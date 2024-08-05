@@ -50,20 +50,21 @@ interface BlockStats {
   maxTriggerBlocksWithCode: number;
 }
 
-interface Session {
-  startTime: number;
-  soundsUsed: Set<string>;
-  soundsPlayed: {[id: string]: number};
+interface CommonSessionFields {
   blockStats: BlockStats;
   featuresUsed: {[feature: string]: boolean};
+  soundsPlayed: {[id: string]: number};
+  selectedPack?: string;
 }
 
-interface SessionEndPayload {
+interface Session extends CommonSessionFields {
+  startTime: number;
+  soundsUsed: Set<string>;
+}
+
+interface SessionEndPayload extends CommonSessionFields {
   durationSeconds: number;
   soundsUsed: string[];
-  blockStats: BlockStats;
-  featuresUsed: {[feature: string]: boolean};
-  soundsPlayed: {[id: string]: number};
 }
 
 const trackedProjectProperties = [
@@ -181,6 +182,18 @@ export default class AnalyticsReporter {
     this.log(`Project property: ${property}: ${value}`);
   }
 
+  setSelectedPack(packId: string | undefined) {
+    if (!this.session) {
+      this.log('No session in progress');
+      return;
+    }
+    this.session.selectedPack = packId;
+  }
+
+  onPackSelected(packId: string) {
+    this.onButtonClicked('select-pack', {packId});
+  }
+
   onButtonClicked(buttonName: string, properties?: object) {
     this.trackUIEvent('Button clicked', {
       buttonName,
@@ -278,11 +291,9 @@ export default class AnalyticsReporter {
     const duration = Date.now() - this.session.startTime;
 
     const payload: SessionEndPayload = {
+      ...this.session,
       durationSeconds: duration / 1000,
       soundsUsed: Array.from(this.session.soundsUsed),
-      blockStats: this.session.blockStats,
-      featuresUsed: this.session.featuresUsed,
-      soundsPlayed: this.session.soundsPlayed,
     };
 
     this.session = undefined;
