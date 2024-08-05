@@ -54,6 +54,7 @@ import {getValidatedResult, initializeContainedLevel} from './containedLevels';
 import * as dom from './dom';
 import * as dropletUtils from './dropletUtils';
 import FeedbackUtils from './feedback';
+import Alert from './legacySharedComponents/alert';
 import {
   configCircuitPlayground,
   configMicrobit,
@@ -84,7 +85,6 @@ import {
 } from './redux/studioAppActivity';
 import * as shareWarnings from './shareWarnings';
 import Sounds from './Sounds';
-import Alert from './templates/alert';
 import ChallengeDialog from './templates/ChallengeDialog';
 import VersionHistory from './templates/VersionHistory';
 import color from './util/color';

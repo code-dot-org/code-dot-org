@@ -1878,7 +1878,7 @@ FactoryBot.define do
   factory :lti_integration do
     issuer {SecureRandom.alphanumeric}
     client_id {SecureRandom.alphanumeric}
-    platform_name {"platform_name"}
+    platform_name {"canvas_cloud"}
     auth_redirect_url {"http://test.org/auth"}
     jwks_url {"jwks_url"}
     access_token_url {"access_token_url"}

@@ -1097,8 +1097,35 @@ en:
           description_teacher: testing fix for getting started
           version_title: ''
         csa-alt-2025:
-          title: csa non-objects-first
+          title: Computer Science A ('25-'26)
+          description_short: Learn Java programming and software engineering skills.
+          description_student: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          description_teacher: |-
+            **This version of the CSA curriculum follows the sequence outlined in the AP CSA CED.**
+
+            Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          version_title: "'25-'26"
+        sandbox-csf-2025:
+          title: sandbox-csf-2025
           description_short: ''
           description_student: ''
           description_teacher: ''
+          version_title: ''
+        csa-2025:
+          title: Computer Science A ('25-'26)
+          description_short: Learn Java programming and software engineering skills.
+          description_student: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          description_teacher: |-
+            Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+
+            **Did You Know?**
+            * Professional development is available to help you get started teaching CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Click here</a> to learn more about professional learning opportunities in your region.
+
+            * You can find the *Syllabus*, *Course Vocab*, and other resources to help you implement this curriculum in the Teacher Resources menu below.
           version_title: "'25-'26"
+        csa-pilot-2025:
+          title: Computer Science A ('24-'25 Pilot -- 2025 Framework)
+          description_short: Learn Java programming and software engineering skills.
+          description_student: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          description_teacher: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          version_title: "'24-'25"

@@ -800,3 +800,22 @@ export function getCodeFromBlockXmlSource(blockXmlString: string) {
   workspace.dispose();
   return result;
 }
+
+// Returns a list of Blockly toolbox blocks in JSON for a given category.
+// This is used in order to merge XML toolbox blocks with the dynamically created
+// blocks in auto-populated categories, such as Behaviors, Functions, and Variables.
+export function getCategoryBlocksJson(category: string) {
+  const levelToolboxBlocks = Blockly.cdoUtils.getLevelToolboxBlocks(category);
+  if (!levelToolboxBlocks?.querySelector('xml')?.hasChildNodes()) {
+    return [];
+  }
+
+  // Blockly supports XML or JSON, but not a combination of both.
+  // We convert to JSON here because the other flyout blocks are JSON.
+  const blocksConvertedJson = convertXmlToJson(
+    levelToolboxBlocks.documentElement
+  );
+  const flyoutJson = getSimplifiedStateForFlyout(blocksConvertedJson);
+
+  return flyoutJson;
+}

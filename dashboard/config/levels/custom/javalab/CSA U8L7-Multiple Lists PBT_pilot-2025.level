@@ -1,0 +1,45 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-01T21:21:20.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "CityRunner.java": {
+        "text": "import java.util.ArrayList;\n\npublic class CityRunner {\n  public static void main(String[] args) {\n\n    // Reads data from text files into ArrayLists\n    ArrayList<Double> dallas = FileReader.toDoubleList(\"dallastemps.txt\");\n    ArrayList<Double> seattle = FileReader.toDoubleList(\"seattletemps.txt\");\n\n    // Instantiates a CityTemps object with one of the ArrayLists\n    CityTemps dallasTemps = new CityTemps(dallas);\n\n    // Calls the compareTemps() method\n    int numDays = dallasTemps.compareTemps(seattle);\n\n    // Prints the result\n    System.out.println(\"Dallas had \" + numDays + \" days warmer than Seattle in January 2020.\");\n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "CityTemps.java": {
+        "text": "import java.util.ArrayList;\n\n/*\n * Analyzes data about temperatures in cities\n */\npublic class CityTemps {\n\n  private ArrayList<Double> cityTemps;      // The list of temperatures in a city\n\n  /*\n   * Initializes cityTemps to the specified ArrayList of temperatures\n   */\n  public CityTemps(ArrayList<Double> cityTemps) {\n    this.cityTemps = cityTemps;\n  }\n\n  /*\n   * Returns the number of values in cityTemps that are greater than otherCity\n   */\n  public int compareTemps(ArrayList<Double> otherCity) {\n    int count = 0;\n\n    for (int index = 0; index < cityTemps.size(); index++) {\n      Double currentCityTemp = cityTemps.get(index);\n      Double otherCityTemp = otherCity.get(index);\n\n      if (currentCityTemp > otherCityTemp) {\n        count++;\n      }\n    }\n\n    return count;\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      },
+      "dallastemps.txt": {
+        "text": "47.3\n54.5\n51.1\n47.3\n51.3\n50.4\n49.9\n49.7\n61.1\n67.4\n42.7\n38.8\n47.9\n58.6\n67.6\n54.9\n49.7\n55.8\n42.8\n45.3\n43.8\n41.8\n47.2\n48.2\n49.6\n57.0\n50.9\n51.7\n41.5\n41.7\n45.5",
+        "isVisible": true,
+        "tabOrder": 2
+      },
+      "seattletemps.txt": {
+        "text": "51.0\n45.1\n48.1\n47.0\n44.3\n44.8\n50.9\n45.2\n35.9\n38.2\n44.2\n41.4\n35.3\n31.0\n35.0\n41.1\n37.3\n41.7\n48.2\n50.2\n48.7\n45.3\n50.9\n50.9\n48.1\n49.4\n47.6\n46.0\n47.9\n46.3\n51.3",
+        "isVisible": true,
+        "tabOrder": 3
+      },
+      "FileReader.java": {
+        "text": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.io.File;\nimport java.io.FileNotFoundException;\n\npublic class FileReader {\n\n  public static String[] toStringArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    String[] data = new String[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = currentValue;\n    }\n\n    return data;\n  }\n\n  public static int[] toIntArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    int[] data = new int[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = Integer.parseInt(currentValue);\n    }\n\n    return data;\n  }\n\n  public static double[] toDoubleArray(String filename) {\n    ArrayList<String> temp = readDataFromFile(filename);\n    double[] data = new double[temp.size()];\n\n    for (int index = 0; index < data.length; index++) {\n      String currentValue = temp.get(index);\n      data[index] = Double.parseDouble(currentValue);\n    }\n\n    return data;\n  }\n\n  public static ArrayList<Double> toDoubleList(String filename) {\n    ArrayList<String> tempList = readDataFromFile(filename);\n    ArrayList<Double> returnList = new ArrayList<Double>();\n    for (String temp : tempList) {\n      returnList.add(Double.parseDouble(temp));\n    }\n\n    return returnList;\n  }\n\n\n  private static Scanner createScanner(File theFile) {\n    Scanner tempScanner = null;\n\n    try {\n      tempScanner = new Scanner(theFile);\n    } catch(FileNotFoundException error) {\n      System.out.println(\"File not found.\");\n    }\n\n    return tempScanner;\n  }\n\n  private static ArrayList<String> readDataFromFile(String filename) {\n    File dataFile = new File(filename);\n    Scanner reader = createScanner(dataFile);\n    ArrayList<String> temp = new ArrayList<String>();\n\n    while (reader.hasNextLine()) {\n      String currentLine = reader.nextLine().trim();\n      temp.add(currentLine);\n    }\n\n    reader.close();\n    return temp;\n  }\n  \n}",
+        "isVisible": false,
+        "tabOrder": 4
+      }
+    },
+    "name_suffix": "_pilot-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-01T21:21:20.679+00:00\",\"changed\":[\"cloned from \\\"CSA U8L7-Multiple Lists PBT_2025\\\"\"],\"cloned_from\":\"CSA U8L7-Multiple Lists PBT_2025\"}]"
+}]]></config>
+</Javalab>

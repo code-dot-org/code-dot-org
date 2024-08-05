@@ -1,7 +1,7 @@
 {
   "pages": {
     "/home": "progress-launch",
-    "/student-home": "music-lab-launch"
+    "/student-home": ""
   },
   "banners": {
     "superhero": {
@@ -19,15 +19,6 @@
       "buttonText": "Learn more",
       "buttonUrl": "https://code.org/hourofcode",
       "buttonId": "hoc-2023"
-    },
-    "music-lab-launch": {
-      "dcdo": "music-lab-launch-2024",
-      "image": "/shared/images/banners/music-lab-with-afe-logo.png",
-      "title": "Introducing Music Lab",
-      "body": "Get creative with your favorite artist's music and code new songs and mixes!",
-      "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/music",
-      "buttonId": "music-lab-launch"
     },
     "curriculum-launch-2024": {
       "dcdo": "curriculum-launch-2024",
