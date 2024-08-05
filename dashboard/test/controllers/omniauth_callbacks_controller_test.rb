@@ -1798,7 +1798,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
           # so this includes 1 email, 1 SSO, and 1 LTI auth option
           _(user.authentication_options.count).must_equal 3
           _(user.authentication_options).must_include lti_auth_option
-          assert_equal "You have successfully linked your Code.org account!", flash[:notice]
+          assert_equal I18n.t('lti.account_linking.successfully_linked'), flash[:notice]
         end
 
         context 'if account linking is locked for user' do
