@@ -1,5 +1,7 @@
 :ruby
   options = { level: level, script_level: script_level, language: language, user_type: user_type, loc_prefix: loc_prefix, request: request }
+  user_header_options = { loc_prefix: loc_prefix }
+  dashboard ||= false
   contents = Hamburger.get_hamburger_contents(options)
 
 #hamburger{class: contents[:visibility], tabindex: "0", 'aria-label': I18n.t('header_screen_reader_hamburger')}
@@ -10,12 +12,12 @@
         .button-wrapper
           %a.linktag{href: CDO.studio_url('users/sign_in'), class: 'button-signin', id: 'signin_button'}
             .header_button.header_user#header_user_signin
-              %span= I18n.t("user_header_signin")
+              %span= I18n.t(dashboard ? "#{user_header_options[:loc_prefix]}signin" : "user_header_signin")
               .signin_callout_wrapper
           -# Create Acount button for the A/B test
           %a.linktag{href: CDO.studio_url('users/sign_up'), class: 'button-create-account', id: 'create_account_button'}
             .header_button.header_user#header_user_create_account
-              %span= I18n.t("user_header_create_account_low_cap")
+              %span= I18n.t(dashboard ? "#{user_header_options[:loc_prefix]}create_account_low_cap" : "user_header_create_account_low_cap")
         .divider
     - contents[:entries].each do |entry|
       - if entry[:type] == "divider"

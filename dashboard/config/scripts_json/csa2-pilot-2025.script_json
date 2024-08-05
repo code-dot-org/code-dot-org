@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-01 22:26:59 UTC",
+    "serialized_at": "2024-08-02 21:58:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4864,6 +4864,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L1_pilot-2025"
+        ],
         "progression": "Predict and Run: Attributes"
       },
       "bonus": false,
@@ -4886,6 +4889,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Classes and Attributes"
       },
       "bonus": false,
@@ -4908,6 +4914,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L2-2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Classes and Attributes"
       },
       "bonus": false,
@@ -4930,6 +4939,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L2-3_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Classes and Attributes"
       },
       "bonus": false,
@@ -4952,6 +4964,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L3_pilot-2025"
+        ],
         "progression": "Skill Building: Declaring Instance Variables"
       },
       "bonus": false,
@@ -4974,6 +4989,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L4_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Refactoring Code"
       },
       "bonus": false,
@@ -4996,6 +5014,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L4-2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Refactoring Code"
       },
       "bonus": false,
@@ -5018,6 +5039,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L5_pilot-2025"
+        ],
         "progression": "Practice: The Food Truck"
       },
       "bonus": false,
@@ -5040,6 +5064,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L6_pilot-2025"
+        ],
         "progression": "Practice: The Food Truck"
       },
       "bonus": false,
@@ -5062,6 +5089,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L7_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5084,6 +5114,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L1_pilot-2025"
+        ],
         "progression": "Predict and Run: No-Argument Constructors"
       },
       "bonus": false,
@@ -5106,6 +5139,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Constructors"
       },
       "bonus": false,
@@ -5128,6 +5164,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L2-2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Constructors"
       },
       "bonus": false,
@@ -5150,6 +5189,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L2-3_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Constructors"
       },
       "bonus": false,
@@ -5172,6 +5214,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L3_pilot-2025"
+        ],
         "progression": "Skill Building: Writing a Constructor"
       },
       "bonus": false,
@@ -5194,6 +5239,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L4_pilot-2025"
+        ],
         "progression": "Practice: Writing a Class"
       },
       "bonus": false,
@@ -5216,6 +5264,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L5_pilot-2025"
+        ],
         "progression": "Practice: Writing a Class"
       },
       "bonus": false,
@@ -5238,6 +5289,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L6_pilot-2025"
+        ],
         "progression": "Practice: The Food Truck"
       },
       "bonus": false,
@@ -5260,6 +5314,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L7_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5282,6 +5339,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L1_pilot-2025"
+        ],
         "progression": "Predict and Run: Parameterized Constructors"
       },
       "bonus": false,
@@ -5304,6 +5364,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Parameterized Constructors"
       },
       "bonus": false,
@@ -5326,6 +5389,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L2-2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Parameterized Constructors"
       },
       "bonus": false,
@@ -5348,6 +5414,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L2-3_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Parameterized Constructors"
       },
       "bonus": false,
@@ -5370,6 +5439,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L3 CFU_pilot-2025"
+        ],
         "progression": "Practice: Parameterized Constructors"
       },
       "bonus": false,
@@ -5392,6 +5464,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L3_pilot-2025"
+        ],
         "progression": "Practice: Parameterized Constructors"
       },
       "bonus": false,
@@ -5414,6 +5489,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L4_pilot-2025"
+        ],
         "progression": "Practice: Parameterized Constructors"
       },
       "bonus": false,
@@ -5436,6 +5514,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L10_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5458,6 +5539,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L1_pilot-2025"
+        ],
         "progression": "Predict and Run: Constructors and Scope"
       },
       "bonus": false,
@@ -5480,6 +5564,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: The this Keyword"
       },
       "bonus": false,
@@ -5502,6 +5589,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L3_pilot-2025"
+        ],
         "progression": "Investigate and Modify: The this Keyword"
       },
       "bonus": false,
@@ -5524,6 +5614,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L4_pilot-2025"
+        ],
         "progression": "Investigate and Modify: The this Keyword"
       },
       "bonus": false,
@@ -5546,6 +5639,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L5_pilot-2025"
+        ],
         "progression": "Practice: The this Keyword"
       },
       "bonus": false,
@@ -5568,6 +5664,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L6_pilot-2025"
+        ],
         "progression": "Practice: The this Keyword"
       },
       "bonus": false,
@@ -5590,6 +5689,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L7_pilot-2025"
+        ],
         "progression": "Practice: The this Keyword"
       },
       "bonus": false,
@@ -5612,6 +5714,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L8_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5634,6 +5739,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L1_pilot-2025"
+        ],
         "progression": "Predict and Run: Constructors and Inheritance"
       },
       "bonus": false,
@@ -5656,6 +5764,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: The super Keyword"
       },
       "bonus": false,
@@ -5678,6 +5789,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L3_pilot-2025"
+        ],
         "progression": "Investigate and Modify: The super Keyword"
       },
       "bonus": false,
@@ -5700,6 +5814,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L4_pilot-2025"
+        ],
         "progression": "Investigate and Modify: The super Keyword"
       },
       "bonus": false,
@@ -5722,6 +5839,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L5_pilot-2025"
+        ],
         "progression": "Practice: The super Keyword"
       },
       "bonus": false,
@@ -5744,6 +5864,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L6_pilot-2025"
+        ],
         "progression": "Practice: The super Keyword"
       },
       "bonus": false,
@@ -5766,6 +5889,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L7 Practice_pilot-2025"
+        ],
         "progression": "Practice: The super Keyword"
       },
       "bonus": false,
@@ -5788,6 +5914,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L8_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5810,6 +5939,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L6-L1_pilot-2025"
+        ],
         "progression": "Predict and Run: Variables"
       },
       "bonus": false,
@@ -5832,6 +5964,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L6-L2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Variables"
       },
       "bonus": false,
@@ -5854,6 +5989,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L6-L3_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5876,6 +6014,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L1_pilot-2025"
+        ],
         "progression": "Predict and Run: Accessor Methods"
       },
       "bonus": false,
@@ -5898,6 +6039,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Accessor Methods"
       },
       "bonus": false,
@@ -5920,6 +6064,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L3_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Accessor Methods"
       },
       "bonus": false,
@@ -5942,6 +6089,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L4_pilot-2025"
+        ],
         "progression": "Skill Building: Accessor Methods"
       },
       "bonus": false,
@@ -5964,6 +6114,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L5_pilot-2025"
+        ],
         "progression": "Practice: Accessor Methods"
       },
       "bonus": false,
@@ -5986,6 +6139,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L6_pilot-2025"
+        ],
         "progression": "Practice: Accessor Methods"
       },
       "bonus": false,
@@ -6008,6 +6164,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L7 Practice_pilot-2025"
+        ],
         "progression": "Practice: Accessor Methods"
       },
       "bonus": false,
@@ -6030,6 +6189,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L8_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6052,6 +6214,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L1_pilot-2025"
+        ],
         "progression": "Predict and Run: Operators and Expressions"
       },
       "bonus": false,
@@ -6074,6 +6239,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Expressions"
       },
       "bonus": false,
@@ -6096,6 +6264,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L3_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Expressions"
       },
       "bonus": false,
@@ -6118,6 +6289,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L4_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Expressions"
       },
       "bonus": false,
@@ -6140,6 +6314,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L5_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Operators"
       },
       "bonus": false,
@@ -6162,6 +6339,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L6_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Operators"
       },
       "bonus": false,
@@ -6184,6 +6364,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L7_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6206,6 +6389,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L1_pilot-2025"
+        ],
         "progression": "Predict and Run: Mutator Methods"
       },
       "bonus": false,
@@ -6228,6 +6414,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Mutator Methods"
       },
       "bonus": false,
@@ -6250,6 +6439,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L3_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Mutator Methods"
       },
       "bonus": false,
@@ -6272,6 +6464,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L4_pilot-2025"
+        ],
         "progression": "Skill Building: Mutator Methods"
       },
       "bonus": false,
@@ -6294,6 +6489,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L5_pilot-2025"
+        ],
         "progression": "Practice: Mutator Methods"
       },
       "bonus": false,
@@ -6316,6 +6514,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L6_pilot-2025"
+        ],
         "progression": "Practice: Mutator Methods"
       },
       "bonus": false,
@@ -6338,6 +6539,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L7 Practice_pilot-2025"
+        ],
         "progression": "Practice: Mutator Methods"
       },
       "bonus": false,
@@ -6360,6 +6564,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L8_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6382,6 +6589,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L1_pilot-2025"
+        ],
         "progression": "Predict and Run: Printing Objects"
       },
       "bonus": false,
@@ -6404,6 +6614,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Printing Objects"
       },
       "bonus": false,
@@ -6426,6 +6639,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L3_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Printing Objects"
       },
       "bonus": false,
@@ -6448,6 +6664,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L4_pilot-2025"
+        ],
         "progression": "Practice: The toString() Method"
       },
       "bonus": false,
@@ -6470,6 +6689,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L5_pilot-2025"
+        ],
         "progression": "Practice: The toString() Method"
       },
       "bonus": false,
@@ -6492,6 +6714,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L6_pilot-2025"
+        ],
         "progression": "Practice: The toString() Method"
       },
       "bonus": false,
@@ -6514,6 +6739,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L7 Practice_pilot-2025"
+        ],
         "progression": "Practice: The toString() Method"
       },
       "bonus": false,
@@ -6536,6 +6764,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L8_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6558,6 +6789,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2 Store Management Project_pilot-2025"
+        ],
         "progression": "Store Management Project"
       },
       "bonus": false,
@@ -6580,6 +6814,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 2 Assessment_pilot-2025"
+        ],
         "progression": "Unit 2 Assessment"
       },
       "bonus": false,
@@ -6602,6 +6839,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa2_pilot-2025"
+        ],
         "progression": "Unit 2 Survey"
       },
       "bonus": false,
@@ -6624,6 +6864,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2 Store Management Project 1-Day_pilot-2025"
+        ],
         "progression": "Store Management Project"
       },
       "bonus": false,
@@ -6646,6 +6889,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox_pilot-2025"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6667,6 +6913,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox_pilot-2025"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -6689,6 +6938,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox_pilot-2025"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
