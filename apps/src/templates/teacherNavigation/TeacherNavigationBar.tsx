@@ -23,7 +23,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   const [sectionArray, setSectionArray] = useState<
     {value: string; text: string}[]
   >([]);
-  const [selectedSectionId, setSelectedSectionId] = useState<string | ''>('');
+  const [selectedSectionId, setSelectedSectionId] = useState<string>('');
 
   useEffect(() => {
     const updatedSectionArray = Object.entries(sectionList)
