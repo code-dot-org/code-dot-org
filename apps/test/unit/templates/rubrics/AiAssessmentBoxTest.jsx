@@ -5,7 +5,9 @@ import EditorAnnotator from '@cdo/apps/EditorAnnotator';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import AiAssessmentBox from '@cdo/apps/templates/rubrics/AiAssessmentBox';
-import AiAssessmentFeedbackContext from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
+import AiAssessmentFeedbackContext, {
+  NO_FEEDBACK,
+} from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -44,6 +46,7 @@ describe('AiAssessmentBox', () => {
       message: 'This is a third line.',
     },
   ];
+  const mockSetAiFeedback = () => {};
   const props = {
     isAiAssessed: true,
     studentName: 'Jane Doe',
@@ -59,7 +62,9 @@ describe('AiAssessmentBox', () => {
 
   it('renders AiAssessmentBox with student information if it is assessed by AI', () => {
     const wrapper = mount(
-      <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
+      >
         <AiAssessmentBox {...props} />
       </AiAssessmentFeedbackContext.Provider>
     );
@@ -73,7 +78,9 @@ describe('AiAssessmentBox', () => {
 
   it('renders AiAssessmentBox with AiConfidenceBox when available', () => {
     const wrapper = mount(
-      <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
+      >
         <AiAssessmentBox {...props} />
       </AiAssessmentFeedbackContext.Provider>
     );
@@ -86,7 +93,9 @@ describe('AiAssessmentBox', () => {
       aiConfidence: null,
     };
     const wrapper = mount(
-      <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
+      >
         <AiAssessmentBox {...updatedProps} />
       </AiAssessmentFeedbackContext.Provider>
     );
@@ -95,7 +104,9 @@ describe('AiAssessmentBox', () => {
 
   it('should render associated message for aiAssessed with convincing understanding', () => {
     const wrapper = mount(
-      <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
+      >
         <AiAssessmentBox {...props} />
       </AiAssessmentFeedbackContext.Provider>
     );
@@ -116,7 +127,9 @@ describe('AiAssessmentBox', () => {
       aiUnderstandingLevel: RubricUnderstandingLevels.LIMITED,
     };
     const wrapper = mount(
-      <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
+      >
         <AiAssessmentBox {...updatedProps} />
       </AiAssessmentFeedbackContext.Provider>
     );
@@ -134,7 +147,9 @@ describe('AiAssessmentBox', () => {
   it('renders AiAssessmentBox with notice that AI cannot be used when the topic is too subjective to be evaluated', () => {
     const updatedProps = {...props, isAiAssessed: false};
     const wrapper = mount(
-      <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
+      >
         <AiAssessmentBox {...updatedProps} />
       </AiAssessmentFeedbackContext.Provider>
     );
@@ -146,7 +161,9 @@ describe('AiAssessmentBox', () => {
   it('renders no evidence if none is given', () => {
     const updatedProps = {...props, aiEvidence: []};
     const wrapper = mount(
-      <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
+      >
         <AiAssessmentBox {...updatedProps} />
       </AiAssessmentFeedbackContext.Provider>
     );
@@ -156,7 +173,9 @@ describe('AiAssessmentBox', () => {
 
   it('renders evidence when given', () => {
     const wrapper = mount(
-      <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
+      >
         <AiAssessmentBox {...props} />
       </AiAssessmentFeedbackContext.Provider>
     );
@@ -173,7 +192,9 @@ describe('AiAssessmentBox', () => {
   it('falls back to rendering evidence as observations if there is no line numbers', () => {
     const updatedProps = {...props, aiEvidence: mockEvidenceWithoutLines};
     const wrapper = mount(
-      <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
+      >
         <AiAssessmentBox {...updatedProps} />
       </AiAssessmentFeedbackContext.Provider>
     );
@@ -193,7 +214,9 @@ describe('AiAssessmentBox', () => {
       .mockImplementation();
 
     const wrapper = mount(
-      <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
+      >
         <AiAssessmentBox {...props} />
       </AiAssessmentFeedbackContext.Provider>
     );
@@ -223,7 +246,9 @@ describe('AiAssessmentBox', () => {
       .mockImplementation();
 
     const wrapper = mount(
-      <AiAssessmentFeedbackContext.Provider value={[-1, () => {}]}>
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
+      >
         <AiAssessmentBox {...props} />
       </AiAssessmentFeedbackContext.Provider>
     );

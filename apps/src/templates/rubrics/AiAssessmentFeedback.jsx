@@ -12,7 +12,9 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
-import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
+import AiAssessmentFeedbackContext, {
+  NO_FEEDBACK,
+} from './AiAssessmentFeedbackContext';
 import {aiEvaluationShape} from './rubricShapes';
 
 import style from './rubrics.module.scss';
@@ -68,7 +70,7 @@ export default function AiAssessmentFeedback({aiEvalInfo, aiFeedbackId}) {
     setAIOtherContent('');
 
     // Clear feedback
-    setAiFeedback(-1);
+    setAiFeedback(NO_FEEDBACK);
   };
 
   return (

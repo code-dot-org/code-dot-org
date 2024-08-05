@@ -2,7 +2,9 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import AiAssessmentFeedback from '@cdo/apps/templates/rubrics/AiAssessmentFeedback';
-import AiAssessmentFeedbackContext from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
+import AiAssessmentFeedbackContext, {
+  NO_FEEDBACK,
+} from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
 
 describe('AiAssessmentFeedback', () => {
   const mockAiInfo = {
@@ -16,7 +18,6 @@ describe('AiAssessmentFeedback', () => {
     aiFeedbackId: 1,
   };
 
-  const defaultStatus = -1;
   const thumbsupval = 1;
   const thumbsdownval = 0;
   const mockSetAiFeedback = () => {};
@@ -24,7 +25,7 @@ describe('AiAssessmentFeedback', () => {
   it('displays no checkboxes when neither thumb is selected', () => {
     const wrapper = mount(
       <AiAssessmentFeedbackContext.Provider
-        value={{aiFeedback: defaultStatus, setAiFeedback: mockSetAiFeedback}}
+        value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
       >
         <AiAssessmentFeedback {...props} />
       </AiAssessmentFeedbackContext.Provider>

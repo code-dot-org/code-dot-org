@@ -18,7 +18,9 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
 import AiAssessment from './AiAssessment';
-import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
+import AiAssessmentFeedbackContext, {
+  NO_FEEDBACK,
+} from './AiAssessmentFeedbackContext';
 import EvidenceLevels from './EvidenceLevels';
 import tipIcon from './images/AiBot_Icon.svg';
 import infoIcon from './images/info-icon.svg';
@@ -587,7 +589,7 @@ export default function LearningGoals({
       setCurrentLearningGoal(currentIndex);
 
       // Clear feedback (without sending it)
-      setAiFeedback(-1);
+      setAiFeedback(NO_FEEDBACK);
 
       // Annotate the lines based on the AI observation
       clearAnnotations();
