@@ -13,6 +13,10 @@ class DCDOTest < ActiveSupport::TestCase
     @dcdo.clear
   end
 
+  test 'DCDO and @dcdo are instances of the same class' do
+    assert_instance_of @dcdo.class, DCDO
+  end
+
   test 'basic set and get' do
     assert_nil @dcdo.get('key', nil)
     @dcdo.set('key', 'okay')
