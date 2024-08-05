@@ -1,5 +1,4 @@
 /**
- * @deprecated use DSCO Button instead
  * This particular button is designed to operate in contexts where we have a solid
  * background. When we're a button on top of an image, we may want something different.
  */
@@ -44,6 +43,9 @@ const ButtonHeight = {
   small: 20,
 };
 
+/**
+ * @deprecated use DSCO Button instead
+ */
 class Button extends React.Component {
   static propTypes = {
     type: PropTypes.oneOf(['button', 'submit', 'reset']),

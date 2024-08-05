@@ -1,7 +1,3 @@
-/**
- * @deprecated use DSCO Button instead
- */
-
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
@@ -202,6 +198,9 @@ ArrowButton.propTypes = Object.assign({}, BaseButton.propTypes, {
   arrow: PropTypes.oneOf(['left', 'right']).isRequired,
 });
 
+/**
+ * @deprecated use DSCO Button instead
+ */
 const LegacyButton = Radium(function Button(props) {
   if (props.arrow) {
     return <ArrowButton {...props} />;

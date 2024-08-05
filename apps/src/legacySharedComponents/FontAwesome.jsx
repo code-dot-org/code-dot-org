@@ -1,10 +1,4 @@
-/**
- * @deprecated use DSCO FontAwesomeV6Icon instead
- */
 /** @file font-awesome helper component. */
-
-// NOTE: Prefer component/FontAwesomeV6Icon
-
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -13,6 +7,8 @@ import React from 'react';
  * Given an icon name, render the icon using an <i> tag in typical font-awesome
  * fashion.  Requires font-awesome to be available on the page.
  * See http://fontawesome.io/icons/ to look up supported icon names.
+ *
+ * @deprecated use DSCO FontAwesomeV6Icon instead
  */
 export default function FontAwesome({icon, className, title, ...props}) {
   const newProps = _.assign({}, props, {

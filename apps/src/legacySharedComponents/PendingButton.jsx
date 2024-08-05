@@ -1,4 +1,3 @@
-/** @deprecated use DSCO Button instead */
 /** @overview a button which shows a spinner while an operation is pending */
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
@@ -6,6 +5,7 @@ import React from 'react';
 
 import FontAwesome from './FontAwesome';
 
+/** @deprecated use DSCO Button instead */
 class PendingButton extends React.Component {
   static propTypes = {
     className: PropTypes.string,

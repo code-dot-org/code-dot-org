@@ -1,5 +1,3 @@
-/** @deprecated use DSCO StylizedBaseDialog or AccessibleDialog instead */
-
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
@@ -122,6 +120,7 @@ Icon.propTypes = {
   src: PropTypes.string.isRequired,
 };
 
+/** @deprecated use DSCO StylizedBaseDialog or AccessibleDialog instead */
 export default class Dialog extends React.Component {
   static propTypes = {
     ...BaseDialog.propTypes,
