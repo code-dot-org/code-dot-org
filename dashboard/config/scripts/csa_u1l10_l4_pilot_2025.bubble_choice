@@ -1,0 +1,9 @@
+name 'CSA U1L10-L4_pilot-2025'
+display_name 'Practice: Debugging in The Neighborhood'
+description 'Use the problem solving process and printing to debug the program.'
+
+sublevels
+level 'CSA U1L10-L4a_pilot-2025'
+level 'CSA U1L10-L4b_pilot-2025'
+level 'CSA U1L10-L4c_pilot-2025'
+level 'CSA U1L10-L4d_pilot-2025'
