@@ -74,19 +74,17 @@ describe('TeacherDashboardHeader', () => {
   });
 
   it('renders assigned script name if assigned', () => {
-    const wrapper = shallow(
-      <TeacherDashboardHeader
-        {...DEFAULT_PROPS}
-        selectedSection={{...MOCK_SECTIONS[0], courseDisplayName: null}}
-      />
-    );
+    const wrapper = shallow(<TeacherDashboardHeader {...DEFAULT_PROPS} />);
     expect(wrapper.find('#assignment-name')).toHaveLength(1);
     expect(wrapper.contains('Course D (2019)')).toBe(true);
   });
 
   it('does not render script name if not assigned', () => {
     const wrapper = shallow(
-      <TeacherDashboardHeader {...DEFAULT_PROPS} assignmentName="" />
+      <TeacherDashboardHeader
+        {...DEFAULT_PROPS}
+        selectedSection={{...MOCK_SECTIONS[0], courseDisplayName: null}}
+      />
     );
     expect(wrapper.find('#assignment-name')).toHaveLength(0);
     expect(wrapper.contains('Course D (2019)')).toBe(false);
