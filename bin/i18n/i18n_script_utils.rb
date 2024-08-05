@@ -325,15 +325,14 @@ class I18nScriptUtils
 
     return JSON.parse(file_content) if json_file?(file_path)
     return YAML.safe_load(file_content) if yaml_file?(file_path)
-  rescue Errno::ENOENT => exception
-    puts("File not found: #{file_path} - #{exception.message}")
-    nil
+
+    raise "do not know how to parse file #{file_path.inspect}"
+  rescue Errno::ENOENT
+    raise "File not found: #{file_path.inspect}"
   rescue JSON::ParserError => exception
-    puts("JSON parsing error in file #{file_path} - #{exception.message}")
-    nil
+    raise "JSON parsing error in file #{file_path.inspect} - #{exception.message}"
   rescue Psych::SyntaxError => exception
-    puts("YAML parsing error in file #{file_path} - #{exception.message}")
-    nil
+    raise "YAML parsing error in file #{file_path.inspect} - #{exception.message}"
   end
 
   def self.sanitize_file_and_write(loc_path, dest_path)
