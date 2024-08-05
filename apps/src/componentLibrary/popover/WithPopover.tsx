@@ -44,6 +44,7 @@ const WithPopover: React.FunctionComponent<WithPopoverProps> = ({
         setPositionedElementStyles: setPopoverStyles,
         tailOffset,
         tailLength,
+        isPositionFixed: true,
       }),
     [nodePosition, popoverRef, setPopoverStyles, popoverProps, tailLength]
   );
