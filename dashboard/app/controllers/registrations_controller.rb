@@ -83,6 +83,10 @@ class RegistrationsController < Devise::RegistrationsController
     redirect_to new_user_registration_path
   end
 
+  # Part of the new sign up flow - work in progress
+  def account_type
+  end
+
   #
   # PUT /users
   #
