@@ -1,21 +1,20 @@
 import React from 'react';
 
+import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
+import AccountCard from '@cdo/apps/templates/account/AccountCard';
 import i18n from '@cdo/locale';
-
-import WorkshopAccountBanner from './WorkshopAccountBanner';
-import WorkshopAccountCard from './WorkshopAccountCard';
 
 import styles from '../link-account.module.scss';
 
 const WorkshopStudentEnrollPage: React.FunctionComponent = () => (
   <main>
     <div className={styles.contentContainer}>
-      <WorkshopAccountBanner
+      <AccountBanner
         heading={i18n.accountNeedTeacherAccountWelcomeBannerHeaderLabel()}
         desc={i18n.accountNeedTeacherAccountWelcomeBannerHeaderDesc()}
       />
       <div className={styles.cardContainer}>
-        <WorkshopAccountCard
+        <AccountCard
           id={'keep-student-account-card'}
           icon={'child'}
           title={i18n.accountKeepStudentAccountCardTitle()}
@@ -24,7 +23,7 @@ const WorkshopStudentEnrollPage: React.FunctionComponent = () => (
           buttonType="secondary"
           href="/home"
         />
-        <WorkshopAccountCard
+        <AccountCard
           id={'switch-to-teacher-account-card'}
           icon={'chalkboard-user'}
           title={i18n.accountSwitchTeacherAccountCardTitle()}
