@@ -74,7 +74,9 @@ describe('TableControls', () => {
   }
 
   function setModalState(wrapper, newState) {
-    getModal(wrapper).setState(newState);
+    React.act(() => {
+      getModal(wrapper).setState(newState);
+    });
   }
 
   function setModalProps(wrapper, newProps) {
