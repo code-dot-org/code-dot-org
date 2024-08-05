@@ -343,10 +343,7 @@ def run_tests(env, feature, target_platform, arguments, log_prefix)
                         feature_name: feature.include?(".feature") ? feature.split(".feature")[0] : feature,
                         target_browser: target_platform}
     # Metrics for individual feature runs. They will be flushed once all of them run
-    unless eyes_succeeded
-      Infrastructure::Logger.put("runner_feature_eyes_diff", 1, extra_dimensions)
-    end
-
+    Infrastructure::Logger.put("runner_feature_eyes_diff", 1, extra_dimensions) unless eyes_succeeded
     Infrastructure::Logger.put("runner_feature_success", cucumber_succeeded ? 1 : 0, extra_dimensions)
     Infrastructure::Logger.put("runner_feature_failure", cucumber_succeeded ? 0 : 1, extra_dimensions)
     Infrastructure::Logger.put("runner_feature_execution_time", duration, extra_dimensions)
