@@ -1419,8 +1419,10 @@ StudioApp.prototype.onResize = function () {
   if (isBigPlayspaceEnabled) {
     // Let's avoid an infinite recursion by making sure this is a genuine resize.
     if (
-      window.innerWidth !== this.lastWindowInnerWidth ||
-      window.innerHeight !== this.lastWindowInnerHeight
+      this.lastWindowInnerWidth !== undefined &&
+      this.lastWindowInnerHeight !== undefined &&
+      (window.innerWidth !== this.lastWindowInnerWidth ||
+        window.innerHeight !== this.lastWindowInnerHeight)
     ) {
       this.maxVisualizationWidth = getMaxResizableVisualizationWidth();
 
@@ -1429,10 +1431,10 @@ StudioApp.prototype.onResize = function () {
       );
       const visualizationColumnWidth = $(visualizationColumn).width();
       this.resizeVisualization(visualizationColumnWidth, true);
-
-      this.lastWindowInnerWidth = window.innerWidth;
-      this.lastWindowInnerHeight = window.innerHeight;
     }
+
+    this.lastWindowInnerWidth = window.innerWidth;
+    this.lastWindowInnerHeight = window.innerHeight;
   }
 };
 
