@@ -1,11 +1,11 @@
 import * as sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 import {StubFunction} from 'test/types/types';
 
+import CustomMarshalingInterpreter from '@cdo/apps/code-studio/tools/jsinterpreter/CustomMarshalingInterpreter';
 import ProgramExecutor from '@cdo/apps/dance/lab2/ProgramExecutor';
 import {SongMetadata} from '@cdo/apps/dance/types';
 import utils from '@cdo/apps/dance/utils';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
-import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
 import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 

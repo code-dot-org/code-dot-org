@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/utils/firehose';
 import {setMuteMusic, SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import i18n from '@cdo/locale';

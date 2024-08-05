@@ -6,8 +6,8 @@ import React, {useState, useEffect, useCallback, useMemo} from 'react';
 import {Button, Alert, FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import usePrevious from '@cdo/apps/util/usePrevious';
 import i18n from '@cdo/locale';
 

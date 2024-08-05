@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/utils/firehose';
 
 import styleConstants from '../../styleConstants';
 import color from '../../util/color';

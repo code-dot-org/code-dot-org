@@ -5,8 +5,8 @@ import queryString from 'query-string';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 

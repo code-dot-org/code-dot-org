@@ -9,8 +9,8 @@ import {
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {PLATFORMS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import {registerReducers} from '@cdo/apps/redux';
 import {RootState} from '@cdo/apps/types/redux';
 import {NetworkError} from '@cdo/apps/util/HttpClient';

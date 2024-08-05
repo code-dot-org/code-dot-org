@@ -3,12 +3,12 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import {loadUnitProgress} from '@cdo/apps/templates/sectionProgress/sectionProgressLoader';
 
-import firehoseClient from '../lib/util/firehose';
+import firehoseClient from '../metrics/utils/firehose';
 
 const recordEvent = (eventName, sectionId, dataJson = {}) => {
   firehoseClient.putRecord(

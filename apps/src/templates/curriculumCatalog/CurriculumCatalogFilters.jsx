@@ -3,8 +3,8 @@ import React, {useState, useEffect, useCallback} from 'react';
 
 import {Heading6, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
 

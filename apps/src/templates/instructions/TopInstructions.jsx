@@ -11,7 +11,7 @@ import {connect} from 'react-redux';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/utils/firehose';
 import TeacherFeedbackTab from '@cdo/apps/templates/instructions/teacherFeedback/TeacherFeedbackTab';
 import {rubricShape} from '@cdo/apps/templates/rubrics/rubricShapes';
 import StudentRubricView from '@cdo/apps/templates/rubrics/StudentRubricView';

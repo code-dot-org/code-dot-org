@@ -6,7 +6,7 @@ import CdoDarkTheme from '@cdo/apps/blockly/themes/cdoDark';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
-import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import CustomMarshalingInterpreter from '../../code-studio/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {getBlockMode} from '../appConfig';
 import {BlockMode, Triggers} from '../constants';
 

@@ -27,10 +27,11 @@
 
 import Visualization from '@code-dot-org/artist';
 
-import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/code-studio/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 import {blockAsXmlNode, cleanBlocks} from '../block_utils';
+import CustomMarshalingInterpreter from '../code-studio/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {TestResults} from '../constants';
 import {
   getContainedLevelResultInfo,
@@ -38,7 +39,6 @@ import {
   runAfterPostContainedLevel,
 } from '../containedLevels';
 import dom from '../dom';
-import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {getStore} from '../redux';
 import AppView from '../templates/AppView';
 import experiments from '../util/experiments';
@@ -53,8 +53,8 @@ var Provider = require('react-redux').Provider;
 
 var commonMsg = require('@cdo/locale');
 
+var JSInterpreter = require('../code-studio/tools/jsinterpreter/JSInterpreter');
 var JsInterpreterLogger = require('../JsInterpreterLogger');
-var JSInterpreter = require('../lib/tools/jsinterpreter/JSInterpreter');
 var Slider = require('../slider');
 var color = require('../util/color');
 var utils = require('../utils');

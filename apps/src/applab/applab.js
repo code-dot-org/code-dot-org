@@ -22,6 +22,8 @@ import annotationList from '../acemode/annotationList';
 import {showHideWorkspaceCallouts} from '../code-studio/callouts';
 import header from '../code-studio/header';
 import project from '../code-studio/initApp/project';
+import {actions as jsDebugger} from '../code-studio/tools/jsdebugger/redux';
+import JSInterpreter from '../code-studio/tools/jsinterpreter/JSInterpreter';
 import consoleApi from '../consoleApi';
 import {TestResults, ResultType} from '../constants';
 import {
@@ -37,8 +39,6 @@ import JsInterpreterLogger from '../JsInterpreterLogger';
 import {MB_API} from '../lib/kits/maker/boards/microBit/MicroBitConstants';
 import * as makerToolkitRedux from '../lib/kits/maker/redux';
 import * as makerToolkit from '../lib/kits/maker/toolkit';
-import {actions as jsDebugger} from '../lib/tools/jsdebugger/redux';
-import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
 import {outputError, injectErrorHandler} from '../lib/util/javascriptMode';
 import * as apiTimeoutList from '../lib/util/timeoutList';
 import logToCloud from '../logToCloud';

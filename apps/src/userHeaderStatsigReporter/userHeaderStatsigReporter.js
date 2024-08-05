@@ -1,4 +1,4 @@
-import statsigReporter from '../lib/util/StatsigReporter';
+import statsigReporter from '../metrics/StatsigReporter';
 
 if (document.readyState !== 'loading') {
   console.log('Document is ready');

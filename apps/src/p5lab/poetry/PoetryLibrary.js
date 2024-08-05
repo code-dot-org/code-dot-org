@@ -1,6 +1,6 @@
 import _ from 'lodash';
 
-import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
+import {commands as audioCommands} from '@cdo/apps/code-studio/audioApi';
 import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import {getStore} from '@cdo/apps/redux';
 

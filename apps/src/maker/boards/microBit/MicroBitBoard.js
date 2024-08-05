@@ -3,7 +3,7 @@
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 
 import {MAKER_TOOLKIT} from '@cdo/apps/lib/kits/maker/util/makerConstants';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/utils/firehose';
 
 import {delayPromise} from '../../util/boardUtils';
 

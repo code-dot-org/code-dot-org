@@ -9,8 +9,8 @@ import {
   buttonColors,
   LinkButton,
 } from '@cdo/apps/componentLibrary/button';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import CardLabels from '@cdo/apps/templates/curriculumCatalog/CardLabels';
 import {
   CreateSectionsToAssignSectionsDialog,

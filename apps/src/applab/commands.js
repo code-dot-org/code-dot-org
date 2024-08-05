@@ -1,9 +1,9 @@
 import $ from 'jquery';
 
 import i18n from '@cdo/applab/locale';
+import {commands as audioCommands} from '@cdo/apps/code-studio/audioApi';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import * as makerCommands from '@cdo/apps/lib/kits/maker/commands';
-import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import {commands as mlCommands} from '@cdo/apps/lib/util/mlApi';
 import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
 import {rateLimit} from '@cdo/apps/storage/rateLimit';

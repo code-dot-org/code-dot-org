@@ -5,7 +5,7 @@ import {
   LegacyIncorrectDialog,
   LegacyTooFewDialog,
 } from '@cdo/apps/lib/ui/LegacyDialogContents';
-import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/utils/analyticsUtils';
 
 import {TestResults} from '../../constants';
 import Sounds from '../../Sounds';

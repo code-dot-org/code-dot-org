@@ -21,9 +21,9 @@ import {
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
+import CustomMarshalingInterpreter from '../../code-studio/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {TestResults} from '../../constants';
 import dom from '../../dom';
-import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import MusicController from '../../MusicController';
 import {getStore} from '../../redux';
 import Sounds from '../../Sounds';

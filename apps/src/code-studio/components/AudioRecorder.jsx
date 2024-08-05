@@ -3,7 +3,7 @@ import React from 'react';
 
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/utils/firehose';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 

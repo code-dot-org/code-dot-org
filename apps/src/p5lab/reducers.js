@@ -1,6 +1,6 @@
 /** @file Redux reducer functions for Game Lab.
  *  @see http://redux.js.org/docs/basics/Reducers.html */
-import {reducers as jsDebuggerReducers} from '@cdo/apps/lib/tools/jsdebugger/redux';
+import {reducers as jsDebuggerReducers} from '@cdo/apps/code-studio/tools/jsdebugger/redux';
 import locales from '@cdo/apps/redux/localesRedux';
 
 import {

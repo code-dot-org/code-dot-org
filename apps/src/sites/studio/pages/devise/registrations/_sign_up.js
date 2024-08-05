@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 
 $(document).ready(() => {
   analyticsReporter.sendEvent(EVENTS.SIGN_UP_STARTED_EVENT, {}, PLATFORMS.BOTH);

@@ -3,8 +3,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {PLATFORMS} from '@cdo/apps/metrics/utils/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import locale from '@cdo/locale';
 
 import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';

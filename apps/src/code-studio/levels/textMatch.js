@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/utils/analyticsUtils';
 
 import {registerGetResult, onAnswerChanged} from './codeStudioLevels';
 

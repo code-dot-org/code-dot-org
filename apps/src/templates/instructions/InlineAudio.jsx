@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/utils/firehose';
 import {Voices} from '@cdo/generated-scripts/sharedVoices';
 
 import trackEvent from '../../util/trackEvent';

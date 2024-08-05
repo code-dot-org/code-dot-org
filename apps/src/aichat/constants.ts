@@ -1,4 +1,4 @@
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
 import modelsJson from '@cdo/static/aichat/modelDescriptions.json';
 
 import {ModelDescription, SaveType} from './types';

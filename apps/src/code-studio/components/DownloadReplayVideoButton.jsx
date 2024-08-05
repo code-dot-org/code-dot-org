@@ -3,7 +3,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/utils/firehose';
 import i18n from '@cdo/locale';
 
 // Record events to Firehose to understand how often users:

@@ -2,13 +2,13 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
 import i18n from '@cdo/locale';
 
 import {h3Style} from '../../lib/ui/Headings';
-import firehoseClient from '../../lib/util/firehose';
+import firehoseClient from '../../metrics/utils/firehose';
 import color from '../../util/color';
 
 import {ViewType, unitDataPropType} from './sectionProgressConstants';

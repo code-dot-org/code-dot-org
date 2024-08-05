@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
+import firehoseClient from '@cdo/apps/metrics/utils/firehose';
 import {windowOpen} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 

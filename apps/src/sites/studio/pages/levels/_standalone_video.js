@@ -6,7 +6,7 @@ import ReactDom from 'react-dom';
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {onContinue} from '@cdo/apps/code-studio/levels/postOnContinue';
 import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
-import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/utils/analyticsUtils';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import getScriptData from '@cdo/apps/util/getScriptData';
 

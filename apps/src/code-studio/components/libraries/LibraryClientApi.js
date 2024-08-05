@@ -1,5 +1,5 @@
 import clientApi from '@cdo/apps/code-studio/initApp/clientApi';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/utils/firehose';
 
 const LIBRARY_NAME = 'library.json';
 export default class LibraryClientApi {

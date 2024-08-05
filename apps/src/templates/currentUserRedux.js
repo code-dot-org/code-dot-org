@@ -1,6 +1,6 @@
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReport from '@cdo/apps/lib/util/AnalyticsReporter';
-import statsigReporter from '@cdo/apps/lib/util/StatsigReporter';
+import statsigReporter from '@cdo/apps/metrics/StatsigReporter';
+import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReport from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import experiments from '@cdo/apps/util/experiments';
 import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
 

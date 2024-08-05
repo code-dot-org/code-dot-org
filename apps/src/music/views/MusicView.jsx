@@ -11,9 +11,9 @@ import {
   setPageError,
 } from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/utils/AnalyticsConstants.js';
 // This is the utils AnalyticsReporter
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 // This is the Music Lab specific AnalyticsReporter
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';

@@ -4,8 +4,8 @@ import {connect, useSelector} from 'react-redux';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import Link from '@cdo/apps/componentLibrary/link';
 import Typography from '@cdo/apps/componentLibrary/typography';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import {RootState} from '@cdo/apps/types/redux';
 import i18n from '@cdo/locale';
 

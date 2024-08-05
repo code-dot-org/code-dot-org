@@ -8,8 +8,8 @@ import AITutorFloatingActionButton from '@cdo/apps/aiTutor/views/AITutorFloating
 import ScriptLevelRedirectDialog from '@cdo/apps/code-studio/components/ScriptLevelRedirectDialog';
 import UnversionedScriptRedirectDialog from '@cdo/apps/code-studio/components/UnversionedScriptRedirectDialog';
 import {setIsMiniView} from '@cdo/apps/code-studio/progressRedux';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import instructions, {
   setTtsAutoplayEnabledForLevel,

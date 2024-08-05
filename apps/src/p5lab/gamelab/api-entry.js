@@ -1,10 +1,10 @@
 // entry point for api that gets exposed.
-import {globalFunctions as utilFunctions} from '@cdo/apps/dropletUtilsGlobalFunctions';
 import {
   commands as audioCommands,
   executors as audioExecutors,
   injectExecuteCmd,
-} from '@cdo/apps/lib/util/audioApi';
+} from '@cdo/apps/code-studio/audioApi';
+import {globalFunctions as utilFunctions} from '@cdo/apps/dropletUtilsGlobalFunctions';
 
 import MobileControls from './MobileControls';
 

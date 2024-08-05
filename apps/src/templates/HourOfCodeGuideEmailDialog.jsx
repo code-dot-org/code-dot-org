@@ -4,8 +4,8 @@ import React, {useState, useEffect} from 'react';
 
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import {Heading2, Heading3} from '@cdo/apps/componentLibrary/typography';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import i18n from '@cdo/locale';

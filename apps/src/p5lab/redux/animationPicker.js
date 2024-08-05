@@ -2,7 +2,7 @@
 import _ from 'lodash';
 
 import {animations as animationsApi} from '@cdo/apps/clientApi';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/utils/firehose';
 import {makeEnum} from '@cdo/apps/utils';
 
 import {changeInterfaceMode} from '../actions';

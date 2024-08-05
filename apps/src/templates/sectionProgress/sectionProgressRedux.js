@@ -1,11 +1,11 @@
 import _ from 'lodash';
 
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import {SET_SCRIPT} from '@cdo/apps/redux/unitSelectionRedux';
 import {trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
 
-import firehoseClient from '../../lib/util/firehose';
+import firehoseClient from '../../metrics/utils/firehose';
 import {lessonHasLevels} from '../progress/progressHelpers';
 
 import {ViewType} from './sectionProgressConstants';

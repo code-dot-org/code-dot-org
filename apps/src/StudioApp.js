@@ -16,8 +16,8 @@ import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/utils/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {
@@ -43,6 +43,7 @@ import SmallFooter from './code-studio/components/SmallFooter';
 import project from './code-studio/initApp/project';
 import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {closeWorkspaceAlert} from './code-studio/projectRedux';
+import {isEditWhileRun} from './code-studio/tools/jsdebugger/redux';
 import {
   KeyCodes,
   TestResults,
@@ -59,10 +60,9 @@ import {
   configCircuitPlayground,
   configMicrobit,
 } from './lib/kits/maker/dropletConfig';
-import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
 import WireframeButtons from './lib/ui/WireframeButtons';
-import firehoseClient from './lib/util/firehose';
+import firehoseClient from './metrics/utils/firehose';
 import puzzleRatingUtils from './puzzleRatingUtils';
 import {getStore} from './redux';
 import {
@@ -93,7 +93,7 @@ import trackEvent from './util/trackEvent';
 import * as utils from './utils';
 import {parseElement as parseXmlElement} from './xml';
 
-var codegen = require('./lib/tools/jsinterpreter/codegen');
+var codegen = require('./code-studio/tools/jsinterpreter/codegen');
 
 var copyrightStrings;
 

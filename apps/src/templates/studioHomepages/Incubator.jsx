@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 
 import DCDO from '@cdo/apps/dcdo';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';

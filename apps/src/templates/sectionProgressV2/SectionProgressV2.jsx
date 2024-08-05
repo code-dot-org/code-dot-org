@@ -4,8 +4,8 @@ import {connect} from 'react-redux';
 
 import {Heading1, Heading6} from '@cdo/apps/componentLibrary/typography';
 import DCDO from '@cdo/apps/dcdo';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import {unitDataPropType} from '../sectionProgress/sectionProgressConstants';

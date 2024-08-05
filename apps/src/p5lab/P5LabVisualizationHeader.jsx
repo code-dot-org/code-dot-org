@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/utils/firehose';
 import styleConstants from '@cdo/apps/styleConstants';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import color from '@cdo/apps/util/color';

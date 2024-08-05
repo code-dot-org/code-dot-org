@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {PLATFORMS} from '@cdo/apps/metrics/utils/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
 import {beginEditingSection} from '../teacherDashboard/teacherSectionsRedux';

@@ -2,9 +2,9 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
+import firehoseClient from '@cdo/apps/metrics/utils/firehose';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 import {
   SELECT_A_SCHOOL,

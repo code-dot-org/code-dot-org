@@ -7,7 +7,7 @@ import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import LtiSectionSyncDialog, {
   LtiSectionSyncResultShape,
 } from '@cdo/apps/lib/ui/simpleSignUp/lti/sync/LtiSectionSyncDialog';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/utils/firehose';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';

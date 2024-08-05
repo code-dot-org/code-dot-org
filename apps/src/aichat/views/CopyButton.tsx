@@ -3,8 +3,8 @@ import {useSelector} from 'react-redux';
 
 import {selectAllMessages} from '@cdo/apps/aichat/redux/aichatRedux';
 import Button from '@cdo/apps/componentLibrary/button/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 

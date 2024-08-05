@@ -8,8 +8,8 @@ import {
   BodyTwoText,
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
 import i18n from '@cdo/locale';
 

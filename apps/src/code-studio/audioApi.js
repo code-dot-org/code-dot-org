@@ -4,7 +4,11 @@ import AzureTextToSpeech from '@cdo/apps/AzureTextToSpeech';
 import Sounds from '@cdo/apps/Sounds';
 import i18n from '@cdo/locale';
 
-import {apiValidateType, OPTIONAL, outputWarning} from './javascriptMode';
+import {
+  apiValidateType,
+  OPTIONAL,
+  outputWarning,
+} from '../lib/util/javascriptMode';
 
 /**
  * Inject an executeCmd method so this mini-library can be used in both

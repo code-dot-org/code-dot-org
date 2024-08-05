@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/utils/firehose';
 import i18n from '@cdo/locale';
 
 // This min length is configured in user.rb with validates_length_of :password

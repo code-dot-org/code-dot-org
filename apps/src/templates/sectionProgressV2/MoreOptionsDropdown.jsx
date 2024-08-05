@@ -4,8 +4,8 @@ import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 
 import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 

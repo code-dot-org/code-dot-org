@@ -4,12 +4,12 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
-import firehoseClient from '../../../lib/util/firehose';
+import firehoseClient from '../../../metrics/utils/firehose';
 
 import {CreateStandardsReportDialog} from './CreateStandardsReportDialog';
 import LessonStatusDialog from './LessonStatusDialog';

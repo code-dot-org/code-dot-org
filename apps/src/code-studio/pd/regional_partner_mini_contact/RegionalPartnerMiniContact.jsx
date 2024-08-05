@@ -5,8 +5,8 @@ import {Modal, FormGroup, Button, ControlLabel} from 'react-bootstrap'; // eslin
 import Select from 'react-select';
 
 import 'react-select/dist/react-select.css';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import color from '@cdo/apps/util/color';
 
 import {SelectStyleProps} from '../constants';

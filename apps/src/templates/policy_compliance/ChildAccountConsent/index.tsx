@@ -10,8 +10,8 @@ import {
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import i18n from '@cdo/locale';
 import './index.scss';
 

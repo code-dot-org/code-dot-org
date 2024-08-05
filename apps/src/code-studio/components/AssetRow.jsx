@@ -2,7 +2,7 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/utils/firehose';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 

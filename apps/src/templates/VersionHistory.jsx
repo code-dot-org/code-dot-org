@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import project from '@cdo/apps/code-studio/initApp/project';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/utils/firehose';
 import i18n from '@cdo/locale';
 
 import {sources as sourcesApi, files as filesApi} from '../clientApi';

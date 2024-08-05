@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import logToCloud from '@cdo/apps/logToCloud';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
@@ -14,7 +14,7 @@ import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import i18n from '@cdo/locale';
 
 import {h3Style} from '../../lib/ui/Headings';
-import firehoseClient from '../../lib/util/firehose';
+import firehoseClient from '../../metrics/utils/firehose';
 
 import LessonSelector from './LessonSelector';
 import ProgressViewHeader from './ProgressViewHeader';

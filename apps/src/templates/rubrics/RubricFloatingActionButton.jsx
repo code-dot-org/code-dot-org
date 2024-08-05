@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import React, {useEffect, useMemo, useState} from 'react';
 import {connect} from 'react-redux';
 
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import {selectedSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import aiFabIcon from '@cdo/static/ai-bot-centered-teal.png';

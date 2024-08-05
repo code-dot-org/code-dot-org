@@ -6,7 +6,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
-import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
+import JsDebugger from '@cdo/apps/code-studio/tools/jsdebugger/JsDebugger';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
 import i18n from '@cdo/locale';

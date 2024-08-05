@@ -5,8 +5,8 @@ import {connect} from 'react-redux';
 
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import fontConstants from '@cdo/apps/fontConstants';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import * as p5labConstants from '@cdo/apps/p5lab/constants';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';

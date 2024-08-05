@@ -4,8 +4,8 @@ import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import color from '@cdo/apps/util/color';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';

@@ -1,6 +1,6 @@
+import {commands as audioCommands} from '@cdo/apps/code-studio/audioApi';
+import CustomMarshalingInterpreter from '@cdo/apps/code-studio/tools/jsinterpreter/CustomMarshalingInterpreter';
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
-import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 
 import {ASSET_BASE} from '../constants';
 import * as danceMsg from '../locale';

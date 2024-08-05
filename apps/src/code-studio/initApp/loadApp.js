@@ -9,8 +9,8 @@ import PlayZone from '@cdo/apps/code-studio/components/playzone';
 import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import * as imageUtils from '@cdo/apps/imageUtils';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import msg from '@cdo/locale';
 
 import getScriptData from '../../util/getScriptData';

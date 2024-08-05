@@ -2,7 +2,7 @@
  * Contains firehose tracking for buttons on the student privacy page.
  */
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/utils/firehose';
 
 $(document).ready(function () {
   $('#share_on_remind').click(function () {

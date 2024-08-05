@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import {RootState} from '@cdo/apps/types/redux';
 import i18n from '@cdo/locale';
 

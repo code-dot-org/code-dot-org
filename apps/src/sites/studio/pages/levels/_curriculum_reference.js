@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {onContinue} from '@cdo/apps/code-studio/levels/postOnContinue';
-import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/utils/analyticsUtils';
 import ReferenceGuide from '@cdo/apps/templates/referenceGuides/ReferenceGuide';
 import getScriptData from '@cdo/apps/util/getScriptData';
 

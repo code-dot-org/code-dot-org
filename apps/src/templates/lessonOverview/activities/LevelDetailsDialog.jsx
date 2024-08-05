@@ -9,7 +9,7 @@ import SublevelCard from '@cdo/apps/code-studio/components/SublevelCard';
 import {createVideoWithFallback} from '@cdo/apps/code-studio/videos';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/utils/firehose';
 import styleConstants from '@cdo/apps/styleConstants';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import TeacherOnlyMarkdown from '@cdo/apps/templates/instructions/TeacherOnlyMarkdown';

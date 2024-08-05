@@ -1,7 +1,7 @@
 // TODO: The client API should be instantiated with the channel ID, instead of grabbing it from the `dashboard.project` global.
 import queryString from 'query-string';
 
-import firehoseClient from './lib/util/firehose';
+import firehoseClient from './metrics/utils/firehose';
 
 function project() {
   return require('./code-studio/initApp/project');

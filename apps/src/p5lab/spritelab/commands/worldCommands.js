@@ -1,4 +1,4 @@
-import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
+import {commands as audioCommands} from '@cdo/apps/code-studio/audioApi';
 import {getStore} from '@cdo/apps/redux';
 
 import {

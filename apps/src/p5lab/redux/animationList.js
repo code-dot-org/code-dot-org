@@ -16,7 +16,7 @@ import {
   blobToDataURI,
   dataURIToSourceSize,
 } from '@cdo/apps/imageUtils';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import firehoseClient from '@cdo/apps/metrics/utils/firehose';
 import trackEvent from '@cdo/apps/util/trackEvent';
 import {createUuid} from '@cdo/apps/utils';
 

@@ -15,7 +15,7 @@ import {
   LegacyStartOverDialog,
   LegacyInstructionsDialog,
 } from '@cdo/apps/lib/ui/LegacyDialogContents';
-import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/metrics/utils/analyticsUtils';
 import i18n from '@cdo/locale';
 
 export function showInstructionsDialog() {
