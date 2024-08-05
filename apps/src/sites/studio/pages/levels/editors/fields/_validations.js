@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import EditValidations from '@cdo/apps/lab2/levelEditors/validations/EditValidations';
 import getScriptData from '@cdo/apps/util/getScriptData';
@@ -12,12 +12,13 @@ $(document).ready(function () {
   const appName = document.querySelector('script[data-levelname]').dataset
     .appname;
 
-  ReactDOM.render(
+  const root = createRoot(document.getElementById('validations-container'));
+
+  root.render(
     <EditValidations
       initialValidations={validations}
       levelName={levelName}
       appName={appName}
-    />,
-    document.getElementById('validations-container')
+    />
   );
 });

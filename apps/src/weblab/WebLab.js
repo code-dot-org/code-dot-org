@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import project from '@cdo/apps/code-studio/initApp/project';
@@ -239,7 +239,9 @@ WebLab.prototype.init = function (config) {
     }
   }
 
-  ReactDOM.render(
+  const root = createRoot(document.getElementById(config.containerId));
+
+  root.render(
     <Provider store={getStore()}>
       <WebLabView
         onAddFileHTML={onAddFileHTML.bind(this)}
@@ -253,8 +255,7 @@ WebLab.prototype.init = function (config) {
         onToggleInspector={this.onToggleInspector.bind(this)}
         onMount={() => this.onMount(config)}
       />
-    </Provider>,
-    document.getElementById(config.containerId)
+    </Provider>
   );
 
   window.addEventListener('beforeunload', this.beforeUnload.bind(this));

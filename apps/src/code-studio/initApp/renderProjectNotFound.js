@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import msg from '@cdo/locale';
 
@@ -19,7 +19,8 @@ export function ProjectNotFoundAlert() {
 }
 
 export default () => {
-  ReactDOM.render(<ProjectNotFoundAlert />, document.getElementById('codeApp'));
+  const root = createRoot(document.getElementById('codeApp'));
+  root.render(<ProjectNotFoundAlert />);
 };
 
 const styles = {

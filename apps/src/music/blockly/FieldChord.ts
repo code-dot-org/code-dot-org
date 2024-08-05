@@ -1,6 +1,6 @@
 import GoogleBlockly, {BlockSvg, DropDownDiv, Field} from 'blockly/core';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import {ChordEventValue} from '../player/interfaces/ChordEvent';
 import MusicLibrary from '../player/MusicLibrary';
@@ -190,14 +190,15 @@ export default class FieldChord extends Field {
       return;
     }
 
-    ReactDOM.render(
+    const root = createRoot(this.newDiv);
+
+    root.render(
       React.createElement<ChordPanelProps>(ChordPanel, {
         library: this.options.getLibrary(),
         initValue: this.getValue(),
         onChange: this.onValueChange,
         ...this.options,
-      }),
-      this.newDiv
+      })
     );
   }
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import {getStore, registerReducers} from '@cdo/apps/redux';
@@ -28,10 +28,11 @@ $(document).ready(function () {
   store.dispatch(updateTableRecords(tableName, dataset.records));
   store.dispatch(updateTableColumns(tableName, dataset.columns));
 
-  ReactDOM.render(
+  const root = createRoot(document.querySelector('.dataset'));
+
+  root.render(
     <Provider store={store}>
       <Dataset isLive={isLive} />
-    </Provider>,
-    document.querySelector('.dataset')
+    </Provider>
   );
 });

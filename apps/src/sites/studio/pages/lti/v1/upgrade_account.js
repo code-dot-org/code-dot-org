@@ -5,7 +5,7 @@
  * @see upgrade_account.html.haml.
  */
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import LtiUpgradeAccountDialog from '@cdo/apps/lib/ui/simpleSignUp/lti/upgrade/LtiUpgradeAccountDialog';
 import getScriptData from '@cdo/apps/util/getScriptData';
@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
     window.location.href = formData.destination_url;
   };
 
-  ReactDOM.render(
-    <LtiUpgradeAccountDialog isOpen formData={formData} onClose={onClose} />,
-    mountPoint
+  const root = createRoot(mountPoint);
+  root.render(
+    <LtiUpgradeAccountDialog isOpen formData={formData} onClose={onClose} />
   );
 });

@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import queryString from 'query-string';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -50,7 +50,9 @@ $(document).ready(function () {
       courseNames: certificateData.map(data => data.courseName),
     });
 
-  ReactDOM.render(
+  const root = createRoot(document.getElementById('congrats-container'));
+
+  root.render(
     <Provider store={store}>
       <Congrats
         certificateId={certificateId}
@@ -71,7 +73,6 @@ $(document).ready(function () {
         nextCourseDesc={nextCourseDesc}
         curriculumUrl={curriculumUrl}
       />
-    </Provider>,
-    document.getElementById('congrats-container')
+    </Provider>
   );
 });

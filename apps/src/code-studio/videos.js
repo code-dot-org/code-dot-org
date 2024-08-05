@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import videojs from 'video.js';
 
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -588,9 +588,7 @@ function showFallbackPlayerCaptionLink(inDialog) {
     'fallback-player-caption-dialog-link'
   );
   if (mountPoint) {
-    ReactDOM.render(
-      <FallbackPlayerCaptionDialogLink inDialog={inDialog} />,
-      mountPoint
-    );
+    const root = createRoot(mountPoint);
+    root.render(<FallbackPlayerCaptionDialogLink inDialog={inDialog} />);
   }
 }

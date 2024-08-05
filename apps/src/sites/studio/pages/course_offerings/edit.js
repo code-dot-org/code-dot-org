@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import CourseOfferingEditor from '@cdo/apps/lib/levelbuilder/CourseOfferingEditor';
 import getScriptData from '@cdo/apps/util/getScriptData';
@@ -19,13 +19,14 @@ function showCourseOfferingEditor() {
 
   const videos = getScriptData('videos');
 
-  ReactDOM.render(
+  const root = createRoot(document.getElementById('course_offering_editor'));
+
+  root.render(
     <CourseOfferingEditor
       initialCourseOffering={courseOfferingEditorData}
       selfPacedPLCourseOfferings={selfPacedPLCourseOfferings}
       professionalLearningProgramPaths={professionalLearningProgramPaths}
       videos={videos}
-    />,
-    document.getElementById('course_offering_editor')
+    />
   );
 }

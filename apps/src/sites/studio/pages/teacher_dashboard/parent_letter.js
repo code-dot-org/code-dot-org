@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import ParentLetter from '@cdo/apps/lib/ui/ParentLetter';
@@ -41,10 +41,11 @@ window.addEventListener('DOMContentLoaded', function () {
   // Mount and render the letter:
   const mountPoint = document.createElement('div');
   document.body.appendChild(mountPoint);
-  ReactDOM.render(
+  const root = createRoot(mountPoint);
+
+  root.render(
     <Provider store={store}>
       <ParentLetter autoPrint logoUrl={scriptData.logoUrl} />
-    </Provider>,
-    mountPoint
+    </Provider>
   );
 });

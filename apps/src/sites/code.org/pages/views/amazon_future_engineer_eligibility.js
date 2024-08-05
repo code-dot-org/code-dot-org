@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -29,7 +29,9 @@ function showAmazonFutureEngineerEligibility() {
 
       amazonFutureEngineerEligibilityElements.each(
         (index, amazonFutureEngineerEligibilityElement) => {
-          ReactDOM.render(
+          const root = createRoot(amazonFutureEngineerEligibilityElement);
+
+          root.render(
             <AmazonFutureEngineerEligibility
               signedIn={signedIn}
               schoolId={accountInformation.nces_school_id || ''}
@@ -38,8 +40,7 @@ function showAmazonFutureEngineerEligibility() {
               isStudentAccount={
                 accountInformation.user_type === 'student' ? true : false
               }
-            />,
-            amazonFutureEngineerEligibilityElement
+            />
           );
         }
       );

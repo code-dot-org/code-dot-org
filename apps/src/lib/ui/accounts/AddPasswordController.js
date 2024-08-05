@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import AddPasswordForm from './AddPasswordForm';
 
@@ -11,10 +11,8 @@ export default class AddPasswordController {
   }
 
   renderAddPasswordForm = () => {
-    ReactDOM.render(
-      <AddPasswordForm handleSubmit={this.submitAddPassword} />,
-      this.mountPoint
-    );
+    const root = createRoot(this.mountPoint);
+    root.render(<AddPasswordForm handleSubmit={this.submitAddPassword} />);
   };
 
   submitAddPassword = (password, passwordConfirmation) => {

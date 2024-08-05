@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import ProgrammingEnvironmentEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingEnvironmentEditor';
@@ -16,7 +16,9 @@ $(document).ready(() => {
   const store = getStore();
 
   const programmingEnvironment = getScriptData('programmingEnvironment');
-  ReactDOM.render(
+  const root = createRoot(document.getElementById('edit-container'));
+
+  root.render(
     <Provider store={store}>
       <>
         <ProgrammingEnvironmentEditor
@@ -24,7 +26,6 @@ $(document).ready(() => {
         />
         <ExpandableImageDialog />
       </>
-    </Provider>,
-    document.getElementById('edit-container')
+    </Provider>
   );
 });

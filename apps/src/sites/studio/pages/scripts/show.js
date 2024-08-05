@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import announcementsReducer, {
@@ -106,7 +106,9 @@ function initPage() {
     false
   );
 
-  ReactDOM.render(
+  const root = createRoot(mountPoint);
+
+  root.render(
     <Provider store={store}>
       {parentalPermissionBannerData && (
         <ParentalPermissionBanner {...parentalPermissionBannerData} />
@@ -150,8 +152,7 @@ function initPage() {
         publishedState={scriptData.publishedState}
         participantAudience={scriptData.participantAudience}
       />
-    </Provider>,
-    mountPoint
+    </Provider>
   );
 
   tooltipifyVocabulary();

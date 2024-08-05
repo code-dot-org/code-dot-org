@@ -41,17 +41,22 @@ describe('AddResourceDialog', () => {
     expect(handleCloseSpy).not.toHaveBeenCalled();
   });
 
-  it('saves if input is valid', () => {
+  it('saves if input is valid', async () => {
     const wrapper = mount(<AddResourceDialog {...defaultProps} />);
     const instance = wrapper.instance();
-    instance.setState({
-      name: 'my resource name',
-      url: 'code.org',
-    });
+
     const saveResourceSpy = jest
       .spyOn(instance, 'saveResource')
       .mockClear()
       .mockImplementation();
+
+    await React.act(() => {
+      instance.setState({
+        name: 'my resource name',
+        url: 'code.org',
+      });
+    });
+
     instance.forceUpdate();
     wrapper.update();
     wrapper.find('#submit-button').simulate('submit');

@@ -5,7 +5,7 @@ import {
 } from '@code-dot-org/craft';
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import {getCodeBlocks} from '@cdo/apps/blockly/utils';
 import {TestResults} from '@cdo/apps/constants';
@@ -314,7 +314,9 @@ Craft.init = function (config) {
     isMinecraft: true,
   });
 
-  ReactDOM.render(
+  const root = createRoot(document.getElementById(config.containerId));
+
+  root.render(
     <Provider store={getStore()}>
       <div>
         <AppView
@@ -327,8 +329,7 @@ Craft.init = function (config) {
         />
         <PlayerSelectionDialog players={[CHARACTER_STEVE, CHARACTER_ALEX]} />
       </div>
-    </Provider>,
-    document.getElementById(config.containerId)
+    </Provider>
   );
 };
 

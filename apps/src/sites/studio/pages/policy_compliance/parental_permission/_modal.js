@@ -1,6 +1,6 @@
 import moment from 'moment';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider, useSelector} from 'react-redux';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -63,14 +63,17 @@ document.addEventListener('DOMContentLoaded', () => {
       );
     };
 
-    ReactDOM.render(
+    const root = createRoot(
+      document.getElementById('parental-permission-modal-container')
+    );
+
+    root.render(
       <Provider store={getStore()}>
         <Modal
           lockoutDate={getScriptData('lockoutDate')}
           inSection={getScriptData('inSection')}
         />
-      </Provider>,
-      document.getElementById('parental-permission-modal-container')
+      </Provider>
     );
   };
 

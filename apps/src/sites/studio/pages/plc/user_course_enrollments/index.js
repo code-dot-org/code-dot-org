@@ -1,13 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import ProfessionalLearningCourseProgress from '@cdo/apps/code-studio/pd/professional_learning_landing/ProfessionalLearningCourseProgress';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 const userCourseEnrollmentData = getScriptData('userCourseEnrollmentData');
-ReactDOM.render(
+const root = createRoot(
+  document.getElementById('user-course-enrollment-container')
+);
+
+root.render(
   <ProfessionalLearningCourseProgress
     deeperLearningCourseData={userCourseEnrollmentData}
-  />,
-  document.getElementById('user-course-enrollment-container')
+  />
 );

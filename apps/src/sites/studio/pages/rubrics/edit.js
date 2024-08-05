@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import RubricsContainer from '@cdo/apps/lib/levelbuilder/rubrics/RubricsContainer';
 import getScriptData from '@cdo/apps/util/getScriptData';
@@ -12,13 +12,14 @@ $(document).ready(() => {
     level => level.properties.submittable === 'true'
   );
 
-  ReactDOM.render(
+  const root = createRoot(document.getElementById('form'));
+
+  root.render(
     <RubricsContainer
       unitName={unitName}
       lessonNumber={lessonNumber}
       submittableLevels={submittableLevels}
       rubric={rubric}
-    />,
-    document.getElementById('form')
+    />
   );
 });

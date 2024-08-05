@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import {getStore} from '@cdo/apps/redux';
@@ -8,7 +8,9 @@ import LockoutPanel from '@cdo/apps/templates/sessions/LockoutPanel';
 
 $(document).ready(function () {
   const element = document.getElementById('lockout-container');
-  ReactDOM.render(
+  const root = createRoot(element);
+
+  root.render(
     <Provider store={getStore()}>
       <LockoutPanel
         apiURL={element.getAttribute('data-api-url')}
@@ -23,7 +25,6 @@ $(document).ready(function () {
         permissionStatus={element.getAttribute('data-permission-status')}
         inSection={'true' === element.getAttribute('data-in-section')}
       />
-    </Provider>,
-    element
+    </Provider>
   );
 });

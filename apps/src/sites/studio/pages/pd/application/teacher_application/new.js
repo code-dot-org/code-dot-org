@@ -1,12 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplication';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 document.addEventListener('DOMContentLoaded', function (event) {
-  ReactDOM.render(
-    <TeacherApplication {...getScriptData('props')} />,
-    document.getElementById('application-container')
-  );
+  const root = createRoot(document.getElementById('application-container'));
+  root.render(<TeacherApplication {...getScriptData('props')} />);
 });

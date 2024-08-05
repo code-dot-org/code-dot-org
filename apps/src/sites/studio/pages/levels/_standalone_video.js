@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
-import ReactDom from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {onContinue} from '@cdo/apps/code-studio/levels/postOnContinue';
@@ -65,10 +65,8 @@ $(document).ready(() => {
       return;
     }
 
-    ReactDom.render(
-      React.createElement(SafeMarkdown, container.dataset, null),
-      container
-    );
+    const root = createRoot(container);
+    root.render(React.createElement(SafeMarkdown, container.dataset, null));
   });
 
   // Do some dynamic sizing of full width videos.

@@ -258,7 +258,10 @@ describe('RubricSettings', () => {
 
     stubFetchEvalStatusForAll(onePending);
 
-    wrapper.find('button.uitest-run-ai-assessment-all').simulate('click');
+    React.act(() => {
+      wrapper.find('button.uitest-run-ai-assessment-all').simulate('click');
+    });
+    wrapper.update();
 
     status = wrapper.find('BodyTwoText.uitest-eval-status-all-text');
     expect(status.text()).to.include(i18n.aiEvaluationStatus_pending());
@@ -291,7 +294,10 @@ describe('RubricSettings', () => {
     // Next time it asks, we have no unevaluated as a status
     stubFetchEvalStatusForAll(noUnevaluated);
 
-    wrapper.find('Button').first().simulate('click');
+    React.act(() => {
+      wrapper.find('Button').first().simulate('click');
+    });
+    wrapper.update();
 
     //sends event on click
     expect(sendEventSpy).to.have.been.calledWith(

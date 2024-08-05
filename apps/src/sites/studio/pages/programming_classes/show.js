@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import {getStore, registerReducers} from '@cdo/apps/redux';
@@ -30,7 +30,9 @@ $(document).ready(() => {
   const currentCategoryKey = hasScriptData('currentCategoryKey')
     ? getScriptData('currentCategoryKey')
     : null;
-  ReactDOM.render(
+  const root = createRoot(document.getElementById('show-container'));
+
+  root.render(
     <Provider store={store}>
       <>
         <PageContainer
@@ -46,7 +48,6 @@ $(document).ready(() => {
         </PageContainer>
         <ExpandableImageDialog />
       </>
-    </Provider>,
-    document.getElementById('show-container')
+    </Provider>
   );
 });

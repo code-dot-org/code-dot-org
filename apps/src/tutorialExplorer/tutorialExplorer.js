@@ -7,7 +7,7 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {StickyContainer} from 'react-sticky';
 
 import fontConstants from '@cdo/apps/fontConstants';
@@ -855,7 +855,9 @@ window.TutorialExplorerManager = function (options) {
     : TutorialsSortByOptions.displayweight;
 
   this.renderToElement = function (element) {
-    ReactDOM.render(
+    const root = createRoot(element);
+
+    root.render(
       <TutorialExplorer
         tutorials={options.tutorials}
         filterGroups={filters}
@@ -865,8 +867,7 @@ window.TutorialExplorerManager = function (options) {
         showSortDropdown={options.showSortDropdown}
         disabledTutorials={options.disabledTutorials}
         defaultSortBy={defaultSortBy}
-      />,
-      element
+      />
     );
   };
 };

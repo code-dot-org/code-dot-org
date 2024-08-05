@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import announcementReducer, {
@@ -77,8 +77,9 @@ function showCourseOverview() {
     );
   }
 
-  // Eventually we want to do this all via redux
-  ReactDOM.render(
+  const root = createRoot(document.getElementById('course_overview'));
+
+  root.render(
     <Provider store={store}>
       <CourseOverview
         name={courseSummary.name}
@@ -105,8 +106,8 @@ function showCourseOverview() {
         userType={scriptData.user_type}
         participantAudience={courseSummary.participant_audience}
       />
-    </Provider>,
-    document.getElementById('course_overview')
+    </Provider>
   );
+
   tooltipifyVocabulary();
 }

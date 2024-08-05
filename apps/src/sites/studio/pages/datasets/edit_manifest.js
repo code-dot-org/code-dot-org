@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
@@ -13,12 +13,14 @@ $(document).ready(function () {
   registerReducers({data});
   const store = getStore();
   store.dispatch(setLibraryManifest(manifest));
-  ReactDOM.render(
+  const root = createRoot(document.querySelector('.manifest_editor'));
+
+  root.render(
     <Provider store={store}>
       <ManifestEditor />
-    </Provider>,
-    document.querySelector('.manifest_editor')
+    </Provider>
   );
+
   const codeMirrorArea = document.getElementsByTagName('textarea')[0];
   initializeCodeMirror(codeMirrorArea, 'application/json', {
     callback: onChange,

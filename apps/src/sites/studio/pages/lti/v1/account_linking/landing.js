@@ -5,7 +5,7 @@
  * @see landing.html.haml.
  */
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import LtiLinkAccountPage from '@cdo/apps/lib/ui/simpleSignUp/lti/link/LtiLinkAccountPage';
 import {LtiProviderContext} from '@cdo/apps/lib/ui/simpleSignUp/lti/link/LtiLinkAccountPage/context';
@@ -34,10 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
     userType,
   };
 
-  ReactDOM.render(
+  const root = createRoot(mountPoint);
+
+  root.render(
     <LtiProviderContext.Provider value={ltiProviderContext}>
       <LtiLinkAccountPage />
-    </LtiProviderContext.Provider>,
-    mountPoint
+    </LtiProviderContext.Provider>
   );
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import {showShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
@@ -27,11 +27,12 @@ export function shareLab2Project(shareUrl) {
       dialogDom.setAttribute('id', PROJECT_SHARE_DIALOG_ID);
       document.body.appendChild(dialogDom);
     }
-    ReactDOM.render(
+    const root = createRoot(dialogDom);
+
+    root.render(
       <Provider store={getStore()}>
         <Lab2ShareDialogWrapper shareUrl={shareUrl} />
-      </Provider>,
-      dialogDom
+      </Provider>
     );
 
     getStore().dispatch(showShareDialog());

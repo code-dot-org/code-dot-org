@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import ProgrammingClassEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingClassEditor';
@@ -17,7 +17,9 @@ $(document).ready(() => {
   const programmingClass = getScriptData('programmingClass');
   const environmentCategories = getScriptData('environmentCategories');
   const videoOptions = getScriptData('videoOptions');
-  ReactDOM.render(
+  const root = createRoot(document.getElementById('edit-container'));
+
+  root.render(
     <Provider store={store}>
       <>
         <ProgrammingClassEditor
@@ -27,7 +29,6 @@ $(document).ready(() => {
         />
         <ExpandableImageDialog />
       </>
-    </Provider>,
-    document.getElementById('edit-container')
+    </Provider>
   );
 });

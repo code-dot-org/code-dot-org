@@ -2,6 +2,7 @@ import $ from 'jquery';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
+import {flushSync} from 'react-dom';
 import {connect} from 'react-redux';
 
 import {
@@ -107,15 +108,23 @@ function LessonLockDialog({
       handleClose();
     } else {
       saveLockStateResponse.json().then(json => {
-        setSaving(false);
+        // opt out of automatic batching due to conflict with useEffect
+        // see: https://github.com/reactwg/react-18/discussions/21
+        flushSync(() => {
+          setSaving(false);
+        });
         if (json.error) {
-          setError(
-            i18n.errorSavingLockStatusWithMessage({
-              errorMessage: json.error,
-            })
-          );
+          flushSync(() => {
+            setError(
+              i18n.errorSavingLockStatusWithMessage({
+                errorMessage: json.error,
+              })
+            );
+          });
         } else {
-          setError(i18n.errorSavingLockStatus());
+          flushSync(() => {
+            setError(i18n.errorSavingLockStatus());
+          });
         }
       });
     }

@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import {getStore} from '@cdo/apps/redux';
@@ -556,7 +556,9 @@ export default class Craft {
       });
     };
 
-    ReactDOM.render(
+    const root = createRoot(document.getElementById(config.containerId));
+
+    root.render(
       <Provider store={getStore()}>
         <AppView
           visualizationColumn={
@@ -564,8 +566,7 @@ export default class Craft {
           }
           onMount={onMount}
         />
-      </Provider>,
-      document.getElementById(config.containerId)
+      </Provider>
     );
   }
 

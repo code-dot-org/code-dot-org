@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
@@ -18,7 +18,9 @@ export function renderTeacherPanel(
   const div = document.createElement('div');
   div.setAttribute('id', 'teacher-panel-container');
 
-  ReactDOM.render(
+  const root = createRoot(div);
+
+  root.render(
     <Provider store={store}>
       <InstructorsOnly>
         <TeacherPanel
@@ -27,8 +29,8 @@ export function renderTeacherPanel(
           scriptId={scriptId}
         />
       </InstructorsOnly>
-    </Provider>,
-    div
+    </Provider>
   );
+
   document.body.appendChild(div);
 }

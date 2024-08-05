@@ -3,7 +3,7 @@
  *           current shard.
  */
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import i18n from '@cdo/netsim/locale';
 
@@ -243,7 +243,9 @@ NetSimRouterLogModal.prototype.render = function () {
       message: entry.getMessageAscii(),
     })
   );
-  ReactDOM.render(
+  const root = createRoot(this.rootDiv_[0]);
+
+  root.render(
     <NetSimLogBrowser
       isOpen={this.isVisible()}
       handleClose={this.hide.bind(this)}
@@ -259,8 +261,7 @@ NetSimRouterLogModal.prototype.render = function () {
       senderNames={this.uniqueSenderNames_}
       renderedRowLimit={MAXIMUM_ROWS_IN_FULL_RENDER}
       teacherView={this.teacherView_}
-    />,
-    this.rootDiv_[0]
+    />
   );
 };
 

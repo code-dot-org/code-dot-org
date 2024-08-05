@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {onContinue} from '@cdo/apps/code-studio/levels/postOnContinue';
@@ -18,12 +18,13 @@ $(document).ready(() => {
 
   if (refGuideElement) {
     const referenceGuide = getScriptData('referenceGuide');
-    ReactDOM.render(
+    const root = createRoot(refGuideElement);
+
+    root.render(
       <>
         <h1>{referenceGuide.display_name}</h1>
         <ReferenceGuide referenceGuide={referenceGuide} />
-      </>,
-      refGuideElement
+      </>
     );
   }
 

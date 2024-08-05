@@ -7,7 +7,7 @@ import {
 import Hammer from 'hammerjs';
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import {getCodeBlocks} from '@cdo/apps/blockly/utils';
@@ -400,7 +400,9 @@ export default class Craft {
       hideRunButton: config.level.specialLevelType === 'agentSpawn',
     });
 
-    ReactDOM.render(
+    const root = createRoot(document.getElementById(config.containerId));
+
+    root.render(
       <Provider store={getStore()}>
         <div>
           <AppView
@@ -413,8 +415,7 @@ export default class Craft {
           />
           <PlayerSelectionDialog players={[CHARACTER_STEVE, CHARACTER_ALEX]} />
         </div>
-      </Provider>,
-      document.getElementById(config.containerId)
+      </Provider>
     );
   }
 

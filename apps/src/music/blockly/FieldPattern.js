@@ -1,6 +1,6 @@
 import GoogleBlockly from 'blockly/core';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
@@ -104,7 +104,9 @@ class FieldPattern extends GoogleBlockly.Field {
       return;
     }
 
-    ReactDOM.render(
+    const root = createRoot(this.newDiv_);
+
+    root.render(
       <PatternPanel
         library={this.options.getLibrary()}
         initValue={this.getValue()}
@@ -112,8 +114,7 @@ class FieldPattern extends GoogleBlockly.Field {
           this.setValue(value);
         }}
         {...this.options}
-      />,
-      this.newDiv_
+      />
     );
   }
 

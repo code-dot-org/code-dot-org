@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import SectionsSetUpContainer from '@cdo/apps/templates/sectionsRefresh/SectionsSetUpContainer';
 import getScriptData from '@cdo/apps/util/getScriptData';
@@ -9,12 +9,13 @@ $(document).ready(() => {
   const canEnableAITutor = getScriptData('canEnableAITutor');
   const userCountry = getScriptData('userCountry');
 
-  ReactDOM.render(
+  const root = createRoot(document.getElementById('form'));
+
+  root.render(
     <SectionsSetUpContainer
       isUsersFirstSection={isUsersFirstSection}
       canEnableAITutor={canEnableAITutor}
       userCountry={userCountry}
-    />,
-    document.getElementById('form')
+    />
   );
 });

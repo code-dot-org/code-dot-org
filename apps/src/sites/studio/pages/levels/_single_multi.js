@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
@@ -13,13 +13,14 @@ $(document).ready(() => {
     const container = this;
     const store = getStore();
 
-    ReactDOM.render(
+    const root = createRoot(container);
+
+    root.render(
       <Provider store={store}>
         <InstructorsOnly>
           <SummaryEntryPoint scriptData={getScriptData('summaryinfo')} />
         </InstructorsOnly>
-      </Provider>,
-      container
+      </Provider>
     );
   });
 });

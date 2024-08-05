@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import commonMsg from '@cdo/locale';
 
@@ -111,13 +111,15 @@ function showConfirmationDialog(config) {
     '</p>';
 
   const buttons = document.createElement('div');
-  ReactDOM.render(
+  const root = createRoot(buttons);
+
+  root.render(
     <DialogButtons
       confirmText={commonMsg.dialogOK()}
       cancelText={commonMsg.dialogCancel()}
-    />,
-    buttons
+    />
   );
+
   contentDiv.appendChild(buttons);
 
   const dialog = studioApp.createModalDialog({

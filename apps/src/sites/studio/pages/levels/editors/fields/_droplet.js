@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
 import DropletPaletteSelector from '@cdo/apps/lib/levelbuilder/level-editor/DropletPaletteSelector';
@@ -31,13 +31,16 @@ Object.keys(fieldConfig).forEach(key => {
 });
 
 if (data.original_palette && !fieldConfig.codeFunctions.hideWhen) {
-  ReactDOM.render(
-    <DropletPaletteSelector
-      palette={data.original_palette}
-      editor={fieldConfig.codeFunctions.editor}
-    />,
+  const root = createRoot(
     $('<div></div>')
       .insertAfter(`label[for="${fieldConfig.codeFunctions.codemirror}"]`)
       .get(0)
+  );
+
+  root.render(
+    <DropletPaletteSelector
+      palette={data.original_palette}
+      editor={fieldConfig.codeFunctions.editor}
+    />
   );
 }

@@ -1,11 +1,10 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDom from 'react-dom';
+import {createRoot} from 'react-dom/client';
 
 import commonBlocks from '@cdo/apps/blocksCommon';
 import assetUrl from '@cdo/apps/code-studio/assetUrl';
 import logToCloud from '@cdo/apps/logToCloud';
-import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 
@@ -50,14 +49,7 @@ $(document).ready(() => {
       return;
     }
 
-    ReactDom.render(
-      React.createElement(SafeMarkdown, container.dataset, null),
-      container,
-      function () {
-        // After the Markdown is rendered, render any Blockly blocks defined in
-        // <xml> blocks.
-        convertXmlToBlockly(container);
-      }
-    );
+    const root = createRoot(container);
+    root.render(React.createElement(SafeMarkdown, container.dataset, null));
   });
 });

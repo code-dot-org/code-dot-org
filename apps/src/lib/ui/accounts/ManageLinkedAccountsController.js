@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import {getStore, registerReducers} from '@cdo/apps/redux';
@@ -32,11 +32,12 @@ export default class ManageLinkedAccountsController {
       })
     );
 
-    ReactDOM.render(
+    const root = createRoot(mountPoint);
+
+    root.render(
       <Provider store={store}>
         <ManageLinkedAccounts />
-      </Provider>,
-      mountPoint
+      </Provider>
     );
   }
 }

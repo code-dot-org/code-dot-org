@@ -1,3 +1,4 @@
+import {createRoot} from 'react-dom/client';
 /**
  * @file Function that initializes a CodeMirror editor in place of a textarea.
  */
@@ -18,7 +19,6 @@ import 'codemirror/mode/javascript/javascript';
 import './vendor/codemirror.inline-attach';
 import {JSHINT} from 'jshint';
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import SafeMarkdown from '../templates/SafeMarkdown';
 
@@ -70,11 +70,12 @@ function initializeCodeMirror(target, mode, options = {}) {
     if (previewElement) {
       const originalCallback = callback;
       updatePreview = editor => {
-        ReactDOM.render(
+        const root = createRoot(previewElement);
+
+        root.render(
           React.createElement(SafeMarkdown, {
             markdown: editor.getValue(),
-          }),
-          previewElement
+          })
         );
       };
 

@@ -4,6 +4,8 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import SchoolInfoConfirmationDialog from '@cdo/apps/lib/ui/SchoolInfoConfirmationDialog';
 import SchoolInfoInterstitial from '@cdo/apps/lib/ui/SchoolInfoInterstitial';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {Body} from '@cdo/apps/templates/Dialog';
 
 import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
@@ -78,6 +80,7 @@ describe('SchoolInfoConfirmationDialog', () => {
     let stubedFetch;
 
     beforeEach(() => {
+      sinon.restore();
       stubedFetch = sinon.stub(window, 'fetch');
     });
 
@@ -102,29 +105,42 @@ describe('SchoolInfoConfirmationDialog', () => {
       );
 
       it('calls handleClickUpdate method when a user clicks the button to update school information', async () => {
-        const wrapperInstance = wrapper.instance();
-        sinon.spy(wrapperInstance, 'handleClickUpdate');
-        wrapper.setState({showSchoolInterstitial: false});
-        wrapper.find('button#update-button').simulate('click');
+        const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+        await React.act(() => {
+          wrapper.setState({showSchoolInterstitial: false});
+          wrapper.find('button#update-button').simulate('click');
+        });
 
-        expect(wrapperInstance.handleClickUpdate).to.have.been.called;
+        expect(analyticsSpy).to.have.been.calledWith(
+          EVENTS.UPDATE_SCHOOL_CLICKED,
+          {},
+          PLATFORMS.BOTH
+        );
+
         await setTimeout(() => {}, 50);
         expect(wrapper.state('showSchoolInterstitial')).to.be.true;
       });
 
       it('calls handleClickYes method when a user does not need to update school information', async () => {
+        const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
         stubedFetch.resolves();
-        const wrapperInstance = wrapper.instance();
-        const handleClickYesSpy = sinon.spy(wrapperInstance, 'handleClickYes');
-        wrapper.setState({showSchoolInterstitial: false});
-        wrapper.find('button#yes-button').simulate('click');
+        React.act(() => {
+          wrapper.setState({showSchoolInterstitial: false});
+        });
+        wrapper.update();
+        React.act(() => {
+          wrapper.find('button#yes-button').simulate('click');
+        });
 
-        expect(wrapperInstance.handleClickYes).to.have.been.called;
+        expect(analyticsSpy).to.have.been.calledWith(
+          EVENTS.CONFIRM_SCHOOL_CLICKED,
+          {},
+          PLATFORMS.BOTH
+        );
         await setTimeout(() => {}, 50);
         expect(onClose).to.have.been.called;
         await setTimeout(() => {}, 50);
         expect(wrapper.state('showSchoolInterstitial')).to.be.false;
-        handleClickYesSpy.restore();
       });
     });
   });
@@ -155,7 +171,9 @@ describe('SchoolInfoConfirmationDialog', () => {
         wrapperInstance,
         'renderSchoolInformationForm'
       );
-      wrapper.setState({showSchoolInterstitial: true});
+      React.act(() => {
+        wrapper.setState({showSchoolInterstitial: true});
+      });
 
       expect(renderSchoolInformationForm).to.have.been.called;
     });
@@ -166,7 +184,9 @@ describe('SchoolInfoConfirmationDialog', () => {
         wrapperInstance,
         'renderInitialContent'
       );
-      wrapper.setState({showSchoolInterstitial: false});
+      React.act(() => {
+        wrapper.setState({showSchoolInterstitial: false});
+      });
 
       expect(renderSchoolInfoConfirmationDialog).to.have.been.called;
     });

@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import {getStore} from '@cdo/apps/redux';
@@ -10,7 +10,9 @@ $(document).ready(function () {
   const store = getStore();
   const certificateData = getScriptData('certificate');
   const {imageAlt, imageUrl, printUrl, announcement} = certificateData;
-  ReactDOM.render(
+  const root = createRoot(document.getElementById('certificate-share'));
+
+  root.render(
     <Provider store={store}>
       <CertificateShare
         imageUrl={imageUrl}
@@ -18,7 +20,6 @@ $(document).ready(function () {
         announcement={announcement}
         imageAlt={imageAlt}
       />
-    </Provider>,
-    document.getElementById('certificate-share')
+    </Provider>
   );
 });

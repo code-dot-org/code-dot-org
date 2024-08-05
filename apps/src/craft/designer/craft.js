@@ -7,7 +7,7 @@ import Hammer from 'hammerjs';
 import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import {getCodeBlocks} from '@cdo/apps/blockly/utils';
@@ -450,7 +450,9 @@ Craft.init = function (config) {
     isMinecraft: true,
   });
 
-  ReactDOM.render(
+  const root = createRoot(document.getElementById(config.containerId));
+
+  root.render(
     <Provider store={getStore()}>
       <div>
         <AppView
@@ -469,8 +471,7 @@ Craft.init = function (config) {
           hideSubtitle
         />
       </div>
-    </Provider>,
-    document.getElementById(config.containerId)
+    </Provider>
   );
 };
 

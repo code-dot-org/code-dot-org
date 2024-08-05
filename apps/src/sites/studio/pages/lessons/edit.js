@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import reducers, {
@@ -60,7 +60,9 @@ $(document).ready(function () {
     initStandards('opportunityStandard', lessonData.opportunityStandards || [])
   );
 
-  ReactDOM.render(
+  const root = createRoot(document.getElementById('edit-container'));
+
+  root.render(
     <Provider store={store}>
       <div>
         <LessonEditor
@@ -72,7 +74,6 @@ $(document).ready(function () {
         />
         <ExpandableImageDialog />
       </div>
-    </Provider>,
-    document.getElementById('edit-container')
+    </Provider>
   );
 });

@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
-import ReactDOM from 'react-dom';
+import {createRoot} from 'react-dom/client';
 import {Provider} from 'react-redux';
 
 import MiniMusicPlayer from '@cdo/apps/music/views/MiniMusicPlayer';
@@ -11,10 +11,11 @@ $(document).ready(function () {
     document.querySelector('script[data-projects]').dataset.projects
   );
 
-  ReactDOM.render(
+  const root = createRoot(document.getElementById('musiclab-container'));
+
+  root.render(
     <Provider store={getStore()}>
       <MiniMusicPlayer projects={projects} libraryName="launch2024" />
-    </Provider>,
-    document.getElementById('musiclab-container')
+    </Provider>
   );
 });
