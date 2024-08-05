@@ -2,7 +2,7 @@ import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 
-import Popover from '@cdo/apps/componentLibrary/popover'; // Adjust the import path accordingly
+import Popover from '@cdo/apps/componentLibrary/popover';
 
 describe('Design System - Popover Component', () => {
   const mockOnClose = jest.fn();

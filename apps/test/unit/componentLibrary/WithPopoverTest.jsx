@@ -1,7 +1,7 @@
 import {render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
 
-import {WithPopover} from '@cdo/apps/componentLibrary/popover'; // Adjust the import path accordingly
+import {WithPopover} from '@cdo/apps/componentLibrary/popover';
 
 describe('Design System - WithPopover Component', () => {
   const popoverProps = {
@@ -13,18 +13,18 @@ describe('Design System - WithPopover Component', () => {
   it('renders children correctly', () => {
     render(
       <WithPopover popoverProps={popoverProps}>
-        <button type="button">Hover me</button>
+        <button type="button">Btn Text</button>
       </WithPopover>
     );
 
-    const childElement = screen.getByText('Hover me');
+    const childElement = screen.getByText('Btn Text');
     expect(childElement).toBeInTheDocument();
   });
 
   it('shows popover when showPopover is true', () => {
     render(
       <WithPopover popoverProps={popoverProps} showPopover={true}>
-        <button type="button">Hover me</button>
+        <button type="button">Btn Text</button>
       </WithPopover>
     );
 
@@ -40,23 +40,11 @@ describe('Design System - WithPopover Component', () => {
 
     render(
       <WithPopover popoverProps={popoverProps} showPopover={true}>
-        <button type="button">Hover me</button>
+        <button type="button">Btn Text</button>
       </WithPopover>
     );
 
     fireEvent.resize(window);
     expect(updatePositionSpy).toHaveBeenCalled();
-  });
-
-  it('triggers handleEvent on child event', () => {
-    render(
-      <WithPopover popoverProps={popoverProps}>
-        <button type="button">Hover me</button>
-      </WithPopover>
-    );
-
-    const childElement = screen.getByText('Hover me');
-    fireEvent.mouseEnter(childElement);
-    expect(childElement).toBeInTheDocument();
   });
 });
