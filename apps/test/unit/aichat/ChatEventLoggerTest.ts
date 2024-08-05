@@ -1,6 +1,3 @@
-import {expect} from 'chai'; // eslint-disable-line no-restricted-imports
-import sinon from 'ts-sinon';
-
 import * as aichatApi from '@cdo/apps/aichat/aichatApi';
 import ChatEventLogger from '@cdo/apps/aichat/chatEventLogger';
 import {AichatContext, ChatMessage} from '@cdo/apps/aichat/types';
@@ -9,6 +6,8 @@ import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 describe('ChatEventLogger', () => {
   let userChatMessage: ChatMessage;
   let aichatContext: AichatContext;
+  let chatEventLogger: ChatEventLogger;
+  let postLogChatEventSpy: jest.SpyInstance;
 
   beforeEach(() => {
     userChatMessage = {
@@ -22,36 +21,35 @@ describe('ChatEventLogger', () => {
       scriptId: 321,
       channelId: 'abc123',
     };
-    sinon.stub(aichatApi, 'postLogChatEvent').resolves({
-      chat_event_id: 1,
-      chat_event: userChatMessage as ChatMessage,
-    });
+    chatEventLogger = ChatEventLogger.getInstance();
+    postLogChatEventSpy = jest
+      .spyOn(aichatApi, 'postLogChatEvent')
+      .mockResolvedValue({chat_event_id: 1, chat_event: userChatMessage});
   });
 
   afterEach(() => {
-    sinon.restore();
+    postLogChatEventSpy.mockRestore();
   });
 
   it('logChatEvent calls on postLogChatEvent', async () => {
-    const chatEventLogger = ChatEventLogger.getInstance();
-    expect(chatEventLogger).to.not.be.undefined;
     chatEventLogger.logChatEvent(userChatMessage as ChatMessage, aichatContext);
-    expect(aichatApi.postLogChatEvent).to.have.been.calledOnce;
+    expect(postLogChatEventSpy).toHaveBeenCalledTimes(1);
   });
 
-  it('sendChatEvent not called when sendingInProgress is true', async () => {
-    const chatEventLogger = ChatEventLogger.getInstance();
+  it('postLogChatEvent not called when sendingInProgress is true', async () => {
     // Simulate a sending in progress state.
     chatEventLogger.setSendingInProgress(true);
     chatEventLogger.logChatEvent(userChatMessage as ChatMessage, aichatContext);
     // If sending in process is true, sendChatEvent should not be called.
-    expect(aichatApi.postLogChatEvent).to.not.have.been.calledOnce;
+    expect(postLogChatEventSpy).toHaveBeenCalledTimes(0);
   });
 
   it('postLogChatEvent called twice when logChatEvent called twice', async () => {
-    const chatEventLogger = ChatEventLogger.getInstance();
+    chatEventLogger.setSendingInProgress(false);
     chatEventLogger.logChatEvent(userChatMessage as ChatMessage, aichatContext);
+    // Simulate that response to first chat event has been received.
+    chatEventLogger.setSendingInProgress(false);
     chatEventLogger.logChatEvent(userChatMessage as ChatMessage, aichatContext);
-    expect(aichatApi.postLogChatEvent).to.have.been.calledTwice;
+    expect(postLogChatEventSpy).toHaveBeenCalledTimes(2);
   });
 });
