@@ -139,7 +139,7 @@ export default function unitSelection(state = initialState, action) {
   if (action.type === FINISHED_LOADING_COURSES) {
     return {
       ...state,
-      //isLoadingCoursesWithProgress: false,
+      isLoadingCoursesWithProgress: false,
     };
   }
 
