@@ -93,7 +93,7 @@ GRAPH
   cdo-java-7 (0.1.2)
   cdo-jemalloc (0.1.16)
     ark (>= 0.0.0)
-  cdo-mysql (0.1.71)
+  cdo-mysql (0.1.73)
     apt (>= 0.0.0)
   cdo-nginx (0.0.48)
     apt (>= 0.0.0)

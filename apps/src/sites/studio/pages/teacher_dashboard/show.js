@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
@@ -111,11 +111,9 @@ $(document).ready(function () {
   ReactDOM.render(
     <Provider store={store}>
       <Router basename={baseUrl}>
-        <Route
-          path="/"
-          component={props => (
+        <Switch>
+          <Route path="/">
             <TeacherDashboard
-              {...props}
               studioUrlPrefix={scriptData.studioUrlPrefix}
               sectionId={selectedSection.id}
               sectionName={selectedSection.name}
@@ -127,8 +125,8 @@ $(document).ready(function () {
                 selectedSection.id
               )}
             />
-          )}
-        />
+          </Route>
+        </Switch>
       </Router>
     </Provider>,
     document.getElementById('teacher-dashboard')

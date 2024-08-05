@@ -1,7 +1,7 @@
 Feature: Blocks can be dragged
 
 Scenario: Connect two blocks from toolbox
-  Given I am on "http://studio.code.org/s/20-hour/lessons/2/levels/5?noautoplay=true&blocklyVersion=google"
+  Given I am on "http://studio.code.org/s/20-hour/lessons/2/levels/5?noautoplay=true"
   When I wait for the lab page to fully load
   And I dismiss the login reminder
   And I wait to see ".blocklySvg"

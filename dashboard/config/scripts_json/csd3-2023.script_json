@@ -39,7 +39,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-06-21 21:28:44 UTC",
+    "serialized_at": "2024-08-02 22:00:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -21111,7 +21111,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "At least 2 sprites created, each with at least one property updated after creation (2).",
+      "teacher_description": "At least 2 sprites created, each with at least one property updated after creation.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -21303,7 +21303,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "At least 2 shapes, 2 sprites, and 2 lines of text are placed correctly on the screen using the coordinate system. At least 2 elements move in different ways (4).",
+      "teacher_description": "At least 2 shapes, 2 sprites, and 2 lines of text are placed correctly on the screen using the coordinate system. At least 2 elements move in different ways.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -22119,7 +22119,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Your program has conditionals to control multiple sprites’ looping behavior (6) inside the draw loop. ",
+      "teacher_description": "Your program has conditionals to control multiple sprites’ looping behavior inside the draw loop. ",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -22263,7 +22263,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Your program has conditionals to control multiple sprite interactions (7) inside the draw loop. ",
+      "teacher_description": "Your program has conditionals to control multiple sprite interactions inside the draw loop. ",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -22359,7 +22359,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "You sequenced the program well(1)  and properly separated code in and out of the draw loop (2).",
+      "teacher_description": "You sequenced the program well  and properly separated code in and out of the draw loop.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -22503,7 +22503,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "You sequenced the program well (1)  and properly separated code in and out of the draw loop (2).",
+      "teacher_description": "You sequenced the program well and properly separated code in and out of the draw loop.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -22551,7 +22551,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "You sequenced the program well(1) and and all elements on the screen appear as intended.",
+      "teacher_description": "You sequenced the program well and and all elements on the screen appear as intended.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -22827,7 +22827,7 @@
     },
     {
       "understanding": 2,
-      "teacher_description": "Your program has conditionals meant to control the player sprite’s jumping, however the sprite does not respond as expected (5). ",
+      "teacher_description": "Your program has conditionals meant to control the player sprite’s jumping, however the sprite does not respond as expected. ",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 2,
@@ -22839,7 +22839,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "Your program has conditionals to control the player sprite’s jumping (4) inside the draw loop. ",
+      "teacher_description": "Your program has conditionals to control the player sprite’s jumping inside the draw loop. ",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
