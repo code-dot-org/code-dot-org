@@ -35,7 +35,6 @@ class SectionProjectsListWithData extends Component {
   }
 
   render() {
-    console.log('WHY');
     const {studioUrlPrefix} = this.props;
     const {projectsData} = this.state;
 
