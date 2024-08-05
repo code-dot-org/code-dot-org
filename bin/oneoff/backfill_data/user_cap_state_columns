@@ -30,7 +30,7 @@ progress_bar = ProgressBar.create(total: users.count, format: update_progress_ti
 
 log_path = CDO.dir('log', 'oneoff', "user_cap_state_columns_backfill_#{Time.now.utc.strftime('%Y%m%dT%H%M%S')}.csv")
 FileUtils.mkdir_p File.dirname(log_path)
-log_csv = CSV.open(log_path, 'wb', col_sep: ';', write_headers: true, headers: %w[status user_id message])
+log_csv = CSV.open(log_path, 'w', col_sep: ';', write_headers: true, headers: %w[status user_id message])
 
 log_operation = proc do |status, user, message|
   case status
