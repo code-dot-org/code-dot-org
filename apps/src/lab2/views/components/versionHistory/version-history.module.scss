@@ -14,10 +14,7 @@
 }
 
 .versionHistoryMessage {
-  margin-top: 50px;
-  height: 100px;
-  text-align: center;
-  vertical-align: middle;
+  margin: 20px;
   font-size: 16px;
 }
 
@@ -41,4 +38,19 @@
 
 .startOverButton {
   width: 100%;
+}
+
+.versionDropdownFooter {
+  border-top: 1px solid;
+  margin-top: 8px;
+  padding: 8px;
+}
+
+.loadingVersionSpinner {
+  font-size: 32px;
+  text-align: center;
+}
+
+.versionLoadError {
+  font-size: 14px;
 }

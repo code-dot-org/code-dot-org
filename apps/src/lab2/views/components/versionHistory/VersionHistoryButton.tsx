@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React, {useState} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
@@ -84,8 +85,13 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
       {(isVersionHistoryOpen || loading || loadError) && (
         <div className={moduleStyles.versionHistoryDropdown} ref={menuRef}>
           {loading && (
-            <div className={moduleStyles.versionHistoryMessage}>
-              {lab2I18n.versionHistoryLoading()}
+            <div
+              className={classNames(
+                moduleStyles.versionHistoryMessage,
+                moduleStyles.loadingVersionSpinner
+              )}
+            >
+              <i className="fa fa-spinner fa-spin" />
             </div>
           )}
           {loadError && (
