@@ -1,0 +1,65 @@
+name 'CSA U6 Assessment q01_pilot-2025'
+
+wrong 'I only'
+wrong 'II only'
+wrong 'III only'
+right 'I and II'
+wrong 'I and III'
+
+markdown <<MARKDOWN
+Consider the following class definition
+
+```
+public class Book {
+
+  private double cost;
+  
+  public double getCost() {
+    return cost;
+  }
+
+  // There may be instance variables, constructors, and methods not shown.
+}
+```
+
+The following method appears in a class other than `Book`. It is intended to sum all the `cost` instance variables of the `Book` objects in its `ArrayList` parameter.
+
+```
+/** Precondition: bookList is not null */
+public static double getTotal(ArrayList<Book> bookList) {
+  double total = 0.0;
+  /* missing code */
+  return total;
+}
+```
+
+Which of the following can replace `/* missing code */` so the `getTotal` method works as intended?
+
+I.
+```
+for (int x = 0; x < bookList.size(); x++) {
+  total += bookList.get(x).getCost();
+}
+```
+
+II.
+```
+for (Book b : bookList) {
+  total += b.getCost();
+}
+```
+
+III.
+```
+for (Book b : bookList) {
+  total += getCost(b);
+}
+```
+MARKDOWN
+
+allow_multiple_attempts true
+teacher_markdown <<MARKDOWN
+**Option I** uses a traditional `for` loop to iterate over the elements of `bookList`. It uses the `get()` method to access each `Book` object at the specified index and then calls the `getCost()` method on that `Book` object to retrieve its cost. The cost is added to the `total` variable.
+
+**Option II** uses an enhanced `for` loop to iterate over the elements of `bookList`. It directly assigns each element to the variable `b`, which represents a `Book` object. Then, it calls the `getCost()` method on `b` to retrieve its cost and adds it to the `total` variable.
+MARKDOWN

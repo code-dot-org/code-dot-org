@@ -2,7 +2,7 @@ Feature: Complete a simple maze level
 
   Background:
     Given I am on "http://studio.code.org/reset_session"
-    Given I am on "http://studio.code.org/s/20-hour/lessons/2/levels/11?noautoplay=true&blocklyVersion=google"
+    Given I am on "http://studio.code.org/s/20-hour/lessons/2/levels/11?noautoplay=true"
     And I wait for the lab page to fully load
     And I dismiss the login reminder
     Then element ".csf-top-instructions p" has text "Ok, one last time for practice - can you solve this one using only 4 blocks?"
