@@ -31,6 +31,7 @@ export const updatePositionedElementStyles = ({
   setPositionedElementStyles,
   tailOffset,
   tailLength,
+  isPositionFixed = false,
 }: {
   nodePosition: HTMLElement | null;
   positionedElementRef: React.RefObject<HTMLDivElement | null>;
@@ -40,12 +41,13 @@ export const updatePositionedElementStyles = ({
   >;
   tailOffset: number;
   tailLength: number;
+  isPositionFixed?: boolean;
 }) => {
   if (nodePosition && positionedElementRef.current && direction !== 'none') {
     const rect = nodePosition.getBoundingClientRect();
     const tooltipRect = positionedElementRef.current.getBoundingClientRect();
-    const scrollY = window.scrollY;
-    const scrollX = window.scrollX;
+    const scrollY = isPositionFixed ? 0 : window.scrollY;
+    const scrollX = isPositionFixed ? 0 : window.scrollX;
     const textDirection = document.documentElement.dir || 'ltr'; // Default to 'ltr' if not specified
     const isLtr = textDirection === 'ltr';
 
