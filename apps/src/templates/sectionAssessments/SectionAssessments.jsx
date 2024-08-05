@@ -198,7 +198,7 @@ class SectionAssessments extends Component {
       this.props.assessmentId === ASSESSMENT_FEEDBACK_OPTION_ID;
 
     return (
-      <div>
+      <div data-testid={'assessments-tab'}>
         <div style={styles.selectors}>
           <div style={styles.unitSelection}>
             <div style={{...h3Style, ...styles.header}}>
