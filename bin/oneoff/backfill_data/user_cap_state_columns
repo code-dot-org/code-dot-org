@@ -15,16 +15,15 @@ total_failures = 0
 update_progress_title = proc {"Processed[%c/%C]: |%W| Updated: #{total_successes}; Failed: #{total_failures}; %a"}
 progress_bar = ProgressBar.create(total: users.count, format: update_progress_title.call)
 
+log_data = {'failed' => {}, 'succeeded' => {}}
 log_path = CDO.dir('log', "user_cap_state_updates_#{Time.now.utc.strftime('%Y%m%dT%H%M%S')}.json")
 FileUtils.mkdir_p File.dirname(log_path)
-File.write(log_path, '{}')
+FileUtils.touch log_path
 
 log_operation = proc do |status, user, message|
   failed = status == 'failed'
   progress_bar.log "[#{Time.now.utc.iso8601}] #{status.capitalize} to update User[#{user.id}]: #{message}".colorize(failed ? :red : :green)
 
-  log_data = JSON.load_file(log_path)
-  log_data[status] ||= {}
   log_data[status][user.id] = message
   File.write log_path, JSON.pretty_generate(log_data)
 
