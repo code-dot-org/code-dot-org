@@ -2,6 +2,7 @@ import $ from 'jquery';
 import moment from 'moment';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
+import {flushSync} from 'react-dom';
 import Select from 'react-select';
 
 import {
@@ -57,9 +58,11 @@ export default function CourseOfferingEditor(props) {
   const handleSave = (event, shouldCloseAfterSave) => {
     event.preventDefault();
 
-    setError(null);
-    setLastSaved(null);
-    setIsSaving(true);
+    flushSync(() => {
+      setError(null);
+      setLastSaved(null);
+      setIsSaving(true);
+    });
 
     $.ajax({
       url: `/course_offerings/${courseOffering.key}`,
@@ -72,13 +75,17 @@ export default function CourseOfferingEditor(props) {
         if (shouldCloseAfterSave) {
           navigateToHref(linkWithQueryParams('/'));
         } else {
-          setLastSaved(Date.now());
-          setIsSaving(false);
+          flushSync(() => {
+            setLastSaved(Date.now());
+            setIsSaving(false);
+          });
         }
       })
       .fail(error => {
-        setError(error.responseText);
-        setIsSaving(false);
+        flushSync(() => {
+          setError(error.responseText);
+          setIsSaving(false);
+        });
       });
   };
 
