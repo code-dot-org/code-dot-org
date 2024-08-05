@@ -672,6 +672,7 @@ class FilesApi < Sinatra::Base
   get %r{/v3/(animations|sources|files|libraries)/([^/]+)/([^/]+)/versions$} do |endpoint, encrypted_channel_id, filename|
     dont_cache
     content_type :json
+    return bad_request
 
     filename.downcase! if endpoint == 'files'
     begin

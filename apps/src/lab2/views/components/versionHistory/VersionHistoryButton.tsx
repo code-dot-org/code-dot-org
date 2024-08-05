@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import lab2I18n from '@cdo/apps/lab2/locale';
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
 import {commonI18n} from '@cdo/apps/types/locale';
 import useOutsideClick from '@cdo/apps/util/hooks/useOutsideClick';
@@ -25,25 +26,47 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
   updatedSourceCallback,
 }) => {
   const [isVersionHistoryOpen, setIsVersionHistoryOpen] = useState(false);
-  const menuRef = useOutsideClick<HTMLDivElement>(() =>
-    setIsVersionHistoryOpen(false)
-  );
+  const menuRef = useOutsideClick<HTMLDivElement>(() => {
+    setIsVersionHistoryOpen(false);
+    setLoadError(null);
+  });
 
   const [versionList, setVersionList] = useState<ProjectVersion[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [loadError, setLoadError] = useState<string | null>(null);
 
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const toggleVersionHistory = (
     e: React.MouseEvent<HTMLButtonElement> | React.MouseEvent<HTMLAnchorElement>
   ) => {
     setVersionList([]);
+    if (loading) {
+      return;
+    }
+    if (loadError) {
+      setLoadError(null);
+      return;
+    }
     const projectManager = Lab2Registry.getInstance().getProjectManager();
-    if (!isVersionHistoryOpen && projectManager) {
-      projectManager.getVersionList().then(versionList => {
-        setVersionList(versionList);
-        setIsVersionHistoryOpen(true);
-      });
+    if (!projectManager) {
+      setLoadError(lab2I18n.versionHistoryLoadFailure());
+      return;
+    }
+    if (!isVersionHistoryOpen) {
+      setLoading(true);
+      projectManager
+        .getVersionList()
+        .then(versionList => {
+          setIsVersionHistoryOpen(true);
+          setVersionList(versionList);
+          setLoading(false);
+        })
+        .catch(() => {
+          setLoadError(lab2I18n.versionHistoryLoadFailure());
+          setLoading(false);
+        });
     } else {
-      setIsVersionHistoryOpen(!isVersionHistoryOpen);
+      setIsVersionHistoryOpen(false);
     }
   };
 
@@ -58,14 +81,26 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
         size={'xs'}
         disabled={isReadOnly}
       />
-      {isVersionHistoryOpen && (
+      {(isVersionHistoryOpen || loading || loadError) && (
         <div className={moduleStyles.versionHistoryDropdown} ref={menuRef}>
-          <VersionHistoryDropdown
-            versionList={versionList}
-            updatedSourceCallback={updatedSourceCallback}
-            startSource={startSource}
-            closeDropdown={() => setIsVersionHistoryOpen(false)}
-          />
+          {loading && (
+            <div className={moduleStyles.versionHistoryMessage}>
+              {lab2I18n.versionHistoryLoading()}
+            </div>
+          )}
+          {loadError && (
+            <div className={moduleStyles.versionHistoryMessage}>
+              {loadError}
+            </div>
+          )}
+          {isVersionHistoryOpen && (
+            <VersionHistoryDropdown
+              versionList={versionList}
+              updatedSourceCallback={updatedSourceCallback}
+              startSource={startSource}
+              closeDropdown={() => setIsVersionHistoryOpen(false)}
+            />
+          )}
         </div>
       )}
     </>

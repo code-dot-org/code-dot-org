@@ -198,6 +198,7 @@ const LOCALE_ALIASES = {
     localeDoNotImport('@cdo/applab/locale'),
     localeDoNotImport('@cdo/codebridge/locale'),
     localeDoNotImport('@cdo/javalab/locale'),
+    localeDoNotImport('@cdo/lab2/locale'),
     localeDoNotImport('@cdo/music/locale'),
     localeDoNotImport('@cdo/netsim/locale'),
     localeDoNotImport('@cdo/regionalPartnerMiniContact/locale'),

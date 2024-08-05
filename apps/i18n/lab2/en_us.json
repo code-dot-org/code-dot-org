@@ -1,2 +1,4 @@
 {
+  "versionHistoryLoadFailure": "Sorry, we couldn't load your version history. Please try again.",
+  "versionHistoryLoading": "Loading version history..."
 }
