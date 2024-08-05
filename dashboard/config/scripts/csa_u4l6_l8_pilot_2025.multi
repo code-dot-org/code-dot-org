@@ -1,0 +1,23 @@
+name 'CSA U4L6-L8_pilot-2025'
+title 'Check for Understanding'
+
+wrong 'Either `dessert1` or `dessert2` must be `null`.'
+wrong 'Both `dessert1` and `dessert2` must be `null`.'
+wrong '`dessert1` has an overridden `equals` method.'
+right '`dessert1` and `dessert2` are aliases.'
+
+markdown <<MARKDOWN
+Assume `dessert1` and `dessert2` are object references. The following code segment is run and returns `true`.
+
+```
+dessert1 == dessert2
+```
+
+What assumptions can be made about `dessert1` and `dessert2`?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+When the `==` operator is used to compare object references, it returns `true` if both references point to the same object. Since this code segment returns `true`, it can be assumed that they both point to the same object, making them aliases.
+MARKDOWN
+
+allow_multiple_attempts true
