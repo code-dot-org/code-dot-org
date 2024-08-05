@@ -95,14 +95,19 @@ describe('FormController', () => {
     });
 
     it('Has back and next buttons on middle pages', () => {
-      form.setState({currentPage: 1});
+      React.act(() => {
+        form.setState({currentPage: 1});
+      });
+
       const buttons = form.find('button');
       expect(buttons).to.have.length(2);
       expect(buttons.map(button => button.text())).to.eql(['Back', 'Next']);
     });
 
     it('Has a back and submit button on the last page', () => {
-      form.setState({currentPage: 2});
+      React.act(() => {
+        form.setState({currentPage: 2});
+      });
       const buttons = form.find('button');
       expect(buttons).to.have.length(2);
       expect(buttons.map(button => button.text())).to.eql(['Back', 'Submit']);
@@ -146,7 +151,9 @@ describe('FormController', () => {
 
         beforeEach(() => {
           server = sinon.fakeServer.create();
-          form.setState({currentPage: 2});
+          React.act(() => {
+            form.setState({currentPage: 2});
+          });
         });
         afterEach(() => {
           server.restore();
@@ -179,16 +186,19 @@ describe('FormController', () => {
 
         it('Re-enables the submit button on error', () => {
           validateCurrentPageRequiredFields.returns(true);
-          server.respondWith([
-            400,
-            {'Content-Type': 'application/json'},
-            JSON.stringify({
-              errors: {form_data: ['an error']},
-            }),
-          ]);
 
-          submitButton().simulate('submit');
-          server.respond();
+          React.act(() => {
+            server.respondWith([
+              400,
+              {'Content-Type': 'application/json'},
+              JSON.stringify({
+                errors: {form_data: ['an error']},
+              }),
+            ]);
+
+            submitButton().simulate('submit');
+            server.respond();
+          });
           expect(form.state('submitting')).to.be.false;
           expect(form.state('errors')).to.eql(['an error']);
         });
@@ -241,21 +251,25 @@ describe('FormController', () => {
         stubRequiedFields(['included', 'excluded']);
         DummyPage1.associatedFields = ['included'];
 
-        const validated = form.instance().validateCurrentPageRequiredFields();
-        expect(validated).to.be.false;
+        React.act(() => {
+          const validated = form.instance().validateCurrentPageRequiredFields();
+          expect(validated).to.be.false;
+        });
         expect(form.state('errors')).to.eql(['included']);
       });
 
       it('Strips string values on current page and sets empty ones to null', () => {
-        form.setState({
-          data: {
-            textFieldWithSpace: '   trim   ',
-            textFieldWithNoSpace: 'nothing to trim',
-            arrayField: ['  no trim in array  '],
-            onlySpaces: '     ',
-            otherPageTextFieldWithSpace: '   no trim   ',
-            otherPageArrayField: ['  still no trim in array  '],
-          },
+        React.act(() => {
+          form.setState({
+            data: {
+              textFieldWithSpace: '   trim   ',
+              textFieldWithNoSpace: 'nothing to trim',
+              arrayField: ['  no trim in array  '],
+              onlySpaces: '     ',
+              otherPageTextFieldWithSpace: '   no trim   ',
+              otherPageArrayField: ['  still no trim in array  '],
+            },
+          });
         });
         stubRequiedFields([]);
         DummyPage1.associatedFields = [
@@ -265,7 +279,9 @@ describe('FormController', () => {
           'onlySpaces',
         ];
 
-        form.instance().validateCurrentPageRequiredFields();
+        React.act(() => {
+          form.instance().validateCurrentPageRequiredFields();
+        });
         expect(form.state('data')).to.deep.eql({
           textFieldWithSpace: 'trim',
           textFieldWithNoSpace: 'nothing to trim',
@@ -294,15 +310,18 @@ describe('FormController', () => {
           'page1Field2',
           'page1Field3',
         ];
-
-        form.setState({
-          data: {
-            ...pageData,
-            page2Field1: 'unmodified',
-          },
+        React.act(() => {
+          form.setState({
+            data: {
+              ...pageData,
+              page2Field1: 'unmodified',
+            },
+          });
         });
 
-        form.instance().validateCurrentPageRequiredFields();
+        React.act(() => {
+          form.instance().validateCurrentPageRequiredFields();
+        });
         expect(processPageData).to.be.calledOnce;
         expect(form.state('data')).to.deep.eql({
           page1Field1: 'value1',
@@ -322,10 +341,12 @@ describe('FormController', () => {
       });
 
       it('Saves form data to session storage', () => {
-        form.setState({
-          data: {
-            existingField1: 'existing value 1',
-          },
+        React.act(() => {
+          form.setState({
+            data: {
+              existingField1: 'existing value 1',
+            },
+          });
         });
         form.instance().handleChange({updatedField1: 'updated value 1'});
         expect(sessionStorage['DummyForm']).to.eql(
@@ -340,10 +361,12 @@ describe('FormController', () => {
       });
 
       it('Saves current page to session storage', () => {
-        form.setState({
-          data: {
-            existingField1: 'existing value 1',
-          },
+        React.act(() => {
+          form.setState({
+            data: {
+              existingField1: 'existing value 1',
+            },
+          });
         });
         form.instance().nextPage();
         expect(sessionStorage['DummyForm']).to.eql(
@@ -365,7 +388,15 @@ describe('FormController', () => {
         });
 
         form.unmount();
-        form.mount();
+
+        form = mount(
+          <DummyForm
+            apiEndpoint="fake endpoint"
+            options={{}}
+            requiredFields={[]}
+          />
+        );
+
         expect(form.state('currentPage')).to.equal(2);
         expect(form.state('data')).to.eql(testData);
       });
