@@ -29,12 +29,12 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
   const [isVersionHistoryOpen, setIsVersionHistoryOpen] = useState(false);
   const menuRef = useOutsideClick<HTMLDivElement>(() => {
     setIsVersionHistoryOpen(false);
-    setLoadError(null);
+    setLoadError(false);
   });
 
   const [versionList, setVersionList] = useState<ProjectVersion[]>([]);
   const [loading, setLoading] = useState(false);
-  const [loadError, setLoadError] = useState<string | null>(null);
+  const [loadError, setLoadError] = useState(false);
 
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
   const toggleVersionHistory = (
@@ -45,12 +45,12 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
       return;
     }
     if (loadError) {
-      setLoadError(null);
+      setLoadError(false);
       return;
     }
     const projectManager = Lab2Registry.getInstance().getProjectManager();
     if (!projectManager) {
-      setLoadError(lab2I18n.versionHistoryLoadFailure());
+      setLoadError(true);
       return;
     }
     if (!isVersionHistoryOpen) {
@@ -63,7 +63,7 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
           setLoading(false);
         })
         .catch(() => {
-          setLoadError(lab2I18n.versionHistoryLoadFailure());
+          setLoadError(true);
           setLoading(false);
         });
     } else {
@@ -96,7 +96,7 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
           )}
           {loadError && (
             <div className={moduleStyles.versionHistoryMessage}>
-              {loadError}
+              {lab2I18n.versionHistoryLoadFailure()}
             </div>
           )}
           {isVersionHistoryOpen && (
