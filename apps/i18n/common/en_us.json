@@ -456,6 +456,7 @@
   "className": "Class Name",
   "classProgress": "Class Progress",
   "classSection": "Class Section",
+  "classSections": "Class Sections",
   "classSectionNum": "Class Section #{num}",
   "clearAll": "Clear all",
   "clearAssignedCurriculum": "Clear assigned curriculum",
