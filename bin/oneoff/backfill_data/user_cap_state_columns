@@ -7,13 +7,30 @@ require_relative '../../../dashboard/config/environment'
 
 # @see https://github.com/code-dot-org/code-dot-org/pull/52244
 CAP_RELEASE_DATE = DateTime.parse('2023-06-09')
-
 users = User.with_deleted.where(current_sign_in_at: CAP_RELEASE_DATE..)
-total_updated = 0
-failed_user_ids = []
 
-update_progress_title = proc {|num_updates = 1| "Processed[%c/%C]: |%W| Updated: #{total_updated += num_updates} %a"}
-progress_bar = ProgressBar.create(total: users.count, format: update_progress_title.call(0))
+total_successes = 0
+total_failures = 0
+
+update_progress_title = proc {"Processed[%c/%C]: |%W| Updated: #{total_successes}; Failed: #{total_failures}; %a"}
+progress_bar = ProgressBar.create(total: users.count, format: update_progress_title.call)
+
+log_path = CDO.dir('log', "user_cap_state_updates_#{Time.now.utc.strftime('%Y%m%dT%H%M%S')}.json")
+FileUtils.mkdir_p File.dirname(log_path)
+File.write(log_path, '{}')
+
+log_operation = proc do |status, user, message|
+  failed = status == 'failed'
+  progress_bar.log "[#{Time.now.utc.iso8601}] #{status.capitalize} to update User[#{user.id}]: #{message}".colorize(failed ? :red : :green)
+
+  log_data = JSON.load_file(log_path)
+  log_data[status] ||= {}
+  log_data[status][user.id] = message
+  File.write log_path, JSON.pretty_generate(log_data)
+
+  failed ? total_failures += 1 : total_successes += 1
+  progress_bar.format update_progress_title.call
+end
 
 users.select(
   :id,
@@ -26,15 +43,15 @@ users.select(
 
   user.update_columns(
     cap_state: user.original_cap_state == 's' ? Policies::ChildAccount::ComplianceState::LOCKED_OUT : user.original_cap_state,
-    cap_state_date: user.original_cap_state_date.presence && DateTime.parse(user.original_cap_state_date)
+    cap_state_date: user.original_cap_state_date.presence && DateTime.parse(user.original_cap_state_date).utc
   )
 
-  progress_bar.format update_progress_title.call
+  log_operation.call('succeeded', user, user.as_json(only: %i[cap_state cap_state_date]))
 rescue StandardError => exception
-  failed_user_ids << user.id
-  progress_bar.log "Error updating User[#{user.id}]: #{exception.inspect}".red
+  log_operation.call('failed', user, exception.inspect)
 ensure
   progress_bar.increment
 end
 
-puts "Failed to update #{failed_user_ids.size} users: #{failed_user_ids.inspect}".yellow unless failed_user_ids.empty?
+progress_bar.log "Log file: #{log_path}"
+progress_bar.log "Finished at: #{Time.now.utc.iso8601}"
