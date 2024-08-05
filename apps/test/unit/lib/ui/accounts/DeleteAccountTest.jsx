@@ -22,9 +22,11 @@ describe('DeleteAccount', () => {
   describe('DeleteAccountDialog submission', () => {
     it('is disabled if password is required and not provided', () => {
       const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} />);
-      wrapper.setState({
-        isDeleteAccountDialogOpen: true,
-        deleteVerification: DELETE_VERIFICATION_STRING,
+      React.act(() => {
+        wrapper.setState({
+          isDeleteAccountDialogOpen: true,
+          deleteVerification: DELETE_VERIFICATION_STRING,
+        });
       });
       const confirmButton = wrapper.find('Button').at(1);
       expect(confirmButton).to.have.attr('disabled');
@@ -32,9 +34,11 @@ describe('DeleteAccount', () => {
 
     it('is disabled if verification string is not provided', () => {
       const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} />);
-      wrapper.setState({
-        isDeleteAccountDialogOpen: true,
-        password: 'password',
+      React.act(() => {
+        wrapper.setState({
+          isDeleteAccountDialogOpen: true,
+          password: 'password',
+        });
       });
       const confirmButton = wrapper.find('Button').at(1);
       expect(confirmButton).to.have.attr('disabled');
@@ -42,10 +46,12 @@ describe('DeleteAccount', () => {
 
     it('is disabled if verification string is incorrect', () => {
       const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} />);
-      wrapper.setState({
-        isDeleteAccountDialogOpen: true,
-        password: 'password',
-        deleteVerification: 'some other string',
+      React.act(() => {
+        wrapper.setState({
+          isDeleteAccountDialogOpen: true,
+          password: 'password',
+          deleteVerification: 'some other string',
+        });
       });
       const confirmButton = wrapper.find('Button').at(1);
       expect(confirmButton).to.have.attr('disabled');
@@ -56,9 +62,11 @@ describe('DeleteAccount', () => {
         const wrapper = mount(
           <DeleteAccount {...DEFAULT_PROPS} isPasswordRequired={false} />
         );
-        wrapper.setState({
-          isDeleteAccountDialogOpen: true,
-          deleteVerification: DELETE_VERIFICATION_STRING,
+        React.act(() => {
+          wrapper.setState({
+            isDeleteAccountDialogOpen: true,
+            deleteVerification: DELETE_VERIFICATION_STRING,
+          });
         });
         const confirmButton = wrapper.find('Button').at(1);
         expect(confirmButton).to.not.have.attr('disabled');
@@ -66,10 +74,12 @@ describe('DeleteAccount', () => {
 
       it('is enabled if password is provided and verification string is correct', () => {
         const wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} />);
-        wrapper.setState({
-          isDeleteAccountDialogOpen: true,
-          password: 'password',
-          deleteVerification: DELETE_VERIFICATION_STRING,
+        React.act(() => {
+          wrapper.setState({
+            isDeleteAccountDialogOpen: true,
+            password: 'password',
+            deleteVerification: DELETE_VERIFICATION_STRING,
+          });
         });
         const confirmButton = wrapper.find('Button').at(1);
         expect(confirmButton).to.not.have.attr('disabled');
@@ -101,11 +111,13 @@ describe('DeleteAccount', () => {
         );
         let checkboxes = getCheckboxes(true, true);
         checkboxes[1].checked = true;
-        wrapper.setState({
-          isDeleteAccountDialogOpen: true,
-          password: 'password',
-          deleteVerification: DELETE_VERIFICATION_STRING,
-          checkboxes,
+        React.act(() => {
+          wrapper.setState({
+            isDeleteAccountDialogOpen: true,
+            password: 'password',
+            deleteVerification: DELETE_VERIFICATION_STRING,
+            checkboxes,
+          });
         });
         const confirmButton = wrapper.find('Button').at(1);
         expect(confirmButton).to.have.attr('disabled');
@@ -122,10 +134,12 @@ describe('DeleteAccount', () => {
         );
         let checkboxes = getCheckboxes(false, true);
         Object.keys(checkboxes).map(id => (checkboxes[id].checked = true));
-        wrapper.setState({
-          isDeleteAccountDialogOpen: true,
-          deleteVerification: DELETE_VERIFICATION_STRING,
-          checkboxes,
+        React.act(() => {
+          wrapper.setState({
+            isDeleteAccountDialogOpen: true,
+            deleteVerification: DELETE_VERIFICATION_STRING,
+            checkboxes,
+          });
         });
         const confirmButton = wrapper.find('Button').at(1);
         expect(confirmButton).to.not.have.attr('disabled');
@@ -141,11 +155,13 @@ describe('DeleteAccount', () => {
         );
         let checkboxes = getCheckboxes(true, true);
         Object.keys(checkboxes).map(id => (checkboxes[id].checked = true));
-        wrapper.setState({
-          isDeleteAccountDialogOpen: true,
-          password: 'password',
-          deleteVerification: DELETE_VERIFICATION_STRING,
-          checkboxes,
+        React.act(() => {
+          wrapper.setState({
+            isDeleteAccountDialogOpen: true,
+            password: 'password',
+            deleteVerification: DELETE_VERIFICATION_STRING,
+            checkboxes,
+          });
         });
         const confirmButton = wrapper.find('Button').at(1);
         expect(confirmButton).to.not.have.attr('disabled');
@@ -159,10 +175,12 @@ describe('DeleteAccount', () => {
             hasStudents={false}
           />
         );
-        wrapper.setState({
-          isDeleteAccountDialogOpen: true,
-          password: 'password',
-          deleteVerification: DELETE_VERIFICATION_STRING,
+        React.act(() => {
+          wrapper.setState({
+            isDeleteAccountDialogOpen: true,
+            password: 'password',
+            deleteVerification: DELETE_VERIFICATION_STRING,
+          });
         });
         const confirmButton = wrapper.find('Button').at(1);
         expect(confirmButton).to.not.have.attr('disabled');
@@ -175,10 +193,12 @@ describe('DeleteAccount', () => {
 
     beforeEach(() => {
       wrapper = mount(<DeleteAccount {...DEFAULT_PROPS} />);
-      wrapper.setState({
-        isDeleteAccountDialogOpen: true,
-        password: 'password',
-        deleteVerification: DELETE_VERIFICATION_STRING,
+      React.act(() => {
+        wrapper.setState({
+          isDeleteAccountDialogOpen: true,
+          password: 'password',
+          deleteVerification: DELETE_VERIFICATION_STRING,
+        });
       });
       confirmButton = wrapper.find('Button').at(1);
       server = sinon.fakeServer.create();
@@ -213,8 +233,10 @@ describe('DeleteAccount', () => {
           {'Content-Type': 'application/json'},
           '{"error": {"current_password": ["Incorrect password!"]}}',
         ]);
-        confirmButton.simulate('click');
-        server.respond();
+        React.act(() => {
+          confirmButton.simulate('click');
+          server.respond();
+        });
         wrapper.update();
         expect(wrapper.find('FieldError')).to.have.text('Incorrect password!');
       });
@@ -225,8 +247,10 @@ describe('DeleteAccount', () => {
           {'Content-Type': 'application/json'},
           '',
         ]);
-        confirmButton.simulate('click');
-        server.respond();
+        React.act(() => {
+          confirmButton.simulate('click');
+          server.respond();
+        });
         expect(wrapper.find('#uitest-delete-error')).to.have.text(
           'Unexpected error: 400'
         );
