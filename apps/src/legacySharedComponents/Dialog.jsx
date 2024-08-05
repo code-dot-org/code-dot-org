@@ -5,9 +5,9 @@ import React from 'react';
 import locale from '@cdo/locale';
 
 import {childrenOfType, whenNoChildOfTypes} from '../propTypes';
+import BaseDialog from '../templates/BaseDialog';
 import color from '../util/color';
 
-import BaseDialog from './BaseDialog';
 import LegacyButton from './LegacyButton';
 
 export const styles = {
@@ -120,6 +120,7 @@ Icon.propTypes = {
   src: PropTypes.string.isRequired,
 };
 
+/** @deprecated use DSCO StylizedBaseDialog or AccessibleDialog instead */
 export default class Dialog extends React.Component {
   static propTypes = {
     ...BaseDialog.propTypes,

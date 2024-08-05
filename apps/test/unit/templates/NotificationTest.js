@@ -5,8 +5,8 @@ import {combineReducers, createStore} from 'redux';
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Notification from '@cdo/apps/templates/Notification';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import Notification from '@cdo/apps/sharedComponents/Notification';
 
 const announcement = {
   heading: 'Go beyond an Hour of Code',
