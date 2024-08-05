@@ -1,147 +1,92 @@
-// TODO: UNCOMMENT AND UPDATE  ONCE READY
-// import {render, screen} from '@testing-library/react';
-// import userEvent from '@testing-library/user-event';
-// import React from 'react';
-// import sinon from 'sinon';
-//
-// import Tabs from '@cdo/apps/componentLibrary/tabs';
-//
-// import {expect} from '../../util/reconfiguredChai';
-//
-// const valuesMap = {};
-// const onSelectedTabChange = (name, value) => (valuesMap[name] = value);
-//
-// describe('Design System - Tabs', () => {
-//   it('Tabs - renders with correct tabs labels', () => {
-//     // set segmentedButton default value
-//     onSelectedTabChange('test1', 'tab1');
-//
-//     render(
-//       <Tabs
-//         defaultSelectedTabValue={valuesMap.test1}
-//         tabs={[
-//           {text: 'tab1', value: 'tab1', tabContent: <div>tab1 content</div>},
-//           {text: 'tab2', value: 'tab2', tabContent: <div>tab2 content</div>},
-//         ]}
-//         onChange={value => onSelectedTabChange('test1', value)}
-//         name={'test1'}
-//       />
-//     );
-//
-//     const tab1 = screen.getByText('tab1');
-//     const tab2 = screen.getByText('tab2');
-//
-//     expect(tab1).to.exist;
-//     expect(tab2).to.exist;
-//     expect(valuesMap.test1).to.equal('tab1');
-//     expect(screen.getByText('tab1 content')).to.exist;
-//   });
-//
-//   it('Tabs - changes selected tab on click', async () => {
-//     const user = userEvent.setup();
-//     const spyOnChange = sinon.spy();
-//     // set tab default value
-//     onSelectedTabChange('test2', 'tab1');
-//     const onChange = value => {
-//       onSelectedTabChange('test2', value);
-//       spyOnChange(value);
-//     };
-//
-//     const TabsToRender = () => (
-//       <Tabs
-//         defaultSelectedTabValue={valuesMap.test1}
-//         tabs={[
-//           {text: 'tab1', value: 'tab1', tabContent: <div>tab1 content</div>},
-//           {text: 'tab2', value: 'tab2', tabContent: <div>tab2 content</div>},
-//         ]}
-//         onChange={onChange}
-//         name={'test2'}
-//       />
-//     );
-//
-//     const {rerender} = render(<TabsToRender />);
-//
-//     let tab1 = screen.getByText('tab1');
-//     const tab2 = screen.getByText('tab2');
-//
-//     expect(tab1).to.exist;
-//     expect(tab2).to.exist;
-//     expect(valuesMap.test2).to.equal('tab1');
-//
-//     await user.click(tab2);
-//
-//     // Re-render after user's first click
-//     rerender(<TabsToRender />);
-//
-//     tab1 = screen.getByText('tab1');
-//
-//     expect(spyOnChange).to.have.been.calledOnce;
-//     expect(spyOnChange).to.have.been.calledWith('tab2');
-//     expect(valuesMap.test2).to.equal('tab2');
-//
-//     await user.click(tab1);
-//
-//     // Re-render after user's second click
-//     rerender(<TabsToRender />);
-//
-//     expect(spyOnChange).to.have.been.calledTwice;
-//     expect(spyOnChange).to.have.been.calledWith('tab1');
-//     expect(valuesMap.test2).to.equal('tab1');
-//   });
-//
-//   it("Tabs - renders disabled tab, doesn't change on click", async () => {
-//     const user = userEvent.setup();
-//     const spyOnChange = sinon.spy();
-//     // set segmentedButton default value
-//     onSelectedTabChange('test3', 'tab1');
-//     const onChange = value => {
-//       onSelectedTabChange('test3', value);
-//       spyOnChange(value);
-//     };
-//
-//     const TabsToRender = () => (
-//       <Tabs
-//         defaultSelectedTabValue={valuesMap.test1}
-//         tabs={[
-//           {text: 'tab1', value: 'tab1', tabContent: <div>tab1 content</div>},
-//           {
-//             text: 'tab2',
-//             value: 'tab2',
-//             tabContent: <div>tab2 content</div>,
-//             disabled: true,
-//           },
-//         ]}
-//         onChange={onChange}
-//         name={'test3'}
-//       />
-//     );
-//
-//     // Initial render
-//     const {rerender} = render(<TabsToRender />);
-//
-//     let tab1 = screen.getByText('tab1');
-//     const tab2 = screen.getByText('tab2');
-//
-//     expect(tab1).to.exist;
-//     expect(tab2).to.exist;
-//     expect(valuesMap.test3).to.equal('tab1');
-//
-//     await user.click(tab2);
-//
-//     // Re-render after user's first click
-//     rerender(<TabsToRender />);
-//
-//     tab1 = screen.getByText('tab1');
-//
-//     expect(spyOnChange).to.not.have.been.called;
-//     expect(valuesMap.test3).to.equal('tab1');
-//
-//     await user.click(tab1);
-//
-//     // Re-render after user's second click
-//     rerender(<TabsToRender />);
-//
-//     expect(spyOnChange).to.have.been.called.once;
-//     expect(spyOnChange).to.have.been.calledWith('tab1');
-//   });
-// });
+import {render, screen} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import React from 'react';
+
+import Popover from '@cdo/apps/componentLibrary/popover'; // Adjust the import path accordingly
+
+describe('Design System - Popover Component', () => {
+  const mockOnClose = jest.fn();
+
+  beforeEach(() => {
+    mockOnClose.mockClear();
+  });
+
+  it('renders with correct title and content', () => {
+    render(
+      <Popover
+        title="Test Popover"
+        content="This is the content of the popover."
+        onClose={mockOnClose}
+      />
+    );
+
+    const title = screen.getByText('Test Popover');
+    const content = screen.getByText('This is the content of the popover.');
+    const closeButton = screen.getByRole('button', {name: 'Close'});
+
+    expect(title).toBeInTheDocument();
+    expect(content).toBeInTheDocument();
+    expect(closeButton).toBeInTheDocument();
+  });
+
+  it('calls onClose when the close button is clicked', async () => {
+    const user = userEvent.setup();
+    render(
+      <Popover
+        title="Test Popover"
+        content="This is the content of the popover."
+        onClose={mockOnClose}
+      />
+    );
+
+    const closeButton = screen.getByRole('button', {name: 'Close'});
+    await user.click(closeButton);
+
+    expect(mockOnClose).toHaveBeenCalledTimes(1);
+  });
+
+  it('renders with an icon when provided', () => {
+    render(
+      <Popover
+        title="Test Popover"
+        content="This is the content of the popover."
+        onClose={mockOnClose}
+        icon={{iconName: 'check', iconStyle: 'solid', title: 'check-icon'}}
+      />
+    );
+
+    const icon = screen.getByTitle('check-icon');
+
+    expect(icon).toBeInTheDocument();
+    expect(icon).toHaveClass('fa-solid', 'fa-check');
+  });
+
+  it('renders with an image when provided', () => {
+    render(
+      <Popover
+        title="Test Popover"
+        content="This is the content of the popover."
+        onClose={mockOnClose}
+        image={{src: 'test-image.png', alt: 'Test Image'}}
+      />
+    );
+
+    const image = screen.getByRole('img', {name: 'Test Image'});
+
+    expect(image).toBeInTheDocument();
+  });
+
+  it('renders with custom buttons when provided', () => {
+    render(
+      <Popover
+        title="Test Popover"
+        content="This is the content of the popover."
+        onClose={mockOnClose}
+        buttons={<button type="button">Custom Button</button>}
+      />
+    );
+
+    const customButton = screen.getByText('Custom Button');
+    expect(customButton).toBeInTheDocument();
+  });
+});
