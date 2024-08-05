@@ -76,6 +76,10 @@ class RegistrationsController < Devise::RegistrationsController
     render 'new_sign_up'
   end
 
+  # Part of the new sign up flow - work in progress
+  def account_type
+  end
+
   #
   # GET /users/cancel
   #
@@ -88,10 +92,6 @@ class RegistrationsController < Devise::RegistrationsController
 
     PartialRegistration.delete(session)
     redirect_to new_user_registration_path
-  end
-
-  # Part of the new sign up flow - work in progress
-  def account_type
   end
 
   #
