@@ -42,6 +42,8 @@ function TeacherDashboard({
   showAITutorTab,
   sectionProviderName,
 }) {
+  // const teacherNavV2Enabled = DCDO.get('teacher-nav-v2-enabled', false);
+
   const usePrevious = value => {
     const ref = useRef();
     useEffect(() => {
@@ -97,9 +99,9 @@ function TeacherDashboard({
   }
 
   // Include header components unless we are on the /login_info or /standards_report page.
-  const includeHeader = false;
-  // location.pathname !== TeacherDashboardPath.loginInfo &&
-  // location.pathname !== TeacherDashboardPath.standardsReport;
+  const includeHeader =
+    location.pathname !== TeacherDashboardPath.loginInfo &&
+    location.pathname !== TeacherDashboardPath.standardsReport;
 
   const generateEmptySectionGraphic = (hasStudents, hasCurriculumAssigned) => {
     return (
@@ -190,17 +192,6 @@ function TeacherDashboard({
           component={props => <SectionProgressSelector />}
         />
         <Route
-          path={TeacherDashboardPath.navigation}
-          component={props => (
-            <div className={dashboardStyles.pageContainer}>
-              <TeacherNavigationBar />
-              <div className={dashboardStyles.content}>
-                <SectionProgressSelector />
-              </div>
-            </div>
-          )}
-        />
-        <Route
           path={TeacherDashboardPath.textResponses}
           component={props => applyV1TeacherDashboardWidth(<TextResponses />)}
         />
@@ -211,6 +202,18 @@ function TeacherDashboard({
               <SectionAssessments sectionName={sectionName} />
             )
           }
+        />
+        {}
+        <Route
+          path={TeacherDashboardPath.navigation}
+          component={props => (
+            <div className={dashboardStyles.pageContainer}>
+              <TeacherNavigationBar />
+              <div className={dashboardStyles.content}>
+                <SectionProgressSelector />
+              </div>
+            </div>
+          )}
         />
         {showAITutorTab && (
           <Route

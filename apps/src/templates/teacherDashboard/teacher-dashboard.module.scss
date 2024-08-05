@@ -4,13 +4,18 @@
 
 .pageContainer {
   display: flex;
-  flex: 1; /* Take up the remaining space below the top nav bar */
-  overflow-y: auto; /* Make the page content scrollable */
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+body #teacherDashboard {
+  overflow: unset !important;
 }
 
 .content {
-  margin-left: 242px;
-  height: 100vh;
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
 }
 
 .navContainer {

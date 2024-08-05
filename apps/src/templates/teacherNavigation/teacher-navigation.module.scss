@@ -1,11 +1,21 @@
-/* Sidebar.css */
-.sidebar {
-  width: 242px;
-  height: 100%;
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  overflow-y: hidden; /* Prevent scrolling down */
+@import 'color.scss';
+
+.sidebarContainer {
+  min-width: 242px;
+  max-width: 242px;
+  background-color: $light_gray_50;
+}
+
+.sidebarContent {
+  padding-top: 20px;
+  padding-left: 16px;
+  position: sticky;
+  top: 0;
+  width: 210px;
+}
+
+.sectionHeader {
+  margin-top: 0;
+  margin-bottom: 2px;
+  // TO DO: modify color of text after hearing from Molly
 }
