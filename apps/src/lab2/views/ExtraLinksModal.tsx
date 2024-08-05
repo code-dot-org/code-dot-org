@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 
 import {Heading3, StrongText} from '@cdo/apps/componentLibrary/typography';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import Button from '@cdo/apps/templates/Button';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {FeaturedProjectStatus} from '@cdo/generated-scripts/sharedConstants';

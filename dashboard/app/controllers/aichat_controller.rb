@@ -12,7 +12,7 @@ class AichatController < ApplicationController
   # POST /aichat/chat_completion
   def chat_completion
     return render status: :forbidden, json: {} unless AichatSagemakerHelper.can_request_aichat_chat_completion?
-    unless has_required_params?
+    unless chat_completion_has_required_params?
       return render status: :bad_request, json: {}
     end
 
@@ -23,6 +23,43 @@ class AichatController < ApplicationController
     # which causes tests to fail. Nulling out the session ID before responding fixes this issue.
     # More detail/other confused developers here: https://github.com/rails/rails/issues/24566
     @session_id = nil
+    render(status: :ok, json: response_body)
+  end
+
+  # params are newChatEvent: ChatEvent, aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
+  # POST /aichat/log_chat_event
+  def log_chat_event
+    begin
+      params.require([:newChatEvent, :aichatContext])
+    rescue ActionController::ParameterMissing
+      return render status: :bad_request, json: {}
+    end
+
+    context = params[:aichatContext]
+    event = params[:newChatEvent]
+
+    project_id = nil
+    if context[:channelId]
+      _, project_id = storage_decrypt_channel_id(context[:channelId])
+    end
+
+    begin
+      logged_event = AichatEvent.create!(
+        user_id: current_user.id,
+        level_id: context[:currentLevelId],
+        script_id: context[:scriptId],
+        project_id: project_id,
+        aichat_event: event.to_json
+      )
+    rescue StandardError => exception
+      return render status: :bad_request, json: {error: exception.message}
+    end
+
+    response_body = {
+      chat_event_id: logged_event.id,
+      chat_event: logged_event.aichat_event
+    }
+
     render(status: :ok, json: response_body)
   end
 
@@ -84,7 +121,7 @@ class AichatController < ApplicationController
     {messages: messages}
   end
 
-  private def has_required_params?
+  private def chat_completion_has_required_params?
     begin
       params.require([:newMessage, :aichatModelCustomizations, :aichatContext])
     rescue ActionController::ParameterMissing

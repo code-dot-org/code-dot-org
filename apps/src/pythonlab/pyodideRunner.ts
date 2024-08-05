@@ -6,21 +6,13 @@ import {getFileByName} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 
 import {asyncRun} from './pyodideWorkerManager';
-import {getTestRunnerScript} from './pythonHelpers/scripts';
+import {runStudentTests, runValidationTests} from './pythonHelpers/scripts';
 
 export function handleRunClick(
   runTests: boolean,
   dispatch: Dispatch<AnyAction>,
-  permissions: string[],
   source: MultiFileSource | undefined
 ) {
-  // For now, restrict running python code to levelbuilders.
-  if (!permissions.includes('levelbuilder')) {
-    dispatch(
-      appendSystemMessage('You do not have permission to run python code.')
-    );
-    return;
-  }
   if (!source) {
     dispatch(appendSystemMessage('You have no code to run.'));
     return;
@@ -66,10 +58,10 @@ export async function runAllTests(
   if (validationFile) {
     // We only support one validation file. If somehow there is more than one, just run the first one.
     dispatch(appendSystemMessage(`Running level tests...`));
-    await runPythonCode(getTestRunnerScript(validationFile.name), source);
+    await runPythonCode(runValidationTests(validationFile.name), source);
   } else {
     dispatch(appendSystemMessage(`Running your project's tests...`));
     // Otherwise, we look for files that follow the regex 'test*.py' and run those.
-    await runPythonCode(getTestRunnerScript('test*.py'), source);
+    await runPythonCode(runStudentTests(), source);
   }
 }

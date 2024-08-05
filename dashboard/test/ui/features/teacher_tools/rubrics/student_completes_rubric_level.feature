@@ -3,7 +3,7 @@ Feature: Student can complete rubric-enabled level
     # Create student not in an experiment
     Given I create a teacher-associated student named "Reuben"
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I verify progress in the header of the current page is "not_tried" for level 2
 
     # Student submits code
@@ -18,7 +18,7 @@ Feature: Student can complete rubric-enabled level
 
     # Student can see new progress in header
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     Then I verify progress in the header of the current page is "perfect_assessment" for level 2
 
   Scenario: AI pilot student can complete rubric-enabled level
@@ -26,7 +26,7 @@ Feature: Student can complete rubric-enabled level
     Given I create a teacher-associated student named "Reuben"
     And I add the current user to the "ai-rubrics" single user experiment
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I verify progress in the header of the current page is "not_tried" for level 2
 
     # Student submits code
@@ -41,7 +41,7 @@ Feature: Student can complete rubric-enabled level
 
     # Student can see new progress in header
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     Then I verify progress in the header of the current page is "perfect_assessment" for level 2
 
   Scenario: Non-AI pilot student can complete rubric-enabled level
@@ -49,7 +49,7 @@ Feature: Student can complete rubric-enabled level
     Given I create a teacher-associated student named "Reuben"
     And I add the current user to the "non-ai-rubrics" single user experiment
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I verify progress in the header of the current page is "not_tried" for level 2
 
     # Student submits code
@@ -64,5 +64,5 @@ Feature: Student can complete rubric-enabled level
 
     # Student can see new progress in header
     And I am on "http://studio.code.org/s/allthethings/lessons/48/levels/2"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     Then I verify progress in the header of the current page is "perfect_assessment" for level 2
