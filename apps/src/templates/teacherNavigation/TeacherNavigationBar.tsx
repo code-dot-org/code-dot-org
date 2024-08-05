@@ -20,16 +20,12 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
       state.teacherSections.sections
   );
 
-  // State for sectionArray
   const [sectionArray, setSectionArray] = useState<
     {value: string; text: string}[]
   >([]);
-
-  // State for selectedSectionId
   const [selectedSectionId, setSelectedSectionId] = useState<string | ''>('');
 
   useEffect(() => {
-    // Removes hidden sections from the list and updates sectionArray
     const updatedSectionArray = Object.entries(sectionList)
       .filter(([id, section]) => !section.hidden)
       .map(([id, section]) => ({

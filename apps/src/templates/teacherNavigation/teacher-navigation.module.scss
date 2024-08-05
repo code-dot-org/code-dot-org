@@ -1,8 +1,8 @@
 @import 'color.scss';
 
 .sidebarContainer {
-  min-width: 242px;
-  max-width: 242px;
+  width: 242px;
+  flex: 0 0 242px;
   background-color: $light_gray_50;
 }
 
