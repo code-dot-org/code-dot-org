@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import React, {useState} from 'react';
 
+import Alert from '@cdo/apps/componentLibrary/alert';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -96,7 +97,11 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
           )}
           {loadError && (
             <div className={moduleStyles.versionHistoryMessage}>
-              {lab2I18n.versionHistoryLoadFailure()}
+              <Alert
+                type="danger"
+                text={lab2I18n.versionHistoryLoadFailure()}
+                size="s"
+              />
             </div>
           )}
           {isVersionHistoryOpen && (

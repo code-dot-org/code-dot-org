@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import React, {useCallback, useState} from 'react';
 
+import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -139,7 +140,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
             moduleStyles.versionDropdownFooter
           )}
         >
-          {lab2I18n.versionLoadFailure()}
+          <Alert type="danger" text={lab2I18n.versionLoadFailure()} size="s" />
         </div>
       )}
     </div>
