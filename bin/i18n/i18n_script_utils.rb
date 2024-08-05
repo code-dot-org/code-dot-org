@@ -327,8 +327,8 @@ class I18nScriptUtils
     return YAML.safe_load(file_content) if yaml_file?(file_path)
 
     raise "do not know how to parse file #{file_path.inspect}"
-  rescue Errno::ENOENT
-    raise "File not found: #{file_path.inspect}"
+  rescue Errno::ENOENT => exception
+    raise "File not found: #{file_path.inspect} - #{exception.message}"
   rescue JSON::ParserError => exception
     raise "JSON parsing error in file #{file_path.inspect} - #{exception.message}"
   rescue Psych::SyntaxError => exception

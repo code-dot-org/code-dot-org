@@ -333,7 +333,7 @@ describe I18nScriptUtils do
 
       it 'raises an error' do
         error = assert_raises(RuntimeError) {I18nScriptUtils.parse_file(non_existent_file_path)}
-        assert_equal "File not found: \"#{non_existent_file_path}\"", error.message
+        assert_match "File not found: \"#{non_existent_file_path}\" - ", error.message
       end
     end
 
