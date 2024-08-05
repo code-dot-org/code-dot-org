@@ -29,6 +29,7 @@ function UnitSelector({
           styles.skeletonDropdown,
           skeletonizeContent.skeletonizeContent
         )}
+        disabled={true}
       />
     </div>
   );
