@@ -28,11 +28,9 @@ success_status = options[:skip_update] ? 'skipped' : 'updated'
 update_progress_title = proc {"Processed[%c/%C]: |%W| #{success_status.capitalize}: #{total_successes}; Failed: #{total_failures}; %a"}
 progress_bar = ProgressBar.create(total: users.count, format: update_progress_title.call)
 
-log_data = {'updated' => {}, 'skipped' => {}, 'failed' => {}}
-log_path = CDO.dir('log', "user_cap_state_updates_#{Time.now.utc.strftime('%Y%m%dT%H%M%S')}.json")
-
+log_path = CDO.dir('log', 'oneoff', "user_cap_state_columns_backfill_#{Time.now.utc.strftime('%Y%m%dT%H%M%S')}.csv")
 FileUtils.mkdir_p File.dirname(log_path)
-FileUtils.touch log_path
+log_csv = CSV.open(log_path, 'w', col_sep: ';', write_headers: true, headers: %w[status user_id message])
 
 log_operation = proc do |status, user, message|
   case status
@@ -47,8 +45,7 @@ log_operation = proc do |status, user, message|
     progress_bar.log "[#{Time.now.utc.iso8601}] Failed to update User[#{user.id}]: #{message}".red
   end
 
-  log_data[status][user.id] = message
-  File.write log_path, JSON.pretty_generate(log_data)
+  log_csv.add_row [status, user.id, message]
 
   progress_bar.format update_progress_title.call
 end
