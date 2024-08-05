@@ -1,0 +1,19 @@
+@import 'color.scss';
+
+.buttonSpacing {
+  margin-bottom: 10px;
+}
+
+.denied {
+  color: red;
+}
+
+// SampleColumns table styles.
+.row {
+  border: 1px solid;
+}
+
+.cell {
+  padding: 8px;
+  border-right: 1px solid;
+}

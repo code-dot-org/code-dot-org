@@ -2,20 +2,22 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import * as utils from '../../../../utils';
-import trackEvent from '../../../../util/trackEvent';
-import SetupChecker from '../util/SetupChecker';
+
+import applabI18n from '@cdo/applab/locale';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import MBFirmataUpdater from '@cdo/apps/lib/kits/maker/boards/microBit/MBFirmataUpdater';
+import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
-import applabI18n from '@cdo/applab/locale';
-import {isWindows, isLinux} from '../util/browserChecks';
+
+import trackEvent from '../../../../util/trackEvent';
+import * as utils from '../../../../utils';
 import ValidationStep, {Status} from '../../../ui/ValidationStep';
 import {BOARD_TYPE, shouldUseWebSerial, delayPromise} from '../util/boardUtils';
-import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
-import Button from '../../../../templates/Button';
-import MBFirmataUpdater from '@cdo/apps/lib/kits/maker/boards/microBit/MBFirmataUpdater';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {isWindows, isLinux} from '../util/browserChecks';
+import SetupChecker from '../util/SetupChecker';
 
 const STATUS_SUPPORTED_BROWSER = 'statusSupportedBrowser';
 const STATUS_BOARD_PLUG = 'statusBoardPlug';

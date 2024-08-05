@@ -1,8 +1,16 @@
 import cookies from 'js-cookie';
 import PropTypes from 'prop-types';
-import React, {useState} from 'react';
+import React, {useState, useEffect, useReducer} from 'react';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import parentalPermissionRequestReducer, {
+  REQUEST_PARENTAL_PERMISSION_SUCCESS,
+  requestParentalPermission,
+} from '@cdo/apps/redux/parentalPermissionRequestReducer';
 import {isEmail} from '@cdo/apps/util/formatValidation';
+import usePrevious from '@cdo/apps/util/usePrevious';
 import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -10,7 +18,6 @@ import Spinner from '../../code-studio/pd/components/spinner';
 import {getStore} from '../../redux';
 import * as color from '../../util/color';
 import {hashString} from '../../utils';
-import Button from '../Button';
 
 /**
  * This component allows students whose personal account linking has been
@@ -19,6 +26,10 @@ import Button from '../Button';
  * which is similar but for students whose entire account has been locked.
  */
 export default function LockoutLinkedAccounts(props) {
+  const reportEvent = (eventName, payload = {}) => {
+    analyticsReporter.sendEvent(eventName, payload, PLATFORMS.AMPLITUDE);
+  };
+
   const validateEmail = email => {
     return isEmail(email) && props.userEmail !== hashString(email);
   };
@@ -32,14 +43,65 @@ export default function LockoutLinkedAccounts(props) {
   // Date the last request email was sent
   const [lastEmailDate, setLastEmailDate] = useState(props.requestDate);
 
-  // Loading state for the submit button, for use when the request is sending on the backend.
-  const [loading, setLoading] = useState(false);
-
   // Track the state of the request as the user interacts with the form.
-  const status = props.permissionStatus;
+  const [status, setConsentStatus] = useState(props.permissionStatus);
 
   // State of the parent email entered by the user
   const [pendingEmail, setPendingEmail] = useState(props.pendingEmail);
+  const prevPendingEmail = usePrevious(pendingEmail);
+
+  const [
+    {action, error, parentalPermissionRequest, isLoading: loading},
+    parentalPermissionRequestDispatch,
+  ] = useReducer(parentalPermissionRequestReducer, {isLoading: false});
+
+  useEffect(() => {
+    if (parentalPermissionRequest) {
+      setPendingEmail(parentalPermissionRequest.parent_email);
+      setLastEmailDate(new Date(parentalPermissionRequest.requested_at));
+      setConsentStatus(parentalPermissionRequest.consent_status);
+    }
+  }, [parentalPermissionRequest]);
+
+  useEffect(() => {
+    reportEvent(EVENTS.CAP_SETTINGS_SHOWN, {
+      providers: props.providers,
+      inSection: props.inSection,
+      consentStatus: props.permissionStatus,
+    });
+  }, [props]);
+
+  /**
+   * This useEffect hook is responsible for reporting successful parent permission request events:
+   *
+   * Submission event if a previous permission request does not exist.
+   * Resend event if a previous permission request exists and the parent email has not changed.
+   * Update event if a previous permission request exists and the parent email has changed.
+   */
+  useEffect(() => {
+    if (action !== REQUEST_PARENTAL_PERMISSION_SUCCESS) return;
+    if (!parentalPermissionRequest) return;
+
+    if (!prevPendingEmail) {
+      reportEvent(EVENTS.CAP_SETTINGS_EMAIL_SUBMITTED, {
+        providers: props.providers,
+        inSection: props.inSection,
+        consentStatus: parentalPermissionRequest.consent_status,
+      });
+    } else if (parentalPermissionRequest.parent_email === prevPendingEmail) {
+      reportEvent(EVENTS.CAP_SETTINGS_EMAIL_RESEND, {
+        providers: props.providers,
+        inSection: props.inSection,
+        consentStatus: parentalPermissionRequest.consent_status,
+      });
+    } else {
+      reportEvent(EVENTS.CAP_SETTINGS_EMAIL_UPDATED, {
+        providers: props.providers,
+        inSection: props.inSection,
+        consentStatus: parentalPermissionRequest.consent_status,
+      });
+    }
+  }, [action, prevPendingEmail, parentalPermissionRequest, props]);
 
   // When the email field is updated, also update the disability state of the
   // submit button.
@@ -50,11 +112,12 @@ export default function LockoutLinkedAccounts(props) {
   // This will set the email to the current pending email and fire off the
   // form as though they had typed in the same email again.
   const resendPermissionEmail = event => {
+    event.preventDefault();
+
     const field = document.getElementById('parent-email');
     field.value = pendingEmail;
 
-    const form = document.getElementById('lockout-linked-accounts-form');
-    form.submit();
+    requestParentalPermission(parentalPermissionRequestDispatch, field.value);
   };
 
   // Get the current locale.
@@ -86,7 +149,10 @@ export default function LockoutLinkedAccounts(props) {
 
   // Child permission status from the user record
   const permissionStatus = {};
-  if (status === ChildAccountComplianceStates.PERMISSION_GRANTED) {
+  if (error) {
+    permissionStatus.message = error;
+    permissionStatus.style = styles.notSubmitted;
+  } else if (status === ChildAccountComplianceStates.PERMISSION_GRANTED) {
     permissionStatus.message = i18n.sessionLockoutStatusGranted();
     permissionStatus.style = styles.granted;
   } else if (pendingEmail) {
@@ -102,20 +168,10 @@ export default function LockoutLinkedAccounts(props) {
   // policy_compliance_controller to redirect back to the correct page.
   const submitPermissionRequest = async e => {
     e.preventDefault();
-    setLoading(true);
-    const parentEmail = e.target['parent-email'].value;
-    const params = new URLSearchParams({
-      'parent-email': parentEmail,
-      authenticity_token: csrfToken,
-    });
-
-    await fetch(props.apiUrl, {
-      method: 'POST',
-      body: params,
-    });
-    setLoading(false);
-    setPendingEmail(parentEmail);
-    setLastEmailDate(new Date());
+    requestParentalPermission(
+      parentalPermissionRequestDispatch,
+      e.target['parent-email'].value
+    );
   };
 
   return (
@@ -124,11 +180,13 @@ export default function LockoutLinkedAccounts(props) {
       <h2>{i18n.lockoutManageLinkedAccountsHeader()}</h2>
       <form
         id="lockout-linked-accounts-form"
-        action={props.apiUrl}
-        method="post"
         onSubmit={submitPermissionRequest}
       >
-        <p>{i18n.lockoutManageLinkedAccountsPrompt()}</p>
+        <p>
+          {status !== ChildAccountComplianceStates.PERMISSION_GRANTED
+            ? i18n.lockoutManageLinkedAccountsPrompt()
+            : i18n.lockoutManageLinkedAccountsGrantedPrompt()}
+        </p>
         <input type="hidden" value={csrfToken} name="authenticity_token" />
         {/* The top prompt, which depends on whether or not a request is pending. */}
         {pendingEmail &&
@@ -239,11 +297,12 @@ export default function LockoutLinkedAccounts(props) {
 }
 
 LockoutLinkedAccounts.propTypes = {
-  apiUrl: PropTypes.string.isRequired,
   pendingEmail: PropTypes.string,
   requestDate: PropTypes.instanceOf(Date),
   permissionStatus: PropTypes.string,
   userEmail: PropTypes.string,
+  inSection: PropTypes.bool,
+  providers: PropTypes.arrayOf(PropTypes.string),
 };
 
 const styles = {

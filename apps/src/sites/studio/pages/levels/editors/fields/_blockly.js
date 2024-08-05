@@ -1,8 +1,8 @@
-import getScriptData from '@cdo/apps/util/getScriptData';
-import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
-import initializeBlockPreview from '@cdo/apps/code-studio/initializeBlockPreview';
-import commonBlocks from '@cdo/apps/blocksCommon';
 import {installCustomBlocks} from '@cdo/apps/block_utils';
+import commonBlocks from '@cdo/apps/blocksCommon';
+import initializeBlockPreview from '@cdo/apps/code-studio/initializeBlockPreview';
+import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 const data = getScriptData('pageOptions');
 // TODO: stop pulling Blockly off of the window object.

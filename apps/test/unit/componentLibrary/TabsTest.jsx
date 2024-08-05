@@ -1,11 +1,11 @@
 import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import Tabs from '@cdo/apps/componentLibrary/tabs';
 
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const valuesMap = {};
 const onSelectedTabChange = (name, value) => (valuesMap[name] = value);
@@ -142,5 +142,42 @@ describe('Design System - Tabs', () => {
 
     expect(spyOnChange).to.have.been.called.once;
     expect(spyOnChange).to.have.been.calledWith('tab1');
+  });
+
+  it('Tabs - renders with tooltip and displays it on hover', async () => {
+    const user = userEvent.setup();
+    onSelectedTabChange('test4', 'tab1');
+
+    const TabsToRender = () => (
+      <Tabs
+        defaultSelectedTabValue={valuesMap.test4}
+        tabs={[
+          {
+            text: 'tab1',
+            value: 'tab1',
+            tabContent: <div>tab1 content</div>,
+            tooltip: {text: 'Tooltip for tab1', tooltipId: 'tooltip1'},
+          },
+          {text: 'tab2', value: 'tab2', tabContent: <div>tab2 content</div>},
+        ]}
+        onChange={value => onSelectedTabChange('test4', value)}
+        name={'test4'}
+      />
+    );
+
+    const {rerender} = render(<TabsToRender />);
+
+    let tab1 = screen.getByText('tab1');
+    let tooltip = screen.queryByText('Tooltip for tab1');
+    expect(tab1).to.exist;
+    expect(tooltip).not.to.exist;
+
+    await user.hover(tab1);
+
+    rerender(<TabsToRender />);
+
+    tooltip = screen.queryByText('Tooltip for tab1');
+
+    expect(tooltip).to.exist;
   });
 });

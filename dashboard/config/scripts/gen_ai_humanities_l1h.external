@@ -1,5 +1,8 @@
 name 'gen-ai-humanities-L1H'
 title 'Crafting Prompts'
+display_name 'Creative Writing'
+bubble_choice_description 'Write a creative scene where a character discovers a hidden door in their house.'
+thumbnail_url 'https://images.code.org/080877166c565d2506337059a8b032d4-image-1719504693525.png'
 
 markdown <<MARKDOWN
 ## Creative Writing

@@ -1,7 +1,11 @@
 import {LanguageSupport} from '@codemirror/language';
 import {AnyAction, Dispatch} from 'redux';
 
-import {MultiFileSource, ProjectFile} from '@cdo/apps/lab2/types';
+import {
+  MultiFileSource,
+  ProjectFile,
+  ProjectSources,
+} from '@cdo/apps/lab2/types';
 
 export type {
   FileId,
@@ -32,7 +36,7 @@ export type ConfigType = {
   Instructions?: () => JSX.Element;
   defaultTheme?: EditorTheme;
   leftNav: LeftNavElement[];
-  gridLayout: string;
+  gridLayout?: string;
   gridLayoutRows?: string;
   gridLayoutColumns?: string;
   editableFileTypes: string[];
@@ -40,17 +44,25 @@ export type ConfigType = {
   blankEmptyEditor?: boolean;
   PreviewComponents?: {[key: string]: PreviewComponent};
   languageMapping: {[key: string]: LanguageSupport};
+  labeledGridLayouts?: {
+    [key: string]: {
+      gridLayout: string;
+      gridLayoutRows: string;
+      gridLayoutColumns: string;
+    };
+  };
+  activeGridLayout?: string;
 };
 
 export type ProjectType = MultiFileSource;
+export type SourceType = ProjectSources;
 
 export type SetProjectFunction = (project: ProjectType) => void;
 export type SetConfigFunction = (project: ConfigType) => void;
 export type ResetProjectFunction = () => void;
 export type OnRunFunction = (
-  runTexts: boolean,
+  runTests: boolean,
   dispatch: Dispatch<AnyAction>,
-  permissions: string[],
   source: MultiFileSource | undefined
 ) => void;
 

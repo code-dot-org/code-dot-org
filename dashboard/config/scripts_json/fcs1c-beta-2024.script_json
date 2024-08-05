@@ -12,12 +12,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-20 17:11:33 UTC",
+    "serialized_at": "2024-07-11 17:54:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -4049,6 +4050,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 IO Pet Chooser_2024b"
+        ],
         "progression": "App: Pet Chooser"
       },
       "bonus": false,
@@ -4071,6 +4075,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 IO Story_2024b"
+        ],
         "progression": "App: Story Creator"
       },
       "bonus": false,
@@ -4093,6 +4100,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 IO Pet Chooser 2_2024b"
+        ],
         "progression": "App: Improved Pet App"
       },
       "bonus": false,
@@ -4115,6 +4125,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing bday_2024b"
+        ],
         "progression": "App: Is It Your Birthday?"
       },
       "bonus": false,
@@ -4137,6 +4150,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing npark_2024b"
+        ],
         "progression": "App: National Parks"
       },
       "bonus": false,
@@ -4159,6 +4175,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing countries_2024b"
+        ],
         "progression": "App: How Many Countries"
       },
       "bonus": false,
@@ -4181,6 +4200,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing writers_2024b"
+        ],
         "progression": "App: My Famous Birthday"
       },
       "bonus": false,
@@ -4203,6 +4225,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing notebook_2024b"
+        ],
         "progression": "App: Stamp Notebook"
       },
       "bonus": false,
@@ -4225,6 +4250,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing fastest_2024b"
+        ],
         "progression": "App: The Fastest Finger"
       },
       "bonus": false,
@@ -4247,6 +4275,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing guess_2024b"
+        ],
         "progression": "App: Guess the Number"
       },
       "bonus": false,
@@ -4269,6 +4300,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 processing live_2024b"
+        ],
         "progression": "App: Where Should I Live?"
       },
       "bonus": false,
@@ -4291,6 +4325,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 storage outfit_2024b"
+        ],
         "progression": "App: Outfit Picker"
       },
       "bonus": false,
@@ -4313,6 +4350,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 storage friends_2024b"
+        ],
         "progression": "App: Friend Finder"
       },
       "bonus": false,
@@ -4335,6 +4375,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U1 storage movies_2024b"
+        ],
         "progression": "App: Choose a Kid's Movie"
       },
       "bonus": false,

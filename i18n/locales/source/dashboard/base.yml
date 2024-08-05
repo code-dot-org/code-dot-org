@@ -43,6 +43,9 @@ en:
           attributes:
             reset_password_token:
               invalid: "is invalid. Note that each link can only be used once to reset your password, and only the most recently sent link will work."
+            unlock_token:
+              invalid: "is invalid or expired, possibly because your account has already been unlocked."
+            lockout_flow: "cannot be updated because you need parent or guardian permission first."
       messages:
         blank: "is required"
         blank_plural: "are required"
@@ -160,6 +163,7 @@ en:
     disconnect_successful: "Success! We have disconnected the external account from your Code.org account."
     already_in_use: "Your %{provider} account is already connected to another Code.org account."
     already_linked: "Your %{provider} account is already linked to your Code.org account."
+    parental_permission_required: "Uh oh! You must obtain parental permission before creating a linked account."
     existing_account:
       account_exists: "Good news! You already have a Code.org account that uses %{email}"
       sign_in: "Please sign in to your existing account. Then you will be able to link your %{provider} profile from your Account Settings page."
@@ -415,6 +419,7 @@ en:
       learn: "Learn"
       stats: "Stats"
       help_us: "Help Us"
+      donate: "Donate"
       teach: "Teach"
       about: "About"
       incubator: "Incubator"
@@ -541,6 +546,8 @@ en:
     create_personal_login_under_13_username: "Username (don't use your real name!)"
     create_personal_login_under_13_parent_email: 'Parent/guardian email address'
     create_personal_login_info: 'If you want to keep using your Code.org account even after the end of the school year, you can create your own login below.'
+    create_personal_login_state_required: 'Uh oh! Please provide your state before creating a personal login.'
+    create_personal_login_parental_permission_required: 'Uh oh! You must obtain parental permission before creating a personal login.'
     create_personal_login_link_account: 'You can also instead choose to connect to a personal account under the “Manage Linked Accounts” section.'
     create_personal_login_terms: "By creating a personal login, I agree to be bound by the Code.org <a href='%{terms_of_service_url}', target='_blank'>terms of service</a>. I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
     create_personal_login_terms_markdown: "By creating a personal login, I agree to be bound by the Code.org [terms of service](%{terms_of_service_url}). I confirm that I have my parent or legal guardian's permission to use the Code.org services even without a teacher."
@@ -552,6 +559,7 @@ en:
     parent_email_hint: "(this can be used for password recovery)"
     enter_parent_email: "Enter your parent or guardian's email address (for password recovery)"
     update: "Update Account"
+    update_field_parent_permission_required: '(You must obtain parental permission before updating this field)'
     account_successfully_updated: "Account successfully updated."
     auth_option_saved: "You have successfully linked your %{provider} account with email %{email}."
     auth_option_saved_no_email: "You have successfully linked your %{provider} account."
@@ -1222,14 +1230,19 @@ en:
         not_listed: 'Preferred term not listed'
         none: 'Prefer not to answer'
       school_country:
+        antigua_and_barbuda: 'Antigua and Barbuda'
         australia: 'Australia'
         barbados: 'Barbados'
         belize: 'Belize'
+        botswana: 'Botswana'
         brazil: 'Brazil'
+        cambodia: 'Cambodia'
         canada: 'Canada'
         chile: 'Chile'
         colombia: 'Colombia'
         dominican_republic: 'Dominican Republic'
+        ecuador: 'Ecuador'
+        egypt: 'Egypt'
         india: 'India'
         indonesia: 'Indonesia'
         israel: 'Israel'
@@ -1239,18 +1252,24 @@ en:
         kosovo: 'Kosovo'
         malaysia: 'Malaysia'
         maldives: 'Maldives'
+        malta: 'Malta'
         mexico: 'Mexico'
         mongolia: 'Mongolia'
         new_zealand: 'New Zealand'
         paraguay: 'Paraguay'
+        peru: 'Peru'
         philippines: 'Philippines'
         portugal: 'Portugal'
         puerto_rico: 'Puerto Rico'
+        romania: 'Romania'
         slovakia: 'Slovakia'
+        south_africa: 'South Africa'
         south_korea: 'South Korea'
         spain: 'Spain'
+        sri_lanka: 'Sri Lanka'
         thailand: 'Thailand'
         trinidad_and_tobago: 'Trinidad and Tobago'
+        uruguay: 'Uruguay'
         uzbekistan: 'Uzbekistan'
         vietnam: 'Vietnam'
       ages:
@@ -1424,10 +1443,14 @@ en:
     your_friends: "Your Friends at Code.org"
   lti:
     account_linking:
+      account_not_found: "Account not found"
+      admin_not_allowed: "Admins cannot link LTI accounts"
       connect_button: "Connect with %{provider}"
       connect_with: "Connect with..."
       connect_with_email: "Connect with personal login"
+      backend_error: "Oops! We encountered an error while trying to link your account. Please try launching Code.org again from your LMS."
       go_back: "Go back"
+      invalid_credentials: "Invalid credentials"
       linking_page_header: "Link your %{provider} account to your existing Code.org account"
       linking_page_description: "Choose the sign-in method you normally use to access Code.org"
       sign_in_and_connect: "Sign in and connect"
@@ -1475,18 +1498,6 @@ en:
       success_body: "Great news! Your LMS has been registered with Code.org, and you can continue installing and using your LMS integration. You should receive a confirmation email shortly."
       success_header: "Thank you for registering your LMS!"
       register: "Register LMS"
-      early_access:
-        title: LMS Early Access
-        closed: Sorry, all Early Access slots for Code.org Learning Management System Integrations have been claimed.
-        waitlist: Please [sign-up here](%{sign_up_link}) to join the Early Access waitlist and get updates about LMS Integration releases.
-        form_header: Register your LMS for Integration Early Access
-        form_instructions:
-          Please use this form to register your Learning Management System (LMS) with Code.org.
-          This will allow Early Access to install our LTI integration on your LMS.
-        banner:
-          text:
-            You are using an **Early Access version** of Code.org’s LMS Integration.
-            Encountering issues? [**Report a Bug**](%{bug_report_url})
     upgrade_to_teacher_account:
       error:
         missing_email: "Missing required parameter: Email"

@@ -1,5 +1,6 @@
-import {SongMetadata} from './types';
 import previewMetadata from '@cdo/static/dance/preview-metadata.json';
+
+import {SongMetadata} from './types';
 
 // Common utils shared between legacy and Lab2 Dance
 

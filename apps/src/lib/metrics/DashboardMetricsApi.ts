@@ -1,4 +1,5 @@
 import HttpClient from '@cdo/apps/util/HttpClient';
+
 import {MetricsApi} from './MetricsApi';
 import {MetricDatum} from './types';
 

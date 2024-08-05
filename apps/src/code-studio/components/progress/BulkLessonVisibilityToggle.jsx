@@ -1,14 +1,16 @@
+import _ from 'lodash';
+import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
 import ReactTooltip from 'react-tooltip';
-import _ from 'lodash';
+
+import {toggleHiddenLesson} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {getStore} from '@cdo/apps/redux';
-import Button from '@cdo/apps/templates/Button';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
-import {toggleHiddenLesson} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import i18n from '@cdo/locale';
+
 import style from './bulk-lesson-visibility-toggle.module.scss';
 
 function toggleHiddenLessons(unitName, sectionId, lessons, hidden) {

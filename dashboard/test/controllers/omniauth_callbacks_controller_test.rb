@@ -655,6 +655,17 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_equal user.oauth_refresh_token, auth[:credentials][:refresh_token]
   end
 
+  test 'google_oauth2: user can still sign in even if account linking is locked' do
+    user = create(:student, :google_sso_provider, uid: 'fake-uid')
+    @controller.stubs(:account_linking_lock_reason).with(user).returns('reason')
+    auth = generate_auth_user_hash(provider: 'google_oauth2', uid: 'fake-uid')
+    @request.env['omniauth.auth'] = auth
+    @request.env['omniauth.params'] = {}
+    get :google_oauth2
+    # The user should be able to login even in OAuth account linking is locked.
+    assert_redirected_to root_path
+  end
+
   test 'google_oauth2: updates tokens when migrated user is found by credentials' do
     # Given I have a Google-Code.org account
     user = create(:teacher,
@@ -1671,95 +1682,200 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     assert_nil signed_in_user_id
   end
 
-  test 'Google SSO: links an LTI auth option to an existing account' do
-    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
-    lti_integration = create :lti_integration
+  describe '#connect_provider' do
+    let(:user) {create(:user, uid: user_uid)}
+    let(:user_uid) {SecureRandom.uuid}
 
-    # Pre-existing Google account that we want the new LTI auth option to be linked to
-    existing_user = create :teacher, :with_google_authentication_option
-    auth = generate_auth_user_hash provider: AuthenticationOption::GOOGLE, uid: existing_user.authentication_options[1].authentication_id
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
+    AuthenticationOption::OAUTH_CREDENTIAL_TYPES.excluding(
+      AuthenticationOption::QWIKLABS,
+      AuthenticationOption::TWITTER,
+      AuthenticationOption::POWERSCHOOL,
+    ).each do |provider|
+      context "when provider is #{provider}" do
+        let(:auth_hash) {generate_auth_user_hash(provider: provider, uid: user_uid)}
+        let(:user_account_linking_lock_reason) {nil}
 
-    # Teacher that is going through the account linking flow
-    partial_lti_teacher = create :teacher
-    fake_id_token = {iss: lti_integration.issuer, aud: lti_integration.client_id, sub: 'foo'}
-    auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
-    ao = AuthenticationOption.new(
-      authentication_id: auth_id,
-      credential_type: AuthenticationOption::LTI_V1,
-      email: existing_user.email,
-    )
-    partial_lti_teacher.authentication_options = [ao]
-    PartialRegistration.persist_attributes session, partial_lti_teacher
+        before do
+          setup_should_connect_provider(user, auth_hash)
+          @controller.stubs(:account_linking_lock_reason).with(user).returns(user_account_linking_lock_reason)
+        end
 
-    get :google_oauth2
-    # The user factory automatically creates an email auth option,
-    # so this includes 1 email, 1 google, and 1 LTI auth option
-    assert_equal 3, existing_user.reload.authentication_options.count
-    assert_includes existing_user.authentication_options, ao
+        context 'if account linking is locked for user' do
+          let(:user_account_linking_lock_reason) {'expected_user_account_linking_lock_reason'}
+
+          it 'redirects to the sign in page with alert about lock reason' do
+            assert_does_not_create(AuthenticationOption) do
+              get provider
+            end
+
+            assert_redirected_to new_user_session_path
+            _(flash.alert).must_equal user_account_linking_lock_reason
+          end
+
+          context 'and the user has a referrer page' do
+            before do
+              @request.env['HTTP_REFERER'] = 'https://example.com/where-i-came-from'
+            end
+
+            it 'redirects back to where the user came from with alert about lock reason' do
+              assert_does_not_create(AuthenticationOption) do
+                get provider
+              end
+
+              assert_redirected_to 'https://example.com/where-i-came-from'
+              _(flash.alert).must_equal user_account_linking_lock_reason
+            end
+          end
+        end
+      end
+    end
   end
 
-  test 'Facebook SSO: links an LTI auth option to an existing account' do
-    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
-    lti_integration = create :lti_integration
+  describe '#link_accounts' do
+    let(:user) {create(:teacher)}
+    let(:admin) {create(:admin)}
 
-    # Pre-existing Facebook account that we want the new LTI auth option to be linked to
-    existing_user = create :teacher, :with_facebook_authentication_option
-    auth = generate_auth_user_hash provider: AuthenticationOption::FACEBOOK, uid: existing_user.authentication_options[1].authentication_id
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
+    let(:user_account_linking_lock_reason) {nil}
 
-    # Teacher that is going through the account linking flow
-    partial_lti_teacher = create :teacher
-    fake_id_token = {iss: lti_integration.issuer, aud: lti_integration.client_id, sub: 'foo'}
-    auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
-    ao = AuthenticationOption.new(
-      authentication_id: auth_id,
-      credential_type: AuthenticationOption::LTI_V1,
-      email: existing_user.email,
-    )
-    partial_lti_teacher.authentication_options = [ao]
-    PartialRegistration.persist_attributes session, partial_lti_teacher
+    before do
+      @controller.stubs(:account_linking_lock_reason).with(user).returns(user_account_linking_lock_reason)
+      @controller.stubs(:account_linking_lock_reason).with(admin).returns(user_account_linking_lock_reason)
+    end
 
-    get :facebook
-    # The user factory automatically creates an email auth option,
-    # so this includes 1 email, 1 Facebook, and 1 LTI auth option
-    assert_equal 3, existing_user.reload.authentication_options.count
-    assert_includes existing_user.authentication_options, ao
-  end
+    [AuthenticationOption::GOOGLE, AuthenticationOption::FACEBOOK, AuthenticationOption::MICROSOFT].each do |provider|
+      context "when #{provider} SSO" do
+        let(:partial_lti_teacher) {create(:teacher)}
+        let(:lti_integration) {create(:lti_integration)}
+        let(:provider_auth_option) do
+          create(
+            :authentication_option,
+            user: user,
+            email: user.email,
+            hashed_email: user.hashed_email,
+            credential_type: provider,
+            authentication_id: SecureRandom.uuid,
+            data: {
+              oauth_token: "some-#{provider}-token",
+              oauth_refresh_token: "some-#{provider}-refresh-token",
+              oauth_token_expiration: '999999'
+            }.to_json
+          )
+        end
+        let(:lti_auth_option) do
+          AuthenticationOption.new(
+            authentication_id: Services::Lti::AuthIdGenerator.new(
+              {iss: lti_integration.issuer, aud: lti_integration.client_id, sub: 'foo'}
+            ).call,
+            credential_type: AuthenticationOption::LTI_V1,
+            email: user.email,
+          )
+        end
 
-  test 'Microsoft SSO: links an LTI auth option to an existing account' do
-    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
-    lti_integration = create :lti_integration
+        before do
+          @request.env['omniauth.auth'] = generate_auth_user_hash(provider: provider, uid: provider_auth_option.authentication_id)
+          @request.env['omniauth.params'] = {}
 
-    # Pre-existing Microsoft account that we want the new LTI auth option to be linked to
-    existing_user = create :teacher, :with_microsoft_authentication_option
-    auth = generate_auth_user_hash provider: AuthenticationOption::MICROSOFT, uid: existing_user.authentication_options[1].authentication_id
-    @request.env['omniauth.auth'] = auth
-    @request.env['omniauth.params'] = {}
+          partial_lti_teacher.authentication_options = [lti_auth_option]
+          PartialRegistration.persist_attributes session, partial_lti_teacher
+        end
 
-    # Teacher that is going through the account linking flow
-    partial_lti_teacher = create :teacher
-    fake_id_token = {iss: lti_integration.issuer, aud: lti_integration.client_id, sub: 'foo'}
-    auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
-    ao = AuthenticationOption.new(
-      authentication_id: auth_id,
-      credential_type: AuthenticationOption::LTI_V1,
-      email: existing_user.email,
-    )
-    partial_lti_teacher.authentication_options = [ao]
-    PartialRegistration.persist_attributes session, partial_lti_teacher
+        it 'links an LTI auth option to an existing account' do
+          Metrics::Events.expects(:log_event).with(
+            has_entries(
+              user: user,
+              event_name: 'lti_user_signin'
+            )
+          )
+          Metrics::Events.expects(:log_event).with(
+            has_entries(
+              user: user,
+              event_name: 'lti_account_linked'
+            )
+          )
+          get provider
+          # The user factory automatically creates an email auth option,
+          # so this includes 1 email, 1 SSO, and 1 LTI auth option
+          _(user.authentication_options.count).must_equal 3
+          _(user.authentication_options).must_include lti_auth_option
+        end
 
-    get :microsoft_v2_auth
-    # The user factory automatically creates an email auth option,
-    # so this includes 1 email, 1 Microsoft, and 1 LTI auth option
-    assert_equal 3, existing_user.reload.authentication_options.count
-    assert_includes existing_user.authentication_options, ao
+        context 'if account linking is locked for user' do
+          let(:user_account_linking_lock_reason) {'expected_user_account_linking_lock_reason'}
+
+          it 'redirects to the sign in page by default with alert about lock reason' do
+            get provider
+
+            _(user.authentication_options.count).must_equal 2
+            _(user.authentication_options).wont_include lti_auth_option
+
+            assert_redirected_to new_user_session_path
+            _(flash.alert).must_equal user_account_linking_lock_reason
+          end
+
+          context 'and the user has a referrer page' do
+            before do
+              @request.env['HTTP_REFERER'] = 'https://example.com/where-i-came-from'
+            end
+
+            it 'redirects back to where we came from with alert about lock reason' do
+              get provider
+
+              _(user.authentication_options.count).must_equal 2
+              _(user.authentication_options).wont_include lti_auth_option
+
+              assert_redirected_to 'https://example.com/where-i-came-from'
+              _(flash.alert).must_equal user_account_linking_lock_reason
+            end
+          end
+        end
+      end
+      context "when #{provider} SSO as admin" do
+        let(:partial_lti_teacher) {create(:teacher)}
+        let(:lti_integration) {create(:lti_integration)}
+        let(:provider_auth_option) do
+          create(
+            :authentication_option,
+            user: admin,
+            email: admin.email,
+            hashed_email: admin.hashed_email,
+            credential_type: provider,
+            authentication_id: SecureRandom.uuid,
+            data: {
+              oauth_token: "some-#{provider}-token",
+              oauth_refresh_token: "some-#{provider}-refresh-token",
+              oauth_token_expiration: '999999'
+            }.to_json
+          )
+        end
+        let(:lti_auth_option) do
+          AuthenticationOption.new(
+            authentication_id: Services::Lti::AuthIdGenerator.new(
+              {iss: lti_integration.issuer, aud: lti_integration.client_id, sub: 'bar'}
+            ).call,
+            credential_type: AuthenticationOption::LTI_V1,
+            email: admin.email,
+          )
+        end
+
+        before do
+          @request.env['omniauth.auth'] = generate_auth_user_hash(provider: provider, uid: provider_auth_option.authentication_id)
+          @request.env['omniauth.params'] = {}
+
+          partial_lti_teacher.authentication_options = [lti_auth_option]
+          PartialRegistration.persist_attributes session, partial_lti_teacher
+        end
+
+        it 'returns flash alert and does not link admin account' do
+          get provider
+
+          assert_equal I18n.t('lti.account_linking.admin_not_allowed'), flash[:alert]
+          assert_redirected_to user_session_path
+        end
+      end
+    end
   end
 
   test 'Account linking flow doesn\'t sign up new users' do
-    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
     OmniauthCallbacksController.stubs(:should_link_accounts?).returns(true)
     auth = generate_auth_user_hash provider: AuthenticationOption::GOOGLE, uid: 'some-uid'
     @request.env['omniauth.auth'] = auth
@@ -1796,6 +1912,12 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
         token: args[:token] || '12345',
         expires_at: args[:expires_at] || 'some-future-time',
         refresh_token: args[:refresh_token] || nil
+      },
+      extra: {
+        raw_info: {
+          userPrincipalName: "someone",
+          displayName: "someone",
+        }
       }
     )
   end

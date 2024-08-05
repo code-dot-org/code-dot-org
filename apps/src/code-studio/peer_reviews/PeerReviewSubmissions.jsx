@@ -1,11 +1,13 @@
+import $ from 'jquery';
+import _ from 'lodash';
+import PropTypes from 'prop-types';
 import React from 'react';
 import {Button, FormControl} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import PropTypes from 'prop-types';
-import _ from 'lodash';
-import Spinner from '../pd/components/spinner';
-import PeerReviewSubmissionData from './PeerReviewSubmissionData';
+
 import Pagination from '../../lib/ui/Pagination';
-import $ from 'jquery';
+import Spinner from '../pd/components/spinner';
+
+import PeerReviewSubmissionData from './PeerReviewSubmissionData';
 
 class PeerReviewSubmissions extends React.Component {
   static propTypes = {

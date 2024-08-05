@@ -7,11 +7,13 @@ import {
   ThunkDispatch,
 } from '@reduxjs/toolkit';
 
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {registerReducers} from '@cdo/apps/redux';
 import {RootState} from '@cdo/apps/types/redux';
+import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
@@ -20,15 +22,14 @@ import {saveTypeToAnalyticsEvent} from '../constants';
 import {
   AiCustomizations,
   AichatContext,
+  ChatEvent,
   FieldVisibilities,
   LevelAichatSettings,
   ModelCardInfo,
-  Role,
   SaveType,
   ViewMode,
   Visibility,
   ChatMessage,
-  ChatItem,
   isModelUpdate,
   isNotification,
   isChatMessage,
@@ -48,7 +49,7 @@ import {
   hasFilledOutModelCard,
 } from './utils';
 
-const messageListKeys = ['chatItemsPast', 'chatItemsCurrent'] as const;
+const messageListKeys = ['chatEventsPast', 'chatEventsCurrent'] as const;
 type MessageLocation = {
   index: number;
   messageListKey: (typeof messageListKeys)[number];
@@ -57,13 +58,15 @@ type MessageLocation = {
 export interface AichatState {
   // Content from previous chat sessions that we track purely for visibility to the user
   // and do not send to the model as history.
-  chatItemsPast: ChatItem[];
+  chatEventsPast: ChatEvent[];
   // Items in the current chat session that we want to provide as history to the model.
-  chatItemsCurrent: ChatItem[];
+  chatEventsCurrent: ChatEvent[];
   // The user message currently awaiting response from the model (if any).
   chatMessagePending?: ChatMessage;
   // Denotes whether we are waiting for a chat completion response from the backend
   isWaitingForChatResponse: boolean;
+  // Student events viewed by a teacher user in chat workspace
+  studentChatHistory: ChatEvent[];
   // Denotes whether we should show the warning modal
   showWarningModal: boolean;
   // Denotes if there is an error with the chat completion response
@@ -80,10 +83,11 @@ export interface AichatState {
 }
 
 const initialState: AichatState = {
-  chatItemsPast: [],
-  chatItemsCurrent: [],
+  chatEventsPast: [],
+  chatEventsCurrent: [],
   chatMessagePending: undefined,
   isWaitingForChatResponse: false,
+  studentChatHistory: [],
   showWarningModal: true,
   chatMessageError: false,
   currentAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
@@ -214,11 +218,20 @@ export const onSaveComplete =
         })
       );
 
+      // Report to analytics the changed value for only selected model id and temperature properties.
+      // Do not include the free text changes (system prompt and retrieval contexts).
+      const propertiesChangedValueToReport = ['selectedModelId', 'temperature'];
+      const propertyChangedTo = propertiesChangedValueToReport.includes(
+        typedProperty
+      )
+        ? currentAiCustomizations[typedProperty]
+        : 'NULL';
       if (currentSaveType) {
         analyticsReporter.sendEvent(
           saveTypeToAnalyticsEvent[currentSaveType],
           {
             propertyUpdated: property,
+            propertyChangedTo,
             levelPath: window.location.pathname,
           },
           PLATFORMS.BOTH
@@ -236,12 +249,66 @@ export const onSaveComplete =
     }
   };
 
+// Thunk called when a save no-ops (there are no changes to save)
+export const onSaveNoop =
+  () => (dispatch: AppDispatch, getState: () => RootState) => {
+    // Even if no changes were saved, go to the presentation page if the user tried to publish
+    // a model card.
+    if (getState().aichat.currentSaveType === 'publishModelCard') {
+      dispatch(setViewMode(ViewMode.PRESENTATION));
+    }
+    dispatch(endSave());
+  };
+
 // Thunk called when a save has failed.
-export const onSaveFail = () => (dispatch: AppDispatch) => {
+export const onSaveFail =
+  (e: Error) => (dispatch: AppDispatch, getState: () => RootState) => {
+    // Default save error message.
+    let errorMessage =
+      'There was an error saving your project. Please try again.';
+    if (e instanceof NetworkError) {
+      e.response
+        .json()
+        .then(body => {
+          const changedProperties = findChangedProperties(
+            getState().aichat.savedAiCustomizations,
+            getState().aichat.currentAiCustomizations
+          );
+          let flaggedProperties;
+          if (
+            changedProperties.includes('systemPrompt') &&
+            changedProperties.includes('retrievalContexts')
+          ) {
+            flaggedProperties = 'system prompt and/or retrieval contexts';
+          } else if (changedProperties.includes('systemPrompt')) {
+            flaggedProperties = 'system prompt';
+          } else if (changedProperties.includes('retrievalContexts')) {
+            flaggedProperties = 'retrieval contexts';
+          }
+          if (body?.details?.profaneWords?.length > 0 && flaggedProperties) {
+            errorMessage = `Profanity detected in the ${flaggedProperties} and cannot be updated. Please try again.`;
+          }
+          dispatchSaveFailNotification(dispatch, errorMessage);
+        })
+        // Catch any errors in parsing the response body or if there was no response body
+        // and fall back to the default error message.
+        .catch(() => {
+          dispatchSaveFailNotification(dispatch, errorMessage);
+        });
+    } else {
+      // If an Error was passed instead of a NetworkError, fall back to the default error message.
+      dispatchSaveFailNotification(dispatch, errorMessage);
+    }
+  };
+
+const dispatchSaveFailNotification = (
+  dispatch: AppDispatch,
+  errorMessage: string
+) => {
   dispatch(
     addNotification({
       id: getNewMessageId(),
-      text: 'Error updating project. Please try again.',
+      text: errorMessage,
       notificationType: 'error',
       timestamp: Date.now(),
     })
@@ -259,7 +326,7 @@ export const submitChatContents = createAsyncThunk(
     const state = thunkAPI.getState() as RootState;
     const {
       savedAiCustomizations: aiCustomizations,
-      chatItemsCurrent,
+      chatEventsCurrent,
       currentSessionId,
     } = state.aichat;
 
@@ -284,7 +351,7 @@ export const submitChatContents = createAsyncThunk(
     try {
       chatApiResponse = await postAichatCompletionMessage(
         newMessage,
-        chatItemsCurrent.filter(isChatMessage) as ChatMessage[],
+        chatEventsCurrent.filter(isChatMessage) as ChatMessage[],
         aiCustomizations,
         aichatContext,
         currentSessionId
@@ -339,13 +406,16 @@ const aichatSlice = createSlice({
   initialState,
   reducers: {
     addChatMessage: (state, action: PayloadAction<ChatMessage>) => {
-      state.chatItemsCurrent.push(action.payload);
+      state.chatEventsCurrent.push(action.payload);
     },
     addModelUpdate: (state, action: PayloadAction<ModelUpdate>) => {
-      state.chatItemsCurrent.push(action.payload);
+      state.chatEventsCurrent.push(action.payload);
     },
     addNotification: (state, action: PayloadAction<Notification>) => {
-      state.chatItemsCurrent.push(action.payload);
+      state.chatEventsCurrent.push(action.payload);
+    },
+    setStudentChatHistory: (state, action: PayloadAction<ChatEvent[]>) => {
+      state.studentChatHistory = action.payload;
     },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
       const modelUpdateMessageInfo = getUpdateMessageLocation(
@@ -360,8 +430,8 @@ const aichatSlice = createSlice({
       state[messageListKey].splice(index, 1);
     },
     clearChatMessages: state => {
-      state.chatItemsPast = [];
-      state.chatItemsCurrent = [];
+      state.chatEventsPast = [];
+      state.chatEventsCurrent = [];
       state.currentSessionId = undefined;
     },
     setChatMessagePending: (state, action: PayloadAction<ChatMessage>) => {
@@ -369,8 +439,8 @@ const aichatSlice = createSlice({
     },
     clearChatMessagePending: state => (state.chatMessagePending = undefined),
     setNewChatSession: state => {
-      state.chatItemsPast.push(...state.chatItemsCurrent);
-      state.chatItemsCurrent = [];
+      state.chatEventsPast.push(...state.chatEventsCurrent);
+      state.chatEventsCurrent = [];
       state.currentSessionId = undefined;
     },
     setChatSessionId: (state, action: PayloadAction<number>) => {
@@ -413,9 +483,12 @@ const aichatSlice = createSlice({
       }
 
       // Make sure model ID is valid
-      reconciledAiCustomizations.selectedModelId = validateModelId(
-        reconciledAiCustomizations.selectedModelId
-      );
+      reconciledAiCustomizations = {
+        ...reconciledAiCustomizations,
+        selectedModelId: validateModelId(
+          reconciledAiCustomizations.selectedModelId
+        ),
+      };
 
       state.savedAiCustomizations = reconciledAiCustomizations;
       state.currentAiCustomizations = reconciledAiCustomizations;
@@ -428,13 +501,16 @@ const aichatSlice = createSlice({
     ) => {
       const levelAichatSettings = action.payload;
 
-      const defaultAiCustomizations: AiCustomizations =
+      let defaultAiCustomizations: AiCustomizations =
         levelAichatSettings?.initialCustomizations || EMPTY_AI_CUSTOMIZATIONS;
 
       // Make sure model ID is valid
-      defaultAiCustomizations.selectedModelId = validateModelId(
-        defaultAiCustomizations.selectedModelId
-      );
+      defaultAiCustomizations = {
+        ...defaultAiCustomizations,
+        selectedModelId: validateModelId(
+          defaultAiCustomizations.selectedModelId
+        ),
+      };
 
       state.savedAiCustomizations = defaultAiCustomizations;
       state.currentAiCustomizations = defaultAiCustomizations;
@@ -536,13 +612,19 @@ export const selectAllFieldsHidden = createSelector(
 );
 
 export const selectAllMessages = (state: {aichat: AichatState}) => {
-  const {chatItemsPast, chatItemsCurrent, chatMessagePending} = state.aichat;
-  const messages = [...chatItemsPast, ...chatItemsCurrent];
+  const {chatEventsPast, chatEventsCurrent, chatMessagePending} = state.aichat;
+  const messages = [...chatEventsPast, ...chatEventsCurrent];
   if (chatMessagePending) {
     messages.push(chatMessagePending);
   }
   return messages;
 };
+
+export const selectHavePropertiesChanged = (state: RootState) =>
+  findChangedProperties(
+    state.aichat.savedAiCustomizations,
+    state.aichat.currentAiCustomizations
+  ).length > 0;
 
 // Actions not to be used outside of this file
 const {
@@ -566,6 +648,7 @@ export const {
   setViewMode,
   setStartingAiCustomizations,
   setAiCustomizationProperty,
+  setStudentChatHistory,
   setModelCardProperty,
   endSave,
 } = aichatSlice.actions;

@@ -78,7 +78,7 @@
                                 </block>
                               </value>
                               <statement name="DO">
-                                <block type="procedures_callnoreturn" inline="true">
+                                <block type="procedures_callnoreturn">
                                   <mutation name="grabL">
                                     <arg name="number"/>
                                   </mutation>
@@ -88,7 +88,7 @@
                                     </block>
                                   </value>
                                   <next>
-                                    <block type="procedures_callnoreturn" inline="true">
+                                    <block type="procedures_callnoreturn">
                                       <mutation name="grabR">
                                         <arg name="number"/>
                                       </mutation>
@@ -894,23 +894,23 @@
           </block>
         </category>
         <category name="Functions">
-          <block type="procedures_callnoreturn" inline="true">
+          <block type="procedures_callnoreturn">
             <mutation name="grabL">
               <arg name="number"/>
             </mutation>
           </block>
-          <block type="procedures_callnoreturn" inline="true">
+          <block type="procedures_callnoreturn">
             <mutation name="grabR">
               <arg name="number"/>
             </mutation>
           </block>
-          <block type="procedures_callnoreturn" inline="true">
+          <block type="procedures_callnoreturn">
             <mutation name="swap"/>
           </block>
-          <block type="procedures_callnoreturn" inline="true">
+          <block type="procedures_callnoreturn">
             <mutation name="dropL"/>
           </block>
-          <block type="procedures_callnoreturn" inline="true">
+          <block type="procedures_callnoreturn">
             <mutation name="dropR"/>
           </block>
         </category>

@@ -34,7 +34,7 @@
     );
 
 .free-response{:class => ('left-aligned' if left_align)}
-  - if DCDO.get("show_level_summary_entry_point", false) && !in_level_group
+  - if !in_level_group
     %div#summaryEntryPoint
   - title = level.get_property(:title)
   - if title.present? && (!in_level_group || is_contained_level)

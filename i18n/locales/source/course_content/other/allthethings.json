@@ -2900,6 +2900,25 @@
   "https://studio.code.org/s/allthethings/lessons/45/levels/4": {
     "long_instructions": "This is a Poetry level which includes the auto-populated `PROCEDURES` category and uses the modal function editor."
   },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/2": {
+    "long_instructions": "First, please play one sound.",
+    "validations": {
+      "Music Level 1_391b0b44-af8d-4559-a985-d5b643aed908": "Nice work.",
+      "Music Level 1_c0da3b0b-c4d6-490c-8bfb-4faf4188ff32": "Please play one sound."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/3": {
+    "long_instructions": "Second, please play three sounds at the same time.",
+    "validations": {
+      "Music Level 2_b4505750-86bb-40d7-8c31-ca015980d7ee": "Nice work.",
+      "Music Level 2_f5ef3af6-0010-4e06-937c-d35b5cb8e0be": "It's good that you played two sounds, but you need to play another one.",
+      "Music Level 2_3e35e104-7422-4fb8-80e1-b9da580384f2": "It's good that you played one sound, but you need to play two more.",
+      "Music Level 2_dc4dddf1-5e9d-4664-b9a1-00d73e728a06": "Please play three sounds together."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/4": {
+    "long_instructions": "Try everything!"
+  },
   "https://studio.code.org/s/allthethings/lessons/47/levels/1": {
     "long_instructions": "## Sample Instructions\n\nThis is a chat bot which allows you to talk to historical figures.\n\n### Do This\n\nType in a question and press the `Submit`(#7435b2) button. What can you learn about Ada Lovelace?"
   },
@@ -2941,11 +2960,25 @@
   "https://studio.code.org/s/allthethings/lessons/50/levels/4": {
     "long_instructions": "## Project-backed level\n\nThis level shares a project with level 3 in the progression."
   },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/5": {
+    "long_instructions": "## Predict and Run\n\n**What do you think this program does?**\n\nTake a look at the code in this program. Write down what you think this program will do. There are no wrong answers!",
+    "teacher_markdown": "Teachers should see this extra info."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/6": {
+    "long_instructions": "## Predict and Run\n\n**What do you think this program does?**\n\nTake a look at the code in this program. Which of the following matches what the program will print?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/7": {
+    "long_instructions": "## Submittable Level\n\nHere's a sample submittable level!",
+    "teacher_markdown": "Teachers should see this extra info."
+  },
   "https://studio.code.org/s/allthethings/lessons/51/levels/1": {
     "long_instructions": "Add **html** pages and preview them in the right pane.\n\nAdd **css** pages (and link them to your html).\n\nUse the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)"
   },
   "https://studio.code.org/s/allthethings/lessons/51/levels/2": {
     "long_instructions": "## Web Lab 2 Basics\n\nCreate your own web page!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/1": {
+    "long_instructions": "Try everything!"
   },
   "https://studio.code.org/s/allthethings/lessons/52/levels/2": {
     "long_instructions": "## Sample Instructions\n\nThis is a chat bot which allows you to talk to historical figures.\n\n### Do This\n\nType in a question and press the `Submit`(#7435b2) button. What can you learn about Ada Lovelace?"

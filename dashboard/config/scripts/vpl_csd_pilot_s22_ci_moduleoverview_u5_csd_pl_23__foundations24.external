@@ -1,0 +1,26 @@
+name 'VPL-CSD-PILOT-S22-CI-ModuleOverview-U5_CSD_PL_23_-foundations24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Teaching Representing Information
+
+## Welcome! 
+
+#### This professional learning module is designed help you prepare to teach Code.org's Representing Information unit. 
+
+<img src="https://images.code.org/cff9c19a9baf711373858aa734717395-image-1707764744458.05.42 AM.png" alt="Three students look onto a laptop and smile." style="float: right; height: 200px; clear: both; margin: 10px 10px 10px 10px; border-radius: 30px">
+
+### **In this module, you will**:
+
+* #### Get an introduction to Representing Information.
+* #### Practice key concepts included in the unit.
+* #### Explore the end-of-chapter project.
+<br>
+
+#### **Suggested total time:** 40 minutes
+
+
+
+<br>
+MARKDOWN

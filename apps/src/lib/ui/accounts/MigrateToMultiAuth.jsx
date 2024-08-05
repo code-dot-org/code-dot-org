@@ -1,6 +1,7 @@
 import React from 'react';
-import i18n from '@cdo/locale';
+
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import i18n from '@cdo/locale';
 
 export default function MigrateToMultiAuth() {
   return (

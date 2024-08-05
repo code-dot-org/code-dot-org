@@ -31,6 +31,10 @@ class Maze < Grid
     shape_shift
   )
 
+  def uses_google_blockly?
+    true
+  end
+
   # List of possible skins, the first is used as a default.
   def self.skins
     %w(birds pvz scrat)

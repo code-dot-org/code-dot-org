@@ -1,5 +1,6 @@
-import React from 'react';
 import {StoryFn} from '@storybook/react';
+import React from 'react';
+
 import FeedbackBanner from './FeedbackBanner';
 
 export default {

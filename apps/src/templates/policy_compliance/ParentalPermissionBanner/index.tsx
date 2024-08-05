@@ -23,7 +23,6 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
 }) => {
   const currentUser = useSelector((state: RootState) => state.currentUser);
   const [show, setShow] = useState(false);
-  const [consentStatus, setConsentStatus] = useState<string | null>(null);
   const [showModal, setShowModal] = useState(false);
   const formattedLockoutDate = moment(lockoutDate)
     .locale(getCurrentLocale())
@@ -32,10 +31,6 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
   const reportEvent = (eventName: string, payload: object = {}) => {
     analyticsReporter.sendEvent(eventName, payload, PLATFORMS.AMPLITUDE);
   };
-
-  useEffect(() => {
-    setConsentStatus(currentUser.childAccountComplianceState);
-  }, [currentUser.childAccountComplianceState]);
 
   useEffect(() => {
     currentUser.userId && setShow(true);
@@ -55,7 +50,7 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
 
     reportEvent(EVENTS.CAP_PARENT_EMAIL_BANNER_CLICKED, {
       inSection: currentUser.inSection,
-      consentStatus,
+      consentStatus: currentUser.childAccountComplianceState,
     });
   };
 
@@ -64,60 +59,40 @@ const ParentalPermissionBanner: React.FC<ParentalPermissionBannerProps> = ({
   ) => {
     setShowModal(false);
 
-    const newConsentStatus = parentalPermissionRequest
+    const consentStatus = parentalPermissionRequest
       ? parentalPermissionRequest.consent_status
-      : consentStatus;
+      : currentUser.childAccountComplianceState;
 
-    setConsentStatus(newConsentStatus);
-
-    reportEvent(EVENTS.CAP_PARENT_EMAIL_BANNER_CLOSED, {
+    reportEvent(EVENTS.CAP_PARENT_EMAIL_MODAL_CLOSED, {
       inSection: currentUser.inSection,
-      consentStatus: newConsentStatus,
+      consentStatus,
     });
   };
 
   const handleModalSubmit = (
     parentalPermissionRequest: ParentalPermissionRequest
   ) => {
-    const newConsentStatus = parentalPermissionRequest.consent_status;
-
-    setConsentStatus(newConsentStatus);
-
-    reportEvent(EVENTS.CAP_PARENT_EMAIL_BANNER_SUBMITTED, {
+    reportEvent(EVENTS.CAP_PARENT_EMAIL_SUBMITTED, {
       inSection: currentUser.inSection,
-      consentStatus: newConsentStatus,
+      consentStatus: parentalPermissionRequest.consent_status,
     });
   };
 
   const handleModalResend = (
-    prevParentalPermissionRequest: ParentalPermissionRequest,
     parentalPermissionRequest: ParentalPermissionRequest
   ) => {
-    const oldConsentStatus = prevParentalPermissionRequest.consent_status;
-    const newConsentStatus = parentalPermissionRequest.consent_status;
-
-    setConsentStatus(newConsentStatus);
-
-    reportEvent(EVENTS.CAP_PARENT_EMAIL_BANNER_RESEND, {
+    reportEvent(EVENTS.CAP_PARENT_EMAIL_RESEND, {
       inSection: currentUser.inSection,
-      oldConsentStatus,
-      newConsentStatus,
+      consentStatus: parentalPermissionRequest.consent_status,
     });
   };
 
   const handleModalUpdate = (
-    prevParentalPermissionRequest: ParentalPermissionRequest,
     parentalPermissionRequest: ParentalPermissionRequest
   ) => {
-    const oldConsentStatus = prevParentalPermissionRequest.consent_status;
-    const newConsentStatus = parentalPermissionRequest.consent_status;
-
-    setConsentStatus(newConsentStatus);
-
-    reportEvent(EVENTS.CAP_PARENT_EMAIL_BANNER_UPDATED, {
+    reportEvent(EVENTS.CAP_PARENT_EMAIL_UPDATED, {
       inSection: currentUser.inSection,
-      oldConsentStatus,
-      newConsentStatus,
+      consentStatus: parentalPermissionRequest.consent_status,
     });
   };
 

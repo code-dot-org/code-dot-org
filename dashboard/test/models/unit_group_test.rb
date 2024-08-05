@@ -439,7 +439,7 @@ class UnitGroupTest < ActiveSupport::TestCase
       error = assert_raises RuntimeError do
         unit_group1.update_scripts(['unit1', 'unit2'])
       end
-      assert_includes error.message, 'Cannot add units that have resources or vocabulary'
+      assert_includes error.message, 'Cannot add units that have resources or vocabulary: ["unit2"]'
 
       unit_group1.reload
       assert_equal 1, unit_group1.default_unit_group_units.length

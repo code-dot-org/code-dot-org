@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">یک دوره مقدماتی با متناسب با سرعت پیشرفت خودتان را پشت سر بگذارید</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">یک بازی یا اپ خلق کنید</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">علوم کامپیوتر را بدون رایانه بیاموزید (گزینه‌های 'unplugged' و در حرکت)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">علوم کامپیوتر را از تیم Code.org و مهمانان ویژه‌ی آن بیاموزید</a></li>
 </ul>
 
 <br>
@@ -284,56 +283,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">سلام روبی</a> - تخیلی‌ترین راه برای یاد گرفتن رایانه‌ها، فناوری و برنامه‌نویسی. فعالیتهایی در مورد موضوعات مربوط به علوم کامپیوتر، نظیر قابلیت تجزیه‌ی یک مسئله، شکار الگوها، تفکر الگوریتمی و رفع نقص از برنامه‌ها و کار در کنار یکدیگر. (برای سنین 4 تا 10 سال)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">علوم کامپیوتر بدون رایانه</a> - مجموعه‌ای از مواد اموزشی رایگان برای آموزش علوم کامپیوتر از طریق بازیهای درگیرکننده و پازلهایی که از کارتها، فنرها، مداد رنگی و بسیاری مواد دور و برمان استفاده میکنند. (برای سنین 5 تا 14 سال)</li>
 </ul>
-
-<h2>در خانه رایانه ندارید؟ علوم کامپیوتر را با این اپها که شرکای ما طراحی کرده‌اند در تلفن همراه خود بیاموزید</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">جزیره جعبه</h3></a>یک بازی جذاب برنامه نویسی موبایل است که دانش آموزان را در یک ماجراجویی هیجان انگیز قرار می دهد، در حالی که آموزش اصول برنامه نویسی، مانند الگوریتم ها، تشخیص الگو، توالی ها، حلقه ها و شرایط. <i>(برای تمام سنین)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">CodesPark</h3></a>برنده جایزه پلت فرم یادگیری به کد برای کودکان 5-9 ساله. همزمان با کدنویسی، با کمک Foos پازل حل کنید و بازی خلق کنید. <strong>توجه: codeSpark یک اشتراک آزمایشی رایگان 3 ماهه در اختیار شما قرار می‌دهد. آدرس ایمیل والدین و اطلاعات کارت اعتباری آنها برای ثبت‌نام لازم است.</strong><i>(برای کودکان پیش‌دبستانی تا سال پنجم)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[بازگشت به بالای صفحه]</a></p>
-
-<a id="livecoding"></a>
-<h2>از تیم Code.org و مهمانان ویژه آنها بیاموزید!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="لوگوی CodeBytes">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">Codebytes به راحتی قابل هضم است، درس های تعاملی 20 دقیقه ای که علوم کامپیوتر را با موضوعات دنیای واقعی ترکیب می کند. به هوش مصنوعی بیاموزید زبان اشاره را بخواند، یک اپ را رایگان طراحی کند، دنیای ماینکرافت را جستجو کند و بیشتر!</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>اپیزودها (قسمتهای برنامه) را ببینید</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="کشف رمز">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">شکستن کد با استفاده از Code Break علوم کامپیوتر را سرگرم کننده</h3>
-        <div class="smalltext" style="">نگه دارید! میتوانید همراه با اشتون کوچر یک رمزنگار خلق کنید، از یارا شهیدی متغیرها را بیاموزید، و حتی از وینت سرف، ابداع‌کننده‌ی واقعی اینترنت، بیاموزید اینترنت چگونه کار میکند!</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>همراه شوید</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

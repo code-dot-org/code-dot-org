@@ -513,11 +513,6 @@
     "long_instructions": "Let's play a game! Draw as many X's as you can! Can you get 3 in a row?",
     "authored_hints": {
       "harvey_tictactoe": "You can use `jump` blocks to move to other spaces."
-    },
-    "function_definitions": {
-      "potential solution": {
-        "name": "potential solution"
-      }
     }
   },
   "https://studio.code.org/s/course1/lessons/9/levels/1": {

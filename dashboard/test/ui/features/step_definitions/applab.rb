@@ -22,7 +22,7 @@ end
 Given /^I start a new Applab project/ do
   steps <<-GHERKIN
     And I am on "http://studio.code.org/projects/applab/new"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And element "#runButton" is visible
     And element "#codeModeButton" is visible
     And element "#designModeButton" is visible
@@ -33,7 +33,7 @@ end
 Given /^I am on the (\d+)(?:st|nd|rd|th)? App ?Lab test level$/ do |level_index|
   steps <<-GHERKIN
     And I am on "http://studio.code.org/s/allthethings/lessons/#{APPLAB_ALLTHETHINGS_LESSON}/levels/#{level_index}"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
   GHERKIN
 end
 
@@ -101,7 +101,7 @@ end
 
 When /^I navigate to the embedded version of my project$/ do
   steps <<-GHERKIN
-    When I open the share dialog
+    When I open the project share dialog
     And I click selector "#project-share a:contains('Show advanced options')"
     And I click selector "#project-share li:contains('Embed')"
     And I copy the embed code into a new document
@@ -110,7 +110,7 @@ end
 
 When /^I navigate to the embedded version of my project with source hidden$/ do
   steps <<-GHERKIN
-    When I open the share dialog
+    When I open the project share dialog
     And I click selector "#project-share a:contains('Show advanced options')"
     And I click selector "#project-share li:contains('Embed')"
     And I click selector "#project-share label:contains('Hide ability to view code')"

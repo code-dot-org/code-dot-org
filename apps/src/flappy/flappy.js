@@ -5,26 +5,30 @@
  *
  */
 
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+
+import placeholder from '../../static/flappy/placeholder.jpg';
+import {TestResults, ResultType} from '../constants';
+import {dataURIFromURI} from '../imageUtils';
+import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import {getStore} from '../redux';
+import AppView from '../templates/AppView';
+import {getRandomDonorTwitter} from '../util/twitterHelper';
+
 var React = require('react');
 var ReactDOM = require('react-dom');
-var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('@cdo/locale');
-var flappyMsg = require('./locale');
-import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-var api = require('./api');
 var Provider = require('react-redux').Provider;
-import AppView from '../templates/AppView';
-var FlappyVisualizationColumn = require('./FlappyVisualizationColumn');
-var dom = require('../dom');
-var constants = require('./constants');
-var utils = require('../utils');
-import {getRandomDonorTwitter} from '../util/twitterHelper';
-import {getStore} from '../redux';
 
-import {TestResults, ResultType} from '../constants';
-import placeholder from '../../static/flappy/placeholder.jpg';
-import {dataURIFromURI} from '../imageUtils';
-import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+var commonMsg = require('@cdo/locale');
+
+var dom = require('../dom');
+var studioApp = require('../StudioApp').singleton;
+var utils = require('../utils');
+
+var api = require('./api');
+var constants = require('./constants');
+var FlappyVisualizationColumn = require('./FlappyVisualizationColumn');
+var flappyMsg = require('./locale');
 
 /**
  * Create a namespace for the application.

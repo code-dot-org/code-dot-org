@@ -1,5 +1,8 @@
 name 'gen-ai-humanities-L1B'
 title 'Crafting Prompts'
+display_name 'Story Idea Generation'
+bubble_choice_description 'Generate three creative story ideas for a science fiction short story.'
+thumbnail_url 'https://images.code.org/dc21aa11b5a7f6a815081744a547c14f-image-1719500799331.png'
 
 markdown <<MARKDOWN
 ## Story Idea Generation

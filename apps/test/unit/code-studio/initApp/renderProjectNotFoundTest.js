@@ -3,12 +3,10 @@ import React from 'react';
 
 import {ProjectNotFoundAlert} from '@cdo/apps/code-studio/initApp/renderProjectNotFound';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 describe('ProjectNotFoundAlert', () => {
   it('renders AlertExclamation with message', () => {
     const wrapper = shallow(<ProjectNotFoundAlert />);
-    expect(wrapper.find('AlertExclamation').length).to.equal(1);
-    expect(wrapper.find('a').text()).to.include('Go to Code Studio');
+    expect(wrapper.find('AlertExclamation').length).toBe(1);
+    expect(wrapper.find('a').text()).toContain('Go to Code Studio');
   });
 });

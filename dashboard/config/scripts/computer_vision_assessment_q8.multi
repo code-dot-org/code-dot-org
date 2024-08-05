@@ -1,0 +1,9 @@
+name 'Computer-Vision-Assessment-Q8'
+title 'Computer Vision Assessment'
+
+question 'Identify which of the following methods might lead to the least useful data when training a model and explain why.'
+wrong 'Using a balanced dataset with an equal number of images for each category, because it prevents the model from being biased towards one category'
+wrong 'Using labeled images with clear annotations, because it ensures the model learns from accurate data'
+wrong 'Using a diverse dataset with images from different environments, because it increases the ability of the model to generalize'
+right 'Using images with poor lighting and/or low resolution, because they provide unclear and insufficient details for accurate model training'
+allow_multiple_attempts false

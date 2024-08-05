@@ -3,7 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Computer Science Fundamentals - Maker Courses
+# Maker with micro:bit Courses
 
 #### **Preview:** Take some time to explore the different courses and pathways to find the right fit for your class. You will have more time to look at these later in the module if you choose. 
 
@@ -77,7 +77,7 @@ markdown <<MARKDOWN
     </tr>
     <!-- Second row with six columns -->
     <tr>
-        <td width = "141px"><b>Events</b><br><b>Designing for accessibiltiy</b></td>
+        <td width = "141px"><b>Events</b><br><b>Designing for accessibility</b></td>
         <td width = "141px"><b>Conditionals</b></td>
         <td width = "141px"><b>Functions</b></td>
         <td width = "141px"><b>Events</b><br><b>Variables</b></td>

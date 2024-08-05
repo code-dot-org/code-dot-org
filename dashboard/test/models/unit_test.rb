@@ -1532,6 +1532,35 @@ class UnitTest < ActiveSupport::TestCase
     assert_empty unit.text_response_levels
   end
 
+  test 'predict free response level is listed in text_response_levels' do
+    unit = create :script
+    lesson_group = create :lesson_group, script: unit
+    lesson = create :lesson, script: unit, lesson_group: lesson_group
+    level = create :pythonlab, properties: {
+      predict_settings: {isPredictLevel: true, questionType: 'freeResponse'}
+    }
+    create :script_level, script: unit, lesson: lesson, levels: [level]
+
+    assert_equal level, unit.text_response_levels.first[:levels].first
+  end
+
+  test 'predict multiple choice level is listed in text_response_levels' do
+    unit = create :script
+    lesson_group = create :lesson_group, script: unit
+    lesson = create :lesson, script: unit, lesson_group: lesson_group
+    level = create :pythonlab, properties: {
+      predict_settings: {
+        isPredictLevel: true,
+        questionType: 'multipleChoice',
+        multipleChoiceOptions: ['a', 'b', 'c'],
+        solution: 'a'
+      }
+    }
+    create :script_level, script: unit, lesson: lesson, levels: [level]
+
+    assert_empty unit.text_response_levels
+  end
+
   test "course_link retuns nil if unit is in no courses" do
     unit = create :script
     create :unit_group, name: 'csp'
@@ -1539,14 +1568,15 @@ class UnitTest < ActiveSupport::TestCase
     assert_nil unit.course_link
   end
 
-  test "course_link returns nil if unit is in two courses" do
+  test "course_link returns link to first course if unit is in two courses" do
     unit = create :script
     unit_group = create :unit_group, name: 'csp'
     other_unit_group = create :unit_group, name: 'othercsp'
     create :unit_group_unit, position: 1, unit_group: unit_group, script: unit
     create :unit_group_unit, position: 1, unit_group: other_unit_group, script: unit
+    unit.reload
 
-    assert_nil unit.course_link
+    assert_equal '/courses/csp', unit.course_link
   end
 
   test "course_link returns course_path if unit is in one course" do
@@ -2233,7 +2263,7 @@ class UnitTest < ActiveSupport::TestCase
       cloned_unit = @standalone_unit.clone_migrated_unit('coursename2-2021', destination_unit_group_name: @unit_group.name)
       assert_equal 2, @unit_group.default_units.count
       assert_equal 'coursename2-2021', @unit_group.default_units[1].name
-      assert_equal cloned_unit.unit_group, @unit_group
+      assert_equal cloned_unit.original_unit_group, @unit_group
       assert_nil cloned_unit.published_state
       assert_nil cloned_unit.instruction_type
       assert_nil cloned_unit.instructor_audience
@@ -2242,7 +2272,7 @@ class UnitTest < ActiveSupport::TestCase
 
     test 'can copy a unit in a unit group to a standalone unit' do
       cloned_unit = @unit_in_course.clone_migrated_unit('standalone-coursename-2021', version_year: '2021', family_name: 'csf')
-      assert_nil cloned_unit.unit_group
+      assert_nil cloned_unit.original_unit_group
       assert_equal 'standalone-coursename-2021', cloned_unit.name
       assert_equal cloned_unit.published_state, Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
       assert_equal cloned_unit.instruction_type, @unit_group.instruction_type
@@ -2311,7 +2341,7 @@ class UnitTest < ActiveSupport::TestCase
       ReferenceGuide.any_instance.expects(:write_serialization).once
       File.stubs(:write)
       cloned_unit = @unit_in_course.clone_migrated_unit('refguidetest-ug-coursename-2021', destination_unit_group_name: @unit_group.name)
-      assert_equal cloned_unit.unit_group, @unit_group
+      assert_equal cloned_unit.original_unit_group, @unit_group
       assert_equal 1, cloned_unit.get_course_version.reference_guides.count
     end
 
@@ -2446,6 +2476,46 @@ class UnitTest < ActiveSupport::TestCase
   test 'finish_url returns unit finish url if not in a unit group' do
     unit = create :script, is_course: true
     assert unit.finish_url.include?(unit.name)
+  end
+
+  test 'deleting standalone unit deletes corresponding dependencies' do
+    standalone_unit = create :script, is_migrated: true, is_course: true, version_year: '2021', family_name: 'csf', name: 'standalone-2021'
+    course_version = create :course_version, content_root: standalone_unit
+    CourseOffering.add_course_offering(standalone_unit)
+    lesson = create :lesson, script: standalone_unit
+    lesson_gp = create :lesson_group, script: standalone_unit, lessons: [lesson]
+
+    # delete standalone unit
+    unit_id = standalone_unit.id
+    standalone_unit.destroy
+
+    assert Unit.find_by(id: unit_id).nil?
+    assert CourseVersion.find_by(id: course_version.id).nil?
+    assert Lesson.find_by(id: lesson.id).nil?
+    assert LessonGroup.find_by(id: lesson_gp.id).nil?
+  end
+
+  test 'deleting unit in unit group deletes corresponding dependencies' do
+    unit_in_course = create :script, is_migrated: true, name: 'coursename1-2021'
+    unit_group = create(:unit_group)
+    unit_gp_unit = create :unit_group_unit, unit_group: @unit_group, script: unit_in_course, position: 1
+    CourseOffering.add_course_offering(unit_group)
+
+    unit_group.reload
+    unit_in_course.reload
+    course_version = unit_group.course_version
+    assert UnitGroupUnit.find_by(id: unit_gp_unit.id)
+
+    # delete unit in unit group
+    unit_id = unit_in_course.id
+    unit_in_course.destroy
+
+    assert Unit.find_by(id: unit_id).nil?
+    assert UnitGroup.find_by(id: unit_group.id)
+
+    # Course version is associated to unit group and shouldn't be deleted
+    assert CourseVersion.find_by(id: course_version.id)
+    assert UnitGroupUnit.find_by(id: unit_gp_unit.id).nil?
   end
 
   private def has_unlaunched_unit?(units)

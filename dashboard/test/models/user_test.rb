@@ -84,37 +84,6 @@ class UserTest < ActiveSupport::TestCase
     @levelbuilder = create :levelbuilder
   end
 
-  class CAPEventLogging < ActiveSupport::TestCase
-    setup do
-      @student = create(:non_compliant_child)
-    end
-
-    test 'logs CAP event "account_locking" after student compliance state changed to "l"' do
-      Services::ChildAccount.update_compliance(@student, Policies::ChildAccount::ComplianceState::LOCKED_OUT)
-
-      Services::ChildAccount::EventLogger.expects(:log_account_locking).with(@student).once
-
-      @student.save!
-    end
-
-    test 'logs CAP event "permission_granting" after student compliance state changed to "g"' do
-      Services::ChildAccount.update_compliance(@student, Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED)
-
-      Services::ChildAccount::EventLogger.expects(:log_permission_granting).with(@student).once
-
-      @student.save!
-    end
-
-    test 'does not log any CAP events if compliance state was not changed' do
-      Services::ChildAccount.update_compliance(@student, Policies::ChildAccount::ComplianceState::LOCKED_OUT)
-      @student.save!
-
-      Services::ChildAccount::EventLogger.expects(:new).with(user: @student, event_name: anything).never
-
-      @student.save!
-    end
-  end
-
   test 'from_identifier finds user by id' do
     student = create :student
     assert_equal student, User.from_identifier(student.id.to_s)
@@ -142,6 +111,11 @@ class UserTest < ActiveSupport::TestCase
   test 'make_teachers_21' do
     teacher = create :teacher, birthday: Time.now - 18.years
     assert_equal '21+', teacher.age
+  end
+
+  test 'creating teacher sets show_progress_table_v2 to true' do
+    teacher = create :teacher
+    assert teacher.show_progress_table_v2
   end
 
   # Disable this test if and when we do require teachers to complete school data
@@ -364,10 +338,10 @@ class UserTest < ActiveSupport::TestCase
     user = create :teacher
     application = create :pd_teacher_application, user: user
     application_form_data = application.form_data_hash
-    application_form_data['alternateEmail'] = ''
+    application_form_data['alternateEmail'] = nil
     application.update!(form_data_hash: application_form_data)
 
-    assert application.form_data_hash['alternateEmail'].empty?
+    assert application.form_data_hash['alternateEmail'].blank?
     assert_equal user.email_for_enrollments, user.email
   end
 
@@ -5429,6 +5403,34 @@ class UserTest < ActiveSupport::TestCase
     refute student.us_state_changed?
     student.us_state = 'WA'
     assert student.us_state_changed?
+  end
+
+  test "student in cpa lockout flow cannot change us_state or age" do
+    student = create :student, :U13, :in_colorado, :without_parent_permission
+    assert_raises(ActiveRecord::RecordInvalid) do
+      student.update!(us_state: 'CA')
+    end
+
+    assert_raises(ActiveRecord::RecordInvalid) do
+      student.update!(age: 16)
+    end
+    student.reload
+    refute_equal student.age, 16
+
+    student = create :student, :U13, :in_colorado, :with_parent_permission
+    student.update!(us_state: 'WA')
+    student.reload
+    assert_equal student.us_state, 'WA'
+
+    student = create :student, :U13
+    student.update!(us_state: 'WA')
+    student.reload
+    assert_equal student.us_state, 'WA'
+
+    student = create :student, :in_colorado
+    student.update!(us_state: 'WA')
+    student.reload
+    assert_equal student.us_state, 'WA'
   end
 
   describe '#latest_parental_permission_request' do

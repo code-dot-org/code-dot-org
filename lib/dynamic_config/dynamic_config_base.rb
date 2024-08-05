@@ -16,6 +16,8 @@ class DynamicConfigBase
   # @param key [String]
   # @param default
   # @returns the stored value at key
+  # @note This method is redefined in Rack::CookieDCDO to return the cookie DCDO value for testing, if it exists
+  # @see Rack::CookieDCDO#modify_dcdo
   def get(key, default)
     raise ArgumentError unless key.is_a? String
     value = @datastore_cache.get(key)

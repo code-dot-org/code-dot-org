@@ -63,7 +63,7 @@ class Unit < ApplicationRecord
   has_one :plc_course_unit, class_name: 'Plc::CourseUnit', foreign_key: 'script_id', inverse_of: :script, dependent: :destroy
   belongs_to :wrapup_video, class_name: 'Video', optional: true
   belongs_to :user, optional: true
-  has_many :unit_group_units, foreign_key: 'script_id'
+  has_many :unit_group_units, foreign_key: 'script_id', dependent: :destroy
   has_many :unit_groups, through: :unit_group_units
   has_one :course_version, as: :content_root, dependent: :destroy
 
@@ -146,7 +146,7 @@ class Unit < ApplicationRecord
   # however this is not practical to do given how rails validations work for
   # activerecord-import during the seed process.
   def hide_pilot_units
-    if !unit_group && pilot_experiment.present? && published_state != Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
+    if !original_unit_group && pilot_experiment.present? && published_state != Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot
       update!(published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.pilot)
     end
   end
@@ -664,13 +664,13 @@ class Unit < ApplicationRecord
     # or the course it belongs to.
     return nil unless can_view_version?(user, locale: locale) && !user.assigned_script?(self)
     # No redirect if unit or its course are not versioned.
-    current_version_year = version_year || unit_group&.version_year
+    current_version_year = version_year || original_unit_group&.version_year
     return nil if current_version_year.blank?
 
     # Redirect user to the latest assigned unit in this family,
     # if one exists and it is newer than the current unit.
     latest_assigned_version = Unit.latest_assigned_version(family_name, user)
-    latest_assigned_version_year = latest_assigned_version&.version_year || latest_assigned_version&.unit_group&.version_year
+    latest_assigned_version_year = latest_assigned_version&.version_year || latest_assigned_version&.original_unit_group&.version_year
     return nil unless latest_assigned_version_year && latest_assigned_version_year > current_version_year
     latest_assigned_version.link
   end
@@ -700,7 +700,7 @@ class Unit < ApplicationRecord
     return true if can_be_instructor?(user)
 
     # A student can view the unit version if they have progress in it or the course it belongs to.
-    has_progress = user.scripts.include?(self) || unit_group&.has_progress?(user)
+    has_progress = user.scripts.include?(self) || original_unit_group&.has_progress?(user)
     return true if has_progress
 
     # A student can view the unit version if they are assigned to it.
@@ -711,8 +711,8 @@ class Unit < ApplicationRecord
   # If it's the last unit in the unit group, returns nil.
   # If it's not in a unit group, returns nil.
   def next_unit(user)
-    return nil unless unit_group
-    other_units = unit_group.units_for_user(user)
+    return nil unless original_unit_group
+    other_units = original_unit_group.units_for_user(user)
     self_index = other_units.index {|u| u.id == id}
     other_units[self_index + 1] if self_index
   end
@@ -788,11 +788,17 @@ class Unit < ApplicationRecord
     text_response_levels = []
     script_levels.map do |script_level|
       script_level.levels.map do |level|
-        next if level.contained_levels.empty? ||
+        # We are looking for two types of text response levels: levels with contained levels
+        # that are text response levels, and predict levels that are free response (predict
+        # levels are used by lab2).
+        is_not_contained = level.contained_levels.empty? ||
           TEXT_RESPONSE_TYPES.exclude?(level.contained_levels.first.class)
+        is_not_predict_free_response = !level.predict_level? || level.properties.dig('predict_settings', 'questionType') != 'freeResponse'
+        next if is_not_contained && is_not_predict_free_response
+        text_response_level = level.predict_level? ? level : level.contained_levels.first
         text_response_levels << {
           script_level: script_level,
-          levels: [level.contained_levels.first]
+          levels: [text_response_level]
         }
       end
     end
@@ -1334,10 +1340,10 @@ class Unit < ApplicationRecord
           login_required: general_params[:login_required].nil? ? false : general_params[:login_required], # default false
           wrapup_video: general_params[:wrapup_video],
           family_name: general_params[:family_name].presence ? general_params[:family_name] : nil, # default nil
-          published_state: (unit_group.present? && general_params[:published_state] == unit_group.published_state) ? nil : general_params[:published_state],
-          instruction_type: unit_group.present? ? nil : general_params[:instruction_type],
-          participant_audience: unit_group.present? ? nil : general_params[:participant_audience],
-          instructor_audience: unit_group.present? ? nil : general_params[:instructor_audience],
+          published_state: (original_unit_group.present? && general_params[:published_state] == original_unit_group.published_state) ? nil : general_params[:published_state],
+          instruction_type: original_unit_group.present? ? nil : general_params[:instruction_type],
+          participant_audience: original_unit_group.present? ? nil : general_params[:participant_audience],
+          instructor_audience: original_unit_group.present? ? nil : general_params[:instructor_audience],
           properties: Unit.build_property_hash(general_params)
         },
         unit_data[:lesson_groups]
@@ -1453,7 +1459,7 @@ class Unit < ApplicationRecord
   def finish_url
     return hoc_finish_url if hoc?
     return csf_finish_url if csf?
-    return CDO.code_org_url "/congrats/#{unit_group.name}" if unit_group
+    return CDO.code_org_url "/congrats/#{original_unit_group.name}" if original_unit_group
     CDO.code_org_url "/congrats/#{name}"
   end
 
@@ -1475,7 +1481,7 @@ class Unit < ApplicationRecord
     get_published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
-  def summarize(include_lessons = true, user = nil, include_bonus_levels = false, locale_code = 'en-us')
+  def summarize(include_lessons = true, user = nil, include_bonus_levels = false, locale_code = 'en-us', unit_group: nil)
     ActiveRecord::Base.connected_to(role: :reading) do
       # TODO: Set up peer reviews to be more consistent with the rest of the system
       # so that they don't need a bunch of one off cases (example peer reviews
@@ -1502,7 +1508,7 @@ class Unit < ApplicationRecord
         }
       end
 
-      has_older_course_progress = unit_group.try(:has_older_version_progress?, user)
+      has_older_course_progress = original_unit_group.try(:has_older_version_progress?, user)
       has_older_unit_progress = has_older_version_progress?(user)
       user_unit = user && user_scripts.find_by(user: user)
 
@@ -1516,7 +1522,7 @@ class Unit < ApplicationRecord
         title: title_for_display,
         description: Services::MarkdownPreprocessor.process(localized_description),
         studentDescription: Services::MarkdownPreprocessor.process(localized_student_description),
-        course_id: unit_group.try(:id),
+        course_id: original_unit_group.try(:id),
         publishedState: get_published_state,
         instructionType: get_instruction_type,
         instructorAudience: get_instructor_audience,
@@ -1541,7 +1547,7 @@ class Unit < ApplicationRecord
         curriculum_path: curriculum_path,
         announcements: localized_announcements,
         age_13_required: logged_out_age_13_required?,
-        show_course_unit_version_warning: !unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
+        show_course_unit_version_warning: !original_unit_group&.has_dismissed_version_warning?(user) && has_older_course_progress,
         show_script_version_warning: !user_unit&.version_warning_dismissed && !has_older_course_progress && has_older_unit_progress,
         course_versions: summarize_course_versions(user, locale_code),
         supported_locales: supported_locales,
@@ -1564,7 +1570,7 @@ class Unit < ApplicationRecord
         weeklyInstructionalMinutes: weekly_instructional_minutes,
         includeStudentLessonPlans: is_migrated ? include_student_lesson_plans : false,
         useLegacyLessonPlans: is_migrated && use_legacy_lesson_plans,
-        courseVersionId: get_course_version&.id,
+        courseVersionId: unit_group&.get_course_version&.id || get_course_version&.id,
         courseOfferingId: get_course_version&.course_offering&.id,
         scriptOverviewPdfUrl: get_unit_overview_pdf_url,
         scriptResourcesPdfUrl: get_unit_resources_pdf_url,
@@ -1574,10 +1580,12 @@ class Unit < ApplicationRecord
 
       #TODO: lessons should be summarized through lesson groups in the future
       summary[:lessonGroups] = lesson_groups.map(&:summarize)
-      summary[:lessons] = lessons.map {|lesson| lesson.summarize(include_bonus_levels)} if include_lessons
+      summary[:lessons] = lessons.map {|lesson| lesson.summarize(include_bonus_levels, unit_group: unit_group)} if include_lessons
       summary[:deeperLearningCourse] = professional_learning_course if old_professional_learning_course?
       summary[:wrapupVideo] = wrapup_video.key if wrapup_video
       summary[:calendarLessons] = lessons.map(&:summarize_for_calendar)
+
+      summary[:urlPath] = unit_group ? course_script_path(unit_group, self) : script_path(self)
 
       summary
     end
@@ -1603,12 +1611,14 @@ class Unit < ApplicationRecord
   def summarize_for_unit_edit
     include_lessons = false
     summary = summarize(include_lessons)
+    # always provide original course version, even if summarize provided current course version
+    summary[:courseVersionId] = get_course_version&.id
     summary[:lesson_groups] = lesson_groups.map(&:summarize_for_unit_edit)
     summary[:courseOfferingEditPath] = edit_course_offering_path(course_version&.course_offering&.key) if course_version
     summary[:missingRequiredDeviceCompatibilities] = course_version&.course_offering&.missing_required_device_compatibility?
-    summary[:coursePublishedState] = unit_group ? unit_group.published_state : published_state
-    summary[:unitPublishedState] = unit_group ? published_state : nil
-    summary[:isCSDCourseOffering] = unit_group&.course_version&.course_offering&.csd?
+    summary[:coursePublishedState] = original_unit_group ? original_unit_group.published_state : published_state
+    summary[:unitPublishedState] = original_unit_group ? published_state : nil
+    summary[:isCSDCourseOffering] = original_unit_group&.course_version&.course_offering&.csd?
     summary
   end
 
@@ -1704,7 +1714,7 @@ class Unit < ApplicationRecord
   # launched and can_view_version?. For instructors if course_assignable? is false then
   # launched will also be false.
   def summarize_course_versions(user = nil, locale_code = 'en-us')
-    return {} if unit_group
+    return {} if original_unit_group
 
     all_course_versions = course_version&.course_offering&.course_versions
     course_versions_for_user = all_course_versions&.select {|cv| cv.course_assignable?(user) || (cv.launched? && cv.can_view_version?(user, locale: locale_code))}
@@ -1733,7 +1743,7 @@ class Unit < ApplicationRecord
 
   def title_for_display
     title = localized_title
-    has_prefix = unit_group&.has_numbered_units
+    has_prefix = original_unit_group&.has_numbered_units
     return title unless has_prefix
 
     position = unit_group_units&.first&.position
@@ -1824,10 +1834,13 @@ class Unit < ApplicationRecord
     result
   end
 
-  # A unit is considered to have a matching course if there is exactly one
-  # unit_group for this unit
-  def unit_group
-    return nil if unit_group_units.length != 1
+  # A unit is considered to have a matching course if there is at least one
+  # unit_group for this unit. if there are multiple, the first is considered
+  # the original unit group.
+  def original_unit_group
+    # rubocop:disable Style/ZeroLengthPredicate
+    return nil if unit_group_units.length < 1
+    # rubocop:enable Style/ZeroLengthPredicate
     UnitGroup.get_from_cache(unit_group_units[0].course_id)
   end
 
@@ -1836,48 +1849,50 @@ class Unit < ApplicationRecord
   # if there is one.
   # @return [CourseVersion]
   def get_course_version
-    course_version || unit_group&.course_version
+    course_version || original_unit_group&.course_version
   end
 
   # If a script is in a unit group, use that unit group's published state. If not, use the script's published_state
   # If both are null, the script is in_development
   def get_published_state
-    published_state || unit_group&.published_state || Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
+    published_state || original_unit_group&.published_state || Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
   # If a script is in a unit group, use that unit group's instruction type. If not, use the units's instruction type
   # If both are null, the unit should be teacher led
   def get_instruction_type
-    unit_group&.instruction_type || instruction_type || Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
+    original_unit_group&.instruction_type || instruction_type || Curriculum::SharedCourseConstants::INSTRUCTION_TYPE.teacher_led
   end
 
   # If a script is in a unit group, use that unit group's instructor_audience. If not, use the units's instructor_audience
   # If both are null, the unit should be instructed by teacher
   def get_instructor_audience
-    unit_group&.instructor_audience || instructor_audience || Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
+    original_unit_group&.instructor_audience || instructor_audience || Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher
   end
 
   # If a script is in a unit group, use that unit group's participant_audience. If not, use the units's participant_audience
   # If both are null, the unit should be participated in by students
   def get_participant_audience
-    unit_group&.participant_audience || participant_audience || Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
+    original_unit_group&.participant_audience || participant_audience || Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student
   end
 
   # Use the unit group's pilot_experiment if one exists
   def get_pilot_experiment
-    pilot_experiment || unit_group&.pilot_experiment
+    pilot_experiment || original_unit_group&.pilot_experiment
   end
 
   # @return {String|nil} path to the course overview page for this unit if there
   #   is one.
-  def course_link(section_id = nil)
+  def course_link(section_id = nil, current_unit_group = nil)
+    unit_group = current_unit_group || original_unit_group
     return nil unless unit_group
     path = course_path(unit_group)
     path += "?section_id=#{section_id}" if section_id
     path
   end
 
-  def course_title
+  def course_title(current_unit_group = nil)
+    unit_group = current_unit_group || original_unit_group
     unit_group.try(:localized_title)
   end
 

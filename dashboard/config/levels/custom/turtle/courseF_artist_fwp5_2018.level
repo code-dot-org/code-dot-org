@@ -35,13 +35,13 @@
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"A `for` loop would really help you out here!\",\"hint_id\":\"courseF_artist_fwp5_d\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/404cefd069c850b68308abd956ac2098/courseF_artist_fwp5.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"You will need to edit the function a little bit, since your previous function turned the artist to the right after each side, and this image needs a turn to the left.\",\"hint_id\":\"courseF_artist_fwp5_c\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/e0496cd45948632c4a62418aa6c0f6f2/courseF_artist_fwp5.mp3\"},{\"hint_class\":\"pointer\",\"hint_markdown\":\"The length of sides for each shape is 7 times the number of sides it has.\",\"hint_id\":\"courseF_artist_fwp5_a\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/f9aa06898d49c6a6faa2752e93958b98/courseF_artist_fwp5.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"Don't forget to jump 100 pixels between shapes.\",\"hint_id\":\"courseF_artist_fwp5_b\",\"hint_type\":\"general\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/ca7a68d508aa7ade0a007633c3c45aee/courseF_artist_fwp5.mp3\"}]",
     "discard_background": "false",
     "instructions_important": "false",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseF_artist_fwp5_1\",\r\n  \"callout_text\": \"You will find the polygon function in here.\",\r\n  \"element_id\": \"[id=':2.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"courseF_artist_fwp5_1\",\"callout_text\":\"You will find the polygon function in here.\",\"element_id\":\"[id=':2.label']\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\"[id='blockly-1.label']\",\"localization_key\":\"courseF_artist_fwp5_1\",\"callout_text\":\"You will find the polygon function in here.\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

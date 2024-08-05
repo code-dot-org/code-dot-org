@@ -1,16 +1,25 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
 import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
 import Link from '@cdo/apps/componentLibrary/link';
+import DCDO from '@cdo/apps/dcdo';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {getStore} from '@cdo/apps/redux';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {isProductionEnvironment} from '@cdo/apps/utils';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import Button from '../Button';
 import DropdownButton from '../DropdownButton';
+import {
+  convertStudentDataToArray,
+  filterAgeGatedStudents,
+  loadSectionStudentData,
+} from '../manageStudents/manageStudentsRedux';
 import Notification, {NotificationType} from '../Notification';
+import {AgeGatedStudentsBanner} from '../policy_compliance/AgeGatedStudentsModal/AgeGatedStudentsBanner';
 
 import FontAwesome from './../FontAwesome';
 import {switchToSection, recordSwitchToSection} from './sectionHelpers';
@@ -30,10 +39,29 @@ function TeacherDashboardHeader({
   openEditSectionDialog,
   asyncLoadCourseOfferings,
   isRtl,
+  ageGatedStudentsCount,
+  sectionId,
+  loadSectionStudentData,
 }) {
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const currentUser = getStore().getState().currentUser;
+  const inUSA =
+    ['US', 'RD'].includes(currentUser.countryCode) || !!currentUser.usStateCode;
+  const showAgeGatedStudentsBanner =
+    inUSA &&
+    currentUser.isTeacher &&
+    ageGatedStudentsCount > 0 &&
+    DCDO.get('show-age-gated-students-banner', !isProductionEnvironment());
+
+  const toggleModal = () => {
+    setModalOpen(!modalOpen);
+  };
+
   React.useEffect(() => {
     asyncLoadCourseOfferings();
-  }, [asyncLoadCourseOfferings]);
+    loadSectionStudentData(sectionId);
+  }, [asyncLoadCourseOfferings, loadSectionStudentData, sectionId]);
 
   const getDropdownOptions = optionMetricName => {
     let options = sections.map(function (section, i) {
@@ -113,6 +141,13 @@ function TeacherDashboardHeader({
         loginType: selectedSection.loginType,
       })}
       {selectedSection.postMilestoneDisabled && progressNotSavingNotification()}
+      {showAgeGatedStudentsBanner && (
+        <AgeGatedStudentsBanner
+          toggleModal={toggleModal}
+          modalOpen={modalOpen}
+          ageGatedStudentsCount={ageGatedStudentsCount}
+        />
+      )}
       <div className={dashboardStyles.header}>
         <div>
           <h1>{selectedSection.name}</h1>
@@ -159,6 +194,9 @@ TeacherDashboardHeader.propTypes = {
   assignmentName: PropTypes.string,
   asyncLoadCourseOfferings: PropTypes.func.isRequired,
   isRtl: PropTypes.bool,
+  ageGatedStudentsCount: PropTypes.number,
+  sectionId: PropTypes.number,
+  loadSectionStudentData: PropTypes.func,
 };
 
 const styles = {
@@ -185,11 +223,18 @@ export default connect(
       state.teacherSections.selectedSectionId
     ),
     isRtl: state.isRtl,
+    sectionId: state.teacherSections.selectedSectionId,
+    ageGatedStudentsCount: filterAgeGatedStudents(
+      convertStudentDataToArray(state.manageStudents.studentData)
+    ).length,
   }),
   dispatch => {
     return {
       openEditSectionDialog: id => dispatch(beginEditingSection(id)),
       asyncLoadCourseOfferings: () => dispatch(asyncLoadCourseOfferings()),
+      loadSectionStudentData: sectionId => {
+        dispatch(loadSectionStudentData(sectionId));
+      },
     };
   }
 )(TeacherDashboardHeader);

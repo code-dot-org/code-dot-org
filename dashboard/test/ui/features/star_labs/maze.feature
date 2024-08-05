@@ -3,7 +3,7 @@ Feature: Complete a complicated maze level
 Background:
   Given I am on "http://studio.code.org/reset_session"
   Given I am on "http://studio.code.org/s/20-hour/lessons/2/levels/15?noautoplay=true"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I dismiss the login reminder
   And element ".csf-top-instructions p" has text "Ok, this is just like the last puzzle, but you need to remember how you used the \"if\" block and the \"repeat\" block together."
 
@@ -25,15 +25,15 @@ Scenario: Submit an invalid solution
 
 @no_mobile
 Scenario: Submit a valid solution
-  When I wait for the page to fully load
+  When I wait for the lab page to fully load
   Then element "#resetButton" is hidden
-  Then I drag block "4" to block "6"
-  And I drag block "1" to block "7" plus offset 35, 50
-  Then block "8" is child of block "7"
-  Then I drag block "5" to block "8"
-  And block "9" is child of block "8"
-  Then I drag block "3" to block "9" plus offset 35, 30
-  And block "10" is child of block "9"
+  Then I drag block "repeatForever" to block "topBlock"
+  And I drag block "moveForward" into first position in repeat block "repeatForever"
+  Then block "moveForward" is child of block "repeatForever"
+  Then I drag block "ifPathRight" to block "moveForward"
+  And block "ifPathRight" is child of block "moveForward"
+  Then I drag block "turnRight" to block "ifPathRight" plus offset 35, 30
+  And block "turnRight" is child of block "ifPathRight"
   Then I press "runButton"
   Then I wait until element ".congrats" is visible
   And element ".congrats" has text "Congratulations! You completed Puzzle 15."
@@ -45,7 +45,7 @@ Scenario: Submit a valid solution
 
   # Make sure the work on level 15 was saved.
   When I am on "http://studio.code.org/s/20-hour/lessons/2/levels/15?noautoplay=true"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then I press "runButton"
   Then I wait until element ".congrats" is visible
   And element ".congrats" has text "Congratulations! You completed Puzzle 15."

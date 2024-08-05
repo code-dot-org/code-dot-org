@@ -15,8 +15,8 @@
       %a{href: '#notes-outer'}= I18n.t('video.notes')
 
 - if @script_level
-  - level_data = { redirect_script_url: @redirect_unit_url, script_name: @script_level.script&.name, course_name: @script_level.script&.unit_group&.name, level_name: @level.name, tts_autoplay_enabled: @tts_autoplay_enabled, code_review_enabled: @code_review_enabled_for_level, show_unversioned_redirect_warning: @show_unversioned_redirect_warning}
-  - ai_tutor_data = {levelId: @level&.id, scriptId: @script_level.script&.id, type: @level&.type, hasValidation: !!@level&.properties["encrypted_validation"], isProjectBacked: !!@level&.properties["project_template_level_name"], aiTutorAvailable: @level&.ai_tutor_available?, isAssessment: @script_level&.assessment}
+  - level_data = { redirect_script_url: @redirect_unit_url, script_name: @script_level.script&.name, course_name: @script_level.script&.original_unit_group&.name, level_name: @level.name, tts_autoplay_enabled: @tts_autoplay_enabled, code_review_enabled: @code_review_enabled_for_level, show_unversioned_redirect_warning: @show_unversioned_redirect_warning}
+  - ai_tutor_data = {levelId: @level&.id, scriptId: @script_level.script&.id, type: @level&.type, hasValidation: @level&.validated?, aiTutorAvailable: @level&.ai_tutor_available?, isAssessment: @script_level&.assessment}
   %link{href: asset_path('css/levels.css'), rel: 'stylesheet', type: 'text/css'}
   %script{ src: webpack_asset_path('js/levels/show.js'), data: { aiTutorData: ai_tutor_data.to_json, level: level_data.to_json, rubricData: @rubric_data&.to_json }}
   -# Mount point for RedirectDialog React component.
@@ -78,7 +78,7 @@
   -# special tracking image to make sure a cookie is set when hoc starts (/hoc/1)
   = image_tag(tracking_pixel_url(@script))
 
-- if current_user && (!@level.uses_lab2? || (@level.uses_lab2? && !current_user.levelbuilder?))
+- if current_user && !@level.uses_lab2?
   = render partial: 'levels/admin'
 
 - if @script && !@script.old_professional_learning_course? && !@level.is_a?(NetSim)
@@ -87,6 +87,6 @@
 - if @rubric.present? && current_user&.teacher?
   %div#rubric-fab-mount-point
 
-- if current_user&.has_ai_tutor_access? && @script&.csa?
+- if current_user&.has_ai_tutor_access? && @level&.ai_tutor_available?
   %div#ai-tutor-fab-mount-point
 

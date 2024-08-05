@@ -5,9 +5,10 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
+
 import ProtectedStatefulDiv from '@cdo/apps/templates/ProtectedStatefulDiv';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import i18n from '@cdo/locale';
 
 export const LegacySingleLevelGroupDialog = ({id, title, body}) => (
   <ProtectedStatefulDiv id={id}>

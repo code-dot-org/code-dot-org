@@ -1,6 +1,7 @@
 import React from 'react';
+import {Provider} from 'react-redux';
+
 import ActivitiesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitiesEditor';
-import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
 import reducers, {
   initActivities,
   initLevelSearching,
@@ -11,7 +12,8 @@ import createResourcesReducer, {
 import vocabulariesEditor, {
   initVocabularies,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
-import {Provider} from 'react-redux';
+import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
+
 import {
   sampleActivities,
   sampleActivityForLessonWithoutLessonPlan,

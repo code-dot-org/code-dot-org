@@ -1,11 +1,11 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import FormComponent from '@cdo/apps/code-studio/pd/form_components/FormComponent';
 import FormController from '@cdo/apps/code-studio/pd/form_components/FormController';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 class DummyPage1 extends FormComponent {
   static associatedFields = [];
@@ -221,7 +221,7 @@ describe('FormController', () => {
       });
 
       let render;
-      before(() => {
+      beforeAll(() => {
         // Skip rendering
         render = sinon.stub(DummyForm.prototype, 'render');
         render.returns(null);

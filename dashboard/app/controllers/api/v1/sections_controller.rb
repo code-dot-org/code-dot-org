@@ -317,7 +317,7 @@ class Api::V1::SectionsController < Api::V1::JSONApiController
         return head :bad_request unless @course
         return head :forbidden unless @course.course_assignable?(current_user)
         @unit = params[:unit_id] ? Unit.get_from_cache(params[:unit_id]) : nil
-        return head :bad_request if @unit && @course.id != @unit.unit_group.try(:id)
+        return head :bad_request if @unit && @course.default_units.exclude?(@unit)
       when 'Unit'
         unit_id = course_version.content_root_id
         @unit = Unit.get_from_cache(unit_id)

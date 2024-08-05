@@ -1,16 +1,17 @@
-import React, {useMemo, useCallback, useState} from 'react';
-import PropTypes from 'prop-types';
-import $ from 'jquery';
 import {TextLink} from '@dsco_/link';
+import $ from 'jquery';
+import PropTypes from 'prop-types';
+import React, {useMemo, useCallback, useState} from 'react';
+
+import Dialog, {
+  Title as DialogTitle,
+  Body as DialogBody,
+} from '@cdo/apps/templates/Dialog';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
   getGuideChildren,
   organizeReferenceGuides,
 } from '@cdo/apps/util/referenceGuideHelpers';
-import Dialog, {
-  Title as DialogTitle,
-  Body as DialogBody,
-} from '@cdo/apps/templates/Dialog';
 
 const DeleteWarningDialog = ({
   pendingDeleteKey,

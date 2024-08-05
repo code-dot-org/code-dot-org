@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-07-31T20:00:08.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Wrap Up",
+    "long_instructions": "### Imagine a friend walked into class right now and asked “what did I miss?” \r\n### How would you describe why user testing is important to your friend? What kinds of decisions can we still make after testing?",
+    "teacher_markdown": "Have students share in small groups first.\r\n\r\n Discussion Goal: Students should summarize the core concepts of the lesson, emphasizing how it’s important to have a diversity of perspectives when user testing and how those tests can lead to important decisions for what to do next with a chatbot.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-07-31 20:00:11 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

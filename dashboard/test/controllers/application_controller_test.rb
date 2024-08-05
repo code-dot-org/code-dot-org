@@ -4,21 +4,26 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
   describe 'CAP lockout' do
     let(:user) {create(:student)}
 
-    let(:user_lockable?) {true}
-    let(:user_locked_out?) {true}
     let(:cpa_experience_phase) {Cpa::ALL_USER_LOCKOUT}
+    let(:user_is_locked_out?) {true}
+
+    let(:expect_grace_period_handler_call) {Services::ChildAccount::GracePeriodHandler.expects(:call).with(user: user)}
+    let(:expect_lockout_handler_call) {Services::ChildAccount::LockoutHandler.expects(:call).with(user: user)}
 
     before do
       Cpa.stubs(:cpa_experience).returns(cpa_experience_phase)
-
-      Policies::ChildAccount.stubs(:lockable?).with(user).returns(user_lockable?)
-      Policies::ChildAccount::ComplianceState.stubs(:locked_out?).with(user).returns(user_locked_out?)
+      Services::ChildAccount::LockoutHandler.stubs(:call).with(user: user).returns(user_is_locked_out?)
 
       sign_in user
     end
 
-    it 'locks out user' do
-      Services::ChildAccount.expects(:lock_out).with(user).once
+    it 'calls CAP grace period handler' do
+      expect_grace_period_handler_call.once
+      get root_path
+    end
+
+    it 'calls CAP lockout handler' do
+      expect_lockout_handler_call.once
       get root_path
     end
 
@@ -27,8 +32,18 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
       assert_redirected_to lockout_path
     end
 
+    it 'allows current user data retrieving' do
+      get api_v1_users_current_path
+      refute_redirect_to lockout_path
+    end
+
     it 'allows sign out' do
       get destroy_user_session_path
+      refute_redirect_to lockout_path
+    end
+
+    it 'allows CSRF token retrieving' do
+      get get_token_path
       refute_redirect_to lockout_path
     end
 
@@ -55,6 +70,9 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
     context 'when user is not sign in' do
       before do
         sign_out user
+
+        expect_grace_period_handler_call.never
+        expect_lockout_handler_call.never
       end
 
       it 'does not redirect to lockout page' do
@@ -63,26 +81,100 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
       end
     end
 
-    context 'when user is not lockable' do
-      let(:user_lockable?) {false}
+    context 'when user is not locked out' do
+      let(:user_is_locked_out?) {false}
 
-      it 'does not lock out user' do
-        Services::ChildAccount.expects(:lock_out).with(user).never
+      it 'does not redirect to lockout page' do
         get root_path
+        refute_redirect_to lockout_path
       end
     end
 
     context 'when no CPA experience' do
       let(:cpa_experience_phase) {nil}
 
-      it 'does not lock out user' do
-        Services::ChildAccount.expects(:lock_out).with(user).never
+      it 'does not call CAP grace period handler' do
+        expect_grace_period_handler_call.never
+        get root_path
+      end
+
+      it 'does not call CAP lockout handler' do
+        expect_lockout_handler_call.never
         get root_path
       end
 
       it 'does not redirect to lockout page' do
         get root_path
         refute_redirect_to lockout_path
+      end
+    end
+
+    context 'when error is raised during grace period handling' do
+      let(:error) {StandardError.new('expected_error')}
+
+      before do
+        Services::ChildAccount::GracePeriodHandler.stubs(:call).with(user: user).raises(error)
+      end
+
+      it 'does not call CAP grace period handler' do
+        expect_grace_period_handler_call.never
+        get root_path
+      end
+
+      it 'does not call CAP lockout handler' do
+        expect_lockout_handler_call.never
+        get root_path
+      end
+
+      it 'notifies Honeybadger about error' do
+        request_path = root_path
+
+        Honeybadger.expects(:notify).with(
+          error,
+          error_message: 'Failed to apply the Child Account Policy to the user',
+          context: {
+            user_id: user.id,
+            request_path: request_path,
+          }
+        ).once
+
+        get request_path
+      end
+
+      it 'does not redirect to lockout page' do
+        get root_path
+        refute_redirect_to lockout_path
+      end
+    end
+  end
+
+  describe 'LMS lockout' do
+    let(:user) do
+      create(:student)
+    end
+
+    before do
+      user.authentication_options << build(:lti_authentication_option)
+      user.save
+
+      sign_in user
+    end
+
+    describe 'with session initialized' do
+      before do
+        Policies::Lti.stubs(:account_linking?).returns(true)
+      end
+
+      it 'should redirect to landing path' do
+        get root_path
+
+        assert_redirected_to lti_v1_account_linking_landing_path
+      end
+
+      it 'should NOT redirect to landing path for allow listed paths' do
+        get destroy_user_session_path
+
+        assert_redirected_to '//test.code.org'
       end
     end
   end

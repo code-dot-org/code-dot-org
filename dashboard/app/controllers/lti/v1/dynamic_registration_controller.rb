@@ -92,7 +92,8 @@ module Lti
           metadata = {
             lms_name: platform[:name],
           }
-          Metrics::Events.log_event(
+          Metrics::Events.log_event_with_session(
+            session: session,
             event_name: 'lti_dynamic_registration_completed',
             metadata: metadata,
           )

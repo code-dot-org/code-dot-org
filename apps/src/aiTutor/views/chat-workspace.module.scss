@@ -53,17 +53,24 @@ $default-spacing: 2px;
   margin: 5px 0 5px 0;
 }
 
-.feedbackIcons {
-  float: right;
-  height: 36px;
-  justify-content: space-between;
-  gap: 10px;
-}
-
 .aiTutorMarkdown {
   pre, code {
     // Color copied for consistency with bootstrap styles auto-applied to SafeMarkdown component
     background-color: #f7f7f9;
     color: $light_primary_700;
   }
+}
+
+.feedbackIcons {
+  height: 36px;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.feedbackDetails {
+  width: 90%;
+}
+
+.feedbackButton {
+  margin-right: 5px;
 }

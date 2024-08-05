@@ -5,11 +5,12 @@ class ScriptsController < ApplicationController
   before_action :require_levelbuilder_mode_or_test_env, only: [:edit, :update, :new, :create]
   before_action :authenticate_user!, except: [:show, :vocab, :resources, :code, :standards]
   check_authorization
-  before_action :set_unit_by_name, only: [:show, :vocab, :resources, :code, :standards, :edit]
+  before_action :set_unit_by_name, only: [:show, :vocab, :resources, :code, :standards, :edit, :destroy]
+  before_action :set_current_unit_group, only: [:show]
   before_action :render_no_access, only: [:show]
   before_action :set_redirect_override, only: [:show]
-  authorize_resource class: 'Unit', except: [:update, :destroy]
-  load_and_authorize_resource class: 'Unit', only: [:update, :destroy]
+  authorize_resource class: 'Unit', except: [:update]
+  load_and_authorize_resource class: 'Unit', only: [:update]
 
   use_reader_connection_for_route(:show)
 
@@ -24,13 +25,13 @@ class ScriptsController < ApplicationController
       return
     end
 
-    if request.path != (canonical_path = script_path(@script))
-      # return a temporary redirect rather than a permanent one, to avoid ever
-      # serving a permanent redirect from a unit's new location to its old
-      # location during the unit renaming process.
-      redirect_to canonical_path
-      return
-    end
+    # if request.path != (canonical_path = script_path(@script))
+    #   # return a temporary redirect rather than a permanent one, to avoid ever
+    #   # serving a permanent redirect from a unit's new location to its old
+    #   # location during the unit renaming process.
+    #   redirect_to canonical_path
+    #   return
+    # end
 
     if !params[:section_id] && current_user&.last_section_id
       redirect_to request.query_parameters.merge({"section_id" => current_user&.last_section_id})
@@ -59,8 +60,8 @@ class ScriptsController < ApplicationController
     session[:show_unversioned_redirect_warning] = false
 
     additional_script_data = {
-      course_name: @script.unit_group&.name,
-      course_id: @script.unit_group&.id,
+      course_name: @script.original_unit_group&.name,
+      course_id: @script.original_unit_group&.id,
       show_redirect_warning: @show_redirect_warning,
       redirect_script_url: @redirect_unit_url,
       show_unversioned_redirect_warning: !!@show_unversioned_redirect_warning,
@@ -72,12 +73,12 @@ class ScriptsController < ApplicationController
       is_verified_instructor: current_user&.verified_instructor?,
       locale: Unit.locale_english_name_map[request.locale],
       locale_code: request.locale,
-      course_link: @script.course_link(params[:section_id]),
-      course_title: @script.course_title || I18n.t('view_all_units'),
+      course_link: @script.course_link(params[:section_id], @current_unit_group),
+      course_title: @script.course_title(@current_unit_group) || I18n.t('view_all_units'),
       sections: @sections_with_assigned_info
     }
 
-    @script_data = @script.summarize(true, current_user, false, request.locale).merge(additional_script_data)
+    @script_data = @script.summarize(true, current_user, false, request.locale, unit_group: @current_unit_group).merge(additional_script_data)
 
     if @script.old_professional_learning_course? && current_user && Plc::UserCourseEnrollment.exists?(user: current_user, plc_course: @script.plc_course_unit.plc_course)
       @plc_breadcrumb = {unit_name: @script.plc_course_unit.unit_name, course_view_path: course_path(@script.plc_course_unit.plc_course.unit_group)}
@@ -292,6 +293,16 @@ class ScriptsController < ApplicationController
   private def set_unit_by_name
     @script = get_unit_by_name
     raise ActiveRecord::RecordNotFound unless @script
+  end
+
+  private def set_current_unit_group
+    @current_unit_group = UnitGroup.find_by_name(params[:course_course_name])
+    if params[:course_course_name] && !@current_unit_group
+      raise ActiveRecord::RecordNotFound.new("Course #{params[:course_course_name]} not found")
+    end
+    if @current_unit_group && @script.unit_groups.exclude?(@current_unit_group)
+      raise ActiveRecord::RecordNotFound.new("Unit #{@script.name} does not belong to course #{@current_unit_group.name}")
+    end
   end
 
   private def render_no_access

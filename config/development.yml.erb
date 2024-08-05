@@ -14,12 +14,6 @@ db_credential_writer: {"username":"root", "password":""}
 db_credential_reader: {"username":"root", "password":""}
 db_writer: 'mysql://root@localhost/'
 
-firebase_name: cdo-v3-dev
-# provide a unique path for firebase channels data for development, to avoid conflicts in channel ids.
-firebase_secret: !Secret
-firebase_shared_secret: !Secret
-firebase_channel_id_suffix: -DEVELOPMENT-<%=ENV['USER']%>
-
 lint: true
 optimize_webpack_assets: false
 optimize_rails_assets: false
@@ -73,3 +67,6 @@ openai_evaluate_rubric_api_key:
 
 # Mapbox
 mapbox_upload_tileset:    'censustiles-dev'
+
+# Enables DCDO settings via cookies
+use_cookie_dcdo: true

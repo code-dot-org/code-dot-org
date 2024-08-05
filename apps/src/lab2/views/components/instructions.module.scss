@@ -36,7 +36,7 @@
 
 .instructions-light {
   @extend %instructions;
-  background-color: $neutral_dark10;
+  background-color: $light_white;
 }
 
 .item {
@@ -120,7 +120,7 @@
 
 .text-light {
   @extend %text;
-  background-color: $neutral_white;
+  background-color: $light_white;
   color: $neutral_dark;
 }
 
@@ -140,9 +140,9 @@
 
 .message-light {
   @extend %message;
-  background-color: $neutral_white;
+  background-color: $light_gray_50;
   color: $neutral_dark;
-  border: dashed $neutral_white 2px;
+  border: dashed $light_gray_100 2px;
 }
 
 .buttonInstruction {

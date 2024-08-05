@@ -1,10 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import AppLabCrosshairOverlay from '@cdo/apps/applab/AppLabCrosshairOverlay';
-
-import {expect} from '../../util/reconfiguredChai';
 
 // ES5-style require necessary to stub gridUtils.draggedElementDropPoint
 var gridUtils = require('@cdo/apps/applab/gridUtils');
@@ -17,18 +14,18 @@ describe('AppLabCrosshairOverlay', () => {
   var stubDraggedElementDropPoint;
 
   beforeEach(() => {
-    stubDraggedElementDropPoint = sinon.stub(
-      gridUtils,
-      'draggedElementDropPoint'
-    );
+    stubDraggedElementDropPoint = jest
+      .spyOn(gridUtils, 'draggedElementDropPoint')
+      .mockClear()
+      .mockImplementation();
   });
 
   afterEach(() => {
-    stubDraggedElementDropPoint.restore();
+    stubDraggedElementDropPoint.mockRestore();
   });
 
   it('renders to CrosshairOverlay with unmodified properties when not dragging', () => {
-    stubDraggedElementDropPoint.returns(null);
+    stubDraggedElementDropPoint.mockReturnValue(null);
     var element = shallow(
       <AppLabCrosshairOverlay
         width={TEST_APP_WIDTH}
@@ -40,17 +37,20 @@ describe('AppLabCrosshairOverlay', () => {
 
     var overlay = element.find('CrosshairOverlay');
     var props = overlay.props();
-    expect(overlay.length).to.equal(1);
-    expect(props.width).to.equal(TEST_APP_WIDTH);
-    expect(props.height).to.equal(TEST_APP_HEIGHT);
-    expect(props.mouseX).to.equal(TEST_MOUSE_X);
-    expect(props.mouseY).to.equal(TEST_MOUSE_Y);
+    expect(overlay.length).toBe(1);
+    expect(props.width).toBe(TEST_APP_WIDTH);
+    expect(props.height).toBe(TEST_APP_HEIGHT);
+    expect(props.mouseX).toBe(TEST_MOUSE_X);
+    expect(props.mouseY).toBe(TEST_MOUSE_Y);
   });
 
   it('renders to CrosshairOverlay with overridden mouse coordinates when dragging', () => {
     const dropPointX = 42;
     const dropPointY = 43;
-    stubDraggedElementDropPoint.returns({left: dropPointX, top: dropPointY});
+    stubDraggedElementDropPoint.mockReturnValue({
+      left: dropPointX,
+      top: dropPointY,
+    });
     var element = shallow(
       <AppLabCrosshairOverlay
         width={TEST_APP_WIDTH}
@@ -62,10 +62,10 @@ describe('AppLabCrosshairOverlay', () => {
 
     var overlay = element.find('CrosshairOverlay');
     var props = overlay.props();
-    expect(overlay.length).to.equal(1);
-    expect(props.width).to.equal(TEST_APP_WIDTH);
-    expect(props.height).to.equal(TEST_APP_HEIGHT);
-    expect(props.mouseX).to.equal(dropPointX);
-    expect(props.mouseY).to.equal(dropPointY);
+    expect(overlay.length).toBe(1);
+    expect(props.width).toBe(TEST_APP_WIDTH);
+    expect(props.height).toBe(TEST_APP_HEIGHT);
+    expect(props.mouseX).toBe(dropPointX);
+    expect(props.mouseY).toBe(dropPointY);
   });
 });

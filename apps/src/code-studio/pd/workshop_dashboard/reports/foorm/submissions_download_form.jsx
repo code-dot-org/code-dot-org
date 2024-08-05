@@ -1,6 +1,6 @@
 // Pop-up modal for downloading all Foorm submissions for a single form as a csv.
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 /* eslint-disable no-restricted-imports */
 import {
   Modal,
@@ -14,9 +14,10 @@ import {
 import 'react-select/dist/react-select.css';
 import Select from 'react-select/lib/Select';
 import ReactTooltip from 'react-tooltip';
+
+import FontAwesome from '../../../../../templates/FontAwesome.jsx';
 import {SelectStyleProps} from '../../../constants.js';
 import DatePicker from '../../components/date_picker.jsx';
-import FontAwesome from '../../../../../templates/FontAwesome.jsx';
 
 export default class SubmissionsDownloadForm extends React.Component {
   static propTypes = {

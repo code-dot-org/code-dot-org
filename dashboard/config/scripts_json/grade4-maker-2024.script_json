@@ -4,14 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSC",
       "is_course": true,
       "is_migrated": true,
+      "tts": true,
       "version_year": "2024"
     },
     "new_name": null,
     "family_name": "grade4-maker",
-    "serialized_at": "2024-06-20 17:30:28 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-07-19 21:55:42 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -1611,7 +1613,7 @@
       "key": "0d18a755-7efb-46b7-b3f0-f4ffc99ad443",
       "position": 2,
       "properties": {
-        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/1Wg2MNjg2UFtHtLGyE5KLckGMUUoanshkvEKY8-F77bc/edit#slide=id.g26f3d2b7241_0_2018/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/3/topicNumber/2/quizId/6oMwA50HfQPKS9S6hd5I\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 2, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n",
+        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/1Wg2MNjg2UFtHtLGyE5KLckGMUUoanshkvEKY8-F77bc/edit#slide=id.g26f3d2b7241_0_2018/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/3/topicNumber/2/quizId/6oMwA50HfQPKS9S6hd5I\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 1, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n",
         "duration": "10",
         "name": "Assessment",
         "progression_name": "Sensory toy coding with micro:bit"
@@ -2022,7 +2024,7 @@
       "key": "8cf80047-3106-41be-8993-f050b974fc88",
       "position": 2,
       "properties": {
-        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/1Wg2MNjg2UFtHtLGyE5KLckGMUUoanshkvEKY8-F77bc/edit#slide=id.g26f3d2b7241_0_2018/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/3/topicNumber/2/quizId/Zqv1nqglDFqXHrfG8pZv\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 2, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n",
+        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/1Wg2MNjg2UFtHtLGyE5KLckGMUUoanshkvEKY8-F77bc/edit#slide=id.g26f3d2b7241_0_2018/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/3/topicNumber/2/quizId/Zqv1nqglDFqXHrfG8pZv\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 1, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n",
         "duration": "10",
         "name": "Assessment",
         "progression_name": "Simple Door Alarm with micro:bit"
@@ -2583,7 +2585,7 @@
       "key": "3c40e596-fbab-417c-bd25-dedd637bc759",
       "position": 2,
       "properties": {
-        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/1Wg2MNjg2UFtHtLGyE5KLckGMUUoanshkvEKY8-F77bc/edit#slide=id.g26f3d2b7241_0_2018/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/3/topicNumber/2/quizId/GbTQuzI2M5mkqR5IkDgP\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 2, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n",
+        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/1Wg2MNjg2UFtHtLGyE5KLckGMUUoanshkvEKY8-F77bc/edit#slide=id.g26f3d2b7241_0_2018/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/3/topicNumber/2/quizId/GbTQuzI2M5mkqR5IkDgP\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 1, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n",
         "duration": "10",
         "name": "Assessment",
         "progression_name": "Tilt Alarm with micro:bit"
@@ -5252,12 +5254,11 @@
   ],
   "resources": [
     {
-      "name": "**Grade 4 - Maker with micro:bit slides",
+      "name": "Grade 4 - Maker with micro:bit slides",
       "url": "https://docs.google.com/presentation/d/1Wg2MNjg2UFtHtLGyE5KLckGMUUoanshkvEKY8-F77bc/template/preview",
       "key": "_grade_4_-_maker_with_micro_bit_slides",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1Wg2MNjg2UFtHtLGyE5KLckGMUUoanshkvEKY8-F77bc/export/pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5286,6 +5287,39 @@
       },
       "seeding_key": {
         "resource.key": "_optional_how_to_put_code_onto_micro_bit"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/grade4-maker-2024/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/grade4-maker-2024/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/grade4-maker-2024/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
       }
     },
     {
@@ -5569,6 +5603,18 @@
       },
       "seeding_key": {
         "resource.key": "meet_your_micro_bit_video_guide"
+      }
+    },
+    {
+      "name": "micro:bit MakeCode block cut-out cards",
+      "url": "https://microbit.org/teach/classroom-resources/microbit-makecode-blocks-cutout-cards/",
+      "key": "micro_bit_makecode_block_cut-out_cards",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "micro_bit_makecode_block_cut-out_cards"
       }
     },
     {
@@ -6070,6 +6116,30 @@
     {
       "seeding_key": {
         "resource.key": "_grade_4_-_maker_with_micro_bit_slides",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "grade4-maker-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "micro_bit_makecode_block_cut-out_cards",
         "script.name": "grade4-maker-2024"
       }
     }

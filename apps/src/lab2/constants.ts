@@ -22,6 +22,7 @@ export const MAIN_PYTHON_FILE = 'main.py';
 export enum PERMISSIONS {
   // Add more permissions as needed.
   LEVELBUILDER = 'levelbuilder',
+  PROJECT_VALIDATOR = 'project_validator',
 }
 
 export const START_SOURCES = 'start_sources';

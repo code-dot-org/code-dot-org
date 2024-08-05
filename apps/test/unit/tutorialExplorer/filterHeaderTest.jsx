@@ -5,7 +5,7 @@ import {StickyContainer} from 'react-sticky';
 import FilterHeader from '@cdo/apps/tutorialExplorer/filterHeader';
 import i18n from '@cdo/tutorialExplorer/locale';
 
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 import {allowConsoleWarnings} from '../../util/testUtils';
 
 const FAKE_ON_USER_INPUT = () => {};

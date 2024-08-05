@@ -1,9 +1,9 @@
 /**
  * @file Function that initializes a CodeMirror editor in place of a textarea.
  */
-import $ from 'jquery';
 import CodeMirror from 'codemirror';
 import CodeMirrorSpellChecker from 'codemirror-spell-checker';
+import $ from 'jquery';
 import 'codemirror/mode/markdown/markdown';
 import 'codemirror/addon/edit/closetag';
 import 'codemirror/addon/edit/matchtags';
@@ -17,9 +17,9 @@ import 'codemirror/mode/xml/xml';
 import 'codemirror/mode/javascript/javascript';
 import './vendor/codemirror.inline-attach';
 import {JSHINT} from 'jshint';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import SafeMarkdown from '../templates/SafeMarkdown';
 
 window.JSHINT = JSHINT;

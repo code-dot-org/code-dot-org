@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2024-06-28T19:59:03.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-biomistral-7b",
+        "temperature": "0.5",
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "editable",
+        "temperature": "hidden",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01",
+        "gen-ai-biomistral-7b"
+      ]
+    },
+    "long_instructions": "## Switching Between Models\r\n\r\nThis tool has two base models: _BioMistral_ and _Mistral Instruct_. We can use the Compare Models button to view the differences between them.\r\n\r\nTo change a base model, use the dropdown to update the model and then press the Update button to save the configuration.\r\n\r\n### Do This\r\n\r\n1) Ask a **medical question** to the _BioMistral_ model, then change to the _Mistral Instruct_ model and ask the same question\r\n    - How were the responses different? Was one better than the other?\r\n2) Ask a **question about a book or movie** to the _Mistral Instruct_ model, then change to the _BioMistral_ model and ask the same question\r\n    - How were the responses different? Was one better than the other?",
+    "display_name": "BioMistral",
+    "bubble_choice_description": "Experiment with BioMistral, a base model that was fine-tuned on anatomy and biology medical textbooks",
+    "name_suffix": "_2024"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:59:03.063+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-finetuning-explore-biomistral\\\"\"],\"cloned_from\":\"gen-ai-customizing-finetuning-explore-biomistral\"}]"
+}]]></config>
+</Aichat>

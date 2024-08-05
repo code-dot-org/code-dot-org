@@ -1,0 +1,9 @@
+name 'csd-post-survey-worry-less-capable_copy1_mb_2024'
+question "I worry that sometimes I'm seen by others as less capable in this class"
+right 'Strongly agree'
+right 'Agree'
+right 'Slightly agree'
+right 'Neither'
+right 'Slightly disagree'
+right 'Disagree'
+right 'Strongly disagree'

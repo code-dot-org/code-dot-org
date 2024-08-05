@@ -1,14 +1,15 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import javalabMsg from '@cdo/javalab/locale';
+
 import {
   appendNewlineToConsoleLog,
   appendOutputLog,
 } from '@cdo/apps/javalab/redux/consoleRedux.ts';
 import {setIsCaptchaDialogOpen} from '@cdo/apps/javalab/redux/javalabRedux.ts';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import ReCaptchaDialog from '@cdo/apps/templates/ReCaptchaDialog';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import javalabMsg from '@cdo/javalab/locale';
 
 const BLOG_URL = 'https://support.code.org/hc/en-us/articles/6104078305549';
 

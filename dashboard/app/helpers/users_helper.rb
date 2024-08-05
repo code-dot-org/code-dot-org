@@ -283,6 +283,12 @@ module UsersHelper
     user.country_code.presence || request.country.to_s.upcase
   end
 
+  def account_linking_lock_reason(user)
+    return I18n.t('auth.parental_permission_required') unless Policies::ChildAccount.compliant?(user)
+
+    nil
+  end
+
   # Retrieve all teacher feedback for the designated set of users in the given
   # unit, with a single query.
   # @param [Enumerable<User>] users

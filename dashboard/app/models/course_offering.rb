@@ -7,7 +7,6 @@
 #  display_name                     :string(255)      not null
 #  created_at                       :datetime         not null
 #  updated_at                       :datetime         not null
-#  category                         :string(255)      default("other"), not null
 #  is_featured                      :boolean          default(FALSE), not null
 #  assignable                       :boolean          default(TRUE), not null
 #  curriculum_type                  :string(255)
@@ -34,6 +33,8 @@ class CourseOffering < ApplicationRecord
 
   has_many :course_versions, -> {where(content_root_type: ['UnitGroup', 'Unit'])}
   belongs_to :self_paced_pl_course_offering, class_name: 'CourseOffering', optional: true
+
+  has_and_belongs_to_many :pd_workshops, class_name: 'Pd::Workshop', join_table: :course_offerings_pd_workshops, association_foreign_key: 'pd_workshop_id'
 
   validates :curriculum_type, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values, message: "must be one of the course offering curriculum types. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_CURRICULUM_TYPES.to_h.values}. Got: \"%{value}\"."}, allow_nil: true
   validates :marketing_initiative, acceptance: {accept: Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values, message: "must be one of the course offering marketing initiatives. Expected one of: #{Curriculum::SharedCourseConstants::COURSE_OFFERING_MARKETING_INITIATIVES.to_h.values}. Got: \"%{value}\"."}, allow_nil: true
@@ -271,6 +272,13 @@ class CourseOffering < ApplicationRecord
     }
   end
 
+  def summarize_self_paced_pl
+    {
+      id: id,
+      display_name: display_name_with_latest_year
+    }
+  end
+
   def localized_display_name
     localized_name = I18n.t(
       key,
@@ -363,7 +371,6 @@ class CourseOffering < ApplicationRecord
       professional_learning_program: professional_learning_program,
       video: video,
       published_date: published_date,
-      self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
       self_paced_pl_course_offering_key: self_paced_pl_course_offering&.key,
     }
   end
@@ -375,9 +382,9 @@ class CourseOffering < ApplicationRecord
     File.write(file_path, JSON.pretty_generate(object_to_serialize) + "\n")
   end
 
-  def self.seed_all(glob = "config/course_offerings/*.json")
+  def self.seed_all(root_dir: Rails.root, glob: "config/course_offerings/*.json")
     removed_records = all.pluck(:key)
-    Dir.glob(Rails.root.join(glob)).each do |path|
+    Dir.glob(root_dir.join(glob)).each do |path|
       removed_records -= [CourseOffering.seed_record(path)]
     end
     where(key: removed_records).destroy_all

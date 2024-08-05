@@ -1,0 +1,20 @@
+@import 'color.scss';
+
+.floatHeader {
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  height: 82px;
+}
+
+.floatHeaderInterior {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 0 6px 0 $light_black;
+}
+
+.childContainer {
+  overflow: hidden;
+}

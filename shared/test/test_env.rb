@@ -4,7 +4,7 @@ require 'cdo/env'
 class ENVTest < Minitest::Test
   def test_with_sensitive_values_redacted
     ENV['SAFE'] = 'safe value'
-    orig_key = ENV['AWS_SECRET_KEY']
+    orig_key = ENV.fetch('AWS_SECRET_KEY', nil)
     ENV['AWS_SECRET_KEY'] = 'this should be obfuscated'
 
     redacted = ENV.with_sensitive_values_redacted

@@ -301,7 +301,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
             @integration.client_id
           end
     roles_key = Policies::Lti::LTI_ROLES_KEY
-    custom_claims_key = Policies::Lti::LTI_CUSTOM_CLAIMS
+    custom_claims_key = Policies::Lti::LTI_CUSTOM_CLAIMS.to_sym
     teacher_roles = Policies::Lti::STAFF_ROLES
     nrps_url_key = Policies::Lti::LTI_NRPS_CLAIM
     resource_link_key = Policies::Lti::LTI_RESOURCE_LINK_CLAIM
@@ -478,14 +478,19 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
   test 'auth - given a valid jwt with the audience as an array, redirect to target_link_url' do
     aud_is_array = true
-    jwt = create_valid_jwt(aud_is_array)
+    payload = get_valid_payload(aud_is_array)
+    jwt = create_jwt_and_stub(payload)
+    create_preexisting_user(payload)
+
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_response :redirect
   end
 
   test 'auth - given a valid jwt, redirect to target_link_url' do
-    aud_is_array = false
-    jwt = create_valid_jwt(aud_is_array)
+    payload = get_valid_payload
+    jwt = create_jwt_and_stub(payload)
+    create_preexisting_user(payload)
+
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
     assert_response :redirect
     # could confirm more things here
@@ -513,15 +518,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   test 'auth - should render the upgrade account page if the LTI has the same user as an instructor' do
     payload = get_valid_payload
     jwt = create_jwt_and_stub(payload)
-
-    user = create :student
-    ao = AuthenticationOption.new(
-      user: user,
-      email: Services::Lti.get_claim(payload, :email),
-      credential_type: AuthenticationOption::LTI_V1,
-      authentication_id: Services::Lti::AuthIdGenerator.new(payload).call
-    )
-    ao.save!
+    create_preexisting_user(payload, User::TYPE_STUDENT)
 
     deployment = LtiDeployment.create(deployment_id: @deployment_id, lti_integration_id: @integration.id)
     assert deployment
@@ -534,15 +531,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   test 'auth - should NOT upgrade if student and LTI informs that this is a learner' do
     payload = {**get_valid_payload, Policies::Lti::LTI_ROLES_KEY => [Policies::Lti::CONTEXT_LEARNER_ROLE]}
     jwt = create_jwt_and_stub(payload)
-
-    user = create :student
-    ao = AuthenticationOption.new(
-      user: user,
-      email: Services::Lti.get_claim(payload, :email),
-      credential_type: AuthenticationOption::LTI_V1,
-      authentication_id: Services::Lti::AuthIdGenerator.new(payload).call
-    )
-    ao.save!
+    create_preexisting_user(payload, User::TYPE_STUDENT)
 
     deployment = LtiDeployment.create(deployment_id: @deployment_id, lti_integration_id: @integration.id)
     assert deployment
@@ -565,21 +554,21 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
   test 'auth - should NOT redirect to iframe route if LMS caller is Schoology AND new_tab=true param is present' do
     issuer = Policies::Lti::LMS_PLATFORMS[:schoology][:issuer]
     integration = create :lti_integration, issuer: issuer
+    integration.update(platform_name: 'schoology')
     # Override read_cache stub with this integration
     LtiV1Controller.any_instance.stubs(:read_cache).with("#{integration.issuer}/#{integration.client_id}").returns(integration)
     payload = {**get_valid_payload, iss: issuer, aud: integration.client_id, azp: integration.client_id}
     jwt = create_jwt_and_stub(payload)
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state, new_tab: true}
-    assert_response :redirect
-    assert_redirected_to '/users/sign_up'
+    assert_response :ok
+    assert_template 'lti/v1/account_linking/landing'
   end
 
-  test 'auth - should render oauth redirector if student-email-post-enabled' do
+  test 'auth - should render the landing page and store session state' do
     DCDO.stubs(:get)
     Cpa.stubs(:cpa_experience).with(any_parameters).returns(false)
     SignUpTracking.stubs(:begin_sign_up_tracking).returns(false)
     DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
-    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(false)
     DCDO.stubs(:get).with('student-email-post-enabled', false).returns(true)
     payload = {**get_valid_payload, Policies::Lti::LTI_ROLES_KEY => [Policies::Lti::CONTEXT_LEARNER_ROLE]}
     jwt = create_jwt_and_stub(payload)
@@ -588,7 +577,29 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert deployment
     post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
 
-    assert_template 'omniauth/redirect'
+    expected = {
+      lti_provider_name: "canvas_cloud",
+      new_cta_type: "new",
+      user_type: "student",
+    }
+
+    assert_equal expected, session[:lms_landing]
+    assert_template 'lti/v1/account_linking/landing'
+  end
+
+  test 'auth - should create teacher account if user is both teacher and student' do
+    payload = {**get_valid_payload, Policies::Lti::LTI_ROLES_KEY => [Policies::Lti::CONTEXT_LEARNER_ROLE, Policies::Lti::TEACHER_ROLES.first]}
+    jwt = create_jwt_and_stub(payload)
+    post '/lti/v1/authenticate', params: {id_token: jwt, state: @state}
+
+    expected = {
+      lti_provider_name: "canvas_cloud",
+      new_cta_type: "new",
+      user_type: "teacher",
+    }
+
+    assert_equal expected, session[:lms_landing]
+    assert_template 'lti/v1/account_linking/landing'
   end
 
   test 'sync - should redirect students to homepage without syncing' do
@@ -809,22 +820,6 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     assert_response :internal_server_error
   end
 
-  test 'integration form - renders the integration template' do
-    Policies::Lti.stubs(:early_access?).returns(false)
-
-    get '/lti/v1/integrations'
-
-    assert_template 'lti/v1/integrations'
-  end
-
-  test 'integration form - renders the early access template when early access is enabled' do
-    Policies::Lti.stubs(:early_access?).returns(true)
-
-    get '/lti/v1/integrations'
-
-    assert_template 'lti/v1/integrations/early_access'
-  end
-
   test 'integration - given valid inputs, creates a new integration if one does not exist' do
     name = "Fake School"
     client_id = "1234canvas"
@@ -839,22 +834,6 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
     post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
     assert_response :ok
-  end
-
-  test 'integration - redirects to the form without integration creation when early access is closed' do
-    Policies::Lti.expects(:early_access_closed?).returns(true)
-
-    name = 'Fake School'
-    client_id = '1234canvas'
-    lms = 'canvas_cloud'
-    email = 'fake@email.com'
-
-    assert_no_difference 'LtiIntegration.count' do
-      post '/lti/v1/integrations', params: {name: name, client_id: client_id, lms: lms, email: email}
-    end
-
-    assert_redirected_to lti_v1_integrations_path
-    assert_match /Learning Management System Integrations have been claimed/, flash[:alert]
   end
 
   test 'integration - given missing inputs, does not create a new integration' do
@@ -950,5 +929,21 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
 
     get '/lti/v1/sync_course', params: {lti_integration_id: lti_integration.id, deployment_id: 'foo', context_id: lti_course.context_id, rlid: lti_course.resource_link_id, nrps_url: lti_course.nrps_url}
     assert_response :redirect
+  end
+
+  # Create a user with an auth option matching the given JWT.
+  # Useful for bypassing the landing/linking flow.
+  private def create_preexisting_user(jwt_payload, user_type = User::TYPE_TEACHER)
+    user = user_type == User::TYPE_TEACHER ? create(:teacher) : create(:student)
+    user.update(lms_landing_opted_out: true)
+    ao = AuthenticationOption.new(
+      user: user,
+      email: Services::Lti.get_claim(jwt_payload, :email),
+      credential_type: AuthenticationOption::LTI_V1,
+      authentication_id: Services::Lti::AuthIdGenerator.new(jwt_payload).call
+    )
+    ao.save!
+
+    user
   end
 end

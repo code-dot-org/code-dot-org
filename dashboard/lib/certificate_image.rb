@@ -230,9 +230,9 @@ class CertificateImage
 
       # When we have a unit within a unit_group, we want to display both the unit and unit_group titles.
       # When we have a standalone unit or the unit group, we only display the localized title of unit_or_unit_group.
-      if unit_or_unit_group.is_a?(Unit) && unit_or_unit_group.unit_group.present?
+      if unit_or_unit_group.is_a?(Unit) && unit_or_unit_group.original_unit_group.present?
         unit = unit_or_unit_group
-        unit_group = unit.unit_group
+        unit_group = unit.original_unit_group
 
         course_titles_constants = cert_text_constants[:two_titles]
 

@@ -94,7 +94,7 @@
           "type": "comment",
           "name": "teaching_experience_computer_vision_details",
           "visibleIf": "{teaching_experience_computer_vision} = 'yes'",
-          "title": "Please describe briefly the computer vision content you have taight and context in which you taught it.",
+          "title": "Please describe briefly the computer vision content you have taught and context in which you taught it.",
           "rows": 3
         },
         {

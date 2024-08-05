@@ -1,14 +1,15 @@
 import React, {useContext, useState, useCallback} from 'react';
 
-import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
+import {modelDescriptions} from '@cdo/apps/aichat/constants';
+import {Visibility} from '@cdo/apps/aichat/types';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
+import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
 
-import {modelDescriptions} from '@cdo/apps/aichat/constants';
-import moduleStyles from './edit-aichat-settings.module.scss';
-import {UpdateContext} from './UpdateContext';
 import FieldSection from './FieldSection';
-import {Visibility} from '@cdo/apps/aichat/types';
+import {UpdateContext} from './UpdateContext';
+
+import moduleStyles from './edit-aichat-settings.module.scss';
 
 const modelDropdownItems = modelDescriptions.map(model => {
   return {value: model.id, text: model.name};

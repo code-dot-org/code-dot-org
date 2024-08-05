@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
-import i18n from '@cdo/locale';
+
 import Toggle from '@cdo/apps/componentLibrary/toggle';
-import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
 
 export default function LtiRosterSyncSettings(props) {
   const enabledLabel = i18n.ltiSectionSyncEnabled();
@@ -47,23 +48,26 @@ export default function LtiRosterSyncSettings(props) {
         size={'s'}
         name={'lti_roster_sync_enabled'}
       />
-      <button
-        type={'button'}
-        className={'btn'}
-        style={styles.button}
-        onClick={handleSubmit}
-        tabIndex={'0'}
-        disabled={!changed}
-      >
-        {i18n.ltiSectionSyncSettingsButtonText()}
-      </button>
+      <div style={styles.buttonContainer}>
+        <button
+          type={'button'}
+          className={'btn'}
+          onClick={handleSubmit}
+          tabIndex={'0'}
+          disabled={!changed}
+        >
+          {i18n.ltiSectionSyncSettingsButtonText()}
+        </button>
+      </div>
     </div>
   );
 }
 
 const styles = {
-  button: {
-    float: 'right',
+  buttonContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'flex-end',
   },
 };
 

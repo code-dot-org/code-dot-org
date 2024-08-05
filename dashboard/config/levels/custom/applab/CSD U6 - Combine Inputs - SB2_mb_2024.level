@@ -1,0 +1,101 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2024-07-10T18:57:24.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": null,
+      "setProperty": null,
+      "getProperty": null,
+      "console.log": null,
+      "declareAssign_x": null,
+      "onBoardEvent": {
+        "dropdown": {
+          "0": [
+            "buttonA",
+            "buttonB"
+          ],
+          "1": [
+            "\"down\"",
+            "\"up\""
+          ]
+        }
+      },
+      "ledScreen.on": null,
+      "ledScreen.off": null,
+      "ledScreen.toggle": null,
+      "ledScreen.clear": null,
+      "setScreen": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "long_instructions": "# Sliders\r\n\r\nLast time, your users were only able to choose between the left and right columns to light up. To give the user control over which columns to light up, you can use a slider.\r\n\r\nThis slider lets users choose a value between 0 and 4 for each column in the `ledScreen`, but there's something not quite right about how this program is working.\r\n\r\n# Do This\r\n1) Look over the code and find the bug that's keeping the LEDs from being lit up correctly.\r\n\t* (Hint: Hover over the yellow triangles for clues as to what might be wrong with the code.)",
+    "instructions_important": "false",
+    "submittable": "false",
+    "start_blocks": "onBoardEvent(buttonA, \"down\", function() {\r\n  var column = getProperty(\"columnSlider\", \"value\");\r\n  ledScreen.on(column_slider, 0);\r\n  ledScreen.on(column_slider, 1);\r\n  ledScreen.on(column_slider, 2);\r\n  ledScreen.on(column_slider, 3);\r\n  ledScreen.on(column_slider, 4);\r\n});\r\nonBoardEvent(buttonB, \"down\", function() {\r\n  ledScreen.clear();\r\n});\r\n\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "validation_enabled": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen\" style=\"display: block; height: 451px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 29px; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 205px; height: 75px; position: absolute; left: 55px; top: 45px; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif; text-align: center;\" id=\"title\">LED Screen Control</label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 19px; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 240px; height: 115px; position: absolute; left: 45px; top: 270px; text-align: center; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\" id=\"instructions\">Choose the column you want to light up with the slider, then click the A button to turn it on.</label><input type=\"range\" value=\"0\" min=\"0\" max=\"4\" step=\"1\" id=\"columnSlider\" style=\"margin: 0px; padding: 0px; width: 150px; height: 24px; position: absolute; left: 85px; top: 150px;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 14px; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 55px; height: 25px; position: absolute; left: 25px; top: 150px; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\" id=\"left\">left (0)</label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 14px; overflow: hidden; overflow-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 65px; height: 20px; position: absolute; left: 250px; top: 155px; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\" id=\"right\">right (4)</label></div></div>",
+    "hide_view_data_button": "true",
+    "show_debug_watch": "true",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "microbit",
+    "top_level_procedure_autopopulate": "false",
+    "parent_level_id": 20437,
+    "text_mode_at_start": "false",
+    "map_reference": "/courses/csd-2022/guides/taking-input-with-getproperty",
+    "mini_rubric": "false",
+    "encrypted": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "ai_enabled": "false",
+    "encrypted_examples": "KmTsEhTd7JnLAuXYrey3GeFFLpAmeJA38tUgA71Nj1ZlicfURbSTnb+9d8eV\n1dWgG9HRUF5oUzdGAaiI2fIokg==\n",
+    "reference_links": [
+      "/courses/csd-2022/guides/if-statements-2",
+      "/courses/csd-2022/guides/booleans-and-comparison-operators",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/counter-patterns-with-event",
+      "/courses/csd-2022/guides/microbit-physical-input",
+      "/courses/csd-2022/guides/microbit-display",
+      "/courses/csd-2022/guides/microbit-overview",
+      "/maker/setup"
+    ],
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-07-10T18:57:24.710+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - SB2_mb2022\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - SB2_mb2022\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

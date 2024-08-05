@@ -1,7 +1,7 @@
 /** @file Playground Component setup tests */
 import five from '@code-dot-org/johnny-five';
 import Playground from 'playground-io';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';
 import NeoPixel from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/NeoPixel';
@@ -17,7 +17,7 @@ import {
 } from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 import Switch from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Switch';
 
-import {expect} from '../../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 import {
   newBoard,

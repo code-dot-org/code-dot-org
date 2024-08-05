@@ -8,6 +8,7 @@ import {
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import AssignButton from '@cdo/apps/templates/AssignButton';
 import Assigned from '@cdo/apps/templates/Assigned';
@@ -17,8 +18,6 @@ import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherS
 import UnassignSectionButton from '@cdo/apps/templates/UnassignSectionButton';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-
-import Button from '../Button';
 
 import CourseScriptTeacherInfo from './CourseScriptTeacherInfo';
 
@@ -40,6 +39,7 @@ class CourseScript extends Component {
     hasNoSections: PropTypes.bool.isRequired,
     toggleHiddenScript: PropTypes.func.isRequired,
     sectionsForDropdown: PropTypes.arrayOf(sectionForDropdownShape).isRequired,
+    urlPath: PropTypes.string,
   };
 
   state = {
@@ -78,7 +78,6 @@ class CourseScript extends Component {
   render() {
     const {
       title,
-      name,
       id,
       description,
       viewAs,
@@ -91,6 +90,7 @@ class CourseScript extends Component {
       courseVersionId,
       sectionsForDropdown,
       showAssignButton,
+      urlPath,
     } = this.props;
 
     const isHidden = isScriptHiddenForSection(
@@ -132,7 +132,7 @@ class CourseScript extends Component {
             <Button
               __useDeprecatedTag
               text={i18n.goToUnit()}
-              href={`/s/${name}${location.search}`}
+              href={`${urlPath}${location.search}`}
               color={Button.ButtonColor.gray}
               className="uitest-go-to-unit-button"
             />

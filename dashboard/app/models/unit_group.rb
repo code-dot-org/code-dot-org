@@ -102,8 +102,8 @@ class UnitGroup < ApplicationRecord
     published_state == Curriculum::SharedCourseConstants::PUBLISHED_STATE.in_development
   end
 
-  def self.file_path(name)
-    Rails.root.join("config/courses/#{name}.course")
+  def self.file_path(name, root_path = Rails.root)
+    root_path.join("config/courses/#{name}.course")
   end
 
   def self.load_from_path(path)
@@ -201,20 +201,19 @@ class UnitGroup < ApplicationRecord
     unremovable_unit_names = units_to_remove.select(&:prevent_course_version_change?).map(&:name)
     raise "Cannot remove units that have resources or vocabulary: #{unremovable_unit_names}" if unremovable_unit_names.any?
 
-    if new_units_objects.any? do |s|
-      s.unit_group != self && s.prevent_course_version_change?
-    end
-      raise 'Cannot add units that have resources or vocabulary'
-    end
+    # unaddable_unit_names = new_units_objects.select do |s|
+    #   s.original_unit_group != self && s.prevent_course_version_change?
+    # end.map(&:name)
+    # raise "Cannot add units that have resources or vocabulary: #{unaddable_unit_names}" if unaddable_unit_names.any?
 
     new_units_objects.each_with_index do |unit, index|
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
         ugu.position = index + 1
-        unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false, pilot_experiment: nil)
-        unit.course_version&.destroy
+        # unit.update!(published_state: nil, instruction_type: nil, participant_audience: nil, instructor_audience: nil, is_course: false, pilot_experiment: nil)
+        # unit.course_version&.destroy
 
-        unit.reload
-        unit.write_script_json
+        # unit.reload
+        # unit.write_script_json
       end
       unit_group_unit.update!(position: index + 1)
     end
@@ -269,7 +268,7 @@ class UnitGroup < ApplicationRecord
         version_title: I18n.t("data.course.name.#{name}.version_title", default: ''),
         scripts: units_for_user(user).map do |unit|
           include_lessons = false
-          unit.summarize(include_lessons, user).merge!(unit.summarize_i18n_for_display)
+          unit.summarize(include_lessons, user, unit_group: self).merge!(unit.summarize_i18n_for_display)
         end,
         teacher_resources: resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),
         student_resources: student_resources.sort_by(&:name).map(&:summarize_for_resources_dropdown),

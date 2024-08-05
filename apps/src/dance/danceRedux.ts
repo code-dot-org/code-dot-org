@@ -5,10 +5,11 @@ import {
   PayloadAction,
   ThunkDispatch,
 } from '@reduxjs/toolkit';
-import {SongData, SongMetadata} from './types';
-import {DanceAiModalOutputType} from './ai/types';
+
 import {queryParams} from '../code-studio/utils';
 import {fetchSignedCookies} from '../utils';
+
+import {DanceAiModalOutputType} from './ai/types';
 import {
   getSongManifest,
   getSelectedSong,
@@ -18,6 +19,7 @@ import {
   loadSongMetadata,
   isSongDeprecated,
 } from './songs';
+import {SongData, SongMetadata} from './types';
 
 export interface DanceState {
   selectedSong: string;

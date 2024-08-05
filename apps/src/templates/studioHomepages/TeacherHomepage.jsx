@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
@@ -175,9 +175,13 @@ export const UnconnectedTeacherHomepage = ({
   ) {
     trySetSessionStorage(LOGGED_TEACHER_SESSION, 'true');
 
-    analyticsReporter.sendEvent(EVENTS.TEACHER_LOGIN_EVENT, {
-      'user id': currentUserId,
-    });
+    analyticsReporter.sendEvent(
+      EVENTS.TEACHER_LOGIN_EVENT,
+      {
+        'user id': currentUserId,
+      },
+      PLATFORMS.BOTH
+    );
   }
 
   return (

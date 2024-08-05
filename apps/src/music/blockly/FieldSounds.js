@@ -1,12 +1,14 @@
+import GoogleBlockly from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import color from '@cdo/apps/util/color';
+import experiments from '@cdo/apps/util/experiments';
+
+import AppConfig from '../appConfig';
+import SoundStyle from '../utils/SoundStyle';
 import SoundsPanel from '../views/SoundsPanel';
 import SoundsPanel2 from '../views/SoundsPanel2';
-import GoogleBlockly from 'blockly/core';
-import experiments from '@cdo/apps/util/experiments';
-import color from '@cdo/apps/util/color';
-import SoundStyle from '../utils/SoundStyle';
-import AppConfig from '../appConfig';
 
 const FIELD_HEIGHT = 20;
 const FIELD_PADDING = 2;

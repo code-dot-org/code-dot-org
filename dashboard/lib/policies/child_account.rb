@@ -82,27 +82,42 @@ class Policies::ChildAccount
     user.created_at < user_state_policy[:start_date]
   end
 
-  # The date on which the student's account will be locked if the account is not compliant.
-  def self.lockout_date(user)
-    return if compliant?(user)
-
+  # The date on which the student's grace period ends.
+  # @param user [User] the student account
+  # @param approximate [Boolean] if true, return an approximate date if the exact date is not known
+  def self.grace_period_end_date(user, approximate: false)
     user_state_policy = state_policy(user)
     return unless user_state_policy
 
-    # CAP non-compliant students who were created:
-    # - before the policy took effect - should be locked out during the all users lockout phase.
-    # - after the policy took effect - should be locked out immediately.
-    user_predates_policy?(user) ? user_state_policy[:lockout_date] : user_state_policy[:start_date]
+    grace_period_duration = user_state_policy[:grace_period_duration]
+    return unless grace_period_duration
+
+    start_date = DateTime.parse(user.child_account_compliance_state_last_updated) if ComplianceState.grace_period?(user)
+    start_date = user_state_policy[:lockout_date] if approximate && start_date.nil?
+
+    start_date&.since(grace_period_duration)
   end
 
-  # Checks if the user can be locked out due to non-compliance with CAP.
-  def self.lockable?(user)
-    return false if ComplianceState.locked_out?(user)
+  # The date on which the student's account will be locked if the account is not compliant.
+  # @param user [User] the student account
+  # @param approximate [Boolean] if true, return an approximate date if the exact date is not known
+  def self.lockout_date(user, approximate: false)
+    return if compliant?(user)
+    return if ComplianceState.locked_out?(user)
 
-    user_lockout_date = lockout_date(user)
-    return false unless user_lockout_date
+    # CAP non-compliant "pre-policy" created students can be locked out only after their grace period ends.
+    return grace_period_end_date(user, approximate: approximate) if user_predates_policy?(user)
 
-    user_lockout_date <= DateTime.now
+    # CAP non-compliant "post-policy" created students should be locked out immediately after the policy goes into effect.
+    state_policy(user).try(:[], :start_date)
+  end
+
+  # Checks if the user is partially locked out due to current non-compliance with CAP, even
+  # if we are granting them temporary 'compliance' in a grace period.
+  def self.partially_locked_out?(user)
+    # They are in the 'almost' locked out phase by predating the policy and
+    # not pre-emptively getting parent permission. (They may be temporarily compliant.)
+    user_predates_policy?(user) && !ComplianceState.permission_granted?(user)
   end
 
   # Authentication option types which we consider to be "owned" by the school
@@ -129,6 +144,7 @@ class Policies::ChildAccount
   def self.state_policies
     # The individual US State child account policy configuration
     # name: the name of the policy
+    # grace_period_duration: the duration of the grace period in seconds.
     # max_age: the oldest age of the child at which this policy applies.
     # lockout_date: the date at which we will begin to lockout all CPA users who
     # are not in compliance with the policy.
@@ -137,6 +153,7 @@ class Policies::ChildAccount
       'CO' => {
         name: Cpa::NAME,
         max_age: 12,
+        grace_period_duration: DCDO.get('cpa_grace_period_duration', Cpa::GRACE_PERIOD_DURATION)&.seconds,
         lockout_date: DateTime.parse(DCDO.get('cpa_schedule', {})[Cpa::ALL_USER_LOCKOUT] || Cpa::ALL_USER_LOCKOUT_DATE.iso8601),
         start_date: DateTime.parse(DCDO.get('cpa_schedule', {})[Cpa::NEW_USER_LOCKOUT] || Cpa::NEW_USER_LOCKOUT_DATE.iso8601),
       }
@@ -149,6 +166,43 @@ class Policies::ChildAccount
     return unless user.country_code
     return unless user.us_state
     state_policies[user.us_state]
+  end
+
+  # Checks if the user will not be old enough by the lockout date
+  def self.underage?(user)
+    return false unless user.student?
+    return false unless user.birthday
+
+    policy = state_policy(user)
+    return false unless policy
+
+    lockout_date = policy.try(:[], :lockout_date)
+    return false unless lockout_date
+
+    # We have to add 1 to the max_age when calculating the birthday since birthdays are
+    # inaccurate values and we want to *ensure* the student age is legally valid.
+    min_required_age = (policy[:max_age] + 1).years
+
+    # Checks if the student meets the minimum age requirement by the start of the lockout
+    # (And thus they are not considered underage during pre-lockout periods)
+    student_birthday = user.birthday.in_time_zone(lockout_date.utc_offset)
+    return false unless student_birthday.since(min_required_age) > lockout_date
+
+    # Check to see if they are old enough at the current date
+    # We cannot trust 'user.age' because that is a different time zone and broken for leap years
+    today = Time.zone.today.in_time_zone(lockout_date.utc_offset)
+    student_age = today.year - student_birthday.year
+    ((student_birthday + student_age.years > today) ? (student_age - 1) : student_age) <= policy[:max_age]
+  end
+
+  # Whether or not the user can create/link new personal logins
+  def self.can_link_new_personal_account?(user)
+    return true unless user.student?
+    return false unless user.us_state && user.country_code
+    return true unless user.birthday
+    return true unless underage?(user)
+
+    ComplianceState.permission_granted?(user)
   end
 
   # Check if parent permission is required for this account according to our
@@ -165,7 +219,7 @@ class Policies::ChildAccount
 
     # Parental permission is not required for students
     # whose age cannot be identified or who are older than the maximum age covered by the policy.
-    return false if user.age.nil? || user.age.to_i > policy[:max_age]
+    return false unless underage?(user)
 
     personal_account?(user)
   end

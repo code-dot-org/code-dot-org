@@ -12,7 +12,7 @@ class AichatController < ApplicationController
   # POST /aichat/chat_completion
   def chat_completion
     return render status: :forbidden, json: {} unless AichatSagemakerHelper.can_request_aichat_chat_completion?
-    unless has_required_params?
+    unless chat_completion_has_required_params?
       return render status: :bad_request, json: {}
     end
 
@@ -26,10 +26,47 @@ class AichatController < ApplicationController
     render(status: :ok, json: response_body)
   end
 
+  # params are newChatEvent: ChatEvent, aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
+  # POST /aichat/log_chat_event
+  def log_chat_event
+    begin
+      params.require([:newChatEvent, :aichatContext])
+    rescue ActionController::ParameterMissing
+      return render status: :bad_request, json: {}
+    end
+
+    context = params[:aichatContext]
+    event = params[:newChatEvent]
+
+    project_id = nil
+    if context[:channelId]
+      _, project_id = storage_decrypt_channel_id(context[:channelId])
+    end
+
+    begin
+      logged_event = AichatEvent.create!(
+        user_id: current_user.id,
+        level_id: context[:currentLevelId],
+        script_id: context[:scriptId],
+        project_id: project_id,
+        aichat_event: event.to_json
+      )
+    rescue StandardError => exception
+      return render status: :bad_request, json: {error: exception.message}
+    end
+
+    response_body = {
+      chat_event_id: logged_event.id,
+      chat_event: logged_event.aichat_event
+    }
+
+    render(status: :ok, json: response_body)
+  end
+
   private def get_response_body
     # Check for profanity
     locale = params[:locale] || "en"
-    filter_result = ShareFiltering.find_failure(params[:newMessage][:chatMessageText], locale)
+    filter_result = ShareFiltering.find_profanity_failure(params[:newMessage][:chatMessageText], locale)
     if filter_result&.type == ShareFiltering::FailureType::PROFANITY
       messages = [
         get_user_message(SharedConstants::AI_INTERACTION_STATUS[:PROFANITY_VIOLATION])
@@ -41,23 +78,14 @@ class AichatController < ApplicationController
       }
     end
 
-    messages_for_model = params.to_unsafe_h[:storedMessages].filter do |message|
+    messages_for_model = params[:storedMessages].filter do |message|
       message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK] &&
         ROLES_FOR_MODEL.include?(message[:role])
     end
 
-    # Use to_unsafe_h here to allow testing this function.
-    # Safe params are primarily targeted at preventing "mass assignment vulnerability"
-    # which isn't relevant here.
-    input = AichatSagemakerHelper.format_inputs_for_sagemaker_request(
-      params.to_unsafe_h[:aichatModelCustomizations],
-      messages_for_model,
-      params.to_unsafe_h[:newMessage]
-    )
-    sagemaker_response = AichatSagemakerHelper.request_sagemaker_chat_completion(input, params[:aichatModelCustomizations][:selectedModelId])
-    latest_assistant_response = AichatSagemakerHelper.get_sagemaker_assistant_response(sagemaker_response)
+    latest_assistant_response_from_sagemaker = AichatSagemakerHelper.get_sagemaker_assistant_response(params[:aichatModelCustomizations], messages_for_model, params[:newMessage])
 
-    filter_result = ShareFiltering.find_failure(latest_assistant_response, locale)
+    filter_result = ShareFiltering.find_profanity_failure(latest_assistant_response_from_sagemaker, locale)
     if filter_result&.type == ShareFiltering::FailureType::PROFANITY
       messages = [
         get_user_message(SharedConstants::AI_INTERACTION_STATUS[:ERROR]),
@@ -71,7 +99,7 @@ class AichatController < ApplicationController
       Honeybadger.notify(
         'Profanity returned from aichat model (blocked before reaching student)',
         context: {
-          model_response: latest_assistant_response,
+          model_response: latest_assistant_response_from_sagemaker,
           flagged_content: filter_result.content,
           aichat_session_id: log_chat_session(messages)
         }
@@ -83,7 +111,7 @@ class AichatController < ApplicationController
     assistant_message = {
       role: "assistant",
       status: SharedConstants::AI_INTERACTION_STATUS[:OK],
-      chatMessageText: latest_assistant_response,
+      chatMessageText: latest_assistant_response_from_sagemaker,
     }
 
     messages = [
@@ -93,7 +121,7 @@ class AichatController < ApplicationController
     {messages: messages}
   end
 
-  private def has_required_params?
+  private def chat_completion_has_required_params?
     begin
       params.require([:newMessage, :aichatModelCustomizations, :aichatContext])
     rescue ActionController::ParameterMissing
@@ -137,8 +165,15 @@ class AichatController < ApplicationController
       end
     end
 
-    if params[:aichatModelCustomizations] != JSON.parse(session.model_customizations) ||
-        params[:storedMessages] != JSON.parse(session.messages)
+    if params[:aichatModelCustomizations] != JSON.parse(session.model_customizations)
+      return false
+    end
+
+    # Compare stored messages in sessions table with stored message from front-end
+    # for the following fields only: chatMessageText, role, and status.
+    sessions_stored_messages = JSON.parse(session.messages).map {|message| message.slice('chatMessageText', 'role', 'status')}
+    frontend_stored_messages = params[:storedMessages].map {|message| message.slice('chatMessageText', 'role', 'status')}
+    if sessions_stored_messages != frontend_stored_messages
       return false
     end
 

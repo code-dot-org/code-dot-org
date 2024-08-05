@@ -2,13 +2,14 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import color from '@cdo/apps/util/color';
+
 import {
   configMicrobit,
   configCircuitPlayground,
   getMakerBlocks,
 } from '@cdo/apps/lib/kits/maker/dropletConfig';
+import color from '@cdo/apps/util/color';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(function () {
   $('#level_makerlab_enabled').change(function () {

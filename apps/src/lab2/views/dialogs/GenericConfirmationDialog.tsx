@@ -1,8 +1,11 @@
-import Typography from '@cdo/apps/componentLibrary/typography';
 import React from 'react';
-import {BaseDialogProps} from './DialogManager';
-import moduleStyles from './confirm-dialog.module.scss';
+
+import Typography from '@cdo/apps/componentLibrary/typography';
 import commonI18n from '@cdo/locale';
+
+import {BaseDialogProps} from './DialogManager';
+
+import moduleStyles from './confirm-dialog.module.scss';
 
 /**
  * Generic confirmation dialog used in Lab2 labs.

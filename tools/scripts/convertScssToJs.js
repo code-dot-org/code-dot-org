@@ -27,10 +27,9 @@ const camelize = (s) => s.replace(/-./g, (x) => x[1].toUpperCase());
 // we can recursively resolve these referential definitions
 // until we land on an actual variable.
 function resolveVariable(value) {
-  while (/^\$/.test(value)) {
-    value = cachedVariables[value.substring(1)];
-  }
-  return value;
+  return value.split(', ').map(part => {
+    return part.startsWith('$') ? cachedVariables[part.substring(1)] : part;
+  }).join(', ');
 }
 
 const parseMixinStart = (mixinStartMatch, out) => {
@@ -132,12 +131,19 @@ function convertScssToJs(scssPath, jsPath) {
   });
 
   var currentLine = 0;
+  var accumulatedLine = '';
   rl.on("line", function (line) {
     currentLine++;
 
-    var match = variableRe.exec(line);
+    accumulatedLine += ' ' + line.trim();
+
+    var match = variableRe.exec(accumulatedLine);
     if (match === null || !!currentlyInsideMixin) {
-      parseMixin(line, out);
+      parseMixin(accumulatedLine, out);
+
+      // Stop accumulating if the line ends with a semicolon
+      if (accumulatedLine.endsWith(';')) accumulatedLine = '';
+
       return;
     }
 
@@ -148,7 +154,7 @@ function convertScssToJs(scssPath, jsPath) {
         [
           "Unable to resolve variable " + variableName,
           scssPath + ":" + currentLine,
-          line,
+          accumulatedLine,
           " ^",
         ].join("\n")
       );
@@ -167,6 +173,7 @@ function convertScssToJs(scssPath, jsPath) {
     }
 
     out.write('  "' + variableName + '": ' + variableValue + ",\n");
+    accumulatedLine = '';
   });
   rl.on("close", function () {
     out.write("};\n");

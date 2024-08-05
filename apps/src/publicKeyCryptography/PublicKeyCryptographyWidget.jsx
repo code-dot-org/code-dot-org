@@ -1,25 +1,28 @@
 /** @file Root component for Public Key Cryptography widget */
 import PropTypes from 'prop-types';
 import React from 'react';
-import CharacterPanel from './CharacterPanel';
-import EqualColumns from './EqualColumns';
-import Alice from './Alice';
-import AliceInstructions from './AliceInstructions';
-import Eve from './Eve';
-import EveInstructions from './EveInstructions';
-import Bob from './Bob';
-import BobInstructions from './BobInstructions';
-import ModuloClock from './ModuloClock';
-import color from '../util/color';
-import FontAwesome from '../templates/FontAwesome';
-import WidgetContinueButton from '../templates/WidgetContinueButton';
-import StartOverButton from './StartOverButton';
-import ToggleGroup from '../templates/ToggleGroup';
+import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
+
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
 import fontConstants from '@cdo/apps/fontConstants';
-import {Provider} from 'react-redux';
+
+import FontAwesome from '../templates/FontAwesome';
+import ToggleGroup from '../templates/ToggleGroup';
+import WidgetContinueButton from '../templates/WidgetContinueButton';
+import color from '../util/color';
+
+import Alice from './Alice';
+import AliceInstructions from './AliceInstructions';
+import Bob from './Bob';
+import BobInstructions from './BobInstructions';
+import CharacterPanel from './CharacterPanel';
+import EqualColumns from './EqualColumns';
+import Eve from './Eve';
+import EveInstructions from './EveInstructions';
+import ModuloClock from './ModuloClock';
+import StartOverButton from './StartOverButton';
 
 // Magic strings for view modes
 const ALICE_VIEW = 'alice';

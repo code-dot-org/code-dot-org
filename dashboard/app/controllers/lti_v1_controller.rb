@@ -8,9 +8,6 @@ require "cdo/honeybadger"
 require 'metrics/events'
 
 class LtiV1Controller < ApplicationController
-  before_action -> {redirect_to lti_v1_integrations_path, alert: I18n.t('lti.integration.early_access.closed')},
-                if: -> {Policies::Lti.early_access_closed?}, only: :create_integration
-
   # Don't require an authenticity token because LTI Platforms POST to this
   # controller.
   skip_before_action :verify_authenticity_token
@@ -171,15 +168,7 @@ class LtiV1Controller < ApplicationController
       session[:user_return_to] = destination_url
 
       if user
-        original_sign_in_count = user.sign_in_count
         sign_in user
-
-        # If this is the user's first login, send them into the account linking flow
-        if original_sign_in_count < 1 && DCDO.get('lti_account_linking_enabled', false)
-          PartialRegistration.persist_attributes(session, user)
-          publish_linking_page_visit(user, integration[:platform_name])
-          render 'lti/v1/account_linking/landing', locals: {lti_provider: integration[:platform_name], email: Services::Lti.get_claim(decoded_jwt, :email), new_cta_type: 'continue'} and return
-        end
 
         metadata = {
           'user_type' => user.user_type,
@@ -190,6 +179,14 @@ class LtiV1Controller < ApplicationController
           event_name: 'lti_user_signin',
           metadata: metadata,
         )
+
+        # If this is the user's first login, send them into the account linking flow
+        unless user.lms_landing_opted_out
+          Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'continue', user.user_type)
+          PartialRegistration.persist_attributes(session, user)
+          publish_linking_page_visit(user, integration[:platform_name])
+          render 'lti/v1/account_linking/landing', locals: {email: Services::Lti.get_claim(decoded_jwt, :email)} and return
+        end
 
         # If on code.org, the user is a student and the LTI has the same user as a teacher, upgrade the student to a teacher.
         if lti_account_type == User::TYPE_TEACHER && user.user_type == User::TYPE_STUDENT
@@ -206,21 +203,10 @@ class LtiV1Controller < ApplicationController
         user = Services::Lti.initialize_lti_user(decoded_jwt)
         # PartialRegistration removes the email address, so store it in a local variable first
         email_address = Services::Lti.get_claim(decoded_jwt, :email)
+        Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'new', user.user_type)
         PartialRegistration.persist_attributes(session, user)
-        if DCDO.get('lti_account_linking_enabled', false)
-          publish_linking_page_visit(user, integration[:platform_name])
-          render 'lti/v1/account_linking/landing', locals: {lti_provider: integration[:platform_name], email: email_address, new_cta_type: 'new'} and return
-        end
-
-        if DCDO.get('student-email-post-enabled', false)
-          @form_data = {
-            email: email_address
-          }
-
-          render 'omniauth/redirect', {layout: false}
-        else
-          redirect_to new_user_registration_url
-        end
+        publish_linking_page_visit(user, integration[:platform_name])
+        render 'lti/v1/account_linking/landing', locals: {email: email_address} and return
       end
     else
       jwt_error_message = jwt_verifier.errors.empty? ? 'Invalid JWT' : jwt_verifier.errors.join(', ')
@@ -420,7 +406,8 @@ class LtiV1Controller < ApplicationController
       metadata = {
         lms_name: platform_name,
       }
-      Metrics::Events.log_event(
+      Metrics::Events.log_event_with_session(
+        session: session,
         event_name: 'lti_portal_registration_completed',
         metadata: metadata,
       )
@@ -436,7 +423,7 @@ class LtiV1Controller < ApplicationController
       {platform: key, name: value[:name]}
     end
 
-    render template: Policies::Lti.early_access? ? 'lti/v1/integrations/early_access' : 'lti/v1/integrations'
+    render lti_v1_integrations_path
   end
 
   # POST /lti/v1/upgrade_account

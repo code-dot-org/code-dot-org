@@ -1,8 +1,7 @@
 {
   "aichatWorkspaceHeader": "AI Chat",
   "continue": "Continue",
-  "inappropriateUserMessage": "This message has been flagged as inappropriate.",
-  "tooPersonalUserMessage": "This message has been flagged as too personal.",
+  "startOverAichatModelCustomizations": "This will reset this level to its start state and remove any model customizations or model card information you’ve added or changed.",
   "waitingForChatResponse": "Waiting for a response...",
   "whatIsPersonalInformation": "What is considered personal information?"
 }

@@ -1134,6 +1134,7 @@ cs-CZ:
   header_courses: Kurzy
   header_districts: Kraje
   header_documentation: Dokumentace
+  header_donate: Přispějte
   header_educate_beyond: Nad rámec Code.org
   header_educate_community: Online komunita
   header_educate_elementary: Základní škola
@@ -1588,6 +1589,7 @@ cs-CZ:
   homepage_slot_text_link_k5: Kurzy pro 1. stupeň ZŠ
   homepage_slot_text_link_local: Najděte si třídu v místě
   homepage_slot_text_link_middle: 2. stupeň ZŠ
+  homepage_slot_text_link_middle_and_high: Druhý stupeň a střední škola
   homepage_slot_text_link_othercourses: Další on-line kurzy
   homepage_slot_text_link_pd: Profesní rozvoj
   homepage_slot_text_link_shop: Trička, čepice a další
@@ -2480,6 +2482,8 @@ cs-CZ:
   user_header_applab: 'App Lab '
   user_header_artist: 'Umělec '
   user_header_create: 'Vytvoř '
+  user_header_create_account: Vytvořit účet
+  user_header_create_account_low_cap: Vytvořit účet
   user_header_dance: Taneční večírek
   user_header_flappy: Flappy
   user_header_gamelab: Game Lab
@@ -2487,6 +2491,8 @@ cs-CZ:
   user_header_logout: Odhlásit se
   user_header_minecraft: Minecraft
   user_header_my_projects: Moje projekty
+  user_header_new_project: Nový projekt
+  user_header_new_project_low_cap: Nový projekt
   user_header_playlab: Play Lab
   user_header_settings: Můj účet
   user_header_signin: Přihlásit se

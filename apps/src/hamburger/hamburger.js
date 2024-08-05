@@ -1,8 +1,9 @@
-import trackEvent from '../util/trackEvent';
 import {
   getChannelIdFromUrl,
   userAlreadyReportedAbuse,
 } from '@cdo/apps/reportAbuse';
+
+import trackEvent from '../util/trackEvent';
 
 export const initHamburger = function () {
   $(document).ready(function () {

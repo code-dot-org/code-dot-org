@@ -1,3 +1,9 @@
+<%
+/**
+ * This block destructures the local variables for use within this ejs template.
+ */
+var shareFailure = locals.shareFailure;
+%>
 <p id="share-fail-explanation"><%= shareFailure.message %></p>
 
 <% if (shareFailure.contents) { %>

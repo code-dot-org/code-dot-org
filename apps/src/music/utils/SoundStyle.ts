@@ -1,6 +1,7 @@
-import styles from '../views/SoundStyle.module.scss';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {SoundType} from '../player/MusicLibrary';
+
+import styles from '../views/SoundStyle.module.scss';
 
 type SoundStyle = {
   [key in SoundType | PlaybackEvent['type']]?: {

@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
 
 import LessonEditorDialog from './LessonEditorDialog';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
 export default function UploadImageDialog({
   isOpen,

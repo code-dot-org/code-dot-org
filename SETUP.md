@@ -96,8 +96,6 @@ External contributors can supply alternate placeholder values for secrets normal
 ```
 slack_bot_token: localoverride
 pardot_private_key: localoverride
-firebase_secret: localoverride
-firebase_shared_secret: localoverride
 properties_encryption_key: ''
 ```
 
@@ -121,7 +119,7 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
 
 1. Install **brew packages**:
    ```
-   brew install rbenv ruby-build nvm mysql redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi pdftk-java
+   brew install rbenv ruby-build nvm mysql@8.0 redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi pdftk-java
    ```
 
 1. Initialize **Git LFS**:
@@ -138,10 +136,18 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
        ==> Successfully started `redis` (label: homebrew.mxcl.redis)
        ```
    3. macOS will notify you that `redis` has been configured to start automatically upon user login. Confirm this in System Settings --> General --> Login Items --> `redis-server` 
-1. Setup your local **MySql server**
-   1. Start mysql server:
+1. Setup your local **MySQL database server**
+   1. Link MySQL 8
         ```
-        brew services start mysql
+        brew link --force --overwrite mysql@8.0
+        ```
+   2. Verify Link
+        ```
+        mysql --version  # should show: mysql  Ver 8.0.[xx]
+        ```
+   3. Start mysql server:
+        ```
+        brew services start mysql # Should notify you that MySQL server has been added to Login Items
         ```
    2. Confirm that MySQL has started by running:
         ```
@@ -237,8 +243,6 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
     1. Install [ruby-build as a rbenv plugin](https://github.com/rbenv/ruby-build#readme)
         1. `mkdir -p "$(rbenv root)"/plugins`
         1. `git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build`
-    1. Use the rbenv-doctor from the [`rbenv` installation instructions](https://github.com/rbenv/rbenv#basic-github-checkout) to verify rbenv is set up correctly:
-        1. `curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash`
     1. If there are any errors (they appear red), follow the [`rbenv` installation instructions] (https://github.com/rbenv/rbenv#basic-github-checkout) to properly configure `rbenv`, following steps for **Ubuntu Desktop** so that config changes go into `.bashrc`.
     1. **Note:** Ubuntu 22.04 ships with versions of `libssl` and `openssl` that are incompatible with `ruby-build`; see https://github.com/rbenv/ruby-build/discussions/1940 for context
         1. As a result, attempts to run `rbenv install` will fail. To resolve, compile a valid version of `openssl` locally and direct `rbenv` to configure ruby to use it as described here: https://github.com/rbenv/ruby-build/discussions/1940#discussioncomment-2663209

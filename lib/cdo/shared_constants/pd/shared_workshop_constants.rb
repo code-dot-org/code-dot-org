@@ -7,6 +7,7 @@ module Pd
       COURSE_CSA = 'Computer Science A'.freeze,
       COURSE_FACILITATOR = 'Facilitator'.freeze,
       COURSE_ADMIN_COUNSELOR = 'Admin/Counselor Workshop'.freeze,
+      COURSE_BUILD_YOUR_OWN = 'Build Your Own Workshop'.freeze,
     ].freeze
 
     ARCHIVED_COURSES = [

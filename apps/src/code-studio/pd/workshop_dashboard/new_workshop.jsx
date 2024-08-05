@@ -4,6 +4,7 @@
  */
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import WorkshopForm from './components/workshop_form';
 
 export default class NewWorkshop extends React.Component {

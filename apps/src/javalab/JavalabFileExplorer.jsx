@@ -1,12 +1,14 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import color from '@cdo/apps/util/color';
+import React, {Component} from 'react';
 import onClickOutside from 'react-onclickoutside';
+
+import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
 import JavalabDropdown from './components/JavalabDropdown';
 import {DisplayTheme} from './DisplayTheme';
-import i18n from '@cdo/locale';
-import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
 
 /**
  * A button that drops down to a set of clickable file names, and closes itself if

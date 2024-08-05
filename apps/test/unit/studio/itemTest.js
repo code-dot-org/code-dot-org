@@ -1,5 +1,4 @@
 import _ from 'lodash';
-import sinon from 'sinon';
 
 import {
   Direction,
@@ -17,10 +16,8 @@ import Studio from '@cdo/apps/studio/studio';
 import Item from '@cdo/apps/studio/Item';
 import Sprite from '@cdo/apps/studio/Sprite';
 
-import {expect} from '../../util/reconfiguredChai';
-
 describe('item', () => {
-  before(() => {
+  beforeAll(() => {
     Studio.trackedBehavior = {};
     Studio.trackedBehavior.createdItems = {};
     Studio.SQUARE_SIZE = 50;
@@ -38,7 +35,7 @@ describe('item', () => {
         item.x = 100;
         item.y = 100;
 
-        item.hasWall = sinon.stub().returns(false);
+        item.hasWall = jest.fn().mockReturnValue(false);
 
         targetSprite = new Sprite({});
         targetSprite.x = 200;
@@ -49,11 +46,14 @@ describe('item', () => {
         // the destination-setting logic uses _.shuffle to semi-randomize the
         // set of possible destinations before sorting them by score. We would
         // instead like to make it deterministic.
-        shuffleSpy = sinon.stub(_, 'shuffle').callsFake(ar => ar);
+        shuffleSpy = jest
+          .spyOn(_, 'shuffle')
+          .mockClear()
+          .mockImplementation(ar => ar);
       });
 
       afterEach(() => {
-        _.shuffle.restore();
+        _.shuffle.mockRestore();
       });
 
       it('sets an arbitrary direction on wander', () => {
@@ -64,31 +64,31 @@ describe('item', () => {
         // be the coordinates to which we are headed. Since North happens to be
         // the first direction considered, North will be our final result.
         item.update();
-        expect(shuffleSpy.callCount).to.equal(1);
+        expect(shuffleSpy).toHaveBeenCalledTimes(1);
 
-        const firstDestination = shuffleSpy.firstCall.args[0][0];
-        expect(firstDestination.gridX).to.equal(2);
-        expect(firstDestination.gridY).to.equal(1);
+        const firstDestination = shuffleSpy.mock.calls[0][0][0];
+        expect(firstDestination.gridX).toBe(2);
+        expect(firstDestination.gridY).toBe(1);
 
-        expect(item.dir).to.equal(Direction.NORTH);
-        expect(item.destGridX).to.equal(2);
-        expect(item.destGridY).to.equal(1);
+        expect(item.dir).toBe(Direction.NORTH);
+        expect(item.destGridX).toBe(2);
+        expect(item.destGridY).toBe(1);
       });
 
       it('moves toward the target on chase', () => {
         item.activity = BEHAVIOR_CHASE;
         item.update();
-        expect(item.dir).to.equal(Direction.SOUTH);
-        expect(item.destGridX).to.equal(2);
-        expect(item.destGridY).to.equal(3);
+        expect(item.dir).toBe(Direction.SOUTH);
+        expect(item.destGridX).toBe(2);
+        expect(item.destGridY).toBe(3);
       });
 
       it('runs from the target on flee', () => {
         item.activity = BEHAVIOR_FLEE;
         item.update();
-        expect(item.dir).to.equal(Direction.NORTH);
-        expect(item.destGridX).to.equal(2);
-        expect(item.destGridY).to.equal(1);
+        expect(item.dir).toBe(Direction.NORTH);
+        expect(item.destGridX).toBe(2);
+        expect(item.destGridY).toBe(1);
       });
     });
 
@@ -104,18 +104,18 @@ describe('item', () => {
       it('clears direction and destination on STOP', () => {
         item.activity = BEHAVIOR_STOP;
         item.update();
-        expect(item.dir).to.equal(Direction.NONE);
-        expect(item.destGridX).to.be.undefined;
-        expect(item.destGridY).to.be.undefined;
+        expect(item.dir).toBe(Direction.NONE);
+        expect(item.destGridX).toBeUndefined();
+        expect(item.destGridY).toBeUndefined();
       });
 
       it('does nothing on WATCH_ACTOR or GRID_ALIGNED behaviors', () => {
         [BEHAVIOR_WATCH_ACTOR, BEHAVIOR_GRID_ALIGNED].forEach(behavior => {
           item.activity = behavior;
           item.update();
-          expect(item.dir).to.be.undefined;
-          expect(item.destGridX).to.equal(200);
-          expect(item.destGridY).to.equal(200);
+          expect(item.dir).toBeUndefined();
+          expect(item.destGridX).toBe(200);
+          expect(item.destGridY).toBe(200);
         });
       });
     });
@@ -135,7 +135,7 @@ describe('item', () => {
         item.activity = behavior;
         item.x = 100;
         item.moveToNextPosition();
-        expect(item.x).to.equal(105);
+        expect(item.x).toBe(105);
       });
     });
 
@@ -144,7 +144,7 @@ describe('item', () => {
         behavior => {
           item.activity = behavior;
           item.moveToNextPosition();
-          expect(item.x).to.equal(100);
+          expect(item.x).toBe(100);
         }
       );
     });

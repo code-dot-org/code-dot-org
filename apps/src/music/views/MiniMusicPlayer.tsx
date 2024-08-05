@@ -1,22 +1,23 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
-import {Channel} from '../../lab2/types';
-import MusicPlayer from '../player/MusicPlayer';
-import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
-import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+import noteImage from '@cdo/static/music/music-note.png';
+
+import Lab2Registry from '../../lab2/Lab2Registry';
 import {
   RemoteSourcesStore,
   SourcesStore,
 } from '../../lab2/projects/SourcesStore';
-import {loadLibrary} from '../utils/Loader';
-import MusicLibrary from '../player/MusicLibrary';
+import {Channel} from '../../lab2/types';
+import MusicBlocklyWorkspace from '../blockly/MusicBlocklyWorkspace';
 import {setUpBlocklyForMusicLab} from '../blockly/setup';
-import Lab2Registry from '../../lab2/Lab2Registry';
-import moduleStyles from './MiniMusicPlayer.module.scss';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import MusicLibrary from '../player/MusicLibrary';
+import MusicPlayer from '../player/MusicPlayer';
+import Simple2Sequencer from '../player/sequencer/Simple2Sequencer';
 
-import noteImage from '@cdo/static/music/music-note.png';
+import moduleStyles from './MiniMusicPlayer.module.scss';
 
 interface MiniPlayerViewProps {
   projects: Channel[];
@@ -46,8 +47,7 @@ const MiniPlayerView: React.FunctionComponent<MiniPlayerViewProps> = ({
   const onMount = useCallback(async () => {
     setUpBlocklyForMusicLab();
     workspaceRef.current.initHeadless();
-    const library = await loadLibrary(libraryName);
-    MusicLibrary.setCurrent(library);
+    await MusicLibrary.loadLibrary(libraryName);
     setIsLoading(false);
     await analyticsReporter.current.startSession();
   }, [analyticsReporter, libraryName]);

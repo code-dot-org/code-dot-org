@@ -5,12 +5,13 @@
 
 import '@babel/polyfill/noConflict';
 import 'whatwg-fetch';
-import {throwOnConsoleErrorsEverywhere} from './util/throwOnConsole';
-import {clearTimeoutsBetweenTests} from './util/clearTimeoutsBetweenTests';
-import Adapter from 'enzyme-adapter-react-16';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import enzyme from 'enzyme'; // eslint-disable-line no-restricted-imports
-import stubFirehose from './util/stubFirehose';
+
+import {clearTimeoutsBetweenTests} from './util/clearTimeoutsBetweenTests';
 import KARMA_CLI_FLAGS from './util/KARMA_CLI_FLAGS';
+import stubFirehose from './util/stubFirehose';
+import {throwOnConsoleErrorsEverywhere} from './util/throwOnConsole';
 
 enzyme.configure({adapter: new Adapter()});
 
@@ -57,7 +58,7 @@ if (testType('unit')) {
         bodyTag.innerHTML = '<script></script>';
       });
     });
-    runTests(require.context('./unit', true, /\.[j|t]sx?$/));
+    runTests(require.context('./unit', true, /\.karma\.test\.[j|t]sx?$/));
   });
 }
 

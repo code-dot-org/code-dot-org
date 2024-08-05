@@ -1,7 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
-import Button from '@cdo/apps/templates/Button';
 
 export default class LibraryIdCopier extends React.Component {
   static propTypes = {

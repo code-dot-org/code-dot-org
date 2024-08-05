@@ -2,9 +2,11 @@
  *        Public Key Cryptography widget levels. */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PublicKeyCryptographyWidget from './PublicKeyCryptographyWidget';
-import ModuloClockWidget from './ModuloClockWidget';
+
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
+
+import ModuloClockWidget from './ModuloClockWidget';
+import PublicKeyCryptographyWidget from './PublicKeyCryptographyWidget';
 
 // These constants should stay in sync with the levelbuilder options on
 // _public_key_cryptography.html.haml

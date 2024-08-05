@@ -1,5 +1,8 @@
 name 'gen-ai-humanities-L1E'
 title 'Crafting Prompts'
+display_name 'Poem Creation'
+bubble_choice_description 'Write a short poem about the changing seasons.'
+thumbnail_url 'https://images.code.org/5a6bfb82f775521ca06a8d813d5d8d30-image-1719504511535.png'
 
 markdown <<MARKDOWN
 ## Poem Creation

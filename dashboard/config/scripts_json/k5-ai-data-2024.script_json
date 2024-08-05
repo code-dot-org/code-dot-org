@@ -4,14 +4,16 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSC",
       "is_course": true,
       "is_migrated": true,
+      "tts": true,
       "version_year": "2024"
     },
     "new_name": null,
     "family_name": "k5-ai-data",
-    "serialized_at": "2024-06-21 20:48:35 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-07-12 14:27:04 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -58,7 +60,8 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "In this lesson, students will learn about how the inputs they give a machine learning model directly impact the predictions that the model makes. First, they will learn about the difference between random predictions and AI predictions, before training their own AI model to make predictions on whether an item is a fish or trash in the ocean. Finally, students will discuss the implications of biased training data by discussing hypothetical scenarios."
+        "overview": "In this lesson, students will learn about how the inputs they give a machine learning model directly impact the predictions that the model makes. First, they will learn about the difference between random predictions and AI predictions, before training their own AI model to make predictions on whether an item is a fish or trash in the ocean. Finally, students will discuss the implications of biased training data by discussing hypothetical scenarios.",
+        "preparation": "- Play through the levels on your own\n"
       },
       "seeding_key": {
         "lesson.key": "Training AI",
@@ -74,7 +77,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "In this lesson, students will begin thinking about how to classify real world objects by their features. They will build out two feature vectors (foods and emojis) in order to learn how AI makes decisions based on the probability of an outcome. Students will use “Dance Party: AI Edition” to see first-hand how AI can make tasks more efficient, but that it might come at the cost of customization. Students will consider what it means to collaborate and co-create with AI.\n"
+        "overview": "In this lesson, students will begin thinking about how to classify real world objects by their features. They will build out two feature vectors (foods and emojis) in order to learn how AI makes decisions based on the probability of an outcome. Students will use “Dance Party: AI Edition” to see first-hand how AI can make tasks more efficient, but that it might come at the cost of customization. Students will consider what it means to collaborate and co-create with AI.\n",
+        "preparation": "- Play through the levels on your own"
       },
       "seeding_key": {
         "lesson.key": "How AI Makes Decisions",
@@ -90,7 +94,8 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "In this lesson, students will evaluate sample student data. They will choose a hypothetical AI tool and consider what training data the tool will need to successfully make a decision. Then, students will write a letter to the school principal explaining their opinion on using AI tools. At the end of the lesson, students will reflect on what they have learned about AI over the course of the 4 lessons. \n\nStudents will understand that a predictive AI model is only as good as the information it was trained on. Therefore it is important to train the model on a large amount of data that is relevant to the task at hand. Also, students should recognize that there needs to be human oversight when it comes to working with AI to ensure that any mistakes made by AI get corrected. \n"
+        "overview": "In this lesson, students will evaluate sample student data. They will choose a hypothetical AI tool and consider what training data the tool will need to successfully make a decision. Then, students will write a letter to the school principal explaining their opinion on using AI tools. At the end of the lesson, students will reflect on what they have learned about AI over the course of the 4 lessons. \n\nStudents will understand that a predictive AI model is only as good as the information it was trained on. Therefore it is important to train the model on a large amount of data that is relevant to the task at hand. Also, students should recognize that there needs to be human oversight when it comes to working with AI to ensure that any mistakes made by AI get corrected. \n",
+        "preparation": "- Decide in advance if you want students to do the Warm Up and Main Activity on their devices or as an unplugged activity\n- If Unplugged, print out the <a href=\"https://docs.google.com/document/d/1xNf7mANfoF69gquysklUBtxjXN194VAJjU_KeW3lszg/template/preview\" target=\"_blank\">Student Survey</a> and \n<a href=\"https://docs.google.com/document/d/1rRpXQi3T4sl_lI4r5uw1h_btVQu_7M02NVoSjDXdMBk/template/preview\" target=\"_blank\">Activity Guide</a> \n in advance. Make sure students have a way to access the <a href=\"https://docs.google.com/spreadsheets/d/1t44C0ScGvgajfOEE6VE8sl7OQEJbgT1kvGDCnDgOPys/preview\" target=\"_blank\">Student Data</a>  resource.\n- If using devices, make sure you are able to access Student Survey results in your Teacher Dashboard."
       },
       "seeding_key": {
         "lesson.key": "Using AI Tools in School",
@@ -106,7 +111,8 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "In this lesson, students will create an artifact explaining their opinion on using AI tools. They have the option to write a letter to the principal, make a speech or song, make a poster, create a Sprite Lab project, or code a poem to share their opinion. At the end of the lesson, students will reflect on what they have learned about AI over the course of the module.\n"
+        "overview": "In this lesson, students will create an artifact explaining their opinion on using AI tools. They have the option to write a letter to the principal, make a speech or song, make a poster, create a Sprite Lab project, or code a poem to share their opinion. At the end of the lesson, students will reflect on what they have learned about AI over the course of the module.\n",
+        "preparation": "- Survey the different level types in the <a href=\"https://studio.code.org/s/k5-ai-data-2024/lessons/5/levels/1\" target=\"_blank\">choice level</a> to differentiate options for students\n- Prepare any materials students will need to write a letter, design a poster, or complete their projects"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -117,8 +123,21 @@
   ],
   "lesson_activities": [
     {
-      "key": "4f3190fd-914c-4bfe-9355-d1decad147fe",
+      "key": "eb53b309-0cfa-4fcb-a452-d0aeeb8cbd7d",
       "position": 1,
+      "properties": {
+        "name": "[Optional] Context Setting (10 minutes)"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "eb53b309-0cfa-4fcb-a452-d0aeeb8cbd7d",
+        "lesson.key": "Sorting Data",
+        "lesson_group.key": "",
+        "script.name": "k5-ai-data-2024"
+      }
+    },
+    {
+      "key": "4f3190fd-914c-4bfe-9355-d1decad147fe",
+      "position": 2,
       "properties": {
         "duration": 10,
         "name": "Warm Up"
@@ -132,7 +151,7 @@
     },
     {
       "key": "e2af077a-f2e2-4334-a4c1-4890ae8bbd98",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Main Activity"
@@ -146,13 +165,26 @@
     },
     {
       "key": "472b080e-7bb7-4811-b473-ddb1e60914ec",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "472b080e-7bb7-4811-b473-ddb1e60914ec",
+        "lesson.key": "Sorting Data",
+        "lesson_group.key": "",
+        "script.name": "k5-ai-data-2024"
+      }
+    },
+    {
+      "key": "ac90c5c8-68d2-4ce7-8b59-17628f997cd0",
+      "position": 5,
+      "properties": {
+        "name": "[Optional] Read Aloud Extensions (10 minutes)"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ac90c5c8-68d2-4ce7-8b59-17628f997cd0",
         "lesson.key": "Sorting Data",
         "lesson_group.key": "",
         "script.name": "k5-ai-data-2024"
@@ -341,26 +373,74 @@
   ],
   "activity_sections": [
     {
-      "key": "0a070631-4804-4b93-ba28-628d9c720425",
+      "key": "2095a381-fb69-4306-b621-d675bba8ee7f",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “What is AI?” slide\n\n**Do This:** As an optional general introduction to AI, show students this short video. \n\n**Goal:** Some important and relevant points to clarify before beginning this module include: AI stands for Artificial Intelligence. An AI machine is simply a computer that can make decisions after learning from data given to it by humans. A few real world examples of AI include: voice assistants like Siri or Alexa, self driving cars, and robots. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Discuss” slide\n\n**Discuss:**\n* _What is this AI robot doing?_\n* _How do you think it learned how to do this?_\n* _What do you think would happen if you put a red block on the table?_\n* _What are some things this robot probably can not do?_\n\n**Discussion Goal:** Students should notice that this robot has likely been trained how to sort between blue and green blocks. If it has not been taught how to sort red blocks it might incorrectly sort them into the blue or green items or leave it on the table. This robot likely cannot perform tasks unless they involve human-like motor skills. For example, this robot likely cannot generate text, speak, or see. This is a simple example of AI that directly relates to the activities students will be doing in upcoming lessons. \n"
       },
       "seeding_key": {
-        "activity_section.key": "0a070631-4804-4b93-ba28-628d9c720425",
+        "activity_section.key": "2095a381-fb69-4306-b621-d675bba8ee7f",
+        "lesson_activity.key": "eb53b309-0cfa-4fcb-a452-d0aeeb8cbd7d"
+      }
+    },
+    {
+      "key": "501b3755-f012-4bd6-939e-a424d01a70f6",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "In this lesson, students will be sorting items by different features. You may want to demonstrate how to do this by using physical manipulatives before students complete the levels online. You can use items that you have in your classroom or print and cut out the <a href=\"https://docs.google.com/document/d/1AmimDxv3luX-LyQFGnTWIEKdD370CzpYZtDQK4HyDIQ/template/preview\" target=\"_blank\">sorting manipulatives</a> that students will see in the following levels."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "501b3755-f012-4bd6-939e-a424d01a70f6",
+        "lesson_activity.key": "eb53b309-0cfa-4fcb-a452-d0aeeb8cbd7d"
+      }
+    },
+    {
+      "key": "b3dcdec6-5c4e-4d42-9b22-ecd685db25bf",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Say:**\n* **Data**: Information that we collect about the world.\n* **Sort**:  To put items into groups based on their features. \n* **Feature**: Something that an item is or has. A feature of a triangle is that it has 3 sides.\n* **Predict**: To make a guess based on patterns in the data.\n* **Training data**: Information that has been sorted, then given to a computer so it can make predictions\n",
+        "name": "Vocabulary "
+      },
+      "seeding_key": {
+        "activity_section.key": "b3dcdec6-5c4e-4d42-9b22-ecd685db25bf",
+        "lesson_activity.key": "4f3190fd-914c-4bfe-9355-d1decad147fe"
+      }
+    },
+    {
+      "key": "b7cc9136-ce5e-4950-b0f6-4b5958e83630",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Objectives” slide\n\n**Say:** By the end of this lesson, you will be able to:\n* _Explain different ways to sort the same set of items_\n* _Explain how having more data can lead to more accurate predictions_\n",
+        "name": "Lesson Objectives"
+      },
+      "seeding_key": {
+        "activity_section.key": "b7cc9136-ce5e-4950-b0f6-4b5958e83630",
+        "lesson_activity.key": "4f3190fd-914c-4bfe-9355-d1decad147fe"
+      }
+    },
+    {
+      "key": "9950b18e-d502-4d88-9c46-32b8e794c6fc",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Say:** _What features help us decide how to sort a group of objects?_\n",
+        "name": "Question of the Day"
+      },
+      "seeding_key": {
+        "activity_section.key": "9950b18e-d502-4d88-9c46-32b8e794c6fc",
         "lesson_activity.key": "4f3190fd-914c-4bfe-9355-d1decad147fe"
       }
     },
     {
       "key": "1e310eab-3841-4412-8f80-8df878488756",
-      "position": 2,
+      "position": 4,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/16adWPsJf9kGrCZv_cdaqT2-MUr1CiWX0U5E4lPzas-g/export/png?id=16adWPsJf9kGrCZv_cdaqT2-MUr1CiWX0U5E4lPzas-g&pageid=gca418c6afa_0_1070\"></td>\n    <td style=\"width: 75%\"> \n      <p><a href=\"https://docs.google.com/presentation/d/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/template/preview\" target=\"_blank\">Click here to access slides</a><br></p>\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/16adWPsJf9kGrCZv_cdaqT2-MUr1CiWX0U5E4lPzas-g/export/png?id=16adWPsJf9kGrCZv_cdaqT2-MUr1CiWX0U5E4lPzas-g&pageid=g2bd4a0733ea_0_730\"></td>\n    <td style=\"width: 75%\">\n      \n    </td>\n  </tr>\n\n</table>    \n    ",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Teaching Tip: Use the printable manipulatives to demonstrate sorting items** - In this lesson, students will be sorting items by different features. You may want to demonstrate how to do this by using physical manipulatives before students complete the levels online. You can use items that you have in your classroom or print and cut out the <a href=\"https://docs.google.com/document/d/1AmimDxv3luX-LyQFGnTWIEKdD370CzpYZtDQK4HyDIQ/template/preview\" target=\"_blank\">sorting manipulatives</a> that students will see in the following levels."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Warm Up” slide\n \n**Discuss:** Which of these doesn’t belong? Why? Explain what feature makes it different.\n\n**Do This:** Have students discuss different ways of grouping these items in groups of 3 and to explain their reasoning. Some examples are by: shape, color, photo orientation, and toppings. You can also get students thinking like a computer. Ask them “How would a computer tell the difference between these four items? What would it need to know about each pastry?”\n\n**Discussion Goal:** Students should understand that there are different ways of grouping and sorting the same items based on their features. Challenge them to come up with as many different ways of sorting these 4 items as they can.\n",
+        "name": "Warm Up "
       },
       "seeding_key": {
         "activity_section.key": "1e310eab-3841-4412-8f80-8df878488756",
@@ -368,21 +448,32 @@
       }
     },
     {
-      "key": "7ce1eeae-a426-4232-a6a1-5b7f8d48a6da",
-      "position": 3,
+      "key": "5f120584-c7b4-4ecb-96ee-4468f6cfcb0e",
+      "position": 1,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/16adWPsJf9kGrCZv_cdaqT2-MUr1CiWX0U5E4lPzas-g/export/png?id=16adWPsJf9kGrCZv_cdaqT2-MUr1CiWX0U5E4lPzas-g&pageid=g2df47e63e37_0_8\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Use the questions on the slide to guide a closer look at this robot sorting blocks by color. \n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should notice that this robot has likely been trained how to sort between blue and green blocks. If it has not been taught how to sort red blocks it might incorrectly sort them into the blue or green items or leave it on the table. This robot likely cannot perform tasks unless they involve human-like motor skills. For example, this robot likely cannot generate text, speak, or see. This is a simple example of AI that directly relates to the activities students will be doing in upcoming lessons.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/16adWPsJf9kGrCZv_cdaqT2-MUr1CiWX0U5E4lPzas-g/export/png?id=16adWPsJf9kGrCZv_cdaqT2-MUr1CiWX0U5E4lPzas-g&pageid=g2bd4a0733ea_0_736\"></td>\n    <td style=\"width: 75%\">\n      \n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/16adWPsJf9kGrCZv_cdaqT2-MUr1CiWX0U5E4lPzas-g/export/png?id=16adWPsJf9kGrCZv_cdaqT2-MUr1CiWX0U5E4lPzas-g&pageid=g2bd4a6cb5fd_0_387\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> Read aloud the vocabulary words written in the slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/16adWPsJf9kGrCZv_cdaqT2-MUr1CiWX0U5E4lPzas-g/export/png?id=16adWPsJf9kGrCZv_cdaqT2-MUr1CiWX0U5E4lPzas-g&pageid=g2def8beede0_3_135\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> Read aloud the vocabulary words written in the slide.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/16adWPsJf9kGrCZv_cdaqT2-MUr1CiWX0U5E4lPzas-g/export/png?id=16adWPsJf9kGrCZv_cdaqT2-MUr1CiWX0U5E4lPzas-g&pageid=g2bd4a0733ea_0_746\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read aloud the objectives written on the slide\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://docs.google.com/presentation/d/16adWPsJf9kGrCZv_cdaqT2-MUr1CiWX0U5E4lPzas-g/export/png?id=16adWPsJf9kGrCZv_cdaqT2-MUr1CiWX0U5E4lPzas-g&pageid=g2bd4a0733ea_0_750\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have a student read the Question of the Day aloud. Tell students they will revisit this question at the end of the lesson and should be prepared to answer it. \n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “How do computers learn?” slide\n\n**Do This:** Click through the diagram, step-by-step, reading each step aloud to students. \n\n**Say:** Today you are going to act as the computer. Someone has already sorted the items behind the scenes. You have to predict what the pattern is for each level and sort the items into their correct box.\n",
+        "duration": "3",
+        "name": "How Do Computers Learn "
       },
       "seeding_key": {
-        "activity_section.key": "7ce1eeae-a426-4232-a6a1-5b7f8d48a6da",
-        "lesson_activity.key": "4f3190fd-914c-4bfe-9355-d1decad147fe"
+        "activity_section.key": "5f120584-c7b4-4ecb-96ee-4468f6cfcb0e",
+        "lesson_activity.key": "e2af077a-f2e2-4334-a4c1-4890ae8bbd98"
       }
     },
     {
       "key": "f90b50d9-4db9-4535-a2bd-9b1f832fa3af",
-      "position": 1,
+      "position": 2,
       "properties": {
-        "progression_name": "How is it Sorted?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 1-6: Predict the Pattern” slide\n\n**Do This:** Transition students to their devices. Have them go to Level 1 and answer the multiple choice question. \n\n**Goal:** In Levels 1-6, students get to act as if they were AI, and make predictions about where the items should go. Levels 1 and 2 are examples of supervised machine learning. The inputs have been labeled, by color and by wings, which means that students will sort the items according to their label. Levels 3-5 are examples of reinforcement learning. The data is unlabeled and students have to classify it by receiving feedback on whether or not their prediction was correct. \n",
+        "duration": "25",
+        "name": "Sorting Data ",
+        "progression_name": "How is it Sorted?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Before allowing students on their devices, consider modeling this level for the class. If students have never encountered a multiple choice question on the Code.org platform before they may be unfamiliar with how it works. On Level 1, instruct students to read and answer the question before clicking Run. In the following levels, they will need to click Run in order to drag items around on screen.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "f90b50d9-4db9-4535-a2bd-9b1f832fa3af",
@@ -391,7 +482,7 @@
     },
     {
       "key": "dc798ba9-8a3f-4eac-9fea-9bf01b5fa054",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Sort It Out"
       },
@@ -402,7 +493,7 @@
     },
     {
       "key": "fa555caa-f9e2-400c-b7ab-7e812effc6d0",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Sorting Items"
       },
@@ -413,7 +504,7 @@
     },
     {
       "key": "4d4a5dd9-6bae-44b3-8137-b6a76d67fbe3",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Check for Understanding: Matching Level"
       },
@@ -424,8 +515,9 @@
     },
     {
       "key": "e5b0e9d8-a9af-4ebe-aea8-1ed630257a0d",
-      "position": 5,
+      "position": 6,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 7: Your Turn!” slide\n\n**Do This:** Once students have finished Levels 1-6, have them choose one of the sublevels in Level 7 Choice Level and pair them up with a partner. One student will sort the items in the level while the other partner has to guess the pattern. Then have them switch roles.\n",
         "progression_name": "Your Turn!"
       },
       "seeding_key": {
@@ -434,13 +526,15 @@
       }
     },
     {
-      "key": "5f120584-c7b4-4ecb-96ee-4468f6cfcb0e",
-      "position": 6,
+      "key": "3da4724a-4edf-454e-ae97-eba47fbccf99",
+      "position": 7,
       "properties": {
-        "description": " | Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide10.png) | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide11.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Have students list the different features they see on these items. Take time to think about what these items would look like if they were sorted vs. how they appear on screen.<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should notice that there are 3 different shapes (triangle, circle, square), 3 different border colors (red, green, black), and 3 different fill colors (yellow, white, red). They should explain that the items are not sorted because they are all grouped together, regardless of their features.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide12.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> For the first time through this activity, the teacher (or “Trainer”) will be given a set of sorted data. The students are the computers that are being trained on the model. At first, they will guess and check their categorizations. As they get more information, they will learn what the model is and how the items have been sorted.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide13.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Transition students to their devices. Have them go to level one and wait for their next instructions.<br><br>Note: This level starts out with all of the items together in the top of the screen. Students will click and drag items one at a time into the 3 boxes. They will click “Reset” when they finish and reuse this same level for Part Two.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide14.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Tell students to click the orange Run button under the playspace and look for the item on screen. Be careful to refer to this as an “item” and not a triangle to convey that a computer doesn’t understand shape. Have students store this item in one of the three boxes by clicking and dragging it into the box.<br><br>Students will act as the Computer “Guesser” trying to determine what box to put this in. Since students won’t have enough information yet to know where the item should go, they should take a guess.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide15.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Ask students “What features does this item have?” They should note that it is shaped like a triangle, it has a green border, and it has a yellow fill color. Ask students how they decided what box to put it in.<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students may say that they took a guess or that they looked at specific features of the item. Both ways reflect how a computer would also decide what box to put the item in.<br><br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide16.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students move the item into Box 1 if it is not already there.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide17.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students locate and move these three items into Boxes 1, 2, and 3 respectively.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide18.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students store this item in one of the three boxes by clicking and dragging it into the box.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide19.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Ask students where this item could be sorted into. Then ask what information they could receive that would help them to be more accurate in sorting additional items.<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> They should realize that these items could be sorted by shape, border color, or fill. Which means that this item could either belong in Box 2 (squares) or Box 3 (black outline or red fill). Having more data available, i.e. more sorted items on screen, would help them make a more accurate guess.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide20.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students move the item into Box 2 if it is not already there.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide21.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students locate and move the remaining items into Boxes 1, 2, and 3 respectively. Note that there are more shapes on screen than appear in students’ playspace. If you are using physical manipulatives, students may have more items to sort.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide22.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students sort this item in one of the three boxes by clicking and dragging it into the box.<br><br><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> “If you already sorted this item during the previous slide, you should know which Box this item belongs in.”<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide23.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Have students discuss how accurate they were in the first round. How many of them knew the item belonged in Box 1? How about in Round 2? And Round 3? How did having more data sorted in each round, help students make a more accurate prediction of where to put the item on screen.<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should understand that having more data available to them will make their predictions more accurate. In the first round, they had no information and had to make a guess. In the second round, they had slightly more information but were still making a guess. In the third round, they had already seen the item sorted into Box 3 and should not have had to guess at all.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide24.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Have students think about what would happen if they had to sort the three items on screen. Remind them that in the first round, they had no information to go off of and had to make a guess. Similarly, the pentagon, heart, and smiley face don’t appear in the training data so students would have to guess what box to put them in.<br><br>Then have students discuss how the items were sorted by shape.<br><br><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> If I had sorted these items by something other than shape, how would that have affected how you sorted your items?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should understand that they are acting as a computer responding to data inputs. Had you sorted your items by something other than shape, then they would have mirrored that. This leads into the next activity where students will get to redo the previous 3 rounds, but sorting their items by something other than triangle, circle, and square.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide25.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> For the second time through this activity, one student will “train” the model on data and their partner will guess how the data is sorted.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide26.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Group students in pairs. Have students click “Reset” on level one. Have one student act as the trainer and give them a minute to sort the items on their screen however they want. They should keep their screen hidden from their partner until the end of Round 3. Have the other partner act as the Guesser. This student will complete the same steps as in Round 1.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide27.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have the Guesser to click the orange Run button under the playspace and look for the item on screen. Have Guessers store this item in one of the three boxes by clicking and dragging it into the box. Since students won’t have enough information yet to know where the item should go, they should take a guess.<br><br>Have the Guesser show their screen to the Trainer and have the Trainer tell the Guesser if they are correct or if they need to move the item to a different box. The Trainer should keep their screen hidden from the Guesser.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide28.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Ask students “What features does this item have?” They should note that it is shaped like a triangle, it has a green border, and it has a yellow fill. Ask students how they decided what box to put it in.<br><br>Have the Trainer reflect on what information the Guesser currently has.<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students may say that they took a guess or that they looked at specific features of the item. Both ways reflect how a computer would also decide what box to put the item in. Trainers should understand that at this point in the activity, Guessers have no information about how to sort the items on screen.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide29.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students sort these 3 items into the correct boxes if it is not already there. The example on screen is taken from Part One of the activity. Note that Trainers might have sorted their items differently. If so, have the Trainer indicate to the Guesser where on their screen to drag these three items.<br><br><i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> <strong>Circulate:</strong> As students complete this activity, see if you can find different ways that Trainers have sorted their items. Call on these students to explain how they sorted their data at the end of Part Two.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide30.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students store this item in one of the three boxes by clicking and dragging it into the box.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide31.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Ask students if they can guess how these items are sorted. Then ask what information they could receive that would help them to be more accurate in sorting additional items.<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> They should note that these items could be sorted by shape, border color, or fill. Having more data available, i.e. more sorted items on screen, would help them make a more accurate guess.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide32.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students locate and move the remaining items into Boxes 1, 2, and 3 respectively. Note that there are more shapes on screen than appear in students’ playspace. If you are using physical manipulatives, students may have more items to sort.<br><br>The example on screen is taken from Part One of the activity. Note that Trainers might have sorted their items differently. If so, have the Trainer indicate to the Guesser where on their screen to drag these three items.<br><br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide33.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students sort this item in one of the three boxes by clicking and dragging it into the box.<br><br><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> “If you already sorted this item during the previous slide, you should know which Box this item belongs in.”<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide34.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Have students discuss how the Trainers chose to sort their data. Highlight a couple students who sorted their data in different ways.<br><br>Discuss if knowing that the items were sorted by shape in Part One helped in Part Two.<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should be able to explain how their Trainer sorted the data by Round 3. Students should understand that knowing one way to sort a set of items doesn’t provide them with any additional information when starting the process over. Each time they perform this activity, they are starting with a blank slate. Similarly, each time a new machine learning model is trained, we assume that it has no prior knowledge and we must provide it with appropriately tagged and sorted data.<br><br><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> If there is additional time and students want to do a Part Three of this activity. Have the Guesser and Trainer switch roles and have the new Trainer choose a new feature to sort the items by.<br><br></p>|"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Turn and Talk” slide\n\n**Discuss:** Ask students “Which level was the easiest for you to sort? Why?”\n\n**Discussion Goal:** Have students reflect on patterns they noticed in the data. They should be able to articulate that having more sorted data leads to better, more accurate predictions. A level in which items are not initially sorted becomes easier to sort as students begin to place items in the correct boxes.\n",
+        "duration": "2",
+        "name": "Turn and Talk "
       },
       "seeding_key": {
-        "activity_section.key": "5f120584-c7b4-4ecb-96ee-4468f6cfcb0e",
+        "activity_section.key": "3da4724a-4edf-454e-ae97-eba47fbccf99",
         "lesson_activity.key": "e2af077a-f2e2-4334-a4c1-4890ae8bbd98"
       }
     },
@@ -448,7 +542,14 @@
       "key": "9b7cec58-a4c3-474e-b55e-34d0d670c8e2",
       "position": 1,
       "properties": {
-        "description": "| Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide35.png) | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide36.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the day’s learning objectives and have students reflect on how they accomplished each of these during the activity.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide37.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Ask students “How do computers become more accurate at making predictions?”<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should be able to explain that computers are similar to humans in that they require lots of data to make accurate predictions. For example, it helps to have seen the exact item before in order to correctly classify it.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide38.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Show students the short (1 min) video in the link. Then, have students summarize how this tool initially was developed and what it is used for now. See if students can come up with examples of how a sorting algorithm could be used in the real world.<br><br>Some hypothetical examples: sorting between dogs and cats, laundry sorter that sorts pants/shirts/socks, sorting out M&#x26;Ms from the rest of the trail mix.<br><br>Some real world examples: self-driving cars detecting empty crosswalks vs. a pedestrian crossing, sorting by trash/compost/recycling, Roomba vacuums determining if there is an obstacle or not, detecting if an email/text/call is spam or not.<br><br>Here are some additional news examples:<br><br><a href=\"https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/\" target=\"_blank\">Food Waste Is a Serious Problem. AI Is Trying to Solve It</a><br><a href=\"https://seas.harvard.edu/news/2020/06/preventing-poaching\" target=\"_blank\">AI system used to create a patrol route for conservationists to help prevent poaching attacks</a><br><a href=\"https://mashable.com/video/ai-identify-genetic-disorders-photo/?\" target=\"_blank\">AI tech can identify genetic disorders from a person's face</a><br><a href=\"https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/\" target=\"_blank\">MIT AI tool can predict breast cancer up to 5 years early</a><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide39.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Here are two additional read aloud extensions to show students. While these books were not designed for teaching about machine learning or sorting algorithms, their content can be used to start a discussion about features that the different characters or buttons have. Encourage students to start noticing patterns around them in the classroom and beyond where items might be sorted by their features.<br></p>|\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Discuss:** What features help us decide how to sort a group of objects?\n\n**Discussion Goal:** Students should recognize that it depends on the items. For example, they can’t always group items by shape if all the items are the same shape. Students should first figure out what features these items have in common and then determine how to sort them into multiple groups by a shared feature. \n\nIf students need an example, choose one of the options in Lesson 1, Level 7. Ask students how they might sort the items on screen. What features do they notice the items have in common?\n",
+        "name": "Question of the Day",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you need to give students an assessment at the end of each lesson, use the Question of the Day as an assessment of student learning, e.g. an exit ticket.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "9b7cec58-a4c3-474e-b55e-34d0d670c8e2",
@@ -456,12 +557,34 @@
       }
     },
     {
-      "key": "dfa6dd67-5573-47c8-9e5a-34b79b6477d1",
+      "key": "07ddabf3-82fe-45d1-bb22-356d1f946f5e",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Discuss:** Here are two real world examples that use AI to sort data. Can you think of more?\n\n**Discussion Goal:** Discuss the two examples in this slide. [Optional: Show students the short (1 min) video about BakeryScan AI]. Then, see if students can come up with additional examples of how a sorting algorithm could be used in the real world. \n\nSome hypothetical examples: sorting between dogs and cats, laundry sorter that sorts pants/shirts/socks, sorting out M&Ms from the rest of the trail mix. \n\nSome real world examples: self-driving cars detecting empty crosswalks vs. a pedestrian crossing, sorting by trash/compost/recycling, Roomba vacuums determining if there is an obstacle or not, detecting if an email/text/call is spam or not. \n\n\nHere are some additional news examples:\n- **<a href=\"https://singularityhub.com/2019/11/03/food-waste-is-a-serious-problem-ai-is-trying-to-solve-it/\" target=\"_blank\">Food Waste Is a Serious Problem. AI Is Trying to Solve It</a>**\n- **<a href=\"https://seas.harvard.edu/news/2020/06/preventing-poaching\" target=\"_blank\">AI system used to create a patrol route for conservationists to help prevent poaching attacks</a>**\n- **<a href=\"https://mashable.com/video/ai-identify-genetic-disorders-photo/?\" target=\"_blank\">AI tech can identify genetic disorders from a person's face</a>**\n- **<a href=\"https://techcrunch.com/2019/06/26/mit-ai-tool-can-predict-breast-cancer-up-to-5-years-early-works-equally-well-for-white-and-black-patients/?\" target=\"_blank\">MIT AI tool can predict breast cancer up to 5 years early</a>**\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "07ddabf3-82fe-45d1-bb22-356d1f946f5e",
+        "lesson_activity.key": "472b080e-7bb7-4811-b473-ddb1e60914ec"
+      }
+    },
+    {
+      "key": "e22c08fb-2186-4500-8696-b8f024447a5a",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Read Aloud Extensions” slide\n\n**Do This:** Here are two additional read aloud extensions to show students. \n- **<a href=\"https://www.youtube.com/watch?v=veeGj6oJlpo\" target=\"_blank\">Are You My Mother?</a>** by P.D. Eastman\n- **<a href=\"https://www.youtube.com/watch?v=dh-VtSNK5Ag\" target=\"_blank\">Grandma’s Button Box</a>** by Linda Aber\n\nWhile these books were not designed for teaching about machine learning or sorting algorithms, their content can be used to start a discussion about features that the different characters or buttons have. Encourage students to start noticing patterns around them in the classroom and beyond where items might be sorted by their features.\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "e22c08fb-2186-4500-8696-b8f024447a5a",
+        "lesson_activity.key": "ac90c5c8-68d2-4ce7-8b59-17628f997cd0"
+      }
+    },
+    {
+      "key": "12c2d6c0-454e-458e-8975-8603c3ea0066",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "dfa6dd67-5573-47c8-9e5a-34b79b6477d1",
+        "activity_section.key": "12c2d6c0-454e-458e-8975-8603c3ea0066",
         "lesson_activity.key": "534dc3a5-a89a-4e13-b5b1-f944c842d9d5"
       }
     },
@@ -469,7 +592,8 @@
       "key": "bb2ea938-fae1-40f2-87d4-1fe57a4cffe8",
       "position": 1,
       "properties": {
-        "description": "| Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide40.png) | <p><a href=\"https://docs.google.com/presentation/d/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/template/preview\" target=\"_blank\">Click here to access slides</a><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide41.png) | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide42.png) | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide43.png) | <p><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> Read aloud the vocabulary words written on the slide.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide44.png) | <p><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> Read aloud the vocabulary words written on screen<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide45.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read aloud the objectives written on the screen<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide46.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have a student read the Question of the Day aloud<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide47.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Generate a selection of random books using the Random Books Generator <a href=\"https://www.coolgenerator.com/random-books-generator?type=children-fiction-books\" target=\"_blank\">site</a>. Show students the 6 books that were generated. Then, search for a student’s favorite book on Amazon and scroll down to look at Items to Explore. For example, check out More items to explore on <a href=\"https://www.amazon.com/Sideways-Stories-Wayside-School-Sachar/dp/0380698714/ref=sr_1_1?crid=1MFSW30O6NXYZ&dib=eyJ2IjoiMSJ9.L19XPoDqLiRpEU5hSrTCLiDJUBpmuBNrSowOH3ViyaN_lH6KUFwHbyP4InMN6VM28DasYiDuYvpOgAjCbBNrJwLMipeFT6xZNA8XkmCBl3kR7sJSbpuxC4EWLrzhQeARrwnaYzLUgpXa0n1Nd_h95_zRVVf9spDcytPN1f29N1uQ4UReal5Yv7R6TcQRszSq5lrE1KjqtDsQAjKBOTpRnM00WKh0_r2nPlwVdInfRcc._TJm0HrmRKg8pMg09NIz5GPS6CSJxqjin_xyl2pIKN0&dib_tag=se&keywords=sideways+stories+from+wayside+school&qid=1708564592&s=books&sprefix=sideways+st%2Cstripbooks%2C152&sr=1-1\" target=\"_blank\">this search</a> for Sideways Stories from Wayside School.<br><br><br><br><br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide48.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Have students discuss the similarities and differences between how books were generated on these two websites. They should reflect on which books they preferred and how their preferences might differ from people around them.<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should be able to explain that the Random Book Generator site generates books randomly from an unsorted/untagged list of books. If you were to keep clicking “Generate” it would pick 6 books randomly from the list each time. Amazon collects data associate with each book, for example it tracks what other books were bought by people who bought the book searched for. It also uses a recommendation algorithm to look for similar books (author, grade level, content) to the book being searched for that it then recommends.<br><br>Students will likely find books in the random book generator that are not at the right reading level for them or that they don’t find interesting. In comparison, Amazon might recommend more familiar or relevant books. They should understand that if their parent/friend/teacher/librarian clicks “Generate” on the random book generator they are equally likely to get the same book recommendations. However, if they type in their own favorite book into Amazon’s search, they will get more customized recommendations.<br></p>|\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “New Vocabulary” slide\n\n**Say:**\n* **Machine Learning** - How computers recognize patterns and make decisions\n* **Artificial Intelligence** - A way for computers to make decisions by themselves\n* **Accurate** - Another way to say “correct”\n* **Bias** - Favoring some things but not others, which can lead to an unfair decision\n",
+        "name": "Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "bb2ea938-fae1-40f2-87d4-1fe57a4cffe8",
@@ -477,9 +601,54 @@
       }
     },
     {
+      "key": "029be753-29da-4596-aa48-dd9ae1827eb8",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Objectives” slide\n\n**Say:** By the end of this lesson, you will be able to:\n* _Explain the difference between a random prediction and an AI prediction_\n* _Train a machine learning algorithm on chosen features_ \n* _Explain how training a model can look different based on someone’s opinion_",
+        "name": "Lesson Objectives"
+      },
+      "seeding_key": {
+        "activity_section.key": "029be753-29da-4596-aa48-dd9ae1827eb8",
+        "lesson_activity.key": "5ee336a8-8c24-4b60-9ebe-5681de16b9f5"
+      }
+    },
+    {
+      "key": "eb154232-5ab2-425b-a527-c7c9e8fe80d2",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Say:** _How do computers become more accurate at making predictions?_\n",
+        "name": "Question of the Day"
+      },
+      "seeding_key": {
+        "activity_section.key": "eb154232-5ab2-425b-a527-c7c9e8fe80d2",
+        "lesson_activity.key": "5ee336a8-8c24-4b60-9ebe-5681de16b9f5"
+      }
+    },
+    {
+      "key": "f2c37b0b-b17d-4299-bc09-5383489c033f",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Warm Up” slide\n \n**Do This:** Generate a selection of random books using the Random Books Generator site. Show students the 6 books that were generated, and explain that these recommendations are randomly selected from an existing list of books. Then, search for a student’s favorite book on Amazon and scroll down to look at Items to \"Explore.\" For example, check out \"More items\" to explore on this search for _Diary of a Wimpy Kid._ If students aren’t familiar with Amazon, ask them what types of videos are recommended for them when they finish watching a video on YouTube.\n\n**Discuss:** \n* _How did each site decide which books to feature?_\n* _Which set of books are you more likely to read?_\n* _How do you think these book recommendations might be different from ones given to your friend, parent, teacher, or librarian?_\n\n**Discussion Goal:** Students should be able to explain that the Random Book Generator site generates books randomly from an unsorted/untagged list of books. If you were to keep clicking “Generate,” it would pick 6 books randomly from the list each time. \n\n**Context:** Amazon collects data associated with each book. For example, it tracks what other books were bought by people who bought the book that the user searched for. It also uses a recommendation algorithm to look for similar books (author, grade level, content) to the book being searched for. Searching for _Diary of a Wimpy Kid_ on Amazon results in recommendations for other books in the Wimpy Kid series.\n\nStudents will likely find books in the random book generator that are not at the right reading level for them or that they don’t find interesting. In comparison, Amazon might recommend more familiar or relevant books. They should understand that if their parent/friend/teacher/librarian clicks “Generate” on the random book generator they are equally likely to get the same book recommendations. However, if their parent/friend/teacher/librarian were to type in their own favorite book into Amazon’s search, they would get more customized recommendations.\n",
+        "name": "Warm Up ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If you’re unable to access the Random Book Generator site or Amazon on your school’s WiFi network, show the following slide in place of navigating to those websites."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f2c37b0b-b17d-4299-bc09-5383489c033f",
+        "lesson_activity.key": "5ee336a8-8c24-4b60-9ebe-5681de16b9f5"
+      }
+    },
+    {
       "key": "6da31799-aded-4ea1-b1e3-68e320db0613",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Machine Learning” video \n\n**Discuss:** \n_What does the speaker mean when she says computers learn through “trial and error” and “lots of practice”?_\n\n**Discussion Goal:** Have students reflect on the previous lesson. Sometimes they made a guess about what box to put an item in and they were incorrect. They received feedback, then corrected their guess, and moved on to make a prediction about the next item. This is an example of “trial and error” or reinforcement learning. A machine learning model gets fed data, makes predictions, and then gets feedback based on how accurate those predictions were in order to make better predictions in the future.\n\n**Discuss:** \n_How do you think this Bot is able to tell the difference between cars and bikes?_ \n\n**Discussion Goal:** Students should be able to explain that this bot was trained on many different images which were tagged as either a bicycle or a car. Some features that it might be looking for: 2 or 4 wheels, how much of the background is visible behind the image, windows or no windows, handlebars or no handlebars.\n",
+        "duration": "20",
+        "name": "AI for Oceans",
         "progression_name": "Machine Learning Video"
       },
       "seeding_key": {
@@ -491,7 +660,14 @@
       "key": "192e94aa-81c1-4545-ac92-106352698434",
       "position": 2,
       "properties": {
-        "progression_name": "Train AI on Fish"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2” slide \n\n**Do this:** Transition students to their devices. Have them go to Level 2 and sort the items, training the algorithm to distinguish between fish and trash. Have students keep track of the counter in the top right corner to see how many images they have trained AI on. See if they can guess how many images AI will need in order to make accurate predictions.\n",
+        "progression_name": "Train AI on Fish",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Depending on how ready your students are for independent online activities and how comfortable they are reading the text on screen, you may want to complete this level as a class. Display this level for the whole class to see. As you train AI Bot, have the whole class give a thumbs up or thumbs down to indicate whether the model should recognize the item as a fish or not."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "192e94aa-81c1-4545-ac92-106352698434",
@@ -502,6 +678,7 @@
       "key": "3010ea81-3cf5-4b9f-9702-85006796b328",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Levels 3-4” slide \n\nHave students complete Levels 3 and 4 on their own devices. Level 3 introduces the idea that “AI only learns what we teach it.” Students should be aware that we want to train our model to recognize all creatures that belong in the water. In Level 4, students will retrain the model to recognize fish, otters, dolphins, and other sea creatures.\n",
         "progression_name": "Train AI on Sea Creatures"
       },
       "seeding_key": {
@@ -513,6 +690,7 @@
       "key": "4265bd49-223e-42d0-bb55-9d6a4b81ffd5",
       "position": 4,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 5” slide \n\nHave students complete Level 5 by choosing a word to teach A.I. Group students by the word they chose and have them compare their results. Students should start to notice that even though they chose the same word as a classmate, they may have labeled the fish training data differently and, as a result, their AI made different predictions about which fish to include.\n",
         "progression_name": "Teach AI a New Word"
       },
       "seeding_key": {
@@ -524,7 +702,9 @@
       "key": "212d70a6-53b5-43af-a2bd-2879ba725ced",
       "position": 5,
       "properties": {
-        "description": "| Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide49.png) | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide50.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Play the <a href=\"https://www.youtube.com/watch?v=mrJeRNOPBTU\"  target=\"_blank\">video</a> for students.<br><br>Pause at 0:31<br><br><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> What does the speaker mean when she says computers learn through “trial and error” and “lots of practice”?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Have students reflect on the previous lesson. Sometimes they made a guess about what box to put an item in and they were incorrect. The Trainer then corrected the guess and moved on to practice with the next item. This is an example of “trial and error” or supervised learning. A machine learning model gets fed data, makes predictions, and then gets feedback based on how accurate those predictions were in order to make better predictions in the future.<br><br>Pause at 1:06<br><br><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> How do you think this Bot is able to tell the difference between cars and bikes?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should be able to explain that this bot was trained on many different images which were tagged as either a bicycle or a car. Some features that it might be looking for: 2 or 4 wheels, how much of the background is visible behind the image, windows or no windows, handlebars or no handlebars.<br><br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide51.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Transition students to their devices. Have them go to <a href=\"http://studio.code.org/s/pilot-k5-ai/lessons/2/levels/2\"  target=\"_blank\">Level 2</a> and sort the items, training the algorithm to recognize fish.<br><br><details style=\"background-color: #FFA400; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px; color: white\"><summary style=\"font-size: 1.2em; font-weight: bold;\"><i class=\"fa fa-lightbulb-o \"></i> Teaching Tip: Before allowing students on their devices, consider modeling this level for the class</summary><br>Depending on how ready your students are for independent online activities and how comfortable they are reading the text on screen, you may want to complete this level as a class. Display this level for the whole class to see. As you train AI Bot, have the whole class give a thumbs up or thumbs down to indicate whether the model should recognize the item as a fish or not.</details></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide52.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students complete Levels 3 and 4 on their own devices. Level 3 introduces the idea that “AI only learns what we teach it”. Students should be aware that we want to train our model to recognize all creatures that belong in the water. In Level 3, students will retrain the model to recognize fish, otters, dolphins, and more.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide53.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students complete Level 5 by choosing a word to teach A.I. If multiple students choose the same word, have them compare their results. Students should start to notice that even though they chose the same word as a classmate, their training data might have differed.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide54.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Ask students to compare their results with another classmate who chose the same word as them. They may need to run through Level 4 one more time to retrain their model.<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should be able to explain that their training dataset reflects their own opinions. Students might have different opinions about which fish looks “Fast” or “Happy” because these words are subjective, meaning they could be different for each person.<br><br>If students were to label only blue fish as “angry” and only red fish as “awesome”, the computer would learn that biased pattern and might start labeling all blue fish as “angry” or all the red fish as “awesome” even when they're not. These inaccurate predictions, or bias, could cause issues in the future if the computer learns something untrue about a particular type of fish. Having more data and making sure it represents all types of fish can help solve this problem and avoid biased input data.<br></p>|"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Turn and Talk” slide\n\n**Discuss:** \n* _Why might your AI predictions look different from your classmate’s AI predictions even though you trained AI on the same word?_ \n* _What features were most important to you when you were labeling fish?_\n\n**Discussion Goal:** Students should be able to explain that their training dataset reflects their own opinions. Students might have different opinions about which fish looks “Fast” or “Happy” because these words are subjective, meaning they could be different for each person. Additionally, students might have chosen to look at certain features of a fish and not others, such as if it was showing its teeth or if its eyebrows were raised. AI makes predictions based on its training data, so students with different training datasets will likely notice different AI predictions.\n",
+        "duration": "5",
+        "name": "Turn and Talk "
       },
       "seeding_key": {
         "activity_section.key": "212d70a6-53b5-43af-a2bd-2879ba725ced",
@@ -532,10 +712,24 @@
       }
     },
     {
+      "key": "f4ede2c3-960e-4947-9f28-3a5e7e3c46c2",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Discuss:** \n* _What would happen if all the fish labeled 'Angry' were blue and all the fish labeled 'Awesome' were red?_ \n* _What issues might that cause in the long run?_\n\n**Discussion Goal:** If students were to label only blue fish as “angry” and only red fish as “awesome”, the computer would learn that biased pattern and might start labeling all blue fish as “angry” or all the red fish as “awesome” even when they're not. These inaccurate and unfair predictions, also called bias, could cause issues in the future if the computer learns something untrue about a particular type of fish. We can help solve this problem, by giving the computer training data collected from a variety of sources and making sure the data represents all types of fish.\n",
+        "duration": "5",
+        "name": "Reflect"
+      },
+      "seeding_key": {
+        "activity_section.key": "f4ede2c3-960e-4947-9f28-3a5e7e3c46c2",
+        "lesson_activity.key": "9e0e4a02-ff77-4170-b277-6d0004e2a472"
+      }
+    },
+    {
       "key": "c4606d17-396f-4cc6-9ac7-e1f53f4b8723",
       "position": 1,
       "properties": {
-        "description": "| Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide55.png) | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide56.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the day’s learning objectives and have students reflect on how they accomplished each of these during the activity.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide57.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Ask students “How can you prevent bias in your training data?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should understand that training data can be subjective, for example what an “angry” fish looks like. It helps to consider multiple opinions when tagging data that could be based on opinions. Also, students should consider multiple scenarios and not just the most common scenario in order to account for all possible outcomes. Students will get more practice doing this in the Wrap Up question.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide58.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> How does Attendance Bot make things easier (pros) and harder (cons), when might it get things wrong, and how can this be avoided?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Have students consider that this app may not always be more accurate than a teacher taking attendance because it can only see the class at one specific moment in time (cons). On the flip side, it might make a teacher’s life easier because it automates a task that a teacher would have to do by hand (pro). Students might also consider how the app can’t ask questions or see nuanced scenarios, such as a student present but not in their seat. Have students consider examples of when Attendance Bot might be wrong where a human would not be.<br><br>Examples of when Attendance Bot might mark a present student as absent:</p><ul><li>If the student is present but somewhere else in the classroom, e.g. at the teacher’s desk, passing out papers, in another seat</li><li>If the student is kneeling in their chair or bending down to pick something off the floor</li><li>If a student is in the bathroom</li><li>If the student is in a wheelchair or uses a mobility device that prevents them from being able to sit in the school chair</li></ul><p>The makers of Attendance Bot should consider the different scenarios above when training their AI. They might also want to have the Bot take attendance throughout the day to make sure that it is more accurate.<br></p>|\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Discuss:** _How do computers become more accurate at making predictions?_\n\n**Discussion Goal:** Students should understand that the more data they give AI, the more accurate its predictions are: \nThey should understand that tagging data can be subjective. For example, students might have different opinions about which fish look “silly”. Getting data from all the students in the class helps eliminate bias when using training data that might be based on opinions.\nStudents should consider multiple scenarios and not make any assumptions about what AI knows. For example, AI doesn’t know that otters and dolphins belong in the ocean if it was only trained on fish. Students will get more practice doing this in the Wrap Up question.\n",
+        "name": "Question of the Day"
       },
       "seeding_key": {
         "activity_section.key": "c4606d17-396f-4cc6-9ac7-e1f53f4b8723",
@@ -543,10 +737,23 @@
       }
     },
     {
+      "key": "210000aa-ee53-489f-9e31-1e2882b5c54a",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Wrap Up” slide\n\nPretend your school is using Attendance Bot, an AI device that scans the classroom and checks if a student is present or absent.\n\nIf a student is sitting in their seat at 9:00 am, they are marked Present. Otherwise, they are marked Absent and their teacher, principal, and parent is notified.\n* What are the pros and cons of using Attendance Bot?\n* What could cause Attendance Bot to mark a Present student as Absent?\n* What should the makers of Attendance Bot consider when training their AI?\n\n**Discussion Goal:** Have students consider that this AI device may not always be more accurate than a teacher taking attendance because it can only see the class at one specific moment in time (con). On the flip side, it might make a teacher’s life easier because it automates a task that a teacher would have to do by hand (pro). Students might also consider how the AI tool can’t ask questions or see nuanced scenarios, such as a student who is present but not in their seat. Have students consider examples of when Attendance Bot might be wrong where a human would not be.\n\nExamples of when Attendance Bot might mark a present student as absent:\n* If the student is present but somewhere else in the classroom, e.g. at the teacher’s desk, passing out papers, in another seat\n* If the student is kneeling in their chair or bending down to pick something off the floor\n* If a student is in the bathroom\n* If the student is in a wheelchair or uses a mobility device that prevents them from being able to sit in the school chair\n\nThe makers of Attendance Bot should consider the different scenarios above when training their AI. They might also want to have the Bot take attendance throughout the day to make sure that it is more accurate.\n",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "210000aa-ee53-489f-9e31-1e2882b5c54a",
+        "lesson_activity.key": "1c1fbef0-d23f-404e-9ce2-b610930e6697"
+      }
+    },
+    {
       "key": "a532ae2e-a5d3-419e-9eb5-fb10eab0f848",
       "position": 1,
       "properties": {
-        "description": "| Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide59.png) | <p><a href=\"https://docs.google.com/presentation/d/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/template/preview\" target=\"_blank\">Click here to access slides</a><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide60.png) | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide61.png) | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide62.png) | <p><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> Read aloud the vocabulary words written on screen<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide63.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read aloud the objectives written on the screen<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide64.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have a student read the Question of the Day aloud<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide65.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Have students discuss what possible pets an AI pet picker might think of given the adjectives “small” and “furry”. Have students give additional examples of words that could be used to describe a puppy but not a rat. For example: “playful”, “barks”, “furry tail”.<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Sometimes, the same prompt given to AI could lead to multiple different answers. Students should start to understand why AI might sometimes make inaccurate predictions given a limited set of information. You can connect this to the sorting activity that students did in the first lesson. Given the same set of items (inputs), a computer might sort them differently depending on if it was trained on shape, fill color, or border color. Because many AI chatbots out there today are trained on ALL the data on the internet, there might be conflicting opinions which could lead to conflicting outcomes, e.g. choosing a rat instead of a puppy or sorting by shape instead of by fill color.<br></p>|\n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “New Vocabulary” slide\n\n**Say:**\n- **Feature Vector** - Assigning a number value to certain features of an object so that a machine can find patterns between multiple objects in the data \n\n\n",
+        "name": "Vocabulary "
       },
       "seeding_key": {
         "activity_section.key": "a532ae2e-a5d3-419e-9eb5-fb10eab0f848",
@@ -554,10 +761,75 @@
       }
     },
     {
-      "key": "993ecbfa-21fb-4e5c-b33a-dab012840f0c",
+      "key": "3909488b-0b3e-4dfd-80ab-f3a8f64c24dc",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Objectives” slide\n\n**Say:** By the end of this lesson, you will be able to:\n* _Build out your own feature vector_\n* _Experience how AI can make tasks more efficient_ \n* _Explain why AI may make different predictions when asked the same question_",
+        "name": "Lesson Objectives"
+      },
+      "seeding_key": {
+        "activity_section.key": "3909488b-0b3e-4dfd-80ab-f3a8f64c24dc",
+        "lesson_activity.key": "2a0e31fd-f6bf-4051-9443-dface522a77f"
+      }
+    },
+    {
+      "key": "2e026f78-52c1-432b-bf06-bf26c07b6b2a",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Say:** Why might AI give different answers to the same question? For example, I asked AI what colors are in a sunset. It told me, “Orange and red”. When my classmate asked the AI, it said, “Purple and pink.”\n",
+        "name": "Question of the Day"
+      },
+      "seeding_key": {
+        "activity_section.key": "2e026f78-52c1-432b-bf06-bf26c07b6b2a",
+        "lesson_activity.key": "2a0e31fd-f6bf-4051-9443-dface522a77f"
+      }
+    },
+    {
+      "key": "c4e3ba79-3976-483c-853f-b5e4ff1bacb6",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Warm Up” slide\n \n**Do This:** Read the slide aloud.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Preparing the data for AI” slide\n\n**Do This:** Help students look at each animal’s number line. Ask if they can figure out how many employees were surveyed. Point out that each animal was rated by each employee on a scale from 1-10 in terms of how cute it is and its size. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “How do computers learn?” slide\n\n**Do This:** Click through the diagram, step-by-step, reading each step aloud to students. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “A.I.’s Training Data” slide\n\n**Say:** Where each animal has been placed on the graph represents the average, or “middle”, of all pet shop employees' opinions of that animal. We can see that all the pet store employees agreed that lizards and rats are small and horses are big. Most employees thought that puppies and rats were cute.\n\n**Discuss:** \n_Why did AI pet picker choose a rat_ \n_What else might AI pet picker choose if you asked for a house pet again?_\n\n**Discussion Goal:** AI pet picker chose a rat because it is in the “house pet” section of the chart along with the other “small” and “cute” animals. If asked again, AI pet picker might respond with “puppy” or even “lizard”. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “[Optional] Extension: Class Results for favorite pet” slide\n",
+        "name": "Warm Up ",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This slide can be used to reinforce the idea of how AI makes predictions using probabilities. For a given prompt, AI might have several options to select from. It will usually choose the most popular option (the option with the highest probability) but can occasionally choose options with lower probabilities. \n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c4e3ba79-3976-483c-853f-b5e4ff1bacb6",
+        "lesson_activity.key": "2a0e31fd-f6bf-4051-9443-dface522a77f"
+      }
+    },
+    {
+      "key": "7f8890c5-c4bf-4da2-976a-bba3d45a3009",
       "position": 1,
       "properties": {
-        "progression_name": "Food Feature Vector"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Dance Party: AI Edition - How AI Works” video\n\n**Discuss:** What information was this AI Bot trained on?\n\n**Discussion Goal:** AI is learning to recognize different emojis and associate words with them. It’s using information taken from the internet to determine what words fit with each emoji.\n\n**Discuss:** What 3 emojis did the user choose?\n\n**Discussion Goal:** This is a check for understanding to make sure students understand how they will select 3 different emojis for AI Bot.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “How does AI make associations?” slide\n\n**Say:** AI only knows the information that we give it. Before we use AI Bot in Dance Party, let’s teach AI by making some associations of our own:\n1. First you’ll make a feature vector of food by its **sweetness** and how much you **like to eat it**\n2. Then you’ll make a feature vector of emojis by how **colorful** and **happy** they are.\n",
+        "duration": "3",
+        "name": "Introduction to AI Dance Party ",
+        "progression_name": "Let AI Bot Choose Your Effects"
+      },
+      "seeding_key": {
+        "activity_section.key": "7f8890c5-c4bf-4da2-976a-bba3d45a3009",
+        "lesson_activity.key": "6cb4f638-b71d-46fb-bf91-7a4f0e73a7f7"
+      }
+    },
+    {
+      "key": "993ecbfa-21fb-4e5c-b33a-dab012840f0c",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1: Food Feature Vector” slide\n\n**Do this:** Do This: Transition students to their devices. Have them go to Level 1. Tell students to click the orange Run button under the playspace and choose a food item at the top of the screen. Have students store each food item in their feature vector by clicking and dragging it into the box. \n\nFirst, have students move the item along the horizontal “Sweetness” axis, from Not Sweet to Really Sweet. Then, have students move the item up the vertical “Like to eat” axis depending on how much they like the food, from Not for me! To Love it! \n",
+        "duration": "5",
+        "name": "Food Feature Vector",
+        "progression_name": "Food Feature Vector",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Depending on how ready your students are for plotting items on a feature vector, you may want to complete this level as a class first. Display this level for the whole class to see. If students disagree with where you’ve placed an item, remind them that this level is based on individual opinion and they should reflect their own opinions in their answers.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "993ecbfa-21fb-4e5c-b33a-dab012840f0c",
@@ -566,8 +838,11 @@
     },
     {
       "key": "af504c40-7ffd-40eb-97f2-b3ccaac066a0",
-      "position": 2,
+      "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 2” slide\n\n**Do this:** Have students complete Levels 2-5 independently. In Level 5, students have the option to re-watch the “Dance Party: AI Edition - How AI Works” video on their own.\n",
+        "duration": "10",
+        "name": "Independent Work Time ",
         "progression_name": "Check For Understanding: Food"
       },
       "seeding_key": {
@@ -577,7 +852,7 @@
     },
     {
       "key": "4a093f47-0048-417e-8347-30eb73d4ce9b",
-      "position": 3,
+      "position": 4,
       "properties": {
         "progression_name": "Emoji Feature Vector"
       },
@@ -588,7 +863,7 @@
     },
     {
       "key": "af4a6c35-0bbb-443e-b9ca-1271c0f3e1d0",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Check For Understanding: Emojis"
       },
@@ -599,8 +874,11 @@
     },
     {
       "key": "4f674c1b-eb38-45b6-a423-cccaae897f15",
-      "position": 5,
+      "position": 6,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Picking a Dance Party Stage” slide\n\n**Do This:** Read the slide aloud for students. This slide is designed to set up how AI can help us be more efficient with our tasks.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “AI is here to help!” slide\n\n**Say:** In Level 6, you will use a block to make AI Bot generate foreground and background effects for your dance. You choose 3 emojis and AI Bot will choose the effects that best match those emojis.  \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “How does AI choose effects?” slides\n\n**Do This:** Read the slides aloud. Have students choose the three palettes that they believe best represent the smiley face emoji or the words “happy”, “sunny”, and “bright”. Then compare their choices to AI’s choices on the next slide.\n\n\n\n",
+        "duration": "10",
+        "name": "AI Dance Party",
         "progression_name": "Video: How AI Works"
       },
       "seeding_key": {
@@ -609,21 +887,22 @@
       }
     },
     {
-      "key": "7f8890c5-c4bf-4da2-976a-bba3d45a3009",
-      "position": 6,
+      "key": "c444d512-5649-40ce-bfc6-a65beee9175b",
+      "position": 7,
       "properties": {
-        "progression_name": "Let AI Bot Choose Your Effects"
+        "description": "**Do This:** This is the same video that shows up in the slides at the beginning of the Main Activity. If you haven’t already, play the video for students or give students the option to watch it on their own.\n"
       },
       "seeding_key": {
-        "activity_section.key": "7f8890c5-c4bf-4da2-976a-bba3d45a3009",
+        "activity_section.key": "c444d512-5649-40ce-bfc6-a65beee9175b",
         "lesson_activity.key": "6cb4f638-b71d-46fb-bf91-7a4f0e73a7f7"
       }
     },
     {
       "key": "15cf491f-b460-4aa2-83d6-f9d3f1b0bccb",
-      "position": 7,
+      "position": 8,
       "properties": {
-        "description": "| Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide66.png) | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide67.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Transition students to their devices. Have them go to <a href=“studio.code.org/s/pilot-k5-ai/lessons/3/levels/1” target=\"_blank\">Level 1</a> and wait for next instructions.<br><br>Tell students to click the orange Run button under the playspace and choose a food item at the bottom of the screen. Have students store each food item in their feature vector by clicking and dragging it into the box.<br><br>First, have students move the item along the horizontal “Sweetness” axis, from Not Sweet to Really Sweet. Then, have students move the item up the vertical “Like to eat” axis depending on how much they like the food, from Not for me! To Love it!<br><br>If they disagree with where you’ve placed the item, remind them that this is based on individual opinion and they should reflect their own opinions in their answers.<br><br>You can use the following slide to demo for students how to do this.<br><br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide68.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> You can use this slide to demo for students how to click and drag items onto their feature vector.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide69.png) | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> You just made what’s called a feature vector! You assigned a numerical value to an item based on its features.<br><br>Now, we’re going to act as an AI snack picker. I’m looking for a food you like to eat that is sweet. Find the item that’s closest to a 10 on the “Sweetness” scale and a 10 on the “Like to eat” scale. In other words, go to the top right corner of your feature vector and choose one item from that corner. For example, Carla would choose “pineapple” because that is the food that she thinks is the sweetest and that she likes to eat the most.<br><br><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have each student identify one item in the top right corner of their feature vector .<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide70.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have students raise their hands to share what item they picked. If someone says an item that multiple people have chosen, have all of those students raise their hands and add the total count to the chart.<br><br>For example:</p><ul><li>Strawberries: 10</li><li>Pineapple: 5</li><li>Watermelon: 8</li><li>Banana: 2</li></ul><p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Have students determine which is the most popular result. For example, according to the tally above, strawberries is the most popular with 10 votes. Then, have students determine which is the second most popular result. In this example, watermelon with 8 votes is the second most popular.<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Since AI chooses based on probabilities, students should know that strawberries are most likely to be chosen by AI snack picker with watermelon being second most likely. Strawberries and watermelon will not always get chosen, but they will get chosen more often than pineapple or banana.</p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide71.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Play the video for students.<br><br>Pause at 0:20<br><br><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> What information was this AI Bot trained on?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> AI is learning to recognize different emojis and associate words with them. It’s using information taken from the internet to determine what words fit with each emoji.<br><br>Pause at 1:15<br><br><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Why does AI Bot sometimes make a prediction that’s different from one that you or I would make?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Make sure students understand that AI is trained on billions of data points representing many different opinions. Since not everyone agrees on for example, what colors are in a sunset, AI will make a prediction based on the probabilities of different responses. If most people say that a sunset contains the color orange, then AI will usually say “orange”. But since sometimes people see purple in a sunset, occasionally AI will say “purple”.<br><br>Have students reflect on the previous activity where they sorted food. Point out how each student arranged their items differently on the chart. What would happen if an AI snack picker was trained on ALL the charts in the class? It might not pick the snack that you or I picked, but it would certainly reflect someone’s opinion in the class.<br><br>Additionally, in our food example, AI snack picker was only trained to recognize food on a scale from Not sweet to Very sweet and Not for me! to Love it! In reality, an AI snack picker might be trained on many more features of an item such as: healthiness, cost, availability, size, salty, spicy, etc. Taking into consideration all of these factors will lead AI to sometimes make different predictions than you or I would make.<br><br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide72.png) | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> In this level, you will use a block to make AI Bot generate foreground and background effects for your dance. You choose 3 emojis and AI Bot will choose the effects that best match those emojis.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide73.png) | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> In this example, the user has chosen the effects: <i class=\"fa-solid fa-flag-checkered\"></i> (checkered flag), <i class=\"fa-solid fa-party-horn\"></i> (party), and <i class=\"fa-regular fa-gem\"></i> (gem). AI Bot has chosen the effects: confetti (foreground) and black and white diamonds (background). The image on the left represents how these effects look and the image on the right represents these effects in code blocks.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide74.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> This screen appears in the video after AI has generated the background effects. See if students can explain why the three emojis at the top <i class=\"fa-solid fa-flag-checkered\"></i> (checkered flag)<i class=\"fa-solid fa-party-horn\"></i> (party), and <i class=\"fa-regular fa-gem\"></i> (gem) led AI Bot to generate the background effects Black and White, Diamonds, and Confetti, as shown in code and in the bottom right effects square. Why did AI Bot not choose one of the other 4 options?<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Connect this screen back to the activity students did with sorting fruit and vegetables. AI Bot had multiple options that would have fit for “sweet” and “like to eat”. For example, it was more likely to pick strawberries and watermelon over pineapple and banana. Just as there could be multiple options for AI snack picker to choose from, AI Bot had different effects to choose from that were associated with the three emojis.<br><br>For example, if we were to run this again with the same emojis, we might find that instead of choosing “Black and White”, AI Bot could have chosen a “Grayscale” color scheme. Or instead of choosing “Confetti” for the foreground effect, it might have chosen “Starburst”. When clicking “Regenerate” students are able to see other choices that AI Bot has made given the same set of 3 emojis.<br><br>On the flip side, AI Bot did not choose the other four options because they were much less associated with <i class=\"fa-solid fa-flag-checkered\"></i> (checkered flag), <i class=\"fa-solid fa-party-horn\"></i> (party), and <i class=\"fa-regular fa-gem\"></i> (gem). Specifically, AI Bot passed over the “Rose Squiggles”, “Autumn Clouds”, “Sunrise Disco Ball”, and “Sky Frosted Grid” background effects in favor of “Black and White Diamonds”. Note that in most of the other 4 options AI still chose the “Confetti” foreground effect. This effect is closely associated with the <i class=\"fa-solid fa-party-horn\"></i> (party) emoji, as evidenced by the thicker pink bar in the different association bar charts.<br></p>|\n| ![](https://docs.google.com/presentation/d/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/export/png?id=1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI&pageid=g26c0b787507_2_35) | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say: </strong>Here’s what a feature vector might look like for the effects that AI Bot chose. Notice that the X-axis shows how strongly associated the effects are with the gem emoji and the Y-axis shows how strongly associated the effects are with the checkered flag. We chose those emojis as the two features of this chart because those factored most heavily into AI Bot’s decision compared to the party emoji, as shown by the bar graph in the previous slide.<br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide75.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Open <a href=“studio.code.org/s/pilot-k5-ai/lessons/3/levels/2” target=\"_blank\">Level 2</a> on your screen and display it to the whole class. Model how Level 2 works for students:<br></p><ol><li>Choose one of the songs from the level and click Play.</li><li>Survey students to see what emojis they would choose based on the song.</li><li>Point out how choosing an emoji to match the mood of the song is subjective and students can have different answers. Based on which 3 emojis are chosen, AI Bot might recommend different background effects for the same song.</li><li>Click “Generate” and see what effects get chosen. Explain that if students don’t like the effects, they can Regenerate effects using the same 3 emojis, Use the code and update the dropdown fields themselves, or Start over with 3 new emojis.<br></li></ol>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide76.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Once AI Bot has generated its effects, model the explanation screen for students:</p><ol><li>After AI has generated effects, and on the screen that says “AI thinks this is the best effect for your emojis and generated the code!” click the bar graph icon in the top right corner</li><li>Note for students how AI rejected 4 possible combinations of effects that weren’t a good match before choosing the fifth set of effects.</li></ol><p>Then transition students back to their devices. Have them go to Level 2 and try out the AI Bot on their own.<br></p>|"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 6: Coding with AI” slide \n\n**Do This:** Open Level 6 on your screen and display it to the whole class. Model how the AI block works:\nChoose one of the songs from the level and click Play.\nSurvey students to see what emojis they would choose based on the song.\nPoint out how choosing an emoji to match the mood of the song is subjective and students can have different answers. Based on which 3 emojis are chosen, AI Bot might recommend different background effects for the same song.\n\nClick “Generate” and see what effects get chosen. Explain that if students don’t like the effects, they can Regenerate effects using the same 3 emojis, Use the code and update the dropdown fields themselves, or Start over with 3 new emojis.\n",
+        "progression_name": "Coding with AI "
       },
       "seeding_key": {
         "activity_section.key": "15cf491f-b460-4aa2-83d6-f9d3f1b0bccb",
@@ -631,10 +910,36 @@
       }
     },
     {
+      "key": "d490e436-e812-4238-a92a-11f108a8853a",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Do you prefer selecting the effects or having AI select the effects for your dancer’s stage? Why?” slide\n\n**Discussion Goal:** Have students reflect on the pros and cons of each option. By selecting the effects themselves, they can create any combination they want but it’s often tedious to click each option from the dropdown menu. Having AI select the effects based on 3 emojis is easier, but may not yield the exact results that students want. One potential solution is for students to work with AI by having it create a first draft and having students edit the results. In this case, students can have AI generate the effects and then they can click “Use code” and make any adjustments. \n",
+        "duration": "2",
+        "name": "Reflect "
+      },
+      "seeding_key": {
+        "activity_section.key": "d490e436-e812-4238-a92a-11f108a8853a",
+        "lesson_activity.key": "6cb4f638-b71d-46fb-bf91-7a4f0e73a7f7"
+      }
+    },
+    {
+      "key": "4c7077a6-111a-4d15-9f55-604b96742f21",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Additional Context” slides\nThese slides are optional. They provide a more detailed explanation of how AI Bot makes its decisions. You may want to encourage students to click on the bar graph to see how AI Bot chose effects based on their emoji selection.\n\n",
+        "name": "[Optional] Additional Context Slides"
+      },
+      "seeding_key": {
+        "activity_section.key": "4c7077a6-111a-4d15-9f55-604b96742f21",
+        "lesson_activity.key": "6cb4f638-b71d-46fb-bf91-7a4f0e73a7f7"
+      }
+    },
+    {
       "key": "664d8640-527d-4493-89aa-ceedddc8172f",
       "position": 1,
       "properties": {
-        "description": "| Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide77.png) | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide78.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the day’s learning objectives and have students reflect on how they accomplished each of these during the activity.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide79.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Ask students “What happens if AI makes a different prediction than a human would?”<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Have students understand that there can be large and small effects of AI making a different or even incorrect prediction. In the previous lesson, if AI couldn’t correctly predict that a starfish belonged in the ocean, it would assume that it was trash that needed to be removed. In the real world, this could cause large negative environmental impacts.<br><br>In this lesson, if AI Bot chose different background effects we had several options: we could stick with the effects that AI Bot chose, generate new effects with the same emojis, choose new emojis, or simply alter the code that AI Bot produced. This lesson teaches us that while AI can automate tasks to make them more efficient for us (so we don’t have to choose from 11,000 background effects combinations for example), we should still work collaboratively with AI to produce the best result.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide80.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Have students discuss what the effect would be to replace one or more of these jobs with an AI robot.<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should be able to give examples of what might happen if this AI got something wrong: misdiagnosis, misinformation, taking a wrong turn, etc. The takeaway here should be that AI can help us automate tasks so we can do them faster, e.g. pick out background effects, but AI needs oversight. There should be a partnership between humans and AI so that we are not entrusting AI to make the final decision or to operate unchecked.<br></p>|"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Discuss:** _Why might AI give different answers to the same question?_ \n\n_For example, I asked AI what colors are in a sunset. It told me, “Orange and red”. When my classmate asked the AI it said, “Purple and pink”._\n\n**Discussion Goal:** Make sure students understand that AI is trained on billions of data points representing many different opinions. Since not everyone agrees on for example, what colors are in a sunset, AI will make a prediction based on the probabilities of different responses. If most people say that a sunset contains the colors orange and red, then AI will usually say “orange and red”. But since sometimes people see purple and pink in a sunset, AI will occasionally say “purple and pink.” Just as asking different people what colors are present in a sunset will yield different answers, asking AI the same question may result in different responses.\n\n\nHave students reflect on the Warm Up activity in which AI Pet Picker chose a rat, when we were expecting it to choose a puppy. Point out how each Pet Shop employee had different opinions about how cute each animal is and how big it is. Sometimes conflicting opinions in the training data can lead to conflicting AI predictions. If AI Pet Picker was trained on the opinions of everyone in the world, it might not pick the pet that you or I had in mind, but it would certainly reflect someone’s opinion from the training data.\n\nAdditionally, you can point out that there can be small and large effects of AI making a different or even incorrect prediction. In the previous lesson, if AI couldn’t correctly predict that a starfish belonged in the ocean, it would assume that it was trash which needed to be removed. In the real world, this could cause large negative environmental impacts.\n\n",
+        "name": "Question of the Day"
       },
       "seeding_key": {
         "activity_section.key": "664d8640-527d-4493-89aa-ceedddc8172f",
@@ -642,10 +947,23 @@
       }
     },
     {
+      "key": "d1fa7c06-a927-42bb-8949-8c00660164ce",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Wrap Up” slide\n\n**Discuss:** _Choose one of the following jobs:_ Veterinarian, Teacher, Bus Driver, Artist. \n\n_Now, imagine if the person doing this job were replaced by an AI robot._\n\n- _Would you want AI to replace a human in this job? Why or why not?_\n- _What would happen if this AI got something wrong?_\n\n**Discussion Goal:** Students should be able to give examples of what might happen if this AI got something wrong: misdiagnosis, misinformation, taking a wrong turn, etc. The takeaway here should be that AI can help us automate tasks so we can do them faster, e.g. pick out background effects, but AI needs oversight. There should be a partnership between humans and AI so that we are not entrusting AI to make the final decision or to operate unchecked. \n\n",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "d1fa7c06-a927-42bb-8949-8c00660164ce",
+        "lesson_activity.key": "ebb33112-211e-43e3-a7c7-99de939ef4d2"
+      }
+    },
+    {
       "key": "c0a70206-48fa-4b08-8edd-2512e6ceb87d",
       "position": 1,
       "properties": {
-        "description": "| Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide81.png) | <p><a href=\"https://docs.google.com/presentation/d/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/template/preview\" target=\"_blank\">Click here to access slides</a><br></p>|\n| ![](https://docs.google.com/presentation/d/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/export/png?id=1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI&pageid=g266b1b821cc_0_65) | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide83.png) | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide84.png) | <p><i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> Read aloud the vocabulary words written on screen<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide85.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Read aloud the objectives written on the screen<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide86.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Have a student read the Question of the Day aloud<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide87.png) | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> We’re going to collect some data of our own. In a minute, you will go around the room and collect information about some of your classmates using the <a href=\"https://docs.google.com/document/d/1xNf7mANfoF69gquysklUBtxjXN194VAJjU_KeW3lszg/template/preview\" target=\"_blank\">Student Survey handout</a>. Have each student you survey write their first name and fill out the rest of the row with their favorite ice cream flavor, game, pizza topping, and color. After 5 minutes, we’ll come back together and answer some questions about the data we collected.<br><br><details style=\"background-color: #FFA400; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px; color: white\"><summary style=\"font-size: 1.2em; font-weight: bold;\"><i class=\"fa fa-lightbulb-o \"></i> Teaching Tip: If you’re short on time, skip over this slide and move to the next slide</summary><br>If you would prefer to skip the portion of the warm up where students survey each other and collect data, skip to the next slide and use the sample data to answer the warm up questions.</details></p>|\n| ![](https://docs.google.com/presentation/d/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/export/png?id=1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI&pageid=g2c23f5a1b6f_1_1) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Ask students to look at the dataset and answer the four questions on the slide.<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should understand that each row represents a different student. Each column represents a piece of information about that student, such as their name or favorite ice cream flavor. Some decisions that could be made based on this dataset: what games to put out at indoor recess, what flavors of ice cream or pizza to buy for a class party, what colors to use for classroom decorations or class folders.This data shouldn’t be used to make a decision on behalf of the entire school because it’s biased towards one classroom. Students should keep in mind any bias that could result from a dataset having limited or subjective data.<br><br><br></p>|"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Say:**\n* **Artificial Intelligence** - A way for computers to make decisions by themselves\n* **Data** - Information that we collect about the world.\n* **Training** - Teaching a computer to do tasks by showing it many examples. \n* **Training data** - Information that has been sorted, then given to a computer so it can make predictions\n",
+        "name": "Vocabulary"
       },
       "seeding_key": {
         "activity_section.key": "c0a70206-48fa-4b08-8edd-2512e6ceb87d",
@@ -653,9 +971,66 @@
       }
     },
     {
+      "key": "e32327b9-f252-4389-b979-0180337557b7",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Objectives” slide\n\n**Say:** By the end of this lesson, you will be able to:\n* _Read a sample student dataset and notice patterns_\n* _Explain what data makes sense to give an AI tool that is making a decision in school_\n",
+        "name": "Lesson Objectives"
+      },
+      "seeding_key": {
+        "activity_section.key": "e32327b9-f252-4389-b979-0180337557b7",
+        "lesson_activity.key": "fa8029b5-974a-4961-8366-252a80ed2de4"
+      }
+    },
+    {
+      "key": "8c1623fe-9301-4577-a5f4-b409165745eb",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Say:** _How can you prevent bias in your training data?_\n",
+        "name": "Question of the Day"
+      },
+      "seeding_key": {
+        "activity_section.key": "8c1623fe-9301-4577-a5f4-b409165745eb",
+        "lesson_activity.key": "fa8029b5-974a-4961-8366-252a80ed2de4"
+      }
+    },
+    {
+      "key": "ad67c9eb-9be8-4870-ba70-ac0e42ed36d7",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Warm Up” slide\n",
+        "duration": "10",
+        "name": "Warm Up",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The following slides present two options for completing this warm up. You can either have students answer the questions independently in Level 1 (Online Version) or survey each other in person and collect the data on paper (Paper Version). For both options, you have the choice to use sample student data if you don’t have enough time for students to provide or collect data on their own. \n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "ad67c9eb-9be8-4870-ba70-ac0e42ed36d7",
+        "lesson_activity.key": "fa8029b5-974a-4961-8366-252a80ed2de4"
+      }
+    },
+    {
+      "key": "8b315a72-e49d-404c-80d4-404ddae9031f",
+      "position": 5,
+      "properties": {
+        "description": "**Say:** We’re going to collect some data of our own. In a minute, you will go to Level 1 and answer the four multiple choice questions about your favorite ice cream flavor, pizza topping, game, and color. If your favorite answer doesn’t appear, choose E. Something Else. Then we’ll look at the class data altogether.\n\n**Discuss:** Project your class responses on the board. Ask students to look at the data and answer the following four questions:\n1. What does each row represent?\n2. What information is captured in each column?\n3. What decisions could you make using this dataset?\n4. Would you be able to make a decision for the whole school using just this data?\n\n**Discussion Goal:** Students should understand that each row represents the results of one survey question. Each column represents how many students chose that response (represented as a percentage of the entire class). Some decisions that could be made based on this dataset: what flavors of ice cream or pizza to buy for a class party, whether recess should be inside or outside, what colors to use for classroom decorations or class folders. This data shouldn’t be used to make a decision on behalf of the entire school because it’s biased towards the opinions of one classroom. Students should keep in mind any bias that could result from a dataset having limited or subjective data.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "8b315a72-e49d-404c-80d4-404ddae9031f",
+        "lesson_activity.key": "fa8029b5-974a-4961-8366-252a80ed2de4"
+      }
+    },
+    {
       "key": "54ef70f1-7caa-4500-8fcb-10faa747ec75",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “How do computers learn?” slide\n\n**Do This:** Click through the diagram, step-by-step, reading each step aloud to students. \n\n**Say:**  Today you are going to act as the human training the computer. It is up to you to decide what information to give the computer (and what information to leave out) so that it can make the best predictions possible.\n",
+        "duration": "3",
+        "name": "How Do Computers Learn ",
         "progression_name": "Student Survey"
       },
       "seeding_key": {
@@ -667,7 +1042,16 @@
       "key": "77e408bb-19be-47f8-9f0f-000093decae7",
       "position": 2,
       "properties": {
-        "progression_name": "Using AI Tools in School (Online Version)"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Using AI Tools in School” slide\n",
+        "duration": "27",
+        "name": "Using AI Tools In School ",
+        "progression_name": "Using AI Tools in School (Online Version)",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The following slides present two options for completing this student activity. You can either have students answer the questions independently in Level 2 (Online Version) or go to the next slide **<a href=\"https://docs.google.com/document/d/1rRpXQi3T4sl_lI4r5uw1h_btVQu_7M02NVoSjDXdMBk/template/preview\" target=\"_blank\">Using AI Tools in School</a>** handout (Paper Version). "
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "77e408bb-19be-47f8-9f0f-000093decae7",
@@ -678,7 +1062,13 @@
       "key": "e8989af7-5ced-409b-959c-93c9b6659f75",
       "position": 3,
       "properties": {
-        "description": "| Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide89.png) | <p><br></p>|\n| ![](https://docs.google.com/presentation/d/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/export/png?id=1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI&pageid=g2bd4a6cb5fd_0_637) | <p><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong>  Now it's your turn to investigate ways AI can help us in the real world. At the end of this activity, you'll write a letter or create a poster to the principal telling them your own opinion on whether or not AI tools should be used to help make a decision in school.<br><br>First, you’re going to look at some more student data. You’ll think about what data will be most important to include to help AI make a decision, what data you would add to the dataset, and what data you would remove or ignore. Then you’ll think about how to tell if the AI tool was successful at making a decision.<br><br>Once you fill out your chart, you’ll create an artifact explaining to the principal about whether or not AI tools should be used to make decisions in school.<br><br><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Hand out one <a href=\"https://docs.google.com/document/d/1geTnFqtszszfH7Q4_8ZORTAxvh38b-HuLpV1ezy7mgI/template/preview\" target=\"_blank\">Using AI Tools in School</a> guide to each student.<br><br><details style=\"background-color: #FFA400; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px; color: white\"><summary style=\"font-size: 1.2em; font-weight: bold;\"><i class=\"fa fa-lightbulb-o \"></i> Teaching Tip: Before students start filling out their handout, consider previewing the dataset for the class</summary><br>The dataset can be found in the link in <a href=\"http://studio.code.org/s/pilot-k5-ai/lessons/4/levels/1\" target=\"_blank\">Level 1</a>. Preview the link for students <a href=\"https://docs.google.com/spreadsheets/d/1t44C0ScGvgajfOEE6VE8sl7OQEJbgT1kvGDCnDgOPys/preview\" target=\"_blank\">here</a> and point out the different rows and columns.</details></p>|\n"
+        "description": "**Say:** Now it's your turn to investigate ways AI can help us in the real world. You’ll look at a few examples of AI tools that can be used in school and decide which one you want to use.\n\nOnce you’ve picked your AI tool, you’re going to look at some student data. You’ll think about what data will be most important to give to AI, what data you don’t have that you would add to the dataset, and what data you would remove from the dataset. \n\n**Do This:** Direct students to get started on Level 2.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You can preview the link for students **<a href=\"https://docs.google.com/spreadsheets/d/1t44C0ScGvgajfOEE6VE8sl7OQEJbgT1kvGDCnDgOPys/preview\" target=\"_blank\">here</a>** and point out the different rows and columns. The dataset can also be found on the last page of the Using AI Tools in School paper handout. \n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "e8989af7-5ced-409b-959c-93c9b6659f75",
@@ -689,7 +1079,8 @@
       "key": "164d2ac2-29d8-4a9c-b057-5545575e2cc6",
       "position": 1,
       "properties": {
-        "description": "| Slide                                                                                                        | Lesson Guide                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |\n| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide91.png) | <p><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide92.png) | <p><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Review the day’s learning objectives and have students reflect on how they accomplished each of these during the activity.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide93.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Ask students “How do we decide if a task should use AI or not?”<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Have students think about the different examples that they learned about in the previous lessons: BakeryScan and machine learning sorting algorithms, Amazon’s recommendation algorithm, AI for Oceans, AI Bot to pick background effects, and hypothetical scenarios involving AI tools. They should understand that there are pros and cons to using AI tools and the decision is not “one size fits all”. Even in scenarios where they determine it makes sense to use AI, there should still be human involvement in making sure the outcome is fair and correct.<br><br></p>|\n| ![](https://dancodedotorg.github.io/testing-slides/1T-GelzEMIvpJqIjddzcwGuNeXV3SKhYRggsK-rHYcNI/slide94.png) | <p><i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> Have students discuss the ideas they came up with today and reflect on something they learned about AI in the previous lessons.<br><br><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> Students should share what they have learned and any questions they still have about AI. This is an ongoing learning opportunity for students to continue learning and developing opinions about AI. Encourage students to keep coming up with questions they have about how AI works and where it shows up around them.<br></p>|"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Discuss:** _How can you prevent bias in your training data?_\n\n**Discussion Goal:** Students should understand that training data can be subjective, for example what an “angry” fish looks like or someone’s favorite ice cream flavor. It is important to consider what data should and should not be collected. When having AI decide where to seat people in the cafeteria, including what languages they speak is very helpful. On the flip side, certain data which may seem irrelevant, such as the number of detentions a student received, and could even lead AI to make a biased decision. If this is the case, this data should likely be left out of the training dataset and/or AI’s predictions should be evaluated by a human.\n",
+        "name": "Question of the Day"
       },
       "seeding_key": {
         "activity_section.key": "164d2ac2-29d8-4a9c-b057-5545575e2cc6",
@@ -697,9 +1088,24 @@
       }
     },
     {
+      "key": "a0a0e569-8a61-4a29-9c4e-ab39f80eb4c6",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Wrap Up” slide\n\n**Discuss:** _AI Activity Picker recommends activities for kids but it keeps recommending only beach activities and other outdoor activities._ \n* _Why is that a problem?_ \n* _What data can we collect to solve the problem?_\n\n**Discussion Goal:** Students should understand that this AI shows a bias towards beach and outdoor activities due to the data it was provided. It is a problem because kids might be looking for indoor activities and / or not live near the beach. In order to make this AI tool useful for all kids, we should train it on more data that includes indoor activities and activities that aren’t location-specific.\n",
+        "duration": "5",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "a0a0e569-8a61-4a29-9c4e-ab39f80eb4c6",
+        "lesson_activity.key": "15f6b38b-b9e6-46e7-9772-a7cfbf9a9040"
+      }
+    },
+    {
       "key": "f2cf38ee-c39d-4b54-99dd-af0f903d85af",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n**Say:**\n* **Artificial Intelligence** - A way for computers to make decisions by themselves\n* **Data** - Information that we collect about the world.\n* **Training** - Teaching a computer to do tasks by showing it many examples. \n* **Bias** - When a decision favors some things and not others\n",
+        "name": "Vocabulary "
       },
       "seeding_key": {
         "activity_section.key": "f2cf38ee-c39d-4b54-99dd-af0f903d85af",
@@ -707,9 +1113,48 @@
       }
     },
     {
+      "key": "396438d7-550a-4452-8380-82b4cdefaed3",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Lesson Objectives” slide\n\n**Say:** By the end of this lesson, you will be able to:\n* _Consider the pros and cons of AI tools_\n* _Explain your opinion on AI tools to your classmates and teachers_\n",
+        "name": "Lesson Objectives"
+      },
+      "seeding_key": {
+        "activity_section.key": "396438d7-550a-4452-8380-82b4cdefaed3",
+        "lesson_activity.key": "fc50107a-4aff-4bf9-b20d-064f79e39b6a"
+      }
+    },
+    {
+      "key": "f115d03f-67e8-42fe-b78c-8a95daffd69e",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Say:** _How do we decide if a task should use AI or not?_\n",
+        "name": "Question of the Day"
+      },
+      "seeding_key": {
+        "activity_section.key": "f115d03f-67e8-42fe-b78c-8a95daffd69e",
+        "lesson_activity.key": "fc50107a-4aff-4bf9-b20d-064f79e39b6a"
+      }
+    },
+    {
+      "key": "26777bc2-73aa-40c3-95ba-897d82b623d6",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Warm Up” slide\n\n**Discuss:** Consider one of the AI tools from the last lesson that chose:\n* Seats in the cafeteria\n* Teams for gym class\n* Student of the Month \n\n_What are the pros and cons of using AI tools to make these decisions, instead of letting a human decide?_\n\n**Discussion Goal:** Have students think about the different AI tools from the previous lesson. While using AI could save time, it may lead to outcomes that are undesirable, such as placing students who don’t get along next to each other in the cafeteria. Also, AI might make decisions that a human wouldn’t make. Depending on the situation this may or may not be a positive outcome.\n",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "26777bc2-73aa-40c3-95ba-897d82b623d6",
+        "lesson_activity.key": "fc50107a-4aff-4bf9-b20d-064f79e39b6a"
+      }
+    },
+    {
       "key": "3b801ef9-b730-4043-9b20-8211f99aca43",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Level 1: Share Your Voice” slide\n\n**Say:** Today, you'll get a chance to share your opinion on AI by writing a letter to your principal, creating a poster, or expressing yourself in another way. You’ll share whether or not you think AI tools should be used to help make a decision in school. Take a minute to decide which of these options you would like to choose.\n\nThe number of chili peppers next to the option shows how difficult it is. So make sure you choose an option that you’ll be able to finish in class today. When you’re ready, go to Level 1 and get started.\n\n**Do This:** Have students choose from one of the following options:\n* Write a letter to the principal\n* Make a speech, song, or rap \n* Design a poster\n* Create a project in Sprite Lab \n* Code a poem\n",
+        "duration": "30",
+        "name": "Share Your Voice ",
         "progression_name": "Choice Level: Share Your Voice"
       },
       "seeding_key": {
@@ -721,9 +1166,35 @@
       "key": "9b5ac733-bd2f-47b4-a11f-d1bb4775e8ff",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflection” slide\n",
+        "name": "Reflection"
       },
       "seeding_key": {
         "activity_section.key": "9b5ac733-bd2f-47b4-a11f-d1bb4775e8ff",
+        "lesson_activity.key": "a36872a2-4558-450a-8f85-8f7352487168"
+      }
+    },
+    {
+      "key": "a800b543-6290-4fd9-997a-b6311f9648d7",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Question of the Day” slide\n\n**Discuss:** _How do we decide if a task should use AI or not?_\n\n**Discussion Goal:** Have students think about the different examples that they learned about in the previous lessons: BakeryScan and machine learning sorting algorithms, Amazon’s recommendation algorithm, AI for Oceans, AI Bot to pick background effects, and hypothetical scenarios involving AI tools. They should understand that there are pros and cons to using AI tools and the decision is not “one size fits all”. Even in scenarios where they determine it makes sense to use AI, there should still be human involvement in making sure the outcome is fair and correct.\n",
+        "name": "Question of the Day"
+      },
+      "seeding_key": {
+        "activity_section.key": "a800b543-6290-4fd9-997a-b6311f9648d7",
+        "lesson_activity.key": "a36872a2-4558-450a-8f85-8f7352487168"
+      }
+    },
+    {
+      "key": "e47549eb-b04b-461a-8b2a-3e24446ac5e3",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Glows, Grows, Want-to-Knows” slide\n\n**Discuss:** Have students discuss their letters, posters, and songs they made today and have them reflect on something they learned about AI in the previous lessons.\n\n**Discussion Goal:** Students should share what they have learned and any questions they still have about AI. This is an ongoing opportunity for students to continue learning and developing opinions about AI. Encourage students to keep coming up with questions they have about how AI works and where it shows up around them.\n\n",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "e47549eb-b04b-461a-8b2a-3e24446ac5e3",
         "lesson_activity.key": "a36872a2-4558-450a-8f85-8f7352487168"
       }
     }
@@ -736,14 +1207,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "sorting_items_prediction"
+          "sorting_items_wings"
         ],
         "progression": "How is it Sorted?"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "sorting_items_prediction"
+          "sorting_items_wings"
         ],
         "lesson.key": "Sorting Data",
         "lesson_group.key": "",
@@ -751,7 +1222,7 @@
         "activity_section.key": "f90b50d9-4db9-4535-a2bd-9b1f832fa3af"
       },
       "level_keys": [
-        "sorting_items_prediction"
+        "sorting_items_wings"
       ]
     },
     {
@@ -761,14 +1232,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "sorting_items_wings"
+          "sorting_items_prediction"
         ],
         "progression": "Sort It Out"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "sorting_items_wings"
+          "sorting_items_prediction"
         ],
         "lesson.key": "Sorting Data",
         "lesson_group.key": "",
@@ -776,7 +1247,7 @@
         "activity_section.key": "dc798ba9-8a3f-4eac-9fea-9bf01b5fa054"
       },
       "level_keys": [
-        "sorting_items_wings"
+        "sorting_items_prediction"
       ]
     },
     {
@@ -911,14 +1382,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "Oceans_Video_Machine_Learning_2024"
+          "Oceans_Video_Elementary_Machine_Learning_2024"
         ],
         "progression": "Machine Learning Video"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Oceans_Video_Machine_Learning_2024"
+          "Oceans_Video_Elementary_Machine_Learning_2024"
         ],
         "lesson.key": "Training AI",
         "lesson_group.key": "",
@@ -926,7 +1397,7 @@
         "activity_section.key": "6da31799-aded-4ea1-b1e3-68e320db0613"
       },
       "level_keys": [
-        "Oceans_Video_Machine_Learning_2024"
+        "Oceans_Video_Elementary_Machine_Learning_2024"
       ]
     },
     {
@@ -1163,7 +1634,7 @@
         "level_keys": [
           "dance_ai_customize_effect_2024"
         ],
-        "progression": "Let AI Bot Choose Your Effects"
+        "progression": "Coding with AI "
       },
       "bonus": false,
       "seeding_key": {
@@ -1173,7 +1644,7 @@
         "lesson.key": "How AI Makes Decisions",
         "lesson_group.key": "",
         "script.name": "k5-ai-data-2024",
-        "activity_section.key": "7f8890c5-c4bf-4da2-976a-bba3d45a3009"
+        "activity_section.key": "15cf491f-b460-4aa2-83d6-f9d3f1b0bccb"
       },
       "level_keys": [
         "dance_ai_customize_effect_2024"
@@ -1258,9 +1729,9 @@
   "levels_script_levels": [
     {
       "seeding_key": {
-        "level.key": "sorting_items_prediction",
+        "level.key": "sorting_items_wings",
         "script_level.level_keys": [
-          "sorting_items_prediction"
+          "sorting_items_wings"
         ],
         "lesson.key": "Sorting Data",
         "lesson_group.key": "",
@@ -1270,9 +1741,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "sorting_items_wings",
+        "level.key": "sorting_items_prediction",
         "script_level.level_keys": [
-          "sorting_items_wings"
+          "sorting_items_prediction"
         ],
         "lesson.key": "Sorting Data",
         "lesson_group.key": "",
@@ -1342,9 +1813,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Oceans_Video_Machine_Learning_2024",
+        "level.key": "Oceans_Video_Elementary_Machine_Learning_2024",
         "script_level.level_keys": [
-          "Oceans_Video_Machine_Learning_2024"
+          "Oceans_Video_Elementary_Machine_Learning_2024"
         ],
         "lesson.key": "Training AI",
         "lesson_group.key": "",
@@ -1469,7 +1940,7 @@
         "lesson.key": "How AI Makes Decisions",
         "lesson_group.key": "",
         "script.name": "k5-ai-data-2024",
-        "activity_section.key": "7f8890c5-c4bf-4da2-976a-bba3d45a3009"
+        "activity_section.key": "15cf491f-b460-4aa2-83d6-f9d3f1b0bccb"
       }
     },
     {
@@ -1550,6 +2021,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/k5-ai-data-2024/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/k5-ai-data-2024/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/k5-ai-data-2024/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "How AI Makes Predictions",
       "url": "https://docs.google.com/presentation/d/16adWPsJf9kGrCZv_cdaqT2-MUr1CiWX0U5E4lPzas-g/template/preview",
       "key": "elementary_ai_module_slides",
@@ -1573,6 +2077,19 @@
       },
       "seeding_key": {
         "resource.key": "how_ai_makes_predictions"
+      }
+    },
+    {
+      "name": "Share Your Voice - AI Poster",
+      "url": "https://docs.google.com/document/d/14WO5ZNTMFANYcDCcYtXzoH7b8V5tbKIt5oMHj5iaTFg/template/preview",
+      "key": "share_your_voice_-_ai_poster",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/14WO5ZNTMFANYcDCcYtXzoH7b8V5tbKIt5oMHj5iaTFg/export/pdf",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "share_your_voice_-_ai_poster"
       }
     },
     {
@@ -1662,10 +2179,33 @@
         "lesson.key": "lesson-5",
         "resource.key": "how_ai_makes_predictions"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "share_your_voice_-_ai_poster"
+      }
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "k5-ai-data-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "k5-ai-data-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "k5-ai-data-2024"
+      }
+    }
   ],
   "scripts_student_resources": [
 
@@ -1959,6 +2499,16 @@
       }
     },
     {
+      "key": "27471934-7039-4a79-a7a2-e0dd32201da5",
+      "properties": {
+        "description": "Explain their opinion on AI tools to their classmates and teachers"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "27471934-7039-4a79-a7a2-e0dd32201da5"
+      }
+    },
+    {
       "key": "2b43a21f-7a55-4ef6-a6e5-8871bc25b2ca",
       "properties": {
         "description": "Train a machine learning algorithm on chosen features"
@@ -1996,6 +2546,16 @@
       "seeding_key": {
         "lesson.key": "Using AI Tools in School",
         "objective.key": "553b998f-2771-443e-a638-b303b1c9505f"
+      }
+    },
+    {
+      "key": "5bdbc03c-eaf8-4a77-8702-e4d71a19e711",
+      "properties": {
+        "description": "Consider the pros and cons of AI tools"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "5bdbc03c-eaf8-4a77-8702-e4d71a19e711"
       }
     },
     {

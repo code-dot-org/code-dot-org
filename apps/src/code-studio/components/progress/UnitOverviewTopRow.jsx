@@ -1,25 +1,27 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import Button from '@cdo/apps/templates/Button';
-import DropdownButton from '@cdo/apps/templates/DropdownButton';
-import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
-import Assigned from '@cdo/apps/templates/Assigned';
-import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+
+import BulkLessonVisibilityToggle from '@cdo/apps/code-studio/components/progress/BulkLessonVisibilityToggle';
 import ResourcesDropdown from '@cdo/apps/code-studio/components/progress/ResourcesDropdown';
 import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCalendarButton';
-import BulkLessonVisibilityToggle from '@cdo/apps/code-studio/components/progress/BulkLessonVisibilityToggle';
-import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import FontAwesome from '../../../templates/FontAwesome';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import Assigned from '@cdo/apps/templates/Assigned';
+import DropdownButton from '@cdo/apps/templates/DropdownButton';
+import ProgressDetailToggle from '@cdo/apps/templates/progress/ProgressDetailToggle';
+import SectionAssigner from '@cdo/apps/templates/teacherDashboard/SectionAssigner';
+import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import i18n from '@cdo/locale';
+
+import FontAwesome from '../../../templates/FontAwesome';
+import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
 
 export const NOT_STARTED = 'NOT_STARTED';
 export const IN_PROGRESS = 'IN_PROGRESS';

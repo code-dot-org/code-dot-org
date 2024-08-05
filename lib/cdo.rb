@@ -83,10 +83,6 @@ module Cdo
       canonical_hostname('hourofcode.com')
     end
 
-    def advocacy_hostname
-      canonical_hostname('advocacy.code.org')
-    end
-
     def codeprojects_hostname
       canonical_hostname('codeprojects.org')
     end
@@ -104,7 +100,7 @@ module Cdo
     def site_host(domain)
       host = canonical_hostname(domain)
       if (rack_env?(:development) && !https_development) ||
-          (ENV['CI'] && host.include?('localhost'))
+          (ENV.fetch('CI', nil) && host.include?('localhost'))
         port = ['studio.code.org'].include?(domain) ? dashboard_port : pegasus_port
         host += ":#{port}"
       end
@@ -130,10 +126,6 @@ module Cdo
 
     def code_org_url(path = '', scheme = '')
       site_url('code.org', path, scheme)
-    end
-
-    def advocacy_url(path = '', scheme = '')
-      site_url('advocacy.code.org', path, scheme)
     end
 
     def hourofcode_url(path = '', scheme = '')
@@ -287,7 +279,7 @@ module Cdo
     # Is this code running in a webserver as part of our Continuous Integration
     # builds?
     def ci_webserver?
-      running_web_application? && ENV['CI']
+      running_web_application? && ENV.fetch('CI', nil)
     end
 
     def shared_image_url(path)

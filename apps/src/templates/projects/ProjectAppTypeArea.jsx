@@ -4,11 +4,11 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
 
 import styleConstants from '../../styleConstants';
 import color from '../../util/color';
-import Button from '../Button';
 
 import ProjectCardRow from './ProjectCardRow';
 import {
@@ -86,7 +86,6 @@ class ProjectAppTypeArea extends React.Component {
         projects={filteredList}
         galleryType={this.props.galleryType}
         isDetailView={this.props.isDetailView}
-        showReportAbuseHeader
       />
     );
   }

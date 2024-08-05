@@ -1,28 +1,19 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {connect} from 'react-redux';
+
+import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
+import StudentTable from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
 import TeacherPanelContainer from '@cdo/apps/code-studio/components/progress/teacherPanel/TeacherPanelContainer';
-import SectionSelector from '../SectionSelector';
+import {
+  getStudentsForSection,
+  queryLockStatus,
+} from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
 import ViewAsToggle from '@cdo/apps/code-studio/components/progress/ViewAsToggle';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
   fullyLockedLessonMapping,
   setSectionLockStatus,
 } from '@cdo/apps/code-studio/lessonLockRedux';
-import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
-import {
-  pageTypes,
-  setStudentsForCurrentSection,
-  setSections,
-  selectSection,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import StudentTable from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
-import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import SelectedStudentInfo from '@cdo/apps/code-studio/components/progress/teacherPanel/SelectedStudentInfo';
-import Button from '@cdo/apps/templates/Button';
-import i18n from '@cdo/locale';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
   queryUserProgress,
   setViewAsUserId,
@@ -31,15 +22,28 @@ import {
   getCurrentLevel,
   hasLockableLessons,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
-import {reload} from '@cdo/apps/utils';
+import {loadLevelsWithProgress} from '@cdo/apps/code-studio/teacherPanelRedux';
 import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
-import {studentShape, levelWithProgress} from './types';
-import {
-  getStudentsForSection,
-  queryLockStatus,
-} from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
-import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
+import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
+import {
+  pageTypes,
+  setStudentsForCurrentSection,
+  setSections,
+  selectSection,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
+import {reload} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import SectionSelector from '../SectionSelector';
+
+import {studentShape, levelWithProgress} from './types';
+
 import moduleStyles from './teacher-panel.module.scss';
 
 const TEACHER_PANEL = 'TeacherPanel';

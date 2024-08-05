@@ -1,7 +1,9 @@
-import React from 'react';
-import {APP_WIDTH, APP_HEIGHT} from '../../../../applab/constants';
-import {UnconnectedMakerStatusOverlay} from './MakerStatusOverlay';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
+
+import {APP_WIDTH, APP_HEIGHT} from '../../../../applab/constants';
+
+import {UnconnectedMakerStatusOverlay} from './MakerStatusOverlay';
 
 const commonProps = {
   width: APP_WIDTH,

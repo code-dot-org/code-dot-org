@@ -1,0 +1,55 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2024-06-28T19:54:48.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Career Advice\r\n\r\nHave you ever wondered what it would be like to have a certain career but you have no idea what it’s really like? Wouldn’t it be great to talk to someone who had that job?\r\n\r\n### Do This\r\n\r\nAdd a system prompt that lets you talk to someone who works at a specific place or has a certain career. Use techniques you've learned in this unit to make the chatbot as authentic and engaging as possible.",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.5",
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "editable",
+        "systemPrompt": "editable",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+
+      ]
+    },
+    "project_template_level_name": "gen-ai-customizing-prompt-templateC_2024",
+    "display_name": "Career Advice",
+    "bubble_choice_description": "Have you ever wondered what it would be like to have a certain career but you have no idea what it’s really like? Wouldn’t it be great to talk to someone who had that job?",
+    "thumbnail_url": "https://images.code.org/492b225e33c502ecf2d95cdc87323fde-Lesson 3 - Level 7C - Career Advice.png",
+    "name_suffix": "_2024"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:54:48.385+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-synthesis-L10C\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-synthesis-L10C\"}]"
+}]]></config>
+</Aichat>

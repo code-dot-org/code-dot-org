@@ -1,12 +1,10 @@
-# This test has been very flaky recently. Temporarily disabling on mobile while we investigate in LABS-867
-@no_mobile
+@no_phone
 @as_student
 Feature: App Lab Versions
 
-@no_phone
 Scenario: Script Level Versions
   Given I am on "http://studio.code.org/s/allthethings/lessons/18/levels/1?noautoplay=true"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I ensure droplet is in block mode
   And I switch to text mode
   And I add code "// comment 1" to ace editor
@@ -15,7 +13,7 @@ Scenario: Script Level Versions
 
   # reloading here creates a previous version containing only comment 1
   And I reload the page
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   # this particular level is set to always start in block mode
   And I ensure droplet is in block mode
   And I switch to text mode
@@ -29,22 +27,22 @@ Scenario: Script Level Versions
   And element "button.btn-info" is visible
   And I make all links open in the current tab
   And I click selector "button.btn-info:eq(0)" to load a new page
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then ace editor code is equal to "// comment 1"
   And element "#workspace-header-span" contains text "View only"
 
   When I am on "http://studio.code.org/s/allthethings/lessons/18/levels/1?noautoplay=true"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then ace editor code is equal to "// comment 2// comment 1"
 
 Scenario: Project Load and Reload
   Given I am on "http://studio.code.org/projects/applab/new"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   # The initial load results in save only because this is a new project.
   And I wait for initial project save to complete
 
   When I reload the page
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And I press "versions-header"
   And I wait until element "div:contains(Latest Version)" is visible
   And I save the text from ".versionRow:nth-child(1) p"
@@ -76,7 +74,7 @@ Scenario: Project Load and Reload
 @no_mobile
 Scenario: Project Version Checkpoints
   Given I am on "http://studio.code.org/projects/applab/new"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   # The initial load results in save only because this is a new project.
   And I wait for initial project save to complete
   And I ensure droplet is in block mode
@@ -108,7 +106,7 @@ Scenario: Project Version Checkpoints
 Scenario: Project page refreshes when other client adds a newer version
   Given I am on "http://studio.code.org/projects/applab/new"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And element ".project_updated_at" eventually contains text "Saved"
   And I ensure droplet is in block mode
   And I switch to text mode
@@ -121,7 +119,7 @@ Scenario: Project page refreshes when other client adds a newer version
   When I go to a new tab
   And I am on "http://studio.code.org/projects/applab/"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And element ".project_updated_at" eventually contains text "Saved"
   Then ace editor code is equal to "// comment X"
 
@@ -138,14 +136,14 @@ Scenario: Project page refreshes when other client adds a newer version
   # written a newer version (Y) than tab 0's last known version (X).
   When I add code "// comment Z" to ace editor
   And I click selector "#runButton" to load a new page
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then ace editor code is equal to "// comment Y// comment X"
 
 @no_mobile
 Scenario: Project page refreshes when other client replaces current version
   Given I am on "http://studio.code.org/projects/applab/new"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And element ".project_updated_at" eventually contains text "Saved"
   And I ensure droplet is in block mode
   And I switch to text mode
@@ -160,7 +158,7 @@ Scenario: Project page refreshes when other client replaces current version
   When I go to a new tab
   And I am on "http://studio.code.org/projects/applab/"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   And element ".project_updated_at" eventually contains text "Saved"
   And ace editor code is equal to "// Alpha"
 
@@ -181,5 +179,5 @@ Scenario: Project page refreshes when other client replaces current version
   And ace editor code is equal to "// Alpha"
   And I add code "// Charlie" to ace editor
   And I click selector "#runButton" to load a new page
-  And I wait for the page to fully load
+  And I wait for the lab page to fully load
   Then ace editor code is equal to "// Alpha// Bravo"
