@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react';
+import {flushSync} from 'react-dom';
 
 const baseFetchState = {
   loading: false,
@@ -78,11 +79,13 @@ export const useFetch = (url, options = EMPTY_OPTIONS) => {
 
         const data = await response.json();
         if (!canceled) {
-          setFetchState({
-            ...baseFetchState,
-            data,
-            response,
-            status: response.status,
+          flushSync(() => {
+            setFetchState({
+              ...baseFetchState,
+              data,
+              response,
+              status: response.status,
+            });
           });
         }
       } catch (e) {
