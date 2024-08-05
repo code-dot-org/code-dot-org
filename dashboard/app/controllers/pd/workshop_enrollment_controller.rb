@@ -38,6 +38,8 @@ class Pd::WorkshopEnrollmentController < ApplicationController
         }.to_json
       }
       render :logged_out
+    elsif current_user.user_type == 'student'
+      render :students_cannot_enroll
     elsif missing_application?
       render :missing_application
     elsif current_user.teacher? && current_user.email.blank?
