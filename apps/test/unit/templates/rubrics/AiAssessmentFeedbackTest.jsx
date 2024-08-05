@@ -4,6 +4,8 @@ import React from 'react';
 import AiAssessmentFeedback from '@cdo/apps/templates/rubrics/AiAssessmentFeedback';
 import AiAssessmentFeedbackContext, {
   NO_FEEDBACK,
+  THUMBS_DOWN,
+  THUMBS_UP,
 } from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
 
 describe('AiAssessmentFeedback', () => {
@@ -18,8 +20,6 @@ describe('AiAssessmentFeedback', () => {
     aiFeedbackId: 1,
   };
 
-  const thumbsupval = 1;
-  const thumbsdownval = 0;
   const mockSetAiFeedback = () => {};
 
   it('displays no checkboxes when neither thumb is selected', () => {
@@ -36,7 +36,7 @@ describe('AiAssessmentFeedback', () => {
   it('displays no checkboxes when thumbs up is selected', () => {
     const wrapper = mount(
       <AiAssessmentFeedbackContext.Provider
-        value={{aiFeedback: thumbsupval, setAiFeedback: mockSetAiFeedback}}
+        value={{aiFeedback: THUMBS_UP, setAiFeedback: mockSetAiFeedback}}
       >
         <AiAssessmentFeedback {...props} />
       </AiAssessmentFeedbackContext.Provider>
@@ -48,7 +48,7 @@ describe('AiAssessmentFeedback', () => {
   it('displays checkboxes when thumbs down is selected', () => {
     const wrapper = mount(
       <AiAssessmentFeedbackContext.Provider
-        value={{aiFeedback: thumbsdownval, setAiFeedback: mockSetAiFeedback}}
+        value={{aiFeedback: THUMBS_DOWN, setAiFeedback: mockSetAiFeedback}}
       >
         <AiAssessmentFeedback {...props} />
       </AiAssessmentFeedbackContext.Provider>
@@ -59,7 +59,7 @@ describe('AiAssessmentFeedback', () => {
   it('displays textbox when checkbox labelled "other" is selected', () => {
     const wrapper = mount(
       <AiAssessmentFeedbackContext.Provider
-        value={{aiFeedback: thumbsdownval, setAiFeedback: mockSetAiFeedback}}
+        value={{aiFeedback: THUMBS_DOWN, setAiFeedback: mockSetAiFeedback}}
       >
         <AiAssessmentFeedback {...props} />
       </AiAssessmentFeedbackContext.Provider>

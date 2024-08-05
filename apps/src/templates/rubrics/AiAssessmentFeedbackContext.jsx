@@ -1,6 +1,8 @@
 import {createContext} from 'react';
 
 export const NO_FEEDBACK = -1;
+export const THUMBS_DOWN = 0;
+export const THUMBS_UP = 1;
 
 const AiAssessmentFeedbackContext = createContext(NO_FEEDBACK);
 

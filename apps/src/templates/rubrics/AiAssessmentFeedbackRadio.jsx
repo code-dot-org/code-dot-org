@@ -6,14 +6,15 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
-import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
+import AiAssessmentFeedbackContext, {
+  THUMBS_UP,
+  THUMBS_DOWN,
+} from './AiAssessmentFeedbackContext';
 
 import style from './rubrics.module.scss';
 
 export default function AiAssessmentFeedbackRadio({aiEvalId, setAiFeedbackId}) {
   const radioGroupName = `ai-assessment-feedback-${aiEvalId}`;
-  const thumbsupval = 1;
-  const thumbsdownval = 0;
 
   const {aiFeedback, setAiFeedback} = useContext(AiAssessmentFeedbackContext);
 
@@ -45,11 +46,11 @@ export default function AiAssessmentFeedbackRadio({aiEvalId, setAiFeedbackId}) {
         <label>
           <span
             className={classnames(style.aiFeedbackRadioLabel, [
-              aiFeedback === thumbsupval && style.aiFeedbackRadioLabelChecked,
+              aiFeedback === THUMBS_UP && style.aiFeedbackRadioLabelChecked,
             ])}
             aria-hidden="true"
           >
-            {aiFeedback === thumbsupval ? (
+            {aiFeedback === THUMBS_UP ? (
               <FontAwesome icon="thumbs-up" />
             ) : (
               <FontAwesome icon="thumbs-o-up" />
@@ -59,20 +60,20 @@ export default function AiAssessmentFeedbackRadio({aiEvalId, setAiFeedbackId}) {
             type="radio"
             className={style.aiFeedbackRadio}
             name={radioGroupName}
-            value={thumbsupval}
-            onChange={() => createAiFeedback(thumbsupval)}
-            checked={aiFeedback === thumbsupval}
+            value={THUMBS_UP}
+            onChange={() => createAiFeedback(THUMBS_UP)}
+            checked={aiFeedback === THUMBS_UP}
           />
         </label>
 
         <label>
           <span
             className={classnames(style.aiFeedbackRadioLabel, [
-              aiFeedback === thumbsdownval && style.aiFeedbackRadioLabelChecked,
+              aiFeedback === THUMBS_DOWN && style.aiFeedbackRadioLabelChecked,
             ])}
             aria-hidden="true"
           >
-            {aiFeedback === thumbsdownval ? (
+            {aiFeedback === THUMBS_DOWN ? (
               <FontAwesome icon="thumbs-down" />
             ) : (
               <FontAwesome icon="thumbs-o-down" />
@@ -82,9 +83,9 @@ export default function AiAssessmentFeedbackRadio({aiEvalId, setAiFeedbackId}) {
             type="radio"
             className={style.aiFeedbackRadio}
             name={radioGroupName}
-            value={thumbsdownval}
-            onChange={() => createAiFeedback(thumbsdownval)}
-            checked={aiFeedback === thumbsdownval}
+            value={THUMBS_DOWN}
+            onChange={() => createAiFeedback(THUMBS_DOWN)}
+            checked={aiFeedback === THUMBS_DOWN}
           />
         </label>
       </div>

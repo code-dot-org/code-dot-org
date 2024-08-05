@@ -14,6 +14,7 @@ import i18n from '@cdo/locale';
 
 import AiAssessmentFeedbackContext, {
   NO_FEEDBACK,
+  THUMBS_DOWN,
 } from './AiAssessmentFeedbackContext';
 import {aiEvaluationShape} from './rubricShapes';
 
@@ -30,8 +31,6 @@ async function updateAiFeedback(values, aiFeedbackId) {
 }
 
 export default function AiAssessmentFeedback({aiEvalInfo, aiFeedbackId}) {
-  const thumbsdownval = 0;
-
   const {aiFeedback, setAiFeedback} = useContext(AiAssessmentFeedbackContext);
   const [aiSubmitted, setAISubmitted] = useState(false);
   const [aiFalsePos, setAIFalsePos] = useState(false);
@@ -81,7 +80,7 @@ export default function AiAssessmentFeedback({aiEvalInfo, aiFeedbackId}) {
           {i18n.aiFeedbackReceived()}
         </EmText>
       )}
-      {!aiSubmitted && aiFeedback === thumbsdownval && aiFeedbackId && (
+      {!aiSubmitted && aiFeedback === THUMBS_DOWN && aiFeedbackId && (
         <div className={style.aiAssessmentFeedback}>
           <BodyFourText>
             <StrongText>{i18n.aiFeedbackNegativeWhy()}</StrongText>
