@@ -106,7 +106,8 @@ function TeacherDashboard({
   // Include header components unless we are on the /login_info or /standards_report page.
   const includeHeader =
     location.pathname !== TeacherDashboardPath.loginInfo &&
-    location.pathname !== TeacherDashboardPath.standardsReport;
+    location.pathname !== TeacherDashboardPath.standardsReport &&
+    location.pathname !== TeacherDashboardPath.navTestV2;
 
   const generateEmptySectionGraphic = (hasStudents, hasCurriculumAssigned) => {
     return (
@@ -188,7 +189,7 @@ function TeacherDashboard({
         </Route>
         {teacherNavV2Enabled && (
           <Route
-            path={TeacherDashboardPath.navigation}
+            path={TeacherDashboardPath.navTestV2}
             component={props => (
               <div className={dashboardStyles.pageContainer}>
                 <TeacherNavigationBar />
