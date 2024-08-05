@@ -381,6 +381,7 @@ Then /^I create a new code review group for the section I saved$/ do
     And I open the code review groups management dialog
     And I wait for 2 seconds
     And I click selector "#uitest-create-code-review-group" once I see it
+    And I wait until element ".uitest-code-review-group" is visible
   GHERKIN
 end
 
