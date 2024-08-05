@@ -53,6 +53,7 @@ describe('AiAssessmentFeedback', () => {
       </AiAssessmentFeedbackContext.Provider>
     );
     expect(screen.queryAllByRole('checkbox')).toHaveLength(4);
+    expect(screen.queryAllByRole('textbox')).toHaveLength(0);
   });
 
   it('displays textbox when checkbox labelled "other" is selected', () => {
