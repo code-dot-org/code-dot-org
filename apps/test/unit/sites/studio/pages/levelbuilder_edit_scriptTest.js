@@ -1,4 +1,4 @@
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 
 import initPage from '@cdo/apps/sites/studio/pages/scripts/edit';
 
@@ -11,7 +11,7 @@ describe('the level builder page init script', () => {
 
   let container;
   beforeEach(() => {
-    jest.spyOn(ReactDOM, 'render').mockClear();
+    jest.spyOn(ReactDOM, 'createRoot').mockClear();
     container = document.createElement('div');
     document.body.appendChild(container);
     container.className = 'edit_container';
@@ -42,10 +42,10 @@ describe('the level builder page init script', () => {
   });
 
   afterEach(() => {
-    ReactDOM.render.mockRestore();
+    ReactDOM.createRoot.mockRestore();
   });
 
   it('renders to a div with the edit_container class', () => {
-    expect(ReactDOM.render).toHaveBeenCalledWith(expect.any(Object), container);
+    expect(ReactDOM.createRoot).toHaveBeenCalledWith(container);
   });
 });
