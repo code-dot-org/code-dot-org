@@ -1,4 +1,4 @@
-import {render} from '@testing-library/react';
+import {render, waitFor} from '@testing-library/react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
@@ -23,12 +23,6 @@ const DEFAULT_PROPS = {
     buttonImg: {},
   },
   ttsAutoplayEnabled: false,
-};
-
-// this is a helper function which is used in a test to
-// wait for all preceeding promises to resolve
-const waitForPromises = async () => {
-  return Promise.resolve();
 };
 
 function getComponent(element) {
@@ -127,12 +121,17 @@ describe('InlineAudio', function () {
     const component = getComponent(<InlineAudio {...DEFAULT_PROPS} />);
 
     expect(component.state().playing).to.be.false;
+    await React.act(() => {
+      component.instance().toggleAudio();
+    });
+    waitFor(() => {
+      component.update();
+      expect(component.state().playing).to.be.true;
+    });
     component.instance().toggleAudio();
-    await waitForPromises();
-    expect(component.state().playing).to.be.true;
-    component.instance().toggleAudio();
-    await waitForPromises();
-    expect(component.state().playing).to.be.false;
+    waitFor(() => {
+      expect(component.state().playing).to.be.false;
+    });
   });
 
   it('autoplays if autoplay of text-to-speech is enabled', async function () {
@@ -140,8 +139,9 @@ describe('InlineAudio', function () {
       <InlineAudio assetUrl={function () {}} ttsAutoplayEnabled={true} />
     );
 
-    await waitForPromises();
-    expect(component.state().playing).to.be.true;
+    waitFor(() => {
+      expect(component.state().playing).to.be.true;
+    });
   });
 
   it('when playAudio resolves, state.playing set to true', async () => {
@@ -149,35 +149,41 @@ describe('InlineAudio', function () {
       <InlineAudio assetUrl={function () {}} ttsAutoplayEnabled={false} />
     );
 
-    expect(component.state().playing).to.be.false;
-    await component.instance().playAudio();
-    expect(component.state().playing).to.be.true;
+    waitFor(async () => {
+      expect(component.state().playing).to.be.false;
+      await component.instance().playAudio();
+      expect(component.state().playing).to.be.true;
+    });
   });
 
   it('only initializes Audio once', function () {
     sinon.spy(window, 'Audio');
     const component = getComponent(<InlineAudio {...DEFAULT_PROPS} />);
 
-    expect(window.Audio).to.have.been.calledOnce;
-    component.instance().playAudio();
-    expect(window.Audio).to.have.been.calledOnce;
-    component.instance().pauseAudio();
-    expect(window.Audio).to.have.been.calledOnce;
-    component.instance().playAudio();
-    expect(window.Audio).to.have.been.calledOnce;
+    waitFor(() => {
+      expect(window.Audio).to.have.been.calledOnce;
+      component.instance().playAudio();
+      expect(window.Audio).to.have.been.calledOnce;
+      component.instance().pauseAudio();
+      expect(window.Audio).to.have.been.calledOnce;
+      component.instance().playAudio();
+      expect(window.Audio).to.have.been.calledOnce;
+    });
     sinon.restore();
   });
 
   it('handles source update gracefully, stopping audio', async function () {
     const wrapper = mount(<InlineAudio {...DEFAULT_PROPS} />);
-    const component = wrapper.at(0);
-    await component.instance().playAudio();
-    expect(component.state().playing).to.be.true;
+    waitFor(async () => {
+      const component = wrapper.at(0);
+      await component.instance().playAudio();
+      expect(component.state().playing).to.be.true;
 
-    wrapper.setProps({src: 'state2'});
-    expect(component.state().audio).to.be.undefined;
-    expect(component.state().playing).to.be.false;
-    expect(component.state().error).to.be.false;
+      wrapper.setProps({src: 'state2'});
+      expect(component.state().audio).to.be.undefined;
+      expect(component.state().playing).to.be.false;
+      expect(component.state().error).to.be.false;
+    });
   });
 
   it('calls addToQueue for each InlineAudio rendered', () => {
