@@ -271,7 +271,9 @@ describe('The ShowCodeToggle component', () => {
     describe('And studioApp() is subsequently initialized with enableShowCode turned off', () => {
       beforeEach(() => {
         config.enableShowCode = false;
-        studioApp().init(config);
+        React.act(() => {
+          studioApp().init(config);
+        });
         toggle.update();
       });
       it('will reflect the most recent config passed to studioApp().init()', () => {
@@ -317,7 +319,9 @@ describe('The ShowCodeToggle component', () => {
     beforeEach(() => {
       toggle = mount(<ShowCodeToggle onToggle={sinon.spy()} />);
       config.enableShowCode = false;
-      studioApp().init(config);
+      React.act(() => {
+        studioApp().init(config);
+      });
       toggle.update();
     });
 
