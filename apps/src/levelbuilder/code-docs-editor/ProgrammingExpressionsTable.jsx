@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
 import React, {useEffect, useState} from 'react';
+import {flushSync} from 'react-dom';
 import * as Table from 'reactabular-table';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
@@ -98,8 +99,10 @@ export default function ProgrammingExpressionsTable({
       })
       .then(data => {
         if (success) {
-          setProgrammingExpressions(data.results);
-          setNumPages(data.numPages);
+          flushSync(() => {
+            setProgrammingExpressions(data.results);
+            setNumPages(data.numPages);
+          });
         }
       })
       .catch(error => {
