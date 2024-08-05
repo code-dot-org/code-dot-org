@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-01 21:59:37 UTC",
+    "serialized_at": "2024-08-02 21:47:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3900,6 +3900,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L1-L1_pilot-2025"
+        ],
         "progression": "Creative Coding with the Console Example Projects"
       },
       "bonus": false,
@@ -3922,6 +3925,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L1-L2_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3944,6 +3950,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L2-L1_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Linear Search"
       },
       "bonus": false,
@@ -3966,6 +3975,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L2-L2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Linear Search"
       },
       "bonus": false,
@@ -3988,6 +4000,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L2-L3_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Linear Search"
       },
       "bonus": false,
@@ -4010,6 +4025,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L2-L4_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4032,6 +4050,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L3-L1_pilot-2025"
+        ],
         "progression": "Predict and Run: Binary Search"
       },
       "bonus": false,
@@ -4054,6 +4075,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L3-L2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Recursive Binary Search"
       },
       "bonus": false,
@@ -4076,6 +4100,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L3-L3_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Recursive Binary Search"
       },
       "bonus": false,
@@ -4098,6 +4125,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L3-L4_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Recursive Binary Search"
       },
       "bonus": false,
@@ -4120,6 +4150,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L3-L5_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4142,6 +4175,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L4-L1_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Selection Sort"
       },
       "bonus": false,
@@ -4164,6 +4200,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L4-L2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Selection Sort"
       },
       "bonus": false,
@@ -4186,6 +4225,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L4-L3_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Selection Sort"
       },
       "bonus": false,
@@ -4208,6 +4250,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L4-L4_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4230,6 +4275,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L5-L1_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Insertion Sort"
       },
       "bonus": false,
@@ -4252,6 +4300,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L5-L2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Insertion Sort"
       },
       "bonus": false,
@@ -4274,6 +4325,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L5-L3_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Insertion Sort"
       },
       "bonus": false,
@@ -4296,6 +4350,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L5-L4_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4318,6 +4375,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L6-L1_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Merge Sort"
       },
       "bonus": false,
@@ -4340,6 +4400,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L6-L2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Merge Sort"
       },
       "bonus": false,
@@ -4362,6 +4425,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L6-L3_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Merge Sort"
       },
       "bonus": false,
@@ -4384,6 +4450,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L6-L4_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4406,6 +4475,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L1_pilot-2025"
+        ],
         "progression": "Predict and Run: Multiple Lists"
       },
       "bonus": false,
@@ -4428,6 +4500,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L2_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Multiple Lists"
       },
       "bonus": false,
@@ -4450,6 +4525,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L3_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Multiple Lists"
       },
       "bonus": false,
@@ -4472,6 +4550,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L4_pilot-2025"
+        ],
         "progression": "Investigate and Modify: Multiple Lists"
       },
       "bonus": false,
@@ -4494,6 +4575,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L5_pilot-2025"
+        ],
         "progression": "Practice: Searching and Sorting"
       },
       "bonus": false,
@@ -4516,6 +4600,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L6_pilot-2025"
+        ],
         "progression": "Practice: Searching and Sorting"
       },
       "bonus": false,
@@ -4538,6 +4625,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L7_pilot-2025"
+        ],
         "progression": "Practice: Searching and Sorting"
       },
       "bonus": false,
@@ -4560,6 +4650,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L8_pilot-2025"
+        ],
         "progression": "Practice: Searching and Sorting"
       },
       "bonus": false,
@@ -4582,6 +4675,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L9_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4604,6 +4700,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L8-L1_pilot-2025"
+        ],
         "progression": "Creative Coding with the Console Project"
       },
       "bonus": false,
@@ -4626,6 +4725,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L8-L2_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4648,6 +4750,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L9-L1_pilot-2025"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4670,6 +4775,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8 Creative Coding with the Console Project_pilot-2025"
+        ],
         "progression": "Creative Coding with the Console Project"
       },
       "bonus": false,
@@ -4692,6 +4800,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 8 Assessment_pilot-2025"
+        ],
         "progression": "Unit 8 Assessment"
       },
       "bonus": false,
@@ -4714,6 +4825,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-levelgroup_csa_pilot-2025"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4735,6 +4849,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8 Creative Coding with the Console Project 1-Day_pilot-2025"
+        ],
         "progression": "Creative Coding with the Console Project"
       },
       "bonus": false,
@@ -4757,6 +4874,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox_pilot-2025"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4778,6 +4898,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox_pilot-2025"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -4800,6 +4923,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox_pilot-2025"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -4822,6 +4948,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Theater Sandbox_pilot-2025"
+        ]
       },
       "bonus": false,
       "seeding_key": {
