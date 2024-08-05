@@ -4,7 +4,6 @@
 .schoolAssociationWrapper {
   text-align: center;
   display: grid;
-  padding: 0.75rem;
 
   h2 {
     margin-bottom: 0.25rem;
@@ -12,6 +11,7 @@
 
   label {
     width: 100%;
+    margin-bottom: 0;
   }
 
   input {
@@ -20,6 +20,7 @@
     height: 46px !important;
     font-size: 1rem;
     margin-top: 0.37rem !important;
+    margin-bottom: 0;
     border-radius: 0.25rem;
     border: 1px solid;
     text-indent: 0.75rem;
@@ -41,7 +42,7 @@
   }
 
   .errorMessage {
-    margin-block: 0.125rem 0;
+    margin-block: 0.4375rem 0;
     color: $light_negative_500;
   }
 }
@@ -54,7 +55,7 @@
   flex-direction: column;
 
   .padding {
-    padding-top: 0.75rem;
+    padding-top: 1.125rem;
     margin-bottom: 0;
   }
 

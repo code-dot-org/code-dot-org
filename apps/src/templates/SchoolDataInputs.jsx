@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
@@ -25,7 +24,6 @@ export default function SchoolDataInputs({
     schoolName: 'user[school_info_attributes][school_name]',
     schoolZip: 'user[school_info_attributes][school_zip]',
   },
-  overrideStyles = {},
 }) {
   // If the user filled out country before or we are detecting a US IP address
   const detectedCountry =
@@ -37,22 +35,6 @@ export default function SchoolDataInputs({
   const [isOutsideUS, setIsOutsideUS] = useState(
     detectedCountry && detectedCountry !== US_COUNTRY_CODE
   );
-  const styleClassNames = {
-    schoolAssociationWrapper: classNames(
-      overrideStyles.schoolAssociationWrapper,
-      style.schoolAssociationWrapper
-    ),
-    inputContainer: classNames(
-      overrideStyles.inputContainer,
-      style.inputContainer
-    ),
-    topPadding: classNames(overrideStyles.topPadding, style.topPadding),
-    padding: classNames(overrideStyles.padding, style.padding),
-    schoolZipSearch: classNames(
-      overrideStyles.schoolZipSearch,
-      style.schoolZipSearch
-    ),
-  };
 
   // Add 'Select a country' and 'United States' to the top of the country list
   let COUNTRY_ITEMS = [
@@ -88,20 +70,17 @@ export default function SchoolDataInputs({
   };
 
   return (
-    <div className={styleClassNames.schoolAssociationWrapper}>
+    <div className={style.schoolAssociationWrapper}>
       {includeHeaders && (
         <div>
-          <Heading2 className={styleClassNames.topPadding}>
+          <Heading2 className={style.topPadding}>
             {i18n.censusHeading()}
           </Heading2>
           <BodyTwoText>{i18n.schoolInfoInterstitialTitle()}</BodyTwoText>
         </div>
       )}
-      <div className={styleClassNames.inputContainer}>
-        <BodyTwoText
-          className={styleClassNames.padding}
-          visualAppearance={'heading-xs'}
-        >
+      <div className={style.inputContainer}>
+        <BodyTwoText className={style.padding} visualAppearance={'heading-xs'}>
           {i18n.whatCountry()}
         </BodyTwoText>
         <SimpleDropdown
@@ -113,7 +92,7 @@ export default function SchoolDataInputs({
           size="m"
         />
         {askForZip && (
-          <div className={styleClassNames.schoolZipSearch}>
+          <div className={style.schoolZipSearch}>
             <SchoolZipSearch
               fieldNames={{
                 schoolZip: fieldNames.schoolZip,

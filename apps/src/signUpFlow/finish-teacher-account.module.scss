@@ -7,10 +7,12 @@ body {
 .finishTeacherAccountContainer {
   max-width: $content-width;
   display: grid;
-  margin: 30px auto 0 auto;
-  padding: 1rem;
+  margin: 4rem auto;
+  padding: 30px;
   text-align: center;
   background-color: $light_white;
+  border-radius: 0.25rem;
+  border: 1px solid $light_gray_200 !important;
 }
 
 .headerTextContainer {
@@ -40,14 +42,21 @@ p {
   margin-bottom: 0 !important;
 }
 
-.padding {
-  padding-top: 1.125rem !important;
-}
+.emailOptInContainer {
+  margin-top: 1.125rem;
 
-.schoolAssociationWrapper {
-  padding: 0;
-}
+  .emailOptInCheckboxContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 6px;
 
-.schoolZipSearch {
-  padding-top: 0.375rem;
+    .emailOptInCheckbox {
+      flex: 1;
+      padding-top: 1px;
+    }
+
+    .emailOptInLabel {
+      flex: 12;
+    }
+  }
 }
