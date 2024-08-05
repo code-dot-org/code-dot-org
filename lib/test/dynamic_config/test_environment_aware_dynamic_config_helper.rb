@@ -44,10 +44,14 @@ class EnvironmentAwareDynamicConfigHelperTest < Minitest::Test
     assert_equal EnvironmentAwareDynamicConfigHelper.rack_or_rails_env, "development"
   end
 
-  def test_shared_cache_name
-    prefix = SecureRandom.hex
-    expected_cache_key_identifier = "#{prefix}#{ENV.fetch('TEST_ENV_NUMBER', nil)}"
-    assert_equal expected_cache_key_identifier, EnvironmentAwareDynamicConfigHelper.create_datastore_cache(prefix).instance_variable_get(:@identifier)
+  def test_shared_cache_key
+    test_env_num = 'expected_test_env_num'
+    identifier = 'expected_identifier'
+
+    Object.stub_const :ENV, ENV.to_h.merge!('TEST_ENV_NUMBER' => test_env_num) do
+      datastore_cache = EnvironmentAwareDynamicConfigHelper.create_datastore_cache(identifier)
+      assert_equal "DynamicConfigData/#{identifier}#{test_env_num}", datastore_cache.shared_cache_key
+    end
   end
 
   # Simple helper method to DRY up the code
