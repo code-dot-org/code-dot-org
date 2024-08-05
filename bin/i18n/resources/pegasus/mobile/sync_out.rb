@@ -15,7 +15,7 @@ module I18n
 
             pegasus_i18n_file_path = File.join(ORIGIN_I18N_DIR_PATH, "#{language[:locale_s]}.json")
 
-            i18n_data = JSON.load_file(crowdin_file_path)
+            i18n_data = I18nScriptUtils.parse_file(crowdin_file_path)
             I18nScriptUtils.sanitize_data_and_write({language[:locale_s] => i18n_data}, pegasus_i18n_file_path)
 
             I18nScriptUtils.move_file(crowdin_file_path, I18nScriptUtils.locale_dir(language[:locale_s], FILE_PATH))
