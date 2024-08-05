@@ -1,3 +1,4 @@
+import {render, screen} from '@testing-library/react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -54,21 +55,21 @@ describe('AiAssessmentBox', () => {
     currentLearningGoal: 0,
     reportingData: reportingData,
     aiUnderstandingLevel: RubricUnderstandingLevels.CONVINCING,
-    aiConfidence: 70,
+    aiConfidence: 1,
     aiEvalInfo: mockAiInfo,
     aiEvidence: mockEvidence,
     studentLevelInfo: {name: 'student', user_id: 42},
   };
 
   it('renders AiAssessmentBox with student information if it is assessed by AI', () => {
-    const wrapper = mount(
+    render(
       <AiAssessmentFeedbackContext.Provider
         value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
       >
         <AiAssessmentBox {...props} />
       </AiAssessmentFeedbackContext.Provider>
     );
-    expect(wrapper.find('BodyFourText StrongText + span').first().text()).toBe(
+    screen.getByText(
       i18n.aiStudentAssessment({
         studentName: props.studentName,
         understandingLevel: i18n.aiAssessmentDoesMeet(),
@@ -77,14 +78,14 @@ describe('AiAssessmentBox', () => {
   });
 
   it('renders AiAssessmentBox with AiConfidenceBox when available', () => {
-    const wrapper = mount(
+    render(
       <AiAssessmentFeedbackContext.Provider
         value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
       >
         <AiAssessmentBox {...props} />
       </AiAssessmentFeedbackContext.Provider>
     );
-    expect(wrapper.find('AiConfidenceBox')).toHaveLength(1);
+    screen.getByText(i18n.aiConfidence({aiConfidence: i18n.low()}));
   });
 
   it('renders AiAssessmentBox without AiConfidenceBox when unavailable', () => {
@@ -92,18 +93,18 @@ describe('AiAssessmentBox', () => {
       ...props,
       aiConfidence: null,
     };
-    const wrapper = mount(
+    render(
       <AiAssessmentFeedbackContext.Provider
         value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
       >
         <AiAssessmentBox {...updatedProps} />
       </AiAssessmentFeedbackContext.Provider>
     );
-    expect(wrapper.find('AiConfidenceBox')).toHaveLength(0);
+    expect(screen.queryByText('AI Confidence')).toBeNull();
   });
 
   it('should render associated message for aiAssessed with convincing understanding', () => {
-    const wrapper = mount(
+    render(
       <AiAssessmentFeedbackContext.Provider
         value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
       >
@@ -111,14 +112,12 @@ describe('AiAssessmentBox', () => {
       </AiAssessmentFeedbackContext.Provider>
     );
 
-    expect(
-      wrapper.html().includes(
-        i18n.aiStudentAssessment({
-          studentName: props.studentName,
-          understandingLevel: i18n.aiAssessmentDoesMeet(),
-        })
-      )
-    ).toBe(true);
+    screen.getByText(
+      i18n.aiStudentAssessment({
+        studentName: props.studentName,
+        understandingLevel: i18n.aiAssessmentDoesMeet(),
+      })
+    );
   });
 
   it('should render associated message for aiAssessed with limited understanding', () => {
@@ -126,22 +125,19 @@ describe('AiAssessmentBox', () => {
       ...props,
       aiUnderstandingLevel: RubricUnderstandingLevels.LIMITED,
     };
-    const wrapper = mount(
+    render(
       <AiAssessmentFeedbackContext.Provider
         value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
       >
         <AiAssessmentBox {...updatedProps} />
       </AiAssessmentFeedbackContext.Provider>
     );
-
-    expect(
-      wrapper.html().includes(
-        i18n.aiStudentAssessment({
-          studentName: props.studentName,
-          understandingLevel: i18n.aiAssessmentDoesNotMeet(),
-        })
-      )
-    ).toBe(true);
+    screen.getByText(
+      i18n.aiStudentAssessment({
+        studentName: props.studentName,
+        understandingLevel: i18n.aiAssessmentDoesNotMeet(),
+      })
+    );
   });
 
   it('renders AiAssessmentBox with notice that AI cannot be used when the topic is too subjective to be evaluated', () => {
