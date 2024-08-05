@@ -1,0 +1,41 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T22:04:05.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "A software engineer is developing a weather simulation app and wants to display a specific image based on a random temperature.\r\n\r\n✅ **TO DO #1:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">WeatherScene.java</code>, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getRandomTemp()</code> method to generate and return a random temperature between 20 and 80 degrees.\r\n\r\n✅ **TO DO #2:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner.java</code>, call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getRandomTemp()</code> method and pass the value returned to the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">drawResult()</code> method.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Math</code> class in the <strong>Documentation</strong> tab ⬆️ for help using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Math.random()</code> method.\r\n</div>",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "display_name": "Random Weather",
+    "bubble_choice_description": "A software engineer is developing a weather simulation app and wants to display a specific image based on a random temperature.",
+    "thumbnail_url": "https://images.code.org/056a800887ce0147c5281a5f922706f9-weather.png",
+    "starter_assets": {
+      "snowflake.png": "44580cb1-7417-4f23-9315-59cf02986004.png",
+      "sun.png": "a0064c41-7319-44f6-802d-d859b64e2556.png"
+    },
+    "encrypted_validation": "1Muijhudp9ZoduP38jcKWqzzWVkOSHhCGqp6YbIvM9rE3O+Q7Shl1LsBinXF\nbFbrb53VutLWSQnysbCml3CB4COWdSqIFy5Ve4NZdRBZ5QyCEb6VkPyTmKtQ\nukdeL9j9gScy738sNWgnUBq1l07dR543dlleM+pEvY4XVAmZS2AXk/aQTR78\nxb0LDTw++SgfqXraD59wcCJiKPIMbORXOUsUmnCpM53PzBmBpLFKPfFHSarZ\nG7UiyjfcMNmJUMsidjZlGq6u9cHfqzyfOqChtbxSqP4I1UAadiie6sQgsoQd\nbdZZEXRdbS4tYY5a4cK1ixr4+211ue997gxo6ENQip6AnFiInsDAx1XeY46f\nO92Pya7MBASCbi822x6m16MXR2wRG9F5qtO9wfvL+0oHcAKoJBzY6yHXocB0\nn/6rn2ii31aySqVzOwlnS2UpC1DwfJElCHjvcDQMVg4rH3IGn/rwbzxgPDgs\npz/GEalPK/0cgEeMJBT+oVBwq5jFB5RjJyENUTPXEU9+8Mr0t9nRijpjG9+/\njljaHYM2wLFSLI8yH7V+NV/Ma2Dal/oiAayWami+ufGwwuophpWPHjz99BWv\nw7SAaBRQ6gpbPzbaGnYpMHHfQ36sbc8SOfHxV+07ILJ4DwksjyblcX5MGnjV\nvwE3cHsI20v6ivEVVm/lihOzMvoGyBw57K+riBQ7jc4Z9hVRDfURWO9L98sk\nh8FEo8ei5Uycn6irXQ16wdcYeRJ+14PzyWOd5nD43QfMY3A01+jzDvXQ0c+k\nJQptpXSdyYCmECcsRqYZxJ4m90kmIm9zN1Ieisr8LOfsXXVbmF3NODKvxYmf\nuLcYg866Ri2dZVsdT2XYwpRk4rK6aIADFqOdhP8hKrG9KIPQoMUigpxDnNzt\nD94RxoWocjirN9i+0rVrj7UqfkFfzVU67a6+7wkawAVNV85icpQN9/NPUzBN\nLQPtW4HQ6y5kZUAT1f/E4RvvM7kKQdvALDLju3m3Gkv5eLj5S0dr8J4yPMsI\n4p7qHVNlwUZvQo3QJHrloDOGP/a0gCfgr6uq6u5Ug1inWsIoorEopIv2tCy+\nbhfaK1ko8w6DKxnYJ8sMpO4bZ1EpVsqTpUiMZmOn/RWwuFhCTzK6Gkhv9xH0\nmarE1u+fvbg27ZQS4k4FPm9QD7v4i8DTsA11s83irtAKIOoS0zg59/Mrj2M3\nK+pkpu2pWMPJDCsMdsptaCnKg87L1ozC6D0u58HGGw5/4HyYB/TzTrAvyrLk\nyU8gqCWgUYBYWRm+8DclCq5eo9pAYWiYGTHElK9NPbbx9OAfDtSW4Nn61jhv\nYGo60v0u4+4czBCxP8/BIiRc\n",
+    "encrypted_exemplar_sources": "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\npCY=\n",
+    "start_sources": {
+      "TheaterRunner.java": {
+        "text": "import org.code.theater.*;\n\npublic class TheaterRunner {\n  public static void main(String[] args) {\n\n    // Creates a WeatherScene object\n    WeatherScene scene = new WeatherScene();\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Call the getRandomTemp() method and pass the value returned to a call\n     * to the drawResult() method.\n     * -----------------------------------------------------------------------------\n     */\n\n\n    \n\n    // Plays the scene\n    Theater.playScenes(scene);\n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "WeatherScene.java": {
+        "text": "import org.code.theater.*;\n\n/*\n * Represents a scene to simulate the weather\n */\npublic class WeatherScene extends Scene {\n\n  /*\n   * Returns a random temperature\n   */\n  public int getRandomTemp() {\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Generate and return a random value between 20 and 80.\n     * -----------------------------------------------------------------------------\n     */\n    \n    return -1;\n  }\n\n  /*\n   * Draws the snowflake if the temperature is less than 40, and draws\n   * the sun if the temperature is greater than or equal to 40\n   */\n  public void drawResult(int temp) {\n    if (temp < 40) {\n      drawImage(\"snowflake.png\", 50, 50, 300);\n    }\n    else {\n      drawImage(\"sun.png\", 50, 50, 300);\n    }\n\n    drawText(temp + \" degrees\", 250, 350);\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      }
+    },
+    "video_key": "csa_random_numbers",
+    "name_suffix": "_alt-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:05.565+00:00\",\"changed\":[\"cloned from \\\"CSA U4L5-L5c_pilot-2025\\\"\"],\"cloned_from\":\"CSA U4L5-L5c_pilot-2025\"}]"
+}]]></config>
+</Javalab>

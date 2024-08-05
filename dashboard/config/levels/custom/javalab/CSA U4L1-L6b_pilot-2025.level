@@ -1,0 +1,39 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T16:52:23.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Add music to the scene!\r\n\r\n✅ **TO DO #1:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">NatureScene.java</code>, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">drawScene()</code> method to play the parameter <code style=\"background-color: #ececec; color: black; font-weight: bold;\">soundFile</code>.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Scene</code> class in the <strong>Documentation</strong> tab ⬆️ for help with playing sounds.\r\n</div>",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "start_sources": {
+      "TheaterRunner.java": {
+        "text": "import org.code.theater.*;\n\npublic class TheaterRunner {\n  public static void main(String[] args) {\n\n    // Instantiates a NatureScene object\n    NatureScene nature = new NatureScene(\"nature.jpg\", \"forestsounds.wav\");\n\n    // Calls the drawScene() method\n    nature.drawScene();\n    \n    // Plays the nature scene\n    Theater.playScenes(nature);\n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "NatureScene.java": {
+        "text": "import org.code.theater.*;\n\n/*\n * Represents a scene that plays music\n */\npublic class NatureScene extends Scene {\n\n  private String backgroundImage;     // The image to display in the scene\n  private String soundFile;           // The sound file to play\n\n  /*\n   * Sets backgroundImages to the specified image and\n   * soundFile to the specified sound file\n   */\n  public NatureScene(String backgroundImage, String soundFile) {\n    this.backgroundImage = backgroundImage;\n    this.soundFile = soundFile;\n  }\n\n  /*\n   * Draws backgroundImage in the scene and plays soundFile\n   */\n  public void drawScene() {\n    drawImage(backgroundImage, 0, 0, getWidth());\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Use one of the methods in the Scene class to play the sound file.\n     * -----------------------------------------------------------------------------\n     */\n\n\n    \n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      }
+    },
+    "display_name": "Music for a Nature Scene",
+    "bubble_choice_description": "Add music to the scene displaying a nature image.",
+    "thumbnail_url": "https://images.code.org/dfaed589c66d8c3d63b7de3c8edc9ed8-4ccd7c43b151b13d567b1eb222a7a372-image-1650485438594.jpg",
+    "starter_assets": {
+      "nature.jpg": "edfcdb40-297a-437f-a615-171f83da2619.jpg",
+      "forestsounds.wav": "3fa30755-26ce-44bd-9016-91c9a6f9eb88.wav"
+    },
+    "encrypted_exemplar_sources": "Q1PxmLgiasYA0VmeXomMQm8rxQrn3nRO03FnOhEzENWlt+10N2ixk6siKAeG\naHnUup0nMTuOPSmEebFHdnhnvWgiifgNMor4wT6WGR2DTQcYY80Qu4S177nr\n57xWg/XmUSEfnFezj224YtIL9WpdEL97DzdoU6GbY3d8b+LbwvJ1wQRyfxmM\nlV8v44VJ9wU+2EBCA7/TmZw9P0dXwJ/8zUs+NeApZw6RSsOHB95QLM8qs0Ae\n+S2aAPsp8AmT6w9xCMM0kEpLakysZyhT4r/mmaWrg542dXVLA63Q9EAu2IXS\nLxaM+ooZQr7dUVIb9j9ARTHYRdl4U57eAC9XQ0LCcwnEFU33YC2O555/NYn4\nKnjHnLNgw5BFgAKHexFBfP9KYQwdsshox9dS5fotzns61E45kbuDoYg3M6jB\ncM0yweh61e5iSpW3Zc7KeFsh+6eNoI1WaRMKMetcYJyWgJayJIH5ld5Y1CrS\nSUCHIKOkzOduXQAnisPzh2kDPeN1Dr6Ejp4f2PM1Gj5Ge+xBz7X+UiXMEr8G\nI8tjb9T2WKkLaJnHRo2Du1yOayf2Zm3gZpYFbW4NG2AFgEstFsGTt4r2kBa0\ndGRU0PhW/6DB6ECb6oBPSRoz0iWVfBeQpULyl3UJLz/OQj/9FS2WQyFsDT82\ne7f2s+wvbopaRi1YmHEBWMJ+ZkQ8fQ0itr0LgdHJR6LgGDh6hGnbQxpcWi1I\nJVClWgg3NzXJuaKoqL0pr1Saog3rkMLB/1mNpSordMtO7l2yWDLbQG4si6iB\nO/3YTe9iMkHqlg17EpXVVK4sBZjQ6YmNFJyUY3ohvR0KXoJiLzL9QOxgcpZg\nYhtZrWjvMqJMxm2HzWlqkDycjZk2kViuzojuegC+22E2KbMHPEQdqkcn48Ol\nLpThx4RC+pWyEWUwQXbXV/LduFm/yRSAlJevyI84mOpCkURAynuDUeeUPz+i\nEwcBbRZXUC4GiomEJN0nsXV7Q94dB01DohONKTEVmzExbXVQsRHReFkN3EQ1\nzWIfBfoD0mx+XsutrALK1liwqdu44bNVlmogpbia9Mmeb0ofWonaOVAce2iT\nQl4iC8dBN8oPA3FklcI3RZRZTPAmUofRYdGaIu4IP4ihx+bAhe3p6QLQYioQ\nmxu7PjQF+Z4zJyFaAd2YyLclMGxisEzR4JTwJQAM1XIP5w9BnFHRKZ+zVcxT\npDZBlejBQ2TN0cPqp2yLDUatyI1spFypRz2plVWr1xYTjQRN0tiUx3o+66M1\n9o2oDVMsji8raC+o7f+ha7gxPrtiKYtiyjGqv7a53j4J7XqG8c3f6o6adtZr\nAoMIR2Ins2a7ckNm0J6QiSjXAvIurzaEIGtyA9GrpjMKQG9ADBTe8kEIO0xJ\nrzdM3JqQsKAaXRmKNwhQ1KBI3Q8EZf93ocUFDSBrz0UARIdfqXJeUZ4SfjXI\nNw3nXUv0Ts+VeWeTVIukNROpf89WGyXqY7BGX+6SH5JT6iFpRmw1XILIvg9s\nJaFfCuY+BiaRy6QwGyOkO7wTWsucbs4fYCwnjH7RphmZDbKhTmdTLw+t6Mwt\n4IvatIGlpUJxPpvHH1AHnkumQS6RVuBASDU0Fcdg71NHbq7akDKl0lCZXaM5\nDowcHc4v8RKoI397wtnyCQYLLhNXj7+Lz65aSLLgBes9HFzM2Lw9WLcto3hV\nCWPSUtMTm8a8dJoYWkTQ4WBV1GwKsWPaFeFj000+JKdWJp71jsYSA0Ix8a9s\n8cmjncOC9Ky9HF/zM2hm80wwUzg4UMWTW/oA2g4nnifdyzjvy0plmJBgGO9a\n82slPwDHMSy9H4GiEOeyFFiU06WnjxINGnMxA6OZqSoZC1qUFT4hVUyTYqTa\n4AT0sHb0fPXuLdb9PXntabas3Bz7uF6vUlCz2kDz8tCnhl1SAIMGoQkCtq7V\n1oa2e5bLOIPJYoVUPFxUng==\n",
+    "name_suffix": "_pilot-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T16:52:23.159+00:00\",\"changed\":[\"cloned from \\\"CSA U4L1-L6b_2025\\\"\"],\"cloned_from\":\"CSA U4L1-L6b_2025\"}]"
+}]]></config>
+</Javalab>
