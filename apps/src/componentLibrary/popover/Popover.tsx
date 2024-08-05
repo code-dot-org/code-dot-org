@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import React, {ReactNode, useEffect} from 'react';
+import React, {ReactNode} from 'react';
 
 import CloseButton from '@cdo/apps/componentLibrary/closeButton';
 import {
@@ -71,36 +71,6 @@ const Popover = React.forwardRef<HTMLDivElement, PopoverProps>(
     },
     ref
   ) => {
-    /** Disable Scroll when Popover is rendered.
-     * This is needed to prevent the user from scrolling the page when the Popover is open.
-     * Reason for this is that we want our popover to be tab-navigable and the best approach
-     * for it when this comment is written is to use position: fixed for the popover.
-     */
-    useEffect(() => {
-      let scrollPosition = {top: 0, left: 0};
-
-      const disableScroll = () => {
-        scrollPosition = {top: window.scrollY, left: window.scrollX};
-        window.addEventListener('scroll', keepScrollPosition, {passive: false});
-      };
-
-      const enableScroll = () => {
-        window.removeEventListener('scroll', keepScrollPosition);
-      };
-
-      const keepScrollPosition = (event: Event) => {
-        window.scrollTo(scrollPosition.left, scrollPosition.top);
-        event.preventDefault();
-      };
-
-      // Disable scroll on mount
-      disableScroll();
-
-      // Enable scroll on unmount
-      return () => {
-        enableScroll();
-      };
-    }, []);
     return (
       <div
         ref={ref}
