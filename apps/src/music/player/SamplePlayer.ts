@@ -43,7 +43,7 @@ export default class SamplePlayer {
 
   constructor(
     metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter(),
-    soundCache: SoundCache = new SoundCache(),
+    soundCache: SoundCache = SoundCache.getInstance(),
     soundPlayer: SoundPlayer = new SoundPlayer()
   ) {
     this.metricsReporter = metricsReporter;

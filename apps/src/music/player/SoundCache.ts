@@ -6,12 +6,21 @@ import {baseAssetUrlRestricted} from '../constants';
 import {LoadFinishedCallback} from '../types';
 
 class SoundCache {
+  private static instance: SoundCache;
+
+  public static getInstance() {
+    if (!SoundCache.instance) {
+      SoundCache.instance = new SoundCache();
+    }
+    return SoundCache.instance;
+  }
+
   private readonly audioContext: AudioContext;
   private readonly metricsReporter: LabMetricsReporter;
   private audioBuffers: {[id: string]: AudioBuffer};
   private hasLoadedSignedCookies: boolean;
 
-  constructor(
+  private constructor(
     audioContext: AudioContext = new AudioContext(),
     metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
   ) {

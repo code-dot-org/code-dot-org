@@ -1,7 +1,7 @@
 import React from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import Alert from '@cdo/apps/templates/alert';
+import Alert from '@cdo/apps/legacySharedComponents/alert';
 import i18n from '@cdo/locale';
 
 import {disabledBubblesSupportArticle} from './disabledBubbles';

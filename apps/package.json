@@ -174,7 +174,6 @@
     "@amplitude/analytics-browser": "^1.5.4",
     "@blockly/block-shareable-procedures": "~4.0.5",
     "@blockly/field-bitmap": "^4.1.0",
-    "@blockly/field-colour": "^4.0.0",
     "@blockly/field-grid-dropdown": "~4.0.9",
     "@blockly/keyboard-navigation": "~0.5.6",
     "@blockly/plugin-cross-tab-copy-paste": "~5.0.4",

@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import project from '@cdo/apps/code-studio/initApp/project';
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 

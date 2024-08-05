@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import {reload} from '@cdo/apps/utils';
 import commonI18n from '@cdo/locale';
 import weblabI18n from '@cdo/weblab/locale';

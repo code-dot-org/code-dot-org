@@ -805,6 +805,7 @@ Dashboard::Application.routes.draw do
       post 'workshop_survey/submit', to: 'workshop_daily_survey#submit_general'
       get 'workshop_post_survey', to: 'workshop_daily_survey#new_post'
       get 'workshop_survey/post/:enrollment_code', to: 'workshop_daily_survey#new_post', as: 'new_workshop_survey'
+      get 'workshop_survey/facilitator_post_foorm', to: 'workshop_daily_survey#new_facilitator_post'
       get 'workshop_survey/new_facilitator_post', to: 'workshop_daily_survey#new_facilitator_post'
       get 'workshop_survey/csf/post101(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post101'
       get 'workshop_survey/csf/pre201', to: 'workshop_daily_survey#new_csf_pre201'
@@ -1163,6 +1164,7 @@ Dashboard::Application.routes.draw do
     post '/openai/chat_completion', to: 'openai_chat#chat_completion'
 
     post '/aichat/chat_completion', to: 'aichat#chat_completion'
+    post '/aichat/log_chat_event', to: 'aichat#log_chat_event'
 
     resources :ai_tutor_interactions, only: [:create, :index] do
       resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]
