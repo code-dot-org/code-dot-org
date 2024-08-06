@@ -59,4 +59,18 @@ p {
       flex: 12;
     }
   }
+
+  .emailOptInFootnote {
+    margin-top: 0.125rem;
+  }
+}
+
+.finishSignUpButtonContainer {
+  display: grid;
+  margin-top: 1.125rem;
+  justify-content: end;
+
+  .finishSignUpButton {
+    width: fit-content;
+  }
 }

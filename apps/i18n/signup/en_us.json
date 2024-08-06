@@ -54,5 +54,6 @@
   "account_name_input": "What do you want to be called on Code.org?*",
   "finish_teacher_account_name_input_desc": "This is what your students will see.",
   "stay_updated_email_opt_in": "Keep me updated:",
-  "stay_updated_email_opt_in_desc": "Get informational emails about Code.org updates and opportunities (1-2/month)*"
+  "stay_updated_email_opt_in_desc": "Get informational emails about Code.org updates and opportunities (1-2/month)*",
+  "stay_updated_email_opt_in_footnote": "*After creating your account, you will receive a set of onboarding emails to help you get started."
 }

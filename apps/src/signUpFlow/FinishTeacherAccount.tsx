@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 
+import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import {
   Heading2,
   BodyTwoText,
@@ -12,21 +13,8 @@ import Checkbox from '../componentLibrary/checkbox/Checkbox';
 
 import style from './finish-teacher-account.module.scss';
 
-const SIGN_UP_FLOW_SESSION_KEY = 'signUpFlow';
-
-const setSignUpDataValue = (key: string, value: string) => {
-  const currSignUpSessionData: string | null = sessionStorage.getItem(
-    SIGN_UP_FLOW_SESSION_KEY
-  );
-  const signUpSessionData: {[k: string]: string} = currSignUpSessionData
-    ? JSON.parse(currSignUpSessionData)
-    : {};
-  signUpSessionData[key] = value;
-  sessionStorage.setItem(
-    SIGN_UP_FLOW_SESSION_KEY,
-    JSON.stringify(signUpSessionData)
-  );
-};
+const USER_NAME_SESSION_KEY = 'username';
+const EMAIL_OPT_IN_SESSION_KEY = 'emailOptIn';
 
 const FinishTeacherAccount: React.FunctionComponent<{
   usIp: boolean;
@@ -37,13 +25,16 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const onNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const newName = e.target.value;
     setName(newName);
-    setSignUpDataValue('name', newName);
+    sessionStorage.setItem(USER_NAME_SESSION_KEY, newName);
   };
 
   const onEmailOptInChange = (): void => {
     const newOptInCheckedChoice = !emailOptInChecked;
     setEmailOptInChecked(newOptInCheckedChoice);
-    setSignUpDataValue('emailOptIn', `${newOptInCheckedChoice}`);
+    sessionStorage.setItem(
+      EMAIL_OPT_IN_SESSION_KEY,
+      `${newOptInCheckedChoice}`
+    );
   };
 
   return (
@@ -92,7 +83,24 @@ const FinishTeacherAccount: React.FunctionComponent<{
               {locale.stay_updated_email_opt_in_desc()}
             </BodyTwoText>
           </span>
+          <BodyThreeText className={style.emailOptInFootnote}>
+            {locale.stay_updated_email_opt_in_footnote()}
+          </BodyThreeText>
         </div>
+      </div>
+      <div className={style.finishSignUpButtonContainer}>
+        <Button
+          className={style.finishSignUpButton}
+          color={buttonColors.purple}
+          type="primary"
+          onClick={() => console.log('FINISH SIGN UP')}
+          text={locale.go_to_my_account()}
+          iconRight={{
+            iconName: 'arrow-right',
+            iconStyle: 'solid',
+            title: 'arrow-right',
+          }}
+        />
       </div>
     </div>
   );
