@@ -1,39 +1,37 @@
 import React from 'react';
 
+import locale from '@cdo/apps/signup/locale';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 
 import AccountCard from '../templates/account/AccountCard';
-// import i18n from '@cdo/locale';
 
-import styles from './accountType.module.scss';
-
-// import i18n from '@cdo/locale';
+import style from './accountType.module.scss';
 
 const AccountType: React.FunctionComponent = () => {
   return (
-    <main className={styles.wrapper}>
-      <div className={styles.contentContainer}>
+    <main className={style.wrapper}>
+      <div className={style.contentContainer}>
         <AccountBanner
-          heading="Create your free account"
-          desc="Start creating your free account by selecting the account type that best matches your needs."
+          heading={locale.create_your_free_account()}
+          desc={locale.create_your_free_account_desc()}
           showLogo={false}
         />
-        <div className={styles.cardContainer}>
+        <div className={style.cardContainer}>
           <AccountCard
             id={'student-card'}
             icon={'child-reaching'}
-            title="I'm a Student"
-            content="Explore our courses and activities, plus:"
-            buttonText="Sign up as a student"
+            title={locale.im_a_student()}
+            content={locale.explore_courses_and_activities()}
+            buttonText={locale.sign_up_as_a_student()}
             buttonType="primary"
             href="#"
           />
           <AccountCard
             id={'teacher-card'}
             icon={'person-chalkboard'}
-            title="I'm a Teacher"
-            content="All student account features, plus:"
-            buttonText="Sign up as a teacher"
+            title={locale.im_a_teacher()}
+            content={locale.all_student_account_features()}
+            buttonText={locale.sign_up_as_a_teacher()}
             buttonType="primary"
             href="#"
           />
