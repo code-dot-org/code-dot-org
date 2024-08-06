@@ -9,6 +9,6 @@ $(document).ready(() => {
   const usIp = getScriptData('usIp');
   ReactDOM.render(
     <FinishTeacherAccount usIp={usIp} />,
-    document.getElementById('root')
+    document.getElementById('finish-teacher-account-root')
   );
 });
