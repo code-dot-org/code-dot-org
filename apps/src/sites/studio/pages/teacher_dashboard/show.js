@@ -144,18 +144,7 @@ $(document).ready(function () {
       {!showV2TeacherDashboard ? (
         getV1TeacherDashboard()
       ) : (
-        <SectionNavigationRouter
-          studioUrlPrefix={scriptData.studioUrlPrefix}
-          sectionId={selectedSection.id}
-          sectionName={selectedSection.name}
-          studentCount={selectedSection.students.length}
-          coursesWithProgress={coursesWithProgress}
-          showAITutorTab={showAITutorTab}
-          sectionProviderName={sectionProviderName(
-            store.getState(),
-            selectedSection.id
-          )}
-        />
+        <SectionNavigationRouter sectionId={selectedSection.id} />
       )}
     </Provider>,
     document.getElementById('teacher-dashboard')
