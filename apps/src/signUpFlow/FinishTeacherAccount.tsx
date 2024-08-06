@@ -12,6 +12,22 @@ import Checkbox from '../componentLibrary/checkbox/Checkbox';
 
 import style from './finish-teacher-account.module.scss';
 
+const SIGN_UP_FLOW_SESSION_KEY = 'signUpFlow';
+
+const setSignUpDataValue = (key: string, value: string) => {
+  const currSignUpSessionData: string | null = sessionStorage.getItem(
+    SIGN_UP_FLOW_SESSION_KEY
+  );
+  const signUpSessionData: {[k: string]: string} = currSignUpSessionData
+    ? JSON.parse(currSignUpSessionData)
+    : {};
+  signUpSessionData[key] = value;
+  sessionStorage.setItem(
+    SIGN_UP_FLOW_SESSION_KEY,
+    JSON.stringify(signUpSessionData)
+  );
+};
+
 const FinishTeacherAccount: React.FunctionComponent<{
   usIp: boolean;
 }> = ({usIp}) => {
@@ -21,10 +37,13 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const onNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const newName = e.target.value;
     setName(newName);
+    setSignUpDataValue('name', newName);
   };
 
   const onEmailOptInChange = (): void => {
-    setEmailOptInChecked(!emailOptInChecked);
+    const newOptInCheckedChoice = !emailOptInChecked;
+    setEmailOptInChecked(newOptInCheckedChoice);
+    setSignUpDataValue('emailOptIn', `${newOptInCheckedChoice}`);
   };
 
   return (
