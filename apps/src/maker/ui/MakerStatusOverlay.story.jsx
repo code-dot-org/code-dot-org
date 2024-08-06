@@ -1,7 +1,7 @@
 import {action} from '@storybook/addon-actions';
 import React from 'react';
 
-import {APP_WIDTH, APP_HEIGHT} from '../../../../applab/constants';
+import {APP_WIDTH, APP_HEIGHT} from '../../applab/constants';
 
 import {UnconnectedMakerStatusOverlay} from './MakerStatusOverlay';
 

@@ -1,6 +1,6 @@
 /** @file Wrapper around Johnny-Five Piezo component to modify play() */
 import five from '@code-dot-org/johnny-five';
-import '../../../../../utils'; // For Function.prototype.inherits
+import '../../../utils'; // For Function.prototype.inherits
 
 /**
  * Wrap Johnny-Five's Piezo (buzzer/speaker) component to modify the arguments
