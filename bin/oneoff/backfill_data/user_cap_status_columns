@@ -28,7 +28,7 @@ success_status = options[:skip_update] ? 'skipped' : 'updated'
 update_progress_title = proc {"Processed[%c/%C]: |%W| #{success_status.capitalize}: #{total_successes}; Failed: #{total_failures}; %a"}
 progress_bar = ProgressBar.create(total: users.count, format: update_progress_title.call)
 
-log_path = CDO.dir('log', 'oneoff', "user_cap_state_columns_backfill_#{Time.now.utc.strftime('%Y%m%dT%H%M%S')}.csv")
+log_path = CDO.dir('log', 'oneoff', "user_cap_status_columns_backfill_#{Time.now.utc.strftime('%Y%m%dT%H%M%S')}.csv")
 FileUtils.mkdir_p File.dirname(log_path)
 log_csv = CSV.open(log_path, 'w', col_sep: ';', write_headers: true, headers: %w[status user_id message])
 
@@ -56,26 +56,26 @@ users.in_batches(of: batch_size) do |users_batch|
   cap_users = users_batch.
     select(
       :id,
-      :cap_state,
-      :cap_state_date,
-      "properties->>'$.child_account_compliance_state' AS original_cap_state",
-      "properties->>'$.child_account_compliance_state_last_updated' AS original_cap_state_date"
+      :cap_status,
+      :cap_status_date,
+      "properties->>'$.child_account_compliance_state' AS original_cap_status",
+      "properties->>'$.child_account_compliance_state_last_updated' AS original_cap_status_date"
     ).
-    where(cap_state: nil).
+    where(cap_status: nil).
     where("properties->>'$.child_account_compliance_state' IS NOT NULL").
     where("properties->>'$.child_account_compliance_state' != ''")
 
   cap_users.find_each do |user|
-    cap_state = user.original_cap_state == 's' ? Policies::ChildAccount::ComplianceState::LOCKED_OUT : user.original_cap_state
-    cap_state_date = user.original_cap_state_date.presence && DateTime.parse(user.original_cap_state_date).utc
+    cap_status = user.original_cap_status == 's' ? Policies::ChildAccount::ComplianceState::LOCKED_OUT : user.original_cap_status
+    cap_status_date = user.original_cap_status_date.presence && DateTime.parse(user.original_cap_status_date).utc
 
     if options[:skip_update]
-      user.assign_attributes(cap_state: cap_state, cap_state_date: cap_state_date)
+      user.assign_attributes(cap_status: cap_status, cap_status_date: cap_status_date)
     else
-      user.update_columns(cap_state: cap_state, cap_state_date: cap_state_date)
+      user.update_columns(cap_status: cap_status, cap_status_date: cap_status_date)
     end
 
-    log_operation.call(success_status, user, user.as_json(only: %i[cap_state cap_state_date]))
+    log_operation.call(success_status, user, user.as_json(only: %i[cap_status cap_status_date]))
   rescue StandardError => exception
     log_operation.call('failed', user, exception.inspect)
   end

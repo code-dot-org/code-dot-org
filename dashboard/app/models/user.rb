@@ -335,10 +335,10 @@ class User < ApplicationRecord
 
   # TODO(P20-1055): Remove in "CAP data migration Phase 2" once new CAP columns are populated
   before_save if: -> {property_changed?('child_account_compliance_state')} do
-    self.cap_state = child_account_compliance_state.presence
+    self.cap_status = child_account_compliance_state.presence
   end
   before_save if: -> {property_changed?('child_account_compliance_state_last_updated')} do
-    self.cap_state_date = child_account_compliance_state_last_updated.presence
+    self.cap_status_date = child_account_compliance_state_last_updated.presence
   end
 
   def save_email_preference
