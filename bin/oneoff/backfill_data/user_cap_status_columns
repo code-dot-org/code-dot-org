@@ -1,8 +1,14 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
 
 # This script migrates CAP (Child Account Policy) data from properties to separate indexed columns.
 
 require 'ruby-progressbar'
+require 'honeybadger/ruby'
+
+# Disable Honeybadger breadcrumbs to avoid memory leaks.
+Honeybadger.config.set(:'breadcrumbs.enabled', false)
+
 require_relative '../../../dashboard/config/environment'
 
 options = {skip_update: false}
@@ -32,20 +38,20 @@ log_path = CDO.dir('log', 'oneoff', "user_cap_status_columns_backfill_#{Time.now
 FileUtils.mkdir_p File.dirname(log_path)
 log_csv = CSV.open(log_path, 'w', col_sep: ';', write_headers: true, headers: %w[status user_id message])
 
-log_operation = proc do |status, user, message|
+log_operation = proc do |status, user_id, message = nil|
   case status
   when 'updated'
     total_successes += 1
-    progress_bar.log "[#{Time.now.utc.iso8601}] Successfully updated User[#{user.id}]: #{message}".green
+    progress_bar.log "[#{Time.now.utc.iso8601}] Successfully updated User[#{user_id}]"
   when 'skipped'
     total_successes += 1
-    progress_bar.log "[#{Time.now.utc.iso8601}] Skipped updating User[#{user.id}]: #{message}".yellow
+    progress_bar.log "[#{Time.now.utc.iso8601}] Skipped updating User[#{user_id}]"
   when 'failed'
     total_failures += 1
-    progress_bar.log "[#{Time.now.utc.iso8601}] Failed to update User[#{user.id}]: #{message}".red
+    progress_bar.log "[#{Time.now.utc.iso8601}] Failed to update User[#{user_id}]: #{message}".red
   end
 
-  log_csv.add_row [status, user.id, message]
+  log_csv.add_row [status, user_id, message]
   log_csv.flush
 
   progress_bar.format update_progress_title.call
@@ -54,30 +60,21 @@ end
 batch_size = 10_000
 users.in_batches(of: batch_size) do |users_batch|
   cap_users = users_batch.
-    select(
-      :id,
-      :cap_status,
-      :cap_status_date,
-      "properties->>'$.child_account_compliance_state' AS original_cap_status",
-      "properties->>'$.child_account_compliance_state_last_updated' AS original_cap_status_date"
-    ).
     where(cap_status: nil).
     where("properties->>'$.child_account_compliance_state' IS NOT NULL").
     where("properties->>'$.child_account_compliance_state' != ''")
 
-  cap_users.find_each do |user|
-    cap_status = user.original_cap_status == 's' ? Policies::ChildAccount::ComplianceState::LOCKED_OUT : user.original_cap_status
-    cap_status_date = user.original_cap_status_date.presence && DateTime.parse(user.original_cap_status_date).utc
-
-    if options[:skip_update]
-      user.assign_attributes(cap_status: cap_status, cap_status_date: cap_status_date)
-    else
-      user.update_columns(cap_status: cap_status, cap_status_date: cap_status_date)
+  cap_users.ids.each do |user_id|
+    unless options[:skip_update]
+      User.where(id: user_id).update_all <<-SQL.squish
+        cap_status = IF(properties->>'$.child_account_compliance_state' = 's', 'l', properties->>'$.child_account_compliance_state'),
+        cap_status_date = CAST(properties->>'$.child_account_compliance_state_last_updated' AS DATETIME)
+      SQL
     end
 
-    log_operation.call(success_status, user, user.as_json(only: %i[cap_status cap_status_date]))
+    log_operation.call(success_status, user_id)
   rescue StandardError => exception
-    log_operation.call('failed', user, exception.inspect)
+    log_operation.call('failed', user_id, exception.inspect)
   end
 
   progress_bar.progress += batch_size
