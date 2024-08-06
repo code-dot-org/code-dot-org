@@ -14,7 +14,7 @@ import Dialog, {
   Buttons,
   Confirm,
   Cancel,
-} from '@cdo/apps/templates/Dialog';
+} from '@cdo/apps/legacySharedComponents/Dialog';
 
 describe('AssetListItem', () => {
   var item;

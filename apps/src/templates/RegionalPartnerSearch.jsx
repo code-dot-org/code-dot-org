@@ -13,7 +13,7 @@ import {
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
-import Notification from '@cdo/apps/templates/Notification';
+import Notification from '@cdo/apps/sharedComponents/Notification';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {currentLocation} from '@cdo/apps/utils';
 

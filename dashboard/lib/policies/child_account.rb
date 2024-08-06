@@ -67,17 +67,11 @@ class Policies::ChildAccount
     user_state_policy = state_policy(user)
     return false unless user_state_policy
 
-    if user_state_policy[:name] == Cpa::NAME
-      # Accounts created before 5/26/2024 should have been locked upon creation,
-      # but they weren't because their state wasn't collected.
-      # To avoid immediate lockout after the state banner rollout,
-      # their lockout was postponed to the start of the "all-user lockout" phase.
-      return true if user.created_at < Cpa::CREATED_AT_EXCEPTION_DATE
-
-      # Due to a leaky bucket issue, roster-synced Google accounts weren't being locked out as intended.
-      # Therefore, it was decided to move their locking out to the "all-user lockout" phase.
-      return true if user.created_at < user_state_policy[:lockout_date] && user.authentication_options.any?(&:google?)
-    end
+    # Due to a leaky bucket issue, roster-synced Google accounts weren't being locked out as intended.
+    # Therefore, it was decided to move their locking out to the "all-user lockout" phase.
+    return true if user_state_policy[:name] == Cpa::NAME &&
+      user.created_at < user_state_policy[:lockout_date] &&
+      user.authentication_options.any?(&:google?)
 
     user.created_at < user_state_policy[:start_date]
   end

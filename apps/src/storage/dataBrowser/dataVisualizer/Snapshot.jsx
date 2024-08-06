@@ -5,8 +5,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import * as imageUtils from '@cdo/apps/imageUtils';
+import PendingButton from '@cdo/apps/legacySharedComponents/PendingButton';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import PendingButton from '@cdo/apps/templates/PendingButton';
 import {html2canvas} from '@cdo/apps/util/htmlToCanvasWrapper';
 import msg from '@cdo/locale';
 

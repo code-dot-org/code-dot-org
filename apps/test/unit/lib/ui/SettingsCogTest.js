@@ -4,6 +4,7 @@ import {Provider} from 'react-redux';
 
 import * as assets from '@cdo/apps/code-studio/assets';
 import JavalabDropdown from '@cdo/apps/javalab/components/JavalabDropdown';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import * as makerRedux from '@cdo/apps/lib/kits/maker/redux';
 import {renderMakerButton, SettingsCog} from '@cdo/apps/lib/ui/SettingsCog';
 import {
@@ -15,7 +16,6 @@ import {
 import pageConstantsReducer, {
   setPageConstants,
 } from '@cdo/apps/redux/pageConstants';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import msg from '@cdo/locale';
 
 describe('SettingsCog', () => {
