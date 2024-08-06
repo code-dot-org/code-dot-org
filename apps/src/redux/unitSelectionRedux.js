@@ -69,6 +69,7 @@ export const asyncLoadCoursesWithProgress = () => (dispatch, getState) => {
   }
 
   dispatch(startLoadingCoursesWithProgress());
+  console.log('lfm started loading courses');
 
   fetch(`/dashboardapi/section_courses/${selectedSection.id}`, {
     method: 'GET',
@@ -111,6 +112,7 @@ const initialState = {
 
 export default function unitSelection(state = initialState, action) {
   if (action.type === SET_COURSES) {
+    console.log('lfm SET_COURSES');
     let firstCourse = action.coursesWithProgress[0];
 
     const firstUnit = firstCourse ? firstCourse.units[0] : null;
@@ -123,6 +125,7 @@ export default function unitSelection(state = initialState, action) {
   }
 
   if (action.type === SET_SCRIPT) {
+    console.log('lfm SET_SCRIPT');
     return {
       ...state,
       scriptId: action.scriptId,
@@ -130,6 +133,7 @@ export default function unitSelection(state = initialState, action) {
   }
 
   if (action.type === START_LOADING_COURSES) {
+    console.log('lfm START_LOADING_COURSES');
     return {
       ...state,
       isLoadingCoursesWithProgress: true,
@@ -137,6 +141,7 @@ export default function unitSelection(state = initialState, action) {
   }
 
   if (action.type === FINISHED_LOADING_COURSES) {
+    console.log('lfm FINISHED_LOADING_COURSES');
     return {
       ...state,
       isLoadingCoursesWithProgress: false,

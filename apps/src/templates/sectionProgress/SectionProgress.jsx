@@ -62,10 +62,16 @@ class SectionProgress extends Component {
   }
 
   componentDidMount() {
-    loadUnitProgress(this.props.scriptId, this.props.sectionId);
+    if (this.props.scriptId) {
+      loadUnitProgress(this.props.scriptId, this.props.sectionId);
+    }
   }
 
   componentDidUpdate(prevProps) {
+    if (prevProps.scriptId !== this.props.scriptId) {
+      loadUnitProgress(this.props.scriptId, this.props.sectionId);
+    }
+
     if (this.levelDataInitialized() && !this.state.reportedInitialRender) {
       logToCloud.addPageAction(
         logToCloud.PageAction.SectionProgressRenderedWithData,
@@ -100,7 +106,6 @@ class SectionProgress extends Component {
 
   onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
-    loadUnitProgress(scriptId, this.props.sectionId);
 
     this.recordEvent('change_script', {
       old_script_id: this.props.scriptId,
