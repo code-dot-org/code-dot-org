@@ -92,7 +92,7 @@ export default function SchoolDataInputs({
           size="m"
         />
         {askForZip && (
-          <div className={style.schoolZipSearch}>
+          <div>
             <SchoolZipSearch
               fieldNames={{
                 schoolZip: fieldNames.schoolZip,
@@ -118,5 +118,4 @@ SchoolDataInputs.propTypes = {
   usIp: PropTypes.bool,
   includeHeaders: PropTypes.bool,
   fieldNames: PropTypes.object,
-  overrideStyles: PropTypes.object,
 };
