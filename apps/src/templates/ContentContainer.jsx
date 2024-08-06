@@ -5,10 +5,9 @@ import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
 
+import FontAwesome from '../legacySharedComponents/FontAwesome';
 import styleConstants from '../styleConstants';
 import color from '../util/color';
-
-import FontAwesome from './FontAwesome';
 
 import moduleStyles from './content-container.module.scss';
 

@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 
 import {MAKER_DEPRECATION_SUPPORT_URL} from '@cdo/apps/lib/kits/maker/util/makerConstants';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import Notification, {
+  NotificationType,
+} from '@cdo/apps/sharedComponents/Notification';
 import i18n from '@cdo/locale';
 
 import shapes from './studioHomepages/shapes';
