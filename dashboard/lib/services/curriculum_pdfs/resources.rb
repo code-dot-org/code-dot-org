@@ -98,8 +98,9 @@ module Services
               "temporary directory contents: #{Dir.entries(pdfs_dir).inspect}",
               color: 'red'
             )
+            # !subteam^S07FB3XSAR5 - would notify the teacher-tools-on-call group
             ChatClient.log(
-              "<@teacher-tools-on-call> Please follow instructions in https://docs.google.com/document/d/1mBY56DeAzrwTM3CVIOFho3azTi9mudE37ZQrVZXxaMA/edit#heading=h.axfu5or8cueg to troubleshoot",
+              "<!subteam^S07FB3XSAR5> Please follow instructions in https://docs.google.com/document/d/1mBY56DeAzrwTM3CVIOFho3azTi9mudE37ZQrVZXxaMA/edit#heading=h.axfu5or8cueg to troubleshoot",
               color: 'red'
             )
             raise exception
@@ -221,8 +222,9 @@ module Services
             color: 'yellow'
           )
 
+          # !subteam^S07FB3XSAR5 - would notify the teacher-tools-on-call group
           ChatClient.log(
-            "<@teacher-tools-on-call> Please follow instructions in https://docs.google.com/document/d/1mBY56DeAzrwTM3CVIOFho3azTi9mudE37ZQrVZXxaMA/edit#heading=h.axfu5or8cueg to troubleshoot",
+            "<!subteam^S07FB3XSAR5> Please follow instructions in https://docs.google.com/document/d/1mBY56DeAzrwTM3CVIOFho3azTi9mudE37ZQrVZXxaMA/edit#heading=h.axfu5or8cueg to troubleshoot",
             color: 'yellow'
           )
           return nil
