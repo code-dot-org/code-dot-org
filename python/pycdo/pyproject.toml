@@ -11,6 +11,7 @@ dependencies = [
     "boto3",
     "numpy",
     "openai",
+    "llm-guard>=0.3.14",
 ]
 
 [tool.pytest.ini_options]
