@@ -7,9 +7,9 @@ import {
   Heading3,
   Heading4,
 } from '@cdo/apps/componentLibrary/typography';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
+import {pegasus} from '@cdo/apps/util/urlHelpers';
 import i18n from '@cdo/locale';
 import facilitatorLedPlBanner from '@cdo/static/facilitatorLedPlBanner.png';
 import selfPacedPlBanner from '@cdo/static/selfPacedPlBanner.png';

@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import React, {useState, useCallback} from 'react';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import ControlledFieldGroup from '@cdo/apps/templates/certificates/petition/ControlledFieldGroup';
 import {
   keyValidation,
@@ -13,6 +12,7 @@ import {
   getAgeSafeData,
   professionOptions,
 } from '@cdo/apps/templates/certificates/petition/petitionHelpers';
+import {pegasus} from '@cdo/apps/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 const PetitionForm = ({tutorial}) => {

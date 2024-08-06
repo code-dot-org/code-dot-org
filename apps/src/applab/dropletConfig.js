@@ -2,8 +2,8 @@ import $ from 'jquery';
 
 import * as audioApi from '@cdo/apps/code-studio/audioApi';
 import audioApiDropletConfig from '@cdo/apps/code-studio/audioApiDropletConfig';
+import * as timeoutApi from '@cdo/apps/code-studio/timeoutApi';
 import * as makerApi from '@cdo/apps/lib/kits/maker/api';
-import * as timeoutApi from '@cdo/apps/lib/util/timeoutApi';
 import {getTables, getColumns} from '@cdo/apps/storage/getColumnDropdown';
 
 import getAssetDropdown from '../assetManagement/getAssetDropdown';

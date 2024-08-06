@@ -4,10 +4,10 @@ import React, {Component} from 'react';
 import msg from '@cdo/locale';
 
 import project from '../code-studio/initApp/project';
-import UserPreferences from '../lib/util/UserPreferences';
 import logToCloud from '../logToCloud';
+import trackEvent from '../metrics/trackEvent';
 import {singleton as studioApp} from '../StudioApp';
-import trackEvent from '../util/trackEvent';
+import UserPreferences from '../util/UserPreferences';
 
 import {PaneButton} from './PaneHeader';
 

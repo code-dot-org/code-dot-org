@@ -7,8 +7,8 @@ import {
 } from '@cdo/apps/code-studio/announcementsRedux';
 import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import HelpTip from '@cdo/apps/legacySharedComponents/HelpTip';
 import Announcement from '@cdo/apps/lib/levelbuilder/announcementsEditor/Announcement';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import {NotificationType} from '@cdo/apps/templates/Notification';
 import {createUuid} from '@cdo/apps/utils';
 

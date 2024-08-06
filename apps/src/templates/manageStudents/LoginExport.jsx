@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {CSVLink} from 'react-csv';
 
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {pegasus} from '@cdo/apps/util/urlHelpers';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 

@@ -14,7 +14,7 @@ import {loadTextResponsesFromServer} from '@cdo/apps/templates/textResponses/tex
 import TextResponsesLessonSelector from '@cdo/apps/templates/textResponses/TextResponsesLessonSelector';
 import i18n from '@cdo/locale';
 
-import {h3Style} from '../../lib/ui/Headings';
+import {h3Style} from '../../legacySharedComponents/Headings';
 import color from '../../util/color';
 
 import TextResponsesTable from './TextResponsesTable';

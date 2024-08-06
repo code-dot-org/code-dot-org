@@ -8,7 +8,7 @@ import {connect} from 'react-redux';
 
 import i18n from '@cdo/locale';
 
-import trackEvent from '../../../util/trackEvent';
+import trackEvent from '../../../metrics/trackEvent';
 
 import {actions, selectors} from './redux';
 

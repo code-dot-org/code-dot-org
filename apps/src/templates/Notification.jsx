@@ -10,7 +10,7 @@ import firehoseClient from '@cdo/apps/metrics/utils/firehose';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 
-import trackEvent from '../util/trackEvent';
+import trackEvent from '../metrics/trackEvent';
 
 export const NotificationType = {
   default: 'default',

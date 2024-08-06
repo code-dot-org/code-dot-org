@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import HelpTip from '@cdo/apps/legacySharedComponents/HelpTip';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import color from '@cdo/apps/util/color';
 

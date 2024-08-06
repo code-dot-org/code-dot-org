@@ -23,6 +23,7 @@ import {getValidatedResult} from './containedLevels';
 import dom from './dom';
 import FeedbackBlocks from './feedbackBlocks';
 import {dataURIToBlob} from './imageUtils';
+import trackEvent from './metrics/trackEvent';
 import puzzleRatingUtils from './puzzleRatingUtils';
 import {getStore} from './redux';
 import ChallengeDialog from './templates/ChallengeDialog';
@@ -36,7 +37,6 @@ import {
   PUBLISH_SUCCESS,
   PUBLISH_FAILURE,
 } from './templates/projects/publishDialog/publishDialogRedux';
-import trackEvent from './util/trackEvent';
 import {createHiddenPrintWindow} from './utils';
 
 // Types of blocks that do not count toward displayed block count. Used

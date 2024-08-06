@@ -24,6 +24,7 @@ import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import CustomMarshalingInterpreter from '../../code-studio/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {TestResults} from '../../constants';
 import dom from '../../dom';
+import trackEvent from '../../metrics/trackEvent';
 import MusicController from '../../MusicController';
 import {getStore} from '../../redux';
 import Sounds from '../../Sounds';
@@ -31,7 +32,6 @@ import {singleton as studioApp} from '../../StudioApp';
 import AppView from '../../templates/AppView';
 import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
-import trackEvent from '../../util/trackEvent';
 import craftMsg from '../locale';
 
 import CraftVisualizationColumn from './CraftVisualizationColumn';

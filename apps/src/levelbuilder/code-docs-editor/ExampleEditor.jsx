@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import HelpTip from '@cdo/apps/legacySharedComponents/HelpTip';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
 
 import ImageInput from '../ImageInput';

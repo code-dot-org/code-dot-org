@@ -4,10 +4,10 @@ import React, {Component} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import {pegasus} from '@cdo/apps/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import color from '../util/color';

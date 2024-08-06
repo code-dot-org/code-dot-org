@@ -1,11 +1,11 @@
 import _ from 'lodash';
 import React from 'react';
 
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {
   ADD_A_PERSONAL_LOGIN_HELP_URL,
   RELEASE_OR_DELETE_RECORDS_EXPLANATION,
-} from '@cdo/apps/lib/util/urlHelpers';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+} from '@cdo/apps/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 export const TeacherWarning = () => {

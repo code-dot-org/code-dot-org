@@ -1,5 +1,5 @@
 import testImageAccess from '../code-studio/url_test';
-import trackEvent from '../util/trackEvent';
+import trackEvent from '../metrics/trackEvent';
 
 export async function measureVideoConnectivity() {
   const providers = {

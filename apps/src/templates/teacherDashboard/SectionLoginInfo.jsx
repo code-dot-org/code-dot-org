@@ -4,12 +4,12 @@ import {connect} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import fontConstants from '@cdo/apps/fontConstants';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {PrintLoginCardsButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import PrintLoginCards from '@cdo/apps/templates/manageStudents/PrintLoginCards';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstructions';
 import color from '@cdo/apps/util/color';
+import {pegasus} from '@cdo/apps/util/urlHelpers';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 

@@ -1,4 +1,4 @@
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {pegasus} from '@cdo/apps/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 const CSFExpress = {

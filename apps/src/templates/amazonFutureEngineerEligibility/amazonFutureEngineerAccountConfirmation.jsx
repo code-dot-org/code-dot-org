@@ -1,10 +1,10 @@
 import React from 'react';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
-import {studio, pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import color from '@cdo/apps/util/color';
+import {studio, pegasus} from '@cdo/apps/util/urlHelpers';
 
 const RETURN_TO = `user_return_to=${pegasus('/afe')}`;
 const SIGN_UP_URL = studio(

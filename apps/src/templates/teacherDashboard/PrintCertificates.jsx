@@ -3,9 +3,9 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/utils/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
+import RailsAuthenticityToken from '@cdo/apps/util/RailsAuthenticityToken';
 import i18n from '@cdo/locale';
 
 import style from './print-certificates.module.scss';

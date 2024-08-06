@@ -1,6 +1,6 @@
 import * as audioApi from '@cdo/apps/code-studio/audioApi';
 import audioApiDropletConfig from '@cdo/apps/code-studio/audioApiDropletConfig';
-import * as timeoutApi from '@cdo/apps/lib/util/timeoutApi';
+import * as timeoutApi from '@cdo/apps/code-studio/timeoutApi';
 import {getStore} from '@cdo/apps/redux';
 import color from '@cdo/apps/util/color';
 

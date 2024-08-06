@@ -13,6 +13,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import {Heading1} from '../../legacySharedComponents/Headings';
 import {
   importOrUpdateRoster,
   sectionCode,
@@ -23,8 +24,6 @@ import {
   syncEnabled,
 } from '../../templates/teacherDashboard/teacherSectionsRedux';
 import * as utils from '../../utils';
-
-import {Heading1} from './Headings';
 
 const SUPPORTED_PROVIDERS = [
   OAuthSectionTypes.clever,

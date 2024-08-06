@@ -13,7 +13,7 @@ import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginI
 import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
 import i18n from '@cdo/locale';
 
-import {Heading1} from '../../lib/ui/Headings';
+import {Heading1} from '../../legacySharedComponents/Headings';
 import firehoseClient from '../../metrics/utils/firehose';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';

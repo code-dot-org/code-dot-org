@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {NotificationResponsive} from '@cdo/apps/templates/Notification';
 import {
   InternationalGradeBandCards,
   ToolsCards,
   ToolsWidgetsCard,
 } from '@cdo/apps/util/courseBlockCardsConstants';
+import {pegasus} from '@cdo/apps/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import ContentContainer from '../ContentContainer';

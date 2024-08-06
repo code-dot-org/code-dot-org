@@ -15,8 +15,8 @@ import {getStore} from '@cdo/apps/redux';
 import {setIsRunning} from '@cdo/apps/redux/runState';
 import loadApplab from '@cdo/apps/sites/studio/pages/init/loadApplab';
 
+import {injectErrorHandler} from '../code-studio/javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
-import {injectErrorHandler} from '../lib/util/javascriptMode';
 import * as shareWarnings from '../shareWarnings';
 import Sounds from '../Sounds';
 import {singleton as studioApp} from '../StudioApp';

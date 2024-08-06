@@ -10,10 +10,10 @@ import {
 } from '@cdo/apps/componentLibrary/card';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import DCDO from '@cdo/apps/dcdo';
-import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import {PLATFORMS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import RailsAuthenticityToken from '@cdo/apps/util/RailsAuthenticityToken';
 import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 

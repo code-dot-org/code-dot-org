@@ -13,8 +13,8 @@ import {
   DeviceTypes,
   DeviceCompatibilityLevels,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import HelpTip from '@cdo/apps/legacySharedComponents/HelpTip';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import {
   translatedCourseOfferingCsTopics,
   translatedCourseOfferingSchoolSubjects,

@@ -5,10 +5,10 @@ import {connect} from 'react-redux';
 
 import {getCurrentId} from '@cdo/apps/code-studio/initApp/project';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import firehoseClient from '@cdo/apps/metrics/utils/firehose';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import {pegasus} from '@cdo/apps/util/urlHelpers';
 import msg from '@cdo/locale';
 
 import * as animationActions from './redux/animationList';

@@ -11,7 +11,7 @@ import i18n from '@cdo/locale';
 
 import {queryParams} from '../../code-studio/utils';
 import color from '../../util/color';
-import {studio, pegasus} from '../util/urlHelpers';
+import {studio, pegasus} from '../../util/urlHelpers';
 
 const RESEARCH_ARTICLE_URL =
   'https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536';

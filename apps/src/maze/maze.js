@@ -6,12 +6,12 @@ const React = require('react');
 const ReactDOM = require('react-dom');
 const Provider = require('react-redux').Provider;
 
+const timeoutList = require('../code-studio/timeoutList');
 const CustomMarshalingInterpreter =
   require('../code-studio/tools/jsinterpreter/CustomMarshalingInterpreter').default;
 const containedLevels = require('../containedLevels');
 const dom = require('../dom');
 const generateCodeAliases = require('../dropletUtils').generateCodeAliases;
-const timeoutList = require('../lib/util/timeoutList');
 const getStore = require('../redux').getStore;
 const studioApp = require('../StudioApp').singleton;
 const utils = require('../utils');

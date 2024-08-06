@@ -16,8 +16,8 @@ import {
   blobToDataURI,
   dataURIToSourceSize,
 } from '@cdo/apps/imageUtils';
+import trackEvent from '@cdo/apps/metrics/trackEvent';
 import firehoseClient from '@cdo/apps/metrics/utils/firehose';
-import trackEvent from '@cdo/apps/util/trackEvent';
 import {createUuid} from '@cdo/apps/utils';
 
 import {P5LabInterfaceMode} from '../constants';

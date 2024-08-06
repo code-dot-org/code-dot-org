@@ -2,7 +2,7 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import trackEvent from '../../util/trackEvent';
+import trackEvent from '../../metrics/trackEvent';
 
 // Similar UI exists in sharing.html.ejs. At some point int he future, it may
 // make sense to see if we can get rid of the stuff in the .ejs file

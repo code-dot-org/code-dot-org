@@ -5,8 +5,8 @@ import {connect} from 'react-redux';
 import ReactTooltip from 'react-tooltip';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import firehoseClient from '@cdo/apps/metrics/utils/firehose';
+import {pegasus} from '@cdo/apps/util/urlHelpers';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 

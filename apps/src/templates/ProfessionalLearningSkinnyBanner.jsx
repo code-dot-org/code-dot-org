@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {pegasus} from '@cdo/apps/util/urlHelpers';
 
 import './professionalLearningSkinnyBanner.scss';
 import bgDesktop from './images/superhero-banner-bg.png';

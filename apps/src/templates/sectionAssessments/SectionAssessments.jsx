@@ -19,7 +19,7 @@ import {
 import UnitSelector from '@cdo/apps/templates/sectionProgress/UnitSelector';
 import i18n from '@cdo/locale';
 
-import {h3Style} from '../../lib/ui/Headings';
+import {h3Style} from '../../legacySharedComponents/Headings';
 import firehoseClient from '../../metrics/utils/firehose';
 
 import AssessmentSelector from './AssessmentSelector';

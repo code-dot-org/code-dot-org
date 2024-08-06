@@ -4,9 +4,9 @@ import React, {Component} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
 import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import color from '@cdo/apps/util/color';
+import RailsAuthenticityToken from '@cdo/apps/util/RailsAuthenticityToken';
 
 import LessonEditorDialog from './LessonEditorDialog';
 

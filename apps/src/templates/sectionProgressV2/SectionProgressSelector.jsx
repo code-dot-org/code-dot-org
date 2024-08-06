@@ -6,11 +6,11 @@ import {connect} from 'react-redux';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import Link from '@cdo/apps/componentLibrary/link';
 import DCDO from '@cdo/apps/dcdo';
-import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import {setShowProgressTableV2} from '@cdo/apps/templates/currentUserRedux';
 import experiments from '@cdo/apps/util/experiments';
+import UserPreferences from '@cdo/apps/util/UserPreferences';
 import i18n from '@cdo/locale';
 
 import SectionProgress from '../sectionProgress/SectionProgress';

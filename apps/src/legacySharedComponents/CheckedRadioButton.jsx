@@ -2,6 +2,9 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import './checkedRadioButton.css';
 
+/**
+ * @deprecated use DSCO RadioButton instead
+ */
 export class CheckedRadioButton extends Component {
   static propTypes = {
     id: PropTypes.string,

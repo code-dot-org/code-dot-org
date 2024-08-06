@@ -13,7 +13,7 @@ import StandardsView from '@cdo/apps/templates/sectionProgress/standards/Standar
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import i18n from '@cdo/locale';
 
-import {h3Style} from '../../lib/ui/Headings';
+import {h3Style} from '../../legacySharedComponents/Headings';
 import firehoseClient from '../../metrics/utils/firehose';
 
 import LessonSelector from './LessonSelector';

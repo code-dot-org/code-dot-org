@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import color from '@cdo/apps/util/color';
+import {pegasus} from '@cdo/apps/util/urlHelpers';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 

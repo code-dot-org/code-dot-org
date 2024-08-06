@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {pegasus} from '@cdo/apps/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import ResourceCardResponsiveContainer from '../studioHomepages/ResourceCardResponsiveContainer';

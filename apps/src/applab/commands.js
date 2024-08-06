@@ -1,11 +1,11 @@
 import $ from 'jquery';
 
 import i18n from '@cdo/applab/locale';
+import {commands as mlCommands} from '@cdo/apps/ailab/mlApi';
 import {commands as audioCommands} from '@cdo/apps/code-studio/audioApi';
 import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
+import {commands as timeoutCommands} from '@cdo/apps/code-studio/timeoutApi';
 import * as makerCommands from '@cdo/apps/lib/kits/maker/commands';
-import {commands as mlCommands} from '@cdo/apps/lib/util/mlApi';
-import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
 import {rateLimit} from '@cdo/apps/storage/rateLimit';
 
 import * as assetPrefix from '../assetManagement/assetPrefix';
@@ -16,7 +16,7 @@ import {
   getAsyncOutputWarning,
   outputError,
   outputWarning,
-} from '../lib/util/javascriptMode';
+} from '../code-studio/javascriptMode';
 import logToCloud from '../logToCloud';
 import {getStore} from '../redux';
 import * as utils from '../utils';

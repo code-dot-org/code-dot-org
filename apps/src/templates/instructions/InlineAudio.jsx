@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 import firehoseClient from '@cdo/apps/metrics/utils/firehose';
 import {Voices} from '@cdo/generated-scripts/sharedVoices';
 
-import trackEvent from '../../util/trackEvent';
+import trackEvent from '../../metrics/trackEvent';
 
 import {AudioQueueContext} from './AudioQueue';
 

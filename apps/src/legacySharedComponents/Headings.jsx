@@ -1,10 +1,13 @@
-/** @file Reusable heading components for the 2017 dashboard redesign */
+/**
+ * @file Reusable heading components for the 2017 dashboard redesign
+ * @deprecated Use DSCO Typography instead
+ */
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
 
-import color from '../../util/color';
+import color from '../util/color';
 
 const baseHeadingStyle = {
   display: 'block',

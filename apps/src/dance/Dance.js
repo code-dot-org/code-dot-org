@@ -19,6 +19,7 @@ import project from '../code-studio/initApp/project';
 import CustomMarshalingInterpreter from '../code-studio/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {TestResults} from '../constants';
 import logToCloud from '../logToCloud';
+import trackEvent from '../metrics/trackEvent';
 import {EVENTS} from '../metrics/utils/AnalyticsConstants';
 import analyticsReporter from '../metrics/utils/AnalyticsReporter';
 import {getStore} from '../redux';
@@ -28,7 +29,6 @@ import {
   captureThumbnailFromCanvas,
   setThumbnailBlobFromCanvas,
 } from '../util/thumbnail';
-import trackEvent from '../util/trackEvent';
 
 import {DANCE_AI_SOUNDS} from './ai/constants';
 import {ASSET_BASE, DancelabReservedWords} from './constants';

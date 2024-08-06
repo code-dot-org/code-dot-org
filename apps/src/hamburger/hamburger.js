@@ -3,7 +3,7 @@ import {
   userAlreadyReportedAbuse,
 } from '@cdo/apps/reportAbuse';
 
-import trackEvent from '../util/trackEvent';
+import trackEvent from '../metrics/trackEvent';
 
 export const initHamburger = function () {
   $(document).ready(function () {

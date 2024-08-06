@@ -13,8 +13,8 @@ import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import msg from '@cdo/locale';
 
+import trackEvent from '../../metrics/trackEvent';
 import getScriptData from '../../util/getScriptData';
-import trackEvent from '../../util/trackEvent';
 import {getStore} from '../redux';
 
 import renderProjectNotFound from './renderProjectNotFound';

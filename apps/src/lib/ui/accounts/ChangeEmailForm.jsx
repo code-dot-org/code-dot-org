@@ -3,7 +3,7 @@ import React from 'react';
 
 import i18n from '@cdo/locale';
 
-import {pegasus} from '../../util/urlHelpers';
+import {pegasus} from '../../../util/urlHelpers';
 import {Field} from '../SystemDialog/SystemDialog';
 
 export default class ChangeEmailForm extends React.Component {

@@ -8,8 +8,8 @@ import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
+import trackEvent from '../metrics/trackEvent';
 import FallbackPlayerCaptionDialogLink from '../templates/FallbackPlayerCaptionDialogLink';
-import trackEvent from '../util/trackEvent';
 
 var clientState = require('./clientState');
 var testImageAccess = require('./url_test');

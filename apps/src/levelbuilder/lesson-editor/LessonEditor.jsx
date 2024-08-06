@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import HelpTip from '@cdo/apps/legacySharedComponents/HelpTip';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import ActivitiesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitiesEditor';
@@ -26,7 +27,6 @@ import {
   standardShape,
 } from '@cdo/apps/lib/levelbuilder/shapes';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 

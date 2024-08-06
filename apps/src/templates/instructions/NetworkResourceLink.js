@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {metaTagDescription} from '../../lib/util/urlHelpers';
+import {metaTagDescription} from '../../util/urlHelpers';
 
 import ResourceLink from './ResourceLink';
 

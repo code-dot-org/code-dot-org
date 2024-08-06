@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {pegasus} from '@cdo/apps/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import BaseDialog from './BaseDialog';

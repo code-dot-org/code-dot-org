@@ -1,7 +1,7 @@
 import {executors as audioExecutors} from '../code-studio/audioApi';
+import {executors as timeoutExecutors} from '../code-studio/timeoutApi';
 import * as dontMarshalApi from '../dontMarshalApi';
 import {dropletGlobalConfigBlocks} from '../dropletUtils';
-import {executors as timeoutExecutors} from '../lib/util/timeoutApi';
 
 import * as api from './api';
 

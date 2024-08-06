@@ -3,8 +3,8 @@ import React, {useCallback} from 'react';
 import {connect} from 'react-redux';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
+import UserPreferences from '@cdo/apps/util/UserPreferences';
 import i18n from '@cdo/locale';
 
 const FAMILY_NAME = 'familyName';

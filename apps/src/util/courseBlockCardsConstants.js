@@ -1,4 +1,4 @@
-import {pegasus, studio} from '@cdo/apps/lib/util/urlHelpers';
+import {pegasus, studio} from '@cdo/apps/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 export const TeacherGradeBandCards = [

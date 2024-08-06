@@ -2,9 +2,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import Notification from '@cdo/apps/templates/Notification';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {studio} from '@cdo/apps/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 export default function JoinSectionNotifications({

@@ -3,8 +3,8 @@ import React, {Component} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import color from '@cdo/apps/util/color';
+import {pegasus} from '@cdo/apps/util/urlHelpers';
 
 import styleConstants from '../../styleConstants';
 import SchoolInfoInputs from '../SchoolInfoInputs';

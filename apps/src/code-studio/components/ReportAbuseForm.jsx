@@ -9,7 +9,7 @@ import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import msg from '@cdo/locale';
 
-import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
+import RailsAuthenticityToken from '../../util/RailsAuthenticityToken';
 
 /**
  * A component containing some text/links for projects that have had abuse

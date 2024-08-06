@@ -62,6 +62,7 @@ import {
 } from './lib/kits/maker/dropletConfig';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
 import WireframeButtons from './lib/ui/WireframeButtons';
+import trackEvent from './metrics/trackEvent';
 import firehoseClient from './metrics/utils/firehose';
 import puzzleRatingUtils from './puzzleRatingUtils';
 import {getStore} from './redux';
@@ -89,7 +90,6 @@ import ChallengeDialog from './templates/ChallengeDialog';
 import VersionHistory from './templates/VersionHistory';
 import color from './util/color';
 import KeyHandler from './util/KeyHandler';
-import trackEvent from './util/trackEvent';
 import * as utils from './utils';
 import {parseElement as parseXmlElement} from './xml';
 

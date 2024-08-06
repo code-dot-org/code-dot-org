@@ -1,5 +1,5 @@
+import trackEvent from '@cdo/apps/metrics/trackEvent';
 import {getStore} from '@cdo/apps/redux';
-import trackEvent from '@cdo/apps/util/trackEvent';
 import msg from '@cdo/poetry/locale';
 
 import {P5LabType} from '../constants';

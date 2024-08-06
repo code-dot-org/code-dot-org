@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -11,6 +10,7 @@ import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstr
 import {sectionProviderName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import color from '@cdo/apps/util/color';
+import {pegasus} from '@cdo/apps/util/urlHelpers';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 

@@ -1,6 +1,6 @@
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
+import RailsAuthenticityToken from '@cdo/apps/util/RailsAuthenticityToken';
 
 // Stub the DOM-dependent behavior of the RailsAuthenticityToken component, so
 // we don't have to actually build meta tags in our tests.

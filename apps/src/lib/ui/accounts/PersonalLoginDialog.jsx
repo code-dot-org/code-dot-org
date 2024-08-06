@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {ADD_A_PERSONAL_LOGIN_HELP_URL} from '@cdo/apps/lib/util/urlHelpers';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
+import {ADD_A_PERSONAL_LOGIN_HELP_URL} from '@cdo/apps/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import {Header, ConfirmCancelFooter} from '../SystemDialog/SystemDialog';

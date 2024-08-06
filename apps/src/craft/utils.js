@@ -1,5 +1,5 @@
 import * as craftRedux from '@cdo/apps/craft/redux';
-import trackEvent from '@cdo/apps/util/trackEvent';
+import trackEvent from '@cdo/apps/metrics/trackEvent';
 
 import i18n from './locale';
 

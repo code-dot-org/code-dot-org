@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import ResourceCard from '@cdo/apps/templates/studioHomepages/ResourceCard';
 import ResourceCardResponsiveContainer from '@cdo/apps/templates/studioHomepages/ResourceCardResponsiveContainer';
+import {pegasus} from '@cdo/apps/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 const CARDS = [

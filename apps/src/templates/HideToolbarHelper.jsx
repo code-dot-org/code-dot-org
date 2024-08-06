@@ -5,7 +5,7 @@ import React from 'react';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import msg from '@cdo/locale';
 
-import trackEvent from '../util/trackEvent';
+import trackEvent from '../metrics/trackEvent';
 
 // Note that additional styling can be found in apps/style/HideToolbarHelper.scss.
 

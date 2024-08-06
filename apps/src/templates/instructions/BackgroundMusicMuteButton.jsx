@@ -7,12 +7,12 @@ import {setMuteMusic, SignInState} from '@cdo/apps/templates/currentUserRedux';
 import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import i18n from '@cdo/locale';
 
-import UserPreferences from '../../lib/util/UserPreferences';
 import {
   muteCookieValue,
   setMuteCookie,
   removeMuteCookie,
 } from '../../util/muteCookieHelpers';
+import UserPreferences from '../../util/UserPreferences';
 
 function BackgroundMusicMuteButton({
   className,

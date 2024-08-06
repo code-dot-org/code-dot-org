@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import trackEvent from '@cdo/apps/metrics/trackEvent';
 import {dismissSwipeOverlay} from '@cdo/apps/templates/arrowDisplayRedux';
-import trackEvent from '@cdo/apps/util/trackEvent';
 
 const HideSwipeOverlayCookieName = 'hide_swipe_overlay';
 

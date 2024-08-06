@@ -4,7 +4,7 @@ import javalabMsg from '@cdo/javalab/locale';
 
 import {NeighborhoodSignalType, STATUS_MESSAGE_PREFIX} from '../constants';
 
-const timeoutList = require('@cdo/apps/lib/util/timeoutList');
+const timeoutList = require('@cdo/apps/code-studio/timeoutList');
 const Slider = require('@cdo/apps/slider');
 
 const Direction = tiles.Direction;

@@ -5,7 +5,7 @@ import {
   announcementShape,
   VisibilityType,
 } from '@cdo/apps/code-studio/announcementsRedux';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import HelpTip from '@cdo/apps/legacySharedComponents/HelpTip';
 import {NotificationType} from '@cdo/apps/templates/Notification';
 
 export default class Announcement extends Component {

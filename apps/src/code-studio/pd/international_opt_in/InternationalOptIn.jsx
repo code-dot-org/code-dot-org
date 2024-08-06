@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Row, Col, ControlLabel, FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {pegasus} from '@cdo/apps/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import FormComponent from '../form_components/FormComponent';

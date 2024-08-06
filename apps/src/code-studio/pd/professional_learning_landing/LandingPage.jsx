@@ -8,7 +8,6 @@ import {connect, useDispatch} from 'react-redux';
 import Tabs from '@cdo/apps/componentLibrary/tabs';
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
 import DCDO from '@cdo/apps/dcdo';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import HeaderBannerNoImage from '@cdo/apps/templates/HeaderBannerNoImage';
@@ -26,6 +25,7 @@ import {
   asyncLoadCoteacherInvite,
   hiddenPlSectionIds,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {pegasus} from '@cdo/apps/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import {queryParams, updateQueryParam} from '../../utils';

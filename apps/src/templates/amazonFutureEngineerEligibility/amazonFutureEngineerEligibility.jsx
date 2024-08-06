@@ -2,12 +2,12 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {FormGroup, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
-import {studio, pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
 import color from '@cdo/apps/util/color';
 import {isEmail} from '@cdo/apps/util/formatValidation';
+import {studio, pegasus} from '@cdo/apps/util/urlHelpers';
 
 import FieldGroup from '../../code-studio/pd/form_components/FieldGroup';
 

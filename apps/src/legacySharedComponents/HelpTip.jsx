@@ -1,10 +1,13 @@
+/**
+ * @deprecated Use DSCO Tooltip instead
+ */
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Portal} from 'react-portal';
 import ReactTooltip from 'react-tooltip';
 
-import FontAwesome from '../../templates/FontAwesome';
+import FontAwesome from '../templates/FontAwesome';
 
 export default function HelpTip({children}) {
   const id = _.uniqueId();

@@ -16,12 +16,12 @@ import {trySetLocalStorage} from '@cdo/apps/utils';
 
 import CustomMarshalingInterpreter from '../../code-studio/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {TestResults} from '../../constants';
+import trackEvent from '../../metrics/trackEvent';
 import {getStore} from '../../redux';
 import Sounds from '../../Sounds';
 import AppView from '../../templates/AppView';
 import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
-import trackEvent from '../../util/trackEvent';
 
 var Provider = require('react-redux').Provider;
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import {studio} from '@cdo/apps/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import color from '../../util/color';

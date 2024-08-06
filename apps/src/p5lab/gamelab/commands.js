@@ -1,13 +1,13 @@
 /** @file Non-p5 GameLab commands */
 import {commands as audioCommands} from '@cdo/apps/code-studio/audioApi';
-import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
+import {commands as timeoutCommands} from '@cdo/apps/code-studio/timeoutApi';
 import {rateLimit} from '@cdo/apps/storage/rateLimit';
 import {singleton as studioApp} from '@cdo/apps/StudioApp';
 
 import {
   getAsyncOutputWarning,
   outputError,
-} from '../../lib/util/javascriptMode';
+} from '../../code-studio/javascriptMode';
 
 /*
   The 'commands' file assembles a set of calls that student code can make

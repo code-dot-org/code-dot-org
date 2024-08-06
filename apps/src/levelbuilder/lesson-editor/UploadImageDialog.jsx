@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import HelpTip from '@cdo/apps/legacySharedComponents/HelpTip';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import i18n from '@cdo/locale';
 

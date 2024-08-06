@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
+import HelpTip from '@cdo/apps/legacySharedComponents/HelpTip';
 import CourseTypeEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseTypeEditor';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
 export default function NewCourseFields(props) {
   const [selectedFamilyName, setSelectedFamilyName] = useState('');

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import logToCloud from '../../logToCloud';
+import logToCloud from '../logToCloud';
 
 /**
  * React component that renders a hidden input populated with the name and

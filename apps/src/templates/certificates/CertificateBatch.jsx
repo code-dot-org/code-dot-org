@@ -6,8 +6,8 @@ import {
   Heading3,
   Heading4,
 } from '@cdo/apps/componentLibrary/typography';
-import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import RailsAuthenticityToken from '@cdo/apps/util/RailsAuthenticityToken';
 import i18n from '@cdo/locale';
 
 import style from './certificate_batch.module.scss';

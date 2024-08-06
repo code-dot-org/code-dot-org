@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 
+import HelpTip from '@cdo/apps/legacySharedComponents/HelpTip';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
+import RailsAuthenticityToken from '@cdo/apps/util/RailsAuthenticityToken';
 
 const NewDataDocForm = () => {
   const [dataDocContent, setDataDocContent] = useState('');

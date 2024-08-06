@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {
   getSelectedScriptFriendlyName,
   getSelectedScriptDescription,
@@ -14,6 +13,7 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {getCurrentUnitData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import {sectionName} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import color from '@cdo/apps/util/color';
+import {pegasus} from '@cdo/apps/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import {unitDataPropType} from '../sectionProgressConstants';

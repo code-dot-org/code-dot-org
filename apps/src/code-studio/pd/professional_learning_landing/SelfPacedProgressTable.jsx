@@ -7,7 +7,7 @@ import {
   BodyThreeText,
   BodyFourText,
 } from '@cdo/apps/componentLibrary/typography';
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import {studio} from '@cdo/apps/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import styles from './selfPacedProgressTable.module.scss';

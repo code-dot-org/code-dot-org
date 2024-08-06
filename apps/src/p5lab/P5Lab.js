@@ -4,12 +4,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
-import CustomMarshalingInterpreter from '@cdo/apps/code-studio/tools/jsinterpreter/CustomMarshalingInterpreter';
-import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
 import {
   outputError,
   injectErrorHandler,
-} from '@cdo/apps/lib/util/javascriptMode';
+} from '@cdo/apps/code-studio/javascriptMode';
+import CustomMarshalingInterpreter from '@cdo/apps/code-studio/tools/jsinterpreter/CustomMarshalingInterpreter';
+import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
 import experiments from '@cdo/apps/util/experiments';
 
 import {TOOLBOX_EDIT_MODE} from '../constants';
@@ -31,7 +31,7 @@ var consoleApi = require('@cdo/apps/consoleApi');
 var utils = require('@cdo/apps/utils');
 var dropletConfig = require('./gamelab/dropletConfig');
 var JSInterpreter = require('@cdo/apps/code-studio/tools/jsinterpreter/JSInterpreter');
-import * as apiTimeoutList from '@cdo/apps/lib/util/timeoutList';
+import * as apiTimeoutList from '@cdo/apps/code-studio/timeoutList';
 var JsInterpreterLogger = require('@cdo/apps/JsInterpreterLogger');
 var P5Wrapper = require('./P5Wrapper');
 var p5SpriteWrapper = require('./P5SpriteWrapper');

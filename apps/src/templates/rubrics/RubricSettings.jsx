@@ -15,10 +15,10 @@ import {
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import {setAiRubricsDisabled} from '@cdo/apps/templates/currentUserRedux';
+import UserPreferences from '@cdo/apps/util/UserPreferences';
 import i18n from '@cdo/locale';
 
 import {UNDERSTANDING_LEVEL_STRINGS_V2, TAB_NAMES} from './rubricHelpers';

@@ -7,8 +7,8 @@ import {
   SectionHeaders,
   TextFields,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import color from '@cdo/apps/util/color';
+import {pegasus} from '@cdo/apps/util/urlHelpers';
 
 import Spinner from '../../components/spinner';
 import {useRegionalPartner} from '../../components/useRegionalPartner';

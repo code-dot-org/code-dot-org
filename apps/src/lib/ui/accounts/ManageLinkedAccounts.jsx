@@ -10,7 +10,7 @@ import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import RailsAuthenticityToken from '../../util/RailsAuthenticityToken';
+import RailsAuthenticityToken from '../../../util/RailsAuthenticityToken';
 
 import BootstrapButton from './BootstrapButton';
 import lockImage from './images/lock.svg';

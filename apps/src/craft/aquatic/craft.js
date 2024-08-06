@@ -22,9 +22,9 @@ import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 
 import CustomMarshalingInterpreter from '../../code-studio/tools/jsinterpreter/CustomMarshalingInterpreter';
+import trackEvent from '../../metrics/trackEvent';
 import AppView from '../../templates/AppView';
 import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
-import trackEvent from '../../util/trackEvent';
 import craftMsg from '../locale';
 
 var Provider = require('react-redux').Provider;

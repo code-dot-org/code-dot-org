@@ -37,7 +37,7 @@ import {
   NotFundedSubjects,
   MustSuppressEmailSubjects,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import HelpTip from '@cdo/apps/legacySharedComponents/HelpTip';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 

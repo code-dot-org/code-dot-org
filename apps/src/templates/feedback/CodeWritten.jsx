@@ -4,7 +4,7 @@ import React from 'react';
 
 import msg from '@cdo/locale';
 
-import trackEvent from '../../util/trackEvent';
+import trackEvent from '../../metrics/trackEvent';
 
 class CodeWritten extends React.Component {
   static propTypes = {

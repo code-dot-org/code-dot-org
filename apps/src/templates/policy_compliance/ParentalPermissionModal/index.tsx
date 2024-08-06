@@ -12,7 +12,6 @@ import {
 } from 'react-bootstrap';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import parentalPermissionRequestReducer, {
   REQUEST_PARENTAL_PERMISSION_SUCCESS,
   ParentalPermissionRequest,
@@ -23,6 +22,7 @@ import parentalPermissionRequestReducer, {
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import Skeleton from '@cdo/apps/util/loadingSkeleton';
+import {studio} from '@cdo/apps/util/urlHelpers';
 import usePrevious from '@cdo/apps/util/usePrevious';
 import i18n from '@cdo/locale';
 import updateRequestImg from '@cdo/static/common_images/penguin/dancing.png';

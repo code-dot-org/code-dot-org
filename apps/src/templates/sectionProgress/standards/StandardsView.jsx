@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {getCurrentUnitData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import {pegasus} from '@cdo/apps/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import {unitDataPropType} from '../sectionProgressConstants';

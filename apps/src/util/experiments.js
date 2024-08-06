@@ -10,9 +10,8 @@ import Cookie from 'js-cookie';
 
 import DCDO from '@cdo/apps/dcdo';
 
+import trackEvent from '../metrics/trackEvent';
 import {trySetLocalStorage} from '../utils';
-
-import trackEvent from './trackEvent';
 
 const queryString = require('query-string');
 

@@ -7,8 +7,8 @@ import {PLATFORMS} from '@cdo/apps/metrics/utils/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import locale from '@cdo/locale';
 
-import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
 import color from '../../util/color';
+import RailsAuthenticityToken from '../../util/RailsAuthenticityToken';
 import BaseDialog from '../BaseDialog';
 
 import {classroomShape, loadErrorShape} from './shapes';
