@@ -8,7 +8,7 @@ import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
-import FontAwesome from '../FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 
 import AssignmentCompletionStatesBox from './AssignmentCompletionStatesBox';
 import LevelTypesBox from './LevelTypesBox';

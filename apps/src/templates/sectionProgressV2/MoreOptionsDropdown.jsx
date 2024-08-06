@@ -9,7 +9,7 @@ import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-import FontAwesome from '../FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import {
   collapseMetadataForStudents,
   expandMetadataForStudents,

@@ -14,9 +14,9 @@ import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpe
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import color from '../../util/color';
 import BaseDialog from '../BaseDialog';
-import FontAwesome from '../FontAwesome';
 
 import DialogFooter from './DialogFooter';
 import PrintCertificates from './PrintCertificates';

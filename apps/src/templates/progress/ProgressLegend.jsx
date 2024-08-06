@@ -5,7 +5,7 @@ import React, {Component} from 'react';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import FontAwesome from '../FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 
 import BubbleBadge, {BadgeType} from './BubbleBadge';
 import {

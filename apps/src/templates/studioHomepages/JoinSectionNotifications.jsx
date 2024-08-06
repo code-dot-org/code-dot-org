@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Notification from '@cdo/apps/templates/Notification';
+import Notification from '@cdo/apps/sharedComponents/Notification';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {studio} from '@cdo/apps/util/urlHelpers';
 import i18n from '@cdo/locale';

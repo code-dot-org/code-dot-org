@@ -29,7 +29,7 @@ import {DefaultLocale} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import Announcements from '../../code-studio/components/progress/Announcements';
-import FontAwesome from '../FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 
 import LessonStandards from './LessonStandards';
 import StyledCodeBlock from './StyledCodeBlock';

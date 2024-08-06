@@ -2,11 +2,11 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import {reducers} from '@cdo/apps/applab/redux/applab';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {registerReducers, restoreRedux, stubRedux} from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {UnconnectedTeacherDashboardHeader as TeacherDashboardHeader} from '@cdo/apps/templates/teacherDashboard/TeacherDashboardHeader';
 import i18n from '@cdo/locale';
 

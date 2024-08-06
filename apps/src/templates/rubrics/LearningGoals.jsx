@@ -9,9 +9,9 @@ import {
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {ai_rubric_cyan} from '@cdo/apps/util/color';
 import HttpClient from '@cdo/apps/util/HttpClient';

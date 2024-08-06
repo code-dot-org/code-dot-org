@@ -4,9 +4,9 @@ import React, {useCallback, useEffect, useState, useRef} from 'react';
 import Draggable from 'react-draggable';
 
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';

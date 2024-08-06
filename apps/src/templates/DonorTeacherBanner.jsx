@@ -6,7 +6,9 @@ import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import Notification, {
+  NotificationType,
+} from '@cdo/apps/sharedComponents/Notification';
 import {pegasus} from '@cdo/apps/util/urlHelpers';
 import i18n from '@cdo/locale';
 

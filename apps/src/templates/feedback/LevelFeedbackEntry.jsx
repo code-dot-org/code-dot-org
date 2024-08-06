@@ -3,9 +3,9 @@ import React, {useState, useEffect, useRef} from 'react';
 import ReactDOM from 'react-dom';
 
 import fontConstants from '@cdo/apps/fontConstants';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import firehoseClient from '@cdo/apps/metrics/utils/firehose';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {KeepWorkingBadge} from '@cdo/apps/templates/progress/BubbleBadge';
 import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
 import color from '@cdo/apps/util/color';

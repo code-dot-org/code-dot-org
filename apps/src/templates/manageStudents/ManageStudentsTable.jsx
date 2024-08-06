@@ -26,7 +26,9 @@ import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import Button from '../../legacySharedComponents/Button';
-import Notification, {NotificationType} from '../Notification';
+import Notification, {
+  NotificationType,
+} from '../../sharedComponents/Notification';
 import SafeMarkdown from '../SafeMarkdown';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import wrappedSortable from '../tables/wrapped_sortable';

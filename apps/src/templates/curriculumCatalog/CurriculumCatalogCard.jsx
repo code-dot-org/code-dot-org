@@ -9,6 +9,7 @@ import {
   buttonColors,
   LinkButton,
 } from '@cdo/apps/componentLibrary/button';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import CardLabels from '@cdo/apps/templates/curriculumCatalog/CardLabels';
@@ -17,7 +18,6 @@ import {
   SignInToAssignSectionsDialog,
   UpgradeAccountToAssignSectionsDialog,
 } from '@cdo/apps/templates/curriculumCatalog/noSectionsToAssignDialogs';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import MultipleSectionsAssigner from '@cdo/apps/templates/MultipleSectionsAssigner';
 import {
   translatedCourseOfferingCsTopics,

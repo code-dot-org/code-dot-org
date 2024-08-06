@@ -5,8 +5,8 @@ import {connect} from 'react-redux';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import firehoseClient from '@cdo/apps/metrics/utils/firehose';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
 import LessonGroupInfo from '@cdo/apps/templates/progress/LessonGroupInfo';
 import LessonGroupInfoDialog from '@cdo/apps/templates/progress/LessonGroupInfoDialog';

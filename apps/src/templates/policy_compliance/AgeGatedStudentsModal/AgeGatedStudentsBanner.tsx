@@ -6,7 +6,9 @@ import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import {RootState} from '@cdo/apps/types/redux';
 import i18n from '@cdo/locale';
 
-import Notification, {NotificationType} from '../../Notification';
+import Notification, {
+  NotificationType,
+} from '../../../sharedComponents/Notification';
 
 import AgeGatedStudentsModal from './AgeGatedStudentsModal';
 

@@ -9,7 +9,7 @@ import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
-import FontAwesome from '../FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import {
   collapseMetadataForStudents,
   expandMetadataForStudents,

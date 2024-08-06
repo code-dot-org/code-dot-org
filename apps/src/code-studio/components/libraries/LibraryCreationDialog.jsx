@@ -4,9 +4,9 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
+import Dialog, {Body} from '@cdo/apps/legacySharedComponents/Dialog';
 import {Heading1, Heading2} from '@cdo/apps/legacySharedComponents/Headings';
 import {getStore} from '@cdo/apps/redux';
-import Dialog, {Body} from '@cdo/apps/templates/Dialog';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';

@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import logToCloud from '@cdo/apps/logToCloud';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ProgressTableView from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableView';
 import SectionProgressToggle from '@cdo/apps/templates/sectionProgress/SectionProgressToggle';
 import StandardsView from '@cdo/apps/templates/sectionProgress/standards/StandardsView';

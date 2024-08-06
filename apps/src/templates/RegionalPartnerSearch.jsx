@@ -12,7 +12,7 @@ import {
   ActiveCourseWorkshops,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import Notification from '@cdo/apps/templates/Notification';
+import Notification from '@cdo/apps/sharedComponents/Notification';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {studio} from '@cdo/apps/util/urlHelpers';
 import {currentLocation} from '@cdo/apps/utils';

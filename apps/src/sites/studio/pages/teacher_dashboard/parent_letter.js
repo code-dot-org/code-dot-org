@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import ParentLetter from '@cdo/apps/lib/ui/ParentLetter';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setCurrentUserName,
 } from '@cdo/apps/templates/currentUserRedux';
+import ParentLetter from '@cdo/apps/templates/teacherDashboard/ParentLetter';
 import teacherSections, {
   selectSection,
   setSections,

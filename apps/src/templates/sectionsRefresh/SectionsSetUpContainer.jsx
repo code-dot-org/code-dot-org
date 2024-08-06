@@ -15,7 +15,9 @@ import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import Notification, {
+  NotificationType,
+} from '@cdo/apps/sharedComponents/Notification';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
 import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';

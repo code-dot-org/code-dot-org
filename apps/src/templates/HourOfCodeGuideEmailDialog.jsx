@@ -6,7 +6,7 @@ import Button, {buttonColors} from '@cdo/apps/componentLibrary/button/Button';
 import {Heading2, Heading3} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
-import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
+import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import i18n from '@cdo/locale';
 

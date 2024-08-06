@@ -5,7 +5,7 @@ import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import {CheckedRadioButton} from '@cdo/apps/lib/ui/CheckedRadioButton';
+import {CheckedRadioButton} from '@cdo/apps/legacySharedComponents/CheckedRadioButton';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 

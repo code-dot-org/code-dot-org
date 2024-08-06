@@ -12,6 +12,7 @@ import {
   CurriculumUmbrella,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
+import Dialog from '@cdo/apps/legacySharedComponents/Dialog';
 import HelpTip from '@cdo/apps/legacySharedComponents/HelpTip';
 import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
@@ -27,7 +28,6 @@ import {
   init,
   mapLessonGroupDataForEditor,
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
-import Dialog from '@cdo/apps/templates/Dialog';
 import MultiCheckboxSelector from '@cdo/apps/templates/MultiCheckboxSelector';
 import color from '@cdo/apps/util/color';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';

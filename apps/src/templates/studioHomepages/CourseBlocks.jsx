@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-import {NotificationResponsive} from '@cdo/apps/templates/Notification';
+import {NotificationResponsive} from '@cdo/apps/sharedComponents/Notification';
 import {
   InternationalGradeBandCards,
   ToolsCards,

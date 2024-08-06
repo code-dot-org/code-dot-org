@@ -3,8 +3,8 @@ import React, {Component} from 'react';
 import {CSVLink} from 'react-csv';
 import {connect} from 'react-redux';
 
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {
   asyncLoadAssessments,

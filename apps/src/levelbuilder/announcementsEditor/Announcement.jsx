@@ -6,7 +6,7 @@ import {
   VisibilityType,
 } from '@cdo/apps/code-studio/announcementsRedux';
 import HelpTip from '@cdo/apps/legacySharedComponents/HelpTip';
-import {NotificationType} from '@cdo/apps/templates/Notification';
+import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
 
 export default class Announcement extends Component {
   static propTypes = {

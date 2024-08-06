@@ -8,8 +8,8 @@ import {
 import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import HelpTip from '@cdo/apps/legacySharedComponents/HelpTip';
-import Announcement from '@cdo/apps/lib/levelbuilder/announcementsEditor/Announcement';
-import {NotificationType} from '@cdo/apps/templates/Notification';
+import Announcement from '@cdo/apps/levelbuilder/announcementsEditor/Announcement';
+import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
 import {createUuid} from '@cdo/apps/utils';
 
 export default class AnnouncementsEditor extends Component {

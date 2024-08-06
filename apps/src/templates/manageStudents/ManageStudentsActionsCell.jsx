@@ -12,8 +12,8 @@ import {navigateToHref} from '@cdo/apps/utils';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import color from '../../util/color';
-import FontAwesome from '../FontAwesome';
 import QuickActionsCell from '../tables/QuickActionsCell';
 
 import ConfirmRemoveStudentDialog from './ConfirmRemoveStudentDialog';

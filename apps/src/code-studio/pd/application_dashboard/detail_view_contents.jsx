@@ -28,9 +28,9 @@ import {
   ValidScores as TeacherValidScores,
   PrincipalApprovalState,
 } from '@cdo/apps/generated/pd/teacherApplicationConstants';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 
 import {

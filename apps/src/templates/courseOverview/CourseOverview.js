@@ -11,10 +11,12 @@ import fontConstants from '@cdo/apps/fontConstants';
 import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import {EVENTS, PLATFORMS} from '@cdo/apps/metrics/utils/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/metrics/utils/AnalyticsReporter';
+import Notification, {
+  NotificationType,
+} from '@cdo/apps/sharedComponents/Notification';
 import styleConstants from '@cdo/apps/styleConstants';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
 import {
   assignmentCourseVersionShape,
