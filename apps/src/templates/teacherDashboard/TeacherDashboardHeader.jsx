@@ -5,23 +5,25 @@ import {connect} from 'react-redux';
 import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
 import Link from '@cdo/apps/componentLibrary/link';
 import DCDO from '@cdo/apps/dcdo';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {getStore} from '@cdo/apps/redux';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import {isProductionEnvironment} from '@cdo/apps/utils';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import Button from '../Button';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+import Notification, {
+  NotificationType,
+} from '../../sharedComponents/Notification';
 import DropdownButton from '../DropdownButton';
 import {
   convertStudentDataToArray,
   filterAgeGatedStudents,
   loadSectionStudentData,
 } from '../manageStudents/manageStudentsRedux';
-import Notification, {NotificationType} from '../Notification';
 import {AgeGatedStudentsBanner} from '../policy_compliance/AgeGatedStudentsModal/AgeGatedStudentsBanner';
 
-import FontAwesome from './../FontAwesome';
 import {switchToSection, recordSwitchToSection} from './sectionHelpers';
 import {
   asyncLoadCourseOfferings,

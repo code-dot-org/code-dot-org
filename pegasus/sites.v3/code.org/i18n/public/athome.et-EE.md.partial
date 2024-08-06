@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">Võtke sissejuhatav, iseenesest tempoga kursus</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">Mängu või rakenduse loomine</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">Proovige CS-i ilma arvutita („unplugged” ja mobiilivalikud)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Õpi CS Code.org meeskond ja erikülalised</a></li>
 </ul>
 
 <br>
@@ -283,56 +282,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Tere Ruby</a> - Maailma kõige veidrad viis õppida arvutid, tehnoloogia ja programmeerimine. Tegevused erinevatel CS teemadel, nagu võime laguneda probleem, kohapeal mustrid, mõelda algoritmiliselt, siluda probleeme ja töötada koos. (vanuses 4-10)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - kogumik tasuta õppematerjal, mis õpetab infotehnoloogia läbi kaasates mänge ja mõistatusi, mis kasutavad kaarte, string, värvipliiatsid ja palju töötab ringi. (vanuses 5-14)</li>
 </ul>
-
-<h2>Kodus pole arvutit? Proovige CS-i telefonis nende partnerite rakendustega</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Võluv mobiilne kodeerimine mäng, mis võtab õppijate põnev seiklus, samas õpetades põhialuste kodeerimine, nagu algoritmid, muster tuvastus, järjestused, silmad ja conditionals. <i>(igas vanuses)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="CodeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">CodesPark</h3></a>Auhinnatud õppe-to-koodi platvorm lastele vanuses 5-9. Lahenda mõistatusi ja luua mänge Foos õppimise ajal koodi. <strong>Märkus: CodesPark pakub tasuta 3-kuulist prooviversiooni. Vanema e-posti aadress ja krediitkaardi andmed on vajalikud registreerumisel.</strong> <i>(eelnevalt lugejad läbi Hinne 5)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[Tagasi üles]</a></p>
-
-<a id="livecoding"></a>
-<h2>Õppige Code.org meeskonnast ja erikülalistest!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="CodeBytes logo">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes on kergesti seeditavad, 20-minutilised interaktiivsed õppetunnid, mis segavad arvutiteadust reaalse maailma teemadega. Treeni AI lugeda viipekeelt, kujundada app hea, uurida maailma Minecraft, ja palju muud!</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Vaata episoode</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Kood Break">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">Kood Break</h3>
-        <div class="smalltext" style="">Hoidke infotehnoloogia lõbus võttes Code Break! Saate luua küpher Ashton Kutcher, õppida muutujaid Yara Shahidi, ja isegi uurida, kuidas Internet töötab tegelik leiutaja Internet, Vint Cerf!</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Hankige ühendus</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

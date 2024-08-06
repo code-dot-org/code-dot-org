@@ -826,21 +826,21 @@ en:
           description_teacher: ''
           version_title: ''
         3-5gamedesign-2024:
-          title: Elementary Game Design
+          title: Preparing to Teach Elementary Game Design
           description_short: ''
-          description_student: ''
+          description_student: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get familiar with Elementary Game Design! After completing this professional learning experience, **you'll be comfortable with basic game design concepts for elementary school students**.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
           description_teacher: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get familiar with Elementary Game Design! After completing this professional learning experience, **you'll be comfortable with basic game design concepts for elementary school students**.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
           version_title: ''
         microbitmakermodule-2024:
-          title: microbitmakermodule-2024
+          title: Preparing to Teach Maker with micro:bit
           description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_student: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get familiar with Maker with micro:bit! After completing this professional learning experience, **you'll be comfortable with basic coding and maker concepts**.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
+          description_teacher: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get familiar with Maker with micro:bit! After completing this professional learning experience, **you'll be comfortable with basic coding and maker concepts**.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
           version_title: ''
         elementaryai-2024:
-          title: How AI Makes Decisions
+          title: Preparing to Teach How AI Makes Decisions
           description_short: ''
-          description_student: ''
+          description_student: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get familiar with artificial intelligence (AI) and machine learning! After completing this professional learning experience, **you'll be comfortable with basic AI and machine learning concepts**.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
           description_teacher: "## Welcome\n\nWelcome to Code.org's free self-paced online learning for educators to get familiar with artificial intelligence (AI) and machine learning! After completing this professional learning experience, **you'll be comfortable with basic AI and machine learning concepts**.\n\n### Find the learning that works for you\n\n-   **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n-   **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
           version_title: ''
         self-paced-pl-computer-vision-2024:
@@ -861,6 +861,12 @@ en:
           description_student: ''
           description_teacher: ''
           version_title: "'24-'25"
+        tesselementaryai-2024:
+          title: tesselementaryai-2024
+          description_short: testing fix for getting started
+          description_student: testing fix for getting started
+          description_teacher: testing fix for getting started
+          version_title: ''
     resources:
       curriculum/csd/2017:
         name: Curriculum

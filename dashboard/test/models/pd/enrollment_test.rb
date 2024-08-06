@@ -93,7 +93,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
   test 'required field validations with country' do
     enrollment = Pd::Enrollment.new
     enrollment.first_name = 'FirstName'
-    enrollment.last_name = 'LastName'
     enrollment.email = 'teacher@example.net'
     assert enrollment.valid?
   end
@@ -254,20 +253,10 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     end
   end
 
-  test 'old enrollments with no last name are still valid' do
-    old_enrollment = create :pd_enrollment
-    old_enrollment.update!(created_at: '2016-11-09', last_name: '')
-    assert old_enrollment.valid?
-  end
-
-  test 'last name is required on new enrollments, create and update' do
-    e = assert_raises ActiveRecord::RecordInvalid do
-      create :pd_enrollment, last_name: ''
-    end
-    assert_includes(e.message, 'Validation failed: Last name is required')
-
+  test 'enrollments with no last name are still valid' do
     enrollment = create :pd_enrollment
-    refute enrollment.update(last_name: '')
+    enrollment.update!(last_name: '')
+    assert enrollment.valid?
   end
 
   test 'email must be unique on enrollments within a workshop' do
@@ -619,6 +608,16 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     assert_empty teacher.permissions
 
     workshop = create :workshop, course: Pd::SharedWorkshopConstants::COURSE_CSD
+    create :pd_enrollment, workshop: workshop, user: teacher
+
+    assert teacher.permission? UserPermission::AUTHORIZED_TEACHER
+  end
+
+  test 'Enrolling user in BYOW course makes them an authorized teacher' do
+    teacher = create :teacher
+    assert_empty teacher.permissions
+
+    workshop = create :workshop, course: Pd::SharedWorkshopConstants::COURSE_BUILD_YOUR_OWN
     create :pd_enrollment, workshop: workshop, user: teacher
 
     assert teacher.permission? UserPermission::AUTHORIZED_TEACHER

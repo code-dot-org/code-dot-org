@@ -64,6 +64,10 @@ experiments.SECTION_PROGRESS_V2 = 'section_progress_v2';
 experiments.BIG_PLAYSPACE = 'bigPlayspace';
 // Shows the new sign-up flow
 experiments.NEW_SIGN_UP_FLOW = 'new_sign_up_flow';
+// Allows teacher view of student chat history in aichat workspace
+experiments.VIEW_CHAT_HISTORY = 'view_chat_history';
+// Allows user to view the new version of the teacher navigation
+experiments.TEACHER_LOCAL_NAV_V2 = 'teacher-local-nav-v2';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

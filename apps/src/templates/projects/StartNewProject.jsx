@@ -4,8 +4,8 @@ import React from 'react';
 import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
 
+import Button from '../../legacySharedComponents/Button';
 import color from '../../util/color';
-import Button from '../Button';
 
 import NewProjectButtons from './NewProjectButtons';
 

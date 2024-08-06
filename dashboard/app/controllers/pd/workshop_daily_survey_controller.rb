@@ -101,7 +101,7 @@ module Pd
     # GET /pd/workshop_survey/post/:enrollment_code
     # If Build Your Own, redirect to its specific survey link. Otherwise, use Foorm.
     def new_post
-      course = get_workshop_by_enrollment_or_course_and_subject(enrollment_code: params[:enrollment_code], course: nil, subject: nil)&.course
+      course = Pd::Enrollment.find_by(code: params[:enrollment_code], user: current_user)&.workshop&.course
       if course == COURSE_BUILD_YOUR_OWN
         redirect_to CDO.studio_url SURVEY_LINKS[:COURSE_BUILD_YOUR_OWN_TEACHER], CDO.default_scheme
       else

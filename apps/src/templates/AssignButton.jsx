@@ -6,11 +6,10 @@ import {
   isScriptHiddenForSection,
   updateHiddenScript,
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import ConfirmHiddenAssignment from '@cdo/apps/templates/courseOverview/ConfirmHiddenAssignment';
 import {assignToSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
-
-import Button from './Button';
 
 class AssignButton extends React.Component {
   static propTypes = {

@@ -1,0 +1,53 @@
+%h2
+  =hoc_s(:"teach_labs_section.header")
+%p
+  =hoc_s(:"teach_labs_section.description")
+.action-block__wrapper.action-block__wrapper--three-col
+  .action-block.action-block--one-col.flex-space-between
+    .content-wrapper 
+      %p.overline=hoc_s(:"teach_labs_section.spritelab.overline")
+      %h3=hoc_s(:"teach_labs_section.spritelab.title")
+      %img{src: "/images/build-your-way-spritelab.png", alt: ""}
+      %p
+        %strong=hoc_s(:"teach_labs_section.label_what_you_can_make")
+        =hoc_s(:"teach_labs_section.spritelab.what_you_can_make")
+      %p
+        %strong=hoc_s(:"teach_labs_section.label_experience")
+        =hoc_s(:"teach_labs_section.spritelab.experience")
+    .content-footer 
+      %a.link-button{href: "/educate/spritelab", aria:{label: hoc_s(:"teach_labs_section.spritelab.aria_label_learn_more")}}
+        =hoc_s(:"teach_labs_section.spritelab.call_to_action_learn_more")
+      %a.link-button.secondary{href: CDO.studio_url("/projects/spritelab/new")}
+        =hoc_s(:"teach_labs_section.spritelab.call_to_action_try")
+  .action-block.action-block--one-col.flex-space-between
+    .content-wrapper 
+      %p.overline=hoc_s(:"teach_labs_section.gamelab.overline")
+      %h3=hoc_s(:"teach_labs_section.gamelab.title")
+      %img{src: "/images/game-lab-banner.png", alt: ""}
+      %p
+        %strong=hoc_s(:"teach_labs_section.label_what_you_can_make")
+        =hoc_s(:"teach_labs_section.gamelab.what_you_can_make")
+      %p
+        %strong=hoc_s(:"teach_labs_section.label_experience")
+        =hoc_s(:"teach_labs_section.gamelab.experience")
+    .content-footer 
+      %a.link-button{href: "/educate/gamelab", aria:{label: hoc_s(:"teach_labs_section.gamelab.aria_label_learn_more")}}
+        =hoc_s(:"teach_labs_section.gamelab.call_to_action_learn_more")
+      %a.link-button.secondary{href: CDO.studio_url("/projects/gamelab/new")}
+        =hoc_s(:"teach_labs_section.gamelab.call_to_action_try")
+  .action-block.action-block--one-col.flex-space-between
+    .content-wrapper 
+      %p.overline=hoc_s(:"teach_labs_section.applab.overline")
+      %h3=hoc_s(:"teach_labs_section.applab.title")
+      %img{src: "/images/build-your-way-applab.png", alt: ""}
+      %p
+        %strong=hoc_s(:"teach_labs_section.label_what_you_can_make")
+        =hoc_s(:"teach_labs_section.applab.what_you_can_make")
+      %p
+        %strong=hoc_s(:"teach_labs_section.label_experience")
+        =hoc_s(:"teach_labs_section.applab.experience")
+    .content-footer 
+      %a.link-button{href: "/tools/applab", aria:{label: hoc_s(:"teach_labs_section.applab.aria_label_learn_more")}}
+        =hoc_s(:"teach_labs_section.applab.call_to_action_learn_more")
+      %a.link-button.secondary{href: CDO.studio_url("/projects/applab/new")}
+        =hoc_s(:"teach_labs_section.applab.call_to_action_try")

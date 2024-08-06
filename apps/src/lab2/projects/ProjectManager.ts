@@ -79,28 +79,7 @@ export default class ProjectManager {
     if (this.destroyed) {
       this.throwErrorIfDestroyed('load');
     }
-    let sources: ProjectSources | undefined;
-    try {
-      sources = await this.sourcesStore.load(this.channelId);
-      this.lastSource = JSON.stringify(sources);
-    } catch (error) {
-      // If there was a validation error or sourceResponse is a 404 (not found),
-      // we still want to load the channel. In the case of a validation error,
-      // we will default to empty sources. Source can return not found if the project
-      // is new. If neither of these cases, throw the error.
-      if (error instanceof ValidationError) {
-        this.metricsReporter.logWarning(
-          `Error validating sources (${error.message}). Defaulting to empty sources.`
-        );
-      } else if (
-        error instanceof NetworkError &&
-        (error as NetworkError).response.status === 404
-      ) {
-        // This is expected if the project is new. Default to empty sources.
-      } else {
-        throw new Error('Error loading sources', {cause: error});
-      }
-    }
+    const sources = await this.loadSources();
 
     let channel: Channel;
     try {
@@ -111,6 +90,25 @@ export default class ProjectManager {
 
     this.lastChannel = channel;
     return {sources, channel};
+  }
+
+  // Restore the given version of the project. This will call restore on the sources store
+  // and then load and return the updated sources.
+  async restoreSources(versionId: string): Promise<ProjectSources | undefined> {
+    if (this.destroyed) {
+      this.throwErrorIfDestroyed('restore');
+    }
+    // Flush the enqueued save, if it exists, before restoring.
+    await this.flushSave();
+    try {
+      await this.sourcesStore.restore(this.channelId, versionId);
+    } catch (e) {
+      throw new Error('Error restoring sources', {cause: e});
+    }
+    // Now that we've restored to the previous version, loading sources
+    // will load the newly-restored version.
+    const sources = await this.loadSources();
+    return sources;
   }
 
   hasUnsavedChanges(): boolean {
@@ -248,6 +246,11 @@ export default class ProjectManager {
     this.publishHelper(false);
   }
 
+  async getVersionList() {
+    // TODO: Error handling
+    return await this.sourcesStore.getVersionList(this.channelId);
+  }
+
   addSaveSuccessListener(listener: (channel: Channel) => void) {
     this.saveSuccessListeners.push(listener);
   }
@@ -301,6 +304,8 @@ export default class ProjectManager {
     // If neither source nor channel has actually changed, no need to save again.
     if (!sourceChanged && !channelChanged) {
       this.saveInProgress = false;
+      // We can clear sourcesToSave since they have not changed.
+      this.sourcesToSave = undefined;
       this.executeSaveNoopListeners(this.lastChannel);
       return;
     }
@@ -357,6 +362,7 @@ export default class ProjectManager {
 
     this.saveInProgress = false;
     this.channelToSave = undefined;
+    this.sourcesToSave = undefined;
     this.executeSaveSuccessListeners(this.lastChannel);
     this.initialSaveComplete = true;
   }
@@ -487,6 +493,44 @@ export default class ProjectManager {
     } else {
       return this.channelsStore.unpublish(this.lastChannel);
     }
+  }
+
+  /**
+   * Load the sources for this project. If a versionId is provided, load that version, otherwise
+   * load the latest version.
+   * @param versionId Optional version id to load. If not provided, the latest version is loaded.
+   * @param isPreview Optional boolean to indicate if we are previewing a project. If we are previewing,
+   * we won't store the source as lastSource.
+   * @returns sources for the project.
+   */
+  private async loadSources(versionId?: string, isPreview?: boolean) {
+    let sources: ProjectSources | undefined;
+    try {
+      sources = await this.sourcesStore.load(this.channelId, versionId);
+      // If we are previewing a project, we don't want to store the source as lastSource.
+      // lastSource is used to decide if we have unsaved changes.
+      if (!isPreview) {
+        this.lastSource = JSON.stringify(sources);
+      }
+    } catch (error) {
+      // If there was a validation error or sourceResponse is a 404 (not found),
+      // we still want to load the channel. In the case of a validation error,
+      // we will default to empty sources. Source can return not found if the project
+      // is new. If neither of these cases, throw the error.
+      if (error instanceof ValidationError) {
+        this.metricsReporter.logWarning(
+          `Error validating sources (${error.message}). Defaulting to empty sources.`
+        );
+      } else if (
+        error instanceof NetworkError &&
+        (error as NetworkError).response.status === 404
+      ) {
+        // This is expected if the project is new. Default to empty sources.
+      } else {
+        throw new Error('Error loading sources', {cause: error});
+      }
+    }
+    return sources;
   }
 
   // LISTENERS

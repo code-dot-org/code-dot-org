@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
 
 import BaseDialog from '../../BaseDialog';
-import Button from '../../Button';
 import DialogFooter from '../../teacherDashboard/DialogFooter';
 
 import LessonStatusList from './LessonStatusList';
