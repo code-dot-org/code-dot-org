@@ -16,8 +16,8 @@ main.wrapper {
   padding-bottom: 32px;
 }
 
-.cardContainer {
-  margin-top: 40px;
+.cardWrapper {
+  margin-block: 40px;
   display: flex;
   flex-flow: row wrap;
   gap: 24px;
@@ -29,11 +29,6 @@ main.wrapper {
   & > div {
     flex: 1;
     width: unset;
+    justify-content: space-between;
   }
-}
-
-.cardIcon {
-  width: 45px;
-  height: 40px;
-  color: #0093A4;
 }

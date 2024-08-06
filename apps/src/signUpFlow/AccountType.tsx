@@ -16,7 +16,7 @@ const AccountType: React.FunctionComponent = () => {
           desc={locale.create_your_free_account_desc()}
           showLogo={false}
         />
-        <div className={style.cardContainer}>
+        <div className={style.cardWrapper}>
           <AccountCard
             id={'student-card'}
             icon={'child-reaching'}
@@ -25,6 +25,10 @@ const AccountType: React.FunctionComponent = () => {
             buttonText={locale.sign_up_as_a_student()}
             buttonType="primary"
             href="#"
+            iconList={[
+              locale.save_projects_and_progress(),
+              locale.join_classroom_section(),
+            ]}
           />
           <AccountCard
             id={'teacher-card'}
@@ -34,6 +38,12 @@ const AccountType: React.FunctionComponent = () => {
             buttonText={locale.sign_up_as_a_teacher()}
             buttonType="primary"
             href="#"
+            iconList={[
+              locale.create_classroom_sections(),
+              locale.track_student_progress(),
+              locale.access_assessments(),
+              locale.enroll_in_pl(),
+            ]}
           />
         </div>
       </div>
