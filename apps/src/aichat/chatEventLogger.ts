@@ -29,11 +29,6 @@ export default class ChatEventLogger {
     ChatEventLogger.instance = new ChatEventLogger();
   }
 
-  // For testing purposes only.
-  setSendingInProgress(sendingInProgress: boolean): void {
-    this.sendingInProgress = sendingInProgress;
-  }
-
   public logChatEvent(chatEvent: ChatEvent, aichatContext: AichatContext) {
     this.queue.push({chatEvent, aichatContext});
     if (!this.sendingInProgress) {
