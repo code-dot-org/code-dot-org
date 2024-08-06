@@ -33,6 +33,30 @@ module Pd::Foorm
       end
     end
 
+    # Iterates over a batch of Foorm Submissions, returning a comma-separated string
+    # with each line represents a user's answer to a single question.
+    # will return a csv string or nil if there are no submissions to reshape
+    # @param [Integer] batch_size Number of submissions to reshape at a time
+    # @param [Integer] offset Number of submissions to skip before reshaping
+    # @return [String] a CSV formatted string with each line containing an answer.
+    def self.reshape_submissions_batch_into_csv(offset, batch_size)
+      submissions = ::Foorm::Submission.offset(offset).limit(batch_size)
+      return nil if submissions.empty?
+
+      CSV.generate do |csv|
+        csv << HEADERS
+
+        submissions.each do |submission|
+          reshaped_submission = reshape_submission(submission)
+
+          reshaped_submission.each do |answer|
+            row = answer.stringify_keys.values_at(*HEADERS)
+            csv << row
+          end
+        end
+      end
+    end
+
     # @param [Foorm::Submission] submission Submission to reshape
     # @return [Array] array of hashes, each representing a user's answer to a single question
     def self.reshape_submission(submission)

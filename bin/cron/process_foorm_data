@@ -1,45 +1,87 @@
 #!/usr/bin/env ruby
 
-require_relative '../../lib/cdo/redshift'
+# This script is responsible for reshaping and uploading Foorm data to Redshift.
+# It works via a series of steps:
+#
+# 1. Fetch a batch of data from the database.
+# 2. Reshape the data into a CSV format that is suitable for Redshift.
+# 3. Upload the reshaped data to S3.
+# 4. Import the reshaped data to a temp table in Redshift.
+# 5. Merge the temp table with the main table in Redshift.
+# 6. Cleanup the temp table and the CSV file from S3.
+#
+# There are a couple of things to keep in mind with this script:
+#
+# * Rows delete in the source tables will not be deleted from Redshift
+# * Rows with their user_id changed will be modified in Redshift
+# * To anonymize/disassosiate PII, you should MODIFY the source table
+# * To delete data, you should delete it from the destination redshift table
+# * Temp S3 files containing PII are not cleaned up. The expectation is that we're
+#   using lifecycle rules to expire them once their troubleshooting value is gone
+#
+# It is possible that the import into Redshift from the S3 CSV file will fail with
+# a "stl_load_errors" error. This can be investigated with the following query in
+# the Redshift query editor.
+#
+# ```
+# SELECT * FROM stl_load_errors
+# WHERE filename LIKE 's3://cdo-data-sharing-internal/tmp-foorm/%'
+# ORDER BY starttime DESC LIMIT 10;
+# ````
+
 require_relative 'only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
+require_relative '../../lib/cdo/redshift'
 require_relative '../../dashboard/config/environment'
+require 'cdo/chat_client'
 
+# Batch Config - Approx total submissions is 300,000
+BATCH_SIZE = 10000 # aiming for about 30 batches
+BATCHES_PER_LOG = 1 # with progress reported every 1 batches
+SUBMISSIONS_OFFSET = 0
+
+# AWS Config
+AWS_ACCOUNT_ID = Aws::STS::Client.new.get_caller_identity.account
+REDSHIFT_S3_ACCESS_ROLE_ARN = "arn:aws:iam::#{AWS_ACCOUNT_ID}:role/redshift-s3"
+
+# S3 Config
 S3_BUCKET_NAME = 'cdo-data-sharing-internal'
-aws_account_id = Aws::STS::Client.new.get_caller_identity.account
-REDSHIFT_S3_ACCESS_ROLE_ARN = "arn:aws:iam::#{aws_account_id}:role/redshift-s3"
-
 SUBMISSIONS_S3_CSV_NAME = 'submissions.csv'
-SUBMISSIONS_REDSHIFT_TABLE_NAME = 'analysis_pii.foorm_submissions_reshaped'
 FORMS_S3_CSV_NAME = 'forms.csv'
+S3_PREFIX = "tmp-foorm/#{Time.now.strftime('%Y/%m/%d')}"
+
+# Redshift Config
+SUBMISSIONS_REDSHIFT_TABLE_NAME = 'analysis_pii.foorm_submissions_reshaped'
 FORMS_REDSHIFT_TABLE_NAME = 'analysis.foorm_forms_reshaped'
 
-# Main method responsible for reshaping Foorm data
-# and importing to our analytics database (Redshift).
-# For each of our Foorm models (Forms and Submissions), we:
-# 1) delete any existing files (if any) from previous iterations of this job,
-# 2) reshape each record from our database into a CSV format,
-# 3) write that CSV to an S3 bucket,
-# 4) copy the contents of that CSV into a Redshift table,
-# 5) delete the CSV from S3.
 def main
-  redshift_client = RedshiftClient.instance
+  log '*Process Foorm Data*'
 
-  # Processes and uploads Foorm submissions to Redshift for analytics use via S3.
-  AWS::S3.delete_from_bucket(S3_BUCKET_NAME, SUBMISSIONS_S3_CSV_NAME)
-  reshaped_submissions = Pd::Foorm::SubmissionAnalyticsParser.reshape_all_submissions_into_csv
-  AWS::S3.upload_to_bucket(S3_BUCKET_NAME, SUBMISSIONS_S3_CSV_NAME, reshaped_submissions, no_random: true)
-  write_submissions_to_redshift(redshift_client, REDSHIFT_S3_ACCESS_ROLE_ARN)
+  unless CDO.rack_env?(:production)
+    log 'Foorm processing should only be run in production'
+    return
+  end
 
-  # Processes and uploads Foorm forms to Redshift for analytics use via S3.
-  AWS::S3.delete_from_bucket(S3_BUCKET_NAME, FORMS_S3_CSV_NAME)
-  reshaped_forms = Pd::Foorm::FormAnalyticsParser.reshape_all_forms_into_csv
-  AWS::S3.upload_to_bucket(S3_BUCKET_NAME, FORMS_S3_CSV_NAME, reshaped_forms, no_random: true)
-  write_forms_to_redshift(redshift_client, REDSHIFT_S3_ACCESS_ROLE_ARN)
+  client = RedshiftClient.instance
+  process_forms(client)
+  process_submissions(client)
+  log 'Foorm data processing complete.'
 end
 
-def write_forms_to_redshift(client, arn)
+# Forms are processed in one batch, because there are less than a few hundred.
+def process_forms(client)
+  forms_count = Foorm::Form.count
+  log "Processing #{forms_count} foorm forms"
+
+  reshaped_forms_csv = Pd::Foorm::FormAnalyticsParser.reshape_all_forms_into_csv
+
+  filename = "#{S3_PREFIX}/#{FORMS_REDSHIFT_TABLE_NAME}_#{Time.now.to_i}.csv"
+  AWS::S3.upload_to_bucket(S3_BUCKET_NAME, filename, reshaped_forms_csv, no_random: true)
+
+  s3_path = "s3://#{S3_BUCKET_NAME}/#{filename}"
+
+  # Drop and reload the table from the CSV
   query = <<~SQL
     DROP TABLE IF EXISTS #{FORMS_REDSHIFT_TABLE_NAME};
     CREATE TABLE #{FORMS_REDSHIFT_TABLE_NAME}
@@ -58,20 +100,65 @@ def write_forms_to_redshift(client, arn)
     );
 
     COPY #{FORMS_REDSHIFT_TABLE_NAME}
-    FROM 's3://#{S3_BUCKET_NAME}/#{FORMS_S3_CSV_NAME}'
-    IAM_ROLE '#{arn}'
+    FROM '#{s3_path}'
+    IAM_ROLE '#{REDSHIFT_S3_ACCESS_ROLE_ARN}'
     CSV
     IGNOREHEADER 1;
   SQL
 
-  client.exec(query)
+  execute_redshift_query(client, query)
+
+  log "Processed #{forms_count}/#{forms_count} forms"
 end
 
-def write_submissions_to_redshift(client, arn)
+# There are about 300,000 submissions, so we process them in batches.
+def process_submissions(client)
+  start_time = Time.now
+  submissions_count = Foorm::Submission.count - SUBMISSIONS_OFFSET
+  log "Processing #{submissions_count} foorm submissions"
+
+  offset = SUBMISSIONS_OFFSET
+
+  loop do
+    reshaped_submissions_csv = Pd::Foorm::SubmissionAnalyticsParser.reshape_submissions_batch_into_csv(offset, BATCH_SIZE)
+    if reshaped_submissions_csv.nil?
+      log 'No more submissions to process'
+      break
+    end
+
+    # Prefix filenames with a seconds timestamp to avoid collisions.
+    filename = "#{S3_PREFIX}/#{SUBMISSIONS_REDSHIFT_TABLE_NAME}_#{Time.now.to_i}.csv"
+    s3_path = "s3://#{S3_BUCKET_NAME}/#{filename}"
+    AWS::S3.upload_to_bucket(S3_BUCKET_NAME, filename, reshaped_submissions_csv, no_random: true)
+
+    load_submissions_csv_from_s3_into_redshift_table(client, s3_path, "#{SUBMISSIONS_REDSHIFT_TABLE_NAME}_temp")
+    merge_temp_table_with_main_table(client, "#{SUBMISSIONS_REDSHIFT_TABLE_NAME}_temp", SUBMISSIONS_REDSHIFT_TABLE_NAME, 'submission_id')
+
+    # Cleanup the temp table to minimize PII exposure (S3 file should be cleaned up via lifecycle rules)
+    # TODO: actually delete the table once we're done troubleshooting this script.
+    # delete_redshift_table(client, "#{table_name}_temp")
+
+    offset += BATCH_SIZE
+
+    # log only after N batches to reduce noise
+    if offset % (BATCH_SIZE * BATCHES_PER_LOG) == 0
+      elapsed_time = Time.now - start_time
+      percent_complete = (offset + BATCH_SIZE) / submissions_count.to_f
+      estimated_minutes_remaining = ((elapsed_time / percent_complete) - elapsed_time) / 60
+      log "Processed #{offset}/#{submissions_count} submissions, ETA: #{estimated_minutes_remaining.round(0)}m"
+    end
+  rescue => exception
+    log "Error processing submissions #{offset + 1}-#{offset + BATCH_SIZE}: #{exception.message}\n#{exception.backtrace.join("\n")}"
+    break
+  end
+
+  log "Processed #{submissions_count}/#{submissions_count} submissions"
+end
+
+def load_submissions_csv_from_s3_into_redshift_table(client, s3_path, table_name)
   query = <<~SQL
-    DROP TABLE IF EXISTS #{SUBMISSIONS_REDSHIFT_TABLE_NAME};
-    CREATE TABLE IF NOT EXISTS #{SUBMISSIONS_REDSHIFT_TABLE_NAME}
-    (
+    DROP TABLE IF EXISTS #{table_name};
+    CREATE TABLE IF NOT EXISTS #{table_name} (
       submission_id    int,
       item_name        varchar,
       matrix_item_name varchar,
@@ -79,20 +166,51 @@ def write_submissions_to_redshift(client, arn)
       response_text    varchar(max)
     );
 
-    COPY #{SUBMISSIONS_REDSHIFT_TABLE_NAME}
-    FROM 's3://#{S3_BUCKET_NAME}/#{SUBMISSIONS_S3_CSV_NAME}'
-    IAM_ROLE  '#{arn}'
+    COPY #{table_name}
+    FROM '#{s3_path}'
+    IAM_ROLE '#{REDSHIFT_S3_ACCESS_ROLE_ARN}'
     CSV
     IGNOREHEADER 1;
   SQL
 
+  execute_redshift_query(client, query)
+end
+
+def merge_temp_table_with_main_table(client, temp_table_name, main_table_name, key)
+  query = <<~SQL
+    BEGIN;
+    DELETE FROM #{main_table_name}
+    USING #{temp_table_name}
+    WHERE #{main_table_name}.#{key} = #{temp_table_name}.#{key};
+
+    INSERT INTO #{main_table_name}
+    SELECT * FROM #{temp_table_name};
+
+    COMMIT;
+  SQL
+
+  execute_redshift_query(client, query)
+end
+
+def delete_redshift_table(client, table_name)
+  query = "DROP TABLE IF EXISTS #{table_name}"
+  execute_redshift_query(client, query)
+end
+
+def execute_redshift_query(client, query)
   client.exec(query)
+rescue => exception
+  log "Error executing Redshift query: #{exception.message}\n#{exception.backtrace.join("\n")}"
+  raise
+end
+
+def log(message)
+  puts message
+  ChatClient.message 'cron-daily', message
 end
 
 begin
   main
 ensure
-  # If processing fails at any point, delete CSVs from S3.
-  AWS::S3.delete_from_bucket(S3_BUCKET_NAME, SUBMISSIONS_S3_CSV_NAME)
-  AWS::S3.delete_from_bucket(S3_BUCKET_NAME, FORMS_S3_CSV_NAME)
+  log 'Foorm data processing ended.'
 end
