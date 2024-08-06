@@ -83,7 +83,7 @@ module Services
             PDF.merge_local_pdfs(destination, *pdfs)
           rescue Exception => exception
             ChatClient.log(
-              "@teacher-tools-team Error when trying to merge resource PDFs for #{script.name}: #{exception}",
+              "Error when trying to merge resource PDFs for #{script.name}: #{exception}",
               color: 'red'
             )
             ChatClient.log(
@@ -96,6 +96,10 @@ module Services
             )
             ChatClient.log(
               "temporary directory contents: #{Dir.entries(pdfs_dir).inspect}",
+              color: 'red'
+            )
+            ChatClient.log(
+              "<@teacher-tools-on-call> Please follow instructions in https://docs.google.com/document/d/1mBY56DeAzrwTM3CVIOFho3azTi9mudE37ZQrVZXxaMA/edit#heading=h.axfu5or8cueg to troubleshoot",
               color: 'red'
             )
             raise exception
@@ -218,7 +222,7 @@ module Services
           )
 
           ChatClient.log(
-            "@teacher-tools-team Please follow instructions in https://docs.google.com/document/d/1mBY56DeAzrwTM3CVIOFho3azTi9mudE37ZQrVZXxaMA/edit#heading=h.axfu5or8cueg to troubleshoot",
+            "<@teacher-tools-on-call> Please follow instructions in https://docs.google.com/document/d/1mBY56DeAzrwTM3CVIOFho3azTi9mudE37ZQrVZXxaMA/edit#heading=h.axfu5or8cueg to troubleshoot",
             color: 'yellow'
           )
           return nil
