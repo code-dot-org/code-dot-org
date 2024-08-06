@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 
-
 import {
   Heading2,
   BodyTwoText,
@@ -10,22 +9,12 @@ import locale from '@cdo/apps/signup/locale';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 
 import Checkbox from '../componentLibrary/checkbox/Checkbox';
-// import getScriptData from '@cdo/apps/util/getScriptData';
 
 import style from './finish-teacher-account.module.scss';
 
-// Values loaded from scriptData are always initial values, not the latest
-// (possibly unsaved) user-edited values on the form.
-// interface SignupScriptData {
-//   usIp: boolean;
-// }
-// const scriptData = getScriptData('signup') as SignupScriptData;
-// const {usIp} = scriptData;
-
-
-
-
-const FinishTeacherAccount: React.FunctionComponent = () => {
+const FinishTeacherAccount: React.FunctionComponent<{
+  usIp: boolean;
+}> = ({usIp}) => {
   const [name, setName] = useState('');
   const [emailOptInChecked, setEmailOptInChecked] = useState(false);
 
@@ -49,7 +38,7 @@ const FinishTeacherAccount: React.FunctionComponent = () => {
           className={style.labelText}
           visualAppearance={'heading-xs'}
         >
-          {locale.finish_teacher_account_name_input()}
+          {locale.account_name_input()}
         </BodyTwoText>
         <input
           type="text"
@@ -60,7 +49,7 @@ const FinishTeacherAccount: React.FunctionComponent = () => {
         <BodyThreeText>
           {locale.finish_teacher_account_name_input_desc()}
         </BodyThreeText>
-        <SchoolDataInputs usIp={true} includeHeaders={false} />
+        <SchoolDataInputs usIp={usIp} includeHeaders={false} />
         <div className={style.emailOptInContainer}>
           <BodyTwoText
             className={style.labelText}
