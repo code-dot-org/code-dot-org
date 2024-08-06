@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
@@ -98,22 +98,25 @@ $(document).ready(function () {
   ReactDOM.render(
     <Provider store={store}>
       <Router basename={baseUrl}>
-        <Switch>
-          <Route path="/">
-            <TeacherDashboard
-              studioUrlPrefix={scriptData.studioUrlPrefix}
-              sectionId={selectedSection.id}
-              sectionName={selectedSection.name}
-              studentCount={selectedSection.students.length}
-              anyStudentHasProgress={anyStudentHasProgress}
-              showAITutorTab={showAITutorTab}
-              sectionProviderName={sectionProviderName(
-                store.getState(),
-                selectedSection.id
-              )}
-            />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route
+            path="/*"
+            element={
+              <TeacherDashboard
+                studioUrlPrefix={scriptData.studioUrlPrefix}
+                sectionId={selectedSection.id}
+                sectionName={selectedSection.name}
+                studentCount={selectedSection.students.length}
+                showAITutorTab={showAITutorTab}
+                anyStudentHasProgress={anyStudentHasProgress}
+                sectionProviderName={sectionProviderName(
+                  store.getState(),
+                  selectedSection.id
+                )}
+              />
+            }
+          />
+        </Routes>
       </Router>
     </Provider>,
     document.getElementById('teacher-dashboard')

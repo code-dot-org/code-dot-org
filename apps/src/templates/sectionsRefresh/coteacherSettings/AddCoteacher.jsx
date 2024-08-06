@@ -5,9 +5,9 @@ import React, {useCallback, useState} from 'react';
 
 import {Figcaption} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import i18n from '@cdo/locale';
 

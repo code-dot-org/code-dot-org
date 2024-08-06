@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import FontAwesome from './FontAwesome';
+import FontAwesome from '../legacySharedComponents/FontAwesome';
 
 export function SmallChevronLink({
   href,
