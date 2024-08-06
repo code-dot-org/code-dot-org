@@ -330,7 +330,7 @@ class EvaluateRubricJob < ApplicationJob
     response = HTTParty.post(
       uri,
       body: URI.encode_www_form(openai_params),
-      headers: {'Content-Type' => 'application/x-www-form-urlencoded'},
+      headers: {'Content-Type' => 'application/x-www-form-urlencoded', 'Authorization' => cdo.aiproxy_api_key},
       timeout: AIPROXY_API_TIMEOUT
     )
 
