@@ -77,6 +77,13 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   #
+  # Get /users/finish_teacher_account
+  #
+  def finish_teacher_account
+    render 'finish_teacher_account'
+  end
+
+  #
   # GET /users/cancel
   #
   # Cancels the in-progress partial user registration and redirects to sign-up page.
