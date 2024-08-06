@@ -55,13 +55,13 @@ module MailJet
   #
   # Parameters:
   # user     - a single User object.
-  # sections - a JSON object containing an array of sections, each with a 'sectionName' and 'sectionLink'.
+  # sections - a Object containing an array of sections, each with a 'Name' and a 'Link'.
   #            Example format:
   #            {
-  #              sections: [
-  #                { sectionName: 'Section 1', sectionLink: 'https://example.com/section1' },
-  #                { sectionName: 'Section 2', sectionLink: 'https://example.com/section2' }
-  #              ]
+  #              capSections => [
+  #                { Name => 'Section 1', Link => 'https://example.com/section1' },
+  #                { Name => 'Section 2', Link => 'https://example.com/section2' }
+  #               ]
   #            }
   # locale   - (optional) the locale for the email template. Defaults to 'en-US'.
   #
@@ -159,28 +159,17 @@ module MailJet
       config.api_version = "v3.1"
     end
 
-    from_address = email_config[:from_address]
-    from_name = email_config[:from_name]
     template_config = email_config[:template_id][subaccount.to_sym]
-    template_id = template_config[locale.to_sym] || template_config[:default]
+    # Each email template may have different required "messages:"" fields
+    # See https://dev.mailjet.com/email/guides for more information regarding "messages:" format
+    message = {}
+    message['From'] = {'Email' => email_config[:from_address], 'Name' => email_config[:from_name]}
+    message['To'] = [{'Email' => contact.email, 'Name' => contact.name}]
+    message['TemplateID'] = template_config[locale.to_sym] || template_config[:default]
+    message['TemplateLanguage'] = true
+    message['Variables'] = variables if variables.present?
 
-    Mailjet::Send.create(messages:
-      [{
-        From: {
-          Email: from_address,
-          Name: from_name
-        },
-        To: [
-          {
-            Email: contact.email,
-            Name: contact.name
-          }
-        ],
-        TemplateID: template_id,
-        TemplateLanguage: true,
-        Variables: variables
-      }]
-    )
+    Mailjet::Send.create(messages: [message])
   end
 
   def self.valid_email?(email)
