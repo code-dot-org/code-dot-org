@@ -1,5 +1,12 @@
 # Helper steps for signing in, signing out and permissions
 
+def reset_session
+  @browser.manage.delete_all_cookies
+  @browser.execute_script("sessionStorage.clear(); localStorage.clear();")
+  restart_browser
+  navigate_to replace_hostname('http://studio.code.org/reset_session')
+end
+
 Then /^I sign out using jquery$/ do
   code = <<-JAVASCRIPT
     window.signOutComplete = false;
@@ -17,7 +24,7 @@ Then /^I sign out using jquery$/ do
 end
 
 Given(/^I sign in as "([^"]*)"( and go home)?$/) do |name, home|
-  navigate_to replace_hostname('http://studio.code.org/reset_session')
+  reset_session
   sign_in name
   redirect = 'http://studio.code.org/home'
   navigate_to replace_hostname(redirect) if home
@@ -28,6 +35,7 @@ Given(/^I sign out and sign in as "([^"]*)"$/) do |name|
 end
 
 Given(/^I sign in as "([^"]*)" from the sign in page$/) do |name|
+  reset_session
   steps <<~GHERKIN
     And check that the url contains "/users/sign_in"
     And I wait to see "#signin"
@@ -274,12 +282,7 @@ And(/I fill in account email and current password for "([^"]*)"$/) do |name|
 end
 
 When(/^I sign out$/) do
-  if @browser.current_url.include?('studio')
-    browser_request(url: replace_hostname('/users/sign_out.json'), code: 204)
-    @browser.execute_script("sessionStorage.clear(); localStorage.clear();")
-  else
-    navigate_to replace_hostname('http://studio.code.org/reset_session')
-  end
+  reset_session
 end
 
 When(/^I am not signed in/) do

@@ -96,12 +96,7 @@ Before('@dashboard_db_access') do
   require_rails_env
 end
 
-Before do |scenario|
-  @tags = scenario.source_tag_names
-  $single_session = true if @tags.include?('@single_session')
-
-  very_verbose "DEBUG: @browser == #{CGI.escapeHTML @browser.inspect}"
-
+def start_browser
   if single_session?
     very_verbose('Single session, using existing browser') if $browser
     $browser ||= get_browser ENV.fetch('TEST_RUN_NAME', nil)
@@ -109,6 +104,21 @@ Before do |scenario|
   else
     $browser = @browser = get_browser "#{ENV.fetch('TEST_RUN_NAME', nil)}_#{scenario.name}"
   end
+end
+
+def restart_browser
+  @browser.quit
+  $browser = @browser = nil
+  start_browser
+end
+
+Before do |scenario|
+  @tags = scenario.source_tag_names
+  $single_session = true if @tags.include?('@single_session')
+
+  very_verbose "DEBUG: @browser == #{CGI.escapeHTML @browser.inspect}"
+
+  start_browser
 
   debug_cookies(@browser.manage.all_cookies) if @browser && ENV['VERY_VERBOSE']
 end

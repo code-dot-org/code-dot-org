@@ -4,8 +4,8 @@ Feature: Signing in and signing out
 
 Scenario: Student sign in from code.org
   Given I create a student named "Bob"
-  And I set the cookie named "_loc_notice" to "1"
   And I sign out
+  And I set the cookie named "_loc_notice" to "1"
   Given I am on "http://code.org/"
   Then I wait to see "#header_user_signin"
   Then I click "#header_user_signin"
