@@ -5,10 +5,10 @@ import {connect} from 'react-redux';
 
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import fontConstants from '@cdo/apps/fontConstants';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import * as p5labConstants from '@cdo/apps/p5lab/constants';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';

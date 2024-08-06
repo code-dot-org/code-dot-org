@@ -1,0 +1,35 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-01T22:23:40.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "ClothesRunner.java": {
+        "text": "import java.util.Scanner;\n\npublic class ClothesRunner {\n  public static void main(String[] args) {\n\n    Shirt favShirt = new Shirt(\"large\", 10.75, true);\n    Scanner input = new Scanner(System.in);\n\n    System.out.println(\"Favorite Shirt: Original\");\n    System.out.println(\"Shirt Size: \" + favShirt.getSize());\n    System.out.println(\"Shirt Price: \" + favShirt.getPrice());\n    System.out.println(\"Shirt Has Buttons: \" + favShirt.getHasButtons());\n\n    System.out.println(\"--------------------\");\n\n    favShirt.setSize(\"small\");\n    favShirt.setHasButtons(false);\n\n    System.out.println(\"Favorite Shirt: Updated\");\n    System.out.println(\"Shirt Size: \" + favShirt.getSize());\n    System.out.println(\"Shirt Price: \" + favShirt.getPrice());\n    System.out.println(\"Shirt Has Buttons: \" + favShirt.getHasButtons());\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "Clothes.java": {
+        "text": "/*\n * Represents a clothing item\n */\npublic class Clothes {\n\n  private String size;    // The size of a clothing item\n  private double price;   // The price of a clothing item\n\n  /*\n   * Sets the size to small and price to 10.99\n   */\n  public Clothes() {\n    size = \"small\";\n    price = 10.99;\n  }\n\n  /*\n   * Sets the size to the specified size and\n   * the price to the specified price\n   */\n  public Clothes(String size, double price) {\n    this.size = size;\n    this.price = price;\n  }\n\n  /*\n   * Returns the value of size of the clothing item\n   */\n  public String getSize() {\n    return size;\n  }\n\n  /*\n   * Returns the value of price of the clothing item\n   */\n  public double getPrice() {\n    return price;\n  }\n\n  /*\n   * Sets the size of the clothing item to the specified size\n   */\n  public void setSize(String newSize) {\n    size = newSize;\n  }\n\n  /*\n   * Sets the price of the clothing item to the specified price\n   */\n  public void setPrice(double newPrice) {\n    price = newPrice;\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      },
+      "Shirt.java": {
+        "text": "/*\n * Represents a shirt\n */\npublic class Shirt extends Clothes {\n\n  private boolean hasButtons;    // Whether or not a shirt has buttons\n\n  /*\n   * Sets the size to small, price to 10.99, and hasButtons to true\n   */\n  public Shirt() {\n    hasButtons = true;\n  }\n\n  /*\n   * Sets the size to the specified size, the price to the specified\n   * price, and hasButtons to the specified status\n   */\n  public Shirt(String size, double price, boolean hasButtons) {\n    super(size, price);\n    this.hasButtons = hasButtons;\n  }\n\n  /*\n   * Returns whether or not the shirt has buttons\n   */\n  public boolean getHasButtons() {\n    return hasButtons;\n  }\n\n  /*\n   * Sets hasButtons to the specified status\n   */\n  public void setHasButtons(boolean newHasButtons) {\n    hasButtons = newHasButtons;\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 2
+      }
+    },
+    "name_suffix": "_pilot-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-01T22:23:40.556+00:00\",\"changed\":[\"cloned from \\\"CSA U2L9-Mutators PBT_2025\\\"\"],\"cloned_from\":\"CSA U2L9-Mutators PBT_2025\"}]"
+}]]></config>
+</Javalab>

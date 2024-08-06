@@ -32,46 +32,54 @@ module Devise
         reload
       end
 
-      # Record lock and unlock events.
+      # Record lock and unlock events. Make sure to only log method invocations
+      # that will actually result in a state change, to avoid logging no-op
+      # invocations such as from the password reset workflow.
       #
       # As a core system event related to the user model, we want to log these
-      # in CloudWatch in order to preverse metrics for the long term. And as a
+      # in CloudWatch in order to preserve metrics for the long term. And as a
       # newly-enabled feature, we want to also log them in Statsig to make the
       # metric available on the product team's dashboards in the short term.
 
       # @override https://github.com/heartcombo/devise/blob/v4.9.3/lib/devise/models/lockable.rb#L42-L50
       def lock_access!
-        # CloudWatch
-        Cdo::Metrics.put(
-          'User', 'DeviseLockableAccessLocked', 1, {
-            Environment: CDO.rack_env,
-            UserType: user_type
-          }
-        )
+        unless access_locked?
+          # CloudWatch
+          Cdo::Metrics.put(
+            'User', 'DeviseLockableAccessLocked', 1, {
+              Environment: CDO.rack_env,
+              UserType: user_type
+            }
+          )
 
-        # Statsig
-        Metrics::Events.log_event(
-          user: current_user,
-          event_name: 'devise-lockable-user-access-locked',
-        )
+          # Statsig
+          Metrics::Events.log_event(
+            user: current_user,
+            event_name: 'devise-lockable-user-access-locked',
+          )
+        end
+
         super
       end
 
       # @override https://github.com/heartcombo/devise/blob/v4.9.3/lib/devise/models/lockable.rb#L53-L58
       def unlock_access!
-        # CloudWatch
-        Cdo::Metrics.put(
-          'User', 'DeviseLockableAccessUnlocked', 1, {
-            Environment: CDO.rack_env,
-            UserType: user_type
-          }
-        )
+        if access_locked?
+          # CloudWatch
+          Cdo::Metrics.put(
+            'User', 'DeviseLockableAccessUnlocked', 1, {
+              Environment: CDO.rack_env,
+              UserType: user_type
+            }
+          )
 
-        # Statsig
-        Metrics::Events.log_event(
-          user: current_user,
-          event_name: 'devise-lockable-user-access-unlocked',
-        )
+          # Statsig
+          Metrics::Events.log_event(
+            user: current_user,
+            event_name: 'devise-lockable-user-access-unlocked',
+          )
+        end
+
         super
       end
 

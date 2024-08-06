@@ -14,6 +14,10 @@ const FAKE_SOURCE: ProjectSources = {
   source: 'fakeSource',
 };
 
+const FAKE_MODIFIED_SOURCE: ProjectSources = {
+  source: 'fakeModifiedSource',
+};
+
 const FAKE_CHANNEL: Channel = {
   id: '123',
   name: 'fakeChannel',
@@ -258,6 +262,61 @@ describe('ProjectManager', () => {
     await projectManager.save(UPDATED_SOURCE);
     assert.isTrue(sourcesStore.save.notCalled);
     assert.isTrue(channelsStore.save.notCalled);
+  });
+
+  it('Does not save on clean up after restore', async () => {
+    // First load will be "original" code, second will be the versioned we restored.
+    sourcesStore.load.onCall(0).returns(Promise.resolve(FAKE_SOURCE));
+    sourcesStore.load.onCall(1).returns(Promise.resolve(FAKE_MODIFIED_SOURCE));
+    const projectManager = new ProjectManager(
+      sourcesStore,
+      channelsStore,
+      FAKE_CHANNEL_ID,
+      false
+    );
+
+    // Load the initial sources
+    const {sources} = await projectManager.load();
+    expect(sources).to.deep.equal(FAKE_SOURCE);
+
+    // Save called with same initial sources; will not trigger a save because
+    // sources have not changed.
+    await projectManager.save(FAKE_SOURCE);
+    assert.isTrue(sourcesStore.save.notCalled);
+
+    // Restore a previous version.
+    const versionedSources = await projectManager.restoreSources(
+      'fakeVersionId'
+    );
+    expect(versionedSources).to.deep.equal(FAKE_MODIFIED_SOURCE);
+    assert.isTrue(sourcesStore.restore.calledOnce);
+
+    // Call clean up; save should not be called.
+    await projectManager.cleanUp();
+    assert.isTrue(sourcesStore.save.notCalled);
+  });
+
+  it('Flushes save before restore', async () => {
+    // First load will be "original" code, second will be the versioned we restored.
+    sourcesStore.load.onCall(0).returns(Promise.resolve(FAKE_SOURCE));
+    sourcesStore.load.onCall(1).returns(Promise.resolve(FAKE_MODIFIED_SOURCE));
+    const projectManager = new ProjectManager(
+      sourcesStore,
+      channelsStore,
+      FAKE_CHANNEL_ID,
+      false
+    );
+
+    // Load the initial sources
+    const {sources} = await projectManager.load();
+    expect(sources).to.deep.equal(FAKE_SOURCE);
+    projectManager.save(UPDATED_SOURCE);
+    const versionedSources = await projectManager.restoreSources(
+      'fakeVersionId'
+    );
+    expect(versionedSources).to.deep.equal(FAKE_MODIFIED_SOURCE);
+    assert.isTrue(sourcesStore.restore.calledOnce);
+    assert.isTrue(sourcesStore.save.calledOnce);
   });
 });
 

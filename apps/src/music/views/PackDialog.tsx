@@ -1,11 +1,12 @@
 import classNames from 'classnames';
-import React, {useCallback, useState, useRef} from 'react';
+import React, {useCallback, useState, useRef, useContext} from 'react';
 import FocusLock from 'react-focus-lock';
 
 import Typography from '@cdo/apps/componentLibrary/typography';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {DEFAULT_PACK} from '../constants';
+import {AnalyticsContext} from '../context';
 import musicI18n from '../locale';
 import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
@@ -108,6 +109,8 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
 
   const [selectedFolderId, setSelectedFolderId] = useState<string | null>(null);
 
+  const analyticsReporter = useContext(AnalyticsContext);
+
   const handleSelectFolder = useCallback(
     (folder: SoundFolder) => {
       if (!library) {
@@ -123,29 +126,30 @@ const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
     [selectedFolderId, library]
   );
 
-  const setPackToDefault = useCallback(() => {
-    if (!library) {
-      return;
-    }
+  const selectPack = useCallback(
+    (packId: string) => {
+      if (!library) {
+        return;
+      }
 
-    player.cancelPreviews();
-    dispatch(setPackId(DEFAULT_PACK));
-    library.setCurrentPackId(DEFAULT_PACK);
-    setSelectedFolderId(null);
-  }, [dispatch, library, player]);
+      player.cancelPreviews();
+      dispatch(setPackId(packId));
+      library.setCurrentPackId(packId);
+      setSelectedFolderId(null);
+      analyticsReporter?.onPackSelected(packId);
+    },
+    [library, dispatch, player, analyticsReporter]
+  );
+
+  const setPackToDefault = useCallback(() => {
+    selectPack(DEFAULT_PACK);
+  }, [selectPack]);
 
   const setPackToSelectedFolder = useCallback(() => {
-    if (!library) {
-      return;
-    }
-
     if (selectedFolderId) {
-      player.cancelPreviews();
-      dispatch(setPackId(selectedFolderId));
-      library.setCurrentPackId(selectedFolderId);
-      setSelectedFolderId(null);
+      selectPack(selectedFolderId);
     }
-  }, [selectedFolderId, dispatch, library, player]);
+  }, [selectPack, selectedFolderId]);
 
   const onPreview = useCallback(
     (id: string) => {

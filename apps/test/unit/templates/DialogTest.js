@@ -2,7 +2,7 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import Dialog from '@cdo/apps/templates/Dialog';
+import Dialog from '@cdo/apps/legacySharedComponents/Dialog';
 
 describe('Dialog', function () {
   describe('fullWidth option', function () {

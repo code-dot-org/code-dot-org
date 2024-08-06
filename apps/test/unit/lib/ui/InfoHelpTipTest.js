@@ -4,8 +4,8 @@ import React from 'react';
 import ReactTooltip from 'react-tooltip';
 
 import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 // "it renders" test that checks for FontAwesome and ReactTooltip
 

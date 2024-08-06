@@ -17,10 +17,14 @@ import {
   WorkspaceSvg,
   Xml,
 } from 'blockly';
-import GoogleBlockly, {Connection} from 'blockly/core';
+import GoogleBlockly, {Connection, Names} from 'blockly/core';
 import {Abstract} from 'blockly/core/events/events_abstract';
 import {Field, FieldProto} from 'blockly/core/field';
-import {IProcedureBlock, IProcedureModel} from 'blockly/core/procedures';
+import {
+  IParameterModel,
+  IProcedureBlock,
+  IProcedureModel,
+} from 'blockly/core/procedures';
 import {ProcedureSerializer} from 'blockly/core/serialization/procedures';
 import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
 import {javascriptGenerator} from 'blockly/javascript';
@@ -34,6 +38,7 @@ import CdoFieldAnimationDropdown from './addons/cdoFieldAnimationDropdown';
 import CdoFieldBehaviorPicker from './addons/cdoFieldBehaviorPicker';
 import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
 import CdoFieldButton from './addons/cdoFieldButton';
+import CdoFieldColour from './addons/cdoFieldColour';
 import CdoFieldFlyout from './addons/cdoFieldFlyout';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldParameter from './addons/cdoFieldParameter';
@@ -116,6 +121,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   FieldToggle: typeof CdoFieldToggle;
   FieldFlyout: typeof CdoFieldFlyout;
   FieldBitmap: typeof CdoFieldBitmap;
+  FieldColour: typeof CdoFieldColour;
   FieldVariable: typeof CdoFieldVariable;
   FieldParameter: typeof CdoFieldParameter;
   JavaScript: JavascriptGeneratorType;
@@ -291,6 +297,8 @@ export interface ExtendedGenerator extends CodeGeneratorType {
   ) => string;
   blocksToCode: (name: string, blocksToGenerate: Block[]) => string;
   prefixLines: (text: string, prefix: string) => string;
+  nameDB_: Names | undefined;
+  variableDB_: Names | undefined;
 }
 
 type XmlType = typeof Xml;
@@ -378,6 +386,8 @@ export interface ProcedureBlock extends ExtendedBlockSvg, IProcedureBlock {
   description?: string | null;
   // used for behavior blocks
   behaviorId?: string | null;
+  prevParams_: IParameterModel[];
+  argsMap_: Map<string, Block>;
 }
 
 // Blockly uses {[key: string]: any} to define workspace serialization.

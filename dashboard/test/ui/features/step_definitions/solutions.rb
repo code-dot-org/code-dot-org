@@ -1,9 +1,9 @@
 PUZZLE_SOLUTIONS = {
-  "http://studio.code.org/s/allthethings/lessons/2/levels/1?blocklyVersion=google" => %{
+  "http://studio.code.org/s/allthethings/lessons/2/levels/1" => %{
     And I drag block "moveWest" to block "whenRun"
     And I drag block "moveWest" to block "moveWest"
   },
-  "http://studio.code.org/s/allthethings/lessons/29/levels/1?blocklyVersion=google&level_name=2-3 Maze 1" => %{
+  "http://studio.code.org/s/allthethings/lessons/29/levels/1?level_name=2-3 Maze 1" => %{
     And I drag block "moveForward" to block "whenRun"
     And I drag block "moveForward" to block "moveForward"
   },

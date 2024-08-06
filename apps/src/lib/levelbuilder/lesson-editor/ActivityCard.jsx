@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import {
   addActivitySection,
@@ -12,7 +13,6 @@ import {
 import ActivitySectionCard from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitySectionCard';
 import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
 import {activityShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 
 /*
