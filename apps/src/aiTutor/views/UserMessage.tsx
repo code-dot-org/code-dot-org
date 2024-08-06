@@ -17,7 +17,7 @@ const PROFANITY_VIOLATION_USER_MESSAGE =
 const PII_VIOLATION_USER_MESSAGE =
   'This chat has been hidden because it contains personal information.';
 
-const statusToStyleMap = {
+const statusToStyleMap: {[status: string]: string} = {
   [Status.OK]: style.userMessage,
   [Status.UNKNOWN]: style.userMessage,
   [Status.PROFANITY_VIOLATION]: style.profaneMessage,

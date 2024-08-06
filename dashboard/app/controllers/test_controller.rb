@@ -327,6 +327,11 @@ class TestController < ApplicationController
     head :ok
   end
 
+  def delete_workshop
+    Pd::Workshop.find_by_id(params[:workshop_id]).destroy
+    head :ok
+  end
+
   def create_pilot
     name = params.require(:pilot_name)
     Pilot.create_with(allow_joining_via_url: true, display_name: name).find_or_create_by(name: name)

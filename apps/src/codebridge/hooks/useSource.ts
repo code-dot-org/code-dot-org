@@ -55,19 +55,19 @@ export const useSource = (defaultSources: ProjectSources) => {
     [setSourceHelper]
   );
 
-  const resetToStartSource = useCallback(() => {
+  const getStartSource = useCallback(() => {
     // When resetting in start mode, we always use the level start source.
-    setSource(
-      (!isStartMode && templateStartSource) ||
+    return {
+      source:
+        (!isStartMode && templateStartSource) ||
         levelStartSource ||
-        (defaultSources.source as MultiFileSource)
-    );
+        (defaultSources.source as MultiFileSource),
+    };
   }, [
     defaultSources.source,
     isStartMode,
     templateStartSource,
     levelStartSource,
-    setSource,
   ]);
 
   useEffect(() => {
@@ -96,5 +96,5 @@ export const useSource = (defaultSources: ProjectSources) => {
     }
   }, [initialSources, levelId, setSourceHelper]);
 
-  return {source, setSource, resetToStartSource};
+  return {source, setSource, getStartSource};
 };
