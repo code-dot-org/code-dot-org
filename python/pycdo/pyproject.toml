@@ -5,6 +5,7 @@ description = "python equivalent of lib/cdo"
 authors = [
     { name = "Code.org Python Devs", email = "python-devs@code.org" }
 ]
+requires-python = "==3.12.*"
 
 dependencies = [
     "boto3",
