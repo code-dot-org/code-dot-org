@@ -24,13 +24,14 @@
 }
 
 .cardIcon {
-  font-size: 36px;
+  font-size: 2.25rem;
   margin-bottom: 1rem;
   color: #0093A4;
 }
 
 .cardContent {
   margin-block: 1.25rem;
+  line-height: 1.4;
 
   .iconList {
     margin: 1.5rem 0 0;
@@ -43,7 +44,7 @@
     }
 
     li {
-      font-size: 16px;
+      font-size: 1rem;
       list-style-type: none;
       display: flex;
       gap: 0.5rem;

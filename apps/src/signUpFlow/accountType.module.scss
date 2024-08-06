@@ -12,23 +12,23 @@ main.wrapper {
 .contentContainer {
   max-width: $content-width;
   margin: auto;
-  font-size: 16px;
-  padding-bottom: 32px;
+  font-size: 1rem;
+  padding-bottom: 2rem;
 }
 
 .cardWrapper {
-  margin-block: 40px;
+  margin-block: 3rem;
   display: flex;
   flex-flow: row wrap;
-  gap: 24px;
+  gap: 1.5rem;
 
   @media (max-width: $width-sm) {
     flex-direction: column;
   }
 
   & > div {
-    flex: 1;
     width: unset;
+    flex: 1;
     justify-content: space-between;
   }
 }
