@@ -9,7 +9,7 @@ import Announcements from '@cdo/apps/code-studio/components/progress/Announcemen
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import Announcement from '@cdo/apps/lib/levelbuilder/announcementsEditor/Announcement';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import {NotificationType} from '@cdo/apps/templates/Notification';
+import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
 import {createUuid} from '@cdo/apps/utils';
 
 export default class AnnouncementsEditor extends Component {

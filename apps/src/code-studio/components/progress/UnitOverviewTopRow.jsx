@@ -20,7 +20,7 @@ import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shap
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-import FontAwesome from '../../../templates/FontAwesome';
+import FontAwesome from '../../../legacySharedComponents/FontAwesome';
 import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
 
 export const NOT_STARTED = 'NOT_STARTED';
