@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react';
+import {render, screen, act} from '@testing-library/react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -8,9 +8,18 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import AiAssessmentBox from '@cdo/apps/templates/rubrics/AiAssessmentBox';
 import AiAssessmentFeedbackContext, {
   NO_FEEDBACK,
+  THUMBS_UP,
 } from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
+
+async function wait() {
+  for (let _ = 0; _ < 10; _++) {
+    await act(async () => {
+      await Promise.resolve();
+    });
+  }
+}
 
 describe('AiAssessmentBox', () => {
   const reportingData = {
@@ -19,8 +28,8 @@ describe('AiAssessmentBox', () => {
     levelName: 'Test Blah Blah Blah',
   };
   const mockAiInfo = {
-    id: 2,
-    learning_goal_id: 2,
+    id: 33,
+    learning_goal_id: 44,
     understanding: 2,
     aiConfidencePassFail: 2,
   };
@@ -266,5 +275,52 @@ describe('AiAssessmentBox', () => {
     // Restore stubs
     scrollToLineStub.mockRestore();
     sendEventSpy.mockRestore();
+  });
+
+  it('sends an event when thumbs up is clicked', async () => {
+    render(
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
+      >
+        <AiAssessmentBox {...props} />
+      </AiAssessmentFeedbackContext.Provider>
+    );
+
+    const fetchStub = jest.spyOn(window, 'fetch');
+
+    fetchStub.mockImplementation((endpoint, options) => {
+      if (endpoint === '/get_token') {
+        return Promise.resolve(
+          new Response('', {
+            headers: {'csrf-token': 'token'},
+          })
+        );
+      } else if (
+        endpoint === '/learning_goal_ai_evaluation_feedbacks' &&
+        options['method'] === 'POST'
+      ) {
+        return Promise.resolve(new Response(JSON.stringify({id: 999})));
+      }
+    });
+
+    const thumbsUpButton = screen.getByTestId('thumbs-o-up');
+    act(() => thumbsUpButton.click());
+
+    await wait();
+
+    const expectedBody = JSON.stringify({
+      learningGoalAiEvaluationId: 33,
+      aiFeedbackApproval: THUMBS_UP,
+    });
+    expect(fetchStub).toHaveBeenCalledWith(
+      '/learning_goal_ai_evaluation_feedbacks',
+      {
+        body: expectedBody,
+        headers: {'Content-Type': 'application/json', 'X-CSRF-TOKEN': 'token'},
+        method: 'POST',
+      }
+    );
+
+    fetchStub.mockRestore();
   });
 });
