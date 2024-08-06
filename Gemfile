@@ -349,7 +349,8 @@ gem 'cld'
 
 gem 'crowdin-api', '~> 1.10.0'
 
-gem "pycall", "~> 1.5"
+# Not thread-safe, this should only be required by PyCDO:
+gem "pycall", "~> 1.5", require: false
 
 gem "delayed_job_active_record", "~> 4.1"
 

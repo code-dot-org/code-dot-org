@@ -1,7 +1,7 @@
 require 'open3'
 require 'yaml'
 require_relative 'hooks_utils'
-require_relative '../../lib/cdo/python_venv'
+require_relative '../../lib/pycdo/python_venv'
 
 REPO_DIR = File.expand_path('../../../', __FILE__).freeze
 APPS_DIR = "#{REPO_DIR}/apps".freeze
