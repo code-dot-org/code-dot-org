@@ -9,6 +9,7 @@ import Button from '@cdo/apps/componentLibrary/button/Button';
 import AITutorTesterSampleColumns from './AITutorTesterSampleColumns';
 
 import styles from './ai-tutor-tester.module.scss';
+import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 
 /**
  * Renders a series of buttons that allow levelbuilders to upload a CSV of
@@ -28,6 +29,7 @@ interface AITutorTesterProps {
 const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
   const [csvFile, setCsvFile] = useState<File | null>(null);
   const [data, setData] = useState<AIInteraction[]>([]);
+  const [selectedEndpoint, setSelectedEndpoint] = useState<string>('ai-tutor');
   const [responseCount, setResponseCount] = useState<number>(0);
   const [responsesPending, setResponsesPending] = useState<boolean>(false);
 
@@ -47,6 +49,10 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
     }
   };
 
+  const onDropdownChange = (value: string) => {
+    setSelectedEndpoint(value);
+  };
+
   const updateData = (result: {data: AIInteraction[]}) => {
     setData(result.data);
   };
@@ -54,8 +60,21 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
   const getAIResponses = () => {
     setResponsesPending(true);
     for (let i = 0; i < data.length; i++) {
-      askAI(data[i]);
+      if (selectedEndpoint === 'llm-guard') {
+        getLLMGuardToxicity(data[i]);
+      } else {
+        askAI(data[i]);
+      }
     }
+  };
+
+  const getLLMGuardToxicity = async (row: AIInteraction) => {
+    // here's where we're going to hit the endpoint that gives us the toxicity true/false
+    // likely leverage https://github.com/code-dot-org/code-dot-org/pull/60221 ?
+
+    // const llmGuardResponse =
+    //row.aiResponse = llmGuardResponse.toxicity;
+    setResponseCount(prevResponseCount => prevResponseCount + 1);
   };
 
   const askAI = async (row: AIInteraction) => {
@@ -89,6 +108,17 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
     }
   }, [aiResponded]);
 
+  const availableEndpoints = [
+    {
+      id: 'ai-tutor',
+      name: 'AI Tutor - full flow',
+    },
+    {
+      id: 'llm-guard',
+      name: 'LLM Guard',
+    },
+  ];
+
   return (
     <div>
       <h2>Generate AI Tutor Responses</h2>
@@ -103,6 +133,20 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
         CSV.
       </p>
       <AITutorTesterSampleColumns />
+      <br />
+      <SimpleDropdown
+        labelText="Choose an endpoint"
+        isLabelVisible={false}
+        onChange={event => onDropdownChange(event.target.value)}
+        items={availableEndpoints.map(endpoint => {
+          return {value: endpoint.id, text: endpoint.name};
+        })}
+        selectedValue={selectedEndpoint}
+        name="aiChatTesterDropdown"
+        size="s"
+      />
+      <br />
+      <br />
       <div>
         <div className={styles.buttonSpacing}>
           <input
