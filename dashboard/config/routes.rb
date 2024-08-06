@@ -1227,5 +1227,8 @@ Dashboard::Application.routes.draw do
         delete :clear_all_data
       end
     end
+
+    get '/llm_guard', to: 'llm_guard#index'
+    post '/llm_guard/check_prompt', to: 'llm_guard#check_prompt'
   end
 end
