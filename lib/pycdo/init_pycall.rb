@@ -24,7 +24,7 @@ module PyCDO
   site = PyCall.import_module('site')
   site.addsitedir(PythonVenv.site_packages_path)
 
-  # After unset PYTHON & PYTHONHOME so we don't mess up python3-using apps
+  # After unset PYTHONs & PYTHONHOME so we don't mess up python3-using apps
   # launched from our Ruby processes (like the aws cli)
   # see: https://github.com/code-dot-org/code-dot-org/pull/60048#issuecomment-2267510208
   ENV.delete('PYTHONHOME')
