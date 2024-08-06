@@ -2,7 +2,7 @@
 requires-python = "==3.12.*"
 
 dependencies = [
-    # CDO python packages, from /python:
+    # Register local python packages from /python here, and in dev-dependencies below:
     "pycdo @ file:///${PROJECT_ROOT}/python/pycdo",
 
     ## Do not add dependencies here, add them to a pyproject.toml in /python ##
@@ -10,6 +10,11 @@ dependencies = [
 
 [tool.pdm.dev-dependencies]
 dev = [
+    # Register local python packages from /python here with -e, and in dependencies above:
+    # Adding -e in --dev mode will make changes to /python/*py available without needing
+    # to run `pdm install` first.
+    "-e file:///${PROJECT_ROOT}/python/pycdo#egg=pycdo",
+
     "coverage",
     "ipython",
     "pytest >=8",
