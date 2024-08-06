@@ -12,13 +12,17 @@ class ApplicationJobTest < ActiveJob::TestCase
   end
 
   test 'enqueued jobs log PendingJobCount FailedJobCount WaitTime ExecutionTime and TotalTime' do
-    # TODO: actually assert the expected values for job counts
-    # When implementing, I ran into a lot of difficulty mocking
-    # the Delayed::Job.where(failed_at: nil) calls accurately.
+    expected_failed_count = 5
+    expected_pending_count = 3
+
+    # Mock these helper methods because mocking the Delayed::Job calls is impossible/complex
+    ApplicationJob.any_instance.stubs(:get_pending_job_count).returns(expected_pending_count)
+    ApplicationJob.any_instance.stubs(:get_failed_job_count).returns(expected_failed_count)
+
     Cdo::Metrics.expects(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
       all_of(
-        includes_metrics(PendingJobCount: anything, FailedJobCount: anything),
+        includes_metrics(PendingJobCount: expected_pending_count, FailedJobCount: expected_failed_count),
         includes_dimensions(:PendingJobCount, Environment: CDO.rack_env),
         includes_dimensions(:FailedJobCount, Environment: CDO.rack_env)
       )
@@ -125,5 +129,21 @@ class ApplicationJobTest < ActiveJob::TestCase
     rescue => exception
       raise exception, 'Expected error to be squashed'
     end
+  end
+
+  test 'get_pending_job_count returns the number of pending jobs' do
+    Delayed::Job.expects(:where).with(failed_at: nil).returns(stub(count: 42))
+    assert_equal 42, ApplicationJob.new.get_pending_job_count
+  end
+
+  test 'get_failed_job_count returns the number of failed jobs' do
+    failed_jobs_mock = mock('failed_jobs')
+    where_mock = mock('where')
+
+    Delayed::Job.expects(:where).returns(where_mock)
+    where_mock.expects(:not).with(failed_at: nil).returns(failed_jobs_mock)
+    failed_jobs_mock.expects(:count).returns(42)
+
+    assert_equal 42, ApplicationJob.new.get_failed_job_count
   end
 end
