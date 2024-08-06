@@ -23,7 +23,7 @@ Feature: Using the assessments tab in the teacher dashboard
     And I submit the assessment on "http://studio.code.org/s/csp-post-survey/lessons/1/levels/1/page/6"
 
     # Assign a unit with an unlocked survey
-    When I sign in as "Teacher_Sally" and go home
+    When I sign in as "Teacher_Sally" and go home and wait
     And I get levelbuilder access
     And I click selector ".ui-test-section-dropdown" once I see it
     And I click selector ".edit-section-details-link"

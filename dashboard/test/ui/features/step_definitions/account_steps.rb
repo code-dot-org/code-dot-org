@@ -16,7 +16,9 @@ Then /^I sign out using jquery$/ do
   wait_short_until {@browser.execute_script('return window.signOutComplete;')}
 end
 
-Given(/^I sign in as "([^"]*)"( and go home)?$/) do |name, home|
+Given(/^I sign in as "([^"]*)"( and go home)?( and wait)?$/) do |name, home, wait|
+  wait_seconds = 3
+  sleep wait_seconds.to_f if wait
   navigate_to replace_hostname('http://studio.code.org/reset_session')
   sign_in name
   redirect = 'http://studio.code.org/home'
