@@ -1,3 +1,3 @@
-from .test_func import test_func
+from .example_func import example_func
 
-__all__ = ["test_func"]
+__all__ = ["example_func"]

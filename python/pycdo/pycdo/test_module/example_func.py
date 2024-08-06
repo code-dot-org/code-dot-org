@@ -1,2 +1,2 @@
-def test_func():
+def example_func():
     return "Ruby can call Python!"
