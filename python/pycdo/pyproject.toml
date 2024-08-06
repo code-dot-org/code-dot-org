@@ -13,13 +13,6 @@ dependencies = [
     "openai",
 ]
 
-[tool.pdm.dev-dependencies]
-dev = [
-    "pytest",
-    "pytest-mock",
-    "coverage",
-]
-
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 

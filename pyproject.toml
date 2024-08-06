@@ -10,8 +10,11 @@ dependencies = [
 
 [tool.pdm.dev-dependencies]
 dev = [
-    "ruff",
+    "coverage",
     "ipython",
+    "pytest >=8",
+    "pytest-mock",
+    "ruff",
 ]
 
 [tool.pdm]
