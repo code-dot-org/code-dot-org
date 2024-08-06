@@ -2,7 +2,7 @@ import classnames from 'classnames';
 import React, {useState} from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import i18n from '@cdo/locale';
 

@@ -10,7 +10,7 @@ import {InputGroup, FormGroup, FormControl} from 'react-bootstrap'; // eslint-di
 import ReactDatePicker from 'react-datepicker';
 import ReactDOM from 'react-dom';
 
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 
 import {DATE_FORMAT} from '../workshopConstants';
 

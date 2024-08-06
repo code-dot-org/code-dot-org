@@ -4,12 +4,6 @@ import React from 'react';
 
 import color from '../util/color';
 
-/**
- * This file at one point represented our "default" button component. It has since
- * become outdated, and thus has been renamed to LegacyButton. New buttons should use
- * componentLibrary/Button
- */
-
 const ARROW_WIDTH = 58;
 const ARROW_HEIGHT = ARROW_WIDTH * 2;
 const ARROW_BUTTON_HEIGHT = 44; // originally from common.scss .arrow-text rule
@@ -204,6 +198,9 @@ ArrowButton.propTypes = Object.assign({}, BaseButton.propTypes, {
   arrow: PropTypes.oneOf(['left', 'right']).isRequired,
 });
 
+/**
+ * @deprecated use DSCO Button instead
+ */
 const LegacyButton = Radium(function Button(props) {
   if (props.arrow) {
     return <ArrowButton {...props} />;

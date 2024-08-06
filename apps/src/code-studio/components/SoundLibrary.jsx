@@ -3,7 +3,7 @@ import React from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import SearchBar from '@cdo/apps/templates/SearchBar';
+import SearchBar from '@cdo/apps/sharedComponents/SearchBar';
 import i18n from '@cdo/locale';
 
 import Sounds from '../../Sounds';

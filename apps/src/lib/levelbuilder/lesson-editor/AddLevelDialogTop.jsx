@@ -5,10 +5,10 @@ import React, {useState, useEffect} from 'react';
 import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import AddLevelFilters from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelFilters';
 import AddLevelTable from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTable';
 import CreateNewLevelInputs from '@cdo/apps/lib/levelbuilder/lesson-editor/CreateNewLevelInputs';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 
 function AddLevelDialogTop(props) {
