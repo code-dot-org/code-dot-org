@@ -1,5 +1,39 @@
-@import 'color';
+@import 'color', 'breakpoints', 'style-constants';
 
 body {
   background-color: $light_gray_50 !important;
+}
+
+main.wrapper {
+  padding-block: 1rem;
+  margin-inline: auto;
+}
+
+.contentContainer {
+  max-width: $content-width;
+  margin: auto;
+  font-size: 16px;
+  padding-bottom: 32px;
+}
+
+.cardContainer {
+  margin-top: 40px;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 24px;
+
+  @media (max-width: $width-sm) {
+    flex-direction: column;
+  }
+
+  & > div {
+    flex: 1;
+    width: unset;
+  }
+}
+
+.cardIcon {
+  width: 45px;
+  height: 40px;
+  color: #0093A4;
 }
