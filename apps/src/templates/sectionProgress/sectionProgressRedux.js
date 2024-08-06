@@ -122,7 +122,6 @@ export default function sectionProgress(state = initialState, action) {
     };
   }
   if (action.type === FINISH_LOADING_PROGRESS) {
-    console.log('lfm FINISH_LOADING_PROGRESS');
     return {
       ...state,
       isLoadingProgress: false,

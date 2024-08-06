@@ -89,7 +89,6 @@ $(document).ready(function () {
   const defaultScriptId = selectedSection.script
     ? selectedSection.script.id
     : null;
-  console.log('lfm defaultScriptId', defaultScriptId);
   if (defaultScriptId) {
     store.dispatch(setScriptId(defaultScriptId));
   }

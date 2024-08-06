@@ -25,7 +25,6 @@ import {
 const NUM_STUDENTS_PER_PAGE = 20;
 
 export function loadUnitProgress(scriptId, sectionId) {
-  console.log('lfm loadUnitProgress');
   const state = getStore().getState().sectionProgress;
   const sectionData = getStore().getState().teacherSections.sections[sectionId];
   const students = getStore().getState().teacherSections.selectedStudents;
