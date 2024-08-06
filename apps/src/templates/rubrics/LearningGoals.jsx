@@ -545,8 +545,9 @@ export default function LearningGoals({
     clearAnnotations();
 
     if (!!aiEvalInfo && !productTour) {
+      const evidence = aiEvalInfo.evidence || '';
       const annotations = annotateLines(
-        aiEvalInfo.evidence,
+        evidence,
         aiEvalInfo.observations,
         onEvidenceTooltipOpened
       );
