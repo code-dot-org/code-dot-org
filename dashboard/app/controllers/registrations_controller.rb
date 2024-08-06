@@ -78,6 +78,7 @@ class RegistrationsController < Devise::RegistrationsController
 
   # Part of the new sign up flow - work in progress
   def account_type
+    view_options(full_width: true, responsive_content: true)
   end
 
   #
