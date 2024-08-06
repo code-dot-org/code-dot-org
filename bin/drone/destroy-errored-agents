@@ -24,21 +24,30 @@ set -e
 export DRONE_SERVER=https://drone.cdn-code.org
 export DRONE_AUTOSCALER=https://drone.cdn-code.org:8443
 
-# Function to send metrics to CloudWatch with error handling
-put_metric_data() {
-    metric_name=$1
-    value=$2
-    unit=$3
-    if ! aws cloudwatch put-metric-data --metric-name "$metric_name" --namespace "ContinuousIntegration" --value "$value" --unit "$unit"; then
-        echo "Error sending metric $metric_name to CloudWatch"
-    fi
+log_group_name="/drone/agent-terminations"
+log_stream_name="single-log-stream"
+
+# Function to log a message to CloudWatch
+log_to_cloudwatch() {
+    message=$1
+    
+    # TODO: create these in the drone stack so we know they exist
+    # TODO: grant permission in the iam stack to write to this group/stream for eng readonly+
+    # Create log group if it doesn't exist
+    aws logs describe-log-groups --log-group-name-prefix "$log_group_name" | grep -q "$log_group_name" || aws logs create-log-group --log-group-name "$log_group_name"
+    # Create log stream if it doesn't exist
+    aws logs describe-log-streams --log-group-name "$log_group_name" --log-stream-name-prefix "$log_stream_name" | grep -q "$log_stream_name" || aws logs create-log-stream --log-group-name "$log_group_name" --log-stream-name "$log_stream_name"
+    
+    # Log the message
+    aws logs put-log-events --log-group-name "$log_group_name" --log-stream-name "$log_stream_name" --log-events "timestamp=$(date +%s%3N),message=\"$message\""
 }
 
-# Function to get drone server metrics, and set global variables
+# Function to get drone server metrics and set global variables
 get_drone_metrics() {
     total_count=$(drone server ls -l | tail -n +2 | wc -l)
     error_ids=$(drone server ls -l | grep error | awk '{print $1}')
     error_count=$(if [ -z "$error_ids" ]; then echo 0; else echo "$error_ids" | wc -l; fi)
+    healthy_count=$((total_count - error_count))
 }
 
 # Check if DRONE_TOKEN is valid
@@ -52,17 +61,15 @@ fi
 
 # Get initial metrics
 get_drone_metrics
-put_metric_data DroneServers $total_count Count
-put_metric_data DroneErroredServers $error_count Count
+
+# Log the termination event
+log_to_cloudwatch "Terminating ${error_count} of ${total_count} drone agents that were in 'error' state. Total: ${total_count}, Healthy: ${healthy_count}, Error: ${error_count}"
 
 # Terminate agents in 'error' state
-echo "Terminating ${error_count} of ${total_count} drone agents that were in 'error' state"
 [ -z "$error_ids" ] || echo "$error_ids" | xargs -tL1 drone server destroy
 
 # Get new metrics after termination
-initial_error_count=$error_count
 get_drone_metrics
-terminated_count=$((initial_error_count - error_count))
-put_metric_data DroneServers $total_count Count
-put_metric_data DroneErroredServers $error_count Count
-put_metric_data DroneTerminatedServers $terminated_count Count
+
+# Log the post-termination status
+log_to_cloudwatch "Post-termination status: Total: ${total_count}, Healthy: ${healthy_count}, Error: ${error_count}"

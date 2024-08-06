@@ -276,7 +276,6 @@ roles = {
     ManagedPolicyArns: [
       'arn:aws:iam::aws:policy/ReadOnlyAccess',
       '!Ref EngineerSecretsPolicy',
-      '!Ref EngineerContinuousIntegrationLoggingPolicy',
       '!Ref AthenaCloudwatchLogsQueryPolicy',
     ]
   },
@@ -287,7 +286,6 @@ roles = {
       'arn:aws:iam::aws:policy/PowerUserAccess',
       'arn:aws:iam::aws:policy/IAMReadOnlyAccess',
       '!Ref EngineerSecretsPolicy',
-      '!Ref EngineerContinuousIntegrationLoggingPolicy',
       '!Ref CloudformationPassRolePolicy',
     ]
   },
@@ -617,23 +615,6 @@ roles.each do |name, config| %>
             Resource:
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:development/cdo/*
               - !Sub arn:aws:secretsmanager:${AWS::Region}:${AWS::AccountId}:secret:adhoc/cdo/*
-
-  # Allow locally executed CI scripts to write to CloudWatch.
-  EngineerContinuousIntegrationLoggingPolicy
-    Type: AWS::IAM::ManagedPolicy
-    Properties:
-      ManagedPolicyName: EngineerContinuousIntegrationLoggingPolicy
-      Path: /engineering/
-      PolicyDocument:
-        Version: '2012-10-17'
-        Statement: 
-          - Effect: Allow
-            Action:
-              - cloudwatch:PutMetricData
-            Resource: *
-            Condition:
-              StringEquals:
-                'cloudwatch:namespace': ContinuousIntegration
 
   ContributorSecretsPolicy:
     Type: AWS::IAM::ManagedPolicy
