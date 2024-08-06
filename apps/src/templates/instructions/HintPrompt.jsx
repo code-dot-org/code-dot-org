@@ -4,7 +4,7 @@ import React from 'react';
 
 import msg from '@cdo/locale';
 
-import LegacyButton from '../LegacyButton';
+import LegacyButton from '../../legacySharedComponents/LegacyButton';
 
 import ChatBubble from './ChatBubble';
 
