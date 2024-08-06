@@ -5,13 +5,9 @@ module I18n
     module Apps
       module MusiclabLibraries
         DIR_NAME = 'musiclab_libraries'
-        # Allows temporarily sourcing input strings from a new version of our Music Lab
+        # Allows  sourcing input strings from a new version of our Music Lab
         # launch library (music-library-launch2024-v2), which will eventually
         # replace music-library-launch2024.
-        # Once we've overwritten the contents of music-library-launch2024 with
-        # what's in music-library-launch2024-v2, we can remove this
-        # and replace it with a simple array of library filenames
-        # (ie, %w[music-library-intro2024 music-library-launch2024-v2])
         LIBRARY_NAME_IN_OUT_MAPPINGS = [
           {from: 'music-library-intro2024', to: 'music-library-intro2024'},
           {from: 'music-library-launch2024-v2', to: 'music-library-launch2024'}
