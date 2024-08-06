@@ -291,7 +291,7 @@ export const onSaveFail =
           dispatchSaveFailNotification(
             dispatch,
             errorMessage,
-            includeInChatHistory
+            !!includeInChatHistory
           );
         })
         // Catch any errors in parsing the response body or if there was no response body
@@ -342,13 +342,13 @@ export const submitChatContents = createAsyncThunk(
       channelId: state.lab.channel?.id,
     };
     // Create the new user ChatCompleteMessage and add to chatMessages.
-    const newMessage: ChatMessage = {
+    const newUserMessage: ChatMessage = {
       role: Role.USER,
       status: Status.UNKNOWN,
       chatMessageText: newUserMessageText,
       timestamp: Date.now(),
     };
-    thunkAPI.dispatch(setChatMessagePending(newMessage));
+    thunkAPI.dispatch(setChatMessagePending(newUserMessage));
 
     // Post user content and messages to backend and retrieve assistant response.
     const startTime = Date.now();
@@ -356,7 +356,7 @@ export const submitChatContents = createAsyncThunk(
     let chatApiResponse;
     try {
       chatApiResponse = await postAichatCompletionMessage(
-        newMessage,
+        newUserMessage,
         chatEventsCurrent.filter(isChatMessage) as ChatMessage[],
         aiCustomizations,
         aichatContext,
@@ -368,16 +368,18 @@ export const submitChatContents = createAsyncThunk(
         .logError('Error in aichat completion request', error as Error);
 
       thunkAPI.dispatch(clearChatMessagePending());
-      const erroredUserChatMessage = {...newMessage, status: Status.ERROR};
-      thunkAPI.dispatch(addChatEvent(erroredUserChatMessage));
+      thunkAPI.dispatch(
+        addChatEvent({...newUserMessage, status: Status.ERROR} as ChatEvent)
+      );
 
-      const erroredAssistantChatMessage: ChatMessage = {
-        role: Role.ASSISTANT,
-        status: Status.ERROR,
-        chatMessageText: 'error',
-        timestamp: Date.now(),
-      };
-      thunkAPI.dispatch(addChatEvent(erroredAssistantChatMessage));
+      thunkAPI.dispatch(
+        addChatEvent({
+          role: Role.ASSISTANT,
+          status: Status.ERROR,
+          chatMessageText: 'error',
+          timestamp: Date.now(),
+        } as ChatEvent)
+      );
 
       return;
     }

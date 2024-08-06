@@ -42,11 +42,9 @@ export default class ChatEventLogger {
       const loggerPayload = this.queue.shift(); // Remove the first element from the queue.
       if (loggerPayload) {
         const {chatEvent, aichatContext} = loggerPayload;
-        let logResponse;
         this.sendingInProgress = true;
         try {
-          logResponse = await postLogChatEvent(chatEvent, aichatContext);
-          console.log('logChatEventResponse', logResponse);
+          await postLogChatEvent(chatEvent, aichatContext);
           this.sendingInProgress = false;
         } catch (error) {
           Lab2Registry.getInstance()

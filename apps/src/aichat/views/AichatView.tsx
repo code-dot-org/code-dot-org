@@ -119,7 +119,7 @@ const AichatView: React.FunctionComponent = () => {
         timestamp: Date.now(),
         descriptionKey: 'LOAD_LEVEL',
         hideForParticipants: true,
-      } as ChatEvent)
+      })
     );
   }, [dispatch, initialSources, levelAichatSettings]);
 
