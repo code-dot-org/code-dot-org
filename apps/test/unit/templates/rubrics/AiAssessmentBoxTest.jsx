@@ -9,6 +9,7 @@ import AiAssessmentBox from '@cdo/apps/templates/rubrics/AiAssessmentBox';
 import AiAssessmentFeedbackContext, {
   NO_FEEDBACK,
   THUMBS_UP,
+  THUMBS_DOWN,
 } from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
@@ -311,6 +312,53 @@ describe('AiAssessmentBox', () => {
     const expectedBody = JSON.stringify({
       learningGoalAiEvaluationId: 33,
       aiFeedbackApproval: THUMBS_UP,
+    });
+    expect(fetchStub).toHaveBeenCalledWith(
+      '/learning_goal_ai_evaluation_feedbacks',
+      {
+        body: expectedBody,
+        headers: {'Content-Type': 'application/json', 'X-CSRF-TOKEN': 'token'},
+        method: 'POST',
+      }
+    );
+
+    fetchStub.mockRestore();
+  });
+
+  it('sends an event when thumbs down is clicked', async () => {
+    render(
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
+      >
+        <AiAssessmentBox {...props} />
+      </AiAssessmentFeedbackContext.Provider>
+    );
+
+    const fetchStub = jest.spyOn(window, 'fetch');
+
+    fetchStub.mockImplementation((endpoint, options) => {
+      if (endpoint === '/get_token') {
+        return Promise.resolve(
+          new Response('', {
+            headers: {'csrf-token': 'token'},
+          })
+        );
+      } else if (
+        endpoint === '/learning_goal_ai_evaluation_feedbacks' &&
+        options['method'] === 'POST'
+      ) {
+        return Promise.resolve(new Response(JSON.stringify({id: 999})));
+      }
+    });
+
+    const thumbsUpButton = screen.getByTestId('thumbs-o-down');
+    act(() => thumbsUpButton.click());
+
+    await wait();
+
+    const expectedBody = JSON.stringify({
+      learningGoalAiEvaluationId: 33,
+      aiFeedbackApproval: THUMBS_DOWN,
     });
     expect(fetchStub).toHaveBeenCalledWith(
       '/learning_goal_ai_evaluation_feedbacks',
