@@ -13,9 +13,7 @@ import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAs
 import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
 import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
 import experiments from '@cdo/apps/util/experiments';
-import i18n from '@cdo/locale';
 
-import {Heading1} from '../../lib/ui/Headings';
 import firehoseClient from '../../lib/util/firehose';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
@@ -114,30 +112,6 @@ function TeacherDashboard({
     location.pathname !== TeacherDashboardPath.standardsReport &&
     location.pathname !== TeacherDashboardPath.navTestV2;
 
-  const generateEmptySectionGraphic = (hasStudents, hasCurriculumAssigned) => {
-    return (
-      <div className={dashboardStyles.emptyClassroomDiv}>
-        {location.pathname === TeacherDashboardPath.progress && (
-          <div>
-            <Heading1>{i18n.progress()}</Heading1>
-            <EmptySection
-              className={dashboardStyles.emptyClassroomProgress}
-              hasStudents={hasStudents}
-              hasCurriculumAssigned={hasCurriculumAssigned}
-            />
-          </div>
-        )}
-        {location.pathname !== TeacherDashboardPath.progress && (
-          <EmptySection
-            className={dashboardStyles.emptyClassroom}
-            hasStudents={hasStudents}
-            hasCurriculumAssigned={hasCurriculumAssigned}
-          />
-        )}
-      </div>
-    );
-  };
-
   return (
     <div>
       {includeHeader && (
@@ -171,7 +145,11 @@ function TeacherDashboard({
           element={applyV1TeacherDashboardWidth(<StandardsReport />)}
         />
         {studentCount === 0 && (
-          <Route element={generateEmptySectionGraphic(false, true)} />
+          <Route
+            element={
+              <EmptySection hasStudents={false} hasCurriculumAssigned={true} />
+            }
+          />
         )}
         <Route
           path={TeacherDashboardPath.projects}
@@ -184,7 +162,11 @@ function TeacherDashboard({
           element={applyV1TeacherDashboardWidth(<StatsTableWithData />)}
         />
         {!anyStudentHasProgress && (
-          <Route element={generateEmptySectionGraphic(true, false)} />
+          <Route
+            element={
+              <EmptySection hasStudents={true} hasCurriculumAssigned={false} />
+            }
+          />
         )}
         <Route
           path={TeacherDashboardPath.progress}
