@@ -1,13 +1,25 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
 import {Provider} from 'react-redux';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
+import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
+import currentUser, {
+  setCurrentUserHasSeenStandardsReportInfo,
+} from '@cdo/apps/templates/currentUserRedux';
 import manageStudents, {
   setLoginType,
   setShowSharingColumn,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
+import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
+import sectionStandardsProgress from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
+import progressV2Feedback from '@cdo/apps/templates/sectionProgressV2/progressV2FeedbackRedux';
+import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
+import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
 import teacherSections, {
   setSections,
   selectSection,
@@ -17,21 +29,11 @@ import teacherSections, {
   setStudentsForCurrentSection,
   sectionProviderName,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
-import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
-import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
-import sectionStandardsProgress from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
-import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
-import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
-import currentUser, {
-  setCurrentUserHasSeenStandardsReportInfo,
-} from '@cdo/apps/templates/currentUserRedux';
+
 import {
   setCoursesWithProgress,
   setScriptId,
 } from '../../../../redux/unitSelectionRedux';
-import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
-import progressV2Feedback from '@cdo/apps/templates/sectionProgressV2/progressV2FeedbackRedux';
 
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
@@ -109,11 +111,9 @@ $(document).ready(function () {
   ReactDOM.render(
     <Provider store={store}>
       <Router basename={baseUrl}>
-        <Route
-          path="/"
-          component={props => (
+        <Switch>
+          <Route path="/">
             <TeacherDashboard
-              {...props}
               studioUrlPrefix={scriptData.studioUrlPrefix}
               sectionId={selectedSection.id}
               sectionName={selectedSection.name}
@@ -125,8 +125,8 @@ $(document).ready(function () {
                 selectedSection.id
               )}
             />
-          )}
-        />
+          </Route>
+        </Switch>
       </Router>
     </Provider>,
     document.getElementById('teacher-dashboard')

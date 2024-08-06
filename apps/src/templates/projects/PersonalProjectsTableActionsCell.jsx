@@ -2,16 +2,16 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
 import i18n from '@cdo/locale';
 
-import NameFailureDialog from '../../code-studio/components/NameFailureDialog';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import color from '../../util/color';
-import Button from '../Button';
-import FontAwesome from '../FontAwesome';
 import QuickActionsCell from '../tables/QuickActionsCell';
 
 import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
+import ProjectNameFailureDialog from './ProjectNameFailureDialog';
 import {
   startRenamingProject,
   cancelRenamingProject,
@@ -93,23 +93,24 @@ export class PersonalProjectsTableActionsCell extends Component {
         {isEditing && (
           <div>
             <Button
-              __useDeprecatedTag
               onClick={this.onSave}
-              color={Button.ButtonColor.brandSecondaryDefault}
               text={i18n.save()}
+              size="s"
+              color={buttonColors.purple}
               disabled={isSaving}
-              className="ui-projects-rename-save"
+              id="ui-projects-rename-save"
+              className={moduleStyles.buttonMargin}
             />
-            <br />
             <Button
-              __useDeprecatedTag
               onClick={this.onCancel}
-              color={Button.ButtonColor.gray}
               text={i18n.cancel()}
+              size="s"
+              type="secondary"
+              color={buttonColors.gray}
             />
           </div>
         )}
-        <NameFailureDialog
+        <ProjectNameFailureDialog
           flaggedText={this.props.projectNameFailure}
           isOpen={!!this.props.projectNameFailure}
           handleClose={this.handleNameFailureDialogClose}

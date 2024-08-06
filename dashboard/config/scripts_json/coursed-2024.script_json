@@ -10,12 +10,13 @@
       "is_course": true,
       "is_migrated": true,
       "lesson_extras_available": true,
+      "tts": true,
       "version_year": "2024"
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2024-07-02 19:48:51 UTC",
-    "published_state": "preview",
+    "serialized_at": "2024-08-01 16:22:52 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -4201,6 +4202,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unplugged_graph paper programming_markdown"
+        ],
         "progression": "Graph Paper Programming - Student Resources"
       },
       "bonus": false,
@@ -4725,6 +4729,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unplugged_hardware and software skits_markdown"
+        ],
         "progression": "Hardware and Software Skits - Student Reminder"
       },
       "bonus": false,
@@ -7075,6 +7082,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unplugged_conditionals with cards_markdown"
+        ],
         "progression": "Conditionals with Cards - Student Resources "
       },
       "bonus": false,
@@ -13448,6 +13458,27 @@
     {
       "seeding_key": {
         "lesson.key": "Loops in Ice Age",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab Intro Tutorial ",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-15"
       }

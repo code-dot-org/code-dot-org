@@ -49,14 +49,10 @@ theme: responsive_full_width
     %p=hoc_s("coding_with_ai_page.lessons.desc")
     = view :"coding_with_ai/coding_with_ai_lessons"
 
--# TODO remove DCDO logic after the 2024 curriculum launch
-- if !!DCDO.get('curriculum-launch-2024', false)
-  %section.bg-neutral-light
-    .wrapper
-      %h2=hoc_s("coding_with_ai_page.teach.heading")
-      = view :"coding_with_ai/coding_with_ai_teach"
-- else
-  = view :section_divider_line
+%section.bg-neutral-light
+  .wrapper
+    %h2=hoc_s("coding_with_ai_page.teach.heading")
+    = view :"coding_with_ai/coding_with_ai_teach"
 
 %section
   .wrapper

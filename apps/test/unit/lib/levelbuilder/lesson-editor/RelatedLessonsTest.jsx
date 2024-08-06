@@ -3,8 +3,6 @@ import React from 'react';
 
 import RelatedLessons from '@cdo/apps/lib/levelbuilder/lesson-editor/RelatedLessons';
 
-import {expect} from '../../../../util/reconfiguredChai';
-
 describe('RelatedLessons', () => {
   let defaultProps;
   beforeEach(() => {
@@ -39,23 +37,23 @@ describe('RelatedLessons', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<RelatedLessons {...defaultProps} />);
-    expect(wrapper.text()).to.include('Update Similar Lessons');
-    expect(wrapper.text()).to.include(
+    expect(wrapper.text()).toContain('Update Similar Lessons');
+    expect(wrapper.text()).toContain(
       'The following lessons are similar to this one.'
     );
 
     const link1 = wrapper.find('a').at(0);
-    expect(link1.props().href).to.equal('/lessons/123/edit');
-    expect(link1.text()).to.equal('Course A - 2017 - Lesson 3');
+    expect(link1.props().href).toBe('/lessons/123/edit');
+    expect(link1.text()).toBe('Course A - 2017 - Lesson 3');
 
     const link2 = wrapper.find('a').at(1);
-    expect(link2.props().href).to.equal('/lessons/456/edit');
+    expect(link2.props().href).toBe('/lessons/456/edit');
     // Redundant version year is omitted
-    expect(link2.text()).to.equal('Express (2019) - Lesson 2');
+    expect(link2.text()).toBe('Express (2019) - Lesson 2');
 
     const link3 = wrapper.find('a').at(2);
-    expect(link3.props().href).to.equal('/lessons/789/edit');
+    expect(link3.props().href).toBe('/lessons/789/edit');
     // Missing version year is omitted
-    expect(link3.text()).to.equal('Course 1 - Lesson 4');
+    expect(link3.text()).toBe('Course 1 - Lesson 4');
   });
 });

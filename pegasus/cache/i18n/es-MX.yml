@@ -157,7 +157,7 @@ es-MX:
     o explora más opciones en [Aprender más allá de una hora] (/learn/beyond).
   beyond_submission: "¿Desea entregar un tutorial después de una hora? Ver los criterios
     y formulario de entrega."
-  bitsbox_gradelevel: Escuela primaria
+  bitsbox_gradelevel: K-5
   bitsbox_longdescription: Personaliza tu propia tableta virtual, y luego programa
     una serie de aplicaciones para jugar y compartir. Guías simples hacen posible
     que niños muy jóvenes programen en el JavaScript real, y cuanto más avancen más
@@ -175,7 +175,7 @@ es-MX:
     No lo tradusca al alfabeto latino, pero transcrbalo a todos los demas alfabetos'
   blockly_platformtext: Navegadores modernos únicamente
   blockly_shortdescription: Descarga un archivo ZIP para aprender si no tienes conexión
-  boxisland_gradelevel: Escuela primaria
+  boxisland_gradelevel: K-5
   boxisland_longdescription: "¡Viaja por Box Island y ayuda a Hiro a recoger todos
     los relojes esparcidos por la jungla! En este tutorial aprenderás los conceptos
     básicos de algoritmos, secuencias, bucles y condicionales."
@@ -255,9 +255,9 @@ es-MX:
     en ciencias de la computación
   class_submission_languages_other: Otros idiomas
   class_submission_level_college: Universidad
-  class_submission_level_elementary: Escuela primaria
-  class_submission_level_high_school: Preparatoria
-  class_submission_level_middle_school: Escuela secundaria
+  class_submission_level_elementary: K-5
+  class_submission_level_high_school: 9-12
+  class_submission_level_middle_school: 6-8
   class_submission_level_preschool: Preescolar
   class_submission_level_vocational: Vocacional
   class_submission_online: En línea
@@ -315,7 +315,7 @@ es-MX:
   codebytes_skinny_banner_learn: Más información en [code.org/codebytes](%{code_bytes_url}).
   codebytes_skinny_banner_title: "¡Acompáñanos del 7 al 11 de Diciembre en nuestras
     mini-lecciones en vivo de CodeBytes!"
-  codecademy_beyond_gradelevel: Preparatoria
+  codecademy_beyond_gradelevel: 9-12
   codecademy_beyond_longdescription: Codeacademy es una introducción interactiva y
     dirigida al estudiante sobre los conceptos fundamentales de informática mediante
     JavaScript, la cual se usa por millones de estudiantes alrededor del mundo. Hemos
@@ -325,7 +325,7 @@ es-MX:
   codecademy_beyond_platformtext: Navegadores web modernos. iOS, aplicaciones Android
   codecademy_beyond_shortdescription: Aprende programación en JavaScript en un navegador
     web
-  codecademy_gradelevel: Preparatoria
+  codecademy_gradelevel: 9-12
   codecademy_longdescription: Codeacademy es una introducción interactiva y dirigida
     al estudiante sobre los conceptos fundamentales de informática mediante JavaScript,
     la cual se usa por millones de estudiantes alrededor del mundo. Hemos preparado
@@ -351,7 +351,7 @@ es-MX:
     costo)
   codecombat_shortdescription: "¡Derrota a los ogros para aprender Python o JavaScript
     en este épico juego de programación!"
-  codehs_beyond_gradelevel: Preparatoria
+  codehs_beyond_gradelevel: 9-12
   codehs_beyond_longdescription: 'Aprende los aspectos básicos de la programación
     con el perro Karel. Se trata de una introducción divertida, accesible y visual
     a la programación, en la que puedes dar órdenes a una computadora como si fuese
@@ -361,7 +361,7 @@ es-MX:
   codehs_beyond_platformtext: Navegadores modernos (con costo)
   codehs_beyond_shortdescription: Aprende programación en JavaScript con un ambiente
     visual y divertido
-  codehs_gradelevel: Preparatoria
+  codehs_gradelevel: 9-12
   codehs_longdescription: 'Dar órdenes a una computadora, que es de lo que  básicamente
     se trata la programación, es como darle órdenes a un perro. Aprende a programar
     con Karel, el perro: una introducción a la programación que enseña conceptos fundamentales,
@@ -410,7 +410,7 @@ es-MX:
   codeorg_name: Laberinto clásico
   codeorg_platformtext: Navegadores modernos, teléfonos inteligentes, tabletas
   codeorg_shortdescription: "¡Aprende a programar con Mark Zuckerberg y Angry Birds!"
-  codespark_gradelevel: Escuela primaria
+  codespark_gradelevel: K-5
   codespark_longdescription: Los Foos es una forma divertida y amigable para que los
     niños aprendan sobre programación de computadoras. Programa con simpáticos personajes
     para resolver puzzles y dar vida a un mundo virtual. ¡El juego no contiene texto,
@@ -1220,7 +1220,7 @@ es-MX:
   groklearning_shortdescription: ¡Enseña a "Eliza", el robot que conversa, a engañar
     a tus amigos y que piensen que es una persona de carne y hueso!
   gumball_name: Gumball
-  hacketyhack_beyond_gradelevel: Preparatoria
+  hacketyhack_beyond_gradelevel: 9-12
   hacketyhack_beyond_longdescription: 'Hackety Hack te va a enseñar las bases de la
     programación desde cero. ¡No se necesita experiencia previa! Con Hackety Hack
     vas a aprender el lenguaje de programación Ruby, que se utiliza para una gran
@@ -1244,13 +1244,14 @@ es-MX:
   header_courses: Cursos
   header_districts: Distritos Escolares
   header_documentation: Documentación
+  header_donate: Dona
   header_educate_beyond: Más allá de Code.org
   header_educate_community: Comunidad en línea
-  header_educate_elementary: Escuela primaria
-  header_educate_high: Preparatoria
+  header_educate_elementary: K-5
+  header_educate_high: 9-12
   header_educate_hoc: Hora del código
   header_educate_inspire: Inspira a un estudiante
-  header_educate_middle: Escuela secundaria
+  header_educate_middle: 6-8
   header_educate_overview: Descripción del educador
   header_educate_partner: Colabora con nosotros
   header_educate_requirements: Requisitos Técnicos
@@ -1704,16 +1705,16 @@ es-MX:
   homepage_slot_text_link_codestudio: Prueba Code Studio
   homepage_slot_text_link_do_hoc: Prepara una Hora de Código
   homepage_slot_text_link_donate: Haga una donación
-  homepage_slot_text_link_elementary: Escuela primaria
+  homepage_slot_text_link_elementary: K-5
   homepage_slot_text_link_express_course: Prueba el Curso Exprés
   homepage_slot_text_link_fullcurriculum: Ver nuestro currículum completo
-  homepage_slot_text_link_high: Preparatoria
+  homepage_slot_text_link_high: 9-12
   homepage_slot_text_link_hoc: Prueba la Hora del Código
   homepage_slot_text_link_hocserved: "# comprometidos"
   homepage_slot_text_link_host: Sea anfitrión de una hora de código
   homepage_slot_text_link_k5: Cursos de Kinder a 5to básico
   homepage_slot_text_link_local: Encuentra una clase local
-  homepage_slot_text_link_middle: Escuela secundaria
+  homepage_slot_text_link_middle: 6-8
   homepage_slot_text_link_middle_and_high: Escuela secundaria
   homepage_slot_text_link_othercourses: Otros cursos en línea
   homepage_slot_text_link_pd: Desarrollo profesional
@@ -1855,7 +1856,7 @@ es-MX:
   kidsruby_beyond_name: KidsRuby
   kidsruby_beyond_platformtext: Instalación en computadoras de escritorio
   kidsruby_beyond_shortdescription: Aprende a programar con Ruby
-  kodable_beyond_gradelevel: Escuela primaria
+  kodable_beyond_gradelevel: K-5
   kodable_beyond_longdescription: Kodable es un juego autoguiado para iPad que introduce
     a niños de más de 5 años a los conceptos básicos de programación. Es recomendable
     tener a un padre o docente al lado, pero no necesario.
@@ -1863,7 +1864,7 @@ es-MX:
   kodable_beyond_platformtext: iPad
   kodable_beyond_shortdescription: Un juego divertido para aprender los conceptos
     básicos de la programación en un iPad
-  kodable_gradelevel: Escuela primaria
+  kodable_gradelevel: K-5
   kodable_longdescription: Kodable es un juego autoguiado para iPad que introduce
     a niños de más de 5 años a los conceptos básicos de programación. Es recomendable
     tener a un padre o docente al lado, pero no necesario.
@@ -1983,7 +1984,7 @@ es-MX:
   lynda_beyond_platformtext: Para la web (con costo)
   lynda_beyond_shortdescription: Decenas de cursos de programación en línea
   make_app: Haz una aplicación
-  makeschool_beyond_gradelevel: Preparatoria
+  makeschool_beyond_gradelevel: 9-12
   makeschool_beyond_longdescription: "¿Ya sabés algo de ObjectiveC? ¡Aprende a hacer
     un juego para iPhone en una hora! Te vamos a guiar durante el proceso para programar,
     probar y jugar tu juego en el navegador. Luego vas a poder compartirlo en Facebook
@@ -1993,7 +1994,7 @@ es-MX:
   makeschool_beyond_platformtext: Navegadores web modernos
   makeschool_beyond_shortdescription: Aprende a crear un juego para iPhone en una
     hora
-  makeschool_gradelevel: Preparatoria
+  makeschool_gradelevel: 9-12
   makeschool_longdescription: "¡Aprende a programar haciendo un juego para iPhone
     usando un lenguaje de programación totalmente nuevo y para principiantes llamado
     Swift! Crea un juego de acción inspirado en Pokémon y escribe código para enseñar
@@ -2188,7 +2189,7 @@ es-MX:
   privacy_doc_explanation: Haz clic aquí para ver nuestro documento de privacidad,
     que puedes imprimir o compartir con tus estudiantes.
   privacy_practices_children: Consulta nuestras políticas de privacidad para niños
-  processing_beyond_gradelevel: Preparatoria
+  processing_beyond_gradelevel: 9-12
   processing_beyond_longdescription: Processing es un lenguaje de programación, un
     entorno de desarrollo y una comunidad online. Desde 2001 Processing ha promovido
     el aprendizaje de programación dentro de las artes visuales y la literatura visual
@@ -2200,7 +2201,7 @@ es-MX:
   processing_beyond_name: Programación con Processing
   processing_beyond_platformtext: Navegadores web modernos
   processing_beyond_shortdescription: Aprende los lenguajes Processing
-  processing_gradelevel: Preparatoria
+  processing_gradelevel: 9-12
   processing_longdescription: Una introducción a la programación en el contexto de
     las artes visuales usando el lenguaje de programación Processing. Pequeñas lecciones
     en video presentan ejercicios de programación que, gradualmente, conducen a diseñar
@@ -2276,7 +2277,7 @@ es-MX:
   scratch_name: Despierta tu creatividad con la programación
   scratch_platformtext: Navegadores web en computadoras de escritorio (no en tabletas)
   scratch_shortdescription: Crea animaciones, historias y juegos interactivos.
-  scratchjr_beyond_gradelevel: Escuela primaria
+  scratchjr_beyond_gradelevel: K-5
   scratchjr_beyond_longdescription: ScratchJr es un lenguaje de programación introductorio
     que les permite a los niños pequeños crear sus propias historias interactivas
     y juegos. Los niños colocan bloques gráficos de programación para hacer que los
@@ -2599,7 +2600,7 @@ es-MX:
     los niños a innovar y crear.
   top_hoc_tutorial_applab_alt_text: Una mano marrón con el dedo índice tocando una
     tableta de pantalla táctil que emite estrellas y rayos de luz sobre un fondo azul
-  touchdevelop_beyond_gradelevel: Preparatoria
+  touchdevelop_beyond_gradelevel: 9-12
   touchdevelop_beyond_longdescription: TouchDevelop te permite crear tus propias aplicaciones
     en los dispositivos iPan, iPhone, Android, PC, y el teléfono inteligente de Windows.
     ¡Nuestro editor de un entorno amigable táctil hace que codificar sea divertido
@@ -2609,7 +2610,7 @@ es-MX:
     todos los dispositivos
   touchdevelop_beyond_shortdescription: Programa aplicaciones móviles directamente
     desde tu teléfono, tableta o computadora portátil
-  touchdevelop_gradelevel: Preparatoria
+  touchdevelop_gradelevel: 9-12
   touchdevelop_longdescription: 'El editor táctil te guiará a crear arte de píxeles,
     resolver el problema del oso, o hacer tu propio juego de un pájaro saltarín. '
   touchdevelop_name: TouchDevelop

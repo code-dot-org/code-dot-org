@@ -1,11 +1,14 @@
 import React, {useEffect, useState} from 'react';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
 import {Heading3, StrongText} from '@cdo/apps/componentLibrary/typography';
-import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import HttpClient, {NetworkError} from '@cdo/apps/util/HttpClient';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {FeaturedProjectStatus} from '@cdo/generated-scripts/sharedConstants';
+
 import {ExtraLinksLevelData, ExtraLinksProjectData} from '../types';
+
 import moduleStyles from './extra-links.module.scss';
 
 // Extra Links modal. This is used to display helpful links for levelbuilders, and should
@@ -121,14 +124,6 @@ const ExtraLinksModal: React.FunctionComponent<ExtraLinksModalProps> = ({
   return isOpen ? (
     <AccessibleDialog onClose={onClose}>
       <Heading3>Extra links</Heading3>
-
-      <button
-        type="button"
-        onClick={onClose}
-        className={moduleStyles.xCloseButton}
-      >
-        <i id="x-close" className="fa-solid fa-xmark" />
-      </button>
       {Object.entries(levelLinkData.links).map(([listTitle, links]) => (
         // Levels can be part of level groups (sublevels) and/or can be a template level
         // so we list these here as well.
@@ -338,6 +333,9 @@ const ProjectLinkData: React.FunctionComponent<ProjectLinkDataProps> = ({
   }
   const ownerInfo = projectLinkData.owner_info;
   const projectInfo = projectLinkData.project_info;
+  if (!ownerInfo || !projectInfo) {
+    return null;
+  }
   const remixList = projectInfo.remix_ancestry;
 
   return (

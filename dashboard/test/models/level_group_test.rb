@@ -317,7 +317,7 @@ MARKDOWN
     # DSL for the level_group.
     level_group_input_dsl = "
   name 'level_group_test long assessment'
-  title 'Long Assessment'
+  title 'Long\\'s Assessment'
   submittable 'true'
 
   page
@@ -334,7 +334,7 @@ MARKDOWN
   "
 
     expected_copy_dsl = "name 'level_group_test long assessment_copy'
-title 'Long Assessment'
+title 'Long\\'s Assessment'
 submittable 'true'
 
 page

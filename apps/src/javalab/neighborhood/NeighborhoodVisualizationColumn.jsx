@@ -1,10 +1,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import PreviewPaneHeader from '../PreviewPaneHeader';
-import MazeVisualization from '@cdo/apps/maze/Visualization';
+
 import {toggleVisualizationCollapsed} from '@cdo/apps/javalab/redux/viewRedux';
+import MazeVisualization from '@cdo/apps/maze/Visualization';
+
 import {DisplayTheme} from '../DisplayTheme';
+import PreviewPaneHeader from '../PreviewPaneHeader';
 
 const ICON_PATH = '/blockly/media/turtle/';
 

@@ -35,7 +35,7 @@ export const TRUTHY_DEFAULT = (attributeValue: xmlAttribute) =>
 export function readBooleanAttribute(
   xmlElement: Element,
   attribute: string,
-  callback = FALSEY_DEFAULT
+  callback: (attributeValue: xmlAttribute) => boolean = FALSEY_DEFAULT
 ) {
   const attributeValue = xmlElement.getAttribute(attribute);
   return callback(attributeValue);

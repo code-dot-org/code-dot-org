@@ -5,9 +5,9 @@ import React, {Component} from 'react';
 import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import styleConstants from '../../styleConstants';
 import color from '../../util/color';
-import FontAwesome from '../FontAwesome';
 
 export const QuickActionsCellType = {
   header: 'header',
@@ -37,6 +37,17 @@ export default class QuickActionsCell extends Component {
     menuTop: 0, // location of dropdown menu
     menuLeft: 0,
     currWindowWidth: window.innerWidth, // used to calculate location of menu on resize
+  };
+
+  handleClick = e => {
+    e.stopPropagation();
+
+    if (this.state.open) {
+      this.close();
+      this.onClose();
+    } else {
+      this.state.canOpen ? this.open() : undefined;
+    }
   };
 
   // Menu open
@@ -113,7 +124,7 @@ export default class QuickActionsCell extends Component {
           icon={icons[type]}
           style={iconStyle}
           className="ui-test-section-dropdown ui-projects-table-dropdown"
-          onClick={this.state.canOpen ? this.open : undefined}
+          onClick={this.handleClick}
           tabIndex="0"
           onKeyDown={e => {
             if ([' ', 'Enter', 'Spacebar'].includes(e.key)) {

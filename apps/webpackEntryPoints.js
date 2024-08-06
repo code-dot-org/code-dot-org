@@ -1,3 +1,7 @@
+// Entrypoints for old-style "lab1" labs
+//
+// New labs should instead use Lab2, see: lab2EntryPoints.ts
+
 const ALL_APPS = [
   'ailab',
   'applab',
@@ -51,6 +55,7 @@ const CODE_STUDIO_ENTRIES = {
   'sessions/lockout': './src/sites/studio/pages/sessions/lockout.js',
   'devise/sessions/new': './src/sites/studio/pages/devise/sessions/new.js',
   'devise/registrations/_sign_up': './src/sites/studio/pages/devise/registrations/_sign_up.js',
+  'devise/registrations/new_sign_up': './src/sites/studio/pages/devise/registrations/new_sign_up.js',
   'devise/shared/_oauth_links': './src/sites/studio/pages/devise/shared/_oauth_links.js',
   'devise/registrations/_finish_sign_up': './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
   'devise/registrations/edit': './src/sites/studio/pages/devise/registrations/edit.js',
@@ -86,7 +91,6 @@ const CODE_STUDIO_ENTRIES = {
   'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
   'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
   'levels/show': './src/sites/studio/pages/levels/show.js',
-  'lti/v1/_early_access_banner': './src/sites/studio/pages/lti/v1/_early_access_banner.js',
   'lti/v1/iframe': './src/sites/studio/pages/lti/v1/iframe.js',
   'lti/v1/account_linking/landing': './src/sites/studio/pages/lti/v1/account_linking/landing.js',
   'lti/v1/dynamic_registration': './src/sites/studio/pages/lti/v1/dynamic_registration.js',
@@ -116,6 +120,7 @@ const CODE_STUDIO_ENTRIES = {
 
 // prettier-ignore
 const INTERNAL_ENTRIES = {
+  'ai_tutor/tester': './src/sites/studio/pages/ai_tutor/tester.js',
   'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
   'blocks/index': './src/sites/studio/pages/blocks/index.js',
   'course_offerings/edit': './src/sites/studio/pages/course_offerings/edit.js',
@@ -230,6 +235,8 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
   'pd/application/teacher_application/new': './src/sites/studio/pages/pd/application/teacher_application/new.js',
   'pd/application/principal_approval_application/new': './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
   'pd/workshop_daily_survey/new_general_foorm': './src/sites/studio/pages/pd/workshop_daily_survey/new_general_foorm.js',
+  'pd/workshop_enrollment/logged_out': './src/sites/studio/pages/pd/workshop_enrollment/logged_out.js',
+  'pd/workshop_enrollment/students_cannot_enroll': './src/sites/studio/pages/pd/workshop_enrollment/students_cannot_enroll.js',
   'pd/workshop_enrollment/new': './src/sites/studio/pages/pd/workshop_enrollment/new.js',
   'pd/workshop_enrollment/cancel': './src/sites/studio/pages/pd/workshop_enrollment/cancel.js',
 
@@ -255,6 +262,8 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
 const SHARED_ENTRIES = {
   cookieBanner: './src/cookieBanner/cookieBanner.js',
   userHeaderEventLogger: './src/userHeaderEventLogger/userHeaderEventLogger.js',
+  userHeaderStatsigReporter:
+    './src/userHeaderStatsigReporter/userHeaderStatsigReporter.js',
 };
 
 // prettier-ignore

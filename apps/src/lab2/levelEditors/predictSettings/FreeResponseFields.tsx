@@ -1,7 +1,10 @@
 import React from 'react';
-import {LevelPredictSettings} from '../types';
-import moduleStyles from './edit-predict-settings.module.scss';
+
 import TextField from '@cdo/apps/componentLibrary/textField';
+
+import {LevelPredictSettings} from '../types';
+
+import moduleStyles from './edit-predict-settings.module.scss';
 
 interface FreeResponseFieldsProps {
   predictSettings: LevelPredictSettings;

@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import i18n from '@cdo/locale';
+
 import BaseDialog from '../../../templates/BaseDialog';
 import color from '../../../util/color';
 import {isEmail} from '../../../util/formatValidation';
 import {Header, ConfirmCancelFooter} from '../SystemDialog/SystemDialog';
+
 import ChangeUserTypeForm from './ChangeUserTypeForm';
 
 const STATE_INITIAL = 'initial';

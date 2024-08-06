@@ -15,12 +15,13 @@
         "artist_k1"
       ],
       "project_widget_visible": true,
+      "tts": true,
       "version_year": "2024"
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2024-07-02 19:36:43 UTC",
-    "published_state": "preview",
+    "serialized_at": "2024-07-11 16:05:30 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",

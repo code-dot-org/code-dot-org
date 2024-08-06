@@ -49,6 +49,8 @@ class Pd::Workshop < ApplicationRecord
 
   has_many :regional_partner_program_managers, source: :program_managers, through: :regional_partner
 
+  has_and_belongs_to_many :course_offerings, join_table: :course_offerings_pd_workshops, foreign_key: 'pd_workshop_id'
+
   serialized_attrs [
     'fee',
 
@@ -579,7 +581,7 @@ class Pd::Workshop < ApplicationRecord
 
   # Send Post-surveys to facilitators of CSD and CSP workshops
   def send_facilitator_post_surveys
-    if course == COURSE_CSD || course == COURSE_CSP || course == COURSE_CSA || course == COURSE_CSF
+    if course == COURSE_CSD || course == COURSE_CSP || course == COURSE_CSA || course == COURSE_CSF || course == COURSE_BUILD_YOUR_OWN
       facilitators.each do |facilitator|
         next unless facilitator.email
 
@@ -934,6 +936,7 @@ class Pd::Workshop < ApplicationRecord
       organizer: organizer,
       enrollment_code: enrollments&.first&.code,
       status: state,
+      course_offerings: course_offerings,
     }
   end
 end

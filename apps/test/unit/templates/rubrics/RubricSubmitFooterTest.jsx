@@ -3,7 +3,7 @@ import {render, screen, act} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {
   getStore,
@@ -18,7 +18,7 @@ import RubricSubmitFooter from '@cdo/apps/templates/rubrics/RubricSubmitFooter';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('RubricSubmitFooter', () => {
   let store;

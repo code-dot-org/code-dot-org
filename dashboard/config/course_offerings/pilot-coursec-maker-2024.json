@@ -2,11 +2,11 @@
   "key": "pilot-coursec-maker-2024",
   "display_name": "[Pilot] Course C Maker with micro:bit",
   "is_featured": false,
-  "assignable": true,
+  "assignable": false,
   "curriculum_type": "Course",
   "marketing_initiative": null,
   "grade_levels": "2,3",
-  "header": "csf",
+  "header": null,
   "image": null,
   "cs_topic": null,
   "school_subject": null,
@@ -15,6 +15,5 @@
   "professional_learning_program": null,
   "video": null,
   "published_date": null,
-  "self_paced_pl_course_offering_id": null,
   "self_paced_pl_course_offering_key": null
 }

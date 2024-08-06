@@ -16,6 +16,8 @@ import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {
@@ -52,6 +54,7 @@ import {getValidatedResult, initializeContainedLevel} from './containedLevels';
 import * as dom from './dom';
 import * as dropletUtils from './dropletUtils';
 import FeedbackUtils from './feedback';
+import Alert from './legacySharedComponents/alert';
 import {
   configCircuitPlayground,
   configMicrobit,
@@ -60,7 +63,6 @@ import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
 import WireframeButtons from './lib/ui/WireframeButtons';
 import firehoseClient from './lib/util/firehose';
-import logToCloud from './logToCloud';
 import puzzleRatingUtils from './puzzleRatingUtils';
 import {getStore} from './redux';
 import {
@@ -83,7 +85,6 @@ import {
 } from './redux/studioAppActivity';
 import * as shareWarnings from './shareWarnings';
 import Sounds from './Sounds';
-import Alert from './templates/alert';
 import ChallengeDialog from './templates/ChallengeDialog';
 import VersionHistory from './templates/VersionHistory';
 import color from './util/color';
@@ -97,15 +98,26 @@ var codegen = require('./lib/tools/jsinterpreter/codegen');
 var copyrightStrings;
 
 /**
- * The minimum width of a playable whole blockly game.
+ * Store experiment parameters.
  */
+const isBigPlayspaceEnabled = experiments.isEnabledAllowingQueryString(
+  experiments.BIG_PLAYSPACE
+);
+const bigPlaySpacePadding = queryParams('bigPlayspacePadding') || 160;
+
+/**
+ * Get the maximum resizable width of the playspace.
+ */
+const getMaxResizableVisualizationWidth = () => {
+  return isBigPlayspaceEnabled
+    ? Math.min(window.innerHeight - bigPlaySpacePadding, window.innerWidth / 2)
+    : 400;
+};
+
 const MIN_WIDTH = 1400;
 const DEFAULT_MOBILE_NO_PADDING_SHARE_WIDTH = 400;
-export const MAX_VISUALIZATION_WIDTH = experiments.isEnabled(
-  experiments.BIG_PLAYSPACE
-)
-  ? 0.75 * window.innerHeight
-  : 400;
+const DEFAULT_VISUALIZATION_WIDTH = 400;
+export const MAX_VISUALIZATION_WIDTH = 400;
 export const MIN_VISUALIZATION_WIDTH = 200;
 
 /**
@@ -253,6 +265,12 @@ class StudioApp extends EventEmitter {
      * Global key handler for the app.
      */
     this.keyHandler = new KeyHandler(document);
+
+    /**
+     * Last window dimensions when a resize was handled.
+     */
+    this.lastWindowInnerWidth = undefined;
+    this.lastWindowInnerHeight = undefined;
   }
 }
 /**
@@ -275,7 +293,7 @@ StudioApp.prototype.configure = function (options) {
   this.assetUrl = _.bind(this.assetUrl_, this);
 
   this.maxVisualizationWidth =
-    options.maxVisualizationWidth || MAX_VISUALIZATION_WIDTH;
+    options.maxVisualizationWidth || getMaxResizableVisualizationWidth();
   this.minVisualizationWidth =
     options.minVisualizationWidth || MIN_VISUALIZATION_WIDTH;
 
@@ -1397,6 +1415,25 @@ StudioApp.prototype.onResize = function () {
     // Content below visualization is a resizing scroll area in pinned mode
     onResizeSmallFooter();
   }
+
+  if (isBigPlayspaceEnabled) {
+    // Let's avoid an infinite recursion by making sure this is a genuine resize.
+    if (
+      window.innerWidth !== this.lastWindowInnerWidth ||
+      window.innerHeight !== this.lastWindowInnerHeight
+    ) {
+      this.maxVisualizationWidth = getMaxResizableVisualizationWidth();
+
+      const visualizationColumn = document.getElementById(
+        'visualizationColumn'
+      );
+      const visualizationColumnWidth = $(visualizationColumn).width();
+      this.resizeVisualization(visualizationColumnWidth, true);
+
+      this.lastWindowInnerWidth = window.innerWidth;
+      this.lastWindowInnerHeight = window.innerHeight;
+    }
+  }
 };
 
 /**
@@ -1496,7 +1533,7 @@ function applyTransformOrigin(element, origin) {
  * Resize the visualization to the given width. If no width is provided, the
  * scale of child elements is updated to the current width.
  */
-StudioApp.prototype.resizeVisualization = function (width) {
+StudioApp.prototype.resizeVisualization = function (width, skipFire = false) {
   if ($('#visualizationColumn').hasClass('wireframeShare')) {
     return;
   }
@@ -1538,8 +1575,10 @@ StudioApp.prototype.resizeVisualization = function (width) {
   visualizationColumn.style.maxWidth = newVizWidth + vizSideBorderWidth + 'px';
   visualization.style.maxWidth = newVizWidthString;
   visualization.style.maxHeight = newVizHeightString;
-  if (experiments.isEnabled(experiments.BIG_PLAYSPACE)) {
-    visualization.style.width = newVizWidthString;
+  if (isBigPlayspaceEnabled) {
+    // Override the max visualization column width.
+    visualizationColumn.style.width = visualizationColumn.style.maxWidth;
+    // Override the visualization height.
     visualization.style.height = newVizHeightString;
   }
 
@@ -1566,8 +1605,10 @@ StudioApp.prototype.resizeVisualization = function (width) {
     smallFooter.style.maxWidth = newVizWidthString;
   }
 
-  // Fire resize so blockly and droplet handle this type of resize properly:
-  utils.fireResizeEvent();
+  if (!skipFire) {
+    // Fire resize so blockly and droplet handle this type of resize properly:
+    utils.fireResizeEvent();
+  }
 };
 
 /**
@@ -2022,10 +2063,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.startBlocks_ =
     config.level.lastAttempt || config.level.startBlocks || '';
   this.vizAspectRatio = config.vizAspectRatio || 1.0;
-  this.nativeVizWidth = config.nativeVizWidth || this.maxVisualizationWidth;
-  if (experiments.isEnabled(experiments.BIG_PLAYSPACE)) {
-    this.nativeVizWidth = 400;
-  }
+  this.nativeVizWidth = config.nativeVizWidth || DEFAULT_VISUALIZATION_WIDTH;
 
   if (config.level.initializationBlocks) {
     var xml = parseXmlElement(config.level.initializationBlocks);
@@ -2121,6 +2159,9 @@ StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
   var codeWorkspace = container.querySelector('#codeWorkspace');
 
+  const isSignedOut = !config.isSignedIn;
+  const isStandaloneProject = config.level.isProjectLevel;
+
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
   var runClick = this.runButtonClick.bind(this);
@@ -2129,8 +2170,23 @@ StudioApp.prototype.configureDom = function (config) {
     leading: true,
     trailing: false,
   });
+
+  function handleRunButtonClick() {
+    throttledRunClick.call(this);
+    // Sends a Statsig event when the Run button is pressed by a signed out user
+    // This is related to the Create Account Button A/B Test; see Jira ticket:
+    // https://codedotorg.atlassian.net/browse/ACQ-1938
+    if (isSignedOut && isStandaloneProject) {
+      analyticsReporter.sendEvent(
+        EVENTS.RUN_BUTTON_PRESSED_SIGNED_OUT,
+        {},
+        PLATFORMS.STATSIG
+      );
+    }
+  }
+
   if (runButton && resetButton) {
-    dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
+    dom.addClickTouchEvent(runButton, _.bind(handleRunButtonClick, this));
     dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
     this.keyHandler.registerEvent(['Control', 'Enter'], () => {
       if (this.isRunning()) {
@@ -3513,27 +3569,6 @@ StudioApp.prototype.setPageConstants = function (config, appSpecificConstants) {
 
   const instructionsConstants = determineInstructionsConstants(config);
   getStore().dispatch(setInstructionsConstants(instructionsConstants));
-};
-
-StudioApp.prototype.showRateLimitAlert = function () {
-  // only show the alert once per session
-  if (this.hasSeenRateLimitAlert_) {
-    return false;
-  }
-  this.hasSeenRateLimitAlert_ = true;
-
-  var alert = <div>{msg.dataLimitAlert()}</div>;
-  if (this.share) {
-    this.displayPlayspaceAlert('error', alert);
-  } else {
-    this.displayWorkspaceAlert('error', alert);
-  }
-
-  logToCloud.addPageAction(logToCloud.PageAction.FirebaseRateLimitExceeded, {
-    isEditing: project.isEditing(),
-    isOwner: project.isOwner(),
-    share: !!this.share,
-  });
 };
 
 /** @return Promise */

@@ -3,11 +3,11 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lesson 7: Introduction to AI Lab
+# Lesson 6: Introduction to AI Lab
 
 ## Lesson Overview 
 
-#### In Lesson 7, students will dive into the AI Lab tool for the first time, where they will select features to train a model that predicts a given label. They will start by exploring AI Lab and training a model to recognize shapes. After training their first model, students will pretend that they have been hired by restaurants to make recommendations to new customers based on survey data. To do this, students will use data sets and visualization tools to identify features to use to train machine learning models to make recommendations. 
+#### In Lesson 6, students will dive into the AI Lab tool for the first time, where they will select features to train a model that predicts a given label. They will start by exploring AI Lab and training a model to recognize shapes. After training their first model, students will pretend that they have been hired by restaurants to make recommendations to new customers based on survey data. To do this, students will use data sets and visualization tools to identify features to use to train machine learning models to make recommendations. 
 
 
 ### **Question of the Day:** How can we use machine learning to make recommendations?
@@ -43,5 +43,5 @@ markdown <<MARKDOWN
 
 ### **Up Next**
 
-#### In the next level of this professional learning module, you will complete an activity in AI Lab that your students will complete as part of Lesson 7. 
+#### In the next level of this professional learning module, you will complete an activity in AI Lab that your students will complete as part of Lesson 6. 
 MARKDOWN

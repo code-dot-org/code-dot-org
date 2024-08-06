@@ -8,10 +8,10 @@ import {connect} from 'react-redux';
 
 import msg from '@cdo/locale';
 
-import FontAwesome from '../../templates/FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import {DataView, WarningType} from '../constants';
 import {changeView, showWarning, tableType} from '../redux/data';
-import {storageBackend, isFirebaseStorage} from '../storage';
+import {storageBackend} from '../storage';
 
 import DataTable from './DataTable';
 import {refreshCurrentDataView} from './loadDataForView';
@@ -71,16 +71,7 @@ class DataTableView extends React.Component {
   };
 
   exportCsv = () => {
-    // TODO: post-firebase-cleanup, remove this conditional, leave only logic from the else clause #56994
-    if (isFirebaseStorage()) {
-      const isSharedTable =
-        this.props.tableListMap[this.props.tableName] === tableType.SHARED;
-      const tableName = encodeURIComponent(this.props.tableName);
-      const channelId = isSharedTable ? 'shared' : Applab.channelId;
-      location.href = `/v3/export-firebase-tables/${channelId}/${tableName}`;
-    } else {
-      location.href = storageBackend().exportCsvUrl(this.props.tableName);
-    }
+    location.href = storageBackend().exportCsvUrl(this.props.tableName);
   };
 
   /** Delete all rows, but preserve the columns. */

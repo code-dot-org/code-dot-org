@@ -178,9 +178,9 @@ def main
 
       if CDO.test_system?
         DevelopersTopic.set_dtt 'no (robo-DTT failed)'
-        msg = "*** <@#{DevelopersTopic.dotd}> Please update the " \
-          "<https://docs.google.com/spreadsheets/d/1DD6ebHM-2fsiMxxYCzhJYd1DzA69Z20qrCItaER9vto|Flaky Test Tracker>. " \
-          "See instructions in the tracker for more info. ***"
+        msg = "***<@#{DevelopersTopic.dotd}> See instructions in " \
+          "<https://docs.google.com/document/d/1T4gZD6A5jOflEQH0i9_y2VA4trlJTsmdZXWTdGRzGWA/edit?usp=sharing|this document> " \
+          "for current guidance on tracking flaky tests.***"
         ChatClient.log msg, color: 'yellow'
       end
     end

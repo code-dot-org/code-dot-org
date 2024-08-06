@@ -12,13 +12,14 @@
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "unversioned",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "coding-with-ai",
-    "serialized_at": "2024-06-29 01:31:02 UTC",
-    "published_state": "preview",
+    "serialized_at": "2024-07-11 18:24:13 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -3174,6 +3175,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "codingwithai-lesson3-juicemindquiz"
+        ],
         "progression": "JuiceMind Assessment"
       },
       "bonus": false,
@@ -3296,6 +3300,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "codingwithai-lesson4-juicemindquiz"
+        ],
         "progression": "JuiceMind Assessment"
       },
       "bonus": false,
@@ -3518,6 +3525,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "codingwithai-lesson5-juicemindquiz"
+        ],
         "progression": "JuiceMind Assessment"
       },
       "bonus": false,
@@ -4348,6 +4358,18 @@
       }
     },
     {
+      "name": "Self-Paced Professional Development",
+      "url": "https://studio.code.org/courses/self-paced-pl-coding-with-ai-2024",
+      "key": "self-paced_professional_development",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "self-paced_professional_development"
+      }
+    },
+    {
       "name": "Teacher Guide to Chat GPT",
       "url": "https://docs.google.com/document/d/1X9RLIpeAwlxckdAugepxS4h7hyjvHUTSDn-knipVneE/",
       "key": "teacher_guide_to_chat_gpt",
@@ -4667,6 +4689,12 @@
     {
       "seeding_key": {
         "resource.key": "ai_chatbot_prompting_guide",
+        "script.name": "coding-with-ai"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "self-paced_professional_development",
         "script.name": "coding-with-ai"
       }
     },

@@ -1,4 +1,5 @@
 import {Block} from 'blockly';
+
 import {BlockTypes} from './blockTypes';
 
 // Configuration data for a block.

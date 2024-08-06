@@ -7,6 +7,9 @@ Dashboard::Application.routes.draw do
   # Redirect studio.code.org/courses to code.org/students
   get "/courses", to: redirect(CDO.code_org_url("/students"))
 
+  # Redirect studio.code.org/sections/teacher_dashboard/first_section_progress to most recent section
+  get '/teacher_dashboard/sections/first_section_progress', to: "teacher_dashboard#redirect_to_newest_section"
+
   constraints host: CDO.codeprojects_hostname do
     # Routes needed for the footer on weblab share links on codeprojects
     get '/weblab/footer', to: 'projects#weblab_footer'
@@ -27,6 +30,7 @@ Dashboard::Application.routes.draw do
     post '/delete_predict_level_progress', to: 'user_levels#delete_predict_level_progress'
     get '/user_levels/get_token', to: 'user_levels#get_token'
     get '/user_levels/level_source/:script_id/:level_id', to: 'user_levels#get_level_source'
+    get '/user_levels/section_summary/:section_id/:level_id', to: 'user_levels#get_section_response_summary'
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
 
@@ -63,6 +67,8 @@ Dashboard::Application.routes.draw do
     end
 
     resources :images, only: [:new]
+
+    get "/ai_tutor/tester", to: "ai_tutor#tester"
 
     get 'maker/home', to: 'maker#home'
     get 'maker/setup', to: 'maker#setup'
@@ -186,6 +192,7 @@ Dashboard::Application.routes.draw do
       get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
       post '/users/begin_sign_up', to: 'registrations#begin_sign_up'
       post '/users/finish_sign_up', to: 'registrations#new'
+      get '/users/new_sign_up', to: 'registrations#new_sign_up'
       patch '/dashboardapi/users', to: 'registrations#update'
       patch '/users/upgrade', to: 'registrations#upgrade'
       patch '/users/set_student_information', to: 'registrations#set_student_information'
@@ -796,10 +803,11 @@ Dashboard::Application.routes.draw do
       get 'workshop_survey/day/:day', to: 'workshop_daily_survey#new_general'
       get 'workshop_daily_survey/day/:day', to: 'workshop_daily_survey#new_daily_foorm'
       get 'workshop_pre_survey', to: 'workshop_daily_survey#new_pre_foorm'
-      get 'workshop_post_survey', to: 'workshop_daily_survey#new_post_foorm'
       post 'workshop_survey/submit', to: 'workshop_daily_survey#submit_general'
+      get 'workshop_post_survey', to: 'workshop_daily_survey#new_post'
       get 'workshop_survey/post/:enrollment_code', to: 'workshop_daily_survey#new_post', as: 'new_workshop_survey'
-      get 'workshop_survey/facilitator_post_foorm', to: 'workshop_daily_survey#new_facilitator_post_foorm'
+      get 'workshop_survey/facilitator_post_foorm', to: 'workshop_daily_survey#new_facilitator_post'
+      get 'workshop_survey/new_facilitator_post', to: 'workshop_daily_survey#new_facilitator_post'
       get 'workshop_survey/csf/post101(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post101'
       get 'workshop_survey/csf/pre201', to: 'workshop_daily_survey#new_csf_pre201'
       get 'workshop_survey/csf/post201(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post201'
@@ -1157,6 +1165,7 @@ Dashboard::Application.routes.draw do
     post '/openai/chat_completion', to: 'openai_chat#chat_completion'
 
     post '/aichat/chat_completion', to: 'aichat#chat_completion'
+    post '/aichat/log_chat_event', to: 'aichat#log_chat_event'
 
     resources :ai_tutor_interactions, only: [:create, :index] do
       resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]
@@ -1171,7 +1180,7 @@ Dashboard::Application.routes.draw do
 
     # DatablockStorageController powers the data features of applab,
     # and the key/value pair store feature of gamelab
-    resources :datablock_storage, path: '/datablock_storage/:channel_id/', only: [:index] do
+    resources :datablock_storage, path: '/datablock_storage/:channel_id/', only: [] do
       collection do
         # Datablock Storage: Key-Value-Pair API
         post :set_key_value
@@ -1211,11 +1220,6 @@ Dashboard::Application.routes.draw do
         # Datablock Storage: Project API
         get :project_has_data
         delete :clear_all_data
-
-        # TODO: post-firebase-cleanup, remove
-        # Project Use Datablock Storage API
-        put :use_datablock_storage
-        put :use_firebase_storage
       end
     end
   end

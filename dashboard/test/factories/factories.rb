@@ -436,15 +436,7 @@ FactoryBot.define do
         child_account_compliance_state_last_updated {DateTime.now}
       end
 
-      trait :before_p20_937_exception_date do
-        created_at {Cpa::CREATED_AT_EXCEPTION_DATE.ago(1.second)}
-      end
-
-      trait :p20_937_exception_date do
-        created_at {Cpa::CREATED_AT_EXCEPTION_DATE}
-      end
-
-      factory :cpa_non_compliant_student, traits: [:U13, :in_colorado, :p20_937_exception_date], aliases: %i[non_compliant_child] do
+      factory :cpa_non_compliant_student, traits: [:U13, :in_colorado], aliases: %i[non_compliant_child] do
         trait :predates_policy do
           created_at {Policies::ChildAccount.state_policies.dig('CO', :start_date).ago(1.second)}
         end
@@ -770,6 +762,13 @@ FactoryBot.define do
       end
     end
 
+    trait :with_instructions do
+      after(:create) do |level|
+        level.properties['long_instructions'] = 'Write a loop.'
+        level.save!
+      end
+    end
+
     factory :sublevel do
       sequence(:name) {|n| "sub_level_#{n}"}
     end
@@ -923,6 +922,11 @@ FactoryBot.define do
 
   factory :panels, parent: :level, class: Panels do
     game {Game.panels}
+    level_num {'custom'}
+  end
+
+  factory :pythonlab, parent: :level, class: Pythonlab do
+    game {Game.pythonlab}
     level_num {'custom'}
   end
 
@@ -1180,6 +1184,13 @@ FactoryBot.define do
       after(:create) do |csf_script_level|
         csf_script_level.script.curriculum_umbrella = 'CSF'
         csf_script_level.save
+      end
+    end
+
+    factory :csa_script_level do
+      after(:create) do |csa_script_level|
+        csa_script_level.script.curriculum_umbrella = 'CSA'
+        csa_script_level.save
       end
     end
   end
@@ -1859,7 +1870,7 @@ FactoryBot.define do
   factory :lti_integration do
     issuer {SecureRandom.alphanumeric}
     client_id {SecureRandom.alphanumeric}
-    platform_name {"platform_name"}
+    platform_name {"canvas_cloud"}
     auth_redirect_url {"http://test.org/auth"}
     jwks_url {"jwks_url"}
     access_token_url {"access_token_url"}

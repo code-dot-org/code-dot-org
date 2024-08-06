@@ -788,11 +788,17 @@ class Unit < ApplicationRecord
     text_response_levels = []
     script_levels.map do |script_level|
       script_level.levels.map do |level|
-        next if level.contained_levels.empty? ||
+        # We are looking for two types of text response levels: levels with contained levels
+        # that are text response levels, and predict levels that are free response (predict
+        # levels are used by lab2).
+        is_not_contained = level.contained_levels.empty? ||
           TEXT_RESPONSE_TYPES.exclude?(level.contained_levels.first.class)
+        is_not_predict_free_response = !level.predict_level? || level.properties.dig('predict_settings', 'questionType') != 'freeResponse'
+        next if is_not_contained && is_not_predict_free_response
+        text_response_level = level.predict_level? ? level : level.contained_levels.first
         text_response_levels << {
           script_level: script_level,
-          levels: [level.contained_levels.first]
+          levels: [text_response_level]
         }
       end
     end

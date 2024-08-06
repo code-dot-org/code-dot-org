@@ -1,16 +1,18 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
-import * as Table from 'reactabular-table';
-import {lessonEditorTableStyles} from './TableConstants';
-import color from '@cdo/apps/util/color';
-import Dialog from '@cdo/apps/templates/Dialog';
 import {connect} from 'react-redux';
+import * as Table from 'reactabular-table';
+
+import Dialog from '@cdo/apps/legacySharedComponents/Dialog';
+import SearchBox from '@cdo/apps/lib/levelbuilder/lesson-editor/SearchBox';
 import {
   addStandard,
   removeStandard,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
 import {standardShape, frameworkShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import SearchBox from '@cdo/apps/lib/levelbuilder/lesson-editor/SearchBox';
+import color from '@cdo/apps/util/color';
+
+import {lessonEditorTableStyles} from './TableConstants';
 
 function StandardsEditor(props) {
   const [standardToRemove, setStandardToRemove] = useState(null);

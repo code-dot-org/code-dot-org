@@ -1,7 +1,9 @@
-import * as api from './api';
 import _ from 'lodash';
-import color from '../../../util/color';
+
 import {getFirstParam} from '../../../dropletUtils';
+import color from '../../../util/color';
+
+import * as api from './api';
 import {
   N_COLOR_LEDS,
   CP_BUTTON_VARS,
@@ -9,7 +11,6 @@ import {
   SONG_CHARGE,
   SONG_SINGLE_NOTE,
 } from './boards/circuitPlayground/PlaygroundConstants';
-
 import {
   MB_BUTTON_VARS,
   MB_SENSOR_VARS,

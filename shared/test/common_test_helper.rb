@@ -9,6 +9,7 @@ require 'minitest/reporters'
 require 'minitest/around/unit'
 require 'minitest-spec-context'
 require 'minitest/stub_const'
+require 'active_support/testing/assertions'
 require 'mocha/mini_test'
 require 'vcr'
 require_relative '../../deployment'
@@ -16,6 +17,11 @@ require 'cdo/db'
 require 'cdo/aws/s3'
 
 raise 'Test helper must only be used in `test` environment!' unless rack_env? :test
+
+module Minitest::Assertions
+  # Include assertions defined in ActiveSupport such as assert_changes, etc.
+  include ActiveSupport::Testing::Assertions
+end
 
 VCR.configure do |c|
   c.cassette_library_dir = File.expand_path 'fixtures/vcr', __dir__

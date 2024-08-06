@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import {Header, ConfirmCancelFooter} from '../SystemDialog/SystemDialog';
-import Button from '@cdo/apps/templates/Button';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {ADD_A_PERSONAL_LOGIN_HELP_URL} from '@cdo/apps/lib/util/urlHelpers';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import {Header, ConfirmCancelFooter} from '../SystemDialog/SystemDialog';
 
 const GUTTER = 20;
 

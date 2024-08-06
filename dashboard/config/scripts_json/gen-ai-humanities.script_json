@@ -13,13 +13,14 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "unversioned",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "gen-ai-humanities",
-    "serialized_at": "2024-06-21 22:25:33 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-07-12 00:24:37 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -596,6 +597,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-humanities-writing-L1"
+        ],
         "progression": "Crafting Prompts"
       },
       "bonus": false,
@@ -693,6 +697,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-humanities-research-L1"
+        ],
         "progression": "Verifying Quotes"
       },
       "bonus": false,
@@ -715,6 +722,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-humanities-research-L2"
+        ],
         "progression": "Using a Search Engine to Find Information"
       },
       "bonus": false,
@@ -737,6 +747,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-humanities-research-L3"
+        ],
         "progression": "Using an AI Chatbot to Find Information"
       },
       "bonus": false,
@@ -759,6 +772,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Gen AI Humanities - Research - Student L1 Survey"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,

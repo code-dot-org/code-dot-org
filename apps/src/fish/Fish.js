@@ -3,6 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {TestResults} from '@cdo/apps/constants';
 
 import {getStore} from '../redux';
@@ -116,8 +117,9 @@ Fish.prototype.onContinue = function () {
 };
 
 Fish.prototype.initMLActivities = function () {
-  const {mode} = this.level;
+  const {mode, guides} = this.level;
   const onContinue = this.onContinue.bind(this);
+  const textToSpeechLocale = queryParams('tts');
 
   // Set up initial state
   const canvas = document.getElementById('activity-canvas');
@@ -132,6 +134,8 @@ Fish.prototype.initMLActivities = function () {
     canvas,
     backgroundCanvas,
     appMode: mode,
+    guides,
+    textToSpeechLocale,
     onContinue,
     registerSound: this.studioApp_.registerAudio.bind(this.studioApp_),
     playSound: this.studioApp_.playAudio.bind(this.studioApp_),

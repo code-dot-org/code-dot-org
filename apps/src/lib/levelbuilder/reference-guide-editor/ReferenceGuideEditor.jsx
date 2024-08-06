@@ -1,10 +1,11 @@
-import React, {useState} from 'react';
-import PropTypes from 'prop-types';
-import $ from 'jquery';
-import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
-import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import {TextLink} from '@dsco_/link';
+import $ from 'jquery';
+import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+
+import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
+import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import {navigateToHref} from '@cdo/apps/utils';
 
 export default function ReferenceGuideEditor(props) {

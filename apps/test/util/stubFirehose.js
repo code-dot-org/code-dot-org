@@ -1,4 +1,4 @@
-import {stub} from 'sinon';
+import {stub} from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import firehose from '@cdo/apps/lib/util/firehose';
 

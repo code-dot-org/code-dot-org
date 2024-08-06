@@ -1,6 +1,7 @@
-import React from 'react';
-import ChangeUserTypeForm from './ChangeUserTypeForm';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
+
+import ChangeUserTypeForm from './ChangeUserTypeForm';
 
 const DEFAULT_PROPS = {
   values: {

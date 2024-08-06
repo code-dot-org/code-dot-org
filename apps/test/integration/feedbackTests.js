@@ -1,9 +1,9 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {TestResults} from '@cdo/apps/constants';
 import * as redux from '@cdo/apps/redux';
 
-import {assert} from '../util/reconfiguredChai';
+import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
 

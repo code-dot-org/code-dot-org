@@ -8,9 +8,9 @@ import {
   ExtraStrongText,
   Heading6,
 } from '@cdo/apps/componentLibrary/typography';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';

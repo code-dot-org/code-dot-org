@@ -96,8 +96,6 @@ External contributors can supply alternate placeholder values for secrets normal
 ```
 slack_bot_token: localoverride
 pardot_private_key: localoverride
-firebase_secret: localoverride
-firebase_shared_secret: localoverride
 properties_encryption_key: ''
 ```
 
@@ -245,8 +243,6 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
     1. Install [ruby-build as a rbenv plugin](https://github.com/rbenv/ruby-build#readme)
         1. `mkdir -p "$(rbenv root)"/plugins`
         1. `git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build`
-    1. Use the rbenv-doctor from the [`rbenv` installation instructions](https://github.com/rbenv/rbenv#basic-github-checkout) to verify rbenv is set up correctly:
-        1. `curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash`
     1. If there are any errors (they appear red), follow the [`rbenv` installation instructions] (https://github.com/rbenv/rbenv#basic-github-checkout) to properly configure `rbenv`, following steps for **Ubuntu Desktop** so that config changes go into `.bashrc`.
     1. **Note:** Ubuntu 22.04 ships with versions of `libssl` and `openssl` that are incompatible with `ruby-build`; see https://github.com/rbenv/ruby-build/discussions/1940 for context
         1. As a result, attempts to run `rbenv install` will fail. To resolve, compile a valid version of `openssl` locally and direct `rbenv` to configure ruby to use it as described here: https://github.com/rbenv/ruby-build/discussions/1940#discussioncomment-2663209

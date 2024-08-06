@@ -18,7 +18,7 @@ Instructions HoC	Hour of Code	2_14	Maze	instructions_repeat_explanation	#prompt	
 Category 20	20-hour	2_1	Artist3	category_explanation	.blocklyTreeRoot	{"position": {"my": "center left", "at": "center right"}}
 Jigsaw Click	jigsaw	1	Jigsaw	jigsaw_click	[block-id='1']	{"position": {"my": "top left", "at": "center right"}}
 Drag Blocks HoC	hourofcode	2_2	Maze	drag_blocks	[block-id='1']	{"position": {"my": "top left", "at": "bottom right", "adjust": {"x": 22, "y":60}}, "style": { "classes": "no-tip" }}
-Drag Blocks HoC	hourofcode	2_2	Maze	drag_blocks	[data-id='dragBlocks']	{"position": {"my": "top left", "at": "bottom right", "adjust": {"x": 22, "y":60}}, "style": { "classes": "no-tip" }}
+Drag Blocks HoC	hourofcode	2_2	Maze	drag_blocks	[data-id='moveForward']	{"position": {"my": "top left", "at": "bottom right", "adjust": {"x": 22, "y":60}}, "style": { "classes": "no-tip" }}
 Run HoC	hourofcode	2_2	Maze	run	#runButton
 Watch Video Again HoC	hourofcode	2_5	Maze	watch_again	[data-key='loop_times']	{"position": {"my": "bottom left", "at": "top right"}}
 Undraggable HoC	hourofcode	2_8	Maze	gray_block_explanation	.blocklyUndeletable	{"position": {"my": "top middle", "at": "bottom middle"}}

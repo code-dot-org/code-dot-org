@@ -1,11 +1,8 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import './addons/plusMinusBlocks/if';
-import './addons/plusMinusBlocks/text_join';
 import {
   ObservableProcedureModel,
   ObservableParameterModel,
 } from '@blockly/block-shareable-procedures';
-import {installAllBlocks as installColourBlocks} from '@blockly/field-colour';
 import {LineCursor, NavigationController} from '@blockly/keyboard-navigation';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
 import {
@@ -23,12 +20,14 @@ import {
   SETTABLE_PROPERTIES,
   WORKSPACE_EVENTS,
 } from '@cdo/apps/blockly/constants';
+import DCDO from '@cdo/apps/dcdo';
 import {MetricEvent} from '@cdo/apps/lib/metrics/events';
 import {getStore} from '@cdo/apps/redux';
 import {setFailedToGenerateCode} from '@cdo/apps/redux/blockly';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
 
+import CdoAngleHelper from './addons/cdoAngleHelper';
 import CdoBlockSerializer from './addons/cdoBlockSerializer';
 import CdoConnectionChecker from './addons/cdoConnectionChecker';
 import initializeCdoConstants from './addons/cdoConstants';
@@ -39,15 +38,18 @@ import CdoFieldAnimationDropdown from './addons/cdoFieldAnimationDropdown';
 import CdoFieldBehaviorPicker from './addons/cdoFieldBehaviorPicker';
 import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
 import CdoFieldButton from './addons/cdoFieldButton';
+import CdoFieldColour from './addons/cdoFieldColour';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
 import CdoFieldFlyout from './addons/cdoFieldFlyout';
 import CdoFieldImage from './addons/cdoFieldImage';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldLabel from './addons/cdoFieldLabel';
+import CdoFieldNumber from './addons/cdoFieldNumber';
 import CdoFieldParameter from './addons/cdoFieldParameter';
 import CdoFieldToggle from './addons/cdoFieldToggle';
 import CdoFieldVariable from './addons/cdoFieldVariable';
 import initializeGenerator from './addons/cdoGenerator';
+import {overrideHandleTouchMove} from './addons/cdoGesture';
 import CdoMetricsManager from './addons/cdoMetricsManager';
 import CdoRendererGeras from './addons/cdoRendererGeras';
 import CdoRendererThrasos from './addons/cdoRendererThrasos';
@@ -58,9 +60,12 @@ import CdoTrashcan from './addons/cdoTrashcan';
 import * as cdoUtils from './addons/cdoUtils';
 import initializeVariables from './addons/cdoVariables';
 import CdoVerticalFlyout from './addons/cdoVerticalFlyout';
-import initializeBlocklyXml from './addons/cdoXml';
+import initializeBlocklyXml, {removeInvisibleBlocks} from './addons/cdoXml';
 import {registerAllContextMenuItems} from './addons/contextMenu';
+import registerLogicCompareMutator from './addons/extensions/logic_compare';
 import FunctionEditor from './addons/functionEditor';
+import registerIfMutator from './addons/plusMinusBlocks/if';
+import registerTextJoinMutator from './addons/plusMinusBlocks/text_join';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {Themes, Renderers} from './constants';
 import {flyoutCategory as behaviorsFlyoutCategory} from './customBlocks/googleBlockly/behaviorBlocks';
@@ -92,10 +97,12 @@ import {
   ExtendedBlock,
   ExtendedBlockSvg,
   ExtendedBlocklyOptions,
+  ExtendedConnection,
   ExtendedInput,
   ExtendedVariableMap,
   ExtendedWorkspace,
   ExtendedWorkspaceSvg,
+  FieldHelperOptions,
   GoogleBlocklyInstance,
 } from './types';
 import {
@@ -187,6 +194,9 @@ const BlocklyWrapper = function (
  * Blockly.navigationController.dispose() before calling this function again.
  */
 function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
+  registerIfMutator();
+  registerLogicCompareMutator();
+  registerTextJoinMutator();
   // TODO: can we avoid using any here by converting BlocklyWrapper to a class?
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const blocklyWrapper = new (BlocklyWrapper as any)(
@@ -259,6 +269,8 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   const fieldOverrides: [string, string, FieldProto][] = [
     ['field_variable', 'FieldVariable', CdoFieldVariable],
     ['field_dropdown', 'FieldDropdown', CdoFieldDropdown],
+    ['field_colour', 'FieldColour', CdoFieldColour],
+    ['field_number', 'FieldNumber', CdoFieldNumber],
     // CdoFieldBitmap extends from a JavaScript class without typing.
     // We know it's a field, so it's safe to cast as unknown.
     ['field_bitmap', 'FieldBitmap', CdoFieldBitmap as unknown as FieldProto],
@@ -276,6 +288,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   blocklyWrapper.blockly_.Trashcan = CdoTrashcan as any;
 
   // Code.org custom fields
+  blocklyWrapper.AngleHelper = CdoAngleHelper;
   blocklyWrapper.FieldButton = CdoFieldButton;
   blocklyWrapper.FieldImage = CdoFieldImage;
   blocklyWrapper.FieldImageDropdown = CdoFieldImageDropdown;
@@ -361,6 +374,13 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       return this.blockly_.getSelected();
     },
   });
+  Object.defineProperty(blocklyWrapper, 'BlockFieldHelper', {
+    get: function () {
+      return {
+        ANGLE_HELPER: 'Angle Helper',
+      };
+    },
+  });
 
   // Properties cannot be modified until wrapSettableProperty has been called
   SETTABLE_PROPERTIES.forEach(property =>
@@ -384,10 +404,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   // Assign all of the properties of the javascript generator to the forBlock array
   // Prevents deprecation warnings related to https://github.com/google/blockly/pull/7150
   Object.setPrototypeOf(javascriptGenerator.forBlock, javascriptGenerator);
-  // Installs all colour blocks, the colour field, and the JS generator functions.
-  installColourBlocks({
-    javascript: javascriptGenerator,
-  });
+
   blocklyWrapper.JavaScript = javascriptGenerator;
   blocklyWrapper.LineCursor = LineCursor;
   blocklyWrapper.navigationController = new NavigationController();
@@ -450,6 +467,8 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   };
 
   const extendedInput = blocklyWrapper.Input.prototype as ExtendedInput;
+  const extendedConnection = blocklyWrapper.Connection
+    .prototype as ExtendedConnection;
 
   extendedInput.setStrictCheck = function (check) {
     return this.setCheck(check);
@@ -460,6 +479,37 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     return this.fieldRow;
   };
 
+  /**
+   * Enable the specified field helper with the specified options for this
+   * input's connection
+   * @param {string} fieldHelper the field helper to retrieve. One of
+   *        Blockly.BlockFieldHelper
+   * @param {*} options for this helper
+   * @return {!Blockly.Input} The input being modified (to allow chaining).
+   */
+  extendedInput.addFieldHelper = function (
+    fieldHelper: string,
+    options: FieldHelperOptions
+  ) {
+    (this.connection as ExtendedConnection).addFieldHelper(
+      fieldHelper,
+      options
+    );
+    return this;
+  };
+
+  extendedConnection.addFieldHelper = function (
+    fieldHelper: string,
+    options: FieldHelperOptions
+  ) {
+    if (!this.fieldHelpers_) {
+      this.fieldHelpers_ = {};
+    }
+    this.fieldHelpers_[fieldHelper] = options;
+  };
+  extendedConnection.getFieldHelperOptions = function (fieldHelper: string) {
+    return this.fieldHelpers_ && this.fieldHelpers_[fieldHelper];
+  };
   const extendedBlock = blocklyWrapper.Block.prototype as ExtendedBlock;
 
   extendedBlock.interpolateMsg = interpolateMsg;
@@ -535,6 +585,10 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     variableList.forEach(varName => this.createVariable(varName));
   };
 
+  if (DCDO.get('blockly-move', true)) {
+    overrideHandleTouchMove(blocklyWrapper);
+  }
+
   // Used for spritelab behavior blocks.
   // We can remove this once we are ready to no longer support sprite lab on CDO Blockly.
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -557,8 +611,20 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     return this.embeddedWorkspaces.includes(workspace.id);
   };
 
-  // TODO - used for validation in CS in Algebra.
-  blocklyWrapper.findEmptyContainerBlock = function () {};
+  blocklyWrapper.findEmptyContainerBlock = function (blocks) {
+    for (const block of blocks) {
+      const emptyInput = block.inputList.find(
+        input =>
+          input.type === blocklyWrapper.inputTypes.STATEMENT &&
+          input.connection?.targetConnection === null
+      );
+      if (emptyInput) {
+        return block;
+      }
+    }
+    return null;
+  };
+
   blocklyWrapper.BlockSpace = {
     EVENTS: WORKSPACE_EVENTS,
     onMainBlockSpaceCreated: callback => {
@@ -671,6 +737,13 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       media: '/blockly/media/google_blockly',
       modalInputs: false, // Prevents pop-up editor on mobile
     };
+    // Google Blockly doesn't support invisible blocks, so we want to prevent
+    // them from showing up in the toolbox.
+    if (typeof options.toolbox === 'string') {
+      options.toolbox = Blockly.Xml.domToText(
+        removeInvisibleBlocks(Blockly.Xml.textToDom(options.toolbox))
+      );
+    }
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
     // apps, so we should also set it here.
     blocklyWrapper.assetUrl =

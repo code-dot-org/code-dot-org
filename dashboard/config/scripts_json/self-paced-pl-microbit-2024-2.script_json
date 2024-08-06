@@ -2,17 +2,20 @@
   "script": {
     "name": "self-paced-pl-microbit-2024-2",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "is_migrated": true
+      "curriculum_umbrella": "CSF Self Paced PL",
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-01 22:41:20 UTC",
+    "serialized_at": "2024-07-11 20:34:25 UTC",
     "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "self-paced-pl-microbit-2024-2"
     }

@@ -12,6 +12,7 @@ import {loadUnitProgress} from '../sectionProgress/sectionProgressLoader';
 import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
 
 import ExpandedProgressDataColumn from './ExpandedProgressDataColumn';
+import FloatingHeader from './floatingHeader/FloatingHeader';
 import FloatingScrollbar from './floatingScrollbar/FloatingScrollbar';
 import LessonProgressDataColumn from './LessonProgressDataColumn';
 import SkeletonProgressDataColumn from './SkeletonProgressDataColumn';
@@ -35,6 +36,10 @@ function ProgressTableV2({
   unitId,
   levelProgressByStudent,
 }) {
+  const outsideTableRef = React.useRef();
+
+  const [scrollCallback, setScrollCallback] = React.useState(undefined);
+
   // Filter out all students without progress and reload unit data.
   // This is most likely because a new student was added.
   const filteredStudents = React.useMemo(() => {
@@ -108,21 +113,38 @@ function ProgressTableV2({
     }
 
     return (
-      <FloatingScrollbar childRef={tableRef}>
-        <div
-          className={classNames(
-            styles.table,
-            isSkeleton && styles.tableLoading
-          )}
-          ref={tableRef}
-        >
-          <div className={styles.tableInterior}>
-            {unitData.lessons.map(getRenderedColumn)}
+      <div ref={outsideTableRef} className={styles.outerTable}>
+        <FloatingScrollbar childRef={tableRef} scrollCallback={scrollCallback}>
+          <div
+            className={classNames(
+              styles.table,
+              isSkeleton && styles.tableLoading
+            )}
+            ref={tableRef}
+          >
+            <FloatingHeader
+              setScrollCallback={setScrollCallback}
+              sortedStudents={sortedStudents}
+              outsideTableRef={outsideTableRef}
+            >
+              <div className={styles.tableInterior}>
+                {unitData.lessons.map(getRenderedColumn)}
+              </div>
+            </FloatingHeader>
           </div>
-        </div>
-      </FloatingScrollbar>
+        </FloatingScrollbar>
+      </div>
     );
-  }, [isSkeleton, getRenderedColumn, unitData, tableRef]);
+  }, [
+    isSkeleton,
+    getRenderedColumn,
+    unitData,
+    tableRef,
+    setScrollCallback,
+    sortedStudents,
+    outsideTableRef,
+    scrollCallback,
+  ]);
 
   return (
     <div className={styles.progressTableV2} id="ui-test-progress-table-v2">

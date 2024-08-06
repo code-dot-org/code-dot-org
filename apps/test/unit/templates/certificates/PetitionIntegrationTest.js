@@ -2,11 +2,11 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import {mapValues} from 'lodash';
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import PetitionCallToAction from '@cdo/apps/templates/certificates/petition/PetitionCallToAction';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('Petition on submit', () => {
   const minimumInputs = {

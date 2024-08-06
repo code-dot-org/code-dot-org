@@ -5,8 +5,6 @@ import {
 } from '@cdo/apps/util/curriculumRecommender/curriculumRecommender';
 import {IMPORTANT_TOPICS} from '@cdo/apps/util/curriculumRecommender/curriculumRecommenderConstants';
 
-import {expect} from '../../util/reconfiguredChai';
-
 import {
   IS_FEATURED_TEST_COURSES,
   DURATION_TEST_COURSES,
@@ -27,7 +25,7 @@ describe('testRecommender', () => {
       ''
     ).map(curr => curr.key);
 
-    expect(recommendedCurricula).to.deep.equal([
+    expect(recommendedCurricula).toEqual([
       // Curricula marked as is_featured sorted before other 0-scoring curricula
       'featuredCourse',
       // Sort remaining 0-score curricula by published_date
@@ -45,7 +43,7 @@ describe('testRecommender', () => {
       ''
     ).map(curr => curr.key);
 
-    expect(recommendedCurricula).to.deep.equal([
+    expect(recommendedCurricula).toEqual([
       // Curricula with desired duration score higher
       'monthDurationCourse',
       // Sort remaining 0-score curricula by published_date
@@ -64,7 +62,7 @@ describe('testRecommender', () => {
       ''
     ).map(curr => curr.key);
 
-    expect(recommendedCurricula).to.deep.equal([
+    expect(recommendedCurricula).toEqual([
       // Curricula with slightly longer duration score higher
       'weekDurationCourse',
       // Sort remaining 0-score curricula by published_date
@@ -83,7 +81,7 @@ describe('testRecommender', () => {
       ''
     ).map(curr => curr.key);
 
-    expect(recommendedCurricula).to.deep.equal([
+    expect(recommendedCurricula).toEqual([
       // Curricula with desired marketing initiative score higher
       'marketingInitCourse1',
       // Sort remaining 0-score curricula by published_date
@@ -102,7 +100,7 @@ describe('testRecommender', () => {
       ''
     ).map(curr => curr.key);
 
-    expect(recommendedCurricula).to.deep.equal([
+    expect(recommendedCurricula).toEqual([
       // Curricula with any school subjects score higher
       'multipleSchoolSubjectsCourse',
       'oneSchoolSubjectCourse',
@@ -121,7 +119,7 @@ describe('testRecommender', () => {
       ''
     ).map(curr => curr.key);
 
-    expect(recommendedCurricula).to.deep.equal([
+    expect(recommendedCurricula).toEqual([
       // Curricula with multiple desired school subjects score higher
       'multipleSchoolSubjectsCourse',
       // Curricula with one desired school subject score higher
@@ -141,7 +139,7 @@ describe('testRecommender', () => {
       'topic1,topic2'
     ).map(curr => curr.key);
 
-    expect(recommendedCurricula).to.deep.equal([
+    expect(recommendedCurricula).toEqual([
       // Curricula with multiple desired topics score higher
       'multipleTopicsCourse',
       // Curricula with one desired topic score higher
@@ -164,7 +162,7 @@ describe('testRecommender', () => {
       IMPORTANT_TOPICS[0]
     ).map(curr => curr.key);
 
-    expect(recommendedCurricula).to.deep.equal([
+    expect(recommendedCurricula).toEqual([
       // Curricula with desired topic score higher
       'firstImportantTopicCourse',
       // Curricula with undesired important topics score higher
@@ -186,7 +184,7 @@ describe('testRecommender', () => {
       ''
     ).map(curr => curr.key);
 
-    expect(recommendedCurricula).to.deep.equal([
+    expect(recommendedCurricula).toEqual([
       // Curricula published within the last year score higher
       'publishedWithinOneYearAgoCourse',
       // Curricula published within the last 2 years score higher
@@ -210,7 +208,7 @@ describe('similarRecommender', () => {
 
     // Check recommended curricula results. fullTestCourse1 should be filtered out because it's the curriculum each other one is being compared against,
     // and fullTestCourse5 should be filtered out because it does not support any of the same grade levels as fullTestCourse1.
-    expect(recommendedCurricula).to.deep.equal([
+    expect(recommendedCurricula).toEqual([
       'fullTestCourse2' /* 7 points = hasDesiredMarketingInitiative(2) + (1 overlapping subject * overlappingDesiredSchoolSubject(2)) +
                           (1 overlapping topic * overlappingDesiredTopic(2)) + publishedWithinTwoYearsAgo(1) */,
       'fullTestCourse3' /* 5 points = (1 overlapping topic * overlappingDesiredTopic(2)) + (1 overlapping subject * overlappingDesiredSchoolSubject(2)) +
@@ -231,7 +229,7 @@ describe('stretchRecommender', () => {
 
     // Check recommended curricula results. fullTestCourse1 should be filtered out because it's the curriculum each other one is being compared against,
     // and fullTestCourse5 should be filtered out because it does not support any of the same grade levels as fullTestCourse1.
-    expect(recommendedCurricula).to.deep.equal([
+    expect(recommendedCurricula).toEqual([
       'fullTestCourse3' /* 6 points = hasDesiredDuration(2) + hasDesiredMarketingInitiative(1) + hasImportantButNotDesiredTopic(2) +
                            publishedWithinTwoYearsAgo(1) */,
       'fullTestCourse4' /* 4 points = hasDesiredDuration(2) + hasDesiredMarketingInitiative(1) + overlappingDesiredSchoolSubject(1) */,

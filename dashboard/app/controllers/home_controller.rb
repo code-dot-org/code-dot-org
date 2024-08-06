@@ -69,7 +69,6 @@ class HomeController < ApplicationController
   def home
     authenticate_user!
     init_homepage
-    @is_teacher_homepage = true
     render 'home/index'
   end
 

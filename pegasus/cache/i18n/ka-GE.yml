@@ -1141,6 +1141,7 @@ ka-GE:
   header_courses: კურსები
   header_districts: სკოლები
   header_documentation: დოკუმენტაცია
+  header_donate: შემოწირულობა
   header_educate_beyond: Code.org-ის მიღმა
   header_educate_community: ონლაინ თემი
   header_educate_elementary: დაწყებითი სკოლა
@@ -1164,6 +1165,7 @@ ka-GE:
   header_project_gallery: პროექტები
   header_report_abuse: ბოროტად გამოყენების შესახებ
   header_report_bug: მოგვახსენეთ ტექნიკური ხარვეზის შესახებ
+  header_schools: სკოლები
   header_screen_reader_hamburger: მენიუ
   header_screen_reader_help: დახმარების მენიუ
   header_sections: განყოფილებები
@@ -2437,6 +2439,8 @@ ka-GE:
   user_header_applab: 'App Lab '
   user_header_artist: 'მხატვარი '
   user_header_create: 'შექმნა '
+  user_header_create_account: ანგარიშის შექმნა
+  user_header_create_account_low_cap: ანგარიშის შექმნა
   user_header_dance: ცეკვა
   user_header_flappy: Flappy
   user_header_gamelab: თამაშების ლაბი
@@ -2444,6 +2448,8 @@ ka-GE:
   user_header_logout: გასვლა
   user_header_minecraft: Minecraft
   user_header_my_projects: ჩემი პროექტები
+  user_header_new_project: ახალი პროექტი
+  user_header_new_project_low_cap: ახალი პროექტი
   user_header_playlab: თამაშების ლაბი
   user_header_settings: ანგარიშის პარამეტრები
   user_header_signin: შესვლა

@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-staging",
-    "serialized_at": "2024-06-28 20:06:52 UTC",
+    "serialized_at": "2024-07-27 21:55:49 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -282,7 +282,8 @@
       "has_lesson_plan": true,
       "relative_position": 13,
       "properties": {
-        "overview": "In this lesson, students are presented an overview of the unit and explore the chatbot lab for the first time. Students begin by exploring a chatbot, using a model card to guide their understanding of its capabilities and limitations. Next they learn about the temperature setting in chatbots and how it influences the creativity and reliability of responses. Through hands-on experimentation, students will adjust the temperature to see its effect on the chatbot's answers. Finally, students explore how chatbots can hallucinate to produce incorrect or misleading information. Throughout the unit, students will monitor and document these instances, enhancing their critical awareness of AI's limitations."
+        "overview": "In this lesson, students are presented an overview of the unit and explore the chatbot lab for the first time. Students begin by exploring a chatbot, using a model card to guide their understanding of its capabilities and limitations. Next they learn about the temperature setting in chatbots and how it influences the creativity and reliability of responses. Through hands-on experimentation, students will adjust the temperature to see its effect on the chatbot's answers. Finally, students explore how chatbots can hallucinate to produce incorrect or misleading information. Throughout the unit, students will monitor and document these instances, enhancing their critical awareness of AI's limitations.",
+        "preparation": "- Run through the slide deck and videos ahead of time\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
       "seeding_key": {
         "lesson.key": "Interacting with Language Models",
@@ -298,7 +299,8 @@
       "has_lesson_plan": true,
       "relative_position": 14,
       "properties": {
-        "overview": "This **Explore** lesson introduces the system prompt and guides students through an investigation on how it impacts a chatbot's behavior. Students start by predicting and discussing how a system prompt can impact a chatbot’s behavior, and then investigate and modify existing chatbots to confirm or expand their initial guesses. Through guided activities, they will learn how the design of a prompt can direct and limit chatbot interactions. Students will practice crafting prompts to elicit specific responses from the AI and engage in activities that incorporate personal experiences to see the effect of their prompt design on how the chatbot functions.\n"
+        "overview": "This **Explore** lesson introduces the system prompt and guides students through an investigation on how it impacts a chatbot's behavior. Students start by predicting and discussing how a system prompt can impact a chatbot’s behavior, and then investigate and modify existing chatbots to confirm or expand their initial guesses. Through guided activities, they will learn how the design of a prompt can direct and limit chatbot interactions. Students will practice crafting prompts to elicit specific responses from the AI and engage in activities that incorporate personal experiences to see the effect of their prompt design on how the chatbot functions.\n",
+        "preparation": "- Run through the slide deck and videos ahead of time\n- Review the Level Guide Exemplar\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
       "seeding_key": {
         "lesson.key": "System Prompting - Exploration",
@@ -314,7 +316,8 @@
       "has_lesson_plan": true,
       "relative_position": 15,
       "properties": {
-        "overview": "This **Practice** lesson builds fluency in designing and applying system prompts, expanding the knowledge students developed in the previous lesson. Through examples and guided practice, students learn to craft prompts that guide not only the content but also the style and appropriateness of AI responses based on different audiences and situations. Students apply these skills through practice scenarios simulating real-life use cases and user-stories, emphasizing how problem-solving with system prompts can be applied to address real-world issues."
+        "overview": "This **Practice** lesson builds fluency in designing and applying system prompts, expanding the knowledge students developed in the previous lesson. Through examples and guided practice, students learn to craft prompts that guide not only the content but also the style and appropriateness of AI responses based on different audiences and situations. Students apply these skills through practice scenarios simulating real-life use cases and user-stories, emphasizing how problem-solving with system prompts can be applied to address real-world issues.",
+        "preparation": "- Run through the slide deck and videos ahead of time\n- Review the Level Guide Exemplar\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
       "seeding_key": {
         "lesson.key": "System Prompting - Practice",
@@ -330,7 +333,8 @@
       "has_lesson_plan": true,
       "relative_position": 16,
       "properties": {
-        "overview": "This **Synthesis** lesson expands on the prompting techniques students have learned in the previous two lessons, and invites them to revisit and reflect on how their skills have grown. Students explore two advanced prompting techniques: (1) chain of reasoning, which helps chatbots deliver more precise and relevant responses by giving explicit steps, and (2) providing examples, which enhances the chatbot's accuracy and context appropriateness. After practicing these skills in specific contexts, students revisit and refine earlier lesson activities using the knowledge they’ve accumulated so far."
+        "overview": "This **Synthesis** lesson expands on the prompting techniques students have learned in the previous two lessons, and invites them to revisit and reflect on how their skills have grown. Students explore two advanced prompting techniques: (1) chain of reasoning, which helps chatbots deliver more precise and relevant responses by giving explicit steps, and (2) providing examples, which enhances the chatbot's accuracy and context appropriateness. After practicing these skills in specific contexts, students revisit and refine earlier lesson activities using the knowledge they’ve accumulated so far.",
+        "preparation": "- Run through the slide deck and videos ahead of time\n- Review the Level Guide Exemplar\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
       "seeding_key": {
         "lesson.key": "System Prompting - Synthesis",
@@ -346,7 +350,8 @@
       "has_lesson_plan": true,
       "relative_position": 17,
       "properties": {
-        "overview": "This **Explore** lesson introduces the concept of retrieval and guides students through an investigation on how it impacts a chatbot's behavior. Students start by predicting and discussing how retrieval can impact a chatbot’s behavior, and then investigate and modify existing chatbots to confirm or expand their initial guesses. Through guided activities, they will learn how adding specific information to a chatbot’s knowledge base can significantly improve the accuracy and relevance of its responses. Students will practice adding retrieval information to elicit specific responses from the AI and engage in activities that incorporate personal experiences to see the effect of their retrieval on how the chatbot functions."
+        "overview": "This **Explore** lesson introduces the concept of retrieval and guides students through an investigation on how it impacts a chatbot's behavior. Students start by predicting and discussing how retrieval can impact a chatbot’s behavior, and then investigate and modify existing chatbots to confirm or expand their initial guesses. Through guided activities, they will learn how adding specific information to a chatbot’s knowledge base can significantly improve the accuracy and relevance of its responses. Students will practice adding retrieval information to elicit specific responses from the AI and engage in activities that incorporate personal experiences to see the effect of their retrieval on how the chatbot functions.",
+        "preparation": "- Run through the slide deck and videos ahead of time\n- Review the Level Guide Exemplar\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
       "seeding_key": {
         "lesson.key": "Retrieval - Exploration",
@@ -362,7 +367,8 @@
       "has_lesson_plan": true,
       "relative_position": 18,
       "properties": {
-        "overview": "This **Practice** lesson builds fluency in designing and applying retrieval statements, expanding the knowledge students developed in the previous lesson. Through examples and guided practice, students explore how retrieval can be used to provide current, specialized, and accurate information, helping to reduce the occurrence of AI hallucinations. Students apply these skills through practice scenarios simulating real-life use cases and user-stories, emphasizing the use of trusted real-world data sources (ie: copy-and-pasting accurate sentences) is an effective strategy to address real-world issues."
+        "overview": "This **Practice** lesson builds fluency in designing and applying retrieval statements, expanding the knowledge students developed in the previous lesson. Through examples and guided practice, students explore how retrieval can be used to provide current, specialized, and accurate information, helping to reduce the occurrence of AI hallucinations. Students apply these skills through practice scenarios simulating real-life use cases and user-stories, emphasizing the use of trusted real-world data sources (ie: copy-and-pasting accurate sentences) is an effective strategy to address real-world issues.",
+        "preparation": "- Run through the slide deck and videos ahead of time\n- Review the Level Guide Exemplar\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
       "seeding_key": {
         "lesson.key": "Retrieval - Practice",
@@ -378,7 +384,8 @@
       "has_lesson_plan": true,
       "relative_position": 19,
       "properties": {
-        "overview": "This **Synthesis** lesson focuses on applying retrieval and system prompting to three complex user scenarios. Students begin by brainstorming and planning how to use these strategies to achieve user goals effectively. They will also explore methods for testing and evaluating chatbots to prevent potential harms. After planning, students will design chatbots tailored to each scenario, deciding strategically between using system prompts or retrieval. The lesson concludes with a reflection on the appropriate use of retrieval versus system prompting and revisits previous tasks, allowing students to apply their new insights to enhance their earlier work."
+        "overview": "This **Synthesis** lesson focuses on applying retrieval and system prompting to three complex user scenarios. Students begin by brainstorming and planning how to use these strategies to achieve user goals effectively. They will also explore methods for testing and evaluating chatbots to prevent potential harms. After planning, students will design chatbots tailored to each scenario, deciding strategically between using system prompts or retrieval. The lesson concludes with a reflection on the appropriate use of retrieval versus system prompting and revisits previous tasks, allowing students to apply their new insights to enhance their earlier work.",
+        "preparation": "- Run through the slide deck and videos ahead of time\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
       "seeding_key": {
         "lesson.key": "Retrieval - Synthesis",
@@ -394,7 +401,8 @@
       "has_lesson_plan": true,
       "relative_position": 20,
       "properties": {
-        "overview": "In this lesson, students create their project for the unit. In the project, students create a chatbot that represents their personality and is an expert on a specific interest they care about. Using their newfound knowledge from this unit, students apply techniques to adjust the temperature, system prompt, and retrieval settings of a chatbot. After testing their chatbot, they create a model card and “publish” it so other users can interact with it."
+        "overview": "In this lesson, students create their project for the unit. In the project, students create a chatbot that represents their personality and is an expert on a specific interest they care about. Using their newfound knowledge from this unit, students apply techniques to adjust the temperature, system prompt, and retrieval settings of a chatbot. After testing their chatbot, they create a model card and “publish” it so other users can interact with it.",
+        "preparation": "- Print copies of the activity guide for each student\n- Run through the slide deck and videos ahead of time\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
       "seeding_key": {
         "lesson.key": "Project: Create a Personal Chatbot",
@@ -410,7 +418,8 @@
       "has_lesson_plan": true,
       "relative_position": 21,
       "properties": {
-        "overview": "In this lesson, students are introduced to Model Cards and Foresight in AI charts as tools used to plan for how AI products are used. Students begin by reflecting on what materials are provided to users when we buy a new product, then explore how a Model Card serves a similar purpose for chatbots to clarify and caution how a particular chatbot product should and shouldn’t be used. Then, students explore an example of a Library chatbot and use a Foresight in AI table to examine the intended and unintended users and use-cases for this chatbot. After this example, students create their own model card for a fictitious chatbot, and then analyze each other’s model cards with a Foresight in AI chart."
+        "overview": "In this lesson, students are introduced to Model Cards and Foresight in AI charts as tools used to plan for how AI products are used. Students begin by reflecting on what materials are provided to users when we buy a new product, then explore how a Model Card serves a similar purpose for chatbots to clarify and caution how a particular chatbot product should and shouldn’t be used. Then, students explore an example of a Library chatbot and use a Foresight in AI table to examine the intended and unintended users and use-cases for this chatbot. After this example, students create their own model card for a fictitious chatbot, and then analyze each other’s model cards with a Foresight in AI chart.",
+        "preparation": "- Print copies of the activity guide for each student\n- Run through the slide deck and videos ahead of time\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
       "seeding_key": {
         "lesson.key": "Model Cards - Exploration",
@@ -426,7 +435,8 @@
       "has_lesson_plan": true,
       "relative_position": 22,
       "properties": {
-        "overview": "In this lesson, students explore how to create model cards as they develop their chatbots. Students start by helping a friend design a chatbot to give more specific recommendations using a series of multiple-choice focus questions. Once these decisions are made, students document these decisions on the model card for the chatbot, emphasizing how a model card can also serve as documentation as you make decisions during chatbot development. After doing an example as a class, students choose a new scenario and repeat this process."
+        "overview": "In this lesson, students explore how to create model cards as they develop their chatbots. Students start by helping a friend design a chatbot to give more specific recommendations using a series of multiple-choice focus questions. Once these decisions are made, students document these decisions on the model card for the chatbot, emphasizing how a model card can also serve as documentation as you make decisions during chatbot development. After doing an example as a class, students choose a new scenario and repeat this process.",
+        "preparation": "- Print copies of the activity guide for each student\n- Run through the slide deck and videos ahead of time\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
       "seeding_key": {
         "lesson.key": "Model Cards - Practice",
@@ -442,7 +452,8 @@
       "has_lesson_plan": true,
       "relative_position": 23,
       "properties": {
-        "overview": "In this lesson, students explore a design thinking strategy to help identify core issues in their community and brainstorm ways generative AI can help solve them. Students start with an initial observation of a problem in their community, then use the 5 Why’s strategy to identify the larger core issue that could be addressed. Students then use model cards to brainstorm possible solutions, then discuss four possible solutions provided by other students. These activities act as a “practice run” for skills and processes students will do for their project later in the unit."
+        "overview": "In this lesson, students explore a design thinking strategy to help identify core issues in their community and brainstorm ways generative AI can help solve them. Students start with an initial observation of a problem in their community, then use the 5 Why’s strategy to identify the larger core issue that could be addressed. Students then use model cards to brainstorm possible solutions, then discuss four possible solutions provided by other students. These activities act as a “practice run” for skills and processes students will do for their project later in the unit.",
+        "preparation": "- Print copies of the activity guide for each student\n- Run through the slide deck and videos ahead of time\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
       "seeding_key": {
         "lesson.key": "Issue Statements",
@@ -458,7 +469,8 @@
       "has_lesson_plan": true,
       "relative_position": 24,
       "properties": {
-        "overview": "In this lesson, students are introduced to the process of fine-tuning as a process for altering the core behavior of a language model. The lesson starts with students reflecting on how inside jokes or slang expressions create connections that are difficult to explain to folks outside the group - they must be experienced to be understood. This idea ties into the lesson as we explore a new chatbot that has been specifically designed to act as a medical expert. Students observe how speaking to the medical expert chatbot is different from the typical chatbot due to how the both has been fine-tuned on additional medical data. Students learn about the fine-tuning process, then explore additional models on the Hugging Face website to see additional fine-tuned examples."
+        "overview": "In this lesson, students are introduced to the process of fine-tuning as a process for altering the core behavior of a language model. The lesson starts with students reflecting on how inside jokes or slang expressions create connections that are difficult to explain to folks outside the group - they must be experienced to be understood. This idea ties into the lesson as we explore a new chatbot that has been specifically designed to act as a medical expert. Students observe how speaking to the medical expert chatbot is different from the typical chatbot due to how the both has been fine-tuned on additional medical data. Students learn about the fine-tuning process, then explore additional models on the Hugging Face website to see additional fine-tuned examples.",
+        "preparation": "- Run through the slide deck and videos ahead of time\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
       "seeding_key": {
         "lesson.key": "Fine Tuning - Exploration",
@@ -474,7 +486,8 @@
       "has_lesson_plan": true,
       "relative_position": 25,
       "properties": {
-        "overview": "This lesson has two central parts - first students explore how to act as user testers for a chatbot app, then students help decide what the next-steps should be for a chatbot based on the testing data. This lesson builds to the project students will complete at the end of the unit, where they will user-test each other’s apps using the same structure in this lesson. Students also wrestle with the responsible use of AI and help decide whether or not a chatbot should be launched publicly even when some flaws are uncovered, emphasizing how humans remain decision-makers for how AI products impact society."
+        "overview": "This lesson has two central parts - first students explore how to act as user testers for a chatbot app, then students help decide what the next-steps should be for a chatbot based on the testing data. This lesson builds to the project students will complete at the end of the unit, where they will user-test each other’s apps using the same structure in this lesson. Students also wrestle with the responsible use of AI and help decide whether or not a chatbot should be launched publicly even when some flaws are uncovered, emphasizing how humans remain decision-makers for how AI products impact society.",
+        "preparation": "- Print copies of the activity guide for each student\n- Run through the slide deck and videos ahead of time\n- Review the LEADERS framework\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
       "seeding_key": {
         "lesson.key": "User Feedback",
@@ -490,7 +503,8 @@
       "has_lesson_plan": true,
       "relative_position": 26,
       "properties": {
-        "overview": "Students explore the impact of generative AI by participating in a collaborative game. Students take on a persona of someone impacted by generative AI to read a few articles and react in-character. Then, students form groups and are given a scenario involving their persona and generative AI. Working together, they come up with guidelines for how generative AI should be implemented in this scenario that includes the voices and perspectives of all stakeholders. Finally, students share their results with the class and reflect on this process."
+        "overview": "Students explore the impact of generative AI by participating in a collaborative game. Students take on a persona of someone impacted by generative AI to read a few articles and react in-character. Then, students form groups and are given a scenario involving their persona and generative AI. Working together, they come up with guidelines for how generative AI should be implemented in this scenario that includes the voices and perspectives of all stakeholders. Finally, students share their results with the class and reflect on this process.",
+        "preparation": "- Run through the slide deck and videos ahead of time\n- Check any external links to make sure they are not blocked\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
       "seeding_key": {
         "lesson.key": "Chatbots in Society",
@@ -506,7 +520,8 @@
       "has_lesson_plan": true,
       "relative_position": 27,
       "properties": {
-        "overview": "In this lesson, students create their project for the unit. In the project, students create a chatbot that addresses a personally relevant issue or an issue in their community. Students rely on the user-centered design strategies they’ve seen throughout the unit to create issue statements, design a chatbot, perform user testing, and reflect on the results. Optionally, students can design a presentation on their project and the problem it was designed to address."
+        "overview": "In this lesson, students create their project for the unit. In the project, students create a chatbot that addresses a personally relevant issue or an issue in their community. Students rely on the user-centered design strategies they’ve seen throughout the unit to create issue statements, design a chatbot, perform user testing, and reflect on the results. Optionally, students can design a presentation on their project and the problem it was designed to address.",
+        "preparation": "- Print copies of the activity guide for each student\n- Run through the slide deck and videos ahead of time\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes)."
       },
       "seeding_key": {
         "lesson.key": "Project: Solving Community Problems with Chatbots",
@@ -604,7 +619,7 @@
       "position": 3,
       "properties": {
         "duration": 5,
-        "name": "Warm Up"
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "a103b66b-6644-4dca-9da4-3a53784b9185",
@@ -731,19 +746,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "f630571f-1183-477c-bfae-51cc69f3fedb",
-        "lesson.key": "Understanding Embeddings",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "gen-ai-staging"
-      }
-    },
-    {
-      "key": "0017740c-e208-4883-9048-85f2a533df48",
-      "position": 4,
-      "properties": {
-        "name": "Pilot Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "0017740c-e208-4883-9048-85f2a533df48",
         "lesson.key": "Understanding Embeddings",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "gen-ai-staging"
@@ -2411,7 +2413,7 @@
       "key": "cbba2873-df2a-4812-a7a9-995af84a9bdd",
       "position": 3,
       "properties": {
-        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/8639001290192cc68496a83c54328ed3-image-1712459938896.png\"></td>\n    <td style=\"width: 75%\">\n      <strong>Before Class:</strong> Have the <a href=\"https://research.google.com/semantris/\">Semantris game</a> loaded on your computer. Consider having it displayed as students walk in instead of this slide.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Play the <a href=\"https://research.google.com/semantris/\">Semantris Arcade game</a> as a class, with you driving the game while students shout out words to type in. After a few rounds, continue on with the lesson.\n\t\t<br />\n\t\t<br />(Optional): If your class has easy access to devices, have students play this game on their own before continuing.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/a461237766d22c9a7671c0fb0d190f30-image-1712459941410.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This exercise introduces this idea of “closeness” or “similarity” between words. At its core, it’s based on the idea that when you have an input of a single word…\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> you’re able to access additional information about that word in your head…\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> which then lets you think of similar words related to the one you started with…\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/6c90e8287b1e1cca2d4f6bb89692c387-image-1712459943340.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> It turns out this is our next step in understanding how language models work. We learned in the last few lessons how language models use training data to recognize individual words. \n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br />\n<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> And the next step is to learn how models can group these words in a logical way.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/325ac2ff18d1c9712afe337395e24d1b-image-1712459945571.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today, we’ll learn about the special representation it uses for these words. This is what allows models to approximate the meaning of words and determine how “close” or similar words are to each other, just like we did in this warm-up.\n<br />\n<br /><strong>Question of the Day:</strong> How do computers represent the meanings of words?\n    </td>\n  </tr>\n\n</table>    \n    "
+        "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/a461237766d22c9a7671c0fb0d190f30-image-1712459941410.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This exercise introduces this idea of “closeness” or “similarity” between words. At its core, it’s based on the idea that when you have an input of a single word…\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> you’re able to access additional information about that word in your head…\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> which then lets you think of similar words related to the one you started with…\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/6c90e8287b1e1cca2d4f6bb89692c387-image-1712459943340.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> It turns out this is our next step in understanding how language models work. We learned in the last few lessons how language models use training data to recognize individual words. \n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br />\n<i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> And the next step is to learn how models can group these words in a logical way.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/325ac2ff18d1c9712afe337395e24d1b-image-1712459945571.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today, we’ll learn about the special representation it uses for these words. This is what allows models to approximate the meaning of words and determine how “close” or similar words are to each other, just like we did in this warm-up.\n<br />\n<br /><strong>Question of the Day:</strong> How do computers represent the meanings of words?\n    </td>\n  </tr>\n\n</table>    \n    "
       },
       "seeding_key": {
         "activity_section.key": "cbba2873-df2a-4812-a7a9-995af84a9bdd",
@@ -2431,8 +2433,19 @@
       }
     },
     {
-      "key": "3b2e332e-bf0c-4e47-9028-f9befb4eb3c0",
+      "key": "74576132-784b-49dd-9baf-a84f93b7b1e4",
       "position": 5,
+      "properties": {
+        "progression_name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "74576132-784b-49dd-9baf-a84f93b7b1e4",
+        "lesson_activity.key": "9faaca19-d813-4250-9953-11abc4a1104f"
+      }
+    },
+    {
+      "key": "3b2e332e-bf0c-4e47-9028-f9befb4eb3c0",
+      "position": 6,
       "properties": {
         "description": "\n<table>\n  <tr>\n    <td style=\"width: 25%\">Slide</td>\n    <td style=\"width: 75%\">Lesson Guide</td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/8639001290192cc68496a83c54328ed3-image-1712459938896.png\"></td>\n    <td style=\"width: 75%\">\n      <strong>Before Class:</strong> Have the <a href=\"https://research.google.com/semantris/\">Semantris game</a> loaded on your computer. Consider having it displayed as students walk in instead of this slide.\n\t\t<br />\n\t\t<br /><i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> <strong>Do This:</strong> Play the <a href=\"https://research.google.com/semantris/\">Semantris Arcade game</a> as a class, with you driving the game while students shout out words to type in. After a few rounds, continue on with the lesson.\n\t\t<br />\n\t\t<br />(Optional): If your class has easy access to devices, have students play this game on their own before continuing.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/a461237766d22c9a7671c0fb0d190f30-image-1712459941410.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> This exercise introduces this idea of “closeness” or “similarity” between words. At its core, it’s based on the idea that when you have an input of a single word…\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> you’re able to access additional information about that word in your head…\n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> which then lets you think of similar words related to the one you started with…\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/6c90e8287b1e1cca2d4f6bb89692c387-image-1712459943340.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> It turns out this is our next step in understanding how language models work. We learned in the last few lessons how language models use training data to recognize individual words. \n\t\t<br />\n\t\t<br /><img src=\"https://curriculum.code.org/media/uploads/animation.png\" /> Click the animation\n\t\t<br />\n\t\t<br /><i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> And the next step is to learn how models can group these words in a logical way.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/325ac2ff18d1c9712afe337395e24d1b-image-1712459945571.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-microphone\" aria-hidden=\"true\"></i> <strong>Say:</strong> Today, we’ll learn about the special representation it uses for these words. This is what allows models to approximate the meaning of words and determine how “close” or similar words are to each other, just like we did in this warm-up.\n<br />\n<br /><strong>Question of the Day:</strong> How do computers represent the meanings of words?\n    </td>\n  </tr>\n    "
       },
@@ -2527,25 +2540,25 @@
       }
     },
     {
-      "key": "5a48cffd-d4db-4113-95d1-05867833e31c",
+      "key": "942e1678-2ffb-47c8-9d84-c45fb8d2da08",
       "position": 1,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "942e1678-2ffb-47c8-9d84-c45fb8d2da08",
+        "lesson_activity.key": "f630571f-1183-477c-bfae-51cc69f3fedb"
+      }
+    },
+    {
+      "key": "5a48cffd-d4db-4113-95d1-05867833e31c",
+      "position": 2,
       "properties": {
         "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/11cc6b2bf688d6ca7af50a45911f9624-Storage.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> We’ve been exploring how a language model represents and stores the meaning of words. In your graphic organizer, update the Storage section with an explanation of how a model represents words.\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/2daf9bd34ce43cd82fd7e72a5b115a39-image-1712459987641.png\"></td>\n    <td style=\"width: 75%\">\n      <strong>Question of the Day:</strong> How do computers represent the meanings of words?\n    </td>\n  </tr>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/66e598dbe01a59e62e462ed2cbc2f8c8-image-1712459990120.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-pencil\" aria-hidden=\"true\"></i> <strong>Vocabulary:</strong> The key vocabulary from this lesson is provided on this slide and in the lesson plan.\n    </td>\n  </tr>\n\n</table>    "
       },
       "seeding_key": {
         "activity_section.key": "5a48cffd-d4db-4113-95d1-05867833e31c",
         "lesson_activity.key": "f630571f-1183-477c-bfae-51cc69f3fedb"
-      }
-    },
-    {
-      "key": "5e6d006b-a9bf-4005-94fa-fb269741389b",
-      "position": 1,
-      "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLSf-4jHfSNooPbk44HLXnxjdwnD5Rjat7PqwDkMbsJZetT3ZYQ/viewform)\n- [**Submit Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSdmFf5tZbaeaJo4IMsirKF6JM6_bGZg6sTGWWmMRL3OoS5pMQ/viewform) (required for Amazon Gift Card!)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/generative-ai-pilot/460)"
-      },
-      "seeding_key": {
-        "activity_section.key": "5e6d006b-a9bf-4005-94fa-fb269741389b",
-        "lesson_activity.key": "0017740c-e208-4883-9048-85f2a533df48"
       }
     },
     {
@@ -5721,6 +5734,59 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson4-warmup-level1"
+        ],
+        "progression": "Warm Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson4-warmup-level1"
+        ],
+        "lesson.key": "Understanding Embeddings",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "74576132-784b-49dd-9baf-a84f93b7b1e4"
+      },
+      "level_keys": [
+        "genai-lesson4-warmup-level1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-lesson4-wrapup-level1"
+        ],
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson4-wrapup-level1"
+        ],
+        "lesson.key": "Understanding Embeddings",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "942e1678-2ffb-47c8-9d84-c45fb8d2da08"
+      },
+      "level_keys": [
+        "genai-lesson4-wrapup-level1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Foundations AI - Outputs - Mad Lib Widget_2024"
+        ],
         "progression": "[For Teachers] Mad Lib Widget"
       },
       "bonus": false,
@@ -5738,11 +5804,14 @@
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L1_2024"
+        ],
         "progression": "Explore a Chatbot"
       },
       "bonus": false,
@@ -5760,11 +5829,14 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 5,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L2_2024"
+        ],
         "progression": "Explore a Chatbot"
       },
       "bonus": false,
@@ -5782,11 +5854,14 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 6,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L3_2024"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -5804,11 +5879,14 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 7,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L4_2024"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -5826,11 +5904,14 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 8,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L5_2024"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -5848,11 +5929,14 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 9,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L6_2024"
+        ],
         "progression": "Temperature"
       },
       "bonus": false,
@@ -5870,11 +5954,14 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 10,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L7_2024"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -5892,11 +5979,14 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 11,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L8V2_2024"
+        ],
         "progression": "Investigating Hallucinations"
       },
       "bonus": false,
@@ -5914,11 +6004,14 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 12,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-intro-L8_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -5936,11 +6029,14 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L1V2_2024"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -5958,11 +6054,14 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L2V2_2024"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -5980,11 +6079,14 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 15,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L3_2024"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -6002,11 +6104,14 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 16,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L4_2024"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -6024,11 +6129,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 17,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L5_2024"
+        ],
         "progression": "Modify"
       },
       "bonus": false,
@@ -6046,11 +6154,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 18,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L6_2024"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -6068,11 +6179,14 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 19,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-explore-L7_2024"
+        ],
         "progression": "Make"
       },
       "bonus": false,
@@ -6090,11 +6204,14 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L1_2024"
+        ],
         "progression": "Using a System Prompt"
       },
       "bonus": false,
@@ -6112,11 +6229,14 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L2_2024"
+        ],
         "progression": "Using a System Prompt"
       },
       "bonus": false,
@@ -6134,11 +6254,14 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L3_2024"
+        ],
         "progression": "Using a System Prompt"
       },
       "bonus": false,
@@ -6156,11 +6279,14 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L4_2024"
+        ],
         "progression": "Role & Tone"
       },
       "bonus": false,
@@ -6178,11 +6304,14 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 24,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L5_2024"
+        ],
         "progression": "Role & Tone"
       },
       "bonus": false,
@@ -6200,11 +6329,14 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 25,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L6_2024"
+        ],
         "progression": "Role & Tone"
       },
       "bonus": false,
@@ -6222,11 +6354,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 26,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L7_2024"
+        ],
         "progression": "Audience & Delivery"
       },
       "bonus": false,
@@ -6244,11 +6379,14 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 27,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L8_2024"
+        ],
         "progression": "Audience & Delivery"
       },
       "bonus": false,
@@ -6266,11 +6404,14 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 28,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L9_2024"
+        ],
         "progression": "Audience & Delivery"
       },
       "bonus": false,
@@ -6288,11 +6429,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 29,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L10_2024"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -6310,11 +6454,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 30,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L11_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -6332,11 +6479,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 31,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L12_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -6354,11 +6504,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 32,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-practice-L13_2024"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -6376,11 +6529,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 33,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson3_2024"
+        ],
         "progression": "End-Of-Lesson Survey!"
       },
       "bonus": false,
@@ -6398,11 +6554,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 34,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L1_2024"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -6420,11 +6579,14 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L2_2024"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -6442,11 +6604,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L3_2024"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -6464,11 +6629,14 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L4_2024"
+        ],
         "progression": "Chain of Reasoning"
       },
       "bonus": false,
@@ -6486,11 +6654,14 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 38,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L5_2024"
+        ],
         "progression": "Giving Examples"
       },
       "bonus": false,
@@ -6508,11 +6679,14 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 39,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L6_2024"
+        ],
         "progression": "Giving Examples"
       },
       "bonus": false,
@@ -6530,11 +6704,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 40,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L7_2024"
+        ],
         "progression": "Giving Examples"
       },
       "bonus": false,
@@ -6552,11 +6729,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L9_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -6574,11 +6754,14 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-L8_2024"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -6596,11 +6779,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-prompt-synthesis-10V2_2024"
+        ],
         "progression": "Show What You Know"
       },
       "bonus": false,
@@ -6618,11 +6804,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson4_2024"
+        ],
         "progression": "End-Of-Lesson Survey!"
       },
       "bonus": false,
@@ -6640,11 +6829,14 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L1_2024"
+        ],
         "progression": "Explore"
       },
       "bonus": false,
@@ -6662,11 +6854,14 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 46,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L2V2_2024"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -6684,11 +6879,14 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L3V2_2024"
+        ],
         "progression": "Predict"
       },
       "bonus": false,
@@ -6706,11 +6904,14 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 48,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L4_2024"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -6728,11 +6929,14 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 49,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L5_2024"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -6750,11 +6954,14 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L6_2024"
+        ],
         "progression": "Investigate"
       },
       "bonus": false,
@@ -6772,11 +6979,14 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L7A_2024"
+        ],
         "progression": "Modify"
       },
       "bonus": false,
@@ -6794,11 +7004,14 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L8_2024"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -6816,11 +7029,14 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 53,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-explore-L9_2024"
+        ],
         "progression": "Make"
       },
       "bonus": false,
@@ -6838,11 +7054,14 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 54,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson5_2024"
+        ],
         "progression": "End-Of-Lesson Survey!"
       },
       "bonus": false,
@@ -6860,11 +7079,14 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 55,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L1_2024"
+        ],
         "progression": "Current Information"
       },
       "bonus": false,
@@ -6882,11 +7104,14 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 56,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L2_2024"
+        ],
         "progression": "Current Information"
       },
       "bonus": false,
@@ -6904,11 +7129,14 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 57,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L3_2024"
+        ],
         "progression": "Specialized Information"
       },
       "bonus": false,
@@ -6926,11 +7154,14 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 58,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L4_2024"
+        ],
         "progression": "Specialized Information"
       },
       "bonus": false,
@@ -6948,11 +7179,14 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 59,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L5_2024"
+        ],
         "progression": "Accurate Information"
       },
       "bonus": false,
@@ -6970,11 +7204,14 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 60,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L6_2024"
+        ],
         "progression": "Accurate Information"
       },
       "bonus": false,
@@ -6992,11 +7229,14 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 61,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L7_2024"
+        ],
         "progression": "Accurate Information"
       },
       "bonus": false,
@@ -7014,11 +7254,14 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 62,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L8_2024"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -7036,11 +7279,14 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 63,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L9_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -7058,11 +7304,14 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 64,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L10_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7080,11 +7329,14 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 65,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-practice-L11_2024"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -7102,11 +7354,14 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 66,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson6_2024"
+        ],
         "progression": "End-Of-Lesson Survey!"
       },
       "bonus": false,
@@ -7124,11 +7379,14 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L1_2024"
+        ],
         "progression": "User Story #1: Sarah Thompson"
       },
       "bonus": false,
@@ -7146,11 +7404,14 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 68,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L1.1_2024"
+        ],
         "progression": "User Story #1: Sarah Thompson"
       },
       "bonus": false,
@@ -7168,11 +7429,14 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 69,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L2_2024"
+        ],
         "progression": "User Story #1: Sarah Thompson"
       },
       "bonus": false,
@@ -7190,11 +7454,14 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 70,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L4_2024"
+        ],
         "progression": "User Story #2: Janet Lee"
       },
       "bonus": false,
@@ -7212,11 +7479,14 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 71,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L4.1_2024"
+        ],
         "progression": "User Story #2: Janet Lee"
       },
       "bonus": false,
@@ -7234,11 +7504,14 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 72,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L5_2024"
+        ],
         "progression": "User Story #2: Janet Lee"
       },
       "bonus": false,
@@ -7256,11 +7529,14 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 73,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L7_2024"
+        ],
         "progression": "User Story #3: Alex Martinez"
       },
       "bonus": false,
@@ -7278,11 +7554,14 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 74,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-predict-L7.1_2024"
+        ],
         "progression": "User Story #3: Alex Martinez"
       },
       "bonus": false,
@@ -7300,11 +7579,14 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 75,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L8_2024"
+        ],
         "progression": "User Story #3: Alex Martinez"
       },
       "bonus": false,
@@ -7322,11 +7604,14 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 76,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L10_2024"
+        ],
         "progression": "Check-In"
       },
       "bonus": false,
@@ -7344,11 +7629,14 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 77,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-retrieval-synthesis-L11_2024"
+        ],
         "progression": "Show What You Know"
       },
       "bonus": false,
@@ -7366,11 +7654,14 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 78,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson7_2024"
+        ],
         "progression": "End-Of-Lesson Survey!"
       },
       "bonus": false,
@@ -7388,11 +7679,14 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 79,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project-L1_2024"
+        ],
         "progression": "Model, Temperature, and Prompt"
       },
       "bonus": false,
@@ -7410,11 +7704,14 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 80,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project-L2_2024"
+        ],
         "progression": "Retrieval"
       },
       "bonus": false,
@@ -7432,11 +7729,14 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 81,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project-L3_2024"
+        ],
         "progression": "Model Card"
       },
       "bonus": false,
@@ -7454,209 +7754,14 @@
       ]
     },
     {
-      "chapter": 80,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Explore"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-finetuning-explore-L1_2024"
-        ],
-        "lesson.key": "Fine Tuning - Exploration",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "b2854861-6ec4-486f-b95e-5b6f4d56c08a"
-      },
-      "level_keys": [
-        "gen-ai-customizing-finetuning-explore-L1_2024"
-      ]
-    },
-    {
-      "chapter": 81,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Predict"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-finetuning-explore-L2V2_2024"
-        ],
-        "lesson.key": "Fine Tuning - Exploration",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "6be30e70-2bd8-4774-b7b1-67cfff9b22ea"
-      },
-      "level_keys": [
-        "gen-ai-customizing-finetuning-explore-L2V2_2024"
-      ]
-    },
-    {
       "chapter": 82,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Predict"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-finetuning-explore-L3V2_2024"
-        ],
-        "lesson.key": "Fine Tuning - Exploration",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "6be30e70-2bd8-4774-b7b1-67cfff9b22ea"
-      },
-      "level_keys": [
-        "gen-ai-customizing-finetuning-explore-L3V2_2024"
-      ]
-    },
-    {
-      "chapter": 83,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Investigate"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-finetuning-explore-L4_2024"
-        ],
-        "lesson.key": "Fine Tuning - Exploration",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "0b801556-1983-43ee-b87a-b2cb44b1d482"
-      },
-      "level_keys": [
-        "gen-ai-customizing-finetuning-explore-L4_2024"
-      ]
-    },
-    {
-      "chapter": 84,
-      "position": 5,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Investigate"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-panels-finetune-overview_2024"
-        ],
-        "lesson.key": "Fine Tuning - Exploration",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "0b801556-1983-43ee-b87a-b2cb44b1d482"
-      },
-      "level_keys": [
-        "gen-ai-panels-finetune-overview_2024"
-      ]
-    },
-    {
-      "chapter": 85,
-      "position": 6,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Investigate"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-finetuning-explore-choice_2024"
-        ],
-        "lesson.key": "Fine Tuning - Exploration",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "0b801556-1983-43ee-b87a-b2cb44b1d482"
-      },
-      "level_keys": [
-        "gen-ai-customizing-finetuning-explore-choice_2024"
-      ]
-    },
-    {
-      "chapter": 86,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Check-In"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-finetuning-explore-L6_2024"
-        ],
-        "lesson.key": "Fine Tuning - Exploration",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "d26dd3ee-3592-4184-a6df-828f6804cc78"
-      },
-      "level_keys": [
-        "gen-ai-customizing-finetuning-explore-L6_2024"
-      ]
-    },
-    {
-      "chapter": 87,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Make"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-finetuning-explore-L5_2024"
-        ],
-        "lesson.key": "Fine Tuning - Exploration",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "33305457-e01e-4be0-9e71-bc9600622cc4"
-      },
-      "level_keys": [
-        "gen-ai-customizing-finetuning-explore-L5_2024"
-      ]
-    },
-    {
-      "chapter": 88,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "End-Of-Lesson Survey!"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson8_2024"
-        ],
-        "lesson.key": "Fine Tuning - Exploration",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "76c66a35-a57a-45c6-a5f0-235ba54382c3"
-      },
-      "level_keys": [
-        "gen-ai-customizing-pilotv2-survey-lesson8_2024"
-      ]
-    },
-    {
-      "chapter": 89,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson9_2024"
+        ],
         "progression": "End-Of-Lesson Survey!"
       },
       "bonus": false,
@@ -7674,11 +7779,14 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 83,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-modelcards-practice-L1_2024"
+        ],
         "progression": "Initial Scenario"
       },
       "bonus": false,
@@ -7696,11 +7804,14 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 84,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-modelcards-practice-L2_2024"
+        ],
         "progression": "You Decide!"
       },
       "bonus": false,
@@ -7718,11 +7829,14 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 85,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson10_2024"
+        ],
         "progression": "End-Of-Lesson Survey!"
       },
       "bonus": false,
@@ -7740,11 +7854,14 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 86,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson11_2024"
+        ],
         "progression": "End-Of-Lesson Survey!"
       },
       "bonus": false,
@@ -7762,11 +7879,239 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 87,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L1_2024"
+        ],
+        "progression": "Explore"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-L1_2024"
+        ],
+        "lesson.key": "Fine Tuning - Exploration",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "b2854861-6ec4-486f-b95e-5b6f4d56c08a"
+      },
+      "level_keys": [
+        "gen-ai-customizing-finetuning-explore-L1_2024"
+      ]
+    },
+    {
+      "chapter": 88,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L2V2_2024"
+        ],
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-L2V2_2024"
+        ],
+        "lesson.key": "Fine Tuning - Exploration",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "6be30e70-2bd8-4774-b7b1-67cfff9b22ea"
+      },
+      "level_keys": [
+        "gen-ai-customizing-finetuning-explore-L2V2_2024"
+      ]
+    },
+    {
+      "chapter": 89,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L3V2_2024"
+        ],
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-L3V2_2024"
+        ],
+        "lesson.key": "Fine Tuning - Exploration",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "6be30e70-2bd8-4774-b7b1-67cfff9b22ea"
+      },
+      "level_keys": [
+        "gen-ai-customizing-finetuning-explore-L3V2_2024"
+      ]
+    },
+    {
+      "chapter": 90,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L4_2024"
+        ],
+        "progression": "Investigate"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-L4_2024"
+        ],
+        "lesson.key": "Fine Tuning - Exploration",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "0b801556-1983-43ee-b87a-b2cb44b1d482"
+      },
+      "level_keys": [
+        "gen-ai-customizing-finetuning-explore-L4_2024"
+      ]
+    },
+    {
+      "chapter": 91,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-panels-finetune-overview_2024"
+        ],
+        "progression": "Investigate"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-panels-finetune-overview_2024"
+        ],
+        "lesson.key": "Fine Tuning - Exploration",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "0b801556-1983-43ee-b87a-b2cb44b1d482"
+      },
+      "level_keys": [
+        "gen-ai-panels-finetune-overview_2024"
+      ]
+    },
+    {
+      "chapter": 92,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-choice_2024"
+        ],
+        "progression": "Investigate"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-choice_2024"
+        ],
+        "lesson.key": "Fine Tuning - Exploration",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "0b801556-1983-43ee-b87a-b2cb44b1d482"
+      },
+      "level_keys": [
+        "gen-ai-customizing-finetuning-explore-choice_2024"
+      ]
+    },
+    {
+      "chapter": 93,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L6_2024"
+        ],
+        "progression": "Check-In"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-L6_2024"
+        ],
+        "lesson.key": "Fine Tuning - Exploration",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "d26dd3ee-3592-4184-a6df-828f6804cc78"
+      },
+      "level_keys": [
+        "gen-ai-customizing-finetuning-explore-L6_2024"
+      ]
+    },
+    {
+      "chapter": 94,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L5_2024"
+        ],
+        "progression": "Make"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-L5_2024"
+        ],
+        "lesson.key": "Fine Tuning - Exploration",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "33305457-e01e-4be0-9e71-bc9600622cc4"
+      },
+      "level_keys": [
+        "gen-ai-customizing-finetuning-explore-L5_2024"
+      ]
+    },
+    {
+      "chapter": 95,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson8_2024"
+        ],
+        "progression": "End-Of-Lesson Survey!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson8_2024"
+        ],
+        "lesson.key": "Fine Tuning - Exploration",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "76c66a35-a57a-45c6-a5f0-235ba54382c3"
+      },
+      "level_keys": [
+        "gen-ai-customizing-pilotv2-survey-lesson8_2024"
+      ]
+    },
+    {
+      "chapter": 96,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-L1_2024"
+        ],
         "progression": "User Testing"
       },
       "bonus": false,
@@ -7784,11 +8129,14 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 97,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L2_2024"
+        ],
         "progression": "Making Decisions"
       },
       "bonus": false,
@@ -7806,11 +8154,14 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 98,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L3_2024"
+        ],
         "progression": "Making Decisions"
       },
       "bonus": false,
@@ -7828,11 +8179,14 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 99,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L4_2024"
+        ],
         "progression": "Making Decisions"
       },
       "bonus": false,
@@ -7850,11 +8204,14 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 100,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-usertesting-predict-L5_2024"
+        ],
         "progression": "Making Decisions"
       },
       "bonus": false,
@@ -7872,11 +8229,14 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 101,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson12_2024"
+        ],
         "progression": "End-Of-Lesson Survey!"
       },
       "bonus": false,
@@ -7894,11 +8254,14 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 102,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project2-L1_2024"
+        ],
         "progression": "Step 4: Create your Chatbot"
       },
       "bonus": false,
@@ -7916,11 +8279,14 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 103,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project2-L2_2024"
+        ],
         "progression": "Step 5: Make a Model Card"
       },
       "bonus": false,
@@ -7938,11 +8304,14 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 104,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson13_2024"
+        ],
         "progression": "End-Of-Lesson Survey!"
       },
       "bonus": false,
@@ -7961,6 +8330,30 @@
     }
   ],
   "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson4-warmup-level1",
+        "script_level.level_keys": [
+          "genai-lesson4-warmup-level1"
+        ],
+        "lesson.key": "Understanding Embeddings",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "74576132-784b-49dd-9baf-a84f93b7b1e4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson4-wrapup-level1",
+        "script_level.level_keys": [
+          "genai-lesson4-wrapup-level1"
+        ],
+        "lesson.key": "Understanding Embeddings",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "942e1678-2ffb-47c8-9d84-c45fb8d2da08"
+      }
+    },
     {
       "seeding_key": {
         "level.key": "Foundations AI - Outputs - Mad Lib Widget_2024",
@@ -8911,6 +9304,66 @@
     },
     {
       "seeding_key": {
+        "level.key": "gen-ai-customizing-pilotv2-survey-lesson9_2024",
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson9_2024"
+        ],
+        "lesson.key": "Model Cards - Exploration",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "16984cc8-2984-4d92-b3c7-08b98597989b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-modelcards-practice-L1_2024",
+        "script_level.level_keys": [
+          "gen-ai-customizing-modelcards-practice-L1_2024"
+        ],
+        "lesson.key": "Model Cards - Practice",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "623740c7-e0e0-4111-93d4-cf051e50d5b0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-modelcards-practice-L2_2024",
+        "script_level.level_keys": [
+          "gen-ai-customizing-modelcards-practice-L2_2024"
+        ],
+        "lesson.key": "Model Cards - Practice",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "70c95442-c0f6-41fd-a161-1f0f341f8b55"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-pilotv2-survey-lesson10_2024",
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson10_2024"
+        ],
+        "lesson.key": "Model Cards - Practice",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "a5b73236-98bf-48cb-a6ee-08ea67328e25"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-pilotv2-survey-lesson11_2024",
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson11_2024"
+        ],
+        "lesson.key": "Issue Statements",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "bd7d98ba-c663-4973-9221-252fbb561104"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "gen-ai-customizing-finetuning-explore-L1_2024",
         "script_level.level_keys": [
           "gen-ai-customizing-finetuning-explore-L1_2024"
@@ -9015,66 +9468,6 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "gen-ai-staging",
         "activity_section.key": "76c66a35-a57a-45c6-a5f0-235ba54382c3"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "gen-ai-customizing-pilotv2-survey-lesson9_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson9_2024"
-        ],
-        "lesson.key": "Model Cards - Exploration",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "16984cc8-2984-4d92-b3c7-08b98597989b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "gen-ai-customizing-modelcards-practice-L1_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-modelcards-practice-L1_2024"
-        ],
-        "lesson.key": "Model Cards - Practice",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "623740c7-e0e0-4111-93d4-cf051e50d5b0"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "gen-ai-customizing-modelcards-practice-L2_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-modelcards-practice-L2_2024"
-        ],
-        "lesson.key": "Model Cards - Practice",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "70c95442-c0f6-41fd-a161-1f0f341f8b55"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "gen-ai-customizing-pilotv2-survey-lesson10_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson10_2024"
-        ],
-        "lesson.key": "Model Cards - Practice",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "a5b73236-98bf-48cb-a6ee-08ea67328e25"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "gen-ai-customizing-pilotv2-survey-lesson11_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson11_2024"
-        ],
-        "lesson.key": "Issue Statements",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "bd7d98ba-c663-4973-9221-252fbb561104"
       }
     },
     {
@@ -9289,6 +9682,8 @@
       "url": "https://docs.google.com/document/d/1-kRr7MLjo4XrJ4wehFq43b5bOSXjqlTabLktbc22LwY/edit",
       "key": "_key_level_guide_system_prompting_-_synthesis",
       "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "_key_level_guide_system_prompting_-_synthesis"
@@ -10814,6 +11209,36 @@
   ],
   "objectives": [
     {
+      "key": "0115f16e-f765-44c5-8b3a-f4b2017632eb",
+      "properties": {
+        "description": "Design and create chatbots to address specific community problems"
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Solving Community Problems with Chatbots",
+        "objective.key": "0115f16e-f765-44c5-8b3a-f4b2017632eb"
+      }
+    },
+    {
+      "key": "04032f34-2db2-43b8-8a60-54fddfb6556e",
+      "properties": {
+        "description": "Brainstorm chatbot solutions to address identified community issues"
+      },
+      "seeding_key": {
+        "lesson.key": "Issue Statements",
+        "objective.key": "04032f34-2db2-43b8-8a60-54fddfb6556e"
+      }
+    },
+    {
+      "key": "04b5ddca-7a78-47ba-bb3f-a68e87dfe35f",
+      "properties": {
+        "description": "Explain the importance of user testing in developing AI applications"
+      },
+      "seeding_key": {
+        "lesson.key": "User Feedback",
+        "objective.key": "04b5ddca-7a78-47ba-bb3f-a68e87dfe35f"
+      }
+    },
+    {
       "key": "09259346-539f-453d-8f12-fb23640c7cce",
       "properties": {
         "description": "Explain how embeddings and neural networks are used in the attention process"
@@ -10824,9 +11249,59 @@
       }
     },
     {
+      "key": "0e3d1a7b-eb34-44f1-bc29-4408d0f4c5b7",
+      "properties": {
+        "description": "Identify scenarios where retrieval is essential for updating chatbot information"
+      },
+      "seeding_key": {
+        "lesson.key": "Retrieval - Practice",
+        "objective.key": "0e3d1a7b-eb34-44f1-bc29-4408d0f4c5b7"
+      }
+    },
+    {
+      "key": "1095fce5-2e67-4ce8-8f30-de8127010ad0",
+      "properties": {
+        "description": "Implement system prompts, retrieval, and temperature settings to customize their chatbot"
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Create a Personal Chatbot",
+        "objective.key": "1095fce5-2e67-4ce8-8f30-de8127010ad0"
+      }
+    },
+    {
+      "key": "113bd21f-9ce4-4d01-9370-aa326d5d9963",
+      "properties": {
+        "description": "Use examples to guide chatbots in generating accurate and specific responses"
+      },
+      "seeding_key": {
+        "lesson.key": "System Prompting - Synthesis",
+        "objective.key": "113bd21f-9ce4-4d01-9370-aa326d5d9963"
+      }
+    },
+    {
+      "key": "1821e498-bb7b-4b9b-8710-b01f3e4a2200",
+      "properties": {
+        "description": "Explain how retrieval allows chatbots to access updated information"
+      },
+      "seeding_key": {
+        "lesson.key": "Retrieval - Exploration",
+        "objective.key": "1821e498-bb7b-4b9b-8710-b01f3e4a2200"
+      }
+    },
+    {
+      "key": "1954e58a-33ee-4e84-9248-aa93c48a3328",
+      "properties": {
+        "description": "Explain the importance of providing safety, transparency, and usability information for chatbots through model cards"
+      },
+      "seeding_key": {
+        "lesson.key": "Model Cards - Exploration",
+        "objective.key": "1954e58a-33ee-4e84-9248-aa93c48a3328"
+      }
+    },
+    {
       "key": "1e8063c4-8e2a-4fda-aff4-5ab5af9c6fbb",
       "properties": {
-        "description": "I can describe the four components that all computers have"
+        "description": "Identify and explain the four key components that make up a computer system."
       },
       "seeding_key": {
         "lesson.key": "Introduction to Generative AI",
@@ -10834,13 +11309,73 @@
       }
     },
     {
+      "key": "1f5ca706-a3a5-4da2-83de-e958c9544864",
+      "properties": {
+        "description": "Create and document model cards for chatbots, including making strategic decisions about their behavior"
+      },
+      "seeding_key": {
+        "lesson.key": "Model Cards - Practice",
+        "objective.key": "1f5ca706-a3a5-4da2-83de-e958c9544864"
+      }
+    },
+    {
       "key": "1f7a03cd-6670-4751-a65c-f665ecec8737",
       "properties": {
-        "description": "Construct a neural network to represent a situation"
+        "description": "Construct a neural network to represent a situation and make decisions based on inputs"
       },
       "seeding_key": {
         "lesson.key": "Understanding Neural Networks",
         "objective.key": "1f7a03cd-6670-4751-a65c-f665ecec8737"
+      }
+    },
+    {
+      "key": "28e191cf-3783-433d-9820-0bde41b9e630",
+      "properties": {
+        "description": "Explain the concept of fine-tuning and how it affects the core behavior of chatbots"
+      },
+      "seeding_key": {
+        "lesson.key": "Fine Tuning - Exploration",
+        "objective.key": "28e191cf-3783-433d-9820-0bde41b9e630"
+      }
+    },
+    {
+      "key": "2f3ed511-139c-4916-8f91-de09734b0b66",
+      "properties": {
+        "description": "Modify system prompts to achieve desired chatbot responses"
+      },
+      "seeding_key": {
+        "lesson.key": "System Prompting - Exploration",
+        "objective.key": "2f3ed511-139c-4916-8f91-de09734b0b66"
+      }
+    },
+    {
+      "key": "34364c2d-69a6-4e4d-ac7a-3f98b8d485a6",
+      "properties": {
+        "description": "Design a chatbot that reflects their knowledge and personality on a specific topic"
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Create a Personal Chatbot",
+        "objective.key": "34364c2d-69a6-4e4d-ac7a-3f98b8d485a6"
+      }
+    },
+    {
+      "key": "35c5cd9e-f833-41e5-85bc-851e6ac9f216",
+      "properties": {
+        "description": "Perform user testing on chatbots and provide constructive feedback"
+      },
+      "seeding_key": {
+        "lesson.key": "User Feedback",
+        "objective.key": "35c5cd9e-f833-41e5-85bc-851e6ac9f216"
+      }
+    },
+    {
+      "key": "37bf8ca7-40e2-436b-9d38-38b8eca714ad",
+      "properties": {
+        "description": "Conduct user testing and refine their chatbots based on feedback"
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Solving Community Problems with Chatbots",
+        "objective.key": "37bf8ca7-40e2-436b-9d38-38b8eca714ad"
       }
     },
     {
@@ -10864,6 +11399,16 @@
       }
     },
     {
+      "key": "44b34c15-470f-4d3f-829c-d9bde31cdf97",
+      "properties": {
+        "description": "Differentiate when to use retrieval versus system prompting to address specific chatbot tasks"
+      },
+      "seeding_key": {
+        "lesson.key": "Retrieval - Synthesis",
+        "objective.key": "44b34c15-470f-4d3f-829c-d9bde31cdf97"
+      }
+    },
+    {
       "key": "46aa07fa-5f5e-490a-8ddf-153ff6f888ac",
       "properties": {
         "description": "Explain how a language model uses probabilities to generate words as ouput"
@@ -10876,7 +11421,7 @@
     {
       "key": "46ec9d23-c5b1-40b1-8219-f786850a2592",
       "properties": {
-        "description": "Describe when two items are similar or different using an embedding"
+        "description": "Describe how embeddings show the similarity or difference between two items"
       },
       "seeding_key": {
         "lesson.key": "Understanding Embeddings",
@@ -10884,13 +11429,53 @@
       }
     },
     {
+      "key": "4eefda0c-0194-4d01-b9c7-f816cbbd071a",
+      "properties": {
+        "description": "Use retrieval to provide current, specialized, and accurate information to chatbots"
+      },
+      "seeding_key": {
+        "lesson.key": "Retrieval - Practice",
+        "objective.key": "4eefda0c-0194-4d01-b9c7-f816cbbd071a"
+      }
+    },
+    {
       "key": "4fd6c452-de7e-4dd3-8357-ed46e058eabd",
       "properties": {
-        "description": "Explain how language models store the meaning of words with embeddings"
+        "description": "Explain how language models use embeddings to store the meaning of wordss"
       },
       "seeding_key": {
         "lesson.key": "Understanding Embeddings",
         "objective.key": "4fd6c452-de7e-4dd3-8357-ed46e058eabd"
+      }
+    },
+    {
+      "key": "5b045ccd-3108-4791-be5b-444446931f2e",
+      "properties": {
+        "description": "Identify and explain hallucinations in chatbot responses"
+      },
+      "seeding_key": {
+        "lesson.key": "Interacting with Language Models",
+        "objective.key": "5b045ccd-3108-4791-be5b-444446931f2e"
+      }
+    },
+    {
+      "key": "6e10c362-9749-453e-a591-6a2666655882",
+      "properties": {
+        "description": "Explain how system prompts can influence the behavior of a chatbot"
+      },
+      "seeding_key": {
+        "lesson.key": "System Prompting - Exploration",
+        "objective.key": "6e10c362-9749-453e-a591-6a2666655882"
+      }
+    },
+    {
+      "key": "761ce6f9-bb72-4a80-bfd1-7c9888335828",
+      "properties": {
+        "description": "Identify community issues through observation and empathy"
+      },
+      "seeding_key": {
+        "lesson.key": "Issue Statements",
+        "objective.key": "761ce6f9-bb72-4a80-bfd1-7c9888335828"
       }
     },
     {
@@ -10906,11 +11491,61 @@
     {
       "key": "9546ffdb-657f-48a1-85ab-7723b2cc45e5",
       "properties": {
-        "description": "I can explain the different levels of artificial intelligence"
+        "description": "Distinguish between different types of AI, including machine learning, deep learning, and generative AI."
       },
       "seeding_key": {
         "lesson.key": "Introduction to Generative AI",
         "objective.key": "9546ffdb-657f-48a1-85ab-7723b2cc45e5"
+      }
+    },
+    {
+      "key": "9d3bb9cb-1a1f-4a97-b6fc-7edaa5bfbd11",
+      "properties": {
+        "description": "Create artifacts that explain generative AI concepts in a clear and engaging manner"
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Demystifying Generative AI",
+        "objective.key": "9d3bb9cb-1a1f-4a97-b6fc-7edaa5bfbd11"
+      }
+    },
+    {
+      "key": "9f089fda-da70-4105-b725-ec3d74b4c641",
+      "properties": {
+        "description": "Use chain-of-reasoning techniques to create system prompts for complex tasks"
+      },
+      "seeding_key": {
+        "lesson.key": "System Prompting - Synthesis",
+        "objective.key": "9f089fda-da70-4105-b725-ec3d74b4c641"
+      }
+    },
+    {
+      "key": "af024261-6c45-447b-a8ce-fbf4d3ab204c",
+      "properties": {
+        "description": "Identify and articulate community issues through issue statements"
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Solving Community Problems with Chatbots",
+        "objective.key": "af024261-6c45-447b-a8ce-fbf4d3ab204c"
+      }
+    },
+    {
+      "key": "b270a477-46e5-4039-a2b4-425194042a72",
+      "properties": {
+        "description": "Understand different perspectives on the impact of generative AI in a specific scenario"
+      },
+      "seeding_key": {
+        "lesson.key": "Chatbots in Society",
+        "objective.key": "b270a477-46e5-4039-a2b4-425194042a72"
+      }
+    },
+    {
+      "key": "b83605a8-cf25-4dbb-8924-4609945f6825",
+      "properties": {
+        "description": "Analyze and create model cards for chatbots, including potential intended and unintended uses"
+      },
+      "seeding_key": {
+        "lesson.key": "Model Cards - Exploration",
+        "objective.key": "b83605a8-cf25-4dbb-8924-4609945f6825"
       }
     },
     {
@@ -10934,6 +11569,16 @@
       }
     },
     {
+      "key": "c9298484-b12d-49d6-a1be-a28d4733f997",
+      "properties": {
+        "description": "Strategically combine retrieval and system prompting to solve complex problems with chatbots"
+      },
+      "seeding_key": {
+        "lesson.key": "Retrieval - Synthesis",
+        "objective.key": "c9298484-b12d-49d6-a1be-a28d4733f997"
+      }
+    },
+    {
       "key": "ce655a01-4238-49ea-abad-119a3ed4d194",
       "properties": {
         "description": "Describe patterns in collections of data sources that contribute to bias"
@@ -10941,6 +11586,26 @@
       "seeding_key": {
         "lesson.key": "(Optional) Bias in the Machine",
         "objective.key": "ce655a01-4238-49ea-abad-119a3ed4d194"
+      }
+    },
+    {
+      "key": "d1862f15-fb52-4ec8-a371-8038dec753de",
+      "properties": {
+        "description": "Write system prompts that meet specific user needs"
+      },
+      "seeding_key": {
+        "lesson.key": "System Prompting - Practice",
+        "objective.key": "d1862f15-fb52-4ec8-a371-8038dec753de"
+      }
+    },
+    {
+      "key": "d323d5e1-b00a-4d26-bbd3-4e052578753a",
+      "properties": {
+        "description": "Evaluate the potential impact of generative AI on society and discuss its capabilities and limitations."
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to Generative AI",
+        "objective.key": "d323d5e1-b00a-4d26-bbd3-4e052578753a"
       }
     },
     {
@@ -10954,13 +11619,93 @@
       }
     },
     {
+      "key": "daa72f7c-9ecb-49a9-8516-b96f4dcda00a",
+      "properties": {
+        "description": "Identify and address misconceptions about generative AI"
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Demystifying Generative AI",
+        "objective.key": "daa72f7c-9ecb-49a9-8516-b96f4dcda00a"
+      }
+    },
+    {
+      "key": "dc5d1237-6972-4c31-aba5-18cc7b45c7aa",
+      "properties": {
+        "description": "Create model cards for their chatbots to document their decisions and usage guidelines"
+      },
+      "seeding_key": {
+        "lesson.key": "Project: Solving Community Problems with Chatbots",
+        "objective.key": "dc5d1237-6972-4c31-aba5-18cc7b45c7aa"
+      }
+    },
+    {
       "key": "e60cd25a-7e2c-4b5e-913a-125cd0732cb9",
       "properties": {
-        "description": "Use trial-and-error and past data to increase my accuracy in a supervised learning process"
+        "description": "Use trial-and-error and past data to increase their accuracy in a supervised learning process"
       },
       "seeding_key": {
         "lesson.key": "Neural Networks: How They're Trained",
         "objective.key": "e60cd25a-7e2c-4b5e-913a-125cd0732cb9"
+      }
+    },
+    {
+      "key": "e70c21ba-9685-41a2-83b8-2830cc3e7251",
+      "properties": {
+        "description": "Make informed decisions based on user feedback to improve chatbot performance and usability"
+      },
+      "seeding_key": {
+        "lesson.key": "User Feedback",
+        "objective.key": "e70c21ba-9685-41a2-83b8-2830cc3e7251"
+      }
+    },
+    {
+      "key": "e9f6348f-89a3-4bdc-a9a3-8b0873ef2926",
+      "properties": {
+        "description": "Refine system prompts by considering role, tone, audience, and delivery modality"
+      },
+      "seeding_key": {
+        "lesson.key": "System Prompting - Practice",
+        "objective.key": "e9f6348f-89a3-4bdc-a9a3-8b0873ef2926"
+      }
+    },
+    {
+      "key": "ea5236cd-8f3c-4305-afd4-2a01191516f1",
+      "properties": {
+        "description": "Experiment with different fine-tuned models to observe how additional data sources influence chatbot responses"
+      },
+      "seeding_key": {
+        "lesson.key": "Fine Tuning - Exploration",
+        "objective.key": "ea5236cd-8f3c-4305-afd4-2a01191516f1"
+      }
+    },
+    {
+      "key": "ebcea7ba-1e0b-4110-88c8-47b0aff716eb",
+      "properties": {
+        "description": "Explain how temperature settings influence the creativity and reliability of chatbot responses"
+      },
+      "seeding_key": {
+        "lesson.key": "Interacting with Language Models",
+        "objective.key": "ebcea7ba-1e0b-4110-88c8-47b0aff716eb"
+      }
+    },
+    {
+      "key": "ff837a99-3d25-42ff-9d4e-65b6a357cc5f",
+      "properties": {
+        "description": "Modify chatbot responses by adding and removing retrieval statements"
+      },
+      "seeding_key": {
+        "lesson.key": "Retrieval - Exploration",
+        "objective.key": "ff837a99-3d25-42ff-9d4e-65b6a357cc5f"
+      }
+    },
+    {
+      "key": "fff030b4-ff53-45e6-86ef-1838805ab2a8",
+      "properties": {
+        "description": "Collaboratively develop guidelines for the use of generative AI that consider multiple stakeholders’ needs and concerns"
+      },
+      "seeding_key": {
+        "lesson.key": "Chatbots in Society",
+        "objective.key": "fff030b4-ff53-45e6-86ef-1838805ab2a8"
       }
     }
   ],

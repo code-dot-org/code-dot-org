@@ -31,7 +31,8 @@ export default class HeaderPopup extends Component {
     );
   }
 
-  handleClickOpen = () => {
+  handleClickOpen = e => {
+    e.stopPropagation();
     this.setState({open: true});
 
     progress.retrieveProgress(

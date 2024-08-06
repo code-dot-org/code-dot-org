@@ -1,7 +1,7 @@
 {
   "pages": {
-    "/home": "lms-launch",
-    "/student-home": "music-lab-launch"
+    "/home": "progress-launch",
+    "/student-home": ""
   },
   "banners": {
     "superhero": {
@@ -20,32 +20,22 @@
       "buttonUrl": "https://code.org/hourofcode",
       "buttonId": "hoc-2023"
     },
-    "music-lab-launch": {
-      "dcdo": "music-lab-launch-2024",
-      "image": "/shared/images/banners/music-lab-with-afe-logo.png",
-      "title": "Introducing Music Lab",
-      "body": "Get creative with your favorite artist's music and code new songs and mixes!",
-      "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/music",
-      "buttonId": "music-lab-launch"
-    },
-    "lms-launch": {
-      "dcdo": "show-updated-lms-content",
-      "image": "/shared/images/banners/banner-lms-launch.png",
-      "title": "Discover our new LMS integrations",
-      "body": "We've added new LMS integrations for Canvas and Schoology! Connect existing LMS classrooms in your school to Code.org with one-click Roster Syncing, Single Sign-On, and integrated access to curriculum.",
-      "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/lms",
-      "buttonId": "lms-launch"
-    },
     "curriculum-launch-2024": {
       "dcdo": "curriculum-launch-2024",
-      "image": "",
+      "image": "/shared/images/banners/banner-curriculum-launch-2024.png",
       "title": "Discover new and updated curriculum!",
       "body": "Explore our latest units and professional learning resources to inspire future tech innovators.",
       "buttonText": "See what's new",
-      "buttonUrl": "",
+      "buttonUrl": "https://codeorg.medium.com/ai-game-design-and-more-in-code-orgs-2024-25-curriculum-updates-caff691935ad",
       "buttonId": "curriculum-launch-2024"
+    },
+    "progress-launch": {
+      "image": "/shared/images/banners/banner-progress-launch.png",
+      "title": "Progress tracking just leveled up!",
+      "body": "Effortlessly monitor student work, provide timely feedback, and simplify grading with our fast, teacher-tested interface. Save time and gain valuable insights into your students' performance, all in one intuitive tool.",
+      "buttonText": "Try it now",
+      "buttonUrl": "/teacher_dashboard/sections/first_section_progress",
+      "buttonId": "progress-launch"
     }
   }
 }

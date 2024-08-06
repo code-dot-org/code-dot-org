@@ -1,6 +1,8 @@
 import {Meta, StoryFn} from '@storybook/react';
 import React from 'react';
 
+import {Button} from '@cdo/apps/componentLibrary/button';
+
 import Tooltip, {TooltipProps, WithTooltip} from './index';
 
 export default {
@@ -19,9 +21,7 @@ export default {
 //
 const SingleTemplate: StoryFn<TooltipProps> = args => (
   <WithTooltip tooltipProps={{...args}}>
-    <button style={{margin: 0}} type="button">
-      Hover me
-    </button>
+    <Button onClick={() => null} text="Hover me" />
   </WithTooltip>
 );
 
@@ -35,9 +35,7 @@ const MultipleTemplate: StoryFn<{components: TooltipProps[]}> = args => (
     <div style={{display: 'flex', gap: '20px', flexWrap: 'wrap'}}>
       {args.components?.map(componentArg => (
         <WithTooltip key={componentArg.tooltipId} tooltipProps={componentArg}>
-          <button style={{margin: 0}} type="button">
-            Hover Me
-          </button>
+          <Button onClick={() => null} text="Hover me" />
         </WithTooltip>
       ))}
     </div>

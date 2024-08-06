@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -46,7 +46,7 @@ import reducer, {
   NO_SECTION,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-import {assert, expect} from '../../../util/reconfiguredChai';
+import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const {
   EDIT_SECTION_SUCCESS,

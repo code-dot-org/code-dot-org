@@ -113,6 +113,11 @@ class UserTest < ActiveSupport::TestCase
     assert_equal '21+', teacher.age
   end
 
+  test 'creating teacher sets show_progress_table_v2 to true' do
+    teacher = create :teacher
+    assert teacher.show_progress_table_v2
+  end
+
   # Disable this test if and when we do require teachers to complete school data
   test 'school info should not be validated' do
     school_attributes = {
@@ -333,10 +338,10 @@ class UserTest < ActiveSupport::TestCase
     user = create :teacher
     application = create :pd_teacher_application, user: user
     application_form_data = application.form_data_hash
-    application_form_data['alternateEmail'] = ''
+    application_form_data['alternateEmail'] = nil
     application.update!(form_data_hash: application_form_data)
 
-    assert application.form_data_hash['alternateEmail'].empty?
+    assert application.form_data_hash['alternateEmail'].blank?
     assert_equal user.email_for_enrollments, user.email
   end
 
@@ -5398,6 +5403,34 @@ class UserTest < ActiveSupport::TestCase
     refute student.us_state_changed?
     student.us_state = 'WA'
     assert student.us_state_changed?
+  end
+
+  test "student in cpa lockout flow cannot change us_state or age" do
+    student = create :student, :U13, :in_colorado, :without_parent_permission
+    assert_raises(ActiveRecord::RecordInvalid) do
+      student.update!(us_state: 'CA')
+    end
+
+    assert_raises(ActiveRecord::RecordInvalid) do
+      student.update!(age: 16)
+    end
+    student.reload
+    refute_equal student.age, 16
+
+    student = create :student, :U13, :in_colorado, :with_parent_permission
+    student.update!(us_state: 'WA')
+    student.reload
+    assert_equal student.us_state, 'WA'
+
+    student = create :student, :U13
+    student.update!(us_state: 'WA')
+    student.reload
+    assert_equal student.us_state, 'WA'
+
+    student = create :student, :in_colorado
+    student.update!(us_state: 'WA')
+    student.reload
+    assert_equal student.us_state, 'WA'
   end
 
   describe '#latest_parental_permission_request' do

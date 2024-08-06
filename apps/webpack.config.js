@@ -205,6 +205,7 @@ const LOCALE_ALIASES = {
     localeDoNotImport('@cdo/standaloneVideo/locale'),
     localeDoNotImport('@cdo/tutorialExplorer/locale'),
     localeDoNotImport('@cdo/weblab/locale'),
+    localeDoNotImport('@cdo/signup/locale'),
     localeDoNotImportP5Lab('@cdo/gamelab/locale'),
     localeDoNotImportP5Lab('@cdo/poetry/locale'),
     localeDoNotImportP5Lab('@cdo/spritelab/locale'),
@@ -244,7 +245,7 @@ const WEBPACK_BASE_CONFIG = {
       {
         test: /\.ejs$/,
         include: [p('src'), p('test')],
-        loader: 'ejs-webpack-loader',
+        loader: './lib/ejs-webpack-loader',
         options: {
           strict: true,
         },
@@ -288,22 +289,7 @@ const WEBPACK_BASE_CONFIG = {
           p('test'),
           p('../dashboard/app/assets/images'),
         ],
-        // note that in the name template given below, a dash prefixing
-        // the hash is explicitly avoided. If rails tries to serve
-        // this file when asset digests are turned off, it will return a
-        // 404 because it thinks the hash is a digest and it won't
-        // be able to find the file without the hash. :( :(
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 1024,
-              // uses the file-loader when file size is over the limit
-              name: '[name]wp[contenthash].[ext]',
-              esModule: false,
-            },
-          },
-        ],
+        type: 'asset/inline',
       },
       {
         test: /\.jsx?$/,
@@ -438,6 +424,9 @@ function createWebpackConfig({
           // Excludes these from minification to avoid breaking functionality,
           // but still adds .min to the output filename suffix.
           exclude: [/\/blockly.js$/, /\/brambleHost.js$/],
+          // Temporarily disable due to
+          // https://github.com/webpack-contrib/terser-webpack-plugin/issues/589
+          extractComments: false,
           terserOptions: {
             sourceMap: envConstants.DEBUG_MINIFIED,
             // Handle Safari 10.x issues: [See FND-2108 / FND-2109]

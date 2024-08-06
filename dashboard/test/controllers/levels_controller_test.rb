@@ -31,8 +31,6 @@ class LevelsControllerTest < ActionController::TestCase
       type: 'toolbox_blocks',
       program: @program,
     }
-    stub_request(:get, /https:\/\/cdo-v3-shared.firebaseio.com/).
-      to_return({"status" => 200, "body" => "{}", "headers" => {}})
 
     @request.host = CDO.dashboard_hostname
   end

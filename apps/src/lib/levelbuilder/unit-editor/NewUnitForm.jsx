@@ -1,9 +1,11 @@
-import React, {useState} from 'react';
-import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import PropTypes from 'prop-types';
-import NewCourseFields from '../NewCourseFields';
+import React, {useState} from 'react';
+
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
+
+import NewCourseFields from '../NewCourseFields';
 
 export default function NewUnitForm(props) {
   const [isCourse, setIsCourse] = useState('');

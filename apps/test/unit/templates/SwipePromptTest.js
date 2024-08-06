@@ -1,11 +1,8 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import cookies from 'js-cookie';
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedSwipePrompt as SwipePrompt} from '@cdo/apps/templates/SwipePrompt';
-
-import {expect} from '../../util/reconfiguredChai';
 
 const visibleOverlayProps = {
   buttonsAreVisible: true,
@@ -25,28 +22,37 @@ describe('SwipePrompt', () => {
     });
 
     it('when the cookie is not set', () => {
-      sinon.stub(instance, 'hideOverlayCookieSet').returns(false);
-      sinon.stub(instance, 'touchSupported').returns(true);
+      jest
+        .spyOn(instance, 'hideOverlayCookieSet')
+        .mockClear()
+        .mockReturnValue(false);
+      jest.spyOn(instance, 'touchSupported').mockClear().mockReturnValue(true);
       wrapper.setProps({}); // force a re-render
-      expect(wrapper.find('svg').exists()).to.be.true;
+      expect(wrapper.find('svg').exists()).toBe(true);
     });
 
     it('when the override is set', () => {
-      sinon.stub(cookies, 'get').returns(true);
-      sinon.stub(instance, 'touchSupported').returns(true);
-      sinon.stub(instance, 'swipeOverlayOverrideSet').returns(true);
+      jest.spyOn(cookies, 'get').mockClear().mockReturnValue(true);
+      jest.spyOn(instance, 'touchSupported').mockClear().mockReturnValue(true);
+      jest
+        .spyOn(instance, 'swipeOverlayOverrideSet')
+        .mockClear()
+        .mockReturnValue(true);
       wrapper.setProps({}); // force a re-render
-      expect(wrapper.find('svg').exists()).to.be.true;
-      cookies.get.restore();
+      expect(wrapper.find('svg').exists()).toBe(true);
+      cookies.get.mockRestore();
     });
 
     it('and hides when dismissed', () => {
-      sinon.stub(instance, 'hideOverlayCookieSet').returns(false);
-      sinon.stub(instance, 'touchSupported').returns(true);
+      jest
+        .spyOn(instance, 'hideOverlayCookieSet')
+        .mockClear()
+        .mockReturnValue(false);
+      jest.spyOn(instance, 'touchSupported').mockClear().mockReturnValue(true);
       wrapper.setProps({}); // force a re-render
-      expect(wrapper.find('svg').exists()).to.be.true;
+      expect(wrapper.find('svg').exists()).toBe(true);
       wrapper.setProps({hasBeenDismissed: true});
-      expect(wrapper.find('svg').exists()).to.be.false;
+      expect(wrapper.find('svg').exists()).toBe(false);
     });
   });
 
@@ -55,20 +61,26 @@ describe('SwipePrompt', () => {
       const hiddenProps = {...visibleOverlayProps, buttonsAreVisible: false};
       wrapper = shallow(<SwipePrompt {...hiddenProps} />);
       instance = wrapper.instance();
-      sinon.stub(instance, 'hideOverlayCookieSet').returns(false);
-      sinon.stub(instance, 'touchSupported').returns(true);
+      jest
+        .spyOn(instance, 'hideOverlayCookieSet')
+        .mockClear()
+        .mockReturnValue(false);
+      jest.spyOn(instance, 'touchSupported').mockClear().mockReturnValue(true);
       wrapper.setProps({}); // force a re-render
-      expect(wrapper.find('svg').exists()).to.be.false;
+      expect(wrapper.find('svg').exists()).toBe(false);
     });
 
     it('if buttons are disabled', () => {
       const hiddenProps = {...visibleOverlayProps, buttonsAreDisabled: true};
       wrapper = shallow(<SwipePrompt {...hiddenProps} />);
       instance = wrapper.instance();
-      sinon.stub(instance, 'hideOverlayCookieSet').returns(false);
-      sinon.stub(instance, 'touchSupported').returns(true);
+      jest
+        .spyOn(instance, 'hideOverlayCookieSet')
+        .mockClear()
+        .mockReturnValue(false);
+      jest.spyOn(instance, 'touchSupported').mockClear().mockReturnValue(true);
       wrapper.setProps({}); // force a re-render
-      expect(wrapper.find('svg').exists()).to.be.false;
+      expect(wrapper.find('svg').exists()).toBe(false);
     });
 
     describe('when buttons are usable', () => {
@@ -78,18 +90,33 @@ describe('SwipePrompt', () => {
       });
 
       it('if the cookie has been set', () => {
-        sinon.stub(instance, 'hideOverlayCookieSet').returns(true);
-        sinon.stub(instance, 'touchSupported').returns(true);
+        jest
+          .spyOn(instance, 'hideOverlayCookieSet')
+          .mockClear()
+          .mockReturnValue(true);
+        jest
+          .spyOn(instance, 'touchSupported')
+          .mockClear()
+          .mockReturnValue(true);
         wrapper.setProps({}); // force a re-render
-        expect(wrapper.find('svg').exists()).to.be.false;
+        expect(wrapper.find('svg').exists()).toBe(false);
       });
 
       it('if touch is not supported', () => {
-        sinon.stub(instance, 'hideOverlayCookieSet').returns(false);
-        sinon.stub(instance, 'swipeOverlayOverrideSet').returns(false);
-        sinon.stub(instance, 'touchSupported').returns(false);
+        jest
+          .spyOn(instance, 'hideOverlayCookieSet')
+          .mockClear()
+          .mockReturnValue(false);
+        jest
+          .spyOn(instance, 'swipeOverlayOverrideSet')
+          .mockClear()
+          .mockReturnValue(false);
+        jest
+          .spyOn(instance, 'touchSupported')
+          .mockClear()
+          .mockReturnValue(false);
         wrapper.setProps({}); // force a re-render
-        expect(wrapper.find('svg').exists()).to.be.false;
+        expect(wrapper.find('svg').exists()).toBe(false);
       });
     });
   });

@@ -59,18 +59,6 @@ module CAP
             end
           end
 
-          context 'when student was create before P20-937-exception-date' do
-            let(:student) {create(:cpa_non_compliant_student, :before_p20_937_exception_date)}
-
-            it 'student should not be locked out yet' do
-              assert_student_is_not_locked_out
-            end
-
-            it 'student should be redirected away from the lockout page' do
-              assert_student_is_redirected_away_from_lockout
-            end
-          end
-
           context 'when student provider is Google' do
             before do
               create(:google_authentication_option, user: student)
@@ -166,24 +154,12 @@ module CAP
             end
           end
 
-          context 'when student was create before P20-937-exception-date' do
-            let(:student) {create(:cpa_non_compliant_student, :before_p20_937_exception_date)}
-
-            it 'student should be transited to grace period state' do
-              assert_student_in_grace_period
-            end
-
-            it 'student should be redirected away from the lockout page' do
-              assert_student_is_redirected_away_from_lockout
-            end
-          end
-
           context 'when student became compliant during their grace period' do
             let(:student) {create(:cpa_non_compliant_student, :predates_policy, :in_grace_period)}
 
             before do
               Timecop.travel(grace_period_duration.from_now)
-              student.update!(age: 13)
+              student.update_attribute(:age, 13) # bypass validation
             end
 
             it 'student should not be locked out' do

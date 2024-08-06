@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {TestResults} from '@cdo/apps/constants';
 import {globalFunctions} from '@cdo/apps/dropletUtilsGlobalFunctions';
