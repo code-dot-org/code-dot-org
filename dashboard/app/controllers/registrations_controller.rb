@@ -82,7 +82,14 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   #
-  # Get /users/finish_teacher_account
+  # Get /users/new_sign_up/finish_student_account
+  #
+  def finish_student_account
+    render 'finish_student_account'
+  end
+
+  #
+  # Get /users/new_sign_up/finish_teacher_account
   #
   def finish_teacher_account
     # Get the request location
