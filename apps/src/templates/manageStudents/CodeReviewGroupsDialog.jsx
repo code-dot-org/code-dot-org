@@ -75,7 +75,10 @@ export default function CodeReviewGroupsDialog({
     switch (submitStatus) {
       case SUBMIT_STATES.SUCCESS:
         return (
-          <span style={styles.successMessageContainer}>
+          <span
+            style={styles.successMessageContainer}
+            id="uitest-code-review-groups-save-confirm"
+          >
             <i className={'fa fa-check fa-lg'} style={styles.checkIcon} />
             {i18n.codeReviewGroupsSaveSuccess()}
           </span>

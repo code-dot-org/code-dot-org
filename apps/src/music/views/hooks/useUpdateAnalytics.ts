@@ -109,6 +109,11 @@ function useUpdateAnalytics(analyticsReporter: AnalyticsReporter) {
     sessionInProgress &&
       analyticsReporter.setProjectProperty('scriptName', scriptName);
   }, [sessionInProgress, scriptName, analyticsReporter]);
+
+  const packId = useAppSelector(state => state.music.packId || undefined);
+  useEffect(() => {
+    sessionInProgress && analyticsReporter.setSelectedPack(packId);
+  }, [sessionInProgress, packId, analyticsReporter]);
 }
 
 export default useUpdateAnalytics;

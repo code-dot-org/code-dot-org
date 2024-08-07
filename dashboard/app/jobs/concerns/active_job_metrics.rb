@@ -30,19 +30,38 @@ module ActiveJobMetrics
     ]
   end
 
+  # Get the number of failed jobs, presuming the Delayed::Job table is being used.
+  def get_failed_job_count
+    Delayed::Job.where.not(failed_at: nil).count
+  end
+
+  # Get the number of pending jobs, presuming the Delayed::Job table is being used.
+  def get_pending_job_count
+    Delayed::Job.where(failed_at: nil).count
+  end
+
   protected def report_job_count
-    Cdo::Metrics.push(
-      METRICS_NAMESPACE, [
+    Cdo::Metrics.push(METRICS_NAMESPACE,
+      # Same metrics as "bin/cron/report_activejob_metrics"
+      [
         {
-          # Same metric as "bin/cron/report_activejob_metrics"
-          metric_name: 'JobCount',
-          value: Delayed::Job.count,
+          metric_name: 'PendingJobCount',
+          value: get_pending_job_count,
           unit: 'Count',
           timestamp: Time.now,
           dimensions: [
             {name: 'Environment', value: CDO.rack_env},
           ],
         },
+        {
+          metric_name: 'FailedJobCount',
+          value: get_failed_job_count,
+          unit: 'Count',
+          timestamp: Time.now,
+          dimensions: [
+            {name: 'Environment', value: CDO.rack_env},
+          ],
+        }
       ]
     )
   rescue => exception

@@ -29,23 +29,10 @@ will produce content suitable for embedding inside an existing block-level eleme
 
 ### Pegasus
 
-#### Modifying an existing string
-
--   Update the string in the [i18n Gsheet][0]
--   `ssh staging.code.org` and check that your changes were synced to
-    `staging/pegasus/cache/i18n/en-US.yml`
-
-#### Adding a new string
-
--   Add a unique key and your string value to the [i18n Gsheet][0].
-
-    -   Organization is
-        by category/page; try to prepend each string of a common category with
-        the same key. For example, all teacher dashboard strings begin with 'dashboard'
-        so they're easier to find.
-
--   ssh into staging and check that your changes were synced to
-    `staging/pegasus/cache/i18n/en-US.yml`
+There are two i18n files in Pegasus: `pegasus/cache/i18n/en-US.yml` and `pegasus/sites.v3/hourofcode.com/i18n/en.yml`.
+Either can be used in any subdirectory; lately `pegasus/sites.v3/hourofcode.com/i18n/en.yml` has been preferred.
+To use strings in `pegasus/cache/i18n/en-US.yml`, use `I18n.t` and pass the key in as a parameter.
+To use strings in `pegasus/sites.v3/hourofcode.com/i18n/en.yml`, use `hoc_s` and pass the key in as a parameter. 
 
 ### Apps
 For `.json` files we use [MessageFormat](http://messageformat.github.io/messageformat/guide/) to enable formatting options such as Variables and Plurals.
