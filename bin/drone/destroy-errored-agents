@@ -26,6 +26,7 @@ export DRONE_AUTOSCALER=https://drone.cdn-code.org:8443
 
 # Function to send metrics to CloudWatch with error handling
 put_metric_data() {
+    echo "Sending $1 metric"
     metric_name=$1
     value=$2
     unit=$3
