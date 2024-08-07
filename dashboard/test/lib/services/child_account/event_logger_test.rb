@@ -9,7 +9,7 @@ class Services::ChildAccount::EventLoggerTest < ActiveSupport::TestCase
     event_name = CAP::UserEvent::ACCOUNT_LOCKING
 
     # Simulate updating the state to 'granted'
-    @user.cap_state = 'g'
+    @user.cap_status = 'g'
     @user.save
 
     # Should record the prior and current state

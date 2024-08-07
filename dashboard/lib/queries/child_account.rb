@@ -11,8 +11,8 @@ class Queries::ChildAccount
     # Filter for accounts which don't have parent permission then filter for
     # accounts which have been locked out before the expiration_date
     scope.where(
-      cap_state: Policies::ChildAccount::ComplianceState::LOCKED_OUT,
-      cap_state_date: ..expiration_date
+      cap_status: Policies::ChildAccount::ComplianceState::LOCKED_OUT,
+      cap_status_date: ..expiration_date
     )
   end
 end

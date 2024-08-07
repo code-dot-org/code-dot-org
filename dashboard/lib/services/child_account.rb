@@ -26,12 +26,12 @@ module Services::ChildAccount
     Services::ChildAccount::EventLogger.log_compliance_removing(user)
   end
 
-  # Updates the cap_state attribute to the given state.
+  # Updates the cap_status attribute to the given state.
   # @param {String} new_state - A constant from Policies::ChildAccount::ComplianceState
   def self.update_compliance(user, new_state)
     return unless user
-    user.cap_state = new_state
-    user.cap_state_date = DateTime.now
+    user.cap_status = new_state
+    user.cap_status_date = DateTime.now
   end
 
   # Updates the User in the given PermissionRequest to indicate that their

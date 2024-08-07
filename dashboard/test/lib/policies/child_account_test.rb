@@ -9,19 +9,19 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
 
     test 'grace_period?' do
       assert_changes -> {Policies::ChildAccount::ComplianceState.grace_period?(@student)}, from: false, to: true do
-        @student.cap_state = 'p'
+        @student.cap_status = 'p'
       end
     end
 
     test 'locked_out?' do
       assert_changes -> {Policies::ChildAccount::ComplianceState.locked_out?(@student)}, from: false, to: true do
-        @student.cap_state = 'l'
+        @student.cap_status = 'l'
       end
     end
 
     test 'permission_granted?' do
       assert_changes -> {Policies::ChildAccount::ComplianceState.permission_granted?(@student)}, from: false, to: true do
-        @student.cap_state = 'g'
+        @student.cap_status = 'g'
       end
     end
   end
@@ -184,8 +184,8 @@ class Policies::ChildAccountTest < ActiveSupport::TestCase
     let(:user) do
       build_stubbed(
         :non_compliant_child,
-        cap_state: user_cap_compliance_state,
-        cap_state_date: user_cap_compliance_state_updated_at
+        cap_status: user_cap_compliance_state,
+        cap_status_date: user_cap_compliance_state_updated_at
       )
     end
 

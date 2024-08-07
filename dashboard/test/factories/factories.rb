@@ -427,13 +427,13 @@ FactoryBot.define do
       end
 
       trait :with_parent_permission do
-        cap_state {Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED}
-        cap_state_date {DateTime.now}
+        cap_status {Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED}
+        cap_status_date {DateTime.now}
       end
 
       trait :without_parent_permission do
-        cap_state {nil}
-        cap_state_date {DateTime.now}
+        cap_status {nil}
+        cap_status_date {DateTime.now}
       end
 
       factory :cpa_non_compliant_student, traits: [:U13, :in_colorado], aliases: %i[non_compliant_child] do
@@ -442,15 +442,15 @@ FactoryBot.define do
         end
 
         trait :in_grace_period do
-          cap_state {Policies::ChildAccount::ComplianceState::GRACE_PERIOD}
-          cap_state_date {DateTime.now}
+          cap_status {Policies::ChildAccount::ComplianceState::GRACE_PERIOD}
+          cap_status_date {DateTime.now}
         end
 
         factory :locked_out_child do
-          cap_state {Policies::ChildAccount::ComplianceState::LOCKED_OUT}
-          cap_state_date {DateTime.now}
+          cap_status {Policies::ChildAccount::ComplianceState::LOCKED_OUT}
+          cap_status_date {DateTime.now}
           trait :expired do
-            cap_state_date {7.days.ago}
+            cap_status_date {7.days.ago}
           end
         end
       end

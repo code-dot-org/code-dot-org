@@ -31,8 +31,8 @@ module Services
           user: user,
           policy: policy,
           name: event_name,
-          state_before: user.cap_state_previously_was,
-          state_after: user.cap_state
+          state_before: user.cap_status_previously_was,
+          state_after: user.cap_status
         )
       end
 

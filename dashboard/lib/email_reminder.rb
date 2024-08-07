@@ -37,7 +37,7 @@ class EmailReminder
       select(:id).
       where(created_at: @max_reminder_age..@min_reminder_age).
       where(reminders_sent: ...MAX_LIFETIME_REMINDERS).
-      where.not(users: {cap_state: Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED})
+      where.not(users: {cap_status: Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED})
 
     CDO.log.info "Found #{reqs.length} requests needing reminders"
     reqs
