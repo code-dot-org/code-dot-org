@@ -98,7 +98,6 @@ module Services
               "temporary directory contents: #{Dir.entries(pdfs_dir).inspect}",
               color: 'red'
             )
-            # Group ID: S07FB3XSAR5 - teacher-tools-on-call would be notified
             ChatClient.log(
               "Please follow instructions in https://docs.google.com/document/d/1mBY56DeAzrwTM3CVIOFho3azTi9mudE37ZQrVZXxaMA/edit#heading=h.axfu5or8cueg to troubleshoot",
               color: 'red',
@@ -223,9 +222,8 @@ module Services
             color: 'yellow'
           )
 
-          # Group ID: S07FB3XSAR5 - teacher-tools-on-call would be notified
           ChatClient.log(
-            "<!subteam^S07FB3XSAR5> Please follow instructions in https://docs.google.com/document/d/1mBY56DeAzrwTM3CVIOFho3azTi9mudE37ZQrVZXxaMA/edit#heading=h.axfu5or8cueg to troubleshoot",
+            "Please follow instructions in https://docs.google.com/document/d/1mBY56DeAzrwTM3CVIOFho3azTi9mudE37ZQrVZXxaMA/edit#heading=h.axfu5or8cueg to troubleshoot",
             color: 'yellow',
             notify_group: 'teacher-tools-on-call'
           )

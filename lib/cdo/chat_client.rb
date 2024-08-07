@@ -9,7 +9,7 @@ require 'cdo/slack'
 # implementation (namely Slack as of February 2017).
 class ChatClient
   USER_GROUP_ID_MAP = {
-    teacher_tools_on_call: 'S07FB3XSAR5'
+    'teacher-tools-on-call': 'S07FB3XSAR5'
   }.freeze
 
   @@name = CDO.name[0..14]
@@ -30,6 +30,8 @@ class ChatClient
   #   color (optional): The color the message should be posted.
   # @return [Boolean] Whether the message was posted successfully.
   def self.message(room, message, options = {})
+    message = "<!subteam^#{USER_GROUP_ID_MAP[options[:notify_group].to_sym]}> #{message}" if options[:notify_group]
+
     unless @@logger
       FileUtils.mkdir_p(deploy_dir('log'))
       @@logger = Logger.new(deploy_dir('log', 'chat_messages.log'))
@@ -39,8 +41,6 @@ class ChatClient
     unless CDO.hip_chat_logging
       return
     end
-
-    message = "<!subteam^#{USER_GROUP_ID_MAP[group_name.to_sym]}> #{message}" if options[:notify_group]
 
     Slack.message(
       message.to_s,
