@@ -123,4 +123,9 @@ class SlackTest < Minitest::Test
     user_group = "invalid-group"
     assert_equal "<!subteam^> test message", Slack.tag_user_group(message, user_group)
   end
+
+  def test_tag_user_group_with_null_group
+    message = "test message"
+    assert_equal "<!subteam^> test message", Slack.tag_user_group(message, nil)
+  end
 end

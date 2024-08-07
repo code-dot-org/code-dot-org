@@ -187,7 +187,7 @@ class Slack
   # @param message [String] the message to update to tag the user_group
   # @param user_group [String] slack user group to be tagged for notification
   def self.tag_user_group(message, user_group)
-    "<!subteam^#{USER_GROUP_ID_MAP[user_group.to_sym]}> #{message}"
+    "<!subteam^#{USER_GROUP_ID_MAP[user_group&.to_sym]}> #{message}"
   end
 
   # Returns the channel ID for the channel with the requested channel_name.
