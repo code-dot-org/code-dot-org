@@ -112,7 +112,7 @@ $(document).ready(function () {
   const showAITutorTab = canViewStudentAIChatMessages;
 
   const showV2TeacherDashboard =
-    DCDO.get('teacher-local-nav-v2') ||
+    DCDO.get('teacher-local-nav-v2', false) ||
     experiments.isEnabled('teacher-local-nav-v2');
 
   const getV1TeacherDashboard = () => (
