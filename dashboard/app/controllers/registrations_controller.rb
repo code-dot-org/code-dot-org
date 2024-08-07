@@ -76,6 +76,11 @@ class RegistrationsController < Devise::RegistrationsController
     render 'new_sign_up'
   end
 
+  # Part of the new sign up flow - work in progress
+  def account_type
+    view_options(full_width: true, responsive_content: true)
+  end
+
   #
   # GET /users/cancel
   #

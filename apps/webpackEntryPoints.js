@@ -59,6 +59,7 @@ const CODE_STUDIO_ENTRIES = {
   'devise/shared/_oauth_links': './src/sites/studio/pages/devise/shared/_oauth_links.js',
   'devise/registrations/_finish_sign_up': './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
   'devise/registrations/edit': './src/sites/studio/pages/devise/registrations/edit.js',
+  'devise/registrations/account_type': './src/sites/studio/pages/devise/registrations/account_type.js',
   'essential': './src/sites/studio/pages/essential.js',
   'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
   'layouts/_parent_email_banner': './src/sites/studio/pages/layouts/_parent_email_banner.js',
