@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.2] ()
+
+* updated `Tooltip` background color to be $light_gray_950;
+
 ## [0.2.1] (https://github.com/code-dot-org/code-dot-org/pull/59610)
 
 * used DSCO Button component for `Tooltip` stories
