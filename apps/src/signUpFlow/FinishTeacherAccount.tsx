@@ -13,7 +13,7 @@ import Checkbox from '../componentLibrary/checkbox/Checkbox';
 
 import style from './finish-teacher-account.module.scss';
 
-const USER_NAME_SESSION_KEY = 'username';
+const USER_NAME_SESSION_KEY = 'userName';
 const EMAIL_OPT_IN_SESSION_KEY = 'emailOptIn';
 
 const FinishTeacherAccount: React.FunctionComponent<{
