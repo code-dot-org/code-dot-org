@@ -25,11 +25,11 @@ export default class ChatEventLogger {
     return ChatEventLogger.instance;
   }
 
-  public static create() {
+  public static create(): void {
     ChatEventLogger.instance = new ChatEventLogger();
   }
 
-  logChatEvent(chatEvent: ChatEvent, aichatContext: AichatContext) {
+  public logChatEvent(chatEvent: ChatEvent, aichatContext: AichatContext) {
     this.queue.push({chatEvent, aichatContext});
     if (!this.sendingInProgress) {
       this.sendChatEvent();
@@ -50,7 +50,6 @@ export default class ChatEventLogger {
           Lab2Registry.getInstance()
             .getMetricsReporter()
             .logError('Error in aichat event logging request', error as Error);
-          return;
         }
       }
     }
