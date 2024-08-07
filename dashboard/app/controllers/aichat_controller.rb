@@ -67,9 +67,25 @@ class AichatController < ApplicationController
   # POST /aichat/log_chat_event
   def student_chat_history
     # Request all chat events for a student at a given level/script.
-    # Note that the permission check for a teacher viewing a student's project is done in
-    # projects_controller's `get_or_create_for_level`.
-    chat_events = AichatEvent.where(user_id: params[:studentUserId], level_id: params[:currentLevelId], script_id: params[:scriptId])
+    begin
+      params.require([:studentUserId, :currentLevelId, :scriptId])
+    rescue ActionController::ParameterMissing
+      return render status: :bad_request, json: {}
+    end
+
+    # ensure that we have permission to view student's chat events, i.e.,
+    # student is in teacher section.
+    script_id = params[:scriptId]
+    level_id = params[:currentLevelId]
+    student_user_id = params[:studentUserId]
+    level = Level.find(level_id)
+    script_level = level.script_levels.find_by_script_id(script_id)
+    user = User.find(student_user_id)
+    unless can?(:view_as_user, script_level, user)
+      return render(status: :forbidden, json: {error: "Access denied for student chat history."})
+    end
+
+    chat_events = AichatEvent.where(user_id: student_user_id, level_id: level_id, script_id: script_id)
     render json: chat_events
   end
 
