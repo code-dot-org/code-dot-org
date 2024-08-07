@@ -4,7 +4,9 @@ import {loadPyodide, version} from 'pyodide';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 
 import {HOME_FOLDER} from './pythonHelpers/constants';
+import {SETUP_CODE} from './pythonHelpers/patches';
 import {
+  getCleanupCode,
   getUpdatedSourceAndDeleteFiles,
   importPackagesFromFiles,
   resetGlobals,
@@ -56,9 +58,11 @@ self.onmessage = async event => {
   try {
     writeSource(source, DEFAULT_FOLDER_ID, '', self.pyodide);
     await importPackagesFromFiles(source, self.pyodide);
+    await runInternalCode(SETUP_CODE, id);
     results = await self.pyodide.runPythonAsync(python, {
       filename: `/${HOME_FOLDER}/${MAIN_PYTHON_FILE}`,
     });
+    await runInternalCode(getCleanupCode(source), id);
   } catch (error) {
     self.postMessage({type: 'error', message: error.message, id});
   }
@@ -72,6 +76,14 @@ self.onmessage = async event => {
   resetGlobals(self.pyodide, pyodideGlobals);
   self.postMessage({type: 'run_complete', message: results, id});
 };
+
+async function runInternalCode(code, id) {
+  try {
+    await self.pyodide.runPythonAsync(code);
+  } catch (error) {
+    self.postMessage({type: 'internal_error', message: error.message, id});
+  }
+}
 
 // Return the options for sysout or syserr stream handler.
 function getStreamHandlerOptions(type) {

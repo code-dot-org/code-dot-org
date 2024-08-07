@@ -5,17 +5,12 @@ import {
   appendErrorMessage,
 } from '@codebridge/redux/consoleRedux';
 
-import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {setAndSaveProjectSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 import {getStore} from '@cdo/apps/redux';
 
 import {parseErrorMessage} from './pythonHelpers/messageHelpers';
 import {MATPLOTLIB_IMG_TAG} from './pythonHelpers/patches';
-import {
-  applyPatches,
-  deleteCachedUserModules,
-} from './pythonHelpers/pythonScriptUtils';
 
 // This syntax doesn't work with typescript, so this file is in js.
 const pyodideWorker = new Worker(
@@ -67,11 +62,8 @@ const asyncRun = (() => {
     id = (id + 1) % Number.MAX_SAFE_INTEGER;
     return new Promise(onSuccess => {
       callbacks[id] = onSuccess;
-      let wrappedScript = applyPatches(script);
-      wrappedScript =
-        wrappedScript + deleteCachedUserModules(source, MAIN_PYTHON_FILE);
       const messageData = {
-        python: wrappedScript,
+        python: script,
         id,
         source,
       };
