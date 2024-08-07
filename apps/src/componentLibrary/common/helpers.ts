@@ -24,11 +24,21 @@ export const getAriaPropsFromProps = (props: {
   return ariaProps as AriaAttributes;
 };
 
-export const updatePositionedElementStyles = ({
+/**
+ * Calculates the positioned element styles based on the node(relative element)
+ * position and the direction of the positioned element. Can be used to calculate styles
+ * for both position: fixed and position: absolute.
+ * @param nodePosition
+ * @param positionedElementRef
+ * @param direction
+ * @param tailOffset
+ * @param tailLength
+ * @param isPositionFixed
+ */
+export const calculatePositionedElementStyles = ({
   nodePosition,
   positionedElementRef,
   direction,
-  setPositionedElementStyles,
   tailOffset,
   tailLength,
   isPositionFixed = false,
@@ -36,13 +46,12 @@ export const updatePositionedElementStyles = ({
   nodePosition: HTMLElement | null;
   positionedElementRef: React.RefObject<HTMLDivElement | null>;
   direction?: ComponentPlacementDirection | 'none';
-  setPositionedElementStyles: React.Dispatch<
-    React.SetStateAction<React.CSSProperties>
-  >;
   tailOffset: number;
   tailLength: number;
   isPositionFixed?: boolean;
 }) => {
+  const styles: React.CSSProperties = {};
+
   if (nodePosition && positionedElementRef.current && direction !== 'none') {
     const rect = nodePosition.getBoundingClientRect();
     const tooltipRect = positionedElementRef.current.getBoundingClientRect();
@@ -50,8 +59,6 @@ export const updatePositionedElementStyles = ({
     const scrollX = isPositionFixed ? 0 : window.scrollX;
     const textDirection = document.documentElement.dir || 'ltr'; // Default to 'ltr' if not specified
     const isLtr = textDirection === 'ltr';
-
-    const styles: React.CSSProperties = {};
 
     const verticalMiddlePosition =
       rect.top + scrollY + rect.height / 2 - tooltipRect.height / 2;
@@ -87,7 +94,49 @@ export const updatePositionedElementStyles = ({
         styles.left = horizontalMiddlePosition;
         break;
     }
-
-    setPositionedElementStyles(styles);
   }
+
+  return styles;
+};
+/**
+ * Shortcut function to update React state for the positioned element styles based on the node position
+ * (relative element) position and the direction of the positioned element.
+ * For more context see calculatePositionedElementStyles function.
+ * @param nodePosition
+ * @param positionedElementRef
+ * @param direction
+ * @param setPositionedElementStyles
+ * @param tailOffset
+ * @param tailLength
+ * @param isPositionFixed
+ */
+export const updatePositionedElementStyles = ({
+  nodePosition,
+  positionedElementRef,
+  direction,
+  setPositionedElementStyles,
+  tailOffset,
+  tailLength,
+  isPositionFixed = false,
+}: {
+  nodePosition: HTMLElement | null;
+  positionedElementRef: React.RefObject<HTMLDivElement | null>;
+  direction?: ComponentPlacementDirection | 'none';
+  setPositionedElementStyles: React.Dispatch<
+    React.SetStateAction<React.CSSProperties>
+  >;
+  tailOffset: number;
+  tailLength: number;
+  isPositionFixed?: boolean;
+}) => {
+  setPositionedElementStyles(
+    calculatePositionedElementStyles({
+      nodePosition,
+      positionedElementRef,
+      direction,
+      tailOffset,
+      tailLength,
+      isPositionFixed,
+    })
+  );
 };
