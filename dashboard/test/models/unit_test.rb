@@ -2517,6 +2517,28 @@ class UnitTest < ActiveSupport::TestCase
     assert UnitGroupUnit.find_by(id: unit_gp_unit.id).nil?
   end
 
+  test 'deleting unit in unit group updates course json' do
+    Rails.application.config.stubs(:levelbuilder_mode).returns true
+    unit_in_course = create :script, is_migrated: true, name: 'coursename1-2021'
+    unit_group = create(:unit_group)
+    unit_gp_unit = create :unit_group_unit, unit_group: @unit_group, script: unit_in_course, position: 1
+    CourseOffering.add_course_offering(unit_group)
+
+    File.stubs(:write)
+    UnitGroup.any_instance.expects(:write_serialization).once
+
+    unit_group.reload
+    unit_in_course.reload
+    assert UnitGroupUnit.find_by(id: unit_gp_unit.id)
+
+    # delete unit in unit group
+    unit_id = unit_in_course.id
+    unit_in_course.destroy
+
+    assert Unit.find_by(id: unit_id).nil?
+    assert UnitGroupUnit.find_by(id: unit_gp_unit.id).nil?
+  end
+
   private def has_unlaunched_unit?(units)
     units.any? {|u| !u.launched?}
   end
