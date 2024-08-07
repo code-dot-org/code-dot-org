@@ -68,7 +68,7 @@ function UnitSelectorV2({
     [unitId, setScriptId, sectionId]
   );
 
-  const itemGroups = coursesWithProgress.map((version, index) => ({
+  const itemGroups = coursesWithProgress.map(version => ({
     label: version.display_name,
     groupItems: version.units.map(unit => ({
       value: unit.id,
