@@ -203,14 +203,14 @@ function TeacherDashboard({
         {teacherNavV2Enabled && (
           <Route
             path={TeacherDashboardPath.navTestV2}
-            component={props => (
+            element={
               <div className={dashboardStyles.pageContainer}>
                 <TeacherNavigationBar />
                 <div className={dashboardStyles.content}>
                   <SectionProgressSelector />
                 </div>
               </div>
-            )}
+            }
           />
         )}
         {showAITutorTab && (
