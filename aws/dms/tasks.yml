@@ -119,13 +119,6 @@ cron:
 cron-user-hierarchy:
 - dashboard.users:
     remove_column:
-    - email
-    - encrypted_password
-    - reset_password_token
-    - reset_password_sent_at
-    - remember_created_at
-    - current_sign_in_ip
-    - last_sign_in_ip
     - username
     - uid
     - name
