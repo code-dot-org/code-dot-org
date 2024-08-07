@@ -4,7 +4,7 @@ import React from 'react';
 import color from '@cdo/apps/util/color';
 import {makeEnum} from '@cdo/apps/utils';
 
-import FontAwesome from '../FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 
 import {BubbleSize, BubbleShape} from './BubbleFactory';
 

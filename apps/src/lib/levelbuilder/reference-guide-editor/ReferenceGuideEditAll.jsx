@@ -6,8 +6,8 @@ import React, {useMemo, useCallback, useState} from 'react';
 import Dialog, {
   Title as DialogTitle,
   Body as DialogBody,
-} from '@cdo/apps/templates/Dialog';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+} from '@cdo/apps/legacySharedComponents/Dialog';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {
   getGuideChildren,
   organizeReferenceGuides,

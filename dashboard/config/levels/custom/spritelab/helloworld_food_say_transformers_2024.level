@@ -1,0 +1,111 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2024-08-02T22:04:51.000Z",
+  "level_num": "custom",
+  "user_id": 9,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "true",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "true",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "hide_animation_mode": "true",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "pause_animations_by_default": "false",
+    "edit_code": "false",
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zHelloWorldValidation",
+      "zValidationHelperFunctions"
+    ],
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "hide_custom_blocks": "true",
+    "use_default_sprites": "false",
+    "auto_run_setup": "DRAW_LOOP",
+    "parent_level_id": 28354,
+    "show_type_hints": "true",
+    "include_shared_functions": "false",
+    "block_pool": "gamelab",
+    "name_suffix": "_transformers_2024",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "mini_rubric": "false",
+    "encrypted": "false",
+    "long_instructions": "\r\n*Hello, world! I'm a sprite. Use the `say` block to make me say whatever you like!*\r\n\r\n- Drag a `make new sprite` block into the workspace and connect it under `when run`.\r\n- Connect a `say` block *under* a `make new sprite` block.\r\n- Make sure to select the same *costume* in each block of code.\r\n- Press *\"Run\"* when you are finished.",
+    "start_animations": "\r\n{\r\n  \"orderedKeys\": [\r\n    \"bg-default-plate\",\r\n    \"pizza\",\r\n    \"burger\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"bg-default-plate\": {\r\n      \"name\": \"hw_plate_background_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/vYopFokxZKjdlYWHACQAd4NzCDWN2Vee/category_backgrounds/hw_plate_background.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"vYopFokxZKjdlYWHACQAd4NzCDWN2Vee\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"burger\": {\r\n      \"name\": \"face_burger_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/l..BIzEFYJNv7_aOrcRH1BnVBT6le3QF/category_food/face_burger.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 341\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"l..BIzEFYJNv7_aOrcRH1BnVBT6le3QF\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"pizza\": {\r\n      \"name\": \"face_pizza_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/gPFKgB_Let0u1.OCTIhpCP5K5iqadQcn/category_food/face_pizza.png\",\r\n      \"frameSize\": {\r\n        \"x\": 330,\r\n        \"y\": 395\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"gPFKgB_Let0u1.OCTIhpCP5K5iqadQcn\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    }\r\n  }\r\n}",
+    "validation_enabled": "true",
+    "mini_toolbox": "false",
+    "callout_json": "[{\"localization_key\":\"hello_world_say\",\"callout_text\":\"Use this block to make sprites speak.\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"3\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left top\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"localization_key\":\"hello_world_make_sprite\",\"callout_text\":\"Use this block to create a sprite.\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"1\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":-120,\"y\":10}}}},{\"element_id\":\".blocklyFlyout [data-id=\\\"3\\\"]\",\"localization_key\":\"hello_world_say\",\"callout_text\":\"Use this block to make sprites speak.\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left top\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"},{\"element_id\":\".blocklyFlyout [data-id=\\\"1\\\"]\",\"localization_key\":\"hello_world_make_sprite\",\"callout_text\":\"Use this block to create a sprite.\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":-120,\"y\":10}}},\"on\":\"\"}]",
+    "validation_code": "//Requires zHelloWorldValidation and zValidationHelperFunctions\r\nlevel1();",
+    "hide_pause_button": "true",
+    "hint_prompt_attempts_threshold": "1",
+    "short_instructions": "Use the `say` block to make me say whatever you like!",
+    "instructions_icon": "pizza",
+    "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"To make the pizza say something, connect the blocks of code like this:\\n\\n<xml>\\n  <block type=\\\"when_run\\\" deletable=\\\"false\\\"><next>  <block type=\\\"gamelab_makeNewSpriteAnon\\\">\\n    <title name=\\\"ANIMATION_NAME\\\">\\\"face_pizza_1\\\"</title>\\n    <value name=\\\"LOCATION\\\">\\n      <block type=\\\"gamelab_location_picker\\\">\\n        <title name=\\\"LOCATION\\\">{\\\"x\\\":200,\\\"y\\\":200}</title>\\n      </block>\\n    </value><next>  <block type=\\\"gamelab_spriteSay\\\">\\n    <title name=\\\"SPEECH\\\">Hello, world!</title>\\n    <value name=\\\"SPRITE\\\">\\n      <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n        <title name=\\\"ANIMATION\\\">\\\"face_pizza_1\\\"</title>\\n      </block>\\n    </value>\\n  </block></next>\\n  </block></next></block>\\n</xml>\",\"hint_id\":\"hello-world-first-solution-pizza\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b37310b0c44442dede5daaa2c1ce96a0/helloworld_food_say.mp3\"}]",
+    "video_key": "hello_world_intro",
+    "skip_autosave": true,
+    "encrypted_examples": "Wao2CB+999XcuWgtwhzMiapqj3NBqk4XREhbUIAzevPrHpFjG9wRcTMxBkel\nFfs7cEhGmbjXv7PwAEqUNGguYQ==\n",
+    "standalone_app_name": "spritelab",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:51.785+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_say\\\"\"],\"cloned_from\":\"helloworld_food_say\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="gamelab_makeNewSpriteAnon" id="1">
+          <title name="ANIMATION_NAME">"face_pizza_1"</title>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker" can_disconnect_from_parent="false">
+              <title name="LOCATION">{"x":200,"y":200}</title>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_spriteSay" id="3">
+          <title name="SPEECH">Hello, world!</title>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+              <title name="ANIMATION">"face_pizza_1"</title>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

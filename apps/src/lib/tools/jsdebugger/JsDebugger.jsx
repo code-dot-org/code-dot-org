@@ -12,12 +12,12 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 
 import dom from '../../../dom';
+import FontAwesome from '../../../legacySharedComponents/FontAwesome';
 import {setStepSpeed, setIsDebuggingSprites} from '../../../redux/runState';
 import {
   add as addWatchExpression,
   remove as removeWatchExpression,
 } from '../../../redux/watchedExpressions';
-import FontAwesome from '../../../templates/FontAwesome';
 import PaneHeader, {
   PaneSection,
   PaneButton,
