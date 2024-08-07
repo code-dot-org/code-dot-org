@@ -8,6 +8,7 @@ import lab2I18n from '@cdo/apps/lab2/locale';
 import {
   setProjectSource,
   setAndSaveProjectSource,
+  loadVersion,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -63,6 +64,16 @@ const VersionHistoryDropdown: React.FunctionComponent<
     [dispatch, updatedSourceCallback, closeDropdown]
   );
 
+  const viewVersion = useCallback(
+    (version: ProjectVersion) => {
+      // TODO: loading
+      console.log('loading version');
+      dispatch(loadVersion({versionId: version.versionId}));
+      closeDropdown();
+    },
+    [dispatch, closeDropdown]
+  );
+
   const startOver = useCallback(() => {
     // TODO: confirm
     dispatch(setAndSaveProjectSource(startSource));
@@ -87,6 +98,13 @@ const VersionHistoryDropdown: React.FunctionComponent<
     } else {
       return (
         <>
+          {' '}
+          <Button
+            text={commonI18n.view()}
+            color={'white'}
+            size={'s'}
+            onClick={() => viewVersion(version)}
+          />
           <Button
             text={commonI18n.restore()}
             color={'white'}
