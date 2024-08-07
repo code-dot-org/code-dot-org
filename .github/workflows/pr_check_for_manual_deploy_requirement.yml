@@ -5,7 +5,7 @@ on:
     types: [opened, synchronize]
 
 jobs:
-  add-comment:
+  check-files:
     runs-on: ubuntu-latest
 
     steps:
