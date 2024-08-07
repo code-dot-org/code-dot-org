@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {BrowserRouter, Routes, Route, Outlet} from 'react-router-dom';
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
 
@@ -31,10 +31,13 @@ interface SectionNavigationRouterProps {
 }
 
 const BASE_URL = `/teacher_dashboard/sections/`;
+const SECTION_ID_PATH_PART = `/:sectionId`;
 
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
   return <div className={dashboardStyles.dashboardPage}>{children}</div>;
 };
+
+const getPath = (pathUrl: string) => `${SECTION_ID_PATH_PART}${pathUrl}`;
 
 const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
   studioUrlPrefix,
@@ -45,88 +48,90 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
   showAITutorTab,
   sectionProviderName,
 }) => {
+  console.log('lfm', getPath(TeacherDashboardPath.manageStudents));
   return (
     <BrowserRouter basename={BASE_URL}>
       <Routes>
         <Route
-          path="/:sectionId/*"
-          element={<div>Main container with sidebar</div>}
+          path={`${SECTION_ID_PATH_PART}/`}
+          element={
+            <div>
+              <h1>Main container with sidebar</h1>
+              <Outlet />
+            </div>
+          }
         >
-          <Routes>
+          <Route
+            path={getPath(TeacherDashboardPath.manageStudents)}
+            element={applyV1TeacherDashboardWidth(
+              <ManageStudents studioUrlPrefix={studioUrlPrefix} />
+            )}
+          />
+          <Route
+            path={getPath(TeacherDashboardPath.loginInfo)}
+            element={applyV1TeacherDashboardWidth(
+              <SectionLoginInfo
+                studioUrlPrefix={studioUrlPrefix}
+                sectionProviderName={sectionProviderName}
+              />
+            )}
+          />
+          <Route
+            path={getPath(TeacherDashboardPath.standardsReport)}
+            element={applyV1TeacherDashboardWidth(<StandardsReport />)}
+          />
+          {studentCount === 0 && (
             <Route
-              path={TeacherDashboardPath.manageStudents}
-              element={applyV1TeacherDashboardWidth(
-                <ManageStudents studioUrlPrefix={studioUrlPrefix} />
-              )}
-            />
-            <Route
-              path={TeacherDashboardPath.loginInfo}
-              element={applyV1TeacherDashboardWidth(
-                <SectionLoginInfo
-                  studioUrlPrefix={studioUrlPrefix}
-                  sectionProviderName={sectionProviderName}
+              element={
+                <EmptySection
+                  hasStudents={false}
+                  hasCurriculumAssigned={true}
                 />
-              )}
+              }
             />
-            <Route
-              path={TeacherDashboardPath.standardsReport}
-              element={applyV1TeacherDashboardWidth(<StandardsReport />)}
-            />
-            {studentCount === 0 && (
-              <Route
-                element={
-                  <EmptySection
-                    hasStudents={false}
-                    hasCurriculumAssigned={true}
-                  />
-                }
-              />
+          )}
+          <Route
+            path={getPath(TeacherDashboardPath.projects)}
+            element={applyV1TeacherDashboardWidth(
+              <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
             )}
+          />
+          <Route
+            path={getPath(TeacherDashboardPath.stats)}
+            element={applyV1TeacherDashboardWidth(<StatsTableWithData />)}
+          />
+          {coursesWithProgress.length === 0 && (
             <Route
-              path={TeacherDashboardPath.projects}
-              element={applyV1TeacherDashboardWidth(
-                <SectionProjectsListWithData
-                  studioUrlPrefix={studioUrlPrefix}
+              element={
+                <EmptySection
+                  hasStudents={true}
+                  hasCurriculumAssigned={false}
                 />
-              )}
+              }
             />
-            <Route
-              path={TeacherDashboardPath.stats}
-              element={applyV1TeacherDashboardWidth(<StatsTableWithData />)}
-            />
-            {coursesWithProgress.length === 0 && (
-              <Route
-                element={
-                  <EmptySection
-                    hasStudents={true}
-                    hasCurriculumAssigned={false}
-                  />
-                }
-              />
+          )}
+          <Route
+            path={getPath(TeacherDashboardPath.progress)}
+            element={<SectionProgressSelector />}
+          />
+          <Route
+            path={getPath(TeacherDashboardPath.textResponses)}
+            element={applyV1TeacherDashboardWidth(<TextResponses />)}
+          />
+          <Route
+            path={getPath(TeacherDashboardPath.assessments)}
+            element={applyV1TeacherDashboardWidth(
+              <SectionAssessments sectionName={sectionName} />
             )}
+          />
+          {showAITutorTab && (
             <Route
-              path={TeacherDashboardPath.progress}
-              element={<SectionProgressSelector />}
-            />
-            <Route
-              path={TeacherDashboardPath.textResponses}
-              element={applyV1TeacherDashboardWidth(<TextResponses />)}
-            />
-            <Route
-              path={TeacherDashboardPath.assessments}
+              path={getPath(TeacherDashboardPath.aiTutorChatMessages)}
               element={applyV1TeacherDashboardWidth(
-                <SectionAssessments sectionName={sectionName} />
+                <TutorTab sectionId={sectionId} />
               )}
             />
-            {showAITutorTab && (
-              <Route
-                path={TeacherDashboardPath.aiTutorChatMessages}
-                element={applyV1TeacherDashboardWidth(
-                  <TutorTab sectionId={sectionId} />
-                )}
-              />
-            )}
-          </Routes>
+          )}
         </Route>
       </Routes>
     </BrowserRouter>
