@@ -20,15 +20,24 @@ jobs:
             pull_number: context.issue.number
           });
 
-          console.log(prFiles.data);
-          console.log("found", prFiles.data.some(file => file.filename == 'aws/dms/tasks.yml'));
-          const dmsTasksModified = prFiles.data.some(file => file.filename == 'aws/dms/tasks.yml');
+          const dmsTasksModified = prFiles.data.some(file => file.filename === 'aws/dms/tasks.yml');
 
           if (dmsTasksModified) {
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
+            const dmsComment = "This PR modifies the `aws/dms/tasks.yml` file. These changes must be deployed manually by @code-dot-org/infrastructure before merging.";
+            const comments = await github.rest.issues.listComments({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: "This PR modifies the `aws/dms/tasks.yml` file. These changes must be deployed manually by @code-dot-org/infrastructure before merging."
-            })
+              issue_number: context.issue.number
+            });
+
+            const commentExists = comments.data.some(comment => comment.body.includes(dmsComment));
+
+            if (!commentExists) {
+              await github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: dmsComment
+              });
+            }
           }
