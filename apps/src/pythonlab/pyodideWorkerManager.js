@@ -3,6 +3,7 @@ import {
   appendSystemMessage,
   appendSystemOutMessage,
   appendErrorMessage,
+  appendSystemError,
 } from '@codebridge/redux/consoleRedux';
 
 import {setAndSaveProjectSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
@@ -41,6 +42,13 @@ pyodideWorker.onmessage = event => {
   } else if (type === 'internal_error') {
     MetricsReporter.logError({
       type: 'PythonLabInternalError',
+      message,
+    });
+    return;
+  } else if (type === 'system_error') {
+    getStore().dispatch(appendSystemError(message));
+    MetricsReporter.logError({
+      type: 'PythonLabSystemCodeError',
       message,
     });
     return;

@@ -58,11 +58,14 @@ self.onmessage = async event => {
   try {
     writeSource(source, DEFAULT_FOLDER_ID, '', self.pyodide);
     await importPackagesFromFiles(source, self.pyodide);
-    await runInternalCode(SETUP_CODE, id);
-    results = await self.pyodide.runPythonAsync(python, {
-      filename: `/${HOME_FOLDER}/${MAIN_PYTHON_FILE}`,
-    });
-    await runInternalCode(getCleanupCode(source), id);
+    const setupResult = await runInternalCode(SETUP_CODE, id);
+    // Only run the user's code if the setup code ran successfully.
+    if (setupResult) {
+      results = await self.pyodide.runPythonAsync(python, {
+        filename: `/${HOME_FOLDER}/${MAIN_PYTHON_FILE}`,
+      });
+      await runInternalCode(getCleanupCode(source), id);
+    }
   } catch (error) {
     self.postMessage({type: 'error', message: error.message, id});
   }
@@ -81,8 +84,10 @@ async function runInternalCode(code, id) {
   try {
     await self.pyodide.runPythonAsync(code);
   } catch (error) {
-    self.postMessage({type: 'internal_error', message: error.message, id});
+    self.postMessage({type: 'system_error', message: error.message, id});
+    return false;
   }
+  return true;
 }
 
 // Return the options for sysout or syserr stream handler.

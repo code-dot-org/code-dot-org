@@ -7,10 +7,7 @@ import {HOME_FOLDER} from './constants';
  * for end users.
  * Pyodide error messages start with an internal stack trace we can ignore.
  * The first useful line is the one that starts with "File "/Files/main.py", line (line number)", which refers to a line number
- * in main.py. We prepend setup code to the user's main.py, so we adjust the line number accordingly.
- * If there is a further stack trace (from other files) we can just send those lines as is.
- * If there is not, we continue to adjust the line numbers in the error message to account for the setup code we prepended,
- * as the error message line numbers will all refer to main.py.
+ * in main.py. If we find this line, we return the error message starting from this line.
  * If we never find the main error, we return the entire message unaltered.
  *
  * There is one exception to this rule: if the error message is a ModuleNotFoundError relating to a module
