@@ -21,6 +21,7 @@ const ProgressFeedbackBanner = ({
   fetchProgressV2Feedback,
   createProgressV2Feedback,
   errorWhenCreatingOrLoading,
+  userCreatedAt,
 }) => {
   const [bannerStatus, setBannerStatus] = React.useState(BANNER_STATUS.UNSET);
 
@@ -46,7 +47,10 @@ const ProgressFeedbackBanner = ({
       bannerStatus === BANNER_STATUS.UNSET &&
       progressV2Feedback
     ) {
-      if (progressV2Feedback.empty) {
+      if (
+        progressV2Feedback.empty &&
+        new Date(userCreatedAt) < new Date('2024-08-02')
+      ) {
         setBannerStatus(BANNER_STATUS.UNANSWERED);
       } else {
         setBannerStatus(BANNER_STATUS.PREVIOUSLY_ANSWERED);
@@ -54,6 +58,7 @@ const ProgressFeedbackBanner = ({
     }
   }, [
     progressV2Feedback,
+    userCreatedAt,
     bannerStatus,
     canShow,
     isLoading,
@@ -100,7 +105,7 @@ const ProgressFeedbackBanner = ({
 };
 
 ProgressFeedbackBanner.propTypes = {
-  currentUser: PropTypes.object.isRequired,
+  userCreatedAt: PropTypes.string,
   canShow: PropTypes.bool,
   isLoading: PropTypes.bool.isRequired,
   progressV2Feedback: PropTypes.object,
@@ -113,7 +118,7 @@ export const UnconnectedProgressFeedbackBanner = ProgressFeedbackBanner;
 
 export default connect(
   state => ({
-    currentUser: state.currentUser,
+    userCreatedAt: state.currentUser.userCreatedAt,
     isLoading: state.progressV2Feedback.isLoading,
     progressV2Feedback: state.progressV2Feedback.progressV2Feedback,
     errorWhenCreatingOrLoading: state.progressV2Feedback.error,
