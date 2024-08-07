@@ -34,13 +34,6 @@ put_metric_data() {
     fi
 }
 
-# Function to get drone server metrics, and set global variables
-get_drone_metrics() {
-    total_count=$(drone server ls -l | tail -n +2 | wc -l)
-    error_ids=$(drone server ls -l | grep error | awk '{print $1}')
-    error_count=$(if [ -z "$error_ids" ]; then echo 0; else echo "$error_ids" | wc -l; fi)
-}
-
 # Check if DRONE_TOKEN is valid
 if ! output=$(drone server ls 2>&1); then
     echo "$output"
@@ -50,19 +43,21 @@ if ! output=$(drone server ls 2>&1); then
     exit 1
 fi
 
-# Get initial metrics
-get_drone_metrics
-put_metric_data DroneServers $total_count Count
-put_metric_data DroneErroredServers $error_count Count
+total_count=$(drone server ls -l | tail -n +2 | wc -l)
+error_ids=$(drone server ls -l | grep error | awk '{print $1}')
+# Count errored servers, counting empty string as 0
+error_count=$(if [ -z "$error_ids" ]; then echo 0; else echo "$error_ids" | wc -l; fi)
 
 # Terminate agents in 'error' state
 echo "Terminating ${error_count} of ${total_count} drone agents that were in 'error' state"
 [ -z "$error_ids" ] || echo "$error_ids" | xargs -tL1 drone server destroy
 
 # Get new metrics after termination
-initial_error_count=$error_count
-get_drone_metrics
-terminated_count=$((initial_error_count - error_count))
-put_metric_data DroneServers $total_count Count
-put_metric_data DroneErroredServers $error_count Count
-put_metric_data DroneTerminatedServers $terminated_count Count
+new_error_ids=$(drone server ls -l | grep error | awk '{print $1}')
+new_error_count=$(if [ -z "$new_error_ids" ]; then echo 0; else echo "$new_error_ids" | wc -l; fi)
+terminated_count=$((error_count - new_error_count))
+
+# Send metric if servers were terminated
+if [ "$terminated_count" -gt 0 ]; then
+    put_metric_data TerminatedDroneServers $terminated_count Count
+fi
