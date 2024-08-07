@@ -43,7 +43,7 @@ services:
       # The Protocol port that our testing infrastructure connects to
       - "4444:4444"  
 
-  selenium-video:
+  selenium-video-base: &selenium-video-base
     hostname: selenium-video
     image: codedotorg/selenium-video
     build:
@@ -51,10 +51,31 @@ services:
       context: ./selenium-video
     environment:
       DISPLAY_CONTAINER_NAME: code-dot-org-selenium-chrome
+    expose:
+      - "9001" # The control server for the video service
     volumes:
       - /tmp:/videos
-    networks:
-      cdo_network_test:
+
+  selenium-video-native:
+    <<: *selenium-video-base
+    network_mode: host
+
+  # Runs selenium grid and spins up all possible browser nodes
+  selenium-video:
+    image: alpine
+    depends_on:
+      selenium-video-native:
+        condition: service_started
+    command: >
+      /bin/sh -c "
+        echo 'Selenium Video Service Started.' &&
+        echo &&
+        echo 'To run a UI test while recording, use the normal command and append \"record=<filename>\" to it:' &&
+        echo '  (you may substitute browser=firefox with chrome or edge as needed)' &&
+        echo 'bundle exec rake test:ui record=my-test-video browser=firefox selenium= feature=dashboard/test/ui/features/platform/signing_in.feature' &&
+        echo &&
+        echo 'Then you will find /tmp/my-test-video.firefox.mp4 afterward.'
+      "
 
   # A Selenium server running Chrome for running UI tests contained in Docker
   selenium-chrome-base: &selenium-chrome-base
@@ -63,6 +84,8 @@ services:
     environment:
       SE_VNC_PORT: 5910
       SE_NO_VNC_PORT: 7910
+      DISPLAY_NUM: 100
+      DISPLAY: ':100.0'
       JAVA_OPTS: -Dwebdriver.chrome.whitelistedIps= -Dwebdriver.chrome.allowedIps=
     shm_size: '2gb'
     expose:
@@ -156,6 +179,8 @@ services:
     environment:
       SE_VNC_PORT: 5911
       SE_NO_VNC_PORT: 7911
+      DISPLAY_NUM: 101
+      DISPLAY: ':101.0'
     ulimits: *selenium-ulimits
 
   # A Selenium server running Firefox for running UI tests locally against a
@@ -173,6 +198,8 @@ services:
       SE_OPTS: "--port 4445"
       SE_VNC_PORT: 5911
       SE_NO_VNC_PORT: 7911
+      DISPLAY_NUM: 101
+      DISPLAY: ':101.0'
     network_mode: host
 
   selenium-firefox:
@@ -238,6 +265,8 @@ services:
     environment:
       SE_VNC_PORT: 5912
       SE_NO_VNC_PORT: 7912
+      DISPLAY_NUM: 102
+      DISPLAY: ':102.0'
     expose:
       - "5912" # The selenium direct VNC port
       - "4444" # The selenium router port
@@ -257,9 +286,11 @@ services:
     <<: *selenium-edge-base
     container_name: code-dot-org-selenium-edge
     environment:
+      DISPLAY_NUM: 102
       SE_VNC_PORT: 5912
       SE_NO_VNC_PORT: 7912
       SE_OPTS: "--port 4446"
+      DISPLAY: ':102.0'
     network_mode: host
 
   selenium-edge:
