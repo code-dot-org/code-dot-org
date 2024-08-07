@@ -33,7 +33,6 @@ class Slack
     'server-operations' => 'C0CCSS3PX'
   }.freeze
 
-  # TODO DELETE THIS COMMENT
   SLACK_TOKEN = CDO.methods.include?(:slack_token) ? CDO.slack_token.freeze : nil
   SLACK_BOT_TOKEN = CDO.methods.include?(:slack_bot_token) ? CDO.slack_bot_token.freeze : nil
 
