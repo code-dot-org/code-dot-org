@@ -248,7 +248,7 @@ loop do
         CDO.log.info exception.message
       end
       modified_batch_s3_key = REDELIVER_DATA_PREFIX + undelivered_batch_uri.path
-      raise DryRun::Error if dry_run
+      raise StandardError unless options[:actually_update]
       s3_client.put_object(bucket: FIREHOSE_INTERMEDIATE_BUCKET, key: modified_batch_s3_key, body: modified_batch)
       redelivery_manifest = {
         entries: [
@@ -263,11 +263,10 @@ loop do
       }
       load_batch_query = <<~SQL
         SET search_path TO #{REDSHIFT_SCHEMA};
-        BEGIN;
-          COPY #{REDSHIFT_TABLE} (created_at, environment, study, study_group, device, uuid, user_id, script_id, level_id, project_id, event, data_int, data_float, data_string, data_json)
-          FROM 's3://#{FIREHOSE_INTERMEDIATE_BUCKET}/#{modified_batch_s3_key}'
-          CREDENTIALS 'aws_iam_role=arn:aws:iam::#{ACCOUNT_ID}:role/redshift-s3'
-          json 'auto' timeformat 'auto';
+        COPY #{REDSHIFT_TABLE} (created_at, environment, study, study_group, device, uuid, user_id, script_id, level_id, project_id, event, data_int, data_float, data_string, data_json)
+        FROM 's3://#{FIREHOSE_INTERMEDIATE_BUCKET}/#{modified_batch_s3_key}'
+        CREDENTIALS 'aws_iam_role=arn:aws:iam::#{ACCOUNT_ID}:role/redshift-s3'
+        json 'auto' timeformat 'auto';
       SQL
       CDO.log.info load_batch_query
       redshift_client.exec(load_batch_query)
@@ -277,7 +276,7 @@ loop do
         body: redelivery_manifest.to_json
       )
       CDO.log.info "Successfully redelivered #{undelivered_batch_uri.path} to Redshift."
-    rescue PostgreSQLQueryError => exception
+    rescue RedshiftClient::PostgreSQLQueryError => exception
       CDO.log.info "Error redelivering #{undelivered_batch_uri.path}"
       CDO.log.info exception.message
       s3_client.put_object(
