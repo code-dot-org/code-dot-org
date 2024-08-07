@@ -163,11 +163,11 @@ module MailJet
     # Each email template may have different required "messages:"" fields
     # See https://dev.mailjet.com/email/guides for more information regarding "messages:" format
     message = {}
-    message['From'] = {'Email' => email_config[:from_address], 'Name' => email_config[:from_name]}
-    message['To'] = [{'Email' => contact.email, 'Name' => contact.name}]
-    message['TemplateID'] = template_config[locale.to_sym] || template_config[:default]
-    message['TemplateLanguage'] = true
-    message['Variables'] = variables if variables.present?
+    message[:From] = {Email: email_config[:from_address], Name: email_config[:from_name]}
+    message[:To] = [{Email: contact.email, Name: contact.name}]
+    message[:TemplateID] = template_config[locale.to_sym] || template_config[:default]
+    message[:TemplateLanguage] = true
+    message[:Variables] = variables if variables.present?
 
     Mailjet::Send.create(messages: [message])
   end
