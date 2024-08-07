@@ -1,5 +1,12 @@
 import React from 'react';
-import {BrowserRouter, Routes, Route, Outlet} from 'react-router-dom';
+import {
+  Routes,
+  Route,
+  Outlet,
+  useNavigate,
+  useLocation,
+  generatePath,
+} from 'react-router-dom';
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
 
@@ -26,7 +33,7 @@ interface SectionNavigationRouterProps {
   sectionProviderName: string;
 }
 
-const BASE_URL = `/teacher_dashboard/sections/`;
+export const SECTION_NAVIGATION_BARE_URL = `/teacher_dashboard/sections/`;
 const SECTION_ID_PATH_PART = `/:sectionId`;
 
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
@@ -44,93 +51,102 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
   showAITutorTab,
   sectionProviderName,
 }) => {
-  console.log('lfm', getPath(TeacherDashboardPath.manageStudents));
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  React.useEffect(() => {
+    // Select a default tab if current path doesn't match one of the paths in our TeacherDashboardPath type.
+    const emptyOrInvalidPath = !Object.values(TeacherDashboardPath).includes(
+      location.pathname
+    );
+    if (emptyOrInvalidPath) {
+      const nextPath =
+        studentCount === 0
+          ? TeacherDashboardPath.manageStudents
+          : TeacherDashboardPath.progress;
+
+      navigate(generatePath(getPath(nextPath), {sectionId: sectionId}));
+    }
+  }, [navigate, location, studentCount, sectionId]);
+
   return (
-    <BrowserRouter basename={BASE_URL}>
-      <Routes>
+    <Routes>
+      <Route
+        path={`${SECTION_ID_PATH_PART}/`}
+        element={
+          <div>
+            <h1>Main container with sidebar</h1>
+            <Outlet />
+          </div>
+        }
+      >
         <Route
-          path={`${SECTION_ID_PATH_PART}/`}
-          element={
-            <div>
-              <h1>Main container with sidebar</h1>
-              <Outlet />
-            </div>
-          }
-        >
-          <Route
-            path={getPath(TeacherDashboardPath.manageStudents)}
-            element={applyV1TeacherDashboardWidth(
-              <ManageStudents studioUrlPrefix={studioUrlPrefix} />
-            )}
-          />
-          <Route
-            path={getPath(TeacherDashboardPath.loginInfo)}
-            element={applyV1TeacherDashboardWidth(
-              <SectionLoginInfo
-                studioUrlPrefix={studioUrlPrefix}
-                sectionProviderName={sectionProviderName}
-              />
-            )}
-          />
-          <Route
-            path={getPath(TeacherDashboardPath.standardsReport)}
-            element={applyV1TeacherDashboardWidth(<StandardsReport />)}
-          />
-          {studentCount === 0 && (
-            <Route
-              element={
-                <EmptySection
-                  hasStudents={false}
-                  hasCurriculumAssigned={true}
-                />
-              }
+          path={getPath(TeacherDashboardPath.manageStudents)}
+          element={applyV1TeacherDashboardWidth(
+            <ManageStudents studioUrlPrefix={studioUrlPrefix} />
+          )}
+        />
+        <Route
+          path={getPath(TeacherDashboardPath.loginInfo)}
+          element={applyV1TeacherDashboardWidth(
+            <SectionLoginInfo
+              studioUrlPrefix={studioUrlPrefix}
+              sectionProviderName={sectionProviderName}
             />
           )}
+        />
+        <Route
+          path={getPath(TeacherDashboardPath.standardsReport)}
+          element={applyV1TeacherDashboardWidth(<StandardsReport />)}
+        />
+        {studentCount === 0 && (
           <Route
-            path={getPath(TeacherDashboardPath.projects)}
+            element={
+              <EmptySection hasStudents={false} hasCurriculumAssigned={true} />
+            }
+          />
+        )}
+        <Route
+          path={getPath(TeacherDashboardPath.projects)}
+          element={applyV1TeacherDashboardWidth(
+            <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
+          )}
+        />
+        <Route
+          path={getPath(TeacherDashboardPath.stats)}
+          element={applyV1TeacherDashboardWidth(<StatsTableWithData />)}
+        />
+        {!anyStudentHasProgress && (
+          <Route
+            element={
+              <EmptySection hasStudents={true} hasCurriculumAssigned={false} />
+            }
+          />
+        )}
+        <Route
+          path={getPath(TeacherDashboardPath.progress)}
+          element={<SectionProgressSelector />}
+        />
+        <Route
+          path={getPath(TeacherDashboardPath.textResponses)}
+          element={applyV1TeacherDashboardWidth(<TextResponses />)}
+        />
+        <Route
+          path={getPath(TeacherDashboardPath.assessments)}
+          element={applyV1TeacherDashboardWidth(
+            <SectionAssessments sectionName={sectionName} />
+          )}
+        />
+        {showAITutorTab && (
+          <Route
+            path={getPath(TeacherDashboardPath.aiTutorChatMessages)}
             element={applyV1TeacherDashboardWidth(
-              <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
+              <TutorTab sectionId={sectionId} />
             )}
           />
-          <Route
-            path={getPath(TeacherDashboardPath.stats)}
-            element={applyV1TeacherDashboardWidth(<StatsTableWithData />)}
-          />
-          {!anyStudentHasProgress && (
-            <Route
-              element={
-                <EmptySection
-                  hasStudents={true}
-                  hasCurriculumAssigned={false}
-                />
-              }
-            />
-          )}
-          <Route
-            path={getPath(TeacherDashboardPath.progress)}
-            element={<SectionProgressSelector />}
-          />
-          <Route
-            path={getPath(TeacherDashboardPath.textResponses)}
-            element={applyV1TeacherDashboardWidth(<TextResponses />)}
-          />
-          <Route
-            path={getPath(TeacherDashboardPath.assessments)}
-            element={applyV1TeacherDashboardWidth(
-              <SectionAssessments sectionName={sectionName} />
-            )}
-          />
-          {showAITutorTab && (
-            <Route
-              path={getPath(TeacherDashboardPath.aiTutorChatMessages)}
-              element={applyV1TeacherDashboardWidth(
-                <TutorTab sectionId={sectionId} />
-              )}
-            />
-          )}
-        </Route>
-      </Routes>
-    </BrowserRouter>
+        )}
+      </Route>
+    </Routes>
   );
 };
 
