@@ -21,7 +21,7 @@ describe('ChatEventLogger', () => {
       scriptId: 321,
       channelId: 'abc123',
     };
-    chatEventLogger = ChatEventLogger.getInstance();
+    chatEventLogger = new ChatEventLogger();
   });
 
   afterEach(() => {
