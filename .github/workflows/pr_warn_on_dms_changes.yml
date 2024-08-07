@@ -1,0 +1,35 @@
+name: Warn on PR's that modify DMS tasks
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  add-comment:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Check for modified files
+      id: check_files
+      run: |
+        # Check if aws/dms/tasks.yml is modified
+        if git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -q "aws/dms/tasks.yml"; then
+          echo "file_modified=true" >> $GITHUB_OUTPUT
+        else
+          echo "file_modified=false" >> $GITHUB_OUTPUT
+        fi
+
+    - name: Add comment to PR
+      if: steps.check_files.outputs.file_modified == 'true'
+      uses: actions/github-script@v6
+      with:
+        script: |
+          github.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: "This PR modifies the `aws/dms/tasks.yml` file. These changes must be deployed manually by the Infra team before merging."
+          })
