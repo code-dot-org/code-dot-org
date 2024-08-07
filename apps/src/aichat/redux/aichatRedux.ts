@@ -287,11 +287,10 @@ export const onSaveFail =
           if (body?.details?.profaneWords?.length > 0 && flaggedProperties) {
             errorMessage = `Profanity detected in the ${flaggedProperties} and cannot be updated. Please try again.`;
           }
-          const includeInChatHistory = flaggedProperties ? true : false;
           dispatchSaveFailNotification(
             dispatch,
             errorMessage,
-            !!includeInChatHistory
+            !!flaggedProperties
           );
         })
         // Catch any errors in parsing the response body or if there was no response body
@@ -405,8 +404,7 @@ export const submitChatContents = createAsyncThunk(
 
     thunkAPI.dispatch(clearChatMessagePending());
     chatApiResponse.messages.forEach(message => {
-      const successfulChatMessage = {...message, timestamp: Date.now()};
-      thunkAPI.dispatch(addChatEvent(successfulChatMessage));
+      thunkAPI.dispatch(addChatEvent({...message, timestamp: Date.now()}));
     });
   }
 );
