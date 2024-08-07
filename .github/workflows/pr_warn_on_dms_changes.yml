@@ -19,6 +19,8 @@ jobs:
             repo: context.repo.repo,
             pull_number: context.issue.number
           });
+
+          console.log(prFiles.data);
           
           const fileModified = prFiles.data.some(file => file.filename === 'aws/dms/tasks.yml');
           return { file_modified: fileModified };
