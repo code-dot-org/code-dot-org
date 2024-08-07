@@ -68,6 +68,9 @@ def build
     RakeUtils.git_fetch
     count = RakeUtils.git_update_count
     RakeUtils.git_pull if count > 0
+    # if CDO.test_system? and count > 0  
+    # git restore dashboard/db/schema.rb dashboard/db/schema_cache.yml 
+    end
     count = [1, count].max
 
     log = `git log --pretty=format:"%h %s (%an)" -n #{count}`
