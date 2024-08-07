@@ -10,5 +10,8 @@ include:
   - path: ./docker/developers/docker-compose.mysql.yml
   - path: ./docker/developers/docker-compose.redis.yml
 
+  # Selenium services for UI testing
+  - path: ./docker/developers/docker-compose.selenium.yml
+
   # The dashboard server
   - path: ./docker/developers/docker-compose.dashboard.yml
