@@ -1,6 +1,7 @@
 require_relative './rake_utils'
 require_relative '../../deployment'
 require 'cdo/chat_client'
+require 'net/http'
 
 module TestRunUtils
   def self.run_apps_tests
@@ -41,7 +42,9 @@ module TestRunUtils
     end
 
     # If 'browser=' specified, we pass along our desired browser (firefox, chrome, etc)
+    browser = 'chrome'
     if ENV.fetch('browser', nil)
+      browser = ENV.fetch('browser', nil)
       args << "--browser=#{ENV.fetch('browser', nil)}"
     end
 
@@ -51,8 +54,40 @@ module TestRunUtils
       args << "--selenium-hub-url=#{url}"
     end
 
+    # Check if we are recording a video of this test
+    record_video = false
+    if ENV.fetch('record', nil)
+      record_video = "#{ENV.fetch('record', 'video')}.#{browser}.mp4"
+    end
+
     Dir.chdir(dashboard_dir('test/ui/')) do
+      selenium_video_host = ENV.fetch('SELENIUM_VIDEO_HOST', 'localhost')
+      display_container_name = ENV.fetch('DISPLAY_CONTAINER_NAME', 'localhost')
+
+      # For native hosted docker, the display num is different based on the browser
+      display_num = 99
+      if selenium_video_host == 'localhost'
+        case browser
+        when 'chrome'
+          display_num = 100
+        when 'firefox'
+          display_num = 101
+        when 'edge'
+          display_num = 102
+        end
+      end
+
+      if record_video
+        # Ping the selenium-video service
+        url = "http://#{selenium_video_host}:9001/start?FILE_NAME=#{record_video}&DISPLAY_CONTAINER_NAME=#{display_container_name}&DISPLAY_NUM=#{display_num}"
+        Net::HTTP.get(URI.parse(url))
+      end
       RakeUtils.system "./runner.rb #{args.join(' ')}"
+      if record_video
+        # Stop recording
+        url = "http://#{selenium_video_host}:9001/stopall"
+        Net::HTTP.get(URI.parse(url))
+      end
     end
   end
 
