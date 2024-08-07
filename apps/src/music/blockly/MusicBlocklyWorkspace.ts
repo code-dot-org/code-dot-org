@@ -17,6 +17,7 @@ import {
   TriggerStart,
   TRIGGER_FIELD,
 } from './constants';
+import {setUpBlocklyForMusicLab} from './setup';
 import {getToolbox} from './toolbox';
 
 const experiments = require('@cdo/apps/util/experiments');
@@ -30,6 +31,19 @@ type CompiledEvents = {[key: string]: {code: string; args?: string[]}};
  * workspace view, execute code, and save/load projects.
  */
 export default class MusicBlocklyWorkspace {
+  private static isBlocklyEnvironmentSetup = false;
+
+  // Setup the global Blockly environment for Music Lab.
+  // This should only happen once per page load.
+  public static setupBlocklyEnvironment() {
+    if (this.isBlocklyEnvironmentSetup) {
+      return;
+    }
+
+    setUpBlocklyForMusicLab();
+    this.isBlocklyEnvironmentSetup = true;
+  }
+
   private workspace: WorkspaceSvg | Workspace | null;
   private container: HTMLElement | null;
   private codeHooks: {[key: string]: (...args: unknown[]) => void};

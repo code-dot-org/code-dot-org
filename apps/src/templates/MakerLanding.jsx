@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import {MAKER_DEPRECATION_SUPPORT_URL} from '@cdo/apps/lib/kits/maker/util/makerConstants';
+import {MAKER_DEPRECATION_SUPPORT_URL} from '@cdo/apps/maker/util/makerConstants';
 import Notification, {
   NotificationType,
 } from '@cdo/apps/sharedComponents/Notification';

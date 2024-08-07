@@ -39,8 +39,6 @@ const LabViewsRenderer: React.FunctionComponent = () => {
   // When navigating to a new app type, add it to the list of apps to render.
   useEffect(() => {
     if (currentAppName && !appsToRender.includes(currentAppName)) {
-      // Run the setup function for the Lab if it has one.
-      lab2EntryPoints[currentAppName]?.setupFunction?.();
       setAppsToRender([...appsToRender, currentAppName]);
     }
   }, [currentAppName, appsToRender]);

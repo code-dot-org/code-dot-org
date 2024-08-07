@@ -16,6 +16,7 @@ const WorkshopLinkAccountPage: React.FunctionComponent<{
       <AccountBanner
         heading={i18n.accountWelcomeBannerHeaderLabel()}
         desc={i18n.accountWelcomeBannerContentWorkshopEnroll()}
+        showLogo={true}
       />
       <div className={styles.cardContainer}>
         <AccountCard
