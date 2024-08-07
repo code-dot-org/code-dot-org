@@ -23,21 +23,21 @@ jobs:
           const dmsTasksModified = prFiles.data.some(file => file.filename === 'aws/dms/tasks.yml');
 
           if (dmsTasksModified) {
-            const dmsComment = "This PR modifies the `aws/dms/tasks.yml` file. These changes must be deployed manually by @code-dot-org/infrastructure before merging.";
+            const dmsPrefix = "[WARN: DMS Config Modified]";
             const comments = await github.rest.issues.listComments({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number
             });
 
-            const commentExists = comments.data.some(comment => comment.body.includes(dmsComment));
+            const commentExists = comments.data.some(comment => comment.body.includes(dmsPrefix));
 
             if (!commentExists) {
               await github.rest.issues.createComment({
                 issue_number: context.issue.number,
                 owner: context.repo.owner,
                 repo: context.repo.repo,
-                body: dmsComment
+                body: dmsPrefix + " This PR modifies the `aws/dms/tasks.yml` file. These changes must be deployed manually by @code-dot-org/infrastructure before merging."
               });
             }
           }
