@@ -35,12 +35,7 @@ import {
   updateAiCustomization,
 } from '../redux/aichatRedux';
 import {getNewMessageId} from '../redux/utils';
-import {
-  AichatLevelProperties,
-  ChatEvent,
-  Notification,
-  ViewMode,
-} from '../types';
+import {AichatLevelProperties, Notification, ViewMode} from '../types';
 
 import ChatWorkspace from './ChatWorkspace';
 import {isDisabled} from './modelCustomization/utils';
@@ -197,7 +192,7 @@ const AichatView: React.FunctionComponent = () => {
         timestamp: Date.now(),
         descriptionKey: 'CLEAR_CHAT',
         hideForParticipants: true,
-      } as ChatEvent)
+      })
     );
     analyticsReporter.sendEvent(
       EVENTS.CHAT_ACTION,
