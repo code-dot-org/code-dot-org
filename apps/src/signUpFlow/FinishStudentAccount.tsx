@@ -7,7 +7,6 @@ import {
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
 import locale from '@cdo/apps/signup/locale';
-import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 
 import Checkbox from '../componentLibrary/checkbox/Checkbox';
 
@@ -16,7 +15,7 @@ import {
   EMAIL_OPT_IN_SESSION_KEY,
 } from './signUpFlowConstants';
 
-import style from './finish-teacher-account.module.scss';
+import style from './finish-account.module.scss';
 
 const FinishStudentAccount: React.FunctionComponent = () => {
   const [name, setName] = useState('');
@@ -59,7 +58,6 @@ const FinishStudentAccount: React.FunctionComponent = () => {
         <BodyThreeText>
           {locale.finish_teacher_account_name_input_desc()}
         </BodyThreeText>
-        <SchoolDataInputs usIp={usIp} includeHeaders={false} />
         <div className={style.emailOptInContainer}>
           <BodyTwoText
             className={style.labelText}
