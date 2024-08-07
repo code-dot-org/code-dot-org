@@ -15,7 +15,7 @@ interface SectionsData {
 }
 
 const TeacherNavigationBar: React.FunctionComponent = () => {
-  const sectionList = useSelector(
+  const sections = useSelector(
     (state: {teacherSections: {sections: SectionsData}}) =>
       state.teacherSections.sections
   );
@@ -26,7 +26,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   const [selectedSectionId, setSelectedSectionId] = useState<string>('');
 
   useEffect(() => {
-    const updatedSectionArray = Object.entries(sectionList)
+    const updatedSectionArray = Object.entries(sections)
       .filter(([id, section]) => !section.hidden)
       .map(([id, section]) => ({
         value: String(id),
@@ -39,10 +39,10 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     if (updatedSectionArray.length > 0 && !selectedSectionId) {
       setSelectedSectionId(updatedSectionArray[0].value);
     }
-  }, [sectionList, selectedSectionId]);
+  }, [sections, selectedSectionId]);
 
   return (
-    <div className={styles.sidebarContainer}>
+    <nav className={styles.sidebarContainer}>
       <div className={styles.sidebarContent}>
         <Typography
           semanticTag={'h2'}
@@ -60,7 +60,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
           name="section-dropdown"
         />
       </div>
-    </div>
+    </nav>
   );
 };
 

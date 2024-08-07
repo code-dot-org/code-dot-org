@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import {Route, Switch, useLocation} from 'react-router-dom';
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
@@ -87,9 +87,14 @@ function TeacherDashboard({
     }
   });
 
-  const teacherNavV2Enabled =
-    DCDO.get('teacher-local-nav-v2', false) ||
-    experiments.isEnabled(experiments.TEACHER_LOCAL_NAV_V2);
+  const [teacherNavV2Enabled, setTeacherNavV2Enabled] = useState(false);
+
+  useEffect(() => {
+    setTeacherNavV2Enabled(
+      DCDO.get('teacher-local-nav-v2', false) ||
+        experiments.isEnabled(experiments.TEACHER_LOCAL_NAV_V2)
+    );
+  }, []);
 
   // Select a default tab if current path doesn't match one of the paths in our TeacherDashboardPath type.
   const emptyOrInvalidPath = !Object.values(TeacherDashboardPath).includes(
