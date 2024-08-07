@@ -3,7 +3,10 @@ import React from 'react';
 import locale from '@cdo/apps/signup/locale';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 
+import FontAwesomeV6Icon from '../componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import {Heading2} from '../componentLibrary/typography';
 import AccountCard from '../templates/account/AccountCard';
+import SafeMarkdown from '../templates/SafeMarkdown';
 
 import style from './accountType.module.scss';
 
@@ -44,6 +47,18 @@ const AccountType: React.FunctionComponent = () => {
               locale.access_assessments(),
               locale.enroll_in_pl(),
             ]}
+          />
+        </div>
+        <div className={style.freeCurriculumWrapper}>
+          <FontAwesomeV6Icon iconName={'book-open-cover'} />
+          <Heading2 visualAppearance="heading-xs">
+            {locale.free_curriculum_forever()}
+          </Heading2>
+          <SafeMarkdown
+            className={style.desc}
+            markdown={locale.read_our_commitment({
+              link: 'http://creativecommons.org/licenses/by-nc-sa/4.0/',
+            })}
           />
         </div>
       </div>
