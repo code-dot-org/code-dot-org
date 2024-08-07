@@ -30,6 +30,7 @@ Dashboard::Application.routes.draw do
     post '/delete_predict_level_progress', to: 'user_levels#delete_predict_level_progress'
     get '/user_levels/get_token', to: 'user_levels#get_token'
     get '/user_levels/level_source/:script_id/:level_id', to: 'user_levels#get_level_source'
+    get '/user_levels/section_summary/:section_id/:level_id', to: 'user_levels#get_section_response_summary'
 
     patch '/api/v1/user_scripts/:script_id', to: 'api/v1/user_scripts#update'
 
@@ -191,6 +192,7 @@ Dashboard::Application.routes.draw do
       get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
       post '/users/begin_sign_up', to: 'registrations#begin_sign_up'
       post '/users/finish_sign_up', to: 'registrations#new'
+      get '/users/new_sign_up', to: 'registrations#new_sign_up'
       patch '/dashboardapi/users', to: 'registrations#update'
       patch '/users/upgrade', to: 'registrations#upgrade'
       patch '/users/set_student_information', to: 'registrations#set_student_information'
@@ -801,10 +803,11 @@ Dashboard::Application.routes.draw do
       get 'workshop_survey/day/:day', to: 'workshop_daily_survey#new_general'
       get 'workshop_daily_survey/day/:day', to: 'workshop_daily_survey#new_daily_foorm'
       get 'workshop_pre_survey', to: 'workshop_daily_survey#new_pre_foorm'
-      get 'workshop_post_survey', to: 'workshop_daily_survey#new_post_foorm'
       post 'workshop_survey/submit', to: 'workshop_daily_survey#submit_general'
+      get 'workshop_post_survey', to: 'workshop_daily_survey#new_post'
       get 'workshop_survey/post/:enrollment_code', to: 'workshop_daily_survey#new_post', as: 'new_workshop_survey'
-      get 'workshop_survey/facilitator_post_foorm', to: 'workshop_daily_survey#new_facilitator_post_foorm'
+      get 'workshop_survey/facilitator_post_foorm', to: 'workshop_daily_survey#new_facilitator_post'
+      get 'workshop_survey/new_facilitator_post', to: 'workshop_daily_survey#new_facilitator_post'
       get 'workshop_survey/csf/post101(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post101'
       get 'workshop_survey/csf/pre201', to: 'workshop_daily_survey#new_csf_pre201'
       get 'workshop_survey/csf/post201(/:enrollment_code)', to: 'workshop_daily_survey#new_csf_post201'
@@ -1162,6 +1165,7 @@ Dashboard::Application.routes.draw do
     post '/openai/chat_completion', to: 'openai_chat#chat_completion'
 
     post '/aichat/chat_completion', to: 'aichat#chat_completion'
+    post '/aichat/log_chat_event', to: 'aichat#log_chat_event'
 
     resources :ai_tutor_interactions, only: [:create, :index] do
       resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]

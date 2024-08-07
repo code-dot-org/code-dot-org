@@ -9,7 +9,7 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
-import FontAwesome from '../FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import {
   collapseMetadataForStudents,
   expandMetadataForStudents,
@@ -81,6 +81,7 @@ function StudentColumn({
       onClick={() => expandRow(student.id)}
       type="button"
       aria-expanded={false}
+      id={'ui-test-student-row-unexpanded-' + getFullName(student)}
     >
       <FontAwesome
         icon="caret-right"
@@ -98,6 +99,7 @@ function StudentColumn({
         onClick={() => collapseRow(student.id)}
         type="button"
         aria-expanded={true}
+        id={'ui-test-student-row-expanded-' + getFullName(student)}
       >
         <FontAwesome
           icon="caret-down"

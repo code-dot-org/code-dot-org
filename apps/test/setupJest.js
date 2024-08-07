@@ -7,6 +7,7 @@ import '../build/locales/en_us/common_locale.js';
 import '../build/locales/en_us/aichat_locale.js';
 import '../build/locales/en_us/applab_locale.js';
 import '../build/locales/en_us/javalab_locale.js';
+import '../build/locales/en_us/signup_locale.js';
 import '../build/locales/en_us/music_locale.js';
 import '../build/locales/en_us/netsim_locale.js';
 import '../build/locales/en_us/standaloneVideo_locale.js';
@@ -19,8 +20,8 @@ import '../build/locales/en_us/studio_locale.js';
 import '../build/locales/en_us/craft_locale.js';
 import '../build/locales/en_us/flappy_locale.js';
 
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import enzyme from 'enzyme'; // eslint-disable-line no-restricted-imports
-import Adapter from 'enzyme-adapter-react-16';
 import mockFetch from 'jest-fetch-mock';
 import $ from 'jquery';
 import {TextEncoder, TextDecoder} from 'util';

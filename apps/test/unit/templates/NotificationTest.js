@@ -4,9 +4,9 @@ import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
-import Button from '@cdo/apps/templates//Button';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Notification from '@cdo/apps/templates/Notification';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import Notification from '@cdo/apps/sharedComponents/Notification';
 
 const announcement = {
   heading: 'Go beyond an Hour of Code',
@@ -104,10 +104,8 @@ describe('Notification', () => {
               </div>
               <div>
                 <Button
-                  __useDeprecatedTag
                   href={announcement.link}
                   text={announcement.buttonText}
-                  target="_blank"
                 />
               </div>
             </div>
@@ -287,12 +285,7 @@ describe('Notification', () => {
                 <div>{findCourse.details}</div>
               </div>
               <div>
-                <Button
-                  __useDeprecatedTag
-                  href={findCourse.link}
-                  text={findCourse.buttonText}
-                  target="_blank"
-                />
+                <Button href={findCourse.link} text={findCourse.buttonText} />
               </div>
             </div>
           </div>

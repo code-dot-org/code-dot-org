@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-11 16:58:07 UTC",
+    "serialized_at": "2024-07-24 04:47:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3586,6 +3586,18 @@
       }
     },
     {
+      "name": "CSP Unit 8 - Slides",
+      "url": "https://drive.google.com/drive/folders/1ad6AxACidf5p-cSG6SRVu0kQrSar74lg?usp=drive_link",
+      "key": "csp_unit_8_-_slides",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_8_-_slides"
+      }
+    },
+    {
       "name": "Cybersecurity and Global Impacts (Unit Slides)",
       "url": "https://docs.google.com/presentation/d/1T6Bk9nNHyOi8OLn8ZDLzzNWPr-ujIJo881rH1l2DRUU/template/preview",
       "key": "cybersecurity_and_global_impacts_unit_slides_",
@@ -3973,6 +3985,12 @@
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
+        "script.name": "csp8-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_unit_8_-_slides",
         "script.name": "csp8-2024"
       }
     },

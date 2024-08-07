@@ -8,14 +8,14 @@ Feature: Manage Assets
   Scenario: The manage assets dialog contains the option to record audio on Chrome
     Given I am a student
     And I start a new Game Lab project
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I open the Manage Assets dialog
     And I wait until element "#record-asset" is visible
 
   Scenario: The manage assets dialog displays the audio preview, and toggles between play and pause button.
     Given I am a student
     And I start a new Game Lab project
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I open the Manage Assets dialog
     And I wait to see a dialog titled "Manage Assets"
     And I wait until element "#upload-asset" is visible
@@ -27,7 +27,7 @@ Feature: Manage Assets
   Scenario: The manage assets dialog displays an image thumbnail and opens in a new tab when clicked
     Given I am a student
     And I start a new Game Lab project
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I open the Manage Assets dialog
     And I wait to see a dialog titled "Manage Assets"
     And I wait until element "#upload-asset" is visible

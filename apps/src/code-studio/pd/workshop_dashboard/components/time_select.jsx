@@ -11,7 +11,7 @@ import React from 'react';
 import {FormControl, InputGroup, Dropdown, MenuItem} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 import fontConstants from '@cdo/apps/fontConstants';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 
 import {TIME_FORMAT} from '../workshopConstants';
 

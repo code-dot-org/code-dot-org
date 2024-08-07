@@ -6,7 +6,6 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
     @admin = create :admin
     @lti_integration = create :lti_integration
     DCDO.stubs(:get)
-    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
   end
 
   test 'links an LTI login to an existing account' do
@@ -63,22 +62,6 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
     PartialRegistration.stubs(:in_progress?).returns(true)
     Services::Lti::AccountLinker.expects(:call).never
     post :link_email, params: {email: @user.email, password: 'password'}
-  end
-
-  test 'blocks access if lti_account_linking_enabled is false' do
-    sign_in @user
-    DCDO.expects(:get).with('lti_account_linking_enabled', false).times(3).returns(false)
-    get :existing_account
-    assert_response :not_found
-    get :landing
-    assert_response :not_found
-    post :link_email, params: {email: @user.email, password: 'password'}
-    assert_response :not_found
-  end
-
-  test 'allows access if lti_account_linking_enabled is true' do
-    get :existing_account
-    assert_response :ok
   end
 
   test 'returns bad request if not logged in' do

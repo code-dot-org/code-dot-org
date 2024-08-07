@@ -6,9 +6,9 @@ import {
   searchAssets,
   filterAnimations,
 } from '@cdo/apps/code-studio/assets/searchAssets';
+import Button from '@cdo/apps/legacySharedComponents/Button.jsx';
 import {AnimationProps} from '@cdo/apps/p5lab/shapes';
-import Button from '@cdo/apps/templates/Button';
-import SearchBar from '@cdo/apps/templates/SearchBar';
+import SearchBar from '@cdo/apps/sharedComponents/SearchBar.jsx';
 import {isMobileDevice} from '@cdo/apps/util/browser-detector';
 import color from '@cdo/apps/util/color';
 import msg from '@cdo/locale';

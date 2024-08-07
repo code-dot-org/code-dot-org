@@ -98,6 +98,10 @@ module Services
               "temporary directory contents: #{Dir.entries(pdfs_dir).inspect}",
               color: 'red'
             )
+            ChatClient.log(
+              "<@teacher-tools-on-call> Please follow instructions in https://docs.google.com/document/d/1mBY56DeAzrwTM3CVIOFho3azTi9mudE37ZQrVZXxaMA/edit#heading=h.axfu5or8cueg to troubleshoot",
+              color: 'red'
+            )
             raise exception
           end
           FileUtils.remove_entry_secure(pdfs_dir)
@@ -211,15 +215,14 @@ module Services
               return path
             end
           end
-        rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error => exception
+        rescue Google::Apis::ClientError, Google::Apis::ServerError, GoogleDrive::Error, URI::InvalidURIError, OpenURI::HTTPError => exception
           ChatClient.log(
-            "Google error when trying to fetch PDF from #{url.inspect} to #{path.inspect}: #{exception}",
+            "Error when trying to fetch PDF from #{url.inspect} to #{path.inspect}: #{exception.inspect}",
             color: 'yellow'
           )
-          return nil
-        rescue URI::InvalidURIError, OpenURI::HTTPError => exception
+
           ChatClient.log(
-            "URI error when trying to fetch PDF from #{url.inspect} to #{path.inspect}: #{exception}",
+            "<@teacher-tools-on-call> Please follow instructions in https://docs.google.com/document/d/1mBY56DeAzrwTM3CVIOFho3azTi9mudE37ZQrVZXxaMA/edit#heading=h.axfu5or8cueg to troubleshoot",
             color: 'yellow'
           )
           return nil

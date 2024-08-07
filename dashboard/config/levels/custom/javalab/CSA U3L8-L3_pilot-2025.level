@@ -1,0 +1,29 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T15:25:45.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO #1:** Look at the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getEffectResponse()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">MusicSurvey</code> class. What does this method do? What position in the 1D array <code style=\"background-color: #ececec; color: black; font-weight: bold;\">answers</code> is being returned?\r\n\r\n✅ **TO DO #2:** Modify this method to the following:\r\n\r\n<pre style=\"background-color: #333333; color: white;\">\r\npublic Respondent getEffectResponse(boolean targetEffect) {\r\n  for (Respondent response : answers) {\r\n    if (response.getEffect() == targetEffect) {\r\n      return response;\r\n    }\r\n  }\r\n  \r\n  return null;\r\n}\r\n</pre>\r\n\r\nHow does this change the result? What position in the 1D array <code style=\"background-color: #ececec; color: black; font-weight: bold;\">answers</code> is being returned?",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "project_template_level_name": "CSA U3L8-Comparing Strings PBT_pilot-2025",
+    "teacher_markdown": "Students should notice that the method is returning the last match found in the 1D array `answers`. In this case, it returns the element at the last index.\r\n\r\nWhen students modify the method, they should notice that this changes which element is returned. Instead of the last match found, it now returns the first match found.",
+    "name_suffix": "_pilot-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T15:25:45.959+00:00\",\"changed\":[\"cloned from \\\"CSA U3L8-L3_2025\\\"\"],\"cloned_from\":\"CSA U3L8-L3_2025\"}]"
+}]]></config>
+</Javalab>

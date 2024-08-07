@@ -53,6 +53,7 @@
     "fishlong-pond-init3": "Or you can teach A.I. a new word by choosing New Word.",
     "didYouKnow": "Did you know?",
     "continue": "Continue",
+    "training-generic-please-continue": "Great Work! Click Continue to see what A.I. has learned.",
     "areYouSure": "Are you sure?",
     "eraseWarning": "Erasing A.I.'s data will permanently delete all training. Is that what you want to do?",
     "erase": "Erase",

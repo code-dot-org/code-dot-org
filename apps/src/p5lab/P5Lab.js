@@ -22,8 +22,9 @@ import {
 } from './spritelab/constants';
 import {startInAnimationTab} from './stateQueries';
 
-// Disabling import/order because moving the require statements may have unintended side effects.
-// This might be safe to remove but needs investigation whether any behavior is changed by order.
+// eslint autocorrection was unable to automatically fix these violations of the import/order rule.
+// Because moving the require statements may have unintended side effects, we disable the rule for these statements
+// until we are able to investigate whether any behavior is changed by order, at which point we can apply the reordering manually.
 /* eslint-disable import/order */
 var apiJavascript = require('./gamelab/apiJavascript');
 var consoleApi = require('@cdo/apps/consoleApi');

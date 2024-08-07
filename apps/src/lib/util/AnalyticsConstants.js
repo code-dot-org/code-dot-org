@@ -175,6 +175,15 @@ const EVENTS = {
   SUMMARY_PAGE_NEXT_LEVEL_CLICKED: 'Summary Page Next Level Clicked',
   SUMMARY_PAGE_BACK_TO_LEVEL_CLICKED: 'Summary Page Back To Level Clicked',
 
+  // Check for understanding
+  CFU_NAMES_TOGGLED_ON: 'Summary Page Names Toggled On',
+  CFU_NAMES_TOGGLED_OFF: 'Summary Page Names Toggled Off',
+  CFU_RESPONSE_HIDDEN: 'Summary Page Response Hidden',
+  CFU_RESPONSE_PINNED: 'Summary Page Response Pinned',
+  CFU_RESPONSE_UNPINNED: 'Summary Page Response Unpinned',
+  CFU_RESPONSE_ALL_UNHID: 'Summary Page Response Hidden Responses Unhidden',
+  CFU_RESPONSE_ALL_UNPINNED: 'Summary Page Response All Unpinned',
+
   // Maker setup
   MAKER_SETUP_PAGE_BOARD_TYPE_EVENT: 'Board Type On Maker Setup Page',
   MAKER_SETUP_PAGE_MB_VERSION_EVENT: 'Microbit Version',
@@ -278,7 +287,7 @@ const EVENTS = {
   // PL Landing Page
   MY_PL_PAGE_VISITED: 'My Professional Learning Page Visited',
 
-  // Header navigation
+  // Header navigation - signed out
   SIGNED_OUT_USER_SEES_HEADER: 'Signed Out Navigation Header Shown',
   SIGNED_OUT_USER_CLICKS_HEADER_LINK: 'Signed Out User Clicks Header Link',
   SIGNED_OUT_USER_CLICKS_HAMBURGER_LINK:
@@ -287,11 +296,29 @@ const EVENTS = {
   SIGNED_OUT_USER_CLICKS_HELP_MENU: 'Signed Out User Clicks Help Menu',
   CREATE_ACCOUNT_BUTTON_CLICKED: 'Create Account Button Clicked',
 
-  // Header Create menu
+  // Header Create menu - signed out
   SIGNED_OUT_USER_CLICKS_CREATE_DROPDOWN:
     'Signed Out User Clicks Create Dropdown',
   SIGNED_OUT_USER_SELECTS_CREATE_DROPDOWN_OPTION:
     'Signed Out User Selects Create Dropdown Option',
+
+  // Header navigation - signed in
+  SIGNED_IN_USER_CLICKS_HEADER_LINK: 'Signed In User Clicks Header Link',
+  SIGNED_IN_USER_CLICKS_HAMBURGER_LINK: 'Signed In User Clicks Hamburger Link',
+  SIGNED_IN_USER_CLICKS_HAMBURGER_OPTION:
+    'Signed In User Clicks Hamburger Dropdown Option',
+  SIGNED_IN_USER_CLICKS_HELP_MENU: 'Signed In User Clicks Help Menu',
+  SIGNED_IN_USER_CLICKS_HELP_MENU_OPTION:
+    'Signed In User Clicks Help Menu Option',
+  SIGNED_IN_USER_CLICKS_USER_MENU: 'Signed In User Clicks User Menu',
+  SIGNED_IN_USER_CLICKS_USER_MENU_OPTION:
+    'Signed In User Clicks User Menu Option',
+
+  // Header Create menu - signed in
+  SIGNED_IN_USER_CLICKS_CREATE_DROPDOWN:
+    'Signed In User Clicks Create Dropdown',
+  SIGNED_IN_USER_SELECTS_CREATE_DROPDOWN_OPTION:
+    'Signed In User Selects Create Dropdown Option',
 
   // Projects
   RUN_BUTTON_PRESSED_SIGNED_OUT:

@@ -17,9 +17,11 @@
     "skip_dialog": true,
     "skip_sound": true,
     "display_name": "Dataset #1",
-    "bubble_choice_description": "How messy was Micah's room over an 8-week period?"
+    "bubble_choice_description": "How messy was Micah's room over an 8-week period?",
+    "thumbnail_url": "https://images.code.org/65ee26dc76978ebe1fab3dcc0fcab1e1-number-1.png",
+    "teacher_markdown": "\r\n![](https://images.code.org/a64257507ee63217f58344b42ad1154d-image-1721762597044.png)"
   },
-  "audit_log": "[{\"changed_at\":\"2024-07-18 17:58:22 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-07-18 17:58:22 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-23 17:16:54 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-23 19:23:38 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-07-23 19:23:54 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
