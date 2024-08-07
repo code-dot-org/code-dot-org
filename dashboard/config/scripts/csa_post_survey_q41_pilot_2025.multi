@@ -1,0 +1,9 @@
+name 'CSA Post-Survey q41_pilot-2025'
+question 'Asked me to problem solve and debug when something didn\'t work the way I wanted it to work.'
+
+right 'Never'
+right 'A few classes'
+right 'About half the class sessions'
+right 'Many class sessions'
+right 'Once or more per class session'
+allow_multiple_attempts true

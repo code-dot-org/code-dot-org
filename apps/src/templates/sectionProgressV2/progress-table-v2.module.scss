@@ -66,6 +66,8 @@ $level-cell-width: 52;
   display: flex;
   flex-direction: row;
   width: fit-content;
+  // Needed to account for the `margin: -1px` on the lesson column
+  padding-right: 1px;
 }
 
 .gridBox {

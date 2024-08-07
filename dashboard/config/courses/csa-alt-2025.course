@@ -17,7 +17,66 @@
     "version_year": "2025"
   },
   "resources": [
-
+    {
+      "name": "Code Reviews for Teachers",
+      "url": "https://docs.google.com/document/d/12NKMurFZbuo_QEhFBm-kjN-whkhGyMO8FVwmlMeDNUQ/edit?usp=sharing",
+      "key": "code_reviews_for_teachers",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "code_reviews_for_teachers"
+      }
+    },
+    {
+      "name": "Culturally Responsive Pedagogy and Equity",
+      "url": "https://docs.google.com/document/d/1n2bPN--Cd9dz8P0yOZBUJ3DGY_BQHEMALFXUITJZWN0/edit?usp=sharing",
+      "key": "culturally_responsive_pedagogy_and_equity",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "culturally_responsive_pedagogy_and_equity"
+      }
+    },
+    {
+      "name": "Curriculum Videos",
+      "url": "https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing",
+      "key": "curriculum_videos",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "curriculum_videos"
+      }
+    },
+    {
+      "name": "Java Lab Documentation",
+      "url": "https://studio.code.org/docs/ide/javalab/",
+      "key": "java_lab_documentation",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "java_lab_documentation"
+      }
+    },
+    {
+      "name": "Level Validation in Java Lab",
+      "url": "https://docs.google.com/document/d/1vNeia7dKCpKLT7vC13Gnpzwf6u_WbA8URkEme8jP1Q0/edit?usp=sharing",
+      "key": "level_validation_in_java_lab",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "level_validation_in_java_lab"
+      }
+    },
+    {
+      "name": "Level Validation in Java Lab",
+      "url": "https://docs.google.com/document/d/1vNeia7dKCpKLT7vC13Gnpzwf6u_WbA8URkEme8jP1Q0/edit?usp=sharing",
+      "key": "level_validation_in_java_lab_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "level_validation_in_java_lab_1"
+      }
+    }
   ],
   "student_resources": [
 

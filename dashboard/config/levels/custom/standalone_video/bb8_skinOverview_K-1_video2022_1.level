@@ -1,0 +1,21 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2024-08-02T16:35:27.000Z",
+  "level_num": "custom",
+  "user_id": 772,
+  "properties": {
+    "video_key": "CSF_bb8_skinOverview_K-1",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 20983,
+    "name_suffix": "_1"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-08-02T16:35:27.833+00:00\",\"changed\":[\"cloned from \\\"bb8_skinOverview_K-1_video2022_2024\\\"\"],\"cloned_from\":\"bb8_skinOverview_K-1_video2022_2024\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

@@ -98,7 +98,7 @@
     .header_button.header_user#header_user_create_account
       %span= I18n.t("#{loc_prefix}create_account_low_cap")
 
-= render inline: File.read(shared_dir('haml/user_header_event_logger.haml')), type: :haml, locals: {is_signed_out: user_type.nil?, create_menu_options: create_drop_down_items&.map{|entry| entry[:title]}&.append("view_all")}
+= render inline: File.read(shared_dir('haml/user_header_event_logger.haml')), type: :haml, locals: {is_signed_out: user_type.nil?, user_type: user_type, page_controller_name: params[:controller], page_action_name: params[:action], create_menu_options: create_drop_down_items&.map{|entry| entry[:title]}&.append("view_all")}
 
 :javascript
   window.cookieEnvSuffix = '#{rack_env?(:production) ? '' : "_#{rack_env}"}';
