@@ -8,10 +8,6 @@ require 'cdo/slack'
 # This class is intended to be a thin wrapper around our chat client
 # implementation (namely Slack as of February 2017).
 class ChatClient
-  USER_GROUP_ID_MAP = {
-    'teacher-tools-on-call': 'S07FB3XSAR5'
-  }.freeze
-
   @@name = CDO.name[0..14]
   @@logger = nil
 
@@ -30,7 +26,7 @@ class ChatClient
   #   color (optional): The color the message should be posted.
   # @return [Boolean] Whether the message was posted successfully.
   def self.message(room, message, options = {})
-    message = "<!subteam^#{USER_GROUP_ID_MAP[options[:notify_group].to_sym]}> #{message}" if options[:notify_group]
+    message = Slack.tag_user_group(message, options[:notify_group]) if options[:notify_group]
 
     unless @@logger
       FileUtils.mkdir_p(deploy_dir('log'))
