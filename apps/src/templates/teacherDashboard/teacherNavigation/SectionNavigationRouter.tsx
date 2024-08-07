@@ -16,16 +16,12 @@ import {TeacherDashboardPath} from '../TeacherDashboardNavigation';
 
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
-interface CourseWithProgress {
-  // TODO : fill in
-}
-
 interface SectionNavigationRouterProps {
   studioUrlPrefix: string;
   sectionId: number;
   sectionName: string;
   studentCount: number;
-  coursesWithProgress: Array<CourseWithProgress>;
+  anyStudentHasProgress: boolean;
   showAITutorTab: boolean;
   sectionProviderName: string;
 }
@@ -44,7 +40,7 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
   sectionId,
   sectionName,
   studentCount,
-  coursesWithProgress,
+  anyStudentHasProgress,
   showAITutorTab,
   sectionProviderName,
 }) => {
@@ -100,7 +96,7 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
             path={getPath(TeacherDashboardPath.stats)}
             element={applyV1TeacherDashboardWidth(<StatsTableWithData />)}
           />
-          {coursesWithProgress.length === 0 && (
+          {!anyStudentHasProgress && (
             <Route
               element={
                 <EmptySection
