@@ -1,0 +1,34 @@
+name: Check for manual deployment requirements
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  add-comment:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check for modified DMS tasks file
+      id: check_files
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const prFiles = await github.rest.pulls.listFiles({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            pull_number: context.issue.number
+          });
+
+          console.log(prFiles.data);
+          console.log("found", prFiles.data.some(file => file.filename == 'aws/dms/tasks.yml'));
+          const dmsTasksModified = prFiles.data.some(file => file.filename == 'aws/dms/tasks.yml');
+
+          if (dmsTasksModified) {
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: "This PR modifies the `aws/dms/tasks.yml` file. These changes must be deployed manually by the Infra team before merging."
+            })
+          }
