@@ -19,9 +19,9 @@ import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAs
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import sectionStandardsProgress from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 import progressV2Feedback from '@cdo/apps/templates/sectionProgressV2/progressV2FeedbackRedux';
-import SectionNavigationRouter from '@cdo/apps/templates/teacherDashboard/sectionNavigation/SectionNavigationRouter';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
+import SectionNavigationRouter from '@cdo/apps/templates/teacherDashboard/teacherNavigation/SectionNavigationRouter';
 import teacherSections, {
   setSections,
   selectSection,
