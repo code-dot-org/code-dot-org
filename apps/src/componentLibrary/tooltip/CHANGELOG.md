@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.2.2] ()
+## [0.2.2] (https://github.com/code-dot-org/code-dot-org/pull/60245)
 
 * updated `Tooltip` background color to be $light_gray_950;
 
