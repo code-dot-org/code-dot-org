@@ -28,7 +28,6 @@ import {
   FieldVisibilities,
   LevelAichatSettings,
   ModelCardInfo,
-  ModelUpdate,
   SaveType,
   ViewMode,
   Visibility,
@@ -367,19 +366,13 @@ export const submitChatContents = createAsyncThunk(
         .logError('Error in aichat completion request', error as Error);
 
       thunkAPI.dispatch(clearChatMessagePending());
-      thunkAPI.dispatch(
-        addChatEvent({...newUserMessage, status: Status.ERROR} as ChatEvent)
-      );
-
-      thunkAPI.dispatch(
-        addChatEvent({
-          role: Role.ASSISTANT,
-          status: Status.ERROR,
-          chatMessageText: 'error',
-          timestamp: Date.now(),
-        } as ChatEvent)
-      );
-
+      addChatEvent({...newUserMessage, status: Status.ERROR});
+      addChatEvent({
+        role: Role.ASSISTANT,
+        status: Status.ERROR,
+        chatMessageText: 'error',
+        timestamp: Date.now(),
+      });
       return;
     }
 
@@ -404,7 +397,7 @@ export const submitChatContents = createAsyncThunk(
 
     thunkAPI.dispatch(clearChatMessagePending());
     chatApiResponse.messages.forEach(message => {
-      thunkAPI.dispatch(addChatEvent({...message, timestamp: Date.now()}));
+      addChatEvent({...message, timestamp: Date.now()});
     });
   }
 );
@@ -412,14 +405,14 @@ export const submitChatContents = createAsyncThunk(
 // This thunk adds a chat event to chatEventsCurrent (displayed in current chat workspace)
 // if hideForParticipants != true and then logs the event to the backend for all chat events
 // except notifications with includeInHistory != true.
-export const addChatEvent = createAsyncThunk(
-  'aichat/addChatEvent',
-  async (chatEvent: ChatEvent, thunkAPI) => {
+export const addChatEvent =
+  <T extends ChatEvent>(chatEvent: T) =>
+  (dispatch: AppDispatch, getState: () => RootState) => {
     if (!chatEvent.hideForParticipants) {
-      thunkAPI.dispatch(addEventToChatEventsCurrent(chatEvent));
+      dispatch(addEventToChatEventsCurrent(chatEvent));
     }
     // Log chat event to backend.
-    const state = thunkAPI.getState() as RootState;
+    const state = getState() as RootState;
     const aichatContext: AichatContext = {
       currentLevelId: parseInt(state.progress.currentLevelId || ''),
       scriptId: state.progress.scriptId,
@@ -443,12 +436,11 @@ export const addChatEvent = createAsyncThunk(
         chatEvent = {
           ...chatEvent,
           updatedValue: updatedValueToLog,
-        } as ModelUpdate;
+        };
       }
       ChatEventLogger.getInstance().logChatEvent(chatEvent, aichatContext);
     }
-  }
-);
+  };
 
 const aichatSlice = createSlice({
   name: 'aichat',
