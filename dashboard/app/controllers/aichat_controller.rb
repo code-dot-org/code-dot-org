@@ -63,6 +63,16 @@ class AichatController < ApplicationController
     render(status: :ok, json: response_body)
   end
 
+  # params are studentUserId: number, currentLevelId: number, scriptId: number
+  # POST /aichat/log_chat_event
+  def student_chat_history
+    # Request all chat events for a student at a given level/script.
+    # Note that the permission check for a teacher viewing a student's project is done in
+    # projects_controller's `get_or_create_for_level`.
+    chat_events = AichatEvent.where(user_id: params[:studentUserId], level_id: params[:currentLevelId], script_id: params[:scriptId])
+    render json: chat_events
+  end
+
   private def get_response_body
     # Check for profanity
     locale = params[:locale] || "en"
