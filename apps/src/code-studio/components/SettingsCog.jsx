@@ -11,8 +11,8 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import msg from '@cdo/locale';
 
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
-import ConfirmEnableMakerDialog from '../../lib/ui/ConfirmEnableMakerDialog';
 import * as makerToolkitRedux from '../../maker/redux';
+import ConfirmEnableMakerDialog from '../../maker/ui/ConfirmEnableMakerDialog';
 import {getStore} from '../../redux';
 import * as assets from '../assets';
 import project from '../initApp/project';
