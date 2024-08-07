@@ -4,11 +4,12 @@ import React, {useState} from 'react';
 import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
+import {SCHOOL_NAME_SESSION_KEY} from '../signUpFlow/signUpFlowConstants';
+
 import style from './school-association.module.scss';
 
-const SCHOOL_NAME = 'schoolName';
 export default function SchoolNameInput({fieldNames}) {
-  const detectedName = sessionStorage.getItem(SCHOOL_NAME) || '';
+  const detectedName = sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY) || '';
   const [schoolName, setSchoolName] = useState(detectedName);
 
   return (
@@ -21,7 +22,7 @@ export default function SchoolNameInput({fieldNames}) {
         name={fieldNames.schoolName}
         onChange={e => {
           setSchoolName(e.target.value);
-          sessionStorage.setItem(SCHOOL_NAME, e.target.value);
+          sessionStorage.setItem(SCHOOL_NAME_SESSION_KEY, e.target.value);
         }}
         value={schoolName}
       />

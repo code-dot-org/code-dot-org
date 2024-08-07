@@ -11,10 +11,12 @@ import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 
 import Checkbox from '../componentLibrary/checkbox/Checkbox';
 
-import style from './finish-teacher-account.module.scss';
+import {
+  USER_NAME_SESSION_KEY,
+  EMAIL_OPT_IN_SESSION_KEY,
+} from './signUpFlowConstants';
 
-const USER_NAME_SESSION_KEY = 'userName';
-const EMAIL_OPT_IN_SESSION_KEY = 'emailOptIn';
+import style from './finish-teacher-account.module.scss';
 
 const FinishTeacherAccount: React.FunctionComponent<{
   usIp: boolean;

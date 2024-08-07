@@ -13,6 +13,11 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
 import i18n from '@cdo/locale';
 
+import {
+  SCHOOL_ID_SESSION_KEY,
+  SCHOOL_ZIP_SESSION_KEY,
+} from '../signUpFlow/signUpFlowConstants';
+
 import style from './school-association.module.scss';
 
 export const SELECT_A_SCHOOL = 'selectASchool';
@@ -23,15 +28,13 @@ const SEARCH_DEFAULTS = [
   {value: NO_SCHOOL_SETTING, text: i18n.noSchoolSetting()},
 ];
 const ZIP_REGEX = new RegExp(/(^\d{5}$)/);
-const SCHOOL_ZIP = 'schoolZip';
-const SCHOOL_ID = 'schoolId';
 
 // Controls the logic and components surrounding a zip input box and its error
 // messaging, the api school search filtered on zip, and the school dropdown
 // that search populates.
 export default function SchoolZipSearch({fieldNames}) {
-  const detectedSchoolId = sessionStorage.getItem(SCHOOL_ID);
-  const detectedZip = sessionStorage.getItem(SCHOOL_ZIP);
+  const detectedSchoolId = sessionStorage.getItem(SCHOOL_ID_SESSION_KEY);
+  const detectedZip = sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY);
   const [selectedSchoolNcesId, setSelectedSchoolNcesId] = useState(
     detectedSchoolId || SELECT_A_SCHOOL
   );
@@ -49,11 +52,11 @@ export default function SchoolZipSearch({fieldNames}) {
   useEffect(() => {
     const isValidZip = ZIP_REGEX.test(zip);
     if (isValidZip) {
-      if (zip !== sessionStorage.getItem(SCHOOL_ZIP)) {
+      if (zip !== sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY)) {
         // Clear out school from dropdown if zip has changed
         setSelectedSchoolNcesId(SELECT_A_SCHOOL);
       }
-      sessionStorage.setItem(SCHOOL_ZIP, zip);
+      sessionStorage.setItem(SCHOOL_ZIP_SESSION_KEY, zip);
       const searchUrl = `/dashboardapi/v1/schoolzipsearch/${zip}`;
       fetch(searchUrl, {headers: {'X-Requested-With': 'XMLHttpRequest'}})
         .then(response => (response.ok ? response.json() : []))
@@ -79,7 +82,7 @@ export default function SchoolZipSearch({fieldNames}) {
   }, [zip]);
 
   useEffect(() => {
-    sessionStorage.setItem(SCHOOL_ID, selectedSchoolNcesId);
+    sessionStorage.setItem(SCHOOL_ID_SESSION_KEY, selectedSchoolNcesId);
   }, [selectedSchoolNcesId]);
 
   const sendAnalyticsEvent = (eventName, data) => {
