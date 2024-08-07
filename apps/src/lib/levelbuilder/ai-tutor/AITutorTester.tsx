@@ -1,16 +1,16 @@
 import Papa from 'papaparse';
 import React, {useEffect, useState} from 'react';
 
+import {postAichatCheckSafety} from '@cdo/apps/aichat/aichatCompletionApi';
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import {formatQuestionForAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {ChatContext} from '@cdo/apps/aiTutor/types';
 import Button from '@cdo/apps/componentLibrary/button/Button';
+import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 
 import AITutorTesterSampleColumns from './AITutorTesterSampleColumns';
 
 import styles from './ai-tutor-tester.module.scss';
-import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import {postAichatCheckSafety} from '@cdo/apps/aichat/aichatCompletionApi';
 
 /**
  * Renders a series of buttons that allow levelbuilders to upload a CSV of
@@ -70,11 +70,14 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
   };
 
   const getLLMGuardToxicity = async (row: AIInteraction) => {
-    // likely leverage https://github.com/code-dot-org/code-dot-org/pull/60221 ?
-
     const llmGuardResponse = await postAichatCheckSafety(row.studentInput);
-
-    console.log('llmGuardResponse', llmGuardResponse);
+    if (llmGuardResponse.result.statusCode === 200) {
+      row.aiResponse = 'ok';
+    } else if (llmGuardResponse.result.statusCode === 422) {
+      row.aiResponse = 'toxic';
+    } else {
+      row.aiResponse = 'error';
+    }
     setResponseCount(prevResponseCount => prevResponseCount + 1);
   };
 
@@ -169,7 +172,7 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
 
         <div className={styles.buttonSpacing}>
           <Button
-            text="Get AI Tutor Responses"
+            text="Get Responses"
             onClick={getAIResponses}
             disabled={!dataUploaded || !allowed}
             isPending={responsesPending}
@@ -181,7 +184,7 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
 
         <div>
           <Button
-            text=" Download CSV"
+            text="Download CSV"
             onClick={downloadCSV}
             disabled={!aiResponded || !allowed}
           />

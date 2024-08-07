@@ -13,7 +13,7 @@ module AichatSafetyHelper
       input_text: message
     }
 
-    HTTParty.get(
+    HTTParty.post(
       LLMGUARD_URL,
       headers: headers,
       body: data.to_json,

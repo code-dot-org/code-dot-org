@@ -64,10 +64,8 @@ class AichatController < ApplicationController
   end
 
   def check_message_safety
-    string_to_check = params[:newMessage]
+    string_to_check = params[:message]
     response_body = AichatSafetyHelper.get_llmguard_response(string_to_check)
-    puts
-    puts "Response from LLMGuard: #{response_body}"
     render(status: :ok, json: response_body)
   end
 

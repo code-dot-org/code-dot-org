@@ -48,9 +48,18 @@ export async function postAichatCompletionMessage(
   return await response.json();
 }
 
+interface LLMGuardResponseResult {
+  body: string;
+  statusCode: number;
+}
+
+interface LLMGuardResponse {
+  result: LLMGuardResponseResult;
+}
+
 export async function postAichatCheckSafety(
   message: string
-): Promise<ChatApiResponse> {
+): Promise<LLMGuardResponse> {
   const payload = {
     message,
   };
