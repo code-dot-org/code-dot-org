@@ -21,8 +21,8 @@ jobs:
           });
 
           console.log(prFiles.data);
-          
-          const fileModified = prFiles.data.some(file => file.filename === 'aws/dms/tasks.yml');
+          console.log("found", prFiles.data.some(file => file.filename == 'aws/dms/tasks.yml'));
+          const fileModified = prFiles.data.some(file => file.filename == 'aws/dms/tasks.yml');
           return { file_modified: fileModified };
 
     - name: Add comment to PR
