@@ -9,8 +9,7 @@
     "instructions_important": "false",
     "display_name": "Video: Share Your App",
     "skip_dialog": true,
-    "skip_sound": true,
-    "name_suffix": "_mb_2024"
+    "skip_sound": true
   },
   "published": true,
   "notes": "",

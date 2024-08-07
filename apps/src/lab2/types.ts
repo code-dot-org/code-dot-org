@@ -7,8 +7,15 @@
 // live elsewhere.
 // The library data should definitely live elsewhere.
 
+import {ComponentType, LazyExoticComponent} from 'react';
+
 import {BlockDefinition} from '@cdo/apps/blockly/types';
 import {LevelPredictSettings} from '@cdo/apps/lab2/levelEditors/types';
+import {Theme} from '@cdo/apps/lab2/views/ThemeWrapper';
+
+import {lab2EntryPoints} from '../../lab2EntryPoints';
+
+export {Theme};
 
 /// ------ PROJECTS ------ ///
 
@@ -99,6 +106,7 @@ export type FolderId = string;
 export interface MultiFileSource {
   folders: Record<FolderId, ProjectFolder>;
   files: Record<FileId, ProjectFile>;
+  openFiles?: FileId[];
 }
 
 export interface ProjectFile {
@@ -177,6 +185,58 @@ export interface VideoLevelData {
   download: string;
 }
 
+export enum OptionsToAvoid {
+  /**
+   * @deprecated: using this option will result in hardcoding this lab into the
+   * downloaded bundle for ALL other lab2 labs, slowing down their loading and
+   * consuming excessive school internet bandwidth.
+   *
+   * See `pythonlab/entrypoint.tsx` for an example that doesn't use this option.
+   *
+   * Please only use this option if there's a good reason you can't lazy load
+   * your lab. With this option set, you must also specify `hardcodedEntryPoint`.
+   */
+  UseHardcodedView_WARNING_Bloats_Lab2_Bundle,
+}
+
+// Configuration for how a Lab should be rendered
+export interface Lab2EntryPoint {
+  /**
+   * Whether this lab should remain rendered in the background once mounted.
+   * If true, the lab will always be present in the tree, but will be hidden
+   * via visibility: hidden when not active. If false, the lab will only
+   * be rendered in the tree when active.
+   */
+  backgroundMode: boolean;
+  /**
+   * A lazy loaded view for the lab. This should be a lazy-loaded react
+   * component using a dynamic import. See `pythonlab/entrypoint.tsx` for an
+   * example.
+   */
+  view: LazyExoticComponent<ComponentType> | OptionsToAvoid;
+  /**
+   * Using this option will result in hardcoding this lab into the downloaded
+   * bundle for ALL other lab2 labs, slowing down their loading and consuming
+   * excessive school internet bandwidth. Please use `view` instead,
+   * which lazy loads you lab on demand, unless you have a really good reason
+   * you can't lazy load.
+   *
+   * See `pythonlab/entrypoint.tsx` for an example that doesn't use this option.
+   */
+  hardcodedView?: ComponentType;
+  /**
+   * Display theme for this lab. This will likely be configured by user
+   * preferences eventually, but for now this is fixed for each lab. Defaults
+   * to the default theme if not specified.
+   */
+  theme?: Theme;
+  /**
+   * Optional function to run when the lab is first mounted. This is useful
+   * for any one-time setup actions such as setting up Blockly.
+   */
+  setupFunction?: () => void;
+}
+
 export type LevelData = ProjectLevelData | VideoLevelData;
 
 export type ProjectType =
@@ -201,28 +261,7 @@ export type ProjectType =
   | 'sports'
   | 'basketball';
 
-export type AppName =
-  | 'aichat'
-  | 'applab'
-  | 'calc'
-  | 'dance'
-  | 'eval'
-  | 'flappy'
-  | 'gamelab'
-  | 'javalab'
-  | 'music'
-  | 'thebadguys'
-  | 'weblab'
-  | 'turtle'
-  | 'craft'
-  | 'studio'
-  | 'bounce'
-  | 'poetry'
-  | 'pythonlab'
-  | 'spritelab'
-  | 'standalone_video'
-  | 'panels'
-  | 'weblab2';
+export type AppName = keyof typeof lab2EntryPoints;
 
 export type StandaloneAppName =
   | 'spritelab'
@@ -282,4 +321,10 @@ export interface ExtraLinksProjectData {
     remix_ancestry: string[];
   };
   meesage?: string;
+}
+
+export interface ProjectVersion {
+  versionId: string;
+  lastModified: string;
+  isLatest: boolean;
 }

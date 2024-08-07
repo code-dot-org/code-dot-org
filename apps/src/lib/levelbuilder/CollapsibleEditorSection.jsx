@@ -1,8 +1,10 @@
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+
 import style from './levelbuilder.module.scss';
-import classnames from 'classnames';
 
 export default function CollapsibleEditorSection(props) {
   const [collapsed, setCollapsed] = useState(props.collapsed || false);

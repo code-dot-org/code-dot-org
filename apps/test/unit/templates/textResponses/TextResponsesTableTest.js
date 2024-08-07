@@ -3,7 +3,7 @@ import React from 'react';
 
 import TextResponsesTable from '@cdo/apps/templates/textResponses/TextResponsesTable';
 
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const responses = [
   {

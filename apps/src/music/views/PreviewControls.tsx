@@ -1,6 +1,8 @@
-import React, {useCallback} from 'react';
 import classNames from 'classnames';
+import React, {useCallback} from 'react';
+
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+
 import moduleStyles from './preview-controls.module.scss';
 
 /**

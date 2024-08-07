@@ -57,7 +57,6 @@
     "long_instructions": "<img src=\"https://images.code.org/2896ac58f26810e3a5f3b52917dc5eb4-image-1634318916183.png\" style=\"float:right; width: 100px; margin: 20px\" />\r\n\r\n# Virtual Monster Pet\r\n\r\nEva is trying to make an app that simulates a virtual monster pet. The app lets you control the monster in the following way:\r\n\r\n- When you press the Happy button, the pet should make a happy face with the `ledScreen`\r\n- When you press the Sad button, the pet should make a sad face with the `ledScreen`\r\n- When you press the Name button, the name of the pet should scroll across the screen (you can decide the name!)\r\n- When you press the Age button, the age of the pet should scroll across the screen (you can decide the age!)\r\n\r\nThe Happy button has already been coded - we need to add the code for the other three buttons!\r\n\r\n# Do This\r\n \r\n1. Add code to the Sad button so it shows a sad face\r\n2. Add code to the Name button so it scrolls its name across the screen\r\n3. Add code to the Age button so it scrolls its age across the screen",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20400,
-    "name_suffix": "_mb_2024",
     "reference_links": [
       "/courses/csd-2022/guides/microbit-overview",
       "/courses/csd-2022/guides/microbit-display",

@@ -1,10 +1,10 @@
 {
   "name": "elementaryai-2024",
   "script_names": [
-    "k5gettingstarted",
+    "getting-started-with-code",
     "k5howaimakesdecisions"
   ],
-  "published_state": "in_development",
+  "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",

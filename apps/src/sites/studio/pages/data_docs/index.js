@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import getScriptData from '@cdo/apps/util/getScriptData';
+
 import DataDocIndex from '@cdo/apps/templates/dataDocs/DataDocIndex';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(() => {
   const dataDocs = getScriptData('dataDocs');

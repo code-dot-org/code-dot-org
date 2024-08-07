@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import onClickOutside from 'react-onclickoutside';
+
 import color from '@cdo/apps/util/color';
+
 import {lessonEditorTableStyles} from './TableConstants';
 
 const styles = {

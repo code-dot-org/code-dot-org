@@ -3,7 +3,6 @@ import $ from 'jquery';
 import _ from 'lodash';
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
 
 import DCDO from '@cdo/apps/dcdo';
 import {
@@ -24,8 +23,6 @@ import progressV2Feedback from '@cdo/apps/templates/sectionProgressV2/progressV2
 import SectionProgressSelector from '@cdo/apps/templates/sectionProgressV2/SectionProgressSelector.jsx';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 const V1_PAGE_LINK_TEXT = 'Try out new progress view (beta)';
 const V2_PAGE_LINK_TEXT = 'Switch to old progress view';
@@ -59,17 +56,20 @@ describe('SectionProgressSelector', () => {
     DCDO.set('progress-table-v2-default-v2', false);
     DCDO.set('progress-table-v2-closed-beta-enabled', false);
 
-    postStub = sinon.stub($, 'post');
-    postStub.returns(Promise.resolve());
+    postStub = jest.spyOn($, 'post').mockClear().mockImplementation();
+    postStub.mockReturnValue(Promise.resolve());
 
-    sinon.stub(_, 'debounce').callsFake(fn => fn);
+    jest
+      .spyOn(_, 'debounce')
+      .mockClear()
+      .mockImplementation(fn => fn);
   });
 
   afterEach(() => {
     restoreRedux();
 
-    postStub.restore();
-    sinon.restore();
+    postStub.mockRestore();
+    jest.restoreAllMocks();
   });
 
   function renderDefault(propOverrides = {}) {
@@ -85,8 +85,8 @@ describe('SectionProgressSelector', () => {
     renderDefault();
     store.dispatch(setShowProgressTableV2(true));
 
-    expect(screen.queryByText(V1_PAGE_LINK_TEXT)).to.not.exist;
-    expect(screen.queryByText(V2_PAGE_LINK_TEXT)).to.not.exist;
+    expect(screen.queryByText(V1_PAGE_LINK_TEXT)).toBeFalsy();
+    expect(screen.queryByText(V2_PAGE_LINK_TEXT)).toBeFalsy();
   });
 
   it('shows v1 if disabled', () => {
@@ -96,7 +96,7 @@ describe('SectionProgressSelector', () => {
 
     screen.getByTestId(V1_TEST_ID);
 
-    expect(screen.queryByTestId(V2_TEST_ID)).to.not.exist;
+    expect(screen.queryByTestId(V2_TEST_ID)).toBeFalsy();
   });
 
   it('shows v1', () => {
@@ -105,8 +105,8 @@ describe('SectionProgressSelector', () => {
     screen.getByText(V1_PAGE_LINK_TEXT);
     screen.getByTestId(V1_TEST_ID);
 
-    expect(screen.queryByText(V2_PAGE_LINK_TEXT)).to.not.exist;
-    expect(screen.queryByTestId(V2_TEST_ID)).to.not.exist;
+    expect(screen.queryByText(V2_PAGE_LINK_TEXT)).toBeFalsy();
+    expect(screen.queryByTestId(V2_TEST_ID)).toBeFalsy();
   });
 
   it('shows v2', () => {
@@ -116,8 +116,8 @@ describe('SectionProgressSelector', () => {
     screen.getByText(V2_PAGE_LINK_TEXT);
     screen.getByTestId(V2_TEST_ID);
 
-    expect(screen.queryByText(V1_PAGE_LINK_TEXT)).to.not.exist;
-    expect(screen.queryByTestId(V1_TEST_ID)).to.not.exist;
+    expect(screen.queryByText(V1_PAGE_LINK_TEXT)).toBeFalsy();
+    expect(screen.queryByTestId(V1_TEST_ID)).toBeFalsy();
   });
 
   it('shows default v1 if no user preference', () => {
@@ -127,8 +127,8 @@ describe('SectionProgressSelector', () => {
     screen.getByText(V1_PAGE_LINK_TEXT);
     screen.getByTestId(V1_TEST_ID);
 
-    expect(screen.queryByText(V2_PAGE_LINK_TEXT)).to.not.exist;
-    expect(screen.queryByTestId(V2_TEST_ID)).to.not.exist;
+    expect(screen.queryByText(V2_PAGE_LINK_TEXT)).toBeFalsy();
+    expect(screen.queryByTestId(V2_TEST_ID)).toBeFalsy();
   });
 
   it('shows default v2 if no user preference', () => {
@@ -139,8 +139,8 @@ describe('SectionProgressSelector', () => {
     screen.getByText(V2_PAGE_LINK_TEXT);
     screen.getByTestId(V2_TEST_ID);
 
-    expect(screen.queryByText(V1_PAGE_LINK_TEXT)).to.not.exist;
-    expect(screen.queryByTestId(V1_TEST_ID)).to.not.exist;
+    expect(screen.queryByText(V1_PAGE_LINK_TEXT)).toBeFalsy();
+    expect(screen.queryByTestId(V1_TEST_ID)).toBeFalsy();
   });
 
   it('sets user preference when link clicked', () => {
@@ -149,7 +149,7 @@ describe('SectionProgressSelector', () => {
     const link = screen.getByText(V1_PAGE_LINK_TEXT);
     fireEvent.click(link);
 
-    expect(postStub).to.have.been.calledWith(
+    expect(postStub).toHaveBeenCalledWith(
       '/api/v1/users/show_progress_table_v2',
       {
         show_progress_table_v2: true,
@@ -162,11 +162,11 @@ describe('SectionProgressSelector', () => {
     DCDO.set('progress-table-v2-closed-beta-enabled', true);
     renderDefault();
 
-    expect(screen.queryByText(V1_PAGE_LINK_TEXT)).to.not.exist;
-    expect(screen.queryByText(V2_PAGE_LINK_TEXT)).to.not.exist;
+    expect(screen.queryByText(V1_PAGE_LINK_TEXT)).toBeFalsy();
+    expect(screen.queryByText(V2_PAGE_LINK_TEXT)).toBeFalsy();
 
     screen.getByTestId(V1_TEST_ID);
-    expect(screen.queryByTestId(V2_TEST_ID)).to.not.exist;
+    expect(screen.queryByTestId(V2_TEST_ID)).toBeFalsy();
   });
 
   it('shows toggle if user is in closed beta', () => {
@@ -178,7 +178,7 @@ describe('SectionProgressSelector', () => {
     screen.getByText(V1_PAGE_LINK_TEXT);
 
     screen.getByTestId(V1_TEST_ID);
-    expect(screen.queryByTestId(V2_TEST_ID)).to.not.exist;
+    expect(screen.queryByTestId(V2_TEST_ID)).toBeFalsy();
   });
 
   it('shows toggle if user not in closed beta, but v2 enabled', () => {
@@ -189,8 +189,8 @@ describe('SectionProgressSelector', () => {
     screen.getByText(V1_PAGE_LINK_TEXT);
     screen.getByTestId(V1_TEST_ID);
 
-    expect(screen.queryByText(V2_PAGE_LINK_TEXT)).to.not.exist;
-    expect(screen.queryByTestId(V2_TEST_ID)).to.not.exist;
+    expect(screen.queryByText(V2_PAGE_LINK_TEXT)).toBeFalsy();
+    expect(screen.queryByTestId(V2_TEST_ID)).toBeFalsy();
   });
 
   it('shows modal if modal is enabled and the user has not seen the invite before', () => {
@@ -219,8 +219,7 @@ describe('SectionProgressSelector', () => {
     screen.getByText(V1_PAGE_LINK_TEXT);
     screen.getByTestId(V1_TEST_ID);
 
-    expect(screen.queryByText(i18n.progressTrackingAnnouncement())).to.not
-      .exist;
+    expect(screen.queryByText(i18n.progressTrackingAnnouncement())).toBeFalsy();
   });
 
   it('does not show modal if the user has just switched from V1', () => {
@@ -242,7 +241,6 @@ describe('SectionProgressSelector', () => {
     screen.getByText(V1_PAGE_LINK_TEXT);
     screen.getByTestId(V1_TEST_ID);
 
-    expect(screen.queryByText(i18n.progressTrackingAnnouncement())).to.not
-      .exist;
+    expect(screen.queryByText(i18n.progressTrackingAnnouncement())).toBeFalsy();
   });
 });

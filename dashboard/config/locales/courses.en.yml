@@ -1034,21 +1034,21 @@ en:
           description_teacher: ''
           version_title: ''
         3-5gamedesign-2024:
-          title: Elementary Game Design
+          title: Preparing to Teach Elementary Game Design
           description_short: ''
-          description_student: ''
+          description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get familiar with Elementary Game Design! After completing this professional learning experience, **you'll be comfortable with basic game design concepts for elementary school students**.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get familiar with Elementary Game Design! After completing this professional learning experience, **you'll be comfortable with basic game design concepts for elementary school students**.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
           version_title: ''
         microbitmakermodule-2024:
-          title: Maker with micro:bit
+          title: Preparing to Teach Maker with micro:bit
           description_short: ''
-          description_student: ''
+          description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get familiar with Maker with micro:bit! After completing this professional learning experience, **you'll be comfortable with basic coding and maker concepts**.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get familiar with Maker with micro:bit! After completing this professional learning experience, **you'll be comfortable with basic coding and maker concepts**.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
           version_title: ''
         elementaryai-2024:
-          title: How AI Makes Decisions
+          title: Preparing to Teach How AI Makes Decisions
           description_short: ''
-          description_student: ''
+          description_student: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get familiar with artificial intelligence (AI) and machine learning! After completing this professional learning experience, **you'll be comfortable with basic AI and machine learning concepts**.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
           description_teacher: "## Welcome\nWelcome to Code.org's free self-paced online learning for educators to get familiar with artificial intelligence (AI) and machine learning! After completing this professional learning experience, **you'll be comfortable with basic AI and machine learning concepts**.\n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to teaching computer science and Code.org. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip the Overview. "
           version_title: ''
         self-paced-pl-computer-vision-2024:
@@ -1089,4 +1089,43 @@ en:
           description_short: ''
           description_student: ''
           description_teacher: ''
+          version_title: "'24-'25"
+        tesselementaryai-2024:
+          title: tesselementaryai-2024
+          description_short: testing fix for getting started
+          description_student: testing fix for getting started
+          description_teacher: testing fix for getting started
+          version_title: ''
+        csa-alt-2025:
+          title: Computer Science A ('25-'26)
+          description_short: Learn Java programming and software engineering skills.
+          description_student: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          description_teacher: |-
+            **This version of the CSA curriculum follows the sequence outlined in the AP CSA CED.**
+
+            Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          version_title: "'25-'26"
+        sandbox-csf-2025:
+          title: sandbox-csf-2025
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        csa-2025:
+          title: Computer Science A ('25-'26)
+          description_short: Learn Java programming and software engineering skills.
+          description_student: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          description_teacher: |-
+            Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+
+            **Did You Know?**
+            * Professional development is available to help you get started teaching CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Click here</a> to learn more about professional learning opportunities in your region.
+
+            * You can find the *Syllabus*, *Course Vocab*, and other resources to help you implement this curriculum in the Teacher Resources menu below.
+          version_title: "'25-'26"
+        csa-pilot-2025:
+          title: Computer Science A ('24-'25 Pilot -- 2025 Framework)
+          description_short: Learn Java programming and software engineering skills.
+          description_student: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          description_teacher: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
           version_title: "'24-'25"

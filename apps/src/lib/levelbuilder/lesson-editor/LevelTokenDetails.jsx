@@ -1,10 +1,11 @@
-import React, {Component} from 'react';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import ReactTooltip from 'react-tooltip';
+
 import {setScriptLevelField} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import {scriptLevelShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import ReactTooltip from 'react-tooltip';
-import _ from 'lodash';
 
 const tooltipText = {
   bonus: 'Include in lesson extras at the end of the lesson',

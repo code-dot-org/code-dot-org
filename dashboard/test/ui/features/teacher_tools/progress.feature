@@ -3,12 +3,12 @@ Feature: Level Progress
   Scenario: Progress is saved for signed-in student
     Given I am a student
 
-    When I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1?blocklyVersion=google"
+    When I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
     Then I verify progress in the header of the current page is "perfect" for level 1
     And I verify progress in the header of the current page is "not_tried" for level 2
 
     When I am on "http://studio.code.org/s/allthethings/lessons/2/levels/2"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     Then I verify progress in the header of the current page is "perfect" for level 1
     And I verify progress in the header of the current page is "not_tried" for level 2
 
@@ -20,12 +20,12 @@ Feature: Level Progress
   Scenario: Progress is saved for signed-out student
     Given I am not signed in
 
-    When I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1?blocklyVersion=google"
+    When I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
     Then I verify progress in the header of the current page is "perfect" for level 1
     And I verify progress in the header of the current page is "not_tried" for level 2
 
     When I am on "http://studio.code.org/s/allthethings/lessons/2/levels/2"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     Then I verify progress in the header of the current page is "perfect" for level 1
     And I verify progress in the header of the current page is "not_tried" for level 2
 

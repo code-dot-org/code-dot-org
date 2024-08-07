@@ -1,15 +1,12 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import HeightResizer from '@cdo/apps/templates/instructions/HeightResizer';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 describe('HeightResizer', () => {
   it('handles a drag event', () => {
-    const resizeItemTopCallback = sinon.stub().returns(5);
-    const onResizeCallback = sinon.stub();
+    const resizeItemTopCallback = jest.fn().mockReturnValue(5);
+    const onResizeCallback = jest.fn();
     const wrapper = mount(
       <HeightResizer
         resizeItemTop={resizeItemTopCallback}
@@ -26,10 +23,10 @@ describe('HeightResizer', () => {
     });
     wrapper.instance().onMouseDown(mouseDownEvent);
 
-    expect(resizeItemTopCallback).to.have.been.calledOnce;
-    expect(onResizeCallback).not.to.have.been.called;
-    expect(mouseDownEvent.stopPropagation).to.have.been.called;
-    expect(mouseDownEvent.preventDefault).to.have.been.called;
+    expect(resizeItemTopCallback).toHaveBeenCalledTimes(1);
+    expect(onResizeCallback).not.toHaveBeenCalled();
+    expect(mouseDownEvent.stopPropagation).toHaveBeenCalled();
+    expect(mouseDownEvent.preventDefault).toHaveBeenCalled();
 
     // Simulate mouseMove
     const mouseMoveEvent = mouseEvent({
@@ -38,10 +35,10 @@ describe('HeightResizer', () => {
     });
     wrapper.instance().onMouseMove(mouseMoveEvent);
 
-    expect(resizeItemTopCallback).to.have.been.calledTwice;
-    expect(onResizeCallback).to.have.been.calledOnce.and.calledWith(10);
-    expect(mouseMoveEvent.stopPropagation).to.have.been.called;
-    expect(mouseMoveEvent.preventDefault).to.have.been.called;
+    expect(resizeItemTopCallback).toHaveBeenCalledTimes(2);
+    expect(onResizeCallback).toHaveBeenCalledWith(10);
+    expect(mouseMoveEvent.stopPropagation).toHaveBeenCalled();
+    expect(mouseMoveEvent.preventDefault).toHaveBeenCalled();
 
     // Simulate mouseUp
     const mouseUpEvent = mouseEvent({
@@ -51,10 +48,10 @@ describe('HeightResizer', () => {
     });
     wrapper.instance().onMouseUp(mouseUpEvent);
 
-    expect(resizeItemTopCallback).to.have.been.calledTwice;
-    expect(onResizeCallback).to.have.been.calledOnce;
-    expect(mouseUpEvent.stopPropagation).to.have.been.called;
-    expect(mouseUpEvent.preventDefault).to.have.been.called;
+    expect(resizeItemTopCallback).toHaveBeenCalledTimes(2);
+    expect(onResizeCallback).toHaveBeenCalledTimes(1);
+    expect(mouseUpEvent.stopPropagation).toHaveBeenCalled();
+    expect(mouseUpEvent.preventDefault).toHaveBeenCalled();
   });
 
   it('ignores secondary mouse buttons', () => {
@@ -65,7 +62,7 @@ describe('HeightResizer', () => {
         onResize={() => {}}
       />
     );
-    sinon.spy(wrapper.instance(), 'setState');
+    jest.spyOn(wrapper.instance(), 'setState').mockClear();
 
     // Simulate mouseDown with non-primary mouse button
     const mouseDownEvent = mouseEvent({
@@ -75,14 +72,14 @@ describe('HeightResizer', () => {
     });
     wrapper.instance().onMouseDown(mouseDownEvent);
 
-    expect(wrapper.instance().setState).not.to.have.been.called;
-    expect(mouseDownEvent.stopPropagation).not.to.have.been.called;
-    expect(mouseDownEvent.preventDefault).not.to.have.been.called;
+    expect(wrapper.instance().setState).not.toHaveBeenCalled();
+    expect(mouseDownEvent.stopPropagation).not.toHaveBeenCalled();
+    expect(mouseDownEvent.preventDefault).not.toHaveBeenCalled();
   });
 
   it('ignores mouseMove events if not dragging', () => {
-    const resizeItemTopCallback = sinon.stub().returns(10);
-    const onResizeCallback = sinon.stub();
+    const resizeItemTopCallback = jest.fn().mockReturnValue(10);
+    const onResizeCallback = jest.fn();
     const wrapper = mount(
       <HeightResizer
         resizeItemTop={resizeItemTopCallback}
@@ -90,7 +87,7 @@ describe('HeightResizer', () => {
         onResize={onResizeCallback}
       />
     );
-    sinon.spy(wrapper.instance(), 'setState');
+    jest.spyOn(wrapper.instance(), 'setState').mockClear();
 
     const mouseMoveEvent = mouseEvent({
       pageY: 30,
@@ -98,18 +95,18 @@ describe('HeightResizer', () => {
     });
     wrapper.instance().onMouseMove(mouseMoveEvent);
 
-    expect(resizeItemTopCallback).not.to.have.been.called;
-    expect(onResizeCallback).not.to.have.been.called;
-    expect(wrapper.instance().setState).not.to.have.been.called;
-    expect(mouseMoveEvent.stopPropagation).to.have.been.called;
-    expect(mouseMoveEvent.preventDefault).to.have.been.called;
+    expect(resizeItemTopCallback).not.toHaveBeenCalled();
+    expect(onResizeCallback).not.toHaveBeenCalled();
+    expect(wrapper.instance().setState).not.toHaveBeenCalled();
+    expect(mouseMoveEvent.stopPropagation).toHaveBeenCalled();
+    expect(mouseMoveEvent.preventDefault).toHaveBeenCalled();
   });
 });
 
 function mouseEvent(props) {
   return {
-    stopPropagation: sinon.spy(),
-    preventDefault: sinon.spy(),
+    stopPropagation: jest.fn(),
+    preventDefault: jest.fn(),
     ...props,
   };
 }

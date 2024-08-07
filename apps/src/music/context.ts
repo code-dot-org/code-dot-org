@@ -1,4 +1,5 @@
 import React from 'react';
+
 import AnalyticsReporter from './analytics/AnalyticsReporter';
 
 /** Provides access to the Analytics reporter object */

@@ -4,7 +4,6 @@ import {
   RATE_LIMIT,
   RATE_LIMIT_INTERVAL_MS,
 } from '../../../src/storage/rateLimit';
-import {expect} from '../../util/reconfiguredChai';
 
 describe('DatablockStorage', () => {
   beforeEach(() => {
@@ -34,7 +33,7 @@ describe('DatablockStorage', () => {
       }
 
       // This should be over the rate limit
-      expect(() => rateLimit(now + RATE_LIMIT)).to.throw(Error);
+      expect(() => rateLimit(now + RATE_LIMIT)).toThrow(Error);
 
       done();
     });

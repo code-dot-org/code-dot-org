@@ -1,4 +1,5 @@
 import React from 'react';
+
 import style from './ai-tutor-tester.module.scss';
 
 /**
@@ -14,6 +15,10 @@ const AITutorTesterSampleColumns: React.FC = () => {
       systemPrompt:
         'OPTIONAL. If not included, the default system prompt is used.',
       studentCode: "OPTIONAL. The student's code.",
+      levelId:
+        "OPTIONAL. If provided, will be used to fetch the level's instructions and test files if applicable. Reminder: it needs to be the levelId for the level in the environment in which you're running the tester.",
+      scriptId:
+        'OPTIONAL. If provided will be used to determine the programming language.',
     },
   ];
   return (
@@ -31,6 +36,12 @@ const AITutorTesterSampleColumns: React.FC = () => {
             <td className={style.cell}>
               <div>studentCode</div>
             </td>
+            <td className={style.cell}>
+              <div>levelId</div>
+            </td>
+            <td className={style.cell}>
+              <div>scriptId</div>
+            </td>
           </tr>
         </thead>
         <tbody>
@@ -39,6 +50,8 @@ const AITutorTesterSampleColumns: React.FC = () => {
               <td className={style.cell}>{row.studentInput}</td>
               <td className={style.cell}>{row.systemPrompt}</td>
               <td className={style.cell}>{row.studentCode}</td>
+              <td className={style.cell}>{row.levelId}</td>
+              <td className={style.cell}>{row.scriptId}</td>
             </tr>
           ))}
         </tbody>

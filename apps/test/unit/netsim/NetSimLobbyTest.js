@@ -1,10 +1,8 @@
 import $ from 'jquery';
-import sinon from 'sinon';
 
 import * as userSectionClient from '@cdo/apps/util/userSectionClient';
 
 import NetSimLobby from '../../../src/netsim/NetSimLobby.js';
-import {expect} from '../../util/reconfiguredChai';
 
 var NetSimTestUtils = require('../../util/netsimTestUtils');
 
@@ -17,7 +15,10 @@ const SIGNED_IN_USER = {
 describe('NetSimLobby', () => {
   let rootDiv, netsim, getUserSectionsStub;
   beforeEach(function () {
-    getUserSectionsStub = sinon.stub(userSectionClient, 'getUserSections');
+    getUserSectionsStub = jest
+      .spyOn(userSectionClient, 'getUserSections')
+      .mockClear()
+      .mockImplementation();
     NetSimTestUtils.initializeGlobalsToDefaultValues();
     rootDiv = $('<div>');
     netsim = {
@@ -30,12 +31,12 @@ describe('NetSimLobby', () => {
   });
 
   afterEach(function () {
-    userSectionClient.getUserSections.restore();
+    userSectionClient.getUserSections.mockRestore();
   });
 
   it('performs an async request to fetch user sections', () => {
     new NetSimLobby(rootDiv, netsim, SIGNED_IN_USER);
-    expect(getUserSectionsStub).to.have.been.calledOnce;
+    expect(getUserSectionsStub).toHaveBeenCalledTimes(1);
   });
 
   it('filters out archived sections', () => {
@@ -54,8 +55,8 @@ describe('NetSimLobby', () => {
       },
     ];
     netsimLobby.buildShardChoiceList_(sectionList, null);
-    expect(netsimLobby.shardChoices_).to.have.lengthOf(1);
-    expect(netsimLobby.shardChoices_.map(obj => obj.displayName)).to.include(
+    expect(netsimLobby.shardChoices_).toHaveLength(1);
+    expect(netsimLobby.shardChoices_.map(obj => obj.displayName)).toContain(
       'Course 2'
     );
   });

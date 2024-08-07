@@ -11,40 +11,34 @@
       url_secondary: '/ai#ai-curricula',
       aria_label_primary: hoc_s(:aria_label_call_to_action_ai_101),
       aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_ai_101),
-      new: true
-    }
-  ]
-  if !!DCDO.get('curriculum-launch-2024', false)
-    block_items += [
-      {
-        overline: hoc_s(:module_grade_6_12_teachers),
-        title: hoc_s(:module_label_teaching_coding_with_ai),
-        image: '/images/self-paced-pl-tile-coding-with-ai.png',
-        curriculum: hoc_s(:curriculum_name_coding_with_ai),
-        duration: hoc_s(:module_duration_2_hrs),
-        prerequisites: hoc_s(:module_prerequisites_none),
-        url_primary: CDO.studio_url("/courses/self-paced-pl-coding-with-ai-2024"),
-        url_secondary: '/curriculum/coding-with-ai',
-        aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_coding_with_ai),
-        aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_coding_with_ai),
-        new: true,
-      },
-      {
-        overline: hoc_s(:module_grade_9_12_teachers),
-        title: hoc_s(:module_label_teaching_computer_vision),
-        image: '/images/self-paced-pl-tile-computer-vision.png',
-        curriculum: hoc_s(:curriculum_name_computer_vision),
-        duration: hoc_s(:module_duration_1_hr_30_minutes),
-        prerequisites: hoc_s(:module_prerequisites_none),
-        url_primary: CDO.studio_url("/courses/self-paced-pl-computer-vision-2024"),
-        url_secondary: '/curriculum/computer-vision',
-        aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_computer_vision),
-        aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_computer_vision),
-        new: true,
-      }
-    ]
-  end
-  block_items += [
+      new: true,
+    },
+    {
+      overline: hoc_s(:module_grade_6_12_teachers),
+      title: hoc_s(:module_label_teaching_coding_with_ai),
+      image: '/images/self-paced-pl-tile-coding-with-ai.png',
+      curriculum: hoc_s(:curriculum_name_coding_with_ai),
+      duration: hoc_s(:module_duration_2_hrs),
+      prerequisites: hoc_s(:module_prerequisites_none),
+      url_primary: CDO.studio_url("/courses/self-paced-pl-coding-with-ai-2024"),
+      url_secondary: '/curriculum/coding-with-ai',
+      aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_coding_with_ai),
+      aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_coding_with_ai),
+      new: true,
+    },
+    {
+      overline: hoc_s(:module_grade_9_12_teachers),
+      title: hoc_s(:module_label_teaching_computer_vision),
+      image: '/images/self-paced-pl-tile-computer-vision.png',
+      curriculum: hoc_s(:curriculum_name_computer_vision),
+      duration: hoc_s(:module_duration_1_hr_30_minutes),
+      prerequisites: hoc_s(:module_prerequisites_none),
+      url_primary: CDO.studio_url("/courses/self-paced-pl-computer-vision-2024"),
+      url_secondary: '/curriculum/computer-vision',
+      aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_computer_vision),
+      aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_computer_vision),
+      new: true,
+    },
     {
       overline: hoc_s(:module_grade_9_12_teachers),
       title: hoc_s(:module_label_teaching_csp),

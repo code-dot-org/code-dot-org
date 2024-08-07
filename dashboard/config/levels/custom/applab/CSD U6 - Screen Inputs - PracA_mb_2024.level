@@ -69,7 +69,6 @@
     "debugger_disabled": "false",
     "long_instructions": "<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/22b6d9efd53765a02305fdbd376fb903-image-1648830447189.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n# Pet Scene Creator\r\n\r\nCreate an app that lets you mix and match different background images with animal images to create different scenes. The images have already been uploaded to your app - you need to add the code that updates the screen when the user presses the \"Create\" button\r\n\r\n## Do This\r\n\r\n_Note: You can click the instructions below to expand them and see more specific instructions_\r\n\r\n1) ::: details [Get the values from the dropdowns and store it in two variables]\r\n\t- Use [`var x`(#BB77C7)](/docs/applab/declareAssign_x/) and [`getText()`(#fff176)](/docs/applab/getText/) blocks to get the values from the `backgroundDropdown` and `petDropdown` elements\r\n:::\r\n\r\n2) ::: details [Update the images on the screen]\r\n\t- Use two [`setProperty()`(#fff176)](/docs/applab/setProperty/) blocks to update the `image` property of the `backgroundImage` and `petImage` elements\r\n:::\r\n\r\n\r\n**Run the program!** You should be able to mix and match different images to create new scenes",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

@@ -1,4 +1,4 @@
-@import "color.scss";
+@import 'color.scss';
 
 .summaryContainer {
   max-width: 970px;
@@ -75,7 +75,7 @@ label.sectionSelector {
   float: right;
 }
 
-[dir="rtl"] .toggleContainer {
+[dir='rtl'] .toggleContainer {
   float: left;
 }
 
@@ -87,30 +87,108 @@ label.sectionSelector {
   margin-bottom: 24px;
 }
 
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.studentName {
+  min-height: 24px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+
+  p {
+    margin: 0;
+  }
+}
+
 .studentResponses {
   select {
     display: block;
+  }
+
+  .studentResponsesContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .studentResponseBlock {
+    margin-bottom: 22px;
+    // inline-block is necessary to prevent boxes from splitting across columns.
+    display: inline-block;
+    width: 100%;
   }
 
   .studentResponsesColumns {
     width: 100%;
     columns: 2 auto;
     column-gap: 48px;
-    padding-top: 24px;
+    padding-top: 40px;
     padding-bottom: 12px;
+
+  }
+
+  .pinResponsesSection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pinnedResponsesColumns {
+    width: 100%;
+    columns: 2 auto;
+    column-gap: 48px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid $light_gray_200;
+  }
+
+  .pinnedResponse {
+    background-color: $light_secondary_500;
+    p {
+      color: $light_white;
+    }
+  }
+
+  .pinResponsesHeader {
+    display: flex;
+    flex-direction: row;
+    height: 42px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    align-items: center;
+
+    h3 {
+      margin: 0;
+      margin-inline-end: auto;
+    }
+
+    .pinHeaderIcon {
+      color: $light_secondary_500;
+      margin-inline-end: 8px;
+      font-size: 20px;
+    }
+  }
+
+  .unpinnedResponse {
+    background-color: #F6EDFD;
   }
 
   .studentAnswer {
-    padding: 12px;
-    margin-bottom: 16px;
-    // TODO: Update to use #E6F6F8 once the phase-2 brand colors are in.
-    background-color: $lightest_cyan;
     width: 100%;
     box-sizing: border-box;
     border-radius: 4px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+
+    .studentAnswerInterior {
+      padding: 12px;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
 
     p {
       margin: 0;
@@ -119,6 +197,14 @@ label.sectionSelector {
     .studentAnswerMenuButton {
       width: 26px;
       height: 26px;
+    }
+
+    .studentAnswerMenuButtonPinned {
+      color: $light_white;
+
+      &:hover {
+        background-color: $light_secondary_700;
+      }
     }
 
     .studentAnswerMenuDropdownContainer {
@@ -136,12 +222,12 @@ label.sectionSelector {
       margin: 0.25rem 0;
       list-style: none;
       background-color: $light_white;
-      border: 1px solid rgba(0 0 0 / .15);
+      border: 1px solid rgba(0 0 0 / 0.15);
       border-radius: 4px;
       -webkit-box-shadow: 0 6px 12px rgba(20 16 16 / 0.175);
-      box-shadow: 0 6px 12px rgba(0 0 0 / .175);
+      box-shadow: 0 6px 12px rgba(0 0 0 / 0.175);
       background-clip: padding-box;
-      padding: .25rem 0 .25rem;
+      padding: 0.25rem 0 0.25rem;
 
       ul {
         margin: 0;
@@ -177,7 +263,9 @@ label.sectionSelector {
 
       i {
         display: inline-block;
-        min-width: 2em;
+        min-width: 20px;
+        max-width: 20px;
+        margin: 0 8px;
       }
     }
 

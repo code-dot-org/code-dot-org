@@ -55,7 +55,6 @@
     "makerlab_enabled": "microbit",
     "long_instructions": "# Little Alien Friend\r\nRosie is designing a children's toy to look like an alien. it has a physical body that uses 2 LEDs as the eye, and you communicate with it via an app. Each button on the app causes the alien to respond in a different way:\r\n\r\n- Pressing “Wake Up” has the alien open their eyes\r\n- Pressing “Listen” has the alien blink slowly as it listens to a story\r\n- Pressing “Sleep” puts the alien to sleep and closes its eyes\r\n\r\n## Do This\r\n\r\n1. Wire up two LEDs to pins `0` and `2`\r\n2. Create two LED variables on pins `0` and `2`\r\n3. Use an `___.on()`(#4dd0e1) block in the Wake Up event\r\n4. Use a `___.blink()`(#4dd0e1) block in the Listen event\r\n5. Use an `___.off()`(#4dd0e1) block in the Sleep event\r\n",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "true",
     "text_mode_at_start": "false",
     "encrypted": "false",

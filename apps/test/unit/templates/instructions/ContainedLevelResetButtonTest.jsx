@@ -1,12 +1,12 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import * as CodeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {UnconnectedContainedLevelResetButton as ContainedLevelResetButton} from '@cdo/apps/templates/instructions/ContainedLevelResetButton';
 import experiments from '@cdo/apps/util/experiments';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('ContainedLevelResetButton', () => {
   let queryUserProgressSpy;
@@ -38,7 +38,7 @@ describe('ContainedLevelResetButton', () => {
         codeIsRunning={false}
       />
     );
-    const button = wrapper.find('Button');
+    const button = wrapper.find({name: 'containedLevelResetButton'});
     expect(button.props().disabled).to.be.true;
   });
 
@@ -52,7 +52,7 @@ describe('ContainedLevelResetButton', () => {
         codeIsRunning={false}
       />
     );
-    const button = wrapper.find('Button');
+    const button = wrapper.find({name: 'containedLevelResetButton'});
     expect(button.props().disabled).to.be.false;
   });
 
@@ -84,7 +84,7 @@ describe('ContainedLevelResetButton', () => {
         codeIsRunning={false}
       />
     );
-    const button = wrapper.find('Button');
+    const button = wrapper.find({name: 'containedLevelResetButton'});
 
     button.simulate('click');
     await setTimeout(() => {}, 50);

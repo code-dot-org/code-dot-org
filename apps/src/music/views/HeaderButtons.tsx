@@ -1,20 +1,23 @@
+import classNames from 'classnames';
+import React, {useCallback, useContext} from 'react';
+import {useSelector} from 'react-redux';
+
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {
   DialogContext,
   DialogType,
 } from '@cdo/apps/lab2/views/dialogs/DialogManager';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import classNames from 'classnames';
-import React, {useCallback, useContext} from 'react';
-import {useSelector} from 'react-redux';
-import {AnalyticsContext} from '../context';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {MusicState} from '../redux/musicRedux';
-import moduleStyles from './HeaderButtons.module.scss';
-import musicI18n from '../locale';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {commonI18n} from '@cdo/apps/types/locale';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
-import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
 import {getBaseAssetUrl} from '../appConfig';
+import {AnalyticsContext} from '../context';
+import musicI18n from '../locale';
+import MusicLibrary, {SoundFolder} from '../player/MusicLibrary';
+import {MusicState} from '../redux/musicRedux';
+
+import moduleStyles from './HeaderButtons.module.scss';
 
 interface CurrentPackProps {
   packFolder: SoundFolder;

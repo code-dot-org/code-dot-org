@@ -42,13 +42,13 @@ module AichatSagemakerHelper
   def self.get_model_processor(selected_model_id)
     case selected_model_id
     when MODELS[:PIRATE]
-      return PirateProcessor.new
+      return AiModelProcessors::PirateProcessor.new
     when MODELS[:KAREN]
-      return KarenProcessor.new
+      return AiModelProcessors::KarenProcessor.new
     when MODELS[:ARITHMO]
-      return ArithmoProcessor.new
+      return AiModelProcessors::ArithmoProcessor.new
     else
-      return MistralProcessor.new
+      return AiModelProcessors::MistralProcessor.new
     end
   end
 
@@ -60,7 +60,9 @@ module AichatSagemakerHelper
     )
   end
 
-  def self.get_sagemaker_assistant_response(inputs, selected_model_id)
+  def self.get_sagemaker_assistant_response(aichat_model_customizations, stored_messages, new_message)
+    inputs = format_inputs_for_sagemaker_request(aichat_model_customizations, stored_messages, new_message)
+    selected_model_id = aichat_model_customizations[:selectedModelId]
     sagemaker_response = request_sagemaker_chat_completion(inputs, selected_model_id)
     parsed_response = JSON.parse(sagemaker_response.body.string)
     generated_text = parsed_response[0]["generated_text"]

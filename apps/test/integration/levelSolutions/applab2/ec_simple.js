@@ -56,11 +56,6 @@ module.exports = {
       ],
     },
 
-    // Missing coverage of the data category here.
-    // Most data blocks make network calls and modify data records. To get
-    // test coverage of these here, we would probably need to mock portions of that.
-    // We do have UI test coverage of data apis in dataBlocks.feature
-
     // These exercise all of the blocks in Control category
     // It does not validate that they behave correctly, just that we don't end
     // up with any errors

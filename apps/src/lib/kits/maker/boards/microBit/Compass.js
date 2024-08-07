@@ -1,4 +1,5 @@
 import {EventEmitter} from 'events';
+
 import {SENSOR_CHANNELS} from './MicroBitConstants';
 
 export default class Compass extends EventEmitter {

@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-16 06:25:28 UTC",
+    "serialized_at": "2024-07-31 16:19:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -230,6 +230,9 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
+        "overview": "**How do the visualizations data scientists choose impact our interpretation of data?**\n\nThis lesson delves into how various data visualizations can shape our understanding of the same topic, emphasizing identifying trends, patterns, and outliers. Students will analyze individual datasets and create visualizations before participating in a jigsaw activity to merge and discuss insights from different perspectives. This collaborative approach enhances their ability to critically assess data and understand the ethical considerations involved in its presentation.",
+        "preparation": "* Print out copies of the activity guide for each dataset",
+        "student_overview": "**How do the visualizations data scientists choose impact our interpretation of data?**\n\nIn this lesson, you'll explore how different visualizations influence our understanding of the same data. Through individual analysis and group collaboration, you'll learn to identify trends, patterns, outliers, and the impact of how data is presented."
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -245,6 +248,9 @@
       "has_lesson_plan": true,
       "relative_position": 11,
       "properties": {
+        "overview": "**How can we gain deeper insights into our data?**\n\nIn this lesson, students will deepen their understanding of data visualization by using additional features in CODAP to analyze various datasets. They learn to use formulas and other visualization tools to interpret data through different lenses and discuss ethical considerations such as bias and privacy. The lesson aims to enhance their skills in technical data handling and critical thinking about the impacts of data analysis.",
+        "preparation": "* Print copies of the Visualization Techniques activity guide (one for each student)",
+        "student_overview": "**How can we gain deeper insights into our data?**\n\nIn this lesson,  you'll dive into advanced data visualization techniques using CODAP! You'll learn how to reveal deeper insights from data and discuss the importance of using these tools responsibly. Get ready to uncover the hidden stories data can tell!"
       },
       "seeding_key": {
         "lesson.key": "lesson-10",
@@ -260,6 +266,9 @@
       "has_lesson_plan": true,
       "relative_position": 12,
       "properties": {
+        "overview": "**What is the process of choosing a data set and forming a question to investigate?**\n\nOn Day 1, students will choose a dataset to investigate and generate RSAIR questions. They will familiarize themselves with their dataset through a Three Reads of Data, select a data question to investigate, and start discussing potential barriers to success.",
+        "preparation": "* Provide a copy of the project guide for each student\n* **(Optional)** Print out a copy of the Data Question Peer Review for each student",
+        "student_overview": "**What is the process of choosing a data set and forming a question to investigate?**\n\nToday, you will choose a dataset, go through a Three Reads of Data, and form your RSAIR data question. You will also discuss any potential barriers to completing the project."
       },
       "seeding_key": {
         "lesson.key": "lesson-11",
@@ -792,7 +801,8 @@
       "key": "79e54d53-59df-4d60-8766-d5fd04efa632",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 1."
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 1.",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "79e54d53-59df-4d60-8766-d5fd04efa632",
@@ -934,7 +944,8 @@
       "key": "4603e3ae-386a-4eac-98b3-f16bea23447e",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 2. Once students are on the level, they should find the person they are researching, click on the available link, and answer the questions on their tent about that person as they read about them, in preparation to represent the individual. Give students the time that they need – up to around 10 minutes.",
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 2. Once students are on the level, they should find the person they are researching, click on the available link, and answer the questions on their tent about that person as they read about them, in preparation to represent the individual. Give students the time that they need – up to around 10 minutes.",
+        "progression_name": "Data Scientists",
         "tips": [
           {
             "type": "teachingTip",
@@ -978,7 +989,8 @@
       "key": "6ba469b1-09ca-4e39-8327-3991c67855a2",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student some sticky notes to put their reflections on.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Designate a space in the classroom for students to post their sticky notes. Have students write their reflections around what they found interesting and what surprised them, then add their sticky notes to the designated area.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** As students add their thoughts to the designated area, share out what trends you are finding.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 1, Level 3 to respond to the reflection question.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student some sticky notes to put their reflections on.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Designate a space in the classroom for students to post their sticky notes. Have students write their reflections around what they found interesting and what surprised them, then add their sticky notes to the designated area.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** As students add their thoughts to the designated area, share out what trends you are finding.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 3 to respond to the reflection question.",
+        "progression_name": "Check for Understanding",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1018,7 +1030,8 @@
       "key": "db6894d2-4759-47a6-83fb-e245b228cb9d",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the survey questions.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student two sticky notes.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write their answers to the questions on separate sticky notes. Invite some (5-10) students to come up, one at a time, and add their sticky notes to a pre-drawn anchor chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***cells***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***rows*** and ***columns***, and add these to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***attribute***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***case***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***sample size***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***spreadsheet***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 1 to prepare to participate in a Three Reads of Data with their partner on the Pizza Slice dataset.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the survey questions.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student two sticky notes.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students write their answers to the questions on separate sticky notes. Invite some (5-10) students to come up, one at a time, and add their sticky notes to a pre-drawn anchor chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***cells***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***rows*** and ***columns***, and add these to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***attribute***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***case***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***sample size***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***spreadsheet***, and add it to the Spreadsheet Anchor Chart.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 1 to prepare to participate in a Three Reads of Data with their partner on the Pizza Slice dataset.",
+        "progression_name": "Read 1: Context",
         "tips": [
           {
             "type": "teachingTip",
@@ -1045,7 +1058,8 @@
       "key": "ad413d79-9b69-4ea4-b4e8-a0ac93f796c8",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate a Three Reads of Data about this data set. During Read 1, give students a moment of individual time to think and record their own ideas in the level and a few minutes to share their ideas with their partner.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Take a few minutes to facilitate a whole-class share out. During the whole-class share out, it is recommended that student responses from Level 1 are displayed for everyone to see.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to move on to Level 2 to work on Read 2: Quantities. "
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate a Three Reads of Data about this data set. During Read 1, give students a moment of individual time to think and record their own ideas in the level and a few minutes to share their ideas with their partner.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Take a few minutes to facilitate a whole-class share out. During the whole-class share out, it is recommended that student responses from Level 1 are displayed for everyone to see.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to move on to Level 2 to work on Read 2: Quantities. ",
+        "progression_name": "Read 2: Quantities"
       },
       "seeding_key": {
         "activity_section.key": "ad413d79-9b69-4ea4-b4e8-a0ac93f796c8",
@@ -1056,7 +1070,8 @@
       "key": "2acd022e-4f67-4cf0-b9d3-c33d15f59245",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate the Read 2 for data set. Just like Read 1, during Read 2, give students a moment of individual time to think and record their own ideas and a few minutes to share their ideas with their partner.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Take a few minutes to facilitate a whole-class share out. During the whole-class share out, it is recommended that student responses from Level 2 are displayed for everyone to see.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to move on to Level 3 to work on Read 3: Questions. "
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate the Read 2 for data set. Just like Read 1, during Read 2, give students a moment of individual time to think and record their own ideas and a few minutes to share their ideas with their partner.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Take a few minutes to facilitate a whole-class share out. During the whole-class share out, it is recommended that student responses from Level 2 are displayed for everyone to see.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to move on to Level 3 to work on Read 3: Questions. ",
+        "progression_name": "Read 3: Questions"
       },
       "seeding_key": {
         "activity_section.key": "2acd022e-4f67-4cf0-b9d3-c33d15f59245",
@@ -1121,7 +1136,8 @@
       "key": "c008a16d-581b-429e-92e4-0a7428229f28",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Answering a Data Question activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Tell students that now that they’re done with the Three Reads, they’re ready to explore the full data set. Tell students that their job is to see if they can answer the data question: How much pizza should we order for a school party? Let students know that the full data set includes survey responses from hundreds of students. Prepare students by telling them that while more data can be necessary to answer a question, it can also be more challenging to work with, which is why data scientists use computers to work with large sets of data.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 2, Level 4 to access the Pizza Slice data set.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair of students a copy of the Answering a Data Question activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Tell students that now that they’re done with the Three Reads, they’re ready to explore the full data set. Tell students that their job is to see if they can answer the data question: How much pizza should we order for a school party? Let students know that the full data set includes survey responses from hundreds of students. Prepare students by telling them that while more data can be necessary to answer a question, it can also be more challenging to work with, which is why data scientists use computers to work with large sets of data.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 3, Level 4 to access the Pizza Slice data set.",
+        "progression_name": "Pizza Slice Data Set",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1191,7 +1207,8 @@
       "key": "f2bc1e1b-62ec-4ca9-b587-05974ee7e03c",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data collection***.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data ethics***.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of three.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to complete Levels 1, 2, and 3. On each level, students should examine each of the scenarios and write a statement that provides guidance about ethical data collection."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data collection***.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define ***data ethics***.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in groups of three.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to complete Levels 1, 2, and 3. On each level, students should examine each of the scenarios and write a statement that provides guidance about ethical data collection.",
+        "progression_name": "Party Planning"
       },
       "seeding_key": {
         "activity_section.key": "f2bc1e1b-62ec-4ca9-b587-05974ee7e03c",
@@ -1202,7 +1219,8 @@
       "key": "ddebaec3-cb62-4e0e-b243-c815743346ac",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the activity, encourage them to write statements that reflect three different aspects of data ethics.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students continue to Level 4 to respond to the discussion question. Show the students' responses and discuss the common themes that arose as a class."
+        "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** As students work through the activity, encourage them to write statements that reflect three different aspects of data ethics.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students continue to Level 4 to respond to the discussion question. Show the students' responses and discuss the common themes that arose as a class.",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "ddebaec3-cb62-4e0e-b243-c815743346ac",
@@ -1401,7 +1419,8 @@
       "key": "1960f840-bf2b-489a-b699-0b7c990d0029",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 4, Level 1. Students will choose a persona (or you may assign each pair a persona) and discuss what their stance towards data rights might be based on their background and key experiences. Students will then write 1-2 data rights statements that would reflect the viewpoint of this stakeholder based on his/her key experiences."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1. Students will choose a persona (or you may assign each pair a persona) and discuss what their stance towards data rights might be based on their background and key experiences. Students will then write 1-2 data rights statements that would reflect the viewpoint of this stakeholder based on his/her key experiences.",
+        "progression_name": "Choose a Persona"
       },
       "seeding_key": {
         "activity_section.key": "1960f840-bf2b-489a-b699-0b7c990d0029",
@@ -1434,7 +1453,8 @@
       "key": "f10ed846-80d3-4db4-ada2-8f6121290e8f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 1 to prepare to participate in a Three Reads of Data with their partner on the Pizza Slice dataset.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 1 to prepare to participate in a Three Reads of Data with their partner on the Pizza Slice dataset.",
+        "progression_name": "Read 1: Context",
         "tips": [
           {
             "type": "teachingTip",
@@ -1461,7 +1481,8 @@
       "key": "5ba9086c-74db-4d29-9058-5f48796e4952",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Present the following scenario: Their school’s leadership class/principal is wants to have an end of the year party and decided to survey students. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate a Three Reads of Data about this data set. During Read 1, give students a moment of individual time to think and record their own ideas in the level and a few minutes to share their ideas with their partner.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Take a few minutes to facilitate a whole-class share out. During the whole-class share out, it is recommended that student responses from Level 1 are displayed for everyone to see.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to move on to Level 2 to work on Read 2: Quantities. "
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Present the following scenario: Their school’s leadership class/principal is wants to have an end of the year party and decided to survey students. \n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Facilitate a Three Reads of Data about this data set. During Read 1, give students a moment of individual time to think and record their own ideas in the level and a few minutes to share their ideas with their partner.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Take a few minutes to facilitate a whole-class share out. During the whole-class share out, it is recommended that student responses from Level 1 are displayed for everyone to see.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to move on to Level 2 to work on Read 2: Quantities. ",
+        "progression_name": "Read 2: Quantities"
       },
       "seeding_key": {
         "activity_section.key": "5ba9086c-74db-4d29-9058-5f48796e4952",
@@ -1618,7 +1639,8 @@
       "key": "7adc5c14-8c10-4229-94bd-aa3d3ca37a68",
       "position": 11,
       "properties": {
-        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How and why would you use the RSAIR criteria?*\n\n* Allow students to reflect on their own and share with a partner if time allows before sharing ideas with the class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Goals for this question include:\n* The criteria should help you think about the kinds of questions a dataset can answer based on what information is there\n* Use the criteria to shape the questions you ask about a dataset so they are clear, directly linked to the data, possible to answer and respectful\n* The criteria will help you end up with a solid data-question that leads to meaningful and responsible insights from your data\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display potential responses to the question.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 3 to participate in Read 3 of the School Party dataset with their partner.",
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *How and why would you use the RSAIR criteria?*\n\n* Allow students to reflect on their own and share with a partner if time allows before sharing ideas with the class.\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Goals for this question include:\n* The criteria should help you think about the kinds of questions a dataset can answer based on what information is there\n* Use the criteria to shape the questions you ask about a dataset so they are clear, directly linked to the data, possible to answer and respectful\n* The criteria will help you end up with a solid data-question that leads to meaningful and responsible insights from your data\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to display potential responses to the question.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 3 to participate in Read 3 of the School Party dataset with their partner.",
+        "progression_name": "Read 3: Questions",
         "tips": [
           {
             "type": "teachingTip",
@@ -1693,7 +1715,8 @@
       "key": "9f306986-7efa-4cd4-be72-0e3109d886c9",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 5, Level 4 to complete the Check for Understanding.",
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the learning objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Lesson 6, Level 4 to complete the Check for Understanding.",
+        "progression_name": "Lacking Criteria",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1775,7 +1798,8 @@
       "key": "60d44e55-492c-4d54-9eb6-9bcd69a43a19",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce expository data stories and the Spotify Year Wrapped example.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Data Storytelling activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to complete the Expository Data Story section of the Data Storytelling activity guide."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce expository data stories and the Spotify Year Wrapped example.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Place students in pairs.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each pair a copy of the Data Storytelling activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to complete the Expository Data Story section of the Data Storytelling activity guide.",
+        "progression_name": "Expository Data Story"
       },
       "seeding_key": {
         "activity_section.key": "60d44e55-492c-4d54-9eb6-9bcd69a43a19",
@@ -1813,7 +1837,8 @@
       "key": "49721fd1-fbf8-4303-bd86-84c8b0105248",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce persuasive data stories and the example.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 to complete the Persuasive Data Story section of the Data Storytelling activity guide."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce persuasive data stories and the example.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2 to complete the Persuasive Data Story section of the Data Storytelling activity guide.",
+        "progression_name": "Persuasive Data Story"
       },
       "seeding_key": {
         "activity_section.key": "49721fd1-fbf8-4303-bd86-84c8b0105248",
@@ -1824,7 +1849,8 @@
       "key": "be0e76d2-d5cd-4ba7-bbe9-2a897ed51e4f",
       "position": 7,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 3 to choose one of the three party planning datasets and create a persuasive data story that helps guide the party planners to make a decision."
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 3 to choose one of the three party planning datasets and create a persuasive data story that helps guide the party planners to make a decision.",
+        "progression_name": "Party Planning Datasets"
       },
       "seeding_key": {
         "activity_section.key": "be0e76d2-d5cd-4ba7-bbe9-2a897ed51e4f",
@@ -1846,7 +1872,8 @@
       "key": "c53cad79-b8aa-4fde-a4dc-10aa28c3e779",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to complete a Data Talk with their partner on the party data set. Students record what they notice and what they wonder about the visualizations in the level. This should be done individually first. After students have had a chance to write down a couple things they noticed and wondered, instruct students to share with their partner. Give students a few minutes to share before bringing the class back together."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to complete a Data Talk with their partner on the party data set. Students record what they notice and what they wonder about the visualizations in the level. This should be done individually first. After students have had a chance to write down a couple things they noticed and wondered, instruct students to share with their partner. Give students a few minutes to share before bringing the class back together.",
+        "progression_name": "Data Talk"
       },
       "seeding_key": {
         "activity_section.key": "c53cad79-b8aa-4fde-a4dc-10aa28c3e779",
@@ -1857,7 +1884,8 @@
       "key": "42ab9ca8-2e73-431d-8106-6c8bdb9224a2",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to write about the shape of distribution of the party dataset on Level 2."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to write about the shape of distribution of the party dataset on Level 2.",
+        "progression_name": "Shape of Distribution"
       },
       "seeding_key": {
         "activity_section.key": "42ab9ca8-2e73-431d-8106-6c8bdb9224a2",
@@ -1902,7 +1930,8 @@
       "key": "3d59dbd5-bb1a-4e45-8e29-37dbf63fb3e5",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce dot plots.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce bar charts.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce scatter plots.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 3 to complete Levels 3, 4, and 5.\n* **Level 3:** Students explore CODAP and create a dot plot.\n* **Level 4:** Students create a bar chart.\n* **Level 5:** Students create a scatter plot."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce dot plots.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce bar charts.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce scatter plots.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 3 to complete Levels 3, 4, and 5.\n* **Level 3:** Students explore CODAP and create a dot plot.\n* **Level 4:** Students create a bar chart.\n* **Level 5:** Students create a scatter plot.",
+        "progression_name": "CODAP Graphs"
       },
       "seeding_key": {
         "activity_section.key": "3d59dbd5-bb1a-4e45-8e29-37dbf63fb3e5",
@@ -1963,7 +1992,8 @@
       "key": "afc32033-4c4e-480e-95ef-60a11903da73",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce filter.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 6 to apply filters to the dataset and create new data visualizations."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce filter.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 6 to apply filters to the dataset and create new data visualizations.",
+        "progression_name": "Applying Filters"
       },
       "seeding_key": {
         "activity_section.key": "afc32033-4c4e-480e-95ef-60a11903da73",
@@ -1996,7 +2026,8 @@
       "key": "8bf101ac-adb4-44bc-a15a-2d7750426b07",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to complete a Data Talk with their partner on the dataset. Students write what they notice and what they wonder about the visualization. After students have had a chance to write a couple things they noticed and wondered, instruct students to share with their partner. Give students a few minutes to share before bringing the class back together."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to complete a Data Talk with their partner on the dataset. Students write what they notice and what they wonder about the visualization. After students have had a chance to write a couple things they noticed and wondered, instruct students to share with their partner. Give students a few minutes to share before bringing the class back together.",
+        "progression_name": "Data Talk"
       },
       "seeding_key": {
         "activity_section.key": "8bf101ac-adb4-44bc-a15a-2d7750426b07",
@@ -2046,6 +2077,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the pizza party topping problem.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** *Is this data useful?*\n\n<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** Students should highlight issues with this data that make it less useful, such as the comments that are not related to pizza toppings and the duplicate responses. If no one mentions it, point out that this data looks a lot like one of the graphs they saw in the warm up, where there isn’t a very clear pattern. Tell students that data scientists call data like this \"raw data\" or \"messy data\".\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Explain to the students that the data needs to be cleaned to make it more usable and ways that data scientists do this.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have a student add data cleaning to the Word Wall.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2. For each entry in the first column, students should decide if they want to keep it the same, delete it, or change it.",
+        "progression_name": "Check for Understanding",
         "tips": [
           {
             "type": "teachingTip",
@@ -2175,7 +2207,8 @@
       "key": "fe4358ac-11f0-4e0d-8c53-0adbba8e5fc0",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to complete a Data Talk with their partner on the Dessert dataset. Students write what they notice and what they wonder about the visualization. After students have had a chance to write a couple things they noticed and wondered, instruct students to share with their partner. Give students a few minutes to share before bringing the class back together."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Group students into pairs.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to complete a Data Talk with their partner on the Dessert dataset. Students write what they notice and what they wonder about the visualization. After students have had a chance to write a couple things they noticed and wondered, instruct students to share with their partner. Give students a few minutes to share before bringing the class back together.",
+        "progression_name": "Data Talk"
       },
       "seeding_key": {
         "activity_section.key": "fe4358ac-11f0-4e0d-8c53-0adbba8e5fc0",
@@ -2286,7 +2319,8 @@
       "key": "d31feb4c-8e09-4e10-9b84-f728f49d9c19",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2, and have them select the dataset that corresponds to the one under \"Part 1\" of the activity guide. Students should work with their partner, following the instructions to create the desired bar chart or line graph. Once the visualization is created, students should take a moment and explore the dataset and visualization, then discuss and answer the questions with their partner."
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 2, and have them select the dataset that corresponds to the one under \"Part 1\" of the activity guide. Students should work with their partner, following the instructions to create the desired bar chart or line graph. Once the visualization is created, students should take a moment and explore the dataset and visualization, then discuss and answer the questions with their partner.",
+        "progression_name": "CODAP Level"
       },
       "seeding_key": {
         "activity_section.key": "d31feb4c-8e09-4e10-9b84-f728f49d9c19",
@@ -2346,6 +2380,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to complete Levels 3-5.\n* **Level 3:** Students record their expository data story.\n* **Level 4:** Students answer reflection questions.\n* **Level 5:** Students practice identifying trends, patterns, and outliers in a data visualization.",
+        "progression_name": "Check for Understanding",
         "tips": [
           {
             "type": "teachingTip",
@@ -2366,7 +2401,8 @@
       "key": "4404942e-f1f6-475f-b509-d3de52a6fa3a",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to create a graph using the Roller Coaster dataset. Students should then move on to Levels 2, 3, and 4 to answer the questions about the context, shape of distribution and measures of center about their graph. Finally, have students compare with a neighbor."
+        "description": "<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 1 to create a graph using the Roller Coaster dataset. Students should then move on to Levels 2, 3, and 4 to answer the questions about the context, shape of distribution and measures of center about their graph. Finally, have students compare with a neighbor.",
+        "progression_name": "Roller Coasters"
       },
       "seeding_key": {
         "activity_section.key": "4404942e-f1f6-475f-b509-d3de52a6fa3a",
@@ -2469,7 +2505,8 @@
       "key": "ff5a6099-37ff-4b4a-a5a3-2292d5851d27",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Visualization Techniques activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 5 to complete Levels 5 through 8."
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Visualization Techniques activity guide.\n\n<i class=\"fa fa-desktop\" aria-hidden=\"true\"></i> **Transition:** Direct students to Level 5 to complete Levels 5 through 8.",
+        "progression_name": "Skill Building"
       },
       "seeding_key": {
         "activity_section.key": "ff5a6099-37ff-4b4a-a5a3-2292d5851d27",
@@ -2508,6 +2545,7 @@
       "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to answer the check-in question on Level 9.",
+        "progression_name": "Check for Understanding",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -2534,7 +2572,8 @@
       "key": "8b14a7b6-d470-460c-99c6-52c5cc98d618",
       "position": 6,
       "properties": {
-        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete at least two of the choices on Level 10. Students may complete more than two if they have time."
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Direct students to complete at least two of the choices on Level 10. Students may complete more than two if they have time.",
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "8b14a7b6-d470-460c-99c6-52c5cc98d618",
@@ -3193,12 +3232,1576 @@
     }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson1-level1"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson1-level1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "79e54d53-59df-4d60-8766-d5fd04efa632"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson1-level1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson1-level2"
+        ],
+        "progression": "Data Scientists"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson1-level2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "4603e3ae-386a-4eac-98b3-f16bea23447e"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson1-level2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson1-level3"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson1-level3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "6ba469b1-09ca-4e39-8327-3991c67855a2"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson1-level3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson2-level1"
+        ],
+        "progression": "Read 1: Context"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson2-level1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "db6894d2-4759-47a6-83fb-e245b228cb9d"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson2-level1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson2-level2"
+        ],
+        "progression": "Read 2: Quantities"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson2-level2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "ad413d79-9b69-4ea4-b4e8-a0ac93f796c8"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson2-level2"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson2-level3"
+        ],
+        "progression": "Read 3: Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson2-level3"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "2acd022e-4f67-4cf0-b9d3-c33d15f59245"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson2-level3"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson2-level4"
+        ],
+        "progression": "Pizza Slice Data Set"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson2-level4"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "c008a16d-581b-429e-92e4-0a7428229f28"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson2-level4"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson3-level1"
+        ],
+        "progression": "Party Planning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson3-level1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "f2bc1e1b-62ec-4ca9-b587-05974ee7e03c"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson3-level1"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson3-level2"
+        ],
+        "progression": "Party Planning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson3-level2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "f2bc1e1b-62ec-4ca9-b587-05974ee7e03c"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson3-level2"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson3-level3"
+        ],
+        "progression": "Party Planning"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson3-level3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "f2bc1e1b-62ec-4ca9-b587-05974ee7e03c"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson3-level3"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson3-level4"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson3-level4"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "ddebaec3-cb62-4e0e-b243-c815743346ac"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson3-level4"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson4-level1-choice"
+        ],
+        "progression": "Choose a Persona"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson4-level1-choice"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "1960f840-bf2b-489a-b699-0b7c990d0029"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson4-level1-choice"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson5-level1-v2"
+        ],
+        "progression": "Read 1: Context"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson5-level1-v2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "f10ed846-80d3-4db4-ada2-8f6121290e8f"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson5-level1-v2"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson5-level2-v2"
+        ],
+        "progression": "Read 2: Quantities"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson5-level2-v2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "5ba9086c-74db-4d29-9058-5f48796e4952"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson5-level2-v2"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson5-level3-v2"
+        ],
+        "progression": "Read 3: Questions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson5-level3-v2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "7adc5c14-8c10-4229-94bd-aa3d3ca37a68"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson5-level3-v2"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "Data Sci - Ch1L5 match criteria"
+        ],
+        "progression": "Lacking Criteria"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Data Sci - Ch1L5 match criteria"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "9f306986-7efa-4cd4-be72-0e3109d886c9"
+      },
+      "level_keys": [
+        "Data Sci - Ch1L5 match criteria"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson6-level1"
+        ],
+        "progression": "Expository Data Story"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson6-level1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "60d44e55-492c-4d54-9eb6-9bcd69a43a19"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson6-level1"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson6-level2"
+        ],
+        "progression": "Persuasive Data Story"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson6-level2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "49721fd1-fbf8-4303-bd86-84c8b0105248"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson6-level2"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson6-level3"
+        ],
+        "progression": "Party Planning Datasets"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson6-level3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "be0e76d2-d5cd-4ba7-bbe9-2a897ed51e4f"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson6-level3"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson7-level1"
+        ],
+        "progression": "Data Talk"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson7-level1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "c53cad79-b8aa-4fde-a4dc-10aa28c3e779"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson7-level1"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson7-level2"
+        ],
+        "progression": "Shape of Distribution"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson7-level2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "42ab9ca8-2e73-431d-8106-6c8bdb9224a2"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson7-level2"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson7-level3"
+        ],
+        "progression": "CODAP Graphs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson7-level3"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "3d59dbd5-bb1a-4e45-8e29-37dbf63fb3e5"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson7-level3"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson7-level4"
+        ],
+        "progression": "CODAP Graphs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson7-level4"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "3d59dbd5-bb1a-4e45-8e29-37dbf63fb3e5"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson7-level4"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson7-level5"
+        ],
+        "progression": "CODAP Graphs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson7-level5"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "3d59dbd5-bb1a-4e45-8e29-37dbf63fb3e5"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson7-level5"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson7-level6"
+        ],
+        "progression": "Applying Filters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson7-level6"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "afc32033-4c4e-480e-95ef-60a11903da73"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson7-level6"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson8-level1"
+        ],
+        "progression": "Data Talk"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson8-level1"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "8bf101ac-adb4-44bc-a15a-2d7750426b07"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson8-level1"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson8-level3"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson8-level3"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "110d0ff3-c2ec-4586-8017-2383c237685e"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson8-level3"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson9-level1"
+        ],
+        "progression": "Data Talk"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson9-level1"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "fe4358ac-11f0-4e0d-8c53-0adbba8e5fc0"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson9-level1"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson9-level2-choice"
+        ],
+        "progression": "CODAP Level"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson9-level2-choice"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "d31feb4c-8e09-4e10-9b84-f728f49d9c19"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson9-level2-choice"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson9-level3"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson9-level3"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "b0029faa-6591-4cb5-8bda-fd79f16ab021"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson9-level3"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson9-level4"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson9-level4"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "b0029faa-6591-4cb5-8bda-fd79f16ab021"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson9-level4"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson9-level5"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson9-level5"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "b0029faa-6591-4cb5-8bda-fd79f16ab021"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson9-level5"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level1-v2"
+        ],
+        "progression": "Roller Coasters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-level1-v2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "4404942e-f1f6-475f-b509-d3de52a6fa3a"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson10-level1-v2"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level2"
+        ],
+        "progression": "Roller Coasters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-level2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "4404942e-f1f6-475f-b509-d3de52a6fa3a"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson10-level2"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level3"
+        ],
+        "progression": "Roller Coasters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-level3"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "4404942e-f1f6-475f-b509-d3de52a6fa3a"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson10-level3"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level4"
+        ],
+        "progression": "Roller Coasters"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-level4"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "4404942e-f1f6-475f-b509-d3de52a6fa3a"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson10-level4"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level5-v2"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-level5-v2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "ff5a6099-37ff-4b4a-a5a3-2292d5851d27"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson10-level5-v2"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level6"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-level6"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "ff5a6099-37ff-4b4a-a5a3-2292d5851d27"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson10-level6"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 7,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level7"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-level7"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "ff5a6099-37ff-4b4a-a5a3-2292d5851d27"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson10-level7"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 8,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level8"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-level8"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "ff5a6099-37ff-4b4a-a5a3-2292d5851d27"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson10-level8"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level9"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-level9"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "ea44e788-f19d-4bcf-8d14-dac291ebbbae"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson10-level9"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "data-science-ch1-lesson10-level10"
+        ],
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-level10"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "8b14a7b6-d470-460c-99c6-52c5cc98d618"
+      },
+      "level_keys": [
+        "data-science-ch1-lesson10-level10"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson1-level1",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson1-level1"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "79e54d53-59df-4d60-8766-d5fd04efa632"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson1-level2",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson1-level2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "4603e3ae-386a-4eac-98b3-f16bea23447e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson1-level3",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson1-level3"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "6ba469b1-09ca-4e39-8327-3991c67855a2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson2-level1",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson2-level1"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "db6894d2-4759-47a6-83fb-e245b228cb9d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson2-level2",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson2-level2"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "ad413d79-9b69-4ea4-b4e8-a0ac93f796c8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson2-level3",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson2-level3"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "2acd022e-4f67-4cf0-b9d3-c33d15f59245"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson2-level4",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson2-level4"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "c008a16d-581b-429e-92e4-0a7428229f28"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson3-level1",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson3-level1"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "f2bc1e1b-62ec-4ca9-b587-05974ee7e03c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson3-level2",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson3-level2"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "f2bc1e1b-62ec-4ca9-b587-05974ee7e03c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson3-level3",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson3-level3"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "f2bc1e1b-62ec-4ca9-b587-05974ee7e03c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson3-level4",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson3-level4"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "ddebaec3-cb62-4e0e-b243-c815743346ac"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson4-level1-choice",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson4-level1-choice"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "1960f840-bf2b-489a-b699-0b7c990d0029"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson5-level1-v2",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson5-level1-v2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "f10ed846-80d3-4db4-ada2-8f6121290e8f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson5-level2-v2",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson5-level2-v2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "5ba9086c-74db-4d29-9058-5f48796e4952"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson5-level3-v2",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson5-level3-v2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "7adc5c14-8c10-4229-94bd-aa3d3ca37a68"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Data Sci - Ch1L5 match criteria",
+        "script_level.level_keys": [
+          "Data Sci - Ch1L5 match criteria"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "9f306986-7efa-4cd4-be72-0e3109d886c9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson6-level1",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson6-level1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "60d44e55-492c-4d54-9eb6-9bcd69a43a19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson6-level2",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson6-level2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "49721fd1-fbf8-4303-bd86-84c8b0105248"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson6-level3",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson6-level3"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "be0e76d2-d5cd-4ba7-bbe9-2a897ed51e4f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson7-level1",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson7-level1"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "c53cad79-b8aa-4fde-a4dc-10aa28c3e779"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson7-level2",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson7-level2"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "42ab9ca8-2e73-431d-8106-6c8bdb9224a2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson7-level3",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson7-level3"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "3d59dbd5-bb1a-4e45-8e29-37dbf63fb3e5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson7-level4",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson7-level4"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "3d59dbd5-bb1a-4e45-8e29-37dbf63fb3e5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson7-level5",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson7-level5"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "3d59dbd5-bb1a-4e45-8e29-37dbf63fb3e5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson7-level6",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson7-level6"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "afc32033-4c4e-480e-95ef-60a11903da73"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson8-level1",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson8-level1"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "8bf101ac-adb4-44bc-a15a-2d7750426b07"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson8-level3",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson8-level3"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "110d0ff3-c2ec-4586-8017-2383c237685e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson9-level1",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson9-level1"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "fe4358ac-11f0-4e0d-8c53-0adbba8e5fc0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson9-level2-choice",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson9-level2-choice"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "d31feb4c-8e09-4e10-9b84-f728f49d9c19"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson9-level3",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson9-level3"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "b0029faa-6591-4cb5-8bda-fd79f16ab021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson9-level4",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson9-level4"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "b0029faa-6591-4cb5-8bda-fd79f16ab021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson9-level5",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson9-level5"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "b0029faa-6591-4cb5-8bda-fd79f16ab021"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson10-level1-v2",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-level1-v2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "4404942e-f1f6-475f-b509-d3de52a6fa3a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson10-level2",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-level2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "4404942e-f1f6-475f-b509-d3de52a6fa3a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson10-level3",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-level3"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "4404942e-f1f6-475f-b509-d3de52a6fa3a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson10-level4",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-level4"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "4404942e-f1f6-475f-b509-d3de52a6fa3a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson10-level5-v2",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-level5-v2"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "ff5a6099-37ff-4b4a-a5a3-2292d5851d27"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson10-level6",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-level6"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "ff5a6099-37ff-4b4a-a5a3-2292d5851d27"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson10-level7",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-level7"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "ff5a6099-37ff-4b4a-a5a3-2292d5851d27"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson10-level8",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-level8"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "ff5a6099-37ff-4b4a-a5a3-2292d5851d27"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson10-level9",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-level9"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "ea44e788-f19d-4bcf-8d14-dac291ebbbae"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "data-science-ch1-lesson10-level10",
+        "script_level.level_keys": [
+          "data-science-ch1-lesson10-level10"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "intro-to-data-science-2024",
+        "activity_section.key": "8b14a7b6-d470-460c-99c6-52c5cc98d618"
+      }
+    }
   ],
   "resources": [
+    {
+      "name": "[EXEMPLAR] Jigsaw Graphs",
+      "url": "https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FLZicfZ8p84qBSfEs0LRw%2Ffile.json",
+      "key": "_exemplar_jigsaw_graphs",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_jigsaw_graphs"
+      }
+    },
     {
       "name": "[KEY] Data Scientist Bingo",
       "url": "https://docs.google.com/document/d/1arZXqs-PZbSe53kvNvl4wNgMmWDDit131wiblo5ImF0/view",
@@ -3249,6 +4852,31 @@
       }
     },
     {
+      "name": "Crafting Stories with Data Project",
+      "url": "https://docs.google.com/presentation/d/1k58rMvqRdWNCBLv8YWgtVn8_68ckfGWxRKmLo3XL8iM/template/preview",
+      "key": "crafting_stories_with_data_project",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "crafting_stories_with_data_project"
+      }
+    },
+    {
+      "name": "Crafting Stories with Data Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1wIqaBJxxyYquYiuWS2-CYN2zpSWA6mqI2j3S4cKHbvE/edit#heading=h.3gr1mqiax0ng",
+      "key": "crafting_stories_with_data_project_planning_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "crafting_stories_with_data_project_planning_guide"
+      }
+    },
+    {
       "name": "Data Collection Methods",
       "url": "https://docs.google.com/document/d/1i7H5FuiJ9wKRgHJVX94b7p0YqJwx5_YPQVJJD_HC75o/view",
       "key": "data_collection_methods",
@@ -3259,6 +4887,109 @@
       },
       "seeding_key": {
         "resource.key": "data_collection_methods"
+      }
+    },
+    {
+      "name": "Data Interpretation",
+      "url": "https://docs.google.com/presentation/d/1miYE3vdccvAFzf_OsVBFkFCsNcFMVLYQ-pJ-r6ugTCY/template/preview",
+      "key": "data_interpretation",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "data_interpretation"
+      }
+    },
+    {
+      "name": "Data Interpretation - Dataset #1",
+      "url": "https://docs.google.com/document/d/1baUZ-M7KUmz0slX8iULIVUJKpnqg-Q6wZFCuHlNaAr8/edit?usp=drive_link",
+      "key": "data_interpretation_-_dataset_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_interpretation_-_dataset_1"
+      }
+    },
+    {
+      "name": "Data Interpretation - Dataset #2",
+      "url": "https://docs.google.com/document/d/1dk7aMg3kt__oRVdkNGBlwMRJ7M64PJ5JpCpqK3qHnRQ/edit?usp=drive_link",
+      "key": "data_interpretation_-_dataset_2",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_interpretation_-_dataset_2"
+      }
+    },
+    {
+      "name": "Data Interpretation - Dataset #3",
+      "url": "https://docs.google.com/document/d/1istc2atn3m4WFlk-xKtp5GI579ALAuP-Py4w3ohpaJc/edit?usp=drive_link",
+      "key": "data_interpretation_-_dataset_3",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_interpretation_-_dataset_3"
+      }
+    },
+    {
+      "name": "Data Interpretation - Dataset #4",
+      "url": "https://docs.google.com/document/d/1eGXSm1jBl_RRU4NZqXwiHSi-lzl-RNWIrrzlrM4xgg0/edit?usp=drive_link",
+      "key": "data_interpretation_-_dataset_4",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_interpretation_-_dataset_4"
+      }
+    },
+    {
+      "name": "Data Interpretation - Dataset #5",
+      "url": "https://docs.google.com/document/d/101BWNLoTdZ9_nnvV9CMqesNXjZLgqCJViLwBBAej0JM/edit?usp=drive_link",
+      "key": "data_interpretation_-_dataset_5",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_interpretation_-_dataset_5"
+      }
+    },
+    {
+      "name": "Data Interpretation - Dataset #6",
+      "url": "https://docs.google.com/document/d/1z5PuP-GOnk55S-mYI2QSWxc_vnRGBlihwtwDJa5UXz8/edit?usp=drive_link",
+      "key": "data_interpretation_-_dataset_6",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_interpretation_-_dataset_6"
+      }
+    },
+    {
+      "name": "Data Question Peer Review",
+      "url": "https://docs.google.com/document/d/1A6tPg-WhJPmjYJMqKjUh3toQexGdsS0wjbQ52Otj430/edit?usp=sharing",
+      "key": "data_question_peer_review",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "data_question_peer_review"
       }
     },
     {
@@ -3423,6 +5154,18 @@
       }
     },
     {
+      "name": "More Visualization Techniques",
+      "url": "https://docs.google.com/presentation/d/1r06gRF-64qnEtmfF781Lns3ny9ODkW4jDyp3oUTlPyY/template/preview",
+      "key": "more_visualization_techniques",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "more_visualization_techniques"
+      }
+    },
+    {
       "name": "Possible Questions",
       "url": "https://docs.google.com/document/d/1IW9npsTXMycjHznEfWqY_J16z8ULBru-oyKU7Bd_ftI/view",
       "key": "possible_questions",
@@ -3446,6 +5189,19 @@
       },
       "seeding_key": {
         "resource.key": "privacy_policy_statements"
+      }
+    },
+    {
+      "name": "Visualization Techniques",
+      "url": "https://docs.google.com/document/d/1dQM0oBAF7E69ji75o0GOncvCe-hPk_fXAqGo0HKOa8Y/edit?usp=sharing",
+      "key": "visualization_techniques",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "visualization_techniques"
       }
     }
   ],
@@ -3478,6 +5234,36 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "resource.key": "introduction_to_data_science"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "more_visualization_techniques"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "resource.key": "visualization_techniques"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "crafting_stories_with_data_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "crafting_stories_with_data_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "resource.key": "data_question_peer_review"
       }
     },
     {
@@ -3574,6 +5360,54 @@
       "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "cleaning_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "_exemplar_jigsaw_graphs"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "data_interpretation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "data_interpretation_-_dataset_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "data_interpretation_-_dataset_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "data_interpretation_-_dataset_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "data_interpretation_-_dataset_4"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "data_interpretation_-_dataset_5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "resource.key": "data_interpretation_-_dataset_6"
       }
     }
   ],
@@ -3785,6 +5619,26 @@
       }
     },
     {
+      "key": "outlier",
+      "word": "outlier",
+      "definition": "a data point that significantly differs from other data points",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "outlier"
+      }
+    },
+    {
+      "key": "pattern",
+      "word": "pattern",
+      "definition": "a consistent or recurring sequence that can be observed and predicted",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "pattern"
+      }
+    },
+    {
       "key": "persuasive_data_story",
       "word": "persuasive data story",
       "definition": "attempts to convince the audience of a stance based on evidence from data and visualizations",
@@ -3842,6 +5696,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "spreadsheet"
+      }
+    },
+    {
+      "key": "trend",
+      "word": "trend",
+      "definition": "the general direction in which data points are heading over a period of time",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "trend"
       }
     }
   ],
@@ -4001,6 +5865,24 @@
         "lesson.key": "lesson-8",
         "vocabulary.key": "skewed_distribution"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "outlier"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "pattern"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "vocabulary.key": "trend"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -4015,6 +5897,26 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "objective.key": "05cdd93f-dd38-4de6-99af-37eb2b5a8707"
+      }
+    },
+    {
+      "key": "09adc903-9575-4664-9f8e-aaf88bce13e9",
+      "properties": {
+        "description": "Identify a data set to investigate and generate questions"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "09adc903-9575-4664-9f8e-aaf88bce13e9"
+      }
+    },
+    {
+      "key": "0e749838-f265-4984-8a07-f2311f02041e",
+      "properties": {
+        "description": "Analyze data to identify key trends, patterns, and outliers"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "0e749838-f265-4984-8a07-f2311f02041e"
       }
     },
     {
@@ -4068,6 +5970,16 @@
       }
     },
     {
+      "key": "3c1b9e27-5fbb-403a-af3e-2e62069d51d0",
+      "properties": {
+        "description": "Interpret the information presented in different data visualizations and discuss the potential insights they offer"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "objective.key": "3c1b9e27-5fbb-403a-af3e-2e62069d51d0"
+      }
+    },
+    {
       "key": "44446117-f104-4df4-94ef-52f5cd932448",
       "properties": {
         "description": "Define \"data\" and \"data science\""
@@ -4098,6 +6010,16 @@
       }
     },
     {
+      "key": "6d9992db-8062-4896-9257-3654c66a59a2",
+      "properties": {
+        "description": "Identify a data question to investigate"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "6d9992db-8062-4896-9257-3654c66a59a2"
+      }
+    },
+    {
       "key": "880cb788-9242-4223-b872-8a91648bf32d",
       "properties": {
         "description": "Create dot plots, bar charts, and scatter plots"
@@ -4105,6 +6027,16 @@
       "seeding_key": {
         "lesson.key": "lesson-7",
         "objective.key": "880cb788-9242-4223-b872-8a91648bf32d"
+      }
+    },
+    {
+      "key": "8b3735d8-0509-4727-8e58-c557690e7b7d",
+      "properties": {
+        "description": "Evaluate ethical considerations involved in data visualization"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "8b3735d8-0509-4727-8e58-c557690e7b7d"
       }
     },
     {
@@ -4125,6 +6057,26 @@
       "seeding_key": {
         "lesson.key": "lesson-7",
         "objective.key": "a3ce4189-ecaf-4bab-9688-6ff6338f8ea2"
+      }
+    },
+    {
+      "key": "a70e7775-2272-4292-a81f-d32a699e091f",
+      "properties": {
+        "description": "Explain how different visualization methods can lead to deeper insights"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "a70e7775-2272-4292-a81f-d32a699e091f"
+      }
+    },
+    {
+      "key": "acc60ccb-d032-4769-8450-42a799c540a5",
+      "properties": {
+        "description": "Use additional visualization techniques to explore and interpret datasets"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "objective.key": "acc60ccb-d032-4769-8450-42a799c540a5"
       }
     },
     {
@@ -4158,6 +6110,16 @@
       }
     },
     {
+      "key": "ef4f043c-86f9-4a95-8802-63d5c585d406",
+      "properties": {
+        "description": "Formulate clear and relevant questions based on the data set, following the RSAIR criteria"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "objective.key": "ef4f043c-86f9-4a95-8802-63d5c585d406"
+      }
+    },
+    {
       "key": "f7559a99-2863-497a-83c8-1f4839157ceb",
       "properties": {
         "description": "Discuss multiple real-world applications of data science and their impact on various industries"
@@ -4179,6 +6141,41 @@
     }
   ],
   "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-29"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-10",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-11",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-05"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -4261,6 +6258,20 @@
         "lesson.key": "lesson-8",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-DA-06"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-05"
       }
     }
   ],

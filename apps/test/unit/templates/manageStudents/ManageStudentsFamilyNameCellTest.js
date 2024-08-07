@@ -5,7 +5,7 @@ import {Provider} from 'react-redux';
 import {getStore} from '@cdo/apps/redux';
 import ManageStudentFamilyNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsFamilyNameCell';
 
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   id: 2,

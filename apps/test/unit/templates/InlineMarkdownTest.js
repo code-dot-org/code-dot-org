@@ -3,8 +3,6 @@ import React from 'react';
 
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 
-import {expect} from '../../util/reconfiguredChai';
-
 describe('InlineMarkdown', () => {
   it('will render basic inline markdown', () => {
     const wrapper = shallow(
@@ -17,7 +15,7 @@ describe('InlineMarkdown', () => {
           <strong>some</strong> <em>basic</em> <a href="markdown">inline</a>
         </span>
       )
-    ).to.equal(true);
+    ).toBe(true);
   });
 
   it('will refuse to render block elements', () => {
@@ -31,7 +29,7 @@ describe('InlineMarkdown', () => {
           markdown which contains\n\n- some\n - basic\n\n&gt; block elements
         </span>
       )
-    ).to.equal(true);
+    ).toBe(true);
   });
 
   it('will ignore what would normally be a paragraph break', () => {
@@ -47,7 +45,7 @@ describe('InlineMarkdown', () => {
           paragraph
         </span>
       )
-    ).to.equal(true);
+    ).toBe(true);
   });
 
   it('will ignore raw html', () => {
@@ -61,21 +59,19 @@ describe('InlineMarkdown', () => {
       <InlineMarkdown markdown='<strong>some</strong> <em>basic</em> <a href="markdown">inline</a>' />
     );
 
-    expect(
-      basicWrapper.equals(<span>some basic inline</span>),
-      'inline html is ignored'
-    ).to.equal(true);
+    // inline html is ignored
+    expect(basicWrapper.equals(<span>some basic inline</span>)).toBe(true);
 
     const advancedWrapper = shallow(
       <InlineMarkdown markdown="<table><thead><th>Some advanced html</th><th><strong>not</strong> usually supported by markdown</th></thead></table>" />
     );
 
+    // block html is ignored
     expect(
       advancedWrapper.equals(
         <span>Some advanced htmlnot usually supported by markdown</span>
-      ),
-      'block html is ignored'
-    ).to.equal(true);
+      )
+    ).toBe(true);
   });
 
   // This test was added as part of a change to prevent this component from

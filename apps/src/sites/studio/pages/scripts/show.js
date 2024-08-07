@@ -1,21 +1,26 @@
 import $ from 'jquery';
-
-import {Provider} from 'react-redux';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+
 import announcementsReducer, {
   addAnnouncement,
 } from '@cdo/apps/code-studio/announcementsRedux';
+import UnitOverview from '@cdo/apps/code-studio/components/progress/UnitOverview.jsx';
+import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import plcHeaderReducer, {
   setPlcHeader,
 } from '@cdo/apps/code-studio/plc/plcHeaderRedux';
+import progress from '@cdo/apps/code-studio/progress';
+import {setStudentDefaultsSummaryView} from '@cdo/apps/code-studio/progressRedux';
 import {getStore} from '@cdo/apps/code-studio/redux';
-import {registerReducers} from '@cdo/apps/redux';
+import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 import {
   setVerified,
   setVerifiedResources,
 } from '@cdo/apps/code-studio/verifiedInstructorRedux';
-import {tooltipifyVocabulary} from '@cdo/apps/utils';
+import {registerReducers} from '@cdo/apps/redux';
+import ParentalPermissionBanner from '@cdo/apps/templates/policy_compliance/ParentalPermissionBanner';
 import googlePlatformApi, {
   loadGooglePlatformApi,
 } from '@cdo/apps/templates/progress/googlePlatformApiRedux';
@@ -25,12 +30,7 @@ import {
   setPageType,
   pageTypes,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import progress from '@cdo/apps/code-studio/progress';
-import UnitOverview from '@cdo/apps/code-studio/components/progress/UnitOverview.jsx';
-import {setStudentDefaultsSummaryView} from '@cdo/apps/code-studio/progressRedux';
-import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
-import ParentalPermissionBanner from '@cdo/apps/templates/policy_compliance/ParentalPermissionBanner';
+import {tooltipifyVocabulary} from '@cdo/apps/utils';
 
 import locales, {setLocaleCode} from '../../../../redux/localesRedux';
 

@@ -1,6 +1,7 @@
-import React from 'react';
-import SchoolInfoInterstitial from './SchoolInfoInterstitial';
 import {action} from '@storybook/addon-actions';
+import React from 'react';
+
+import SchoolInfoInterstitial from './SchoolInfoInterstitial';
 
 export default {
   component: SchoolInfoInterstitial,

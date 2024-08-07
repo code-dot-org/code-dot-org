@@ -47,7 +47,6 @@
     "makerlab_enabled": "microbit",
     "long_instructions": "# Adding New Features!\r\n\r\nOne advantage to using functions is it's easy to add new features! Let's add a new feature that lets you shake the micro:bit and causes the aliens to scatter.\r\n\r\n<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/e3c0ff016d39d50ecf724381f1c85fae-image-1643657668043.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\n## Do This\r\n\r\n1) Add a new [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) that uses the `accelerometer` to detect a `shake` event.\r\n2) Drag out a green [`myFunction()`(#68D995)](/docs/applab/callMyFunction/) block to **call** the `moveAliens` function\r\n\r\n**Run Your Code!** By making these two small changes, you should be able to shake the circuit playground and have the aliens move around the screen!",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

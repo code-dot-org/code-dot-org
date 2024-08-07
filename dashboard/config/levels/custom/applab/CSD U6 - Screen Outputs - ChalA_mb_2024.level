@@ -56,7 +56,6 @@
     "palette_category_at_start": "uicontrols",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20381,
-    "name_suffix": "_mb_2024",
     "reference_links": [
       "/courses/csd-2022/guides/responding-to-user-input",
       "/courses/csd-2022/guides/random-numbers"

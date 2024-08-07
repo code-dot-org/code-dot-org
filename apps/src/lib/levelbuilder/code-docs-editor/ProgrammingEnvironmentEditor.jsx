@@ -1,14 +1,17 @@
-import React, {useState} from 'react';
-import PropTypes from 'prop-types';
 import $ from 'jquery';
-import color from '@cdo/apps/util/color';
-import OrderableList from './OrderableList';
-import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
+import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
-import ImageInput from '../ImageInput';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
+import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import color from '@cdo/apps/util/color';
 import {navigateToHref} from '@cdo/apps/utils';
+
+import ImageInput from '../ImageInput';
+
+import OrderableList from './OrderableList';
 
 const EDITOR_LANGUAGES = ['blockly', 'droplet', 'html/css', 'java'];
 

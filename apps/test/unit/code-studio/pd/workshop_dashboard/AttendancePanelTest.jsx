@@ -1,7 +1,6 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Factory} from 'rosie';
-import sinon from 'sinon';
 
 import AttendancePanel from '@cdo/apps/code-studio/pd/workshop_dashboard/AttendancePanel';
 
@@ -23,7 +22,7 @@ describe('AttendancePanel', () => {
         ]}
       />,
       {
-        context: {router: {push: sinon.spy(), createHref: sinon.spy()}},
+        context: {router: {push: jest.fn(), createHref: jest.fn()}},
       }
     );
   });

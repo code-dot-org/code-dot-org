@@ -65,7 +65,6 @@
     "start_blocks": "// When buttonA is pressed, turn the red LED on.\r\nonBoardEvent(buttonA, \"down\", function() {\r\n  ledScreen.on(0, 3);\r\n});\r\n\r\n//When buttonB is pressed, turn the red LED off.\r\n",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20415,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "encrypted": "false",
     "widget_mode": "false",

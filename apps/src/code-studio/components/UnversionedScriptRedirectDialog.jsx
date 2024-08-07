@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 import StylizedBaseDialog, {
   FooterButton,
-} from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+} from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import i18n from '@cdo/locale';
 
 /*

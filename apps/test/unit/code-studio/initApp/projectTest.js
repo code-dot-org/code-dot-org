@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {files as filesApi} from '@cdo/apps/clientApi';
 import header from '@cdo/apps/code-studio/header';
@@ -8,7 +8,7 @@ import {CP_API} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Playgrou
 import * as utils from '@cdo/apps/utils';
 import msg from '@cdo/locale';
 
-import {expect, assert} from '../../../util/reconfiguredChai';
+import {expect, assert} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 
 describe('project.js', () => {

@@ -104,7 +104,7 @@ class Blockly < Level
 
   def uses_google_blockly?
     skin = properties['skin']
-    self.class.migrated_skins.include?(skin) && DCDO.get('maze_sw_google_blockly', true)
+    self.class.migrated_skins.include?(skin)
   end
 
   def summarize_for_lab2_properties(script, script_level = nil, current_user = nil)

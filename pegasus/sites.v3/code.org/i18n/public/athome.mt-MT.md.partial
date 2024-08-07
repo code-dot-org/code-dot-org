@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">Ħu kors introduttorju, b'ritmu awtonomu</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">Oħloq logħba jew app</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">Ipprova CS mingħajr kompjuter ('unplugged' & għażliet mobbli)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Tgħallem CS mit-tim Code.org u mistednin speċjali</a></li>
 </ul>
 
 <br>
@@ -283,56 +282,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Hello Ruby</a> - L-iktar mod whimsical fid-dinja biex titgħallem dwar il-kompjuters, it-teknoloġija u l-ipprogrammar. Attivitajiet fuq firxa ta 'suġġetti CS, bħall-abbiltà li jiddekomponu problema, mudelli spot, jaħsbu algorithmically, problemi debug u jaħdmu flimkien. (għall-etajiet 4-10)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - Ġabra ta 'materjal ta' tagħlim b'xejn li tgħallem ix-xjenza tal-kompjuter permezz ta 'logħob u puzzles li jużaw karti, spag, krejons u ħafna ġiri madwar. (għall-etajiet 5-14)</li>
 </ul>
-
-<h2>L-ebda kompjuter id-dar? Ipprova CS fuq it-telefon tiegħek b'dawn l-apps mill-imsieħba tagħna</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Gżira Kaxxa"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">kaxxa gżira Logħba</h3></a>ta 'kodifikazzjoni mobbli charming li tieħu lill-istudenti fuq avventura eċċitanti, waqt li tgħallem il-prinċipji fundamentali tal-kodifikazzjoni, bħal algoritmi, rikonoxximent tal-mudelli, sekwenzi, loops u conditionals. <i>(għall-etajiet kollha)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="KodiċijietPark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">Pjattaforma ta 'tagħlim għall-kodiċi</h3></a>rebbieħa ta' CodesPark għal tfal ta 'etajiet 5-9. Issolvi puzzles u toħloq logħob ma 'The Foos waqt li titgħallem tikkodifika. <strong>Nota: CodeSpark qed joffri prova ta '3 xhur b'xejn. L-indirizz tal-email tal-ġenitur u l-informazzjoni tal-karta ta 'kreditu huma meħtieġa fl-iskrizzjoni.</strong> <i>(għall-qarrejja minn qabel permezz tal-Grad 5)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[Lura għall-quċċata]</a></p>
-
-<a id="livecoding"></a>
-<h2>Tgħallem mit-tim Code.org u mistednin speċjali!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="CodeBytes logo">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes huma faċli biex jiddiġerixxu, 20 minuta lezzjonijiet interattivi li jħalltu x-xjenza tal-kompjuter ma 'suġġetti tad-dinja reali. Ħarreġ AI biex taqra l-lingwa tas-sinjali, iddisinja app għall-ġid, tesplora d-dinja ta 'Minecraft, u aktar!</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Episodji View</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Kodiċi Break">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">break kodiċi</h3>
-        <div class="smalltext" style="">Żomm gost xjenza tal-kompjuter billi tieħu Break Kodiċi! Tista 'toħloq cypher ma' Ashton Kutcher, titgħallem dwar varjabbli ma 'Yara Shahidi, u saħansitra tesplora kif jaħdem l-Internet ma' l-inventur attwali ta 'l-Internet, Vint Cerf!</div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Qabbad</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

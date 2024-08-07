@@ -1,10 +1,11 @@
-import React, {useState} from 'react';
-import PropTypes from 'prop-types';
+import {TextLink} from '@dsco_/link';
 import $ from 'jquery';
+import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+
 import StylizedBaseDialog, {
   FooterButton,
-} from '@cdo/apps/componentLibrary/StylizedBaseDialog';
-import {TextLink} from '@dsco_/link';
+} from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 

@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
+
 import {vocabularyShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 const INIT = 'vocabulariesEditor/INIT';

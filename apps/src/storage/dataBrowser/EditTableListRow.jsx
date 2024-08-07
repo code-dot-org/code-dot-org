@@ -4,7 +4,7 @@ import React from 'react';
 import msg from '@cdo/locale';
 
 import {DataView} from '../constants';
-import {storageBackend, isFirebaseStorage} from '../storage';
+import {storageBackend} from '../storage';
 
 import ConfirmDeleteButton from './ConfirmDeleteButton';
 import EditLink from './EditLink';
@@ -23,21 +23,8 @@ class EditTableListRow extends React.Component {
     this.props.onViewChange(DataView.TABLE, this.props.tableName);
   };
 
-  handleDelete = () => {
-    // TODO: post-firebase-cleanup, remove this conditional: #56994
-    if (isFirebaseStorage()) {
-      storageBackend().deleteTable(
-        this.props.tableName,
-        this.props.tableType,
-        refreshCurrentDataView
-      );
-    } else {
-      storageBackend().deleteTable(
-        this.props.tableName,
-        refreshCurrentDataView
-      );
-    }
-  };
+  handleDelete = () =>
+    storageBackend().deleteTable(this.props.tableName, refreshCurrentDataView);
 
   render() {
     return (

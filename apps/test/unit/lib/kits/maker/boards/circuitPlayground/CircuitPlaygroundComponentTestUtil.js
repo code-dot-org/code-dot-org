@@ -2,11 +2,11 @@
  * @file Exports a set of tests that verify  that the Circuit Playground board
  * components and component constructors are available from the interpreter
  */
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {N_COLOR_LEDS} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
 
-import {expect} from '../../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 export function itMakesCircuitPlaygroundComponentsAvailable(
   BoardClient,

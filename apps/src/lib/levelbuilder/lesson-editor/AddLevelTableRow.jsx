@@ -1,7 +1,8 @@
-import React, {Component} from 'react';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import PropTypes from 'prop-types';
 import $ from 'jquery';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import color from '@cdo/apps/util/color';
 
 export default class AddLevelTableRow extends Component {

@@ -53,7 +53,6 @@
     "long_instructions": "# More LED Blocks\r\n\r\nNow that we're using [`createLed()`(#4dd0e1)](/docs/applab/createLed/), we can also use some of the additional LED functions like `blink` or `toggle`.\r\n\r\nThis app is setup to just turn both LEDs on. Instead, let's edit the app so one LED blinks every 500ms and the other LED blinks every 1000 seconds.\r\n\r\n# Do This\r\n\r\n**Preparation:**\r\n\r\n* Keep your LEDs wired just as they were before\r\n\r\n**In Code Mode:**\r\n\r\n1) Make the `leftLED` blink every 500 milliseconds\r\n\t- Replace the block `leftLED.on()` with a `___.blink()`(#4dd0e1) block.\r\n    - Type in `leftLED` in the first blank, and type in `500` for the blink speed.\r\n2) Make the `rightLED` blink every 1000 milliseconds\r\n\t- Replace the block `rightLED.on()` with a `___.blink()`(#4dd0e1) block.\r\n    - Type in `rightLED` in the first blank, and type in `1000` for the blink speed.\r\n\r\n**Run Your Code!** One LED should blink while the other pulses!",
     "text_mode_at_start": "false",
     "parent_level_id": 20596,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "encrypted": "false",
     "widget_mode": "false",

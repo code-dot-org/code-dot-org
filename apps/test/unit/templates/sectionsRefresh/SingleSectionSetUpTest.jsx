@@ -1,15 +1,12 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import SingleSectionSetUp from '@cdo/apps/templates/sectionsRefresh/SingleSectionSetUp';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 describe('SingleSectionSetUp', () => {
   it('calls updateSection when name is updated', () => {
-    const updateSectionSpy = sinon.spy();
+    const updateSectionSpy = jest.fn();
     const wrapper = shallow(
       <SingleSectionSetUp
         sectionNum={1}
@@ -23,7 +20,7 @@ describe('SingleSectionSetUp', () => {
       .find('input')
       .at(0)
       .simulate('change', {target: {value: 'Section 1'}});
-    expect(updateSectionSpy).to.have.been.calledOnce;
+    expect(updateSectionSpy).toHaveBeenCalledTimes(1);
   });
 
   it('renders Chips with expected props', () => {
@@ -37,11 +34,11 @@ describe('SingleSectionSetUp', () => {
     );
 
     const chips = wrapper.find('Chips');
-    expect(chips.length).to.equal(1);
-    expect(chips.prop('name')).to.eq('grades');
-    expect(chips.prop('required')).to.eq(true);
-    expect(chips.prop('options').length).to.eq(14); // K + 12 + Other
-    expect(chips.prop('values')).to.eql([]);
+    expect(chips.length).toBe(1);
+    expect(chips.prop('name')).toBe('grades');
+    expect(chips.prop('required')).toBe(true);
+    expect(chips.prop('options').length).toBe(14); // K + 12 + Other
+    expect(chips.prop('values')).toEqual([]);
   });
 
   it('does not render grade selector when participantType is teacher', () => {
@@ -54,11 +51,11 @@ describe('SingleSectionSetUp', () => {
       />
     );
 
-    expect(wrapper.find('Chips').length).to.equal(0);
+    expect(wrapper.find('Chips').length).toBe(0);
   });
 
   it('calls updateSection when grade selection is updated', () => {
-    const updateSectionSpy = sinon.spy();
+    const updateSectionSpy = jest.fn();
     const wrapper = mount(
       <SingleSectionSetUp
         sectionNum={1}
@@ -72,6 +69,6 @@ describe('SingleSectionSetUp', () => {
     checkbox.simulate('change', {
       target: {setCustomValidity: () => {}, checked: true},
     });
-    expect(updateSectionSpy).to.have.been.calledOnce;
+    expect(updateSectionSpy).toHaveBeenCalledTimes(1);
   });
 });

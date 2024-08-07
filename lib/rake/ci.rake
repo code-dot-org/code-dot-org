@@ -25,8 +25,6 @@ namespace :ci do
         end
       end
     elsif CDO.daemon && CDO.chef_managed
-
-      # Temporarily disable automatic chef cookbook updates for Ubuntu upgrade except for envs undergoing upgrade
       ChatClient.log('Updating Chef cookbooks...')
       RakeUtils.with_bundle_dir(cookbooks_dir) do
         # Automatically update Chef cookbook versions in staging environment.
@@ -92,7 +90,6 @@ namespace :ci do
   end
 
   all_tasks = []
-  all_tasks << 'firebase:ci'
   all_tasks << :build
   all_tasks << :deploy_multi
   all_tasks << :flush_cloudfront_cache

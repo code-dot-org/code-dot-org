@@ -1,14 +1,14 @@
-import React from 'react';
-import {Provider, useSelector} from 'react-redux';
-import ReactDOM from 'react-dom';
 import moment from 'moment';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Provider, useSelector} from 'react-redux';
 
-import {getStore} from '@cdo/apps/redux';
-import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import ParentalPermissionModal from '@cdo/apps/templates/policy_compliance/ParentalPermissionModal';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {getStore} from '@cdo/apps/redux';
+import ParentalPermissionModal from '@cdo/apps/templates/policy_compliance/ParentalPermissionModal';
+import getScriptData from '@cdo/apps/util/getScriptData';
+import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';
 
 const SHOW_DELAY = 86400; // 1 day
 

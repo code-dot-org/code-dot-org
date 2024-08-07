@@ -75,7 +75,6 @@
     "makerlab_enabled": "circuitPlayground",
     "long_instructions": "# Survey App\r\n\r\nCreate an app prototype that could be used for a survey to learn more about a person, such as asking about someone's interests to make a restaurant recommendation or asking about someone's preferences to help a group make a decision.\r\n\r\nYou may not be able to create the \"perfect\" app yet, but you can develop a **prototype** which shows the general idea of the app and some of the basic features behind how it could work.",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

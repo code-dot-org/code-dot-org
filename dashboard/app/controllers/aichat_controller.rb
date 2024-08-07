@@ -12,7 +12,7 @@ class AichatController < ApplicationController
   # POST /aichat/chat_completion
   def chat_completion
     return render status: :forbidden, json: {} unless AichatSagemakerHelper.can_request_aichat_chat_completion?
-    unless has_required_params?
+    unless chat_completion_has_required_params?
       return render status: :bad_request, json: {}
     end
 
@@ -23,6 +23,43 @@ class AichatController < ApplicationController
     # which causes tests to fail. Nulling out the session ID before responding fixes this issue.
     # More detail/other confused developers here: https://github.com/rails/rails/issues/24566
     @session_id = nil
+    render(status: :ok, json: response_body)
+  end
+
+  # params are newChatEvent: ChatEvent, aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
+  # POST /aichat/log_chat_event
+  def log_chat_event
+    begin
+      params.require([:newChatEvent, :aichatContext])
+    rescue ActionController::ParameterMissing
+      return render status: :bad_request, json: {}
+    end
+
+    context = params[:aichatContext]
+    event = params[:newChatEvent]
+
+    project_id = nil
+    if context[:channelId]
+      _, project_id = storage_decrypt_channel_id(context[:channelId])
+    end
+
+    begin
+      logged_event = AichatEvent.create!(
+        user_id: current_user.id,
+        level_id: context[:currentLevelId],
+        script_id: context[:scriptId],
+        project_id: project_id,
+        aichat_event: event.to_json
+      )
+    rescue StandardError => exception
+      return render status: :bad_request, json: {error: exception.message}
+    end
+
+    response_body = {
+      chat_event_id: logged_event.id,
+      chat_event: logged_event.aichat_event
+    }
+
     render(status: :ok, json: response_body)
   end
 
@@ -41,20 +78,12 @@ class AichatController < ApplicationController
       }
     end
 
-    messages_for_model = params.to_unsafe_h[:storedMessages].filter do |message|
+    messages_for_model = params[:storedMessages].filter do |message|
       message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK] &&
         ROLES_FOR_MODEL.include?(message[:role])
     end
 
-    # Use to_unsafe_h here to allow testing this function.
-    # Safe params are primarily targeted at preventing "mass assignment vulnerability"
-    # which isn't relevant here.
-    inputs = AichatSagemakerHelper.format_inputs_for_sagemaker_request(
-      params.to_unsafe_h[:aichatModelCustomizations],
-      messages_for_model,
-      params.to_unsafe_h[:newMessage]
-    )
-    latest_assistant_response_from_sagemaker = AichatSagemakerHelper.get_sagemaker_assistant_response(inputs, params[:aichatModelCustomizations][:selectedModelId])
+    latest_assistant_response_from_sagemaker = AichatSagemakerHelper.get_sagemaker_assistant_response(params[:aichatModelCustomizations], messages_for_model, params[:newMessage])
 
     filter_result = ShareFiltering.find_profanity_failure(latest_assistant_response_from_sagemaker, locale)
     if filter_result&.type == ShareFiltering::FailureType::PROFANITY
@@ -92,7 +121,7 @@ class AichatController < ApplicationController
     {messages: messages}
   end
 
-  private def has_required_params?
+  private def chat_completion_has_required_params?
     begin
       params.require([:newMessage, :aichatModelCustomizations, :aichatContext])
     rescue ActionController::ParameterMissing
@@ -136,8 +165,15 @@ class AichatController < ApplicationController
       end
     end
 
-    if params[:aichatModelCustomizations] != JSON.parse(session.model_customizations) ||
-        params[:storedMessages] != JSON.parse(session.messages)
+    if params[:aichatModelCustomizations] != JSON.parse(session.model_customizations)
+      return false
+    end
+
+    # Compare stored messages in sessions table with stored message from front-end
+    # for the following fields only: chatMessageText, role, and status.
+    sessions_stored_messages = JSON.parse(session.messages).map {|message| message.slice('chatMessageText', 'role', 'status')}
+    frontend_stored_messages = params[:storedMessages].map {|message| message.slice('chatMessageText', 'role', 'status')}
+    if sessions_stored_messages != frontend_stored_messages
       return false
     end
 

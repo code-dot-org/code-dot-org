@@ -492,7 +492,7 @@ class FilesApi < Sinatra::Base
     if source.is_a?(Hash)
       # Iterate over each file
       source.each_key do |key|
-        if source[key]["text"].is_a?(String)
+        if source[key].is_a?(Hash) && source[key]["text"].is_a?(String)
           # Multi-file source structure, used in Java Lab
           # {"source":{"MyClass.java":{"text":"“public class ClassName: {...<code here>...}”","isVisible":true}}
           return false unless source[key]["text"]&.force_encoding("UTF-8")&.valid_encoding?

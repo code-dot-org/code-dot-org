@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import * as callouts from '@cdo/apps/code-studio/callouts';
 import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
@@ -22,7 +22,7 @@ import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setInstructionsConstants} from '@cdo/apps/redux/instructions';
 import GameButtons from '@cdo/apps/templates/GameButtons';
 
-import {assert} from '../util/reconfiguredChai';
+import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('getContainedLevelResultInfo', () => {
   const containedLevelResult = {

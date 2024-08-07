@@ -66,7 +66,6 @@
     "makerlab_enabled": "microbit",
     "long_instructions": "# Changing Positions\r\n\r\nThe **[Counter Pattern](https://studio.code.org/docs/concepts/patterns/counter-patterns-with-event/)** can also be used to change the position of elements on the screen. Let's make a program where pressing the A button moves the bird up, and pressing the B button moves the bird down\r\n\r\n*Note: Remember that y positions are reversed on the screen. Moving up means subtracting, and moving down means adding*\r\n\r\n## Do This\r\n1) Inside the `buttonA` event, subtract one from the `yPosition` variable\r\n\t- Run your code and test that the bird is able to move up!\r\n2) Inside the `buttonB` event, add one to the `yPosition` variable\r\n\t- Run your program and test that the bird is able to move up and down!\r\n\r\nOptional: try changing the amount that the bird changes on each button press. This can simulate moving at different speeds!\r\n\r\n",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

@@ -1,4 +1,4 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import project from '@cdo/apps/code-studio/initApp/project';
 import {
@@ -16,7 +16,7 @@ import {
   UserTestResultSignalType,
   TestStatus,
 } from '../../../src/javalab/constants';
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('JavabuilderConnection', () => {
   let onOutputMessage,

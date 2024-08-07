@@ -72,7 +72,6 @@
     "makerlab_enabled": "microbit",
     "long_instructions": "# Assistive Mouse\r\n\r\n<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/7ab3aadb4ff08ef00ee3db1be25daf1a-image-1691515194600.gif)\r\n\r\n<br/>\r\n\r\nClick to Expand\r\n\r\n</div>\r\n\r\nAssistive Technology helps people with disabilities use technology in the same way able-bodied individuals can. For example, someone with a physical disability with their hand or wrist may not be able to use a mouse the same way we can. But, the micro:bit can help them navigate an app in a different way.\r\n \r\nThis app is designed to use the accelerometer to move the cursor, then use a button to detect a \"click\". The button click has already been coded, but the app still needs the accelerometer.\r\n\r\n## Do This\r\n\r\n1. Create an event to continuously check the accelerometer\r\n2. Get the `pitch` and `roll` properties of the accelerometer and store them in two variables\r\n3. Update the `x` and `y` position of the cursor based on the `pitch` and `roll`\r\n\t-  _Hint:_ if the cursor is moving too fast when you adjust the micro:bit, try dividing the `pitch` and `roll` values by 10 to make the changes smaller and easier to see!",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "true",
     "text_mode_at_start": "false",
     "encrypted": "false",

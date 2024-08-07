@@ -81,6 +81,16 @@
       }
     },
     {
+      "name": "Course Changelog '24-'25",
+      "url": "https://docs.google.com/document/d/1JJqAWqR9XufLGf4F1Pa2MbUXp4iYlCeqrq3GXpVtGck/edit?usp=sharing",
+      "key": "course_changelong_24-_25",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "course_changelong_24-_25"
+      }
+    },
+    {
       "name": "Course Vocabulary",
       "url": "https://docs.google.com/document/d/142LD4u8_K84e20kjQwoz1Ez8LQEcYGKZAL_cujAhrmI/edit?usp=sharing",
       "key": "course_vocabulary_1",
