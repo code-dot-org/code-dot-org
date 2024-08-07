@@ -30,6 +30,8 @@ interface SectionNavigationRouterProps {
   sectionProviderName: string;
 }
 
+const BASE_URL = `/teacher_dashboard/sections/`;
+
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
   return <div className={dashboardStyles.dashboardPage}>{children}</div>;
 };
@@ -43,9 +45,8 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
   showAITutorTab,
   sectionProviderName,
 }) => {
-  const baseUrl = `/teacher_dashboard/sections/`;
   return (
-    <BrowserRouter basename={baseUrl}>
+    <BrowserRouter basename={BASE_URL}>
       <Routes>
         <Route
           path="/:sectionId/*"
