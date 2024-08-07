@@ -403,13 +403,13 @@ img.video_thumbnail {
   /*
     The banner background image leaves an open space for text on the left. Therefore, in Right-to-Left languages, the
     banner needs to be flipped horizontally so the background image empty space is on the right.
-  */
+   */
   html[dir=rtl] & {
     transform: scaleX(-1);
     /*
       Since the whole banner was flipped horizontally, we need to un-flip all the content in the header. So the text and
       layout is not backwards
-    */
+     */
     .bannerContentContainer {
       transform: scaleX(-1);
     }
@@ -436,7 +436,7 @@ img.video_thumbnail {
 }
 
 /* When we are using a dark theme in Google Blockly, we want the main Blockly area (inside #codeWorkspace)
-* to have a 1px separation between it and the PaneHeader above it.
+ * to have a 1px separation between it and the PaneHeader above it.
 *  */
 #codeWorkspace > .cdomoderndark-theme,
 #codeWorkspace > .cdohighcontrastdark-theme,
