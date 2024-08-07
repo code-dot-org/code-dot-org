@@ -1,4 +1,4 @@
-import MBFirmataClient from '../../../../../third-party/maker/MBFirmataClient';
+import MBFirmataClient from '../../../third-party/maker/MBFirmataClient';
 import {isWebSerialPort} from '../../util/boardUtils';
 
 import {SAMPLE_INTERVAL} from './MicroBitConstants';

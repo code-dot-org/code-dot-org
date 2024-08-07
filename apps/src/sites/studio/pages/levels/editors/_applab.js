@@ -7,7 +7,7 @@ import {
   configMicrobit,
   configCircuitPlayground,
   getMakerBlocks,
-} from '@cdo/apps/lib/kits/maker/dropletConfig';
+} from '@cdo/apps/maker/dropletConfig';
 import color from '@cdo/apps/util/color';
 import getScriptData from '@cdo/apps/util/getScriptData';
 

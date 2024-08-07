@@ -1,4 +1,4 @@
-import {DOWNLOAD_PREFIX} from '@cdo/apps/lib/kits/maker/util/makerConstants';
+import {DOWNLOAD_PREFIX} from '@cdo/apps/maker/util/makerConstants';
 
 export const CIRCUIT_PLAYGROUND_EXPRESS_FIRMATA_FILENAME =
   'circuit-playground-express-firmata-ver2018-2-19.UF2';

@@ -5,7 +5,7 @@ import React, {Component} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
 
-import color from '../../../../util/color';
+import color from '../../util/color';
 
 const style = {
   height: 40,

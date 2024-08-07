@@ -25,13 +25,21 @@ import {
 import {AgeGatedStudentsBanner} from '../policy_compliance/AgeGatedStudentsModal/AgeGatedStudentsBanner';
 
 import {switchToSection, recordSwitchToSection} from './sectionHelpers';
-import {beginEditingSection, sortedSectionsList} from './teacherSectionsRedux';
+import {
+  asyncLoadCourseOfferings,
+  beginEditingSection,
+  getAssignmentName,
+  sortedSectionsList,
+} from './teacherSectionsRedux';
 
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
 function TeacherDashboardHeader({
   sections,
   selectedSection,
+  assignmentName,
+  openEditSectionDialog,
+  asyncLoadCourseOfferings,
   isRtl,
   ageGatedStudentsCount,
   sectionId,
@@ -53,8 +61,9 @@ function TeacherDashboardHeader({
   };
 
   React.useEffect(() => {
+    asyncLoadCourseOfferings();
     loadSectionStudentData(sectionId);
-  }, [loadSectionStudentData, sectionId]);
+  }, [asyncLoadCourseOfferings, loadSectionStudentData, sectionId]);
 
   const getDropdownOptions = optionMetricName => {
     let options = sections.map(function (section, i) {
@@ -144,13 +153,13 @@ function TeacherDashboardHeader({
       <div className={dashboardStyles.header}>
         <div>
           <h1>{selectedSection.name}</h1>
-          {selectedSection.courseDisplayName && (
+          {assignmentName && (
             <div
               id="assignment-name"
               className={dashboardStyles.headerCurriculum}
             >
               <span>{i18n.assignedToWithColon()} </span>
-              {selectedSection.courseDisplayName}
+              {assignmentName}
             </div>
           )}
         </div>
@@ -184,6 +193,8 @@ TeacherDashboardHeader.propTypes = {
   sections: PropTypes.arrayOf(sectionShape).isRequired,
   selectedSection: sectionShape.isRequired,
   openEditSectionDialog: PropTypes.func.isRequired,
+  assignmentName: PropTypes.string,
+  asyncLoadCourseOfferings: PropTypes.func.isRequired,
   isRtl: PropTypes.bool,
   ageGatedStudentsCount: PropTypes.number,
   sectionId: PropTypes.number,
@@ -209,6 +220,10 @@ export default connect(
     ),
     selectedSection:
       state.teacherSections.sections[state.teacherSections.selectedSectionId],
+    assignmentName: getAssignmentName(
+      state,
+      state.teacherSections.selectedSectionId
+    ),
     isRtl: state.isRtl,
     sectionId: state.teacherSections.selectedSectionId,
     ageGatedStudentsCount: filterAgeGatedStudents(
@@ -218,6 +233,7 @@ export default connect(
   dispatch => {
     return {
       openEditSectionDialog: id => dispatch(beginEditingSection(id)),
+      asyncLoadCourseOfferings: () => dispatch(asyncLoadCourseOfferings()),
       loadSectionStudentData: sectionId => {
         dispatch(loadSectionStudentData(sectionId));
       },

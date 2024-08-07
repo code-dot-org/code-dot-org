@@ -1,6 +1,6 @@
-import {SENSOR_CHANNELS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
-import MicroBitThermometer from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitThermometer';
-import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
+import {SENSOR_CHANNELS} from '@cdo/apps/maker/boards/microBit/MicroBitConstants';
+import MicroBitThermometer from '@cdo/apps/maker/boards/microBit/MicroBitThermometer';
+import {MBFirmataClientStub} from '@cdo/apps/maker/util/makeStubBoard';
 
 describe('MicroBitThermometer', function () {
   let boardClient, thermometer;

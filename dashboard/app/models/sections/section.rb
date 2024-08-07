@@ -217,10 +217,6 @@ class Section < ApplicationRecord
     unit_group ? unit_group&.course_version&.course_offering&.id : script&.course_version&.course_offering&.id
   end
 
-  def course_display_name
-    unit_group ? unit_group&.course_version&.localized_title : script&.course_version&.localized_title
-  end
-
   def workshop_section?
     Pd::Workshop::SECTION_TYPES.include? section_type
   end
@@ -396,7 +392,7 @@ class Section < ApplicationRecord
         tts_autoplay_enabled: tts_autoplay_enabled,
         sharing_disabled: sharing_disabled?,
         studentCount: students.distinct(&:id).size,
-        code: code,        course_display_name: course_display_name,
+        code: code,
         course_offering_id: course_offering_id,
         course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
         unit_id: unit_group ? script_id : nil,
@@ -503,7 +499,6 @@ class Section < ApplicationRecord
         login_type: login_type,
         login_type_name: login_type_name,
         participant_type: participant_type,
-        course_display_name: course_display_name,
         course_offering_id: course_offering_id,
         course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
         unit_id: unit_group ? script_id : nil,
@@ -591,12 +586,6 @@ class Section < ApplicationRecord
   def code_review_enabled?
     return false if code_review_expires_at.nil?
     return code_review_expires_at > Time.now.utc
-  end
-
-  # Returns true if any student in the section has ever made progress on a unit
-  # that the instructor of the section can be an instructor for.
-  def any_student_has_progress?
-    Unit.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).any? {|s| s.course_assignable?(user)}
   end
 
   # A section can be assigned a course (aka unit_group) without being assigned a script,

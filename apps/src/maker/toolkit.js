@@ -6,11 +6,11 @@ import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
 import {
   WEB_SERIAL_FILTERS,
   shouldUseWebSerial,
-} from '@cdo/apps/lib/kits/maker/util/boardUtils';
-import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
+} from '@cdo/apps/maker/util/boardUtils';
+import WebSerialPortWrapper from '@cdo/apps/maker/WebSerialPortWrapper';
 
-import {getStore} from '../../../redux';
-import trackEvent from '../../../util/trackEvent';
+import {getStore} from '../redux';
+import trackEvent from '../util/trackEvent';
 
 import CircuitPlaygroundBoard from './boards/circuitPlayground/CircuitPlaygroundBoard';
 import MicroBitBoard from './boards/microBit/MicroBitBoard';

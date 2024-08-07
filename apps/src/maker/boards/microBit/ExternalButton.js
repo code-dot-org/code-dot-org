@@ -1,5 +1,5 @@
 import {EventEmitter} from 'events';
-import '../../../../../utils'; // For Function.prototype.inherits
+import '../../../utils'; // For Function.prototype.inherits
 
 export default function ExternalButton(board) {
   this.board = board;

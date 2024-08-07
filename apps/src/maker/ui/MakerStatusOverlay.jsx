@@ -5,9 +5,9 @@ import {connect} from 'react-redux';
 
 import applabI18n from '@cdo/applab/locale';
 
-import FontAwesome from '../../../../legacySharedComponents/FontAwesome';
-import {getVisualizationScale} from '../../../../redux/layout';
-import color from '../../../../util/color';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+import {getVisualizationScale} from '../../redux/layout';
+import color from '../../util/color';
 import {UnsupportedBrowserError} from '../MakerError';
 import {
   isConnecting,

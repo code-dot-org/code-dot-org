@@ -278,11 +278,6 @@ class ApiController < ApplicationController
     render json: data
   end
 
-  def show_courses_with_progress
-    section = load_section
-    render json: CourseVersion.courses_for_unit_selector(section.participant_unit_ids)
-  end
-
   use_reader_connection_for_route(:section_level_progress)
 
   # This API returns data similar to user_progress, but aggregated for all users

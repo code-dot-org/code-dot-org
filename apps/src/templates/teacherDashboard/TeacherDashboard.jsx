@@ -1,9 +1,10 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import {Route, Routes, useLocation} from 'react-router-dom';
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
+import DCDO from '@cdo/apps/dcdo';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import ManageStudents from '@cdo/apps/templates/manageStudents/ManageStudents';
@@ -11,12 +12,14 @@ import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionPro
 import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
 import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
 import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
+import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import {Heading1} from '../../lib/ui/Headings';
 import firehoseClient from '../../lib/util/firehose';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
+import TeacherNavigationBar from '../teacherNavigation/TeacherNavigationBar';
 
 import EmptySection from './EmptySection';
 import StatsTableWithData from './StatsTableWithData';
@@ -36,7 +39,7 @@ function TeacherDashboard({
   sectionId,
   sectionName,
   studentCount,
-  anyStudentHasProgress,
+  coursesWithProgress,
   showAITutorTab,
   sectionProviderName,
 }) {
@@ -84,6 +87,15 @@ function TeacherDashboard({
     }
   });
 
+  const [teacherNavV2Enabled, setTeacherNavV2Enabled] = useState(false);
+
+  useEffect(() => {
+    setTeacherNavV2Enabled(
+      DCDO.get('teacher-local-nav-v2', false) ||
+        experiments.isEnabled(experiments.TEACHER_LOCAL_NAV_V2)
+    );
+  }, []);
+
   // Select a default tab if current path doesn't match one of the paths in our TeacherDashboardPath type.
   const emptyOrInvalidPath = !Object.values(TeacherDashboardPath).includes(
     location.pathname
@@ -99,7 +111,8 @@ function TeacherDashboard({
   // Include header components unless we are on the /login_info or /standards_report page.
   const includeHeader =
     location.pathname !== TeacherDashboardPath.loginInfo &&
-    location.pathname !== TeacherDashboardPath.standardsReport;
+    location.pathname !== TeacherDashboardPath.standardsReport &&
+    location.pathname !== TeacherDashboardPath.navTestV2;
 
   const generateEmptySectionGraphic = (hasStudents, hasCurriculumAssigned) => {
     return (
@@ -170,7 +183,7 @@ function TeacherDashboard({
           path={TeacherDashboardPath.stats}
           element={applyV1TeacherDashboardWidth(<StatsTableWithData />)}
         />
-        {!anyStudentHasProgress && (
+        {coursesWithProgress.length === 0 && (
           <Route element={generateEmptySectionGraphic(true, false)} />
         )}
         <Route
@@ -187,6 +200,19 @@ function TeacherDashboard({
             <SectionAssessments sectionName={sectionName} />
           )}
         />
+        {teacherNavV2Enabled && (
+          <Route
+            path={TeacherDashboardPath.navTestV2}
+            element={
+              <div className={dashboardStyles.pageContainer}>
+                <TeacherNavigationBar />
+                <div className={dashboardStyles.content}>
+                  <SectionProgressSelector />
+                </div>
+              </div>
+            }
+          />
+        )}
         {showAITutorTab && (
           <Route
             path={TeacherDashboardPath.aiTutorChatMessages}
@@ -205,7 +231,7 @@ TeacherDashboard.propTypes = {
   sectionId: PropTypes.number.isRequired,
   sectionName: PropTypes.string.isRequired,
   studentCount: PropTypes.number.isRequired,
-  anyStudentHasProgress: PropTypes.bool.isRequired,
+  coursesWithProgress: PropTypes.array.isRequired,
   showAITutorTab: PropTypes.bool,
   sectionProviderName: PropTypes.string,
 };
