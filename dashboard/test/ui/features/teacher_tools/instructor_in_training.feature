@@ -6,7 +6,7 @@ Feature: Self Paced PL Instructor in Training
     And I sign in as "Universal Instructor"
     And I get universal instructor access
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/1"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
 
     Then I press the first ".uitest-teacherOnlyTab" element
     And I wait to see ".editor-column"
@@ -19,7 +19,7 @@ Feature: Self Paced PL Instructor in Training
     Given I create an authorized teacher-associated student named "Manuel"
     And I sign in as "Teacher_Manuel"
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/1"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
 
     Then I press the first ".uitest-teacherOnlyTab" element
     And I wait to see ".editor-column"
@@ -31,7 +31,7 @@ Feature: Self Paced PL Instructor in Training
   Scenario: View Instructor In Training Applab Level as Unverified Teacher
     Given I create a teacher named "Ms_Frizzle"
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/1"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
 
     And element ".uitest-instructionsTab" is visible
     And element ".uitest-teacherOnlyTab" is not visible
@@ -43,7 +43,7 @@ Feature: Self Paced PL Instructor in Training
     And I get universal instructor access
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/2"
     And I dismiss the hoc guide dialog
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
 
     Then I press the first ".uitest-teacherOnlyTab" element
     And I wait to see ".editor-column"
@@ -56,7 +56,7 @@ Feature: Self Paced PL Instructor in Training
     And I sign in as "Teacher_Manuel"
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/2"
     And I dismiss the hoc guide dialog
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
 
     Then I press the first ".uitest-teacherOnlyTab" element
     And I wait to see ".editor-column"
@@ -67,7 +67,7 @@ Feature: Self Paced PL Instructor in Training
   Scenario: View Instructor In Training Dance Level as Unverified Teacher
     Given I create a teacher named "Ms_Frizzle"
     Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/2"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
 
     And element ".uitest-instructionsTab" is visible
     And element ".uitest-teacherOnlyTab" is not visible

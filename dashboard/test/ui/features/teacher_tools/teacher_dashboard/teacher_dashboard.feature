@@ -2,12 +2,17 @@
 Feature: Using the teacher dashboard
 
   Scenario: Visiting student name URLs in teacher dashboard
+    Given I am on "http://studio.code.org"
+    When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
-    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1?blocklyVersion=google"
+    Given I am assigned to unit "allthethings"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
 
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
     When I click selector "a:contains(Untitled Section)" once I see it to load a new page
+    And I wait until element "#ui-test-toggle-progress-view" is visible
+    And I click selector "#ui-test-toggle-progress-view"
     And I wait until element "#uitest-teacher-dashboard-nav" is visible
     And check that the URL contains "/teacher_dashboard/sections/"
     And I wait until element "#uitest-course-dropdown" is visible
@@ -19,9 +24,11 @@ Feature: Using the teacher dashboard
     And check that the URL contains "viewAs=Instructor"
 
   Scenario: Viewing a student
+    Given I am on "http://studio.code.org"
+    When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
     Given I am assigned to unit "allthethings"
-    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1?blocklyVersion=google"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
     And I complete the free response on "http://studio.code.org/s/allthethings/lessons/27/levels/1"
     And I submit the assessment on "http://studio.code.org/s/allthethings/lessons/33/levels/1"
 
@@ -31,17 +38,11 @@ Feature: Using the teacher dashboard
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
-    Then I append "/?enableExperiments=section_progress_v2" to the URL
-    Then I click selector "#ui-close-dialog"
-    And I wait until element "#uitest-course-dropdown" is visible
-    And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
-
-    # Toggle to V2 progress view
-    Then I click selector "#ui-test-toggle-progress-view"
     And I wait until element "h6:contains(Icon Key)" is visible
     And I wait until element "#ui-test-progress-table-v2" is visible
     Then I click selector "#ui-test-toggle-progress-view"
     And I wait until element "#uitest-course-dropdown" is visible
+    And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
 
     # Stats tab
     And I click selector "#uitest-teacher-dashboard-nav a:contains(Stats)" once I see it
@@ -107,7 +108,7 @@ Feature: Using the teacher dashboard
 
   Scenario: Toggling student progress
     Given I create an authorized teacher-associated student named "Sally"
-    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1?blocklyVersion=google"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
     And I complete the free response on "http://studio.code.org/s/allthethings/lessons/27/levels/1"
     And I submit the assessment on "http://studio.code.org/s/allthethings/lessons/33/levels/1"
 
@@ -130,7 +131,7 @@ Feature: Using the teacher dashboard
     # Create an applab project and generate a thumbnail
 
     When I am on "http://studio.code.org/projects/applab/new"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I ensure droplet is in text mode
     And I append text to droplet "createCanvas('id', 320, 450);\nsetFillColor('red');\ncircle(160, 225, 160);"
     And I press "runButton"
@@ -144,7 +145,7 @@ Feature: Using the teacher dashboard
     # Create a gamelab project and generate a thumbnail
 
     When I am on "http://studio.code.org/projects/gamelab/new"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I ensure droplet is in text mode
     And I append text to droplet "\nfill('orange');\nellipse(200,200,400,400);"
     And I press "runButton"
@@ -168,12 +169,12 @@ Feature: Using the teacher dashboard
     # until it is resolved we want to make sure thumbnails include predraw.
 
     When I am on "http://studio.code.org/s/allthethings/lessons/3/levels/8"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I press "runButton"
     And I wait until element ".project_updated_at" contains text "Saved"
     And I wait until initial thumbnail capture is complete
     And I press the first ".project_remix" element to load a new page
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
 
     # Create a dance party project level and generate a thumbnail.
 
@@ -181,13 +182,13 @@ Feature: Using the teacher dashboard
     # an existing project-backed level, and then run the project.
 
     When I am on "http://studio.code.org/s/dance/lessons/1/levels/13"
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I wait for 3 seconds
     And I wait until I don't see selector "#p5_loading"
     And I click selector "#x-close" once I see it
     And I close the instructions overlay if it exists
     And I press the first ".project_remix" element to load a new page
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     And I press "runButton"
     And I wait until element ".project_updated_at" contains text "Saved"
     And I wait until initial thumbnail capture is complete
@@ -237,46 +238,56 @@ Feature: Using the teacher dashboard
     And element ".announcement-notification" contains text matching "You are already an instructor for section"
 
   Scenario: Decline invitation to new progress view
+    Given I am on "http://studio.code.org"
+    When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
     Given I am assigned to unit "allthethings"
-    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1?blocklyVersion=google"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
 
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
-    Then I append "/?enableExperiments=section_progress_v2" to the URL
+    Then I click selector "#ui-test-toggle-progress-view"
+    And I reload the page
     Then I click selector "#ui-close-dialog"
     And I wait until element "#uitest-course-dropdown" is visible
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
 
   Scenario: Accept invitation to new progress view and see new view immediately. 
+    Given I am on "http://studio.code.org"
+    When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
     Given I am assigned to unit "allthethings"
-    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1?blocklyVersion=google"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
 
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
-    Then I append "/?enableExperiments=section_progress_v2" to the URL
+    Then I click selector "#ui-test-toggle-progress-view"
+    And I reload the page
     Then I click selector "#accept-invitation"
     And I wait until element "h6:contains(Icon Key)" is visible
     And I wait until element "#ui-test-progress-table-v2" is visible
 
   Scenario: Delay responding to invitation to new progress view and see old view immediately. 
+    Given I am on "http://studio.code.org"
+    When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
     Given I create an authorized teacher-associated student named "Sally"
     Given I am assigned to unit "allthethings"
-    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1?blocklyVersion=google"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
 
     When I sign in as "Teacher_Sally" and go home
     And I get levelbuilder access
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
-    Then I append "/?enableExperiments=section_progress_v2" to the URL
+    Then I click selector "#ui-test-toggle-progress-view"
+    And I wait until element "#uitest-course-dropdown" is visible
+    And I reload the page
     Then I click selector "#remind-me-later-option"
     And I wait until element "#uitest-course-dropdown" is visible
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"

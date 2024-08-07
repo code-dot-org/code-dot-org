@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import SearchBar from '@cdo/apps/sharedComponents/SearchBar';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import SearchBar from '@cdo/apps/templates/SearchBar';
 import msg from '@cdo/locale';
 
 import experiments from '../../util/experiments';

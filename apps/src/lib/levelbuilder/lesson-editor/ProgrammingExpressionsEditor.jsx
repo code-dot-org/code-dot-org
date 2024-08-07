@@ -3,6 +3,8 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import Dialog from '@cdo/apps/legacySharedComponents/Dialog';
 import FindProgrammingExpressionDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindProgrammingExpressionDialog';
 import {
   addProgrammingExpression,
@@ -12,8 +14,6 @@ import {
   programmingExpressionShape,
   programmingEnvironmentShape,
 } from '@cdo/apps/lib/levelbuilder/shapes';
-import Button from '@cdo/apps/templates/Button';
-import Dialog from '@cdo/apps/templates/Dialog';
 import color from '@cdo/apps/util/color';
 
 import {lessonEditorTableStyles} from './TableConstants';

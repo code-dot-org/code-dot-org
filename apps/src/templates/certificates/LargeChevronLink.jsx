@@ -4,8 +4,8 @@ import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
 
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import color from '../../util/color';
-import FontAwesome from '../FontAwesome';
 
 class LargeChevronLink extends Component {
   static propTypes = {

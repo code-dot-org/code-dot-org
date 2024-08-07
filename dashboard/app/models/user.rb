@@ -50,13 +50,13 @@
 #  races                    :string(255)
 #  primary_contact_info_id  :integer
 #  unlock_token             :string(255)
-#  cap_state                :string(1)
-#  cap_state_date           :datetime
+#  cap_status               :string(1)
+#  cap_status_date          :datetime
 #
 # Indexes
 #
 #  index_users_on_birthday                             (birthday)
-#  index_users_on_cap_state_and_cap_state_date         (cap_state,cap_state_date)
+#  index_users_on_cap_status_and_cap_status_date       (cap_status,cap_status_date)
 #  index_users_on_current_sign_in_at                   (current_sign_in_at)
 #  index_users_on_deleted_at                           (deleted_at)
 #  index_users_on_email_and_deleted_at                 (email,deleted_at)
@@ -113,6 +113,8 @@ class User < ApplicationRecord
   #   ai_rubrics_tour_seen: Tracks whether user has viewed the AI rubric product tour.
   #   lti_roster_sync_enabled: Enable/disable LTI roster syncing for a User.
   #   user_provided_us_state: Indicates if the us_state was provided by the user as opposed to being interpolated.
+  #   failed_attempts and locked_at: Used by Devise#Lockable to prevent
+  #     brute-force password attempts
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -159,6 +161,8 @@ class User < ApplicationRecord
     date_progress_table_invitation_last_delayed
     user_provided_us_state
     lms_landing_opted_out
+    failed_attempts
+    locked_at
   )
 
   attr_accessor(
@@ -181,10 +185,9 @@ class User < ApplicationRecord
   )
 
   # Include default devise modules. Others available are:
-  # :token_authenticatable, :confirmable,
-  # :lockable, :timeoutable
+  # :token_authenticatable, :confirmable, :timeoutable
   devise :invitable, :database_authenticatable, :registerable, :omniauthable,
-    :recoverable, :rememberable, :trackable
+    :recoverable, :rememberable, :trackable, :lockable
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
 
@@ -283,6 +286,8 @@ class User < ApplicationRecord
 
   after_create :associate_with_potential_pd_enrollments
 
+  before_create :save_show_progress_table_v2
+
   after_save :save_email_preference, if: -> {email_preference_opt_in.present?}
 
   after_save :save_parent_email_preference, if: :parent_email_preference_opt_in_required?
@@ -321,6 +326,14 @@ class User < ApplicationRecord
     self.lti_roster_sync_enabled = ActiveRecord::Type::Boolean.new.cast(lti_roster_sync_enabled)
   end
 
+  # TODO(P20-1055): Remove in "CAP data migration Phase 2" once new CAP columns are populated
+  before_save if: -> {property_changed?('child_account_compliance_state')} do
+    self.cap_status = child_account_compliance_state.presence
+  end
+  before_save if: -> {property_changed?('child_account_compliance_state_last_updated')} do
+    self.cap_status_date = child_account_compliance_state_last_updated.presence
+  end
+
   def save_email_preference
     if teacher?
       EmailPreference.upsert!(
@@ -355,12 +368,12 @@ class User < ApplicationRecord
     end
   end
 
-  # after_create :send_new_teacher_email
-  # def send_new_teacher_email
-  # TODO: it's not easy to pass cookies into an after_create call, so for now while this is behind a page mode
-  # flag, we send the email from the controller instead. This should ultimately live here, though.
-  # TeacherMailer.new_teacher_email(self).deliver_now if teacher?
-  # end
+  # Puts teachers directly into the progress table v2 view when new account is created.
+  def save_show_progress_table_v2
+    if teacher?
+      self.show_progress_table_v2 = true
+    end
+  end
 
   # Set validation type to VALIDATION_NONE, and deduplicate the school_info object
   # based on the passed attributes.
@@ -2248,7 +2261,7 @@ class User < ApplicationRecord
       has_ever_signed_in: has_ever_signed_in?,
       ai_tutor_access_denied: !!ai_tutor_access_denied,
       at_risk_age_gated: Policies::ChildAccount.parent_permission_required?(self),
-      child_account_compliance_state: cap_state,
+      child_account_compliance_state: cap_status,
       latest_permission_request_sent_at: latest_parental_permission_request&.updated_at,
     }
   end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_07_23_202827) do
+ActiveRecord::Schema.define(version: 2024_08_06_035905) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -68,6 +68,17 @@ ActiveRecord::Schema.define(version: 2024_07_23_202827) do
     t.index ["script_id"], name: "index_ai_tutor_interactions_on_script_id"
     t.index ["user_id", "level_id", "script_id"], name: "index_ati_user_level_script"
     t.index ["user_id"], name: "index_ai_tutor_interactions_on_user_id"
+  end
+
+  create_table "aichat_events", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "level_id"
+    t.integer "script_id"
+    t.integer "project_id"
+    t.json "aichat_event"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id", "level_id", "script_id"], name: "index_ace_user_level_script"
   end
 
   create_table "aichat_sessions", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
@@ -2388,10 +2399,10 @@ ActiveRecord::Schema.define(version: 2024_07_23_202827) do
     t.string "races"
     t.integer "primary_contact_info_id"
     t.string "unlock_token"
-    t.string "cap_state", limit: 1
-    t.datetime "cap_state_date"
+    t.string "cap_status", limit: 1
+    t.datetime "cap_status_date"
     t.index ["birthday"], name: "index_users_on_birthday"
-    t.index ["cap_state", "cap_state_date"], name: "index_users_on_cap_state_and_cap_state_date"
+    t.index ["cap_status", "cap_status_date"], name: "index_users_on_cap_status_and_cap_status_date"
     t.index ["current_sign_in_at"], name: "index_users_on_current_sign_in_at"
     t.index ["deleted_at"], name: "index_users_on_deleted_at"
     t.index ["email", "deleted_at"], name: "index_users_on_email_and_deleted_at"

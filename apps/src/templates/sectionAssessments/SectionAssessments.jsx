@@ -3,8 +3,8 @@ import React, {Component} from 'react';
 import {CSVLink} from 'react-csv';
 import {connect} from 'react-redux';
 
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {
   asyncLoadAssessments,
@@ -198,7 +198,7 @@ class SectionAssessments extends Component {
       this.props.assessmentId === ASSESSMENT_FEEDBACK_OPTION_ID;
 
     return (
-      <div>
+      <div data-testid={'assessments-tab'}>
         <div style={styles.selectors}>
           <div style={styles.unitSelection}>
             <div style={{...h3Style, ...styles.header}}>

@@ -1,0 +1,42 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T21:33:38.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Debug the Program\r\n\r\nA weather tracking app needs to remove outdated weather data from the list of weather data, but it has a bug 🪲\r\n\r\nFind and fix the error in the program.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "video_key": "csa_remving_data_from_an_arraylist",
+    "display_name": "Weather Tracking",
+    "bubble_choice_description": "A weather tracking app needs to remove outdated weather data from the list of weather data, but it has a bug!",
+    "thumbnail_url": "https://images.code.org/58eccb080267df3802a6539419ab6fac-weather-app.png",
+    "encrypted_validation": "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\nczGjgPY7ci1nM1mU4gIPYZH/mAIlYXgKPMWPVA==\n",
+    "encrypted_exemplar_sources": "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\nKWA=\n",
+    "start_sources": {
+      "WeatherRunner.java": {
+        "text": "public class WeatherRunner {\n  public static void main(String[] args) {\n    \n    // Creates a WeatherApp object\n    WeatherApp app = new WeatherApp();\n\n    // Adds weather\n    app.addWeather(new Weather(\"Monday\", \"sunny\"));\n    app.addWeather(new Weather(\"Tuesday\", \"sunny\"));\n    app.addWeather(new Weather(\"Wednesay\", \"cloudy\"));\n\n    // Remove weather\n    app.removeWeather(\"Monday\");\n\n    System.out.println(app.getWeathers());\n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "WeatherApp.java": {
+        "text": "import java.util.ArrayList;\n\n/*\n * Represents a Weather App\n */\npublic class WeatherApp {\n\n  private ArrayList<Weather> weathers;\n\n  public WeatherApp() {\n    weathers = new ArrayList<Weather>(); // the list of weather\n  }\n\n  /*\n   * Returns the ArrayList weathers\n   */\n  public ArrayList<Weather> getWeathers() {\n    return weathers;\n  }\n  \n  /*\n   * Adds a weather\n   */\n  public void addWeather(Weather newWeather) {\n    weathers.add(newWeather);\n  }\n\n  /*\n   * Removes a weather\n   */\n  public void removeWeather(String dayOfWeek) {\n    int index = 0;\n    for (Weather w : weathers) {\n      if (w.getDayOfWeek().equals(dayOfWeek)) {\n        weathers.remove(index);\n      }\n      index++;\n    }\n  }\n  \n}\n",
+        "isVisible": true,
+        "tabOrder": 1
+      },
+      "Weather.java": {
+        "text": "/*\n * Represents weather for a day of the week\n */\npublic class Weather {\n  private String dayOfWeek; // the day of the week\n  private String weather;   // the weather\n\n  public Weather(String dayOfWeek, String weather) {\n    this.dayOfWeek = dayOfWeek;\n    this.weather = weather;\n  }\n\n  /*\n   * Returns the day of the week\n   */\n  public String getDayOfWeek() {\n    return dayOfWeek;\n  }\n\n  /*\n   * Returns a String containing the weather's information\n   */\n  public String toString() {\n    return dayOfWeek + \": \" + weather;\n  }\n}",
+        "isVisible": true,
+        "tabOrder": 2
+      }
+    },
+    "name_suffix": "_pilot-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T21:33:38.593+00:00\",\"changed\":[\"cloned from \\\"CSA U6L8-L6b_2025\\\"\"],\"cloned_from\":\"CSA U6L8-L6b_2025\"}]"
+}]]></config>
+</Javalab>

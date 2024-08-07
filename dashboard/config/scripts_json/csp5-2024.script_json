@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-11 16:36:42 UTC",
+    "serialized_at": "2024-07-24 04:42:32 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3452,6 +3452,18 @@
       }
     },
     {
+      "name": "CSP Unit 5 - Slides",
+      "url": "https://drive.google.com/drive/folders/1L6OgsxtfrUQuygTGR4ERA43WRMvmi-nU?usp=drive_link",
+      "key": "csp_unit_5_-_slides_1",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_5_-_slides_1"
+      }
+    },
+    {
       "name": "Data Analysis Process",
       "url": "https://youtu.be/uzESOw7tmzw",
       "key": "data_analysis_process",
@@ -3942,6 +3954,12 @@
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
+        "script.name": "csp5-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_unit_5_-_slides_1",
         "script.name": "csp5-2024"
       }
     },

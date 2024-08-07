@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {unitCalendarLessonChunk} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 import color from '@cdo/apps/util/color';
 
