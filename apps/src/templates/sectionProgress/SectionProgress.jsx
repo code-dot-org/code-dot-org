@@ -43,6 +43,7 @@ class SectionProgress extends Component {
     //Provided by redux
     scriptId: PropTypes.number,
     sectionId: PropTypes.number,
+    coursesWithProgress: PropTypes.array.isRequired,
     currentView: PropTypes.oneOf(Object.values(ViewType)),
     setCurrentView: PropTypes.func.isRequired,
     scriptData: unitDataPropType,
@@ -62,16 +63,10 @@ class SectionProgress extends Component {
   }
 
   componentDidMount() {
-    if (this.props.scriptId) {
-      loadUnitProgress(this.props.scriptId, this.props.sectionId);
-    }
+    loadUnitProgress(this.props.scriptId, this.props.sectionId);
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.scriptId !== this.props.scriptId) {
-      loadUnitProgress(this.props.scriptId, this.props.sectionId);
-    }
-
     if (this.levelDataInitialized() && !this.state.reportedInitialRender) {
       logToCloud.addPageAction(
         logToCloud.PageAction.SectionProgressRenderedWithData,
@@ -106,6 +101,7 @@ class SectionProgress extends Component {
 
   onChangeScript = scriptId => {
     this.props.setScriptId(scriptId);
+    loadUnitProgress(scriptId, this.props.sectionId);
 
     this.recordEvent('change_script', {
       old_script_id: this.props.scriptId,
@@ -164,6 +160,7 @@ class SectionProgress extends Component {
 
   render() {
     const {
+      coursesWithProgress,
       currentView,
       scriptId,
       scriptData,
@@ -190,7 +187,11 @@ class SectionProgress extends Component {
             <div style={{...h3Style, ...styles.heading}}>
               {i18n.selectACourse()}
             </div>
-            <UnitSelector scriptId={scriptId} onChange={this.onChangeScript} />
+            <UnitSelector
+              coursesWithProgress={coursesWithProgress}
+              scriptId={scriptId}
+              onChange={this.onChangeScript}
+            />
           </div>
           {levelDataInitialized && (
             <div style={styles.toggle}>
@@ -285,6 +286,7 @@ export default connect(
   state => ({
     scriptId: state.unitSelection.scriptId,
     sectionId: state.teacherSections.selectedSectionId,
+    coursesWithProgress: state.unitSelection.coursesWithProgress,
     currentView: state.sectionProgress.currentView,
     scriptData: getCurrentUnitData(state),
     isLoadingProgress: state.sectionProgress.isLoadingProgress,

@@ -39,7 +39,7 @@ function TeacherDashboard({
   sectionId,
   sectionName,
   studentCount,
-  anyStudentHasProgress,
+  coursesWithProgress,
   showAITutorTab,
   sectionProviderName,
 }) {
@@ -183,7 +183,7 @@ function TeacherDashboard({
           path={TeacherDashboardPath.stats}
           element={applyV1TeacherDashboardWidth(<StatsTableWithData />)}
         />
-        {!anyStudentHasProgress && (
+        {coursesWithProgress.length === 0 && (
           <Route element={generateEmptySectionGraphic(true, false)} />
         )}
         <Route
@@ -231,7 +231,7 @@ TeacherDashboard.propTypes = {
   sectionId: PropTypes.number.isRequired,
   sectionName: PropTypes.string.isRequired,
   studentCount: PropTypes.number.isRequired,
-  anyStudentHasProgress: PropTypes.bool.isRequired,
+  coursesWithProgress: PropTypes.array.isRequired,
   showAITutorTab: PropTypes.bool,
   sectionProviderName: PropTypes.string,
 };
