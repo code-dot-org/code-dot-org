@@ -67,7 +67,6 @@ const VersionHistoryDropdown: React.FunctionComponent<
   const viewVersion = useCallback(
     (version: ProjectVersion) => {
       // TODO: loading
-      console.log('loading version');
       dispatch(loadVersion({versionId: version.versionId}));
       closeDropdown();
     },
