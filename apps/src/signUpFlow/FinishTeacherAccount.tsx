@@ -42,15 +42,15 @@ const FinishTeacherAccount: React.FunctionComponent<{
   return (
     <div className={style.finishAccountContainer}>
       <div className={style.headerTextContainer}>
-        <Heading2>{locale.finish_teacher_account_title()}</Heading2>
-        <BodyTwoText>{locale.finish_teacher_account_subtitle()}</BodyTwoText>
+        <Heading2>{locale.finish_creating_teacher_account()}</Heading2>
+        <BodyTwoText>{locale.tailor_experience()}</BodyTwoText>
       </div>
       <div className={style.inputContainer}>
         <BodyTwoText
           className={style.labelText}
           visualAppearance={'heading-xs'}
         >
-          {locale.account_name_input()}
+          {locale.what_do_you_want_to_be_called()}
         </BodyTwoText>
         <input
           type="text"
@@ -59,7 +59,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
           value={name}
         />
         <BodyThreeText>
-          {locale.finish_teacher_account_name_input_desc()}
+          {locale.this_is_what_your_students_will_see()}
         </BodyThreeText>
         <SchoolDataInputs usIp={usIp} includeHeaders={false} />
         <div className={style.emailOptInContainer}>
@@ -67,7 +67,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
             className={style.labelText}
             visualAppearance={'heading-xs'}
           >
-            {locale.stay_updated_email_opt_in()}
+            {locale.keep_me_updated()}
           </BodyTwoText>
           <span className={style.emailOptInCheckboxContainer}>
             <div className={style.emailOptInCheckbox}>
@@ -82,11 +82,11 @@ const FinishTeacherAccount: React.FunctionComponent<{
               className={style.emailOptInLabel}
               visualAppearance={'body-two'}
             >
-              {locale.stay_updated_email_opt_in_desc()}
+              {locale.get_informational_emails()}
             </BodyTwoText>
           </span>
           <BodyThreeText className={style.emailOptInFootnote}>
-            {locale.stay_updated_email_opt_in_footnote()}
+            {locale.after_creating_your_account()}
           </BodyThreeText>
         </div>
       </div>

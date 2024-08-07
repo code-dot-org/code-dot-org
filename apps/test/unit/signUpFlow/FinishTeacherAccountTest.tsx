@@ -33,12 +33,12 @@ describe('FinishTeacherAccount', () => {
     renderDefault(true);
 
     // Renders page title
-    screen.getByText(locale.finish_teacher_account_title());
+    screen.getByText(locale.finish_creating_teacher_account());
 
     // Renders questions shown regardless of usIp
-    screen.getByText(locale.account_name_input());
+    screen.getByText(locale.what_do_you_want_to_be_called());
     screen.getByText(i18n.whatCountry());
-    screen.getByText(locale.stay_updated_email_opt_in());
+    screen.getByText(locale.keep_me_updated());
 
     // Renders school zip and select school questions if usIp is true
     screen.getByText(i18n.enterYourSchoolZip());
@@ -53,12 +53,12 @@ describe('FinishTeacherAccount', () => {
     renderDefault(false);
 
     // Renders page title
-    screen.getByText(locale.finish_teacher_account_title());
+    screen.getByText(locale.finish_creating_teacher_account());
 
     // Renders questions shown regardless of usIp
-    screen.getByText(locale.account_name_input());
+    screen.getByText(locale.what_do_you_want_to_be_called());
     screen.getByText(i18n.whatCountry());
-    screen.getByText(locale.stay_updated_email_opt_in());
+    screen.getByText(locale.keep_me_updated());
 
     // Renders school name/organization if usIp is false
     expect(screen.queryByText(i18n.enterYourSchoolZip())).toBe(null);
