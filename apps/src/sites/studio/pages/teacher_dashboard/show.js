@@ -33,19 +33,16 @@ import teacherSections, {
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import experiments from '@cdo/apps/util/experiments';
 
-import {
-  setCoursesWithProgress,
-  setScriptId,
-} from '../../../../redux/unitSelectionRedux';
+import {setScriptId} from '../../../../redux/unitSelectionRedux';
 
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
 const {
+  anyStudentHasProgress,
   section,
   sections,
   localeCode,
   hasSeenStandardsReportInfo,
-  coursesWithProgress,
   canViewStudentAIChatMessages,
 } = scriptData;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
@@ -98,16 +95,6 @@ $(document).ready(function () {
   if (defaultScriptId) {
     store.dispatch(setScriptId(defaultScriptId));
   }
-  // Reorder coursesWithProgress so that the current section is at the top and other sections are in order from newest to oldest
-  const reorderedCourses = [
-    ...coursesWithProgress.filter(
-      course => course.id !== selectedSection.course_version_id
-    ),
-    ...coursesWithProgress.filter(
-      course => course.id === selectedSection.course_version_id
-    ),
-  ].reverse();
-  store.dispatch(setCoursesWithProgress(reorderedCourses));
 
   const showAITutorTab = canViewStudentAIChatMessages;
 
@@ -126,7 +113,7 @@ $(document).ready(function () {
               sectionId={selectedSection.id}
               sectionName={selectedSection.name}
               studentCount={selectedSection.students.length}
-              coursesWithProgress={coursesWithProgress}
+              anyStudentHasProgress={anyStudentHasProgress}
               showAITutorTab={showAITutorTab}
               sectionProviderName={sectionProviderName(
                 store.getState(),

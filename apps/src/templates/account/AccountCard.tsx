@@ -24,32 +24,50 @@ const AccountCard: React.FunctionComponent<{
   buttonText: string;
   buttonType: ButtonType;
   href: string;
-}> = ({id, icon, title, content, buttonText, buttonType, href}) => (
+  iconList?: string[];
+}> = ({id, icon, title, content, buttonText, buttonType, href, iconList}) => (
   <Card data-testid={id}>
-    <CardHeader
-      title={title}
-      icon={
-        <FontAwesomeV6Icon
-          className={classNames(styles.cardIcon, 'fa-2x')}
-          iconName={icon}
-        />
-      }
-    />
-    <CardContent className={classNames(styles.cardContent)}>
-      {content}
-    </CardContent>
-    <CardActions>
-      <LinkButton
-        className={styles.button}
-        color={
-          buttonType === 'primary' ? buttonColors.purple : buttonColors.black
+    <div className={styles.contentWrapper}>
+      <CardHeader
+        title={title}
+        icon={
+          <FontAwesomeV6Icon
+            className={classNames(styles.cardIcon, 'fa-2x')}
+            iconName={icon}
+          />
         }
-        size="m"
-        text={buttonText}
-        type={buttonType}
-        href={href}
       />
-    </CardActions>
+      <CardContent className={classNames(styles.cardContent)}>
+        {content}
+        {iconList && (
+          <ul className={styles.iconList}>
+            {iconList.map((item, index) => (
+              <li key={index}>
+                <FontAwesomeV6Icon
+                  className={styles.icon}
+                  iconName="check-circle"
+                />
+                {item}
+              </li>
+            ))}
+          </ul>
+        )}
+      </CardContent>
+    </div>
+    <div className={styles.buttonWrapper}>
+      <CardActions>
+        <LinkButton
+          className={styles.button}
+          color={
+            buttonType === 'primary' ? buttonColors.purple : buttonColors.black
+          }
+          size="m"
+          text={buttonText}
+          type={buttonType}
+          href={href}
+        />
+      </CardActions>
+    </div>
   </Card>
 );
 

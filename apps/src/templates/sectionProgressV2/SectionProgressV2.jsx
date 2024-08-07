@@ -52,7 +52,7 @@ function SectionProgressV2({
   }, [unitData, isLevelProgressLoaded]);
 
   React.useEffect(() => {
-    if (!unitData && !isLoadingProgress && !isRefreshingProgress) {
+    if (!unitData && !isLoadingProgress && !isRefreshingProgress && scriptId) {
       loadUnitProgress(scriptId, sectionId);
     }
   }, [unitData, isLoadingProgress, isRefreshingProgress, scriptId, sectionId]);
