@@ -467,14 +467,6 @@ export const asyncLoadSectionData = id => dispatch => {
     });
 };
 
-export const asyncLoadCourseOfferings = () => dispatch => {
-  fetchJSON('/dashboardapi/sections/valid_course_offerings')
-    .then(offerings => dispatch(setCourseOfferings(offerings)))
-    .catch(err => {
-      console.error(err.message);
-    });
-};
-
 /**
  * Load coteacher invites
  */
@@ -703,6 +695,7 @@ function newSectionData(participantType) {
     courseId: null,
     courseOfferingId: null,
     courseVersionId: null,
+    courseDisplayName: null,
     unitId: null,
     hidden: false,
     restrictSection: false,
@@ -1341,6 +1334,7 @@ export function getSectionRows(state, sectionIds) {
       'id',
       'name',
       'courseVersionName',
+      'courseDisplayName',
       'loginType',
       'loginTypeName',
       'studentCount',
@@ -1381,6 +1375,7 @@ export const sectionFromServerSection = serverSection => ({
   code: serverSection.code,
   courseOfferingId: serverSection.course_offering_id,
   courseVersionId: serverSection.course_version_id,
+  courseDisplayName: serverSection.course_display_name,
   unitId: serverSection.unit_id,
   courseId: serverSection.course_id,
   hidden: serverSection.hidden,
