@@ -100,8 +100,9 @@ module Services
             )
             # Group ID: S07FB3XSAR5 - teacher-tools-on-call would be notified
             ChatClient.log(
-              "<!subteam^S07FB3XSAR5> Please follow instructions in https://docs.google.com/document/d/1mBY56DeAzrwTM3CVIOFho3azTi9mudE37ZQrVZXxaMA/edit#heading=h.axfu5or8cueg to troubleshoot",
-              color: 'red'
+              "Please follow instructions in https://docs.google.com/document/d/1mBY56DeAzrwTM3CVIOFho3azTi9mudE37ZQrVZXxaMA/edit#heading=h.axfu5or8cueg to troubleshoot",
+              color: 'red',
+              notify_group: 'teacher-tools-on-call'
             )
             raise exception
           end
@@ -225,7 +226,8 @@ module Services
           # Group ID: S07FB3XSAR5 - teacher-tools-on-call would be notified
           ChatClient.log(
             "<!subteam^S07FB3XSAR5> Please follow instructions in https://docs.google.com/document/d/1mBY56DeAzrwTM3CVIOFho3azTi9mudE37ZQrVZXxaMA/edit#heading=h.axfu5or8cueg to troubleshoot",
-            color: 'yellow'
+            color: 'yellow',
+            notify_group: 'teacher-tools-on-call'
           )
           return nil
         end

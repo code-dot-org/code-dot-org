@@ -8,6 +8,10 @@ require 'cdo/slack'
 # This class is intended to be a thin wrapper around our chat client
 # implementation (namely Slack as of February 2017).
 class ChatClient
+  USER_GROUP_ID_MAP = {
+    teacher_tools_on_call: 'S07FB3XSAR5'
+  }.freeze
+
   @@name = CDO.name[0..14]
   @@logger = nil
 
@@ -35,6 +39,8 @@ class ChatClient
     unless CDO.hip_chat_logging
       return
     end
+
+    message = "<!subteam^#{USER_GROUP_ID_MAP[group_name.to_sym]}> #{message}" if options[:notify_group]
 
     Slack.message(
       message.to_s,
