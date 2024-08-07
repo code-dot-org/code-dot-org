@@ -3,6 +3,7 @@ import {useEffect} from 'react';
 import {getCurrentLevel} from '@cdo/apps/code-studio/progressReduxSelectors';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {Channel, LevelProperties} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -22,6 +23,22 @@ function useUpdateAnalytics(analyticsReporter: AnalyticsReporter) {
   useEffect(() => {
     analyticsReporter.startSession();
 
+    const startSession = async (
+      levelProperties: LevelProperties,
+      channel: Channel | undefined
+    ) => {
+      if (levelProperties.appName !== 'music') {
+        return;
+      }
+
+      await analyticsReporter.startSession();
+      analyticsReporter.setProjectProperty(
+        'levelType',
+        levelProperties.isProjectLevel ? 'Standalone Project' : 'Level'
+      );
+      analyticsReporter.setProjectProperty('channelId', channel?.id);
+    };
+
     const endSession = () => {
       if (analyticsReporter.isSessionInProgress()) {
         analyticsReporter.endSession();
@@ -32,18 +49,7 @@ function useUpdateAnalytics(analyticsReporter: AnalyticsReporter) {
     const lifecycleNotifier = Lab2Registry.getInstance().getLifecycleNotifier();
     lifecycleNotifier.addListener(
       LifecycleEvent.LevelLoadCompleted,
-      async (levelProperties, channel) => {
-        if (levelProperties.appName !== 'music') {
-          return;
-        }
-
-        await analyticsReporter.startSession();
-        analyticsReporter.setProjectProperty(
-          'levelType',
-          levelProperties.isProjectLevel ? 'Standalone Project' : 'Level'
-        );
-        analyticsReporter.setProjectProperty('channelId', channel?.id);
-      }
+      startSession
     );
 
     lifecycleNotifier.addListener(
@@ -59,7 +65,22 @@ function useUpdateAnalytics(analyticsReporter: AnalyticsReporter) {
     // we need a way of reporting analytics when the user navigates away from the page. Check with Amplitude for the
     // correct approach.
     window.addEventListener('beforeunload', endSession);
-    return () => window.removeEventListener('beforeunload', endSession);
+
+    return () => {
+      window.removeEventListener('beforeunload', endSession);
+      lifecycleNotifier.removeListener(
+        LifecycleEvent.LevelLoadCompleted,
+        startSession
+      );
+      lifecycleNotifier.removeListener(
+        LifecycleEvent.LevelChangeRequested,
+        endSession
+      );
+      lifecycleNotifier.removeListener(
+        LifecycleEvent.LevelLoadStarted,
+        endSession
+      );
+    };
   }, [analyticsReporter]);
 
   const sessionInProgress = analyticsReporter.isSessionInProgress();
