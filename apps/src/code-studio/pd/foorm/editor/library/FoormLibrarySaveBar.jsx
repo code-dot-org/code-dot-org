@@ -12,8 +12,8 @@ import {
 import {connect} from 'react-redux';
 import Select from 'react-select/lib/Select';
 
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import ModalHelpTip from '@cdo/apps/lib/ui/ModalHelpTip';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 
 import ConfirmationDialog from '../../../components/confirmation_dialog';

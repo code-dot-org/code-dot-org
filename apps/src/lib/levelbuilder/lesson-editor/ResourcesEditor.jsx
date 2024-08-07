@@ -4,13 +4,13 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 
+import Dialog from '@cdo/apps/legacySharedComponents/Dialog';
 import {
   addResource,
   editResource,
   removeResource,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import Dialog from '@cdo/apps/templates/Dialog';
 import color from '@cdo/apps/util/color';
 
 import AddResourceDialog from './AddResourceDialog';

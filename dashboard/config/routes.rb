@@ -194,6 +194,8 @@ Dashboard::Application.routes.draw do
       post '/users/finish_sign_up', to: 'registrations#new'
       get '/users/new_sign_up', to: 'registrations#new_sign_up'
       get '/users/finish_teacher_account', to: 'registrations#finish_teacher_account'
+      # Part of the new sign up flow - work in progress
+      get '/users/new_sign_up/account_type', to: 'registrations#account_type'
       patch '/dashboardapi/users', to: 'registrations#update'
       patch '/users/upgrade', to: 'registrations#upgrade'
       patch '/users/set_student_information', to: 'registrations#set_student_information'
@@ -874,6 +876,7 @@ Dashboard::Application.routes.draw do
 
     get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
     get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
+    get 'dashboardapi/section_courses/:section_id', to: 'api#show_courses_with_progress'
     scope 'dashboardapi', module: 'api/v1' do
       concerns :section_api_routes
       concerns :assessments_routes

@@ -12,32 +12,26 @@ import {isProductionEnvironment} from '@cdo/apps/utils';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+import Notification, {
+  NotificationType,
+} from '../../sharedComponents/Notification';
 import DropdownButton from '../DropdownButton';
 import {
   convertStudentDataToArray,
   filterAgeGatedStudents,
   loadSectionStudentData,
 } from '../manageStudents/manageStudentsRedux';
-import Notification, {NotificationType} from '../Notification';
 import {AgeGatedStudentsBanner} from '../policy_compliance/AgeGatedStudentsModal/AgeGatedStudentsBanner';
 
-import FontAwesome from './../FontAwesome';
 import {switchToSection, recordSwitchToSection} from './sectionHelpers';
-import {
-  asyncLoadCourseOfferings,
-  beginEditingSection,
-  getAssignmentName,
-  sortedSectionsList,
-} from './teacherSectionsRedux';
+import {beginEditingSection, sortedSectionsList} from './teacherSectionsRedux';
 
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
 function TeacherDashboardHeader({
   sections,
   selectedSection,
-  assignmentName,
-  openEditSectionDialog,
-  asyncLoadCourseOfferings,
   isRtl,
   ageGatedStudentsCount,
   sectionId,
@@ -59,9 +53,8 @@ function TeacherDashboardHeader({
   };
 
   React.useEffect(() => {
-    asyncLoadCourseOfferings();
     loadSectionStudentData(sectionId);
-  }, [asyncLoadCourseOfferings, loadSectionStudentData, sectionId]);
+  }, [loadSectionStudentData, sectionId]);
 
   const getDropdownOptions = optionMetricName => {
     let options = sections.map(function (section, i) {
@@ -151,13 +144,13 @@ function TeacherDashboardHeader({
       <div className={dashboardStyles.header}>
         <div>
           <h1>{selectedSection.name}</h1>
-          {assignmentName && (
+          {selectedSection.courseDisplayName && (
             <div
               id="assignment-name"
               className={dashboardStyles.headerCurriculum}
             >
               <span>{i18n.assignedToWithColon()} </span>
-              {assignmentName}
+              {selectedSection.courseDisplayName}
             </div>
           )}
         </div>
@@ -191,8 +184,6 @@ TeacherDashboardHeader.propTypes = {
   sections: PropTypes.arrayOf(sectionShape).isRequired,
   selectedSection: sectionShape.isRequired,
   openEditSectionDialog: PropTypes.func.isRequired,
-  assignmentName: PropTypes.string,
-  asyncLoadCourseOfferings: PropTypes.func.isRequired,
   isRtl: PropTypes.bool,
   ageGatedStudentsCount: PropTypes.number,
   sectionId: PropTypes.number,
@@ -218,10 +209,6 @@ export default connect(
     ),
     selectedSection:
       state.teacherSections.sections[state.teacherSections.selectedSectionId],
-    assignmentName: getAssignmentName(
-      state,
-      state.teacherSections.selectedSectionId
-    ),
     isRtl: state.isRtl,
     sectionId: state.teacherSections.selectedSectionId,
     ageGatedStudentsCount: filterAgeGatedStudents(
@@ -231,7 +218,6 @@ export default connect(
   dispatch => {
     return {
       openEditSectionDialog: id => dispatch(beginEditingSection(id)),
-      asyncLoadCourseOfferings: () => dispatch(asyncLoadCourseOfferings()),
       loadSectionStudentData: sectionId => {
         dispatch(loadSectionStudentData(sectionId));
       },

@@ -211,6 +211,35 @@ describe('LearningGoals - React Testing Library', () => {
     sinon.assert.notCalled(scrollToLineStub);
   });
 
+  it('does not fail to render when the evidence is null', async () => {
+    const myAiEvaluations = [
+      {
+        ...aiEvaluations[0],
+        evidence: null,
+      },
+      {
+        ...aiEvaluations[1],
+        evidence: null,
+      },
+    ];
+
+    render(
+      <LearningGoals
+        learningGoals={learningGoals}
+        teacherHasEnabledAi={true}
+        aiUnderstanding={3}
+        studentLevelInfo={studentLevelInfo}
+        aiEvaluations={myAiEvaluations}
+      />
+    );
+
+    const user = userEvent.setup();
+    const button = screen.getByRole('button', {
+      name: i18n.rubricNextLearningGoal(),
+    });
+    await user.click(button);
+  });
+
   describe('when aiConfidenceExactMatch is high', () => {
     const myAiEvaluations = [
       {
