@@ -58,9 +58,9 @@ module MailJet
   # sections - a Object containing an array of sections, each with a 'Name' and a 'Link'.
   #            Example format:
   #            {
-  #              capSections => [
-  #                { Name => 'Section 1', Link => 'https://example.com/section1' },
-  #                { Name => 'Section 2', Link => 'https://example.com/section2' }
+  #              capSections: [
+  #                { Name: 'Section 1', Link: 'https://example.com/section1' },
+  #                { Name: 'Section 2', Link: 'https://example.com/section2' }
   #               ]
   #            }
   # locale   - (optional) the locale for the email template. Defaults to 'en-US'.
