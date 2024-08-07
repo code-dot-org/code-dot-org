@@ -40,7 +40,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
   };
 
   return (
-    <div className={style.finishTeacherAccountContainer}>
+    <div className={style.finishAccountContainer}>
       <div className={style.headerTextContainer}>
         <Heading2>{locale.finish_teacher_account_title()}</Heading2>
         <BodyTwoText>{locale.finish_teacher_account_subtitle()}</BodyTwoText>
