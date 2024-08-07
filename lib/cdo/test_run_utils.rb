@@ -20,9 +20,39 @@ module TestRunUtils
   end
 
   def self.run_local_ui_test
-    feature_path = File.expand_path(ENV.fetch('feature', nil))
+    args = [
+      "--verbose",
+      "--pegasus=localhost.code.org:3000",
+      "--dashboard=localhost-studio.code.org:3000",
+      "--local",
+      "--headed",
+    ]
+
+    if ENV.fetch('feature', nil)
+      # Perform one or more specific test files (delimited by commas)
+      features = ENV.fetch('feature', nil).split(',')
+      feature_path = features.map do |feature|
+        File.expand_path(feature)
+      end.join(',')
+      args << "--feature=#{feature_path}"
+    else
+      # Perform all tests
+      args << "--with-status-page"
+    end
+
+    # If 'browser=' specified, we pass along our desired browser (firefox, chrome, etc)
+    if ENV.fetch('browser', nil)
+      args << "--browser=#{ENV.fetch('browser', nil)}"
+    end
+
+    # If 'selenium=' is specified, we point the UI tests to the given selenium URL
+    if ENV.fetch('selenium', nil)
+      url = ENV.fetch('selenium', nil) == "" ? "http://localhost:4444/wd/hub" : ENV.fetch('selenium', nil)
+      args << "--selenium-hub-url=#{url}"
+    end
+
     Dir.chdir(dashboard_dir('test/ui/')) do
-      RakeUtils.system "./runner.rb --verbose --pegasus=localhost.code.org:3000 --dashboard=localhost-studio.code.org:3000 --local --headed --feature=#{feature_path}"
+      RakeUtils.system "./runner.rb #{args.join(' ')}"
     end
   end
 
