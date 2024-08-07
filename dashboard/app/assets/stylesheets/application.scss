@@ -410,15 +410,15 @@ img.video_thumbnail {
   }
 
   /*
-    The banner background image leaves an open space for text on the left. Therefore, in Right-to-Left languages, the
-    banner needs to be flipped horizontally so the background image empty space is on the right.
-   */
+     The banner background image leaves an open space for text on the left. Therefore, in Right-to-Left languages, the
+     banner needs to be flipped horizontally so the background image empty space is on the right.
+    */
   html[dir="rtl"] & {
     transform: scaleX(-1);
     /*
-      Since the whole banner was flipped horizontally, we need to un-flip all the content in the header. So the text and
-      layout is not backwards
-     */
+       Since the whole banner was flipped horizontally, we need to un-flip all the content in the header. So the text and
+       layout is not backwards
+      */
     .bannerContentContainer {
       transform: scaleX(-1);
     }
@@ -446,8 +446,8 @@ img.video_thumbnail {
 }
 
 /* When we are using a dark theme in Google Blockly, we want the main Blockly area (inside #codeWorkspace)
- * to have a 1px separation between it and the PaneHeader above it.
-*  */
+  * to have a 1px separation between it and the PaneHeader above it.
+ *  */
 #codeWorkspace > .cdomoderndark-theme,
 #codeWorkspace > .cdohighcontrastdark-theme,
 #codeWorkspace > .cdoprotanopiadark-theme,
@@ -725,9 +725,9 @@ $small-footer-standard-width: 400px;
   max-width: $small-footer-standard-width;
 
   /*
-   * Used in @cdo/apps/src/StudioApp.js to resize #belowVisualization to
-   * fit between the visualization above and the .small-footer
-   */
+    * Used in @cdo/apps/src/StudioApp.js to resize #belowVisualization to
+    * fit between the visualization above and the .small-footer
+    */
   margin-top: 5px;
 
   select {
@@ -854,9 +854,9 @@ $small-footer-standard-width: 400px;
 }
 
 /* All three major components of .small-footer are stacked:
-   Need to have this reasonably, high since some of our elements (such as
-   applab editor) have higher values
-*/
+    Need to have this reasonably, high since some of our elements (such as
+    applab editor) have higher values
+ */
 #more-menu {
   z-index: 998;
 }
@@ -879,8 +879,8 @@ $small-footer-standard-width: 400px;
 }
 
 /* Custom styling for the locale & copyright buttons and the copyright flyout,
- * for Music Lab.
- */
+  * for Music Lab.
+  */
 .music-black {
   #page-small-footer {
     user-select: none;
@@ -1794,10 +1794,10 @@ a.download-video {
     }
 
     /**
-     * betatext can be used to style a span directly, or betacontainer can be
-     * used on a node containing markdown to apply the beta styling to all
-     * **strong** nodes in the markdown
-     */
+      * betatext can be used to style a span directly, or betacontainer can be
+      * used on a node containing markdown to apply the beta styling to all
+      * **strong** nodes in the markdown
+      */
     .betatext,
     .betacontainer strong {
       background: $white;
@@ -3498,11 +3498,11 @@ button.notext {
 }
 
 /*
- * The following responsive styles are designed to match behavior
- * with the vizualizationColumn styles
- * defined in apps/style/common.scss, so that the columns in the
- * header line up with the columns below them.
- */
+  * The following responsive styles are designed to match behavior
+  * with the vizualizationColumn styles
+  * defined in apps/style/common.scss, so that the columns in the
+  * header line up with the columns below them.
+  */
 
 $width: 400px;
 #visualizationColumnHeader {
