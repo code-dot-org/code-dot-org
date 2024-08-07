@@ -1,4 +1,4 @@
-import {render, screen, act} from '@testing-library/react';
+import {render, screen, act, fireEvent} from '@testing-library/react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
@@ -57,7 +57,6 @@ describe('AiAssessmentBox', () => {
       message: 'This is a third line.',
     },
   ];
-  const mockSetAiFeedback = () => {};
   const props = {
     isAiAssessed: true,
     studentName: 'Jane Doe',
@@ -70,7 +69,10 @@ describe('AiAssessmentBox', () => {
     aiEvidence: mockEvidence,
     studentLevelInfo: {name: 'student', user_id: 42},
   };
-
+  let mockSetAiFeedback;
+  beforeEach(() => {
+    mockSetAiFeedback = jest.fn(() => {});
+  });
   it('renders AiAssessmentBox with student information if it is assessed by AI', () => {
     render(
       <AiAssessmentFeedbackContext.Provider
@@ -366,6 +368,99 @@ describe('AiAssessmentBox', () => {
         body: expectedBody,
         headers: {'Content-Type': 'application/json', 'X-CSRF-TOKEN': 'token'},
         method: 'POST',
+      }
+    );
+
+    fetchStub.mockRestore();
+  });
+
+  it('updates the thumbs down event when survey is submitted', async () => {
+    const {rerender} = render(
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: NO_FEEDBACK, setAiFeedback: mockSetAiFeedback}}
+      >
+        <AiAssessmentBox {...props} />
+      </AiAssessmentFeedbackContext.Provider>
+    );
+
+    const fetchStub = jest.spyOn(window, 'fetch');
+
+    fetchStub.mockImplementation((endpoint, options) => {
+      if (endpoint === '/get_token') {
+        return Promise.resolve(
+          new Response('', {
+            headers: {'csrf-token': 'token'},
+          })
+        );
+      } else if (
+        endpoint === '/learning_goal_ai_evaluation_feedbacks' &&
+        options['method'] === 'POST'
+      ) {
+        return Promise.resolve(new Response(JSON.stringify({id: 999})));
+      } else if (
+        endpoint === '/learning_goal_ai_evaluation_feedbacks/999' &&
+        options['method'] === 'PUT'
+      ) {
+        return Promise.resolve(new Response(''));
+      }
+    });
+
+    // survey not visible
+    expect(screen.queryAllByRole('checkbox')).toHaveLength(0);
+
+    expect(mockSetAiFeedback).toHaveBeenCalledTimes(0);
+
+    const thumbsUpButton = screen.getByTestId('thumbs-o-down');
+    act(() => thumbsUpButton.click());
+
+    await wait();
+
+    // manually propagate the aiFeedback state change. this is normally done by
+    // the LearningGoals component.
+    expect(mockSetAiFeedback).toHaveBeenCalledWith(THUMBS_DOWN);
+    rerender(
+      <AiAssessmentFeedbackContext.Provider
+        value={{aiFeedback: THUMBS_DOWN, setAiFeedback: mockSetAiFeedback}}
+      >
+        <AiAssessmentBox {...props} />
+      </AiAssessmentFeedbackContext.Provider>
+    );
+
+    // survey is visible
+    expect(screen.queryAllByRole('checkbox')).toHaveLength(4);
+
+    // click checkbox
+    const checkbox = screen.getByRole('checkbox', {
+      name: i18n.aiFeedbackFalsePos(),
+    });
+    await act(async () => {
+      fireEvent.click(checkbox);
+    });
+
+    // click submit button
+    const submitButton = screen.getByRole('button', {
+      name: i18n.aiFeedbackSubmit(),
+    });
+    await act(async () => {
+      fireEvent.click(submitButton);
+    });
+    await wait();
+
+    const expectedBody = {
+      learningGoalAiEvaluationId: 33,
+      aiFeedbackApproval: 0,
+      falsePositive: true,
+      falseNegative: false,
+      Vague: false,
+      feedbackOther: false,
+      otherContent: '',
+    };
+    expect(fetchStub).toHaveBeenCalledWith(
+      `/learning_goal_ai_evaluation_feedbacks/999`,
+      {
+        body: JSON.stringify(expectedBody),
+        headers: {'Content-Type': 'application/json', 'X-CSRF-TOKEN': 'token'},
+        method: 'PUT',
       }
     );
 
