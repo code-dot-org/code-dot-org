@@ -1,4 +1,4 @@
-import React, {memo, useCallback, useMemo} from 'react';
+import React, {memo, useCallback, useContext, useMemo} from 'react';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {Button} from '@cdo/apps/componentLibrary/button';
@@ -8,6 +8,7 @@ import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 import commonI18n from '@cdo/locale';
 import musicPlayViewLogo from '@cdo/static/music/music-play-view.png';
 
+import {AnalyticsContext} from '../context';
 import musicI18n from '../locale';
 
 import ProgressSlider from './ProgressSlider';
@@ -34,6 +35,7 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
   const isLoading = useAppSelector(
     state => state.music.soundLoadingProgress < 1
   );
+  const analyticsReporter = useContext(AnalyticsContext);
 
   const shareData = useMemo(
     () => ({
@@ -57,18 +59,21 @@ const MusicPlayView: React.FunctionComponent<MusicPlayViewProps> = ({
 
   const projectManager = Lab2Registry.getInstance().getProjectManager();
   const onShareProject = useCallback(() => {
+    analyticsReporter?.onButtonClicked('shareFromShareView');
     navigator?.share(shareData);
-  }, [shareData]);
+  }, [shareData, analyticsReporter]);
   const onViewCode = useCallback(() => {
+    analyticsReporter?.onButtonClicked('viewCodeFromShareView');
     projectManager?.redirectToView();
-  }, [projectManager]);
+  }, [projectManager, analyticsReporter]);
   const onRemix = useCallback(() => {
+    analyticsReporter?.onButtonClicked('remixFromShareView');
     if (projectManager) {
       projectManager.flushSave().then(() => {
         projectManager.redirectToRemix();
       });
     }
-  }, [projectManager]);
+  }, [projectManager, analyticsReporter]);
 
   return (
     <div className={moduleStyles.container}>

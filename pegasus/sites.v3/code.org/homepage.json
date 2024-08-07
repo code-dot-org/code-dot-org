@@ -4,8 +4,7 @@
       "hoc2023-soon-hoc",
       "hoc2023-actual-hoc",
       "pl-launch-superhero",
-      "curriculum-launch-2024",
-      "music-lab-launch-2024"
+      "curriculum-launch-2024"
     ]
   },
 
@@ -100,29 +99,6 @@
           "type": "cta_button_solid_yellow",
           "text": "front_join_us_learn_more",
           "url": "/educate/professional-learning"
-        }
-      ]
-    },
-    "music-lab-launch-2024": {
-      "dcdo": "music-lab-launch-2024",
-      "class": "music-lab-launch homepage",
-      "desktopImage": "/images/music-lab/music-lab-homepage-banner-bg.png",
-      "mobileImage": "/images/music-lab/music-lab-homepage-banner-bg.png",
-      "leftImage": "/images/music-lab/music-lab-homepage-banner-left.png",
-      "rightImage": "/images/music-lab/music-lab-homepage-banner-right.png",
-      "actions": [
-        {
-          "type": "music-lab-launch-2024",
-          "text_overline": "music_lab.introducing_music_lab_strong",
-          "text_h1": "music_lab.banner.heading",
-          "text_desc": "music_lab.banner.desc",
-          "button_label_primary": "music_lab.button.try_music_lab",
-          "button_url_primary": "https://studio.code.org/s/music-intro-2024/reset",
-          "button_label_secondary": "music_lab.button.learn_more",
-          "button_url_secondary": "/music",
-          "text_desc_02": "music_lab.in_partnership_with",
-          "logo_list_01": "/images/avatars/amazon_future_engineer_light.png",
-          "logo_list_01_alt": "music_lab.amazon_future_engineer"
         }
       ]
     },

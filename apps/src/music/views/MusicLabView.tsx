@@ -6,6 +6,7 @@ import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import AnalyticsReporter from '../analytics/AnalyticsReporter';
 import AppConfig, {getBaseAssetUrl} from '../appConfig';
 import musicI18n from '../locale';
 import MusicPlayer from '../player/MusicPlayer';
@@ -20,6 +21,7 @@ import AdvancedControls from './AdvancedControls';
 import Controls from './Controls';
 import HeaderButtons from './HeaderButtons';
 import usePlaybackUpdate from './hooks/usePlaybackUpdate';
+import useUpdateAnalytics from './hooks/useUpdateAnalytics';
 import useUpdatePlayer from './hooks/useUpdatePlayer';
 import MusicPlayView from './MusicPlayView';
 import PackDialog from './PackDialog';
@@ -40,6 +42,7 @@ interface MusicLabViewProps {
   validator: MusicValidator;
   player: MusicPlayer;
   allowPackSelection: boolean;
+  analyticsReporter: AnalyticsReporter;
 }
 
 const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
@@ -55,8 +58,10 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   validator,
   player,
   allowPackSelection,
+  analyticsReporter,
 }) => {
   useUpdatePlayer(player);
+  useUpdateAnalytics(analyticsReporter);
   const dispatch = useAppDispatch();
   const showInstructions = useAppSelector(
     state => state.music.showInstructions
