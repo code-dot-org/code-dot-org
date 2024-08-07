@@ -362,6 +362,8 @@ class LtiV1Controller < ApplicationController
     respond_to do |format|
       format.html do
         if had_changes || params[:force]
+          session[:keep_flashes] = true
+          flash.keep
           render lti_v1_sync_course_path
         else
           redirect_to home_path
