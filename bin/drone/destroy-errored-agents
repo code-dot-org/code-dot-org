@@ -30,7 +30,7 @@ put_metric_data() {
     value=$2
     unit=$3
     if ! aws cloudwatch put-metric-data --metric-name "$metric_name" --namespace "ContinuousIntegration" --value "$value" --unit "$unit"; then
-        echo "Error sending metric $metric_name to CloudWatch"
+        echo "Failed to send metric: $metric_name with value: $value $unit"
     fi
 }
 
@@ -57,7 +57,7 @@ new_error_ids=$(drone server ls -l | grep error | awk '{print $1}')
 new_error_count=$(if [ -z "$new_error_ids" ]; then echo 0; else echo "$new_error_ids" | wc -l; fi)
 terminated_count=$((error_count - new_error_count))
 
-# Send metric if servers were terminated
+# Send metric only if servers were terminated
 if [ "$terminated_count" -gt 0 ]; then
     put_metric_data TerminatedDroneServers $terminated_count Count
 fi
