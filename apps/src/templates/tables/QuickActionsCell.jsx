@@ -5,9 +5,9 @@ import React, {Component} from 'react';
 import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import styleConstants from '../../styleConstants';
 import color from '../../util/color';
-import FontAwesome from '../FontAwesome';
 
 export const QuickActionsCellType = {
   header: 'header',

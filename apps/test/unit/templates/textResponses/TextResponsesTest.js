@@ -57,7 +57,6 @@ describe('TextResponses', () => {
         wrapper = isolateComponent(
           <TextResponses
             sectionId={2}
-            coursesWithProgress={[]}
             scriptId={1}
             setScriptId={() => {}}
             scriptName="A Script"
@@ -65,7 +64,7 @@ describe('TextResponses', () => {
         );
       });
 
-      expect(wrapper.exists('UnitSelector')).toBe(true);
+      expect(wrapper.exists('Connect(UnitSelector)')).toBe(true);
     });
 
     it('renders the TextResponsesTable', async () => {
@@ -75,7 +74,6 @@ describe('TextResponses', () => {
         wrapper = isolateComponent(
           <TextResponses
             sectionId={2}
-            coursesWithProgress={[]}
             scriptId={1}
             setScriptId={() => {}}
             scriptName="A Script"
@@ -97,7 +95,6 @@ describe('TextResponses', () => {
         wrapper = isolateComponent(
           <TextResponses
             sectionId={2}
-            coursesWithProgress={[]}
             scriptId={1}
             setScriptId={() => {}}
             scriptName="A Script"
@@ -116,7 +113,6 @@ describe('TextResponses', () => {
         wrapper = isolateComponent(
           <TextResponses
             sectionId={2}
-            coursesWithProgress={[]}
             scriptId={1}
             setScriptId={() => {}}
             scriptName="A Script"
@@ -150,7 +146,6 @@ describe('TextResponses', () => {
         wrapper = isolateComponent(
           <TextResponses
             sectionId={2}
-            coursesWithProgress={[]}
             scriptId={1}
             setScriptId={() => {}}
             scriptName="A Script"

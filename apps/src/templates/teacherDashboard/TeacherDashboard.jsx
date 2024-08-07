@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useEffect, useState, useRef} from 'react';
-import {Route, Switch, useLocation} from 'react-router-dom';
+import {Route, Routes, useLocation} from 'react-router-dom';
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
 import DCDO from '@cdo/apps/dcdo';
@@ -39,7 +39,7 @@ function TeacherDashboard({
   sectionId,
   sectionName,
   studentCount,
-  coursesWithProgress,
+  anyStudentHasProgress,
   showAITutorTab,
   sectionProviderName,
 }) {
@@ -150,48 +150,56 @@ function TeacherDashboard({
           <TeacherDashboardNavigation showAITutorTab={showAITutorTab} />
         </div>
       )}
-      <Switch>
-        <Route path={TeacherDashboardPath.manageStudents}>
-          {applyV1TeacherDashboardWidth(
+      <Routes>
+        <Route
+          path={TeacherDashboardPath.manageStudents}
+          element={applyV1TeacherDashboardWidth(
             <ManageStudents studioUrlPrefix={studioUrlPrefix} />
           )}
-        </Route>
-        <Route path={TeacherDashboardPath.loginInfo}>
-          {applyV1TeacherDashboardWidth(
+        />
+        <Route
+          path={TeacherDashboardPath.loginInfo}
+          element={applyV1TeacherDashboardWidth(
             <SectionLoginInfo
               studioUrlPrefix={studioUrlPrefix}
               sectionProviderName={sectionProviderName}
             />
           )}
-        </Route>
-        <Route path={TeacherDashboardPath.standardsReport}>
-          {applyV1TeacherDashboardWidth(<StandardsReport />)}
-        </Route>
+        />
+        <Route
+          path={TeacherDashboardPath.standardsReport}
+          element={applyV1TeacherDashboardWidth(<StandardsReport />)}
+        />
         {studentCount === 0 && (
-          <Route>{generateEmptySectionGraphic(false, true)}</Route>
+          <Route element={generateEmptySectionGraphic(false, true)} />
         )}
-        <Route path={TeacherDashboardPath.projects}>
-          {applyV1TeacherDashboardWidth(
+        <Route
+          path={TeacherDashboardPath.projects}
+          element={applyV1TeacherDashboardWidth(
             <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
           )}
-        </Route>
-        <Route path={TeacherDashboardPath.stats}>
-          {applyV1TeacherDashboardWidth(<StatsTableWithData />)}
-        </Route>
-        {coursesWithProgress.length === 0 && (
-          <Route>{generateEmptySectionGraphic(true, false)}</Route>
+        />
+        <Route
+          path={TeacherDashboardPath.stats}
+          element={applyV1TeacherDashboardWidth(<StatsTableWithData />)}
+        />
+        {!anyStudentHasProgress && (
+          <Route element={generateEmptySectionGraphic(true, false)} />
         )}
-        <Route path={TeacherDashboardPath.progress}>
-          <SectionProgressSelector />
-        </Route>
-        <Route path={TeacherDashboardPath.textResponses}>
-          {applyV1TeacherDashboardWidth(<TextResponses />)}
-        </Route>
-        <Route path={TeacherDashboardPath.assessments}>
-          {applyV1TeacherDashboardWidth(
+        <Route
+          path={TeacherDashboardPath.progress}
+          element={<SectionProgressSelector />}
+        />
+        <Route
+          path={TeacherDashboardPath.textResponses}
+          element={applyV1TeacherDashboardWidth(<TextResponses />)}
+        />
+        <Route
+          path={TeacherDashboardPath.assessments}
+          element={applyV1TeacherDashboardWidth(
             <SectionAssessments sectionName={sectionName} />
           )}
-        </Route>
+        />
         {teacherNavV2Enabled && (
           <Route
             path={TeacherDashboardPath.navTestV2}
@@ -206,11 +214,14 @@ function TeacherDashboard({
           />
         )}
         {showAITutorTab && (
-          <Route path={TeacherDashboardPath.aiTutorChatMessages}>
-            {applyV1TeacherDashboardWidth(<TutorTab sectionId={sectionId} />)}
-          </Route>
+          <Route
+            path={TeacherDashboardPath.aiTutorChatMessages}
+            element={applyV1TeacherDashboardWidth(
+              <TutorTab sectionId={sectionId} />
+            )}
+          />
         )}
-      </Switch>
+      </Routes>
     </div>
   );
 }
@@ -220,7 +231,7 @@ TeacherDashboard.propTypes = {
   sectionId: PropTypes.number.isRequired,
   sectionName: PropTypes.string.isRequired,
   studentCount: PropTypes.number.isRequired,
-  coursesWithProgress: PropTypes.array.isRequired,
+  anyStudentHasProgress: PropTypes.bool.isRequired,
   showAITutorTab: PropTypes.bool,
   sectionProviderName: PropTypes.string,
 };

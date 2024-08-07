@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {NavLink} from 'react-router-dom';
@@ -63,8 +64,12 @@ export default function TeacherDashboardNavigation({links, showAITutorTab}) {
         <NavLink
           key={link.url}
           to={link.url}
-          className={styles.linkContainer}
-          activeClassName={styles.activeLinkContainer}
+          className={({isActive}) =>
+            classNames(
+              styles.linkContainer,
+              isActive && styles.activeLinkContainer
+            )
+          }
         >
           <div className={styles.link}>{link.label}</div>
         </NavLink>

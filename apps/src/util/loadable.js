@@ -3,7 +3,7 @@ import React from 'react';
 
 import i18n from '@cdo/locale';
 
-import FontAwesome from '../templates/FontAwesome';
+import FontAwesome from '../legacySharedComponents/FontAwesome';
 
 function Spinner() {
   return <FontAwesome icon="spinner" className="fa-pulse fa-3x" />;
