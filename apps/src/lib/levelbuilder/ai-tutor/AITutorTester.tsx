@@ -10,6 +10,7 @@ import AITutorTesterSampleColumns from './AITutorTesterSampleColumns';
 
 import styles from './ai-tutor-tester.module.scss';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import {postAichatCheckSafety} from '@cdo/apps/aichat/aichatCompletionApi';
 
 /**
  * Renders a series of buttons that allow levelbuilders to upload a CSV of
@@ -69,11 +70,11 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
   };
 
   const getLLMGuardToxicity = async (row: AIInteraction) => {
-    // here's where we're going to hit the endpoint that gives us the toxicity true/false
     // likely leverage https://github.com/code-dot-org/code-dot-org/pull/60221 ?
 
-    // const llmGuardResponse =
-    //row.aiResponse = llmGuardResponse.toxicity;
+    const llmGuardResponse = await postAichatCheckSafety(row.studentInput);
+
+    console.log('llmGuardResponse', llmGuardResponse);
     setResponseCount(prevResponseCount => prevResponseCount + 1);
   };
 
