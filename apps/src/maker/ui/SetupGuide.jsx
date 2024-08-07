@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import applabI18n from '@cdo/applab/locale';
-import SetupInstructions from '@cdo/apps/lib/kits/maker/ui/SetupInstructions';
+import SetupInstructions from '@cdo/apps/maker/ui/SetupInstructions';
 import {
   MAKER_DEPRECATION_SUPPORT_URL,
   MIN_CHROME_VERSION,
-} from '@cdo/apps/lib/kits/maker/util/makerConstants';
+} from '@cdo/apps/maker/util/makerConstants';
 import Notification, {
   NotificationType,
 } from '@cdo/apps/sharedComponents/Notification';

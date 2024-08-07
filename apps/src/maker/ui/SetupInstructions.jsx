@@ -7,11 +7,11 @@ import {
   CIRCUIT_PLAYGROUND_EXPRESS_FIRMATA_FILENAME,
   RESET_BUTTON_NAME,
   BOOT_DRIVE_NAME,
-} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
+} from '@cdo/apps/maker/boards/circuitPlayground/PlaygroundConstants';
 import {
   shouldUseWebSerial,
   WEB_SERIAL_FILTERS,
-} from '@cdo/apps/lib/kits/maker/util/boardUtils';
+} from '@cdo/apps/maker/util/boardUtils';
 import {getStore} from '@cdo/apps/redux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';

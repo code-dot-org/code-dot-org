@@ -1,5 +1,5 @@
-import {MIN_CHROME_VERSION} from '@cdo/apps/lib/kits/maker/util/makerConstants';
-import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
+import {MIN_CHROME_VERSION} from '@cdo/apps/maker/util/makerConstants';
+import WebSerialPortWrapper from '@cdo/apps/maker/WebSerialPortWrapper';
 
 import {
   ADAFRUIT_VID,
@@ -8,7 +8,8 @@ import {
   MICROBIT_PID,
   MICROBIT_VID,
 } from '../portScanning';
-import {isChromeOS, getChromeVersion} from '../util/browserChecks';
+
+import {isChromeOS, getChromeVersion} from './browserChecks';
 
 export const BOARD_TYPE = {
   CLASSIC: 'classic',

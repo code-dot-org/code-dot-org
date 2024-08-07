@@ -15,7 +15,7 @@ import {
   hasConnectionError,
   getConnectionError,
   shouldRunWithVirtualBoard,
-} from '@cdo/apps/lib/kits/maker/redux';
+} from '@cdo/apps/maker/redux';
 
 describe('maker/redux.js', () => {
   let store;

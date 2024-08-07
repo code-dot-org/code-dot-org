@@ -2,7 +2,7 @@
 import MakerError, {
   ConnectionFailedError,
   wrapKnownMakerErrors,
-} from '@cdo/apps/lib/kits/maker/MakerError';
+} from '@cdo/apps/maker/MakerError';
 
 import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 

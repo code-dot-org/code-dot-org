@@ -5,16 +5,16 @@ import {connect} from 'react-redux';
 
 import applabI18n from '@cdo/applab/locale';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import MBFirmataUpdater from '@cdo/apps/lib/kits/maker/boards/microBit/MBFirmataUpdater';
-import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import MBFirmataUpdater from '@cdo/apps/maker/boards/microBit/MBFirmataUpdater';
+import WebSerialPortWrapper from '@cdo/apps/maker/WebSerialPortWrapper';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
-import trackEvent from '../../../../util/trackEvent';
-import * as utils from '../../../../utils';
-import ValidationStep, {Status} from '../../../ui/ValidationStep';
+import ValidationStep, {Status} from '../../lib/ui/ValidationStep';
+import trackEvent from '../../util/trackEvent';
+import * as utils from '../../utils';
 import {BOARD_TYPE, shouldUseWebSerial, delayPromise} from '../util/boardUtils';
 import {isWindows, isLinux} from '../util/browserChecks';
 import SetupChecker from '../util/SetupChecker';

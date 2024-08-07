@@ -1,7 +1,7 @@
 import _ from 'lodash';
 
-import {getFirstParam} from '../../../dropletUtils';
-import color from '../../../util/color';
+import {getFirstParam} from '../dropletUtils';
+import color from '../util/color';
 
 import * as api from './api';
 import {

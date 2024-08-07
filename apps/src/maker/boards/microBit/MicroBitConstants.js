@@ -1,4 +1,4 @@
-import {DOWNLOAD_PREFIX} from '@cdo/apps/lib/kits/maker/util/makerConstants';
+import {DOWNLOAD_PREFIX} from '@cdo/apps/maker/util/makerConstants';
 
 export const SENSOR_CHANNELS = {
   accelX: 8,

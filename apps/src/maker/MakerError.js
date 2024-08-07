@@ -1,5 +1,5 @@
 /** @file Custom error types for Maker Toolkit */
-import ExtendableError from '../../util/ExtendableError';
+import ExtendableError from '../lib/util/ExtendableError';
 
 export default class MakerError extends ExtendableError {}
 
