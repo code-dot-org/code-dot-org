@@ -1,0 +1,34 @@
+@import 'color', 'breakpoints', 'style-constants';
+
+body {
+  background-color: $light_gray_50 !important;
+}
+
+main.wrapper {
+  padding-block: 1rem;
+  margin-inline: auto;
+}
+
+.contentContainer {
+  max-width: $content-width;
+  margin: auto;
+  font-size: 1rem;
+  padding-bottom: 2rem;
+}
+
+.cardWrapper {
+  margin-block: 3rem;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1.5rem;
+
+  @media (max-width: $width-sm) {
+    flex-direction: column;
+  }
+
+  & > div {
+    width: unset;
+    flex: 1;
+    justify-content: space-between;
+  }
+}
