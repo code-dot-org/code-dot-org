@@ -1,7 +1,8 @@
 <Artist>
   <config><![CDATA[{
+  "published": true,
   "game_id": 23,
-  "created_at": "2014-10-28T19:54:27.000Z",
+  "created_at": "2022-02-16T19:37:58.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -22,7 +23,7 @@
     "ideal": "5",
     "embed": "false",
     "disable_sharing": "false",
-    "callout_json": "[\r\n  {\"localization_key\":\"replace_questions_degree\",\"callout_text\":\"Use the drop-down to replace \\\"???\\\" with a number\",\"element_id\":\"#turn_right_qtip > .blocklyEditableText:eq(1)\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"replace_questions_degree\",\r\n  \"callout_text\": \"Use the drop-down to replace \\\"???\\\" with a number\",\r\n  \"element_id\": \"#turn_right_qtip > .blocklyEditableText:eq(1), [data-id=\\\"turn_right_qtip\\\"] .blocklyEditableText:eq(1)\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "permitted_errors": "0",
     "long_instructions": "Now try repeating it 10 times. How many degrees do you need to turn between each line?",
     "never_autoplay_video": "false",
@@ -33,7 +34,22 @@
     "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "discard_background": "false",
+    "validation_enabled": "false",
+    "enable_download_image": "false",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-07 13:33:10 -0400\",\"changed\":[\"published\",\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2024-08-07 13:34:07 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"callout_json\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"}]",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>

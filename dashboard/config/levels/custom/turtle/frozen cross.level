@@ -1,7 +1,8 @@
 <Artist>
   <config><![CDATA[{
+  "published": true,
   "game_id": 23,
-  "created_at": "2014-10-28T19:44:42.000Z",
+  "created_at": "2022-02-16T19:37:58.000Z",
   "level_num": "custom",
   "user_id": 1,
   "properties": {
@@ -20,7 +21,7 @@
     "use_modal_function_editor": "false",
     "ideal": "5",
     "use_contract_editor": "false",
-    "callout_json": "[\r\n  {\"localization_key\":\"repeat_blocks_1\",\"callout_text\":\"(1) Use this block and put it around the grey blocks in the workspace\",\"element_id\":\"#repeat_toolbox_qtip1\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"top center\",\"at\":\"bottom center\"},\"style\":{\"classes\":\"\"}}}\r\n,  {\"localization_key\":\"repeat_blocks_2\",\"callout_text\":\"(2) Move the \\\"Repeat\\\" block here, and place the gray blocks inside\",\"element_id\":\"#repeat_toolbox_qtip2\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":22,\"y\":36},\"my\":\"top left\",\"at\":\"top left\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"repeat_blocks_1\",\r\n  \"callout_text\": \"(1) Use this block and put it around the grey blocks in the workspace\",\r\n  \"element_id\": \"#repeat_toolbox_qtip1, [data-id=\\\"repeat_toolbox_qtip1\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"repeat_blocks_2\",\r\n  \"callout_text\": \"(2) Move the \\\"Repeat\\\" block here, and place the gray blocks inside\",\r\n  \"element_id\": \"#repeat_toolbox_qtip2, [data-id=\\\"repeat_toolbox_qtip2\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"top left\",\r\n    \"adjust\": {\r\n     \"x\": 22,\r\n     \"y\": 36\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "embed": "false",
     "disable_sharing": "false",
     "permitted_errors": "0",
@@ -33,7 +34,22 @@
     "examples_required": "false",
     "definition_highlight": "false",
     "definition_collapse": "false",
-    "disable_examples": "false"
+    "disable_examples": "false",
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "instructions_important": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "discard_background": "false",
+    "validation_enabled": "false",
+    "enable_download_image": "false",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-07 13:38:52 -0400\",\"changed\":[\"published\",\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"callout_json\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"},{\"changed_at\":\"2024-08-07 13:40:33 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"callout_json\",\"encrypted_examples\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"}]",
+  "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
