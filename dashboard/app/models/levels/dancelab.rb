@@ -30,7 +30,6 @@ class Dancelab < GamelabJr
     song_selection
     uses_lab2
     uses_preview
-    enable_big_playspace
   )
 
   def self.skins
