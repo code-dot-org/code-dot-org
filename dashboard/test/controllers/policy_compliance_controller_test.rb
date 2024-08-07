@@ -25,8 +25,8 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
     end
     user.reload
     assert_response :ok
-    assert_equal Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, user.cap_state
-    refute_nil user.cap_state_date
+    assert_equal Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED, user.cap_status
+    refute_nil user.cap_status_date
   end
 
   test "making the same request twice is ok and email is sent once" do
@@ -65,7 +65,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   test "given a user already has parental permission, should just redirect back" do
     permission = create :parental_permission_request, :granted
     user = permission.user
-    user.cap_state = Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
+    user.cap_status = Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
 
     sign_in user
 
@@ -233,7 +233,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   class PendingPermissionRequestTest < ActionDispatch::IntegrationTest
     test 'json format - returns pending permission request data when exists' do
       consent_status = 'p'
-      user = create(:young_student, cap_state: consent_status)
+      user = create(:young_student, cap_status: consent_status)
       parent_email = 'parent@example.com'
       requested_at = DateTime.now.utc.iso8601(3)
       resends_sent = 999
@@ -275,7 +275,7 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
   class ChildAccountConsentRequest < ActionDispatch::IntegrationTest
     test 'json format - returns permission request data on success' do
       consent_status = 'p'
-      child_account = create(:young_student, cap_state: consent_status)
+      child_account = create(:young_student, cap_status: consent_status)
       parent_email = 'parent@example.com'
       requested_at = DateTime.now.utc.iso8601(3)
       resends_sent = 999

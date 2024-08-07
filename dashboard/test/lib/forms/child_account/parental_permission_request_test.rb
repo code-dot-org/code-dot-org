@@ -186,7 +186,7 @@ class Forms::ChildAccount::ParentalPermissionRequestTest < ActiveSupport::TestCa
       expected_mail_error = 'expected_mail_error'
       ParentMailer.expects(:parent_permission_request).raises(expected_mail_error)
 
-      assert_no_change -> {@child_account.reload.cap_state}  do
+      assert_no_change -> {@child_account.reload.cap_status}  do
         assert_raises(expected_mail_error) {@permission_request_form.request}
       end
     end

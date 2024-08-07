@@ -2253,7 +2253,7 @@ class User < ApplicationRecord
       has_ever_signed_in: has_ever_signed_in?,
       ai_tutor_access_denied: !!ai_tutor_access_denied,
       at_risk_age_gated: Policies::ChildAccount.parent_permission_required?(self),
-      child_account_compliance_state: cap_state,
+      child_account_compliance_state: cap_status,
       latest_permission_request_sent_at: latest_parental_permission_request&.updated_at,
     }
   end

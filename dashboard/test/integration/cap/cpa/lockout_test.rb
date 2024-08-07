@@ -235,8 +235,8 @@ module CAP
           assert_equal home_path, path
 
           assert_attributes student.reload, {
-            cap_state: Policies::ChildAccount::ComplianceState::GRACE_PERIOD,
-            cap_state_date: DateTime.now,
+            cap_status: Policies::ChildAccount::ComplianceState::GRACE_PERIOD,
+            cap_status_date: DateTime.now,
           }
         end
 
@@ -249,7 +249,7 @@ module CAP
         end
 
         private def assert_student_is_locked_out_until_permission_granted
-          initial_cap_compliance_state = student.cap_state
+          initial_cap_compliance_state = student.cap_status
 
           get home_path
 
@@ -258,8 +258,8 @@ module CAP
           assert_equal lockout_path, path
 
           assert_attributes student.reload, {
-            cap_state: Policies::ChildAccount::ComplianceState::LOCKED_OUT,
-            cap_state_date: DateTime.now,
+            cap_status: Policies::ChildAccount::ComplianceState::LOCKED_OUT,
+            cap_status_date: DateTime.now,
           }
 
           assert_latest_student_cap_event(
@@ -277,8 +277,8 @@ module CAP
           assert_equal home_path, path
 
           assert_attributes student.reload, {
-            cap_state: Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED,
-            cap_state_date: DateTime.now,
+            cap_status: Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED,
+            cap_status_date: DateTime.now,
           }
 
           assert_latest_student_cap_event(

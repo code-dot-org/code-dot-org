@@ -406,7 +406,7 @@ class RegistrationsController < Devise::RegistrationsController
   # GET /users/edit
   #
   def edit
-    @permission_status = current_user.cap_state
+    @permission_status = current_user.cap_status
 
     # Get the request location
     location = Geocoder.search(request.ip).try(:first)
