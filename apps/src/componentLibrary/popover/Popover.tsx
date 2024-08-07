@@ -38,16 +38,12 @@ export interface PopoverProps {
   buttons?: ReactNode;
 }
 
-// TODO:
-// - clean up
-// - update README with how to use WithPopover component
-
 /**
  * ### Production-ready Checklist:
- * * (?) implementation of component approved by design team;
- * * (?) has storybook, covered with stories and documentation;
- * * (?) has tests: test every prop, every state and every interaction that's js related;
- * * (see apps/test/unit/componentLibrary/TabsTest.jsx)
+ * * (✔) implementation of component approved by design team;
+ * * (✔) has storybook, covered with stories and documentation;
+ * * (✔) has tests: test every prop, every state and every interaction that's js related;
+ * * (see apps/test/unit/componentLibrary/PopoverTest.jsx, apps/test/unit/componentLibrary/WithPopoverTest.jsx);
  * * (?) passes accessibility checks;
  *
  * ###  Status: ```Ready For Dev```
