@@ -7,7 +7,7 @@ import {
   ThunkDispatch,
 } from '@reduxjs/toolkit';
 
-import {Role} from '@cdo/apps/aiComponentLibrary/chatItems/types';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -22,6 +22,7 @@ import {saveTypeToAnalyticsEvent} from '../constants';
 import {
   AiCustomizations,
   AichatContext,
+  ChatEvent,
   FieldVisibilities,
   LevelAichatSettings,
   ModelCardInfo,
@@ -29,7 +30,6 @@ import {
   ViewMode,
   Visibility,
   ChatMessage,
-  ChatItem,
   isModelUpdate,
   isNotification,
   isChatMessage,
@@ -49,7 +49,7 @@ import {
   hasFilledOutModelCard,
 } from './utils';
 
-const messageListKeys = ['chatItemsPast', 'chatItemsCurrent'] as const;
+const messageListKeys = ['chatEventsPast', 'chatEventsCurrent'] as const;
 type MessageLocation = {
   index: number;
   messageListKey: (typeof messageListKeys)[number];
@@ -58,13 +58,15 @@ type MessageLocation = {
 export interface AichatState {
   // Content from previous chat sessions that we track purely for visibility to the user
   // and do not send to the model as history.
-  chatItemsPast: ChatItem[];
+  chatEventsPast: ChatEvent[];
   // Items in the current chat session that we want to provide as history to the model.
-  chatItemsCurrent: ChatItem[];
+  chatEventsCurrent: ChatEvent[];
   // The user message currently awaiting response from the model (if any).
   chatMessagePending?: ChatMessage;
   // Denotes whether we are waiting for a chat completion response from the backend
   isWaitingForChatResponse: boolean;
+  // Student events viewed by a teacher user in chat workspace
+  studentChatHistory: ChatEvent[];
   // Denotes whether we should show the warning modal
   showWarningModal: boolean;
   // Denotes if there is an error with the chat completion response
@@ -81,10 +83,11 @@ export interface AichatState {
 }
 
 const initialState: AichatState = {
-  chatItemsPast: [],
-  chatItemsCurrent: [],
+  chatEventsPast: [],
+  chatEventsCurrent: [],
   chatMessagePending: undefined,
   isWaitingForChatResponse: false,
+  studentChatHistory: [],
   showWarningModal: true,
   chatMessageError: false,
   currentAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
@@ -323,7 +326,7 @@ export const submitChatContents = createAsyncThunk(
     const state = thunkAPI.getState() as RootState;
     const {
       savedAiCustomizations: aiCustomizations,
-      chatItemsCurrent,
+      chatEventsCurrent,
       currentSessionId,
     } = state.aichat;
 
@@ -348,7 +351,7 @@ export const submitChatContents = createAsyncThunk(
     try {
       chatApiResponse = await postAichatCompletionMessage(
         newMessage,
-        chatItemsCurrent.filter(isChatMessage) as ChatMessage[],
+        chatEventsCurrent.filter(isChatMessage) as ChatMessage[],
         aiCustomizations,
         aichatContext,
         currentSessionId
@@ -403,13 +406,16 @@ const aichatSlice = createSlice({
   initialState,
   reducers: {
     addChatMessage: (state, action: PayloadAction<ChatMessage>) => {
-      state.chatItemsCurrent.push(action.payload);
+      state.chatEventsCurrent.push(action.payload);
     },
     addModelUpdate: (state, action: PayloadAction<ModelUpdate>) => {
-      state.chatItemsCurrent.push(action.payload);
+      state.chatEventsCurrent.push(action.payload);
     },
     addNotification: (state, action: PayloadAction<Notification>) => {
-      state.chatItemsCurrent.push(action.payload);
+      state.chatEventsCurrent.push(action.payload);
+    },
+    setStudentChatHistory: (state, action: PayloadAction<ChatEvent[]>) => {
+      state.studentChatHistory = action.payload;
     },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
       const modelUpdateMessageInfo = getUpdateMessageLocation(
@@ -424,8 +430,8 @@ const aichatSlice = createSlice({
       state[messageListKey].splice(index, 1);
     },
     clearChatMessages: state => {
-      state.chatItemsPast = [];
-      state.chatItemsCurrent = [];
+      state.chatEventsPast = [];
+      state.chatEventsCurrent = [];
       state.currentSessionId = undefined;
     },
     setChatMessagePending: (state, action: PayloadAction<ChatMessage>) => {
@@ -433,8 +439,8 @@ const aichatSlice = createSlice({
     },
     clearChatMessagePending: state => (state.chatMessagePending = undefined),
     setNewChatSession: state => {
-      state.chatItemsPast.push(...state.chatItemsCurrent);
-      state.chatItemsCurrent = [];
+      state.chatEventsPast.push(...state.chatEventsCurrent);
+      state.chatEventsCurrent = [];
       state.currentSessionId = undefined;
     },
     setChatSessionId: (state, action: PayloadAction<number>) => {
@@ -606,8 +612,8 @@ export const selectAllFieldsHidden = createSelector(
 );
 
 export const selectAllMessages = (state: {aichat: AichatState}) => {
-  const {chatItemsPast, chatItemsCurrent, chatMessagePending} = state.aichat;
-  const messages = [...chatItemsPast, ...chatItemsCurrent];
+  const {chatEventsPast, chatEventsCurrent, chatMessagePending} = state.aichat;
+  const messages = [...chatEventsPast, ...chatEventsCurrent];
   if (chatMessagePending) {
     messages.push(chatMessagePending);
   }
@@ -642,6 +648,7 @@ export const {
   setViewMode,
   setStartingAiCustomizations,
   setAiCustomizationProperty,
+  setStudentChatHistory,
   setModelCardProperty,
   endSave,
 } = aichatSlice.actions;

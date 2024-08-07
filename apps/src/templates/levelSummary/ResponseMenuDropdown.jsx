@@ -44,7 +44,7 @@ const ResponseMenuDropdown = ({
       return (
         <button
           type="button"
-          className={styles.dropdownOption}
+          className={classNames(styles.dropdownOption, 'uitest-pin-response')}
           onClick={() => {
             setIsOpen(false);
             pinResponse(response.user_id);
@@ -62,7 +62,7 @@ const ResponseMenuDropdown = ({
       <Button
         onClick={() => setIsOpen(!isOpen)}
         isIconOnly={true}
-        icon={{iconName: 'ellipsis-vertical', title: i18n.additionalOptions()}}
+        icon={{iconName: 'ellipsis-vertical'}}
         color={buttonColors.purple}
         size="xs"
         type="tertiary"
@@ -70,6 +70,7 @@ const ResponseMenuDropdown = ({
           styles.studentAnswerMenuButton,
           unpinResponse && styles.studentAnswerMenuButtonPinned
         )}
+        aria-label={i18n.additionalOptions()}
       />
       {isOpen && (
         <div className={styles.studentAnswerMenuDropdown}>
@@ -77,7 +78,10 @@ const ResponseMenuDropdown = ({
             <li>{getPinnedDropdownOption()}</li>
             <li>
               <button
-                className={styles.dropdownOption}
+                className={classNames(
+                  styles.dropdownOption,
+                  'uitest-hide-response'
+                )}
                 type="button"
                 onClick={() => {
                   setIsOpen(false);

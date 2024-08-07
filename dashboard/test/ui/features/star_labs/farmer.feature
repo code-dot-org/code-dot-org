@@ -1,7 +1,7 @@
 Feature: Playing the Farmer Game
 
 Background:
-  Given I am on "http://studio.code.org/s/20-hour/lessons/9/levels/1?noautoplay=true&blocklyVersion=google"
+  Given I am on "http://studio.code.org/s/20-hour/lessons/9/levels/1?noautoplay=true"
   And I wait for the lab page to fully load
   And I dismiss the login reminder
   And element ".instructions-markdown p" has text "Hi, I'm a farmer. I need your help to flatten the field on my farm so it's ready for planting. Move me to the pile of dirt and use the \"remove\" block to remove it."

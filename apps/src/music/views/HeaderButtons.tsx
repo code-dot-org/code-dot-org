@@ -7,7 +7,7 @@ import {
   DialogContext,
   DialogType,
 } from '@cdo/apps/lab2/views/dialogs/DialogManager';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 

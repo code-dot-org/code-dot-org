@@ -2,8 +2,8 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import FontAwesome from '../legacySharedComponents/FontAwesome';
 import {styles as CompletionButtonStyles} from '../templates/CompletionButton';
-import FontAwesome from '../templates/FontAwesome';
 import {RunButton, ResetButton} from '../templates/GameButtons';
 
 import ScreenSelector from './ScreenSelector';

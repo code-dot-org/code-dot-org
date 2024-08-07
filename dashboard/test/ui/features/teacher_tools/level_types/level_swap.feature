@@ -19,7 +19,7 @@ Feature: Swapped levels
   @as_student
   @no_mobile
   Scenario: Student with progress sees old version
-    Given I complete the level on "http://studio.code.org/s/allthethings/lessons/29/levels/1?blocklyVersion=google&level_name=2-3 Maze 1"
+    Given I complete the level on "http://studio.code.org/s/allthethings/lessons/29/levels/1?level_name=2-3 Maze 1"
     And I complete the level on "http://studio.code.org/s/allthethings/lessons/29/levels/4?level_name=2-3 Artist 1 new"
     And I am on "http://studio.code.org/s/allthethings/lessons/29/levels/5?level_name=ramp_video_loopsArtist&noautoplay=true"
     And I wait until element ".submitButton" is visible
