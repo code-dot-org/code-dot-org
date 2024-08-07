@@ -52,9 +52,7 @@ $selectUserTypeButtonTextColorSelected: #fff;
 
 @import "bootstrap";
 
-p,
-pre,
-span {
+p,pre,span {
   @include selectable;
 }
 
@@ -204,8 +202,7 @@ img.video_thumbnail {
   }
 
   .project_info {
-    .header_text,
-    .header_button {
+    .header_text, .header_button {
       float: left;
     }
     .project_name_wrapper .header_text {
@@ -255,20 +252,18 @@ img.video_thumbnail {
       display: inline-block;
       margin-top: -1px;
 
-      &:link,
-      &:visited {
+      &:link, &:visited {
         text-decoration: none;
       }
 
-      &:hover,
-      &:active {
+      &:hover, &:active {
         border-bottom: solid 2px $orange;
         margin-top: 3px;
         padding-bottom: 2px;
       }
     }
 
-    html[dir="rtl"] & {
+    html[dir=rtl] & {
       padding-right: 30px;
     }
   }
@@ -297,14 +292,10 @@ img.video_thumbnail {
     }
   }
 
-  .user_menu,
-  .create_menu,
-  .help_button {
+  .user_menu, .create_menu, .help_button {
     margin-top: 6px;
-    .create_button,
-    .display_name,
-    .pairing_name {
-      html[dir="rtl"] & {
+    .create_button, .display_name, .pairing_name {
+      html[dir=rtl] & {
         float: right;
         padding-left: 3px;
       }
@@ -317,8 +308,7 @@ img.video_thumbnail {
       padding-top: 3px;
     }
 
-    .user_options,
-    .help_contents {
+    .user_options, .help_contents {
       font-size: 14px;
       line-height: 20px;
     }
@@ -387,6 +377,7 @@ img.video_thumbnail {
   }
 }
 
+
 #language_dir.rtl #pageheader-wrapper {
   .create_options {
     direction: rtl;
@@ -410,15 +401,15 @@ img.video_thumbnail {
   }
 
   /*
-     The banner background image leaves an open space for text on the left. Therefore, in Right-to-Left languages, the
-     banner needs to be flipped horizontally so the background image empty space is on the right.
-    */
-  html[dir="rtl"] & {
+    The banner background image leaves an open space for text on the left. Therefore, in Right-to-Left languages, the
+    banner needs to be flipped horizontally so the background image empty space is on the right.
+  */
+  html[dir=rtl] & {
     transform: scaleX(-1);
     /*
-       Since the whole banner was flipped horizontally, we need to un-flip all the content in the header. So the text and
-       layout is not backwards
-      */
+      Since the whole banner was flipped horizontally, we need to un-flip all the content in the header. So the text and
+      layout is not backwards
+    */
     .bannerContentContainer {
       transform: scaleX(-1);
     }
@@ -438,16 +429,15 @@ img.video_thumbnail {
   }
 }
 
-#header-banner,
-#header-banner-overflow {
+#header-banner, #header-banner-overflow {
   .children {
     margin-top: 16px;
   }
 }
 
 /* When we are using a dark theme in Google Blockly, we want the main Blockly area (inside #codeWorkspace)
-  * to have a 1px separation between it and the PaneHeader above it.
- *  */
+* to have a 1px separation between it and the PaneHeader above it.
+*  */
 #codeWorkspace > .cdomoderndark-theme,
 #codeWorkspace > .cdohighcontrastdark-theme,
 #codeWorkspace > .cdoprotanopiadark-theme,
@@ -508,10 +498,7 @@ img.video_thumbnail {
 .main {
   padding: 10px;
 
-  a:link,
-  a:visited,
-  a:hover,
-  a:active {
+  a:link, a:visited, a:hover, a:active {
     @include main-font-bold;
     color: $brand_secondary_default;
     background-color: transparent;
@@ -522,9 +509,7 @@ img.video_thumbnail {
     text-decoration: underline;
   }
 
-  a:link,
-  a:visited,
-  a:active {
+  a:link, a:visited, a:active {
     &:has(.visual-block) {
       text-decoration: unset;
 
@@ -534,10 +519,7 @@ img.video_thumbnail {
     }
   }
 
-  a.fa:link,
-  a.fa:visited,
-  a.fa:hover,
-  a.fa:active {
+  a.fa:link, a.fa:visited, a.fa:hover, a.fa:active {
     font-family: FontAwesome;
   }
 }
@@ -546,19 +528,18 @@ img.video_thumbnail {
 $footer_min_height: 236px;
 $footer_padding-top: 20px;
 $footer_fullheight: $footer_min_height + $footer_padding-top;
-html,
-body {
+html, body {
   height: 100%;
 }
 .wrapper {
   min-height: 100%;
-  margin-bottom: -$footer_fullheight; /* This is the same as the height of .push. */
+  margin-bottom: -$footer_fullheight;     /* This is the same as the height of .push. */
   .legacy-share-view & {
     position: relative;
   }
 }
 .push {
-  height: $footer_fullheight; /* This is the same as the height of .footer once its padding is included. */
+  height: $footer_fullheight;             /* This is the same as the height of .footer once its padding is included. */
 }
 .legacy-share-view .push {
   display: none;
@@ -570,10 +551,7 @@ body {
   font-size: 14px;
   background-color: $darkest_gray;
   color: $header_text;
-  a:link,
-  a:visited,
-  a:hover,
-  a:active {
+  a:link, a:visited, a:hover, a:active {
     @include main-font-regular;
     color: $white;
     background-color: transparent;
@@ -590,12 +568,9 @@ body {
     font-size: 11px;
     height: 18px;
     margin-bottom: 4px;
-  }
+    }
   .fineprint {
-    a:link,
-    a:visited,
-    a:hover,
-    a:active {
+    a:link, a:visited, a:hover, a:active {
       @include main-font-semi-bold;
     }
   }
@@ -605,26 +580,26 @@ body {
   }
 
   .container {
-    html[dir="rtl"] & {
+    html[dir=rtl] & {
       float: right;
     }
 
     .row {
       [class*="span"] {
-        html[dir="rtl"] & {
+        html[dir=rtl] & {
           float: right;
           margin-right: 20px;
           margin-left: 0;
         }
 
         a {
-          html[dir="rtl"] & {
+          html[dir=rtl] & {
             float: right;
           }
         }
 
         div.dim {
-          html[dir="rtl"] & {
+          html[dir=rtl] & {
             float: right;
             margin-left: 4px;
             margin-right: 4px;
@@ -632,6 +607,7 @@ body {
         }
       }
     }
+
   }
 }
 
@@ -641,9 +617,7 @@ $small-footer-horizontal-margin: 15px;
 $small-footer-standard-width: 400px;
 
 /* Shared styles so flyout looks like footer */
-.small-footer-base,
-#copyright-flyout,
-#more-menu {
+.small-footer-base, #copyright-flyout, #more-menu {
   background-color: $background_gray;
   color: $dimgray;
   font-size: 14px;
@@ -725,9 +699,9 @@ $small-footer-standard-width: 400px;
   max-width: $small-footer-standard-width;
 
   /*
-    * Used in @cdo/apps/src/StudioApp.js to resize #belowVisualization to
-    * fit between the visualization above and the .small-footer
-    */
+  * Used in @cdo/apps/src/StudioApp.js to resize #belowVisualization to
+  * fit between the visualization above and the .small-footer
+  */
   margin-top: 5px;
 
   select {
@@ -741,9 +715,7 @@ $small-footer-standard-width: 400px;
     border: 0;
   }
 
-  .copyright-button,
-  .i18n-dropdown-container,
-  .globe-icon {
+  .copyright-button, .i18n-dropdown-container, .globe-icon {
     align-self: center;
   }
 
@@ -784,6 +756,7 @@ $small-footer-standard-width: 400px;
   position: fixed;
   margin-top: 0;
 }
+
 
 #copyright-scroll-area {
   overflow-y: auto;
@@ -854,9 +827,9 @@ $small-footer-standard-width: 400px;
 }
 
 /* All three major components of .small-footer are stacked:
-    Need to have this reasonably, high since some of our elements (such as
-    applab editor) have higher values
- */
+  Need to have this reasonably, high since some of our elements (such as
+  applab editor) have higher values
+*/
 #more-menu {
   z-index: 998;
 }
@@ -872,15 +845,14 @@ $small-footer-standard-width: 400px;
   height: 24px;
 }
 
-.oceans-blue .small-footer-base,
-.music-black .small-footer-base {
+.oceans-blue .small-footer-base, .music-black .small-footer-base {
   background-color: initial;
   border-top: initial;
 }
 
 /* Custom styling for the locale & copyright buttons and the copyright flyout,
-  * for Music Lab.
-  */
+* for Music Lab.
+*/
 .music-black {
   #page-small-footer {
     user-select: none;
@@ -893,8 +865,7 @@ $small-footer-standard-width: 400px;
       }
     }
 
-    .i18n-dropdown-container,
-    .copyright-link {
+    .i18n-dropdown-container, .copyright-link {
       height: 26px;
       box-sizing: border-box;
       border: solid 1px $neutral_dark40;
@@ -908,10 +879,7 @@ $small-footer-standard-width: 400px;
       }
     }
 
-    .i18n-dropdown-container,
-    .globe-icon,
-    #locale,
-    .copyright-link {
+    .i18n-dropdown-container, .globe-icon, #locale, .copyright-link {
       background-color: initial;
       color: $neutral_dark40;
     }
@@ -920,8 +888,7 @@ $small-footer-standard-width: 400px;
       border: solid 1px $neutral_dark40;
       box-sizing: border-box;
 
-      h4,
-      a:link {
+      h4, a:link {
         color: $neutral_dark50;
       }
 
@@ -933,8 +900,7 @@ $small-footer-standard-width: 400px;
       }
     }
 
-    #copyright-flyout,
-    #copyright-scroll-area {
+    #copyright-flyout, #copyright-scroll-area {
       background-color: $neutral_dark;
       color: $neutral_light;
     }
@@ -956,8 +922,7 @@ $small-footer-standard-width: 400px;
   display: inline-block;
 }
 
-.user_options,
-.help_contents {
+.user_options, .help_contents {
   display: none;
   a:link {
     color: $black;
@@ -1074,8 +1039,7 @@ $default-modal-width: 640px;
   margin: 0;
 }
 
-.vjs-tech:focus,
-.vjs-poster:focus {
+.vjs-tech:focus, .vjs-poster:focus {
   outline: 0;
 }
 
@@ -1106,8 +1070,7 @@ $default-modal-width: 640px;
 }
 
 .fallback-video-player-failed {
-  video,
-  div {
+  video, div {
     visibility: hidden;
   }
   p {
@@ -1144,8 +1107,7 @@ $default-modal-width: 640px;
   flex-grow: 0;
 }
 
-.header_left,
-.header_right {
+.header_left, .header_right {
   margin-top: 5px;
 }
 
@@ -1163,17 +1125,17 @@ $default-modal-width: 640px;
   }
 }
 
+
 .project_info {
   float: left;
 
-  .header_text,
-  .header_button {
+  .header_text, .header_button {
     float: left;
   }
   .project_name_wrapper {
     min-width: 160px;
 
-    html[dir="rtl"] & {
+    html[dir=rtl] & {
       padding-left: 5px;
       padding-right: 5px;
     }
@@ -1197,6 +1159,7 @@ $default-modal-width: 640px;
 }
 
 #project-share {
+
   .export-button {
     color: $dark_color;
     cursor: pointer;
@@ -1215,8 +1178,7 @@ $default-modal-width: 640px;
     border-radius: 5px;
     margin-right: 8px;
     font-size: larger;
-    &:hover,
-    & {
+    &:hover, & {
       text-decoration: none;
     }
 
@@ -1262,8 +1224,7 @@ $default-modal-width: 640px;
   min-width: 0;
   float: left;
 
-  .header_button,
-  .header_input {
+  .header_button, .header_input {
     margin-left: 10px;
   }
 }
@@ -1388,8 +1349,7 @@ input.header_input {
 .oceans-blue {
   #codeApp {
     .loading {
-      background: image-url("spinner-big-oceans-blue.gif") no-repeat center
-        center;
+      background: image-url("spinner-big-oceans-blue.gif") no-repeat center center;
     }
 
     .slow_load {
@@ -1400,8 +1360,7 @@ input.header_input {
 
 #codeApp {
   position: relative;
-  margin: env(safe-area-inset-top) env(safe-area-inset-right)
-    env(safe-area-inset-bottom) env(safe-area-inset-left);
+  margin: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
 
   .loading {
     height: 520px;
@@ -1431,6 +1390,7 @@ body.iframe_embed_app_and_code {
   #codeApp {
     height: 100%;
   }
+
 }
 
 #codeApp.pin_bottom {
@@ -1536,7 +1496,7 @@ body.iframe_embed_app_and_code {
         }
       }
 
-      html[dir="rtl"] & {
+      html[dir=rtl] & {
         float: right;
       }
     }
@@ -1579,23 +1539,21 @@ body.iframe_embed_app_and_code {
     height: $startHeight + $growth;
   }
 
-  html[dir="rtl"] &,
-  .flip-x-close & {
+  html[dir=rtl] &, .flip-x-close & {
     right: auto;
     left: $cornerOffset;
   }
-  html[dir="rtl"] &:hover,
-  .flip-x-close &:hover {
+  html[dir=rtl] &:hover, .flip-x-close &:hover {
     right: auto;
     left: $cornerOffset - $movement;
   }
 
-  html[dir="rtl"] .flip-x-close & {
+  html[dir=rtl] .flip-x-close & {
     right: auto;
     left: $cornerOffset;
   }
 
-  html[dir="rtl"] .flip-x-close &:hover {
+  html[dir=rtl] .flip-x-close &:hover {
     right: auto;
     left: $cornerOffset - $movement;
   }
@@ -1644,7 +1602,7 @@ body.iframe_embed_app_and_code {
   padding-right: 25px;
 }
 
-html[dir="rtl"] .qtip-content {
+html[dir=rtl] .qtip-content {
   direction: rtl;
   text-align: right;
   padding-right: 9px;
@@ -1734,10 +1692,7 @@ a.download-video {
   }
 
   h3.whitetext {
-    a,
-    a:link,
-    a:hover,
-    a:visited {
+    a, a:link, a:hover, a:visited {
       color: $white;
       text-decoration: none;
       cursor: pointer;
@@ -1756,15 +1711,12 @@ a.download-video {
       margin-right: 10px;
     }
 
-    li.active a,
-    li.active a:hover,
-    li.active a:link {
+    li.active a, li.active a:hover, li.active a:link {
       background-color: $white;
       color: $purple;
       border: 2px solid $purple;
     }
-    li a:hover,
-    a:focus {
+    li a:hover, a:focus {
       text-decoration: none;
       background-color: $white;
     }
@@ -1794,12 +1746,11 @@ a.download-video {
     }
 
     /**
-      * betatext can be used to style a span directly, or betacontainer can be
-      * used on a node containing markdown to apply the beta styling to all
-      * **strong** nodes in the markdown
-      */
-    .betatext,
-    .betacontainer strong {
+    * betatext can be used to style a span directly, or betacontainer can be
+    * used on a node containing markdown to apply the beta styling to all
+    * **strong** nodes in the markdown
+    */
+    .betatext, .betacontainer strong {
       background: $white;
       color: $cyan;
       padding: 2px 4px;
@@ -1813,8 +1764,7 @@ a.download-video {
 }
 
 #signinsection {
-  ul.students,
-  ul.pictures {
+  ul.students, ul.pictures {
     margin-left: 0;
   }
 
@@ -1845,8 +1795,7 @@ a.download-video {
     label {
       font-size: 17.5px;
     }
-    label,
-    input {
+    label, input {
       margin: 5px;
       display: inline-block;
       vertical-align: middle;
@@ -1883,8 +1832,7 @@ a.download-video {
     align-items: center;
     justify-content: space-between;
 
-    input[type="text"],
-    input[type="password"] {
+    input[type=text], input[type=password] {
       width: $field-width;
       height: 40px;
       padding: 0 6px;
@@ -1914,8 +1862,7 @@ a.download-video {
     @include main-font-semi-bold;
   }
 
-  #password_field,
-  #new_user {
+  #password_field, #new_user {
     margin-bottom: 0;
   }
 
@@ -1985,8 +1932,7 @@ a.download-video {
   margin-bottom: 0;
 }
 
-#signup,
-#school-info-modal {
+#signup, #school-info-modal {
   $signup-info-background: #f7f7f7;
   $signup-info-border-color: #e5e5e5;
 
@@ -2053,8 +1999,7 @@ a.download-video {
     margin: 20px 0;
   }
 
-  .select-user-type-teacher-button,
-  .select-user-type-student-button {
+  .select-user-type-teacher-button, .select-user-type-student-button {
     min-width: 225px;
     min-height: 275px;
     position: relative;
@@ -2093,8 +2038,7 @@ a.download-video {
     display: none;
   }
 
-  .select-user-type-teacher-button:hover,
-  .select-user-type-student-button:hover {
+  .select-user-type-teacher-button:hover, .select-user-type-student-button:hover {
     background-color: $selectUserTypeButtonBackgroundColorHover;
     color: $selectUserTypeButtonTextColorHover;
   }
@@ -2118,8 +2062,7 @@ a.download-video {
     flex-grow: 1;
   }
 
-  .signup,
-  .finish-signup {
+  .signup, .finish-signup {
     .section-container {
       padding: 10px;
       flex-grow: 1;
@@ -2158,8 +2101,7 @@ a.download-video {
     .field_with_errors {
       display: flex;
       flex-basis: 100%;
-      input,
-      select {
+      input, select {
         border-color: $red;
       }
     }
@@ -2193,9 +2135,7 @@ a.download-video {
       height: 36px;
     }
 
-    input[type="text"],
-    input[type="password"],
-    input[type="email"] {
+    input[type=text], input[type=password], input[type=email] {
       height: 36px;
     }
 
@@ -2203,8 +2143,7 @@ a.download-video {
       margin: 0;
     }
 
-    input,
-    select {
+    input, select {
       flex-grow: 1;
     }
 
@@ -2212,7 +2151,7 @@ a.download-video {
       display: flex;
       margin-bottom: 20px;
 
-      [class*="span"] {
+      [class*=span] {
         align-self: center;
         display: flex;
         .div {
@@ -2225,7 +2164,7 @@ a.download-video {
         margin: 0;
       }
 
-      input[type="checkbox"] {
+      input[type=checkbox] {
         flex-grow: 0;
         align-self: center;
         .field_with_errors {
@@ -2263,9 +2202,7 @@ a.download-video {
       flex-grow: 1;
     }
 
-    #teacher-name-label,
-    #student-name-label,
-    #teacher-email-label {
+    #teacher-name-label, #student-name-label, #teacher-email-label {
       display: flex;
       flex-basis: 100%;
     }
@@ -2278,8 +2215,7 @@ a.download-video {
         display: flex;
       }
 
-      p,
-      span {
+      p, span {
         margin: 0;
         padding: 0 10px;
         font-size: 14px;
@@ -2289,8 +2225,7 @@ a.download-video {
       }
     }
 
-    #email-preference-radio,
-    #share-email-reg-part-preference-radio {
+    #email-preference-radio, #share-email-reg-part-preference-radio {
       p {
         margin: 0;
       }
@@ -2299,12 +2234,11 @@ a.download-video {
     .radio {
       padding: 0;
       display: flex;
-      input[type="radio"] {
+      input[type=radio] {
         margin-left: 0;
         align-self: center;
       }
-      input[type="radio"],
-      label {
+      input[type=radio], label {
         flex-grow: 0;
         margin-right: 5px;
       }
@@ -2351,7 +2285,7 @@ a.download-video {
       .checkbox {
         label {
           align-items: baseline;
-          input[type="checkbox"] {
+          input[type=checkbox] {
             align-self: auto;
           }
         }
@@ -2413,7 +2347,7 @@ a.download-video {
       background-color: $neutral_light;
     }
 
-    input[type="text"] {
+    input[type=text] {
       flex-grow: 2;
       height: 40px;
       padding-top: 0;
@@ -2665,17 +2599,13 @@ a.download-video {
 .level-group-content {
   overflow: hidden;
 
-  .external,
-  .free-response {
+  .external, .free-response {
     margin-left: 0;
   }
 }
 
-.text-match,
-.free-response,
-.peer-review {
-  p,
-  label {
+.text-match, .free-response, .peer-review {
+  p, label {
     font-size: 16px;
     line-height: 24px;
   }
@@ -2696,7 +2626,7 @@ a.download-video {
   margin-left: 93px;
 }
 
-.peer-review input[type="radio"] {
+.peer-review input[type=radio] {
   margin: 0 3px 3px 5px;
 }
 
@@ -2807,8 +2737,7 @@ a.download-video {
   }
 }
 
-.multi.contained,
-.contained.free-response {
+.multi.contained, .contained.free-response {
   margin: 20px;
   max-width: 100%;
   #markdown.teacher {
@@ -2830,9 +2759,7 @@ a.download-video {
   background: image-url("spinner-big.gif") no-repeat center center;
 }
 
-.external,
-.free-response,
-.curriculum-reference {
+.external, .free-response, .curriculum-reference {
   max-width: 970px;
   margin: auto;
 
@@ -2854,9 +2781,7 @@ a.download-video {
   width: 853px;
   margin: 10px auto 0 auto;
 
-  .video-link,
-  .slides-link,
-  #fallback-player-caption-dialog-link {
+  .video-link, .slides-link, #fallback-player-caption-dialog-link {
     display: inline-block;
   }
 
@@ -2880,8 +2805,7 @@ a.download-video {
   margin-right: 0;
 }
 
-.text-match #markdown.teacher,
-.free-response #markdown.teacher {
+.text-match #markdown.teacher, .free-response #markdown.teacher {
   margin-left: 0;
   margin-right: 0;
 }
@@ -2890,8 +2814,7 @@ a.download-video {
   overflow: hidden;
 }
 
-#current-script-levels,
-#all-levels {
+#current-script-levels, #all-levels {
   min-height: 50px;
   li {
     list-style-type: none;
@@ -2938,8 +2861,7 @@ a.download-video {
 }
 
 .buttons.submittable {
-  .submitButton,
-  .unsubmitButton {
+  .submitButton, .unsubmitButton {
     border-color: $purple;
     background-color: $purple;
     color: $white;
@@ -2985,6 +2907,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
   // The tight layout is designed for a full-width layout that tends to
   // vertically stack every element, rather than going for side-by-side elements.
   &.tight {
+
     // A piece of instructional content (image, text, markdown)
     .question .content {
       float: left;
@@ -3030,6 +2953,7 @@ $information-desktop: "only screen and (min-width: 1024px)";
   // layout when the screen is wide, and then stacking vertically for narrow
   // devices.
   &.default {
+
     // The block containing all instructional content (image, text, markdown).
     .question {
       float: left;
@@ -3145,7 +3069,7 @@ $modal-no-icon-gap: 22px;
 
 .modal-content {
   margin-left: $modal-image-width + $modal-image-margin-gap;
-  html[dir="rtl"] & {
+  html[dir=rtl] & {
     margin-left: 0;
     margin-right: $modal-image-width + $modal-image-margin-gap;
   }
@@ -3153,8 +3077,7 @@ $modal-no-icon-gap: 22px;
     margin-left: $modal-no-icon-gap;
   }
 
-  p,
-  pre {
+  p, pre {
     line-height: 27px;
     font-size: 24px;
     color: $neutral_dark;
@@ -3229,8 +3152,7 @@ $modal-no-icon-gap: 22px;
 
   .instructions-container {
     .authored-hints {
-      p,
-      pre {
+      p, pre {
         font-size: 18px;
         line-height: normal;
         color: $charcoal;
@@ -3256,8 +3178,7 @@ h5.dialog-title {
   min-width: 100px;
 }
 
-#again-button,
-#cancel-button {
+#again-button, #cancel-button {
   background-color: $green;
   color: $white;
   margin-left: 0;
@@ -3277,7 +3198,7 @@ h5.dialog-title {
   height: auto;
   margin-top: -75px;
   position: absolute;
-  html[dir="rtl"] & {
+  html[dir=rtl] & {
     float: right;
     -webkit-transform: scaleX(-1);
     -ms-transform: scaleX(-1);
@@ -3302,8 +3223,7 @@ h5.dialog-title {
   padding: 0 0 15px 0;
   background-color: $white;
   $outside-margin-side: 15px;
-  width: $default-modal-width - ($modal-no-icon-gap * 2) -
-    ($outside-margin-side * 2);
+  width: $default-modal-width - ($modal-no-icon-gap * 2) - ($outside-margin-side * 2);
 }
 
 .modal-content.instructions-container {
@@ -3320,8 +3240,7 @@ h5.dialog-title {
   }
 }
 
-.csf-top-instructions,
-.instructions-markdown {
+.csf-top-instructions, .instructions-markdown {
   p {
     line-height: 25px;
     font-size: 16px;
@@ -3399,21 +3318,20 @@ html[dir="rtl"] .instructions-markdown {
 }
 
 #feedbackButtons::after {
-  content: "";
+  content: '';
   display: inline-block;
   width: 100%;
 }
 
 .farSide {
   text-align: right;
-  html[dir="rtl"] & {
+  html[dir=rtl] & {
     text-align: left;
   }
 }
 
 .exclamation-abuse {
-  a,
-  a:hover {
+  a, a:hover {
     color: $white;
     text-decoration: underline;
   }
@@ -3444,15 +3362,15 @@ button.launch {
 html[dir="RTL"] button.launch {
   text-align: right;
 }
-button.launch > img {
+button.launch>img {
   opacity: 1;
   vertical-align: text-bottom;
 }
-button > img {
+button>img {
   opacity: 0.6;
   vertical-align: text-bottom;
 }
-button:hover > img {
+button:hover>img {
   opacity: 1;
 }
 button:active {
@@ -3466,13 +3384,12 @@ button.button-active-no-border:active {
 button:hover {
   @include box-shadow(2px 2px 5px $shadow);
 }
-button.disabled,
-button[disabled="disabled"] {
+button.disabled, button[disabled=disabled] {
   border: 1px solid $lighter_gray;
   background-color: $lighter_gray;
   @include box-shadow(none);
 }
-button.disabled:hover > img {
+button.disabled:hover>img {
   opacity: 0.6;
 }
 button.disabled {
@@ -3498,11 +3415,11 @@ button.notext {
 }
 
 /*
-  * The following responsive styles are designed to match behavior
-  * with the vizualizationColumn styles
-  * defined in apps/style/common.scss, so that the columns in the
-  * header line up with the columns below them.
-  */
+* The following responsive styles are designed to match behavior
+* with the vizualizationColumn styles
+* defined in apps/style/common.scss, so that the columns in the
+* header line up with the columns below them.
+*/
 
 $width: 400px;
 #visualizationColumnHeader {
@@ -3640,8 +3557,7 @@ code {
   color: $purple;
 }
 
-.instructions-markdown ul li,
-.instructions-markdown ol li {
+.instructions-markdown ul li, .instructions-markdown ol li {
   font-size: 16px;
   margin-bottom: 5px;
   line-height: 1.2em;
@@ -4046,7 +3962,7 @@ h2.danger {
 }
 
 // Some images must not be flipped over even in RTL
-html[dir="rtl"] {
+html[dir=rtl] {
   img[src="/blockly/media/skins/jigsaw/blocks.png"] {
     -webkit-transform: none !important;
     transform: none !important;
@@ -4067,12 +3983,11 @@ html[dir="rtl"] {
   height: 32px;
   padding: 6px !important;
 
-  html[dir="rtl"] & {
+  html[dir=rtl] & {
     float: left;
   }
 
-  &:hover,
-  &:focus {
+  &:hover, &:focus {
     background-color: $brand_primary_default !important;
     border-color: $brand_primary_default;
 
@@ -4082,15 +3997,13 @@ html[dir="rtl"] {
 
     img {
       // paint native Microsoft icon full black and set it's color to $neutral_white
-      filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
-        hue-rotate(111deg) brightness(101%) contrast(100%);
+      filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(111deg) brightness(101%) contrast(100%);
     }
   }
 
   img {
     // paint native Microsoft icon full black and set it's color to $neutral_dark
-    filter: brightness(0) saturate(100%) invert(15%) sepia(31%) saturate(359%)
-      hue-rotate(169deg) brightness(94%) contrast(91%);
+    filter: brightness(0) saturate(100%) invert(15%) sepia(31%) saturate(359%) hue-rotate(169deg) brightness(94%) contrast(91%);
   }
 }
 
@@ -4138,43 +4051,40 @@ html[dir="rtl"] {
 }
 
 #reset-predict-progress-button {
-  display: "inline-block";
+  display: 'inline-block';
   font-size: 12;
   @include main-font-regular;
-  border-width: "1px";
-  border-style: "solid";
+  border-width: '1px';
+  border-style: 'solid';
   border-color: $border_gray;
   border-bottom-left-radius: 3;
   border-bottom-right-radius: 3;
   border-top-left-radius: 3;
   border-top-right-radius: 3;
-  text-decoration: "none";
-  box-sizing: "border-box";
-  overflow: "hidden";
-  white-space: "nowrap";
+  text-decoration: 'none';
+  box-sizing: 'border-box';
+  overflow: 'hidden';
+  white-space: 'nowrap';
   color: $white;
   background-color: $red;
-  font-weight: "bold";
-  box-shadow: "inset 0 2px 0 0 rgba(255,255,255,0.40)";
+  font-weight: 'bold';
+  box-shadow: 'inset 0 2px 0 0 rgba(255,255,255,0.40)';
   &:hover:not(:disabled) {
-    box-shadow: "none";
+    box-shadow: 'none';
     color: $red;
     border-color: $red;
     background-color: $white;
-    cursor: "pointer";
+    cursor: 'pointer';
   }
   &:disabled {
     background-color: $lightest_red;
-    box-shadow: "inset 0 2px 0 0 rgba(0,0,0,0.1)";
+    box-shadow: 'inset 0 2px 0 0 rgba(0,0,0,0.1)';
   }
 }
 
 a {
   &.design-system-btn {
-    &:link,
-    &:visited,
-    &:hover,
-    &:active {
+    &:link, &:visited, &:hover, &:active {
       text-decoration: none;
       border-radius: 4px;
       @include main-font-semi-bold;
@@ -4240,6 +4150,10 @@ a {
   }
 }
 
+#teacher-dashboard {
+  overflow: auto;
+}
+
 #lti-integration-portal {
   $signup-info-background: #f7f7f7;
   $signup-info-border-color: #e5e5e5;
@@ -4262,8 +4176,7 @@ a {
   }
 
   .lti-integration-form {
-    input[type="text"],
-    input[type="email"] {
+    input[type=text], input[type=email] {
       height: 36px;
     }
 
@@ -4271,8 +4184,7 @@ a {
       margin: 0;
     }
 
-    input,
-    select {
+    input, select {
       flex-grow: 1;
     }
 
@@ -4280,7 +4192,7 @@ a {
       display: flex;
       margin-bottom: 20px;
 
-      [class*="span"] {
+      [class*=span] {
         align-self: center;
         display: flex;
         .div {
