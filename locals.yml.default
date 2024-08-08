@@ -144,4 +144,4 @@ use_my_apps: true
 # If you enable `delayed_job`, you will need to manually run `bundle exec bin/delayed_job start`
 # from the dashboard/ directory to start the workers.
 #
-# active_job: { queue_adapter: delayed_job }
+# active_job_queue_adapter: :delayed_job

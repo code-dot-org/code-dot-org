@@ -224,7 +224,7 @@ module Dashboard
     # Use custom routes for error codes
     config.exceptions_app = routes
 
-    config.active_job.queue_adapter = :delayed_job
+    config.active_job.queue_adapter = CDO.active_job_queue_adapter
     config.active_job.default_queue_name = CDO.active_job_queues[:default]
   end
 end

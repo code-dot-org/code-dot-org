@@ -18,7 +18,7 @@ This means, at present, **PyCall should be used from ActiveJob workers**.
 
 - On production we are using `delayed_job` for ActiveJob, which does not use threads.
 - On development, we default to the async adapter, which uses threads. If you wish to develop
-  ActiveJob Python workers, you'll need to set `active_job: { queue_adapter: delayed_job }` in
+  ActiveJob Python workers, you'll need to set `active_job_queue_adapter: delayed_job }` in
   your locals.yml and launch workers manually using `bundle exec bin/delayed_job start`.
   See comments in [locals.yml.default](../locals.yml.default) for more details.
 
