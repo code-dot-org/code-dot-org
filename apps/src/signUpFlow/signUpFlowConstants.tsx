@@ -1,4 +1,5 @@
 const USER_NAME_SESSION_KEY = 'userName';
+const USER_AGE_SESSION_KEY = 'userAge';
 const EMAIL_OPT_IN_SESSION_KEY = 'emailOptIn';
 const SCHOOL_ID_SESSION_KEY = 'schoolId';
 const SCHOOL_ZIP_SESSION_KEY = 'schoolZip';
@@ -6,6 +7,7 @@ const SCHOOL_NAME_SESSION_KEY = 'schoolName';
 
 export {
   USER_NAME_SESSION_KEY,
+  USER_AGE_SESSION_KEY,
   EMAIL_OPT_IN_SESSION_KEY,
   SCHOOL_ID_SESSION_KEY,
   SCHOOL_ZIP_SESSION_KEY,

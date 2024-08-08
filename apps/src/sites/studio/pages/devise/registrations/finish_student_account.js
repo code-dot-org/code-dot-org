@@ -2,11 +2,11 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import StudentTeacherAccount from '@cdo/apps/signUpFlow/StudentTeacherAccount';
+import FinishStudentAccount from '@cdo/apps/signUpFlow/FinishStudentAccount';
 
 $(document).ready(() => {
   ReactDOM.render(
-    <StudentTeacherAccount />,
+    <FinishStudentAccount />,
     document.getElementById('finish-student-account-root')
   );
 });

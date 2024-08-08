@@ -46,10 +46,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
         <BodyTwoText>{locale.tailor_experience()}</BodyTwoText>
       </div>
       <div className={style.inputContainer}>
-        <BodyTwoText
-          className={style.labelText}
-          visualAppearance={'heading-xs'}
-        >
+        <BodyTwoText visualAppearance={'heading-xs'}>
           {locale.what_do_you_want_to_be_called()}
         </BodyTwoText>
         <input
@@ -63,10 +60,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
         </BodyThreeText>
         <SchoolDataInputs usIp={usIp} includeHeaders={false} />
         <div className={style.emailOptInContainer}>
-          <BodyTwoText
-            className={style.labelText}
-            visualAppearance={'heading-xs'}
-          >
+          <BodyTwoText visualAppearance={'heading-xs'}>
             {locale.keep_me_updated()}
           </BodyTwoText>
           <span className={style.emailOptInCheckboxContainer}>
@@ -86,7 +80,6 @@ const FinishTeacherAccount: React.FunctionComponent<{
             </BodyTwoText>
           </span>
           <BodyThreeText className={style.emailOptInFootnote}>
-            <strong>{locale.note()}</strong>{' '}
             {locale.after_creating_your_account()}
           </BodyThreeText>
         </div>

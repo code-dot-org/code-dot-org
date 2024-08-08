@@ -1,12 +1,34 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import locale from '@cdo/apps/signup/locale';
 
+import SimpleDropdown from '../componentLibrary/dropdown/simpleDropdown';
+
+import {
+  USER_NAME_SESSION_KEY,
+  USER_AGE_SESSION_KEY,
+} from './signUpFlowConstants';
+
 import style from './finish-account.module.scss';
 
 const FinishStudentAccount: React.FunctionComponent = () => {
+  const [name, setName] = useState('');
+  const [age, setAge] = useState('');
+
+  const onNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    const newName = e.target.value;
+    setName(newName);
+    sessionStorage.setItem(USER_NAME_SESSION_KEY, newName);
+  };
+
+  const onAgeChange = (e: React.ChangeEvent<HTMLSelectElement>): void => {
+    const newAge = e.target.value;
+    setAge(newAge);
+    sessionStorage.setItem(USER_AGE_SESSION_KEY, newAge);
+  };
+
   return (
     <div className={style.finishAccountContainer}>
       <div className={style.headerTextContainer}>
@@ -14,12 +36,32 @@ const FinishStudentAccount: React.FunctionComponent = () => {
         <BodyTwoText>{locale.tailor_experience()}</BodyTwoText>
       </div>
       <div className={style.inputContainer}>
+        <BodyTwoText visualAppearance={'heading-xs'}>
+          {locale.display_name_eg()}
+        </BodyTwoText>
+        <input
+          type="text"
+          name="[user][name]"
+          onChange={onNameChange}
+          value={name}
+          placeholder="Type something here"
+        />
         <BodyTwoText
-          className={style.labelText}
+          className={style.ageDropdownLabel}
           visualAppearance={'heading-xs'}
         >
-          {locale.account_name_input()}
+          {locale.what_is_your_age()}
         </BodyTwoText>
+        <SimpleDropdown
+          id="uitest-age-dropdown"
+          name={'[user][age]'}
+          labelText=""
+          isLabelVisible={false}
+          items={[{value: '0', text: '0'}, {value: '1', text: '1'}, {value: '2', text: '2'}]}
+          selectedValue={age}
+          onChange={onAgeChange}
+          size="m"
+        />
       </div>
       <div className={style.finishSignUpButtonContainer}>
         <Button
