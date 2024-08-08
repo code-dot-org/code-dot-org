@@ -1,7 +1,7 @@
-import Accelerometer from '@cdo/apps/lib/kits/maker/boards/microBit/Accelerometer';
-import {ACCEL_EVENT_ID} from '@cdo/apps/lib/kits/maker/boards/microBit/MBFirmataWrapper';
-import {SENSOR_CHANNELS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
-import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
+import Accelerometer from '@cdo/apps/maker/boards/microBit/Accelerometer';
+import {ACCEL_EVENT_ID} from '@cdo/apps/maker/boards/microBit/MBFirmataWrapper';
+import {SENSOR_CHANNELS} from '@cdo/apps/maker/boards/microBit/MicroBitConstants';
+import {MBFirmataClientStub} from '@cdo/apps/maker/util/makeStubBoard';
 
 describe('MicroBitAccelerometer', function () {
   let boardClient;

@@ -1,9 +1,9 @@
-import LightSensor from '@cdo/apps/lib/kits/maker/boards/microBit/LightSensor';
+import LightSensor from '@cdo/apps/maker/boards/microBit/LightSensor';
 import {
   SENSOR_CHANNELS,
   MAX_LIGHT_SENSOR_VALUE,
-} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
-import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
+} from '@cdo/apps/maker/boards/microBit/MicroBitConstants';
+import {MBFirmataClientStub} from '@cdo/apps/maker/util/makeStubBoard';
 
 describe('LightSensor', function () {
   let boardClient, lightSensor;

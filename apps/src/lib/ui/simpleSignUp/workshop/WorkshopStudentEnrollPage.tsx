@@ -12,6 +12,7 @@ const WorkshopStudentEnrollPage: React.FunctionComponent = () => (
       <AccountBanner
         heading={i18n.accountNeedTeacherAccountWelcomeBannerHeaderLabel()}
         desc={i18n.accountNeedTeacherAccountWelcomeBannerHeaderDesc()}
+        showLogo={true}
       />
       <div className={styles.cardContainer}>
         <AccountCard
