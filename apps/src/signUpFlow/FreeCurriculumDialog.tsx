@@ -36,7 +36,7 @@ const FreeCurriculumDialog: React.FunctionComponent<
           openExternalLinksInNewTab={true}
           markdown={locale.our_commitment_to_free_resources({
             creativeCommonsLink:
-              'http://creativecommons.org/licenses/by-nc-sa/4.0/',
+              'https://creativecommons.org/licenses/by-nc-sa/4.0/',
           })}
         />
         <BodyThreeText>{locale.dedicated_to_expanding()}</BodyThreeText>

@@ -8,10 +8,6 @@
 
 body {
   background-color: $light_gray_50 !important;
-
-  & > .responsive_full_container {
-    padding: 1rem;
-  }
 }
 
 main.wrapper {
@@ -64,6 +60,7 @@ main.wrapper {
     }
   }
 
+  // Styled here to look like a text link
   .dialogButton {
     @include body-three;
     margin: unset !important;
