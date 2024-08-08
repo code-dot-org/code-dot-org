@@ -131,7 +131,6 @@
 
     # 'daemons' in all environments.
     cronjob at:'*/1 * * * *', do:deploy_dir('aws', 'ci_build'), notify: 'dev+build@code.org'
-    cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'mysql-metrics')
     cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'report_activejob_metrics')
 
     # background tasks that adhoc instances don't need to run.

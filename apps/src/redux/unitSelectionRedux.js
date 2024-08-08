@@ -87,10 +87,10 @@ export const asyncLoadCoursesWithProgress = () => (dispatch, getState) => {
       // Reorder coursesWithProgress so that the current section is at the top and other sections are in order from newest to oldest
       const reorderedCourses = [
         ...coursesWithProgress.filter(
-          course => course.id !== selectedSection.course_version_id
+          course => course.id !== selectedSection.courseVersionId
         ),
         ...coursesWithProgress.filter(
-          course => course.id === selectedSection.course_version_id
+          course => course.id === selectedSection.courseVersionId
         ),
       ].reverse();
       dispatch(setCoursesWithProgress(reorderedCourses));

@@ -6,27 +6,25 @@ import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import _ from 'lodash';
 import {PyodideInterface} from 'pyodide';
 
+import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 import {PyodideMessage, PyodidePathContent} from '../types';
 
 import {HIDDEN_FOLDERS} from './constants';
-import {ALL_PATCHES} from './patches';
+import {FLUSH_STDOUT} from './patches';
 
-export function applyPatches(originalCode: string) {
-  let finalCode = originalCode;
-
-  for (const patch of ALL_PATCHES) {
-    finalCode = patch.shouldPrepend
-      ? patch.contents + '\n' + finalCode
-      : finalCode + '\n' + patch.contents;
-  }
-  return finalCode;
+// Returns the cleanup code to be run after the user's code.
+export function getCleanupCode(source: MultiFileSource) {
+  // FLUSH_STDOUT imports sys, so we don't need to import it again for deleteCachedUserModules.
+  const cleanupCode = FLUSH_STDOUT;
+  return cleanupCode + deleteCachedUserModules(source, MAIN_PYTHON_FILE);
 }
 
 // Pyodide uses the same interpreter for the lifetime of the browser tab.
 // In order to ensure we get updated user code for each run, we delete the
 // modules created by the user code from the sys.modules cache.
+// This script should only be run after sys has been imported.
 export function deleteCachedUserModules(
   source: MultiFileSource,
   excludedFileName: string

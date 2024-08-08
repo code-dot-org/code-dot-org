@@ -1170,6 +1170,7 @@ Dashboard::Application.routes.draw do
 
     post '/aichat/chat_completion', to: 'aichat#chat_completion'
     post '/aichat/log_chat_event', to: 'aichat#log_chat_event'
+    post '/aichat/check_message_safety', to: 'aichat#check_message_safety'
 
     resources :ai_tutor_interactions, only: [:create, :index] do
       resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]
