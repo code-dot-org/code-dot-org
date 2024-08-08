@@ -6,7 +6,7 @@
 #  user_id              :integer          not null
 #  model_customizations :json             not null
 #  stored_messages      :json
-#  new_message          :text(65535)      not null
+#  new_message          :json             not null
 #  status               :integer
 #  response             :text(65535)
 #  created_at           :datetime         not null

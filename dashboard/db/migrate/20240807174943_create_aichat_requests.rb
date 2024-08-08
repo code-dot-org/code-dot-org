@@ -5,7 +5,7 @@ class CreateAichatRequests < ActiveRecord::Migration[6.1]
       t.integer :user_id, null: false
       t.json :model_customizations, null: false
       t.json :stored_messages
-      t.text :new_message, null: false
+      t.json :new_message, null: false
       t.integer :status
       t.text :response
 

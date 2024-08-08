@@ -85,7 +85,7 @@ ActiveRecord::Schema.define(version: 2024_08_07_174943) do
     t.integer "user_id", null: false
     t.json "model_customizations", null: false
     t.json "stored_messages"
-    t.text "new_message", null: false
+    t.json "new_message", null: false
     t.integer "status"
     t.text "response"
     t.datetime "created_at", precision: 6, null: false
