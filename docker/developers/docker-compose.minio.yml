@@ -1,0 +1,113 @@
+include:
+  - path: ./docker-compose.networks.yml
+
+services:
+  minio-base: &minio-base
+    hostname: minio
+    # x86 image:
+    image: minio/minio:${MINIO_VERSION:-latest}
+    # arm image:
+    #image: pixelchrome/minio-arm:latest-arm32v7
+    volumes:
+      - minio1_storage:/data1
+      - minio2_storage:/data2
+      - minio3_storage:/data3
+      - minio4_storage:/data4
+    command: server --console-address ":3001" /data1 /data2 /data3 /data4
+
+  minio:
+    <<: *minio-base
+    environment: &minio-env
+      MINIO_VOLUMES: "http://localhost:9000/data{1...4}"
+      MINIO_SERVER_URL: "http://localhost:9000"
+      MINIO_ROOT_USER: local-development
+      MINIO_ROOT_PASSWORD: allstudents
+      MINIO_STORAGE_CLASS_STANDARD: "EC:2"
+    network_mode: host
+
+  minio-contained:
+    <<: *minio-base
+    environment: &minio-contained-env
+      MINIO_VOLUMES: "http://minio:9000/data{1...4}"
+      MINIO_SERVER_URL: "http://minio:9000"
+      MINIO_ROOT_USER: local-development
+      MINIO_ROOT_PASSWORD: allstudents
+      MINIO_STORAGE_CLASS_STANDARD: "EC:2"
+    ports:
+      - "9000:9000"
+      - "3001:3001"
+    networks:
+      cdo_network:
+      cdo_network_test:
+
+  minio-install-base: &minio-install-base
+    image: amazon/aws-cli
+    entrypoint: ''
+    working_dir: /app/src/docker/developers
+    environment:
+      - AWS_ACCESS_KEY_ID=local-development
+      - AWS_SECRET_ACCESS_KEY=allstudents
+      - AWS_DEFAULT_REGION=us-east-1
+      - AWS_S3_ENDPOINT_URL=http://localhost:9000
+      - WITHIN_DOCKER=1
+    volumes:
+      - ../..:/app/src
+    command: /bin/bash ./install-s3.sh
+
+  minio-install:
+    <<: *minio-install-base
+    depends_on:
+      - minio
+    network_mode: host
+
+  minio-contained-install:
+    <<: *minio-install-base
+    environment:
+      - AWS_ACCESS_KEY_ID=local-development
+      - AWS_SECRET_ACCESS_KEY=allstudents
+      - AWS_DEFAULT_REGION=us-east-1
+      - AWS_S3_ENDPOINT_URL=http://minio:9000
+      - WITHIN_DOCKER=1
+    networks:
+      cdo_network:
+      cdo_network_test:
+
+  mc:
+    image: minio/mc
+    depends_on:
+      minio:
+        condition: service_started
+    entrypoint: ''
+    networks:
+      cdo_network:
+
+  s3-services:
+    image: alpine
+    depends_on:
+      minio:
+        condition: service_started
+    command: >
+      /bin/sh -c "
+        echo 'S3 Emulation Services Started (MinIO)' &&
+        echo &&
+        echo 'To see and interact with the buckets:' &&
+        echo 'http://localhost:3001' &&
+        echo &&
+        echo 'Username: local-development' &&
+        echo 'Password: allstudents' &&
+        echo &&
+        echo 'To shut down the S3 service, use:' &&
+        echo 'docker compose stop minio'
+        echo &&
+        echo 'You need to add the following to locals.yml to have your server use these services:' &&
+        echo &&
+        echo 'aws_s3_endpoint: http://localhost:9000' &&
+        echo 'aws_access_key_id: local-development' &&
+        echo 'aws_secret_access_key: allstudents'
+      "
+
+volumes:
+  minio1_storage:
+  minio2_storage:
+  minio3_storage:
+  minio4_storage:

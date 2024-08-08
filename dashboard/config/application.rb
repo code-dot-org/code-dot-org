@@ -72,6 +72,10 @@ module Dashboard
       # Autoload mailer previews in development mode so changes are picked up without restarting the server.
       # autoload_paths is frozen by time it gets to development.rb, so it must be done here.
       config.autoload_paths << Rails.root.join('test/mailers/previews')
+
+      if CDO.aws_s3_emulated?
+        config.autoload_paths << Rails.root.join('..', 'docker', 'developers', 's3')
+      end
     end
 
     if CDO.image_optim
