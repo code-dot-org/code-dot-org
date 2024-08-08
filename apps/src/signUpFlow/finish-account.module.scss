@@ -30,13 +30,23 @@ body {
 input {
   width: 100%;
   box-sizing: border-box;
-  height: 46px !important;
-  font-size: 1rem;
-  margin-top: 0.37rem !important;
+  height: 40px !important;
+  font-size: 1rem !important;
+  margin-top: 0.375rem !important;
   border-radius: 0.25rem;
   border: 1px solid $black !important;
   text-indent: 0.75rem;
 }
+
+.nameInput {
+  margin-bottom: 0.375rem !important;
+}
+
+// select {
+//   padding-top: 11px !important;
+//   padding-bottom: 11px !important;
+//   height: 46px !important;
+// }
 
 p {
   margin-bottom: 0 !important;

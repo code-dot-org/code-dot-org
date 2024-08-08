@@ -16,7 +16,7 @@ import {
   EMAIL_OPT_IN_SESSION_KEY,
 } from './signUpFlowConstants';
 
-import style from './finish-teacher-account.module.scss';
+import style from './finish-account.module.scss';
 
 const FinishTeacherAccount: React.FunctionComponent<{
   usIp: boolean;
@@ -46,10 +46,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
         <BodyTwoText>{locale.tailor_experience()}</BodyTwoText>
       </div>
       <div className={style.inputContainer}>
-        <BodyTwoText
-          className={style.labelText}
-          visualAppearance={'heading-xs'}
-        >
+        <BodyTwoText visualAppearance={'heading-xs'}>
           {locale.what_do_you_want_to_be_called()}
         </BodyTwoText>
         <input
@@ -57,18 +54,16 @@ const FinishTeacherAccount: React.FunctionComponent<{
           name="[user][name]"
           onChange={onNameChange}
           value={name}
+          className={style.nameInput}
         />
         <BodyThreeText>
           {locale.this_is_what_your_students_will_see()}
         </BodyThreeText>
         <SchoolDataInputs usIp={usIp} includeHeaders={false} />
         <div className={style.emailOptInContainer}>
-          <BodyTwoText
-            className={style.labelText}
-            visualAppearance={'heading-xs'}
-          >
-            {locale.keep_me_updated()}
-          </BodyTwoText>
+          <BodyThreeText>
+            <strong>{locale.keep_me_updated()}</strong>
+          </BodyThreeText>
           <span className={style.emailOptInCheckboxContainer}>
             <div className={style.emailOptInCheckbox}>
               <Checkbox
