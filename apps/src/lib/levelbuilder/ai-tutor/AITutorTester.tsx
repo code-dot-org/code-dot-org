@@ -1,7 +1,10 @@
 import Papa from 'papaparse';
 import React, {useEffect, useState} from 'react';
 
-import {postAichatCheckSafety} from '@cdo/apps/aichat/aichatApi';
+import {
+  postAichatCheckSafety,
+  postAichatCompletionMessage,
+} from '@cdo/apps/aichat/aichatApi';
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import {formatQuestionForAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {ChatContext} from '@cdo/apps/aiTutor/types';
@@ -11,6 +14,7 @@ import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import AITutorTesterSampleColumns from './AITutorTesterSampleColumns';
 
 import styles from './ai-tutor-tester.module.scss';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 
 /**
  * Renders a series of buttons that allow levelbuilders to upload a CSV of
@@ -63,10 +67,53 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
     for (let i = 0; i < data.length; i++) {
       if (selectedEndpoint === 'llm-guard') {
         getLLMGuardToxicity(data[i]);
+      } else if (selectedEndpoint === 'gen-ai-mistral-7b-inst-v01') {
+        getGenAIResponses(data[i]);
       } else {
-        askAI(data[i]);
+        askAITutor(data[i]);
       }
     }
+  };
+
+  const getGenAIResponses = async (row: AIInteraction) => {
+    const systemPrompt = row.systemPrompt ? row.systemPrompt : '';
+    const chatMessage = {
+      chatMessageText: row.studentInput,
+      role: Role.USER,
+      status: 'ok',
+      timestamp: new Date().getTime(),
+    };
+    // Dummy data to appease the model card info type requirements in the real tool.
+    const modelCardInfo = {
+      botName: 'Mistral',
+      description: 'Mistral Base Model',
+      intendedUse: 'General AI',
+      limitationsAndWarnings: 'None',
+      testingAndEvaluation: 'None',
+      exampleTopics: [],
+      isPublished: false,
+    };
+    const aiCustomizations = {
+      selectedModelId: 'gen-ai-mistral-7b-inst-v01',
+      temperature: 0.8,
+      systemPrompt: systemPrompt,
+      retrievalContexts: [],
+      modelCardInfo: modelCardInfo,
+    };
+    const levelId = row.levelId ? row.levelId : null;
+    const aichatContext = {
+      currentLevelId: levelId,
+      scriptId: null,
+      channelId: undefined,
+    };
+    const genAIResponse = await postAichatCompletionMessage(
+      chatMessage,
+      [],
+      aiCustomizations,
+      aichatContext
+    );
+    row.aiResponse = genAIResponse.messages[1].chatMessageText;
+    setResponseCount(prevResponseCount => prevResponseCount + 1);
   };
 
   const getLLMGuardToxicity = async (row: AIInteraction) => {
@@ -81,7 +128,7 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
     setResponseCount(prevResponseCount => prevResponseCount + 1);
   };
 
-  const askAI = async (row: AIInteraction) => {
+  const askAITutor = async (row: AIInteraction) => {
     const chatApiResponse = await getChatCompletionMessage(
       formatQuestionForAITutor(row),
       [],
@@ -115,26 +162,30 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
   const availableEndpoints = [
     {
       id: 'ai-tutor',
-      name: 'AI Tutor - full flow',
+      name: 'AI Tutor + Webpurify',
     },
     {
       id: 'llm-guard',
       name: 'LLM Guard',
     },
+    {
+      id: 'gen-ai-mistral-7b-inst-v01',
+      name: 'Mistral Base + Webpurify',
+    },
   ];
 
   return (
     <div>
-      <h2>Generate AI Tutor Responses</h2>
+      <h2>Generate AI Responses</h2>
       {!allowed && (
         <h3 className={styles.denied}>
           You need to be a levelbuilder with AI Tutor access to use this tool.
         </h3>
       )}
       <p>
-        Upload a CSV of student inputs that will be sent to AI Tutor. AI Tutor
-        responses will then be saved and you can download the resulting updated
-        CSV.
+        Upload a CSV of student inputs that will be sent to the selected
+        service. AI responses will then be saved and you can download the
+        resulting updated CSV.
       </p>
       <AITutorTesterSampleColumns />
       <br />
