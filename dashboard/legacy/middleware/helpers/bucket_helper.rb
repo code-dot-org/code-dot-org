@@ -56,6 +56,8 @@ class BucketHelper
     owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
     prefix = s3_path owner_id, storage_app_id
     track_list_operation 'BucketHelper.app_size'
+    puts @bucket
+    puts prefix
     s3.list_objects(bucket: @bucket, prefix: prefix).contents.sum(&:size).to_i
   end
 
@@ -87,6 +89,8 @@ class BucketHelper
     owner_id, storage_app_id = storage_decrypt_channel_id(encrypted_channel_id)
     prefix = s3_path owner_id, storage_app_id
     track_list_operation 'BucketHelper.list'
+    puts @bucket
+    puts prefix
     s3.list_objects(bucket: @bucket, prefix: prefix).contents.map do |fileinfo|
       filename = %r{#{prefix}(.+)$}.match(fileinfo.key)[1]
       category = category_from_file_type(File.extname(filename))
