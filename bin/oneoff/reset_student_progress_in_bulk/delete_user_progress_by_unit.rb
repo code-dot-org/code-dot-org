@@ -18,7 +18,7 @@ csv_file_path = ARGV[1]
 
 teacher_id = ARGV[0]
 teacher_user = User.find_by(id: teacher_id) || User.find_by(email: teacher_id)
-raise "Teacher with id or email" + teacher_id.to_s + " not found" if teacher_user.nil?
+raise "Teacher with id or email " + teacher_id.to_s.dump + " not found" if teacher_user.nil?
 
 rows = CSV.read(csv_file_path, headers: true)
 rows.each do |row|
@@ -49,7 +49,7 @@ follower_ids = teacher_user.followers.pluck(:student_user_id)
 
 # Delete progress
 rows.each do |row|
-  student_id = row['student_id']
+  student_id = row['student_id'].to_i
   script_id = row['script_id']
   raise "missing script_id for row #{row}" unless script_id
   if follower_ids.include?(student_id)
@@ -59,11 +59,11 @@ rows.each do |row|
       # Retrieve storage ID for the user
       user_storage_id = storage_id_for_user_id(student_id)
       # inspired from: https://github.com/code-dot-org/code-dot-org/blob/375e794083094cf128e9fac67ba09ec5adcd436b/dashboard/app/controllers/admin_users_controller.rb#L193
-      UserScript.where(user_id: user_id, script_id: script_id).destroy_all
-      UserLevel.where(user_id: user_id, script_id: script_id).destroy_all
+      UserScript.where(user_id: student_id, script_id: script_id).destroy_all
+      UserLevel.where(user_id: student_id, script_id: script_id).destroy_all
       ChannelToken.where(storage_id: user_storage_id, script_id: script_id).destroy_all unless user_storage_id.nil?
-      TeacherFeedback.where(student_id: user_id, script_id: script_id).destroy_all
-      CodeReview.where(user_id: user_id, script_id: script_id).destroy_all
+      TeacherFeedback.where(student_id: student_id, script_id: script_id).destroy_all
+      CodeReview.where(user_id: student_id, script_id: script_id).destroy_all
     end
   else
     puts "Student with id " + student_id.to_s + " is not in teacher " + teacher_id.to_s +
