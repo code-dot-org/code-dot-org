@@ -321,12 +321,53 @@ const dispatchSaveFailNotification = (
   dispatch(endSave());
 };
 
+// This thunk adds a chat event to chatEventsCurrent (displayed in current chat workspace)
+// if hideForParticipants != true and then logs the event to the backend for all chat events
+// except notifications with includeInHistory != true.
+export const addChatEvent =
+  <T extends ChatEvent>(chatEvent: T) =>
+  (dispatch: AppDispatch, getState: () => RootState) => {
+    if (!chatEvent.hideForParticipants) {
+      dispatch(addEventToChatEventsCurrent(chatEvent));
+    }
+    // Log chat event to backend.
+    const state = getState() as RootState;
+    const aichatContext: AichatContext = {
+      currentLevelId: parseInt(state.progress.currentLevelId || ''),
+      scriptId: state.progress.scriptId,
+      channelId: state.lab.channel?.id,
+    };
+    // Other than notifications that are not included in chat history (save errors not due to profanity),
+    // log the chat event to backend.
+    if (
+      !isNotification(chatEvent) ||
+      (isNotification(chatEvent) && chatEvent.includeInChatHistory)
+    ) {
+      // If a model update, log only the updated value for temperature and selected model id.
+      // Do not log free text updated values (e.g., system prompt, retrieval contexts, model card info).
+      if (isModelUpdate(chatEvent)) {
+        const {updatedField, updatedValue} = chatEvent;
+        // Only log updated value for temperature and selected model id - free text values are not logged.
+        const updatedValueToLog =
+          updatedField === 'temperature' || updatedField === 'selectedModelId'
+            ? updatedValue
+            : 'N/A';
+        chatEvent = {
+          ...chatEvent,
+          updatedValue: updatedValueToLog,
+        };
+      }
+      ChatEventLogger.getInstance().logChatEvent(chatEvent, aichatContext);
+    }
+  };
+
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
 // the user messages.
 export const submitChatContents = createAsyncThunk(
   'aichat/submitChatContents',
   async (newUserMessageText: string, thunkAPI) => {
+    const dispatch = thunkAPI.dispatch as AppDispatch;
     const state = thunkAPI.getState() as RootState;
     const {
       savedAiCustomizations: aiCustomizations,
@@ -346,7 +387,7 @@ export const submitChatContents = createAsyncThunk(
       chatMessageText: newUserMessageText,
       timestamp: Date.now(),
     };
-    thunkAPI.dispatch(setChatMessagePending(newUserMessage));
+    dispatch(setChatMessagePending(newUserMessage));
 
     // Post user content and messages to backend and retrieve assistant response.
     const startTime = Date.now();
@@ -397,50 +438,10 @@ export const submitChatContents = createAsyncThunk(
 
     thunkAPI.dispatch(clearChatMessagePending());
     chatApiResponse.messages.forEach(message => {
-      addChatEvent({...message, timestamp: Date.now()});
+      dispatch(addChatEvent({...message, timestamp: Date.now()}));
     });
   }
 );
-
-// This thunk adds a chat event to chatEventsCurrent (displayed in current chat workspace)
-// if hideForParticipants != true and then logs the event to the backend for all chat events
-// except notifications with includeInHistory != true.
-export const addChatEvent =
-  <T extends ChatEvent>(chatEvent: T) =>
-  (dispatch: AppDispatch, getState: () => RootState) => {
-    if (!chatEvent.hideForParticipants) {
-      dispatch(addEventToChatEventsCurrent(chatEvent));
-    }
-    // Log chat event to backend.
-    const state = getState() as RootState;
-    const aichatContext: AichatContext = {
-      currentLevelId: parseInt(state.progress.currentLevelId || ''),
-      scriptId: state.progress.scriptId,
-      channelId: state.lab.channel?.id,
-    };
-    // Other than notifications that are not included in chat history (save errors not due to profanity),
-    // log the chat event to backend.
-    if (
-      !isNotification(chatEvent) ||
-      (isNotification(chatEvent) && chatEvent.includeInChatHistory)
-    ) {
-      // If a model update, log only the updated value for temperature and selected model id.
-      // Do not log free text updated values (e.g., system prompt, retrieval contexts, model card info).
-      if (isModelUpdate(chatEvent)) {
-        const {updatedField, updatedValue} = chatEvent;
-        // Only log updated value for temperature and selected model id - free text values are not logged.
-        const updatedValueToLog =
-          updatedField === 'temperature' || updatedField === 'selectedModelId'
-            ? updatedValue
-            : 'N/A';
-        chatEvent = {
-          ...chatEvent,
-          updatedValue: updatedValueToLog,
-        };
-      }
-      ChatEventLogger.getInstance().logChatEvent(chatEvent, aichatContext);
-    }
-  };
 
 const aichatSlice = createSlice({
   name: 'aichat',
