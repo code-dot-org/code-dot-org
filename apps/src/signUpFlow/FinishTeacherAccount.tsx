@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
+import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
+import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {
   Heading2,
   BodyTwoText,
@@ -8,8 +10,6 @@ import {
 } from '@cdo/apps/componentLibrary/typography';
 import locale from '@cdo/apps/signup/locale';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
-
-import Checkbox from '../componentLibrary/checkbox/Checkbox';
 
 import {
   USER_NAME_SESSION_KEY,
@@ -49,27 +49,27 @@ const FinishTeacherAccount: React.FunctionComponent<{
         <BodyTwoText visualAppearance={'heading-xs'}>
           {locale.what_do_you_want_to_be_called()}
         </BodyTwoText>
-        <input
-          type="text"
-          name="[user][name]"
+        <TextField
+          name="userName"
           onChange={onNameChange}
           value={name}
+          className={style.nameInput}
         />
         <BodyThreeText>
           {locale.this_is_what_your_students_will_see()}
         </BodyThreeText>
         <SchoolDataInputs usIp={usIp} includeHeaders={false} />
         <div className={style.emailOptInContainer}>
-          <BodyTwoText visualAppearance={'heading-xs'}>
-            {locale.keep_me_updated()}
-          </BodyTwoText>
+          <BodyThreeText>
+            <strong>{locale.keep_me_updated()}</strong>
+          </BodyThreeText>
           <span className={style.emailOptInCheckboxContainer}>
             <div className={style.emailOptInCheckbox}>
               <Checkbox
                 label=""
                 checked={emailOptInChecked}
                 onChange={onEmailOptInChange}
-                name="[user][emailOptIn]"
+                name="userEmailOptIn"
               />
             </div>
             <BodyTwoText

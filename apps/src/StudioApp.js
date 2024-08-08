@@ -55,14 +55,11 @@ import * as dom from './dom';
 import * as dropletUtils from './dropletUtils';
 import FeedbackUtils from './feedback';
 import Alert from './legacySharedComponents/alert';
-import {
-  configCircuitPlayground,
-  configMicrobit,
-} from './lib/kits/maker/dropletConfig';
 import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
 import WireframeButtons from './lib/ui/WireframeButtons';
 import firehoseClient from './lib/util/firehose';
+import {configCircuitPlayground, configMicrobit} from './maker/dropletConfig';
 import puzzleRatingUtils from './puzzleRatingUtils';
 import {getStore} from './redux';
 import {

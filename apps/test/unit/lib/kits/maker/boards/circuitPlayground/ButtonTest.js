@@ -2,9 +2,9 @@
 import five from '@code-dot-org/johnny-five';
 import _ from 'lodash';
 
-import PlaygroundButton from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Button';
-import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
-import {makeCPBoardStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
+import PlaygroundButton from '@cdo/apps/maker/boards/circuitPlayground/Button';
+import {EXTERNAL_PINS} from '@cdo/apps/maker/boards/circuitPlayground/PlaygroundConstants';
+import {makeCPBoardStub} from '@cdo/apps/maker/util/makeStubBoard';
 
 describe('PlaygroundButton', function () {
   it('is a johnny-five Button component', function () {

@@ -16,12 +16,14 @@ export interface UserMessageEditorProps {
   showSubmitLabel?: boolean;
   /** Custom className for editor container */
   editorContainerClassName?: string;
+  customPlaceholder?: string;
 }
 
 const UserMessageEditor: React.FunctionComponent<UserMessageEditorProps> = ({
   onSubmit,
   disabled,
   editorContainerClassName,
+  customPlaceholder,
   showSubmitLabel = false,
 }) => {
   const [userMessage, setUserMessage] = useState<string>('');
@@ -54,7 +56,7 @@ const UserMessageEditor: React.FunctionComponent<UserMessageEditorProps> = ({
     >
       <textarea
         className={moduleStyles.textArea}
-        placeholder={commonI18n.aiUserMessagePlaceholder()}
+        placeholder={customPlaceholder || commonI18n.aiUserMessagePlaceholder()}
         onChange={e => setUserMessage(e.target.value)}
         value={userMessage}
         disabled={disabled}
