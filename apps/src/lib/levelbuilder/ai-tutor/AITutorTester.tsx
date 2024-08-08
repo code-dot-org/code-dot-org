@@ -1,7 +1,7 @@
 import Papa from 'papaparse';
 import React, {useEffect, useState} from 'react';
 
-import {postAichatCheckSafety} from '@cdo/apps/aichat/aichatCompletionApi';
+import {postAichatCheckSafety} from '@cdo/apps/aichat/aichatApi';
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import {formatQuestionForAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {ChatContext} from '@cdo/apps/aiTutor/types';
