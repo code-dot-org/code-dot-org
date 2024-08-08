@@ -17,11 +17,32 @@ end
 csv_file_path = ARGV[1]
 
 teacher_id = ARGV[0]
-teacher_user = User.find_by(id: teacher_id)
+teacher_user = User.find_by(id: teacher_id) || User.find_by(email: teacher_id)
+raise "Teacher with id " + teacher_id.to_s + " not found" if teacher_user.nil?
 
-student_ids = CSV.read(csv_file_path, headers: true).map {|row| row['student_id'].to_i}
+rows = CSV.read(csv_file_path, headers: true)
+rows.each do |row|
+  unless row['student_id']
+    puts 'CSV must have a column named "student_id".'
+    exit 1
+  end
+  unless row['unit_name']
+    puts 'CSV must have a column named "unit_name".'
+    exit 1
+  end
 
-puts "Found #{student_ids.count} ids to reset data for."
+  student_id = row['student_id']
+  student = User.find_by(id: student_id) || User.find_by(username: student_id)
+  raise "Student with id " + student_id.to_s + " not found" if student.nil?
+  row['student_id'] = student&.id
+
+  unit_name = row['unit_name']
+  unit = Unit.find_by_name(unit_name)
+  raise "Unit with name #{unit_name} not found" unless unit
+  row['script_id'] = unit.id
+end
+
+puts "Found #{rows.count} ids to reset data for."
 
 do_dry_run = true
 if ARGV[2] == "for-real"
@@ -31,8 +52,10 @@ end
 # Get user IDs of all students in the teacher_user's sections
 follower_ids = teacher_user.followers.pluck(:student_user_id)
 
-# Delete all progress
-student_ids.each do |student_id|
+# Delete progress
+rows.each do |row|
+  student_id = row['student_id']
+  script_id = row['script_id']
   if follower_ids.include?(student_id)
     if do_dry_run
       puts "can remove student data with id " + student_id.to_s
@@ -40,11 +63,11 @@ student_ids.each do |student_id|
       # Retrieve storage ID for the user
       user_storage_id = storage_id_for_user_id(student_id)
       # inspired from: https://github.com/code-dot-org/code-dot-org/blob/375e794083094cf128e9fac67ba09ec5adcd436b/dashboard/app/controllers/admin_users_controller.rb#L193
-      UserScript.where(user_id: student_id).destroy_all
-      UserLevel.where(user_id: student_id).destroy_all
-      ChannelToken.where(storage_id: user_storage_id).destroy_all unless user_storage_id.nil?
-      TeacherFeedback.where(student_id: student_id).destroy_all
-      CodeReview.where(user_id: student_id).destroy_all
+      UserScript.where(user_id: user_id, script_id: script_id).destroy_all
+      UserLevel.where(user_id: user_id, script_id: script_id).destroy_all
+      ChannelToken.where(storage_id: user_storage_id, script_id: script_id).destroy_all unless user_storage_id.nil?
+      TeacherFeedback.where(student_id: user_id, script_id: script_id).destroy_all
+      CodeReview.where(user_id: user_id, script_id: script_id).destroy_all
     end
   else
     puts "Student with id " + student_id.to_s + " is not in teacher " + teacher_id.to_s +
