@@ -4,10 +4,13 @@
 #
 #  id                   :bigint           not null, primary key
 #  user_id              :integer          not null
+#  level_id             :integer
+#  script_id            :integer
+#  project_id           :integer
 #  model_customizations :json             not null
-#  stored_messages      :json
+#  stored_messages      :json             not null
 #  new_message          :json             not null
-#  status               :integer
+#  execution_status     :integer          not null
 #  response             :text(65535)
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
