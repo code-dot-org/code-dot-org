@@ -244,25 +244,25 @@ class AichatControllerTest < ActionController::TestCase
 
   test 'Bad request if required params are not included for student_chat_history' do
     sign_in(@genai_pilot_teacher)
-    post :chat_completion, params: {studentId: @genai_pilot_student.id}, as: :json
+    get :chat_completion, params: {studentId: @genai_pilot_student.id}, as: :json
     assert_response :bad_request
   end
 
   test 'pilot student does not have access to student_chat_history test' do
     sign_in(@genai_pilot_student)
-    post :student_chat_history, params: @valid_params_student_chat_history, as: :json
+    get :student_chat_history, params: @valid_params_student_chat_history, as: :json
     assert_response :forbidden
   end
 
   test 'pilot teacher has access to student_chat_history if teacher of student' do
     sign_in(@genai_pilot_teacher)
-    post :student_chat_history, params: @valid_params_student_chat_history, as: :json
+    get :student_chat_history, params: @valid_params_student_chat_history, as: :json
     assert_response :success
   end
 
   test 'pilot teacher does not have access to student_chat_history if not teacher of student' do
     sign_in(@genai_pilot_teacher2)
-    post :student_chat_history, params: @valid_params_student_chat_history, as: :json
+    get :student_chat_history, params: @valid_params_student_chat_history, as: :json
     assert_response :forbidden
   end
 end
