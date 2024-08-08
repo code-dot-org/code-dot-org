@@ -10,9 +10,9 @@ class AichatControllerTest < ActionController::TestCase
     pilot_section = create(:section, user: @genai_pilot_teacher)
     @genai_pilot_student = create(:follower, section: pilot_section).student_user
     @genai_pilot_teacher2 = create :teacher, pilot_experiment: @genai_pilot.name
-    @level = FactoryBot.create(:level, name: 'level1')
-    @script = FactoryBot.create(:script)
-    @script_level = FactoryBot.create(:script_level, script: @script, levels: [@level])
+    @level = create(:level, name: 'level1')
+    @script = create(:script)
+    @script_level = create(:script_level, script: @script, levels: [@level])
 
     @default_model_customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"}.stringify_keys
     @common_params = {
