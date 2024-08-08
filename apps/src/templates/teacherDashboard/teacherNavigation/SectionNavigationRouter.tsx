@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 import {
   Routes,
@@ -6,6 +7,7 @@ import {
   useNavigate,
   useLocation,
   generatePath,
+  matchPath,
 } from 'react-router-dom';
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
@@ -57,10 +59,13 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
 
   React.useEffect(() => {
     // Select a default tab if current path doesn't match one of the paths in our TEACHER_DASHBOARD_PATHS type.
-    const emptyOrInvalidPath = !Object.values(TEACHER_DASHBOARD_PATHS).includes(
-      location.pathname
-    );
-    if (emptyOrInvalidPath) {
+    const noMatchingPaths =
+      _.find(
+        Object.values(TEACHER_DASHBOARD_PATHS),
+        path => matchPath(getPath(path), location.pathname) !== null
+      ) === undefined;
+
+    if (noMatchingPaths) {
       const nextPath =
         studentCount === 0
           ? TEACHER_DASHBOARD_PATHS.manageStudents
