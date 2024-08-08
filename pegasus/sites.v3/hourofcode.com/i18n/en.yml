@@ -1821,12 +1821,16 @@
         desc: "Code.org has over 60 partners in all 50 states running workshops to prepare teachers for computer science. Help create sustainable, community-driven professional development by supporting these local workshops."
         amount: "$750"
     campaign:
+      farsi:
+        aria_label:
+          primary: "Donate to Code.org in Farsi"
+          secondary: "Learn more about Code.org in Farsi"
       naipi:
         title: "Native American and Indigenous Peoples Initiative (NAIPI)"
         desc: "Code.org's Native American and Indigenous Peoples Initiative integrates Native American perspectives into education and technology. Explore innovative approaches in Native American education and computer science, discover collaboration opportunities, and witness our collective impact."
-        button:
-          donate: "Donate"
-          learn_more: "Learn more"
+        aria_label:
+          primary: "Donate to Code.org's Native American and Indigenous Peoples Initiative"
+          secondary: "Learn more about Code.org's Native American and Indigenous Peoples Initiative"
     support_mission:
       heading: "More ways you can support our mission"
       desc: "Support our mission to make computer science accessible for every child, everywhere. Your efforts help us inspire future innovators and bridge the tech education gap."

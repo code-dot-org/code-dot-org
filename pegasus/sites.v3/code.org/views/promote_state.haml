@@ -107,9 +107,9 @@
       = "#{data[:percent_ap_female_i]}% of them were taken by female students"
 
 .state-buttons
-  -if ! state.nil_or_empty? && File.exists?(pegasus_dir("sites.v3/code.org/public/advocacy/state-facts/#{state}.pdf.fetch"))
+  -if ! state.nil_or_empty?
     .state-button.download-fact-sheet
-      %a{:href=>CDO.code_org_url("/advocacy/state-facts/#{state}.pdf"), target: '_blank'}
+      %a{href: "https://code.org/assets/advocacy/stateofcs/2023/#{statename}.pdf", target: '_blank'}
         %button<
           View state fact-sheet
 

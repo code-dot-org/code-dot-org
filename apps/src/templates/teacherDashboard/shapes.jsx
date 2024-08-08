@@ -70,7 +70,6 @@ export const sortableSectionShape = PropTypes.shape({
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   courseVersionName: PropTypes.string,
-  courseDisplayName: PropTypes.string,
   loginType: PropTypes.oneOf(Object.keys(SectionLoginType)).isRequired,
   studentCount: PropTypes.number.isRequired,
   code: PropTypes.string.isRequired,

@@ -144,6 +144,8 @@ class UnconnectedMusicView extends React.Component {
       loadedLibrary: false,
       hasLoadedInitialSounds: false,
     };
+
+    MusicBlocklyWorkspace.setupBlocklyEnvironment();
   }
 
   componentDidMount() {
