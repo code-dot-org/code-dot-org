@@ -26,8 +26,8 @@ tabs.forEach((tab) => {
 
 // Hide the desktop or tablet/mobile version in the DOM
 jQuery(document).ready(function ($) {
-  var $showDesktop = $(".show-desktop");
-  var $showTabletAndMobile = $(".show-tablet-and-mobile");
+  var $showDesktop = $(".tabs-section.show-desktop");
+  var $showTabletAndMobile = $(".tabs-section.show-tablet-and-mobile");
 
   var hideResponsiveTabs = function () {
     var ww = $(window).width();
