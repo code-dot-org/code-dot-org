@@ -1,0 +1,28 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T22:26:05.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Investigate and Modify\r\n\r\nEdge detection is a fundamental technique in image processing that is widely used in various fields for different purposes.\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Look at the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">detectEdges()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ImagePlus</code> class. This method works best when there are big color changes from left to right but not when the changes are from top to bottom.\r\n\r\nAdd the following code to the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TheaterRunner</code> class:\r\n\r\n<pre style=\"background-color: #333333; color: white;\">\r\nImagePlus donutEdges = new ImagePlus(\"donuts.jpg\");\r\nscene.drawImageWithEdges(donutEdges);\r\n</pre>\r\n\r\n*You can comment out the line* <code style=\"background-color: #ececec; color: black; font-weight: bold;\">scene.drawChromaImage(camera, \"donuts.jpg\");</code> *so the scene only draws the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">donutEdges</code> image.*\r\n\r\nWhat happens when you run the program? Try modifying the value for the edge distance where <code style=\"background-color: #ececec; color: black; font-weight: bold;\">detectEdges()</code> is called in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">drawImageWithEdges()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">ImageScene</code> class. How do larger numbers impact the result? What about smaller numbers?",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "project_template_level_name": "CSA U5L9-Manipulations PBT_alt-2025",
+    "name_suffix": "_alt-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:26:05.369+00:00\",\"changed\":[\"cloned from \\\"CSA U5L9-L2_pilot-2025\\\"\"],\"cloned_from\":\"CSA U5L9-L2_pilot-2025\"}]"
+}]]></config>
+</Javalab>

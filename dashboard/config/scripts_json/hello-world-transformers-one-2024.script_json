@@ -48,7 +48,7 @@
     },
     "new_name": null,
     "family_name": "hello-world-transformers-one",
-    "serialized_at": "2024-08-02 22:04:56 UTC",
+    "serialized_at": "2024-08-07 20:29:11 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -73,7 +73,7 @@
   "lessons": [
     {
       "key": "Hello World: Food",
-      "name": "Hello World: Food",
+      "name": "Hello World: Transformers One",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
