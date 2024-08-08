@@ -2,6 +2,7 @@ import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import {
+  fetchStudentChatHistory,
   selectAllMessages,
   setShowWarningModal,
 } from '@cdo/apps/aichat/redux/aichatRedux';
@@ -56,6 +57,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       state.teacherSections.selectedStudents
   );
 
+  const dispatch = useAppDispatch();
+
   // Compare the messages as a string since the object reference will change on every update.
   // This way we will only scroll when the contents of the messages have changed.
   const messagesString = JSON.stringify(items);
@@ -76,11 +79,12 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         student => student.id === viewAsUserId
       );
       if (selectedStudent) {
+        dispatch(fetchStudentChatHistory(selectedStudent.id));
         return getShortName(selectedStudent.name);
       }
     }
     return null;
-  }, [viewAsUserId, students]);
+  }, [viewAsUserId, students, dispatch]);
 
   // Teacher user is able to interact with chatbot.
   const canChatWithModel = useMemo(
@@ -159,8 +163,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabsContainerClassName: moduleStyles.tabsContainer,
     tabPanelsContainerClassName: moduleStyles.tabPanels,
   };
-
-  const dispatch = useAppDispatch();
 
   const onCloseWarningModal = useCallback(
     () => dispatch(setShowWarningModal(false)),
