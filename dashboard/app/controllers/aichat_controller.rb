@@ -85,8 +85,13 @@ class AichatController < ApplicationController
       return render(status: :forbidden, json: {error: "Access denied for student chat history."})
     end
 
-    chat_events = AichatEvent.where(user_id: student_user_id, level_id: level_id, script_id: script_id)
-    render json: chat_events
+    aichat_event_rows = AichatEvent.where(user_id: student_user_id, level_id: level_id, script_id: script_id).order(created_at: :desc)
+    aichat_events = aichat_event_rows.map do |aichat_event_row|
+      {
+        chatEvent: aichat_event_row.aichat_event,
+      }
+    end
+    render json: aichat_events
   end
 
   private def get_response_body

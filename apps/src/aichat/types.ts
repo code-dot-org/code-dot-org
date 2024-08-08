@@ -66,13 +66,7 @@ export interface LogChatEventApiResponse {
 }
 
 export interface AichatEvent {
-  aichat_event: string; // JSON string
-  id: number;
-  level_id: number;
-  script_id: number;
-  updated_at: string;
-  created_at: string;
-  user_id: number;
+  chatEvent: string; // JSON string
 }
 
 export type StudentChatHistoryApiResponse = AichatEvent[];
