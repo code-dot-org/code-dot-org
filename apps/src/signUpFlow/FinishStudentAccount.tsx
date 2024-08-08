@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
+import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
+import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import locale from '@cdo/apps/signup/locale';
-
-import SimpleDropdown from '../componentLibrary/dropdown/simpleDropdown';
 
 import {
   USER_NAME_SESSION_KEY,
@@ -39,12 +39,11 @@ const FinishStudentAccount: React.FunctionComponent = () => {
         <BodyTwoText visualAppearance={'heading-xs'}>
           {locale.display_name_eg()}
         </BodyTwoText>
-        <input
-          type="text"
-          name="[user][name]"
+        <TextField
+          name="userName"
           onChange={onNameChange}
           value={name}
-          placeholder="Type something here"
+          placeholder={locale.coder()}
         />
         <BodyTwoText
           className={style.ageDropdownLabel}
@@ -54,7 +53,7 @@ const FinishStudentAccount: React.FunctionComponent = () => {
         </BodyTwoText>
         <SimpleDropdown
           id="uitest-age-dropdown"
-          name={'[user][age]'}
+          name="userAge"
           labelText=""
           isLabelVisible={false}
           items={[{value: '0', text: '0'}, {value: '1', text: '1'}, {value: '2', text: '2'}]}
