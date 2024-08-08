@@ -268,6 +268,10 @@ class Ability
       if user.can_view_student_ai_chat_messages?
         can :index, AiTutorInteraction
       end
+
+      if user.has_ai_tutor_access? && user.levelbuilder?
+        can :check_message_safety, :aichat
+      end
     end
 
     # Override UnitGroup, Unit, Lesson and ScriptLevel.

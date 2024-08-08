@@ -63,6 +63,12 @@ class AichatController < ApplicationController
     render(status: :ok, json: response_body)
   end
 
+  def check_message_safety
+    string_to_check = params[:message]
+    response_body = AichatSafetyHelper.get_llmguard_response(string_to_check)
+    render(status: :ok, json: response_body)
+  end
+
   private def get_response_body
     # Check for profanity
     locale = params[:locale] || "en"
