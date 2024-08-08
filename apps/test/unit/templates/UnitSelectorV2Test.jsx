@@ -1,12 +1,16 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 
-import {UnconnectedUnitSelector} from '@cdo/apps/templates/sectionProgress/UnitSelector';
 import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
+import {UnconnectedUnitSelectorV2} from '@cdo/apps/templates/UnitSelectorV2';
+
+jest.mock('@cdo/apps/templates/sectionProgress/sectionProgressLoader');
 
 const DEFAULT_PROPS = {
   coursesWithProgress: fakeCoursesWithProgress,
-  scriptId: null,
+  scriptId: 2, // Course A (2018)
+  sectionId: 1,
+  setScriptId: () => {},
   onChange: () => {},
   asyncLoadCoursesWithProgress: () => {},
   isLoadingCourses: false,
@@ -14,7 +18,7 @@ const DEFAULT_PROPS = {
 
 describe('UnitSelector', () => {
   it('loads the correct number of course versions', () => {
-    render(<UnconnectedUnitSelector {...DEFAULT_PROPS} />);
+    render(<UnconnectedUnitSelectorV2 {...DEFAULT_PROPS} />);
     const dropdown = screen.getByRole('combobox');
     fireEvent.click(dropdown);
 
@@ -29,10 +33,24 @@ describe('UnitSelector', () => {
     screen.getByRole('option', {name: 'Flappy'});
   });
 
+  it('sets scriptId on change', () => {
+    const setScriptId = jest.fn();
+    render(
+      <UnconnectedUnitSelectorV2 {...DEFAULT_PROPS} setScriptId={setScriptId} />
+    );
+    const dropdown = screen.getByRole('combobox');
+    fireEvent.click(dropdown);
+
+    const option = screen.getByRole('option', {name: 'Flappy'});
+    fireEvent.change(dropdown, {target: {value: option.value}});
+
+    expect(setScriptId).toHaveBeenCalledTimes(1);
+  });
+
   it('loads courses on initial render', () => {
     const asyncLoadCoursesWithProgress = jest.fn();
     render(
-      <UnconnectedUnitSelector
+      <UnconnectedUnitSelectorV2
         {...DEFAULT_PROPS}
         coursesWithProgress={[]}
         asyncLoadCoursesWithProgress={asyncLoadCoursesWithProgress}
@@ -44,8 +62,8 @@ describe('UnitSelector', () => {
 
   it('shows skeleton if loading', () => {
     render(
-      <UnconnectedUnitSelector {...DEFAULT_PROPS} isLoadingCourses={true} />
+      <UnconnectedUnitSelectorV2 {...DEFAULT_PROPS} isLoadingCourses={true} />
     );
-    expect(screen.queryByRole('combobox')).toBeNull();
+    expect(screen.queryByRole('select')).toBeNull();
   });
 });
