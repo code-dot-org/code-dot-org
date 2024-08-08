@@ -47,6 +47,23 @@ module PythonVenv
     _run_command('pdm', *args)
   end
 
+  def self.run_python_block(args_dict:, &block)
+    Tempfile.open do |out_file|
+      Tempfile.open do |in_file|
+        in_file.write(args_dict.to_json)
+        in_file.fsync
+        pycode = <<~PYTHON
+          from pycdo.json import read_json, write_json
+          _return = lambda _: write_json('#{out_file.path}', _)
+          #{yield("read_json('#{in_file.path}')")}
+        PYTHON
+        single_line_pycode = '"' + pycode.split("\n").join(';') + '"'
+        run('python', '-c', single_line_pycode)
+      end
+      JSON.parse(File.read(out_file.path))
+    end
+  end
+
   def self._run_command(*args)
     command = args.map(&:to_s).join(' ')
     CDO.log.info command
