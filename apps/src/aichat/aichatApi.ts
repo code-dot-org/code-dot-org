@@ -11,6 +11,7 @@ import {
 } from './types';
 
 const CHAT_COMPLETION_URL = '/aichat/chat_completion';
+const CHAT_CHECK_SAFETY_URL = '/aichat/check_message_safety';
 const LOG_CHAT_EVENT_URL = '/aichat/log_chat_event';
 
 /**
@@ -64,6 +65,33 @@ export async function postLogChatEvent(
   };
   const response = await HttpClient.post(
     LOG_CHAT_EVENT_URL,
+    JSON.stringify(payload),
+    true,
+    {
+      'Content-Type': 'application/json; charset=UTF-8',
+    }
+  );
+
+  return await response.json();
+}
+
+interface LLMGuardResponseResult {
+  body: string;
+  statusCode: number;
+}
+
+interface LLMGuardResponse {
+  result: LLMGuardResponseResult;
+}
+
+export async function postAichatCheckSafety(
+  message: string
+): Promise<LLMGuardResponse> {
+  const payload = {
+    message,
+  };
+  const response = await HttpClient.post(
+    CHAT_CHECK_SAFETY_URL,
     JSON.stringify(payload),
     true,
     {
