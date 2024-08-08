@@ -8,8 +8,8 @@ require 'csv'
 # Depending on where this goes, tests should be added as deleting progress is not undoable
 
 if ARGV.empty? || ARGV.length > 3
-  puts 'Usage: ./bin/oneoff/reset_student_progress_in_bulk teacher_id ./bin/oneoff/reset_student_progress_in_bulk/yyyy-mm-dd-users.csv [commit]'
-  puts 'The CSV needs a column with "student_id".'
+  puts 'Usage: ./bin/oneoff/reset_student_progress_in_bulk teacher_id_or_email ./bin/oneoff/reset_student_progress_in_bulk/yyyy-mm-dd-user-ids.csv [commit]'
+  puts 'The CSV needs columns with "student_id" and "unit_name".'
   puts 'Will do a "dry run" until you specify "for-real" for the "commit" field.'
   exit 1
 end
@@ -18,7 +18,7 @@ csv_file_path = ARGV[1]
 
 teacher_id = ARGV[0]
 teacher_user = User.find_by(id: teacher_id) || User.find_by(email: teacher_id)
-raise "Teacher with id " + teacher_id.to_s + " not found" if teacher_user.nil?
+raise "Teacher with id or email" + teacher_id.to_s + " not found" if teacher_user.nil?
 
 rows = CSV.read(csv_file_path, headers: true)
 rows.each do |row|
@@ -30,11 +30,6 @@ rows.each do |row|
     puts 'CSV must have a column named "unit_name".'
     exit 1
   end
-
-  student_id = row['student_id']
-  student = User.find_by(id: student_id) || User.find_by(username: student_id)
-  raise "Student with id " + student_id.to_s + " not found" if student.nil?
-  row['student_id'] = student&.id
 
   unit_name = row['unit_name']
   unit = Unit.find_by_name(unit_name)
@@ -56,6 +51,7 @@ follower_ids = teacher_user.followers.pluck(:student_user_id)
 rows.each do |row|
   student_id = row['student_id']
   script_id = row['script_id']
+  raise "missing script_id for row #{row}" unless script_id
   if follower_ids.include?(student_id)
     if do_dry_run
       puts "can remove student data with id " + student_id.to_s
