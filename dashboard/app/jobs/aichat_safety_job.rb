@@ -12,6 +12,11 @@ class AichatSafetyJob < JobWithResults
         _return(is_prompt_safe(**#{args_dict}))
       PYTHON
     end
+
+    # Eventually:
+    # pyimport "pycdo.aichat.safety", as: :safety
+    # safety.is_prompt_safe(prompt: prompt)
+
     write_results(results)
   end
 end
