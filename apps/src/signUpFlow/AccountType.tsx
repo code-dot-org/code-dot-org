@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState} from 'react';
+import {Button} from 'react-bootstrap/lib/InputGroup';
 
 import locale from '@cdo/apps/signup/locale';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
@@ -6,11 +7,15 @@ import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 import FontAwesomeV6Icon from '../componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {Heading2} from '../componentLibrary/typography';
 import AccountCard from '../templates/account/AccountCard';
-import SafeMarkdown from '../templates/SafeMarkdown';
+// import SafeMarkdown from '../templates/SafeMarkdown';
+
+import FreeCurriculumDialog from './FreeCurriculumDialog';
 
 import style from './accountType.module.scss';
 
 const AccountType: React.FunctionComponent = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <main className={style.wrapper}>
       <div className={style.contentContainer}>
@@ -49,17 +54,18 @@ const AccountType: React.FunctionComponent = () => {
             ]}
           />
         </div>
+        <FreeCurriculumDialog
+          isOpen={isModalOpen}
+          closeModal={() => setIsModalOpen(false)}
+        />
         <div className={style.freeCurriculumWrapper}>
           <FontAwesomeV6Icon iconName={'book-open-cover'} />
           <Heading2 visualAppearance="heading-xs">
             {locale.free_curriculum_forever()}
           </Heading2>
-          <SafeMarkdown
-            className={style.desc}
-            markdown={locale.read_our_commitment({
-              link: 'http://creativecommons.org/licenses/by-nc-sa/4.0/',
-            })}
-          />
+          <Button onClick={() => setIsModalOpen(true)} className={style.desc}>
+            Button
+          </Button>
         </div>
       </div>
     </main>

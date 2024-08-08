@@ -1,4 +1,10 @@
-@import 'color', 'breakpoints', 'style-constants';
+@import 'color', 'breakpoints', 'style-constants', 'typography';
+
+@mixin link-style {
+  color: $light_black;
+  text-decoration: underline;
+  font-weight: 500;
+}
 
 body {
   background-color: $light_gray_50 !important;
@@ -50,9 +56,31 @@ main.wrapper {
     font-size: 0.875rem;
 
     a {
-      color: $light_black;
-      text-decoration: underline;
-      font-weight: 500;
+      @include link-style;
     }
+  }
+}
+
+.dialogContainer {
+  padding: 1.5rem 2rem 1.875rem;
+  display: flex;
+  flex-direction: column;
+
+  .contentWrapper {
+    border-block: 1px solid $light_gray_200;
+    padding-block: 1rem 0.25rem;
+    margin-bottom: 1.25rem;
+
+    .markdownDesc p {
+      @include body-three;
+
+      a {
+        @include link-style;
+      }
+    }
+  }
+
+  button {
+    align-self: end;
   }
 }
