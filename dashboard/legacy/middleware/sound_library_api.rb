@@ -27,6 +27,14 @@ class SoundLibraryApi < Sinatra::Base
   #
   get %r{/api/v1/sound-library/(.+)} do |sound_name|
     not_found if sound_name.empty?
+    puts "looking for sound #{sound_name}"
+
+    if CDO.aws_s3_emulated?
+      # For development environments, we look to see if we should lazily populate the
+      # local bucket first.
+      puts "populating local bucket"
+      AWS::S3.populate_local_bucket(SOUND_LIBRARY_BUCKET, sound_name)
+    end
 
     if CDO.aws_s3_emulated?
       # For development environments, we look to see if we should lazily populate the
