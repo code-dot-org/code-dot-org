@@ -80,6 +80,8 @@ self.onmessage = async event => {
   self.postMessage({type: 'run_complete', message: results, id});
 };
 
+// Run code owned by us (not the user). If there is an error, post a
+// system_error message and return false, otherwise return true.
 async function runInternalCode(code, id) {
   try {
     await self.pyodide.runPythonAsync(code);
