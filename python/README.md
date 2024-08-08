@@ -8,6 +8,20 @@ in [the initial pycall PR](https://github.com/code-dot-org/code-dot-org/pull/600
 For package management and virtual env we use [pdm](https://pdm-project.org/), see
 [section on using pdm below](#pdm-manage-python-packages-and-virtualenv).
 
+### PyCall (currently) doesn't work from Rails web requests
+
+While we hope to fix this in the future, PyCall is not thread-safe, and cannot be invoked from
+Rails web requests. Invoking PyCall from a Rails controller request will cause
+an instant SEGV crash of the Rails process.
+
+This means, at present, **PyCall should be used from ActiveJob workers**.
+
+- On production we are using `delayed_job` for ActiveJob, which does not use threads.
+- On development, we default to the async adapter, which uses threads. If you wish to develop
+  ActiveJob Python workers, you'll need to set `active_job: { queue_adapter: delayed_job }` in
+  your locals.yml and launch workers manually using `bundle exec bin/delayed_job start`.
+  See comments in [locals.yml.default](../locals.yml.default) for more details.
+
 ## pdm: manage python packages and virtualenv
 
 [pdm](https://pdm-project.org/) uses [pyproject.toml](../pyproject.toml) to create a python virtualenv, and install and manage its
