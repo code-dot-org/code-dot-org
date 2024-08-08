@@ -2,8 +2,8 @@ import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-impo
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import BubbleBadge, {
   KeepWorkingBadge,
   BadgeType,

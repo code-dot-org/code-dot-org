@@ -20,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2024-07-11 16:04:34 UTC",
+    "serialized_at": "2024-08-01 16:20:21 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -13213,6 +13213,27 @@
         "lesson.key": "Mini-Project: About Me",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-NI-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
       }
     },
     {

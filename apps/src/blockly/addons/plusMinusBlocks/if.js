@@ -242,11 +242,13 @@ const controlsIfHelper = function () {
   this.getInput('IF0').insertFieldAt(0, createPlusField(), 'PLUS');
 };
 
-if (GoogleBlockly.Extensions.isRegistered('controls_if_mutator')) {
-  GoogleBlockly.Extensions.unregister('controls_if_mutator');
+export default function registerMutator() {
+  if (GoogleBlockly.Extensions.isRegistered('controls_if_mutator')) {
+    GoogleBlockly.Extensions.unregister('controls_if_mutator');
+  }
+  GoogleBlockly.Extensions.registerMutator(
+    'controls_if_mutator',
+    controlsIfMutator,
+    controlsIfHelper
+  );
 }
-GoogleBlockly.Extensions.registerMutator(
-  'controls_if_mutator',
-  controlsIfMutator,
-  controlsIfHelper
-);

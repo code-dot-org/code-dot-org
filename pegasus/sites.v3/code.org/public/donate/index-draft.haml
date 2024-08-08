@@ -1,0 +1,102 @@
+---
+title: Donate
+theme: responsive_full_width
+---
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+-# TODO - Update this to donate-styles.css
+%link{href: "/css/generated/page/donate-styles-draft.css", rel: "stylesheet"}
+
+-# Donate with Amazon
+%script{async: "", src: "https://static-na.payments-amazon.com/OffAmazonPayments/us/js/Widgets.js"}
+
+-# Double the Donation
+:javascript
+  var DDCONF = { API_KEY: "#{CDO.ddconf_api_key}" };
+%script{src: "https://doublethedonation.com/api/js/ddplugin.js"}
+
+-# Classy donation form
+= view :classy_embed_form
+
+%section.top
+  .wrapper.flex-container.justify-space-between.align-items-center.wrap
+    .text-wrapper.col-50
+      %h1=hoc_s("donate_page.heading")
+      %p.body-two
+        =hoc_s(:donate_page_top_desc)
+      %a.link-button.has-external-link{href: "https://donate.code.org/campaign/support-computer-science-education/c172233", target: "_blank", rel: "noopener noreferrer"}
+        =hoc_s(:call_to_action_donate_to_cdo)
+    %div.col-45{style: "margin: 1rem 0 0;"}
+      = view :display_video_thumbnail, id: "donate_10th_anniv", video_code: "4w9y93ouj8w", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/donate_10th_anniversary_video.mp4"
+  .clear
+
+%section.donate-options.bg-neutral-light
+  .wrapper
+    %h2.centered
+      =hoc_s(:donate_page_other_ways_title)
+    %p.centered
+      =hoc_s(:donate_page_other_ways_desc)
+    = view :"tabs_section/donate/donate_tabs_draft"
+    %p.body-three
+      =hoc_s("donate_page.options.disclaimer", markdown: :inline, locals:{policy_url: "/donate/policy"})
+
+%section.bg-pattern-dark
+  .wrapper
+    %h2.centered.white
+      =hoc_s("donate_page.empower.heading")
+    = view :donate_empower
+
+%section.campaigns.bg-neutral-light
+  .wrapper
+    %h2.centered
+      =hoc_s(:donate_page_campaigns_heading)
+    = view :donate_campaign_carousel
+
+%section.bg-neutral-dark
+  .wrapper.centered
+    %h2.white=hoc_s(:donate_page_fundraise_title)
+    %p.white=hoc_s(:donate_page_fundraise_desc)
+    %a.link-button.has-external-link{href: "https://donate.code.org/campaign/computer-science-education/c142257", target: "_blank", rel: "noopener noreferrer"}
+      =hoc_s(:call_to_action_start_fundraiser)
+
+%section.supporters
+  .wrapper.centered
+    %h2=hoc_s(:donate_page_supporters_heading)
+    %p.wrap-balance=hoc_s(:donate_page_supporters_desc)
+    .logos-wrapper
+      %img{src: "/images/avatars/amazon.png", alt: hoc_s(:amazon_logo_alt)}
+      %img{src: "/images/avatars/microsoft.png", alt: hoc_s(:microsoft_logo_alt)}
+      %img{src: "/images/avatars/google.png", alt: hoc_s(:google_logo_alt)}
+      %img{src: "/images/avatars/coinbase.png", alt: hoc_s(:coinbase_logo_alt)}
+      %img{src: "/images/avatars/ballmer_group.png", alt: hoc_s(:ballmer_group_logo_alt)}
+      %img{src: "/images/avatars/vista_equity_partners.png", alt: hoc_s(:vista_equity_partners_logo_alt)}
+    .button-wrapper.centered
+      %a.link-button.secondary{href: "/about/supporters"}
+        =hoc_s(:call_to_action_view_our_supporters)
+
+%section.bg-neutral-light
+  .wrapper
+    %h2.centered
+      =hoc_s("donate_page.support_mission.heading")
+    %p.centered
+      =hoc_s("donate_page.support_mission.desc")
+    = view :donate_support_mission
+
+%section.spread-the-word
+  .wrapper
+    %h2
+      =hoc_s(:spread_the_word_heading)
+    %p
+      =hoc_s(:spread_the_word_desc)
+    %div.content-wrapper.flex-container.justify-space-between.wrap-reverse
+      = view :"help/help_page_spread_the_word"
+      %figure.rounded-corners.col-33
+    .clear
+
+= view :section_divider_line
+
+%section.seals
+  .wrapper
+    = view :about_seals
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::DONATE_PAGE_VISITED_EVENT

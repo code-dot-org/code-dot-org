@@ -1,7 +1,7 @@
 import {EventEmitter} from 'events';
 
-import MicroBitButton from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitButton';
-import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
+import MicroBitButton from '@cdo/apps/maker/boards/microBit/MicroBitButton';
+import {MBFirmataClientStub} from '@cdo/apps/maker/util/makeStubBoard';
 
 describe('MicroBitButton', function () {
   it('is an event emitter component', function () {

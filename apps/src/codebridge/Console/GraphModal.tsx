@@ -5,13 +5,13 @@ import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
 import i18n from '@cdo/locale';
 
 import styles from './console.module.scss';
-import dialogStyles from '@cdo/apps/templates/accessible-dialogue.module.scss';
+import dialogStyles from '@cdo/apps/sharedComponents/accessible-dialogue.module.scss';
 
 /**
  * Renders a modal that displays data visualizations from Python Lab console output.
  */
 
-export interface GraphModalProps {
+interface GraphModalProps {
   onClose: () => void;
   src: string;
 }

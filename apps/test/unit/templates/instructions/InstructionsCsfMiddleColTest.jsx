@@ -1,12 +1,12 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
+import LegacyButton from '@cdo/apps/legacySharedComponents/LegacyButton';
 import HintPrompt from '@cdo/apps/templates/instructions/HintPrompt';
 import InlineFeedback from '@cdo/apps/templates/instructions/InlineFeedback';
 import InlineHint from '@cdo/apps/templates/instructions/InlineHint';
 import Instructions from '@cdo/apps/templates/instructions/Instructions';
 import {UnconnectedInstructionsCsfMiddleCol as InstructionsCsfMiddleCol} from '@cdo/apps/templates/instructions/InstructionsCsfMiddleCol';
-import LegacyButton from '@cdo/apps/templates/LegacyButton';
 
 const DEFAULT_PROPS = {
   dismissHintPrompt: () => {},

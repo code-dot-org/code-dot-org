@@ -398,6 +398,9 @@ export function flyoutCategory(
     blockList.push(functionDefinitionBlock);
   }
 
+  // Add blocks from the level toolbox XML, if present.
+  blockList.push(...Blockly.cdoUtils.getCategoryBlocksJson('PROCEDURE'));
+
   // Workspaces to populate functions flyout category from
   const workspaces = [
     Blockly.getMainWorkspace(),
