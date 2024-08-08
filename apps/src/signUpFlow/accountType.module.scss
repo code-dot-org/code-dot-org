@@ -8,6 +8,10 @@
 
 body {
   background-color: $light_gray_50 !important;
+
+  & > .responsive_full_container {
+    padding: 1rem;
+  }
 }
 
 main.wrapper {
@@ -57,6 +61,25 @@ main.wrapper {
 
     a {
       @include link-style;
+    }
+  }
+
+  .dialogButton {
+    @include body-three;
+    margin: unset !important;
+    padding: unset !important;
+    background: none;
+    color: $light_gray_800;
+    text-decoration: underline !important;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+      color: $light_black;
+      background: none;
+    }
+
+    & > span {
+      font-weight: 400;
     }
   }
 }

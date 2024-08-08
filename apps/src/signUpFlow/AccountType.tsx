@@ -1,13 +1,12 @@
 import React, {useState} from 'react';
-import {Button} from 'react-bootstrap/lib/InputGroup';
 
+import Button from '@cdo/apps/componentLibrary/button/Button';
 import locale from '@cdo/apps/signup/locale';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 
 import FontAwesomeV6Icon from '../componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {Heading2} from '../componentLibrary/typography';
 import AccountCard from '../templates/account/AccountCard';
-// import SafeMarkdown from '../templates/SafeMarkdown';
 
 import FreeCurriculumDialog from './FreeCurriculumDialog';
 
@@ -63,9 +62,12 @@ const AccountType: React.FunctionComponent = () => {
           <Heading2 visualAppearance="heading-xs">
             {locale.free_curriculum_forever()}
           </Heading2>
-          <Button onClick={() => setIsModalOpen(true)} className={style.desc}>
-            Button
-          </Button>
+          <Button
+            className={style.dialogButton}
+            size="s"
+            text={locale.read_our_commitment()}
+            onClick={() => setIsModalOpen(true)}
+          />
         </div>
       </div>
     </main>
