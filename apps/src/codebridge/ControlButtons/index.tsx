@@ -25,9 +25,10 @@ import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import moduleStyles from './control-buttons.module.scss';
 
 const ControlButtons: React.FunctionComponent = () => {
-  const {onRun} = useCodebridgeContext();
+  const {onRun, onStop} = useCodebridgeContext();
   const dialogControl = useContext(DialogContext);
   const [hasRun, setHasRun] = useState(false);
+  const [isRunning, setIsRunning] = useState(false);
   const dispatch = useAppDispatch();
 
   const source = useAppSelector(
@@ -89,10 +90,21 @@ const ControlButtons: React.FunctionComponent = () => {
 
   const handleRun = (runTests: boolean) => {
     if (onRun) {
+      setIsRunning(true);
       onRun(runTests, dispatch, source);
       setHasRun(true);
     } else {
       dispatch(appendSystemMessage("We don't know how to run your code."));
+    }
+  };
+
+  const handleStop = () => {
+    if (onStop) {
+      onStop();
+      setIsRunning(false);
+    } else {
+      dispatch(appendSystemMessage("We don't know how to stop your code."));
+      setIsRunning(false);
     }
   };
 
@@ -121,23 +133,35 @@ const ControlButtons: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.controlButtonsContainer}>
-      <Button
-        text="Run"
-        onClick={() => handleRun(false)}
-        disabled={disableRunAndTest}
-        iconLeft={{iconStyle: 'solid', iconName: 'play'}}
-        className={moduleStyles.firstControlButton}
-        size={'s'}
-        color={'white'}
-      />
-      <Button
-        text="Test"
-        onClick={() => handleRun(true)}
-        disabled={disableRunAndTest}
-        iconLeft={{iconStyle: 'solid', iconName: 'flask'}}
-        color={'black'}
-        size={'s'}
-      />
+      {isRunning ? (
+        <Button
+          text={'Stop'}
+          onClick={handleStop}
+          color={'destructive'}
+          iconLeft={{iconStyle: 'solid', iconName: 'square'}}
+          size={'s'}
+        />
+      ) : (
+        <>
+          <Button
+            text={'Run'}
+            onClick={() => handleRun(false)}
+            disabled={disableRunAndTest}
+            iconLeft={{iconStyle: 'solid', iconName: 'play'}}
+            className={moduleStyles.firstControlButton}
+            size={'s'}
+            color={'white'}
+          />
+          <Button
+            text="Test"
+            onClick={() => handleRun(true)}
+            disabled={disableRunAndTest}
+            iconLeft={{iconStyle: 'solid', iconName: 'flask'}}
+            color={'black'}
+            size={'s'}
+          />
+        </>
+      )}
       <Button
         text={navigationText}
         onClick={handleNavigation}

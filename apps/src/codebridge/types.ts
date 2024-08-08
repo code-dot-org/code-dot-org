@@ -65,6 +65,7 @@ export type OnRunFunction = (
   dispatch: Dispatch<AnyAction>,
   source: MultiFileSource | undefined
 ) => void;
+export type OnStopFunction = () => void;
 
 export type ReducerAction = {
   type: string;

@@ -12,7 +12,7 @@ import {isPredictAnswerLocked} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {handleRunClick} from './pyodideRunner';
+import {handleRunClick, stopPythonCode} from './pyodideRunner';
 
 import moduleStyles from './pythonlab-view.module.scss';
 
@@ -128,6 +128,7 @@ const PythonlabView: React.FunctionComponent = () => {
           setConfig={setConfig}
           startSource={getStartSource()}
           onRun={onRun}
+          onStop={stopPythonCode}
         />
       )}
     </div>
