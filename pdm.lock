@@ -121,23 +121,23 @@ files = [
 
 [[package]]
 name = "boto3"
-version = "1.34.154"
+version = "1.34.156"
 requires_python = ">=3.8"
 summary = "The AWS SDK for Python"
 groups = ["default", "dev"]
 dependencies = [
-    "botocore<1.35.0,>=1.34.154",
+    "botocore<1.35.0,>=1.34.156",
     "jmespath<2.0.0,>=0.7.1",
     "s3transfer<0.11.0,>=0.10.0",
 ]
 files = [
-    {file = "boto3-1.34.154-py3-none-any.whl", hash = "sha256:7ca22adef4c77ee128e1e1dc7d48bc9512a87cc6fe3d771b3f913d5ecd41c057"},
-    {file = "boto3-1.34.154.tar.gz", hash = "sha256:864f06528c583dc7b02adf12db395ecfadbf9cb0da90e907e848ffb27128ce19"},
+    {file = "boto3-1.34.156-py3-none-any.whl", hash = "sha256:cbbd453270b8ce94ef9da60dfbb6f9ceeb3eeee226b635aa9ec44b1def98cc96"},
+    {file = "boto3-1.34.156.tar.gz", hash = "sha256:b33e9a8f8be80d3053b8418836a7c1900410b23a30c7cb040927d601a1082e68"},
 ]
 
 [[package]]
 name = "botocore"
-version = "1.34.154"
+version = "1.34.156"
 requires_python = ">=3.8"
 summary = "Low-level, data-driven core of boto 3."
 groups = ["default", "dev"]
@@ -148,8 +148,8 @@ dependencies = [
     "urllib3<1.27,>=1.25.4; python_version < \"3.10\"",
 ]
 files = [
-    {file = "botocore-1.34.154-py3-none-any.whl", hash = "sha256:4eef4b1bb809b382ba9dc9c88f5fcc4a133f221a1acb693ee6bee4de9f325979"},
-    {file = "botocore-1.34.154.tar.gz", hash = "sha256:64d9b4c85a504d77cb56dabb2ad717cd8e1717424a88edb458b01d1e5797262a"},
+    {file = "botocore-1.34.156-py3-none-any.whl", hash = "sha256:c48f8c8996216dfdeeb0aa6d3c0f2c7ae25234766434a2ea3e57bdc08494bdda"},
+    {file = "botocore-1.34.156.tar.gz", hash = "sha256:5d1478c41ab9681e660b3322432fe09c4055759c317984b7b8d3af9557ff769a"},
 ]
 
 [[package]]
@@ -530,6 +530,28 @@ dependencies = [
 files = [
     {file = "jinja2-3.1.4-py3-none-any.whl", hash = "sha256:bc5dd2abb727a5319567b7a813e6a2e7318c39f4f487cfe6c89c6f9c7d25197d"},
     {file = "jinja2-3.1.4.tar.gz", hash = "sha256:4a3aee7acbbe7303aede8e9648d13b8bf88a429282aa6122a993f0ac800cb369"},
+]
+
+[[package]]
+name = "jiter"
+version = "0.5.0"
+requires_python = ">=3.8"
+summary = "Fast iterable JSON parser."
+groups = ["default", "dev"]
+files = [
+    {file = "jiter-0.5.0-cp312-cp312-macosx_10_12_x86_64.whl", hash = "sha256:9f664e7351604f91dcdd557603c57fc0d551bc65cc0a732fdacbf73ad335049a"},
+    {file = "jiter-0.5.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:044f2f1148b5248ad2c8c3afb43430dccf676c5a5834d2f5089a4e6c5bbd64df"},
+    {file = "jiter-0.5.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:702e3520384c88b6e270c55c772d4bd6d7b150608dcc94dea87ceba1b6391248"},
+    {file = "jiter-0.5.0-cp312-cp312-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:528d742dcde73fad9d63e8242c036ab4a84389a56e04efd854062b660f559544"},
+    {file = "jiter-0.5.0-cp312-cp312-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:8cf80e5fe6ab582c82f0c3331df27a7e1565e2dcf06265afd5173d809cdbf9ba"},
+    {file = "jiter-0.5.0-cp312-cp312-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:44dfc9ddfb9b51a5626568ef4e55ada462b7328996294fe4d36de02fce42721f"},
+    {file = "jiter-0.5.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:c451f7922992751a936b96c5f5b9bb9312243d9b754c34b33d0cb72c84669f4e"},
+    {file = "jiter-0.5.0-cp312-cp312-manylinux_2_5_i686.manylinux1_i686.whl", hash = "sha256:308fce789a2f093dca1ff91ac391f11a9f99c35369117ad5a5c6c4903e1b3e3a"},
+    {file = "jiter-0.5.0-cp312-cp312-musllinux_1_1_aarch64.whl", hash = "sha256:7f5ad4a7c6b0d90776fdefa294f662e8a86871e601309643de30bf94bb93a64e"},
+    {file = "jiter-0.5.0-cp312-cp312-musllinux_1_1_x86_64.whl", hash = "sha256:ea189db75f8eca08807d02ae27929e890c7d47599ce3d0a6a5d41f2419ecf338"},
+    {file = "jiter-0.5.0-cp312-none-win32.whl", hash = "sha256:e3bbe3910c724b877846186c25fe3c802e105a2c1fc2b57d6688b9f8772026e4"},
+    {file = "jiter-0.5.0-cp312-none-win_amd64.whl", hash = "sha256:a586832f70c3f1481732919215f36d41c59ca080fa27a65cf23d9490e75b2ef5"},
+    {file = "jiter-0.5.0.tar.gz", hash = "sha256:1d916ba875bcab5c5f7d927df998c4cb694d27dceddf3392e58beaf10563368a"},
 ]
 
 [[package]]
@@ -946,7 +968,7 @@ files = [
 
 [[package]]
 name = "openai"
-version = "1.39.0"
+version = "1.40.1"
 requires_python = ">=3.7.1"
 summary = "The official Python library for the openai API"
 groups = ["default", "dev"]
@@ -955,14 +977,15 @@ dependencies = [
     "cached-property; python_version < \"3.8\"",
     "distro<2,>=1.7.0",
     "httpx<1,>=0.23.0",
+    "jiter<1,>=0.4.0",
     "pydantic<3,>=1.9.0",
     "sniffio",
     "tqdm>4",
-    "typing-extensions<5,>=4.7",
+    "typing-extensions<5,>=4.11",
 ]
 files = [
-    {file = "openai-1.39.0-py3-none-any.whl", hash = "sha256:a712553a131c59a249c474d0bb6a0414f41df36dc186d3a018fa7e600e57fb7f"},
-    {file = "openai-1.39.0.tar.gz", hash = "sha256:0cea446082f50985f26809d704a97749cb366a1ba230ef432c684a9745b3f2d9"},
+    {file = "openai-1.40.1-py3-none-any.whl", hash = "sha256:cf5929076c6ca31c26f1ed207e9fd19eb05404cc9104f64c9d29bb0ac0c5bcd4"},
+    {file = "openai-1.40.1.tar.gz", hash = "sha256:cb1294ac1f8c6a1acbb07e090698eb5ad74a7a88484e77126612a4f22579673d"},
 ]
 
 [[package]]
@@ -1803,6 +1826,7 @@ version = "2.2.2"
 requires_python = ">=3.8"
 summary = "HTTP library with thread-safe connection pooling, file post, and more."
 groups = ["default", "dev"]
+marker = "python_version >= \"3.10\""
 files = [
     {file = "urllib3-2.2.2-py3-none-any.whl", hash = "sha256:a448b2f64d686155468037e1ace9f2d2199776e17f0a46610480d311f73e3472"},
     {file = "urllib3-2.2.2.tar.gz", hash = "sha256:dd505485549a7a552833da5e6063639d0d177c04f23bc3864e41e5dc5f612168"},
