@@ -59,7 +59,7 @@
     "mini_rubric": "false",
     "encrypted": "false",
     "long_instructions": "*What's different here? Can you make these sprites talk?*\r\n\r\n- Read the code. What do you notice?\r\n- Click the *\"Run\"* button.\r\n- Click or tap the sprites.\r\n",
-    "start_animations": "\r\n{\r\n  \"orderedKeys\": [\r\n    \"bg-default-plate\",\r\n    \"bg-abstract-blue\",\r\n    \"bg-abstract-pink\",\r\n    \"bg-graident-green\",\r\n    \"bg-graident-pink\",\r\n    \"bg-graident-light-green\",\r\n    \"bg-graident-light-blue\",\r\n    \"bg-abstract-green\",\r\n    \"bg-abstract-orange\",\r\n    \"pizza\",\r\n    \"burger\",\r\n    \"broccoli\",\r\n    \"carrot\",\r\n    \"cupcake\",\r\n    \"ice-cream-cone\"\r\n  ],\r\n  \"propsByKey\": {\r\n    \"bg-default-plate\": {\r\n      \"name\": \"hw_plate_background_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/spritelab/vYopFokxZKjdlYWHACQAd4NzCDWN2Vee/category_backgrounds/hw_plate_background.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"vYopFokxZKjdlYWHACQAd4NzCDWN2Vee\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"bg-abstract-blue\": {\r\n      \"name\": \"abstract_15_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/kpGIKirow4l3xRdN_BYD7pW3aVlfysex/category_backgrounds/abstract_15.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"kpGIKirow4l3xRdN_BYD7pW3aVlfysex\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"bg-abstract-pink\": {\r\n      \"name\": \"abstract_16_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/OEa2gEbbvs2v84AZcjbUfOw_7tVqVKJr/category_backgrounds/abstract_16.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"OEa2gEbbvs2v84AZcjbUfOw_7tVqVKJr\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"bg-graident-green\": {\r\n      \"name\": \"gradient_13_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/RnFEWg6kwTHgLC2WCCLXYrgyTwZwwy5q/category_backgrounds/gradient_13.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"RnFEWg6kwTHgLC2WCCLXYrgyTwZwwy5q\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"bg-graident-pink\": {\r\n      \"name\": \"gradient_14_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/xk9FNA5fI7KifcH2.fXAvYJEzMQCjKsW/category_backgrounds/gradient_14.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"xk9FNA5fI7KifcH2.fXAvYJEzMQCjKsW\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"bg-graident-light-green\": {\r\n      \"name\": \"gradient_10_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/HTm.whWJkR5t0Kf4BGlyLT8QtC3EN356/category_backgrounds/gradient_10.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"HTm.whWJkR5t0Kf4BGlyLT8QtC3EN356\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"bg-graident-light-blue\": {\r\n      \"name\": \"gradient_25_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/HJMXamvByE28ZPEEbFg5KUDcFo6EhoEf/category_backgrounds/gradient_25.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 339\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"HJMXamvByE28ZPEEbFg5KUDcFo6EhoEf\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"bg-abstract-green\": {\r\n      \"name\": \"abstract_08_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/.g_fM0jG5YHeQCetPtAd_H9pyzUfaVjK/category_backgrounds/abstract_08.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \".g_fM0jG5YHeQCetPtAd_H9pyzUfaVjK\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"bg-abstract-orange\": {\r\n      \"name\": \"abstract_26_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/_pBimGWbiO2Nbb6J7Bfjez6VIWSBKdx./category_backgrounds/abstract_26.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 400\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"_pBimGWbiO2Nbb6J7Bfjez6VIWSBKdx.\",\r\n      \"categories\": [\r\n        \"backgrounds\"\r\n      ]\r\n    },\r\n    \"burger\": {\r\n      \"name\": \"face_burger_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/l..BIzEFYJNv7_aOrcRH1BnVBT6le3QF/category_food/face_burger.png\",\r\n      \"frameSize\": {\r\n        \"x\": 400,\r\n        \"y\": 341\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"l..BIzEFYJNv7_aOrcRH1BnVBT6le3QF\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"pizza\": {\r\n      \"name\": \"face_pizza_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/gPFKgB_Let0u1.OCTIhpCP5K5iqadQcn/category_food/face_pizza.png\",\r\n      \"frameSize\": {\r\n        \"x\": 330,\r\n        \"y\": 395\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"gPFKgB_Let0u1.OCTIhpCP5K5iqadQcn\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"broccoli\": {\r\n      \"name\": \"face_broc_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/ub5g3lhCqabDt4tlhLOEG85lxxCTsCt1/category_food/face_broc.png\",\r\n      \"frameSize\": {\r\n        \"x\": 340,\r\n        \"y\": 396\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"ub5g3lhCqabDt4tlhLOEG85lxxCTsCt1\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"ice-cream-cone\": {\r\n      \"name\": \"face_icecreamcone_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/oqNN9WsJkGcHW.yydcp3dq1f6.P4eSU8/category_food/face_icecreamcone.png\",\r\n      \"frameSize\": {\r\n        \"x\": 224,\r\n        \"y\": 394\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"oqNN9WsJkGcHW.yydcp3dq1f6.P4eSU8\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"carrot\": {\r\n      \"name\": \"face_carrot_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/j8_YdWDy2Z8ck2PxCyV0QOTXmI2ot_tN/category_food/face_carrot.png\",\r\n      \"frameSize\": {\r\n        \"x\": 123,\r\n        \"y\": 399\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"j8_YdWDy2Z8ck2PxCyV0QOTXmI2ot_tN\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    },\r\n    \"cupcake\": {\r\n      \"name\": \"face_cupcake_1\",\r\n      \"sourceUrl\": \"/api/v1/animation-library/gamelab/KHrxG_UKYXBvq5A284g3HbUGHHaHSGMo/category_food/face_cupcake.png\",\r\n      \"frameSize\": {\r\n        \"x\": 285,\r\n        \"y\": 399\r\n      },\r\n      \"frameCount\": 1,\r\n      \"looping\": true,\r\n      \"frameDelay\": 2,\r\n      \"version\": \"KHrxG_UKYXBvq5A284g3HbUGHHaHSGMo\",\r\n      \"categories\": [\r\n        \"food\"\r\n      ]\r\n    }\r\n  }\r\n}",
+    "start_animations": "{\"orderedKeys\":[\"061c23be-537b-4c5f-9b94-efc6cd826a5d\",\"23bd7485-ded1-4b12-8d50-6880015c4df3\",\"26b3a5d6-4464-4f14-a8b2-aef2390086c6\",\"321cf665-2ccc-47e1-b226-1cae0e5f8ec3\",\"581b5f21-adae-4848-8bb7-fa947e5c3f87\",\"2dfa4711-515f-412e-8b00-ad53a990c56a\",\"3c66678d-9cc3-4dca-b0c5-7e513094456e\",\"f5ae25b8-42c7-42d3-8ec6-e87a7b4a31f5\",\"18bd6e91-7bc7-461c-a7a0-a03e15a908f3\",\"6a3d97a7-8187-4ab6-aedf-c6eb4c1ce3cd\",\"b26dd872-48dc-4e4b-9f72-a0a348938c54\",\"fcc51102-c648-4b0f-b5fa-1a0129e6031a\",\"20379614-7d67-46c7-906c-e76eb611f538\",\"c1d08467-f6d4-49de-a950-b5f4c25dbff4\"],\"propsByKey\":{\"061c23be-537b-4c5f-9b94-efc6cd826a5d\":{\"name\":\"transformers_one_bg_1\",\"frameCount\":1,\"frameSize\":{\"x\":800,\"y\":800},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-07T17:14:18.000Z\",\"pngLastModified\":\"2024-08-07T17:14:18.000Z\",\"version\":\"dBKUQZCTQZdCtRWW08V9unJxemky7hNH\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/dBKUQZCTQZdCtRWW08V9unJxemky7hNH/transformers_one_bg_1.png\",\"sourceSize\":{\"x\":800,\"y\":800}},\"23bd7485-ded1-4b12-8d50-6880015c4df3\":{\"name\":\"transformers_one_bg_2\",\"frameCount\":1,\"frameSize\":{\"x\":800,\"y\":800},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-07T17:14:30.000Z\",\"pngLastModified\":\"2024-08-07T17:14:29.000Z\",\"version\":\"Wq7X8pZbvvGTCfC1lBq_vYRPYvTGzLu8\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/Wq7X8pZbvvGTCfC1lBq_vYRPYvTGzLu8/transformers_one_bg_2.png\",\"sourceSize\":{\"x\":800,\"y\":800}},\"26b3a5d6-4464-4f14-a8b2-aef2390086c6\":{\"name\":\"transformers_one_bg_3\",\"frameCount\":1,\"frameSize\":{\"x\":800,\"y\":800},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-07T17:14:38.000Z\",\"pngLastModified\":\"2024-08-07T17:14:38.000Z\",\"version\":\"hUcZ_.NLBvURzSJulqR9bmixtjvoNssq\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/hUcZ_.NLBvURzSJulqR9bmixtjvoNssq/transformers_one_bg_3.png\",\"sourceSize\":{\"x\":800,\"y\":800}},\"321cf665-2ccc-47e1-b226-1cae0e5f8ec3\":{\"name\":\"transformers_one_bg_4\",\"frameCount\":1,\"frameSize\":{\"x\":800,\"y\":800},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-07T17:14:50.000Z\",\"pngLastModified\":\"2024-08-07T17:14:50.000Z\",\"version\":\"8C4E8lDExGBWYYp_G3YV16WiaA8J2qTq\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/8C4E8lDExGBWYYp_G3YV16WiaA8J2qTq/transformers_one_bg_4.png\",\"sourceSize\":{\"x\":800,\"y\":800}},\"581b5f21-adae-4848-8bb7-fa947e5c3f87\":{\"name\":\"transformers_one_bg_5\",\"frameCount\":1,\"frameSize\":{\"x\":800,\"y\":800},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-07T17:15:00.000Z\",\"pngLastModified\":\"2024-08-07T17:14:59.000Z\",\"version\":\"z.WaVPfBtQWzxyWWwK5BFl6S5A5aktmF\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/z.WaVPfBtQWzxyWWwK5BFl6S5A5aktmF/transformers_one_bg_5.png\",\"sourceSize\":{\"x\":800,\"y\":800}},\"2dfa4711-515f-412e-8b00-ad53a990c56a\":{\"name\":\"transformers_one_bg_6\",\"frameCount\":1,\"frameSize\":{\"x\":800,\"y\":800},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-07T17:15:10.000Z\",\"pngLastModified\":\"2024-08-07T17:15:09.000Z\",\"version\":\"OhY5JsBjyDH2uEuA_F6.4qOaxm6jyRD0\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/OhY5JsBjyDH2uEuA_F6.4qOaxm6jyRD0/transformers_one_bg_6.png\",\"sourceSize\":{\"x\":800,\"y\":800}},\"3c66678d-9cc3-4dca-b0c5-7e513094456e\":{\"name\":\"optimus_prime_1\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:12:23.000Z\",\"pngLastModified\":\"2024-08-07T17:12:22.000Z\",\"version\":\"lXfLgjLKmYgLhV.L23LvCYtNlgwZrA3i\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/lXfLgjLKmYgLhV.L23LvCYtNlgwZrA3i/optimus_prime_1.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"f5ae25b8-42c7-42d3-8ec6-e87a7b4a31f5\":{\"name\":\"megatron_1\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:11:43.000Z\",\"pngLastModified\":\"2024-08-07T17:11:43.000Z\",\"version\":\"S837ya3F1lMBgC37PlzFsBSKGHqvNwcn\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/S837ya3F1lMBgC37PlzFsBSKGHqvNwcn/megatron_1.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"18bd6e91-7bc7-461c-a7a0-a03e15a908f3\":{\"name\":\"elita_1\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:11:00.000Z\",\"pngLastModified\":\"2024-08-07T17:11:00.000Z\",\"version\":\"JAs0NA0pdQneIsm6bGpJwshYzMvX.xma\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/JAs0NA0pdQneIsm6bGpJwshYzMvX.xma/elita_1.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"6a3d97a7-8187-4ab6-aedf-c6eb4c1ce3cd\":{\"name\":\"bumblebee_3\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:10:42.000Z\",\"pngLastModified\":\"2024-08-07T17:10:42.000Z\",\"version\":\"KYVUKktjd0jLhKFztkLgcLUEwuVJOvZ3\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/KYVUKktjd0jLhKFztkLgcLUEwuVJOvZ3/bumblebee_3.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"b26dd872-48dc-4e4b-9f72-a0a348938c54\":{\"name\":\"optimus_prime_vehicle\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:12:47.000Z\",\"pngLastModified\":\"2024-08-07T17:12:47.000Z\",\"version\":\"pK2WWKZB1GKQhmivE7hiY6xlPX9UBGWO\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/pK2WWKZB1GKQhmivE7hiY6xlPX9UBGWO/optimus_prime_vehicle.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"fcc51102-c648-4b0f-b5fa-1a0129e6031a\":{\"name\":\"megatron_vehicle\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:12:07.000Z\",\"pngLastModified\":\"2024-08-07T17:12:07.000Z\",\"version\":\"HjVkuEdDCYSYZIiFU_KgSQFw9nTlnt5H\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/HjVkuEdDCYSYZIiFU_KgSQFw9nTlnt5H/megatron_vehicle.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"20379614-7d67-46c7-906c-e76eb611f538\":{\"name\":\"elita_vehicle\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:11:25.000Z\",\"pngLastModified\":\"2024-08-07T17:11:24.000Z\",\"version\":\"qf_6OZ1pwaVE4PwNluEUj8CaZr77iziA\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/qf_6OZ1pwaVE4PwNluEUj8CaZr77iziA/elita_vehicle.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"c1d08467-f6d4-49de-a950-b5f4c25dbff4\":{\"name\":\"bumblebee_vehicle\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:10:49.000Z\",\"pngLastModified\":\"2024-08-07T17:10:49.000Z\",\"version\":\"1QOUsRRXrVQ_BJyZA422sj7Yc2ep_Pe8\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/1QOUsRRXrVQ_BJyZA422sj7Yc2ep_Pe8/bumblebee_vehicle.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}\r\n\r\n",
     "validation_enabled": "false",
     "mini_toolbox": "false",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"hw_Run\",\r\n  \"callout_text\": \"Click here to run the code.\",\r\n  \"element_id\": \"[id='runButton']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top left\",\r\n    \"at\": \"bottom left\",\r\n    \"adjust\": {\r\n     \"x\": 30,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
@@ -70,35 +70,36 @@
     "instructions_icon": "pizza",
     "validation_code": "//Requires zHelloWorldValidation and zValidationHelperFunctions\r\nlevel4();",
     "skip_autosave": true,
+    "standalone_app_name": "spritelab",
     "preload_asset_list": null
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:52.703+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_click\\\"\"],\"cloned_from\":\"helloworld_food_click\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:52.703+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_click\\\"\"],\"cloned_from\":\"helloworld_food_click\"},{\"changed_at\":\"2024-08-07 18:44:09 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-07 18:59:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
   <blocks>
     <start_blocks>
-      <xml>
-        <block type="when_run" movable="false">
+      <xml xmlns="https://developers.google.com/blockly/xml">
+        <block type="when_run" deletable="false" movable="false" x="16" y="16">
           <next>
-            <block type="gamelab_setBackgroundImageAs" can_disconnect_from_parent="false">
-              <title name="IMG">"gradient_10_1"</title>
+            <block type="gamelab_setBackgroundImageAs" movable="false">
+              <field name="IMG">"transformers_one_bg_6"</field>
               <next>
-                <block type="gamelab_makeNewSpriteAnon" can_disconnect_from_parent="false">
-                  <title name="ANIMATION_NAME">"face_cupcake_1"</title>
+                <block type="gamelab_makeNewSpriteAnon" movable="false">
+                  <field name="ANIMATION_NAME">"elita_1"</field>
                   <value name="LOCATION">
-                    <block type="gamelab_location_picker" can_disconnect_from_parent="false">
-                      <title name="LOCATION">{"x":100,"y":200}</title>
+                    <block type="gamelab_location_picker" movable="false">
+                      <field name="LOCATION">{"x":100,"y":200}</field>
                     </block>
                   </value>
                   <next>
-                    <block type="gamelab_makeNewSpriteAnon" can_disconnect_from_parent="false">
-                      <title name="ANIMATION_NAME">"face_icecreamcone_1"</title>
+                    <block type="gamelab_makeNewSpriteAnon" movable="false">
+                      <field name="ANIMATION_NAME">"bumblebee_3"</field>
                       <value name="LOCATION">
-                        <block type="gamelab_location_picker" can_disconnect_from_parent="false">
-                          <title name="LOCATION">{"x":300,"y":200}</title>
+                        <block type="gamelab_location_picker" movable="false">
+                          <field name="LOCATION">{"x":300,"y":200}</field>
                         </block>
                       </value>
                     </block>
@@ -108,37 +109,37 @@
             </block>
           </next>
         </block>
-        <block type="gamelab_spriteClicked" movable="false">
-          <title name="CONDITION">"when"</title>
+        <block type="gamelab_spriteClicked" movable="false" x="16" y="219">
+          <field name="CONDITION">"when"</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <title name="ANIMATION">"face_cupcake_1"</title>
+            <block type="gamelab_allSpritesWithAnimation" movable="false">
+              <field name="ANIMATION">"elita_1"</field>
             </block>
           </value>
           <next>
-            <block type="gamelab_spriteSay" can_disconnect_from_parent="false">
-              <title name="SPEECH">Sweet!</title>
+            <block type="gamelab_spriteSay" movable="false">
+              <field name="SPEECH">Sweet!</field>
               <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                  <title name="ANIMATION">"face_cupcake_1"</title>
+                <block type="gamelab_allSpritesWithAnimation" movable="false">
+                  <field name="ANIMATION">"elita_1"</field>
                 </block>
               </value>
             </block>
           </next>
         </block>
-        <block type="gamelab_spriteClicked" movable="false">
-          <title name="CONDITION">"when"</title>
+        <block type="gamelab_spriteClicked" movable="false" x="16" y="357">
+          <field name="CONDITION">"when"</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <title name="ANIMATION">"face_icecreamcone_1"</title>
+            <block type="gamelab_allSpritesWithAnimation" movable="false">
+              <field name="ANIMATION">"bumblebee_3"</field>
             </block>
           </value>
           <next>
-            <block type="gamelab_spriteSay" can_disconnect_from_parent="false">
-              <title name="SPEECH">Cool!</title>
+            <block type="gamelab_spriteSay" movable="false">
+              <field name="SPEECH">Cool!</field>
               <value name="SPRITE">
-                <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-                  <title name="ANIMATION">"face_icecreamcone_1"</title>
+                <block type="gamelab_allSpritesWithAnimation" movable="false">
+                  <field name="ANIMATION">"bumblebee_3"</field>
                 </block>
               </value>
             </block>

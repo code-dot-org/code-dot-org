@@ -1,0 +1,29 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T22:27:35.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Take a look at the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">recipesToString()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">RecipeBlog</code> class. Should this method be <code style=\"background-color: #ececec; color: black; font-weight: bold;\">public</code> or <code style=\"background-color: #ececec; color: black; font-weight: bold;\">private</code>?\r\n\r\nTry changing the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">recipesToString()</code> method to <code style=\"background-color: #ececec; color: black; font-weight: bold;\">private</code>, then run the program. Does this change the functionality of the program? Why or why not?",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "project_template_level_name": "CSA U7L4-L1 Private PBT_alt-2025",
+    "teacher_markdown": "Students should conclude that the `recipesToString()` method should be `private` because it is only used inside the `RecipeBlog` class. With the design and structure of the program, there is no reason for another class to call this method.\r\n\r\nWhen students change this method to `private`, the functionality of the program is not impacted because it is only called inside the `RecipeBlog` class.",
+    "name_suffix": "_alt-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:27:35.706+00:00\",\"changed\":[\"cloned from \\\"CSA U7L4-L3_pilot-2025\\\"\"],\"cloned_from\":\"CSA U7L4-L3_pilot-2025\"}]"
+}]]></config>
+</Javalab>
