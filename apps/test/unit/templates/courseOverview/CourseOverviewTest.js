@@ -2,8 +2,8 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
 import {UnconnectedCourseOverview as CourseOverview} from '@cdo/apps/templates/courseOverview/CourseOverview';
-import {NotificationType} from '@cdo/apps/templates/Notification';
 import {courseOfferings} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 import * as utils from '@cdo/apps/utils';
 

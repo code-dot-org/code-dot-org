@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
-import {Button} from '@cdo/apps/componentLibrary/button';
+import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import {resetPredictProgress} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import {CourseRoles} from '@cdo/apps/templates/currentUserRedux';
@@ -48,7 +48,7 @@ const PredictResetButton: React.FunctionComponent = () => {
         disabled={!hasSubmitted}
         iconLeft={{iconStyle: 'solid', iconName: 'trash'}}
         type={'secondary'}
-        color={'black'}
+        color={buttonColors.destructive}
       />
       <HelpTip>{i18n.deleteAnswerHelpTip()}</HelpTip>
       {resetFailed && (

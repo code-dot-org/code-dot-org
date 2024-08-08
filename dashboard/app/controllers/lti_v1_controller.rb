@@ -181,7 +181,7 @@ class LtiV1Controller < ApplicationController
         )
 
         # If this is the user's first login, send them into the account linking flow
-        if DCDO.get('lti_account_linking_enabled', false) && !user.lms_landing_opted_out
+        unless user.lms_landing_opted_out
           Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'continue', user.user_type)
           PartialRegistration.persist_attributes(session, user)
           publish_linking_page_visit(user, integration[:platform_name])
@@ -203,22 +203,10 @@ class LtiV1Controller < ApplicationController
         user = Services::Lti.initialize_lti_user(decoded_jwt)
         # PartialRegistration removes the email address, so store it in a local variable first
         email_address = Services::Lti.get_claim(decoded_jwt, :email)
+        Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'new', user.user_type)
         PartialRegistration.persist_attributes(session, user)
-        if DCDO.get('lti_account_linking_enabled', false)
-          Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'new', user.user_type)
-          publish_linking_page_visit(user, integration[:platform_name])
-          render 'lti/v1/account_linking/landing', locals: {email: email_address} and return
-        end
-
-        if DCDO.get('student-email-post-enabled', false)
-          @form_data = {
-            email: email_address
-          }
-
-          render 'omniauth/redirect', {layout: false}
-        else
-          redirect_to new_user_registration_url
-        end
+        publish_linking_page_visit(user, integration[:platform_name])
+        render 'lti/v1/account_linking/landing', locals: {email: email_address} and return
       end
     else
       jwt_error_message = jwt_verifier.errors.empty? ? 'Invalid JWT' : jwt_verifier.errors.join(', ')

@@ -54,14 +54,12 @@ import {getValidatedResult, initializeContainedLevel} from './containedLevels';
 import * as dom from './dom';
 import * as dropletUtils from './dropletUtils';
 import FeedbackUtils from './feedback';
-import {
-  configCircuitPlayground,
-  configMicrobit,
-} from './lib/kits/maker/dropletConfig';
+import Alert from './legacySharedComponents/alert';
 import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
 import WireframeButtons from './lib/ui/WireframeButtons';
 import firehoseClient from './lib/util/firehose';
+import {configCircuitPlayground, configMicrobit} from './maker/dropletConfig';
 import puzzleRatingUtils from './puzzleRatingUtils';
 import {getStore} from './redux';
 import {
@@ -84,7 +82,6 @@ import {
 } from './redux/studioAppActivity';
 import * as shareWarnings from './shareWarnings';
 import Sounds from './Sounds';
-import Alert from './templates/alert';
 import ChallengeDialog from './templates/ChallengeDialog';
 import VersionHistory from './templates/VersionHistory';
 import color from './util/color';
