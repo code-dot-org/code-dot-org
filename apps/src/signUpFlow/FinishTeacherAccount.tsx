@@ -54,6 +54,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
           onChange={onNameChange}
           value={name}
           className={style.nameInput}
+          placeholder={'Dr. Joanna'}
         />
         <BodyThreeText>
           {locale.this_is_what_your_students_will_see()}

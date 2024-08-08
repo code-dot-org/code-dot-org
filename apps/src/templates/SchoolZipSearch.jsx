@@ -136,6 +136,7 @@ export default function SchoolZipSearch({fieldNames}) {
             setZip(e.target.value);
           }}
           value={zip}
+          placeholder={i18n.enterYourSchoolZipPlaceholder()}
         />
         {zip && isSchoolDropdownDisabled && (
           <BodyThreeText className={style.errorMessage}>
