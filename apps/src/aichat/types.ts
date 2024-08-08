@@ -17,6 +17,8 @@ export interface ChatEvent {
   // This allows the chat event to be visible by default without having to add an extra field.
   hideForParticipants?: true;
   descriptionKey?: keyof typeof ChatEventDescriptions;
+  // This field is optional but when it is defined, it must be set to `true`.
+  teacherView?: true;
 }
 
 export interface ChatMessage extends ChatEvent {
@@ -63,7 +65,17 @@ export interface LogChatEventApiResponse {
   chat_event: ChatMessage;
 }
 
-export type StudentChatHistoryApiResponse = ChatEvent[];
+export interface AichatEvent {
+  aichat_event: string; // JSON string
+  id: number;
+  level_id: number;
+  script_id: number;
+  updated_at: string;
+  created_at: string;
+  user_id: number;
+}
+
+export type StudentChatHistoryApiResponse = AichatEvent[];
 
 export type AichatContext = {
   currentLevelId: number | null;

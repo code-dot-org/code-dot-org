@@ -34,12 +34,14 @@ interface ChatMessageProps {
   chatMessageText: string;
   role: Role;
   status: string;
+  teacherView?: boolean;
 }
 
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   chatMessageText,
   role,
   status,
+  teacherView,
 }) => {
   const hasDangerStyle =
     status === Status.PROFANITY_VIOLATION ||
@@ -48,28 +50,35 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   const hasWarningStyle = status === Status.PII_VIOLATION;
 
   return (
-    <div className={moduleStyles[`container-${role}`]}>
-      {role === Role.ASSISTANT && (
-        <div className={moduleStyles.botIconContainer}>
-          <img
-            src={aiBotIcon}
-            alt={commonI18n.aiChatBotIconAlt()}
-            className={moduleStyles.botIcon}
+    <>
+      <div className={moduleStyles[`container-${role}`]}>
+        {role === Role.ASSISTANT && (
+          <div className={moduleStyles.botIconContainer}>
+            <img
+              src={aiBotIcon}
+              alt={commonI18n.aiChatBotIconAlt()}
+              className={moduleStyles.botIcon}
+            />
+          </div>
+        )}
+        <div
+          className={classNames(
+            moduleStyles[`message-${role}`],
+            hasDangerStyle && moduleStyles.danger,
+            hasWarningStyle && moduleStyles.warning
+          )}
+        >
+          <SafeMarkdown
+            markdown={getDisplayText(chatMessageText, status, role)}
           />
         </div>
-      )}
-      <div
-        className={classNames(
-          moduleStyles[`message-${role}`],
-          hasDangerStyle && moduleStyles.danger,
-          hasWarningStyle && moduleStyles.warning
-        )}
-      >
-        <SafeMarkdown
-          markdown={getDisplayText(chatMessageText, status, role)}
-        />
       </div>
-    </div>
+      {teacherView && status === Status.PROFANITY_VIOLATION && (
+        <div className={moduleStyles.toggleTeacherView}>
+          View hidden message
+        </div>
+      )}
+    </>
   );
 };
 

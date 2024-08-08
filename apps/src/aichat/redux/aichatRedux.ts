@@ -25,6 +25,7 @@ import ChatEventLogger from '../chatEventLogger';
 import {saveTypeToAnalyticsEvent} from '../constants';
 import {
   AichatContext,
+  AichatEvent,
   AiCustomizations,
   ChatEvent,
   ChatMessage,
@@ -470,8 +471,11 @@ export const fetchStudentChatHistory = createAsyncThunk(
         );
       return;
     }
-    console.log('studentChatHistoryApiResponse', studentChatHistoryApiResponse);
-    thunkAPI.dispatch(setStudentChatHistory(studentChatHistoryApiResponse));
+    const chatHistory: ChatEvent[] = studentChatHistoryApiResponse.map(
+      (aichatEventEntry: AichatEvent) =>
+        JSON.parse(aichatEventEntry.aichat_event)
+    );
+    thunkAPI.dispatch(setStudentChatHistory(chatHistory));
   }
 );
 

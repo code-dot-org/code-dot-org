@@ -46,9 +46,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const [selectedTab, setSelectedTab] =
     useState<WorkspaceTeacherViewTab | null>(null);
 
-  const {showWarningModal, isWaitingForChatResponse} = useAppSelector(
-    state => state.aichat
-  );
+  const {showWarningModal, isWaitingForChatResponse, studentChatHistory} =
+    useAppSelector(state => state.aichat);
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const items = useSelector(selectAllMessages);
 
@@ -129,9 +128,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           ? ' (view only)'
           : ''),
 
-      tabContent: (
-        <div>Viewing {selectedStudentName}'s chat history - TODO</div>
-      ),
+      tabContent: <StudentChatHistoryView events={studentChatHistory} />,
       iconLeft: iconValue,
     },
     {
@@ -224,6 +221,26 @@ const ChatWithModel: React.FunctionComponent<ChatWithModelProps> = ({
         <ChatEventView event={item} key={index} />
       ))}
       {showWaitingAnimation()}
+    </div>
+  );
+};
+
+interface StudentChatHistoryViewProps {
+  events: ChatEvent[];
+}
+
+const StudentChatHistoryView: React.FunctionComponent<
+  StudentChatHistoryViewProps
+> = ({events}) => {
+  return (
+    <div
+      id="student-chat-history-workspace"
+      className={moduleStyles.conversationArea}
+    >
+      {events.map((event, index) => {
+        event = {...event, teacherView: true};
+        return <ChatEventView event={event} key={index} />;
+      })}
     </div>
   );
 };

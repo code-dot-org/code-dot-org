@@ -100,3 +100,11 @@ $assistant-color: $light_gray_100;
 .warning {
   background-color: $light_caution_100;
 }
+
+
+.toggleTeacherView {
+  margin-top: -10px;
+  display: flex;
+  justify-content: flex-end;
+  color: $purple;
+}
