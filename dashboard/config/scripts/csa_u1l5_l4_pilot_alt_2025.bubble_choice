@@ -1,0 +1,9 @@
+name 'CSA U1L5-L4_pilot_alt-2025'
+display_name 'Practice: Using Loops and Boolean Methods'
+description 'Implement your algorithm to solve your chosen problem.'
+
+sublevels
+level 'CSA U1L5-L4a_alt-2025'
+level 'CSA U1L5-L4b_alt-2025'
+level 'CSA U1L5-L4c_alt-2025'
+level 'CSA U1L5-L4d_alt-2025'
