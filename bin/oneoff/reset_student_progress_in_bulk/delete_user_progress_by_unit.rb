@@ -1,8 +1,5 @@
 #!/usr/bin/env ruby
 
-require_relative '../../../dashboard/config/environment'
-require 'csv'
-
 # This script was developed to allow us to delete progress for multiple users quickly.
 # Prior to the development of this script, it was a manual process for our Customer Success team
 # Depending on where this goes, tests should be added as deleting progress is not undoable
@@ -13,6 +10,9 @@ if ARGV.empty? || ARGV.length > 3
   puts 'Will do a "dry run" until you specify "for-real" for the "commit" field.'
   exit 1
 end
+
+require_relative '../../../dashboard/config/environment'
+require 'csv'
 
 csv_file_path = ARGV[1]
 
