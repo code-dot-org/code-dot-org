@@ -86,6 +86,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
             </BodyTwoText>
           </span>
           <BodyThreeText className={style.emailOptInFootnote}>
+            <strong>{locale.note()}</strong>{' '}
             {locale.after_creating_your_account()}
           </BodyThreeText>
         </div>
