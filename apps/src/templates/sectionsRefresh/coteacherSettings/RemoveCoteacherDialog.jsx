@@ -7,7 +7,7 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
-import AccessibleDialog from '../../AccessibleDialog';
+import AccessibleDialog from '../../../sharedComponents/AccessibleDialog';
 
 import styles from './coteacher-settings.module.scss';
 

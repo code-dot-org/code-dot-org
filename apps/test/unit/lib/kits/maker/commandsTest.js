@@ -1,8 +1,9 @@
 /** @file Test maker command behavior for Circuit Playground and Micro:Bit*/
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import MicroBitBoard from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitBoard';
-import VirtualCPBoard from '@cdo/apps/lib/kits/maker/boards/VirtualCPBoard';
+import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
+import MicroBitBoard from '@cdo/apps/maker/boards/microBit/MicroBitBoard';
+import VirtualCPBoard from '@cdo/apps/maker/boards/VirtualCPBoard';
 import {
   analogRead,
   analogWrite,
@@ -14,9 +15,8 @@ import {
   injectBoardController,
   onBoardEvent,
   pinMode,
-} from '@cdo/apps/lib/kits/maker/commands';
-import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
-import {injectErrorHandler} from '@cdo/apps/lib/util/javascriptMode';
+} from '@cdo/apps/maker/commands';
+import {MBFirmataClientStub} from '@cdo/apps/maker/util/makeStubBoard';
 
 import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 

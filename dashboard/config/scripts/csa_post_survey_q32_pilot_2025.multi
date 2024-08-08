@@ -1,0 +1,9 @@
+name 'CSA Post-Survey q32_pilot-2025'
+question 'How challenging are the lessons and topics in this course for you? I think this course is…'
+
+right 'way too easy.'
+right 'a little too easy.'
+right 'just about right.'
+right 'a little too difficult.'
+right 'way too difficult.'
+allow_multiple_attempts true

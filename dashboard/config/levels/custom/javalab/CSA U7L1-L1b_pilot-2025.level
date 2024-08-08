@@ -1,0 +1,84 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T21:40:10.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Look at this project example. What are some of its characteristics and features?\r\n\r\n*While this is an example of a project for this unit, it is not representative of the only way you can approach or develop the project.*",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "theater",
+    "start_sources": {
+      "TheaterRunner.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\n\npublic class TheaterRunner {\n  public static void main(String[] args) {\n\n    MovingSoundCharacter[] characters = {\n        new MovingSoundCharacter(\"spongebobSound.wav\", \"frontSpongebob.png\", \"backSpongebob.png\"), \n        new MovingSoundCharacter(\"patrickSound.wav\", \"frontPatrick.png\", \"backPatrick.png\"),\n        new MovingSoundCharacter(\"sandySound.wav\", \"frontSandy.png\", \"backSandy.png\"),\n        new MovingSoundCharacter(\"garySound.wav\", \"frontGary.png\", \"backGary.png\"),\n        new MovingSoundCharacter(\"purpleSnailSound.wav\",\"purpleSnail.png\", \"purpleSnail.png\") };\n\n    Seat[] seats = { new Seat(80, -20, 260), new Seat(80, 67, 260), new Seat(85, 20, 250),\n                     new Seat(120, 337, 265), new Seat(100, 210, 250) };\n\n    SoundCharacter mrKrabs = new SoundCharacter(\"mrKrabsSound.wav\", \"MrKrabs.png\");\n    OpeningScene opening = new OpeningScene(mrKrabs, \"krustyKrabs.png\");\n    opening.createScene();\n    \n    SoundCharacter squidWard = new SoundCharacter(\"squidwardSound.wav\", \"squidWard1.png\");\n    KrustyKrabsScene mainScene = new KrustyKrabsScene(characters, seats, \"krustyKrabs.jpg\", squidWard);\n    mainScene.createScene();\n\n    Theater.playScenes(opening, mainScene);\n\n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "OpeningScene.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\n\npublic class OpeningScene extends Scene {\n\n  private SoundCharacter owner;\n  private String krustyKrabs;\n\n  public OpeningScene(SoundCharacter owner, String krustyKrabs) {\n    this.owner = owner;\n    this.krustyKrabs = krustyKrabs;\n  }\n\n  public void drawOneBubble(int numBubbles) {\n    if (numBubbles == 0) { \n      playSound(\"bubblesSound.wav\");\n      return;\n    }\n    \n    drawRandomBubble();\n    drawOneBubble(numBubbles - 1);\n  }\n\n  public void drawMrKrabs() {\n    drawOwner();\n    drawSpeech();\n    playSound(owner.getSoundFile()); \n  }\n\n  public void createScene() {\n    drawImage(krustyKrabs, 0, 0, 400);\n    drawMrKrabs();\n    drawOneBubble(25);\n    pause(2);\n  }\n\n  private void drawRandomBubble() {\n    int x = (int)(Math.random() * 400);    // x position\n    int y = (int)(Math.random() * 200);    // y position\n    int z = (int)(Math.random() * 60);     // size\n    \n    drawImage(\"1bubble.png\", x + 10, y - 20, z);\n  }\n\n  private void drawOwner() {\n    drawImage(owner.getImage(), 170, 245, 200);\n    pause(0.25);\n  }\n\n  private void drawSpeech() {\n    drawImage(\"screamSpeechBubble.png\", 80, 130, 270);\n    setTextHeight(8);\n    drawText(\"Hello! I like money\", 185, 250);\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      },
+      "KrustyKrabsScene.java": {
+        "text": "import org.code.theater.*;\nimport org.code.media.*;\nimport java.util.ArrayList;\n\npublic class KrustyKrabsScene extends Scene {\n\n  private MovingSoundCharacter[] characters;\n  private Seat[] seats;\n  private String theInside;\n  private SoundCharacter server;\n  private ArrayList<MovingSoundCharacter> seatedCharacters;\n\n  public KrustyKrabsScene(MovingSoundCharacter[] characters, Seat[] seats, String theInside, SoundCharacter server) {\n    this.characters = characters;\n    this.seats = seats;\n    this.theInside = theInside;\n    this.server = server;\n    \n    this.seatedCharacters = new ArrayList<MovingSoundCharacter>();\n  }\n  \n  public void createScene() {\n    for(int index = 0; index < characters.length; index++) {\n      MovingSoundCharacter currentCharacter = characters[index];\n      showCharacter(currentCharacter);\n      seatedCharacters.add(characters[index]);\n      pause(1);\n      drawBackground(); \n    }\n    \n    playSound(server.getSoundFile());\n  }\n  \n  public void drawSeatedCharacters() {\n    for (int index = 0; index < seatedCharacters.size(); index++) {\n      MovingSoundCharacter currentCharacter = seatedCharacters.get(index);\n      drawImage(currentCharacter.getImage(), seats[index].getSeatXPos(), seats[index].getSeatYPos(), seats[index].getImageSize());\n    }  \n  }\n  \n  public void drawBackground() {\n    clear(\"black\");\n    drawImage(theInside, -40, 0, 500);\n    drawImage(server.getImage(), 240, 202, 130);\n    drawSeatedCharacters();\n  }\n\n  private void showCharacter(MovingSoundCharacter currentCharacter) {\n    playSound(currentCharacter.getSoundFile());\n    \n    for (int x = 90; x < 230; x += 40) {\n        drawBackground();\n        drawImage(currentCharacter.getImage(true), x, 235, 80);   \n        pause(0.2);\n    }\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 2
+      },
+      "Character.java": {
+        "text": "public class Character {\n  private String image;\n\n  public Character(String image) {\n    this.image = image;\n  }\n  \n  public String getImage() {\n    return image;\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 3
+      },
+      "Seat.java": {
+        "text": "public class Seat {\n\n  private int imageSize;\n  private int seatXPos;\n  private int seatYPos;\n  \n  public Seat(int imageSize, int seatXPos, int seatYPos) {\n    this.imageSize = imageSize;\n    this.seatXPos = seatXPos;\n    this.seatYPos = seatYPos;\n  }\n  \n  public int getImageSize() {\n    return imageSize;\n  }\n  \n  public int getSeatXPos() {\n    return seatXPos;\n  }\n  \n  public int getSeatYPos() {\n    return seatYPos;\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 4
+      },
+      "SoundCharacter.java": {
+        "text": "public class SoundCharacter extends Character {\n  private String soundFile;\n\n  public SoundCharacter(String soundFile, String image) {\n    super(image);\n    this.soundFile = soundFile;\n  }\n  \n  public String getSoundFile() {\n    return soundFile;\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 5
+      },
+      "MovingSoundCharacter.java": {
+        "text": "public class MovingSoundCharacter extends SoundCharacter {\n  private String backImage;\n\n  public MovingSoundCharacter(String soundFile, String image, String backImage) {\n    super(soundFile, image);\n    this.backImage = backImage;\n  }\n  \n  public String getImage(boolean isBackImage) {\n    if (isBackImage) {\n      return backImage;\n    }\n    return getImage();\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 6
+      }
+    },
+    "display_name": "The Krusty Krab",
+    "bubble_choice_description": "An example project that creates an animation at the Krusty Krab.",
+    "thumbnail_url": "https://images.code.org/dac5606022b180b29f108cb59fbfa4eb-U7_project2.gif",
+    "starter_assets": {
+      "1bubble.png": "8cdbf0d3-9063-4fb7-ad24-bce8ac0af956.png",
+      "backGary.png": "3f3aa846-0551-46b7-94b0-0f913f228b1f.png",
+      "backPatrick.png": "91150155-8963-4cce-82b7-63f599784b6c.png",
+      "backSandy.png": "ecc8e0b7-6e99-4d1d-930b-0a64ae3c9a05.png",
+      "backSpongebob.png": "3dfbd3fb-0b54-46c4-a0cf-59377ed9a3d5.png",
+      "bubblesSound.wav": "9327c3a5-1287-4c3b-943a-812c6a6e1e9d.wav",
+      "frontGary.png": "64b75dd9-d499-4059-b54d-9645e14bf200.png",
+      "frontPatrick.png": "c6d69627-41a5-4e66-ba29-67f952f268bd.png",
+      "frontSandy.png": "737da0e6-fa29-4f5d-9b83-b178458ff703.png",
+      "frontSpongebob.png": "1faa3e2c-7e68-40bf-9b0a-be71c8fedc27.png",
+      "garySound.wav": "1cf78e7b-dddf-4486-822a-4ee0732cb7f5.wav",
+      "krustyKrabs.jpg": "aa0d3f34-28d1-4e13-a907-2f4b4becf3fe.jpg",
+      "krustyKrabs.png": "379027b8-5539-46bf-a920-cc4dd746b852.png",
+      "MrKrabs.png": "8087a637-6148-477a-a42b-242a4d110a0e.png",
+      "mrKrabsSound.wav": "c95dfd76-a0e4-4c41-998d-b900a95b6bc7.wav",
+      "patrickSound.wav": "3e0301a9-5260-494a-9bab-0525ca91e10a.wav",
+      "purpleSnail.png": "c5f90a78-bb2c-4fc7-918c-7c53647e80b7.png",
+      "purpleSnailSound.wav": "fa4fda4d-da4f-4659-b068-796b6761ac66.wav",
+      "sandySound.wav": "6c848642-03ea-4c3a-8370-68cb3cb52374.wav",
+      "screamSpeechBubble.png": "047e2dad-9bb1-4174-9658-0097365495e5.png",
+      "spongebobSound.wav": "8e0ff767-394b-415b-ae64-8b2d440b4c6d.wav",
+      "squidWard1.png": "f7556ebb-2ace-4977-b107-5df35d6817e3.png",
+      "squidwardSound.wav": "22a7dc8e-b2cc-4dcf-8507-db26ccd03908.wav"
+    },
+    "name_suffix": "_pilot-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T21:40:10.808+00:00\",\"changed\":[\"cloned from \\\"CSA U7L1-L1b_2025\\\"\"],\"cloned_from\":\"CSA U7L1-L1b_2025\"}]"
+}]]></config>
+</Javalab>
