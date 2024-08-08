@@ -10,11 +10,14 @@ import styles from './account-components.module.scss';
 const AccountBanner: React.FunctionComponent<{
   heading: string;
   desc: string;
-}> = ({heading, desc}) => (
+  showLogo: boolean;
+}> = ({heading, desc, showLogo}) => (
   <div className={styles.bannerContainer}>
-    <div className={styles.iconContainer}>
-      <img src={codeLogo} alt={i18n.codeLogo()} />
-    </div>
+    {showLogo && (
+      <div className={styles.iconContainer}>
+        <img src={codeLogo} alt={i18n.codeLogo()} />
+      </div>
+    )}
 
     <div className={styles.titleContainer}>
       <Heading1>{heading}</Heading1>

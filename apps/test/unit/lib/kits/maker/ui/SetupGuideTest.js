@@ -3,7 +3,7 @@ import {render, screen} from '@testing-library/react';
 import React from 'react';
 
 import applabI18n from '@cdo/applab/locale';
-import SetupGuide from '@cdo/apps/lib/kits/maker/ui/SetupGuide';
+import SetupGuide from '@cdo/apps/maker/ui/SetupGuide';
 
 describe('MakerSetupGuide', () => {
   describe('General description displayed correctly', () => {

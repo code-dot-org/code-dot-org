@@ -2,13 +2,13 @@
 import {EventEmitter} from 'events';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import CapacitiveTouchSensor from '@cdo/apps/lib/kits/maker/boards/microBit/CapacitiveTouchSensor';
+import CapacitiveTouchSensor from '@cdo/apps/maker/boards/microBit/CapacitiveTouchSensor';
 import {
   createMicroBitComponents,
   cleanupMicroBitComponents,
   enableMicroBitComponents,
-} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitComponents';
-import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
+} from '@cdo/apps/maker/boards/microBit/MicroBitComponents';
+import {MBFirmataClientStub} from '@cdo/apps/maker/util/makeStubBoard';
 
 import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 

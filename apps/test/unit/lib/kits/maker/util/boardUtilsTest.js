@@ -1,7 +1,7 @@
 import {
   detectBoardTypeFromPort,
   BOARD_TYPE,
-} from '@cdo/apps/lib/kits/maker/util/boardUtils';
+} from '@cdo/apps/maker/util/boardUtils';
 
 import {
   CIRCUIT_PLAYGROUND_EXPRESS_PORTS,

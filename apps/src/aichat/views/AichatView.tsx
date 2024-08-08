@@ -20,7 +20,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import aichatI18n from '../locale';
 import {
-  addNotification,
+  addChatEvent,
   clearChatMessages,
   onSaveComplete,
   onSaveFail,
@@ -46,6 +46,7 @@ const getResetModelNotification = (): Notification => ({
   text: 'Model customizations and model card information have been reset to default settings.',
   notificationType: 'success',
   timestamp: Date.now(),
+  includeInChatHistory: true,
 });
 
 const AichatView: React.FunctionComponent = () => {
@@ -103,6 +104,13 @@ const AichatView: React.FunctionComponent = () => {
       setStartingAiCustomizations({
         levelAichatSettings,
         studentAiCustomizations,
+      })
+    );
+    dispatch(
+      addChatEvent({
+        timestamp: Date.now(),
+        descriptionKey: 'LOAD_LEVEL',
+        hideForParticipants: true,
       })
     );
   }, [dispatch, initialSources, levelAichatSettings]);
@@ -163,7 +171,7 @@ const AichatView: React.FunctionComponent = () => {
     // Save the customizations to the user's project.
     dispatch(updateAiCustomization());
     dispatch(clearChatMessages());
-    dispatch(addNotification(getResetModelNotification()));
+    dispatch(addChatEvent(getResetModelNotification()));
   }, [dispatch, levelAichatSettings]);
 
   const dialogControl = useDialogControl();
@@ -179,6 +187,13 @@ const AichatView: React.FunctionComponent = () => {
 
   const onClear = useCallback(() => {
     dispatch(clearChatMessages());
+    dispatch(
+      addChatEvent({
+        timestamp: Date.now(),
+        descriptionKey: 'CLEAR_CHAT',
+        hideForParticipants: true,
+      })
+    );
     analyticsReporter.sendEvent(
       EVENTS.CHAT_ACTION,
       {

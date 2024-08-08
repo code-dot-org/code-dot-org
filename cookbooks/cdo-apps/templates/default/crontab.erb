@@ -58,7 +58,6 @@
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'import_google_sheets')
       cronjob at:'* * * * *', do:deploy_dir('bin', 'cron', 'sync_dropbox')
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'check_invalid_staging_filenames')
-      cronjob at:'*/2 * * * *', do:deploy_dir('bin', 'cron', 'run_server_generate_pdfs')
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','run_server_generate_curriculum_pdfs')
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','collate_pdfs')
       cronjob at:'0 14,15 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
@@ -132,7 +131,6 @@
 
     # 'daemons' in all environments.
     cronjob at:'*/1 * * * *', do:deploy_dir('aws', 'ci_build'), notify: 'dev+build@code.org'
-    cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'mysql-metrics')
     cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'report_activejob_metrics')
 
     # background tasks that adhoc instances don't need to run.

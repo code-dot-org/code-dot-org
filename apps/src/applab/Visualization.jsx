@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 
 import project from '../code-studio/initApp/project';
 import commonStyles from '../commonStyles';
-import MakerStatusOverlay from '../lib/kits/maker/ui/MakerStatusOverlay';
+import MakerStatusOverlay from '../maker/ui/MakerStatusOverlay';
 import {singleton as studioApp} from '../StudioApp';
 import {
   VISUALIZATION_DIV_ID,
