@@ -22,9 +22,8 @@ import TeacherNavigationBar from '../teacherNavigation/TeacherNavigationBar';
 import EmptySection from './EmptySection';
 import StatsTableWithData from './StatsTableWithData';
 import TeacherDashboardHeader from './TeacherDashboardHeader';
-import TeacherDashboardNavigation, {
-  TeacherDashboardPath,
-} from './TeacherDashboardNavigation';
+import TeacherDashboardNavigation from './TeacherDashboardNavigation';
+import {TEACHER_DASHBOARD_PATHS} from './teacherNavigation/TeacherDashboardPaths';
 
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
@@ -94,23 +93,23 @@ function TeacherDashboard({
     );
   }, []);
 
-  // Select a default tab if current path doesn't match one of the paths in our TeacherDashboardPath type.
-  const emptyOrInvalidPath = !Object.values(TeacherDashboardPath).includes(
+  // Select a default tab if current path doesn't match one of the paths in our TEACHER_DASHBOARD_PATHS type.
+  const emptyOrInvalidPath = !Object.values(TEACHER_DASHBOARD_PATHS).includes(
     location.pathname
   );
   if (emptyOrInvalidPath && studentCount === 0) {
     // Default to the Manage Students tab if section has 0 students.
-    location.pathname = TeacherDashboardPath.manageStudents;
+    location.pathname = TEACHER_DASHBOARD_PATHS.manageStudents;
   } else if (emptyOrInvalidPath) {
     // Default to the Progress tab if section otherwise.
-    location.pathname = TeacherDashboardPath.progress;
+    location.pathname = TEACHER_DASHBOARD_PATHS.progress;
   }
 
   // Include header components unless we are on the /login_info or /standards_report page.
   const includeHeader =
-    location.pathname !== TeacherDashboardPath.loginInfo &&
-    location.pathname !== TeacherDashboardPath.standardsReport &&
-    location.pathname !== TeacherDashboardPath.navTestV2;
+    location.pathname !== TEACHER_DASHBOARD_PATHS.loginInfo &&
+    location.pathname !== TEACHER_DASHBOARD_PATHS.standardsReport &&
+    location.pathname !== TEACHER_DASHBOARD_PATHS.navTestV2;
 
   return (
     <div>
@@ -126,13 +125,13 @@ function TeacherDashboard({
       )}
       <Routes>
         <Route
-          path={TeacherDashboardPath.manageStudents}
+          path={TEACHER_DASHBOARD_PATHS.manageStudents}
           element={applyV1TeacherDashboardWidth(
             <ManageStudents studioUrlPrefix={studioUrlPrefix} />
           )}
         />
         <Route
-          path={TeacherDashboardPath.loginInfo}
+          path={TEACHER_DASHBOARD_PATHS.loginInfo}
           element={applyV1TeacherDashboardWidth(
             <SectionLoginInfo
               studioUrlPrefix={studioUrlPrefix}
@@ -141,7 +140,7 @@ function TeacherDashboard({
           )}
         />
         <Route
-          path={TeacherDashboardPath.standardsReport}
+          path={TEACHER_DASHBOARD_PATHS.standardsReport}
           element={applyV1TeacherDashboardWidth(<StandardsReport />)}
         />
         {studentCount === 0 && (
@@ -152,13 +151,13 @@ function TeacherDashboard({
           />
         )}
         <Route
-          path={TeacherDashboardPath.projects}
+          path={TEACHER_DASHBOARD_PATHS.projects}
           element={applyV1TeacherDashboardWidth(
             <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
           )}
         />
         <Route
-          path={TeacherDashboardPath.stats}
+          path={TEACHER_DASHBOARD_PATHS.stats}
           element={applyV1TeacherDashboardWidth(<StatsTableWithData />)}
         />
         {!anyStudentHasProgress && (
@@ -169,22 +168,22 @@ function TeacherDashboard({
           />
         )}
         <Route
-          path={TeacherDashboardPath.progress}
+          path={TEACHER_DASHBOARD_PATHS.progress}
           element={<SectionProgressSelector />}
         />
         <Route
-          path={TeacherDashboardPath.textResponses}
+          path={TEACHER_DASHBOARD_PATHS.textResponses}
           element={applyV1TeacherDashboardWidth(<TextResponses />)}
         />
         <Route
-          path={TeacherDashboardPath.assessments}
+          path={TEACHER_DASHBOARD_PATHS.assessments}
           element={applyV1TeacherDashboardWidth(
             <SectionAssessments sectionName={sectionName} />
           )}
         />
         {teacherNavV2Enabled && (
           <Route
-            path={TeacherDashboardPath.navTestV2}
+            path={TEACHER_DASHBOARD_PATHS.navTestV2}
             element={
               <div className={dashboardStyles.pageContainer}>
                 <TeacherNavigationBar />
@@ -197,7 +196,7 @@ function TeacherDashboard({
         )}
         {showAITutorTab && (
           <Route
-            path={TeacherDashboardPath.aiTutorChatMessages}
+            path={TEACHER_DASHBOARD_PATHS.aiTutorChatMessages}
             element={applyV1TeacherDashboardWidth(
               <TutorTab sectionId={sectionId} />
             )}
