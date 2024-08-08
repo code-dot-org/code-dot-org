@@ -3,9 +3,12 @@ import React from 'react';
 import {Provider} from 'react-redux';
 
 import * as assets from '@cdo/apps/code-studio/assets';
+import {
+  renderMakerButton,
+  SettingsCog,
+} from '@cdo/apps/code-studio/components/SettingsCog';
 import JavalabDropdown from '@cdo/apps/javalab/components/JavalabDropdown';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import {renderMakerButton, SettingsCog} from '@cdo/apps/lib/ui/SettingsCog';
 import * as makerRedux from '@cdo/apps/maker/redux';
 import {
   getStore,
