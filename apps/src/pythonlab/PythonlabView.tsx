@@ -100,12 +100,12 @@ const PythonlabView: React.FunctionComponent = () => {
   const predictResponse = useAppSelector(state => state.predictLevel.response);
   const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
 
-  const onRun = (
+  const onRun = async (
     runTests: boolean,
     dispatch: AppDispatch,
     source: MultiFileSource | undefined
   ) => {
-    handleRunClick(runTests, dispatch, source);
+    await handleRunClick(runTests, dispatch, source);
     // Only send a predict level report if this is a predict level and the predict
     // answer was not locked.
     if (isPredictLevel && !predictAnswerLocked) {

@@ -8,7 +8,7 @@ import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 import {asyncRun, stopAndRestartPyodideWorker} from './pyodideWorkerManager';
 import {runStudentTests, runValidationTests} from './pythonHelpers/scripts';
 
-export function handleRunClick(
+export async function handleRunClick(
   runTests: boolean,
   dispatch: Dispatch<AnyAction>,
   source: MultiFileSource | undefined
@@ -27,7 +27,7 @@ export function handleRunClick(
       return;
     }
     dispatch(appendSystemMessage('Running program...'));
-    runPythonCode(code, source);
+    await runPythonCode(code, source);
   }
 }
 

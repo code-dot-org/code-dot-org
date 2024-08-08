@@ -91,7 +91,7 @@ const ControlButtons: React.FunctionComponent = () => {
   const handleRun = (runTests: boolean) => {
     if (onRun) {
       setIsRunning(true);
-      onRun(runTests, dispatch, source);
+      onRun(runTests, dispatch, source).then(() => setIsRunning(false));
       setHasRun(true);
     } else {
       dispatch(appendSystemMessage("We don't know how to run your code."));
@@ -139,16 +139,17 @@ const ControlButtons: React.FunctionComponent = () => {
           onClick={handleStop}
           color={'destructive'}
           iconLeft={{iconStyle: 'solid', iconName: 'square'}}
+          className={moduleStyles.centerButton}
           size={'s'}
         />
       ) : (
-        <>
+        <span className={moduleStyles.centerButton}>
           <Button
             text={'Run'}
             onClick={() => handleRun(false)}
             disabled={disableRunAndTest}
             iconLeft={{iconStyle: 'solid', iconName: 'play'}}
-            className={moduleStyles.firstControlButton}
+            className={moduleStyles.runButton}
             size={'s'}
             color={'white'}
           />
@@ -160,7 +161,7 @@ const ControlButtons: React.FunctionComponent = () => {
             color={'black'}
             size={'s'}
           />
-        </>
+        </span>
       )}
       <Button
         text={navigationText}
