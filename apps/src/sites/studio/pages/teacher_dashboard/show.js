@@ -127,7 +127,6 @@ $(document).ready(function () {
       </Routes>
     </Router>
   );
-  console.log('lfm', SECTION_NAVIGATION_BARE_URL);
 
   ReactDOM.render(
     <Provider store={store}>
