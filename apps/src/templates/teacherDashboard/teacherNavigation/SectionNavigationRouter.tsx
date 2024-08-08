@@ -17,6 +17,7 @@ import SectionProjectsListWithData from '../../projects/SectionProjectsListWithD
 import SectionAssessments from '../../sectionAssessments/SectionAssessments';
 import StandardsReport from '../../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../../sectionProgressV2/SectionProgressSelector';
+import TeacherNavigationBar from '../../teacherNavigation/TeacherNavigationBar';
 import TextResponses from '../../textResponses/TextResponses';
 import EmptySection from '../EmptySection';
 import SectionLoginInfo from '../SectionLoginInfo';
@@ -80,9 +81,11 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
       <Route
         path={`${SECTION_ID_PATH_PART}/`}
         element={
-          <div>
-            <h1>Main container with sidebar</h1>
-            <Outlet />
+          <div className={dashboardStyles.pageContainer}>
+            <TeacherNavigationBar />
+            <div className={dashboardStyles.content}>
+              <Outlet />
+            </div>
           </div>
         }
       >
