@@ -40,6 +40,19 @@ section.donate-options {
         display: none !important;
       }
     }
+
+    @media (max-width: $width-sm) {
+      &.show-tablet-and-mobile > .classy {
+        figure {
+          padding: 0;
+          background: none;
+        }
+
+        .classy-inline-embed {
+          width: 100%;
+        }
+      }
+    }
   }
 }
 

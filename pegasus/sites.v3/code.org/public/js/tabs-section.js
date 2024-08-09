@@ -39,9 +39,6 @@ jQuery(document).ready(function ($) {
       $showTabletAndMobile.add();
     }
   };
-  $(window).resize(function () {
-    hideResponsiveTabs();
-  });
   //Fire it when the page first loads:
   hideResponsiveTabs();
 });
