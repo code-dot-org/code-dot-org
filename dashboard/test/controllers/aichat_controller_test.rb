@@ -33,7 +33,7 @@ class AichatControllerTest < ActionController::TestCase
     @missing_stored_messages_params = @common_params.except(:storedMessages)
     @valid_params_student_chat_history = {
       studentUserId: @genai_pilot_student.id,
-      currentLevelId: @level.id,
+      levelId: @level.id,
       scriptId: @script.id,
     }
   end

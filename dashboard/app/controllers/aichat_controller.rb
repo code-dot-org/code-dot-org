@@ -63,12 +63,12 @@ class AichatController < ApplicationController
     render(status: :ok, json: response_body)
   end
 
-  # params are studentUserId: number, currentLevelId: number, scriptId: number, (optional) scriptLevelId: number
+  # params are studentUserId: number, levelId: number, scriptId: number, (optional) scriptLevelId: number
   # GET /aichat/student_chat_history
   def student_chat_history
     # Request all chat events for a student at a given level/script.
     begin
-      params.require([:studentUserId, :currentLevelId, :scriptId])
+      params.require([:studentUserId, :levelId, :scriptId])
     rescue ActionController::ParameterMissing
       return render status: :bad_request, json: {}
     end
@@ -76,7 +76,7 @@ class AichatController < ApplicationController
     # If a script level ID is provided, ensure it matches the level ID or that
     # the level is a sublevel of the script level.
     script_id = params[:scriptId]
-    level_id = params[:currentLevelId]
+    level_id = params[:levelId]
     level = Level.find(level_id)
     script_level_id = params[:scriptLevelId]
     if script_level_id
@@ -95,12 +95,7 @@ class AichatController < ApplicationController
       return render(status: :forbidden, json: {error: "Access denied for student chat history."})
     end
 
-    aichat_event_rows = AichatEvent.where(user_id: student_user_id, level_id: level_id, script_id: script_id).order(created_at: :desc)
-    aichat_events = aichat_event_rows.map do |aichat_event_row|
-      {
-        chatEvent: aichat_event_row.aichat_event,
-      }
-    end
+    aichat_events = AichatEvent.where(user_id: student_user_id, level_id: level_id, script_id: script_id).order(created_at: :desc).pluck(:aichat_event)
     render json: aichat_events
   end
 
