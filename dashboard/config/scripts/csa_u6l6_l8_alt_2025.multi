@@ -1,0 +1,38 @@
+name 'CSA U6L6-L8_alt-2025'
+title 'Check for Understanding'
+
+right '`mystery("noon");`'
+wrong '`mystery("on");`'
+wrong '`mystery("nnoo");`'
+wrong '`mystery("nono");`'
+wrong '`mystery("no");`'
+
+allow_multiple_attempts true
+
+markdown <<MARKDOWN
+Consider the following method.
+
+```
+public static boolean mystery(String str) {
+   String temp = "";
+
+   for (int i = str.length(); i > 0; i--) {
+      temp = temp + str.substring(i - 1, i);
+   }
+
+   return temp.equals(str);
+}
+```
+
+Which of the following calls to `mystery` will return `true`?
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+The `mystery()` method takes a `String` parameter `str` and returns a `boolean` value indicating whether or not the `String` is a palindrome.
+
+In the method, a new `String` variable `temp` is initialized to an empty `String`. Then, the method uses a `for` loop to iterate over the characters in `str` in reverse order. In each iteration of the loop, the method appends the current character to the end of `temp` using the `substring()` method.
+
+Finally, the method checks if the resulting `temp` is equal to the original `str` using the `equals()` method. If the two `String`s are equal, the method returns `true`. Otherwise, it returns `false`.
+
+In option A, the input string `"noon"` is a palindrome, because it is the same forwards and backwards. When the `mystery()` method is called with this input, it will correctly reverse the `String` and return `true`, because `temp` and `str` are equal. In the other options, the input `String`s are not palindromes and therefore the `mystery()` method will return `false`.
+MARKDOWN
