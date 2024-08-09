@@ -8,7 +8,6 @@ import {
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import {formatQuestionForAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
-import {ChatContext} from '@cdo/apps/aiTutor/types';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 
@@ -21,9 +20,11 @@ import styles from './ai-tutor-tester.module.scss';
  * student inputs and get back AI Tutor responses in bulk.
  */
 
-interface AIInteraction extends ChatContext {
+interface AIInteraction {
+  studentInput: string;
   systemPrompt?: string | undefined;
   levelId?: number | undefined;
+  temperature?: number | undefined;
   aiResponse: string | undefined;
 }
 
@@ -37,6 +38,44 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
   const [selectedEndpoint, setSelectedEndpoint] = useState<string>('ai-tutor');
   const [responseCount, setResponseCount] = useState<number>(0);
   const [responsesPending, setResponsesPending] = useState<boolean>(false);
+
+  const endpoints = [
+    {
+      id: 'ai-tutor',
+      name: 'AI Tutor + Webpurify',
+    },
+    {
+      id: 'llm-guard',
+      name: 'LLM Guard',
+    },
+  ];
+
+  const genAIEndpoints = [
+    {
+      id: 'gen-ai-mistral-7b-inst-v01',
+      name: 'Mistral Base + Webpurify',
+    },
+    {
+      id: 'gen-ai-arithmo2-mistral-7b',
+      name: 'Mistral Arithmo + Webpurify',
+    },
+    {
+      id: 'gen-ai-biomistral-7b',
+      name: 'Mistral Biomistral + Webpurify',
+    },
+    {
+      id: 'gen-ai-karen-creative-mistral-7b',
+      name: 'Mistral Karen + Webpurify',
+    },
+    {
+      id: 'gen-ai-mistral-pirate-7b',
+      name: 'Mistral Pirate + Webpurify',
+    },
+  ];
+
+  const genAIEndpointIds = genAIEndpoints.map(endpoint => endpoint.id);
+
+  const availableEndpoints = endpoints.concat(genAIEndpoints);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files ? event.target.files[0] : null;
@@ -67,7 +106,7 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
     for (let i = 0; i < data.length; i++) {
       if (selectedEndpoint === 'llm-guard') {
         getLLMGuardToxicity(data[i]);
-      } else if (selectedEndpoint === 'gen-ai-mistral-7b-inst-v01') {
+      } else if (genAIEndpointIds.includes(selectedEndpoint)) {
         getGenAIResponses(data[i]);
       } else {
         askAITutor(data[i]);
@@ -86,7 +125,7 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
     // Dummy data to appease the model card info type requirements in the real tool.
     const modelCardInfo = {
       botName: 'Mistral',
-      description: 'Mistral Base Model',
+      description: 'Mistral Model',
       intendedUse: 'General AI',
       limitationsAndWarnings: 'None',
       testingAndEvaluation: 'None',
@@ -94,7 +133,7 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
       isPublished: false,
     };
     const aiCustomizations = {
-      selectedModelId: 'gen-ai-mistral-7b-inst-v01',
+      selectedModelId: selectedEndpoint,
       temperature: 0.8,
       systemPrompt: systemPrompt,
       retrievalContexts: [],
@@ -158,21 +197,6 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
       setResponsesPending(false);
     }
   }, [aiResponded]);
-
-  const availableEndpoints = [
-    {
-      id: 'ai-tutor',
-      name: 'AI Tutor + Webpurify',
-    },
-    {
-      id: 'llm-guard',
-      name: 'LLM Guard',
-    },
-    {
-      id: 'gen-ai-mistral-7b-inst-v01',
-      name: 'Mistral Base + Webpurify',
-    },
-  ];
 
   return (
     <div>
