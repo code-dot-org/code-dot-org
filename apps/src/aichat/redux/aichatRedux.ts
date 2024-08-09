@@ -8,6 +8,10 @@ import {
 } from '@reduxjs/toolkit';
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {
+  getCurrentScriptLevelId,
+  getCurrentLevel,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -17,7 +21,7 @@ import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-import {postAichatCompletionMessage} from '../aichatApi';
+import {postAichatCompletionMessage, getStudentChatHistory} from '../aichatApi';
 import ChatEventLogger from '../chatEventLogger';
 import {saveTypeToAnalyticsEvent} from '../constants';
 import {
@@ -440,6 +444,46 @@ export const submitChatContents = createAsyncThunk(
     chatApiResponse.messages.forEach(message => {
       dispatch(addChatEvent({...message, timestamp: Date.now()}));
     });
+  }
+);
+
+// This thunk's callback function submits a teacher's student's id along with the level/script id
+// (and the scriptLevelId if the level is a sublevel) to the student chat history endpoint,
+// waits for a response, and then returns the student's chat events for that level/script.
+export const fetchStudentChatHistory = createAsyncThunk(
+  'aichat/fetchStudentChatHistory',
+  async (studentUserId: number, thunkAPI) => {
+    const state = thunkAPI.getState() as RootState;
+    // Post teacher's student's user id to backend and retrieve student's chat history.
+    let studentChatHistoryApiResponse;
+    const currentLevel = getCurrentLevel(state);
+    // The scriptLevelId is sent to the backend if the current level is a sublevel so that we can
+    // correctly check if the teacher has permission to view the student's chat history.
+    const scriptLevelId = currentLevel.parentLevelId
+      ? getCurrentScriptLevelId(state)
+      : undefined;
+    try {
+      studentChatHistoryApiResponse = await getStudentChatHistory(
+        studentUserId,
+        parseInt(state.progress.currentLevelId || ''),
+        state.progress.scriptId,
+        scriptLevelId
+      );
+    } catch (error) {
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError(
+          'Error in aichat student chat history request',
+          error as Error
+        );
+      return;
+    }
+    const chatHistory: ChatEvent[] = studentChatHistoryApiResponse.map(
+      (event: string) => {
+        return JSON.parse(event);
+      }
+    );
+    thunkAPI.dispatch(setStudentChatHistory(chatHistory));
   }
 );
 
