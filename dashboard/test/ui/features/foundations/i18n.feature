@@ -26,27 +26,25 @@ Scenario: Minecraft:Agent tutorial in Spanish
   And element ".csf-top-instructions p" has "es-MX" text from key "data.short_instructions.MC_HOC_2017_01_RETRY"
 
 Scenario: Toolbox Categories in Spanish
-  Given I am on "http://studio.code.org/s/allthethings/lessons/3/levels/7/lang/es-MX"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/45/levels/4/lang/es-MX"
   And I wait for the lab page to fully load
-  Then element ".blocklyTreeRoot #\\\:1" has "es-MX" text from key "data.block_categories.Actions"
-  Then element ".blocklyTreeRoot #\\\:2" has "es-MX" text from key "data.block_categories.Color"
-  Then element ".blocklyTreeRoot #\\\:3" has "es-MX" text from key "data.block_categories.Category"
-  Then element ".blocklyTreeRoot #\\\:4" has "es-MX" text from key "data.block_categories.Functions"
-  Then element ".blocklyTreeRoot #\\\:5" has "es-MX" text from key "data.block_categories.Prebuilt"
-  Then element ".blocklyTreeRoot #\\\:6" has "es-MX" text from key "data.block_categories.Loops"
-  Then element ".blocklyTreeRoot #\\\:7" has "es-MX" text from key "data.block_categories.Logic"
-  Then element ".blocklyTreeRoot #\\\:8" has "es-MX" text from key "data.block_categories.Math"
-  Then element ".blocklyTreeRoot #\\\:9" has "es-MX" text from key "data.block_categories.Text"
+  Then element "#blockly-0" has "es-MX" text from key "data.block_categories.Events"
+  Then element "#blockly-1" has "es-MX" text from key "data.block_categories.Text"
+  Then element "#blockly-2" has "es-MX" text from key "data.block_categories.Variables"
+  Then element "#blockly-3" has "es-MX" text from key "data.block_categories.Effects"
+  Then element "#blockly-4" has "es-MX" text from key "data.block_categories.Sprites"
+  Then element "#blockly-5" has "es-MX" text from key "data.block_categories.Functions"
+  Then element "#blockly-6" has "es-MX" text from key "data.block_categories.Variables"
 
 Scenario: Translated function names in Spanish
-  Given I am on "http://studio.code.org/s/allthethings/lessons/3/levels/3/lang/es-MX"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/4/levels/6/lang/es-MX"
   And I wait for the lab page to fully load
   # Toolbox call block is translated
-  Then element "[block-id=6] .blocklyText" has "es-MX" text from key "data.function_definitions.2-3 Artist Functions 4.draw a square.name"
+  Then element "[data-id='toolboxCallBlock'] .blocklyText" has "es-MX" text from key "data.function_definitions.2-3 Bee Functions 2.get 5.name"
   # Workspace call block is translated
-  And element "[block-id=28] .blocklyText" has "es-MX" text from key "data.function_definitions.2-3 Artist Functions 4.draw a square.name"
+  And element "[data-id='workspaceCallBlock'] .blocklyText" has "es-MX" text from key "data.function_definitions.2-3 Bee Functions 2.get 5.name"
   # Workspace definition block is translated
-  And element "[block-id=29] > .blocklyNonEditableText > .blocklyText" has "es-MX" text from key "data.function_definitions.2-3 Artist Functions 4.draw a square.name"
+  And element "[data-id='definitionBlock'] > .blocklyNonEditableText > .blocklyText" has "es-MX" text from key "data.function_definitions.2-3 Bee Functions 2.get 5.name"
 
 Scenario: HoC tutorial in Portuguese
   Given I am on "http://studio.code.org/hoc/15/lang/pt-br"
@@ -74,27 +72,25 @@ Scenario: Minecraft:Agent tutorial in Portuguese
   And element ".csf-top-instructions p" has "pt-BR" text from key "data.short_instructions.MC_HOC_2017_01_RETRY"
 
 Scenario: Toolbox Categories in Portuguese
-  Given I am on "http://studio.code.org/s/allthethings/lessons/3/levels/7/lang/pt-br"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/45/levels/4/lang/pt-br"
   And I wait for the lab page to fully load
-  Then element ".blocklyTreeRoot #\\:1" has "pt-BR" text from key "data.block_categories.Actions"
-  Then element ".blocklyTreeRoot #\\:2" has "pt-BR" text from key "data.block_categories.Color"
-  Then element ".blocklyTreeRoot #\\:3" has "pt-BR" text from key "data.block_categories.Category"
-  Then element ".blocklyTreeRoot #\\:4" has "pt-BR" text from key "data.block_categories.Functions"
-  Then element ".blocklyTreeRoot #\\:5" has "pt-BR" text from key "data.block_categories.Prebuilt"
-  Then element ".blocklyTreeRoot #\\:6" has "pt-BR" text from key "data.block_categories.Loops"
-  Then element ".blocklyTreeRoot #\\:7" has "pt-BR" text from key "data.block_categories.Logic"
-  Then element ".blocklyTreeRoot #\\:8" has "pt-BR" text from key "data.block_categories.Math"
-  Then element ".blocklyTreeRoot #\\:9" has "pt-BR" text from key "data.block_categories.Text"
+  Then element "#blockly-0" has "pt-BR" text from key "data.block_categories.Events"
+  Then element "#blockly-1" has "pt-BR" text from key "data.block_categories.Text"
+  Then element "#blockly-2" has "pt-BR" text from key "data.block_categories.Variables"
+  Then element "#blockly-3" has "pt-BR" text from key "data.block_categories.Effects"
+  Then element "#blockly-4" has "pt-BR" text from key "data.block_categories.Sprites"
+  Then element "#blockly-5" has "pt-BR" text from key "data.block_categories.Functions"
+  Then element "#blockly-6" has "pt-BR" text from key "data.block_categories.Variables"
 
 Scenario: Translated function names in Portuguese
-  Given I am on "http://studio.code.org/s/allthethings/lessons/3/levels/3/lang/pt-BR"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/4/levels/6/lang/pt-BR"
   And I wait for the lab page to fully load
   # Toolbox call block is translated
-  Then element "[block-id=6] .blocklyText" has "pt-BR" text from key "data.function_definitions.2-3 Artist Functions 4.draw a square.name"
+  Then element "[data-id='toolboxCallBlock'] .blocklyText" has "pt-BR" text from key "data.function_definitions.2-3 Bee Functions 2.get 5.name"
   # Workspace call block is translated
-  And element "[block-id=28] .blocklyText" has "pt-BR" text from key "data.function_definitions.2-3 Artist Functions 4.draw a square.name"
+  And element "[data-id='workspaceCallBlock'] .blocklyText" has "pt-BR" text from key "data.function_definitions.2-3 Bee Functions 2.get 5.name"
   # Workspace definition block is translated
-  And element "[block-id=29] > .blocklyNonEditableText > .blocklyText" has "pt-BR" text from key "data.function_definitions.2-3 Artist Functions 4.draw a square.name"
+  And element "[data-id='definitionBlock'] > .blocklyNonEditableText > .blocklyText" has "pt-BR" text from key "data.function_definitions.2-3 Bee Functions 2.get 5.name"
 
 Scenario: HoC tutorial in Arabic (RTL)
   Given I am on "http://studio.code.org/hoc/15/lang/ar-sa"
@@ -121,27 +117,25 @@ Scenario: Minecraft:Agent tutorial in Arabic (RTL)
   Then element ".csf-top-instructions p" has "ar-SA" text from key "data.short_instructions.MC_HOC_2017_01_RETRY"
 
 Scenario: Translated function names in Arabic
-  Given I am on "http://studio.code.org/s/allthethings/lessons/3/levels/3/lang/ar-SA"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/4/levels/6/lang/ar-SA"
   And I wait for the lab page to fully load
   # Toolbox call block is translated
-  Then element "[block-id=6] .blocklyText" has "ar-SA" text from key "data.function_definitions.2-3 Artist Functions 4.draw a square.name"
+  Then element "[data-id='toolboxCallBlock'] .blocklyText" has "ar-SA" text from key "data.function_definitions.2-3 Bee Functions 2.get 5.name"
   # Workspace call block is translated
-  And element "[block-id=28] .blocklyText" has "ar-SA" text from key "data.function_definitions.2-3 Artist Functions 4.draw a square.name"
+  And element "[data-id='workspaceCallBlock'] .blocklyText" has "ar-SA" text from key "data.function_definitions.2-3 Bee Functions 2.get 5.name"
   # Workspace definition block is translated
-  And element "[block-id=29] > .blocklyNonEditableText > .blocklyText" has "ar-SA" text from key "data.function_definitions.2-3 Artist Functions 4.draw a square.name"
+  And element "[data-id='definitionBlock'] > .blocklyNonEditableText > .blocklyText" has "ar-SA" text from key "data.function_definitions.2-3 Bee Functions 2.get 5.name"
 
 Scenario: Toolbox Categories in Arabic (RTL)
-  Given I am on "http://studio.code.org/s/allthethings/lessons/3/levels/7/lang/ar-sa"
+  Given I am on "http://studio.code.org/s/allthethings/lessons/45/levels/4/lang/ar-sa"
   And I wait for the lab page to fully load
-  Then element ".blocklyTreeRoot #\\:1" has "ar-SA" text from key "data.block_categories.Actions"
-  Then element ".blocklyTreeRoot #\\:2" has "ar-SA" text from key "data.block_categories.Color"
-  Then element ".blocklyTreeRoot #\\:3" has "ar-SA" text from key "data.block_categories.Category"
-  Then element ".blocklyTreeRoot #\\:4" has "ar-SA" text from key "data.block_categories.Functions"
-  Then element ".blocklyTreeRoot #\\:5" has "ar-SA" text from key "data.block_categories.Prebuilt"
-  Then element ".blocklyTreeRoot #\\:6" has "ar-SA" text from key "data.block_categories.Loops"
-  Then element ".blocklyTreeRoot #\\:7" has "ar-SA" text from key "data.block_categories.Logic"
-  Then element ".blocklyTreeRoot #\\:8" has "ar-SA" text from key "data.block_categories.Math"
-  Then element ".blocklyTreeRoot #\\:9" has "ar-SA" text from key "data.block_categories.Text"
+  Then element "#blockly-0" has "ar-SA" text from key "data.block_categories.Events"
+  Then element "#blockly-1" has "ar-SA" text from key "data.block_categories.Text"
+  Then element "#blockly-2" has "ar-SA" text from key "data.block_categories.Variables"
+  Then element "#blockly-3" has "ar-SA" text from key "data.block_categories.Effects"
+  Then element "#blockly-4" has "ar-SA" text from key "data.block_categories.Sprites"
+  Then element "#blockly-5" has "ar-SA" text from key "data.block_categories.Functions"
+  Then element "#blockly-6" has "ar-SA" text from key "data.block_categories.Variables"
 
 Scenario: Pixelation Widget long and short instructions in Spanish
   Given I am on "http://studio.code.org/s/allthethings/lessons/17/levels/2/lang/es-MX"
