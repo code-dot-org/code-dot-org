@@ -9,7 +9,7 @@ import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-const NO_FEEDBACK = {
+const DEFAULT_FEEDBACK = {
   id: 1,
   seen_on_feedback_page_at: null,
   student_first_visited_at: null,
@@ -22,7 +22,7 @@ const NO_FEEDBACK = {
 
 const setUp = overrideFeedback => {
   const props = {
-    feedback: {...NO_FEEDBACK, ...overrideFeedback},
+    feedback: {...DEFAULT_FEEDBACK, ...overrideFeedback},
   };
   return mount(<LevelFeedbackEntry {...props} />);
 };
