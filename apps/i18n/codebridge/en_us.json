@@ -17,5 +17,6 @@
   "newFolderPrompt": "Please name your new folder",
   "noFileExtensionError": "Please include a file extension",
   "renameFile": "Rename file",
-  "renameFolder": "Rename folder"
+  "renameFolder": "Rename folder",
+  "systemCodeError": "We're sorry, we hit an issue running your program. Please refresh the page and try again."
 }

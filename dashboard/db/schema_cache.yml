@@ -372,6 +372,54 @@ columns:
     comment:
   - *14
   - *15
+  aichat_requests:
+  - *10
+  - *11
+  - *12
+  - *17
+  - *18
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: model_customizations
+    sql_type_metadata: *19
+    'null': false
+    default:
+    default_function:
+    collation:
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: stored_messages
+    sql_type_metadata: *19
+    'null': false
+    default:
+    default_function:
+    collation:
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: new_message
+    sql_type_metadata: *19
+    'null': false
+    default:
+    default_function:
+    collation:
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: execution_status
+    sql_type_metadata: *2
+    'null': false
+    default:
+    default_function:
+    collation:
+    comment:
+  - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
+    name: response
+    sql_type_metadata: *9
+    'null': true
+    default:
+    default_function:
+    collation: utf8mb4_bin
+    comment:
+  - *14
+  - *15
   aichat_sessions:
   - *10
   - *16
@@ -7684,6 +7732,7 @@ primary_keys:
   ai_tutor_interaction_feedbacks: id
   ai_tutor_interactions: id
   aichat_events: id
+  aichat_requests: id
   aichat_sessions: id
   ar_internal_metadata: key
   assessment_activities: id
@@ -7891,6 +7940,7 @@ data_sources:
   ai_tutor_interaction_feedbacks: true
   ai_tutor_interactions: true
   aichat_events: true
+  aichat_requests: true
   aichat_sessions: true
   ar_internal_metadata: true
   assessment_activities: true
@@ -8238,6 +8288,7 @@ indexes:
     type:
     using: :btree
     comment:
+  aichat_requests: []
   aichat_sessions:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: aichat_sessions
@@ -13608,7 +13659,7 @@ indexes:
     type: :fulltext
     using:
     comment:
-version: 20240726205216
+version: 20240807174943
 database_version: !ruby/object:ActiveRecord::ConnectionAdapters::AbstractAdapter::Version
   version:
   - 8
