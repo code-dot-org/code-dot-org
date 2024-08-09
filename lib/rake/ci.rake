@@ -48,6 +48,7 @@ namespace :ci do
   # Additionally run the lint task if specified for the environment.
   timed_task_with_logging build: [:chef_update] do
     Dir.chdir(deploy_dir) do
+      RakeUtils.python_venv_install # we need python for linting python
       ChatClient.wrap('rake lint') {Rake::Task['lint'].invoke} if CDO.lint
       ChatClient.wrap('rake build') {Rake::Task['build'].invoke}
     end
