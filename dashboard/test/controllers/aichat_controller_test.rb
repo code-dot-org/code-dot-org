@@ -15,18 +15,19 @@ class AichatControllerTest < ActionController::TestCase
     @script_level = create(:script_level, script: @script, levels: [@level])
 
     @default_model_customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"}.stringify_keys
+    @default_aichat_context = {
+      currentLevelId: @level.id,
+      scriptId: @script.id,
+      channelId: "test"
+    }
     @common_params = {
       storedMessages: [],
       aichatModelCustomizations: @default_model_customizations,
-      aichatContext: {
-        currentLevelId: @level.id,
-        scriptId: @script.id,
-        channelId: "test"
-      }
+      aichatContext: @default_aichat_context
     }
     valid_message = {role: 'user', chatMessageText: 'hello', status: 'unknown', timestamp: Time.now.to_i}
     @profanity_violation_message = {role: 'user', chatMessageText: 'Damn you, robot', status: 'unknown', timestamp: Time.now.to_i}
-    @valid_params = @common_params.merge(newMessage: valid_message)
+    @valid_params_chat_completion = @common_params.merge(newMessage: valid_message)
     @profanity_violation_params = @common_params.merge(
       newMessage: @profanity_violation_message
     )
@@ -36,6 +37,12 @@ class AichatControllerTest < ActionController::TestCase
       levelId: @level.id,
       scriptId: @script.id,
     }
+
+    @valid_params_log_chat_event = {
+      newChatEvent: {timestamp: Time.now.to_i},
+      aichatContext: @default_aichat_context
+    }
+    @missing_aichat_context_params = @valid_params_log_chat_event.except(:aichatContext)
   end
 
   setup do
@@ -44,37 +51,38 @@ class AichatControllerTest < ActionController::TestCase
     @controller.stubs(:storage_decrypt_channel_id).returns([123, 456])
   end
 
+  # chat_completion tests
   test_user_gets_response_for :chat_completion,
-    name: "student_no_access_test",
+    name: "student_no_access_chat_completion_test",
     user: :student,
     method: :post,
     response: :forbidden
 
   test_user_gets_response_for :chat_completion,
-    name: "teacher_no_access_test",
+    name: "teacher_no_access_chat_completion_test",
     user: :teacher,
     method: :post,
     response: :forbidden
 
-  test 'pilot teacher has access test' do
+  test 'pilot teacher has access to chat_completion test' do
     sign_in(@genai_pilot_teacher)
-    post :chat_completion, params: @valid_params, as: :json
+    post :chat_completion, params: @valid_params_chat_completion, as: :json
     assert_response :success
   end
 
-  test 'pilot student has access test' do
+  test 'pilot student has access to chat_completion test' do
     sign_in(@genai_pilot_student)
-    post :chat_completion, params: @valid_params, as: :json
+    post :chat_completion, params: @valid_params_chat_completion, as: :json
     assert_response :success
   end
 
-  test 'Bad request if required params are not included' do
+  test 'Bad request if required params are not included for chat_completion' do
     sign_in(@genai_pilot_teacher)
     post :chat_completion, params: {newMessage: "hello"}, as: :json
     assert_response :bad_request
   end
 
-  test 'Bad request if storedMessages param is not included' do
+  test 'Bad request if storedMessages param is not included for chat_completion' do
     sign_in(@genai_pilot_teacher)
     post :chat_completion, params: @missing_stored_messages_params, as: :json
     assert_response :bad_request
@@ -87,36 +95,7 @@ class AichatControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal "damn", json_response["flagged_content"]
-    assert_equal json_response.keys, ['messages', 'flagged_content', 'session_id']
-
-    session = AichatSession.find(json_response['session_id'])
-    stored_message = JSON.parse(session.messages)[0]
-    assert_equal stored_message,
-      @profanity_violation_message.merge(
-        status: SharedConstants::AI_INTERACTION_STATUS[:PROFANITY_VIOLATION]
-      ).stringify_keys
-  end
-
-  test 'filters previous profanity when sending previous messages to Sagemaker but still logs' do
-    ok_message = {status: 'ok', role: 'user', chatMessageText: 'another message'}.stringify_keys
-    params = @valid_params.merge(
-      storedMessages: [
-        {status: 'profanity_violation', role: 'user', chatMessageText: 'damn'},
-        ok_message
-      ]
-    )
-
-    # Note that second expected argument filters out the previous profane message
-    # in what we send to Sagemaker.
-    AichatSagemakerHelper.expects(:get_sagemaker_assistant_response).with(params[:aichatModelCustomizations], [ok_message], params[:newMessage].stringify_keys).once
-
-    sign_in(@genai_pilot_student)
-    post :chat_completion, params: params, as: :json
-    assert_response :success
-
-    session = AichatSession.find(json_response['session_id'])
-    assert_equal 4, JSON.parse(session.messages).length
-    assert_equal 1, (JSON.parse(session.messages).count {|message| message["status"] == 'profanity_violation'})
+    assert_equal json_response.keys, ['messages', 'flagged_content']
   end
 
   test 'returns model profanity status when model response contains profanity' do
@@ -125,24 +104,18 @@ class AichatControllerTest < ActionController::TestCase
       nil,
       ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'damn')
     )
-    post :chat_completion, params: @valid_params, as: :json
+    post :chat_completion, params: @valid_params_chat_completion, as: :json
 
     assert_response :success
-    assert_equal json_response.keys, ['messages', 'session_id']
-
-    session = AichatSession.find(json_response['session_id'])
-    assert_equal 2, JSON.parse(session.messages).length
-    assert_equal JSON.parse(session.messages),
-      [
-        @valid_params[:newMessage].merge(
-          status: SharedConstants::AI_INTERACTION_STATUS[:ERROR]
-        ),
-        {
-          role: "assistant",
-          status: SharedConstants::AI_INTERACTION_STATUS[:ERROR],
-          chatMessageText: '[redacted - model generated profanity]',
-        }
-      ].map(&:stringify_keys)
+    assert_equal json_response.keys, ['messages']
+    assert_equal json_response["messages"].length, 2
+    user_message = json_response["messages"].first
+    assert_equal user_message["role"], "user"
+    assert_equal user_message["status"], SharedConstants::AI_INTERACTION_STATUS[:ERROR]
+    assistant_message = json_response["messages"].last
+    assert_equal assistant_message["role"], "assistant"
+    assert_equal assistant_message["status"], SharedConstants::AI_INTERACTION_STATUS[:ERROR]
+    assert_equal assistant_message["chatMessageText"], '[redacted - model generated profanity]'
   end
 
   test 'can_request_aichat_chat_completion returns false when DCDO flag is set to `false`' do
@@ -153,93 +126,50 @@ class AichatControllerTest < ActionController::TestCase
   test 'returns forbidden when DCDO flag is set to `false`' do
     AichatSagemakerHelper.stubs(:can_request_aichat_chat_completion?).returns(false)
     sign_in(@genai_pilot_teacher)
-    post :chat_completion, params: @valid_params, as: :json
+    post :chat_completion, params: @valid_params_chat_completion, as: :json
     assert_response :forbidden
   end
 
-  test 'creates new chat session when no session id provided' do
+  # log_chat_event tests
+  test_user_gets_response_for :log_chat_event,
+    name: "student_no_access_log_chat_event_test",
+    user: :student,
+    method: :post,
+    response: :forbidden
+
+  test_user_gets_response_for :log_chat_event,
+    name: "teacher_no_access_log_chat_event_test",
+    user: :teacher,
+    method: :post,
+    response: :forbidden
+
+  test 'pilot teacher has access to log_chat_event test' do
     sign_in(@genai_pilot_teacher)
-
-    post :chat_completion, params: @valid_params, as: :json
-    session = AichatSession.find(json_response['session_id'])
-
-    assert_equal @genai_pilot_teacher.id, session.user_id
-    assert_equal @valid_params[:aichatContext][:currentLevelId], session.level_id
-    assert_equal @valid_params[:aichatContext][:scriptId], session.script_id
-    assert_equal 456, session.project_id
-    assert_equal [
-      @valid_params[:newMessage].merge(status: 'ok').stringify_keys,
-      {role: 'assistant', chatMessageText: @assistant_response, status: 'ok'}.stringify_keys
-    ],
-      JSON.parse(session.messages)
-    assert_equal @valid_params[:aichatModelCustomizations].stringify_keys,
-      JSON.parse(session.model_customizations)
+    post :log_chat_event, params: @valid_params_log_chat_event, as: :json
+    assert_response :success
   end
 
-  test 'updates existing chat session when session id provided' do
-    sign_in(@genai_pilot_teacher)
-
-    post :chat_completion, params: @valid_params, as: :json
-    session = AichatSession.find(json_response['session_id'])
-
-    post :chat_completion, params: @valid_params.merge(
-      {
-        sessionId: session.id,
-        storedMessages: [
-          @valid_params[:newMessage].merge(status: 'ok').stringify_keys,
-          {role: 'assistant', chatMessageText: @assistant_response, status: 'ok'}.stringify_keys
-        ]
-      }
-    ),
-      as: :json
-    assert_equal session.id, json_response['session_id']
-
-    # Check that we added two new messages to the stored messages
-    # (the new user and assistant messages).
-    session.reload
-    assert_equal 4, JSON.parse(session.messages).length
+  test 'pilot student has access to log_chat_event test' do
+    sign_in(@genai_pilot_student)
+    post :log_chat_event, params: @valid_params_log_chat_event, as: :json
+    assert_response :success
   end
 
-  test 'creates new chat session when session id provided but session property does not match' do
+  test 'Bad request if missing param for log_chat_event' do
     sign_in(@genai_pilot_teacher)
-
-    post :chat_completion, params: @valid_params, as: :json
-    session = AichatSession.find(json_response['session_id'])
-
-    post :chat_completion, params: @valid_params.merge(
-      {
-        sessionId: session.id,
-        storedMessages: [
-          @valid_params[:newMessage].merge(status: 'ok').stringify_keys,
-          {role: 'assistant', chatMessageText: @assistant_response, status: 'ok'}.stringify_keys
-        ],
-        aichatModelCustomizations: @default_model_customizations.merge(
-          retrievalContexts: ["test", "mismatched retrieval context item"],
-        ),
-      }
-    ),
-      as: :json
-    refute_equal session.id, json_response['session_id']
+    post :log_chat_event, params: @missing_aichat_context_params, as: :json
+    assert_response :bad_request
   end
 
-  test 'updates existing chat session when session id provided and a message field outside of chatMessageText, role, and status do not match' do
-    sign_in(@genai_pilot_teacher)
+  test 'log_chat_event logs successfully to AichatEvents table' do
+    sign_in(@genai_pilot_student)
+    post :log_chat_event, params: @valid_params_log_chat_event, as: :json
 
-    post :chat_completion, params: @valid_params, as: :json
-    session = AichatSession.find(json_response['session_id'])
-
-    post :chat_completion, params: @valid_params.merge(
-      {
-        sessionId: session.id,
-        storedMessages: [
-          @valid_params[:newMessage].merge(status: 'ok').stringify_keys,
-          {role: 'assistant', chatMessageText: @assistant_response, status: 'ok', timestamp: Time.now.to_i}.stringify_keys
-        ],
-        aichatModelCustomizations: @default_model_customizations
-      }
-    ),
-      as: :json
-    assert_equal session.id, json_response['session_id']
+    assert_response :success
+    assert_equal json_response.keys, ['chat_event_id', 'chat_event']
+    session = AichatEvent.find(json_response['chat_event_id'])
+    stored_message = JSON.parse(session.aichat_event)
+    assert_equal stored_message['timestamp'], @valid_params_log_chat_event[:newChatEvent][:timestamp]
   end
 
   test 'Bad request if required params are not included for student_chat_history' do

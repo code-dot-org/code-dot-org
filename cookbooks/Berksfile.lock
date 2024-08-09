@@ -62,7 +62,7 @@ GRAPH
   cdo-analytics (0.1.16)
     apt (>= 0.0.0)
     ark (>= 0.0.0)
-  cdo-apps (0.2.647)
+  cdo-apps (0.2.648)
     apt (>= 0.0.0)
     cdo-analytics (>= 0.0.0)
     cdo-cloudwatch-agent (>= 0.0.0)
