@@ -36,6 +36,7 @@ class Lti::V1::AccountLinkingControllerTest < ActionController::TestCase
       )
     )
     post :link_email, params: {email: @user.email, password: 'password'}
+    assert_equal I18n.t('lti.account_linking.successfully_linked'), flash[:notice]
     assert_redirected_to target_url
     assert Policies::Lti.lti?(@user)
   end

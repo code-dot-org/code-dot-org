@@ -71,5 +71,9 @@ mapbox_upload_tileset:    'censustiles-dev'
 # Enables DCDO settings via cookies
 use_cookie_dcdo: true
 
+# ActiveJob Queue Adapter, default to async which doesn't require manually
+# starting the worker processes. See locals.yml.default for more discussion.
+active_job_queue_adapter: :async
+
 # aiproxy credentials
 aiproxy_api_key: !Secret

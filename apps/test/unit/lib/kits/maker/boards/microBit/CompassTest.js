@@ -1,6 +1,6 @@
-import Compass from '@cdo/apps/lib/kits/maker/boards/microBit/Compass';
-import {SENSOR_CHANNELS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
-import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
+import Compass from '@cdo/apps/maker/boards/microBit/Compass';
+import {SENSOR_CHANNELS} from '@cdo/apps/maker/boards/microBit/MicroBitConstants';
+import {MBFirmataClientStub} from '@cdo/apps/maker/util/makeStubBoard';
 
 describe('MicroBit Compass', function () {
   let boardClient;
