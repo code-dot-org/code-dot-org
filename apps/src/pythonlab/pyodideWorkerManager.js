@@ -10,6 +10,8 @@ import {setAndSaveProjectSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 import {getStore} from '@cdo/apps/redux';
 
+import {setLoadingCodeEnvironment} from '../lab2/redux/systemRedux';
+
 import {parseErrorMessage} from './pythonHelpers/messageHelpers';
 import {MATPLOTLIB_IMG_TAG} from './pythonHelpers/patches';
 
@@ -52,6 +54,16 @@ const setUpPyodideWorker = () => {
         type: 'PythonLabSystemCodeError',
         message,
       });
+      return;
+    } else if (type === 'loading_pyodide') {
+      getStore().dispatch(
+        appendSystemMessage('Loading your python environment...')
+      );
+      getStore().dispatch(setLoadingCodeEnvironment(true));
+      return;
+    } else if (type === 'loaded_pyodide') {
+      getStore().dispatch(appendSystemMessage('Your environment is ready!'));
+      getStore().dispatch(setLoadingCodeEnvironment(false));
       return;
     } else {
       console.warn(

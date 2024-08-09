@@ -42,10 +42,16 @@ async function loadPyodideAndPackages() {
 let pyodideReadyPromise = null;
 let pyodideGlobals = null;
 async function initializePyodide() {
+  let promiseWasNull = false;
   if (pyodideReadyPromise === null) {
     pyodideReadyPromise = loadPyodideAndPackages();
+    self.postMessage({type: 'loading_pyodide'});
+    promiseWasNull = true;
   }
   await pyodideReadyPromise;
+  if (promiseWasNull) {
+    self.postMessage({type: 'loaded_pyodide'});
+  }
   pyodideGlobals = self.pyodide.globals.toJs();
 }
 
