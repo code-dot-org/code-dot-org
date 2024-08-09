@@ -17,10 +17,7 @@ import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-import {
-  postAichatCompletionMessage,
-  postStudentChatHistory,
-} from '../aichatApi';
+import {postAichatCompletionMessage, getStudentChatHistory} from '../aichatApi';
 import ChatEventLogger from '../chatEventLogger';
 import {saveTypeToAnalyticsEvent} from '../constants';
 import {
@@ -457,7 +454,7 @@ export const fetchStudentChatHistory = createAsyncThunk(
     // Post teacher's student's user id to backend and retrieve student's chat history.
     let studentChatHistoryApiResponse;
     try {
-      studentChatHistoryApiResponse = await postStudentChatHistory(
+      studentChatHistoryApiResponse = await getStudentChatHistory(
         studentUserId,
         parseInt(state.progress.currentLevelId || ''),
         state.progress.scriptId

@@ -77,19 +77,19 @@ export async function postLogChatEvent(
   return await response.json();
 }
 
-export async function postStudentChatHistory(
+export async function getStudentChatHistory(
   studentUserId: number,
-  currentLevelId: number,
+  levelId: number,
   scriptId: number | null
 ): Promise<StudentChatHistoryApiResponse> {
-  const payload = {
-    studentUserId,
-    currentLevelId,
-    scriptId,
-  };
-  const response = await HttpClient.post(
-    STUDENT_CHAT_HISTORY_URL,
-    JSON.stringify(payload),
+  const params = new URLSearchParams({
+    studentUserId: studentUserId.toString(),
+    levelId: levelId.toString(),
+    scriptId: scriptId?.toString() || '',
+  });
+
+  const response = await HttpClient.get(
+    STUDENT_CHAT_HISTORY_URL + '?' + new URLSearchParams(params.toString()),
     true,
     {
       'Content-Type': 'application/json; charset=UTF-8',

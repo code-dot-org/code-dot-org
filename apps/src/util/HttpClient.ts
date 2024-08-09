@@ -121,6 +121,14 @@ async function post(
   return sendRequest('POST', endpoint, body, useAuthenticityToken, headers);
 }
 
+async function getRequest(
+  endpoint: string,
+  useAuthenticityToken = false,
+  headers: Record<string, string> = {}
+): Promise<Response> {
+  return sendRequest('GET', endpoint, undefined, useAuthenticityToken, headers);
+}
+
 async function deleteRequest(
   endpoint: string,
   useAuthenticityToken = false,
@@ -140,4 +148,5 @@ export default {
   post,
   delete: deleteRequest,
   fetchJson,
+  get: getRequest,
 };
