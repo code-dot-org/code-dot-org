@@ -4,7 +4,10 @@
 # in the Gemfile so that the PYTHON environment variable is set correctly.
 # Otherwise various pycall related gems like numpy will fail to load.
 
-require 'cdo/python_venv'
+require_relative './python_venv'
+
+# Snag this /before/ PyCall fiddles with PYTHONHOME:
+site_packages_path = PythonVenv.site_packages_path
 
 ENV['PYTHON'] = PythonVenv.python_bin_path
 unless File.exist? ENV['PYTHON']
@@ -24,7 +27,7 @@ include PyCall::Import
 # sys.executable is set to the ruby interpreter, and site.py doesn't properly
 # add site-packages for our venv to the sys.path. So, we do it manually:
 pyimport 'site'
-site.addsitedir(PythonVenv.site_packages_path)
+site.addsitedir(site_packages_path)
 
 # Now unset PYTHON & PYTHONHOME so we don't mess up python3-using apps
 # launched from our Ruby processes (like the aws cli)
