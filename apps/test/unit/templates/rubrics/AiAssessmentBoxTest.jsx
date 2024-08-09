@@ -14,6 +14,7 @@ import AiAssessmentFeedbackContext, {
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+// wait for one network request, then update the DOM
 async function wait() {
   await act(async () => Promise.resolve());
 }
