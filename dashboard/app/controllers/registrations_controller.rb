@@ -138,7 +138,7 @@ class RegistrationsController < Devise::RegistrationsController
     if current_user && current_user.errors.blank?
       if current_user.teacher?
         begin
-          MailJet.create_contact_and_send_welcome_email(current_user, request.locale)
+          MailJet.create_contact_and_add_to_welcome_series(current_user, request.locale)
         rescue => exception
           # If the welcome email fails to send, we don't want to disrupt
           # sign up, but we do want to know about it.

@@ -36,7 +36,7 @@ module MailJet
     end
   end
 
-  def self.create_contact_and_send_welcome_email(user, locale = 'en-US')
+  def self.create_contact_and_add_to_welcome_series(user, locale = 'en-US')
     return unless enabled?
 
     return unless user&.id.present?
@@ -44,11 +44,8 @@ module MailJet
 
     contact = find_or_create_contact(user.email, user.name)
     update_contact_field(contact, 'sign_up_date', user.created_at.to_datetime.rfc3339)
-    send_template_email(
-      contact,
-      EMAILS[:welcome],
-      locale
-    )
+    contact_list_id = CONTACT_LISTS[:welcome_series][locale.to_sym] || CONTACT_LISTS[:welcome_series][:default]
+    add_to_contact_list(contact, contact_list_id)
   end
 
   def self.find_or_create_contact(email, name)
@@ -65,7 +62,7 @@ module MailJet
     return contact if contact&.id.present?
 
     Mailjet::Contact.create(
-      is_excluded_from_campaigns: true,
+      is_excluded_from_campaigns: "false",
       email: email,
       name: name
     )
@@ -106,6 +103,23 @@ module MailJet
     Net::HTTP.start(delete_uri.hostname, delete_uri.port, use_ssl: true) do |http|
       http.request(delete_http_request)
     end
+  end
+
+  def self.add_to_contact_list(contact, list_id)
+    return unless enabled?
+    return if contact.nil?
+
+    Mailjet.configure do |config|
+      config.api_key = API_KEY
+      config.secret_key = SECRET_KEY
+      config.api_version = "v3"
+    end
+
+    # This will raise an exception if the contact is already on the list
+    Mailjet::Listrecipient.create(
+      list_id: list_id,
+      contact_id: contact.id
+    )
   end
 
   def self.send_template_email(contact, email_config, locale = 'en-US')

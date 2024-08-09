@@ -348,7 +348,7 @@ class RegistrationsControllerTest < ActionController::TestCase
     teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'yes')
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'CA')])
     MailJet.stubs(:enabled?).returns(true)
-    MailJet.expects(:create_contact_and_send_welcome_email).once
+    MailJet.expects(:create_contact_and_add_to_welcome_series).once
     assert_creates(User) do
       post :create, params: {user: teacher_params}
     end
