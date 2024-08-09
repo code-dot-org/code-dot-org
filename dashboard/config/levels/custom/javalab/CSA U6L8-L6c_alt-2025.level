@@ -1,0 +1,42 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T22:51:54.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Debug the Program\r\n\r\nA hotel reservation system needs to remove completed reservations, but it has a bug 🪲\r\n\r\nFind and fix the error in the program.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "video_key": "csa_remving_data_from_an_arraylist",
+    "display_name": "Hotel Reservations",
+    "bubble_choice_description": "A hotel reservation system needs to remove completed reservations, but it has a bug!",
+    "thumbnail_url": "https://images.code.org/61d6aac08f256faadf864d1bb63d3ada-5-stars.png",
+    "encrypted_validation": "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\n59D/rMs9\n",
+    "encrypted_exemplar_sources": "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\nUUsdPjVtsJE8QUp5/o1Ih1TUa10vOg==\n",
+    "start_sources": {
+      "HotelRunner.java": {
+        "text": "public class HotelRunner {\n  public static void main(String[] args) {\n    \n    // Creates a Hotel object\n    Hotel app = new Hotel();\n\n    // Adds reservation\n    app.addReservation(new Reservation(3));\n    app.addReservation(new Reservation(100));\n    app.addReservation(new Reservation(50));\n\n    // Remove reservation\n    app.removeReservation(3);\n\n    System.out.println(app.getReservations());\n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "Hotel.java": {
+        "text": "import java.util.ArrayList;\n\n/*\n * Represents a Hotel\n */\npublic class Hotel {\n\n  private ArrayList<Reservation> reservations; // the list of reservations\n\n  public Hotel() {\n    reservations = new ArrayList<Reservation>();\n  }\n\n  /*\n   * Returns the ArrayList reservations\n   */\n  public ArrayList<Reservation> getReservations() {\n    return reservations;\n  }\n  \n  /*\n   * Adds a reservation\n   */\n  public void addReservation(Reservation newReservation) {\n    reservations.add(newReservation);\n  }\n\n  /*\n   * Removes a reservation\n   */\n  public void removeReservation(int ID) {\n    int index = 0;\n    for (Reservation w : reservations) {\n      if (w.getID() == ID) {\n        reservations.remove(index);\n      }\n      index++;\n    }\n  }\n  \n}\n",
+        "isVisible": true,
+        "tabOrder": 1
+      },
+      "Reservation.java": {
+        "text": "/*\n * Represents a reservation\n */\npublic class Reservation {\n  private int ID; // the ID\n\n  public Reservation(int ID) {\n    this.ID = ID;\n  }\n\n  /*\n   * Returns the ID\n   */\n  public int getID() {\n    return ID;\n  }\n\n  /*\n   * Returns a String containing the reservation's information\n   */\n  public String toString() {\n    return \"reservation ID : \" + ID;\n  }\n}",
+        "isVisible": true,
+        "tabOrder": 2
+      }
+    },
+    "name_suffix": "_alt-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:51:54.799+00:00\",\"changed\":[\"cloned from \\\"CSA U6L8-L6c_pilot-2025\\\"\"],\"cloned_from\":\"CSA U6L8-L6c_pilot-2025\"}]"
+}]]></config>
+</Javalab>

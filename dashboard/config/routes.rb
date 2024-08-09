@@ -875,6 +875,7 @@ Dashboard::Application.routes.draw do
 
     get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
     get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
+    get 'dashboardapi/section_courses/:section_id', to: 'api#show_courses_with_progress'
     scope 'dashboardapi', module: 'api/v1' do
       concerns :section_api_routes
       concerns :assessments_routes
@@ -1168,7 +1169,8 @@ Dashboard::Application.routes.draw do
 
     post '/aichat/chat_completion', to: 'aichat#chat_completion'
     post '/aichat/log_chat_event', to: 'aichat#log_chat_event'
-    post '/aichat/student_chat_history', to: 'aichat#student_chat_history'
+    get '/aichat/student_chat_history', to: 'aichat#student_chat_history'
+    post '/aichat/check_message_safety', to: 'aichat#check_message_safety'
 
     resources :ai_tutor_interactions, only: [:create, :index] do
       resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]

@@ -10,9 +10,9 @@ class AichatControllerTest < ActionController::TestCase
     pilot_section = create(:section, user: @genai_pilot_teacher)
     @genai_pilot_student = create(:follower, section: pilot_section).student_user
     @genai_pilot_teacher2 = create :teacher, pilot_experiment: @genai_pilot.name
-    @level = FactoryBot.create(:level, name: 'level1')
-    @script = FactoryBot.create(:script)
-    @script_level = FactoryBot.create(:script_level, script: @script, levels: [@level])
+    @level = create(:level, name: 'level1')
+    @script = create(:script)
+    @script_level = create(:script_level, script: @script, levels: [@level])
 
     @default_model_customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"}.stringify_keys
     @common_params = {
@@ -33,7 +33,7 @@ class AichatControllerTest < ActionController::TestCase
     @missing_stored_messages_params = @common_params.except(:storedMessages)
     @valid_params_student_chat_history = {
       studentUserId: @genai_pilot_student.id,
-      currentLevelId: @level.id,
+      levelId: @level.id,
       scriptId: @script.id,
     }
   end
@@ -244,25 +244,25 @@ class AichatControllerTest < ActionController::TestCase
 
   test 'Bad request if required params are not included for student_chat_history' do
     sign_in(@genai_pilot_teacher)
-    post :chat_completion, params: {studentId: @genai_pilot_student.id}, as: :json
+    get :chat_completion, params: {studentId: @genai_pilot_student.id}, as: :json
     assert_response :bad_request
   end
 
   test 'pilot student does not have access to student_chat_history test' do
     sign_in(@genai_pilot_student)
-    post :student_chat_history, params: @valid_params_student_chat_history, as: :json
+    get :student_chat_history, params: @valid_params_student_chat_history, as: :json
     assert_response :forbidden
   end
 
   test 'pilot teacher has access to student_chat_history if teacher of student' do
     sign_in(@genai_pilot_teacher)
-    post :student_chat_history, params: @valid_params_student_chat_history, as: :json
+    get :student_chat_history, params: @valid_params_student_chat_history, as: :json
     assert_response :success
   end
 
   test 'pilot teacher does not have access to student_chat_history if not teacher of student' do
     sign_in(@genai_pilot_teacher2)
-    post :student_chat_history, params: @valid_params_student_chat_history, as: :json
+    get :student_chat_history, params: @valid_params_student_chat_history, as: :json
     assert_response :forbidden
   end
 end
