@@ -1,6 +1,8 @@
 require_relative './import'
 require_relative './init_pycall'
 
+include Python::Import
+
 # This is a placeholder for the Python module, letting us use the future API
 # in today's code. Python.run() of the future will run a block of python without
 # having to worry about threads.
