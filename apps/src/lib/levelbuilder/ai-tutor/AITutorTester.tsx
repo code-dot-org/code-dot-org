@@ -5,6 +5,7 @@ import {
   postAichatCheckSafety,
   postAichatCompletionMessage,
 } from '@cdo/apps/aichat/aichatApi';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import {formatQuestionForAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {ChatContext} from '@cdo/apps/aiTutor/types';
@@ -14,7 +15,6 @@ import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import AITutorTesterSampleColumns from './AITutorTesterSampleColumns';
 
 import styles from './ai-tutor-tester.module.scss';
-import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 
 /**
  * Renders a series of buttons that allow levelbuilders to upload a CSV of
@@ -187,7 +187,6 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
         service. AI responses will then be saved and you can download the
         resulting updated CSV.
       </p>
-      <AITutorTesterSampleColumns />
       <br />
       <SimpleDropdown
         labelText="Choose an endpoint"
@@ -202,6 +201,7 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
       />
       <br />
       <br />
+      <AITutorTesterSampleColumns endpoint={selectedEndpoint} />
       <div>
         <div className={styles.buttonSpacing}>
           <input
