@@ -681,7 +681,7 @@ class EvaluateRubricJobTest < ActiveJob::TestCase
     post_stub = HTTParty.stubs(:post).with(
       uri,
       body: URI.encode_www_form(expected_form_data),
-      headers: {'Content-Type' => 'application/x-www-form-urlencoded'},
+      headers: {'Content-Type' => 'application/x-www-form-urlencoded', 'Authorization' => CDO.aiproxy_api_key},
       timeout: EvaluateRubricJob::AIPROXY_API_TIMEOUT
     )
 

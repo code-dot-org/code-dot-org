@@ -24,6 +24,7 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
      ruby --version     # --> ruby 3.0.5
      node --version     # --> v18.16.0
      git-lfs --version  #  >= git-lfs/3.0
+     pdm --version    #  >= 2.17
      ```
 
 1. `git lfs pull`
@@ -119,7 +120,7 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
 
 1. Install **brew packages**:
    ```
-   brew install rbenv ruby-build nvm mysql@8.0 redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi pdftk-java
+   brew install rbenv ruby-build nvm pdm mysql@8.0 redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi pdftk-java
    ```
 
 1. Initialize **Git LFS**:
@@ -208,7 +209,7 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
 Note: Virtual Machine Users should check the [Alternative note](#alternative-use-an-ubuntu-vm) below before starting
 
 1. `sudo apt-get update`
-1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-11-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript build-essential redis-server rbenv chromium-browser parallel`
+1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-11-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript build-essential redis-server rbenv chromium-browser parallel python3-pip`
     * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
     <details> 
       <summary>Troubleshoot: `E: Package 'pdftk' has no installation candidate`.</summary>
@@ -251,6 +252,9 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
     1. If your PATH is missing `~/.rbenv/shims`, the next two commands might not work. Edit your .bashrc to include the following line:
        `export PATH="$HOME/.rbenv/bin:~/.rbenv/shims:$PATH"`, then run `source .bashrc` for the change to take effect (as seen in [this github issue](https://github.com/rbenv/rbenv/issues/877)).
     1. `rbenv rehash`
+1. Install pdm, which will be used later by `rake install` to install python
+    1. `sudo pip3 install --prefix=/usr/local --upgrade pdm`
+        - alternatively, if you prefer pipx and have it configured path-wise: `pipx install pdm`
 1. Enable **corepack** to install **yarn**: `corepack enable`
 1. Make it so that you can run apps tests locally
     1. Add the following to `~/.bashrc` or your desired shell configuration file:

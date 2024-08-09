@@ -4,7 +4,7 @@ maintainer_email 'will@code.org'
 license          'All rights reserved'
 description      'Installs/Configures cdo-apps'
 long_description File.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.2.642'
+version          '0.2.648'
 
 depends 'apt'
 
@@ -24,3 +24,4 @@ depends 'cdo-analytics'
 depends 'cdo-syslog'
 depends 'cdo-jemalloc'
 depends 'cdo-tippecanoe'
+depends 'cdo-python'

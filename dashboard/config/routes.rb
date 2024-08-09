@@ -1171,6 +1171,7 @@ Dashboard::Application.routes.draw do
 
     post '/aichat/chat_completion', to: 'aichat#chat_completion'
     post '/aichat/log_chat_event', to: 'aichat#log_chat_event'
+    get '/aichat/student_chat_history', to: 'aichat#student_chat_history'
     post '/aichat/check_message_safety', to: 'aichat#check_message_safety'
 
     resources :ai_tutor_interactions, only: [:create, :index] do
