@@ -40,6 +40,11 @@ const ProgressFeedbackBanner = ({
       return;
     }
 
+    // V2 was launched on 2024-08-02. If the user was created before that date,
+    // we want them to see the feedback banner.
+    const userCreatedBeforeV2Released =
+      new Date(userCreatedAt) < new Date('2024-08-02');
+
     // If feedback has been loaded and empty and the user hasn't answered, it is unanswered.
     // If we have feedback and the user did not just submit feedback, set to previously-answered.
     if (
@@ -47,10 +52,7 @@ const ProgressFeedbackBanner = ({
       bannerStatus === BANNER_STATUS.UNSET &&
       progressV2Feedback
     ) {
-      if (
-        progressV2Feedback.empty &&
-        new Date(userCreatedAt) < new Date('2024-08-02')
-      ) {
+      if (progressV2Feedback.empty && userCreatedBeforeV2Released) {
         setBannerStatus(BANNER_STATUS.UNANSWERED);
       } else {
         setBannerStatus(BANNER_STATUS.PREVIOUSLY_ANSWERED);
