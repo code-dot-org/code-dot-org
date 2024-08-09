@@ -8,7 +8,7 @@ require 'csv'
 # Depending on where this goes, tests should be added as deleting progress is not undoable
 
 if ARGV.empty? || ARGV.length > 3
-  puts 'Usage: ./bin/oneoff/reset_student_progress_in_bulk teacher_id ./bin/oneoff/reset_student_progress_in_bulk/yyyy-mm-dd-users.csv [commit]'
+  puts "Usage: #{__FILE__} teacher_id ./bin/oneoff/reset_student_progress_in_bulk/yyyy-mm-dd-users.csv [commit]"
   puts 'The CSV needs a column with "student_id".'
   puts 'Will do a "dry run" until you specify "for-real" for the "commit" field.'
   exit 1
