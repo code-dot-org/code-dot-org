@@ -19,6 +19,33 @@ class PyCallTest < ActiveSupport::TestCase
     assert_equal 'Ruby can call Python!', result
   end
 
+  test 'using pyimport outside a Python.run block raises an error' do
+    assert_raises(Python::ThreadSafetyError) do
+      pyfrom 'pathlib', import: :Path
+      Path('.')
+    end
+  end
+
+  test 'running Python.run on another thread CURRENTLY raises an error' do
+    # this is a test we hope we can delete in the future
+    Thread.new do
+      assert_raises(Python::ThreadSafetyError) do
+        Python.run do
+          pyimport 'math'
+          math.sqrt(25)
+        end
+      end
+    end.join
+  end
+
+  test 'returning a python object froma Python.run block raises an error' do
+    assert_raises(Python::ThreadSafetyError) do
+      Python.run do
+        PyCall.import_module('math')
+      end
+    end
+  end
+
   test 'pyimport a package dep from /python/pycdo/pyproject.toml' do
     result = Python.run do
       pyimport 'openai'
