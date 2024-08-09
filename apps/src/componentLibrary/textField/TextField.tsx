@@ -12,6 +12,8 @@ import moduleStyles from './textfield.module.scss';
 export interface TextFieldProps extends AriaAttributes {
   /** TextField onChange handler*/
   onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  /** TextField id */
+  id?: string;
   /** The name attribute specifies the name of an input element.
      The name attribute is used to reference elements in a JavaScript,
      or to reference form data after a form is submitted.
@@ -55,6 +57,7 @@ export interface TextFieldProps extends AriaAttributes {
  * Used to render a text field.
  */
 const TextField: React.FunctionComponent<TextFieldProps> = ({
+  id,
   label,
   onChange,
   name,
@@ -84,6 +87,7 @@ const TextField: React.FunctionComponent<TextFieldProps> = ({
     >
       {label && <span className={moduleStyles.textFieldLabel}>{label}</span>}
       <input
+        id={id}
         type="text"
         name={name}
         value={value}
