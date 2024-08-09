@@ -307,7 +307,7 @@ describe('AiAssessmentBox', () => {
     });
 
     const thumbsUpButton = screen.getByTestId('thumbs-o-up');
-    act(() => thumbsUpButton.click());
+    fireEvent.click(thumbsUpButton);
 
     await wait();
 
@@ -354,7 +354,7 @@ describe('AiAssessmentBox', () => {
     });
 
     const thumbsUpButton = screen.getByTestId('thumbs-o-down');
-    act(() => thumbsUpButton.click());
+    fireEvent.click(thumbsUpButton);
 
     await wait();
 
@@ -411,7 +411,7 @@ describe('AiAssessmentBox', () => {
     expect(mockSetAiFeedback).toHaveBeenCalledTimes(0);
 
     const thumbsUpButton = screen.getByTestId('thumbs-o-down');
-    act(() => thumbsUpButton.click());
+    fireEvent.click(thumbsUpButton);
 
     await wait();
 
@@ -433,17 +433,13 @@ describe('AiAssessmentBox', () => {
     const checkbox = screen.getByRole('checkbox', {
       name: i18n.aiFeedbackFalsePos(),
     });
-    await act(async () => {
-      fireEvent.click(checkbox);
-    });
+    fireEvent.click(checkbox);
 
     // click submit button
     const submitButton = screen.getByRole('button', {
       name: i18n.aiFeedbackSubmit(),
     });
-    await act(async () => {
-      fireEvent.click(submitButton);
-    });
+    fireEvent.click(submitButton);
     await wait();
 
     const expectedBody = {
