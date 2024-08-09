@@ -5,58 +5,26 @@ import {NavLink} from 'react-router-dom';
 
 import i18n from '@cdo/locale';
 
+import {
+  LABELED_TEACHER_DASHBOARD_PATHS,
+  TEACHER_DASHBOARD_PATHS,
+} from './teacherNavigation/TeacherDashboardPaths';
+
 import styles from './teacher-dashboard.module.scss';
-
-export const TeacherDashboardPath = {
-  progress: '/progress',
-  textResponses: '/text_responses',
-  assessments: '/assessments',
-  projects: '/projects',
-  stats: '/stats',
-  manageStudents: '/manage_students',
-  loginInfo: '/login_info',
-  standardsReport: '/standards_report',
-  aiTutorChatMessages: '/ai_tutor',
-  navTestV2: '/nav_test_v2',
-};
-
-const teacherDashboardLinks = [
-  {
-    label: i18n.teacherTabProgress(),
-    url: TeacherDashboardPath.progress,
-  },
-  {
-    label: i18n.teacherTabStatsTextResponses(),
-    url: TeacherDashboardPath.textResponses,
-  },
-  {
-    label: i18n.teacherTabAssessments(),
-    url: TeacherDashboardPath.assessments,
-  },
-  {
-    label: i18n.teacherTabProjects(),
-    url: TeacherDashboardPath.projects,
-  },
-  {
-    label: i18n.teacherTabStats(),
-    url: TeacherDashboardPath.stats,
-  },
-  {
-    label: i18n.teacherTabManageStudents(),
-    url: TeacherDashboardPath.manageStudents,
-  },
-];
 
 export default function TeacherDashboardNavigation({links, showAITutorTab}) {
   const aiTutorLinks = showAITutorTab
     ? [
         {
           label: i18n.aiTutor(),
-          url: TeacherDashboardPath.aiTutorChatMessages,
+          url: TEACHER_DASHBOARD_PATHS.aiTutorChatMessages,
         },
       ]
     : [];
-  const renderedLinks = [...(links || teacherDashboardLinks), ...aiTutorLinks];
+  const renderedLinks = [
+    ...(links || LABELED_TEACHER_DASHBOARD_PATHS),
+    ...aiTutorLinks,
+  ];
 
   return (
     <div id="uitest-teacher-dashboard-nav" className={styles.navContainer}>
