@@ -423,7 +423,7 @@ describe('AiAssessmentBox', () => {
     );
 
     // survey is visible
-    expect(screen.queryAllByRole('checkbox')).toHaveLength(4);
+    expect(screen.getAllByRole('checkbox')).toHaveLength(4);
 
     // click checkbox
     const checkbox = screen.getByRole('checkbox', {
