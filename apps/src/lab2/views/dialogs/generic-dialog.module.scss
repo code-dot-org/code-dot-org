@@ -1,7 +1,7 @@
 @import 'color.scss';
 @import './dialog-manager.module.scss';
 
-.confirmDialog {
+.genericDialog {
   @extend %dialog;
   display: flex;
   flex-direction: column;
@@ -17,12 +17,30 @@
 }
 
 .buttonContainer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 20px;
+  .outerButtonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    .innerButtonContainer {
+      display : flex;
+      flex-direction : row;
+      justify-content : flex-end;
+    }
+  }
 
   .cancel {
+    @extend %button;
+    background-color: $neutral_light;
+    border-color: $neutral_dark;
+
+    &:hover {
+      background-color: $neutral_dark20;
+    }
+  }
+
+  .neutral {
     @extend %button;
     background-color: $neutral_light;
     border-color: $neutral_dark;

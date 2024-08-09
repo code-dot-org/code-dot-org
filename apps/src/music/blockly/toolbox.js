@@ -1,4 +1,4 @@
-import {getBlockMode} from '../appConfig';
+import AppConfig, {getBlockMode} from '../appConfig';
 import {BlockMode} from '../constants';
 import musicI18n from '../locale';
 
@@ -58,6 +58,11 @@ const toolboxBlocks = {
     id: BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2,
     kind: 'block',
     type: BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2,
+  },
+  [BlockTypes.PLAY_TUNE_AT_CURRENT_LOCATION_SIMPLE2]: {
+    id: BlockTypes.PLAY_TUNE_AT_CURRENT_LOCATION_SIMPLE2,
+    kind: 'block',
+    type: BlockTypes.PLAY_TUNE_AT_CURRENT_LOCATION_SIMPLE2,
   },
   [BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2]: {
     kind: 'block',
@@ -447,6 +452,9 @@ export function getToolbox(toolbox) {
             BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
             BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2,
             BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2,
+            ...(AppConfig.getValue('play-tune-block') === 'true'
+              ? [BlockTypes.PLAY_TUNE_AT_CURRENT_LOCATION_SIMPLE2]
+              : []),
             BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
           ],
           Control: [

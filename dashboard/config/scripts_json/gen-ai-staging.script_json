@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-staging",
-    "serialized_at": "2024-08-06 08:24:02 UTC",
+    "serialized_at": "2024-08-09 06:44:32 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -7697,81 +7697,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "gen-ai-customizing-project-L1_2024"
-        ],
-        "progression": "Model, Temperature, and Prompt"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-project-L1_2024"
-        ],
-        "lesson.key": "Project: Create a Personal Chatbot",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "a01e3c73-3b26-456d-b279-e49fb32d066b"
-      },
-      "level_keys": [
-        "gen-ai-customizing-project-L1_2024"
-      ]
-    },
-    {
-      "chapter": 80,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "gen-ai-customizing-project-L2_2024"
-        ],
-        "progression": "Retrieval"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-project-L2_2024"
-        ],
-        "lesson.key": "Project: Create a Personal Chatbot",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "107dca32-f0b3-4d66-91e6-e90ee09cd73f"
-      },
-      "level_keys": [
-        "gen-ai-customizing-project-L2_2024"
-      ]
-    },
-    {
-      "chapter": 81,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "gen-ai-customizing-project-L3_2024"
-        ],
-        "progression": "Model Card"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-project-L3_2024"
-        ],
-        "lesson.key": "Project: Create a Personal Chatbot",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "edc3bdd7-1ee9-4135-8304-06b4b46d470c"
-      },
-      "level_keys": [
-        "gen-ai-customizing-project-L3_2024"
-      ]
-    },
-    {
-      "chapter": 82,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "gen-ai-customizing-pilotv2-survey-lesson9_2024"
         ],
         "progression": "End-Of-Lesson Survey!"
@@ -7791,7 +7716,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 80,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7816,7 +7741,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 81,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7841,7 +7766,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 82,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7863,6 +7788,81 @@
       },
       "level_keys": [
         "gen-ai-customizing-pilotv2-survey-lesson10_2024"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project-L1_2024"
+        ],
+        "progression": "Model, Temperature, and Prompt"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-project-L1_2024"
+        ],
+        "lesson.key": "Project: Create a Personal Chatbot",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "a01e3c73-3b26-456d-b279-e49fb32d066b"
+      },
+      "level_keys": [
+        "gen-ai-customizing-project-L1_2024"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project-L2_2024"
+        ],
+        "progression": "Retrieval"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-project-L2_2024"
+        ],
+        "lesson.key": "Project: Create a Personal Chatbot",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "107dca32-f0b3-4d66-91e6-e90ee09cd73f"
+      },
+      "level_keys": [
+        "gen-ai-customizing-project-L2_2024"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-project-L3_2024"
+        ],
+        "progression": "Model Card"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-project-L3_2024"
+        ],
+        "lesson.key": "Project: Create a Personal Chatbot",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "edc3bdd7-1ee9-4135-8304-06b4b46d470c"
+      },
+      "level_keys": [
+        "gen-ai-customizing-project-L3_2024"
       ]
     },
     {
@@ -7897,231 +7897,6 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "gen-ai-customizing-finetuning-explore-L1_2024"
-        ],
-        "progression": "Explore"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-finetuning-explore-L1_2024"
-        ],
-        "lesson.key": "Fine Tuning - Exploration",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "b2854861-6ec4-486f-b95e-5b6f4d56c08a"
-      },
-      "level_keys": [
-        "gen-ai-customizing-finetuning-explore-L1_2024"
-      ]
-    },
-    {
-      "chapter": 88,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "gen-ai-customizing-finetuning-explore-L2V2_2024"
-        ],
-        "progression": "Predict"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-finetuning-explore-L2V2_2024"
-        ],
-        "lesson.key": "Fine Tuning - Exploration",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "6be30e70-2bd8-4774-b7b1-67cfff9b22ea"
-      },
-      "level_keys": [
-        "gen-ai-customizing-finetuning-explore-L2V2_2024"
-      ]
-    },
-    {
-      "chapter": 89,
-      "position": 3,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "gen-ai-customizing-finetuning-explore-L3V2_2024"
-        ],
-        "progression": "Predict"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-finetuning-explore-L3V2_2024"
-        ],
-        "lesson.key": "Fine Tuning - Exploration",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "6be30e70-2bd8-4774-b7b1-67cfff9b22ea"
-      },
-      "level_keys": [
-        "gen-ai-customizing-finetuning-explore-L3V2_2024"
-      ]
-    },
-    {
-      "chapter": 90,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "gen-ai-customizing-finetuning-explore-L4_2024"
-        ],
-        "progression": "Investigate"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-finetuning-explore-L4_2024"
-        ],
-        "lesson.key": "Fine Tuning - Exploration",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "0b801556-1983-43ee-b87a-b2cb44b1d482"
-      },
-      "level_keys": [
-        "gen-ai-customizing-finetuning-explore-L4_2024"
-      ]
-    },
-    {
-      "chapter": 91,
-      "position": 5,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "gen-ai-panels-finetune-overview_2024"
-        ],
-        "progression": "Investigate"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-panels-finetune-overview_2024"
-        ],
-        "lesson.key": "Fine Tuning - Exploration",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "0b801556-1983-43ee-b87a-b2cb44b1d482"
-      },
-      "level_keys": [
-        "gen-ai-panels-finetune-overview_2024"
-      ]
-    },
-    {
-      "chapter": 92,
-      "position": 6,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "gen-ai-customizing-finetuning-explore-choice_2024"
-        ],
-        "progression": "Investigate"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-finetuning-explore-choice_2024"
-        ],
-        "lesson.key": "Fine Tuning - Exploration",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "0b801556-1983-43ee-b87a-b2cb44b1d482"
-      },
-      "level_keys": [
-        "gen-ai-customizing-finetuning-explore-choice_2024"
-      ]
-    },
-    {
-      "chapter": 93,
-      "position": 7,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "gen-ai-customizing-finetuning-explore-L6_2024"
-        ],
-        "progression": "Check-In"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-finetuning-explore-L6_2024"
-        ],
-        "lesson.key": "Fine Tuning - Exploration",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "d26dd3ee-3592-4184-a6df-828f6804cc78"
-      },
-      "level_keys": [
-        "gen-ai-customizing-finetuning-explore-L6_2024"
-      ]
-    },
-    {
-      "chapter": 94,
-      "position": 8,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "gen-ai-customizing-finetuning-explore-L5_2024"
-        ],
-        "progression": "Make"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-finetuning-explore-L5_2024"
-        ],
-        "lesson.key": "Fine Tuning - Exploration",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "33305457-e01e-4be0-9e71-bc9600622cc4"
-      },
-      "level_keys": [
-        "gen-ai-customizing-finetuning-explore-L5_2024"
-      ]
-    },
-    {
-      "chapter": 95,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson8_2024"
-        ],
-        "progression": "End-Of-Lesson Survey!"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson8_2024"
-        ],
-        "lesson.key": "Fine Tuning - Exploration",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "76c66a35-a57a-45c6-a5f0-235ba54382c3"
-      },
-      "level_keys": [
-        "gen-ai-customizing-pilotv2-survey-lesson8_2024"
-      ]
-    },
-    {
-      "chapter": 96,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
           "gen-ai-customizing-usertesting-L1_2024"
         ],
         "progression": "User Testing"
@@ -8141,7 +7916,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 88,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8166,7 +7941,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 89,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8191,7 +7966,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 90,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -8216,7 +7991,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 91,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -8241,7 +8016,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 92,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -8263,6 +8038,231 @@
       },
       "level_keys": [
         "gen-ai-customizing-pilotv2-survey-lesson12_2024"
+      ]
+    },
+    {
+      "chapter": 93,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L1_2024"
+        ],
+        "progression": "Explore"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-L1_2024"
+        ],
+        "lesson.key": "Fine Tuning - Exploration",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "b2854861-6ec4-486f-b95e-5b6f4d56c08a"
+      },
+      "level_keys": [
+        "gen-ai-customizing-finetuning-explore-L1_2024"
+      ]
+    },
+    {
+      "chapter": 94,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L2V2_2024"
+        ],
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-L2V2_2024"
+        ],
+        "lesson.key": "Fine Tuning - Exploration",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "6be30e70-2bd8-4774-b7b1-67cfff9b22ea"
+      },
+      "level_keys": [
+        "gen-ai-customizing-finetuning-explore-L2V2_2024"
+      ]
+    },
+    {
+      "chapter": 95,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L3V2_2024"
+        ],
+        "progression": "Predict"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-L3V2_2024"
+        ],
+        "lesson.key": "Fine Tuning - Exploration",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "6be30e70-2bd8-4774-b7b1-67cfff9b22ea"
+      },
+      "level_keys": [
+        "gen-ai-customizing-finetuning-explore-L3V2_2024"
+      ]
+    },
+    {
+      "chapter": 96,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L4_2024"
+        ],
+        "progression": "Investigate"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-L4_2024"
+        ],
+        "lesson.key": "Fine Tuning - Exploration",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "0b801556-1983-43ee-b87a-b2cb44b1d482"
+      },
+      "level_keys": [
+        "gen-ai-customizing-finetuning-explore-L4_2024"
+      ]
+    },
+    {
+      "chapter": 97,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-panels-finetune-overview_2024"
+        ],
+        "progression": "Investigate"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-panels-finetune-overview_2024"
+        ],
+        "lesson.key": "Fine Tuning - Exploration",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "0b801556-1983-43ee-b87a-b2cb44b1d482"
+      },
+      "level_keys": [
+        "gen-ai-panels-finetune-overview_2024"
+      ]
+    },
+    {
+      "chapter": 98,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-choice_2024"
+        ],
+        "progression": "Investigate"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-choice_2024"
+        ],
+        "lesson.key": "Fine Tuning - Exploration",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "0b801556-1983-43ee-b87a-b2cb44b1d482"
+      },
+      "level_keys": [
+        "gen-ai-customizing-finetuning-explore-choice_2024"
+      ]
+    },
+    {
+      "chapter": 99,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L6_2024"
+        ],
+        "progression": "Check-In"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-L6_2024"
+        ],
+        "lesson.key": "Fine Tuning - Exploration",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "d26dd3ee-3592-4184-a6df-828f6804cc78"
+      },
+      "level_keys": [
+        "gen-ai-customizing-finetuning-explore-L6_2024"
+      ]
+    },
+    {
+      "chapter": 100,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-finetuning-explore-L5_2024"
+        ],
+        "progression": "Make"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-finetuning-explore-L5_2024"
+        ],
+        "lesson.key": "Fine Tuning - Exploration",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "33305457-e01e-4be0-9e71-bc9600622cc4"
+      },
+      "level_keys": [
+        "gen-ai-customizing-finetuning-explore-L5_2024"
+      ]
+    },
+    {
+      "chapter": 101,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson8_2024"
+        ],
+        "progression": "End-Of-Lesson Survey!"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson8_2024"
+        ],
+        "lesson.key": "Fine Tuning - Exploration",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "76c66a35-a57a-45c6-a5f0-235ba54382c3"
+      },
+      "level_keys": [
+        "gen-ai-customizing-pilotv2-survey-lesson8_2024"
       ]
     },
     {
@@ -9280,42 +9280,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "gen-ai-customizing-project-L1_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-project-L1_2024"
-        ],
-        "lesson.key": "Project: Create a Personal Chatbot",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "a01e3c73-3b26-456d-b279-e49fb32d066b"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "gen-ai-customizing-project-L2_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-project-L2_2024"
-        ],
-        "lesson.key": "Project: Create a Personal Chatbot",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "107dca32-f0b3-4d66-91e6-e90ee09cd73f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "gen-ai-customizing-project-L3_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-project-L3_2024"
-        ],
-        "lesson.key": "Project: Create a Personal Chatbot",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "edc3bdd7-1ee9-4135-8304-06b4b46d470c"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "gen-ai-customizing-pilotv2-survey-lesson9_2024",
         "script_level.level_keys": [
           "gen-ai-customizing-pilotv2-survey-lesson9_2024"
@@ -9364,6 +9328,42 @@
     },
     {
       "seeding_key": {
+        "level.key": "gen-ai-customizing-project-L1_2024",
+        "script_level.level_keys": [
+          "gen-ai-customizing-project-L1_2024"
+        ],
+        "lesson.key": "Project: Create a Personal Chatbot",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "a01e3c73-3b26-456d-b279-e49fb32d066b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-project-L2_2024",
+        "script_level.level_keys": [
+          "gen-ai-customizing-project-L2_2024"
+        ],
+        "lesson.key": "Project: Create a Personal Chatbot",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "107dca32-f0b3-4d66-91e6-e90ee09cd73f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-project-L3_2024",
+        "script_level.level_keys": [
+          "gen-ai-customizing-project-L3_2024"
+        ],
+        "lesson.key": "Project: Create a Personal Chatbot",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "edc3bdd7-1ee9-4135-8304-06b4b46d470c"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "gen-ai-customizing-pilotv2-survey-lesson11_2024",
         "script_level.level_keys": [
           "gen-ai-customizing-pilotv2-survey-lesson11_2024"
@@ -9372,6 +9372,78 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "gen-ai-staging",
         "activity_section.key": "bd7d98ba-c663-4973-9221-252fbb561104"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-usertesting-L1_2024",
+        "script_level.level_keys": [
+          "gen-ai-customizing-usertesting-L1_2024"
+        ],
+        "lesson.key": "User Feedback",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "1e4b9c3c-8ca5-4a43-b72f-afa91a93b107"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-usertesting-predict-L2_2024",
+        "script_level.level_keys": [
+          "gen-ai-customizing-usertesting-predict-L2_2024"
+        ],
+        "lesson.key": "User Feedback",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "cb8abbe4-0490-4409-bc38-3776c4c6ff78"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-usertesting-predict-L3_2024",
+        "script_level.level_keys": [
+          "gen-ai-customizing-usertesting-predict-L3_2024"
+        ],
+        "lesson.key": "User Feedback",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "cb8abbe4-0490-4409-bc38-3776c4c6ff78"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-usertesting-predict-L4_2024",
+        "script_level.level_keys": [
+          "gen-ai-customizing-usertesting-predict-L4_2024"
+        ],
+        "lesson.key": "User Feedback",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "cb8abbe4-0490-4409-bc38-3776c4c6ff78"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-usertesting-predict-L5_2024",
+        "script_level.level_keys": [
+          "gen-ai-customizing-usertesting-predict-L5_2024"
+        ],
+        "lesson.key": "User Feedback",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "cb8abbe4-0490-4409-bc38-3776c4c6ff78"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "gen-ai-customizing-pilotv2-survey-lesson12_2024",
+        "script_level.level_keys": [
+          "gen-ai-customizing-pilotv2-survey-lesson12_2024"
+        ],
+        "lesson.key": "User Feedback",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "57c6d861-70e7-4fc8-a5af-a90630e12f45"
       }
     },
     {
@@ -9480,78 +9552,6 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "gen-ai-staging",
         "activity_section.key": "76c66a35-a57a-45c6-a5f0-235ba54382c3"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "gen-ai-customizing-usertesting-L1_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-usertesting-L1_2024"
-        ],
-        "lesson.key": "User Feedback",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "1e4b9c3c-8ca5-4a43-b72f-afa91a93b107"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "gen-ai-customizing-usertesting-predict-L2_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-usertesting-predict-L2_2024"
-        ],
-        "lesson.key": "User Feedback",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "cb8abbe4-0490-4409-bc38-3776c4c6ff78"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "gen-ai-customizing-usertesting-predict-L3_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-usertesting-predict-L3_2024"
-        ],
-        "lesson.key": "User Feedback",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "cb8abbe4-0490-4409-bc38-3776c4c6ff78"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "gen-ai-customizing-usertesting-predict-L4_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-usertesting-predict-L4_2024"
-        ],
-        "lesson.key": "User Feedback",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "cb8abbe4-0490-4409-bc38-3776c4c6ff78"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "gen-ai-customizing-usertesting-predict-L5_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-usertesting-predict-L5_2024"
-        ],
-        "lesson.key": "User Feedback",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "cb8abbe4-0490-4409-bc38-3776c4c6ff78"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "gen-ai-customizing-pilotv2-survey-lesson12_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson12_2024"
-        ],
-        "lesson.key": "User Feedback",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "57c6d861-70e7-4fc8-a5af-a90630e12f45"
       }
     },
     {
@@ -10555,6 +10555,19 @@
       }
     },
     {
+      "name": "Warm Up Cutouts",
+      "url": "https://docs.google.com/document/d/11ef6pISlj5ov3ZmKO7Pbqd1wiRcK7FHzk7A3zetqBMw/edit",
+      "key": "warm_up_cutouts",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "warm_up_cutouts"
+      }
+    },
+    {
       "name": "What Is Machine Learning?",
       "url": "https://www.youtube.com/watch?v=KHbwOetbmbs",
       "key": "what_is_machine_learning_",
@@ -10651,6 +10664,12 @@
       "seeding_key": {
         "lesson.key": "Embeddings: How They're Created",
         "resource.key": "how_embeddings_are_made_version_b_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Embeddings: How They're Created",
+        "resource.key": "warm_up_cutouts"
       }
     },
     {
