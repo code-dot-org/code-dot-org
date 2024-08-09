@@ -12,12 +12,13 @@ import Button from '@cdo/apps/componentLibrary/button/Button';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 
 import AITutorTesterSampleColumns from './AITutorTesterSampleColumns';
+import {availableEndpoints, genAIEndpointIds, modelCardInfo} from './constants';
 
 import styles from './ai-tutor-tester.module.scss';
 
 /**
  * Renders a series of buttons that allow levelbuilders to upload a CSV of
- * student inputs and get back AI Tutor responses in bulk.
+ * student inputs and get back AI responses in bulk.
  */
 
 interface AIInteraction {
@@ -38,44 +39,6 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
   const [selectedEndpoint, setSelectedEndpoint] = useState<string>('ai-tutor');
   const [responseCount, setResponseCount] = useState<number>(0);
   const [responsesPending, setResponsesPending] = useState<boolean>(false);
-
-  const endpoints = [
-    {
-      id: 'ai-tutor',
-      name: 'AI Tutor + Webpurify',
-    },
-    {
-      id: 'llm-guard',
-      name: 'LLM Guard',
-    },
-  ];
-
-  const genAIEndpoints = [
-    {
-      id: 'gen-ai-mistral-7b-inst-v01',
-      name: 'Mistral Base + Webpurify',
-    },
-    {
-      id: 'gen-ai-arithmo2-mistral-7b',
-      name: 'Mistral Arithmo + Webpurify',
-    },
-    {
-      id: 'gen-ai-biomistral-7b',
-      name: 'Mistral Biomistral + Webpurify',
-    },
-    {
-      id: 'gen-ai-karen-creative-mistral-7b',
-      name: 'Mistral Karen + Webpurify',
-    },
-    {
-      id: 'gen-ai-mistral-pirate-7b',
-      name: 'Mistral Pirate + Webpurify',
-    },
-  ];
-
-  const genAIEndpointIds = genAIEndpoints.map(endpoint => endpoint.id);
-
-  const availableEndpoints = endpoints.concat(genAIEndpoints);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files ? event.target.files[0] : null;
@@ -122,19 +85,10 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
       status: 'ok',
       timestamp: new Date().getTime(),
     };
-    // Dummy data to appease the model card info type requirements in the real tool.
-    const modelCardInfo = {
-      botName: 'Mistral',
-      description: 'Mistral Model',
-      intendedUse: 'General AI',
-      limitationsAndWarnings: 'None',
-      testingAndEvaluation: 'None',
-      exampleTopics: [],
-      isPublished: false,
-    };
+    const temperature = row.temperature ? row.temperature : 0.8;
     const aiCustomizations = {
       selectedModelId: selectedEndpoint,
-      temperature: 0.8,
+      temperature: temperature,
       systemPrompt: systemPrompt,
       retrievalContexts: [],
       modelCardInfo: modelCardInfo,

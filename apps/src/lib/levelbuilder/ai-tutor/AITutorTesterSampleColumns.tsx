@@ -1,5 +1,7 @@
 import React from 'react';
 
+import {genAIEndpointIds} from './constants';
+
 import style from './ai-tutor-tester.module.scss';
 
 /**
@@ -53,7 +55,7 @@ const AITutorTesterSampleColumns: React.FC<SampleColumnsProps> = ({
 
   if (endpoint === 'ai-tutor') {
     rows = rows.concat(basicRows, aiTutorRows);
-  } else if (endpoint === 'gen-ai-mistral-7b-inst-v01') {
+  } else if (genAIEndpointIds.includes(endpoint)) {
     rows = rows.concat(basicRows, genAIRows);
   }
 
