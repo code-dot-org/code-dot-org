@@ -3,12 +3,12 @@ class AichatRequestChatCompletionJob < ApplicationJob
 
   before_enqueue do |job|
     request = job.arguments.first[:request]
-    request.update(execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:QUEUED])
+    request.update!(execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:QUEUED])
   end
 
   before_perform do |job|
     request = job.arguments.first[:request]
-    request.update(execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:RUNNING])
+    request.update!(execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:RUNNING])
   end
 
   # Catch any exceptions that occur during the job and update the request status accordingly
@@ -18,13 +18,16 @@ class AichatRequestChatCompletionJob < ApplicationJob
     end
 
     request = arguments.first[:request]
-    request.update(response: exception.message, execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE])
+    request.update!(response: exception.message, execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE])
     Honeybadger.notify(
       "AichatRequestChatCompletionJob failed with unexpected error: #{exception.message}",
       context: {
         request: request.to_json
       }
     )
+
+    # Raise an exception to notify our system of the failed job.
+    raise "AichatRequestChatCompletionJob failed with unexpected error: #{exception.message}. Context: #{request.to_json}"
   end
 
   def perform(request:, locale:)
@@ -33,7 +36,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
     new_message = JSON.parse(request.new_message, {symbolize_names: true})
 
     status, response = get_execution_status_and_response(model_customizations, stored_messages, new_message, locale)
-    request.update(response: response, execution_status: status)
+    request.update!(response: response, execution_status: status)
   end
 
   private def get_execution_status_and_response(model_customizations, stored_messages, new_message, locale)
