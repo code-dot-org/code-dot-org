@@ -47,7 +47,7 @@ const StartOverDialog: React.FunctionComponent<StartOverDialogProps> = ({
       buttons={{
         confirm: {
           callback: handleConfirm,
-          text: commonI18n.skipToProject(),
+          text: commonI18n.startOver(),
         },
         cancel: {
           callback: handleCancel,

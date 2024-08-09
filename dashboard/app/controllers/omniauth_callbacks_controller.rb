@@ -588,6 +588,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         event_name: 'lti_user_signin',
         metadata: metadata,
       )
+      flash[:notice] = I18n.t('lti.account_linking.successfully_linked')
       sign_in_and_redirect user and return
     end
 
