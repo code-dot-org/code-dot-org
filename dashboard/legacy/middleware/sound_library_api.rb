@@ -27,12 +27,10 @@ class SoundLibraryApi < Sinatra::Base
   #
   get %r{/api/v1/sound-library/(.+)} do |sound_name|
     not_found if sound_name.empty?
-    puts "looking for sound #{sound_name}"
 
     if CDO.aws_s3_emulated?
       # For development environments, we look to see if we should lazily populate the
       # local bucket first.
-      puts "populating local bucket"
       AWS::S3.populate_local_bucket(SOUND_LIBRARY_BUCKET, sound_name)
     end
 
@@ -87,7 +85,6 @@ class SoundLibraryApi < Sinatra::Base
     if encoded_policy.blank? && (CDO.aws_emulated? || CDO.aws_s3_emulated?)
       encoded_policy = request.cookies['CloudFront-Policy-Emulated'].to_s
     end
-    puts "cookie policy? #{encoded_policy}"
     return false unless encoded_policy && !encoded_policy.empty?
     policy_json = Base64.decode64(encoded_policy.tr('-_~', '+=/'))
     return false unless policy_json

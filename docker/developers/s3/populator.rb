@@ -70,7 +70,6 @@ module Populator
 
     url = "#{SOURCE_DOMAIN}#{api_path}/#{path}"
     to = local_path(path)
-    puts "to: #{to} base_path: #{base_path}"
     relative_path = File.path(Pathname.new(to).relative_path_from(base_path))
     if File.exist?(to)
       data = File.read(to)
@@ -82,9 +81,7 @@ module Populator
       end
 
       # Write out file
-      puts "Writing #{bucket_name}:#{relative_path}"
       data = response.body
-      puts "Writing #{data.length} bytes"
       File.open(to, 'w+') do |f|
         f.binmode
         f.write(data)

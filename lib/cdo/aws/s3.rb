@@ -99,7 +99,6 @@ module AWS
       until class_parts.empty?
         begin
           base = [*class_parts, 'Populate'].join('::').constantize
-          puts base
           relative_path << path_parts.pop
           break if base
         rescue NameError
@@ -131,7 +130,6 @@ module AWS
     # @param [String] key
     # @return [Boolean]
     def self.exists_in_bucket(bucket, key)
-      puts "bucket #{bucket} key #{key}"
       create_client.head_object(bucket: bucket, key: key)
       return true
     rescue Aws::S3::Errors::NotFound, Aws::S3::Errors::Forbidden
