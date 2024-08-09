@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-02 22:04:46 UTC",
+    "serialized_at": "2024-08-07 21:26:25 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -125,7 +125,7 @@
       "relative_position": 1,
       "properties": {
         "overview": "**What does software engineering mean to me?**\n\nBelieving in one's own software engineering identity develops confidence and perseverance. In this lesson, students are introduced to key characteristics and skills of software engineers and explore common perceptions. Students realize that they have many of the same characteristics and skills as software engineers and discover their software engineering identity.",
-        "preparation": "* Gather sticky notes (at least 20 for each student)\n* Print copies of the Software Engineering Skills handout (one half sheet for each student)\n* Preview the *Change the Face of Computer Science* and *Software Engineering: Skills and Characteristics* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-1-welcome-to-csa/37855) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Gather sticky notes (at least 20 for each student)\n* Print copies of the Software Engineering Skills handout (one half sheet for each student)\n* Preview the *Change the Face of Computer Science* and *Software Engineering: Skills and Characteristics* videos",
         "student_overview": "**What does software engineering mean to me?**\n\nBelieving in one's own software engineering identity develops confidence and perseverance. In this lesson, you are introduced to key characteristics and skills of software engineers and explore common perceptions. You have many of the same characteristics and skills as software engineers, which you realize as you discover your software engineering identity."
       },
       "seeding_key": {
@@ -142,9 +142,9 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**What are some of the primary components of a Java program?**\n\nStudents are introduced to the Java Lab programming environment and its features. Students encounter their first Java program and explore the structure of a Java source code file. While investigating a simple program, students discover key components of a Java source code file, including the class header, the `main` method, syntax, and comments. Students then use their new knowledge of Java syntax to find and fix syntax errors.",
-        "preparation": "* **(Optional)** Print copies of the U1L2 Guided Notes (one for each student)\n* Print copies of the Unit 1 Guide (one for each student)\n* Print copies of the Investigate: Working with Java Files handout (one for each pair of students)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-2-java-lab/37856) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "**What are some of the primary components of a Java program?**\n\nIn this lesson, you are introduced to the Java Lab programming environment and its features. You encounter your first Java program and explore the structure of a Java source code file. While investigating a simple program, you discover key components of a Java source code file, including the class header, the `main` method, syntax, and comments. You then use your new knowledge of Java syntax to find and fix syntax errors."
+        "overview": "**What are some of the primary components of a Java program?**\n\nStudents are introduced to the Java Lab Integrated Development Environment (IDE) and its features. Students encounter their first Java program and explore the structure of a Java source code file. While investigating a simple program, students discover key components of a Java source code file, including the class header, the `main` method, syntax, and comments. Students then use their new knowledge of Java syntax to find and fix syntax errors.",
+        "preparation": "* **(Optional)** Print copies of the U1L2 Guided Notes (one for each student)\n* **(Optional)** Print copies of the Unit 1 Guide (one for each student)\n* Print copies of the Investigate: Working with Java Files handout (one for each pair of students)",
+        "student_overview": "**What are some of the primary components of a Java program?**\n\nIn this lesson, you are introduced to the Java Lab Integrated Development Environment (IDE) and its features. You encounter your first Java program and explore the structure of a Java source code file. While investigating a simple program, you discover key components of a Java source code file, including the class header, the `main` method, syntax, and comments. You then use your new knowledge of Java syntax to find and fix syntax errors."
       },
       "seeding_key": {
         "lesson.key": "Java Lab",
@@ -161,7 +161,7 @@
       "relative_position": 3,
       "properties": {
         "overview": "**What is object-oriented programming?**\n\nStudents are introduced to The Neighborhood and learn about the organization of the grid, potential obstacles, and some of the classes that make up The Neighborhood. Students begin to develop an understanding of classes and objects in Java and identify the components and relationship between these concepts. Students then explore the `Painter` class to identify the attributes and behavior that a `Painter` object has and can do and consider how they might use a `Painter` object in The Neighborhood.",
-        "preparation": "* **(Optional)** Print copies of the U1L3 Guided Notes (one for each student)\n* Preview the *Object-Oriented Programming* video\n* Print copies of The Painter handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-1-3-classes-and-objects/37857) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the U1L3 Guided Notes (one for each student)\n* Preview the *Object-Oriented Programming* video\n* Print copies of The Painter handout (one for each student)",
         "student_overview": "**What is object-oriented programming?**\n\nIn this lesson, you are introduced to The Neighborhood and learn about the organization of the grid, potential obstacles, and some of the classes that make up The Neighborhood. You begin to develop an understanding of classes and objects in Java and identify the components and relationship between these concepts. You then explore the `Painter` class to identify the attributes and behavior that a `Painter` object has and can do and consider how they might use a `Painter` object in The Neighborhood."
       },
       "seeding_key": {
@@ -1376,7 +1376,7 @@
       "key": "212e7f2d-637a-4bf0-9fbf-c7764996d6fe",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display: Show the video – *Change the Face of Computer Science*.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Change the Face of Computer Science*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1390,23 +1390,33 @@
       }
     },
     {
-      "key": "a068899c-f5d9-42a0-9194-03bc4e89a72c",
-      "position": 1,
+      "key": "5835e44e-4b87-4ab7-ad3a-2507a2425df9",
+      "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
-        "duration": "10",
-        "name": "Design Thinking: Group Brainstorm"
       },
       "seeding_key": {
-        "activity_section.key": "a068899c-f5d9-42a0-9194-03bc4e89a72c",
-        "lesson_activity.key": "0b345016-4350-4b7d-84af-9124b56f01f4"
+        "activity_section.key": "5835e44e-4b87-4ab7-ad3a-2507a2425df9",
+        "lesson_activity.key": "d8e13991-0bf7-468a-a0ac-592810299655"
+      }
+    },
+    {
+      "key": "7e12167c-b9c3-4e93-b833-3838854286ea",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "7e12167c-b9c3-4e93-b833-3838854286ea",
+        "lesson_activity.key": "d8e13991-0bf7-468a-a0ac-592810299655"
       }
     },
     {
       "key": "d0cecae2-4d39-4847-9782-b341bf88ffff",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "You won't just explore software engineering in this class – you will be software engineers.\n\nWe will use a common design thinking activity known as group brainstorming to gather some ideas about software engineering.",
+        "duration": "10",
+        "name": "Design Thinking: Group Brainstorm",
         "remarks": true
       },
       "seeding_key": {
@@ -1416,7 +1426,7 @@
     },
     {
       "key": "722ec188-2dda-439c-bd45-7cc57106d36a",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student at least 20 sticky notes.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write a word or phrase on a sticky note in response to the prompt.",
         "tips": [
@@ -1428,6 +1438,16 @@
       },
       "seeding_key": {
         "activity_section.key": "722ec188-2dda-439c-bd45-7cc57106d36a",
+        "lesson_activity.key": "0b345016-4350-4b7d-84af-9124b56f01f4"
+      }
+    },
+    {
+      "key": "595c824a-cc7e-4886-ad99-2a84bd100019",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "595c824a-cc7e-4886-ad99-2a84bd100019",
         "lesson_activity.key": "0b345016-4350-4b7d-84af-9124b56f01f4"
       }
     },
@@ -1526,7 +1546,7 @@
       "key": "b4de12fa-b2b8-4310-8302-8a534c99d983",
       "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define the term ***software engineer***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Display: Show the video – *Software Engineering: Skills and Characteristics*.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define the term ***software engineer***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Software Engineering: Skills and Characteristics*.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1540,8 +1560,18 @@
       }
     },
     {
-      "key": "309f4ec1-6b2a-46eb-a070-ba279c9a87db",
+      "key": "eba2a725-e393-4254-a7c1-1ab0d2b57a8d",
       "position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "eba2a725-e393-4254-a7c1-1ab0d2b57a8d",
+        "lesson_activity.key": "0b345016-4350-4b7d-84af-9124b56f01f4"
+      }
+    },
+    {
+      "key": "309f4ec1-6b2a-46eb-a070-ba279c9a87db",
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What skills and characteristics do you think are important for software engineering?*\n\n**Discussion Goal:** Students recall skills and characteristics discussed in the video, such as problem-solving, collaboration, creativity, and curiosity. Students share ideas about why these characteristics and skills are important for software engineering.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When have you shown these characteristics inside or outside of school? How?*\n\n**Discussion Goal:** Students realize they have already displayed many of the characteristics and skills of a software engineer in school and at home."
       },
@@ -1551,11 +1581,22 @@
       }
     },
     {
-      "key": "f0725768-a9ce-47ef-a56e-bfd0b8549ef4",
+      "key": "485eff72-4902-47af-b7ec-adc8bb0f0fce",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "name": "Developing a Software Engineering Identity"
+      },
+      "seeding_key": {
+        "activity_section.key": "485eff72-4902-47af-b7ec-adc8bb0f0fce",
+        "lesson_activity.key": "bdecb04c-2b8e-4798-9e39-15515b121750"
+      }
+    },
+    {
+      "key": "f0725768-a9ce-47ef-a56e-bfd0b8549ef4",
+      "position": 2,
+      "properties": {
         "description": "These characteristics and skills are the most important parts of being a software engineer. You may not realize it yet, but you already have the mindset of a software engineer.",
-        "name": "Developing a Software Engineering Identity",
         "remarks": true
       },
       "seeding_key": {
@@ -1565,7 +1606,7 @@
     },
     {
       "key": "55e706b3-d1df-49d2-b5f3-c179ef122dad",
-      "position": 2,
+      "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Software Engineering Characteristics handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to choose one software engineering characteristic or skill that they feel is their strongest and one that they feel they have the most room for growth.",
         "tips": [
@@ -1581,10 +1622,20 @@
       }
     },
     {
-      "key": "815b6ef0-c742-45d0-8e8f-a99b5c57326e",
-      "position": 3,
+      "key": "995b4c23-b4c5-44c6-9fe7-e93874badb08",
+      "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+      },
+      "seeding_key": {
+        "activity_section.key": "995b4c23-b4c5-44c6-9fe7-e93874badb08",
+        "lesson_activity.key": "bdecb04c-2b8e-4798-9e39-15515b121750"
+      }
+    },
+    {
+      "key": "815b6ef0-c742-45d0-8e8f-a99b5c57326e",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
         "tips": [
           {
             "type": "teachingTip",
@@ -1628,8 +1679,18 @@
       }
     },
     {
-      "key": "52f50f4c-bc48-4d31-849e-54a5b28b5c52",
+      "key": "3fc108aa-9e3e-4513-a586-edfdbd855bec",
       "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3fc108aa-9e3e-4513-a586-edfdbd855bec",
+        "lesson_activity.key": "e1263781-2389-45b0-9315-5abed9932bd8"
+      }
+    },
+    {
+      "key": "52f50f4c-bc48-4d31-849e-54a5b28b5c52",
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Play the music clip to cue the Give One, Get One activity and direct students to participate in a Give One, Get One.",
         "tips": [
@@ -1645,10 +1706,20 @@
       }
     },
     {
-      "key": "ba30db10-e65a-4096-bc9c-4f4d97a1ea38",
-      "position": 4,
+      "key": "9be9c260-8e74-4c26-bbce-34dee9b43e5b",
+      "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you learn from each other?*\n* *How did these ideas and thoughts contribute to your identity as a software engineer?*\n\n**Discussion Goal:** Students share the ideas they gathered and identify patterns or common views. Students identify characteristics of a software engineer that programmers on the ENIAC had and how they share or demonstrate these same characteristics in their personal lives."
+      },
+      "seeding_key": {
+        "activity_section.key": "9be9c260-8e74-4c26-bbce-34dee9b43e5b",
+        "lesson_activity.key": "e1263781-2389-45b0-9315-5abed9932bd8"
+      }
+    },
+    {
+      "key": "ba30db10-e65a-4096-bc9c-4f4d97a1ea38",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did you learn from each other?*\n* *How did these ideas and thoughts contribute to your identity as a software engineer?*\n\n**Discussion Goal:** Students share the ideas they gathered and identify patterns or common views. Students identify characteristics of a software engineer that programmers on the ENIAC had and how they share or demonstrate these same characteristics in their personal lives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "ba30db10-e65a-4096-bc9c-4f4d97a1ea38",
@@ -1656,23 +1727,12 @@
       }
     },
     {
-      "key": "207fb6a3-3cd5-457d-a184-22d223ec8052",
+      "key": "edf64dc8-90a4-4db9-a081-9de55d64e02d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "description": "Code can be written in any text editor; however, an Integrated Development Environment (IDE) is often used to write programs because it provides tools for a programmer to write, compile, and run code. In this class, we will use Java Lab as our IDE to write our code. We will explore Java Lab's features and learn how Java files are structured.",
         "duration": "5",
-        "name": "Introduction"
-      },
-      "seeding_key": {
-        "activity_section.key": "207fb6a3-3cd5-457d-a184-22d223ec8052",
-        "lesson_activity.key": "d199cd03-da20-4f03-b3fb-11d37c479dcc"
-      }
-    },
-    {
-      "key": "edf64dc8-90a4-4db9-a081-9de55d64e02d",
-      "position": 2,
-      "properties": {
-        "description": "Software engineers use various tools to write and test programs. In this class, we will use Java Lab as our programming tool to write our code. We will explore Java Lab's features and learn how Java files are structured.",
+        "name": "Introduction",
         "remarks": true
       },
       "seeding_key": {
@@ -1682,9 +1742,9 @@
     },
     {
       "key": "edc43cfd-3ace-429b-9b47-12561846dd27",
-      "position": 3,
+      "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce Java Lab.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***Integrated Development Environment (IDE)***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce Java Lab.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1694,6 +1754,16 @@
       },
       "seeding_key": {
         "activity_section.key": "edc43cfd-3ace-429b-9b47-12561846dd27",
+        "lesson_activity.key": "d199cd03-da20-4f03-b3fb-11d37c479dcc"
+      }
+    },
+    {
+      "key": "8ddcb74a-34a2-4a18-9c32-26fd5674d7bd",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "8ddcb74a-34a2-4a18-9c32-26fd5674d7bd",
         "lesson_activity.key": "d199cd03-da20-4f03-b3fb-11d37c479dcc"
       }
     },
@@ -1741,8 +1811,18 @@
       }
     },
     {
-      "key": "5c6df225-cd7b-4de4-8722-d79ba80f2d3d",
+      "key": "6436043c-2a00-49b9-bcbf-1f40ec62725e",
       "position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6436043c-2a00-49b9-bcbf-1f40ec62725e",
+        "lesson_activity.key": "d199cd03-da20-4f03-b3fb-11d37c479dcc"
+      }
+    },
+    {
+      "key": "5c6df225-cd7b-4de4-8722-d79ba80f2d3d",
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code and their responses on the Investigate: Working with Java Files handout."
       },
@@ -1753,7 +1833,7 @@
     },
     {
       "key": "f4e9142c-6955-4520-81a4-f204991aaf05",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "A Java program is made up of one or more Java source code files. Each source code file gives instructions to Java to tell it what we want it to do and the order we want the tasks to execute. When we write Java source code files, we have to be sure to follow certain rules so our program runs as expected.",
         "remarks": true
@@ -1765,9 +1845,9 @@
     },
     {
       "key": "505b6575-c661-4226-809f-c34a5a645e1e",
-      "position": 9,
+      "position": 10,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the Java syntax rules and define ***syntax***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how Java source code files are named.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***class header***.\n\n**Do This:** Explain the syntax and purpose of the `main` method:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The purpose of the `main` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Java looks for the `main` method to determine where to start running the program\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `String[] args` in the `main` method\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***comment***."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the Java syntax rules and define ***syntax***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how Java source code files are named.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***class header***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain that a block of code is any section of code that is enclosed in curly braces.\n\n**Do This:** Explain the syntax and purpose of the `main` method:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The purpose of the `main` method\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Java looks for the `main` method to determine where to start running the program\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The `String[] args` in the `main` method\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***comment***."
       },
       "seeding_key": {
         "activity_section.key": "505b6575-c661-4226-809f-c34a5a645e1e",
@@ -1776,7 +1856,7 @@
     },
     {
       "key": "e202c97d-c70c-460a-a9cf-df1387523648",
-      "position": 10,
+      "position": 11,
       "properties": {
         "description": "When we are writing code, we can sometimes encounter errors that prevent our programs from running. This is a normal part of the programming process. In fact, software engineers spend a lot of time finding and fixing errors in their own programs!",
         "duration": "10",
@@ -1790,7 +1870,7 @@
     },
     {
       "key": "7945b715-7c5c-4246-95f7-dadeeabda1df",
-      "position": 11,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you think it means for a program to have a syntax error?*\n\n**Discussion Goal:** Students make predictions about the definition of syntax error based on what they know about syntax. Students may share examples that might cause a syntax error, such as forgetting a semicolon or writing the `main` method incorrectly.",
         "tips": [
@@ -1806,10 +1886,20 @@
       }
     },
     {
-      "key": "57e2fdc8-3514-417a-8879-245d0bcd3154",
-      "position": 12,
+      "key": "ec2d3221-4ff6-408a-bd82-baceb4cad6a2",
+      "position": 13,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***syntax error***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3 and 4. Students complete Check for Understanding on Level 3, then continue to Level 4 to complete a choice level to find and fix the syntax errors in the program.",
+      },
+      "seeding_key": {
+        "activity_section.key": "ec2d3221-4ff6-408a-bd82-baceb4cad6a2",
+        "lesson_activity.key": "d199cd03-da20-4f03-b3fb-11d37c479dcc"
+      }
+    },
+    {
+      "key": "57e2fdc8-3514-417a-8879-245d0bcd3154",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***syntax error***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***compiler***.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 3 on Code Studio to complete Levels 3 and 4. Students complete Check for Understanding on Level 3, then continue to Level 4 to complete a choice level to find and fix the syntax errors in the program.",
         "progression_name": "Practice: Syntax Errors",
         "tips": [
           {
@@ -1844,7 +1934,7 @@
       "key": "fc4f3ee3-a4ad-47db-b83a-3d4d10f95467",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as syntax, class headers, and the `main` method. Students also identify the features in Java Lab that allow them to write, run, and test their programs. They should realize that the knowledge they gained in this lesson provides them a foundation to build on to develop more complex programs and make predictions about what they might learn next.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and vocabulary they learned in this lesson, such as syntax, class headers, and the `main` method. Students also identify the features in Java Lab that allow them to write, run, and test their programs. They should realize that the knowledge they gained in this lesson provides them a foundation to build on to develop more complex programs and make predictions about what they might learn next.",
         "tips": [
           {
             "type": "teachingTip",
@@ -1858,8 +1948,18 @@
       }
     },
     {
-      "key": "572ff1c3-8534-43b7-8cc3-3ac86bf8e7b6",
+      "key": "3ad05208-9dad-42da-8bdd-53802dabbd37",
       "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3ad05208-9dad-42da-8bdd-53802dabbd37",
+        "lesson_activity.key": "bb3006c5-192e-4f1a-a263-0dfa0b99b3db"
+      }
+    },
+    {
+      "key": "572ff1c3-8534-43b7-8cc3-3ac86bf8e7b6",
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
@@ -1870,7 +1970,7 @@
     },
     {
       "key": "9110725d-d298-45a2-82a7-66d18327d659",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "---"
       },
@@ -1881,7 +1981,7 @@
     },
     {
       "key": "33f2df99-6aae-47b1-b621-f71cf5854d41",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -1911,10 +2011,20 @@
       }
     },
     {
-      "key": "b48b14e0-e147-457f-bce1-b19aed559e05",
+      "key": "90d83645-9417-47c5-9c3c-e25742339e7e",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What elements does everyone's house have in common?*\n\n**Discussion Goal:** Students identify common elements in the drawings, such as having a door, windows, or a roof.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What information might we include if we were to create a blueprint for what all houses should have?*\n\n**Discussion Goal:** Students suggest that a blueprint for all houses might specify a front door, the number of windows, the shape of the building, or the shape of the roof."
+      },
+      "seeding_key": {
+        "activity_section.key": "90d83645-9417-47c5-9c3c-e25742339e7e",
+        "lesson_activity.key": "29bbadf0-2c04-485c-8bf3-a11c3731527d"
+      }
+    },
+    {
+      "key": "b48b14e0-e147-457f-bce1-b19aed559e05",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What elements does everyone's house have in common?*\n\n**Discussion Goal:** Students identify common elements in the drawings, such as having a door, windows, or a roof.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What information might we include if we were to create a blueprint for what all houses should have?*\n\n**Discussion Goal:** Students suggest that a blueprint for all houses might specify a front door, the number of windows, the shape of the building, or the shape of the roof.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day."
       },
       "seeding_key": {
         "activity_section.key": "b48b14e0-e147-457f-bce1-b19aed559e05",
@@ -1922,23 +2032,12 @@
       }
     },
     {
-      "key": "144e9cc1-f814-4d57-9079-96a20c8419d9",
+      "key": "66b92584-207c-42b2-a477-2d0f6d061e3e",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
-        "duration": "15",
-        "name": "Introduction"
-      },
-      "seeding_key": {
-        "activity_section.key": "144e9cc1-f814-4d57-9079-96a20c8419d9",
-        "lesson_activity.key": "8d312229-1432-45a2-8230-51e086f9886a"
-      }
-    },
-    {
-      "key": "66b92584-207c-42b2-a477-2d0f6d061e3e",
-      "position": 2,
-      "properties": {
         "description": "Software engineers have to make decisions similar to the ones you just made to decide what elements are important to represent in a program. When you decide what elements all houses should have, you establish a blueprint for building houses that someone can use to ensure every house they build has these elements. Today we're going to learn how this process works in Java.",
+        "duration": "15",
+        "name": "Introduction",
         "remarks": true
       },
       "seeding_key": {
@@ -1948,7 +2047,7 @@
     },
     {
       "key": "226b19b5-d008-4193-b948-95779a4811c6",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Object-Oriented Programming*.",
         "tips": [
@@ -1960,6 +2059,16 @@
       },
       "seeding_key": {
         "activity_section.key": "226b19b5-d008-4193-b948-95779a4811c6",
+        "lesson_activity.key": "8d312229-1432-45a2-8230-51e086f9886a"
+      }
+    },
+    {
+      "key": "db34cac6-601b-4e26-8f16-b0403e2a7b84",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "db34cac6-601b-4e26-8f16-b0403e2a7b84",
         "lesson_activity.key": "8d312229-1432-45a2-8230-51e086f9886a"
       }
     },
@@ -2004,8 +2113,18 @@
       }
     },
     {
-      "key": "21ae235b-cdad-46f5-9b41-56779209cd85",
+      "key": "689b82be-4d72-43fc-8b70-4dd4a1fb367a",
       "position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "689b82be-4d72-43fc-8b70-4dd4a1fb367a",
+        "lesson_activity.key": "8d312229-1432-45a2-8230-51e086f9886a"
+      }
+    },
+    {
+      "key": "21ae235b-cdad-46f5-9b41-56779209cd85",
+      "position": 8,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain the meaning of an instance of a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Do you think there is a limit to how many objects you can create from a class? Why or why not?*\n\n**Discussion Goal:** Students share their thoughts about whether or not they think there is a limit and justify their reasoning. Students should realize that they can create multiple objects from a class because the class is a blueprint for how objects should be created."
       },
@@ -2016,7 +2135,7 @@
     },
     {
       "key": "9d1f4a18-1055-4c23-b2b5-50af2619c889",
-      "position": 8,
+      "position": 9,
       "properties": {
         "description": "When we identified elements that all houses should have, we were choosing things that all houses should have. This blueprint would allow someone to create house objects that each have their own versions of these elements.",
         "duration": "15",
@@ -2030,7 +2149,7 @@
     },
     {
       "key": "78a5ab68-cbdb-4b0c-87b8-e20cd5c0595e",
-      "position": 9,
+      "position": 10,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce The Neighborhood.",
         "tips": [
@@ -2046,8 +2165,18 @@
       }
     },
     {
+      "key": "e0133963-10b5-48f8-8fbd-40321a3c1450",
+      "position": 11,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "e0133963-10b5-48f8-8fbd-40321a3c1450",
+        "lesson_activity.key": "8d312229-1432-45a2-8230-51e086f9886a"
+      }
+    },
+    {
       "key": "88a0c0d7-346d-4317-8d72-17d2a3e2f034",
-      "position": 10,
+      "position": 12,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Consider your own neighborhood and the things that are in it. If you were to represent your neighborhood as a collection of classes, what classes would your neighborhood consist of?*\n\n**Discussion Goal:** Students make suggestions about how their neighborhood might be represented in a program, such as creating classes to represent a house, a family, a park, and a street light.",
         "tips": [
@@ -2063,8 +2192,18 @@
       }
     },
     {
+      "key": "24e5a092-e0d5-4adf-be17-ac17673ccad8",
+      "position": 13,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "24e5a092-e0d5-4adf-be17-ac17673ccad8",
+        "lesson_activity.key": "8d312229-1432-45a2-8230-51e086f9886a"
+      }
+    },
+    {
       "key": "1dd9963a-def2-4a9f-96b7-aa2c160c5d71",
-      "position": 11,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What else could you represent in a Java program as a class?*\n\n**Discussion Goal:** Students share examples of real or imagined objects they could represent as a class, such as a book, a sport, or player in a game.\n\n**Group:** Place students in pairs.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the The Painter handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio to investigate the program with their partners and complete The Painter handout.",
         "progression_name": "Investigate and Modify: The Painter Class",
@@ -2081,8 +2220,18 @@
       }
     },
     {
+      "key": "09fa9fb9-277b-47af-9abb-701c8e65ab7b",
+      "position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "09fa9fb9-277b-47af-9abb-701c8e65ab7b",
+        "lesson_activity.key": "8d312229-1432-45a2-8230-51e086f9886a"
+      }
+    },
+    {
       "key": "2c2e657f-0434-4f30-9e39-32a076f08bd8",
-      "position": 12,
+      "position": 16,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code and their responses to The Painter handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to introduce UML diagrams.\n\n**Do This:** Explain the components of the `Painter` class:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the `Painter` class\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***attribute***\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Define ***behavior***",
         "tips": [
@@ -2098,8 +2247,18 @@
       }
     },
     {
+      "key": "0275eeda-3c86-49be-8614-6cf10afccff8",
+      "position": 17,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "0275eeda-3c86-49be-8614-6cf10afccff8",
+        "lesson_activity.key": "8d312229-1432-45a2-8230-51e086f9886a"
+      }
+    },
+    {
       "key": "c5e6cf02-6efb-4ca1-95c0-55f6e4fe833a",
-      "position": 13,
+      "position": 18,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Based on what you have learned about the `Painter` class, what are some things you could do with a `Painter` object in The Neighborhood?*\n\n**Discussion Goal:** Students suggest using a `Painter` object to navigate a maze or paint designs or murals. Students may share examples of methods they saw in the `Painter` class and suggest how they might use them."
       },
@@ -2125,7 +2284,7 @@
       "key": "2b9793e7-e6b5-4b58-9dc5-d040eb5305b8",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student an index card or piece of scrap paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write a question on their index card using one of the question stems. Have students turn to a neighbor and take turns asking and answering their questions.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student an index card or piece of scrap paper.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to write a question on their index card using one of the question stems. Have students turn to a neighbor and take turns asking and answering their questions.",
         "tips": [
           {
             "type": "teachingTip",
@@ -2139,8 +2298,18 @@
       }
     },
     {
-      "key": "6d5e07a2-eb86-408d-84dd-16f08bb57ee9",
+      "key": "9d4e7e41-ca2c-4651-ac21-d64c700205c9",
       "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "9d4e7e41-ca2c-4651-ac21-d64c700205c9",
+        "lesson_activity.key": "3ae58412-b7b6-4331-a4f3-a883b1d014d4"
+      }
+    },
+    {
+      "key": "6d5e07a2-eb86-408d-84dd-16f08bb57ee9",
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
       },
@@ -2151,7 +2320,7 @@
     },
     {
       "key": "31b771c9-b412-42e9-8610-36274f014bd8",
-      "position": 4,
+      "position": 5,
       "properties": {
         "description": "---"
       },
@@ -2162,7 +2331,7 @@
     },
     {
       "key": "72adabd6-cbed-4b33-b521-4e7b0e0fea65",
-      "position": 5,
+      "position": 6,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
@@ -2170,18 +2339,6 @@
       },
       "seeding_key": {
         "activity_section.key": "72adabd6-cbed-4b33-b521-4e7b0e0fea65",
-        "lesson_activity.key": "3ae58412-b7b6-4331-a4f3-a883b1d014d4"
-      }
-    },
-    {
-      "key": "54675b56-04bc-4c0e-8ecd-a990d9132661",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "54675b56-04bc-4c0e-8ecd-a990d9132661",
         "lesson_activity.key": "3ae58412-b7b6-4331-a4f3-a883b1d014d4"
       }
     },
@@ -9570,6 +9727,18 @@
       }
     },
     {
+      "name": "AI-Generated Code",
+      "url": "https://docs.google.com/presentation/d/1eSqoZRIxM-3-KM9wyTweEs__p1Zd-PUA_319LXw7cuo/edit?usp=drive_link",
+      "key": "ai-generated_code",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "ai-generated_code"
+      }
+    },
+    {
       "name": "Asphalt Art Project",
       "url": "https://docs.google.com/presentation/d/1ZRHKtN5vv3KLNis_RfXmur2yoCqQA5d7ncE7cU805Io/edit?usp=sharing",
       "key": "asphalt_art_project",
@@ -9645,7 +9814,7 @@
     },
     {
       "name": "Classes and Objects",
-      "url": "https://docs.google.com/presentation/d/1zShEU4odisNrMf1__90VklwFDu16Rjysvh-IzF1nRtY/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1tP5JyPp2st-gB1uUX6Ilinf0eetvyqcPEWiGYUSaUEA/edit?usp=drive_link",
       "key": "classes_and_objects",
       "properties": {
         "audience": "Verified Teacher",
@@ -9718,7 +9887,7 @@
     },
     {
       "name": "Debugging Strategies",
-      "url": "https://docs.google.com/presentation/d/1JebRe7kA8gc80b3vrG9zrOZjNtezlIINHuMpAzkz4gk/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1mPGsM9Jpg7OuJWkIPL9MXrMusD8_mXsioEU_EBeBiX4/edit?usp=drive_link",
       "key": "debugging_strategies",
       "properties": {
         "audience": "Verified Teacher",
@@ -9743,7 +9912,7 @@
     },
     {
       "name": "Decomposition and Design",
-      "url": "https://docs.google.com/presentation/d/1U1NEkrq_f3vRhxg77wvFko4AIVDUCy8xS7HitLJbors/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1xRzpju9uLvbyhSi9jvrXz5lFNkKdPcO55Q7FhBPCt8c/edit?usp=drive_link",
       "key": "decomposition_and_design",
       "properties": {
         "audience": "Verified Teacher",
@@ -9790,7 +9959,7 @@
     },
     {
       "name": "Inheritance",
-      "url": "https://docs.google.com/presentation/d/1sZXGQkHJ92D6GmvcToWwFs74gotv7EBtgpZJOzD2LiI/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1c_yGAlTY1VsOVdqnhHwi3-GJ-BmM8I1U_uZP-uYrfvs/edit?usp=drive_link",
       "key": "inheritance",
       "properties": {
         "audience": "Verified Teacher",
@@ -9814,7 +9983,7 @@
     },
     {
       "name": "Instantiating Objects",
-      "url": "https://docs.google.com/presentation/d/14S28Ksj3oLnR8GYbnIlWbdY8KqgHTFpPPcHuWW7mQo8/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1WKLyDuMiF7EvwM9Xeoj2vkfPYFcVW_AzPZZZ-eeJsLM/edit?usp=drive_link",
       "key": "instantiating_objects",
       "properties": {
         "audience": "Verified Teacher",
@@ -9878,7 +10047,7 @@
     },
     {
       "name": "Java Lab",
-      "url": "https://docs.google.com/presentation/d/1Ld2vwxu3keK9oKxtAPRGUkjXktfaRs9ryxI7TlxVfuo/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1eo7qa97gBIJHoF19KqGiPFiku1D-Ht-j2Tj4rwDVTcc/edit?usp=drive_link",
       "key": "java_lab",
       "properties": {
         "audience": "Verified Teacher",
@@ -9890,7 +10059,7 @@
     },
     {
       "name": "Loops",
-      "url": "https://docs.google.com/presentation/d/1bIR-aVo6alP-Yy6FZSb5TDGIA2zXItjJUVp3ikoHRJo/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/124lzhj3-krS5UCdPQsNMbvMyuFGuAEYxoDpMf-UcvSw/edit?usp=drive_link",
       "key": "loops",
       "properties": {
         "audience": "Verified Teacher",
@@ -9902,7 +10071,7 @@
     },
     {
       "name": "Methods",
-      "url": "https://docs.google.com/presentation/d/1HsnHYwE8Ue_CJfbgT5KCyUT5vH9zLJh8lJ2BFdyw6d0/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1eD6vNI2ALPszoyq6A7O6ljQuVXNn9NbzniOz7XAMzF8/edit?usp=drive_link",
       "key": "methods",
       "properties": {
         "audience": "Verified Teacher",
@@ -9914,7 +10083,7 @@
     },
     {
       "name": "Methods with Parameters",
-      "url": "https://docs.google.com/presentation/d/18h7hzR-1at1rjZJuq5ioLoU16ouGra5lcGufVph7aWw/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1-z7lDM3doRIvhq-2S4JLzOjv82-s8bHtpi9EMThnkL0/edit?usp=drive_link",
       "key": "methods_with_parameters",
       "properties": {
         "audience": "Verified Teacher",
@@ -9960,7 +10129,7 @@
     },
     {
       "name": "Programming Style and Feedback",
-      "url": "https://docs.google.com/presentation/d/1XE9JUSQJuCLKobCFY0-Sz-OasBDGkZH9i_2ki69livg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1QOgmd28vVeTOBUXNl3wnYPY1cZVDSYX7SzpfJCP4mF8/edit?usp=drive_link",
       "key": "programming_style_and_feedback",
       "properties": {
         "audience": "Verified Teacher",
@@ -9972,7 +10141,7 @@
     },
     {
       "name": "Selection Statements",
-      "url": "https://docs.google.com/presentation/d/14zJMk22_jttyT-dOaPUAAS6uKm02pPn0hG09mFQqYDg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1YzEtuVjDknU6CxK0U0vvhFWekQ2nH4QwNWKr2HsI-Zo/edit?usp=drive_link",
       "key": "selection_statements",
       "properties": {
         "audience": "Verified Teacher",
@@ -10095,7 +10264,7 @@
     },
     {
       "name": "Two-Way Selection Statements",
-      "url": "https://docs.google.com/presentation/d/13RVFVV4ONYAUC_oVnKc9dFbWnb55a0r_DOTnSxOvWLY/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1dZ5XFzz8DzXdes-UaeSWL2jakzxFM5eKQZhNnakSAvI/edit?usp=drive_link",
       "key": "two-way_selection_statements",
       "properties": {
         "audience": "Verified Teacher",
@@ -10494,7 +10663,7 @@
     },
     {
       "name": "Welcome to CSA",
-      "url": "https://docs.google.com/presentation/d/1mP5UFgh1I6po_enlzpo9EMdK4r2LpBHXDt2pQMNxakA/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1O0AYxGDaXU8CdidBfQx4bGzPwRco9QR9UVpCxNfX2eg/edit?usp=drive_link",
       "key": "welcome_to_csa",
       "properties": {
         "audience": "Verified Teacher",
@@ -10556,7 +10725,7 @@
     },
     {
       "name": "Writing Methods",
-      "url": "https://docs.google.com/presentation/d/1yST_x1sNq2yOtlmWqqXYT80-WxABrUsuu_S_w12VSWM/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1MnOmJB9M67aiN10VeH6TtTipU4o0wqqgi1JTIZT5hZI/edit?usp=drive_link",
       "key": "writing_methods",
       "properties": {
         "audience": "Verified Teacher",
@@ -11323,6 +11492,12 @@
         "lesson.key": "Writing Methods",
         "resource.key": "writing_methods"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "ai-generated_code"
+      }
     }
   ],
   "scripts_resources": [
@@ -11434,6 +11609,16 @@
       }
     },
     {
+      "key": "compiler",
+      "word": "compiler",
+      "definition": "a special program that translates code written in one programming language (like Java) into another language (like machine code that your computer understands)",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "compiler"
+      }
+    },
+    {
       "key": "condition",
       "word": "condition",
       "definition": "determines whether or not to execute a block of code",
@@ -11531,6 +11716,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "instantiate"
+      }
+    },
+    {
+      "key": "integrated_development_environment_ide_",
+      "word": "Integrated Development Environment (IDE)",
+      "definition": "a specialized software designed to assist programmers in creating, editing, and managing code efficiently",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "integrated_development_environment_ide_"
       }
     },
     {
@@ -11893,6 +12088,18 @@
       "seeding_key": {
         "lesson.key": "Java Lab",
         "vocabulary.key": "comment"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Java Lab",
+        "vocabulary.key": "compiler"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Java Lab",
+        "vocabulary.key": "integrated_development_environment_ide_"
       }
     },
     {
@@ -12401,7 +12608,7 @@
     {
       "key": "c5c12c4d-b711-4462-9a6b-1d7a5b1bec40",
       "properties": {
-        "description": "Use Java Lab features to run and test program code"
+        "description": "Use the Java Lab IDE to run and test program code"
       },
       "seeding_key": {
         "lesson.key": "Java Lab",
