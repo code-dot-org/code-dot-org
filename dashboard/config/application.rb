@@ -18,7 +18,6 @@ require 'cdo/shared_constants'
 
 # load and configure pycall before numpy and any other python-related gems
 # can be automatically loaded just below.
-require 'cdo/pycall'
 require 'python/python'
 
 # Require the gems listed in Gemfile, including any gems

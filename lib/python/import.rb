@@ -1,3 +1,5 @@
+require 'pycall/import'
+
 module Python
   module Import
     include PyCall::Import

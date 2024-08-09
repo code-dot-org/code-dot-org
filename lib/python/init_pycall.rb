@@ -4,22 +4,18 @@
 # in the Gemfile so that the PYTHON environment variable is set correctly.
 # Otherwise various pycall related gems like numpy will fail to load.
 
-require_relative './python_venv'
+require_relative './venv'
 
 Dir.chdir(File.expand_path('../../', __dir__)) do
   # Snag this /before/ PyCall fiddles with PYTHONHOME:
-  site_packages_path = PythonVenv.site_packages_path
+  site_packages_path = Python::Venv.site_packages_path
 
-  ENV['PYTHON'] = PythonVenv.python_bin_path
+  ENV['PYTHON'] = Python::Venv.python_bin_path
   unless File.exist? ENV['PYTHON']
     raise "Python bin not found at #{ENV['PYTHON']}. Please run `pdm install` again."
   end
 
   require 'pycall'
-
-  # Put `pyimport` and `pyfrom` methods in the global namespace.
-  require 'pycall/import'
-  include PyCall::Import
 
   # Python initializes its site-packages directory using site.py:
   # https://github.com/python/cpython/blob/main/Lib/site.py
@@ -27,13 +23,12 @@ Dir.chdir(File.expand_path('../../', __dir__)) do
   # initialize the site-packages directory. Because pycall.rb uses libpython,
   # sys.executable is set to the ruby interpreter, and site.py doesn't properly
   # add site-packages for our venv to the sys.path. So, we do it manually:
-  pyimport 'site'
+  site = PyCall.import_module 'site'
   site.addsitedir(site_packages_path)
 
-  # Now unset PYTHON & PYTHONHOME so we don't mess up python3-using apps
-  # launched from our Ruby processes (like the aws cli)
+  # Now that we've done an import, unset PYTHON & PYTHONHOME so we don't
+  # mess up python3-using apps launched from our Ruby processes (like the aws cli)
   # see: https://github.com/code-dot-org/code-dot-org/pull/60048#issuecomment-2267510208
-  pyimport 'sys' # ensure libpython is already loaded before unsetting env vars
   ENV.delete('PYTHONHOME')
   ENV.delete('PYTHON')
 end

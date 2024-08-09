@@ -1,7 +1,7 @@
 require 'open3'
 require 'yaml'
 require_relative 'hooks_utils'
-require_relative '../../lib/cdo/python_venv'
+require_relative '../../lib/python/venv'
 
 REPO_DIR = File.expand_path('../../../', __FILE__).freeze
 APPS_DIR = "#{REPO_DIR}/apps".freeze
@@ -79,7 +79,7 @@ def run_stylelint_apps(files)
 end
 
 def run_python(files)
-  run("#{PythonVenv.lint_command} #{files.join(' ')}", PYTHON_DIR)
+  run("#{Python::Venv.lint_command} #{files.join(' ')}", PYTHON_DIR)
 end
 
 def run_haml(files)
