@@ -81,9 +81,13 @@ class AichatController < ApplicationController
     script_level_id = params[:scriptLevelId]
     if script_level_id
       script_level = ScriptLevel.cache_find(script_level_id.to_i)
+      puts "script_level.oldest_active_level.id: #{script_level.oldest_active_level.id}"
+      puts "level_id: #{level_id}"
       same_level = script_level.oldest_active_level.id == level_id
       is_sublevel = ParentLevelsChildLevel.exists?(child_level_id: level_id, parent_level_id: script_level.oldest_active_level.id)
-      return render(status: :forbidden, json: {error: "Access denied."}) unless same_level || is_sublevel
+      puts "same_level: #{same_level}"
+      puts "is_sublevel: #{is_sublevel}"
+      return render(status: :forbidden, json: {error: "Access denied for student chat history."}) unless same_level || is_sublevel
     else
       script_level = level.script_levels.find_by_script_id(script_id)
     end

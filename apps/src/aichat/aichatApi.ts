@@ -83,16 +83,20 @@ export async function postLogChatEvent(
 export async function getStudentChatHistory(
   studentUserId: number,
   levelId: number,
-  scriptId: number | null
+  scriptId: number | null,
+  scriptLevelId: number | undefined
 ): Promise<string[]> {
-  const params = new URLSearchParams({
+  let params: Record<string, string> = {
     studentUserId: studentUserId.toString(),
     levelId: levelId.toString(),
     scriptId: scriptId?.toString() || '',
-  });
-
+  };
+  if (scriptLevelId) {
+    params = {...params, scriptLevelId: scriptLevelId.toString()};
+  }
+  const urlParams = new URLSearchParams(params);
   const response = await HttpClient.get(
-    STUDENT_CHAT_HISTORY_URL + '?' + new URLSearchParams(params.toString()),
+    STUDENT_CHAT_HISTORY_URL + '?' + new URLSearchParams(urlParams.toString()),
     true,
     {
       'Content-Type': 'application/json; charset=UTF-8',

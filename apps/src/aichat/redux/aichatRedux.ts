@@ -8,6 +8,10 @@ import {
 } from '@reduxjs/toolkit';
 
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {
+  getCurrentScriptLevelId,
+  getCurrentLevel,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -452,11 +456,19 @@ export const fetchStudentChatHistory = createAsyncThunk(
     const state = thunkAPI.getState() as RootState;
     // Post teacher's student's user id to backend and retrieve student's chat history.
     let studentChatHistoryApiResponse;
+    const currentLevel = getCurrentLevel(state);
+    console.log('currentLevel', currentLevel);
+    console.log('state.progress.currentLevelId', state.progress.currentLevelId);
+    const scriptLevelId = currentLevel.parentLevelId
+      ? getCurrentScriptLevelId(state)
+      : undefined;
+    console.log('scriptLevelId', scriptLevelId);
     try {
       studentChatHistoryApiResponse = await getStudentChatHistory(
         studentUserId,
         parseInt(state.progress.currentLevelId || ''),
-        state.progress.scriptId
+        state.progress.scriptId,
+        scriptLevelId
       );
     } catch (error) {
       Lab2Registry.getInstance()
