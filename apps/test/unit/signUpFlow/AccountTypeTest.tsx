@@ -30,13 +30,23 @@ describe('SelectAccountType', () => {
     renderDefault();
 
     // Renders free curriculum button (styled as a text link)
-    const freeCurriculumButton = screen.getByText(locale.read_our_commitment());
+    const freeCurriculumButton = screen.getByText(
+      locale.read_our_commitment_free()
+    );
 
-    // Show the free curriculum dialog when the button is clicked
+    // Shows the free curriculum dialog when the button is clicked
     fireEvent.click(freeCurriculumButton);
 
     // Render the popup dialog
     screen.getByText(locale.our_commitment_to_free_curriculum());
-    screen.getByText(locale.return_to_signup());
+
+    // Renders the return to sign up button
+    const returnToSignUpButton = screen.getByText(locale.return_to_signup());
+
+    // Closes the dialog when the return to sign up button is clicked
+    fireEvent.click(returnToSignUpButton);
+    expect(
+      screen.queryByText(locale.our_commitment_to_free_curriculum())
+    ).toBeNull();
   });
 });

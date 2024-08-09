@@ -13,7 +13,8 @@ import FreeCurriculumDialog from './FreeCurriculumDialog';
 import style from './accountType.module.scss';
 
 const AccountType: React.FunctionComponent = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isFreeCurriculumDialogOpen, setIsFreeCurriculumDialogOpen] =
+    useState(false);
 
   return (
     <main className={style.wrapper}>
@@ -54,8 +55,8 @@ const AccountType: React.FunctionComponent = () => {
           />
         </div>
         <FreeCurriculumDialog
-          isOpen={isModalOpen}
-          closeModal={() => setIsModalOpen(false)}
+          isOpen={isFreeCurriculumDialogOpen}
+          closeModal={() => setIsFreeCurriculumDialogOpen(false)}
         />
         <div className={style.freeCurriculumWrapper}>
           <FontAwesomeV6Icon iconName={'book-open-cover'} />
@@ -65,8 +66,8 @@ const AccountType: React.FunctionComponent = () => {
           <Button
             className={style.dialogButton}
             size="s"
-            text={locale.read_our_commitment()}
-            onClick={() => setIsModalOpen(true)}
+            text={locale.read_our_commitment_free()}
+            onClick={() => setIsFreeCurriculumDialogOpen(true)}
           />
         </div>
       </div>
