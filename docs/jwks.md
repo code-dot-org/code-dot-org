@@ -14,19 +14,24 @@ allows us to start using a new key when signing JWTs, while still allowing users
 to validate JWTs issued with the old key. To generate a new JWK, refer to the
 following steps:
 
-1. Run `bin/generate-jwks` locally on your dev machine (not on a server)
-1. This will push the new JWK to the JWKS array in
-   `dashboard/public/oauth/jwks.json`
-1. Open and merge a PR with the change
+1. Run `bin/generate-jwks <env>` locally on your dev machine (not on a server)
+1. This will generate a new public and private key, and output them to your terminal`
+1. Add the public key (JWK) to the `jwks_data` in the appropriate config file.
+NOTE: there is probably already an existing key under the `keys` array. You need
+to add the newly generated key to the `keys` array.
+  - For 'Prod', add it to `config/production.yml.erb`
+  - For 'Non-Prod, add it to `config.yml.erb`
+1. Open a PR and merge the changes to the config file(s)
+1. *IMPORTANT* DO NOT PROCEED TO THE NEXT STEP UNTIL THE ABOVE CHANGES HAVE BEEN
+DEPLOYED
 1. Use the private key data printed in your terminal to update the secret using
    the [secrets process](../config/secrets.md)
-1. After the next deployment, code will start using the new private key when
+1. After a following DTP, code will start using the new private key when
    signing JWTs, and the `kid` in those JWTs will point to the new JWK
 
 After you are sure that any JWTs issued with the old key have expired, you can:
 
-1. Remove the old JWK from the `keys` array in the JWKS object at
-   `dashboard/public/oauth/jwks.json`
+1. Remove the old JWK from the `keys` array in the appropriate config file`
 1. Open and merge a PR with the change
 
 There is a bit of coordination with the above steps, but it's important you
