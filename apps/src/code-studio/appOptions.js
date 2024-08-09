@@ -124,6 +124,7 @@
  * @property {boolean} isLastLevelInLesson
  * @property {boolean} isLastLevelInScript
  * @property {boolean} showEndOfLessonMsgs
+//  * @property {boolean} enableBigPlayspace
  */
 
 /**

@@ -39,6 +39,7 @@ class DanceVisualizationColumn extends React.Component {
     currentAiModalBlockId: PropTypes.string,
     resetProgram: PropTypes.func.isRequired,
     playSound: PropTypes.func.isRequired,
+    // enableBigPlayspace: PropTypes.bool,
   };
 
   state = {
@@ -88,7 +89,7 @@ class DanceVisualizationColumn extends React.Component {
           )}
         <div
           style={
-            experiments.isEnabledAllowingQueryString(experiments.BIG_PLAYSPACE)
+            experiments.isEnabledAllowingQueryString(experiments.BIG_PLAYSPACE) // || this.props?.enableBigPlayspace
               ? {}
               : {maxWidth: MAX_GAME_WIDTH}
           }
@@ -174,4 +175,5 @@ export default connect(state => ({
   levelIsRunning: state.runState.isRunning,
   levelRunIsStarting: state.dance.runIsStarting,
   currentAiModalBlockId: state.dance.currentAiModalBlockId,
+  // enableBigPlayspace: state.enableBigPlayspace, // Does this work?? Might be state.spageConstants.
 }))(DanceVisualizationColumn);

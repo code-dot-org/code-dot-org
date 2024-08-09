@@ -177,6 +177,7 @@ Dance.prototype.init = function (config) {
   this.studioApp_.setPageConstants(config, {
     channelId: config.channel,
     isProjectLevel: !!config.level.isProjectLevel,
+    // enableBigPlayspace: !!config.level.enableBigPlayspace,
   });
 
   this.initSongsPromise = this.initSongs(config);
