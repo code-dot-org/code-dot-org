@@ -10,7 +10,6 @@ export const TEACHER_DASHBOARD_PATHS = {
   loginInfo: '/login_info',
   standardsReport: '/standards_report',
   aiTutorChatMessages: '/ai_tutor',
-  navTestV2: '/nav_test_v2',
 };
 
 export const LABELED_TEACHER_DASHBOARD_PATHS = [
