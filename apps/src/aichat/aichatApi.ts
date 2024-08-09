@@ -8,7 +8,6 @@ import {
   ChatEvent,
   ChatMessage,
   LogChatEventApiResponse,
-  StudentChatHistoryApiResponse,
 } from './types';
 
 const CHAT_COMPLETION_URL = '/aichat/chat_completion';
@@ -77,11 +76,15 @@ export async function postLogChatEvent(
   return await response.json();
 }
 
+/**
+ * This function sends a GET request to the aichat student chat history backend controller, then returns
+ * a list of chat events (JSON) if successful.
+ */
 export async function getStudentChatHistory(
   studentUserId: number,
   levelId: number,
   scriptId: number | null
-): Promise<StudentChatHistoryApiResponse> {
+): Promise<string[]> {
   const params = new URLSearchParams({
     studentUserId: studentUserId.toString(),
     levelId: levelId.toString(),
