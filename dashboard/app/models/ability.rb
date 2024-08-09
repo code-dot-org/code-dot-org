@@ -487,6 +487,10 @@ class Ability
         can :chat_completion, :aichat
         can :log_chat_event, :aichat
       end
+      # Only teachers can view student chat history.
+      if user.has_pilot_experiment?(GENAI_PILOT)
+        can :student_chat_history, :aichat
+      end
     end
 
     if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)
