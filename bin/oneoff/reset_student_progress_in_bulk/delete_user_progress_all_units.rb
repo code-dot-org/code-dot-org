@@ -19,7 +19,14 @@ csv_file_path = ARGV[1]
 teacher_id = ARGV[0]
 teacher_user = User.find_by(id: teacher_id)
 
-student_ids = CSV.read(csv_file_path, headers: true).map {|row| row['student_id'].to_i}
+rows = CSV.read(csv_file_path, headers: true)
+
+# Never delete progress from all units when file specifies unit_name
+student_ids = rows.map do |row|
+  unexpected_columns = row.to_h.keys - ['student_id']
+  raise "Unexpected columns: #{unexpected_columns}" unless unexpected_columns.empty?
+  row['student_id'].to_i
+end
 
 puts "Found #{student_ids.count} ids to reset data for."
 
