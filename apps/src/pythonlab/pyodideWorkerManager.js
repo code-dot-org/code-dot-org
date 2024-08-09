@@ -89,6 +89,7 @@ const asyncRun = (() => {
 const stopAndRestartPyodideWorker = () => {
   pyodideWorker.terminate();
   pyodideWorker = setUpPyodideWorker();
+  getStore().dispatch(appendSystemMessage('Program stopped.'));
 };
 
 export {asyncRun, stopAndRestartPyodideWorker};
