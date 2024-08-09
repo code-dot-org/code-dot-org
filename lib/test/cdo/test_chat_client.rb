@@ -25,6 +25,7 @@ class ChatClientTest < Minitest::Test
   end
 
   def test_log_with_notify_group
+    ENV.expects(:[]).returns(false)
     Slack.expects(:tag_user_group).with do |_message, group|
       group == "teacher-tools-on-call"
     end.returns(FAKE_MESSAGE)
