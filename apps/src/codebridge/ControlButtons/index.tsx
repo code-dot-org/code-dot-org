@@ -1,6 +1,6 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {appendSystemMessage} from '@codebridge/redux/consoleRedux';
-import React, {useContext, useState} from 'react';
+import React, {useState} from 'react';
 
 import {
   navigateToNextLevel,
@@ -14,10 +14,7 @@ import Button from '@cdo/apps/componentLibrary/button';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import {
-  DialogContext,
-  DialogType,
-} from '@cdo/apps/lab2/views/dialogs/DialogManager';
+import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
@@ -26,7 +23,8 @@ import moduleStyles from './control-buttons.module.scss';
 
 const ControlButtons: React.FunctionComponent = () => {
   const {onRun, onStop} = useCodebridgeContext();
-  const dialogControl = useContext(DialogContext);
+
+  const dialogControl = useDialogControl();
   const [hasRun, setHasRun] = useState(false);
   const [isRunning, setIsRunning] = useState(false);
   const dispatch = useAppDispatch();
@@ -72,12 +70,12 @@ const ControlButtons: React.FunctionComponent = () => {
     const dialogMessage = hasSubmitted
       ? commonI18n.unsubmitYourProjectConfirm()
       : commonI18n.submitYourProjectConfirm();
-    dialogControl?.showDialog(
-      DialogType.GenericConfirmation,
-      handleSubmit,
-      dialogTitle,
-      dialogMessage
-    );
+    dialogControl?.showDialog({
+      type: DialogType.GenericConfirmation,
+      handleConfirm: handleSubmit,
+      title: dialogTitle,
+      message: dialogMessage,
+    });
   };
 
   const handleSubmit = () => {
