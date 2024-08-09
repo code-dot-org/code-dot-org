@@ -58,6 +58,42 @@ class AichatController < ApplicationController
     render(status: :ok, json: response_body)
   end
 
+  # params are studentUserId: number, levelId: number, scriptId: number, (optional) scriptLevelId: number
+  # GET /aichat/student_chat_history
+  def student_chat_history
+    # Request all chat events for a student at a given level/script.
+    begin
+      params.require([:studentUserId, :levelId, :scriptId])
+    rescue ActionController::ParameterMissing
+      return render status: :bad_request, json: {}
+    end
+
+    # If a script level ID is provided, ensure it matches the level ID or that
+    # the level is a sublevel of the script level.
+    script_id = params[:scriptId]
+    level_id = params[:levelId]
+    level = Level.find(level_id)
+    script_level_id = params[:scriptLevelId]
+    if script_level_id
+      script_level = ScriptLevel.cache_find(script_level_id.to_i)
+      same_level = script_level.oldest_active_level.id == level_id
+      is_sublevel = ParentLevelsChildLevel.exists?(child_level_id: level_id, parent_level_id: script_level.oldest_active_level.id)
+      return render(status: :forbidden, json: {error: "Access denied."}) unless same_level || is_sublevel
+    else
+      script_level = level.script_levels.find_by_script_id(script_id)
+    end
+
+    # Ensure that we have permission to view student's chat events, i.e., student is in teacher section.
+    student_user_id = params[:studentUserId]
+    user = User.find(student_user_id)
+    unless can?(:view_as_user, script_level, user)
+      return render(status: :forbidden, json: {error: "Access denied for student chat history."})
+    end
+
+    aichat_events = AichatEvent.where(user_id: student_user_id, level_id: level_id, script_id: script_id).order(created_at: :desc).pluck(:aichat_event)
+    render json: aichat_events
+  end
+
   def check_message_safety
     string_to_check = params[:message]
     response_body = AichatSafetyHelper.get_llmguard_response(string_to_check)
