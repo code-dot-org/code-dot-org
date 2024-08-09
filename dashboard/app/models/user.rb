@@ -1959,7 +1959,7 @@ class User < ApplicationRecord
     percent_completed_by_script = {}
     pl_scripts.each do |pl_script|
       levels_completed = (user_levels_by_script[pl_script.id] || []).count(&:passing?)
-      total_levels = pl_script.levels.count
+      total_levels = pl_script.levels.uniq.count
       next if total_levels == 0
       percent_completed_by_script[pl_script.id] = ((levels_completed.to_f / total_levels) * 100).round
     end
