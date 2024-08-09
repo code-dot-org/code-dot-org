@@ -1,24 +1,33 @@
 #!/usr/bin/env ruby
 
 # This script is meant to be run locally on a dev machine (not a server), and it
-# is used to generate new JSON Web Keys (JWK) to be added to the
-# JSON Web Key Set (JWKS) exposed at /oauth/jwks. It generates both the public
-# key and the private key. The public key will be added to the JWKS in
-# dashboard/public/oauth/jwks.json. It will print the private key and
-# key id (kid) that is to be used for updating the secret at
-# CDO.jwk_private_key_data.
-
+# is used to generate new JSON Web Keys (JWKS). It generates both the public key
+# and the private key. The public key will be formated in YAML, to simplify adding
+# it to the approprate config files (see below). The private key will be formated
+# as JSON, which is how it should be stored in Secrets Manager.
+#
+# Here are the locations the public key should be added
+# - For Production, the public key should be added to config/production.yml.erb
+# - For Non-Prod, the public key should be added to config.yml.erb
+#
 # When you include 'dev' as an argument, it will write the JWK and the private
 # key to your locals.yml. This should be done once for local development.
+#
+# You can find more information about the JWKS implimentation in docs/jwks.md
 
 require 'jwt'
 require 'json'
+require 'yaml'
+require 'active_support/core_ext/hash'
 
-allowed_args = ["dev", "prod"].freeze
-# default to 'prod'
-arg = ARGV.first || "prod"
+allowed_args = ["dev", "prod", "non-prod"].freeze
 
-puts "Usage: 'dev' or 'prod' as arguments...\n" unless allowed_args.include? arg
+@arg = ARGV.first
+
+unless allowed_args.include?(@arg)
+  puts "Usage: 'dev', 'prod', or 'non-prod' as arguments...\n"
+  return
+end
 
 params = {use: 'sig', alg: 'RS256'}
 jwk = JWT::JWK.new(OpenSSL::PKey::RSA.new(2048), params, kid_generator: JWT::JWK::Thumbprint)
@@ -29,21 +38,20 @@ jwk = JWT::JWK.new(OpenSSL::PKey::RSA.new(2048), params, kid_generator: JWT::JWK
   private_key: jwk.signing_key.to_s,
 }
 
-def write_jwk_prod
-  # read current JWKS
-  jwks_data = File.join(File.dirname(__FILE__), '../dashboard/public/oauth/jwks.json')
-  jwks_json = File.read(jwks_data)
-  current_jwks = JSON.parse(jwks_json).transform_keys(&:to_sym)
+def write_jwk
+  # Stringify keys so the leading colon doesn't end up in the yaml keys
+  jwks_stringified_hash = @jwks_hash.deep_stringify_keys
+  prod_config = 'config/production.yml.erb'
+  non_prod_config = 'config.yml.erb'
+  config = @arg == 'prod' ? prod_config : non_prod_config
 
-  # get new key
-  new_jwk = @jwks_hash[:keys][0]
-  # push new key to current jwks keys array
-  current_jwks[:keys] << new_jwk
-
-  File.write(jwks_data, current_jwks.to_json)
-
-  print "Update secret CDO.jwk_private_key_data with the following value:\n\n"
-  print @private_key_obj.to_json
+  puts "Add this YAML to #{config} jwks_data. If a key already exists in the 'keys' list, only add the single key object starting with '- kty':"
+  puts ''
+  puts jwks_stringified_hash.to_yaml
+  puts ''
+  puts "Update #{@arg} secret CDO.jwk_private_key_data with the following value:"
+  puts ''
+  puts @private_key_obj.to_json
 end
 
 def write_jwk_dev
@@ -59,9 +67,9 @@ def write_jwk_dev
   File.write(File.join(File.dirname(__FILE__), '../locals.yml'), jwk_data, mode: "a")
 end
 
-case arg
-when "dev"
+case @arg
+when 'dev'
   write_jwk_dev
-when "prod"
-  write_jwk_prod
+else
+  write_jwk
 end
