@@ -81,7 +81,7 @@ class TeacherPanel extends React.Component {
     setSectionLockStatus: PropTypes.func.isRequired,
     selectSection: PropTypes.func.isRequired,
     setViewType: PropTypes.func.isRequired,
-    isCurrentLevelLab2: PropTypes.bool.isRequired,
+    isCurrentLevelLab2: PropTypes.bool,
     lab2ExampleSolutions: PropTypes.array,
   };
 

@@ -11,7 +11,7 @@ describe('ProgressFeedbackBanner', () => {
   const fakeFetch = sinon.spy();
   const fakeCreate = sinon.spy();
   const defaultProps = {
-    currentUser: {isAdmin: false},
+    userCreatedAt: '2024-07-01',
     canShow: true,
     isLoading: false,
     progressV2Feedback: {empty: true},
@@ -30,6 +30,26 @@ describe('ProgressFeedbackBanner', () => {
       <UnconnectedProgressFeedbackBanner
         {...defaultProps}
         canShow={false}
+        fetchProgressV2Feedback={fakeFetch}
+      />
+    );
+    expect(fakeFetch).to.have.been.calledOnce;
+    const questionText = screen.queryByText(
+      i18n.progressV2_feedback_question()
+    );
+    const shareMoreText = screen.queryByText(
+      i18n.progressV2_feedback_shareMore()
+    );
+    expect(questionText).to.not.exist;
+    expect(shareMoreText).to.not.exist;
+  });
+
+  it('renders empty if the user was created after roll out date', () => {
+    render(
+      <UnconnectedProgressFeedbackBanner
+        {...defaultProps}
+        userCreatedAt={'2024-08-03'}
+        canShow={true}
         fetchProgressV2Feedback={fakeFetch}
       />
     );

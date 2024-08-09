@@ -13,8 +13,8 @@ import msg from '@cdo/locale';
 import * as assets from '../../code-studio/assets';
 import project from '../../code-studio/initApp/project';
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
+import * as makerToolkitRedux from '../../maker/redux';
 import {getStore} from '../../redux';
-import * as makerToolkitRedux from '../kits/maker/redux';
 
 import ConfirmEnableMakerDialog from './ConfirmEnableMakerDialog';
 

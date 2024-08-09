@@ -1,0 +1,22 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T22:30:31.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "project_template_level_name": "CSA U2L7-Accessors PBT_alt-2025",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Look at the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getNumStudents()</code> method in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Course</code> class.\r\n\r\n1. Change the return type in the method signature to <code style=\"background-color: #ececec; color: black; font-weight: bold;\">void</code>. What happens when you run the program? Why do you think this happened?\r\n\r\n2. Comment out the line <code style=\"background-color: #ececec; color: black; font-weight: bold;\">return numStudents;</code> in the body of the method. What happens when you run the program? Why do you think this happened?",
+    "teacher_markdown": "1. Changing the return type to `void` will result in the multiple errors:\r\n\r\n```\r\n/CourseRunner.java:7: error: incompatible types: void cannot be converted to int\r\n    int numStudents = graphicDesign.getNumStudents();\r\n                                                  ^\r\n/CourseRunner.java:10: error: 'void' type not allowed here\r\n    System.out.println(\"Algebra Students: \" + algebra.getNumStudents());\r\n                                                                    ^\r\n/Course.java:20: error: incompatible types: unexpected return value\r\n    return numStudents;\r\n           ^\r\n```\r\n\r\nThe first error indicates that `void` cannot be converted to an `int` value, while the second error indicates that `void` is not a value that can be concatenated with a `String`. The last error points to the return statement in the `getNumStudents()` method, indicating that a `void` return type should not return a value.\r\n\r\n2. Commenting out the `return numStudents;` line will result in the following error:\r\n\r\n```\r\n/Course.java:21: error: missing return statement\r\n  }\r\n  ^\r\n```\r\n\r\nThis indicates that since a return type other than `void` is specified, a value of the specified return type should be returned.",
+    "name_suffix": "_alt-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:30:31.962+00:00\",\"changed\":[\"cloned from \\\"CSA U2L7-L2_pilot-2025\\\"\"],\"cloned_from\":\"CSA U2L7-L2_pilot-2025\"}]"
+}]]></config>
+</Javalab>
