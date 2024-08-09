@@ -15,11 +15,7 @@ import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants'
 import i18n from '@cdo/locale';
 
 async function wait() {
-  for (let _ = 0; _ < 10; _++) {
-    await act(async () => {
-      await Promise.resolve();
-    });
-  }
+  await act(async () => Promise.resolve());
 }
 
 describe('AiAssessmentBox', () => {
