@@ -41,6 +41,21 @@ describe('SchoolDataInputs', () => {
     expect(screen.queryByText(i18n.enterYourSchoolZip()));
   });
 
+  it('does not show Name field if US IP address is detected', () => {
+    renderDefault({usIp: true});
+    expect(screen.queryByText(i18n.schoolOrganizationQuestion())).toBeFalsy();
+  });
+
+  it('does not show Name field if no IP address is detected', () => {
+    renderDefault({usIp: undefined});
+    expect(screen.queryByText(i18n.schoolOrganizationQuestion())).toBeFalsy();
+  });
+
+  it('automatically displays Name field if non-US IP address is detected', () => {
+    renderDefault({usIp: false});
+    expect(screen.queryByText(i18n.schoolOrganizationQuestion()));
+  });
+
   it('autopopulates Name field if you leave and come back', () => {
     renderDefault({usIp: true});
     fireEvent.change(screen.getAllByRole('combobox')[0], {

@@ -4,6 +4,7 @@ import React, {useState, useEffect} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {
   BodyTwoText,
   BodyThreeText,
@@ -125,14 +126,14 @@ export default function SchoolZipSearch({fieldNames}) {
         <BodyTwoText className={style.padding} visualAppearance={'heading-xs'}>
           {i18n.enterYourSchoolZip()}
         </BodyTwoText>
-        <input
+        <TextField
           id="uitest-school-zip"
-          type="text"
           name={fieldNames.schoolZip}
           onChange={e => {
             setZip(e.target.value);
           }}
           value={zip}
+          placeholder="00000"
         />
         {zip && isSchoolDropdownDisabled && (
           <BodyThreeText className={style.errorMessage}>
