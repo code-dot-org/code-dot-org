@@ -1,10 +1,9 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
-import React, {useEffect, useState, useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {Route, Routes, useLocation} from 'react-router-dom';
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
-import DCDO from '@cdo/apps/dcdo';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import ManageStudents from '@cdo/apps/templates/manageStudents/ManageStudents';
@@ -12,21 +11,16 @@ import SectionProjectsListWithData from '@cdo/apps/templates/projects/SectionPro
 import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAssessments';
 import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
 import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
-import experiments from '@cdo/apps/util/experiments';
-import i18n from '@cdo/locale';
 
-import {Heading1} from '../../lib/ui/Headings';
 import firehoseClient from '../../lib/util/firehose';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
-import TeacherNavigationBar from '../teacherNavigation/TeacherNavigationBar';
 
 import EmptySection from './EmptySection';
 import StatsTableWithData from './StatsTableWithData';
 import TeacherDashboardHeader from './TeacherDashboardHeader';
-import TeacherDashboardNavigation, {
-  TeacherDashboardPath,
-} from './TeacherDashboardNavigation';
+import TeacherDashboardNavigation from './TeacherDashboardNavigation';
+import {TEACHER_DASHBOARD_PATHS} from './teacherNavigation/TeacherDashboardPaths';
 
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
@@ -39,7 +33,7 @@ function TeacherDashboard({
   sectionId,
   sectionName,
   studentCount,
-  coursesWithProgress,
+  anyStudentHasProgress,
   showAITutorTab,
   sectionProviderName,
 }) {
@@ -87,56 +81,23 @@ function TeacherDashboard({
     }
   });
 
-  const [teacherNavV2Enabled, setTeacherNavV2Enabled] = useState(false);
-
-  useEffect(() => {
-    setTeacherNavV2Enabled(
-      DCDO.get('teacher-local-nav-v2', false) ||
-        experiments.isEnabled(experiments.TEACHER_LOCAL_NAV_V2)
-    );
-  }, []);
-
-  // Select a default tab if current path doesn't match one of the paths in our TeacherDashboardPath type.
-  const emptyOrInvalidPath = !Object.values(TeacherDashboardPath).includes(
+  // Select a default tab if current path doesn't match one of the paths in our TEACHER_DASHBOARD_PATHS type.
+  const emptyOrInvalidPath = !Object.values(TEACHER_DASHBOARD_PATHS).includes(
     location.pathname
   );
   if (emptyOrInvalidPath && studentCount === 0) {
     // Default to the Manage Students tab if section has 0 students.
-    location.pathname = TeacherDashboardPath.manageStudents;
+    location.pathname = TEACHER_DASHBOARD_PATHS.manageStudents;
   } else if (emptyOrInvalidPath) {
     // Default to the Progress tab if section otherwise.
-    location.pathname = TeacherDashboardPath.progress;
+    location.pathname = TEACHER_DASHBOARD_PATHS.progress;
   }
 
   // Include header components unless we are on the /login_info or /standards_report page.
   const includeHeader =
-    location.pathname !== TeacherDashboardPath.loginInfo &&
-    location.pathname !== TeacherDashboardPath.standardsReport &&
-    location.pathname !== TeacherDashboardPath.navTestV2;
-
-  const generateEmptySectionGraphic = (hasStudents, hasCurriculumAssigned) => {
-    return (
-      <div className={dashboardStyles.emptyClassroomDiv}>
-        {location.pathname === TeacherDashboardPath.progress && (
-          <div>
-            <Heading1>{i18n.progress()}</Heading1>
-            <EmptySection
-              className={dashboardStyles.emptyClassroomProgress}
-              hasStudents={hasStudents}
-              hasCurriculumAssigned={hasCurriculumAssigned}
-            />
-          </div>
-        )}
-        {location.pathname !== TeacherDashboardPath.progress && (
-          <EmptySection
-            className={dashboardStyles.emptyClassroom}
-            hasStudents={hasStudents}
-            hasCurriculumAssigned={hasCurriculumAssigned}
-          />
-        )}
-      </div>
-    );
-  };
+    location.pathname !== TEACHER_DASHBOARD_PATHS.loginInfo &&
+    location.pathname !== TEACHER_DASHBOARD_PATHS.standardsReport &&
+    location.pathname !== TEACHER_DASHBOARD_PATHS.navTestV2;
 
   return (
     <div>
@@ -152,13 +113,13 @@ function TeacherDashboard({
       )}
       <Routes>
         <Route
-          path={TeacherDashboardPath.manageStudents}
+          path={TEACHER_DASHBOARD_PATHS.manageStudents}
           element={applyV1TeacherDashboardWidth(
             <ManageStudents studioUrlPrefix={studioUrlPrefix} />
           )}
         />
         <Route
-          path={TeacherDashboardPath.loginInfo}
+          path={TEACHER_DASHBOARD_PATHS.loginInfo}
           element={applyV1TeacherDashboardWidth(
             <SectionLoginInfo
               studioUrlPrefix={studioUrlPrefix}
@@ -167,55 +128,50 @@ function TeacherDashboard({
           )}
         />
         <Route
-          path={TeacherDashboardPath.standardsReport}
+          path={TEACHER_DASHBOARD_PATHS.standardsReport}
           element={applyV1TeacherDashboardWidth(<StandardsReport />)}
         />
         {studentCount === 0 && (
-          <Route element={generateEmptySectionGraphic(false, true)} />
+          <Route
+            element={
+              <EmptySection hasStudents={false} hasCurriculumAssigned={true} />
+            }
+          />
         )}
         <Route
-          path={TeacherDashboardPath.projects}
+          path={TEACHER_DASHBOARD_PATHS.projects}
           element={applyV1TeacherDashboardWidth(
             <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
           )}
         />
         <Route
-          path={TeacherDashboardPath.stats}
+          path={TEACHER_DASHBOARD_PATHS.stats}
           element={applyV1TeacherDashboardWidth(<StatsTableWithData />)}
         />
-        {coursesWithProgress.length === 0 && (
-          <Route element={generateEmptySectionGraphic(true, false)} />
+        {!anyStudentHasProgress && (
+          <Route
+            element={
+              <EmptySection hasStudents={true} hasCurriculumAssigned={false} />
+            }
+          />
         )}
         <Route
-          path={TeacherDashboardPath.progress}
+          path={TEACHER_DASHBOARD_PATHS.progress}
           element={<SectionProgressSelector />}
         />
         <Route
-          path={TeacherDashboardPath.textResponses}
+          path={TEACHER_DASHBOARD_PATHS.textResponses}
           element={applyV1TeacherDashboardWidth(<TextResponses />)}
         />
         <Route
-          path={TeacherDashboardPath.assessments}
+          path={TEACHER_DASHBOARD_PATHS.assessments}
           element={applyV1TeacherDashboardWidth(
             <SectionAssessments sectionName={sectionName} />
           )}
         />
-        {teacherNavV2Enabled && (
-          <Route
-            path={TeacherDashboardPath.navTestV2}
-            element={
-              <div className={dashboardStyles.pageContainer}>
-                <TeacherNavigationBar />
-                <div className={dashboardStyles.content}>
-                  <SectionProgressSelector />
-                </div>
-              </div>
-            }
-          />
-        )}
         {showAITutorTab && (
           <Route
-            path={TeacherDashboardPath.aiTutorChatMessages}
+            path={TEACHER_DASHBOARD_PATHS.aiTutorChatMessages}
             element={applyV1TeacherDashboardWidth(
               <TutorTab sectionId={sectionId} />
             )}
@@ -231,7 +187,7 @@ TeacherDashboard.propTypes = {
   sectionId: PropTypes.number.isRequired,
   sectionName: PropTypes.string.isRequired,
   studentCount: PropTypes.number.isRequired,
-  coursesWithProgress: PropTypes.array.isRequired,
+  anyStudentHasProgress: PropTypes.bool.isRequired,
   showAITutorTab: PropTypes.bool,
   sectionProviderName: PropTypes.string,
 };
