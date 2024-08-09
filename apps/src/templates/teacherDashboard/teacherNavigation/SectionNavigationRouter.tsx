@@ -1,14 +1,5 @@
-import _ from 'lodash';
 import React from 'react';
-import {
-  Routes,
-  Route,
-  Outlet,
-  useNavigate,
-  useLocation,
-  generatePath,
-  matchPath,
-} from 'react-router-dom';
+import {Routes, Route, Outlet, generatePath, Navigate} from 'react-router-dom';
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
 import {Heading1} from '@cdo/apps/componentLibrary/typography';
@@ -56,27 +47,44 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
   showAITutorTab,
   sectionProviderName,
 }) => {
-  const navigate = useNavigate();
-  const location = useLocation();
+  // const navigate = useNavigate();
+  // const location = useLocation();
 
-  React.useEffect(() => {
-    // Select a default tab if current path doesn't match one of the paths in our TEACHER_DASHBOARD_PATHS type.
-    const noMatchingPaths =
-      _.find(
-        Object.values(TEACHER_DASHBOARD_PATHS),
-        path => matchPath(getPath(path), location.pathname) !== null
-      ) === undefined;
+  // React.useEffect(() => {
+  //   // Select a default tab if current path doesn't match one of the paths in our TEACHER_DASHBOARD_PATHS type.
+  //   const noMatchingPaths =
+  //     _.find(
+  //       Object.values(TEACHER_DASHBOARD_PATHS),
+  //       path => matchPath(getPath(path), location.pathname) !== null
+  //     ) === undefined;
 
-    if (noMatchingPaths) {
-      const nextPath =
-        studentCount === 0
-          ? TEACHER_DASHBOARD_PATHS.manageStudents
-          : TEACHER_DASHBOARD_PATHS.progress;
+  //   if (noMatchingPaths) {
+  //     const nextPath =
+  //       studentCount === 0
+  //         ? TEACHER_DASHBOARD_PATHS.manageStudents
+  //         : TEACHER_DASHBOARD_PATHS.progress;
 
-      navigate(generatePath(getPath(nextPath), {sectionId: sectionId}));
-    }
-  }, [navigate, location, studentCount, sectionId]);
+  //     navigate(generatePath(getPath(nextPath), {sectionId: sectionId}));
+  //   }
+  // }, [navigate, location, studentCount, sectionId]);
 
+  const renderEmptyStateOrElement = React.useCallback(
+    (element: React.ReactNode) => {
+      if (studentCount === 0) {
+        return (
+          <EmptySection hasStudents={false} hasCurriculumAssigned={true} />
+        );
+      }
+      if (!anyStudentHasProgress) {
+        return (
+          <EmptySection hasStudents={true} hasCurriculumAssigned={false} />
+        );
+      }
+      return element;
+    },
+    [studentCount, anyStudentHasProgress]
+  );
+  console.log('lfm', anyStudentHasProgress);
   return (
     <Routes>
       <Route
@@ -99,6 +107,38 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
           }
         >
           <Route
+            element={renderEmptyStateOrElement(
+              <Navigate
+                to={generatePath(
+                  getPath(
+                    studentCount === 0
+                      ? TEACHER_DASHBOARD_PATHS.manageStudents
+                      : TEACHER_DASHBOARD_PATHS.progress
+                  ),
+                  {sectionId: sectionId}
+                )}
+                replace={true}
+              />
+            )}
+            path={getPath('/*')}
+          />
+          <Route
+            element={renderEmptyStateOrElement(
+              <Navigate
+                to={generatePath(
+                  getPath(
+                    studentCount === 0
+                      ? TEACHER_DASHBOARD_PATHS.manageStudents
+                      : TEACHER_DASHBOARD_PATHS.progress
+                  ),
+                  {sectionId: sectionId}
+                )}
+                replace={true}
+              />
+            )}
+            path={getPath('/')}
+          />
+          <Route
             path={getPath(TEACHER_DASHBOARD_PATHS.manageStudents)}
             element={applyV1TeacherDashboardWidth(
               <ManageStudents studioUrlPrefix={studioUrlPrefix} />
@@ -117,16 +157,6 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
             path={getPath(TEACHER_DASHBOARD_PATHS.standardsReport)}
             element={applyV1TeacherDashboardWidth(<StandardsReport />)}
           />
-          {studentCount === 0 && (
-            <Route
-              element={
-                <EmptySection
-                  hasStudents={false}
-                  hasCurriculumAssigned={true}
-                />
-              }
-            />
-          )}
           <Route
             path={getPath(TEACHER_DASHBOARD_PATHS.projects)}
             element={applyV1TeacherDashboardWidth(
@@ -137,19 +167,9 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
             path={getPath(TEACHER_DASHBOARD_PATHS.stats)}
             element={applyV1TeacherDashboardWidth(<StatsTableWithData />)}
           />
-          {!anyStudentHasProgress && (
-            <Route
-              element={
-                <EmptySection
-                  hasStudents={true}
-                  hasCurriculumAssigned={false}
-                />
-              }
-            />
-          )}
           <Route
             path={getPath(TEACHER_DASHBOARD_PATHS.progress)}
-            element={<SectionProgressSelector />}
+            element={renderEmptyStateOrElement(<SectionProgressSelector />)}
           />
           <Route
             path={getPath(TEACHER_DASHBOARD_PATHS.textResponses)}
