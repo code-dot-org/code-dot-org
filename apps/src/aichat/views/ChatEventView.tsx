@@ -54,7 +54,7 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
   // For now, we always hide chat events when this property is `true`. This is not technically needed
   // since hidden chat events are not added to `chatEventsCurrent` but adds clarification and redundancy.
   // TODO: add `teacherView` prop for displaying chat events when in teacher view of student chat history.
-  if (event.hideForParticipants) {
+  if (event.hideForParticipants && !event.teacherView) {
     return null;
   }
 

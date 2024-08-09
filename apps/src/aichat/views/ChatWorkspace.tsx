@@ -2,6 +2,7 @@ import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import {
+  fetchStudentChatHistory,
   selectAllMessages,
   setShowWarningModal,
 } from '@cdo/apps/aichat/redux/aichatRedux';
@@ -45,9 +46,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const [selectedTab, setSelectedTab] =
     useState<WorkspaceTeacherViewTab | null>(null);
 
-  const {showWarningModal, isWaitingForChatResponse} = useAppSelector(
-    state => state.aichat
-  );
+  const {showWarningModal, isWaitingForChatResponse, studentChatHistory} =
+    useAppSelector(state => state.aichat);
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const items = useSelector(selectAllMessages);
 
@@ -55,6 +55,8 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     (state: {teacherSections: {selectedStudents: Students}}) =>
       state.teacherSections.selectedStudents
   );
+
+  const dispatch = useAppDispatch();
 
   // Compare the messages as a string since the object reference will change on every update.
   // This way we will only scroll when the contents of the messages have changed.
@@ -76,11 +78,12 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         student => student.id === viewAsUserId
       );
       if (selectedStudent) {
+        dispatch(fetchStudentChatHistory(selectedStudent.id));
         return getShortName(selectedStudent.name);
       }
     }
     return null;
-  }, [viewAsUserId, students]);
+  }, [viewAsUserId, students, dispatch]);
 
   // Teacher user is able to interact with chatbot.
   const canChatWithModel = useMemo(
@@ -125,9 +128,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           ? ' (view only)'
           : ''),
 
-      tabContent: (
-        <div>Viewing {selectedStudentName}'s chat history - TODO</div>
-      ),
+      tabContent: <StudentChatHistoryView events={studentChatHistory} />,
       iconLeft: iconValue,
     },
     {
@@ -159,8 +160,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabsContainerClassName: moduleStyles.tabsContainer,
     tabPanelsContainerClassName: moduleStyles.tabPanels,
   };
-
-  const dispatch = useAppDispatch();
 
   const onCloseWarningModal = useCallback(
     () => dispatch(setShowWarningModal(false)),
@@ -222,6 +221,26 @@ const ChatWithModel: React.FunctionComponent<ChatWithModelProps> = ({
         <ChatEventView event={item} key={index} />
       ))}
       {showWaitingAnimation()}
+    </div>
+  );
+};
+
+interface StudentChatHistoryViewProps {
+  events: ChatEvent[];
+}
+
+const StudentChatHistoryView: React.FunctionComponent<
+  StudentChatHistoryViewProps
+> = ({events}) => {
+  return (
+    <div
+      id="student-chat-history-workspace"
+      className={moduleStyles.conversationArea}
+    >
+      {events.map((event, index) => {
+        event = {...event, teacherView: true};
+        return <ChatEventView event={event} key={index} />;
+      })}
     </div>
   );
 };
