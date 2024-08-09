@@ -14,21 +14,12 @@ import {parseErrorMessage} from './pythonHelpers/messageHelpers';
 import {MATPLOTLIB_IMG_TAG} from './pythonHelpers/patches';
 
 let callbacks = {};
-let interruptBuffer = undefined;
 
 const setUpPyodideWorker = () => {
   // This syntax doesn't work with typescript, so this file is in js.
   const worker = new Worker(new URL('./pyodideWebWorker.js', import.meta.url));
 
   callbacks = {};
-  if (window.crossOriginIsolated) {
-    // eslint-disable-next-line no-undef
-    interruptBuffer = new Uint8Array(new SharedArrayBuffer(1));
-    worker.postMessage({
-      cmd: 'setInterruptBuffer',
-      interruptBuffer,
-    });
-  }
 
   worker.onmessage = event => {
     const {type, id, message} = event.data;
@@ -90,18 +81,14 @@ const asyncRun = (() => {
         id,
         source,
       };
-      pyodideWorker.postMessage({cmd: 'runCode', metadata: messageData});
+      pyodideWorker.postMessage(messageData);
     });
   };
 })();
 
 const stopAndRestartPyodideWorker = () => {
-  if (window.crossOriginIsolated && interruptBuffer) {
-    interruptBuffer[0] = 2;
-  } else {
-    pyodideWorker.terminate();
-    pyodideWorker = setUpPyodideWorker();
-  }
+  pyodideWorker.terminate();
+  pyodideWorker = setUpPyodideWorker();
 };
 
 export {asyncRun, stopAndRestartPyodideWorker};

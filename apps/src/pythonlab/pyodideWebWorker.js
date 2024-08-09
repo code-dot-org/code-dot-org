@@ -51,37 +51,33 @@ async function initializePyodide() {
 initializePyodide();
 
 self.onmessage = async event => {
-  if (event.data.msg === 'setInterruptBuffer') {
-    self.pyodide.setInterruptBuffer(event.data.interruptBuffer);
-  } else {
-    // make sure loading is done
-    await initializePyodide();
-    const {id, python, source} = event.data.metadata;
-    let results = '';
-    try {
-      writeSource(source, DEFAULT_FOLDER_ID, '', self.pyodide);
-      await importPackagesFromFiles(source, self.pyodide);
-      const setupResult = await runInternalCode(SETUP_CODE, id);
-      // Only run the user's code if the setup code ran successfully.
-      if (setupResult) {
-        results = await self.pyodide.runPythonAsync(python, {
-          filename: `/${HOME_FOLDER}/${MAIN_PYTHON_FILE}`,
-        });
-        await runInternalCode(getCleanupCode(source), id);
-      }
-    } catch (error) {
-      self.postMessage({type: 'error', message: error.message, id});
+  // make sure loading is done
+  await initializePyodide();
+  const {id, python, source} = event.data;
+  let results = '';
+  try {
+    writeSource(source, DEFAULT_FOLDER_ID, '', self.pyodide);
+    await importPackagesFromFiles(source, self.pyodide);
+    const setupResult = await runInternalCode(SETUP_CODE, id);
+    // Only run the user's code if the setup code ran successfully.
+    if (setupResult) {
+      results = await self.pyodide.runPythonAsync(python, {
+        filename: `/${HOME_FOLDER}/${MAIN_PYTHON_FILE}`,
+      });
+      await runInternalCode(getCleanupCode(source), id);
     }
-    const updatedSource = getUpdatedSourceAndDeleteFiles(
-      source,
-      id,
-      self.pyodide,
-      self.postMessage
-    );
-    self.postMessage({type: 'updated_source', message: updatedSource, id});
-    resetGlobals(self.pyodide, pyodideGlobals);
-    self.postMessage({type: 'run_complete', message: results, id});
+  } catch (error) {
+    self.postMessage({type: 'error', message: error.message, id});
   }
+  const updatedSource = getUpdatedSourceAndDeleteFiles(
+    source,
+    id,
+    self.pyodide,
+    self.postMessage
+  );
+  self.postMessage({type: 'updated_source', message: updatedSource, id});
+  resetGlobals(self.pyodide, pyodideGlobals);
+  self.postMessage({type: 'run_complete', message: results, id});
 };
 
 // Run code owned by us (not the user). If there is an error, post a
