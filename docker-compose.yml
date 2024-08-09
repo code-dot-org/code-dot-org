@@ -19,6 +19,12 @@ include:
   # The dashboard server
   - path: ./docker/developers/docker-compose.dashboard.yml
 
+  # Useful commands
+  - path: ./docker/developers/docker-compose.commands.yml
+
+  # Git hooks
+  - path: ./docker/developers/docker-compose.hooks.yml
+
 services:
   all-services:
     image: alpine
