@@ -214,19 +214,6 @@ class Documents < Sinatra::Base
     redirect "/learn?r=#{rand(100000)}"
   end
 
-  # /private (protected area)
-  ['/private', '/private/*'].each do |uri|
-    get_head_or_post uri do
-      unless rack_env?(:development)
-        # rubocop:disable CustomCops/DashboardDbUsage
-        not_authorized! unless dashboard_user_helper
-        forbidden! unless dashboard_user_helper.admin?
-        # rubocop:enable CustomCops/DashboardDbUsage
-      end
-      pass
-    end
-  end
-
   # Static files
   get '*' do |uri|
     pass unless path = resolve_static('public', uri)
