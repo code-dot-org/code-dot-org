@@ -302,7 +302,7 @@ export default function LearningGoals({
   const [displayUnderstanding, setDisplayUnderstanding] = useState(
     INVALID_UNDERSTANDING
   );
-  const [aiFeedback, setAiFeedback] = useState(-1);
+  const [aiFeedback, setAiFeedback] = useState(NO_FEEDBACK);
   const [doneLoading, setDoneLoading] = useState(false);
 
   // The ref version of this state is used when updating the information based
