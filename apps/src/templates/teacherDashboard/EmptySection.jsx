@@ -3,16 +3,21 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 
 import {LinkButton} from '@cdo/apps/componentLibrary/button';
-import {Heading3, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import {
+  Heading3,
+  BodyTwoText,
+  Heading1,
+} from '@cdo/apps/componentLibrary/typography';
 import emptyDesk from '@cdo/apps/templates/teacherDashboard/images/empty_desk.svg';
 import blankScreen from '@cdo/apps/templates/teacherDashboard/images/no_curriculum_assigned.svg';
 import i18n from '@cdo/locale';
 
-import {TeacherDashboardPath} from './TeacherDashboardNavigation';
+import {TEACHER_DASHBOARD_PATHS} from './teacherNavigation/TeacherDashboardPaths';
 
 import styles from './teacher-dashboard.module.scss';
+import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
-function EmptySection({className, hasStudents, hasCurriculumAssigned}) {
+function EmptySection({hasStudents, hasCurriculumAssigned}) {
   const textDescription = !hasStudents
     ? i18n.emptySectionDescription()
     : i18n.noCurriculumAssigned();
@@ -23,7 +28,7 @@ function EmptySection({className, hasStudents, hasCurriculumAssigned}) {
     <img src={blankScreen} alt="blank screen" />
   );
 
-  return (
+  const emptySectionGraphic = className => (
     <div className={className}>
       {displayedImage}
       <Heading3 className={styles.topPadding}>
@@ -32,8 +37,8 @@ function EmptySection({className, hasStudents, hasCurriculumAssigned}) {
       <BodyTwoText>{textDescription}</BodyTwoText>
       {!hasStudents && (
         <NavLink
-          key={TeacherDashboardPath.manageStudents}
-          to={TeacherDashboardPath.manageStudents}
+          key={TEACHER_DASHBOARD_PATHS.manageStudents}
+          to={TEACHER_DASHBOARD_PATHS.manageStudents}
           className={styles.navLink}
         >
           {i18n.addStudents()}
@@ -42,6 +47,19 @@ function EmptySection({className, hasStudents, hasCurriculumAssigned}) {
       {!hasCurriculumAssigned && hasStudents && (
         <LinkButton href="/catalog" text={i18n.browseCurriculum()} />
       )}
+    </div>
+  );
+
+  return (
+    <div className={dashboardStyles.emptyClassroomDiv}>
+      {location.pathname === TEACHER_DASHBOARD_PATHS.progress && (
+        <div>
+          <Heading1>{i18n.progress()}</Heading1>
+          {emptySectionGraphic(dashboardStyles.emptyClassroomProgress)}
+        </div>
+      )}
+      {location.pathname !== TEACHER_DASHBOARD_PATHS.progress &&
+        emptySectionGraphic(dashboardStyles.emptyClassroom)}
     </div>
   );
 }
