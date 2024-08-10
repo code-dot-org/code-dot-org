@@ -100,7 +100,6 @@ export default function EvidenceLevelsForTeachersV2({
       const nextDim = nodes[1].getBoundingClientRect();
       left = (nextDim.left - dim.right) / 2 + dim.right - edge;
     }
-    console.log(left);
     arrowPositionCallback(left);
   }, [arrowPositionCallback, suggestedEvidenceLevels]);
 
