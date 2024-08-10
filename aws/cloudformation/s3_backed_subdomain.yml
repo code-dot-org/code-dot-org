@@ -56,7 +56,11 @@ Resources:
               - !Sub "*.${Domain}"
               # Permit local host development environments
               - "*.code.org:3000"
-              - "http://studio.code.org.localhost:*"
+              - "http://studio.code.org:*"
+              # Deprecated old style local host URLs, see: https://github.com/code-dot-org/code-dot-org/pull/60333
+              # these can be removed several months after the PR is merged when usage has dropped.
+              - "*.code.org:3000"
+              - "http://studio.code.org:*"
             AllowedHeaders: ["*"]
       Tags:
         - Key: environment
