@@ -177,7 +177,7 @@ gem 'honeybadger', '>= 4.5.6' # error monitoring
 
 gem 'newrelic_rpm', '~> 6.14.0', group: [:staging, :development, :production] # perf/error/etc monitoring
 
-gem 'redcarpet', '~> 3.5.1'
+gem 'redcarpet', '~> 3.6.0'
 
 gem 'geocoder'
 

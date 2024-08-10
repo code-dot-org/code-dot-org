@@ -710,7 +710,7 @@ GEM
     rbtree (0.4.6)
     recaptcha (4.6.3)
       json
-    redcarpet (3.5.1)
+    redcarpet (3.6.0)
     redis (4.8.1)
     redis-actionpack (5.4.0)
       actionpack (>= 5, < 8)
@@ -1059,7 +1059,7 @@ DEPENDENCIES
   raindrops
   rambling-trie (>= 2.1.1)
   recaptcha
-  redcarpet (~> 3.5.1)
+  redcarpet (~> 3.6.0)
   redis (~> 4.8.1)
   redis-actionpack (~> 5.4.0)
   redis-slave-read!
