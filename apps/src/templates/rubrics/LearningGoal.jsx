@@ -55,6 +55,7 @@ export default function LearningGoal({
   });
   const [isOpen, setIsOpen] = useState(false);
   const [aiFeedback, setAiFeedback] = useState(NO_FEEDBACK);
+  const [aiFeedbackId, setAiFeedbackId] = useState(null);
   const [autosaveStatus, setAutosaveStatus] = useState(STATUS.NOT_STARTED);
   const [learningGoalEval, setLearningGoalEval] = useState(null);
   const [displayFeedback, setDisplayFeedback] = useState('');
@@ -271,7 +272,7 @@ export default function LearningGoal({
       {/*TODO: Pass through data to child component*/}
       <div>
         <AiAssessmentFeedbackContext.Provider
-          value={{aiFeedback, setAiFeedback}}
+          value={{aiFeedback, setAiFeedback, aiFeedbackId, setAiFeedbackId}}
         >
           {teacherHasEnabledAi &&
             !!studentLevelInfo &&

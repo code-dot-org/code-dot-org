@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import React, {useContext, useState} from 'react';
+import React, {useContext} from 'react';
 
 import {
   EmText,
@@ -136,9 +136,9 @@ export default function AiAssessmentBox({
     );
   };
 
-  const [aiFeedbackId, setAiFeedbackId] = useState(null);
-
-  const {aiFeedback, setAiFeedback} = useContext(AiAssessmentFeedbackContext);
+  const {aiFeedback, setAiFeedback, aiFeedbackId, setAiFeedbackId} = useContext(
+    AiAssessmentFeedbackContext
+  );
 
   return (
     <div className={style.aiAssessmentInfoBlock}>

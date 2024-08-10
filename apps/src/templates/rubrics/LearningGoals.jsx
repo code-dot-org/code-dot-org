@@ -303,6 +303,7 @@ export default function LearningGoals({
     INVALID_UNDERSTANDING
   );
   const [aiFeedback, setAiFeedback] = useState(NO_FEEDBACK);
+  const [aiFeedbackId, setAiFeedbackId] = useState(null);
   const [doneLoading, setDoneLoading] = useState(false);
 
   // The ref version of this state is used when updating the information based
@@ -591,6 +592,7 @@ export default function LearningGoals({
 
       // Clear feedback (without sending it)
       setAiFeedback(NO_FEEDBACK);
+      setAiFeedbackId(null);
 
       // Annotate the lines based on the AI observation
       clearAnnotations();
@@ -712,7 +714,7 @@ export default function LearningGoals({
         {currentLearningGoal !== learningGoals.length && (
           <div className={style.learningGoalExpanded}>
             <AiAssessmentFeedbackContext.Provider
-              value={{aiFeedback, setAiFeedback}}
+              value={{aiFeedback, setAiFeedback, aiFeedbackId, setAiFeedbackId}}
             >
               {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
               <div>
