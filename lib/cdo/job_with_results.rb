@@ -4,58 +4,85 @@ class JobWithResults < ApplicationJob
   after_perform :write_end_time
   around_perform :timeout
 
+  rescue_from(StandardError) do |exception|
+    write_exception(exception)
+  end
+
   # Default timeout is 60s, set this in your class to override.
   @@timeout_s ||= 60
 
   def wait_for_results(timeout_s: @@timeout_s, poll_interval_s: 1)
     start_time = Time.now
-    until (result = cache.read(results_key)) || (Time.now - start_time > timeout_s)
+    until Time.now - start_time > timeout_s
+      result = read(:results)
+      return result if result
+
+      exception = read(:exception)
+      raise deserialize_exception(exception) if exception
+
       sleep(poll_interval_s)
     end
     result # nil if timed out
-  end
-
-  def key(type)
-    "jobs/#{self.class.name}/#{job_id}/#{type}"
-  end
-
-  def results_key
-    key(:results)
-  end
-
-  def enqueue_time_key
-    key(:enqueue_time)
-  end
-
-  def start_time_key
-    key(:start_time)
-  end
-
-  def end_time_key
-    key(:end_time)
   end
 
   def cache
     Cdo::SharedCache.cache
   end
 
+  def key(type)
+    "jobs/#{self.class.name}/#{job_id}/#{type}"
+  end
+
+  def write(key_type, obj)
+    cache.write(key(key_type), obj)
+  end
+
+  def read(key_type)
+    cache.read(key(key_type))
+  end
+
   def write_results(results)
-    cache.write(results_key, results)
+    write(:results, results)
+  end
+
+  def write_exception(exception)
+    write(:exception, serialize_exception(exception))
   end
 
   def write_enqueue_time
-    cache.write(enqueue_time_key, Time.now)
+    write(:enqueue_time, Time.now)
   end
 
   def write_start_time
-    cache.write(start_time_key, Time.now)
+    write(:start_time, Time.now)
   end
 
   def write_end_time
-    cache.write(end_time_key, Time.now)
+    write(:end_time, Time.now)
   end
 
   def timeout(&block)
     Timeout.timeout(@@timeout_s, &block)
+  end
+
+  private def serialize_exception(exception)
+    {
+      class: exception.class.name,
+      message: exception.message,
+      backtrace: exception.backtrace,
+    }
+  end
+
+  private def deserialize_exception(serialized_exception)
+    begin
+      # Try to instantiate the same exception class
+      exception_class = Object.const_get(serialized_exception[:class])
+      exception = exception_class.new(serialized_exception[:message])
+    rescue
+      # If you can't, no biggie, just use a StandardError with the class added to the message
+      exception = StandardError.new("#{serialized_exception[:message]} (#{serialized_exception[:class]})")
+    end
+    exception.set_backtrace(serialized_exception[:backtrace])
+    exception
   end
 end
