@@ -189,7 +189,7 @@ const config = {
 
   // Options that will be passed to the testEnvironment
   testEnvironmentOptions: {
-    url: 'http://localhost-studio.code.org',
+    url: 'http://studio.code.org.localhost',
   },
 
   // Adds a location field to test results

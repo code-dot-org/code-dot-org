@@ -10,14 +10,14 @@ describe('ReportAbuseForm', () => {
       '123abc'
     );
     expect(
-      getChannelIdFromUrl('http://localhost.codeprojects.org:3000/abc123/')
+      getChannelIdFromUrl('http://codeprojects.org.localhost:3000/abc123/')
     ).toEqual('abc123');
     expect(
       getChannelIdFromUrl('https://codeprojects.org/projects/weblab/123abc/')
     ).toEqual('123abc');
     expect(
       getChannelIdFromUrl(
-        'http://localhost.codeprojects.org:3000/projects/weblab/abc123/'
+        'http://codeprojects.org.localhost:3000/projects/weblab/abc123/'
       )
     ).toEqual('abc123');
   });
@@ -34,7 +34,7 @@ describe('ReportAbuseForm', () => {
     ).toEqual('123abc');
     expect(
       getChannelIdFromUrl(
-        'http://localhost-studio.code.org:3000/projects/weblab/123abc/edit'
+        'http://studio.code.org.localhost:3000/projects/weblab/123abc/edit'
       )
     ).toEqual('123abc');
   });
@@ -47,7 +47,7 @@ describe('ReportAbuseForm', () => {
     ).toEqual('123abc');
     expect(
       getChannelIdFromUrl(
-        'http://localhost-studio.code.org:3000/report_abuse?channelId=123abc'
+        'http://studio.code.org.localhost:3000/report_abuse?channelId=123abc'
       )
     ).toEqual('123abc');
   });

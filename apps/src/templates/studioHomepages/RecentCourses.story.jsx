@@ -57,9 +57,9 @@ const courses = [
 const topCourse = {
   assignableName: 'Course 1',
   lessonName: 'Lesson 3: Learn to drag and drop',
-  linkToOverview: 'http://localhost-studio.code.org:3000/s/course1',
+  linkToOverview: 'http://studio.code.org.localhost:3000/s/course1',
   linkToLesson:
-    'http://localhost-studio.code.org:3000/s/course1/lessons/3/levels/1',
+    'http://studio.code.org.localhost:3000/s/course1/lessons/3/levels/1',
 };
 
 const plCourses = [
