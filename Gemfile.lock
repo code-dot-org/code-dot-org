@@ -465,7 +465,7 @@ GEM
     hashie (3.6.0)
     highline (3.1.0)
       reline
-    honeybadger (4.12.1)
+    honeybadger (5.15.5)
     http (5.2.0)
       addressable (~> 2.8)
       base64 (~> 0.1)
