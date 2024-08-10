@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react';
+import {render, screen, act as rtlAct, fireEvent} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
@@ -8,6 +8,10 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {
+  THUMBS_UP,
+  THUMBS_DOWN,
+} from '@cdo/apps/templates/rubrics/AiAssessmentFeedbackContext';
 import tipIconImage from '@cdo/apps/templates/rubrics/images/AiBot_Icon.svg';
 import infoIconImage from '@cdo/apps/templates/rubrics/images/info-icon.svg';
 import LearningGoals, {
@@ -109,6 +113,12 @@ const reportingData = {
   courseName: 'course-2023',
   levelName: 'Test Blah Blah Blah',
 };
+
+async function wait() {
+  for (let _ = 0; _ < 10; _++) {
+    await rtlAct(async () => Promise.resolve());
+  }
+}
 
 describe('LearningGoals - React Testing Library', () => {
   let annotatorStub,
@@ -371,6 +381,175 @@ describe('LearningGoals - React Testing Library', () => {
 
     // Restore stubs
     sendEventSpy.restore();
+  });
+
+  describe('ai evaluation feedback', () => {
+    const feedbackProps = {
+      teacherHasEnabledAi: true,
+      learningGoals,
+      aiEvaluations,
+      studentLevelInfo,
+      canProvideFeedback: true,
+    };
+
+    it('sends an event when thumbs up is clicked', async () => {
+      render(<LearningGoals {...feedbackProps} />);
+
+      const fetchStub = jest.spyOn(window, 'fetch');
+
+      fetchStub.mockImplementation((endpoint, options) => {
+        if (endpoint === '/get_token') {
+          return Promise.resolve(
+            new Response('', {
+              headers: {'csrf-token': 'token'},
+            })
+          );
+        } else if (
+          endpoint === '/learning_goal_ai_evaluation_feedbacks' &&
+          options['method'] === 'POST'
+        ) {
+          return Promise.resolve(new Response(JSON.stringify({id: 999})));
+        }
+      });
+
+      const thumbsUpButton = screen.getByTestId('thumbs-o-up');
+      fireEvent.click(thumbsUpButton);
+
+      await wait();
+
+      const expectedBody = JSON.stringify({
+        learningGoalAiEvaluationId: 2,
+        aiFeedbackApproval: THUMBS_UP,
+      });
+      expect(fetchStub).toHaveBeenCalledWith(
+        '/learning_goal_ai_evaluation_feedbacks',
+        {
+          body: expectedBody,
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': 'token',
+          },
+          method: 'POST',
+        }
+      );
+
+      fetchStub.mockRestore();
+    });
+
+    it('sends an event when thumbs down is clicked', async () => {
+      render(<LearningGoals {...feedbackProps} />);
+
+      const fetchStub = jest.spyOn(window, 'fetch');
+
+      fetchStub.mockImplementation((endpoint, options) => {
+        if (endpoint === '/get_token') {
+          return Promise.resolve(
+            new Response('', {
+              headers: {'csrf-token': 'token'},
+            })
+          );
+        } else if (
+          endpoint === '/learning_goal_ai_evaluation_feedbacks' &&
+          options['method'] === 'POST'
+        ) {
+          return Promise.resolve(new Response(JSON.stringify({id: 999})));
+        }
+      });
+
+      const thumbsUpButton = screen.getByTestId('thumbs-o-down');
+      fireEvent.click(thumbsUpButton);
+      await wait();
+
+      const expectedBody = JSON.stringify({
+        learningGoalAiEvaluationId: 2,
+        aiFeedbackApproval: THUMBS_DOWN,
+      });
+      expect(fetchStub).toHaveBeenCalledWith(
+        '/learning_goal_ai_evaluation_feedbacks',
+        {
+          body: expectedBody,
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': 'token',
+          },
+          method: 'POST',
+        }
+      );
+
+      fetchStub.mockRestore();
+    });
+
+    it('updates the thumbs down event when survey is submitted', async () => {
+      render(<LearningGoals {...feedbackProps} />);
+
+      const fetchStub = jest.spyOn(window, 'fetch');
+
+      fetchStub.mockImplementation((endpoint, options) => {
+        if (endpoint === '/get_token') {
+          return Promise.resolve(
+            new Response('', {
+              headers: {'csrf-token': 'token'},
+            })
+          );
+        } else if (
+          endpoint === '/learning_goal_ai_evaluation_feedbacks' &&
+          options['method'] === 'POST'
+        ) {
+          return Promise.resolve(new Response(JSON.stringify({id: 999})));
+        } else if (
+          endpoint === '/learning_goal_ai_evaluation_feedbacks/999' &&
+          options['method'] === 'PUT'
+        ) {
+          return Promise.resolve(new Response(''));
+        }
+      });
+
+      // survey not visible
+      expect(screen.queryAllByRole('checkbox')).toHaveLength(0);
+
+      const thumbsUpButton = screen.getByTestId('thumbs-o-down');
+      fireEvent.click(thumbsUpButton);
+      await wait();
+
+      // survey is visible
+      expect(screen.getAllByRole('checkbox')).toHaveLength(4);
+
+      // click checkbox
+      const checkbox = screen.getByRole('checkbox', {
+        name: i18n.aiFeedbackFalsePos(),
+      });
+      fireEvent.click(checkbox);
+
+      // click submit button
+      const submitButton = screen.getByRole('button', {
+        name: i18n.aiFeedbackSubmit(),
+      });
+      fireEvent.click(submitButton);
+      await wait();
+
+      const expectedBody = {
+        learningGoalAiEvaluationId: 2,
+        aiFeedbackApproval: 0,
+        falsePositive: true,
+        falseNegative: false,
+        Vague: false,
+        feedbackOther: false,
+        otherContent: '',
+      };
+      expect(fetchStub).toHaveBeenCalledWith(
+        `/learning_goal_ai_evaluation_feedbacks/999`,
+        {
+          body: JSON.stringify(expectedBody),
+          headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': 'token',
+          },
+          method: 'PUT',
+        }
+      );
+
+      fetchStub.mockRestore();
+    });
   });
 });
 
