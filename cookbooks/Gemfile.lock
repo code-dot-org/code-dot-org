@@ -790,7 +790,7 @@ DEPENDENCIES
   test-kitchen
 
 RUBY VERSION
-   ruby 3.0.5p211
+   ruby 3.3.4p94
 
 BUNDLED WITH
-   2.3.22
+   2.5.17
