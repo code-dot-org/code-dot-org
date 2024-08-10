@@ -17,4 +17,9 @@
 #
 class AichatRequest < ApplicationRecord
   belongs_to :user
+  after_initialize :set_default_execution_status
+
+  def set_default_execution_status
+    self.execution_status ||= SharedConstants::AI_REQUEST_EXECUTION_STATUS[:NOT_STARTED]
+  end
 end
