@@ -21,7 +21,7 @@ class JobWithResults < ApplicationJob
 
       sleep(poll_interval_s)
     end
-    result # nil if timed out
+    nil # timed out
   end
 
   # Non-blocking version of wait_for_results()
