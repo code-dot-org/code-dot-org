@@ -6,7 +6,8 @@ provisioner:
   name: chef_zero
   data_path: test/shared
   require_chef_omnibus: 17.6.18
-
+verifier:
+  name: serverspec
 platforms:
   - name: ubuntu-20.04
     run_list:
