@@ -673,7 +673,7 @@ GEM
       multi_json (~> 1.0)
       pusher-signature (~> 0.1.8)
     pusher-signature (0.1.8)
-    pycall (1.5.1)
+    pycall (1.5.2)
     racc (1.6.2)
     rack (2.2.6.4)
     rack-cache (1.13.0)

@@ -349,7 +349,7 @@ gem 'cld'
 
 gem 'crowdin-api', '~> 1.10.0'
 
-gem "pycall", "~> 1.5"
+gem "pycall", ">= 1.5.2"
 
 gem "delayed_job_active_record", "~> 4.1"
 
