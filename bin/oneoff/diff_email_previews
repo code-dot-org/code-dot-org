@@ -16,7 +16,7 @@ To diff emails in 2 folders in the current directory: './diff_email_previews dif
 }
 
 # List of email previews are copied from
-# http://localhost-studio.code.org:3000/rails/mailers/pd_workshop_mailer/
+# http://studio.code.org.localhost:3000/rails/mailers/pd_workshop_mailer/
 PREVIEWS = %w(
   detail_change_notification__admin
   detail_change_notification__csf_deepdive
@@ -133,7 +133,7 @@ def clean_email_content(folder_name)
 end
 
 def download_workshop_emails(output_folder)
-  base = 'http://localhost-studio.code.org:3000/rails/mailers/pd_workshop_mailer/'
+  base = 'http://studio.code.org.localhost:3000/rails/mailers/pd_workshop_mailer/'
   body = '?part=text%2Fhtml'
 
   output_folder = clean_folder_name(output_folder)

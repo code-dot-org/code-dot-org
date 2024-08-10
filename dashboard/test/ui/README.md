@@ -48,16 +48,19 @@ You can find the values for these settings in your saucelabs account settings (`
 If you want to run tests on Sauce Labs against localhost you need to set up your tunnel:
 
 #### Latest version of Sauce Connect Proxy CLI (5.1.0)
+
 1. Login to Sauce Labs and download the [tunnel](https://app.saucelabs.com/tunnels).
-2. Uncomment and fill out the values for the "saucelabs_" properties in `locals.yml`
+2. Uncomment and fill out the values for the "saucelabs\_" properties in `locals.yml`
    - `saucelabs_tunnel_name` can be an arbitrary name, but it needs to match what you pass as an argument to `sc run...`
 3. (Re)start your dashboard-server `./bin/dashboard-server`.
 4. Start the sauce labs tunnel
-    - `sc run -u <saucelabs_username> -k <saucelabs_authkey> -r us-west --tunnel-name <saucelabs_tunnel_name>`
+   - `sc run -u <saucelabs_username> -k <saucelabs_authkey> -r us-west --tunnel-name <saucelabs_tunnel_name>`
 5. Run your UI test
-    - `./runner.rb -l -c Chrome --html -f features/platform/policy_compliance.feature`
-        - The log output can be found in `log/*.html`
+   - `./runner.rb -l -c Chrome --html -f features/platform/policy_compliance.feature`
+     - The log output can be found in `log/*.html`
+
 #### Older versions of Sauce Connect Proxy CLI
+
 1. Login to Sauce Labs and download the [tunnel](https://app.saucelabs.com/tunnels).
    - If you work on a Linux EC2 instance:
      - Download the Linux version (will end in .tar.gz)
@@ -66,10 +69,10 @@ If you want to run tests on Sauce Labs against localhost you need to set up your
 2. `cd` into the unzipped folder and start the tunnel via `bin/sc --user <saucelabs-username> --api-key <saucelabs-api-key>`. You can find your username and key on the page linked in step 1. Note: the command listed there does not match the above.
    - The `bin/sc` path only works once you've navigated into the unzipped file (on a mac, the full path might look something like `sc-4.8.2-osx/bin/sc`).
    - The configuration of the `--tunnel-name` flag (formerly [`--tunnel-id`](https://docs.saucelabs.com/dev/cli/saucectl/run/#--tunnel-name)) depends on your environment:
-     - If you do *not* work on an EC2 instance, the `--tunnel-name` flag (included in the command given by Sauce Labs), can be removed. If you leave it in, you'll also need to set the `tunnelIdentifier` option in the `sauce_capabilities` config. See [Using Sauce Connect Tunnel Identifiers](https://wiki.saucelabs.com/display/DOCS/Using+Sauce+Connect+Tunnel+Identifiers#UsingSauceConnectTunnelIdentifiers-TheBasicsofUsingTunnelIdentifiers) for more details.
-     - If you *do* work on an EC2 instance, the `--tunnel-name` flag is required to launch the tunnel.
+     - If you do _not_ work on an EC2 instance, the `--tunnel-name` flag (included in the command given by Sauce Labs), can be removed. If you leave it in, you'll also need to set the `tunnelIdentifier` option in the `sauce_capabilities` config. See [Using Sauce Connect Tunnel Identifiers](https://wiki.saucelabs.com/display/DOCS/Using+Sauce+Connect+Tunnel+Identifiers#UsingSauceConnectTunnelIdentifiers-TheBasicsofUsingTunnelIdentifiers) for more details.
+     - If you _do_ work on an EC2 instance, the `--tunnel-name` flag is required to launch the tunnel.
 3. (Re)start your dashboard-server `./bin/dashboard-server`.
-4. In a new terminal window, navigate back into `dashboard/test/ui` and run your ui tests `./runner.rb -d localhost-studio.code.org:3000 <whatever other arguments you want>`
+4. In a new terminal window, navigate back into `dashboard/test/ui` and run your ui tests `./runner.rb -d studio.code.org.localhost:3000 <whatever other arguments you want>`
 
 You can now watch your tests run at the [Sauce Labs dashboard](https://saucelabs.com/beta/dashboard/tests)
 
@@ -79,8 +82,8 @@ Here are some example command line options. Run `./runner.rb --help` for a full 
 
 Run all UI tests on all browsers against your local host (by default, tests point to test.code.org). Takes some around 45 minutes to run depending on your setup. If you are testing browsers against your localhost other than Chrome, you need to setup SauceConnect - instructions are here https://wiki.saucelabs.com/display/DOCS/Setting+Up+Sauce+Connect.
 
-`./runner.rb -d localhost-studio.code.org:3000`
-Alternatively, `./runner.rb -d localhost-studio.code.org:3000 -n <some number>` will run "some number" of tests in parallel - it might be faster though too high a number will overwhelm your host. 5 seems to work well.
+`./runner.rb -d studio.code.org.localhost:3000`
+Alternatively, `./runner.rb -d studio.code.org.localhost:3000 -n <some number>` will run "some number" of tests in parallel - it might be faster though too high a number will overwhelm your host. 5 seems to work well.
 
 Run all UI tests using the local chromedriver against your localhost. Faster than running through Saucelabs.
 

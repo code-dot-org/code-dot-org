@@ -5195,8 +5195,8 @@
       ]
     ],
     "preload_asset_list": [
-      "http://localhost-studio.code.org:3000/v3/assets/w_eai5DrjJOJxs9ueya-pw/roundGlomming.png?t=1626135418000",
-      "http://localhost-studio.code.org:3000/v3/assets/w_eai5DrjJOJxs9ueya-pw/gapPrideflag.png?t=1626135647313"
+      "http://studio.code.org.localhost:3000/v3/assets/w_eai5DrjJOJxs9ueya-pw/roundGlomming.png?t=1626135418000",
+      "http://studio.code.org.localhost:3000/v3/assets/w_eai5DrjJOJxs9ueya-pw/gapPrideflag.png?t=1626135647313"
     ],
     "parent_level_id": 28644,
     "start_sources": {

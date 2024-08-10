@@ -55,9 +55,9 @@ Resources:
             AllowedOrigins:
               - !Sub "*.${Domain}"
               # Permit local host development environments
-              - '*.code.org:3000'
-              - 'http://localhost-studio.code.org:*'
-            AllowedHeaders: ['*']
+              - "*.code.org:3000"
+              - "http://studio.code.org.localhost:*"
+            AllowedHeaders: ["*"]
       Tags:
         - Key: environment
           Value: production
@@ -69,26 +69,26 @@ Resources:
       PolicyDocument:
         Statement:
           - Effect: Allow
-            Principal: '*'
-            Action: 's3:GetObject'
-            Resource: !Sub 'arn:aws:s3:::${Bucket}/*'
+            Principal: "*"
+            Action: "s3:GetObject"
+            Resource: !Sub "arn:aws:s3:::${Bucket}/*"
 
   BucketBackedDistribution:
     Type: AWS::CloudFront::Distribution
     Properties:
       DistributionConfig:
         Aliases:
-          - !Sub '${Subdomain}.${Domain}'
+          - !Sub "${Subdomain}.${Domain}"
         Enabled: true
         DefaultCacheBehavior:
           # Use the Managed-CachingOptimized policy from
           # https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/using-managed-cache-policies.html
           CachePolicyId: 658327ea-f89d-4fab-a63d-7e88639e58f6
-          TargetOriginId: !Sub 's3-${BucketName}'
+          TargetOriginId: !Sub "s3-${BucketName}"
           ViewerProtocolPolicy: https-only
         Origins:
-          - DomainName: !Sub '${BucketName}.s3.amazonaws.com'
-            Id: !Sub 's3-${BucketName}'
+          - DomainName: !Sub "${BucketName}.s3.amazonaws.com"
+            Id: !Sub "s3-${BucketName}"
             S3OriginConfig:
               OriginAccessIdentity: ""
         ViewerCertificate:
@@ -102,8 +102,8 @@ Resources:
   SubdomainRecord:
     Type: AWS::Route53::RecordSet
     Properties:
-      HostedZoneName: !Sub '${Domain}.'
-      Name: !Sub '${Subdomain}.${Domain}'
+      HostedZoneName: !Sub "${Domain}."
+      Name: !Sub "${Subdomain}.${Domain}"
       Type: A
       AliasTarget:
         DNSName: !GetAtt

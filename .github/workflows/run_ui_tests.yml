@@ -3,75 +3,75 @@ on: workflow_dispatch
 jobs:
   run-ui-tests:
     runs-on: ubuntu-latest
-    env:        
+    env:
       CI: true
       RAILS_ENV: test
       RACK_ENV: test
-      DISABLE_SPRING: 1   
+      DISABLE_SPRING: 1
       CLOUDFRONT_KEY_PAIR_ID: ${{ secrets.CLOUDFRONT_KEY_PAIR_ID }}
       CLOUDFRONT_PRIVATE_KEY: ${{ secrets.CLOUDFRONT_PRIVATE_KEY }}
-      PROPERTIES_ENCRYPTION_KEY: $${{ secrets.PROPERTIES_ENCRYPTION_KEY }}      
+      PROPERTIES_ENCRYPTION_KEY: $${{ secrets.PROPERTIES_ENCRYPTION_KEY }}
       AWS_ACCESS_KEY_ID: $${{ secrets.CI_AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: $${{ secrets.CI_AWS_SECRET_ACCESS_KEY }}  
+      AWS_SECRET_ACCESS_KEY: $${{ secrets.CI_AWS_SECRET_ACCESS_KEY }}
       SAUCE_ACCESS_KEY: $${{ secrets.SAUCE_ACCESS_KEY }}
-      SAUCE_USERNAME: $${{ secrets.SAUCE_USERNAME }}        
-    steps:    
+      SAUCE_USERNAME: $${{ secrets.SAUCE_USERNAME }}
+    steps:
       - name: Get actions code
-        uses: actions/checkout@v3    
+        uses: actions/checkout@v3
       - name: say-hello
-        uses: ./.github/actions/start-server-job-actions          
+        uses: ./.github/actions/start-server-job-actions
       - name: Install mysql
-        uses: ./.github/actions/install-mysql                    
+        uses: ./.github/actions/install-mysql
       - name: Install test variables
-        uses: ./.github/actions/install-test-variables   
-      - name: Install UI test variables        
+        uses: ./.github/actions/install-test-variables
+      - name: Install UI test variables
         uses: ./.github/actions/install-ui-test-variables
       - name: Install Ruby
         uses: ./.github/actions/install-ruby
       - name: Install apt packages
         uses: ./.github/actions/install-apt-packages
       - name: Install node
-        uses: ./.github/actions/install-node        
-      - name: Install rake dependencies 
+        uses: ./.github/actions/install-node
+      - name: Install rake dependencies
         uses: ./.github/actions/install-rake-dependencies
       - name: Setup locals
         run: |
-            echo "
-            properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
-            bundler_use_sudo: false
-            cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
-            cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
-            saucelabs_username: $SAUCE_USERNAME
-            saucelabs_authkey: $SAUCE_ACCESS_KEY
-            ignore_eyes_mismatches: true
-            disable_all_eyes_running: true
-            use_my_apps: true
-            build_dashboard: true
-            build_pegasus: true
-            build_apps: true
-            build_i18n: false
-            localize_apps: true
-            dashboard_enable_pegasus: true
-            dashboard_workers: 5
-            skip_seed_all: true
-            no_https_store: true
-            override_dashboard: \"localhost-studio.code.org\"
-            override_pegasus: \"localhost.code.org\"
-            dashboard_port: 3000
-            pegasus_port: 3000
-            animations_s3_directory: animations_circle/42:-2323
-            assets_s3_directory: assets_circle/42:-2323
-            files_s3_directory: files_circle/42:-2323
-            sources_s3_directory: sources_circle/42:-2323
-            libraries_s3_directory: libraries_circle/42:-2323
-            dashboard_db_reader: \"mysql://readonly@localhost/dashboard_test\"          
-            " >> locals.yml        
+          echo "
+          properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
+          bundler_use_sudo: false
+          cloudfront_key_pair_id: $CLOUDFRONT_KEY_PAIR_ID
+          cloudfront_private_key: \"$CLOUDFRONT_PRIVATE_KEY\"
+          saucelabs_username: $SAUCE_USERNAME
+          saucelabs_authkey: $SAUCE_ACCESS_KEY
+          ignore_eyes_mismatches: true
+          disable_all_eyes_running: true
+          use_my_apps: true
+          build_dashboard: true
+          build_pegasus: true
+          build_apps: true
+          build_i18n: false
+          localize_apps: true
+          dashboard_enable_pegasus: true
+          dashboard_workers: 5
+          skip_seed_all: true
+          no_https_store: true
+          override_dashboard: \"studio.code.org.localhost\"
+          override_pegasus: \"code.org.localhost\"
+          dashboard_port: 3000
+          pegasus_port: 3000
+          animations_s3_directory: animations_circle/42:-2323
+          assets_s3_directory: assets_circle/42:-2323
+          files_s3_directory: files_circle/42:-2323
+          sources_s3_directory: sources_circle/42:-2323
+          libraries_s3_directory: libraries_circle/42:-2323
+          dashboard_db_reader: \"mysql://readonly@localhost/dashboard_test\"          
+          " >> locals.yml
       - name: Seed run UI tests
-        env: 
+        env:
           CI: true
           RAILS_ENV: test
           RACK_ENV: test
-          DISABLE_SPRING: 1           
+          DISABLE_SPRING: 1
           CIRCLE_NODE_INDEX: 1
           CIRCLE_NODE_TOTAL: 1
           CIRCLECI: true
@@ -79,13 +79,13 @@ jobs:
           CIRCLE_BUILD_NUM: "42:-2323"
           CIRCLE_TEST_REPORTS: /home/circleci/test_reports
           CIRCLE_ARTIFACTS: /home/circleci/artifacts
-        run: bundle exec rake circle:seed_ui_test --trace   
+        run: bundle exec rake circle:seed_ui_test --trace
       - name: Rake run UI tests
-        env: 
+        env:
           CI: true
           RAILS_ENV: test
           RACK_ENV: test
-          DISABLE_SPRING: 1           
+          DISABLE_SPRING: 1
           CIRCLE_NODE_INDEX: 1
           CIRCLE_NODE_TOTAL: 1
           CIRCLECI: true
