@@ -890,6 +890,7 @@ GEM
       attr_required (>= 0.0.5)
       httpclient (>= 2.4)
     sysexits (1.2.0)
+    syslog (0.1.2)
     temple (0.8.2)
     thin (1.8.2)
       daemons (~> 1.0, >= 1.0.9)
@@ -1129,6 +1130,7 @@ DEPENDENCIES
   sshkit
   statsig (~> 1.33)
   stringex (~> 2.5.2)
+  syslog
   thin
   thwait
   timecop
