@@ -8,12 +8,12 @@
 # written; this probably doesn't matter, but we need to pick something.
 RUBY_BUILD_VERSION = '20240727'.freeze
 
-remote_file '/tmp/ruby-build.tar.gz' do
+remote_file "/tmp/ruby-build-#{RUBY_BUILD_VERSION}.tar.gz" do
   source "https://github.com/rbenv/ruby-build/archive/refs/tags/v#{RUBY_BUILD_VERSION}.tar.gz"
   action :create_if_missing
 end
 
-archive_file '/tmp/ruby-build.tar.gz' do
+archive_file "/tmp/ruby-build-#{RUBY_BUILD_VERSION}.tar.gz" do
   destination '/tmp/ruby-build'
   overwrite :auto
 end
