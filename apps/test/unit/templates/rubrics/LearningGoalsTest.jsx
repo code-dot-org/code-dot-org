@@ -392,6 +392,19 @@ describe('LearningGoals - React Testing Library', () => {
       canProvideFeedback: true,
     };
 
+    it('displays no checkboxes when neither thumb is selected', () => {
+      render(<LearningGoals {...feedbackProps} />);
+
+      // neither thumb is selected
+      screen.getByTestId('thumbs-o-up');
+      expect(screen.queryByTestId('thumbs-up')).not.toBeInTheDocument();
+      screen.getByTestId('thumbs-o-down');
+      expect(screen.queryByTestId('thumbs-down')).not.toBeInTheDocument();
+
+      // checkboxes not visible
+      expect(screen.queryAllByRole('checkbox')).toHaveLength(0);
+    });
+
     it('sends an event when thumbs up is clicked', async () => {
       render(<LearningGoals {...feedbackProps} />);
 
@@ -414,8 +427,10 @@ describe('LearningGoals - React Testing Library', () => {
 
       const thumbsUpButton = screen.getByTestId('thumbs-o-up');
       fireEvent.click(thumbsUpButton);
-
       await wait();
+
+      screen.getByTestId('thumbs-up');
+      expect(screen.queryAllByRole('checkbox')).toHaveLength(0);
 
       const expectedBody = JSON.stringify({
         learningGoalAiEvaluationId: 2,
@@ -460,6 +475,8 @@ describe('LearningGoals - React Testing Library', () => {
       fireEvent.click(thumbsUpButton);
       await wait();
 
+      screen.getByTestId('thumbs-down');
+
       const expectedBody = JSON.stringify({
         learningGoalAiEvaluationId: 2,
         aiFeedbackApproval: THUMBS_DOWN,
@@ -475,6 +492,47 @@ describe('LearningGoals - React Testing Library', () => {
           method: 'POST',
         }
       );
+
+      fetchStub.mockRestore();
+    });
+
+    it('displays textbox when checkbox labelled "other" is selected', async () => {
+      render(<LearningGoals {...feedbackProps} />);
+
+      const fetchStub = jest.spyOn(window, 'fetch');
+
+      fetchStub.mockImplementation((endpoint, options) => {
+        if (endpoint === '/get_token') {
+          return Promise.resolve(
+            new Response('', {
+              headers: {'csrf-token': 'token'},
+            })
+          );
+        } else if (
+          endpoint === '/learning_goal_ai_evaluation_feedbacks' &&
+          options['method'] === 'POST'
+        ) {
+          return Promise.resolve(new Response(JSON.stringify({id: 999})));
+        }
+      });
+
+      // survey not visible
+      expect(screen.queryAllByRole('checkbox')).toHaveLength(0);
+
+      const thumbsUpButton = screen.getByTestId('thumbs-o-down');
+      fireEvent.click(thumbsUpButton);
+      await wait();
+
+      // survey is visible
+      expect(screen.getAllByRole('checkbox')).toHaveLength(4);
+
+      expect(screen.queryByTestId('ai-assessment-feedback-textarea')).not
+        .toBeInTheDocument;
+
+      const checkbox = screen.getByRole('checkbox', {name: 'Other'});
+      fireEvent.click(checkbox);
+
+      screen.getByTestId('ai-assessment-feedback-textarea');
 
       fetchStub.mockRestore();
     });
@@ -526,6 +584,9 @@ describe('LearningGoals - React Testing Library', () => {
       });
       fireEvent.click(submitButton);
       await wait();
+
+      expect(screen.queryByTestId('ai-assessment-feedback-textarea')).not
+        .toBeInTheDocument;
 
       const expectedBody = {
         learningGoalAiEvaluationId: 2,
