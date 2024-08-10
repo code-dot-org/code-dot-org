@@ -171,7 +171,7 @@ gem 'jquery-ui-rails', '~> 6.0.1'
 
 gem 'nokogiri', '>= 1.10.0'
 
-gem 'highline', '~> 1.6.21'
+gem 'highline', '~> 3.1.0'
 
 gem 'honeybadger', '>= 4.5.6' # error monitoring
 

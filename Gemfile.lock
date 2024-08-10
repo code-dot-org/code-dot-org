@@ -463,7 +463,8 @@ GEM
     hashdiff (1.0.1)
     hashery (2.1.2)
     hashie (3.6.0)
-    highline (1.6.21)
+    highline (3.1.0)
+      reline
     honeybadger (4.12.1)
     http (5.2.0)
       addressable (~> 2.8)
@@ -486,6 +487,7 @@ GEM
       sprockets
     image_size (1.5.0)
     in_threads (1.4.0)
+    io-console (0.7.2)
     ip3country (0.2.1)
     jmespath (1.6.2)
     jquery-rails (4.1.1)
@@ -748,6 +750,8 @@ GEM
     redis-store (1.10.0)
       redis (>= 4, < 6)
     regexp_parser (2.8.1)
+    reline (0.5.9)
+      io-console (~> 0.5)
     representable (3.2.0)
       declarative (< 0.1.0)
       trailblazer-option (>= 0.1.1, < 0.2.0)
@@ -1020,7 +1024,7 @@ DEPENDENCIES
   haml (~> 5.2.0)
   haml-rails
   haml_lint
-  highline (~> 1.6.21)
+  highline (~> 3.1.0)
   honeybadger (>= 4.5.6)
   http (~> 5.0)
   httparty
