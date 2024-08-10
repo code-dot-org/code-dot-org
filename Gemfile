@@ -354,3 +354,11 @@ gem 'mailjet', '~> 1.7.3'
 
 gem 'json-jwt', '~> 1.15'
 gem "json-schema", "~> 4.3"
+
+gem "csv"
+
+gem 'mutex_m' # needed for httpclient in Ruby >= 3.4, drop explicit dep if we upgrade httpclient
+
+gem 'abbrev' # needed for activesupport in Ruby >= 3.4, drop explicit dep after we upgrade to activesupport >= 7.2
+gem 'drb' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
+gem 'observer' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
