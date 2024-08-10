@@ -264,6 +264,7 @@ GEM
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
       rouge (>= 1.0.0)
+    bigdecimal (3.1.8)
     bindata (2.5.0)
     bindex (0.8.1)
     bootsnap (1.16.0)
@@ -277,7 +278,6 @@ GEM
       activesupport
     cgi (0.3.6)
     chronic (0.10.2)
-    chunky_png (1.3.6)
     cld (0.13.0)
       ffi
     climate_control (0.0.3)
@@ -285,7 +285,7 @@ GEM
     cocaine (0.5.8)
       climate_control (>= 0.0.3, < 1.0)
     coderay (1.1.3)
-    colorize (0.8.1)
+    colorize (1.1.0)
     composite_primary_keys (13.0.4)
       activerecord (~> 6.1.0)
     concurrent-ruby (1.2.3)
@@ -340,8 +340,7 @@ GEM
       devise (>= 4.6)
     diff-lcs (1.5.0)
     docile (1.4.0)
-    domain_name (0.5.20180417)
-      unf (>= 0.0.5, < 1.0.0)
+    domain_name (0.6.20240107)
     dotiw (4.0.1)
       actionpack (>= 4)
       i18n
@@ -350,20 +349,22 @@ GEM
     eventmachine (1.2.7)
     execjs (2.7.0)
     exifr (1.2.5)
-    eyes_core (3.18.4)
-      chunky_png (= 1.3.6)
+    eyes_core (6.3.7)
+      colorize
+      eyes_universal (= 4.18.0)
       faraday
       faraday-cookie_jar
       faraday_middleware
-      oily_png (~> 1.2)
       oj
-    eyes_selenium (3.18.4)
+      sorted_set
+      websocket
+    eyes_selenium (6.3.7)
       crass
       css_parser
-      eyes_core (= 3.18.4)
-      nokogiri
-      selenium-webdriver
-      state_machine
+      eyes_core (= 6.3.7)
+      selenium-webdriver (>= 3)
+      state_machines
+    eyes_universal (4.18.0)
     factory_bot (6.2.1)
       activesupport (>= 5.0.0)
     factory_bot_rails (6.2.0)
@@ -393,7 +394,7 @@ GEM
     faraday-httpclient (1.0.1)
     faraday-multipart (1.0.4)
       multipart-post (~> 2)
-    faraday-net_http (1.0.1)
+    faraday-net_http (1.0.2)
     faraday-net_http_persistent (1.2.0)
     faraday-patron (1.0.0)
     faraday-rack (1.0.0)
@@ -467,7 +468,7 @@ GEM
       http-cookie (~> 1.0)
       http-form_data (~> 2.2)
       llhttp-ffi (~> 0.5.0)
-    http-cookie (1.0.3)
+    http-cookie (1.0.6)
       domain_name (~> 0.5)
     http-form_data (2.3.0)
     httparty (0.21.0)
@@ -513,6 +514,7 @@ GEM
     llhttp-ffi (0.5.0)
       ffi-compiler (~> 1.0)
       rake (~> 13.0)
+    logger (1.6.0)
     loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -559,7 +561,7 @@ GEM
     multi_json (1.15.0)
     multi_test (0.1.2)
     multi_xml (0.6.0)
-    multipart-post (2.2.3)
+    multipart-post (2.4.1)
     mustermann (2.0.2)
       ruby2_keywords (~> 0.0.1)
     mysql2 (0.5.5)
@@ -594,9 +596,9 @@ GEM
     octokit (6.0.1)
       faraday (>= 1, < 3)
       sawyer (~> 0.9)
-    oily_png (1.2.0)
-      chunky_png (~> 1.3.1)
-    oj (3.14.2)
+    oj (3.16.5)
+      bigdecimal (>= 3.0)
+      ostruct (>= 0.2)
     omniauth (1.9.0)
       hashie (>= 3.4.6, < 3.7.0)
       rack (>= 1.6.2, < 3)
@@ -619,6 +621,7 @@ GEM
     open_uri_redirections (0.2.1)
     orm_adapter (0.5.0)
     os (1.1.4)
+    ostruct (0.6.0)
     parallel (1.23.0)
     parallel_tests (2.27.0)
       parallel
@@ -741,7 +744,8 @@ GEM
       netrc (~> 0.8)
     retriable (3.1.2)
     retryable (2.0.4)
-    rexml (3.2.5)
+    rexml (3.3.4)
+      strscan
     rinku (2.0.4)
     rmagick (4.2.5)
     rouge (4.1.2)
@@ -806,12 +810,14 @@ GEM
     scss_lint (0.60.0)
       sass (~> 3.5, >= 3.5.5)
     sd_notify (0.1.1)
-    selenium-webdriver (4.10.0)
+    selenium-webdriver (4.23.0)
+      base64 (~> 0.2)
+      logger (~> 1.4)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
     sequel (5.67.0)
-    set (1.0.3)
+    set (1.1.0)
     signet (0.17.0)
       addressable (~> 2.8)
       faraday (>= 0.17.5, < 3.a)
@@ -841,7 +847,7 @@ GEM
     sshkit (1.20.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
-    state_machine (1.2.0)
+    state_machines (0.6.0)
     statsig (1.33.2)
       concurrent-ruby (~> 1.1)
       connection_pool (~> 2.4, >= 2.4.1)
@@ -850,6 +856,7 @@ GEM
       user_agent_parser (~> 2.15.0)
     stringex (2.5.2)
     stringio (3.1.1)
+    strscan (3.1.0)
     swd (1.3.0)
       activesupport (>= 3)
       attr_required (>= 0.0.5)
@@ -877,8 +884,6 @@ GEM
     uber (0.1.0)
     uglifier (3.0.0)
       execjs (>= 0.3.0, < 3)
-    unf (0.1.4)
-      unf_ext
     unf_ext (0.0.7.2)
     unicode-display_width (2.4.2)
     unicode_utils (1.4.0)
@@ -905,7 +910,7 @@ GEM
       crack (>= 0.3.2)
       hashdiff (>= 0.4.0, < 2.0.0)
     webrick (1.7.0)
-    websocket (1.2.9)
+    websocket (1.2.11)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -968,7 +973,7 @@ DEPENDENCIES
   devise_invitable (~> 2.0.2)
   dotiw
   execjs
-  eyes_selenium (= 3.18.4)
+  eyes_selenium (= 6.3.7)
   factory_bot_rails (~> 6.2)
   fakefs (~> 2.5.0)
   fakeredis
