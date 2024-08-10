@@ -1,4 +1,4 @@
-require_relative '../../../kitchen/data/helper_spec'
+require_relative '../../../shared/helper_spec'
 
 file_exist '/usr/local/bin/ruby'
 cmd 'ruby -v', '3.3.4'
