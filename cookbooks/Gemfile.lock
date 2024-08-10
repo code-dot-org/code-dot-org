@@ -545,7 +545,7 @@ GEM
     public_suffix (5.0.0)
     rack (2.2.8.1)
     rainbow (3.1.1)
-    rake (13.0.6)
+    rake (13.2.1)
     regexp_parser (2.6.0)
     representable (3.2.0)
       declarative (< 0.1.0)
@@ -790,7 +790,7 @@ DEPENDENCIES
   test-kitchen
 
 RUBY VERSION
-   ruby 3.0.5p211
+   ruby 3.3.4p94
 
 BUNDLED WITH
    2.5.17
