@@ -25,7 +25,8 @@ execute 'install ruby-build' do
 end
 
 # Install dependencies require for ruby-build to succeed
-apt_package %w(zlib1g-dev)
+# List taken from: https://github.com/rbenv/ruby-build/wiki#ubuntudebianmint
+apt_package %w(autoconf patch build-essential rustc libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libgmp-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev uuid-dev)
 
 execute 'install ruby with ruby build' do
   # Target /usr/local; it might make sense to install ruby itself to /usr as
