@@ -11,18 +11,25 @@ class JobWithResults < ApplicationJob
   # Default timeout is 60s, set this in your class to override.
   @@timeout_s ||= 60
 
+  # Gets the results of the job, if there's no results it polls and waits for them
   def wait_for_results(timeout_s: @@timeout_s, poll_interval_s: 1)
     start_time = Time.now
-    until Time.now - start_time > timeout_s
-      result = read(:results)
-      return result if result
 
-      exception = read(:exception)
-      raise deserialize_exception(exception) if exception
+    until Time.now - start_time > timeout_s
+      val = results
+      return val if val
 
       sleep(poll_interval_s)
     end
     result # nil if timed out
+  end
+
+  # Non-blocking version of wait_for_results()
+  def results
+    exception = read(:exception)
+    raise deserialize_exception(exception) if exception
+
+    read(:results) # nil if no results yet
   end
 
   def cache
