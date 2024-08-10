@@ -8,7 +8,7 @@ class UrlConverter
   DASHBOARD_REGEX = /#{'//studio.code.org'}(?=$|\/)/
 
   # For reference, a 'host' is a domain and (optionally) port without a protocol.
-  # Examples: code.org, studio.code.org, localhost-studio.code.org:3000
+  # Examples: code.org, studio.code.org, studio.code.org.localhost:3000
   # @see https://developer.mozilla.org/en-US/docs/Web/API/Location
   def initialize(dashboard_host: nil, pegasus_host: nil, hourofcode_host: nil,
     csedweek_host: nil, advocacy_host: nil)
