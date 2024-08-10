@@ -19,6 +19,10 @@ class ChatClient
     end
   end
 
+  def self.bold_tags_to_terminal_escapes(input)
+    input.gsub(/<b>(.*?)<\/b>/, "\e[1m\\1\e[22m")
+  end
+
   # @param room [String] The room to post to which message should be posted.
   # @param message [String] The message to post. Can also be anything that
   #   responds to the method to_s.
@@ -31,6 +35,7 @@ class ChatClient
       @@logger = Logger.new(deploy_dir('log', 'chat_messages.log'))
     end
     @@logger.info("[#{room}] #{message}")
+    puts bold_tags_to_terminal_escapes message
 
     unless CDO.hip_chat_logging
       return
