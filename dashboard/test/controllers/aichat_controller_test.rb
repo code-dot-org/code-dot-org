@@ -10,10 +10,19 @@ class AichatControllerTest < ActionController::TestCase
     pilot_section = create(:section, user: @genai_pilot_teacher)
     @genai_pilot_student = create(:follower, section: pilot_section).student_user
     @genai_pilot_teacher2 = create :teacher, pilot_experiment: @genai_pilot.name
+    @genai_pilot_student2 = create(:follower, section: pilot_section).student_user
     @level = create(:level, name: 'level1')
     @script = create(:script)
     @script_level = create(:script_level, script: @script, levels: [@level])
-
+    valid_student_chat_message = {role: 'user', chatMessageText: 'hello from pilot student 1', status: 'ok', timestamp: Time.now.to_i}
+    valid_student_chat_message2 = {role: 'user', chatMessageText: 'hello from pilot student 1 - message 2', status: 'ok', timestamp: Time.now.to_i}
+    valid_student2_chat_message = {role: 'user', chatMessageText: 'hello from pilot student 2', status: 'ok', timestamp: Time.now.to_i}
+    valid_teacher_chat_message = {role: 'user', chatMessageText: 'hello from pilot teacher', status: 'ok', timestamp: Time.now.to_i}
+    # Store 4 chat_events in AichatEvents table: 2 for pilot student1, 1 for pilot teacher, 1 for pilot student2
+    @student_aichat_event = create(:aichat_event, user_id: @genai_pilot_student.id, level_id: @level.id, script_id: @script.id, aichat_event: valid_student_chat_message.to_json)
+    @student_aichat_event2 = create(:aichat_event, user_id: @genai_pilot_student.id, level_id: @level.id, script_id: @script.id, aichat_event: valid_student_chat_message2.to_json)
+    @teacher_aichat_event = create(:aichat_event, user_id: @genai_pilot_teacher.id, level_id: @level.id, script_id: @script.id, aichat_event: valid_teacher_chat_message.to_json)
+    @student2_aichat_event = create(:aichat_event, user_id: @genai_pilot_student2.id, level_id: @level.id, script_id: @script.id, aichat_event: valid_student2_chat_message.to_json)
     @default_model_customizations = {temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"}.stringify_keys
     @default_aichat_context = {
       currentLevelId: @level.id,
@@ -25,9 +34,8 @@ class AichatControllerTest < ActionController::TestCase
       aichatModelCustomizations: @default_model_customizations,
       aichatContext: @default_aichat_context
     }
-    valid_message = {role: 'user', chatMessageText: 'hello', status: 'unknown', timestamp: Time.now.to_i}
-    @profanity_violation_message = {role: 'user', chatMessageText: 'Damn you, robot', status: 'unknown', timestamp: Time.now.to_i}
-    @valid_params_chat_completion = @common_params.merge(newMessage: valid_message)
+    @profanity_violation_message = {role: 'user', chatMessageText: 'Damn you, robot', status: 'ok', timestamp: Time.now.to_i}
+    @valid_params_chat_completion = @common_params.merge(newMessage: valid_student_chat_message)
     @profanity_violation_params = @common_params.merge(
       newMessage: @profanity_violation_message
     )
@@ -39,7 +47,7 @@ class AichatControllerTest < ActionController::TestCase
     }
 
     @valid_params_log_chat_event = {
-      newChatEvent: {timestamp: Time.now.to_i},
+      newChatEvent: valid_student_chat_message,
       aichatContext: @default_aichat_context
     }
     @missing_aichat_context_params = @valid_params_log_chat_event.except(:aichatContext)
@@ -167,9 +175,9 @@ class AichatControllerTest < ActionController::TestCase
 
     assert_response :success
     assert_equal json_response.keys, ['chat_event_id', 'chat_event']
-    session = AichatEvent.find(json_response['chat_event_id'])
-    stored_message = JSON.parse(session.aichat_event)
-    assert_equal stored_message['timestamp'], @valid_params_log_chat_event[:newChatEvent][:timestamp]
+    aichat_event_row = AichatEvent.find(json_response['chat_event_id'])
+    stored_aichat_event = JSON.parse(aichat_event_row.aichat_event)
+    assert_equal stored_aichat_event['timestamp'], @valid_params_log_chat_event[:newChatEvent][:timestamp]
   end
 
   test 'Bad request if required params are not included for student_chat_history' do
@@ -194,5 +202,22 @@ class AichatControllerTest < ActionController::TestCase
     sign_in(@genai_pilot_teacher2)
     get :student_chat_history, params: @valid_params_student_chat_history, as: :json
     assert_response :forbidden
+  end
+
+  test 'student_chat_history successfully returns list of student aichat_events' do
+    sign_in(@genai_pilot_teacher)
+    post :student_chat_history, params: @valid_params_student_chat_history, as: :json
+    assert_response :success
+    chat_events_response_array = json_response
+    # 2 chat event stored for pilot student1 in AichatEvents table so 2 chat events returned
+    # in descending order.
+    assert_equal chat_events_response_array.length, 2
+    chat_event1_response = JSON.parse(chat_events_response_array.last)
+    chat_event2_response = JSON.parse(chat_events_response_array.first)
+    chat_event1_stored = JSON.parse(@student_aichat_event[:aichat_event])
+    chat_event2_stored = JSON.parse(@student_aichat_event2[:aichat_event])
+    assert_equal chat_event1_response.keys, ['role', 'chatMessageText', 'status', 'timestamp']
+    assert_equal chat_event1_response["chatMessageText"], chat_event1_stored["chatMessageText"]
+    assert_equal chat_event2_response["chatMessageText"], chat_event2_stored["chatMessageText"]
   end
 end

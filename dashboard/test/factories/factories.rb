@@ -2035,4 +2035,8 @@ FactoryBot.define do
     type {SharedConstants::AI_TUTOR_TYPES[:GENERAL_CHAT]}
     status {SharedConstants::AI_TUTOR_INTERACTION_STATUS[:OK]}
   end
+
+  factory :aichat_event do
+    association :user
+  end
 end
