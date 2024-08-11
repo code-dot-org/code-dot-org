@@ -55,19 +55,27 @@ module Cdo
 
     def site_from_host
       host_parts = host
+
       # staging-studio.code.org -> ['staging', 'studio', 'code', 'org']
       host_parts.sub!('-', '.') unless rack_env?(:production)
       parts = host_parts.split('.')
 
+      # If its a dev url like: hourofcode.com.localhost or studio.code.org.localhost
+      # just remove the .localhost from the end and continue processing it.
+      parts.pop if parts.last.split(':').first == 'localhost'
+
+      # Handle a dashboard url like: studio.code.org (or studio.partner.com)
       if parts.count >= 2
         domains = (%w(studio learn) + CDO.partners).map {|x| x + '.code.org'}
         domain = parts.last(3).join('.').split(':').first
         return domain if domains.include? domain
       end
 
+      # Handle one of our branded urls like: hourofcode.com
       domain = parts.last(2).join('.').split(':').first
       return domain if %w(csedweek.org hourofcode.com codeprojects.org).include?(domain)
 
+      # Otherwise, by fiat, its a pegasus url!
       'code.org'
     end
 
