@@ -1,7 +1,4 @@
-require_relative './import'
-require_relative './init_pycall'
-
-include Python::Import
+require_relative './_load_pycall'
 
 # This is a placeholder for the Python module, letting us use the future API
 # in today's code. Python.run() of the future will run a block of python without
@@ -9,8 +6,25 @@ include Python::Import
 module Python
   extend self
 
+  def init(use_pycall_thread: false)
+    @use_pycall_thread = use_pycall_thread
+
+    if @use_pycall_thread
+      require_relative './pycall_thread'
+      PyCallThread.init do
+        LoadPyCall.load_pycall
+      end
+    else
+      @thread_id = Thread.current.object_id
+      LoadPyCall.load_pycall
+    end
+
+    # Safe to load now that PyCall has been initialized in the correct thread:
+    require_relative './_import'
+  end
+
   def run(&block)
-    on_same_thread!
+    on_same_thread! if @use_pycall_thread
     dont_return_python_objects! _run(&block)
   end
 
@@ -37,7 +51,6 @@ module Python
     ].any? {|kind| obj.is_a?(kind)}
   end
 
-  @thread_id = Thread.current.object_id
   private def on_same_thread!
     if @thread_id != Thread.current.object_id
       raise ThreadSafetyError, "TODO: Python.run() of the future will be thread-safe, but Python.run() " \
@@ -49,7 +62,11 @@ module Python
   private def _run(&block)
     @py_block_depth ||= 0
     @py_block_depth += 1
-    yield
+    if @use_pycall_thread
+      PyCallThread.run(&block)
+    else
+      yield
+    end
   ensure
     @py_block_depth -= 1
   end
@@ -63,3 +80,5 @@ module Python
     obj
   end
 end
+
+Python.init(use_pycall_thread: false)
