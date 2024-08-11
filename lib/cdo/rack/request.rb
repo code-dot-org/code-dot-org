@@ -85,6 +85,12 @@ module Cdo
 
     def shared_cookie_domain_from_host
       parts = host.split('.')
+
+      # If its a dev url like: hourofcode.com.localhost or studio.code.org.localhost
+      # the cookie domain is not shared, its the whole hostname sans port.
+      return host.split(':').first if parts.last.split(':').first == 'localhost' && parts.count > 1
+
+      # All *code.org domains share the same cookie domain: code.org
       if parts.count >= 2
         domain_suffix = parts.last(2).join('.')
         return domain_suffix if domain_suffix == 'code.org'
