@@ -55,13 +55,11 @@ Resources:
             AllowedOrigins:
               - !Sub "*.${Domain}"
               # Permit local host development environments
-              - '*.code.org.localhost:3000'
-              - 'http://studio.code.org.localhost:*'
+              - '*.code.org.localhost:*'
               # Old-style localhost dev URLs
               # Deprecated by: https://github.com/code-dot-org/code-dot-org/pull/60333
               # Can be removed several months after merge when use tapers off.
-              - '*.code.org:3000'
-              - 'http://localhost-studio.code.org:*'
+              - '*.code.org:*'
             AllowedHeaders: ['*']
       Tags:
         - Key: environment
