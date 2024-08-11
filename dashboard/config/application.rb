@@ -226,5 +226,17 @@ module Dashboard
 
     config.active_job.queue_adapter = CDO.active_job_queue_adapter
     config.active_job.default_queue_name = CDO.active_job_queues[:default]
+
+    # Print `Access Dashboard at: ${URL}` message after startup.
+    if rack_env?(:development)
+      Rails.application.config.after_initialize do
+        BOLD = "\x1b[1m"
+        RED_BG = "\e[41;37m"
+        RESET = "\x1b[0m"
+        dashboard_url = CDO.studio_url('', CDO.default_scheme)
+        puts "\n#{RED_BG}Access Dashboard at:#{RESET} #{BOLD}#{dashboard_url}#{RESET}"
+        puts RESET
+      end
+    end
   end
 end
