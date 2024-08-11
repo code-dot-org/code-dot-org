@@ -56,6 +56,7 @@ Resources:
               - !Sub "*.${Domain}"
               # Permit local host development environments
               - '*.code.org.localhost:*'
+              - 'code.org.localhost:*'
               # Old-style localhost dev URLs
               # Deprecated by: https://github.com/code-dot-org/code-dot-org/pull/60333
               # Can be removed several months after merge when use tapers off.
