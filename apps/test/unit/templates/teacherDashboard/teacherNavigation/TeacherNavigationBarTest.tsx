@@ -48,16 +48,10 @@ describe('TeacherNavigationBar', () => {
       </Provider>
     );
 
-    const classLabel = screen.getByText(i18n.classSections());
-    expect(classLabel).toBeDefined();
-
-    const dropdown = screen.getByRole('combobox');
-    expect(dropdown).toBeDefined();
-
-    const option1 = screen.getByText('Period 1');
+    screen.getByText(i18n.classSections());
+    screen.getByRole('combobox');
+    screen.getByText('Period 1');
     expect(screen.queryByText('Period 3')).toBeNull();
-    const option2 = screen.getByText('Period 2');
-    expect(option1).toBeDefined();
-    expect(option2).toBeDefined();
+    screen.getByText('Period 2');
   });
 });
