@@ -349,7 +349,9 @@ gem 'cld'
 
 gem 'crowdin-api', '~> 1.10.0'
 
-gem "pycall", ">= 1.5.2"
+# To Use Python in Ruby, see: ./python/README.md
+gem "pycall", ">= 1.5.2", require: false
+gem "pycall_thread", require: false
 
 gem "delayed_job_active_record", "~> 4.1"
 
