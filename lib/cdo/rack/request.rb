@@ -62,7 +62,7 @@ module Cdo
 
       # If its a dev url like: hourofcode.com.localhost or studio.code.org.localhost
       # just remove the .localhost from the end and continue processing it.
-      parts.pop if parts.last.split(':').first == 'localhost'
+      parts.pop if parts.last == 'localhost'
 
       # Handle a dashboard url like: studio.code.org (or studio.partner.com)
       if parts.count >= 2
@@ -88,7 +88,7 @@ module Cdo
 
       # If its a dev url like: hourofcode.com.localhost or studio.code.org.localhost
       # the cookie domain is not shared, its the whole hostname sans port.
-      return host.split(':').first if parts.last.split(':').first == 'localhost' && parts.count > 1
+      return host if parts.last == 'localhost' && parts.count > 1
 
       # All *code.org domains share the same cookie domain: code.org
       if parts.count >= 2
