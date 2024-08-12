@@ -33,16 +33,7 @@ export async function handleRunClick(
 
 export async function runPythonCode(mainFile: string, source: MultiFileSource) {
   try {
-    const {results, error} = await asyncRun(mainFile, source);
-    if (results) {
-      console.log('got results!');
-      console.log({results: results});
-      // console.log(results[0]);
-      // console.log(results[0].test_title);
-      //console.log('pyodideWorker return results: ', results);
-    } else if (error) {
-      console.log('pyodideWorker error: ', error);
-    }
+    return await asyncRun(mainFile, source);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (e: any) {
     console.log(
@@ -67,7 +58,22 @@ export async function runAllTests(
   if (validationFile) {
     // We only support one validation file. If somehow there is more than one, just run the first one.
     dispatch(appendSystemMessage(`Running level tests...`));
-    await runPythonCode(runValidationTests(validationFile.name), source);
+    const result = await runPythonCode(
+      runValidationTests(validationFile.name),
+      source
+    );
+    if (result?.message) {
+      // Get validation test results
+      // Message is an array of Maps with the keys "name" and "result",
+      // where "name" is the name of the test and "result" is one of
+      // "PASS/FAIL/ERROR/EXPECTED_FAILURE/UNEXPECTED_SUCCESS"
+      // TODO: Add link to pythonlab-packages
+      const testResults = result.message as Map<string, string>[];
+      const allPass = testResults.every(
+        testResult => testResult.get('result') === 'PASS'
+      );
+      console.log({allPass});
+    }
   } else {
     dispatch(appendSystemMessage(`Running your project's tests...`));
     // Otherwise, we look for files that follow the regex 'test*.py' and run those.
