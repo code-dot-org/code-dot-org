@@ -26,7 +26,7 @@ export default class GDPRDialog extends Component {
       user_id: this.props.currentUserId,
     }).then(() => {
       const gdprDataScript = document.querySelector('script[data-gdpr]');
-      let gdprData = JSON.parse(gdprDataScript.dataset['gdpr']);
+      const gdprData = JSON.parse(gdprDataScript.dataset['gdpr']);
       gdprData.show_gdpr_dialog = false;
       gdprDataScript.dataset['gdpr'] = JSON.stringify(gdprData);
     });
