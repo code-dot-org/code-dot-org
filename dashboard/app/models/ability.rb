@@ -486,6 +486,8 @@ class Ability
           user.teachers.any? {|teacher| teacher.has_pilot_experiment?(GENAI_PILOT)})
         can :chat_completion, :aichat
         can :log_chat_event, :aichat
+        can :start_chat_completion, :aichat
+        can :chat_request, :aichat
       end
       # Only teachers can view student chat history.
       if user.has_pilot_experiment?(GENAI_PILOT)

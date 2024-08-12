@@ -35,15 +35,22 @@ async function loadPyodideAndPackages() {
   });
   self.pyodide.setStdout(getStreamHandlerOptions('sysout'));
   self.pyodide.setStderr(getStreamHandlerOptions('syserr'));
+  // Warm up the pyodide environment by running setup code.
+  await runInternalCode(SETUP_CODE, 'setup_run');
 }
 
 let pyodideReadyPromise = null;
 let pyodideGlobals = null;
 async function initializePyodide() {
-  if (pyodideReadyPromise === null) {
+  const promiseWasNull = pyodideReadyPromise === null;
+  if (promiseWasNull) {
     pyodideReadyPromise = loadPyodideAndPackages();
+    self.postMessage({type: 'loading_pyodide'});
   }
   await pyodideReadyPromise;
+  if (promiseWasNull) {
+    self.postMessage({type: 'loaded_pyodide'});
+  }
   pyodideGlobals = self.pyodide.globals.toJs();
 }
 
@@ -58,17 +65,17 @@ self.onmessage = async event => {
   try {
     writeSource(source, DEFAULT_FOLDER_ID, '', self.pyodide);
     await importPackagesFromFiles(source, self.pyodide);
-    const setupResult = await runInternalCode(SETUP_CODE, id);
-    // Only run the user's code if the setup code ran successfully.
-    if (setupResult) {
-      results = await self.pyodide.runPythonAsync(python, {
-        filename: `/${HOME_FOLDER}/${MAIN_PYTHON_FILE}`,
-      });
-    }
+    results = await self.pyodide.runPythonAsync(python, {
+      filename: `/${HOME_FOLDER}/${MAIN_PYTHON_FILE}`,
+    });
   } catch (error) {
     self.postMessage({type: 'error', message: error.message, id});
   }
+  // Clean up environment.
   await runInternalCode(getCleanupCode(source), id);
+  // We run setup code at the end to prepare the environment for the next run.
+  await runInternalCode(SETUP_CODE, id);
+
   const updatedSource = getUpdatedSourceAndDeleteFiles(
     source,
     id,
@@ -81,15 +88,13 @@ self.onmessage = async event => {
 };
 
 // Run code owned by us (not the user). If there is an error, post a
-// system_error message and return false, otherwise return true.
+// system_error message.
 async function runInternalCode(code, id) {
   try {
     await self.pyodide.runPythonAsync(code);
   } catch (error) {
     self.postMessage({type: 'system_error', message: error.message, id});
-    return false;
   }
-  return true;
 }
 
 // Return the options for sysout or syserr stream handler.

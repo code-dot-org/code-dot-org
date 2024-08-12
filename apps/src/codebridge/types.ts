@@ -64,7 +64,8 @@ export type OnRunFunction = (
   runTests: boolean,
   dispatch: Dispatch<AnyAction>,
   source: MultiFileSource | undefined
-) => void;
+) => Promise<void>;
+export type OnStopFunction = () => void;
 
 export type ReducerAction = {
   type: string;
