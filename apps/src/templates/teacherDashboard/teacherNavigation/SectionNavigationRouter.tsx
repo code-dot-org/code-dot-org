@@ -103,7 +103,10 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
             path={getSectionRouterPath('/')}
             element={redirectToDefaultPath}
           />
-          <Route path={'/*'} element={redirectToDefaultPath} />
+          <Route
+            path={getSectionRouterPath('/*')}
+            element={redirectToDefaultPath}
+          />
           <Route
             path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.manageStudents)}
             element={applyV1TeacherDashboardWidth(
