@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-08-02T22:04:54.000Z",
   "level_num": "custom",
@@ -69,16 +70,15 @@
     "hide_pause_button": "true",
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Let's learn to animate sprites using behaviors. ",
-    "instructions_icon": "pizza",
+    "instructions_icon": "transformers_optimusprime",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"*Note:* To give a sprite a behavior, you need to use a `sprite begins` block with one of the green behavior blocks, such as `spinning right`.\\n\\n<xml><block type=\\\"gamelab_addBehaviorSimple\\\">\\n            <value name=\\\"SPRITE\\\">\\n              <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n                <title name=\\\"ANIMATION\\\">\\\"face_burger_1\\\"</title>\\n              </block>\\n            </value>\\n            <value name=\\\"BEHAVIOR\\\">\\n              <block type=\\\"gamelab_behavior_get\\\">\\n                <mutation></mutation>\\n                <title name=\\\"VAR\\\" id=\\\"spinning right\\\">spinning right</title>\\n              </block>\\n              </value></block></xml>\",\"hint_id\":\"storyboard_behavior_example\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/8c3cc5caca0ba69be58ce14d9fd7a983/generic_storyboard_choices_behaviors.mp3\"}]",
     "skip_autosave": true,
     "encrypted_examples": "Osk7nlPszFZs/rUC33b4g3fRYu1/0Ln4Dr7UKGkqB2igNdhuEusjyF70+ZqC\nGLztY5YSLxvhU0hkCL/vHoAzuaL4n5Fj9x7QhB1ULMoIo2AQEvKD8ilOhtkS\nzofSQj+IqvBg3BZEFoHQgbMCfTro/d/TwICW+c4zAg7UgEG0u/86zN688td7\nlu6N2X4rZVci/Eki2BL80ib9cURlJNPBHQ==\n",
     "standalone_app_name": "spritelab",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:54.115+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_behaviors\\\"\"],\"cloned_from\":\"helloworld_food_behaviors\"},{\"changed_at\":\"2024-08-07 18:30:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-07 18:34:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:54.115+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_behaviors\\\"\"],\"cloned_from\":\"helloworld_food_behaviors\"},{\"changed_at\":\"2024-08-07 18:30:51 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-07 18:34:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-09 17:13:29 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

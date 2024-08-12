@@ -512,6 +512,7 @@ sq-AL:
   dashboard_error_other_section: Nëse jeni duke i zhvendosur nxënësit midis sesioneve
     tuaja, zgjedhni sesionin tuaj nga menyja rënëse. Zgjedhni vetëm “Tjetër mësimdhënës”
     për të zhvendosur nxënësit tuaj në një sesion të mësimdhënësit tjetër.
+  dashboard_express: 'Kursi Express: '
   dashboard_faq: Pyetjet më të shpeshta
   dashboard_faq_k5: Pyetje e shtruar shpesh të K-5
   dashboard_filter_all: Të gjitha
@@ -708,7 +709,7 @@ sq-AL:
   dashboard_students_url: URL
   dashboard_submission_in_progress: Në proces
   dashboard_submission_submitted: Dorëzuar
-  dashboard_teacher: Mësues
+  dashboard_teacher: Mësimdhënës
   dashboard_teacher_worksheet: puna mësuesit
   dashboard_view_all_lesson_plans: Shkarko planin mësimor për kurset 1-3
   educator_notes: Shënimet e Edukatorit
