@@ -5,6 +5,8 @@ import Draggable, {DraggableEventHandler} from 'react-draggable';
 import Button from '@cdo/apps/componentLibrary/button';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
+import AiDiffChatFooter from './AiDiffChatFooter';
+
 import style from './ai-differentiation.module.scss';
 
 interface AiDiffContainerProps {
@@ -22,9 +24,15 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   const [positionX, setPositionX] = useState(0);
   const [positionY, setPositionY] = useState(0);
 
+  const [messageHistory, setMessageHistory] = useState<string[]>([]);
+
   const onStopHandler: DraggableEventHandler = (e, data) => {
     setPositionX(data.x);
     setPositionY(data.y);
+  };
+
+  const onMessageSend = (message: string) => {
+    setMessageHistory([...messageHistory, message]);
   };
 
   return (
@@ -58,7 +66,14 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
           </div>
         </div>
 
-        <div className={style.fabBackground} />
+        <div className={style.fabBackground}>
+          <div className={style.chatContent}>
+            {messageHistory.map((message: string) => (
+              <p>{message}</p>
+            ))}
+          </div>
+          <AiDiffChatFooter onSubmit={onMessageSend} />
+        </div>
       </div>
     </Draggable>
   );

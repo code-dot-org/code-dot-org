@@ -85,9 +85,18 @@ const soundStyle: SoundStyle = {
     iconCode: '',
     marginLeft: 0,
     classNameColor: styles.soundChordColor,
-    classNameFill: styles.soundPatternFill,
+    classNameFill: styles.soundChordFill,
     classNameBackground: styles.soundChordBackground,
     classNameBorder: styles.soundChordBorder,
+  },
+  tune: {
+    icon: '',
+    iconCode: '',
+    marginLeft: 0,
+    classNameColor: styles.soundTuneColor,
+    classNameFill: styles.soundTuneFill,
+    classNameBackground: styles.soundTuneBackground,
+    classNameBorder: styles.soundTuneBorder,
   },
 };
 

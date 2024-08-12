@@ -58,6 +58,7 @@ session_store_server: 'redis://ui-tests-redis:6379/0/session'
 skip_seed_all: true
 sources_s3_directory: sources_circle/$CIRCLE_BUILD_NUM
 use_my_apps: true
+aiproxy_api_key: 'fake_key'
 " >> locals.yml
 echo "Wrote secrets from env vars into locals.yml."
 

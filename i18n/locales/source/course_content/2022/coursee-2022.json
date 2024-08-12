@@ -469,6 +469,22 @@
   },
   "https://studio.code.org/s/coursee-2022/lessons/5/levels/1": {
     "long_instructions": "<img src=\"https://studio.code.org/api/v1/animation-library/gamelab/uRkXIcSlbIAZ46WKaW.dFu.g3062psWS/category_people/pink_dress_wave.png\" style=\"height:80px\"> _\"Hello, world! My name is Rikki, and here are some things I'd like to share about me!\"_\n\n**Explore:** Rikki is using Sprite Lab to create an _interactive poster_ about herself that she can share on the web.  \n\nRikki has given you permission to check out her poster. You can even edit her code! \n\nPlay with Rikki's poster and code for a bit, then click **Finish**.",
+    "behavior_names": {
+      "wobbling": "wobbling",
+      "moving with arrow keys": "moving with arrow keys",
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling"
+    },
     "behavior_descriptions": {
       "randomly set the rotation of a sprite": "randomly set the rotation of a sprite",
       "move a sprite if the user is pressing the arrow keys": "move a sprite if the user is pressing the arrow keys",
@@ -648,6 +664,17 @@
     "authored_hints": {
       "courseC_artist_prog3_a": "To create this window, just draw a square with 100 pixel sides.\n\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward\n-   turn\n-   move forward",
       "courseC_artist_prog3_b": "Want to make shorter code? Try using a loop in this puzzle."
+    },
+    "function_definitions": {
+      "draw flame": {
+        "name": "draw flame",
+        "parameters": {
+          "x": "x"
+        }
+      },
+      "draw fire": {
+        "name": "draw fire"
+      }
     }
   },
   "https://studio.code.org/s/coursee-2022/lessons/6/levels/6": {

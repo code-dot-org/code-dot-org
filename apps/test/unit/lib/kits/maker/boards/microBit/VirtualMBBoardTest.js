@@ -1,4 +1,4 @@
-import VirtualMBBoard from '@cdo/apps/lib/kits/maker/boards/VirtualMBBoard';
+import VirtualMBBoard from '@cdo/apps/maker/boards/VirtualMBBoard';
 
 import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardInterfaceTestUtil';

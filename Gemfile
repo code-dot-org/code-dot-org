@@ -229,6 +229,7 @@ gem 'active_model_serializers', '~> 0.10.13'
 
 # AWS SDK and associated service APIs.
 gem 'aws-sdk-acm'
+gem 'aws-sdk-bedrockagentruntime', '~> 1.10.0'
 gem 'aws-sdk-cloudformation'
 gem 'aws-sdk-cloudfront'
 gem 'aws-sdk-cloudwatch'
@@ -348,6 +349,8 @@ gem 'pry', '~> 0.14.0'
 gem 'cld'
 
 gem 'crowdin-api', '~> 1.10.0'
+
+gem "pycall", ">= 1.5.2"
 
 gem "delayed_job_active_record", "~> 4.1"
 
