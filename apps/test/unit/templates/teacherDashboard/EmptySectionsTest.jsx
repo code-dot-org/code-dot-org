@@ -47,13 +47,17 @@ describe('EmptySection', () => {
     expect(screen.queryByText(i18n.browseCurriculum())).not.be.visible;
   });
 
-  it('Is null when there are students and a curriculum is assigned', () => {
+  it('only displays headline and description when there are students and a curriculum is assigned', () => {
     render(
       <Router>
         <EmptySection hasStudents={true} hasCurriculumAssigned={true} />
       </Router>
     );
 
-    expect(screen.queryByText(i18n.emptySectionHeadline())).to.be.null;
+    expect(screen.getByText(i18n.emptySectionHeadline())).to.be.visible;
+    expect(screen.queryByAltText('empty desk')).not.be.visible;
+    expect(screen.queryByAltText('blank screen')).not.be.visible;
+    expect(screen.queryByText(i18n.addStudents())).not.be.visible;
+    expect(screen.queryByText(i18n.browseCurriculum())).not.be.visible;
   });
 });
