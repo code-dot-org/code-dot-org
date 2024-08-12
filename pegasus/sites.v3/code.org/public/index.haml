@@ -22,9 +22,6 @@ style_min: true
 -# Apply this stylesheet when 'curriculum-launch-2024' is set to 'true'
 - if !!DCDO.get('curriculum-launch-2024', false)
   =inline_css '/generated/banners-curriculum-launch.css'
--# TODO: Remove this after Best of STEM 2024 is over
-- if !!DCDO.get('best-of-stem-2024', false)
-  =inline_css '/generated/best-of-stem-hero-banner.css'
 
 - cookie_key = environment_specific_cookie_name '_user_type'
 - user_type = request.cookies[cookie_key]

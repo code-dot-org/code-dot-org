@@ -129,7 +129,7 @@
           "type": "best-of-stem-2024",
           "text_h1": "best_of_stem_heading",
           "external_link": true,
-          "button_link": "/test",
+          "button_link": "#",
           "button_text": "call_to_action_learn_more"
         }
       ]
