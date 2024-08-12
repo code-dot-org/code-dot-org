@@ -17,24 +17,23 @@ import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-import {postAichatCompletionMessage} from '../aichatCompletionApi';
+import {postAichatCompletionMessage} from '../aichatApi';
+import ChatEventLogger from '../chatEventLogger';
 import {saveTypeToAnalyticsEvent} from '../constants';
 import {
-  AiCustomizations,
   AichatContext,
+  AiCustomizations,
   ChatEvent,
+  ChatMessage,
   FieldVisibilities,
   LevelAichatSettings,
   ModelCardInfo,
   SaveType,
   ViewMode,
   Visibility,
-  ChatMessage,
   isModelUpdate,
   isNotification,
   isChatMessage,
-  ModelUpdate,
-  Notification,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -209,14 +208,13 @@ export const onSaveComplete =
 
     changedProperties.forEach(property => {
       const typedProperty = property as keyof AiCustomizations;
-      dispatch(
-        addModelUpdate({
-          id: getNewMessageId(),
-          updatedField: typedProperty,
-          updatedValue: currentAiCustomizations[typedProperty],
-          timestamp: Date.now(),
-        })
-      );
+      const modelUpdate = {
+        id: getNewMessageId(),
+        updatedField: typedProperty,
+        updatedValue: currentAiCustomizations[typedProperty],
+        timestamp: Date.now(),
+      };
+      dispatch(addChatEvent(modelUpdate));
 
       // Report to analytics the changed value for only selected model id and temperature properties.
       // Do not include the free text changes (system prompt and retrieval contexts).
@@ -288,7 +286,11 @@ export const onSaveFail =
           if (body?.details?.profaneWords?.length > 0 && flaggedProperties) {
             errorMessage = `Profanity detected in the ${flaggedProperties} and cannot be updated. Please try again.`;
           }
-          dispatchSaveFailNotification(dispatch, errorMessage);
+          dispatchSaveFailNotification(
+            dispatch,
+            errorMessage,
+            !!flaggedProperties
+          );
         })
         // Catch any errors in parsing the response body or if there was no response body
         // and fall back to the default error message.
@@ -303,19 +305,61 @@ export const onSaveFail =
 
 const dispatchSaveFailNotification = (
   dispatch: AppDispatch,
-  errorMessage: string
+  errorMessage: string,
+  includeInChatHistory?: boolean
 ) => {
-  dispatch(
-    addNotification({
-      id: getNewMessageId(),
-      text: errorMessage,
-      notificationType: 'error',
-      timestamp: Date.now(),
-    })
-  );
+  const errorNotification = {
+    id: getNewMessageId(),
+    text: errorMessage,
+    notificationType: 'error',
+    timestamp: Date.now(),
+    includeInChatHistory,
+  };
+  dispatch(addChatEvent(errorNotification));
+
   // Notify the UI that the save is complete.
   dispatch(endSave());
 };
+
+// This thunk adds a chat event to chatEventsCurrent (displayed in current chat workspace)
+// if hideForParticipants != true and then logs the event to the backend for all chat events
+// except notifications with includeInHistory != true.
+export const addChatEvent =
+  <T extends ChatEvent>(chatEvent: T) =>
+  (dispatch: AppDispatch, getState: () => RootState) => {
+    if (!chatEvent.hideForParticipants) {
+      dispatch(addEventToChatEventsCurrent(chatEvent));
+    }
+    // Log chat event to backend.
+    const state = getState() as RootState;
+    const aichatContext: AichatContext = {
+      currentLevelId: parseInt(state.progress.currentLevelId || ''),
+      scriptId: state.progress.scriptId,
+      channelId: state.lab.channel?.id,
+    };
+    // Other than notifications that are not included in chat history (save errors not due to profanity),
+    // log the chat event to backend.
+    if (
+      !isNotification(chatEvent) ||
+      (isNotification(chatEvent) && chatEvent.includeInChatHistory)
+    ) {
+      // If a model update, log only the updated value for temperature and selected model id.
+      // Do not log free text updated values (e.g., system prompt, retrieval contexts, model card info).
+      if (isModelUpdate(chatEvent)) {
+        const {updatedField, updatedValue} = chatEvent;
+        // Only log updated value for temperature and selected model id - free text values are not logged.
+        const updatedValueToLog =
+          updatedField === 'temperature' || updatedField === 'selectedModelId'
+            ? updatedValue
+            : 'N/A';
+        chatEvent = {
+          ...chatEvent,
+          updatedValue: updatedValueToLog,
+        };
+      }
+      ChatEventLogger.getInstance().logChatEvent(chatEvent, aichatContext);
+    }
+  };
 
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
@@ -323,6 +367,7 @@ const dispatchSaveFailNotification = (
 export const submitChatContents = createAsyncThunk(
   'aichat/submitChatContents',
   async (newUserMessageText: string, thunkAPI) => {
+    const dispatch = thunkAPI.dispatch as AppDispatch;
     const state = thunkAPI.getState() as RootState;
     const {
       savedAiCustomizations: aiCustomizations,
@@ -336,13 +381,13 @@ export const submitChatContents = createAsyncThunk(
       channelId: state.lab.channel?.id,
     };
     // Create the new user ChatCompleteMessage and add to chatMessages.
-    const newMessage: ChatMessage = {
+    const newUserMessage: ChatMessage = {
       role: Role.USER,
       status: Status.UNKNOWN,
       chatMessageText: newUserMessageText,
       timestamp: Date.now(),
     };
-    thunkAPI.dispatch(setChatMessagePending(newMessage));
+    dispatch(setChatMessagePending(newUserMessage));
 
     // Post user content and messages to backend and retrieve assistant response.
     const startTime = Date.now();
@@ -350,7 +395,7 @@ export const submitChatContents = createAsyncThunk(
     let chatApiResponse;
     try {
       chatApiResponse = await postAichatCompletionMessage(
-        newMessage,
+        newUserMessage,
         chatEventsCurrent.filter(isChatMessage) as ChatMessage[],
         aiCustomizations,
         aichatContext,
@@ -362,16 +407,13 @@ export const submitChatContents = createAsyncThunk(
         .logError('Error in aichat completion request', error as Error);
 
       thunkAPI.dispatch(clearChatMessagePending());
-      thunkAPI.dispatch(addChatMessage({...newMessage, status: Status.ERROR}));
-
-      const assistantChatMessage: ChatMessage = {
+      addChatEvent({...newUserMessage, status: Status.ERROR});
+      addChatEvent({
         role: Role.ASSISTANT,
         status: Status.ERROR,
         chatMessageText: 'error',
         timestamp: Date.now(),
-      };
-      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
-
+      });
       return;
     }
 
@@ -395,9 +437,9 @@ export const submitChatContents = createAsyncThunk(
     }
 
     thunkAPI.dispatch(clearChatMessagePending());
-    chatApiResponse.messages.forEach(message =>
-      thunkAPI.dispatch(addChatMessage({...message, timestamp: Date.now()}))
-    );
+    chatApiResponse.messages.forEach(message => {
+      dispatch(addChatEvent({...message, timestamp: Date.now()}));
+    });
   }
 );
 
@@ -405,13 +447,7 @@ const aichatSlice = createSlice({
   name: 'aichat',
   initialState,
   reducers: {
-    addChatMessage: (state, action: PayloadAction<ChatMessage>) => {
-      state.chatEventsCurrent.push(action.payload);
-    },
-    addModelUpdate: (state, action: PayloadAction<ModelUpdate>) => {
-      state.chatEventsCurrent.push(action.payload);
-    },
-    addNotification: (state, action: PayloadAction<Notification>) => {
+    addEventToChatEventsCurrent: (state, action: PayloadAction<ChatEvent>) => {
       state.chatEventsCurrent.push(action.payload);
     },
     setStudentChatHistory: (state, action: PayloadAction<ChatEvent[]>) => {
@@ -628,8 +664,7 @@ export const selectHavePropertiesChanged = (state: RootState) =>
 
 // Actions not to be used outside of this file
 const {
-  addChatMessage,
-  addModelUpdate,
+  addEventToChatEventsCurrent,
   startSave,
   setChatMessagePending,
   clearChatMessagePending,
@@ -638,7 +673,6 @@ const {
 
 registerReducers({aichat: aichatSlice.reducer});
 export const {
-  addNotification,
   removeUpdateMessage,
   setNewChatSession,
   setChatSessionId,

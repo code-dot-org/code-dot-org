@@ -1,5 +1,5 @@
-import CapacitiveTouchSensor from '@cdo/apps/lib/kits/maker/boards/microBit/CapacitiveTouchSensor';
-import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
+import CapacitiveTouchSensor from '@cdo/apps/maker/boards/microBit/CapacitiveTouchSensor';
+import {MBFirmataClientStub} from '@cdo/apps/maker/util/makeStubBoard';
 
 describe('CapacitiveTouchSensor', function () {
   let boardClient, sensor;

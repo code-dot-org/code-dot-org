@@ -15,7 +15,6 @@ import sectionStandardsProgress, {
   setTeacherCommentForReport,
 } from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
-import {fakeCoursesWithProgress} from '@cdo/apps/templates/teacherDashboard/teacherDashboardTestHelpers';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
@@ -26,8 +25,8 @@ const DEFAULT_PROPS = {
   sectionId: 1,
   sectionName: 'My Section',
   studentCount: 5,
-  coursesWithProgress: fakeCoursesWithProgress,
   sectionVersionId: 2,
+  anyStudentHasProgress: true,
 };
 
 describe('TeacherDashboard', () => {

@@ -11,6 +11,7 @@ export enum BlockTypes {
   PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2 = 'play_sound_at_current_location_simple2',
   PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2 = 'play_pattern_at_current_location_simple2',
   PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2 = 'play_chord_at_current_location_simple2',
+  PLAY_TUNE_AT_CURRENT_LOCATION_SIMPLE2 = 'play_tune_at_current_location_simple2',
   PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2 = 'play_rest_at_current_location_simple2',
   SET_EFFECT_AT_CURRENT_LOCATION_SIMPLE2 = 'set_effect_at_current_location_simple2',
   SET_VOLUME_EFFECT_AT_CURRENT_LOCATION_SIMPLE2 = 'set_volume_effect_at_current_location_simple2',

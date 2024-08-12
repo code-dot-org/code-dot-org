@@ -12,7 +12,7 @@ import arrowDisplay from '@cdo/apps/templates/arrowDisplayRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-import microBit from '../lib/kits/maker/microBitRedux';
+import microBit from '../maker/microBitRedux';
 import frozenProjectInfoDialog from '../templates/projects/frozenProjectInfoDialog/frozenProjectInfoDialogRedux';
 import projects from '../templates/projects/projectsRedux';
 import publishDialog from '../templates/projects/publishDialog/publishDialogRedux';

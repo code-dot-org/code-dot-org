@@ -3,6 +3,7 @@ import SwapLayoutButton from '@codebridge/SwapLayoutButton';
 import React, {useEffect, useRef, useState} from 'react';
 import {useDispatch} from 'react-redux';
 
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -101,6 +102,13 @@ const Console: React.FunctionComponent = () => {
             return (
               <div key={index} className={moduleStyles.errorLine}>
                 {outputLine.contents}
+              </div>
+            );
+          } else if (outputLine.type === 'system_error') {
+            return (
+              <div key={index} className={moduleStyles.errorLine}>
+                {systemMessagePrefix}
+                {codebridgeI18n.systemCodeError()}
               </div>
             );
           } else {

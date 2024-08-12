@@ -4,7 +4,7 @@
  */
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import {N_COLOR_LEDS} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
+import {N_COLOR_LEDS} from '@cdo/apps/maker/boards/circuitPlayground/PlaygroundConstants';
 
 import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
