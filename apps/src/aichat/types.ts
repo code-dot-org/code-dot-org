@@ -13,6 +13,8 @@ export type AichatInteractionStatusValue = string;
 export interface ChatEvent {
   // UTC timestamp in milliseconds
   timestamp: number;
+  // This field is optional but when it is defined, it must be set to `true`.
+  // This allows the chat event to be visible by default without having to add an extra field.
   hideForParticipants?: true;
   descriptionKey?: keyof typeof ChatEventDescriptions;
 }
@@ -33,6 +35,7 @@ export interface Notification extends ChatEvent {
   id: number;
   text: string;
   notificationType: 'error' | 'success';
+  includeInChatHistory?: boolean;
 }
 
 // Type Predicates: checks if a ChatEvent is a given type, and more helpfully,
@@ -49,10 +52,15 @@ export function isNotification(event: ChatEvent): event is Notification {
   return (event as Notification).notificationType !== undefined;
 }
 
-export interface ChatApiResponse {
+export interface ChatCompletionApiResponse {
   messages: ChatMessage[];
   session_id: number;
   flagged_content?: string;
+}
+
+export interface LogChatEventApiResponse {
+  chat_event_id: number;
+  chat_event: ChatMessage;
 }
 
 export type AichatContext = {

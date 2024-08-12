@@ -443,8 +443,12 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   };
 
   extendedBlockSvg.isUserVisible = function () {
-    // TODO - used for EXTRA_TOP_BLOCKS_FAIL feedback
-    return false;
+    // Used for EXTRA_TOP_BLOCKS_FAIL feedback
+    // Mainline Blockly doesn't support invisible blocks. If a block should be
+    // invisible, we instead load it to the hidden workspace. We use custom
+    // serialization hooks to manage this block state.
+    // Any block on the main workspace is visible.
+    return this.workspace === Blockly.getMainWorkspace();
   };
 
   // Labs like Maze and Artist turn undeletable blocks gray.
@@ -769,6 +773,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.isToolboxMode =
       optOptionsExtended.editBlocks === 'toolbox_blocks';
     blocklyWrapper.toolboxBlocks = options.toolbox;
+    blocklyWrapper.showUnusedBlocks = options.showUnusedBlocks;
     blocklyWrapper.blockLimitMap = cdoUtils.createBlockLimitMap();
     const workspace = blocklyWrapper.blockly_.inject(
       container,

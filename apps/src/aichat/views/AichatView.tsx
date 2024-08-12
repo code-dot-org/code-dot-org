@@ -1,6 +1,6 @@
 /** @file Top-level view for AI Chat Lab */
 
-import React, {useCallback, useContext, useEffect} from 'react';
+import React, {useCallback, useEffect} from 'react';
 
 import {sendSuccessReport} from '@cdo/apps/code-studio/progressRedux';
 import Button from '@cdo/apps/componentLibrary/button/Button';
@@ -11,10 +11,7 @@ import {isProjectTemplateLevel} from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import {
-  DialogContext,
-  DialogType,
-} from '@cdo/apps/lab2/views/dialogs/DialogManager';
+import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
@@ -23,7 +20,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import aichatI18n from '../locale';
 import {
-  addNotification,
+  addChatEvent,
   clearChatMessages,
   onSaveComplete,
   onSaveFail,
@@ -49,6 +46,7 @@ const getResetModelNotification = (): Notification => ({
   text: 'Model customizations and model card information have been reset to default settings.',
   notificationType: 'success',
   timestamp: Date.now(),
+  includeInChatHistory: true,
 });
 
 const AichatView: React.FunctionComponent = () => {
@@ -106,6 +104,13 @@ const AichatView: React.FunctionComponent = () => {
       setStartingAiCustomizations({
         levelAichatSettings,
         studentAiCustomizations,
+      })
+    );
+    dispatch(
+      addChatEvent({
+        timestamp: Date.now(),
+        descriptionKey: 'LOAD_LEVEL',
+        hideForParticipants: true,
       })
     );
   }, [dispatch, initialSources, levelAichatSettings]);
@@ -166,19 +171,29 @@ const AichatView: React.FunctionComponent = () => {
     // Save the customizations to the user's project.
     dispatch(updateAiCustomization());
     dispatch(clearChatMessages());
-    dispatch(addNotification(getResetModelNotification()));
+    dispatch(addChatEvent(getResetModelNotification()));
   }, [dispatch, levelAichatSettings]);
 
-  const dialogControl = useContext(DialogContext);
+  const dialogControl = useDialogControl();
 
   const onClickStartOver = useCallback(() => {
     if (dialogControl) {
-      dialogControl.showDialog(DialogType.StartOver, resetProject);
+      dialogControl.showDialog({
+        type: DialogType.StartOver,
+        handleConfirm: resetProject,
+      });
     }
   }, [dialogControl, resetProject]);
 
   const onClear = useCallback(() => {
     dispatch(clearChatMessages());
+    dispatch(
+      addChatEvent({
+        timestamp: Date.now(),
+        descriptionKey: 'CLEAR_CHAT',
+        hideForParticipants: true,
+      })
+    );
     analyticsReporter.sendEvent(
       EVENTS.CHAT_ACTION,
       {
