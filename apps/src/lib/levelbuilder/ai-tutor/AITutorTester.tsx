@@ -12,7 +12,12 @@ import Button from '@cdo/apps/componentLibrary/button/Button';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 
 import AITutorTesterSampleColumns from './AITutorTesterSampleColumns';
-import {availableEndpoints, genAIEndpointIds, modelCardInfo} from './constants';
+import {
+  availableEndpoints,
+  DEFAULT_TEMPERATURE,
+  genAIEndpointIds,
+  modelCardInfo,
+} from './constants';
 
 import styles from './ai-tutor-tester.module.scss';
 
@@ -64,17 +69,19 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
     setData(result.data);
   };
 
-  const getAIResponses = () => {
+  const getAIResponses = async () => {
     setResponsesPending(true);
-    for (let i = 0; i < data.length; i++) {
+    const responsePromises = data.map(async row => {
       if (selectedEndpoint === 'llm-guard') {
-        getLLMGuardToxicity(data[i]);
+        return getLLMGuardToxicity(row);
       } else if (genAIEndpointIds.includes(selectedEndpoint)) {
-        getGenAIResponses(data[i]);
+        return getGenAIResponses(row);
       } else {
-        askAITutor(data[i]);
+        return askAITutor(row);
       }
-    }
+    });
+
+    await Promise.allSettled(responsePromises);
   };
 
   const getGenAIResponses = async (row: AIInteraction) => {
@@ -85,7 +92,7 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
       status: 'ok',
       timestamp: new Date().getTime(),
     };
-    const temperature = row.temperature ? row.temperature : 0.8;
+    const temperature = row.temperature ? row.temperature : DEFAULT_TEMPERATURE;
     const aiCustomizations = {
       selectedModelId: selectedEndpoint,
       temperature: temperature,
@@ -105,7 +112,7 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
       aiCustomizations,
       aichatContext
     );
-    row.aiResponse = genAIResponse.messages[1].chatMessageText;
+    row.aiResponse = genAIResponse?.messages[1]?.chatMessageText;
     setResponseCount(prevResponseCount => prevResponseCount + 1);
   };
 
