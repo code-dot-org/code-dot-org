@@ -132,13 +132,11 @@ function TeacherDashboard({
         />
         <Route
           path={TEACHER_DASHBOARD_PATHS.loginInfo}
-          element={renderEmptySectionOrElement(
-            applyV1TeacherDashboardWidth(
-              <SectionLoginInfo
-                studioUrlPrefix={studioUrlPrefix}
-                sectionProviderName={sectionProviderName}
-              />
-            )
+          element={applyV1TeacherDashboardWidth(
+            <SectionLoginInfo
+              studioUrlPrefix={studioUrlPrefix}
+              sectionProviderName={sectionProviderName}
+            />
           )}
         />
         <Route
