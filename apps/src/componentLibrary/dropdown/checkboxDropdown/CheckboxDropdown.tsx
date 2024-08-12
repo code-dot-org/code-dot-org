@@ -75,7 +75,7 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
       isSomeValueSelected={checkedOptions.length > 0}
       {...rest}
     >
-      <form className={moduleStyles.dropdownMenuContainer}>
+      <div className={moduleStyles.dropdownMenuContainer}>
         <ul>
           {allOptions.map(({value, label, isOptionDisabled}) => (
             <li key={value}>
@@ -107,7 +107,7 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
             color={Button.ButtonColor.brandSecondaryDefault}
           />
         </div>
-      </form>
+      </div>
     </CustomDropdown>
   );
 };
