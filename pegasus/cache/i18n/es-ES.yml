@@ -1159,6 +1159,9 @@ es-ES:
   footer_store: Tienda
   footer_support: Soporte
   footer_terms: Términos
+  footer_trademark: ' "&copy; Code.org, %{current_year}. Code.org&reg;, el logotipo
+    de CODE,  la Hora de Código&reg; y %{cs_discoveries} son marcas registradas de
+    Code.org."'
   frozen_gradelevel: De 8 a 108 años
   frozen_longdescription: Vamos a usar código para unirnos a Ana y Elsa mientras exploran
     la magia y la belleza del hielo. Crearás copos de nieve y patrones a medida que
