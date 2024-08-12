@@ -23,7 +23,7 @@ class EnrolledWorkshops extends React.Component {
         hideNoWorkshopsMessage={true}
         tableHeader={i18n.myWorkshops()}
       >
-        <WorkshopsTable />
+        <WorkshopsTable tableHeader={i18n.myWorkshops()} />
       </WorkshopTableLoader>
     );
   }
