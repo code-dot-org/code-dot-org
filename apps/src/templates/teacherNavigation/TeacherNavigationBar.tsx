@@ -59,6 +59,27 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
           selectedValue={selectedSectionId}
           name="section-dropdown"
         />
+        <Typography
+          semanticTag={'h2'}
+          visualAppearance={'overline-two'}
+          className={styles.sectionHeader}
+        >
+          {i18n.courseContent()}
+        </Typography>
+        <Typography
+          semanticTag={'h2'}
+          visualAppearance={'overline-two'}
+          className={styles.sectionHeader}
+        >
+          {i18n.performance()}
+        </Typography>
+        <Typography
+          semanticTag={'h2'}
+          visualAppearance={'overline-two'}
+          className={styles.sectionHeader}
+        >
+          {i18n.classroom()}
+        </Typography>
       </div>
     </nav>
   );
