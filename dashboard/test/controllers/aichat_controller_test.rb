@@ -208,14 +208,14 @@ class AichatControllerTest < ActionController::TestCase
     sign_in(@genai_pilot_teacher1)
     post :student_chat_history, params: @valid_params_student1_chat_history, as: :json
     assert_response :success
-    chat_events_response_array = json_response
+    chat_events_array = json_response
     # 2 chat event stored for pilot student1 in AichatEvents table so 2 chat events returned
     # in descending order.
-    assert_equal chat_events_response_array.length, 2
-    chat_event1_response = JSON.parse(chat_events_response_array.last)
-    chat_event2_response = JSON.parse(chat_events_response_array.first)
-    chat_event1_stored = JSON.parse(@student1_aichat_event1[:aichat_event])
-    chat_event2_stored = JSON.parse(@student1_aichat_event2[:aichat_event])
+    assert_equal chat_events_array.length, 2
+    chat_event1_response = JSON.parse(chat_events_array.last)
+    chat_event2_response = JSON.parse(chat_events_array.first)
+    chat_event1_stored = JSON.parse(AichatEvent.find(@student1_aichat_event1.id).aichat_event)
+    chat_event2_stored = JSON.parse(AichatEvent.find(@student1_aichat_event2.id).aichat_event)
     assert_equal chat_event1_response.keys, ['role', 'chatMessageText', 'status', 'timestamp']
     assert_equal chat_event1_response["chatMessageText"], chat_event1_stored["chatMessageText"]
     assert_equal chat_event2_response["chatMessageText"], chat_event2_stored["chatMessageText"]
