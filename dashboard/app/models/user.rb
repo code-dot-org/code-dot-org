@@ -109,10 +109,6 @@ class User < ApplicationRecord
   #   us_state: A 2 letter code United States state code the user has given us.
   #   country_code: The country the user was in when they told us their
   #     us_state.
-  #   child_account_compliance_state: The state of a user's compliance with our
-  #     child account policy.
-  #   child_account_compliance_state_last_updated: The date the user became
-  #     compliant with our child account policy.
   #   ai_rubrics_disabled: Turns off AI assessment for a User.
   #   ai_rubrics_tour_seen: Tracks whether user has viewed the AI rubric product tour.
   #   lti_roster_sync_enabled: Enable/disable LTI roster syncing for a User.
@@ -149,9 +145,6 @@ class User < ApplicationRecord
     gender_student_input
     gender_teacher_input
     gender_third_party_input
-    child_account_compliance_state
-    child_account_compliance_state_last_updated
-    child_account_compliance_lock_out_date
     us_state
     country_code
     family_name
@@ -2268,7 +2261,7 @@ class User < ApplicationRecord
       has_ever_signed_in: has_ever_signed_in?,
       ai_tutor_access_denied: !!ai_tutor_access_denied,
       at_risk_age_gated: Policies::ChildAccount.parent_permission_required?(self),
-      child_account_compliance_state: child_account_compliance_state,
+      child_account_compliance_state: cap_status,
       latest_permission_request_sent_at: latest_parental_permission_request&.updated_at,
     }
   end
