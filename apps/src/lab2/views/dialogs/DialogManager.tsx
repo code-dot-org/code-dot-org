@@ -1,5 +1,10 @@
 import React, {useCallback, useState} from 'react';
 
+import {
+  getDeferredPromise,
+  DeferredPromiseObject,
+} from '@cdo/apps/lab2/utils/getDeferredPromise';
+
 import {DialogControlContext} from './DialogControlContext';
 import GenericAlertDialog from './GenericAlertDialog';
 import GenericConfirmationDialog from './GenericConfirmationDialog';
@@ -38,9 +43,12 @@ const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
 }) => {
   const [openDialog, setOpenDialog] = useState<DialogType | null>(null);
   const [dialogArgs, setDialogArgs] = useState<AnyDialogType>();
+  const [deferredPromiseObject, setDeferredPromiseObject] =
+    useState<DeferredPromiseObject>(getDeferredPromise());
 
   const showDialog = useCallback(
     ({type, ...dialogArgs}: TypedDialogProps) => {
+      setDeferredPromiseObject(getDeferredPromise());
       setOpenDialog(type);
       setDialogArgs(dialogArgs);
     },
@@ -60,6 +68,7 @@ const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
       value={{
         closeDialog,
         showDialog,
+        deferredPromiseObject,
       }}
     >
       {DialogView && (

@@ -36,6 +36,7 @@ export type GenericDialogProps = GenericDialogTitleProps &
       [key in ButtonType]?: {
         text?: string;
         callback?: dialogCallback;
+        disabled?: boolean;
       };
     };
   };
@@ -93,6 +94,7 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
                 dialogControl.closeDialog,
                 buttons.cancel.callback
               )}
+              disabled={buttons?.cancel?.disabled}
             >
               {buttons.cancel.text || commonI18n.cancel()}
             </button>
@@ -108,6 +110,7 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
                   dialogControl.closeDialog,
                   buttons.neutral.callback
                 )}
+                disabled={buttons?.neutral?.disabled}
               >
                 {buttons.neutral.text}
               </button>
@@ -120,6 +123,7 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
                 dialogControl.closeDialog,
                 buttons?.confirm?.callback
               )}
+              disabled={buttons?.confirm?.disabled}
             >
               {buttons?.confirm?.text || commonI18n.dialogOK()}
             </button>
