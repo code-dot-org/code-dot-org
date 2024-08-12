@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-08-02T22:04:53.000Z",
   "level_num": "custom",
@@ -72,15 +73,14 @@
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Let's learn to change the size of sprites.",
     "authored_hints": "[{\"hint_class\":\"content\",\"hint_markdown\":\"To set the size of a sprite just one time, you can use this block:\\n\\n<xml><block type=\\\"gamelab_setProp\\\">\\n      <title name=\\\"PROPERTY\\\">\\\"scale\\\"</title>\\n      <value name=\\\"SPRITE\\\">\\n        <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n          <title name=\\\"ANIMATION\\\">\\\"face_strawberry_1\\\"</title>\\n        </block>\\n      </value>\\n      <value name=\\\"VAL\\\">\\n        <block type=\\\"math_number\\\">\\n          <title name=\\\"NUM\\\">50</title>\\n        </block>\\n      </value>\\n    </block></xml>\",\"hint_id\":\"storyboard_setProp\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/56b8cfafde672fecebe3d9ab39a2170c/generic_storyboard_choices_properties.mp3\"},{\"hint_class\":\"content\",\"hint_markdown\":\"If you want to change a sprite's size over and over (with events), use this block:\\n\\n<xml><block type=\\\"gamelab_changePropBy\\\">\\n      <title name=\\\"PROPERTY\\\">\\\"scale\\\"</title>\\n      <value name=\\\"SPRITE\\\">\\n        <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n          <title name=\\\"ANIMATION\\\">\\\"face_strawberry_1\\\"</title>\\n        </block>\\n      </value>\\n      <value name=\\\"VAL\\\">\\n        <block type=\\\"math_number\\\">\\n          <title name=\\\"NUM\\\">10</title>\\n        </block>\\n      </value>\\n    </block></xml>\",\"hint_id\":\"storyboard_changePropBy\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1763da358898c81d34dceb47dd1bfc79/generic_storyboard_choices_properties.mp3\"}]",
-    "instructions_icon": "pizza",
+    "instructions_icon": "transformers_optimusprime",
     "skip_autosave": true,
     "encrypted_examples": "yKCPAmSnn8v8n2WNtuB2d8Iv8AsfHiQHKG7+QOQCPGDnYNQ57O7REtlYR4zv\ngcWnPla08c0AuD7ywvXAAfilT8KWGGGQJMEKGtOQem7ATfF39zkPZ3IRQTjs\nUiAnoafzShFGutp918CD/JtZQ1ruzw==\n",
     "standalone_app_name": "spritelab",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:53.887+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_sizes\\\"\"],\"cloned_from\":\"helloworld_food_sizes\"},{\"changed_at\":\"2024-08-07 18:37:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-07 18:38:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-07 18:41:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-07 19:04:45 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:53.887+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_sizes\\\"\"],\"cloned_from\":\"helloworld_food_sizes\"},{\"changed_at\":\"2024-08-07 18:37:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-07 18:38:47 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-07 18:41:15 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-07 19:04:45 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-09 17:13:09 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
