@@ -65,18 +65,18 @@
     "mini_toolbox": "false",
     "hide_pause_button": "false",
     "callout_json": "[{\"localization_key\":\"hw_background_location\",\"callout_text\":\"Use this block to set a new background.\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"1\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\".blocklyFlyout [data-id=\\\"1\\\"]\",\"localization_key\":\"hw_background_location\",\"callout_text\":\"Use this block to set a new background.\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
-    "instructions_icon": "pizza",
+    "instructions_icon": "transformers_optimusprime",
     "validation_code": "//This level requires zValidationHelperFunctions and zHelloWorldValidation\r\nlevel6();",
     "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"You can change the background by connecting a `set background` block under a `when clicked` event block:\\n\\n<xml><block type=\\\"gamelab_spriteClicked\\\">\\n    <title name=\\\"CONDITION\\\">\\\"when\\\"</title>\\n    <value name=\\\"SPRITE\\\">\\n      <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n        <title name=\\\"ANIMATION\\\">\\\"face_avocado_1\\\"</title>\\n      </block>\\n    </value>\\n    <next>\\n      <block type=\\\"gamelab_setBackgroundImageAs\\\">\\n        <title name=\\\"IMG\\\">\\\"gradient_25_1\\\"</title>\\n      </block>\\n    </next>\\n  </block>\\n</xml>\",\"hint_id\":\"hello_world_background\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b220d889d60cca00de3866ba03f8785b/generic_storyboard_choices_backgrounds.mp3\"}]",
     "skip_autosave": true,
     "encrypted_examples": "M0uLULmNhXaU8Ut3rdrP5NIb+gfthRG8+IkcRUgCfD2MWtiAP8+oOlSky0Mo\n0onbyI/NciaLYkLgR2ZU4EP5lVn5dkcrHD55UPW0i0KSURawxB7ROFjIAiMm\n94tybwDWlFTIEIRSbhbJl7oXsGL5Gw==\n",
     "display_name": "Click Events",
     "thumbnail_url": "https://images.code.org/ea43c5ba56ca0e31d92d050246585d4c-image-1648497295488.50.36 PM.png",
-    "preload_asset_list": null,
-    "standalone_app_name": "spritelab"
+    "standalone_app_name": "spritelab",
+    "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:53.193+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_backgrounds\\\"\"],\"cloned_from\":\"helloworld_food_backgrounds\"},{\"changed_at\":\"2024-08-07 18:43:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:53.193+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_backgrounds\\\"\"],\"cloned_from\":\"helloworld_food_backgrounds\"},{\"changed_at\":\"2024-08-07 18:43:35 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-09 17:12:39 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

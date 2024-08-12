@@ -21,7 +21,9 @@ import sectionStandardsProgress from '@cdo/apps/templates/sectionProgress/standa
 import progressV2Feedback from '@cdo/apps/templates/sectionProgressV2/progressV2FeedbackRedux';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
-import SectionNavigationRouter from '@cdo/apps/templates/teacherDashboard/teacherNavigation/SectionNavigationRouter';
+import SectionNavigationRouter, {
+  SECTION_NAVIGATION_BARE_URL,
+} from '@cdo/apps/templates/teacherDashboard/teacherNavigation/SectionNavigationRouter';
 import teacherSections, {
   setSections,
   selectSection,
@@ -131,7 +133,20 @@ $(document).ready(function () {
       {!showV2TeacherDashboard ? (
         getV1TeacherDashboard()
       ) : (
-        <SectionNavigationRouter sectionId={selectedSection.id} />
+        <Router basename={SECTION_NAVIGATION_BARE_URL}>
+          <SectionNavigationRouter
+            studioUrlPrefix={scriptData.studioUrlPrefix}
+            sectionId={selectedSection.id}
+            sectionName={selectedSection.name}
+            studentCount={selectedSection.students.length}
+            anyStudentHasProgress={anyStudentHasProgress}
+            showAITutorTab={showAITutorTab}
+            sectionProviderName={sectionProviderName(
+              store.getState(),
+              selectedSection.id
+            )}
+          />
+        </Router>
       )}
     </Provider>,
     document.getElementById('teacher-dashboard')
