@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csd-playground",
-    "serialized_at": "2024-05-21 22:52:19 UTC",
+    "serialized_at": "2024-08-10 10:19:39 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2433,6 +2433,28 @@
       },
       "seeding_key": {
         "activity_section.key": "b7b46520-04b8-471f-a69e-ac97d76da412",
+        "lesson_activity.key": "bd22b255-6fbc-4ac9-97f6-565f7b9ab30d"
+      }
+    },
+    {
+      "key": "c21d0ea2-19ed-4407-8037-1f349ea28c14",
+      "position": 2,
+      "properties": {
+        "description": "\n\n![expandable](https://images.code.org/8af3c1808b1a032735e26fefa773a480-IMG_7529.jpg)"
+      },
+      "seeding_key": {
+        "activity_section.key": "c21d0ea2-19ed-4407-8037-1f349ea28c14",
+        "lesson_activity.key": "bd22b255-6fbc-4ac9-97f6-565f7b9ab30d"
+      }
+    },
+    {
+      "key": "1db2dccb-00c4-4d00-afbd-02a753c9d4fc",
+      "position": 3,
+      "properties": {
+        "description": "<span data-url=\"https://images.code.org/8af3c1808b1a032735e26fefa773a480-IMG_7529.jpg\" class=\"expandable-image\"></span>"
+      },
+      "seeding_key": {
+        "activity_section.key": "1db2dccb-00c4-4d00-afbd-02a753c9d4fc",
         "lesson_activity.key": "bd22b255-6fbc-4ac9-97f6-565f7b9ab30d"
       }
     },

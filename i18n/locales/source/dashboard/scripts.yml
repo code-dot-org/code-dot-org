@@ -10552,7 +10552,7 @@ en:
           title: Coding a Geometric Star Quilt
           description_audience: ''
           description_short: ''
-          description: "## Suggested Pre-Work for this Module\n\n**Math:** Students will be working with shapes and angles in this module. To build familiarity, we recommend playing these active songs [Types of Angles song][0] (2:47 minutes) and [Angles & Lines][1] (3:06 minutes). \n\nThese are a few children's books to build some background knowledge and deepen connections to the real world:  \n\n-   [Shota and the Star Quilt][2] Picture book about the tradition of quilting and how traditions can change over time\n-   [Rainbow Weavers][3] This picture book is about weaving, not quilting, but it could deepen students' understanding of how indigenous traditions evolve.\n-   [A Trapezoid is Not a Dinosaur][4] by Suzanne Morris \n-   [The Greedy Triangle][5] by Marilyn Burns\n-   Any of these [Geometry Read Alouds][6]\n\n**Computer Science:** In this module, students will use Code.org's Artist tool. If students are not yet familiar with it, we recommend trying [Intro to Artist lesson][7] (50 minutes) for a basic introduction to the tool. \n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning][8]."
+          description: "## Suggested Pre-Work for this Module\n\n**Math:** Students will be working with shapes and angles in this module. To build familiarity, we recommend playing these active songs [Types of Angles song][0] (2:47 minutes) and [Angles & Lines][1] (3:06 minutes). \n\nFor a quick introduction to shapes and angles with the Artist tool, watch this [Turns and Angles video][2] (2 mins).\n\nThese are a few children's books to build some background knowledge and deepen connections to the real world:  \n\n-   [Shota and the Star Quilt][3] Picture book about the tradition of quilting and how traditions can change over time\n-   [Rainbow Weavers][4] This picture book is about weaving, not quilting, but it could deepen students' understanding of how indigenous traditions evolve.\n-   [A Trapezoid is Not a Dinosaur][5] by Suzanne Morris \n-   [The Greedy Triangle][6] by Marilyn Burns\n-   Any of these [Geometry Read Alouds][7]\n\n**Computer Science:** In this module, students will use Code.org's Artist tool. If students are not yet familiar with it, we recommend trying [Intro to Artist lesson][8] (50 minutes) for a basic introduction to the tool. \n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning][9]."
           student_description: ''
         focus-on-creativity4-2023:
           lessons: {}
@@ -14106,6 +14106,8 @@ en:
           student_description: "In this unit, you expand on the algorithms you have learned to explore common approaches to searching and sorting 1D and 2D arrays and `ArrayList`s. In the process, you analyze and compare the efficiencies of these algorithms using statement execution counts and further develop problem-solving skills to decompose complex problems. Throughout the unit, you apply your programming and software engineering skills to plan and develop a creative coding project using the console that incorporates object-oriented design, data structures, and algorithmic thinking. With the knowledge and skills acquired throughout the year, you consider the privacy and security of programs and users.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p>\n\n-   Explain the functionality of standard searching and sorting algorithms\n\n-   Analyze the efficiency of searching and sorting algorithms using execution counts\n\n-   Implement algorithms involving multiple 1D or 2D arrays or `ArrayList`s\n    </div>\n    </details>"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: csa8-2025
         csa9-2025:
           lesson_groups:
             lessonGroup-2:
@@ -16864,7 +16866,9 @@ en:
           lesson_groups: {}
           name: focus-on-data-post-survey-2024
         sandbox-csf-a:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Learn to Drag and Drop
           lesson_groups: {}
           name: sandbox-csf-a
           title: 'SANDBOX CSF Course A '
@@ -17394,3 +17398,167 @@ en:
           description_short: ''
           description: "##### We've compiled a list of all of our unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not!\n\n<img src=\"https://images.code.org/8f9ecd6897039d861bccd67cd60a16c4-image-1721339529551.jpg\" width=450px style=\"float:right; margin-left:30px\">\n\n##### We refer to lessons in which students are not working on a computer as “unplugged.” Students will often work with pencil and paper or physical manipulatives. These are intentionally placed kinesthetic opportunities that help students digest complicated concepts in ways that relate to their own lives.\n\n##### Unplugged lessons are particularly useful for building and maintaining a collaborative classroom environment, and they are useful touchstone experiences you can refer to when introducing more abstract concepts. Each of these activities can either be used alone or with other computer science lessons on related concepts.\n\n<br>\n<br>\n<br>\n<br>\n<br>"
           student_description: ''
+        csa1-alt-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: csa1-alt-2025
+          title: Using Objects and Methods
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa2-alt-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: csa2-alt-2025
+          title: Selection and Iteration
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa3-alt-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: csa3-alt-2025
+          title: Class Creation
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa4-alt-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: csa4-alt-2025
+          title: Data Collections
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hello-world-food-one:
+          title: 'Hello World: Food'
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        sandbox-csf-course-a:
+          lessons: {}
+          lesson_groups: {}
+        hello-world-transformers-one-2024:
+          title: 'Hello World: Transformers One'
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: hello-world-transformers-one-2024
+        csa1-pilot-2025:
+          lessons:
+            lesson-8:
+              name: AI-Generated Code
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Survey
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: Show What You Know
+            lessonGroup-5:
+              display_name: End of Unit Survey
+            lessonGroup-6:
+              display_name: Alternate Lessons
+            lessonGroup-7:
+              display_name: Sandboxes
+          name: csa1-pilot-2025
+          title: Object-Oriented Programming
+          description_audience: ''
+          description_short: Students learn fundamental Java concepts, discover their identity as software engineers, and use debugging strategies and code reviews to improve their programming skills.
+          description: "This unit introduces students to object-oriented programming principles as they explore The Neighborhood and discover their identity as a software engineer. Students learn fundamental Java concepts as they navigate and paint in The Neighborhood with `Painter` objects and extend the `Painter` class to expand the capabilities of their programs. Students practice predicting the outcome of program code and developing algorithms using sequencing, selection, and iteration to navigate mazes and paint murals. Students also learn to document program code using comments to describe the behavior of specific code segments and conduct code reviews to receive feedback from their peers.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, students will be able to . . .</em></strong></p>\n\n-   Use inheritance to create subclasses that extend an existing class\n\n-   Write methods with and without parameters to perform a specific task\n\n-   Implement algorithms sequencing, selection, and iteration\n\n-   Write clear and readable code using methods, control structures, and comments\n\n-   Improve a program through iterative development based on feedback\n    </div>\n    </details>\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][0] to let the Code.org curriculum team know how the unit went."
+          student_description: "This unit introduces you to object-oriented programming principles as you explore The Neighborhood and discover your identity as a software engineer. You learn fundamental Java concepts as you navigate and paint in The Neighborhood with `Painter` objects and extend the `Painter` class to expand the capabilities of your programs. You practice predicting the outcome of program code and developing algorithms using sequencing, selection, and iteration to navigate mazes and paint murals. You also learn to document program code using comments to describe the behavior of specific code segments and conduct code reviews to receive feedback from your peers.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p>\n\n-   Use inheritance to create subclasses that extend an existing class\n\n-   Write methods with and without parameters to perform a specific task\n\n-   Implement algorithms sequencing, selection, and iteration\n\n-   Write clear and readable code using methods, control structures, and comments\n\n-   Improve a program through iterative development based on feedback\n    </div>\n    </details>"
+        csa2-pilot-2025:
+          lessons:
+            lesson-3:
+              name: Program Design
+            lesson-5:
+              name: User Input
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+            lessonGroup-4:
+              display_name: End of Unit Survey
+            lessonGroup-5:
+              display_name: Alternate Lessons
+            lessonGroup-6:
+              display_name: Sandboxes
+          name: csa2-pilot-2025
+          title: Class Structure and Design
+          description_audience: ''
+          description_short: Students develop an understanding of data encapsulation and object-oriented design decisions.
+          description: "This unit expands on the object-oriented programming principles introduced in Unit 1 to explore design principles as students develop classes with attributes and behaviors and work with primitive and object data. Students learn to write no-argument constructors to assign default values and parameterized constructors to assign specific values to an object's instance variables. They explore how the `this` keyword can be used to reduce ambiguity and redundancies in their program and how the `super` keyword can be used to call a superclass constructor or method. Students also learn how to work with variables and write expressions using arithmetic and compound assignment operators and practice tracing code segments to determine the output. After working with instance variables and constructors, they write accessor and mutator methods to work with the values assigned to an object's instance variables and `toString()` methods to display information about an object to the console. Throughout this unit, students continue to develop software engineering skills as they learn to make design decisions and use inheritance to create class hierarchies.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, students will be able to . . .</em></strong></p>\n\n-   Represent attributes of an object using instance variables\n\n-   Write no-argument and parameterized constructors to set the state of an object\n\n-   Use the `super` keyword to refer to the superclass in constructors and methods\n\n-   Write expressions using arithmetic operators and compound assignment operators with variables and object data\n\n-   Write accessor and mutator methods to obtain and modify object data\n\n-   Write `toString()` methods and use escape sequences to display and format information about an object to the console\n    </div>\n    </details>\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">✅ AP Classroom Personal Progress Checks</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p>To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's <a href=\"https://studio.code.org/s/csa2-2023/standards\" target=\"_blank\"><strong>Standards</strong></a> page. You can find instructions and video demonstrations to do this on <a href=\"https://apcentral.collegeboard.org/instructional-resources/ap-classroom\" target=\"_blank\"><strong>AP Central</strong></a>.</p>\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n\n-   Personal Progress Check 1\n\n-   Personal Progress Check 5\n\n-   Personal Progress Check 9\n\n<p><em><strong>Note:</strong> Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.</em></p>\n    </div>\n</details>\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][0] to let the Code.org curriculum team know how the unit went. "
+          student_description: "This unit expands on the object-oriented programming principles introduced in Unit 1 to explore design principles as you develop classes with attributes and behaviors and work with primitive and object data. You learn to work with variables and user input as you develop and utilize classes and objects to represent desserts, customers, and food trucks for the Project Mercury Pastries Food Truck business. As you work with the `Dessert` class, you build on your knowledge of inheritance to design subclasses that represent specific types of desserts. While working with variables, you learn to create and evaluate expressions using assignment and relational operators and trace code segments to determine the result of output. Throughout this unit, you continue to develop software engineering skills as you learn to use UML diagrams to represent classes and the DRY principle to refactor program code.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p>\n\n-   Represent attributes of an object using instance variables\n\n-   Write no-argument and parameterized constructors to set the state of an object\n\n-   Use the `super` keyword to refer to the superclass in constructors and methods\n\n-   Write expressions using arithmetic operators and compound assignment operators with variables and object data\n\n-   Write accessor and mutator methods to obtain and modify object data\n\n-   Write `toString()` methods and use escape sequences to display and format information about an object to the console\n    </div>\n    </details>"
+        csa3-pilot-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: csa3-pilot-2025
+          title: Arrays and Algorithms
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa4-pilot-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: csa4-pilot-2025
+          title: Conditions and Logic
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa5-pilot-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: csa5-pilot-2025
+          title: Two-Dimensional Arrays
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa6-pilot-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: csa6-pilot-2025
+          title: ArrayLists and String Methods
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa7-pilot-2025:
+          lessons: {}
+          lesson_groups: {}
+          name: csa7-pilot-2025
+          title: Method Decomposition and Recursion
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa8-pilot-2025:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Survey
+            lessonGroup-5:
+              display_name: Alternate Lessons
+            lessonGroup-6:
+              display_name: Sandboxes
+          name: csa8-pilot-2025
+          title: Searching and Sorting
+          description_audience: ''
+          description_short: ''
+          description: "This unit expands on algorithms students have learned to introduce common approaches to searching and sorting 1D and 2D arrays and `ArrayList`s. In the process, students analyze and compare the efficiencies of these algorithms using statement execution counts and further develop problem-solving skills to decompose complex problems. Throughout the unit, students apply their programming and software engineering skills to plan and develop a creative coding project using the console that incorporates object-oriented design, data structures, and algorithmic thinking. With the knowledge and skills acquired throughout the year, students consider the privacy and security of programs and users.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, students will be able to . . .</em></strong></p>\n\n-   Explain the functionality of standard searching and sorting algorithms\n\n-   Analyze the efficiency of searching and sorting algorithms using execution counts\n\n-   Implement algorithms involving multiple 1D or 2D arrays or `ArrayList`s\n    </div>\n    </details>\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">✅ AP Classroom Personal Progress Checks</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p>To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's <a href=\"https://studio.code.org/s/csa2-2023/standards\" target=\"_blank\"><strong>Standards</strong></a> page. You can find instructions and video demonstrations to do this on <a href=\"https://apcentral.collegeboard.org/instructional-resources/ap-classroom\" target=\"_blank\"><strong>AP Central</strong></a>.</p>\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n\n-   Personal Progress Check 10\n\n<p><em><strong>Note:</strong> Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.</em></p>\n    </div>\n</details>\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][0] to let the Code.org curriculum team know how the unit went."
+          student_description: "In this unit, you expand on the algorithms you have learned to explore common approaches to searching and sorting 1D and 2D arrays and `ArrayList`s. In the process, you analyze and compare the efficiencies of these algorithms using statement execution counts and further develop problem-solving skills to decompose complex problems. Throughout the unit, you apply your programming and software engineering skills to plan and develop a creative coding project using the console that incorporates object-oriented design, data structures, and algorithmic thinking. With the knowledge and skills acquired throughout the year, you consider the privacy and security of programs and users.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p>\n\n-   Explain the functionality of standard searching and sorting algorithms\n\n-   Analyze the efficiency of searching and sorting algorithms using execution counts\n\n-   Implement algorithms involving multiple 1D or 2D arrays or `ArrayList`s\n    </div>\n    </details>"

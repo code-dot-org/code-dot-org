@@ -1,7 +1,7 @@
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import LedScreen from '@cdo/apps/lib/kits/maker/boards/microBit/LedScreen';
-import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
+import LedScreen from '@cdo/apps/maker/boards/microBit/LedScreen';
+import {MBFirmataClientStub} from '@cdo/apps/maker/util/makeStubBoard';
 
 import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
