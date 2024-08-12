@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-08-02T22:04:52.000Z",
   "level_num": "custom",
@@ -67,7 +68,7 @@
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Make each of your two sprites say something. ",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"Make sure the costumes match for each sprite.\\n<xml><block type=\\\"gamelab_spriteSay\\\">\\n      <title name=\\\"SPEECH\\\">Hello, broccoli!</title>\\n      <value name=\\\"SPRITE\\\">\\n        <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n          <title name=\\\"ANIMATION\\\">\\\"face_carrot_1\\\"</title>\\n        </block>\\n      </value>\\n    </block></xml>\",\"hint_id\":\"storyboard_costume\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/a127b6a27f73f4f98339ee51ff01ce26/food_helloworld_multi.mp3\"}]",
-    "instructions_icon": "pizza",
+    "instructions_icon": "transformers_optimusprime",
     "project_template_level_name": "helloworld_food_template_transformers_2024",
     "validation_code": "//This level requires zValidationHelperFunctions and zHelloWorldValidation\r\nlevel3();",
     "skip_autosave": true,
@@ -75,9 +76,8 @@
     "standalone_app_name": "spritelab",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:52.471+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_multi\\\"\"],\"cloned_from\":\"helloworld_food_multi\"},{\"changed_at\":\"2024-08-07 18:45:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-07 18:46:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-07 18:58:06 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:52.471+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_multi\\\"\"],\"cloned_from\":\"helloworld_food_multi\"},{\"changed_at\":\"2024-08-07 18:45:53 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-07 18:46:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-07 18:58:06 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-09 17:11:44 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
