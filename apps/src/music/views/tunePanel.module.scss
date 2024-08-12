@@ -1,6 +1,6 @@
 @import 'color.scss';
 
-.chordPanelContainer {
+.tunePanelContainer {
   background-color: $neutral_dark;
   align-items: center;
   padding: 5px;
@@ -19,19 +19,57 @@
     }
   }
 
-  .noteGridContainer {
-    position: relative;
-    width: 315px;
-    margin: 10px 0;
-    height: 110px;
-    border-radius: 4px;
-    background-color: $neutral_dark90;
+  .editorContainer {
+    display: flex;
+  }
 
-    .gridNote {
+  .eventGridContainer {
+    position: relative;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column-reverse;
+
+    .gridEvent {
       position: absolute;
       background-color: $light_cyan;
       border-radius: 3px;
     }
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      background-color: rgba($background_gray, 0.2);
+    }
+  }
+
+  .outerCell {
+    display: inline-block;
+    padding: 1px 3px;
+    box-sizing: border-box;
+    cursor: pointer;
+
+    &Playing {
+      background-color: $light-gray;
+    }
+  }
+
+  .cell {
+    padding: 1px;
+    width: 10px;
+    height: 4.75px;
+    background-color: #555;
+    border-radius: 3px;
+  }
+
+  .activeCell {
+    background-color: #68d1f7;
+  }
+
+  .highlightedCell {
+    background-color: #696969;
   }
 
   .controlsRow {
