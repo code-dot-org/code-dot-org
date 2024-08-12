@@ -85,6 +85,10 @@ export default function EvidenceLevelsForTeachersV2({
   }, [productTour]);
 
   useLayoutEffect(() => {
+    if (!ref.current) {
+      return;
+    }
+
     // Get the position of the suggested buttons and determine the position of the arrow
     const edge = ref.current.getBoundingClientRect().left;
     const nodes = ref.current.querySelectorAll('button[data-ai-suggested]');
@@ -101,7 +105,7 @@ export default function EvidenceLevelsForTeachersV2({
       left = (nextDim.left - dim.right) / 2 + dim.right - edge;
     }
     arrowPositionCallback(left);
-  }, [arrowPositionCallback, suggestedEvidenceLevels]);
+  }, [ref, arrowPositionCallback, suggestedEvidenceLevels]);
 
   if (canProvideFeedback) {
     return (
