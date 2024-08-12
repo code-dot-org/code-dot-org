@@ -11,8 +11,6 @@ import {
 
 const SectionNavigablePageHeader: React.FC = () => {
   const location = useLocation();
-  console.log(location, 'lfm');
-
   const pathName = React.useMemo(
     () =>
       _.find(
