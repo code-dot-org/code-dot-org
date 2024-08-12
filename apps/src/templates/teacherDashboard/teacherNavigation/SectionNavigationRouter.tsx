@@ -63,6 +63,23 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
     [studentCount, anyStudentHasProgress]
   );
 
+  const redirectToDefaultPath = React.useMemo(
+    () => (
+      <Navigate
+        to={generatePath(
+          getSectionRouterPath(
+            studentCount === 0
+              ? TEACHER_DASHBOARD_PATHS.manageStudents
+              : TEACHER_DASHBOARD_PATHS.progress
+          ),
+          {sectionId: sectionId}
+        )}
+        replace={true}
+      />
+    ),
+    [sectionId, studentCount]
+  );
+
   return (
     <Routes>
       <Route
@@ -84,20 +101,9 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
         >
           <Route
             path={getSectionRouterPath('/')}
-            element={
-              <Navigate
-                to={generatePath(
-                  getSectionRouterPath(
-                    studentCount === 0
-                      ? TEACHER_DASHBOARD_PATHS.manageStudents
-                      : TEACHER_DASHBOARD_PATHS.progress
-                  ),
-                  {sectionId: sectionId}
-                )}
-                replace={true}
-              />
-            }
+            element={redirectToDefaultPath}
           />
+          <Route path={'/*'} element={redirectToDefaultPath} />
           <Route
             path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.manageStudents)}
             element={applyV1TeacherDashboardWidth(
