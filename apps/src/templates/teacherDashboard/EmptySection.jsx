@@ -50,7 +50,7 @@ function EmptySection({hasStudents, hasCurriculumAssigned}) {
     </div>
   );
 
-  if (!hasStudents && !hasCurriculumAssigned) {
+  if (hasStudents && hasCurriculumAssigned) {
     return null;
   }
 

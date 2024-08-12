@@ -103,8 +103,8 @@ function TeacherDashboard({
     if (studentCount === 0 || !anyStudentHasProgress) {
       return (
         <EmptySection
-          hasStudents={studentCount !== 0}
-          hasCurriculumAssigned={!anyStudentHasProgress}
+          hasStudents={studentCount > 0}
+          hasCurriculumAssigned={anyStudentHasProgress}
         />
       );
     }
