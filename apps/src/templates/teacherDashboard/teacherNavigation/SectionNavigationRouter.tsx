@@ -14,7 +14,7 @@ import EmptySection from '../EmptySection';
 import SectionLoginInfo from '../SectionLoginInfo';
 import StatsTableWithData from '../StatsTableWithData';
 
-import TeacherDashboardHeaderV2 from './TeacherDashboardHeaderV2';
+import SectionNavigablePageHeader from './TeacherDashboardHeaderV2';
 import {
   getSectionRouterPath,
   SECTION_ID_PATH_PART,
@@ -77,7 +77,7 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
           path={`${SECTION_ID_PATH_PART}/`}
           element={
             <div className={styles.pageWithHeader}>
-              <TeacherDashboardHeaderV2 />
+              <SectionNavigablePageHeader />
               <Outlet />
             </div>
           }

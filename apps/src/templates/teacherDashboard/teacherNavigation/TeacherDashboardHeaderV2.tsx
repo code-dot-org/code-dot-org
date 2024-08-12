@@ -9,7 +9,7 @@ import {
   LABELED_TEACHER_DASHBOARD_PATHS,
 } from './TeacherDashboardPaths';
 
-const TeacherDashboardHeaderV2: React.FC = () => {
+const SectionNavigablePageHeader: React.FC = () => {
   const location = useLocation();
   console.log(location, 'lfm');
 
@@ -25,4 +25,4 @@ const TeacherDashboardHeaderV2: React.FC = () => {
   return <Heading1>{pathName}</Heading1>;
 };
 
-export default TeacherDashboardHeaderV2;
+export default SectionNavigablePageHeader;
