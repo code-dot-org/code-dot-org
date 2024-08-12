@@ -972,7 +972,7 @@ en:
     privacy_notice: "Privacy Notice"
     accept_label: 'I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.'
     accept_label_markdown: I agree to the [Terms of Service](%{tos_url}) and [Privacy Policy](%{privacy_url}).
-    accept_tos: By signing up for Code.org, you agree to our [Terms of Service](%{tos_url}) and [Privacy Policy](%{privacy_url}), and acknowledge that you will receive a series of 6 onboarding emails over 2 weeks.
+    accept_tos: By signing up for Code.org, you agree to our [Terms of Service](%{tos_url}) and [Privacy Policy](%{privacy_url}), and acknowledge that you will receive a series of onboarding emails over the next few weeks.
     accept_new_tos: By signing up for Code.org, you agree to our [Terms of Service](%{tos_url}) and [Privacy Policy](%{privacy_url}).
     accept: "Accept"
     print: "Print"
