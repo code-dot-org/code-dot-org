@@ -455,7 +455,6 @@ export const fetchStudentChatHistory = createAsyncThunk(
   async (studentUserId: number, thunkAPI) => {
     const state = thunkAPI.getState() as RootState;
     // Post teacher's student's user id to backend and retrieve student's chat history.
-    let studentChatHistoryApiResponse;
     const currentLevel = getCurrentLevel(state);
     // The scriptLevelId is sent to the backend if the current level is a sublevel so that we can
     // correctly check if the teacher has permission to view the student's chat history.
@@ -463,12 +462,18 @@ export const fetchStudentChatHistory = createAsyncThunk(
       ? getCurrentScriptLevelId(state)
       : undefined;
     try {
-      studentChatHistoryApiResponse = await getStudentChatHistory(
+      const studentChatHistoryApiResponse = await getStudentChatHistory(
         studentUserId,
         parseInt(state.progress.currentLevelId || ''),
         state.progress.scriptId,
         scriptLevelId
       );
+      const chatHistory: ChatEvent[] = studentChatHistoryApiResponse.map(
+        (event: string) => {
+          return JSON.parse(event);
+        }
+      );
+      thunkAPI.dispatch(setStudentChatHistory(chatHistory));
     } catch (error) {
       Lab2Registry.getInstance()
         .getMetricsReporter()
@@ -478,12 +483,6 @@ export const fetchStudentChatHistory = createAsyncThunk(
         );
       return;
     }
-    const chatHistory: ChatEvent[] = studentChatHistoryApiResponse.map(
-      (event: string) => {
-        return JSON.parse(event);
-      }
-    );
-    thunkAPI.dispatch(setStudentChatHistory(chatHistory));
   }
 );
 

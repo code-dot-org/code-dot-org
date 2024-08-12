@@ -113,13 +113,13 @@ export async function getStudentChatHistory(
   scriptId: number | null,
   scriptLevelId: number | undefined
 ): Promise<string[]> {
-  let params: Record<string, string> = {
+  const params: Record<string, string> = {
     studentUserId: studentUserId.toString(),
     levelId: levelId.toString(),
     scriptId: scriptId?.toString() || '',
   };
   if (scriptLevelId) {
-    params = {...params, scriptLevelId: scriptLevelId.toString()};
+    params.scriptLevelId = scriptLevelId.toString();
   }
   const urlParams = new URLSearchParams(params);
   const response = await HttpClient.get(
