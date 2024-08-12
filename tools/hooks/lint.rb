@@ -1,9 +1,11 @@
 require 'open3'
 require 'yaml'
 require_relative 'hooks_utils'
+require_relative '../../lib/cdo/python_venv'
 
 REPO_DIR = File.expand_path('../../../', __FILE__).freeze
 APPS_DIR = "#{REPO_DIR}/apps".freeze
+PYTHON_DIR = "#{REPO_DIR}/python".freeze
 SHARED_JS_DIR = "#{REPO_DIR}/shared/js".freeze
 SCSS_GLOB = "#{REPO_DIR}/#{YAML.load_file('.scss-lint.yml')['scss_files'] || '*'}".freeze
 
@@ -12,6 +14,14 @@ def filter_eslint_apps(modified_files)
 
   modified_files.select do |f|
     f.start_with?(full_apps_dir) && f.end_with?(".js", ".jsx", ".ts", ".tsx")
+  end
+end
+
+def filter_python(modified_files)
+  full_python_dir = File.expand_path(PYTHON_DIR)
+
+  modified_files.select do |f|
+    f.start_with?(full_python_dir) && f.end_with?(".py", ".pyi")
   end
 end
 
@@ -68,6 +78,10 @@ def run_stylelint_apps(files)
   run("./node_modules/.bin/stylelint #{files.join(' ')} --config stylelint.config.js", APPS_DIR)
 end
 
+def run_python(files)
+  run("#{PythonVenv.lint_command} #{files.join(' ')}", PYTHON_DIR)
+end
+
 def run_haml(files)
   run("bundle exec haml-lint #{files.join(' ')}", REPO_DIR)
 end
@@ -105,6 +119,7 @@ def do_linting(base = nil, current = nil)
     Object.method(:run_eslint_apps) => filter_eslint_apps(modified_files),
     Object.method(:run_eslint_shared) => filter_eslint_shared(modified_files),
     Object.method(:run_stylelint_apps) => filter_scss_apps(modified_files),
+    Object.method(:run_python) => filter_python(modified_files),
     Object.method(:run_rubocop) => filter_rubocop(modified_files)
   }
 
