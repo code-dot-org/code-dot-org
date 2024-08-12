@@ -6,7 +6,7 @@ import msg from '@cdo/locale';
 
 import {files as filesApi} from '../../clientApi';
 import {CIPHER, ALPHABET} from '../../constants';
-import {CP_API} from '../../lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
+import {CP_API} from '../../maker/boards/circuitPlayground/PlaygroundConstants';
 import {getStore} from '../../redux';
 import * as utils from '../../utils';
 import header from '../header';

@@ -1,0 +1,9 @@
+name 'CSA U6L5-L7_alt-2025'
+display_name 'Practice: Traversing an ArrayList'
+description 'Practice traversing an `ArrayList` to find or manipulate its elements.'
+
+sublevels
+level 'CSA U6L5-L7a_alt-2025'
+level 'CSA U6L5-L7b_alt-2025'
+level 'CSA U6L5-L7c_alt-2025'
+level 'CSA U6L5-L7d_alt-2025'
