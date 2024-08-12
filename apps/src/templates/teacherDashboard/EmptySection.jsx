@@ -50,6 +50,10 @@ function EmptySection({hasStudents, hasCurriculumAssigned}) {
     </div>
   );
 
+  if (!hasStudents && !hasCurriculumAssigned) {
+    return null;
+  }
+
   return (
     <div className={dashboardStyles.emptyClassroomDiv}>
       {location.pathname === TEACHER_DASHBOARD_PATHS.progress && (
