@@ -2,7 +2,6 @@ import React from 'react';
 import {Routes, Route, Outlet, generatePath, Navigate} from 'react-router-dom';
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
-import {Heading1} from '@cdo/apps/componentLibrary/typography';
 
 import ManageStudents from '../../manageStudents/ManageStudents';
 import SectionProjectsListWithData from '../../projects/SectionProjectsListWithData';
@@ -15,9 +14,14 @@ import EmptySection from '../EmptySection';
 import SectionLoginInfo from '../SectionLoginInfo';
 import StatsTableWithData from '../StatsTableWithData';
 
-import {TEACHER_DASHBOARD_PATHS} from './TeacherDashboardPaths';
+import TeacherDashboardHeaderV2 from './TeacherDashboardHeaderV2';
+import {
+  getSectionRouterPath,
+  SECTION_ID_PATH_PART,
+  TEACHER_DASHBOARD_PATHS,
+} from './TeacherDashboardPaths';
 
-import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
+import styles from './section-navigation.module.scss';
 
 interface SectionNavigationRouterProps {
   studioUrlPrefix: string;
@@ -30,13 +34,10 @@ interface SectionNavigationRouterProps {
 }
 
 export const SECTION_NAVIGATION_BARE_URL = `/teacher_dashboard/sections/`;
-const SECTION_ID_PATH_PART = `/:sectionId`;
 
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
-  return <div className={dashboardStyles.dashboardPage}>{children}</div>;
+  return <div className={styles.widthLockedPage}>{children}</div>;
 };
-
-const getPath = (pathUrl: string) => `${SECTION_ID_PATH_PART}${pathUrl}`;
 
 const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
   studioUrlPrefix,
@@ -89,19 +90,17 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
     <Routes>
       <Route
         element={
-          <div className={dashboardStyles.pageContainer}>
+          <div className={styles.pageAndSidebar}>
             <TeacherNavigationBar />
-            <div className={dashboardStyles.content}>
-              <Outlet />
-            </div>
+            <Outlet />
           </div>
         }
       >
         <Route
           path={`${SECTION_ID_PATH_PART}/`}
           element={
-            <div>
-              <Heading1>sectionHeader</Heading1>
+            <div className={styles.pageWithHeader}>
+              <TeacherDashboardHeaderV2 />
               <Outlet />
             </div>
           }
@@ -110,7 +109,7 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
             element={renderEmptyStateOrElement(
               <Navigate
                 to={generatePath(
-                  getPath(
+                  getSectionRouterPath(
                     studentCount === 0
                       ? TEACHER_DASHBOARD_PATHS.manageStudents
                       : TEACHER_DASHBOARD_PATHS.progress
@@ -120,13 +119,13 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
                 replace={true}
               />
             )}
-            path={getPath('/*')}
+            path={getSectionRouterPath('/*')}
           />
           <Route
             element={renderEmptyStateOrElement(
               <Navigate
                 to={generatePath(
-                  getPath(
+                  getSectionRouterPath(
                     studentCount === 0
                       ? TEACHER_DASHBOARD_PATHS.manageStudents
                       : TEACHER_DASHBOARD_PATHS.progress
@@ -136,16 +135,16 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
                 replace={true}
               />
             )}
-            path={getPath('/')}
+            path={getSectionRouterPath('/')}
           />
           <Route
-            path={getPath(TEACHER_DASHBOARD_PATHS.manageStudents)}
+            path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.manageStudents)}
             element={applyV1TeacherDashboardWidth(
               <ManageStudents studioUrlPrefix={studioUrlPrefix} />
             )}
           />
           <Route
-            path={getPath(TEACHER_DASHBOARD_PATHS.loginInfo)}
+            path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.loginInfo)}
             element={applyV1TeacherDashboardWidth(
               <SectionLoginInfo
                 studioUrlPrefix={studioUrlPrefix}
@@ -154,36 +153,38 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
             )}
           />
           <Route
-            path={getPath(TEACHER_DASHBOARD_PATHS.standardsReport)}
+            path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.standardsReport)}
             element={applyV1TeacherDashboardWidth(<StandardsReport />)}
           />
           <Route
-            path={getPath(TEACHER_DASHBOARD_PATHS.projects)}
+            path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.projects)}
             element={applyV1TeacherDashboardWidth(
               <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
             )}
           />
           <Route
-            path={getPath(TEACHER_DASHBOARD_PATHS.stats)}
+            path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.stats)}
             element={applyV1TeacherDashboardWidth(<StatsTableWithData />)}
           />
           <Route
-            path={getPath(TEACHER_DASHBOARD_PATHS.progress)}
+            path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.progress)}
             element={renderEmptyStateOrElement(<SectionProgressSelector />)}
           />
           <Route
-            path={getPath(TEACHER_DASHBOARD_PATHS.textResponses)}
+            path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.textResponses)}
             element={applyV1TeacherDashboardWidth(<TextResponses />)}
           />
           <Route
-            path={getPath(TEACHER_DASHBOARD_PATHS.assessments)}
+            path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.assessments)}
             element={applyV1TeacherDashboardWidth(
               <SectionAssessments sectionName={sectionName} />
             )}
           />
           {showAITutorTab && (
             <Route
-              path={getPath(TEACHER_DASHBOARD_PATHS.aiTutorChatMessages)}
+              path={getSectionRouterPath(
+                TEACHER_DASHBOARD_PATHS.aiTutorChatMessages
+              )}
               element={applyV1TeacherDashboardWidth(
                 <TutorTab sectionId={sectionId} />
               )}
