@@ -70,7 +70,7 @@ steps:
 
   - name: unit-tests
     # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:1.9.4
+    image: codedotorg/code-dot-org:1.10.0
     pull: always
     volumes:
       - name: rbenv
@@ -189,7 +189,7 @@ steps:
 
   - name: ui-tests
     # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:1.9.4
+    image: codedotorg/code-dot-org:1.10.0
     pull: always
     volumes:
       - name: rbenv
@@ -287,6 +287,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: 3015b948ea07f038e2eb09c553d5bfbb5ff1a084dc321649037368e8bd13c617
+hmac: 952c3f87b96b6a57cfbb52f6c9e9b0adb88bc5ec0c775e79b2791349d80b0daa
 
 ...

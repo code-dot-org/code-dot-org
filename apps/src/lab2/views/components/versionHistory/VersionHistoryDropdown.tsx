@@ -1,7 +1,10 @@
-import React, {useCallback} from 'react';
+import classNames from 'classnames';
+import React, {useCallback, useState} from 'react';
 
+import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import lab2I18n from '@cdo/apps/lab2/locale';
 import {
   setProjectSource,
   setAndSaveProjectSource,
@@ -27,23 +30,34 @@ interface VersionHistoryDropdownProps {
 const VersionHistoryDropdown: React.FunctionComponent<
   VersionHistoryDropdownProps
 > = ({versionList, updatedSourceCallback, startSource, closeDropdown}) => {
+  const [loadError, setLoadError] = useState(false);
+  const [loading, setLoading] = useState(false);
+
   const dispatch = useAppDispatch();
   const restoreVersion = useCallback(
     (version: ProjectVersion) => {
       const projectManager = Lab2Registry.getInstance().getProjectManager();
       if (projectManager) {
-        projectManager.restoreSources(version.versionId).then(sources => {
-          if (sources) {
-            dispatch(setProjectSource(sources));
-            if (updatedSourceCallback) {
-              updatedSourceCallback(sources);
+        setLoading(true);
+        setLoadError(false);
+        projectManager
+          .restoreSources(version.versionId)
+          .then(sources => {
+            if (sources) {
+              dispatch(setProjectSource(sources));
+              if (updatedSourceCallback) {
+                updatedSourceCallback(sources);
+              }
+            } else {
+              setLoadError(true);
             }
-          } else {
-            // TODO: handle no source
-            console.error('no source found!');
-          }
-          closeDropdown();
-        });
+            setLoading(false);
+            closeDropdown();
+          })
+          .catch(() => {
+            setLoadError(true);
+            setLoading(false);
+          });
       }
     },
     [dispatch, updatedSourceCallback, closeDropdown]
@@ -85,25 +99,50 @@ const VersionHistoryDropdown: React.FunctionComponent<
   };
 
   return (
-    <div className={moduleStyles.versionHistoryList}>
-      {versionList.map(version => (
-        <div key={version.versionId} className={moduleStyles.versionHistoryRow}>
-          <div>{parseDate(version.lastModified)}</div>
-          <div className={moduleStyles.versionOptions}>
-            {renderVersionOptions(version)}
+    <div>
+      <div className={moduleStyles.versionHistoryList}>
+        {versionList.map(version => (
+          <div
+            key={version.versionId}
+            className={moduleStyles.versionHistoryRow}
+          >
+            <div>{parseDate(version.lastModified)}</div>
+            <div className={moduleStyles.versionOptions}>
+              {renderVersionOptions(version)}
+            </div>
           </div>
+        ))}
+        <div className={moduleStyles.versionHistoryRow}>
+          <Button
+            text={commonI18n.startOver()}
+            size={'s'}
+            onClick={startOver}
+            color={buttonColors.destructive}
+            className={moduleStyles.startOverButton}
+            iconLeft={{iconStyle: 'solid', iconName: 'trash-undo'}}
+          />
         </div>
-      ))}
-      <div className={moduleStyles.versionHistoryRow}>
-        <Button
-          text={commonI18n.startOver()}
-          size={'s'}
-          onClick={startOver}
-          color={buttonColors.destructive}
-          className={moduleStyles.startOverButton}
-          iconLeft={{iconStyle: 'solid', iconName: 'trash-undo'}}
-        />
       </div>
+      {loading && (
+        <div
+          className={classNames(
+            moduleStyles.loadingVersionSpinner,
+            moduleStyles.versionDropdownFooter
+          )}
+        >
+          <i className="fa fa-spinner fa-spin" />
+        </div>
+      )}
+      {loadError && (
+        <div
+          className={classNames(
+            moduleStyles.versionLoadError,
+            moduleStyles.versionDropdownFooter
+          )}
+        >
+          <Alert type="danger" text={lab2I18n.versionLoadFailure()} size="s" />
+        </div>
+      )}
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import VirtualCPBoard from '@cdo/apps/lib/kits/maker/boards/VirtualCPBoard';
+import VirtualCPBoard from '@cdo/apps/maker/boards/VirtualCPBoard';
 
 import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardInterfaceTestUtil';

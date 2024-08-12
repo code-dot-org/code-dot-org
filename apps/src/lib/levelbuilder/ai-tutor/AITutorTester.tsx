@@ -1,10 +1,12 @@
 import Papa from 'papaparse';
 import React, {useEffect, useState} from 'react';
 
+import {postAichatCheckSafety} from '@cdo/apps/aichat/aichatApi';
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import {formatQuestionForAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {ChatContext} from '@cdo/apps/aiTutor/types';
 import Button from '@cdo/apps/componentLibrary/button/Button';
+import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 
 import AITutorTesterSampleColumns from './AITutorTesterSampleColumns';
 
@@ -28,6 +30,7 @@ interface AITutorTesterProps {
 const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
   const [csvFile, setCsvFile] = useState<File | null>(null);
   const [data, setData] = useState<AIInteraction[]>([]);
+  const [selectedEndpoint, setSelectedEndpoint] = useState<string>('ai-tutor');
   const [responseCount, setResponseCount] = useState<number>(0);
   const [responsesPending, setResponsesPending] = useState<boolean>(false);
 
@@ -47,6 +50,10 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
     }
   };
 
+  const onDropdownChange = (value: string) => {
+    setSelectedEndpoint(value);
+  };
+
   const updateData = (result: {data: AIInteraction[]}) => {
     setData(result.data);
   };
@@ -54,8 +61,24 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
   const getAIResponses = () => {
     setResponsesPending(true);
     for (let i = 0; i < data.length; i++) {
-      askAI(data[i]);
+      if (selectedEndpoint === 'llm-guard') {
+        getLLMGuardToxicity(data[i]);
+      } else {
+        askAI(data[i]);
+      }
     }
+  };
+
+  const getLLMGuardToxicity = async (row: AIInteraction) => {
+    const llmGuardResponse = await postAichatCheckSafety(row.studentInput);
+    if (llmGuardResponse.result.statusCode === 200) {
+      row.aiResponse = 'ok';
+    } else if (llmGuardResponse.result.statusCode === 422) {
+      row.aiResponse = 'toxic';
+    } else {
+      row.aiResponse = 'error';
+    }
+    setResponseCount(prevResponseCount => prevResponseCount + 1);
   };
 
   const askAI = async (row: AIInteraction) => {
@@ -89,6 +112,17 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
     }
   }, [aiResponded]);
 
+  const availableEndpoints = [
+    {
+      id: 'ai-tutor',
+      name: 'AI Tutor - full flow',
+    },
+    {
+      id: 'llm-guard',
+      name: 'LLM Guard',
+    },
+  ];
+
   return (
     <div>
       <h2>Generate AI Tutor Responses</h2>
@@ -103,6 +137,20 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
         CSV.
       </p>
       <AITutorTesterSampleColumns />
+      <br />
+      <SimpleDropdown
+        labelText="Choose an endpoint"
+        isLabelVisible={false}
+        onChange={event => onDropdownChange(event.target.value)}
+        items={availableEndpoints.map(endpoint => {
+          return {value: endpoint.id, text: endpoint.name};
+        })}
+        selectedValue={selectedEndpoint}
+        name="aiChatTesterDropdown"
+        size="s"
+      />
+      <br />
+      <br />
       <div>
         <div className={styles.buttonSpacing}>
           <input
@@ -124,7 +172,7 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
 
         <div className={styles.buttonSpacing}>
           <Button
-            text="Get AI Tutor Responses"
+            text="Get Responses"
             onClick={getAIResponses}
             disabled={!dataUploaded || !allowed}
             isPending={responsesPending}
@@ -136,7 +184,7 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
 
         <div>
           <Button
-            text=" Download CSV"
+            text="Download CSV"
             onClick={downloadCSV}
             disabled={!aiResponded || !allowed}
           />

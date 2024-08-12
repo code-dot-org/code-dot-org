@@ -2,7 +2,7 @@
 import Playground from 'playground-io';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import Thermometer from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Thermometer';
+import Thermometer from '@cdo/apps/maker/boards/circuitPlayground/Thermometer';
 
 import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 

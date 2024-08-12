@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import {dropdownStyles} from '@cdo/apps/templates/sectionProgress/UnitSelector';
-
+import styles from '../sectionProgress/unit-selector.module.scss';
 export default class AssessmentSelector extends Component {
   static propTypes = {
     assessmentList: PropTypes.array.isRequired,
@@ -19,7 +18,8 @@ export default class AssessmentSelector extends Component {
           id="assessment-selector"
           value={assessmentId}
           onChange={event => onChange(parseInt(event.target.value))}
-          style={{...dropdownStyles.dropdown, width: 350}}
+          className={styles.dropdown}
+          style={{width: 350}}
         >
           {Object.values(assessmentList).map((assessment, index) => (
             <option key={assessment.id} value={assessment.id}>
