@@ -16,8 +16,6 @@ import {addCallouts} from '@cdo/apps/code-studio/callouts';
 import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {queryParams} from '@cdo/apps/code-studio/utils';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {
@@ -2156,9 +2154,6 @@ StudioApp.prototype.configureDom = function (config) {
   var container = document.getElementById(config.containerId);
   var codeWorkspace = container.querySelector('#codeWorkspace');
 
-  const isSignedOut = !config.isSignedIn;
-  const isStandaloneProject = config.level.isProjectLevel;
-
   var runButton = container.querySelector('#runButton');
   var resetButton = container.querySelector('#resetButton');
   var runClick = this.runButtonClick.bind(this);
@@ -2168,22 +2163,8 @@ StudioApp.prototype.configureDom = function (config) {
     trailing: false,
   });
 
-  function handleRunButtonClick() {
-    throttledRunClick.call(this);
-    // Sends a Statsig event when the Run button is pressed by a signed out user
-    // This is related to the Create Account Button A/B Test; see Jira ticket:
-    // https://codedotorg.atlassian.net/browse/ACQ-1938
-    if (isSignedOut && isStandaloneProject) {
-      analyticsReporter.sendEvent(
-        EVENTS.RUN_BUTTON_PRESSED_SIGNED_OUT,
-        {},
-        PLATFORMS.STATSIG
-      );
-    }
-  }
-
   if (runButton && resetButton) {
-    dom.addClickTouchEvent(runButton, _.bind(handleRunButtonClick, this));
+    dom.addClickTouchEvent(runButton, _.bind(throttledRunClick, this));
     dom.addClickTouchEvent(resetButton, _.bind(this.resetButtonClick, this));
     this.keyHandler.registerEvent(['Control', 'Enter'], () => {
       if (this.isRunning()) {
