@@ -48,44 +48,21 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
   showAITutorTab,
   sectionProviderName,
 }) => {
-  // const navigate = useNavigate();
-  // const location = useLocation();
-
-  // React.useEffect(() => {
-  //   // Select a default tab if current path doesn't match one of the paths in our TEACHER_DASHBOARD_PATHS type.
-  //   const noMatchingPaths =
-  //     _.find(
-  //       Object.values(TEACHER_DASHBOARD_PATHS),
-  //       path => matchPath(getPath(path), location.pathname) !== null
-  //     ) === undefined;
-
-  //   if (noMatchingPaths) {
-  //     const nextPath =
-  //       studentCount === 0
-  //         ? TEACHER_DASHBOARD_PATHS.manageStudents
-  //         : TEACHER_DASHBOARD_PATHS.progress;
-
-  //     navigate(generatePath(getPath(nextPath), {sectionId: sectionId}));
-  //   }
-  // }, [navigate, location, studentCount, sectionId]);
-
   const renderEmptyStateOrElement = React.useCallback(
     (element: React.ReactNode) => {
-      if (studentCount === 0) {
+      if (studentCount === 0 || !anyStudentHasProgress) {
         return (
-          <EmptySection hasStudents={false} hasCurriculumAssigned={true} />
-        );
-      }
-      if (!anyStudentHasProgress) {
-        return (
-          <EmptySection hasStudents={true} hasCurriculumAssigned={false} />
+          <EmptySection
+            hasStudents={studentCount !== 0}
+            hasCurriculumAssigned={!anyStudentHasProgress}
+          />
         );
       }
       return element;
     },
     [studentCount, anyStudentHasProgress]
   );
-  console.log('lfm', anyStudentHasProgress);
+
   return (
     <Routes>
       <Route
@@ -106,36 +83,20 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
           }
         >
           <Route
-            element={renderEmptyStateOrElement(
-              <Navigate
-                to={generatePath(
-                  getSectionRouterPath(
-                    studentCount === 0
-                      ? TEACHER_DASHBOARD_PATHS.manageStudents
-                      : TEACHER_DASHBOARD_PATHS.progress
-                  ),
-                  {sectionId: sectionId}
-                )}
-                replace={true}
-              />
-            )}
-            path={getSectionRouterPath('/*')}
-          />
-          <Route
-            element={renderEmptyStateOrElement(
-              <Navigate
-                to={generatePath(
-                  getSectionRouterPath(
-                    studentCount === 0
-                      ? TEACHER_DASHBOARD_PATHS.manageStudents
-                      : TEACHER_DASHBOARD_PATHS.progress
-                  ),
-                  {sectionId: sectionId}
-                )}
-                replace={true}
-              />
-            )}
             path={getSectionRouterPath('/')}
+            element={
+              <Navigate
+                to={generatePath(
+                  getSectionRouterPath(
+                    studentCount === 0
+                      ? TEACHER_DASHBOARD_PATHS.manageStudents
+                      : TEACHER_DASHBOARD_PATHS.progress
+                  ),
+                  {sectionId: sectionId}
+                )}
+                replace={true}
+              />
+            }
           />
           <Route
             path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.manageStudents)}
@@ -154,30 +115,44 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
           />
           <Route
             path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.standardsReport)}
-            element={applyV1TeacherDashboardWidth(<StandardsReport />)}
+            element={renderEmptyStateOrElement(
+              applyV1TeacherDashboardWidth(<StandardsReport />)
+            )}
           />
           <Route
             path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.projects)}
-            element={applyV1TeacherDashboardWidth(
-              <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
+            element={renderEmptyStateOrElement(
+              applyV1TeacherDashboardWidth(
+                <SectionProjectsListWithData
+                  studioUrlPrefix={studioUrlPrefix}
+                />
+              )
             )}
           />
           <Route
             path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.stats)}
-            element={applyV1TeacherDashboardWidth(<StatsTableWithData />)}
+            element={renderEmptyStateOrElement(
+              applyV1TeacherDashboardWidth(<StatsTableWithData />)
+            )}
           />
           <Route
             path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.progress)}
-            element={renderEmptyStateOrElement(<SectionProgressSelector />)}
+            element={renderEmptyStateOrElement(
+              renderEmptyStateOrElement(<SectionProgressSelector />)
+            )}
           />
           <Route
             path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.textResponses)}
-            element={applyV1TeacherDashboardWidth(<TextResponses />)}
+            element={renderEmptyStateOrElement(
+              applyV1TeacherDashboardWidth(<TextResponses />)
+            )}
           />
           <Route
             path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.assessments)}
-            element={applyV1TeacherDashboardWidth(
-              <SectionAssessments sectionName={sectionName} />
+            element={renderEmptyStateOrElement(
+              applyV1TeacherDashboardWidth(
+                <SectionAssessments sectionName={sectionName} />
+              )
             )}
           />
           {showAITutorTab && (
@@ -185,8 +160,8 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
               path={getSectionRouterPath(
                 TEACHER_DASHBOARD_PATHS.aiTutorChatMessages
               )}
-              element={applyV1TeacherDashboardWidth(
-                <TutorTab sectionId={sectionId} />
+              element={renderEmptyStateOrElement(
+                applyV1TeacherDashboardWidth(<TutorTab sectionId={sectionId} />)
               )}
             />
           )}
