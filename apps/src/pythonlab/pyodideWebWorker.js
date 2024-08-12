@@ -64,11 +64,11 @@ self.onmessage = async event => {
       results = await self.pyodide.runPythonAsync(python, {
         filename: `/${HOME_FOLDER}/${MAIN_PYTHON_FILE}`,
       });
-      await runInternalCode(getCleanupCode(source), id);
     }
   } catch (error) {
     self.postMessage({type: 'error', message: error.message, id});
   }
+  await runInternalCode(getCleanupCode(source), id);
   const updatedSource = getUpdatedSourceAndDeleteFiles(
     source,
     id,
