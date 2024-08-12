@@ -1,7 +1,5 @@
 {{ featured_tutorial, title: "Привіт, світ: футбол", body: "Ви стаєте справжнім капітаном команди, пишучи код для інтерактивних сцен на футбольному полі. ГОООООЛ!", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
 
-{{ featured_tutorial, title: "Спорт", body: "Створіть гру в баскетбол або поєднайте різні види спорту.", image: "/shared/images/courses/logo_tall_sports.jpg", url: "https://code.org/athletes" }}
-
 {{ featured_tutorial, title: "Flappy Code", body: "Написати власну гру менш ніж за 10 хвилин? Спробуйте наш посібник Flappy Code!", image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
 
 {{ featured_tutorial, title: "Година коду з Майнкрафт", body: "Майнкрафт повертається в "Годину коду" з новими розвагами! Подорож світом Майнкрафт завдяки коду.", image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}

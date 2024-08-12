@@ -1,7 +1,5 @@
 {{ featured_tutorial, title: "헬로 월드: 축구", body: "귀하는 축구 경기장에서 인터랙티브 장면을 코딩하므로 팀 주장입니다. 골~인!", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
 
-{{ featured_tutorial, title: "스포츠", body: "농구 경기를 만들거나 스포츠 경기를 믹스 앤 매치하세요.", image: "/shared/images/courses/logo_tall_sports.jpg", url: "https://code.org/athletes" }}
-
 {{ featured_tutorial, title: "플래피 코드", body: "10분 이내에 나만의 게임을 만들고 싶은가요? 저희의 플래피 코드 튜토리얼을 이용해보세요!", image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
 
 {{ featured_tutorial, title: "마인크래프트 아워오브코드", body: "마인크래프트가 새로운 활동으로 아워오브코드를 위해 돌아왔습니다! 코딩과 함께 마인크래프트로 여행을 떠나보세요", image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}

@@ -1,7 +1,5 @@
 {{ featured_tutorial, title: "Xin chào cả thế giới: Bóng đá", body: "Bạn là đội trưởng khi bạn lập trình các cảnh tương tác trên sân bóng. VÀOOOOOOOO!", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
 
-{{ featured_tutorial, title: "Thể thao", body: "Làm game bóng rổ hoặc kết hợp các môn thể thao.", image: "/shared/images/courses/logo_tall_sports.jpg", url: "https://code.org/athletes" }}
-
 {{ featured_tutorial, title: "Lập trình game dạng Flappy Bird", body: "Bạn có muốn tự lập trình game trong vòng chưa tới 10 phút không? Hãy thử bài hướng dẫn Lập trình game dạng Flappy Bird của chúng tôi!", image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
 
 {{ featured_tutorial, title: "Minecraft Giờ lập trình", body: "Minecraft đã trở lại trong Giờ lập trình với một hoạt động hoàn toàn mới! Chuyến du hành trong Minecraft với mã lệnh.", image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}

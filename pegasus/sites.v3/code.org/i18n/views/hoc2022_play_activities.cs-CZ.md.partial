@@ -1,7 +1,5 @@
 {{ featured_tutorial, title: "Ahoj, světe: Fotbal", body: "Jste kapitán týmu a programujete interaktivní scény na fotbalovém hřišti. GÓÓÓÓÓÓÓL!", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
 
-{{ featured_tutorial, title: "Sport", body: "Udělejte hru v košíkovou nebo smíchejte a popřiřazujte různé sporty.", image: "/shared/images/courses/logo_tall_sports.jpg", url: "https://code.org/athletes" }}
-
 {{ featured_tutorial, title: "Flappy Code", body: "Chcete napsat svou vlastní hru za méně než 10 minut? Zkuste náš výukový kurz Flappy Code!", image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
 
 {{ featured_tutorial, title: "Hodina programování Minecraft", body: "Minecraft je zpět na Hodině programování se zcela novou aktivitou! Procestujte Minecraft s kódem.", image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}

@@ -1,7 +1,5 @@
 {{ featured_tutorial, title: "हॅलो वर्ल्ड: सॉकर", body:“तुम्ही संघाचे कर्णधार आहात कारण तुम्ही सॉकर खेळपट्टीवर परस्परसंवादी दृश्ये कोड करता. गोललल्लल!", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
 
-{{ featured_tutorial, title: "स्पोर्ट्स", body: "बास्केटबॉल गेम बनवा किंवा सर्व खेळ मिक्स एंड मैच करा.", image: "/shared/images/courses/logo_tall_sports.jpg", url: "https://code. org/athletes" }}
-
 {{ featured_tutorial, title: "फ्लॅपी कोड", body: "10 मिनिटांपेक्षा कमी वेळात तुमचा स्वतःचा गेम लिहायचा आहे का? आमचे फ्लॅपी कोड ट्यूटोरियल वापरून पहा!", image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
 
 {{featured_tutorial, title: "माइनक्राफ्ट अवर ऑफ कोड ", body: "माइनक्राफ्ट अवर ऑफ कोड साठी नवीन गतिविधि घेऊन परत आले आहे! कोडसह माइनक्राफ्ट चा प्रवास.", image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}
