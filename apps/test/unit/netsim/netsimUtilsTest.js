@@ -1,4 +1,4 @@
-import {assert, expect} from '../../util/reconfiguredChai';
+import {assert, expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 var NetSimUtils = require('@cdo/apps/netsim/NetSimUtils');
 

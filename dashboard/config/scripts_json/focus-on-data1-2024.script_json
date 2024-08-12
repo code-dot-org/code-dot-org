@@ -12,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-24 23:37:07 UTC",
+    "serialized_at": "2024-07-11 21:05:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

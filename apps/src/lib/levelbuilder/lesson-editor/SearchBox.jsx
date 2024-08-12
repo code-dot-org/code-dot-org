@@ -1,8 +1,8 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
-import _ from 'lodash';
 
 export default class SearchBox extends Component {
   static propTypes = {

@@ -11,6 +11,7 @@ export const buttonColors: {[key in ButtonColor]: ButtonColor} = {
   black: 'black',
   gray: 'gray',
   white: 'white',
+  destructive: 'destructive',
 };
 
 export interface ButtonProps extends CoreButtonProps, ButtonSpecificProps {}

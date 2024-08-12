@@ -1795,6 +1795,54 @@
   donate_tabs_bitpay_title: "Donate with Crypto via BitPay"
   donate_tabs_bitpay_desc: "Embrace the future of giving with cryptocurrency. Through BitPay, your digital currency can directly support Code.org's endeavors in expanding computer science education."
 
+  donate_page:
+    heading: "Help fund and support our mission"
+    options:
+      heading: "Donate to Code.org"
+      desc: "Explore a variety of ways to support Code.org directly through our website. Your contribution fuels our mission to expand access to computer science education."
+      contribute:
+        tab: "Contribute"
+        title: "Donate directly to Code.org"
+        desc: "Make a secure donation directly through our site using the form. Your gift can be one-time or recurring, tailored to your preference. Access our [donation system](%{system_url}), powered by Classy, to create an account or manage your contributions."
+      disclaimer: "Code.org is registered as a public 501(c)(3) nonprofit organization. Contributions to Code.org are tax-deductible to the extent permitted by law. Code.org's tax identification number is 46-0858543. Read our [donation policy](%{policy_url}) to learn about how we handle and allocate contributions."
+    empower:
+      heading: "Empower computer science education"
+      button: "Donate"
+      worldwide:
+        title: "Support students worldwide"
+        desc: "Help students worldwide try an Hour of Code! Our courses are available in over 50 languages and 180+ countries. For every dollar you give, one child is introduced to the world of computer science."
+        amount: "$50"
+      teacher:
+        title: "Support teachers like Flo"
+        desc: "How can there be computer science classes without CS teachers? Support teachers like Flo from Oakland to become computer science educators. Code.org trains thousands of teachers nationwide."
+        amount: "$250"
+      workshops:
+        title: "Support local workshops"
+        desc: "Code.org has over 60 partners in all 50 states running workshops to prepare teachers for computer science. Help create sustainable, community-driven professional development by supporting these local workshops."
+        amount: "$750"
+    campaign:
+      naipi:
+        title: "Native American and Indigenous Peoples Initiative (NAIPI)"
+        desc: "Code.org's Native American and Indigenous Peoples Initiative integrates Native American perspectives into education and technology. Explore innovative approaches in Native American education and computer science, discover collaboration opportunities, and witness our collective impact."
+        button:
+          donate: "Donate"
+          learn_more: "Learn more"
+    support_mission:
+      heading: "More ways you can support our mission"
+      desc: "Support our mission to make computer science accessible for every child, everywhere. Your efforts help us inspire future innovators and bridge the tech education gap."
+      translate:
+        title: "Help us translate"
+        desc: "Volunteers have translated our tutorials in over 45 languages. Help us continue to expand our tutorials for students around the world!"
+        button: "Start translating"
+      speak_up:
+        title: "Speak up for CS education"
+        desc: "Learn more about Code.org's advocacy work across the U.S. and the ten policies we recommend states adopt to make computer science foundational for all students. Plus, find out how you can drive change in your state."
+        button: "Learn about our advocacy"
+      shop:
+        title: "Shop Code.org"
+        desc: "Support our work and wear the movement with pride. Our hats have been worn by President Obama and celebrities too."
+        button: "Visit the store"
+
   help_page_top_heading: "How you can help"
   help_page_top_desc: "Support our mission to make computer science accessible for every child, everywhere. Your efforts help us inspire future innovators and bridge the tech education gap."
   help_page_top_subhead: "Make a donation to Code.org"
@@ -11464,6 +11512,43 @@
     subtitle: "New"
     description: "Why is it still important for students to learn to program? How are teachers in CS classrooms already incorporating AI? Explore the guidance and engage in the future of CS education in an age of AI."
     button_text: "Explore the guidance"
+
+  teach_labs_section:
+    header: "Build your way with labs"
+    description: "Discover programming environments tailored to meet students at their level, empowering them to express their creativity and build more freely as they grow their programming skills."
+    label_what_you_can_make: "What you can make:"
+    label_experience: "Experience:"
+    spritelab:
+      overline: "Ages 5-12"
+      title: "Sprite Lab"
+      what_you_can_make: "Simple animations and games with characters"
+      experience: "Beginner"
+      call_to_action_learn_more: "Learn more"
+      aria_label_learn_more: "Learn more about Sprite Lab"
+      call_to_action_try: "Try Sprite Lab"
+    gamelab:
+      overline: "Ages 13+"
+      title: "Game Lab"
+      what_you_can_make: "Simple animations and games with characters"
+      experience: "Beginner"
+      call_to_action_learn_more: "Learn more"
+      aria_label_learn_more: "Learn more about Game Lab"
+      call_to_action_try: "Try Game Lab"
+    applab:
+      overline: "Ages 13+"
+      title: "App Lab"
+      what_you_can_make: "Simple Javascript apps with blocks or code"
+      experience: "Beginner"
+      call_to_action_learn_more: "Learn more"
+      aria_label_learn_more: "Learn more about App Lab"
+      call_to_action_try: "Try App Lab"
+
+  resources_tabs:
+    progress:
+      tab_label: "Progress"
+      heading: "Track your students' progress"
+      desc: "Our powerful progress view helps you monitor student work by providing insights into completion status, time spent, and more. Easily track each student's learning journey, quickly assess participation, and give personalized feedback."
+      call_to_action: "Create a Code.org account"
 
   language_code:
     ar: "Arabic"

@@ -1,6 +1,5 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import EnhancedSafeMarkdown, {
   ExpandableImagesWrapper,
@@ -9,12 +8,10 @@ import EnhancedSafeMarkdown, {
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import * as expandableImages from '@cdo/apps/templates/utils/expandableImages';
 
-import {expect} from '../../util/reconfiguredChai';
-
 describe('EnhancedSafeMarkdown', () => {
   it('renders SafeMarkdown by default', () => {
     const wrapper = shallow(<EnhancedSafeMarkdown markdown="test" />);
-    expect(wrapper.equals(<SafeMarkdown markdown="test" />)).to.equal(true);
+    expect(wrapper.equals(<SafeMarkdown markdown="test" />)).toBe(true);
   });
 
   it('renders SafeMarkdown by default with class name', () => {
@@ -23,7 +20,7 @@ describe('EnhancedSafeMarkdown', () => {
     );
     expect(
       wrapper.equals(<SafeMarkdown markdown="test" className="class test" />)
-    ).to.equal(true);
+    ).toBe(true);
   });
 
   it('wraps output in enhancements as specified', () => {
@@ -36,12 +33,14 @@ describe('EnhancedSafeMarkdown', () => {
           <SafeMarkdown markdown="test" />
         </ExpandableImagesWrapper>
       )
-    ).to.equal(true);
+    ).toBe(true);
   });
 
   describe('ExpandableImagesWrapper', () => {
     it('renders expandable images', () => {
-      const renderSpy = sinon.spy(expandableImages, 'renderExpandableImages');
+      const renderSpy = jest
+        .spyOn(expandableImages, 'renderExpandableImages')
+        .mockClear();
       // We use mount rather than shallow here because renderExpandableImages
       // expects an actual node as an argument
       mount(
@@ -49,8 +48,8 @@ describe('EnhancedSafeMarkdown', () => {
           <span className="expandable-image" />
         </UnconnectedExpandableImagesWrapper>
       );
-      expect(renderSpy).to.have.been.calledOnce;
-      renderSpy.restore();
+      expect(renderSpy).toHaveBeenCalledTimes(1);
+      renderSpy.mockRestore();
     });
   });
 });

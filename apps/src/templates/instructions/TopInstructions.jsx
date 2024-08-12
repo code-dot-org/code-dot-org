@@ -10,6 +10,7 @@ import {connect} from 'react-redux';
 
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import TeacherFeedbackTab from '@cdo/apps/templates/instructions/teacherFeedback/TeacherFeedbackTab';
 import {rubricShape} from '@cdo/apps/templates/rubrics/rubricShapes';
@@ -26,7 +27,6 @@ import {
 } from '../../redux/instructions';
 import styleConstants from '../../styleConstants';
 import color from '../../util/color';
-import Button from '../Button';
 import ContainedLevel from '../ContainedLevel';
 import ContainedLevelAnswer from '../ContainedLevelAnswer';
 import {Z_INDEX as OVERLAY_Z_INDEX} from '../Overlay';

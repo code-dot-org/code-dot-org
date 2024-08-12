@@ -1,10 +1,10 @@
 /** @file Tests for our johnny-five Piezo wrapper */
 import five from '@code-dot-org/johnny-five';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import Piezo from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Piezo';
+import Piezo from '@cdo/apps/maker/boards/circuitPlayground/Piezo';
 
-import {expect} from '../../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('Piezo', function () {
   beforeEach(function () {

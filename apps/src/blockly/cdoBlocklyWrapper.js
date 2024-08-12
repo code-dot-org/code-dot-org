@@ -18,6 +18,7 @@ import customBlocks from './customBlocks/cdoBlockly/index.js';
 import {
   INFINITE_LOOP_TRAP,
   LOOP_HIGHLIGHT,
+  getCodeBlocks,
   handleCodeGenerationFailure,
   strip,
 } from './utils';
@@ -290,6 +291,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
     bindBrowserEvent: function (element, name, thisObject, func, useCapture) {
       return Blockly.bindEvent_(element, name, thisObject, func, useCapture);
     },
+    nonnegativeIntegerValidator: function (text) {
+      return Blockly.FieldTextInput.nonnegativeIntegerValidator(text);
+    },
+    numberValidator: function (text) {
+      return Blockly.FieldTextInput.numberValidator(text);
+    },
     getField: function (type) {
       return new Blockly.FieldTextInput('', getFieldInputChangeHandler(type));
     },
@@ -353,6 +360,17 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
     highlightBlock(id, spotlight) {
       Blockly.mainBlockSpace.highlightBlock(id, spotlight);
+    },
+    getAllGeneratedCode(extraCode) {
+      const studentCode = Blockly.Generator.blocksToCode(
+        'JavaScript',
+        getCodeBlocks()
+      );
+      return (extraCode || '') + studentCode;
+    },
+    getCodeFromBlockXmlSource(xmlString) {
+      const domBlocks = Blockly.Xml.textToDom(xmlString);
+      return Blockly.Generator.xmlToCode('JavaScript', domBlocks);
     },
   };
   blocklyWrapper.customBlocks = customBlocks;

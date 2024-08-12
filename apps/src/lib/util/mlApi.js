@@ -1,4 +1,5 @@
 import $ from 'jquery';
+
 import {predict} from '@cdo/apps/MLTrainers';
 
 export const commands = {

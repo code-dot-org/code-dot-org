@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React, {useMemo} from 'react';
 import {useSelector} from 'react-redux';
-import moduleStyles from './timeline.module.scss';
+
 import TimelineElement from './TimelineElement';
+
+import moduleStyles from './timeline.module.scss';
 
 const TimelineTrackEvents = ({
   barWidth,

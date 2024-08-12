@@ -7,33 +7,31 @@ import {
   subjectsAndTopicsOrder,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 describe('CourseOfferingHelpers', () => {
   it('each translatedCourseOfferingCsTopics constant is mapped to a non-empty string', () => {
     Object.values(translatedCourseOfferingCsTopics).forEach(cs_topic => {
-      expect(cs_topic).to.not.equal('');
+      expect(cs_topic).not.toBe('');
     });
   });
 
   it('each translatedCourseOfferingSchoolSubjects constant is mapped to a non-empty string', () => {
     Object.values(translatedCourseOfferingSchoolSubjects).forEach(
       school_subject => {
-        expect(school_subject).to.not.equal('');
+        expect(school_subject).not.toBe('');
       }
     );
   });
 
   it('each translatedCourseOfferingDeviceTypes constant is mapped to a non-empty string', () => {
     Object.values(translatedCourseOfferingDeviceTypes).forEach(device => {
-      expect(device).to.not.equal('');
+      expect(device).not.toBe('');
     });
   });
 
   it('each translatedCourseOfferingDeviceCompatibilityLevels constant is mapped to a non-empty string', () => {
     Object.values(translatedCourseOfferingDeviceCompatibilityLevels).forEach(
       compatibility_level => {
-        expect(compatibility_level).to.not.equal('');
+        expect(compatibility_level).not.toBe('');
       }
     );
   });
@@ -41,7 +39,7 @@ describe('CourseOfferingHelpers', () => {
   it('each translatedCourseOfferingDurations constant is mapped to a non-empty string', () => {
     Object.values(translatedCourseOfferingDurations).forEach(
       course_duration => {
-        expect(course_duration).to.not.equal('');
+        expect(course_duration).not.toBe('');
       }
     );
   });
@@ -52,6 +50,6 @@ describe('CourseOfferingHelpers', () => {
         ...Object.keys(translatedCourseOfferingSchoolSubjects),
         ...Object.keys(translatedCourseOfferingCsTopics),
       ].sort()
-    ).to.deep.equal([...subjectsAndTopicsOrder].sort());
+    ).toEqual([...subjectsAndTopicsOrder].sort());
   });
 });

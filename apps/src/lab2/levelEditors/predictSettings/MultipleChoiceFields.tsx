@@ -1,8 +1,11 @@
 import React from 'react';
-import {LevelPredictSettings} from '../types';
-import moduleStyles from './edit-predict-settings.module.scss';
+
 import {Button} from '@cdo/apps/componentLibrary/button';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox';
+
+import {LevelPredictSettings} from '../types';
+
+import moduleStyles from './edit-predict-settings.module.scss';
 
 interface MultipleChoiceFieldsProps {
   predictSettings: LevelPredictSettings;

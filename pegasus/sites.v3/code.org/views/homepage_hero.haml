@@ -69,24 +69,6 @@
               = I18n.t(entry[:button_text])
           %figure
             %img{src: entry[:img_src], alt: ""}
-      - elsif entry[:type] == "music-lab-launch-2024"
-        %div.flex-container
-          .text-wrapper
-            %p.has-icon.body-one
-              =hoc_s(:"music_lab.introducing_music_lab_strong", markdown: :inline, locals:{music_lab: "Music Lab"})
-            %h1
-              = I18n.t(entry[:text_h1])
-            %p.body-one.wrap-balance
-              = I18n.t(entry[:text_desc])
-            .button-wrapper
-              %a.link-button.white{href: entry[:button_url_primary]}
-                = I18n.t(entry[:button_label_primary])
-              %a.link-button.secondary.white{href: entry[:button_url_secondary]}
-                = I18n.t(entry[:button_label_secondary])
-            .afe
-              %p= I18n.t(entry[:text_desc_02])
-              %figure
-                %img{src: entry[:logo_list_01], alt: I18n.t(entry[:logo_list_01_alt])}
   .clear{style: "clear: both"}
 
 #hero{style: "position: relative"}

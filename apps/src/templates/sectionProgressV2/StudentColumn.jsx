@@ -5,9 +5,11 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import DCDO from '@cdo/apps/dcdo';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import i18n from '@cdo/locale';
 
-import FontAwesome from '../FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import {
   collapseMetadataForStudents,
   expandMetadataForStudents,
@@ -58,13 +60,28 @@ function StudentColumn({
     </div>
   );
 
+  const collapseRow = studentId => {
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_ONE_ROW_COLLAPSED, {
+      sectionId: sectionId,
+    });
+    collapseMetadataForStudents([studentId]);
+  };
+
+  const expandRow = studentId => {
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_ONE_ROW_EXPANDED, {
+      sectionId: sectionId,
+    });
+    expandMetadataForStudents([studentId]);
+  };
+
   const getUnexpandedRow = (student, ind) => (
     <button
       className={styles.studentColumnName}
       key={ind}
-      onClick={() => expandMetadataForStudents([student.id])}
+      onClick={() => expandRow(student.id)}
       type="button"
       aria-expanded={false}
+      id={'ui-test-student-row-unexpanded-' + getFullName(student)}
     >
       <FontAwesome
         icon="caret-right"
@@ -79,9 +96,10 @@ function StudentColumn({
     <div className={styles.studentColumnExpandedHeader} key={ind}>
       <button
         className={styles.studentColumnName}
-        onClick={() => collapseMetadataForStudents([student.id])}
+        onClick={() => collapseRow(student.id)}
         type="button"
         aria-expanded={true}
+        id={'ui-test-student-row-expanded-' + getFullName(student)}
       >
         <FontAwesome
           icon="caret-down"

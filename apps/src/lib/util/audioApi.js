@@ -1,9 +1,10 @@
 /** @file Droplet-friendly command definitions for audio commands. */
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
-import {apiValidateType, OPTIONAL, outputWarning} from './javascriptMode';
-import i18n from '@cdo/locale';
-import Sounds from '@cdo/apps/Sounds';
 import AzureTextToSpeech from '@cdo/apps/AzureTextToSpeech';
+import Sounds from '@cdo/apps/Sounds';
+import i18n from '@cdo/locale';
+
+import {apiValidateType, OPTIONAL, outputWarning} from './javascriptMode';
 
 /**
  * Inject an executeCmd method so this mini-library can be used in both

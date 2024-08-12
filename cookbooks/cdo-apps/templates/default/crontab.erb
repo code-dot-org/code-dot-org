@@ -58,7 +58,6 @@
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'import_google_sheets')
       cronjob at:'* * * * *', do:deploy_dir('bin', 'cron', 'sync_dropbox')
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'check_invalid_staging_filenames')
-      cronjob at:'*/2 * * * *', do:deploy_dir('bin', 'cron', 'run_server_generate_pdfs')
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','run_server_generate_curriculum_pdfs')
       cronjob at:'*/2 * * * *', do:pegasus_dir('sites','virtual','collate_pdfs')
       cronjob at:'0 14,15 * * *', do:deploy_dir('bin', 'cron', 'update_dotd')
@@ -105,7 +104,6 @@
       cronjob at:'*/5 * * * *', do:dashboard_dir('bin', 'fill_jotform_placeholders')
       cronjob at:'*/30 * * * *', do:dashboard_dir('bin', 'sync_jotforms')
       cronjob at:'0 6 * * *', do:deploy_dir('bin', 'cron', 'process_foorm_data')
-      cronjob at:'25 7 * * *', do:deploy_dir('bin', 'cron', 'update_hoc_map')
       cronjob at:'*/10 * * * *', do:deploy_dir('bin', 'cron', 'delete_twilio_data')
       cronjob at:'* * * * *', do:deploy_dir('bin', 'cron', 'confirm_usage')
       cronjob at:'0 */2 * * *', do:deploy_dir('bin', 'cron', 'teacher_applications_to_gdrive')
@@ -132,7 +130,6 @@
 
     # 'daemons' in all environments.
     cronjob at:'*/1 * * * *', do:deploy_dir('aws', 'ci_build'), notify: 'dev+build@code.org'
-    cronjob at:'*/1 * * * *', do:deploy_dir('bin', 'cron', 'mysql-metrics')
     cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'report_activejob_metrics')
 
     # background tasks that adhoc instances don't need to run.

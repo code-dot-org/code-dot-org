@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import React, {Component} from 'react';
 import queryString from 'query-string';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
-import Button from '@cdo/apps/templates/Button';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import StyledCodeBlock from '@cdo/apps/templates/lessonOverview/StyledCodeBlock';
 import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 
 import LessonEditorDialog from './LessonEditorDialog';
-import {connect} from 'react-redux';
 
 export const SearchForm = function (props) {
   return (

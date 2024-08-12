@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel.jsx';
-import 'selectize';
+import '@selectize/selectize';
 
 let schoolData = {
   nces: '',

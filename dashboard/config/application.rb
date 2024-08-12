@@ -6,7 +6,6 @@ require 'cdo/geocoder'
 require 'varnish_environment'
 require_relative '../legacy/middleware/files_api'
 require_relative '../legacy/middleware/channels_api'
-require_relative '../legacy/middleware/tables_api'
 require 'shared_resources'
 require_relative '../legacy/middleware/net_sim_api'
 require_relative '../legacy/middleware/sound_library_api'
@@ -16,6 +15,10 @@ require 'bootstrap-sass'
 require 'cdo/hash'
 require 'cdo/i18n_backend'
 require 'cdo/shared_constants'
+
+# load and configure pycall before numpy and any other python-related gems
+# can be automatically loaded just below.
+require 'cdo/pycall'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -77,8 +80,7 @@ module Dashboard
     config.middleware.insert_after VarnishEnvironment, FilesApi
 
     config.middleware.insert_after FilesApi, ChannelsApi
-    config.middleware.insert_after ChannelsApi, TablesApi
-    config.middleware.insert_after TablesApi, SharedResources
+    config.middleware.insert_after ChannelsApi, SharedResources
     config.middleware.insert_after SharedResources, NetSimApi
     config.middleware.insert_after NetSimApi, AnimationLibraryApi
     config.middleware.insert_after AnimationLibraryApi, SoundLibraryApi
@@ -228,7 +230,7 @@ module Dashboard
     # Use custom routes for error codes
     config.exceptions_app = routes
 
-    config.active_job.queue_adapter = :delayed_job
+    config.active_job.queue_adapter = CDO.active_job_queue_adapter
     config.active_job.default_queue_name = CDO.active_job_queues[:default]
   end
 end

@@ -229,6 +229,7 @@ gem 'active_model_serializers', '~> 0.10.13'
 
 # AWS SDK and associated service APIs.
 gem 'aws-sdk-acm'
+gem 'aws-sdk-bedrockagentruntime', '~> 1.10.0'
 gem 'aws-sdk-cloudformation'
 gem 'aws-sdk-cloudfront'
 gem 'aws-sdk-cloudwatch'
@@ -270,8 +271,6 @@ gem 'youtube-dl.rb', group: [:development, :staging, :levelbuilder]
 
 gem 'daemons', '1.1.9' # Pinned to old version, see PR 57938
 gem 'httparty'
-gem 'net-scp'
-gem 'net-ssh'
 gem 'oj', '~> 3.10'
 
 gem 'rest-client', '~> 2.0.1'
@@ -286,8 +285,6 @@ gem 'acmesmith', '~> 2.3.1'
 gem 'addressable'
 # bcrypt version specified due to "Invalid Hash" error in Linux
 gem 'bcrypt', '3.1.13'
-gem 'firebase'
-gem 'firebase_token_generator'
 gem 'sshkit'
 gem 'validates_email_format_of'
 
@@ -344,8 +341,6 @@ gem 'require_all', require: false
 
 gem 'dotiw'
 
-gem 'datapackage'
-
 gem 'ruby-progressbar'
 
 gem 'pry', '~> 0.14.0'
@@ -354,6 +349,8 @@ gem 'pry', '~> 0.14.0'
 gem 'cld'
 
 gem 'crowdin-api', '~> 1.10.0'
+
+gem "pycall", ">= 1.5.2"
 
 gem "delayed_job_active_record", "~> 4.1"
 
@@ -367,3 +364,5 @@ gem 'statsig', '~> 1.33'
 
 gem 'mailgun-ruby', '~>1.2.14'
 gem 'mailjet', '~> 1.7.3'
+
+gem "json-schema", "~> 4.3"

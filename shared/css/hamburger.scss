@@ -244,3 +244,21 @@ $arrow-size: 1.5rem;
     }
   }
 }
+
+#hamburger-sign-up-buttons {
+  .button-wrapper {
+    box-sizing: border-box;
+    background-color: $light_primary_500;
+    text-align: center;
+    padding: 1rem 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .header_button {
+      margin: unset;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

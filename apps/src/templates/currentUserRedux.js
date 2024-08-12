@@ -24,6 +24,7 @@ const SET_DATE_PROGRESS_TABLE_INVITATION_LAST_DELAYED =
   'currentUser/SET_DATE_PROGRESS_TABLE_INVITATION_LAST_DELAYED';
 const SET_SEEN_PROGRESS_TABLE_INVITATION =
   'currentUser/SET_SEEN_PROGRESS_TABLE_INVITATION';
+const SET_USER_CREATED_AT = 'currentUser/SET_USER_CREATED_AT';
 
 export const SignInState = makeEnum('Unknown', 'SignedIn', 'SignedOut');
 
@@ -97,6 +98,10 @@ export const setAiRubricsDisabled = aiRubricsDisabled => ({
   type: SET_AI_RUBRICS_DISABLED,
   aiRubricsDisabled,
 });
+export const setUserCreatedAt = userCreatedAt => ({
+  type: SET_USER_CREATED_AT,
+  userCreatedAt,
+});
 
 const initialState = {
   userId: null,
@@ -117,6 +122,7 @@ const initialState = {
   countryCode: null,
   usStateCode: null,
   inSection: null,
+  userCreatedAt: null,
 };
 
 export default function currentUser(state = initialState, action) {
@@ -215,6 +221,12 @@ export default function currentUser(state = initialState, action) {
       aiRubricsDisabled: action.aiRubricsDisabled,
     };
   }
+  if (action.type === SET_USER_CREATED_AT) {
+    return {
+      ...state,
+      userCreatedAt: action.userCreatedAt,
+    };
+  }
 
   if (action.type === SET_INITIAL_DATA) {
     const {
@@ -236,6 +248,7 @@ export default function currentUser(state = initialState, action) {
       country_code,
       us_state_code,
       in_section,
+      created_at,
     } = action.serverUser;
     analyticsReport.setUserProperties(
       id,
@@ -271,6 +284,7 @@ export default function currentUser(state = initialState, action) {
       countryCode: country_code,
       usStateCode: us_state_code,
       inSection: in_section,
+      userCreatedAt: created_at,
     };
   }
 

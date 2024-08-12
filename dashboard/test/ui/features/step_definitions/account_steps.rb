@@ -149,7 +149,7 @@ def create_user(name, url: '/api/test/create_user', **user_opts)
   end
 end
 
-And(/^I create( as a parent)? a (young )?student(?: using (clever|google))?( in Colorado)?( who has never signed in)? named "([^"]*)"( after CPA exception)?( before CPA exception)?( and go home)?$/) do |parent_created, young, using_sso, locked, new_account, name, after_cpa_exception, before_cpa_exception, home|
+And(/^I create( as a parent)? a (young )?student(?: using (clever|google))?( in Colorado)?( who has never signed in)? named "([^"]*)"( after CAP start)?( before CAP start)?( and go home)?$/) do |parent_created, young, using_sso, locked, new_account, name, after_cap_start, before_cap_start, home|
   age = young ? '10' : '16'
   sign_in_count = new_account ? 0 : 2
 
@@ -169,15 +169,14 @@ And(/^I create( as a parent)? a (young )?student(?: using (clever|google))?( in 
     user_opts[:user_provided_us_state] = true
   end
 
-  # See Cpa::CREATED_AT_EXCEPTION_DATE
-  cpa_exception_date = DateTime.parse('2024-05-26T00:00:00MDT')
+  cap_start_date = DateTime.parse('2023-07-01T00:00:00MDT').freeze
 
-  if after_cpa_exception
-    user_opts[:created_at] = cpa_exception_date
+  if after_cap_start
+    user_opts[:created_at] = cap_start_date
   end
 
-  if before_cpa_exception
-    user_opts[:created_at] = cpa_exception_date - 1.second
+  if before_cap_start
+    user_opts[:created_at] = cap_start_date - 1.second
   end
 
   if parent_created
@@ -214,7 +213,7 @@ And(/^I create a student in the eu named "([^"]*)"$/) do |name|
   )
 end
 
-And(/^I create a teacher( who has never signed in)? named "([^"]*)"( after CPA exception)?( before CPA exception)?( and go home)?$/) do |new_account, name, after_cpa_exception, before_cpa_exception, home|
+And(/^I create a teacher( who has never signed in)? named "([^"]*)"( after CAP start)?( before CAP start)?( and go home)?$/) do |new_account, name, after_cap_start, before_cap_start, home|
   sign_in_count = new_account ? 0 : 2
 
   user_opts = {
@@ -225,14 +224,14 @@ And(/^I create a teacher( who has never signed in)? named "([^"]*)"( after CPA e
   }
 
   # See Cpa::CREATED_AT_EXCEPTION_DATE
-  cpa_exception_date = DateTime.parse('2024-05-26T00:00:00MDT')
+  cap_start_date = DateTime.parse('2024-05-26T00:00:00MDT')
 
-  if after_cpa_exception
-    user_opts[:created_at] = cpa_exception_date
+  if after_cap_start
+    user_opts[:created_at] = cap_start_date
   end
 
-  if before_cpa_exception
-    user_opts[:created_at] = cpa_exception_date - 1.second
+  if before_cap_start
+    user_opts[:created_at] = cap_start_date - 1.second
   end
 
   create_user(name, **user_opts)

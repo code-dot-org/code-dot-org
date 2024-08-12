@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {getStore} from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
+
+import {getStore} from '@cdo/apps/redux';
 import getScriptData from '@cdo/apps/util/getScriptData';
+
 import DataDocFormEditor from '../../../../lib/levelbuilder/data-docs-editor/DataDocFormEditor';
 
 $(document).ready(() => {

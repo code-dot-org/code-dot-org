@@ -5,8 +5,6 @@ import React from 'react';
 import {UnconnectedProgressLessonTeacherInfo as ProgressLessonTeacherInfo} from '@cdo/apps/templates/progress/ProgressLessonTeacherInfo';
 import {fakeLesson} from '@cdo/apps/templates/progress/progressTestHelpers';
 
-import {assert} from '../../../util/reconfiguredChai';
-
 const MOCK_SECTION = {
   id: 2,
   name: 'intro to computer science II',
@@ -47,9 +45,9 @@ describe('ProgressLessonTeacherInfo', () => {
       )
     );
 
-    assert.equal(wrapperWithoutPlan.find('Button').length, 0);
-    assert.equal(wrapperWithPlan.find('Button').props().color, 'blue');
-    assert.equal(wrapperWithPlan.find('Button').props().href, 'foo/bar');
+    expect(wrapperWithoutPlan.find('Button').length).toEqual(0);
+    expect(wrapperWithPlan.find('Button').props().color).toEqual('blue');
+    expect(wrapperWithPlan.find('Button').props().href).toEqual('foo/bar');
   });
 
   it('updates the lesson url to require login', () => {
@@ -71,8 +69,7 @@ describe('ProgressLessonTeacherInfo', () => {
         lockableAuthorized={false}
       />
     );
-    assert.equal(
-      wrapper.find('SendLesson').props().lessonUrl,
+    expect(wrapper.find('SendLesson').props().lessonUrl).toEqual(
       'code.org?login_required=true'
     );
   });
@@ -107,10 +104,9 @@ describe('ProgressLessonTeacherInfo', () => {
       )
     );
 
-    assert.equal(wrapperWithoutPlan.find('Button').length, 0);
-    assert.equal(wrapperWithPlan.find('Button').props().color, 'purple');
-    assert.equal(
-      wrapperWithPlan.find('Button').props().href,
+    expect(wrapperWithoutPlan.find('Button').length).toEqual(0);
+    expect(wrapperWithPlan.find('Button').props().color).toEqual('purple');
+    expect(wrapperWithPlan.find('Button').props().href).toEqual(
       'foo/bar/student'
     );
   });
@@ -140,8 +136,8 @@ describe('ProgressLessonTeacherInfo', () => {
       )
     );
 
-    assert.equal(wrapperLockable.find('LessonLock').length, 1);
-    assert.equal(wrapperUnlockable.find('LessonLock').length, 0);
+    expect(wrapperLockable.find('LessonLock').length).toEqual(1);
+    expect(wrapperUnlockable.find('LessonLock').length).toEqual(0);
   });
 
   it('does not render LessonLock button when lesson is lockable and teacher is not lockable authorized', () => {
@@ -169,8 +165,8 @@ describe('ProgressLessonTeacherInfo', () => {
       )
     );
 
-    assert.equal(wrapperLockable.find('LessonLock').length, 0);
-    assert.equal(wrapperUnlockable.find('LessonLock').length, 0);
+    expect(wrapperLockable.find('LessonLock').length).toEqual(0);
+    expect(wrapperUnlockable.find('LessonLock').length).toEqual(0);
   });
 
   it('does not render our LessonLock button when we have no sections', () => {
@@ -192,7 +188,7 @@ describe('ProgressLessonTeacherInfo', () => {
       />
     );
 
-    assert.equal(wrapper.find('LessonLock').length, 0);
+    expect(wrapper.find('LessonLock').length).toEqual(0);
   });
 
   it('renders SendLessonDialog with only start url', () => {
@@ -216,7 +212,7 @@ describe('ProgressLessonTeacherInfo', () => {
       />
     );
 
-    assert.equal(wrapper.find('SendLesson').length, 1);
+    expect(wrapper.find('SendLesson').length).toEqual(1);
   });
 
   it('does not render SendLessonDialog when lockable lesson and teacher is not authorized', () => {
@@ -238,7 +234,7 @@ describe('ProgressLessonTeacherInfo', () => {
       />
     );
 
-    assert.equal(wrapper.find('SendLesson').length, 0);
+    expect(wrapper.find('SendLesson').length).toEqual(0);
   });
 
   it('renders Rate This Lesson only if lesson feedback url', () => {
@@ -263,7 +259,7 @@ describe('ProgressLessonTeacherInfo', () => {
       />
     );
 
-    assert.equal(wrapper.find('.rate-lesson-button').length, 1);
+    expect(wrapper.find('.rate-lesson-button').length).toEqual(1);
   });
 
   it('renders our HiddenForSectionToggle when we have a section', () => {
@@ -286,10 +282,11 @@ describe('ProgressLessonTeacherInfo', () => {
         )
     );
 
-    assert.equal(withSection.find('Connect(HiddenForSectionToggle)').length, 1);
-    assert.equal(
-      withoutSection.find('Connect(HiddenForSectionToggle)').length,
-      0
+    expect(withSection.find('Connect(HiddenForSectionToggle)').length).toEqual(
+      1
     );
+    expect(
+      withoutSection.find('Connect(HiddenForSectionToggle)').length
+    ).toEqual(0);
   });
 });

@@ -8,8 +8,6 @@ import {
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import CourseTypeEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseTypeEditor';
 
-import {assert} from '../../../../util/reconfiguredChai';
-
 const defaultProps = {
   instructorAudience: InstructorAudience.teacher,
   participantAudience: ParticipantAudience.student,
@@ -25,17 +23,17 @@ describe('CourseTypeEditor', () => {
     const wrapper = shallow(
       <CourseTypeEditor {...defaultProps} allowMajorCurriculumChanges={false} />
     );
-    assert.equal(wrapper.find('select').at(0).props().disabled, true);
-    assert.equal(wrapper.find('select').at(1).props().disabled, true);
-    assert.equal(wrapper.find('select').at(2).props().disabled, true);
+    expect(wrapper.find('select').at(0).props().disabled).toEqual(true);
+    expect(wrapper.find('select').at(1).props().disabled).toEqual(true);
+    expect(wrapper.find('select').at(2).props().disabled).toEqual(true);
   });
 
   it('allow editing selects when allowMajorCurriculumChanges is true', () => {
     const wrapper = shallow(
       <CourseTypeEditor {...defaultProps} allowMajorCurriculumChanges={true} />
     );
-    assert.equal(wrapper.find('select').at(0).props().disabled, false);
-    assert.equal(wrapper.find('select').at(1).props().disabled, false);
-    assert.equal(wrapper.find('select').at(2).props().disabled, false);
+    expect(wrapper.find('select').at(0).props().disabled).toEqual(false);
+    expect(wrapper.find('select').at(1).props().disabled).toEqual(false);
+    expect(wrapper.find('select').at(2).props().disabled).toEqual(false);
   });
 });

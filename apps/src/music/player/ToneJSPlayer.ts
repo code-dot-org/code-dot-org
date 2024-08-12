@@ -1,5 +1,3 @@
-import {SoundLoadCallbacks} from '../types';
-import SoundCache from './SoundCache';
 import {
   Clock,
   Filter,
@@ -12,8 +10,17 @@ import {
   getContext,
   start,
 } from 'tone';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {BarsBeatsSixteenths} from 'tone/build/esm/core/type/Units';
+import {Source, SourceOptions} from 'tone/build/esm/source/Source';
+
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+
+import {BUS_EFFECT_COMBINATIONS, DEFAULT_BPM} from '../constants';
+import {SoundLoadCallbacks} from '../types';
+
+import {Effects} from './interfaces/Effects';
+import SoundCache from './SoundCache';
 import {
   AudioPlayer,
   InstrumentData,
@@ -21,10 +28,6 @@ import {
   SampleEvent,
   SamplerSequence,
 } from './types';
-import {BarsBeatsSixteenths} from 'tone/build/esm/core/type/Units';
-import {Source, SourceOptions} from 'tone/build/esm/source/Source';
-import {BUS_EFFECT_COMBINATIONS, DEFAULT_BPM} from '../constants';
-import {Effects} from './interfaces/Effects';
 import {generateEffectsKeyString} from './utils';
 
 const EMPTY_EFFECTS_KEY = '';
@@ -51,7 +54,7 @@ class ToneJSPlayer implements AudioPlayer {
 
   constructor(
     bpm = DEFAULT_BPM,
-    private readonly soundCache: SoundCache = new SoundCache(),
+    private readonly soundCache: SoundCache = SoundCache.getInstance(),
     private readonly metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
   ) {
     Transport.bpm.value = bpm;

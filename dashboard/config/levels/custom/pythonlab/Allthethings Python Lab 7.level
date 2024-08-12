@@ -1,0 +1,41 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-07-10T04:07:00.000Z",
+  "level_num": "custom",
+  "user_id": 6959,
+  "properties": {
+    "encrypted": "false",
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "print('Hello start!!')",
+          "folderId": "1",
+          "active": true,
+          "open": true
+        }
+      },
+      "folders": {
+        "1": {
+          "id": "1",
+          "name": "src",
+          "parentId": "0",
+          "open": true
+        }
+      }
+    },
+    "long_instructions": "## Submittable Level\r\nHere's a sample submittable level!",
+    "hide_share_and_remix": "true",
+    "teacher_markdown": "Teachers should see this extra info.",
+    "submittable": "true",
+    "predict_settings": {
+      "isPredictLevel": false
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2024-07-09T14:07:00.198-07:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 1\\\"\"],\"cloned_from\":\"Allthethings Python Lab 1\"},{\"changed_at\":\"2024-07-09 14:07:34 -0700\",\"changed\":[\"long_instructions\",\"reference_links\",\"map_reference\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

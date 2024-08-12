@@ -12,12 +12,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-23 17:28:28 UTC",
+    "serialized_at": "2024-07-11 19:38:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6298,6 +6299,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Web Sample Pages_2024"
+        ],
         "progression": "Sample Web Pages"
       },
       "bonus": false,
@@ -6320,6 +6324,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd2_2024"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -6342,6 +6349,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSDU2 - Type Anything_2024"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -6364,6 +6374,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Inspector Warm Up_2024"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -6386,6 +6399,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 HTML Adding Paragraphs_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6408,6 +6424,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 HTML Adding Paragraphs pt 2_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6430,6 +6449,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 HTML Debug Paragraphs_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6452,6 +6474,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L2 - Prac_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -6474,6 +6499,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2L2 - PracC_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -6496,6 +6524,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L2 Assess FR_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -6518,6 +6549,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L2 - Chal_2024"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -6540,6 +6574,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 heading explore_2024"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -6562,6 +6599,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Heading Demo_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6584,6 +6624,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Heading Sizes_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6606,6 +6649,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Header Size MC_2018_2019_pilot_2024"
+        ],
         "progression": "Quick Check"
       },
       "bonus": false,
@@ -6628,6 +6674,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Web Dev choice level ul 1_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6650,6 +6699,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Web Dev choice level ol 1_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6672,6 +6724,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Web Dev SB comments_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6694,6 +6749,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Web Headings practice_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -6716,6 +6774,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2 Heading Test_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -6738,6 +6799,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L3 Assess FR_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -6760,6 +6824,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Web Headings challenge_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -6782,6 +6849,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Social Sleuth_2018_2019_pilot_2024"
+        ],
         "progression": "Social Sleuth"
       },
       "bonus": false,
@@ -6804,6 +6874,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD HTML project Review_2024"
+        ],
         "progression": "Review: HTML"
       },
       "bonus": false,
@@ -6826,6 +6899,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web HTML project HTML_2024"
+        ],
         "progression": "Code Your Page"
       },
       "bonus": false,
@@ -6848,6 +6924,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web HTML project check_2024"
+        ],
         "progression": "Review Your Page"
       },
       "bonus": false,
@@ -6870,6 +6949,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Sample CSS text_2024"
+        ],
         "progression": "Sample Website"
       },
       "bonus": false,
@@ -6892,6 +6974,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 CSS explore CSS_2024"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -6914,6 +6999,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style h1_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6936,6 +7024,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style h3_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6958,6 +7049,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style rgb practice_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -6980,6 +7074,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style rgb practice 2_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7002,6 +7099,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style size_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7024,6 +7124,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 add file_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7046,6 +7149,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 CSS practice_pilot_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -7068,6 +7174,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Web CSS Assessment_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7090,6 +7199,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L6 Assess FR_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7112,6 +7224,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 CSS challenge_pilot_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -7134,6 +7249,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 images explore_2024"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -7156,6 +7274,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag 1_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7178,6 +7299,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Credit_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7200,6 +7324,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag Debug_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7222,6 +7349,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image choose name_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7244,6 +7374,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag 2_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7266,6 +7399,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image practice_pilot_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -7288,6 +7424,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image assessment_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7310,6 +7449,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L Assess FR_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7332,6 +7474,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image challenge_pilot_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -7354,6 +7499,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Sample CSS layout_2024"
+        ],
         "progression": "Sample Website"
       },
       "bonus": false,
@@ -7376,6 +7524,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 layout style sample_2024"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -7398,6 +7549,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 layout style bgcolor_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7420,6 +7574,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 layout style body_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7442,6 +7599,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 layout style float_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7464,6 +7624,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 layout style width_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7486,6 +7649,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 layout style practice_pilot_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -7508,6 +7674,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2 add style_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7530,6 +7699,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L9 Assess FR_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7552,6 +7724,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 layout style challenge_pilot_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -7574,6 +7749,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD CSS project Review_2024"
+        ],
         "progression": "Review: CSS"
       },
       "bonus": false,
@@ -7596,6 +7774,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 L10 Project Choices_2024"
+        ],
         "progression": "Add Style to Your User's Page"
       },
       "bonus": false,
@@ -7618,6 +7799,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 L10 Project Choices-2_2024"
+        ],
         "progression": "Add Style to Your User's Page"
       },
       "bonus": false,
@@ -7640,6 +7824,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 L10 Project Choices-3_2024"
+        ],
         "progression": "Add Style to Your User's Page"
       },
       "bonus": false,
@@ -7662,6 +7849,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 L10 Project Choices-4_2024"
+        ],
         "progression": "Review Your Page"
       },
       "bonus": false,
@@ -7684,6 +7874,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Sample classes_2024"
+        ],
         "progression": "Sample Web Page"
       },
       "bonus": false,
@@ -7706,6 +7899,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 classes waterfalls_2024"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -7728,6 +7924,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 classes pac man_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7750,6 +7949,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD classes novels_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7772,6 +7974,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web classes practice_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -7794,6 +7999,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2 classes haikus_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7816,6 +8024,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L11 Assess FR_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -7838,6 +8049,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web classes challenge_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -7860,6 +8074,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csd_U2L12 Exploration-div_flex_2024"
+        ],
         "progression": "Div & Flex Exploration"
       },
       "bonus": false,
@@ -7882,6 +8099,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 Div Flex SB_1_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7904,6 +8124,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 Div Flex SB_2_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7926,6 +8149,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 Div Flex SB_3_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7948,6 +8174,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 Div Flex SB_4_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -7970,6 +8199,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 - Prac_2024"
+        ],
         "progression": "Practice Levels"
       },
       "bonus": false,
@@ -7992,6 +8224,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2L12 Div Flex SB_9_2024"
+        ],
         "progression": "Assessment Level"
       },
       "bonus": false,
@@ -8014,6 +8249,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L12 Assess FR_2024"
+        ],
         "progression": "Assessment Level"
       },
       "bonus": false,
@@ -8036,6 +8274,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Flex challenge_2024"
+        ],
         "progression": "Challenge Levels"
       },
       "bonus": false,
@@ -8058,6 +8299,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L13 explore_1_2024"
+        ],
         "progression": "Exploration level"
       },
       "bonus": false,
@@ -8080,6 +8324,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L13 flex-grow_1_2024"
+        ],
         "progression": "Skill Building Levels"
       },
       "bonus": false,
@@ -8102,6 +8349,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L13 flex-shrink_2_2024"
+        ],
         "progression": "Skill Building Levels"
       },
       "bonus": false,
@@ -8124,6 +8374,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L13 order_3_2024"
+        ],
         "progression": "Skill Building Levels"
       },
       "bonus": false,
@@ -8146,6 +8399,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L13 align-self_4_2024"
+        ],
         "progression": "Skill Building Levels"
       },
       "bonus": false,
@@ -8168,6 +8424,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L13 - Prac_2024"
+        ],
         "progression": "Practice Levels"
       },
       "bonus": false,
@@ -8190,6 +8449,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2L13 assessment_2024"
+        ],
         "progression": "Assessment Level"
       },
       "bonus": false,
@@ -8212,6 +8474,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L13 Assess FR_2024"
+        ],
         "progression": "Assessment Level"
       },
       "bonus": false,
@@ -8234,6 +8499,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L13 - Challenge_2024"
+        ],
         "progression": "Challenge Levels"
       },
       "bonus": false,
@@ -8256,6 +8524,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L14 - Option 1 Choices_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -8277,6 +8548,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L14 - Option 2 Choices_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -8298,6 +8572,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L14 - Option 3 Choices_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -8319,6 +8596,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U2Ch1_2018_2019_pilot_2024"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -8341,6 +8621,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 link demo_2024"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -8363,6 +8646,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 making links_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8385,6 +8671,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 naming links_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8407,6 +8696,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 naming pages_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -8429,6 +8721,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 hyperlinks practice_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -8451,6 +8746,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2 adding pages_2024"
+        ],
         "progression": "Adding Pages"
       },
       "bonus": false,
@@ -8473,6 +8771,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L17 Assess FR_2024"
+        ],
         "progression": "Adding Pages"
       },
       "bonus": false,
@@ -8495,6 +8796,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 links challenge_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -8517,6 +8821,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L18 explore_1_2024"
+        ],
         "progression": "Exploration Level"
       },
       "bonus": false,
@@ -8539,6 +8846,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L18 order_sb_1_2024"
+        ],
         "progression": "Skill Building Levels"
       },
       "bonus": false,
@@ -8561,6 +8871,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L18 order_sb_2_2024"
+        ],
         "progression": "Skill Building Levels"
       },
       "bonus": false,
@@ -8583,6 +8896,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L18 order_sb_3_2024"
+        ],
         "progression": "Skill Building Levels"
       },
       "bonus": false,
@@ -8605,6 +8921,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2L18 class_sb_4_2024"
+        ],
         "progression": "Skill Building Levels"
       },
       "bonus": false,
@@ -8627,6 +8946,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 L18 practice_2024"
+        ],
         "progression": "Practice Levels"
       },
       "bonus": false,
@@ -8649,6 +8971,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2L18 assessment_2024"
+        ],
         "progression": "Assessment Level"
       },
       "bonus": false,
@@ -8671,6 +8996,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L18 Assess FR_2024"
+        ],
         "progression": "Assessment Level"
       },
       "bonus": false,
@@ -8693,6 +9021,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 L18 challenge_2024"
+        ],
         "progression": "Challenge Levels"
       },
       "bonus": false,
@@ -8715,6 +9046,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web upload images multi_2024"
+        ],
         "progression": "Upload Your Images"
       },
       "bonus": false,
@@ -8737,6 +9071,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web create pages project_2024"
+        ],
         "progression": "Your Team Project"
       },
       "bonus": false,
@@ -8759,6 +9096,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web add html_2024"
+        ],
         "progression": "Add Content and HTML"
       },
       "bonus": false,
@@ -8781,6 +9121,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web share html_2024"
+        ],
         "progression": "Share Your Pages"
       },
       "bonus": false,
@@ -8803,6 +9146,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web add CSS_2024"
+        ],
         "progression": "Add Style"
       },
       "bonus": false,
@@ -8825,6 +9171,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web share CSS_2024"
+        ],
         "progression": "Share Your Stylesheets"
       },
       "bonus": false,
@@ -8847,6 +9196,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD web check_2024"
+        ],
         "progression": "Check Your Work"
       },
       "bonus": false,
@@ -8869,6 +9221,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Web incorporate feedback_2024"
+        ],
         "progression": "Incorporate Feedback"
       },
       "bonus": false,
@@ -8891,6 +9246,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csd2_2024"
+        ],
         "progression": "End-Of-Unit Survey"
       },
       "bonus": false,
@@ -8913,6 +9271,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Web Development Post-Project Test_pilot_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {

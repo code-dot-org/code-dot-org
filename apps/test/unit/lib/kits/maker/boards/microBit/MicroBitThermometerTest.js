@@ -1,10 +1,6 @@
-import sinon from 'sinon';
-
-import {SENSOR_CHANNELS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
-import MicroBitThermometer from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitThermometer';
-import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
-
-import {expect} from '../../../../../../util/reconfiguredChai';
+import {SENSOR_CHANNELS} from '@cdo/apps/maker/boards/microBit/MicroBitConstants';
+import MicroBitThermometer from '@cdo/apps/maker/boards/microBit/MicroBitThermometer';
+import {MBFirmataClientStub} from '@cdo/apps/maker/util/makeStubBoard';
 
 describe('MicroBitThermometer', function () {
   let boardClient, thermometer;
@@ -14,7 +10,7 @@ describe('MicroBitThermometer', function () {
     thermometer = new MicroBitThermometer({mb: boardClient});
   });
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
   });
 
   it(`attributes are readonly`, () => {
@@ -23,8 +19,8 @@ describe('MicroBitThermometer', function () {
 
     attributes.forEach(attr => {
       descriptor = Object.getOwnPropertyDescriptor(thermometer, attr);
-      expect(descriptor.set).to.be.undefined;
-      expect(descriptor.get).to.not.be.undefined;
+      expect(descriptor.set).toBeUndefined();
+      expect(descriptor.get).toBeDefined();
     });
   });
 
@@ -32,37 +28,39 @@ describe('MicroBitThermometer', function () {
     // Seed the temp channel with celsius data
     boardClient.analogChannel[SENSOR_CHANNELS.tempSensor] = 3;
 
-    expect(thermometer.celsius).to.equal(thermometer.C);
-    expect(thermometer.celsius).to.equal(3);
+    expect(thermometer.celsius).toBe(thermometer.C);
+    expect(thermometer.celsius).toBe(3);
 
-    expect(thermometer.fahrenheit).to.equal(thermometer.F);
-    expect(thermometer.fahrenheit).to.equal(37.4);
+    expect(thermometer.fahrenheit).toBe(thermometer.F);
+    expect(thermometer.fahrenheit).toBe(37.4);
   });
 
   describe(`start() and stop()`, () => {
     it(`trigger the parent call`, () => {
-      let startSpy = sinon.spy(boardClient, 'streamAnalogChannel');
-      let stopSpy = sinon.spy(boardClient, 'stopStreamingAnalogChannel');
+      let startSpy = jest.spyOn(boardClient, 'streamAnalogChannel').mockClear();
+      let stopSpy = jest
+        .spyOn(boardClient, 'stopStreamingAnalogChannel')
+        .mockClear();
       thermometer.start();
-      expect(startSpy).to.have.been.calledOnce;
-      expect(startSpy).to.have.been.calledWith(SENSOR_CHANNELS.tempSensor);
+      expect(startSpy).toHaveBeenCalledTimes(1);
+      expect(startSpy).toHaveBeenCalledWith(SENSOR_CHANNELS.tempSensor);
 
       thermometer.stop();
-      expect(stopSpy).to.have.been.calledOnce;
-      expect(stopSpy).to.have.been.calledWith(SENSOR_CHANNELS.tempSensor);
+      expect(stopSpy).toHaveBeenCalledTimes(1);
+      expect(stopSpy).toHaveBeenCalledWith(SENSOR_CHANNELS.tempSensor);
     });
   });
 
   describe('emitsEvent', () => {
     let emitSpy;
     beforeEach(() => {
-      emitSpy = sinon.spy(thermometer, 'emit');
+      emitSpy = jest.spyOn(thermometer, 'emit').mockClear();
     });
 
     it('emits the data event when it receives data', () => {
       boardClient.receivedAnalogUpdate();
-      expect(emitSpy).to.have.been.calledOnce;
-      expect(emitSpy).to.have.been.calledWith('data');
+      expect(emitSpy).toHaveBeenCalledTimes(1);
+      expect(emitSpy).toHaveBeenCalledWith('data');
     });
 
     it('emits the change event when it receives data that is different from previous', () => {
@@ -73,8 +71,8 @@ describe('MicroBitThermometer', function () {
       boardClient.analogChannel[SENSOR_CHANNELS.tempSensor] = 3;
 
       boardClient.receivedAnalogUpdate();
-      expect(emitSpy).to.have.been.calledWith('data');
-      expect(emitSpy).to.have.been.calledWith('change');
+      expect(emitSpy).toHaveBeenCalledWith('data');
+      expect(emitSpy).toHaveBeenCalledWith('change');
     });
   });
 });

@@ -2474,6 +2474,33 @@
   },
   "https://studio.code.org/s/allthethings/lessons/36/levels/3": {
     "long_instructions": "This is an allthethings level used to test the modal function editor.",
+    "function_definitions": {
+      "set background": {
+        "name": "set background"
+      }
+    },
+    "behavior_names": {
+      "spinning left": "spinning left",
+      "growing": "growing",
+      "jittering": "jittering",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "swimming left and right": "swimming left and right",
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "wobbling": "wobbling",
+      "driving with arrow keys": "driving with arrow keys",
+      "moving east and looping": "moving east and looping",
+      "fluttering": "fluttering",
+      "moving west and looping": "moving west and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
+    },
     "behavior_descriptions": {
       "rotate a sprite to its left": "rotate a sprite to its left",
       "change the size of a sprite": "change the size of a sprite",
@@ -2496,6 +2523,28 @@
   },
   "https://studio.code.org/s/allthethings/lessons/36/levels/4": {
     "long_instructions": "This is an allthethings Sprite Lab level that uses a variety of blocks",
+    "behavior_names": {
+      "spinning left": "spinning left",
+      "growing": "growing",
+      "jittering": "jittering",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "swimming left and right": "swimming left and right",
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "wobbling": "wobbling",
+      "driving with arrow keys": "driving with arrow keys",
+      "moving east and looping": "moving east and looping",
+      "fluttering": "fluttering",
+      "moving west and looping": "moving west and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
+    },
     "behavior_descriptions": {
       "rotate a sprite to its left": "rotate a sprite to its left",
       "change the size of a sprite": "change the size of a sprite",
@@ -2966,6 +3015,10 @@
   },
   "https://studio.code.org/s/allthethings/lessons/50/levels/6": {
     "long_instructions": "## Predict and Run\n\n**What do you think this program does?**\n\nTake a look at the code in this program. Which of the following matches what the program will print?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/7": {
+    "long_instructions": "## Submittable Level\n\nHere's a sample submittable level!",
+    "teacher_markdown": "Teachers should see this extra info."
   },
   "https://studio.code.org/s/allthethings/lessons/51/levels/1": {
     "long_instructions": "Add **html** pages and preview them in the right pane.\n\nAdd **css** pages (and link them to your html).\n\nUse the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)"

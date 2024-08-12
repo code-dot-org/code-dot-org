@@ -7,7 +7,7 @@ import '@cdo/locale';
 import * as applabConstants from '@cdo/apps/applab/constants';
 import library from '@cdo/apps/applab/designElements/library';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const {elements, ElementType} = library;
 const label = elements[ElementType.LABEL];

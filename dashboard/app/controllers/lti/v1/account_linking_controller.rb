@@ -3,15 +3,8 @@ require 'metrics/events'
 module Lti
   module V1
     class AccountLinkingController < ApplicationController
-      before_action :lti_account_linking_enabled?
-
       # GET /lti/v1/account_linking/landing
       def landing
-      end
-
-      # GET /lti/v1/account_linking/existing_account
-      def existing_account
-        @user = User.new_with_session(ActionController::Parameters.new, session)
       end
 
       # GET /lti/v1/account_linking/finish_link
@@ -50,6 +43,7 @@ module Lti
             metadata: metadata,
           )
           target_url = session[:user_return_to] || home_path
+          flash[:notice] = I18n.t('lti.account_linking.successfully_linked')
           redirect_to target_url
         else
           flash.alert = I18n.t('lti.account_linking.invalid_credentials')
@@ -60,7 +54,6 @@ module Lti
       # POST /lti/v1/account_linking/new_account
       def new_account
         if current_user
-
           current_user.lms_landing_opted_out = true
           current_user.save!
         elsif PartialRegistration.in_progress?(session)
@@ -70,10 +63,6 @@ module Lti
         else
           render status: :bad_request, json: {}
         end
-      end
-
-      private def lti_account_linking_enabled?
-        head :not_found unless DCDO.get('lti_account_linking_enabled', false)
       end
     end
   end

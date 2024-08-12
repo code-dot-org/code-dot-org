@@ -1,4 +1,4 @@
-import MBFirmataUpdater from '@cdo/apps/lib/kits/maker/boards/microBit/MBFirmataUpdater';
+import MBFirmataUpdater from '@cdo/apps/maker/boards/microBit/MBFirmataUpdater';
 import {
   MICROBIT_V1,
   MICROBIT_V2,
@@ -6,18 +6,16 @@ import {
   MICROBIT_FIRMATA_V2_URL,
   MICROBIT_IDS_V1,
   MICROBIT_IDS_V2,
-} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
+} from '@cdo/apps/maker/boards/microBit/MicroBitConstants';
 import microBitReducer, {
   setMicroBitFirmataUpdatePercent,
-} from '@cdo/apps/lib/kits/maker/microBitRedux';
+} from '@cdo/apps/maker/microBitRedux';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
-
-import {expect} from '../../../../../../util/reconfiguredChai';
 
 describe('MBFirmataUpdater', () => {
   const mbFirmataUpdater = new MBFirmataUpdater();
@@ -26,7 +24,7 @@ describe('MBFirmataUpdater', () => {
       MICROBIT_IDS_V1.forEach(idPrefix => {
         const device = {serialNumber: idPrefix + '1234'};
         const version = mbFirmataUpdater.detectMicroBitVersion(device);
-        expect(version).to.equal(MICROBIT_V1);
+        expect(version).toBe(MICROBIT_V1);
       });
     });
 
@@ -34,30 +32,30 @@ describe('MBFirmataUpdater', () => {
       MICROBIT_IDS_V2.forEach(idPrefix => {
         const device = {serialNumber: idPrefix + '1234'};
         const version = mbFirmataUpdater.detectMicroBitVersion(device);
-        expect(version).to.equal(MICROBIT_V2);
+        expect(version).toBe(MICROBIT_V2);
       });
     });
 
     it('returns null for device that is not micro:bit', () => {
       const device = {serialNumber: '88001234'};
       const version = mbFirmataUpdater.detectMicroBitVersion(device);
-      expect(version).to.equal(null);
+      expect(version).toBeNull();
     });
   });
 
   describe('getFirmataURLByVersion function', () => {
     it('returns correct URL for micro:bit v1', () => {
       const URL = mbFirmataUpdater.getFirmataURLByVersion(MICROBIT_V1);
-      expect(URL).to.equal(MICROBIT_FIRMATA_V1_URL);
+      expect(URL).toBe(MICROBIT_FIRMATA_V1_URL);
     });
 
     it('returns correct URL for micro:bit v2', () => {
       const URL = mbFirmataUpdater.getFirmataURLByVersion(MICROBIT_V2);
-      expect(URL).to.equal(MICROBIT_FIRMATA_V2_URL);
+      expect(URL).toBe(MICROBIT_FIRMATA_V2_URL);
     });
 
     it('throws an error if the micro:bit version is invalid', () => {
-      expect(() => mbFirmataUpdater.getFirmataURLByVersion('v3')).to.throw(
+      expect(() => mbFirmataUpdater.getFirmataURLByVersion('v3')).toThrow(
         'micro:bit version is invalid.'
       );
     });
@@ -77,18 +75,18 @@ describe('MBFirmataUpdater', () => {
       getStore().dispatch(setMicroBitFirmataUpdatePercent(3));
       mbFirmataUpdater.firmataUpdatePercent = 3;
       mbFirmataUpdater.setPercentUpdateComplete(0.034);
-      expect(mbFirmataUpdater.firmataUpdatePercent).to.equal(4);
+      expect(mbFirmataUpdater.firmataUpdatePercent).toBe(4);
       let percent = getStore().getState().microBit.microBitFirmataUpdatePercent;
-      expect(percent).to.equal(4);
+      expect(percent).toBe(4);
     });
 
     it('does not change state value when rounded progress value has not changed', () => {
       getStore().dispatch(setMicroBitFirmataUpdatePercent(4));
       mbFirmataUpdater.firmataUpdatePercent = 4;
       mbFirmataUpdater.setPercentUpdateComplete(0.034);
-      expect(mbFirmataUpdater.firmataUpdatePercent).to.equal(4);
+      expect(mbFirmataUpdater.firmataUpdatePercent).toBe(4);
       let percent = getStore().getState().microBit.microBitFirmataUpdatePercent;
-      expect(percent).to.equal(4);
+      expect(percent).toBe(4);
     });
   });
 });

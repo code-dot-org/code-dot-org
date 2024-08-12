@@ -2,15 +2,15 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import microBitReducer, {
   setMicroBitFirmataUpdatePercent,
-} from '@cdo/apps/lib/kits/maker/microBitRedux';
-import SetupChecklist from '@cdo/apps/lib/kits/maker/ui/SetupChecklist';
-import * as boardUtils from '@cdo/apps/lib/kits/maker/util/boardUtils';
-import SetupChecker from '@cdo/apps/lib/kits/maker/util/SetupChecker';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+} from '@cdo/apps/maker/microBitRedux';
+import SetupChecklist from '@cdo/apps/maker/ui/SetupChecklist';
+import * as boardUtils from '@cdo/apps/maker/util/boardUtils';
+import SetupChecker from '@cdo/apps/maker/util/SetupChecker';
 import {
   getStore,
   registerReducers,
@@ -19,7 +19,7 @@ import {
 } from '@cdo/apps/redux';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 // Speed up the tests by reducing the artificial delay between steps
 const STEP_DELAY_MS = 1;

@@ -1,7 +1,5 @@
 import {fixMenuGenerator} from '@cdo/apps/blockly/addons/cdoFieldImageDropdown';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 describe('CdoFieldImageDropdown', () => {
   it('restructures menu items to make images', () => {
     const options = [
@@ -13,7 +11,7 @@ describe('CdoFieldImageDropdown', () => {
     const height = 50;
 
     const fixedOptions = fixMenuGenerator(options, width, height);
-    expect(fixedOptions).to.deep.equal([
+    expect(fixedOptions).toEqual([
       [
         {
           src: options[0][0],

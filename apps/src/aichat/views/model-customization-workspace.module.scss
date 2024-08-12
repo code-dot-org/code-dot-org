@@ -95,3 +95,13 @@
   padding: 5px 16px;
   margin: 10px 0;
 }
+
+.fieldLabelContainer {
+  display: flex;
+  gap: 6px;
+  align-items: baseline;
+}
+
+.fieldLabel {
+  margin: 0;
+}

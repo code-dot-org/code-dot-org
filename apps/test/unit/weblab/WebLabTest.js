@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import project from '@cdo/apps/code-studio/initApp/project';
 import {TestResults} from '@cdo/apps/constants';
@@ -26,7 +26,7 @@ import {
 import reducers from '@cdo/apps/weblab/reducers';
 import WebLab from '@cdo/apps/weblab/WebLab';
 
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 var filesApi = require('@cdo/apps/clientApi').files;
 var assetListStore = require('@cdo/apps/code-studio/assets/assetListStore');

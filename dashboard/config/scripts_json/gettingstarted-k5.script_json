@@ -14,7 +14,7 @@
     },
     "new_name": null,
     "family_name": "gettingstarted-k5",
-    "serialized_at": "2024-07-03 15:44:20 UTC",
+    "serialized_at": "2024-07-10 19:39:50 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",
@@ -573,6 +573,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "k5SP-VPL-21-mod2-LMSIntegrations"
+        ],
         "progression": "Set Up a Class Section"
       },
       "bonus": false,

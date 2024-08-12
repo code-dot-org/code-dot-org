@@ -1,12 +1,13 @@
-import Typography from '@cdo/apps/componentLibrary/typography';
 import React from 'react';
-import {BaseDialogProps} from './DialogManager';
-import moduleStyles from './confirm-dialog.module.scss';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {TEXT_BASED_LABS} from '../../constants';
-import {commonI18n} from '@cdo/apps/types/locale';
+
 import aichatI18n from '@cdo/apps/aichat/locale';
+import {commonI18n} from '@cdo/apps/types/locale';
+import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {TEXT_BASED_LABS} from '../../constants';
 import {AppName} from '../../types';
+
+import GenericDialog, {GenericDialogProps} from './GenericDialog';
 
 // Lab-specific messages for starting over.
 const LAB_SPECIFIC_MESSAGES: {[appName in AppName]?: string} = {
@@ -16,9 +17,15 @@ const LAB_SPECIFIC_MESSAGES: {[appName in AppName]?: string} = {
 /**
  * Start Over dialog used in Lab2 labs.
  */
-const StartOverDialog: React.FunctionComponent<BaseDialogProps> = ({
+
+export type StartOverDialogProps = GenericDialogProps & {
+  handleConfirm: () => void;
+  handleCancel?: () => void;
+};
+
+const StartOverDialog: React.FunctionComponent<StartOverDialogProps> = ({
   handleConfirm,
-  handleCancel,
+  handleCancel = () => {},
 }) => {
   const currentAppName = useAppSelector(
     state => state.lab.levelProperties?.appName
@@ -34,30 +41,19 @@ const StartOverDialog: React.FunctionComponent<BaseDialogProps> = ({
       : commonI18n.startOverWorkspace());
 
   return (
-    <div className={moduleStyles.confirmDialog}>
-      <Typography semanticTag="h1" visualAppearance="heading-lg">
-        {commonI18n.startOverTitle()}
-      </Typography>
-      <Typography semanticTag="p" visualAppearance="body-two">
-        {dialogMessage}
-      </Typography>
-      <div className={moduleStyles.buttonContainer}>
-        <button
-          className={moduleStyles.cancel}
-          type="button"
-          onClick={handleCancel}
-        >
-          {commonI18n.cancel()}
-        </button>
-        <button
-          className={moduleStyles.confirm}
-          type="button"
-          onClick={handleConfirm}
-        >
-          {commonI18n.startOver()}
-        </button>
-      </div>
-    </div>
+    <GenericDialog
+      title={commonI18n.startOverTitle()}
+      message={dialogMessage}
+      buttons={{
+        confirm: {
+          callback: handleConfirm,
+          text: commonI18n.startOver(),
+        },
+        cancel: {
+          callback: handleCancel,
+        },
+      }}
+    />
   );
 };
 

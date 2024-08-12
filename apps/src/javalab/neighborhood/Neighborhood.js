@@ -1,9 +1,13 @@
 import {tiles, MazeController} from '@code-dot-org/maze';
-const Slider = require('@cdo/apps/slider');
-const Direction = tiles.Direction;
-import {NeighborhoodSignalType, STATUS_MESSAGE_PREFIX} from '../constants';
-const timeoutList = require('@cdo/apps/lib/util/timeoutList');
+
 import javalabMsg from '@cdo/javalab/locale';
+
+import {NeighborhoodSignalType, STATUS_MESSAGE_PREFIX} from '../constants';
+
+const timeoutList = require('@cdo/apps/lib/util/timeoutList');
+const Slider = require('@cdo/apps/slider');
+
+const Direction = tiles.Direction;
 
 const PAUSE_BETWEEN_SIGNALS = 200;
 const ANIMATED_STEP_SPEED = 500;

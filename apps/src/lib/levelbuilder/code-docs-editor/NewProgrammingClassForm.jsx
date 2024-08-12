@@ -1,7 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
+import React from 'react';
+
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 
 export default function NewProgrammingClassForm({
   programmingEnvironmentsForSelect,

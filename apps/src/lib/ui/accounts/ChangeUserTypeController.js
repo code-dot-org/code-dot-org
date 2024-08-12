@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as utils from '../../../utils';
-import ChangeUserTypeModal from './ChangeUserTypeModal';
+
 import i18n from '@cdo/locale';
+
+import * as utils from '../../../utils';
+
+import ChangeUserTypeModal from './ChangeUserTypeModal';
 
 /**
  * Note: This controller attaches to the accounts page, and submits account

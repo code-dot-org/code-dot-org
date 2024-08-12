@@ -10,7 +10,6 @@ class Lti::V1::FeedbackControllerTest < ActionController::TestCase
   setup do
     sign_in @user
 
-    Policies::Lti.stubs(:early_access?).returns(false)
     Policies::Lti.stubs(:feedback_available?).with(@user).returns(true)
   end
 
@@ -20,9 +19,7 @@ class Lti::V1::FeedbackControllerTest < ActionController::TestCase
 
   test 'create - creates user LTI Feedback' do
     expected_satisfied = true
-    expected_early_access = true
-
-    Policies::Lti.stubs(:early_access?).returns(expected_early_access)
+    expected_early_access = false
 
     assert_difference('Lti::Feedback.count') do
       post :create, params: {lti_feedback: {satisfied: expected_satisfied}}, format: :json

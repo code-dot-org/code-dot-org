@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {act} from 'react-dom/test-utils';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -18,7 +18,7 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 // These are test observations that would be given by the AI.
 const observations = 'This is an observation. This is another observation.';
@@ -209,6 +209,35 @@ describe('LearningGoals - React Testing Library', () => {
     await user.click(button);
 
     sinon.assert.notCalled(scrollToLineStub);
+  });
+
+  it('does not fail to render when the evidence is null', async () => {
+    const myAiEvaluations = [
+      {
+        ...aiEvaluations[0],
+        evidence: null,
+      },
+      {
+        ...aiEvaluations[1],
+        evidence: null,
+      },
+    ];
+
+    render(
+      <LearningGoals
+        learningGoals={learningGoals}
+        teacherHasEnabledAi={true}
+        aiUnderstanding={3}
+        studentLevelInfo={studentLevelInfo}
+        aiEvaluations={myAiEvaluations}
+      />
+    );
+
+    const user = userEvent.setup();
+    const button = screen.getByRole('button', {
+      name: i18n.rubricNextLearningGoal(),
+    });
+    await user.click(button);
   });
 
   describe('when aiConfidenceExactMatch is high', () => {

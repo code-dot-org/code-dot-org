@@ -1,4 +1,4 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {
   TheaterSignalType,
@@ -7,7 +7,7 @@ import {
 } from '@cdo/apps/javalab/constants';
 import Theater from '@cdo/apps/javalab/theater/Theater';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('Theater', () => {
   let theater,

@@ -1,9 +1,8 @@
 import {
   detectBoardTypeFromPort,
   BOARD_TYPE,
-} from '@cdo/apps/lib/kits/maker/util/boardUtils';
+} from '@cdo/apps/maker/util/boardUtils';
 
-import {expect} from '../../../../../util/reconfiguredChai';
 import {
   CIRCUIT_PLAYGROUND_EXPRESS_PORTS,
   CIRCUIT_PLAYGROUND_PORTS,
@@ -13,21 +12,19 @@ import {
 describe('boardUtils', () => {
   describe(`detectBoardTypeFromPort()`, () => {
     it('sets the type of board detected for Classic boards', () => {
-      expect(detectBoardTypeFromPort(CIRCUIT_PLAYGROUND_PORTS[0])).to.equal(
+      expect(detectBoardTypeFromPort(CIRCUIT_PLAYGROUND_PORTS[0])).toBe(
         BOARD_TYPE.CLASSIC
       );
     });
 
     it('sets the type of board detected for Express boards', () => {
-      expect(
-        detectBoardTypeFromPort(CIRCUIT_PLAYGROUND_EXPRESS_PORTS[0])
-      ).to.equal(BOARD_TYPE.EXPRESS);
+      expect(detectBoardTypeFromPort(CIRCUIT_PLAYGROUND_EXPRESS_PORTS[0])).toBe(
+        BOARD_TYPE.EXPRESS
+      );
     });
 
     it('sets the type of board detected for other boards', () => {
-      expect(detectBoardTypeFromPort(FLORA_PORTS[0])).to.equal(
-        BOARD_TYPE.OTHER
-      );
+      expect(detectBoardTypeFromPort(FLORA_PORTS[0])).toBe(BOARD_TYPE.OTHER);
     });
   });
 });

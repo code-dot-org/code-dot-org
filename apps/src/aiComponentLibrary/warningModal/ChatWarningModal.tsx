@@ -6,7 +6,7 @@ import {
   Heading3,
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
-import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
+import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './warning-modal.module.scss';
@@ -24,14 +24,6 @@ const ChatWarningModal: React.FunctionComponent<ChatWarningModalProps> = ({
 }) => (
   <AccessibleDialog onClose={onClose} className={moduleStyles.chatWarningModal}>
     <Heading3>{i18n.aiWarningModalHeader()}</Heading3>
-
-    <button
-      type="button"
-      onClick={onClose}
-      className={moduleStyles.xCloseButton}
-    >
-      <i id="x-close" className="fa-solid fa-xmark" />
-    </button>
     <hr />
     <BodyTwoText>
       <StrongText>{i18n.aiWarningModalMessagesAreRecorded()}</StrongText>

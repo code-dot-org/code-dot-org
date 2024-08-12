@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import getScriptData from '@cdo/apps/util/getScriptData';
+
 import NewReferenceGuideForm from '@cdo/apps/lib/levelbuilder/reference-guide-editor/NewReferenceGuideForm';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   const baseUrl = getScriptData('baseUrl');

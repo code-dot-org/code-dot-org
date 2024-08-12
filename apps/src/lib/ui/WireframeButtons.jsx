@@ -1,10 +1,12 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
+
 import SendToPhone from '../../code-studio/components/SendToPhone';
 import project from '../../code-studio/initApp/project';
-import fontConstants from '@cdo/apps/fontConstants';
 
 /**
  * List of app types for which we should show a "View code" button here. Other

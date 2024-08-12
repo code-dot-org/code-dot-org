@@ -1,0 +1,1416 @@
+{
+  "script": {
+    "name": "getting-started-with-code-game-design",
+    "wrapup_video_id": null,
+    "login_required": true,
+    "properties": {
+      "curriculum_umbrella": "Foundations of CS",
+      "has_verified_resources": true,
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2024-07-18 16:20:01 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "getting-started-with-code-game-design"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "lessonGroup-2",
+      "user_facing": true,
+      "position": 1,
+      "properties": {
+        "display_name": "Getting Started with Code.org"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Welcome to Codeorg",
+      "name": "Welcome to Code.org",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**You will:**\n\n* Get an introduction to Code.org's mission.\n\n**Suggested Time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to Code.org's mission.\n\n**Suggested Time:** 10 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design"
+      }
+    },
+    {
+      "key": "Navigating the Codeorg Learning Platform",
+      "name": "Navigating the Code.org Learning Platform",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n\n**Suggested time:** 35 minutes",
+        "student_overview": "**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n\n**Suggested time:** 35 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design"
+      }
+    },
+    {
+      "key": "Navigating Lesson Plans and Resources",
+      "name": "Navigating Lesson Plans and Resources",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**You will:**\n\n* Locate and use course lesson plans and teacher resources.\n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Locate and use course lesson plans and teacher resources.\n\n**Suggested time:** 20 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design"
+      }
+    },
+    {
+      "key": "Navigating Support",
+      "name": "Navigating Support",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+        "overview": "**You will:**\n\n* Access support while teaching Code.org curricula. \n\n**Suggested time:** 15 minutes",
+        "student_overview": "**You will:**\n\n* Access support while teaching Code.org curricula. \n\n**Suggested time:** 15 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "280cff3d-2428-4707-a832-bcd9409e89fb",
+      "position": 1,
+      "properties": {
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "280cff3d-2428-4707-a832-bcd9409e89fb",
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design"
+      }
+    },
+    {
+      "key": "1e679973-4542-4d75-a7f5-e6b0adabb8ce",
+      "position": 1,
+      "properties": {
+        "duration": 35
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1e679973-4542-4d75-a7f5-e6b0adabb8ce",
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design"
+      }
+    },
+    {
+      "key": "44077088-7d97-4166-bd4a-8dde31a47103",
+      "position": 1,
+      "properties": {
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "44077088-7d97-4166-bd4a-8dde31a47103",
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design"
+      }
+    },
+    {
+      "key": "06eca8a1-597f-4307-82f8-943de4fe8fda",
+      "position": 1,
+      "properties": {
+        "duration": 15
+      },
+      "seeding_key": {
+        "lesson_activity.key": "06eca8a1-597f-4307-82f8-943de4fe8fda",
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "b42a8d74-078e-43ef-b963-dbb9466bb0a3",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "b42a8d74-078e-43ef-b963-dbb9466bb0a3",
+        "lesson_activity.key": "280cff3d-2428-4707-a832-bcd9409e89fb"
+      }
+    },
+    {
+      "key": "18849228-6094-487d-a35d-b8633bfb7dc0",
+      "position": 2,
+      "properties": {
+        "progression_name": "Welcome to Code.org"
+      },
+      "seeding_key": {
+        "activity_section.key": "18849228-6094-487d-a35d-b8633bfb7dc0",
+        "lesson_activity.key": "280cff3d-2428-4707-a832-bcd9409e89fb"
+      }
+    },
+    {
+      "key": "4b5e162e-60d4-40ce-addb-1429c74e3d63",
+      "position": 3,
+      "properties": {
+        "progression_name": "Welcome to Creating Apps for Devices"
+      },
+      "seeding_key": {
+        "activity_section.key": "4b5e162e-60d4-40ce-addb-1429c74e3d63",
+        "lesson_activity.key": "280cff3d-2428-4707-a832-bcd9409e89fb"
+      }
+    },
+    {
+      "key": "6f143d00-0344-4f36-beef-8e49945d634a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "6f143d00-0344-4f36-beef-8e49945d634a",
+        "lesson_activity.key": "1e679973-4542-4d75-a7f5-e6b0adabb8ce"
+      }
+    },
+    {
+      "key": "5b32e2a5-e781-4cd9-8da2-471f5dfa8f28",
+      "position": 2,
+      "properties": {
+        "progression_name": "Tour the Code.org Learning Platform"
+      },
+      "seeding_key": {
+        "activity_section.key": "5b32e2a5-e781-4cd9-8da2-471f5dfa8f28",
+        "lesson_activity.key": "1e679973-4542-4d75-a7f5-e6b0adabb8ce"
+      }
+    },
+    {
+      "key": "353d4817-e583-4b12-ae57-3132e4e711e9",
+      "position": 3,
+      "properties": {
+        "progression_name": "Set Up a Class Section"
+      },
+      "seeding_key": {
+        "activity_section.key": "353d4817-e583-4b12-ae57-3132e4e711e9",
+        "lesson_activity.key": "1e679973-4542-4d75-a7f5-e6b0adabb8ce"
+      }
+    },
+    {
+      "key": "511b1998-203c-4505-b92d-4bde237a5e55",
+      "position": 4,
+      "properties": {
+        "progression_name": "Explore the Student View"
+      },
+      "seeding_key": {
+        "activity_section.key": "511b1998-203c-4505-b92d-4bde237a5e55",
+        "lesson_activity.key": "1e679973-4542-4d75-a7f5-e6b0adabb8ce"
+      }
+    },
+    {
+      "key": "57c9e712-80fb-4b7b-bcc6-e4447dfa8013",
+      "position": 5,
+      "properties": {
+        "progression_name": "Track Student Progress and Provide Feedback"
+      },
+      "seeding_key": {
+        "activity_section.key": "57c9e712-80fb-4b7b-bcc6-e4447dfa8013",
+        "lesson_activity.key": "1e679973-4542-4d75-a7f5-e6b0adabb8ce"
+      }
+    },
+    {
+      "key": "07f9773a-448d-40ba-a65a-a2c6b03ba79a",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "07f9773a-448d-40ba-a65a-a2c6b03ba79a",
+        "lesson_activity.key": "44077088-7d97-4166-bd4a-8dde31a47103"
+      }
+    },
+    {
+      "key": "b7b9a615-71dd-4e74-81c1-adab94707f81",
+      "position": 2,
+      "properties": {
+        "progression_name": "Explore Course Lesson Plans"
+      },
+      "seeding_key": {
+        "activity_section.key": "b7b9a615-71dd-4e74-81c1-adab94707f81",
+        "lesson_activity.key": "44077088-7d97-4166-bd4a-8dde31a47103"
+      }
+    },
+    {
+      "key": "a1b0bc88-233c-4cb3-a99e-6935541b7c7b",
+      "position": 3,
+      "properties": {
+        "progression_name": "Explore Additional Teacher Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "a1b0bc88-233c-4cb3-a99e-6935541b7c7b",
+        "lesson_activity.key": "44077088-7d97-4166-bd4a-8dde31a47103"
+      }
+    },
+    {
+      "key": "c8d5021e-7917-4bde-888a-1a90bbbd725b",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "c8d5021e-7917-4bde-888a-1a90bbbd725b",
+        "lesson_activity.key": "06eca8a1-597f-4307-82f8-943de4fe8fda"
+      }
+    },
+    {
+      "key": "5d1de54c-55f6-4f0d-9f65-00a581614a8e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Additional support for teachers"
+      },
+      "seeding_key": {
+        "activity_section.key": "5d1de54c-55f6-4f0d-9f65-00a581614a8e",
+        "lesson_activity.key": "06eca8a1-597f-4307-82f8-943de4fe8fda"
+      }
+    },
+    {
+      "key": "80a4046e-a5a2-4efe-a385-87a543ba2f33",
+      "position": 3,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "80a4046e-a5a2-4efe-a385-87a543ba2f33",
+        "lesson_activity.key": "06eca8a1-597f-4307-82f8-943de4fe8fda"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_physical-computing_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "b42a8d74-078e-43ef-b963-dbb9466bb0a3"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-Overview-Welcome_physical-computing_1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_ModuleOverview_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "b42a8d74-078e-43ef-b963-dbb9466bb0a3"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-Overview-Welcome_ModuleOverview_1"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-24-mod1-Certificate_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "b42a8d74-078e-43ef-b963-dbb9466bb0a3"
+      },
+      "level_keys": [
+        "SP-VPL-24-mod1-Certificate_1"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Welcome to Code.org"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "18849228-6094-487d-a35d-b8633bfb7dc0"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-welcome-vid_1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Welcome to Code.org"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_physical-computing_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "18849228-6094-487d-a35d-b8633bfb7dc0"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-CSisFoundational_physical-computing_1"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Welcome to Code.org"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Advice-TipVid_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "18849228-6094-487d-a35d-b8633bfb7dc0"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-Advice-TipVid_1"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Overview-WebsiteNavigation_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "6f143d00-0344-4f36-beef-8e49945d634a"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-Overview-WebsiteNavigation_physical-computing_2"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Tour the Code.org Learning Platform"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-tour-vid_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "5b32e2a5-e781-4cd9-8da2-471f5dfa8f28"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-tour-vid_2"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Tour the Code.org Learning Platform"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-VerifiedTeacher_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "5b32e2a5-e781-4cd9-8da2-471f5dfa8f28"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-Task-VerifiedTeacher_physical-computing_2"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Set Up a Class Section"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ClassSection-vid_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "353d4817-e583-4b12-ae57-3132e4e711e9"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ClassSection-vid_2"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Set Up a Class Section"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-LMSIntegrations_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "353d4817-e583-4b12-ae57-3132e4e711e9"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-LMSIntegrations_2"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Set Up a Class Section"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-ClassSection_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "353d4817-e583-4b12-ae57-3132e4e711e9"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-Task-ClassSection_physical-computing_2"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Set Up a Class Section"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL_21-mod2-MakeAPlan-StudentLogIn_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "353d4817-e583-4b12-ae57-3132e4e711e9"
+      },
+      "level_keys": [
+        "SP-VPL_21-mod2-MakeAPlan-StudentLogIn_physical-computing_2"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore the Student View"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-StudentExperience-vid_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "511b1998-203c-4505-b92d-4bde237a5e55"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-StudentExperience-vid_2"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore the Student View"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-StudentView_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "511b1998-203c-4505-b92d-4bde237a5e55"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-Task-StudentView_physical-computing_2"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Track Student Progress and Provide Feedback"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ProgessAndFeedback-vid_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "57c9e712-80fb-4b7b-bcc6-e4447dfa8013"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ProgessAndFeedback-vid_2"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Track Student Progress and Provide Feedback"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-progress-c4u_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "57c9e712-80fb-4b7b-bcc6-e4447dfa8013"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-progress-c4u_physical-computing_2"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Track Student Progress and Provide Feedback"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-feedback-c4u_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "57c9e712-80fb-4b7b-bcc6-e4447dfa8013"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-feedback-c4u_physical-computing_2"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-TeachersInClassrooms_physical-computing_3"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "07f9773a-448d-40ba-a65a-a2c6b03ba79a"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-TeachersInClassrooms_physical-computing_3"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore Course Lesson Plans"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-NavigatingLessonPlans_physical-computing_3"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "b7b9a615-71dd-4e74-81c1-adab94707f81"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-NavigatingLessonPlans_physical-computing_3"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore Course Lesson Plans"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ExploreLessonPlan_physical-computing_3"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "b7b9a615-71dd-4e74-81c1-adab94707f81"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ExploreLessonPlan_physical-computing_3"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore Course Lesson Plans"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL_21-mod2-MakeAPlan-LessonPlanning_physical-computing_3"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "b7b9a615-71dd-4e74-81c1-adab94707f81"
+      },
+      "level_keys": [
+        "SP-VPL_21-mod2-MakeAPlan-LessonPlanning_physical-computing_3"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore Additional Teacher Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-NavigatingTeacherResources_physical-computing_3"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "a1b0bc88-233c-4cb3-a99e-6935541b7c7b"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-NavigatingTeacherResources_physical-computing_3"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore Additional Teacher Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-UnitCalendar_physical-computing_3"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "a1b0bc88-233c-4cb3-a99e-6935541b7c7b"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-UnitCalendar_physical-computing_3"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-TaskResources_physical-computing_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "c8d5021e-7917-4bde-888a-1a90bbbd725b"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-TaskResources_physical-computing_1"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Additional support for teachers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-navigating support_physical-computing_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "5d1de54c-55f6-4f0d-9f65-00a581614a8e"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-navigating support_physical-computing_1"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Additional support for teachers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ReadSupportArticles_physical-computing_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "5d1de54c-55f6-4f0d-9f65-00a581614a8e"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ReadSupportArticles_physical-computing_1"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Additional support for teachers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ReportAProblem_physical-computing_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "5d1de54c-55f6-4f0d-9f65-00a581614a8e"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ReportAProblem_physical-computing_1"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Additional support for teachers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-JoinTheTeacherCommunity_physical-computing_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "5d1de54c-55f6-4f0d-9f65-00a581614a8e"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-JoinTheTeacherCommunity_physical-computing_1"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": true,
+      "properties": {
+        "progression": "Additional support for teachers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Support-c4u_physical-computing_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "5d1de54c-55f6-4f0d-9f65-00a581614a8e"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-Support-c4u_physical-computing_1"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-CSD-Unit1-Module1WrapUp_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "80a4046e-a5a2-4efe-a385-87a543ba2f33"
+      },
+      "level_keys": [
+        "SP-CSD-Unit1-Module1WrapUp_1"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-Overview-Welcome_physical-computing_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_physical-computing_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "b42a8d74-078e-43ef-b963-dbb9466bb0a3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-Overview-Welcome_ModuleOverview_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_ModuleOverview_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "b42a8d74-078e-43ef-b963-dbb9466bb0a3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-24-mod1-Certificate_1",
+        "script_level.level_keys": [
+          "SP-VPL-24-mod1-Certificate_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "b42a8d74-078e-43ef-b963-dbb9466bb0a3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-welcome-vid_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "18849228-6094-487d-a35d-b8633bfb7dc0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-CSisFoundational_physical-computing_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_physical-computing_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "18849228-6094-487d-a35d-b8633bfb7dc0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-Advice-TipVid_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Advice-TipVid_1"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "18849228-6094-487d-a35d-b8633bfb7dc0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-Overview-WebsiteNavigation_physical-computing_2",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Overview-WebsiteNavigation_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "6f143d00-0344-4f36-beef-8e49945d634a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-tour-vid_2",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-tour-vid_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "5b32e2a5-e781-4cd9-8da2-471f5dfa8f28"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-Task-VerifiedTeacher_physical-computing_2",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-VerifiedTeacher_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "5b32e2a5-e781-4cd9-8da2-471f5dfa8f28"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ClassSection-vid_2",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ClassSection-vid_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "353d4817-e583-4b12-ae57-3132e4e711e9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-LMSIntegrations_2",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-LMSIntegrations_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "353d4817-e583-4b12-ae57-3132e4e711e9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-Task-ClassSection_physical-computing_2",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-ClassSection_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "353d4817-e583-4b12-ae57-3132e4e711e9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL_21-mod2-MakeAPlan-StudentLogIn_physical-computing_2",
+        "script_level.level_keys": [
+          "SP-VPL_21-mod2-MakeAPlan-StudentLogIn_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "353d4817-e583-4b12-ae57-3132e4e711e9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-StudentExperience-vid_2",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-StudentExperience-vid_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "511b1998-203c-4505-b92d-4bde237a5e55"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-Task-StudentView_physical-computing_2",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-StudentView_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "511b1998-203c-4505-b92d-4bde237a5e55"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ProgessAndFeedback-vid_2",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ProgessAndFeedback-vid_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "57c9e712-80fb-4b7b-bcc6-e4447dfa8013"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-progress-c4u_physical-computing_2",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-progress-c4u_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "57c9e712-80fb-4b7b-bcc6-e4447dfa8013"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-feedback-c4u_physical-computing_2",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-feedback-c4u_physical-computing_2"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "57c9e712-80fb-4b7b-bcc6-e4447dfa8013"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-TeachersInClassrooms_physical-computing_3",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-TeachersInClassrooms_physical-computing_3"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "07f9773a-448d-40ba-a65a-a2c6b03ba79a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-NavigatingLessonPlans_physical-computing_3",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-NavigatingLessonPlans_physical-computing_3"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "b7b9a615-71dd-4e74-81c1-adab94707f81"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ExploreLessonPlan_physical-computing_3",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ExploreLessonPlan_physical-computing_3"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "b7b9a615-71dd-4e74-81c1-adab94707f81"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL_21-mod2-MakeAPlan-LessonPlanning_physical-computing_3",
+        "script_level.level_keys": [
+          "SP-VPL_21-mod2-MakeAPlan-LessonPlanning_physical-computing_3"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "b7b9a615-71dd-4e74-81c1-adab94707f81"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-NavigatingTeacherResources_physical-computing_3",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-NavigatingTeacherResources_physical-computing_3"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "a1b0bc88-233c-4cb3-a99e-6935541b7c7b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-UnitCalendar_physical-computing_3",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-UnitCalendar_physical-computing_3"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "a1b0bc88-233c-4cb3-a99e-6935541b7c7b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-TaskResources_physical-computing_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-TaskResources_physical-computing_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "c8d5021e-7917-4bde-888a-1a90bbbd725b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-navigating support_physical-computing_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-navigating support_physical-computing_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "5d1de54c-55f6-4f0d-9f65-00a581614a8e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ReadSupportArticles_physical-computing_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ReadSupportArticles_physical-computing_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "5d1de54c-55f6-4f0d-9f65-00a581614a8e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ReportAProblem_physical-computing_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ReportAProblem_physical-computing_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "5d1de54c-55f6-4f0d-9f65-00a581614a8e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-JoinTheTeacherCommunity_physical-computing_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-JoinTheTeacherCommunity_physical-computing_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "5d1de54c-55f6-4f0d-9f65-00a581614a8e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-Support-c4u_physical-computing_1",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Support-c4u_physical-computing_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "5d1de54c-55f6-4f0d-9f65-00a581614a8e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-CSD-Unit1-Module1WrapUp_1",
+        "script_level.level_keys": [
+          "SP-CSD-Unit1-Module1WrapUp_1"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "getting-started-with-code-game-design",
+        "activity_section.key": "80a4046e-a5a2-4efe-a385-87a543ba2f33"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

@@ -1,12 +1,9 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {UnconnectedStudentTable as StudentTable} from '@cdo/apps/code-studio/components/progress/teacherPanel/StudentTable';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
-
-import {expect} from '../../../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   students: [
@@ -60,41 +57,41 @@ const setUp = overrideProps => {
 describe('StudentTable', () => {
   it('displays a row for the teacher', () => {
     const wrapper = setUp();
-    expect(wrapper.contains(i18n.studentTableTeacherDemo())).to.be.true;
+    expect(wrapper.contains(i18n.studentTableTeacherDemo())).toBe(true);
   });
 
   it('display bubbles for each student when there are levels with progress', () => {
     const wrapper = setUp({levelsWithProgress});
-    expect(wrapper.find('ProgressBubble')).to.have.length(2);
+    expect(wrapper.find('ProgressBubble')).toHaveLength(2);
   });
 
   it('does not display bubbles when no levels', () => {
     const wrapper = setUp();
-    expect(wrapper.find('ProgressBubble')).to.have.length(0);
+    expect(wrapper.find('ProgressBubble')).toHaveLength(0);
   });
 
   it('calls onSelectUser when row is clicked', () => {
-    const onSelectUserStub = sinon.stub();
+    const onSelectUserStub = jest.fn();
     const wrapper = setUp({levelsWithProgress, onSelectUser: onSelectUserStub});
 
     const firstStudentRow = wrapper.find('tr').at(1);
     firstStudentRow.simulate('click');
 
-    expect(onSelectUserStub).to.have.been.calledWith(1);
+    expect(onSelectUserStub).toHaveBeenCalledWith(1);
   });
 
   it('sorts by display name by default', () => {
     const wrapper = setUp();
 
     const firstStudentRow = wrapper.find('tr').at(1);
-    expect(firstStudentRow.text()).to.match(/^Student 1/);
+    expect(firstStudentRow.text()).toMatch(/^Student 1/);
   });
 
   it('sorts by family name if toggled', () => {
     const wrapper = setUp({isSortedByFamilyName: true});
 
     const firstStudentRow = wrapper.find('tr').at(1);
-    expect(firstStudentRow.text()).to.match(/^Student 2 FamNameA/);
+    expect(firstStudentRow.text()).toMatch(/^Student 2 FamNameA/);
   });
 
   it('sorts null family names last', () => {
@@ -108,9 +105,9 @@ describe('StudentTable', () => {
     });
 
     const lastStudentRow = wrapper.find('tr').at(3);
-    expect(lastStudentRow.text()).to.match(/^Student 2/);
-    expect(lastStudentRow.text()).to.not.match(/null/);
-    expect(lastStudentRow.text()).to.not.match(/undefined/);
+    expect(lastStudentRow.text()).toMatch(/^Student 2/);
+    expect(lastStudentRow.text()).not.toMatch(/null/);
+    expect(lastStudentRow.text()).not.toMatch(/undefined/);
   });
 
   it('includes non-alphabetic characters in sorting', () => {
@@ -125,10 +122,10 @@ describe('StudentTable', () => {
     });
 
     const studentRows = wrapper.find('tr');
-    expect(studentRows.at(1).text()).to.match(/^Student 4/);
-    expect(studentRows.at(2).text()).to.match(/^Student 3/);
-    expect(studentRows.at(3).text()).to.match(/^Student 1/);
-    expect(studentRows.at(4).text()).to.match(/^Student 2/);
+    expect(studentRows.at(1).text()).toMatch(/^Student 4/);
+    expect(studentRows.at(2).text()).toMatch(/^Student 3/);
+    expect(studentRows.at(3).text()).toMatch(/^Student 1/);
+    expect(studentRows.at(4).text()).toMatch(/^Student 2/);
   });
 
   it('sorts by name when family names are equivalent', () => {
@@ -142,8 +139,8 @@ describe('StudentTable', () => {
     });
 
     const studentRows = wrapper.find('tr');
-    expect(studentRows.at(1).text()).to.match(/^Alice/);
-    expect(studentRows.at(2).text()).to.match(/^Bob/);
-    expect(studentRows.at(3).text()).to.match(/^Eve/);
+    expect(studentRows.at(1).text()).toMatch(/^Alice/);
+    expect(studentRows.at(2).text()).toMatch(/^Bob/);
+    expect(studentRows.at(3).text()).toMatch(/^Eve/);
   });
 });

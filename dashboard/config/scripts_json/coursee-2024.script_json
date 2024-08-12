@@ -15,12 +15,13 @@
         "artist"
       ],
       "project_widget_visible": true,
+      "tts": true,
       "version_year": "2024"
     },
     "new_name": null,
     "family_name": "coursee",
-    "serialized_at": "2024-07-02 20:06:56 UTC",
-    "published_state": "preview",
+    "serialized_at": "2024-08-01 16:20:21 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -6479,6 +6480,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unplugged_songwriting_markdown"
+        ],
         "progression": "Songwriting - Student Resources"
       },
       "bonus": false,
@@ -8728,6 +8732,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unplugged_designing for accessibility_markdown"
+        ],
         "progression": "Designing for Accessibility - Student Discussion"
       },
       "bonus": false,
@@ -8775,6 +8782,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "unplugged_digital sharing_markdown"
+        ],
         "progression": "Digital Sharing - Discussion Questions"
       },
       "bonus": false,
@@ -13203,6 +13213,27 @@
         "lesson.key": "Mini-Project: About Me",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-NI-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
       }
     },
     {

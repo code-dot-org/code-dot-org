@@ -1,10 +1,7 @@
 import {EventEmitter} from 'events';
-import sinon from 'sinon';
 
-import MicroBitButton from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitButton';
-import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
-
-import {expect} from '../../../../../../util/reconfiguredChai';
+import MicroBitButton from '@cdo/apps/maker/boards/microBit/MicroBitButton';
+import {MBFirmataClientStub} from '@cdo/apps/maker/util/makeStubBoard';
 
 describe('MicroBitButton', function () {
   it('is an event emitter component', function () {
@@ -12,7 +9,7 @@ describe('MicroBitButton', function () {
       mb: new MBFirmataClientStub(),
       pin: 0,
     });
-    expect(button).to.be.an.instanceOf(EventEmitter);
+    expect(button).toBeInstanceOf(EventEmitter);
   });
 
   describe('isPressed', () => {
@@ -27,19 +24,19 @@ describe('MicroBitButton', function () {
 
     it('is a readonly property', () => {
       const descriptor = Object.getOwnPropertyDescriptor(button, 'isPressed');
-      expect(descriptor.get).to.be.a('function');
-      expect(descriptor.set).to.be.undefined;
+      expect(descriptor.get).toBeInstanceOf(Function);
+      expect(descriptor.set).toBeUndefined();
       expect(() => {
         button.isPressed = true;
-      }).to.throw();
+      }).toThrow();
     });
 
     it('returns true when pressed and false when released', () => {
       button.buttonEvents[1]++; // record a 'press down' event
-      expect(button.isPressed).to.equal(true);
+      expect(button.isPressed).toBe(true);
 
       button.buttonEvents[2]++; // record a 'release up' event
-      expect(button.isPressed).to.equal(false);
+      expect(button.isPressed).toBe(false);
     });
   });
 
@@ -53,20 +50,20 @@ describe('MicroBitButton', function () {
       });
     });
     afterAll(() => {
-      sinon.restore();
+      jest.restoreAllMocks();
     });
 
     it('is a readonly property', () => {
       const descriptor = Object.getOwnPropertyDescriptor(button, 'holdtime');
-      expect(descriptor.get).to.be.a('function');
-      expect(descriptor.set).to.be.undefined;
+      expect(descriptor.get).toBeInstanceOf(Function);
+      expect(descriptor.set).toBeUndefined();
       expect(() => {
         button.holdtime = 600;
-      }).to.throw();
+      }).toThrow();
     });
 
     it('returns the default value, 500 ms', () => {
-      expect(button.holdtime).to.equal(500);
+      expect(button.holdtime).toBe(500);
     });
   });
 
@@ -78,17 +75,17 @@ describe('MicroBitButton', function () {
         pin: 0,
       });
 
-      let emitSpy = sinon.spy(button, 'emit');
+      let emitSpy = jest.spyOn(button, 'emit').mockClear();
 
       boardClient.receivedEvent(0, 1);
-      expect(button.isPressed).to.equal(true);
-      expect(emitSpy).to.have.been.calledOnce;
-      expect(emitSpy).to.have.been.calledWith('down');
+      expect(button.isPressed).toBe(true);
+      expect(emitSpy).toHaveBeenCalledTimes(1);
+      expect(emitSpy).toHaveBeenCalledWith('down');
 
       boardClient.receivedEvent(0, 2);
-      expect(button.isPressed).to.equal(false);
-      expect(emitSpy).to.have.been.calledTwice;
-      expect(emitSpy).to.have.been.calledWith('up');
+      expect(button.isPressed).toBe(false);
+      expect(emitSpy).toHaveBeenCalledTimes(2);
+      expect(emitSpy).toHaveBeenCalledWith('up');
     });
   });
 });

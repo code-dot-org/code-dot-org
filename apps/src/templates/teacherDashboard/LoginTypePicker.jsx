@@ -8,18 +8,19 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
 import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
+import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
+import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
 import {Heading3} from '../../lib/ui/Headings';
 import styleConstants from '../../styleConstants';
-import Button from '../Button';
 
 import CardContainer from './CardContainer';
 import LoginTypeCard from './LoginTypeCard';
@@ -58,9 +59,13 @@ class LoginTypePicker extends Component {
   };
 
   recordSectionSetupExitEvent = eventName => {
-    analyticsReporter.sendEvent(eventName, {
-      source: SELECT_LOGIN_TYPE,
-    });
+    analyticsReporter.sendEvent(
+      eventName,
+      {
+        source: SELECT_LOGIN_TYPE,
+      },
+      PLATFORMS.BOTH
+    );
   };
 
   openImportDialog = provider => {

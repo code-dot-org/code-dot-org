@@ -1,10 +1,6 @@
-import sinon from 'sinon';
-
-import Compass from '@cdo/apps/lib/kits/maker/boards/microBit/Compass';
-import {SENSOR_CHANNELS} from '@cdo/apps/lib/kits/maker/boards/microBit/MicroBitConstants';
-import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
-
-import {expect} from '../../../../../../util/reconfiguredChai';
+import Compass from '@cdo/apps/maker/boards/microBit/Compass';
+import {SENSOR_CHANNELS} from '@cdo/apps/maker/boards/microBit/MicroBitConstants';
+import {MBFirmataClientStub} from '@cdo/apps/maker/util/makeStubBoard';
 
 describe('MicroBit Compass', function () {
   let boardClient;
@@ -15,13 +11,13 @@ describe('MicroBit Compass', function () {
     compass = new Compass({mb: boardClient});
   });
   afterEach(() => {
-    sinon.restore();
+    jest.restoreAllMocks();
   });
 
   it(`attributes are readonly`, () => {
     let desc = Object.getOwnPropertyDescriptor(compass, 'heading');
-    expect(desc.set).to.be.undefined;
-    expect(desc.get).to.not.be.undefined;
+    expect(desc.set).toBeUndefined();
+    expect(desc.get).toBeDefined();
   });
 
   it(`magnetometer values calculated as expected and rounded to integer`, () => {
@@ -29,7 +25,7 @@ describe('MicroBit Compass', function () {
     boardClient.analogChannel[SENSOR_CHANNELS.magX] = 3;
     boardClient.analogChannel[SENSOR_CHANNELS.magY] = 49;
 
-    expect(compass.heading).to.equal(86);
+    expect(compass.heading).toBe(86);
   });
 
   it(`getHeading() returns the heading attribute`, () => {
@@ -37,36 +33,38 @@ describe('MicroBit Compass', function () {
     boardClient.analogChannel[SENSOR_CHANNELS.magX] = 3;
     boardClient.analogChannel[SENSOR_CHANNELS.magY] = 49;
 
-    expect(compass.heading).to.equal(86);
-    expect(compass.getHeading()).to.equal(86);
+    expect(compass.heading).toBe(86);
+    expect(compass.getHeading()).toBe(86);
   });
 
   describe(`start() and stop()`, () => {
     it(`trigger the parent call`, () => {
-      let startSpy = sinon.spy(boardClient, 'streamAnalogChannel');
-      let stopSpy = sinon.spy(boardClient, 'stopStreamingAnalogChannel');
+      let startSpy = jest.spyOn(boardClient, 'streamAnalogChannel').mockClear();
+      let stopSpy = jest
+        .spyOn(boardClient, 'stopStreamingAnalogChannel')
+        .mockClear();
       compass.start();
-      expect(startSpy).to.have.been.calledTwice;
-      expect(startSpy).to.have.been.calledWith(SENSOR_CHANNELS.magX);
-      expect(startSpy).to.have.been.calledWith(SENSOR_CHANNELS.magY);
+      expect(startSpy).toHaveBeenCalledTimes(2);
+      expect(startSpy).toHaveBeenCalledWith(SENSOR_CHANNELS.magX);
+      expect(startSpy).toHaveBeenCalledWith(SENSOR_CHANNELS.magY);
 
       compass.stop();
-      expect(stopSpy).to.have.been.calledTwice;
-      expect(stopSpy).to.have.been.calledWith(SENSOR_CHANNELS.magX);
-      expect(stopSpy).to.have.been.calledWith(SENSOR_CHANNELS.magY);
+      expect(stopSpy).toHaveBeenCalledTimes(2);
+      expect(stopSpy).toHaveBeenCalledWith(SENSOR_CHANNELS.magX);
+      expect(stopSpy).toHaveBeenCalledWith(SENSOR_CHANNELS.magY);
     });
   });
 
   describe('emitsEvent', () => {
     let emitSpy;
     beforeEach(() => {
-      emitSpy = sinon.spy(compass, 'emit');
+      emitSpy = jest.spyOn(compass, 'emit').mockClear();
     });
 
     it('emits the data event when it receives data', () => {
       boardClient.receivedAnalogUpdate();
-      expect(emitSpy).to.have.been.calledOnce;
-      expect(emitSpy).to.have.been.calledWith('data');
+      expect(emitSpy).toHaveBeenCalledTimes(1);
+      expect(emitSpy).toHaveBeenCalledWith('data');
     });
 
     it('emits the change event when it receives data that is different from previous', () => {
@@ -78,8 +76,8 @@ describe('MicroBit Compass', function () {
       boardClient.analogChannel[SENSOR_CHANNELS.magY] = 12;
 
       boardClient.receivedAnalogUpdate();
-      expect(emitSpy).to.have.been.calledWith('data');
-      expect(emitSpy).to.have.been.calledWith('change');
+      expect(emitSpy).toHaveBeenCalledWith('data');
+      expect(emitSpy).toHaveBeenCalledWith('change');
     });
 
     it('emits the change event when only one variable changes', () => {
@@ -90,7 +88,7 @@ describe('MicroBit Compass', function () {
       boardClient.analogChannel[SENSOR_CHANNELS.magX] = 6;
 
       boardClient.receivedAnalogUpdate();
-      expect(emitSpy).to.have.been.calledWith('change');
+      expect(emitSpy).toHaveBeenCalledWith('change');
     });
   });
 });

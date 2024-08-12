@@ -25,7 +25,7 @@
 #
 class Pythonlab < Level
   serialized_attrs %w(
-    source
+    start_sources
     encrypted_exemplar_sources
     encrypted_validation
     hide_share_and_remix

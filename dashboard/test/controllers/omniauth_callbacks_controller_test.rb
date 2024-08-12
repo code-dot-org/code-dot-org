@@ -1738,7 +1738,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     let(:user_account_linking_lock_reason) {nil}
 
     before do
-      DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
       @controller.stubs(:account_linking_lock_reason).with(user).returns(user_account_linking_lock_reason)
       @controller.stubs(:account_linking_lock_reason).with(admin).returns(user_account_linking_lock_reason)
     end
@@ -1798,6 +1797,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
           # so this includes 1 email, 1 SSO, and 1 LTI auth option
           _(user.authentication_options.count).must_equal 3
           _(user.authentication_options).must_include lti_auth_option
+          assert_equal I18n.t('lti.account_linking.successfully_linked'), flash[:notice]
         end
 
         context 'if account linking is locked for user' do
@@ -1877,7 +1877,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'Account linking flow doesn\'t sign up new users' do
-    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
     OmniauthCallbacksController.stubs(:should_link_accounts?).returns(true)
     auth = generate_auth_user_hash provider: AuthenticationOption::GOOGLE, uid: 'some-uid'
     @request.env['omniauth.auth'] = auth

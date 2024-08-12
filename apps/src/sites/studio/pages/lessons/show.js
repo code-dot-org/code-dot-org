@@ -1,36 +1,39 @@
+import _ from 'lodash';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import _ from 'lodash';
 import {Provider} from 'react-redux';
 
-import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
-import LessonOverview from '@cdo/apps/templates/lessonOverview/LessonOverview';
+import AiDiffFloatingActionButton from '@cdo/apps/aiDifferentiation/AiDiffFloatingActionButton';
 import announcementsReducer, {
   addAnnouncement,
 } from '@cdo/apps/code-studio/announcementsRedux';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import {getStore} from '@cdo/apps/code-studio/redux';
-import {registerReducers} from '@cdo/apps/redux';
 import {
   setVerified,
   setVerifiedResources,
 } from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {tooltipifyVocabulary} from '@cdo/apps/utils';
-import {prepareBlocklyForEmbedding} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
 import CloneLessonDialogButton from '@cdo/apps/lib/levelbuilder/CloneLessonDialogButton';
+import {registerReducers} from '@cdo/apps/redux';
+import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import {
   setUserRoleInCourse,
   CourseRoles,
 } from '@cdo/apps/templates/currentUserRedux';
+import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
+import LessonOverview from '@cdo/apps/templates/lessonOverview/LessonOverview';
+import {prepareBlocklyForEmbedding} from '@cdo/apps/templates/utils/embeddedBlocklyUtils';
+import experiments from '@cdo/apps/util/experiments';
+import getScriptData from '@cdo/apps/util/getScriptData';
+import {tooltipifyVocabulary} from '@cdo/apps/utils';
 
 $(document).ready(function () {
   prepareBlockly();
   displayLessonOverview();
   prepareExpandableImageDialog();
   tooltipifyVocabulary();
+  displayDifferentiationChat();
   renderCopyLessonButton();
 });
 
@@ -136,6 +139,15 @@ function prepareExpandableImageDialog() {
     </Provider>,
     container
   );
+}
+
+function displayDifferentiationChat() {
+  const aiDiffFabMountPoint = document.getElementById(
+    'ai-differentiation-fab-mount-point'
+  );
+  if (aiDiffFabMountPoint && experiments.isEnabled('ai-differentiation')) {
+    ReactDOM.render(<AiDiffFloatingActionButton />, aiDiffFabMountPoint);
+  }
 }
 
 const renderCopyLessonButton = () => {

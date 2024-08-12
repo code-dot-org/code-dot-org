@@ -32,7 +32,7 @@
     %ul#headerlinks
       - Hamburger.get_header_contents(header_contents_options).each do |entry|
         %li
-          %a{id: entry[:id], href: entry[:url]}= entry[:title]
+          %a.headerlink{id: entry[:id], href: entry[:url]}= entry[:title]
   .right
     = view :sign_in_or_user
     = view :help_button, hamburger_options

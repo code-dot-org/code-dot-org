@@ -439,7 +439,7 @@
       "CSD Web Dev choice level list 1_2024": {
         "display_name": "Debug Ordered List",
         "bubble_choice_description": "Use your debugging skills to figure out why the list is not showing up correctly.",
-        "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n</div>\r\n\r\n# Debug Ordered List\r\n\r\nThere are a some issues with this page's list. Can you fix them?\r\n\r\n# Do This\r\n\r\n1) Find and fix the problems that are causing the bugs.\r\n"
+        "long_instructions": "<div class=\"no-pullthrough\" style=\"float: right; height: 250px; width: 40%; overflow-y: scroll; margin-left: 20px; font-size:14px\">\r\n\r\n</div>\r\n\r\n# Debug Ordered List\r\n\r\nThere are some issues with this page's list. Can you fix them?\r\n\r\n# Do This\r\n\r\n1) Find and fix the problems that are causing the bugs.\r\n"
       },
       "CSD Web Dev bubble choice br tag_2024": {
         "display_name": "Line Break",

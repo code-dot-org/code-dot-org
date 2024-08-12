@@ -49,10 +49,14 @@
 #  urm                      :boolean
 #  races                    :string(255)
 #  primary_contact_info_id  :integer
+#  unlock_token             :string(255)
+#  cap_status               :string(1)
+#  cap_status_date          :datetime
 #
 # Indexes
 #
 #  index_users_on_birthday                             (birthday)
+#  index_users_on_cap_status_and_cap_status_date       (cap_status,cap_status_date)
 #  index_users_on_current_sign_in_at                   (current_sign_in_at)
 #  index_users_on_deleted_at                           (deleted_at)
 #  index_users_on_email_and_deleted_at                 (email,deleted_at)
@@ -66,6 +70,7 @@
 #  index_users_on_reset_password_token_and_deleted_at  (reset_password_token,deleted_at) UNIQUE
 #  index_users_on_school_info_id                       (school_info_id)
 #  index_users_on_studio_person_id                     (studio_person_id)
+#  index_users_on_unlock_token                         (unlock_token) UNIQUE
 #  index_users_on_username_and_deleted_at              (username,deleted_at) UNIQUE
 #
 
@@ -112,6 +117,8 @@ class User < ApplicationRecord
   #   ai_rubrics_tour_seen: Tracks whether user has viewed the AI rubric product tour.
   #   lti_roster_sync_enabled: Enable/disable LTI roster syncing for a User.
   #   user_provided_us_state: Indicates if the us_state was provided by the user as opposed to being interpolated.
+  #   failed_attempts and locked_at: Used by Devise#Lockable to prevent
+  #     brute-force password attempts
   serialized_attrs %w(
     ops_first_name
     ops_last_name
@@ -161,6 +168,8 @@ class User < ApplicationRecord
     date_progress_table_invitation_last_delayed
     user_provided_us_state
     lms_landing_opted_out
+    failed_attempts
+    locked_at
   )
 
   attr_accessor(
@@ -183,10 +192,9 @@ class User < ApplicationRecord
   )
 
   # Include default devise modules. Others available are:
-  # :token_authenticatable, :confirmable,
-  # :lockable, :timeoutable
+  # :token_authenticatable, :confirmable, :timeoutable
   devise :invitable, :database_authenticatable, :registerable, :omniauthable,
-    :recoverable, :rememberable, :trackable
+    :recoverable, :rememberable, :trackable, :lockable
 
   acts_as_paranoid # use deleted_at column instead of deleting rows
 
@@ -285,6 +293,8 @@ class User < ApplicationRecord
 
   after_create :associate_with_potential_pd_enrollments
 
+  before_create :save_show_progress_table_v2
+
   after_save :save_email_preference, if: -> {email_preference_opt_in.present?}
 
   after_save :save_parent_email_preference, if: :parent_email_preference_opt_in_required?
@@ -302,6 +312,8 @@ class User < ApplicationRecord
   before_validation on: :create, if: -> {gender.present?} do
     self.gender = Policies::Gender.normalize gender
   end
+
+  before_validation :enforce_age_or_state_update, on: :update, if: :should_check_age_or_state_update?
 
   validate :validate_us_state, if: :should_validate_us_state?
 
@@ -355,12 +367,12 @@ class User < ApplicationRecord
     end
   end
 
-  # after_create :send_new_teacher_email
-  # def send_new_teacher_email
-  # TODO: it's not easy to pass cookies into an after_create call, so for now while this is behind a page mode
-  # flag, we send the email from the controller instead. This should ultimately live here, though.
-  # TeacherMailer.new_teacher_email(self).deliver_now if teacher?
-  # end
+  # Puts teachers directly into the progress table v2 view when new account is created.
+  def save_show_progress_table_v2
+    if teacher?
+      self.show_progress_table_v2 = true
+    end
+  end
 
   # Set validation type to VALIDATION_NONE, and deduplicate the school_info object
   # based on the passed attributes.
@@ -441,7 +453,7 @@ class User < ApplicationRecord
       status: 'accepted'
     ).order(application_year: :desc).first&.form_data_hash
     alternate_email = latest_accepted_app ? latest_accepted_app['alternateEmail'] : ''
-    alternate_email&.empty? ? email : alternate_email
+    alternate_email.presence || email
   end
 
   # assign a course to a facilitator that is qualified to teach it
@@ -1516,6 +1528,10 @@ class User < ApplicationRecord
   # as levelbuilders
   def verified_teacher?
     permission?(UserPermission::AUTHORIZED_TEACHER)
+  end
+
+  def levelbuilder?
+    permission?(UserPermission::LEVELBUILDER)
   end
 
   # A user is a verified instructor if you are a universal_instructor, plc_reviewer,
@@ -2760,6 +2776,23 @@ class User < ApplicationRecord
     # us_state is only a required field if the User lives in the US.
     return false unless %w[US RD].include? country_code
     new_record? || us_state_changed?
+  end
+
+  private def should_check_age_or_state_update?
+    return false unless student?
+    return false unless %w[US RD].include? country_code
+    birthday_changed? || us_state_changed?
+  end
+
+  private def enforce_age_or_state_update
+    # Create copy of user to mock the user's state before an update.
+    user_before_update = User.new(attributes.merge(changed_attributes))
+    potentially_locked = Policies::ChildAccount.underage?(user_before_update)
+    # The student is in a 'lockout' flow if they are potentially locked out and not unlocked
+    if potentially_locked && !Policies::ChildAccount::ComplianceState.permission_granted?(user_before_update)
+      errors.add(:us_state,  I18n.t('activerecord.errors.models.user.attributes.lockout_flow')) if us_state_changed?
+      errors.add(:age,  I18n.t('activerecord.errors.models.user.attributes.lockout_flow')) if birthday_changed?
+    end
   end
 
   private def ai_tutor_feature_globally_disabled?

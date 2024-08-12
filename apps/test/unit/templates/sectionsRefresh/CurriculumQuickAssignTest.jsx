@@ -4,8 +4,6 @@ import React from 'react';
 import CurriculumQuickAssign from '@cdo/apps/templates/sectionsRefresh/CurriculumQuickAssign';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 window.fetch = jest.fn().mockResolvedValue({json: jest.fn()});
 
 describe('CurriculumQuickAssign', () => {
@@ -14,17 +12,17 @@ describe('CurriculumQuickAssign', () => {
       <CurriculumQuickAssign updateSection={() => {}} sectionCourse={{}} />
     );
 
-    expect(wrapper.find('h3').length).to.equal(1);
-    expect(wrapper.find('p').length).to.equal(1);
+    expect(wrapper.find('h3').length).toBe(1);
+    expect(wrapper.find('p').length).toBe(1);
     // We haven't specified participantType = student, so all 5 buttons appear
-    expect(wrapper.find('Button').length).to.equal(5);
-    expect(wrapper.find('Button').at(0).props().text).to.equal(
+    expect(wrapper.find('Button').length).toBe(5);
+    expect(wrapper.find('Button').at(0).props().text).toBe(
       i18n.courseBlocksGradeBandsElementary()
     );
-    expect(
-      wrapper.find('Button[id="uitest-high-button"]').props().text
-    ).to.equal(i18n.courseBlocksGradeBandsHigh());
-    expect(wrapper.find('input').length).to.equal(1);
+    expect(wrapper.find('Button[id="uitest-high-button"]').props().text).toBe(
+      i18n.courseBlocksGradeBandsHigh()
+    );
+    expect(wrapper.find('input').length).toBe(1);
   });
 
   it('updates caret direction when clicked', () => {
@@ -32,29 +30,29 @@ describe('CurriculumQuickAssign', () => {
       <CurriculumQuickAssign updateSection={() => {}} sectionCourse={{}} />
     );
 
-    expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-right');
+    expect(wrapper.find('Button').at(0).props().icon).toBe('caret-right');
     wrapper
       .find('Button')
       .at(0)
       .simulate('click', {preventDefault: () => {}});
-    expect(wrapper.find('Button').at(0).props().icon).to.equal('caret-down');
+    expect(wrapper.find('Button').at(0).props().icon).toBe('caret-down');
   });
 
   it('opens and closes version dropdowns with table open and collapse', () => {
     const wrapper = mount(
       <CurriculumQuickAssign updateSection={() => {}} sectionCourse={{}} />
     );
-    expect(wrapper.find('VersionUnitDropdowns')).to.have.lengthOf(0);
+    expect(wrapper.find('VersionUnitDropdowns')).toHaveLength(0);
     wrapper
       .find('Button')
       .at(0)
       .simulate('click', {preventDefault: () => {}});
-    expect(wrapper.find('VersionUnitDropdowns')).to.have.lengthOf(1);
+    expect(wrapper.find('VersionUnitDropdowns')).toHaveLength(1);
     wrapper
       .find('Button')
       .at(0)
       .simulate('click', {preventDefault: () => {}});
-    expect(wrapper.find('VersionUnitDropdowns')).to.have.lengthOf(0);
+    expect(wrapper.find('VersionUnitDropdowns')).toHaveLength(0);
   });
 
   it('leaves dropdowns alone when decide later clicked', () => {
@@ -63,34 +61,34 @@ describe('CurriculumQuickAssign', () => {
     );
 
     // No dropdowns active at beginning
-    expect(wrapper.find('VersionUnitDropdowns')).to.have.lengthOf(0);
+    expect(wrapper.find('VersionUnitDropdowns')).toHaveLength(0);
 
     // Toggle decide later, verify its state changes.
-    expect(wrapper.find('input').props().checked).to.equal(false);
+    expect(wrapper.find('input').props().checked).toBe(false);
     wrapper.find('input').simulate('change');
-    expect(wrapper.find('input').props().checked).to.equal(true);
+    expect(wrapper.find('input').props().checked).toBe(true);
 
     // Still no dropdowns active
-    expect(wrapper.find('VersionUnitDropdowns')).to.have.lengthOf(0);
+    expect(wrapper.find('VersionUnitDropdowns')).toHaveLength(0);
 
     // Uncheck decide later, still no dropdowns active
     wrapper.find('input').simulate('change');
-    expect(wrapper.find('input').props().checked).to.equal(false);
-    expect(wrapper.find('VersionUnitDropdowns')).to.have.lengthOf(0);
+    expect(wrapper.find('input').props().checked).toBe(false);
+    expect(wrapper.find('VersionUnitDropdowns')).toHaveLength(0);
 
     // Open elementary dropdown
     wrapper
       .find('Button')
       .at(0)
       .simulate('click', {preventDefault: () => {}});
-    expect(wrapper.find('VersionUnitDropdowns')).to.have.lengthOf(1);
+    expect(wrapper.find('VersionUnitDropdowns')).toHaveLength(1);
 
     // Toggle decide later on and off, dropdown remains active
     wrapper.find('input').simulate('change');
-    expect(wrapper.find('input').props().checked).to.equal(true);
-    expect(wrapper.find('VersionUnitDropdowns')).to.have.lengthOf(1);
+    expect(wrapper.find('input').props().checked).toBe(true);
+    expect(wrapper.find('VersionUnitDropdowns')).toHaveLength(1);
     wrapper.find('input').simulate('change');
-    expect(wrapper.find('input').props().checked).to.equal(false);
-    expect(wrapper.find('VersionUnitDropdowns')).to.have.lengthOf(1);
+    expect(wrapper.find('input').props().checked).toBe(false);
+    expect(wrapper.find('VersionUnitDropdowns')).toHaveLength(1);
   });
 });

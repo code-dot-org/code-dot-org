@@ -1,7 +1,8 @@
-import moduleStyles from '../views/toolbox.module.scss';
-import {BlockTypes} from './blockTypes';
-import {getBlockMode} from '../appConfig';
+import AppConfig, {getBlockMode} from '../appConfig';
 import {BlockMode} from '../constants';
+import musicI18n from '../locale';
+
+import {BlockTypes} from './blockTypes';
 import {
   FIELD_REST_DURATION_NAME,
   PRIMARY_SOUND_INPUT_NAME,
@@ -11,7 +12,8 @@ import {
   DEFAULT_EFFECT_VALUE,
   FIELD_EFFECTS_VALUE,
 } from './constants';
-import musicI18n from '../locale';
+
+import moduleStyles from '../views/toolbox.module.scss';
 
 const baseCategoryCssConfig = {
   container: moduleStyles.toolboxCategoryContainer,
@@ -56,6 +58,11 @@ const toolboxBlocks = {
     id: BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2,
     kind: 'block',
     type: BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2,
+  },
+  [BlockTypes.PLAY_TUNE_AT_CURRENT_LOCATION_SIMPLE2]: {
+    id: BlockTypes.PLAY_TUNE_AT_CURRENT_LOCATION_SIMPLE2,
+    kind: 'block',
+    type: BlockTypes.PLAY_TUNE_AT_CURRENT_LOCATION_SIMPLE2,
   },
   [BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2]: {
     kind: 'block',
@@ -445,6 +452,9 @@ export function getToolbox(toolbox) {
             BlockTypes.PLAY_SOUND_AT_CURRENT_LOCATION_SIMPLE2,
             BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2,
             BlockTypes.PLAY_CHORD_AT_CURRENT_LOCATION_SIMPLE2,
+            ...(AppConfig.getValue('play-tune-block') === 'true'
+              ? [BlockTypes.PLAY_TUNE_AT_CURRENT_LOCATION_SIMPLE2]
+              : []),
             BlockTypes.PLAY_REST_AT_CURRENT_LOCATION_SIMPLE2,
           ],
           Control: [

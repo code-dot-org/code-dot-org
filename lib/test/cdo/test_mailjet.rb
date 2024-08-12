@@ -57,7 +57,7 @@ class MailJetTest < Minitest::Test
     MailJet.update_contact_field(mock_contact, 'field_name', 'field_value')
   end
 
-  def test_send_template_email
+  def test_send_template_email_default_locale
     to_email = 'fake.email@test.xx'
     to_name = 'Fake Name'
     from_address = 'test@code.org'
@@ -74,7 +74,9 @@ class MailJetTest < Minitest::Test
       from_address: from_address,
       from_name: from_name,
       template_id: {
-        unit_test: template_id
+        unit_test: {
+          default: template_id
+        }
       }
     }
 
@@ -89,7 +91,46 @@ class MailJetTest < Minitest::Test
         messages[0][:TemplateID] == template_id
     end
 
-    MailJet.send_template_email(mock_contact, email_config)
+    MailJet.send_template_email(mock_contact, email_config, 'en-US')
+  end
+
+  def test_send_template_email_localized
+    to_email = 'fake.email@test.xx'
+    to_name = 'Fake Name'
+    from_address = 'test@code.org'
+    from_name = 'Test Name'
+    default_template_id = 123
+    localized_template_id = 456
+
+    MailJet.stubs(:subaccount).returns('unit_test')
+
+    mock_contact = mock('Mailjet::Contact')
+    mock_contact.stubs(:email).returns(to_email)
+    mock_contact.stubs(:name).returns(to_name)
+
+    email_config = {
+      from_address: from_address,
+      from_name: from_name,
+      template_id: {
+        unit_test: {
+          default: default_template_id,
+          'es-MX': localized_template_id
+        }
+      }
+    }
+
+    Mailjet::Send.expects(:create).with do |params|
+      messages = params[:messages]
+      messages.length == 1 &&
+        messages[0][:From][:Email] == from_address &&
+        messages[0][:From][:Name] == from_name &&
+        messages[0][:To].length == 1 &&
+        messages[0][:To][0][:Email] == to_email &&
+        messages[0][:To][0][:Name] == to_name &&
+        messages[0][:TemplateID] == localized_template_id
+    end
+
+    MailJet.send_template_email(mock_contact, email_config, 'es-MX')
   end
 
   def test_create_contact_and_send_welcome_email
@@ -108,7 +149,7 @@ class MailJetTest < Minitest::Test
 
     MailJet.expects(:update_contact_field).with(mock_contactdata, 'sign_up_date', sign_up_time.rfc3339)
 
-    MailJet.expects(:send_template_email).with(mock_contactdata, MailJet::EMAILS[:welcome])
+    MailJet.expects(:send_template_email).with(mock_contactdata, MailJet::EMAILS[:welcome], 'en-US')
 
     MailJet.create_contact_and_send_welcome_email(user)
   end

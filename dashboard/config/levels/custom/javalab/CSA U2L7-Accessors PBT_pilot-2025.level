@@ -1,0 +1,30 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-01T22:22:35.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "CourseRunner.java": {
+        "text": "public class CourseRunner {\n  public static void main(String[] args) {\n\n    Course graphicDesign = new Course(6);\n    Course algebra = new Course(24);\n\n    int numStudents = graphicDesign.getNumStudents();\n    System.out.println(\"Graphic Design Students: \" + numStudents);\n\n    System.out.println(\"Algebra Students: \" + algebra.getNumStudents());\n\n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "Course.java": {
+        "text": "/*\n * Represents a course\n */\npublic class Course {\n\n  private int numStudents;   // The number of students in a course\n\n  /*\n   * Sets numStudents to the specified\n   * number of students in a course\n   */\n  public Course(int numStudents) {\n    this.numStudents = numStudents;\n  }\n\n  /*\n   * Returns the number of students in the course\n   */\n  public int getNumStudents() {\n    return numStudents;\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      }
+    },
+    "name_suffix": "_pilot-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-01T22:22:35.839+00:00\",\"changed\":[\"cloned from \\\"CSA U2L7-Accessors PBT_2025\\\"\"],\"cloned_from\":\"CSA U2L7-Accessors PBT_2025\"}]"
+}]]></config>
+</Javalab>

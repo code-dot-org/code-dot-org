@@ -1,18 +1,18 @@
 import five from '@code-dot-org/johnny-five';
 import _ from 'lodash';
 import Playground from 'playground-io';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import CircuitPlaygroundBoard from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/CircuitPlaygroundBoard';
-import Led from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Led';
+import CircuitPlaygroundBoard from '@cdo/apps/maker/boards/circuitPlayground/CircuitPlaygroundBoard';
+import Led from '@cdo/apps/maker/boards/circuitPlayground/Led';
 import {
   SONG_CHARGE,
   EXTERNAL_PINS,
-} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
-import {BOARD_TYPE} from '@cdo/apps/lib/kits/maker/util/boardUtils';
-import WebSerialPortWrapper from '@cdo/apps/lib/kits/maker/WebSerialPortWrapper';
+} from '@cdo/apps/maker/boards/circuitPlayground/PlaygroundConstants';
+import {BOARD_TYPE} from '@cdo/apps/maker/util/boardUtils';
+import WebSerialPortWrapper from '@cdo/apps/maker/WebSerialPortWrapper';
 
-import {expect} from '../../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardInterfaceTestUtil';
 
 import {itMakesCircuitPlaygroundComponentsAvailable} from './CircuitPlaygroundComponentTestUtil';

@@ -2,8 +2,6 @@ import {blocks as applabBlocks} from '@cdo/apps/applab/dropletConfig';
 import {getExportedGlobals} from '@cdo/apps/applab/export';
 import {dropletGlobalConfigBlocks} from '@cdo/apps/dropletUtils';
 
-import {assert} from '../../util/reconfiguredChai';
-
 describe('the export module', () => {
   describe('the getExportedGlobals function', () => {
     let globals;
@@ -25,10 +23,7 @@ describe('the export module', () => {
           if (globals.indexOf(block.func) < 0) {
             // eslint-disable-next-line no-eval
             if (!eval(`window.${block.func}`)) {
-              assert(
-                false,
-                `expected exported globals to include ${block.func}`
-              );
+              expect(false).toBeTruthy();
             }
           }
         });

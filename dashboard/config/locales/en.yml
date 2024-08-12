@@ -45,6 +45,7 @@ en:
               invalid: "is invalid. Note that each link can only be used once to reset your password, and only the most recently sent link will work."
             unlock_token:
               invalid: "is invalid or expired, possibly because your account has already been unlocked."
+            lockout_flow: "cannot be updated because you need parent or guardian permission first."
       messages:
         blank: "is required"
         blank_plural: "are required"
@@ -418,6 +419,7 @@ en:
       learn: "Learn"
       stats: "Stats"
       help_us: "Help Us"
+      donate: "Donate"
       teach: "Teach"
       about: "About"
       incubator: "Incubator"
@@ -1228,14 +1230,19 @@ en:
         not_listed: 'Preferred term not listed'
         none: 'Prefer not to answer'
       school_country:
+        antigua_and_barbuda: 'Antigua and Barbuda'
         australia: 'Australia'
         barbados: 'Barbados'
         belize: 'Belize'
+        botswana: 'Botswana'
         brazil: 'Brazil'
+        cambodia: 'Cambodia'
         canada: 'Canada'
         chile: 'Chile'
         colombia: 'Colombia'
         dominican_republic: 'Dominican Republic'
+        ecuador: 'Ecuador'
+        egypt: 'Egypt'
         india: 'India'
         indonesia: 'Indonesia'
         israel: 'Israel'
@@ -1245,18 +1252,24 @@ en:
         kosovo: 'Kosovo'
         malaysia: 'Malaysia'
         maldives: 'Maldives'
+        malta: 'Malta'
         mexico: 'Mexico'
         mongolia: 'Mongolia'
         new_zealand: 'New Zealand'
         paraguay: 'Paraguay'
+        peru: 'Peru'
         philippines: 'Philippines'
         portugal: 'Portugal'
         puerto_rico: 'Puerto Rico'
+        romania: 'Romania'
         slovakia: 'Slovakia'
+        south_africa: 'South Africa'
         south_korea: 'South Korea'
         spain: 'Spain'
+        sri_lanka: 'Sri Lanka'
         thailand: 'Thailand'
         trinidad_and_tobago: 'Trinidad and Tobago'
+        uruguay: 'Uruguay'
         uzbekistan: 'Uzbekistan'
         vietnam: 'Vietnam'
       ages:
@@ -1441,6 +1454,7 @@ en:
       linking_page_header: "Link your %{provider} account to your existing Code.org account"
       linking_page_description: "Choose the sign-in method you normally use to access Code.org"
       sign_in_and_connect: "Sign in and connect"
+      successfully_linked: "You have successfully linked your Code.org account!"
     create_integration_success: "Successfully created your LTI integration"
     dynamic_registration_title: "Code.org Dynamic Registration"
     error:
@@ -1485,18 +1499,6 @@ en:
       success_body: "Great news! Your LMS has been registered with Code.org, and you can continue installing and using your LMS integration. You should receive a confirmation email shortly."
       success_header: "Thank you for registering your LMS!"
       register: "Register LMS"
-      early_access:
-        title: LMS Early Access
-        closed: Sorry, all Early Access slots for Code.org Learning Management System Integrations have been claimed.
-        waitlist: Please [sign-up here](%{sign_up_link}) to join the Early Access waitlist and get updates about LMS Integration releases.
-        form_header: Register your LMS for Integration Early Access
-        form_instructions:
-          Please use this form to register your Learning Management System (LMS) with Code.org.
-          This will allow Early Access to install our LTI integration on your LMS.
-        banner:
-          text:
-            You are using an **Early Access version** of Code.org’s LMS Integration.
-            Encountering issues? [**Report a Bug**](%{bug_report_url})
     upgrade_to_teacher_account:
       error:
         missing_email: "Missing required parameter: Email"

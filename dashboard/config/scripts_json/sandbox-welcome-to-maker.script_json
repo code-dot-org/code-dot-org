@@ -2,17 +2,20 @@
   "script": {
     "name": "sandbox-welcome-to-maker",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "is_migrated": true
+      "curriculum_umbrella": "CSF Self Paced PL",
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-06-27 16:49:14 UTC",
+    "serialized_at": "2024-07-11 20:30:53 UTC",
     "published_state": null,
-    "instruction_type": null,
-    "instructor_audience": null,
-    "participant_audience": null,
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
     "seeding_key": {
       "script.name": "sandbox-welcome-to-maker"
     }

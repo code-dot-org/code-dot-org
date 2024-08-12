@@ -1,25 +1,9 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import UnitCard from '@cdo/apps/lib/levelbuilder/unit-editor/UnitCard';
-import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
-import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
-import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import LessonExtrasEditor from '@cdo/apps/lib/levelbuilder/unit-editor/LessonExtrasEditor';
-import color from '@cdo/apps/util/color';
-import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
-import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
-import $ from 'jquery';
-import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import {connect} from 'react-redux';
-import {
-  init,
-  mapLessonGroupDataForEditor,
-} from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
-import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import {lessonGroupShape} from './shapes';
-import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
-import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
+
+import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import {
   InstructionType,
   PublishedState,
@@ -27,10 +11,28 @@ import {
   ParticipantAudience,
   CurriculumUmbrella,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import Button from '@cdo/apps/templates/Button';
-import Dialog from '@cdo/apps/templates/Dialog';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import Dialog from '@cdo/apps/legacySharedComponents/Dialog';
+import AnnouncementsEditor from '@cdo/apps/lib/levelbuilder/announcementsEditor/AnnouncementsEditor';
+import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import CourseTypeEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseTypeEditor';
+import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
+import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
+import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
+import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
+import LessonExtrasEditor from '@cdo/apps/lib/levelbuilder/unit-editor/LessonExtrasEditor';
+import UnitCard from '@cdo/apps/lib/levelbuilder/unit-editor/UnitCard';
+import {
+  init,
+  mapLessonGroupDataForEditor,
+} from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import MultiCheckboxSelector from '@cdo/apps/templates/MultiCheckboxSelector';
+import color from '@cdo/apps/util/color';
+import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
+
+import {lessonGroupShape} from './shapes';
 
 /**
  * Component for editing units in unit_groups or stand alone courses
@@ -387,6 +389,14 @@ class UnitEditor extends React.Component {
         }
       })
       .fail(error => {
+        if (error.status === 504) {
+          this.setState({
+            isSaving: false,
+            error:
+              'The save request timed out. Please refresh the page and verify your changes have been saved correctly.',
+          });
+          return;
+        }
         this.setState({isSaving: false, error: error.responseText});
       });
   };

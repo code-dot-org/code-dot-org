@@ -9,8 +9,6 @@ import currentUser, {
   CourseRoles,
 } from '@cdo/apps/templates/currentUserRedux';
 
-import {assert} from '../../util/reconfiguredChai';
-
 describe('currentUserRedux', () => {
   const initialState = currentUser(undefined, {});
 
@@ -19,20 +17,20 @@ describe('currentUserRedux', () => {
       const action = setCurrentUserName('Test Person');
       const nextState = currentUser(initialState, action);
 
-      assert.deepEqual(nextState.userName, 'Test Person');
+      expect(nextState.userName).toEqual('Test Person');
     });
   });
 
   describe('setUserSignedIn', () => {
     it('can update signInState', () => {
       const signedIn = currentUser(initialState, setUserSignedIn(true));
-      assert.equal(signedIn.signInState, SignInState.SignedIn);
+      expect(signedIn.signInState).toEqual(SignInState.SignedIn);
 
       const signedOut = currentUser(initialState, setUserSignedIn(false));
-      assert.equal(signedOut.signInState, SignInState.SignedOut);
+      expect(signedOut.signInState).toEqual(SignInState.SignedOut);
     });
     it('initially sets signInState to Unknown', () => {
-      assert.equal(initialState.signInState, SignInState.Unknown);
+      expect(initialState.signInState).toEqual(SignInState.Unknown);
     });
   });
 
@@ -42,16 +40,16 @@ describe('currentUserRedux', () => {
         initialState,
         setUserRoleInCourse(CourseRoles.Instructor)
       );
-      assert.equal(instructor.userRoleInCourse, CourseRoles.Instructor);
+      expect(instructor.userRoleInCourse).toEqual(CourseRoles.Instructor);
 
       const participant = currentUser(
         initialState,
         setUserRoleInCourse(CourseRoles.Participant)
       );
-      assert.equal(participant.userRoleInCourse, CourseRoles.Participant);
+      expect(participant.userRoleInCourse).toEqual(CourseRoles.Participant);
     });
     it('initially sets userRoleInCourse to Unknown', () => {
-      assert.equal(initialState.userRoleInCourse, CourseRoles.Unknown);
+      expect(initialState.userRoleInCourse).toEqual(CourseRoles.Unknown);
     });
   });
 
@@ -60,7 +58,7 @@ describe('currentUserRedux', () => {
       const action = setUserType('teacher');
       const nextState = currentUser(initialState, action);
 
-      assert.deepEqual(nextState.userType, 'teacher');
+      expect(nextState.userType).toEqual('teacher');
     });
   });
 
@@ -69,7 +67,7 @@ describe('currentUserRedux', () => {
       const action = setCurrentUserHasSeenStandardsReportInfo(true);
       const nextState = currentUser(initialState, action);
 
-      assert.deepEqual(nextState.hasSeenStandardsReportInfo, true);
+      expect(nextState.hasSeenStandardsReportInfo).toEqual(true);
     });
   });
 
@@ -83,8 +81,8 @@ describe('currentUserRedux', () => {
     const action = setInitialData(serverUser);
     const nextState = currentUser(initialState, action);
 
-    assert.equal(nextState.userId, 1);
-    assert.equal(nextState.userName, 'test_user');
-    assert.equal(nextState.userType, 'teacher');
+    expect(nextState.userId).toEqual(1);
+    expect(nextState.userName).toEqual('test_user');
+    expect(nextState.userType).toEqual('teacher');
   });
 });

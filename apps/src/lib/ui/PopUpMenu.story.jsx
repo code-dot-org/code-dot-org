@@ -1,5 +1,6 @@
-import React, {useState, useEffect} from 'react';
 import {action} from '@storybook/addon-actions';
+import React, {useState, useEffect} from 'react';
+
 import PopUpMenu from './PopUpMenu';
 
 export default {

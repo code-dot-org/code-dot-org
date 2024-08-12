@@ -233,6 +233,7 @@ exports.forceInsertTopBlock = function (input, blockType) {
   topBlock.setAttribute('type', blockType);
   topBlock.setAttribute('movable', 'false');
   topBlock.setAttribute('deletable', 'false');
+  topBlock.setAttribute('id', 'topBlock');
 
   var numChildren = root.childNodes ? root.childNodes.length : 0;
 

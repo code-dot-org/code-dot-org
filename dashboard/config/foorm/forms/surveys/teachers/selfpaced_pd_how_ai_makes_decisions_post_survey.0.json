@@ -6,7 +6,7 @@
         {
           "type": "html",
           "name": "intro_how_ai_makes_decisions_post",
-          "html": "<h1>Code.org Self-paced Online Professional Learning - How AI Makes Decisions (K-5)!</p><h3><strong>Post-Module Survey</strong></h3><p><strong>Thanks for learning with us!</strong></p>\n\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>How AI Makes Decisions (K-5) - Post-Module Survey</h2>"
+          "html": "<h1>Code.org Self-paced Online Professional Learning - How AI Makes Decisions for 3-5th Grade!</p><h3><strong>Post-Module Survey</strong></h3><p><strong>Thanks for learning with us!</strong></p>\n\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>How AI Makes Decisions for 3-5th Grade - Post-Module Survey</h2>"
         },
         {
           "type": "radiogroup",
@@ -65,7 +65,7 @@
         {
           "type": "radiogroup",
           "name": "how_ai_makes_decisions_know_what_students_learn",
-          "title": "After completing this module, I have a basic understanding of what my students will learn in Code.org’s How AI Makes Decisions curriculum for K-5 students.",
+          "title": "After completing this module, I have a basic understanding of what my students will learn in Code.org’s How AI Makes Decisions curriculum.",
           "choices": [
             {
               "value": "1",
@@ -92,7 +92,7 @@
         {
           "type": "radiogroup",
           "name": "how_ai_makes_decisions_comfort_ability_to_teach",
-          "title": "After completing this module, I feel more comfortable in my ability to teach Code.org’s How AI Makes Decisions curriculum for K-5 students than I did before starting this professional learning course.",
+          "title": "After completing this module, I feel more comfortable in my ability to teach Code.org’s How AI Makes Decisions curriculum than I did before starting this professional learning course.",
           "choices": [
             {
               "value": "1",
@@ -153,7 +153,7 @@
             },
             {
               "value": "making_a_plan",
-              "text": "Making a plan to prepare to teach Code.org's How AI Makes Decisions curriculum for K-5 students."
+              "text": "Making a plan to prepare to teach Code.org's How AI Makes Decisions curriculum."
             },
             {
               "value": "check_for_understanding",
@@ -233,5 +233,5 @@
       ]
     }
   ],
-  "published": false
+  "published": true
 }

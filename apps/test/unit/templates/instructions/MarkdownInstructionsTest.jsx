@@ -3,7 +3,6 @@ import React from 'react';
 
 import MarkdownInstructions from '@cdo/apps/templates/instructions/MarkdownInstructions';
 
-import {expect} from '../../../util/reconfiguredChai';
 import {setExternalGlobals} from '../../../util/testUtils';
 
 describe('MarkdownInstructions', function () {
@@ -20,12 +19,12 @@ describe('MarkdownInstructions', function () {
     );
 
     const containerElement = wrapper.find('.instructions-markdown').first();
-    expect(containerElement.props().style.paddingTop).to.equal(19);
-    expect(containerElement.props().style.marginBottom).to.equal(35);
-    expect(containerElement.props().style.marginLeft).to.equal(undefined);
+    expect(containerElement.props().style.paddingTop).toBe(19);
+    expect(containerElement.props().style.marginBottom).toBe(35);
+    expect(containerElement.props().style.marginLeft).toBeUndefined();
 
     const markdownElement = wrapper.find('EnhancedSafeMarkdown').first();
-    expect(markdownElement.props().markdown).to.equal('md');
+    expect(markdownElement.props().markdown).toBe('md');
   });
 
   it('inTopPane has no top padding', function () {
@@ -37,6 +36,6 @@ describe('MarkdownInstructions', function () {
       />
     );
     const element = wrapper.find('.instructions-markdown').first();
-    expect(element.props().style.paddingTop).to.equal(0);
+    expect(element.props().style.paddingTop).toBe(0);
   });
 });

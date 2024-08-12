@@ -1,8 +1,7 @@
 name 'k5_ai_final_choice_level_pl'
-display_name 'End of Module Project'
+display_name 'Lesson 5: End of Module Project'
 
-
-description 'You have reached the end of the AI course. Choose a project to work on. The projects are ranked from Easy (🌶️) to Difficult (🌶️🌶️🌶️).'
+description 'This is the final lesson in the 3-5th grade How AI Makes Decisions module. <br> You have reached the end of the AI course. Choose a project to work on. The projects are ranked from Easy (🌶️) to Difficult (🌶️🌶️🌶️).'
 
 sublevels
 level 'k5_ai_final_choice_level_letter_to_principal_pl'
@@ -12,13 +11,11 @@ level 'k5_ai_final_choice_level_sprite_lab_pl'
 level 'k5_ai_final_choice_level_poetry_lab_pl'
 
 markdown <<MARKDOWN
-<div style="width: 100%; display: flex; justify-content: center;">
-  <div style="background-color: #A6E3E8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px;">
-    <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;"> 
-      <b>Teacher Tip: </b>If needed, scaffold the lesson by choosing one topic to address as a class. Model how to respond to the prompts, and then have students complete another prompt independently. 
-    </p>
-  </div>
-</div>
 
+
+
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
 
 MARKDOWN
