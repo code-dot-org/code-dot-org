@@ -537,44 +537,6 @@ class CoursesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "update: persists changes to alternate_unit_group_units" do
-    sign_in @levelbuilder
-    Rails.application.config.stubs(:levelbuilder_mode).returns true
-    create :unit_group, name: 'csp'
-    create :script, name: 'unit1'
-    create :script, name: 'unit2'
-    create :script, name: 'unit2-alt'
-    create :script, name: 'unit3'
-
-    post :update, params: {
-      course_name: 'csp',
-      scripts: ['unit1', 'unit2', 'unit3'],
-      alternate_units: [
-        {
-          experiment_name: 'my_experiment',
-          alternate_script: 'unit2-alt',
-          default_script: 'unit2'
-        }
-      ]
-    }
-    unit_group = UnitGroup.find_by_name('csp')
-    assert_equal 3, unit_group.default_unit_group_units.length
-    assert_equal ['unit1', 'unit2', 'unit3'], unit_group.default_unit_group_units.map(&:script).map(&:name)
-
-    assert_equal 1, unit_group.alternate_unit_group_units.length
-    alternate_unit_group_unit = unit_group.alternate_unit_group_units.first
-    assert_equal 'unit2-alt', alternate_unit_group_unit.script.name
-    assert_equal 'unit2', alternate_unit_group_unit.default_script.name
-    assert_equal 'my_experiment', alternate_unit_group_unit.experiment_name
-
-    default_unit = Unit.find_by(name: 'unit2')
-    expected_position = unit_group.default_unit_group_units.find_by(script: default_unit).position
-    assert_equal expected_position, alternate_unit_group_unit.position,
-      'an alternate unit must have the same position as the default unit it replaces'
-
-    assert_response :success
-  end
-
   test "update: persists changes localizeable strings" do
     sign_in @levelbuilder
     Rails.application.config.stubs(:levelbuilder_mode).returns true

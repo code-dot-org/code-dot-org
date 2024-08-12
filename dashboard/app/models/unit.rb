@@ -1891,17 +1891,6 @@ class Unit < ApplicationRecord
     version_year.blank? || version_year == CourseVersion::UNVERSIONED
   end
 
-  # If there is an alternate version of this unit which the user should be on
-  # due to existing progress or a course experiment, return that unit. Otherwise,
-  # return nil.
-  def alternate_script(user)
-    unit_group_units.each do |ugu|
-      alternate_ugu = ugu.unit_group.select_unit_group_unit(user, ugu)
-      return alternate_ugu.script if ugu != alternate_ugu
-    end
-    nil
-  end
-
   def included_in_units?(unit_ids)
     unit_ids.include? id
   end

@@ -113,8 +113,6 @@ namespace :seed do
     csp1-2017
     csp2-2017
     csp3-2017
-    csp3-a
-    csp3-research-mxghyt
     csp4-2017
     csp5-2017
     csp-ap

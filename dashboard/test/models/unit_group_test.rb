@@ -756,18 +756,11 @@ class UnitGroupTest < ActiveSupport::TestCase
 
       @unit1 = create(:script, name: 'unit1')
       @unit2 = create(:script, name: 'unit2')
-      @unit2a = create(:script, name: 'unit2a')
       @unit3 = create(:script, name: 'unit3')
 
       create :unit_group_unit, unit_group: @unit_group, script: @unit1, position: 1
 
       @unit_group_unit = create :unit_group_unit, unit_group: @unit_group, script: @unit2, position: 2
-      @alternate_unit_group_unit = create :unit_group_unit,
-        unit_group: @unit_group,
-        script: @unit2a,
-        position: 2,
-        default_script: @unit2,
-        experiment_name: 'my-experiment'
 
       create :unit_group_unit, unit_group: @unit_group, script: @unit3, position: 3
     end
@@ -775,67 +768,6 @@ class UnitGroupTest < ActiveSupport::TestCase
     test 'unit group unit test data is properly initialized' do
       assert_equal 'my-unit-group', @unit_group.name
       assert_equal %w(unit1 unit2 unit3), @unit_group.default_units.map(&:name)
-      assert_equal %w(unit2a), @unit_group.alternate_unit_group_units.map(&:script).map(&:name)
-    end
-
-    test 'select default unit group unit for teacher without experiment' do
-      assert_equal(
-        @unit_group_unit,
-        @unit_group.select_unit_group_unit(@other_teacher, @unit_group_unit)
-      )
-    end
-
-    test 'select alternate unit group unit for teacher with experiment' do
-      experiment = create :single_user_experiment, min_user_id: @other_teacher.id, name: 'my-experiment'
-      assert_equal(
-        @alternate_unit_group_unit,
-        @unit_group.select_unit_group_unit(@other_teacher, @unit_group_unit)
-      )
-      experiment.destroy
-    end
-
-    test 'select default unit group unit for student by default' do
-      assert_equal(
-        @unit_group_unit,
-        @unit_group.select_unit_group_unit(@student, @unit_group_unit)
-      )
-    end
-
-    test 'select alternate unit group unit for student when unit_group teacher has experiment' do
-      create :follower, section: @course_section, student_user: @student
-      experiment = create :single_user_experiment, min_user_id: @course_teacher.id, name: 'my-experiment'
-      assert_equal(
-        @alternate_unit_group_unit,
-        @unit_group.select_unit_group_unit(@student, @unit_group_unit)
-      )
-      experiment.destroy
-    end
-
-    test 'select default unit group unit for student when other teacher has experiment' do
-      create :follower, section: @other_section, student_user: @student
-      experiment = create :single_user_experiment, min_user_id: @other_teacher.id, name: 'my-experiment'
-      assert_equal(
-        @unit_group_unit,
-        @unit_group.select_unit_group_unit(@student, @unit_group_unit)
-      )
-      experiment.destroy
-    end
-
-    test 'select alternate unit group unit for student with progress' do
-      create :user_script, user: @student, script: @unit2a
-      assert_equal(
-        @alternate_unit_group_unit,
-        @unit_group.select_unit_group_unit(@student, @unit_group_unit)
-      )
-    end
-
-    test 'ignore progress if assigned to unit_group teacher without experiment' do
-      create :follower, section: @course_section, student_user: @student
-      create :user_script, user: @student, script: @unit2a
-      assert_equal(
-        @unit_group_unit,
-        @unit_group.select_unit_group_unit(@student, @unit_group_unit)
-      )
     end
   end
 
