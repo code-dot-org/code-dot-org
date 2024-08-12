@@ -238,7 +238,7 @@ const StudentChatHistoryView: React.FunctionComponent<
       className={moduleStyles.conversationArea}
     >
       {events.map((event, index) => {
-        event = {...event, teacherView: true};
+        event = {...event, isTeacherView: true};
         return <ChatEventView event={event} key={index} />;
       })}
     </div>

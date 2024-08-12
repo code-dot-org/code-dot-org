@@ -19,7 +19,7 @@ export interface ChatEvent {
   descriptionKey?: keyof typeof ChatEventDescriptions;
   // This field is optional but when it is defined, it must be set to `true`.
   // This allows a particulat chat event to be visible only when in teacher view of student chat history.
-  teacherView?: true;
+  isTeacherView?: true;
 }
 
 export interface ChatMessage extends ChatEvent {

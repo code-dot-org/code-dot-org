@@ -51,7 +51,7 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
 }) => {
   const dispatch = useAppDispatch();
 
-  if (event.hideForParticipants && !event.teacherView) {
+  if (event.hideForParticipants && !event.isTeacherView) {
     return null;
   }
 
