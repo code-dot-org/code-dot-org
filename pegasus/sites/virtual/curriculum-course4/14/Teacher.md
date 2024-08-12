@@ -54,7 +54,7 @@ Students will have experienced functions through Artist in a previous stage. Thi
 [together]
 
 ## Activity
-### <a name="Activity"></a> [Artist: Functions with Parameters](http://learn.code.org/s/course4/lessons/14/levels/1)
+### <a name="Activity"></a> [Artist: Functions with Parameters](https://studio.code.org/s/course4/lessons/14/levels/1)
 
 [/together]
 
