@@ -27,7 +27,7 @@ async function loadPyodideAndPackages() {
       // These are custom packages that we have built. They are defined in this repo:
       // https://github.com/code-dot-org/pythonlab-packages
       `/blockly/js/pyodide/${version}/pythonlab_setup-0.0.1-py3-none-any.whl`,
-      `/blockly/js/pyodide/${version}/unittest_runner-0.0.1-py3-none-any.whl`,
+      `/blockly/js/pyodide/${version}/unittest_runner-0.1.0-py3-none-any.whl`,
     ],
     env: {
       HOME: `/${HOME_FOLDER}/`,
@@ -77,7 +77,10 @@ self.onmessage = async event => {
   );
   self.postMessage({type: 'updated_source', message: updatedSource, id});
   resetGlobals(self.pyodide, pyodideGlobals);
-  self.postMessage({type: 'run_complete', message: results, id});
+
+  const resultsObject = results.toJs();
+  console.log({resultsObject});
+  self.postMessage({type: 'run_complete', message: resultsObject, id});
 };
 
 // Run code owned by us (not the user). If there is an error, post a

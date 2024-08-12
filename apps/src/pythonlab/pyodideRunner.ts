@@ -35,7 +35,11 @@ export async function runPythonCode(mainFile: string, source: MultiFileSource) {
   try {
     const {results, error} = await asyncRun(mainFile, source);
     if (results) {
-      console.log('pyodideWorker return results: ', results);
+      console.log('got results!');
+      console.log({results: results});
+      // console.log(results[0]);
+      // console.log(results[0].test_title);
+      //console.log('pyodideWorker return results: ', results);
     } else if (error) {
       console.log('pyodideWorker error: ', error);
     }
