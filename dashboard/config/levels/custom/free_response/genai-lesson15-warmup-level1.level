@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "title": "Warm Up",
-    "long_instructions": "###Hannah is a “social media influencer” who became famous for their viral videos and leveraged that into sponsored content on social media. \r\n###Hannah would like a chatbot to help her write some of her social media posts that include her sponsor, Sasha’s Jewelry Emporium. \r\n### **What is important to include in a system prompt that could help Hannah draft these posts?**\r\n",
+    "long_instructions": "#### Hannah is a “social media influencer” who became famous for their viral videos and leveraged that into sponsored content on social media. \r\n#### Hannah would like a chatbot to help her write some of her social media posts that include her sponsor, Sasha’s Jewelry Emporium. \r\n#### **What is important to include in a system prompt that could help Hannah draft these posts?**\r\n",
     "teacher_markdown": "Discussion Goal: This prompt follows a similar pattern as many levels in this lesson (where students are helping a fictional person solve a problem or accomplish a task) so make sure students stay focused on the user-story and their needs. A key goal in this discussion is to draw out all of the intersecting factors that could cause a prompt like this to snowball. Students may think this is a simple prompt around writing social media - if so, push them to consider:\r\n- Social media follows a specific format, including hashtags and tagging, which may be hard to describe in a prompt\r\n- A key part of marketing is considering the audience - who are the people Hannah needs to reach?\r\n- Hannah needs a tone that represents her voice, but also allows her to advertise (and get paid) by her sponsor, which is a difficult needle to thread.\r\n\r\nEmphasizing all of these intersecting points is a great tie-in to today’s lesson.",
     "allow_user_uploads": "false",
     "submittable": "false",
@@ -18,7 +18,7 @@
     "skip_dialog": true,
     "skip_sound": true
   },
-  "audit_log": "[{\"changed_at\":\"2024-07-31 16:54:54 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-07-31 16:54:54 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"},{\"changed_at\":\"2024-08-10 10:01:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
