@@ -1,4 +1,4 @@
-import Parser from '@code-dot-org/redactable-markdown';
+import Processor from '@code-dot-org/redactable-markdown';
 import {
   details,
   clickableText,
@@ -13,6 +13,7 @@ import rehypeRaw from 'rehype-raw';
 import rehypeReact from 'rehype-react';
 import rehypeSanitize from 'rehype-sanitize';
 import remarkRehype from 'remark-rehype';
+import unified from 'unified';
 
 import externalLinks from './plugins/externalLinks';
 
@@ -33,11 +34,11 @@ class SafeMarkdown extends React.Component {
     // that we do so; this is absolutely not something we want to do as a
     // general practice, but unfortunately there are some situations in which
     // it is currently a requirement.
-    const parser = this.props.openExternalLinksInNewTab
+    const processor = this.props.openExternalLinksInNewTab
       ? markdownToReactExternalLinks
       : markdownToReact;
 
-    const rendered = parser.processSync(this.props.markdown).contents;
+    const rendered = processor.processSync(this.props.markdown).result;
 
     const markdownProps = {};
     if (this.props.className) {
@@ -108,9 +109,8 @@ blocklyTags.forEach(tag => {
     return <BlocklyElement is={tag} {...props} />;
   };
 });
-
-const markdownToReact = Parser.create()
-  .getParser()
+const markdownToReact = unified()
+  .use(Processor.getParser())
   // include custom plugins
   .use([
     clickableText,
@@ -122,7 +122,7 @@ const markdownToReact = Parser.create()
   // convert markdown to an HTML Abstract Syntax Tree (HAST)
   .use(remarkRehype, {
     // include any raw HTML in the markdown as raw HTML nodes in the HAST
-    allowDangerousHTML: true,
+    allowDangerousHtml: true,
   })
   // parse the raw HTML nodes in the HAST to actual HAST nodes
   .use(rehypeRaw)
