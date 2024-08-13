@@ -42,6 +42,43 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     }
   }, [sections, selectedSectionId]);
 
+  const courseContent = (
+    <>
+      <Typography
+        semanticTag={'h2'}
+        visualAppearance={'overline-two'}
+        className={styles.sectionHeader}
+      >
+        {i18n.courseContent()}
+      </Typography>
+      <TeacherNavigationSidebarOption
+        icon={'split'}
+        optionTitle={i18n.course()}
+        isSelected={true}
+      />
+      <TeacherNavigationSidebarOption
+        icon={'split'}
+        optionTitle={i18n.lessonMaterials()}
+        isSelected={true}
+      />
+      <TeacherNavigationSidebarOption
+        icon={'split'}
+        optionTitle={i18n.lessonPlans()}
+        isSelected={true}
+      />
+      <TeacherNavigationSidebarOption
+        icon={'split'}
+        optionTitle={i18n.slideDecks()}
+        isSelected={true}
+      />
+      <TeacherNavigationSidebarOption
+        icon={'split'}
+        optionTitle={i18n.calendar()}
+        isSelected={true}
+      />
+    </>
+  );
+
   return (
     <nav className={styles.sidebarContainer}>
       <div className={styles.sidebarContent}>
@@ -61,18 +98,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
           className={styles.sectionDropdown}
           name="section-dropdown"
         />
-        <Typography
-          semanticTag={'h2'}
-          visualAppearance={'overline-two'}
-          className={styles.sectionHeader}
-        >
-          {i18n.courseContent()}
-        </Typography>
-        <TeacherNavigationSidebarOption
-          icon={'split'}
-          optionTitle={i18n.courseContent()}
-          isSelected={true}
-        />
+        {courseContent}
         <Typography
           semanticTag={'h2'}
           visualAppearance={'overline-two'}

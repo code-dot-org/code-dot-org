@@ -16,9 +16,47 @@
   width: 210px;
 }
 
+.optionIcon {
+  padding-left: 32px;
+  // padding-right: 12px;
+  color: $neutral_dark80;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+.optionText {
+  color: $neutral_dark80;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 16px;
+  padding-left: 0;
+  text-align: left;
+  width: 100%;
+}
+
+.linkText {
+  margin-bottom: 0 !important;
+  font-weight: 600 !important;
+  color: $neutral_dark80;
+}
+
 .sidebarOption {
   width: 100%;
   background-color: $neutral_gray10;
+  display: flex;
+
+  // see suggsested styles
+  height: 32px;
+  // padding: 0px 8px 0px 32px;
+  align-items: center;
+  gap: 12px;
+  // align-self: stretch;
 }
 
 .sectionHeader {
