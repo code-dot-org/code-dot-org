@@ -17,8 +17,6 @@
 }
 
 .optionIcon {
-  padding-left: 32px;
-  // padding-right: 12px;
   color: $neutral_dark80;
   font-size: 16px;
   font-style: normal;
@@ -47,16 +45,17 @@
 }
 
 .sidebarOption {
-  width: 100%;
-  background-color: $neutral_gray10;
   display: flex;
-
-  // see suggsested styles
   height: 32px;
-  // padding: 0px 8px 0px 32px;
   align-items: center;
   gap: 12px;
-  // align-self: stretch;
+  padding-left: 32px;
+
+  &.selected {
+    border-left: 4px solid $light_primary_500;
+    background-color: $neutral_gray10;
+    padding-left: 28px;
+  }
 }
 
 .sectionHeader {

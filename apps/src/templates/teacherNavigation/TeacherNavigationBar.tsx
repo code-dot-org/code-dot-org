@@ -54,27 +54,27 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
       <TeacherNavigationSidebarOption
         icon={'split'}
         optionTitle={i18n.course()}
-        isSelected={true}
+        isSelected={false}
       />
       <TeacherNavigationSidebarOption
         icon={'split'}
         optionTitle={i18n.lessonMaterials()}
-        isSelected={true}
+        isSelected={false}
       />
       <TeacherNavigationSidebarOption
         icon={'split'}
         optionTitle={i18n.lessonPlans()}
-        isSelected={true}
+        isSelected={false}
       />
       <TeacherNavigationSidebarOption
         icon={'split'}
         optionTitle={i18n.slideDecks()}
-        isSelected={true}
+        isSelected={false}
       />
       <TeacherNavigationSidebarOption
         icon={'split'}
         optionTitle={i18n.calendar()}
-        isSelected={true}
+        isSelected={false}
       />
     </>
   );
@@ -91,12 +91,12 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
       <TeacherNavigationSidebarOption
         icon={'split'}
         optionTitle={i18n.progress()}
-        isSelected={true}
+        isSelected={false}
       />
       <TeacherNavigationSidebarOption
         icon={'split'}
         optionTitle={i18n.assessments()}
-        isSelected={true}
+        isSelected={false}
       />
       <TeacherNavigationSidebarOption
         icon={'split'}
@@ -106,12 +106,34 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
       <TeacherNavigationSidebarOption
         icon={'split'}
         optionTitle={i18n.teacherTabStats()}
-        isSelected={true}
+        isSelected={false}
       />
       <TeacherNavigationSidebarOption
         icon={'split'}
         optionTitle={i18n.teacherTabStatsTextResponses()}
-        isSelected={true}
+        isSelected={false}
+      />
+    </>
+  );
+
+  const classroomContent = (
+    <>
+      <Typography
+        semanticTag={'h2'}
+        visualAppearance={'overline-two'}
+        className={styles.sectionHeader}
+      >
+        {i18n.classroom()}
+      </Typography>
+      <TeacherNavigationSidebarOption
+        icon={'split'}
+        optionTitle={i18n.roster()}
+        isSelected={false}
+      />
+      <TeacherNavigationSidebarOption
+        icon={'split'}
+        optionTitle={i18n.settings()}
+        isSelected={false}
       />
     </>
   );
@@ -137,14 +159,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
         />
         {courseContent}
         {performanceContent}
-
-        <Typography
-          semanticTag={'h2'}
-          visualAppearance={'overline-two'}
-          className={styles.sectionHeader}
-        >
-          {i18n.classroom()}
-        </Typography>
+        {classroomContent}
       </div>
     </nav>
   );
