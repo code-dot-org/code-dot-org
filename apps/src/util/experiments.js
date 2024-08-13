@@ -68,6 +68,8 @@ experiments.NEW_SIGN_UP_FLOW = 'new_sign_up_flow';
 experiments.VIEW_CHAT_HISTORY = 'view_chat_history';
 // Allows user to view the new version of the teacher navigation
 experiments.TEACHER_LOCAL_NAV_V2 = 'teacher-local-nav-v2';
+// Use the polling API for fetching chat responses in the AI Chat lab
+experiments.AI_CHAT_POLLING = 'ai-chat-polling';
 
 /**
  * This was a gamified version of the finish dialog, built in 2018,

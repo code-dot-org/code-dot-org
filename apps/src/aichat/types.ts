@@ -1,6 +1,8 @@
 import {LevelProperties} from '@cdo/apps/lab2/types';
+import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import {Role} from '../aiComponentLibrary/chatMessage/types';
+import type {ValueOf} from '../types/utils';
 
 export const ChatEventDescriptions = {
   CLEAR_CHAT: 'The user clears the chat workspace.',
@@ -22,7 +24,7 @@ export interface ChatEvent {
 export interface ChatMessage extends ChatEvent {
   chatMessageText: string;
   role: Role;
-  status: AichatInteractionStatusValue;
+  status: ValueOf<typeof AiInteractionStatus>;
 }
 
 export interface ModelUpdate extends ChatEvent {
@@ -54,7 +56,7 @@ export function isNotification(event: ChatEvent): event is Notification {
 
 export interface ChatCompletionApiResponse {
   messages: ChatMessage[];
-  session_id: number;
+  session_id?: number;
   flagged_content?: string;
 }
 
