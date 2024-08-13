@@ -79,6 +79,43 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     </>
   );
 
+  const performanceContent = (
+    <>
+      <Typography
+        semanticTag={'h2'}
+        visualAppearance={'overline-two'}
+        className={styles.sectionHeader}
+      >
+        {i18n.performance()}
+      </Typography>
+      <TeacherNavigationSidebarOption
+        icon={'split'}
+        optionTitle={i18n.progress()}
+        isSelected={true}
+      />
+      <TeacherNavigationSidebarOption
+        icon={'split'}
+        optionTitle={i18n.assessments()}
+        isSelected={true}
+      />
+      <TeacherNavigationSidebarOption
+        icon={'split'}
+        optionTitle={i18n.studentProjects()}
+        isSelected={true}
+      />
+      <TeacherNavigationSidebarOption
+        icon={'split'}
+        optionTitle={i18n.teacherTabStats()}
+        isSelected={true}
+      />
+      <TeacherNavigationSidebarOption
+        icon={'split'}
+        optionTitle={i18n.teacherTabStatsTextResponses()}
+        isSelected={true}
+      />
+    </>
+  );
+
   return (
     <nav className={styles.sidebarContainer}>
       <div className={styles.sidebarContent}>
@@ -99,13 +136,8 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
           name="section-dropdown"
         />
         {courseContent}
-        <Typography
-          semanticTag={'h2'}
-          visualAppearance={'overline-two'}
-          className={styles.sectionHeader}
-        >
-          {i18n.performance()}
-        </Typography>
+        {performanceContent}
+
         <Typography
           semanticTag={'h2'}
           visualAppearance={'overline-two'}
