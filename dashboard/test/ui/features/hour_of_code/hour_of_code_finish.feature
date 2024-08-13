@@ -104,7 +104,6 @@ Scenario: Oceans uncustomized dashboard certificate pages
 
 Scenario: Course A 2017 uncustomized dashboard certificate pages
   Given I create a student named "Student1"
-  And I sign in as "Student1"
   And I complete unit coursea-2017
   And I am on "http://studio.code.org/congrats"
   Then I wait until element "#uitest-certificate" is visible
@@ -204,7 +203,6 @@ Scenario: congrats certificate pages
   And I see no difference for "customized 20-hour certificate"
 
   Given I create a student named "Student1"
-  And I sign in as "Student1"
   And I complete unit coursea-2017
   When I am on "http://code.org/congrats/coursea-2017"
   And I wait until current URL contains "http://studio.code.org/congrats"
