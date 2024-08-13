@@ -7,7 +7,7 @@ import MicroBitBoard from '@cdo/apps/maker/boards/microBit/MicroBitBoard';
 import {MB_COMPONENT_COUNT} from '@cdo/apps/maker/boards/microBit/MicroBitConstants';
 import {MBFirmataClientStub} from '@cdo/apps/maker/util/makeStubBoard';
 
-import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardInterfaceTestUtil';
 
 import {itMakesMicroBitComponentsAvailable} from './MicroBitComponentTestUtil';

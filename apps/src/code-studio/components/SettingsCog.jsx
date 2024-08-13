@@ -10,13 +10,12 @@ import JavalabDropdown from '@cdo/apps/javalab/components/JavalabDropdown';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import msg from '@cdo/locale';
 
-import * as assets from '../../code-studio/assets';
-import project from '../../code-studio/initApp/project';
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import * as makerToolkitRedux from '../../maker/redux';
+import ConfirmEnableMakerDialog from '../../maker/ui/ConfirmEnableMakerDialog';
 import {getStore} from '../../redux';
-
-import ConfirmEnableMakerDialog from './ConfirmEnableMakerDialog';
+import * as assets from '../assets';
+import project from '../initApp/project';
 
 import moduleStyles from './settings-cog.module.scss';
 

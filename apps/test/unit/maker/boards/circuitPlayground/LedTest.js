@@ -5,7 +5,7 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 import Led from '@cdo/apps/maker/boards/circuitPlayground/Led';
 import {makeCPBoardStub} from '@cdo/apps/maker/util/makeStubBoard';
 
-import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('Led', function () {
   it('is a five.Led', () => {

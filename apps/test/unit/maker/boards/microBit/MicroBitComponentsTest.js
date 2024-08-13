@@ -10,7 +10,7 @@ import {
 } from '@cdo/apps/maker/boards/microBit/MicroBitComponents';
 import {MBFirmataClientStub} from '@cdo/apps/maker/util/makeStubBoard';
 
-import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const COMPONENTS = [
   'buttonA',

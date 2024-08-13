@@ -4,7 +4,7 @@ import {MB_COMPONENT_EVENTS} from '@cdo/apps/maker/boards/microBit/MicroBitConst
 import * as commands from '@cdo/apps/maker/commands';
 import dropletConfig, {configMicrobit} from '@cdo/apps/maker/dropletConfig';
 
-import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('maker/dropletConfig.js', () => {
   describe('getBoardEventDropdownForParam', () => {

@@ -6,7 +6,7 @@ import Switch, {
   READ_WRITE_PROPERTIES,
 } from '@cdo/apps/maker/boards/circuitPlayground/Switch';
 
-import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('Switch', () => {
   let fakeJohnnyFiveSwitch;
