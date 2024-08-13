@@ -3,7 +3,7 @@ import React from 'react';
 
 import color from '@cdo/apps/util/color';
 
-import {createUuid} from '../../../utils';
+import {createUuid} from '../../utils';
 
 /**
  * Field wrapper for a "System" dialog style.
