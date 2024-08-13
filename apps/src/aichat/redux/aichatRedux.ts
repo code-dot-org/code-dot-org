@@ -325,12 +325,13 @@ const dispatchSaveFailNotification = (
   dispatch(endSave());
 };
 
-// This thunk adds a chat event to chatEventsCurrent (displayed in current chat workspace)
-// if hideForParticipants != true and then logs the event to the backend for all chat events
-// except notifications with includeInHistory != true.
+// This thunk adds a chat event to chatEventsCurrent (displayed in current chat workspace) if visible, i.e.,
+// hideForParticipants != true. Then it logs the event to the backend for all chat events except notifications
+// with includeInHistory != true.
 export const addChatEvent =
   <T extends ChatEvent>(chatEvent: T) =>
   (dispatch: AppDispatch, getState: () => RootState) => {
+    // Only visible chat events added to chatEventsCurrent.
     if (!chatEvent.hideForParticipants) {
       dispatch(addEventToChatEventsCurrent(chatEvent));
     }
@@ -685,7 +686,7 @@ export const selectAllFieldsHidden = createSelector(
   allFieldsHidden
 );
 
-export const selectAllMessages = (state: {aichat: AichatState}) => {
+export const selectAllVisibleMessages = (state: {aichat: AichatState}) => {
   const {chatEventsPast, chatEventsCurrent, chatMessagePending} = state.aichat;
   const messages = [...chatEventsPast, ...chatEventsCurrent];
   if (chatMessagePending) {

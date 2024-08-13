@@ -17,9 +17,6 @@ export interface ChatEvent {
   // This allows the chat event to be visible by default without having to add an extra field.
   hideForParticipants?: true;
   descriptionKey?: keyof typeof ChatEventDescriptions;
-  // This field is optional but when it is defined, it must be set to `true`.
-  // This allows a particulat chat event to be visible only when in teacher view of student chat history.
-  isTeacherView?: true;
 }
 
 export interface ChatMessage extends ChatEvent {
