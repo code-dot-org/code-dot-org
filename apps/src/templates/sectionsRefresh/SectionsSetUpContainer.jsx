@@ -11,7 +11,7 @@ import {
   Heading3,
 } from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
+import InfoHelpTip from '@cdo/apps/sharedComponents/InfoHelpTip';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
