@@ -52,27 +52,27 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
         {i18n.courseContent()}
       </Typography>
       <TeacherNavigationSidebarOption
-        icon={'split'}
+        icon={'desktop'}
         optionTitle={i18n.course()}
         isSelected={false}
       />
       <TeacherNavigationSidebarOption
-        icon={'split'}
+        icon={'folder-open'}
         optionTitle={i18n.lessonMaterials()}
         isSelected={false}
       />
       <TeacherNavigationSidebarOption
-        icon={'split'}
+        icon={'file-lines'}
         optionTitle={i18n.lessonPlans()}
         isSelected={false}
       />
       <TeacherNavigationSidebarOption
-        icon={'split'}
+        icon={'presentation-screen'}
         optionTitle={i18n.slideDecks()}
         isSelected={false}
       />
       <TeacherNavigationSidebarOption
-        icon={'split'}
+        icon={'calendar'}
         optionTitle={i18n.calendar()}
         isSelected={false}
       />
@@ -89,27 +89,27 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
         {i18n.performance()}
       </Typography>
       <TeacherNavigationSidebarOption
-        icon={'split'}
+        icon={'chart-line'}
         optionTitle={i18n.progress()}
         isSelected={false}
       />
       <TeacherNavigationSidebarOption
-        icon={'split'}
+        icon={'star'}
         optionTitle={i18n.assessments()}
         isSelected={false}
       />
       <TeacherNavigationSidebarOption
-        icon={'split'}
+        icon={'code'}
         optionTitle={i18n.studentProjects()}
         isSelected={true}
       />
       <TeacherNavigationSidebarOption
-        icon={'split'}
+        icon={'chart-simple'}
         optionTitle={i18n.teacherTabStats()}
         isSelected={false}
       />
       <TeacherNavigationSidebarOption
-        icon={'split'}
+        icon={'pen-line'}
         optionTitle={i18n.teacherTabStatsTextResponses()}
         isSelected={false}
       />
@@ -126,12 +126,12 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
         {i18n.classroom()}
       </Typography>
       <TeacherNavigationSidebarOption
-        icon={'split'}
+        icon={'users'}
         optionTitle={i18n.roster()}
         isSelected={false}
       />
       <TeacherNavigationSidebarOption
-        icon={'split'}
+        icon={'gear'}
         optionTitle={i18n.settings()}
         isSelected={false}
       />
