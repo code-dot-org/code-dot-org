@@ -8,34 +8,36 @@ import {
   BodyTwoText,
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
-import locale from '@cdo/apps/signup/locale';
+import locale from '@cdo/apps/signUpFlow/locale';
+
+import style from '@cdo/apps/signUpFlow/loginTypeSelection.module.scss';
 
 const LoginTypeSelection: React.FunctionComponent = () => {
   return (
-    <div id="newSignupFlow">
+    <div className={style.newSignupFlow}>
       <Heading1>{locale.pick_your_login_method()}</Heading1>
       <BodyTwoText>{locale.choose_one_method()}</BodyTwoText>
-      <div className={'containerWrapper'}>
-        <div className="container">
+      <div className={style.containerWrapper}>
+        <div className={style.container}>
           <Heading3>{locale.sign_up_with()}</Heading3>
           <BodyThreeText>{locale.streamline_your_sign_in()}</BodyThreeText>
           <LinkButton
             text={locale.sign_up_google()}
             href={'#'}
-            className="greenButton"
+            className={style.greenButton}
           />
           <LinkButton
             text={locale.sign_up_microsoft()}
             href={'#'}
-            className="yellowButton"
+            className={style.yellowButton}
           />
           <LinkButton
             text={locale.sign_up_facebook()}
             href={'#'}
-            className="blueButton"
+            className={style.blueButton}
           />
         </div>
-        <div className="container">
+        <div className={style.container}>
           <Heading3>{locale.or_sign_up_with_email()}</Heading3>
           <TextField
             label={locale.email_address()}
