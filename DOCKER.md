@@ -101,6 +101,40 @@ docker run hello-world
 docker compose version
 ```
 
+## Running a fully Docker Serup
+
+These steps will use Docker Compose to run everything entirely within Docker. This is the easiest
+path since it relegates all responsibility for the development environment to Docker.
+
+If you want to run a native server and just use Docker to handle the services, such as the database,
+then skip ahead to the next section and all other sections referring to the "Native Dashboard Server".
+
+For the fully contained setup, you need to build the Dashboard code-dot-org Docker image:
+
+```shell
+FIXUID=$(id -u) docker compose build web test selenium-video
+```
+
+Then we install all the necessary libraries and such into our environment:
+
+```
+docker compose run install-all
+```
+
+Then build:
+
+```
+docker compose run build
+```
+
+Now we can start the dashboard server:
+
+```
+docker compose up web
+```
+
+And then navigate to `http://localhost-studio.code.org:3000`.
+
 ## Running a Native Dashboard Server
 
 If you want to run the server code natively, but leverage Docker to run the dependent services, you can follow these instructions.
