@@ -3,7 +3,7 @@ import {useSelector} from 'react-redux';
 
 import {
   fetchStudentChatHistory,
-  selectAllMessages,
+  selectAllVisibleMessages,
   setShowWarningModal,
 } from '@cdo/apps/aichat/redux/aichatRedux';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
@@ -49,7 +49,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const {showWarningModal, isWaitingForChatResponse, studentChatHistory} =
     useAppSelector(state => state.aichat);
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
-  const items = useSelector(selectAllMessages);
+  const visibleItems = useSelector(selectAllVisibleMessages);
 
   const students = useSelector(
     (state: {teacherSections: {selectedStudents: Students}}) =>
@@ -60,7 +60,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
 
   // Compare the messages as a string since the object reference will change on every update.
   // This way we will only scroll when the contents of the messages have changed.
-  const messagesString = JSON.stringify(items);
+  const messagesString = JSON.stringify(visibleItems);
   const conversationContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -128,7 +128,12 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           ? ' (view only)'
           : ''),
 
-      tabContent: <StudentChatHistoryView events={studentChatHistory} />,
+      tabContent: (
+        <StudentChatHistory
+          events={studentChatHistory}
+          conversationContainerRef={conversationContainerRef}
+        />
+      ),
       iconLeft: iconValue,
     },
     {
@@ -136,7 +141,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       text: 'Test student model',
       tabContent: (
         <ChatWithModel
-          items={items}
+          items={visibleItems}
           showWaitingAnimation={showWaitingAnimation}
           conversationContainerRef={conversationContainerRef}
         />
@@ -173,7 +178,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         <Tabs {...tabArgs} />
       ) : (
         <ChatWithModel
-          items={items}
+          items={visibleItems}
           showWaitingAnimation={showWaitingAnimation}
           conversationContainerRef={conversationContainerRef}
         />
@@ -225,23 +230,28 @@ const ChatWithModel: React.FunctionComponent<ChatWithModelProps> = ({
   );
 };
 
-interface StudentChatHistoryViewProps {
+interface StudentChatHistoryProps {
   events: ChatEvent[];
+  conversationContainerRef: React.RefObject<HTMLDivElement>;
 }
 
-const StudentChatHistoryView: React.FunctionComponent<
-  StudentChatHistoryViewProps
-> = ({events}) => {
+const StudentChatHistory: React.FunctionComponent<StudentChatHistoryProps> = ({
+  events,
+  conversationContainerRef,
+}) => {
+  const studentChatHistoryEvents = events.map(
+    event =>
+      ({
+        ...event,
+        isTeacherView: true,
+      } as ChatEvent)
+  );
   return (
-    <div
-      id="student-chat-history-workspace"
-      className={moduleStyles.conversationArea}
-    >
-      {events.map(event => {
-        event = {...event, isTeacherView: true};
-        return <ChatEventView event={event} key={event.timestamp} />;
-      })}
-    </div>
+    <ChatWithModel
+      items={studentChatHistoryEvents}
+      showWaitingAnimation={() => null}
+      conversationContainerRef={conversationContainerRef}
+    />
   );
 };
 

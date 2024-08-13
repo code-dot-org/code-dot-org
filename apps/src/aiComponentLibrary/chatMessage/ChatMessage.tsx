@@ -41,6 +41,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   role,
   status,
 }) => {
+  // TODO: in teacher view, show option to view profane user message.
   const hasDangerStyle =
     status === Status.PROFANITY_VIOLATION ||
     (role === Role.ASSISTANT && status === Status.ERROR);
