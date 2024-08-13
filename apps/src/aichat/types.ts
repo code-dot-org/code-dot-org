@@ -9,9 +9,6 @@ export const ChatEventDescriptions = {
   LOAD_LEVEL: 'The user loads the aichat level.',
 } as const;
 
-// TODO: Update this once https://codedotorg.atlassian.net/browse/CT-471 is resolved
-export type AichatInteractionStatusValue = string;
-
 export interface ChatEvent {
   // UTC timestamp in milliseconds
   timestamp: number;
