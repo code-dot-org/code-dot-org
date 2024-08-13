@@ -14,6 +14,7 @@ export interface TestResult {
     | 'SKIP';
 }
 
+// Conditions the Python Validator supports.
 export enum ConditionType {
   PASSED_ALL_TESTS = 'PASSED_ALL_TESTS',
   HAS_RUN_CODE = 'HAS_RUN_CODE',
@@ -39,7 +40,6 @@ export default class PythonValidator extends Validator {
   checkConditions(): void {}
 
   conditionsMet(conditions: Condition[]): boolean {
-    console.log('checking conditions');
     if (!conditions) {
       return true;
     }
@@ -47,17 +47,11 @@ export default class PythonValidator extends Validator {
     conditions.forEach(condition => {
       if (condition.name === ConditionType.PASSED_ALL_TESTS) {
         const testResults = this.pythonValidationTracker.getTestResults();
-        if (!testResults) {
-          hasPassedAllTests = false;
-        } else if (
-          !testResults.every(testResult => testResult.result === 'PASS')
-        ) {
-          hasPassedAllTests = false;
-        }
+        hasPassedAllTests &&= !!testResults?.every(
+          testResult => testResult.result === 'PASS'
+        );
       } else if (condition.name === ConditionType.HAS_RUN_CODE) {
-        if (!this.pythonValidationTracker.getHasRunCode()) {
-          hasPassedAllTests = false;
-        }
+        hasPassedAllTests &&= this.pythonValidationTracker.getHasRunCode();
       }
     });
     return hasPassedAllTests;

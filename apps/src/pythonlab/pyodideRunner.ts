@@ -75,20 +75,13 @@ export async function runAllTests(
       // Get validation test results
       // Message is an array of Maps with the keys "name" and "result",
       // where "name" is the name of the test and "result" is one of
-      // "PASS/FAIL/ERROR/EXPECTED_FAILURE/UNEXPECTED_SUCCESS"
+      // "PASS/FAIL/ERROR/SKIP/EXPECTED_FAILURE/UNEXPECTED_SUCCESS"
       // TODO: Add link to pythonlab-packages
       const testResults = result.message as Map<string, string>[];
       if (progressManager) {
         PythonValidationTracker.getInstance().setTestResults(testResults);
         progressManager.updateProgress();
       }
-      const allPass = testResults.every(
-        testResult => testResult.get('result') === 'PASS'
-      );
-      console.log({allPass});
-      // if it passed we need to report that to the progress system and
-      // enable the continue button
-      // can we integrate with the progress manager here? or is it too different??
     }
   } else {
     dispatch(appendSystemMessage(`Running your project's tests...`));
