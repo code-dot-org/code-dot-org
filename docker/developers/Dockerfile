@@ -104,6 +104,14 @@ RUN cd /app/src \
     && sudo cp -r /home/${USERNAME}/.rbenv /opt/base-rbenv \
     && sudo chown -R ${USERNAME} /opt/base-rbenv
 
+# Install python and pdm
+RUN sudo apt update
+RUN sudo -E apt-get -y install python3-pip python3-venv
+RUN sudo curl -sSL https://pdm-project.org/install-pdm.py | python3 -
+
+# Add pdm binaries to path
+RUN echo -n "\n# Add pdm binaries on path\nexport PATH=\$PATH:/home/${USERNAME}/.local/bin\n" >> ~/.bashrc
+
 # Development Environment
 # -----------------------
 
