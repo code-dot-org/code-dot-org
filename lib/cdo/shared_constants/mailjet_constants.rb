@@ -20,15 +20,18 @@ module MailJetConstants
     },
     cap_section_warning: {
       template_id: {
+        production: {
+          default: 6_195_698,
+        },
         staging: {
-          default: 6_190_124,
+          default: 6_205_189,
         },
         development: {
-          default: 6_189_697,
+          default: 6_205_188,
         }
       },
-      from_address: 'hadi_partovi@code.org',
-      from_name: 'Hadi Partovi',
+      from_address: 'noreply@code.org',
+      from_name: 'Code.org',
     }
   }.freeze
 end

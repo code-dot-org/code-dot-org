@@ -55,14 +55,12 @@ module MailJet
   #
   # Parameters:
   # user     - a single User object.
-  # sections - a Object containing an array of sections, each with a 'Name' and a 'Link'.
+  # sections - an Array of sections, each with a 'Name' and a 'Link'.
   #            Example format:
-  #            {
-  #              capSections: [
-  #                { Name: 'Section 1', Link: 'https://example.com/section1' },
-  #                { Name: 'Section 2', Link: 'https://example.com/section2' }
-  #               ]
-  #            }
+  #             [
+  #               { Name: 'Section 1', Link: 'https://example.com/section1' },
+  #               { Name: 'Section 2', Link: 'https://example.com/section2' }
+  #             ]
   # locale   - (optional) the locale for the email template. Defaults to 'en-US'.
   #
   # Returns:
@@ -77,7 +75,7 @@ module MailJet
   #   3. Ensures the user has a teacher role.
   #   4. Finds or creates a contact using the user's email and name.
   #   5. Sends a template email with the specified sections in the specified locale.
-  def self.send_cap_section_warning_email(user, sections, locale = 'en-US')
+  def self.send_cap_section_warning_email(user, sections = [], locale = 'en-US')
     return unless enabled?
 
     return unless user&.id.present?
@@ -88,7 +86,7 @@ module MailJet
       contact,
       EMAILS[:cap_section_warning],
       locale,
-      sections
+      {capSections: sections}
     )
   end
 
