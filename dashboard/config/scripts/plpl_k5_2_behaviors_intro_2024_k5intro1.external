@@ -1,0 +1,22 @@
+name 'PLpl-k5-2-behaviors -intro_2024_K5Intro1'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Building Blocks of AI: Predictive Data Models
+
+#### The objective of this lesson is for students to understand that having access to more data improves the accuracy of predictions. This sets the foundation for understanding how AI uses data. In the following levels are pulled directly from the student curriculum to train you on the content. 
+
+
+## While teaching this lesson, focus on these main takeaways:
+
+* #### AI uses pattern based logic. It's not magical or random.  
+* #### AI uses predictive data models, and challenges arise when there are limited data sets.
+* #### Choosing how to categorize datasets and by which features leads to different AI predictions
+
+
+
+<div style="clear:both"/>
+
+
+MARKDOWN

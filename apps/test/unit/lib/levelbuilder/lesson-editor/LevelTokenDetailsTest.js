@@ -1,9 +1,8 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
-import sinon from 'sinon';
-import {UnconnectedLevelTokenDetails as LevelTokenDetails} from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails';
 import _ from 'lodash';
+import React from 'react';
+
+import {UnconnectedLevelTokenDetails as LevelTokenDetails} from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails';
 
 const defaultScriptLevel = {
   id: '10',
@@ -23,28 +22,28 @@ const assertCheckboxVisible = (wrapper, name, visible) => {
   const label = wrapper
     .find('.level-token-checkboxes')
     .findWhere(n => n.name() === 'label' && n.text().includes(name));
-  expect(label).to.have.lengthOf(visible ? 1 : 0);
+  expect(label).toHaveLength(visible ? 1 : 0);
 };
 
 const assertChecked = (wrapper, name, checked) => {
   const label = wrapper
     .find('.level-token-checkboxes')
     .findWhere(n => n.name() === 'label' && n.text().includes(name));
-  expect(label.find('input').props().checked).to.equal(checked);
+  expect(label.find('input').props().checked).toBe(checked);
 };
 
 const assertDisabled = (wrapper, name, disabled) => {
   const label = wrapper
     .find('.level-token-checkboxes')
     .findWhere(n => n.name() === 'label' && n.text().includes(name));
-  expect(label.find('input').props().disabled).to.equal(disabled);
+  expect(label.find('input').props().disabled).toBe(disabled);
 };
 
 describe('LevelTokenDetails', () => {
   let setScriptLevelField;
   let defaultProps;
   beforeEach(() => {
-    setScriptLevelField = sinon.spy();
+    setScriptLevelField = jest.fn();
     defaultProps = {
       setScriptLevelField,
       scriptLevel: defaultScriptLevel,
@@ -139,7 +138,7 @@ describe('LevelTokenDetails', () => {
 
   it('does not show variants by default', () => {
     const wrapper = shallow(<LevelTokenDetails {...defaultProps} />);
-    expect(wrapper.text()).not.to.contain('inactive variants');
+    expect(wrapper.text()).not.toContain('inactive variants');
   });
 
   it('shows inactive variants when present', () => {
@@ -149,7 +148,7 @@ describe('LevelTokenDetails', () => {
         inactiveLevelNames={['Inactive Level']}
       />
     );
-    expect(wrapper.text()).to.contain('inactive variants');
-    expect(wrapper.text()).to.contain('Inactive Level');
+    expect(wrapper.text()).toContain('inactive variants');
+    expect(wrapper.text()).toContain('Inactive Level');
   });
 });

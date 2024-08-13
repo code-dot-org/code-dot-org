@@ -1,0 +1,35 @@
+name 'self-paced-pl-microbit_welcome_this_PL'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Navigating this Module 
+
+#### This module is set up to be customizable and flexible to your needs. The full experience includes three parts.
+- #### **STEP ONE:** Getting Started with Code.org explains how to use the teacher features on our platform and is recommended for new Code.org users.
+
+- #### **STEP TWO:** Grade level units **(Grades 2-5)** cover the foundational coding concepts from each grade specific course. 
+
+- #### **STEP THREE:** The Physical Computing Unit introduces you to the micro:bit and gets you started coding a micro:bit and acquainted with the MakeCode classroom features. 
+
+![](https://images.code.org/7203bf40c418e1c597319c8424be7996-image-1719505018594.png)
+
+<div style="background-color: #F7F8FA; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 14px; "> <i>If you teach multiple grade levels completing grades 3 and 5 will be sufficient to cover all of the coding concepts. </i>
+</p>
+</div>
+
+
+<div style="clear:both"/>
+
+## Choose your path
+
+#### Click 'Continue' on the bottom right to go to the **Getting Started** Module 
+
+#### Otherwise, click the 'Return to Menu' button to select the level you want complete next.
+
+<a class="btn btn-large btn-primary" href="https://studio.code.org/courses/microbitmakermodule-2024" rel="noopener noreferrer" style="float:left;">Return to Menu</a>
+
+
+MARKDOWN

@@ -88,9 +88,9 @@
         -# Level name column, linked to view action if permitted
         %td
           - if can? :show, level
-            = link_to level.name, level, title: t('crud.show')
+            = link_to level.key, level, title: t('crud.show')
           - else
-            = level.name
+            = level.key
 
         -# Level type column
         %td= level.class.name

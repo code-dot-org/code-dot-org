@@ -1,14 +1,13 @@
-import React from 'react';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
+import React from 'react';
+
 import AddResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddResourceDialog';
-import sinon from 'sinon';
 
 describe('AddResourceDialog', () => {
   let defaultProps, onSaveSpy, handleCloseSpy;
   beforeEach(() => {
-    onSaveSpy = sinon.spy();
-    handleCloseSpy = sinon.spy();
+    onSaveSpy = jest.fn();
+    handleCloseSpy = jest.fn();
     defaultProps = {
       isOpen: true,
       onSave: onSaveSpy,
@@ -20,26 +19,26 @@ describe('AddResourceDialog', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<AddResourceDialog {...defaultProps} />);
-    expect(wrapper.contains('Add Resource')).to.be.true;
-    expect(wrapper.find('input').length).to.equal(6);
-    expect(wrapper.find('select').length).to.equal(2);
+    expect(wrapper.contains('Add Resource')).toBe(true);
+    expect(wrapper.find('input').length).toBe(6);
+    expect(wrapper.find('select').length).toBe(2);
   });
 
   it('has an extra input with course version id if one is provided', () => {
     const wrapper = shallow(
       <AddResourceDialog {...defaultProps} courseVersionId={1} />
     );
-    expect(wrapper.contains('Add Resource')).to.be.true;
-    expect(wrapper.find('input').length).to.equal(7);
-    expect(wrapper.find('select').length).to.equal(2);
+    expect(wrapper.contains('Add Resource')).toBe(true);
+    expect(wrapper.find('input').length).toBe(7);
+    expect(wrapper.find('select').length).toBe(2);
   });
 
   it('validates key, name, and url on submit', () => {
     const wrapper = mount(<AddResourceDialog {...defaultProps} />);
     wrapper.find('#submit-button').simulate('submit');
-    expect(wrapper.contains('Name is required. URL is required.')).to.be.true;
-    expect(onSaveSpy.notCalled).to.be.true;
-    expect(handleCloseSpy.notCalled).to.be.true;
+    expect(wrapper.contains('Name is required. URL is required.')).toBe(true);
+    expect(onSaveSpy).not.toHaveBeenCalled();
+    expect(handleCloseSpy).not.toHaveBeenCalled();
   });
 
   it('saves if input is valid', () => {
@@ -49,11 +48,14 @@ describe('AddResourceDialog', () => {
       name: 'my resource name',
       url: 'code.org',
     });
-    const saveResourceSpy = sinon.stub(instance, 'saveResource');
+    const saveResourceSpy = jest
+      .spyOn(instance, 'saveResource')
+      .mockClear()
+      .mockImplementation();
     instance.forceUpdate();
     wrapper.update();
     wrapper.find('#submit-button').simulate('submit');
-    expect(saveResourceSpy.calledOnce).to.be.true;
+    expect(saveResourceSpy).toHaveBeenCalledTimes(1);
   });
 
   it('renders an existing resource for edit', () => {
@@ -73,12 +75,12 @@ describe('AddResourceDialog', () => {
         existingResource={existingResource}
       />
     );
-    expect(wrapper.find('[name="name"]').props().value).to.equal(
+    expect(wrapper.find('[name="name"]').props().value).toBe(
       'existing resource'
     );
-    expect(wrapper.find('[name="url"]').props().value).to.equal('fake.url');
-    expect(wrapper.find('[name="includeInPdf"]').props().checked).to.be.true;
-    expect(wrapper.find('[name="type"]').props().value).to.equal('Handout');
-    expect(wrapper.find('[name="audience"]').props().value).to.equal('Teacher');
+    expect(wrapper.find('[name="url"]').props().value).toBe('fake.url');
+    expect(wrapper.find('[name="includeInPdf"]').props().checked).toBe(true);
+    expect(wrapper.find('[name="type"]').props().value).toBe('Handout');
+    expect(wrapper.find('[name="audience"]').props().value).toBe('Teacher');
   });
 });

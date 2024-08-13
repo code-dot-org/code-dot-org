@@ -33,8 +33,12 @@ namespace :seed do
     ActiveRecord::Migration.check_pending!
   end
 
+  # Path to the dashboard directory from which content files (under /config) should be read.
+  CURRICULUM_CONTENT_DIR = ENV['CURRICULUM_CONTENT_DIR'] || '.'
+  CURRICULUM_CONTENT_PATHNAME = Pathname(CURRICULUM_CONTENT_DIR)
+
   timed_task_with_logging videos: :environment do
-    Video.setup
+    Video.setup(CURRICULUM_CONTENT_DIR)
   end
 
   timed_task_with_logging concepts: :environment do
@@ -54,19 +58,19 @@ namespace :seed do
   end
 
   timed_task_with_logging foorm_libraries: :environment do
-    Foorm::Library.setup
+    Foorm::Library.setup(CURRICULUM_CONTENT_DIR)
   end
 
   timed_task_with_logging foorm_forms: :environment do
-    Foorm::Form.setup
+    Foorm::Form.setup(CURRICULUM_CONTENT_DIR)
   end
 
   timed_task_with_logging foorms: :environment do
-    Foorm::Library.setup
-    Foorm::Form.setup
+    Foorm::Library.setup(CURRICULUM_CONTENT_DIR)
+    Foorm::Form.setup(CURRICULUM_CONTENT_DIR)
   end
 
-  SCRIPTS_GLOB = Dir.glob('config/scripts_json/**/*.script_json').sort.flatten.freeze
+  SCRIPTS_GLOB = Dir.glob("#{CURRICULUM_CONTENT_DIR}/config/scripts_json/**/*.script_json").sort.flatten.freeze
   SPECIAL_UI_TEST_SCRIPTS = %w(
     ui-test-script-in-course-2017
     ui-test-script-in-course-2019
@@ -142,7 +146,7 @@ namespace :seed do
     oceans
     sports
   ).map {|script| "config/scripts_json/#{script}.script_json"}.freeze
-  SEEDED = 'config/scripts/.seeded'.freeze
+  SEEDED = "#{CURRICULUM_CONTENT_DIR}/config/scripts/.seeded".freeze
 
   # Update scripts in the database from their file definitions.
   #
@@ -174,8 +178,9 @@ namespace :seed do
     :check_migrations,
     :games,
     :deprecated_blockly_levels,
+    :child_dsls,
     :custom_levels,
-    :dsls,
+    :parent_dsls,
     :code_docs,
     :blocks,
     :standards,
@@ -189,7 +194,7 @@ namespace :seed do
   # rake seed:single_script SCRIPT_NAME=express-2019
   # rake seed:single_script SCRIPT_NAME="csp*-2020"
   timed_task_with_logging single_script: :environment do
-    script_name = ENV['SCRIPT_NAME']
+    script_name = ENV.fetch('SCRIPT_NAME', nil)
     raise "must specify SCRIPT_NAME=" unless script_name
     script_files = Dir.glob("config/scripts_json/#{script_name}.script_json")
     raise "no matching scripts found" if script_files.blank?
@@ -210,7 +215,7 @@ namespace :seed do
   end
 
   timed_task_with_logging courses: :environment do
-    Dir.glob(UnitGroup.file_path('**')).sort.map do |path|
+    Dir.glob(UnitGroup.file_path('**', CURRICULUM_CONTENT_PATHNAME)).sort.map do |path|
       UnitGroup.load_from_path(path)
     end
   end
@@ -225,69 +230,88 @@ namespace :seed do
     end
   end
 
-  # detect changes to dsldefined level files
-  # LevelGroup must be last here so that LevelGroups are seeded after all levels that they can contain
-  DSL_TYPES = %w(TextMatch ContractMatch External Match Multi EvaluationMulti BubbleChoice LevelGroup).freeze
-  DSLS_GLOB = DSL_TYPES.map {|x| Dir.glob("config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
-  file 'config/scripts/.dsls_seeded' => DSLS_GLOB do |t|
-    Rake::Task['seed:dsls'].invoke
-    FileUtils.touch(t.name)
+  # multi and match files must be seeded before any custom levels which contain them
+  CHILD_DSL_TYPES = %w(TextMatch ContractMatch External Match Multi EvaluationMulti).freeze
+  CHILD_DSL_FILES = CHILD_DSL_TYPES.map {|x| Dir.glob("#{CURRICULUM_CONTENT_DIR}/config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
+
+  timed_task_with_logging child_dsls: :environment do
+    DSLDefined.transaction do
+      parse_dsl_files(CHILD_DSL_FILES, CHILD_DSL_TYPES)
+    end
   end
 
-  # explicit execution of "seed:dsls"
-  timed_task_with_logging dsls: :environment do
+  # bubble choice and level group files must be seeded last, since they can
+  # contain many other level types
+  PARENT_DSL_TYPES = %w(BubbleChoice LevelGroup).freeze
+  PARENT_DSL_FILES = PARENT_DSL_TYPES.map {|x| Dir.glob("#{CURRICULUM_CONTENT_DIR}/config/scripts/**/*.#{x.underscore}*").sort}.flatten.freeze
+
+  timed_task_with_logging parent_dsls: :environment do
     DSLDefined.transaction do
-      level_md5s_by_name = DSLDefined.pluck(:name, :md5).to_h
+      parse_dsl_files(PARENT_DSL_FILES, PARENT_DSL_TYPES)
+    end
+  end
 
-      # Allow developers to seed just one dsl-defined level, e.g.
-      # rake seed:dsls DSL_FILENAME=k-1_Artistloops_multi1.multi
-      dsls_glob = ENV['DSL_FILENAME'] ? Dir.glob("config/scripts/**/#{ENV['DSL_FILENAME']}") : DSLS_GLOB
+  # Allow developers to seed just one dsl-defined level, e.g.
+  # rake seed:single_dsl DSL_FILENAME=k-1_Artistloops_multi1.multi
+  # rake seed:single_dsl DSL_FILENAME=csa_unit_6_assessment_2023.level_group
+  timed_task_with_logging single_dsl: :environment do
+    DSLDefined.transaction do
+      dsl_files = Dir.glob("#{CURRICULUM_CONTENT_DIR}/config/scripts/**/#{ENV.fetch('DSL_FILENAME', nil)}")
 
-      # This is only expected to happen when DSL_FILENAME is set and the
-      # filename is not found
-      unless dsls_glob.count > 0
+      unless dsl_files.count > 0
         raise 'no matching dsl-defined level files found. please check filename for exact case and spelling.'
       end
 
-      # Parse each .[dsl] file and setup its model.
-      dsls_glob.each do |filename|
-        dsl_class = DSL_TYPES.detect {|type| filename.include?(".#{type.underscore}")}.try(:constantize)
-        begin
-          contents = File.read(filename)
-          md5 = Digest::MD5.hexdigest(contents)
-          data, _i18n = dsl_class.parse(contents, filename)
-          unless md5 == level_md5s_by_name[data[:name]]
-            dsl_class.setup(data, md5)
-          end
-        rescue Exception
-          puts "Error parsing #{filename}"
-          raise
+      puts "seeding dsl files:\n#{dsl_files.join("\n")}"
+
+      parse_dsl_files(dsl_files, CHILD_DSL_TYPES + PARENT_DSL_TYPES)
+    end
+  end
+
+  # Parse each .[dsl] file and setup its model.
+  def parse_dsl_files(dsl_files, dsl_types)
+    level_md5s_by_name = DSLDefined.pluck(:name, :md5).to_h
+
+    dsl_files.each do |filename|
+      dsl_class = dsl_types.detect {|type| filename.include?(".#{type.underscore}")}.try(:constantize)
+      begin
+        contents = File.read(filename)
+        md5 = Digest::MD5.hexdigest(contents)
+        data, _i18n = dsl_class.parse(contents, filename)
+
+        # Skip any files which have not been updated since last seed. To force a
+        # a level to be reseeded, clear its md5 field in the database.
+        unless md5 == level_md5s_by_name[data[:name]]
+          dsl_class.setup(data, md5)
         end
+      rescue Exception
+        puts "Error parsing #{filename}"
+        raise
       end
     end
   end
 
   timed_task_with_logging blocks: :environment do
-    Block.load_records
+    Block.load_records(root_dir: CURRICULUM_CONTENT_PATHNAME)
   end
 
   timed_task_with_logging shared_blockly_functions: :environment do
-    SharedBlocklyFunction.load_records
+    SharedBlocklyFunction.load_records(root_dir: CURRICULUM_CONTENT_PATHNAME)
   end
 
   timed_task_with_logging libraries: :environment do
-    Library.load_records
+    Library.load_records(root_dir: CURRICULUM_CONTENT_PATHNAME)
   end
 
   # Generate the database entry from the custom levels json file.
   # Optionally limit to a single level via LEVEL_NAME= env variable.
   timed_task_with_logging custom_levels: :environment do
-    level_name = ENV['LEVEL_NAME']
-    LevelLoader.load_custom_levels(level_name)
+    level_name = ENV.fetch('LEVEL_NAME', nil)
+    LevelLoader.load_custom_levels(level_name, CURRICULUM_CONTENT_DIR)
   end
 
   timed_task_with_logging deprecated_blockly_levels: :environment do
-    Services::DeprecatedLevelLoader.load_blockly_levels
+    Services::DeprecatedLevelLoader.load_blockly_levels(CURRICULUM_CONTENT_DIR)
   end
 
   # Seeds the data in callouts
@@ -301,7 +325,7 @@ namespace :seed do
   end
 
   timed_task_with_logging course_offerings: :environment do
-    CourseOffering.seed_all
+    CourseOffering.seed_all(root_dir: CURRICULUM_CONTENT_PATHNAME)
   end
 
   timed_task_with_logging course_offerings_ui_tests: :environment do
@@ -311,7 +335,7 @@ namespace :seed do
   end
 
   timed_task_with_logging reference_guides: :environment do
-    ReferenceGuide.seed_all
+    ReferenceGuide.seed_all(CURRICULUM_CONTENT_PATHNAME)
   end
 
   # Seeds Standards
@@ -322,13 +346,13 @@ namespace :seed do
   end
 
   timed_task_with_logging code_docs: :environment do
-    ProgrammingEnvironment.seed_all
-    ProgrammingExpression.seed_all
-    ProgrammingClass.seed_all
+    ProgrammingEnvironment.seed_all(root_dir: CURRICULUM_CONTENT_PATHNAME)
+    ProgrammingExpression.seed_all(root_dir: CURRICULUM_CONTENT_PATHNAME)
+    ProgrammingClass.seed_all(root_dir: CURRICULUM_CONTENT_PATHNAME)
   end
 
   timed_task_with_logging data_docs: :environment do
-    DataDoc.seed_all
+    DataDoc.seed_all(CURRICULUM_CONTENT_DIR)
   end
 
   # Seeds the data in school_districts
@@ -352,6 +376,11 @@ namespace :seed do
 
   timed_task_with_logging mega_section: :environment do
     MegaSection.seed
+  end
+
+  # Seeds shared tables in datablock storage
+  timed_task_with_logging datablock_storage: :environment do
+    DatablockStorageLibraryManifest.seed_all
   end
 
   MAX_LEVEL_SOURCES = 10_000
@@ -386,12 +415,10 @@ namespace :seed do
 
   timed_task_with_logging secret_words: :environment do
     SecretWord.setup
-    puts "done"
   end
 
   timed_task_with_logging secret_pictures: :environment do
     SecretPicture.setup
-    puts "done"
   end
 
   timed_task_with_logging restricted_section: :environment do
@@ -460,8 +487,8 @@ namespace :seed do
     files_to_import.each {|file_to_import| CsvToSqlTable.new(pegasus_dir(file_to_import), db, table_prefix).import}
   end
 
-  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :donor_schools, :foorms, :import_pegasus_data].freeze
-  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_ui_tests, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools, :import_pegasus_data].freeze
+  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :donor_schools, :foorms, :import_pegasus_data, :datablock_storage].freeze
+  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_ui_tests, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools, :import_pegasus_data, :datablock_storage].freeze
   DEFAULT_SEED_TASKS = [:adhoc, :test].include?(rack_env) ? UI_TEST_SEED_TASKS : FULL_SEED_TASKS
 
   desc "seed the data needed for this type of environment by default"

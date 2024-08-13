@@ -1,23 +1,27 @@
 /**
  * @overview Component for displaying a data table.
  */
-import AddTableRow from './AddTableRow';
-import EditTableRow from './EditTableRow';
-import ColumnHeader from './ColumnHeader';
-import DataEntryError from './DataEntryError';
-import {storageBackend} from '../storage';
-import FontAwesome from '../../templates/FontAwesome';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {showWarning} from '../redux/data';
-import dataStyles from './data-styles.module.scss';
 import {connect} from 'react-redux';
-import PaginationWrapper from '../../templates/PaginationWrapper';
+
 import msg from '@cdo/locale';
+
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+import PaginationWrapper from '../../templates/PaginationWrapper';
 import {WarningType} from '../constants';
-import style from './data-table.module.scss';
-import classNames from 'classnames';
+import {showWarning} from '../redux/data';
+import {storageBackend} from '../storage';
+
+import AddTableRow from './AddTableRow';
+import ColumnHeader from './ColumnHeader';
+import DataEntryError from './DataEntryError';
+import EditTableRow from './EditTableRow';
 import {refreshCurrentDataView} from './loadDataForView';
+
+import dataStyles from './data-styles.module.scss';
+import style from './data-table.module.scss';
 
 const MAX_ROWS_PER_PAGE = 500;
 

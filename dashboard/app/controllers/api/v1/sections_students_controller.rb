@@ -8,7 +8,7 @@ class Api::V1::SectionsStudentsController < Api::V1::JSONApiController
 
   # GET /sections/<section_id>/students
   def index
-    summaries = @section.students.map do |student|
+    summaries = @section.students.includes(:latest_parental_permission_request).map do |student|
       # Student depends on this section for login if student's account is
       # teacher managed and only belongs to the one section.
       student.summarize.merge(depends_on_this_section_for_login:

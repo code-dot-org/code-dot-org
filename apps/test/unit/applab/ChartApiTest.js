@@ -1,4 +1,5 @@
-import {assert} from '../../util/reconfiguredChai';
+import {assert} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
 var ChartApi = require('@cdo/apps/applab/ChartApi');
 var GoogleChart = require('@cdo/apps/applab/GoogleChart');
 

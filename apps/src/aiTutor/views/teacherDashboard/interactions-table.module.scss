@@ -31,6 +31,12 @@
   border-left: 6px solid red;
 }
 
+.filterDropdowns {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+}
+
 .interactionsElement {
   margin: 10px 10px 10px 0;
 }

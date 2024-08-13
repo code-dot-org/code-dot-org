@@ -1,0 +1,9 @@
+@import 'color.scss';
+
+.noExemplarContainer {
+  color: $lightest_gray;
+  background-color: $neutral_dark;
+  text-align: center;
+  height: 100%;
+  padding-top: 10px;
+}

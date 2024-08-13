@@ -1,13 +1,15 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import Select from 'react-select';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import {vocabularyShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import color from '@cdo/apps/util/color';
-import {vocabularyShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import $ from 'jquery';
-import Select from 'react-select';
+
 import 'react-select/dist/react-select.css';
-import fontConstants from '@cdo/apps/fontConstants';
 
 const initialState = {
   word: '',

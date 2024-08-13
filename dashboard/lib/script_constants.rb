@@ -258,6 +258,7 @@ module ScriptConstants
     K1HOC_2017 = 'k1hoc2017'.freeze,
     MUSIC_INTRO_2024 = 'music-intro-2024'.freeze,
     MUSIC_ONBOARD = 'music-onboard'.freeze,
+    MUSIC_TUTORIAL_2024 = 'music-tutorial-2024'.freeze,
     NETSIM = 'netsim'.freeze,
     ODOMETER = 'odometer'.freeze,
     OUTBREAK = 'outbreak'.freeze,
@@ -268,7 +269,9 @@ module ScriptConstants
     K5_ONLINEPD_2019 = 'k5-onlinepd-2019'.freeze,
     K5_ONLINEPD = 'K5-OnlinePD'.freeze,
     KODEA_PD_2021 = 'kodea-pd-2021'.freeze,
-    ALLTHETHINGS = 'allthethings'.freeze
+    ALLTHETHINGS = 'allthethings'.freeze,
+    COMPUTER_VISION = 'computer-vision'.freeze,
+    CSD2_2024 = 'csd2-2024'.freeze,
   ]
 
   DEFAULT_VERSION_YEAR = '2017'

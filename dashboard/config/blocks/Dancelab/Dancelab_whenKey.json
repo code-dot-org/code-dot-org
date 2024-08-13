@@ -2,6 +2,7 @@
   "category": "Events",
   "config": {
     "func": "whenKey",
+    "docFunc": "gamelab_keyPressed",
     "blockText": "when {KEY} pressed",
     "args": [
       {

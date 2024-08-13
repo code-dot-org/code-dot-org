@@ -1,22 +1,25 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
+import {
+  PageLabels,
+  SectionHeaders,
+  Year,
+} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import color from '@cdo/apps/util/color';
+
+import {FormContext} from '../../form_components_func/FormComponent';
+import {LabeledCheckBoxes} from '../../form_components_func/labeled/LabeledCheckBoxes';
+import {LabeledRadioButtons} from '../../form_components_func/labeled/LabeledRadioButtons';
+import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
+
 import {
   PROGRAM_CSD,
   PROGRAM_CSP,
   PROGRAM_CSA,
   getProgramInfo,
 } from './TeacherApplicationConstants';
-import {
-  PageLabels,
-  SectionHeaders,
-  Year,
-} from '@cdo/apps/generated/pd/teacherApplicationConstants';
-import {FormGroup} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import {LabelsContext} from '../../form_components_func/LabeledFormComponent';
-import {FormContext} from '../../form_components_func/FormComponent';
-import {LabeledCheckBoxes} from '../../form_components_func/labeled/LabeledCheckBoxes';
-import {LabeledRadioButtons} from '../../form_components_func/labeled/LabeledRadioButtons';
 
 const ImplementationPlan = props => {
   const {data} = props;

@@ -1,10 +1,10 @@
-import {expect} from '../../util/reconfiguredChai';
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import i18n from '@cdo/locale';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import DisabledBubblesModal from '@cdo/apps/code-studio/DisabledBubblesModal';
+import React from 'react';
+
 import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
+import DisabledBubblesModal from '@cdo/apps/code-studio/DisabledBubblesModal';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import i18n from '@cdo/locale';
 
 describe('DisabledBubblesModal', () => {
   it('is open to begin with', () => {
@@ -33,14 +33,14 @@ describe('DisabledBubblesModal', () => {
           </div>
         </BaseDialog>
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('closes when the button is clicked', () => {
     const wrapper = shallow(<DisabledBubblesModal />);
-    expect(wrapper.find(BaseDialog).prop('isOpen')).to.be.true;
+    expect(wrapper.find(BaseDialog).prop('isOpen')).toBe(true);
 
     wrapper.find('button').simulate('click');
-    expect(wrapper.find(BaseDialog).prop('isOpen')).to.be.false;
+    expect(wrapper.find(BaseDialog).prop('isOpen')).toBe(false);
   });
 });

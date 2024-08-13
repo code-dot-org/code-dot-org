@@ -1,0 +1,62 @@
+:ruby
+  block_items = [
+    {
+      overline: hoc_s("ai_page.curricula.tile.decisions.overline"),
+      title: hoc_s("ai_page.curricula.tile.decisions.title"),
+      img: "/images/action-blocks/action-block-ai-decisions.png",
+      desc: hoc_s("ai_page.curricula.tile.decisions.desc"),
+      duration: hoc_s("ai_page.curricula.tile.decisions.duration"),
+      url: CDO.studio_url("/s/k5-ai-data-2024"),
+      aria_label: hoc_s("ai_page.curricula.tile.decisions.aria_label"),
+      button_label: hoc_s("ai_page.curricula.tile.decisions.button"),
+      new: true,
+    },
+    {
+      overline: hoc_s(:module_grade_3_12),
+      title: hoc_s(:ai_curriculum_title_03),
+      img: "/images/ai/ai-curriclum-oceans.png",
+      desc: hoc_s(:ai_curriculum_desc_03),
+      duration: hoc_s(:module_duration_1_hr),
+      url: CDO.studio_url("/s/oceans"),
+      aria_label: hoc_s(:ai_curriculum_btn_aria_label_03),
+      button_label: hoc_s(:call_to_action_try_activity),
+    },
+    {
+      overline: hoc_s(:module_grade_3_12),
+      title: hoc_s(:curriculum_name_dance_party_ai_edition),
+      img: "/images/dance-hoc/dance-party-activity-ai-edition-cropped.png",
+      desc: hoc_s(:curriculum_desc_dance_party_ai_edition),
+      duration: hoc_s(:module_duration_1_hr),
+      url: CDO.studio_url("/s/dance-ai-2023/reset"),
+      aria_label: hoc_s(:ai_curriculum_btn_aria_label_dance_ai),
+      button_label: hoc_s(:call_to_action_try_activity),
+    },
+  ]
+
+.action-block__wrapper.action-block__wrapper--three-col
+  - block_items.each do |block_item|
+    .action-block.action-block--one-col.flex-space-between
+      .content-wrapper
+        - if block_item[:new]
+          .flex-container.justify-space-between.align-items-start
+            %p.overline
+              =hoc_s(:module_label_grades)
+              = block_item[:overline]
+            %p.new
+              =hoc_s(:new)
+        - else
+          %p.overline
+            =hoc_s(:module_label_grades)
+            = block_item[:overline]
+        %h3
+          = block_item[:title]
+        %img{src: block_item[:img], alt: ""}
+        %p
+          = block_item[:desc]
+        %p
+          %strong
+            =hoc_s(:module_label_duration)
+          = block_item[:duration]
+      .content-footer
+        %a.link-button{href: block_item[:url], aria:{label: block_item[:aria_label]}}
+          = block_item[:button_label]

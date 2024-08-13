@@ -1,6 +1,6 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
+import React from 'react';
+
 import NewProgrammingExpressionForm from '@cdo/apps/lib/levelbuilder/code-docs-editor/NewProgrammingExpressionForm';
 
 describe('NewProgrammingExpressionForm', () => {
@@ -14,12 +14,12 @@ describe('NewProgrammingExpressionForm', () => {
       />
     );
 
-    expect(wrapper.find('input').props().required).to.be.true;
+    expect(wrapper.find('input').props().required).toBe(true);
 
     const programmingEnvironmentSelect = wrapper.find('select');
-    expect(programmingEnvironmentSelect.props().required).to.be.true;
+    expect(programmingEnvironmentSelect.props().required).toBe(true);
     expect(
       programmingEnvironmentSelect.find('option').map(env => env.props().value)
-    ).to.eql([1, 2]);
+    ).toEqual([1, 2]);
   });
 });

@@ -1,16 +1,18 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import * as Table from 'reactabular-table';
-import {lessonEditorTableStyles} from './lesson-editor/TableConstants';
-import AddVocabularyDialog from './lesson-editor/AddVocabularyDialog';
 import {connect} from 'react-redux';
+import * as Table from 'reactabular-table';
+
+import Dialog from '@cdo/apps/legacySharedComponents/Dialog';
 import {
   addVocabulary,
   updateVocabulary,
   removeVocabulary,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 import {vocabularyShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import Dialog from '@cdo/apps/templates/Dialog';
+
+import AddVocabularyDialog from './lesson-editor/AddVocabularyDialog';
+import {lessonEditorTableStyles} from './lesson-editor/TableConstants';
 
 class AllVocabulariesEditor extends Component {
   static propTypes = {

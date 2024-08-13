@@ -117,15 +117,6 @@ const EdgeClassNames = ['top', 'left', 'bottom', 'right'];
 let level;
 let skin;
 
-// These skins can be published as projects.
-const PUBLISHABLE_SKINS = [
-  'gumball',
-  'studio',
-  'iceage',
-  'infinity',
-  'hoc2015',
-];
-
 //TODO: Make configurable.
 studioApp().setCheckForEmptyBlocks(true);
 
@@ -3081,7 +3072,6 @@ Studio.displayFeedback = function () {
   };
 
   if (!Studio.waitingForReport) {
-    const saveToProjectGallery = PUBLISHABLE_SKINS.includes(skin.id);
     const isSignedIn =
       getStore().getState().currentUser.signInState === SignInState.SignedIn;
     studioApp().displayFeedback({
@@ -3098,12 +3088,13 @@ Studio.displayFeedback = function () {
         !level.projectTemplateLevelName,
       feedbackImage: Studio.feedbackImage,
       twitter: skin.twitterOptions || twitterOptions,
-      // save to the project gallery
-      saveToProjectGallery: saveToProjectGallery,
+      // Do not allow saving to the project gallery because converting from level to standalone
+      // project is problematic.
+      saveToProjectGallery: false,
       disableSaveToGallery: !isSignedIn,
       message: Studio.message,
       appStrings: appStrings,
-      // Currently only true for Artist levels
+      // Currently only true for Artist levels.
       enablePrinting: level.enablePrinting,
     });
   }
@@ -3170,17 +3161,24 @@ var registerHandlers = function (
   matchParam2Val,
   argNames
 ) {
-  var blocks = Blockly.mainBlockSpace.getTopBlocks();
-  for (var x = 0; blocks[x]; x++) {
-    var block = blocks[x];
-    // default title values to '0' for case when there is only one sprite
-    // and no title value is set through a dropdown
-    var titleVal1 = block.getFieldValue(nameParam1) || '0';
-    var titleVal2 = block.getFieldValue(nameParam2) || '0';
+  const blocks = Blockly.mainBlockSpace.getTopBlocks();
+  for (let x = 0; blocks[x]; x++) {
+    const block = blocks[x];
+    // default field values to '0' for case when there is only one sprite
+    // and no field value is set through a dropdown
+    const fieldVal1 =
+      typeof nameParam1 !== 'string'
+        ? '0'
+        : block.getFieldValue(nameParam1) || '0';
+    const fieldVal2 =
+      typeof nameParam2 !== 'string'
+        ? '0'
+        : block.getFieldValue(nameParam2) || '0';
+
     if (
       block.type === blockName &&
-      (!nameParam1 || matchParam1Val === titleVal1) &&
-      (!nameParam2 || matchParam2Val === titleVal2)
+      (!nameParam1 || matchParam1Val === fieldVal1) &&
+      (!nameParam2 || matchParam2Val === fieldVal2)
     ) {
       var code = Blockly.Generator.blocksToCode('JavaScript', [block]);
       if (code) {

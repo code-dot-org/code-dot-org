@@ -1,7 +1,7 @@
-import React from 'react';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+
 import ProgrammingEnvironmentsTable from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingEnvironmentsTable';
-import {expect} from '../../../../util/reconfiguredChai';
 
 describe('ProgrammingEnvironmentsTable', () => {
   let defaultProps;
@@ -34,9 +34,9 @@ describe('ProgrammingEnvironmentsTable', () => {
   it('shows table with environments', () => {
     const wrapper = shallow(<ProgrammingEnvironmentsTable {...defaultProps} />);
 
-    expect(wrapper.find('Header').length).to.equal(1);
-    expect(wrapper.find('Body').length).to.equal(1);
-    expect(wrapper.find('Body').props().rows).to.eql(
+    expect(wrapper.find('Header').length).toBe(1);
+    expect(wrapper.find('Body').length).toBe(1);
+    expect(wrapper.find('Body').props().rows).toEqual(
       defaultProps.programmingEnvironments
     );
   });
@@ -46,8 +46,8 @@ describe('ProgrammingEnvironmentsTable', () => {
       <ProgrammingEnvironmentsTable {...defaultProps} hidden />
     );
 
-    expect(wrapper.find('Header').length).to.equal(0);
-    expect(wrapper.find('Body').length).to.equal(0);
+    expect(wrapper.find('Header').length).toBe(0);
+    expect(wrapper.find('Body').length).toBe(0);
   });
 
   it('shows confirmation dialog if destroy is pressed', () => {
@@ -55,6 +55,6 @@ describe('ProgrammingEnvironmentsTable', () => {
     const wrapper = mount(<ProgrammingEnvironmentsTable {...defaultProps} />);
 
     wrapper.find('BodyRow').at(1).find('Button').at(1).simulate('click');
-    expect(wrapper.find('StylizedBaseDialog').length).to.equal(1);
+    expect(wrapper.find('StylizedBaseDialog').length).toBe(1);
   });
 });

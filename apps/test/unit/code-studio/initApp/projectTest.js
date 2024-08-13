@@ -1,16 +1,20 @@
 import _ from 'lodash';
-import {expect, assert} from '../../../util/reconfiguredChai';
-import sinon from 'sinon';
-import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
-import * as utils from '@cdo/apps/utils';
-import project from '@cdo/apps/code-studio/initApp/project';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {files as filesApi} from '@cdo/apps/clientApi';
 import header from '@cdo/apps/code-studio/header';
+import project from '@cdo/apps/code-studio/initApp/project';
+import {CP_API} from '@cdo/apps/maker/boards/circuitPlayground/PlaygroundConstants';
+import * as utils from '@cdo/apps/utils';
 import msg from '@cdo/locale';
-import {CP_API} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
+
+import {expect, assert} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 
 describe('project.js', () => {
   let sourceHandler;
+
+  window.dashboard = {...window.dashboard, project};
 
   const setData = project.__TestInterface.setCurrentData;
   const setSources = project.__TestInterface.setCurrentSources;
@@ -196,19 +200,9 @@ describe('project.js', () => {
       expect(project.getStandaloneApp()).to.equal('applab');
     });
 
-    it('for calc', () => {
-      window.appOptions.app = 'calc';
-      expect(project.getStandaloneApp()).to.equal('calc');
-    });
-
     it('for dance', () => {
       window.appOptions.app = 'dance';
       expect(project.getStandaloneApp()).to.equal('dance');
-    });
-
-    it('for eval', () => {
-      window.appOptions.app = 'eval';
-      expect(project.getStandaloneApp()).to.equal('eval');
     });
 
     it('for flappy', () => {

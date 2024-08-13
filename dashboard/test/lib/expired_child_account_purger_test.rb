@@ -73,6 +73,10 @@ class ExpiredChildAccountPurgerTest < ActiveSupport::TestCase
     u13_colorado_account = create :student, :U13, :in_colorado
     student_account = create :student
 
+    expired_accounts.each do |user|
+      Services::ChildAccount::EventLogger.expects(:log_account_purging).with(user).once
+    end
+
     purger = ExpiredChildAccountPurger.new
     purger.purge_expired_child_accounts!(skip_report: true)
 

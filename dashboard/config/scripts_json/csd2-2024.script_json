@@ -24,12 +24,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-09 18:01:07 UTC",
+    "serialized_at": "2024-08-09 19:12:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -284,7 +285,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson introduces students to two new web development tools: div tags and Flexbox styling. This lesson introduces students to div tags to organize their HTML code into sections. They then learn about Flexbox and how it can be used with their div containers to style and position items. Students practice using Flexbox properties to control the layout of web pages.\n\n**Question of the Day:** What are div tags and Flexbox and why are they important in web design?\n",
-        "preparation": "* Print copies of the handout\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "preparation": "* Print copies of the handout\n- If you would like more information on what Flexbox is and how to use it with CSS, **check out [this video](https://youtu.be/H2O5NcXhBPc)!**\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:** What are div tags and Flexbox and why are they important in web design?\n\nIn this lesson, you will explore two new concepts that will help you solve design and layout issues: `div` tags and Flexbox. "
       },
       "seeding_key": {
@@ -303,7 +304,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson introduces students to advanced Flexbox child properties including `order`, `align-self`, `flex-grow`, and `flex-shrink` through an interactive warm-up and the various level exercises. They’ll deepen their understanding of how these properties affect web page layouts and conclude with a creative group drawing game to reinforce their learning.\n\n**Question of the Day:** How do Flexbox child properties affect the layout and organization of elements within a webpage?\n",
-        "preparation": "* Print out one copy of the activity guide and handout for each student.\n* Print and cut out the Pictionary Terms slips.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "preparation": "* Print out one copy of the activity guide and handout for each student.\n* Print and cut out the Pictionary Terms slips.\n- If you would like more information on how to use Flexbox Children **check out [this video](https://youtu.be/pPdEXY_LfcU)!**\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:** How do Flexbox child properties affect the layout and organization of elements within a webpage?\n\nIn this lesson, you will learn about \"child\" Flexbox properties that can be applied directly to items within a container. \n\n"
       },
       "seeding_key": {
@@ -12145,7 +12146,7 @@
     },
     {
       "name": "Web Design for Users (A)",
-      "url": "https://docs.google.com/document/d/1dZxd7DuruNKhqjp9nxAzr0RSICJFyb3sc-B6bgY2bIs/view",
+      "url": "https://docs.google.com/document/d/1NYVEB_fULN0TwhKRyIBP7j2e-EZreodBpBhURM9aT8Y/edit",
       "key": "web_design_for_users_a_",
       "properties": {
         "audience": "Student",
@@ -13730,16 +13731,6 @@
       }
     },
     {
-      "key": "45e6e834-b1f7-4ee3-8b9f-b5d6952f7347",
-      "properties": {
-        "description": "Apply Flexbox properties in CSS"
-      },
-      "seeding_key": {
-        "lesson.key": "Websites for Expression",
-        "objective.key": "45e6e834-b1f7-4ee3-8b9f-b5d6952f7347"
-      }
-    },
-    {
       "key": "4c5d3778-7924-4696-a8d7-80573652342a",
       "properties": {
         "description": "Write a simple HTML document that uses opening and closing tags to structure content"
@@ -13767,6 +13758,16 @@
       "seeding_key": {
         "lesson.key": "Team Problem Solving",
         "objective.key": "500a9c65-79a8-494b-a0a0-a9dff0f9fd98"
+      }
+    },
+    {
+      "key": "52651590-94dc-4432-8fa3-2c1d4a123c0c",
+      "properties": {
+        "description": "Apply Flexbox properties in CSS"
+      },
+      "seeding_key": {
+        "lesson.key": "Websites for Expression",
+        "objective.key": "52651590-94dc-4432-8fa3-2c1d4a123c0c"
       }
     },
     {
@@ -13867,26 +13868,6 @@
       "seeding_key": {
         "lesson.key": "Websites for a Purpose",
         "objective.key": "694e5850-ccd9-47ba-a2cd-bc755ac1b28a"
-      }
-    },
-    {
-      "key": "69cf2c6b-e8ac-47ab-8ffd-aa80d419f492",
-      "properties": {
-        "description": "Analyze and solve common web design layout challenges using div tags and Flexbox"
-      },
-      "seeding_key": {
-        "lesson.key": "Websites for Expression",
-        "objective.key": "69cf2c6b-e8ac-47ab-8ffd-aa80d419f492"
-      }
-    },
-    {
-      "key": "71cf9da7-f188-4b32-bf5c-968a82caecfe",
-      "properties": {
-        "description": "Identify and explain the purpose and use of div tags in HTML"
-      },
-      "seeding_key": {
-        "lesson.key": "Websites for Expression",
-        "objective.key": "71cf9da7-f188-4b32-bf5c-968a82caecfe"
       }
     },
     {
@@ -14030,6 +14011,16 @@
       }
     },
     {
+      "key": "d29092a2-0a57-451e-8bbc-e2b5b23cd5a5",
+      "properties": {
+        "description": "Analyze and solve common web design layout challenges using div tags and Flexbox"
+      },
+      "seeding_key": {
+        "lesson.key": "Websites for Expression",
+        "objective.key": "d29092a2-0a57-451e-8bbc-e2b5b23cd5a5"
+      }
+    },
+    {
       "key": "d85ab2ef-0091-4823-afec-2873f5f5382e",
       "properties": {
         "description": "Design a webpage based on user needs"
@@ -14077,6 +14068,16 @@
       "seeding_key": {
         "lesson.key": "Mini-Project: HTML Web Page",
         "objective.key": "f4b15a53-b0f8-45ff-8dcd-72faabed7a5a"
+      }
+    },
+    {
+      "key": "f8cc060a-ffdc-47b5-9f44-4ba5ed6d63e2",
+      "properties": {
+        "description": "Identify and explain the purpose and use of div tags in HTML"
+      },
+      "seeding_key": {
+        "lesson.key": "Websites for Expression",
+        "objective.key": "f8cc060a-ffdc-47b5-9f44-4ba5ed6d63e2"
       }
     },
     {

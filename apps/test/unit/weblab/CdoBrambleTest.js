@@ -1,6 +1,8 @@
-import sinon from 'sinon';
-import {assert, expect} from '../../util/reconfiguredChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import CdoBramble from '@cdo/apps/weblab/CdoBramble';
+
+import {assert, expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const DISALLOWED_HTML_TAGS = ['script', 'a'];
 const VALID_HTML = `<!DOCTYPE html>

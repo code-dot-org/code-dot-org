@@ -2,16 +2,20 @@
  * @overview Component for editing key/value pairs.
  */
 import _ from 'lodash';
-import AddKeyRow from './AddKeyRow';
-import {DataView} from '../constants';
-import EditKeyRow from './EditKeyRow';
-import DataEntryError from './DataEntryError';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {changeView, showWarning} from '../redux/data';
 import {connect} from 'react-redux';
-import dataStyles from './data-styles.module.scss';
+
 import msg from '@cdo/locale';
+
+import {DataView} from '../constants';
+import {changeView, showWarning} from '../redux/data';
+
+import AddKeyRow from './AddKeyRow';
+import DataEntryError from './DataEntryError';
+import EditKeyRow from './EditKeyRow';
+
+import dataStyles from './data-styles.module.scss';
 
 class KVPairs extends React.Component {
   static propTypes = {

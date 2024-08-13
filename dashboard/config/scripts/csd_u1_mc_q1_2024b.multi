@@ -1,0 +1,25 @@
+name 'CSD U1 MC Q1_2024b'
+type 'multi2'
+
+right 'Touchscreen'
+right 'Microphone'
+wrong 'Speaker'
+wrong 'Monitor'
+wrong 'All of the above'
+
+teacher_markdown <<MARKDOWN
+**Content: Unit 1 Lesson 5**
+
+
+Input gets information from users or devices to the computer. Touchscreens and microphones get information.
+Speakers and flashlights are not inputs because they are outputs that *give* information.
+MARKDOWN
+
+markdown <<MARKDOWN
+Which of the following could be described as an input for a computer? *(Select all that apply)*
+
+
+
+MARKDOWN
+
+allow_multiple_attempts true

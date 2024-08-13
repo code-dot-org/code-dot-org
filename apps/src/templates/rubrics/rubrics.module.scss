@@ -855,7 +855,7 @@ em.aiFeedbackReceived {
 }
 
 .studentSelector {
-  width: 240px;
+  width: 300px;
 }
 
 .learningGoalsContainer {
@@ -1234,12 +1234,13 @@ p.detailsHidden {
 .studentDropdownOptionContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .studentDropdownOption {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   gap: 5px;
   margin-top: 3px;
   height: 26px;
@@ -1250,6 +1251,7 @@ p.detailsHidden {
   border-radius: 20px;
   padding: 4px 10px 0;
   height: 22px;
+  min-width: 80px;
   display: inline;
   p {
     margin-bottom: 0;
@@ -1261,6 +1263,7 @@ p.detailsHidden {
   border-radius: 20px;
   padding: 5px 10px 0;
   height: 22px;
+  min-width: 80px;
   display: inline;
   p {
     margin: 0, 0, 0, 0;
@@ -1272,6 +1275,7 @@ p.detailsHidden {
   border-radius: 20px;
   padding: 5px 10px 0;
   height: 22px;
+  min-width: 80px;
   display: inline;
   p {
     margin: 0, 0, 0, 0;

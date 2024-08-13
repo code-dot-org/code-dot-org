@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "Foundations of CS",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -11,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-08 20:48:41 UTC",
+    "serialized_at": "2024-07-11 17:52:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -129,7 +131,7 @@
     },
     {
       "key": "Creating functions with Parameters",
-      "name": "Creating functions with Parameters",
+      "name": "Creating Functions with Parameters",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
@@ -960,7 +962,7 @@
       "key": "78140a36-9263-49cb-99d4-0b134e5d9daf",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** In the previous lesson we created simple turtle drawings using only four commands. At some point you probably wished that more commands were available to you. Describe a command you wanted to be able to use and explain why you wanted to use it.\n\n**Discussion Goal:** Students have been solving turtle challenges with a limited set of commands. Recognize their desire to have access to more commands to solve these challenges. Motivate the fact they can create these new commands themselves, using the original turtle commands as building blocks.\n\nResponses might include:\n* A command that turns the turtle to the right\n* A command that moves forward more than one space\n* A command that creates a repeated pattern or shape\n* Students may also just wish for different colors, curved lines, etc.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *In the previous lesson we created simple turtle drawings using only four commands. At some point you probably wished that more commands were available to you. Describe a command you wanted to be able to use and explain why you wanted to use it.*\n\n**Discussion Goal:** Students have been solving turtle challenges with a limited set of commands. Recognize their desire to have access to more commands to solve these challenges. Motivate the fact they can create these new commands themselves, using the original turtle commands as building blocks.\n\nResponses might include:\n* A command that turns the turtle to the right\n* A command that moves forward more than one space\n* A command that creates a repeated pattern or shape\n* Students may also just wish for different colors, curved lines, etc.",
         "name": "The Need for Functions"
       },
       "seeding_key": {
@@ -1266,7 +1268,7 @@
       "key": "dc384733-8590-484b-8850-e7bd82df3e8d",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Develop a rule for deciding when to create a function with a parameter rather than a normal function. Below your rule write a couple sentences justifying your rule.*\n\n**Discussion Goal:** Having used parameters to generalize the behavior of many functions, students should attempt to formalize their understanding of what parameters are and why they are beneficial. Important points to draw out are:\nParameters allow the creation of a generalized solution to a whole class of problems, rather than individually solving many specific problems.\nParameters remove the need to create repetitive functions, making code easier to write, read, and change.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Develop a rule for deciding when to create a function with a parameter rather than a normal function. Below your rule write a couple sentences justifying your rule.*\n\n**Discussion Goal:** Having used parameters to generalize the behavior of many functions, students should attempt to formalize their understanding of what parameters are and why they are beneficial. Important points to draw out are:\nParameters allow the creation of a generalized solution to a whole class of problems, rather than individually solving many specific problems.\nParameters remove the need to create repetitive functions, making code easier to write, read, and change.",
         "name": "With or Without Parameters"
       },
       "seeding_key": {
@@ -3581,7 +3583,7 @@
   "resources": [
     {
       "name": "Algorithms Solve Problems",
-      "url": "https://docs.google.com/presentation/d/1m-AeFFpQ6oNfVzHNL9OqDmn3ocoZw8rj6ZanCFlgq_Q/template/preview",
+      "url": "https://docs.google.com/presentation/d/1D79uUJmzvR1YH1FBsANlCobBZEmFy3CTnl4R8MnhzRQ/edit?usp=sharing",
       "key": "algorithms_solve_problems",
       "properties": {
         "audience": "Teacher",
@@ -3589,6 +3591,86 @@
       },
       "seeding_key": {
         "resource.key": "algorithms_solve_problems"
+      }
+    },
+    {
+      "name": "All Code",
+      "url": "/s/fcs6-beta-2024/code",
+      "key": "all_code",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/fcs6-beta-2024/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/fcs6-beta-2024/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/fcs6-beta-2024/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
+      "name": "APIs and Function Parameters",
+      "url": "https://docs.google.com/presentation/d/1toj1-S60v1uE2ZCFXjNu52osmLnVkJ_r-QLWvY6aZXc/edit?usp=sharing",
+      "key": "apis_and_function_parameters",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "apis_and_function_parameters"
+      }
+    },
+    {
+      "name": "Creating Functions",
+      "url": "https://docs.google.com/presentation/d/1a3s1wsH7swRDIdBA5RVzR8wt3vpXB3_F7rcWrzCYgVI/edit?usp=sharing",
+      "key": "creating_functions",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "creating_functions"
+      }
+    },
+    {
+      "name": "Creating Functions with Parameters",
+      "url": "https://docs.google.com/presentation/d/1iXK164VUxGGcGEqnCjkXF08Z7nTh_dTJXwfcOisY2AE/edit?usp=sharing",
+      "key": "creating_functions_with_parameters",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "creating_functions_with_parameters"
       }
     },
     {
@@ -3617,6 +3699,18 @@
       }
     },
     {
+      "name": "Digital Scene Project",
+      "url": "https://docs.google.com/presentation/d/1qi2aGrmNbYNXNbdaEyrBzyJDZmc3sngPN6X6H9co3R0/edit?usp=sharing",
+      "key": "digital_scene_project",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "digital_scene_project"
+      }
+    },
+    {
       "name": "Functions with Parameters",
       "url": "https://www.youtube.com/watch?v=k7Ji1E97-V0&feature=youtu.be",
       "key": "functions_with_parameters",
@@ -3626,6 +3720,18 @@
       },
       "seeding_key": {
         "resource.key": "functions_with_parameters"
+      }
+    },
+    {
+      "name": "Looping and Random Numbers",
+      "url": "https://docs.google.com/presentation/d/1eQN8NW6PSjbcmtUhVxsJrqJl9waqctbYQM-kx5Tro80/edit?usp=sharing",
+      "key": "looping_and_random_numbers",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "looping_and_random_numbers"
       }
     },
     {
@@ -3642,7 +3748,7 @@
     },
     {
       "name": "The Need for Programming Languages",
-      "url": "https://docs.google.com/presentation/d/1vKDoFifrWW11cYJPtblcSb4OxFZJLKs9n4wLlWF4p3w/template/preview",
+      "url": "https://docs.google.com/presentation/d/1-3XjF4f0y_VD4w17p_ywB-qrgYNxSBNIbDYdpRSJpDg/edit?usp=sharing",
       "key": "the_need_for_programming_languages",
       "properties": {
         "audience": "Teacher",
@@ -3675,13 +3781,37 @@
       "seeding_key": {
         "resource.key": "using_loops"
       }
+    },
+    {
+      "name": "Using Simple Commands",
+      "url": "https://docs.google.com/presentation/d/1Zw_RMnTAE1oAudM4fgf23z2GS0bKR6LNykGL7qeFWSA/edit?usp=sharing",
+      "key": "using_simple_commands",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "using_simple_commands"
+      }
     }
   ],
   "lessons_resources": [
     {
       "seeding_key": {
+        "lesson.key": "APIs and Function Parameters",
+        "resource.key": "apis_and_function_parameters"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Algorithms Solve Problems",
         "resource.key": "algorithms_solve_problems"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Creating Functions",
+        "resource.key": "creating_functions"
       }
     },
     {
@@ -3693,7 +3823,19 @@
     {
       "seeding_key": {
         "lesson.key": "Creating functions with Parameters",
+        "resource.key": "creating_functions_with_parameters"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Creating functions with Parameters",
         "resource.key": "functions_with_parameters"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Looping and Random Numbers",
+        "resource.key": "looping_and_random_numbers"
       }
     },
     {
@@ -3706,6 +3848,12 @@
       "seeding_key": {
         "lesson.key": "Make your own Digital Scene",
         "resource.key": "design_a_digital_scene_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Make your own Digital Scene",
+        "resource.key": "digital_scene_project"
       }
     },
     {
@@ -3725,10 +3873,39 @@
         "lesson.key": "Using Simple Commands",
         "resource.key": "turtle_programming"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Simple Commands",
+        "resource.key": "using_simple_commands"
+      }
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_code",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "fcs6-beta-2024"
+      }
+    }
   ],
   "scripts_student_resources": [
 

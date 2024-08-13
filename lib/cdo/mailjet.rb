@@ -36,7 +36,7 @@ module MailJet
     end
   end
 
-  def self.create_contact_and_send_welcome_email(user)
+  def self.create_contact_and_send_welcome_email(user, locale = 'en-US')
     return unless enabled?
 
     return unless user&.id.present?
@@ -46,7 +46,8 @@ module MailJet
     update_contact_field(contact, 'sign_up_date', user.created_at.to_datetime.rfc3339)
     send_template_email(
       contact,
-      EMAILS[:welcome]
+      EMAILS[:welcome],
+      locale
     )
   end
 
@@ -107,7 +108,7 @@ module MailJet
     end
   end
 
-  def self.send_template_email(contact, email_config)
+  def self.send_template_email(contact, email_config, locale = 'en-US')
     return unless enabled?
     return unless contact&.email.present?
 
@@ -119,7 +120,8 @@ module MailJet
 
     from_address = email_config[:from_address]
     from_name = email_config[:from_name]
-    template_id = email_config[:template_id][subaccount.to_sym]
+    template_config = email_config[:template_id][subaccount.to_sym]
+    template_id = template_config[locale.to_sym] || template_config[:default]
 
     Mailjet::Send.create(messages:
       [{

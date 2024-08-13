@@ -24,13 +24,13 @@
     "name_suffix": "_v2",
     "panels": [
       {
-        "imageUrl": "https://images.code.org/377423de5c46897d0a68e4206f37aaf8-Music Lab Callout Graphic (6).png",
+        "imageUrl": "https://images.code.org/846388521fe0f07f2577b346a7ba51d9-musiclab-big-banner-image.png",
         "text": "#### 🎶 Ready to jam? 🎶\n\nYou've learned the basics, and now you're ready to make your own song! \n\nCheck out all the new sounds and customizations in the toolbox. \n\nClick Continue to get started. ",
         "key": "musiclab_intro_panels_end_pdx-88ca8817-6cb7-4c5b-a08a-69fc2267eb0b",
         "nextUrl": "https://studio.code.org/projects/music/new"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-26T04:08:34.103+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_panels_end_v2\\\"\"],\"cloned_from\":\"musiclab_intro_panels_end_v2\"},{\"changed_at\":\"2024-05-06 22:09:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-06 22:10:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-06 22:11:05 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-06 22:11:51 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-06 22:14:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-26T04:08:34.103+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_panels_end_v2\\\"\"],\"cloned_from\":\"musiclab_intro_panels_end_v2\"},{\"changed_at\":\"2024-05-06 22:09:24 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-06 22:10:14 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-06 22:11:05 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-06 22:11:51 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-06 22:14:22 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-16 02:20:33 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":574,\"changed_by_email\":\"brendan+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import color from '../../../util/color';
-import ChangeEmailModal from './ChangeEmailModal';
+
 import {hashEmail} from '../../../code-studio/hashEmail';
+import color from '../../../util/color';
+
+import ChangeEmailModal from './ChangeEmailModal';
 
 /**
  * This controller submits email changes to dashboard using a hidden

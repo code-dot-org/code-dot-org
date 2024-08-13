@@ -1,14 +1,17 @@
 import React from 'react';
-import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
-import LessonProgress from './LessonProgress';
+import {createStore, combineReducers} from 'redux';
+
+import {TestResults} from '@cdo/apps/constants';
+
 import lessonLock from '../../lessonLockRedux';
 import progress, {
   initProgress,
   mergeResults,
   setLessonExtrasEnabled,
 } from '../../progressRedux';
-import {TestResults} from '@cdo/apps/constants';
+
+import LessonProgress from './LessonProgress';
 
 const activityPuzzle = {
   ids: ['123'],

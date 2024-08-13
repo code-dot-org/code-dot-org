@@ -4,6 +4,7 @@ import React, {useState, useEffect} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {
   BodyTwoText,
   BodyThreeText,
@@ -23,18 +24,24 @@ const SEARCH_DEFAULTS = [
   {value: NO_SCHOOL_SETTING, text: i18n.noSchoolSetting()},
 ];
 const ZIP_REGEX = new RegExp(/(^\d{5}$)/);
+const SCHOOL_ZIP = 'schoolZip';
+const SCHOOL_ID = 'schoolId';
 
 // Controls the logic and components surrounding a zip input box and its error
 // messaging, the api school search filtered on zip, and the school dropdown
 // that search populates.
 export default function SchoolZipSearch({fieldNames}) {
-  const [selectedSchoolNcesId, setSelectedSchoolNcesId] =
-    useState(SELECT_A_SCHOOL);
+  const detectedSchoolId = sessionStorage.getItem(SCHOOL_ID);
+  const detectedZip = sessionStorage.getItem(SCHOOL_ZIP);
+  const [selectedSchoolNcesId, setSelectedSchoolNcesId] = useState(
+    detectedSchoolId || SELECT_A_SCHOOL
+  );
   const [inputManually, setInputManually] = useState(false);
   const [dropdownSchools, setDropdownSchools] = useState([]);
-  const [zip, setZip] = useState('');
-  const [isSchoolDropdownDisabled, setIsSchoolDropdownDisabled] =
-    useState(true);
+  const [zip, setZip] = useState(detectedZip || '');
+  const [isSchoolDropdownDisabled, setIsSchoolDropdownDisabled] = useState(
+    !detectedZip
+  );
 
   const labelClassName = isSchoolDropdownDisabled
     ? classNames(style.padding, style.disabledLabel)
@@ -43,7 +50,11 @@ export default function SchoolZipSearch({fieldNames}) {
   useEffect(() => {
     const isValidZip = ZIP_REGEX.test(zip);
     if (isValidZip) {
-      setSelectedSchoolNcesId(SELECT_A_SCHOOL);
+      if (zip !== sessionStorage.getItem(SCHOOL_ZIP)) {
+        // Clear out school from dropdown if zip has changed
+        setSelectedSchoolNcesId(SELECT_A_SCHOOL);
+      }
+      sessionStorage.setItem(SCHOOL_ZIP, zip);
       const searchUrl = `/dashboardapi/v1/schoolzipsearch/${zip}`;
       fetch(searchUrl, {headers: {'X-Requested-With': 'XMLHttpRequest'}})
         .then(response => (response.ok ? response.json() : []))
@@ -67,6 +78,10 @@ export default function SchoolZipSearch({fieldNames}) {
       setIsSchoolDropdownDisabled(true);
     }
   }, [zip]);
+
+  useEffect(() => {
+    sessionStorage.setItem(SCHOOL_ID, selectedSchoolNcesId);
+  }, [selectedSchoolNcesId]);
 
   const sendAnalyticsEvent = (eventName, data) => {
     analyticsReporter.sendEvent(eventName, data, PLATFORMS.BOTH);
@@ -111,14 +126,14 @@ export default function SchoolZipSearch({fieldNames}) {
         <BodyTwoText className={style.padding} visualAppearance={'heading-xs'}>
           {i18n.enterYourSchoolZip()}
         </BodyTwoText>
-        <input
+        <TextField
           id="uitest-school-zip"
-          type="text"
           name={fieldNames.schoolZip}
           onChange={e => {
             setZip(e.target.value);
           }}
           value={zip}
+          placeholder="00000"
         />
         {zip && isSchoolDropdownDisabled && (
           <BodyThreeText className={style.errorMessage}>

@@ -1,10 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
 import _ from 'lodash';
-import {ChartType, ignoreMissingValues} from '../dataUtils';
-import {GOOGLE_CHART_AREA} from './constants';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import GoogleChart from '@cdo/apps/applab/GoogleChart';
 import msg from '@cdo/locale';
+
+import {ChartType, ignoreMissingValues} from '../dataUtils';
+
+import {GOOGLE_CHART_AREA} from './constants';
 
 class GoogleChartWrapper extends React.Component {
   static propTypes = {

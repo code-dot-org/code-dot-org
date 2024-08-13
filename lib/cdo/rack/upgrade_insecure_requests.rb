@@ -51,7 +51,7 @@ module Rack
             "style-src 'self' https: 'unsafe-inline'",
             "img-src 'self' https: data: blob: https://*.code.org",
             "font-src 'self' https: data:",
-            "connect-src 'self' https: https://api.pusherapp.com wss://ws.pusherapp.com wss://*.firebaseio.com http://localhost:8080 https://curriculum.code.org/ wss://*.code.org",
+            "connect-src 'self' https: https://api.pusherapp.com wss://ws.pusherapp.com http://localhost:8080 https://curriculum.code.org/ wss://*.code.org",
             "media-src 'self' https: data: https://*.code.org http://vaas.acapela-group.com",
             "report-uri #{CDO.code_org_url('https/mixed-content')}"
           ]
@@ -67,7 +67,7 @@ module Rack
         # Warning: Our default policy is to deny iframes for security concerns.  Allow list entries are only to be
         # added when absolutely necessary, when the scope is reduced to bare minimum to meet the objectives, and once
         # security has reviewed and signed off on the specific changed.  Please contact security for more information.
-        iframe_path_allowlist = Set.new(["/lti/v1/authenticate"])
+        iframe_path_allowlist = Set.new(["/lti/v1/authenticate", "/lti/v1/dynamic_registration"])
         cdo_allowed_iframe_ancestors = DCDO.get('allowed_iframe_ancestors', nil) || CDO.allowed_iframe_ancestors
         allowed_iframe_ancestors = iframe_path_allowlist.include?(env['REQUEST_PATH']) ? '*' : cdo_allowed_iframe_ancestors
 

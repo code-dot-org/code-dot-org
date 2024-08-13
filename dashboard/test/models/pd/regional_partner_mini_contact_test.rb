@@ -30,10 +30,6 @@ class Pd::RegionalPartnerMiniContactTest < ActiveSupport::TestCase
     refute_includes Pd::RegionalPartnerMiniContact.required_fields, :notes
   end
 
-  private def valid_form?(form_data)
-    build(:pd_regional_partner_mini_contact, form_data: form_data.to_json).valid?
-  end
-
   test 'Matches regional partner' do
     # Use the same state & zip as the mini-contact factory's defaults.
     state = 'OH'
@@ -151,5 +147,9 @@ class Pd::RegionalPartnerMiniContactTest < ActiveSupport::TestCase
     assert_equal 'Thank you for contacting your Code.org Regional Partner', mail.subject
     assert_equal ['noreply@code.org'], mail.from
     assert_sendable mail
+  end
+
+  private def valid_form?(form_data)
+    build(:pd_regional_partner_mini_contact, form_data: form_data.to_json).valid?
   end
 end

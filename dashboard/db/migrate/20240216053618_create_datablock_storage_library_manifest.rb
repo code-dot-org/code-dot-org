@@ -1,5 +1,3 @@
-require 'firebase'
-
 class CreateDatablockStorageLibraryManifest < ActiveRecord::Migration[6.1]
   def change
     create_table :datablock_storage_library_manifest do |t|

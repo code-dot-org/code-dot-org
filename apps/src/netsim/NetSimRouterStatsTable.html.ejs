@@ -3,6 +3,20 @@
   var NetSimUtils = require('./NetSimUtils');
 
   /**
+  * This block destructures the local variables for use within this ejs template.
+  */
+  var uptime = locals.uptime;
+  var queuedPackets = locals.queuedPackets;
+  var totalPackets = locals.totalPackets;
+  var successfulPackets = locals.successfulPackets;
+  var totalData = locals.totalData;
+  var successfulData = locals.successfulData;
+  var bandwidthLimit = locals.bandwidthLimit;
+  var dataRate = locals.dataRate;
+  var totalMemory = locals.totalMemory;
+  var usedMemory = locals.usedMemory;
+
+  /**
    * Write a stats row with the given title and value.
    * @param {string} title - localized name of the statistic (the header column contents)
    * @param {*} statValue - the value of the statistic

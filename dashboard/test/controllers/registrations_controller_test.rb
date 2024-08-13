@@ -344,34 +344,6 @@ class RegistrationsControllerTest < ActionController::TestCase
     assert_equal ["Age is required"], assigns(:user).errors.full_messages
   end
 
-  test "create new teacher with us ip sends email with us content" do
-    teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'yes')
-    MailJet.stubs(:enabled?).returns(false)
-    Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'US')])
-    assert_creates(User) do
-      post :create, params: {user: teacher_params}
-    end
-
-    mail = ActionMailer::Base.deliveries.first
-    assert_equal 'Welcome to Code.org!', mail.subject
-    assert_includes(mail.body.to_s, 'Hadi Partovi')
-    assert_includes(mail.body.to_s, 'New to teaching computer science')
-  end
-
-  test "create new teacher with non-us ip sends email without us content" do
-    teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'yes')
-    Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'CA')])
-    MailJet.stubs(:enabled?).returns(false)
-    assert_creates(User) do
-      post :create, params: {user: teacher_params}
-    end
-
-    mail = ActionMailer::Base.deliveries.first
-    assert_equal 'Welcome to Code.org!', mail.subject
-    assert_includes(mail.body.to_s, 'Hadi Partovi')
-    refute_includes(mail.body.to_s, 'New to teaching computer science')
-  end
-
   test "create new teacher with MailJet enabled sends welcome email" do
     teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'yes')
     Geocoder.stubs(:search).returns([OpenStruct.new(country_code: 'CA')])
@@ -382,16 +354,6 @@ class RegistrationsControllerTest < ActionController::TestCase
     end
 
     assert_empty ActionMailer::Base.deliveries
-  end
-
-  test 'create new teacher with es-MX locale sends localized welcome email' do
-    with_default_locale('es-MX') do
-      teacher_params = @default_params.update(user_type: 'teacher', email_preference_opt_in: 'yes')
-      post :create, params: {user: teacher_params}
-      mail = ActionMailer::Base.deliveries.first
-      assert_equal I18n.t('teacher_mailer.new_teacher_subject', locale: 'es-MX'), mail.subject
-      assert_match(/Hola/, mail.body.to_s)
-    end
   end
 
   test "create new teacher with opt-in option as yes writes email preference as yes" do
@@ -611,5 +573,19 @@ class RegistrationsControllerTest < ActionController::TestCase
     student.reload
     assert_equal "male", student.gender_student_input
     assert_equal "m", student.gender
+  end
+
+  test 'does not render the parent email section for LTI users' do
+    user = create :student, :with_lti_auth
+    PartialRegistration.persist_attributes session, user
+
+    post :new, params: {
+      user: {
+        email: 'test@code.org'
+      }
+    }
+
+    assert_template partial: '_finish_sign_up'
+    assert_select '#parent_email-container', 0
   end
 end

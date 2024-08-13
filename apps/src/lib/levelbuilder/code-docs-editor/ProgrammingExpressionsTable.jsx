@@ -1,10 +1,12 @@
-import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
-import * as Table from 'reactabular-table';
 import queryString from 'query-string';
-import Button from '@cdo/apps/templates/Button';
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+import React, {useEffect, useState} from 'react';
+import * as Table from 'reactabular-table';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import PaginationWrapper from '@cdo/apps/templates/PaginationWrapper';
+
 import CloneProgrammingExpressionDialog from './CloneProgrammingExpressionDialog';
 
 const DEFAULT_VALUE = 'all';
@@ -57,10 +59,16 @@ export default function ProgrammingExpressionsTable({
           style={{margin: 0}}
         />
         <Button
+          disabled={!rowData.deletable}
           onClick={() => setItemToDelete(rowData)}
           text=""
           icon="trash"
           color="red"
+          title={
+            rowData.deletable
+              ? null
+              : 'Programming expressions referenced from lessons cannot be deleted.'
+          }
           style={{margin: 0}}
         />
       </div>

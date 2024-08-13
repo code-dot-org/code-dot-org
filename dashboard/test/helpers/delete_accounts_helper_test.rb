@@ -49,12 +49,6 @@ class DeleteAccountsHelperTest < ActionView::TestCase
       bucket.any_instance.stubs(:hard_delete_channel_content)
     end
 
-    # Skip real Firebase operations
-    # TODO: unfirebase, write a version of this for Datablock Storage: #57004
-    # TODO: post-firebase-cleanup, switch to the datablock storage version: #56994
-    FirebaseHelper.stubs(:delete_channel)
-    FirebaseHelper.stubs(:delete_channels)
-
     # Skip MailJet calls
     MailJet.stubs(:delete_contact)
 
@@ -1604,6 +1598,50 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
+  # Table: dashboard.rubric_ai_evaluations
+  # Table: dashboard.learning_goal_ai_evaluations
+  # Table: dashboard.learning_goal_ai_evaluation_feedbacks
+  # Table: dashboard.learning_goal_teacher_evaluations
+  #
+
+  test "deletes all of a purged user's ai evaluations and teacher evaluations as student" do
+    student = create :student
+    rubric_ai_evaluation = create :rubric_ai_evaluation, user: student, requester: student
+    learning_goal_ai_evaluation = create :learning_goal_ai_evaluation, user: student, rubric_ai_evaluation: rubric_ai_evaluation
+    create :learning_goal_ai_evaluation_feedback, learning_goal_ai_evaluation: learning_goal_ai_evaluation
+    create :learning_goal_teacher_evaluation, user: student
+
+    assert_changes -> {RubricAiEvaluation.where(user: student).count}, from: 1, to: 0 do
+      assert_changes -> {LearningGoalAiEvaluation.where(rubric_ai_evaluation: rubric_ai_evaluation).count}, from: 1, to: 0 do
+        assert_changes -> {LearningGoalAiEvaluationFeedback.where(learning_goal_ai_evaluation: learning_goal_ai_evaluation).count}, from: 1, to: 0 do
+          assert_changes -> {LearningGoalTeacherEvaluation.where(user: student).count}, from: 1, to: 0 do
+            purge_user student
+          end
+        end
+      end
+    end
+  end
+
+  test "deletes all of a purged user's ai evaluations and teacher evaluations as teacher" do
+    student = create :student
+    teacher = create :teacher
+    rubric_ai_evaluation = create :rubric_ai_evaluation, user: student, requester: teacher
+    learning_goal_ai_evaluation = create :learning_goal_ai_evaluation, user: student, rubric_ai_evaluation: rubric_ai_evaluation
+    create :learning_goal_ai_evaluation_feedback, learning_goal_ai_evaluation: learning_goal_ai_evaluation
+    create :learning_goal_teacher_evaluation, user: student, teacher: teacher
+
+    assert_changes -> {RubricAiEvaluation.where(requester_id: teacher).count}, from: 1, to: 0 do
+      assert_changes -> {LearningGoalAiEvaluation.where(rubric_ai_evaluation: rubric_ai_evaluation).count}, from: 1, to: 0 do
+        assert_changes -> {LearningGoalAiEvaluationFeedback.where(learning_goal_ai_evaluation: learning_goal_ai_evaluation).count}, from: 1, to: 0 do
+          assert_changes -> {LearningGoalTeacherEvaluation.where(teacher: teacher).count}, from: 1, to: 0 do
+            purge_user teacher
+          end
+        end
+      end
+    end
+  end
+
+  #
   # Table: dashboard.projects
   #
 
@@ -1915,26 +1953,50 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   end
 
   #
-  # Firebase
+  # Project tables and kvps i.e. datablock storage
   #
 
-  test "Firebase: deletes content for all of user's channels" do
+  # Table: dashboard.datablock_storage_tables, dashboard.datablock_storage_records
+  test "Datablock Storage: hard-deletes all of user's project tables" do
     student = create :student
     with_channel_for student do |project_id_a, _|
-      with_channel_for student do |project_id_b, storage_id|
-        projects_table.where(id: project_id_a).update(state: 'deleted')
+      with_channel_for student do |project_id_b, _|
+        timestamp = DateTime.now
+        DatablockStorageTable.create(project_id: project_id_a, table_name: "table_a", columns: '["id", "name"]', created_at: timestamp, updated_at: timestamp)
+        DatablockStorageRecord.create(project_id: project_id_a, table_name: "table_a", record_id: 1, record_json: '{"id": 1, "name": "Bob"}')
+        DatablockStorageTable.create(project_id: project_id_b, table_name: "table_b", columns: '["id", "name"]', created_at: timestamp, updated_at: timestamp)
+        DatablockStorageRecord.create(project_id: project_id_b, table_name: "table_b", record_id: 1, record_json: '{"id": 1, "name": "Alice"}')
 
-        student_channels = [storage_encrypt_channel_id(storage_id, project_id_a),
-                            storage_encrypt_channel_id(storage_id, project_id_b)]
-
-        # TODO: unfirebase, write a version of this for Datablock Storage: #57004
-        # TODO: post-firebase-cleanup, switch to the datablock storage version: #56994
-        FirebaseHelper.
-          expects(:delete_channels).
-          with(student_channels)
+        assert_equal 1, DatablockStorageTable.where(project_id: project_id_a).count
+        assert_equal 1, DatablockStorageTable.where(project_id: project_id_b).count
+        assert_equal 1, DatablockStorageRecord.where(project_id: project_id_a).count
+        assert_equal 1, DatablockStorageRecord.where(project_id: project_id_b).count
 
         purge_user student
-        assert_logged "Deleting Firebase contents for 2 channels"
+        assert_logged "Deleting Datablock Storage contents for 2 projects"
+        assert_empty DatablockStorageTable.where(project_id: project_id_a)
+        assert_empty DatablockStorageTable.where(project_id: project_id_b)
+        assert_empty DatablockStorageRecord.where(project_id: project_id_a)
+        assert_empty DatablockStorageRecord.where(project_id: project_id_b)
+      end
+    end
+  end
+
+  # Table: dashboard.datablock_storage_kvps
+  test "Datablock Storage: hard-deletes all of user's project kvps" do
+    student = create :student
+    with_channel_for student do |project_id_a, _|
+      with_channel_for student do |project_id_b, _|
+        DatablockStorageKvp.set_kvp(project_id_a, "key_a", '"value_a"')
+        DatablockStorageKvp.set_kvp(project_id_b, "key_b", '"value_b"')
+
+        assert_equal 1, DatablockStorageKvp.where(project_id: project_id_a).count
+        assert_equal 1, DatablockStorageKvp.where(project_id: project_id_b).count
+
+        purge_user student
+        assert_logged "Deleting Datablock Storage contents for 2 projects"
+        assert_empty DatablockStorageKvp.where(project_id: project_id_a)
+        assert_empty DatablockStorageKvp.where(project_id: project_id_b)
       end
     end
   end

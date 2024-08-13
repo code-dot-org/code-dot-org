@@ -2,8 +2,9 @@
  * @fileoverview Utility functions shared by applab and gamelab exporters.
  */
 import $ from 'jquery';
-import download from '../assetManagement/download';
+
 import * as assetPrefix from '../assetManagement/assetPrefix';
+import download from '../assetManagement/download';
 
 const soundRegex =
   /(\bsound:\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gi;

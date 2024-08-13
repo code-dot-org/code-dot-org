@@ -1,20 +1,17 @@
 import ReactDOM from 'react-dom';
-import sinon from 'sinon';
 
 import {renderExpandableImages} from '@cdo/apps/templates/utils/expandableImages';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 describe('expandableImages', () => {
   describe('renderExpandableImages', () => {
     let renderSpy;
 
     beforeEach(() => {
-      renderSpy = sinon.spy(ReactDOM, 'render');
+      renderSpy = jest.spyOn(ReactDOM, 'render').mockClear();
     });
 
     afterEach(() => {
-      renderSpy.restore();
+      renderSpy.mockRestore();
     });
 
     const createExpandableImage = url => {
@@ -31,13 +28,13 @@ describe('expandableImages', () => {
 
       renderExpandableImages(containerNode);
 
-      expect(renderSpy).to.have.been.calledOnce;
+      expect(renderSpy).toHaveBeenCalledTimes(1);
 
-      const renderElement = renderSpy.args[0][0];
-      expect(renderElement.props.url).to.equal('https://example.com/img.jpg');
+      const renderElement = renderSpy.mock.calls[0][0];
+      expect(renderElement.props.url).toBe('https://example.com/img.jpg');
 
-      const renderContainer = renderSpy.args[0][1];
-      expect(renderContainer).to.equal(image);
+      const renderContainer = renderSpy.mock.calls[0][1];
+      expect(renderContainer).toBe(image);
     });
 
     it('supports multiple images in a single node', () => {
@@ -51,7 +48,7 @@ describe('expandableImages', () => {
       }
 
       renderExpandableImages(containerNode);
-      expect(renderSpy.callCount).to.equal(N);
+      expect(renderSpy).toHaveBeenCalledTimes(N);
     });
   });
 });

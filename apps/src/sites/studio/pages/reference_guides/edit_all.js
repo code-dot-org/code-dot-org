@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import getScriptData from '@cdo/apps/util/getScriptData';
+
 import ReferenceGuideEditAll from '@cdo/apps/lib/levelbuilder/reference-guide-editor/ReferenceGuideEditAll';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(() => {
   const referenceGuides = getScriptData('referenceGuides');

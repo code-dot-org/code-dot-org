@@ -1,8 +1,10 @@
-import ReactDOM from 'react-dom';
 import $ from 'jquery';
-import {spy, stub} from 'sinon';
-import {expect, assert} from '../../../../util/reconfiguredChai';
+import ReactDOM from 'react-dom';
+import {spy, stub} from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import AddPasswordController from '@cdo/apps/lib/ui/accounts/AddPasswordController';
+
+import {expect, assert} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('AddPasswordController', () => {
   let controller, form, mockMountPoint;

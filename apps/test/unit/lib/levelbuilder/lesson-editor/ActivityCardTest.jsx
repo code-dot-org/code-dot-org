@@ -1,12 +1,12 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
+import React from 'react';
+
 import {UnconnectedActivityCard as ActivityCard} from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCard';
+
 import {
   sampleActivities,
   sampleActivityForLessonWithoutLessonPlan,
 } from './activitiesTestData';
-import sinon from 'sinon';
 
 describe('ActivityCard', () => {
   let defaultProps,
@@ -21,16 +21,16 @@ describe('ActivityCard', () => {
     generateActivitySectionKey,
     updateActivitySectionMetrics;
   beforeEach(() => {
-    addActivitySection = sinon.spy();
-    removeActivity = sinon.spy();
-    moveActivity = sinon.spy();
-    updateActivityField = sinon.spy();
-    setActivitySectionRef = sinon.spy();
-    updateTargetActivitySection = sinon.spy();
-    clearTargetActivitySection = sinon.spy();
-    updateActivitySectionMetrics = sinon.spy();
-    handleCollapse = sinon.spy();
-    generateActivitySectionKey = sinon.spy();
+    addActivitySection = jest.fn();
+    removeActivity = jest.fn();
+    moveActivity = jest.fn();
+    updateActivityField = jest.fn();
+    setActivitySectionRef = jest.fn();
+    updateTargetActivitySection = jest.fn();
+    clearTargetActivitySection = jest.fn();
+    updateActivitySectionMetrics = jest.fn();
+    handleCollapse = jest.fn();
+    generateActivitySectionKey = jest.fn();
     defaultProps = {
       activity: sampleActivities[0],
       activitiesCount: 1,
@@ -54,11 +54,11 @@ describe('ActivityCard', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<ActivityCard {...defaultProps} />);
-    expect(wrapper.contains('Activity:')).to.be.true;
-    expect(wrapper.contains('Duration:')).to.be.true;
-    expect(wrapper.find('OrderControls').length).to.equal(1);
-    expect(wrapper.find('Connect(ActivitySectionCard)').length).to.equal(3);
-    expect(wrapper.find('button').length).to.equal(1);
+    expect(wrapper.contains('Activity:')).toBe(true);
+    expect(wrapper.contains('Duration:')).toBe(true);
+    expect(wrapper.find('OrderControls').length).toBe(1);
+    expect(wrapper.find('Connect(ActivitySectionCard)').length).toBe(3);
+    expect(wrapper.find('button').length).toBe(1);
   });
 
   it('show OrderControls when not allowed to make major curriculum changes but there are no levels in activity', () => {
@@ -108,21 +108,21 @@ describe('ActivityCard', () => {
         activity={activityWithNoLevels}
       />
     );
-    expect(wrapper.find('OrderControls').length).to.equal(1);
+    expect(wrapper.find('OrderControls').length).toBe(1);
   });
 
   it('hides OrderControls when not allowed to make major curriculum changes', () => {
     const wrapper = shallow(
       <ActivityCard {...defaultProps} allowMajorCurriculumChanges={false} />
     );
-    expect(wrapper.find('OrderControls').length).to.equal(0);
+    expect(wrapper.find('OrderControls').length).toBe(0);
   });
 
   it('shows OrderControls when allowed to make major curriculum changes', () => {
     const wrapper = shallow(
       <ActivityCard {...defaultProps} allowMajorCurriculumChanges={true} />
     );
-    expect(wrapper.find('OrderControls').length).to.equal(1);
+    expect(wrapper.find('OrderControls').length).toBe(1);
   });
 
   it('renders correct fields for lesson without lesson plan', () => {
@@ -133,22 +133,22 @@ describe('ActivityCard', () => {
         activity={sampleActivityForLessonWithoutLessonPlan}
       />
     );
-    expect(wrapper.contains('Activity:')).to.be.false;
-    expect(wrapper.contains('Duration:')).to.be.true;
-    expect(wrapper.find('OrderControls').length).to.equal(0);
-    expect(wrapper.find('Connect(ActivitySectionCard)').length).to.equal(1);
-    expect(wrapper.find('button').length).to.equal(1);
+    expect(wrapper.contains('Activity:')).toBe(false);
+    expect(wrapper.contains('Duration:')).toBe(true);
+    expect(wrapper.find('OrderControls').length).toBe(0);
+    expect(wrapper.find('Connect(ActivitySectionCard)').length).toBe(1);
+    expect(wrapper.find('button').length).toBe(1);
   });
 
   it('adds activity section when button pressed', () => {
     const wrapper = shallow(<ActivityCard {...defaultProps} />);
-    expect(wrapper.find('button').length).to.equal(1);
+    expect(wrapper.find('button').length).toBe(1);
 
     const button = wrapper.find('button');
-    expect(button.text()).to.include('Activity Section');
+    expect(button.text()).toContain('Activity Section');
     button.simulate('mouseDown');
-    expect(addActivitySection).to.have.been.calledOnce;
-    expect(generateActivitySectionKey).to.have.been.calledOnce;
+    expect(addActivitySection).toHaveBeenCalledTimes(1);
+    expect(generateActivitySectionKey).toHaveBeenCalledTimes(1);
   });
 
   it('edit activity title', () => {
@@ -156,7 +156,7 @@ describe('ActivityCard', () => {
 
     const titleInput = wrapper.find('input').at(0);
     titleInput.simulate('change', {target: {value: 'New Title'}});
-    expect(updateActivityField).to.have.been.calledWith(
+    expect(updateActivityField).toHaveBeenCalledWith(
       1,
       'displayName',
       'New Title'
@@ -168,6 +168,6 @@ describe('ActivityCard', () => {
 
     const titleInput = wrapper.find('input').at(1);
     titleInput.simulate('change', {target: {value: '1000'}});
-    expect(updateActivityField).to.have.been.calledWith(1, 'duration', 1000);
+    expect(updateActivityField).toHaveBeenCalledWith(1, 'duration', 1000);
   });
 });

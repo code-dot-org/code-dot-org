@@ -1,8 +1,10 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../util/reconfiguredChai';
-import sinon from 'sinon';
+import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import ImageInput from '@cdo/apps/lib/levelbuilder/ImageInput';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('ImageInput', () => {
   it('displays image upload dialog when upload image button is pressed', () => {

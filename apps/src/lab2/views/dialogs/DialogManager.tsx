@@ -1,27 +1,27 @@
 import React, {useCallback, useState} from 'react';
-import moduleStyles from './dialog-manager.module.scss';
-import StartOverDialog from './StartOverDialog';
+
+import {DialogControlContext} from './DialogControlContext';
+import GenericAlertDialog from './GenericAlertDialog';
+import GenericConfirmationDialog from './GenericConfirmationDialog';
+import GenericDialog from './GenericDialog';
+import GenericPrompt from './GenericPrompt';
 import SkipDialog from './SkipDialog';
+import StartOverDialog from './StartOverDialog';
+import {DialogType, TypedDialogProps, AnyDialogType} from './types';
+
+import moduleStyles from './dialog-manager.module.scss';
 
 /**
  * Manages displaying common dialogs for Lab2.
  */
 
-export enum DialogType {
-  StartOver = 'StartOver',
-  Skip = 'Skip',
-}
-
-export interface BaseDialogProps {
-  handleConfirm: () => void;
-  handleCancel: () => void;
-}
-
-const DialogViews: {
-  [key in DialogType]: React.FunctionComponent<BaseDialogProps>;
-} = {
+const DialogViews = {
   [DialogType.StartOver]: StartOverDialog,
   [DialogType.Skip]: SkipDialog,
+  [DialogType.GenericAlert]: GenericAlertDialog,
+  [DialogType.GenericConfirmation]: GenericConfirmationDialog,
+  [DialogType.GenericDialog]: GenericDialog,
+  [DialogType.GenericPrompt]: GenericPrompt,
 };
 
 interface DialogManagerProps {
@@ -37,54 +37,39 @@ const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
   children,
 }) => {
   const [openDialog, setOpenDialog] = useState<DialogType | null>(null);
-  const [dialogCallback, setDialogCallback] = useState<(() => void) | null>(
-    () => null
-  );
+  const [dialogArgs, setDialogArgs] = useState<AnyDialogType>();
 
   const showDialog = useCallback(
-    (dialogType: DialogType, callback: () => void) => {
-      setOpenDialog(dialogType);
-      setDialogCallback(() => callback);
+    ({type, ...dialogArgs}: TypedDialogProps) => {
+      setOpenDialog(type);
+      setDialogArgs(dialogArgs);
     },
-    [setOpenDialog, setDialogCallback]
+    [setDialogArgs]
   );
 
-  const handleConfirm = useCallback(() => {
-    if (dialogCallback) {
-      dialogCallback();
-      setOpenDialog(null);
-    }
-  }, [dialogCallback, setOpenDialog]);
+  const closeDialog = useCallback(() => setOpenDialog(null), [setOpenDialog]);
 
-  const handleCancel = useCallback(() => {
-    setOpenDialog(null);
-  }, [setOpenDialog]);
-
-  const DialogView = openDialog && dialogCallback && DialogViews[openDialog];
+  // Allow the any because if it's NOT any, then line 63 with DialogView's args will toss an error.
+  // Keep this until we have a better solution. ¯\_(ツ)_/¯
+  // The typing on the `showDialog` function ensures the props are correct, so we're still safe'
+  // eslint-disable-next-line
+  const DialogView: any = openDialog && dialogArgs && DialogViews[openDialog];
 
   return (
-    <DialogContext.Provider
+    <DialogControlContext.Provider
       value={{
+        closeDialog,
         showDialog,
       }}
     >
       {DialogView && (
         <div className={moduleStyles.dialogContainer}>
-          <DialogView
-            handleConfirm={handleConfirm}
-            handleCancel={handleCancel}
-          />
+          <DialogView {...dialogArgs} />
         </div>
       )}
       {children}
-    </DialogContext.Provider>
+    </DialogControlContext.Provider>
   );
 };
-
-interface DialogControl {
-  showDialog: (dialogType: DialogType, callback: () => void) => void;
-}
-
-export const DialogContext = React.createContext<DialogControl | null>(null);
 
 export default DialogManager;

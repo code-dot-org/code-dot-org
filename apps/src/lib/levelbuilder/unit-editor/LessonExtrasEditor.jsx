@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 
 /**
@@ -85,8 +86,6 @@ export default class LessonExtrasEditor extends React.Component {
                 <option value="applab">App Lab</option>
                 <option value="gamelab">Game Lab</option>
                 <option value="weblab">Web Lab</option>
-                <option value="calc">Calc</option>
-                <option value="eval">Eval</option>
                 <option value="frozen">Frozen</option>
                 <option value="minecraft_adventurer">
                   Minecraft Adventurer

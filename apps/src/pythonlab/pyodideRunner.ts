@@ -1,31 +1,24 @@
-import {AnyAction, Dispatch} from 'redux';
-import {MultiFileSource} from '@cdo/apps/lab2/types';
-import {asyncRun} from './pyodideWorkerManager';
-import {getTestRunnerScript} from './pythonHelpers/scripts';
 import {appendSystemMessage} from '@codebridge/redux/consoleRedux';
+import {AnyAction, Dispatch} from 'redux';
+
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {getFileByName} from '@cdo/apps/lab2/projects/utils';
+import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 
-export function handleRunClick(
+import {asyncRun, stopAndRestartPyodideWorker} from './pyodideWorkerManager';
+import {runStudentTests, runValidationTests} from './pythonHelpers/scripts';
+
+export async function handleRunClick(
   runTests: boolean,
   dispatch: Dispatch<AnyAction>,
-  permissions: string[],
   source: MultiFileSource | undefined
 ) {
-  // For now, restrict running python code to levelbuilders.
-  if (!permissions.includes('levelbuilder')) {
-    dispatch(
-      appendSystemMessage('You do not have permission to run python code.')
-    );
-    return;
-  }
   if (!source) {
     dispatch(appendSystemMessage('You have no code to run.'));
     return;
   }
   if (runTests) {
-    dispatch(appendSystemMessage('Running tests...'));
-    runAllTests(source);
+    runAllTests(source, dispatch);
   } else {
     // Run main.py
     const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;
@@ -34,7 +27,7 @@ export function handleRunClick(
       return;
     }
     dispatch(appendSystemMessage('Running program...'));
-    runPythonCode(code, source);
+    await runPythonCode(code, source);
   }
 }
 
@@ -54,7 +47,26 @@ export async function runPythonCode(mainFile: string, source: MultiFileSource) {
   }
 }
 
-export async function runAllTests(source: MultiFileSource) {
-  // To run all tests in the project, we look for files that follow the regex 'test*.py'
-  await runPythonCode(getTestRunnerScript('test*.py'), source);
+export function stopPythonCode() {
+  // This will terminate the worker and create a new one.
+  stopAndRestartPyodideWorker();
+}
+
+export async function runAllTests(
+  source: MultiFileSource,
+  dispatch: Dispatch<AnyAction>
+) {
+  // If the project has a validation file, we just run those tests.
+  const validationFile = Object.values(source.files).find(
+    f => f.type === ProjectFileType.VALIDATION
+  );
+  if (validationFile) {
+    // We only support one validation file. If somehow there is more than one, just run the first one.
+    dispatch(appendSystemMessage(`Running level tests...`));
+    await runPythonCode(runValidationTests(validationFile.name), source);
+  } else {
+    dispatch(appendSystemMessage(`Running your project's tests...`));
+    // Otherwise, we look for files that follow the regex 'test*.py' and run those.
+    await runPythonCode(runStudentTests(), source);
+  }
 }

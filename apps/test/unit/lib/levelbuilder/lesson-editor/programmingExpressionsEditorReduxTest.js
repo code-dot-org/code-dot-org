@@ -1,8 +1,7 @@
-import {assert} from 'chai';
 import programmingExpressionEditor, {
   addProgrammingExpression,
   removeProgrammingExpression,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/programmingExpressionsEditorRedux';
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/programmingExpressionsEditorRedux'; // eslint-disable-line no-restricted-imports
 
 const getInitialState = () => [
   {
@@ -26,10 +25,10 @@ describe('programmingExpressionsEditorRedux reducer tests', () => {
   beforeEach(() => (initialState = getInitialState()));
 
   it('add programmingExpression', () => {
-    assert.deepEqual(
-      initialState.map(r => r.key),
-      ['programmingExpression-1', 'programmingExpression-2']
-    );
+    expect(initialState.map(r => r.key)).toEqual([
+      'programmingExpression-1',
+      'programmingExpression-2',
+    ]);
 
     const nextState = programmingExpressionEditor(
       initialState,
@@ -41,28 +40,22 @@ describe('programmingExpressionsEditorRedux reducer tests', () => {
         programmingEnvironmentName: 'applab',
       })
     );
-    assert.deepEqual(
-      nextState.map(r => r.key),
-      [
-        'programmingExpression-1',
-        'programmingExpression-2',
-        'programmingExpression-3',
-      ]
-    );
+    expect(nextState.map(r => r.key)).toEqual([
+      'programmingExpression-1',
+      'programmingExpression-2',
+      'programmingExpression-3',
+    ]);
   });
 
   it('remove programmingExpression', () => {
-    assert.deepEqual(
-      initialState.map(r => r.key),
-      ['programmingExpression-1', 'programmingExpression-2']
-    );
+    expect(initialState.map(r => r.key)).toEqual([
+      'programmingExpression-1',
+      'programmingExpression-2',
+    ]);
     const nextState = programmingExpressionEditor(
       initialState,
       removeProgrammingExpression(1)
     );
-    assert.deepEqual(
-      nextState.map(r => r.key),
-      ['programmingExpression-2']
-    );
+    expect(nextState.map(r => r.key)).toEqual(['programmingExpression-2']);
   });
 });

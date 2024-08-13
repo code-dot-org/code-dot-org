@@ -104,9 +104,7 @@ class Section < ApplicationRecord
   validate :pl_sections_must_use_pl_grade
   validate :participant_type_not_changed
 
-  private def soft_delete_lti_section
-    lti_section.destroy if lti_section
-  end
+  before_validation :strip_emoji_from_name
 
   # PL courses which are run with adults should be set up with teacher accounts so they must use
   # email logins
@@ -217,6 +215,10 @@ class Section < ApplicationRecord
 
   def course_offering_id
     unit_group ? unit_group&.course_version&.course_offering&.id : script&.course_version&.course_offering&.id
+  end
+
+  def course_display_name
+    unit_group ? unit_group&.course_version&.localized_title : script&.course_version&.localized_title
   end
 
   def workshop_section?
@@ -394,7 +396,7 @@ class Section < ApplicationRecord
         tts_autoplay_enabled: tts_autoplay_enabled,
         sharing_disabled: sharing_disabled?,
         studentCount: students.distinct(&:id).size,
-        code: code,
+        code: code,        course_display_name: course_display_name,
         course_offering_id: course_offering_id,
         course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
         unit_id: unit_group ? script_id : nil,
@@ -408,6 +410,7 @@ class Section < ApplicationRecord
         participant_type: participant_type,
         sectionInstructors: serialized_section_instructors,
         sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
+        ai_tutor_enabled: ai_tutor_enabled,
       }
     end
   end
@@ -500,6 +503,7 @@ class Section < ApplicationRecord
         login_type: login_type,
         login_type_name: login_type_name,
         participant_type: participant_type,
+        course_display_name: course_display_name,
         course_offering_id: course_offering_id,
         course_version_id: unit_group ? unit_group&.course_version&.id : script&.course_version&.id,
         unit_id: unit_group ? script_id : nil,
@@ -520,6 +524,7 @@ class Section < ApplicationRecord
         post_milestone_disabled: !!script && !Gatekeeper.allows('postMilestone', where: {script_name: script.name}, default: true),
         code_review_expires_at: code_review_expires_at,
         sync_enabled: Policies::Lti.roster_sync_enabled?(teacher),
+        ai_tutor_enabled: ai_tutor_enabled,
       }
     end
   end
@@ -588,6 +593,12 @@ class Section < ApplicationRecord
     return code_review_expires_at > Time.now.utc
   end
 
+  # Returns true if any student in the section has ever made progress on a unit
+  # that the instructor of the section can be an instructor for.
+  def any_student_has_progress?
+    Unit.joins(:user_scripts).where(user_scripts: {user_id: students.pluck(:id)}).any? {|s| s.course_assignable?(user)}
+  end
+
   # A section can be assigned a course (aka unit_group) without being assigned a script,
   # so we check both here.
   def assigned_csa?
@@ -612,26 +623,6 @@ class Section < ApplicationRecord
   def update_code_review_expiration(enable_code_review)
     self.code_review_expires_at = enable_code_review ? Time.now.utc + 90.days : nil
   end
-
-  private def unused_random_code
-    CodeGeneration.random_unique_code length: 6, model: Section
-  end
-
-  # Drops unicode characters not supported by utf8mb3 strings (most commonly emoji)
-  # from the section name.
-  # We make a best-effort to make the name usable without the removed characters.
-  # We can remove this once our database has utf8mb4 support everywhere.
-  private def strip_emoji_from_name
-    # We don't want to fill in a default name if the caller intentionally tried to clear it.
-    return if name.blank?
-
-    # Drop emoji and other unsupported characters
-    self.name = name&.strip_utf8mb4&.strip
-
-    # If dropping emoji resulted in a blank name, use a default
-    self.name = I18n.t('sections.default_name', default: 'Untitled Section') if name.blank?
-  end
-  before_validation :strip_emoji_from_name
 
   # Adds an instructor to the section
   # If the instructor was previously deleted, restore the instructor
@@ -671,7 +662,7 @@ class Section < ApplicationRecord
   end
 
   # Validates instructor can be added to the section, returns soft-deleted section instructor (if any)
-  public def validate_instructor(instructor)
+  def validate_instructor(instructor)
     if section_instructors.count >= INSTRUCTOR_LIMIT
       raise ArgumentError.new('section full')
     end
@@ -687,5 +678,28 @@ class Section < ApplicationRecord
     elsif students.exists?(email: instructor.email)
       raise ArgumentError.new('already a student')
     end
+  end
+
+  private def soft_delete_lti_section
+    lti_section.destroy if lti_section
+  end
+
+  private def unused_random_code
+    CodeGeneration.random_unique_code length: 6, model: Section
+  end
+
+  # Drops unicode characters not supported by utf8mb3 strings (most commonly emoji)
+  # from the section name.
+  # We make a best-effort to make the name usable without the removed characters.
+  # We can remove this once our database has utf8mb4 support everywhere.
+  private def strip_emoji_from_name
+    # We don't want to fill in a default name if the caller intentionally tried to clear it.
+    return if name.blank?
+
+    # Drop emoji and other unsupported characters
+    self.name = name&.strip_utf8mb4&.strip
+
+    # If dropping emoji resulted in a blank name, use a default
+    self.name = I18n.t('sections.default_name', default: 'Untitled Section') if name.blank?
   end
 end

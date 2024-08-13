@@ -1,9 +1,11 @@
-import {expect} from '../../../util/reconfiguredChai';
-import React from 'react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import CourseOfferingEditor from '@cdo/apps/lib/levelbuilder/CourseOfferingEditor';
-import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('CourseOfferingEditor', () => {
   let defaultProps;
@@ -21,7 +23,6 @@ describe('CourseOfferingEditor', () => {
       initialCourseOffering: {
         key: 'test-course-offering',
         is_featured: false,
-        category: 'Other',
         display_name: 'Course Offering 1',
         assignable: true,
         grade_levels: 'K',
@@ -93,7 +94,6 @@ describe('CourseOfferingEditor', () => {
       let returnData = {
         key: 'test-course-offering',
         display_name: 'Course Offering 2',
-        category: 'Full Courses',
         is_featured: true,
         assignable: true,
         grade_levels: 'K',
@@ -171,7 +171,6 @@ describe('CourseOfferingEditor', () => {
       let returnData = {
         key: 'test-course-offering',
         display_name: 'Course Offering 2',
-        category: 'Full Courses',
         is_featured: true,
         grade_levels: 'K,1,2,3',
         curriculum_type: 'Course',

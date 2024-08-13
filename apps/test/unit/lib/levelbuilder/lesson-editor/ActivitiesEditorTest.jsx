@@ -1,14 +1,14 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import sinon from 'sinon';
-import {expect} from '../../../../util/reconfiguredChai';
+import React from 'react';
+
 import {UnconnectedActivitiesEditor as ActivitiesEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitiesEditor';
+
 import {sampleActivities} from './activitiesTestData';
 
 describe('ActivitiesEditor', () => {
   let defaultProps, addActivity;
   beforeEach(() => {
-    addActivity = sinon.spy();
+    addActivity = jest.fn();
     defaultProps = {
       activities: sampleActivities,
       hasLessonPlan: true,
@@ -19,32 +19,34 @@ describe('ActivitiesEditor', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<ActivitiesEditor {...defaultProps} />);
-    expect(wrapper.find('button').length).to.equal(1);
-    expect(wrapper.find('ActivityCardAndPreview').length).to.equal(1);
+    expect(wrapper.find('button').length).toBe(1);
+    expect(wrapper.find('ActivityCardAndPreview').length).toBe(1);
 
     const hiddenInputs = wrapper.find('input[type="hidden"]');
-    expect(hiddenInputs.length, 'hidden input').to.equal(1);
+    // hidden input
+    expect(hiddenInputs.length).toBe(1);
   });
 
   it('renders without activity button if hasLessonPlan false', () => {
     const wrapper = shallow(
       <ActivitiesEditor {...defaultProps} hasLessonPlan={false} />
     );
-    expect(wrapper.find('button').length).to.equal(0);
-    expect(wrapper.find('ActivityCardAndPreview').length).to.equal(1);
+    expect(wrapper.find('button').length).toBe(0);
+    expect(wrapper.find('ActivityCardAndPreview').length).toBe(1);
 
     const hiddenInputs = wrapper.find('input[type="hidden"]');
-    expect(hiddenInputs.length, 'hidden input').to.equal(1);
+    // hidden input
+    expect(hiddenInputs.length).toBe(1);
   });
 
   it('adds activity when activity button pressed', () => {
     const wrapper = shallow(<ActivitiesEditor {...defaultProps} />);
-    expect(wrapper.find('button').length).to.equal(1);
+    expect(wrapper.find('button').length).toBe(1);
 
     const button = wrapper.find('button').at(0);
-    expect(button.text()).to.include('Activity');
+    expect(button.text()).toContain('Activity');
     button.simulate('mouseDown');
-    expect(addActivity).to.have.been.calledWith(
+    expect(addActivity).toHaveBeenCalledWith(
       1,
       'activity-2',
       'activitySection-1'

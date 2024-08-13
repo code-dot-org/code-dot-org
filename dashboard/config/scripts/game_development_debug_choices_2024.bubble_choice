@@ -5,4 +5,5 @@ description 'Choose a game to fix.'
 sublevels
 level 'game_development_try_it_2024'
 level 'game_development_environ_2024'
+level 'game_development_player_2024'
 level 'game_development_platform_2024'

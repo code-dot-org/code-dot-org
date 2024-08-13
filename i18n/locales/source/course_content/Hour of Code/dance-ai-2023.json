@@ -1,0 +1,91 @@
+{
+  "https://studio.code.org/s/dance-ai-2023/lessons/1/levels/1": {
+    "long_instructions": "Watch this video, then go on to the next level."
+  },
+  "https://studio.code.org/s/dance-ai-2023/lessons/1/levels/2": {
+    "short_instructions": "**Create your dancer and code them do a new dance move!** Click Run to start dancing.",
+    "long_instructions": "**Add blocks to create your dancer and code them to do a new dance move!**\n\n-   Click <code style=\"color:white; background-color:#FFBD46\">Run</code> to start dancing.",
+    "authored_hints": {
+      "HInt2": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> The dancer should be the same on both blocks and the sequence (order) is important.  ",
+      "validation": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> Add these blocks to <code style=\"color:white; background-color:#FFBD46\">setup</code> to create your first dancer: \n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n      <block type=\"Dancelab_makeAnonymousDanceSprite\" id=\"1\">\n        <field name=\"COSTUME\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field>\n        <field name=\"LOCATION\">{x: 200, y: 200}</field>\n        <next>\n          <block type=\"Dancelab_changeMoveEachLR\" id=\"|y+CWEBlleENO5MU(?yL\">\n            <field name=\"GROUP\" config=\"&quot;CAT&quot;,&quot;SLOTH&quot;\">\"CAT\"</field>\n            <field name=\"MOVE\">MOVES.Roll</field>\n            <field name=\"DIR\">-1</field>\n          </block>\n        </next>\n      </block>\n    </statement>\n\n</xml>"
+    },
+    "callouts": {
+      "ai_dance_callout_draft_level_02": "⬆️ Start here."
+    }
+  },
+  "https://studio.code.org/s/dance-ai-2023/lessons/1/levels/3": {
+    "short_instructions": "**A.I. can help you create fun visual effects for your dance party!**\nConnect the `A.I. generate effect` block to setup. Then click on the block to get started.",
+    "long_instructions": "**A.I. can help you create fun visual effects for your dance party!**\n\n<img src=\"https://images.code.org/9fa6476e1e62030a0f0814bbc6f006b5-image-1700521543414.png\" style=\" margin-right: 40px;  height: 100px; float: left\">\n\n-   Connect the <code style=\"color:white; background-color:#566064\">A.I. generate effect</code> block to setup.\n\n-   Click on the block to get started. ",
+    "authored_hints": {
+      "Hint2": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> Connect the [blockly block][0]  block into <code style=\"color:white; background-color:#FFBD46\">setup</code>. Then click on it to get started.",
+      "Hint3": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\">  If you want to regenerate the effect or change the emojis you can click on the [blockly block][0] block again. "
+    },
+    "callouts": {
+      "ai_dance_callout_draft_level_03": "⬆️ Use this block. "
+    }
+  },
+  "https://studio.code.org/s/dance-ai-2023/lessons/1/levels/4": {
+    "short_instructions": "**Use A.I. to generate a new effect for a different song.**",
+    "long_instructions": "**Use A.I. to generate a new effect for a different song.**\n\n-   Connect the <code style=\"color:white; background-color:#566064\">A.I. generate effect</code> block to setup.\n\n-   Click on the block to get started. ",
+    "authored_hints": {
+      "Hint1": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> Listen to the song and think about the mood of the music. ",
+      "Hint2": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> Connect the [blockly block][0] into <code style=\"color:white; background-color:#FFBD46\">setup</code>. Then click on it to get started.",
+      "Hint3": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> If you want to regenerate the effect or change the emojis you can click on the [blockly block][0] block again."
+    },
+    "callouts": {
+      "dance_callout_01": "⬆️ Use this block."
+    }
+  },
+  "https://studio.code.org/s/dance-ai-2023/lessons/1/levels/5": {
+    "short_instructions": "**You can customize the effect A.I. creates!**\nClick the emojis on the block. Then either `Regenerate`, `Use code`, or `Start over`.",
+    "long_instructions": "**A.I. gets you started. You can customize the effect it creates!**\n\n-   Click the emojis to try one of these: \n\n    -   <img src=\"https://images.code.org/101001680b5a4de2d752a6b3b59a116f-image-1699478528416.jpg\" style=\" margin-right: 5px;  height: 20px;\">`Regenerate`  A.I. will recommend a different effect based on the same emojis.\n\n    -   `Use code`  Use the code A.I. writes and customize it! \n\n    -   <img src=\"https://images.code.org/3e2c74fbae82198ebc3264ecaf3a823e-image-1699478492041.jpg\" style=\" margin-right: 5px;  height: 15px;\">`Start over`  Choose three new emojis to generate a new effect. ",
+    "authored_hints": {
+      "Hint1": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> Customize the effect by clicking emojis on the [blockly block][0] block in the workspace. ",
+      "HintEdit": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> If you would like to use the code A.I. writes, toggle to show the code and then click `Use code`. The blocks will replace the  [blockly block][0] block in your workspace. ",
+      "Hint2": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> **Still stuck?** Watch the video to see how you can customize the effect. "
+    },
+    "callouts": {
+      "ai_dance_callout_draft_level_6": "Click here."
+    }
+  },
+  "https://studio.code.org/s/dance-ai-2023/lessons/1/levels/6": {
+    "short_instructions": "**Try it out!** \nPress Run. Then press the right or left arrow ◀ ▶ to cue your dancers to move.",
+    "long_instructions": "**Try it out! You control the dance moves.**\n\n-   Press <code style=\"color:white; background-color:#FFBD46\">Run</code> to start the song.\n-   Then press the right or left arrow <code style=\"color:white; background-color:#FFBD46\">◀</code> <code style=\"color:white; background-color:#FFBD46\">▶</code> to cue your dancers to move. ",
+    "authored_hints": {
+      "hint1": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\">  Your dancers won’t respond to your cues unless the dance is running. ",
+      "hint2": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\">  After you press <code style=\"color:white; background-color:#FFBD46\">Run</code>, cue your dancers by pressing the  <code style=\"color:white; background-color:#FFBD46\">◀</code> <code style=\"color:white; background-color:#FFBD46\">▶</code> right or left arrow. "
+    }
+  },
+  "https://studio.code.org/s/dance-ai-2023/lessons/1/levels/7": {
+    "short_instructions": "**Code your dancer to move when you press a key.**",
+    "long_instructions": "**Your turn! Code your dancer to move when you press a key.**\n\n-   Attach <code style=\"color:white; background-color:#7435b2\">sprites do dance move</code> under the <code style=\"color:white; background-color:#00bc3e\">when up pressed</code> event. \n\n-   Make sure to press the <code style=\"color:white; background-color:#FFBD46\">▲</code> button or your “up arrow” key after clicking <code style=\"color:white; background-color:#FFBD46\">Run</code>. ",
+    "authored_hints": {
+      "hint1": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\">  **Still stuck?** Watch the events video again to learn how they work. ",
+      "hint2": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\">  Here’s an example of what your code could look like. <xml>\n<xml xmlns=\"https://developers.google.com/blockly/xml\">\n\n  <block type=\"Dancelab_whenKey\" id=\"*R3Us3z5;rM#sBE?1zjX\" deletable=\"false\" x=\"19\" y=\"221\">\n    <field name=\"KEY\">\"up\"</field>\n    <next>\n      <block type=\"Dancelab_doMoveEachLR\" id=\"*hCDocpHXqlku@f[[rK=\">\n        <field name=\"GROUP\">\"BEAR\"</field>\n        <field name=\"MOVE\">MOVES.Dab</field>\n        <field name=\"DIR\">-1</field>\n      </block>\n    </next>\n  </block>\n</xml>"
+    },
+    "callouts": {
+      "dance_callout_02": "Add do dance move.",
+      "ai_dance_callout_02_b": "⬆️ Use this block."
+    }
+  },
+  "https://studio.code.org/s/dance-ai-2023/lessons/1/levels/8": {
+    "short_instructions": "**Try it out:** The effects change at specific times in the song!",
+    "long_instructions": "**Try it out: The effects change at specific times in the song!**\n\n-   Press <code style=\"color:white; background-color:#FFBD46\">Run</code> to start the song.\n-   Watch the effects change at measure 3 and again at measure 5."
+  },
+  "https://studio.code.org/s/dance-ai-2023/lessons/1/levels/9": {
+    "short_instructions": "**Code your dance to change effects at specific times in the song.**",
+    "long_instructions": "**Your turn! Code your dance to change effects at specific times in the song.** \n\n-   Connect an <code style=\"color:white; background-color:#566064\">A.I. generate effect</code> block to the <code style=\"color:white; background-color:#00bc3e\">at 2 measures</code> event in your workspace. \n-   Press <code style=\"color:white; background-color:#FFBD46\">Run</code> to watch the effect change at measure 2. ",
+    "authored_hints": {
+      "hint1": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> Connect an <code style=\"color:white; background-color:#566064\">A.I. generate effect</code> block to the <code style=\"color:white; background-color:#00bc3e\">at 2 measures</code> event in your workspace like this:\n\n[blockly block][0]",
+      "hint2": "<img src=\"https://images.code.org/7be0ad471681f374466d45003ac04529-image-1699980027509.png\" style=\" margin-right: 10px;  height: 20px; float: left\"> Click on the [blockly block][0]  block to make a new effect. "
+    },
+    "callouts": {
+      "dance_callout_02": "Add the A.I. generate effect block here. ",
+      "ai_dance_callout_02_b": "⬆️ Use this block."
+    }
+  },
+  "https://studio.code.org/s/dance-ai-2023/lessons/1/levels/10": {
+    "short_instructions": "**Get creative!**\nNow use the skills you just learned and A.I. to keep the dance party going. ",
+    "long_instructions": "### **Nice work!**\n\n-   Now use the skills you just learned and A.I. to keep the dance party going. Get creative!"
+  }
+}

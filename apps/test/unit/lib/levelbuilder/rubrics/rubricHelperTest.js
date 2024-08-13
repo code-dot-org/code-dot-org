@@ -1,3 +1,5 @@
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {
   saveRubricToTable,
   SAVING_TEXT,
@@ -5,7 +7,6 @@ import {
   SAVE_COMPLETED_TEXT,
 } from '@cdo/apps/lib/levelbuilder/rubrics/rubricHelper';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
-import sinon from 'sinon';
 
 describe('rubricHelperTest.js', () => {
   const learningGoalList = [

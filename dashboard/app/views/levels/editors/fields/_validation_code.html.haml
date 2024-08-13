@@ -52,8 +52,7 @@
         locals: {f: f, field_name: :free_play, description: "Free Play"}
       %p
         Free Play levels are not checked for correctness (any solution is
-        accepted), can be shared, and can be saved to the public and private
-        gallery
+        accepted), can be shared, and depending on the app type can be saved to the personal project gallery.
   - if @level.respond_to? :validation_enabled
     .field
       = render partial: 'levels/editors/fields/checkboxes',

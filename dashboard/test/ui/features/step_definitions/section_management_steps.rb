@@ -95,7 +95,7 @@ And /^I create a new "([^"]*)" student section with course "([^"]*)", version "(
   GHERKIN
 end
 
-And(/^I create a(n authorized)? teacher-associated( under-13)? student named "([^"]*)"$/) do |authorized, under_13, name|
+And(/^I create a(n authorized)? teacher-associated( under-13)?( sponsored)? student( in Colorado)? named "([^"]*)"( after CAP start)?( before CAP start)?$/) do |authorized, under_13, sponsored, locked, name, after_cap_start, before_cap_start|
   steps "Given I create a teacher named \"Teacher_#{name}\""
   # enroll in a plc course as a way of becoming an authorized teacher
   steps 'And I am enrolled in a plc course' if authorized
@@ -103,7 +103,38 @@ And(/^I create a(n authorized)? teacher-associated( under-13)? student named "([
   section = JSON.parse(browser_request(url: '/dashboardapi/sections', method: 'POST', body: {login_type: 'email', participant_type: 'student'}))
   section_code = section['code']
   @section_url = "http://studio.code.org/join/#{section_code}"
-  create_user(name, url: "/join/#{section_code}", code: 200, age: under_13 ? '10' : '16')
+
+  user_opts = {
+    age: under_13 ? '10' : '16',
+  }
+
+  if sponsored
+    user_opts[:email] = nil
+    user_opts[:password] = nil
+    user_opts[:password_confirmation] = nil
+    user_opts[:provider] = "sponsored"
+  end
+
+  if locked
+    user_opts[:country_code] = "US"
+    user_opts[:us_state] = "CO"
+    user_opts[:user_provided_us_state] = true
+  end
+
+  cap_start_date = DateTime.parse('2023-07-01T00:00:00MDT').freeze
+
+  if after_cap_start
+    user_opts[:created_at] = cap_start_date
+  end
+
+  if before_cap_start
+    user_opts[:created_at] = cap_start_date - 1.second
+  end
+
+  create_user(name, **user_opts)
+
+  # Sign up the user in the section
+  browser_request(url: "/join/#{section_code}", method: 'POST', code: 200)
 end
 
 And(/^I save the student section url$/) do
@@ -121,9 +152,11 @@ And(/^I join the section$/) do
   page_load(true) do
     steps <<~GHERKIN
       Given I am on "#{@section_url}"
-      And I click selector ".btn.btn-primary" once I see it
     GHERKIN
   end
+  steps <<~GHERKIN
+    And I click selector ".btn.btn-primary" once I see it to load a new page
+  GHERKIN
 end
 
 And(/^I attempt to join the section$/) do
@@ -228,6 +261,12 @@ end
 
 Then /^the section table row at index (\d+) has (primary|secondary) assignment path "([^"]+)"$/ do |row_index, assignment_type, expected_path|
   link_index = (assignment_type == 'primary') ? 0 : 1
+  # Wait until the link loads in the table
+  wait_until do
+    @browser.execute_script("return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(3) a:eq(#{link_index})').attr('href') !== null;")
+  end
+
+  # Then grab it
   href = @browser.execute_script(
     "return $('.uitest-owned-sections tbody tr:eq(#{row_index}) td:eq(3) a:eq(#{link_index})').attr('href');"
   )
@@ -341,20 +380,17 @@ Then /^I create a new code review group for the section I saved$/ do
     And I open the code review groups management dialog
     And I wait for 2 seconds
     And I click selector "#uitest-create-code-review-group" once I see it
+    And I wait until element ".uitest-code-review-group" is visible
   GHERKIN
 end
 
-And /^I navigate to the V2 progress dashboard$/ do
+And /^I navigate to the V2 progress dashboard for "([^"]+)"$/ do |section_name|
   steps <<-GHERKIN
-    When I click selector "a:contains(Untitled Section)" once I see it to load a new page
+    Given I am on "http://studio.code.org"
+    When I use a cookie to mock the DCDO key "progress-table-v2-enabled" as "true"
+    When I click selector "a:contains(#{section_name})" once I see it to load a new page
     And I wait until element "#uitest-teacher-dashboard-nav" is visible
     And check that the URL contains "/teacher_dashboard/sections/"
-    And I wait until element "#uitest-course-dropdown" is visible
-    Then I append "/?enableExperiments=section_progress_v2" to the URL
-    And I click selector "#ui-close-dialog" if I see it
-
-    # toggle to V2 progress view
-    Then I click selector "#ui-test-toggle-progress-view"
     And element "#ui-test-progress-table-v2" is visible
   GHERKIN
 end

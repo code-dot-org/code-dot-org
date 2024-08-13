@@ -6,7 +6,7 @@ class SectionsController < ApplicationController
 
   def new
     redirect_to '/home' unless params[:loginType] && params[:participantType]
-    @user_country = request.country.to_s.upcase
+    @user_country = helpers.country_code(current_user, request)
     @is_users_first_section = current_user.sections_instructed.empty?
   end
 

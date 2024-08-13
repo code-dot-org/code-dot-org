@@ -63,11 +63,10 @@ end
 
 def replace_hostname(url)
   UrlConverter.new(
-    dashboard_host: ENV['DASHBOARD_TEST_DOMAIN'],
-    pegasus_host: ENV['PEGASUS_TEST_DOMAIN'],
-    hourofcode_host: ENV['HOUROFCODE_TEST_DOMAIN'],
-    csedweek_host: ENV['CSEDWEEK_TEST_DOMAIN'],
-    advocacy_host: ENV['ADVOCACY_TEST_DOMAIN']
+    dashboard_host: ENV.fetch('DASHBOARD_TEST_DOMAIN', nil),
+    pegasus_host: ENV.fetch('PEGASUS_TEST_DOMAIN', nil),
+    hourofcode_host: ENV.fetch('HOUROFCODE_TEST_DOMAIN', nil),
+    csedweek_host: ENV.fetch('CSEDWEEK_TEST_DOMAIN', nil),
   ).replace_origin(url)
 end
 
@@ -83,7 +82,15 @@ end
 def navigate_to(url)
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, sleep: 10, tries: 3) do
     with_read_timeout(DEFAULT_WAIT_TIMEOUT + 5.seconds) do
+      root = @browser.find_element(css: ':root')
       @browser.navigate.to url
+      # Wait until the document has actually changed
+      if root
+        wait_until do
+          root != @browser.find_element(css: ':root')
+        end
+      end
+      # Then, wait until the document is done loading
       wait_until do
         @browser.execute_script('return document.readyState;') == 'complete'
       end
@@ -95,19 +102,32 @@ end
 
 Given /^I am on "([^"]*)"$/ do |url|
   check_window_for_js_errors('before navigation')
-  navigate_to replace_hostname(url)
+  begin
+    navigate_to replace_hostname(url)
+  rescue Selenium::WebDriver::Error::TimeoutError => exception
+    puts "Timeout: I am not on #{url} like I want."
+    puts "         I am on #{@browser.current_url} instead."
+    raise exception
+  end
 end
 
 And /^I take note of the current loaded page$/ do
   # Remember this page
   @current_page_body = @browser.find_element(:css, 'body')
+  @current_page_body_url = @browser.current_url
 end
 
 Then /^I wait until I am on a different page than I noted before$/ do
   # When we've seen a page before, look for a different page
   if @current_page_body
-    wait_until do
-      @current_page_body != @browser.find_element(:css, 'body')
+    begin
+      wait_until do
+        @current_page_body != @browser.find_element(:css, 'body')
+      end
+    rescue Selenium::WebDriver::Error::TimeoutError => exception
+      puts "Timeout: I am not still on #{@current_page_body_url} like I want."
+      puts "         I am on #{@browser.current_url} instead."
+      raise exception
     end
   end
 end
@@ -162,7 +182,7 @@ When /^I close the instructions overlay if it exists$/ do
   steps 'When I click selector "#overlay" if it exists'
 end
 
-When /^I wait for the page to fully load$/ do
+When /^I wait for the lab page to fully load$/ do
   steps <<-GHERKIN
     When I wait to see "#runButton"
     And I wait to see ".header_user"
@@ -234,6 +254,14 @@ end
 
 When /^I wait until the first (?:element )?"([^"]*)" (?:has|contains) text "([^"]*)"$/ do |selector, text|
   wait_until {@browser.execute_script("return $(#{selector.dump}).first().text();").include? text}
+end
+
+When /^I wait until (?:element )?"([^"]*)" (?:has|contains) one or more integers$/ do |selector|
+  wait_for_jquery
+  wait_until do
+    element_text = @browser.execute_script("return $(#{selector.dump}).text();")
+    element_text.match?(/\d+/)
+  end
 end
 
 When /^I wait until (?:element )?"([^"]*)" is (not )?checked$/ do |selector, negation|
@@ -314,6 +342,9 @@ And /^check that the URL matches "([^"]*)"$/ do |regex_text|
 end
 
 Then /^I wait until I am on "([^"]*)"$/ do |url|
+  if @browser.capabilities.browser_name == 'Safari'
+    puts "WARNING: 'I wait until I am on' is not reliable in Safari. Consider 'to load a new page' steps instead."
+  end
   url = replace_hostname(url)
   begin
     wait_until {@browser.current_url == url}
@@ -1024,12 +1055,18 @@ def set_cookie(key, value)
     value: value,
   }
 
-  if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /\.code.org/ &&
-      ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /\.code.org/
+  if ENV.fetch('DASHBOARD_TEST_DOMAIN', nil) && ENV.fetch('DASHBOARD_TEST_DOMAIN', nil) =~ /\.code.org/ &&
+      ENV.fetch('PEGASUS_TEST_DOMAIN', nil) && ENV.fetch('PEGASUS_TEST_DOMAIN', nil) =~ /\.code.org/
     params[:domain] = '.code.org' # top level domain cookie
   end
 
   @browser.manage.add_cookie params
+end
+
+Given(/^I use a cookie to mock the DCDO key "([^"]*)" as "(.*)"$/) do |key, json|
+  mock_dcdo(key, JSON.parse(json))
+rescue JSON::ParserError
+  mock_dcdo(key, json)
 end
 
 And(/^I set the language cookie$/) do
@@ -1128,8 +1165,8 @@ end
 # Send an asynchronous XmlHttpRequest from the browser.
 def browser_request(url:, method: 'GET', headers: {}, body: nil, code: 200, tries: 3)
   if body
-    headers['Content-Type'] = 'application/x-www-form-urlencoded'
-    body = "'#{body.to_param}'" if body
+    headers['Content-Type'] = 'application/json'
+    body = "'#{body.to_json}'"
   end
 
   js = <<~JS
@@ -1447,6 +1484,7 @@ When /^I set up code review for teacher "([^"]*)" with (\d+(?:\.\d*)?) students 
   student_count.to_i.times do |i|
     add_student_step_list.push("Given I create a student named \"student_#{i}\"")
     add_student_step_list.push("And I join the section")
+    add_student_step_list.push("And I wait for 3 seconds")
   end
 
   add_students_to_group_step_list = []
@@ -1464,11 +1502,14 @@ When /^I set up code review for teacher "([^"]*)" with (\d+(?:\.\d*)?) students 
     #{add_student_step_list.join("\n")}
     And I wait to see ".alert-success"
     And I sign out using jquery
+    And I wait for 3 seconds
     Given I sign in as "#{teacher_name}" and go home
     And I create a new code review group for the section I saved
     #{add_students_to_group_step_list.join("\n")}
     And I click selector ".uitest-base-dialog-confirm"
-    And I click selector ".toggle-input"
+    And I click selector "#uitest-code-review-groups-toggle"
+    And I wait until element "#uitest-code-review-groups-status-message" is visible
+    And I wait until element "#uitest-code-review-groups-save-confirm" is visible
   GHERKIN
 end
 

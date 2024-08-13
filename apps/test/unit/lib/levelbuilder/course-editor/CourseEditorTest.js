@@ -1,7 +1,17 @@
-import {assert, expect} from '../../../../util/reconfiguredChai';
-import React from 'react';
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import $ from 'jquery';
+import React from 'react';
+import {Provider} from 'react-redux';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import {
+  PublishedState,
+  InstructionType,
+  InstructorAudience,
+  ParticipantAudience,
+} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {UnconnectedCourseEditor as CourseEditor} from '@cdo/apps/lib/levelbuilder/course-editor/CourseEditor';
+import createResourcesReducer from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
 import {
   stubRedux,
   restoreRedux,
@@ -9,17 +19,9 @@ import {
   registerReducers,
 } from '@cdo/apps/redux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import createResourcesReducer from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
-import {Provider} from 'react-redux';
-import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
-import $ from 'jquery';
-import {
-  PublishedState,
-  InstructionType,
-  InstructorAudience,
-  ParticipantAudience,
-} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+
+import {assert, expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 const defaultProps = {
@@ -371,6 +373,81 @@ describe('CourseEditor', () => {
       wrapper
         .find('.saveBar')
         .contains('Error Saving: Please set both version year and family name.')
+    ).to.be.true;
+
+    $.ajax.restore();
+  });
+
+  it('shows error when published state is preview or stable and device compatibility JSON is null', () => {
+    sinon.stub($, 'ajax');
+    const wrapper = createWrapper({
+      isMissingRequiredDeviceCompatibilities: true,
+    });
+
+    const courseEditor = wrapper.find('CourseEditor');
+    courseEditor.setState({
+      publishedState: PublishedState.preview,
+      courseOfferingDeviceCompatibilities: null,
+    });
+
+    const saveBar = wrapper.find('SaveBar');
+
+    const saveAndKeepEditingButton = saveBar.find('button').at(1);
+    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+      .true;
+    saveAndKeepEditingButton.simulate('click');
+
+    expect($.ajax).to.not.have.been.called;
+
+    expect(courseEditor.state().isSaving).to.equal(false);
+    expect(courseEditor.state().error).to.equal(
+      'Please set all device compatibilities in order to save with published state as preview or stable.'
+    );
+
+    expect(
+      wrapper
+        .find('.saveBar')
+        .contains(
+          'Error Saving: Please set all device compatibilities in order to save with published state as preview or stable.'
+        )
+    ).to.be.true;
+
+    $.ajax.restore();
+  });
+
+  it('shows error when published state is preview or stable and at least one device compatibility is not set', () => {
+    sinon.stub($, 'ajax');
+    const wrapper = createWrapper({
+      isMissingRequiredDeviceCompatibilities: true,
+    });
+
+    const courseEditor = wrapper.find('CourseEditor');
+    courseEditor.setState({
+      publishedState: PublishedState.stable,
+      courseOfferingDeviceCompatibilities:
+        '{"computer":"","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
+    });
+
+    const saveBar = wrapper.find('SaveBar');
+
+    const saveAndKeepEditingButton = saveBar.find('button').at(1);
+    expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+      .true;
+    saveAndKeepEditingButton.simulate('click');
+
+    expect($.ajax).to.not.have.been.called;
+
+    expect(courseEditor.state().isSaving).to.equal(false);
+    expect(courseEditor.state().error).to.equal(
+      'Please set all device compatibilities in order to save with published state as preview or stable.'
+    );
+
+    expect(
+      wrapper
+        .find('.saveBar')
+        .contains(
+          'Error Saving: Please set all device compatibilities in order to save with published state as preview or stable.'
+        )
     ).to.be.true;
 
     $.ajax.restore();

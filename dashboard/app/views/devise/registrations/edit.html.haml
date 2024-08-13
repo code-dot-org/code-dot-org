@@ -6,6 +6,8 @@
 - @page_title = t('activerecord.attributes.user.edit_header')
 - no_email = current_user.no_personal_email? || params[:noEmail] == 'true'
 
+= render_parental_permission_banner(current_user, request)
+
 = link_to :back do
   %i.fa.fa-chevron-left
   %span= t('crud.back')
@@ -68,11 +70,22 @@
   - if !resource.teacher?
     .field
       = f.label t('signup_form.age'), class: "label-bold"
-      = f.select :age, User::AGE_DROPDOWN_OPTIONS
+      - if @student_in_lockout_flow
+        %em= t('user.update_field_parent_permission_required')
+        %br/
+      = f.select :age, User::AGE_DROPDOWN_OPTIONS, {}, disabled: @student_in_lockout_flow
     - if experiment_value('gender', request)
       .field
         = f.label :gender_student_input, t('signup_form.gender'), class: "label-bold"
         = f.text_field :gender_student_input, maxlength: 50
+    - if @is_usa
+      .field
+        = f.label :us_state, t('activerecord.attributes.user.us_state'), class: 'label-bold'
+        - if @student_in_lockout_flow
+          %em= t('user.update_field_parent_permission_required')
+          %br/
+        = f.select :us_state, us_state_options, {include_blank: t('school_info.select_state')}, disabled: @student_in_lockout_flow, required: true
+        = f.hidden_field :country_code, value: @country_code
   - if resource.teacher?
     .field
       = f.label :school, class: "label-bold"
@@ -128,18 +141,16 @@
   = form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put, id: 'lti-sync-settings-form'}) do |f|
     = f.hidden_field :lti_roster_sync_enabled
 
-- if current_user.student? && experiment_value('cpa-partial-lockout', request) && Cpa.cpa_experience(request) && Policies::ChildAccount.user_predates_policy?(current_user)
+- if @potentially_locked && experiment_value('cpa-partial-lockout', request)
   %div#lockout-linked-accounts{
     data: {
       request_date: @request_date&.iso8601,
       pending_email: @pending_email,
-      api_url: url_for(
-        action: :child_account_consent,
-        controller: :policy_compliance
-      ),
       permission_status: @permission_status,
       user_email: current_user.hashed_email,
-    }
+      in_section: JSON.dump(current_user.student? ? current_user.sections_as_student.present? : nil),
+      providers: JSON.dump(current_user.providers.filter_map(&:presence)),
+    },
   }
 
 -# Skip this section as ai-rubrics experiment needs to be unit aware
@@ -155,50 +166,62 @@
             = t('activerecord.attributes.user.ai_rubrics_disabled')
       %div= form.submit t('crud.update'), id: 'edit-ai-settings', class: 'btn btn-warning'
 
-- if current_user.migrated? && !(Policies::Lti.lti? current_user)
+- if current_user.migrated?
   -# Mount point for React ManageLinkedAccounts component.
   %div#manage-linked-accounts
 
 - if current_user.can_create_personal_login?
   %hr
   %h2= t('user.create_personal_login')
-  %p
-    = no_email ? t('user.create_personal_login_under_13_info') : t('user.create_personal_login_info')
-    = t('user.create_personal_login_link_account') if current_user.migrated?
-  = form_for(current_user, url: '/users/upgrade', html: {id: 'edit_user_create_personal_account'}, namespace: 'create_personal') do |form|
-    = form.hidden_field :hashed_email
-    %h3= t('user.enter_new_login_info')
-    - if no_email
-      = hidden_field_tag :noEmail, true
-      .field
-        = form.label t('user.create_personal_login_under_13_username'), class: "label-bold"
-        = form.text_field :username, maxlength: 255
+
+  %p#edit_user_create_personal_account_description
+    - if @locked
+      - if current_user.us_state.nil?
+        = t('user.create_personal_login_state_required')
+      - else
+        = t('user.create_personal_login_parental_permission_required')
     - else
+      = no_email ? t('user.create_personal_login_under_13_info') : t('user.create_personal_login_info')
+      = t('user.create_personal_login_link_account') if current_user.migrated?
+  .div{style: 'position: relative'}
+    = form_for(current_user, url: '/users/upgrade', html: {id: 'edit_user_create_personal_account', style: (@locked ? 'opacity: 0.25;' : '')}, namespace: 'create_personal') do |form|
+      = form.hidden_field :hashed_email
+      %h3= t('user.enter_new_login_info')
+      - if no_email
+        = hidden_field_tag :noEmail, true
+        .field
+          = form.label t('user.create_personal_login_under_13_username'), class: "label-bold"
+          = form.text_field :username, maxlength: 255, disabled: @locked
+      - else
+        .field
+          = form.label :personal_email, class: "label-bold" do
+            %span
+              = t('activerecord.attributes.user.personal_email_markdown', url: CDO.studio_url('users/edit/?noEmail=true'), markdown: :inline).html_safe
+          = form.email_field :email, placeholder: '', autocomplete: 'off', maxlength: 255
       .field
-        = form.label :personal_email, class: "label-bold" do
-          %span
-            = t('activerecord.attributes.user.personal_email_markdown', url: CDO.studio_url('users/edit/?noEmail=true'), markdown: :inline).html_safe
-        = form.email_field :email, placeholder: '', autocomplete: 'off', maxlength: 255
-    .field
-      = form.label :password, maxlength: 255, class: "label-bold"
-      = form.password_field :password, autocomplete: 'off', maxlength: 255
-    .field
-      = form.label :password_confirmation, class: "label-bold"
-      = form.password_field :password_confirmation, autocomplete: 'off', maxlength: 255
-    - if current_user.secret_word_account?
-      %h3= t('user.confirm_secret_words')
+        = form.label :password, maxlength: 255, class: "label-bold"
+        = form.password_field :password, autocomplete: 'off', maxlength: 255, disabled: @locked
       .field
-        = form.label :secret_words, class: "label-bold"
-        = form.text_field :secret_words, autocomplete: 'off', value: '', maxlength: 255
-    - if no_email
-      %h3= t('user.enter_parent_email')
-      .field
-        = form.label t('user.create_personal_login_under_13_parent_email'), class: "label-bold"
-        = form.text_field :parent_email, maxlength: 255
-    = t('user.create_personal_login_terms_markdown', terms_of_service_url: CDO.code_org_url('/tos'), markdown: true).html_safe
-    - unless no_email
-      = t('user.create_personal_login_email_note_markdown', privacy_policy_url: CDO.code_org_url('/privacy'), markdown: true).html_safe
-    %div= form.submit t('crud.submit'), id: 'create-personal-login', class: 'btn btn-warning'
+        = form.label :password_confirmation, class: "label-bold"
+        = form.password_field :password_confirmation, autocomplete: 'off', maxlength: 255
+      - if !@locked
+        - if current_user.secret_word_account?
+          %h3= t('user.confirm_secret_words')
+          .field
+            = form.label :secret_words, class: "label-bold"
+            = form.text_field :secret_words, autocomplete: 'off', value: '', maxlength: 255, disabled: @locked
+        - if no_email
+          %h3= t('user.enter_parent_email')
+          .field
+            = form.label t('user.create_personal_login_under_13_parent_email'), class: "label-bold"
+            = form.text_field :parent_email, maxlength: 255, disabled: @locked
+        = t('user.create_personal_login_terms_markdown', terms_of_service_url: CDO.code_org_url('/tos'), markdown: true).html_safe
+        - unless no_email
+          = t('user.create_personal_login_email_note_markdown', privacy_policy_url: CDO.code_org_url('/privacy'), markdown: true).html_safe
+        %div= form.submit t('crud.submit'), id: 'create-personal-login', class: 'btn btn-warning'
+    - if @locked
+      %div{style: 'position: absolute; left: 0; right: 0; top: 0; bottom: 0; display: flex; flex-direction: row; align-items: center; justify-content: center; pointer-events: none'}
+        %img{src: asset_path('auth/lock.svg'), style: 'width: 3rem; height: 3rem'}
 
 -# Separately-submittable form section allowing the user to edit their own
 -# account type.  We keep this separate because it's sometimes a multi-step

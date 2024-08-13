@@ -1,17 +1,14 @@
 :ruby
   @page_title = t('project.project_gallery')
   projects_data = {}
-  projects_data[:limitedGallery] = @limited_gallery
   projects_data[:currentTab] = @current_tab
   projects_data[:projectCount] = @project_count_millions
 
   if current_user
     projects_data[:canViewAdvancedTools] = !(current_user.under_13? && current_user.terms_version.nil?)
-    projects_data[:canShare] = !current_user&.sharing_disabled?
   end
 
   projects_data[:specialAnnouncement] = Announcements.get_announcement_for_page("/projects")
-  projects_data[:showPublicGalleryUpdatedInfo] = !!current_user
   projects_data[:recaptchaSiteKey] = CDO.recaptcha_site_key
 
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}

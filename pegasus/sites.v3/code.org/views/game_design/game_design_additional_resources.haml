@@ -1,0 +1,37 @@
+:ruby
+  block_items = [
+    {
+      title: hoc_s("game_design_page.additional_resources.catalog.title"),
+      img: "/images/action-blocks/action-block-catalog.png",
+      desc: hoc_s("game_design_page.additional_resources.catalog.desc"),
+      url: CDO.studio_url("/catalog"),
+      button_label: hoc_s("game_design_page.additional_resources.catalog.button"),
+    },
+    {
+      title: hoc_s("game_design_page.additional_resources.professional_learning.title"),
+      img: "/images/action-blocks/action-block-pl-superhero.png",
+      desc: hoc_s("game_design_page.additional_resources.professional_learning.desc"),
+      url: "/professional-learning",
+      button_label: hoc_s("game_design_page.additional_resources.professional_learning.button"),
+    },
+    {
+      title: hoc_s("game_design_page.additional_resources.hour_of_code.title"),
+      img: "/images/action-blocks/action-block-hoc.png",
+      desc: hoc_s("game_design_page.additional_resources.hour_of_code.desc"),
+      url: "/hourofcode",
+      button_label: hoc_s("game_design_page.additional_resources.hour_of_code.button"),
+    },
+  ]
+
+.action-block__wrapper.action-block__wrapper--three-col
+  - block_items.each do |block_item|
+    .action-block.action-block--one-col.flex-space-between
+      .content-wrapper
+        %h3
+          = block_item[:title]
+        %img{src: block_item[:img], alt: ""}
+        %p
+          = block_item[:desc]
+      .content-footer
+        %a.link-button{href: block_item[:url]}
+          = block_item[:button_label]

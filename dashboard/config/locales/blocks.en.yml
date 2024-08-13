@@ -1264,9 +1264,9 @@ en:
         text: make player do {STRENGTH} jump
         options:
           STRENGTH:
-            '6': small
-            '9': medium
-            '10': big
+            '10': small
+            '13': medium
+            '17': big
       GameDev_removeGroup:
         text: set {SPRITE} type to {GROUP}
         options:

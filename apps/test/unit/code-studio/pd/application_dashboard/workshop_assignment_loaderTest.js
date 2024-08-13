@@ -1,8 +1,9 @@
-import WorkshopAssignmentLoader from '@cdo/apps/code-studio/pd/application_dashboard/workshop_assignment_loader';
-import React from 'react';
-import {expect} from 'chai';
+import {expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import sinon from 'sinon';
+import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import WorkshopAssignmentLoader from '@cdo/apps/code-studio/pd/application_dashboard/workshop_assignment_loader';
 
 const defer = () => new Promise(resolve => setTimeout(resolve, 0));
 

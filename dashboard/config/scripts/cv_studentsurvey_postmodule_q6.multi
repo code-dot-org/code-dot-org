@@ -1,0 +1,8 @@
+name 'cv-studentsurvey-postmodule-q6'
+question 'Would you recommend the Computer Vision unit to other students?'
+right 'Definitely yes'
+right 'Probably yes'
+right 'Might or might not'
+right 'Probably no'
+right 'Definitely no'
+allow_multiple_attempts true

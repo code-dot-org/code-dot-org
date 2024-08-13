@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import ProgrammingExpressionEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingExpressionEditor';
-import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
-import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
-import {getStore, registerReducers} from '@cdo/apps/redux';
 import {Provider} from 'react-redux';
+
+import ProgrammingExpressionEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingExpressionEditor';
 import reducers, {
   initLevelSearching,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+import {getStore, registerReducers} from '@cdo/apps/redux';
+import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
+import ExpandableImageDialog from '@cdo/apps/templates/lessonOverview/ExpandableImageDialog';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   registerReducers({

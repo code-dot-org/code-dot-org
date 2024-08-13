@@ -1,6 +1,6 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import {CheckedRadioButton} from '@cdo/apps/lib/ui/CheckedRadioButton';
 
 const DEFAULT_PROPS = {
@@ -16,6 +16,6 @@ describe('CheckedRadioButton', () => {
     const wrapper = shallow(
       <CheckedRadioButton {...DEFAULT_PROPS} checked={true} />
     );
-    expect(wrapper.find('input').props().checked).to.equal(true);
+    expect(wrapper.find('input').props().checked).toBe(true);
   });
 });

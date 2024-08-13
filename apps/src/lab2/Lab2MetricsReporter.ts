@@ -59,6 +59,16 @@ export default class LabMetricsReporter {
     ]);
   }
 
+  public incrementCounter(
+    metricName: string,
+    dimensions: MetricDimension[] = []
+  ) {
+    MetricsReporter.incrementCounter(metricName, [
+      ...dimensions,
+      ...this.getCommonDimensions(),
+    ]);
+  }
+
   public reportSevereError(dimensions: MetricDimension[] = []) {
     MetricsReporter.incrementCounter('SevereError', [
       ...dimensions,

@@ -13,7 +13,9 @@ import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants'
 import i18n from '@cdo/locale';
 
 import AiAssessmentFeedback from './AiAssessmentFeedback';
-import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
+import AiAssessmentFeedbackContext, {
+  THUMBS_DOWN,
+} from './AiAssessmentFeedbackContext';
 import AiAssessmentFeedbackRadio from './AiAssessmentFeedbackRadio';
 import AiConfidenceBox from './AiConfidenceBox';
 import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
@@ -39,8 +41,6 @@ export default function AiAssessmentBox({
   aiEvalInfo,
   aiEvidence,
 }) {
-  const thumbsdownval = 0;
-
   const studentAchievement = () => {
     const assessment = getStudentAssessmentString();
     return i18n.aiStudentAssessment({
@@ -136,7 +136,9 @@ export default function AiAssessmentBox({
     );
   };
 
-  const {aiFeedback, setAiFeedback} = useContext(AiAssessmentFeedbackContext);
+  const {aiFeedback, setAiFeedback, aiFeedbackId, setAiFeedbackId} = useContext(
+    AiAssessmentFeedbackContext
+  );
 
   return (
     <div className={style.aiAssessmentInfoBlock}>
@@ -151,11 +153,15 @@ export default function AiAssessmentBox({
           <AiAssessmentFeedbackRadio
             onChosen={val => setAiFeedback(val)}
             aiEvalId={aiEvalInfo.id}
+            setAiFeedbackId={setAiFeedbackId}
           />
         </div>
       )}
-      {isAiAssessed && aiFeedback === thumbsdownval && (
-        <AiAssessmentFeedback aiEvalInfo={aiEvalInfo} />
+      {isAiAssessed && aiFeedback === THUMBS_DOWN && (
+        <AiAssessmentFeedback
+          aiEvalInfo={aiEvalInfo}
+          aiFeedbackId={aiFeedbackId}
+        />
       )}
       {isAiAssessed && aiEvidence && aiEvidence.length > 0 && (
         <div id="tour-ai-evidence">

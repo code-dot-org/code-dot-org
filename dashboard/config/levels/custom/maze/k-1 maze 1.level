@@ -1,7 +1,8 @@
 <Maze>
   <config><![CDATA[{
+  "published": true,
   "game_id": 25,
-  "created_at": "2014-05-07T17:04:10.000Z",
+  "created_at": "2022-02-16T19:37:58.000Z",
   "level_num": "custom",
   "user_id": 19,
   "properties": {
@@ -28,22 +29,33 @@
     "examples_required": "false",
     "disable_examples": "false",
     "instructions_important": "true",
-    "hint_prompt_attempts_threshold": 3,
-    "contained_level_names": null
+    "hint_prompt_attempts_threshold": "3",
+    "encrypted": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "show_type_hints": "false",
+    "maze_data": null,
+    "shape_shift": "false",
+    "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-07-08 09:13:39 -0400\",\"changed\":[\"toolbox_blocks\",\"recommended_blocks\",\"solution_blocks\",\"hint_prompt_attempts_threshold\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"}]",
   "level_concept_difficulty": {
     "sequencing": 2
   }
 }]]></config>
   <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" id="whenRun"/>
+      </xml>
+    </start_blocks>
     <toolbox_blocks>
       <xml>
         <block type="maze_moveNorth"/>
         <block type="maze_moveSouth"/>
         <block type="maze_moveEast"/>
-        <block type="maze_moveWest"/>
+        <block type="maze_moveWest" id="moveWest"/>
       </xml>
     </toolbox_blocks>
     <recommended_blocks>

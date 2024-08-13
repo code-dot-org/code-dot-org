@@ -1,0 +1,10 @@
+name 'game_variables_fix_choices_course-e'
+display_name 'These games do not work!'
+description 'Choose a game to fix.'
+
+sublevels
+level 'game_variables_fix_choices_d_course-e'
+level 'game_variables_fix_choices_e_course-e'
+level 'game_variables_fix_choices_f_course-e'
+level 'game_variables_fix_choices_g_course-e'
+level 'game_variables_fix_choices_c_course-e'

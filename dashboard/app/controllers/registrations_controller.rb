@@ -24,13 +24,9 @@ class RegistrationsController < Devise::RegistrationsController
     if PartialRegistration.in_progress?(session)
       user_params = params[:user] || ActionController::Parameters.new
       user_params[:user_type] ||= session[:default_sign_up_user_type]
-      if DCDO.get('student-email-post-enabled', false)
-        user_params[:email] ||= params[:email]
+      user_params[:email] ||= params[:email]
 
-        @user = User.new_with_session(user_params.permit(:user_type, :email), session)
-      else
-        @user = User.new_with_session(user_params.permit(:user_type), session)
-      end
+      @user = User.new_with_session(user_params.permit(:user_type, :email), session)
     else
       save_default_sign_up_user_type
       SignUpTracking.begin_sign_up_tracking(session, split_test: true)
@@ -59,14 +55,24 @@ class RegistrationsController < Devise::RegistrationsController
     @user = User.new(begin_sign_up_params)
     @user.validate_for_finish_sign_up
     SignUpTracking.log_begin_sign_up(@user, session)
-    is_signup_post_enabled = DCDO.get('student-email-post-enabled', false)
 
     if @user.errors.blank?
       PartialRegistration.persist_attributes(session, @user)
-      redirect_to new_user_registration_path and return unless is_signup_post_enabled
     end
 
     render 'new'
+  end
+
+  #
+  # Get /users/new_sign_up
+  #
+  def new_sign_up
+    render 'new_sign_up'
+  end
+
+  # Part of the new sign up flow - work in progress
+  def account_type
+    view_options(full_width: true, responsive_content: true)
   end
 
   #
@@ -125,10 +131,16 @@ class RegistrationsController < Devise::RegistrationsController
 
     if current_user && current_user.errors.blank?
       if current_user.teacher?
-        if MailJet.enabled? && request.locale != 'es-MX'
-          MailJet.create_contact_and_send_welcome_email(current_user)
-        else
-          TeacherMailer.new_teacher_email(current_user, request.locale).deliver_now
+        begin
+          MailJet.create_contact_and_send_welcome_email(current_user, request.locale)
+        rescue => exception
+          # If the welcome email fails to send, we don't want to disrupt
+          # sign up, but we do want to know about it.
+          Honeybadger.notify(
+            exception,
+            error_message: 'Failed to send MailJet welcome email',
+            context: {}
+          )
         end
       end
       ParentMailer.parent_email_added_to_student_account(current_user.parent_email, current_user).deliver_now if current_user.parent_email.present?
@@ -257,6 +269,7 @@ class RegistrationsController < Devise::RegistrationsController
     student_information[:us_state] = params[:user][:us_state] unless current_user.user_provided_us_state
     student_information[:user_provided_us_state] = params[:user][:us_state].present? unless current_user.user_provided_us_state
     student_information[:gender_student_input] = params[:user][:gender_student_input] if current_user.gender.blank?
+    student_information[:country_code] = params[:user][:country_code] if current_user.country_code.blank?
 
     current_user.update(student_information) unless student_information.empty?
   end
@@ -388,22 +401,41 @@ class RegistrationsController < Devise::RegistrationsController
   #
   def edit
     @permission_status = current_user.child_account_compliance_state
-    @personal_account_linking_enabled = true
 
-    # Backfill us_state for pre-CPA students
-    if current_user.student? && current_user.us_state.nil?
-      Services::ChildAccount.update_us_state_from_teacher!(current_user)
-    end
+    # Get the request location
+    location = Geocoder.search(request.ip).try(:first)
+    @country_code = location&.country_code.to_s.upcase
+    @is_usa = ['US', 'RD'].include?(@country_code)
+
+    # We determine if the student is potentially locked by looking at their age
+    # If they are older (or there is no policy for them) they are unlocked
+    # This ignores them being explicitly unlocked by parental permission so we
+    # can show the 'Granted' status of that permission later.
+    @potentially_locked = Policies::ChildAccount.underage?(current_user)
+
+    # The student is in a 'lockout' flow if they are potentially locked out and not unlocked
+    @student_in_lockout_flow = @potentially_locked && !Policies::ChildAccount::ComplianceState.permission_granted?(current_user)
+    # We need to also account for the case when the US State is not specified
+    # All students are locked out of account settings features until they specify these
+    @locked = @student_in_lockout_flow || current_user.country_code.nil? || current_user.us_state.nil?
+    # Only for students
+    @locked &&= current_user.student?
+    # Only for US-based requests
+    @locked &&= @is_usa
+    # Put this behind an experiment flag for now
+    @locked &&= !!experiment_value('cpa-partial-lockout', request)
+
+    @personal_account_linking_enabled = !@locked
 
     # Handle users who aren't locked out, but still need parent permission to link personal accounts.
-    if Policies::ChildAccount.user_predates_policy?(current_user)
-      permission_request = Queries::ChildAccount.latest_permission_request(current_user)
+    if @potentially_locked
+      permission_request = current_user.latest_parental_permission_request
       @pending_email = permission_request&.parent_email
       @request_date = permission_request&.updated_at || Date.new
-      @personal_account_linking_enabled = false unless Policies::ChildAccount.compliant?(current_user)
-    end
 
-    @personal_account_linking_enabled = true unless experiment_value('cpa-partial-lockout', request)
+      partially_locked = Policies::ChildAccount.partially_locked_out?(current_user) && experiment_value('cpa-partial-lockout', request)
+      @personal_account_linking_enabled = false if partially_locked
+    end
   end
 
   private def update_user_email

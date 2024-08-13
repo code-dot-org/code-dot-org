@@ -1,14 +1,18 @@
 /** @overview Component for adding a key/value pair row. */
-import PendingButton from '../../templates/PendingButton';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import {castValue} from './dataUtils';
-import dataStyles from './data-styles.module.scss';
-import classNames from 'classnames';
-import {WarningType} from '../constants';
+
 import msg from '@cdo/locale';
-import {refreshCurrentDataView} from './loadDataForView';
+
+import PendingButton from '../../legacySharedComponents/PendingButton';
+import {WarningType} from '../constants';
 import {storageBackend} from '../storage';
+
+import {castValue} from './dataUtils';
+import {refreshCurrentDataView} from './loadDataForView';
+
+import dataStyles from './data-styles.module.scss';
 
 const INITIAL_STATE = {
   isAdding: false,

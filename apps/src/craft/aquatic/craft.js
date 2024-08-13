@@ -7,6 +7,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import {getCodeBlocks} from '@cdo/apps/blockly/utils';
 import {TestResults} from '@cdo/apps/constants';
 import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
 import reducers from '@cdo/apps/craft/redux';
@@ -582,7 +583,7 @@ Craft.executeUserCode = function () {
   };
 
   // Run user code.
-  let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
+  let codeBlocks = getCodeBlocks();
   code += Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
   interpreter = CustomMarshalingInterpreter.evalWith(
     code,

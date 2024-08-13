@@ -12,8 +12,6 @@ import {
 } from '@cdo/apps/templates/progress/BubbleFactory';
 import color from '@cdo/apps/util/color';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 describe('BubbleBadge', () => {
   it('renders an AssessmentBadge for BadgeType.assessment', () => {
     const wrapper = shallow(
@@ -23,7 +21,7 @@ describe('BubbleBadge', () => {
         bubbleShape={BubbleShape.circle}
       />
     );
-    expect(wrapper.find(AssessmentBadge)).to.have.lengthOf(1);
+    expect(wrapper.find(AssessmentBadge)).toHaveLength(1);
   });
 
   it('renders a KeepWorkingBadge for BadgeType.keepWorking', () => {
@@ -34,7 +32,7 @@ describe('BubbleBadge', () => {
         bubbleShape={BubbleShape.circle}
       />
     );
-    expect(wrapper.find(KeepWorkingBadge)).to.have.lengthOf(1);
+    expect(wrapper.find(KeepWorkingBadge)).toHaveLength(1);
   });
 
   it('renders nothing for dot bubbles and KeepWorking badge for letter bubbles', () => {
@@ -52,8 +50,8 @@ describe('BubbleBadge', () => {
         bubbleShape={BubbleShape.circle}
       />
     );
-    expect(letter.find(KeepWorkingBadge)).to.have.lengthOf(1);
-    expect(dot).to.be.empty;
+    expect(letter.find(KeepWorkingBadge)).toHaveLength(1);
+    expect(Object.keys(dot)).toHaveLength(0);
   });
 
   it('positions the element correctly is bubbleShape is not a diamond for assessment badge', () => {
@@ -64,8 +62,8 @@ describe('BubbleBadge', () => {
         bubbleSize={BubbleSize.full}
       />
     );
-    expect(wrapper.find('div').props().style.top).to.equal(-7);
-    expect(wrapper.find('div').props().style.right).to.equal(-7);
+    expect(wrapper.find('div').props().style.top).toBe(-7);
+    expect(wrapper.find('div').props().style.right).toBe(-7);
   });
 
   it('positions the element correctly is bubbleShape is a diamond for assessment badge', () => {
@@ -76,16 +74,14 @@ describe('BubbleBadge', () => {
         bubbleSize={BubbleSize.full}
       />
     );
-    expect(wrapper.find('div').props().style.top).to.equal(-13);
-    expect(wrapper.find('div').props().style.right).to.equal(-17);
+    expect(wrapper.find('div').props().style.top).toBe(-13);
+    expect(wrapper.find('div').props().style.right).toBe(-17);
   });
 
   describe('KeepWorkingBadge', () => {
     it('has a red background', () => {
       const wrapper = mount(<KeepWorkingBadge />);
-      expect(wrapper.find('div').props().style.backgroundColor).to.equal(
-        color.red
-      );
+      expect(wrapper.find('div').props().style.backgroundColor).toBe(color.red);
     });
   });
 
@@ -94,20 +90,18 @@ describe('BubbleBadge', () => {
       const wrapper = mount(<AssessmentBadge />);
       expect(
         wrapper.find('FontAwesome[icon="circle"]').props().style.color
-      ).to.equal(color.purple);
+      ).toBe(color.purple);
     });
 
     it('has a check icon', () => {
       const wrapper = mount(<AssessmentBadge />);
-      expect(wrapper.find('FontAwesome[icon="check"]')).to.have.length(1);
+      expect(wrapper.find('FontAwesome[icon="check"]')).toHaveLength(1);
     });
 
-    it('displays a white border when hasWhiteBorder is true', () => {
+    describe('displays a white border when hasWhiteBorder is true', () => {
       it('has a exclamation icon', () => {
         const wrapper = mount(<AssessmentBadge hasWhiteBorder={true} />);
-        expect(wrapper.find('FontAwesome[icon="circle-thin"]')).to.have.length(
-          1
-        );
+        expect(wrapper.find('FontAwesome[icon="circle-thin"]')).toHaveLength(1);
       });
     });
   });

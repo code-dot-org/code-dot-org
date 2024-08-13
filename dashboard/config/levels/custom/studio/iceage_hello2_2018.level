@@ -15,7 +15,7 @@
     "default_emotion": 1,
     "success_condition": "function successCondition() {\r\n\t      return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 1;\r\n\t    }",
     "short_instructions": "Help Manny and Sid greet each other by using the the `actor ___ say` block twice.",
-    "callout_json": "[{\"localization_key\":\"playlab_use_twice\",\"callout_text\":null,\"element_id\":\"[block-id='1']\",\"qtip_config\":{\"position\":{\"my\":\"top left\",\"at\":\"bottom left\",\"adjust\":{\"x\":62,\"y\":0}}},\"on\":null}]",
+    "callout_json": "[{\"localization_key\":\"playlab_use_twice\",\"callout_text\":null,\"element_id\":\"[block-id='1']\",\"qtip_config\":{\"position\":{\"my\":\"top left\",\"at\":\"bottom left\",\"adjust\":{\"x\":62,\"y\":0}}},\"on\":null},{\"element_id\":\"[data-id='1']\",\"localization_key\":\"playlab_use_twice\",\"callout_text\":null,\"qtip_config\":{\"position\":{\"my\":\"top left\",\"at\":\"bottom left\",\"adjust\":{\"x\":62,\"y\":0}}},\"on\":null}]",
     "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":16,\"sprite\":1},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"sprite\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
     "long_instructions": "Manny (actor 2) found Sid (actor 1) and wants to invite him on an adventure. Help them greet each other by using the the `actor ___ say` block twice.",
@@ -48,7 +48,7 @@
     "sprites_hidden_to_start": "false",
     "remove_items_when_actor_collides": "false",
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
@@ -57,7 +57,7 @@
   <blocks>
     <start_blocks>
       <xml>
-        <block type="when_run" deletable="false" x="20" y="20"/>
+        <block type="when_run" deletable="false" x="20" y="20" id="1"/>
       </xml>
     </start_blocks>
     <toolbox_blocks>

@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 const assets = require('@cdo/apps/code-studio/assets');
 const project = require('@cdo/apps/code-studio/initApp/project');
@@ -12,7 +12,15 @@ export {
 } from './throwOnConsole';
 export {clearTimeoutsBetweenTests} from './clearTimeoutsBetweenTests';
 
-export function setExternalGlobals(beforeFunc = before, afterFunc = after) {
+/**
+ * Temporarily support switching between mocha 'before' and jest 'beforeAll'.
+ *
+ * todo: Remove this code when Karma is fully removed
+ */
+export function setExternalGlobals(
+  beforeFunc = typeof beforeAll === 'function' ? beforeAll : before,
+  afterFunc = typeof afterAll === 'function' ? afterAll : after
+) {
   // Temporary: Provide React on window while we still have a direct dependency
   // on the global due to a bad code-studio/apps interaction.
   window.React = React;
@@ -299,8 +307,8 @@ export function sandboxDocumentBody(runOncePerTest = true) {
     beforeEach(storeBody);
     afterEach(restoreBody);
   } else {
-    before(storeBody);
-    after(restoreBody);
+    beforeAll(storeBody);
+    afterAll(restoreBody);
   }
 }
 
@@ -393,8 +401,8 @@ export function enforceDocumentBodyCleanup(
  */
 export function stubWindowDashboard(value) {
   let originalDashboard;
-  before(() => (originalDashboard = window.dashboard));
-  after(() => (window.dashboard = originalDashboard));
+  beforeAll(() => (originalDashboard = window.dashboard));
+  afterAll(() => (window.dashboard = originalDashboard));
   beforeEach(() => (window.dashboard = value));
 }
 
@@ -414,7 +422,7 @@ export function stubWindowDashboard(value) {
  */
 export function stubWindowPegasus(value) {
   let originalPegasus;
-  before(() => (originalPegasus = window.pegasus));
-  after(() => (window.pegasus = originalPegasus));
+  beforeAll(() => (originalPegasus = window.pegasus));
+  afterAll(() => (window.pegasus = originalPegasus));
   beforeEach(() => (window.pegasus = value));
 }

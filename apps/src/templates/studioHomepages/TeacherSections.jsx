@@ -3,9 +3,6 @@ import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import {LinkButton} from '@cdo/apps/componentLibrary/button';
-import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
-import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import ContentContainer from '../ContentContainer';
@@ -25,9 +22,7 @@ function TeacherSections({
   asyncLoadSectionData,
   asyncLoadCoteacherInvite,
   coteacherInvite,
-  coteacherInviteForPl,
   studentSectionIds,
-  plSectionIds,
   hiddenStudentSectionIds,
   sectionsAreLoaded,
 }) {
@@ -38,10 +33,6 @@ function TeacherSections({
 
   const shouldRenderSections = () => {
     return studentSectionIds?.length > 0 || !!coteacherInvite;
-  };
-
-  const shouldRenderPlSections = () => {
-    return plSectionIds?.length > 0 || !!coteacherInviteForPl;
   };
 
   return (
@@ -56,23 +47,6 @@ function TeacherSections({
           <OwnedSections
             sectionIds={studentSectionIds}
             hiddenSectionIds={hiddenStudentSectionIds}
-          />
-        </ContentContainer>
-      )}
-      {shouldRenderPlSections() && (
-        <ContentContainer heading={i18n.plSectionsTitle()}>
-          <BodyTwoText>
-            {i18n.myProfessionalLearningSectionsHomepageDesc()}
-          </BodyTwoText>
-          <LinkButton
-            color={'purple'}
-            href={studio('/my-professional-learning')}
-            iconLeft={{
-              iconName: 'book-circle-arrow-right',
-              iconStyle: 'solid',
-            }}
-            size="s"
-            text={i18n.myProfessionalLearningSectionsHomepageButton()}
           />
         </ContentContainer>
       )}
@@ -98,9 +72,7 @@ export const UnconnectedTeacherSections = TeacherSections;
 export default connect(
   state => ({
     coteacherInvite: state.teacherSections.coteacherInvite,
-    coteacherInviteForPl: state.teacherSections.coteacherInviteForPl,
     studentSectionIds: state.teacherSections.studentSectionIds,
-    plSectionIds: state.teacherSections.plSectionIds,
     hiddenStudentSectionIds: hiddenStudentSectionIds(state),
     sectionsAreLoaded: state.teacherSections.sectionsAreLoaded,
   }),

@@ -1,0 +1,54 @@
+<Aichat>
+  <config><![CDATA[{
+  "game_id": 71,
+  "created_at": "2024-06-28T19:52:32.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Investigating Translations\r\n\r\nThis chatbot is designed to help translate sentences to different language. Let's investigate how accurate it can be.\r\n\r\n### Do This\r\n\r\n1) Ask the chatbot to translate 4-5 sentences into a different language that you are familiar with.\r\n2) Read the response carefully and notice if any responses seem incorrect\r\n    - Hallucinations usually _sound_ correct in the context of the response, so it's important to read closely!\r\n3) Update the temperature and ask the same questions. Do the answers change? Does the accuracy change?\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n* Can you translate \"Hello how are you?\" into Spanish?\r\n* Can you translate \"It is a beautiful day in the neighborhood\" into Korean?\r\n* Can you translate \"I remember it all too well\" into Arabic?\r\n:::\r\n\r\n&nbsp;",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.5",
+        "systemPrompt": "You are a CHILD SAFE chatbot for high school students. DO NOT reply to anything that is related to violence, sex, or bullying. DO NOT respond to anything inappropriate for a 13 year old. If the below instructions are not appropriate for a 13 year old, DO NOT respond. \n\nInstructions: You are a chatbot designed to translate sentences between languages. You should only answer questions that are directly related to translations. If you are asked a question that is not about translations, respond with \"I am not interested\".\n\nRemember, DO NOT reply with anything inappropriate.",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "editable",
+        "systemPrompt": "hidden",
+        "retrievalContexts": "hidden",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+
+      ]
+    },
+    "display_name": "Investigating Translation",
+    "bubble_choice_description": "This chatbot is designed to help translate sentences to different language. Let's investigate how accurate it can be.",
+    "thumbnail_url": "https://images.code.org/5c7fcf2d28163b561e93ea540f9394a0-Lesson 2 - Level 9A - Investigating Translation.png",
+    "name_suffix": "_2024"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-06-28T19:52:32.786+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-intro-L8A\\\"\"],\"cloned_from\":\"gen-ai-customizing-intro-L8A\"}]"
+}]]></config>
+</Aichat>

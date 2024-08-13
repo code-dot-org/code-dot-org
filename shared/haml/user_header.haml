@@ -30,11 +30,12 @@
 %script{data: {"amplitude-api-key": CDO.safe_amplitude_api_key}}
 %script{data: {'statsig-api-client-key': CDO.safe_statsig_api_client_key}}
 %script{data: {'managed-test-server': "#{CDO.running_web_application? && CDO.test_system?}"}}
+= render inline: File.read(shared_dir('haml/user_header_statsig_reporter.haml')), type: :haml
 
 - if show_create_menu
-  .header_button.create_menu{id: "header_create_menu", tabindex: 0, role: "button"}
+  .header_button.create_menu{id: "header_create_menu", tabindex: 0, role: "button", class: user_type ? "hide-mobile" : "show-small-desktop"}
     %span.create_button
-      = I18n.t("#{loc_prefix}create")
+      = I18n.t("#{loc_prefix}new_project_low_cap")
     &nbsp;
     %i.create_menu_arrow_down{class: "fa fa-caret-down"}
     %i.create_menu_arrow_up{class: "fa fa-caret-up", style: "display: none"}
@@ -88,12 +89,16 @@
       %a.linktag#user-edit{href: CDO.studio_url('users/edit')}= I18n.t("#{loc_prefix}settings")
       %a.linktag#user-signout{href: CDO.studio_url('users/sign_out')}= I18n.t("#{loc_prefix}logout")
 - else
-  %a.linktag{href: CDO.studio_url('users/sign_in'), class: 'button-signin', id: 'signin_button'}
+  %a.linktag{href: CDO.studio_url('users/sign_in'), class: 'button-signin desktop', id: 'signin_button'}
     .header_button.header_user#header_user_signin
       %span= I18n.t("#{loc_prefix}signin")
       .signin_callout_wrapper
+  -# Create Acount button for the A/B test
+  %a.linktag{href: CDO.studio_url('users/sign_up'), class: 'button-create-account desktop', id: 'create_account_button', style: "display:none"}
+    .header_button.header_user#header_user_create_account
+      %span= I18n.t("#{loc_prefix}create_account_low_cap")
 
-= render inline: File.read(shared_dir('haml/user_header_event_logger.haml')), type: :haml, locals: {is_signed_out: user_type.nil?, create_menu_options: create_drop_down_items&.map{|entry| entry[:title]}&.append("view_all")}
+= render inline: File.read(shared_dir('haml/user_header_event_logger.haml')), type: :haml, locals: {is_signed_out: user_type.nil?, user_type: user_type, page_controller_name: params[:controller], page_action_name: params[:action], create_menu_options: create_drop_down_items&.map{|entry| entry[:title]}&.append("view_all")}
 
 :javascript
   window.cookieEnvSuffix = '#{rack_env?(:production) ? '' : "_#{rack_env}"}';

@@ -1,14 +1,14 @@
-import ChartApi from './ChartApi';
-import EventSandboxer from './EventSandboxer';
-import sanitizeHtml from './sanitizeHtml';
-import * as utils from '../utils';
-import elementLibrary from './designElements/library';
-import * as elementUtils from './designElements/elementUtils';
-import * as setPropertyDropdown from './setPropertyDropdown';
+import $ from 'jquery';
+
+import i18n from '@cdo/applab/locale';
+import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
+import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
+import {commands as mlCommands} from '@cdo/apps/lib/util/mlApi';
+import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
+import * as makerCommands from '@cdo/apps/maker/commands';
+import {rateLimit} from '@cdo/apps/storage/rateLimit';
+
 import * as assetPrefix from '../assetManagement/assetPrefix';
-import applabTurtle from './applabTurtle';
-import ChangeEventHandler from './ChangeEventHandler';
-import logToCloud from '../logToCloud';
 import {
   OPTIONAL,
   apiValidateType,
@@ -17,21 +17,23 @@ import {
   outputError,
   outputWarning,
 } from '../lib/util/javascriptMode';
-import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
-import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
-import {commands as mlCommands} from '@cdo/apps/lib/util/mlApi';
-import * as makerCommands from '@cdo/apps/lib/kits/maker/commands';
-import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
-import {actions, REDIRECT_RESPONSE} from './redux/applab';
+import logToCloud from '../logToCloud';
 import {getStore} from '../redux';
-import $ from 'jquery';
-import i18n from '@cdo/applab/locale';
-import {rateLimit} from '@cdo/apps/storage/rateLimit';
+import * as utils from '../utils';
+
+import applabTurtle from './applabTurtle';
+import ChangeEventHandler from './ChangeEventHandler';
+import ChartApi from './ChartApi';
+import {ICON_PREFIX_REGEX} from './constants';
+import * as elementUtils from './designElements/elementUtils';
+import elementLibrary from './designElements/library';
+import EventSandboxer from './EventSandboxer';
+import {actions, REDIRECT_RESPONSE} from './redux/applab';
+import sanitizeHtml from './sanitizeHtml';
+import * as setPropertyDropdown from './setPropertyDropdown';
 
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
-
-import {ICON_PREFIX_REGEX} from './constants';
 
 var applabCommands = {};
 export default applabCommands;
@@ -2018,7 +2020,10 @@ applabCommands.updateRecord = function (opts) {
     return;
   }
   var onComplete = applabCommands.handleUpdateRecord.bind(this, opts);
-  var onError = opts.onError || getAsyncOutputWarning();
+  var onError = error => {
+    getAsyncOutputWarning()(error);
+    onComplete(null, false);
+  };
   try {
     rateLimit();
     Applab.storage.updateRecord(opts.table, opts.record, onComplete, onError);
@@ -2081,7 +2086,10 @@ applabCommands.deleteRecord = function (opts) {
     return;
   }
   var onComplete = applabCommands.handleDeleteRecord.bind(this, opts);
-  var onError = opts.onError || getAsyncOutputWarning();
+  var onError = error => {
+    getAsyncOutputWarning()(error);
+    onComplete(false);
+  };
   try {
     rateLimit();
     Applab.storage.deleteRecord(opts.table, opts.record, onComplete, onError);

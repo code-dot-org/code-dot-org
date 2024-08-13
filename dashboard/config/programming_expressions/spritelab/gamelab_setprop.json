@@ -1,14 +1,14 @@
 {
   "key": "gamelab_setProp",
   "name": "set sprite property",
-  "category": "Sprites",
+  "category": "Actions",
   "category_key": "actions",
   "block_name": "gamelab_setProp",
-  "content": "Sets the property of a sprite or group of sprites to a given value.\r\n\r\nYou can change or set a sprite’s properties. Properties control things like a sprite’s size, rotation, and position. These properties are:\r\n\r\n- Size - the size of the sprite by percentage. 100 is the full, default size. Any number less than 100 makes the sprite smaller, and any number larger will make the sprite bigger.\r\n- Rotation - the direction or rotation the sprite is facing in degrees, 0 to 359.\r\n- x position - the x position of the center of the sprite. To remain on the canvas, this should be a number between 0 and 400. “0” is the normal default direction.\r\n- y position - the y position of the center of the sprite. To remain on the canvas, this should be a number between 0 and 400.\r\n- Movement direction - the direction the sprite travels with the [`move forward`(#5ef3ff)](/docs/spritelab/gamelab_moveForward/) block. “0” is the default value and moves the sprite right (east). “180” moves the sprite left (west).\r\n\r\n(Opens YouTube in new tab)\r\n\r\n[![How To Make A Sprite](https://img.youtube.com/vi/wbTJpx3driA/0.jpg)](https://www.youtube.com/watch?v=wbTJpx3driA)",
+  "content": "Sets the property of a sprite or group of sprites to a given value.\n\nYou can change or set a sprite’s properties. Properties control things like a sprite’s size, rotation, and position. These properties are:\n\n- Size - the size of the sprite by percentage. 100 is the full, default size. Any number less than 100 makes the sprite smaller, and any number larger will make the sprite bigger.\n- Rotation - the direction or rotation the sprite is facing in degrees, 0 to 359.\n- x position - the x position of the center of the sprite. To remain on the canvas, this should be a number between 0 and 400. 0 is the normal default direction.\n- y position - the y position of the center of the sprite. To remain on the canvas, this should be a number between 0 and 400. 0 is the normal default direction.\n- Movement direction - the direction the sprite travels with the [`move forward`(#5ef3ff)](/docs/spritelab/gamelab_moveForward/) block. 0 is the default value and moves the sprite right (east). 180 moves the sprite left (west).\n\n(Opens YouTube in new tab)\n\n[How To Make A Sprite (https://img.youtube.com/vi/wbTJpx3driA/0.jpg)](https://www.youtube.com/watch?v=wbTJpx3driA)",
   "examples": [
     {
       "name": "Example 1",
-      "description": "Each sprite is set to a different size.",
+      "description": "When the rhino is clicked, each sprite is set to a different size.",
       "app": "https://studio.code.org/projects/spritelab/LLivCo_Re1h4pHsRFRnS2L68tpF6RFPfinwb_dAyu2w",
       "image": null,
       "app_display_type": "embedAppWithCode",
@@ -16,7 +16,7 @@
     },
     {
       "name": "Example 2",
-      "description": "Each sprite is set to a different rotation.",
+      "description": "When the rhino is clicked, each sprite is set to a different rotation.",
       "app": "https://studio.code.org/projects/spritelab/Ems0tkcP45ZIBWpmWwCNkMabLNrQorCCiXlN7hOJVLI",
       "image": null,
       "app_display_type": "embedAppWithCode",

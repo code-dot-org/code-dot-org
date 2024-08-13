@@ -1,30 +1,35 @@
 import $ from 'jquery';
-import sinon from 'sinon';
-import {expect} from '../util/reconfiguredChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import {assets as assetsApi} from '@cdo/apps/clientApi';
+import {listStore} from '@cdo/apps/code-studio/assets';
+import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
+import project from '@cdo/apps/code-studio/initApp/project';
+import * as redux from '@cdo/apps/redux';
+import * as commonReducers from '@cdo/apps/redux/commonReducers';
+import {resetIdleTime} from '@cdo/apps/redux/studioAppActivity';
+import Sounds from '@cdo/apps/Sounds';
 import {
   singleton as studioApp,
   stubStudioApp,
   restoreStudioApp,
   makeFooterMenuItems,
 } from '@cdo/apps/StudioApp';
-import Sounds from '@cdo/apps/Sounds';
-import {assets as assetsApi} from '@cdo/apps/clientApi';
-import {listStore} from '@cdo/apps/code-studio/assets';
-import * as commonReducers from '@cdo/apps/redux/commonReducers';
-import * as redux from '@cdo/apps/redux';
-import project from '@cdo/apps/code-studio/initApp/project';
+import * as utils from '@cdo/apps/utils';
+
+import {expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import setBlocklyGlobal from '../util/setupBlocklyGlobal';
 import {
   sandboxDocumentBody,
   replaceOnWindow,
   restoreOnWindow,
 } from '../util/testUtils';
+
 import sampleLibrary from './code-studio/components/libraries/sampleLibrary.json';
-import {createLibraryClosure} from '@cdo/apps/code-studio/components/libraries/libraryParser';
-import * as utils from '@cdo/apps/utils';
-import {resetIdleTime} from '@cdo/apps/redux/studioAppActivity';
 
 describe('StudioApp', () => {
   sandboxDocumentBody();
+  setBlocklyGlobal();
 
   describe('StudioApp.singleton', () => {
     let containerDiv, codeWorkspaceDiv;

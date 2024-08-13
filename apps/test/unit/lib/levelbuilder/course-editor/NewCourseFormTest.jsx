@@ -1,6 +1,6 @@
-import {expect} from '../../../../util/reconfiguredChai';
-import React from 'react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+
 import NewCourseForm from '@cdo/apps/lib/levelbuilder/course-editor/NewCourseForm';
 
 describe('NewCourseFormTest', () => {
@@ -26,21 +26,21 @@ describe('NewCourseFormTest', () => {
 
   it('save button shows up once you have selected family name and version year', () => {
     const wrapper = mount(<NewCourseForm {...defaultProps} />);
-    expect(wrapper.find('button').length).to.equal(0);
+    expect(wrapper.find('button').length).toBe(0);
     let fields = wrapper.find('NewCourseFields');
-    expect(fields.length).to.equal(1);
+    expect(fields.length).toBe(1);
 
-    expect(fields.find('.familyNameSelector').length).to.equal(1);
+    expect(fields.find('.familyNameSelector').length).toBe(1);
 
-    expect(fields.find('isVersionedSelector').length).to.equal(0);
+    expect(fields.find('isVersionedSelector').length).toBe(0);
     fields
       .find('.familyNameSelector')
       .simulate('change', {target: {value: 'family-1'}});
 
     // need to get updated fields
     fields = wrapper.find('NewCourseFields');
-    expect(fields.find('.isVersionedSelector').length).to.equal(1);
-    expect(wrapper.find('button').length).to.equal(1);
+    expect(fields.find('.isVersionedSelector').length).toBe(1);
+    expect(wrapper.find('button').length).toBe(1);
 
     fields
       .find('.isVersionedSelector')
@@ -48,11 +48,9 @@ describe('NewCourseFormTest', () => {
 
     // need to get updated fields
     fields = wrapper.find('NewCourseFields');
-    expect(fields.find('.versionYearSelector').length).to.equal(1);
-    expect(fields.find('.versionYearSelector').props().disabled).to.equal(
-      false
-    );
-    expect(wrapper.find('button').length).to.equal(1);
+    expect(fields.find('.versionYearSelector').length).toBe(1);
+    expect(fields.find('.versionYearSelector').props().disabled).toBe(false);
+    expect(wrapper.find('button').length).toBe(1);
 
     fields
       .find('.versionYearSelector')
@@ -60,35 +58,35 @@ describe('NewCourseFormTest', () => {
 
     // need to get updated fields
     fields = wrapper.find('NewCourseFields');
-    expect(fields.find('.versionYearSelector').props().value).to.equal('1991');
+    expect(fields.find('.versionYearSelector').props().value).toBe('1991');
 
-    expect(wrapper.find('button').length).to.equal(2);
+    expect(wrapper.find('button').length).toBe(2);
   });
 
   it('course type settings are updated when family name is selected', () => {
     const wrapper = mount(<NewCourseForm {...defaultProps} />);
     let fields = wrapper.find('NewCourseFields');
-    expect(fields.length).to.equal(1);
+    expect(fields.length).toBe(1);
 
-    expect(fields.find('.familyNameSelector').length).to.equal(1);
+    expect(fields.find('.familyNameSelector').length).toBe(1);
 
-    expect(fields.find('isVersionedSelector').length).to.equal(0);
-    expect(fields.find('CourseTypeEditor').length).to.equal(0);
+    expect(fields.find('isVersionedSelector').length).toBe(0);
+    expect(fields.find('CourseTypeEditor').length).toBe(0);
     fields
       .find('.familyNameSelector')
       .simulate('change', {target: {value: 'family-1'}});
 
     // need to get updated fields
     fields = wrapper.find('NewCourseFields');
-    expect(fields.find('.isVersionedSelector').length).to.equal(1);
-    expect(fields.find('CourseTypeEditor').length).to.equal(1);
-    expect(fields.find('CourseTypeEditor').props().instructorAudience).to.equal(
+    expect(fields.find('.isVersionedSelector').length).toBe(1);
+    expect(fields.find('CourseTypeEditor').length).toBe(1);
+    expect(fields.find('CourseTypeEditor').props().instructorAudience).toBe(
       'teacher'
     );
-    expect(
-      fields.find('CourseTypeEditor').props().participantAudience
-    ).to.equal('student');
-    expect(fields.find('CourseTypeEditor').props().instructionType).to.equal(
+    expect(fields.find('CourseTypeEditor').props().participantAudience).toBe(
+      'student'
+    );
+    expect(fields.find('CourseTypeEditor').props().instructionType).toBe(
       'teacher_led'
     );
 
@@ -98,15 +96,15 @@ describe('NewCourseFormTest', () => {
 
     // need to get updated fields
     fields = wrapper.find('NewCourseFields');
-    expect(fields.find('.isVersionedSelector').length).to.equal(1);
-    expect(fields.find('CourseTypeEditor').length).to.equal(1);
-    expect(fields.find('CourseTypeEditor').props().instructorAudience).to.equal(
+    expect(fields.find('.isVersionedSelector').length).toBe(1);
+    expect(fields.find('CourseTypeEditor').length).toBe(1);
+    expect(fields.find('CourseTypeEditor').props().instructorAudience).toBe(
       'universal_instructor'
     );
-    expect(
-      fields.find('CourseTypeEditor').props().participantAudience
-    ).to.equal('teacher');
-    expect(fields.find('CourseTypeEditor').props().instructionType).to.equal(
+    expect(fields.find('CourseTypeEditor').props().participantAudience).toBe(
+      'teacher'
+    );
+    expect(fields.find('CourseTypeEditor').props().instructionType).toBe(
       'self_paced'
     );
   });

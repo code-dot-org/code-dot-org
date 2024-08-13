@@ -4,14 +4,15 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSC",
       "is_course": true,
       "is_migrated": true,
       "version_year": "2024"
     },
     "new_name": null,
     "family_name": "grade5-maker",
-    "serialized_at": "2024-05-07 21:31:01 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-07-19 21:57:27 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -536,8 +537,21 @@
       }
     },
     {
-      "key": "0b271ae2-cdfc-47c6-adb3-922ec658b708",
+      "key": "7b1e2059-a7f0-47f4-80ac-bfe9cdcf813d",
       "position": 4,
+      "properties": {
+        "name": "[Optional] Extension"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "7b1e2059-a7f0-47f4-80ac-bfe9cdcf813d",
+        "lesson.key": "Cristina - Step Counter Coding with micro:bit",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "key": "0b271ae2-cdfc-47c6-adb3-922ec658b708",
+      "position": 5,
       "properties": {
         "name": "[Optional] Extended learning"
       },
@@ -591,8 +605,21 @@
       }
     },
     {
-      "key": "63fda4f3-ee4f-4ae3-8dd3-18424c67f6fb",
+      "key": "349aea24-cc98-4afe-a9c0-874d06b7957e",
       "position": 4,
+      "properties": {
+        "name": "[Optional] Extention"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "349aea24-cc98-4afe-a9c0-874d06b7957e",
+        "lesson.key": "Conditionals with Cards",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "key": "63fda4f3-ee4f-4ae3-8dd3-18424c67f6fb",
+      "position": 5,
       "properties": {
         "name": "Extended Learning"
       },
@@ -605,7 +632,7 @@
     },
     {
       "key": "d92ef2d0-698c-4788-9933-18ff170ef6d7",
-      "position": 5,
+      "position": 6,
       "properties": {
         "name": "Cross-Curricular Opportunity"
       },
@@ -714,8 +741,21 @@
       }
     },
     {
-      "key": "76a64823-1908-4e57-8d1a-c19e0c9fb435",
+      "key": "62671da3-6c10-4118-9fd0-6a069c4016be",
       "position": 1,
+      "properties": {
+        "name": "[Optional] Pre-requisite"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "62671da3-6c10-4118-9fd0-6a069c4016be",
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "key": "76a64823-1908-4e57-8d1a-c19e0c9fb435",
+      "position": 2,
       "properties": {
         "duration": 10,
         "name": "Warm Up"
@@ -729,7 +769,7 @@
     },
     {
       "key": "909fdda6-c847-47d6-bc98-36c773cf259e",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 30,
         "name": "Main Activity"
@@ -743,7 +783,7 @@
     },
     {
       "key": "ea67305d-8687-4787-affe-803e70cc46ba",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -756,8 +796,21 @@
       }
     },
     {
+      "key": "03e72faa-9719-40af-99e2-61e97c3cda64",
+      "position": 5,
+      "properties": {
+        "name": "[Optional] Extension"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "03e72faa-9719-40af-99e2-61e97c3cda64",
+        "lesson.key": "Cristina - Micro:bit pet with micro:bit",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
       "key": "89184511-51ff-44ea-a0fe-f3847ecb1db6",
-      "position": 4,
+      "position": 6,
       "properties": {
         "name": "[Optional] Extended learning"
       },
@@ -895,8 +948,21 @@
       }
     },
     {
-      "key": "e0f3be13-0b28-4e61-b997-04680efac4aa",
+      "key": "b5959298-7d69-46e4-abf1-337d886fd4c8",
       "position": 4,
+      "properties": {
+        "name": "[Optional] Extension"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b5959298-7d69-46e4-abf1-337d886fd4c8",
+        "lesson.key": "Cristina - Max-min thermometer with micro:bit",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "key": "e0f3be13-0b28-4e61-b997-04680efac4aa",
+      "position": 5,
       "properties": {
         "name": "[Optional] Extended Learning"
       },
@@ -1607,7 +1673,9 @@
       "position": 1,
       "properties": {
         "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n\n- Step by step coding **<a href=\"https://mbit.io/csf-f2-coding\" target=\"_blank\"> video </a>**\n- Live micro:bit **<a href=\"https://mbit.io/csf-f2-classroom\" target=\"_blank\"> classroom session </a>**",
-        "name": "Student Coding"
+        "duration": "20",
+        "name": "Student Coding",
+        "progression_name": "Step counter coding with micro:bit"
       },
       "seeding_key": {
         "activity_section.key": "2dd46e9e-3c96-4999-8505-1304bcc04380",
@@ -1618,6 +1686,9 @@
       "key": "29b63ed3-1b89-4944-a186-6c2cdd55a0ea",
       "position": 2,
       "properties": {
+        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/1CrNrbnG4-DuDf4Pejrcnz1ZStBotO-Oq59aik-iq4DE/edit#slide=id.g26f3d2b7307_0_69/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/4/topicNumber/2/quizId/2V1iaNQ41eZVWHqvrAEM\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 1, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n",
+        "duration": "10",
+        "name": "Assessment",
         "progression_name": "Step Counter Coding with micro:bit"
       },
       "seeding_key": {
@@ -1636,6 +1707,18 @@
       "seeding_key": {
         "activity_section.key": "ca286d88-399a-40b9-bce2-e50ca6b2553b",
         "lesson_activity.key": "1d10e3ce-e460-415d-9b35-5dc2d757ad5f"
+      }
+    },
+    {
+      "key": "4a2dfff0-a49e-499c-a090-cdc3721a11f2",
+      "position": 1,
+      "properties": {
+        "description": "This extension is perfect for students working online at makecode.microbit.org without a physical micro:bit device. While the step counter activity might not give them a chance to directly test their code on a physical device, creating a scoreboard counter offers a fantastic way to engage them and create a program they can test and use.\n\nOnce their programs are up and running, students can use their apps in a Rock, Paper, Scissors tournament with classmates, their scores tracked and displayed on the custom scoreboards they created. It's a fun and interactive way to test their programming skills and a bit of friendly competition.\n\n**Find the code for this project <a href=\"https://makecode.microbit.org/_2sqKyg4Tb2Tb\" target=\"_blank\">here.</a>**\n\n**Find the student handout for this project <a href=\"https://docs.google.com/document/d/1Yv_Hqk4pWRp4e0gpFS_iuRIry2LIlPfn5fCp8flZkYc/template/preview\" target=\"_blank\">here.</a>**",
+        "name": "Scoreboard"
+      },
+      "seeding_key": {
+        "activity_section.key": "4a2dfff0-a49e-499c-a090-cdc3721a11f2",
+        "lesson_activity.key": "7b1e2059-a7f0-47f4-80ac-bfe9cdcf813d"
       }
     },
     {
@@ -1759,6 +1842,18 @@
       "seeding_key": {
         "activity_section.key": "224c6601-11a7-42a6-a842-381c3799f10a",
         "lesson_activity.key": "0c1ed7dd-ddf4-46f8-8964-ee4fbf9a909d"
+      }
+    },
+    {
+      "key": "22076275-cab9-4d04-a740-52051335f928",
+      "position": 1,
+      "properties": {
+        "description": "This activity introduces the concepts of If/Then using the familiar fairytale of the Three Little Pigs. The story clearly demonstrates the \"if\" and \"then\" relationship that forms the core of conditional statements. By seeing the pigs make choices (building with different materials) and the resulting consequences (strong house vs. weak house), students grasp the concept in a real-world way. By creating a storyboard students will visualize the \"if\" and \"then\" scenarios. This visual aid helps solidify their understanding and provides a clear reference point when writing their own conditional statements with the micro:bit. It provides a fun and engaging context for them to learn about conditionals. They can connect with the characters and the cause-and-effect nature of the story.\n\n**Find the student handout for this project <a href=\"https://docs.google.com/document/d/1xNxJFtpb9VI8miyTx3TitTUJGPYNMl1j-ALE1e2Qk2s/template/preview\" target=\"_blank\">here.</a>**\n\n**Find The Three Little Pigs story <a href=\"https://youtu.be/CtP83CWOMwc?si=bVG-sYcYeaBTrAfL\" target=\"_blank\">here.</a>**",
+        "name": "Three Little Pigs"
+      },
+      "seeding_key": {
+        "activity_section.key": "22076275-cab9-4d04-a740-52051335f928",
+        "lesson_activity.key": "349aea24-cc98-4afe-a9c0-874d06b7957e"
       }
     },
     {
@@ -2168,6 +2263,18 @@
       }
     },
     {
+      "key": "88bc42e7-ca10-4c3c-8581-6dfc786029a0",
+      "position": 1,
+      "properties": {
+        "description": "Building on the understanding of If/Then statements from the conditionals with cards activity, this exercise allows students to immediately apply that knowledge in a practical and engaging way. \n\nStudents will combine their understanding of If/Then statements with the micro:bit's capabilities to create a musical and animated experience. Using If/Then statements, students will program the micro:bit to play specific notes (a simple 3-note song like \"Mary Had a Little Lamb\") when specific buttons are pressed (A, B, or A & B pressed together).\n\nTo further the engagement, students will create a stick figure animation using the micro:bit's LED display. This animation will come dance whenever a sound is played!\n\nThis activity serves as a bridge between the conditional statements concepts and the Micro:bit pet activity. It allows them to experiment with the micro:bit's functions earlier, solidifying their understanding of If/Then statements through a fun and interactive experience.This activity can be adapted to different skill levels. You may adjust the complexity of the song or the dancing animation based on your students' progress.\n\n**Find the code for this project <a href=\"https://makecode.microbit.org/_38sKbu4ivDzu\" target=\"_blank\">here.</a>**\n\n**Find the student handout for this project <a href=\"https://docs.google.com/document/d/1_XtzfuSqh16dNVyW2QTKD75N9jyXQzXCf6VKEAnEIv8/template/preview\" target=\"_blank\">here.</a>**",
+        "name": "Music and Dance"
+      },
+      "seeding_key": {
+        "activity_section.key": "88bc42e7-ca10-4c3c-8581-6dfc786029a0",
+        "lesson_activity.key": "62671da3-6c10-4118-9fd0-6a069c4016be"
+      }
+    },
+    {
       "key": "a173c9a3-3097-485d-bdc0-a4f9a0a888c4",
       "position": 1,
       "properties": {
@@ -2184,7 +2291,9 @@
       "position": 1,
       "properties": {
         "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n- Step by step coding **<a href=\"https://mbit.io/csf-f3-coding\" target=\"_blank\">video</a>**\n- Live micro:bit **<a href=\"https://mbit.io/csf-f3-classroom\" target=\"_blank\">classroom session</a>** ",
-        "name": "Student Coding"
+        "duration": "20",
+        "name": "Student Coding",
+        "progression_name": "Micro:bit pet with micro:bit"
       },
       "seeding_key": {
         "activity_section.key": "d258590f-9bcb-40d1-9043-dd3e44281a42",
@@ -2195,6 +2304,9 @@
       "key": "8ee2158e-9009-47e2-b64b-a3c9c4b49a9c",
       "position": 2,
       "properties": {
+        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/1CrNrbnG4-DuDf4Pejrcnz1ZStBotO-Oq59aik-iq4DE/edit#slide=id.g26f3d2b7307_0_69/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/4/topicNumber/2/quizId/c4GLaOb8w0DgdZwbNPr2\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 1, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n",
+        "duration": "10",
+        "name": "Assessment",
         "progression_name": "Micro:bit pet"
       },
       "seeding_key": {
@@ -2212,6 +2324,18 @@
       "seeding_key": {
         "activity_section.key": "8993d594-f023-489f-95ab-18ccde343039",
         "lesson_activity.key": "ea67305d-8687-4787-affe-803e70cc46ba"
+      }
+    },
+    {
+      "key": "fddf296b-272f-4ca2-8090-6f159b33cc9b",
+      "position": 1,
+      "properties": {
+        "description": "This activity strengthens students' grasp of conditionals and utilizes functions to help them creating an interactive pet. The pet uses the LED screen and sounds to provide an engaging and creative experience. Students will program their micro:bit's LED screen to generate visual and auditory responses for their virtual pet.\n\nThis project extends beyond traditional programming, offering a fantastic opportunity for students with artistic and creative inclinations. It empowers them to design a physical \"body\" for the micro:bit, transforming it from a circuit board into a playful companion.\n\nOnce the micro:bit is programmed and the body is built, encourage students to write a short story featuring their micro:pet. The story should incorporate the pet's emotions to reflect the events in the story. Students can then share their stories, making their micro:bit pets react accordingly throughout the reading.\n\n**Find the code for this project <a href=\"https://makecode.microbit.org/_7b5cU2JDYJiv\" target=\"_blank\">here.</a>**\n\n**Find the student handout for this project <a href=\"https://docs.google.com/document/d/1D6A2bgwedQmLcz9a3z7_Qhestcx_NLimuGvINwqKbnE/template/preview\" target=\"_blank\">here.**\n\n**Find a micro:bit character demo video <a href=\"https://www.youtube.com/watch?v=yIig7oIYNZw\" target=\"_blank\">here.</a>** You may need to watch the video two times.",
+        "name": "Storytelling"
+      },
+      "seeding_key": {
+        "activity_section.key": "fddf296b-272f-4ca2-8090-6f159b33cc9b",
+        "lesson_activity.key": "03e72faa-9719-40af-99e2-61e97c3cda64"
       }
     },
     {
@@ -2469,7 +2593,9 @@
       "position": 1,
       "properties": {
         "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n- Step by step coding **<a href=\"https://mbit.io/csf-f4-coding\" target=\"_blank\">video</a>**\n- Live micro:bit **<a href=\"https://mbit.io/csf-f4-classroom\" target=\"_blank\">classroom session</a>** ",
-        "name": "Student Coding"
+        "duration": "20",
+        "name": "Student Coding",
+        "progression_name": "Max-min thermometer with micro:bit"
       },
       "seeding_key": {
         "activity_section.key": "f5e6eab1-df3f-413d-9a92-1b10d69d060e",
@@ -2480,6 +2606,9 @@
       "key": "82121ccc-b178-425d-821c-d5a098d6e562",
       "position": 2,
       "properties": {
+        "description": "After completing the lesson, assess students' knowledge of the concepts covered by going through the assessment slides in the \n**<a href=\"https://docs.google.com/presentation/d/1CrNrbnG4-DuDf4Pejrcnz1ZStBotO-Oq59aik-iq4DE/edit#slide=id.g26f3d2b7307_0_69/template/preview\"  target=\"_blank\">slide deck</a>**. You can also assign students a content assessment hosted on the JuiceMind platform. To assign the assessment to your students, click <a href=\"https://play.juicemind.com/dashboard/explore/class/codeorg-microbit/unitNumber/4/topicNumber/2/quizId/jeU0ooLL5dfz1eYiXeHW\" target=\"_blank\">here.</a>\n\n::: details [**Setting up a JuiceMind assessment**]\nClick \"Assign\" on the assessment page, then have students join your unique class session. Students have a link to the Join page on level 1, and will need to enter the class session code. After students complete the assessment, you can view their results on the JuiceMind teacher dashboard.\n\n**Note**: You will need to <a href=\"https://play.juicemind.com/signup\" target=\"_blank\">sign up</a> for an account on JuiceMind to assign the assessment.\n:::\n",
+        "duration": "10",
+        "name": "Assessment",
         "progression_name": "Max-min thermometer"
       },
       "seeding_key": {
@@ -2497,6 +2626,18 @@
       "seeding_key": {
         "activity_section.key": "0132b48f-97e2-4e3d-8e1d-d8408d82b4ad",
         "lesson_activity.key": "147f6e69-d327-495c-bf1a-bea41d9f1163"
+      }
+    },
+    {
+      "key": "7f8645d2-be1b-4236-9cfe-c168549670a1",
+      "position": 1,
+      "properties": {
+        "description": "In this activity, students create a digital bubble level using a micro:bit. This project introduces them to engineering concepts and practical tool building through the micro:bit. More importantly, the digital bubble level allows them to explore their surroundings – the classroom, hallways, or even outside – investigating real-world applications of levels. This activity will engage their curiosity and encourage discovery, all while introducing the concept of engineering in an interactive and exploratory way.\n\nStudents will incorporate the concepts of **variables**, **loops**, **conditionals**, **sensors**, **LEDs**, and **sounds** to create and realistic tool.\n\n**Find the code for this project <a href=\"https://makecode.microbit.org/_6fzRY7Fy927C\" target=\"_blank\">here.</a>**\n\n**Find the student handout for this project <a href=\"https://docs.google.com/document/d/1m_PC49F-oObDxS7XdZAmX5Akq0aTG4FZDjVe535whlY/template/preview\" target=\"_blank\">here.</a>**",
+        "name": "Digital Bubble Level"
+      },
+      "seeding_key": {
+        "activity_section.key": "7f8645d2-be1b-4236-9cfe-c168549670a1",
+        "lesson_activity.key": "b5959298-7d69-46e4-abf1-337d886fd4c8"
       }
     },
     {
@@ -3296,7 +3437,7 @@
         "level_keys": [
           "course_f_maker_step_counter_grade5"
         ],
-        "progression": "Step Counter Coding with micro:bit"
+        "progression": "Step counter coding with micro:bit"
       },
       "bonus": false,
       "seeding_key": {
@@ -3306,7 +3447,7 @@
         "lesson.key": "Cristina - Step Counter Coding with micro:bit",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
-        "activity_section.key": "29b63ed3-1b89-4944-a186-6c2cdd55a0ea"
+        "activity_section.key": "2dd46e9e-3c96-4999-8505-1304bcc04380"
       },
       "level_keys": [
         "course_f_maker_step_counter_grade5"
@@ -3997,7 +4138,7 @@
         "level_keys": [
           "course_f_maker_microbit_pet_grade5"
         ],
-        "progression": "Micro:bit pet"
+        "progression": "Micro:bit pet with micro:bit"
       },
       "bonus": false,
       "seeding_key": {
@@ -4007,7 +4148,7 @@
         "lesson.key": "Cristina - Micro:bit pet with micro:bit",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "grade5-maker-2024",
-        "activity_section.key": "8ee2158e-9009-47e2-b64b-a3c9c4b49a9c"
+        "activity_section.key": "d258590f-9bcb-40d1-9043-dd3e44281a42"
       },
       "level_keys": [
         "course_f_maker_microbit_pet_grade5"
@@ -4447,7 +4588,7 @@
         "level_keys": [
           "course_f_maker_max_min_thermometer_grade5"
         ],
-        "progression": "Max-min thermometer"
+        "progression": "Max-min thermometer with micro:bit"
       },
       "bonus": false,
       "seeding_key": {
@@ -4457,7 +4598,7 @@
         "lesson.key": "Cristina - Max-min thermometer with micro:bit",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "grade5-maker-2024",
-        "activity_section.key": "82121ccc-b178-425d-821c-d5a098d6e562"
+        "activity_section.key": "f5e6eab1-df3f-413d-9a92-1b10d69d060e"
       },
       "level_keys": [
         "course_f_maker_max_min_thermometer_grade5"
@@ -4846,7 +4987,7 @@
         "lesson.key": "Cristina - Step Counter Coding with micro:bit",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "grade5-maker-2024",
-        "activity_section.key": "29b63ed3-1b89-4944-a186-6c2cdd55a0ea"
+        "activity_section.key": "2dd46e9e-3c96-4999-8505-1304bcc04380"
       }
     },
     {
@@ -5182,7 +5323,7 @@
         "lesson.key": "Cristina - Micro:bit pet with micro:bit",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "grade5-maker-2024",
-        "activity_section.key": "8ee2158e-9009-47e2-b64b-a3c9c4b49a9c"
+        "activity_section.key": "d258590f-9bcb-40d1-9043-dd3e44281a42"
       }
     },
     {
@@ -5398,18 +5539,17 @@
         "lesson.key": "Cristina - Max-min thermometer with micro:bit",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "grade5-maker-2024",
-        "activity_section.key": "82121ccc-b178-425d-821c-d5a098d6e562"
+        "activity_section.key": "f5e6eab1-df3f-413d-9a92-1b10d69d060e"
       }
     }
   ],
   "resources": [
     {
-      "name": "**Grade 5 - Maker with micro:bit slides",
+      "name": "Grade 5 - Maker with micro:bit slides",
       "url": "https://docs.google.com/presentation/d/1CrNrbnG4-DuDf4Pejrcnz1ZStBotO-Oq59aik-iq4DE/template/preview",
       "key": "_grade_5_-_maker_with_micro_bit_slides",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1CrNrbnG4-DuDf4Pejrcnz1ZStBotO-Oq59aik-iq4DE/export/pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -5438,6 +5578,39 @@
       },
       "seeding_key": {
         "resource.key": "_optional_how_to_put_code_onto_micro_bit"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/grade5-maker-2024/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/grade5-maker-2024/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/grade5-maker-2024/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
       }
     },
     {
@@ -5707,6 +5880,18 @@
       },
       "seeding_key": {
         "resource.key": "meet_your_micro_bit_video_guide"
+      }
+    },
+    {
+      "name": "micro:bit MakeCode block cut-out cards",
+      "url": "https://microbit.org/teach/classroom-resources/microbit-makecode-blocks-cutout-cards/",
+      "key": "micro_bit_makecode_block_cut-out_cards",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "micro_bit_makecode_block_cut-out_cards"
       }
     },
     {
@@ -6189,6 +6374,30 @@
     {
       "seeding_key": {
         "resource.key": "_grade_5_-_maker_with_micro_bit_slides",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "grade5-maker-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "micro_bit_makecode_block_cut-out_cards",
         "script.name": "grade5-maker-2024"
       }
     }

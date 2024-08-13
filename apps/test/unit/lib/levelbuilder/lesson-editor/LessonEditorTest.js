@@ -1,36 +1,39 @@
-import React from 'react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
+import _ from 'lodash';
+import React from 'react';
+import {Provider} from 'react-redux';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import reducers, {
+  initActivities,
+  initLevelSearching,
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
 import LessonEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonEditor';
+import programmingExpressionsEditor, {
+  initProgrammingExpressions,
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/programmingExpressionsEditorRedux';
+import createResourcesReducer, {
+  initResources,
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+import createStandardsReducer, {
+  initStandards,
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
+import vocabulariesEditor, {
+  initVocabularies,
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 import {
   stubRedux,
   restoreRedux,
   getStore,
   registerReducers,
 } from '@cdo/apps/redux';
-import reducers, {
-  initActivities,
-  initLevelSearching,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import createResourcesReducer, {
-  initResources,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
-import vocabulariesEditor, {
-  initVocabularies,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
-import programmingExpressionsEditor, {
-  initProgrammingExpressions,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/programmingExpressionsEditorRedux';
-import createStandardsReducer, {
-  initStandards,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
+import * as utils from '@cdo/apps/utils';
+
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
+
 import {sampleActivities, searchOptions} from './activitiesTestData';
 import resourceTestData from './resourceTestData';
-import {Provider} from 'react-redux';
-import sinon from 'sinon';
-import * as utils from '@cdo/apps/utils';
-import _ from 'lodash';
-import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 describe('LessonEditor', () => {
   // Warnings allowed due to usage of deprecated  componentWillReceiveProps

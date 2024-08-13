@@ -1,8 +1,8 @@
-import React from 'react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
+import React from 'react';
+
 import ObjectivesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ObjectivesEditor';
-import sinon from 'sinon';
+
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 describe('ObjectivesEditor', () => {
@@ -12,7 +12,7 @@ describe('ObjectivesEditor', () => {
 
   let defaultProps, updateObjectives;
   beforeEach(() => {
-    updateObjectives = sinon.spy();
+    updateObjectives = jest.fn();
     defaultProps = {
       objectives: [{key: '1', description: 'description'}],
       updateObjectives,
@@ -21,24 +21,24 @@ describe('ObjectivesEditor', () => {
 
   it('renders default props', () => {
     const wrapper = mount(<ObjectivesEditor {...defaultProps} />);
-    expect(wrapper.find('tr').length).to.equal(2);
+    expect(wrapper.find('tr').length).toBe(2);
   });
 
   it('can remove an objective', () => {
     const wrapper = mount(<ObjectivesEditor {...defaultProps} />);
     const numObjectives = wrapper.find('tr').length;
-    expect(numObjectives).at.least(2);
+    expect(numObjectives).toBeGreaterThanOrEqual(2);
     // Find one of thet "remove" buttons and click it
     const removeObjectiveButton = wrapper.find('.unit-test-remove-objective');
     removeObjectiveButton.simulate('mouseDown');
-    expect(updateObjectives).to.have.been.calledWith([]);
+    expect(updateObjectives).toHaveBeenCalledWith([]);
   });
 
   it('can add an objective', () => {
     const wrapper = mount(<ObjectivesEditor {...defaultProps} />);
     const addObjectiveButton = wrapper.find('button').first();
     addObjectiveButton.simulate('mouseDown');
-    expect(updateObjectives).to.have.been.calledWith([
+    expect(updateObjectives).toHaveBeenCalledWith([
       {description: 'description', key: '1'},
       {description: '', key: 'objective-2'},
     ]);
@@ -49,7 +49,7 @@ describe('ObjectivesEditor', () => {
       ],
     });
 
-    updateObjectives.resetHistory();
+    updateObjectives.mockReset();
     const objectiveInput = wrapper
       .find('ObjectiveLine')
       .at(1)
@@ -57,7 +57,7 @@ describe('ObjectivesEditor', () => {
       .first();
     objectiveInput.simulate('change', {target: {value: 'new description'}});
     objectiveInput.simulate('keyDown', {key: 'Enter'});
-    expect(updateObjectives).to.have.been.calledWith([
+    expect(updateObjectives).toHaveBeenCalledWith([
       {description: 'description', key: '1'},
       {description: 'new description', key: 'objective-2'},
     ]);
@@ -67,7 +67,7 @@ describe('ObjectivesEditor', () => {
     const wrapper = mount(<ObjectivesEditor {...defaultProps} />);
     const addObjectiveButton = wrapper.find('button').first();
     addObjectiveButton.simulate('mouseDown');
-    expect(updateObjectives).to.have.been.calledWith([
+    expect(updateObjectives).toHaveBeenCalledWith([
       {description: 'description', key: '1'},
       {description: '', key: 'objective-2'},
     ]);
@@ -78,14 +78,14 @@ describe('ObjectivesEditor', () => {
       ],
     });
 
-    updateObjectives.resetHistory();
+    updateObjectives.mockReset();
     const cancelEditButton = wrapper
       .find('ObjectiveLine')
       .last()
       .find('.unit-test-cancel-edit')
       .first();
     cancelEditButton.simulate('mouseDown');
-    expect(updateObjectives).to.have.been.calledWith([
+    expect(updateObjectives).toHaveBeenCalledWith([
       {description: 'description', key: '1'},
     ]);
   });

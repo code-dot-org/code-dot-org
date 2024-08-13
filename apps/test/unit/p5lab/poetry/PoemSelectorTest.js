@@ -1,11 +1,13 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
-import {expect} from '../../../util/reconfiguredChai';
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import sinon from 'sinon';
-import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import {PoemEditor} from '@cdo/apps/p5lab/poetry/PoemSelector';
 import * as utils from '@cdo/apps/utils';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 
 describe('PoemEditor', () => {
   // PoemEditor pulls this string from i18n, but we'll hardcode it in tests for simplicity.

@@ -1,60 +1,85 @@
-import {getStore} from '@cdo/apps/redux';
-import {
-  applyPatches,
-  deleteCachedUserModules,
-} from './pythonHelpers/pythonScriptUtils';
-import {MATPLOTLIB_IMG_TAG} from './pythonHelpers/patches';
 import {
   appendOutputImage,
   appendSystemMessage,
   appendSystemOutMessage,
+  appendErrorMessage,
+  appendSystemError,
 } from '@codebridge/redux/consoleRedux';
-import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
-import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
+
 import {setAndSaveProjectSource} from '@cdo/apps/lab2/redux/lab2ProjectRedux';
+import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
+import {getStore} from '@cdo/apps/redux';
 
-// This syntax doesn't work with typescript, so this file is in js.
-const pyodideWorker = new Worker(
-  new URL('./pyodideWebWorker.js', import.meta.url)
-);
+import {setLoadingCodeEnvironment} from '../lab2/redux/systemRedux';
 
-const callbacks = {};
+import {parseErrorMessage} from './pythonHelpers/messageHelpers';
+import {MATPLOTLIB_IMG_TAG} from './pythonHelpers/patches';
 
-pyodideWorker.onmessage = event => {
-  const {type, id, message} = event.data;
-  if (type === 'sysout' || type === 'syserr') {
-    if (message.startsWith(MATPLOTLIB_IMG_TAG)) {
-      // This is a matplotlib image, so we need to append it to the output
-      const image = message.slice(MATPLOTLIB_IMG_TAG.length + 1);
-      getStore().dispatch(appendOutputImage(image));
+let callbacks = {};
+
+const setUpPyodideWorker = () => {
+  // This syntax doesn't work with typescript, so this file is in js.
+  const worker = new Worker(new URL('./pyodideWebWorker.js', import.meta.url));
+
+  callbacks = {};
+
+  worker.onmessage = event => {
+    const {type, id, message} = event.data;
+    if (type === 'sysout' || type === 'syserr') {
+      if (message.startsWith(MATPLOTLIB_IMG_TAG)) {
+        // This is a matplotlib image, so we need to append it to the output
+        const image = message.slice(MATPLOTLIB_IMG_TAG.length + 1);
+        getStore().dispatch(appendOutputImage(image));
+        return;
+      }
+      getStore().dispatch(appendSystemOutMessage(message));
+      return;
+    } else if (type === 'run_complete') {
+      getStore().dispatch(appendSystemMessage('Program completed.'));
+    } else if (type === 'updated_source') {
+      getStore().dispatch(setAndSaveProjectSource({source: message}));
+      return;
+    } else if (type === 'error') {
+      getStore().dispatch(appendErrorMessage(parseErrorMessage(message)));
+      return;
+    } else if (type === 'internal_error') {
+      MetricsReporter.logError({
+        type: 'PythonLabInternalError',
+        message,
+      });
+      return;
+    } else if (type === 'system_error') {
+      getStore().dispatch(appendSystemError(message));
+      MetricsReporter.logError({
+        type: 'PythonLabSystemCodeError',
+        message,
+      });
+      return;
+    } else if (type === 'loading_pyodide') {
+      getStore().dispatch(
+        appendSystemMessage('Loading your python environment...')
+      );
+      getStore().dispatch(setLoadingCodeEnvironment(true));
+      return;
+    } else if (type === 'loaded_pyodide') {
+      getStore().dispatch(appendSystemMessage('Your environment is ready!'));
+      getStore().dispatch(setLoadingCodeEnvironment(false));
+      return;
+    } else {
+      console.warn(
+        `Unknown message type ${type} with message ${message} from pyodideWorker.`
+      );
       return;
     }
-    getStore().dispatch(appendSystemOutMessage(message));
-    return;
-  } else if (type === 'run_complete') {
-    getStore().dispatch(appendSystemMessage('Program completed.'));
-  } else if (type === 'updated_source') {
-    getStore().dispatch(setAndSaveProjectSource({source: message}));
-    return;
-  } else if (type === 'error') {
-    getStore().dispatch(appendSystemMessage(`Error: ${message}`));
-    return;
-  } else if (type === 'internal_error') {
-    MetricsReporter.logError({
-      type: 'PythonLabInternalError',
-      message,
-    });
-    return;
-  } else {
-    console.warn(
-      `Unknown message type ${type} with message ${message} from pyodideWorker.`
-    );
-    return;
-  }
-  const onSuccess = callbacks[id];
-  delete callbacks[id];
-  onSuccess(event.data);
+    const onSuccess = callbacks[id];
+    delete callbacks[id];
+    onSuccess(event.data);
+  };
+
+  return worker;
 };
+
+let pyodideWorker = setUpPyodideWorker();
 
 const asyncRun = (() => {
   let id = 0; // identify a Promise
@@ -63,11 +88,8 @@ const asyncRun = (() => {
     id = (id + 1) % Number.MAX_SAFE_INTEGER;
     return new Promise(onSuccess => {
       callbacks[id] = onSuccess;
-      let wrappedScript = applyPatches(script);
-      wrappedScript =
-        wrappedScript + deleteCachedUserModules(source, MAIN_PYTHON_FILE);
       const messageData = {
-        python: wrappedScript,
+        python: script,
         id,
         source,
       };
@@ -76,4 +98,10 @@ const asyncRun = (() => {
   };
 })();
 
-export {asyncRun};
+const stopAndRestartPyodideWorker = () => {
+  pyodideWorker.terminate();
+  pyodideWorker = setUpPyodideWorker();
+  getStore().dispatch(appendSystemMessage('Program stopped.'));
+};
+
+export {asyncRun, stopAndRestartPyodideWorker};

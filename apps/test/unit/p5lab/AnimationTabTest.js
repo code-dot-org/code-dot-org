@@ -1,5 +1,4 @@
 var animationTab = require('@cdo/apps/p5lab/redux/animationTab');
-import {expect} from '../../util/reconfiguredChai';
 
 describe('AnimationTab', function () {
   describe('reducer', function () {
@@ -10,7 +9,7 @@ describe('AnimationTab', function () {
     };
 
     it('has expected initial state', function () {
-      expect(reducer(undefined, {})).to.deep.equal(initialState);
+      expect(reducer(undefined, {})).toEqual(initialState);
     });
 
     it('returns original state on unhandled action', function () {
@@ -18,7 +17,7 @@ describe('AnimationTab', function () {
         columnSizes: [150, undefined],
         currentAnimations: {ANIMATION: 'whatever', BACKGROUND: ''},
       };
-      expect(reducer(state, {})).to.equal(state);
+      expect(reducer(state, {})).toBe(state);
     });
 
     describe('action: selectAnimation', function () {
@@ -26,8 +25,8 @@ describe('AnimationTab', function () {
 
       it('changes selected animation in state', function () {
         var newState = reducer(initialState, selectAnimation('animationKey'));
-        expect(newState).not.to.equal(initialState);
-        expect(newState).to.have.deep.property(
+        expect(newState).not.toBe(initialState);
+        expect(newState).toHaveProperty(
           'currentAnimations.ANIMATION',
           'animationKey'
         );
@@ -39,7 +38,7 @@ describe('AnimationTab', function () {
           currentAnimations: {ANIMATION: 'anotherKey', BACKGROUND: ''},
         };
         var newState = reducer(state, selectAnimation('anotherKey'));
-        expect(newState).to.deep.equal(state);
+        expect(newState).toEqual(state);
       });
     });
 
@@ -48,8 +47,8 @@ describe('AnimationTab', function () {
 
       it('changes selected background in state', function () {
         var newState = reducer(initialState, selectBackground('backgroundKey'));
-        expect(newState).not.to.equal(initialState);
-        expect(newState).to.have.deep.property(
+        expect(newState).not.toBe(initialState);
+        expect(newState).toHaveProperty(
           'currentAnimations.BACKGROUND',
           'backgroundKey'
         );
@@ -61,7 +60,7 @@ describe('AnimationTab', function () {
           currentAnimations: {ANIMATION: '', BACKGROUND: 'anotherKey'},
         };
         var newState = reducer(state, selectBackground('anotherKey'));
-        expect(newState).to.deep.equal(state);
+        expect(newState).toEqual(state);
       });
     });
   });

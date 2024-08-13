@@ -5,9 +5,12 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
+
 import i18n from '@cdo/locale';
-import {actions, selectors} from './redux';
+
 import trackEvent from '../../../util/trackEvent';
+
+import {actions, selectors} from './redux';
 
 export default connect(
   state => ({

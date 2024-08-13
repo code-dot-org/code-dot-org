@@ -94,6 +94,19 @@ section.student-projects {
   }
 }
 
+section.aws-career-tours {
+
+  @media (min-width: 993px) {
+    .text-wrapper {
+      max-width: 570px;
+    }
+
+    a.link-button {
+      max-width: 205px;
+    }
+  }
+}
+
 section.quote {
   background: url("/images/banners/banner-bg-music.png") center repeat-x;
   background-size: contain;

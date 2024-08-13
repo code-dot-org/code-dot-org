@@ -1,7 +1,9 @@
-import React from 'react';
-import moduleStyles from './dance-ai-score.module.scss';
 import classNames from 'classnames';
+import React from 'react';
+
 import {GeneratedEffectScores, MinMax} from './types';
+
+import moduleStyles from './dance-ai-score.module.scss';
 
 export enum ScoreColors {
   // A grey bar with no symbol in the symbol container yet.

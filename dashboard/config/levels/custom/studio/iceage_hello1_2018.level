@@ -16,7 +16,7 @@
     "first_sprite_index": "1",
     "success_condition": "function successCondition() {\r\n\t      return Studio.allWhenRunBlocksComplete() && Studio.sayComplete > 0;\r\n\t    }",
     "short_instructions": "Help Sid say \"Hello!\" by dragging the `say` block out and connecting it to the bottom of the `when run` event.",
-    "callout_json": "[{\"localization_key\":\"playlab_drag_say\",\"callout_text\":null,\"element_id\":\"[block-id='2']\",\"qtip_config\":{\"position\":{\"my\":\"top left\",\"at\":\"bottom left\",\"adjust\":{\"x\":22,\"y\":4}}},\"on\":null}]",
+    "callout_json": "[{\"localization_key\":\"playlab_drag_say\",\"callout_text\":null,\"element_id\":\"[block-id='2']\",\"qtip_config\":{\"position\":{\"my\":\"top left\",\"at\":\"bottom left\",\"adjust\":{\"x\":22,\"y\":4}}},\"on\":null},{\"element_id\":\"[data-id='2']\",\"localization_key\":\"playlab_drag_say\",\"callout_text\":null,\"qtip_config\":{\"position\":{\"my\":\"top left\",\"at\":\"bottom left\",\"adjust\":{\"x\":22,\"y\":4}}},\"on\":null}]",
     "maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":16,\"size\":0.005},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "embed": "false",
     "long_instructions": "Sid (actor 1) wants to gather everyone for a new adventure. Can you help him say \"Hello!\" by dragging the `say` block out and connecting it to the bottom of the `when run` event?   \r\n\r\nDon't forget to type \"Hello!\" inside!",
@@ -47,7 +47,7 @@
     "allow_sprites_outside_playspace": "false",
     "sprites_hidden_to_start": "false",
     "name_suffix": "_2018",
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",
@@ -61,7 +61,7 @@
     </start_blocks>
     <toolbox_blocks>
       <xml id="toolbox" style="display: none;">
-        <block type="studio_saySprite"/>
+        <block type="studio_saySprite" id="2"/>
       </xml>
     </toolbox_blocks>
     <required_blocks>

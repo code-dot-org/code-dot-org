@@ -49,9 +49,9 @@ class ProgrammingClass < ApplicationRecord
     )
   end
 
-  def self.seed_all
+  def self.seed_all(root_dir: Rails.root)
     removed_records = all.pluck(:id)
-    Dir.glob(Rails.root.join("config/programming_classes/**/*.json")).each do |path|
+    Dir.glob(root_dir.join("config/programming_classes/**/*.json")).each do |path|
       removed_records -= [ProgrammingClass.seed_record(path)]
     end
     where(id: removed_records).destroy_all

@@ -1,6 +1,6 @@
-import {expect} from '../../../../util/reconfiguredChai';
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+
 import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
 
 describe('ResourcesEditor', () => {
@@ -33,7 +33,7 @@ describe('ResourcesEditor', () => {
         courseVersionId={1}
       />
     );
-    expect(wrapper.find('Connect(ResourcesEditor)').length).to.equal(1);
+    expect(wrapper.find('Connect(ResourcesEditor)').length).toBe(1);
   });
 
   it('uses no editor for resources without courseVersionId', () => {
@@ -57,7 +57,7 @@ describe('ResourcesEditor', () => {
         courseVersionId={null}
       />
     );
-    expect(wrapper.find('Connect(ResourcesEditor)').length).to.equal(0);
+    expect(wrapper.find('Connect(ResourcesEditor)').length).toBe(0);
     expect(
       wrapper.contains(
         'Cannot add resources to migrated script without course version.'

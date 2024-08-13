@@ -1,9 +1,10 @@
-import React from 'react';
+import {expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import PeerReviewSubmissions from '@cdo/apps/code-studio/peer_reviews/PeerReviewSubmissions';
-import {expect} from 'chai';
-import sinon from 'sinon';
 import _ from 'lodash';
+import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import PeerReviewSubmissions from '@cdo/apps/code-studio/peer_reviews/PeerReviewSubmissions';
 
 describe('PeerReviewSubmissions', () => {
   let server;
@@ -38,7 +39,7 @@ describe('PeerReviewSubmissions', () => {
     },
   };
 
-  before(() => {
+  beforeAll(() => {
     // stub out debounce to return the original function, so it's called immediately
     debounceStub = sinon.stub(_, 'debounce').callsFake(f => f);
 
@@ -73,7 +74,7 @@ describe('PeerReviewSubmissions', () => {
     );
   });
 
-  after(() => {
+  afterAll(() => {
     debounceStub.restore();
     server.restore();
   });

@@ -204,7 +204,7 @@ module I18n
                 functions = blocks.xpath("//block[@type=\"procedures_defnoreturn\"]")
                 i18n_strings['function_definitions'] = Hash.new unless functions.empty?
                 functions.each do |function|
-                  name = function.at_xpath('./title[@name="NAME"]')
+                  name = function.at_xpath('./title[@name="NAME"] | ./field[@name="NAME"]')
                   # The name is used to uniquely identify the function. Skip if there is no name.
                   next unless name
                   description = function.at_xpath('./mutation/description')
@@ -225,7 +225,7 @@ module I18n
                   i18n_strings['behavior_descriptions'] = Hash.new
                 end
                 behaviors.each do |behavior|
-                  name = behavior.at_xpath('./title[@name="NAME"]')
+                  name = behavior.at_xpath('./title[@name="NAME"] | ./field[@name="NAME"]')
                   description = behavior.at_xpath('./mutation/description')
                   i18n_strings['behavior_names'][name.content] = name.content if name
                   i18n_strings['behavior_descriptions'][description.content] = description.content if description
@@ -237,7 +237,7 @@ module I18n
                 variables = variables_get + variables_set
                 i18n_strings[VARIABLE_NAMES_TYPE] = Hash.new unless variables.empty?
                 variables.each do |variable|
-                  name = variable.at_xpath('./title[@name="VAR"]')
+                  name = variable.at_xpath('./title[@name="VAR"] | ./field[@name="VAR"]')
                   i18n_strings[VARIABLE_NAMES_TYPE][name.content] = name.content if name
                 end
 
@@ -245,7 +245,7 @@ module I18n
                 parameters = blocks.xpath("//block[@type=\"parameters_get\"]")
                 i18n_strings[PARAMETER_NAMES_TYPE] = Hash.new unless parameters.empty?
                 parameters.each do |parameter|
-                  name = parameter.at_xpath('./title[@name="VAR"]')
+                  name = parameter.at_xpath('./title[@name="VAR"] | ./field[@name="VAR"]')
                   i18n_strings[PARAMETER_NAMES_TYPE][name.content] = name.content if name
                 end
 
@@ -342,7 +342,7 @@ module I18n
               # We want to make sure to categorize HoC scripts as HoC scripts even if
               # they have a version year, so this ordering is important
               script_i18n_directory =
-                if Unit.unit_in_category?('hoc', script.name)
+                if script.in_initiative?('HOC')
                   File.join(I18N_SOURCE_DIR_PATH, 'Hour of Code')
                 elsif script.unversioned?
                   File.join(I18N_SOURCE_DIR_PATH, 'other')

@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 import {
   IMPORTANT_TOPICS,
   CURRICULUM_DURATIONS,
@@ -6,7 +8,6 @@ import {
   SIMILAR_RECOMMENDER_SCORING,
   STRETCH_RECOMMENDER_SCORING,
 } from './curriculumRecommenderConstants';
-import moment from 'moment';
 
 const now = moment().utc();
 

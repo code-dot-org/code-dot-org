@@ -1,11 +1,12 @@
-import {assert} from 'chai';
+import _ from 'lodash'; // eslint-disable-line no-restricted-imports
+
 import createResourcesReducer, {
   addResource,
   editResource,
   removeResource,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+
 import resourceTestData from './resourceTestData';
-import _ from 'lodash';
 
 const getInitialState = () => _.cloneDeep(resourceTestData);
 
@@ -25,10 +26,11 @@ describe('resourcesEditorRedux reducer tests', () => {
         url: 'new-fake.url',
       })
     );
-    assert.deepEqual(
-      nextState.map(r => r.key),
-      ['resource-1', 'resource-2', 'new-key']
-    );
+    expect(nextState.map(r => r.key)).toEqual([
+      'resource-1',
+      'resource-2',
+      'new-key',
+    ]);
   });
 
   it('keeps rollup resources at the end', () => {
@@ -43,10 +45,11 @@ describe('resourcesEditorRedux reducer tests', () => {
         isRollup: false,
       })
     );
-    assert.deepEqual(
-      nextState.map(r => r.key),
-      ['resource-1', 'new-key', 'resource-2']
-    );
+    expect(nextState.map(r => r.key)).toEqual([
+      'resource-1',
+      'new-key',
+      'resource-2',
+    ]);
   });
 
   it('edit resource', () => {
@@ -56,10 +59,7 @@ describe('resourcesEditorRedux reducer tests', () => {
       initialState,
       editResource('lessonResource', editedResource)
     );
-    assert.deepEqual(
-      nextState.map(r => r.name),
-      ['new name', 'Resource 2']
-    );
+    expect(nextState.map(r => r.name)).toEqual(['new name', 'Resource 2']);
   });
 
   it('remove resource', () => {
@@ -67,10 +67,7 @@ describe('resourcesEditorRedux reducer tests', () => {
       initialState,
       removeResource('lessonResource', 'resource-1')
     );
-    assert.deepEqual(
-      nextState.map(r => r.key),
-      ['resource-2']
-    );
+    expect(nextState.map(r => r.key)).toEqual(['resource-2']);
   });
 
   it('can add teacher resource without adding student resource', () => {
@@ -92,13 +89,15 @@ describe('resourcesEditorRedux reducer tests', () => {
         url: 'new-fake.url',
       })
     );
-    assert.deepEqual(
-      nextTeacherResourceState.map(r => r.key),
-      ['resource-1', 'resource-2', 'new-teacher-resource-key']
-    );
-    assert.deepEqual(
-      nextStudentResourceState.map(r => r.key),
-      ['resource-1', 'resource-2', 'new-student-resource-key']
-    );
+    expect(nextTeacherResourceState.map(r => r.key)).toEqual([
+      'resource-1',
+      'resource-2',
+      'new-teacher-resource-key',
+    ]);
+    expect(nextStudentResourceState.map(r => r.key)).toEqual([
+      'resource-1',
+      'resource-2',
+      'new-student-resource-key',
+    ]);
   });
 });

@@ -7,15 +7,18 @@
 
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import Video from './Video';
+
 import {
   sendSuccessReport,
   navigateToNextLevel,
 } from '@cdo/apps/code-studio/progressRedux';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {VideoLevelData} from '@cdo/apps/lab2/types';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+
 import standaloneVideoLocale from './locale';
+import Video from './Video';
+
 import styles from './video.module.scss';
 
 const StandaloneVideo: React.FunctionComponent = () => {

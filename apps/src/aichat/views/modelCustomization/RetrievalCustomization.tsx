@@ -1,16 +1,19 @@
 import React, {useState, useCallback} from 'react';
+import {useSelector} from 'react-redux';
 
-import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import {setAiCustomizationProperty} from '@cdo/apps/aichat/redux/aichatRedux';
 import Button from '@cdo/apps/componentLibrary/button/Button';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
-import modelCustomizationStyles from '../model-customization-workspace.module.scss';
-import styles from './retrieval-customization.module.scss';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
+
+import FieldLabel from './FieldLabel';
+import UpdateButton from './UpdateButton';
 import {isDisabled} from './utils';
-import {
-  setAiCustomizationProperty,
-  updateAiCustomization,
-} from '@cdo/apps/aichat/redux/aichatRedux';
+
+import styles from './retrieval-customization.module.scss';
+import modelCustomizationStyles from '../model-customization-workspace.module.scss';
 
 const RetrievalCustomization: React.FunctionComponent = () => {
   const [newRetrievalContext, setNewRetrievalContext] = useState('');
@@ -23,10 +26,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
     state => state.aichat.currentAiCustomizations
   );
 
-  const onUpdate = useCallback(
-    () => dispatch(updateAiCustomization()),
-    [dispatch]
-  );
+  const isReadOnly = useSelector(isReadOnlyWorkspace) || isDisabled(visibility);
 
   const onAdd = useCallback(() => {
     dispatch(
@@ -61,26 +61,33 @@ const RetrievalCustomization: React.FunctionComponent = () => {
   return (
     <div className={modelCustomizationStyles.verticalFlexContainer}>
       <div className={modelCustomizationStyles.customizationContainer}>
-        <div className={modelCustomizationStyles.inputContainer}>
-          <label htmlFor="system-prompt">
-            <StrongText>Retrieval</StrongText>
-          </label>
-          <textarea
-            id="retrieval-input"
-            onChange={event => setNewRetrievalContext(event.target.value)}
-            value={newRetrievalContext}
-            disabled={isDisabled(visibility)}
-          />
-        </div>
-        <div className={styles.addItemContainer}>
-          <Button
-            text="Add"
-            type="secondary"
-            onClick={onAdd}
-            iconLeft={{iconName: 'plus'}}
-            disabled={!newRetrievalContext || isDisabled(visibility)}
-          />
-        </div>
+        {!isReadOnly && (
+          <>
+            <div className={modelCustomizationStyles.inputContainer}>
+              <FieldLabel
+                label="Retrieval"
+                id="retrieval-input"
+                tooltipText="Retrieval lets you add new information for a chatbot to reference. Type in each retrieval statement into the text box, then click “Add” for each one."
+              />
+              <textarea
+                id="retrieval-input"
+                onChange={event => setNewRetrievalContext(event.target.value)}
+                value={newRetrievalContext}
+              />
+            </div>
+            <div className={styles.addItemContainer}>
+              <Button
+                text="Add"
+                type="secondary"
+                color="gray"
+                size="s"
+                onClick={onAdd}
+                iconLeft={{iconName: 'plus'}}
+                disabled={!newRetrievalContext}
+              />
+            </div>
+          </>
+        )}
         <div className={styles.addedItemsHeaderContainer}>
           <StrongText>Added</StrongText>
         </div>
@@ -88,29 +95,25 @@ const RetrievalCustomization: React.FunctionComponent = () => {
           return (
             <div key={index} className={styles.itemContainer}>
               <span>{message}</span>
-              <button
-                type="button"
-                onClick={() => onRemove(index)}
-                className={styles.removeItemButton}
-                disabled={isDisabled(visibility)}
-              >
-                <FontAwesomeV6Icon
-                  iconName="circle-xmark"
-                  className={styles.removeItemIcon}
-                />
-              </button>
+              {!isReadOnly && (
+                <button
+                  type="button"
+                  onClick={() => onRemove(index)}
+                  className={styles.removeItemButton}
+                  disabled={isDisabled(visibility)}
+                >
+                  <FontAwesomeV6Icon
+                    iconName="circle-xmark"
+                    className={styles.removeItemIcon}
+                  />
+                </button>
+              )}
             </div>
           );
         })}
       </div>
       <div className={modelCustomizationStyles.footerButtonContainer}>
-        <Button
-          text="Update"
-          onClick={onUpdate}
-          iconLeft={{iconName: 'edit'}}
-          className={modelCustomizationStyles.updateButton}
-          disabled={isDisabled(visibility)}
-        />
+        <UpdateButton isDisabledDefault={isReadOnly} />
       </div>
     </div>
   );

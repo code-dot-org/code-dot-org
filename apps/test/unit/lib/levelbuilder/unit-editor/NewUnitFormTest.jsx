@@ -1,6 +1,6 @@
-import {expect} from '../../../../util/reconfiguredChai';
-import React from 'react';
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+
 import NewUnitForm from '@cdo/apps/lib/levelbuilder/unit-editor/NewUnitForm';
 
 describe('NewUnitFormTest', () => {
@@ -26,28 +26,28 @@ describe('NewUnitFormTest', () => {
 
   it('can create a new standalone unit', () => {
     const wrapper = mount(<NewUnitForm {...defaultProps} />);
-    expect(wrapper.find('button').length).to.equal(0);
-    expect(wrapper.find('NewCourseFields').length).to.equal(0);
-    expect(wrapper.find('.isCourseSelector').length).to.equal(1);
+    expect(wrapper.find('button').length).toBe(0);
+    expect(wrapper.find('NewCourseFields').length).toBe(0);
+    expect(wrapper.find('.isCourseSelector').length).toBe(1);
 
     wrapper
       .find('.isCourseSelector')
       .simulate('change', {target: {value: 'true'}});
 
     let fields = wrapper.find('NewCourseFields');
-    expect(fields.length).to.equal(1);
+    expect(fields.length).toBe(1);
 
-    expect(fields.find('.familyNameSelector').length).to.equal(1);
+    expect(fields.find('.familyNameSelector').length).toBe(1);
 
-    expect(fields.find('isVersionedSelector').length).to.equal(0);
+    expect(fields.find('isVersionedSelector').length).toBe(0);
     fields
       .find('.familyNameSelector')
       .simulate('change', {target: {value: 'family-1'}});
 
     // need to get updated fields
     fields = wrapper.find('NewCourseFields');
-    expect(fields.find('.isVersionedSelector').length).to.equal(1);
-    expect(wrapper.find('button').length).to.equal(1);
+    expect(fields.find('.isVersionedSelector').length).toBe(1);
+    expect(wrapper.find('button').length).toBe(1);
 
     fields
       .find('.isVersionedSelector')
@@ -55,11 +55,9 @@ describe('NewUnitFormTest', () => {
 
     // need to get updated fields
     fields = wrapper.find('NewCourseFields');
-    expect(fields.find('.versionYearSelector').length).to.equal(1);
-    expect(fields.find('.versionYearSelector').props().disabled).to.equal(
-      false
-    );
-    expect(wrapper.find('button').length).to.equal(1);
+    expect(fields.find('.versionYearSelector').length).toBe(1);
+    expect(fields.find('.versionYearSelector').props().disabled).toBe(false);
+    expect(wrapper.find('button').length).toBe(1);
 
     fields
       .find('.versionYearSelector')
@@ -67,43 +65,43 @@ describe('NewUnitFormTest', () => {
 
     // need to get updated fields
     fields = wrapper.find('NewCourseFields');
-    expect(fields.find('.versionYearSelector').props().value).to.equal('1991');
+    expect(fields.find('.versionYearSelector').props().value).toBe('1991');
 
-    expect(wrapper.find('div.savingDetailsAndButton').length).to.equal(1);
-    expect(wrapper.find('[name="script[name]"]').length).to.equal(1);
+    expect(wrapper.find('div.savingDetailsAndButton').length).toBe(1);
+    expect(wrapper.find('[name="script[name]"]').length).toBe(1);
   });
 
   it('course type settings are updated when family name is selected', () => {
     const wrapper = mount(<NewUnitForm {...defaultProps} />);
-    expect(wrapper.find('button').length).to.equal(0);
-    expect(wrapper.find('NewCourseFields').length).to.equal(0);
-    expect(wrapper.find('.isCourseSelector').length).to.equal(1);
+    expect(wrapper.find('button').length).toBe(0);
+    expect(wrapper.find('NewCourseFields').length).toBe(0);
+    expect(wrapper.find('.isCourseSelector').length).toBe(1);
 
     wrapper
       .find('.isCourseSelector')
       .simulate('change', {target: {value: 'true'}});
 
     let fields = wrapper.find('NewCourseFields');
-    expect(fields.length).to.equal(1);
+    expect(fields.length).toBe(1);
 
-    expect(fields.find('.familyNameSelector').length).to.equal(1);
+    expect(fields.find('.familyNameSelector').length).toBe(1);
 
-    expect(fields.find('isVersionedSelector').length).to.equal(0);
+    expect(fields.find('isVersionedSelector').length).toBe(0);
     fields
       .find('.familyNameSelector')
       .simulate('change', {target: {value: 'family-1'}});
 
     // need to get updated fields
     fields = wrapper.find('NewCourseFields');
-    expect(fields.find('.isVersionedSelector').length).to.equal(1);
-    expect(fields.find('CourseTypeEditor').length).to.equal(1);
-    expect(fields.find('CourseTypeEditor').props().instructorAudience).to.equal(
+    expect(fields.find('.isVersionedSelector').length).toBe(1);
+    expect(fields.find('CourseTypeEditor').length).toBe(1);
+    expect(fields.find('CourseTypeEditor').props().instructorAudience).toBe(
       'teacher'
     );
-    expect(
-      fields.find('CourseTypeEditor').props().participantAudience
-    ).to.equal('student');
-    expect(fields.find('CourseTypeEditor').props().instructionType).to.equal(
+    expect(fields.find('CourseTypeEditor').props().participantAudience).toBe(
+      'student'
+    );
+    expect(fields.find('CourseTypeEditor').props().instructionType).toBe(
       'teacher_led'
     );
 
@@ -113,94 +111,94 @@ describe('NewUnitFormTest', () => {
 
     // need to get updated fields
     fields = wrapper.find('NewCourseFields');
-    expect(fields.find('.isVersionedSelector').length).to.equal(1);
-    expect(fields.find('CourseTypeEditor').length).to.equal(1);
-    expect(fields.find('CourseTypeEditor').props().instructorAudience).to.equal(
+    expect(fields.find('.isVersionedSelector').length).toBe(1);
+    expect(fields.find('CourseTypeEditor').length).toBe(1);
+    expect(fields.find('CourseTypeEditor').props().instructorAudience).toBe(
       'universal_instructor'
     );
-    expect(
-      fields.find('CourseTypeEditor').props().participantAudience
-    ).to.equal('teacher');
-    expect(fields.find('CourseTypeEditor').props().instructionType).to.equal(
+    expect(fields.find('CourseTypeEditor').props().participantAudience).toBe(
+      'teacher'
+    );
+    expect(fields.find('CourseTypeEditor').props().instructionType).toBe(
       'self_paced'
     );
   });
 
   it('can create a new unit for multi unit course', () => {
     const wrapper = shallow(<NewUnitForm {...defaultProps} />);
-    expect(wrapper.find('div.savingDetailsAndButton').length).to.equal(0);
-    expect(wrapper.find('NewCourseFields').length).to.equal(0);
-    expect(wrapper.find('.isCourseSelector').length).to.equal(1);
+    expect(wrapper.find('div.savingDetailsAndButton').length).toBe(0);
+    expect(wrapper.find('NewCourseFields').length).toBe(0);
+    expect(wrapper.find('.isCourseSelector').length).toBe(1);
 
     wrapper
       .find('.isCourseSelector')
       .simulate('change', {target: {value: 'false'}});
 
-    expect(wrapper.find('NewCourseFields').length).to.equal(0);
-    expect(wrapper.find('div.savingDetailsAndButton').length).to.equal(1);
-    expect(wrapper.find('[name="script[name]"]').length).to.equal(1);
+    expect(wrapper.find('NewCourseFields').length).toBe(0);
+    expect(wrapper.find('div.savingDetailsAndButton').length).toBe(1);
+    expect(wrapper.find('[name="script[name]"]').length).toBe(1);
   });
 
   it('resetting isCourseSelector hides NewCourseFields', () => {
     const wrapper = shallow(<NewUnitForm {...defaultProps} />);
-    expect(wrapper.find('div.savingDetailsAndButton').length).to.equal(0);
-    expect(wrapper.find('NewCourseFields').length).to.equal(0);
-    expect(wrapper.find('.isCourseSelector').length).to.equal(1);
+    expect(wrapper.find('div.savingDetailsAndButton').length).toBe(0);
+    expect(wrapper.find('NewCourseFields').length).toBe(0);
+    expect(wrapper.find('.isCourseSelector').length).toBe(1);
 
     wrapper
       .find('.isCourseSelector')
       .simulate('change', {target: {value: 'true'}});
 
-    expect(wrapper.find('NewCourseFields').length).to.equal(1);
-    expect(wrapper.find('div.savingDetailsAndButton').length).to.equal(0);
-    expect(wrapper.find('[name="script[name]"]').length).to.equal(0);
+    expect(wrapper.find('NewCourseFields').length).toBe(1);
+    expect(wrapper.find('div.savingDetailsAndButton').length).toBe(0);
+    expect(wrapper.find('[name="script[name]"]').length).toBe(0);
 
     wrapper.find('.isCourseSelector').simulate('change', {target: {value: ''}});
 
-    expect(wrapper.find('NewCourseFields').length).to.equal(0);
-    expect(wrapper.find('div.savingDetailsAndButton').length).to.equal(0);
-    expect(wrapper.find('[name="script[name]"]').length).to.equal(0);
+    expect(wrapper.find('NewCourseFields').length).toBe(0);
+    expect(wrapper.find('div.savingDetailsAndButton').length).toBe(0);
+    expect(wrapper.find('[name="script[name]"]').length).toBe(0);
   });
 
   it('resetting isCourseSelector hides save button', () => {
     const wrapper = shallow(<NewUnitForm {...defaultProps} />);
-    expect(wrapper.find('div.savingDetailsAndButton').length).to.equal(0);
-    expect(wrapper.find('NewCourseFields').length).to.equal(0);
-    expect(wrapper.find('.isCourseSelector').length).to.equal(1);
+    expect(wrapper.find('div.savingDetailsAndButton').length).toBe(0);
+    expect(wrapper.find('NewCourseFields').length).toBe(0);
+    expect(wrapper.find('.isCourseSelector').length).toBe(1);
 
     wrapper
       .find('.isCourseSelector')
       .simulate('change', {target: {value: 'false'}});
 
-    expect(wrapper.find('NewCourseFields').length).to.equal(0);
-    expect(wrapper.find('div.savingDetailsAndButton').length).to.equal(1);
-    expect(wrapper.find('[name="script[name]"]').length).to.equal(1);
+    expect(wrapper.find('NewCourseFields').length).toBe(0);
+    expect(wrapper.find('div.savingDetailsAndButton').length).toBe(1);
+    expect(wrapper.find('[name="script[name]"]').length).toBe(1);
 
     wrapper.find('.isCourseSelector').simulate('change', {target: {value: ''}});
 
-    expect(wrapper.find('NewCourseFields').length).to.equal(0);
-    expect(wrapper.find('div.savingDetailsAndButton').length).to.equal(0);
-    expect(wrapper.find('[name="script[name]"]').length).to.equal(0);
+    expect(wrapper.find('NewCourseFields').length).toBe(0);
+    expect(wrapper.find('div.savingDetailsAndButton').length).toBe(0);
+    expect(wrapper.find('[name="script[name]"]').length).toBe(0);
   });
 
   it('hitting save opens submit confirmation dialog', () => {
     const wrapper = shallow(<NewUnitForm {...defaultProps} />);
-    expect(wrapper.find('div.savingDetailsAndButton').length).to.equal(0);
-    expect(wrapper.find('NewCourseFields').length).to.equal(0);
-    expect(wrapper.find('.isCourseSelector').length).to.equal(1);
+    expect(wrapper.find('div.savingDetailsAndButton').length).toBe(0);
+    expect(wrapper.find('NewCourseFields').length).toBe(0);
+    expect(wrapper.find('.isCourseSelector').length).toBe(1);
 
     wrapper
       .find('.isCourseSelector')
       .simulate('change', {target: {value: 'false'}});
 
-    expect(wrapper.find('BaseDialog').props().isOpen).to.be.false;
+    expect(wrapper.find('BaseDialog').props().isOpen).toBe(false);
 
-    expect(wrapper.find('NewCourseFields').length).to.equal(0);
-    expect(wrapper.find('div.savingDetailsAndButton').length).to.equal(1);
-    expect(wrapper.find('[name="script[name]"]').length).to.equal(1);
+    expect(wrapper.find('NewCourseFields').length).toBe(0);
+    expect(wrapper.find('div.savingDetailsAndButton').length).toBe(1);
+    expect(wrapper.find('[name="script[name]"]').length).toBe(1);
 
     wrapper.find('div.savingDetailsAndButton').find('button').simulate('click');
 
-    expect(wrapper.find('BaseDialog').props().isOpen).to.be.true;
+    expect(wrapper.find('BaseDialog').props().isOpen).toBe(true);
   });
 });

@@ -1,7 +1,10 @@
-import React from 'react';
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
 import moduleStyles from '@cdo/apps/lib/levelbuilder/levelbuilder.module.scss';
 
 describe('CollapsibleEditorSection', () => {

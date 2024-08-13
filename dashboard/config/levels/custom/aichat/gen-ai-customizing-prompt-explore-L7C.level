@@ -7,7 +7,7 @@
   "user_id": 4,
   "properties": {
     "encrypted": "false",
-    "long_instructions": "## Career Advice\r\n\r\nHave you ever wondered what it would be like to have a certain career but you have no idea what it’s really like? Wouldn’t it be great to talk to someone who had that job?\r\n\r\n### Do This\r\n\r\nAdd a system prompt that lets you talk to someone who works at a specific place or has a certain career.\r\n\r\nMake sure your prompt includes:\r\n- A specific goal or focus\r\n- A way to restrict responses\r\n- **A specific role or tone to use when responding**\r\n\r\nTest the chatbot! Have a conversation with at least 4 messages, then press the `Continue`(#7435b2) button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n- What is it like to do your job?\r\n- What should I study in school in order to do your job?\r\n- Who are other famous people who do your job?\r\n:::\r\n\r\n&nbsp;",
+    "long_instructions": "## Career Advice\r\n\r\nHave you ever wondered what it would be like to have a certain career but you have no idea what it’s really like? Wouldn’t it be great to talk to someone who had that job?\r\n\r\n### Do This\r\n\r\nAdd a system prompt that lets you talk to someone who works at a specific place or has a certain career.\r\n\r\nMake sure your prompt includes:\r\n- A specific goal or focus\r\n- A way to restrict responses\r\n- **A specific role or tone to use when responding**\r\n\r\nTest the chatbot! Have a conversation with at least 4 messages, then press the <code style=\"color:white; background-color:#7435b2\">Continue</code> button!\r\n\r\n&nbsp;\r\n\r\n::: details [**Click here to see example messages to try in this level**]\r\n- What is it like to do your job?\r\n- What should I study in school in order to do your job?\r\n- Who are other famous people who do your job?\r\n:::\r\n\r\n&nbsp;",
     "system_prompt": "deprecated",
     "bot_title": "deprecated",
     "bot_description": "deprecated",
@@ -44,8 +44,11 @@
 
       ]
     },
-    "project_template_level_name": "gen-ai-customizing-prompt-templateC"
+    "project_template_level_name": "gen-ai-customizing-prompt-templateC",
+    "display_name": "Career Advice",
+    "bubble_choice_description": "Have you ever wondered what it would be like to have a certain career but you have no idea what it’s really like? Wouldn’t it be great to talk to someone who had that job?",
+    "thumbnail_url": "https://images.code.org/492b225e33c502ecf2d95cdc87323fde-Lesson 3 - Level 7C - Career Advice.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-03T23:15:34.809+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-template\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-template\"},{\"changed_at\":\"2024-05-06 04:50:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 20:45:22 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-03T23:15:34.809+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-template\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-template\"},{\"changed_at\":\"2024-05-06 04:50:15 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 20:45:22 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-21 17:28:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:09:04 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

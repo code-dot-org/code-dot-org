@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-04-02 18:21:44 UTC",
+    "serialized_at": "2024-08-01 22:27:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5220,7 +5220,7 @@
       "key": "fbbaa320-6278-433b-9541-86e86f0a89bd",
       "position": 1,
       "properties": {
-        "description": "Software engineers use nested loops to solve a wide variety of problems. Many of these problems use the same types of loops we wrote today. We have done a lot today to grow our programming abilities!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Click through the animated slide to display the prompts.\n\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and syntax they learned in this lesson, such as how a nested `for` loop can be used to repeat a series of actions within other actions. They should realizedd that nested `for` loops can be used for tasks that are highly repetitive. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the question of the day\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "description": "Software engineers use nested loops to solve a wide variety of problems. Many of these problems use the same types of loops we wrote today. We have done a lot today to grow our programming abilities!",
         "name": "Three W’s",
         "remarks": true
       },
@@ -5230,8 +5230,19 @@
       }
     },
     {
-      "key": "230aaa0c-7742-473e-befd-89c35780385a",
+      "key": "9d8088da-8611-408e-9e5f-b2fcc28e4281",
       "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:**  Click through the animated slide to display the prompts.\n\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Students highlight the concepts and syntax they learned in this lesson, such as how a nested `for` loop can be used to repeat a series of actions within other actions. They should realizedd that nested `for` loops can be used for tasks that are highly repetitive. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the question of the day\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d8088da-8611-408e-9e5f-b2fcc28e4281",
+        "lesson_activity.key": "8d15bd13-d5a9-40ab-813b-aa21151afd53"
+      }
+    },
+    {
+      "key": "230aaa0c-7742-473e-befd-89c35780385a",
+      "position": 3,
       "properties": {
         "description": "Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.\n",
         "name": "Assessment: Check for Understanding",
@@ -7402,11 +7413,14 @@
       ]
     },
     {
-      "chapter": 87,
-      "position": 6,
+      "chapter": 86,
+      "position": 5,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U6L2-L6_-modular"
+        ],
         "progression": "Practice: Implementing String Algorithms"
       },
       "bonus": false,
@@ -7424,7 +7438,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 87,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7449,7 +7463,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 88,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7474,7 +7488,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 89,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7499,7 +7513,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 90,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -7524,7 +7538,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 91,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -7549,7 +7563,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 92,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7574,7 +7588,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 93,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7598,7 +7612,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 94,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7623,7 +7637,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 95,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8816,6 +8830,18 @@
       }
     },
     {
+      "name": "[Exemplar] Nested Iteration Guided Notes",
+      "url": "https://docs.google.com/document/d/1cTpq3R5lUfFd0XgBECZUxVsc03GVuMdrXFFCnez_ZQo/edit?usp=drive_link",
+      "key": "_exemplar_nested_iteration_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_nested_iteration_guided_notes"
+      }
+    },
+    {
       "name": "[EXEMPLAR] Store Management Project Planning Guide",
       "url": "https://docs.google.com/document/d/1_QJOqx8_GlvSo30yUv8AeJOU3v8SJhUAOUv5_zPcSrQ/edit?usp=sharing",
       "key": "_exemplar_store_management_project_planning_guide",
@@ -9454,15 +9480,39 @@
       }
     },
     {
-      "name": "nested_iteration",
+      "name": "Nested Iteration",
       "url": "https://docs.google.com/presentation/d/1rhcMwM5-4IHiS-hJY2Ah-5AtwKBBB4DZsug--KmReh0/edit#slide=id.gca418c6afa_0_1070",
       "key": "nested_iteration",
       "properties": {
-        "audience": "Verified Teacher",
+        "audience": "Student",
         "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "nested_iteration"
+      }
+    },
+    {
+      "name": "Nested Iteration Guided Notes",
+      "url": "https://docs.google.com/document/d/1A0gRMtYFIwERoZZWm10ijQYm5Sw3_GnRen5C5608uRw/edit?usp=drive_link",
+      "key": "nested_iteration_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "nested_iteration_guided_notes"
+      }
+    },
+    {
+      "name": "Nested Loops",
+      "url": "https://youtu.be/xFJoqfqVEbg",
+      "key": "nested_loops",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "nested_loops"
       }
     },
     {
@@ -10531,7 +10581,25 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "resource.key": "_exemplar_nested_iteration_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "resource.key": "nested_iteration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "nested_iteration_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "nested_loops"
       }
     }
   ],

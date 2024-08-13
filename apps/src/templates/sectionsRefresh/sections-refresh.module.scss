@@ -1,6 +1,6 @@
-@import "color.scss";
-@import "font.scss";
-@import "@cdo/apps/componentLibrary/common/styles/mixins";
+@import 'color.scss';
+@import 'font.scss';
+@import '@cdo/apps/componentLibrary/common/styles/mixins';
 
 // In order to make typography work correctly with em units. (Design system is build for 16px default font size)
 body {
@@ -179,17 +179,6 @@ label.typographyLabelTwo {
   padding: 0.3em;
 }
 
-.toolTipContainer {
-  display: flex;
-  align-items: center;
-
-  button {
-    .toggle-display {
-      margin-left: 5px;
-    }
-  }
-}
-
 button.advancedSettingsButton {
   margin: 5px;
   font-size: unset;
@@ -229,4 +218,16 @@ button.advancedSettingsButton {
 
 .textPopUp {
   cursor: pointer;
+}
+
+.toolTipContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+
+  button {
+    .toggle-display {
+      margin-left: 5px;
+    }
+  }
 }

@@ -1,11 +1,13 @@
+// Entrypoints for old-style "lab1" labs
+//
+// New labs should instead use Lab2, see: lab2EntryPoints.ts
+
 const ALL_APPS = [
   'ailab',
   'applab',
   'bounce',
-  'calc',
   'craft',
   'dance',
-  'eval',
   'fish',
   'flappy',
   'javalab',
@@ -38,10 +40,10 @@ const CODE_STUDIO_ENTRIES = {
   'incubator/index': './src/sites/studio/pages/incubator/index.js',
   'lessons/show': './src/sites/studio/pages/lessons/show.js',
   'lessons/student_lesson_plan': './src/sites/studio/pages/lessons/student_lesson_plan.js',
-  'musiclab/index': './src/sites/studio/pages/musiclab/index.js',
   'musiclab/menu': './src/sites/studio/pages/musiclab/menu.js',
   'musiclab/gallery': './src/sites/studio/pages/musiclab/gallery.js',
   'musiclab/embed': './src/sites/studio/pages/musiclab/embed.js',
+  'policy_compliance/parental_permission/_banner': './src/sites/studio/pages/policy_compliance/parental_permission/_banner.js',
   'policy_compliance/parental_permission/_modal': './src/sites/studio/pages/policy_compliance/parental_permission/_modal.js',
   'policy_compliance/child_account_consent': './src/sites/studio/pages/policy_compliance/child_account_consent.js',
   'print_certificates/batch': './src/sites/studio/pages/print_certificates/batch.js',
@@ -53,9 +55,11 @@ const CODE_STUDIO_ENTRIES = {
   'sessions/lockout': './src/sites/studio/pages/sessions/lockout.js',
   'devise/sessions/new': './src/sites/studio/pages/devise/sessions/new.js',
   'devise/registrations/_sign_up': './src/sites/studio/pages/devise/registrations/_sign_up.js',
+  'devise/registrations/new_sign_up': './src/sites/studio/pages/devise/registrations/new_sign_up.js',
   'devise/shared/_oauth_links': './src/sites/studio/pages/devise/shared/_oauth_links.js',
   'devise/registrations/_finish_sign_up': './src/sites/studio/pages/devise/registrations/_finish_sign_up.js',
   'devise/registrations/edit': './src/sites/studio/pages/devise/registrations/edit.js',
+  'devise/registrations/account_type': './src/sites/studio/pages/devise/registrations/account_type.js',
   'essential': './src/sites/studio/pages/essential.js',
   'home/_homepage': './src/sites/studio/pages/home/_homepage.js',
   'layouts/_parent_email_banner': './src/sites/studio/pages/layouts/_parent_email_banner.js',
@@ -88,8 +92,9 @@ const CODE_STUDIO_ENTRIES = {
   'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
   'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
   'levels/show': './src/sites/studio/pages/levels/show.js',
-  'lti/v1/_early_access_banner': './src/sites/studio/pages/lti/v1/_early_access_banner.js',
   'lti/v1/iframe': './src/sites/studio/pages/lti/v1/iframe.js',
+  'lti/v1/account_linking/landing': './src/sites/studio/pages/lti/v1/account_linking/landing.js',
+  'lti/v1/dynamic_registration': './src/sites/studio/pages/lti/v1/dynamic_registration.js',
   'lti/v1/sync_course': './src/sites/studio/pages/lti/v1/sync_course.js',
   'lti/v1/upgrade_account': './src/sites/studio/pages/lti/v1/upgrade_account.js',
   'maker/home': './src/sites/studio/pages/maker/home.js',
@@ -116,6 +121,7 @@ const CODE_STUDIO_ENTRIES = {
 
 // prettier-ignore
 const INTERNAL_ENTRIES = {
+  'ai_tutor/tester': './src/sites/studio/pages/ai_tutor/tester.js',
   'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
   'blocks/index': './src/sites/studio/pages/blocks/index.js',
   'course_offerings/edit': './src/sites/studio/pages/course_offerings/edit.js',
@@ -141,12 +147,14 @@ const INTERNAL_ENTRIES = {
   'levels/editors/fields/_grid': './src/sites/studio/pages/levels/editors/fields/_grid.js',
   'levels/editors/fields/_panels': './src/sites/studio/pages/levels/editors/fields/_panels.js',
   'levels/editors/fields/_poetry_fields': './src/sites/studio/pages/levels/editors/fields/_poetry_fields.js',
+  'levels/editors/fields/_predict_settings': './src/sites/studio/pages/levels/editors/fields/_predict_settings.js',
   'levels/editors/fields/_preload_assets': './src/sites/studio/pages/levels/editors/fields/_preload_assets.js',
   'levels/editors/fields/_special_level_types': './src/sites/studio/pages/levels/editors/fields/_special_level_types.js',
   'levels/editors/fields/_validation_code': './src/sites/studio/pages/levels/editors/fields/_validation_code.js',
   'levels/editors/fields/_validations': './src/sites/studio/pages/levels/editors/fields/_validations.js',
   'levels/editors/fields/_video': './src/sites/studio/pages/levels/editors/fields/_video.js',
   'levels/editors/_gamelab': './src/sites/studio/pages/levels/editors/_gamelab.js',
+  'levels/editors/_navigation_sidebar': './src/sites/studio/pages/levels/editors/_navigation_sidebar.js',
   'levels/editors/_pixelation': './src/sites/studio/pages/levels/editors/_pixelation.js',
   'levels/editors/_studio': './src/sites/studio/pages/levels/editors/_studio.js',
   'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
@@ -161,6 +169,7 @@ const INTERNAL_ENTRIES = {
   'reference_guides/edit': './src/sites/studio/pages/reference_guides/edit.js',
   'reference_guides/edit_all': './src/sites/studio/pages/reference_guides/edit_all.js',
   'programming_expressions/index': './src/sites/studio/pages/programming_expressions/index.js',
+  'images/new': './src/sites/studio/pages/images/new.js',
   'rubrics/new': './src/sites/studio/pages/rubrics/new.js',
   'rubrics/edit': './src/sites/studio/pages/rubrics/edit.js',
   'sections/new': './src/sites/studio/pages/sections/new.js',
@@ -183,7 +192,7 @@ const PEGASUS_ENTRIES = {
   'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
   'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
   'code.org/public/yourschool/thankyou': './src/sites/code.org/pages/public/yourschool/thankyou.js',
-  'code.org/public/districts': './src/sites/code.org/pages/public/districts.js',
+  'code.org/views/admins_email_signup_form': './src/sites/code.org/pages/views/admins_email_signup_form.js',
   'code.org/views/share_privacy': './src/sites/code.org/pages/views/share_privacy.js',
   'code.org/views/theme_common_head_after': './src/sites/code.org/pages/views/theme_common_head_after.js',
   'code.org/views/theme_google_analytics': './src/sites/code.org/pages/views/theme_google_analytics.js',
@@ -201,6 +210,7 @@ const PEGASUS_ENTRIES = {
   'code.org/views/swiper_page_minecraft': './src/sites/code.org/pages/views/swiper_page_minecraft.js',
   'code.org/views/swiper_page_music_lab': './src/sites/code.org/pages/views/swiper_page_music_lab.js',
   'code.org/views/swiper_page_promote': './src/sites/code.org/pages/views/swiper_page_promote.js',
+  'code.org/views/classy_embed_form': './src/sites/code.org/pages/views/classy_embed_form.js',
   'code.org/public/poetry': './src/sites/code.org/pages/public/poetry.js',
 
   // hourofcode.com
@@ -209,6 +219,7 @@ const PEGASUS_ENTRIES = {
   'hourofcode.com/views/hoc_events_map': './src/sites/hourofcode.com/pages/views/hoc_events_map.js',
   'hourofcode.com/views/theme_google_analytics': './src/sites/hourofcode.com/pages/views/theme_google_analytics.js',
   'hourofcode.com/views/swiper_page_ai': './src/sites/hourofcode.com/pages/views/swiper_page_ai.js',
+  'hourofcode.com/views/swiper_page_beyond': './src/sites/hourofcode.com/pages/views/swiper_page_beyond.js',
 
   // shared between code.org and hourofcode.com
   'tutorialExplorer': './src/tutorialExplorer/tutorialExplorer.js',
@@ -226,6 +237,8 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
   'pd/application/teacher_application/new': './src/sites/studio/pages/pd/application/teacher_application/new.js',
   'pd/application/principal_approval_application/new': './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
   'pd/workshop_daily_survey/new_general_foorm': './src/sites/studio/pages/pd/workshop_daily_survey/new_general_foorm.js',
+  'pd/workshop_enrollment/logged_out': './src/sites/studio/pages/pd/workshop_enrollment/logged_out.js',
+  'pd/workshop_enrollment/students_cannot_enroll': './src/sites/studio/pages/pd/workshop_enrollment/students_cannot_enroll.js',
   'pd/workshop_enrollment/new': './src/sites/studio/pages/pd/workshop_enrollment/new.js',
   'pd/workshop_enrollment/cancel': './src/sites/studio/pages/pd/workshop_enrollment/cancel.js',
 
@@ -251,6 +264,8 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
 const SHARED_ENTRIES = {
   cookieBanner: './src/cookieBanner/cookieBanner.js',
   userHeaderEventLogger: './src/userHeaderEventLogger/userHeaderEventLogger.js',
+  userHeaderStatsigReporter:
+    './src/userHeaderStatsigReporter/userHeaderStatsigReporter.js',
 };
 
 // prettier-ignore

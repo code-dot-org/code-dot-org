@@ -53,7 +53,7 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncIn do
     let(:unit) {FactoryBot.create(:unit, name: unit_name, course_version: unit_course_version)}
 
     before do
-      Unit.stubs(:unit_in_category?).with('hoc', unit_name).returns(false)
+      unit.stubs(:in_initiative?).with('HOC').returns(false)
       unit.stubs(:csf?).returns(false)
       unit.stubs(:csc?).returns(false)
     end
@@ -92,7 +92,7 @@ describe I18n::Resources::Dashboard::CurriculumContent::SyncIn do
 
     context 'when the init in the "hoc" category' do
       before do
-        Unit.expects(:unit_in_category?).with('hoc', unit_name).returns(true)
+        unit.expects(:in_initiative?).with('HOC').returns(true)
       end
 
       it 'returns subdirectory path for "Hour of Code" units' do

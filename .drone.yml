@@ -71,7 +71,7 @@ steps:
   - name: unit-tests
     # see: docker/continuous-integration/Dockerfile
     # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:1.9.3
+    image: codedotorg/code-dot-org:1.10.0
     pull: always
     volumes:
       - name: rbenv
@@ -191,7 +191,7 @@ steps:
   - name: ui-tests
     # see: docker/continuous-integration/Dockerfile
     # TODO: switch to codedotorg/cdo-ci
-    image: codedotorg/code-dot-org:1.9.3
+    image: codedotorg/code-dot-org:1.10.0
     pull: always
     volumes:
       - name: rbenv
@@ -206,12 +206,6 @@ steps:
         from_secret: CLOUDFRONT_PRIVATE_KEY
       PROPERTIES_ENCRYPTION_KEY:
         from_secret: PROPERTIES_ENCRYPTION_KEY
-      FIREBASE_NAME:
-        from_secret: FIREBASE_NAME
-      FIREBASE_SECRET:
-        from_secret: FIREBASE_SECRET
-      FIREBASE_SHARED_SECRET:
-        from_secret: FIREBASE_SHARED_SECRET
       SAUCE_USERNAME:
         from_secret: SAUCE_USERNAME
       SAUCE_ACCESS_KEY:
@@ -295,6 +289,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: c477840363aef5622277b7f1a1b47b0b93e6e516e89562b7505d30d2bfd8473c
+hmac: 8551f3e768d263e92bb0c8060de2b6bfd8cf939aa31c52047621485746726d16
 
 ...

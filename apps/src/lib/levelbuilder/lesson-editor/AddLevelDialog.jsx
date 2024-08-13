@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import AddLevelDialogTop from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelDialogTop';
-import Button from '@cdo/apps/templates/Button';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import LevelToken from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelToken';
 import RemoveLevelDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveLevelDialog';
-import i18n from '@cdo/locale';
 import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import i18n from '@cdo/locale';
 
 import LessonEditorDialog from './LessonEditorDialog';
 
@@ -45,7 +45,12 @@ export default class AddLevelDialog extends Component {
           style={styles.dialogContent}
           className="uitest-level-dialog-content"
         >
-          <AddLevelDialogTop addLevel={this.props.addLevel} />
+          <AddLevelDialogTop
+            addLevel={this.props.addLevel}
+            currentLevelIds={this.props.activitySection.scriptLevels.map(
+              scriptLevel => scriptLevel.activeId
+            )}
+          />
           <div style={styles.bottomArea}>
             <h4>Levels in Progression</h4>
             <div style={styles.levelsBox}>

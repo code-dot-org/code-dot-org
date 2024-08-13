@@ -156,6 +156,9 @@ class Ability
         can?(:manage, section) || user.sections_as_student.include?(section)
       end
 
+      # all signed in users can get their level source
+      can :get_level_source, UserLevel
+
       if user.teacher?
         can :manage, Section do |s|
           s.instructors.include?(user)
@@ -265,6 +268,10 @@ class Ability
       if user.can_view_student_ai_chat_messages?
         can :index, AiTutorInteraction
       end
+
+      if user.has_ai_tutor_access? && user.levelbuilder?
+        can :check_message_safety, :aichat
+      end
     end
 
     # Override UnitGroup, Unit, Lesson and ScriptLevel.
@@ -339,6 +346,15 @@ class Ability
       else
         can :load_project, project_type_key
       end
+    end
+
+    # We allow loading extra links on non-levelbuilder environments (such as prod)
+    if user.persisted? && (user.permission?(UserPermission::LEVELBUILDER) || user.permission?(UserPermission::PROJECT_VALIDATOR))
+      can :extra_links, Level
+    end
+
+    if user.persisted? && (user.permission?(UserPermission::PROJECT_VALIDATOR))
+      can :extra_links, ProjectsController
     end
 
     # In order to accommodate the possibility of there being no database, we
@@ -469,6 +485,13 @@ class Ability
           (!user.teachers.empty? &&
           user.teachers.any? {|teacher| teacher.has_pilot_experiment?(GENAI_PILOT)})
         can :chat_completion, :aichat
+        can :log_chat_event, :aichat
+        can :start_chat_completion, :aichat
+        can :chat_request, :aichat
+      end
+      # Only teachers can view student chat history.
+      if user.has_pilot_experiment?(GENAI_PILOT)
+        can :student_chat_history, :aichat
       end
     end
 

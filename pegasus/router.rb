@@ -37,7 +37,6 @@ require src_dir 'social_metadata'
 require src_dir 'forms'
 require src_dir 'curriculum_router'
 require src_dir 'homepage'
-require src_dir 'advocacy_site'
 require 'cdo/hamburger'
 
 require pegasus_dir 'helper_modules/multiple_extname_file_utils'
@@ -111,7 +110,7 @@ class Documents < Sinatra::Base
         ['.fetch']
     # Note: shared_resources.rb has additional configuration for Sass::Plugin
     Sass::Plugin.options[:cache_location] = pegasus_dir('cache', '.sass-cache')
-    ['code.org', 'hourofcode.com', 'advocacy.code.org'].each do |site|
+    ['code.org', 'hourofcode.com'].each do |site|
       Sass::Plugin.add_template_location(
         sites_v3_dir(site, 'public', 'css'),
         sites_v3_dir(site, 'public', 'css', 'generated')

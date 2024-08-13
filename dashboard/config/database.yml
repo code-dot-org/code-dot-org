@@ -1,4 +1,6 @@
 <%
+require 'dynamic_config/dcdo'
+
 # TODO: Rails 4.1 may be able to be configured with the database url
 # instead of having to parse it here. Actually 4.0 can do that too but
 # it doesn't work with the way seamless_database_pool wants to
@@ -24,15 +26,15 @@ mysql_defaults: &mysql_defaults
   checkout_timeout: 3
 
   # `mysql_options` client options forwarded through the mysql2 adapter:
-  # See: https://dev.mysql.com/doc/refman/5.7/en/mysql-options.html
+  # See: https://dev.mysql.com/doc/c-api/8.0/en/mysql-options.html
 
   # `MYSQL_OPT_CONNECT_TIMEOUT`: The connect timeout in seconds.
   connect_timeout: 2
 
-  # `MYSQL_OPT_RECONNECT`: Enable or disable automatic reconnection to the server if the connection is found to have
-  # been lost. Reconnect is off by default; this option provides a way to set reconnection behavior explicitly.
-  # See https://dev.mysql.com/doc/refman/5.7/en/c-api-auto-reconnect.html
+<% if DCDO.get('enable_mysql_client_reconnect', true) %>
+  # `MYSQL_OPT_RECONNECT` is deprecated https://dev.mysql.com/doc/c-api/8.0/en/c-api-auto-reconnect.html
   reconnect: true
+<% end %>
 
   # `MYSQL_OPT_READ_TIMEOUT`: The timeout in seconds for each attempt to read from the server.
   # There are retries if necessary, so the total effective timeout value is three times the option value.

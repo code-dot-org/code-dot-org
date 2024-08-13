@@ -4,10 +4,11 @@
  * for the given type.
  */
 
+import {ProjectManagerStorageType} from '../types';
+
 import {RemoteChannelsStore, LocalChannelsStore} from './ChannelsStore';
 import ProjectManager from './ProjectManager';
 import {RemoteSourcesStore, LocalSourcesStore} from './SourcesStore';
-import {ProjectManagerStorageType} from '../types';
 
 export default class ProjectManagerFactory {
   /**
@@ -36,13 +37,15 @@ export default class ProjectManagerFactory {
    * @param levelId The identifier for the level.
    * @param userId The user ID of the creator.  Can be undefined if the user is looking at their own work.
    * @param scriptId The id of the script. Can be undefined if the level is not in the context of a script.
+   * @param scriptLevelId the ID of the script level (if different from the level ID). Can be undefined if the level is not in the context of a script.
    * @returns A project manager
    */
   static async getProjectManagerForLevel(
     projectManagerStorageType: ProjectManagerStorageType,
     levelId: number,
-    userId?: string,
-    scriptId?: number
+    userId?: number,
+    scriptId?: number,
+    scriptLevelId?: string
   ): Promise<ProjectManager | null> {
     const channelsStore = this.getChannelsStore(projectManagerStorageType);
     let channelId: string | undefined = undefined;
@@ -50,6 +53,7 @@ export default class ProjectManagerFactory {
     const response = await channelsStore.loadForLevel(
       levelId,
       scriptId,
+      scriptLevelId,
       userId
     );
     if (response.ok) {

@@ -2,6 +2,7 @@
   "category": "World",
   "config": {
     "func": "textVariableJoin",
+    "docFunc": "codestudio_variableName",
     "blockText": "{VAR}{TEXT2}",
     "returnType": "String",
     "style": "variable_blocks",

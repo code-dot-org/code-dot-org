@@ -90,6 +90,7 @@ RUN apt-get install -y --no-install-recommends \
     parallel \
     python \
     python-dev \
+    python3-pip \
     software-properties-common \
     sudo \
     tar \
@@ -107,24 +108,9 @@ WORKDIR /tmp
 # en_US.UTF-8 locale not available by default
 RUN locale-gen en_US.UTF-8
 
-# Install MySQL.
-#
-# We explicitly target MySQL 5.7, and because of that we also explicitly target
-# Ubuntu Bionic (18.x).
-#
-# We also explicitly install both mysql-client and mysql-server, so that we can
-# also explicitly define the versions of both; normally only the latter is
-# required since it depends on the former.
-#
-# Once we update to MySQL 8+, this can be simplified.
-RUN curl -sSLOJ https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb && \
-    echo "mysql-apt-config mysql-apt-config/select-server select mysql-5.7" | /usr/bin/debconf-set-selections && \
-    echo "mysql-apt-config mysql-apt-config/repo-codename select bionic" | /usr/bin/debconf-set-selections && \
-    dpkg -i mysql-apt-config_0.8.22-1_all.deb || apt-get --fix-broken --yes install && \
-    rm -rf mysql-apt-config_0.8.22-1_all.deb && \
-    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B7B3B788A8D3785C && \
-    apt-get update && \
-    apt-get install --yes libmysqlclient-dev mysql-client=5.7.42-1ubuntu18.04 mysql-server=5.7.42-1ubuntu18.04
+# Install MySQL; implicitly targeting MySQL 8.0
+RUN apt-get update && \
+    apt-get install --yes libmysqlclient-dev mysql-client mysql-server
 
 # disable auth for local dashboard mysql db
 RUN service mysql start && \
@@ -132,6 +118,23 @@ RUN service mysql start && \
     echo "CREATE USER 'readonly'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | mysql && \
     echo "GRANT SELECT ON dashboard_test.* TO 'readonly'@'localhost';" | mysql && \
     service mysql stop
+
+# For some reason, MySQL 8 on Ubuntu 20 does not have a home directory by
+# default, so we explicity specify one to avoid the error:
+#
+#   su: warning: cannot change directory to /nonexistent: No such file or directory
+#
+# For more, see:
+#  https://serverfault.com/questions/755763/mysql-nonexistent-home-vs-no-directory-logging-in-with-home/942422
+#  https://stackoverflow.com/a/63040661/1810460
+RUN usermod -d /var/lib/mysql/ mysql
+
+# Also for some reason, MySQL 8 on Ubuntu 20 only grants read permissions to
+# the mysqld directory to the mysql user, but we need to be able to connect as
+# circleci, so we explicitly grant permissions to avoid the error:
+#
+#  ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/run/mysqld/mysqld.sock' (13) 
+RUN sudo chmod -R 755 /run/mysqld
 
 # we need git >= 2.15 to use git rev-parse --is-shallow-clone feature
 RUN add-apt-repository ppa:git-core/ppa && \
@@ -186,6 +189,9 @@ RUN curl -SsL https://github.com/boxboat/fixuid/releases/download/v0.4/fixuid-0.
     chmod 4755 /usr/local/bin/fixuid && \
     mkdir -p /etc/fixuid && \
     printf "user: ${USER}\ngroup: ${GROUP}\n" > /etc/fixuid/config.yml
+
+# install pdm for managing our python dependencies
+RUN pip install --system --prefix=/usr/local pdm
 
 USER ${USER}
 

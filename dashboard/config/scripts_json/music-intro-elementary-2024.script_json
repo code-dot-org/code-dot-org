@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
@@ -12,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "music-intro-elementary",
-    "serialized_at": "2024-04-04 15:54:55 UTC",
+    "serialized_at": "2024-06-04 17:52:10 UTC",
     "published_state": "pilot",
     "instruction_type": "self_paced",
     "instructor_audience": "teacher",

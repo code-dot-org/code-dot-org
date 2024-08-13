@@ -6,7 +6,6 @@ theme: responsive_full_width
 %script{data: {'amplitude-api-key': CDO.safe_amplitude_api_key}}
 %script{data: {'statsig-api-client-key': CDO.safe_statsig_api_client_key}}
 %script{data: {'managed-test-server': "#{CDO.running_web_application? && CDO.test_system?}"}}
-%script{src: webpack_asset_path('js/code.org/public/districts.js')}
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/districts-styles.css", rel: "stylesheet"}
 

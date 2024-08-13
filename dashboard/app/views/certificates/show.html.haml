@@ -1,5 +1,6 @@
 - content_for :og do
   = tag 'meta', property: 'og:image', content: @image_url
+  = tag 'meta', property: 'og:title', content: @page_title
 
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
 %script{src: webpack_asset_path('js/certificates/show.js'), data: {certificate: @certificate_data.to_json}}

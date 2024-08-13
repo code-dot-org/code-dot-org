@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2024-05-07T21:27:15.000Z",
   "level_num": "custom",
@@ -27,16 +28,10 @@
         "text": "#STEP 3️⃣ \n##Change variable\n\nThis block changes the value of the variable. \n\nFor example, you could add points to the score variable or decrease the value of a health variable.\n\n<img src=\"https://images.code.org/a0e8b3cabe987ebe9b165983735ddfc4-image-1712095475591.jpg\" style=\"margin-right: 40px;  width: 75%\">",
         "imageUrl": "https://images.code.org/00869dc5b2b214d25a19db5b44110c15-changeScorePanel.gif",
         "key": "games_dev_variables_panel-68fde408-b74c-4b53-8a8c-39dd7456bf02"
-      },
-      {
-        "text": "#STEP 4️⃣ \n##Check the value\n\nThis block checks to see if the condition is true. If it is true it will run the code inside.\n\n<img src=\"https://images.code.org/009a6cd754f5e172b4274f888f956ef7-image-1712095627200.jpg\" style=\"margin-right: 40px;  width: 75%\">",
-        "imageUrl": "https://images.code.org/9dd86e42b57084bf839b3cedbb63ec22-winning.gif",
-        "key": "games_dev_variables_panel-5fea9700-21a2-42af-8226-aad824e7b531"
       }
     ],
     "name_suffix": "_2024"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-05-07T21:27:15.698+00:00\",\"changed\":[\"cloned from \\\"game_variables_about_panel\\\"\"],\"cloned_from\":\"game_variables_about_panel\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-07T21:27:15.698+00:00\",\"changed\":[\"cloned from \\\"game_variables_about_panel\\\"\"],\"cloned_from\":\"game_variables_about_panel\"},{\"changed_at\":\"2024-05-16 20:52:16 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]"
 }]]></config>
 </Panels>

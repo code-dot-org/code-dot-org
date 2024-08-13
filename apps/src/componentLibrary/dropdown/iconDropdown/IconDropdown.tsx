@@ -10,17 +10,16 @@ import {
   ComponentSizeXSToL,
   DropdownColor,
 } from '@cdo/apps/componentLibrary/common/types';
-import CustomDropdown from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
+import CustomDropdown, {
+  _CustomDropdownOption,
+} from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
 import FontAwesomeV6Icon, {
   FontAwesomeV6IconProps,
 } from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 
 import moduleStyles from '@cdo/apps/componentLibrary/dropdown/customDropdown.module.scss';
 
-export interface IconDropdownOption {
-  value: string;
-  label: string;
-  isOptionDisabled?: boolean;
+export interface IconDropdownOption extends _CustomDropdownOption {
   icon: FontAwesomeV6IconProps;
 }
 
@@ -85,7 +84,7 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
       size={size}
       {...rest}
     >
-      <form className={moduleStyles.dropdownMenuContainer}>
+      <div className={moduleStyles.dropdownMenuContainer}>
         <ul>
           {options.map(option => {
             const {
@@ -124,7 +123,7 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
             );
           })}
         </ul>
-      </form>
+      </div>
     </CustomDropdown>
   );
 };

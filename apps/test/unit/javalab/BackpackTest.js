@@ -1,13 +1,15 @@
-import React from 'react';
-import {expect, assert} from '../../util/reconfiguredChai';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
-import javalab from '@cdo/apps/javalab/redux/javalabRedux';
+import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
-import sinon from 'sinon';
 import {UnconnectedBackpack as Backpack} from '@cdo/apps/javalab/Backpack';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
+import javalab from '@cdo/apps/javalab/redux/javalabRedux';
+import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
+
 import {BackpackAPIContext} from '../../../src/javalab/BackpackAPIContext';
+import {expect, assert} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('Java Lab Backpack Test', () => {
   let defaultProps, backpackApiStub;

@@ -1,6 +1,6 @@
 import {Workspace, WorkspaceSvg} from 'blockly';
 
-import {BLOCK_TYPES, PROCEDURE_DEFINITION_TYPES} from '../constants';
+import {BLOCK_TYPES} from '../constants';
 import {BlocklyWrapperType, XmlBlockConfig} from '../types';
 import {
   FALSEY_DEFAULT,
@@ -149,7 +149,8 @@ export function removeIdsFromBlocks(
  */
 export function addMutationToMiniToolboxBlocks(blockElement: Element) {
   const miniflyoutAttribute = blockElement.getAttribute('miniflyout');
-  const existingMutationElement = blockElement.querySelector('mutation');
+  const existingMutationElement =
+    blockElement.querySelector(':scope > mutation');
   if (!miniflyoutAttribute || existingMutationElement) {
     // The block is the wrong type or has somehow already been processed.
     return;
@@ -202,7 +203,7 @@ export function addMutationToBehaviorBlocks(blockElement: Element) {
     return;
   }
   const mutationElement =
-    blockElement.querySelector('mutation') ||
+    blockElement.querySelector(':scope > mutation') ||
     blockElement.ownerDocument.createElement('mutation');
   // Place mutator before fields, values, and other nested blocks.
   blockElement.insertBefore(mutationElement, blockElement.firstChild);
@@ -244,7 +245,7 @@ export function addMutationToProcedureDefBlocks(blockElement: Element) {
     return;
   }
   const mutationElement =
-    blockElement.querySelector('mutation') ||
+    blockElement.querySelector(':scope > mutation') ||
     blockElement.ownerDocument.createElement('mutation');
   // Place mutator before fields, values, and other nested blocks.
   blockElement.insertBefore(mutationElement, blockElement.firstChild);
@@ -267,11 +268,6 @@ export function addMutationToProcedureDefBlocks(blockElement: Element) {
  * @param {Element} blockElement - The XML element for a single block.
  */
 export function addMutationToInvisibleBlocks(blockElement: Element) {
-  const blockType = blockElement.getAttribute('type');
-  if (blockType && PROCEDURE_DEFINITION_TYPES.includes(blockType)) {
-    return;
-  }
-
   const invisible = !readBooleanAttribute(
     blockElement,
     'uservisible',
@@ -282,7 +278,7 @@ export function addMutationToInvisibleBlocks(blockElement: Element) {
     return;
   }
   const mutationElement =
-    blockElement.querySelector('mutation') ||
+    blockElement.querySelector(':scope > mutation') ||
     blockElement.ownerDocument.createElement('mutation');
   // Place mutator before fields, values, and other nested blocks.
   blockElement.insertBefore(mutationElement, blockElement.firstChild);
@@ -321,7 +317,7 @@ export function addNameToBlockFunctionCallBlock(blockElement: Element) {
     return;
   }
   const mutationElement =
-    blockElement.querySelector('mutation') ||
+    blockElement.querySelector(':scope > mutation') ||
     blockElement.ownerDocument.createElement('mutation');
   // Place mutator before fields, values, and other nested blocks.
   blockElement.insertBefore(mutationElement, blockElement.firstChild);
@@ -379,7 +375,7 @@ export function addMutationToTextJoinBlock(blockElement: Element) {
     return;
   }
   const mutationElement =
-    blockElement.querySelector('mutation') ||
+    blockElement.querySelector(':scope > mutation') ||
     blockElement.ownerDocument.createElement('mutation');
   // Place mutator before fields, values, and other nested blocks.
   blockElement.insertBefore(mutationElement, blockElement.firstChild);
@@ -457,4 +453,21 @@ function makeLockedBlockImmovable(block: Element) {
 export function getBlockElements(xml: Element) {
   // Convert XML to an array of block elements
   return Array.from(xml.querySelectorAll('xml > block'));
+}
+
+export function removeInvisibleBlocks(xml: Element) {
+  // Get all top-level blocks
+  const topLevelBlocks = xml.getElementsByTagName('block');
+  // Convert HTMLCollection to an array to iterate safely
+  const blocksArray = Array.from(topLevelBlocks);
+
+  blocksArray.forEach(block => {
+    if (
+      block.parentElement === xml &&
+      block.getAttribute('uservisible') === 'false'
+    ) {
+      block.remove();
+    }
+  });
+  return xml;
 }

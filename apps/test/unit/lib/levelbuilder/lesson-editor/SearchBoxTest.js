@@ -1,8 +1,10 @@
-import React from 'react';
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import sinon from 'sinon';
-import {expect} from '../../../../util/reconfiguredChai';
+import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import SearchBox from '@cdo/apps/lib/levelbuilder/lesson-editor/SearchBox';
+
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('SearchBox', () => {
   let defaultProps, constructOptions, fetchSpy;

@@ -1,5 +1,5 @@
 /** @file Tests of App Lab event sanitization. */
-import {assert} from '../../util/reconfiguredChai';
+
 var EventSandboxer = require('@cdo/apps/applab/EventSandboxer');
 
 describe('EventSandboxer', function () {
@@ -10,61 +10,41 @@ describe('EventSandboxer', function () {
   });
 
   it('can be constructed with no arguments', function () {
-    assert.isDefined(sandboxer);
+    expect(sandboxer).toBeDefined();
   });
 
   describe('sandboxing', function () {
     it('throws TypeError when sandboxing null or non-objects', function () {
-      assert.throws(
-        function () {
-          sandboxer.sandboxEvent(undefined);
-        },
-        TypeError,
-        'Failed to sandbox event: Expected an event object, but got undefined'
-      );
-      assert.throws(
-        function () {
-          sandboxer.sandboxEvent(null);
-        },
-        TypeError,
-        'Failed to sandbox event: Expected an event object, but got null'
-      );
-      assert.throws(
-        function () {
-          sandboxer.sandboxEvent(NaN);
-        },
-        TypeError,
-        'Failed to sandbox event: Expected an event object, but got NaN'
-      );
-      assert.throws(
-        function () {
-          sandboxer.sandboxEvent('some string');
-        },
-        TypeError,
-        'Failed to sandbox event: Expected an event object, but got some string'
-      );
-      assert.throws(
-        function () {
-          sandboxer.sandboxEvent(function () {});
-        },
-        TypeError,
-        'Failed to sandbox event: Expected an event object, but got function () {}'
-      );
+      expect(function () {
+        sandboxer.sandboxEvent(undefined);
+      }).toThrow();
+      expect(function () {
+        sandboxer.sandboxEvent(null);
+      }).toThrow();
+      expect(function () {
+        sandboxer.sandboxEvent(NaN);
+      }).toThrow();
+      expect(function () {
+        sandboxer.sandboxEvent('some string');
+      }).toThrow();
+      expect(function () {
+        sandboxer.sandboxEvent(function () {});
+      }).toThrow();
     });
 
     it('creates a new object', function () {
       var originalEvent = {};
       var newEvent = sandboxer.sandboxEvent(originalEvent);
-      assert.deepEqual(originalEvent, newEvent);
-      assert.notStrictEqual(originalEvent, newEvent);
+      expect(originalEvent).toEqual(newEvent);
+      expect(originalEvent).not.toBe(newEvent);
     });
 
     function assertPreservesPropertyValue(name, value) {
       var originalEvent = {};
       originalEvent[name] = value;
       var newEvent = sandboxer.sandboxEvent(originalEvent);
-      assert.property(newEvent, name);
-      assert.equal(newEvent[name], value);
+      expect(name in newEvent).toBeTruthy();
+      expect(newEvent[name]).toEqual(value);
     }
 
     it('preserves "altKey"', function () {
@@ -155,8 +135,8 @@ describe('EventSandboxer', function () {
       var originalEvent = {};
       originalEvent[name] = value;
       var newEvent = sandboxer.sandboxEvent(originalEvent);
-      assert.notProperty(newEvent, name);
-      assert.equal(newEvent[name], undefined);
+      expect(name in newEvent).toBeFalsy();
+      expect(newEvent[name]).toEqual(undefined);
     }
 
     it('does not preserve undefined properties', function () {
@@ -184,8 +164,8 @@ describe('EventSandboxer', function () {
         charCode: 65,
       };
       var newEvent = sandboxer.sandboxEvent(originalEvent);
-      assert.property(newEvent, 'key');
-      assert.equal(newEvent.key, 'A');
+      expect('key' in newEvent).toBeTruthy();
+      expect(newEvent.key).toEqual('A');
     });
 
     it('adds "key" property when keyCode is available', function () {
@@ -193,15 +173,15 @@ describe('EventSandboxer', function () {
         keyCode: 65,
       };
       var newEvent = sandboxer.sandboxEvent(originalEvent);
-      assert.property(newEvent, 'key');
-      assert.equal(newEvent.key, 'a');
+      expect('key' in newEvent).toBeTruthy();
+      expect(newEvent.key).toEqual('a');
     });
 
     it('does not add "key" property when neither charCode nor keyCode are available', function () {
       var originalEvent = {};
       var newEvent = sandboxer.sandboxEvent(originalEvent);
-      assert.notProperty(newEvent, 'key');
-      assert.equal(newEvent.key, undefined);
+      expect('key' in newEvent).toBeFalsy();
+      expect(newEvent.key).toEqual(undefined);
     });
   });
 
@@ -210,14 +190,14 @@ describe('EventSandboxer', function () {
       var originalEvent = {};
       originalEvent[propertyName] = originalValue;
       var newEvent = sandboxer.sandboxEvent(originalEvent);
-      assert.equal(newEvent[propertyName], newValue);
+      expect(newEvent[propertyName]).toEqual(newValue);
     }
 
     function assertNoPropertyChange(propertyName, originalValue) {
       var originalEvent = {};
       originalEvent[propertyName] = originalValue;
       var newEvent = sandboxer.sandboxEvent(originalEvent);
-      assert.equal(newEvent[propertyName], originalValue);
+      expect(newEvent[propertyName]).toEqual(originalValue);
     }
 
     it('applies inverse xOffset_ to "clientX" property', function () {
@@ -320,10 +300,10 @@ describe('EventSandboxer', function () {
         movementY: 15,
       };
       var newEvent = sandboxer.sandboxEvent(originalEvent);
-      assert.property(newEvent, 'movementX');
-      assert.property(newEvent, 'movementY');
-      assert.equal(newEvent.movementX, 10);
-      assert.equal(newEvent.movementY, 15);
+      expect('movementX' in newEvent).toBeTruthy();
+      expect('movementY' in newEvent).toBeTruthy();
+      expect(newEvent.movementX).toEqual(10);
+      expect(newEvent.movementY).toEqual(15);
     });
 
     it('synthesizes "movementX/Y" properties when type is "mousemove"', function () {
@@ -331,10 +311,10 @@ describe('EventSandboxer', function () {
         type: 'mousemove',
       };
       var newEvent = sandboxer.sandboxEvent(originalEvent);
-      assert.property(newEvent, 'movementX');
-      assert.property(newEvent, 'movementY');
-      assert.equal(newEvent.movementX, 0);
-      assert.equal(newEvent.movementY, 0);
+      expect('movementX' in newEvent).toBeTruthy();
+      expect('movementY' in newEvent).toBeTruthy();
+      expect(newEvent.movementX).toEqual(0);
+      expect(newEvent.movementY).toEqual(0);
     });
 
     function makeMousemoveEvent(target, x, y) {
@@ -363,16 +343,16 @@ describe('EventSandboxer', function () {
       var mousemoveC = makeMousemoveEvent(fakeTarget, 75, 30);
 
       var newMousemoveA = sandboxer.sandboxEvent(mousemoveA);
-      assert.equal(newMousemoveA.movementX, 0);
-      assert.equal(newMousemoveA.movementY, 0);
+      expect(newMousemoveA.movementX).toEqual(0);
+      expect(newMousemoveA.movementY).toEqual(0);
 
       var newMousemoveB = sandboxer.sandboxEvent(mousemoveB);
-      assert.equal(newMousemoveB.movementX, 10);
-      assert.equal(newMousemoveB.movementY, 0);
+      expect(newMousemoveB.movementX).toEqual(10);
+      expect(newMousemoveB.movementY).toEqual(0);
 
       var newMousemoveC = sandboxer.sandboxEvent(mousemoveC);
-      assert.equal(newMousemoveC.movementX, 15);
-      assert.equal(newMousemoveC.movementY, -20);
+      expect(newMousemoveC.movementX).toEqual(15);
+      expect(newMousemoveC.movementY).toEqual(-20);
     });
 
     it('can clear history for synthesized movements for an element', function () {
@@ -386,18 +366,18 @@ describe('EventSandboxer', function () {
       var mousemoveC = makeMousemoveEvent(fakeTarget, 75, 30);
 
       var newMousemoveA = sandboxer.sandboxEvent(mousemoveA);
-      assert.equal(newMousemoveA.movementX, 0);
-      assert.equal(newMousemoveA.movementY, 0);
+      expect(newMousemoveA.movementX).toEqual(0);
+      expect(newMousemoveA.movementY).toEqual(0);
 
       var newMousemoveB = sandboxer.sandboxEvent(mousemoveB);
-      assert.equal(newMousemoveB.movementX, 10);
-      assert.equal(newMousemoveB.movementY, 0);
+      expect(newMousemoveB.movementX).toEqual(10);
+      expect(newMousemoveB.movementY).toEqual(0);
 
       sandboxer.clearLastMouseMoveEvent(mouseoutA);
 
       var newMousemoveC = sandboxer.sandboxEvent(mousemoveC);
-      assert.equal(newMousemoveC.movementX, 0);
-      assert.equal(newMousemoveC.movementY, 0);
+      expect(newMousemoveC.movementX).toEqual(0);
+      expect(newMousemoveC.movementY).toEqual(0);
     });
   });
 
@@ -407,8 +387,7 @@ describe('EventSandboxer', function () {
         target: {tagName: 'TEXTAREA', selectionStart: Math.random()},
       };
       const newEvent = sandboxer.sandboxEvent(originalEvent);
-      assert.equal(
-        newEvent.selectionStart,
+      expect(newEvent.selectionStart).toEqual(
         originalEvent.target.selectionStart
       );
     });
@@ -418,7 +397,7 @@ describe('EventSandboxer', function () {
         target: {tagName: 'TEXTAREA', selectionEnd: Math.random()},
       };
       const newEvent = sandboxer.sandboxEvent(originalEvent);
-      assert.equal(newEvent.selectionEnd, originalEvent.target.selectionEnd);
+      expect(newEvent.selectionEnd).toEqual(originalEvent.target.selectionEnd);
     });
 
     it('copies "selectionStart" from the original event target to the new event if the target is the text type of INPUT', () => {
@@ -426,8 +405,7 @@ describe('EventSandboxer', function () {
         target: {tagName: 'INPUT', type: 'text', selectionStart: Math.random()},
       };
       const newEvent = sandboxer.sandboxEvent(originalEvent);
-      assert.equal(
-        newEvent.selectionStart,
+      expect(newEvent.selectionStart).toEqual(
         originalEvent.target.selectionStart
       );
     });
@@ -437,7 +415,7 @@ describe('EventSandboxer', function () {
         target: {tagName: 'TEXTAREA', selectionEnd: Math.random()},
       };
       const newEvent = sandboxer.sandboxEvent(originalEvent);
-      assert.equal(newEvent.selectionEnd, originalEvent.target.selectionEnd);
+      expect(newEvent.selectionEnd).toEqual(originalEvent.target.selectionEnd);
     });
 
     it('does not add selectionStart or selectionEnd to the new event if they are missing or undefined', () => {
@@ -445,12 +423,12 @@ describe('EventSandboxer', function () {
         target: {tagName: 'TEXTAREA', selectionEnd: undefined},
       };
       const newEvent = sandboxer.sandboxEvent(originalEvent);
-      assert.isFalse(
+      expect(
         Object.prototype.hasOwnProperty.call(newEvent, 'selectionStart')
-      );
-      assert.isFalse(
+      ).toBe(false);
+      expect(
         Object.prototype.hasOwnProperty.call(newEvent, 'selectionEnd')
-      );
+      ).toBe(false);
     });
 
     it('does not add selectionStart or selectionEnd to the new event if the target is the range type of INPUT', () => {
@@ -463,12 +441,12 @@ describe('EventSandboxer', function () {
         },
       };
       const newEvent = sandboxer.sandboxEvent(originalEvent);
-      assert.isFalse(
+      expect(
         Object.prototype.hasOwnProperty.call(newEvent, 'selectionStart')
-      );
-      assert.isFalse(
+      ).toBe(false);
+      expect(
         Object.prototype.hasOwnProperty.call(newEvent, 'selectionEnd')
-      );
+      ).toBe(false);
     });
   });
 
@@ -480,8 +458,8 @@ describe('EventSandboxer', function () {
         id: randomId,
       };
       var newEvent = sandboxer.sandboxEvent(originalEvent);
-      assert.property(newEvent, originalName + 'Id');
-      assert.equal(newEvent[originalName + 'Id'], randomId);
+      expect(originalName + 'Id' in newEvent).toBeTruthy();
+      expect(newEvent[originalName + 'Id']).toEqual(randomId);
     }
 
     it('replaces the "fromElement" element property with the "fromElementId" property', function () {
@@ -525,15 +503,15 @@ describe('EventSandboxer', function () {
       };
       originalEvent[srcProperty] = {id: randomIdA};
       var polyfilledEvent = sandboxer.sandboxEvent(originalEvent);
-      assert.property(polyfilledEvent, destProperty + 'Id');
-      assert.equal(polyfilledEvent[destProperty + 'Id'], randomIdA);
+      expect(destProperty + 'Id' in polyfilledEvent).toBeTruthy();
+      expect(polyfilledEvent[destProperty + 'Id']).toEqual(randomIdA);
 
       // If both properties are present, assert that the destination property
       // keeps its own value.
       originalEvent[destProperty] = {id: randomIdB};
       var nonPolyfilledEvent = sandboxer.sandboxEvent(originalEvent);
-      assert.property(nonPolyfilledEvent, destProperty + 'Id');
-      assert.equal(nonPolyfilledEvent[destProperty + 'Id'], randomIdB);
+      expect(destProperty + 'Id' in nonPolyfilledEvent).toBeTruthy();
+      expect(nonPolyfilledEvent[destProperty + 'Id']).toEqual(randomIdB);
     }
 
     // It's valuable to check these paired properties together, to make sure
@@ -556,18 +534,10 @@ describe('EventSandboxer', function () {
       originalEvent[toProperty] = {id: toId};
       originalEvent[fromProperty] = {id: fromId};
       var polyfilledEvent = sandboxer.sandboxEvent(originalEvent);
-      assert.property(polyfilledEvent, 'toElementId');
-      assert.equal(
-        polyfilledEvent.toElementId,
-        toId,
-        'toElementId gets value from ' + toProperty
-      );
-      assert.property(polyfilledEvent, 'fromElementId');
-      assert.equal(
-        polyfilledEvent.fromElementId,
-        fromId,
-        'fromElementId gets value from ' + fromProperty
-      );
+      expect('toElementId' in polyfilledEvent).toBeTruthy();
+      expect(polyfilledEvent.toElementId).toEqual(toId);
+      expect('fromElementId' in polyfilledEvent).toBeTruthy();
+      expect(polyfilledEvent.fromElementId).toEqual(fromId);
 
       // If both properties are present, assert that the destination properties
       // keeps their own values.
@@ -576,18 +546,10 @@ describe('EventSandboxer', function () {
       originalEvent.toElement = {id: providedToId};
       originalEvent.fromElement = {id: providedFromId};
       var nonPolyfilledEvent = sandboxer.sandboxEvent(originalEvent);
-      assert.property(nonPolyfilledEvent, 'toElementId');
-      assert.equal(
-        nonPolyfilledEvent.toElementId,
-        providedToId,
-        'toElementId keeps its value'
-      );
-      assert.property(nonPolyfilledEvent, 'fromElementId');
-      assert.equal(
-        nonPolyfilledEvent.fromElementId,
-        providedFromId,
-        'fromElementId keeps its value'
-      );
+      expect('toElementId' in nonPolyfilledEvent).toBeTruthy();
+      expect(nonPolyfilledEvent.toElementId).toEqual(providedToId);
+      expect('fromElementId' in nonPolyfilledEvent).toBeTruthy();
+      expect(nonPolyfilledEvent.fromElementId).toEqual(providedFromId);
     }
 
     it('polyfills target->srcElement', function () {

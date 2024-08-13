@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-06-17T22:34:28.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "## Confidence Scores\r\n\r\nWhat is a confidence score, and why is it important in the output of a computer vision model?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 20662,
+    "name_suffix": "_2024",
+    "allow_multiple_attempts": "false",
+    "teacher_markdown": "This question assesses students’ understanding of confidence scores as a measure of how certain a computer vision model is about its predictions, emphasizing its importance in determining the reliability of these predictions.\r\n"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-06-17T22:34:28.743+00:00\",\"changed\":[\"cloned from \\\"CV_L8_Reflection_2\\\"\"],\"cloned_from\":\"CV_L8_Reflection_2\"},{\"changed_at\":\"2024-07-04 18:35:02 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

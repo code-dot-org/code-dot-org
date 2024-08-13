@@ -1,7 +1,8 @@
-import {expect} from '../../../../util/reconfiguredChai';
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+
 import UnitCalendar from '@cdo/apps/code-studio/components/progress/UnitCalendar';
+
 import {testLessonSchedule, testLessons} from './unitCalendarTestData';
 
 describe('UnitCalendar', () => {
@@ -13,9 +14,7 @@ describe('UnitCalendar', () => {
         weekWidth={585}
       />
     );
-    expect(wrapper.instance().generateSchedule()).to.deep.equal(
-      testLessonSchedule
-    );
-    expect(wrapper.find('UnitCalendarLessonChunk').length).to.equal(5);
+    expect(wrapper.instance().generateSchedule()).toEqual(testLessonSchedule);
+    expect(wrapper.find('UnitCalendarLessonChunk').length).toBe(5);
   });
 });

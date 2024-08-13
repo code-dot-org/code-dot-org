@@ -1,10 +1,12 @@
-import React from 'react';
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
-import {Body} from '@cdo/apps/templates/Dialog';
-import SchoolInfoInterstitial from '@cdo/apps/lib/ui/SchoolInfoInterstitial';
+import React from 'react';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import {Body} from '@cdo/apps/legacySharedComponents/Dialog';
 import SchoolInfoConfirmationDialog from '@cdo/apps/lib/ui/SchoolInfoConfirmationDialog';
+import SchoolInfoInterstitial from '@cdo/apps/lib/ui/SchoolInfoInterstitial';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('SchoolInfoConfirmationDialog', () => {
   const MINIMUM_PROPS = {

@@ -1,0 +1,11 @@
+name 'k5_ai_student_data_scenarios'
+question 'Which scenario did you choose?'
+
+right 'Choosing seats in the cafeteria'
+right 'Choosing teams for gym class'
+right 'Picking the Student of the Month'
+
+allow_multiple_attempts true
+markdown <<MARKDOWN
+
+MARKDOWN

@@ -28,7 +28,7 @@ class DatablockStorageRecord < ApplicationRecord
 
   private def max_record_length
     if record_json.to_json.bytesize > MAX_RECORD_LENGTH
-      raise StudentFacingError.new(:MAX_RECORD_LENGTH_EXCEEDED), "The record is too large. The maximum allowable size is #{DatablockStorageRecord::MAX_RECORD_LENGTH} bytes"
+      raise StudentFacingError.new(:MAX_RECORD_LENGTH_EXCEEDED), "The record is too large. The maximum allowable size is #{DatablockStorageRecord::MAX_RECORD_LENGTH} bytes ('characters')"
     end
   end
 end

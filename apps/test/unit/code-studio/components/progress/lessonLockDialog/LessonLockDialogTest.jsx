@@ -1,12 +1,12 @@
-import React from 'react';
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../../util/reconfiguredChai';
-import sinon from 'sinon';
-import {UnconnectedLessonLockDialog as LessonLockDialog} from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDialog';
-import {LockStatus} from '@cdo/apps/code-studio/lessonLockRedux';
-import StudentRow from '@cdo/apps/code-studio/components/progress/lessonLockDialog/StudentRow';
+import React from 'react';
+import {Provider} from 'react-redux';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import * as lessonLockDataApi from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDataApi';
-import i18n from '@cdo/locale';
+import {UnconnectedLessonLockDialog as LessonLockDialog} from '@cdo/apps/code-studio/components/progress/lessonLockDialog/LessonLockDialog';
+import StudentRow from '@cdo/apps/code-studio/components/progress/lessonLockDialog/StudentRow';
+import {LockStatus} from '@cdo/apps/code-studio/lessonLockRedux';
 import {
   getStore,
   registerReducers,
@@ -14,7 +14,9 @@ import {
   restoreRedux,
 } from '@cdo/apps/redux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import {Provider} from 'react-redux';
+import i18n from '@cdo/locale';
+
+import {expect} from '../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const fakeSectionId = 42;
 const fakeUnitId = 1;

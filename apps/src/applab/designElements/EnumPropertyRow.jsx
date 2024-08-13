@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import * as rowStyle from './rowStyle';
 
 export default class EnumPropertyRow extends React.Component {

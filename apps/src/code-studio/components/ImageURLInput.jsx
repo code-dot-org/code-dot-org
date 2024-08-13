@@ -1,9 +1,10 @@
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
-import moment from 'moment';
+
+import {ABSOLUTE_REGEXP} from '@cdo/apps/assetManagement/assetPrefix';
 import InputPrompt from '@cdo/apps/templates/InputPrompt';
 import i18n from '@cdo/locale';
-import {ABSOLUTE_REGEXP} from '@cdo/apps/assetManagement/assetPrefix';
 
 export default class ImageURLInput extends React.Component {
   static propTypes = {

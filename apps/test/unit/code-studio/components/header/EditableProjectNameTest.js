@@ -1,19 +1,19 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import {expect} from '../../../../util/reconfiguredChai';
-import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
-
+import EditableProjectName from '@cdo/apps/code-studio/components/header/EditableProjectName';
 import projectReducer, {
   refreshProjectName,
 } from '@cdo/apps/code-studio/projectRedux';
-import EditableProjectName from '@cdo/apps/code-studio/components/header/EditableProjectName';
 import lab2Redux from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import ProjectManager from '@cdo/apps/lab2/projects/ProjectManager';
+
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 describe('EditableProjectName', () => {
   let currentName;

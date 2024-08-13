@@ -1,5 +1,4 @@
 import React from 'react';
-const baseUrl = window.location.origin + '/projectbeats';
 
 const optionsList = [
   {
@@ -60,6 +59,14 @@ const optionsList = [
     ],
   },
   {
+    name: 'play-tune-block',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Hide play tune block (default).'},
+      {value: 'true', description: 'Show play tune block.'},
+    ],
+  },
+  {
     name: 'BPM',
     type: 'string',
     description: 'Set a specific BPM',
@@ -106,6 +113,14 @@ const optionsList = [
         value: 'true',
         description: 'Enable advanced controls for the ToneJS player.',
       },
+    ],
+  },
+  {
+    name: 'timeline-original-layout',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'New timeline (default).'},
+      {value: 'true', description: 'Original timeline.'},
     ],
   },
 ];
@@ -199,7 +214,7 @@ export default class MusicMenu extends React.Component {
           userSelect: 'all',
         }}
       >
-        {baseUrl}?
+        ?
         {optionsList
           .map(option => {
             return (

@@ -1,17 +1,57 @@
-import {ResponseValidator} from '@cdo/apps/util/HttpClient';
-import {Key} from '../utils/Notes';
+import HttpClient, {ResponseValidator} from '@cdo/apps/util/HttpClient';
+
+import AppConfig, {getBaseAssetUrl} from '../appConfig';
 import {baseAssetUrlRestricted, DEFAULT_PACK} from '../constants';
-import {getBaseAssetUrl} from '../appConfig';
+import {Key} from '../utils/Notes';
+
+// This value can be modifed each time we know that there is an important new version
+// of the library on S3, to help bypass any caching of an older version.
+const requestVersion = 'launch2024-0';
+
+/**
+ * Loads a sound library JSON file.
+ *
+ * @param libraryName specific library to load. If a library is specified by
+ * URL param, that will take precedence.
+ * @returns the Music Library
+ */
+async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
+  const libraryParameter = AppConfig.getValue('library') || libraryName;
+  const libraryFilename = `music-library-${libraryParameter}`;
+
+  if (AppConfig.getValue('local-library') === 'true') {
+    const localLibrary = require(`@cdo/static/music/${libraryFilename}.json`);
+    return new MusicLibrary(
+      'local-' + libraryName,
+      localLibrary as LibraryJson
+    );
+  } else {
+    const libraryJsonResponse = await HttpClient.fetchJson<LibraryJson>(
+      getBaseAssetUrl() +
+        libraryFilename +
+        '.json' +
+        (requestVersion ? `?version=${requestVersion}` : ''),
+      {},
+      LibraryValidator
+    );
+    return new MusicLibrary(libraryName, libraryJsonResponse.value);
+  }
+}
 
 export default class MusicLibrary {
-  private static instance: MusicLibrary;
+  private static instance: MusicLibrary | undefined;
 
-  static getInstance(): MusicLibrary | undefined {
+  static async loadLibrary(libraryName: string): Promise<MusicLibrary> {
+    if (this.instance?.name === libraryName) {
+      return this.instance;
+    }
+
+    this.instance = await loadLibrary(libraryName);
     return this.instance;
   }
 
-  static setCurrent(library: MusicLibrary) {
-    this.instance = library;
+  static getInstance(): MusicLibrary | undefined {
+    return this.instance;
   }
 
   name: string;
@@ -50,11 +90,11 @@ export default class MusicLibrary {
     this.instruments = libraryJson.instruments;
     this.kits = libraryJson.kits;
 
-    if (libraryJson.bpm) {
+    if (libraryJson.bpm !== undefined) {
       this.bpm = libraryJson.bpm;
     }
 
-    if (libraryJson.key) {
+    if (libraryJson.key !== undefined) {
       this.key = libraryJson.key;
     }
 
@@ -71,7 +111,7 @@ export default class MusicLibrary {
     return this.libraryJson.path;
   }
 
-  setCurrentPackId(packId: string) {
+  setCurrentPackId(packId: string | null) {
     this.currentPackId = packId;
   }
 
@@ -245,7 +285,7 @@ export default class MusicLibrary {
     const folder = this.getFolderForFolderId(this.currentPackId);
     // Read key from the folder, or the first sound that has a key if not present on the folder.
     return (
-      folder?.key || folder?.sounds.find(sound => sound.key !== undefined)?.key
+      folder?.key ?? folder?.sounds.find(sound => sound.key !== undefined)?.key
     );
   }
 }

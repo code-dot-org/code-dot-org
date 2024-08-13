@@ -1,9 +1,10 @@
-import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import React, {useState} from 'react';
 import * as Table from 'reactabular-table';
-import Button from '@cdo/apps/templates/Button';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 
 const destroyEnvironment = (destroyPath, successCallback, failureCallback) => {
   fetch(destroyPath, {

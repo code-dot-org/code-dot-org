@@ -493,14 +493,6 @@ th a:active, th a:hover, th a:link, th a:visited {
   color: #c1c1c1 !important
 }
 
-.btn-carousel-slide {
-  background: #ffa401
-}
-
-.course-carousel .slide-next, .course-carousel .slide-prev {
-  background-color: #7765a1
-}
-
 .container_nonresponsive {
   width: 970px;
   margin: 0 auto;

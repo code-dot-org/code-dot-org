@@ -11,7 +11,7 @@
     "csd7-2024",
     "csd-post-survey-2024"
   ],
-  "published_state": "beta",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",

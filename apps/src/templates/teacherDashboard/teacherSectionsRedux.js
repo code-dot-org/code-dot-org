@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {
@@ -31,6 +31,7 @@ const USER_EDITABLE_SECTION_PROPS = [
   'hidden',
   'restrictSection',
   'codeReviewExpiresAt',
+  'aiTutorEnabled',
 ];
 
 /** @const {number} ID for a new section that has not been saved */
@@ -114,6 +115,9 @@ const IMPORT_ROSTER_REQUEST = 'teacherSections/IMPORT_ROSTER_REQUEST';
 /** Reports request to import a roster has succeeded */
 const IMPORT_ROSTER_SUCCESS = 'teacherSections/IMPORT_ROSTER_SUCCESS';
 const IMPORT_LTI_ROSTER_SUCCESS = 'teacherSections/IMPORT_LTI_ROSTER_SUCCESS';
+/** Sets section aiTutorEnabled */
+const UPDATE_SECTION_AI_TUTOR_ENABLED =
+  'teacherSections/UPDATE_SECTION_AI_TUTOR_ENABLED';
 
 /** @const A few constants exposed for unit test setup */
 export const __testInterface__ = {
@@ -170,6 +174,14 @@ export const setSectionCodeReviewExpiresAt = (
     type: SET_SECTION_CODE_REVIEW_EXPIRES_AT,
     sectionId,
     codeReviewExpiresAt,
+  };
+};
+
+export const updateSectionAiTutorEnabled = (sectionId, aiTutorEnabled) => {
+  return {
+    type: UPDATE_SECTION_AI_TUTOR_ENABLED,
+    sectionId,
+    aiTutorEnabled,
   };
 };
 
@@ -267,17 +279,21 @@ export const assignToSection = (
       (courseVersionId && section.courseVersionId !== courseVersionId) ||
       (unitId && section.unitId !== unitId)
     ) {
-      analyticsReporter.sendEvent(EVENTS.CURRICULUM_ASSIGNED, {
-        sectionName: section.name,
-        sectionId,
-        sectionLoginType: section.loginType,
-        previousUnitId: section.unitId,
-        previousCourseId: section.courseOfferingId,
-        previousCourseVersionId: section.courseVersionId,
-        newUnitId: unitId,
-        newCourseId: courseOfferingId,
-        newCourseVersionId: courseVersionId,
-      });
+      analyticsReporter.sendEvent(
+        EVENTS.CURRICULUM_ASSIGNED,
+        {
+          sectionName: section.name,
+          sectionId,
+          sectionLoginType: section.loginType,
+          previousUnitId: section.unitId,
+          previousCourseId: section.courseOfferingId,
+          previousCourseVersionId: section.courseVersionId,
+          newUnitId: unitId,
+          newCourseId: courseOfferingId,
+          newCourseVersionId: courseVersionId,
+        },
+        PLATFORMS.BOTH
+      );
     }
 
     dispatch(beginEditingSection(sectionId, true));
@@ -448,14 +464,6 @@ export const asyncLoadSectionData = id => dispatch => {
     })
     .then(() => {
       dispatch({type: ASYNC_LOAD_END});
-    });
-};
-
-export const asyncLoadCourseOfferings = () => dispatch => {
-  fetchJSON('/dashboardapi/sections/valid_course_offerings')
-    .then(offerings => dispatch(setCourseOfferings(offerings)))
-    .catch(err => {
-      console.error(err.message);
     });
 };
 
@@ -687,9 +695,11 @@ function newSectionData(participantType) {
     courseId: null,
     courseOfferingId: null,
     courseVersionId: null,
+    courseDisplayName: null,
     unitId: null,
     hidden: false,
     restrictSection: false,
+    aiTutorEnabled: false,
   };
 }
 
@@ -1210,6 +1220,25 @@ export default function teacherSections(state = initialState, action) {
     };
   }
 
+  if (action.type === UPDATE_SECTION_AI_TUTOR_ENABLED) {
+    const {sectionId, aiTutorEnabled} = action;
+    const section = state.sections[sectionId];
+    if (!section) {
+      throw new Error('section does not exist');
+    }
+
+    return {
+      ...state,
+      sections: {
+        ...state.sections,
+        [sectionId]: {
+          ...state.sections[sectionId],
+          aiTutorEnabled: aiTutorEnabled,
+        },
+      },
+    };
+  }
+
   return state;
 }
 
@@ -1305,6 +1334,7 @@ export function getSectionRows(state, sectionIds) {
       'id',
       'name',
       'courseVersionName',
+      'courseDisplayName',
       'loginType',
       'loginTypeName',
       'studentCount',
@@ -1345,6 +1375,7 @@ export const sectionFromServerSection = serverSection => ({
   code: serverSection.code,
   courseOfferingId: serverSection.course_offering_id,
   courseVersionId: serverSection.course_version_id,
+  courseDisplayName: serverSection.course_display_name,
   unitId: serverSection.unit_id,
   courseId: serverSection.course_id,
   hidden: serverSection.hidden,
@@ -1357,6 +1388,7 @@ export const sectionFromServerSection = serverSection => ({
   participantType: serverSection.participant_type,
   sectionInstructors: serverSection.section_instructors,
   syncEnabled: serverSection.sync_enabled,
+  aiTutorEnabled: serverSection.ai_tutor_enabled,
 });
 
 /**
@@ -1396,6 +1428,7 @@ export function serverSectionFromSection(section) {
     course_id: section.courseId,
     restrict_section: section.restrictSection,
     participant_type: section.participantType,
+    ai_tutor_enabled: section.aiTutorEnabled,
   };
 }
 

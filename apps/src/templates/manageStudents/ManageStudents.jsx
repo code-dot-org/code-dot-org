@@ -26,7 +26,7 @@ class ManageStudents extends React.Component {
     const {sectionId, studioUrlPrefix, isLoadingStudents} = this.props;
 
     return (
-      <div>
+      <div data-testid={'manage-students-tab'}>
         {isLoadingStudents && <Spinner />}
         {!isLoadingStudents && (
           <div>

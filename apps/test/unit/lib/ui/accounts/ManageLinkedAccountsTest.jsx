@@ -1,10 +1,12 @@
-import React from 'react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/deprecatedChai';
+import React from 'react';
+
 import {
   UnconnectedManageLinkedAccounts as ManageLinkedAccounts,
   ENCRYPTED,
 } from '@cdo/apps/lib/ui/accounts/ManageLinkedAccounts';
+
+import {expect} from '../../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 const DEFAULT_PROPS = {
@@ -268,15 +270,24 @@ describe('ManageLinkedAccounts', () => {
         />
       );
 
-      const googleConnectButton = wrapper.find('BootstrapButton').at(0);
+      const googleForm = wrapper.find(
+        'form[action="/users/auth/google_oauth2?action=connect"]'
+      );
+      const googleConnectButton = googleForm.find('BootstrapButton').at(0);
       expect(googleConnectButton).to.have.attr('disabled');
       expect(googleConnectButton).to.be.disabled();
 
-      const msftConnectButton = wrapper.find('BootstrapButton').at(1);
+      const msftForm = wrapper.find(
+        'form[action="/users/auth/microsoft_v2_auth?action=connect"]'
+      );
+      const msftConnectButton = msftForm.find('BootstrapButton').at(0);
       expect(msftConnectButton).to.have.attr('disabled');
       expect(msftConnectButton).to.be.disabled();
 
-      const facebookConnectButton = wrapper.find('BootstrapButton').at(3);
+      const facebookForm = wrapper.find(
+        'form[action="/users/auth/facebook?action=connect"]'
+      );
+      const facebookConnectButton = facebookForm.find('BootstrapButton').at(0);
       expect(facebookConnectButton).to.have.attr('disabled');
       expect(facebookConnectButton).to.be.disabled();
     });
@@ -288,7 +299,10 @@ describe('ManageLinkedAccounts', () => {
           personalAccountLinkingEnabled={false}
         />
       );
-      const cleverConnectButton = wrapper.find('BootstrapButton').at(2);
+      const cleverForm = wrapper.find(
+        'form[action="/users/auth/clever?action=connect"]'
+      );
+      const cleverConnectButton = cleverForm.find('BootstrapButton').at(0);
       expect(cleverConnectButton).to.not.have.attr('disabled');
       expect(cleverConnectButton).to.not.be.disabled();
     });

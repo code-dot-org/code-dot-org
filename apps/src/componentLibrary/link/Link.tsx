@@ -5,9 +5,7 @@ import {ComponentSizeXSToL} from '@cdo/apps/componentLibrary/common/types';
 
 import moduleStyles from './link.module.scss';
 
-export interface LinkProps {
-  /** Link content */
-  children: React.ReactNode;
+type LinkBaseProps = {
   /** Link id */
   id?: string;
   /** Custom class name */
@@ -26,7 +24,23 @@ export interface LinkProps {
   size?: ComponentSizeXSToL;
   /** Type of link */
   type?: 'primary' | 'secondary';
-}
+  /** Role of link */
+  role?: string;
+};
+
+type LinkWithChildren = LinkBaseProps & {
+  /** Link content */
+  children: React.ReactNode;
+  text?: never;
+};
+
+type LinkWithText = LinkBaseProps & {
+  /** Link text content */
+  text: string;
+  children?: never;
+};
+
+export type LinkProps = LinkWithChildren | LinkWithText;
 
 /**
  * ### Production-ready Checklist:
@@ -44,6 +58,7 @@ export interface LinkProps {
  */
 const Link: React.FunctionComponent<LinkProps> = ({
   children,
+  text,
   id,
   className,
   external,
@@ -53,6 +68,7 @@ const Link: React.FunctionComponent<LinkProps> = ({
   onClick,
   size = 'm',
   type = 'primary',
+  role,
 }) => {
   return (
     <a
@@ -67,9 +83,10 @@ const Link: React.FunctionComponent<LinkProps> = ({
       onClick={!disabled ? onClick : undefined}
       rel={openInNewTab || external ? 'noopener noreferrer' : undefined}
       target={(openInNewTab || undefined) && '_blank'}
+      role={role}
       {...(disabled ? {'aria-disabled': true} : {})}
     >
-      {children}
+      {text || children}
     </a>
   );
 };

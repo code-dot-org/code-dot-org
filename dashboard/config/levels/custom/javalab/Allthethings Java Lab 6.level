@@ -1,5 +1,10 @@
 <Javalab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 68,
+  "created_at": "2021-08-04T22:28:51.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
@@ -302,14 +307,11 @@
     ],
     "encrypted_examples": [
 
-    ]
+    ],
+    "ai_tutor_available": "false",
+    "submittable": "false"
   },
-  "game_id": 68,
-  "published": true,
-  "created_at": "2021-07-28T23:56:27.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2021-07-28T09:56:27.955-07:00\",\"changed\":[\"cloned from \\\"Allthethings Java Lab 1\\\"\"],\"cloned_from\":\"Allthethings Java Lab 1\"},{\"changed_at\":\"2021-07-28 09:56:57 -0700\",\"changed\":[\"start_direction\",\"serialized_maze\"],\"changed_by_id\":1,\"changed_by_email\":\"bethany+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2021-07-28T09:56:27.955-07:00\",\"changed\":[\"cloned from \\\"Allthethings Java Lab 1\\\"\"],\"cloned_from\":\"Allthethings Java Lab 1\"},{\"changed_at\":\"2021-07-28 09:56:57 -0700\",\"changed\":[\"start_direction\",\"serialized_maze\"],\"changed_by_id\":1,\"changed_by_email\":\"bethany+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-01 18:44:19 +0000\",\"changed\":[\"serialized_maze\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-06-01 18:44:35 +0000\",\"changed\":[\"serialized_maze\",\"encrypted_examples\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Javalab>

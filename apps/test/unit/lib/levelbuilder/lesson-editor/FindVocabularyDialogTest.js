@@ -1,17 +1,16 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
+import React from 'react';
+
 import FindVocabularyDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindVocabularyDialog';
-import sinon from 'sinon';
 
 describe('FindVocabularyDialog', () => {
   let defaultProps, handleConfirm;
   beforeEach(() => {
-    handleConfirm = sinon.spy();
+    handleConfirm = jest.fn();
     defaultProps = {
       isOpen: true,
       handleConfirm,
-      handleClose: sinon.spy(),
+      handleClose: jest.fn(),
       vocabularies: [
         {
           id: 1,
@@ -35,18 +34,18 @@ describe('FindVocabularyDialog', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<FindVocabularyDialog {...defaultProps} />);
-    expect(wrapper.contains('Add Vocabulary')).to.be.true;
-    expect(wrapper.find('LessonEditorDialog').length).to.equal(1);
-    expect(wrapper.find('select').length).to.equal(1);
-    expect(wrapper.find('option').length).to.equal(2);
-    expect(wrapper.find('Button').length).to.equal(1);
+    expect(wrapper.contains('Add Vocabulary')).toBe(true);
+    expect(wrapper.find('LessonEditorDialog').length).toBe(1);
+    expect(wrapper.find('select').length).toBe(1);
+    expect(wrapper.find('option').length).toBe(2);
+    expect(wrapper.find('Button').length).toBe(1);
   });
 
   it('adds vocabulary key on confirm, no dropdown change', () => {
     const wrapper = shallow(<FindVocabularyDialog {...defaultProps} />);
     const closeAndAddButton = wrapper.find('Button').first();
     closeAndAddButton.simulate('click', {preventDefault: () => {}});
-    expect(handleConfirm).to.have.been.calledWith('key1/course/year');
+    expect(handleConfirm).toHaveBeenCalledWith('key1/course/year');
   });
 
   it('adds vocabulary key on confirm, dropdown change', () => {
@@ -55,6 +54,6 @@ describe('FindVocabularyDialog', () => {
     select.simulate('change', {target: {value: 'key2/course/year'}});
     const closeAndAddButton = wrapper.find('Button').first();
     closeAndAddButton.simulate('click', {preventDefault: () => {}});
-    expect(handleConfirm).to.have.been.calledWith('key2/course/year');
+    expect(handleConfirm).toHaveBeenCalledWith('key2/course/year');
   });
 });

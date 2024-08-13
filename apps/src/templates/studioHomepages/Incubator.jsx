@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 
 import DCDO from '@cdo/apps/dcdo';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
-import Button from '@cdo/apps/templates/Button';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
@@ -109,30 +109,6 @@ class Incubator extends Component {
               ]}
             />
           )}
-
-          <TwoColumnActionBlock
-            imageUrl={
-              '/shared/images/teacher-announcement/incubator-projectbeats.png'
-            }
-            subHeading={'Project Beats'}
-            description={
-              'Make music with code! Try mixing and matching beats, bass, and other sounds to make your own songs.'
-            }
-            buttons={[
-              {
-                url: '/s/music-intro-2024/reset',
-                text: 'Get Started',
-                extraText:
-                  'Learn how to use Project Beats in a step by step intro.',
-              },
-              {
-                url: '/projects/music/new',
-                text: 'Make Music',
-                extraText: 'Skip directly to creating a Project Beats project.',
-                color: Button.ButtonColor.neutralDark,
-              },
-            ]}
-          />
         </div>
       </div>
     );

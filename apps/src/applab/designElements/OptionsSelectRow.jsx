@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import * as rowStyle from './rowStyle';
 
 export default class OptionsSelectRow extends React.Component {

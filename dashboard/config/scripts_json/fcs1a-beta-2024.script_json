@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "Foundations of CS",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -11,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-04-05 19:30:45 UTC",
+    "serialized_at": "2024-07-11 17:54:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -26,29 +28,13 @@
   },
   "lesson_groups": [
     {
-      "key": "lessonGroup-2",
-      "user_facing": true,
+      "key": "",
+      "user_facing": false,
       "position": 1,
       "properties": {
-        "display_name": "Introduction to App Lab",
-        "description": "This unit assumes students are already familiar with App Lab, so we recommend starting with the App Lab Hour of Code which is included below. If your students are already familiar with App Lab, you may decide to skip this lesson. [Click here to learn more about skipping this lesson](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students), allowing your classes to start right away with Creating Apps for Devices."
       },
       "seeding_key": {
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "fcs1a-beta-2024"
-      }
-    },
-    {
-      "key": "lessonGroup-3",
-      "user_facing": true,
-      "position": 2,
-      "properties": {
-        "display_name": "Inputs and Outputs",
-        "description": "This unit emphasizes the interactions between inputs and outputs on the circuit playground and an app screen. On their circuit playground, students learn to control inputs like buttons or toggle switches and outputs like the buzzer or LED. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.",
-        "big_questions": "- What inputs and outputs are available on a physical device?\n- What inputs and outputs are available on an app?\n- How can we create apps that use a physical device to control a digital app?"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     }
@@ -63,13 +49,13 @@
       "relative_position": 1,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This unit assumes students are already familiar with App Lab, so we recommend starting with the App Lab Hour of Code which is included in this lesson. If your students are already familiar with App Lab, you may decide to skip this lesson, which requires hiding it from students in the unit overview page. [Click here to learn more about hiding this lesson](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students), allowing your classes to start right away with Physical Computing\n\nThis tutorial is designed to quickly introduce the App Lab programming environment as a powerful tool for building and sharing apps. The tutorial itself teaches students to create and control buttons, text, images, sounds, and screens in JavaScript using either blocks or text. At the end of the tutorial, students are given time to either extend a project they started building into a \"Choose Your Own Adventure\", \"Greeting Card\", or \"Personality Quiz\" app. They can also continue on to build more projects featured on the code.org/applab page. ",
+        "overview": "This tutorial is designed to quickly introduce the App Lab programming environment as a powerful tool for building and sharing apps. The tutorial itself teaches students to create and control buttons, text, images, sounds, and screens in JavaScript using either blocks or text. At the end of the tutorial, students are given time to either extend a project they started building into a \"Choose Your Own Adventure\", \"Greeting Card\", or \"Personality Quiz\" app. They can also continue on to build more projects featured on the code.org/applab page. ",
         "preparation": "- Review and complete the online tutorial yourself\n- Print one or more of the [Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) at the end of this lesson plan, or create your own. \n",
         "student_overview": "Learn about App Lab, which lets you create apps with code! You'll learn to create and control buttons, text, images, sounds, and screens. At the end of the lesson, you will be able to extend a project you started building into a \"Choose Your Own Adventure\", \"Greeting Card\", or \"Personality Quiz\" app. "
       },
       "seeding_key": {
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -83,12 +69,11 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "To kick off a unit devoted to problem-solving and creating apps with devices, students begin by investigating the design of different physical devices and their apps. Students look at a variety of physical designs and attempt to match each design with a potential user. Then students choose a user and attempt to prototype a physical design for them on paper or in a digital template. To conclude the activity, students consider what it means to be a physical designer and create resources for other users.\n\n**Question of the Day:** How can we design apps with devices based on the needs of a user?",
-        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
         "student_overview": "**Question of the Day:** How can we design apps with devices based on the needs of a user?\n\nIn this lesson, you will explore how we can design apps with devices for different users and purposes\n\n"
       },
       "seeding_key": {
         "lesson.key": "Physical Designs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -102,12 +87,12 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students get their first opportunity to write programs that use the Circuit Playground. After first inspecting the board visually and hypothesizing possible functionalities, students move online where they will learn to write applications that control an LED and use a buzzer to make sounds. By combining App Lab screens with the Circuit Playgrounds, students can gradually start to integrate elements of the board as an output device while relying on App Lab for user input.\n\n**Question of the Day:** What outputs can I control on the circuit playground?",
-        "preparation": "* Make sure that student computers have the drivers and software necessary to connect to the Circuit Playground ([details here](//studio.code.org/maker/setup))\n* Prepare a board and USB cable for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Make sure that student computers have the drivers and software necessary to connect to the Circuit Playground ([details here](//studio.code.org/maker/setup))\n* Prepare a board and USB cable for each pair of students",
         "student_overview": "In this lesson, you will get to know the Circuit Playground, the circuit board that will be used throughout the rest of this unit. "
       },
       "seeding_key": {
         "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -121,12 +106,12 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students should already be familiar with programming in App Lab, specifically using Design Mode to create screen elements and using `onEvent` blocks to create button click events. To expand the kinds of apps that students can make, and to encourage them to think in new ways about how users interact with apps, we introduce the `setProperty()` and `setText()` blocks that allow users to change the properties and content of various UI elements. In this lesson students explore how they can use events to update elements on the screen\n\n**Question of the Day:** How can you update design elements of an app?",
-        "preparation": "- Students do _not_ need Circuit Playgrounds for this lesson, and we recommend teaching the lesson without devices to avoid distractions\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Students do _not_ need Circuit Playgrounds for this lesson, and we recommend teaching the lesson without devices to avoid distractions",
         "student_overview": "In this lesson, you will start to build apps that allow for lots of user interaction and functionality"
       },
       "seeding_key": {
         "lesson.key": "Updating Screen Elements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -140,12 +125,12 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson transitions students from considering the Circuit Playground as strictly an output device and instead introduces the buttons and toggle switches as tools for input. Starting with the hardware buttons and switch, students learn to use [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/), analogously to [`onEvent()`(#fff176)](/docs/applab/onEvent/), in order to take input from their Circuit Playgrounds.\n\n**Question of the Day:** How can the user interact with the circuit playground for input?",
-        "preparation": "- Prepare a board and USB cable for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Prepare a board and USB cable for each pair of students",
         "student_overview": "In this lesson, you will learn how to use the Circuit Playground's hardware buttons and switch which will give the Circuit Playground input."
       },
       "seeding_key": {
         "lesson.key": "Board Events",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -158,12 +143,12 @@
       "relative_position": 6,
       "properties": {
         "overview": "In this lesson, students are introduced to variables, the counter pattern, and if-statements. Students will use these concepts in the context of programming the circuit playground and creating more complex input/output behaviors, such as counting the number of button presses before having the circuit playground make a noise. The concepts in this lesson are used to make more complex and fulfilling apps in future lessons, and students may need to refer back to the videos and examples in this lesson as they continue to master these concepts.\n\n**Question of the Day:** How can I create more complex programs that keep track of information and make decisions?",
-        "preparation": "- Prepare a board and USB cable for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Prepare a board and USB cable for each pair of students",
         "student_overview": "Learn to make more complex programs that keep track of information and make decisions, using variables and if-statements."
       },
       "seeding_key": {
         "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -176,12 +161,12 @@
       "relative_position": 7,
       "properties": {
         "overview": "In this mini-project, students will use the Circuit Playground to collect data, then use App Lab to analyze the data that was collected. This is similar to citizen science fieldwork or survey apps where a person collects data on a device \"in the field\", then returns to a central location to view and analyze the data (such as cataloguing endangered species in the wild). Students will use variables and events to collect data from the circuit playground, then use if-statements to make decisions or recommendations based on the data they collect.\n\n**Question of the Day:** How can I use events and variables to create an app that collects and analyzes data?",
-        "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-field-collector-app-physical-computing-lesson-6/36200) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.",
         "student_overview": "Create an app that uses the Circuit Playground to collect data for a specific purpose, then has an app to analyze the data that was collected"
       },
       "seeding_key": {
         "lesson.key": "Mini-Project: Field Collector App",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -195,12 +180,12 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students learn how to use the 10 color LEDs on the Circuit Playground. Students will control the color and intensity of each LED, then use what they have learned to program light patterns to create a light show on their Circuit Playground.\n\n**Question of the Day:** How can you use the colored LEDs in an app?",
-        "preparation": "- Prepare a board and USB cable for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Prepare a board and USB cable for each pair of students",
         "student_overview": "In this lesson, you will learn how to access and control the colored LEDs on the Circuit Playground."
       },
       "seeding_key": {
         "lesson.key": "Color LEDs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -214,12 +199,12 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students learn to use several new design elements - text inputs, dropdowns, and sliders - so they can get user input from the screen of their apps. This lesson also introduces students to the getProperty and getText blocks, which allow them to access their user input in their code. Students first practice using these tools to determine what the user has input in various user interface elements. Students later use getProperty and setProperty together with the counter pattern to make elements move across the screen. A new event trigger, change, is also introduced to represent when a dropdown or slider changes values.\n\n**Question of the Day:** How can we use the app screen for user input?",
-        "preparation": "- Students do _not_ need Circuit Playgrounds for this lesson, and we recommend teaching the lesson without devices.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Students do _not_ need Circuit Playgrounds for this lesson, and we recommend teaching the lesson without devices.",
         "student_overview": "In this lesson, you will learn how to use design elements like textboxes or dropdowns to get user input from the screen"
       },
       "seeding_key": {
         "lesson.key": "Getting Screen Inputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -232,12 +217,12 @@
       "relative_position": 10,
       "properties": {
         "overview": "In this lesson, students combine inputs and outputs across both the circuit playground and the app screen. For example, students may use dropdowns or sliders to make the LEDs on the circuit playground change. Or, students may use the buttons on the circuit playground to update elements on the screen. This lesson also extends how students use variables and if-statements to make more complex decisions based on user input. There are no new coding commands or circuit playground features in this lesson, but students are combining many elements from previous lessons in new ways.\n\n**Question of the Day:** How can I use inputs and outputs from both the circuit playground and the app screen?",
-        "preparation": "- Prepare a board and USB cable for each pair of students\n- (Optional) consider preparing external reference materials from previous lessons for students, such as a Word Wall or Reference Packet, that students can access.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-physical-computing-chapter-1-lessons-1-10/36169) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Prepare a board and USB cable for each pair of students\n- (Optional) consider preparing external reference materials from previous lessons for students, such as a Word Wall or Reference Packet, that students can access.",
         "student_overview": "Combine inputs and outputs from the screen and Circuit Playground to make complex apps"
       },
       "seeding_key": {
         "lesson.key": "Combining Inputs and Outputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -250,11 +235,11 @@
       "relative_position": 11,
       "properties": {
         "overview": "In this project, students create an app that controls the Circuit Playground so it interacts with the physical environment around it, similar to many smart phone apps that are used to control devices in a house or car or school. Students use physical materials to help design their physical device, then create an app that lets the user interact with the physical device or change settings. ",
-        "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.\n* Gather prototyping materials, such as:\n\t* Structural material (cardboard, construction paper, etc)\n\t* Connective material (tape, glue, hot glue, etc)\n\t* Construction tools (scissors, staplers, etc)\n\t* Other materials (cups, binder clips, paper plates, etc)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-human-device-interaction-physical-computing-lesson-10/36216) forum for verified teachers to find additional strategies or resources shared by fellow teachers"
+        "preparation": "- Review the Project Guide and Rubric to understand the scope of the project.\n- Review the exemplar projects as examples of what students can create.\n- (Optional) You may decide to show one of these projects to students to help spark ideas.\n* Gather prototyping materials, such as:\n\t* Structural material (cardboard, construction paper, etc)\n\t* Connective material (tape, glue, hot glue, etc)\n\t* Construction tools (scissors, staplers, etc)\n\t* Other materials (cups, binder clips, paper plates, etc)"
       },
       "seeding_key": {
         "lesson.key": "Project: Human Device Interaction",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     }
@@ -270,7 +255,7 @@
       "seeding_key": {
         "lesson_activity.key": "bbe4a1f6-9025-4603-954a-7b93b0d328fa",
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -284,7 +269,7 @@
       "seeding_key": {
         "lesson_activity.key": "bf1f16b0-d59b-4856-9fb7-a09f72d9a656",
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -298,7 +283,7 @@
       "seeding_key": {
         "lesson_activity.key": "685fb5d2-e487-43aa-9e38-8468efe9a9e3",
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -311,7 +296,7 @@
       "seeding_key": {
         "lesson_activity.key": "95e01f35-3cad-4bf6-80da-034c396de9d0",
         "lesson.key": "Physical Designs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -324,7 +309,7 @@
       "seeding_key": {
         "lesson_activity.key": "ad9f9003-f9b6-406b-bb05-a30d49dc2c71",
         "lesson.key": "Physical Designs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -338,7 +323,7 @@
       "seeding_key": {
         "lesson_activity.key": "5fe3e76b-4bdd-4122-a840-e51ef32fb8f0",
         "lesson.key": "Physical Designs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -352,7 +337,7 @@
       "seeding_key": {
         "lesson_activity.key": "123890b4-f578-4d83-947d-80e495e1cf00",
         "lesson.key": "Physical Designs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -366,7 +351,7 @@
       "seeding_key": {
         "lesson_activity.key": "a9d475ad-f75f-4d62-b08c-e6093727dade",
         "lesson.key": "Physical Designs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -380,7 +365,7 @@
       "seeding_key": {
         "lesson_activity.key": "f726eec5-f730-42ca-9cd7-c6f4670cd668",
         "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -394,7 +379,7 @@
       "seeding_key": {
         "lesson_activity.key": "e3a98fda-bd15-4875-8554-cd981e0f86b4",
         "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -408,7 +393,7 @@
       "seeding_key": {
         "lesson_activity.key": "9dc2d1f4-8803-40b8-a83a-344149f3d397",
         "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -422,7 +407,7 @@
       "seeding_key": {
         "lesson_activity.key": "879dd53d-cb14-48b3-befb-58b25605c252",
         "lesson.key": "Updating Screen Elements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -436,7 +421,7 @@
       "seeding_key": {
         "lesson_activity.key": "bd8dae5d-80c3-4237-ad5a-4fb841fcf5b2",
         "lesson.key": "Updating Screen Elements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -450,7 +435,7 @@
       "seeding_key": {
         "lesson_activity.key": "6f88011b-2a75-41a2-af31-3932a4905d4d",
         "lesson.key": "Updating Screen Elements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -464,7 +449,7 @@
       "seeding_key": {
         "lesson_activity.key": "30924bc7-ba87-40da-a779-053efd1b970a",
         "lesson.key": "Board Events",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -478,7 +463,7 @@
       "seeding_key": {
         "lesson_activity.key": "d78b01ed-fb93-46d9-b6a9-b2647502a765",
         "lesson.key": "Board Events",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -492,7 +477,7 @@
       "seeding_key": {
         "lesson_activity.key": "23864fc0-52b5-449a-af74-97a0c241b047",
         "lesson.key": "Board Events",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -506,7 +491,7 @@
       "seeding_key": {
         "lesson_activity.key": "af6ca894-38e3-4f35-82e9-42760cb2daa1",
         "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -520,7 +505,7 @@
       "seeding_key": {
         "lesson_activity.key": "4aee3495-2f95-4b8f-96b0-cd3c4d8eac7e",
         "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -534,7 +519,7 @@
       "seeding_key": {
         "lesson_activity.key": "6fe714ab-8e9a-4ae7-858e-e70ef54825fc",
         "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -548,7 +533,7 @@
       "seeding_key": {
         "lesson_activity.key": "64d5cf1e-489e-41b2-8a4d-16e1647739fa",
         "lesson.key": "Mini-Project: Field Collector App",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -562,7 +547,7 @@
       "seeding_key": {
         "lesson_activity.key": "65915c6a-03df-457f-9bc7-bb50e8473d60",
         "lesson.key": "Mini-Project: Field Collector App",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -576,7 +561,7 @@
       "seeding_key": {
         "lesson_activity.key": "31b67fa8-3956-4473-b997-12c850057c2b",
         "lesson.key": "Mini-Project: Field Collector App",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -590,7 +575,7 @@
       "seeding_key": {
         "lesson_activity.key": "274cf6f7-693d-4d24-abfc-53c8cf3bbdc5",
         "lesson.key": "Color LEDs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -604,7 +589,7 @@
       "seeding_key": {
         "lesson_activity.key": "5ab06a3a-0c5d-4b6e-bf4d-d3a3873a45a2",
         "lesson.key": "Color LEDs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -618,7 +603,7 @@
       "seeding_key": {
         "lesson_activity.key": "3177cef8-26cc-44bb-a93f-1118d7a7a1a5",
         "lesson.key": "Color LEDs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -632,7 +617,7 @@
       "seeding_key": {
         "lesson_activity.key": "bba25bce-967e-46a2-9834-5592b246edd1",
         "lesson.key": "Getting Screen Inputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -646,7 +631,7 @@
       "seeding_key": {
         "lesson_activity.key": "2144e17d-b8c3-408c-a819-10cb248fe4e3",
         "lesson.key": "Getting Screen Inputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -660,7 +645,7 @@
       "seeding_key": {
         "lesson_activity.key": "83a6162e-6908-4128-bb69-f2b05b90d92f",
         "lesson.key": "Getting Screen Inputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -674,7 +659,7 @@
       "seeding_key": {
         "lesson_activity.key": "08113c26-f2d9-442f-8f17-071689785573",
         "lesson.key": "Combining Inputs and Outputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -688,7 +673,7 @@
       "seeding_key": {
         "lesson_activity.key": "1f52500d-1791-4356-addc-8defd51011ea",
         "lesson.key": "Combining Inputs and Outputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -702,7 +687,7 @@
       "seeding_key": {
         "lesson_activity.key": "171f932e-2559-4e2b-9b10-70c0e6a7164a",
         "lesson.key": "Combining Inputs and Outputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -716,7 +701,7 @@
       "seeding_key": {
         "lesson_activity.key": "4d251365-5d8b-4f03-a93f-f29fc6386615",
         "lesson.key": "Project: Human Device Interaction",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -730,7 +715,7 @@
       "seeding_key": {
         "lesson_activity.key": "446c399d-c45a-470a-bb1e-ce9891d36746",
         "lesson.key": "Project: Human Device Interaction",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -744,7 +729,7 @@
       "seeding_key": {
         "lesson_activity.key": "c01865ac-afb1-41a4-8c2a-6d8718c62e38",
         "lesson.key": "Project: Human Device Interaction",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -758,7 +743,7 @@
       "seeding_key": {
         "lesson_activity.key": "f662301c-6dfb-45d2-9711-366b2d63c8a3",
         "lesson.key": "Project: Human Device Interaction",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     },
@@ -772,7 +757,7 @@
       "seeding_key": {
         "lesson_activity.key": "7165a443-e6d0-46d4-b700-c32135d69ad5",
         "lesson.key": "Project: Human Device Interaction",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024"
       }
     }
@@ -890,7 +875,7 @@
       "key": "221bb79d-6269-45bf-add5-1bcf9f258907",
       "position": 1,
       "properties": {
-        "description": "**code.org/applab:** At the end of the lesson encourage students to head to the App Lab home page where they can get ideas for more ways to keep their adventure with App Lab going.\n\n**Exit Ticket:** Distribute the Exit Tickets to collect feedback on how the day felt for students.\n\n**(Optional) Certificates:** You may decide to print certificates to celebrate students who completed the entire tutorial - printable certificates can be found here: http://code.org/certificates",
+        "description": "**code.org/applab:** At the end of the lesson encourage students to head to the App Lab home page where they can get ideas for more ways to keep their adventure with App Lab going.\n\n**Exit Ticket:** Distribute the Exit Tickets to collect feedback on how the day felt for students.",
         "name": "Celebrate and Keep Going!\r"
       },
       "seeding_key": {
@@ -1493,13 +1478,7 @@
       "key": "33814d83-486b-47a5-9693-7c239f46c93e",
       "position": 1,
       "properties": {
-        "description": "**Transition:** Send students to Code Studio",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view). This document includes strategies and best-practices for facilitating programming levels with students."
-          }
-        ]
+        "description": "**Transition:** Send students to Code Studio"
       },
       "seeding_key": {
         "activity_section.key": "33814d83-486b-47a5-9693-7c239f46c93e",
@@ -2271,7 +2250,7 @@
         "tips": [
           {
             "type": "contentCorner",
-            "markdown": "**List Terminology:** A list in javascript is formally called an **array**. The `colorLEDs[x]` block uses an array to access each LED.  The number inside the [square brackets] is called the **index**. We might say `colorLEDs[0]` represents the LED at index 0, or `colorLEDs[5]` represents the LED at index 5. \n\nArrays are discussed in more depth in a later lesson and students do not need to have a strong understanding of arrays by the end of this lesson. At a bare minimum, students should understand that the “first” LED starts at index 0, and the “last” LED is at index 9."
+            "markdown": "**List Terminology:** A list in JavaScript is formally called an **array**. The `colorLEDs[x]` block uses an array to access each LED.  The number inside the [square brackets] is called the **index**. We might say `colorLEDs[0]` represents the LED at index 0, or `colorLEDs[5]` represents the LED at index 5. \n\nArrays are discussed in more depth in a later lesson and students do not need to have a strong understanding of arrays by the end of this lesson. At a bare minimum, students should understand that the “first” LED starts at index 0, and the “last” LED is at index 9."
           }
         ]
       },
@@ -2631,7 +2610,7 @@
         "tips": [
           {
             "type": "contentCorner",
-            "markdown": "**List Terminology:** A list in javascript is formally called an **array**. The `colorLEDs[x]` block uses an array to access each LED.  The number inside the [square brackets] is called the **index**. We might say `colorLEDs[0]` represents the LED at index 0, or `colorLEDs[5]` represents the LED at index 5. \n\nArrays are discussed in more depth in a later lesson and students do not need to have a strong understanding of arrays by the end of this lesson. At a bare minimum, students should understand that the “first” LED starts at index 0, and the “last” LED is at index 9."
+            "markdown": "**List Terminology:** A list in JavaScript is formally called an **array**. The `colorLEDs[x]` block uses an array to access each LED.  The number inside the [square brackets] is called the **index**. We might say `colorLEDs[0]` represents the LED at index 0, or `colorLEDs[5]` represents the LED at index 5. \n\nArrays are discussed in more depth in a later lesson and students do not need to have a strong understanding of arrays by the end of this lesson. At a bare minimum, students should understand that the “first” LED starts at index 0, and the “last” LED is at index 9."
           }
         ]
       },
@@ -3043,7 +3022,7 @@
           "App Lab Intro 8 - Video Getting Started_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "7e753309-64af-40e6-9d09-8e7187605660"
       },
@@ -3068,7 +3047,7 @@
           "AppLab Intro 7 - Change Screen Color_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "71966efb-8a73-4bfe-b0fd-a724495a9d7c"
       },
@@ -3093,7 +3072,7 @@
           "AppLab Intro 7 - Change Text 2_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "71966efb-8a73-4bfe-b0fd-a724495a9d7c"
       },
@@ -3118,7 +3097,7 @@
           "AppLab Intro 7 - Full Text_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "71966efb-8a73-4bfe-b0fd-a724495a9d7c"
       },
@@ -3143,7 +3122,7 @@
           "App Lab Intro 8 - Video Make It Interactive_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "651bfc82-6403-4233-8827-8bc85fd81e96"
       },
@@ -3168,7 +3147,7 @@
           "AppLab Intro 7 - onEvent intro_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "651bfc82-6403-4233-8827-8bc85fd81e96"
       },
@@ -3193,7 +3172,7 @@
           "AppLab Intro 7 - onEvent twoButtons_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "651bfc82-6403-4233-8827-8bc85fd81e96"
       },
@@ -3218,7 +3197,7 @@
           "App Lab Intro 8 - Video Images and Sounds_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "d591c7fd-87a2-41ce-bf24-1fb768646fd9"
       },
@@ -3243,7 +3222,7 @@
           "AppLab Intro 7 - playSound_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "d591c7fd-87a2-41ce-bf24-1fb768646fd9"
       },
@@ -3268,7 +3247,7 @@
           "App Lab Intro 8 - Video Design Mode_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "fc95ab79-904c-428e-921f-2579a4a91c9c"
       },
@@ -3293,7 +3272,7 @@
           "AppLab Intro 7 - thisOrThatAddButton_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "fc95ab79-904c-428e-921f-2579a4a91c9c"
       },
@@ -3318,7 +3297,7 @@
           "AppLab Intro 7 - thisOrThatAddScreen_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "fc95ab79-904c-428e-921f-2579a4a91c9c"
       },
@@ -3343,7 +3322,7 @@
           "AppLab Intro 7 - thisOrThatSetScreen_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "fc95ab79-904c-428e-921f-2579a4a91c9c"
       },
@@ -3368,7 +3347,7 @@
           "App Lab Intro 8 - Video Share Your App_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "5b3374c1-e33a-4c49-8a37-c46e1a47adb1"
       },
@@ -3393,7 +3372,7 @@
           "AppLab Intro 7 - thisOrThatPersonalize_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "5b3374c1-e33a-4c49-8a37-c46e1a47adb1"
       },
@@ -3418,7 +3397,7 @@
           "CSD U3 L1 - Design Templates_2023a_2023"
         ],
         "lesson.key": "Physical Designs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "8a3d96b4-be4b-4ca6-a8e7-f13fa7233f05"
       },
@@ -3443,7 +3422,7 @@
           "CSDU6 Circuit Playground Test_2023"
         ],
         "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "2b79da99-62d0-41dc-91cc-1765d3452754"
       },
@@ -3468,7 +3447,7 @@
           "CSD U6 - Board Outputs - P_2023"
         ],
         "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "ad3b01bb-11b3-4abb-a538-973d34e1f2bc"
       },
@@ -3493,7 +3472,7 @@
           "CSD U6 - Board Outputs - SB1_2023"
         ],
         "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "c3c83e1d-2e79-4f87-ae94-a236e15a45ec"
       },
@@ -3518,7 +3497,7 @@
           "CSD U6 - Board Outputs - SB2_2023"
         ],
         "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "c3c83e1d-2e79-4f87-ae94-a236e15a45ec"
       },
@@ -3543,7 +3522,7 @@
           "CSD U6 - Board Outputs - P2_2023"
         ],
         "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "3dc8b92f-514f-48e0-8933-6ef00bf3233e"
       },
@@ -3568,7 +3547,7 @@
           "CSD U6 - Board Outputs - SB3_2023"
         ],
         "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "44fa6593-4604-4220-8159-345918fd881a"
       },
@@ -3593,7 +3572,7 @@
           "CSD U6 - Board Outputs - SB4_2023"
         ],
         "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "44fa6593-4604-4220-8159-345918fd881a"
       },
@@ -3618,7 +3597,7 @@
           "CSD U6 - Board Outputs - Prac_2023"
         ],
         "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "91c2ff00-75bf-4fe8-8da9-d0ce985362ce"
       },
@@ -3643,7 +3622,7 @@
           "CSD U6 - Board Outputs - A_2023"
         ],
         "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "c33776f7-a077-4fc5-a18e-ecc83e66399b"
       },
@@ -3668,7 +3647,7 @@
           "CSD U6 - Board Outputs - Chal_2023"
         ],
         "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "6cb290df-464e-4c33-bc65-143c01b76ff2"
       },
@@ -3693,7 +3672,7 @@
           "CSD U6 - Screen Outputs - P_2023"
         ],
         "lesson.key": "Updating Screen Elements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "5de08a8c-454f-4dda-a7a1-aa5227fb0032"
       },
@@ -3718,7 +3697,7 @@
           "CSD U6 - Screen Outputs - SB1_2023"
         ],
         "lesson.key": "Updating Screen Elements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "e844cadf-dd74-497c-9c89-6c53befece68"
       },
@@ -3743,7 +3722,7 @@
           "CSD U6 - Screen Outputs - SB1.1_2023"
         ],
         "lesson.key": "Updating Screen Elements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "e844cadf-dd74-497c-9c89-6c53befece68"
       },
@@ -3768,7 +3747,7 @@
           "CSD U6 - Screen Outputs - SB2_2023"
         ],
         "lesson.key": "Updating Screen Elements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "e844cadf-dd74-497c-9c89-6c53befece68"
       },
@@ -3793,7 +3772,7 @@
           "CSD U6 - Screen Outputs - SB3_2023"
         ],
         "lesson.key": "Updating Screen Elements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "e844cadf-dd74-497c-9c89-6c53befece68"
       },
@@ -3818,7 +3797,7 @@
           "CSD U6 - Screen Outputs - SB4_2023"
         ],
         "lesson.key": "Updating Screen Elements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "e844cadf-dd74-497c-9c89-6c53befece68"
       },
@@ -3843,7 +3822,7 @@
           "CSD U6 - Screen Outputs - Prac_2023"
         ],
         "lesson.key": "Updating Screen Elements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "5afe57f1-81d5-4253-a278-bbc76b59a70b"
       },
@@ -3868,7 +3847,7 @@
           "CSD U6 - Screen Outputs - ChalB_2023"
         ],
         "lesson.key": "Updating Screen Elements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "62ef46eb-3df3-477b-82ec-87197009007e"
       },
@@ -3893,7 +3872,7 @@
           "CSD U6 - Screen Outputs - Chal_2023"
         ],
         "lesson.key": "Updating Screen Elements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "63766a76-8b31-4ce3-ab56-b3b6ec49d7b0"
       },
@@ -3918,7 +3897,7 @@
           "CSD U6 - Board Inputs - P_2023"
         ],
         "lesson.key": "Board Events",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "1a8d6b41-3501-4390-a15d-a125688a55a6"
       },
@@ -3943,7 +3922,7 @@
           "CSD U6 - Board Inputs - SB1_2023"
         ],
         "lesson.key": "Board Events",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "bb1ff0a5-9799-443d-961a-04d92d9de73d"
       },
@@ -3968,7 +3947,7 @@
           "CSD U6 - Board Inputs - SB2_2023"
         ],
         "lesson.key": "Board Events",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "bb1ff0a5-9799-443d-961a-04d92d9de73d"
       },
@@ -3993,7 +3972,7 @@
           "CSD U6 - Board Inputs - SB3_2023"
         ],
         "lesson.key": "Board Events",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "bb1ff0a5-9799-443d-961a-04d92d9de73d"
       },
@@ -4018,7 +3997,7 @@
           "CSD U6 - Board Inputs - SB4_2023"
         ],
         "lesson.key": "Board Events",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "bb1ff0a5-9799-443d-961a-04d92d9de73d"
       },
@@ -4043,7 +4022,7 @@
           "CSD U6 - Board Inputs - Prac_2023"
         ],
         "lesson.key": "Board Events",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "23426905-9fe7-4126-b05b-e896d62a69ad"
       },
@@ -4068,7 +4047,7 @@
           "CSD U6 - Board Inputs - A_2023"
         ],
         "lesson.key": "Board Events",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "ac232592-befa-408b-941f-06a42cd15cce"
       },
@@ -4093,7 +4072,7 @@
           "CSD U6 - Board Inputs - Chal_2023"
         ],
         "lesson.key": "Board Events",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "9fa5cc46-a5d4-451e-aabf-e436ddc01b11"
       },
@@ -4118,7 +4097,7 @@
           "CSD U6 - If Variables - P_2023"
         ],
         "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "b15ab1ef-b033-45e4-a59e-2e1f2f04b1bf"
       },
@@ -4143,7 +4122,7 @@
           "CSD U6 - If Variables - SB0_2023"
         ],
         "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "f074fa41-fa33-4a52-970f-788eccf3bba1"
       },
@@ -4168,7 +4147,7 @@
           "CSD U6 - If Variables - SB3_2023"
         ],
         "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "8a013c1c-7272-44ca-83b7-f336b063ea90"
       },
@@ -4193,7 +4172,7 @@
           "CSD U6 - If Variables - SB2_2023"
         ],
         "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "8a013c1c-7272-44ca-83b7-f336b063ea90"
       },
@@ -4218,7 +4197,7 @@
           "CSD U6 - If Variables - SB4_2023"
         ],
         "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "ae1e6fd0-938e-4362-a96f-6360da8a4dc8"
       },
@@ -4243,7 +4222,7 @@
           "CSD U6 - If Variables - SB5_2023"
         ],
         "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "ae1e6fd0-938e-4362-a96f-6360da8a4dc8"
       },
@@ -4268,7 +4247,7 @@
           "CSD U6 - If Variables - P2_2023"
         ],
         "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "5df39165-fff9-404e-82da-a1c6a33e0d05"
       },
@@ -4293,7 +4272,7 @@
           "CSD U6 - If Variables - SB7_2023"
         ],
         "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "2e9c69fc-99be-4f51-bc4e-d0b80c765bb3"
       },
@@ -4318,7 +4297,7 @@
           "CSD U6 - If Variables - SB6_2023"
         ],
         "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "2e9c69fc-99be-4f51-bc4e-d0b80c765bb3"
       },
@@ -4343,7 +4322,7 @@
           "CSD U6 - If Variables - A_2023"
         ],
         "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "6561a895-70c0-4f95-b8ac-2fba827e2cac"
       },
@@ -4368,7 +4347,7 @@
           "CSD U6 - If Variables - Chal_2023"
         ],
         "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "727ce746-e810-4ac3-925c-f92d2e336100"
       },
@@ -4393,7 +4372,7 @@
           "CSD U6 - On The Go - Design_2023"
         ],
         "lesson.key": "Mini-Project: Field Collector App",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "2ae7594a-0416-43de-949e-b54ed2fec4f0"
       },
@@ -4418,7 +4397,7 @@
           "CSD U6 - On The Go - Events_2023"
         ],
         "lesson.key": "Mini-Project: Field Collector App",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "2ae7594a-0416-43de-949e-b54ed2fec4f0"
       },
@@ -4443,7 +4422,7 @@
           "CSD U6 - On The Go - Logic_2023"
         ],
         "lesson.key": "Mini-Project: Field Collector App",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "2ae7594a-0416-43de-949e-b54ed2fec4f0"
       },
@@ -4468,7 +4447,7 @@
           "CSD U6 - On The Go - Review_2023"
         ],
         "lesson.key": "Mini-Project: Field Collector App",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "2ae7594a-0416-43de-949e-b54ed2fec4f0"
       },
@@ -4493,7 +4472,7 @@
           "CSD U6 - Color LEDs - P_2023"
         ],
         "lesson.key": "Color LEDs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "7502a81f-0577-4482-90cd-ae21f48dfb4b"
       },
@@ -4518,7 +4497,7 @@
           "CSD U6 - Color LEDs - SB1_2023"
         ],
         "lesson.key": "Color LEDs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "723dd095-a2ba-4e23-bedf-6af484799e1c"
       },
@@ -4543,7 +4522,7 @@
           "CSD U6 - Color LEDs - SB2_2023"
         ],
         "lesson.key": "Color LEDs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "723dd095-a2ba-4e23-bedf-6af484799e1c"
       },
@@ -4568,7 +4547,7 @@
           "CSD U6 - Color LEDs - SB3_2023"
         ],
         "lesson.key": "Color LEDs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "723dd095-a2ba-4e23-bedf-6af484799e1c"
       },
@@ -4593,7 +4572,7 @@
           "CSD U6 - Color LEDs - SB4_2023"
         ],
         "lesson.key": "Color LEDs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "723dd095-a2ba-4e23-bedf-6af484799e1c"
       },
@@ -4618,7 +4597,7 @@
           "CSD U6 - Color LEDs - Prac_2023a_2023"
         ],
         "lesson.key": "Color LEDs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "44154d32-58c1-451e-b8aa-87dbd141ba5f"
       },
@@ -4643,7 +4622,7 @@
           "CSD U6 - Color LEDs - A_2023"
         ],
         "lesson.key": "Color LEDs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "b3d4c60f-47a6-4851-bd7e-c6da4c0b1c7c"
       },
@@ -4668,7 +4647,7 @@
           "CSD U6 - Color LEDs - Chal_2023a_2023"
         ],
         "lesson.key": "Color LEDs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "0a780d29-6186-422d-a75c-d86b00d0eed4"
       },
@@ -4693,7 +4672,7 @@
           "CSD U6 - Screen Inputs - P_2023"
         ],
         "lesson.key": "Getting Screen Inputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "6c526046-2ee2-4369-80d6-e4d749f0f8b0"
       },
@@ -4718,7 +4697,7 @@
           "CSD U6 - Screen Inputs - SB1_2023"
         ],
         "lesson.key": "Getting Screen Inputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "b1882847-f24a-4dc3-8897-17940629493d"
       },
@@ -4743,7 +4722,7 @@
           "CSD U6 - Screen Inputs - SB2.1_2023"
         ],
         "lesson.key": "Getting Screen Inputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "b1882847-f24a-4dc3-8897-17940629493d"
       },
@@ -4768,7 +4747,7 @@
           "CSD U6 - Screen Inputs - SB2.2_2023"
         ],
         "lesson.key": "Getting Screen Inputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "b1882847-f24a-4dc3-8897-17940629493d"
       },
@@ -4793,7 +4772,7 @@
           "CSD U6 - Screen Inputs - SB3_2023"
         ],
         "lesson.key": "Getting Screen Inputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "b1882847-f24a-4dc3-8897-17940629493d"
       },
@@ -4818,7 +4797,7 @@
           "CSD U6 - Screen Inputs - SB4_2023"
         ],
         "lesson.key": "Getting Screen Inputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "b1882847-f24a-4dc3-8897-17940629493d"
       },
@@ -4843,7 +4822,7 @@
           "CSD U6 - Screen Inputs - SB5_2023"
         ],
         "lesson.key": "Getting Screen Inputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "b1882847-f24a-4dc3-8897-17940629493d"
       },
@@ -4868,7 +4847,7 @@
           "CSD U6 - Screen Inputs - Prac_2023"
         ],
         "lesson.key": "Getting Screen Inputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "51f0cb49-3533-4db5-8012-c81ad798e731"
       },
@@ -4893,7 +4872,7 @@
           "CSD U6 - Screen Inputs - A_2023"
         ],
         "lesson.key": "Getting Screen Inputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "40b1d7b1-f988-440c-9e27-24aeaf9d2d29"
       },
@@ -4918,7 +4897,7 @@
           "CSD U6 - Screen Inputs - Chal_2023"
         ],
         "lesson.key": "Getting Screen Inputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "89261ba5-be57-4d10-ab1a-f1ddf45d0c70"
       },
@@ -4943,7 +4922,7 @@
           "CSD U6 - Combine Inputs - P_2023"
         ],
         "lesson.key": "Combining Inputs and Outputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "61458380-cdc6-431e-a706-35fe950c442d"
       },
@@ -4968,7 +4947,7 @@
           "CSD U6 - Combine Inputs - SB1_2023"
         ],
         "lesson.key": "Combining Inputs and Outputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "2d06700e-92ad-49e3-a917-d518c3d94bd0"
       },
@@ -4993,7 +4972,7 @@
           "CSD U6 - Combine Inputs - SB2_2023"
         ],
         "lesson.key": "Combining Inputs and Outputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "2d06700e-92ad-49e3-a917-d518c3d94bd0"
       },
@@ -5018,7 +4997,7 @@
           "CSD U6 - Combine Inputs - SB3_2023"
         ],
         "lesson.key": "Combining Inputs and Outputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "2d06700e-92ad-49e3-a917-d518c3d94bd0"
       },
@@ -5043,7 +5022,7 @@
           "CSD U6 - Combine Inputs - SB4_2023"
         ],
         "lesson.key": "Combining Inputs and Outputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "2d06700e-92ad-49e3-a917-d518c3d94bd0"
       },
@@ -5068,7 +5047,7 @@
           "CSD U6 - Combine Inputs - Prac_2023a_2023"
         ],
         "lesson.key": "Combining Inputs and Outputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "b7759d8a-4aaa-4c6d-82b3-847ce6f126b3"
       },
@@ -5093,7 +5072,7 @@
           "CSD U6 - Combine Inputs - A_2023"
         ],
         "lesson.key": "Combining Inputs and Outputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "6841ba5d-f87c-4388-8b3a-cca2e75c47f4"
       },
@@ -5118,7 +5097,7 @@
           "CSD U6 - Combine Inputs - Chal_2023a_2023"
         ],
         "lesson.key": "Combining Inputs and Outputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "ea849e24-58ca-4f2a-8f5b-fa2c8014f37b"
       },
@@ -5143,7 +5122,7 @@
           "CSD U6 - Human Device - Design_2023"
         ],
         "lesson.key": "Project: Human Device Interaction",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "fd038106-15cb-4cf2-8f27-df2e73d9add9"
       },
@@ -5168,7 +5147,7 @@
           "CSD U6 - Human Device - Events_2023"
         ],
         "lesson.key": "Project: Human Device Interaction",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "fd038106-15cb-4cf2-8f27-df2e73d9add9"
       },
@@ -5193,7 +5172,7 @@
           "CSD U6 - Human Device - Logic_2023"
         ],
         "lesson.key": "Project: Human Device Interaction",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "fd038106-15cb-4cf2-8f27-df2e73d9add9"
       },
@@ -5218,7 +5197,7 @@
           "CSD U6 - Human Device - Review_2023"
         ],
         "lesson.key": "Project: Human Device Interaction",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "fd038106-15cb-4cf2-8f27-df2e73d9add9"
       },
@@ -5243,7 +5222,7 @@
           "csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_2023a_2023"
         ],
         "lesson.key": "Project: Human Device Interaction",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "a000a786-2ac3-4f4b-8e1e-c2db75f9f026"
       },
@@ -5260,7 +5239,7 @@
           "App Lab Intro 8 - Video Getting Started_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "7e753309-64af-40e6-9d09-8e7187605660"
       }
@@ -5272,7 +5251,7 @@
           "AppLab Intro 7 - Change Screen Color_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "71966efb-8a73-4bfe-b0fd-a724495a9d7c"
       }
@@ -5284,7 +5263,7 @@
           "AppLab Intro 7 - Change Text 2_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "71966efb-8a73-4bfe-b0fd-a724495a9d7c"
       }
@@ -5296,7 +5275,7 @@
           "AppLab Intro 7 - Full Text_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "71966efb-8a73-4bfe-b0fd-a724495a9d7c"
       }
@@ -5308,7 +5287,7 @@
           "App Lab Intro 8 - Video Make It Interactive_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "651bfc82-6403-4233-8827-8bc85fd81e96"
       }
@@ -5320,7 +5299,7 @@
           "AppLab Intro 7 - onEvent intro_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "651bfc82-6403-4233-8827-8bc85fd81e96"
       }
@@ -5332,7 +5311,7 @@
           "AppLab Intro 7 - onEvent twoButtons_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "651bfc82-6403-4233-8827-8bc85fd81e96"
       }
@@ -5344,7 +5323,7 @@
           "App Lab Intro 8 - Video Images and Sounds_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "d591c7fd-87a2-41ce-bf24-1fb768646fd9"
       }
@@ -5356,7 +5335,7 @@
           "AppLab Intro 7 - playSound_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "d591c7fd-87a2-41ce-bf24-1fb768646fd9"
       }
@@ -5368,7 +5347,7 @@
           "App Lab Intro 8 - Video Design Mode_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "fc95ab79-904c-428e-921f-2579a4a91c9c"
       }
@@ -5380,7 +5359,7 @@
           "AppLab Intro 7 - thisOrThatAddButton_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "fc95ab79-904c-428e-921f-2579a4a91c9c"
       }
@@ -5392,7 +5371,7 @@
           "AppLab Intro 7 - thisOrThatAddScreen_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "fc95ab79-904c-428e-921f-2579a4a91c9c"
       }
@@ -5404,7 +5383,7 @@
           "AppLab Intro 7 - thisOrThatSetScreen_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "fc95ab79-904c-428e-921f-2579a4a91c9c"
       }
@@ -5416,7 +5395,7 @@
           "App Lab Intro 8 - Video Share Your App_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "5b3374c1-e33a-4c49-8a37-c46e1a47adb1"
       }
@@ -5428,7 +5407,7 @@
           "AppLab Intro 7 - thisOrThatPersonalize_2023"
         ],
         "lesson.key": "Intro to App Lab",
-        "lesson_group.key": "lessonGroup-2",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "5b3374c1-e33a-4c49-8a37-c46e1a47adb1"
       }
@@ -5440,7 +5419,7 @@
           "CSD U3 L1 - Design Templates_2023a_2023"
         ],
         "lesson.key": "Physical Designs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "8a3d96b4-be4b-4ca6-a8e7-f13fa7233f05"
       }
@@ -5452,7 +5431,7 @@
           "CSDU6 Circuit Playground Test_2023"
         ],
         "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "2b79da99-62d0-41dc-91cc-1765d3452754"
       }
@@ -5464,7 +5443,7 @@
           "CSD U6 - Board Outputs - P_2023"
         ],
         "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "ad3b01bb-11b3-4abb-a538-973d34e1f2bc"
       }
@@ -5476,7 +5455,7 @@
           "CSD U6 - Board Outputs - SB1_2023"
         ],
         "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "c3c83e1d-2e79-4f87-ae94-a236e15a45ec"
       }
@@ -5488,7 +5467,7 @@
           "CSD U6 - Board Outputs - SB2_2023"
         ],
         "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "c3c83e1d-2e79-4f87-ae94-a236e15a45ec"
       }
@@ -5500,7 +5479,7 @@
           "CSD U6 - Board Outputs - P2_2023"
         ],
         "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "3dc8b92f-514f-48e0-8933-6ef00bf3233e"
       }
@@ -5512,7 +5491,7 @@
           "CSD U6 - Board Outputs - SB3_2023"
         ],
         "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "44fa6593-4604-4220-8159-345918fd881a"
       }
@@ -5524,7 +5503,7 @@
           "CSD U6 - Board Outputs - SB4_2023"
         ],
         "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "44fa6593-4604-4220-8159-345918fd881a"
       }
@@ -5536,7 +5515,7 @@
           "CSD U6 - Board Outputs - Prac_2023"
         ],
         "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "91c2ff00-75bf-4fe8-8da9-d0ce985362ce"
       }
@@ -5548,7 +5527,7 @@
           "CSD U6 - Board Outputs - A_2023"
         ],
         "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "c33776f7-a077-4fc5-a18e-ecc83e66399b"
       }
@@ -5560,7 +5539,7 @@
           "CSD U6 - Board Outputs - Chal_2023"
         ],
         "lesson.key": "The Circuit Playground",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "6cb290df-464e-4c33-bc65-143c01b76ff2"
       }
@@ -5572,7 +5551,7 @@
           "CSD U6 - Screen Outputs - P_2023"
         ],
         "lesson.key": "Updating Screen Elements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "5de08a8c-454f-4dda-a7a1-aa5227fb0032"
       }
@@ -5584,7 +5563,7 @@
           "CSD U6 - Screen Outputs - SB1_2023"
         ],
         "lesson.key": "Updating Screen Elements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "e844cadf-dd74-497c-9c89-6c53befece68"
       }
@@ -5596,7 +5575,7 @@
           "CSD U6 - Screen Outputs - SB1.1_2023"
         ],
         "lesson.key": "Updating Screen Elements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "e844cadf-dd74-497c-9c89-6c53befece68"
       }
@@ -5608,7 +5587,7 @@
           "CSD U6 - Screen Outputs - SB2_2023"
         ],
         "lesson.key": "Updating Screen Elements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "e844cadf-dd74-497c-9c89-6c53befece68"
       }
@@ -5620,7 +5599,7 @@
           "CSD U6 - Screen Outputs - SB3_2023"
         ],
         "lesson.key": "Updating Screen Elements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "e844cadf-dd74-497c-9c89-6c53befece68"
       }
@@ -5632,7 +5611,7 @@
           "CSD U6 - Screen Outputs - SB4_2023"
         ],
         "lesson.key": "Updating Screen Elements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "e844cadf-dd74-497c-9c89-6c53befece68"
       }
@@ -5644,7 +5623,7 @@
           "CSD U6 - Screen Outputs - Prac_2023"
         ],
         "lesson.key": "Updating Screen Elements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "5afe57f1-81d5-4253-a278-bbc76b59a70b"
       }
@@ -5656,7 +5635,7 @@
           "CSD U6 - Screen Outputs - ChalB_2023"
         ],
         "lesson.key": "Updating Screen Elements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "62ef46eb-3df3-477b-82ec-87197009007e"
       }
@@ -5668,7 +5647,7 @@
           "CSD U6 - Screen Outputs - Chal_2023"
         ],
         "lesson.key": "Updating Screen Elements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "63766a76-8b31-4ce3-ab56-b3b6ec49d7b0"
       }
@@ -5680,7 +5659,7 @@
           "CSD U6 - Board Inputs - P_2023"
         ],
         "lesson.key": "Board Events",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "1a8d6b41-3501-4390-a15d-a125688a55a6"
       }
@@ -5692,7 +5671,7 @@
           "CSD U6 - Board Inputs - SB1_2023"
         ],
         "lesson.key": "Board Events",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "bb1ff0a5-9799-443d-961a-04d92d9de73d"
       }
@@ -5704,7 +5683,7 @@
           "CSD U6 - Board Inputs - SB2_2023"
         ],
         "lesson.key": "Board Events",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "bb1ff0a5-9799-443d-961a-04d92d9de73d"
       }
@@ -5716,7 +5695,7 @@
           "CSD U6 - Board Inputs - SB3_2023"
         ],
         "lesson.key": "Board Events",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "bb1ff0a5-9799-443d-961a-04d92d9de73d"
       }
@@ -5728,7 +5707,7 @@
           "CSD U6 - Board Inputs - SB4_2023"
         ],
         "lesson.key": "Board Events",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "bb1ff0a5-9799-443d-961a-04d92d9de73d"
       }
@@ -5740,7 +5719,7 @@
           "CSD U6 - Board Inputs - Prac_2023"
         ],
         "lesson.key": "Board Events",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "23426905-9fe7-4126-b05b-e896d62a69ad"
       }
@@ -5752,7 +5731,7 @@
           "CSD U6 - Board Inputs - A_2023"
         ],
         "lesson.key": "Board Events",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "ac232592-befa-408b-941f-06a42cd15cce"
       }
@@ -5764,7 +5743,7 @@
           "CSD U6 - Board Inputs - Chal_2023"
         ],
         "lesson.key": "Board Events",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "9fa5cc46-a5d4-451e-aabf-e436ddc01b11"
       }
@@ -5776,7 +5755,7 @@
           "CSD U6 - If Variables - P_2023"
         ],
         "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "b15ab1ef-b033-45e4-a59e-2e1f2f04b1bf"
       }
@@ -5788,7 +5767,7 @@
           "CSD U6 - If Variables - SB0_2023"
         ],
         "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "f074fa41-fa33-4a52-970f-788eccf3bba1"
       }
@@ -5800,7 +5779,7 @@
           "CSD U6 - If Variables - SB3_2023"
         ],
         "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "8a013c1c-7272-44ca-83b7-f336b063ea90"
       }
@@ -5812,7 +5791,7 @@
           "CSD U6 - If Variables - SB2_2023"
         ],
         "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "8a013c1c-7272-44ca-83b7-f336b063ea90"
       }
@@ -5824,7 +5803,7 @@
           "CSD U6 - If Variables - SB4_2023"
         ],
         "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "ae1e6fd0-938e-4362-a96f-6360da8a4dc8"
       }
@@ -5836,7 +5815,7 @@
           "CSD U6 - If Variables - SB5_2023"
         ],
         "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "ae1e6fd0-938e-4362-a96f-6360da8a4dc8"
       }
@@ -5848,7 +5827,7 @@
           "CSD U6 - If Variables - P2_2023"
         ],
         "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "5df39165-fff9-404e-82da-a1c6a33e0d05"
       }
@@ -5860,7 +5839,7 @@
           "CSD U6 - If Variables - SB7_2023"
         ],
         "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "2e9c69fc-99be-4f51-bc4e-d0b80c765bb3"
       }
@@ -5872,7 +5851,7 @@
           "CSD U6 - If Variables - SB6_2023"
         ],
         "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "2e9c69fc-99be-4f51-bc4e-d0b80c765bb3"
       }
@@ -5884,7 +5863,7 @@
           "CSD U6 - If Variables - A_2023"
         ],
         "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "6561a895-70c0-4f95-b8ac-2fba827e2cac"
       }
@@ -5896,7 +5875,7 @@
           "CSD U6 - If Variables - Chal_2023"
         ],
         "lesson.key": "Variables and If Statements",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "727ce746-e810-4ac3-925c-f92d2e336100"
       }
@@ -5908,7 +5887,7 @@
           "CSD U6 - On The Go - Design_2023"
         ],
         "lesson.key": "Mini-Project: Field Collector App",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "2ae7594a-0416-43de-949e-b54ed2fec4f0"
       }
@@ -5920,7 +5899,7 @@
           "CSD U6 - On The Go - Events_2023"
         ],
         "lesson.key": "Mini-Project: Field Collector App",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "2ae7594a-0416-43de-949e-b54ed2fec4f0"
       }
@@ -5932,7 +5911,7 @@
           "CSD U6 - On The Go - Logic_2023"
         ],
         "lesson.key": "Mini-Project: Field Collector App",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "2ae7594a-0416-43de-949e-b54ed2fec4f0"
       }
@@ -5944,7 +5923,7 @@
           "CSD U6 - On The Go - Review_2023"
         ],
         "lesson.key": "Mini-Project: Field Collector App",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "2ae7594a-0416-43de-949e-b54ed2fec4f0"
       }
@@ -5956,7 +5935,7 @@
           "CSD U6 - Color LEDs - P_2023"
         ],
         "lesson.key": "Color LEDs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "7502a81f-0577-4482-90cd-ae21f48dfb4b"
       }
@@ -5968,7 +5947,7 @@
           "CSD U6 - Color LEDs - SB1_2023"
         ],
         "lesson.key": "Color LEDs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "723dd095-a2ba-4e23-bedf-6af484799e1c"
       }
@@ -5980,7 +5959,7 @@
           "CSD U6 - Color LEDs - SB2_2023"
         ],
         "lesson.key": "Color LEDs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "723dd095-a2ba-4e23-bedf-6af484799e1c"
       }
@@ -5992,7 +5971,7 @@
           "CSD U6 - Color LEDs - SB3_2023"
         ],
         "lesson.key": "Color LEDs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "723dd095-a2ba-4e23-bedf-6af484799e1c"
       }
@@ -6004,7 +5983,7 @@
           "CSD U6 - Color LEDs - SB4_2023"
         ],
         "lesson.key": "Color LEDs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "723dd095-a2ba-4e23-bedf-6af484799e1c"
       }
@@ -6016,7 +5995,7 @@
           "CSD U6 - Color LEDs - Prac_2023a_2023"
         ],
         "lesson.key": "Color LEDs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "44154d32-58c1-451e-b8aa-87dbd141ba5f"
       }
@@ -6028,7 +6007,7 @@
           "CSD U6 - Color LEDs - A_2023"
         ],
         "lesson.key": "Color LEDs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "b3d4c60f-47a6-4851-bd7e-c6da4c0b1c7c"
       }
@@ -6040,7 +6019,7 @@
           "CSD U6 - Color LEDs - Chal_2023a_2023"
         ],
         "lesson.key": "Color LEDs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "0a780d29-6186-422d-a75c-d86b00d0eed4"
       }
@@ -6052,7 +6031,7 @@
           "CSD U6 - Screen Inputs - P_2023"
         ],
         "lesson.key": "Getting Screen Inputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "6c526046-2ee2-4369-80d6-e4d749f0f8b0"
       }
@@ -6064,7 +6043,7 @@
           "CSD U6 - Screen Inputs - SB1_2023"
         ],
         "lesson.key": "Getting Screen Inputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "b1882847-f24a-4dc3-8897-17940629493d"
       }
@@ -6076,7 +6055,7 @@
           "CSD U6 - Screen Inputs - SB2.1_2023"
         ],
         "lesson.key": "Getting Screen Inputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "b1882847-f24a-4dc3-8897-17940629493d"
       }
@@ -6088,7 +6067,7 @@
           "CSD U6 - Screen Inputs - SB2.2_2023"
         ],
         "lesson.key": "Getting Screen Inputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "b1882847-f24a-4dc3-8897-17940629493d"
       }
@@ -6100,7 +6079,7 @@
           "CSD U6 - Screen Inputs - SB3_2023"
         ],
         "lesson.key": "Getting Screen Inputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "b1882847-f24a-4dc3-8897-17940629493d"
       }
@@ -6112,7 +6091,7 @@
           "CSD U6 - Screen Inputs - SB4_2023"
         ],
         "lesson.key": "Getting Screen Inputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "b1882847-f24a-4dc3-8897-17940629493d"
       }
@@ -6124,7 +6103,7 @@
           "CSD U6 - Screen Inputs - SB5_2023"
         ],
         "lesson.key": "Getting Screen Inputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "b1882847-f24a-4dc3-8897-17940629493d"
       }
@@ -6136,7 +6115,7 @@
           "CSD U6 - Screen Inputs - Prac_2023"
         ],
         "lesson.key": "Getting Screen Inputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "51f0cb49-3533-4db5-8012-c81ad798e731"
       }
@@ -6148,7 +6127,7 @@
           "CSD U6 - Screen Inputs - A_2023"
         ],
         "lesson.key": "Getting Screen Inputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "40b1d7b1-f988-440c-9e27-24aeaf9d2d29"
       }
@@ -6160,7 +6139,7 @@
           "CSD U6 - Screen Inputs - Chal_2023"
         ],
         "lesson.key": "Getting Screen Inputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "89261ba5-be57-4d10-ab1a-f1ddf45d0c70"
       }
@@ -6172,7 +6151,7 @@
           "CSD U6 - Combine Inputs - P_2023"
         ],
         "lesson.key": "Combining Inputs and Outputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "61458380-cdc6-431e-a706-35fe950c442d"
       }
@@ -6184,7 +6163,7 @@
           "CSD U6 - Combine Inputs - SB1_2023"
         ],
         "lesson.key": "Combining Inputs and Outputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "2d06700e-92ad-49e3-a917-d518c3d94bd0"
       }
@@ -6196,7 +6175,7 @@
           "CSD U6 - Combine Inputs - SB2_2023"
         ],
         "lesson.key": "Combining Inputs and Outputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "2d06700e-92ad-49e3-a917-d518c3d94bd0"
       }
@@ -6208,7 +6187,7 @@
           "CSD U6 - Combine Inputs - SB3_2023"
         ],
         "lesson.key": "Combining Inputs and Outputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "2d06700e-92ad-49e3-a917-d518c3d94bd0"
       }
@@ -6220,7 +6199,7 @@
           "CSD U6 - Combine Inputs - SB4_2023"
         ],
         "lesson.key": "Combining Inputs and Outputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "2d06700e-92ad-49e3-a917-d518c3d94bd0"
       }
@@ -6232,7 +6211,7 @@
           "CSD U6 - Combine Inputs - Prac_2023a_2023"
         ],
         "lesson.key": "Combining Inputs and Outputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "b7759d8a-4aaa-4c6d-82b3-847ce6f126b3"
       }
@@ -6244,7 +6223,7 @@
           "CSD U6 - Combine Inputs - A_2023"
         ],
         "lesson.key": "Combining Inputs and Outputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "6841ba5d-f87c-4388-8b3a-cca2e75c47f4"
       }
@@ -6256,7 +6235,7 @@
           "CSD U6 - Combine Inputs - Chal_2023a_2023"
         ],
         "lesson.key": "Combining Inputs and Outputs",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "ea849e24-58ca-4f2a-8f5b-fa2c8014f37b"
       }
@@ -6268,7 +6247,7 @@
           "CSD U6 - Human Device - Design_2023"
         ],
         "lesson.key": "Project: Human Device Interaction",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "fd038106-15cb-4cf2-8f27-df2e73d9add9"
       }
@@ -6280,7 +6259,7 @@
           "CSD U6 - Human Device - Events_2023"
         ],
         "lesson.key": "Project: Human Device Interaction",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "fd038106-15cb-4cf2-8f27-df2e73d9add9"
       }
@@ -6292,7 +6271,7 @@
           "CSD U6 - Human Device - Logic_2023"
         ],
         "lesson.key": "Project: Human Device Interaction",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "fd038106-15cb-4cf2-8f27-df2e73d9add9"
       }
@@ -6304,7 +6283,7 @@
           "CSD U6 - Human Device - Review_2023"
         ],
         "lesson.key": "Project: Human Device Interaction",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "fd038106-15cb-4cf2-8f27-df2e73d9add9"
       }
@@ -6316,7 +6295,7 @@
           "csd-pulse-check-survey-1-levelgroup U6Ch1_pilot_2023a_2023"
         ],
         "lesson.key": "Project: Human Device Interaction",
-        "lesson_group.key": "lessonGroup-3",
+        "lesson_group.key": "",
         "script.name": "fcs1a-beta-2024",
         "activity_section.key": "a000a786-2ac3-4f4b-8e1e-c2db75f9f026"
       }
@@ -6346,6 +6325,50 @@
       },
       "seeding_key": {
         "resource.key": "_warm_up_word_search"
+      }
+    },
+    {
+      "name": "All Code",
+      "url": "/s/fcs1a-beta-2024/code",
+      "key": "all_code_2",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code_2"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/fcs1a-beta-2024/resources",
+      "key": "all_resources_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_3"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/fcs1a-beta-2024/standards",
+      "key": "all_standards_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_3"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/fcs1a-beta-2024/vocab",
+      "key": "all_vocabulary_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_3"
       }
     },
     {
@@ -7146,7 +7169,30 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_code_2",
+        "script.name": "fcs1a-beta-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_3",
+        "script.name": "fcs1a-beta-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_3",
+        "script.name": "fcs1a-beta-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_3",
+        "script.name": "fcs1a-beta-2024"
+      }
+    }
   ],
   "scripts_student_resources": [
 

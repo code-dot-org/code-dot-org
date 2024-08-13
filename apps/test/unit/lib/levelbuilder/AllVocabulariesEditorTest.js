@@ -1,15 +1,14 @@
-import React from 'react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import sinon from 'sinon';
-import {expect} from '../../../util/reconfiguredChai';
+import React from 'react';
+
 import {UnconnectedAllVocabulariesEditor as AllVocabulariesEditor} from '@cdo/apps/lib/levelbuilder/AllVocabulariesEditor';
 
 describe('AllVocabulariesEditor', () => {
   let defaultProps, addVocabulary, updateVocabulary, removeVocabulary;
   beforeEach(() => {
-    addVocabulary = sinon.spy();
-    updateVocabulary = sinon.spy();
-    removeVocabulary = sinon.spy();
+    addVocabulary = jest.fn();
+    updateVocabulary = jest.fn();
+    removeVocabulary = jest.fn();
     defaultProps = {
       vocabularies: [
         {
@@ -37,13 +36,13 @@ describe('AllVocabulariesEditor', () => {
 
   it('renders default props', () => {
     const wrapper = mount(<AllVocabulariesEditor {...defaultProps} />);
-    expect(wrapper.find('tr').length).to.equal(3);
+    expect(wrapper.find('tr').length).toBe(3);
   });
 
   it('can remove a vocabulary', () => {
     const wrapper = mount(<AllVocabulariesEditor {...defaultProps} />);
     const numVocabularies = wrapper.find('tr').length;
-    expect(numVocabularies).at.least(2);
+    expect(numVocabularies).toBeGreaterThanOrEqual(2);
     // Find one of the "remove" buttons and click it
     const removeVocabularyButton = wrapper
       .find('.unit-test-destroy-vocabulary')
@@ -52,14 +51,14 @@ describe('AllVocabulariesEditor', () => {
     const removeDialog = wrapper.find('Dialog');
     const deleteButton = removeDialog.find('button').at(2);
     deleteButton.simulate('click');
-    expect(removeVocabulary).to.have.been.calledOnce;
+    expect(removeVocabulary).toHaveBeenCalledTimes(1);
   });
 
   it('can add a vocabulary', () => {
     const wrapper = mount(<AllVocabulariesEditor {...defaultProps} />);
     const addVocabularyButton = wrapper.find('a');
-    expect(addVocabularyButton.contains('Create New Vocabulary')).to.be.true;
+    expect(addVocabularyButton.contains('Create New Vocabulary')).toBe(true);
     addVocabularyButton.simulate('click');
-    expect(wrapper.find('AddVocabularyDialog').length).to.equal(1);
+    expect(wrapper.find('AddVocabularyDialog').length).toBe(1);
   });
 });

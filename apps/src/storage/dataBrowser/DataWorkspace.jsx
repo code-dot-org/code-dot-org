@@ -1,15 +1,18 @@
-import {ApplabInterfaceMode} from '../../applab/constants';
-import {DataView} from '../constants';
-import DataOverview from './DataOverview';
-import DataTableView from './DataTableView';
-import Dialog from '../../templates/Dialog';
 import PropTypes from 'prop-types';
 import React from 'react';
-import PaneHeader, {PaneSection, PaneButton} from '../../templates/PaneHeader';
 import {connect} from 'react-redux';
-import {clearWarning} from '../redux/data';
+
 import msg from '@cdo/locale';
+
+import {ApplabInterfaceMode} from '../../applab/constants';
+import Dialog from '../../legacySharedComponents/Dialog';
+import PaneHeader, {PaneSection, PaneButton} from '../../templates/PaneHeader';
 import color from '../../util/color';
+import {DataView} from '../constants';
+import {clearWarning} from '../redux/data';
+
+import DataOverview from './DataOverview';
+import DataTableView from './DataTableView';
 
 class DataWorkspace extends React.Component {
   static propTypes = {

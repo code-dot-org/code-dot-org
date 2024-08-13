@@ -104,22 +104,22 @@ Qué necesitas:
 * Nombre y correo electrónico del contacto principal que representa la actividad enviada
 * Nombre de la actividad (no puede incluir "Hora del Código" en el nombre)
 * URL para la actividad
-* Does this activity include AI: Yes or No
-* An activity description (max character count: 400) 
-    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
+* La actividad incluya IA: Sí o No
+* Descripción de una actividad (máx. de caracteres: 400) 
+    * Por favor, incluye en la descripción si es principalmente una actividad dirigida por el estudiante o por el profesor. Además, algunas escuelas están interesadas en conocer si las actividades de la Hora del Código abordan los estándares comunes o avanzados de la ciencia. If the activity addresses specific standards, consider including this information.
 * Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
-    * Kindergarten - Grade 1 (ages 4-6)
-    * Grades 2-5 (ages 7-10)
-    * Grades 6-8 (ages 11-13)
-    * Grades 9+ (ages 14+)
-* Una lista de lenguajes de programación que enseña tu actividad, por ej., C/C++, Java, JavaScript, etc., o independiente del idioma (para planes de lecciones que se pueden enseñar en varios idiomas) choose language arts.
-* Una lista de lenguajes naturales compatibles. Nota: la detección del lenguaje es responsabilidad de quien provee los tutoriales; nuestra función es llevar a los usuarios a la URL provista. or language independent (for lesson plans that can be taught in multiple languages)
+    * Jardín de infancia - Grado 1 (de 4 a 6 años)
+    * Grados 2-5 (de 7 a 10 años)
+    * Grados 6-8 (de 11 a 13 años)
+    * Grados superiores a 9 (para mayores de 14)
+* Una lista de lenguajes de programación que enseña tu actividad, por ej., C/C++, Java, JavaScript, etc., o independiente del idioma (para planes de lecciones que se pueden enseñar en varios idiomas) Elegir lenguaje del arte.
+* Una lista de lenguajes naturales compatibles. Nota: la detección del lenguaje es responsabilidad de quien provee los tutoriales; nuestra función es llevar a los usuarios a la URL provista. o lengua independiente (para planes de lecciones que puedan ser enseñadas en múltiples idiomas)
 * ¿Qué nivel de experiencia debe tener un educador para usar tu actividad? (por ejemplo, principiante o a gusto). ¿Qué nivel de experiencia deben tener los estudiantes?
-* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
-* The length of your activity 
-    * 1 hour only
-    * 1 hour with follow-on course
-    * 2-6 hours (can be multiple lessons)
+* ¿Qué nivel de experiencia debe tener un educador para usar tu actividad? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
+* La duración de tu actividad 
+    * 1 hora solo
+    * 1 hora con curso de seguimiento
+    * 2-6 horas (pueden ser varias lecciones)
 * A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
 
 #### Cosas adicionales que necesitarás cuando envíes planes de lecciones

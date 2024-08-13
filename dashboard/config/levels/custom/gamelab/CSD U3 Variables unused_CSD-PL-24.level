@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2024-05-04T02:45:27.000Z",
   "level_num": "custom",
@@ -66,11 +67,11 @@
     ],
     "map_reference": "/courses/csd-2022/guides/naming-variables",
     "validation_enabled": "true",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "start_blocks": "var earSize = 80;\r\nvar eyeSize = 15;\r\nvar center = 200;\r\n\r\n//1) Update the code to use the variables\r\nfill(\"saddlebrown\");\r\nellipse(130, 115, 80, 80);\r\nellipse(270, 115, 80, 80);\r\nellipse(200, 195, 205, 205);\r\nellipse(200, 245, 100, 100);\r\nfill(\"black\");\r\nellipse(200, 225, 20, 20);\r\nellipse(165, 175, 15, 15);\r\nellipse(235, 175, 15, 15);\r\nline(200, 235, 200, 265);\r\nnoFill();\r\narc(200, 215, 100, 100, 35, 145);"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-05-04T02:45:27.675+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Variables unused_2024\\\"\"],\"cloned_from\":\"CSD U3 Variables unused_2024\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:45:27.675+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Variables unused_2024\\\"\"],\"cloned_from\":\"CSD U3 Variables unused_2024\"},{\"changed_at\":\"2024-06-11 21:38:30 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"},{\"changed_at\":\"2024-06-11 21:39:47 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

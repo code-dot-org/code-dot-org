@@ -45,6 +45,6 @@
       ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-03T23:39:53.202+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-template\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-template\"},{\"changed_at\":\"2024-05-07 03:15:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-03T23:39:53.202+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-explore-template\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-explore-template\"},{\"changed_at\":\"2024-05-07 03:15:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-15 23:21:20 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-15 23:22:42 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

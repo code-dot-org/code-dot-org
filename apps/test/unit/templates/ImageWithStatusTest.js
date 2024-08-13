@@ -1,9 +1,7 @@
-import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {render, waitFor} from '@testing-library/react';
 import React from 'react';
 
 import {ImageWithStatus} from '@cdo/apps/templates/ImageWithStatus';
-
-import {expect} from '../../util/reconfiguredChai';
 
 const CAT_IMAGE_URL = '/base/static/common_images/stickers/cat.png';
 const BOGUS_IMAGE_URL = '/nonexistent.png';
@@ -11,92 +9,87 @@ const THUMBNAIL_SIZE = 50;
 
 describe('ImageWithStatus', () => {
   it('shows status loading initially', () => {
-    const root = mount(
+    const {container} = render(
       <ImageWithStatus
         src={CAT_IMAGE_URL}
         width={THUMBNAIL_SIZE}
         height={THUMBNAIL_SIZE}
       />
     );
-    const loading = root.find('div[data-image-status="loading"]');
-    expect(loading).to.have.length(1);
+    const loading = container.querySelector('div[data-image-status="loading"]');
+    expect(loading).not.toBeNull();
   });
 
-  it('shows status loaded after loading a valid image', done => {
-    const root = mount(
+  it('shows status loaded after loading a valid image', async () => {
+    const {container} = render(
       <ImageWithStatus
         src={CAT_IMAGE_URL}
         width={THUMBNAIL_SIZE}
         height={THUMBNAIL_SIZE}
       />
     );
-    const image = new Image();
-    image.src = CAT_IMAGE_URL;
-    image.onload = function () {
-      // There's no guarantee we'll hit this onload after the onload in
-      // ImageWithStatus, so wait until the next clock tick before checking
-      // expectations.
-      setTimeout(function () {
-        root.update();
-        const loaded = root.find('div[data-image-status="loaded"]');
-        expect(loaded).to.have.length(1);
-        done();
-      }, 0);
-    };
+
+    const image = container.querySelector(`img[src='${CAT_IMAGE_URL}']`);
+    image.dispatchEvent(new Event('load'));
+
+    const loaded = await waitFor(() =>
+      container.querySelector('div[data-image-status="loaded"]')
+    );
+    expect(loaded).not.toBeNull();
   });
 
-  it('shows status loading again if the src url is changed', done => {
-    const root = mount(
+  it('shows status loading again if the src url is changed', async () => {
+    const {rerender, container} = render(
       <ImageWithStatus
         src={CAT_IMAGE_URL}
         width={THUMBNAIL_SIZE}
         height={THUMBNAIL_SIZE}
       />
     );
-    const image = new Image();
-    image.src = CAT_IMAGE_URL;
-    image.onload = function () {
-      // There's no guarantee we'll hit this onload after the onload in
-      // ImageWithStatus, so wait until the next clock tick before checking
-      // expectations.
-      setTimeout(function () {
-        root.update();
-        const loaded = root.find('div[data-image-status="loaded"]');
-        expect(loaded).to.have.length(1);
-        changeImageUrl(done);
-      }, 0);
-    };
 
-    function changeImageUrl(done) {
-      root.setProps({src: BOGUS_IMAGE_URL});
-      const loading = root.find('div[data-image-status="loading"]');
-      expect(loading).to.have.length(1);
-      const loaded = root.find('div[data-image-status="loaded"]');
-      expect(loaded).to.have.length(0);
-      done();
-    }
-  });
+    const image = container.querySelector(`img[src='${CAT_IMAGE_URL}']`);
+    image.dispatchEvent(new Event('load'));
 
-  it('shows status error after loading an invalid image', done => {
-    const root = mount(
+    let loaded = await waitFor(() =>
+      container.querySelector('div[data-image-status="loaded"]')
+    );
+    expect(loaded).not.toBeNull();
+
+    // Now change the image url
+    rerender(
       <ImageWithStatus
         src={BOGUS_IMAGE_URL}
         width={THUMBNAIL_SIZE}
         height={THUMBNAIL_SIZE}
       />
     );
-    const image = new Image();
-    image.src = BOGUS_IMAGE_URL;
-    image.onerror = function () {
-      // There's no guarantee we'll hit this onerror after the onerror in
-      // ImageWithStatus, so wait until the next clock tick before checking
-      // expectations.
-      setTimeout(function () {
-        root.update();
-        const error = root.find('div[data-image-status="error"]');
-        expect(error).to.have.length(1);
-        done();
-      }, 0);
-    };
+
+    const loading = container.querySelector('div[data-image-status="loading"]');
+    expect(loading).not.toBeNull();
+
+    image.dispatchEvent(new Event('load'));
+
+    loaded = await waitFor(() =>
+      container.querySelector('div[data-image-status="loaded"]')
+    );
+    expect(loaded).not.toBeNull();
+  });
+
+  it('shows status error after loading an invalid image', async () => {
+    const {container} = render(
+      <ImageWithStatus
+        src={BOGUS_IMAGE_URL}
+        width={THUMBNAIL_SIZE}
+        height={THUMBNAIL_SIZE}
+      />
+    );
+
+    const image = container.querySelector(`img[src='${BOGUS_IMAGE_URL}']`);
+    image.dispatchEvent(new Event('error'));
+
+    const error = await waitFor(() =>
+      container.querySelector('div[data-image-status="error"]')
+    );
+    expect(error).not.toBeNull();
   });
 });

@@ -1,5 +1,6 @@
 import {ObservableProcedureModel} from '@blockly/block-shareable-procedures';
 import * as GoogleBlockly from 'blockly/core';
+import {IProcedureModel} from 'blockly/core/procedures';
 import {FlyoutItemInfoArray} from 'blockly/core/utils/toolbox';
 
 import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
@@ -13,6 +14,7 @@ import procedureCallerOnChangeMixin from './mixins/procedureCallerOnChangeMixin'
 import procedureCallerMutator from './mutators/procedureCallerMutator';
 import {procedureDefMutator} from './mutators/procedureDefMutator';
 
+const PARAMETERS_LABEL = 'PARAMETERS_LABEL';
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
  * Replaces blocks that are part of core Blockly.
@@ -67,6 +69,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_def_mini_toolbox',
       'modal_procedures_no_destroy',
       'procedure_def_no_gray_out',
+      'procedure_def_get_info',
     ],
     mutator: 'procedure_def_mutator',
   },
@@ -87,7 +90,6 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
     helpUrl: '/docs/spritelab/codestudio_callingFunction',
     extensions: [
       'procedures_edit_button',
-      'procedure_caller_serialize_name',
       'procedure_caller_get_def_mixin',
       'procedure_caller_var_mixin',
       'procedure_caller_update_shape_mixin',
@@ -97,6 +99,20 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_call_do_update',
     ],
     mutator: 'procedure_caller_mutator',
+  },
+  {
+    type: 'parameters_get',
+    message0: '%1',
+    args0: [
+      {
+        type: 'field_parameter',
+        name: 'VAR',
+        variable: '%{BKY_VARIABLES_DEFAULT_NAME}',
+      },
+    ],
+    output: null,
+    style: 'sprite_blocks',
+    extensions: ['contextMenu_variableSetterGetter'],
   },
 ]);
 
@@ -139,29 +155,23 @@ GoogleBlockly.Extensions.register(
   }
 );
 
-// This extension make the NAME fields of caller/getter blocks serializable.
-GoogleBlockly.Extensions.register(
-  'procedure_caller_serialize_name',
-  function (this: ProcedureBlock) {
-    const labelField = this.getField('NAME');
-    if (labelField) {
-      labelField.SERIALIZABLE = true;
-    }
-  }
-);
-
 // This extension renders function and behavior definitions as mini toolboxes
 // The only toolbox blocks are a comment (for functions) or a comment + "this sprite" block (for behaviors)
 GoogleBlockly.Extensions.register(
   'procedure_def_mini_toolbox',
   function (this: ProcedureBlock) {
-    // TODO: Add comment block here after https://codedotorg.atlassian.net/browse/CT-121
     const miniToolboxBlocks = [];
-    if (this.type === BLOCK_TYPES.behaviorDefinition) {
-      miniToolboxBlocks.push('sprite_parameter_get');
+    switch (this.type) {
+      case BLOCK_TYPES.behaviorDefinition:
+        miniToolboxBlocks.push(BLOCK_TYPES.spriteParameterGet);
+        break;
+      case BLOCK_TYPES.procedureDefinition:
+        if (Blockly.enableParamEditing) {
+          miniToolboxBlocks.push(BLOCK_TYPES.parametersGet);
+        }
+        break;
     }
 
-    // TODO: Remove this comment after https://codedotorg.atlassian.net/browse/CT-121
     if (!miniToolboxBlocks.length) {
       return;
     }
@@ -178,6 +188,14 @@ GoogleBlockly.Extensions.register(
     );
     // Open mini-toolbox by default
     flyoutToggleButton.setIcon(false);
+    // If we added a flyout, place a 'Parameters' label before it.
+    const flyoutInput = this.getInput('flyout_input');
+    if (flyoutInput) {
+      flyoutInput.insertFieldAt(
+        0,
+        new Blockly.FieldLabel(commonI18n.parameters(), PARAMETERS_LABEL)
+      );
+    }
   }
 );
 
@@ -240,6 +258,12 @@ GoogleBlockly.Extensions.register(
   function (this: ProcedureBlock) {
     const mixin = {
       /**
+       * Adds or removes the parameter label to match the state of the data model.
+       * No-op to avoid adding "with:" label to the block.
+       */
+      addParametersLabel__: function () {},
+
+      /**
        * Updates the shape of this block to reflect the state of the data model.
        */
       doProcedureUpdate: function (this: ProcedureBlock) {
@@ -252,6 +276,44 @@ GoogleBlockly.Extensions.register(
         this.updateName_();
         this.updateEnabled_();
         this.updateParameters_();
+      },
+      /**
+       * Returns the data model for this procedure block, or finds it if it has not been set.
+       *
+       * @returns The data model for this procedure block.
+       */
+      getProcedureModel: function (
+        this: ProcedureBlock
+      ): IProcedureModel | null {
+        if (!this.model_) {
+          this.model_ = this.findProcedureModel_(
+            this.getFieldValue('NAME'),
+            this.paramsFromSerializedState_
+          );
+        }
+        return this.model_;
+      },
+
+      /**
+       * Makes sure that if we are updating the parameters before any move events
+       * have happened, the args map records the current state of the block. Does
+       * not remove entries from the array, since blocks can be disconnected
+       * temporarily during mutation (which triggers this method).
+       */
+      syncArgsMap_: function (this: ProcedureBlock) {
+        // If we haven't yet stored the previous parameters, do so now. This would
+        // normally happen when we initialize the procedure block with a model or
+        // update its parameters.
+        if (!this.prevParams_.length) {
+          this.prevParams_ = [
+            ...(this.getProcedureModel().getParameters() || []),
+          ];
+        }
+        // Original code from shareable procedures plugin follows unmodified:
+        for (const [i, p] of this.prevParams_.entries()) {
+          const target = this.getInputTargetBlock(`ARG${i}`);
+          if (target) this.argsMap_.set(p.getId(), target);
+        }
       },
     };
     // We can't register this as a mixin since we're overwriting existing methods
@@ -290,6 +352,17 @@ GoogleBlockly.Extensions.registerMixin('procedure_def_no_gray_out', {
     return false;
   },
 });
+
+// Used for giving feedback about empty function definition blocks.
+GoogleBlockly.Extensions.registerMixin('procedure_def_get_info', {
+  getProcedureInfo: function () {
+    return {
+      name: this.getFieldValue('NAME'),
+      callType: this.callType_,
+    };
+  },
+});
+
 /**
  * Constructs the blocks required by the flyout for the procedure category.
  * Modeled after core Blockly procedures flyout category, but excludes unwanted blocks.
@@ -325,35 +398,38 @@ export function flyoutCategory(
     blockList.push(functionDefinitionBlock);
   }
 
+  // Add blocks from the level toolbox XML, if present.
+  blockList.push(...Blockly.cdoUtils.getCategoryBlocksJson('PROCEDURE'));
+
   // Workspaces to populate functions flyout category from
   const workspaces = [
     Blockly.getMainWorkspace(),
     Blockly.getHiddenDefinitionWorkspace(),
   ];
 
-  const allFunctions: {name: string; id: string}[] = [];
+  const allFunctions: GoogleBlockly.serialization.procedures.State[] = [];
   workspaces.forEach(workspace => {
-    const procedureBlocks = workspace
-      .getTopBlocks()
-      .filter(topBlock => topBlock.type === BLOCK_TYPES.procedureDefinition);
+    const procedureBlocks = (
+      workspace.getTopBlocks() as ProcedureBlock[]
+    ).filter(block => block.type === BLOCK_TYPES.procedureDefinition);
+
     procedureBlocks.forEach(block => {
-      allFunctions.push({
-        name: block.getFieldValue('NAME'),
-        id: block.id,
-      });
+      allFunctions.push(
+        Blockly.serialization.procedures.saveProcedure(
+          block.getProcedureModel()
+        )
+      );
     });
   });
 
-  allFunctions.sort(nameComparator).forEach(({name, id}) => {
+  allFunctions.sort(nameComparator).forEach(({name, id, parameters}) => {
     blockList.push({
       kind: 'block',
       type: BLOCK_TYPES.procedureCall,
       extraState: {
         name: name,
         id: id,
-      },
-      fields: {
-        NAME: name,
+        params: parameters?.map(param => param.name),
       },
     });
   });

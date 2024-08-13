@@ -14,7 +14,7 @@ markdown <<MARKDOWN
 
 <p style = "font-size:30px; font-weight:bold"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="color:black; background-color:#5ED5DD; font-size: 14pt">Part 1</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="color:white; background-color:#8c52BA; font-size: 14pt">Part 2</code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code style="color:white; background-color:#ed6060; font-size: 14pt">Part 3</code> </p>
 
-<p style = "font-size:30px; font-weight:bold"> <code style="color:black; background-color:#5ED5DD; font-size: 14pt">Intro to Code.org (optional)</code>+<code style="color:white; background-color:#8c52BA; font-size: 14pt">Pick 1: Course C-F</code>+<code style="color:white; background-color:#ed6060; font-size: 14pt">Physical computing with micro:bit</code> </p>
+<p style = "font-size:30px; font-weight:bold"> <code style="color:black; background-color:#5ED5DD; font-size: 14pt">Intro to Code.org (optional)</code>+<code style="color:white; background-color:#8c52BA; font-size: 14pt">Pick 1: Grade 2-5 </code>+<code style="color:white; background-color:#ed6060; font-size: 14pt">Physical computing with micro:bit</code> </p>
 
 <br>
 
@@ -23,13 +23,13 @@ markdown <<MARKDOWN
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
     <summary style="font-size: 1.5em; font-weight: bold;">Unit 1: Intro to Code.org</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
-<p style ="font-size: 14pt"> You are in lesson one of this unit. Lesson two is designed to help you get started with Code.org. You will learn how to set up a class, navigate the platform, and other important tools needed for successully implementing courses with Code.org.<br><br> <b>Skip lesson two</b> you have experience using Code.org in your class. </p>
+<p style ="font-size: 14pt"> You are in lesson one of this unit. Lessons two and three are designed to help you get started with Code.org. You will learn how to set up a class, navigate the platform, and other important tools needed for successully implementing courses with Code.org.<br><br> <b>Skip these lessons</b> if you have experience using Code.org in your class. </p>
 </div>
 </details>
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-    <summary style="font-size: 1.5em; font-weight: bold;"> Units 2-5: Courses Content (Courses C, D, E, and/or F) </summary>
+    <summary style="font-size: 1.5em; font-weight: bold;"> Units 2-5: Grade level content (2nd, 3rd, 4th, or 5th grade) </summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; margin-bottom:75px;">
-<p style ="font-size: 14pt"> These units are separated by grade-level / course-level. Choose the course that is most relevant to you. <br><br> <b>If you teach more than one level...</b> you are welcome to complete each unit or, select the unit you feel will most help you get you started. If you are an experienced coder, choosing one level will be sufficient. <br> <br>⭐ A recommended pathway for a K-5 specialist would be to complete units D, E, and F to get a full spectrum of the coding concepts.</p>
+<p style ="font-size: 14pt"> These units are separated by grade-level. Choose the course that is most relevant to you. <br><br> <b>If you teach more than one level...</b> you are welcome to complete each unit or, select the unit you feel will most help you get you started. If you are an experienced coder, choosing one level will be sufficient. <br> <br>⭐ A recommended pathway for a K-5 specialist would be to complete units 3 and 5 to get a full spectrum of the coding concepts.</p>
 </div>
 </details>
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">

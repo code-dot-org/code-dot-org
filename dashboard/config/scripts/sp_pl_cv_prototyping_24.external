@@ -1,0 +1,17 @@
+name 'sp-pl-CV_prototyping_24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Prototyping  
+
+<img src="https://images.code.org/c281f7a0bea0f158b14b4e2a141754b0-image-1715025449589.png" alt="prototyping icon of lightbulb and pencil on paper" width="250px" style="border-radius:10px; float:right; margin: 0 20px 40px 40px;">
+
+#### The prototyping stage is the fourth step in the design thinking process, where the team brings their ideas to life through physical or digital models in order to **visualize and test** how these solutions might work in the real world.
+
+#### The prototyping stage is iterative; based on feedback and testing, prototypes are refined, adjusted, or sometimes discarded. 
+
+#### It’s a **hands-on phase** that encourages practical experimentation and learning, helping to quickly converge on the most effective and user-centered solution before final development begins. 
+
+
+MARKDOWN

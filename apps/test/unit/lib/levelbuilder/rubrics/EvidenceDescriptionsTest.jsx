@@ -1,14 +1,13 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
+import React from 'react';
+
 import EvidenceDescriptions from '@cdo/apps/lib/levelbuilder/rubrics/EvidenceDescriptions';
-import sinon from 'sinon';
 import {UNDERSTANDING_LEVEL_STRINGS} from '@cdo/apps/templates/rubrics/rubricHelpers';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 
 describe('EvidenceDescriptions', () => {
   let defaultProps;
-  const updateLearningGoal = sinon.spy();
+  const updateLearningGoal = jest.fn();
   const learningGoalData = {
     key: 'learningGoal-1',
     id: '1',
@@ -55,28 +54,26 @@ describe('EvidenceDescriptions', () => {
 
   it('renders correctly', () => {
     const wrapper = shallow(<EvidenceDescriptions {...defaultProps} />);
-    expect(wrapper.find('EvidenceDescriptionsRow').length).to.equal(4);
+    expect(wrapper.find('EvidenceDescriptionsRow').length).toBe(4);
     expect(
       wrapper.find('EvidenceDescriptionsRow').at(0).props().isAiEnabled
-    ).to.equal(learningGoalData.aiEnabled);
+    ).toBe(learningGoalData.aiEnabled);
     expect(
       wrapper.find('EvidenceDescriptionsRow').at(0).props().evidenceLabel
-    ).to.equal(
-      UNDERSTANDING_LEVEL_STRINGS[RubricUnderstandingLevels.EXTENSIVE]
-    );
+    ).toBe(UNDERSTANDING_LEVEL_STRINGS[RubricUnderstandingLevels.EXTENSIVE]);
     expect(
       wrapper.find('EvidenceDescriptionsRow').at(0).props().updateLearningGoal
-    ).to.equal(updateLearningGoal);
+    ).toBe(updateLearningGoal);
     expect(
       wrapper.find('EvidenceDescriptionsRow').at(0).props().evidenceLevelData
-    ).to.equal(
+    ).toBe(
       learningGoalData.learningGoalEvidenceLevelsAttributes[
         [RubricUnderstandingLevels.EXTENSIVE]
       ]
     );
     expect(
       wrapper.find('EvidenceDescriptionsRow').at(0).props().learningGoalId
-    ).to.equal(learningGoalData.id);
-    expect(wrapper.find('Heading6').length).to.equal(3);
+    ).toBe(learningGoalData.id);
+    expect(wrapper.find('Heading6').length).toBe(3);
   });
 });

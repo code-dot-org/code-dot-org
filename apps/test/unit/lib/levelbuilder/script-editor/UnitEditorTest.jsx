@@ -1,9 +1,21 @@
-import React from 'react';
+import {render, screen} from '@testing-library/react';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import UnitEditor from '@cdo/apps/lib/levelbuilder/unit-editor/UnitEditor';
-import {assert, expect} from '../../../../util/reconfiguredChai';
+import $ from 'jquery';
+import React from 'react';
 import {Provider} from 'react-redux';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
+import {
+  PublishedState,
+  InstructionType,
+  InstructorAudience,
+  ParticipantAudience,
+} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import createResourcesReducer, {
+  initResources,
+} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+import UnitEditor from '@cdo/apps/lib/levelbuilder/unit-editor/UnitEditor';
 import reducers, {
   init,
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
@@ -13,19 +25,9 @@ import {
   getStore,
   registerReducers,
 } from '@cdo/apps/redux';
-import createResourcesReducer, {
-  initResources,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
-import sinon from 'sinon';
 import * as utils from '@cdo/apps/utils';
-import $ from 'jquery';
-import {render, screen} from '@testing-library/react';
-import {
-  PublishedState,
-  InstructionType,
-  InstructorAudience,
-  ParticipantAudience,
-} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+
+import {assert, expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('UnitEditor', () => {
   let defaultProps, store;
@@ -88,6 +90,7 @@ describe('UnitEditor', () => {
       scriptPath: '/s/test-unit',
       initialProfessionalLearningCourse: '',
       isCSDCourseOffering: false,
+      isMissingRequiredDeviceCompatibilities: false,
     };
   });
 
@@ -396,6 +399,47 @@ describe('UnitEditor', () => {
       server.restore();
     });
 
+    it('Timeout error shows custom error message to refresh and check it saved', () => {
+      const wrapper = createWrapper({});
+      const unitEditor = wrapper.find('UnitEditor');
+
+      let server = sinon.fakeServer.create();
+      server.respondWith('PUT', `/s/1`, [
+        504,
+        {'Content-Type': 'application/json'},
+        'Error: Gateway Timeout',
+      ]);
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndKeepEditingButton = saveBar.find('button').at(1);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
+      saveAndKeepEditingButton.simulate('click');
+
+      // check the the spinner is showing
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(1);
+      expect(unitEditor.state().isSaving).to.equal(true);
+
+      server.respond();
+      unitEditor.update();
+      expect(utils.navigateToHref).to.not.have.been.called;
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().error).to.equal(
+        'The save request timed out. Please refresh the page and verify your changes have been saved correctly.'
+      );
+      expect(wrapper.find('.saveBar').find('FontAwesome').length).to.equal(0);
+      expect(
+        wrapper
+          .find('.saveBar')
+          .contains(
+            'Error Saving: The save request timed out. Please refresh the page and verify your changes have been saved correctly.'
+          )
+      ).to.be.true;
+
+      server.restore();
+    });
+
     it('shows error when showCalendar is true and weeklyInstructionalMinutes not provided', () => {
       sinon.stub($, 'ajax');
       const wrapper = createWrapper({initialShowCalendar: true});
@@ -486,6 +530,83 @@ describe('UnitEditor', () => {
           .find('.saveBar')
           .contains(
             'Error Saving: Please provide a pilot experiment in order to save with published state as pilot.'
+          )
+      ).to.be.true;
+
+      $.ajax.restore();
+    });
+
+    it('shows error when published state is preview or stable and device compatibility JSON is null', () => {
+      sinon.stub($, 'ajax');
+      const wrapper = createWrapper({
+        isMissingRequiredDeviceCompatibilities: true,
+        hasCourse: true,
+      });
+
+      const unitEditor = wrapper.find('UnitEditor');
+      unitEditor.setState({
+        publishedState: PublishedState.preview,
+        courseOfferingDeviceCompatibilities: null,
+      });
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndKeepEditingButton = saveBar.find('button').at(1);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
+      saveAndKeepEditingButton.simulate('click');
+
+      expect($.ajax).to.not.have.been.called;
+
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().error).to.equal(
+        'Please set all device compatibilities in order to save with published state as preview or stable.'
+      );
+
+      expect(
+        wrapper
+          .find('.saveBar')
+          .contains(
+            'Error Saving: Please set all device compatibilities in order to save with published state as preview or stable.'
+          )
+      ).to.be.true;
+
+      $.ajax.restore();
+    });
+
+    it('shows error when published state is preview or stable and at least one device compatibility is not set', () => {
+      sinon.stub($, 'ajax');
+      const wrapper = createWrapper({
+        isMissingRequiredDeviceCompatibilities: true,
+        hasCourse: true,
+      });
+
+      const unitEditor = wrapper.find('UnitEditor');
+      unitEditor.setState({
+        publishedState: PublishedState.stable,
+        courseOfferingDeviceCompatibilities:
+          '{"computer":"","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
+      });
+
+      const saveBar = wrapper.find('SaveBar');
+
+      const saveAndKeepEditingButton = saveBar.find('button').at(1);
+      expect(saveAndKeepEditingButton.contains('Save and Keep Editing')).to.be
+        .true;
+      saveAndKeepEditingButton.simulate('click');
+
+      expect($.ajax).to.not.have.been.called;
+
+      expect(unitEditor.state().isSaving).to.equal(false);
+      expect(unitEditor.state().error).to.equal(
+        'Please set all device compatibilities in order to save with published state as preview or stable.'
+      );
+
+      expect(
+        wrapper
+          .find('.saveBar')
+          .contains(
+            'Error Saving: Please set all device compatibilities in order to save with published state as preview or stable.'
           )
       ).to.be.true;
 

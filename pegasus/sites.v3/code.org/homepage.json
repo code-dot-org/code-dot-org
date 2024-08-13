@@ -4,7 +4,7 @@
       "hoc2023-soon-hoc",
       "hoc2023-actual-hoc",
       "pl-launch-superhero",
-      "music-lab-launch-2024"
+      "curriculum-launch-2024"
     ]
   },
 
@@ -102,26 +102,20 @@
         }
       ]
     },
-    "music-lab-launch-2024": {
-      "dcdo": "music-lab-launch-2024",
-      "class": "music-lab-launch homepage",
-      "desktopImage": "/images/music-lab/music-lab-homepage-banner-bg.png",
-      "mobileImage": "/images/music-lab/music-lab-homepage-banner-bg.png",
-      "leftImage": "/images/music-lab/music-lab-homepage-banner-left.png",
-      "rightImage": "/images/music-lab/music-lab-homepage-banner-right.png",
+    "curriculum-launch-2024": {
+      "dcdo": "curriculum-launch-2024",
+      "class": "curriculum-banner-hero homepage",
+      "desktopImage": "/images/banners/banner-bg-school-supplies-dark-black.png",
       "actions": [
         {
-          "type": "music-lab-launch-2024",
-          "text_overline": "music_lab.introducing_music_lab_strong",
-          "text_h1": "music_lab.banner.heading",
-          "text_desc": "music_lab.banner.desc",
-          "button_label_primary": "music_lab.button.try_music_lab",
-          "button_url_primary": "https://studio.code.org/s/music-intro-2024/reset",
-          "button_label_secondary": "music_lab.button.learn_more",
-          "button_url_secondary": "/music",
-          "text_desc_02": "music_lab.in_partnership_with",
-          "logo_list_01": "/images/avatars/amazon_future_engineer_light.png",
-          "logo_list_01_alt": "music_lab.amazon_future_engineer"
+          "type": "flex-container",
+          "text_h1": "curriculum_launch_2024.banner.heading",
+          "text_desc": "curriculum_launch_2024.banner.desc",
+          "external_link": true,
+          "button_color_white": true,
+          "button_link": "https://codeorg.medium.com/ai-game-design-and-more-in-code-orgs-2024-25-curriculum-updates-caff691935ad",
+          "button_text": "curriculum_launch_2024.banner.button_learn_more_here",
+          "img_src": "/images/banners/banner-curriculum-catalog-illustration-black.png"
         }
       ]
     }

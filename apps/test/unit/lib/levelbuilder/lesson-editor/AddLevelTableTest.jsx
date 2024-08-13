@@ -1,14 +1,13 @@
-import React from 'react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
-import {expect} from '../../../../util/reconfiguredChai';
+import React from 'react';
+
 import AddLevelTable from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTable';
-import sinon from 'sinon';
 
 describe('AddLevelTable', () => {
   let defaultProps, addLevel, setCurrentPage;
   beforeEach(() => {
-    addLevel = sinon.spy();
-    setCurrentPage = sinon.spy();
+    addLevel = jest.fn();
+    setCurrentPage = jest.fn();
     defaultProps = {
       addLevel,
       currentPage: 1,
@@ -49,32 +48,32 @@ describe('AddLevelTable', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<AddLevelTable {...defaultProps} />);
-    expect(wrapper.contains('Actions')).to.be.true;
-    expect(wrapper.contains('Name')).to.be.true;
-    expect(wrapper.contains('Type')).to.be.true;
-    expect(wrapper.contains('Owner')).to.be.true;
-    expect(wrapper.contains('Last Updated')).to.be.true;
+    expect(wrapper.contains('Actions')).toBe(true);
+    expect(wrapper.contains('Name')).toBe(true);
+    expect(wrapper.contains('Type')).toBe(true);
+    expect(wrapper.contains('Owner')).toBe(true);
+    expect(wrapper.contains('Last Updated')).toBe(true);
 
-    expect(wrapper.find('PaginationWrapper').length).to.equal(1);
-    expect(wrapper.find('tr').length).to.equal(1);
-    expect(wrapper.find('AddLevelTableRow').length).to.equal(4);
+    expect(wrapper.find('PaginationWrapper').length).toBe(1);
+    expect(wrapper.find('tr').length).toBe(1);
+    expect(wrapper.find('AddLevelTableRow').length).toBe(4);
   });
 
   it('renders message when no levels found', () => {
     defaultProps.levels = [];
     const wrapper = shallow(<AddLevelTable {...defaultProps} />);
-    expect(wrapper.contains('Actions')).to.be.true;
-    expect(wrapper.contains('Name')).to.be.true;
-    expect(wrapper.contains('Type')).to.be.true;
-    expect(wrapper.contains('Owner')).to.be.true;
-    expect(wrapper.contains('Last Updated')).to.be.true;
+    expect(wrapper.contains('Actions')).toBe(true);
+    expect(wrapper.contains('Name')).toBe(true);
+    expect(wrapper.contains('Type')).toBe(true);
+    expect(wrapper.contains('Owner')).toBe(true);
+    expect(wrapper.contains('Last Updated')).toBe(true);
 
-    expect(wrapper.find('PaginationWrapper').length).to.equal(1);
-    expect(wrapper.find('tr').length).to.equal(1);
-    expect(wrapper.find('AddLevelTableRow').length).to.equal(0);
+    expect(wrapper.find('PaginationWrapper').length).toBe(1);
+    expect(wrapper.find('tr').length).toBe(1);
+    expect(wrapper.find('AddLevelTableRow').length).toBe(0);
 
     expect(
       wrapper.contains('There are no levels matching the search you entered.')
-    ).to.be.true;
+    ).toBe(true);
   });
 });

@@ -7,6 +7,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import {getCodeBlocks} from '@cdo/apps/blockly/utils';
 import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
 import reducers from '@cdo/apps/craft/redux';
 import {handlePlayerSelection} from '@cdo/apps/craft/utils';
@@ -774,7 +775,7 @@ Craft.executeUserCode = function () {
 
   // Run user generated code, calling appCodeOrgAPI
   let code = '';
-  let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
+  let codeBlocks = getCodeBlocks();
   if (studioApp().initializationBlocks) {
     codeBlocks = studioApp().initializationBlocks.concat(codeBlocks);
   }

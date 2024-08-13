@@ -1,14 +1,15 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
 import {
   announcementShape,
   VisibilityType,
 } from '@cdo/apps/code-studio/announcementsRedux';
 import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
-import {NotificationType} from '@cdo/apps/templates/Notification';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import Announcement from '@cdo/apps/lib/levelbuilder/announcementsEditor/Announcement';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import Announcement from '@cdo/apps/lib/levelbuilder/announcementsEditor/Announcement';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
 import {createUuid} from '@cdo/apps/utils';
 
 export default class AnnouncementsEditor extends Component {

@@ -1,12 +1,14 @@
-import React from 'react';
-import {expect} from '../../../../util/reconfiguredChai';
-import DataDocFormEditor from '@cdo/apps/lib/levelbuilder/data-docs-editor/DataDocFormEditor';
-import {isolateComponent} from 'isolate-react';
-import {getStore} from '@cdo/apps/redux';
-import {Provider} from 'react-redux';
-import sinon from 'sinon';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import {isolateComponent} from 'isolate-react';
+import React from 'react';
+import {Provider} from 'react-redux';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import DataDocFormEditor from '@cdo/apps/lib/levelbuilder/data-docs-editor/DataDocFormEditor';
+import {getStore} from '@cdo/apps/redux';
 import * as utils from '@cdo/apps/utils';
+
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('DataDocFormEditor', () => {
   let defaultProps;

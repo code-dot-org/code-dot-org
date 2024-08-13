@@ -12,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-09 17:37:24 UTC",
+    "serialized_at": "2024-07-17 06:41:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2910,7 +2911,13 @@
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 2 on Code Studio complete Levels 2, 3, and 4. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "duration": "10",
         "name": "Removing Elements",
-        "progression_name": "Investigate and Modify: Removing Elements"
+        "progression_name": "Investigate and Modify: Removing Elements",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You will want to have students use the reset version history before starting level 3 and, as well as, comment out the enhanced for loop so that they do not continue to get the same error from the previous level.\n"
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "7d5452bd-b79a-4121-bc8b-25d864855276",

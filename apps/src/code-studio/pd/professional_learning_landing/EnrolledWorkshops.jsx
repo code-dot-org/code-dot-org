@@ -1,11 +1,15 @@
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {Table, Button, Modal} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+import ReactTooltip from 'react-tooltip';
+
+import {Heading2} from '@cdo/apps/componentLibrary/typography';
+import i18n from '@cdo/locale';
+
 import * as utils from '../../../utils';
 import WorkshopTableLoader from '../workshop_dashboard/components/workshop_table_loader';
 import {workshopShape} from '../workshop_dashboard/types.js';
-import {Table, Button, Modal} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import ReactTooltip from 'react-tooltip';
-import moment from 'moment';
 import {
   DATE_FORMAT,
   TIME_FORMAT,
@@ -17,17 +21,19 @@ class EnrolledWorkshops extends React.Component {
       <WorkshopTableLoader
         queryUrl="/api/v1/pd/workshops_user_enrolled_in"
         hideNoWorkshopsMessage={true}
+        tableHeader={i18n.myWorkshops()}
       >
-        <EnrolledWorkshopsTable />
+        <WorkshopsTable tableHeader={i18n.myWorkshops()} />
       </WorkshopTableLoader>
     );
   }
 }
 
-class EnrolledWorkshopsTable extends React.Component {
+class WorkshopsTable extends React.Component {
   static propTypes = {
     workshops: PropTypes.arrayOf(workshopShape),
     forMyPlPage: PropTypes.bool,
+    tableHeader: PropTypes.string,
   };
 
   state = {
@@ -227,7 +233,9 @@ class EnrolledWorkshopsTable extends React.Component {
         </Modal>
         {this.props.workshops && (
           <section>
-            <h2>My Workshops</h2>
+            {this.props.tableHeader && (
+              <Heading2>{this.props.tableHeader}</Heading2>
+            )}
             {this.renderWorkshopsTable()}
           </section>
         )}
@@ -242,4 +250,4 @@ const styles = {
   },
 };
 
-export {EnrolledWorkshops, EnrolledWorkshopsTable};
+export {EnrolledWorkshops, WorkshopsTable};

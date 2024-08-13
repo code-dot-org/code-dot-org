@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "csc-adaptations",
-    "serialized_at": "2023-07-25 22:10:48 UTC",
+    "serialized_at": "2024-07-26 22:46:28 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2666,6 +2666,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

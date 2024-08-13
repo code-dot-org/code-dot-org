@@ -1,13 +1,15 @@
-import React, {Component} from 'react';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import PropTypes from 'prop-types';
 import $ from 'jquery';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import color from '@cdo/apps/util/color';
 
 export default class AddLevelTableRow extends Component {
   static propTypes = {
     addLevel: PropTypes.func.isRequired,
     level: PropTypes.object.isRequired,
+    isInLesson: PropTypes.bool.isRequired,
   };
 
   constructor(props) {
@@ -61,10 +63,14 @@ export default class AddLevelTableRow extends Component {
   };
 
   render() {
-    const {level} = this.props;
-
+    const {level, isInLesson} = this.props;
     return (
-      <tr key={level.id}>
+      <tr
+        key={level.id}
+        style={
+          isInLesson ? {color: color.white, backgroundColor: color.teal} : {}
+        }
+      >
         <td>
           <button onClick={this.handleAddLevel.bind(this, level)} type="button">
             <FontAwesome icon="plus" />

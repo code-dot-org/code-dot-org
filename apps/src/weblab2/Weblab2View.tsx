@@ -1,36 +1,41 @@
-import React, {useState} from 'react';
-
-import './styles/Weblab2View.css';
-
-import {Config} from './Config';
+// Making sure that css is first so that it is imported for other classes.
+// This might not be necessary.
+import './styles/Weblab2View.css'; // eslint-disable-line import/order
 
 import {Codebridge} from '@codebridge/Codebridge';
 import {ConfigType, ProjectType} from '@codebridge/types';
-
+import {css} from '@codemirror/lang-css';
 import {html} from '@codemirror/lang-html';
 import {LanguageSupport} from '@codemirror/language';
-import {css} from '@codemirror/lang-css';
-import {useSource} from '../codebridge/hooks/useSource';
+import React, {useState} from 'react';
+
 import {ProjectSources} from '@cdo/apps/lab2/types';
+
+import {useSource} from '../codebridge/hooks/useSource';
+
+import {Config} from './Config';
 
 const weblabLangMapping: {[key: string]: LanguageSupport} = {
   html: html(),
   css: css(),
 };
 
-const horizontalLayout = {
-  gridLayoutRows: '300px auto',
-  gridLayoutColumns: '300px auto auto',
-  gridLayout: `    "instructions workspace preview-container"
-      "file-browser workspace preview-container"`,
-};
-
-const verticalLayout = {
-  gridLayoutRows: '300px auto auto',
-  gridLayoutColumns: '300px auto',
-  gridLayout: `    "instructions workspace workspace"
-      "file-browser workspace workspace"
-      "file-browser preview-container preview-container"`,
+const labeledGridLayouts = {
+  horizontal: {
+    gridLayoutRows: '300px minmax(0, 1fr)',
+    gridLayoutColumns: '300px minmax(0, 1fr) 1fr',
+    gridLayout: `
+    "info-panel workspace preview-container"
+    "file-browser workspace preview-container"`,
+  },
+  vertical: {
+    gridLayoutRows: '300px minmax(0, 1fr) 1fr',
+    gridLayoutColumns: '300px minmax(0, 1fr) 1fr',
+    gridLayout: `
+    "info-panel workspace workspace"
+    "file-browser workspace workspace"
+    "file-browser preview-container preview-container"`,
+  },
 };
 
 const defaultConfig: ConfigType = {
@@ -63,7 +68,9 @@ const defaultConfig: ConfigType = {
       action: () => window.alert('You are already on the file browser'),
     },
   ],
-  ...horizontalLayout,
+
+  labeledGridLayouts,
+  activeGridLayout: 'horizontal',
 };
 
 const defaultSource: ProjectType = {
@@ -145,7 +152,7 @@ const defaultProject: ProjectSources = {source: defaultSource};
 
 const Weblab2View = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {source, setSource, resetToStartSource} = useSource(defaultProject);
+  const {source, setSource, getStartSource} = useSource(defaultProject);
   const [showConfig, setShowConfig] = useState<
     'project' | 'config' | 'layout' | ''
   >('');
@@ -168,18 +175,6 @@ const Weblab2View = () => {
         <button type="button" onClick={() => setShowConfig('layout')}>
           Edit layout
         </button>
-        <button
-          type="button"
-          onClick={() => setConfig({...config, ...horizontalLayout})}
-        >
-          Use horizontal layout
-        </button>
-        <button
-          type="button"
-          onClick={() => setConfig({...config, ...verticalLayout})}
-        >
-          Use vertical layout
-        </button>
       </div>
       <div className="app-ide">
         {source && (
@@ -188,7 +183,7 @@ const Weblab2View = () => {
             config={config}
             setProject={setSource}
             setConfig={setConfig}
-            resetProject={resetToStartSource}
+            startSource={getStartSource()}
           />
         )}
 

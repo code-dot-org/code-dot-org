@@ -4,9 +4,12 @@
 
 -# This variable will get any data we need to pass along to scripts/show.js
 - scriptOverviewData = {scriptData: @script_data, plcBreadcrumb: @plc_breadcrumb}
+- parental_permission_banner_data = current_user && parental_permission_banner_data(current_user, request)
 
 - content_for(:head) do
-  %script{ src: webpack_asset_path('js/scripts/show.js'), data: {scriptoverview: scriptOverviewData.to_json }}
+  %script{
+  src: webpack_asset_path('js/scripts/show.js'),
+          data: {scriptoverview: scriptOverviewData.to_json, parental_permission_banner: parental_permission_banner_data.to_json}}
 
 - if RaceInterstitialHelper.show?(current_user) || @force_race_interstitial
   = render partial: 'layouts/race_interstitial'

@@ -30,7 +30,7 @@
     "definition_collapse": "false",
     "disable_examples": "false",
     "fast_get_nectar_animation": "true",
-    "callout_json": "[\r\n {\r\n  \"localization_key\": \"courseF_bee_conditionals2_2\",\r\n  \"callout_text\": \"The toolbox is now in category mode.  All of the blocks you need are beneath these labels!\",\r\n  \"element_id\": \"[id=':2.label']\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left bottom\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "callout_json": "[{\"localization_key\":\"courseF_bee_conditionals2_2\",\"callout_text\":\"The toolbox is now in category mode.  All of the blocks you need are beneath these labels!\",\"element_id\":\"[id=':2.label']\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left bottom\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\"[id='blockly-1.label']\",\"localization_key\":\"courseF_bee_conditionals2_2\",\"callout_text\":\"The toolbox is now in category mode.  All of the blocks you need are beneath these labels!\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":false,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left bottom\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "serialized_maze": "[[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1},{\"tileType\":1},{\"tileType\":2},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2,\"cloudType\":2},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":1,\"value\":1,\"range\":1,\"featureType\":2,\"cloudType\":2},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}],[{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0},{\"tileType\":0}]]",
     "long_instructions": "*\"It's too cloudy to see any flowers!\"*\r\n\r\nCheck underneath every cloud to see if it is hiding a flower before you get nectar. If there is a flower underneath the cloud, the bee will need to get nectar **once**.  \r\n\r\nRemember: Not all clouds hide the same thing!",
     "step_speed": "1",
@@ -41,7 +41,7 @@
     "disable_procedure_autopopulate": "false",
     "shape_shift": "false",
     "hint_prompt_attempts_threshold": 22,
-    "contained_level_names": null
+    "preload_asset_list": null
   },
   "published": true,
   "notes": "",

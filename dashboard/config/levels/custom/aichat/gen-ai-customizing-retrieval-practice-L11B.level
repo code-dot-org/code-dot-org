@@ -43,8 +43,11 @@
       "availableModelIds": [
 
       ]
-    }
+    },
+    "display_name": "Virtual Museum Guide",
+    "bubble_choice_description": "Jen is the curator of a museum and they have a brand new exhibit on Egyptian artifacts and culture, which is also available online. Jen wants to create a chatbot to act as a \"virtual museum docent\" that can guide visitors through this new exhibit.",
+    "thumbnail_url": "https://images.code.org/26587a2dd4729c275b51a76cb2f618c3-Lesson 7 - Level 11B- Virtual Museum Guide.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-04T02:30:20.539+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L10\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L10\"},{\"changed_at\":\"2024-05-11 23:23:57 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:30:20.539+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L10\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L10\"},{\"changed_at\":\"2024-05-11 23:23:57 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:33:55 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

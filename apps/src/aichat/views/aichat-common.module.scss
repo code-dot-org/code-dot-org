@@ -1,0 +1,6 @@
+$border-radius: 4px;
+
+// Rounded bottom border for AI Chat panels
+%panel-section {
+  border-radius: 0 0 $border-radius $border-radius;
+}

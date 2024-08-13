@@ -59,10 +59,9 @@ class HelpHeader
     end
 
     if options[:level] && options[:level].game == Game.music
-      options[:request].path.starts_with?('/projectbeats')
       entries << {
-        title: I18n.t("#{loc_prefix}project_beats_documentation"),
-        url: "https://studio.code.org/docs/ide/projectbeats/",
+        title: I18n.t("#{loc_prefix}music_lab_documentation"),
+        url: "/docs/ide/music",
         id: "musiclab-docs"
       }
     end

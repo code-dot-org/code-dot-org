@@ -1,10 +1,13 @@
-import React from 'react';
-import applabMsg from '@cdo/applab/locale';
-import commonStyles from '../../commonStyles';
-import PropTypes from 'prop-types';
-import PopUpMenu from '../../lib/ui/PopUpMenu';
-import {connect} from 'react-redux';
 import throttle from 'lodash/debounce';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
+
+import applabMsg from '@cdo/applab/locale';
+
+import commonStyles from '../../commonStyles';
+import PopUpMenu from '../../lib/ui/PopUpMenu';
+
 import style from './copy-element-to-screen-button.module.scss';
 
 /**
@@ -55,6 +58,7 @@ class CopyElementToScreenButton extends React.Component {
   };
 
   handleDropdownClick = event => {
+    event.stopPropagation();
     this.setState({opened: !this.state.opened});
   };
 

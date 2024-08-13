@@ -2474,6 +2474,33 @@
   },
   "https://studio.code.org/s/allthethings/lessons/36/levels/3": {
     "long_instructions": "This is an allthethings level used to test the modal function editor.",
+    "function_definitions": {
+      "set background": {
+        "name": "set background"
+      }
+    },
+    "behavior_names": {
+      "spinning left": "spinning left",
+      "growing": "growing",
+      "jittering": "jittering",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "swimming left and right": "swimming left and right",
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "wobbling": "wobbling",
+      "driving with arrow keys": "driving with arrow keys",
+      "moving east and looping": "moving east and looping",
+      "fluttering": "fluttering",
+      "moving west and looping": "moving west and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
+    },
     "behavior_descriptions": {
       "rotate a sprite to its left": "rotate a sprite to its left",
       "change the size of a sprite": "change the size of a sprite",
@@ -2496,6 +2523,28 @@
   },
   "https://studio.code.org/s/allthethings/lessons/36/levels/4": {
     "long_instructions": "This is an allthethings Sprite Lab level that uses a variety of blocks",
+    "behavior_names": {
+      "spinning left": "spinning left",
+      "growing": "growing",
+      "jittering": "jittering",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "swimming left and right": "swimming left and right",
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "wobbling": "wobbling",
+      "driving with arrow keys": "driving with arrow keys",
+      "moving east and looping": "moving east and looping",
+      "fluttering": "fluttering",
+      "moving west and looping": "moving west and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
+    },
     "behavior_descriptions": {
       "rotate a sprite to its left": "rotate a sprite to its left",
       "change the size of a sprite": "change the size of a sprite",
@@ -2900,6 +2949,25 @@
   "https://studio.code.org/s/allthethings/lessons/45/levels/4": {
     "long_instructions": "This is a Poetry level which includes the auto-populated `PROCEDURES` category and uses the modal function editor."
   },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/2": {
+    "long_instructions": "First, please play one sound.",
+    "validations": {
+      "Music Level 1_391b0b44-af8d-4559-a985-d5b643aed908": "Nice work.",
+      "Music Level 1_c0da3b0b-c4d6-490c-8bfb-4faf4188ff32": "Please play one sound."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/3": {
+    "long_instructions": "Second, please play three sounds at the same time.",
+    "validations": {
+      "Music Level 2_b4505750-86bb-40d7-8c31-ca015980d7ee": "Nice work.",
+      "Music Level 2_f5ef3af6-0010-4e06-937c-d35b5cb8e0be": "It's good that you played two sounds, but you need to play another one.",
+      "Music Level 2_3e35e104-7422-4fb8-80e1-b9da580384f2": "It's good that you played one sound, but you need to play two more.",
+      "Music Level 2_dc4dddf1-5e9d-4664-b9a1-00d73e728a06": "Please play three sounds together."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/4": {
+    "long_instructions": "Try everything!"
+  },
   "https://studio.code.org/s/allthethings/lessons/47/levels/1": {
     "long_instructions": "## Sample Instructions\n\nThis is a chat bot which allows you to talk to historical figures.\n\n### Do This\n\nType in a question and press the `Submit`(#7435b2) button. What can you learn about Ada Lovelace?"
   },
@@ -2929,15 +2997,76 @@
     "long_instructions": "Let's get this moose dancing! Click the `\"dancer1\" do \"Floss\" forever` block onto the \"at 4 measures\" block to make him start flossing at the second measure."
   },
   "https://studio.code.org/s/allthethings/lessons/50/levels/1": {
-    "long_instructions": "## Welcome to Python Lab\n\nPress the Run button and see what happens."
+    "long_instructions": "## Welcome to Python Lab\n\nPress the Run button and see what happens.",
+    "teacher_markdown": "Teachers should see this extra info."
   },
   "https://studio.code.org/s/allthethings/lessons/50/levels/2": {
-    "long_instructions": "## Python Lab Basics\n\nTry adding some new code."
+    "long_instructions": "## Python Lab with Validation\n\nThis level has some built-in validation code."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/3": {
+    "long_instructions": "## Project-backed level\n\nThis level shares a project with level 4 in the progression."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/4": {
+    "long_instructions": "## Project-backed level\n\nThis level shares a project with level 3 in the progression."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/5": {
+    "long_instructions": "## Predict and Run\n\n**What do you think this program does?**\n\nTake a look at the code in this program. Write down what you think this program will do. There are no wrong answers!",
+    "teacher_markdown": "Teachers should see this extra info."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/6": {
+    "long_instructions": "## Predict and Run\n\n**What do you think this program does?**\n\nTake a look at the code in this program. Which of the following matches what the program will print?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/7": {
+    "long_instructions": "## Submittable Level\n\nHere's a sample submittable level!",
+    "teacher_markdown": "Teachers should see this extra info."
   },
   "https://studio.code.org/s/allthethings/lessons/51/levels/1": {
     "long_instructions": "Add **html** pages and preview them in the right pane.\n\nAdd **css** pages (and link them to your html).\n\nUse the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)"
   },
   "https://studio.code.org/s/allthethings/lessons/51/levels/2": {
     "long_instructions": "## Web Lab 2 Basics\n\nCreate your own web page!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/1": {
+    "long_instructions": "Try everything!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/2": {
+    "long_instructions": "## Sample Instructions\n\nThis is a chat bot which allows you to talk to historical figures.\n\n### Do This\n\nType in a question and press the `Submit`(#7435b2) button. What can you learn about Ada Lovelace?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/3": {
+    "long_instructions": "## Welcome to Python Lab\n\nPress the Run button and see what happens."
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/4": {
+    "long_instructions": "Add **html** pages and preview them in the right pane.\n\nAdd **css** pages (and link them to your html).\n\nUse the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)"
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/5": {
+    "long_instructions": "Let's get this moose dancing! Click the `\"dancer1\" do \"Floss\" forever` block onto the \"at 4 measures\" block to make him start flossing at the second measure."
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/6": {
+    "panels": {
+      "musiclab_intro_panels_start-421d64b2-c4db-42cb-ac1f-de66a4d22fa7": "#### Welcome to Project Beats!\n\nProject Beats lets you mix, remix, and even perform music using code. Don’t worry if you don’t know much about code, or even music! All you need is a little time and some curiosity to start making your own creations."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/8": {
+    "dsls": {
+      "description": "This Bubble Choice level is currently NOT on lab2, but all the sublevels here should be Lab2 levels",
+      "display_name": "Lab2 BubbleChoice Showcase"
+    },
+    "sublevels": {
+      "AI Chat Sublevel": {
+        "long_instructions": "# AI Chat 2\r\n\r\n## Sample Instructions\r\n\r\nThis is a chat bot which helps you with grammar and punctuation to improve your writing.\r\n\r\n### Do This\r\n\r\nType in a paragraph that you'd like to revise and press the `Submit`(#7435b2) button."
+      },
+      "Music Sublevel": {
+        "validations": {
+          "Music Sublevel_20cb71d4-b13c-4494-8ca0-a234414ec12d": "Nice work.",
+          "Music Sublevel_e826dcbb-1947-42a8-b66f-aa676119b013": "Please play one sound."
+        }
+      },
+      "Python Lab Sublevel": {
+        "long_instructions": "## Python Lab Basics\r\n\r\nTry adding some new code."
+      },
+      "Weblab2 Sublevel": {
+        "long_instructions": "## Web Lab 2 Basics\r\n\r\nCreate your own web page!"
+      }
+    }
   }
 }

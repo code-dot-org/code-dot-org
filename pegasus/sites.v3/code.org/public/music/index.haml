@@ -31,7 +31,7 @@ theme: responsive_full_width
       %h2.heading-lg
         =hoc_s("music_lab.featuring_songs_by")
       %p.no-margin-bottom
-        =hoc_s("music_lab.artist_list", markdown: :inline, locals:{artist_list: "The Chainsmokers, Tinashe, Rosa Linn, Coldplay, Aloe Blacc, Halle X Chloe, Lady Gaga, Dove Cameron"})
+        =hoc_s("music_lab.artist_list", markdown: :inline, locals:{artist_list: "The Chainsmokers, Tinashe, Rosa Linn, Coldplay, Aloe Blacc, Chloe x Halle, Lady Gaga, Dove Cameron"})
     .flex-1
       = view :"music/music_lab_featured_artists"
 
@@ -40,7 +40,7 @@ theme: responsive_full_width
     %h2=hoc_s("music_lab.student_projects.heading")
     = view :"music/music_lab_student_projects"
 
-%section.bg-primary-light
+%section.bg-primary-light.aws-career-tours
   .wrapper.flex-container.justify-space-between.align-items-center.wrap.flex-direction-column-tablet.gap-1
     %figure
       %img{src: "/images/avatars/amazon-career-tours.png", alt: hoc_s("music_lab.amazon_future_engineer"), style: "width: 150px"}
@@ -65,11 +65,12 @@ theme: responsive_full_width
 %section
   .wrapper
     .flex-container.justify-space-between.align-items-center.wrap.gap-2
-      %figure.col-47
+      %figure.col-45
         %img.rounded-corners{src: "/images/music-lab/music-lab-tutorial.png", alt: "", style: "width: 100%;"}
-      .text-wrapper.col-47
+      .text-wrapper.col-50
         %h2=hoc_s("music_lab.tutorial.heading")
-        %p=hoc_s("music_lab.tutorial.desc")
+        %p.wrap-pretty
+          =hoc_s("music_lab.tutorial.desc")
         %a.link-button{href: CDO.studio_url("/s/music-tutorial-2024")}
           =hoc_s("music_lab.tutorial.button")
 

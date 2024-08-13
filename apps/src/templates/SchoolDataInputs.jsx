@@ -12,7 +12,11 @@ import i18n from '@cdo/locale';
 
 import style from './school-association.module.scss';
 
+const SCHOOL_COUNTRY = 'schoolCountry';
+const US_COUNTRY_CODE = 'US';
+
 export default function SchoolDataInputs({
+  usIp,
   includeHeaders = true,
   fieldNames = {
     country: 'user[school_info_attributes][country]',
@@ -21,18 +25,25 @@ export default function SchoolDataInputs({
     schoolZip: 'user[school_info_attributes][school_zip]',
   },
 }) {
-  const [askForZip, setAskForZip] = useState(false);
-  const [isOutsideUS, setIsOutsideUS] = useState(false);
-  const [country, setCountry] = useState('');
+  // If the user filled out country before or we are detecting a US IP address
+  const detectedCountry =
+    sessionStorage.getItem(SCHOOL_COUNTRY) || (usIp ? US_COUNTRY_CODE : '');
+  const [country, setCountry] = useState(detectedCountry);
+  const [askForZip, setAskForZip] = useState(
+    detectedCountry === US_COUNTRY_CODE
+  );
+  const [isOutsideUS, setIsOutsideUS] = useState(
+    (detectedCountry || usIp === false) && detectedCountry !== US_COUNTRY_CODE
+  );
 
   // Add 'Select a country' and 'United States' to the top of the country list
   let COUNTRY_ITEMS = [
     {value: 'selectCountry', text: i18n.selectCountry()},
-    {value: 'US', text: i18n.unitedStates()},
+    {value: US_COUNTRY_CODE, text: i18n.unitedStates()},
   ];
   // Pull in the rest of the countries after/below
   const nonUsCountries = Object.values(COUNTRIES).filter(
-    item => item.label !== 'US'
+    item => item.label !== US_COUNTRY_CODE
   );
   for (const item of nonUsCountries) {
     COUNTRY_ITEMS.push({value: item.label, text: item.value});
@@ -41,6 +52,7 @@ export default function SchoolDataInputs({
   const onCountryChange = e => {
     const country = e.target.value;
     setCountry(country);
+    sessionStorage.setItem(SCHOOL_COUNTRY, country);
     analyticsReporter.sendEvent(
       EVENTS.COUNTRY_SELECTED,
       {country: country},
@@ -48,7 +60,7 @@ export default function SchoolDataInputs({
     );
     // We don't want to display any fields to start that won't eventually be
     // necessary, so updating both of these any time country changes
-    if (country === 'US') {
+    if (country === US_COUNTRY_CODE) {
       setAskForZip(true);
       setIsOutsideUS(false);
     } else {
@@ -103,6 +115,7 @@ export default function SchoolDataInputs({
 }
 
 SchoolDataInputs.propTypes = {
+  usIp: PropTypes.bool,
   includeHeaders: PropTypes.bool,
   fieldNames: PropTypes.object,
 };

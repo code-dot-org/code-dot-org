@@ -1,7 +1,8 @@
--# FontAwesome icon
-- icon_check = "fa-solid fa-check-circle"
-- embed_src = CDO.studio_url("/musiclab/embed?channels=#{request.params['channels']}&library=#{request.params['library']}", CDO.default_scheme)
-- list_items = [hoc_s("music_lab.student_projects.list_create"), hoc_s("music_lab.student_projects.list_artist"),  hoc_s("music_lab.student_projects.list_share")]
+:ruby
+  # FontAwesome icon
+  icon_check = "fa-solid fa-check-circle"
+  embed_src = CDO.studio_url("/musiclab/embed?channels=#{request.params['channels']}&library=#{request.params['library']}", CDO.default_scheme)
+  list_items = [hoc_s("music_lab.student_projects.list_create"), hoc_s("music_lab.student_projects.list_artist"),  hoc_s("music_lab.student_projects.list_share")]
 
 .grid-container.gap-2
   %iframe.rounded-corners.box-shadow-primary{width: "100%", height: 300, src: embed_src}

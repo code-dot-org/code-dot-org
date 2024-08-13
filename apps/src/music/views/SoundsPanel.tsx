@@ -1,18 +1,21 @@
-import React, {useCallback, useEffect, useRef, useState} from 'react';
 import classNames from 'classnames';
-import {getBaseAssetUrl} from '../appConfig';
-import styles from './soundsPanel.module.scss';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import React, {useCallback, useEffect, useRef, useState} from 'react';
+import FocusLock from 'react-focus-lock';
+
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+
+import {getBaseAssetUrl} from '../appConfig';
+import musicI18n from '../locale';
 import MusicLibrary, {
   SoundData,
   SoundFolder,
   SoundType,
 } from '../player/MusicLibrary';
 import SoundStyle from '../utils/SoundStyle';
-import FocusLock from 'react-focus-lock';
-import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons';
-import musicI18n from '../locale';
+
+import styles from './soundsPanel.module.scss';
 
 /*
  * Renders a UI for previewing and choosing samples. This is currently used within a
@@ -145,14 +148,20 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
   const soundPath = folder.id + '/' + sound.src;
   const isSelected = soundPath === currentValue;
   const isPlayingPreview = playingPreview === soundPath;
-  const onPreviewClick = useCallback(
-    (e: Event) => {
-      if (!isPlayingPreview) {
-        onPreview(soundPath);
-      }
+
+  const onSoundSelect = useCallback(() => {
+    if (!isPlayingPreview) {
+      onPreview(soundPath);
+    }
+    onSelect(soundPath);
+  }, [isPlayingPreview, onPreview, onSelect, soundPath]);
+
+  const onSoundClick = useCallback(
+    (e: React.MouseEvent<HTMLDivElement>) => {
       e.stopPropagation();
+      onSoundSelect();
     },
-    [isPlayingPreview, onPreview, soundPath]
+    [onSoundSelect]
   );
 
   return (
@@ -162,10 +171,10 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
         styles.soundRow,
         isSelected && styles.soundRowSelected
       )}
-      onClick={() => onSelect(folder.id + '/' + sound.src)}
+      onClick={onSoundClick}
       onKeyDown={event => {
         if (event.key === 'Enter') {
-          onSelect(folder.id + '/' + sound.src);
+          onSoundSelect();
         }
       }}
       ref={isSelected ? currentSoundRefCallback : null}
@@ -196,19 +205,8 @@ const SoundsPanelRow: React.FunctionComponent<SoundsPanelRowProps> = ({
         </div>
       )}
       <div className={styles.soundRowRight}>
-        <div className={styles.length}>
+        <div className={classNames(styles.length, styles.lengthNoMarginRight)}>
           {getLengthRepresentation(sound.length)}
-        </div>
-        <div className={styles.previewContainer}>
-          <FontAwesome
-            title={undefined}
-            icon={'play-circle'}
-            className={classNames(
-              styles.preview,
-              isPlayingPreview && styles.previewPlaying
-            )}
-            onClick={onPreviewClick}
-          />
         </div>
       </div>
     </div>
@@ -321,7 +319,11 @@ const SoundsPanel: React.FunctionComponent<SoundsPanelProps> = ({
 
   return (
     <FocusLock>
-      <div id="sounds-panel" className={styles.soundsPanel} aria-modal>
+      <div
+        id="sounds-panel"
+        className={classNames(styles.soundsPanel)}
+        aria-modal
+      >
         <div id="hidden-item" tabIndex={0} role="button" />
         {showSoundFilters && (
           <div id="sounds-panel-top" className={styles.soundsPanelTop}>

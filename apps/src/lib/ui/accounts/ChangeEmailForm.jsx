@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import i18n from '@cdo/locale';
-import {Field} from '../SystemDialog/SystemDialog';
+
 import {pegasus} from '../../util/urlHelpers';
+import {Field} from '../SystemDialog/SystemDialog';
 
 export default class ChangeEmailForm extends React.Component {
   static propTypes = {

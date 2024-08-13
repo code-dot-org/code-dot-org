@@ -1,11 +1,7 @@
-import sinon from 'sinon';
-
 import CodeReviewDataApi, {
   timelineElementType,
 } from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
 import * as utils from '@cdo/apps/utils';
-
-import {expect} from '../../../../util/reconfiguredChai';
 
 const fakeCommitData = [
   {
@@ -83,54 +79,56 @@ const fakeScriptId = 4;
 describe('CodeReviewDataApi', () => {
   describe('getInitialTimelineData', () => {
     let dataApi;
-    before(() => {
+    beforeAll(() => {
       dataApi = new CodeReviewDataApi(
         fakeChannelId,
         fakeLevelId,
         fakeProjectLevelId,
         fakeScriptId
       );
-      sinon.stub(CodeReviewDataApi.prototype, 'getCommits').callsFake(() => {
-        return Promise.resolve(fakeCommitData);
-      });
-      sinon
-        .stub(CodeReviewDataApi.prototype, 'getCodeReviews')
-        .callsFake(() => {
+      jest
+        .spyOn(CodeReviewDataApi.prototype, 'getCommits')
+        .mockClear()
+        .mockImplementation(() => {
+          return Promise.resolve(fakeCommitData);
+        });
+      jest
+        .spyOn(CodeReviewDataApi.prototype, 'getCodeReviews')
+        .mockClear()
+        .mockImplementation(() => {
           return Promise.resolve(fakeReviewData);
         });
     });
 
     it('returns timelineData commits and closed code reviews sorted by createdAt', async () => {
       const {timelineData} = await dataApi.getInitialTimelineData();
-      expect(timelineData.length).to.equal(4); // 1 closed review + 3 commits
-      expect(timelineData[0].comment).to.equal('First commit');
-      expect(timelineData[1].comment).to.equal('Second commit');
-      expect(timelineData[2].projectVersion).to.equal('asdfjkl');
-      expect(timelineData[3].comment).to.equal('Third commit');
+      expect(timelineData.length).toBe(4); // 1 closed review + 3 commits
+      expect(timelineData[0].comment).toBe('First commit');
+      expect(timelineData[1].comment).toBe('Second commit');
+      expect(timelineData[2].projectVersion).toBe('asdfjkl');
+      expect(timelineData[3].comment).toBe('Third commit');
     });
 
     it('returns the open code review as openReview', async () => {
       const {openReview} = await dataApi.getInitialTimelineData();
-      expect(openReview.projectVersion).to.equal('qweruiop');
+      expect(openReview.projectVersion).toBe('qweruiop');
     });
 
     it('adds the timelineElementType to each element', async () => {
       const {timelineData, openReview} = await dataApi.getInitialTimelineData();
-      expect(timelineData[0].timelineElementType).to.equal(
+      expect(timelineData[0].timelineElementType).toBe(
         timelineElementType.commit
       );
-      expect(timelineData[2].timelineElementType).to.equal(
+      expect(timelineData[2].timelineElementType).toBe(
         timelineElementType.review
       );
-      expect(openReview.timelineElementType).to.equal(
-        timelineElementType.review
-      );
+      expect(openReview.timelineElementType).toBe(timelineElementType.review);
     });
   });
 
   describe('closeReview', () => {
     let dataApi, ajaxStub;
-    before(() => {
+    beforeAll(() => {
       dataApi = new CodeReviewDataApi(
         fakeChannelId,
         fakeLevelId,
@@ -140,21 +138,24 @@ describe('CodeReviewDataApi', () => {
     });
 
     beforeEach(() => {
-      ajaxStub = sinon.stub($, 'ajax').returns({
-        done: successCallback => {
-          successCallback(fakeReviewData[0]);
-          return {fail: () => {}};
-        },
-      });
+      ajaxStub = jest
+        .spyOn($, 'ajax')
+        .mockClear()
+        .mockReturnValue({
+          done: successCallback => {
+            successCallback(fakeReviewData[0]);
+            return {fail: () => {}};
+          },
+        });
     });
 
     afterEach(() => {
-      ajaxStub.restore();
+      ajaxStub.mockRestore();
     });
 
     it('calls patch code review endpoint with isClosed true', async () => {
       await dataApi.closeReview(11);
-      expect(ajaxStub).to.have.been.calledWith({
+      expect(ajaxStub).toHaveBeenCalledWith({
         url: `/code_reviews/11`,
         type: 'PATCH',
         headers: {'X-CSRF-Token': undefined},
@@ -166,14 +167,14 @@ describe('CodeReviewDataApi', () => {
 
     it('appends timelineElementType of review onto response', async () => {
       const result = await dataApi.closeReview(11);
-      expect(result.timelineElementType).to.equal(timelineElementType.review);
+      expect(result.timelineElementType).toBe(timelineElementType.review);
     });
   });
 
   describe('openNewCodeReview', () => {
     let dataApi, ajaxStub;
     const fakeVersion = 'asdfjkl';
-    before(() => {
+    beforeAll(() => {
       dataApi = new CodeReviewDataApi(
         fakeChannelId,
         fakeLevelId,
@@ -183,21 +184,24 @@ describe('CodeReviewDataApi', () => {
     });
 
     beforeEach(() => {
-      ajaxStub = sinon.stub($, 'ajax').returns({
-        done: successCallback => {
-          successCallback(fakeReviewData[0]);
-          return {fail: () => {}};
-        },
-      });
+      ajaxStub = jest
+        .spyOn($, 'ajax')
+        .mockClear()
+        .mockReturnValue({
+          done: successCallback => {
+            successCallback(fakeReviewData[0]);
+            return {fail: () => {}};
+          },
+        });
     });
 
     afterEach(() => {
-      ajaxStub.restore();
+      ajaxStub.mockRestore();
     });
 
     it('calls code reveiw POST endpoint with the expected data', async () => {
       await dataApi.openNewCodeReview(fakeVersion);
-      expect(ajaxStub).to.have.been.calledWith({
+      expect(ajaxStub).toHaveBeenCalledWith({
         url: `/code_reviews`,
         type: 'POST',
         headers: {'X-CSRF-Token': undefined},
@@ -213,7 +217,7 @@ describe('CodeReviewDataApi', () => {
 
     it('appends timelineElementType of review onto response', async () => {
       const result = await dataApi.openNewCodeReview(fakeVersion);
-      expect(result.timelineElementType).to.equal(timelineElementType.review);
+      expect(result.timelineElementType).toBe(timelineElementType.review);
     });
   });
 
@@ -221,7 +225,7 @@ describe('CodeReviewDataApi', () => {
     let dataApi, ajaxStub;
     const fakeReviewId = 11;
     const fakeComment = 'A comment';
-    before(() => {
+    beforeAll(() => {
       dataApi = new CodeReviewDataApi(
         fakeChannelId,
         fakeLevelId,
@@ -231,44 +235,53 @@ describe('CodeReviewDataApi', () => {
     });
 
     beforeEach(() => {
-      ajaxStub = sinon.stub($, 'ajax').returns({
-        done: successCallback => {
-          successCallback(fakeReviewData[0]);
-          return {fail: () => {}};
-        },
-      });
+      ajaxStub = jest
+        .spyOn($, 'ajax')
+        .mockClear()
+        .mockReturnValue({
+          done: successCallback => {
+            successCallback(fakeReviewData[0]);
+            return {fail: () => {}};
+          },
+        });
     });
 
     afterEach(() => {
-      ajaxStub.restore();
+      ajaxStub.mockRestore();
     });
 
     it('rejects with profanity error if profanity is found', async () => {
       const profaneWordsRes = ['word1', 'word2'];
-      sinon
-        .stub(utils, 'findProfanity')
-        .returns({done: successCallback => successCallback(profaneWordsRes)});
+      jest
+        .spyOn(utils, 'findProfanity')
+        .mockClear()
+        .mockReturnValue({
+          done: successCallback => successCallback(profaneWordsRes),
+        });
 
       try {
         await dataApi.submitNewCodeReviewComment(fakeComment, fakeReviewId);
         new Error('Expected promise to reject');
       } catch (err) {
-        expect(err.profanityFoundError).to.equal(
+        expect(err.profanityFoundError).toBe(
           'Your comment contains inappropriate language, so it will not be saved. Please update your comment to remove the words "word1, word2".'
         );
       }
 
-      utils.findProfanity.restore();
+      utils.findProfanity.mockRestore();
     });
 
     it('calls code_review_comments endpoint if profanity is not found', async () => {
-      sinon.stub(utils, 'findProfanity').returns({
-        done: successCallback => successCallback(null),
-      });
+      jest
+        .spyOn(utils, 'findProfanity')
+        .mockClear()
+        .mockReturnValue({
+          done: successCallback => successCallback(null),
+        });
 
       await dataApi.submitNewCodeReviewComment(fakeComment, fakeReviewId);
 
-      expect(ajaxStub).to.have.been.calledWith({
+      expect(ajaxStub).toHaveBeenCalledWith({
         url: `/code_review_comments`,
         type: 'POST',
         headers: {'X-CSRF-Token': undefined},
@@ -277,13 +290,13 @@ describe('CodeReviewDataApi', () => {
           comment: fakeComment,
         },
       });
-      utils.findProfanity.restore();
+      utils.findProfanity.mockRestore();
     });
   });
 
   describe('toggleResolveComment', () => {
     let dataApi, ajaxStub;
-    before(() => {
+    beforeAll(() => {
       dataApi = new CodeReviewDataApi(
         fakeChannelId,
         fakeLevelId,
@@ -293,21 +306,24 @@ describe('CodeReviewDataApi', () => {
     });
 
     beforeEach(() => {
-      ajaxStub = sinon.stub($, 'ajax').returns({
-        done: successCallback => {
-          successCallback(fakeReviewData[0]);
-          return {fail: () => {}};
-        },
-      });
+      ajaxStub = jest
+        .spyOn($, 'ajax')
+        .mockClear()
+        .mockReturnValue({
+          done: successCallback => {
+            successCallback(fakeReviewData[0]);
+            return {fail: () => {}};
+          },
+        });
     });
 
     afterEach(() => {
-      ajaxStub.restore();
+      ajaxStub.mockRestore();
     });
 
     it('calls code_review_comments PATCH endpoint with the isResolved value to set', async () => {
       await dataApi.toggleResolveComment(11, true);
-      expect(ajaxStub).to.have.been.calledWith({
+      expect(ajaxStub).toHaveBeenCalledWith({
         url: `/code_review_comments/11`,
         type: 'PATCH',
         headers: {'X-CSRF-Token': undefined},

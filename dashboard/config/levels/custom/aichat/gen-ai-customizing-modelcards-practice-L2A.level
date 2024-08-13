@@ -14,7 +14,7 @@
     "aichat_settings": {
       "initialCustomizations": {
         "selectedModelId": "gen-ai-mistral-7b-inst-v01",
-        "temperature": "0.8",
+        "temperature": "0.5",
         "systemPrompt": "",
         "retrievalContexts": [
 
@@ -32,18 +32,21 @@
         }
       },
       "visibilities": {
-        "selectedModelId": "readonly",
+        "selectedModelId": "hidden",
         "temperature": "editable",
         "systemPrompt": "editable",
-        "retrievalContexts": "editable",
+        "retrievalContexts": "hidden",
         "modelCardInfo": "editable"
       },
       "hidePresentationPanel": false,
       "availableModelIds": [
         "gen-ai-mistral-7b-inst-v01"
       ]
-    }
+    },
+    "long_instructions": "## Alex's Mental Health Chatbot\r\n\r\nMake a chatbot for Alex <a href=\"https://docs.google.com/document/d/1fmw324RzOuxAS1NhETm8AApDk56ZmtW-0JluAq-ZPF0/edit\" target=\"_blank\">using this activity guide!</a>\r\n\r\n### Do This\r\n\r\n1) Make Alex's chatbot! Choose a system prompt that represents the decisions you made on the activity guide!\r\n2) Test the chatbot to make sure it works as expected! You'll need to write down how you tested the chatbot on your model card!\r\n3) Create a Model Card based on these decisions\r\n4) \"Publish\" the chatbot and see how it would look to a user!\r\n    - Press the <code class=\"visual-block\" style=\"color:white; background-color:#7435b2\">Publish</code> button and you'll be taken to the User View.",
+    "display_name": "Alex's Mental Health Chat",
+    "bubble_choice_description": "Alex aims to develop a chatbot to help people manage their mental health. While initial users found it helpful, many did not return. Alex needs to specialize the chatbot to better meet their needs."
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-04T03:05:25.365+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-modelcards-template\\\"\"],\"cloned_from\":\"gen-ai-customizing-modelcards-template\"},{\"changed_at\":\"2024-05-13 07:25:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-05-04T03:05:25.365+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-modelcards-template\\\"\"],\"cloned_from\":\"gen-ai-customizing-modelcards-template\"},{\"changed_at\":\"2024-05-13 07:25:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-25 00:11:17 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-25 00:17:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:41:37 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-06-04 02:43:56 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

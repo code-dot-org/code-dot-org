@@ -1,0 +1,42 @@
+name 'CSA U4LArraysOfObjects-L4'
+title 'Check for Understanding'
+
+wrong 'I only'
+wrong 'II only'
+wrong 'I and II'
+right 'I and III'
+wrong 'I, II, and III'
+
+markdown <<MARKDOWN
+Which of the following are code segments is a valid means for declaring and initializing a 1D array of `Student` objects? Assume all `Student` objects have been declared and initialized properly.
+
+I. 
+```
+Student[] students = new Student[3];`
+```
+II. 
+```
+Student[] students = {
+	Student("Joanna"), 
+	Student("Edgar"), 
+	Student("Beth")
+	};
+```
+
+III. 
+```
+Student joanna = new Student("Joanna");
+Student edgar = new Student("Edgar");
+Student beth = new Student("Beth");
+Student[] students = {joanna, edgar, beth};
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+II. `Student[] students = {Student("Joanna"), Student("Edgar"), Student("Beth")};` is almost correct, but the objects need to be created using the new keyword. Without it, the constructor call is incorrect. The correct version would be:
+
+`Student[] students = {new Student("Joanna"), new Student("Edgar"), new Student("Beth")};`
+
+MARKDOWN
+
+allow_multiple_attempts true

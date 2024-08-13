@@ -36,7 +36,7 @@
 
 .instructions-light {
   @extend %instructions;
-  background-color: $neutral_dark10;
+  background-color: $light_white;
 }
 
 .item {
@@ -120,7 +120,7 @@
 
 .text-light {
   @extend %text;
-  background-color: $neutral_white;
+  background-color: $light_white;
   color: $neutral_dark;
 }
 
@@ -140,9 +140,9 @@
 
 .message-light {
   @extend %message;
-  background-color: $neutral_white;
+  background-color: $light_gray_50;
   color: $neutral_dark;
-  border: dashed $neutral_white 2px;
+  border: dashed $light_gray_100 2px;
 }
 
 .buttonInstruction {
@@ -155,7 +155,8 @@
   border-radius: 4px;
   height: 38px;
   margin: 0 0 10px 0;
-  &:disabled, &[aria-disabled="true"] {
+  &:disabled,
+  &[aria-disabled='true'] {
     cursor: not-allowed;
     border-color: $light_gray_200;
     background-color: $light_gray_200;
@@ -166,7 +167,10 @@
 .markdownText {
   line-height: 0;
 
-  h1, h2, h3, h4 {
+  h1,
+  h2,
+  h3,
+  h4 {
     margin: 0 0 10px 0;
     font-family: $barlowSemiCondensed-semibold;
     font-size: 1.75em;
@@ -182,7 +186,7 @@
   }
 
   code {
-    color: $neutral_light;
+    color: $light_primary_700;
   }
 
   p {

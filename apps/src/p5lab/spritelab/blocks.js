@@ -1,15 +1,16 @@
+import {NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
+import {parseSoundPathString} from '@cdo/apps/blockly/utils';
 import {SVG_NS} from '@cdo/apps/constants';
+import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
 import {getStore} from '@cdo/apps/redux';
-import {getLocation} from '../redux/locationPicker';
-import {P5LabInterfaceMode} from '../constants';
-import {TOOLBOX_EDIT_MODE} from '../../constants';
-import {animationSourceUrl} from '../redux/animationList';
-import {changeInterfaceMode} from '../actions';
 import i18n from '@cdo/locale';
 import spritelabMsg from '@cdo/spritelab/locale';
-import {parseSoundPathString} from '@cdo/apps/blockly/utils';
-import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
-import {NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
+
+import {TOOLBOX_EDIT_MODE} from '../../constants';
+import {changeInterfaceMode} from '../actions';
+import {P5LabInterfaceMode} from '../constants';
+import {animationSourceUrl} from '../redux/animationList';
+import {getLocation} from '../redux/locationPicker';
 
 function animations(includeBackgrounds) {
   const animationList = getStore().getState().animationList;
@@ -350,12 +351,7 @@ const customInputTypes = {
     generateCode(block, arg) {
       const fieldValue = block.getFieldValue(arg.name);
       const invalidBehavior = fieldValue === NO_OPTIONS_MESSAGE;
-      // variableDB_ was deprecated in Google Blockly but exists up to v9 and in CDO Blockly.
-      // TODO: After Sprite Lab has migrated to mainline, and before updating to v10,
-      // use nameDB_ exclusively.
-      const variableNameDB =
-        Blockly.JavaScript.nameDB_ || Blockly.JavaScript.variableDB_;
-      const behaviorId = variableNameDB.getName(fieldValue, 'PROCEDURE');
+      const behaviorId = Blockly.JavaScript.getName(fieldValue, 'PROCEDURE');
       if (invalidBehavior) {
         console.warn('No behaviors available');
         return undefined;
@@ -434,6 +430,8 @@ const customInputTypes = {
       const config = {
         height: 8,
         width: 8,
+        fieldHeight: 42,
+        buttons: {randomize: false},
       };
       currentInputRow
         .appendField(inputConfig.label)

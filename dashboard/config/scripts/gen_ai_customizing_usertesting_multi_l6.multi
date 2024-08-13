@@ -1,0 +1,12 @@
+name 'gen-ai-customizing-usertesting-multi-L6'
+question 'Given this new information, what do you think we should do?'
+
+wrong '🟢Launch it anyway - no action needed!'
+wrong '🟡Launch the chatbot, but follow-up with a quick fix to address the issue'
+wrong '🟠Delay the launch until we fix the issue'
+wrong '🔴Cancel the project altogether - this issue is too serious'
+
+allow_multiple_attempts false
+markdown <<MARKDOWN
+# [Replace with scenario]
+MARKDOWN

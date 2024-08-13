@@ -1,5 +1,3 @@
-import {SoundLoadCallbacks} from '../types';
-import SoundCache from './SoundCache';
 import {
   Clock,
   Filter,
@@ -12,8 +10,17 @@ import {
   getContext,
   start,
 } from 'tone';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {BarsBeatsSixteenths} from 'tone/build/esm/core/type/Units';
+import {Source, SourceOptions} from 'tone/build/esm/source/Source';
+
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+
+import {BUS_EFFECT_COMBINATIONS, DEFAULT_BPM} from '../constants';
+import {SoundLoadCallbacks} from '../types';
+
+import {Effects} from './interfaces/Effects';
+import SoundCache from './SoundCache';
 import {
   AudioPlayer,
   InstrumentData,
@@ -21,10 +28,6 @@ import {
   SampleEvent,
   SamplerSequence,
 } from './types';
-import {BarsBeatsSixteenths} from 'tone/build/esm/core/type/Units';
-import {Source, SourceOptions} from 'tone/build/esm/source/Source';
-import {BUS_EFFECT_COMBINATIONS, DEFAULT_BPM} from '../constants';
-import {Effects} from './interfaces/Effects';
 import {generateEffectsKeyString} from './utils';
 
 const EMPTY_EFFECTS_KEY = '';
@@ -51,7 +54,7 @@ class ToneJSPlayer implements AudioPlayer {
 
   constructor(
     bpm = DEFAULT_BPM,
-    private readonly soundCache: SoundCache = new SoundCache(),
+    private readonly soundCache: SoundCache = SoundCache.getInstance(),
     private readonly metricsReporter: LabMetricsReporter = Lab2Registry.getInstance().getMetricsReporter()
   ) {
     Transport.bpm.value = bpm;
@@ -259,7 +262,7 @@ class ToneJSPlayer implements AudioPlayer {
     this.generateEffectBusses();
   }
 
-  scheduleSample(sample: SampleEvent) {
+  scheduleSample(sample: SampleEvent, onSampleStart: (id: string) => void) {
     const buffer = this.soundCache.getSound(sample.sampleUrl);
     if (!buffer) {
       this.metricsReporter.logWarning(
@@ -286,6 +289,12 @@ class ToneJSPlayer implements AudioPlayer {
       .start(this.playbackTimeToTransportTime(sample.playbackPosition));
 
     this.activePlayers.push(player);
+
+    // Schedule a callback to report the sound ID after the sound has been played.
+    Transport.scheduleOnce(
+      () => onSampleStart(sample.id),
+      this.playbackTimeToTransportTime(sample.playbackPosition)
+    );
   }
 
   scheduleSamplerSequence({instrument, events, effects}: SamplerSequence) {
@@ -369,8 +378,10 @@ class ToneJSPlayer implements AudioPlayer {
   ): BarsBeatsSixteenths {
     const bar = Math.floor(playbackPosition);
     const beat = Math.floor((playbackPosition - bar) * 4);
-    const sixteenths = Math.floor((playbackPosition - bar - beat / 4) * 16);
-    return `${bar - 1}:${beat}:${sixteenths}`;
+    const sixteenths = (playbackPosition - bar - beat / 4) * 16;
+    // Round sixteenths note value to 3 decimal places.
+    const sixteenthsRounded = Math.round(sixteenths * 1000) / 1000;
+    return `${bar - 1}:${beat}:${sixteenthsRounded}`;
   }
 
   private createPlayer(
@@ -399,6 +410,8 @@ class ToneJSPlayer implements AudioPlayer {
   }
 
   private generateEffectBusses() {
+    // Dispose of all existing effect busses
+    Object.values(this.effectBusses).forEach(node => node.dispose());
     BUS_EFFECT_COMBINATIONS.forEach(effects => {
       const {filter, delay} = effects;
       let firstNode, lastNode;

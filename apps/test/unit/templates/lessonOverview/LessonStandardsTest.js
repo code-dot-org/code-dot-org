@@ -5,7 +5,7 @@ import LessonStandards, {
   ExpandMode,
 } from '@cdo/apps/templates/lessonOverview/LessonStandards';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 import {cspStandards, cstaStandards} from './sampleStandardsData';
 

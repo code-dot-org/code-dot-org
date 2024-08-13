@@ -144,7 +144,7 @@ class LevelsController < ApplicationController
   # Get a JSON summary of a level's properties, used in modern labs that don't
   # reload the page between level views.
   def level_properties
-    render json: @level.summarize_for_lab2_properties(nil)
+    render json: @level.summarize_for_lab2_properties(nil, nil, current_user)
   end
 
   # GET /levels/1/edit
@@ -491,7 +491,8 @@ class LevelsController < ApplicationController
   end
 
   # GET /levels/:id/extra_links
-  # Get the extra links for the level, for use by levelbuilders.
+  # Get the "extra links" for the level, for use by levelbuilders and project validators.
+  # Project validators can view a subset of the links/information.
   # This is used by lab2 levels that cannot use the haml "extra links" box
   # as that box will not refresh when changing levels.
   def extra_links
@@ -505,7 +506,8 @@ class LevelsController < ApplicationController
     # Curriculum writers rarely need to edit STANDALONE_PROJECTS levels, and accidental edits to these levels
     # can be quite disruptive. As a workaround you can navigate directly to the edit url for these levels.
     if Rails.application.config.levelbuilder_mode && !is_standalone_project
-      if can? :edit, @level
+      can_edit_level = can? :edit, @level
+      if can_edit_level
         links[@level.name] << {text: '[E]dit', url: edit_level_path(@level), access_key: 'e'}
         if @level.is_a?(Javalab) || @level.is_a?(Pythonlab) || @level.is_a?(Weblab2)
           links[@level.name] << {text: "[s]tart", url: edit_blocks_level_path(@level, :start_sources), access_key: 's'}
@@ -521,9 +523,15 @@ class LevelsController < ApplicationController
       if project_template_level_name = @level.properties['project_template_level_name']
         project_template_level = Level.find_by_name(project_template_level_name)
         links["Template Level"] = [
-          {text: project_template_level_name, url: level_path(project_template_level)},
-          {text: 'Edit', url: edit_level_path(project_template_level)}
+          {text: project_template_level_name, url: level_path(project_template_level)}
         ]
+        template_level_edit_link =
+          if can_edit_level
+            {text: 'Edit', url: edit_level_path(project_template_level)}
+          else
+            {text: '(Cannot edit)', url: ''}
+          end
+        links["Template Level"] << template_level_edit_link
       end
 
     elsif @script_level
@@ -554,7 +562,7 @@ class LevelsController < ApplicationController
       can_clone: can?(:clone, @level),
       can_delete: can?(:delete, @level),
       level_name: @level.name,
-      script_level_path_links: script_level_path_links
+      script_level_path_links: script_level_path_links,
     }
   end
 
@@ -639,7 +647,7 @@ class LevelsController < ApplicationController
     # Parse a few specific JSON fields used by modern (Lab2) labs so that they are
     # stored in the database as a first-order member of the properties JSON, rather
     # than simply as a string of JSON belonging to a single property.
-    [:level_data, :aichat_settings, :validations, :panels].each do |key|
+    [:level_data, :aichat_settings, :validations, :panels, :predict_settings].each do |key|
       level_params[key] = JSON.parse(level_params[key]) if level_params[key]
     end
     # Delete validations from level data if present. We'll use the validations in level properties instead.
