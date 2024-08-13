@@ -1,4 +1,5 @@
-import mm, {MusicRNN, sequences} from '@magenta/music';
+import mm, {MusicRNN, sequences} from '@magenta/music/es6';
+
 import {PatternTickEvent} from '../player/interfaces/PatternEvent';
 
 const model = new MusicRNN(
