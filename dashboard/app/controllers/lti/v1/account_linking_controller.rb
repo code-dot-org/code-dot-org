@@ -23,7 +23,10 @@ module Lti
 
       # POST /lti/v1/account_linking/link_email
       def link_email
-        head :bad_request unless PartialRegistration.in_progress?(session)
+        unless PartialRegistration.in_progress?(session)
+          head :bad_request and return
+        end
+
         params.require([:email, :password])
         existing_user = User.find_by_email_or_hashed_email(params[:email])
         if existing_user&.admin?
@@ -44,7 +47,7 @@ module Lti
           )
           target_url = session[:user_return_to] || home_path
           flash[:notice] = I18n.t('lti.account_linking.successfully_linked')
-          redirect_to target_url
+          redirect_to target_url and return
         else
           flash.alert = I18n.t('lti.account_linking.invalid_credentials')
           redirect_to user_session_path(lti_provider: params[:lti_provider], lms_name: params[:lms_name]) and return
