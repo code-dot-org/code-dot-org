@@ -56,14 +56,7 @@ rows.each do |row|
     if do_dry_run
       puts "can remove student data with id " + student_id.to_s
     else
-      # Retrieve storage ID for the user
-      user_storage_id = storage_id_for_user_id(student_id)
-      # inspired from: https://github.com/code-dot-org/code-dot-org/blob/375e794083094cf128e9fac67ba09ec5adcd436b/dashboard/app/controllers/admin_users_controller.rb#L193
-      UserScript.where(user_id: student_id, script_id: script_id).destroy_all
-      UserLevel.where(user_id: student_id, script_id: script_id).destroy_all
-      ChannelToken.where(storage_id: user_storage_id, script_id: script_id).destroy_all unless user_storage_id.nil?
-      TeacherFeedback.where(student_id: student_id, script_id: script_id).destroy_all
-      CodeReview.where(user_id: student_id, script_id: script_id).destroy_all
+      User.delete_progress_for_unit(user_id: student_id, script_id: script_id)
     end
   else
     puts "Student with id " + student_id.to_s + " is not in teacher " + teacher_id.to_s +
