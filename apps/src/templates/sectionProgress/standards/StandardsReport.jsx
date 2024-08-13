@@ -52,13 +52,19 @@ class StandardsReport extends Component {
   };
 
   componentDidMount() {
-    this.props.setTeacherCommentForReport(
-      window.opener.teacherDashboardStoreInformation.teacherComment
-    );
-    const scriptIdFromTD =
-      window.opener.teacherDashboardStoreInformation.scriptId;
-    this.props.setScriptId(scriptIdFromTD);
-    loadUnitProgress(scriptIdFromTD, this.props.sectionId);
+    try {
+      this.props.setTeacherCommentForReport(
+        window.opener.teacherDashboardStoreInformation.teacherComment
+      );
+      const scriptIdFromTD =
+        window.opener.teacherDashboardStoreInformation.scriptId;
+      this.props.setScriptId(scriptIdFromTD);
+      loadUnitProgress(scriptIdFromTD, this.props.sectionId);
+    } catch (e) {
+      throw new Error(
+        '/standards_report must be opened from the `generate PDF report` button of the Standards tab on the v1 progress page on a section assigned to curriculum that has standards (e.g. `Course C (2023)`).'
+      );
+    }
   }
 
   getLinkToOverview() {
