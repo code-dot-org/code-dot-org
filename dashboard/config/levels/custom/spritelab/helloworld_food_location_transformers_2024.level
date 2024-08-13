@@ -42,7 +42,8 @@
     "helper_libraries": [
       "NativeSpriteLab",
       "zHelloWorldValidation",
-      "zValidationHelperFunctions"
+      "zValidationHelperFunctions",
+      "transformers"
     ],
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
@@ -73,11 +74,11 @@
     "skip_autosave": true,
     "project_template_level_name": "helloworld_food_template_transformers_2024",
     "encrypted_examples": "ymZKPOCnVExTJR5CQrTBpL41Memxyt0nM6CkHhs6oe32Wje0lFfIoCCOn1fO\n9ku6ju82b3v6bnf+sEXA5bSTBQ==\n",
-    "preload_asset_list": null,
-    "standalone_app_name": "spritelab"
+    "standalone_app_name": "spritelab",
+    "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:52.035+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_location\\\"\"],\"cloned_from\":\"helloworld_food_location\"},{\"changed_at\":\"2024-08-09 17:11:28 +0000\",\"changed\":[\"start_blocks\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:52.035+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_location\\\"\"],\"cloned_from\":\"helloworld_food_location\"},{\"changed_at\":\"2024-08-09 17:11:28 +0000\",\"changed\":[\"start_blocks\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-12 20:30:20 +0000\",\"changed\":[\"start_blocks\",\"helper_libraries\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
