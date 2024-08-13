@@ -298,6 +298,7 @@ export default function LearningGoal({
             submittedEvaluation={submittedEvaluation}
             isStudent={isStudent}
             isAutosaving={autosaveStatus === STATUS.IN_PROGRESS}
+            arrowPositionCallback={_ => {}}
           />
           {learningGoal.tips && !isStudent && (
             <div>
