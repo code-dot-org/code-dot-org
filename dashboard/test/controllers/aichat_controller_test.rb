@@ -209,8 +209,8 @@ class AichatControllerTest < ActionController::TestCase
     # 2 chat event stored for pilot student1 in AichatEvents table so 2 chat events returned
     # in descending order.
     assert_equal chat_events_array.length, 2
-    chat_event1_response = JSON.parse(chat_events_array.last)
-    chat_event2_response = JSON.parse(chat_events_array.first)
+    chat_event1_response = chat_events_array.last
+    chat_event2_response = chat_events_array.first
     chat_event1_stored = JSON.parse(AichatEvent.find(@student1_aichat_event1.id).aichat_event)
     chat_event2_stored = JSON.parse(AichatEvent.find(@student1_aichat_event2.id).aichat_event)
     assert_equal chat_event1_response.keys, ['role', 'chatMessageText', 'status', 'timestamp']
