@@ -8,7 +8,7 @@ import ChatEventView from './ChatEventView';
 
 import moduleStyles from './chatWorkspace.module.scss';
 
-interface ChatWithModelProps {
+interface ChatEventsListProps {
   events: ChatEvent[];
   showWaitingAnimation: () => React.ReactNode;
 }
@@ -16,7 +16,7 @@ interface ChatWithModelProps {
 /**
  * Renders AI Chat {@link ChatEvent}s using common AI design components.
  */
-const ChatWithModel: React.FunctionComponent<ChatWithModelProps> = ({
+const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   events,
   showWaitingAnimation,
 }) => {
@@ -49,4 +49,4 @@ const ChatWithModel: React.FunctionComponent<ChatWithModelProps> = ({
   );
 };
 
-export default ChatWithModel;
+export default ChatEventsList;
