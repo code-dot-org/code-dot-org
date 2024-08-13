@@ -38,16 +38,6 @@ GIT
       omniauth-oauth2 (>= 1.1, <= 1.5)
 
 GIT
-  remote: https://github.com/code-dot-org/omniauth-openid-connect.git
-  revision: 2397b1415896e2639a7582a36e26c90b9211f99f
-  ref: cdo
-  specs:
-    omniauth-openid-connect (0.2.2)
-      addressable (~> 2.3)
-      omniauth (~> 1.1)
-      openid_connect (~> 1.0, >= 1.0.3)
-
-GIT
   remote: https://github.com/code-dot-org/omniauth-windowslive.git
   revision: 68ece379fa4d79a49505454c52aaf9142cd2ed74
   ref: cdo
@@ -626,7 +616,13 @@ GEM
     omniauth-rails_csrf_protection (0.1.2)
       actionpack (>= 4.2)
       omniauth (>= 1.3.1)
+    omniauth_openid_connect (0.6.1)
+      omniauth (>= 1.9, < 3)
+      openid_connect (~> 1.1)
     open-uri (0.1.0)
+      stringio
+      time
+      uri
     open_uri_redirections (0.2.1)
     openid_connect (1.4.2)
       activemodel
@@ -877,6 +873,7 @@ GEM
       ip3country (~> 0.2.1)
       user_agent_parser (~> 2.15.0)
     stringex (2.5.2)
+    stringio (3.1.1)
     swd (1.3.0)
       activesupport (>= 3)
       attr_required (>= 0.0.5)
@@ -891,6 +888,8 @@ GEM
     thwait (0.2.0)
       e2mmap
     tilt (2.0.11)
+    time (0.3.0)
+      date
     timecop (0.8.1)
     timeout (0.3.2)
     trailblazer-option (0.1.2)
@@ -909,6 +908,7 @@ GEM
     unf_ext (0.0.7.2)
     unicode-display_width (2.4.2)
     unicode_utils (1.4.0)
+    uri (0.13.0)
     user_agent_parser (2.15.0)
     validate_email (0.1.6)
       activemodel (>= 3.0)
@@ -1057,9 +1057,9 @@ DEPENDENCIES
   omniauth-google-oauth2 (~> 0.6.0)
   omniauth-microsoft_v2_auth!
   omniauth-openid
-  omniauth-openid-connect!
   omniauth-rails_csrf_protection (~> 0.1)
   omniauth-windowslive (~> 0.0.11)!
+  omniauth_openid_connect (~> 0.6)
   open_uri_redirections
   os
   parallel
