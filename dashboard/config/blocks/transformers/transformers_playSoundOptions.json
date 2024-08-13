@@ -1,5 +1,5 @@
 {
-  "category": "HoC",
+  "category": "Transformers",
   "config": {
     "func": "playSoundOptions",
     "docFunc": "gamelab_playSound",
@@ -9,8 +9,64 @@
         "name": "SOUND",
         "options": [
           [
-            "transformers SFX 1",
-            "'sound://category_space/Blackhole_SFX.mp3'"
+            "Glitch",
+            "'sound://category_transformers/transforming1.mp3'"
+          ],
+          [
+            "Static",
+            "'sound://category_transformers/transforming2.mp3'"
+          ],
+          [
+            "Warp",
+            "'sound://category_transformers/transforming3.mp3'"
+          ],
+          [
+            "Buzz",
+            "'sound://category_transformers/transforming4.mp3'"
+          ],
+          [
+            "Synthesize",
+            "'sound://category_transformers/transforming5.mp3'"
+          ],
+          [
+            "Fuzz",
+            "'sound://category_transformers/transforming6.mp3'"
+          ],
+          [
+            "Electric",
+            "'sound://category_transformers/transforming7.mp3'"
+          ],
+          [
+            "Pulse",
+            "'sound://category_transformers/transforming8.mp3'"
+          ],
+          [
+            "Cybernetic",
+            "'sound://category_transformers/transforming9.mp3'"
+          ],
+          [
+            "Zap",
+            "'sound://category_transformers/transforming10.mp3'"
+          ],
+          [
+            "Transform",
+            "'sound://category_transformers/transforming11.mp3'"
+          ],
+          [
+            "Robotic",
+            "'sound://category_transformers/transforming12.mp3'"
+          ],
+          [
+            "Ping",
+            "'sound://category_transformers/transforming13.mp3'"
+          ],
+          [
+            "Pulse",
+            "'sound://category_transformers/transforming14.mp3'"
+          ],
+          [
+            "Crash",
+            "'sound://category_transformers/transforming15.mp3'"
           ]
         ]
       }
