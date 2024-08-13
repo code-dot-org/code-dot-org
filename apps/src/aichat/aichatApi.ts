@@ -105,7 +105,7 @@ export async function postAichatCheckSafety(
 
 /**
  * This function sends a GET request to the aichat student chat history backend controller, then returns
- * a list of chat events (JSON) if successful.
+ * a list of chat events if successful.
  */
 export async function getStudentChatHistory(
   studentUserId: number,

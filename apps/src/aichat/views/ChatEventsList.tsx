@@ -21,8 +21,9 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   showWaitingAnimation,
 }) => {
   const {isWaitingForChatResponse} = useAppSelector(state => state.aichat);
-  // Compare the messages as a string since the object reference will change on every update.
-  // This way we will only scroll when the contents of the messages have changed.
+
+  // Compare the chat events  as a string since the object reference will change on every update.
+  // This way we will only scroll when the contents of the events have changed.
   const eventsString = JSON.stringify(events);
   const conversationContainerRef = useRef<HTMLDivElement>(null);
 
