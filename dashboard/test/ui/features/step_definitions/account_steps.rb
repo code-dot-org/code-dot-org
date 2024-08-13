@@ -17,6 +17,7 @@ Then /^I sign out using jquery$/ do
 end
 
 Given(/^I sign in as "([^"]*)"( and go home)?$/) do |name, home|
+  steps "And I wait for 3 seconds"
   navigate_to replace_hostname('http://studio.code.org/reset_session')
   sign_in name
   redirect = 'http://studio.code.org/home'
@@ -97,6 +98,7 @@ end
 
 # Creates the user and signs them in.
 def create_user(name, url: '/api/test/create_user', **user_opts)
+  steps "And I wait for 3 seconds"
   navigate_to replace_hostname('http://studio.code.org/reset_session')
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, tries: 3) do
     # Generate the user
@@ -278,6 +280,7 @@ When(/^I sign out$/) do
     browser_request(url: replace_hostname('/users/sign_out.json'), code: 204)
     @browser.execute_script("sessionStorage.clear(); localStorage.clear();")
   else
+    steps "And I wait for 3 seconds"
     navigate_to replace_hostname('http://studio.code.org/reset_session')
   end
 end
