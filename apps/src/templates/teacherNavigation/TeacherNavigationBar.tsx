@@ -3,6 +3,7 @@ import {useSelector} from 'react-redux';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import Typography from '@cdo/apps/componentLibrary/typography';
+import TeacherNavigationSidebarOption from '@cdo/apps/templates/teacherNavigation/TeacherNavigationSidebarOption';
 import i18n from '@cdo/locale';
 
 import styles from './teacher-navigation.module.scss';
@@ -57,6 +58,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
           labelText=""
           size="m"
           selectedValue={selectedSectionId}
+          className={styles.sectionDropdown}
           name="section-dropdown"
         />
         <Typography
@@ -66,6 +68,11 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
         >
           {i18n.courseContent()}
         </Typography>
+        <TeacherNavigationSidebarOption
+          icon={'split'}
+          optionTitle={i18n.courseContent()}
+          isSelected={true}
+        />
         <Typography
           semanticTag={'h2'}
           visualAppearance={'overline-two'}

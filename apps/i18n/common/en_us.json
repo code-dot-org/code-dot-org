@@ -1993,7 +1993,7 @@
   "percentCorrect": "% correct",
   "perfect": "perfect",
   "perfectDescription": "PERFECT!",
-  "Performance": "Performance",
+  "performance": "Performance",
   "performanceLevel": "Performance Level",
   "performanceLevelDetails": "Performance Level Details",
   "personalLoginDialog_body1": "You have {numStudents} or more students that log into Code.org via secret words, secret pictures, or a third-party service and might not have set up a personal login. ",
