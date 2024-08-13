@@ -99,12 +99,20 @@ function TeacherDashboard({
     location.pathname !== TEACHER_DASHBOARD_PATHS.standardsReport &&
     location.pathname !== TEACHER_DASHBOARD_PATHS.navTestV2;
 
-  const renderEmptySectionOrElement = element => {
-    if (studentCount === 0 || !anyStudentHasProgress) {
+  const renderEmptySectionOrElement = (
+    element,
+    showCurriculumAssignedEmpty = true
+  ) => {
+    if (
+      studentCount === 0 ||
+      (!anyStudentHasProgress && showCurriculumAssignedEmpty)
+    ) {
       return (
         <EmptySection
           hasStudents={studentCount > 0}
-          hasCurriculumAssigned={anyStudentHasProgress}
+          hasCurriculumAssigned={
+            anyStudentHasProgress || !showCurriculumAssignedEmpty
+          }
         />
       );
     }
@@ -150,7 +158,8 @@ function TeacherDashboard({
           element={renderEmptySectionOrElement(
             applyV1TeacherDashboardWidth(
               <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
-            )
+            ),
+            false
           )}
         />
         <Route
