@@ -6,15 +6,17 @@ import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 
 import styles from './teacher-navigation.module.scss';
 
-interface TeacherNavigationSidebarOptionProps {
+interface SidebarOptionProps {
   icon: string;
   optionTitle: string;
   isSelected: boolean;
 }
 
-const TeacherNavigationSidebarOption: React.FC<
-  TeacherNavigationSidebarOptionProps
-> = ({icon, optionTitle, isSelected}) => {
+const SidebarOption: React.FC<SidebarOptionProps> = ({
+  icon,
+  optionTitle,
+  isSelected,
+}) => {
   return (
     <div
       className={classNames(styles.sidebarOption, {
@@ -27,4 +29,4 @@ const TeacherNavigationSidebarOption: React.FC<
   );
 };
 
-export default TeacherNavigationSidebarOption;
+export default SidebarOption;

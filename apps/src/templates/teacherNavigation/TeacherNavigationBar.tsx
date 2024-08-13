@@ -3,7 +3,7 @@ import {useSelector} from 'react-redux';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import Typography from '@cdo/apps/componentLibrary/typography';
-import TeacherNavigationSidebarOption from '@cdo/apps/templates/teacherNavigation/TeacherNavigationSidebarOption';
+import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
 import i18n from '@cdo/locale';
 
 import styles from './teacher-navigation.module.scss';
@@ -42,101 +42,89 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     }
   }, [sections, selectedSectionId]);
 
-  const courseContent = (
-    <>
+  const getSectionHeader = (label: string) => {
+    return (
       <Typography
         semanticTag={'h2'}
         visualAppearance={'overline-two'}
         className={styles.sectionHeader}
       >
-        {i18n.courseContent()}
+        {label}
       </Typography>
-      <TeacherNavigationSidebarOption
-        icon={'desktop'}
-        optionTitle={i18n.course()}
-        isSelected={false}
-      />
-      <TeacherNavigationSidebarOption
-        icon={'folder-open'}
-        optionTitle={i18n.lessonMaterials()}
-        isSelected={false}
-      />
-      <TeacherNavigationSidebarOption
-        icon={'file-lines'}
-        optionTitle={i18n.lessonPlans()}
-        isSelected={false}
-      />
-      <TeacherNavigationSidebarOption
-        icon={'presentation-screen'}
-        optionTitle={i18n.slideDecks()}
-        isSelected={false}
-      />
-      <TeacherNavigationSidebarOption
-        icon={'calendar'}
-        optionTitle={i18n.calendar()}
-        isSelected={false}
-      />
-    </>
-  );
+    );
+  };
 
-  const performanceContent = (
-    <>
-      <Typography
-        semanticTag={'h2'}
-        visualAppearance={'overline-two'}
-        className={styles.sectionHeader}
-      >
-        {i18n.performance()}
-      </Typography>
-      <TeacherNavigationSidebarOption
-        icon={'chart-line'}
-        optionTitle={i18n.progress()}
-        isSelected={false}
-      />
-      <TeacherNavigationSidebarOption
-        icon={'star'}
-        optionTitle={i18n.assessments()}
-        isSelected={false}
-      />
-      <TeacherNavigationSidebarOption
-        icon={'code'}
-        optionTitle={i18n.studentProjects()}
-        isSelected={true}
-      />
-      <TeacherNavigationSidebarOption
-        icon={'chart-simple'}
-        optionTitle={i18n.teacherTabStats()}
-        isSelected={false}
-      />
-      <TeacherNavigationSidebarOption
-        icon={'pen-line'}
-        optionTitle={i18n.teacherTabStatsTextResponses()}
-        isSelected={false}
-      />
-    </>
-  );
+  const courseContent = [
+    getSectionHeader(i18n.courseContent()),
+    <SidebarOption
+      icon={'desktop'}
+      optionTitle={i18n.course()}
+      isSelected={false}
+    />,
+    <SidebarOption
+      icon={'folder-open'}
+      optionTitle={i18n.lessonMaterials()}
+      isSelected={false}
+    />,
+    <SidebarOption
+      icon={'file-lines'}
+      optionTitle={i18n.lessonPlans()}
+      isSelected={false}
+    />,
+    <SidebarOption
+      icon={'presentation-screen'}
+      optionTitle={i18n.slideDecks()}
+      isSelected={false}
+    />,
+    <SidebarOption
+      icon={'calendar'}
+      optionTitle={i18n.calendar()}
+      isSelected={false}
+    />,
+  ];
 
-  const classroomContent = (
-    <>
-      <Typography
-        semanticTag={'h2'}
-        visualAppearance={'overline-two'}
-        className={styles.sectionHeader}
-      >
-        {i18n.classroom()}
-      </Typography>
-      <TeacherNavigationSidebarOption
-        icon={'users'}
-        optionTitle={i18n.roster()}
-        isSelected={false}
-      />
-      <TeacherNavigationSidebarOption
-        icon={'gear'}
-        optionTitle={i18n.settings()}
-        isSelected={false}
-      />
-    </>
-  );
+  const performanceContent = [
+    getSectionHeader(i18n.performance()),
+    <SidebarOption
+      icon={'chart-line'}
+      optionTitle={i18n.progress()}
+      isSelected={false}
+    />,
+    <SidebarOption
+      icon={'star'}
+      optionTitle={i18n.assessments()}
+      isSelected={false}
+    />,
+    <SidebarOption
+      icon={'code'}
+      optionTitle={i18n.studentProjects()}
+      isSelected={true}
+    />,
+    <SidebarOption
+      icon={'chart-simple'}
+      optionTitle={i18n.teacherTabStats()}
+      isSelected={false}
+    />,
+    <SidebarOption
+      icon={'pen-line'}
+      optionTitle={i18n.teacherTabStatsTextResponses()}
+      isSelected={false}
+    />,
+  ];
+
+  const classroomContent = [
+    getSectionHeader(i18n.classroom()),
+    <SidebarOption
+      icon={'users'}
+      optionTitle={i18n.roster()}
+      isSelected={false}
+    />,
+    <SidebarOption
+      icon={'gear'}
+      optionTitle={i18n.settings()}
+      isSelected={false}
+    />,
+  ];
 
   return (
     <nav className={styles.sidebarContainer}>
