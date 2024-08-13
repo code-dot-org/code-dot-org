@@ -42,6 +42,26 @@ module ActiveSupport
 
           name
         end
+
+        def subject(name = :subject, &block)
+          already_initialized = respond_to?(name)
+
+          let name, &block
+
+          let("_#{name}") {_ public_send(name)} unless already_initialized
+        end
+
+        def let!(name, &block)
+          already_initialized = respond_to?(name)
+
+          let name, &block
+
+          before {public_send(name)} unless already_initialized
+        end
+      end
+
+      def described_class
+        @described_class ||= class_name[/^(.*)Test::/, 1]&.constantize
       end
     end
   end

@@ -216,80 +216,6 @@ class MailJetTest < Minitest::Test
     MailJet.create_contact_and_add_to_welcome_series(user, 'es-MX')
   end
 
-  def test_send_teacher_cap_section_warning
-    email = 'fake.email@test.xx'
-
-    sign_up_time = Time.now.to_datetime
-
-    user = mock
-    user.stubs(:id).returns(1)
-    user.stubs(:email).returns(email)
-    user.stubs(:name).returns('Fake Name')
-    user.stubs(:teacher?).returns(true)
-    user.stubs(:created_at).returns(sign_up_time)
-
-    sections = [
-      {'Name' => 'Section 1', 'Link' => 'https://example.com/section1'},
-      {'Name' => 'Section 2', 'Link' => 'https://example.com/section2'}
-    ]
-
-    mock_contactdata = mock('Mailjet::Contactdata')
-    MailJet.expects(:enabled?).returns(true)
-    user.expects(:persisted?).returns(true)
-
-    MailJet.expects(:find_or_create_contact).with(email, user.name).returns(mock_contactdata)
-
-    MailJet.expects(:send_template_email).with(mock_contactdata, MailJet::EMAILS[:cap_section_warning], 'en-US', variables: {capSections: sections})
-
-    MailJet.send_teacher_cap_section_warning(user, sections)
-  end
-
-  def test_send_teacher_cap_section_warning_to_student
-    email = 'fake.email@test.xx'
-
-    sign_up_time = Time.now.to_datetime
-
-    user = mock
-    user.stubs(:id).returns(1)
-    user.stubs(:email).returns(email)
-    user.stubs(:name).returns('Fake Name')
-    user.stubs(:teacher?).returns(false)
-    user.stubs(:created_at).returns(sign_up_time)
-
-    sections = [
-      {'Name' => 'Section 1', 'Link' => 'https://example.com/section1'},
-      {'Name' => 'Section 2', 'Link' => 'https://example.com/section2'}
-    ]
-
-    MailJet.expects(:enabled?).returns(true)
-    user.expects(:persisted?).returns(true)
-
-    assert_raises(ArgumentError, 'the user must be a teacher') do
-      MailJet.send_teacher_cap_section_warning(user, sections)
-    end
-  end
-
-  def test_send_teacher_cap_section_warning_to_non_persisted_user
-    email = 'fake.email@test.xx'
-
-    user = mock
-    user.stubs(:email).returns(email)
-    user.stubs(:name).returns('Fake Name')
-    user.stubs(:teacher?).returns(false)
-
-    sections = [
-      {'Name' => 'Section 1', 'Link' => 'https://example.com/section1'},
-      {'Name' => 'Section 2', 'Link' => 'https://example.com/section2'}
-    ]
-
-    MailJet.expects(:enabled?).returns(true)
-    user.expects(:persisted?).returns(false)
-
-    assert_raises(ArgumentError, 'the user must be persisted') do
-      MailJet.send_teacher_cap_section_warning(user, sections)
-    end
-  end
-
   def test_valid_email_deliverable
     Mailgun::Address.any_instance.expects(:validate).returns({'result' => 'deliverable'})
     assert MailJet.valid_email?('test@email.com')
@@ -341,5 +267,52 @@ class MailJetTest < Minitest::Test
     Mailjet::Listrecipient.expects(:create).with(list_id: list_id, contact_id: 123)
 
     MailJet.add_to_contact_list(contact, list_id)
+  end
+
+  def test_sending_email_with_template
+    template_name = :email_template_name
+    template_config = 'email_template_config'
+    contact_email = 'contact_email'
+    contact_name = 'contact_name'
+    mailjet_contact = 'mailjet_contact'
+
+    MailJetConstants.stub_const(:EMAILS, {template_name => template_config}) do
+      MailJet.expects(:find_or_create_contact).with(contact_email, contact_name).returns(mailjet_contact)
+      MailJet.expects(:send_template_email).with(mailjet_contact, template_config, 'en-US', variables: {}).once
+
+      MailJet.send_email(template_name, contact_email, contact_name)
+    end
+  end
+
+  def test_sending_email_with_template_vars_and_locale
+    template_name = :email_template_name
+    template_config = 'email_template_config'
+    contact_email = 'contact_email'
+    contact_name = 'contact_name'
+    mailjet_contact = 'mailjet_contact'
+    vars = {variables: 'variables'}
+    locale = 'locale'
+
+    MailJetConstants.stub_const(:EMAILS, {template_name => template_config}) do
+      MailJet.expects(:find_or_create_contact).with(contact_email, contact_name).returns(mailjet_contact)
+      MailJet.expects(:send_template_email).with(mailjet_contact, template_config, locale, variables: vars).once
+
+      MailJet.send_email(template_name, contact_email, contact_name, vars: vars, locale: locale)
+    end
+  end
+
+  def test_sending_email_with_invalid_template
+    template_name = :email_template_name
+    contact_email = 'contact_email'
+    contact_name = 'contact_name'
+    mailjet_contact = 'mailjet_contact'
+
+    MailJetConstants.stub_const(:EMAILS, {template_name => nil}) do
+      MailJet.expects(:find_or_create_contact).with(contact_email, contact_name).returns(mailjet_contact).never
+      MailJet.expects(:send_template_email).with(mailjet_contact, anything).never
+
+      actual_error = assert_raises(ArgumentError) {MailJet.send_email(template_name, contact_email, contact_name)}
+      assert_equal "Invalid email template: #{template_name}", actual_error.message
+    end
   end
 end
