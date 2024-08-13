@@ -135,18 +135,9 @@ async function deleteRequest(
   );
 }
 
-async function getRequest(
-  endpoint: string,
-  useAuthenticityToken = false,
-  headers: Record<string, string> = {}
-): Promise<Response> {
-  return sendRequest('GET', endpoint, undefined, useAuthenticityToken, headers);
-}
-
 export default {
   delete: deleteRequest,
   fetchJson,
-  get: getRequest,
   post,
   put,
 };

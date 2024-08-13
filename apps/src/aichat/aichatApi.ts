@@ -122,13 +122,8 @@ export async function getStudentChatHistory(
     params.scriptLevelId = scriptLevelId.toString();
   }
   const urlParams = new URLSearchParams(params);
-  const response = await HttpClient.get(
-    STUDENT_CHAT_HISTORY_URL + '?' + new URLSearchParams(urlParams.toString()),
-    true,
-    {
-      'Content-Type': 'application/json; charset=UTF-8',
-    }
+  const response = await HttpClient.fetchJson<ChatEvent[]>(
+    STUDENT_CHAT_HISTORY_URL + '?' + new URLSearchParams(urlParams.toString())
   );
-
-  return await response.json();
+  return response.value;
 }
