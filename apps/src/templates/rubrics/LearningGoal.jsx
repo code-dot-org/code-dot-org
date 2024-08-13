@@ -16,7 +16,9 @@ import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
 import AiAssessment from './AiAssessment';
-import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
+import AiAssessmentFeedbackContext, {
+  NO_FEEDBACK,
+} from './AiAssessmentFeedbackContext';
 import EvidenceLevels from './EvidenceLevels';
 import {UNDERSTANDING_LEVEL_STRINGS} from './rubricHelpers';
 import {
@@ -52,7 +54,8 @@ export default function LearningGoal({
     ERROR: 3,
   });
   const [isOpen, setIsOpen] = useState(false);
-  const [aiFeedback, setAiFeedback] = useState(-1);
+  const [aiFeedback, setAiFeedback] = useState(NO_FEEDBACK);
+  const [aiFeedbackId, setAiFeedbackId] = useState(null);
   const [autosaveStatus, setAutosaveStatus] = useState(STATUS.NOT_STARTED);
   const [learningGoalEval, setLearningGoalEval] = useState(null);
   const [displayFeedback, setDisplayFeedback] = useState('');
@@ -269,7 +272,7 @@ export default function LearningGoal({
       {/*TODO: Pass through data to child component*/}
       <div>
         <AiAssessmentFeedbackContext.Provider
-          value={{aiFeedback, setAiFeedback}}
+          value={{aiFeedback, setAiFeedback, aiFeedbackId, setAiFeedbackId}}
         >
           {teacherHasEnabledAi &&
             !!studentLevelInfo &&

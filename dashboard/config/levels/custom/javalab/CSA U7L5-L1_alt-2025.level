@@ -1,0 +1,29 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T22:11:32.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** Create a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Post</code> object and a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">TrendingPost</code> object with different numbers of likes. Call the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">getLikes()</code> method on both objects and print the results.\r\n\r\nWhat do you notice about the output for both objects?",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "project_template_level_name": "CSA U7L5-L1 Overriding PBT_alt-2025",
+    "teacher_markdown": "The `TrendingPost` version of the `getLikes()` method adds `\"[TRENDING]\"` to the number of likes if it is greater than `1000`, while the `Post` version of the `getLikes()` method only returns the number of likes.",
+    "name_suffix": "_alt-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:11:32.565+00:00\",\"changed\":[\"cloned from \\\"CSA U7L5-L1_pilot-2025\\\"\"],\"cloned_from\":\"CSA U7L5-L1_pilot-2025\"}]"
+}]]></config>
+</Javalab>

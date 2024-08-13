@@ -9,6 +9,7 @@ import {
   FIELD_EFFECTS_NAME,
   FIELD_EFFECTS_VALUE,
   FIELD_CHORD_NAME,
+  FIELD_TUNE_NAME,
   DOCS_BASE_URL,
   FIELD_TRIGGER_START_NAME,
   TriggerStart,
@@ -20,6 +21,7 @@ import {
   fieldPatternDefinition,
   fieldRestDurationDefinition,
   fieldChordDefinition,
+  fieldTuneDefinition,
   fieldTriggerDefinition,
 } from '../fields';
 
@@ -185,6 +187,24 @@ export const playChordAtCurrentLocationSimple2 = {
   generator: block =>
     `Sequencer.playChord(${JSON.stringify(
       block.getFieldValue(FIELD_CHORD_NAME)
+    )},  "${block.id}");`,
+};
+
+export const playTuneAtCurrentLocationSimple2 = {
+  definition: {
+    type: BlockTypes.PLAY_TUNE_AT_CURRENT_LOCATION_SIMPLE2,
+    message0: musicI18n.blockly_blockPlayTune({tune: '%1'}),
+    args0: [fieldTuneDefinition],
+    inputsInline: true,
+    previousStatement: null,
+    nextStatement: null,
+    style: 'lab_blocks',
+    tooltip: musicI18n.blockly_blockPlayTuneTooltip(),
+    helpUrl: DOCS_BASE_URL + 'play_tune',
+  },
+  generator: block =>
+    `Sequencer.playTune(${JSON.stringify(
+      block.getFieldValue(FIELD_TUNE_NAME)
     )},  "${block.id}");`,
 };
 

@@ -8,13 +8,6 @@ module Devise
     module CustomLockable
       # @override https://github.com/heartcombo/devise/blob/v4.9.3/lib/devise/models/lockable.rb#L122-L125
       def increment_failed_attempts
-        # Temporarily gate all of this logic behind a DCDO flag, to make it
-        # easier to disable this new feature in case we discover either
-        # technical or user experience issues upon first release. Defaults to
-        # 'enabled' for more consist behavior between environments.
-        # TODO infra: remove this once we're convinced the feature is stable.
-        return if DCDO.get('devise-custom-lockable-disabled', false)
-
         # Only track failed attempts for teachers; we can't send 'unlock your
         # account' emails to students, so we don't want to lock them out in the
         # first place.

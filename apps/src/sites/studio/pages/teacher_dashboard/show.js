@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
+import DCDO from '@cdo/apps/dcdo';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
@@ -20,6 +21,9 @@ import sectionStandardsProgress from '@cdo/apps/templates/sectionProgress/standa
 import progressV2Feedback from '@cdo/apps/templates/sectionProgressV2/progressV2FeedbackRedux';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
+import SectionNavigationRouter, {
+  SECTION_NAVIGATION_BARE_URL,
+} from '@cdo/apps/templates/teacherDashboard/teacherNavigation/SectionNavigationRouter';
 import teacherSections, {
   setSections,
   selectSection,
@@ -29,6 +33,7 @@ import teacherSections, {
   setStudentsForCurrentSection,
   sectionProviderName,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import experiments from '@cdo/apps/util/experiments';
 
 import {setScriptId} from '../../../../redux/unitSelectionRedux';
 
@@ -95,29 +100,54 @@ $(document).ready(function () {
 
   const showAITutorTab = canViewStudentAIChatMessages;
 
+  const showV2TeacherDashboard =
+    DCDO.get('teacher-local-nav-v2', false) ||
+    experiments.isEnabled('teacher-local-nav-v2');
+
+  const getV1TeacherDashboard = () => (
+    <Router basename={baseUrl}>
+      <Routes>
+        <Route
+          path="/*"
+          element={
+            <TeacherDashboard
+              studioUrlPrefix={scriptData.studioUrlPrefix}
+              sectionId={selectedSection.id}
+              sectionName={selectedSection.name}
+              studentCount={selectedSection.students.length}
+              anyStudentHasProgress={anyStudentHasProgress}
+              showAITutorTab={showAITutorTab}
+              sectionProviderName={sectionProviderName(
+                store.getState(),
+                selectedSection.id
+              )}
+            />
+          }
+        />
+      </Routes>
+    </Router>
+  );
+
   ReactDOM.render(
     <Provider store={store}>
-      <Router basename={baseUrl}>
-        <Routes>
-          <Route
-            path="/*"
-            element={
-              <TeacherDashboard
-                studioUrlPrefix={scriptData.studioUrlPrefix}
-                sectionId={selectedSection.id}
-                sectionName={selectedSection.name}
-                studentCount={selectedSection.students.length}
-                showAITutorTab={showAITutorTab}
-                anyStudentHasProgress={anyStudentHasProgress}
-                sectionProviderName={sectionProviderName(
-                  store.getState(),
-                  selectedSection.id
-                )}
-              />
-            }
+      {!showV2TeacherDashboard ? (
+        getV1TeacherDashboard()
+      ) : (
+        <Router basename={SECTION_NAVIGATION_BARE_URL}>
+          <SectionNavigationRouter
+            studioUrlPrefix={scriptData.studioUrlPrefix}
+            sectionId={selectedSection.id}
+            sectionName={selectedSection.name}
+            studentCount={selectedSection.students.length}
+            anyStudentHasProgress={anyStudentHasProgress}
+            showAITutorTab={showAITutorTab}
+            sectionProviderName={sectionProviderName(
+              store.getState(),
+              selectedSection.id
+            )}
           />
-        </Routes>
-      </Router>
+        </Router>
+      )}
     </Provider>,
     document.getElementById('teacher-dashboard')
   );
