@@ -5,9 +5,7 @@
 .tabs-section.donate-tabs.show-desktop
   -# Tabs nav
   %nav.flex-container.justify-space-between
-    %button.tab.daf-direct.active{"data-content": "#classy"}
-      =hoc_s("donate_page.options.contribute.tab")
-    %button.tab.daf-direct{"data-content": "#daf-direct"}
+    %button.tab.daf-direct.active{"data-content": "#daf-direct"}
       =hoc_s(:donate_tabs_tab_label_daf_direct)
     %button.tab.amazon{"data-content": "#amazon"}
       =hoc_s(:donate_tabs_tab_label_amazon)
@@ -17,9 +15,7 @@
       =hoc_s(:donate_tabs_tab_label_employee_match)
   -# Tabs content
   %div.tab-content-container
-    %div#classy.content.show
-      = view :"tabs_section/donate/donate_tabs_classy"
-    %div#daf-direct.content
+    %div#daf-direct.content.show
       = view :"tabs_section/donate/donate_tabs_daf_direct"
     %div#amazon.content
       = view :"tabs_section/donate/donate_tabs_amazon"
@@ -30,9 +26,6 @@
 
 -# Shows accordion UI on smaller screens
 .tabs-section.donate-tabs.show-tablet-and-mobile
-  %details.classy
-    %summary=hoc_s("donate_page.options.contribute.tab")
-    = view :"tabs_section/donate/donate_tabs_classy"
   %details.daf-direct
     %summary=hoc_s(:donate_tabs_tab_label_daf_direct)
     = view :"tabs_section/donate/donate_tabs_daf_direct"
@@ -46,4 +39,4 @@
     %summary=hoc_s(:donate_tabs_tab_label_employee_match)
     = view :"tabs_section/donate/donate_tabs_employee_match"
 
-= view :tabs_section
+%script{src: '../js/tabs-section.js'}
