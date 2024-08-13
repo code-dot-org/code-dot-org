@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-08-02T22:04:54.000Z",
   "level_num": "custom",
@@ -12,7 +11,8 @@
       "NativeSpriteLab",
       "zHelloWorldValidation",
       "zSpeechBubblePrototype2",
-      "zValidationHelperFunctions"
+      "zValidationHelperFunctions",
+      "transformers"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
@@ -55,7 +55,8 @@
     "block_pool": "gamelab",
     "name_suffix": "_transformers_2024",
     "block_pools": [
-      "GamelabJr"
+      "GamelabJr",
+      "transformers"
     ],
     "mini_rubric": "false",
     "include_shared_functions": "true",
@@ -75,8 +76,9 @@
     "standalone_app_name": "spritelab",
     "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:54.465+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_sounds\\\"\"],\"cloned_from\":\"helloworld_food_sounds\"},{\"changed_at\":\"2024-08-07 17:47:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-07 17:49:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-09 17:13:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:54.465+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_sounds\\\"\"],\"cloned_from\":\"helloworld_food_sounds\"},{\"changed_at\":\"2024-08-07 17:47:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-07 17:49:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-09 17:13:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-12 20:33:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"helper_libraries\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-12 20:36:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"block_pools\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-12 20:37:28 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-12 20:37:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-12 20:38:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1413,111 +1415,89 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="gamelab_setBackgroundImageAs">
-          <title name="IMG">"gradient_10_1"</title>
+        <block type="gamelab_setBackgroundImageAs" id="1lAgPwZEB,F`,|]lP^k1" x="16" y="16">
+          <field name="IMG">"transformers_one_bg_1"</field>
         </block>
-        <block type="gamelab_setBackground">
+        <block type="gamelab_setBackground" id="v%;tGoy;JdInlto7jHbw" x="16" y="90">
           <value name="COLOR">
-            <block type="colour_picker" can_disconnect_from_parent="false">
-              <title name="COLOUR">#3333ff</title>
+            <block type="colour_picker" id="V)Q}e`yToL3=/%W^{x1~" movable="false">
+              <field name="COLOUR">#3333ff</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_playSoundOptions" id="4">
-          <title name="SOUND" config="'sound://category_accent/puzzle_game_accent_a_01.mp3', 'sound://category_digital/boing_2.mp3', 'sound://category_pop/bubble_pop_cluster_airy_1.mp3', 'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3', 'sound://category_app/app_button_1.mp3', 'sound://category_collect/clicky_crunch.mp3', 'sound://category_swish/quick_swing.mp3'">'sound://category_accent/puzzle_game_accent_a_01.mp3'</title>
+        <block type="gamelab_playSoundOptions" id="yGO,(}5K`aiK2F8qM0;$" x="133" y="130">
+          <field name="SOUND">'sound://category_accent/puzzle_game_accent_a_01.mp3'</field>
         </block>
-        <block type="gamelab_makeNewSpriteAnon">
-          <title name="ANIMATION_NAME">"face_carrot_1"</title>
+        <block type="gamelab_makeNewSpriteAnon" id="qZPLUf$WXeJ{-h0A2);s" x="16" y="170">
+          <field name="ANIMATION_NAME">"optimus_prime_1"</field>
           <value name="LOCATION">
-            <block type="gamelab_location_picker" can_disconnect_from_parent="false">
-              <title name="LOCATION">{"x":200,"y":200}</title>
+            <block type="gamelab_location_picker" id="7U0e@jPylbXwbl$h(vFx" movable="false">
+              <field name="LOCATION">{"x":200,"y":200}</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_spriteSay">
-          <title name="SPEECH">Hello, world!</title>
+        <block type="gamelab_spriteSay" id="=eCmJHD#:t:NEkO}LVMH" x="16" y="236">
+          <field name="SPEECH">Hello, world!</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <title name="ANIMATION">"face_apple_1"</title>
+            <block type="gamelab_allSpritesWithAnimation" id="$PfR~^CYk+Aau#GXU#yb" movable="false">
+              <field name="ANIMATION">"optimus_prime_1"</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_setProp">
-          <title name="PROPERTY">"scale"</title>
+        <block type="transformers_setTransformersSize" id="-dt$KCrJ3c`]Fe(/Nf;M" x="48" y="339">
+          <field name="SIZE">0.50</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <title name="ANIMATION">"face_apple_1"</title>
-            </block>
-          </value>
-          <value name="VAL">
-            <block type="math_number" can_disconnect_from_parent="false">
-              <title name="NUM">50</title>
+            <block type="gamelab_allSpritesWithAnimation" id="+]bt/Q;od:,;-c9zpZ(5">
+              <field name="ANIMATION">"optimus_prime_1"</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_changePropBy">
-          <title name="PROPERTY">"scale"</title>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <title name="ANIMATION">"face_apple_1"</title>
-            </block>
-          </value>
-          <value name="VAL">
-            <block type="math_number" can_disconnect_from_parent="false">
-              <title name="NUM">10</title>
-            </block>
-          </value>
+        <block type="transformers_setAllTransformersSize" id="T_|XjDa?D#~1^m[,j:hq" x="97" y="418">
+          <field name="SIZE">0.50</field>
         </block>
-        <block type="gamelab_setAnimation">
-          <title name="ANIMATION">"face_carrot_1"</title>
+        <block type="gamelab_setAnimation" id="pn(8A~+#L~WzIQDR8MQ[" x="16" y="464">
+          <field name="ANIMATION">"optimus_prime_1"</field>
           <value name="THIS">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <title name="ANIMATION">"face_apple_1"</title>
+            <block type="gamelab_allSpritesWithAnimation" id="-_e:J-!Ll}-t@EQN(bIF" movable="false">
+              <field name="ANIMATION">"optimus_prime_1"</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_spriteClicked">
-          <title name="CONDITION">"when"</title>
+        <block type="gamelab_spriteClicked" id="kFT83~:?Q+{h;CaV_%1(" x="16" y="540">
+          <field name="CONDITION">"when"</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <title name="ANIMATION">"face_apple_1"</title>
+            <block type="gamelab_allSpritesWithAnimation" id="J_E@R]NKN3l=}}A(%}iO" movable="false">
+              <field name="ANIMATION">"optimus_prime_1"</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_addBehaviorSimple">
+        <block type="gamelab_addBehaviorSimple" id="|(Z%pG:Xy,.q5?#NkaYq" x="16" y="616">
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <title name="ANIMATION">"face_apple_1"</title>
+            <block type="gamelab_allSpritesWithAnimation" id="{O:rlq2|GL6M=ihVX=_9" movable="false">
+              <field name="ANIMATION">"optimus_prime_1"</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_behavior_get">
-          <mutation/>
-          <title name="VAR" id="spinning right">spinning right</title>
+        <block type="gamelab_behavior_get" id="),,8cn|#M~f11G1h;g1X" x="16" y="707">
+          <mutation behaviorId="spinning right" name="spinning right"/>
         </block>
-        <block type="gamelab_behavior_get">
-          <mutation/>
-          <title name="VAR" id="spinning left">spinning left</title>
+        <block type="gamelab_behavior_get" id="`;ec;papgS;*O/L]kNE`" x="16" y="742">
+          <mutation behaviorId="spinning left" name="spinning left"/>
         </block>
-        <block type="gamelab_behavior_get">
-          <mutation/>
-          <title name="VAR" id="shrinking">shrinking</title>
+        <block type="gamelab_behavior_get" id=".r(U*4I|HQZ?-5L.Nj$a" x="16" y="777">
+          <mutation behaviorId="shrinking" name="shrinking"/>
         </block>
-        <block type="gamelab_behavior_get">
-          <mutation/>
-          <title name="VAR" id="growing">growing</title>
+        <block type="gamelab_behavior_get" id="Hqh:W8|mgy#~03R*.8H;" x="16" y="812">
+          <mutation behaviorId="growing" name="growing"/>
         </block>
-        <block type="gamelab_behavior_get">
-          <mutation/>
-          <title name="VAR" id="fluttering">fluttering</title>
+        <block type="gamelab_behavior_get" id="#Cr$Smz[K-Zr}rrvcCFZ" x="16" y="847">
+          <mutation behaviorId="fluttering" name="fluttering"/>
         </block>
-        <block type="gamelab_behavior_get">
-          <mutation/>
-          <title name="VAR" id="jittering">jittering</title>
+        <block type="gamelab_behavior_get" id="(:HXL8PkGNS,Y_E3_8wC" x="16" y="882">
+          <mutation behaviorId="jittering" name="jittering"/>
         </block>
-        <block type="gamelab_behavior_get">
-          <mutation/>
-          <title name="VAR" id="wobbling">wobbling</title>
+        <block type="gamelab_behavior_get" id="@)!$Y$XN=KC5xM(l!b=|" x="16" y="917">
+          <mutation behaviorId="wobbling" name="wobbling"/>
         </block>
       </xml>
     </toolbox_blocks>
