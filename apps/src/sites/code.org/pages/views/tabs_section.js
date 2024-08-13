@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const hideResponsiveTabs = () => {
     var ww = window.innerWidth;
-    if (ww > 1023) {
+    if (ww > 1024) {
       showTabletAndMobile.remove();
     } else {
       showDesktop.remove();
