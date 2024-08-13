@@ -9,7 +9,7 @@
 -# Shows tabs UI on desktop
 .tabs-section.resources-tabs.show-desktop
   -# Tabs nav
-  %nav.flex-container.justify-space-between
+  %nav.tab-container.flex-container.justify-space-between
     %button.tab.lesson-plans.active{"data-content": "#lesson-plans"}
       =hoc_s(:resources_tabs_tab_label_lesson_plans)
     %button.tab.videos{"data-content": "#videos"}
@@ -19,18 +19,19 @@
     %button.tab.assessments{"data-content": "#assessments"}
       =hoc_s(:resources_tabs_tab_label_assessments)
     %button.tab.tools{"data-content": "#tools"}
-      =hoc_s(:resources_tabs_tab_label_tools)
+      =hoc_s(:"resources_tabs.progress.tab_label")
   -# Tabs content
-  %div#lesson-plans.content.show
-    = view :"tabs_section/resources/resources_tabs_content_lesson_plans"
-  %div#videos.content
-    = view :"tabs_section/resources/resources_tabs_content_videos"
-  %div#slides.content
-    = view :"tabs_section/resources/resources_tabs_content_slides"
-  %div#assessments.content
-    = view :"tabs_section/resources/resources_tabs_content_assessments"
-  %div#tools.content
-    = view :"tabs_section/resources/resources_tabs_content_tools"
+  %div.tab-content-container
+    %div#lesson-plans.content.tab-content.show
+      = view :"tabs_section/resources/resources_tabs_content_lesson_plans"
+    %div#videos.content.tab-content
+      = view :"tabs_section/resources/resources_tabs_content_videos"
+    %div#slides.content.tab-content
+      = view :"tabs_section/resources/resources_tabs_content_slides"
+    %div#assessments.content.tab-content
+      = view :"tabs_section/resources/resources_tabs_content_assessments"
+    %div#tools.content.tab-content
+      = view :"tabs_section/resources/resources_tabs_content_progress"
 
 -# Shows accordion UI on smaller screens
 .tabs-section.resources-tabs.show-tablet-and-mobile
@@ -47,7 +48,7 @@
     %summary=hoc_s(:resources_tabs_tab_label_assessments)
     = view :"tabs_section/resources/resources_tabs_content_assessments"
   %details.tools
-    %summary=hoc_s(:resources_tabs_tab_label_tools)
-    = view :"tabs_section/resources/resources_tabs_content_tools"
+    %summary=hoc_s(:"resources_tabs.progress.tab_label")
+    = view :"tabs_section/resources/resources_tabs_content_progress"
 
 %script{src: '../js/tabs-section.js'}

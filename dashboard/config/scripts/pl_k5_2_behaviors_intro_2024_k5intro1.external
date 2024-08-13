@@ -3,11 +3,12 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Code.org AI Lessons
+# How AI Makes Decisions: Lessons 1-5
 
-#### This lesson will teach you about the foundational concepts of AI, building on your understanding of AI and its everyday applications.
+#### This lesson will teach you about the foundational concepts of AI, building on your understanding of AI and its everyday applications.The following levels have been **pulled directly from student-facing content** that appears in the lessons of the module.
 
-<img src="https://images.code.org/826e9a97bb0fbd0d6fc0c8f70a6604a5-image-1719426950472.png" alt="white robot head with blue eyes with the letters AI beneath the face" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
+<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="white robot head with blue eyes with the letters AI beneath the face" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
 
 ## In this lesson, you will:
@@ -15,6 +16,18 @@ markdown <<MARKDOWN
 * #### Explore how data impacts AI decision making and results 
 * #### Train an AI bot to recognize fish
 * #### Experience how biases impact AI 
+* #### Create and use feature vectors
+
+## The following levels covers student-facing content: 
+* #### <a href="https://levelbuilder-studio.code.org/s/k5-ai-data-2024/lessons/1" target="_blank">Lesson 1: Making Predictions</a>
+
+* #### <a href="https://levelbuilder-studio.code.org/s/k5-ai-data-2024/lessons/2" target="_blank">Lesson 2: Training AI</a>
+
+* #### <a href="https://levelbuilder-studio.code.org/s/k5-ai-data-2024/lessons/3" target="_blank">Lesson 3: Using AI Bot</a>
+
+* #### <a href="https://levelbuilder-studio.code.org/s/k5-ai-data-2024/lessons/4" target="_blank">Lesson 4: AI Tools in School</a>
+* #### <a href="https://levelbuilder-studio.code.org/s/k5-ai-data-2024/lessons/5" target="_blank">Lesson 5: Share Your Voice</a>
+
 
 ### **Suggested time:** 60 minutes
 

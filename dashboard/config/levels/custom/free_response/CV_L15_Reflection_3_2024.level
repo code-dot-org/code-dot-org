@@ -1,5 +1,6 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2024-06-17T22:34:42.000Z",
   "level_num": "custom",
@@ -7,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "# Feedback Experience\r\n\r\n#### What have you learned about the process of collecting, evaluating, and acting on feedback throughout this project? How will this learning influence your approach to future projects?\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
+    "long_instructions": "## Feedback Experience\r\n\r\nWhat have you learned about the process of collecting, evaluating, and acting on feedback throughout this project? How will this learning influence your approach to future projects?",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -19,9 +20,8 @@
     "allow_multiple_attempts": "false",
     "teacher_markdown": "This question aims to explore what students have gleaned from their experiences with feedback, emphasizing the importance of feedback in design and how it shapes their approach to projects. \r\n"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-06-17T22:34:42.612+00:00\",\"changed\":[\"cloned from \\\"CV_L15_Reflection_3\\\"\"],\"cloned_from\":\"CV_L15_Reflection_3\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-06-17T22:34:42.612+00:00\",\"changed\":[\"cloned from \\\"CV_L15_Reflection_3\\\"\"],\"cloned_from\":\"CV_L15_Reflection_3\"},{\"changed_at\":\"2024-07-04 18:45:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

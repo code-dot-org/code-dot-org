@@ -1,7 +1,7 @@
 class CourseOfferingsController < ApplicationController
-  load_and_authorize_resource except: [:quick_assign_course_offerings]
+  load_and_authorize_resource except: [:quick_assign_course_offerings, :self_paced_pl_course_offerings]
 
-  before_action :require_levelbuilder_mode, except: [:quick_assign_course_offerings]
+  before_action :require_levelbuilder_mode, except: [:quick_assign_course_offerings, :self_paced_pl_course_offerings]
   before_action :authenticate_user!
 
   def edit
@@ -33,6 +33,14 @@ class CourseOfferingsController < ApplicationController
 
     offerings = QuickAssignHelper.course_offerings(current_user, request.locale, participant_type)
     render :ok, json: offerings.to_json
+  end
+
+  def self_paced_pl_course_offerings
+    return head :bad_request unless current_user
+    offerings = CourseOffering.assignable_course_offerings(current_user).filter do |co|
+      co.get_participant_audience == 'teacher' && co.any_version_is_in_published_state? && co.instruction_type == 'self_paced' && co.header.present?
+    end
+    render :ok, json: offerings&.map(&:summarize_self_paced_pl).to_json
   end
 
   private def course_offering_params

@@ -1,0 +1,107 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2024-08-02T22:04:52.000Z",
+  "level_num": "custom",
+  "user_id": 9,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "true",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "true",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "hide_animation_mode": "true",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "pause_animations_by_default": "false",
+    "edit_code": "false",
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zHelloWorldValidation",
+      "zValidationHelperFunctions"
+    ],
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "hide_custom_blocks": "true",
+    "use_default_sprites": "false",
+    "auto_run_setup": "DRAW_LOOP",
+    "parent_level_id": 28356,
+    "show_type_hints": "true",
+    "include_shared_functions": "false",
+    "block_pool": "gamelab",
+    "name_suffix": "_transformers_2024",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "mini_rubric": "false",
+    "encrypted": "false",
+    "long_instructions": "TEMPLATE",
+    "start_animations": "{\"orderedKeys\":[\"061c23be-537b-4c5f-9b94-efc6cd826a5d\",\"321cf665-2ccc-47e1-b226-1cae0e5f8ec3\",\"581b5f21-adae-4848-8bb7-fa947e5c3f87\",\"3c66678d-9cc3-4dca-b0c5-7e513094456e\",\"f5ae25b8-42c7-42d3-8ec6-e87a7b4a31f5\",\"b26dd872-48dc-4e4b-9f72-a0a348938c54\",\"fcc51102-c648-4b0f-b5fa-1a0129e6031a\",\"3b40686b-cbc5-45bb-a6c2-6ee923aa2583\"],\"propsByKey\":{\"061c23be-537b-4c5f-9b94-efc6cd826a5d\":{\"name\":\"transformers_one_bg_1\",\"frameCount\":1,\"frameSize\":{\"x\":800,\"y\":800},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-07T17:14:18.000Z\",\"pngLastModified\":\"2024-08-07T17:14:18.000Z\",\"version\":\"dBKUQZCTQZdCtRWW08V9unJxemky7hNH\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/dBKUQZCTQZdCtRWW08V9unJxemky7hNH/transformers_one_bg_1.png\",\"sourceSize\":{\"x\":800,\"y\":800}},\"321cf665-2ccc-47e1-b226-1cae0e5f8ec3\":{\"name\":\"transformers_one_bg_4\",\"frameCount\":1,\"frameSize\":{\"x\":800,\"y\":800},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-07T17:14:50.000Z\",\"pngLastModified\":\"2024-08-07T17:14:50.000Z\",\"version\":\"8C4E8lDExGBWYYp_G3YV16WiaA8J2qTq\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/8C4E8lDExGBWYYp_G3YV16WiaA8J2qTq/transformers_one_bg_4.png\",\"sourceSize\":{\"x\":800,\"y\":800}},\"581b5f21-adae-4848-8bb7-fa947e5c3f87\":{\"name\":\"transformers_one_bg_5\",\"frameCount\":1,\"frameSize\":{\"x\":800,\"y\":800},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-07T17:15:00.000Z\",\"pngLastModified\":\"2024-08-07T17:14:59.000Z\",\"version\":\"z.WaVPfBtQWzxyWWwK5BFl6S5A5aktmF\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/z.WaVPfBtQWzxyWWwK5BFl6S5A5aktmF/transformers_one_bg_5.png\",\"sourceSize\":{\"x\":800,\"y\":800}},\"3c66678d-9cc3-4dca-b0c5-7e513094456e\":{\"name\":\"optimus_prime_1\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:12:23.000Z\",\"pngLastModified\":\"2024-08-07T17:12:22.000Z\",\"version\":\"lXfLgjLKmYgLhV.L23LvCYtNlgwZrA3i\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/lXfLgjLKmYgLhV.L23LvCYtNlgwZrA3i/optimus_prime_1.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"f5ae25b8-42c7-42d3-8ec6-e87a7b4a31f5\":{\"name\":\"megatron_1\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:11:43.000Z\",\"pngLastModified\":\"2024-08-07T17:11:43.000Z\",\"version\":\"S837ya3F1lMBgC37PlzFsBSKGHqvNwcn\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/S837ya3F1lMBgC37PlzFsBSKGHqvNwcn/megatron_1.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"b26dd872-48dc-4e4b-9f72-a0a348938c54\":{\"name\":\"optimus_prime_vehicle\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:12:47.000Z\",\"pngLastModified\":\"2024-08-07T17:12:47.000Z\",\"version\":\"pK2WWKZB1GKQhmivE7hiY6xlPX9UBGWO\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/pK2WWKZB1GKQhmivE7hiY6xlPX9UBGWO/optimus_prime_vehicle.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"fcc51102-c648-4b0f-b5fa-1a0129e6031a\":{\"name\":\"megatron_vehicle\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:12:07.000Z\",\"pngLastModified\":\"2024-08-07T17:12:07.000Z\",\"version\":\"HjVkuEdDCYSYZIiFU_KgSQFw9nTlnt5H\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/HjVkuEdDCYSYZIiFU_KgSQFw9nTlnt5H/megatron_vehicle.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"3b40686b-cbc5-45bb-a6c2-6ee923aa2583\":{\"name\":\"transformers_one_bg_6\",\"frameCount\":1,\"frameSize\":{\"x\":800,\"y\":800},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-07T17:15:10.000Z\",\"pngLastModified\":\"2024-08-07T17:15:09.000Z\",\"version\":\"OhY5JsBjyDH2uEuA_F6.4qOaxm6jyRD0\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/OhY5JsBjyDH2uEuA_F6.4qOaxm6jyRD0/transformers_one_bg_6.png\",\"sourceSize\":{\"x\":800,\"y\":800}}}}\r\n\r\n",
+    "validation_enabled": "false",
+    "mini_toolbox": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"pin\",\r\n  \"callout_text\": \"pin\",\r\n  \"element_id\": \"pin\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom right\",\r\n    \"adjust\": {\r\n     \"x\": -20,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "hide_pause_button": "true",
+    "hint_prompt_attempts_threshold": "1",
+    "authored_hints": "[]",
+    "instructions_icon": "pizza",
+    "standalone_app_name": "spritelab",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:52.144+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_template\\\"\"],\"cloned_from\":\"helloworld_food_template\"},{\"changed_at\":\"2024-08-07 18:46:42 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-07 18:56:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml xmlns="https://developers.google.com/blockly/xml">
+        <block type="when_run" deletable="false" x="16" y="16">
+          <next>
+            <block type="gamelab_makeNewSpriteAnon">
+              <field name="ANIMATION_NAME">"optimus_prime_1"</field>
+              <value name="LOCATION">
+                <block type="gamelab_location_picker" movable="false">
+                  <field name="LOCATION">{"x":200,"y":200}</field>
+                </block>
+              </value>
+              <next>
+                <block type="gamelab_makeNewSpriteAnon">
+                  <field name="ANIMATION_NAME">"megatron_vehicle"</field>
+                  <value name="LOCATION">
+                    <block type="gamelab_location_picker" movable="false">
+                      <field name="LOCATION">{"x":200,"y":200}</field>
+                    </block>
+                  </value>
+                </block>
+              </next>
+            </block>
+          </next>
+        </block>
+      </xml>
+    </start_blocks>
+  </blocks>
+</GamelabJr>

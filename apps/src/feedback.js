@@ -2,40 +2,42 @@
 //   Blockly
 
 import $ from 'jquery';
-import {getStore} from './redux';
+import QRCode from 'qrcode.react';
 import React from 'react';
-import {Provider} from 'react-redux';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import color from '@cdo/apps/util/color';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import msg from '@cdo/locale';
-import dom from './dom';
-import LegacyDialog from './code-studio/LegacyDialog';
-import ChallengeDialog from './templates/ChallengeDialog';
+
+import {getAllBlocks} from './blockly/utils';
+import DownloadReplayVideoButton from './code-studio/components/DownloadReplayVideoButton';
 import project from './code-studio/initApp/project';
+import LegacyDialog from './code-studio/LegacyDialog';
+import testImageAccess from './code-studio/url_test';
+import {TestResults, KeyCodes} from './constants';
+import {getValidatedResult} from './containedLevels';
+import dom from './dom';
 import FeedbackBlocks from './feedbackBlocks';
+import {dataURIToBlob} from './imageUtils';
+import DialogButtons from './legacySharedComponents/DialogButtons';
 import puzzleRatingUtils from './puzzleRatingUtils';
-import DialogButtons from './templates/DialogButtons';
+import {getStore} from './redux';
+import ChallengeDialog from './templates/ChallengeDialog';
 import CodeWritten from './templates/feedback/CodeWritten';
 import GeneratedCode from './templates/feedback/GeneratedCode';
-import {dataURIToBlob} from './imageUtils';
-import trackEvent from './util/trackEvent';
-import {getValidatedResult} from './containedLevels';
 import PublishDialog from './templates/projects/publishDialog/PublishDialog';
-import DownloadReplayVideoButton from './code-studio/components/DownloadReplayVideoButton';
 import {
   showPublishDialog,
   PUBLISH_REQUEST,
   PUBLISH_SUCCESS,
   PUBLISH_FAILURE,
 } from './templates/projects/publishDialog/publishDialogRedux';
+import trackEvent from './util/trackEvent';
 import {createHiddenPrintWindow} from './utils';
-import testImageAccess from './code-studio/url_test';
-import {TestResults, KeyCodes} from './constants';
-import QRCode from 'qrcode.react';
-import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import color from '@cdo/apps/util/color';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {getAllBlocks} from './blockly/utils';
 
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_

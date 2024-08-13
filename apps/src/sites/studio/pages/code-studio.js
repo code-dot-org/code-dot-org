@@ -9,24 +9,34 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {getStore} from '@cdo/apps/code-studio/redux';
-import {setRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
-import initSigninState from '@cdo/apps/code-studio/initSigninState';
-import initResponsive from '@cdo/apps/code-studio/responsive';
+
 import hashEmail from '@cdo/apps/code-studio/hashEmail';
+import initSigninState from '@cdo/apps/code-studio/initSigninState';
+import {setRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
+import {
+  registerGetResult,
+  registerLevel,
+  onAnswerChanged,
+} from '@cdo/apps/code-studio/levels/codeStudioLevels';
+import {getStore} from '@cdo/apps/code-studio/redux';
+import initResponsive from '@cdo/apps/code-studio/responsive';
+import {initHamburger} from '@cdo/apps/hamburger/hamburger.js';
 import GDPRDialog from '@cdo/apps/templates/GDPRDialog';
+// disable import/order rule to import consoleShim after setting store.
+// This might be safe to remove but needs investigation whether any behavior is changed by order.
+/* eslint-disable import/order*/
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 const store = getStore();
 store.dispatch(setRtlFromDOM());
-
 // Shim window.console to be safe in IE
 require('@cdo/apps/code-studio/consoleShim')(window);
+/* eslint-enable import/order*/
 
-var Sounds = require('@cdo/apps/Sounds');
-var activateReferenceAreaOnLoad = require('@cdo/apps/code-studio/reference_area');
 import {checkForUnsupportedBrowsersOnLoad} from '@cdo/apps/util/unsupportedBrowserWarning';
-import {initHamburger} from '@cdo/apps/hamburger/hamburger.js';
+
+var activateReferenceAreaOnLoad = require('@cdo/apps/code-studio/reference_area');
+var Sounds = require('@cdo/apps/Sounds');
 
 window.React = require('react');
 window.ReactDOM = require('react-dom');
@@ -53,11 +63,6 @@ window.dashboard.pairing = require('@cdo/apps/code-studio/pairing');
 window.dashboard.project = require('@cdo/apps/code-studio/initApp/project');
 
 // only stick the necessary methods onto dashboard.codeStudioLevels
-import {
-  registerGetResult,
-  registerLevel,
-  onAnswerChanged,
-} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 window.dashboard.codeStudioLevels = {
   registerGetResult,
   registerLevel,

@@ -13,13 +13,14 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2024",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "interactive-games-animations",
-    "serialized_at": "2024-05-25 00:01:04 UTC",
-    "published_state": "preview",
+    "serialized_at": "2024-08-05 21:36:27 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -8944,14 +8945,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSD U3 Sprites intro sprites_2024"
+          "CSD U3 Sprites test intro sprites_2024"
         ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U3 Sprites intro sprites_2024"
+          "CSD U3 Sprites test intro sprites_2024"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "lessonGroup-2",
@@ -8959,7 +8960,7 @@
         "activity_section.key": "2509e70f-94cb-4016-9b62-6a34fd8f0071"
       },
       "level_keys": [
-        "CSD U3 Sprites intro sprites_2024"
+        "CSD U3 Sprites test intro sprites_2024"
       ]
     },
     {
@@ -13981,9 +13982,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U3 Sprites intro sprites_2024",
+        "level.key": "CSD U3 Sprites test intro sprites_2024",
         "script_level.level_keys": [
-          "CSD U3 Sprites intro sprites_2024"
+          "CSD U3 Sprites test intro sprites_2024"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "lessonGroup-2",
@@ -20465,12 +20466,2627 @@
 
   ],
   "rubrics": [
-
+    {
+      "level_name": "CSD web project animated review_2024",
+      "seeding_key": {
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "level_name": "CSD U3 Sprites scene challenge_2024",
+      "seeding_key": {
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "level_name": "CSD U3 collisions flyman bounceOff_2024",
+      "seeding_key": {
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "level_name": "CSD U3 L7 mini project_2024",
+      "seeding_key": {
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "level_name": "CSD games sidescroll review_2024",
+      "seeding_key": {
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "level_name": "CSD games project review_2024",
+      "seeding_key": {
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "level_name": "CSD U3 Interactive Card Final_2024",
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    }
   ],
   "learning_goals": [
-
+    {
+      "key": "03900526-ff25-4098-955e-ab75999c16fa",
+      "position": 7,
+      "learning_goal": "Algorithms and Control - Interaction Conditionals",
+      "ai_enabled": false,
+      "tips": "Your program does not use any conditionals to control sprite interactions.",
+      "seeding_key": {
+        "learning_goal.key": "03900526-ff25-4098-955e-ab75999c16fa",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "272cd59e-1ccd-4b5f-b9b6-f3ce76903f4c",
+      "position": 2,
+      "learning_goal": "Program Development  - Program Readability",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "272cd59e-1ccd-4b5f-b9b6-f3ce76903f4c",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "29db3424-791e-4884-9fa7-b66974b34ca4",
+      "position": 9,
+      "learning_goal": "Variables",
+      "ai_enabled": false,
+      "tips": "(9) **Affect how the game is played**\n- Examples include (but are not limited to): moving to a different level at a certain point value, losing the game at a certain score value,  game play becomes harder or speeds up at a certain variable value, etc.\n",
+      "seeding_key": {
+        "learning_goal.key": "29db3424-791e-4884-9fa7-b66974b34ca4",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "2aea627b-51b8-4e26-baa8-0c4e1e8d19ba",
+      "position": 6,
+      "learning_goal": "Algorithms and Control - User Input",
+      "ai_enabled": false,
+      "tips": "(5) **Different types of user input**\n- This includes keyboard and mouse inputs. \n- Different types can include two different keyboard inputs such as `keyDown(“left”)` and `keyDown(“space”)`",
+      "seeding_key": {
+        "learning_goal.key": "2aea627b-51b8-4e26-baa8-0c4e1e8d19ba",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "2ea00724-c609-4e0b-bb98-85b566b78c61",
+      "position": 5,
+      "learning_goal": "Algorithms and Control - Looping Conditionals",
+      "ai_enabled": false,
+      "tips": "(6) **Conditionals to control the obstacle sprites’ looping behavior**\nThis includes the use of at least 1 conditional per obstacle sprite to control the looping on both the x and y axis.\n",
+      "seeding_key": {
+        "learning_goal.key": "2ea00724-c609-4e0b-bb98-85b566b78c61",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "3698d711-f8a2-44ca-859b-9166c3dbe6d8",
+      "position": 2,
+      "learning_goal": "Modularity - Sprites and Sprite Properties",
+      "ai_enabled": false,
+      "tips": "(2) **Updated after creation**\n  - Sprites are created with these two lines of code: \n    ```\n    var sprite = createSprite(200, 200); \n    sprite.setAnimation(\"animation_1\");\n    ```\n  - After the above two lines, a sprite property listed below should be updated\n    - `rotation`\n    - `scale`\n    - `tint`\n    - `alpha`\n    - `width`\n    - `height`",
+      "seeding_key": {
+        "learning_goal.key": "3698d711-f8a2-44ca-859b-9166c3dbe6d8",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "3822cb51-fe93-4ae1-bb04-850ea77b4643",
+      "position": 2,
+      "learning_goal": "Program Development - Program Sequence",
+      "ai_enabled": false,
+      "tips": "(1) **Sequenced the program well**\n- If the program code is not sequenced correctly, some elements, such as shapes, sprites, and text, may be unintentionally hidden behind others. \n- In the specific case of sprites, if the `drawSprites()` code is not sequenced correctly, some or all sprites may not appear on the screen.\n\n(2) **Code in and out of the draw loop**\n- Code outside the draw loop is used to set up the program and its starting elements (creating sprites, setting sprite properties that won’t change, etc). \n- Code inside the draw loop is for things that are changing as the program is running. This includes updating properties or non-sprite variables as well as any shapes for the background, text, and the `drawSprites()` block.",
+      "seeding_key": {
+        "learning_goal.key": "3822cb51-fe93-4ae1-bb04-850ea77b4643",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "3d04bc2b-5258-42df-ad49-601091a84580",
+      "position": 4,
+      "learning_goal": "Modularity - Use of Functions",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "3d04bc2b-5258-42df-ad49-601091a84580",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "4625a3fc-979e-4b12-803f-7e1ac58fb20c",
+      "position": 1,
+      "learning_goal": "Program Development - Program Sequence",
+      "ai_enabled": false,
+      "tips": "(1) **Sequenced the program well**\n- If the program code is not sequenced correctly, some elements, such as shapes, sprites, and text, may be unintentionally hidden behind others\n- In the specific case of sprites, if the `drawSprites()` code is not sequenced correctly, some or all sprites may not appear on the screen.",
+      "seeding_key": {
+        "learning_goal.key": "4625a3fc-979e-4b12-803f-7e1ac58fb20c",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "4d426a73-f9c8-46dd-acf9-94d1b52ef5a7",
+      "position": 4,
+      "learning_goal": "Algorithms and Control - Player Control Conditionals",
+      "ai_enabled": false,
+      "tips": "(4) **Conditionals to respond to multiple types of user input that control the player sprite’s movement**\n- This includes the use of 3 conditionals that use different keyboard input (left arrow and right arrow) and/or mouse input.\n- This also includes using the counter pattern with the sprite’s y velocity in order to create the complex acceleration movement (i.e. falling behavior)\n\n(5) **Sprite does not respond as expected**\n- The sprite’s movement should simulate the player going up when the “up” key is pressed, followed by the sprite accelerating falling back down the screen on its own. The sprite should also move left and right when those keys are pressed.",
+      "seeding_key": {
+        "learning_goal.key": "4d426a73-f9c8-46dd-acf9-94d1b52ef5a7",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "4eaffb1d-4e2f-4f1f-a68d-e0a8977cd837",
+      "position": 7,
+      "learning_goal": "Variables",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "4eaffb1d-4e2f-4f1f-a68d-e0a8977cd837",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "640b432d-39cd-4bf6-b07d-043236630718",
+      "position": 1,
+      "learning_goal": "Program Development - Program Sequence",
+      "ai_enabled": false,
+      "tips": ". Sequenced the program well\nIf the program code is not sequenced correctly, some elements, such as shapes, may be unintentionally hidden behind other shapes. \n2. Different types of shapes: \nEach shape listed below would be considered a “different type” of shape. Students should use at least 4 different types of shapes.\nrect(x, y, width, height)\nellipse(x, y, width, height)\nline(x1, y1, x2, y2)\narc(x, y, width, height, start, stop)\npoint(x, y)\nregularPolygon(x, y, sides, size)\nshape(x1, y1, x2, y2, … xN, yN)\n",
+      "seeding_key": {
+        "learning_goal.key": "640b432d-39cd-4bf6-b07d-043236630718",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "66f7f58f-6bd6-4674-a0d2-cfa515892d6f",
+      "position": 3,
+      "learning_goal": "Modularity - Multiple Sprites",
+      "ai_enabled": false,
+      "tips": "(3) **Sprites created and animations set**\n- Sprites are created and their animations are set with these two lines of code **outside** of the draw loop: \n  ```\n  var sprite = createSprite(200, 200); \n  sprite.setAnimation(\"animation_1\");\n```\n",
+      "seeding_key": {
+        "learning_goal.key": "66f7f58f-6bd6-4674-a0d2-cfa515892d6f",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "6eea9ecc-61c1-41ba-b9fc-b8bd368ac9e7",
+      "position": 2,
+      "learning_goal": "Position - Shapes",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "6eea9ecc-61c1-41ba-b9fc-b8bd368ac9e7",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "76b79e3f-6182-4103-bee0-01184d58f78b",
+      "position": 1,
+      "learning_goal": "Program Development - Project Guide",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "76b79e3f-6182-4103-bee0-01184d58f78b",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "76b8efd8-fd65-4cac-a358-f161ed2f100c",
+      "position": 1,
+      "learning_goal": "Program Development - Project Guide",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "76b8efd8-fd65-4cac-a358-f161ed2f100c",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "795ab2a9-f897-477d-92ba-8b6fa339b76b",
+      "position": 3,
+      "learning_goal": "Program Development - Program Sequence",
+      "ai_enabled": false,
+      "tips": "(1) **Sequenced the program well**\n- If the program code is not sequenced correctly, some elements, such as shapes, sprites, and text, may be unintentionally hidden behind others. \n- In the specific case of sprites, if the `drawSprites()` code is not sequenced correctly, some or all sprites may not appear on the screen.\n\n(2) **Code in and out of the draw loop**\n- Code outside the draw loop is used to set up the program, its starting elements, and all created functions. \n- Code inside the draw loop at this point should be primarily function calls and perhaps some conditionals used with function calls in addition to the `drawSprites()` block.",
+      "seeding_key": {
+        "learning_goal.key": "795ab2a9-f897-477d-92ba-8b6fa339b76b",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "7cadf931-2b03-4af5-8885-335edd707e1a",
+      "position": 2,
+      "learning_goal": "Program Development - Program Sequence",
+      "ai_enabled": false,
+      "tips": "(1) **Sequenced the program well**\n- If the program code is not sequenced correctly, some elements, such as shapes, sprites, and text, may be unintentionally hidden behind others. \n- In the specific case of sprites, if the `drawSprites()` code is not sequenced correctly, some or all sprites may not appear on the screen.\n\n(2) **Code in and out of the draw loop**\n- Code outside the draw loop is used to set up the program and its starting elements (creating sprites, setting sprite properties that won’t change, etc). \n- Code inside the draw loop is for things that are changing as the program is running. This includes updating properties or non-sprite variables as well as any shapes for the background, text, and the `drawSprites()` block.",
+      "seeding_key": {
+        "learning_goal.key": "7cadf931-2b03-4af5-8885-335edd707e1a",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "8689b47f-e61c-41b4-93a6-7a30fd5f77f9",
+      "position": 1,
+      "learning_goal": "Program Development - Program Sequence",
+      "ai_enabled": false,
+      "tips": "(1) **Sequenced the program well**\nIf the program code is not sequenced correctly, some elements, such as shapes, sprites, and text, may be unintentionally hidden behind others. \nIn the specific case of sprites, if the `drawSprites()` code is not sequenced correctly, some or all sprites may not appear on the screen.\n\n(2) **Code in and out of the draw loop**\nCode inside the draw loop is for things that are changing as the program is running. This includes updating properties or non-sprite variables as well as any shapes for the background, text, and the `drawSprites()` block.\n",
+      "seeding_key": {
+        "learning_goal.key": "8689b47f-e61c-41b4-93a6-7a30fd5f77f9",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "8c81b261-6d11-4059-a1f7-77cd75518294",
+      "position": 7,
+      "learning_goal": "Optional “Stretch” Feature - Variables",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "8c81b261-6d11-4059-a1f7-77cd75518294",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "91b774bb-20d0-416a-aa9c-cafac2ecd7c5",
+      "position": 1,
+      "learning_goal": "Program Development - Project Guide",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "91b774bb-20d0-416a-aa9c-cafac2ecd7c5",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "9e23bc94-9c97-431b-82c6-6e3575491643",
+      "position": 6,
+      "learning_goal": "Position and Movement",
+      "ai_enabled": false,
+      "tips": "(6) **Move in different ways**\n- Both types of the following movement should be used:\n  - Random movement using `randomNumber()`\n  - Smooth movement using the **counter pattern** `(sprite.x = sprite.x + 1)`",
+      "seeding_key": {
+        "learning_goal.key": "9e23bc94-9c97-431b-82c6-6e3575491643",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "a4882b26-a67c-443f-aa85-1a18a8c77e5e",
+      "position": 4,
+      "learning_goal": "Algorithms and Control - Player Control Conditionals",
+      "ai_enabled": false,
+      "tips": "(4) **Conditionals to control the player sprite’s jumping**\n- This includes the use of at least 3 conditionals (at least one of which utilizes user input)\n- Examples:\n  - _One responding to user input with the keyDown(“up”) to change the sprite’s y velocity_\n  - _One checking the y value of the player sprite to see if it has reached the “top” of it’s jump and then send the sprite back down the screen_\n  - _One checking the y value of the player sprite to see if it is “on the ground” and then stop the sprite from falling_\n\n(5) **Sprite does not respond as expected**\n- The sprite’s movement should simulate the player jumping up when the “up” key is pressed, followed by the sprite coming back down to the ground on its own once it reaches the height of its jump. The sprite should also “land” back on the ground where it started.\n",
+      "seeding_key": {
+        "learning_goal.key": "a4882b26-a67c-443f-aa85-1a18a8c77e5e",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "a62651fd-c757-45ab-befc-b9d5c9e19ae3",
+      "position": 8,
+      "learning_goal": "Position and Movement",
+      "ai_enabled": false,
+      "tips": "(7) **Instances of complex movement**\n- This includes code that simulates movement such as acceleration, moving in a curve, looping from one side of the screen to the other, or jumping \n\n(8) **Simple, independent movement**\n- This includes movement such as moving in a straight line or rotation\n",
+      "seeding_key": {
+        "learning_goal.key": "a62651fd-c757-45ab-befc-b9d5c9e19ae3",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "a70ebd80-ee5c-484d-ae78-2122a14a483d",
+      "position": 7,
+      "learning_goal": "Variables - Optional “Stretch” Feature",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "a70ebd80-ee5c-484d-ae78-2122a14a483d",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "b95cb058-7a58-498f-ae64-50b289654a53",
+      "position": 4,
+      "learning_goal": "Algorithms and Control - User Input",
+      "ai_enabled": false,
+      "tips": "(4) **Different types of user input**\n- This includes keyboard and mouse inputs. \n- Two different types can include two different keyboard inputs such as `keyDown(“left”)` and `keyDown(“space”)`",
+      "seeding_key": {
+        "learning_goal.key": "b95cb058-7a58-498f-ae64-50b289654a53",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "bbd27f80-e161-4681-8644-7ada92bb3d9c",
+      "position": 3,
+      "learning_goal": "Modularity - Multiple Sprites",
+      "ai_enabled": false,
+      "tips": "(3) **Updating in the draw loop**\n- Sprites are created with these two lines of code outside of the draw loop: \n  ```\n  var sprite = createSprite(200, 200); \n  sprite.setAnimation(\"animation_1\");\n  ```\n- After the above two lines, a sprite property, such as the ones listed below, should be **updating inside** the draw loop.\n  - x\n  - y\n  - rotation\n  - scale\n  - tint\n  - alpha\n  - width\n  - height\n  - visible\n- Assigning value to a sprite property inside the draw loop, such as `sprite.scale = 0.4`, does not count as updating a property unless it is in a conditional. \n",
+      "seeding_key": {
+        "learning_goal.key": "bbd27f80-e161-4681-8644-7ada92bb3d9c",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "bc66c9c9-cfbb-4d80-9609-8acc24980c38",
+      "position": 2,
+      "learning_goal": "Modularity - Sprites and Sprite Properties",
+      "ai_enabled": false,
+      "tips": "(3) **Updating in the draw loop**\n- Sprites are created with these two lines of code outside of the draw loop: \n  ```\nvar sprite = createSprite(200, 200); \nsprite.setAnimation(\"animation_1\");\n```\n- After the above two lines, a sprite property, such as the ones listed below, should be continuously updating inside the draw loop\n  - x \n  - y\n  - rotation\n  - scale\n  - tint\n  - alpha\n  - width\n  - height",
+      "seeding_key": {
+        "learning_goal.key": "bc66c9c9-cfbb-4d80-9609-8acc24980c38",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "be474897-a8ea-4524-8ecd-a980ccb4f119",
+      "position": 2,
+      "learning_goal": "Program Development - Program Sequence",
+      "ai_enabled": false,
+      "tips": "(1) **Sequenced the program well**\n- If the program code is not sequenced correctly, some elements, such as shapes, sprites, and text, may be unintentionally hidden behind others. \n- In the specific case of sprites, if the `drawSprites()` code is not sequenced correctly, some or all sprites may not appear on the screen.\n\n(2) **Code in and out of the draw loop**\n- Code outside the draw loop is used to set up the program and its starting elements (creating sprites, setting starting properties, sprite velocities that won’t change, etc). \n- Code inside the draw loop is for things that are changing as the program is running, such as user interaction. This also includes updating properties or non-sprite variables as well as any shapes for the background, text, and the `drawSprites()` block.\n",
+      "seeding_key": {
+        "learning_goal.key": "be474897-a8ea-4524-8ecd-a980ccb4f119",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "c1aab145-b8a3-4cc7-9e74-fdfdc210de4c",
+      "position": 5,
+      "learning_goal": "Algorithms and Control - Conditionals",
+      "ai_enabled": false,
+      "tips": "(5) **Triggered by a variable or sprite property**\n- A conditional should have a boolean statement that uses a variable, such as `(count > 10)`, or a sprite property, such as `(sprite.scale > 50)`. \n- Using `World.mouseX` or `World.mouseY` can also count for this conditional.",
+      "seeding_key": {
+        "learning_goal.key": "c1aab145-b8a3-4cc7-9e74-fdfdc210de4c",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "c733bfa5-a591-459a-a692-a08d4ec9c5ce",
+      "position": 4,
+      "learning_goal": "Creating a Digital Artifact",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "c733bfa5-a591-459a-a692-a08d4ec9c5ce",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "ca7afde1-e768-4165-a279-7b565548c7f4",
+      "position": 5,
+      "learning_goal": "Algorithms and Control - Looping Conditionals",
+      "ai_enabled": false,
+      "tips": "(6) **Conditionals to control multiple sprites’ looping behavior**\n- This includes the use of at least 1 conditional for the target sprite and at least 1 conditional for the obstacle sprite.\n- Examples:\n  - _The conditional for the target sprite should check if the sprite’s x value has reached the left side of the screen and then reset it’s x value to the right side of the screen_\n  - _The conditional for the obstacle sprite should also check if the sprite’s x value has reached the left side of the screen and then reset it’s x value to the right side of the screen_\n",
+      "seeding_key": {
+        "learning_goal.key": "ca7afde1-e768-4165-a279-7b565548c7f4",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "cc01ce3a-2afd-4c08-928d-10f517d43f74",
+      "position": 3,
+      "learning_goal": "Position - Elements and the Coordinate System",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "cc01ce3a-2afd-4c08-928d-10f517d43f74",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "d1022ece-09e4-4df4-92ac-3019d67b287a",
+      "position": 3,
+      "learning_goal": "Variables / Storing Information",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "d1022ece-09e4-4df4-92ac-3019d67b287a",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "d2b7fd6d-c480-418c-ae40-6af4efff4bc0",
+      "position": 6,
+      "learning_goal": "Algorithms and Control - Interaction Conditionals",
+      "ai_enabled": false,
+      "tips": "(7) **Conditionals to control multiple sprite interactions**\n- This includes the use of at least 1 conditional for the target sprite and at least 1 conditional for the obstacle sprite. \n- _Examples:_\n  - _The conditional for the target sprite should use the `isTouching()` to detect interaction between the player sprite and target sprite._\n     - _If the two sprites touch, the score variable should increase and the x value of the target sprite should reset to the right side of the screen_\n  - _The conditional for the obstacle sprite should also use the `isTouching()` to detect interaction between the player sprite and the obstacle sprite._\n    - _If the two sprites touch, the health variable should decrease and the obstacle sprite should change in some way_\n      - _For example, the obstacle sprite’s rotation property could change to make the sprite appear to be knocked over or the tint property of the obstacle sprite could change to make the sprite appear red indicating it was touched)._\n",
+      "seeding_key": {
+        "learning_goal.key": "d2b7fd6d-c480-418c-ae40-6af4efff4bc0",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "d8882a0e-f8bb-4bc8-b55e-32dab724c57f",
+      "position": 6,
+      "learning_goal": "Algorithms and Control - Interaction Conditionals & Collision Detection",
+      "ai_enabled": false,
+      "tips": "(7) **Conditional and at least 2 collision detection blocks to control multiple sprite interactions**\n- This includes the use of at least 1 conditional that checks if the player sprite is touching the target sprite and then moves the target to a random location\n- This also includes the use of at least two collision detection blocks, such as `collide()` or `bounceOff()`, to have the obstacles interact with the player sprite ",
+      "seeding_key": {
+        "learning_goal.key": "d8882a0e-f8bb-4bc8-b55e-32dab724c57f",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "dbf8748f-11f9-47a1-b572-a58dc3f5b0e5",
+      "position": 5,
+      "learning_goal": "Algorithms and Control - Backgrounds and Variables",
+      "ai_enabled": false,
+      "tips": "(3) **Three backgrounds that are displayed during run time**\n- Three different backgrounds should appear during a single play of the game.\n- Example backgrounds include (but are not limited to): an instructions screen, different backgrounds for various difficulty levels, win screen, lose screen, etc. \n\n(4) **Backgrounds is triggered automatically through a variable**\n- For example, the game play background is changed to a _“You lose”_ background when the variable named “score” reaches the value of 0.\n",
+      "seeding_key": {
+        "learning_goal.key": "dbf8748f-11f9-47a1-b572-a58dc3f5b0e5",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "e45be25d-df05-4ba7-bb6d-8a2a25af7c37",
+      "position": 4,
+      "learning_goal": "Optional “Stretch” Feature - Variables",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "e45be25d-df05-4ba7-bb6d-8a2a25af7c37",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "eb5fde0d-0ec2-4c43-960e-7b99de1e04b9",
+      "position": 4,
+      "learning_goal": "Creating a Digital Artifact",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "eb5fde0d-0ec2-4c43-960e-7b99de1e04b9",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "f902e010-1929-41b7-92e9-2b8d7ceabb90",
+      "position": 1,
+      "learning_goal": "Program Development - Peer Feedback",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "f902e010-1929-41b7-92e9-2b8d7ceabb90",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "f96a19ce-da2f-4070-aa81-e80312a62f43",
+      "position": 3,
+      "learning_goal": "Modularity - Multiple Sprites",
+      "ai_enabled": false,
+      "tips": "(3) **Sprites are created and their animations are set properly**\n- Sprites are created and their animations are set with these two lines of code outside of the draw loop: \n  ```\n  var sprite = createSprite(200, 200); \n  sprite.setAnimation(\"animation_1\");\n  ```",
+      "seeding_key": {
+        "learning_goal.key": "f96a19ce-da2f-4070-aa81-e80312a62f43",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "key": "fe6ef462-b370-4640-95b3-ebf3eb927659",
+      "position": 3,
+      "learning_goal": "Position and Movement",
+      "ai_enabled": false,
+      "tips": "(4) **Move in different ways**\n- One element should have random movement using `randomNumber()`\n- One element should move using the **counter pattern** `(x = x + 1)`",
+      "seeding_key": {
+        "learning_goal.key": "fe6ef462-b370-4640-95b3-ebf3eb927659",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    }
   ],
   "learning_goal_evidence_levels": [
-
+    {
+      "understanding": 0,
+      "teacher_description": "Your program does not use any conditionals to control sprite interactions.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "03900526-ff25-4098-955e-ab75999c16fa",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Your program either does not have multiple conditionals to control complex sprite interactions, or has multiple conditionals but none of them work as expected.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "03900526-ff25-4098-955e-ab75999c16fa",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Your program has multiple conditionals meant to control complex sprite interactions, however one of them does not work as expected.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "03900526-ff25-4098-955e-ab75999c16fa",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Your program includes multiple conditionals to control complex interactions between sprites (6) which either affect the sprites themselves, such as resetting their location, or affect the gameplay, such as increasing or decreasing the score. \n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "03900526-ff25-4098-955e-ab75999c16fa",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Your program code does not contain comments and is difficult to read.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "272cd59e-1ccd-4b5f-b9b6-f3ce76903f4c",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Your program code has few comments beyond starter code.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "272cd59e-1ccd-4b5f-b9b6-f3ce76903f4c",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Your program code makes use of additional comments throughout the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "272cd59e-1ccd-4b5f-b9b6-f3ce76903f4c",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Your program code effectively uses good naming conventions for sprites, non-sprite variables, and functions, and additional comments are added throughout the program to make the code easily readable.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "272cd59e-1ccd-4b5f-b9b6-f3ce76903f4c",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Your program does not create or update any non-sprite variables. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "29db3424-791e-4884-9fa7-b66974b34ca4",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Your program properly creates at least 1 non-sprite variable and updates it during the game but it either is not displayed or does not affect the way the game is played.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "29db3424-791e-4884-9fa7-b66974b34ca4",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Your program properly creates at least 1 non-sprite variable that is displayed and updated during the game and affects the way the game is played.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "29db3424-791e-4884-9fa7-b66974b34ca4",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Your program properly creates at least 2 non-sprite variables, such as score or health, that are displayed and updated during the game and affect how the game is played.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "29db3424-791e-4884-9fa7-b66974b34ca4",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Your program does not use any code for detecting user input, such as keyDown() or mouseDown().",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "2aea627b-51b8-4e26-baa8-0c4e1e8d19ba",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Your program contains code for detecting user input, such as keyDown(), but it is not used correctly and the program does not respond. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "2aea627b-51b8-4e26-baa8-0c4e1e8d19ba",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Your program responds to 1 type of user input.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "2aea627b-51b8-4e26-baa8-0c4e1e8d19ba",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Your program responds to at least 2 different types of user input. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "2aea627b-51b8-4e26-baa8-0c4e1e8d19ba",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Your program does not use any conditionals to control looping behavior.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "2ea00724-c609-4e0b-bb98-85b566b78c61",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Your program either does not have all conditionals in the draw loop needed to control the obstacle sprites’ looping behavior, or has required conditionals but none of them work as expected.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "2ea00724-c609-4e0b-bb98-85b566b78c61",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Your program has conditionals in the draw loop meant to control the obstacle sprites’ looping behavior, however one of the obstacles does not behave as expected.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "2ea00724-c609-4e0b-bb98-85b566b78c61",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Your program has conditionals to control the obstacle sprites’ looping behavior inside the draw loop. \n\n\n\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "2ea00724-c609-4e0b-bb98-85b566b78c61",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "No sprites are used in the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "3698d711-f8a2-44ca-859b-9166c3dbe6d8",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "At least 1 sprite created. No properties updated after creation.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "3698d711-f8a2-44ca-859b-9166c3dbe6d8",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "At least 1 sprite created with at least one property updated after creation.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "3698d711-f8a2-44ca-859b-9166c3dbe6d8",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "At least 2 sprites created, each with at least one property updated after creation (2).",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "3698d711-f8a2-44ca-859b-9166c3dbe6d8",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Errors in program sequencing are significant enough to keep the output from resembling the intended scene or the Draw loop is not used to create animation",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "3822cb51-fe93-4ae1-bb04-850ea77b4643",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "You have several sequencing errors, resulting in many elements unintentionally hidden or overlapping others. Some code is improperly placed in or out of the loop.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "3822cb51-fe93-4ae1-bb04-850ea77b4643",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "You property separated code in and out of the draw loop, however they have a few incorrectly sequenced code resulting in a few elements hidden behind others unintentionally.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "3822cb51-fe93-4ae1-bb04-850ea77b4643",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "You sequenced the program well  and properly separated code in and out of the draw loop.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "3822cb51-fe93-4ae1-bb04-850ea77b4643",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "There are no functions created outside the draw loop and used in your program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "3d04bc2b-5258-42df-ad49-601091a84580",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "At least one function is created outside the draw loop and used in your program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "3d04bc2b-5258-42df-ad49-601091a84580",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "At least two functions are created outside the draw loop and used in your program to organize your code into logical segments.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "3d04bc2b-5258-42df-ad49-601091a84580",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "At least three functions are created outside the draw loop and used to organize your code into logical segments.  At least one of these functions is called multiple times in your program. \n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "3d04bc2b-5258-42df-ad49-601091a84580",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Errors in program sequencing are significant enough to keep the output from resembling the intended scene.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "4625a3fc-979e-4b12-803f-7e1ac58fb20c",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Your program has significant sequencing errors, resulting in many elements unintentionally hidden or overlapping others.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "4625a3fc-979e-4b12-803f-7e1ac58fb20c",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Your program may contain a few incorrectly sequenced code resulting in a few elements hidden behind others unintentionally.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "4625a3fc-979e-4b12-803f-7e1ac58fb20c",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "You sequenced the program well and and all elements on the screen appear as intended.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "4625a3fc-979e-4b12-803f-7e1ac58fb20c",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Your program does not have conditionals to respond to user input. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "4d426a73-f9c8-46dd-acf9-94d1b52ef5a7",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Your program does not have conditionals to respond to user input. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "4d426a73-f9c8-46dd-acf9-94d1b52ef5a7",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Your program has conditionals to respond to multiple types of user input that are meant to control the player sprite’s movement, however the sprite does not respond as expected. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "4d426a73-f9c8-46dd-acf9-94d1b52ef5a7",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Your program has conditionals to respond to multiple types of user input that control the player sprite’s movement inside the draw loop. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "4d426a73-f9c8-46dd-acf9-94d1b52ef5a7",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Your program does not update any of the provided non-sprite variables during the game. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "4eaffb1d-4e2f-4f1f-a68d-e0a8977cd837",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Your program properly updates at least one provided non-sprite variable during the game and properly updates at least one of the variable totals on the screen.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "4eaffb1d-4e2f-4f1f-a68d-e0a8977cd837",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Your program properly updates the two provided non-sprite variables during the game and properly updates at least one of the variable totals on the screen.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "4eaffb1d-4e2f-4f1f-a68d-e0a8977cd837",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Your program properly updates the two provided non-sprite variables during the game and properly displays the variable totals on the screen.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "4eaffb1d-4e2f-4f1f-a68d-e0a8977cd837",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Errors in program sequencing are significant enough to keep the output from resembling intended drawing.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "640b432d-39cd-4bf6-b07d-043236630718",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Program has significant sequencing errors, resulting in many shapes unintentionally hidden or overlapping others.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "640b432d-39cd-4bf6-b07d-043236630718",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Program may contain a few incorrectly sequenced code resulting in a few shapes hidden behind others unintentionally.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "640b432d-39cd-4bf6-b07d-043236630718",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "They sequenced the program well and all shapes on the screen appear as intended.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "640b432d-39cd-4bf6-b07d-043236630718",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "No sprites are used in the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "66f7f58f-6bd6-4674-a0d2-cfa515892d6f",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "At least 2 sprites created and animations set. The x velocity of the target or obstacle not set or set inside the draw loop.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "66f7f58f-6bd6-4674-a0d2-cfa515892d6f",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "At least 2 sprites created and animations set properly. The x velocity of the target or obstacle properly set outside the draw loop.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "66f7f58f-6bd6-4674-a0d2-cfa515892d6f",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "At least 3 sprites created and animations set3 properly. The x velocity of the target and obstacle properly set outside the draw loop.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "66f7f58f-6bd6-4674-a0d2-cfa515892d6f",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "They used no shapes in the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "6eea9ecc-61c1-41ba-b9fc-b8bd368ac9e7",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "They use at least 1 shape and place it correctly on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "6eea9ecc-61c1-41ba-b9fc-b8bd368ac9e7",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "They only use the ellipse and rect shapes and place them correctly on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "6eea9ecc-61c1-41ba-b9fc-b8bd368ac9e7",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "They used at least 4 different types of shapes2 and placed them correctly on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "6eea9ecc-61c1-41ba-b9fc-b8bd368ac9e7",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The project guide is incomplete or missing.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "76b79e3f-6182-4103-bee0-01184d58f78b",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The project guide is filled out, but is not complete or does not reflect the submitted project.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "76b79e3f-6182-4103-bee0-01184d58f78b",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "The project guide is mostly complete and is generally reflective of the submitted project.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "76b79e3f-6182-4103-bee0-01184d58f78b",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The project guide is complete and reflects the project as submitted.\n\n\n\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "76b79e3f-6182-4103-bee0-01184d58f78b",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Your project guide is incomplete or missing.\n\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "76b8efd8-fd65-4cac-a358-f161ed2f100c",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Your project guide is filled out, but is not complete or does not reflect the submitted project.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "76b8efd8-fd65-4cac-a358-f161ed2f100c",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Your project guide is mostly complete and is generally reflective of the submitted project.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "76b8efd8-fd65-4cac-a358-f161ed2f100c",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Your project guide is complete and reflects the project as submitted.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "76b8efd8-fd65-4cac-a358-f161ed2f100c",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Your entire program code is within the draw loop. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "795ab2a9-f897-477d-92ba-8b6fa339b76b",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "You have significant sequencing errors, which include either sprites created within the draw loop or functions created within the draw loop.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "795ab2a9-f897-477d-92ba-8b6fa339b76b",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Your program effectively creates sprites and defines functions outside of the draw loop, however there are multiple code segments within the draw loop that should be situated within their own functions outside the draw loop.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "795ab2a9-f897-477d-92ba-8b6fa339b76b",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "You sequenced the program well  and properly separated code in and out of the draw loop.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "795ab2a9-f897-477d-92ba-8b6fa339b76b",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Errors in program sequencing are significant enough to keep the output from resembling the intended scene or the Draw loop is not used to create animation",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "7cadf931-2b03-4af5-8885-335edd707e1a",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "You have several sequencing errors, resulting in many elements unintentionally hidden or overlapping others. Some code is improperly placed in or out of the loop.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "7cadf931-2b03-4af5-8885-335edd707e1a",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "You property separated code in and out of the draw loop, however they have a few incorrectly sequenced code resulting in a few elements hidden behind others unintentionally.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "7cadf931-2b03-4af5-8885-335edd707e1a",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "You sequenced the program well  and properly separated code in and out of the draw loop.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "7cadf931-2b03-4af5-8885-335edd707e1a",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Errors in program sequencing are significant enough to keep the output from resembling the intended scene or the Draw loop is not used to create animation",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "8689b47f-e61c-41b4-93a6-7a30fd5f77f9",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "You have several sequencing errors, resulting in many elements unintentionally hidden or overlapping others. Some code is improperly placed in or out of the loop",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "8689b47f-e61c-41b4-93a6-7a30fd5f77f9",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "You properly separated code in and out of the draw loop, however they have a few incorrectly sequenced code resulting in a few elements hidden behind others unintentionally.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "8689b47f-e61c-41b4-93a6-7a30fd5f77f9",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "You sequenced the program well (1)  and properly separated code in and out of the draw loop (2).",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "8689b47f-e61c-41b4-93a6-7a30fd5f77f9",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Your program does not create or update any non-sprite variables. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "8c81b261-6d11-4059-a1f7-77cd75518294",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Your program properly creates at least 1 non-sprite variable and updates it during the game but does not properly display the variable total on the screen.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "8c81b261-6d11-4059-a1f7-77cd75518294",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Your program properly creates at least 1 non-sprite variable, updates it during the game, and properly displays the variable total on the screen.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "8c81b261-6d11-4059-a1f7-77cd75518294",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Your program properly creates at least 2 non-sprite variables (such as score or health), updates them  during the game, and properly displays the variable totals on the screen.\n\n\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "8c81b261-6d11-4059-a1f7-77cd75518294",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The project guide is incomplete or missing.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "91b774bb-20d0-416a-aa9c-cafac2ecd7c5",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "The project guide is filled out, but is not complete or does not reflect the submitted project.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "91b774bb-20d0-416a-aa9c-cafac2ecd7c5",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "The project guide is mostly complete and is generally reflective of the submitted project.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "91b774bb-20d0-416a-aa9c-cafac2ecd7c5",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The project guide is complete and reflects the project as submitted.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "91b774bb-20d0-416a-aa9c-cafac2ecd7c5",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "No elements (sprites or shapes) are placed on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "9e23bc94-9c97-431b-82c6-6e3575491643",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "At least one element is placed on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "9e23bc94-9c97-431b-82c6-6e3575491643",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "At least 2 sprites and 1 other element is placed on the screen using the coordinate system. The sprites move during the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "9e23bc94-9c97-431b-82c6-6e3575491643",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "At least 3 sprites and at least 2 other elements are placed on the screen using the coordinate system. The sprites move in different ways.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "9e23bc94-9c97-431b-82c6-6e3575491643",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Your program does not have conditionals to respond to user input. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "a4882b26-a67c-443f-aa85-1a18a8c77e5e",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Your program responds to the up key but does not have the additional conditionals to control the sprite jumping movement.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "a4882b26-a67c-443f-aa85-1a18a8c77e5e",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Your program has conditionals meant to control the player sprite’s jumping, however the sprite does not respond as expected. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "a4882b26-a67c-443f-aa85-1a18a8c77e5e",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Your program has conditionals to control the player sprite’s jumping inside the draw loop. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "a4882b26-a67c-443f-aa85-1a18a8c77e5e",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "There is no movement in your program, other than direct user control.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "a62651fd-c757-45ab-befc-b9d5c9e19ae3",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Your program includes simple, independent movement.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "a62651fd-c757-45ab-befc-b9d5c9e19ae3",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Your program includes at least one instance of complex movement.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "a62651fd-c757-45ab-befc-b9d5c9e19ae3",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Your program includes at least two instances of complex movement.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "a62651fd-c757-45ab-befc-b9d5c9e19ae3",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "No non-sprite variables are created and used in the program",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "a70ebd80-ee5c-484d-ae78-2122a14a483d",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "At least 1 non-sprite variable is created and used in your program but does not update in the draw loop.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "a70ebd80-ee5c-484d-ae78-2122a14a483d",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "At least 1 non-sprite variable is created and its value is updated in the draw loop and affects how the program runs.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "a70ebd80-ee5c-484d-ae78-2122a14a483d",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "At least 2 non-sprite variables are created and their values are updated in the draw loop and affect how the program runs. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "a70ebd80-ee5c-484d-ae78-2122a14a483d",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Your program does not have user input. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "b95cb058-7a58-498f-ae64-50b289654a53",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Your program contains code, such as keyDown(), for user input but it is not used correctly and the program does not respond. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "b95cb058-7a58-498f-ae64-50b289654a53",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Your program responds to 1 type of user input.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "b95cb058-7a58-498f-ae64-50b289654a53",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Your program responds to at least 2 different types of user input. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "b95cb058-7a58-498f-ae64-50b289654a53",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "No sprites are used in the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "bbd27f80-e161-4681-8644-7ada92bb3d9c",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "At least 1 sprite created. No properties updated inside the draw loop.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "bbd27f80-e161-4681-8644-7ada92bb3d9c",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "At least 1 sprite created with at least one property updated inside the draw loop.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "bbd27f80-e161-4681-8644-7ada92bb3d9c",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "At least 3 sprites created, each with at least one property updating in the draw loop.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "bbd27f80-e161-4681-8644-7ada92bb3d9c",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "No sprites are used in the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "bc66c9c9-cfbb-4d80-9609-8acc24980c38",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "At least 1 sprite created. No properties updated inside the draw loop.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "bc66c9c9-cfbb-4d80-9609-8acc24980c38",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "At least 1 sprite created with at least one property updated inside the draw loop",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "bc66c9c9-cfbb-4d80-9609-8acc24980c38",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "At least 2 sprites created, each with at least one property updating in the draw loop.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "bc66c9c9-cfbb-4d80-9609-8acc24980c38",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Errors in program sequencing are significant enough to keep the output from resembling the intended scene or the Draw loop is not used to create animation.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "be474897-a8ea-4524-8ecd-a980ccb4f119",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "You have several sequencing errors, resulting in many elements unintentionally hidden or overlapping others. Some code is improperly placed in or out of the draw loop.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "be474897-a8ea-4524-8ecd-a980ccb4f119",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "You property separated code in and out of the draw loop, however they have a few incorrectly sequenced code resulting in a few elements hidden behind others unintentionally.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "be474897-a8ea-4524-8ecd-a980ccb4f119",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "You sequenced the program well1  and properly separated code in and out of the draw loop.\n\n\n\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "be474897-a8ea-4524-8ecd-a980ccb4f119",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Your program does not use any conditionals.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "c1aab145-b8a3-4cc7-9e74-fdfdc210de4c",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Your program either has conditionals that all respond to user input (or all using sprite properties/variables) or only has 1 conditional inside the draw loop.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "c1aab145-b8a3-4cc7-9e74-fdfdc210de4c",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Your program uses at least 2 conditionals inside the draw loop - 1 that responds to user input and 1 that is triggered by a variable or sprite property.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "c1aab145-b8a3-4cc7-9e74-fdfdc210de4c",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Your program uses at least 3 conditionals inside the draw loop - 1 (or more) responds to user input and 1 (or more) is triggered by a variable or sprite property.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "c1aab145-b8a3-4cc7-9e74-fdfdc210de4c",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "They did not fill the project guide out, or it is unrelated to the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "c733bfa5-a591-459a-a692-a08d4ec9c5ce",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "They used some elements as described in the project guide.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "c733bfa5-a591-459a-a692-a08d4ec9c5ce",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Elements are generally used as described in the project guide.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "c733bfa5-a591-459a-a692-a08d4ec9c5ce",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "They used elements as described in the project guide and clearly displayed a robot face.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "c733bfa5-a591-459a-a692-a08d4ec9c5ce",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Your program does not use any conditionals to control looping behavior.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "ca7afde1-e768-4165-a279-7b565548c7f4",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Your program either does not have all conditionals in the draw loop needed to control multiple sprites’ looping behavior, or has required conditionals but none of them work as expected.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "ca7afde1-e768-4165-a279-7b565548c7f4",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Your program has conditionals in the draw loop meant to control multiple sprites’ looping behavior, however one of them does not work as expected.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "ca7afde1-e768-4165-a279-7b565548c7f4",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Your program has conditionals to control multiple sprites’ looping behavior inside the draw loop. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "ca7afde1-e768-4165-a279-7b565548c7f4",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Consists solely of sprites or shapes with no inclusion of text, or it lacks any elements (shapes, sprites, or text) positioned on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "cc01ce3a-2afd-4c08-928d-10f517d43f74",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "A cumulative total of at least 2 elements (one of which is text) are placed on the screen using the coordinate system (e.g., 1 sprite and 1 line of text or 1 shape and 1 line of text).",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "cc01ce3a-2afd-4c08-928d-10f517d43f74",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "At least 2 shapes, 2 sprites, and 2 lines of text are placed correctly on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "cc01ce3a-2afd-4c08-928d-10f517d43f74",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "At least 2 shapes, 2 sprites, and 2 lines of text are placed correctly on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "cc01ce3a-2afd-4c08-928d-10f517d43f74",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "No variables or randomNumbers are used in the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "d1022ece-09e4-4df4-92ac-3019d67b287a",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "They created at least 1 variable and used it in the program.\nThey used randomness in the program, but not within a variable. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "d1022ece-09e4-4df4-92ac-3019d67b287a",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "They created at least 4 variables and used them correctly in the program. All variables have descriptive names. Only 2 of the variables use the randomNumber block to give the program a different look each time the program is run.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "d1022ece-09e4-4df4-92ac-3019d67b287a",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "The program creates and correctly uses at least 4 variables. All variables have descriptive names and use the randomNumber block to give the program a different look each time the program is run.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "d1022ece-09e4-4df4-92ac-3019d67b287a",
+        "lesson.key": "Mini-Project - Robot Faces",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Your program does not use any conditionals to control sprite interactions.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "d2b7fd6d-c480-418c-ae40-6af4efff4bc0",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Your program either does not have all conditionals in the draw loop required to control multiple sprite interactions, or has required conditionals but none of them work as expected.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "d2b7fd6d-c480-418c-ae40-6af4efff4bc0",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Your program has conditionals in the draw loop meant to control multiple sprite interactions, however one of them does not work as expected.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "d2b7fd6d-c480-418c-ae40-6af4efff4bc0",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Your program has conditionals to control multiple sprite interactions inside the draw loop. ",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "d2b7fd6d-c480-418c-ae40-6af4efff4bc0",
+        "lesson.key": "Mini-Project - Side Scroller",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Your program does not use any conditionals to control sprite interactions.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "d8882a0e-f8bb-4bc8-b55e-32dab724c57f",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Your program either does not have a conditional in the draw loop required to control player interactions with the target, or has the required conditional but it does not work as expected.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "d8882a0e-f8bb-4bc8-b55e-32dab724c57f",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Your program has a conditional and at least 1 collision detection block in the draw loop meant to control multiple sprite interactions with the player, however one of them does not work as expected.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "d8882a0e-f8bb-4bc8-b55e-32dab724c57f",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Your program has a conditional and at least 2 collision detection blocks to control multiple sprite interactions with the player inside the draw loop. \n\n\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "d8882a0e-f8bb-4bc8-b55e-32dab724c57f",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "Your game has one background.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "dbf8748f-11f9-47a1-b572-a58dc3f5b0e5",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Your program code has multiple backgrounds but only one is ever displayed during run time.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "dbf8748f-11f9-47a1-b572-a58dc3f5b0e5",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Your game has at least two backgrounds that are displayed during run time.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "dbf8748f-11f9-47a1-b572-a58dc3f5b0e5",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Your game has at least three backgrounds that are displayed during run time. At least one of these backgrounds is triggered automatically through a variable.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "dbf8748f-11f9-47a1-b572-a58dc3f5b0e5",
+        "lesson.key": "Project - Design a Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "No non-sprite variables are created and used.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "e45be25d-df05-4ba7-bb6d-8a2a25af7c37",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "At least 1 non-sprite variable is created and used in the program but does not update in the draw loop.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "e45be25d-df05-4ba7-bb6d-8a2a25af7c37",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "At least 1 non-sprite variable is created and its value is updated in the draw loop and affects the program output.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "e45be25d-df05-4ba7-bb6d-8a2a25af7c37",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "At least 2 non-sprite variables are created and their values are updated in the draw loop and affect the program output.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "e45be25d-df05-4ba7-bb6d-8a2a25af7c37",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "The project guide is not filled out or is unrelated to the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "eb5fde0d-0ec2-4c43-960e-7b99de1e04b9",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "Some elements are used as described in the project guide.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "eb5fde0d-0ec2-4c43-960e-7b99de1e04b9",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "Elements are generally used as described in the project guide.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "eb5fde0d-0ec2-4c43-960e-7b99de1e04b9",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Elements are used as described in the project guide and clearly display a captioned scene.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "eb5fde0d-0ec2-4c43-960e-7b99de1e04b9",
+        "lesson.key": "Mini-Project - Captioned Scenes",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "You did not give feedback to peers",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "f902e010-1929-41b7-92e9-2b8d7ceabb90",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "You gave some feedback to peers.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "f902e010-1929-41b7-92e9-2b8d7ceabb90",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "You gave and responded to peer feedback.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "f902e010-1929-41b7-92e9-2b8d7ceabb90",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "You gave thoughtful feedback to peers and you responded to peer feedback by making appropriate changes to program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "f902e010-1929-41b7-92e9-2b8d7ceabb90",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "No sprites are used in the program.\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "f96a19ce-da2f-4070-aa81-e80312a62f43",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "At least 2 sprites created and animations set. The x velocity of the target or obstacle not set or set inside the draw loop.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "f96a19ce-da2f-4070-aa81-e80312a62f43",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "At least 2 sprites created and animations set properly. The x velocity of the target or obstacle properly set outside the draw loop.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "f96a19ce-da2f-4070-aa81-e80312a62f43",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "At least 4 sprites are created and their animations are set properly. The velocities of the obstacles are properly set outside the draw loop.\n\n\n",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "f96a19ce-da2f-4070-aa81-e80312a62f43",
+        "lesson.key": "Mini-Project - Flyer Game",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 0,
+      "teacher_description": "No elements (sprites, shapes, or text) are placed on the screen using the coordinate system.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "fe6ef462-b370-4640-95b3-ebf3eb927659",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "A cumulative of at least a total of 3 elements are placed on the screen using the coordinate system (e.g 2 sprites & 1 line of text or 1 sprite, 1 shape, & 1 line of text).",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "fe6ef462-b370-4640-95b3-ebf3eb927659",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "At least 1 shape, 2 sprites, and 1 line of text are placed on the screen using the coordinate system. At least 1 element moves during the program.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "fe6ef462-b370-4640-95b3-ebf3eb927659",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "At least 2 shapes, 2 sprites, and 2 lines of text are placed correctly on the screen using the coordinate system. At least 2 elements move in different ways.",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "fe6ef462-b370-4640-95b3-ebf3eb927659",
+        "lesson.key": "Mini-Project - Animation",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "interactive-games-animations-2024"
+      }
+    }
   ]
 }

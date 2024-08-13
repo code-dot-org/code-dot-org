@@ -1,33 +1,33 @@
 /** @file Top-level view for GameLab */
 
 import classNames from 'classnames';
-import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
 
-import experiments from '@cdo/apps/util/experiments';
-import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
-import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
-import {isResponsiveFromState} from '@cdo/apps/templates/ProtectedVisualizationDiv';
-import CodeWorkspace from '@cdo/apps/templates/CodeWorkspace';
 import {getManifest} from '@cdo/apps/assetManagement/animationLibraryApi';
 import ModalFunctionEditor from '@cdo/apps/blockly/components/ModalFunctionEditor';
-import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
 import VisualizationResizeBar from '@cdo/apps/lib/ui/VisualizationResizeBar';
+import CodeWorkspace from '@cdo/apps/templates/CodeWorkspace';
+import IFrameEmbedOverlay from '@cdo/apps/templates/IFrameEmbedOverlay';
+import InstructionsWithWorkspace from '@cdo/apps/templates/instructions/InstructionsWithWorkspace';
+import {isResponsiveFromState} from '@cdo/apps/templates/ProtectedVisualizationDiv';
+import StudioAppWrapper from '@cdo/apps/templates/StudioAppWrapper';
+import experiments from '@cdo/apps/util/experiments';
 
-import AnimationTab from './AnimationTab/AnimationTab';
-import ErrorDialogStack from './ErrorDialogStack';
 import AnimationJsonViewer from './AnimationJsonViewer';
+import AnimationPicker, {PICKER_TYPE} from './AnimationPicker/AnimationPicker';
+import AnimationTab from './AnimationTab/AnimationTab';
 import {
   P5LabInterfaceMode,
   P5LabType,
   APP_WIDTH,
   APP_HEIGHT,
 } from './constants';
-import P5LabVisualizationHeader from './P5LabVisualizationHeader';
+import ErrorDialogStack from './ErrorDialogStack';
 import P5LabVisualizationColumn from './P5LabVisualizationColumn';
+import P5LabVisualizationHeader from './P5LabVisualizationHeader';
 import {allowAnimationMode} from './stateQueries';
-import AnimationPicker, {PICKER_TYPE} from './AnimationPicker/AnimationPicker';
 
 /**
  * Top-level React wrapper for GameLab
@@ -114,10 +114,6 @@ class P5LabView extends React.Component {
       display: interfaceMode !== P5LabInterfaceMode.CODE ? 'none' : undefined,
     };
 
-    const visualizationColumnStyle = {
-      width: APP_WIDTH,
-    };
-
     const visualizationColumnClassNames = classNames({
       responsive: isResponsive,
       pin_bottom: !hideSource && pinWorkspaceToBottom,
@@ -142,9 +138,9 @@ class P5LabView extends React.Component {
           id="visualizationColumn"
           className={visualizationColumnClassNames}
           style={
-            experiments.isEnabled(experiments.BIG_PLAYSPACE)
+            experiments.isEnabledAllowingQueryString(experiments.BIG_PLAYSPACE)
               ? {}
-              : visualizationColumnStyle
+              : {width: APP_WIDTH}
           }
         >
           <P5LabVisualizationHeader labType={this.props.labType} />

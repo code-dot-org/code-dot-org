@@ -7,12 +7,13 @@
       "curriculum_umbrella": "CSC",
       "is_course": true,
       "is_migrated": true,
+      "tts": true,
       "version_year": "2024"
     },
     "new_name": null,
     "family_name": "k5-ai-data",
-    "serialized_at": "2024-06-28 17:14:18 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-07-12 14:27:04 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -59,7 +60,8 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "In this lesson, students will learn about how the inputs they give a machine learning model directly impact the predictions that the model makes. First, they will learn about the difference between random predictions and AI predictions, before training their own AI model to make predictions on whether an item is a fish or trash in the ocean. Finally, students will discuss the implications of biased training data by discussing hypothetical scenarios."
+        "overview": "In this lesson, students will learn about how the inputs they give a machine learning model directly impact the predictions that the model makes. First, they will learn about the difference between random predictions and AI predictions, before training their own AI model to make predictions on whether an item is a fish or trash in the ocean. Finally, students will discuss the implications of biased training data by discussing hypothetical scenarios.",
+        "preparation": "- Play through the levels on your own\n"
       },
       "seeding_key": {
         "lesson.key": "Training AI",
@@ -75,7 +77,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "In this lesson, students will begin thinking about how to classify real world objects by their features. They will build out two feature vectors (foods and emojis) in order to learn how AI makes decisions based on the probability of an outcome. Students will use “Dance Party: AI Edition” to see first-hand how AI can make tasks more efficient, but that it might come at the cost of customization. Students will consider what it means to collaborate and co-create with AI.\n"
+        "overview": "In this lesson, students will begin thinking about how to classify real world objects by their features. They will build out two feature vectors (foods and emojis) in order to learn how AI makes decisions based on the probability of an outcome. Students will use “Dance Party: AI Edition” to see first-hand how AI can make tasks more efficient, but that it might come at the cost of customization. Students will consider what it means to collaborate and co-create with AI.\n",
+        "preparation": "- Play through the levels on your own"
       },
       "seeding_key": {
         "lesson.key": "How AI Makes Decisions",
@@ -91,7 +94,8 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "In this lesson, students will evaluate sample student data. They will choose a hypothetical AI tool and consider what training data the tool will need to successfully make a decision. Then, students will write a letter to the school principal explaining their opinion on using AI tools. At the end of the lesson, students will reflect on what they have learned about AI over the course of the 4 lessons. \n\nStudents will understand that a predictive AI model is only as good as the information it was trained on. Therefore it is important to train the model on a large amount of data that is relevant to the task at hand. Also, students should recognize that there needs to be human oversight when it comes to working with AI to ensure that any mistakes made by AI get corrected. \n"
+        "overview": "In this lesson, students will evaluate sample student data. They will choose a hypothetical AI tool and consider what training data the tool will need to successfully make a decision. Then, students will write a letter to the school principal explaining their opinion on using AI tools. At the end of the lesson, students will reflect on what they have learned about AI over the course of the 4 lessons. \n\nStudents will understand that a predictive AI model is only as good as the information it was trained on. Therefore it is important to train the model on a large amount of data that is relevant to the task at hand. Also, students should recognize that there needs to be human oversight when it comes to working with AI to ensure that any mistakes made by AI get corrected. \n",
+        "preparation": "- Decide in advance if you want students to do the Warm Up and Main Activity on their devices or as an unplugged activity\n- If Unplugged, print out the <a href=\"https://docs.google.com/document/d/1xNf7mANfoF69gquysklUBtxjXN194VAJjU_KeW3lszg/template/preview\" target=\"_blank\">Student Survey</a> and \n<a href=\"https://docs.google.com/document/d/1rRpXQi3T4sl_lI4r5uw1h_btVQu_7M02NVoSjDXdMBk/template/preview\" target=\"_blank\">Activity Guide</a> \n in advance. Make sure students have a way to access the <a href=\"https://docs.google.com/spreadsheets/d/1t44C0ScGvgajfOEE6VE8sl7OQEJbgT1kvGDCnDgOPys/preview\" target=\"_blank\">Student Data</a>  resource.\n- If using devices, make sure you are able to access Student Survey results in your Teacher Dashboard."
       },
       "seeding_key": {
         "lesson.key": "Using AI Tools in School",
@@ -107,7 +111,8 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "overview": "In this lesson, students will create an artifact explaining their opinion on using AI tools. They have the option to write a letter to the principal, make a speech or song, make a poster, create a Sprite Lab project, or code a poem to share their opinion. At the end of the lesson, students will reflect on what they have learned about AI over the course of the module.\n"
+        "overview": "In this lesson, students will create an artifact explaining their opinion on using AI tools. They have the option to write a letter to the principal, make a speech or song, make a poster, create a Sprite Lab project, or code a poem to share their opinion. At the end of the lesson, students will reflect on what they have learned about AI over the course of the module.\n",
+        "preparation": "- Survey the different level types in the <a href=\"https://studio.code.org/s/k5-ai-data-2024/lessons/5/levels/1\" target=\"_blank\">choice level</a> to differentiate options for students\n- Prepare any materials students will need to write a letter, design a poster, or complete their projects"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -1377,14 +1382,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "Oceans_Video_Machine_Learning_2024"
+          "Oceans_Video_Elementary_Machine_Learning_2024"
         ],
         "progression": "Machine Learning Video"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "Oceans_Video_Machine_Learning_2024"
+          "Oceans_Video_Elementary_Machine_Learning_2024"
         ],
         "lesson.key": "Training AI",
         "lesson_group.key": "",
@@ -1392,7 +1397,7 @@
         "activity_section.key": "6da31799-aded-4ea1-b1e3-68e320db0613"
       },
       "level_keys": [
-        "Oceans_Video_Machine_Learning_2024"
+        "Oceans_Video_Elementary_Machine_Learning_2024"
       ]
     },
     {
@@ -1808,9 +1813,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Oceans_Video_Machine_Learning_2024",
+        "level.key": "Oceans_Video_Elementary_Machine_Learning_2024",
         "script_level.level_keys": [
-          "Oceans_Video_Machine_Learning_2024"
+          "Oceans_Video_Elementary_Machine_Learning_2024"
         ],
         "lesson.key": "Training AI",
         "lesson_group.key": "",
@@ -2016,6 +2021,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/k5-ai-data-2024/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/k5-ai-data-2024/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/k5-ai-data-2024/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "How AI Makes Predictions",
       "url": "https://docs.google.com/presentation/d/16adWPsJf9kGrCZv_cdaqT2-MUr1CiWX0U5E4lPzas-g/template/preview",
       "key": "elementary_ai_module_slides",
@@ -2039,6 +2077,19 @@
       },
       "seeding_key": {
         "resource.key": "how_ai_makes_predictions"
+      }
+    },
+    {
+      "name": "Share Your Voice - AI Poster",
+      "url": "https://docs.google.com/document/d/14WO5ZNTMFANYcDCcYtXzoH7b8V5tbKIt5oMHj5iaTFg/template/preview",
+      "key": "share_your_voice_-_ai_poster",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://docs.google.com/document/d/14WO5ZNTMFANYcDCcYtXzoH7b8V5tbKIt5oMHj5iaTFg/export/pdf",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "share_your_voice_-_ai_poster"
       }
     },
     {
@@ -2128,10 +2179,33 @@
         "lesson.key": "lesson-5",
         "resource.key": "how_ai_makes_predictions"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "share_your_voice_-_ai_poster"
+      }
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "k5-ai-data-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "k5-ai-data-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "k5-ai-data-2024"
+      }
+    }
   ],
   "scripts_student_resources": [
 

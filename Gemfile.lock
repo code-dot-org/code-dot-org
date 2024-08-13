@@ -203,14 +203,17 @@ GEM
     attr_required (1.0.2)
     auto_strip_attributes (2.1.0)
       activerecord (>= 3.0)
-    aws-eventstream (1.2.0)
+    aws-eventstream (1.3.0)
     aws-google (0.2.0)
       aws-sdk-core (~> 3.130)
       google-apis-core
       launchy (~> 2)
     aws-partitions (1.793.0)
-    aws-sdk-acm (1.44.0)
-      aws-sdk-core (~> 3, >= 3.119.0)
+    aws-sdk-acm (1.74.0)
+      aws-sdk-core (~> 3, >= 3.201.0)
+      aws-sigv4 (~> 1.5)
+    aws-sdk-bedrockagentruntime (1.10.0)
+      aws-sdk-core (~> 3, >= 3.193.0)
       aws-sigv4 (~> 1.1)
     aws-sdk-cloudformation (1.55.0)
       aws-sdk-core (~> 3, >= 3.119.0)
@@ -218,16 +221,16 @@ GEM
     aws-sdk-cloudfront (1.55.0)
       aws-sdk-core (~> 3, >= 3.119.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-cloudwatch (1.54.0)
-      aws-sdk-core (~> 3, >= 3.119.0)
-      aws-sigv4 (~> 1.1)
-    aws-sdk-cloudwatchlogs (1.43.0)
-      aws-sdk-core (~> 3, >= 3.119.0)
-      aws-sigv4 (~> 1.1)
-    aws-sdk-core (3.180.0)
-      aws-eventstream (~> 1, >= 1.0.2)
-      aws-partitions (~> 1, >= 1.651.0)
+    aws-sdk-cloudwatch (1.97.0)
+      aws-sdk-core (~> 3, >= 3.201.0)
       aws-sigv4 (~> 1.5)
+    aws-sdk-cloudwatchlogs (1.88.0)
+      aws-sdk-core (~> 3, >= 3.201.0)
+      aws-sigv4 (~> 1.5)
+    aws-sdk-core (3.201.3)
+      aws-eventstream (~> 1, >= 1.3.0)
+      aws-partitions (~> 1, >= 1.651.0)
+      aws-sigv4 (~> 1.8)
       jmespath (~> 1, >= 1.6.1)
     aws-sdk-databasemigrationservice (1.56.0)
       aws-sdk-core (~> 3, >= 3.119.0)
@@ -257,13 +260,13 @@ GEM
       aws-sdk-core (~> 3, >= 3.119.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.1)
-    aws-sdk-sagemakerruntime (1.55.0)
-      aws-sdk-core (~> 3, >= 3.177.0)
+    aws-sdk-sagemakerruntime (1.60.0)
+      aws-sdk-core (~> 3, >= 3.188.0)
       aws-sigv4 (~> 1.1)
     aws-sdk-secretsmanager (1.48.0)
       aws-sdk-core (~> 3, >= 3.119.0)
       aws-sigv4 (~> 1.1)
-    aws-sigv4 (1.6.0)
+    aws-sigv4 (1.9.1)
       aws-eventstream (~> 1, >= 1.0.2)
     backports (3.11.3)
     base64 (0.2.0)
@@ -331,12 +334,6 @@ GEM
       activerecord (>= 5.a)
       database_cleaner-core (~> 2.0.0)
     database_cleaner-core (2.0.1)
-    datapackage (1.1.1)
-      colorize
-      json-schema
-      ruby_dig
-      rubyzip
-      tableschema
     date (3.3.3)
     declarative (0.0.20)
     delayed_job (4.1.11)
@@ -419,10 +416,6 @@ GEM
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
-    firebase (0.2.6)
-      httpclient
-      json
-    firebase_token_generator (2.0.0)
     fspath (3.1.0)
     gemoji (4.1.0)
     geocoder (1.6.4)
@@ -515,8 +508,8 @@ GEM
       aes_key_wrap
       bindata
       httpclient
-    json-schema (2.8.1)
-      addressable (>= 2.4)
+    json-schema (4.3.1)
+      addressable (>= 2.8)
     jsonapi-renderer (0.2.2)
     jumphash (0.1.0)
     jwt (2.7.1)
@@ -535,8 +528,6 @@ GEM
     loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
-    macaddr (1.7.2)
-      systemu (~> 2.6.5)
     mail (2.8.1)
       mini_mime (>= 0.1.1)
       net-imap
@@ -685,6 +676,7 @@ GEM
       multi_json (~> 1.0)
       pusher-signature (~> 0.1.8)
     pusher-signature (0.1.8)
+    pycall (1.5.2)
     racc (1.6.2)
     rack (2.2.6.4)
     rack-cache (1.13.0)
@@ -824,7 +816,6 @@ GEM
     ruby-progressbar (1.13.0)
     ruby-rc4 (0.1.5)
     ruby2_keywords (0.0.5)
-    ruby_dig (0.0.2)
     rubyzip (2.3.2)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
@@ -896,12 +887,6 @@ GEM
       attr_required (>= 0.0.5)
       httpclient (>= 2.4)
     sysexits (1.2.0)
-    systemu (2.6.5)
-    tableschema (1.0.4)
-      activesupport
-      json-schema (~> 2.8.0)
-      tod (~> 2.1.0)
-      uuid (~> 2.3.8)
     temple (0.8.2)
     thin (1.8.2)
       daemons (~> 1.0, >= 1.0.9)
@@ -915,7 +900,6 @@ GEM
       date
     timecop (0.8.1)
     timeout (0.3.2)
-    tod (2.1.1)
     trailblazer-option (0.1.2)
     ttfunk (1.7.0)
     twilio-ruby (5.77.0)
@@ -934,8 +918,6 @@ GEM
     unicode_utils (1.4.0)
     uri (0.13.0)
     user_agent_parser (2.15.0)
-    uuid (2.3.9)
-      macaddr (~> 1.0)
     validate_email (0.1.6)
       activemodel (>= 3.0)
       mail (>= 2.2.5)
@@ -988,6 +970,7 @@ DEPENDENCIES
   auto_strip_attributes (~> 2.1)
   aws-google (~> 0.2.0)
   aws-sdk-acm
+  aws-sdk-bedrockagentruntime (~> 1.10.0)
   aws-sdk-cloudformation
   aws-sdk-cloudfront
   aws-sdk-cloudwatch
@@ -1021,7 +1004,6 @@ DEPENDENCIES
   dalli
   dalli-elasticache
   database_cleaner-active_record (~> 2.1.0)
-  datapackage
   delayed_job_active_record (~> 4.1)
   devise (~> 4.9.0)
   devise_invitable (~> 2.0.2)
@@ -1031,8 +1013,6 @@ DEPENDENCIES
   factory_bot_rails (~> 6.2)
   fakefs (~> 2.5.0)
   fakeredis
-  firebase
-  firebase_token_generator
   full-name-splitter!
   gemoji
   geocoder
@@ -1054,6 +1034,7 @@ DEPENDENCIES
   image_size
   jquery-rails
   jquery-ui-rails (~> 6.0.1)
+  json-schema (~> 4.3)
   jumphash
   jwt (~> 2.7.0)
   kaminari
@@ -1075,8 +1056,6 @@ DEPENDENCIES
   nakayoshi_fork
   naturally
   net-http-persistent
-  net-scp
-  net-ssh
   newrelic_rpm (~> 6.14.0)
   nokogiri (>= 1.10.0)
   octokit
@@ -1101,6 +1080,7 @@ DEPENDENCIES
   puma (~> 5.6)
   puma_worker_killer
   pusher (~> 1.3.1)
+  pycall (>= 1.5.2)
   rack-cache
   rack-cors (~> 2.0.1)
   rack-mini-profiler
@@ -1115,6 +1095,7 @@ DEPENDENCIES
   redis (~> 4.8.1)
   redis-actionpack (~> 5.4.0)
   redis-slave-read!
+  request_store (~> 1.6.0)
   require_all
   rerun
   responders (~> 3.0)

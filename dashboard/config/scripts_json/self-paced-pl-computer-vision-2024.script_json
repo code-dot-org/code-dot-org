@@ -2,13 +2,17 @@
   "script": {
     "name": "self-paced-pl-computer-vision-2024",
     "wrapup_video_id": null,
-    "login_required": false,
+    "login_required": true,
     "properties": {
-      "is_migrated": true
+      "curriculum_umbrella": "Foundations of CS",
+      "hideable_lessons": true,
+      "is_migrated": true,
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-06-28 15:55:58 UTC",
+    "serialized_at": "2024-07-11 17:26:33 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1282,6 +1286,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-computer_vision_juiceMInd_intro"
+        ],
         "progression": "Teaching Resources"
       },
       "bonus": false,

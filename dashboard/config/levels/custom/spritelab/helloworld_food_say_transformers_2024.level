@@ -1,0 +1,110 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 64,
+  "created_at": "2024-08-02T22:04:51.000Z",
+  "level_num": "custom",
+  "user_id": 9,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "true",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "true",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "hide_animation_mode": "true",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "pause_animations_by_default": "false",
+    "edit_code": "false",
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "zHelloWorldValidation",
+      "zValidationHelperFunctions"
+    ],
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "hide_custom_blocks": "true",
+    "use_default_sprites": "false",
+    "auto_run_setup": "DRAW_LOOP",
+    "parent_level_id": 28354,
+    "show_type_hints": "true",
+    "include_shared_functions": "false",
+    "block_pool": "gamelab",
+    "name_suffix": "_transformers_2024",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "mini_rubric": "false",
+    "encrypted": "false",
+    "long_instructions": "\r\n*Hello, world! I'm a sprite. Use the `say` block to make me say whatever you like!*\r\n\r\n- Drag a `make new sprite` block into the workspace and connect it under `when run`.\r\n- Connect a `say` block *under* a `make new sprite` block.\r\n- Make sure to select the same *costume* in each block of code.\r\n- Press *\"Run\"* when you are finished.",
+    "start_animations": "{\"orderedKeys\":[\"581b5f21-adae-4848-8bb7-fa947e5c3f87\",\"3c66678d-9cc3-4dca-b0c5-7e513094456e\",\"f5ae25b8-42c7-42d3-8ec6-e87a7b4a31f5\"],\"propsByKey\":{\"581b5f21-adae-4848-8bb7-fa947e5c3f87\":{\"name\":\"transformers_one_bg_5\",\"frameCount\":1,\"frameSize\":{\"x\":800,\"y\":800},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-07T17:15:00.000Z\",\"pngLastModified\":\"2024-08-07T17:14:59.000Z\",\"version\":\"z.WaVPfBtQWzxyWWwK5BFl6S5A5aktmF\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/z.WaVPfBtQWzxyWWwK5BFl6S5A5aktmF/transformers_one_bg_5.png\",\"sourceSize\":{\"x\":800,\"y\":800}},\"3c66678d-9cc3-4dca-b0c5-7e513094456e\":{\"name\":\"optimus_prime_1\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:12:23.000Z\",\"pngLastModified\":\"2024-08-07T17:12:22.000Z\",\"version\":\"lXfLgjLKmYgLhV.L23LvCYtNlgwZrA3i\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/lXfLgjLKmYgLhV.L23LvCYtNlgwZrA3i/optimus_prime_1.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"f5ae25b8-42c7-42d3-8ec6-e87a7b4a31f5\":{\"name\":\"megatron_1\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:11:43.000Z\",\"pngLastModified\":\"2024-08-07T17:11:43.000Z\",\"version\":\"S837ya3F1lMBgC37PlzFsBSKGHqvNwcn\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/S837ya3F1lMBgC37PlzFsBSKGHqvNwcn/megatron_1.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}\r\n\r\n",
+    "validation_enabled": "true",
+    "mini_toolbox": "false",
+    "validation_code": "//Requires zHelloWorldValidation and zValidationHelperFunctions\r\nlevel1();",
+    "hide_pause_button": "true",
+    "hint_prompt_attempts_threshold": "1",
+    "short_instructions": "Use the `say` block to make me say whatever you like!",
+    "instructions_icon": "transformers_optimusprime",
+    "authored_hints": "[{\"hint_class\":\"bottom-out\",\"hint_markdown\":\"To make the pizza say something, connect the blocks of code like this:\\n\\n<xml>\\n  <block type=\\\"when_run\\\" deletable=\\\"false\\\"><next>  <block type=\\\"gamelab_makeNewSpriteAnon\\\">\\n    <title name=\\\"ANIMATION_NAME\\\">\\\"face_pizza_1\\\"</title>\\n    <value name=\\\"LOCATION\\\">\\n      <block type=\\\"gamelab_location_picker\\\">\\n        <title name=\\\"LOCATION\\\">{\\\"x\\\":200,\\\"y\\\":200}</title>\\n      </block>\\n    </value><next>  <block type=\\\"gamelab_spriteSay\\\">\\n    <title name=\\\"SPEECH\\\">Hello, world!</title>\\n    <value name=\\\"SPRITE\\\">\\n      <block type=\\\"gamelab_allSpritesWithAnimation\\\">\\n        <title name=\\\"ANIMATION\\\">\\\"face_pizza_1\\\"</title>\\n      </block>\\n    </value>\\n  </block></next>\\n  </block></next></block>\\n</xml>\",\"hint_id\":\"hello-world-first-solution-pizza\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/b37310b0c44442dede5daaa2c1ce96a0/helloworld_food_say.mp3\"}]",
+    "video_key": "hello_world_intro",
+    "skip_autosave": true,
+    "encrypted_examples": "Wao2CB+999XcuWgtwhzMiapqj3NBqk4XREhbUIAzevPrHpFjG9wRcTMxBkel\nFfs7cEhGmbjXv7PwAEqUNGguYQ==\n",
+    "standalone_app_name": "spritelab",
+    "preload_asset_list": null
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:51.785+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_say\\\"\"],\"cloned_from\":\"helloworld_food_say\"},{\"changed_at\":\"2024-08-07 18:48:14 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"start_animations\",\"callout_json\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-07 18:55:32 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"callout_json\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-07 21:14:28 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-09 17:10:50 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false"/>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <block type="gamelab_makeNewSpriteAnon" id="1">
+          <title name="ANIMATION_NAME">"face_pizza_1"</title>
+          <value name="LOCATION">
+            <block type="gamelab_location_picker" can_disconnect_from_parent="false">
+              <title name="LOCATION">{"x":200,"y":200}</title>
+            </block>
+          </value>
+        </block>
+        <block type="gamelab_spriteSay" id="3">
+          <title name="SPEECH">Hello, world!</title>
+          <value name="SPRITE">
+            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+              <title name="ANIMATION">"face_pizza_1"</title>
+            </block>
+          </value>
+        </block>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

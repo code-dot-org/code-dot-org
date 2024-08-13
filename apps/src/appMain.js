@@ -1,17 +1,18 @@
-import {getStore, registerReducers} from './redux';
-import {wrapNumberValidatorsForLevelBuilder, valueOr} from './utils';
-import {makeTestsFromBuilderRequiredBlocks} from './required_block_utils';
-import {singleton as studioApp} from './StudioApp';
-import {generateAuthoredHints} from './authoredHintUtils';
-import {addReadyListener} from './dom';
-import * as blocksCommon from './blocksCommon';
-import * as commonReducers from './redux/commonReducers';
 import {
   installCustomBlocks,
   appendBlocksByCategory,
 } from '@cdo/apps/block_utils';
+
+import {generateAuthoredHints} from './authoredHintUtils';
+import * as blocksCommon from './blocksCommon';
+import {addReadyListener} from './dom';
 import logToCloud from './logToCloud';
+import {getStore, registerReducers} from './redux';
+import * as commonReducers from './redux/commonReducers';
+import {makeTestsFromBuilderRequiredBlocks} from './required_block_utils';
 import defaultSkinModule from './skins.js';
+import {singleton as studioApp} from './StudioApp';
+import {wrapNumberValidatorsForLevelBuilder, valueOr} from './utils';
 
 window.__TestInterface = {
   loadBlocks: (...args) => studioApp().loadBlocks(...args),

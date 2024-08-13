@@ -1,8 +1,8 @@
 name 'k5_ai_final_choice_level_make_a_poster_pl'
 title 'Make a Poster'
 display_name 'Make a Poster'
-level_description '🌶️ Share your thoughts on AI by making a hallway poster.'
-thumbnail_url '![](https://images.code.org/483d23062870c2b485f6a92a1deff1d4-image-1715374258778.50.44 PM.png)'
+bubble_choice_description '🌶️ Share your thoughts on AI by making a hallway poster.'
+thumbnail_url 'https://images.code.org/483d23062870c2b485f6a92a1deff1d4-image-1715374258778.50.44 PM.png'
 
 
 markdown <<MARKDOWN

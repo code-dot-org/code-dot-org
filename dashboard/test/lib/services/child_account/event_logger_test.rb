@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Services::ChildAccount::EventLoggerTest < ActiveSupport::TestCase
   setup do
-    @user = create(:non_compliant_child, child_account_compliance_state: 'l')
+    @user = create(:locked_out_child)
   end
 
   test 'call - creates CAP user event' do
@@ -68,5 +68,11 @@ class Services::ChildAccount::EventLoggerTest < ActiveSupport::TestCase
     event_name = CAP::UserEvent::ACCOUNT_PURGING
     Services::ChildAccount::EventLogger.expects(:call).with(user: @user, event_name: event_name).returns(event_name)
     assert_equal event_name, Services::ChildAccount::EventLogger.log_account_purging(@user)
+  end
+
+  test 'log_compliance_removing' do
+    event_name = CAP::UserEvent::COMPLIANCE_REMOVING
+    Services::ChildAccount::EventLogger.expects(:call).with(user: @user, event_name: event_name).returns(event_name)
+    assert_equal event_name, Services::ChildAccount::EventLogger.log_compliance_removing(@user)
   end
 end

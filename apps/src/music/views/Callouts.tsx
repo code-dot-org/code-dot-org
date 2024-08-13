@@ -1,9 +1,11 @@
 import React, {useEffect} from 'react';
 import {useSelector} from 'react-redux';
-import {MusicState} from '../redux/musicRedux';
-import moduleStyles from './callouts.module.scss';
+
 import {BlockTypes} from '../blockly/blockTypes';
 import {Triggers} from '../constants';
+import {MusicState} from '../redux/musicRedux';
+
+import moduleStyles from './callouts.module.scss';
 
 const arrowImage = require(`@cdo/static/music/music-callout-arrow.png`);
 
@@ -18,6 +20,9 @@ const availableCallouts: {
   },
   'play-drums-block': {
     selector: `.blocklyFlyout g[data-id="${BlockTypes.PLAY_PATTERN_AT_CURRENT_LOCATION_SIMPLE2}"]`,
+  },
+  'play-tune-block': {
+    selector: `.blocklyFlyout g[data-id="${BlockTypes.PLAY_TUNE_AT_CURRENT_LOCATION_SIMPLE2}"]`,
   },
   'play-sounds-together-block': {
     selector: `.blocklyFlyout g[data-id="${BlockTypes.PLAY_SOUNDS_TOGETHER}"]`,

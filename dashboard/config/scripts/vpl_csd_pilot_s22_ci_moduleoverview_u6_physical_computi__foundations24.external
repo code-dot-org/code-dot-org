@@ -3,28 +3,24 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Teaching Creating Apps for Devices
+# Teaching Computer Systems and Devices
 
-#### Welcome! This professional learning experience is designed help you prepare to teach Code.org's Creating Apps for Devices unit. 
+#### Welcome! This professional learning experience is designed help you prepare to teach Code.org's Computer Systems and Devices unit. 
 
 <img src="https://images.code.org/3b3e70c43d22260c1cd76d409a94f0b3-image-1654802658623.png" alt="Image of a Circuit Playground" style="border-radius:0px; float: right; padding-right: 20px; height: 250px; clear: both; margin: 0 0px 20px 0;">
 
 
 ### **You will:**
 
-* #### Get an introduction to Creating Apps for Devices.
+* #### Get an introduction to Computer Systems and Devices.
 * #### Set up your Circuit Playground.
 * #### Practice key concepts included in the unit.
-* #### Preview end-of-chapter projects.
-* #### Consider the role of the teacher in a computer science classroom.
+* #### Preview the end-of-unit project.
 <br>
 
 <div style="background-color: #F7F8FA; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 14px;">
 <b>NOTE:</b> You will need a Circuit Playground to complete this professional learning experience. 
 </p></div>
-<br>
-
-#### **Suggested time:** 100 minutes
 <br>
 
 ___
@@ -33,7 +29,7 @@ ___
 
 ### **You will:**
 
-* #### Get an introduction to Creating Apps for Devices.
+* #### Get an introduction to Computer Systems and Devices.
 * #### Set up your Circuit Playground.
 <br>
 

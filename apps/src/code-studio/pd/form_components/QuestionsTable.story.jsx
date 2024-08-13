@@ -1,7 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import QuestionsTable from './QuestionsTable';
 import {action} from '@storybook/addon-actions';
+import PropTypes from 'prop-types';
+import React from 'react';
+
+import QuestionsTable from './QuestionsTable';
 
 class TestWrapper extends React.Component {
   constructor(props) {

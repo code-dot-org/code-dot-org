@@ -5,8 +5,8 @@ import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import Button from '@cdo/apps/templates/Button';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import color from '@cdo/apps/util/color';
 import {
@@ -84,6 +84,7 @@ export const courseLinkFormatter = function (course, {rowData}) {
       ) : (
         <span
           className={skeletonizeContent.skeletonizeContent}
+          data-testid={'skeletonize-content'}
           style={{width: random(30, 90) + '%'}}
         />
       )}

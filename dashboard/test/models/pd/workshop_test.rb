@@ -309,6 +309,26 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::Workshop.process_ends
   end
 
+  test 'end workshop sends exit surveys to facilitators for Build Your Own workshops' do
+    byo_workshop = create :pd_workshop,
+      :ended,
+      funded: false,
+      course: Pd::Workshop::COURSE_BUILD_YOUR_OWN,
+      subject: nil,
+      course_offerings: [] << (create :course_offering),
+      num_facilitators: 1
+    byo_workshop.start!
+
+    Pd::Workshop.any_instance.expects(:send_exit_surveys)
+    Pd::WorkshopMailer.any_instance.expects(:facilitator_post_workshop)
+
+    byo_workshop.end!
+
+    # This is normally called by a cron job on production-daemon, but in this test
+    # we call it synchronously.
+    Pd::Workshop.process_ends
+  end
+
   test 'end workshop second time attempts sending exit surveys but they do not send again' do
     workshop = create :workshop
     workshop.start!
@@ -1120,7 +1140,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     unit_group = create :unit_group, name: 'pd-workshop-pre-survey-test-1991', family_name: 'pd-workshop-pre-survey-test', version_year: '1991'
     CourseOffering.add_course_offering(unit_group)
     next_position = 1
-    add_unit = ->(unit_name, lesson_names) do
+    add_unit = lambda do |unit_name, lesson_names|
       create(:script, name: unit_name).tap do |script|
         create :unit_group_unit, unit_group: unit_group, script: script, position: (next_position += 1)
         create :lesson_group, script: script

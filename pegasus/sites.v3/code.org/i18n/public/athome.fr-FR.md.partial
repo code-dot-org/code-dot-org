@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">Suivez un cours d'introduction à votre rythme</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">Créer un jeu ou une application</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">Essayez CS sans ordinateur (options « hors ligne » et mobiles)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Apprenez CS avec l'équipe Code.org et des invités spéciaux</a></li>
 </ul>
 
 <br>
@@ -283,56 +282,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Hello Ruby</a> - La façon la plus fantaisiste au monde d'en savoir plus sur l’informatique, la technologie et la programmation. Activités dans une gamme de sujets informatiques, tels que la capacité à décomposer un problème, repérer des modèles, penser de manière algorithmique, déboguer des problèmes et travailler ensemble. (de 4 à 10 ans)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - Une collection de matériel pédagogique gratuit qui enseigne l'informatique à travers des jeux et des puzzles captivants qui utilisent des cartes, de la ficelle, des crayons etc. (de 5 à 14 ans)</li>
 </ul>
-
-<h2>Pas d’ordinateur à la maison ? Essayez CS sur votre téléphone avec les applications de nos partenaires</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="L'île des Boîtes"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Un charmant jeu de codage mobile qui emmène les apprenants dans une aventure passionnante, tout en leur enseignant les principes fondamentaux du codage, tels que les algorithmes, la reconnaissance des formes, les séquences, les boucles et les conditionnels. <i>(pour tous les âges)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">CodeSpark Plateforme d'apprentissage du code</h3></a>primée pour les enfants de 5 à 9 ans. Résolvez des énigmes et créez des jeux avec The Foos, tout en apprenant à coder. <strong>Remarque : codeSpark offre un essai gratuit de 3 mois. L'adresse électronique et les informations relatives à la carte de crédit du parent sont requises lors de l'inscription. </strong> <i>(pour les pré-lecteurs jusqu'au Cm2)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">Haut de page</a></p>
-
-<a id="livecoding"></a>
-<h2>Apprenez avec l'équipe Code.org et des invités spéciaux !</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Logo CodeBytes">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes sont des leçons interactives de 20 minutes faciles à assimiler mêlant l'informatique à des sujets du monde réel. Formez une AI à lire la langue des signes, concevez une application pour de bon, explorez le monde de Minecraft, et plus encore !</div>
-        <br>
-        <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Voir des épisodes</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Code Break">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">Code Break</h3>
-        <div class="smalltext" style="">Amusez-vous en informatique en faisant un code break ! Vous pouvez créer un code avec Ashton Kutcher, découvrir les variables avec Yara Shahidi et même explorer le fonctionnement d'Internet avec le véritable inventeur d'Internet, Vint Cerf </div>
-        <br>
-        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Restez connectés</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

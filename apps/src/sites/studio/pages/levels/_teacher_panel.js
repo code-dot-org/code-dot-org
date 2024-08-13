@@ -1,18 +1,19 @@
 import $ from 'jquery';
-import {getStore} from '@cdo/apps/redux';
 import React from 'react';
-import {Provider} from 'react-redux';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux';
+
+import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import TeacherContentToggle from '@cdo/apps/code-studio/components/TeacherContentToggle';
 import {getHiddenLessons} from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {renderTeacherPanel} from '@cdo/apps/code-studio/teacherPanelHelpers';
-import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import {getStore} from '@cdo/apps/redux';
 import {
   setUserRoleInCourse,
   CourseRoles,
 } from '@cdo/apps/templates/currentUserRedux';
-import {queryParams} from '@cdo/apps/code-studio/utils';
 
 $(document).ready(initPage);
 

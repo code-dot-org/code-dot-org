@@ -1,5 +1,9 @@
 @import 'color';
 
+.container {
+  overflow: hidden;
+}
+
 .modelCardTitle {
   margin: 5px;
   margin-bottom: 20px;
@@ -9,5 +13,5 @@
 
 .modelCardFields {
   overflow-y: auto;
-  height: 70vh;
+  padding: 0 10px 10px 10px;
 }

@@ -1,7 +1,7 @@
-import {expect} from 'chai';
+import {expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {QuickView} from '@cdo/apps/code-studio/pd/application_dashboard/quick_view';
 import QuickViewTable from '@cdo/apps/code-studio/pd/application_dashboard/quick_view_table';
@@ -25,7 +25,7 @@ describe('Quick View', () => {
 
   describe('Initially', () => {
     let quickView;
-    before(() => {
+    beforeAll(() => {
       quickView = shallow(
         <QuickView
           regionalPartnerFilter={regionalPartnerFilter}
@@ -64,7 +64,7 @@ describe('Quick View', () => {
     ];
     let server;
     let quickView;
-    before(() => {
+    beforeAll(() => {
       server = sinon.fakeServer.create();
       server.respondWith(
         'GET',
@@ -87,7 +87,7 @@ describe('Quick View', () => {
       server.respond();
       quickView.update();
     });
-    after(() => {
+    afterAll(() => {
       server.restore();
     });
 

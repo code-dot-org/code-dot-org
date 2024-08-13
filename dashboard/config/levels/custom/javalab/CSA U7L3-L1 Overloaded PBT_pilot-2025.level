@@ -1,0 +1,40 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T21:40:37.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Playlist.java": {
+        "text": "import java.util.ArrayList;\n\n/*\n * Represents a playlist of songs\n */\npublic class Playlist {\n\n  private ArrayList<Song> songs;    // The list of Song objects\n\n  /*\n   * Initializes songs to an empty list\n   */\n  public Playlist() {\n    this.songs = new ArrayList<Song>();\n  }\n\n  /*\n   * Returns the list of songs\n   */\n  public ArrayList<Song> getSongs() {\n    return songs;\n  }\n\n  /*\n   * Returns the number of songs in the playlist\n   */\n  public int getNumSongs() {\n    return songs.size();\n  }\n\n  /*\n   * Returns the song at the specified index\n   */\n  public Song getSong(int index) {\n    return songs.get(index);\n  }\n\n  /*\n   * Adds a song to the list of songs\n   */\n  public void addSong(Song newSong) {\n    songs.add(new Song(newSong.getTitle(), newSong.getArtist()));\n  }\n\n  /*\n   * Returns a String containing each song in the playlist\n   */\n  public String toString() {\n    String result = \"\";\n\n    for (Song song : songs) {\n      result += song + \"\\n\";\n    }\n\n    return result;\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 2
+      },
+      "Song.java": {
+        "text": "/*\n * Represents a song\n */\npublic class Song {\n\n  private String title;     // The title of a song\n  private String artist;    // The name of the artist of a song\n\n  /*\n   * Sets title and artist to the specified values\n   */\n  public Song(String title, String artist) {\n    this.title = title;\n    this.artist = artist;\n  }\n\n  /*\n   * Returns the title of the song\n   */\n  public String getTitle() {\n    return title;\n  }\n\n  /*\n   * Returns the artist of the song\n   */\n  public String getArtist() {\n    return artist;\n  }\n\n  /*\n   * Returns a String containing the song information\n   */\n  public String toString() {\n    return title + \" by \" + artist;\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 3
+      },
+      "MusicPlayer.java": {
+        "text": "/*\n * Represents a music player\n */\npublic class MusicPlayer {\n\n  /*\n   * Returns a String containing the text \"Now playing: \"\n   * and the song's information\n   */\n  public String play(Song song) {\n    return \"Now playing: \" + song;\n  }\n\n  /* \n   * Returns a String containig each song in playlist\n   */\n  public String play(Playlist playlist) {\n    String result = \"First up: \" + playlist.getSong(0) + \"\\n\";\n\n    for (int index = 1; index < playlist.getNumSongs(); index++) {\n      result += \"Next up: \" + playlist.getSong(index) + \"\\n\";\n    }\n\n    return result;\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      },
+      "MusicRunner.java": {
+        "text": "import java.util.ArrayList;\n\npublic class MusicRunner {\n  public static void main(String[] args) {\n\n    // Creates several Song objects\n    Song queen = new Song(\"Bohemian Rhapsody\", \"Queen\");\n    Song lennon = new Song(\"Imagine\", \"John Lennon\");\n    Song weeknd = new Song(\"Blinding Lights\", \"The Weeknd\");\n    Song pharrell = new Song(\"Happy\", \"Pharrell Williams\");\n    Song bruno = new Song(\"Count on Me\", \"Bruno Mars\");\n\n    // Creates a Playlist object\n    Playlist music = new Playlist();\n    music.addSong(queen);\n    music.addSong(lennon);\n    music.addSong(weeknd);\n    music.addSong(pharrell);\n    music.addSong(bruno);\n\n    // Creates a MusicPlayer object\n    MusicPlayer player = new MusicPlayer();\n\n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n\n    \n\n\n\n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "name_suffix": "_pilot-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T21:40:37.116+00:00\",\"changed\":[\"cloned from \\\"CSA U7L3-L1 Overloaded PBT_2025\\\"\"],\"cloned_from\":\"CSA U7L3-L1 Overloaded PBT_2025\"}]"
+}]]></config>
+</Javalab>

@@ -4,10 +4,12 @@ import React, {useState, useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
 
 import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {studentShape} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-import FontAwesome from '../FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import {
   collapseMetadataForStudents,
   expandMetadataForStudents,
@@ -21,6 +23,7 @@ function MoreOptionsDropdown({
   students,
   expandMetadataForStudents,
   collapseMetadataForStudents,
+  sectionId,
 }) {
   const [opened, setOpened] = useState(false);
   const [menuLocation, setMenuLocation] = useState({menuTop: 0, menuLeft: 0});
@@ -33,11 +36,17 @@ function MoreOptionsDropdown({
   );
 
   const expandMetaDataForAllStudents = () => {
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_ALL_ROWS_EXPANDED, {
+      sectionId: sectionId,
+    });
     expandMetadataForStudents(getAllStudentIds);
     setOpened(false);
   };
 
   const collapseMetaDataForAllStudents = () => {
+    analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_ALL_ROWS_COLLAPSED, {
+      sectionId: sectionId,
+    });
     collapseMetadataForStudents(getAllStudentIds);
     setOpened(false);
   };
@@ -71,7 +80,8 @@ function MoreOptionsDropdown({
     };
   }, [updateMenuLocation, opened]);
 
-  const handleDropdownClick = () => {
+  const handleDropdownClick = e => {
+    e.stopPropagation();
     setOpened(!opened);
   };
 
@@ -88,6 +98,7 @@ function MoreOptionsDropdown({
         className={style.expandButton}
         onClick={handleDropdownClick}
         aria-label={i18n.additionalOptions()}
+        id="ui-see-more-options-dropdown"
       >
         <FontAwesome icon="ellipsis-vertical" />
       </button>
@@ -105,7 +116,7 @@ function MoreOptionsDropdown({
             style={{marginTop: '4px', padding: '5px 14px'}}
           >
             <FontAwesome icon="arrows-from-line" />
-            <div>{i18n.expandAll()}</div>
+            <div id="ui-test-expand-all">{i18n.expandAll()}</div>
           </PopUpMenu.Item>
           <PopUpMenu.Item
             className={style.menuItem}
@@ -113,7 +124,7 @@ function MoreOptionsDropdown({
             style={{marginBottom: '4px', padding: '5px 14px'}}
           >
             <FontAwesome icon="arrows-to-line" />
-            <div>{i18n.collapseAll()}</div>
+            <div id="ui-test-collapse-all">{i18n.collapseAll()}</div>
           </PopUpMenu.Item>
         </PopUpMenu>
       )}
@@ -124,6 +135,7 @@ MoreOptionsDropdown.propTypes = {
   students: PropTypes.arrayOf(studentShape),
   expandMetadataForStudents: PropTypes.func,
   collapseMetadataForStudents: PropTypes.func,
+  sectionId: PropTypes.number,
 };
 
 export const UnconnectedMoreOptionsDropdown = MoreOptionsDropdown;
@@ -131,6 +143,7 @@ export const UnconnectedMoreOptionsDropdown = MoreOptionsDropdown;
 export default connect(
   state => ({
     students: state.teacherSections.selectedStudents,
+    sectionId: state.teacherSections.selectedSectionId,
   }),
   dispatch => ({
     expandMetadataForStudents: studentIds =>

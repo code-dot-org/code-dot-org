@@ -1,29 +1,32 @@
 import PropTypes from 'prop-types';
+import QRCode from 'qrcode.react';
 import React from 'react';
 import {connect} from 'react-redux';
-import BaseDialog from '../../templates/BaseDialog';
-import AdvancedShareOptions from './AdvancedShareOptions';
-import AbuseError from './AbuseError';
-import SendToPhone from './SendToPhone';
-import color from '../../util/color';
-import * as applabConstants from '../../applab/constants';
+
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
+import fontConstants from '@cdo/apps/fontConstants';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import * as p5labConstants from '@cdo/apps/p5lab/constants';
-import {SongTitlesToArtistTwitterHandle} from '../dancePartySongArtistTags';
-import {hideShareDialog, unpublishProject} from './shareDialogRedux';
-import DownloadReplayVideoButton from './DownloadReplayVideoButton';
-import {showPublishDialog} from '../../templates/projects/publishDialog/publishDialogRedux';
-import PublishDialog from '../../templates/projects/publishDialog/PublishDialog';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {createHiddenPrintWindow} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
-import LibraryCreationDialog from './libraries/LibraryCreationDialog';
-import QRCode from 'qrcode.react';
-import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import defaultThumbnail from '@cdo/static/projects/project_default.png';
-import fontConstants from '@cdo/apps/fontConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+
+import * as applabConstants from '../../applab/constants';
+import BaseDialog from '../../templates/BaseDialog';
+import PublishDialog from '../../templates/projects/publishDialog/PublishDialog';
+import {showPublishDialog} from '../../templates/projects/publishDialog/publishDialogRedux';
+import color from '../../util/color';
+import {SongTitlesToArtistTwitterHandle} from '../dancePartySongArtistTags';
+
+import AbuseError from './AbuseError';
+import AdvancedShareOptions from './AdvancedShareOptions';
+import DownloadReplayVideoButton from './DownloadReplayVideoButton';
+import LibraryCreationDialog from './libraries/LibraryCreationDialog';
+import SendToPhone from './SendToPhone';
+import {hideShareDialog, unpublishProject} from './shareDialogRedux';
 
 function recordShare(type, appType) {
   if (!window.dashboard) {

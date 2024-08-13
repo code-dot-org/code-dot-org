@@ -2,12 +2,13 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import ProjectUpdatedAt from './ProjectUpdatedAt';
 import {
   setProjectUpdatedError,
   setProjectUpdatedSaving,
   setProjectUpdatedSaved,
 } from '../../projectRedux';
+
+import ProjectUpdatedAt from './ProjectUpdatedAt';
 
 // Levelbuilder-only UI for saving changes to a level.
 class LevelBuilderSaveButton extends React.Component {

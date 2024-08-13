@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import Button from '@cdo/apps/templates/Button';
+import React, {useState} from 'react';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import UploadImageDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/UploadImageDialog';
 import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {getIconForLevel} from '@cdo/apps/templates/progress/progressHelpers';
 import {levelType} from '@cdo/apps/templates/progress/progressTypes';
 import color from '@cdo/apps/util/color';

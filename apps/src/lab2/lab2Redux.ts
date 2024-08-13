@@ -5,11 +5,40 @@
 
 import {
   AnyAction,
+  createAction,
   createAsyncThunk,
   createSlice,
   PayloadAction,
   ThunkDispatch,
 } from '@reduxjs/toolkit';
+
+import {
+  getAppOptionsEditBlocks,
+  getAppOptionsEditingExemplar,
+  getAppOptionsViewingExemplar,
+} from '@cdo/apps/lab2/projects/utils';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+
+import {getCurrentLevel} from '../code-studio/progressReduxSelectors';
+import {
+  setProjectUpdatedAt,
+  setProjectUpdatedError,
+  setProjectUpdatedSaving,
+  setProjectUpdatedSaved,
+} from '../code-studio/projectRedux';
+import {RootState} from '../types/redux';
+import HttpClient, {NetworkError} from '../util/HttpClient';
+
+import {START_SOURCES} from './constants';
+import Lab2Registry from './Lab2Registry';
+import {
+  getInitialValidationState,
+  ValidationState,
+} from './progress/ProgressManager';
+import ProjectManager from './projects/ProjectManager';
+import ProjectManagerFactory from './projects/ProjectManagerFactory';
+import {getPredictResponse} from './projects/userLevelsApi';
+import {LevelPropertiesValidator} from './responseValidators';
 import {
   AppName,
   Channel,
@@ -17,28 +46,7 @@ import {
   ProjectManagerStorageType,
   ProjectSources,
 } from './types';
-import Lab2Registry from './Lab2Registry';
-import ProjectManagerFactory from './projects/ProjectManagerFactory';
-import {
-  setProjectUpdatedAt,
-  setProjectUpdatedError,
-  setProjectUpdatedSaving,
-  setProjectUpdatedSaved,
-} from '../code-studio/projectRedux';
-import ProjectManager from './projects/ProjectManager';
-import HttpClient, {NetworkError} from '../util/HttpClient';
-import {
-  getInitialValidationState,
-  ValidationState,
-} from './progress/ProgressManager';
-import {LevelPropertiesValidator} from './responseValidators';
-import {
-  getAppOptionsEditBlocks,
-  getAppOptionsEditingExemplar,
-  getAppOptionsViewingExemplar,
-} from '@cdo/apps/lab2/projects/utils';
-import {START_SOURCES} from './constants';
-import {getPredictResponse} from './projects/userLevelsApi';
+import {LifecycleEvent} from './utils/LifecycleNotifier';
 
 interface PageError {
   errorMessage: string;
@@ -66,9 +74,6 @@ export interface LabState {
   levelProperties: LevelProperties | undefined;
   // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
   isShareView: boolean | undefined;
-  // User's response for the level, if the level is a predict level. It is an empty string if this
-  // is not a predict level or if the user has not yet submitted a response.
-  predictResponse: string;
 }
 
 const initialState: LabState = {
@@ -80,7 +85,6 @@ const initialState: LabState = {
   validationState: getInitialValidationState(),
   levelProperties: undefined,
   isShareView: undefined,
-  predictResponse: '',
 };
 
 // Thunks
@@ -98,11 +102,14 @@ export const setUpWithLevel = createAsyncThunk(
       scriptId?: number;
       levelPropertiesPath: string;
       channelId?: string;
-      userId?: string;
+      userId?: number;
       scriptLevelId?: string;
     },
     thunkAPI
   ) => {
+    Lab2Registry.getInstance()
+      .getLifecycleNotifier()
+      .notify(LifecycleEvent.LevelLoadStarted, payload.levelId);
     try {
       // Update properties for reporting as early as possible in case of errors.
       Lab2Registry.getInstance().getMetricsReporter().updateProperties({
@@ -156,11 +163,11 @@ export const setUpWithLevel = createAsyncThunk(
       if (levelProperties.predictSettings?.isPredictLevel && payload.scriptId) {
         const predictResponse =
           (await getPredictResponse(payload.levelId, payload.scriptId)) || '';
-        thunkAPI.dispatch(setPredictResponse(predictResponse));
+        thunkAPI.dispatch(setLoadedPredictResponse(predictResponse));
       } else {
         // If this isn't a predict level, reset the response to an empty string
         // to avoid potentially confusing behavior.
-        thunkAPI.dispatch(setPredictResponse(''));
+        thunkAPI.dispatch(setLoadedPredictResponse(''));
       }
 
       // Create a new project manager. If we have a channel id,
@@ -274,21 +281,33 @@ export const isLabLoading = (state: {lab: LabState}) =>
   state.lab.isLoadingProjectOrLevel || state.lab.isLoading;
 
 // This may depend on more factors, such as share.
-export const isReadOnlyWorkspace = (state: {lab: LabState}) => {
+export const isReadOnlyWorkspace = (state: RootState) => {
   const isOwner = state.lab.channel?.isOwner;
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const isEditingExemplarMode = getAppOptionsEditingExemplar();
   const isFrozen = !!state.lab.channel?.frozen;
   const isPredictLevel =
     state.lab.levelProperties?.predictSettings?.isPredictLevel || false;
+  let isReadonlyPredictLevel = isPredictLevel;
+  if (isPredictLevel) {
+    const isEditableAfterSubmit =
+      state.lab.levelProperties?.predictSettings?.codeEditableAfterSubmit ||
+      false;
+    const hasSubmittedPredictResponse = state.predictLevel.hasSubmittedResponse;
+    // If the predict level code is not editable after submit or the user has not submitted a response,
+    // the predict level is read only.
+    isReadonlyPredictLevel =
+      !isEditableAfterSubmit || !hasSubmittedPredictResponse;
+  }
+  const hasSubmitted = getCurrentLevel(state)?.status === LevelStatus.submitted;
   // We are always in edit mode if we are in start or editing exemplar mode.
   // Both of these modes have no channel.
   if (isStartMode || isEditingExemplarMode) {
     return false;
   }
   // Otherwise, we are in read only mode if we are not the owner of the channel,
-  // the level is frozen, or the level is a predict level.
-  return !isOwner || isFrozen || isPredictLevel;
+  // the level is frozen, the level is a read only predict level, or the level has been submitted.
+  return !isOwner || isFrozen || isReadonlyPredictLevel || hasSubmitted;
 };
 
 // If there is an error present on the page.
@@ -348,9 +367,6 @@ const labSlice = createSlice({
     },
     setIsShareView(state, action: PayloadAction<boolean>) {
       state.isShareView = action.payload;
-    },
-    setPredictResponse(state, action: PayloadAction<string>) {
-      state.predictResponse = action.payload;
     },
   },
   extraReducers: builder => {
@@ -475,6 +491,14 @@ function setProjectAndLevelData(
   if (aborted) {
     return;
   }
+  Lab2Registry.getInstance()
+    .getLifecycleNotifier()
+    .notify(
+      LifecycleEvent.LevelLoadCompleted,
+      data.levelProperties,
+      data.channel,
+      data.initialSources
+    );
   // Dispatch level change last so labs can react to the new level data
   // and new initial sources at once.
   dispatch(onLevelChange(data));
@@ -500,13 +524,17 @@ async function cleanUpProjectManager() {
   Lab2Registry.getInstance().clearProjectManager();
 }
 
+// This is an action that other reducers (specifically predictLevelRedux) can respond to.
+export const setLoadedPredictResponse = createAction<string>(
+  'lab/setLoadedPredictResponse'
+);
+
 export const {
   setIsLoading,
   setPageError,
   clearPageError,
   setValidationState,
   setIsShareView,
-  setPredictResponse,
 } = labSlice.actions;
 
 // These should not be set outside of the lab slice.

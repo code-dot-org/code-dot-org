@@ -2,7 +2,7 @@ import {render, screen, fireEvent} from '@testing-library/react';
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import teacherPanel from '@cdo/apps/code-studio/teacherPanelRedux';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
@@ -16,7 +16,15 @@ import {
 import {UnconnectedRubricFloatingActionButton as RubricFloatingActionButton} from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
+jest.mock('@cdo/apps/util/HttpClient', () => ({
+  post: jest.fn().mockResolvedValue({
+    json: jest.fn().mockReturnValue({}),
+  }),
+}));
+
+fetch.mockIf(/\/rubrics\/.*/, JSON.stringify(''));
 
 const defaultProps = {
   rubric: {
@@ -56,13 +64,11 @@ describe('RubricFloatingActionButton - React Testing Library', () => {
     });
 
     afterEach(() => {
-      sessionStorage.getItem.withArgs('RubricFabOpenStateKey').returns(null);
-      sessionStorage.getItem.restore();
+      sessionStorage.removeItem('RubricFabOpenStateKey');
     });
 
     it('renders pulse animation when session storage is empty', () => {
       const sendEventSpy = sinon.stub(analyticsReporter, 'sendEvent');
-      sessionStorage.getItem.withArgs('RubricFabOpenStateKey').returns(null);
       render(
         <Provider store={getStore()}>
           <RubricFloatingActionButton {...defaultProps} />
@@ -90,7 +96,7 @@ describe('RubricFloatingActionButton - React Testing Library', () => {
 
     it('sends open on page load event when open state is true in session storage', () => {
       const sendEventSpy = sinon.stub(analyticsReporter, 'sendEvent');
-      sessionStorage.getItem.withArgs('RubricFabOpenStateKey').returns(true);
+      sessionStorage.setItem('RubricFabOpenStateKey', 'true');
       render(
         <Provider store={getStore()}>
           <RubricFloatingActionButton {...defaultProps} />
@@ -112,7 +118,7 @@ describe('RubricFloatingActionButton - React Testing Library', () => {
 
     it('does not render pulse animation when open state is present in session storage', () => {
       const sendEventSpy = sinon.stub(analyticsReporter, 'sendEvent');
-      sessionStorage.getItem.withArgs('RubricFabOpenStateKey').returns(false);
+      sessionStorage.setItem('RubricFabOpenStateKey', 'false');
       render(
         <Provider store={getStore()}>
           <RubricFloatingActionButton {...defaultProps} />

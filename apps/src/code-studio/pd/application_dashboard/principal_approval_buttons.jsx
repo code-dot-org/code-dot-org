@@ -1,10 +1,12 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
-import $ from 'jquery';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import Spinner from '../components/spinner.jsx';
-import ConfirmationDialog from '../components/confirmation_dialog';
+
 import {SendAdminApprovalEmailStatuses} from '@cdo/apps/generated/pd/teacherApplicationConstants';
+
+import ConfirmationDialog from '../components/confirmation_dialog';
+import Spinner from '../components/spinner.jsx';
 
 export default class PrincipalApprovalButtons extends React.Component {
   static propTypes = {

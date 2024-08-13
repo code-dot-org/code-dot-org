@@ -25,7 +25,7 @@ use Rack::SslEnforcer,
   # The only exception is in :development, where no HTTP-cache layer is present.
   only_environments: 'development',
   # Only HTTPS-redirect in development when `https_development` is true.
-  ignore: lambda {|request| !request.ssl? && !CDO.https_development}
+  ignore: ->(request) {!request.ssl? && !CDO.https_development}
 
 require 'varnish_environment'
 use VarnishEnvironment
@@ -48,6 +48,12 @@ end
 if CDO.image_optim
   require 'cdo/rack/optimize'
   use Rack::Optimize
+end
+
+if CDO.use_cookie_dcdo
+  # Enables the setting of DCDO via cookies for testing purposes.
+  require 'cdo/rack/cookie_dcdo'
+  use Rack::CookieDCDO
 end
 
 # Disable Sinatra auto-initialization.

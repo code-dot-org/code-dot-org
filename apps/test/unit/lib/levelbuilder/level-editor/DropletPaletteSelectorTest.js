@@ -4,8 +4,6 @@ import React from 'react';
 
 import DropletPaletteSelector from '@cdo/apps/lib/levelbuilder/level-editor/DropletPaletteSelector';
 
-import {expect} from '../../../../util/reconfiguredChai';
-
 describe('DropletPaletteSelector', () => {
   let textArea, editor;
   beforeEach(() => {
@@ -32,7 +30,7 @@ describe('DropletPaletteSelector', () => {
             <option>All blocks have been added</option>
           </select>
         )
-      ).to.be.true;
+      ).toBe(true);
     });
   });
 
@@ -49,7 +47,7 @@ describe('DropletPaletteSelector', () => {
             <option value="b">b</option>
           </select>
         )
-      ).to.be.true;
+      ).toBe(true);
     });
 
     describe('and the editor contains some existing json', () => {
@@ -73,7 +71,7 @@ describe('DropletPaletteSelector', () => {
               <option value="b">b</option>
             </select>
           )
-        ).to.be.true;
+        ).toBe(true);
 
         editor.setValue(JSON.stringify({a: null, b: null}));
         selector.update();
@@ -83,7 +81,7 @@ describe('DropletPaletteSelector', () => {
               <option>All blocks have been added</option>
             </select>
           )
-        ).to.be.true;
+        ).toBe(true);
       });
     });
 
@@ -103,7 +101,7 @@ describe('DropletPaletteSelector', () => {
               <option>Fix JSON syntax to see available blocks</option>
             </select>
           )
-        ).to.be.true;
+        ).toBe(true);
       });
     });
 
@@ -120,7 +118,7 @@ describe('DropletPaletteSelector', () => {
           .props()
           .onChange({target: {value: 'b'}});
         selector.update();
-        expect(editor.getValue()).to.equal(`{
+        expect(editor.getValue()).toBe(`{
   "b": null
 }`);
         expect(
@@ -130,7 +128,7 @@ describe('DropletPaletteSelector', () => {
               <option value="a">a</option>
             </select>
           )
-        ).to.be.true;
+        ).toBe(true);
 
         selector
           .find('select')
@@ -144,9 +142,9 @@ describe('DropletPaletteSelector', () => {
               <option>All blocks have been added</option>
             </select>
           )
-        ).to.be.true;
+        ).toBe(true);
 
-        expect(editor.getValue()).to.equal(`{
+        expect(editor.getValue()).toBe(`{
   "b": null,
   "a": null
 }`);

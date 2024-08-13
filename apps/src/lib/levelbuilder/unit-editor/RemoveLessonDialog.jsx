@@ -1,8 +1,9 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
+
+import Dialog from '@cdo/apps/legacySharedComponents/Dialog';
 import {removeLesson} from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
-import Dialog from '@cdo/apps/templates/Dialog';
 
 /**
  * Dialog which confirms removal of the lesson in the specified position

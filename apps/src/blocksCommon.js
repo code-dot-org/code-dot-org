@@ -2,6 +2,7 @@
  * Defines blocks useful in multiple blockly apps
  */
 var commonMsg = require('@cdo/locale');
+
 var BlockStyles = require('./blockly/constants').BlockStyles;
 var BlockColors = require('./blockly/constants').BlockColors;
 
@@ -52,7 +53,7 @@ function installControlsRepeatSimplified(blockly, skin) {
         .appendField(
           new blockly.FieldTextInput(
             '10',
-            blockly.FieldTextInput.nonnegativeIntegerValidator
+            blockly.cdoUtils.nonnegativeIntegerValidator
           ),
           'TIMES'
         );

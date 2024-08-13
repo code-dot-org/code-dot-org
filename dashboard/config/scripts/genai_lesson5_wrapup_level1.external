@@ -1,0 +1,12 @@
+name 'genai-lesson5-wrapup-level1'
+title 'Wrap Up'
+description 'description here'
+
+markdown <<MARKDOWN
+#Wrap Up
+###In your graphic organizer, update the **Embedding** section of the organizer with an explanation of how embeddings are used and created
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

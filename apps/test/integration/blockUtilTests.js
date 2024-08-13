@@ -1,9 +1,11 @@
-import {assert} from '../util/reconfiguredChai';
-import {setupTestBlockly} from './util/testBlockly';
 import {parseElement} from '@cdo/apps/xml';
 
-var requiredBlockUtils = require('@cdo/apps/required_block_utils');
+import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
+import {setupTestBlockly} from './util/testBlockly';
+
 var blockUtils = require('@cdo/apps/block_utils');
+var requiredBlockUtils = require('@cdo/apps/required_block_utils');
 
 describe('blockUtils', function () {
   beforeEach(function () {
@@ -213,14 +215,14 @@ describe('forceInsertTopBlock', function () {
     withoutXml = '';
     result = blockUtils.forceInsertTopBlock(withoutXml, 'when_run');
     expected =
-      '<xml><block type="when_run" movable="false" deletable="false"/></xml>';
+      '<xml><block type="when_run" movable="false" deletable="false" id="topBlock"/></xml>';
     msg = '\n' + 'result: ' + result + '\n' + 'expect: ' + expected + '\n';
     assert(result === expected, msg);
 
     withXml = '<xml>' + withoutXml + '</xml>';
     result = blockUtils.forceInsertTopBlock(withXml, 'when_run');
     expected =
-      '<xml><block type="when_run" movable="false" deletable="false"/></xml>';
+      '<xml><block type="when_run" movable="false" deletable="false" id="topBlock"/></xml>';
     msg = '\n' + 'result: ' + result + '\n' + 'expect: ' + expected + '\n';
     assert(result === expected, msg);
   });
@@ -230,7 +232,7 @@ describe('forceInsertTopBlock', function () {
     withoutXml = '<block type="foo"/>';
     result = blockUtils.forceInsertTopBlock(withoutXml, 'when_run');
     expected =
-      '<xml><block type="when_run" movable="false" deletable="false"><next>' +
+      '<xml><block type="when_run" movable="false" deletable="false" id="topBlock"><next>' +
       withoutXml +
       '</next></block></xml>';
     msg = '\n' + 'result: ' + result + '\n' + 'expect: ' + expected + '\n';
@@ -239,7 +241,7 @@ describe('forceInsertTopBlock', function () {
     withXml = '<xml>' + withoutXml + '</xml>';
     result = blockUtils.forceInsertTopBlock(withXml, 'when_run');
     expected =
-      '<xml><block type="when_run" movable="false" deletable="false"><next>' +
+      '<xml><block type="when_run" movable="false" deletable="false" id="topBlock"><next>' +
       withoutXml +
       '</next></block></xml>';
     msg = '\n' + 'result: ' + result + '\n' + 'expect: ' + expected + '\n';
@@ -253,7 +255,7 @@ describe('forceInsertTopBlock', function () {
     withoutXml = block1 + block2;
     result = blockUtils.forceInsertTopBlock(withoutXml, 'when_run');
     expected =
-      '<xml><block type="when_run" movable="false" deletable="false"><next>' +
+      '<xml><block type="when_run" movable="false" deletable="false" id="topBlock"><next>' +
       block1 +
       '</next></block>' +
       block2 +
@@ -264,7 +266,7 @@ describe('forceInsertTopBlock', function () {
     withXml = '<xml>' + withoutXml + '</xml>';
     result = blockUtils.forceInsertTopBlock(withXml, 'when_run');
     expected =
-      '<xml><block type="when_run" movable="false" deletable="false"><next>' +
+      '<xml><block type="when_run" movable="false" deletable="false" id="topBlock"><next>' +
       block1 +
       '</next></block>' +
       block2 +
@@ -278,7 +280,7 @@ describe('forceInsertTopBlock', function () {
     withoutXml = '<block type="foo"><next><block type="foo2"/></next></block>';
     result = blockUtils.forceInsertTopBlock(withoutXml, 'when_run');
     expected =
-      '<xml><block type="when_run" movable="false" deletable="false"><next>' +
+      '<xml><block type="when_run" movable="false" deletable="false" id="topBlock"><next>' +
       withoutXml +
       '</next></block></xml>';
     msg = '\n' + 'result: ' + result + '\n' + 'expect: ' + expected + '\n';
@@ -287,7 +289,7 @@ describe('forceInsertTopBlock', function () {
     withXml = '<xml>' + withoutXml + '</xml>';
     result = blockUtils.forceInsertTopBlock(withXml, 'when_run');
     expected =
-      '<xml><block type="when_run" movable="false" deletable="false"><next>' +
+      '<xml><block type="when_run" movable="false" deletable="false" id="topBlock"><next>' +
       withoutXml +
       '</next></block></xml>';
     msg = '\n' + 'result: ' + result + '\n' + 'expect: ' + expected + '\n';
@@ -301,7 +303,7 @@ describe('forceInsertTopBlock', function () {
     withoutXml = block1 + block2;
     result = blockUtils.forceInsertTopBlock(withoutXml, 'when_run');
     expected =
-      '<xml><block type="when_run" movable="false" deletable="false"/>' +
+      '<xml><block type="when_run" movable="false" deletable="false" id="topBlock"/>' +
       block1 +
       block2 +
       '</xml>';
@@ -311,7 +313,7 @@ describe('forceInsertTopBlock', function () {
     withXml = '<xml>' + withoutXml + '</xml>';
     result = blockUtils.forceInsertTopBlock(withXml, 'when_run');
     expected =
-      '<xml><block type="when_run" movable="false" deletable="false"/>' +
+      '<xml><block type="when_run" movable="false" deletable="false" id="topBlock"/>' +
       block1 +
       block2 +
       '</xml>';

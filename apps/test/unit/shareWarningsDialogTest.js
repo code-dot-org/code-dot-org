@@ -1,11 +1,11 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import ShareWarningsDialog from '@cdo/apps/templates/ShareWarningsDialog';
 import commonMsg from '@cdo/locale';
 
-import {expect} from '../util/deprecatedChai';
+import {expect} from '../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('ShareWarningsDialog', () => {
   it('renders ShareWarnings with age prompt', () => {

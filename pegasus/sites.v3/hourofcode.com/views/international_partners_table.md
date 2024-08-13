@@ -17,6 +17,7 @@
 |Colombia|Makaia||comunicaciones@makaia.org<br>http://www.makaia.org|
 |Ecuador|Montebello Academy|Alexandra Falcón|info@montebello.edu.ec<br>www.montebello.edu.ec|
 |Ecuador, Mexico|Progracademy|Angelica Rodriguez|angelica.rodriguez@progracademy.org<br>www.progracademy.org|
+|Egypt|Little Coder Academy|Asmaa Abo-amra|eng.asmaa.aboamra@gmail.com, little.coder.ac@gmail.com<br>https://littlecoderacademy.com/|
 |Georgia|Educare Georgia|George Jibladze <br> Razmik Badalyan|gjibladze@educaregeorgia.com <br> rbadalyan@educaregeorgia.com<br>http://www.educaregeorgia.org|
 |Ghana|Ghana Code Club|Ernestina Edem Appiah|tinasupport@gmail.com<br>http://www.ghanacodeclub.org|
 |Hong Kong|Hong Kong Programming Society|Peter Cheung|peter@hkprog.org<br>https://www.hkprog.org/|
@@ -61,7 +62,6 @@
 |Nepal|Adhyayan School|Sandeep Sharma|sandeep.sharma@adhyayan.edu.np<br>http://adhyayan.edu.np|
 |Netherlands, Serbia|codethatidea|Snezana Perovic|info@codethatidea.com<br>www.codethatidea.com|
 |New Zealand|Ara Institute of Canterbury|Amitrajit Sarkar|sarkara@cpit.ac.nz<br>http://www.ara.ac.nz|
-|New Zealand (Aotearoa)|OMGTech!|Education Team @ OMGTech!|schools@omgtech.co.nz<br>https://omgtech.co.nz|
 |Nigeria|Odyssey Educational Foundation|Stella UzochukwuDenis|ifywayne@gmail.com<br>www.odysseyedufoundation.org|
 |Nigeria|Skooqs|Oluwadamilola Soyombo|hello@skooqs.com<br>https://skooqs.com|
 |Pakistan|DIGIT|Majid Hussain|majid.hussain@digit.com.pk<br>https://digit.com.pk/|

@@ -1,7 +1,9 @@
-var utils = require('@cdo/apps/utils');
-var blockUtils = require('@cdo/apps/block_utils');
-var tb = blockUtils.createToolbox;
 import {GamelabBlocks} from '@cdo/generated-scripts/sharedGamelabBlocks';
+
+var blockUtils = require('@cdo/apps/block_utils');
+var utils = require('@cdo/apps/utils');
+
+var tb = blockUtils.createToolbox;
 
 /**
  * Properties of the game lab level object

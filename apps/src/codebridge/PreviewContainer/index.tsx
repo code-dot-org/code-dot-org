@@ -1,10 +1,14 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
+import SwapLayoutButton from '@codebridge/SwapLayoutButton';
 import {ProjectFile, ConfigType, PreviewComponent} from '@codebridge/types';
 import {previewFileType} from '@codebridge/utils';
 import React, {useState, useEffect} from 'react';
 
+import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+
 import {HTMLPreview} from './HTMLPreview';
-import './styles/previewContainer.css';
+
+import moduleStyles from './styles/previewContainer.module.scss';
 
 const fileTypeMap: {
   [key: string]: PreviewComponent;
@@ -62,8 +66,15 @@ export const PreviewContainer = () => {
 
   const PreviewComponent = getPreviewComponent(previewFile, PreviewComponents);
 
+  const headerContent = 'HTML Preview';
+
   return (
-    <div className="preview-container">
+    <PanelContainer
+      id="editor-workspace"
+      headerContent={headerContent}
+      rightHeaderContent={<SwapLayoutButton />}
+      className={moduleStyles.previewContainer}
+    >
       <select
         onChange={e => {
           const newFile = Object.values(files).find(
@@ -83,6 +94,6 @@ export const PreviewContainer = () => {
           ))}
       </select>
       {previewFile && <PreviewComponent file={previewFile} />}
-    </div>
+    </PanelContainer>
   );
 };

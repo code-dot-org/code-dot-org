@@ -1,17 +1,19 @@
 import $ from 'jquery';
-import React from 'react';
 import throttle from 'lodash/throttle';
-import getScriptData from '@cdo/apps/util/getScriptData';
+import React from 'react';
+
 import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
-import {LegacySingleLevelGroupDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
-import i18n from '@cdo/locale';
 import Match from '@cdo/apps/code-studio/levels/match';
+import {LegacySingleLevelGroupDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
+import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
+import getScriptData from '@cdo/apps/util/getScriptData';
+import i18n from '@cdo/locale';
+
 window.Match = Match;
 window.Multi = require('@cdo/apps/code-studio/levels/multi.js');
 window.TextMatch = require('@cdo/apps/code-studio/levels/textMatch.js');
 var saveAnswers =
   require('@cdo/apps/code-studio/levels/saveAnswers.js').saveAnswers;
-import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
 
 $(document).ready(() => {
   const levelData = getScriptData('levelData');

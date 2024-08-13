@@ -1,17 +1,18 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import experiments from '@cdo/apps/util/experiments';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 import {
   SELECT_A_SCHOOL,
   CLICK_TO_ADD,
   NO_SCHOOL_SETTING,
 } from '@cdo/apps/templates/SchoolZipSearch';
+import experiments from '@cdo/apps/util/experiments';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 const TEACHER_ONLY_FIELDS = [
   '#teacher-name-label',
@@ -171,6 +172,11 @@ $(document).ready(() => {
 
   // Style selected user type button to show it has been clicked
   function styleSelectedUserTypeButton(value) {
+    // For LTI, the user type is implied from the LMS so the buttons will not appear
+    if (!teacherButton || !studentButton) {
+      return;
+    }
+
     if (value === 'teacher') {
       teacherButton.classList.add('select-user-type-button-selected');
       studentButton.classList.remove('select-user-type-button-selected');

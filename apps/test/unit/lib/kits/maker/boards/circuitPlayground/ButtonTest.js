@@ -2,11 +2,9 @@
 import five from '@code-dot-org/johnny-five';
 import _ from 'lodash';
 
-import PlaygroundButton from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/Button';
-import {EXTERNAL_PINS} from '@cdo/apps/lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
-import {makeCPBoardStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
-
-import {expect} from '../../../../../../util/reconfiguredChai';
+import PlaygroundButton from '@cdo/apps/maker/boards/circuitPlayground/Button';
+import {EXTERNAL_PINS} from '@cdo/apps/maker/boards/circuitPlayground/PlaygroundConstants';
+import {makeCPBoardStub} from '@cdo/apps/maker/util/makeStubBoard';
 
 describe('PlaygroundButton', function () {
   it('is a johnny-five Button component', function () {
@@ -14,7 +12,7 @@ describe('PlaygroundButton', function () {
       board: makeCPBoardStub(),
       pin: 0,
     });
-    expect(button).to.be.an.instanceOf(five.Button);
+    expect(button).toBeInstanceOf(five.Button);
   });
 
   describe('isPressed', () => {
@@ -29,11 +27,11 @@ describe('PlaygroundButton', function () {
 
     it('is a readonly property', () => {
       const descriptor = Object.getOwnPropertyDescriptor(button, 'isPressed');
-      expect(descriptor.get).to.be.a('function');
-      expect(descriptor.set).to.be.undefined;
+      expect(descriptor.get).toBeInstanceOf(Function);
+      expect(descriptor.set).toBeUndefined();
       expect(() => {
         button.isPressed = true;
-      }).to.throw();
+      }).toThrow();
     });
   });
 
@@ -43,7 +41,7 @@ describe('PlaygroundButton', function () {
         board: makeCPBoardStub(),
         pin,
       });
-      expect(button.pullup).to.be.true;
+      expect(button.pullup).toBe(true);
     });
   });
 
@@ -55,7 +53,7 @@ describe('PlaygroundButton', function () {
           board: makeCPBoardStub(),
           pin,
         });
-        expect(button.pullup).to.be.false;
+        expect(button.pullup).toBe(false);
       });
   });
 });

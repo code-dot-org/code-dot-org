@@ -1,6 +1,7 @@
 import React from 'react';
 import {Alert, Fade} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 
 import './FeedbackBanner.scss';
 

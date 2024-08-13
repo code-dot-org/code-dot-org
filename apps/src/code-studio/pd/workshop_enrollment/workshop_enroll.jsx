@@ -3,12 +3,13 @@
  */
 import PropTypes from 'prop-types';
 import React from 'react';
-import WorkshopDetails from './workshop_details';
-import FacilitatorBio from './facilitator_bio';
+
+import {COURSE_BUILD_YOUR_OWN} from '../workshop_dashboard/workshopConstants';
+
 import EnrollForm from './enroll_form';
 import {WorkshopPropType, FacilitatorPropType} from './enrollmentConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import FacilitatorBio from './facilitator_bio';
+import WorkshopDetails from './workshop_details';
 
 const SUBMISSION_STATUSES = {
   UNSUBMITTED: 'unsubmitted',
@@ -29,6 +30,7 @@ export default class WorkshopEnroll extends React.Component {
     enrollment: PropTypes.shape({
       email: PropTypes.string,
       first_name: PropTypes.string,
+      last_name: PropTypes.string,
     }),
     facilitators: PropTypes.arrayOf(FacilitatorPropType),
     workshop_enrollment_status: PropTypes.string,
@@ -39,12 +41,35 @@ export default class WorkshopEnroll extends React.Component {
   constructor(props) {
     super(props);
 
+    if (this.props.workshop.course === COURSE_BUILD_YOUR_OWN) {
+      this.skipEnrollForm();
+    }
+
     this.state = {
       workshopEnrollmentStatus:
         this.props.workshop_enrollment_status ||
         SUBMISSION_STATUSES.UNSUBMITTED,
     };
   }
+
+  skipEnrollForm = () => {
+    const postParams = {
+      user_id: this.props.user_id,
+      first_name: this.props.enrollment.first_name,
+      last_name: this.props.enrollment.last_name,
+      email: this.props.enrollment.email,
+      previous_courses: this.props.previous_courses,
+    };
+    this.submitRequest = $.ajax({
+      method: 'POST',
+      url: `/api/v1/pd/workshops/${this.props.workshop.id}/enrollments`,
+      contentType: 'application/json',
+      data: JSON.stringify(postParams),
+      complete: result => {
+        this.onSubmissionComplete(result);
+      },
+    });
+  };
 
   onSubmissionComplete = result => {
     if (result.responseJSON) {
@@ -127,44 +152,12 @@ export default class WorkshopEnroll extends React.Component {
   }
 
   renderSuccess() {
-    analyticsReporter.sendEvent(EVENTS.WORKSHOP_ENROLLMENT_COMPLETED_EVENT, {
-      'regional partner': this.props.workshop.regional_partner?.name,
-      'workshop course': this.props.workshop.course,
-      'workshop subject': this.props.workshop.subject,
-    });
-    return (
-      <div>
-        <h1>Thank you for registering</h1>
-        <p>
-          You will receive a confirmation email. If you have any questions or
-          need to request special accommodations, please reach out directly to
-          the workshop organizer: {this.props.workshop.organizer.name} at{' '}
-          {this.props.workshop.organizer.email}.
-        </p>
-        <p>
-          If you need to cancel, click <a href={this.state.cancelUrl}>here</a>.
-        </p>
-        <br />
-        {!this.state.accountExists && (
-          <div>
-            <h1>Get a Head Start: Create Your Code.org Account</h1>
-            <p>
-              If you don’t have a Code.org account yet, click below to create
-              one. You'll need a Code.org account on the day of the workshop.
-              You'll use this account to manage your students and view their
-              progress when you start teaching, so be sure to use the email
-              you'll use when you teach.
-            </p>
-
-            <a href={this.state.signUpUrl}>
-              <button type="button" className="primary">
-                Create account now
-              </button>
-            </a>
-          </div>
-        )}
-      </div>
-    );
+    // Redirect to My PL landing page. The WORKSHOP_ENROLLMENT_COMPLETED_EVENT event will be logged
+    // on that page since event logs immediately followed by redirects sometimes do not fire.
+    const rpName = this.props.workshop.regional_partner?.name;
+    const wsCourse = this.props.workshop.course;
+    const wsSubject = this.props.workshop.subject;
+    window.location.href = `/my-professional-learning?rpName=${rpName}&wsCourse=${wsCourse}&wsSubject=${wsSubject}`;
   }
 
   render() {

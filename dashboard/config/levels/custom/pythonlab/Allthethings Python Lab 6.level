@@ -7,7 +7,7 @@
   "user_id": 6959,
   "properties": {
     "encrypted": "false",
-    "source": {
+    "start_sources": {
       "files": {
         "0": {
           "id": "0",
@@ -34,10 +34,9 @@
       "/courses/csa-2023/guides/instantiating-objects"
     ],
     "map_reference": "/docs/concepts/html/",
-    "teacher_markdown": "Teachers should see this extra info.",
     "predict_settings": {
       "isPredictLevel": true,
-      "solution": "",
+      "solution": "It will print numbers 1 through 4",
       "questionType": "multipleChoice",
       "allowMultipleAttempts": false,
       "multipleChoiceOptions": [
@@ -46,12 +45,9 @@
         "It will print numbers 1 through 4",
         "It will print numbers 0 through 4"
       ],
-      "multipleChoiceAnswers": [
-        "It will print numbers 1 through 4"
-      ],
       "isMultiSelect": false
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-06-26T10:53:23.711-07:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 5\\\"\"],\"cloned_from\":\"Allthethings Python Lab 5\"},{\"changed_at\":\"2024-06-26 11:03:46 -0700\",\"changed\":[\"source\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 11:05:13 -0700\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 13:36:53 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 13:38:54 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 14:15:56 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 14:31:10 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 14:35:10 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-06-26T10:53:23.711-07:00\",\"changed\":[\"cloned from \\\"Allthethings Python Lab 5\\\"\"],\"cloned_from\":\"Allthethings Python Lab 5\"},{\"changed_at\":\"2024-06-26 11:03:46 -0700\",\"changed\":[\"source\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 11:05:13 -0700\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 13:36:53 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 13:38:54 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 14:15:56 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 14:31:10 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 14:35:10 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-01 16:22:53 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-01 16:23:09 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-02 10:43:46 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-02 11:06:14 -0700\",\"changed\":[\"teacher_markdown\",\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-02 11:20:50 -0700\",\"changed\":[\"predict_settings\"],\"changed_by_id\":2,\"changed_by_email\":\"molly+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

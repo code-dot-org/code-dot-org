@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import Dialog from '@cdo/apps/legacySharedComponents/Dialog';
 import {removeLevel} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import Dialog from '@cdo/apps/templates/Dialog';
 import {activitySectionShape} from '@cdo/apps/lib/levelbuilder/shapes';
 
 /**

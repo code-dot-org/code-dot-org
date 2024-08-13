@@ -1,13 +1,37 @@
 @import 'color';
+@import '../../../mixins.scss';
 
 .expandedContent {
-    margin-left: 35px;
+  margin-left: 35px;
 }
 
 .modelCardAttributes {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
-.borderLine {   
-    border-color: $neutral_dark10;
+.borderLine {
+  border-color: $neutral_dark10;
+}
+
+.sectionHeader {
+  display: flex;
+  gap: 10px;
+  margin: 0 25px 0 15px;
+  align-items: center;
+  width: 100%;
+}
+
+.sectionTitle {
+  margin-bottom: 0;
+  transition: color 0.2s ease;
+  text-align: left;
+
+  &:hover {
+    color: $teal;
+  }
+}
+
+.titleIcon {
+  color: $teal;
+  font-size: 18px;
 }

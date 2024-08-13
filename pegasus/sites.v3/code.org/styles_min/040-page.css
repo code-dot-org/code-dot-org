@@ -16,6 +16,7 @@
   --brand_secondary_default: #8c52ba;
   --brand_secondary_dark: #6f488e;
   --brand_accent_default: #ed6060;
+  --light_gray200: #d1d4d8;
   --neutral_white: #ffffff;
   --neutral_light: #f7f8fa;
   --neutral_dark10: #eaebeb;
@@ -32,7 +33,12 @@
   /* Typography */
   --barlowSemiCondensed-semibold: "Barlow Semi Condensed Semibold", sans-serif;
   --barlowSemiCondensed-medium: "Barlow Semi Condensed Medium", sans-serif;
-  --main-font: "Metropolis", sans-serif;
+  --main-font: "Metropolis", "Noto Sans", "Noto Sans Arabic",
+    "Noto Sans Armenian", "Noto Sans Bengali", "Noto Sans SC", "Noto Sans TC",
+    "Noto Sans Devanagari", "Noto Sans Georgian", "Noto Sans Hebrew",
+    "Noto Sans JP", "Noto Sans Kannada", "Noto Sans Khmer", "Noto Sans KR",
+    "Noto Sans Myanmar", "Noto Sans Sinhala", "Noto Sans Tamil",
+    "Noto Sans Telugu", "Noto Sans Thai", "Noto Sans Thaana", sans-serif;
   --thin-font-weight: 100;
   --extra-light-font-weight: 200;
   --light-font-weight: 300;
@@ -117,12 +123,26 @@ h6,
   margin-bottom: 0.5em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
 /* Use this class on text elements to turn them white */
-h1, h2, h3, h4, h5, h6, p, figcaption, span, a:not(.link-button) {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figcaption,
+span,
+a:not(.link-button) {
   &.white {
     color: var(--neutral_white) !important;
   }
@@ -447,6 +467,11 @@ td {
   text-wrap: pretty;
 }
 
+/* Removes border from an element */
+.no-border {
+  border: none !important;
+}
+
 /* Styles for the "OR" divider line between paragraphs
   - see code.org/afe for an example */
 .or-divider-line {
@@ -551,7 +576,8 @@ nav.main i.fa-fw {
 
 nav.main .create_menu,
 nav.main .user_menu,
-nav.main .button-signin {
+nav.main .button-signin,
+nav.main .button-create-account {
   border: 2px solid var(--neutral_white);
   border-radius: 4px;
   color: var(--neutral_white);
@@ -560,6 +586,12 @@ nav.main .button-signin {
   text-decoration: none;
   padding: 7px 12px;
   margin: 0;
+}
+
+nav.main .button-create-account {
+  background-color: var(--neutral_white);
+  color: var(--brand_primary_default);
+  font-weight: var(--semi-bold-font-weight);
 }
 
 nav.main .create_menu,
@@ -591,10 +623,6 @@ nav.main .help_button {
   padding: 0;
   height: unset;
   margin-inline-end: -6px;
-
-  @media (max-width: 1268px) {
-    display: none;
-  }
 }
 
 nav.main .help_button .help_icon {
@@ -611,26 +639,17 @@ nav.main #hamburger #hamburger-icon {
   margin-inline-start: 6px;
 }
 
-@media (max-width: 1023px) {
-  nav.main .create_menu {
-    display: none !important;
-  }
+nav.main #hamburger #hamburger-contents {
+  top: 51px;
+  right: -3px;
 }
 
 /* Show the hamburger on small desktop
   with appropriate links hidden */
 @media (min-width: 1024px) and (max-width: 1268px) {
-  nav.main .left ul li:nth-child(n+4),
-  nav.main #hamburger-contents > div:nth-child(-n+4) {
+  nav.main .left ul li:nth-child(n + 4),
+  nav.main #hamburger-contents > div:nth-child(-n + 5) {
     display: none !important;
-  }
-
-  nav.main #hamburger {
-    display: block;
-  }
-
-  #hamburger .show-mobile {
-    display: block !important;
   }
 }
 
@@ -765,6 +784,11 @@ swiper-slide {
 .carousel-wrapper.video-carousel .swiper-nav-prev,
 .carousel-wrapper.video-carousel .swiper-nav-next {
   top: 28%;
+}
+
+.carousel-wrapper.one-col .swiper-nav-prev,
+.carousel-wrapper.one-col .swiper-nav-next {
+  top: 33%;
 }
 
 /* Begin legacy styles ------------------------ */

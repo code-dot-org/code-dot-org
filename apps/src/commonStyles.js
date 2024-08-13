@@ -2,8 +2,8 @@
 // into the css module common-styles.module.scss.
 // Any changes in one should be made in the other to apply to all components.
 var commonStyles = module.exports;
-var color = require('./util/color');
 var styleConstants = require('./styleConstants');
+var color = require('./util/color');
 
 commonStyles.hidden = {
   display: 'none',

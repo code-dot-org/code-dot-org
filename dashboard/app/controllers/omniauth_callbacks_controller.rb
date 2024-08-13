@@ -2,6 +2,7 @@ require 'cdo/shared_cache'
 require 'honeybadger/ruby'
 require 'services/lti'
 require 'policies/lti'
+require 'metrics/events'
 
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   include UsersHelper
@@ -549,21 +550,16 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # and report an error.
   private def check_account_linking_lock
     # Only check for account link locking when trying to link a new provider.
-    return unless connecting_new_provider? || lti_registration?
+    return unless connecting_new_provider? || Policies::Lti.lti_registration_in_progress?(session)
     lock_reason = account_linking_locked?
     return unless lock_reason
     redirect_back fallback_location: new_user_session_path, alert: lock_reason
   end
 
-  # Are we trying to link a new provider while registering an LTI account?
-  private def lti_registration?
-    DCDO.get('lti_account_linking_enabled', false) && Policies::Lti.lti_registration_in_progress?(session)
-  end
-
   # Determine whether to link a new LTI auth option to an existing account
   # Not to be confused with the connect_provider flow
   private def should_link_accounts?
-    lti_registration? && !account_linking_locked?
+    Policies::Lti.lti_registration_in_progress?(session) && !account_linking_locked?
   end
 
   # For linking new LTI auth options to existing accounts
@@ -582,6 +578,17 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         flash.alert = I18n.t('lti.account_linking.backend_error')
         redirect_to user_session_path and return
       end
+
+      metadata = {
+        'user_type' => user.user_type,
+        'lms_name' => user.lti_user_identities.first.lti_integration[:platform_name],
+      }
+      Metrics::Events.log_event(
+        user: user,
+        event_name: 'lti_user_signin',
+        metadata: metadata,
+      )
+      flash[:notice] = I18n.t('lti.account_linking.successfully_linked')
       sign_in_and_redirect user and return
     end
 

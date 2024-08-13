@@ -1,15 +1,15 @@
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalItem';
 import RubricEditor from '@cdo/apps/lib/levelbuilder/rubrics/RubricEditor';
 import * as rubricHelper from '@cdo/apps/lib/levelbuilder/rubrics/rubricHelper';
 import RubricsContainer from '@cdo/apps/lib/levelbuilder/rubrics/RubricsContainer';
-import Button from '@cdo/apps/templates/Button';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('RubricsContainerTest', () => {
   const defaultProps = {

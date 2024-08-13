@@ -4,9 +4,9 @@ import React, {Component} from 'react';
 import {CSVLink} from 'react-csv';
 import {connect} from 'react-redux';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
-import Button from '@cdo/apps/templates/Button';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {
   getExportableFeedbackData,
@@ -15,7 +15,7 @@ import {
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import moduleStyles from '@cdo/apps/templates/button.module.scss';
+import moduleStyles from '@cdo/apps/legacySharedComponents/button.module.scss';
 
 const CSV_FEEDBACK_RUBRIC_HEADERS = [
   {label: i18n.studentName(), key: 'studentName'},

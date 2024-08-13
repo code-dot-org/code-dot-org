@@ -1,8 +1,9 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import _ from 'lodash';
 import {connect} from 'react-redux';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 
 class AddLevelFilters extends Component {
   static propTypes = {

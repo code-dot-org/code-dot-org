@@ -1,9 +1,9 @@
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import ExternalLed from '@cdo/apps/lib/kits/maker/boards/microBit/ExternalLed';
-import {MBFirmataClientStub} from '@cdo/apps/lib/kits/maker/util/makeStubBoard';
+import ExternalLed from '@cdo/apps/maker/boards/microBit/ExternalLed';
+import {MBFirmataClientStub} from '@cdo/apps/maker/util/makeStubBoard';
 
-import {expect} from '../../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('ExternalLed', function () {
   describe('on() and off()', () => {
@@ -11,7 +11,7 @@ describe('ExternalLed', function () {
     let boardClient = new MBFirmataClientStub();
     let setDigitalOutputSpy;
 
-    before(() => {
+    beforeAll(() => {
       led = new ExternalLed({
         board: boardClient,
         pin: 0,
@@ -20,7 +20,7 @@ describe('ExternalLed', function () {
       setDigitalOutputSpy = sinon.spy(boardClient, 'setDigitalOutput');
     });
 
-    after(() => {
+    afterAll(() => {
       sinon.restore();
     });
 
@@ -42,7 +42,7 @@ describe('ExternalLed', function () {
     let boardClient = new MBFirmataClientStub();
     let setDigitalOutputSpy, onSpy, offSpy;
 
-    before(() => {
+    beforeAll(() => {
       led = new ExternalLed({
         board: boardClient,
         pin: 0,
@@ -52,7 +52,7 @@ describe('ExternalLed', function () {
       onSpy = sinon.spy(led, 'on');
       offSpy = sinon.spy(led, 'off');
     });
-    after(() => {
+    afterAll(() => {
       sinon.restore();
     });
 
@@ -77,7 +77,7 @@ describe('ExternalLed', function () {
     let led, clock;
     let boardClient = new MBFirmataClientStub();
 
-    before(() => {
+    beforeAll(() => {
       led = new ExternalLed({
         board: boardClient,
         pin: 0,
@@ -88,7 +88,7 @@ describe('ExternalLed', function () {
       sinon.spy(led, 'setDigitalOutputOff');
     });
 
-    after(() => {
+    afterAll(() => {
       clock.restore();
       sinon.restore();
     });

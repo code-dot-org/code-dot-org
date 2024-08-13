@@ -3,22 +3,23 @@
  * Used exclusively by StudioApp.
  */
 
+import msg from '@cdo/locale';
+
 import authoredHintUtils from './authoredHintUtils';
+import {TestResults} from './constants';
 import {getStore} from './redux';
-import {setHasAuthoredHints} from './redux/instructions';
 import {
   enqueueHints,
   showNextHint,
   displayMissingBlockHints,
 } from './redux/authoredHints';
-import {TestResults} from './constants';
+import {setHasAuthoredHints} from './redux/instructions';
 import {
   tryGetSessionStorage,
   trySetSessionStorage,
   showGenericQtip,
   createEvent,
 } from './utils';
-import msg from '@cdo/locale';
 
 const ONETIME_HINT_PROMPT_SEEN_LEVELS = 'hint_prompt_seen_levels';
 

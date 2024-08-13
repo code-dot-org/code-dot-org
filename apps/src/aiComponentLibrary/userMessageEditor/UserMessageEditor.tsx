@@ -1,7 +1,8 @@
+import classnames from 'classnames';
 import React, {useState, useCallback, useMemo} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button/Button';
-import i18n from '@cdo/locale';
+import {commonI18n} from '@cdo/apps/types/locale';
 
 import moduleStyles from './user-message-editor.module.scss';
 
@@ -12,11 +13,18 @@ import moduleStyles from './user-message-editor.module.scss';
 export interface UserMessageEditorProps {
   onSubmit: (userMessage: string) => void;
   disabled: boolean;
+  showSubmitLabel?: boolean;
+  /** Custom className for editor container */
+  editorContainerClassName?: string;
+  customPlaceholder?: string;
 }
 
 const UserMessageEditor: React.FunctionComponent<UserMessageEditorProps> = ({
   onSubmit,
   disabled,
+  editorContainerClassName,
+  customPlaceholder,
+  showSubmitLabel = false,
 }) => {
   const [userMessage, setUserMessage] = useState<string>('');
 
@@ -38,11 +46,17 @@ const UserMessageEditor: React.FunctionComponent<UserMessageEditorProps> = ({
     [onSubmit]
   );
 
+  const icon = {iconName: 'paper-plane'};
   return (
-    <div className={moduleStyles.editorContainer}>
+    <div
+      className={classnames(
+        moduleStyles.editorContainer,
+        editorContainerClassName
+      )}
+    >
       <textarea
         className={moduleStyles.textArea}
-        placeholder={i18n.aiUserMessagePlaceholder()}
+        placeholder={customPlaceholder || commonI18n.aiUserMessagePlaceholder()}
         onChange={e => setUserMessage(e.target.value)}
         value={userMessage}
         disabled={disabled}
@@ -51,10 +65,11 @@ const UserMessageEditor: React.FunctionComponent<UserMessageEditorProps> = ({
 
       <div className={moduleStyles.centerSingleItemContainer}>
         <Button
-          isIconOnly
-          icon={{iconName: 'paper-plane'}}
+          isIconOnly={!showSubmitLabel}
           onClick={() => handleSubmit(userMessage)}
           disabled={disabled || !userMessage || userMessageIsEmpty}
+          text={showSubmitLabel ? commonI18n.submit() : undefined}
+          {...{[showSubmitLabel ? 'iconLeft' : 'icon']: icon}}
         />
       </div>
     </div>

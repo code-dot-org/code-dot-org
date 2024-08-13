@@ -1,20 +1,25 @@
-import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import {BlockTypes} from './blockTypes';
+import {BlocklyOptions, Workspace, WorkspaceSvg} from 'blockly';
+import {Abstract} from 'blockly/core/events/events_abstract';
+
+import {Renderers} from '@cdo/apps/blockly/constants';
 import CdoDarkTheme from '@cdo/apps/blockly/themes/cdoDark';
-import {getToolbox} from './toolbox';
+import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+
+import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {getBlockMode} from '../appConfig';
 import {BlockMode, Triggers} from '../constants';
+
+import {GeneratorHelpersSimple2} from './blocks/simple2';
+import {BlockTypes} from './blockTypes';
 import {
   FIELD_TRIGGER_START_NAME,
   TriggerStart,
   TRIGGER_FIELD,
 } from './constants';
-import {GeneratorHelpersSimple2} from './blocks/simple2';
-import {Renderers} from '@cdo/apps/blockly/constants';
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {BlocklyOptions, Workspace, WorkspaceSvg} from 'blockly';
-import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
-import {Abstract} from 'blockly/core/events/events_abstract';
+import {setUpBlocklyForMusicLab} from './setup';
+import {getToolbox} from './toolbox';
+
 const experiments = require('@cdo/apps/util/experiments');
 
 const triggerIdToEvent = (id: string) => `triggeredAtButton-${id}`;
@@ -26,6 +31,19 @@ type CompiledEvents = {[key: string]: {code: string; args?: string[]}};
  * workspace view, execute code, and save/load projects.
  */
 export default class MusicBlocklyWorkspace {
+  private static isBlocklyEnvironmentSetup = false;
+
+  // Setup the global Blockly environment for Music Lab.
+  // This should only happen once per page load.
+  public static setupBlocklyEnvironment() {
+    if (this.isBlocklyEnvironmentSetup) {
+      return;
+    }
+
+    setUpBlocklyForMusicLab();
+    this.isBlocklyEnvironmentSetup = true;
+  }
+
   private workspace: WorkspaceSvg | Workspace | null;
   private container: HTMLElement | null;
   private codeHooks: {[key: string]: (...args: unknown[]) => void};

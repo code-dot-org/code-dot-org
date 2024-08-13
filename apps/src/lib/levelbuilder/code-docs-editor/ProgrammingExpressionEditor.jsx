@@ -1,16 +1,19 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
-import OrderableList from './OrderableList';
-import ExampleEditor from './ExampleEditor';
-import ParameterEditor from './ParameterEditor';
-import ImageInput from '../ImageInput';
-import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
+
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
-import {createUuid, navigateToHref} from '@cdo/apps/utils';
-import $ from 'jquery';
+import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
+import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import color from '@cdo/apps/util/color';
+import {createUuid, navigateToHref} from '@cdo/apps/utils';
+
+import ImageInput from '../ImageInput';
+
+import ExampleEditor from './ExampleEditor';
+import OrderableList from './OrderableList';
+import ParameterEditor from './ParameterEditor';
 
 function useProgrammingExpression(initialProgrammingExpression) {
   const initializeProgrammingExpression = programmingExpression => {

@@ -1,7 +1,6 @@
-import {assert} from 'chai';
 import $ from 'jquery';
 import _ from 'lodash';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import reducer, {
   LockStatus,
@@ -42,7 +41,7 @@ describe('lessonLockRedux reducer tests', () => {
       const action = setSectionLockStatus(fakeSectionData);
       const nextState = reducer({}, action);
 
-      assert.deepEqual(nextState.lessonsBySectionId, {
+      expect(nextState.lessonsBySectionId).toEqual({
         [section1Id]: fakeSectionData[section1Id].lessons,
         [section2Id]: fakeSectionData[section2Id].lessons,
       });
@@ -60,12 +59,12 @@ describe('lessonLockRedux reducer tests', () => {
       // Open dialog, such that lockStatus represents section1
       action = openLockDialog(section1Id, lesson1Id);
       nextState = reducer(sectionState, action);
-      assert.equal(nextState.lockStatus.length, 3);
+      expect(nextState.lockStatus.length).toEqual(3);
 
       // Now switch sections
       action = selectSection(section2Id);
       nextState = reducer(nextState, action);
-      assert.deepEqual(nextState.lockStatus, [
+      expect(nextState.lockStatus).toEqual([
         {
           name: 'student4',
           lockStatus: LockStatus.Locked,
@@ -85,24 +84,24 @@ describe('lessonLockRedux reducer tests', () => {
       // Open dialog, such that lockStatus represents section1
       action = openLockDialog(section1Id, lesson1Id);
       nextState = reducer(sectionState, action);
-      assert.equal(nextState.lockStatus.length, 3);
+      expect(nextState.lockStatus.length).toEqual(3);
 
       // Now switch to NO_SECTION
       action = selectSection(NO_SECTION);
       nextState = reducer(nextState, action);
-      assert.deepEqual(nextState.lockStatus, []);
+      expect(nextState.lockStatus).toEqual([]);
     });
   });
 
   describe('openLockDialog', () => {
     it('updates lock status and lockDialogLessonId', () => {
       const state = reducer(undefined, setSectionLockStatus(fakeSectionData));
-      assert.deepEqual(state.lockStatus, []);
-      assert.equal(state.lockDialogLessonId, null);
+      expect(state.lockStatus).toEqual([]);
+      expect(state.lockDialogLessonId).toEqual(null);
 
       const action = openLockDialog(section1Id, lesson1Id);
       const nextState = reducer(state, action);
-      assert.equal(nextState.lockDialogLessonId, lesson1Id);
+      expect(nextState.lockDialogLessonId).toEqual(lesson1Id);
 
       const student1 = fakeSectionData[section1Id].lessons[lesson1Id][0];
       const student2 = fakeSectionData[section1Id].lessons[lesson1Id][1];
@@ -124,7 +123,7 @@ describe('lessonLockRedux reducer tests', () => {
           lockStatus: LockStatus.ReadonlyAnswers,
         },
       ];
-      assert.deepEqual(nextState.lockStatus, expected);
+      expect(nextState.lockStatus).toEqual(expected);
     });
   });
 
@@ -136,19 +135,19 @@ describe('lessonLockRedux reducer tests', () => {
 
       const action = closeLockDialog();
       const nextState = reducer(state, action);
-      assert.equal(nextState.lockDialogLessonId, null);
-      assert.deepEqual(nextState.lockStatus, []);
+      expect(nextState.lockDialogLessonId).toEqual(null);
+      expect(nextState.lockStatus).toEqual([]);
     });
   });
 
   describe('beginSave', () => {
     it('updates saving', () => {
       const initialState = reducer(undefined, {});
-      assert.equal(initialState.saving, false);
+      expect(initialState.saving).toEqual(false);
 
       const action = beginSave();
       const nextState = reducer(initialState, action);
-      assert.equal(nextState.saving, true);
+      expect(nextState.saving).toEqual(true);
     });
   });
 
@@ -161,18 +160,18 @@ describe('lessonLockRedux reducer tests', () => {
       const student1LockStatus = state.lockStatus[0].lockStatus;
       const student2LockStatus = state.lockStatus[1].lockStatus;
       const student3LockStatus = state.lockStatus[2].lockStatus;
-      assert.equal(student1LockStatus, LockStatus.Locked);
-      assert.equal(student2LockStatus, LockStatus.Editable);
-      assert.equal(student3LockStatus, LockStatus.ReadonlyAnswers);
+      expect(student1LockStatus).toEqual(LockStatus.Locked);
+      expect(student2LockStatus).toEqual(LockStatus.Editable);
+      expect(student3LockStatus).toEqual(LockStatus.ReadonlyAnswers);
       const student1 = state.lessonsBySectionId[section1Id][lesson1Id][0];
       const student2 = state.lessonsBySectionId[section1Id][lesson1Id][1];
       const student3 = state.lessonsBySectionId[section1Id][lesson1Id][2];
-      assert.equal(student1.locked, true);
-      assert.equal(student1.readonly_answers, false);
-      assert.equal(student2.locked, false);
-      assert.equal(student2.readonly_answers, false);
-      assert.equal(student3.locked, false);
-      assert.equal(student3.readonly_answers, true);
+      expect(student1.locked).toEqual(true);
+      expect(student1.readonly_answers).toEqual(false);
+      expect(student2.locked).toEqual(false);
+      expect(student2.readonly_answers).toEqual(false);
+      expect(student3.locked).toEqual(false);
+      expect(student3.readonly_answers).toEqual(true);
 
       let newLockStatus = _.cloneDeep(state.lockStatus);
       // swap students two and three in terms of lock status
@@ -184,21 +183,21 @@ describe('lessonLockRedux reducer tests', () => {
       const nextStudent1LockStatus = nextState.lockStatus[0].lockStatus;
       const nextStudent2LockStatus = nextState.lockStatus[1].lockStatus;
       const nextStudent3LockStatus = nextState.lockStatus[2].lockStatus;
-      assert.equal(nextStudent1LockStatus, LockStatus.Locked);
-      assert.equal(nextStudent2LockStatus, LockStatus.ReadonlyAnswers);
-      assert.equal(nextStudent3LockStatus, LockStatus.Editable);
+      expect(nextStudent1LockStatus).toEqual(LockStatus.Locked);
+      expect(nextStudent2LockStatus).toEqual(LockStatus.ReadonlyAnswers);
+      expect(nextStudent3LockStatus).toEqual(LockStatus.Editable);
       const nextStudent1 =
         nextState.lessonsBySectionId[section1Id][lesson1Id][0];
       const nextStudent2 =
         nextState.lessonsBySectionId[section1Id][lesson1Id][1];
       const nextStudent3 =
         nextState.lessonsBySectionId[section1Id][lesson1Id][2];
-      assert.equal(nextStudent1.locked, true);
-      assert.equal(nextStudent1.readonly_answers, false);
-      assert.equal(nextStudent3.locked, false);
-      assert.equal(nextStudent3.readonly_answers, false);
-      assert.equal(nextStudent2.locked, false);
-      assert.equal(nextStudent2.readonly_answers, true);
+      expect(nextStudent1.locked).toEqual(true);
+      expect(nextStudent1.readonly_answers).toEqual(false);
+      expect(nextStudent3.locked).toEqual(false);
+      expect(nextStudent3.readonly_answers).toEqual(false);
+      expect(nextStudent2.locked).toEqual(false);
+      expect(nextStudent2.readonly_answers).toEqual(true);
     });
   });
 });
@@ -247,7 +246,7 @@ describe('saveLockDialog', () => {
 
     // Make sure we filtered out unchanged student (student1) and pass in the
     // right data
-    assert.deepEqual(updates, [
+    expect(updates).toEqual([
       {
         user_level_data: student2.user_level_data,
         locked: false,
@@ -266,15 +265,15 @@ describe('saveLockDialog', () => {
       JSON.stringify({})
     );
 
-    assert.equal(reducerSpy.callCount, 3);
+    expect(reducerSpy.callCount).toEqual(3);
 
     const firstAction = reducerSpy.getCall(0).args[1];
     const secondAction = reducerSpy.getCall(1).args[1];
     const thirdAction = reducerSpy.getCall(2).args[1];
 
-    assert.equal(firstAction.type, BEGIN_SAVE);
-    assert.equal(secondAction.type, FINISH_SAVE);
-    assert.equal(thirdAction.type, CLOSE_LOCK_DIALOG);
+    expect(firstAction.type).toEqual(BEGIN_SAVE);
+    expect(secondAction.type).toEqual(FINISH_SAVE);
+    expect(thirdAction.type).toEqual(CLOSE_LOCK_DIALOG);
   });
 
   it('successfully lockLesson without dialog', () => {
@@ -290,7 +289,7 @@ describe('saveLockDialog', () => {
 
     const updates = JSON.parse(lastRequest.requestBody).updates;
 
-    assert.deepEqual(updates, [
+    expect(updates).toEqual([
       {
         user_level_data: student1.user_level_data,
         locked: true,
@@ -314,13 +313,13 @@ describe('saveLockDialog', () => {
       JSON.stringify({})
     );
 
-    assert.equal(reducerSpy.callCount, 2);
+    expect(reducerSpy.callCount).toEqual(2);
 
     const firstAction = reducerSpy.getCall(0).args[1];
     const secondAction = reducerSpy.getCall(1).args[1];
 
-    assert.equal(firstAction.type, BEGIN_SAVE);
-    assert.equal(secondAction.type, FINISH_SAVE);
+    expect(firstAction.type).toEqual(BEGIN_SAVE);
+    expect(secondAction.type).toEqual(FINISH_SAVE);
   });
 });
 
@@ -403,28 +402,28 @@ describe('fullyLockedLessonMapping', () => {
   };
 
   it('maps to true for fully locked lessons', () => {
-    assert.deepEqual(fullyLockedLessonMapping(sections['11']), {
+    expect(fullyLockedLessonMapping(sections['11'])).toEqual({
       1360: true,
       1361: true,
     });
   });
 
   it('maps to false for non-fully locked lessons', () => {
-    assert.deepEqual(fullyLockedLessonMapping(sections['12']), {
+    expect(fullyLockedLessonMapping(sections['12'])).toEqual({
       1360: false,
       1361: false,
     });
   });
 
   it('works when some of our lessons are locked and others arent', () => {
-    assert.deepEqual(fullyLockedLessonMapping(sections['13']), {
+    expect(fullyLockedLessonMapping(sections['13'])).toEqual({
       1360: true,
       1361: false,
     });
   });
 
   it('returns an empty object if no selectedSection', () => {
-    assert.deepEqual(fullyLockedLessonMapping(sections['9999']), {});
+    expect(fullyLockedLessonMapping(sections['9999'])).toEqual({});
   });
 });
 
@@ -457,12 +456,12 @@ describe('refetchSectionLockStatus', () => {
     store.dispatch(setSectionLockStatus(fakeSectionData));
     let student2 =
       store.getState().lessonLock.lessonsBySectionId[section1Id][lesson1Id][1];
-    assert.equal(student2.locked, false);
+    expect(student2.locked).toEqual(false);
 
     // Refetch lessonLock data with updated lock status for lesson1 student 2
     store.dispatch(refetchSectionLockStatus(section1Id, scriptId));
     student2 =
       store.getState().lessonLock.lessonsBySectionId[section1Id][lesson1Id][1];
-    assert.equal(student2.locked, true);
+    expect(student2.locked).toEqual(true);
   });
 });

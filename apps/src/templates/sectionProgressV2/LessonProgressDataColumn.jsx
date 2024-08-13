@@ -10,6 +10,10 @@ import {studentShape} from '../teacherDashboard/teacherSectionsRedux';
 
 import LessonDataCell from './LessonDataCell';
 import LessonProgressColumnHeader from './LessonProgressColumnHeader';
+import {
+  getLockedStatusPerStudent,
+  areAllLevelsLocked,
+} from './LockedLessonUtils';
 
 import styles from './progress-table-v2.module.scss';
 
@@ -18,37 +22,24 @@ function LessonProgressDataColumn({
   lessonProgressByStudent,
   levelProgressByStudent,
   sortedStudents,
-  addExpandedLesson,
   expandedMetadataStudentIds,
 }) {
   const lockedPerStudent = React.useMemo(
     () =>
-      Object.fromEntries(
-        sortedStudents.map(student => [
-          student.id,
-          lesson.lockable &&
-            lesson.levels.every(
-              level => levelProgressByStudent[student.id][level.id]?.locked
-            ),
-        ])
-      ),
+      getLockedStatusPerStudent(levelProgressByStudent, sortedStudents, lesson),
     [levelProgressByStudent, sortedStudents, lesson]
   );
 
   // For lockable lessons, check whether each level is locked for each student.
   // Used to control locked/unlocked icon in lesson header.
   const allLocked = React.useMemo(
-    () => sortedStudents.every(student => lockedPerStudent[student.id]),
-    [sortedStudents, lockedPerStudent]
+    () => areAllLevelsLocked(lockedPerStudent),
+    [lockedPerStudent]
   );
 
   return (
     <div className={styles.lessonColumn}>
-      <LessonProgressColumnHeader
-        lesson={lesson}
-        addExpandedLesson={addExpandedLesson}
-        allLocked={allLocked}
-      />
+      <LessonProgressColumnHeader lesson={lesson} allLocked={allLocked} />
 
       <div className={styles.lessonDataColumn}>
         {sortedStudents.map(student => (
@@ -60,7 +51,6 @@ function LessonProgressDataColumn({
             }
             key={student.id + '.' + lesson.id}
             studentId={student.id}
-            addExpandedLesson={addExpandedLesson}
             metadataExpanded={expandedMetadataStudentIds.includes(student.id)}
           />
         ))}
@@ -80,7 +70,6 @@ LessonProgressDataColumn.propTypes = {
     PropTypes.objectOf(studentLevelProgressType)
   ).isRequired,
   lesson: PropTypes.object.isRequired,
-  addExpandedLesson: PropTypes.func.isRequired,
   expandedMetadataStudentIds: PropTypes.array,
 };
 

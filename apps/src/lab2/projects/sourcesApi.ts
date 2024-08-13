@@ -3,23 +3,26 @@
  * A source is the code of a project.
  */
 
-import {ProjectSources, SourceUpdateOptions} from '../types';
-import {SOURCE_FILE} from '../constants';
 import HttpClient, {GetResponse} from '@cdo/apps/util/HttpClient';
+
+import {SOURCE_FILE} from '../constants';
 import {SourceResponseValidator} from '../responseValidators';
+import {ProjectSources, ProjectVersion, SourceUpdateOptions} from '../types';
+
 const {stringifyQueryParams} = require('@cdo/apps/utils');
 
 const rootUrl = (channelId: string) =>
   `/v3/sources/${channelId}/${SOURCE_FILE}`;
 
 export async function get(
-  channelId: string
+  channelId: string,
+  versionId?: string
 ): Promise<GetResponse<ProjectSources>> {
-  return HttpClient.fetchJson<ProjectSources>(
-    rootUrl(channelId),
-    {},
-    SourceResponseValidator
-  );
+  let url = rootUrl(channelId);
+  if (versionId) {
+    url += `?version=${versionId}`;
+  }
+  return HttpClient.fetchJson<ProjectSources>(url, {}, SourceResponseValidator);
 }
 
 export async function update(
@@ -32,4 +35,16 @@ export async function update(
     method: 'PUT',
     body: JSON.stringify(sources),
   });
+}
+
+export async function getVersionList(
+  channelId: string
+): Promise<GetResponse<ProjectVersion[]>> {
+  const requestUrl = rootUrl(channelId) + '/versions';
+  return HttpClient.fetchJson<ProjectVersion[]>(requestUrl);
+}
+
+export async function restore(channelId: string, versionId: string) {
+  const url = rootUrl(channelId) + `/restore?version=${versionId}`;
+  return HttpClient.put(url);
 }

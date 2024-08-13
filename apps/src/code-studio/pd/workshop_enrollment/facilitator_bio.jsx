@@ -2,8 +2,10 @@
  * Facilitator bio as used on the workshop enrollment form
  */
 import React from 'react';
-import {FacilitatorPropType} from './enrollmentConstants';
+
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+
+import {FacilitatorPropType} from './enrollmentConstants';
 
 export default class FacilitatorBio extends React.Component {
   static propTypes = {

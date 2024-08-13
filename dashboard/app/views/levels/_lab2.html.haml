@@ -1,11 +1,11 @@
-#codeApp{style: "position: absolute; top: 60px; bottom: 10px; left: 10px; right: 10px"}
-  #lab2-container{style: "height: 100%"}
+#lab2-container
 
 - content_for(:head) do
   %script{src: webpack_asset_path("js/#{js_locale}/music_locale.js")}
   %script{src: webpack_asset_path("js/#{js_locale}/standaloneVideo_locale.js")}
   %script{src: webpack_asset_path("js/#{js_locale}/aichat_locale.js")}
   %script{src: webpack_asset_path("js/#{js_locale}/codebridge_locale.js")}
+  %script{src: webpack_asset_path("js/#{js_locale}/lab2_locale.js")}
   %script{src: webpack_asset_path('js/googleblockly.js')}
   -# To use css linting in Web Lab 2, uncomment this line. This is commented out because this is a prototype
   -# feature and we aren't ready to have it imported for every lab2 lab yet.

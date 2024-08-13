@@ -66,6 +66,8 @@ if node.chef_environment == 'staging'
   end
 end
 
+include_recipe 'cdo-python'
+
 # Debian-family packages for building Ruby C extensions
 apt_package %w(
   autoconf
@@ -104,7 +106,6 @@ node.default['cdo-secrets']['daemon'] = node['cdo-apps']['daemon'] if node['cdo-
 include_recipe 'cdo-secrets'
 include_recipe 'cdo-mysql'
 include_recipe 'cdo-postfix'
-
 include_recipe 'cdo-cloudwatch-agent'
 include_recipe 'cdo-syslog'
 
@@ -129,6 +130,8 @@ end
 # Workaround for lack of zoneinfo in docker: https://forums.docker.com/t/synchronize-timezone-from-host-to-container/39116/3
 # which causes this error: https://github.com/tzinfo/tzinfo/wiki/Resolving-TZInfo::DataSourceNotFound-Errors
 apt_package 'tzdata'
+
+include_recipe 'cdo-apps::logrotate'
 
 include_recipe 'cdo-apps::dashboard'
 include_recipe 'cdo-apps::pegasus'

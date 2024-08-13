@@ -25,7 +25,7 @@
 #
 class Pythonlab < Level
   serialized_attrs %w(
-    source
+    start_sources
     encrypted_exemplar_sources
     encrypted_validation
     hide_share_and_remix
@@ -57,8 +57,8 @@ class Pythonlab < Level
   def has_correct_multiple_choice_answer?
     if predict_settings && predict_settings["isPredictLevel"] && predict_settings["questionType"] == 'multipleChoice'
       options = predict_settings["multipleChoiceOptions"]
-      answers = predict_settings["multipleChoiceAnswers"]
-      unless options && answers && !options.empty? && !answers.empty?
+      answers = predict_settings["solution"]
+      unless options && answers && !options.empty? && answers.present?
         errors.add(:predict_settings, 'multiple choice questions must have at least one correct answer')
       end
     end
@@ -76,7 +76,6 @@ class Pythonlab < Level
     else
       # Remove any multiple choice settings if this is a free response question.
       predict_settings.delete("multipleChoiceOptions")
-      predict_settings.delete("multipleChoiceAnswers")
     end
   end
 end

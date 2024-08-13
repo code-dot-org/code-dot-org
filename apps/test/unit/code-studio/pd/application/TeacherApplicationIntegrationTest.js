@@ -1,8 +1,8 @@
-import {expect} from 'chai';
+import {expect} from 'chai'; // eslint-disable-line no-restricted-imports
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplication';
 import {PageLabels} from '@cdo/apps/generated/pd/teacherApplicationConstants';
@@ -33,11 +33,6 @@ describe('TeacherApplication', () => {
     sinon.stub($, 'param').returns(new $.Deferred());
     sinon.stub(window, 'fetch').returns(Promise.resolve({ok: true}));
     sinon.stub(utils, 'reload');
-    sinon
-      .stub(window.sessionStorage, 'getItem')
-      .withArgs('TeacherApplication')
-      .returns(JSON.stringify({}));
-    sinon.stub(window.sessionStorage, 'setItem');
     window.ga = sinon.fake();
   });
 
@@ -65,17 +60,9 @@ describe('TeacherApplication', () => {
   });
 
   it('Sets the school dropdown value from storage', () => {
-    window.sessionStorage.getItem.restore();
-    sinon
-      .stub(window.sessionStorage, 'getItem')
-      .withArgs('TeacherApplication')
-      .returns({program: 'CSD', school: '25'});
-    const page = mount(
-      <FindYourRegion
-        {...defaultProps}
-        data={window.sessionStorage.getItem('TeacherApplication')}
-      />
-    );
+    const data = {program: 'CSD', school: '25'};
+
+    const page = mount(<FindYourRegion {...defaultProps} data={data} />);
     expect(page.find('SchoolAutocompleteDropdown').prop('value')).to.equal(
       '25'
     );

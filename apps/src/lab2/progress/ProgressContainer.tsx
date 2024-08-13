@@ -1,3 +1,6 @@
+import React, {useCallback, useEffect, useRef} from 'react';
+import {useSelector} from 'react-redux';
+
 import {sendSuccessReport} from '@cdo/apps/code-studio/progressRedux';
 import {
   getProgressLevelType,
@@ -5,8 +8,7 @@ import {
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import ProgressManager from '@cdo/apps/lab2/progress/ProgressManager';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import React, {useCallback, useEffect, useRef} from 'react';
-import {useSelector} from 'react-redux';
+
 import {setValidationState} from '../lab2Redux';
 
 interface ProgressContainerProps {

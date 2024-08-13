@@ -32,7 +32,7 @@
                 },
                 {
                   "value": "csf_maker_mb",
-                  "text": "Computer Science Foundations: Maker with micro:bit"
+                  "text": "Maker with micro:bit"
                 }
               ]
             },
@@ -89,7 +89,7 @@
             {
               "value": "better_understand_course_csf_maker_mb",
               "visibleIf": "{survey_variable_name}='csf_maker_mb'",
-              "text": "Better understand Code.org's Computer Science Foundations: Maker with micro:bit curriculum"
+              "text": "Better understand Code.org's Maker with micro:bit curriculum"
             },
             {
               "value": "learn_programming",
@@ -250,7 +250,7 @@
           "title": "How interested are you in learning computer science?",
           "visibleIf": "{first_time_csb}<>'no'",
           "rateMax": 7,
-          "minRateDescription": "Very uninterested",
+          "minRateDescription": "Not interested at all",
           "maxRateDescription": "Very interested"
         },
         {
@@ -259,7 +259,7 @@
           "title": "How interested are you in teaching computer science?",
           "visibleIf": "{first_time_csb}<>'no'",
           "rateMax": 7,
-          "minRateDescription": "Very uninterested",
+          "minRateDescription": "Not interested at all",
           "maxRateDescription": "Very interested"
         },
         {
@@ -268,7 +268,7 @@
           "title": "How confident do you feel in your ability to teach computer science effectively right now?",
           "visibleIf": "{first_time_csb}<>'no'",
           "rateMax": 7,
-          "minRateDescription": "Very unconfident",
+          "minRateDescription": "Not confident at all",
           "maxRateDescription": "Very confident"
         },
         {
@@ -277,7 +277,7 @@
           "title": "How necessary is it for students to learn computer science?",
           "visibleIf": "{first_time_csb}<>'no'",
           "rateMax": 7,
-          "minRateDescription": "Very unnecessary",
+          "minRateDescription": "Not necessary at all",
           "maxRateDescription": "Very necessary"
         }
       ]
