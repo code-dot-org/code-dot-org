@@ -14,7 +14,8 @@ allows us to start using a new key when signing JWTs, while still allowing users
 to validate JWTs issued with the old key. To generate a new JWK, refer to the
 following steps:
 
-1. Run `bin/generate-jwks <env>` locally on your dev machine (not on a server)
+1. Run `bin/generate-jwks <env>` locally on your dev machine (not on a server),
+where `<env>` is one of the following: `dev`, `prod`, `non-prod`
 1. This will generate a new public and private key, and output them to your terminal`
 1. Add the public key (JWK) to the `jwks_data` in the appropriate config file.
 NOTE: there is probably already an existing key under the `keys` array. You need
@@ -31,7 +32,7 @@ DEPLOYED
 
 After you are sure that any JWTs issued with the old key have expired, you can:
 
-1. Remove the old JWK from the `keys` array in the appropriate config file`
+1. Remove the old JWK from the `keys` array in the appropriate config file
 1. Open and merge a PR with the change
 
 There is a bit of coordination with the above steps, but it's important you

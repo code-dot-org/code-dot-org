@@ -6,9 +6,9 @@
 # it to the approprate config files (see below). The private key will be formated
 # as JSON, which is how it should be stored in Secrets Manager.
 #
-# Here are the locations the public key should be added
-# - For Production, the public key should be added to config/production.yml.erb
-# - For Non-Prod, the public key should be added to config.yml.erb
+# The public key used by default should be defined in `config.yml.erb`, for use in
+# non-production environments. For the production environment, a production-specific
+# public key override should be added to `config/production.yml.erb`.
 #
 # When you include 'dev' as an argument, it will write the JWK and the private
 # key to your locals.yml. This should be done once for local development.
