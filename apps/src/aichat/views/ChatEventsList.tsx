@@ -1,7 +1,5 @@
 import React, {useEffect, useRef} from 'react';
-import {useSelector} from 'react-redux';
 
-import {selectAllVisibleMessages} from '@cdo/apps/aichat/redux/aichatRedux';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {ChatEvent} from '../types';
@@ -23,10 +21,9 @@ const ChatWithModel: React.FunctionComponent<ChatWithModelProps> = ({
   showWaitingAnimation,
 }) => {
   const {isWaitingForChatResponse} = useAppSelector(state => state.aichat);
-  const visibleItems = useSelector(selectAllVisibleMessages);
   // Compare the messages as a string since the object reference will change on every update.
   // This way we will only scroll when the contents of the messages have changed.
-  const messagesString = JSON.stringify(visibleItems);
+  const messagesString = JSON.stringify(items);
   const conversationContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
