@@ -7666,7 +7666,7 @@ columns:
     collation: utf8mb3_unicode_ci
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: cap_state
+    name: cap_status
     sql_type_metadata: *30
     'null': true
     default:
@@ -7674,7 +7674,7 @@ columns:
     collation: utf8mb3_unicode_ci
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::MySQL::Column
-    name: cap_state_date
+    name: cap_status_date
     sql_type_metadata: *4
     'null': true
     default:
@@ -13603,11 +13603,11 @@ indexes:
     comment:
   - !ruby/object:ActiveRecord::ConnectionAdapters::IndexDefinition
     table: users
-    name: index_users_on_cap_state_and_cap_state_date
+    name: index_users_on_cap_status_and_cap_status_date
     unique: false
     columns:
-    - cap_state
-    - cap_state_date
+    - cap_status
+    - cap_status_date
     lengths: {}
     orders: {}
     opclasses: {}
