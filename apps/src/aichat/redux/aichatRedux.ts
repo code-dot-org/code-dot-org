@@ -468,12 +468,7 @@ export const fetchStudentChatHistory = createAsyncThunk(
         state.progress.scriptId,
         scriptLevelId
       );
-      const chatHistory: ChatEvent[] = studentChatHistoryApiResponse.map(
-        (event: string) => {
-          return JSON.parse(event);
-        }
-      );
-      thunkAPI.dispatch(setStudentChatHistory(chatHistory));
+      thunkAPI.dispatch(setStudentChatHistory(studentChatHistoryApiResponse));
     } catch (error) {
       Lab2Registry.getInstance()
         .getMetricsReporter()

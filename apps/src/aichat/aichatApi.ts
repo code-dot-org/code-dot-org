@@ -112,7 +112,7 @@ export async function getStudentChatHistory(
   levelId: number,
   scriptId: number | null,
   scriptLevelId: number | undefined
-): Promise<string[]> {
+): Promise<ChatEvent[]> {
   const params: Record<string, string> = {
     studentUserId: studentUserId.toString(),
     levelId: levelId.toString(),
