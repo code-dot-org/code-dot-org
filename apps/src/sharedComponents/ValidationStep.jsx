@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import FontAwesome from '../../legacySharedComponents/FontAwesome';
-import color from '../../util/color';
+import FontAwesome from '../legacySharedComponents/FontAwesome';
+import color from '../util/color';
 
 export const Status = {
   WAITING: 'WAITING',

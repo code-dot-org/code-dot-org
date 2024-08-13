@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
 
-import color from '../../util/color';
+import color from '../util/color';
 
 const baseHeadingStyle = {
   display: 'block',
@@ -20,6 +20,9 @@ export const h1Style = {
   lineHeight: '48px',
 };
 
+/**
+ * @deprecated Use DSCO Typography instead.
+ */
 export class Heading1 extends Component {
   static propTypes = {
     children: PropTypes.oneOfType([
