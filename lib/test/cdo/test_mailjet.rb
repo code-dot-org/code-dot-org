@@ -168,15 +168,15 @@ class MailJetTest < Minitest::Test
     user.stubs(:teacher?).returns(true)
     user.stubs(:created_at).returns(sign_up_time)
 
-    sections = {'sections' => [
-      {'SectionName' => 'Section 1', 'SectionLink' => 'https://example.com/section1'},
-      {'SectionName' => 'Section 2', 'SectionLink' => 'https://example.com/section2'}
-    ]}.to_json
+    sections = [
+      {'Name' => 'Section 1', 'Link' => 'https://example.com/section1'},
+      {'Name' => 'Section 2', 'Link' => 'https://example.com/section2'}
+    ]
 
     mock_contactdata = mock('Mailjet::Contactdata')
     MailJet.expects(:find_or_create_contact).with(email, user.name).returns(mock_contactdata)
 
-    MailJet.expects(:send_template_email).with(mock_contactdata, MailJet::EMAILS[:cap_section_warning], 'en-US', sections)
+    MailJet.expects(:send_template_email).with(mock_contactdata, MailJet::EMAILS[:cap_section_warning], 'en-US', {capSections: sections})
 
     MailJet.send_cap_section_warning_email(user, sections)
   end
