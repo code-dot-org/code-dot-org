@@ -43,27 +43,36 @@ class AichatControllerTest < ActionController::TestCase
       aichatContext: @default_aichat_context
     }
     @missing_aichat_context_params = @valid_params_log_chat_event.except(:aichatContext)
+
+    @project_id = 456
   end
 
   setup do
     @assistant_response = "This is an assistant response from Sagemaker"
     AichatSagemakerHelper.stubs(:get_sagemaker_assistant_response).returns(@assistant_response)
-    @controller.stubs(:storage_decrypt_channel_id).returns([123, 456])
+    @controller.stubs(:storage_decrypt_channel_id).returns([123, @project_id])
   end
 
-  # chat_completion tests
-  test_user_gets_response_for :chat_completion,
-    name: "student_no_access_chat_completion_test",
-    user: :student,
-    method: :post,
-    response: :forbidden
+  # Check that non-pilot users don't have access to any aichat endpoints
+  users = [:student, :teacher]
+  [
+    :chat_completion,
+    :log_chat_event,
+    :student_chat_history,
+    :start_chat_completion,
+    [:chat_request, :get, {id: 1}]
+  ].each do |action, method = :post, params = {}|
+    users.each do |user|
+      test_user_gets_response_for action,
+        name: "#{user}_no_access_#{action}_test",
+        user: user,
+        method: method,
+        params: params,
+        response: :forbidden
+    end
+  end
 
-  test_user_gets_response_for :chat_completion,
-    name: "teacher_no_access_chat_completion_test",
-    user: :teacher,
-    method: :post,
-    response: :forbidden
-
+  #chat_completion tests
   test 'pilot teacher has access to chat_completion test' do
     sign_in(@genai_pilot_teacher)
     post :chat_completion, params: @valid_params_chat_completion, as: :json
@@ -131,18 +140,6 @@ class AichatControllerTest < ActionController::TestCase
   end
 
   # log_chat_event tests
-  test_user_gets_response_for :log_chat_event,
-    name: "student_no_access_log_chat_event_test",
-    user: :student,
-    method: :post,
-    response: :forbidden
-
-  test_user_gets_response_for :log_chat_event,
-    name: "teacher_no_access_log_chat_event_test",
-    user: :teacher,
-    method: :post,
-    response: :forbidden
-
   test 'pilot teacher has access to log_chat_event test' do
     sign_in(@genai_pilot_teacher)
     post :log_chat_event, params: @valid_params_log_chat_event, as: :json
@@ -194,5 +191,83 @@ class AichatControllerTest < ActionController::TestCase
     sign_in(@genai_pilot_teacher2)
     get :student_chat_history, params: @valid_params_student_chat_history, as: :json
     assert_response :forbidden
+  end
+
+  # start_chat_completion tests
+  test 'pilot teacher has access to start_chat_completion' do
+    sign_in(@genai_pilot_teacher)
+    post :start_chat_completion, params: @valid_params_chat_completion, as: :json
+    assert_response :success
+  end
+
+  test 'pilot student has access to start_chat_completion test' do
+    sign_in(@genai_pilot_student)
+    post :start_chat_completion, params: @valid_params_chat_completion, as: :json
+    assert_response :success
+  end
+
+  test 'start_chat_completion creates new request and returns correct parameters' do
+    AichatRequestChatCompletionJob.stubs(:perform_later)
+
+    sign_in(@genai_pilot_teacher)
+    post :start_chat_completion, params: @valid_params_chat_completion, as: :json
+    assert_response :success
+
+    assert_equal json_response.keys, ['requestId', 'pollingIntervalMs', 'backoffRate']
+    assert_equal json_response['pollingIntervalMs'], 1000
+    assert_equal json_response['backoffRate'], 1.2
+
+    # Verify the created AichatRequest
+    request_id = json_response['requestId']
+    request = AichatRequest.find(request_id)
+    assert request.present?
+    assert_equal request.user_id, @genai_pilot_teacher.id
+    assert_equal request.level_id, @level.id
+    assert_equal request.script_id, @script.id
+    assert_equal request.project_id, @project_id
+    assert_equal request.model_customizations, @default_model_customizations.to_json
+    assert_equal request.stored_messages, [].to_json
+    assert_equal request.new_message, @valid_params_chat_completion[:newMessage].to_json
+    assert_equal request.execution_status, SharedConstants::AI_REQUEST_EXECUTION_STATUS[:NOT_STARTED]
+  end
+
+  test 'Bad request if required params are not included for start_chat_completion' do
+    sign_in(@genai_pilot_teacher)
+    post :start_chat_completion, params: {newMessage: "hello"}, as: :json
+    assert_response :bad_request
+  end
+
+  test 'Bad request if storedMessages param is not included for start_chat_completion' do
+    sign_in(@genai_pilot_teacher)
+    post :start_chat_completion, params: @missing_stored_messages_params, as: :json
+    assert_response :bad_request
+  end
+
+  # chat_request tests
+  test 'GET chat_request returns not found if request does not exist' do
+    sign_in(@genai_pilot_teacher)
+    get :chat_request, params: {id: 1}, as: :json
+    assert_response :not_found
+  end
+
+  test 'GET chat_request returns forbidden if user is not the requester' do
+    sign_in(@genai_pilot_teacher)
+    request = create(:aichat_request, user: @genai_pilot_student)
+    get :chat_request, params: {id: request.id}, as: :json
+    assert_response :forbidden
+  end
+
+  test 'GET chat_request returns request status and response' do
+    response = "AI model response"
+    execution_status = SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS]
+
+    sign_in(@genai_pilot_teacher)
+    request = create(:aichat_request, user: @genai_pilot_teacher, response: response, execution_status: execution_status)
+    get :chat_request, params: {id: request.id}, as: :json
+
+    assert_response :success
+    assert_equal json_response.keys, ['executionStatus', 'response']
+    assert_equal json_response['executionStatus'], execution_status
+    assert_equal json_response['response'], response
   end
 end

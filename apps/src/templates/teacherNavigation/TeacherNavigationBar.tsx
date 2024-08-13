@@ -156,6 +156,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
           selectedValue={selectedSectionId}
           className={styles.sectionDropdown}
           name="section-dropdown"
+          className="sectionDropdown"
         />
         {courseContent}
         {performanceContent}
