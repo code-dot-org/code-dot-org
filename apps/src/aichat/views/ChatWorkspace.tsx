@@ -17,6 +17,7 @@ import {ChatEvent} from '../types';
 import {getShortName} from '../utils';
 
 import ChatEventView from './ChatEventView';
+import ChatWithModel from './ChatWithModel';
 import CopyButton from './CopyButton';
 import UserChatMessageEditor from './UserChatMessageEditor';
 
@@ -128,12 +129,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           ? ' (view only)'
           : ''),
 
-      tabContent: (
-        <StudentChatHistory
-          events={studentChatHistory}
-          conversationContainerRef={conversationContainerRef}
-        />
-      ),
+      tabContent: <StudentChatHistory events={studentChatHistory} />,
       iconLeft: iconValue,
     },
     {
@@ -143,7 +139,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         <ChatWithModel
           items={visibleItems}
           showWaitingAnimation={showWaitingAnimation}
-          conversationContainerRef={conversationContainerRef}
         />
       ),
     },
@@ -180,7 +175,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         <ChatWithModel
           items={visibleItems}
           showWaitingAnimation={showWaitingAnimation}
-          conversationContainerRef={conversationContainerRef}
         />
       )}
 
@@ -205,39 +199,37 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   );
 };
 
-interface ChatWithModelProps {
-  conversationContainerRef: React.RefObject<HTMLDivElement>;
-  items: ChatEvent[];
-  showWaitingAnimation: () => React.ReactNode;
-}
+// interface ChatWithModelProps {
+//   conversationContainerRef: React.RefObject<HTMLDivElement>;
+//   items: ChatEvent[];
+//   showWaitingAnimation: () => React.ReactNode;
+// }
 
-const ChatWithModel: React.FunctionComponent<ChatWithModelProps> = ({
-  items,
-  showWaitingAnimation,
-  conversationContainerRef,
-}) => {
-  return (
-    <div
-      id="chat-workspace-conversation"
-      className={moduleStyles.conversationArea}
-      ref={conversationContainerRef}
-    >
-      {items.map((item, index) => (
-        <ChatEventView event={item} key={index} />
-      ))}
-      {showWaitingAnimation()}
-    </div>
-  );
-};
+// const ChatWithModel: React.FunctionComponent<ChatWithModelProps> = ({
+//   items,
+//   showWaitingAnimation,
+//   conversationContainerRef,
+// }) => {
+//   return (
+//     <div
+//       id="chat-workspace-conversation"
+//       className={moduleStyles.conversationArea}
+//       ref={conversationContainerRef}
+//     >
+//       {items.map(item => (
+//         <ChatEventView event={item} key={item.timestamp} />
+//       ))}
+//       {showWaitingAnimation()}
+//     </div>
+//   );
+// };
 
 interface StudentChatHistoryProps {
   events: ChatEvent[];
-  conversationContainerRef: React.RefObject<HTMLDivElement>;
 }
 
 const StudentChatHistory: React.FunctionComponent<StudentChatHistoryProps> = ({
   events,
-  conversationContainerRef,
 }) => {
   const studentChatHistoryEvents = events.map(
     event =>
@@ -250,7 +242,6 @@ const StudentChatHistory: React.FunctionComponent<StudentChatHistoryProps> = ({
     <ChatWithModel
       items={studentChatHistoryEvents}
       showWaitingAnimation={() => null}
-      conversationContainerRef={conversationContainerRef}
     />
   );
 };
