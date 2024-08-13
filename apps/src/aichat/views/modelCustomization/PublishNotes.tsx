@@ -8,7 +8,7 @@ import {
   selectHasFilledOutModelCard,
   selectHavePropertiesChanged,
 } from '@cdo/apps/aichat/redux/aichatRedux';
-import Alert, {AlertProps} from '@cdo/apps/componentLibrary/alert/Alert';
+import Alert, {alertTypes} from '@cdo/apps/componentLibrary/alert/Alert';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
@@ -52,14 +52,33 @@ const PublishNotes: React.FunctionComponent = () => {
     animationType: 'spin',
   };
 
-  const [alertText, type]: [string, AlertProps['type']] = hasFilledOutModelCard
-    ? ['Ready to publish', 'success']
-    : ['In order to publish, you must fill out a model card', 'warning'];
+  const alerts = {
+    ready: {text: 'Ready to publish', type: alertTypes.success},
+    empty: {
+      text: 'In order to publish, you must fill out a model card',
+      type: alertTypes.warning,
+    },
+    unsaved: {text: 'You have unsaved changes', type: alertTypes.danger},
+  };
+
+  const getAlert = () => {
+    let alert;
+    if (hasFilledOutModelCard) {
+      alert = alerts['ready'];
+    } else if (havePropertiesChanged) {
+      alert = alerts['unsaved'];
+    } else {
+      alert = alerts['empty'];
+    }
+    return <Alert text={alert.text} type={alert.type} size="s" />;
+  };
+
+  // const [alertText, type]: [string, AlertProps['type']] = getAlert();
 
   return (
     <div className={modelCustomizationStyles.verticalFlexContainer}>
       <div className={modelCustomizationStyles.customizationContainer}>
-        {!isReadOnly && <Alert text={alertText} type={type} size="s" />}
+        {!isReadOnly && getAlert()}
         {MODEL_CARD_FIELDS_LABELS_ICONS.map(data => {
           const {property, label, editTooltip} = data;
           const InputTag = getInputTag(property);
