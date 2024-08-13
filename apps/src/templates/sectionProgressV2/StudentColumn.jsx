@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import DCDO from '@cdo/apps/dcdo';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import i18n from '@cdo/locale';
@@ -43,22 +42,8 @@ function StudentColumn({
   expandMetadataForStudents,
   collapseMetadataForStudents,
 }) {
-  const expandedMetadataEnabled = React.useMemo(
-    () => DCDO.get('progress-v2-metadata-enabled', false),
-    []
-  );
-
   const getFullName = student =>
     student.familyName ? `${student.name} ${student.familyName}` : student.name;
-
-  const getUnexpandableRow = (student, ind) => (
-    <div
-      className={classNames(styles.gridBox, styles.gridBoxStudent)}
-      key={ind}
-    >
-      {getFullName(student)}
-    </div>
-  );
 
   const collapseRow = studentId => {
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_ONE_ROW_COLLAPSED, {
@@ -129,10 +114,6 @@ function StudentColumn({
   const studentColumnBox = (student, ind) => {
     if (isSkeleton) {
       return skeletonCell(ind);
-    }
-
-    if (!expandedMetadataEnabled) {
-      return getUnexpandableRow(student, ind);
     }
 
     if (expandedMetadataStudentIds.includes(student.id)) {

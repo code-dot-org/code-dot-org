@@ -1,0 +1,20 @@
+{
+  "category": "HoC",
+  "config": {
+    "func": "playSoundOptions",
+    "docFunc": "gamelab_playSound",
+    "blockText": "play sound {SOUND}",
+    "args": [
+      {
+        "name": "SOUND",
+        "options": [
+          [
+            "transformers SFX 1",
+            "'sound://category_space/Blackhole_SFX.mp3'"
+          ]
+        ]
+      }
+    ],
+    "style": "default"
+  }
+}
