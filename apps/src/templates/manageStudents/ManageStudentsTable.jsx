@@ -7,8 +7,8 @@ import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
 import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
 import {
@@ -26,7 +26,9 @@ import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import Button from '../../legacySharedComponents/Button';
-import Notification, {NotificationType} from '../Notification';
+import Notification, {
+  NotificationType,
+} from '../../sharedComponents/Notification';
 import SafeMarkdown from '../SafeMarkdown';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import wrappedSortable from '../tables/wrapped_sortable';

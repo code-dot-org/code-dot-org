@@ -2,8 +2,9 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 
+import DCDO from '@cdo/apps/dcdo';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
@@ -20,6 +21,9 @@ import sectionStandardsProgress from '@cdo/apps/templates/sectionProgress/standa
 import progressV2Feedback from '@cdo/apps/templates/sectionProgressV2/progressV2FeedbackRedux';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
+import SectionNavigationRouter, {
+  SECTION_NAVIGATION_BARE_URL,
+} from '@cdo/apps/templates/teacherDashboard/teacherNavigation/SectionNavigationRouter';
 import teacherSections, {
   setSections,
   selectSection,
@@ -29,20 +33,18 @@ import teacherSections, {
   setStudentsForCurrentSection,
   sectionProviderName,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import experiments from '@cdo/apps/util/experiments';
 
-import {
-  setCoursesWithProgress,
-  setScriptId,
-} from '../../../../redux/unitSelectionRedux';
+import {setScriptId} from '../../../../redux/unitSelectionRedux';
 
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
 const {
+  anyStudentHasProgress,
   section,
   sections,
   localeCode,
   hasSeenStandardsReportInfo,
-  coursesWithProgress,
   canViewStudentAIChatMessages,
 } = scriptData;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
@@ -95,39 +97,50 @@ $(document).ready(function () {
   if (defaultScriptId) {
     store.dispatch(setScriptId(defaultScriptId));
   }
-  // Reorder coursesWithProgress so that the current section is at the top and other sections are in order from newest to oldest
-  const reorderedCourses = [
-    ...coursesWithProgress.filter(
-      course => course.id !== selectedSection.course_version_id
-    ),
-    ...coursesWithProgress.filter(
-      course => course.id === selectedSection.course_version_id
-    ),
-  ].reverse();
-  store.dispatch(setCoursesWithProgress(reorderedCourses));
 
   const showAITutorTab = canViewStudentAIChatMessages;
 
+  const showV2TeacherDashboard =
+    DCDO.get('teacher-local-nav-v2', false) ||
+    experiments.isEnabled('teacher-local-nav-v2');
+
+  const getV1TeacherDashboard = () => (
+    <BrowserRouter basename={baseUrl}>
+      <TeacherDashboard
+        studioUrlPrefix={scriptData.studioUrlPrefix}
+        sectionId={selectedSection.id}
+        sectionName={selectedSection.name}
+        studentCount={selectedSection.students.length}
+        anyStudentHasProgress={anyStudentHasProgress}
+        showAITutorTab={showAITutorTab}
+        sectionProviderName={sectionProviderName(
+          store.getState(),
+          selectedSection.id
+        )}
+      />
+    </BrowserRouter>
+  );
+
   ReactDOM.render(
     <Provider store={store}>
-      <Router basename={baseUrl}>
-        <Switch>
-          <Route path="/">
-            <TeacherDashboard
-              studioUrlPrefix={scriptData.studioUrlPrefix}
-              sectionId={selectedSection.id}
-              sectionName={selectedSection.name}
-              studentCount={selectedSection.students.length}
-              coursesWithProgress={coursesWithProgress}
-              showAITutorTab={showAITutorTab}
-              sectionProviderName={sectionProviderName(
-                store.getState(),
-                selectedSection.id
-              )}
-            />
-          </Route>
-        </Switch>
-      </Router>
+      {!showV2TeacherDashboard ? (
+        getV1TeacherDashboard()
+      ) : (
+        <BrowserRouter basename={SECTION_NAVIGATION_BARE_URL}>
+          <SectionNavigationRouter
+            studioUrlPrefix={scriptData.studioUrlPrefix}
+            sectionId={selectedSection.id}
+            sectionName={selectedSection.name}
+            studentCount={selectedSection.students.length}
+            anyStudentHasProgress={anyStudentHasProgress}
+            showAITutorTab={showAITutorTab}
+            sectionProviderName={sectionProviderName(
+              store.getState(),
+              selectedSection.id
+            )}
+          />
+        </BrowserRouter>
+      )}
     </Provider>,
     document.getElementById('teacher-dashboard')
   );

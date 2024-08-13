@@ -95,7 +95,7 @@ And /^I create a new "([^"]*)" student section with course "([^"]*)", version "(
   GHERKIN
 end
 
-And(/^I create a(n authorized)? teacher-associated( under-13)?( sponsored)? student( in Colorado)? named "([^"]*)"( after CPA exception)?( before CPA exception)?$/) do |authorized, under_13, sponsored, locked, name, after_cpa_exception, before_cpa_exception|
+And(/^I create a(n authorized)? teacher-associated( under-13)?( sponsored)? student( in Colorado)? named "([^"]*)"( after CAP start)?( before CAP start)?$/) do |authorized, under_13, sponsored, locked, name, after_cap_start, before_cap_start|
   steps "Given I create a teacher named \"Teacher_#{name}\""
   # enroll in a plc course as a way of becoming an authorized teacher
   steps 'And I am enrolled in a plc course' if authorized
@@ -121,15 +121,14 @@ And(/^I create a(n authorized)? teacher-associated( under-13)?( sponsored)? stud
     user_opts[:user_provided_us_state] = true
   end
 
-  # See Policies::ChildAccount::CPA_CREATED_AT_EXCEPTION_DATE
-  cpa_exception_date = DateTime.parse('2024-05-26T00:00:00MST')
+  cap_start_date = DateTime.parse('2023-07-01T00:00:00MDT').freeze
 
-  if after_cpa_exception
-    user_opts[:created_at] = cpa_exception_date
+  if after_cap_start
+    user_opts[:created_at] = cap_start_date
   end
 
-  if before_cpa_exception
-    user_opts[:created_at] = cpa_exception_date - 1.second
+  if before_cap_start
+    user_opts[:created_at] = cap_start_date - 1.second
   end
 
   create_user(name, **user_opts)

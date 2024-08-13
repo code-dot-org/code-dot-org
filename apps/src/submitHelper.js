@@ -10,7 +10,7 @@ import commonMsg from '@cdo/locale';
 
 import {getLastServerResponse} from './code-studio/reporting';
 import dom from './dom';
-import DialogButtons from './templates/DialogButtons';
+import DialogButtons from './legacySharedComponents/DialogButtons';
 
 // Parameters provided by the calling app.
 let studioApp, onPuzzleComplete, unsubmitUrl;

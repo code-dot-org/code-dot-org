@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import Link from '@cdo/apps/componentLibrary/link/Link';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import color from '@cdo/apps/util/color';
 
 export default class CourseVersionPublishingEditor extends Component {

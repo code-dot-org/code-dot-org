@@ -14681,7 +14681,7 @@ en:
         csp10-2024:
           lesson_groups:
             csp_unit10_2020:
-              display_name: 'Unit 10: Algortihms'
+              display_name: 'Unit 10: Algorithms'
             lessonGroup-2:
               display_name: Post-Course Survey
           title: Algorithms ('24-'25)
@@ -15792,48 +15792,72 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2024-m1
         vpl-csa-2024-m2:
           title: Module 2
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2024-m2
         vpl-csa-2024-m3:
           title: Module 3
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2024-m3
         vpl-csa-2024-m4:
           title: Module 4
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2024-m4
         vpl-csa-2024-m5:
           title: Module 5
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2024-m5
         vpl-csa-2024-m6:
           title: Module 6
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2024-m6
         vpl-csa-2024-m7:
           title: Module 7
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2024-m7
         vpl-csa-2024-m8:
           title: Module 8
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2024-m8
         self-paced-pl-csa1-2024:
           title: 'Module 1: Welcome'
           description: |-
@@ -18182,6 +18206,8 @@ en:
               display_name: Customizing Language Models
             lessonGroup-4:
               display_name: User-Centered Design
+            lessonGroup-5:
+              display_name: Flexible Implementation Lessons
           name: gen-ai-staging
           title: ''
           description_audience: ''
@@ -18503,7 +18529,9 @@ en:
           student_description: ''
         csa2-alt-2025:
           lessons: {}
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
           name: csa2-alt-2025
           title: Selection and Iteration
           description_audience: ''
@@ -18511,8 +18539,20 @@ en:
           description: ''
           student_description: ''
         csa3-alt-2025:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-3:
+              name: Program Design
+            lesson-5:
+              name: AI-Generated Code
+            lesson-9:
+              name: No-Argument Constructors
+            lesson-11:
+              name: Parameterized Constructors
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: AI-Generated Code
           name: csa3-alt-2025
           title: Class Creation
           description_audience: ''
@@ -18520,8 +18560,18 @@ en:
           description: ''
           student_description: ''
         csa4-alt-2025:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Ethical and Social Issues Around Data Collection
+            lesson-2:
+              name: Data Sets
+            lesson-9:
+              name: Text Files
+            lesson-19:
+              name: Enhanced For Loops (2D)
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
           name: csa4-alt-2025
           title: Data Collections
           description_audience: ''
@@ -18538,7 +18588,7 @@ en:
           lessons: {}
           lesson_groups: {}
         hello-world-transformers-one-2024:
-          title: 'Hello World: Food'
+          title: 'Hello World: Transformers One'
           description: ''
           student_description: ''
           description_short: ''

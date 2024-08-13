@@ -33,13 +33,6 @@ function addClickEventToLinks(selector, eventName, additionalProperties = {}) {
   });
 }
 
-function getHeaderType(screenWidth) {
-  if (screenWidth < 425) return 'mobile';
-  if (screenWidth < 1024) return 'tablet';
-  if (screenWidth <= 1268) return 'small desktop';
-  return 'large desktop';
-}
-
 const addCreateMenuMetrics = (
   headerCreateMenu,
   platforms,
@@ -112,16 +105,6 @@ const addMenuMetrics = (
 };
 
 const addSignedOutMetrics = (pageUrl, headerCreateMenu) => {
-  const screenWidth = window.innerWidth;
-  analyticsReporter.sendEvent(
-    EVENTS.SIGNED_OUT_USER_SEES_HEADER,
-    {
-      pageUrl: pageUrl,
-      headerType: getHeaderType(screenWidth),
-    },
-    PLATFORMS.STATSIG
-  );
-
   // Log if a header link is clicked
   addClickEventToLinks('headerlink', EVENTS.SIGNED_OUT_USER_CLICKS_HEADER_LINK);
 
@@ -143,18 +126,6 @@ const addSignedOutMetrics = (pageUrl, headerCreateMenu) => {
     });
   }
 
-  const signInButton = document.getElementById('signin_button');
-  // Log if the Sign in button is clicked
-  if (signInButton) {
-    signInButton.addEventListener('click', () => {
-      analyticsReporter.sendEvent(
-        EVENTS.SIGNED_OUT_USER_CLICKS_SIGN_IN,
-        {pageUrl: pageUrl},
-        PLATFORMS.STATSIG
-      );
-    });
-  }
-
   // Log if the Help icon menu is clicked
   const helpIcon = document.querySelector('#help-icon');
   helpIcon.addEventListener('click', () => {
@@ -170,7 +141,14 @@ const addSignedOutMetrics = (pageUrl, headerCreateMenu) => {
 
 const addSignedInMetrics = (pageUrl, headerCreateMenu) => {
   const userType = getScriptData('userType');
-  const additionalOptions = {userType: userType, pageUrl: pageUrl};
+  const pageControllerName = getScriptData('pageControllerName');
+  const pageActionName = getScriptData('pageActionName');
+  const additionalOptions = {
+    userType: userType,
+    pageUrl: pageUrl,
+    pageControllerName: pageControllerName,
+    pageActionName: pageActionName,
+  };
 
   // Log if a header link is clicked
   addClickEventToLinks(

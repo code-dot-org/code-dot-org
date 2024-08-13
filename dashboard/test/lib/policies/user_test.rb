@@ -2,13 +2,13 @@ require 'test_helper'
 require 'policies/user'
 class Policies::UserTest < ActiveSupport::TestCase
   class UserAttributes < Policies::UserTest
-    test 'all default attributes should be returned' do
+    test 'all default attributes (except email) should be returned' do
       user = create :teacher, :with_google_authentication_option
       attrs = Policies::User.user_attributes(user)
 
       missing_attrs = []
       user.attributes.compact.each_key do |attr|
-        missing_attrs << attr unless attrs.key?(attr)
+        missing_attrs << attr unless attrs.key?(attr) || attr == 'email'
       end
 
       assert missing_attrs.empty?, "#{missing_attrs} are missing"
@@ -26,7 +26,6 @@ class Policies::UserTest < ActiveSupport::TestCase
     end
 
     test 'remove email from user session value' do
-      DCDO.stubs(:get).with('student-email-post-enabled', false).returns(true)
       user = create :teacher
 
       attrs = Policies::User.user_attributes(user)

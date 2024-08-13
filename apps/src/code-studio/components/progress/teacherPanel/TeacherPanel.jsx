@@ -27,8 +27,8 @@ import {updateQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import {
   pageTypes,
@@ -81,7 +81,7 @@ class TeacherPanel extends React.Component {
     setSectionLockStatus: PropTypes.func.isRequired,
     selectSection: PropTypes.func.isRequired,
     setViewType: PropTypes.func.isRequired,
-    isCurrentLevelLab2: PropTypes.bool.isRequired,
+    isCurrentLevelLab2: PropTypes.bool,
     lab2ExampleSolutions: PropTypes.array,
   };
 

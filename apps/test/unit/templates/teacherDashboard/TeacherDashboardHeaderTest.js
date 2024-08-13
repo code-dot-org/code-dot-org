@@ -2,11 +2,11 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import {reducers} from '@cdo/apps/applab/redux/applab';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {registerReducers, restoreRedux, stubRedux} from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {UnconnectedTeacherDashboardHeader as TeacherDashboardHeader} from '@cdo/apps/templates/teacherDashboard/TeacherDashboardHeader';
 import i18n from '@cdo/locale';
 
@@ -22,6 +22,7 @@ const MOCK_SECTIONS = [
     studentCount: 5,
     code: 'VQGSJR',
     providerManaged: false,
+    courseDisplayName: 'Course D (2019)',
   },
   {
     id: 2,
@@ -32,6 +33,7 @@ const MOCK_SECTIONS = [
     studentCount: 4,
     code: 'TQGSJR',
     providerManaged: false,
+    courseDisplayName: 'Course A (2019)',
   },
   {
     id: 1,
@@ -42,19 +44,14 @@ const MOCK_SECTIONS = [
     studentCount: 6,
     code: 'XQGSJR',
     providerManaged: false,
+    courseDisplayName: 'Course B (2019)',
   },
 ];
-
-const MOCK_SCRIPT = {
-  name: 'Course D (2019)',
-};
 
 const DEFAULT_PROPS = {
   sections: MOCK_SECTIONS,
   selectedSection: MOCK_SECTIONS[0],
-  assignmentName: MOCK_SCRIPT.name,
   openEditSectionDialog: () => {},
-  asyncLoadCourseOfferings: () => {},
 };
 
 describe('TeacherDashboardHeader', () => {
@@ -84,7 +81,10 @@ describe('TeacherDashboardHeader', () => {
 
   it('does not render script name if not assigned', () => {
     const wrapper = shallow(
-      <TeacherDashboardHeader {...DEFAULT_PROPS} assignmentName="" />
+      <TeacherDashboardHeader
+        {...DEFAULT_PROPS}
+        selectedSection={{...MOCK_SECTIONS[0], courseDisplayName: null}}
+      />
     );
     expect(wrapper.find('#assignment-name')).toHaveLength(0);
     expect(wrapper.contains('Course D (2019)')).toBe(false);

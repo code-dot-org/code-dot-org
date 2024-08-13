@@ -192,6 +192,9 @@ Dashboard::Application.routes.draw do
       get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
       post '/users/begin_sign_up', to: 'registrations#begin_sign_up'
       post '/users/finish_sign_up', to: 'registrations#new'
+      get '/users/new_sign_up', to: 'registrations#new_sign_up'
+      # Part of the new sign up flow - work in progress
+      get '/users/new_sign_up/account_type', to: 'registrations#account_type'
       patch '/dashboardapi/users', to: 'registrations#update'
       patch '/users/upgrade', to: 'registrations#upgrade'
       patch '/users/set_student_information', to: 'registrations#set_student_information'
@@ -872,6 +875,7 @@ Dashboard::Application.routes.draw do
 
     get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
     get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
+    get 'dashboardapi/section_courses/:section_id', to: 'api#show_courses_with_progress'
     scope 'dashboardapi', module: 'api/v1' do
       concerns :section_api_routes
       concerns :assessments_routes
@@ -1165,6 +1169,10 @@ Dashboard::Application.routes.draw do
 
     post '/aichat/chat_completion', to: 'aichat#chat_completion'
     post '/aichat/log_chat_event', to: 'aichat#log_chat_event'
+    get '/aichat/student_chat_history', to: 'aichat#student_chat_history'
+    post '/aichat/check_message_safety', to: 'aichat#check_message_safety'
+    post '/aichat/start_chat_completion', to: 'aichat#start_chat_completion'
+    get '/aichat/chat_request/:id', to: 'aichat#chat_request'
 
     resources :ai_tutor_interactions, only: [:create, :index] do
       resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]

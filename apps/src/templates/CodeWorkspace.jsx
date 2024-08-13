@@ -11,10 +11,10 @@ import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
+import SettingsCog from '../code-studio/components/SettingsCog';
 import {closeWorkspaceAlert} from '../code-studio/projectRedux';
 import {queryParams} from '../code-studio/utils';
 import commonStyles from '../commonStyles';
-import SettingsCog from '../lib/ui/SettingsCog';
 import {shouldUseRunModeIndicators} from '../redux/selectors';
 import {singleton as studioApp} from '../StudioApp';
 import color from '../util/color';

@@ -38,7 +38,7 @@ describe('ContainedLevelResetButton', () => {
         codeIsRunning={false}
       />
     );
-    const button = wrapper.find('Button');
+    const button = wrapper.find({name: 'containedLevelResetButton'});
     expect(button.props().disabled).to.be.true;
   });
 
@@ -52,7 +52,7 @@ describe('ContainedLevelResetButton', () => {
         codeIsRunning={false}
       />
     );
-    const button = wrapper.find('Button');
+    const button = wrapper.find({name: 'containedLevelResetButton'});
     expect(button.props().disabled).to.be.false;
   });
 
@@ -84,7 +84,7 @@ describe('ContainedLevelResetButton', () => {
         codeIsRunning={false}
       />
     );
-    const button = wrapper.find('Button');
+    const button = wrapper.find({name: 'containedLevelResetButton'});
 
     button.simulate('click');
     await setTimeout(() => {}, 50);

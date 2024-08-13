@@ -3,8 +3,8 @@ import React, {useState} from 'react';
 import * as Table from 'reactabular-table';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 
 const destroyEnvironment = (destroyPath, successCallback, failureCallback) => {
   fetch(destroyPath, {

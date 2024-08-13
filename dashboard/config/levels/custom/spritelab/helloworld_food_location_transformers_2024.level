@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-08-02T22:04:52.000Z",
   "level_num": "custom",
@@ -41,7 +42,8 @@
     "helper_libraries": [
       "NativeSpriteLab",
       "zHelloWorldValidation",
-      "zValidationHelperFunctions"
+      "zValidationHelperFunctions",
+      "transformers"
     ],
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
@@ -68,15 +70,15 @@
     "hint_prompt_attempts_threshold": "1",
     "short_instructions": "Give each sprite a different location.",
     "authored_hints": "[{\"hint_class\":\"pointer\",\"hint_markdown\":\"To change a sprite's location, click the pin on the location block, then click where you want it to go.\\n\\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)\",\"hint_id\":\"location_pin_hint\",\"hint_type\":\"general\",\"hint_path\":\"\",\"hint_video\":\"\",\"tts_url\":\"https://tts.code.org/sharon22k/180/100/1ed0088f4d385255f8d59e42ae9133ed/helloworld_food_location.mp3\"}]",
-    "instructions_icon": "pizza",
+    "instructions_icon": "transformers_optimusprime",
     "skip_autosave": true,
     "project_template_level_name": "helloworld_food_template_transformers_2024",
     "encrypted_examples": "ymZKPOCnVExTJR5CQrTBpL41Memxyt0nM6CkHhs6oe32Wje0lFfIoCCOn1fO\n9ku6ju82b3v6bnf+sEXA5bSTBQ==\n",
+    "standalone_app_name": "spritelab",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:52.035+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_location\\\"\"],\"cloned_from\":\"helloworld_food_location\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:52.035+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_location\\\"\"],\"cloned_from\":\"helloworld_food_location\"},{\"changed_at\":\"2024-08-09 17:11:28 +0000\",\"changed\":[\"start_blocks\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-12 20:30:20 +0000\",\"changed\":[\"start_blocks\",\"helper_libraries\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

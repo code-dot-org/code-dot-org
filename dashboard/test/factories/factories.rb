@@ -436,15 +436,7 @@ FactoryBot.define do
         child_account_compliance_state_last_updated {DateTime.now}
       end
 
-      trait :before_p20_937_exception_date do
-        created_at {Cpa::CREATED_AT_EXCEPTION_DATE.ago(1.second)}
-      end
-
-      trait :p20_937_exception_date do
-        created_at {Cpa::CREATED_AT_EXCEPTION_DATE}
-      end
-
-      factory :cpa_non_compliant_student, traits: [:U13, :in_colorado, :p20_937_exception_date], aliases: %i[non_compliant_child] do
+      factory :cpa_non_compliant_student, traits: [:U13, :in_colorado], aliases: %i[non_compliant_child] do
         trait :predates_policy do
           created_at {Policies::ChildAccount.state_policies.dig('CO', :start_date).ago(1.second)}
         end
@@ -2042,5 +2034,15 @@ FactoryBot.define do
     association :user
     type {SharedConstants::AI_TUTOR_TYPES[:GENERAL_CHAT]}
     status {SharedConstants::AI_TUTOR_INTERACTION_STATUS[:OK]}
+  end
+
+  factory :aichat_request do
+    association :user
+    model_customizations {{temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"}.to_json}
+    new_message {{chatMessageText: "hello", role: 'user', status: 'unknown', timestamp: Time.now.to_i}.to_json}
+    stored_messages {[].to_json}
+    level_id {1}
+    script_id {1}
+    project_id {1}
   end
 end

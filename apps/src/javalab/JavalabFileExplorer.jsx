@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import onClickOutside from 'react-onclickoutside';
 
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import CloseOnEscape from '@cdo/apps/templates/CloseOnEscape';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 

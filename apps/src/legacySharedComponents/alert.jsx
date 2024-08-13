@@ -6,6 +6,8 @@ import {valueOr} from '../utils';
 
 /**
  * Simple boot-strapped style alert.
+ *
+ * @deprecated use DSCO Alert instead
  */
 export default class Alert extends React.Component {
   static propTypes = {
