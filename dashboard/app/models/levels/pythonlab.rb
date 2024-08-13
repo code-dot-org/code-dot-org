@@ -27,16 +27,16 @@ class Pythonlab < Level
   serialized_attrs %w(
     start_sources
     encrypted_exemplar_sources
-    encrypted_validation
     hide_share_and_remix
     is_project_level
     submittable
     starter_assets
     predict_settings
+    validations
   )
 
   validate :has_correct_multiple_choice_answer?
-  before_save :clean_up_predict_settings
+  before_save :clean_up_predict_settings, :create_validations
 
   def self.create_from_level_builder(params, level_params)
     create!(
@@ -76,6 +76,22 @@ class Pythonlab < Level
     else
       # Remove any multiple choice settings if this is a free response question.
       predict_settings.delete("multipleChoiceOptions")
+    end
+  end
+
+  def create_validations
+    has_validation = start_sources && start_sources["files"]&.any? {|(_, file)| file["type"] == 'validation'}
+    if has_validation
+      properties['validations'] = [{
+        conditions: [
+          {
+            name: 'PASSED_ALL_TESTS',
+            value: "true"
+          }
+        ],
+        message: '',
+        next: true,
+      }]
     end
   end
 end

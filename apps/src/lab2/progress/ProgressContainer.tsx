@@ -31,7 +31,9 @@ const ProgressContainer: React.FunctionComponent<ProgressContainerProps> = ({
   );
 
   const onProgressChange = useCallback(() => {
+    console.log('in onProgressChange');
     const currentState = progressManager.current.getCurrentState();
+    console.log({currentState});
     dispatch(setValidationState(currentState));
 
     // Tell the external system (if there is one) about the success.
@@ -48,9 +50,14 @@ const ProgressContainer: React.FunctionComponent<ProgressContainerProps> = ({
     state => state.lab.levelProperties?.validations
   );
 
+  const levelId = useAppSelector(state => state.lab.levelProperties?.id);
+  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+
   useEffect(() => {
+    console.log('setting up progress manager');
+    console.log({levelValidations});
     progressManager.current.onLevelChange(levelValidations);
-  }, [levelValidations]);
+  }, [levelValidations, levelId, appName]);
 
   return (
     <ProgressManagerContext.Provider value={progressManager.current}>

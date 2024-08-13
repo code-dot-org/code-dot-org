@@ -5,20 +5,24 @@ import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {getFileByName} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 
+import ProgressManager from '../lab2/progress/ProgressManager';
+
+import PythonValidator from './progress/PythonValidator';
 import {asyncRun, stopAndRestartPyodideWorker} from './pyodideWorkerManager';
 import {runStudentTests, runValidationTests} from './pythonHelpers/scripts';
 
 export async function handleRunClick(
   runTests: boolean,
   dispatch: Dispatch<AnyAction>,
-  source: MultiFileSource | undefined
+  source: MultiFileSource | undefined,
+  progressManager: ProgressManager | null
 ) {
   if (!source) {
     dispatch(appendSystemMessage('You have no code to run.'));
     return;
   }
   if (runTests) {
-    runAllTests(source, dispatch);
+    runAllTests(source, dispatch, progressManager);
   } else {
     // Run main.py
     const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;
@@ -49,7 +53,8 @@ export function stopPythonCode() {
 
 export async function runAllTests(
   source: MultiFileSource,
-  dispatch: Dispatch<AnyAction>
+  dispatch: Dispatch<AnyAction>,
+  progressManager: ProgressManager | null
 ) {
   // If the project has a validation file, we just run those tests.
   const validationFile = Object.values(source.files).find(
@@ -69,10 +74,20 @@ export async function runAllTests(
       // "PASS/FAIL/ERROR/EXPECTED_FAILURE/UNEXPECTED_SUCCESS"
       // TODO: Add link to pythonlab-packages
       const testResults = result.message as Map<string, string>[];
+      if (progressManager) {
+        console.log('reporting to progress manager');
+        (progressManager.getValidator() as PythonValidator).reportTestResults(
+          testResults
+        );
+        progressManager.updateProgress();
+      }
       const allPass = testResults.every(
         testResult => testResult.get('result') === 'PASS'
       );
       console.log({allPass});
+      // if it passed we need to report that to the progress system and
+      // enable the continue button
+      // can we integrate with the progress manager here? or is it too different??
     }
   } else {
     dispatch(appendSystemMessage(`Running your project's tests...`));
