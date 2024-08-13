@@ -13,6 +13,7 @@ import {isPredictAnswerLocked} from '@cdo/apps/lab2/redux/predictLevelRedux';
 import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
 import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
+import PythonValidationTracker from './progress/PythonValidationTracker';
 import PythonValidator from './progress/PythonValidator';
 import {handleRunClick, stopPythonCode} from './pyodideRunner';
 
@@ -106,8 +107,9 @@ const PythonlabView: React.FunctionComponent = () => {
 
   useEffect(() => {
     if (progressManager && appName === 'pythonlab') {
-      console.log('setting validator');
-      progressManager.setValidator(new PythonValidator());
+      progressManager.setValidator(
+        new PythonValidator(PythonValidationTracker.getInstance())
+      );
     }
   }, [progressManager, appName]);
 

@@ -7,7 +7,7 @@ import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 
 import ProgressManager from '../lab2/progress/ProgressManager';
 
-import PythonValidator from './progress/PythonValidator';
+import PythonValidationTracker from './progress/PythonValidationTracker';
 import {asyncRun, stopAndRestartPyodideWorker} from './pyodideWorkerManager';
 import {runStudentTests, runValidationTests} from './pythonHelpers/scripts';
 
@@ -32,6 +32,10 @@ export async function handleRunClick(
     }
     dispatch(appendSystemMessage('Running program...'));
     await runPythonCode(code, source);
+    if (progressManager) {
+      PythonValidationTracker.getInstance().logRun();
+      progressManager.updateProgress();
+    }
   }
 }
 
@@ -75,10 +79,7 @@ export async function runAllTests(
       // TODO: Add link to pythonlab-packages
       const testResults = result.message as Map<string, string>[];
       if (progressManager) {
-        console.log('reporting to progress manager');
-        (progressManager.getValidator() as PythonValidator).reportTestResults(
-          testResults
-        );
+        PythonValidationTracker.getInstance().setTestResults(testResults);
         progressManager.updateProgress();
       }
       const allPass = testResults.every(

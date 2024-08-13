@@ -84,8 +84,7 @@ self.onmessage = async event => {
   self.postMessage({type: 'updated_source', message: updatedSource, id});
   resetGlobals(self.pyodide, pyodideGlobals);
 
-  const resultsObject = results.toJs();
-  console.log({resultsObject});
+  const resultsObject = results?.toJs();
   self.postMessage({type: 'run_complete', message: resultsObject, id});
 };
 

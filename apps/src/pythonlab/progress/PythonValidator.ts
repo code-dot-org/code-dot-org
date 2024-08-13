@@ -1,6 +1,8 @@
 import {Validator} from '@cdo/apps/lab2/progress/ProgressManager';
 import {Condition} from '@cdo/apps/lab2/types';
 
+import PythonValidationTracker from './PythonValidationTracker';
+
 export interface TestResult {
   name: string;
   result:
@@ -14,11 +16,15 @@ export interface TestResult {
 
 export enum ConditionType {
   PASSED_ALL_TESTS = 'PASSED_ALL_TESTS',
+  HAS_RUN_CODE = 'HAS_RUN_CODE',
 }
 
 export default class PythonValidator extends Validator {
   private testResults: TestResult[] | null = null;
-  constructor() {
+  private hasRunCode: boolean = false;
+  constructor(
+    private readonly pythonValidationTracker: PythonValidationTracker
+  ) {
     super();
   }
 
@@ -34,38 +40,30 @@ export default class PythonValidator extends Validator {
 
   conditionsMet(conditions: Condition[]): boolean {
     console.log('checking conditions');
-    if (
-      conditions.length > 0 &&
-      conditions[0].name === ConditionType.PASSED_ALL_TESTS
-    ) {
-      console.log('has condition');
-      if (!this.testResults) {
-        console.log('does not have test results');
-        return false;
-      }
-      console.log(
-        'conditions met is ' +
-          this.testResults.every(testResult => testResult.result === 'PASS')
-      );
-      return this.testResults.every(testResult => testResult.result === 'PASS');
-    } else {
-      // If there's no conditions to check, the user passes by default.
+    if (!conditions) {
       return true;
     }
+    let hasPassedAllTests = true;
+    conditions.forEach(condition => {
+      if (condition.name === ConditionType.PASSED_ALL_TESTS) {
+        const testResults = this.pythonValidationTracker.getTestResults();
+        if (!testResults) {
+          hasPassedAllTests = false;
+        } else if (
+          !testResults.every(testResult => testResult.result === 'PASS')
+        ) {
+          hasPassedAllTests = false;
+        }
+      } else if (condition.name === ConditionType.HAS_RUN_CODE) {
+        if (!this.pythonValidationTracker.getHasRunCode()) {
+          hasPassedAllTests = false;
+        }
+      }
+    });
+    return hasPassedAllTests;
   }
 
   clear(): void {
-    this.testResults = null;
-  }
-
-  reportTestResults(results: Map<string, string>[]) {
-    if (results) {
-      this.testResults = results.map(result => ({
-        name: result.get('name') || 'unknown',
-        result: result.get('result') as TestResult['result'],
-      }));
-    } else {
-      this.testResults = null;
-    }
+    this.pythonValidationTracker.reset();
   }
 }

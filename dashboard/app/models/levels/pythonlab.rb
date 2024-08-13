@@ -36,7 +36,7 @@ class Pythonlab < Level
   )
 
   validate :has_correct_multiple_choice_answer?
-  before_save :clean_up_predict_settings, :create_validations
+  before_save :clean_up_predict_settings
 
   def self.create_from_level_builder(params, level_params)
     create!(
@@ -79,19 +79,31 @@ class Pythonlab < Level
     end
   end
 
-  def create_validations
+  def get_validations
     has_validation = start_sources && start_sources["files"]&.any? {|(_, file)| file["type"] == 'validation'}
-    if has_validation
-      properties['validations'] = [{
-        conditions: [
-          {
-            name: 'PASSED_ALL_TESTS',
-            value: "true"
-          }
-        ],
-        message: '',
-        next: true,
-      }]
-    end
+    properties['validations'] =
+      if has_validation
+        [{
+          conditions: [
+            {
+              name: 'PASSED_ALL_TESTS',
+              value: "true"
+            }
+          ],
+          message: '',
+          next: true,
+        }]
+      else
+        [{
+          conditions: [
+            {
+              name: 'HAS_RUN_CODE',
+              value: "true"
+            }
+          ],
+          message: '',
+          next: true,
+        }]
+      end
   end
 end

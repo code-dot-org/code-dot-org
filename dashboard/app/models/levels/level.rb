@@ -864,6 +864,9 @@ class Level < ApplicationRecord
       properties_camelized["predictSettings"]&.delete("solution")
       properties_camelized["predictSettings"]&.delete("multipleChoiceAnswers")
     end
+    if get_validations && !properties_camelized["validations"]
+      properties_camelized["validations"] = get_validations
+    end
     properties_camelized
   end
 
@@ -874,13 +877,17 @@ class Level < ApplicationRecord
   # Whether this level has validation for the completion of student work.
   def validated?
     if uses_lab2?
-      return properties.dig('level_data', 'validations').present?
+      return properties.dig('level_data', 'validations').present? || get_validations.present?
     end
     properties['validation_code'].present? || properties['success_condition'].present?
   end
 
   def predict_level?
     return properties.dig('predict_settings', 'isPredictLevel').present?
+  end
+
+  def get_validations
+    return nil
   end
 
   # Returns the level name, removing the name_suffix first (if present), and
