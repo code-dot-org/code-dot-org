@@ -4,7 +4,7 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import Thermometer from '@cdo/apps/maker/boards/circuitPlayground/Thermometer';
 
-import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('Thermometer', function () {
   let testObj;

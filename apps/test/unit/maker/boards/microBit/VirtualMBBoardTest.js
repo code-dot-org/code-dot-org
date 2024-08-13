@@ -1,6 +1,6 @@
 import VirtualMBBoard from '@cdo/apps/maker/boards/VirtualMBBoard';
 
-import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {itImplementsTheMakerBoardInterface} from '../MakerBoardInterfaceTestUtil';
 
 import {itMakesMicroBitComponentsAvailable} from './MicroBitComponentTestUtil';

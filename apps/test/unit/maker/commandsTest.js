@@ -18,7 +18,7 @@ import {
 } from '@cdo/apps/maker/commands';
 import {MBFirmataClientStub} from '@cdo/apps/maker/util/makeStubBoard';
 
-import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('maker/commands.js - CircuitPlayground', () => {
   let stubBoardController, errorHandler;

@@ -19,7 +19,7 @@ import {
 } from '@cdo/apps/redux';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 // Speed up the tests by reducing the artificial delay between steps
 const STEP_DELAY_MS = 1;

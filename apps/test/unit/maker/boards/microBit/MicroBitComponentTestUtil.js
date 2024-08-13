@@ -7,7 +7,7 @@ import {
   MB_COMPONENTS,
 } from '@cdo/apps/maker/boards/microBit/MicroBitConstants';
 
-import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 import {boardSetupAndStub} from './MicroBitTestHelperFunctions';
 export function itMakesMicroBitComponentsAvailable(

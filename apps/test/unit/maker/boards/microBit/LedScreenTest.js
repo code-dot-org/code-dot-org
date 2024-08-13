@@ -3,7 +3,7 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 import LedScreen from '@cdo/apps/maker/boards/microBit/LedScreen';
 import {MBFirmataClientStub} from '@cdo/apps/maker/util/makeStubBoard';
 
-import {expect} from '../../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('LedScreen', function () {
   describe('on() and off()', () => {

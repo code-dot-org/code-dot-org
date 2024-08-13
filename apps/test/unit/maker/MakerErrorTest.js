@@ -4,7 +4,7 @@ import MakerError, {
   wrapKnownMakerErrors,
 } from '@cdo/apps/maker/MakerError';
 
-import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('MakerError', () => {
   describe('wrapKnownMakerErrors(originalError)', () => {

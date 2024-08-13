@@ -5,7 +5,7 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import OverlayButton from '@cdo/apps/maker/ui/OverlayButton';
 
-import {expect} from '../../../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('OverlayButton', () => {
   it('renders a button', () => {
