@@ -42,7 +42,8 @@
     "helper_libraries": [
       "NativeSpriteLab",
       "zHelloWorldValidation",
-      "zValidationHelperFunctions"
+      "zValidationHelperFunctions",
+      "transformers"
     ],
     "droplet_tooltips_disabled": "false",
     "lock_zero_param_functions": "false",
@@ -78,7 +79,7 @@
     ]
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:52.703+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_click\\\"\"],\"cloned_from\":\"helloworld_food_click\"},{\"changed_at\":\"2024-08-07 18:44:09 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-07 18:59:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-09 17:12:04 +0000\",\"changed\":[\"start_blocks\",\"instructions_icon\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:52.703+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_click\\\"\"],\"cloned_from\":\"helloworld_food_click\"},{\"changed_at\":\"2024-08-07 18:44:09 +0000\",\"changed\":[\"start_blocks\",\"start_animations\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-07 18:59:33 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-09 17:12:04 +0000\",\"changed\":[\"start_blocks\",\"instructions_icon\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-12 20:31:02 +0000\",\"changed\":[\"start_blocks\",\"helper_libraries\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

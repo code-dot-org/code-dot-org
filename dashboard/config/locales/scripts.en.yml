@@ -14681,7 +14681,7 @@ en:
         csp10-2024:
           lesson_groups:
             csp_unit10_2020:
-              display_name: 'Unit 10: Algortihms'
+              display_name: 'Unit 10: Algorithms'
             lessonGroup-2:
               display_name: Post-Course Survey
           title: Algorithms ('24-'25)

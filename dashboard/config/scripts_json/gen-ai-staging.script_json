@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-staging",
-    "serialized_at": "2024-08-10 10:26:57 UTC",
+    "serialized_at": "2024-08-12 17:56:22 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -5768,6 +5768,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson1-warmup-lv1"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5790,6 +5793,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson1-wrapup-lv1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -9965,7 +9971,7 @@
       }
     },
     {
-      "name": "Data Intake Form",
+      "name": "RecipeBot Data Curation",
       "url": "https://docs.google.com/document/d/1HmdwAW236aJgN8xu3ezGHultrkwZSgKKpgySHLX_4ms/edit",
       "key": "data_intake_form",
       "properties": {
