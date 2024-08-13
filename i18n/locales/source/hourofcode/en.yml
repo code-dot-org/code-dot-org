@@ -437,7 +437,7 @@
   call_to_action_explore_learning_ages_11_plus: "Explore learning for ages 11+"
   call_to_action_get_started: "Get started"
   call_to_action_discover_district_program: "Discover our District Program"
-  call_to_action_see_district_partners: "See our District Partners"
+  call_to_action_see_district_partners: "See our Code.org Districts"
   call_to_action_read_full_story: "Read the full story"
   call_to_action_learn_about_pl: "Learn about Professional Learning"
   call_to_action_pilot_web_dev_unit: "Pilot our newly updated Web Development unit!"
@@ -1265,7 +1265,7 @@
   ai_vid_ethics1_caption: "Ethics & AI: Equal Access and Algorithmic Bias"
   ai_vid_ethics2_caption: "Ethics & AI: Privacy and the Future of Work"
 
-  admins_page_top_heading: "Expand computer science in your school or district"
+  admins_page_top_heading: "Expand computer science in your district"
   admins_page_top_subhead: "Unlock the future of education with Code.org's comprehensive computer science (CS) programs."
   admins_page_top_desc: "Join a visionary network of over 2 million educators dedicated to shaping innovative leaders, critical thinkers, and engaged digital citizens. Code.org partners with administrators to seamlessly integrate CS into schools, offering extensive resources, tailored professional development, and continual support for systemic success."
   admins_page_elevate_heading: "Elevate computer science education at your school"
@@ -1303,7 +1303,7 @@
   admins_page_resources_desc_unplugged: "Now you can teach the fundamentals of computer science to your students, whether you have computers in your classroom or not!"
 
   districts_page_top_heading: "Districts in the Code.org District Program"
-  districts_page_top_desc: "We're actively expanding our network of district partners across the US. Explore this list of districts currently enrolled in our District Partner program."
+  districts_page_top_desc: "We're actively expanding our network of Code.org Districts across the US. Explore this list of districts currently enrolled in our District Partner program."
   districts_page_join_heading: "Join our District Partner Program"
   districts_page_join_desc: "District leaders around the United States have partnered with Code.org directly, at no cost to bring computer science to their district, and teach students the skills of the future."
 
