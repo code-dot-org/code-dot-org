@@ -8,7 +8,7 @@ require 'csv'
 # Depending on where this goes, tests should be added as deleting progress is not undoable
 
 if ARGV.empty? || ARGV.length > 3
-  puts 'Usage: ./bin/oneoff/reset_student_progress_in_bulk teacher_id ./bin/oneoff/reset_student_progress_in_bulk/yyyy-mm-dd-users.csv [commit]'
+  puts "Usage: #{__FILE__} teacher_id ./bin/oneoff/reset_student_progress_in_bulk/yyyy-mm-dd-users.csv [commit]"
   puts 'The CSV needs a column with "student_id".'
   puts 'Will do a "dry run" until you specify "for-real" for the "commit" field.'
   exit 1
@@ -19,7 +19,14 @@ csv_file_path = ARGV[1]
 teacher_id = ARGV[0]
 teacher_user = User.find_by(id: teacher_id)
 
-student_ids = CSV.read(csv_file_path, headers: true).map {|row| row['student_id'].to_i}
+rows = CSV.read(csv_file_path, headers: true)
+
+# Never delete progress from all units when file specifies unit_name
+student_ids = rows.map do |row|
+  unexpected_columns = row.to_h.keys - ['student_id']
+  raise "Unexpected columns: #{unexpected_columns}" unless unexpected_columns.empty?
+  row['student_id'].to_i
+end
 
 puts "Found #{student_ids.count} ids to reset data for."
 

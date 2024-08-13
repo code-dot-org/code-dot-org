@@ -52,7 +52,6 @@ class DCDOBase < DynamicConfigBase
       'music-lab-samples-report': DCDO.get('music-lab-samples-report', true),
       'disable-try-new-progress-view-modal': DCDO.get('disable-try-new-progress-view-modal', false),
       'music-lab-existing-projects-default-sounds': DCDO.get('music-lab-existing-projects-default-sounds', true),
-      'student-email-post-enabled': DCDO.get('student-email-post-enabled', false),
       'show-age-gated-students-banner': DCDO.get('show-age-gated-students-banner', true),
       'cfu-pin-hide-enabled': DCDO.get('cfu-pin-hide-enabled', false),
       'teacher-local-nav-v2': DCDO.get('teacher-local-nav-v2', false),
