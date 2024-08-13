@@ -4,7 +4,7 @@ import Typography from '@cdo/apps/componentLibrary/typography';
 import commonI18n from '@cdo/locale';
 
 import {useDialogControl} from './DialogControlContext';
-import {closeDialogType} from './types';
+import {DialogCloseFunctionType, DialogCloseActionType} from './types';
 
 export type ButtonType = 'confirm' | 'cancel' | 'neutral';
 
@@ -56,9 +56,13 @@ import moduleStyles from './generic-dialog.module.scss';
  */
 
 const closingCallback =
-  (closeDialog: closeDialogType, callback: dialogCallback | undefined) =>
+  (
+    closeDialog: DialogCloseFunctionType,
+    closeType: DialogCloseActionType,
+    callback: dialogCallback | undefined
+  ) =>
   () => {
-    closeDialog();
+    closeDialog(closeType);
     callback && callback();
   };
 
@@ -92,6 +96,7 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
               type="button"
               onClick={closingCallback(
                 dialogControl.closeDialog,
+                'cancel',
                 buttons.cancel.callback
               )}
               disabled={buttons?.cancel?.disabled}
@@ -108,6 +113,7 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
                 type="button"
                 onClick={closingCallback(
                   dialogControl.closeDialog,
+                  'neutral',
                   buttons.neutral.callback
                 )}
                 disabled={buttons?.neutral?.disabled}
@@ -121,6 +127,7 @@ const GenericDialog: React.FunctionComponent<GenericDialogProps> = ({
               type="button"
               onClick={closingCallback(
                 dialogControl.closeDialog,
+                'confirm',
                 buttons?.confirm?.callback
               )}
               disabled={buttons?.confirm?.disabled}

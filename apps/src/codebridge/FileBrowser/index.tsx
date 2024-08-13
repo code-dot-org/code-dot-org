@@ -348,15 +348,26 @@ export const FileBrowser = React.memo(() => {
   const newFolderPrompt: FilesComponentProps['newFolderPrompt'] = useMemo(
     () =>
       (parentId = DEFAULT_FOLDER_ID) => {
-        dialogControl?.showDialog({
-          type: DialogType.GenericPrompt,
-          title: codebridgeI18n.newFolderPrompt(),
-          handleConfirm: folderName => {
-            innerNewFolder(parentId, folderName);
-          },
-        });
+        dialogControl
+          ?.showDialog({
+            type: DialogType.GenericPrompt,
+            title: codebridgeI18n.newFolderPrompt(),
+            handleConfirm: (folderName: string) => {
+              innerNewFolder(parentId, folderName);
+            },
+            validateInput: (folderName: string) => {
+              const existingFolder = Object.values(project.folders).some(
+                f => f.name === folderName && f.parentId === parentId
+              );
+              if (existingFolder) {
+                return codebridgeI18n.folderExistsError();
+              }
+            },
+          })
+          .then(type => console.log('CLOSE ON : ', type))
+          .catch(type => console.log('CATCH ON : ', type));
       },
-    [dialogControl, innerNewFolder]
+    [dialogControl, innerNewFolder, project.folders]
   );
 
   const downloadFile: FilesComponentProps['downloadFile'] = useMemo(

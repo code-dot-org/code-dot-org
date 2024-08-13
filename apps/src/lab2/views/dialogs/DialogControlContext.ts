@@ -5,17 +5,21 @@ import {
   DeferredPromiseObject,
 } from '@cdo/apps/lab2/utils/getDeferredPromise';
 
-import {TypedDialogProps, closeDialogType} from './types';
+import {
+  TypedDialogProps,
+  DialogCloseFunctionType,
+  DialogCloseActionType,
+} from './types';
 
 interface DialogControl {
-  closeDialog: closeDialogType;
-  showDialog: (args: TypedDialogProps) => void;
+  closeDialog: DialogCloseFunctionType;
+  showDialog: (args: TypedDialogProps) => Promise<DialogCloseActionType>;
   deferredPromiseObject: DeferredPromiseObject;
 }
 
 export const DialogControlContext = React.createContext<DialogControl>({
   closeDialog: () => {},
-  showDialog: () => {},
+  showDialog: () => Promise.resolve('cancel'),
   deferredPromiseObject: getDeferredPromise(),
 });
 export const useDialogControl = () => useContext(DialogControlContext);
