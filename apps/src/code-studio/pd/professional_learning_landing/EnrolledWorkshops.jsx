@@ -23,7 +23,7 @@ class EnrolledWorkshops extends React.Component {
         hideNoWorkshopsMessage={true}
         tableHeader={i18n.myWorkshops()}
       >
-        <WorkshopsTable />
+        <WorkshopsTable tableHeader={i18n.myWorkshops()} />
       </WorkshopTableLoader>
     );
   }
@@ -158,22 +158,19 @@ class WorkshopsTable extends React.Component {
     });
 
     return (
-      <>
-        <Heading2>Workshops</Heading2>
-        <Table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Date</th>
-              <th>Time</th>
-              <th>Location</th>
-              {this.props.forMyPlPage && <th>Status</th>}
-              <th style={{width: '20%'}} />
-            </tr>
-          </thead>
-          <tbody>{rows}</tbody>
-        </Table>
-      </>
+      <Table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Location</th>
+            {this.props.forMyPlPage && <th>Status</th>}
+            <th style={{width: '20%'}} />
+          </tr>
+        </thead>
+        <tbody>{rows}</tbody>
+      </Table>
     );
   }
 

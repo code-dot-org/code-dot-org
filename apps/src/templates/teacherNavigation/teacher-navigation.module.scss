@@ -1,0 +1,25 @@
+@import 'color.scss';
+
+.sidebarContainer {
+  width: 242px;
+  flex: 0 0 242px;
+  background-color: $light_gray_50;
+}
+
+.sidebarContent {
+  padding-top: 20px;
+  padding-left: 16px;
+  position: sticky;
+  top: 0;
+  width: 210px;
+}
+
+.sectionHeader {
+  margin-top: 0;
+  margin-bottom: 2px;
+  color: $neutral_dark80;
+}
+
+.sectionDropdown {
+  width: 100%;
+}

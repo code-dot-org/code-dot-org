@@ -1,0 +1,385 @@
+{
+  "logoPosition": "right",
+  "title": "Post-Workshop Survey for Code.org's Professional Development Facilitators - PD Workshop",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "intro_text",
+          "html": "<p><strong>Thank you for facilitating a Code.org professional development workshop!</strong></p><p>After leading your professional learning workshop, we ask that you please take&nbsp;<strong>3 minutes</strong> to share some feedback about your workshop experience as a facilitator.</p><p>In the event that Code.org shares feedback with workshop organizers, we will do our best to anonymize your responses.</p></li></ul>"
+        },
+        {
+          "type": "html",
+          "name": "workshop_info_section_intro",
+          "html": "<h2><strong>Your Code.org Professional Learning Workshop</strong></h2>\n<p></p><b><h3><font size=3>Please fill in the details about the Code.org professional learning workshop you facilitated.</p>"
+        },
+        {
+          "type": "radiogroup",
+          "name": "pd_content",
+          "title": "What content was the focus of the PD workshop you facilitated?",
+          "isRequired": true,
+          "choices": [
+            {
+              "value": "ai_101",
+              "text": "AI 101"
+            },
+            {
+              "value": "csb",
+              "text": "Teaching Computer Science Basics"
+            },
+            {
+              "value": "csc",
+              "text": "Teaching Computer Science Connections (CSC)"
+            },
+            {
+              "value": "csd",
+              "text": "Teaching CS Discoveries (CSD)"
+            },
+            {
+              "value": "csf",
+              "text": "Teaching Computer Science Fundamentals (CSF)"
+            },
+            {
+              "value": "k5_game_design",
+              "text": "Teaching Elementary Game Design"
+            },
+            {
+              "value": "k5_maker_microbit",
+              "text": "Teaching micro:bit Maker Module for Elementary"
+            },
+            {
+              "value": "csd_1_problem_solving_process",
+              "text": "CSD Unit 1 - Problem Solving in Computing"
+            },
+            {
+              "value": "csd_2_web_development",
+              "text": "CSD Unit 2 - Web Development"
+            },
+            {
+              "value": "csd_3_interactive_animations_games",
+              "text": "CSD Unit 3 - Interactive Animations and Games"
+            },
+            {
+              "value": "csd_4_design_process",
+              "text": "CSD Unit 4 - The Design Process"
+            },
+            {
+              "value": "csd_5_data_society",
+              "text": "CSD Unit 5 - Data and Society"
+            },
+            {
+              "value": "csd_6_maker_circuit_playground",
+              "text": "CSD Unit 6 - Creating Apps with Devices (Circuit Playground)"
+            },
+            {
+              "value": "csd_6_maker_microbit",
+              "text": "CSD Unit 6 - Creating Apps with Devices (micro:bit)"
+            },
+            {
+              "value": "csd_7_maker_microbit",
+              "text": "CSD Unit 7 - AI and Machine Learning"
+            },
+            {
+              "value": "not_sure",
+              "text": "I'm not sure"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "workshop_date",
+          "title": "Please enter the date of the workshop you facilitated",
+          "isRequired": true,
+          "inputType": "date",
+          "min": "2023-10-24",
+          "visible": false,
+          "natalia_comment": "NOTE: removed by adding visible statement as this question is no longer relevant for build your own workshops - 07/22/2024"
+        },
+        {
+          "type": "radiogroup",
+          "name": "workshop_location",
+          "title": "Where did you host this workshop?",
+          "visible": false,
+          "natalia_comment": "NOTE: removed by adding visible statement as this question is no longer relevant for build your own workshops - 07/22/2024",
+          "choices": [
+            {
+              "value": "pd_day_school",
+              "text": "Professional Development Day at a school"
+            },
+            {
+              "value": "pd_day_district",
+              "text": "PD Day at a school district"
+            },
+            {
+              "value": "national_conference",
+              "text": "National conference"
+            },
+            {
+              "value": "local_conference",
+              "text": "Local conference"
+            },
+            {
+              "value": "standalone",
+              "text": "Standalone workshop (unrelated to another event)"
+            },
+            {
+              "value": "other",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "workshop_location_other",
+          "visibleIf": "{workshop_location} anyof ['standalone','other']",
+          "title": "Please describe where was this workshop hosted.",
+          "visible": false,
+          "natalia_comment": "NOTE: removed by adding visible statement as this question is no longer relevant for build your own workshops - 07/22/2024"
+        },
+        {
+          "type": "rating",
+          "name": "workshop_duration",
+          "title": "How long was this workshop?",
+          "description": "(Round to the  nearest number of hours)",
+          "rateCount": 7,
+          "rateMin": 0,
+          "rateMax": 6,
+          "minRateDescription": "Less than one hour",
+          "maxRateDescription": "Six or more hours",
+          "displayRateDescriptionsAsExtremeItems": true,
+          "visible": false,
+          "natalia_comment": "NOTE: removed by adding visible statement as this question is no longer relevant for build your own workshops - 07/22/2024"
+        },
+        {
+          "type": "checkbox",
+          "name": "audience",
+          "title": "What best describes the audience you hosted?",
+          "description": "(Select all that apply",
+          "visible": false,
+          "natalia_comment": "NOTE: removed by adding visible statement as this question is no longer relevant for build your own workshops - 07/22/2024",
+          "choices": [
+            {
+              "value": "teachers",
+              "text": "Teachers"
+            },
+            {
+              "value": "school_admin",
+              "text": "School-level administrators"
+            },
+            {
+              "value": "district_admin",
+              "text": "District-level administrators"
+            },
+            {
+              "value": "other_educators",
+              "text": "Other educators (e.g. Librarians, STEM coordinators,  media specialists, etc.)"
+            },
+            {
+              "value": "other",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "name": "experience_space",
+          "html": "\n<p></p>"
+        },
+        {
+          "type": "html",
+          "name": "experience_section_intro",
+          "html": "<h2><strong>Your Experience Facilitating Code.org Professional Learning Workshops</strong></h2>\n<p></p><b><h3><font size=3>The following section includes questions to helps us understand your experience facilitating professional learning workshops focused on {pd_content} and how we at Code.org can support you better.</p>"
+        },
+        {
+          "type": "rating",
+          "name": "intent_to_repeat",
+          "title": "After facilitating this Code.org professional learning workshop, are you interested in facilitating a Code.org professional learning workshop again?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not interested at all",
+          "maxRateDescription": "Extremely interested"
+        },
+        {
+          "type": "comment",
+          "name": "intent_to_repeat_comment",
+          "title": "If you would like to, please use this space to share any thoughts about whether you are interested in facilitating a Code.org professional learning workshop again.",
+          "rows": 2
+        },
+        {
+          "type": "rating",
+          "name": "preparation_time",
+          "title": "How long did it take you to prepare for this workshop?",
+          "description": "(Round to the  nearest number of hours)",
+          "rateCount": 7,
+          "rateMin": 0,
+          "rateMax": 6,
+          "minRateDescription": "Less than one hour",
+          "maxRateDescription": "Six or more hours",
+          "displayRateDescriptionsAsExtremeItems": true
+        },
+        {
+          "type": "matrix",
+          "name": "resources_effectiveness",
+          "title": "How much do you agree or disagree with the following statements about how prepared you felt to successfully lead the workshop?",
+          "columns": [
+            {
+              "value": "1",
+              "text": "Strongly Disagree"
+            },
+            {
+              "value": "2",
+              "text": "Disagree"
+            },
+            {
+              "value": "3",
+              "text": "Slightly Disagree"
+            },
+            {
+              "value": "4",
+              "text": "Neutral"
+            },
+            {
+              "value": "5",
+              "text": "Slightly Agree"
+            },
+            {
+              "value": "6",
+              "text": "Agree"
+            },
+            {
+              "value": "7",
+              "text": "Strongly Agree"
+            }
+          ],
+          "rows": [
+            {
+              "value": "resources_customizable",
+              "text": "The PL Workshop Resource (slide deck with high-level agenda and objectives) provided by Code.org was easily customizable to meet the specific needs of the workshop audience."
+            },
+            {
+              "value": "resources_effective",
+              "text": "The PL Workshop resource (slide deck with high-level agenda and objectives) helped me feel set-up to facilitate the workshop successfully"
+            },
+            {
+              "value": "facilitator_training_effective",
+              "text": "The PL workshop facilitator training helped me to feel set-up to facilitate this workshop successfully"
+            }
+          ]
+        },
+        {
+          "type": "boolean",
+          "name": "custom_workshop_new",
+          "title": "Is this the first time you have facilitated a custom workshop focused on {pd_content}?",
+          "visible": false,
+          "natalia_comment": "NOTE: removed by adding visible statement as this question is no longer relevant for build your own workshops - 07/22/2024"
+        },
+        {
+          "type": "rating",
+          "name": "flexibility_importance",
+          "title": "How important to you is the flexibility to develop and deliver custom workshops?",
+          "rateCount": 7,
+          "rateMin": 0,
+          "rateMax": 6,
+          "minRateDescription": "Not at all, I prefer predefined content",
+          "maxRateDescription": "Extremely important, I value that flexibility",
+          "visible": false,
+          "natalia_comment": "NOTE: removed by adding visible statement as this question is no longer relevant for build your own workshops - 07/22/2024"
+        },
+        {
+          "type": "rating",
+          "name": "flexibility_audience_needs",
+          "title": "To what extent does the flexiblity allow you to meet different audience needs?",
+          "rateCount": 7,
+          "rateMin": 0,
+          "rateMax": 6,
+          "minRateDescription": "Not at all",
+          "maxRateDescription": "The flexibility definitely allows me to meet audience needs",
+          "visible": false,
+          "natalia_comment": "NOTE: removed by adding visible statement as this question is no longer relevant for build your own workshops - 07/22/2024"
+        },
+        {
+          "type": "rating",
+          "name": "resources_helpful",
+          "title": "Did the resources and guidance provided by Code.org help you feel set up for success at facilitating this workshop?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not helpful at all",
+          "maxRateDescription": "Extremely helpful",
+          "visible": false,
+          "natalia_comment": "NOTE: removed by adding visible statement as this question is no longer relevant for build your own workshops - 07/22/2024"
+        },
+        {
+          "type": "matrix",
+          "name": "resources_rating",
+          "title": "How helpful were each of the following resources for you to facilitate this workshop successfully?",
+          "visible": false,
+          "natalia_comment": "NOTE: removed by adding visible statement as this question is no longer relevant for build your own workshops - 07/22/2024",
+          "columns": [
+            {
+              "value": "5",
+              "text": "Very helpful"
+            },
+            {
+              "value": "4",
+              "text": "Helpful"
+            },
+            {
+              "value": "3",
+              "text": "Neutral"
+            },
+            {
+              "value": "2",
+              "text": "Not too helpful"
+            },
+            {
+              "value": "1",
+              "text": "Not helpful at all"
+            }
+          ],
+          "rows": [
+            {
+              "value": "training_event",
+              "text": "Training event"
+            },
+            {
+              "value": "kickoff_call",
+              "text": "Kickoff call"
+            },
+            {
+              "value": "resource_kit",
+              "text": "Resource kit"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "resources_missing",
+          "title": "Were there any other resources or guidance that would have been helpful for you to facilitate this workshop successfully?",
+          "rows": 2
+        },
+        {
+          "type": "comment",
+          "name": "resources_feedback",
+          "title": "If you have any other thoughts about the resources and guidance available to you, please use this space to share them.",
+          "rows": 2
+        },
+        {
+          "type": "comment",
+          "name": "other_feedback_FR",
+          "title": "Is there anything else you’d like to tell us about your experience designing and delivering custom workshops",
+          "rows": 3,
+          "visible": false,
+          "natalia_comment": "NOTE: removed by adding visible statement as this question is no longer relevant for build your own workshops - 07/22/2024"
+        },
+        {
+          "type": "html",
+          "name": "thank_you",
+          "html": "<h2><strong>Thank You!</strong></h3>\n<p><span style='font-size: 12pt;'>Thanks from Code.org for your time, thoughts, and commitment to expand Computer Science education.</span>&nbsp;</p>"
+        }
+      ]
+    }
+  ],
+  "published": true
+}

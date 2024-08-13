@@ -4,7 +4,9 @@ import {loadPyodide, version} from 'pyodide';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 
 import {HOME_FOLDER} from './pythonHelpers/constants';
+import {SETUP_CODE} from './pythonHelpers/patches';
 import {
+  getCleanupCode,
   getUpdatedSourceAndDeleteFiles,
   importPackagesFromFiles,
   resetGlobals,
@@ -33,15 +35,22 @@ async function loadPyodideAndPackages() {
   });
   self.pyodide.setStdout(getStreamHandlerOptions('sysout'));
   self.pyodide.setStderr(getStreamHandlerOptions('syserr'));
+  // Warm up the pyodide environment by running setup code.
+  await runInternalCode(SETUP_CODE, 'setup_run');
 }
 
 let pyodideReadyPromise = null;
 let pyodideGlobals = null;
 async function initializePyodide() {
-  if (pyodideReadyPromise === null) {
+  const promiseWasNull = pyodideReadyPromise === null;
+  if (promiseWasNull) {
     pyodideReadyPromise = loadPyodideAndPackages();
+    self.postMessage({type: 'loading_pyodide'});
   }
   await pyodideReadyPromise;
+  if (promiseWasNull) {
+    self.postMessage({type: 'loaded_pyodide'});
+  }
   pyodideGlobals = self.pyodide.globals.toJs();
 }
 
@@ -59,6 +68,10 @@ self.onmessage = async event => {
     results = await self.pyodide.runPythonAsync(python, {
       filename: `/${HOME_FOLDER}/${MAIN_PYTHON_FILE}`,
     });
+    await runInternalCode(getCleanupCode(source), id);
+
+    // We run setup code at the end to prepare the environment for the next run.
+    await runInternalCode(SETUP_CODE, id);
   } catch (error) {
     self.postMessage({type: 'error', message: error.message, id});
   }
@@ -72,6 +85,16 @@ self.onmessage = async event => {
   resetGlobals(self.pyodide, pyodideGlobals);
   self.postMessage({type: 'run_complete', message: results, id});
 };
+
+// Run code owned by us (not the user). If there is an error, post a
+// system_error message.
+async function runInternalCode(code, id) {
+  try {
+    await self.pyodide.runPythonAsync(code);
+  } catch (error) {
+    self.postMessage({type: 'system_error', message: error.message, id});
+  }
+}
 
 // Return the options for sysout or syserr stream handler.
 function getStreamHandlerOptions(type) {

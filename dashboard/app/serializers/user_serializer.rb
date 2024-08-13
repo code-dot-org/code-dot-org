@@ -50,13 +50,13 @@
 #  races                    :string(255)
 #  primary_contact_info_id  :integer
 #  unlock_token             :string(255)
-#  cap_state                :string(1)
-#  cap_state_date           :datetime
+#  cap_status               :string(1)
+#  cap_status_date          :datetime
 #
 # Indexes
 #
 #  index_users_on_birthday                             (birthday)
-#  index_users_on_cap_state_and_cap_state_date         (cap_state,cap_state_date)
+#  index_users_on_cap_status_and_cap_status_date       (cap_status,cap_status_date)
 #  index_users_on_current_sign_in_at                   (current_sign_in_at)
 #  index_users_on_deleted_at                           (deleted_at)
 #  index_users_on_email_and_deleted_at                 (email,deleted_at)

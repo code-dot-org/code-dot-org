@@ -87,6 +87,7 @@ RUN apt-get install -y --no-install-recommends \
     parallel \
     python \
     python-dev \
+    python3-pip \
     software-properties-common \
     sudo \
     tar \
@@ -185,6 +186,9 @@ RUN curl -SsL https://github.com/boxboat/fixuid/releases/download/v0.4/fixuid-0.
     chmod 4755 /usr/local/bin/fixuid && \
     mkdir -p /etc/fixuid && \
     printf "user: ${USER}\ngroup: ${GROUP}\n" > /etc/fixuid/config.yml
+
+# install pdm for managing our python dependencies
+RUN pip install --system --prefix=/usr/local pdm
 
 USER ${USER}
 

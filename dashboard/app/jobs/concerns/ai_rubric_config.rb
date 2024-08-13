@@ -6,7 +6,7 @@ class AiRubricConfig
   #
   # Basic validation of the new AI config is done by UI tests, or can be done locally
   # by running `AiRubricConfig.validate_ai_config` from the rails console.
-  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-04-30-confidence-autogen-turbo/'.freeze
+  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-08-12-claude-3-release/'.freeze
 
   # 2D Map from unit name and level name, to the name of the lesson files within
   # the release dir in S3 which will be used for AI evaluation.

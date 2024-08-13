@@ -59,6 +59,14 @@ const optionsList = [
     ],
   },
   {
+    name: 'play-tune-block',
+    type: 'radio',
+    values: [
+      {value: 'false', description: 'Hide play tune block (default).'},
+      {value: 'true', description: 'Show play tune block.'},
+    ],
+  },
+  {
     name: 'BPM',
     type: 'string',
     description: 'Set a specific BPM',

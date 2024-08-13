@@ -288,11 +288,9 @@ const EVENTS = {
   MY_PL_PAGE_VISITED: 'My Professional Learning Page Visited',
 
   // Header navigation - signed out
-  SIGNED_OUT_USER_SEES_HEADER: 'Signed Out Navigation Header Shown',
   SIGNED_OUT_USER_CLICKS_HEADER_LINK: 'Signed Out User Clicks Header Link',
   SIGNED_OUT_USER_CLICKS_HAMBURGER_LINK:
     'Signed Out User Clicks Hamburger Link',
-  SIGNED_OUT_USER_CLICKS_SIGN_IN: 'Signed Out User Clicks Sign In Button',
   SIGNED_OUT_USER_CLICKS_HELP_MENU: 'Signed Out User Clicks Help Menu',
   CREATE_ACCOUNT_BUTTON_CLICKED: 'Create Account Button Clicked',
 
@@ -319,10 +317,6 @@ const EVENTS = {
     'Signed In User Clicks Create Dropdown',
   SIGNED_IN_USER_SELECTS_CREATE_DROPDOWN_OPTION:
     'Signed In User Selects Create Dropdown Option',
-
-  // Projects
-  RUN_BUTTON_PRESSED_SIGNED_OUT:
-    'Signed Out User Presses Run Button on Standalone Project',
 
   // Project sharing via 'Share' button
   SHARING_DIALOG_OPEN: 'User Opens Project Share Dialog',
