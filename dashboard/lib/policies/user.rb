@@ -18,7 +18,7 @@ class Policies::User
   # - Have a non-google/non-gmail email domain attached to that googele_oauth2 authentication option
   def self.verified_teacher_candidate?(user)
     google_ao = user.authentication_options.find_by(credential_type: AuthenticationOption::GOOGLE)
-    is_google_email = google_ao.email.ends_with?('@gmail.com', '@googlemail.com')
+    is_google_email = google_ao.email.end_with?('@gmail.com', '@googlemail.com')
     if google_ao && !is_google_email
       return true
     end
