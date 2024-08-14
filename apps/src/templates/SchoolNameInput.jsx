@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
-import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 import i18n from '@cdo/locale';
 
 import {SCHOOL_NAME_SESSION_KEY} from '../signUpFlow/signUpFlowConstants';
@@ -15,9 +15,9 @@ export default function SchoolNameInput({fieldNames}) {
 
   return (
     <label>
-      <BodyTwoText className={style.padding} visualAppearance={'heading-xs'}>
-        {i18n.schoolOrganizationQuestion()}
-      </BodyTwoText>
+      <BodyThreeText className={style.padding}>
+        <strong>{i18n.schoolOrganizationQuestion()}</strong>
+      </BodyThreeText>
       <TextField
         name={fieldNames.schoolName}
         onChange={e => {
