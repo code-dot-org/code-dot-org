@@ -32,10 +32,6 @@ export async function handleRunClick(
     }
     dispatch(appendSystemMessage('Running program...'));
     await runPythonCode(code, source);
-    if (progressManager) {
-      PythonValidationTracker.getInstance().logRun();
-      progressManager.updateProgress();
-    }
   }
 }
 

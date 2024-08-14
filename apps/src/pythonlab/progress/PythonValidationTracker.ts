@@ -2,7 +2,6 @@ import {TestResult} from './PythonValidator';
 
 export default class PythonValidationTracker {
   private testResults: TestResult[] | null = null;
-  private hasRunCode: boolean = false;
 
   private static _instance: PythonValidationTracker;
 
@@ -32,16 +31,7 @@ export default class PythonValidationTracker {
     }
   }
 
-  logRun() {
-    this.hasRunCode = true;
-  }
-
-  getHasRunCode(): boolean {
-    return this.hasRunCode;
-  }
-
   reset() {
     this.testResults = null;
-    this.hasRunCode = false;
   }
 }

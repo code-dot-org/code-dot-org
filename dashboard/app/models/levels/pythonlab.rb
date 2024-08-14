@@ -79,33 +79,22 @@ class Pythonlab < Level
   end
 
   # Return the validation condition for this level. If the level has a validation file, the condition
-  # is that all tests passed. If there is no validation file, the condition is that
-  # the student has run their code at least once.
+  # is that all tests passed. If there is no validation file, there are no conditions.
   def get_validations
     has_validation = start_sources && start_sources["files"]&.any? {|(_, file)| file["type"] == 'validation'}
-    properties['validations'] =
-      if has_validation
-        [{
-          conditions: [
-            {
-              name: 'PASSED_ALL_TESTS',
-              value: "true"
-            }
-          ],
-          message: '',
-          next: true,
-        }]
-      else
-        [{
-          conditions: [
-            {
-              name: 'HAS_RUN_CODE',
-              value: "true"
-            }
-          ],
-          message: '',
-          next: true,
-        }]
-      end
+    if has_validation
+      [{
+        conditions: [
+          {
+            name: 'PASSED_ALL_TESTS',
+            value: "true"
+          }
+        ],
+        message: '',
+        next: true,
+      }]
+    else
+      nil
+    end
   end
 end

@@ -17,12 +17,9 @@ export interface TestResult {
 // Conditions the Python Validator supports.
 export enum ConditionType {
   PASSED_ALL_TESTS = 'PASSED_ALL_TESTS',
-  HAS_RUN_CODE = 'HAS_RUN_CODE',
 }
 
 export default class PythonValidator extends Validator {
-  private testResults: TestResult[] | null = null;
-  private hasRunCode: boolean = false;
   constructor(
     private readonly pythonValidationTracker: PythonValidationTracker
   ) {
@@ -50,8 +47,6 @@ export default class PythonValidator extends Validator {
         hasPassedAllTests &&= !!testResults?.every(
           testResult => testResult.result === 'PASS'
         );
-      } else if (condition.name === ConditionType.HAS_RUN_CODE) {
-        hasPassedAllTests &&= this.pythonValidationTracker.getHasRunCode();
       }
     });
     return hasPassedAllTests;

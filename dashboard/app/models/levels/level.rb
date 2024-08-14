@@ -883,8 +883,9 @@ class Level < ApplicationRecord
     return properties.dig('predict_settings', 'isPredictLevel').present?
   end
 
+  # Wrapper around validations property. Some labs override this with derived validations.
   def get_validations
-    return properties.dig('level_data', 'validations')
+    properties['validations']
   end
 
   # Returns the level name, removing the name_suffix first (if present), and
