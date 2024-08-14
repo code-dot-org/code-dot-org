@@ -199,33 +199,33 @@ const ControlButtons: React.FunctionComponent = () => {
     );
   };
 
-  const renderNavigationWithTooltip = () => {
-    if (awaitingSubmitRun) {
-      console.log(
-        `adding tooltip with text ${codebridgeI18n.submitDisabledTooltip()}`
-      );
-      return (
-        <WithTooltip
-          tooltipProps={{
-            direction: 'onTop',
-            text: codebridgeI18n.submitDisabledTooltip(),
-            tooltipId: 'submitRunButtonTooltip',
-          }}
-        >
-          {renderNavigationButton()}
-        </WithTooltip>
-      );
-    } else {
-      return renderNavigationButton();
-    }
-  };
+  // const renderNavigationWithTooltip = () => {
+  //   if (awaitingSubmitRun) {
+  //     console.log(
+  //       `adding tooltip with text ${codebridgeI18n.submitDisabledTooltip()}`
+  //     );
+  //     return (
+  //       <WithTooltip
+  //         tooltipProps={{
+  //           direction: 'onTop',
+  //           text: codebridgeI18n.submitDisabledTooltip(),
+  //           tooltipId: 'submitRunButtonTooltip',
+  //         }}
+  //       >
+  //         {renderNavigationButton()}
+  //       </WithTooltip>
+  //     );
+  //   } else {
+  //     return renderNavigationButton();
+  //   }
+  // };
 
   const renderNavigationButton = () => {
     return (
       <Button
         text={navigationText}
         onClick={handleNavigation}
-        disabled={false}
+        disabled={awaitingSubmitRun}
         color={'purple'}
         size={'s'}
         iconLeft={
@@ -256,7 +256,18 @@ const ControlButtons: React.FunctionComponent = () => {
         </span>
       )}
       <span className={moduleStyles.navigationButton}>
-        {renderNavigationWithTooltip()}
+        {awaitingSubmitRun && (
+          <WithTooltip
+            tooltipProps={{
+              direction: 'onLeft',
+              text: codebridgeI18n.submitDisabledTooltip(),
+              tooltipId: 'submitButtonDisabled',
+            }}
+          >
+            <i className="fa fa-circle-question" />
+          </WithTooltip>
+        )}
+        {renderNavigationButton()}
       </span>
     </div>
   );
