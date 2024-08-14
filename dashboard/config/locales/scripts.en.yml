@@ -14681,7 +14681,7 @@ en:
         csp10-2024:
           lesson_groups:
             csp_unit10_2020:
-              display_name: 'Unit 10: Algortihms'
+              display_name: 'Unit 10: Algorithms'
             lessonGroup-2:
               display_name: Post-Course Survey
           title: Algorithms ('24-'25)
@@ -15792,48 +15792,72 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2024-m1
         vpl-csa-2024-m2:
           title: Module 2
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2024-m2
         vpl-csa-2024-m3:
           title: Module 3
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2024-m3
         vpl-csa-2024-m4:
           title: Module 4
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2024-m4
         vpl-csa-2024-m5:
           title: Module 5
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2024-m5
         vpl-csa-2024-m6:
           title: Module 6
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2024-m6
         vpl-csa-2024-m7:
           title: Module 7
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2024-m7
         vpl-csa-2024-m8:
           title: Module 8
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2024-m8
         self-paced-pl-csa1-2024:
           title: 'Module 1: Welcome'
           description: |-
@@ -18182,6 +18206,8 @@ en:
               display_name: Customizing Language Models
             lessonGroup-4:
               display_name: User-Centered Design
+            lessonGroup-5:
+              display_name: Flexible Implementation Lessons
           name: gen-ai-staging
           title: ''
           description_audience: ''
@@ -18503,7 +18529,9 @@ en:
           student_description: ''
         csa2-alt-2025:
           lessons: {}
-          lesson_groups: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
           name: csa2-alt-2025
           title: Selection and Iteration
           description_audience: ''
@@ -18511,8 +18539,20 @@ en:
           description: ''
           student_description: ''
         csa3-alt-2025:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-3:
+              name: Program Design
+            lesson-5:
+              name: AI-Generated Code
+            lesson-9:
+              name: No-Argument Constructors
+            lesson-11:
+              name: Parameterized Constructors
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: AI-Generated Code
           name: csa3-alt-2025
           title: Class Creation
           description_audience: ''
@@ -18520,8 +18560,18 @@ en:
           description: ''
           student_description: ''
         csa4-alt-2025:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Ethical and Social Issues Around Data Collection
+            lesson-2:
+              name: Data Sets
+            lesson-9:
+              name: Text Files
+            lesson-19:
+              name: Enhanced For Loops (2D)
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
           name: csa4-alt-2025
           title: Data Collections
           description_audience: ''
@@ -18538,7 +18588,7 @@ en:
           lessons: {}
           lesson_groups: {}
         hello-world-transformers-one-2024:
-          title: 'Hello World: Food'
+          title: 'Hello World: Transformers One'
           description: ''
           student_description: ''
           description_short: ''
@@ -18727,3 +18777,51 @@ en:
           description_short: Students prepare for the AP CSA Exam by practicing strategies for the multiple-choice and free response questions.
           description: This unit prepares students for the AP CSA Exam by reviewing key concepts, practicing multiple-choice and free response questions, and strengthening test-taking strategies. Students identify strengths and areas of improvement to create individualized study plans to focus their practice and self-assess their progress.
           student_description: This unit prepares you for the AP CSA Exam by reviewing key concepts, practicing multiple-choice and free response questions, and strengthening test-taking strategies. You identify strengths and areas of improvement to create individualized study plans to focus you practice and self-assess your progress.
+        sandbox-debugging:
+          lessons:
+            lesson-1:
+              name: What is Debugging?
+          lesson_groups: {}
+          name: sandbox-debugging
+          title: Debugging Sandbox
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        exploring-gen-ai-1:
+          lessons: {}
+          lesson_groups: {}
+          name: exploring-gen-ai-1
+          title: Foundations of Generative AI
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        exploring-gen-ai-2:
+          lessons: {}
+          lesson_groups: {}
+          name: exploring-gen-ai-2
+          title: Customizing Large Language Models
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-gen-ai-2024:
+          lessons:
+            lesson-1:
+              name: Introduction to Generative AI
+            lesson-2:
+              name: Lesson Exploration, Foundations of Gen AI
+            lesson-3:
+              name: Lesson Exploration, Customizing Large Language Models
+            lesson-4:
+              name: Lesson Exploration, User Centered Design
+            lesson-5:
+              name: Teaching Resources
+          lesson_groups: {}
+          name: self-paced-gen-ai-2024
+          title: Generative AI Self-Paced Professional Learning
+          description_audience: ''
+          description_short: ''
+          description: "## Welcome! \n##### This professional learning module is designed to help you prepare to teach Code.org’s Generative AI unit.\n\n##### The Generative AI unit is designed as standalone coursework for 6-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. \n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Computer Vision Unit. "
+          student_description: ''

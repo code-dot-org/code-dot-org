@@ -80,17 +80,29 @@ module ApplicationHelper
     ret = ''
     if notice.present?
       ret += content_tag(:div, flash.notice, {class: 'alert alert-success'})
-      flash.notice = nil
+      if session[:keep_flashes]
+        session[:keep_flashes] = false
+      else
+        flash.notice = nil
+      end
     end
 
     if flash[:info].present?
       ret += content_tag(:div, flash[:info], {class: 'alert alert-info'})
-      flash[:info] = nil
+      if session[:keep_flashes]
+        session[:keep_flashes] = false
+      else
+        flash[:info] = nil
+      end
     end
 
     if alert.present?
       ret += content_tag(:div, flash.alert, {class: 'alert alert-danger'})
-      flash.alert = nil
+      if session[:keep_flashes]
+        session[:keep_flashes] = false
+      else
+        flash.alert = nil
+      end
     end
 
     ret

@@ -4,8 +4,8 @@ import React from 'react';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
+import {Field} from '../../../sharedComponents/SystemDialog/SystemDialog';
 import * as utils from '../../../utils';
-import {Field} from '../SystemDialog/SystemDialog';
 
 import BootstrapButton from './BootstrapButton';
 

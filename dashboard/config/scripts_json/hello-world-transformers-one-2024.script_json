@@ -4,7 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "curriculum_umbrella": "HOC",
+      "curriculum_umbrella": "CSC",
       "is_course": true,
       "is_migrated": true,
       "supported_locales": [
@@ -48,8 +48,8 @@
     },
     "new_name": null,
     "family_name": "hello-world-transformers-one",
-    "serialized_at": "2024-08-02 22:04:56 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-08-13 22:47:49 UTC",
+    "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -73,7 +73,7 @@
   "lessons": [
     {
       "key": "Hello World: Food",
-      "name": "Hello World: Food",
+      "name": "Hello World: Transformers One",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": true,
@@ -237,6 +237,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_say_transformers_2024"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -259,6 +262,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_location_transformers_2024"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -281,6 +287,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_multi_transformers_2024"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -303,6 +312,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_click_transformers_2024"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -325,6 +337,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_events_transformers_2024"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -347,6 +362,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_backgrounds_transformers_2024"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -369,6 +387,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_costumes_transformers_2024"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -391,6 +412,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_sizes_transformers_2024"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -413,6 +437,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_behaviors_transformers_2024"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -435,6 +462,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_sounds_transformers_2024"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,
@@ -457,6 +487,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "helloworld_food_freeplay_transformers_2024"
+        ],
         "progression": "Hello World"
       },
       "bonus": false,

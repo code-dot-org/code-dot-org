@@ -1,7 +1,7 @@
 import React from 'react';
 
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
+import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 
 export default function NewProgrammingEnvironmentForm() {
   return (
