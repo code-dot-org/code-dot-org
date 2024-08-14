@@ -185,7 +185,6 @@ class AdminUsersController < ApplicationController
 
     user_id = params[:user_id]
     script_id = params[:script_id]
-    user_storage_id = storage_id_for_user_id(user_id)
 
     FirehoseClient.instance.put_record(
       :analysis,
@@ -201,11 +200,7 @@ class AdminUsersController < ApplicationController
       }
     )
 
-    UserScript.where(user_id: user_id, script_id: script_id).destroy_all
-    UserLevel.where(user_id: user_id, script_id: script_id).destroy_all
-    ChannelToken.where(storage_id: user_storage_id, script_id: script_id).destroy_all unless user_storage_id.nil?
-    TeacherFeedback.where(student_id: user_id, script_id: script_id).destroy_all
-    CodeReview.where(user_id: user_id, script_id: script_id).destroy_all
+    User.delete_progress_for_unit(user_id: user_id, script_id: script_id)
 
     redirect_to user_progress_form_path({user_identifier: user_id}), notice: "Progress deleted."
   end

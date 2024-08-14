@@ -183,6 +183,9 @@ class ProjectsController < ApplicationController
     },
     pythonlab: {
       name: 'New Python Lab Project'
+    },
+    transformers: {
+      name: 'New Transformers Project'
     }
   }.with_indifferent_access.freeze
 

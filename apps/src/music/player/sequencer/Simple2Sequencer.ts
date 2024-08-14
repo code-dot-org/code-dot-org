@@ -1,7 +1,11 @@
 import LabMetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 
-import {DEFAULT_CHORD_LENGTH, DEFAULT_PATTERN_LENGTH} from '../../constants';
+import {
+  DEFAULT_CHORD_LENGTH,
+  DEFAULT_PATTERN_LENGTH,
+  DEFAULT_TUNE_LENGTH,
+} from '../../constants';
 import {ChordEvent, ChordEventValue} from '../interfaces/ChordEvent';
 import {Effects, EffectValue} from '../interfaces/Effects';
 import {FunctionEvents} from '../interfaces/FunctionEvents';
@@ -9,6 +13,7 @@ import {PatternEvent, PatternEventValue} from '../interfaces/PatternEvent';
 import {PlaybackEvent} from '../interfaces/PlaybackEvent';
 import {SkipContext} from '../interfaces/SkipContext';
 import {SoundEvent} from '../interfaces/SoundEvent';
+import {TuneEvent, TuneEventValue} from '../interfaces/TuneEvent';
 import MusicLibrary from '../MusicLibrary';
 
 import Sequencer from './Sequencer';
@@ -241,6 +246,20 @@ export default class Simple2Sequencer extends Sequencer {
       id: JSON.stringify(value),
       value,
       length: DEFAULT_CHORD_LENGTH,
+      blockId,
+      ...this.getCommonEventFields(),
+    });
+  }
+
+  /**
+   * Play a tune event at the current location.
+   */
+  playTune(value: TuneEventValue, blockId: string) {
+    this.addNewEvent<TuneEvent>({
+      type: 'tune',
+      id: JSON.stringify(value),
+      value,
+      length: DEFAULT_TUNE_LENGTH,
       blockId,
       ...this.getCommonEventFields(),
     });
