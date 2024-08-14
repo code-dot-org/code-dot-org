@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import {UnconnectedActivitiesEditor as ActivitiesEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitiesEditor';
+import {UnconnectedActivitiesEditor as ActivitiesEditor} from '@cdo/apps/levelbuilder/lesson-editor/ActivitiesEditor';
 
 import {sampleActivities} from './activitiesTestData';
 

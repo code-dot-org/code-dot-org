@@ -5,14 +5,14 @@ import {Provider} from 'react-redux';
 import reducers, {
   initActivities,
   initLevelSearching,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import {UnconnectedActivitySectionCard as ActivitySectionCard} from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitySectionCard';
+} from '@cdo/apps/levelbuilder/lesson-editor/activitiesEditorRedux';
+import {UnconnectedActivitySectionCard as ActivitySectionCard} from '@cdo/apps/levelbuilder/lesson-editor/ActivitySectionCard';
 import createResourcesReducer, {
   initResources,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+} from '@cdo/apps/levelbuilder/lesson-editor/resourcesEditorRedux';
 import vocabulariesEditor, {
   initVocabularies,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
+} from '@cdo/apps/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 import {
   stubRedux,
   restoreRedux,

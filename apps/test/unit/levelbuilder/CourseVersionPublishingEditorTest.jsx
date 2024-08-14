@@ -2,7 +2,7 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVersionPublishingEditor';
+import CourseVersionPublishingEditor from '@cdo/apps/levelbuilder/CourseVersionPublishingEditor';
 
 describe('CourseVersionPublishingEditor', () => {
   let defaultProps,

@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import EvidenceDescriptionsRow from '@cdo/apps/lib/levelbuilder/rubrics/EvidenceDescriptionsRow.jsx';
+import EvidenceDescriptionsRow from '@cdo/apps/levelbuilder/rubrics/EvidenceDescriptionsRow.jsx';
 
 describe('EvidenceDescriptionsRow', () => {
   const evidenceLevelData = {

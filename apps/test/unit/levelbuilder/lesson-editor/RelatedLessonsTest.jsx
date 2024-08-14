@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import RelatedLessons from '@cdo/apps/lib/levelbuilder/lesson-editor/RelatedLessons';
+import RelatedLessons from '@cdo/apps/levelbuilder/lesson-editor/RelatedLessons';
 
 describe('RelatedLessons', () => {
   let defaultProps;

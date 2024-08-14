@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import FindVocabularyDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/FindVocabularyDialog';
+import FindVocabularyDialog from '@cdo/apps/levelbuilder/lesson-editor/FindVocabularyDialog';
 
 describe('FindVocabularyDialog', () => {
   let defaultProps, handleConfirm;

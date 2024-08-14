@@ -6,7 +6,7 @@ import {
   FindProgrammingExpressionDialog,
   ProgrammingExpressionTable,
   SearchForm,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/FindProgrammingExpressionDialog';
+} from '@cdo/apps/levelbuilder/lesson-editor/FindProgrammingExpressionDialog';
 
 import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 

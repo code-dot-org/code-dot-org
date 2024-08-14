@@ -2,7 +2,7 @@ import CodeMirror from 'codemirror';
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import DropletPaletteSelector from '@cdo/apps/lib/levelbuilder/level-editor/DropletPaletteSelector';
+import DropletPaletteSelector from '@cdo/apps/levelbuilder/level-editor/DropletPaletteSelector';
 
 describe('DropletPaletteSelector', () => {
   let textArea, editor;

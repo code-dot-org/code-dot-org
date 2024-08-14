@@ -3,7 +3,7 @@ import React from 'react';
 
 import LessonToken, {
   LessonTokenContents,
-} from '@cdo/apps/lib/levelbuilder/unit-editor/LessonToken';
+} from '@cdo/apps/levelbuilder/unit-editor/LessonToken';
 
 const defaultLesson = {
   id: 10,

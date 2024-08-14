@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import ResourcesEditor from '@cdo/apps/lib/levelbuilder/course-editor/ResourcesEditor';
+import ResourcesEditor from '@cdo/apps/levelbuilder/course-editor/ResourcesEditor';
 
 describe('ResourcesEditor', () => {
   let defaultProps;

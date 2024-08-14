@@ -1,7 +1,7 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import {UnconnectedAllVocabulariesEditor as AllVocabulariesEditor} from '@cdo/apps/lib/levelbuilder/AllVocabulariesEditor';
+import {UnconnectedAllVocabulariesEditor as AllVocabulariesEditor} from '@cdo/apps/levelbuilder/AllVocabulariesEditor';
 
 describe('AllVocabulariesEditor', () => {
   let defaultProps, addVocabulary, updateVocabulary, removeVocabulary;

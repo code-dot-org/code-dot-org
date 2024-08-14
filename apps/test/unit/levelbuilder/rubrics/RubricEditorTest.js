@@ -2,8 +2,8 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalItem';
-import RubricEditor from '@cdo/apps/lib/levelbuilder/rubrics/RubricEditor';
+import LearningGoalItem from '@cdo/apps/levelbuilder/rubrics/LearningGoalItem';
+import RubricEditor from '@cdo/apps/levelbuilder/rubrics/RubricEditor';
 
 describe('RubricEditorTest ', () => {
   let wrapper;

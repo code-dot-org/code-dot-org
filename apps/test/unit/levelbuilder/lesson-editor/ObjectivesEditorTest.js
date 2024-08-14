@@ -1,7 +1,7 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import ObjectivesEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/ObjectivesEditor';
+import ObjectivesEditor from '@cdo/apps/levelbuilder/lesson-editor/ObjectivesEditor';
 
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 

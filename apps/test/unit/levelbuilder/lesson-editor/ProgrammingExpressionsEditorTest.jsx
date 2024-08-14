@@ -5,8 +5,8 @@ import {Provider} from 'react-redux';
 import reducers, {
   initActivities,
   initLevelSearching,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import {UnconnectedProgrammingExpressionsEditor as ProgrammingExpressionsEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/ProgrammingExpressionsEditor';
+} from '@cdo/apps/levelbuilder/lesson-editor/activitiesEditorRedux';
+import {UnconnectedProgrammingExpressionsEditor as ProgrammingExpressionsEditor} from '@cdo/apps/levelbuilder/lesson-editor/ProgrammingExpressionsEditor';
 import {
   stubRedux,
   restoreRedux,

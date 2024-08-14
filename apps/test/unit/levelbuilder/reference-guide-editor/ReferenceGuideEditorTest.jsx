@@ -1,7 +1,7 @@
 import {isolateComponent} from 'isolate-react';
 import React from 'react';
 
-import ReferenceGuideEditor from '@cdo/apps/lib/levelbuilder/reference-guide-editor/ReferenceGuideEditor';
+import ReferenceGuideEditor from '@cdo/apps/levelbuilder/reference-guide-editor/ReferenceGuideEditor';
 
 const makeReferenceGuide = (key, parent = null, pos = 0) => ({
   display_name: key,

@@ -1,7 +1,7 @@
 import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import NewUnitForm from '@cdo/apps/lib/levelbuilder/unit-editor/NewUnitForm';
+import NewUnitForm from '@cdo/apps/levelbuilder/unit-editor/NewUnitForm';
 
 describe('NewUnitFormTest', () => {
   let defaultProps;

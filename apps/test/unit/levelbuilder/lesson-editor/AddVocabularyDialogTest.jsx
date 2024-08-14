@@ -2,7 +2,7 @@ import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-impo
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import AddVocabularyDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddVocabularyDialog';
+import AddVocabularyDialog from '@cdo/apps/levelbuilder/lesson-editor/AddVocabularyDialog';
 
 import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';

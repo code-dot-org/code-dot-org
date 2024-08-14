@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import MethodNameEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/MethodNameEditor';
+import MethodNameEditor from '@cdo/apps/levelbuilder/code-docs-editor/MethodNameEditor';
 
 describe('MethodNameEditor', () => {
   let defaultProps, updateSpy;

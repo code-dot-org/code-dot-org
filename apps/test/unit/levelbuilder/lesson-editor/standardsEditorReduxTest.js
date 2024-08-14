@@ -3,7 +3,7 @@ import _ from 'lodash'; // eslint-disable-line no-restricted-imports
 import createStandardsEditor, {
   addStandard,
   removeStandard,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
+} from '@cdo/apps/levelbuilder/lesson-editor/standardsEditorRedux';
 
 const fakeStandards = [
   {

@@ -7,20 +7,20 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 import reducers, {
   initActivities,
   initLevelSearching,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import LessonEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonEditor';
+} from '@cdo/apps/levelbuilder/lesson-editor/activitiesEditorRedux';
+import LessonEditor from '@cdo/apps/levelbuilder/lesson-editor/LessonEditor';
 import programmingExpressionsEditor, {
   initProgrammingExpressions,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/programmingExpressionsEditorRedux';
+} from '@cdo/apps/levelbuilder/lesson-editor/programmingExpressionsEditorRedux';
 import createResourcesReducer, {
   initResources,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+} from '@cdo/apps/levelbuilder/lesson-editor/resourcesEditorRedux';
 import createStandardsReducer, {
   initStandards,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/standardsEditorRedux';
+} from '@cdo/apps/levelbuilder/lesson-editor/standardsEditorRedux';
 import vocabulariesEditor, {
   initVocabularies,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
+} from '@cdo/apps/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 import {
   stubRedux,
   restoreRedux,

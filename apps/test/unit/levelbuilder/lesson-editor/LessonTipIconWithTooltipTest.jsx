@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import LessonTipIconWithTooltip from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonTipIconWithTooltip';
+import LessonTipIconWithTooltip from '@cdo/apps/levelbuilder/lesson-editor/LessonTipIconWithTooltip';
 
 describe('LessonTipIconWithTooltip', () => {
   let defaultProps, onClick;

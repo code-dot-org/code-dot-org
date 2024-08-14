@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import EditTipDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/EditTipDialog';
+import EditTipDialog from '@cdo/apps/levelbuilder/lesson-editor/EditTipDialog';
 
 describe('EditTipDialog', () => {
   let defaultProps, handleConfirm, handleDelete;

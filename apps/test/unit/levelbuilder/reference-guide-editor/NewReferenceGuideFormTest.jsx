@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import NewReferenceGuideForm from '@cdo/apps/lib/levelbuilder/reference-guide-editor/NewReferenceGuideForm';
+import NewReferenceGuideForm from '@cdo/apps/levelbuilder/reference-guide-editor/NewReferenceGuideForm';
 
 describe('NewReferenceGuide', () => {
   it('renders form', () => {

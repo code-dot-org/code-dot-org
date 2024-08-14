@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import ExampleEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/ExampleEditor';
+import ExampleEditor from '@cdo/apps/levelbuilder/code-docs-editor/ExampleEditor';
 
 describe('ExampleEditor', () => {
   let defaultProps, updateSpy;

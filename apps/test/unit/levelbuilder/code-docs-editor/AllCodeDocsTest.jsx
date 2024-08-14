@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import AllCodeDocs from '@cdo/apps/lib/levelbuilder/code-docs-editor/AllCodeDocs';
+import AllCodeDocs from '@cdo/apps/levelbuilder/code-docs-editor/AllCodeDocs';
 
 describe('AllCodeDocs', () => {
   let defaultProps;

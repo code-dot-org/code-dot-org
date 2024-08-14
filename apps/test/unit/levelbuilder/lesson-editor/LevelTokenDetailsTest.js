@@ -2,7 +2,7 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
 
-import {UnconnectedLevelTokenDetails as LevelTokenDetails} from '@cdo/apps/lib/levelbuilder/lesson-editor/LevelTokenDetails';
+import {UnconnectedLevelTokenDetails as LevelTokenDetails} from '@cdo/apps/levelbuilder/lesson-editor/LevelTokenDetails';
 
 const defaultScriptLevel = {
   id: '10',

@@ -2,10 +2,10 @@ import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-impo
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import {UnconnectedUnitCard as UnitCard} from '@cdo/apps/lib/levelbuilder/unit-editor/UnitCard';
+import {UnconnectedUnitCard as UnitCard} from '@cdo/apps/levelbuilder/unit-editor/UnitCard';
 import reducers, {
   init,
-} from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
+} from '@cdo/apps/levelbuilder/unit-editor/unitEditorRedux';
 import {
   stubRedux,
   restoreRedux,

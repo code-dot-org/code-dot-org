@@ -3,7 +3,7 @@ import React from 'react';
 
 import CloneProgrammingExpressionDialog, {
   CloneFormDialog,
-} from '@cdo/apps/lib/levelbuilder/code-docs-editor/CloneProgrammingExpressionDialog';
+} from '@cdo/apps/levelbuilder/code-docs-editor/CloneProgrammingExpressionDialog';
 
 describe('CloneFormDialog', () => {
   let defaultProps, onCloneSuccessSpy;

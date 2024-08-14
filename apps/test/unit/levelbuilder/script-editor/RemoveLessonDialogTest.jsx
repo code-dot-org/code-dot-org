@@ -1,7 +1,7 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import {UnconnectedRemoveLessonDialog as RemoveLessonDialog} from '@cdo/apps/lib/levelbuilder/unit-editor/RemoveLessonDialog';
+import {UnconnectedRemoveLessonDialog as RemoveLessonDialog} from '@cdo/apps/levelbuilder/unit-editor/RemoveLessonDialog';
 
 describe('RemoveLessonDialog', () => {
   let handleClose, removeLesson, props;

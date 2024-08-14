@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalItem';
+import LearningGoalItem from '@cdo/apps/levelbuilder/rubrics/LearningGoalItem';
 
 describe('LearningGoalItem', () => {
   let defaultProps;

@@ -1,7 +1,7 @@
 import programmingExpressionEditor, {
   addProgrammingExpression,
   removeProgrammingExpression,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/programmingExpressionsEditorRedux'; // eslint-disable-line no-restricted-imports
+} from '@cdo/apps/levelbuilder/lesson-editor/programmingExpressionsEditorRedux'; // eslint-disable-line no-restricted-imports
 
 const getInitialState = () => [
   {

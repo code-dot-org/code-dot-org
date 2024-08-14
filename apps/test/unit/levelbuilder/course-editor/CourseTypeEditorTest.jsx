@@ -6,7 +6,7 @@ import {
   InstructorAudience,
   ParticipantAudience,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import CourseTypeEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseTypeEditor';
+import CourseTypeEditor from '@cdo/apps/levelbuilder/course-editor/CourseTypeEditor';
 
 const defaultProps = {
   instructorAudience: InstructorAudience.teacher,

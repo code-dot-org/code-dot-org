@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import NewDataDocForm from '@cdo/apps/lib/levelbuilder/data-docs-editor/NewDataDocForm';
+import NewDataDocForm from '@cdo/apps/levelbuilder/data-docs-editor/NewDataDocForm';
 
 describe('NewDataDocForm', () => {
   it('renders form', () => {

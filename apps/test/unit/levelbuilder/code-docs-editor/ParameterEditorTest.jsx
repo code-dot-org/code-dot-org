@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import ParameterEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/ParameterEditor';
+import ParameterEditor from '@cdo/apps/levelbuilder/code-docs-editor/ParameterEditor';
 
 describe('ParameterEditor', () => {
   let defaultProps, updateSpy;

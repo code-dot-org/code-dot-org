@@ -21,7 +21,7 @@ import reducers, {
   emptyActivity,
   emptyActivitySection,
   getSerializedActivities,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
+} from '@cdo/apps/levelbuilder/lesson-editor/activitiesEditorRedux';
 
 import {sampleActivities} from './activitiesTestData';
 

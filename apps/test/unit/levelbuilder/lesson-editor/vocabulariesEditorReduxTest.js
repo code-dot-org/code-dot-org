@@ -4,7 +4,7 @@ import vocabularyEditor, {
   addVocabulary,
   updateVocabulary,
   removeVocabulary,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
+} from '@cdo/apps/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 
 const getInitialState = () => [
   {

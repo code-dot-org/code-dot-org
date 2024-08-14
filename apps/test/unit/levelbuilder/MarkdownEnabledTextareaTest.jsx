@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import MarkdownEnabledTextarea from '@cdo/apps/lib/levelbuilder/MarkdownEnabledTextarea';
+import MarkdownEnabledTextarea from '@cdo/apps/levelbuilder/MarkdownEnabledTextarea';
 
 describe('MarkdownEnabledTextarea', () => {
   let defaultProps, handleMarkdownChange;

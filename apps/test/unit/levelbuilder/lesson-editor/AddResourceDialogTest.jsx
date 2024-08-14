@@ -1,7 +1,7 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import AddResourceDialog from '@cdo/apps/lib/levelbuilder/lesson-editor/AddResourceDialog';
+import AddResourceDialog from '@cdo/apps/levelbuilder/lesson-editor/AddResourceDialog';
 
 describe('AddResourceDialog', () => {
   let defaultProps, onSaveSpy, handleCloseSpy;

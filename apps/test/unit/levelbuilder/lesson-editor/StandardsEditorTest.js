@@ -1,7 +1,7 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import {UnconnectedStandardsEditor as StandardsEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/StandardsEditor';
+import {UnconnectedStandardsEditor as StandardsEditor} from '@cdo/apps/levelbuilder/lesson-editor/StandardsEditor';
 
 const fakeStandards = [
   {

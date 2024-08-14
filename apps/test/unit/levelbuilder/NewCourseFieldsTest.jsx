@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import NewCourseFields from '@cdo/apps/lib/levelbuilder/NewCourseFields';
+import NewCourseFields from '@cdo/apps/levelbuilder/NewCourseFields';
 
 describe('NewCourseFieldsTest', () => {
   let defaultProps, setFamilyName, setVersionYear, setFamilyAndCourseType;

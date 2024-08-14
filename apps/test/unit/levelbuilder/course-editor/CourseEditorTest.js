@@ -10,8 +10,8 @@ import {
   InstructorAudience,
   ParticipantAudience,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import {UnconnectedCourseEditor as CourseEditor} from '@cdo/apps/lib/levelbuilder/course-editor/CourseEditor';
-import createResourcesReducer from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+import {UnconnectedCourseEditor as CourseEditor} from '@cdo/apps/levelbuilder/course-editor/CourseEditor';
+import createResourcesReducer from '@cdo/apps/levelbuilder/lesson-editor/resourcesEditorRedux';
 import {
   stubRedux,
   restoreRedux,

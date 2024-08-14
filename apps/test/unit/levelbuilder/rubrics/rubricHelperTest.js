@@ -5,7 +5,7 @@ import {
   SAVING_TEXT,
   RUBRIC_PATH,
   SAVE_COMPLETED_TEXT,
-} from '@cdo/apps/lib/levelbuilder/rubrics/rubricHelper';
+} from '@cdo/apps/levelbuilder/rubrics/rubricHelper';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 
 describe('rubricHelperTest.js', () => {

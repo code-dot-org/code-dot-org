@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import NewProgrammingClassForm from '@cdo/apps/lib/levelbuilder/code-docs-editor/NewProgrammingClassForm';
+import NewProgrammingClassForm from '@cdo/apps/levelbuilder/code-docs-editor/NewProgrammingClassForm';
 
 describe('NewProgrammingClassForm', () => {
   it('renders form', () => {

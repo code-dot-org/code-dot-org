@@ -1,7 +1,7 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import OrderControls from '@cdo/apps/lib/levelbuilder/OrderControls';
+import OrderControls from '@cdo/apps/levelbuilder/OrderControls';
 
 describe('OrderControls', () => {
   let move, remove, defaultProps;

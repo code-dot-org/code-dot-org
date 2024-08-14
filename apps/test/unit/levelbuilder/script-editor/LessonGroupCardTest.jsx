@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import {UnconnectedLessonGroupCard as LessonGroupCard} from '@cdo/apps/lib/levelbuilder/unit-editor/LessonGroupCard';
+import {UnconnectedLessonGroupCard as LessonGroupCard} from '@cdo/apps/levelbuilder/unit-editor/LessonGroupCard';
 
 export const nonUserFacingGroup = {
   key: 'lg-key',

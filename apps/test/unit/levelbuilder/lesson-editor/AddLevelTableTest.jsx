@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import AddLevelTable from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelTable';
+import AddLevelTable from '@cdo/apps/levelbuilder/lesson-editor/AddLevelTable';
 
 describe('AddLevelTable', () => {
   let defaultProps, addLevel, setCurrentPage;

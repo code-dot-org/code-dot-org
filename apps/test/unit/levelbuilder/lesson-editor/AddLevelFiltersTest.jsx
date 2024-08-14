@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import {UnconnectedAddLevelFilters as AddLevelFilters} from '@cdo/apps/lib/levelbuilder/lesson-editor/AddLevelFilters';
+import {UnconnectedAddLevelFilters as AddLevelFilters} from '@cdo/apps/levelbuilder/lesson-editor/AddLevelFilters';
 
 import {searchOptions} from './activitiesTestData';
 

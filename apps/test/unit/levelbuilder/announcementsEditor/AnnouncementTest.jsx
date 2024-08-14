@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import Announcement from '@cdo/apps/lib/levelbuilder/announcementsEditor/Announcement';
+import Announcement from '@cdo/apps/levelbuilder/announcementsEditor/Announcement';
 
 const sampleAnnouncement = {
   key: 'aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa',

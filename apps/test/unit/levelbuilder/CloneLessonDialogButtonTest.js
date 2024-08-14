@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import CloneLessonDialogButton from '@cdo/apps/lib/levelbuilder/CloneLessonDialogButton';
+import CloneLessonDialogButton from '@cdo/apps/levelbuilder/CloneLessonDialogButton';
 
 describe('CloneLessonDialogButton', () => {
   let defaultProps;

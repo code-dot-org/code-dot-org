@@ -4,7 +4,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import DataDocFormEditor from '@cdo/apps/lib/levelbuilder/data-docs-editor/DataDocFormEditor';
+import DataDocFormEditor from '@cdo/apps/levelbuilder/data-docs-editor/DataDocFormEditor';
 import {getStore} from '@cdo/apps/redux';
 import * as utils from '@cdo/apps/utils';
 

@@ -4,7 +4,7 @@ import createResourcesReducer, {
   addResource,
   editResource,
   removeResource,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
+} from '@cdo/apps/levelbuilder/lesson-editor/resourcesEditorRedux';
 
 import resourceTestData from './resourceTestData';
 

@@ -1,7 +1,7 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import {UnconnectedRemoveLevelDialog as RemoveLevelDialog} from '@cdo/apps/lib/levelbuilder/lesson-editor/RemoveLevelDialog';
+import {UnconnectedRemoveLevelDialog as RemoveLevelDialog} from '@cdo/apps/levelbuilder/lesson-editor/RemoveLevelDialog';
 
 import {sampleActivities} from './activitiesTestData';
 

@@ -3,7 +3,7 @@ import React from 'react';
 import {Provider} from 'react-redux';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import ProgrammingMethodEditor from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingMethodEditor';
+import ProgrammingMethodEditor from '@cdo/apps/levelbuilder/code-docs-editor/ProgrammingMethodEditor';
 import {getStore} from '@cdo/apps/redux';
 
 import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports

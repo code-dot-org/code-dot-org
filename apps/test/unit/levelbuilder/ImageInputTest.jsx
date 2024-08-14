@@ -2,7 +2,7 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import ImageInput from '@cdo/apps/lib/levelbuilder/ImageInput';
+import ImageInput from '@cdo/apps/levelbuilder/ImageInput';
 
 import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 

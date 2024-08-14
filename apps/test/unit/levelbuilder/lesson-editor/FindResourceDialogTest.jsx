@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import {UnconnectedFindResourceDialog as FindResourceDialog} from '@cdo/apps/lib/levelbuilder/lesson-editor/FindResourceDialog';
+import {UnconnectedFindResourceDialog as FindResourceDialog} from '@cdo/apps/levelbuilder/lesson-editor/FindResourceDialog';
 
 import resourceTestData from './resourceTestData';
 

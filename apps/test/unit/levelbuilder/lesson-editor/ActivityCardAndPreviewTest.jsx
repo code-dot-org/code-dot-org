@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import ActivityCardAndPreview from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivityCardAndPreview';
+import ActivityCardAndPreview from '@cdo/apps/levelbuilder/lesson-editor/ActivityCardAndPreview';
 
 import {sampleActivities} from './activitiesTestData';
 

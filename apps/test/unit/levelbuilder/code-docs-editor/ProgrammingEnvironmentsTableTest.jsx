@@ -1,7 +1,7 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import ProgrammingEnvironmentsTable from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingEnvironmentsTable';
+import ProgrammingEnvironmentsTable from '@cdo/apps/levelbuilder/code-docs-editor/ProgrammingEnvironmentsTable';
 
 describe('ProgrammingEnvironmentsTable', () => {
   let defaultProps;

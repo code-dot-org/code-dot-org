@@ -1,7 +1,7 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import NewCourseForm from '@cdo/apps/lib/levelbuilder/course-editor/NewCourseForm';
+import NewCourseForm from '@cdo/apps/levelbuilder/course-editor/NewCourseForm';
 
 describe('NewCourseFormTest', () => {
   let defaultProps;

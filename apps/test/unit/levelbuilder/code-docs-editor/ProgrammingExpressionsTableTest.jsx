@@ -3,7 +3,7 @@ import {isolateComponent} from 'isolate-react';
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import ProgrammingExpressionsTable from '@cdo/apps/lib/levelbuilder/code-docs-editor/ProgrammingExpressionsTable';
+import ProgrammingExpressionsTable from '@cdo/apps/levelbuilder/code-docs-editor/ProgrammingExpressionsTable';
 
 import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
