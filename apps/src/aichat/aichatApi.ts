@@ -121,9 +121,8 @@ export async function getStudentChatHistory(
   if (scriptLevelId) {
     params.scriptLevelId = scriptLevelId.toString();
   }
-  const urlParams = new URLSearchParams(params);
   const response = await HttpClient.fetchJson<ChatEvent[]>(
-    STUDENT_CHAT_HISTORY_URL + '?' + new URLSearchParams(urlParams.toString())
+    STUDENT_CHAT_HISTORY_URL + '?' + new URLSearchParams(params)
   );
   return response.value;
 }

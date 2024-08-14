@@ -48,6 +48,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const {showWarningModal, isWaitingForChatResponse, studentChatHistory} =
     useAppSelector(state => state.aichat);
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const visibleItems = useSelector(selectAllVisibleMessages);
 
   const students = useSelector(
@@ -58,7 +59,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const dispatch = useAppDispatch();
 
   const selectedStudentName = useMemo(() => {
-    if (viewAsUserId) {
+    if (viewAsUserId && currentLevelId) {
       const selectedStudent = Object.values(students).find(
         student => student.id === viewAsUserId
       );
@@ -68,7 +69,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       }
     }
     return null;
-  }, [viewAsUserId, students, dispatch]);
+  }, [viewAsUserId, students, dispatch, currentLevelId]);
 
   // Teacher user is able to interact with chatbot.
   const canChatWithModel = useMemo(
