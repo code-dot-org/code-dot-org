@@ -49,11 +49,12 @@ const ProgressContainer: React.FunctionComponent<ProgressContainerProps> = ({
   );
 
   const levelId = useAppSelector(state => state.lab.levelProperties?.id);
-  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
 
   useEffect(() => {
+    // The levelValidations may be the same between two different levels,
+    // but we still want the progressManager to reset itself when the levelId changes.
     progressManager.current.onLevelChange(levelValidations);
-  }, [levelValidations, levelId, appName]);
+  }, [levelValidations, levelId]);
 
   return (
     <ProgressManagerContext.Provider value={progressManager.current}>

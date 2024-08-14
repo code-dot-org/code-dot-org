@@ -848,8 +848,6 @@ class Level < ApplicationRecord
     if try(:project_template_level).try(:start_sources)
       properties_camelized['templateSources'] = try(:project_template_level).try(:start_sources)
     end
-    # Localized properties
-    properties_camelized["validations"] = localized_validations if properties_camelized["validations"]
     properties_camelized["panels"] = localized_panels if properties_camelized["panels"]
     properties_camelized["longInstructions"] = (get_localized_property("long_instructions") || long_instructions) if properties_camelized["longInstructions"]
     if script_level
@@ -864,7 +862,10 @@ class Level < ApplicationRecord
       properties_camelized["predictSettings"]&.delete("solution")
       properties_camelized["predictSettings"]&.delete("multipleChoiceAnswers")
     end
-    if get_validations && !properties_camelized["validations"]
+    # Default to using the validations defined as a property
+    if properties_camelized["validations"]
+      properties_camelized["validations"] = localized_validations
+    elsif get_validations
       properties_camelized["validations"] = get_validations
     end
     properties_camelized
@@ -877,7 +878,7 @@ class Level < ApplicationRecord
   # Whether this level has validation for the completion of student work.
   def validated?
     if uses_lab2?
-      return properties.dig('level_data', 'validations').present? || get_validations.present?
+      return get_validations.present?
     end
     properties['validation_code'].present? || properties['success_condition'].present?
   end
@@ -887,7 +888,7 @@ class Level < ApplicationRecord
   end
 
   def get_validations
-    return nil
+    return properties.dig('level_data', 'validations')
   end
 
   # Returns the level name, removing the name_suffix first (if present), and

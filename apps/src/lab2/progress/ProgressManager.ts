@@ -53,10 +53,6 @@ export default class ProgressManager {
     this.validator = validator;
   }
 
-  getValidator() {
-    return this.validator;
-  }
-
   getCurrentState(): ValidationState {
     return this.currentValidationState;
   }

@@ -32,7 +32,6 @@ class Pythonlab < Level
     submittable
     starter_assets
     predict_settings
-    validations
   )
 
   validate :has_correct_multiple_choice_answer?
@@ -79,6 +78,9 @@ class Pythonlab < Level
     end
   end
 
+  # Return the validation condition for this level. If the level has a validation file, the condition
+  # is that all tests passed. If there is no validation file, the condition is that
+  # the student has run their code at least once.
   def get_validations
     has_validation = start_sources && start_sources["files"]&.any? {|(_, file)| file["type"] == 'validation'}
     properties['validations'] =
