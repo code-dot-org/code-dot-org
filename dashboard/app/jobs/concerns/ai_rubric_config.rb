@@ -36,7 +36,7 @@ class AiRubricConfig
   UNIT_AND_LEVEL_TO_LESSON_S3_NAME['focus-on-coding3-2023'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2023']
   UNIT_AND_LEVEL_TO_LESSON_S3_NAME['interactive-games-animations-2024'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2024']
   UNIT_AND_LEVEL_TO_LESSON_S3_NAME['focus-on-creativity3-2024'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2024']
-  # UNIT_AND_LEVEL_TO_LESSON_S3_NAME['focus-on-coding3-2024'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2024']
+  UNIT_AND_LEVEL_TO_LESSON_S3_NAME['focus-on-coding3-2024'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2024']
   UNIT_AND_LEVEL_TO_LESSON_S3_NAME.freeze
 
   # For testing purposes, we can raise this error to simulate a missing key
