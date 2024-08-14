@@ -50,13 +50,13 @@
 #  races                    :string(255)
 #  primary_contact_info_id  :integer
 #  unlock_token             :string(255)
-#  cap_state                :string(1)
-#  cap_state_date           :datetime
+#  cap_status               :string(1)
+#  cap_status_date          :datetime
 #
 # Indexes
 #
 #  index_users_on_birthday                             (birthday)
-#  index_users_on_cap_state_and_cap_state_date         (cap_state,cap_state_date)
+#  index_users_on_cap_status_and_cap_status_date       (cap_status,cap_status_date)
 #  index_users_on_current_sign_in_at                   (current_sign_in_at)
 #  index_users_on_deleted_at                           (deleted_at)
 #  index_users_on_email_and_deleted_at                 (email,deleted_at)
@@ -331,6 +331,14 @@ class User < ApplicationRecord
 
   validate :lti_roster_sync_enabled, if: -> {lti_roster_sync_enabled.present?} do
     self.lti_roster_sync_enabled = ActiveRecord::Type::Boolean.new.cast(lti_roster_sync_enabled)
+  end
+
+  # TODO(P20-1055): Remove in "CAP data migration Phase 2" once new CAP columns are populated
+  before_save if: -> {property_changed?('child_account_compliance_state')} do
+    self.cap_status = child_account_compliance_state.presence
+  end
+  before_save if: -> {property_changed?('child_account_compliance_state_last_updated')} do
+    self.cap_status_date = child_account_compliance_state_last_updated.presence
   end
 
   def save_email_preference
@@ -2776,6 +2784,19 @@ class User < ApplicationRecord
     # us_state is only a required field if the User lives in the US.
     return false unless %w[US RD].include? country_code
     new_record? || us_state_changed?
+  end
+
+  def self.delete_progress_for_unit(user_id:, script_id:)
+    raise "User id required" unless user_id
+    raise "Script id required" unless script_id
+
+    user_storage_id = storage_id_for_user_id(user_id)
+
+    UserScript.where(user_id: user_id, script_id: script_id).destroy_all
+    UserLevel.where(user_id: user_id, script_id: script_id).destroy_all
+    ChannelToken.where(storage_id: user_storage_id, script_id: script_id).destroy_all unless user_storage_id.nil?
+    TeacherFeedback.where(student_id: user_id, script_id: script_id).destroy_all
+    CodeReview.where(user_id: user_id, script_id: script_id).destroy_all
   end
 
   private def should_check_age_or_state_update?

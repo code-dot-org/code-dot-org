@@ -1,0 +1,294 @@
+{
+  "ar-SA": {
+    "/musiclab_libraries/music-library-intro2024.json": "49e395f4aeb84b6f4f167d3d90db11e0",
+    "/musiclab_libraries/music-library-launch2024.json": "92c3cc0eb02a4bc36982efd339bd0f7d"
+  },
+  "az-AZ": {
+    "/musiclab_libraries/music-library-intro2024.json": "49e395f4aeb84b6f4f167d3d90db11e0",
+    "/musiclab_libraries/music-library-launch2024.json": "92c3cc0eb02a4bc36982efd339bd0f7d"
+  },
+  "bg-BG": {
+    "/musiclab_libraries/music-library-intro2024.json": "92c3cc0eb02a4bc36982efd339bd0f7d",
+    "/musiclab_libraries/music-library-launch2024.json": "92c3cc0eb02a4bc36982efd339bd0f7d"
+  },
+  "bs-BA": {
+    "/musiclab_libraries/music-library-intro2024.json": "49e395f4aeb84b6f4f167d3d90db11e0",
+    "/musiclab_libraries/music-library-launch2024.json": "92c3cc0eb02a4bc36982efd339bd0f7d"
+  },
+  "ca-ES": {
+    "/musiclab_libraries/music-library-intro2024.json": "49e395f4aeb84b6f4f167d3d90db11e0",
+    "/musiclab_libraries/music-library-launch2024.json": "92c3cc0eb02a4bc36982efd339bd0f7d"
+  },
+  "cs-CZ": {
+    "/musiclab_libraries/music-library-intro2024.json": "49e395f4aeb84b6f4f167d3d90db11e0",
+    "/musiclab_libraries/music-library-launch2024.json": "8837d0199606b034410c4db533dd2ce1"
+  },
+  "da-DK": {
+    "/musiclab_libraries/music-library-intro2024.json": "49e395f4aeb84b6f4f167d3d90db11e0",
+    "/musiclab_libraries/music-library-launch2024.json": "92c3cc0eb02a4bc36982efd339bd0f7d"
+  },
+  "de-DE": {
+    "/musiclab_libraries/music-library-intro2024.json": "49e395f4aeb84b6f4f167d3d90db11e0",
+    "/musiclab_libraries/music-library-launch2024.json": "92c3cc0eb02a4bc36982efd339bd0f7d"
+  },
+  "dv-MV": {
+    "/musiclab_libraries/music-library-intro2024.json": "92c3cc0eb02a4bc36982efd339bd0f7d",
+    "/musiclab_libraries/music-library-launch2024.json": "92c3cc0eb02a4bc36982efd339bd0f7d"
+  },
+  "el-GR": {
+    "/musiclab_libraries/music-library-intro2024.json": "92c3cc0eb02a4bc36982efd339bd0f7d",
+    "/musiclab_libraries/music-library-launch2024.json": "92c3cc0eb02a4bc36982efd339bd0f7d"
+  },
+  "en-GB": {
+    "/musiclab_libraries/music-library-intro2024.json": "8837d0199606b034410c4db533dd2ce1",
+    "/musiclab_libraries/music-library-launch2024.json": "8fb8873007cc69ad710c1692ddecb61a"
+  },
+  "es-ES": {
+    "/musiclab_libraries/music-library-intro2024.json": "8837d0199606b034410c4db533dd2ce1",
+    "/musiclab_libraries/music-library-launch2024.json": "8fb8873007cc69ad710c1692ddecb61a"
+  },
+  "es-MX": {
+    "/musiclab_libraries/music-library-intro2024.json": "8837d0199606b034410c4db533dd2ce1",
+    "/musiclab_libraries/music-library-launch2024.json": "dac06ec0444cdedaae672ba6dd2a1912"
+  },
+  "et-EE": {
+    "/musiclab_libraries/music-library-intro2024.json": "8837d0199606b034410c4db533dd2ce1",
+    "/musiclab_libraries/music-library-launch2024.json": "8fb8873007cc69ad710c1692ddecb61a"
+  },
+  "eu-ES": {
+    "/musiclab_libraries/music-library-intro2024.json": "8837d0199606b034410c4db533dd2ce1",
+    "/musiclab_libraries/music-library-launch2024.json": "8fb8873007cc69ad710c1692ddecb61a"
+  },
+  "fa-IR": {
+    "/musiclab_libraries/music-library-intro2024.json": "8837d0199606b034410c4db533dd2ce1",
+    "/musiclab_libraries/music-library-launch2024.json": "8fb8873007cc69ad710c1692ddecb61a"
+  },
+  "fi-FI": {
+    "/musiclab_libraries/music-library-intro2024.json": "8837d0199606b034410c4db533dd2ce1",
+    "/musiclab_libraries/music-library-launch2024.json": "8fb8873007cc69ad710c1692ddecb61a"
+  },
+  "fil-PH": {
+    "/musiclab_libraries/music-library-intro2024.json": "8837d0199606b034410c4db533dd2ce1",
+    "/musiclab_libraries/music-library-launch2024.json": "8fb8873007cc69ad710c1692ddecb61a"
+  },
+  "fr-FR": {
+    "/musiclab_libraries/music-library-intro2024.json": "8837d0199606b034410c4db533dd2ce1",
+    "/musiclab_libraries/music-library-launch2024.json": "8fb8873007cc69ad710c1692ddecb61a"
+  },
+  "ga-IE": {
+    "/musiclab_libraries/music-library-intro2024.json": "dac06ec0444cdedaae672ba6dd2a1912",
+    "/musiclab_libraries/music-library-launch2024.json": "73887d4827bfe2f1e5f1b06d56a2abf5"
+  },
+  "gl-ES": {
+    "/musiclab_libraries/music-library-intro2024.json": "73887d4827bfe2f1e5f1b06d56a2abf5",
+    "/musiclab_libraries/music-library-launch2024.json": "67ca79787631aab0ca672e1f3463b2a0"
+  },
+  "haw-HI": {
+    "/musiclab_libraries/music-library-intro2024.json": "73887d4827bfe2f1e5f1b06d56a2abf5",
+    "/musiclab_libraries/music-library-launch2024.json": "67ca79787631aab0ca672e1f3463b2a0"
+  },
+  "he-IL": {
+    "/musiclab_libraries/music-library-intro2024.json": "73887d4827bfe2f1e5f1b06d56a2abf5",
+    "/musiclab_libraries/music-library-launch2024.json": "67ca79787631aab0ca672e1f3463b2a0"
+  },
+  "hi-IN": {
+    "/musiclab_libraries/music-library-intro2024.json": "73887d4827bfe2f1e5f1b06d56a2abf5",
+    "/musiclab_libraries/music-library-launch2024.json": "67ca79787631aab0ca672e1f3463b2a0"
+  },
+  "hr-HR": {
+    "/musiclab_libraries/music-library-intro2024.json": "73887d4827bfe2f1e5f1b06d56a2abf5",
+    "/musiclab_libraries/music-library-launch2024.json": "67ca79787631aab0ca672e1f3463b2a0"
+  },
+  "hu-HU": {
+    "/musiclab_libraries/music-library-intro2024.json": "73887d4827bfe2f1e5f1b06d56a2abf5",
+    "/musiclab_libraries/music-library-launch2024.json": "67ca79787631aab0ca672e1f3463b2a0"
+  },
+  "hy-AM": {
+    "/musiclab_libraries/music-library-intro2024.json": "73887d4827bfe2f1e5f1b06d56a2abf5",
+    "/musiclab_libraries/music-library-launch2024.json": "67ca79787631aab0ca672e1f3463b2a0"
+  },
+  "id-ID": {
+    "/musiclab_libraries/music-library-intro2024.json": "73887d4827bfe2f1e5f1b06d56a2abf5",
+    "/musiclab_libraries/music-library-launch2024.json": "67ca79787631aab0ca672e1f3463b2a0"
+  },
+  "is-IS": {
+    "/musiclab_libraries/music-library-intro2024.json": "73887d4827bfe2f1e5f1b06d56a2abf5",
+    "/musiclab_libraries/music-library-launch2024.json": "67ca79787631aab0ca672e1f3463b2a0"
+  },
+  "it-IT": {
+    "/musiclab_libraries/music-library-intro2024.json": "67ca79787631aab0ca672e1f3463b2a0",
+    "/musiclab_libraries/music-library-launch2024.json": "ef72a76b41894432cf6723ec3e3152d0"
+  },
+  "ja-JP": {
+    "/musiclab_libraries/music-library-intro2024.json": "ef72a76b41894432cf6723ec3e3152d0",
+    "/musiclab_libraries/music-library-launch2024.json": "d5e5f53798885824b662dc2616b1f717"
+  },
+  "ka-GE": {
+    "/musiclab_libraries/music-library-intro2024.json": "ef72a76b41894432cf6723ec3e3152d0",
+    "/musiclab_libraries/music-library-launch2024.json": "d5e5f53798885824b662dc2616b1f717"
+  },
+  "kk-KZ": {
+    "/musiclab_libraries/music-library-intro2024.json": "ef72a76b41894432cf6723ec3e3152d0",
+    "/musiclab_libraries/music-library-launch2024.json": "d5e5f53798885824b662dc2616b1f717"
+  },
+  "kn-IN": {
+    "/musiclab_libraries/music-library-intro2024.json": "ef72a76b41894432cf6723ec3e3152d0",
+    "/musiclab_libraries/music-library-launch2024.json": "d5e5f53798885824b662dc2616b1f717"
+  },
+  "km-KH": {
+    "/musiclab_libraries/music-library-intro2024.json": "ef72a76b41894432cf6723ec3e3152d0",
+    "/musiclab_libraries/music-library-launch2024.json": "d5e5f53798885824b662dc2616b1f717"
+  },
+  "ko-KR": {
+    "/musiclab_libraries/music-library-intro2024.json": "ef72a76b41894432cf6723ec3e3152d0",
+    "/musiclab_libraries/music-library-launch2024.json": "d5e5f53798885824b662dc2616b1f717"
+  },
+  "ku-IQ": {
+    "/musiclab_libraries/music-library-intro2024.json": "ef72a76b41894432cf6723ec3e3152d0",
+    "/musiclab_libraries/music-library-launch2024.json": "d5e5f53798885824b662dc2616b1f717"
+  },
+  "lt-LT": {
+    "/musiclab_libraries/music-library-intro2024.json": "ef72a76b41894432cf6723ec3e3152d0",
+    "/musiclab_libraries/music-library-launch2024.json": "d5e5f53798885824b662dc2616b1f717"
+  },
+  "lv-LV": {
+    "/musiclab_libraries/music-library-intro2024.json": "ef72a76b41894432cf6723ec3e3152d0",
+    "/musiclab_libraries/music-library-launch2024.json": "d5e5f53798885824b662dc2616b1f717"
+  },
+  "mi-NZ": {
+    "/musiclab_libraries/music-library-intro2024.json": "d5e5f53798885824b662dc2616b1f717",
+    "/musiclab_libraries/music-library-launch2024.json": "7c5357edec7160d26fe26a9e76148dd8"
+  },
+  "mk-MK": {
+    "/musiclab_libraries/music-library-intro2024.json": "7c5357edec7160d26fe26a9e76148dd8",
+    "/musiclab_libraries/music-library-launch2024.json": "82effc9e27105e9762500982d4322b4b"
+  },
+  "mn-MN": {
+    "/musiclab_libraries/music-library-intro2024.json": "7c5357edec7160d26fe26a9e76148dd8",
+    "/musiclab_libraries/music-library-launch2024.json": "82effc9e27105e9762500982d4322b4b"
+  },
+  "mr-IN": {
+    "/musiclab_libraries/music-library-intro2024.json": "7c5357edec7160d26fe26a9e76148dd8",
+    "/musiclab_libraries/music-library-launch2024.json": "82effc9e27105e9762500982d4322b4b"
+  },
+  "ms-MY": {
+    "/musiclab_libraries/music-library-intro2024.json": "7c5357edec7160d26fe26a9e76148dd8",
+    "/musiclab_libraries/music-library-launch2024.json": "82effc9e27105e9762500982d4322b4b"
+  },
+  "mt-MT": {
+    "/musiclab_libraries/music-library-intro2024.json": "7c5357edec7160d26fe26a9e76148dd8",
+    "/musiclab_libraries/music-library-launch2024.json": "82effc9e27105e9762500982d4322b4b"
+  },
+  "my-MM": {
+    "/musiclab_libraries/music-library-intro2024.json": "7c5357edec7160d26fe26a9e76148dd8",
+    "/musiclab_libraries/music-library-launch2024.json": "82effc9e27105e9762500982d4322b4b"
+  },
+  "ne-NP": {
+    "/musiclab_libraries/music-library-intro2024.json": "7c5357edec7160d26fe26a9e76148dd8",
+    "/musiclab_libraries/music-library-launch2024.json": "82effc9e27105e9762500982d4322b4b"
+  },
+  "nl-NL": {
+    "/musiclab_libraries/music-library-intro2024.json": "7c5357edec7160d26fe26a9e76148dd8",
+    "/musiclab_libraries/music-library-launch2024.json": "82effc9e27105e9762500982d4322b4b"
+  },
+  "nn-NO": {
+    "/musiclab_libraries/music-library-intro2024.json": "7c5357edec7160d26fe26a9e76148dd8",
+    "/musiclab_libraries/music-library-launch2024.json": "82effc9e27105e9762500982d4322b4b"
+  },
+  "no-NO": {
+    "/musiclab_libraries/music-library-intro2024.json": "82effc9e27105e9762500982d4322b4b",
+    "/musiclab_libraries/music-library-launch2024.json": "1d86193aaa6166a9f9a2df4a1fb428af"
+  },
+  "pl-PL": {
+    "/musiclab_libraries/music-library-intro2024.json": "1d86193aaa6166a9f9a2df4a1fb428af",
+    "/musiclab_libraries/music-library-launch2024.json": "23ceab2c628f5cf57086a5f95115f625"
+  },
+  "pt-BR": {
+    "/musiclab_libraries/music-library-intro2024.json": "1d86193aaa6166a9f9a2df4a1fb428af",
+    "/musiclab_libraries/music-library-launch2024.json": "23ceab2c628f5cf57086a5f95115f625"
+  },
+  "pt-PT": {
+    "/musiclab_libraries/music-library-intro2024.json": "1d86193aaa6166a9f9a2df4a1fb428af",
+    "/musiclab_libraries/music-library-launch2024.json": "23ceab2c628f5cf57086a5f95115f625"
+  },
+  "ro-RO": {
+    "/musiclab_libraries/music-library-intro2024.json": "1d86193aaa6166a9f9a2df4a1fb428af",
+    "/musiclab_libraries/music-library-launch2024.json": "23ceab2c628f5cf57086a5f95115f625"
+  },
+  "ru-RU": {
+    "/musiclab_libraries/music-library-intro2024.json": "1d86193aaa6166a9f9a2df4a1fb428af",
+    "/musiclab_libraries/music-library-launch2024.json": "23ceab2c628f5cf57086a5f95115f625"
+  },
+  "se-FI": {
+    "/musiclab_libraries/music-library-intro2024.json": "1d86193aaa6166a9f9a2df4a1fb428af",
+    "/musiclab_libraries/music-library-launch2024.json": "23ceab2c628f5cf57086a5f95115f625"
+  },
+  "sm-WS": {
+    "/musiclab_libraries/music-library-intro2024.json": "1d86193aaa6166a9f9a2df4a1fb428af",
+    "/musiclab_libraries/music-library-launch2024.json": "23ceab2c628f5cf57086a5f95115f625"
+  },
+  "si-LK": {
+    "/musiclab_libraries/music-library-intro2024.json": "1d86193aaa6166a9f9a2df4a1fb428af",
+    "/musiclab_libraries/music-library-launch2024.json": "23ceab2c628f5cf57086a5f95115f625"
+  },
+  "sk-SK": {
+    "/musiclab_libraries/music-library-intro2024.json": "1d86193aaa6166a9f9a2df4a1fb428af",
+    "/musiclab_libraries/music-library-launch2024.json": "23ceab2c628f5cf57086a5f95115f625"
+  },
+  "sl-SI": {
+    "/musiclab_libraries/music-library-intro2024.json": "23ceab2c628f5cf57086a5f95115f625",
+    "/musiclab_libraries/music-library-launch2024.json": "fa1dbc6e94a660b259614c5ece0cf4b0"
+  },
+  "sq-AL": {
+    "/musiclab_libraries/music-library-intro2024.json": "fa1dbc6e94a660b259614c5ece0cf4b0",
+    "/musiclab_libraries/music-library-launch2024.json": "6141fc6e8b0b346e5fb82c4e6733ba59"
+  },
+  "sr-SP": {
+    "/musiclab_libraries/music-library-intro2024.json": "fa1dbc6e94a660b259614c5ece0cf4b0",
+    "/musiclab_libraries/music-library-launch2024.json": "6141fc6e8b0b346e5fb82c4e6733ba59"
+  },
+  "sv-SE": {
+    "/musiclab_libraries/music-library-intro2024.json": "fa1dbc6e94a660b259614c5ece0cf4b0",
+    "/musiclab_libraries/music-library-launch2024.json": "6141fc6e8b0b346e5fb82c4e6733ba59"
+  },
+  "ta-IN": {
+    "/musiclab_libraries/music-library-intro2024.json": "fa1dbc6e94a660b259614c5ece0cf4b0",
+    "/musiclab_libraries/music-library-launch2024.json": "6141fc6e8b0b346e5fb82c4e6733ba59"
+  },
+  "te-IN": {
+    "/musiclab_libraries/music-library-intro2024.json": "fa1dbc6e94a660b259614c5ece0cf4b0",
+    "/musiclab_libraries/music-library-launch2024.json": "6141fc6e8b0b346e5fb82c4e6733ba59"
+  },
+  "th-TH": {
+    "/musiclab_libraries/music-library-intro2024.json": "fa1dbc6e94a660b259614c5ece0cf4b0",
+    "/musiclab_libraries/music-library-launch2024.json": "6141fc6e8b0b346e5fb82c4e6733ba59"
+  },
+  "tr-TR": {
+    "/musiclab_libraries/music-library-intro2024.json": "fa1dbc6e94a660b259614c5ece0cf4b0",
+    "/musiclab_libraries/music-library-launch2024.json": "6141fc6e8b0b346e5fb82c4e6733ba59"
+  },
+  "uk-UA": {
+    "/musiclab_libraries/music-library-intro2024.json": "fa1dbc6e94a660b259614c5ece0cf4b0",
+    "/musiclab_libraries/music-library-launch2024.json": "6141fc6e8b0b346e5fb82c4e6733ba59"
+  },
+  "ur-PK": {
+    "/musiclab_libraries/music-library-intro2024.json": "fa1dbc6e94a660b259614c5ece0cf4b0",
+    "/musiclab_libraries/music-library-launch2024.json": "6141fc6e8b0b346e5fb82c4e6733ba59"
+  },
+  "uz-UZ": {
+    "/musiclab_libraries/music-library-intro2024.json": "6141fc6e8b0b346e5fb82c4e6733ba59",
+    "/musiclab_libraries/music-library-launch2024.json": "00b482ebae0a8421d9914f7fbe083414"
+  },
+  "vi-VN": {
+    "/musiclab_libraries/music-library-intro2024.json": "00b482ebae0a8421d9914f7fbe083414",
+    "/musiclab_libraries/music-library-launch2024.json": "259118ee87e7690cb26dbd08918d3559"
+  },
+  "zh-CN": {
+    "/musiclab_libraries/music-library-intro2024.json": "00b482ebae0a8421d9914f7fbe083414",
+    "/musiclab_libraries/music-library-launch2024.json": "259118ee87e7690cb26dbd08918d3559"
+  },
+  "zh-TW": {
+    "/musiclab_libraries/music-library-intro2024.json": "00b482ebae0a8421d9914f7fbe083414",
+    "/musiclab_libraries/music-library-launch2024.json": "259118ee87e7690cb26dbd08918d3559"
+  }
+}
