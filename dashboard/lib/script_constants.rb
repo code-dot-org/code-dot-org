@@ -272,6 +272,7 @@ module ScriptConstants
     ALLTHETHINGS = 'allthethings'.freeze,
     COMPUTER_VISION = 'computer-vision'.freeze,
     CSD2_2024 = 'csd2-2024'.freeze,
+    K5_UNPLUGGED = 'k5-unplugged'.freeze
   ]
 
   DEFAULT_VERSION_YEAR = '2017'
