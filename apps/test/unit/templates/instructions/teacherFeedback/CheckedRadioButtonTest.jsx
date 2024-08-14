@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import {CheckedRadioButton} from '@cdo/apps/lib/ui/CheckedRadioButton';
+import {CheckedRadioButton} from '@cdo/apps/templates/instructions/teacherFeedback/CheckedRadioButton';
 
 const DEFAULT_PROPS = {
   id: 'rubric-input-performanceLevel1',
