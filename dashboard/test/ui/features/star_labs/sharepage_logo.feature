@@ -81,7 +81,7 @@ Feature: Lab share page logo
     And check that I am on "http://code.org/"
 
   @only_mobile
-  Scenario: Select the logo on a playlab share page while logged out and visit the homepage
+  Scenario: When on an applab share page while logged out on mobile, there is no logo.
     Given I am on "http://studio.code.org/projects/applab"
     And I wait for the lab page to fully load
     Then I click selector ".project_share"
@@ -91,7 +91,7 @@ Feature: Lab share page logo
     And element "#main_logo" does not exist
 
   @only_mobile
-  Scenario: Select the logo on a playlab share page while logged out and visit the homepage
+  Scenario: When on a gamelab share page while logged out on mobile, there is no logo.
     Given I am on "http://studio.code.org/projects/gamelab"
     And I wait for the lab page to fully load
     Then I click selector ".project_share"
