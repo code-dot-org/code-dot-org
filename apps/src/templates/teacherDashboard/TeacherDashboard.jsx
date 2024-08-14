@@ -144,7 +144,7 @@ function TeacherDashboard({
             <EmptySectionV1
               hasStudents={studentCount > 0}
               // Don't show no curriculum assigned error for projects tab.
-              hasCurriculumAssigned={anyStudentHasProgress}
+              hasCurriculumAssigned={false}
               element={applyV1TeacherDashboardWidth(
                 <SectionProjectsListWithData
                   studioUrlPrefix={studioUrlPrefix}
@@ -158,7 +158,6 @@ function TeacherDashboard({
           element={
             <EmptySectionV1
               hasStudents={studentCount > 0}
-              // Don't show no curriculum assigned error for projects tab.
               hasCurriculumAssigned={anyStudentHasProgress}
               element={applyV1TeacherDashboardWidth(<StatsTableWithData />)}
             />
@@ -169,7 +168,6 @@ function TeacherDashboard({
           element={
             <EmptySectionV1
               hasStudents={studentCount > 0}
-              // Don't show no curriculum assigned error for projects tab.
               hasCurriculumAssigned={anyStudentHasProgress}
               element={<SectionProgressSelector />}
               showProgressPageHeader={true}
@@ -181,7 +179,6 @@ function TeacherDashboard({
           element={
             <EmptySectionV1
               hasStudents={studentCount > 0}
-              // Don't show no curriculum assigned error for projects tab.
               hasCurriculumAssigned={anyStudentHasProgress}
               element={applyV1TeacherDashboardWidth(<TextResponses />)}
             />
@@ -192,7 +189,6 @@ function TeacherDashboard({
           element={
             <EmptySectionV1
               hasStudents={studentCount > 0}
-              // Don't show no curriculum assigned error for projects tab.
               hasCurriculumAssigned={anyStudentHasProgress}
               element={applyV1TeacherDashboardWidth(
                 <SectionAssessments sectionName={sectionName} />
@@ -206,7 +202,6 @@ function TeacherDashboard({
             element={
               <EmptySectionV1
                 hasStudents={studentCount > 0}
-                // Don't show no curriculum assigned error for projects tab.
                 hasCurriculumAssigned={anyStudentHasProgress}
                 element={applyV1TeacherDashboardWidth(
                   <TutorTab sectionId={sectionId} />
