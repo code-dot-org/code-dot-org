@@ -3,7 +3,7 @@ import React from 'react';
 
 import CollapsibleEditorSection from '@cdo/apps/levelbuilder/CollapsibleEditorSection';
 
-import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 import moduleStyles from '@cdo/apps/levelbuilder/levelbuilder.module.scss';
 

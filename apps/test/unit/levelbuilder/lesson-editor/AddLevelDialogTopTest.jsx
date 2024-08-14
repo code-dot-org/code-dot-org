@@ -4,7 +4,7 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {UnconnectedAddLevelDialogTop as AddLevelDialogTop} from '@cdo/apps/levelbuilder/lesson-editor/AddLevelDialogTop';
 
-import {assert, expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 import {searchOptions} from './activitiesTestData';
 

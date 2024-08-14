@@ -6,8 +6,8 @@ import {
   ENCRYPTED,
 } from '@cdo/apps/accounts/ManageLinkedAccounts';
 
-import {expect} from '../../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
-import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
+import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
+import {replaceOnWindow, restoreOnWindow} from '../../util/testUtils';
 
 const DEFAULT_PROPS = {
   userType: 'student',

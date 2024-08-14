@@ -5,7 +5,7 @@ import manageLinkedAccounts, {
   convertServerAuthOptions,
 } from '@cdo/apps/accounts/manageLinkedAccountsRedux';
 
-import {assert} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {assert} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('manageLinkedAccountsRedux', () => {
   let server;

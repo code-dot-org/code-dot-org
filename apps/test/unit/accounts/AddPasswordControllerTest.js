@@ -4,7 +4,7 @@ import {spy, stub} from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import AddPasswordController from '@cdo/apps/accounts/AddPasswordController';
 
-import {expect, assert} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {expect, assert} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('AddPasswordController', () => {
   let controller, form, mockMountPoint;

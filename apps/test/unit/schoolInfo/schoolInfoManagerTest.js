@@ -1,7 +1,7 @@
 import SchoolInfoManager from '@cdo/apps/schoolInfoManager';
 
-import {assertVisible, assertHidden} from '../util/assertions';
-import {enforceDocumentBodyCleanup} from '../util/testUtils';
+import {assertVisible, assertHidden} from '../../util/assertions';
+import {enforceDocumentBodyCleanup} from '../../util/testUtils';
 
 // This is the very beginning of testing for SchoolInfoManager.
 // It can be expanded to give full coverage.

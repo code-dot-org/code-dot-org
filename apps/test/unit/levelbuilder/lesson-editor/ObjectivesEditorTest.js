@@ -3,7 +3,7 @@ import React from 'react';
 
 import ObjectivesEditor from '@cdo/apps/levelbuilder/lesson-editor/ObjectivesEditor';
 
-import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
+import {allowConsoleWarnings} from '../../../util/throwOnConsole';
 
 describe('ObjectivesEditor', () => {
   // Warnings allowed due to usage of deprecated componentWillReceiveProps

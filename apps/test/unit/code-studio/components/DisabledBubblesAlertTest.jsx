@@ -1,8 +1,8 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
+import DisabledBubblesAlert from '@cdo/apps/code-studio/components/DisabledBubblesAlert';
 import {disabledBubblesSupportArticle} from '@cdo/apps/code-studio/disabledBubbles';
-import DisabledBubblesAlert from '@cdo/apps/code-studio/DisabledBubblesAlert';
 import Alert from '@cdo/apps/legacySharedComponents/alert';
 import i18n from '@cdo/locale';
 
