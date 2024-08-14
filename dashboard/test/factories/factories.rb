@@ -2036,6 +2036,10 @@ FactoryBot.define do
     status {SharedConstants::AI_TUTOR_INTERACTION_STATUS[:OK]}
   end
 
+  factory :aichat_event do
+    association :user
+  end
+
   factory :aichat_request do
     association :user
     model_customizations {{temperature: 0.5, retrievalContexts: ["test"], systemPrompt: "test"}.to_json}
