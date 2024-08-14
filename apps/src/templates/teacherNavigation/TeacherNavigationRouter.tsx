@@ -41,7 +41,7 @@ interface TeacherNavigationRouterProps {
   sectionProviderName: string;
 }
 
-export const TEACHER_NAVIGATION_BARE_URL = `/teacher_dashboard/sections/`;
+export const TEACHER_NAVIGATION_BASE_URL = `/teacher_dashboard/sections/`;
 
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
   return <div className={styles.widthLockedPage}>{children}</div>;
@@ -184,7 +184,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   return (
     <RouterProvider
       router={createBrowserRouter(createRoutesFromElements(routes), {
-        basename: TEACHER_NAVIGATION_BARE_URL,
+        basename: TEACHER_NAVIGATION_BASE_URL,
       })}
     />
   );
