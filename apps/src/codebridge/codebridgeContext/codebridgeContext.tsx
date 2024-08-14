@@ -8,6 +8,7 @@ import {
   SetConfigFunction,
   OnRunFunction,
   SourceType,
+  OnStopFunction,
 } from '../types';
 
 import {
@@ -32,6 +33,7 @@ type CodebridgeContextType = {
   setProject: SetProjectFunction;
   setConfig: SetConfigFunction;
   onRun?: OnRunFunction;
+  onStop?: OnStopFunction;
   saveFile: SaveFileFunction;
   closeFile: CloseFileFunction;
   setActiveFile: SetActiveFileFunction;

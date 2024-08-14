@@ -27,6 +27,7 @@ type CodebridgeProps = {
   setConfig: SetConfigFunction;
   startSource: ProjectSources;
   onRun?: OnRunFunction;
+  onStop?: () => void;
 };
 
 export const Codebridge = React.memo(
@@ -37,6 +38,7 @@ export const Codebridge = React.memo(
     setConfig,
     startSource,
     onRun,
+    onStop,
   }: CodebridgeProps) => {
     // keep our internal reducer backed copy synced up with our external whatever backed copy
     // see useSynchronizedProject for more info.
@@ -84,6 +86,7 @@ export const Codebridge = React.memo(
           setConfig,
           startSource,
           onRun,
+          onStop,
           ...projectUtilities,
         }}
       >
