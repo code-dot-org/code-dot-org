@@ -3,27 +3,27 @@ import {Routes, Route, Outlet, generatePath, Navigate} from 'react-router-dom';
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
 
-import ManageStudents from '../../manageStudents/ManageStudents';
-import SectionProjectsListWithData from '../../projects/SectionProjectsListWithData';
-import SectionAssessments from '../../sectionAssessments/SectionAssessments';
-import StandardsReport from '../../sectionProgress/standards/StandardsReport';
-import SectionProgressSelector from '../../sectionProgressV2/SectionProgressSelector';
-import TeacherNavigationBar from '../../teacherNavigation/TeacherNavigationBar';
-import TextResponses from '../../textResponses/TextResponses';
-import EmptySection from '../EmptySection';
-import SectionLoginInfo from '../SectionLoginInfo';
-import StatsTableWithData from '../StatsTableWithData';
+import ManageStudents from '../manageStudents/ManageStudents';
+import SectionProjectsListWithData from '../projects/SectionProjectsListWithData';
+import SectionAssessments from '../sectionAssessments/SectionAssessments';
+import StandardsReport from '../sectionProgress/standards/StandardsReport';
+import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
+import EmptySection from '../teacherDashboard/EmptySection';
+import SectionLoginInfo from '../teacherDashboard/SectionLoginInfo';
+import StatsTableWithData from '../teacherDashboard/StatsTableWithData';
+import TextResponses from '../textResponses/TextResponses';
 
-import SectionNavigablePageHeader from './TeacherDashboardHeaderV2';
+import PageHeader from './PageHeader';
 import {
   getSectionRouterPath,
   SECTION_ID_PATH_PART,
   TEACHER_DASHBOARD_PATHS,
 } from './TeacherDashboardPaths';
+import TeacherNavigationBar from './TeacherNavigationBar';
 
-import styles from './section-navigation.module.scss';
+import styles from './teacher-navigation.module.scss';
 
-interface SectionNavigationRouterProps {
+interface TeacherNavigationRouterProps {
   studioUrlPrefix: string;
   sectionId: number;
   sectionName: string;
@@ -33,13 +33,13 @@ interface SectionNavigationRouterProps {
   sectionProviderName: string;
 }
 
-export const SECTION_NAVIGATION_BARE_URL = `/teacher_dashboard/sections/`;
+export const TEACHER_NAVIGATION_BARE_URL = `/teacher_dashboard/sections/`;
 
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
   return <div className={styles.widthLockedPage}>{children}</div>;
 };
 
-const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
+const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   studioUrlPrefix,
   sectionId,
   sectionName,
@@ -94,7 +94,7 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
           path={`${SECTION_ID_PATH_PART}/`}
           element={
             <div className={styles.pageWithHeader}>
-              <SectionNavigablePageHeader />
+              <PageHeader />
               <Outlet />
             </div>
           }
@@ -180,4 +180,4 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
   );
 };
 
-export default SectionNavigationRouter;
+export default TeacherNavigationRouter;

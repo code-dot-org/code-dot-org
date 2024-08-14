@@ -1,7 +1,7 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
 
-import {selectAllMessages} from '@cdo/apps/aichat/redux/aichatRedux';
+import {selectAllVisibleMessages} from '@cdo/apps/aichat/redux/aichatRedux';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -19,7 +19,7 @@ import {
 import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 
 const CopyButton: React.FunctionComponent = () => {
-  const messages = useSelector(selectAllMessages);
+  const messages = useSelector(selectAllVisibleMessages);
 
   const handleCopy = () => {
     const textToCopy = messages.map(chatEventToFormattedString).join('\n');

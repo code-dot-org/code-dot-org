@@ -9,7 +9,7 @@ import {
   LABELED_TEACHER_DASHBOARD_PATHS,
 } from './TeacherDashboardPaths';
 
-const SectionNavigablePageHeader: React.FC = () => {
+const PageHeader: React.FC = () => {
   const location = useLocation();
   const pathName = React.useMemo(
     () =>
@@ -23,4 +23,4 @@ const SectionNavigablePageHeader: React.FC = () => {
   return <Heading1>{pathName}</Heading1>;
 };
 
-export default SectionNavigablePageHeader;
+export default PageHeader;
