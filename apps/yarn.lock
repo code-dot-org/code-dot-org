@@ -8461,9 +8461,9 @@ __metadata:
     redux-logger: ^2.6.1
     redux-mock-store: ^1.2.3
     redux-thunk: ^2.0.1
-    rehype-raw: ^4.0.0
+    rehype-raw: ^5.1.0
     rehype-react: ^3.1.0
-    rehype-sanitize: ^2.0.2
+    rehype-sanitize: ^4.0.0
     remark-parse: ~8.0.3
     remark-rehype: 8.1.0
     rgbcolor: 0.0.4
@@ -8938,7 +8938,7 @@ canvg@gabelerner/canvg:
   languageName: node
   linkType: hard
 
-"ccount@npm:^1.0.0, ccount@npm:^1.0.3":
+"ccount@npm:^1.0.0":
   version: 1.0.3
   resolution: "ccount@npm:1.0.3"
   checksum: fd4fa4c54cb3f316fa4517c76284146262acc36f14d22a45cda40b9418ff7f9bbcc33b63fc20acdce50fc5b0b956c6ae0931b5d012c0fe968b1fe7ead23ab0e1
@@ -14380,20 +14380,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"hast-to-hyperscript@npm:^6.0.0":
-  version: 6.0.0
-  resolution: "hast-to-hyperscript@npm:6.0.0"
-  dependencies:
-    comma-separated-tokens: ^1.0.0
-    property-information: ^5.0.0
-    space-separated-tokens: ^1.0.0
-    style-to-object: ^0.2.1
-    unist-util-is: ^2.0.0
-    web-namespaces: ^1.1.2
-  checksum: 5ef55e40c7d39f41545c9544f1fa305f15fb9d83308baf452d2509f1136cabd66ba75546fb68bd0b0562803251781427b14eedbabc427eeec0a6ec9c2f7e5170
-  languageName: node
-  linkType: hard
-
 "hast-to-hyperscript@npm:^9.0.0":
   version: 9.0.1
   resolution: "hast-to-hyperscript@npm:9.0.1"
@@ -14406,19 +14392,6 @@ es6-shim@latest:
     unist-util-is: ^4.0.0
     web-namespaces: ^1.0.0
   checksum: de570d789853018fff2fd38fc096549b9814e366b298f60c90c159a57018230eefc44d46a246027b0e2426ed9e99f2e270050bc183d5bdfe4c9487c320b392cd
-  languageName: node
-  linkType: hard
-
-"hast-util-from-parse5@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "hast-util-from-parse5@npm:5.0.0"
-  dependencies:
-    ccount: ^1.0.3
-    hastscript: ^5.0.0
-    property-information: ^5.0.0
-    web-namespaces: ^1.1.2
-    xtend: ^4.0.1
-  checksum: 945d7d24ed50b977d1d34603cf69b3ecdc673e54bee00c97ab42f13518b1f9a52af4cac1ae8631aa698dfed8126989a883f9216f2a117b8e00a6eb14f139e7e7
   languageName: node
   linkType: hard
 
@@ -14468,29 +14441,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"hast-util-parse-selector@npm:^2.2.0":
-  version: 2.2.1
-  resolution: "hast-util-parse-selector@npm:2.2.1"
-  checksum: 95ecbd22738c338a6a95e8aa18a544179f0da2739637348a5090dc46854b9aa664db9d5c31cfc310be1c7436177b7db73f320c084fb5c21eac2beae5d7c027a2
-  languageName: node
-  linkType: hard
-
-"hast-util-raw@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "hast-util-raw@npm:5.0.0"
-  dependencies:
-    hast-util-from-parse5: ^5.0.0
-    hast-util-to-parse5: ^5.0.0
-    html-void-elements: ^1.0.1
-    parse5: ^5.0.0
-    unist-util-position: ^3.0.0
-    web-namespaces: ^1.0.0
-    xtend: ^4.0.1
-    zwitch: ^1.0.0
-  checksum: 86be41cc6240983bf3786796754bc7abe1d6cc832a06c40691dbd653a92240a9f7fbd4cfd5bdc3adc2811b9d9e3b845eee397f8a161befb41f35a11fe2276fd7
-  languageName: node
-  linkType: hard
-
 "hast-util-raw@npm:^6.1.0":
   version: 6.1.0
   resolution: "hast-util-raw@npm:6.1.0"
@@ -14507,15 +14457,6 @@ es6-shim@latest:
     xtend: ^4.0.0
     zwitch: ^1.0.0
   checksum: dfa4da83ce718bae8a91a88ee4c5ef43e0091dcd32775de633669b412f2ada35a71bb79c4e4b2851175a5a50861d7abe2049d45b97176b892b861d71591a18e6
-  languageName: node
-  linkType: hard
-
-"hast-util-sanitize@npm:^1.1.0":
-  version: 1.3.0
-  resolution: "hast-util-sanitize@npm:1.3.0"
-  dependencies:
-    xtend: ^4.0.1
-  checksum: 4bd7f2cd4d3ca94609063ee83e0faee89de1874c59fd9192e5dc53e1bd09038a4f710660bce93c704e9762970bbfa977edfa50480873ce7809da4f05bf03db5c
   languageName: node
   linkType: hard
 
@@ -14546,19 +14487,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"hast-util-to-parse5@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "hast-util-to-parse5@npm:5.0.0"
-  dependencies:
-    hast-to-hyperscript: ^6.0.0
-    property-information: ^5.0.0
-    web-namespaces: ^1.0.0
-    xtend: ^4.0.1
-    zwitch: ^1.0.0
-  checksum: ca0d593abd6815cd97bf4baf2d7dda073b2af63d53f5c34db1a9c6995bd704bdc04e8c1fdf3d68e4a2b164d4f5dc5f2c84a852885a806d78a466322e9009a3bd
-  languageName: node
-  linkType: hard
-
 "hast-util-to-parse5@npm:^6.0.0":
   version: 6.0.0
   resolution: "hast-util-to-parse5@npm:6.0.0"
@@ -14585,18 +14513,6 @@ es6-shim@latest:
   version: 1.0.1
   resolution: "hast-util-whitespace@npm:1.0.1"
   checksum: 39ad8005e158f4e5eb1146218120ef09cf0f02a0ce3672491611ba8bd09b96fbd00ba40d7fb6b869eca362558cf7cd08210f0301c909d7bb359186b7df913281
-  languageName: node
-  linkType: hard
-
-"hastscript@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "hastscript@npm:5.0.0"
-  dependencies:
-    comma-separated-tokens: ^1.0.0
-    hast-util-parse-selector: ^2.2.0
-    property-information: ^5.0.1
-    space-separated-tokens: ^1.0.0
-  checksum: 6f0bda1d391558f62fda6c76389b565810cb6d05dcbe8903ec43ca8578385e1300313ac165cb673cb1f3839323539ea41f9cd7b2b9795fbbcd0c42ecd0d374ca
   languageName: node
   linkType: hard
 
@@ -14778,7 +14694,7 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"html-void-elements@npm:^1.0.0, html-void-elements@npm:^1.0.1":
+"html-void-elements@npm:^1.0.0":
   version: 1.0.3
   resolution: "html-void-elements@npm:1.0.3"
   checksum: 475e47fe9f84c66ca73845e87af2df04e89e9e12982df4af369c4a4c1bd6ceb5e262c19b4ee66af1921b47bf6714dff3cbe898b2ddcfcdd41a277d34adbd690e
@@ -19796,13 +19712,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"parse5@npm:^5.0.0":
-  version: 5.1.0
-  resolution: "parse5@npm:5.1.0"
-  checksum: 13c44c6d47035a3cc75303655ae5630dc264f9b9ab8344feb3f79ca195d8b57a2a246af902abef1d780ad1eee92eb9b88cd03098a7ee7dd111f032152ebaf0a6
-  languageName: node
-  linkType: hard
-
 "parse5@npm:^6.0.0":
   version: 6.0.1
   resolution: "parse5@npm:6.0.1"
@@ -20623,7 +20532,7 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"property-information@npm:^5.0.0, property-information@npm:^5.0.1":
+"property-information@npm:^5.0.0":
   version: 5.0.1
   resolution: "property-information@npm:5.0.1"
   dependencies:
@@ -22376,15 +22285,6 @@ es6-shim@latest:
   languageName: node
   linkType: hard
 
-"rehype-raw@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "rehype-raw@npm:4.0.0"
-  dependencies:
-    hast-util-raw: ^5.0.0
-  checksum: e2a08c21ab8ec1236cbe4f9db7f50231b8d6b4979c9ed582de6c97448b5269b4e0e7da1d58a707f54be6cce729a99b2b267a35fc682fb2b9960bd2cb41a20575
-  languageName: node
-  linkType: hard
-
 "rehype-raw@npm:^5.1.0":
   version: 5.1.0
   resolution: "rehype-raw@npm:5.1.0"
@@ -22402,15 +22302,6 @@ es6-shim@latest:
     has: ^1.0.1
     hast-to-hyperscript: ^5.0.0
   checksum: c6248731bcf102c52f83f208305762aa7c7eb071f29dd3045a6995657a123cfca7ac514f70fb042435f30ec71b68dc8dd1c5581141b4e84ff6beaf3177ef6b09
-  languageName: node
-  linkType: hard
-
-"rehype-sanitize@npm:^2.0.2":
-  version: 2.0.2
-  resolution: "rehype-sanitize@npm:2.0.2"
-  dependencies:
-    hast-util-sanitize: ^1.1.0
-  checksum: f6569e7b71b1d84f2cd28ffce141ebba79ed194b4b17ce49820001bfd87396940311989e7308ce230d080b8db712da34d93746f21e29a8c33dfd0b04bc950af1
   languageName: node
   linkType: hard
 
