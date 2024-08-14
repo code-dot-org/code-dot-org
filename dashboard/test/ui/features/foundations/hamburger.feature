@@ -52,7 +52,7 @@ Feature: Hamburger dropdown
     And I see "#report-bug"
 
   @only_phone
-  Scenario: Signed out user should see Sign in and Create account buttons on mobile on code.org
+  Scenario: Signed out user should see Sign in and Create account buttons on code.org mobile
     Given I am on "http://code.org/"
     And I rotate to portrait
     Then I wait to see "#hamburger-icon"
@@ -62,7 +62,7 @@ Feature: Hamburger dropdown
     And I see "#create_account_button"
 
   @only_phone
-  Scenario: Signed out user should see Sign in and Create account buttons on mobile on studio.code.org
+  Scenario: Signed out user should see Sign in and Create account buttons on studio.code.org mobile
     Given I am on "http://studio.code.org/catalog"
     And I rotate to portrait
     Then I wait to see "#hamburger-icon"
