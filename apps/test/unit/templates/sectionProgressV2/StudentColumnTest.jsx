@@ -2,7 +2,6 @@ import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import DCDO from '@cdo/apps/dcdo';
 import {
   getStore,
   registerReducers,
@@ -43,8 +42,6 @@ describe('StudentColumn', () => {
     });
 
     store = getStore();
-
-    DCDO.set('progress-v2-metadata-enabled', false);
   });
 
   afterEach(() => {
@@ -89,9 +86,7 @@ describe('StudentColumn', () => {
     screen.getByText('Moriarty');
   });
 
-  it('shows expansion if DCDO flag is enabled', () => {
-    DCDO.set('progress-v2-metadata-enabled', true);
-
+  it('shows expansion', () => {
     renderDefault({
       sortedStudents: [studentA, studentB],
     });

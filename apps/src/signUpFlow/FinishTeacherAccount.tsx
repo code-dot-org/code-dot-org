@@ -8,7 +8,7 @@ import {
   BodyTwoText,
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
-import locale from '@cdo/apps/signup/locale';
+import locale from '@cdo/apps/signUpFlow/locale';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 
 import {

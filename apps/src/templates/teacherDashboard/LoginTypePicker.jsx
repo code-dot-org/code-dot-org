@@ -19,7 +19,7 @@ import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
 import i18n from '@cdo/locale';
 
-import {Heading3} from '../../lib/ui/Headings';
+import {Heading3} from '../../legacySharedComponents/Headings';
 import styleConstants from '../../styleConstants';
 
 import CardContainer from './CardContainer';

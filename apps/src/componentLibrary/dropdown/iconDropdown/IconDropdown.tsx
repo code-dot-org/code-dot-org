@@ -84,7 +84,7 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
       size={size}
       {...rest}
     >
-      <form className={moduleStyles.dropdownMenuContainer}>
+      <div className={moduleStyles.dropdownMenuContainer}>
         <ul>
           {options.map(option => {
             const {
@@ -123,7 +123,7 @@ const IconDropdown: React.FunctionComponent<IconDropdownProps> = ({
             );
           })}
         </ul>
-      </form>
+      </div>
     </CustomDropdown>
   );
 };

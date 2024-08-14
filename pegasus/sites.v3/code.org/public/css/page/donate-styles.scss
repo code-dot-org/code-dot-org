@@ -1,24 +1,11 @@
 // Custom styles for code.org/donate
 // — supplemental to shared/css/design-system-pegasus.scss
 
-@import "color", "font", "typography", "breakpoints",
-  "barlow-semi-condensed-font";
+@import "breakpoints";
 
 section.top {
   .flex-container {
     gap: 1rem;
-  }
-}
-
-section.fundraise {
-  background: url("/images/banners/banner-bg-lines-neutral-dark.png") center
-    repeat;
-  background-size: 10rem;
-  background-color: $neutral-dark;
-
-  h2,
-  p {
-    color: $neutral-white;
   }
 }
 
@@ -53,17 +40,54 @@ section.donate-options {
         display: none !important;
       }
     }
+
+    @media (max-width: $width-sm) {
+      &.show-tablet-and-mobile > .classy {
+        figure {
+          padding: 0;
+          background: none;
+        }
+
+        .classy-inline-embed {
+          width: 100%;
+        }
+      }
+    }
   }
 }
 
-section.supporters {
-  .logos {
-    margin-block: 3rem;
-    gap: 3rem;
+.logos-wrapper img {
+  width: 100px;
+}
 
-    img {
-      width: 100px;
-      align-self: center;
+section.spread-the-word {
+  div.content-wrapper {
+    gap: 2rem;
+  }
+
+  ul.icon-bullet-list {
+    margin: 0;
+    width: 57%;
+
+    @media screen and (max-width: $width-md) {
+      width: 100%;
+    }
+  }
+
+  figure {
+    background: url("/images/help-page-spread-word.png") center no-repeat;
+    background-size: cover;
+    height: auto;
+    flex-grow: 1;
+    margin: 1.5rem 0;
+
+    @media screen and (max-width: $width-md) {
+      height: 28rem;
+      margin-bottom: 0;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      height: 20rem;
     }
   }
 }

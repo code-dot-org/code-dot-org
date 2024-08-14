@@ -1,8 +1,8 @@
 import {render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
 
-import locale from '@cdo/apps/signup/locale';
 import FinishTeacherAccount from '@cdo/apps/signUpFlow/FinishTeacherAccount';
+import locale from '@cdo/apps/signUpFlow/locale';
 import {
   USER_NAME_SESSION_KEY,
   EMAIL_OPT_IN_SESSION_KEY,
