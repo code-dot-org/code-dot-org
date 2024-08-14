@@ -1,5 +1,5 @@
 {
-  "category": "HoC",
+  "category": "Transformers",
   "config": {
     "func": "playSoundOptions",
     "docFunc": "gamelab_playSound",
