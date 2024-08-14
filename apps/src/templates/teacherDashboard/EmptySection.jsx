@@ -17,7 +17,7 @@ import {TEACHER_DASHBOARD_PATHS} from '../teacherNavigation/TeacherDashboardPath
 import styles from './teacher-dashboard.module.scss';
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
-function EmptySection({hasStudents, hasCurriculumAssigned}) {
+function EmptySection({hasStudents, hasCurriculumAssigned, element}) {
   const textDescription = !hasStudents
     ? i18n.emptySectionDescription()
     : i18n.noCurriculumAssigned();
@@ -50,24 +50,29 @@ function EmptySection({hasStudents, hasCurriculumAssigned}) {
     </div>
   );
 
-  return (
-    <div className={dashboardStyles.emptyClassroomDiv}>
-      {location.pathname === TEACHER_DASHBOARD_PATHS.progress && (
-        <div>
-          <Heading1>{i18n.progress()}</Heading1>
-          {emptySectionGraphic(dashboardStyles.emptyClassroomProgress)}
-        </div>
-      )}
-      {location.pathname !== TEACHER_DASHBOARD_PATHS.progress &&
-        emptySectionGraphic(dashboardStyles.emptyClassroom)}
-    </div>
-  );
+  if (hasStudents && hasCurriculumAssigned) {
+    return element;
+  } else {
+    return (
+      <div className={dashboardStyles.emptyClassroomDiv}>
+        {location.pathname === TEACHER_DASHBOARD_PATHS.progress && (
+          <div>
+            <Heading1>{i18n.progress()}</Heading1>
+            {emptySectionGraphic(dashboardStyles.emptyClassroomProgress)}
+          </div>
+        )}
+        {location.pathname !== TEACHER_DASHBOARD_PATHS.progress &&
+          emptySectionGraphic(dashboardStyles.emptyClassroom)}
+      </div>
+    );
+  }
 }
 
 EmptySection.propTypes = {
   className: PropTypes.string,
   hasStudents: PropTypes.bool,
   hasCurriculumAssigned: PropTypes.bool,
+  element: PropTypes.element,
 };
 
 export default EmptySection;

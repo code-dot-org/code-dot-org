@@ -56,21 +56,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   showAITutorTab,
   sectionProviderName,
 }) => {
-  const renderEmptyStateOrElement = React.useCallback(
-    (element: React.ReactNode) => {
-      if (studentCount === 0 || !anyStudentHasProgress) {
-        return (
-          <EmptySection
-            hasStudents={studentCount !== 0}
-            hasCurriculumAssigned={!anyStudentHasProgress}
-          />
-        );
-      }
-      return element;
-    },
-    [studentCount, anyStudentHasProgress]
-  );
-
   const redirectToDefaultPath = React.useMemo(
     () => (
       <Navigate
@@ -129,52 +114,85 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
         />
         <Route
           path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.standardsReport)}
-          element={renderEmptyStateOrElement(
-            applyV1TeacherDashboardWidth(<StandardsReport />)
-          )}
+          element={
+            <EmptySection
+              hasStudents={studentCount !== 0}
+              hasCurriculumAssigned={anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(<StandardsReport />)}
+            />
+          }
         />
         <Route
           path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.projects)}
-          element={renderEmptyStateOrElement(
-            applyV1TeacherDashboardWidth(
-              <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
-            )
-          )}
+          element={
+            <EmptySection
+              hasStudents={studentCount !== 0}
+              // Don't show no curriculum assigned error for projects tab.
+              hasCurriculumAssigned={true}
+              element={applyV1TeacherDashboardWidth(
+                <SectionProjectsListWithData
+                  studioUrlPrefix={studioUrlPrefix}
+                />
+              )}
+            />
+          }
         />
         <Route
           path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.stats)}
-          element={renderEmptyStateOrElement(
-            applyV1TeacherDashboardWidth(<StatsTableWithData />)
-          )}
+          element={
+            <EmptySection
+              hasStudents={studentCount !== 0}
+              hasCurriculumAssigned={anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(<StatsTableWithData />)}
+            />
+          }
         />
         <Route
           path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.progress)}
-          element={renderEmptyStateOrElement(
-            renderEmptyStateOrElement(<SectionProgressSelector />)
-          )}
+          element={
+            <EmptySection
+              hasStudents={studentCount !== 0}
+              hasCurriculumAssigned={anyStudentHasProgress}
+              element={<SectionProgressSelector />}
+            />
+          }
         />
         <Route
           path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.textResponses)}
-          element={renderEmptyStateOrElement(
-            applyV1TeacherDashboardWidth(<TextResponses />)
-          )}
+          element={
+            <EmptySection
+              hasStudents={studentCount !== 0}
+              hasCurriculumAssigned={anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(<TextResponses />)}
+            />
+          }
         />
         <Route
           path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.assessments)}
-          element={renderEmptyStateOrElement(
-            applyV1TeacherDashboardWidth(
-              <SectionAssessments sectionName={sectionName} />
-            )
-          )}
+          element={
+            <EmptySection
+              hasStudents={studentCount !== 0}
+              hasCurriculumAssigned={anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(
+                <SectionAssessments sectionName={sectionName} />
+              )}
+            />
+          }
         />
         {showAITutorTab && (
           <Route
             path={getSectionRouterPath(
               TEACHER_DASHBOARD_PATHS.aiTutorChatMessages
             )}
-            element={renderEmptyStateOrElement(
-              applyV1TeacherDashboardWidth(<TutorTab sectionId={sectionId} />)
-            )}
+            element={
+              <EmptySection
+                hasStudents={studentCount !== 0}
+                hasCurriculumAssigned={anyStudentHasProgress}
+                element={applyV1TeacherDashboardWidth(
+                  <TutorTab sectionId={sectionId} />
+                )}
+              />
+            }
           />
         )}
       </Route>

@@ -99,26 +99,6 @@ function TeacherDashboard({
     location.pathname !== TEACHER_DASHBOARD_PATHS.standardsReport &&
     location.pathname !== TEACHER_DASHBOARD_PATHS.navTestV2;
 
-  const renderEmptySectionOrElement = (
-    element,
-    showCurriculumAssignedEmpty = true
-  ) => {
-    if (
-      studentCount === 0 ||
-      (!anyStudentHasProgress && showCurriculumAssignedEmpty)
-    ) {
-      return (
-        <EmptySection
-          hasStudents={studentCount > 0}
-          hasCurriculumAssigned={
-            anyStudentHasProgress || !showCurriculumAssignedEmpty
-          }
-        />
-      );
-    }
-    return element;
-  };
-
   return (
     <div>
       {includeHeader && (
@@ -149,49 +129,88 @@ function TeacherDashboard({
         />
         <Route
           path={TEACHER_DASHBOARD_PATHS.standardsReport}
-          element={renderEmptySectionOrElement(
-            applyV1TeacherDashboardWidth(<StandardsReport />)
-          )}
+          element={
+            <EmptySection
+              hasStudents={studentCount > 0}
+              hasCurriculumAssigned={anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(<StandardsReport />)}
+            />
+          }
         />
         <Route
           path={TEACHER_DASHBOARD_PATHS.projects}
-          element={renderEmptySectionOrElement(
-            applyV1TeacherDashboardWidth(
-              <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
-            ),
-            false
-          )}
+          element={
+            <EmptySection
+              hasStudents={studentCount > 0}
+              // Don't show no curriculum assigned error for projects tab.
+              hasCurriculumAssigned={anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(
+                <SectionProjectsListWithData
+                  studioUrlPrefix={studioUrlPrefix}
+                />
+              )}
+            />
+          }
         />
         <Route
           path={TEACHER_DASHBOARD_PATHS.stats}
-          element={renderEmptySectionOrElement(
-            applyV1TeacherDashboardWidth(<StatsTableWithData />)
-          )}
+          element={
+            <EmptySection
+              hasStudents={studentCount > 0}
+              // Don't show no curriculum assigned error for projects tab.
+              hasCurriculumAssigned={anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(<StatsTableWithData />)}
+            />
+          }
         />
         <Route
           path={TEACHER_DASHBOARD_PATHS.progress}
-          element={renderEmptySectionOrElement(<SectionProgressSelector />)}
+          element={
+            <EmptySection
+              hasStudents={studentCount > 0}
+              // Don't show no curriculum assigned error for projects tab.
+              hasCurriculumAssigned={anyStudentHasProgress}
+              element={<SectionProgressSelector />}
+            />
+          }
         />
         <Route
           path={TEACHER_DASHBOARD_PATHS.textResponses}
-          element={renderEmptySectionOrElement(
-            applyV1TeacherDashboardWidth(<TextResponses />)
-          )}
+          element={
+            <EmptySection
+              hasStudents={studentCount > 0}
+              // Don't show no curriculum assigned error for projects tab.
+              hasCurriculumAssigned={anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(<TextResponses />)}
+            />
+          }
         />
         <Route
           path={TEACHER_DASHBOARD_PATHS.assessments}
-          element={renderEmptySectionOrElement(
-            applyV1TeacherDashboardWidth(
-              <SectionAssessments sectionName={sectionName} />
-            )
-          )}
+          element={
+            <EmptySection
+              hasStudents={studentCount > 0}
+              // Don't show no curriculum assigned error for projects tab.
+              hasCurriculumAssigned={anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(
+                <SectionAssessments sectionName={sectionName} />
+              )}
+            />
+          }
         />
         {showAITutorTab && (
           <Route
             path={TEACHER_DASHBOARD_PATHS.aiTutorChatMessages}
-            element={renderEmptySectionOrElement(
-              applyV1TeacherDashboardWidth(<TutorTab sectionId={sectionId} />)
-            )}
+            element={
+              <EmptySection
+                hasStudents={studentCount > 0}
+                // Don't show no curriculum assigned error for projects tab.
+                hasCurriculumAssigned={anyStudentHasProgress}
+                element={applyV1TeacherDashboardWidth(
+                  <TutorTab sectionId={sectionId} />
+                )}
+              />
+            }
           />
         )}
       </Routes>

@@ -5,59 +5,79 @@ import {BrowserRouter as Router} from 'react-router-dom';
 import EmptySection from '@cdo/apps/templates/teacherDashboard/EmptySection';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+const TEST_ELEMENT_TEXT = 'Test Element';
 
 describe('EmptySection', () => {
   it('displays empty desk image and Add Students link when there are no students', () => {
     render(
       <Router>
-        <EmptySection hasStudents={false} hasCurriculumAssigned={false} />
+        <EmptySection
+          hasStudents={false}
+          hasCurriculumAssigned={false}
+          element={<div>{TEST_ELEMENT_TEXT}</div>}
+        />
       </Router>
     );
 
-    expect(screen.getByAltText('empty desk')).to.be.visible;
-    expect(screen.getByText(i18n.addStudents())).to.be.visible;
-    expect(screen.queryByAltText('blank screen')).not.be.visible;
-    expect(screen.queryByText(i18n.browseCurriculum())).not.be.visible;
+    screen.getByAltText('empty desk');
+    screen.getByText(i18n.addStudents());
+    expect(screen.queryByAltText('blank screen')).toBeNull();
+    expect(screen.queryByText(i18n.browseCurriculum())).toBeNull();
+    expect(screen.queryByText(TEST_ELEMENT_TEXT)).toBeNull();
   });
 
   it('displays blank screen image and Browse Curriculum button when there are students but no curriculum assigned', () => {
     render(
       <Router>
-        <EmptySection hasStudents={true} hasCurriculumAssigned={false} />
+        <EmptySection
+          hasStudents={true}
+          hasCurriculumAssigned={false}
+          element={<div>{TEST_ELEMENT_TEXT}</div>}
+        />
       </Router>
     );
 
-    expect(screen.getByAltText('blank screen')).to.be.visible;
-    expect(screen.getByText(i18n.browseCurriculum())).to.be.visible;
-    expect(screen.queryByAltText('empty desk')).not.be.visible;
-    expect(screen.queryByText(i18n.addStudents())).not.be.visible;
+    screen.getByAltText('blank screen');
+    screen.getByText(i18n.browseCurriculum());
+    expect(screen.queryByAltText('empty desk')).toBeNull();
+    expect(screen.queryByText(i18n.addStudents())).toBeNull();
+    expect(screen.queryByText(TEST_ELEMENT_TEXT)).toBeNull();
   });
 
   it('displays empty desk image and Add Students button when there are no students but there is a curriculum assigned', () => {
     render(
       <Router>
-        <EmptySection hasStudents={false} hasCurriculumAssigned={true} />
+        <EmptySection
+          hasStudents={false}
+          hasCurriculumAssigned={true}
+          element={<div>{TEST_ELEMENT_TEXT}</div>}
+        />
       </Router>
     );
 
-    expect(screen.getByAltText('empty desk')).to.be.visible;
-    expect(screen.getByText(i18n.addStudents())).to.be.visible;
-    expect(screen.queryByAltText('blank screen')).not.be.visible;
-    expect(screen.queryByText(i18n.browseCurriculum())).not.be.visible;
+    screen.getByAltText('empty desk');
+    screen.getByText(i18n.addStudents());
+    expect(screen.queryByAltText('blank screen')).toBeNull();
+    expect(screen.queryByText(i18n.browseCurriculum())).toBeNull();
+    expect(screen.queryByText(TEST_ELEMENT_TEXT)).toBeNull();
   });
 
-  it('only displays headline and description when there are students and a curriculum is assigned', () => {
+  it('Displays element when has students and curriculum', () => {
     render(
       <Router>
-        <EmptySection hasStudents={true} hasCurriculumAssigned={true} />
+        <EmptySection
+          hasStudents={true}
+          hasCurriculumAssigned={true}
+          element={<div>{TEST_ELEMENT_TEXT}</div>}
+        />
       </Router>
     );
 
-    expect(screen.getByText(i18n.emptySectionHeadline())).to.be.visible;
-    expect(screen.queryByAltText('empty desk')).not.be.visible;
-    expect(screen.queryByAltText('blank screen')).not.be.visible;
-    expect(screen.queryByText(i18n.addStudents())).not.be.visible;
-    expect(screen.queryByText(i18n.browseCurriculum())).not.be.visible;
+    expect(screen.queryByText(i18n.emptySectionHeadline())).toBeNull();
+    expect(screen.queryByAltText('empty desk')).toBeNull();
+    expect(screen.queryByAltText('blank screen')).toBeNull();
+    expect(screen.queryByText(i18n.addStudents())).toBeNull();
+    expect(screen.queryByText(i18n.browseCurriculum())).toBeNull();
+    screen.getByText(TEST_ELEMENT_TEXT);
   });
 });
