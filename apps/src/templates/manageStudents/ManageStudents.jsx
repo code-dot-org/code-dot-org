@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import SyncOmniAuthSectionControl from '@cdo/apps/accounts/SyncOmniAuthSectionControl';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import SyncOmniAuthSectionControl from '@cdo/apps/lib/ui/SyncOmniAuthSectionControl';
 import {loadSectionStudentData} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 import ManageStudentsTable from './ManageStudentsTable';

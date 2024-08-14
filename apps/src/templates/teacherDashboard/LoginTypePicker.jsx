@@ -8,9 +8,9 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';

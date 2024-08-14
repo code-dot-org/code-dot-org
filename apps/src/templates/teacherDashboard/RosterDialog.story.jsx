@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
+import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 
 import {stubRailsAuthenticityToken} from '../../../test/util/stubRailsAuthenticityToken';
 

@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
-import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
+import PopUpMenu, {MenuBreak} from '@cdo/apps/sharedComponents/PopUpMenu';
 import i18n from '@cdo/locale';
 
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
