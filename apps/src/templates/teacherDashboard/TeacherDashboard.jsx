@@ -15,12 +15,13 @@ import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
 import firehoseClient from '../../lib/util/firehose';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
-import {TEACHER_DASHBOARD_PATHS} from '../teacherNavigation/TeacherDashboardPaths';
 
-import EmptySection from './EmptySection';
+import EmptySectionV1 from './EmptySectionV1';
 import StatsTableWithData from './StatsTableWithData';
 import TeacherDashboardHeader from './TeacherDashboardHeader';
-import TeacherDashboardNavigation from './TeacherDashboardNavigation';
+import TeacherDashboardNavigation, {
+  TEACHER_DASHBOARD_PATHS,
+} from './TeacherDashboardNavigation';
 
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
@@ -130,7 +131,7 @@ function TeacherDashboard({
         <Route
           path={TEACHER_DASHBOARD_PATHS.standardsReport}
           element={
-            <EmptySection
+            <EmptySectionV1
               hasStudents={studentCount > 0}
               hasCurriculumAssigned={anyStudentHasProgress}
               element={applyV1TeacherDashboardWidth(<StandardsReport />)}
@@ -140,7 +141,7 @@ function TeacherDashboard({
         <Route
           path={TEACHER_DASHBOARD_PATHS.projects}
           element={
-            <EmptySection
+            <EmptySectionV1
               hasStudents={studentCount > 0}
               // Don't show no curriculum assigned error for projects tab.
               hasCurriculumAssigned={anyStudentHasProgress}
@@ -155,7 +156,7 @@ function TeacherDashboard({
         <Route
           path={TEACHER_DASHBOARD_PATHS.stats}
           element={
-            <EmptySection
+            <EmptySectionV1
               hasStudents={studentCount > 0}
               // Don't show no curriculum assigned error for projects tab.
               hasCurriculumAssigned={anyStudentHasProgress}
@@ -166,18 +167,19 @@ function TeacherDashboard({
         <Route
           path={TEACHER_DASHBOARD_PATHS.progress}
           element={
-            <EmptySection
+            <EmptySectionV1
               hasStudents={studentCount > 0}
               // Don't show no curriculum assigned error for projects tab.
               hasCurriculumAssigned={anyStudentHasProgress}
               element={<SectionProgressSelector />}
+              showProgressPageHeader={true}
             />
           }
         />
         <Route
           path={TEACHER_DASHBOARD_PATHS.textResponses}
           element={
-            <EmptySection
+            <EmptySectionV1
               hasStudents={studentCount > 0}
               // Don't show no curriculum assigned error for projects tab.
               hasCurriculumAssigned={anyStudentHasProgress}
@@ -188,7 +190,7 @@ function TeacherDashboard({
         <Route
           path={TEACHER_DASHBOARD_PATHS.assessments}
           element={
-            <EmptySection
+            <EmptySectionV1
               hasStudents={studentCount > 0}
               // Don't show no curriculum assigned error for projects tab.
               hasCurriculumAssigned={anyStudentHasProgress}
@@ -202,7 +204,7 @@ function TeacherDashboard({
           <Route
             path={TEACHER_DASHBOARD_PATHS.aiTutorChatMessages}
             element={
-              <EmptySection
+              <EmptySectionV1
                 hasStudents={studentCount > 0}
                 // Don't show no curriculum assigned error for projects tab.
                 hasCurriculumAssigned={anyStudentHasProgress}

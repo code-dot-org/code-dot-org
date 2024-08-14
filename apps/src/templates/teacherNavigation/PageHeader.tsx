@@ -4,19 +4,15 @@ import {matchPath, useLocation} from 'react-router-dom';
 
 import {Heading1} from '@cdo/apps/componentLibrary/typography';
 
-import {
-  getSectionRouterPath,
-  LABELED_TEACHER_DASHBOARD_PATHS,
-} from './TeacherDashboardPaths';
+import {LABELED_TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
 
 const PageHeader: React.FC = () => {
   const location = useLocation();
   const pathName = React.useMemo(
     () =>
       _.find(
-        LABELED_TEACHER_DASHBOARD_PATHS,
-        path =>
-          matchPath(getSectionRouterPath(path.url), location.pathname) !== null
+        LABELED_TEACHER_NAVIGATION_PATHS,
+        path => matchPath(path.url, location.pathname) !== null
       )?.label || 'unknown path',
     [location]
   );

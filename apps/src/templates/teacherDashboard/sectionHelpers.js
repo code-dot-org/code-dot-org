@@ -3,7 +3,7 @@ import _ from 'lodash';
 import {navigateToHref} from '@cdo/apps/utils';
 
 import firehoseClient from '../../lib/util/firehose';
-import {TEACHER_DASHBOARD_PATHS} from '../teacherNavigation/TeacherDashboardPaths';
+import {TEACHER_DASHBOARD_PATHS} from '../teacherNavigation/TeacherNavigationPaths';
 
 export function switchToSection(toSectionId, fromSectionId) {
   const baseUrl = `/teacher_dashboard/sections/${toSectionId}/`;
