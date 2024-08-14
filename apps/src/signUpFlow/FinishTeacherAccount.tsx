@@ -8,9 +8,9 @@ import {
   BodyTwoText,
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
-import locale from '@cdo/apps/signUpFlow/locale';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 
+import locale from './locale';
 import {
   USER_NAME_SESSION_KEY,
   EMAIL_OPT_IN_SESSION_KEY,
