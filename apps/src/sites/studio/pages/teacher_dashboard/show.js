@@ -2,12 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import {
-  BrowserRouter,
-  createBrowserRouter,
-  createRoutesFromElements,
-  RouterProvider,
-} from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 
 import DCDO from '@cdo/apps/dcdo';
 import {getStore, registerReducers} from '@cdo/apps/redux';
@@ -35,9 +30,7 @@ import teacherSections, {
   setStudentsForCurrentSection,
   sectionProviderName,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-import getTeacherNavigationRoutes, {
-  TEACHER_NAVIGATION_BARE_URL,
-} from '@cdo/apps/templates/teacherNavigation/TeacherNavigationRouter';
+import TeacherNavigationRouter from '@cdo/apps/templates/teacherNavigation/TeacherNavigationRouter';
 import experiments from '@cdo/apps/util/experiments';
 
 import {setScriptId} from '../../../../redux/unitSelectionRedux';
@@ -126,28 +119,22 @@ $(document).ready(function () {
     </BrowserRouter>
   );
 
-  const routes = getTeacherNavigationRoutes({
-    studioUrlPrefix: scriptData.studioUrlPrefix,
-    sectionId: selectedSection.id,
-    sectionName: selectedSection.name,
-    studentCount: selectedSection.students.length,
-    anyStudentHasProgress: anyStudentHasProgress,
-    showAITutorTab: showAITutorTab,
-    sectionProviderName: sectionProviderName(
-      store.getState(),
-      selectedSection.id
-    ),
-  });
-
   ReactDOM.render(
     <Provider store={store}>
       {!showV2TeacherDashboard ? (
         getV1TeacherDashboard()
       ) : (
-        <RouterProvider
-          router={createBrowserRouter(createRoutesFromElements(routes), {
-            basename: TEACHER_NAVIGATION_BARE_URL,
-          })}
+        <TeacherNavigationRouter
+          studioUrlPrefix={scriptData.studioUrlPrefix}
+          sectionId={selectedSection.id}
+          sectionName={selectedSection.name}
+          studentCount={selectedSection.students.length}
+          anyStudentHasProgress={anyStudentHasProgress}
+          showAITutorTab={showAITutorTab}
+          sectionProviderName={sectionProviderName(
+            store.getState(),
+            selectedSection.id
+          )}
         />
       )}
     </Provider>,
