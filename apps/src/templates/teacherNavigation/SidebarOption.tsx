@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+import {NavLink, generatePath} from 'react-router-dom';
 
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
@@ -12,6 +12,7 @@ interface SidebarOptionProps {
   optionTitle: string;
   isSelected: boolean;
   link: string;
+  sectionId: number;
 }
 
 const SidebarOption: React.FC<SidebarOptionProps> = ({
@@ -19,11 +20,12 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
   optionTitle,
   isSelected,
   link,
+  sectionId,
 }) => {
   return (
     <NavLink
       key={link}
-      to={link}
+      to={generatePath(link, {sectionId: sectionId})}
       className={classNames(styles.sidebarOption, {
         [styles.selected]: isSelected,
       })}

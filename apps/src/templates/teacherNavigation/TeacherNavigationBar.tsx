@@ -75,6 +75,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
       isSelected={false}
       link={'/progress1'}
       key={'/progress1'}
+      sectionId={+selectedSectionId}
     />,
     <SidebarOption
       icon={'folder-open'}
@@ -82,6 +83,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
       isSelected={false}
       link={'/progress2'}
       key={'/progress2'}
+      sectionId={+selectedSectionId}
     />,
     <SidebarOption
       icon={'file-lines'}
@@ -89,6 +91,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
       isSelected={false}
       link={'/progress3'}
       key={'/progress3'}
+      sectionId={+selectedSectionId}
     />,
     <SidebarOption
       icon={'presentation-screen'}
@@ -96,6 +99,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
       isSelected={false}
       link={'/progress4'}
       key={'/progress4'}
+      sectionId={+selectedSectionId}
     />,
     <SidebarOption
       icon={'calendar'}
@@ -103,6 +107,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
       isSelected={false}
       link={'/progress5'}
       key={'/progress5'}
+      sectionId={+selectedSectionId}
     />,
   ];
 
@@ -113,30 +118,35 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
       optionTitle={i18n.progress()}
       isSelected={false}
       link={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.progress)}
+      sectionId={+selectedSectionId}
     />,
     <SidebarOption
       icon={'star'}
       optionTitle={i18n.assessments()}
       isSelected={false}
       link={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.assessments)}
+      sectionId={+selectedSectionId}
     />,
     <SidebarOption
       icon={'code'}
       optionTitle={i18n.studentProjects()}
       isSelected={true}
       link={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.projects)}
+      sectionId={+selectedSectionId}
     />,
     <SidebarOption
       icon={'chart-simple'}
       optionTitle={i18n.teacherTabStats()}
       isSelected={false}
       link={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.stats)}
+      sectionId={+selectedSectionId}
     />,
     <SidebarOption
       icon={'pen-line'}
       optionTitle={i18n.teacherTabStatsTextResponses()}
       isSelected={false}
       link={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.textResponses)}
+      sectionId={+selectedSectionId}
     />,
   ];
 
@@ -148,6 +158,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
       isSelected={false}
       link={'/progress6'}
       key={'/progress6'}
+      sectionId={+selectedSectionId}
     />,
     <SidebarOption
       icon={'gear'}
@@ -155,6 +166,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
       isSelected={false}
       link={'/progress7'}
       key={'/progress7'}
+      sectionId={+selectedSectionId}
     />,
   ];
 
