@@ -734,7 +734,7 @@ class Level < ApplicationRecord
 
   def localized_validations
     if should_localize?
-      validations_clone = validations.map(&:clone)
+      validations_clone = get_validations.map(&:clone)
       validations_clone.each do |validation|
         validation['message'] = I18n.t(
           validation["key"],
@@ -745,7 +745,7 @@ class Level < ApplicationRecord
       end
       validations_clone
     else
-      validations
+      get_validations
     end
   end
 
@@ -848,6 +848,8 @@ class Level < ApplicationRecord
     if try(:project_template_level).try(:start_sources)
       properties_camelized['templateSources'] = try(:project_template_level).try(:start_sources)
     end
+    # Localized properties
+    properties_camelized["validations"] = localized_validations if get_validations
     properties_camelized["panels"] = localized_panels if properties_camelized["panels"]
     properties_camelized["longInstructions"] = (get_localized_property("long_instructions") || long_instructions) if properties_camelized["longInstructions"]
     if script_level
@@ -861,12 +863,6 @@ class Level < ApplicationRecord
       # Users who are not verified teachers or levelbuilders should not be able to see predict level solutions
       properties_camelized["predictSettings"]&.delete("solution")
       properties_camelized["predictSettings"]&.delete("multipleChoiceAnswers")
-    end
-    # Default to using the validations defined as a property
-    if properties_camelized["validations"]
-      properties_camelized["validations"] = localized_validations
-    elsif get_validations
-      properties_camelized["validations"] = get_validations
     end
     properties_camelized
   end
