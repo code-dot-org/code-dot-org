@@ -494,6 +494,33 @@ class ApiController < ApplicationController
     render json: script_level.get_example_solutions(level, current_user, section_id)
   end
 
+  def materials
+    section = load_section
+    script = load_script(section)
+
+    text_response_levels = script.text_response_levels
+
+    data = section.students.map do |student|
+      student_hash = {id: student.id, name: student.name}
+
+      text_response_levels.filter_map do |level_hash|
+        last_attempt = student.last_attempt_for_any(level_hash[:levels])
+        response = last_attempt.try(:level_source).try(:data)
+        next unless response
+        {
+          student: student_hash,
+          lesson: level_hash[:script_level].lesson.localized_title,
+          puzzle: level_hash[:script_level].position,
+          question: last_attempt.level.properties['title'],
+          response: response,
+          url: build_script_level_url(level_hash[:script_level], section_id: section.id, user_id: student.id)
+        }
+      end
+    end.flatten
+
+    render json: data
+  end
+
   def section_text_responses
     section = load_section
     script = load_script(section)
