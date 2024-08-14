@@ -86,7 +86,7 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
         element={
           <div className={styles.pageAndSidebar}>
             <TeacherNavigationBar />
-            <Outlet />
+            <Outlet /> {/* This is what will be rendered by the child routes*/}
           </div>
         }
       >
@@ -95,6 +95,7 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
           element={
             <div className={styles.pageWithHeader}>
               <SectionNavigablePageHeader />
+              {/* this is the section name and page name*/}
               <Outlet />
             </div>
           }
@@ -164,6 +165,62 @@ const SectionNavigationRouter: React.FC<SectionNavigationRouterProps> = ({
               )
             )}
           />
+          <Route
+            path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.lessonMaterials)}
+            element={renderEmptyStateOrElement(
+              applyV1TeacherDashboardWidth(
+                <SectionAssessments sectionName={sectionName} />
+              )
+            )}
+          />
+          {/* <Route
+            path={TEACHER_DASHBOARD_PATHS.lessonPlans}
+            element={renderEmptyStateOrElement(
+              applyV1TeacherDashboardWidth(
+                <SectionAssessments sectionName={sectionName} />
+              )
+            )}
+          />
+          <Route
+            path={TEACHER_DASHBOARD_PATHS.slideDecks}
+            element={renderEmptyStateOrElement(
+              applyV1TeacherDashboardWidth(
+                <SectionAssessments sectionName={sectionName} />
+              )
+            )}
+          />
+          <Route
+            path={TEACHER_DASHBOARD_PATHS.calendar}
+            element={renderEmptyStateOrElement(
+              applyV1TeacherDashboardWidth(
+                <SectionAssessments sectionName={sectionName} />
+              )
+            )}
+          />
+          <Route
+            path={TEACHER_DASHBOARD_PATHS.courseOverview}
+            element={renderEmptyStateOrElement(
+              applyV1TeacherDashboardWidth(
+                <SectionAssessments sectionName={sectionName} />
+              )
+            )}
+          />
+          <Route
+            path={TEACHER_DASHBOARD_PATHS.unitOverview}
+            element={renderEmptyStateOrElement(
+              applyV1TeacherDashboardWidth(
+                <SectionAssessments sectionName={sectionName} />
+              )
+            )}
+          />
+          <Route
+            path={TEACHER_DASHBOARD_PATHS.settings}
+            element={renderEmptyStateOrElement(
+              applyV1TeacherDashboardWidth(
+                <SectionAssessments sectionName={sectionName} />
+              )
+            )}
+          /> */}
           {showAITutorTab && (
             <Route
               path={getSectionRouterPath(

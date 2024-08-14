@@ -10,6 +10,13 @@ export const TEACHER_DASHBOARD_PATHS = {
   loginInfo: '/login_info',
   standardsReport: '/standards_report',
   aiTutorChatMessages: '/ai_tutor',
+  lessonMaterials: '/materials',
+  lessonPlans: '/plans',
+  slideDecks: '/decks',
+  calendar: '/calendar',
+  courseOverview: '/course',
+  unitOverview: '/unit',
+  settings: '/settings',
 };
 
 export const LABELED_TEACHER_DASHBOARD_PATHS = [
@@ -36,6 +43,34 @@ export const LABELED_TEACHER_DASHBOARD_PATHS = [
   {
     label: i18n.teacherTabManageStudents(),
     url: TEACHER_DASHBOARD_PATHS.manageStudents,
+  },
+  {
+    label: i18n.lessonMaterials(),
+    url: TEACHER_DASHBOARD_PATHS.lessonMaterials,
+  },
+  {
+    label: i18n.lessonPlans(),
+    url: TEACHER_DASHBOARD_PATHS.lessonPlans,
+  },
+  {
+    label: i18n.slideDecks(),
+    url: TEACHER_DASHBOARD_PATHS.slideDecks,
+  },
+  {
+    label: i18n.calendar(),
+    url: TEACHER_DASHBOARD_PATHS.calendar,
+  },
+  {
+    label: i18n.course(),
+    url: TEACHER_DASHBOARD_PATHS.courseOverview,
+  },
+  {
+    label: i18n.unit(),
+    url: TEACHER_DASHBOARD_PATHS.unitOverview,
+  },
+  {
+    label: i18n.settings(),
+    url: TEACHER_DASHBOARD_PATHS.settings,
   },
 ];
 

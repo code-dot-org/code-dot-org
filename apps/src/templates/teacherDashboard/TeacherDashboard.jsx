@@ -186,6 +186,62 @@ function TeacherDashboard({
             )
           )}
         />
+        <Route
+          path={TEACHER_DASHBOARD_PATHS.lessonMaterials}
+          element={renderEmptySectionOrElement(
+            applyV1TeacherDashboardWidth(
+              <SectionAssessments sectionName={sectionName} />
+            )
+          )}
+        />
+        <Route
+          path={TEACHER_DASHBOARD_PATHS.lessonPlans}
+          element={renderEmptySectionOrElement(
+            applyV1TeacherDashboardWidth(
+              <SectionAssessments sectionName={sectionName} />
+            )
+          )}
+        />
+        <Route
+          path={TEACHER_DASHBOARD_PATHS.slideDecks}
+          element={renderEmptySectionOrElement(
+            applyV1TeacherDashboardWidth(
+              <SectionAssessments sectionName={sectionName} />
+            )
+          )}
+        />
+        <Route
+          path={TEACHER_DASHBOARD_PATHS.calendar}
+          element={renderEmptySectionOrElement(
+            applyV1TeacherDashboardWidth(
+              <SectionAssessments sectionName={sectionName} />
+            )
+          )}
+        />
+        <Route
+          path={TEACHER_DASHBOARD_PATHS.courseOverview}
+          element={renderEmptySectionOrElement(
+            applyV1TeacherDashboardWidth(
+              <SectionAssessments sectionName={sectionName} />
+            )
+          )}
+        />
+        <Route
+          path={TEACHER_DASHBOARD_PATHS.unitOverview}
+          element={renderEmptySectionOrElement(
+            applyV1TeacherDashboardWidth(
+              <SectionAssessments sectionName={sectionName} />
+            )
+          )}
+        />
+        <Route
+          path={TEACHER_DASHBOARD_PATHS.settings}
+          element={renderEmptySectionOrElement(
+            applyV1TeacherDashboardWidth(
+              <SectionAssessments sectionName={sectionName} />
+            )
+          )}
+        />
         {showAITutorTab && (
           <Route
             path={TEACHER_DASHBOARD_PATHS.aiTutorChatMessages}
