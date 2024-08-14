@@ -1,11 +1,12 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
+import ReactTooltip from 'react-tooltip';
 
 import SegmentedButtons from '@cdo/apps/componentLibrary/segmentedButtons/SegmentedButtons';
 import {RubricAiEvaluationLimits} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {InfoAlert} from './RubricContent';
 import {TAB_NAMES} from './rubricHelpers';
 import {reportingDataShape, rubricShape} from './rubricShapes';
 import RunAIAssessmentButton, {STATUS} from './RunAIAssessmentButton';
@@ -57,6 +58,8 @@ export default function RubricTabButtons({
     }
   };
 
+  const runButtonTooltipId = _.uniqueId();
+
   return (
     <div>
       <div className={style.rubricTabGroup}>
@@ -75,7 +78,7 @@ export default function RubricTabButtons({
           onChange={value => tabSelectCallback(value)}
         />
         {selectedTab === TAB_NAMES.RUBRIC && teacherHasEnabledAi && (
-          <div>
+          <div data-tip data-for={runButtonTooltipId}>
             <RunAIAssessmentButton
               canProvideFeedback={canProvideFeedback}
               teacherHasEnabledAi={teacherHasEnabledAi}
@@ -87,19 +90,21 @@ export default function RubricTabButtons({
               setStatus={setStatus}
               reportingData={reportingData}
             />
+            {!!statusText() && (
+              <ReactTooltip
+                id={runButtonTooltipId}
+                role="tooltip"
+                effect="solid"
+                place="bottom"
+              >
+                <div style={{maxWidth: 400}}>
+                  <p>{statusText()}</p>
+                </div>
+              </ReactTooltip>
+            )}
           </div>
         )}
       </div>
-      {selectedTab === TAB_NAMES.RUBRIC &&
-        canProvideFeedback &&
-        teacherHasEnabledAi &&
-        !!statusText() && (
-          <InfoAlert
-            className={'uitest-eval-status-text'}
-            text={statusText() || ''}
-            dismissable={true}
-          />
-        )}
     </div>
   );
 }
