@@ -9,6 +9,8 @@ import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import locale from './locale';
 import {
   IS_PARENT_SESSION_KEY,
+  PARENT_EMAIL_SESSION_KEY,
+  PARENT_EMAIL_OPT_IN_SESSION_KEY,
   USER_NAME_SESSION_KEY,
   USER_AGE_SESSION_KEY,
   USER_STATE_SESSION_KEY,
@@ -17,8 +19,13 @@ import {
 
 import style from './finishAccount.module.scss';
 
-const FinishStudentAccount: React.FunctionComponent = () => {
+const FinishStudentAccount: React.FunctionComponent<{
+  ageOptions: {value: string; text: string}[];
+  usStateOptions: {value: string; text: string}[];
+}> = ({ageOptions, usStateOptions}) => {
   const [isParent, setIsParent] = useState(false);
+  const [parentEmail, setParentEmail] = useState('');
+  const [parentEmailOptInChecked, setParentEmailOptInChecked] = useState(false);
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
   const [state, setState] = useState('');
@@ -30,6 +37,23 @@ const FinishStudentAccount: React.FunctionComponent = () => {
     sessionStorage.setItem(
       IS_PARENT_SESSION_KEY,
       `${newIsParentCheckedChoice}`
+    );
+  };
+
+  const onParentEmailChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ): void => {
+    const newParentEmail = e.target.value;
+    setParentEmail(newParentEmail);
+    sessionStorage.setItem(PARENT_EMAIL_SESSION_KEY, newParentEmail);
+  };
+
+  const onParentEmailOptInChange = (): void => {
+    const newParentEmailOptInCheckedChoice = !parentEmailOptInChecked;
+    setParentEmailOptInChecked(newParentEmailOptInCheckedChoice);
+    sessionStorage.setItem(
+      PARENT_EMAIL_OPT_IN_SESSION_KEY,
+      `${newParentEmailOptInCheckedChoice}`
     );
   };
 
@@ -64,20 +88,61 @@ const FinishStudentAccount: React.FunctionComponent = () => {
         <BodyTwoText>{locale.tailor_experience()}</BodyTwoText>
       </div>
       <div className={style.inputContainer}>
-        <span className={aaa}>
-          <div className={aaa}>
-            <Checkbox
-              label=""
-              checked={isParent}
-              onChange={onIsParentChange}
-              name="isParent"
-            />
-          </div>
-          <BodyTwoText className={aa} visualAppearance={'body-two'}>
-            {locale.i_am_a_parent_or_guardian()}
-          </BodyTwoText>
-        </span>
-        <BodyTwoText visualAppearance={'heading-xs'}>
+        <div className={style.parentInfoContainer}>
+          <span className={style.parentCheckboxContainer}>
+            <div className={style.parentCheckbox}>
+              <Checkbox
+                label=""
+                checked={isParent}
+                onChange={onIsParentChange}
+                name="isParent"
+              />
+            </div>
+            <BodyTwoText visualAppearance={'body-two'}>
+              {locale.i_am_a_parent_or_guardian()}
+            </BodyTwoText>
+          </span>
+          {isParent && (
+            <>
+              <BodyTwoText
+                className={style.studentQuestionLabel}
+                visualAppearance={'heading-xs'}
+              >
+                {locale.parent_guardian_email()}
+              </BodyTwoText>
+              <TextField
+                name="parentEmail"
+                onChange={onParentEmailChange}
+                value={parentEmail}
+                className={style.parentEmailInput}
+                placeholder={locale.parentEmailPlaceholder()}
+              />
+              <BodyTwoText
+                className={style.studentQuestionLabel}
+                visualAppearance={'heading-xs'}
+              >
+                {locale.keep_me_updated()}
+              </BodyTwoText>
+              <span className={style.parentCheckboxContainer}>
+                <div className={style.parentCheckbox}>
+                  <Checkbox
+                    label=""
+                    checked={parentEmailOptInChecked}
+                    onChange={onParentEmailOptInChange}
+                    name="parentEmailOptIn"
+                  />
+                </div>
+                <BodyTwoText visualAppearance={'body-two'}>
+                  {locale.email_me_with_updates()}
+                </BodyTwoText>
+              </span>
+            </>
+          )}
+        </div>
+        <BodyTwoText
+          className={style.studentQuestionLabel}
+          visualAppearance={'heading-xs'}
+        >
           {locale.display_name_eg()}
         </BodyTwoText>
         <TextField
@@ -87,7 +152,7 @@ const FinishStudentAccount: React.FunctionComponent = () => {
           placeholder={locale.coder()}
         />
         <BodyTwoText
-          className={style.ageDropdownLabel}
+          className={style.studentQuestionLabel}
           visualAppearance={'heading-xs'}
         >
           {locale.what_is_your_age()}
@@ -97,12 +162,15 @@ const FinishStudentAccount: React.FunctionComponent = () => {
           name="userAge"
           labelText=""
           isLabelVisible={false}
-          items={[{value: '0', text: '0'}, {value: '1', text: '1'}, {value: '2', text: '2'}]}
+          items={ageOptions}
           selectedValue={age}
           onChange={onAgeChange}
           size="m"
         />
-        <BodyTwoText visualAppearance={'heading-xs'}>
+        <BodyTwoText
+          className={style.studentQuestionLabel}
+          visualAppearance={'heading-xs'}
+        >
           {locale.what_state_are_you_in()}
         </BodyTwoText>
         <SimpleDropdown
@@ -110,12 +178,15 @@ const FinishStudentAccount: React.FunctionComponent = () => {
           name="userState"
           labelText=""
           isLabelVisible={false}
-          items={[{value: 'WA', text: 'Washington'}, {value: 'CO', text: 'Colorado'}]}
+          items={usStateOptions}
           selectedValue={state}
           onChange={onStateChange}
           size="m"
         />
-        <BodyTwoText visualAppearance={'heading-xs'}>
+        <BodyTwoText
+          className={style.studentQuestionLabel}
+          visualAppearance={'heading-xs'}
+        >
           {locale.what_is_your_gender()}
         </BodyTwoText>
         <TextField

@@ -53,5 +53,6 @@
   "email_me_with_updates": "Email me with updates on my child's progress and projects, as well as updates on their course, and computer science.",
   "note": "Note:",
   "coder": "Coder",
-  "female": "Female"
+  "female": "Female",
+  "parentEmailPlaceholder": "parentemail@email.com"
 }
