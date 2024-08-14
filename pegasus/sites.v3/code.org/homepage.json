@@ -4,7 +4,8 @@
       "hoc2023-soon-hoc",
       "hoc2023-actual-hoc",
       "pl-launch-superhero",
-      "curriculum-launch-2024"
+      "curriculum-launch-2024",
+      "best-of-stem-2024"
     ]
   },
 
@@ -116,6 +117,20 @@
           "button_link": "https://codeorg.medium.com/ai-game-design-and-more-in-code-orgs-2024-25-curriculum-updates-caff691935ad",
           "button_text": "curriculum_launch_2024.banner.button_learn_more_here",
           "img_src": "/images/banners/banner-curriculum-catalog-illustration-black.png"
+        }
+      ]
+    },
+    "best-of-stem-2024": {
+      "dcdo": "best-of-stem-2024",
+      "class": "best-of-stem-2024",
+      "desktopImage": "/images/banners/banner-bg-best-of-stem-confetti.png",
+      "actions": [
+        {
+          "type": "best-of-stem-2024",
+          "text_h1": "best_of_stem_heading",
+          "external_link": true,
+          "button_link": "https://medium.com/@codeorg/code-org-wins-two-best-of-stem-2024-awards-155e55bde866",
+          "button_text": "call_to_action_learn_more"
         }
       ]
     }
