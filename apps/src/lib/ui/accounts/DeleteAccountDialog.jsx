@@ -8,7 +8,11 @@ import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import {Header, Field, ConfirmCancelFooter} from '../SystemDialog/SystemDialog';
+import {
+  Header,
+  Field,
+  ConfirmCancelFooter,
+} from '../../../sharedComponents/SystemDialog/SystemDialog';
 
 const GUTTER = 20;
 

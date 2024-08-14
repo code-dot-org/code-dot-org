@@ -17,7 +17,7 @@ Then /^I sign out using jquery$/ do
 end
 
 Given(/^I sign in as "([^"]*)"( and go home)?$/) do |name, home|
-  navigate_to replace_hostname('http://studio.code.org/reset_session')
+  reset_session
   sign_in name
   redirect = 'http://studio.code.org/home'
   navigate_to replace_hostname(redirect) if home
@@ -97,7 +97,7 @@ end
 
 # Creates the user and signs them in.
 def create_user(name, url: '/api/test/create_user', **user_opts)
-  navigate_to replace_hostname('http://studio.code.org/reset_session')
+  reset_session
   Retryable.retryable(on: RSpec::Expectations::ExpectationNotMetError, tries: 3) do
     # Generate the user
     email, password = generate_user(name)
@@ -278,7 +278,7 @@ When(/^I sign out$/) do
     browser_request(url: replace_hostname('/users/sign_out.json'), code: 204)
     @browser.execute_script("sessionStorage.clear(); localStorage.clear();")
   else
-    navigate_to replace_hostname('http://studio.code.org/reset_session')
+    reset_session
   end
 end
 
@@ -320,4 +320,15 @@ end
 
 And(/^I get debug info for the current user$/) do
   puts browser_request(url: '/api/v1/users/current', method: 'GET')
+end
+
+# reset_session flakes by not signing out the user.
+# This is because an in flight request to the server may still return and set the session to the user
+# after reset_session should have reset the user.
+# To counteract this, we wait for 3 seconds before calling reset_session to ensure all in flight requests have finished.
+# See this PR for more info: https://github.com/code-dot-org/code-dot-org/pull/60376
+# We are tracking a long-term fix here: https://codedotorg.atlassian.net/browse/P20-1080
+def reset_session
+  steps "And I wait for 3 seconds"
+  navigate_to replace_hostname('http://studio.code.org/reset_session')
 end

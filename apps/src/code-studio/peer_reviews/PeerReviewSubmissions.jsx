@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {Button, FormControl} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
-import Pagination from '../../lib/ui/Pagination';
+import Pagination from '@cdo/apps/sharedComponents/Pagination';
+
 import Spinner from '../pd/components/spinner';
 
 import PeerReviewSubmissionData from './PeerReviewSubmissionData';

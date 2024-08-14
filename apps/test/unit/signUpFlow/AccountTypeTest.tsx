@@ -1,8 +1,8 @@
 import {render, screen, fireEvent} from '@testing-library/react';
 import React from 'react';
 
-import locale from '@cdo/apps/signup/locale';
 import AccountType from '@cdo/apps/signUpFlow/AccountType';
+import locale from '@cdo/apps/signUpFlow/locale';
 
 describe('SelectAccountType', () => {
   function renderDefault() {

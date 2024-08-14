@@ -38,3 +38,7 @@ export const LABELED_TEACHER_DASHBOARD_PATHS = [
     url: TEACHER_DASHBOARD_PATHS.manageStudents,
   },
 ];
+
+export const SECTION_ID_PATH_PART = `/:sectionId`;
+export const getSectionRouterPath = (pathUrl: string) =>
+  `${SECTION_ID_PATH_PART}${pathUrl}`;

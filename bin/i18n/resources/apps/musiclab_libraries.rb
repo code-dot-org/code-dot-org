@@ -5,12 +5,11 @@ module I18n
     module Apps
       module MusiclabLibraries
         DIR_NAME = 'musiclab_libraries'
-        # Allows  sourcing input strings from a new version of our Music Lab
-        # launch library (music-library-launch2024-v2), which will eventually
-        # replace music-library-launch2024.
+        # These mappings allow us to pre-translate an updated version of a library
+        # before it becomes the published version.
         LIBRARY_NAME_IN_OUT_MAPPINGS = [
           {from: 'music-library-intro2024', to: 'music-library-intro2024'},
-          {from: 'music-library-launch2024-v2', to: 'music-library-launch2024'}
+          {from: 'music-library-launch2024', to: 'music-library-launch2024'}
         ].freeze
 
         def self.sync_in

@@ -3,6 +3,7 @@ import {useSelector} from 'react-redux';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import Typography from '@cdo/apps/componentLibrary/typography';
+import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
 import i18n from '@cdo/locale';
 
 import styles from './teacher-navigation.module.scss';
@@ -41,6 +42,90 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     }
   }, [sections, selectedSectionId]);
 
+  const getSectionHeader = (label: string) => {
+    return (
+      <Typography
+        semanticTag={'h2'}
+        visualAppearance={'overline-two'}
+        className={styles.sectionHeader}
+      >
+        {label}
+      </Typography>
+    );
+  };
+
+  const courseContent = [
+    getSectionHeader(i18n.courseContent()),
+    <SidebarOption
+      icon={'desktop'}
+      optionTitle={i18n.course()}
+      isSelected={false}
+    />,
+    <SidebarOption
+      icon={'folder-open'}
+      optionTitle={i18n.lessonMaterials()}
+      isSelected={false}
+    />,
+    <SidebarOption
+      icon={'file-lines'}
+      optionTitle={i18n.lessonPlans()}
+      isSelected={false}
+    />,
+    <SidebarOption
+      icon={'presentation-screen'}
+      optionTitle={i18n.slideDecks()}
+      isSelected={false}
+    />,
+    <SidebarOption
+      icon={'calendar'}
+      optionTitle={i18n.calendar()}
+      isSelected={false}
+    />,
+  ];
+
+  const performanceContent = [
+    getSectionHeader(i18n.performance()),
+    <SidebarOption
+      icon={'chart-line'}
+      optionTitle={i18n.progress()}
+      isSelected={false}
+    />,
+    <SidebarOption
+      icon={'star'}
+      optionTitle={i18n.assessments()}
+      isSelected={false}
+    />,
+    <SidebarOption
+      icon={'code'}
+      optionTitle={i18n.studentProjects()}
+      isSelected={true}
+    />,
+    <SidebarOption
+      icon={'chart-simple'}
+      optionTitle={i18n.teacherTabStats()}
+      isSelected={false}
+    />,
+    <SidebarOption
+      icon={'pen-line'}
+      optionTitle={i18n.teacherTabStatsTextResponses()}
+      isSelected={false}
+    />,
+  ];
+
+  const classroomContent = [
+    getSectionHeader(i18n.classroom()),
+    <SidebarOption
+      icon={'users'}
+      optionTitle={i18n.roster()}
+      isSelected={false}
+    />,
+    <SidebarOption
+      icon={'gear'}
+      optionTitle={i18n.settings()}
+      isSelected={false}
+    />,
+  ];
+
   return (
     <nav className={styles.sidebarContainer}>
       <div className={styles.sidebarContent}>
@@ -57,9 +142,12 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
           labelText=""
           size="m"
           selectedValue={selectedSectionId}
+          className={styles.sectionDropdown}
           name="section-dropdown"
-          className="sectionDropdown"
         />
+        {courseContent}
+        {performanceContent}
+        {classroomContent}
       </div>
     </nav>
   );

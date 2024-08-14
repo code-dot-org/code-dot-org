@@ -13,7 +13,7 @@ import i18n from '@cdo/locale';
 import {
   Header,
   ConfirmCancelFooter,
-} from '../../lib/ui/SystemDialog/SystemDialog';
+} from '../../sharedComponents/SystemDialog/SystemDialog';
 import color from '../../util/color';
 import BaseDialog from '../BaseDialog';
 

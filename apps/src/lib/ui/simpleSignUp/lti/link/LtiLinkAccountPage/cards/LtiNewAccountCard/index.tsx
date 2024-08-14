@@ -9,12 +9,10 @@ import {
   CardHeader,
 } from '@cdo/apps/componentLibrary/card';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
-import DCDO from '@cdo/apps/dcdo';
 import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
-import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import {LtiProviderContext} from '../../context';
@@ -25,10 +23,7 @@ const LtiNewAccountCard = () => {
   const {ltiProviderName, newAccountUrl, emailAddress, userType} =
     useContext(LtiProviderContext)!;
   const finishSignupFormRef = useRef<HTMLFormElement>(null);
-  const isStudentEmailPostEnabled = DCDO.get(
-    'student-email-post-enabled',
-    false
-  );
+
   const [isSaving, setIsSaving] = useState(false);
 
   const handleNewAccountSaved = () => {
@@ -41,11 +36,8 @@ const LtiNewAccountCard = () => {
       eventPayload,
       PLATFORMS.STATSIG
     );
-    if (isStudentEmailPostEnabled) {
-      finishSignupFormRef.current?.submit();
-    } else {
-      navigateToHref(newAccountUrl);
-    }
+
+    finishSignupFormRef.current?.submit();
   };
 
   const handleNewAccountSubmit = async () => {
