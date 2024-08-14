@@ -58,7 +58,7 @@ Feature: Lab share page logo
     And I wait until element "#sharing-dialog-copy-button" is visible
     And I navigate to the share URL
     And I wait to see "#runButton"
-    And I am on "http://studio.code.org/users/sign_out"
+    And I sign out using jquery
     And I navigate to the last shared URL
     And element "div:contains('STUDIO')" does not exist
     And I press the first "#logo-img img" element to load a new page
@@ -72,7 +72,7 @@ Feature: Lab share page logo
     And I wait until element "#sharing-dialog-copy-button" is visible
     And I navigate to the share URL
     And I wait to see "#runButton"
-    And I am on "http://studio.code.org/users/sign_out"
+    And I sign out using jquery
     And I navigate to the last shared URL
     And element "div:contains('STUDIO')" does not exist
     And I press the first "#logo-img img" element to load a new page
