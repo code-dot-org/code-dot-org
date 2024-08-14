@@ -85,6 +85,9 @@ self.onmessage = async event => {
   self.postMessage({type: 'updated_source', message: updatedSource, id});
   resetGlobals(self.pyodide, pyodideGlobals);
 
+  // If there is a results response, convert it to a JS object.
+  // Documentation on this method:
+  // https://pyodide.org/en/stable/usage/api/js-api.html#pyodide.ffi.PyProxy.toJs
   const resultsObject = results?.toJs();
   self.postMessage({type: 'run_complete', message: resultsObject, id});
 };

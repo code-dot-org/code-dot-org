@@ -34,12 +34,10 @@ export default class PythonValidator extends Validator {
     return true;
   }
 
+  // No-op, conditions are reported to pythonValidationTracker.
   checkConditions(): void {}
 
   conditionsMet(conditions: Condition[]): boolean {
-    if (!conditions) {
-      return true;
-    }
     let hasPassedAllTests = true;
     conditions.forEach(condition => {
       if (condition.name === ConditionType.PASSED_ALL_TESTS) {
