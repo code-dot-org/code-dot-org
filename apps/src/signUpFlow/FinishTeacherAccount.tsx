@@ -46,9 +46,9 @@ const FinishTeacherAccount: React.FunctionComponent<{
         <BodyTwoText>{locale.tailor_experience()}</BodyTwoText>
       </div>
       <div className={style.inputContainer}>
-        <BodyTwoText visualAppearance={'heading-xs'}>
-          {locale.what_do_you_want_to_be_called()}
-        </BodyTwoText>
+        <BodyThreeText>
+          <strong>{locale.what_do_you_want_to_be_called()}</strong>
+        </BodyThreeText>
         <TextField
           name="userName"
           onChange={onNameChange}
@@ -73,12 +73,12 @@ const FinishTeacherAccount: React.FunctionComponent<{
                 name="userEmailOptIn"
               />
             </div>
-            <BodyTwoText
+            <BodyThreeText
               className={style.emailOptInLabel}
               visualAppearance={'body-two'}
             >
               {locale.get_informational_emails()}
-            </BodyTwoText>
+            </BodyThreeText>
           </span>
           <BodyThreeText className={style.emailOptInFootnote}>
             {locale.after_creating_your_account()}

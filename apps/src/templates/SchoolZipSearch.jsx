@@ -5,10 +5,7 @@ import React, {useState, useEffect} from 'react';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
-import {
-  BodyTwoText,
-  BodyThreeText,
-} from '@cdo/apps/componentLibrary/typography';
+import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
@@ -126,9 +123,9 @@ export default function SchoolZipSearch({fieldNames}) {
   return (
     <div>
       <label>
-        <BodyTwoText className={style.padding} visualAppearance={'heading-xs'}>
-          {i18n.enterYourSchoolZip()}
-        </BodyTwoText>
+        <BodyThreeText className={style.padding}>
+          <strong>{i18n.enterYourSchoolZip()}</strong>
+        </BodyThreeText>
         <TextField
           id="uitest-school-zip"
           name={fieldNames.schoolZip}
@@ -146,12 +143,9 @@ export default function SchoolZipSearch({fieldNames}) {
       </label>
       {!inputManually && (
         <div>
-          <BodyTwoText
-            className={labelClassName}
-            visualAppearance={'heading-xs'}
-          >
-            {i18n.selectYourSchool()}
-          </BodyTwoText>
+          <BodyThreeText className={labelClassName}>
+            <strong>{i18n.selectYourSchool()}</strong>
+          </BodyThreeText>
           <SimpleDropdown
             id="uitest-school-dropdown"
             disabled={isSchoolDropdownDisabled}

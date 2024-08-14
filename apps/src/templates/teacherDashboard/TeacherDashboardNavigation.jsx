@@ -8,7 +8,7 @@ import i18n from '@cdo/locale';
 import {
   LABELED_TEACHER_DASHBOARD_PATHS,
   TEACHER_DASHBOARD_PATHS,
-} from './teacherNavigation/TeacherDashboardPaths';
+} from '../teacherNavigation/TeacherDashboardPaths';
 
 import styles from './teacher-dashboard.module.scss';
 
