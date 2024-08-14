@@ -20,6 +20,7 @@ import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 
 interface ChatEventViewProps {
   event: ChatEvent;
+  isTeacherView?: boolean;
 }
 
 function formatModelUpdateText(update: ModelUpdate): string {
@@ -48,8 +49,10 @@ function formatModelUpdateText(update: ModelUpdate): string {
  */
 const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
   event,
+  isTeacherView,
 }) => {
   const dispatch = useAppDispatch();
+  console.log('isTeacherView', isTeacherView);
 
   if (isChatMessage(event)) {
     return <ChatMessage {...event} />;
@@ -82,7 +85,7 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
     return (
       <Alert
         text={ChatEventDescriptions[event.descriptionKey] as string}
-        type="success"
+        type="info"
         size="s"
       />
     );

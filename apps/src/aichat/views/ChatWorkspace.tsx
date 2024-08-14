@@ -118,6 +118,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         <ChatEventsList
           events={studentChatHistory}
           showWaitingAnimation={() => null}
+          isTeacherView={true}
         />
       ),
       iconLeft: iconValue,

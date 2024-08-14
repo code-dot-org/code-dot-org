@@ -34,13 +34,16 @@ interface ChatMessageProps {
   chatMessageText: string;
   role: Role;
   status: string;
+  isTeacherView?: boolean;
 }
 
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   chatMessageText,
   role,
   status,
+  isTeacherView,
 }) => {
+  console.log('isTeacherView', isTeacherView);
   const hasDangerStyle =
     status === Status.PROFANITY_VIOLATION ||
     (role === Role.ASSISTANT && status === Status.ERROR);
