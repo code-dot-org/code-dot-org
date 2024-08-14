@@ -38,16 +38,18 @@ export default class PythonValidator extends Validator {
   checkConditions(): void {}
 
   conditionsMet(conditions: Condition[]): boolean {
-    let hasPassedAllTests = true;
-    conditions.forEach(condition => {
+    for (const condition of conditions) {
       if (condition.name === ConditionType.PASSED_ALL_TESTS) {
         const testResults = this.pythonValidationTracker.getTestResults();
-        hasPassedAllTests &&= !!testResults?.every(
-          testResult => testResult.result === 'PASS'
-        );
+        if (!testResults) {
+          return false;
+        }
+        if (testResults.some(testResult => testResult.result !== 'PASS')) {
+          return false;
+        }
       }
-    });
-    return hasPassedAllTests;
+    }
+    return true;
   }
 
   clear(): void {

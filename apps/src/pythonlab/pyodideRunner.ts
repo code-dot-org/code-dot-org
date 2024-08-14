@@ -72,7 +72,7 @@ export async function runAllTests(
       // Message is an array of Maps with the keys "name" and "result",
       // where "name" is the name of the test and "result" is one of
       // "PASS/FAIL/ERROR/SKIP/EXPECTED_FAILURE/UNEXPECTED_SUCCESS"
-      // TODO: Add link to pythonlab-packages
+      // See this PR for details: https://github.com/code-dot-org/pythonlab-packages/pull/5
       const testResults = result.message as Map<string, string>[];
       if (progressManager) {
         PythonValidationTracker.getInstance().setTestResults(testResults);

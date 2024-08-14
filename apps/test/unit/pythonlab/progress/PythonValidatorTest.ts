@@ -44,4 +44,16 @@ describe('PythonValidator', () => {
     validationTracker.setTestResults(SOME_FAILED_TESTS);
     expect(validator.conditionsMet(PASSED_TESTS_CONDITION)).toBe(false);
   });
+
+  it('should not meet all passed condition if tests results are null', () => {
+    const validationTracker = new PythonValidationTracker();
+    const validator = new PythonValidator(validationTracker);
+    expect(validator.conditionsMet(PASSED_TESTS_CONDITION)).toBe(false);
+  });
+
+  it('should meet all passed condition if test results are an empty list', () => {
+    const validationTracker = new PythonValidationTracker();
+    const validator = new PythonValidator(validationTracker);
+    expect(validator.conditionsMet(PASSED_TESTS_CONDITION)).toBe(false);
+  });
 });
