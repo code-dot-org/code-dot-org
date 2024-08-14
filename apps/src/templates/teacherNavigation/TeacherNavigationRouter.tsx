@@ -2,8 +2,6 @@ import React from 'react';
 import {
   Route,
   Outlet,
-  generatePath,
-  Navigate,
   createRoutesFromElements,
   createBrowserRouter,
   RouterProvider,
@@ -21,6 +19,7 @@ import SectionLoginInfo from '../teacherDashboard/SectionLoginInfo';
 import StatsTableWithData from '../teacherDashboard/StatsTableWithData';
 import TextResponses from '../textResponses/TextResponses';
 
+import DefaultTeacherNavRedirect from './DefaultPageRedirect';
 import PageHeader from './PageHeader';
 import {
   getSectionRouterPath,
@@ -56,23 +55,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   showAITutorTab,
   sectionProviderName,
 }) => {
-  const redirectToDefaultPath = React.useMemo(
-    () => (
-      <Navigate
-        to={generatePath(
-          getSectionRouterPath(
-            studentCount === 0
-              ? TEACHER_DASHBOARD_PATHS.manageStudents
-              : TEACHER_DASHBOARD_PATHS.progress
-          ),
-          {sectionId: sectionId}
-        )}
-        replace={true}
-      />
-    ),
-    [sectionId, studentCount]
-  );
-
   const routes = (
     <Route
       element={
@@ -95,8 +77,24 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           return null;
         }}
       >
-        <Route path={''} element={redirectToDefaultPath} />
-        <Route path={'*'} element={redirectToDefaultPath} />
+        <Route
+          path={''}
+          element={
+            <DefaultTeacherNavRedirect
+              sectionId={sectionId}
+              studentCount={studentCount}
+            />
+          }
+        />
+        <Route
+          path={'*'}
+          element={
+            <DefaultTeacherNavRedirect
+              sectionId={sectionId}
+              studentCount={studentCount}
+            />
+          }
+        />
         <Route
           path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.manageStudents)}
           element={applyV1TeacherDashboardWidth(
