@@ -33,13 +33,6 @@ function addClickEventToLinks(selector, eventName, additionalProperties = {}) {
   });
 }
 
-function getHeaderType(screenWidth) {
-  if (screenWidth < 425) return 'mobile';
-  if (screenWidth < 1024) return 'tablet';
-  if (screenWidth <= 1268) return 'small desktop';
-  return 'large desktop';
-}
-
 const addCreateMenuMetrics = (
   headerCreateMenu,
   platforms,
@@ -112,16 +105,6 @@ const addMenuMetrics = (
 };
 
 const addSignedOutMetrics = (pageUrl, headerCreateMenu) => {
-  const screenWidth = window.innerWidth;
-  analyticsReporter.sendEvent(
-    EVENTS.SIGNED_OUT_USER_SEES_HEADER,
-    {
-      pageUrl: pageUrl,
-      headerType: getHeaderType(screenWidth),
-    },
-    PLATFORMS.STATSIG
-  );
-
   // Log if a header link is clicked
   addClickEventToLinks('headerlink', EVENTS.SIGNED_OUT_USER_CLICKS_HEADER_LINK);
 
@@ -139,18 +122,6 @@ const addSignedOutMetrics = (pageUrl, headerCreateMenu) => {
         EVENTS.CREATE_ACCOUNT_BUTTON_CLICKED,
         {pageUrl: pageUrl},
         PLATFORMS.BOTH
-      );
-    });
-  }
-
-  const signInButton = document.getElementById('signin_button');
-  // Log if the Sign in button is clicked
-  if (signInButton) {
-    signInButton.addEventListener('click', () => {
-      analyticsReporter.sendEvent(
-        EVENTS.SIGNED_OUT_USER_CLICKS_SIGN_IN,
-        {pageUrl: pageUrl},
-        PLATFORMS.STATSIG
       );
     });
   }

@@ -3,7 +3,7 @@ import Multi from '@cdo/apps/code-studio/levels/multi';
 import {
   LegacyTooFewDialog,
   LegacyIncorrectDialog,
-} from '@cdo/apps/lib/ui/LegacyDialogContents';
+} from '@cdo/apps/legacySharedComponents/LegacyDialogContents';
 
 import {TestResults} from '../../../../src/constants';
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';

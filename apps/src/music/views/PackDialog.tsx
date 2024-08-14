@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import React, {useCallback, useState, useRef, useContext} from 'react';
 import FocusLock from 'react-focus-lock';
 
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -37,6 +38,9 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
   const soundPath = previewSound && folder.id + '/' + previewSound.src;
   const isPlayingPreview = previewSound && playingPreview === soundPath;
   const imageSrc = library?.getPackImageUrl(folder.id);
+  const imageAttributionAuthor = folder.imageAttribution?.author;
+  const imageAttributionColor = folder.imageAttribution?.color;
+  const packImageAttributionLeft = folder.imageAttribution?.position === 'left';
 
   const onEntryClick = useCallback(() => {
     onSelect(folder);
@@ -61,15 +65,42 @@ const PackEntry: React.FunctionComponent<PackEntryProps> = ({
     >
       <div className={styles.packImageContainer}>
         {imageSrc && (
-          <img
-            src={imageSrc}
+          <div
             className={classNames(
-              styles.packImage,
-              isSelected && styles.packImageSelected
+              styles.packImageContainer,
+              isSelected && styles.packImageContainerSelected
             )}
-            alt=""
-            draggable={false}
-          />
+          >
+            <img
+              className={styles.packImage}
+              src={imageSrc}
+              alt=""
+              draggable={false}
+            />
+            {imageAttributionAuthor && (
+              <div
+                className={classNames(
+                  styles.packImageAttribution,
+                  packImageAttributionLeft && styles.packImageAttributionLeft
+                )}
+                style={{color: imageAttributionColor}}
+              >
+                <FontAwesomeV6Icon
+                  iconName={'brands fa-creative-commons'}
+                  iconStyle="solid"
+                  className={styles.icon}
+                />
+                &nbsp;
+                <FontAwesomeV6Icon
+                  iconName={'brands fa-creative-commons-by'}
+                  iconStyle="solid"
+                  className={styles.icon}
+                />
+                &nbsp;
+                {imageAttributionAuthor}
+              </div>
+            )}
+          </div>
         )}
       </div>
       <div className={styles.packFooter}>

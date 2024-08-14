@@ -25,11 +25,7 @@ module PartialRegistration
   end
 
   def self.can_finish_signup?(params, session)
-    if DCDO.get('student-email-post-enabled', false)
-      params&.dig(:user, :email).present? && in_progress?(session)
-    else
-      in_progress?(session)
-    end
+    params&.dig(:user, :email).present? && in_progress?(session)
   end
 
   def self.in_progress?(session)
@@ -41,11 +37,7 @@ module PartialRegistration
     cache_key = PartialRegistration.cache_key(user)
     user_attributes = Policies::User.user_attributes(user)
 
-    if DCDO.get('student-email-post-enabled', false)
-      CDO.shared_cache.write(cache_key, user_attributes.to_json, expires_in: 8.hours)
-    else
-      CDO.shared_cache.write(cache_key, user_attributes.to_json)
-    end
+    CDO.shared_cache.write(cache_key, user_attributes.to_json, expires_in: 8.hours)
 
     # Put the cache key into the session, to
     # 1. track that a partial registration is in progress

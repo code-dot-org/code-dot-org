@@ -52,7 +52,7 @@ module OmniauthCallbacksControllerTests
     def finish_sign_up(auth_hash, user_type)
       post '/users', params: finish_sign_up_params(
         name: auth_hash[:info]&.name,
-        user_type: user_type
+        user_type: user_type,
       )
     end
 
@@ -78,6 +78,7 @@ module OmniauthCallbacksControllerTests
             school_info_attributes: {
               country: 'US'
             },
+            email: 'auth_test@code.org',
             terms_of_service_version: 1,
             email_preference_opt_in: nil,
           }.merge(override_params)
@@ -93,6 +94,7 @@ module OmniauthCallbacksControllerTests
             school_info_attributes: {
               country: 'US'
             },
+            email: 'auth_test@code.org',
             terms_of_service_version: 1,
             email_preference_opt_in: 'yes',
           }.merge(override_params)
@@ -160,6 +162,14 @@ module OmniauthCallbacksControllerTests
     def refute_sign_up_tracking
       study_requests = @firehose_requests.select {|e| e[1][:study] == SignUpTracking::STUDY_NAME && e[0] == :analysis}
       assert_empty study_requests
+    end
+
+    # Simulates an omniauth redirect which is done in Javascript
+    def omniauth_redirect
+      post '/users/finish_sign_up', params: {
+        'user[email]': "test@code.org"
+      }
+      assert_template partial: '_finish_sign_up'
     end
   end
 end
