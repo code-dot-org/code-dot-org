@@ -52,17 +52,13 @@ module MailJet
     return nil unless enabled?
     return nil unless valid_email?(email)
 
-    Mailjet.configure do |config|
-      config.api_key = API_KEY
-      config.secret_key = SECRET_KEY
-      config.api_version = "v3"
-    end
+    configure_api_v3
 
     contact = Mailjet::Contact.find(email)
     return contact if contact&.id.present?
 
     Mailjet::Contact.create(
-      is_excluded_from_campaigns: "false",
+      is_excluded_from_campaigns: false,
       email: email,
       name: name
     )
@@ -87,11 +83,7 @@ module MailJet
   def self.delete_contact(email)
     return unless enabled?
 
-    Mailjet.configure do |config|
-      config.api_key = API_KEY
-      config.secret_key = SECRET_KEY
-      config.api_version = "v3"
-    end
+    configure_api_v3
 
     contact = Mailjet::Contact.find(email)
     return unless contact
@@ -109,11 +101,7 @@ module MailJet
     return unless enabled?
     return if contact.nil?
 
-    Mailjet.configure do |config|
-      config.api_key = API_KEY
-      config.secret_key = SECRET_KEY
-      config.api_version = "v3"
-    end
+    configure_api_v3
 
     # This will raise an exception if the contact is already on the list
     Mailjet::Listrecipient.create(
@@ -126,11 +114,7 @@ module MailJet
     return unless enabled?
     return unless contact&.email.present?
 
-    Mailjet.configure do |config|
-      config.api_key = API_KEY
-      config.secret_key = SECRET_KEY
-      config.api_version = "v3.1"
-    end
+    configure_api_v3dot1
 
     from_address = email_config[:from_address]
     from_name = email_config[:from_name]
@@ -165,5 +149,22 @@ module MailJet
     # Description of values in the result field described here: https://documentation.mailgun.com/docs/inboxready/mailgun-validate/single-valid-ir/#result-types
     return false if %w(do_not_send undeliverable).include?(validation_response['result'])
     return true
+  end
+
+  # The send API has an option of v3 or v3.1. We've been using v3.1.
+  def self.configure_api_v3dot1
+    Mailjet.configure do |config|
+      config.api_key = API_KEY
+      config.secret_key = SECRET_KEY
+      config.api_version = "v3.1"
+    end
+  end
+
+  def self.configure_api_v3
+    Mailjet.configure do |config|
+      config.api_key = API_KEY
+      config.secret_key = SECRET_KEY
+      config.api_version = "v3"
+    end
   end
 end
