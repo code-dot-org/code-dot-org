@@ -27,7 +27,7 @@ import {
   init,
   mapLessonGroupDataForEditor,
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import MultiCheckboxSelector from '@cdo/apps/templates/MultiCheckboxSelector';
 import color from '@cdo/apps/util/color';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';

@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import FeedbackBanner, {
   BANNER_STATUS,
-} from '@cdo/apps/lib/ui/feedback/FeedbackBanner';
+} from '@cdo/apps/sharedComponents/userFeedback/FeedbackBanner';
 import i18n from '@cdo/locale';
 
 import {

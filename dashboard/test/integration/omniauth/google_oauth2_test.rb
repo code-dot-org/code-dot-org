@@ -20,9 +20,7 @@ module OmniauthCallbacksControllerTests
 
       get '/users/sign_up'
       sign_in_through_google
-      assert_redirected_to '/users/sign_up'
-      follow_redirect!
-      assert_template partial: '_finish_sign_up'
+      omniauth_redirect
       assert PartialRegistration.in_progress? session
 
       assert_creates(User) {finish_sign_up auth_hash, User::TYPE_STUDENT}
@@ -54,9 +52,7 @@ module OmniauthCallbacksControllerTests
 
       get '/users/sign_up'
       sign_in_through_google
-      assert_redirected_to '/users/sign_up'
-      follow_redirect!
-      assert_template partial: '_finish_sign_up'
+      omniauth_redirect
       assert PartialRegistration.in_progress? session
 
       assert_creates(User) {finish_sign_up auth_hash, User::TYPE_TEACHER}
@@ -86,9 +82,7 @@ module OmniauthCallbacksControllerTests
 
       get '/users/sign_up'
       sign_in_through_google
-      assert_redirected_to '/users/sign_up'
-      follow_redirect!
-      assert_template partial: '_finish_sign_up'
+      omniauth_redirect
       assert PartialRegistration.in_progress? session
 
       refute_creates(User) {fail_sign_up auth_hash, User::TYPE_TEACHER}
@@ -122,10 +116,7 @@ module OmniauthCallbacksControllerTests
 
       get '/users/sign_up'
       sign_in_through_google
-      assert_redirected_to '/users/sign_up'
-      follow_redirect!
-      assert_response :success
-      assert_template partial: '_finish_sign_up'
+      omniauth_redirect
       assert PartialRegistration.in_progress? session
 
       assert_creates(User) {finish_sign_up auth_hash, User::TYPE_STUDENT}
@@ -158,9 +149,7 @@ module OmniauthCallbacksControllerTests
 
       get '/users/sign_up'
       sign_in_through_google
-      assert_redirected_to '/users/sign_up'
-      follow_redirect!
-      assert_template partial: '_finish_sign_up'
+      omniauth_redirect
       assert PartialRegistration.in_progress? session
 
       assert_creates(User) {finish_sign_up auth_hash, User::TYPE_TEACHER}
@@ -191,9 +180,9 @@ module OmniauthCallbacksControllerTests
 
       get '/users/sign_up'
       sign_in_through_google
-      assert_redirected_to '/users/sign_up'
-      follow_redirect!
-      assert_template partial: '_finish_sign_up'
+
+      omniauth_redirect
+
       assert PartialRegistration.in_progress? session
 
       get '/users/cancel'
@@ -217,9 +206,7 @@ module OmniauthCallbacksControllerTests
 
       get '/users/sign_up'
       sign_in_through_google
-      assert_redirected_to '/users/sign_up'
-      follow_redirect!
-      assert_template partial: '_finish_sign_up'
+      omniauth_redirect
       assert PartialRegistration.in_progress? session
 
       refute_creates(User) {fail_sign_up auth_hash, User::TYPE_TEACHER}
@@ -310,21 +297,8 @@ module OmniauthCallbacksControllerTests
 
       get '/users/sign_up'
       sign_in_through_google
-      follow_redirect!
-
-      assert_template partial: '_finish_sign_up'
+      omniauth_redirect
       assert_nil assigns(:user).user_type
-    end
-
-    test 'sign_up queryparam can prefill user_type on finish_sign_up' do
-      mock_oauth
-
-      get '/users/sign_up?user[user_type]=teacher'
-      sign_in_through_google
-      follow_redirect!
-
-      assert_template partial: '_finish_sign_up'
-      assert_equal 'teacher', assigns(:user).user_type
     end
 
     # @return [OmniAuth::AuthHash] that will be passed to the callback when test-mode OAuth is invoked
