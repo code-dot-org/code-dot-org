@@ -2,7 +2,10 @@ import classnames from 'classnames';
 import React, {useState} from 'react';
 import Draggable, {DraggableEventHandler} from 'react-draggable';
 
+import {ChatCompletionMessage, Role} from '@cdo/apps/aiTutor/types';
+import AssistantMessage from '@cdo/apps/aiTutor/views/AssistantMessage';
 import Button from '@cdo/apps/componentLibrary/button';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import AiDiffChatFooter from './AiDiffChatFooter';
@@ -24,7 +27,9 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   const [positionX, setPositionX] = useState(0);
   const [positionY, setPositionY] = useState(0);
 
-  const [messageHistory, setMessageHistory] = useState<string[]>([]);
+  const [messageHistory, setMessageHistory] = useState<ChatCompletionMessage[]>(
+    []
+  );
 
   const onStopHandler: DraggableEventHandler = (e, data) => {
     setPositionX(data.x);
@@ -32,7 +37,12 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   };
 
   const onMessageSend = (message: string) => {
-    setMessageHistory([...messageHistory, message]);
+    const newMessage = {
+      role: Role.USER,
+      chatMessageText: message,
+      status: Status.OK,
+    };
+    setMessageHistory([...messageHistory, newMessage]);
   };
 
   return (
@@ -68,8 +78,8 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
 
         <div className={style.fabBackground}>
           <div className={style.chatContent}>
-            {messageHistory.map((message: string) => (
-              <p>{message}</p>
+            {messageHistory.map((message: ChatCompletionMessage) => (
+              <AssistantMessage message={message} />
             ))}
           </div>
           <AiDiffChatFooter onSubmit={onMessageSend} />
