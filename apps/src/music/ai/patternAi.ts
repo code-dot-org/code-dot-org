@@ -2,10 +2,7 @@ import mm, {MusicRNN, sequences} from '@magenta/music/es6';
 
 import {PatternTickEvent} from '../player/interfaces/PatternEvent';
 
-const model = new MusicRNN(
-  'https://storage.googleapis.com/download.magenta.tensorflow.org/tfjs_checkpoints/music_rnn/drum_kit_rnn'
-);
-model.initialize();
+let model: MusicRNN | undefined = undefined;
 
 const midiDrums = [36, 38, 42, 46, 41, 43, 45, 49, 51];
 const reverseMidiMapping = new Map([
@@ -72,15 +69,32 @@ const reverseMidiMapping = new Map([
   [82, 8],
 ]);
 
-export function generatePattern(
+export async function generatePattern(
   seed: PatternTickEvent[],
   length: number,
   temperature: number
 ) {
+  if (!model) {
+    console.log('starting create');
+    console.time('ai_create_model');
+    model = new MusicRNN(
+      'https://curriculum.code.org/media/musiclab/ai/music_rnn/drum_kit_rnn'
+    );
+    console.timeLog('ai_create_model');
+    await model.initialize();
+    console.timeEnd('ai_create_model');
+    console.log('ending create');
+  }
+
+  console.log('starting generate');
+  console.time('ai_generate_pattern');
   const seedSeq = toNoteSequence(seed);
-  return model
+  const result = model
     .continueSequence(seedSeq, length, temperature)
     .then(r => seed.concat(fromNoteSequence(r, length)));
+  console.timeEnd('ai_generate_pattern');
+  console.log('ending generate');
+  return result;
 }
 
 function toNoteSequence(pattern: PatternTickEvent[]) {
