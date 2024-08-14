@@ -18777,3 +18777,14 @@ en:
           description_short: Students prepare for the AP CSA Exam by practicing strategies for the multiple-choice and free response questions.
           description: This unit prepares students for the AP CSA Exam by reviewing key concepts, practicing multiple-choice and free response questions, and strengthening test-taking strategies. Students identify strengths and areas of improvement to create individualized study plans to focus their practice and self-assess their progress.
           student_description: This unit prepares you for the AP CSA Exam by reviewing key concepts, practicing multiple-choice and free response questions, and strengthening test-taking strategies. You identify strengths and areas of improvement to create individualized study plans to focus you practice and self-assess your progress.
+        sandbox-debugging:
+          lessons:
+            lesson-1:
+              name: What is Debugging?
+          lesson_groups: {}
+          name: sandbox-debugging
+          title: Debugging Sandbox
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
