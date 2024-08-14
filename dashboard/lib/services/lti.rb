@@ -191,8 +191,18 @@ module Services
           issuer: issuer,
           nrps_member: nrps_member
         )
-        had_changes ||= (user.new_record? || user.changed?)
+        user_was_new = user.new_record?
+        had_changes ||= (user_was_new || user.changed?)
         user.save!
+        if user_was_new
+          Metrics::Events.log_event(
+            user: user,
+            event_name: 'lti_user_created',
+            metadata: {
+              lms_name: lti_integration[:platform_name],
+            }
+          )
+        end
         if account_type == ::User::TYPE_TEACHER
           # Skip adding the instructor and reporting changes if the user is already an instructor
           unless section.instructors.include?(user)
