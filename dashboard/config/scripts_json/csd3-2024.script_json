@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-05 17:56:57 UTC",
+    "serialized_at": "2024-08-13 23:29:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -20738,19 +20738,6 @@
       }
     },
     {
-      "key": "aef06a3e-af8e-47c8-a4c4-38000a311746",
-      "position": 10,
-      "learning_goal": "",
-      "ai_enabled": false,
-      "tips": null,
-      "seeding_key": {
-        "learning_goal.key": "aef06a3e-af8e-47c8-a4c4-38000a311746",
-        "lesson.key": "Project - Design a Game",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd3-2024"
-      }
-    },
-    {
       "key": "b633cbb5-9b08-44ba-ae27-cdc7eec1d5b9",
       "position": 2,
       "learning_goal": "Program Development  - Program Readability",
@@ -21574,7 +21561,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "You sequenced the program well and and all elements on the screen appear as intended.",
+      "teacher_description": "You sequenced the program well and all elements on the screen appear as intended.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -22210,54 +22197,6 @@
     },
     {
       "understanding": 0,
-      "teacher_description": "",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 0,
-        "learning_goal.key": "aef06a3e-af8e-47c8-a4c4-38000a311746",
-        "lesson.key": "Project - Design a Game",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd3-2024"
-      }
-    },
-    {
-      "understanding": 1,
-      "teacher_description": "",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 1,
-        "learning_goal.key": "aef06a3e-af8e-47c8-a4c4-38000a311746",
-        "lesson.key": "Project - Design a Game",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd3-2024"
-      }
-    },
-    {
-      "understanding": 2,
-      "teacher_description": "",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 2,
-        "learning_goal.key": "aef06a3e-af8e-47c8-a4c4-38000a311746",
-        "lesson.key": "Project - Design a Game",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd3-2024"
-      }
-    },
-    {
-      "understanding": 3,
-      "teacher_description": "",
-      "ai_prompt": "",
-      "seeding_key": {
-        "understanding": 3,
-        "learning_goal.key": "aef06a3e-af8e-47c8-a4c4-38000a311746",
-        "lesson.key": "Project - Design a Game",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "csd3-2024"
-      }
-    },
-    {
-      "understanding": 0,
       "teacher_description": "Your program code does not contain comments and is difficult to read.",
       "ai_prompt": "",
       "seeding_key": {
@@ -22822,7 +22761,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "At least 2 sprites created, each with at least one property updated after creation (2).",
+      "teacher_description": "At least 2 sprites created, each with at least one property updated after creation.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
