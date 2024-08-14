@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-05 17:56:57 UTC",
+    "serialized_at": "2024-08-13 23:29:13 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -21561,7 +21561,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "You sequenced the program well and and all elements on the screen appear as intended.",
+      "teacher_description": "You sequenced the program well and all elements on the screen appear as intended.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,
@@ -22761,7 +22761,7 @@
     },
     {
       "understanding": 3,
-      "teacher_description": "At least 2 sprites created, each with at least one property updated after creation (2).",
+      "teacher_description": "At least 2 sprites created, each with at least one property updated after creation.",
       "ai_prompt": "",
       "seeding_key": {
         "understanding": 3,

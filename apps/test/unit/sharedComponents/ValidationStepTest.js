@@ -2,7 +2,9 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
+import ValidationStep, {
+  Status,
+} from '@cdo/apps/sharedComponents/ValidationStep';
 
 describe('ValidationStep', () => {
   describe('can render every status', () => {

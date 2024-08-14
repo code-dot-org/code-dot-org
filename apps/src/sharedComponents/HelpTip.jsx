@@ -1,12 +1,12 @@
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
+import {Portal} from 'react-portal';
 import ReactTooltip from 'react-tooltip';
 
-import FontAwesome from '../../legacySharedComponents/FontAwesome';
+import FontAwesome from '../legacySharedComponents/FontAwesome';
 
-// Help Tip without the Portal feature, which doesn't work if used in a Modal.
-export default function ModalHelpTip({children}) {
+export default function HelpTip({children}) {
   const id = _.uniqueId();
 
   return (
@@ -15,12 +15,14 @@ export default function ModalHelpTip({children}) {
         icon="question-circle-o"
         style={{cursor: 'pointer', marginLeft: '0.5em', marginRight: '0.5em'}}
       />
-      <ReactTooltip id={id} role="tooltip" effect="solid">
-        <div style={{maxWidth: 400}}>{children}</div>
-      </ReactTooltip>
+      <Portal>
+        <ReactTooltip id={id} role="tooltip" effect="solid">
+          <div style={{maxWidth: 400}}>{children}</div>
+        </ReactTooltip>
+      </Portal>
     </span>
   );
 }
-ModalHelpTip.propTypes = {
+HelpTip.propTypes = {
   children: PropTypes.node.isRequired,
 };

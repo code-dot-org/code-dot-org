@@ -7,7 +7,7 @@ import {
   InstructionType,
 } from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import color from '@cdo/apps/util/color';
 
 const INSTRUCTOR_AUDIENCE_DISPLAY_NAMES = {

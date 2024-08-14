@@ -4,7 +4,7 @@ import React from 'react';
 import {
   LegacyIncorrectDialog,
   LegacyTooFewDialog,
-} from '@cdo/apps/lib/ui/LegacyDialogContents';
+} from '@cdo/apps/legacySharedComponents/LegacyDialogContents';
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
 
 import {TestResults} from '../../constants';

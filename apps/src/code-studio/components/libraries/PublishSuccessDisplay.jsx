@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {Heading2} from '@cdo/apps/lib/ui/Headings';
+import {Heading2} from '@cdo/apps/legacySharedComponents/Headings';
 import i18n from '@cdo/locale';
 
 import LibraryIdCopier from './LibraryIdCopier';
