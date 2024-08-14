@@ -17,7 +17,7 @@ require 'csv'
 csv_file_path = ARGV[1]
 
 teacher_id = ARGV[0]
-teacher_user = User.find_by(id: teacher_id) || User.find_by(email: teacher_id)
+teacher_user = User.find_by(id: teacher_id) || User.find_by_email(teacher_id)
 raise "Teacher with id or email " + teacher_id.to_s.dump + " not found" if teacher_user.nil?
 
 rows = CSV.read(csv_file_path, headers: true)
