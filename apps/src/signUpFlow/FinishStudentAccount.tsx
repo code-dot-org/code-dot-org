@@ -5,8 +5,8 @@ import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
-import locale from '@cdo/apps/signup/locale';
 
+import locale from './locale';
 import {
   IS_PARENT_SESSION_KEY,
   USER_NAME_SESSION_KEY,
@@ -15,7 +15,7 @@ import {
   USER_GENDER_SESSION_KEY,
 } from './signUpFlowConstants';
 
-import style from './finish-account.module.scss';
+import style from './finishAccount.module.scss';
 
 const FinishStudentAccount: React.FunctionComponent = () => {
   const [isParent, setIsParent] = useState(false);
