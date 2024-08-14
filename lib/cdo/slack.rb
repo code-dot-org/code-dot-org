@@ -33,6 +33,10 @@ class Slack
     'server-operations' => 'C0CCSS3PX'
   }.freeze
 
+  USER_GROUP_ID_MAP = {
+    'teacher-tools-on-call': 'S07FB3XSAR5'
+  }.freeze
+
   SLACK_TOKEN = CDO.methods.include?(:slack_token) ? CDO.slack_token.freeze : nil
   SLACK_BOT_TOKEN = CDO.methods.include?(:slack_bot_token) ? CDO.slack_bot_token.freeze : nil
 
@@ -178,6 +182,12 @@ class Slack
     return false unless channel
     result = post_to_slack("https://slack.com/api/conversations.join", {"channel" => channel})
     return !!result
+  end
+
+  # @param message [String] the message to update to tag the user_group
+  # @param user_group [String] slack user group to be tagged for notification
+  def self.tag_user_group(message, user_group)
+    "<!subteam^#{USER_GROUP_ID_MAP[user_group&.to_sym]}> #{message}"
   end
 
   # Returns the channel ID for the channel with the requested channel_name.

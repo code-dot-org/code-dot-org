@@ -10,7 +10,9 @@ import {trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
 import {LmsLinks} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import FeedbackBanner, {BANNER_STATUS} from '../../../feedback/FeedbackBanner';
+import FeedbackBanner, {
+  BANNER_STATUS,
+} from '../../../../../sharedComponents/userFeedback/FeedbackBanner';
 
 /**
  * LtiFeedbackBanner component

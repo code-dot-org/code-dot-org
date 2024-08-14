@@ -5,10 +5,10 @@ import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {getFileByName} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource, ProjectFileType} from '@cdo/apps/lab2/types';
 
-import {asyncRun} from './pyodideWorkerManager';
+import {asyncRun, stopAndRestartPyodideWorker} from './pyodideWorkerManager';
 import {runStudentTests, runValidationTests} from './pythonHelpers/scripts';
 
-export function handleRunClick(
+export async function handleRunClick(
   runTests: boolean,
   dispatch: Dispatch<AnyAction>,
   source: MultiFileSource | undefined
@@ -27,7 +27,7 @@ export function handleRunClick(
       return;
     }
     dispatch(appendSystemMessage('Running program...'));
-    runPythonCode(code, source);
+    await runPythonCode(code, source);
   }
 }
 
@@ -45,6 +45,11 @@ export async function runPythonCode(mainFile: string, source: MultiFileSource) {
       `Error in pyodideWorker at ${e.filename}, Line: ${e.lineno}, ${e.message}`
     );
   }
+}
+
+export function stopPythonCode() {
+  // This will terminate the worker and create a new one.
+  stopAndRestartPyodideWorker();
 }
 
 export async function runAllTests(

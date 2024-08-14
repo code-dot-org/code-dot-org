@@ -7,7 +7,10 @@ import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import {Header, ConfirmCancelFooter} from '../SystemDialog/SystemDialog';
+import {
+  Header,
+  ConfirmCancelFooter,
+} from '../../../sharedComponents/SystemDialog/SystemDialog';
 
 const GUTTER = 20;
 

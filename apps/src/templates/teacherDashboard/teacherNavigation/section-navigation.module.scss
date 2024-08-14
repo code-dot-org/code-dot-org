@@ -1,0 +1,18 @@
+@import 'style-constants';
+
+.pageAndSidebar {
+  display: flex;
+  flex-direction: row;
+  min-height: 100%;
+}
+
+.pageWithHeader {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.widthLockedPage {
+  max-width: $content-width;
+  padding: 10px 64px 64px 64px;
+}

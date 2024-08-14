@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 
 import DCDO from '@cdo/apps/dcdo';
 import {getStore, registerReducers} from '@cdo/apps/redux';
@@ -105,27 +105,20 @@ $(document).ready(function () {
     experiments.isEnabled('teacher-local-nav-v2');
 
   const getV1TeacherDashboard = () => (
-    <Router basename={baseUrl}>
-      <Routes>
-        <Route
-          path="/*"
-          element={
-            <TeacherDashboard
-              studioUrlPrefix={scriptData.studioUrlPrefix}
-              sectionId={selectedSection.id}
-              sectionName={selectedSection.name}
-              studentCount={selectedSection.students.length}
-              anyStudentHasProgress={anyStudentHasProgress}
-              showAITutorTab={showAITutorTab}
-              sectionProviderName={sectionProviderName(
-                store.getState(),
-                selectedSection.id
-              )}
-            />
-          }
-        />
-      </Routes>
-    </Router>
+    <BrowserRouter basename={baseUrl}>
+      <TeacherDashboard
+        studioUrlPrefix={scriptData.studioUrlPrefix}
+        sectionId={selectedSection.id}
+        sectionName={selectedSection.name}
+        studentCount={selectedSection.students.length}
+        anyStudentHasProgress={anyStudentHasProgress}
+        showAITutorTab={showAITutorTab}
+        sectionProviderName={sectionProviderName(
+          store.getState(),
+          selectedSection.id
+        )}
+      />
+    </BrowserRouter>
   );
 
   ReactDOM.render(
@@ -133,7 +126,7 @@ $(document).ready(function () {
       {!showV2TeacherDashboard ? (
         getV1TeacherDashboard()
       ) : (
-        <Router basename={SECTION_NAVIGATION_BARE_URL}>
+        <BrowserRouter basename={SECTION_NAVIGATION_BARE_URL}>
           <SectionNavigationRouter
             studioUrlPrefix={scriptData.studioUrlPrefix}
             sectionId={selectedSection.id}
@@ -146,7 +139,7 @@ $(document).ready(function () {
               selectedSection.id
             )}
           />
-        </Router>
+        </BrowserRouter>
       )}
     </Provider>,
     document.getElementById('teacher-dashboard')
