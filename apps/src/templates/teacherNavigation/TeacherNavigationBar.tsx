@@ -1,10 +1,20 @@
+import _ from 'lodash';
 import React, {useState, useEffect} from 'react';
 import {useSelector} from 'react-redux';
+import {
+  useLocation,
+  useParams,
+  matchPath,
+  generatePath,
+  useNavigate,
+} from 'react-router-dom';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import Typography from '@cdo/apps/componentLibrary/typography';
 import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
 import i18n from '@cdo/locale';
+
+import {TEACHER_NAVIGATION_PATHS} from './TeacherDashboardPaths';
 
 import styles from './teacher-navigation.module.scss';
 
@@ -24,7 +34,17 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   const [sectionArray, setSectionArray] = useState<
     {value: string; text: string}[]
   >([]);
-  const [selectedSectionId, setSelectedSectionId] = useState<string>('');
+
+  const location = useLocation();
+  const params = useParams();
+  const navigate = useNavigate();
+
+  const genericPath = React.useMemo(() => {
+    return _.find(
+      Object.values(TEACHER_NAVIGATION_PATHS),
+      path => !!matchPath(path, location.pathname)
+    );
+  }, [location]);
 
   useEffect(() => {
     const updatedSectionArray = Object.entries(sections)
@@ -35,12 +55,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
       }));
 
     setSectionArray(updatedSectionArray);
-
-    // Set initial selectedSectionId if not already set
-    if (updatedSectionArray.length > 0 && !selectedSectionId) {
-      setSelectedSectionId(updatedSectionArray[0].value);
-    }
-  }, [sections, selectedSectionId]);
+  }, [sections]);
 
   const getSectionHeader = (label: string) => {
     return (
@@ -138,10 +153,16 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
         </Typography>
         <SimpleDropdown
           items={sectionArray}
-          onChange={value => setSelectedSectionId(value.target.value)}
+          onChange={value => {
+            if (genericPath) {
+              navigate(
+                generatePath(genericPath, {sectionId: value.target.value})
+              );
+            }
+          }}
           labelText=""
           size="m"
-          selectedValue={selectedSectionId}
+          selectedValue={params.sectionId}
           className={styles.sectionDropdown}
           name="section-dropdown"
         />
