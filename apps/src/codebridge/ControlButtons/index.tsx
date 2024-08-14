@@ -10,7 +10,9 @@ import {
   getCurrentLevel,
   nextLevelId,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Button from '@cdo/apps/componentLibrary/button';
+import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
@@ -111,7 +113,7 @@ const ControlButtons: React.FunctionComponent = () => {
 
   // We disabled navigation if we are still loading, or if this is a submittable level,
   // the user has not submitted yet, and the user has not run their code during this session.
-  const disableNavigation = isSubmittable && !hasSubmitted && !hasRun;
+  const awaitingSubmitRun = isSubmittable && !hasSubmitted && !hasRun;
   const getNavigationButtonProps = () => {
     if (isSubmittable) {
       return {
@@ -130,6 +132,111 @@ const ControlButtons: React.FunctionComponent = () => {
     }
   };
 
+  const renderRunTestWithTooltip = () => {
+    let runTestTooltip = null;
+    if (awaitingPredictSubmit) {
+      runTestTooltip = codebridgeI18n.predictRunDisabledTooltip();
+    } else if (isLoadingEnvironment) {
+      runTestTooltip = codebridgeI18n.loadingEnvironmentTooltip();
+    }
+    if (runTestTooltip) {
+      return (
+        <>
+          <WithTooltip
+            tooltipProps={{
+              direction: 'onTop',
+              text: runTestTooltip,
+              tooltipId: 'runButtonTooltip',
+            }}
+          >
+            {renderRunButton()}
+          </WithTooltip>
+          <WithTooltip
+            tooltipProps={{
+              direction: 'onTop',
+              text: runTestTooltip,
+              tooltipId: 'testButtonTooltip',
+            }}
+          >
+            {renderTestButton()}
+          </WithTooltip>
+        </>
+      );
+    } else {
+      return (
+        <>
+          {renderRunButton()}
+          {renderTestButton()}
+        </>
+      );
+    }
+  };
+
+  const renderRunButton = () => {
+    return (
+      <Button
+        text={'Run'}
+        onClick={() => handleRun(false)}
+        disabled={disableRunAndTest}
+        iconLeft={{iconStyle: 'solid', iconName: 'play'}}
+        className={moduleStyles.runButton}
+        size={'s'}
+        color={'white'}
+      />
+    );
+  };
+
+  const renderTestButton = () => {
+    return (
+      <Button
+        text="Test"
+        onClick={() => handleRun(true)}
+        disabled={disableRunAndTest}
+        iconLeft={{iconStyle: 'solid', iconName: 'flask'}}
+        color={'black'}
+        size={'s'}
+      />
+    );
+  };
+
+  const renderNavigationWithTooltip = () => {
+    if (awaitingSubmitRun) {
+      console.log(
+        `adding tooltip with text ${codebridgeI18n.submitDisabledTooltip()}`
+      );
+      return (
+        <WithTooltip
+          tooltipProps={{
+            direction: 'onTop',
+            text: codebridgeI18n.submitDisabledTooltip(),
+            tooltipId: 'submitRunButtonTooltip',
+          }}
+        >
+          {renderNavigationButton()}
+        </WithTooltip>
+      );
+    } else {
+      return renderNavigationButton();
+    }
+  };
+
+  const renderNavigationButton = () => {
+    return (
+      <Button
+        text={navigationText}
+        onClick={handleNavigation}
+        disabled={false}
+        color={'purple'}
+        size={'s'}
+        iconLeft={
+          hasNextLevel
+            ? {iconStyle: 'solid', iconName: 'arrow-right'}
+            : undefined
+        }
+      />
+    );
+  };
+
   const {navigationText, handleNavigation} = getNavigationButtonProps();
 
   return (
@@ -145,38 +252,12 @@ const ControlButtons: React.FunctionComponent = () => {
         />
       ) : (
         <span className={moduleStyles.centerButton}>
-          <Button
-            text={'Run'}
-            onClick={() => handleRun(false)}
-            disabled={disableRunAndTest}
-            iconLeft={{iconStyle: 'solid', iconName: 'play'}}
-            className={moduleStyles.runButton}
-            size={'s'}
-            color={'white'}
-          />
-          <Button
-            text="Test"
-            onClick={() => handleRun(true)}
-            disabled={disableRunAndTest}
-            iconLeft={{iconStyle: 'solid', iconName: 'flask'}}
-            color={'black'}
-            size={'s'}
-          />
+          {renderRunTestWithTooltip()}
         </span>
       )}
-      <Button
-        text={navigationText}
-        onClick={handleNavigation}
-        disabled={disableNavigation}
-        color={'purple'}
-        className={moduleStyles.navigationButton}
-        size={'s'}
-        iconLeft={
-          hasNextLevel
-            ? {iconStyle: 'solid', iconName: 'arrow-right'}
-            : undefined
-        }
-      />
+      <span className={moduleStyles.navigationButton}>
+        {renderNavigationWithTooltip()}
+      </span>
     </div>
   );
 };
