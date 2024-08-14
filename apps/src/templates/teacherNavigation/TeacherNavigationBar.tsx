@@ -6,6 +6,11 @@ import Typography from '@cdo/apps/componentLibrary/typography';
 import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
 import i18n from '@cdo/locale';
 
+import {
+  TEACHER_DASHBOARD_PATHS,
+  getSectionRouterPath,
+} from '../teacherDashboard/teacherNavigation/TeacherDashboardPaths';
+
 import styles from './teacher-navigation.module.scss';
 
 interface SectionsData {
@@ -42,12 +47,20 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     }
   }, [sections, selectedSectionId]);
 
+  // later
+  // const [selectedOptionPath, setSelectedOptionPath] = useState<string>('');
+
+  // const isSelectedOption = (path: string) => {
+  //   path === selectedOptionPath;
+  // };
+
   const getSectionHeader = (label: string) => {
     return (
       <Typography
         semanticTag={'h2'}
         visualAppearance={'overline-two'}
         className={styles.sectionHeader}
+        key={label}
       >
         {label}
       </Typography>
@@ -60,26 +73,36 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
       icon={'desktop'}
       optionTitle={i18n.course()}
       isSelected={false}
+      link={'/progress1'}
+      key={'/progress1'}
     />,
     <SidebarOption
       icon={'folder-open'}
       optionTitle={i18n.lessonMaterials()}
       isSelected={false}
+      link={'/progress2'}
+      key={'/progress2'}
     />,
     <SidebarOption
       icon={'file-lines'}
       optionTitle={i18n.lessonPlans()}
       isSelected={false}
+      link={'/progress3'}
+      key={'/progress3'}
     />,
     <SidebarOption
       icon={'presentation-screen'}
       optionTitle={i18n.slideDecks()}
       isSelected={false}
+      link={'/progress4'}
+      key={'/progress4'}
     />,
     <SidebarOption
       icon={'calendar'}
       optionTitle={i18n.calendar()}
       isSelected={false}
+      link={'/progress5'}
+      key={'/progress5'}
     />,
   ];
 
@@ -89,26 +112,31 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
       icon={'chart-line'}
       optionTitle={i18n.progress()}
       isSelected={false}
+      link={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.progress)}
     />,
     <SidebarOption
       icon={'star'}
       optionTitle={i18n.assessments()}
       isSelected={false}
+      link={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.assessments)}
     />,
     <SidebarOption
       icon={'code'}
       optionTitle={i18n.studentProjects()}
       isSelected={true}
+      link={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.projects)}
     />,
     <SidebarOption
       icon={'chart-simple'}
       optionTitle={i18n.teacherTabStats()}
       isSelected={false}
+      link={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.stats)}
     />,
     <SidebarOption
       icon={'pen-line'}
       optionTitle={i18n.teacherTabStatsTextResponses()}
       isSelected={false}
+      link={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.textResponses)}
     />,
   ];
 
@@ -118,11 +146,15 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
       icon={'users'}
       optionTitle={i18n.roster()}
       isSelected={false}
+      link={'/progress6'}
+      key={'/progress6'}
     />,
     <SidebarOption
       icon={'gear'}
       optionTitle={i18n.settings()}
       isSelected={false}
+      link={'/progress7'}
+      key={'/progress7'}
     />,
   ];
 
