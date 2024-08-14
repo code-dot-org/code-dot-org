@@ -1,3 +1,8 @@
+// ******** HELPER FUNCTION TO GET RELATIVE SCALE PER BRANDING GUIDELINES ********
+function getDefaultSpriteScale(costume) {
+  return defaultSpriteScales[costume] || 100;
+}
+
 // ******** COMMAND OVERRIDES FOR EXISTING SPRITE LAB BLOCKS ********
 function makeNewSpriteAnon(costume, location) {
   createNewSprite({name: 'newTransformersSprite'}, costume, location);
@@ -83,83 +88,35 @@ function playSoundOptions(choice){
 function validateSpriteScaleChanged(){
   var sprites = World.allSprites;
   for (var i = 0; i < sprites.length; i++) {
-    if(sprites[i].getScale() * 100 !== getDefaultSpriteScale(sprites[i])) {
+    var defaultScale = getDefaultSpriteScale(sprites[i].getAnimationLabel()) / 100;
+    var actualScale = sprites[i].getScale();
+    if(actualScale !== defaultScale) {
       return true;
     }
   }
   return false;
 }
 
-// ******** HELPER FUNCTION TO GET RELATIVE SCALE PER BRANDING GUIDELINES ********
-function getDefaultSpriteScale(costume) {
-  var size;
-  switch (costume) {
-    case 'bumblebee_1':
-      size = 220;
-      break;
-    case 'bumblebee_2':
-      size = 200;
-      break;
-    case 'bumblebee_3':
-      size = 220;
-      break;
-    case 'bumblebee_4':
-      size = 218;
-      break;
-    case 'bumblebee_vehicle':
-      size = 225;
-      break;
-    case 'elita_1':
-      size = 215;
-      break;
-    case 'elita_2':
-      size = 205;
-      break;
-    case 'elita_3':
-      size = 175;
-      break;
-    case 'elita_4':
-      size = 205;
-      break;
-    case 'elita_vehicle':
-      size = 200;
-      break;
-    case 'megatron_1':
-      size = 295;
-      break;
-    case 'megatron_2':
-      size = 240;
-      break;
-    case 'megatron_3':
-      size = 270;
-      break;
-    case 'megatron_4':
-      size = 295;
-      break;
-    case 'megatron_vehicle':
-      size = 248;
-      break;
-    case 'optimus_prime_1':
-      size = 250;
-      break;
-    case 'optimus_prime_2':
-      size = 207;
-      break;
-    case 'optimus_prime_3':
-      size = 213;
-      break;
-    case 'optimus_prime_4':
-      size = 217;
-      break;
-    case 'optimus_prime_vehicle':
-      size = 205;
-      break;
-    case 'cog':
-      size = 48;
-      break;
-    default:
-      size = 100;
-      break;
-  }
-  return size;
-}
+var defaultSpriteScales = {
+  'bumblebee_1': 220,
+  'bumblebee_2': 200,
+  'bumblebee_3': 220,
+  'bumblebee_4': 218,
+  'bumblebee_vehicle': 225,
+  'elita_1': 215,
+  'elita_2': 205,
+  'elita_3': 175,
+  'elita_4': 205,
+  'elita_vehicle': 200,
+  'megatron_1': 295,
+  'megatron_2': 240,
+  'megatron_3': 270,
+  'megatron_4': 295,
+  'megatron_vehicle': 248,
+  'optimus_prime_1': 250,
+  'optimus_prime_2': 207,
+  'optimus_prime_3': 213,
+  'optimus_prime_4': 217,
+  'optimus_prime_vehicle': 205,
+  'cog': 48
+};
