@@ -44,7 +44,7 @@ module Lti
           )
           target_url = session[:user_return_to] || home_path
           flash[:notice] = I18n.t('lti.account_linking.successfully_linked')
-          redirect_to target_url
+          redirect_to target_url and return
         else
           flash.alert = I18n.t('lti.account_linking.invalid_credentials')
           redirect_to user_session_path(lti_provider: params[:lti_provider], lms_name: params[:lms_name]) and return
