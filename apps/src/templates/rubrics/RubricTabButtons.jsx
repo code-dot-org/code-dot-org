@@ -97,9 +97,7 @@ export default function RubricTabButtons({
                 effect="solid"
                 place="bottom"
               >
-                <div style={{maxWidth: 400}}>
-                  <p>{statusText()}</p>
-                </div>
+                {statusText()}
               </ReactTooltip>
             )}
           </div>
