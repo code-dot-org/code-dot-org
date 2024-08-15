@@ -12,6 +12,19 @@ export const TEACHER_DASHBOARD_PATHS = {
   aiTutorChatMessages: '/ai_tutor',
 };
 
+export const TEACHER_NAVIGATION_PATHS = {
+  dashboard: ':sectionId',
+  progress: ':sectionId/progress',
+  textResponses: ':sectionId/text_responses',
+  assessments: ':sectionId/assessments',
+  projects: ':sectionId/projects',
+  stats: ':sectionId/stats',
+  manageStudents: ':sectionId/manage_students',
+  loginInfo: ':sectionId/login_info',
+  standardsReport: ':sectionId/standards_report',
+  aiTutorChatMessages: ':sectionId/ai_tutor',
+};
+
 export const LABELED_TEACHER_DASHBOARD_PATHS = [
   {
     label: i18n.teacherTabProgress(),
