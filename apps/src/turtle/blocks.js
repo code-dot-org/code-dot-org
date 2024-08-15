@@ -738,8 +738,9 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setTitleValue(counter, 'VAR');
     },
   };
-
-  generator.controls_for_counter = generator.controls_for;
+  // Google Blockly uses forBlock, CDO Blockly does not.
+  generator.controls_for_counter =
+    generator.controls_for || generator.forBlock.controls_for;
 
   // Delete these standard blocks.
   delete blockly.Blocks.procedures_defreturn;
