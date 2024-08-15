@@ -1,5 +1,0 @@
-{{ featured_tutorial, title: “ಹಲೋ ವರ್ಲ್ಡ್: ಸಾಕರ್”, body: “ನೀವು ಸಾಕರ್ ಪಿಚ್ನಲ್ಲಿ ಸಂವಾದಾತ್ಮಕ ದೃಶ್ಯಗಳನ್ನು ಕೋಡ್ ಮಾಡುವಾಗ ನೀವು ತಂಡದ ಕ್ಯಾಪ್ಟನ್ ಆಗಿದ್ದೀರಿ. ಗೋಲ್!", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
-
-{{ featured_tutorial, title: “ಫ್ಲಾಪಿ ಕೋಡ್”, body: “10 ನಿಮಿಷಗಳಿಗೂ ಕಡಿಮೆ ಸಮಯದಲ್ಲಿ ನಿಮ್ಮ ಗೇಮ್ ಬರೆಯಲು ಬಯಸಿದ್ದೀರಾ? ನಮ್ಮ ಫ್ಲಾಪಿ ಕೋಡ್ ಟ್ಯುಟೋರಿಯಲ್ ಪ್ರಯತ್ನಿಸಿ!”, image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
-
-{{ featured_tutorial, title: “ಮೈನ್‌ಕ್ರಾಫ್ಟ್‌ ಅವರ್ ಆಫ್ ಕೋಡ್‌”, body: “ಮೈನ್‌ಕ್ರಾಫ್ಟ್ ಹೊಚ್ಚ ಹೊಸ ಚಟುವಟಿಕೆಯೊಂದಿಗೆ ಅವರ್ ಆಫ್‌ ಕೋಡ್‌ಗೆ ಮರಳಿದೆ! ಕೋಡ್ ಜೊತೆಗೆ ಮೈನ್‌ಕ್ರಾಫ್ಟ್‌ ಮೂಲಕ ಪಯಣ.", image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}

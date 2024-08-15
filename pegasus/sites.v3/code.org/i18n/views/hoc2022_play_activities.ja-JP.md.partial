@@ -1,5 +1,0 @@
-{{ featured_tutorial, title: "Hello World: Soccer：サッカー", body: "サッカー場でインタラクティブなシーンをコーディングするとき、あなたはチームのキャプテンである。 ゴール！", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
-
-{{ featured_tutorial, title: "Flappy Code", body: "10分以内に自分のゲームを書きたいのか？ Flappy Codeチュートリアルを試そう！", image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
-
-{{ featured_tutorial, title: "Minecraft Hour of Code", body: "Minecraftが新しいアクティビティでHour of Codeに戻ってきた！ コードでMinecraftを旅しよう。", image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}

@@ -1,5 +1,0 @@
-{{ featured_tutorial, title: "ஹலோ வேர்ல்ட்: சாக்கர்", body: "நீங்கள் கால்பந்து ஆடுகளத்தில் ஊடாடும் காட்சிகளைக் குறிப்பதால் நீங்கள் அணியின் கேப்டன். GOOOAALLL!” ,image: "/images/hoc2022-hello-world-soccer.png“, url: "https://studio.code.org/s/hello-world-soccer-2022/reset "}}
-
-{{ featured_tutorial, title: "பிளாப்பி குறியீடு", body: "உங்கள் சொந்த விளையாட்டை 10 நிமிடங்களுக்குள் எழுத வேண்டுமா? எங்கள் பிளாப்பி குறியீடு டுடோரியலை முயற்சிக்கவும்!", image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
-
-{{ featured_tutorial, title: "மைன் கிராப்ட் ஹவர் ஆஃப் கோட்", body: "புத்தம் புதிய செயல்பாட்டுடன் மைன் கிராப்ட் ஹவர் ஆஃப் கோட் திரும்பியுள்ளது! குறியீட்டுடன் மைன் கிராப்ட் மூலம் பயணம்.", image:"/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}

@@ -1,5 +1,0 @@
-{{ featured_tutorial, title: "مرحبًا أيها العالم: كرة القدم"، body: "أنت قائد الفريق وتقوم ببرمجة مشاهد تفاعلية في ملعب كرة القدم. هدف!", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
-
-{{ featured_tutorial, title: "فلابي كود"، body: "هل تريد كتابة لعبتك الخاصة في أقل من 10 دقائق؟ جرب برنامجنا التعليمي الخاص ببرمجة فلابي كود!"، image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
-
-{{ featured_tutorial, title: "ماين كرافت في ساعة البرمجة"، body: "عادت لعبة ماينكرافت في ساعة البرمجة مع نشاط جديد تمامًا! رحلة عبر ماينكرافت باستخدام الكود."، image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}

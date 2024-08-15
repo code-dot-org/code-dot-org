@@ -1,5 +1,0 @@
-{{ featured_tutorial, title: "Olá Mundo: Futebol", body: "Você é o capitão do time e está codificando cenas interativas do campo de futebol. GOOOOOLLL!", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
-
-{{ featured_tutorial, title: "Código Flappy", body: "Quer programar seu próprio jogo em menos de 10 minutos? Experimente o tutorial Código Flappy!", image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
-
-{{ featured_tutorial, title: "Minecraft Hour of Code", body: "O Minecraft está de volta ao Hour of Code, com uma novíssima atividade! Jornada pelo Minecraft com código.", image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}

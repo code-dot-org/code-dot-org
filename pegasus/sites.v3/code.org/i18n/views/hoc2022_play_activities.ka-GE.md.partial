@@ -1,5 +1,0 @@
-{{ featured_tutorial, title: "Hello World: ფეხბურთი", body: "თქვენ ხართ გუნდის კაპიტანი, როდესაც აპროგრამებთ ინტერაქტიულ სცენებს ფეხბურთის მოედანზე. გოოოოოლ!", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
-
-{{ featured_tutorial, title: "Flappy Code", body: "გსურთ დაწეროთ თქვენი საკუთარი თამაში 10 წუთზე ნაკლებ დროში? სცადეთ თქვენი Flappy Code სასწავლო კურსი!", image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
-
-{{ featured_tutorial, title: "Minecraft კოდის ერთი საათი", body: "Minecraft დაბრუნდა კოდის ერთი საათისთვის სრულიად ახალი აქტივობით! მოგზაურობა Minecraft-ში კოდთან ერთად.", image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}

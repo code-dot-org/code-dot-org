@@ -1,5 +1,0 @@
-{{ featured_tutorial, title: "Salom dunyo: Futbol", body: "Futbol maydonidagi interaktiv sahnalarni dasturlayotganingiz uchun siz jamoa sardorisiz.  GOOOOLLL!", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
-
-{{ featured_tutorial, title: "Flappy Code", body: "10 daqiqadan kamroq vaqt ichida o'z o'yiningizni yozmoqchimisiz? Flappy Code boʻyicha o'quv qoʻllanmamizni sinab koʻring!", image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
-
-{{ featured_tutorial, title: "Minecraft Dasturlash soati", body: "Minecraft yangi mashg'ulot bilan Dasturlash soatiga qaytdi! Dasturlash bilan Minecraft bo'ylab sayohat.", image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}

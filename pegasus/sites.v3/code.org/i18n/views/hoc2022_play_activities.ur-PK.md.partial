@@ -1,5 +1,0 @@
-{{ featured_tutorial, title: "ہیلو ورلڈ: فٹ بال", body: "آپ ٹیم کے کپتان ہیں کیونکہ آپ فٹ بال کے میدان پر انٹرایکٹو مناظر کو کوڈ کرتے ہیں۔ گول!", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
-
-{{ featured_tutorial, title: "فلپی کوڈ", body: "کیا آپ 10 منٹ سے بھی کم وقت میں اپنا گیم لکھنا چاہتے ہیں؟ ہمارا فلیپی کوڈ ٹیوٹوریل آزمائیں۔!", image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
-
-{{ featured_tutorial, title: "مائن کرافٹ آور آف کوڈ", body: "مائن کرافٹ ایک بالکل نئی سرگرمی کے ساتھ آور آف کوڈ کے ساتھ واپس آ گیا ہے۔! کوڈ کے ساتھ مائن کرافٹ کے ذریعے سفر کریں۔", image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}

@@ -1,5 +1,0 @@
-{{ featured_tutorial, title: "你好世界：足球", body: "当你在足球场上编程交互场景时，你就是队长。 进球！", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
-
-{{ featured_tutorial, title: "像素鸟编程", body: "想在10分钟内编写自己的游戏？ 试试我们的像素鸟编程教程！", image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
-
-{{ featured_tutorial, title: "我的世界编程一小时", body: "我的世界回到编程一小时，带来一个全新的活动！ 使用代码畅游我的世界。", image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}

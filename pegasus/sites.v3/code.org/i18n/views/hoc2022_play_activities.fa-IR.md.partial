@@ -1,5 +1,0 @@
-{{ featured_tutorial, title: "Hello World: Soccer", body: "شما کاپیتان تیم هستید که صحنه‌های تعاملی را در زمین فوتبال کد نویسی می‌کنید. گووول!", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
-
-{{ featured_tutorial, title: "Flappy Code", body: "می‌خواهی بازی خودت را در کمتر از 10 دقیقه بنویسی? آموزش Flappy Code!", image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
-
-{{ featured_tutorial, title: "ساعت کدنویسی ماینکرافت", body: "ماینکرافت برای ساعت کدنویسی با فعالیتی کاملاً جدید برگشته است! باکدنویسی در ماینکرافت آشنا شوید", image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}
