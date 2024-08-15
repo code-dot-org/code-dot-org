@@ -180,11 +180,19 @@ export const projectReducer = (project: ProjectType, action: ReducerAction) => {
     case PROJECT_REDUCER_ACTIONS.DELETE_FILE: {
       const {fileId} = <DefaultFilePayload>action.payload;
 
+      const openFileIds = getOpenFileIds(project);
+      const newOpenFileIds = openFileIds.find(
+        openFileId => openFileId === fileId
+      )
+        ? openFileIds.filter(openFileId => openFileId !== fileId)
+        : openFileIds;
+
       const newProject = {
         ...project,
         files: {
           ...project.files,
         },
+        openFiles: newOpenFileIds,
       };
 
       delete newProject.files[fileId];
