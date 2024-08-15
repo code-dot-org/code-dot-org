@@ -36,43 +36,32 @@ async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
     );
 
     // To do: load locale from browser.
-    // To do: handle missing translation file.
     // To do: wrap this (getting translations, localizing library)
     //   in an experiment so we can ship it without any user-facing impact?
     //   Or can just wait to merge it until we have real translations.
-    const translationsPromise = loadTranslations(libraryFilename, 'fr_fr');
+    const translationsPromise = loadTranslations(libraryFilename, 'gagaga');
 
-    // if translation rejects, just send library json
-    //
-    const [libraryJsonResponse, translations] = await Promise.all([
+    const [libraryJsonResponse, translations] = await Promise.allSettled([
       libraryJsonResponsePromise,
       translationsPromise,
     ]);
 
-    // const libraryJsonResponse = results[0].value;
-    // const translations = results[1].value;
+    let libraryJsonLocalized = {} as LibraryJson;
+    if (libraryJsonResponse.status === 'fulfilled') {
+      libraryJsonLocalized = libraryJsonResponse.value.value as LibraryJson;
+    }
 
-    // const [libraryJsonResponse, translations] = results
-    //   .filter(isFulfilled)
-    //   .map(item => item?.value);
-
-    const libraryJsonLocalized = localizeLibrary(
-      libraryJsonResponse.value as LibraryJson,
-      translations as Translations
-    );
+    if (translations.status === 'fulfilled') {
+      libraryJsonLocalized = localizeLibrary(
+        libraryJsonLocalized,
+        translations.value as Translations
+      );
+    }
 
     // should first arg be libraryFilename?
     return new MusicLibrary(libraryName, libraryJsonLocalized);
   }
 }
-
-// const isRejected = (
-//   input: PromiseSettledResult<unknown>
-// ): input is PromiseRejectedResult => input.status === 'rejected';
-//
-// const isFulfilled = <T>(
-//   input: PromiseSettledResult<T>
-// ): input is PromiseFulfilledResult<T> => input.status === 'fulfilled';
 
 type Translations = {[key: string]: string};
 
