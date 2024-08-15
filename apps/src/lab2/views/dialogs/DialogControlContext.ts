@@ -8,18 +8,22 @@ import {
 import {
   TypedDialogProps,
   DialogCloseFunctionType,
-  DialogCloseActionType,
+  DialogClosePromiseReturnType,
 } from './types';
 
 interface DialogControl {
   closeDialog: DialogCloseFunctionType;
-  showDialog: (args: TypedDialogProps) => Promise<DialogCloseActionType>;
+  showDialog: (args: TypedDialogProps) => Promise<DialogClosePromiseReturnType>;
   deferredPromiseObject: DeferredPromiseObject;
+  promiseArgs: unknown;
+  setPromiseArgs: (args: unknown) => void;
 }
 
 export const DialogControlContext = React.createContext<DialogControl>({
   closeDialog: () => {},
-  showDialog: () => Promise.resolve('cancel'),
+  showDialog: () => Promise.resolve({type: 'cancel'}),
   deferredPromiseObject: getDeferredPromise(),
+  promiseArgs: undefined,
+  setPromiseArgs: () => {},
 });
 export const useDialogControl = () => useContext(DialogControlContext);

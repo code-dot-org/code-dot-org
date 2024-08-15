@@ -21,7 +21,11 @@ import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {ProjectFileType} from '@cdo/apps/lab2/types';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
+import {
+  useDialogControl,
+  DialogType,
+  DialogClosePromiseReturnType,
+} from '@cdo/apps/lab2/views/dialogs';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
@@ -32,7 +36,6 @@ import {
   newFilePromptType,
   newFileType,
   newFolderPromptType,
-  newFolderType,
   renameFilePromptType,
   renameFileType,
   renameFolderPromptType,
@@ -54,6 +57,17 @@ type FilesComponentProps = {
   renameFilePrompt: renameFilePromptType;
   renameFolderPrompt: renameFolderPromptType;
   setFileType: setFileType;
+};
+
+const extractPrompt = (
+  promiseResults: DialogClosePromiseReturnType
+): string => {
+  const {type, args} = promiseResults;
+  if (type === 'confirm') {
+    return args as string;
+  }
+
+  return '';
 };
 
 const InnerFileBrowser = React.memo(
@@ -321,53 +335,32 @@ export const FileBrowser = React.memo(() => {
     [dialogControl]
   );
 
-  const innerNewFolder: newFolderType = useMemo(
-    () => (parentId, folderName) => {
-      const folderId = getNextFolderId(Object.values(project.folders));
-
-      if (!folderName) {
-        return;
-      }
-
-      const existingFolder = Object.values(project.folders).some(
-        f => f.name === folderName && f.parentId === parentId
-      );
-      if (existingFolder) {
-        dialogControl?.showDialog({
-          type: DialogType.GenericAlert,
-          title: codebridgeI18n.folderExistsError(),
-        });
-        return;
-      }
-
-      newFolder({parentId, folderName, folderId});
-    },
-    [newFolder, project.folders, dialogControl]
-  );
-
   const newFolderPrompt: FilesComponentProps['newFolderPrompt'] = useMemo(
     () =>
-      (parentId = DEFAULT_FOLDER_ID) => {
-        dialogControl
-          ?.showDialog({
-            type: DialogType.GenericPrompt,
-            title: codebridgeI18n.newFolderPrompt(),
-            handleConfirm: (folderName: string) => {
-              innerNewFolder(parentId, folderName);
-            },
-            validateInput: (folderName: string) => {
-              const existingFolder = Object.values(project.folders).some(
-                f => f.name === folderName && f.parentId === parentId
-              );
-              if (existingFolder) {
-                return codebridgeI18n.folderExistsError();
-              }
-            },
-          })
-          .then(type => console.log('CLOSE ON : ', type))
-          .catch(type => console.log('CATCH ON : ', type));
+      async (parentId = DEFAULT_FOLDER_ID) => {
+        const results = await dialogControl.showDialog({
+          type: DialogType.GenericPrompt,
+          title: codebridgeI18n.newFolderPrompt(),
+          validateInput: (folderName: string) => {
+            const existingFolder = Object.values(project.folders).some(
+              f => f.name === folderName && f.parentId === parentId
+            );
+            if (existingFolder) {
+              return codebridgeI18n.folderExistsError();
+            }
+          },
+        });
+
+        const folderName = extractPrompt(results);
+
+        if (!folderName) {
+          return;
+        }
+
+        const folderId = getNextFolderId(Object.values(project.folders));
+        newFolder({parentId, folderName, folderId});
       },
-    [dialogControl, innerNewFolder, project.folders]
+    [dialogControl, newFolder, project.folders]
   );
 
   const downloadFile: FilesComponentProps['downloadFile'] = useMemo(

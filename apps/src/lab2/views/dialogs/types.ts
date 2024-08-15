@@ -20,6 +20,11 @@ export type DialogCloseFunctionType = (
   args?: unknown
 ) => void;
 
+export type DialogClosePromiseReturnType = {
+  type: DialogCloseActionType;
+  args?: unknown;
+};
+
 export type SpecificTypedDialogProps =
   | (GenericAlertDialogProps & {
       type: DialogType.GenericAlert;

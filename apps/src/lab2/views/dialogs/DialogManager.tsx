@@ -17,6 +17,7 @@ import {
   TypedDialogProps,
   AnyDialogType,
   DialogCloseActionType,
+  DialogClosePromiseReturnType,
 } from './types';
 
 import moduleStyles from './dialog-manager.module.scss';
@@ -49,6 +50,7 @@ const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
   const [openDialog, setOpenDialog] = useState<DialogType | null>(null);
   const [shouldThrowOnCancel, setShouldThrowOnCancel] =
     useState<boolean>(false);
+  const [promiseArgs, setPromiseArgs] = useState<unknown>();
   const [dialogArgs, setDialogArgs] = useState<AnyDialogType>();
   const [deferredPromiseObject, setDeferredPromiseObject] =
     useState<DeferredPromiseObject>(getDeferredPromise());
@@ -57,12 +59,13 @@ const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
     ({type, throwOnCancel = false, ...dialogArgs}: TypedDialogProps) => {
       const newDeferredPromise = getDeferredPromise();
       setDeferredPromiseObject(newDeferredPromise);
+      setPromiseArgs(undefined);
       setShouldThrowOnCancel(throwOnCancel);
       setOpenDialog(type);
       setDialogArgs(dialogArgs);
-      return newDeferredPromise.deferred;
+      return newDeferredPromise.deferred as Promise<DialogClosePromiseReturnType>;
     },
-    [setDialogArgs]
+    [setDialogArgs, setPromiseArgs]
   );
 
   const closeDialog = useCallback(
@@ -72,9 +75,9 @@ const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
         shouldThrowOnCancel && closeType === 'cancel'
           ? deferredPromiseObject.reject
           : deferredPromiseObject.resolve;
-      resolver?.(closeType);
+      resolver?.({type: closeType, args: promiseArgs});
     },
-    [setOpenDialog, deferredPromiseObject, shouldThrowOnCancel]
+    [setOpenDialog, deferredPromiseObject, shouldThrowOnCancel, promiseArgs]
   );
 
   // Allow the any because if it's NOT any, then line 63 with DialogView's args will toss an error.
@@ -89,6 +92,8 @@ const DialogManager: React.FunctionComponent<DialogManagerProps> = ({
         closeDialog,
         showDialog,
         deferredPromiseObject,
+        promiseArgs,
+        setPromiseArgs,
       }}
     >
       {DialogView && (
