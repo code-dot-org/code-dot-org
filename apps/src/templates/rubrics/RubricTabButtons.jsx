@@ -61,10 +61,9 @@ export default function RubricTabButtons({
   const runButtonTooltipId = _.uniqueId();
 
   return (
-    <div>
+    <div className="uitest-rubric-tab-buttons">
       <div className={style.rubricTabGroup}>
         <SegmentedButtons
-          className="uitest-rubric-tab-buttons"
           selectedButtonValue={selectedTab}
           size="s"
           buttons={[
