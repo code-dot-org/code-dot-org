@@ -6,6 +6,7 @@ import {connect} from 'react-redux';
 import ErrorBoundary from '@cdo/apps/lab2/ErrorBoundary';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {selectedSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
@@ -23,10 +24,10 @@ import {
 
 import style from './rubrics.module.scss';
 
-export const RubricErrorContainer = ({open}) => (
+export const RubricErrorContainer = ({isOpen, setIsOpen}) => (
   <div
     className={classnames(style.rubricContainer, {
-      [style.hiddenRubricContainer]: !open,
+      [style.hiddenRubricContainer]: !isOpen,
     })}
   >
     <div className={style.rubricHeaderRedesign}>
@@ -38,6 +39,15 @@ export const RubricErrorContainer = ({open}) => (
         />
         <span>{i18n.rubricAiHeaderText()}</span>
       </div>
+      <div className={style.rubricHeaderRightSide}>
+        <button
+          type="button"
+          onClick={_ => setIsOpen(!isOpen)}
+          className={classnames(style.buttonStyle, style.closeButton)}
+        >
+          <FontAwesome icon="xmark" />
+        </button>
+      </div>
     </div>
     <div className={classnames(style.fabBackground, style.fabErrorBackground)}>
       <div className={style.visibleRubricContent}>
@@ -48,7 +58,8 @@ export const RubricErrorContainer = ({open}) => (
 );
 
 RubricErrorContainer.propTypes = {
-  open: PropTypes.bool,
+  isOpen: PropTypes.bool,
+  setIsOpen: PropTypes.function,
 };
 
 function RubricFloatingActionButton({
@@ -169,7 +180,13 @@ function RubricFloatingActionButton({
       </div>
       {/* TODO: do not hardcode in AI setting */}
       <ErrorBoundary
-        fallback={<RubricErrorContainer open={isOpen} error={internalError} />}
+        fallback={
+          <RubricErrorContainer
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+            error={internalError}
+          />
+        }
         onError={onInternalError}
       >
         <RubricContainer
