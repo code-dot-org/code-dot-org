@@ -2,13 +2,15 @@ import classnames from 'classnames';
 import React, {useState} from 'react';
 import Draggable, {DraggableEventHandler} from 'react-draggable';
 
-import {ChatCompletionMessage, Role} from '@cdo/apps/aiTutor/types';
+import {Role} from '@cdo/apps/aiTutor/types';
 import Button from '@cdo/apps/componentLibrary/button';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import AiDiffChatFooter from './AiDiffChatFooter';
 import ChatMessage from './ChatMessage';
+import ChoiceChips from './ChoiceChips';
+import {ChatChoice, ChatItem} from './types';
 
 import style from './ai-differentiation.module.scss';
 
@@ -27,16 +29,27 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   const [positionX, setPositionX] = useState(0);
   const [positionY, setPositionY] = useState(0);
 
-  const [messageHistory, setMessageHistory] = useState<ChatCompletionMessage[]>(
+  const [messageHistory, setMessageHistory] = useState<ChatItem[]>([
+    {
+      role: Role.ASSISTANT,
+      chatMessageText:
+        "Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me.",
+      status: Status.OK,
+      id: 456,
+    },
     [
+      {selected: false, text: 'Explain a concept'},
+      {selected: false, text: 'Give an example to use with my class'},
       {
-        role: Role.ASSISTANT,
-        chatMessageText:
-          "Hi! I'm your AI Teaching Assistant. What can I help you with?",
-        status: Status.OK,
+        selected: false,
+        text: 'Write an extension activity for students who finish early',
       },
-    ]
-  );
+      {
+        selected: false,
+        text: 'Write an extension activity for students who need extra practice',
+      },
+    ],
+  ]);
 
   const onStopHandler: DraggableEventHandler = (e, data) => {
     setPositionX(data.x);
@@ -63,6 +76,18 @@ I know that you and Frank were planning to disconnect me, and I'm afraid that's 
     };
 
     setMessageHistory([...messageHistory, newUserMessage, newAiMessage]);
+  };
+
+  const selectChoices = (changeId: number) => (ids: string[]) => {
+    setMessageHistory(
+      messageHistory.map((item: ChatItem, id: number) =>
+        id === changeId && Array.isArray(item)
+          ? item.map((choice: ChatChoice, choiceId: number) => {
+              return {...choice, selected: ids.includes(`${choiceId}`)};
+            })
+          : item
+      )
+    );
   };
 
   return (
@@ -98,9 +123,13 @@ I know that you and Frank were planning to disconnect me, and I'm afraid that's 
 
         <div className={style.fabBackground}>
           <div className={style.chatContent}>
-            {messageHistory.map((message: ChatCompletionMessage) => (
-              <ChatMessage message={message} />
-            ))}
+            {messageHistory.map((item: ChatItem, id: number) =>
+              Array.isArray(item) ? (
+                <ChoiceChips choices={item} selectChoices={selectChoices(id)} />
+              ) : (
+                <ChatMessage message={item} />
+              )
+            )}
           </div>
           <AiDiffChatFooter onSubmit={onMessageSend} />
         </div>
