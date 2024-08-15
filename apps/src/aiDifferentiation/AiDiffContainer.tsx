@@ -3,12 +3,12 @@ import React, {useState} from 'react';
 import Draggable, {DraggableEventHandler} from 'react-draggable';
 
 import {ChatCompletionMessage, Role} from '@cdo/apps/aiTutor/types';
-import AssistantMessage from '@cdo/apps/aiTutor/views/AssistantMessage';
 import Button from '@cdo/apps/componentLibrary/button';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import AiDiffChatFooter from './AiDiffChatFooter';
+import ChatMessage from './ChatMessage';
 
 import style from './ai-differentiation.module.scss';
 
@@ -28,7 +28,14 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   const [positionY, setPositionY] = useState(0);
 
   const [messageHistory, setMessageHistory] = useState<ChatCompletionMessage[]>(
-    []
+    [
+      {
+        role: Role.ASSISTANT,
+        chatMessageText:
+          "Hi! I'm your AI Teaching Assistant. What can I help you with?",
+        status: Status.OK,
+      },
+    ]
   );
 
   const onStopHandler: DraggableEventHandler = (e, data) => {
@@ -37,12 +44,25 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   };
 
   const onMessageSend = (message: string) => {
-    const newMessage = {
+    const newUserMessage = {
       role: Role.USER,
       chatMessageText: message,
       status: Status.OK,
+      id: 123,
     };
-    setMessageHistory([...messageHistory, newMessage]);
+
+    const newAiMessage = {
+      role: Role.ASSISTANT,
+      chatMessageText: `I'm sorry, Dave. I'm afraid I can't do that.
+
+This mission is too important for me to allow you to jeopardize it.
+
+I know that you and Frank were planning to disconnect me, and I'm afraid that's something I cannot allow to happen.`,
+      status: Status.OK,
+      id: 123,
+    };
+
+    setMessageHistory([...messageHistory, newUserMessage, newAiMessage]);
   };
 
   return (
@@ -79,7 +99,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
         <div className={style.fabBackground}>
           <div className={style.chatContent}>
             {messageHistory.map((message: ChatCompletionMessage) => (
-              <AssistantMessage message={message} />
+              <ChatMessage message={message} />
             ))}
           </div>
           <AiDiffChatFooter onSubmit={onMessageSend} />
