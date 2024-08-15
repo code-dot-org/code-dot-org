@@ -3,6 +3,9 @@
 require_relative '../deployment'
 require 'cdo/rake_utils'
 
+# This script looks for a separate git worktree at ../../staging that has the
+# staging branch checked out. It will pull the latest content, seed it into the
+# database, and then perform an instance refresh on the web application servers.
 Dir.chdir(dashboard_dir) do
   staging_dir = '../../staging'
   begin
@@ -15,4 +18,5 @@ Dir.chdir(dashboard_dir) do
   end
   RakeUtils.rake_stream_output 'seed:default', "CURRICULUM_CONTENT_DIR=#{staging_dir}/dashboard"
 end
-RakeUtils.restart_service CDO.dashboard_web_server_name unless rack_env?(:development)
+
+# TODO: initiate instance refresh here.
