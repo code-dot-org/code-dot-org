@@ -27,7 +27,7 @@ const EmptySection: React.FC<EmptySectionProps> = ({
     ? i18n.emptySectionDescription()
     : i18n.noCurriculumAssigned();
 
-  const displayedImage = !showNoStudents ? (
+  const displayedImage = showNoStudents ? (
     <img src={emptyDesk} alt="empty desk" />
   ) : (
     <img src={blankScreen} alt="blank screen" />
