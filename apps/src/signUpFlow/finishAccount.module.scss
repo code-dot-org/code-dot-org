@@ -1,20 +1,5 @@
 @import 'color', 'style-constants';
 
-body {
-  background-color: $light_gray_50;
-}
-
-.finishAccountContainer {
-  max-width: $content-width;
-  display: grid;
-  margin: 4rem auto;
-  padding: 30px;
-  text-align: center;
-  background-color: $light_white;
-  border-radius: 0.25rem;
-  border: 1px solid $light_gray_200 !important;
-}
-
 .headerTextContainer {
   margin-bottom: 30px;
 }
@@ -27,85 +12,6 @@ body {
   flex-direction: column;
 }
 
-input {
-  width: 100%;
-  box-sizing: border-box;
-  height: 46px !important;
-  text-indent: 0.25rem;
-}
-
 .nameInput {
   margin: 0.375rem 0 !important;
-}
-
-select {
-  padding-top: 11px !important;
-  padding-bottom: 11px !important;
-  height: 46px !important;
-  font-weight: 400 !important;
-}
-
-p {
-  margin-bottom: 0 !important;
-}
-
-.emailOptInContainer {
-  margin-top: 1.125rem;
-
-  .emailOptInCheckboxContainer {
-    display: flex;
-    flex-direction: row;
-    padding: 6px;
-
-    .emailOptInCheckbox {
-      flex: 1;
-      padding-top: 1px;
-    }
-
-    .emailOptInLabel {
-      flex: 12;
-    }
-  }
-
-  .emailOptInFootnote {
-    margin-top: 0.125rem;
-  }
-}
-
-.parentInfoContainer {
-  background-color: $light_gray_50;
-  padding: 1.125rem;
-  border-radius: 0.25rem;
-  border: 1px solid $light_gray_200;
-
-  i {
-    background-color: $light_white;
-  }
-
-  .parentCheckboxContainer {
-    display: flex;
-
-    .parentCheckbox {
-      padding-inline-end: 0.5rem;
-    }
-  }
-
-  .parentEmailInput {
-    width: 100%;
-  }
-}
-
-.studentQuestionLabel {
-  margin-top: 1.125rem;
-  margin-bottom: 0.375rem !important;
-}
-
-.finishSignUpButtonContainer {
-  display: grid;
-  margin-top: 1.125rem;
-  justify-content: end;
-
-  .finishSignUpButton {
-    width: fit-content;
-  }
 }

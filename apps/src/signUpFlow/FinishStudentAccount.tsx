@@ -21,7 +21,7 @@ import {
   USER_GENDER_SESSION_KEY,
 } from './signUpFlowConstants';
 
-import style from './finishAccount.module.scss';
+import style from './signUpFlowStyles.module.scss';
 
 const FinishStudentAccount: React.FunctionComponent<{
   ageOptions: {value: string; text: string}[];

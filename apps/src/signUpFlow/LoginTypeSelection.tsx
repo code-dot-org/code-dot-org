@@ -10,7 +10,7 @@ import {
 } from '@cdo/apps/componentLibrary/typography';
 import locale from '@cdo/apps/signUpFlow/locale';
 
-import style from '@cdo/apps/signUpFlow/loginTypeSelection.module.scss';
+import style from './signUpFlowStyles.module.scss';
 
 const LoginTypeSelection: React.FunctionComponent = () => {
   return (

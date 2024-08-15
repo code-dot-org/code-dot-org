@@ -16,7 +16,7 @@ import {
   EMAIL_OPT_IN_SESSION_KEY,
 } from './signUpFlowConstants';
 
-import style from './finishAccount.module.scss';
+import style from './signUpFlowStyles.module.scss';
 
 const FinishTeacherAccount: React.FunctionComponent<{
   usIp: boolean;

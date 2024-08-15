@@ -10,7 +10,7 @@ import AccountCard from '../templates/account/AccountCard';
 
 import FreeCurriculumDialog from './FreeCurriculumDialog';
 
-import style from './accountType.module.scss';
+import style from './signUpFlowStyles.module.scss';
 
 const AccountType: React.FunctionComponent = () => {
   const [isFreeCurriculumDialogOpen, setIsFreeCurriculumDialogOpen] =
