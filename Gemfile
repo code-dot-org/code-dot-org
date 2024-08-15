@@ -275,7 +275,9 @@ gem 'bcrypt', '3.1.13'
 gem 'sshkit'
 gem 'validates_email_format_of'
 
-gem 'composite_primary_keys', '~> 13.0'
+# DISABLED during Rails 7.2 upgrade: Rails 7.1 includes composite primary key support, and this
+# gem has not been updated to support ActiveRecord >= 7.1 yet (possibly as a result of reduced demand)
+# gem 'composite_primary_keys', '~> 13.0'
 
 # GitHub API; used by the DotD script to automatically create new
 # releases on deploy
