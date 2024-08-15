@@ -8,6 +8,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {
@@ -130,6 +131,7 @@ class LoginTypePicker extends Component {
       scroll: {
         overflowX: 'hidden',
         overflowY: 'auto',
+        marginBottom: '16px',
       },
       thirdPartyProviderUpsell: {
         marginBottom: '10px',
@@ -161,10 +163,7 @@ class LoginTypePicker extends Component {
         borderTop: `1px solid ${color.neutral_dark}`,
       },
       subheader: {
-        fontSize: '16px',
-        fontWeight: 600,
         color: color.charcoal,
-        marginTop: '16px',
       },
       lmsInfoCardsContainer: {
         display: 'flex',
@@ -212,7 +211,13 @@ class LoginTypePicker extends Component {
             handleClose={() => this.setState({isLearnMoreOpen: false})}
           />
         )}
-        <h6 style={style.subheader}>{i18n.loginTypes()}</h6>
+        <Typography
+          style={style.subheader}
+          semanticTag={'h6'}
+          visualAppearance={'heading-xs'}
+        >
+          {i18n.loginTypes()}
+        </Typography>
         <div style={style.scroll}>
           <CardContainer>
             {withGoogle && (
@@ -230,7 +235,13 @@ class LoginTypePicker extends Component {
         {experiments.isEnabled(experiments.SECTION_CREATE_LMS_CARDS) &&
           !withAllLmsProviders && (
             <>
-              <h6 style={style.subheader}>{i18n.lmsIntegrations()}</h6>
+              <Typography
+                style={style.subheader}
+                semanticTag={'h6'}
+                visualAppearance={'heading-xs'}
+              >
+                {i18n.lmsIntegrations()}
+              </Typography>
               <div
                 style={style.lmsInfoCardsContainer}
                 data-testid={'lms-info-cards-container'}
