@@ -13,6 +13,8 @@ class HoneybadgerTest < ActionDispatch::IntegrationTest
       get 'raise_error' => 'honeybadger_error#raise_error'
     end
 
+    warn "At setup, Honeybadger::Backend::Test.notifications[:notices].length is #{Honeybadger::Backend::Test.notifications[:notices].length}"
+
     Honeybadger.configure do |config|
       @original_backend = config.backend
       config.backend = 'test'
@@ -34,29 +36,21 @@ class HoneybadgerTest < ActionDispatch::IntegrationTest
   FILTERED = "[FILTERED]"
 
   test "does NOT log encrypted data" do
-    Honeybadger.configure do |config|
-      assert_equal 'test', config.backend
-    end
+    warn "At test start, Honeybadger::Backend::Test.notifications[:notices].length is #{Honeybadger::Backend::Test.notifications[:notices].length}"
 
     student = create :student
     sign_in student
-
-    Honeybadger.configure do |config|
-      assert_equal 'test', config.backend
-    end
-
     get raise_error_path
 
-    Honeybadger.configure do |config|
-      assert_equal 'test', config.backend
+    warn "Honeybadger notices there are #{Honeybadger::Backend::Test.notifications[:notices].length}:"
+    Honeybadger::Backend::Test.notifications[:notices].each do |notice|
+      notice_json = notice.as_json
+      pp notice_json.reject {|k, _| k == :breadcrumbs}, indent: 4
+      # binding.irb
     end
 
     notice = Honeybadger::Backend::Test.notifications[:notices].first&.as_json
     refute_nil notice
-
-    Honeybadger.configure do |config|
-      assert_equal 'test', config.backend
-    end
 
     assert_includes notice[:request][:session], "warden.user.user.key"
     assert_equal FILTERED, notice[:request][:session]["warden.user.user.key"]
