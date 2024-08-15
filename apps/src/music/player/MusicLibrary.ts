@@ -1,4 +1,5 @@
 import currentLocale from '@cdo/apps/util/currentLocale';
+import experiments from '@cdo/apps/util/experiments';
 import HttpClient, {ResponseValidator} from '@cdo/apps/util/HttpClient';
 
 import AppConfig, {getBaseAssetUrl} from '../appConfig';
@@ -36,10 +37,6 @@ async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
       LibraryValidator
     );
 
-    // To do: load locale from browser.
-    // To do: wrap this (getting translations, localizing library)
-    //   in an experiment so we can ship it without any user-facing impact?
-    //   Or can just wait to merge it until we have real translations.
     const translationsPromise = loadTranslations(
       libraryFilename,
       currentLocale().toLowerCase().replace('-', '_')
@@ -50,15 +47,21 @@ async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
       translationsPromise,
     ]);
 
-    let libraryJsonLocalized = {} as LibraryJson;
+    let libraryJson = {} as LibraryJson;
     if (libraryJsonResponse.status === 'fulfilled') {
-      libraryJsonLocalized = libraryJsonResponse.value.value as LibraryJson;
+      libraryJson = libraryJsonResponse.value.value as LibraryJson;
     }
 
+    // Early return with no translations unless experiment is enabled for now.
+    if (!experiments.isEnabled('libraryLocalization')) {
+      return new MusicLibrary(libraryName, libraryJson);
+    }
+
+    let libraryJsonLocalized = {} as LibraryJson;
     if (translations.status === 'fulfilled') {
       libraryJsonLocalized = localizeLibrary(
-        libraryJsonLocalized,
-        translations.value as Translations
+        libraryJson,
+        translations.value.value as Translations
       );
     }
 
@@ -69,15 +72,10 @@ async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
 
 type Translations = {[key: string]: string};
 
-const loadTranslations = async (
-  libraryName: string,
-  locale: string
-): Promise<Translations> => {
-  // To do: change musiclab-test/ to musiclab/ once we have real translations.
-  const translations = await HttpClient.fetchJson<Translations>(
-    `https://curriculum.code.org/media/musiclab/${libraryName}-loc/${locale}.json`
+const loadTranslations = async (libraryName: string, locale: string) => {
+  return await HttpClient.fetchJson<Translations>(
+    `${getBaseAssetUrl()}${libraryName}-loc/${locale}.json`
   );
-  return translations.value;
 };
 
 const localizeLibrary = (
