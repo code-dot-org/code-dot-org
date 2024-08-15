@@ -34,13 +34,24 @@ class HoneybadgerTest < ActionDispatch::IntegrationTest
   FILTERED = "[FILTERED]"
 
   test "does NOT log encrypted data" do
+    # Check if the backend is the test backend after setup
+    assert_equal 'test', Honeybadger.configuration.backend
+
     student = create :student
     sign_in student
 
+    # Check if the backend is the test backend after setup
+    assert_equal 'test', Honeybadger.configuration.backend
+
     get raise_error_path
+
+    # Check if the backend is the test backend after setup
+    assert_equal 'test', Honeybadger.configuration.backend
 
     notice = Honeybadger::Backend::Test.notifications[:notices].first&.as_json
     refute_nil notice
+
+    assert_includes notice[:request][:session], "warden.user.user.key"
     assert_equal FILTERED, notice[:request][:session]["warden.user.user.key"]
   end
 end
