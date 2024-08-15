@@ -34,7 +34,6 @@ export async function postAichatCompletionMessage(
   storedMessages: ChatMessage[],
   aiCustomizations: AiCustomizations,
   aichatContext: AichatContext,
-  sessionId?: number,
   useAsyncPolling = false,
   // Configurable for testing
   maxPollingTimeMs = MAX_POLLING_TIME_MS
@@ -61,7 +60,6 @@ export async function postAichatCompletionMessage(
     storedMessages,
     aichatModelCustomizations,
     aichatContext,
-    ...(sessionId ? {sessionId} : {}),
   };
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,

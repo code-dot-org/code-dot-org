@@ -26,7 +26,6 @@ describe('aichatApi', () => {
     aiCustomizations: AiCustomizations,
     aichatModelCustomizations: AichatModelCustomizations,
     aichatContext: AichatContext,
-    sessionId: number,
     post: jest.MockedFunction<typeof HttpClient.post>,
     fetchJson: jest.MockedFunction<typeof HttpClient.fetchJson>;
 
@@ -71,7 +70,6 @@ describe('aichatApi', () => {
       scriptId: 321,
       channelId: 'abc123',
     };
-    sessionId = 123;
 
     post = jest.fn();
     fetchJson = jest.fn();
@@ -121,7 +119,6 @@ describe('aichatApi', () => {
           storedMessages,
           aiCustomizations,
           aichatContext,
-          sessionId,
           true,
           maxPollingTime
         )
