@@ -12,7 +12,7 @@ const PageHeader: React.FC = () => {
     () =>
       _.find(
         LABELED_TEACHER_NAVIGATION_PATHS,
-        path => matchPath(path.url, location.pathname) !== null
+        path => matchPath(path.absoluteUrl, location.pathname) !== null
       )?.label || 'unknown path',
     [location]
   );
