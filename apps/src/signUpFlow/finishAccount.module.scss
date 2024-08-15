@@ -21,7 +21,7 @@ body {
 
 .inputContainer {
   justify-self: center;
-  text-align: left;
+  text-align: start;
   width: 400px;
   display: flex;
   flex-direction: column;
@@ -31,7 +31,6 @@ input {
   width: 100%;
   box-sizing: border-box;
   height: 46px !important;
-  margin-top: 0.37rem !important;
   text-indent: 0.25rem;
 }
 
