@@ -1,7 +1,7 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {appendSystemMessage} from '@codebridge/redux/consoleRedux';
 import classNames from 'classnames';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import {
   navigateToNextLevel,
@@ -15,8 +15,10 @@ import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Button from '@cdo/apps/componentLibrary/button';
 import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -56,6 +58,7 @@ const ControlButtons: React.FunctionComponent = () => {
     state => state.lab2System.loadingCodeEnvironment
   );
   const validationState = useAppSelector(state => state.lab.validationState);
+  const lifecycleNotifier = Lab2Registry.getInstance().getLifecycleNotifier();
 
   // We disable the run button in predict levels if we are not in start mode
   // and the user has not yet written a prediction.
@@ -63,13 +66,29 @@ const ControlButtons: React.FunctionComponent = () => {
     !isStartMode && isPredictLevel && !hasPredictResponse;
   const disableRunAndTest = awaitingPredictSubmit || isLoadingEnvironment;
 
-  // We disabled for two cases:
-  // If this is a submittable level, the user has not submitted yet, and the user has not run their code during this session.
+  // We disabled for the followign cases:
+  // If this is a submittable level, the user has not submitted yet,
+  // and the user has not run their code during this session.
   // OR if this level has validation and the validation has not yet passed.
+  // OR if the user has not run or tested their code during this session.
   const awaitingSubmitRun = isSubmittable && !hasSubmitted && !hasRun;
   const validationHasNotPassed =
     validationState.hasConditions && !validationState.satisfied;
-  const disableNavigation = awaitingSubmitRun || validationHasNotPassed;
+  const disableNavigation =
+    awaitingSubmitRun || validationHasNotPassed || !hasRun;
+
+  const resetStatus = () => {
+    setHasRun(false);
+    setIsRunning(false);
+  };
+
+  useEffect(() => {
+    // Reset run status when the level changes.
+    lifecycleNotifier.addListener(
+      LifecycleEvent.LevelLoadCompleted,
+      resetStatus
+    );
+  }, [lifecycleNotifier]);
 
   const onContinue = () => dispatch(navigateToNextLevel());
   // No-op for now. TODO: figure out what the finish button should do.
@@ -158,6 +177,10 @@ const ControlButtons: React.FunctionComponent = () => {
       navigationTooltip = hasNextLevel
         ? codebridgeI18n.validationNotYetPassedContinue()
         : codebridgeI18n.validationNotYetPassedFinish();
+    } else if (!hasRun) {
+      navigationTooltip = hasNextLevel
+        ? codebridgeI18n.runToContinue()
+        : codebridgeI18n.runToFinish();
     }
     return navigationTooltip;
   };

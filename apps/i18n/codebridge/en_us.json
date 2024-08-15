@@ -20,6 +20,8 @@
   "predictRunDisabledTooltip": "You must answer the question in the instructions before running the code.",
   "renameFile": "Rename file",
   "renameFolder": "Rename folder",
+  "runToContinue": "You must run or test your code before continuing.",
+  "runToFinish": "You must run or test your code before finishing.",
   "submitDisabledTooltip": "You must run your code before submitting.",
   "systemCodeError": "We're sorry, we hit an issue running your program. Please refresh the page and try again.",
   "validationNotYetPassedContinue": "You must pass tests before continuing.",
