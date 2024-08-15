@@ -199,7 +199,7 @@ module Dashboard
     config.action_mailer.default_url_options = {host: CDO.canonical_hostname('studio.code.org'), protocol: 'https'}
     config.action_mailer.deliver_later_queue_name = CDO.active_job_queues[:mailers]
     Rails.application.config.to_prepare do
-      config.action_mailer.delivery_job = 'MailDeliveryJob'
+      Rails.application.config.action_mailer.delivery_job = 'MailDeliveryJob'
     end
 
     # Rails.cache is a fast memory store, cleared every time the application reloads.
