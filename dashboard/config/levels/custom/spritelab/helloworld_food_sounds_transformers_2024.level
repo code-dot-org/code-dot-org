@@ -1,6 +1,5 @@
 <GamelabJr>
   <config><![CDATA[{
-  "published": true,
   "game_id": 64,
   "created_at": "2024-08-02T22:04:54.000Z",
   "level_num": "custom",
@@ -12,7 +11,8 @@
       "NativeSpriteLab",
       "zHelloWorldValidation",
       "zSpeechBubblePrototype2",
-      "zValidationHelperFunctions"
+      "zValidationHelperFunctions",
+      "transformers"
     ],
     "use_default_sprites": "false",
     "hide_animation_mode": "true",
@@ -45,7 +45,7 @@
     "expand_debugger": "false",
     "debugger_disabled": "false",
     "pause_animations_by_default": "false",
-    "start_animations": "{\"orderedKeys\":[\"061c23be-537b-4c5f-9b94-efc6cd826a5d\",\"23bd7485-ded1-4b12-8d50-6880015c4df3\",\"26b3a5d6-4464-4f14-a8b2-aef2390086c6\",\"321cf665-2ccc-47e1-b226-1cae0e5f8ec3\",\"581b5f21-adae-4848-8bb7-fa947e5c3f87\",\"2dfa4711-515f-412e-8b00-ad53a990c56a\",\"3c66678d-9cc3-4dca-b0c5-7e513094456e\",\"c3c291bf-f471-4599-9003-749b3a611646\",\"33bbe9cc-101e-46e0-98de-b2cdad178335\",\"8780c2df-da09-4e0f-a439-2962a1e02777\",\"db75b957-d92b-4e6b-9855-a5563487cdb9\",\"4dee1d4c-c0e2-45e7-b27b-ac0d3724a1da\",\"68159def-372b-4968-b76c-d0c6c6a0f710\",\"b42540e4-052f-462a-a985-afec0da23b02\",\"55400cc2-74b3-4696-b2ea-c1cf77df0bef\",\"8289b7b4-601e-4ee7-adb9-20db2919c1b4\",\"7be4171a-89d3-48f4-bb57-55c5a3fdee16\",\"2fbf0cb9-0504-4522-8708-e5d05b069718\",\"7d320f50-7b2e-4a38-96d2-453c598ba7f7\",\"e4f2f865-48fe-4624-b622-1f13bd82540a\",\"66bf6c09-d811-4d93-9523-83aebdcb7279\",\"160cdb24-6593-48ce-a764-49a19ddbd46a\",\"b8f3c9cd-f993-40b9-bdf7-c5a3047528e2\",\"61402902-ee59-4b4d-a515-cbe12904f222\",\"67667c61-17d5-4aeb-ad17-7ee53e616cda\",\"f4d71127-4f46-47b8-b99f-4aa5cde24720\"],\"propsByKey\":{\"061c23be-537b-4c5f-9b94-efc6cd826a5d\":{\"name\":\"transformers_one_bg_1\",\"frameCount\":1,\"frameSize\":{\"x\":800,\"y\":800},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-07T17:14:18.000Z\",\"pngLastModified\":\"2024-08-07T17:14:18.000Z\",\"version\":\"dBKUQZCTQZdCtRWW08V9unJxemky7hNH\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/dBKUQZCTQZdCtRWW08V9unJxemky7hNH/transformers_one_bg_1.png\",\"sourceSize\":{\"x\":800,\"y\":800}},\"23bd7485-ded1-4b12-8d50-6880015c4df3\":{\"name\":\"transformers_one_bg_2\",\"frameCount\":1,\"frameSize\":{\"x\":800,\"y\":800},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-07T17:14:30.000Z\",\"pngLastModified\":\"2024-08-07T17:14:29.000Z\",\"version\":\"Wq7X8pZbvvGTCfC1lBq_vYRPYvTGzLu8\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/Wq7X8pZbvvGTCfC1lBq_vYRPYvTGzLu8/transformers_one_bg_2.png\",\"sourceSize\":{\"x\":800,\"y\":800}},\"26b3a5d6-4464-4f14-a8b2-aef2390086c6\":{\"name\":\"transformers_one_bg_3\",\"frameCount\":1,\"frameSize\":{\"x\":800,\"y\":800},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-07T17:14:38.000Z\",\"pngLastModified\":\"2024-08-07T17:14:38.000Z\",\"version\":\"hUcZ_.NLBvURzSJulqR9bmixtjvoNssq\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/hUcZ_.NLBvURzSJulqR9bmixtjvoNssq/transformers_one_bg_3.png\",\"sourceSize\":{\"x\":800,\"y\":800}},\"321cf665-2ccc-47e1-b226-1cae0e5f8ec3\":{\"name\":\"transformers_one_bg_4\",\"frameCount\":1,\"frameSize\":{\"x\":800,\"y\":800},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-07T17:14:50.000Z\",\"pngLastModified\":\"2024-08-07T17:14:50.000Z\",\"version\":\"8C4E8lDExGBWYYp_G3YV16WiaA8J2qTq\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/8C4E8lDExGBWYYp_G3YV16WiaA8J2qTq/transformers_one_bg_4.png\",\"sourceSize\":{\"x\":800,\"y\":800}},\"581b5f21-adae-4848-8bb7-fa947e5c3f87\":{\"name\":\"transformers_one_bg_5\",\"frameCount\":1,\"frameSize\":{\"x\":800,\"y\":800},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-07T17:15:00.000Z\",\"pngLastModified\":\"2024-08-07T17:14:59.000Z\",\"version\":\"z.WaVPfBtQWzxyWWwK5BFl6S5A5aktmF\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/z.WaVPfBtQWzxyWWwK5BFl6S5A5aktmF/transformers_one_bg_5.png\",\"sourceSize\":{\"x\":800,\"y\":800}},\"2dfa4711-515f-412e-8b00-ad53a990c56a\":{\"name\":\"transformers_one_bg_6\",\"frameCount\":1,\"frameSize\":{\"x\":800,\"y\":800},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-07T17:15:10.000Z\",\"pngLastModified\":\"2024-08-07T17:15:09.000Z\",\"version\":\"OhY5JsBjyDH2uEuA_F6.4qOaxm6jyRD0\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/OhY5JsBjyDH2uEuA_F6.4qOaxm6jyRD0/transformers_one_bg_6.png\",\"sourceSize\":{\"x\":800,\"y\":800}},\"3c66678d-9cc3-4dca-b0c5-7e513094456e\":{\"name\":\"optimus_prime_1\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:12:23.000Z\",\"pngLastModified\":\"2024-08-07T17:12:22.000Z\",\"version\":\"lXfLgjLKmYgLhV.L23LvCYtNlgwZrA3i\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/lXfLgjLKmYgLhV.L23LvCYtNlgwZrA3i/optimus_prime_1.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"c3c291bf-f471-4599-9003-749b3a611646\":{\"name\":\"optimus_prime_2\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:12:30.000Z\",\"pngLastModified\":\"2024-08-07T17:12:30.000Z\",\"version\":\"7QQczizIQRc0Bw6FKDqmAcwJrsrSvSd6\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/7QQczizIQRc0Bw6FKDqmAcwJrsrSvSd6/optimus_prime_2.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"33bbe9cc-101e-46e0-98de-b2cdad178335\":{\"name\":\"optimus_prime_3\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:12:37.000Z\",\"pngLastModified\":\"2024-08-07T17:12:37.000Z\",\"version\":\"aLE4nS3eMLnqtbw9_x55Dji1Gxoo7es2\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/aLE4nS3eMLnqtbw9_x55Dji1Gxoo7es2/optimus_prime_3.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"8780c2df-da09-4e0f-a439-2962a1e02777\":{\"name\":\"optimus_prime_vehicle\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:12:47.000Z\",\"pngLastModified\":\"2024-08-07T17:12:47.000Z\",\"version\":\"pK2WWKZB1GKQhmivE7hiY6xlPX9UBGWO\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/pK2WWKZB1GKQhmivE7hiY6xlPX9UBGWO/optimus_prime_vehicle.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"db75b957-d92b-4e6b-9855-a5563487cdb9\":{\"name\":\"megatron_1\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:11:43.000Z\",\"pngLastModified\":\"2024-08-07T17:11:43.000Z\",\"version\":\"S837ya3F1lMBgC37PlzFsBSKGHqvNwcn\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/S837ya3F1lMBgC37PlzFsBSKGHqvNwcn/megatron_1.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"4dee1d4c-c0e2-45e7-b27b-ac0d3724a1da\":{\"name\":\"megatron_2\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:11:50.000Z\",\"pngLastModified\":\"2024-08-07T17:11:50.000Z\",\"version\":\"Ev2veFnMyYSLLcDP5K1.rkxN28uzkD.k\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/Ev2veFnMyYSLLcDP5K1.rkxN28uzkD.k/megatron_2.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"68159def-372b-4968-b76c-d0c6c6a0f710\":{\"name\":\"megatron_3\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:11:58.000Z\",\"pngLastModified\":\"2024-08-07T17:11:57.000Z\",\"version\":\"WlCXpagP3JFg6s9VcD31gUVPpikJsMHs\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/WlCXpagP3JFg6s9VcD31gUVPpikJsMHs/megatron_3.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"b42540e4-052f-462a-a985-afec0da23b02\":{\"name\":\"megatron_vehicle\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:12:07.000Z\",\"pngLastModified\":\"2024-08-07T17:12:07.000Z\",\"version\":\"HjVkuEdDCYSYZIiFU_KgSQFw9nTlnt5H\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/HjVkuEdDCYSYZIiFU_KgSQFw9nTlnt5H/megatron_vehicle.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"55400cc2-74b3-4696-b2ea-c1cf77df0bef\":{\"name\":\"elita_1\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:11:00.000Z\",\"pngLastModified\":\"2024-08-07T17:11:00.000Z\",\"version\":\"JAs0NA0pdQneIsm6bGpJwshYzMvX.xma\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/JAs0NA0pdQneIsm6bGpJwshYzMvX.xma/elita_1.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"8289b7b4-601e-4ee7-adb9-20db2919c1b4\":{\"name\":\"elita_2\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:11:09.000Z\",\"pngLastModified\":\"2024-08-07T17:11:09.000Z\",\"version\":\"5e7kmu8H.QW4raQPisEeTpgVix05W3zd\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/5e7kmu8H.QW4raQPisEeTpgVix05W3zd/elita_2.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"7be4171a-89d3-48f4-bb57-55c5a3fdee16\":{\"name\":\"elita_3\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:11:17.000Z\",\"pngLastModified\":\"2024-08-07T17:11:16.000Z\",\"version\":\"Wb54VvZ5XOzxE_Imss9aL4AqL2mZSW5K\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/Wb54VvZ5XOzxE_Imss9aL4AqL2mZSW5K/elita_3.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"2fbf0cb9-0504-4522-8708-e5d05b069718\":{\"name\":\"elita_vehicle\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:11:25.000Z\",\"pngLastModified\":\"2024-08-07T17:11:24.000Z\",\"version\":\"qf_6OZ1pwaVE4PwNluEUj8CaZr77iziA\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/qf_6OZ1pwaVE4PwNluEUj8CaZr77iziA/elita_vehicle.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"7d320f50-7b2e-4a38-96d2-453c598ba7f7\":{\"name\":\"bumblebee_1\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:10:26.000Z\",\"pngLastModified\":\"2024-08-07T17:10:26.000Z\",\"version\":\"dXd_id9S04Q.sdwrgmMF74TRfLOkxuXy\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/dXd_id9S04Q.sdwrgmMF74TRfLOkxuXy/bumblebee_1.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"e4f2f865-48fe-4624-b622-1f13bd82540a\":{\"name\":\"bumblebee_2\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:10:35.000Z\",\"pngLastModified\":\"2024-08-07T17:10:34.000Z\",\"version\":\"aDRCjEprhrU8dIEJQg9XQoZiWsqDGVkp\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/aDRCjEprhrU8dIEJQg9XQoZiWsqDGVkp/bumblebee_2.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"66bf6c09-d811-4d93-9523-83aebdcb7279\":{\"name\":\"bumblebee_3\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:10:42.000Z\",\"pngLastModified\":\"2024-08-07T17:10:42.000Z\",\"version\":\"KYVUKktjd0jLhKFztkLgcLUEwuVJOvZ3\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/KYVUKktjd0jLhKFztkLgcLUEwuVJOvZ3/bumblebee_3.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"160cdb24-6593-48ce-a764-49a19ddbd46a\":{\"name\":\"bumblebee_vehicle\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:10:49.000Z\",\"pngLastModified\":\"2024-08-07T17:10:49.000Z\",\"version\":\"1QOUsRRXrVQ_BJyZA422sj7Yc2ep_Pe8\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/1QOUsRRXrVQ_BJyZA422sj7Yc2ep_Pe8/bumblebee_vehicle.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"b8f3c9cd-f993-40b9-bdf7-c5a3047528e2\":{\"name\":\"spaceship_1\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:13:16.000Z\",\"pngLastModified\":\"2024-08-07T17:13:15.000Z\",\"version\":\"KL5QOgDAnitpNZpYGeoWnZF9liGdd.V6\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/KL5QOgDAnitpNZpYGeoWnZF9liGdd.V6/spaceship_1.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"61402902-ee59-4b4d-a515-cbe12904f222\":{\"name\":\"spaceship_2\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:13:24.000Z\",\"pngLastModified\":\"2024-08-07T17:13:24.000Z\",\"version\":\"cS4GTMClm_zzFSM1GjlFt_2EHNdiX8tl\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/cS4GTMClm_zzFSM1GjlFt_2EHNdiX8tl/spaceship_2.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"67667c61-17d5-4aeb-ad17-7ee53e616cda\":{\"name\":\"spaceship_3\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:13:32.000Z\",\"pngLastModified\":\"2024-08-07T17:13:32.000Z\",\"version\":\"tGTnqR3PPNt8K.Zk0eK5zeJb6TeYyntZ\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/tGTnqR3PPNt8K.Zk0eK5zeJb6TeYyntZ/spaceship_3.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"f4d71127-4f46-47b8-b99f-4aa5cde24720\":{\"name\":\"spaceship_4\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:13:43.000Z\",\"pngLastModified\":\"2024-08-07T17:13:42.000Z\",\"version\":\"Mdzjm9WxIj_DP1d5FZA4q1Iqq4IIJRte\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/Mdzjm9WxIj_DP1d5FZA4q1Iqq4IIJRte/spaceship_4.png\",\"sourceSize\":{\"x\":400,\"y\":400}}}}\r\n\r\n",
+    "start_animations": "{\"orderedKeys\":[\"83d59132-2ada-41cb-bc39-99f752d97fb7\",\"8e0774b1-bf85-4ea5-9dbe-9eb76ee02425\",\"9eac3771-e106-4c83-87cc-7a9f32b8f123\",\"86e1006b-3fcc-4c2d-87d5-f2ad3f05de9e\",\"6f522d45-b944-496f-8a28-6befc3739bf0\",\"765492ed-1293-4905-95cf-06bae5744cdc\",\"c259d461-7443-47be-9359-5d1cee9daec3\",\"ba64befc-2915-49fb-995d-0b44bccaf03a\",\"07f92353-a801-4b51-9d9b-eedb45ad415c\",\"77714b3f-cbc5-4c80-8f22-a58c44dc4bb0\",\"b76e245c-ff35-48c4-be2e-dce7f65363e7\",\"77ace608-3748-4a3b-af2c-bd66ce6e49a5\",\"c0e6bf62-178c-4e1c-9dcf-b45d2cdfbc65\",\"4d26e5aa-03ba-46af-8833-306f3d554fcc\",\"661b580c-df83-4cc6-82df-c2db863e08f5\",\"eec0757d-760a-464d-95f2-bb378737ab5f\",\"a8d72674-89b1-44bd-9589-608fd569a32f\",\"78b99654-a42d-4acd-8a5a-85e9ef626962\",\"f2da772a-7db7-40a1-a5cf-8e029019a81b\",\"bc27b6dc-d0a5-4f80-8abd-93b0c4b151cd\",\"2e3ccbc7-555b-40ae-b303-c0f21fc90758\",\"c040e030-1f0b-409f-9f42-bb55e3e55bfb\",\"2c763058-d18b-4496-a12a-28b54e2dd662\",\"033428e8-f543-4b2b-a5c0-0368fa557a4f\",\"b0a4ce7b-dc97-45ce-bd76-74c45d6f0395\",\"5ef3b907-e892-4830-924e-a545182ab5e7\"],\"propsByKey\":{\"83d59132-2ada-41cb-bc39-99f752d97fb7\":{\"name\":\"transformers_one_bg_2\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-13T16:33:51.000Z\",\"pngLastModified\":\"2024-08-13T16:33:51.000Z\",\"version\":\"n80cuty5qP0Ja23rjmiyUvgsMzvFKwd6\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/n80cuty5qP0Ja23rjmiyUvgsMzvFKwd6/transformers_one_bg_2.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"8e0774b1-bf85-4ea5-9dbe-9eb76ee02425\":{\"name\":\"transformers_one_bg_1\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-13T16:33:43.000Z\",\"pngLastModified\":\"2024-08-13T16:33:42.000Z\",\"version\":\"FmJNkMgDSzzzm6DpseimczWfDnGNNl1U\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/FmJNkMgDSzzzm6DpseimczWfDnGNNl1U/transformers_one_bg_1.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"9eac3771-e106-4c83-87cc-7a9f32b8f123\":{\"name\":\"transformers_one_bg_3\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-13T16:33:58.000Z\",\"pngLastModified\":\"2024-08-13T16:33:57.000Z\",\"version\":\"9KAkvI4oKsYwB4DVWqV._rDhCJo5BPRx\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/9KAkvI4oKsYwB4DVWqV._rDhCJo5BPRx/transformers_one_bg_3.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"86e1006b-3fcc-4c2d-87d5-f2ad3f05de9e\":{\"name\":\"transformers_one_bg_4\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-13T16:34:06.000Z\",\"pngLastModified\":\"2024-08-13T16:34:05.000Z\",\"version\":\"yVz9vbQTM0UZmLU4muHZmm816leCYaPT\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/yVz9vbQTM0UZmLU4muHZmm816leCYaPT/transformers_one_bg_4.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"6f522d45-b944-496f-8a28-6befc3739bf0\":{\"name\":\"transformers_one_bg_5\",\"frameCount\":1,\"frameSize\":{\"x\":401,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"backgrounds\"],\"jsonLastModified\":\"2024-08-13T16:34:13.000Z\",\"pngLastModified\":\"2024-08-13T16:34:12.000Z\",\"version\":\"kuhHeFUetufFsAVXbHkEmc.Ig00E3ASi\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/kuhHeFUetufFsAVXbHkEmc.Ig00E3ASi/transformers_one_bg_5.png\",\"sourceSize\":{\"x\":401,\"y\":400}},\"765492ed-1293-4905-95cf-06bae5744cdc\":{\"name\":\"optimus_prime_1\",\"frameCount\":1,\"frameSize\":{\"x\":127,\"y\":250},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:44:22.000Z\",\"pngLastModified\":\"2024-08-13T15:44:22.000Z\",\"version\":\"pg3DXjsX8WLcB556l_mQbpIW5dqrrctP\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/pg3DXjsX8WLcB556l_mQbpIW5dqrrctP/optimus_prime_1.png\",\"sourceSize\":{\"x\":127,\"y\":250}},\"c259d461-7443-47be-9359-5d1cee9daec3\":{\"name\":\"megatron_1\",\"frameCount\":1,\"frameSize\":{\"x\":147,\"y\":295},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:43:07.000Z\",\"pngLastModified\":\"2024-08-13T15:43:06.000Z\",\"version\":\"J7isRRoerYbpGT6uXgpQqt_l.7.J955i\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/J7isRRoerYbpGT6uXgpQqt_l.7.J955i/megatron_1.png\",\"sourceSize\":{\"x\":147,\"y\":295}},\"ba64befc-2915-49fb-995d-0b44bccaf03a\":{\"name\":\"bumblebee_1\",\"frameCount\":1,\"frameSize\":{\"x\":115,\"y\":220},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:40:47.000Z\",\"pngLastModified\":\"2024-08-13T15:40:47.000Z\",\"version\":\"PrHauzONGlHvGwUxdnKVdyMpti4E2T3q\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/PrHauzONGlHvGwUxdnKVdyMpti4E2T3q/bumblebee_1.png\",\"sourceSize\":{\"x\":115,\"y\":220}},\"07f92353-a801-4b51-9d9b-eedb45ad415c\":{\"name\":\"elita_1\",\"frameCount\":1,\"frameSize\":{\"x\":73,\"y\":216},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:42:07.000Z\",\"pngLastModified\":\"2024-08-13T15:42:06.000Z\",\"version\":\"hJxMxLyuqa.c88NH5OoWsjADawt0zGqX\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/hJxMxLyuqa.c88NH5OoWsjADawt0zGqX/elita_1.png\",\"sourceSize\":{\"x\":73,\"y\":216}},\"77714b3f-cbc5-4c80-8f22-a58c44dc4bb0\":{\"name\":\"optimus_prime_2\",\"frameCount\":1,\"frameSize\":{\"x\":196,\"y\":218},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:44:34.000Z\",\"pngLastModified\":\"2024-08-13T15:44:34.000Z\",\"version\":\"Iw66CV4HzT_mppWF3WHpKx4tyh7B2TAi\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/Iw66CV4HzT_mppWF3WHpKx4tyh7B2TAi/optimus_prime_2.png\",\"sourceSize\":{\"x\":196,\"y\":218}},\"b76e245c-ff35-48c4-be2e-dce7f65363e7\":{\"name\":\"megatron_2\",\"frameCount\":1,\"frameSize\":{\"x\":125,\"y\":241},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:43:14.000Z\",\"pngLastModified\":\"2024-08-13T15:43:14.000Z\",\"version\":\"gezYnQcb7NvAtxlldyhGuDyJH4ohU0AY\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/gezYnQcb7NvAtxlldyhGuDyJH4ohU0AY/megatron_2.png\",\"sourceSize\":{\"x\":125,\"y\":241}},\"77ace608-3748-4a3b-af2c-bd66ce6e49a5\":{\"name\":\"bumblebee_2\",\"frameCount\":1,\"frameSize\":{\"x\":139,\"y\":201},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:41:01.000Z\",\"pngLastModified\":\"2024-08-13T15:41:01.000Z\",\"version\":\"5Swnm2SSm3VbMF_uAOYAjyQy0ZnPDiXX\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/5Swnm2SSm3VbMF_uAOYAjyQy0ZnPDiXX/bumblebee_2.png\",\"sourceSize\":{\"x\":139,\"y\":201}},\"c0e6bf62-178c-4e1c-9dcf-b45d2cdfbc65\":{\"name\":\"elita_3\",\"frameCount\":1,\"frameSize\":{\"x\":157,\"y\":176},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:42:23.000Z\",\"pngLastModified\":\"2024-08-13T15:42:23.000Z\",\"version\":\"cC_1aWwjcOakoyfLGYfTkpyonWmMiU_d\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/cC_1aWwjcOakoyfLGYfTkpyonWmMiU_d/elita_3.png\",\"sourceSize\":{\"x\":157,\"y\":176}},\"4d26e5aa-03ba-46af-8833-306f3d554fcc\":{\"name\":\"optimus_prime_3\",\"frameCount\":1,\"frameSize\":{\"x\":158,\"y\":214},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:44:49.000Z\",\"pngLastModified\":\"2024-08-13T15:44:49.000Z\",\"version\":\"SMgGULJFBpVpEfWG2kmUblHrELms9EPW\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/SMgGULJFBpVpEfWG2kmUblHrELms9EPW/optimus_prime_3.png\",\"sourceSize\":{\"x\":158,\"y\":214}},\"661b580c-df83-4cc6-82df-c2db863e08f5\":{\"name\":\"megatron_3\",\"frameCount\":1,\"frameSize\":{\"x\":196,\"y\":271},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:43:44.000Z\",\"pngLastModified\":\"2024-08-13T15:43:43.000Z\",\"version\":\"C.qS1LE_mGuEXZU2a4YQTWdH8mjAIh3X\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/C.qS1LE_mGuEXZU2a4YQTWdH8mjAIh3X/megatron_3.png\",\"sourceSize\":{\"x\":196,\"y\":271}},\"eec0757d-760a-464d-95f2-bb378737ab5f\":{\"name\":\"bumblebee_3\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":400},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-07T17:10:42.000Z\",\"pngLastModified\":\"2024-08-07T17:10:42.000Z\",\"version\":\"KYVUKktjd0jLhKFztkLgcLUEwuVJOvZ3\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/KYVUKktjd0jLhKFztkLgcLUEwuVJOvZ3/bumblebee_3.png\",\"sourceSize\":{\"x\":400,\"y\":400}},\"a8d72674-89b1-44bd-9589-608fd569a32f\":{\"name\":\"elita_2\",\"frameCount\":1,\"frameSize\":{\"x\":93,\"y\":205},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:42:16.000Z\",\"pngLastModified\":\"2024-08-13T15:42:16.000Z\",\"version\":\"EJz2S41cs3Iybm7zzDEkX8tT5GwkSGI3\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/EJz2S41cs3Iybm7zzDEkX8tT5GwkSGI3/elita_2.png\",\"sourceSize\":{\"x\":93,\"y\":205}},\"78b99654-a42d-4acd-8a5a-85e9ef626962\":{\"name\":\"optimus_prime_4\",\"frameCount\":1,\"frameSize\":{\"x\":176,\"y\":207},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:44:57.000Z\",\"pngLastModified\":\"2024-08-13T15:44:57.000Z\",\"version\":\"kaP5QYGZ8q8R_sveiDIBV5mr8trW1mqR\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/kaP5QYGZ8q8R_sveiDIBV5mr8trW1mqR/optimus_prime_4.png\",\"sourceSize\":{\"x\":176,\"y\":207}},\"f2da772a-7db7-40a1-a5cf-8e029019a81b\":{\"name\":\"megatron_4\",\"frameCount\":1,\"frameSize\":{\"x\":295,\"y\":251},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:43:58.000Z\",\"pngLastModified\":\"2024-08-13T15:43:58.000Z\",\"version\":\"FGT_XB6T2npr4K3NGmzpjOggZLFk1Y0X\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/FGT_XB6T2npr4K3NGmzpjOggZLFk1Y0X/megatron_4.png\",\"sourceSize\":{\"x\":295,\"y\":251}},\"bc27b6dc-d0a5-4f80-8abd-93b0c4b151cd\":{\"name\":\"bumblebee_4\",\"frameCount\":1,\"frameSize\":{\"x\":175,\"y\":219},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:41:38.000Z\",\"pngLastModified\":\"2024-08-13T15:41:38.000Z\",\"version\":\"2OUK07eDdZLh3VdtZ1lKc7F4qq0cnexA\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/2OUK07eDdZLh3VdtZ1lKc7F4qq0cnexA/bumblebee_4.png\",\"sourceSize\":{\"x\":175,\"y\":219}},\"2e3ccbc7-555b-40ae-b303-c0f21fc90758\":{\"name\":\"elita_4\",\"frameCount\":1,\"frameSize\":{\"x\":132,\"y\":206},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:42:43.000Z\",\"pngLastModified\":\"2024-08-13T15:42:42.000Z\",\"version\":\"bE7df.RINUw5ClgbW.Kumg0iWAaUSp5o\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/bE7df.RINUw5ClgbW.Kumg0iWAaUSp5o/elita_4.png\",\"sourceSize\":{\"x\":132,\"y\":206}},\"c040e030-1f0b-409f-9f42-bb55e3e55bfb\":{\"name\":\"optimus_prime_vehicle\",\"frameCount\":1,\"frameSize\":{\"x\":205,\"y\":133},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:45:05.000Z\",\"pngLastModified\":\"2024-08-13T15:45:05.000Z\",\"version\":\"HM5gXwfoDR7mURS1.F_4MzXi4gtDIwNq\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/HM5gXwfoDR7mURS1.F_4MzXi4gtDIwNq/optimus_prime_vehicle.png\",\"sourceSize\":{\"x\":205,\"y\":133}},\"2c763058-d18b-4496-a12a-28b54e2dd662\":{\"name\":\"megatron_vehicle\",\"frameCount\":1,\"frameSize\":{\"x\":248,\"y\":160},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:44:09.000Z\",\"pngLastModified\":\"2024-08-13T15:44:09.000Z\",\"version\":\"4UhOMamfvAj8IQ4i_xWR0JSwjMyCEC2C\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/4UhOMamfvAj8IQ4i_xWR0JSwjMyCEC2C/megatron_vehicle.png\",\"sourceSize\":{\"x\":248,\"y\":160}},\"033428e8-f543-4b2b-a5c0-0368fa557a4f\":{\"name\":\"bumblebee_vehicle\",\"frameCount\":1,\"frameSize\":{\"x\":225,\"y\":88},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:41:47.000Z\",\"pngLastModified\":\"2024-08-13T15:41:47.000Z\",\"version\":\"JFb9hj4jLpOLj4rdXB8wwni3CuI4OWhM\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/JFb9hj4jLpOLj4rdXB8wwni3CuI4OWhM/bumblebee_vehicle.png\",\"sourceSize\":{\"x\":225,\"y\":88}},\"b0a4ce7b-dc97-45ce-bd76-74c45d6f0395\":{\"name\":\"elita_vehicle\",\"frameCount\":1,\"frameSize\":{\"x\":200,\"y\":105},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T15:42:54.000Z\",\"pngLastModified\":\"2024-08-13T15:42:54.000Z\",\"version\":\"g7YXw5cSOS.pChU8U7O1VfiLlIUdzOwt\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/g7YXw5cSOS.pChU8U7O1VfiLlIUdzOwt/elita_vehicle.png\",\"sourceSize\":{\"x\":200,\"y\":105}},\"5ef3b907-e892-4830-924e-a545182ab5e7\":{\"name\":\"cog\",\"frameCount\":1,\"frameSize\":{\"x\":400,\"y\":389},\"looping\":true,\"frameDelay\":2,\"categories\":[\"\"],\"jsonLastModified\":\"2024-08-13T16:44:49.000Z\",\"pngLastModified\":\"2024-08-13T16:44:49.000Z\",\"version\":\"0Pi.JtOW3zvhmxVivxLgge1szzEaBPxv\",\"sourceUrl\":\"/api/v1/animation-library/level_animations/0Pi.JtOW3zvhmxVivxLgge1szzEaBPxv/cog.png\",\"sourceSize\":{\"x\":400,\"y\":389}}}}",
     "hide_custom_blocks": "true",
     "long_instructions": "*Let's learn how to play sounds.*\r\n\r\n- Use the new block in the the toolbox to play a sound.\r\n\r\n*Challenge:* Use **events** to play a sound when a sprite is clicked.",
     "parent_level_id": 28721,
@@ -55,7 +55,8 @@
     "block_pool": "gamelab",
     "name_suffix": "_transformers_2024",
     "block_pools": [
-      "GamelabJr"
+      "GamelabJr",
+      "transformers"
     ],
     "mini_rubric": "false",
     "include_shared_functions": "true",
@@ -68,15 +69,17 @@
     "bubble_choice_description": "Learn how to play sounds.",
     "callout_json": "[{\"localization_key\":\"hello_world_new\",\"callout_text\":\"New block!\",\"element_id\":\".svgFlyoutGroup [block-id=\\\"4\\\"]\",\"on\":\"\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}}},{\"element_id\":\".blocklyFlyout [data-id=\\\"4\\\"]\",\"localization_key\":\"hello_world_new\",\"callout_text\":\"New block!\",\"qtip_config\":{\"codeStudio\":{\"canReappear\":true,\"dropletPaletteCategory\":\"\"},\"style\":{\"classes\":\"\"},\"position\":{\"my\":\"left center\",\"at\":\"right center\",\"adjust\":{\"x\":0,\"y\":0}}},\"on\":\"\"}]",
     "thumbnail_url": "https://studio.code.org/api/v1/animation-library/gamelab/D9I677s9Rz4Ww_Znrcm36XWuz8WA0Kh8/category_food/face_apple.png",
-    "instructions_icon": "pizza",
+    "instructions_icon": "transformers_optimusprime",
     "validation_code": "//This level requires zValidationHelperFunctions and zHelloWorldValidation\r\nlevel10();",
     "skip_autosave": true,
     "encrypted_examples": "Be5GY+LxN9VCpJ9TJjRuSzVp5RfUb7UgLC5LSfUjWEkRRoxrmyG+1cRcFOnE\nxeMHIbGVbJhG/qR9L7/m7qI/27lwmtcLHHj+2ug+kSn90wDJiAmYHfgLyU/C\nsGqLs4iw315tqcduvXGehSuZluxDYQ==\n",
-    "preload_asset_list": null,
-    "standalone_app_name": "spritelab"
+    "standalone_app_name": "spritelab",
+    "enable_big_playspace": "false",
+    "preload_asset_list": null
   },
+  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:54.465+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_sounds\\\"\"],\"cloned_from\":\"helloworld_food_sounds\"},{\"changed_at\":\"2024-08-07 17:47:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-07 17:49:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:04:54.465+00:00\",\"changed\":[\"cloned from \\\"helloworld_food_sounds\\\"\"],\"cloned_from\":\"helloworld_food_sounds\"},{\"changed_at\":\"2024-08-07 17:47:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-07 17:49:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-09 17:13:46 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"instructions_icon\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-12 20:33:49 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"helper_libraries\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-12 20:36:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"block_pools\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-12 20:37:28 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-12 20:37:46 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-12 20:38:21 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-13 19:27:24 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-13 19:34:16 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"solution_blocks\",\"start_animations\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-13 22:48:49 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -1413,111 +1416,89 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
-        <block type="gamelab_setBackgroundImageAs">
-          <title name="IMG">"gradient_10_1"</title>
+        <block type="gamelab_setBackgroundImageAs" id="1lAgPwZEB,F`,|]lP^k1" x="16" y="16">
+          <field name="IMG">"transformers_one_bg_1"</field>
         </block>
-        <block type="gamelab_setBackground">
+        <block type="gamelab_setBackground" id="v%;tGoy;JdInlto7jHbw" x="16" y="90">
           <value name="COLOR">
-            <block type="colour_picker" can_disconnect_from_parent="false">
-              <title name="COLOUR">#3333ff</title>
+            <block type="colour_picker" id="V)Q}e`yToL3=/%W^{x1~" movable="false">
+              <field name="COLOUR">#3333ff</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_playSoundOptions" id="4">
-          <title name="SOUND" config="'sound://category_accent/puzzle_game_accent_a_01.mp3', 'sound://category_digital/boing_2.mp3', 'sound://category_pop/bubble_pop_cluster_airy_1.mp3', 'sound://category_bell/vibrant_game_bell_twinkle_positive_touch_1.mp3', 'sound://category_app/app_button_1.mp3', 'sound://category_collect/clicky_crunch.mp3', 'sound://category_swish/quick_swing.mp3'">'sound://category_accent/puzzle_game_accent_a_01.mp3'</title>
+        <block type="transformers_playSoundOptions" id="Vy-8FMHj+W}r,N0G|y0r" x="164" y="130">
+          <field name="SOUND">'sound://category_space/Blackhole_SFX.mp3'</field>
         </block>
-        <block type="gamelab_makeNewSpriteAnon">
-          <title name="ANIMATION_NAME">"face_carrot_1"</title>
+        <block type="gamelab_makeNewSpriteAnon" id="qZPLUf$WXeJ{-h0A2);s" x="16" y="170">
+          <field name="ANIMATION_NAME">"optimus_prime_1"</field>
           <value name="LOCATION">
-            <block type="gamelab_location_picker" can_disconnect_from_parent="false">
-              <title name="LOCATION">{"x":200,"y":200}</title>
+            <block type="gamelab_location_picker" id="7U0e@jPylbXwbl$h(vFx" movable="false">
+              <field name="LOCATION">{"x":200,"y":200}</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_spriteSay">
-          <title name="SPEECH">Hello, world!</title>
+        <block type="gamelab_spriteSay" id="=eCmJHD#:t:NEkO}LVMH" x="16" y="236">
+          <field name="SPEECH">Hello, world!</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <title name="ANIMATION">"face_apple_1"</title>
+            <block type="gamelab_allSpritesWithAnimation" id="$PfR~^CYk+Aau#GXU#yb" movable="false">
+              <field name="ANIMATION">"optimus_prime_1"</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_setProp">
-          <title name="PROPERTY">"scale"</title>
+        <block type="transformers_setTransformersSize" id="-dt$KCrJ3c`]Fe(/Nf;M" x="48" y="339">
+          <field name="SIZE">0.50</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <title name="ANIMATION">"face_apple_1"</title>
-            </block>
-          </value>
-          <value name="VAL">
-            <block type="math_number" can_disconnect_from_parent="false">
-              <title name="NUM">50</title>
+            <block type="gamelab_allSpritesWithAnimation" id="+]bt/Q;od:,;-c9zpZ(5">
+              <field name="ANIMATION">"optimus_prime_1"</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_changePropBy">
-          <title name="PROPERTY">"scale"</title>
-          <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <title name="ANIMATION">"face_apple_1"</title>
-            </block>
-          </value>
-          <value name="VAL">
-            <block type="math_number" can_disconnect_from_parent="false">
-              <title name="NUM">10</title>
-            </block>
-          </value>
+        <block type="transformers_setAllTransformersSize" id="T_|XjDa?D#~1^m[,j:hq" x="97" y="418">
+          <field name="SIZE">0.50</field>
         </block>
-        <block type="gamelab_setAnimation">
-          <title name="ANIMATION">"face_carrot_1"</title>
+        <block type="gamelab_setAnimation" id="pn(8A~+#L~WzIQDR8MQ[" x="16" y="464">
+          <field name="ANIMATION">"optimus_prime_1"</field>
           <value name="THIS">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <title name="ANIMATION">"face_apple_1"</title>
+            <block type="gamelab_allSpritesWithAnimation" id="-_e:J-!Ll}-t@EQN(bIF" movable="false">
+              <field name="ANIMATION">"optimus_prime_1"</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_spriteClicked">
-          <title name="CONDITION">"when"</title>
+        <block type="gamelab_spriteClicked" id="kFT83~:?Q+{h;CaV_%1(" x="16" y="540">
+          <field name="CONDITION">"when"</field>
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <title name="ANIMATION">"face_apple_1"</title>
+            <block type="gamelab_allSpritesWithAnimation" id="J_E@R]NKN3l=}}A(%}iO" movable="false">
+              <field name="ANIMATION">"optimus_prime_1"</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_addBehaviorSimple">
+        <block type="gamelab_addBehaviorSimple" id="|(Z%pG:Xy,.q5?#NkaYq" x="16" y="616">
           <value name="SPRITE">
-            <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
-              <title name="ANIMATION">"face_apple_1"</title>
+            <block type="gamelab_allSpritesWithAnimation" id="{O:rlq2|GL6M=ihVX=_9" movable="false">
+              <field name="ANIMATION">"optimus_prime_1"</field>
             </block>
           </value>
         </block>
-        <block type="gamelab_behavior_get">
-          <mutation/>
-          <title name="VAR" id="spinning right">spinning right</title>
+        <block type="gamelab_behavior_get" id="),,8cn|#M~f11G1h;g1X" x="16" y="707">
+          <mutation behaviorId="spinning right" name="spinning right"/>
         </block>
-        <block type="gamelab_behavior_get">
-          <mutation/>
-          <title name="VAR" id="spinning left">spinning left</title>
+        <block type="gamelab_behavior_get" id="`;ec;papgS;*O/L]kNE`" x="16" y="742">
+          <mutation behaviorId="spinning left" name="spinning left"/>
         </block>
-        <block type="gamelab_behavior_get">
-          <mutation/>
-          <title name="VAR" id="shrinking">shrinking</title>
+        <block type="gamelab_behavior_get" id=".r(U*4I|HQZ?-5L.Nj$a" x="16" y="777">
+          <mutation behaviorId="shrinking" name="shrinking"/>
         </block>
-        <block type="gamelab_behavior_get">
-          <mutation/>
-          <title name="VAR" id="growing">growing</title>
+        <block type="gamelab_behavior_get" id="Hqh:W8|mgy#~03R*.8H;" x="16" y="812">
+          <mutation behaviorId="growing" name="growing"/>
         </block>
-        <block type="gamelab_behavior_get">
-          <mutation/>
-          <title name="VAR" id="fluttering">fluttering</title>
+        <block type="gamelab_behavior_get" id="#Cr$Smz[K-Zr}rrvcCFZ" x="16" y="847">
+          <mutation behaviorId="fluttering" name="fluttering"/>
         </block>
-        <block type="gamelab_behavior_get">
-          <mutation/>
-          <title name="VAR" id="jittering">jittering</title>
+        <block type="gamelab_behavior_get" id="(:HXL8PkGNS,Y_E3_8wC" x="16" y="882">
+          <mutation behaviorId="jittering" name="jittering"/>
         </block>
-        <block type="gamelab_behavior_get">
-          <mutation/>
-          <title name="VAR" id="wobbling">wobbling</title>
+        <block type="gamelab_behavior_get" id="@)!$Y$XN=KC5xM(l!b=|" x="16" y="917">
+          <mutation behaviorId="wobbling" name="wobbling"/>
         </block>
       </xml>
     </toolbox_blocks>

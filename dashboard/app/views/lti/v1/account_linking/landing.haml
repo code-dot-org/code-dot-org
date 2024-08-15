@@ -14,7 +14,7 @@
     end
 
     email ||= params[:email]
-    new_account_url = DCDO.get('student-email-post-enabled', false) ? users_finish_sign_up_path : new_user_registration_url
+    new_account_url = users_finish_sign_up_path
     script_data[:lti_provider] = lti_provider
     script_data[:lti_provider_name] = Policies::Lti::LMS_PLATFORMS[lti_provider.to_sym][:name]
     script_data[:new_account_url] = new_account_url

@@ -3,7 +3,7 @@ import {
   showDialog,
   processResults,
 } from '@cdo/apps/code-studio/levels/dialogHelper';
-import {LegacyUnsubmitDialog} from '@cdo/apps/lib/ui/LegacyDialogContents';
+import {LegacyUnsubmitDialog} from '@cdo/apps/legacySharedComponents/LegacyDialogContents';
 
 /**
  * This file does some handling of submit button interactions.

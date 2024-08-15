@@ -578,7 +578,13 @@ class RegistrationsControllerTest < ActionController::TestCase
   test 'does not render the parent email section for LTI users' do
     user = create :student, :with_lti_auth
     PartialRegistration.persist_attributes session, user
-    get :new
+
+    post :new, params: {
+      user: {
+        email: 'test@code.org'
+      }
+    }
+
     assert_template partial: '_finish_sign_up'
     assert_select '#parent_email-container', 0
   end

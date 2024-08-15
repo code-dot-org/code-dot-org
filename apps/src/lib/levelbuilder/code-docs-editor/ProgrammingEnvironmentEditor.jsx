@@ -5,7 +5,7 @@ import React, {useState} from 'react';
 import CollapsibleEditorSection from '@cdo/apps/lib/levelbuilder/CollapsibleEditorSection';
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import color from '@cdo/apps/util/color';
 import {navigateToHref} from '@cdo/apps/utils';
 

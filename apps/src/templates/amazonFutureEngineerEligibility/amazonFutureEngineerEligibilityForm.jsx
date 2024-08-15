@@ -5,9 +5,11 @@ import React from 'react';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import ValidationStep, {
+  Status,
+} from '@cdo/apps/sharedComponents/ValidationStep';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
 import color from '@cdo/apps/util/color';
 import {isEmail} from '@cdo/apps/util/formatValidation';

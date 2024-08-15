@@ -6,7 +6,7 @@ class Policies::User
     authentication_options = user.authentication_options.map {|ao| ao.attributes.compact}
 
     # Remove the plaintext email from the session cache
-    attributes.delete("email") if DCDO.get('student-email-post-enabled', false)
+    attributes.delete("email")
 
     attributes.merge('authentication_options_attributes' => authentication_options).compact
   end

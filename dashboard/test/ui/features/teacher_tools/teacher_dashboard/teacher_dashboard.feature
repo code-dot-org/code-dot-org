@@ -82,6 +82,7 @@ Feature: Using the teacher dashboard
 
   Scenario: Loading section projects
     Given I create a teacher-associated student named "Sally"
+    Given I am assigned to unit "allthethings"
     And I am on "http://studio.code.org/projects/applab"
 
     # Make sure the initial save doesn't interfere with renaming the project
