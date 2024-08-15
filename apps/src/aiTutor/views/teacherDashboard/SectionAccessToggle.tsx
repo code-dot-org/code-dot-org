@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react';
 import {useSelector} from 'react-redux';
 
 import {handleUpdateSectionAITutorEnabled} from '@cdo/apps/aiTutor/accessControlsApi';
-import ToggleSwitch from '@cdo/apps/code-studio/components/ToggleSwitch';
-import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
+import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
+import InfoHelpTip from '@cdo/apps/sharedComponents/InfoHelpTip';
 import {updateSectionAiTutorEnabled} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
@@ -48,10 +48,11 @@ const SectionAccessToggle: React.FC<SectionAccessToggleProps> = ({
   return (
     <div>
       <div className={style.toolTipContainer}>
-        <ToggleSwitch
+        <Toggle
           id={'uitest-ai-tutor-toggle'}
-          isToggledOn={aiTutorEnabled}
-          onToggle={handleAITutorEnabledToggle}
+          name="aiTutorSectionAccessToggle"
+          checked={aiTutorEnabled}
+          onChange={handleAITutorEnabledToggle}
           label={i18n.enableAITutor()}
         />
         <InfoHelpTip

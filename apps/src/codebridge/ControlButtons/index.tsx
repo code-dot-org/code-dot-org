@@ -1,6 +1,6 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {appendSystemMessage} from '@codebridge/redux/consoleRedux';
-import React, {useContext, useState} from 'react';
+import React, {useState} from 'react';
 
 import {
   navigateToNextLevel,
@@ -14,26 +14,19 @@ import Button from '@cdo/apps/componentLibrary/button';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import {
-  DialogContext,
-  DialogType,
-} from '@cdo/apps/lab2/views/dialogs/DialogManager';
+import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {useFetch} from '@cdo/apps/util/useFetch';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import moduleStyles from './control-buttons.module.scss';
 
-interface PermissionResponse {
-  permissions: string[];
-}
-
 const ControlButtons: React.FunctionComponent = () => {
-  const {onRun} = useCodebridgeContext();
-  const dialogControl = useContext(DialogContext);
-  const {loading, data} = useFetch('/api/v1/users/current/permissions');
+  const {onRun, onStop} = useCodebridgeContext();
+
+  const dialogControl = useDialogControl();
   const [hasRun, setHasRun] = useState(false);
+  const [isRunning, setIsRunning] = useState(false);
   const dispatch = useAppDispatch();
 
   const source = useAppSelector(
@@ -56,11 +49,14 @@ const ControlButtons: React.FunctionComponent = () => {
     state => getCurrentLevel(state)?.status === LevelStatus.submitted
   );
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+  const isLoadingEnvironment = useAppSelector(
+    state => state.lab2System.loadingCodeEnvironment
+  );
   // We disable the run button in predict levels if we are not in start mode
   // and the user has not yet written a prediction.
   const awaitingPredictSubmit =
     !isStartMode && isPredictLevel && !hasPredictResponse;
-  const disableRunAndTest = loading || awaitingPredictSubmit;
+  const disableRunAndTest = awaitingPredictSubmit || isLoadingEnvironment;
 
   const onContinue = () => dispatch(navigateToNextLevel());
   // No-op for now. TODO: figure out what the finish button should do.
@@ -74,12 +70,12 @@ const ControlButtons: React.FunctionComponent = () => {
     const dialogMessage = hasSubmitted
       ? commonI18n.unsubmitYourProjectConfirm()
       : commonI18n.submitYourProjectConfirm();
-    dialogControl?.showDialog(
-      DialogType.GenericConfirmation,
-      handleSubmit,
-      dialogTitle,
-      dialogMessage
-    );
+    dialogControl?.showDialog({
+      type: DialogType.GenericConfirmation,
+      handleConfirm: handleSubmit,
+      title: dialogTitle,
+      message: dialogMessage,
+    });
   };
 
   const handleSubmit = () => {
@@ -95,20 +91,27 @@ const ControlButtons: React.FunctionComponent = () => {
 
   const handleRun = (runTests: boolean) => {
     if (onRun) {
-      const parsedPermissions = data
-        ? (data as PermissionResponse)
-        : {permissions: []};
-      onRun(runTests, dispatch, parsedPermissions.permissions, source);
+      setIsRunning(true);
+      onRun(runTests, dispatch, source).then(() => setIsRunning(false));
       setHasRun(true);
     } else {
       dispatch(appendSystemMessage("We don't know how to run your code."));
     }
   };
 
+  const handleStop = () => {
+    if (onStop) {
+      onStop();
+      setIsRunning(false);
+    } else {
+      dispatch(appendSystemMessage("We don't know how to stop your code."));
+      setIsRunning(false);
+    }
+  };
+
   // We disabled navigation if we are still loading, or if this is a submittable level,
   // the user has not submitted yet, and the user has not run their code during this session.
-  const disableNavigation =
-    loading || (isSubmittable && !hasSubmitted && !hasRun);
+  const disableNavigation = isSubmittable && !hasSubmitted && !hasRun;
   const getNavigationButtonProps = () => {
     if (isSubmittable) {
       return {
@@ -131,23 +134,36 @@ const ControlButtons: React.FunctionComponent = () => {
 
   return (
     <div className={moduleStyles.controlButtonsContainer}>
-      <Button
-        text="Run"
-        onClick={() => handleRun(false)}
-        disabled={disableRunAndTest}
-        iconLeft={{iconStyle: 'solid', iconName: 'play'}}
-        className={moduleStyles.firstControlButton}
-        size={'s'}
-        color={'white'}
-      />
-      <Button
-        text="Test"
-        onClick={() => handleRun(true)}
-        disabled={disableRunAndTest}
-        iconLeft={{iconStyle: 'solid', iconName: 'flask'}}
-        color={'black'}
-        size={'s'}
-      />
+      {isRunning ? (
+        <Button
+          text={'Stop'}
+          onClick={handleStop}
+          color={'destructive'}
+          iconLeft={{iconStyle: 'solid', iconName: 'square'}}
+          className={moduleStyles.centerButton}
+          size={'s'}
+        />
+      ) : (
+        <span className={moduleStyles.centerButton}>
+          <Button
+            text={'Run'}
+            onClick={() => handleRun(false)}
+            disabled={disableRunAndTest}
+            iconLeft={{iconStyle: 'solid', iconName: 'play'}}
+            className={moduleStyles.runButton}
+            size={'s'}
+            color={'white'}
+          />
+          <Button
+            text="Test"
+            onClick={() => handleRun(true)}
+            disabled={disableRunAndTest}
+            iconLeft={{iconStyle: 'solid', iconName: 'flask'}}
+            color={'black'}
+            size={'s'}
+          />
+        </span>
+      )}
       <Button
         text={navigationText}
         onClick={handleNavigation}

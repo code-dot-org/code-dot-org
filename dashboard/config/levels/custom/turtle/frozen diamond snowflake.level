@@ -21,7 +21,7 @@
     "use_contract_editor": "false",
     "ideal": "10",
     "embed": "false",
-    "callout_json": "[\r\n  {\"localization_key\":\"frozen_diamond_repeat\",\"callout_text\":\"Use the repeat block to create this shape.\",\"element_id\":\"#toolbox_repeat_qtip\",\"qtip_config\":{\"position\":{\"adjust\":{\"x\":null,\"y\":null},\"my\":\"left center\",\"at\":\"right center\"},\"style\":{\"classes\":\"\"}}}\r\n]",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"frozen_diamond_repeat\",\r\n  \"callout_text\": \"Use the repeat block to create this shape.\",\r\n  \"element_id\": \"#toolbox_repeat_qtip, [data-id=\\\"toolbox_repeat_qtip\\\"]\",\r\n  \"on\": \"\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": false,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"left center\",\r\n    \"at\": \"right center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "disable_sharing": "false",
     "shapeways_url": "https://www.shapeways.com/model/2925828/",
     "permitted_errors": "0",

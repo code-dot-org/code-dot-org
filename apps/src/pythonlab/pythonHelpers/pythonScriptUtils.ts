@@ -6,22 +6,18 @@ import {DEFAULT_FOLDER_ID} from '@codebridge/constants';
 import _ from 'lodash';
 import {PyodideInterface} from 'pyodide';
 
+import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 
 import {PyodideMessage, PyodidePathContent} from '../types';
 
 import {HIDDEN_FOLDERS} from './constants';
-import {ALL_PATCHES} from './patches';
+import {TEARDOWN_CODE} from './patches';
 
-export function applyPatches(originalCode: string) {
-  let finalCode = originalCode;
-
-  for (const patch of ALL_PATCHES) {
-    finalCode = patch.shouldPrepend
-      ? patch.contents + '\n' + finalCode
-      : finalCode + '\n' + patch.contents;
-  }
-  return finalCode;
+// Returns the cleanup code to be run after the user's code.
+export function getCleanupCode(source: MultiFileSource) {
+  const cleanupCode = TEARDOWN_CODE;
+  return cleanupCode + deleteCachedUserModules(source, MAIN_PYTHON_FILE);
 }
 
 // Pyodide uses the same interpreter for the lifetime of the browser tab.
@@ -31,7 +27,7 @@ export function deleteCachedUserModules(
   source: MultiFileSource,
   excludedFileName: string
 ) {
-  const result = [];
+  const result = ['import sys'];
   for (const file of Object.values(source.files)) {
     if (file.name !== excludedFileName) {
       const filePath = getModuleName(file.id, source);

@@ -3,11 +3,8 @@ import React, {useCallback, useContext} from 'react';
 import {useSelector} from 'react-redux';
 
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
-import {
-  DialogContext,
-  DialogType,
-} from '@cdo/apps/lab2/views/dialogs/DialogManager';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -86,7 +83,7 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
   );
   const currentPackId = useAppSelector(state => state.music.packId);
   const analyticsReporter = useContext(AnalyticsContext);
-  const dialogControl = useContext(DialogContext);
+  const dialogControl = useDialogControl();
 
   const library = MusicLibrary.getInstance();
 
@@ -118,7 +115,10 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
     Blockly.getMainWorkspace().hideChaff();
 
     if (dialogControl) {
-      dialogControl.showDialog(DialogType.StartOver, clearCode);
+      dialogControl.showDialog({
+        type: DialogType.StartOver,
+        handleConfirm: clearCode,
+      });
     }
 
     if (analyticsReporter) {
@@ -138,10 +138,13 @@ const HeaderButtons: React.FunctionComponent<HeaderButtonsProps> = ({
 
   const onClickSkip = useCallback(() => {
     if (dialogControl) {
-      dialogControl.showDialog(DialogType.Skip, () => {
-        if (skipUrl) {
-          window.location.href = skipUrl;
-        }
+      dialogControl.showDialog({
+        type: DialogType.Skip,
+        handleConfirm: () => {
+          if (skipUrl) {
+            window.location.href = skipUrl;
+          }
+        },
       });
     }
   }, [dialogControl, skipUrl]);

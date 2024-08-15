@@ -1,0 +1,729 @@
+{
+  "script": {
+    "name": "hello-world-transformers-one-2024",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "curriculum_umbrella": "CSC",
+      "is_course": true,
+      "is_migrated": true,
+      "supported_locales": [
+        "ar-SA",
+        "cs-CZ",
+        "de-DE",
+        "el-GR",
+        "es-ES",
+        "es-MX",
+        "fa-IR",
+        "fr-FR",
+        "he-IL",
+        "hi-IN",
+        "hu-HU",
+        "id-ID",
+        "it-IT",
+        "ja-JP",
+        "ka-GE",
+        "ko-KR",
+        "kn-IN",
+        "mr-IN",
+        "ms-MY",
+        "pl-PL",
+        "pt-BR",
+        "pt-PT",
+        "ro-RO",
+        "ru-RU",
+        "sk-SK",
+        "sq-AL",
+        "ta-IN",
+        "te-IN",
+        "th-TH",
+        "tr-TR",
+        "uk-UA",
+        "ur-PK",
+        "vi-VN",
+        "zh-CN",
+        "zh-TW"
+      ],
+      "version_year": "2024"
+    },
+    "new_name": null,
+    "family_name": "hello-world-transformers-one",
+    "serialized_at": "2024-08-13 22:47:49 UTC",
+    "published_state": "beta",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "hello-world-transformers-one-2024"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Hello World: Food",
+      "name": "Hello World: Transformers One",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "In this lesson, students will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. Students will learn to create and animate sprites and make them interactive using events. \n\nThere are multiple versions of this lesson. Each version teaches the same concepts but features different images to appeal to different students. For more information visit the [Hello World landing page.](https://code.org/helloworld)",
+        "preparation": "\n* Play through the puzzles to find any potential problem areas for your class.\n- Use the resources at [CS Connections](https://code.org/educate/csc) to make a plan for more computer science learning after the initial tutorial.\n",
+        "purpose": "This lesson is intended to prepare students to create simple programming projects in Sprite Lab. With this skill, students could then create projects on any topic, such as another school topic or something personally relevant to them. Visit [CS Connections](https://code.org/educate/csc) for ideas about how to integrate computer science into other subjects.\n",
+        "student_overview": "In this lesson, you will learn the basics of computer science by programming in Sprite Lab. Sprite Lab is a tool you can use to build imaginative and fun projects. You will learn to create and animate sprites and make them interactive using events."
+      },
+      "seeding_key": {
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "b0ad27ad-ca86-4390-b269-2c4e5413a06c",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b0ad27ad-ca86-4390-b269-2c4e5413a06c",
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024"
+      }
+    },
+    {
+      "key": "66f9b9ff-f131-41c8-8306-924cd105d31e",
+      "position": 2,
+      "properties": {
+        "duration": 40,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "66f9b9ff-f131-41c8-8306-924cd105d31e",
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024"
+      }
+    },
+    {
+      "key": "8e4ac132-8831-4de5-b0f2-cf00de8662a1",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "8e4ac132-8831-4de5-b0f2-cf00de8662a1",
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "6b321434-4d8f-4561-bd10-90713d71fb08",
+      "position": 1,
+      "properties": {
+        "description": "Welcome students to class and very briefly introduce the day’s activity.\n\n",
+        "name": "Setting the Stage"
+      },
+      "seeding_key": {
+        "activity_section.key": "6b321434-4d8f-4561-bd10-90713d71fb08",
+        "lesson_activity.key": "b0ad27ad-ca86-4390-b269-2c4e5413a06c"
+      }
+    },
+    {
+      "key": "d950cfb2-75a0-44f1-8208-67c418673860",
+      "position": 2,
+      "properties": {
+        "description": "*In this activity, you’re going to have fun making an interactive world with fun characters called sprites. You’ll be able to make the sprites say things with speech bubbles as you’d see in a comic or graphic novel, and you’ll learn to make them respond automatically when you or someone else clicks on them.*\n\n*Today you’ll be writing \"code\", which just means a set of instructions that a computer can understand. When you write a story, you need to think carefully about the words you use. When you write code, you’ll need to think carefully about the instructions you are giving to your computer.*\n",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You’ll want to spend very little time front-loading or introducing your Hour of Code. Especially with young learners, it’s best to jump in as quickly as possible."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d950cfb2-75a0-44f1-8208-67c418673860",
+        "lesson_activity.key": "b0ad27ad-ca86-4390-b269-2c4e5413a06c"
+      }
+    },
+    {
+      "key": "9714eed3-d77f-47d3-a7f8-74d7f277f062",
+      "position": 1,
+      "properties": {
+        "description": "Here are a few tips that should help students regardless of the level they're working on\n\n* **Collaborate with Neighbors:** Encourage students to check in with a neighbor when they're getting stuck. Depending on the age and ability of your students, you might consider formally breaking your class into pairs to complete the tutorial using [pair programming](https://youtu.be/vgkahOzFH2Q).  \n* **Read the Instructions:** The instructions usually provide helpful tips on how to complete the level. Before giving students the answer, ensure they've carefully looked at the instructions, hints, videos, and any starter code carefully.\n\n\n- <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Stuck? Look for hints:** Each level includes a hint with advice for how to pass a level, including which blocks of code to try out. \n\n* **Take your time and experiment.** The instructions tell students generally what to do, but they should also feel free to try out their own ideas.",
+        "name": "General Support"
+      },
+      "seeding_key": {
+        "activity_section.key": "9714eed3-d77f-47d3-a7f8-74d7f277f062",
+        "lesson_activity.key": "66f9b9ff-f131-41c8-8306-924cd105d31e"
+      }
+    },
+    {
+      "key": "b9190c42-0947-4ba2-bb1e-d8bb79b8eb5d",
+      "position": 2,
+      "properties": {
+        "name": "Hello World",
+        "progression_name": "Hello World"
+      },
+      "seeding_key": {
+        "activity_section.key": "b9190c42-0947-4ba2-bb1e-d8bb79b8eb5d",
+        "lesson_activity.key": "66f9b9ff-f131-41c8-8306-924cd105d31e"
+      }
+    },
+    {
+      "key": "2b41dd25-4da8-4fb0-b48a-05829a8d2709",
+      "position": 3,
+      "properties": {
+        "description": "If a group or individual finishes early, encourage them to continue building a project in the last level. If students aren’t sure what else to do, you can prompt them with questions:\n\n- What other sprites could you add to your project?\n- Have you looked through the costume library or tried drawing your own sprite costume?\n- What else could you have your sprites say?\n- What should your sprites do when they are clicked?\n- Invite students to share ideas and to learn from each other. They can also attempt another tutorial by visiting [code.org/learn](https://code.org/learn).\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "2b41dd25-4da8-4fb0-b48a-05829a8d2709",
+        "lesson_activity.key": "66f9b9ff-f131-41c8-8306-924cd105d31e"
+      }
+    },
+    {
+      "key": "2fa1495e-d7c6-4713-95f2-43c5eeef3a1b",
+      "position": 1,
+      "properties": {
+        "description": "####Debrief\nAsk students to reflect on the day’s activities. What did they learn about coding? Sprites? Events?\n\nHow do they feel about computer science and coding after spending one hour exploring?\n\n####Next Steps\nLet students know that if they enjoyed today’s activity, they have many options for continuing to code. Visit [CS Connections](https://code.org/educate/csc) for ideas about how to integrate computer science into other subjects or read more about our [course offerings for elementary schools](https://code.org/educate/curriculum/elementary-school).\n\n",
+        "name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "2fa1495e-d7c6-4713-95f2-43c5eeef3a1b",
+        "lesson_activity.key": "8e4ac132-8831-4de5-b0f2-cf00de8662a1"
+      }
+    },
+    {
+      "key": "300795a4-86c6-4efb-8d72-b4173a2d3389",
+      "position": 2,
+      "properties": {
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Professional Learning Opportunity**\n\nWant to keep the fun going but not sure how? Consider engaging in our self-paced professional learning module, [Preparing to Teach Interactive Animations and Games](https://studio.code.org/courses/self-paced-pl-csd-unit3-2023)! This unit teaches students to build exciting creations using sprites. This module will give you all the necessary tools, skills, and knowledge."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "300795a4-86c6-4efb-8d72-b4173a2d3389",
+        "lesson_activity.key": "8e4ac132-8831-4de5-b0f2-cf00de8662a1"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_food_say_transformers_2024"
+        ],
+        "progression": "Hello World"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_food_say_transformers_2024"
+        ],
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024",
+        "activity_section.key": "b9190c42-0947-4ba2-bb1e-d8bb79b8eb5d"
+      },
+      "level_keys": [
+        "helloworld_food_say_transformers_2024"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_food_location_transformers_2024"
+        ],
+        "progression": "Hello World"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_food_location_transformers_2024"
+        ],
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024",
+        "activity_section.key": "b9190c42-0947-4ba2-bb1e-d8bb79b8eb5d"
+      },
+      "level_keys": [
+        "helloworld_food_location_transformers_2024"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_food_multi_transformers_2024"
+        ],
+        "progression": "Hello World"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_food_multi_transformers_2024"
+        ],
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024",
+        "activity_section.key": "b9190c42-0947-4ba2-bb1e-d8bb79b8eb5d"
+      },
+      "level_keys": [
+        "helloworld_food_multi_transformers_2024"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_food_click_transformers_2024"
+        ],
+        "progression": "Hello World"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_food_click_transformers_2024"
+        ],
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024",
+        "activity_section.key": "b9190c42-0947-4ba2-bb1e-d8bb79b8eb5d"
+      },
+      "level_keys": [
+        "helloworld_food_click_transformers_2024"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_food_events_transformers_2024"
+        ],
+        "progression": "Hello World"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_food_events_transformers_2024"
+        ],
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024",
+        "activity_section.key": "b9190c42-0947-4ba2-bb1e-d8bb79b8eb5d"
+      },
+      "level_keys": [
+        "helloworld_food_events_transformers_2024"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_food_backgrounds_transformers_2024"
+        ],
+        "progression": "Hello World"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_food_backgrounds_transformers_2024"
+        ],
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024",
+        "activity_section.key": "b9190c42-0947-4ba2-bb1e-d8bb79b8eb5d"
+      },
+      "level_keys": [
+        "helloworld_food_backgrounds_transformers_2024"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_food_costumes_transformers_2024"
+        ],
+        "progression": "Hello World"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_food_costumes_transformers_2024"
+        ],
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024",
+        "activity_section.key": "b9190c42-0947-4ba2-bb1e-d8bb79b8eb5d"
+      },
+      "level_keys": [
+        "helloworld_food_costumes_transformers_2024"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_food_sizes_transformers_2024"
+        ],
+        "progression": "Hello World"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_food_sizes_transformers_2024"
+        ],
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024",
+        "activity_section.key": "b9190c42-0947-4ba2-bb1e-d8bb79b8eb5d"
+      },
+      "level_keys": [
+        "helloworld_food_sizes_transformers_2024"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_food_behaviors_transformers_2024"
+        ],
+        "progression": "Hello World"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_food_behaviors_transformers_2024"
+        ],
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024",
+        "activity_section.key": "b9190c42-0947-4ba2-bb1e-d8bb79b8eb5d"
+      },
+      "level_keys": [
+        "helloworld_food_behaviors_transformers_2024"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_food_sounds_transformers_2024"
+        ],
+        "progression": "Hello World"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_food_sounds_transformers_2024"
+        ],
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024",
+        "activity_section.key": "b9190c42-0947-4ba2-bb1e-d8bb79b8eb5d"
+      },
+      "level_keys": [
+        "helloworld_food_sounds_transformers_2024"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "helloworld_food_freeplay_transformers_2024"
+        ],
+        "progression": "Hello World"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "helloworld_food_freeplay_transformers_2024"
+        ],
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024",
+        "activity_section.key": "b9190c42-0947-4ba2-bb1e-d8bb79b8eb5d"
+      },
+      "level_keys": [
+        "helloworld_food_freeplay_transformers_2024"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "helloworld_food_say_transformers_2024",
+        "script_level.level_keys": [
+          "helloworld_food_say_transformers_2024"
+        ],
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024",
+        "activity_section.key": "b9190c42-0947-4ba2-bb1e-d8bb79b8eb5d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_food_location_transformers_2024",
+        "script_level.level_keys": [
+          "helloworld_food_location_transformers_2024"
+        ],
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024",
+        "activity_section.key": "b9190c42-0947-4ba2-bb1e-d8bb79b8eb5d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_food_multi_transformers_2024",
+        "script_level.level_keys": [
+          "helloworld_food_multi_transformers_2024"
+        ],
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024",
+        "activity_section.key": "b9190c42-0947-4ba2-bb1e-d8bb79b8eb5d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_food_click_transformers_2024",
+        "script_level.level_keys": [
+          "helloworld_food_click_transformers_2024"
+        ],
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024",
+        "activity_section.key": "b9190c42-0947-4ba2-bb1e-d8bb79b8eb5d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_food_events_transformers_2024",
+        "script_level.level_keys": [
+          "helloworld_food_events_transformers_2024"
+        ],
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024",
+        "activity_section.key": "b9190c42-0947-4ba2-bb1e-d8bb79b8eb5d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_food_backgrounds_transformers_2024",
+        "script_level.level_keys": [
+          "helloworld_food_backgrounds_transformers_2024"
+        ],
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024",
+        "activity_section.key": "b9190c42-0947-4ba2-bb1e-d8bb79b8eb5d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_food_costumes_transformers_2024",
+        "script_level.level_keys": [
+          "helloworld_food_costumes_transformers_2024"
+        ],
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024",
+        "activity_section.key": "b9190c42-0947-4ba2-bb1e-d8bb79b8eb5d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_food_sizes_transformers_2024",
+        "script_level.level_keys": [
+          "helloworld_food_sizes_transformers_2024"
+        ],
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024",
+        "activity_section.key": "b9190c42-0947-4ba2-bb1e-d8bb79b8eb5d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_food_behaviors_transformers_2024",
+        "script_level.level_keys": [
+          "helloworld_food_behaviors_transformers_2024"
+        ],
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024",
+        "activity_section.key": "b9190c42-0947-4ba2-bb1e-d8bb79b8eb5d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_food_sounds_transformers_2024",
+        "script_level.level_keys": [
+          "helloworld_food_sounds_transformers_2024"
+        ],
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024",
+        "activity_section.key": "b9190c42-0947-4ba2-bb1e-d8bb79b8eb5d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "helloworld_food_freeplay_transformers_2024",
+        "script_level.level_keys": [
+          "helloworld_food_freeplay_transformers_2024"
+        ],
+        "lesson.key": "Hello World: Food",
+        "lesson_group.key": "",
+        "script.name": "hello-world-transformers-one-2024",
+        "activity_section.key": "b9190c42-0947-4ba2-bb1e-d8bb79b8eb5d"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "d13ede26-1625-41a4-8542-e8bdb44aac74",
+      "properties": {
+        "description": "Create an interactive animation using sprites and events."
+      },
+      "seeding_key": {
+        "lesson.key": "Hello World: Food",
+        "objective.key": "d13ede26-1625-41a4-8542-e8bdb44aac74"
+      }
+    },
+    {
+      "key": "e71b0dc3-f05e-46b5-9fe8-36bd00317f5b",
+      "properties": {
+        "description": "Create new sprites and assign them costumes and locations."
+      },
+      "seeding_key": {
+        "lesson.key": "Hello World: Food",
+        "objective.key": "e71b0dc3-f05e-46b5-9fe8-36bd00317f5b"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Hello World: Food",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hello World: Food",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-IC-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hello World: Food",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Hello World: Food",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-12"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

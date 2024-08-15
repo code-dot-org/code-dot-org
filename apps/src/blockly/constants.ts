@@ -181,7 +181,6 @@ export const READ_ONLY_PROPERTIES = [
   'Extensions',
   'FieldAngle',
   'FieldAngleInput',
-  'FieldColour',
   'FieldColourDropdown',
   'FieldIcon',
   'FieldMultilineInput',

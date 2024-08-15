@@ -34,4 +34,12 @@ module MailJetConstants
       from_name: 'Code.org',
     }
   }.freeze
+
+  CONTACT_LISTS = {
+    welcome_series: {
+      default: 10_353_815,
+      'es-MX': 10_353_822,
+      'es-ES': 10_353_822,
+    }
+  }
 end
