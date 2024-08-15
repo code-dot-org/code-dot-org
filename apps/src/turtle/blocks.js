@@ -1433,7 +1433,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.draw_colour_simple = {
     // Simplified dropdown block for setting the colour.
     init: function () {
-      var colours = [
+      const colours = [
         Colours.RED,
         Colours.BLACK,
         Colours.PINK,
@@ -1449,7 +1449,7 @@ exports.install = function (blockly, blockInstallOptions) {
         BlockColors.LOGIC,
         BlockStyles.LOGIC
       );
-      var colourField = new Blockly.FieldColourDropdown(colours, 45, 35);
+      const colourField = Blockly.customBlocks.getColourDropdownField(colours);
       this.appendDummyInput()
         .appendField(msg.setColour())
         .appendField(colourField, 'COLOUR');
