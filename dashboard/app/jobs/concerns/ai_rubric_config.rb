@@ -19,6 +19,14 @@ class AiRubricConfig
       'CSD U3 collisions flyman bounceOff_2023' => 'csd3-2023-L24',
       'CSD games project review_2023' => 'csd3-2023-L28',
     },
+    'csd3-2024' => {
+      'CSD U3 Sprites scene challenge_2024' => 'csd3-2023-L11',
+      'CSD web project animated review_2024' => 'csd3-2023-L14',
+      'CSD U3 Interactive Card Final_2024' => 'csd3-2023-L18',
+      'CSD games sidescroll review_2024' => 'csd3-2023-L21',
+      'CSD U3 collisions flyman bounceOff_2024' => 'csd3-2023-L24',
+      'CSD games project review_2024' => 'csd3-2023-L28',
+    },
     'allthethings' => {
       'CSD U3 Sprites scene challenge_allthethings' => 'allthethings-L48',
     },
@@ -26,6 +34,9 @@ class AiRubricConfig
   UNIT_AND_LEVEL_TO_LESSON_S3_NAME['interactive-games-animations-2023'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2023']
   UNIT_AND_LEVEL_TO_LESSON_S3_NAME['focus-on-creativity3-2023'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2023']
   UNIT_AND_LEVEL_TO_LESSON_S3_NAME['focus-on-coding3-2023'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2023']
+  UNIT_AND_LEVEL_TO_LESSON_S3_NAME['interactive-games-animations-2024'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2024']
+  UNIT_AND_LEVEL_TO_LESSON_S3_NAME['focus-on-creativity3-2024'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2024']
+  UNIT_AND_LEVEL_TO_LESSON_S3_NAME['focus-on-coding3-2024'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2024']
   UNIT_AND_LEVEL_TO_LESSON_S3_NAME.freeze
 
   # For testing purposes, we can raise this error to simulate a missing key

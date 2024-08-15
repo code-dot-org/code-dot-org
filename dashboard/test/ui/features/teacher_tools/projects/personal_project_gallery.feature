@@ -28,7 +28,6 @@ Scenario: Can Rename a Project
   And I wait until element "#ui-projects-rename-save" is not visible
   And the first project in the table is named "New Name"
 
-@skip
 Scenario: Can Remix a Project
   Given I make a "playlab" project named "Remix Template"
   Given I am on "http://studio.code.org/projects"
