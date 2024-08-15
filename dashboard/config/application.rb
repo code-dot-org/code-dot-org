@@ -27,7 +27,9 @@ Bundler.require(:default, Rails.env)
 module Dashboard
   class Application < Rails::Application
     # Explicitly load appropriate defaults for this version of Rails.
-    config.load_defaults 6.1
+    config.load_defaults 7.2
+
+    config.autoload_lib(ignore: %w(assets tasks))
 
     # Temporarily disable some default values that we aren't yet ready for.
     # Right now, these changes to cookie functionality break projects
