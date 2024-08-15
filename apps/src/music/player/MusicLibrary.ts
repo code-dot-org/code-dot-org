@@ -26,7 +26,7 @@ async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
       localLibrary as LibraryJson
     );
   } else {
-    const libraryJsonResponse = await HttpClient.fetchJson<LibraryJson>(
+    const libraryJsonResponsePromise = HttpClient.fetchJson<LibraryJson>(
       getBaseAssetUrl() +
         libraryFilename +
         '.json' +
@@ -35,23 +35,44 @@ async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
       LibraryValidator
     );
 
-    // To do: load translations in parallel with library.
     // To do: load locale from browser.
     // To do: handle missing translation file.
     // To do: wrap this (getting translations, localizing library)
     //   in an experiment so we can ship it without any user-facing impact?
     //   Or can just wait to merge it until we have real translations.
-    const translations = await loadTranslations(libraryFilename, 'fr_fr');
+    const translationsPromise = loadTranslations(libraryFilename, 'fr_fr');
+
+    // if translation rejects, just send library json
+    //
+    const [libraryJsonResponse, translations] = await Promise.all([
+      libraryJsonResponsePromise,
+      translationsPromise,
+    ]);
+
+    // const libraryJsonResponse = results[0].value;
+    // const translations = results[1].value;
+
+    // const [libraryJsonResponse, translations] = results
+    //   .filter(isFulfilled)
+    //   .map(item => item?.value);
 
     const libraryJsonLocalized = localizeLibrary(
-      libraryJsonResponse.value,
-      translations
+      libraryJsonResponse.value as LibraryJson,
+      translations as Translations
     );
 
-    return new MusicLibrary(libraryFilename, libraryJsonLocalized);
-    return new MusicLibrary(libraryName, libraryJsonResponse.value);
+    // should first arg be libraryFilename?
+    return new MusicLibrary(libraryName, libraryJsonLocalized);
   }
 }
+
+// const isRejected = (
+//   input: PromiseSettledResult<unknown>
+// ): input is PromiseRejectedResult => input.status === 'rejected';
+//
+// const isFulfilled = <T>(
+//   input: PromiseSettledResult<T>
+// ): input is PromiseFulfilledResult<T> => input.status === 'fulfilled';
 
 type Translations = {[key: string]: string};
 
