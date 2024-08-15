@@ -1,6 +1,3 @@
-require 'user'
-require 'authentication_option'
-
 class Policies::Lti
   module AccessTokenScopes
     LINE_ITEM = 'https://purl.imsglobal.org/spec/lti-ags/scope/lineitem'.freeze
