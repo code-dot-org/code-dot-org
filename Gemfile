@@ -15,7 +15,7 @@ gem 'cgi', '~> 0.3.6'
 # see https://github.com/ruby/set/pull/2
 gem 'sorted_set'
 
-gem 'rails', '~> 6.1'
+gem 'rails', '~> 7.2'
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # provide `respond_to` methods
@@ -55,12 +55,12 @@ gem 'memory_profiler'
 gem 'rack-mini-profiler'
 
 group :development do
-  gem 'annotate', '~> 3.1.1'
+  gem 'annotate', '~> 3.2.0'
   gem 'aws-google', '~> 0.2.0'
-  gem 'web-console', '~> 4.2.0'
+  gem 'web-console', '~> 4.2.1'
   # Bootsnap pre-caches Ruby require paths + bytecode and speeds up boot time significantly.
   # We only use it in development atm to get a feel for it, and the benefit is greatest here.
-  gem 'bootsnap', '>= 1.14.0', require: false
+  gem 'bootsnap', '>= 1.18.4', require: false
 end
 
 # Rack::Cache middleware used in development/test;
@@ -94,7 +94,7 @@ group :development, :test do
   gem 'fakefs', '~> 2.5.0', require: false
   gem 'minitest', '~> 5.15'
   gem 'minitest-around'
-  gem 'minitest-rails', '~> 6.1', require: false
+  gem 'minitest-rails', '~> 7.1.1', require: false
   gem 'minitest-reporters', '~> 1.2.0.beta3'
   gem 'minitest-spec-context', '~> 0.0.3'
   gem 'minitest-stub-const', '~> 0.6'
@@ -103,7 +103,7 @@ group :development, :test do
   gem 'rspec', require: false
   gem 'selenium-webdriver', '~> 4.0'
   gem 'simplecov', '~> 0.22.0', require: false
-  gem 'spring', '~> 3.1.1'
+  gem 'spring', '~> 4.2.1'
   gem 'spring-commands-testunit'
   gem 'webdrivers', '~> 5.2'
 
@@ -113,7 +113,7 @@ group :development, :test do
 end
 
 # Needed for unit testing, and also for /rails/mailers email previews.
-gem 'factory_bot_rails', '~> 6.2', group: [:development, :staging, :test, :adhoc]
+gem 'factory_bot_rails', '~> 6.4.3', group: [:development, :staging, :test, :adhoc]
 
 # For pegasus PDF generation.
 gem 'open_uri_redirections', require: false
@@ -209,10 +209,10 @@ gem 'twilio-ruby', '< 6.0'
 gem 'sequel', '~> 5.29'
 gem 'user_agent_parser'
 
-gem 'paranoia', '~> 2.5.0'
+gem 'paranoia', '~> 3.0.0'
 
 # JSON model serializer for REST APIs.
-gem 'active_model_serializers', '~> 0.10.13'
+gem 'active_model_serializers', '~> 0.10.14'
 
 # AWS SDK and associated service APIs.
 gem 'aws-sdk-acm'
@@ -305,7 +305,7 @@ gem 'sort_alphabetical', github: 'grosser/sort_alphabetical'
 
 gem 'recaptcha', require: 'recaptcha/rails'
 
-gem 'loofah', '~> 2.19.1'
+gem 'loofah', '~> 2.22.0'
 
 # Install pg gem only on specific production hosts and the i18n-dev server.
 require_pg = lambda do
@@ -317,7 +317,7 @@ install_if require_pg do
   gem 'pg', require: false
 end
 
-gem 'activerecord-import', '~> 1.0.3'
+gem 'activerecord-import', '~> 1.7.0'
 gem 'active_record_union'
 gem 'scenic'
 gem 'scenic-mysql_adapter'
