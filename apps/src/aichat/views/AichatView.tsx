@@ -158,7 +158,7 @@ const AichatView: React.FunctionComponent = () => {
   const chatWorkspaceHeader = (
     <div>
       {projectTemplateLevel && (
-        <ProjectTemplateWorkspaceIcon tooltipPlace="bottom" dark /> // todo: dark should be conditional based on the theme (light/dark)
+        <ProjectTemplateWorkspaceIcon tooltipPlace="bottom" dark />
       )}
       {viewMode === ViewMode.EDIT
         ? aichatI18n.aichatWorkspaceHeader()
@@ -285,7 +285,7 @@ const renderModelCustomizationHeaderRight = (onStartOver: () => void) => {
       <Button
         icon={{iconStyle: 'solid', iconName: 'refresh'}}
         isIconOnly={true}
-        color={'black'} // todo: This should be conditional based on the theme (light/dark)
+        color={'black'}
         onClick={onStartOver}
         ariaLabel={'Start Over'}
         size={'xs'}
