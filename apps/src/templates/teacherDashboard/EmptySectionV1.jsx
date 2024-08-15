@@ -12,12 +12,17 @@ import emptyDesk from '@cdo/apps/templates/teacherDashboard/images/empty_desk.sv
 import blankScreen from '@cdo/apps/templates/teacherDashboard/images/no_curriculum_assigned.svg';
 import i18n from '@cdo/locale';
 
-import {TEACHER_DASHBOARD_PATHS} from '../teacherNavigation/TeacherDashboardPaths';
+import {TEACHER_DASHBOARD_PATHS} from './TeacherDashboardNavigation';
 
 import styles from './teacher-dashboard.module.scss';
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
-function EmptySection({hasStudents, hasCurriculumAssigned}) {
+function EmptySectionV1({
+  hasStudents,
+  hasCurriculumAssigned,
+  showProgressPageHeader = false,
+  element,
+}) {
   const textDescription = !hasStudents
     ? i18n.emptySectionDescription()
     : i18n.noCurriculumAssigned();
@@ -50,24 +55,29 @@ function EmptySection({hasStudents, hasCurriculumAssigned}) {
     </div>
   );
 
+  if (hasStudents && hasCurriculumAssigned) {
+    return element;
+  }
   return (
     <div className={dashboardStyles.emptyClassroomDiv}>
-      {location.pathname === TEACHER_DASHBOARD_PATHS.progress && (
+      {showProgressPageHeader ? (
         <div>
           <Heading1>{i18n.progress()}</Heading1>
           {emptySectionGraphic(dashboardStyles.emptyClassroomProgress)}
         </div>
+      ) : (
+        emptySectionGraphic(dashboardStyles.emptyClassroom)
       )}
-      {location.pathname !== TEACHER_DASHBOARD_PATHS.progress &&
-        emptySectionGraphic(dashboardStyles.emptyClassroom)}
     </div>
   );
 }
 
-EmptySection.propTypes = {
+EmptySectionV1.propTypes = {
   className: PropTypes.string,
   hasStudents: PropTypes.bool,
   hasCurriculumAssigned: PropTypes.bool,
+  showProgressPageHeader: PropTypes.bool,
+  element: PropTypes.element,
 };
 
-export default EmptySection;
+export default EmptySectionV1;
