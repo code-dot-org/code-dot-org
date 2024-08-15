@@ -200,6 +200,7 @@ module Services
             event_name: 'lti_user_created',
             metadata: {
               lms_name: lti_integration[:platform_name],
+              context: 'roster_sync'
             }
           )
         end

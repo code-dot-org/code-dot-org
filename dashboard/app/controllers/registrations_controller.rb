@@ -153,6 +153,7 @@ class RegistrationsController < Devise::RegistrationsController
         metadata = {
           'user_type' => current_user.user_type,
           'lms_name' => lms_name,
+          'context' => 'registration_controller'
         }
         Metrics::Events.log_event(
           user: current_user,
