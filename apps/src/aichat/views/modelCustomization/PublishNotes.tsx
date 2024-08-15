@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import {
@@ -39,6 +39,9 @@ const PublishNotes: React.FunctionComponent = () => {
   const currentSaveType = useAppSelector(state => state.aichat.currentSaveType);
   const havePropertiesChanged = useAppSelector(selectHavePropertiesChanged);
 
+  const [showUnsavedChangesAlert, setShowUnsavedChangesAlert] =
+    useState<boolean>(false);
+
   const onSave = useCallback(() => {
     dispatch(saveModelCard());
   }, [dispatch]);
@@ -65,8 +68,8 @@ const PublishNotes: React.FunctionComponent = () => {
     let alert;
     if (hasFilledOutModelCard) {
       alert = alerts['ready'];
-    } else if (havePropertiesChanged) {
-      alert = alerts['unsaved'];
+      // } else if (havePropertiesChanged) {
+      //   alert = alerts['unsaved'];
     } else {
       alert = alerts['empty'];
     }
@@ -75,9 +78,30 @@ const PublishNotes: React.FunctionComponent = () => {
 
   // const [alertText, type]: [string, AlertProps['type']] = getAlert();
 
+  // let showUnsavedChangesAlert = false;
+  // Event listener for the 'beforeunload' event
+  window.addEventListener('beforeunload', function (e) {
+    console.log('beforeunload called');
+    // Check if any of the input fields are filled
+    if (havePropertiesChanged) {
+      setShowUnsavedChangesAlert(true);
+      // Cancel the event and show alert that
+      // the unsaved changes would be lost
+      e.preventDefault();
+      e.returnValue = '';
+    }
+  });
+
   return (
     <div className={modelCustomizationStyles.verticalFlexContainer}>
       <div className={modelCustomizationStyles.customizationContainer}>
+        {showUnsavedChangesAlert && (
+          <Alert
+            text={alerts.unsaved.text}
+            type={alerts.unsaved.type}
+            size="s"
+          />
+        )}
         {!isReadOnly && getAlert()}
         {MODEL_CARD_FIELDS_LABELS_ICONS.map(data => {
           const {property, label, editTooltip} = data;
