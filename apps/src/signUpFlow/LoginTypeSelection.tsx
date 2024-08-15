@@ -10,7 +10,6 @@ import {
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
 import signupCanvas from '@cdo/apps/signUpFlow/images/signupCanvas.png';
-import signupClever from '@cdo/apps/signUpFlow/images/signupClever.png';
 import signupSchoology from '@cdo/apps/signUpFlow/images/signupSchoology.png';
 import locale from '@cdo/apps/signUpFlow/locale';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -44,22 +43,26 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             text={locale.sign_up_google()}
             href={'#'}
             iconLeft={{iconName: 'brands fa-google', iconStyle: 'solid'}}
-            className={style.greenButton}
+            className={style.googleButton}
           />
           <LinkButton
             text={locale.sign_up_microsoft()}
             href={'#'}
             iconLeft={{iconName: 'brands fa-microsoft', iconStyle: 'light'}}
-            className={style.yellowButton}
+            className={style.microsoftButton}
           />
           <LinkButton
             text={locale.sign_up_facebook()}
             href={'#'}
             iconLeft={{iconName: 'brands fa-facebook-f', iconStyle: 'solid'}}
-            className={style.blueButton}
+            className={style.facebookButton}
+          />
+          <LinkButton
+            text={locale.sign_up_clever()}
+            href={'#'}
+            className={style.cleverButton}
           />
           <div className={style.greyTextbox}>
-            <img src={signupClever} alt="" />
             <img src={signupCanvas} alt="" />
             <img src={signupSchoology} alt="" />
             <BodyThreeText className={style.subheader}>

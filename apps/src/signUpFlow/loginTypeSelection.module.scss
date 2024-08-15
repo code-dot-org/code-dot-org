@@ -110,19 +110,40 @@ body {
       margin-top: 1rem;
     }
 
-    .greenButton {
+    .googleButton {
       background-color: $google_brand_color;
       margin-bottom: .5rem;
+
+      &:hover {
+        background-color: darken($google_brand_color, 10%);
+      }
     }
   
-    .yellowButton {
+    .microsoftButton {
       background-color: $microsoft_brand_color;
       color: $black;
       margin-bottom: .5rem;
+
+      &:hover {
+        background-color: darken($microsoft_brand_color, 10%);
+      }
     }
   
-    .blueButton {
+    .facebookButton {
       background-color: $facebook_brand_color;
+      margin-bottom: .5rem;
+
+      &:hover {
+        background-color: darken($facebook_brand_color, 10%);
+      }
+    }
+
+    .cleverButton {
+      background-color: $clever_brand_color;
+
+      &:hover {
+        background-color: darken($clever_brand_color, 10%);
+      }
     }
 
     .greyTextbox {
