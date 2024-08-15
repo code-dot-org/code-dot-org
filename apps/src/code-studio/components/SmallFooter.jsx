@@ -309,7 +309,7 @@ export default class SmallFooter extends React.Component {
       return (
         <span className="copyright-button">
           <Button
-            aria-label="Copyright Button"
+            aria-label={i18n.copyrightInfoButton()}
             className="copyright-link no-mc"
             color={buttonColors.gray}
             icon={{
