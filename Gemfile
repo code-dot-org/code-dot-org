@@ -229,6 +229,7 @@ gem 'active_model_serializers', '~> 0.10.13'
 
 # AWS SDK and associated service APIs.
 gem 'aws-sdk-acm'
+gem 'aws-sdk-autoscaling'
 gem 'aws-sdk-bedrockagentruntime', '~> 1.10.0'
 gem 'aws-sdk-cloudformation'
 gem 'aws-sdk-cloudfront'
