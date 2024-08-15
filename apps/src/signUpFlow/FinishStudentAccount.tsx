@@ -15,7 +15,7 @@ import {
   IS_PARENT_SESSION_KEY,
   PARENT_EMAIL_SESSION_KEY,
   PARENT_EMAIL_OPT_IN_SESSION_KEY,
-  USER_NAME_SESSION_KEY,
+  DISPLAY_NAME_SESSION_KEY,
   USER_AGE_SESSION_KEY,
   USER_STATE_SESSION_KEY,
   USER_GENDER_SESSION_KEY,
@@ -64,7 +64,7 @@ const FinishStudentAccount: React.FunctionComponent<{
   const onNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const newName = e.target.value;
     setName(newName);
-    sessionStorage.setItem(USER_NAME_SESSION_KEY, newName);
+    sessionStorage.setItem(DISPLAY_NAME_SESSION_KEY, newName);
   };
 
   const onAgeChange = (e: React.ChangeEvent<HTMLSelectElement>): void => {

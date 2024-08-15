@@ -1,4 +1,4 @@
-const USER_NAME_SESSION_KEY = 'userName';
+const DISPLAY_NAME_SESSION_KEY = 'displayName';
 const USER_AGE_SESSION_KEY = 'userAge';
 const IS_PARENT_SESSION_KEY = 'userIsParent';
 const PARENT_EMAIL_SESSION_KEY = 'userParentEmail';
@@ -11,7 +11,7 @@ const SCHOOL_ZIP_SESSION_KEY = 'schoolZip';
 const SCHOOL_NAME_SESSION_KEY = 'schoolName';
 
 export {
-  USER_NAME_SESSION_KEY,
+  DISPLAY_NAME_SESSION_KEY,
   USER_AGE_SESSION_KEY,
   IS_PARENT_SESSION_KEY,
   PARENT_EMAIL_SESSION_KEY,

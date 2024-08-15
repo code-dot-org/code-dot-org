@@ -12,7 +12,7 @@ import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 
 import locale from './locale';
 import {
-  USER_NAME_SESSION_KEY,
+  DISPLAY_NAME_SESSION_KEY,
   EMAIL_OPT_IN_SESSION_KEY,
 } from './signUpFlowConstants';
 
@@ -27,7 +27,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
   const onNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const newName = e.target.value;
     setName(newName);
-    sessionStorage.setItem(USER_NAME_SESSION_KEY, newName);
+    sessionStorage.setItem(DISPLAY_NAME_SESSION_KEY, newName);
   };
 
   const onEmailOptInChange = (): void => {
@@ -54,7 +54,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
           onChange={onNameChange}
           value={name}
           className={style.nameInput}
-          placeholder={'Dr. Joanna'}
+          placeholder={locale.msCoder()}
         />
         <BodyThreeText>
           {locale.this_is_what_your_students_will_see()}

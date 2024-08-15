@@ -4,7 +4,7 @@ import React from 'react';
 import FinishTeacherAccount from '@cdo/apps/signUpFlow/FinishTeacherAccount';
 import locale from '@cdo/apps/signUpFlow/locale';
 import {
-  USER_NAME_SESSION_KEY,
+  DISPLAY_NAME_SESSION_KEY,
   EMAIL_OPT_IN_SESSION_KEY,
   SCHOOL_ID_SESSION_KEY,
   SCHOOL_ZIP_SESSION_KEY,
@@ -15,7 +15,7 @@ import i18n from '@cdo/locale';
 describe('FinishTeacherAccount', () => {
   afterEach(() => {
     [
-      USER_NAME_SESSION_KEY,
+      DISPLAY_NAME_SESSION_KEY,
       EMAIL_OPT_IN_SESSION_KEY,
       SCHOOL_ID_SESSION_KEY,
       SCHOOL_ZIP_SESSION_KEY,
@@ -69,15 +69,15 @@ describe('FinishTeacherAccount', () => {
     screen.getByText(locale.go_to_my_account());
   });
 
-  it('userName is tracked in sessionStorage', () => {
+  it('displayName is tracked in sessionStorage', () => {
     renderDefault();
-    const userName = 'Glen Powell';
-    const userNameInput = screen.getAllByRole('textbox')[0];
+    const displayName = 'Glen Powell';
+    const displayNameInput = screen.getAllByRole('textbox')[0];
 
-    expect(sessionStorage.getItem(USER_NAME_SESSION_KEY)).toBe(null);
+    expect(sessionStorage.getItem(DISPLAY_NAME_SESSION_KEY)).toBe(null);
 
-    fireEvent.change(userNameInput, {target: {value: userName}});
-    expect(sessionStorage.getItem(USER_NAME_SESSION_KEY)).toBe(userName);
+    fireEvent.change(displayNameInput, {target: {value: displayName}});
+    expect(sessionStorage.getItem(DISPLAY_NAME_SESSION_KEY)).toBe(displayName);
   });
 
   it('school info is tracked in sessionStorage', () => {
