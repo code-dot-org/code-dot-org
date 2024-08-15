@@ -30,7 +30,7 @@ module MysqlCheckIndexUsed
     @instrumenter.instrument("sql.active_record", options) do
       @lock.synchronize do
         ActiveSupport::Dependencies.interlock.permit_concurrent_loads do
-          @connection.query(sql).tap do |result|
+          @raw_connection.query(sql).tap do |result|
             if name && name != 'SCHEMA' && result && result.server_flags[:no_index_used]
               options[:name] += ' ' + '[NO INDEX]'.on_red
               raise NoIndexUsedException if Rails.application.config.raise_on_no_index_used
