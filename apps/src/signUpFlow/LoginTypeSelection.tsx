@@ -43,19 +43,19 @@ const LoginTypeSelection: React.FunctionComponent = () => {
           <LinkButton
             text={locale.sign_up_google()}
             href={'#'}
-            iconLeft={{iconName: 'google', iconStyle: 'solid'}}
+            iconLeft={{iconName: 'brands fa-google', iconStyle: 'solid'}}
             className={style.greenButton}
           />
           <LinkButton
             text={locale.sign_up_microsoft()}
             href={'#'}
-            iconLeft={{iconName: 'microsoft', iconStyle: 'solid'}}
+            iconLeft={{iconName: 'brands fa-microsoft', iconStyle: 'light'}}
             className={style.yellowButton}
           />
           <LinkButton
             text={locale.sign_up_facebook()}
             href={'#'}
-            iconLeft={{iconName: 'facebook-f', iconStyle: 'solid'}}
+            iconLeft={{iconName: 'brands fa-facebook-f', iconStyle: 'solid'}}
             className={style.blueButton}
           />
           <div className={style.greyTextbox}>
