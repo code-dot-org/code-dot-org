@@ -10,7 +10,7 @@ class MailJetTest < Minitest::Test
     email = 'fake.email@test.xx'
     name = 'Fake Name'
 
-    Mailjet::Contact.expects(:create).with(is_excluded_from_campaigns: 'false', email: email, name: name)
+    Mailjet::Contact.expects(:create).with(is_excluded_from_campaigns: false, email: email, name: name)
 
     mock_contact = mock('Mailjet::Contact')
     Mailjet::Contact.stubs(:find).with(email).returns(nil).then.returns(mock_contact)
