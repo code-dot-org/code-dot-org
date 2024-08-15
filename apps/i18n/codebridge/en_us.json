@@ -8,7 +8,7 @@
   "duplicateFileError": "Filename {fileName} is already in use in this folder. Please choose a different name.",
   "duplicateSupportFileError": "Filename {fileName} is already in use in this folder in the level's support code. Please choose a different name.",
   "folderExistsError": "Folder already exists with that name",
-  "loadingEnvironmentTooltip": "Your environment is loading. Please wait to run or test your code.",
+  "loadingEnvironmentTooltip": "Your environment is loading. Please wait.",
   "makeStarter": "Make starter file",
   "makeSupport": "Make support file",
   "makeValidation": "Make validation file",

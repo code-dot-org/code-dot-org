@@ -1,5 +1,6 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {appendSystemMessage} from '@codebridge/redux/consoleRedux';
+import classNames from 'classnames';
 import React, {useState} from 'react';
 
 import {
@@ -132,108 +133,36 @@ const ControlButtons: React.FunctionComponent = () => {
     }
   };
 
-  const renderRunTestWithTooltip = () => {
+  const getRunTestTooltip = () => {
     let runTestTooltip = null;
     if (awaitingPredictSubmit) {
       runTestTooltip = codebridgeI18n.predictRunDisabledTooltip();
     } else if (isLoadingEnvironment) {
       runTestTooltip = codebridgeI18n.loadingEnvironmentTooltip();
     }
-    if (runTestTooltip) {
-      return (
-        <>
-          <WithTooltip
-            tooltipProps={{
-              direction: 'onTop',
-              text: runTestTooltip,
-              tooltipId: 'runButtonTooltip',
-            }}
-          >
-            {renderRunButton()}
-          </WithTooltip>
-          <WithTooltip
-            tooltipProps={{
-              direction: 'onTop',
-              text: runTestTooltip,
-              tooltipId: 'testButtonTooltip',
-            }}
-          >
-            {renderTestButton()}
-          </WithTooltip>
-        </>
-      );
-    } else {
-      return (
-        <>
-          {renderRunButton()}
-          {renderTestButton()}
-        </>
-      );
-    }
+    return runTestTooltip;
   };
 
-  const renderRunButton = () => {
-    return (
-      <Button
-        text={'Run'}
-        onClick={() => handleRun(false)}
-        disabled={disableRunAndTest}
-        iconLeft={{iconStyle: 'solid', iconName: 'play'}}
-        className={moduleStyles.runButton}
-        size={'s'}
-        color={'white'}
-      />
-    );
-  };
+  const runTestTooltip = getRunTestTooltip();
 
-  const renderTestButton = () => {
+  const renderDisabledButtonHelperIcon = (
+    iconName: string,
+    tooltipId: string,
+    helpText: string
+  ) => {
     return (
-      <Button
-        text="Test"
-        onClick={() => handleRun(true)}
-        disabled={disableRunAndTest}
-        iconLeft={{iconStyle: 'solid', iconName: 'flask'}}
-        color={'black'}
-        size={'s'}
-      />
-    );
-  };
-
-  // const renderNavigationWithTooltip = () => {
-  //   if (awaitingSubmitRun) {
-  //     console.log(
-  //       `adding tooltip with text ${codebridgeI18n.submitDisabledTooltip()}`
-  //     );
-  //     return (
-  //       <WithTooltip
-  //         tooltipProps={{
-  //           direction: 'onTop',
-  //           text: codebridgeI18n.submitDisabledTooltip(),
-  //           tooltipId: 'submitRunButtonTooltip',
-  //         }}
-  //       >
-  //         {renderNavigationButton()}
-  //       </WithTooltip>
-  //     );
-  //   } else {
-  //     return renderNavigationButton();
-  //   }
-  // };
-
-  const renderNavigationButton = () => {
-    return (
-      <Button
-        text={navigationText}
-        onClick={handleNavigation}
-        disabled={awaitingSubmitRun}
-        color={'purple'}
-        size={'s'}
-        iconLeft={
-          hasNextLevel
-            ? {iconStyle: 'solid', iconName: 'arrow-right'}
-            : undefined
-        }
-      />
+      <WithTooltip
+        tooltipProps={{
+          direction: 'onLeft',
+          text: helpText,
+          tooltipId: tooltipId,
+          size: 's',
+        }}
+      >
+        <i
+          className={classNames('fa', iconName, moduleStyles.disabledInfoIcon)}
+        />
+      </WithTooltip>
     );
   };
 
@@ -248,26 +177,54 @@ const ControlButtons: React.FunctionComponent = () => {
           color={'destructive'}
           iconLeft={{iconStyle: 'solid', iconName: 'square'}}
           className={moduleStyles.centerButton}
-          size={'s'}
+          size={'xs'}
         />
       ) : (
         <span className={moduleStyles.centerButton}>
-          {renderRunTestWithTooltip()}
+          {runTestTooltip &&
+            renderDisabledButtonHelperIcon(
+              'fa-spinner fa-spin',
+              'runTestTooltip',
+              runTestTooltip
+            )}
+          <Button
+            text={'Run'}
+            onClick={() => handleRun(false)}
+            disabled={disableRunAndTest}
+            iconLeft={{iconStyle: 'solid', iconName: 'play'}}
+            className={moduleStyles.runButton}
+            size={'s'}
+            color={'white'}
+          />
+          <Button
+            text="Test"
+            onClick={() => handleRun(true)}
+            disabled={disableRunAndTest}
+            iconLeft={{iconStyle: 'solid', iconName: 'flask'}}
+            color={'black'}
+            size={'s'}
+          />
         </span>
       )}
       <span className={moduleStyles.navigationButton}>
-        {awaitingSubmitRun && (
-          <WithTooltip
-            tooltipProps={{
-              direction: 'onLeft',
-              text: codebridgeI18n.submitDisabledTooltip(),
-              tooltipId: 'submitButtonDisabled',
-            }}
-          >
-            <i className="fa fa-circle-question" />
-          </WithTooltip>
-        )}
-        {renderNavigationButton()}
+        {awaitingSubmitRun &&
+          renderDisabledButtonHelperIcon(
+            'fa-question-circle-o',
+            'submitButtonDisabled',
+            codebridgeI18n.submitDisabledTooltip()
+          )}
+        <Button
+          text={navigationText}
+          onClick={handleNavigation}
+          disabled={awaitingSubmitRun}
+          color={'purple'}
+          size={'s'}
+          iconLeft={
+            hasNextLevel
+              ? {iconStyle: 'solid', iconName: 'arrow-right'}
+              : undefined
+          }
+        />
       </span>
     </div>
   );
