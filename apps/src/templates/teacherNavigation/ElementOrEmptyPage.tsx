@@ -12,13 +12,13 @@ import {TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
 import styles from './teacher-navigation.module.scss';
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
-interface EmptySectionProps {
+interface ElementOrEmptyPageProps {
   showNoStudents: boolean;
   showNoCurriculumAssigned: boolean;
   element: React.ReactElement;
 }
 
-const EmptySection: React.FC<EmptySectionProps> = ({
+const ElementOrEmptyPage: React.FC<ElementOrEmptyPageProps> = ({
   showNoStudents,
   showNoCurriculumAssigned,
   element,
@@ -63,4 +63,4 @@ const EmptySection: React.FC<EmptySectionProps> = ({
   }
 };
 
-export default EmptySection;
+export default ElementOrEmptyPage;

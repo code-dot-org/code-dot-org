@@ -2,16 +2,16 @@ import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {BrowserRouter as Router} from 'react-router-dom';
 
-import EmptySection from '@cdo/apps/templates/teacherNavigation/EmptySection';
+import ElementOrEmptyPage from '@cdo/apps/templates/teacherNavigation/ElementOrEmptyPage';
 import i18n from '@cdo/locale';
 
 const TEST_ELEMENT_TEXT = 'Test Element';
 
-describe('EmptySection', () => {
+describe('ElementOrEmptyPage', () => {
   it('Shows only no students graphic if both should be shown', () => {
     render(
       <Router>
-        <EmptySection
+        <ElementOrEmptyPage
           showNoStudents={true}
           showNoCurriculumAssigned={true}
           element={<div>{TEST_ELEMENT_TEXT}</div>}
@@ -29,7 +29,7 @@ describe('EmptySection', () => {
   it('Shows no curriculum graphic', () => {
     render(
       <Router>
-        <EmptySection
+        <ElementOrEmptyPage
           showNoStudents={false}
           showNoCurriculumAssigned={true}
           element={<div>{TEST_ELEMENT_TEXT}</div>}
@@ -47,7 +47,7 @@ describe('EmptySection', () => {
   it('Shows no students', () => {
     render(
       <Router>
-        <EmptySection
+        <ElementOrEmptyPage
           showNoStudents={true}
           showNoCurriculumAssigned={false}
           element={<div>{TEST_ELEMENT_TEXT}</div>}
@@ -65,7 +65,7 @@ describe('EmptySection', () => {
   it('Shows element and no empty section graphic', () => {
     render(
       <Router>
-        <EmptySection
+        <ElementOrEmptyPage
           showNoStudents={false}
           showNoCurriculumAssigned={false}
           element={<div>{TEST_ELEMENT_TEXT}</div>}
