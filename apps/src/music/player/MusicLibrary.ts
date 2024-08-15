@@ -37,6 +37,7 @@ async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
       LibraryValidator
     );
 
+    // skip if english
     const translationsPromise = loadTranslations(
       libraryFilename,
       currentLocale().toLowerCase().replace('-', '_')
@@ -57,16 +58,14 @@ async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
       return new MusicLibrary(libraryName, libraryJson);
     }
 
-    let libraryJsonLocalized = {} as LibraryJson;
     if (translations.status === 'fulfilled') {
-      libraryJsonLocalized = localizeLibrary(
+      libraryJson = localizeLibrary(
         libraryJson,
         translations.value.value as Translations
       );
     }
 
-    // should first arg be libraryFilename?
-    return new MusicLibrary(libraryName, libraryJsonLocalized);
+    return new MusicLibrary(libraryName, libraryJson);
   }
 }
 
