@@ -8,7 +8,8 @@ export default class CdoFieldColour extends FieldColour {
   static COLOURS: string[] = FieldColour.COLOURS;
   static TITLES: string[] = [];
   static COLUMNS: number = 7;
-  static K1_FIELD_SIZE = {height: 35, width: 45};
+  static K1_HEIGHT: number = 35;
+  static K1_WIDTH: number = 45;
   private isK1: boolean;
   /**
    * @param value The initial value of the field.  Should be in '#rrggbb'
@@ -69,7 +70,10 @@ export default class CdoFieldColour extends FieldColour {
     super.updateSize_(margin);
 
     if (this.isK1) {
-      this.size_ = CdoFieldColour.K1_FIELD_SIZE;
+      this.size_ = {
+        width: CdoFieldColour.K1_WIDTH,
+        height: CdoFieldColour.K1_HEIGHT,
+      };
     }
 
     this.positionBorderRect_();
