@@ -1,5 +1,6 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {appendSystemMessage} from '@codebridge/redux/consoleRedux';
+import classNames from 'classnames';
 import React, {useState} from 'react';
 
 import {
@@ -10,7 +11,9 @@ import {
   getCurrentLevel,
   nextLevelId,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Button from '@cdo/apps/componentLibrary/button';
+import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
@@ -111,7 +114,7 @@ const ControlButtons: React.FunctionComponent = () => {
 
   // We disabled navigation if we are still loading, or if this is a submittable level,
   // the user has not submitted yet, and the user has not run their code during this session.
-  const disableNavigation = isSubmittable && !hasSubmitted && !hasRun;
+  const awaitingSubmitRun = isSubmittable && !hasSubmitted && !hasRun;
   const getNavigationButtonProps = () => {
     if (isSubmittable) {
       return {
@@ -130,6 +133,39 @@ const ControlButtons: React.FunctionComponent = () => {
     }
   };
 
+  const getRunTestTooltip = () => {
+    let runTestTooltip = null;
+    if (awaitingPredictSubmit) {
+      runTestTooltip = codebridgeI18n.predictRunDisabledTooltip();
+    } else if (isLoadingEnvironment) {
+      runTestTooltip = codebridgeI18n.loadingEnvironmentTooltip();
+    }
+    return runTestTooltip;
+  };
+
+  const runTestTooltip = getRunTestTooltip();
+
+  const renderDisabledButtonHelperIcon = (
+    iconName: string,
+    tooltipId: string,
+    helpText: string
+  ) => {
+    return (
+      <WithTooltip
+        tooltipProps={{
+          direction: 'onLeft',
+          text: helpText,
+          tooltipId: tooltipId,
+          size: 's',
+        }}
+      >
+        <i
+          className={classNames('fa', iconName, moduleStyles.disabledInfoIcon)}
+        />
+      </WithTooltip>
+    );
+  };
+
   const {navigationText, handleNavigation} = getNavigationButtonProps();
 
   return (
@@ -145,6 +181,12 @@ const ControlButtons: React.FunctionComponent = () => {
         />
       ) : (
         <span className={moduleStyles.centerButton}>
+          {runTestTooltip &&
+            renderDisabledButtonHelperIcon(
+              'fa-spinner fa-spin',
+              'runTestTooltip',
+              runTestTooltip
+            )}
           <Button
             text={'Run'}
             onClick={() => handleRun(false)}
@@ -164,19 +206,26 @@ const ControlButtons: React.FunctionComponent = () => {
           />
         </span>
       )}
-      <Button
-        text={navigationText}
-        onClick={handleNavigation}
-        disabled={disableNavigation}
-        color={'purple'}
-        className={moduleStyles.navigationButton}
-        size={'s'}
-        iconLeft={
-          hasNextLevel
-            ? {iconStyle: 'solid', iconName: 'arrow-right'}
-            : undefined
-        }
-      />
+      <span className={moduleStyles.navigationButton}>
+        {awaitingSubmitRun &&
+          renderDisabledButtonHelperIcon(
+            'fa-question-circle-o',
+            'submitButtonDisabled',
+            codebridgeI18n.submitDisabledTooltip()
+          )}
+        <Button
+          text={navigationText}
+          onClick={handleNavigation}
+          disabled={awaitingSubmitRun}
+          color={'purple'}
+          size={'s'}
+          iconLeft={
+            hasNextLevel
+              ? {iconStyle: 'solid', iconName: 'arrow-right'}
+              : undefined
+          }
+        />
+      </span>
     </div>
   );
 };
