@@ -625,7 +625,7 @@ GEM
       net-protocol
     net-ssh (5.2.0)
     netrc (0.11.0)
-    newrelic_rpm (6.14.0)
+    newrelic_rpm (9.12.0)
     nio4r (2.7.3)
     nokogiri (1.16.7)
       mini_portile2 (~> 2.8.2)
@@ -1130,7 +1130,7 @@ DEPENDENCIES
   nakayoshi_fork
   naturally
   net-http-persistent
-  newrelic_rpm (~> 6.14.0)
+  newrelic_rpm (~> 9.12.0)
   nokogiri (>= 1.10.0)
   observer
   octokit
