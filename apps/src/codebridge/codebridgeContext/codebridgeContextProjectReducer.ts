@@ -33,8 +33,7 @@ export const projectReducer = (project: ProjectType, action: ReducerAction) => {
 
       const newProject = {...project, files: {...project.files}};
 
-      /* eslint-disable-next-line */
-      const [_, extension] = fileName.split('.');
+      const [, extension] = fileName.split('.');
 
       newProject.files[fileId] = {
         id: fileId,
