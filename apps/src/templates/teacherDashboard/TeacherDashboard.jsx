@@ -144,7 +144,7 @@ function TeacherDashboard({
             <EmptySectionV1
               hasStudents={studentCount > 0}
               // Don't show no curriculum assigned error for projects tab.
-              hasCurriculumAssigned={false}
+              hasCurriculumAssigned={true}
               element={applyV1TeacherDashboardWidth(
                 <SectionProjectsListWithData
                   studioUrlPrefix={studioUrlPrefix}

@@ -57,20 +57,19 @@ function EmptySectionV1({
 
   if (hasStudents && hasCurriculumAssigned) {
     return element;
-  } else {
-    return (
-      <div className={dashboardStyles.emptyClassroomDiv}>
-        {showProgressPageHeader ? (
-          <div>
-            <Heading1>{i18n.progress()}</Heading1>
-            {emptySectionGraphic(dashboardStyles.emptyClassroomProgress)}
-          </div>
-        ) : (
-          emptySectionGraphic(dashboardStyles.emptyClassroom)
-        )}
-      </div>
-    );
   }
+  return (
+    <div className={dashboardStyles.emptyClassroomDiv}>
+      {showProgressPageHeader ? (
+        <div>
+          <Heading1>{i18n.progress()}</Heading1>
+          {emptySectionGraphic(dashboardStyles.emptyClassroomProgress)}
+        </div>
+      ) : (
+        emptySectionGraphic(dashboardStyles.emptyClassroom)
+      )}
+    </div>
+  );
 }
 
 EmptySectionV1.propTypes = {
