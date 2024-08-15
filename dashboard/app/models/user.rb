@@ -1399,9 +1399,13 @@ class User < ApplicationRecord
   # Returns true if all progression levels in the provided script have a passing
   # result
   def completed_progression_levels?(script)
+    num_unpassed_progression_levels(script) == 0
+  end
+
+  def num_unpassed_progression_levels(script)
     user_levels_by_level = user_levels_by_level(script)
 
-    script.script_levels.none? do |script_level|
+    script.script_levels.count do |script_level|
       user_levels = []
       script_level.levels.each do |level|
         curr_user_level = user_levels_by_level[level.id]
@@ -1955,21 +1959,16 @@ class User < ApplicationRecord
     pl_user_scripts = user_scripts.select {|us| us.script.pl_course?}
     pl_scripts = pl_user_scripts.map(&:script)
 
-    levels = pl_scripts.map(&:levels).flatten
-    level_ids = levels.map(&:id)
-
-    # Handle levels-within-levels
-    levels.each {|l| level_ids << l.contained_levels.first&.id unless l.contained_levels.empty?}
-
-    user_levels = UserLevel.where(user: self, script: pl_scripts, level_id: level_ids)
-    return [] if user_levels.empty?
-    user_levels_by_script = user_levels.group_by(&:script_id)
     percent_completed_by_script = {}
     pl_scripts.each do |pl_script|
-      levels_completed = (user_levels_by_script[pl_script.id] || []).count(&:passing?)
+      if pl_user_scripts.find {|us| us.script_id == pl_script.id}.completed_at
+        percent_completed_by_script[pl_script.id] = 100
+        next
+      end
+      num_levels_unpassed = num_unpassed_progression_levels(pl_script)
       total_levels = pl_script.levels.count
       next if total_levels == 0
-      percent_completed_by_script[pl_script.id] = ((levels_completed.to_f / total_levels) * 100).round
+      percent_completed_by_script[pl_script.id] = (((total_levels - num_levels_unpassed).to_f / total_levels) * 100).round
     end
 
     pl_scripts.map do |script|
