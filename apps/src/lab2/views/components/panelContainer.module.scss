@@ -1,8 +1,5 @@
 @import 'color.scss';
 
-// Constants
-$default-spacing: 2px;
-
 .panelContainer {
   width: 100%;
   height: 100%;
@@ -13,19 +10,21 @@ $default-spacing: 2px;
 
 %panel-container-header {
   min-height: 30px;
-  margin-bottom: $default-spacing;
   position: relative;
   z-index: 1;
+  border-bottom: 1px $light_gray_200 solid;
 }
 
 .panelContainerHeader-dark {
   @extend %panel-container-header;
   background-color: $neutral_dark80;
+  color: $neutral_light;
 }
 
 .panelContainerHeader-light {
   @extend %panel-container-header;
-  background-color: $neutral_dark;
+  background-color: $neutral_gray10;
+  color: $neutral_dark;
 }
 
 .panelContainerHeaderItem {
@@ -34,16 +33,17 @@ $default-spacing: 2px;
   transform: translateY(-50%);
 
   &Text {
-    color: $neutral_light;
     width: 100%;
     text-align: center;
   }
 
-  [dir="ltr"] &Right, [dir="rtl"] &Left {
+  [dir='ltr'] &Right,
+  [dir='rtl'] &Left {
     right: 4px;
   }
 
-  [dir="ltr"] &Left, [dir="rtl"] &Right {
+  [dir='ltr'] &Left,
+  [dir='rtl'] &Right {
     left: 4px;
   }
 }
