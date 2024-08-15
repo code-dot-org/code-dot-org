@@ -20,7 +20,7 @@ class Policies::User
     google_ao = user.authentication_options.find_by(credential_type: AuthenticationOption::GOOGLE)
     return false unless google_ao
 
-    is_google_email = google_ao.email.end_with?('@gmail.com', '@googlemail.com')
+    is_google_email = google_ao.email.end_with?('@gmail.com', '@googlemail.com', '@google.com')
     !is_google_email
   end
 end
