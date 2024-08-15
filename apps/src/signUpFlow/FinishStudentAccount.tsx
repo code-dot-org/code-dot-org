@@ -4,7 +4,11 @@ import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
-import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
+import {
+  Heading2,
+  BodyTwoText,
+  BodyThreeText,
+} from '@cdo/apps/componentLibrary/typography';
 
 import locale from './locale';
 import {
@@ -98,18 +102,13 @@ const FinishStudentAccount: React.FunctionComponent<{
                 name="isParent"
               />
             </div>
-            <BodyTwoText visualAppearance={'body-two'}>
-              {locale.i_am_a_parent_or_guardian()}
-            </BodyTwoText>
+            <BodyTwoText>{locale.i_am_a_parent_or_guardian()}</BodyTwoText>
           </span>
           {isParent && (
             <>
-              <BodyTwoText
-                className={style.studentQuestionLabel}
-                visualAppearance={'heading-xs'}
-              >
-                {locale.parent_guardian_email()}
-              </BodyTwoText>
+              <BodyThreeText className={style.studentQuestionLabel}>
+                <strong>{locale.parent_guardian_email()}</strong>
+              </BodyThreeText>
               <TextField
                 name="parentEmail"
                 onChange={onParentEmailChange}
@@ -117,12 +116,9 @@ const FinishStudentAccount: React.FunctionComponent<{
                 className={style.parentEmailInput}
                 placeholder={locale.parentEmailPlaceholder()}
               />
-              <BodyTwoText
-                className={style.studentQuestionLabel}
-                visualAppearance={'heading-xs'}
-              >
-                {locale.keep_me_updated()}
-              </BodyTwoText>
+              <BodyThreeText className={style.studentQuestionLabel}>
+                <strong>{locale.keep_me_updated()}</strong>
+              </BodyThreeText>
               <span className={style.parentCheckboxContainer}>
                 <div className={style.parentCheckbox}>
                   <Checkbox
@@ -132,31 +128,23 @@ const FinishStudentAccount: React.FunctionComponent<{
                     name="parentEmailOptIn"
                   />
                 </div>
-                <BodyTwoText visualAppearance={'body-two'}>
-                  {locale.email_me_with_updates()}
-                </BodyTwoText>
+                <BodyTwoText>{locale.email_me_with_updates()}</BodyTwoText>
               </span>
             </>
           )}
         </div>
-        <BodyTwoText
-          className={style.studentQuestionLabel}
-          visualAppearance={'heading-xs'}
-        >
-          {locale.display_name_eg()}
-        </BodyTwoText>
+        <BodyThreeText className={style.studentQuestionLabel}>
+          <strong>{locale.display_name_eg()}</strong>
+        </BodyThreeText>
         <TextField
           name="userName"
           onChange={onNameChange}
           value={name}
           placeholder={locale.coder()}
         />
-        <BodyTwoText
-          className={style.studentQuestionLabel}
-          visualAppearance={'heading-xs'}
-        >
-          {locale.what_is_your_age()}
-        </BodyTwoText>
+        <BodyThreeText className={style.studentQuestionLabel}>
+          <strong>{locale.what_is_your_age()}</strong>
+        </BodyThreeText>
         <SimpleDropdown
           id="uitest-age-dropdown"
           name="userAge"
@@ -167,12 +155,9 @@ const FinishStudentAccount: React.FunctionComponent<{
           onChange={onAgeChange}
           size="m"
         />
-        <BodyTwoText
-          className={style.studentQuestionLabel}
-          visualAppearance={'heading-xs'}
-        >
-          {locale.what_state_are_you_in()}
-        </BodyTwoText>
+        <BodyThreeText className={style.studentQuestionLabel}>
+          <strong>{locale.what_state_are_you_in()}</strong>
+        </BodyThreeText>
         <SimpleDropdown
           id="uitest-state-dropdown"
           name="userState"
@@ -183,12 +168,9 @@ const FinishStudentAccount: React.FunctionComponent<{
           onChange={onStateChange}
           size="m"
         />
-        <BodyTwoText
-          className={style.studentQuestionLabel}
-          visualAppearance={'heading-xs'}
-        >
-          {locale.what_is_your_gender()}
-        </BodyTwoText>
+        <BodyThreeText className={style.studentQuestionLabel}>
+          <strong>{locale.what_is_your_gender()}</strong>
+        </BodyThreeText>
         <TextField
           name="userGender"
           onChange={onGenderChange}
