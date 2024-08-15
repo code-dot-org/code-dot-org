@@ -177,7 +177,7 @@ const ControlButtons: React.FunctionComponent = () => {
           color={'destructive'}
           iconLeft={{iconStyle: 'solid', iconName: 'square'}}
           className={moduleStyles.centerButton}
-          size={'xs'}
+          size={'s'}
         />
       ) : (
         <span className={moduleStyles.centerButton}>
