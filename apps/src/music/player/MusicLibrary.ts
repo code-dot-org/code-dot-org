@@ -1,3 +1,4 @@
+import currentLocale from '@cdo/apps/util/currentLocale';
 import HttpClient, {ResponseValidator} from '@cdo/apps/util/HttpClient';
 
 import AppConfig, {getBaseAssetUrl} from '../appConfig';
@@ -39,7 +40,10 @@ async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
     // To do: wrap this (getting translations, localizing library)
     //   in an experiment so we can ship it without any user-facing impact?
     //   Or can just wait to merge it until we have real translations.
-    const translationsPromise = loadTranslations(libraryFilename, 'gagaga');
+    const translationsPromise = loadTranslations(
+      libraryFilename,
+      currentLocale().toLowerCase().replace('-', '_')
+    );
 
     const [libraryJsonResponse, translations] = await Promise.allSettled([
       libraryJsonResponsePromise,
@@ -65,14 +69,13 @@ async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
 
 type Translations = {[key: string]: string};
 
-// To do: specify values that libraryFilename can be?
 const loadTranslations = async (
   libraryName: string,
   locale: string
 ): Promise<Translations> => {
   // To do: change musiclab-test/ to musiclab/ once we have real translations.
   const translations = await HttpClient.fetchJson<Translations>(
-    `https://curriculum.code.org/media/musiclab-test/${libraryName}-loc/${locale}.json`
+    `https://curriculum.code.org/media/musiclab/${libraryName}-loc/${locale}.json`
   );
   return translations.value;
 };
