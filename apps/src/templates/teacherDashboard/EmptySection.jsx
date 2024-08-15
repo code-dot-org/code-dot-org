@@ -12,7 +12,7 @@ import emptyDesk from '@cdo/apps/templates/teacherDashboard/images/empty_desk.sv
 import blankScreen from '@cdo/apps/templates/teacherDashboard/images/no_curriculum_assigned.svg';
 import i18n from '@cdo/locale';
 
-import {TEACHER_DASHBOARD_PATHS} from './teacherNavigation/TeacherDashboardPaths';
+import {TEACHER_DASHBOARD_PATHS} from '../teacherNavigation/TeacherDashboardPaths';
 
 import styles from './teacher-dashboard.module.scss';
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
