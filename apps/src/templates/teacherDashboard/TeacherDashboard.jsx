@@ -15,12 +15,12 @@ import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
 import firehoseClient from '../../lib/util/firehose';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
+import {TEACHER_DASHBOARD_PATHS} from '../teacherNavigation/TeacherDashboardPaths';
 
 import EmptySection from './EmptySection';
 import StatsTableWithData from './StatsTableWithData';
 import TeacherDashboardHeader from './TeacherDashboardHeader';
 import TeacherDashboardNavigation from './TeacherDashboardNavigation';
-import {TEACHER_DASHBOARD_PATHS} from './teacherNavigation/TeacherDashboardPaths';
 
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
@@ -99,6 +99,26 @@ function TeacherDashboard({
     location.pathname !== TEACHER_DASHBOARD_PATHS.standardsReport &&
     location.pathname !== TEACHER_DASHBOARD_PATHS.navTestV2;
 
+  const renderEmptySectionOrElement = (
+    element,
+    showCurriculumAssignedEmpty = true
+  ) => {
+    if (
+      studentCount === 0 ||
+      (!anyStudentHasProgress && showCurriculumAssignedEmpty)
+    ) {
+      return (
+        <EmptySection
+          hasStudents={studentCount > 0}
+          hasCurriculumAssigned={
+            anyStudentHasProgress || !showCurriculumAssignedEmpty
+          }
+        />
+      );
+    }
+    return element;
+  };
+
   return (
     <div>
       {includeHeader && (
@@ -129,51 +149,48 @@ function TeacherDashboard({
         />
         <Route
           path={TEACHER_DASHBOARD_PATHS.standardsReport}
-          element={applyV1TeacherDashboardWidth(<StandardsReport />)}
+          element={renderEmptySectionOrElement(
+            applyV1TeacherDashboardWidth(<StandardsReport />)
+          )}
         />
-        {studentCount === 0 && (
-          <Route
-            element={
-              <EmptySection hasStudents={false} hasCurriculumAssigned={true} />
-            }
-          />
-        )}
         <Route
           path={TEACHER_DASHBOARD_PATHS.projects}
-          element={applyV1TeacherDashboardWidth(
-            <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
+          element={renderEmptySectionOrElement(
+            applyV1TeacherDashboardWidth(
+              <SectionProjectsListWithData studioUrlPrefix={studioUrlPrefix} />
+            ),
+            false
           )}
         />
         <Route
           path={TEACHER_DASHBOARD_PATHS.stats}
-          element={applyV1TeacherDashboardWidth(<StatsTableWithData />)}
+          element={renderEmptySectionOrElement(
+            applyV1TeacherDashboardWidth(<StatsTableWithData />)
+          )}
         />
-        {!anyStudentHasProgress && (
-          <Route
-            element={
-              <EmptySection hasStudents={true} hasCurriculumAssigned={false} />
-            }
-          />
-        )}
         <Route
           path={TEACHER_DASHBOARD_PATHS.progress}
-          element={<SectionProgressSelector />}
+          element={renderEmptySectionOrElement(<SectionProgressSelector />)}
         />
         <Route
           path={TEACHER_DASHBOARD_PATHS.textResponses}
-          element={applyV1TeacherDashboardWidth(<TextResponses />)}
+          element={renderEmptySectionOrElement(
+            applyV1TeacherDashboardWidth(<TextResponses />)
+          )}
         />
         <Route
           path={TEACHER_DASHBOARD_PATHS.assessments}
-          element={applyV1TeacherDashboardWidth(
-            <SectionAssessments sectionName={sectionName} />
+          element={renderEmptySectionOrElement(
+            applyV1TeacherDashboardWidth(
+              <SectionAssessments sectionName={sectionName} />
+            )
           )}
         />
         {showAITutorTab && (
           <Route
             path={TEACHER_DASHBOARD_PATHS.aiTutorChatMessages}
-            element={applyV1TeacherDashboardWidth(
-              <TutorTab sectionId={sectionId} />
+            element={renderEmptySectionOrElement(
+              applyV1TeacherDashboardWidth(<TutorTab sectionId={sectionId} />)
             )}
           />
         )}

@@ -6,7 +6,7 @@ class AiRubricConfig
   #
   # Basic validation of the new AI config is done by UI tests, or can be done locally
   # by running `AiRubricConfig.validate_ai_config` from the rails console.
-  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-04-30-confidence-autogen-turbo/'.freeze
+  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-08-12-claude-3-release/'.freeze
 
   # 2D Map from unit name and level name, to the name of the lesson files within
   # the release dir in S3 which will be used for AI evaluation.
@@ -19,6 +19,14 @@ class AiRubricConfig
       'CSD U3 collisions flyman bounceOff_2023' => 'csd3-2023-L24',
       'CSD games project review_2023' => 'csd3-2023-L28',
     },
+    'csd3-2024' => {
+      'CSD U3 Sprites scene challenge_2024' => 'csd3-2023-L11',
+      'CSD web project animated review_2024' => 'csd3-2023-L14',
+      'CSD U3 Interactive Card Final_2024' => 'csd3-2023-L18',
+      'CSD games sidescroll review_2024' => 'csd3-2023-L21',
+      'CSD U3 collisions flyman bounceOff_2024' => 'csd3-2023-L24',
+      'CSD games project review_2024' => 'csd3-2023-L28',
+    },
     'allthethings' => {
       'CSD U3 Sprites scene challenge_allthethings' => 'allthethings-L48',
     },
@@ -26,6 +34,9 @@ class AiRubricConfig
   UNIT_AND_LEVEL_TO_LESSON_S3_NAME['interactive-games-animations-2023'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2023']
   UNIT_AND_LEVEL_TO_LESSON_S3_NAME['focus-on-creativity3-2023'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2023']
   UNIT_AND_LEVEL_TO_LESSON_S3_NAME['focus-on-coding3-2023'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2023']
+  UNIT_AND_LEVEL_TO_LESSON_S3_NAME['interactive-games-animations-2024'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2024']
+  UNIT_AND_LEVEL_TO_LESSON_S3_NAME['focus-on-creativity3-2024'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2024']
+  UNIT_AND_LEVEL_TO_LESSON_S3_NAME['focus-on-coding3-2024'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2024']
   UNIT_AND_LEVEL_TO_LESSON_S3_NAME.freeze
 
   # For testing purposes, we can raise this error to simulate a missing key
