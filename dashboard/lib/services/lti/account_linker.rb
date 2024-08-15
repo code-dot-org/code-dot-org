@@ -27,7 +27,6 @@ module Services
               user: user,
               event_name: 'lti_user_created',
               metadata: {
-                'user_type' => user.user_type,
                 'lms_name' => @lti_integration[:platform_name],
                 'context' => 'account_linking',
               }
