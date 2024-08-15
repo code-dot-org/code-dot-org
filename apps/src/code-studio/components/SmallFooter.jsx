@@ -310,15 +310,16 @@ export default class SmallFooter extends React.Component {
         <span className="copyright-button">
           <Button
             aria-label="Copyright Button"
-            size="xs"
+            className="copyright-link no-mc"
             color={buttonColors.gray}
-            type="secondary"
-            onClick={this.clickBaseCopyright}
-            isIconOnly
             icon={{
               iconName: 'copyright',
               iconStyle: 'light',
             }}
+            isIconOnly
+            onClick={this.clickBaseCopyright}
+            size="xs"
+            type="secondary"
           />
         </span>
       );
