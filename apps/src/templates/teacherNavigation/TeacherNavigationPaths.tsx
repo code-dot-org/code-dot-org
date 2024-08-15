@@ -1,17 +1,20 @@
 import i18n from '@cdo/locale';
 
-export const SECTION_ID_PATH_PART = `/:sectionId`;
+export const TEACHER_NAVIGATION_BASE_URL = `/teacher_dashboard/`;
+
+export const TEACHER_NAVIGATION_SECTIONS_URL = '/sections';
+export const SPECIFIC_SECTION_BASE_URL = `/sections/:sectionId`;
 
 export const TEACHER_NAVIGATION_PATHS = {
-  progress: '/:sectionId/progress',
-  textResponses: '/:sectionId/text_responses',
-  assessments: '/:sectionId/assessments',
-  projects: '/:sectionId/projects',
-  stats: '/:sectionId/stats',
-  manageStudents: '/:sectionId/manage_students',
-  loginInfo: '/:sectionId/login_info',
-  standardsReport: '/:sectionId/standards_report',
-  aiTutorChatMessages: '/:sectionId/ai_tutor',
+  progress: '/sections/:sectionId/progress',
+  textResponses: '/sections/:sectionId/text_responses',
+  assessments: '/sections/:sectionId/assessments',
+  projects: '/sections/:sectionId/projects',
+  stats: '/sections/:sectionId/stats',
+  manageStudents: '/sections/:sectionId/manage_students',
+  loginInfo: '/sections/:sectionId/login_info',
+  standardsReport: '/sections/:sectionId/standards_report',
+  aiTutorChatMessages: '/sections/:sectionId/ai_tutor',
 };
 
 export const LABELED_TEACHER_NAVIGATION_PATHS = {
