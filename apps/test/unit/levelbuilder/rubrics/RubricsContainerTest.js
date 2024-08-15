@@ -9,7 +9,7 @@ import * as rubricHelper from '@cdo/apps/levelbuilder/rubrics/rubricHelper';
 import RubricsContainer from '@cdo/apps/levelbuilder/rubrics/RubricsContainer';
 import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
 
-import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('RubricsContainerTest', () => {
   const defaultProps = {

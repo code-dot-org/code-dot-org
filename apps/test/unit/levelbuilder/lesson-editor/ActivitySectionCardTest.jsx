@@ -20,7 +20,7 @@ import {
   registerReducers,
 } from '@cdo/apps/redux';
 
-import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
+import {allowConsoleWarnings} from '../../../util/throwOnConsole';
 
 import {sampleActivities, searchOptions} from './activitiesTestData';
 import resourceTestData from './resourceTestData';

@@ -5,7 +5,7 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 import CourseOfferingEditor from '@cdo/apps/levelbuilder/CourseOfferingEditor';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('CourseOfferingEditor', () => {
   let defaultProps;

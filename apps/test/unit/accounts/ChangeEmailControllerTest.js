@@ -6,7 +6,7 @@ import ChangeEmailController from '@cdo/apps/accounts/ChangeEmailController';
 import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
 import color from '@cdo/apps/util/color';
 
-import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 export const ENCRYPTED_EMAIL_PLACEHOLDER = '***encrypted***';
 

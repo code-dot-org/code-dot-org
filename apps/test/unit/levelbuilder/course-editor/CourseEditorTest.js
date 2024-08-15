@@ -21,8 +21,8 @@ import {
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import * as utils from '@cdo/apps/utils';
 
-import {assert, expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
-import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
+import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {allowConsoleWarnings} from '../../../util/throwOnConsole';
 
 const defaultProps = {
   name: 'test-course',

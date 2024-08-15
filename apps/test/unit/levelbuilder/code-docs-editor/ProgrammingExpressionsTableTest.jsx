@@ -5,7 +5,7 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import ProgrammingExpressionsTable from '@cdo/apps/levelbuilder/code-docs-editor/ProgrammingExpressionsTable';
 
-import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('ProgrammingExpressionsTable', () => {
   let defaultProps, fetchStub, returnData;

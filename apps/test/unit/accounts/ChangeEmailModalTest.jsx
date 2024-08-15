@@ -7,7 +7,7 @@ import {hashEmail} from '@cdo/apps/code-studio/hashEmail';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('ChangeEmailModal', () => {
   let wrapper;

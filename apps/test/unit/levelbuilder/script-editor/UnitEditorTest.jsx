@@ -27,7 +27,7 @@ import {
 } from '@cdo/apps/redux';
 import * as utils from '@cdo/apps/utils';
 
-import {assert, expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {assert, expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('UnitEditor', () => {
   let defaultProps, store;

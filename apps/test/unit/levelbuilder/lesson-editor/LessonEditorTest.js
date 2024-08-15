@@ -29,8 +29,8 @@ import {
 } from '@cdo/apps/redux';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
-import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {allowConsoleWarnings} from '../../../util/throwOnConsole';
 
 import {sampleActivities, searchOptions} from './activitiesTestData';
 import resourceTestData from './resourceTestData';
