@@ -55,11 +55,21 @@ const ControlButtons: React.FunctionComponent = () => {
   const isLoadingEnvironment = useAppSelector(
     state => state.lab2System.loadingCodeEnvironment
   );
+  const validationState = useAppSelector(state => state.lab.validationState);
+
   // We disable the run button in predict levels if we are not in start mode
   // and the user has not yet written a prediction.
   const awaitingPredictSubmit =
     !isStartMode && isPredictLevel && !hasPredictResponse;
   const disableRunAndTest = awaitingPredictSubmit || isLoadingEnvironment;
+
+  // We disabled for two cases:
+  // If this is a submittable level, the user has not submitted yet, and the user has not run their code during this session.
+  // OR if this level has validation and the validation has not yet passed.
+  const awaitingSubmitRun = isSubmittable && !hasSubmitted && !hasRun;
+  const validationHasNotPassed =
+    validationState.hasConditions && !validationState.satisfied;
+  const disableNavigation = awaitingSubmitRun || validationHasNotPassed;
 
   const onContinue = () => dispatch(navigateToNextLevel());
   // No-op for now. TODO: figure out what the finish button should do.
@@ -112,9 +122,6 @@ const ControlButtons: React.FunctionComponent = () => {
     }
   };
 
-  // We disabled navigation if we are still loading, or if this is a submittable level,
-  // the user has not submitted yet, and the user has not run their code during this session.
-  const awaitingSubmitRun = isSubmittable && !hasSubmitted && !hasRun;
   const getNavigationButtonProps = () => {
     if (isSubmittable) {
       return {
@@ -143,7 +150,20 @@ const ControlButtons: React.FunctionComponent = () => {
     return runTestTooltip;
   };
 
+  const getNavigationTooltip = () => {
+    let navigationTooltip = null;
+    if (awaitingSubmitRun) {
+      navigationTooltip = codebridgeI18n.submitDisabledTooltip();
+    } else if (validationHasNotPassed) {
+      navigationTooltip = hasNextLevel
+        ? codebridgeI18n.validationNotYetPassedContinue()
+        : codebridgeI18n.validationNotYetPassedFinish();
+    }
+    return navigationTooltip;
+  };
+
   const runTestTooltip = getRunTestTooltip();
+  const navigationTooltip = getNavigationTooltip();
 
   const renderDisabledButtonHelperIcon = (
     iconName: string,
@@ -207,16 +227,16 @@ const ControlButtons: React.FunctionComponent = () => {
         </span>
       )}
       <span className={moduleStyles.navigationButton}>
-        {awaitingSubmitRun &&
+        {navigationTooltip &&
           renderDisabledButtonHelperIcon(
             'fa-question-circle-o',
             'submitButtonDisabled',
-            codebridgeI18n.submitDisabledTooltip()
+            navigationTooltip
           )}
         <Button
           text={navigationText}
           onClick={handleNavigation}
-          disabled={awaitingSubmitRun}
+          disabled={disableNavigation}
           color={'purple'}
           size={'s'}
           iconLeft={
