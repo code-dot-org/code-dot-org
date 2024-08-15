@@ -16,6 +16,19 @@ gem 'cgi', '~> 0.3.6'
 gem 'sorted_set'
 
 gem 'rails', '~> 7.2'
+
+# Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
+gem "importmap-rails"
+# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
+gem "turbo-rails"
+# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
+gem "stimulus-rails"
+# Build JSON APIs with ease [https://github.com/rails/jbuilder]
+gem "jbuilder"
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem "tzinfo-data", platforms: %i[windows jruby]
+
 gem 'rails-controller-testing', '~> 1.0.5'
 
 # provide `respond_to` methods
@@ -70,8 +83,12 @@ gem 'rack-cache'
 group :development, :test do
   gem 'rerun'
   gem 'thin'
-  # Use debugger
-  #gem 'debugger' unless ENV['RM_INFO']
+
+  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem "debug", platforms: %i[mri windows], require: "debug/prelude"
+
+  # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
+  gem "rubocop-rails-omakase", require: false
 
   gem 'active_record_query_trace'
   gem 'benchmark-ips'
@@ -89,6 +106,7 @@ group :development, :test do
   gem 'timecop'
 
   # For UI testing.
+  gem 'capybara'
   gem 'cucumber'
   gem 'eyes_selenium', '6.3.7'
   gem 'fakefs', '~> 2.5.0', require: false
@@ -101,7 +119,7 @@ group :development, :test do
   gem 'net-http-persistent'
   gem 'rinku'
   gem 'rspec', require: false
-  gem 'selenium-webdriver', '~> 4.0'
+  gem 'selenium-webdriver'
   gem 'simplecov', '~> 0.22.0', require: false
   gem 'spring', '~> 4.2.1'
   gem 'spring-commands-testunit'
