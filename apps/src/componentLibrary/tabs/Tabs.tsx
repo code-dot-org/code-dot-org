@@ -32,6 +32,10 @@ export interface TabsProps {
   tabPanelsContainerClassName?: string;
   /** Custom id for Tab Panels container */
   tabPanelsContainerId?: string;
+  /** Custom className for active Tab Panel */
+  tabPanelClassNameActive?: string;
+  /** Custom className for hidden Tab Panel */
+  tabPanelClassNameHidden?: string;
 }
 
 /**
@@ -111,6 +115,8 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
             isActive={tab.value === selectedTabValue}
             id={`${nameStripped}-panel-${tab.value}`}
             labelledBy={`${nameStripped}-tab-${tab.value}`}
+            classNameActive={moduleStyles.tabPanelActive}
+            classNameHidden={moduleStyles.tabPanelHidden}
           />
         ))}
       </div>

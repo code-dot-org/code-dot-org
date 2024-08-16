@@ -1,13 +1,15 @@
 import React from 'react';
 
-import moduleStyles from './tabs.module.scss';
-
 interface TabPanelProps {
   content: React.ReactNode;
   isActive: boolean;
   id: string;
   /* The ID of the button element that controls this panel's visibility. */
   labelledBy: string;
+  /** Custom className for active Tab Panel */
+  classNameActive: string;
+  /** Custom className for hidden Tab Panel */
+  classNameHidden: string;
 }
 
 const _TabPanel: React.FunctionComponent<TabPanelProps> = ({
@@ -15,6 +17,8 @@ const _TabPanel: React.FunctionComponent<TabPanelProps> = ({
   isActive,
   id,
   labelledBy,
+  classNameActive,
+  classNameHidden,
 }) => {
   console.log('isActive', isActive);
   console.log('id', id);
@@ -24,10 +28,7 @@ const _TabPanel: React.FunctionComponent<TabPanelProps> = ({
       id={id}
       aria-labelledby={labelledBy}
       hidden={!isActive}
-      className={
-        isActive ? moduleStyles.tabPanelActive : moduleStyles.tabPanelHidden
-      }
-      // style={{display: isActive ? 'flex' : 'none', height: '100%'}}
+      className={isActive ? classNameActive : classNameHidden}
     >
       {content}
     </div>
