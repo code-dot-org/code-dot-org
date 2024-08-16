@@ -8,7 +8,7 @@ import {
   AITutorInteractionStatus,
   AITutorInteractionStatusValue,
 } from '@cdo/apps/aiTutor/types';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import CheckboxDropdown, {
   CheckboxDropdownOption,
 } from '@cdo/apps/componentLibrary/dropdown/checkboxDropdown';
