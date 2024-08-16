@@ -1,3 +1,4 @@
+// Carefully import only what works in a web worker.
 import mm from '@magenta/music/es6';
 import {sequences} from '@magenta/music/es6/core';
 import {MusicRNN} from '@magenta/music/es6/music_rnn';
