@@ -7,9 +7,9 @@ interface TabPanelProps {
   /* The ID of the button element that controls this panel's visibility. */
   labelledBy: string;
   /** Custom className for active Tab Panel */
-  classNameActive: string;
+  classNameActive?: string;
   /** Custom className for hidden Tab Panel */
-  classNameHidden: string;
+  classNameHidden?: string;
 }
 
 const _TabPanel: React.FunctionComponent<TabPanelProps> = ({
@@ -19,20 +19,16 @@ const _TabPanel: React.FunctionComponent<TabPanelProps> = ({
   labelledBy,
   classNameActive,
   classNameHidden,
-}) => {
-  console.log('isActive', isActive);
-  console.log('id', id);
-  return (
-    <div
-      role="tabpanel"
-      id={id}
-      aria-labelledby={labelledBy}
-      hidden={!isActive}
-      className={isActive ? classNameActive : classNameHidden}
-    >
-      {content}
-    </div>
-  );
-};
+}) => (
+  <div
+    role="tabpanel"
+    id={id}
+    aria-labelledby={labelledBy}
+    hidden={!isActive}
+    className={isActive ? classNameActive : classNameHidden}
+  >
+    {content}
+  </div>
+);
 
 export default _TabPanel;
