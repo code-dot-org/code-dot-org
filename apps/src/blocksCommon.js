@@ -22,6 +22,7 @@ exports.install = function (blockly, blockInstallOptions) {
   installWhenRun(blockly, skin, isK1);
   installJoinBlock(blockly);
   installCommentBlock(blockly);
+  // The custom block supports the US English spelling of "color"
   installCustomColourRandomBlock(blockly);
 };
 
