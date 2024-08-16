@@ -44,7 +44,7 @@ Scenario: Gamelab Flow
   And selector "#codeWorkspace" doesn't have class "readonly"
 
   # Test the "View code" button, as an anonymous user goes to /view
-  When I am on "http://studio.code.org/users/sign_out"
+  And I sign out
   And I navigate to the last shared URL
   And I wait to see "#footerDiv"
   Then I should see title includes "Code Ninja II: Uncaught Exception - Game Lab - Code.org"
@@ -70,9 +70,8 @@ Scenario: Gamelab Flow
   # Test navigating to /edit as a non-owner user redirects to /view
   Given I am on "http://studio.code.org/"
   And I create a teacher named "Non-Owner"
-  And I am on "http://studio.code.org/users/sign_in"
-  And I reload the page
-  When I navigate to the last shared URL
+  When I sign in as "Non-Owner" from the sign in page
+  And I navigate to the last shared URL
   And I append "/edit" to the URL
   Then I get redirected to "/projects/gamelab/([^\/]*?)/view" via "pushState"
   And I wait to see "#codeWorkspace"
