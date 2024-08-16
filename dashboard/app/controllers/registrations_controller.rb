@@ -76,6 +76,17 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   #
+  # Get /users/finish_teacher_account
+  #
+  def finish_teacher_account
+    # Get the request location
+    location = Geocoder.search(request.ip).try(:first)
+    country_code = location&.country_code.to_s.upcase
+    @us_ip = ['US', 'RD'].include?(country_code)
+    render 'finish_teacher_account'
+  end
+
+  #
   # GET /users/cancel
   #
   # Cancels the in-progress partial user registration and redirects to sign-up page.
