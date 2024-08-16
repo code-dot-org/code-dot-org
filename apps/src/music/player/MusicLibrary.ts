@@ -51,7 +51,7 @@ async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
       promises.push(translationPromise);
     }
 
-    // translations may be undefined if locale is en_us.
+    // translations will be undefined if locale is en_us.
     const [libraryJsonResponse, translations] = await Promise.allSettled(
       promises
     );
