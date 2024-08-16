@@ -239,7 +239,7 @@ const ControlButtons: React.FunctionComponent = () => {
           {codeActionsTooltip &&
             renderDisabledButtonHelperIcon(
               'fa-spinner fa-spin',
-              'runTestTooltip',
+              'codeActionsTooltip',
               codeActionsTooltip
             )}
           <Button
