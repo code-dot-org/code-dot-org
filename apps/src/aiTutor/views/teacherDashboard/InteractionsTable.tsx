@@ -8,11 +8,11 @@ import {
   AITutorInteractionStatus,
   AITutorInteractionStatusValue,
 } from '@cdo/apps/aiTutor/types';
-import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import CheckboxDropdown, {
   CheckboxDropdownOption,
 } from '@cdo/apps/componentLibrary/dropdown/checkboxDropdown';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import styleConstants from '@cdo/apps/styleConstants';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {tableLayoutStyles as style} from '@cdo/apps/templates/tables/tableConstants';
