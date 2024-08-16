@@ -66,16 +66,16 @@ const ControlButtons: React.FunctionComponent = () => {
     !isStartMode && isPredictLevel && !hasPredictResponse;
   const disableRunAndTest = awaitingPredictSubmit || isLoadingEnvironment;
 
-  // We disabled for the followign cases:
-  // If this is a submittable level, the user has not submitted yet,
-  // and the user has not run their code during this session.
-  // OR if this level has validation and the validation has not yet passed.
-  // OR if the user has not run or tested their code during this session.
-  const awaitingSubmitRun = isSubmittable && !hasSubmitted && !hasRun;
+  // We disabled navigation for the following cases:
+  // If this level has validation and the validation has not yet passed.
+  // OR if there is no validation and the user has not run their code yet.
+  // The exception to this is if this is a submittable level and the user has already submitted.
+  // In that case "navigation" is unsubmitting their project and we want it to be enabled no matter
+  // the run state.
   const validationHasNotPassed =
     validationState.hasConditions && !validationState.satisfied;
   const disableNavigation =
-    awaitingSubmitRun || validationHasNotPassed || !hasRun;
+    !hasSubmitted && (validationHasNotPassed || !hasRun);
 
   const resetStatus = () => {
     setHasRun(false);
@@ -125,7 +125,9 @@ const ControlButtons: React.FunctionComponent = () => {
     if (onRun) {
       setIsRunning(true);
       onRun(runTests, dispatch, source).then(() => setIsRunning(false));
-      setHasRun(true);
+      if (!runTests) {
+        setHasRun(true);
+      }
     } else {
       dispatch(appendSystemMessage("We don't know how to run your code."));
     }
@@ -170,19 +172,25 @@ const ControlButtons: React.FunctionComponent = () => {
   };
 
   const getNavigationTooltip = () => {
-    let navigationTooltip = null;
-    if (awaitingSubmitRun) {
-      navigationTooltip = codebridgeI18n.submitDisabledTooltip();
+    if (!disableNavigation) {
+      return null;
+    }
+    if (isSubmittable) {
+      // If the level is submittable, they need to pass validation if it exists,
+      // otherwise they need to run their code.
+      return validationHasNotPassed
+        ? codebridgeI18n.validationNotYetPassedSubmit()
+        : codebridgeI18n.runToSubmit();
     } else if (validationHasNotPassed) {
-      navigationTooltip = hasNextLevel
+      // If we have a next level, show the continue text, otherwise show the finish text.
+      return hasNextLevel
         ? codebridgeI18n.validationNotYetPassedContinue()
         : codebridgeI18n.validationNotYetPassedFinish();
     } else if (!hasRun) {
-      navigationTooltip = hasNextLevel
+      return hasNextLevel
         ? codebridgeI18n.runToContinue()
         : codebridgeI18n.runToFinish();
     }
-    return navigationTooltip;
   };
 
   const runTestTooltip = getRunTestTooltip();
