@@ -45,8 +45,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const [selectedTab, setSelectedTab] =
     useState<WorkspaceTeacherViewTab | null>(null);
 
-  const {showWarningModal, isWaitingForChatResponse, studentChatHistory} =
-    useAppSelector(state => state.aichat);
+  const {showWarningModal, studentChatHistory} = useAppSelector(
+    state => state.aichat
+  );
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const visibleItems = useSelector(selectAllVisibleMessages);
@@ -88,18 +89,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     }
   }, [viewAsUserId, selectedTab]);
 
-  const showWaitingAnimation = () => {
-    if (isWaitingForChatResponse) {
-      return (
-        <img
-          src="/blockly/media/aichat/typing-animation.gif"
-          alt={'Waiting for response'}
-          className={moduleStyles.waitingForResponse}
-        />
-      );
-    }
-  };
-
   const iconValue: FontAwesomeV6IconProps = {
     iconName: 'lock',
     iconStyle: 'solid',
@@ -117,7 +106,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       tabContent: (
         <ChatEventsList
           events={studentChatHistory}
-          showWaitingAnimation={() => null}
+          showWaitingAnimation={false}
           isTeacherView={true}
         />
       ),
@@ -127,10 +116,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       value: 'testStudentModel',
       text: 'Test student model',
       tabContent: (
-        <ChatEventsList
-          events={visibleItems}
-          showWaitingAnimation={showWaitingAnimation}
-        />
+        <ChatEventsList events={visibleItems} showWaitingAnimation={true} />
       ),
     },
   ];
@@ -163,10 +149,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       {experiments.isEnabled(experiments.VIEW_CHAT_HISTORY) && viewAsUserId ? (
         <Tabs {...tabArgs} />
       ) : (
-        <ChatEventsList
-          events={visibleItems}
-          showWaitingAnimation={showWaitingAnimation}
-        />
+        <ChatEventsList events={visibleItems} showWaitingAnimation={true} />
       )}
 
       {canChatWithModel && (
