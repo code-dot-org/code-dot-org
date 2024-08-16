@@ -66,6 +66,8 @@ const extractPrompt = (
   return '';
 };
 
+const validateName = (name: string = '') => !Boolean(name.match(/[^\w.]/));
+
 const InnerFileBrowser = React.memo(
   ({
     parentId,
@@ -331,6 +333,12 @@ export const FileBrowser = React.memo(() => {
           type: DialogType.GenericPrompt,
           title: codebridgeI18n.newFolderPrompt(),
           validateInput: (folderName: string) => {
+            if (!folderName.length) {
+              return;
+            }
+            if (!validateName(folderName)) {
+              return codebridgeI18n.invalidNameError();
+            }
             const existingFolder = Object.values(project.folders).some(
               f => f.name === folderName && f.parentId === parentId
             );
@@ -339,11 +347,11 @@ export const FileBrowser = React.memo(() => {
             }
           },
         });
-
-        const folderName = extractPrompt(results);
-        if (!folderName) {
+        if (results.type !== 'confirm') {
           return;
         }
+        const folderName = extractPrompt(results);
+
         const folderId = getNextFolderId(Object.values(project.folders));
         newFolder({parentId, folderName, folderId});
       },
@@ -365,6 +373,12 @@ export const FileBrowser = React.memo(() => {
           type: DialogType.GenericPrompt,
           title: codebridgeI18n.newFilePrompt(),
           validateInput: (fileName: string) => {
+            if (!fileName.length) {
+              return;
+            }
+            if (!validateName(fileName)) {
+              return codebridgeI18n.invalidNameError();
+            }
             const duplicate = checkForDuplicateFilename(
               fileName,
               folderId,
@@ -379,12 +393,10 @@ export const FileBrowser = React.memo(() => {
             }
           },
         });
-
-        const fileName = extractPrompt(results);
-
-        if (!fileName) {
+        if (results.type !== 'confirm') {
           return;
         }
+        const fileName = extractPrompt(results);
 
         const fileId = getNextFileId(Object.values(project.files));
 
@@ -405,6 +417,9 @@ export const FileBrowser = React.memo(() => {
         title: codebridgeI18n.moveFilePrompt(),
 
         validateInput: (destinationFolderName: string) => {
+          if (!destinationFolderName.length) {
+            return;
+          }
           try {
             const folderId = findFolder(destinationFolderName.split('/'), {
               folders: Object.values(project.folders),
@@ -423,6 +438,10 @@ export const FileBrowser = React.memo(() => {
           }
         },
       });
+
+      if (results.type !== 'confirm') {
+        return;
+      }
 
       const destinationFolderName = extractPrompt(results);
       try {
@@ -455,8 +474,14 @@ export const FileBrowser = React.memo(() => {
         title: codebridgeI18n.renameFile(),
         placeholder: file.name,
         validateInput: (newName: string) => {
+          if (!newName.length) {
+            return;
+          }
           if (newName === file.name) {
             return;
+          }
+          if (!validateName(newName)) {
+            return codebridgeI18n.invalidNameError();
           }
           const duplicate = checkForDuplicateFilename(
             newName,
@@ -472,6 +497,9 @@ export const FileBrowser = React.memo(() => {
           }
         },
       });
+      if (results.type !== 'confirm') {
+        return;
+      }
       const newName = extractPrompt(results);
       renameFile(fileId, newName);
     },
@@ -486,8 +514,14 @@ export const FileBrowser = React.memo(() => {
         title: codebridgeI18n.renameFolder(),
         placeholder: folder.name,
         validateInput: (newName: string) => {
+          if (!newName.length) {
+            return;
+          }
           if (newName === folder.name) {
             return;
+          }
+          if (!validateName(newName)) {
+            return codebridgeI18n.invalidNameError();
           }
           const existingFolder = Object.values(project.folders).some(
             f => f.name === newName && f.parentId === folder.parentId
@@ -497,7 +531,9 @@ export const FileBrowser = React.memo(() => {
           }
         },
       });
-
+      if (results.type !== 'confirm') {
+        return;
+      }
       const newName = extractPrompt(results);
       renameFolder(folderId, newName);
     },
