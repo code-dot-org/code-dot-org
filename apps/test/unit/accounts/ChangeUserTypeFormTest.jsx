@@ -4,7 +4,7 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import ChangeUserTypeForm from '@cdo/apps/accounts/ChangeUserTypeForm';
 
-import {expect} from '../../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('ChangeUserTypeForm', () => {
   const EMAIL_SELECTOR = 'input[type="email"]';

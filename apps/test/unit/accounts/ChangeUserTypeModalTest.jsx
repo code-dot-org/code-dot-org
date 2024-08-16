@@ -6,7 +6,7 @@ import ChangeUserTypeModal from '@cdo/apps/accounts/ChangeUserTypeModal';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('ChangeUserTypeModal', () => {
   let wrapper;

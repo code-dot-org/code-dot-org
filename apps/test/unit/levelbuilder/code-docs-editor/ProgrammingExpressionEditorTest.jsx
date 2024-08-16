@@ -6,7 +6,7 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 import ProgrammingExpressionEditor from '@cdo/apps/levelbuilder/code-docs-editor/ProgrammingExpressionEditor';
 import {getStore} from '@cdo/apps/redux';
 
-import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('ProgrammingExpressionEditor', () => {
   let defaultProps, initialProgrammingExpression, fetchSpy;

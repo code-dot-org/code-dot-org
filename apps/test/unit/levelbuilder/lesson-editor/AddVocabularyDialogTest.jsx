@@ -4,8 +4,8 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import AddVocabularyDialog from '@cdo/apps/levelbuilder/lesson-editor/AddVocabularyDialog';
 
-import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
-import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {allowConsoleWarnings} from '../../../util/throwOnConsole';
 
 describe('AddVocabularyDialog', () => {
   // Warnings allowed due to usage of deprecated componentWillMount

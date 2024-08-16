@@ -10,7 +10,7 @@ import AddPasswordForm, {
 } from '@cdo/apps/accounts/AddPasswordForm';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('AddPasswordForm', () => {
   let wrapper, handleSubmit;

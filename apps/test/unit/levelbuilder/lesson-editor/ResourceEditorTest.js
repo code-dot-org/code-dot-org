@@ -4,7 +4,7 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {UnconnectedResourcesEditor as ResourcesEditor} from '@cdo/apps/levelbuilder/lesson-editor/ResourcesEditor';
 
-import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 import resourceTestData from './resourceTestData';
 
