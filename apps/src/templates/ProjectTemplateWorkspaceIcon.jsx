@@ -13,6 +13,7 @@ const IMAGE_BASE_URL = '/blockly/media/';
 export default class ProjectTemplateWorkspaceIcon extends React.Component {
   static propTypes = {
     tooltipPlace: PropTypes.string,
+    dark: PropTypes.bool,
   };
 
   constructor(props) {
@@ -36,7 +37,10 @@ export default class ProjectTemplateWorkspaceIcon extends React.Component {
               'projectTemplateWorkspaceIcon',
               moduleStyles.projectTemplateIcon
             )}
-            src={IMAGE_BASE_URL + 'connect.svg'}
+            src={
+              IMAGE_BASE_URL +
+              (this.props.dark ? 'connect-dark.svg' : 'connect.svg')
+            }
             alt={msg.workspaceProjectTemplateLevel()}
           />
         </button>
