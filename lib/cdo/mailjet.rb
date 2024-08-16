@@ -44,7 +44,9 @@ module MailJet
 
     contact = find_or_create_contact(user.email, user.name)
     update_contact_field(contact, 'sign_up_date', user.created_at.to_datetime.rfc3339)
-    contact_list_id = CONTACT_LISTS[:welcome_series][locale.to_sym] || CONTACT_LISTS[:welcome_series][:default]
+
+    subaccount_contact_list_config = CONTACT_LISTS[:welcome_series][subaccount.to_sym]
+    contact_list_id = subaccount_contact_list_config[locale.to_sym] || subaccount_contact_list_config[:default]
     add_to_contact_list(contact, contact_list_id)
   end
 
