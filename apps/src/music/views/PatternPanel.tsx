@@ -7,11 +7,12 @@ import React, {
   useState,
 } from 'react';
 
+import aiBot from '@cdo/static/ai-bot.png';
+
+import {generatePattern} from '../ai/patternAi';
 import {PatternEventValue} from '../player/interfaces/PatternEvent';
 import MusicLibrary, {SoundData} from '../player/MusicLibrary';
 import MusicPlayer from '../player/MusicPlayer';
-import aiBot from '@cdo/static/ai-bot.png';
-import {generatePattern} from '../ai/patternAi';
 
 import LoadingOverlay from './LoadingOverlay';
 import PreviewControls from './PreviewControls';
@@ -156,14 +157,13 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
 
   const handleAiClick = useCallback(async () => {
     const seedEvents = currentValue.events.filter(event => event.tick < 4);
-    const newEvents = await generatePattern(seedEvents, 28 - 16, aiTemperature);
-
-    const newValue: PatternEventValue = {
-      kit: currentValue.kit,
-      events: newEvents,
-    };
-
-    onChange(newValue);
+    generatePattern(seedEvents, 28 - 16, aiTemperature, newEvents => {
+      const newValue: PatternEventValue = {
+        kit: currentValue.kit,
+        events: newEvents,
+      };
+      onChange(newValue);
+    });
   }, [currentValue, onChange, aiTemperature]);
 
   return (
