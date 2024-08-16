@@ -1,6 +1,9 @@
 import currentLocale from '@cdo/apps/util/currentLocale';
 import experiments from '@cdo/apps/util/experiments';
-import HttpClient, {ResponseValidator} from '@cdo/apps/util/HttpClient';
+import HttpClient, {
+  ResponseValidator,
+  GetResponse,
+} from '@cdo/apps/util/HttpClient';
 
 import AppConfig, {getBaseAssetUrl} from '../appConfig';
 import {baseAssetUrlRestricted, DEFAULT_PACK} from '../constants';
@@ -36,17 +39,22 @@ async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
       {},
       LibraryValidator
     );
-
-    // skip if english
-    const translationsPromise = loadTranslations(
-      libraryFilename,
-      currentLocale().toLowerCase().replace('-', '_')
-    );
-
-    const [libraryJsonResponse, translations] = await Promise.allSettled([
+    const promises: Promise<GetResponse<Translations | LibraryJson>>[] = [
       libraryJsonResponsePromise,
-      translationsPromise,
-    ]);
+    ];
+
+    const jsLocale = currentLocale().toLowerCase().replace('-', '_');
+    if (jsLocale !== 'en_us') {
+      const translationPromise = HttpClient.fetchJson<Translations>(
+        getBaseAssetUrl() + libraryFilename + '-loc/' + jsLocale + '.json'
+      );
+      promises.push(translationPromise);
+    }
+
+    // translations may be undefined if locale is en_us.
+    const [libraryJsonResponse, translations] = await Promise.allSettled(
+      promises
+    );
 
     let libraryJson = {} as LibraryJson;
     if (libraryJsonResponse.status === 'fulfilled') {
@@ -58,7 +66,7 @@ async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
       return new MusicLibrary(libraryName, libraryJson);
     }
 
-    if (translations.status === 'fulfilled') {
+    if (translations && translations.status === 'fulfilled') {
       libraryJson = localizeLibrary(
         libraryJson,
         translations.value.value as Translations
@@ -68,14 +76,6 @@ async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
     return new MusicLibrary(libraryName, libraryJson);
   }
 }
-
-type Translations = {[key: string]: string};
-
-const loadTranslations = async (libraryName: string, locale: string) => {
-  return await HttpClient.fetchJson<Translations>(
-    `${getBaseAssetUrl()}${libraryName}-loc/${locale}.json`
-  );
-};
 
 const localizeLibrary = (
   library: LibraryJson,
@@ -454,4 +454,8 @@ export type LibraryJson = {
 
 interface Sounds {
   [index: string]: [string];
+}
+
+interface Translations {
+  [key: string]: string;
 }
