@@ -546,7 +546,7 @@ function isReadonlyPredictLevel(state: RootState) {
   return isReadonlyPredictLevel;
 }
 
-// Currently only Python Lab disables editing while code is running
+// Currently only Python Lab disables editing while code is running.
 function shouldBeReadonlyWhileRunning(state: RootState) {
   return state.lab.levelProperties?.appName === 'pythonlab';
 }
