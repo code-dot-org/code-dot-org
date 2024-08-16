@@ -34,7 +34,6 @@ import {
   moveFilePromptType,
   moveFileType,
   newFilePromptType,
-  newFileType,
   newFolderPromptType,
   renameFilePromptType,
   renameFileType,
@@ -309,7 +308,7 @@ export const FileBrowser = React.memo(() => {
         folderId: string,
         projectFiles: Record<string, ProjectFile>
       ) => {
-        let message = null;
+        let message = undefined;
         const existingFile = Object.values(projectFiles).find(
           f => f.name === fileName && f.folderId === folderId
         );
@@ -322,17 +321,10 @@ export const FileBrowser = React.memo(() => {
             message = codebridgeI18n.duplicateSupportFileError({fileName});
           }
         }
-        if (message) {
-          dialogControl?.showDialog({
-            type: DialogType.GenericAlert,
-            title: message,
-          });
-          return true;
-        } else {
-          return false;
-        }
+
+        return message;
       },
-    [dialogControl]
+    []
   );
 
   const newFolderPrompt: FilesComponentProps['newFolderPrompt'] = useMemo(
@@ -352,11 +344,9 @@ export const FileBrowser = React.memo(() => {
         });
 
         const folderName = extractPrompt(results);
-
         if (!folderName) {
           return;
         }
-
         const folderId = getNextFolderId(Object.values(project.folders));
         newFolder({parentId, folderName, folderId});
       },
@@ -371,48 +361,43 @@ export const FileBrowser = React.memo(() => {
     [project.files]
   );
 
-  const innerNewFile: newFileType = useMemo(
-    () => (folderId, fileName) => {
-      if (!fileName) {
-        return;
-      }
-
-      if (checkForDuplicateFilename(fileName, folderId, project.files)) {
-        return;
-      }
-
-      /* eslint-disable-next-line */
-      const [_, extension] = fileName.split('.');
-      if (!extension) {
-        dialogControl?.showDialog({
-          type: DialogType.GenericAlert,
-          title: codebridgeI18n.noFileExtensionError(),
-        });
-        return;
-      }
-
-      const fileId = getNextFileId(Object.values(project.files));
-      newFile({
-        fileId,
-        fileName,
-        folderId,
-      });
-    },
-    [newFile, project.files, checkForDuplicateFilename, dialogControl]
-  );
-
   const newFilePrompt: FilesComponentProps['newFilePrompt'] = useMemo(
     () =>
-      (folderId = DEFAULT_FOLDER_ID) => {
-        dialogControl?.showDialog({
+      async (folderId = DEFAULT_FOLDER_ID) => {
+        const results = await dialogControl?.showDialog({
           type: DialogType.GenericPrompt,
           title: codebridgeI18n.newFilePrompt(),
-          handleConfirm: fileName => {
-            innerNewFile(folderId, fileName?.replace(/[^\w.]+/g, ''));
+          validateInput: (fileName: string) => {
+            const duplicate = checkForDuplicateFilename(
+              fileName,
+              folderId,
+              project.files
+            );
+            if (duplicate) {
+              return duplicate;
+            }
+            const [, extension] = fileName.split('.');
+            if (!extension) {
+              return codebridgeI18n.noFileExtensionError();
+            }
           },
         });
+
+        const fileName = extractPrompt(results);
+
+        if (!fileName) {
+          return;
+        }
+
+        const fileId = getNextFileId(Object.values(project.files));
+
+        newFile({
+          fileId,
+          fileName,
+          folderId,
+        });
       },
-    [dialogControl, innerNewFile]
+    [dialogControl, checkForDuplicateFilename, newFile, project.files]
   );
 
   const innerMoveFile: moveFileType = useMemo(

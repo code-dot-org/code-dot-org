@@ -14,7 +14,10 @@ type DefaultFolderPayload = {
   folderId: FolderId;
 };
 
-export const projectReducer = (project: ProjectType, action: ReducerAction) => {
+export const projectReducer = (
+  project: ProjectType,
+  action: ReducerAction
+): ProjectType => {
   switch (action.type) {
     case PROJECT_REDUCER_ACTIONS.REPLACE_PROJECT: {
       const {project: newProject} = action.payload as {
@@ -44,7 +47,10 @@ export const projectReducer = (project: ProjectType, action: ReducerAction) => {
         folderId,
       };
 
-      return newProject;
+      return projectReducer(newProject, {
+        type: PROJECT_REDUCER_ACTIONS.ACTIVATE_FILE,
+        payload: {fileId},
+      });
     }
 
     case PROJECT_REDUCER_ACTIONS.RENAME_FILE: {

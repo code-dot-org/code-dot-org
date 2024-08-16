@@ -9,7 +9,6 @@ export type moveFileType = (
   destinationFolderName: string
 ) => void;
 export type newFilePromptType = (folderId?: FolderId) => void;
-export type newFileType = (folderId: FolderId, fileName: string) => void;
 export type newFolderPromptType = (parentId?: FolderId) => void;
 export type renameFilePromptType = (fileId: FileId) => void;
 export type renameFileType = (fileId: FileId, newName: string) => void;
