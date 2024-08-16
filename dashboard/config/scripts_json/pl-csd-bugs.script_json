@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "pl-csd-bugs",
-    "serialized_at": "2022-04-08 15:41:00 UTC",
+    "serialized_at": "2024-08-15 22:37:42 UTC",
     "published_state": "beta",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -69,7 +69,7 @@
       "key": "e05edc41-686a-4462-9480-b32f595fe784",
       "position": 1,
       "properties": {
-        "progression_name": "Introduction to Debugging"
+        "progression_name": "Start Here!"
       },
       "seeding_key": {
         "activity_section.key": "e05edc41-686a-4462-9480-b32f595fe784",
@@ -80,6 +80,7 @@
       "key": "fb8ad5ea-b679-4d3a-acd3-f579f3057ce5",
       "position": 2,
       "properties": {
+        "progression_name": "Unit 3 - Interactive Animations & Games Debugging"
       },
       "seeding_key": {
         "activity_section.key": "fb8ad5ea-b679-4d3a-acd3-f579f3057ce5",
@@ -97,7 +98,7 @@
         "level_keys": [
           "CSD-PL AYWS1 Debugging Intro"
         ],
-        "progression": "Introduction to Debugging"
+        "progression": "Start Here!"
       },
       "bonus": false,
       "seeding_key": {
@@ -121,7 +122,8 @@
       "properties": {
         "level_keys": [
           "CSD U3 drawing practice 1"
-        ]
+        ],
+        "progression": "Unit 3 - Interactive Animations & Games Debugging"
       },
       "bonus": false,
       "seeding_key": {
@@ -145,7 +147,8 @@
       "properties": {
         "level_keys": [
           "CSD U3 drawing practice 3"
-        ]
+        ],
+        "progression": "Unit 3 - Interactive Animations & Games Debugging"
       },
       "bonus": false,
       "seeding_key": {
@@ -169,7 +172,8 @@
       "properties": {
         "level_keys": [
           "CSD U3 Variable names debug"
-        ]
+        ],
+        "progression": "Unit 3 - Interactive Animations & Games Debugging"
       },
       "bonus": false,
       "seeding_key": {
@@ -193,7 +197,8 @@
       "properties": {
         "level_keys": [
           "CSD U3 Sprites debug"
-        ]
+        ],
+        "progression": "Unit 3 - Interactive Animations & Games Debugging"
       },
       "bonus": false,
       "seeding_key": {
@@ -207,6 +212,94 @@
       },
       "level_keys": [
         "CSD U3 Sprites debug"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 3 - Interactive Animations & Games Debugging"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Text debug"
+        ],
+        "lesson.key": "CSD Workshop 1 Bugs",
+        "lesson_group.key": "",
+        "script.name": "pl-csd-bugs",
+        "activity_section.key": "fb8ad5ea-b679-4d3a-acd3-f579f3057ce5"
+      },
+      "level_keys": [
+        "CSD U3 Text debug"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 3 - Interactive Animations & Games Debugging"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Movement debug"
+        ],
+        "lesson.key": "CSD Workshop 1 Bugs",
+        "lesson_group.key": "",
+        "script.name": "pl-csd-bugs",
+        "activity_section.key": "fb8ad5ea-b679-4d3a-acd3-f579f3057ce5"
+      },
+      "level_keys": [
+        "CSD U3 Movement debug"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 3 - Interactive Animations & Games Debugging"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Watcher Debug PL"
+        ],
+        "lesson.key": "CSD Workshop 1 Bugs",
+        "lesson_group.key": "",
+        "script.name": "pl-csd-bugs",
+        "activity_section.key": "fb8ad5ea-b679-4d3a-acd3-f579f3057ce5"
+      },
+      "level_keys": [
+        "CSD U3 Watcher Debug PL"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+        "progression": "Unit 3 - Interactive Animations & Games Debugging"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 Debug Paragraph Style"
+        ],
+        "lesson.key": "CSD Workshop 1 Bugs",
+        "lesson_group.key": "",
+        "script.name": "pl-csd-bugs",
+        "activity_section.key": "fb8ad5ea-b679-4d3a-acd3-f579f3057ce5"
+      },
+      "level_keys": [
+        "CSD U2 Debug Paragraph Style"
       ]
     }
   ],
@@ -270,6 +363,54 @@
         "script.name": "pl-csd-bugs",
         "activity_section.key": "fb8ad5ea-b679-4d3a-acd3-f579f3057ce5"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Text debug",
+        "script_level.level_keys": [
+          "CSD U3 Text debug"
+        ],
+        "lesson.key": "CSD Workshop 1 Bugs",
+        "lesson_group.key": "",
+        "script.name": "pl-csd-bugs",
+        "activity_section.key": "fb8ad5ea-b679-4d3a-acd3-f579f3057ce5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Movement debug",
+        "script_level.level_keys": [
+          "CSD U3 Movement debug"
+        ],
+        "lesson.key": "CSD Workshop 1 Bugs",
+        "lesson_group.key": "",
+        "script.name": "pl-csd-bugs",
+        "activity_section.key": "fb8ad5ea-b679-4d3a-acd3-f579f3057ce5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Watcher Debug PL",
+        "script_level.level_keys": [
+          "CSD U3 Watcher Debug PL"
+        ],
+        "lesson.key": "CSD Workshop 1 Bugs",
+        "lesson_group.key": "",
+        "script.name": "pl-csd-bugs",
+        "activity_section.key": "fb8ad5ea-b679-4d3a-acd3-f579f3057ce5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 Debug Paragraph Style",
+        "script_level.level_keys": [
+          "CSD U2 Debug Paragraph Style"
+        ],
+        "lesson.key": "CSD Workshop 1 Bugs",
+        "lesson_group.key": "",
+        "script.name": "pl-csd-bugs",
+        "activity_section.key": "fb8ad5ea-b679-4d3a-acd3-f579f3057ce5"
+      }
     }
   ],
   "resources": [
@@ -300,6 +441,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }
