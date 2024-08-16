@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "హలో వరల్డ్: స్పేస్", body: "మీరు\"హలో వరల్డ్స్!\" అని చెప్పుకుంటూ, పాత్రలు మరియు ధ్వనులతో నక్షత్రమండలాంతర సన్నివేశాలను సృష్టించండి", image: "/images/hoc2022-hello-world-space.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
-
-{{ featured_tutorial, title: "NASA యొక్క స్పేస్ జామ్", body: "ప్రక్రియలో సంగీతం, జ్యోతిష్యం, మరియు కోడింగ్ గురించి నేర్చుకుంటూ నిజంగా అదరగొట్టే ఒక సౌర వ్యవస్థను సృష్టించండి!", image: "/images/hoc2022-nasa-space-jam.png", url: "https://chandra.si.edu/sound/code/" }}
-
-{{ featured_tutorial, title: "స్టార్ వార్స్", body: "ప్రోగ్రామ్ డ్రాయిడ్స్ గురించి తెలుసుకోండి, ఒక నక్షత్రమండలంలో దూరంగా, చాలా దూరంగా మీ స్వంత స్టార్ వార్స్ గేమ్ సృష్టించండి.", image: "/shared/images/courses/logo_tall_starwars.jpg", url: "https://code.org/starwars" }}
-
-{{ featured_tutorial, title: "SciGirls కోడ్ అన్వేషణ", body: "ఈ ఆన్‌లైన్ కోడింగ్ సాహసయాత్రలో, మీరు నీటి అడుగున సవాళ్ళ ద్వారా సబ్బీ జలాంతర్గామిని తీసుకుంటారు.", image: "/images/hoc2022-scigirls-code-quest.png", url: "https://pbskids.org/scigirls/games/code-quest" }}

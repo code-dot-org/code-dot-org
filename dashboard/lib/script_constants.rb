@@ -147,7 +147,6 @@ module ScriptConstants
       HOC_ENCRYPTION_NAME = 'hoc-encryption'.freeze,
       TEXT_COMPRESSION_NAME = 'text-compression'.freeze,
       BASKETBALL_NAME = 'basketball'.freeze,
-      SPORTS_NAME = 'sports'.freeze,
       HOC_NAME = 'hourofcode'.freeze, # 2014 hour of code
       DANCE_PARTY_NAME = 'dance'.freeze, # 2018 hour of code
       DANCE_PARTY_EXTRAS_NAME = 'dance-extras'.freeze, # 2018 hour of code
