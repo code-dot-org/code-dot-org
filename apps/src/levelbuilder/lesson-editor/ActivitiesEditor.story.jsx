@@ -13,13 +13,12 @@ import vocabulariesEditor, {
   initVocabularies,
 } from '@cdo/apps/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
-
 import {
   sampleActivities,
   sampleActivityForLessonWithoutLessonPlan,
   searchOptions,
-} from '../../../test/unit/lib/levelbuilder/lesson-editor/activitiesTestData';
-import {allowConsoleWarnings} from '../../../test/util/testUtils';
+} from '@cdo/apps/test/unit/levelbuilder/lesson-editor/activitiesTestData';
+import {allowConsoleWarnings} from '@cdo/apps/test/util/testUtils';
 
 export default {
   component: ActivitiesEditor,
