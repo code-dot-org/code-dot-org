@@ -3,8 +3,8 @@ import {LevelProperties} from '@cdo/apps/lab2/types';
 import {Role} from '../aiComponentLibrary/chatMessage/types';
 
 export const ChatEventDescriptions = {
-  CLEAR_CHAT: 'The user clears the chat workspace.',
-  LOAD_LEVEL: 'The user loads the aichat level.',
+  CLEAR_CHAT: 'The user cleared the chat workspace.',
+  LOAD_LEVEL: 'The user loaded the aichat level.',
 } as const;
 
 // TODO: Update this once https://codedotorg.atlassian.net/browse/CT-471 is resolved

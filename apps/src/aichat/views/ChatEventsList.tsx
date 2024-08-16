@@ -11,6 +11,7 @@ import moduleStyles from './chatWorkspace.module.scss';
 interface ChatEventsListProps {
   events: ChatEvent[];
   showWaitingAnimation: () => React.ReactNode;
+  isTeacherView?: boolean;
 }
 
 /**
@@ -19,6 +20,7 @@ interface ChatEventsListProps {
 const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   events,
   showWaitingAnimation,
+  isTeacherView,
 }) => {
   const {isWaitingForChatResponse} = useAppSelector(state => state.aichat);
 
@@ -43,7 +45,11 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
       ref={conversationContainerRef}
     >
       {events.map(event => (
-        <ChatEventView event={event} key={event.timestamp} />
+        <ChatEventView
+          event={event}
+          key={event.timestamp}
+          isTeacherView={isTeacherView}
+        />
       ))}
       {showWaitingAnimation()}
     </div>

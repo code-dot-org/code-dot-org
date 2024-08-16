@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
-import Alert from '@cdo/apps/componentLibrary/alert/Alert';
+import Alert, {AlertProps} from '@cdo/apps/componentLibrary/alert/Alert';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {modelDescriptions} from '../constants';
@@ -20,6 +20,7 @@ import {AI_CUSTOMIZATIONS_LABELS} from './modelCustomization/constants';
 
 interface ChatEventViewProps {
   event: ChatEvent;
+  isTeacherView?: boolean;
 }
 
 function formatModelUpdateText(update: ModelUpdate): string {
@@ -48,41 +49,52 @@ function formatModelUpdateText(update: ModelUpdate): string {
  */
 const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
   event,
+  isTeacherView,
 }) => {
   const dispatch = useAppDispatch();
 
   if (isChatMessage(event)) {
-    return <ChatMessage {...event} />;
+    const {chatMessageText, role, status} = event;
+    return (
+      <ChatMessage
+        chatMessageText={chatMessageText}
+        role={role}
+        status={status}
+        isTeacherView={isTeacherView}
+      />
+    );
   }
 
   if (isNotification(event)) {
     const {id, text, notificationType, timestamp} = event;
-    return (
-      <Alert
-        text={`${text} ${timestampToLocalTime(timestamp)}`}
-        type={notificationType === 'error' ? 'danger' : 'success'}
-        onClose={() => dispatch(removeUpdateMessage(id))}
-        size="s"
-      />
-    );
+    const alertArgs: AlertProps = {
+      text: `${text} ${timestampToLocalTime(timestamp)}`,
+      type: notificationType === 'error' ? 'danger' : 'success',
+      size: 's',
+    };
+    if (!isTeacherView) {
+      alertArgs.onClose = () => dispatch(removeUpdateMessage(id));
+    }
+    return <Alert {...alertArgs} />;
   }
 
   if (isModelUpdate(event)) {
-    return (
-      <Alert
-        text={formatModelUpdateText(event)}
-        type="success"
-        onClose={() => dispatch(removeUpdateMessage(event.id))}
-        size="s"
-      />
-    );
+    const alertArgs: AlertProps = {
+      text: formatModelUpdateText(event),
+      type: 'success',
+      size: 's',
+    };
+    if (!isTeacherView) {
+      alertArgs.onClose = () => dispatch(removeUpdateMessage(event.id));
+    }
+    return <Alert {...alertArgs} />;
   }
 
   if (event.descriptionKey) {
     return (
       <Alert
         text={ChatEventDescriptions[event.descriptionKey] as string}
-        type="success"
+        type="info"
         size="s"
       />
     );
