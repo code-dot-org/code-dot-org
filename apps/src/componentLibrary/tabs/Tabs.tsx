@@ -60,6 +60,8 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
   tabsContainerClassName,
   tabPanelsContainerId,
   tabPanelsContainerClassName,
+  tabPanelClassNameActive,
+  tabPanelClassNameHidden,
   type = 'primary',
   mode = 'light',
   size = 'm',
@@ -115,8 +117,8 @@ const Tabs: React.FunctionComponent<TabsProps> = ({
             isActive={tab.value === selectedTabValue}
             id={`${nameStripped}-panel-${tab.value}`}
             labelledBy={`${nameStripped}-tab-${tab.value}`}
-            classNameActive={moduleStyles.tabPanelActive}
-            classNameHidden={moduleStyles.tabPanelHidden}
+            classNameActive={tabPanelClassNameActive}
+            classNameHidden={tabPanelClassNameHidden}
           />
         ))}
       </div>
