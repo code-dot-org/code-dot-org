@@ -59,7 +59,6 @@ class PegasusTest < Minitest::Test
     code.org
     code.org/about
     code.org/about/jobs
-    code.org/athletes
     code.org/congrats
     code.org/educate/curriculum/elementary-school
     code.org/educate/curriculum/high-school

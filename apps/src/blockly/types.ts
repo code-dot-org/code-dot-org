@@ -355,7 +355,7 @@ export interface ExtendedVariables extends VariablesType {
   getters: {[key: string]: string};
   registerGetter: (category: string, blockName: string) => void;
   allVariablesFromBlock: (block: Block) => string[];
-  getVars: (opt_category?: string) => {[key: string]: string[]};
+  getVars: (opt_category?: string) => string[];
 }
 
 export interface ProcedureBlock extends ExtendedBlockSvg, IProcedureBlock {
