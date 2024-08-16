@@ -110,6 +110,10 @@ namespace :seed do
     interactive-games-animations-2023
     focus-on-creativity3-2023
     focus-on-coding3-2023
+    csd3-2024
+    interactive-games-animations-2024
+    focus-on-creativity3-2024
+    focus-on-coding3-2024
     csp1-2017
     csp2-2017
     csp3-2017

@@ -25,55 +25,60 @@ const setUpPyodideWorker = () => {
 
   worker.onmessage = event => {
     const {type, id, message} = event.data;
-    if (type === 'sysout' || type === 'syserr') {
-      if (message.startsWith(MATPLOTLIB_IMG_TAG)) {
-        // This is a matplotlib image, so we need to append it to the output
-        const image = message.slice(MATPLOTLIB_IMG_TAG.length + 1);
-        getStore().dispatch(appendOutputImage(image));
-        return;
-      }
-      getStore().dispatch(appendSystemOutMessage(message));
-      return;
-    } else if (type === 'run_complete') {
-      getStore().dispatch(appendSystemMessage('Program completed.'));
-    } else if (type === 'updated_source') {
-      getStore().dispatch(setAndSaveProjectSource({source: message}));
-      return;
-    } else if (type === 'error') {
-      getStore().dispatch(appendErrorMessage(parseErrorMessage(message)));
-      return;
-    } else if (type === 'internal_error') {
-      MetricsReporter.logError({
-        type: 'PythonLabInternalError',
-        message,
-      });
-      return;
-    } else if (type === 'system_error') {
-      getStore().dispatch(appendSystemError(message));
-      MetricsReporter.logError({
-        type: 'PythonLabSystemCodeError',
-        message,
-      });
-      return;
-    } else if (type === 'loading_pyodide') {
-      getStore().dispatch(
-        appendSystemMessage('Loading your python environment...')
-      );
-      getStore().dispatch(setLoadingCodeEnvironment(true));
-      return;
-    } else if (type === 'loaded_pyodide') {
-      getStore().dispatch(appendSystemMessage('Your environment is ready!'));
-      getStore().dispatch(setLoadingCodeEnvironment(false));
-      return;
-    } else {
-      console.warn(
-        `Unknown message type ${type} with message ${message} from pyodideWorker.`
-      );
-      return;
-    }
     const onSuccess = callbacks[id];
-    delete callbacks[id];
-    onSuccess(event.data);
+    switch (type) {
+      case 'sysout':
+      case 'syserr':
+        // We currently treat sysout and syserr the same, but we may want to
+        // change this in the future. Test output goes to syserr by default.
+        if (message.startsWith(MATPLOTLIB_IMG_TAG)) {
+          // This is a matplotlib image, so we need to append it to the output
+          const image = message.slice(MATPLOTLIB_IMG_TAG.length + 1);
+          getStore().dispatch(appendOutputImage(image));
+          break;
+        }
+        getStore().dispatch(appendSystemOutMessage(message));
+        break;
+      case 'run_complete':
+        getStore().dispatch(appendSystemMessage('Program completed.'));
+        delete callbacks[id];
+        onSuccess(event.data);
+        break;
+      case 'updated_source':
+        getStore().dispatch(setAndSaveProjectSource({source: message}));
+        break;
+      case 'error':
+        getStore().dispatch(appendErrorMessage(parseErrorMessage(message)));
+        break;
+      case 'system_error':
+        getStore().dispatch(appendSystemError(message));
+        MetricsReporter.logError({
+          type: 'PythonLabSystemCodeError',
+          message,
+        });
+        break;
+      case 'internal_error':
+        MetricsReporter.logError({
+          type: 'PythonLabInternalError',
+          message,
+        });
+        break;
+      case 'loading_pyodide':
+        getStore().dispatch(
+          appendSystemMessage('Loading your python environment...')
+        );
+        getStore().dispatch(setLoadingCodeEnvironment(true));
+        break;
+      case 'loaded_pyodide':
+        getStore().dispatch(appendSystemMessage('Your environment is ready!'));
+        getStore().dispatch(setLoadingCodeEnvironment(false));
+        break;
+      default:
+        console.warn(
+          `Unknown message type ${type} with message ${message} from pyodideWorker.`
+        );
+        break;
+    }
   };
 
   return worker;
