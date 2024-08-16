@@ -25,6 +25,7 @@ export const blocks = {
     blockly.JavaScript.forBlock.text_join_simple =
       blockly.JavaScript.forBlock.text_join;
   },
+  // We need to use a custom block so that English users will see "random color".
   installCustomColourRandomBlock(blockly: BlocklyWrapperType) {
     delete blockly.Blocks['colour_random'];
     blockly.common.defineBlocks(
