@@ -47,7 +47,7 @@ p {
   margin-inline: auto;
 
   .shortBottomMargin {
-    margin-bottom: .5rem;
+    margin-bottom: .5rem !important;
   }
 
   .containerWrapper {
@@ -59,7 +59,7 @@ p {
     gap: 16px;
     border-radius: 4px;
     border: 1px solid $light_gray;
-    margin: 1rem;
+    margin: 2.5rem 0 1rem 0;
   }
 
   .dividerContainer {
@@ -115,6 +115,12 @@ p {
     img {
       margin-right: .5rem;
       width: 2rem;
+    }
+
+    .ssoSignUpTypes {
+      display: flex;
+      flex-direction: column;
+      padding: 1.875rem 0;
     }
 
     .passwordMessage {
@@ -183,7 +189,6 @@ p {
     .greyTextbox {
       background-color: $light_gray_50;
       padding: 1rem;
-      margin-top: 1rem;
       border-radius: 4px;
       box-sizing: border-box;
 

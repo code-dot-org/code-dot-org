@@ -39,29 +39,31 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             {locale.sign_up_with()}
           </Heading3>
           <BodyThreeText>{locale.streamline_your_sign_in()}</BodyThreeText>
-          <LinkButton
-            text={locale.sign_up_google()}
-            href={'#'}
-            iconLeft={{iconName: 'brands fa-google', iconStyle: 'solid'}}
-            className={style.googleButton}
-          />
-          <LinkButton
-            text={locale.sign_up_microsoft()}
-            href={'#'}
-            iconLeft={{iconName: 'brands fa-microsoft', iconStyle: 'light'}}
-            className={style.microsoftButton}
-          />
-          <LinkButton
-            text={locale.sign_up_facebook()}
-            href={'#'}
-            iconLeft={{iconName: 'brands fa-facebook-f', iconStyle: 'solid'}}
-            className={style.facebookButton}
-          />
-          <LinkButton
-            text={locale.sign_up_clever()}
-            href={'#'}
-            className={style.cleverButton}
-          />
+          <div className={style.ssoSignUpTypes}>
+            <LinkButton
+              text={locale.sign_up_google()}
+              href={'#'}
+              iconLeft={{iconName: 'brands fa-google', iconStyle: 'solid'}}
+              className={style.googleButton}
+            />
+            <LinkButton
+              text={locale.sign_up_microsoft()}
+              href={'#'}
+              iconLeft={{iconName: 'brands fa-microsoft', iconStyle: 'light'}}
+              className={style.microsoftButton}
+            />
+            <LinkButton
+              text={locale.sign_up_facebook()}
+              href={'#'}
+              iconLeft={{iconName: 'brands fa-facebook-f', iconStyle: 'solid'}}
+              className={style.facebookButton}
+            />
+            <LinkButton
+              text={locale.sign_up_clever()}
+              href={'#'}
+              className={style.cleverButton}
+            />
+          </div>
           <div className={style.greyTextbox}>
             <img src={signupCanvas} alt="" />
             <img src={signupSchoology} alt="" />
