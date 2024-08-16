@@ -36,7 +36,6 @@ import {
   newFolderPromptType,
   renameFilePromptType,
   renameFolderPromptType,
-  renameFolderType,
   setFileType,
 } from './types';
 
@@ -479,44 +478,30 @@ export const FileBrowser = React.memo(() => {
     [dialogControl, project.files, checkForDuplicateFilename, renameFile]
   );
 
-  const innerRenameFolder: renameFolderType = useMemo(
-    () => (folderId, newName) => {
-      const folder = project.folders[folderId];
-
-      if (newName === null || newName === folder.name) {
-        return;
-      }
-
-      const existingFolder = Object.values(project.folders).some(
-        f => f.name === newName && f.parentId === folder.parentId
-      );
-      if (existingFolder) {
-        dialogControl?.showDialog({
-          type: DialogType.GenericAlert,
-          title: codebridgeI18n.folderExistsError(),
-        });
-
-        return;
-      }
-
-      renameFolder(folder.id, newName);
-    },
-    [renameFolder, project.folders, dialogControl]
-  );
-
   const renameFolderPrompt: FilesComponentProps['renameFolderPrompt'] = useMemo(
-    () => folderId => {
+    () => async folderId => {
       const folder = project.folders[folderId];
-      dialogControl?.showDialog({
+      const results = await dialogControl?.showDialog({
         type: DialogType.GenericPrompt,
         title: codebridgeI18n.renameFolder(),
         placeholder: folder.name,
-        handleConfirm: newName => {
-          innerRenameFolder(folderId, newName);
+        validateInput: (newName: string) => {
+          if (newName === folder.name) {
+            return;
+          }
+          const existingFolder = Object.values(project.folders).some(
+            f => f.name === newName && f.parentId === folder.parentId
+          );
+          if (existingFolder) {
+            return codebridgeI18n.folderExistsError();
+          }
         },
       });
+
+      const newName = extractPrompt(results);
+      renameFolder(folderId, newName);
     },
-    [dialogControl, innerRenameFolder, project.folders]
+    [dialogControl, renameFolder, project.folders]
   );
 
   return (
