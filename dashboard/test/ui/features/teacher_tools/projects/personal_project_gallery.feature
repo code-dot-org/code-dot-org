@@ -38,7 +38,7 @@ Scenario: Can Remix a Project
   And the first project in the table is named "Remix Template"
   Then I scroll the ".ui-projects-table-dropdown" element into view
   Then I click selector ".ui-projects-table-dropdown"
-  And I press the child number 1 of class ".pop-up-menu-item"
+  And I press the child number 1 of class ".pop-up-menu-item" to load a new page
   And I wait until current URL contains "/edit"
 
 Scenario: Can Delete a Project
