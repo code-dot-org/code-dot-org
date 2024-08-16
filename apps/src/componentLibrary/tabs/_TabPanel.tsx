@@ -1,5 +1,7 @@
 import React from 'react';
 
+import moduleStyles from './tabs.module.scss';
+
 interface TabPanelProps {
   content: React.ReactNode;
   isActive: boolean;
@@ -13,10 +15,23 @@ const _TabPanel: React.FunctionComponent<TabPanelProps> = ({
   isActive,
   id,
   labelledBy,
-}) => (
-  <div role="tabpanel" id={id} aria-labelledby={labelledBy} hidden={!isActive}>
-    {content}
-  </div>
-);
+}) => {
+  console.log('isActive', isActive);
+  console.log('id', id);
+  return (
+    <div
+      role="tabpanel"
+      id={id}
+      aria-labelledby={labelledBy}
+      hidden={!isActive}
+      className={
+        isActive ? moduleStyles.tabPanelActive : moduleStyles.tabPanelHidden
+      }
+      // style={{display: isActive ? 'flex' : 'none', height: '100%'}}
+    >
+      {content}
+    </div>
+  );
+};
 
 export default _TabPanel;

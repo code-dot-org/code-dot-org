@@ -79,6 +79,14 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     [selectedTab]
   );
 
+  // const tabsContainerClassName = useMemo(
+  //   () =>
+  //     selectedTab === WorkspaceTeacherViewTab.TEST_STUDENT_MODEL
+  //       ? moduleStyles.tabPanelsStudentChatHistory
+  //       : moduleStyles.tabPanelsTestModel,
+  //   [selectedTab]
+  // );
+
   useEffect(() => {
     // If we are viewing as a student, default to the student chat history tab if tab is not yet selected.
     if (viewAsUserId && !selectedTab) {

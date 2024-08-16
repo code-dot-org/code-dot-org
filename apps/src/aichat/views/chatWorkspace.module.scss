@@ -27,12 +27,36 @@ $default-spacing: 16px;
   background-color: #eaebeb;
 }
 
+// .tabPanelsTestStudentModel {
+//   @extend %conversation-area;
+//   #teacherViewChatHistoryTabs-panel-viewStudentChatHistory {
+//     display: hidden;
+//     height: 100%;
+//   }
+//   #teacherViewChatHistoryTabs-panel-testStudentModel {
+//     display: flex;
+//     height: 100%;
+//   }
+// }
+
+// .tabPanelsStudentChatHistory {
+//   @extend %conversation-area;
+//   #teacherViewChatHistoryTabs-panel-viewStudentChatHistory {
+//     display: flex;
+//     height: 100%;
+//   }
+//   #teacherViewChatHistoryTabs-panel-testStudentModel {
+//     display: hidden;
+//     height: 100%;
+//   }
+// }
+
 .tabPanels {
   @extend %conversation-area;
-  > div {
-    display: flex;
-    height: 100%;
-  }
+  // > div {
+  //   display: flex;
+  //   height: 100%;
+  // }
 }
 
 .waitingForResponse {
