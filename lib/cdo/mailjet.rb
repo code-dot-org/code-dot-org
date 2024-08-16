@@ -139,6 +139,7 @@ module MailJet
       contact_id: contact.id
     )
   end
+
   def self.send_template_email(contact, email_config, locale = 'en-US', variables = {})
     return unless enabled?
     return unless contact&.email.present?
