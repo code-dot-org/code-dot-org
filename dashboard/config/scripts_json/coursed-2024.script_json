@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2024-07-11 16:07:54 UTC",
+    "serialized_at": "2024-08-01 16:22:52 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -13458,6 +13458,27 @@
     {
       "seeding_key": {
         "lesson.key": "Loops in Ice Age",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab Intro Tutorial ",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-15"
       }

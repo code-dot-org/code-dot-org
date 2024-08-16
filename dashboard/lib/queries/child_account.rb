@@ -10,14 +10,9 @@ class Queries::ChildAccount
   def self.expired_accounts(scope: User.all, expiration_date: 7.days.ago)
     # Filter for accounts which don't have parent permission then filter for
     # accounts which have been locked out before the expiration_date
-    scope.
-      where(
-        "JSON_EXTRACT(properties, '$.child_account_compliance_state') != ?",
-        Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
-      ).
-      where(
-        "CAST(properties->>'$.child_account_compliance_lock_out_date' AS DATETIME) <= ?",
-        expiration_date
-      )
+    scope.where(
+      cap_status: Policies::ChildAccount::ComplianceState::LOCKED_OUT,
+      cap_status_date: ..expiration_date
+    )
   end
 end

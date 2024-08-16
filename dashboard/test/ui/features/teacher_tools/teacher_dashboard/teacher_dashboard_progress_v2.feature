@@ -4,16 +4,16 @@ Feature: Using the V2 teacher dashboard
 Scenario: Teacher can open and close Icon Key and details
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
-  And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1?blocklyVersion=google"
+  And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
 
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
   And I navigate to the V2 progress dashboard for "Untitled Section"
-  
+
   # toggle to V2 progress view
   And I wait until element "h6:contains(Icon Key)" is visible
   And I wait until element "#ui-test-progress-table-v2" is visible
-  And element "#ui-test-progress-table-v2" is visible 
+  And element "#ui-test-progress-table-v2" is visible
 
   # Teacher can minimize icon key
   And I wait until element "strong:contains(Assignment Completion States)" is visible
@@ -94,7 +94,7 @@ Scenario: Teacher can open and close lessons and see level data cells
 Scenario: Teacher can navigate to student work by clicking level cell.
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
-    
+
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
   And I navigate to the V2 progress dashboard for "Untitled Section"
@@ -110,7 +110,7 @@ Scenario: Teacher can navigate to student work by clicking level cell.
 Scenario: Teacher can open lesson data, refresh the page, and lesson data will still be shown
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
-    
+
   When I sign in as "Teacher_Sally" and go home
   And I get levelbuilder access
   And I navigate to the V2 progress dashboard for "Untitled Section"
@@ -132,7 +132,7 @@ Scenario: Teacher can view lesson progress for when students have completed a le
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
   # Student completes one of many levels in lesson 2
-  And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1?blocklyVersion=google"
+  And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
 
   # Student completes all the levels in lesson 10 (there is only one level)
   Given I am on "http://studio.code.org/s/allthethings/lessons/10/levels/1?noautoplay=true"
@@ -157,7 +157,7 @@ Scenario: Teacher can view student work, ask student to keep working, on rubric 
   And I open my eyes to test "V2 Progress Dashboard Assessments"
   Given I create an authorized teacher-associated student named "Sally"
   Given I am assigned to unit "allthethings"
-  
+
   # Student submits project
   Given I am on "http://studio.code.org/s/allthethings/lessons/38/levels/1?noautoplay=true"
   Then I wait to see "#runButton"

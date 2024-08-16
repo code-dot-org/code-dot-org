@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
-import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
+import InfoHelpTip from '@cdo/apps/sharedComponents/InfoHelpTip';
 import i18n from '@cdo/locale';
 
 import style from './sections-refresh.module.scss';

@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.0](https://github.com/code-dot-org/code-dot-org/pull/60369)
+
+* used Design System `Button` component instead of Legacy Buttons for bottom buttons menu section
+
+## [0.4.2](https://github.com/code-dot-org/code-dot-org/pull/60269)
+
+* used `div` instead of `form` html tag for menu container element
+
 ## [0.4.1](https://github.com/code-dot-org/code-dot-org/pull/60025)
 
 * minor menu items width update

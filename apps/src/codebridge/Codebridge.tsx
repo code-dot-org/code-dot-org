@@ -10,11 +10,12 @@ import {
   SetProjectFunction,
   SetConfigFunction,
   OnRunFunction,
-  ResetProjectFunction,
 } from '@codebridge/types';
 import React from 'react';
 
 import './styles/cdoIDE.scss';
+import {ProjectSources} from '@cdo/apps/lab2/types';
+
 import Console from './Console';
 import ControlButtons from './ControlButtons';
 import Workspace from './Workspace';
@@ -24,8 +25,9 @@ type CodebridgeProps = {
   config: ConfigType;
   setProject: SetProjectFunction;
   setConfig: SetConfigFunction;
-  resetProject: ResetProjectFunction;
+  startSource: ProjectSources;
   onRun?: OnRunFunction;
+  onStop?: () => void;
 };
 
 export const Codebridge = React.memo(
@@ -34,8 +36,9 @@ export const Codebridge = React.memo(
     config,
     setProject,
     setConfig,
-    resetProject,
+    startSource,
     onRun,
+    onStop,
   }: CodebridgeProps) => {
     // keep our internal reducer backed copy synced up with our external whatever backed copy
     // see useSynchronizedProject for more info.
@@ -81,8 +84,9 @@ export const Codebridge = React.memo(
           config,
           setProject,
           setConfig,
-          resetProject,
+          startSource,
           onRun,
+          onStop,
           ...projectUtilities,
         }}
       >

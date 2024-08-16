@@ -27,7 +27,6 @@ class Pythonlab < Level
   serialized_attrs %w(
     start_sources
     encrypted_exemplar_sources
-    encrypted_validation
     hide_share_and_remix
     is_project_level
     submittable
@@ -76,6 +75,26 @@ class Pythonlab < Level
     else
       # Remove any multiple choice settings if this is a free response question.
       predict_settings.delete("multipleChoiceOptions")
+    end
+  end
+
+  # Return the validation condition for this level. If the level has a validation file, the condition
+  # is that all tests passed. If there is no validation file, there are no conditions.
+  def get_validations
+    has_validation = start_sources && start_sources["files"]&.any? {|(_, file)| file["type"] == 'validation'}
+    if has_validation
+      [{
+        conditions: [
+          {
+            name: 'PASSED_ALL_TESTS',
+            value: "true"
+          }
+        ],
+        message: '',
+        next: true,
+      }]
+    else
+      nil
     end
   end
 end

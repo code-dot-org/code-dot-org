@@ -19,7 +19,7 @@
     %button.tab.assessments{"data-content": "#assessments"}
       =hoc_s(:resources_tabs_tab_label_assessments)
     %button.tab.tools{"data-content": "#tools"}
-      =hoc_s(:resources_tabs_tab_label_tools)
+      =hoc_s(:"resources_tabs.progress.tab_label")
   -# Tabs content
   %div.tab-content-container
     %div#lesson-plans.content.tab-content.show
@@ -31,7 +31,7 @@
     %div#assessments.content.tab-content
       = view :"tabs_section/resources/resources_tabs_content_assessments"
     %div#tools.content.tab-content
-      = view :"tabs_section/resources/resources_tabs_content_tools"
+      = view :"tabs_section/resources/resources_tabs_content_progress"
 
 -# Shows accordion UI on smaller screens
 .tabs-section.resources-tabs.show-tablet-and-mobile
@@ -48,7 +48,7 @@
     %summary=hoc_s(:resources_tabs_tab_label_assessments)
     = view :"tabs_section/resources/resources_tabs_content_assessments"
   %details.tools
-    %summary=hoc_s(:resources_tabs_tab_label_tools)
-    = view :"tabs_section/resources/resources_tabs_content_tools"
+    %summary=hoc_s(:"resources_tabs.progress.tab_label")
+    = view :"tabs_section/resources/resources_tabs_content_progress"
 
-%script{src: '../js/tabs-section.js'}
+= view :tabs_section

@@ -3,14 +3,17 @@
 .controlButtonsContainer {
   grid-area: control-buttons;
   display: grid;
-  grid-template-columns: 1fr repeat(2, auto) 1fr;
+  grid-template-columns: 1fr auto 1fr;
   padding: 8px 0;
   background-color: $neutral_dark80;
-  column-gap: 8px;
 }
 
-.firstControlButton {
+.centerButton {
   grid-column-start: 2;
+}
+
+.runButton {
+  margin-right: 8px;
 }
 
 .navigationButton {

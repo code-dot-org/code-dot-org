@@ -3,13 +3,13 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 
+import Dialog from '@cdo/apps/legacySharedComponents/Dialog';
 import {
   addVocabulary,
   updateVocabulary,
   removeVocabulary,
 } from '@cdo/apps/lib/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 import {vocabularyShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import Dialog from '@cdo/apps/templates/Dialog';
 import color from '@cdo/apps/util/color';
 
 import AddVocabularyDialog from './AddVocabularyDialog';

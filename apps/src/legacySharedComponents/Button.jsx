@@ -1,7 +1,4 @@
 /**
- * OLD Button. If you are updating or building new UI, please use the DSCO Button
- * component in the componentLibrary directory.
- *
  * This particular button is designed to operate in contexts where we have a solid
  * background. When we're a button on top of an image, we may want something different.
  */
@@ -10,7 +7,7 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 
 import moduleStyles from './button.module.scss';
 
@@ -46,6 +43,9 @@ const ButtonHeight = {
   small: 20,
 };
 
+/**
+ * @deprecated use DSCO Button instead
+ */
 class Button extends React.Component {
   static propTypes = {
     type: PropTypes.oneOf(['button', 'submit', 'reset']),

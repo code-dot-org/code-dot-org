@@ -1,8 +1,9 @@
-import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import {
-  selectAllMessages,
+  fetchStudentChatHistory,
+  selectAllVisibleMessages,
   setShowWarningModal,
 } from '@cdo/apps/aichat/redux/aichatRedux';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
@@ -12,10 +13,9 @@ import Tabs, {TabsProps} from '@cdo/apps/componentLibrary/tabs/Tabs';
 import experiments from '@cdo/apps/util/experiments';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {ChatItem} from '../types';
 import {getShortName} from '../utils';
 
-import ChatItemView from './ChatItemView';
+import ChatEventsList from './ChatEventsList';
 import CopyButton from './CopyButton';
 import UserChatMessageEditor from './UserChatMessageEditor';
 
@@ -45,42 +45,31 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const [selectedTab, setSelectedTab] =
     useState<WorkspaceTeacherViewTab | null>(null);
 
-  const {showWarningModal, isWaitingForChatResponse} = useAppSelector(
-    state => state.aichat
-  );
+  const {showWarningModal, isWaitingForChatResponse, studentChatHistory} =
+    useAppSelector(state => state.aichat);
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
-  const items = useSelector(selectAllMessages);
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+  const visibleItems = useSelector(selectAllVisibleMessages);
 
   const students = useSelector(
     (state: {teacherSections: {selectedStudents: Students}}) =>
       state.teacherSections.selectedStudents
   );
 
-  // Compare the messages as a string since the object reference will change on every update.
-  // This way we will only scroll when the contents of the messages have changed.
-  const messagesString = JSON.stringify(items);
-  const conversationContainerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (conversationContainerRef.current) {
-      conversationContainerRef.current.scrollTo({
-        top: conversationContainerRef.current.scrollHeight,
-        behavior: 'smooth',
-      });
-    }
-  }, [messagesString, isWaitingForChatResponse]);
+  const dispatch = useAppDispatch();
 
   const selectedStudentName = useMemo(() => {
-    if (viewAsUserId) {
+    if (viewAsUserId && currentLevelId) {
       const selectedStudent = Object.values(students).find(
         student => student.id === viewAsUserId
       );
       if (selectedStudent) {
+        dispatch(fetchStudentChatHistory(selectedStudent.id));
         return getShortName(selectedStudent.name);
       }
     }
     return null;
-  }, [viewAsUserId, students]);
+  }, [viewAsUserId, students, dispatch, currentLevelId]);
 
   // Teacher user is able to interact with chatbot.
   const canChatWithModel = useMemo(
@@ -126,7 +115,10 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           : ''),
 
       tabContent: (
-        <div>Viewing {selectedStudentName}'s chat history - TODO</div>
+        <ChatEventsList
+          events={studentChatHistory}
+          showWaitingAnimation={() => null}
+        />
       ),
       iconLeft: iconValue,
     },
@@ -134,10 +126,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       value: 'testStudentModel',
       text: 'Test student model',
       tabContent: (
-        <ChatWithModel
-          items={items}
+        <ChatEventsList
+          events={visibleItems}
           showWaitingAnimation={showWaitingAnimation}
-          conversationContainerRef={conversationContainerRef}
         />
       ),
     },
@@ -160,8 +151,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     tabPanelsContainerClassName: moduleStyles.tabPanels,
   };
 
-  const dispatch = useAppDispatch();
-
   const onCloseWarningModal = useCallback(
     () => dispatch(setShowWarningModal(false)),
     [dispatch]
@@ -173,10 +162,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       {experiments.isEnabled(experiments.VIEW_CHAT_HISTORY) && viewAsUserId ? (
         <Tabs {...tabArgs} />
       ) : (
-        <ChatWithModel
-          items={items}
+        <ChatEventsList
+          events={visibleItems}
           showWaitingAnimation={showWaitingAnimation}
-          conversationContainerRef={conversationContainerRef}
         />
       )}
 
@@ -197,31 +185,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         />
         <CopyButton />
       </div>
-    </div>
-  );
-};
-
-interface ChatWithModelProps {
-  conversationContainerRef: React.RefObject<HTMLDivElement>;
-  items: ChatItem[];
-  showWaitingAnimation: () => React.ReactNode;
-}
-
-const ChatWithModel: React.FunctionComponent<ChatWithModelProps> = ({
-  items,
-  showWaitingAnimation,
-  conversationContainerRef,
-}) => {
-  return (
-    <div
-      id="chat-workspace-conversation"
-      className={moduleStyles.conversationArea}
-      ref={conversationContainerRef}
-    >
-      {items.map((item, index) => (
-        <ChatItemView item={item} key={index} />
-      ))}
-      {showWaitingAnimation()}
     </div>
   );
 };

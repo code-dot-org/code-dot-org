@@ -764,3 +764,58 @@ export function toolboxWithoutIds(
   removeIdsFromBlocks(toolboxDom);
   return Blockly.Xml.domToText(toolboxDom);
 }
+
+// Sets the lab code based on the student's blocks and any extra (e.g. initialization) code.
+// The students blocks are considered to be any on the main or hidden workspaces.
+export function getAllGeneratedCode(extraCode?: string) {
+  let code = extraCode || '';
+
+  [Blockly.getHiddenDefinitionWorkspace(), Blockly.getMainWorkspace()].forEach(
+    workspace => {
+      if (workspace) {
+        Blockly.getGenerator().init(workspace);
+        const blocks = workspace.getTopBlocks(true);
+        const blocksCode: Block[] = [];
+        blocks.forEach(block =>
+          blocksCode.push(Blockly.JavaScript.blockToCode(block))
+        );
+        code += Blockly.getGenerator().finish(blocksCode.join('\n'));
+      }
+    }
+  );
+  return code;
+}
+
+// Returns the student's executable code based on blockXml. Blocks are loaded onto
+// a single unrendered workspace. Used for Artist solution blocks in the student view.
+export function getCodeFromBlockXmlSource(blockXmlString: string) {
+  const domBlocks = Blockly.Xml.textToDom(blockXmlString);
+  const workspace = new Blockly.Workspace();
+  Blockly.Xml.domToBlockSpace(workspace, domBlocks);
+  Blockly.getGenerator().init(workspace);
+  const blocks = workspace.getTopBlocks(true);
+  const code = [] as string[];
+  blocks.forEach(block => code.push(Blockly.JavaScript.blockToCode(block)));
+  const result = Blockly.getGenerator().finish(code.join('\n'));
+  workspace.dispose();
+  return result;
+}
+
+// Returns a list of Blockly toolbox blocks in JSON for a given category.
+// This is used in order to merge XML toolbox blocks with the dynamically created
+// blocks in auto-populated categories, such as Behaviors, Functions, and Variables.
+export function getCategoryBlocksJson(category: string) {
+  const levelToolboxBlocks = Blockly.cdoUtils.getLevelToolboxBlocks(category);
+  if (!levelToolboxBlocks?.querySelector('xml')?.hasChildNodes()) {
+    return [];
+  }
+
+  // Blockly supports XML or JSON, but not a combination of both.
+  // We convert to JSON here because the other flyout blocks are JSON.
+  const blocksConvertedJson = convertXmlToJson(
+    levelToolboxBlocks.documentElement
+  );
+  const flyoutJson = getSimplifiedStateForFlyout(blocksConvertedJson);
+
+  return flyoutJson;
+}

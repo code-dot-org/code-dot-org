@@ -1,0 +1,25 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-07-31T20:07:37.000Z",
+  "level_num": "custom",
+  "user_id": 21093,
+  "properties": {
+    "encrypted": "false",
+    "title": "Warm Up",
+    "long_instructions": "###We’ve seen a lot of chatbot examples in this unit that help solve problems. \r\n###What’s one chatbot you could see yourself actually using to help with a personal problem or something a family member cares about?",
+    "teacher_markdown": "Discussion Goal: This discussion is meant to prime students to think about how chatbots can address an issue in their community - in this case, they’re thinking of past chatbots and how they might be useful outside of this class. For example, students might think of tutoring chatbots or writing assistance chatbots that could be helpful to them personally. They might also think of chatbots that help brainstorm recipes or ideas as something a family member might find useful. As students name examples of chatbot, try to focus on the kind of problem this chatbot is solving and how it’s personally relevant to students or to members of their community.",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true
+  },
+  "audit_log": "[{\"changed_at\":\"2024-07-31 20:07:39 +0000\",\"changed\":[],\"changed_by_id\":21093,\"changed_by_email\":\"msquires@princeton.edu\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

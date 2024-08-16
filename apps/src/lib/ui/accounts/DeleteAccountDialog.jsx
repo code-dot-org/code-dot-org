@@ -2,13 +2,17 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import {Header, Field, ConfirmCancelFooter} from '../SystemDialog/SystemDialog';
+import {
+  Header,
+  Field,
+  ConfirmCancelFooter,
+} from '../../../sharedComponents/SystemDialog/SystemDialog';
 
 const GUTTER = 20;
 

@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import msg from '@cdo/locale';
 
 import {ApplabInterfaceMode} from '../../applab/constants';
-import Dialog from '../../templates/Dialog';
+import Dialog from '../../legacySharedComponents/Dialog';
 import PaneHeader, {PaneSection, PaneButton} from '../../templates/PaneHeader';
 import color from '../../util/color';
 import {DataView} from '../constants';
