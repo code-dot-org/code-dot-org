@@ -572,19 +572,18 @@ p.errorMessage {
   border: 1px solid $neutral_dark20;
   background: $neutral_white;
   position: relative;
+}
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: calc(-0.5rem * sqrt(2) + 0.125rem);
-    left: calc(50% - 0.5rem);
-    width: 1rem;
-    height: 1rem;
-    background: $neutral_white;
-    transform: rotate(45deg);
-    border-top: 1px solid $neutral_dark20;
-    border-left: 1px solid $neutral_dark20;
-  }
+.aiAssessmentArrow {
+  position: absolute;
+  top: calc(-0.5rem * sqrt(2) + 0.125rem);
+  left: calc(50% - 0.5rem);
+  width: 1rem;
+  height: 1rem;
+  background: $neutral_white;
+  transform: rotate(45deg);
+  border-top: 1px solid $neutral_dark20;
+  border-left: 1px solid $neutral_dark20;
 }
 
 .aiAssessmentBlock {
@@ -1093,7 +1092,6 @@ p.evidenceLevelHeaderText {
   border: 1px solid $light_black;
   background: $neutral_white;
   gap: 10px;
-  padding: 3px 16px 0;
   font-size: 0.875rem;
   height: 32px;
   box-shadow: 0 0 0 0.125rem $ai_rubric_cyan;
