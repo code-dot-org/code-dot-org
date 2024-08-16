@@ -39,8 +39,8 @@ module MailJet
   def self.create_contact_and_send_welcome_email(user, locale = 'en-US')
     return unless enabled?
 
-    return unless user&.id.present?
-    return unless user.teacher?
+    raise ArgumentError, 'the user must be persisted' unless user&.persisted?
+    raise ArgumentError, 'the user must be a teacher' unless user.teacher?
 
     contact = find_or_create_contact(user.email, user.name)
     update_contact_field(contact, 'sign_up_date', user.created_at.to_datetime.rfc3339)
@@ -51,31 +51,22 @@ module MailJet
     )
   end
 
-  # This method sends a "CAP section warning" email to a specified user if certain conditions are met.
+  # Sends a warning to a teacher about sections with students affected by the Child Account Policy (CAP).
   #
-  # Parameters:
-  # user     - a single User object.
-  # sections - an Array of sections, each with a 'Name' and a 'Link'.
-  #            Example format:
-  #             [
-  #               { Name: 'Section 1', Link: 'https://example.com/section1' },
-  #               { Name: 'Section 2', Link: 'https://example.com/section2' }
-  #             ]
-  # locale   - (optional) the locale for the email template. Defaults to 'en-US'.
+  # @note The function may exit early due to any of the following conditions:
+  #   - the feature is not enabled.
+  #   - the user is nil or does not have a valid ID.
+  #   - the user is not a teacher.
   #
-  # Returns:
-  #   Nothing if the function exits early due to any of the following conditions:
-  #     - the feature is not enabled.
-  #     - the user is nil or does not have a valid ID.
-  #     - the user is not a teacher.
+  # @param user [User] The teacher to be warned.
+  # @param sections [Array<Hash>] The list of CAP-affected sections.
+  #   Each section is represented as a hash with keys:
+  #   - `:Name` [String] The name of the section.
+  #   - `:Link` [String] The URL link to the section.
+  # @param locale [String] The locale to use for the email. Defaults to 'en-US'.
   #
-  # Workflow:
-  #   1. Checks if the feature is enabled.
-  #   2. Verifies the presence of a valid user ID.
-  #   3. Ensures the user has a teacher role.
-  #   4. Finds or creates a contact using the user's email and name.
-  #   5. Sends a template email with the specified sections in the specified locale.
-  def self.send_cap_section_warning_email(user, sections = [], locale = 'en-US')
+  # @return [void]
+  def self.send_teacher_cap_section_warning(user, sections, locale: 'en-US')
     return unless enabled?
 
     return unless user&.id.present?
