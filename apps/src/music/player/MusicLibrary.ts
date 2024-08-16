@@ -77,43 +77,6 @@ async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
   }
 }
 
-const localizeLibrary = (
-  library: LibraryJson,
-  translations: Translations
-): LibraryJson => {
-  const libraryJsonLocalized = JSON.parse(
-    JSON.stringify(library)
-  ) as LibraryJson;
-  libraryJsonLocalized.instruments.forEach(
-    instrument =>
-      (instrument.name = translations[instrument.id] || instrument.name)
-  );
-
-  libraryJsonLocalized.kits.forEach(kit => {
-    const kitId = kit.id;
-    kit.name = translations[kitId] || kit.name;
-    kit.sounds.forEach(sound => {
-      const soundId = `${kitId}/${sound.src}`;
-      sound.name = translations[soundId] || sound.name;
-    });
-  });
-
-  libraryJsonLocalized.packs.forEach(pack => {
-    const packId = pack.id;
-    if (!pack.skipLocalization) {
-      pack.name = translations[packId] || pack.name;
-    }
-    pack.sounds.forEach(sound => {
-      if (!sound.skipLocalization) {
-        const soundId = `${packId}/${sound.src}`;
-        sound.name = translations[soundId] || sound.name;
-      }
-    });
-  });
-
-  return libraryJsonLocalized;
-};
-
 export default class MusicLibrary {
   private static instance: MusicLibrary | undefined;
 
@@ -372,6 +335,43 @@ export const LibraryValidator: ResponseValidator<LibraryJson> = response => {
     throw new Error(`Invalid library JSON: ${response}`);
   }
   return libraryJson;
+};
+
+const localizeLibrary = (
+  library: LibraryJson,
+  translations: Translations
+): LibraryJson => {
+  const libraryJsonLocalized = JSON.parse(
+    JSON.stringify(library)
+  ) as LibraryJson;
+  libraryJsonLocalized.instruments.forEach(
+    instrument =>
+      (instrument.name = translations[instrument.id] || instrument.name)
+  );
+
+  libraryJsonLocalized.kits.forEach(kit => {
+    const kitId = kit.id;
+    kit.name = translations[kitId] || kit.name;
+    kit.sounds.forEach(sound => {
+      const soundId = `${kitId}/${sound.src}`;
+      sound.name = translations[soundId] || sound.name;
+    });
+  });
+
+  libraryJsonLocalized.packs.forEach(pack => {
+    const packId = pack.id;
+    if (!pack.skipLocalization) {
+      pack.name = translations[packId] || pack.name;
+    }
+    pack.sounds.forEach(sound => {
+      if (!sound.skipLocalization) {
+        const soundId = `${packId}/${sound.src}`;
+        sound.name = translations[soundId] || sound.name;
+      }
+    });
+  });
+
+  return libraryJsonLocalized;
 };
 
 export type SoundType = 'beat' | 'bass' | 'lead' | 'fx' | 'vocal' | 'preview';
