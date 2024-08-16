@@ -39,8 +39,8 @@ module MailJet
   def self.create_contact_and_send_welcome_email(user, locale = 'en-US')
     return unless enabled?
 
-    raise ArgumentError, 'the user must be persisted' unless user&.persisted?
-    raise ArgumentError, 'the user must be a teacher' unless user.teacher?
+    return unless user&.id.present?
+    return unless user.teacher?
 
     contact = find_or_create_contact(user.email, user.name)
     update_contact_field(contact, 'sign_up_date', user.created_at.to_datetime.rfc3339)
@@ -69,8 +69,8 @@ module MailJet
   def self.send_teacher_cap_section_warning(user, sections, locale: 'en-US')
     return unless enabled?
 
-    return unless user&.id.present?
-    return unless user.teacher?
+    raise ArgumentError, 'the user must be persisted' unless user&.persisted?
+    raise ArgumentError, 'the user must be a teacher' unless user.teacher?
 
     contact = find_or_create_contact(user.email, user.name)
     send_template_email(
