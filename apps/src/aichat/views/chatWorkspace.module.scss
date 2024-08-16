@@ -29,6 +29,10 @@ $default-spacing: 16px;
 
 .tabPanels {
   @extend %conversation-area;
+  > div {
+    display: flex;
+    height: 100%;
+  }
 }
 
 .waitingForResponse {
