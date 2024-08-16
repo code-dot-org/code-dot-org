@@ -35,7 +35,6 @@ import {
   newFilePromptType,
   newFolderPromptType,
   renameFilePromptType,
-  renameFileType,
   renameFolderPromptType,
   renameFolderType,
   setFileType,
@@ -427,11 +426,18 @@ export const FileBrowser = React.memo(() => {
       });
 
       const destinationFolderName = extractPrompt(results);
-      const folderId = findFolder(destinationFolderName.split('/'), {
-        folders: Object.values(project.folders),
-        required: true,
-      });
-      moveFile(fileId, folderId);
+      try {
+        const folderId = findFolder(destinationFolderName.split('/'), {
+          folders: Object.values(project.folders),
+          required: true,
+        });
+        moveFile(fileId, folderId);
+      } catch (e) {
+        dialogControl?.showDialog({
+          type: DialogType.GenericAlert,
+          title: getErrorMessage(e),
+        });
+      }
     },
     [
       dialogControl,
@@ -442,36 +448,35 @@ export const FileBrowser = React.memo(() => {
     ]
   );
 
-  const innerRenameFile: renameFileType = useMemo(
-    () => (fileId, newName) => {
-      const file = project.files[fileId];
-
-      if (newName === null || newName === file.name) {
-        return;
-      }
-
-      if (checkForDuplicateFilename(newName, file.folderId, project.files)) {
-        return;
-      }
-
-      renameFile(fileId, newName);
-    },
-    [renameFile, checkForDuplicateFilename, project.files]
-  );
-
   const renameFilePrompt: FilesComponentProps['renameFilePrompt'] = useMemo(
-    () => fileId => {
+    () => async fileId => {
       const file = project.files[fileId];
-      dialogControl?.showDialog({
+      const results = await dialogControl?.showDialog({
         type: DialogType.GenericPrompt,
         title: codebridgeI18n.renameFile(),
         placeholder: file.name,
-        handleConfirm: newName => {
-          innerRenameFile(fileId, newName);
+        validateInput: (newName: string) => {
+          if (newName === file.name) {
+            return;
+          }
+          const duplicate = checkForDuplicateFilename(
+            newName,
+            file.folderId,
+            project.files
+          );
+          if (duplicate) {
+            return duplicate;
+          }
+          const [, extension] = newName.split('.');
+          if (!extension) {
+            return codebridgeI18n.noFileExtensionError();
+          }
         },
       });
+      const newName = extractPrompt(results);
+      renameFile(fileId, newName);
     },
-    [dialogControl, innerRenameFile, project.files]
+    [dialogControl, project.files, checkForDuplicateFilename, renameFile]
   );
 
   const innerRenameFolder: renameFolderType = useMemo(
@@ -499,7 +504,7 @@ export const FileBrowser = React.memo(() => {
     [renameFolder, project.folders, dialogControl]
   );
 
-  const renameFolderPrompt: FilesComponentProps['renameFilePrompt'] = useMemo(
+  const renameFolderPrompt: FilesComponentProps['renameFolderPrompt'] = useMemo(
     () => folderId => {
       const folder = project.folders[folderId];
       dialogControl?.showDialog({
