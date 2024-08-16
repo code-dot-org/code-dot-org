@@ -53,7 +53,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
           name="userName"
           onChange={onNameChange}
           value={name}
-          className={style.nameInput}
+          className={style.displayNameInput}
           placeholder={locale.msCoder()}
         />
         <BodyThreeText>
