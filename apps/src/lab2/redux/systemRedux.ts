@@ -1,5 +1,9 @@
 import {PayloadAction, createSlice} from '@reduxjs/toolkit';
 
+// This slice represents the state of the system lifecycle, including loading the
+// coding environment and if the user's program is running. Individual labs are
+// responsible for setting this state as needed (some labs may not care about these
+// states, and therefore may not set these values).
 export interface Lab2SystemState {
   loadingCodeEnvironment: boolean;
   isRunning: boolean;
