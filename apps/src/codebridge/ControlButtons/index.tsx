@@ -13,6 +13,7 @@ import {
 import Button from '@cdo/apps/componentLibrary/button';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -26,7 +27,6 @@ const ControlButtons: React.FunctionComponent = () => {
 
   const dialogControl = useDialogControl();
   const [hasRun, setHasRun] = useState(false);
-  const [isRunning, setIsRunning] = useState(false);
   const dispatch = useAppDispatch();
 
   const source = useAppSelector(
@@ -52,6 +52,8 @@ const ControlButtons: React.FunctionComponent = () => {
   const isLoadingEnvironment = useAppSelector(
     state => state.lab2System.loadingCodeEnvironment
   );
+  const isRunning = useAppSelector(state => state.lab2System.isRunning);
+
   // We disable the run button in predict levels if we are not in start mode
   // and the user has not yet written a prediction.
   const awaitingPredictSubmit =
@@ -91,8 +93,10 @@ const ControlButtons: React.FunctionComponent = () => {
 
   const handleRun = (runTests: boolean) => {
     if (onRun) {
-      setIsRunning(true);
-      onRun(runTests, dispatch, source).then(() => setIsRunning(false));
+      dispatch(setIsRunning(true));
+      onRun(runTests, dispatch, source).then(() =>
+        dispatch(setIsRunning(false))
+      );
       setHasRun(true);
     } else {
       dispatch(appendSystemMessage("We don't know how to run your code."));
@@ -102,10 +106,10 @@ const ControlButtons: React.FunctionComponent = () => {
   const handleStop = () => {
     if (onStop) {
       onStop();
-      setIsRunning(false);
+      dispatch(setIsRunning(false));
     } else {
       dispatch(appendSystemMessage("We don't know how to stop your code."));
-      setIsRunning(false);
+      dispatch(setIsRunning(false));
     }
   };
 
