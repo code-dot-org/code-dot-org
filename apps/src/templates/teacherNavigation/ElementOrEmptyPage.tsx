@@ -12,28 +12,40 @@ import {TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
 import styles from './teacher-navigation.module.scss';
 import dashboardStyles from '@cdo/apps/templates/teacherDashboard/teacher-dashboard.module.scss';
 
-interface EmptySectionProps {
-  hasStudents: boolean;
-  hasCurriculumAssigned: boolean;
+interface ElementOrEmptyPageProps {
+  showNoStudents: boolean;
+  showNoCurriculumAssigned: boolean;
   element: React.ReactElement;
 }
 
-const EmptySection: React.FC<EmptySectionProps> = ({
-  hasStudents,
-  hasCurriculumAssigned,
+const ElementOrEmptyPage: React.FC<ElementOrEmptyPageProps> = ({
+  showNoStudents,
+  showNoCurriculumAssigned,
   element,
 }) => {
-  const textDescription = !hasStudents
+  const textDescription = showNoStudents
     ? i18n.emptySectionDescription()
     : i18n.noCurriculumAssigned();
 
-  const displayedImage = !hasStudents ? (
+  const displayedImage = showNoStudents ? (
     <img src={emptyDesk} alt="empty desk" />
   ) : (
     <img src={blankScreen} alt="blank screen" />
   );
 
-  if (hasStudents && hasCurriculumAssigned) {
+  const link = showNoStudents ? (
+    <NavLink
+      key={TEACHER_NAVIGATION_PATHS.manageStudents}
+      to={TEACHER_NAVIGATION_PATHS.manageStudents}
+      className={styles.navLink}
+    >
+      {i18n.addStudents()}
+    </NavLink>
+  ) : (
+    <LinkButton href="/catalog" text={i18n.browseCurriculum()} />
+  );
+
+  if (!showNoStudents && !showNoCurriculumAssigned) {
     return element;
   } else {
     return (
@@ -44,22 +56,11 @@ const EmptySection: React.FC<EmptySectionProps> = ({
             {i18n.emptySectionHeadline()}
           </Heading3>
           <BodyTwoText>{textDescription}</BodyTwoText>
-          {!hasStudents && (
-            <NavLink
-              key={TEACHER_NAVIGATION_PATHS.manageStudents}
-              to={TEACHER_NAVIGATION_PATHS.manageStudents}
-              className={styles.navLink}
-            >
-              {i18n.addStudents()}
-            </NavLink>
-          )}
-          {!hasCurriculumAssigned && hasStudents && (
-            <LinkButton href="/catalog" text={i18n.browseCurriculum()} />
-          )}
+          {link}
         </div>
       </div>
     );
   }
 };
 
-export default EmptySection;
+export default ElementOrEmptyPage;

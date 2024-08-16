@@ -2,16 +2,16 @@ import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {BrowserRouter as Router} from 'react-router-dom';
 
-import EmptySection from '@cdo/apps/templates/teacherDashboard/EmptySectionV1';
+import EmptySectionV1 from '@cdo/apps/templates/teacherDashboard/EmptySectionV1';
 import i18n from '@cdo/locale';
 
 const TEST_ELEMENT_TEXT = 'Test Element';
 
-describe('EmptySection', () => {
+describe('EmptySectionV1', () => {
   it('displays empty desk image and Add Students link when there are no students', () => {
     render(
       <Router>
-        <EmptySection
+        <EmptySectionV1
           hasStudents={false}
           hasCurriculumAssigned={false}
           element={<div>{TEST_ELEMENT_TEXT}</div>}
@@ -29,7 +29,7 @@ describe('EmptySection', () => {
   it('displays blank screen image and Browse Curriculum button when there are students but no curriculum assigned', () => {
     render(
       <Router>
-        <EmptySection
+        <EmptySectionV1
           hasStudents={true}
           hasCurriculumAssigned={false}
           element={<div>{TEST_ELEMENT_TEXT}</div>}
@@ -47,7 +47,7 @@ describe('EmptySection', () => {
   it('displays empty desk image and Add Students button when there are no students but there is a curriculum assigned', () => {
     render(
       <Router>
-        <EmptySection
+        <EmptySectionV1
           hasStudents={false}
           hasCurriculumAssigned={true}
           element={<div>{TEST_ELEMENT_TEXT}</div>}
@@ -65,7 +65,7 @@ describe('EmptySection', () => {
   it('Displays element when has students and curriculum', () => {
     render(
       <Router>
-        <EmptySection
+        <EmptySectionV1
           hasStudents={true}
           hasCurriculumAssigned={true}
           element={<div>{TEST_ELEMENT_TEXT}</div>}
