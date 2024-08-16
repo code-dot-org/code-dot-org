@@ -32,6 +32,12 @@ export const tipTypes = {
     color: color.purple,
     backgroundColor: color.lightest_purple,
   },
+  ethicsOpportunity: {
+    displayName: i18n.ethicsOpportunity(),
+    icon: 'head-side-heart',
+    color: color.green,
+    backgroundColor: color.lighter_green,
+  },
 };
 
 class LessonTip extends Component {
