@@ -1,11 +1,9 @@
-// Function Overload Signatures
 export function getFullName(student: {
   name: string;
   familyName: string;
 }): string;
 export function getFullName(name: string, familyName?: string): string;
 
-// Function Implementation
 export function getFullName(
   studentOrName: {name: string; familyName: string} | string,
   familyName?: string
