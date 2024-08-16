@@ -8,6 +8,7 @@
   "duplicateFileError": "Filename {fileName} is already in use in this folder. Please choose a different name.",
   "duplicateSupportFileError": "Filename {fileName} is already in use in this folder in the level's support code. Please choose a different name.",
   "folderExistsError": "Folder already exists with that name",
+  "invalidNameError": "Names must be only letters, numbers, or dots",
   "makeStarter": "Make starter file",
   "makeSupport": "Make support file",
   "makeValidation": "Make validation file",
