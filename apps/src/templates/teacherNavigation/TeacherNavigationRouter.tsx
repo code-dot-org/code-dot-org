@@ -23,8 +23,10 @@ import ElementOrEmptyPage from './ElementOrEmptyPage';
 import PageHeader from './PageHeader';
 import TeacherNavigationBar from './TeacherNavigationBar';
 import {
-  SECTION_ID_PATH_PART,
+  SPECIFIC_SECTION_BASE_URL,
+  TEACHER_NAVIGATION_BASE_URL,
   TEACHER_NAVIGATION_PATHS,
+  TEACHER_NAVIGATION_SECTIONS_URL,
 } from './TeacherNavigationPaths';
 
 import styles from './teacher-navigation.module.scss';
@@ -38,8 +40,6 @@ interface TeacherNavigationRouterProps {
   showAITutorTab: boolean;
   sectionProviderName: string;
 }
-
-export const TEACHER_NAVIGATION_BASE_URL = `/teacher_dashboard/sections/`;
 
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
   return <div className={styles.widthLockedPage}>{children}</div>;
@@ -56,6 +56,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
 }) => {
   const routes = (
     <Route
+      path={TEACHER_NAVIGATION_SECTIONS_URL}
       element={
         <div className={styles.pageAndSidebar}>
           <TeacherNavigationBar />
@@ -64,7 +65,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
       }
     >
       <Route
-        path={`${SECTION_ID_PATH_PART}/`}
+        path={SPECIFIC_SECTION_BASE_URL}
         element={
           <div className={styles.pageWithHeader}>
             <PageHeader />
