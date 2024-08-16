@@ -52,10 +52,17 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
   isTeacherView,
 }) => {
   const dispatch = useAppDispatch();
-  console.log('isTeacherView', isTeacherView);
 
   if (isChatMessage(event)) {
-    return <ChatMessage {...event} />;
+    const {chatMessageText, role, status} = event;
+    return (
+      <ChatMessage
+        chatMessageText={chatMessageText}
+        role={role}
+        status={status}
+        isTeacherView={isTeacherView}
+      />
+    );
   }
 
   if (isNotification(event)) {
