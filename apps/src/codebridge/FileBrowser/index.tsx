@@ -32,7 +32,6 @@ import {FileBrowserHeaderPopUpButton} from './FileBrowserHeaderPopUpButton';
 import {
   downloadFileType,
   moveFilePromptType,
-  moveFileType,
   newFilePromptType,
   newFolderPromptType,
   renameFilePromptType,
@@ -400,48 +399,47 @@ export const FileBrowser = React.memo(() => {
     [dialogControl, checkForDuplicateFilename, newFile, project.files]
   );
 
-  const innerMoveFile: moveFileType = useMemo(
-    () => (fileId, destinationFolderName) => {
-      const file = project.files[fileId];
-
-      try {
-        const folderId = findFolder(destinationFolderName.split('/'), {
-          folders: Object.values(project.folders),
-          required: true,
-        });
-
-        if (checkForDuplicateFilename(file.name, folderId, project.files)) {
-          return;
-        }
-
-        moveFile(fileId, folderId);
-      } catch (e) {
-        dialogControl?.showDialog({
-          type: DialogType.GenericAlert,
-          title: getErrorMessage(e),
-        });
-      }
-    },
-    [
-      moveFile,
-      project.files,
-      project.folders,
-      checkForDuplicateFilename,
-      dialogControl,
-    ]
-  );
-
   const moveFilePrompt: FilesComponentProps['moveFilePrompt'] = useMemo(
-    () => fileId => {
-      dialogControl?.showDialog({
+    () => async fileId => {
+      const file = project.files[fileId];
+      const results = await dialogControl?.showDialog({
         type: DialogType.GenericPrompt,
         title: codebridgeI18n.moveFilePrompt(),
-        handleConfirm: destinationFolderName => {
-          innerMoveFile(fileId, destinationFolderName);
+
+        validateInput: (destinationFolderName: string) => {
+          try {
+            const folderId = findFolder(destinationFolderName.split('/'), {
+              folders: Object.values(project.folders),
+              required: true,
+            });
+            const duplicate = checkForDuplicateFilename(
+              file.name,
+              folderId,
+              project.files
+            );
+            if (duplicate) {
+              return duplicate;
+            }
+          } catch (e) {
+            return getErrorMessage(e);
+          }
         },
       });
+
+      const destinationFolderName = extractPrompt(results);
+      const folderId = findFolder(destinationFolderName.split('/'), {
+        folders: Object.values(project.folders),
+        required: true,
+      });
+      moveFile(fileId, folderId);
     },
-    [dialogControl, innerMoveFile]
+    [
+      dialogControl,
+      moveFile,
+      checkForDuplicateFilename,
+      project.files,
+      project.folders,
+    ]
   );
 
   const innerRenameFile: renameFileType = useMemo(
