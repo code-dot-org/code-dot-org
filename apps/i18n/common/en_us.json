@@ -501,6 +501,7 @@
   "codeToEmbed": "Code that will be embedded.",
   "codeTooltip": "See generated JavaScript code.",
   "collapseAll": "Collapse all student rows",
+  "colourRandom": "random color",
   "commentPrefix": "comment:",
   "commentTooltip": "Leave a message for yourself, or anyone else reading your code.",
   "committedVersionLabel": "Commit from {timestamp}",

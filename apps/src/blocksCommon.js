@@ -22,6 +22,7 @@ exports.install = function (blockly, blockInstallOptions) {
   installWhenRun(blockly, skin, isK1);
   installJoinBlock(blockly);
   installCommentBlock(blockly);
+  installCustomColourRandomBlock(blockly);
 };
 
 function installControlsRepeatSimplified(blockly, skin) {
@@ -275,6 +276,9 @@ function installWhenRun(blockly, skin, isK1) {
 
 function installJoinBlock(blockly) {
   Blockly.customBlocks.installJoinBlock(blockly);
+}
+function installCustomColourRandomBlock(blockly) {
+  Blockly.customBlocks.installCustomColourRandomBlock(blockly);
 }
 
 function installCommentBlock(blockly) {
