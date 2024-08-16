@@ -67,7 +67,7 @@ const styles = {
   content: {
     position: 'absolute',
     top: CALLOUT_TOP,
-    right: -90,
+    right: -118,
     zIndex: CALLOUT_Z_INDEX,
     backgroundColor: CALLOUT_COLOR,
     borderRadius: 3,
@@ -83,7 +83,7 @@ const styles = {
   upTriangle: {
     position: 'absolute',
     top: CALLOUT_TOP - TRIANGLE_HEIGHT,
-    left: -(TRIANGLE_HEIGHT / 2.0),
+    left: 20,
     width: 0,
     height: 0,
     borderStyle: 'solid',
@@ -110,8 +110,11 @@ const styles = {
     width: 400,
     textAlign: 'left',
     whiteSpace: 'normal',
+    color: 'white',
+    fontWeight: '400',
   },
   textHeader: {
     marginTop: 0,
+    color: 'white',
   },
 };

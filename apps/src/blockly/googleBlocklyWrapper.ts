@@ -60,7 +60,10 @@ import CdoTrashcan from './addons/cdoTrashcan';
 import * as cdoUtils from './addons/cdoUtils';
 import initializeVariables from './addons/cdoVariables';
 import CdoVerticalFlyout from './addons/cdoVerticalFlyout';
-import initializeBlocklyXml, {removeInvisibleBlocks} from './addons/cdoXml';
+import initializeBlocklyXml, {
+  removeInvisibleBlocks,
+  removeStaticCallBlocks,
+} from './addons/cdoXml';
 import {registerAllContextMenuItems} from './addons/contextMenu';
 import registerLogicCompareMutator from './addons/extensions/logic_compare';
 import FunctionEditor from './addons/functionEditor';
@@ -741,12 +744,14 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       media: '/blockly/media/google_blockly',
       modalInputs: false, // Prevents pop-up editor on mobile
     };
-    // Google Blockly doesn't support invisible blocks, so we want to prevent
-    // them from showing up in the toolbox.
+    // For old levels, we remove statically-defined procedure call blocks from the
+    // auto-populated Functions category. We also remove any invisible blocks because
+    // Google Blockly doesn't support them.
     if (typeof options.toolbox === 'string') {
-      options.toolbox = Blockly.Xml.domToText(
-        removeInvisibleBlocks(Blockly.Xml.textToDom(options.toolbox))
-      );
+      const toolboxDom = Blockly.Xml.textToDom(options.toolbox);
+      const visibleBlocksDom = removeInvisibleBlocks(toolboxDom);
+      const finalToolboxDom = removeStaticCallBlocks(visibleBlocksDom);
+      options.toolbox = Blockly.Xml.domToText(finalToolboxDom);
     }
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
     // apps, so we should also set it here.

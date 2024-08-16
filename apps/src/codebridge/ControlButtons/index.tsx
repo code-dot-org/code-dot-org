@@ -161,16 +161,6 @@ const ControlButtons: React.FunctionComponent = () => {
     }
   };
 
-  const getRunTestTooltip = () => {
-    let runTestTooltip = null;
-    if (awaitingPredictSubmit) {
-      runTestTooltip = codebridgeI18n.predictRunDisabledTooltip();
-    } else if (isLoadingEnvironment) {
-      runTestTooltip = codebridgeI18n.loadingEnvironmentTooltip();
-    }
-    return runTestTooltip;
-  };
-
   const getNavigationTooltip = () => {
     if (!disableNavigation) {
       return null;
@@ -193,9 +183,23 @@ const ControlButtons: React.FunctionComponent = () => {
     }
   };
 
-  const runTestTooltip = getRunTestTooltip();
   const navigationTooltip = getNavigationTooltip();
 
+  const getCodeActionsTooltip = () => {
+    let tooltip = null;
+    if (awaitingPredictSubmit) {
+      tooltip = codebridgeI18n.predictRunDisabledTooltip();
+    } else if (isLoadingEnvironment) {
+      tooltip = codebridgeI18n.loadingEnvironmentTooltip();
+    }
+    return tooltip;
+  };
+
+  const codeActionsTooltip = getCodeActionsTooltip();
+
+  // We may want to expand the tooltip to cover the disabled button
+  // as well. We will likely move these buttons; when we do consider
+  // wrapping the buttons in a div with the icon and applying the tooltip to that div.
   const renderDisabledButtonHelperIcon = (
     iconName: string,
     tooltipId: string,
@@ -232,11 +236,11 @@ const ControlButtons: React.FunctionComponent = () => {
         />
       ) : (
         <span className={moduleStyles.centerButton}>
-          {runTestTooltip &&
+          {codeActionsTooltip &&
             renderDisabledButtonHelperIcon(
               'fa-spinner fa-spin',
               'runTestTooltip',
-              runTestTooltip
+              codeActionsTooltip
             )}
           <Button
             text={'Run'}

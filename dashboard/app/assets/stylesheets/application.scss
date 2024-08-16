@@ -363,6 +363,15 @@ img.video_thumbnail {
       }
     }
   }
+
+  /* Hide the Sign in and Create account buttons
+  in the header on small screens */
+  @media (max-width: 425px) {
+    .button-signin.desktop,
+    .button-create-account.desktop {
+      display: none;
+    }
+  }
 }
 
 .levelbuilder-header {

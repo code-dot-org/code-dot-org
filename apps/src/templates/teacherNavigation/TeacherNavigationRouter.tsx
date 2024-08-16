@@ -19,12 +19,14 @@ import StatsTableWithData from '../teacherDashboard/StatsTableWithData';
 import TextResponses from '../textResponses/TextResponses';
 
 import DefaultTeacherNavRedirect from './DefaultTeacherNavRedirect';
-import EmptySection from './EmptySection';
+import ElementOrEmptyPage from './ElementOrEmptyPage';
 import PageHeader from './PageHeader';
 import TeacherNavigationBar from './TeacherNavigationBar';
 import {
-  SECTION_ID_PATH_PART,
+  SPECIFIC_SECTION_BASE_URL,
+  TEACHER_NAVIGATION_BASE_URL,
   TEACHER_NAVIGATION_PATHS,
+  TEACHER_NAVIGATION_SECTIONS_URL,
 } from './TeacherNavigationPaths';
 
 import styles from './teacher-navigation.module.scss';
@@ -38,8 +40,6 @@ interface TeacherNavigationRouterProps {
   showAITutorTab: boolean;
   sectionProviderName: string;
 }
-
-export const TEACHER_NAVIGATION_BASE_URL = `/teacher_dashboard/sections/`;
 
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
   return <div className={styles.widthLockedPage}>{children}</div>;
@@ -56,6 +56,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
 }) => {
   const routes = (
     <Route
+      path={TEACHER_NAVIGATION_SECTIONS_URL}
       element={
         <div className={styles.pageAndSidebar}>
           <TeacherNavigationBar />
@@ -64,7 +65,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
       }
     >
       <Route
-        path={`${SECTION_ID_PATH_PART}/`}
+        path={SPECIFIC_SECTION_BASE_URL}
         element={
           <div className={styles.pageWithHeader}>
             <PageHeader />
@@ -112,9 +113,9 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
         <Route
           path={TEACHER_NAVIGATION_PATHS.standardsReport}
           element={
-            <EmptySection
-              hasStudents={studentCount !== 0}
-              hasCurriculumAssigned={anyStudentHasProgress}
+            <ElementOrEmptyPage
+              showNoStudents={studentCount === 0}
+              showNoCurriculumAssigned={!anyStudentHasProgress}
               element={applyV1TeacherDashboardWidth(<StandardsReport />)}
             />
           }
@@ -122,10 +123,10 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
         <Route
           path={TEACHER_NAVIGATION_PATHS.projects}
           element={
-            <EmptySection
-              hasStudents={studentCount !== 0}
+            <ElementOrEmptyPage
+              showNoStudents={studentCount === 0}
               // Don't show no curriculum assigned error for projects tab.
-              hasCurriculumAssigned={true}
+              showNoCurriculumAssigned={false}
               element={applyV1TeacherDashboardWidth(
                 <SectionProjectsListWithData
                   studioUrlPrefix={studioUrlPrefix}
@@ -137,9 +138,9 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
         <Route
           path={TEACHER_NAVIGATION_PATHS.stats}
           element={
-            <EmptySection
-              hasStudents={studentCount !== 0}
-              hasCurriculumAssigned={anyStudentHasProgress}
+            <ElementOrEmptyPage
+              showNoStudents={studentCount === 0}
+              showNoCurriculumAssigned={!anyStudentHasProgress}
               element={applyV1TeacherDashboardWidth(<StatsTableWithData />)}
             />
           }
@@ -147,9 +148,9 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
         <Route
           path={TEACHER_NAVIGATION_PATHS.progress}
           element={
-            <EmptySection
-              hasStudents={studentCount !== 0}
-              hasCurriculumAssigned={anyStudentHasProgress}
+            <ElementOrEmptyPage
+              showNoStudents={studentCount === 0}
+              showNoCurriculumAssigned={!anyStudentHasProgress}
               element={<SectionProgressSelector />}
             />
           }
@@ -157,9 +158,9 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
         <Route
           path={TEACHER_NAVIGATION_PATHS.textResponses}
           element={
-            <EmptySection
-              hasStudents={studentCount !== 0}
-              hasCurriculumAssigned={anyStudentHasProgress}
+            <ElementOrEmptyPage
+              showNoStudents={studentCount === 0}
+              showNoCurriculumAssigned={!anyStudentHasProgress}
               element={applyV1TeacherDashboardWidth(<TextResponses />)}
             />
           }
@@ -167,9 +168,9 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
         <Route
           path={TEACHER_NAVIGATION_PATHS.assessments}
           element={
-            <EmptySection
-              hasStudents={studentCount !== 0}
-              hasCurriculumAssigned={anyStudentHasProgress}
+            <ElementOrEmptyPage
+              showNoStudents={studentCount === 0}
+              showNoCurriculumAssigned={!anyStudentHasProgress}
               element={applyV1TeacherDashboardWidth(
                 <SectionAssessments sectionName={sectionName} />
               )}
@@ -180,9 +181,9 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           <Route
             path={TEACHER_NAVIGATION_PATHS.aiTutorChatMessages}
             element={
-              <EmptySection
-                hasStudents={studentCount !== 0}
-                hasCurriculumAssigned={anyStudentHasProgress}
+              <ElementOrEmptyPage
+                showNoStudents={studentCount === 0}
+                showNoCurriculumAssigned={!anyStudentHasProgress}
                 element={applyV1TeacherDashboardWidth(
                   <TutorTab sectionId={sectionId} />
                 )}
