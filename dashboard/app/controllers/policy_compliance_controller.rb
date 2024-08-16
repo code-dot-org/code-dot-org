@@ -23,7 +23,7 @@ class PolicyComplianceController < ApplicationController
     Services::ChildAccount.grant_permission_request!(permission_request)
     @permission_granted = true
     user = permission_request.user
-    @permission_granted_date = user.child_account_compliance_state_last_updated
+    @permission_granted_date = user.cap_status_date
     @student_id = user.id
   end
 

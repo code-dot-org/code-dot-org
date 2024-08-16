@@ -30,14 +30,19 @@ module ActiveJobMetrics
     ]
   end
 
-  # Get the number of failed jobs, presuming the Delayed::Job table is being used.
+  # Failed jobs are those that have failed at least once.
   def get_failed_job_count
     Delayed::Job.where.not(failed_at: nil).count
   end
 
-  # Get the number of pending jobs, presuming the Delayed::Job table is being used.
+  # Pending jobs are those that have not yet been run.
   def get_pending_job_count
     Delayed::Job.where(failed_at: nil).count
+  end
+
+  # Workable jobs are those that are not locked and are ready to run.
+  def get_workable_job_count
+    Delayed::Job.where(failed_at: nil, locked_at: nil).where('run_at <= ?', Time.now).count
   end
 
   protected def report_job_count
@@ -56,6 +61,15 @@ module ActiveJobMetrics
         {
           metric_name: 'FailedJobCount',
           value: get_failed_job_count,
+          unit: 'Count',
+          timestamp: Time.now,
+          dimensions: [
+            {name: 'Environment', value: CDO.rack_env},
+          ],
+        },
+        {
+          metric_name: 'WorkableJobCount',
+          value: get_workable_job_count,
           unit: 'Count',
           timestamp: Time.now,
           dimensions: [

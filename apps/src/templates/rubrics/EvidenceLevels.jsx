@@ -21,6 +21,7 @@ export default function EvidenceLevels({
   isAutosaving,
   isAiAssessed,
   aiEvalInfo,
+  arrowPositionCallback,
 }) {
   const sortedEvidenceLevels = () => {
     const newArray = [...evidenceLevels];
@@ -45,6 +46,7 @@ export default function EvidenceLevels({
         radioButtonCallback={radioButtonCallback}
         canProvideFeedback={canProvideFeedback}
         isAutosaving={isAutosaving}
+        arrowPositionCallback={arrowPositionCallback}
       />
     );
   }
@@ -62,4 +64,5 @@ EvidenceLevels.propTypes = {
   isAutosaving: PropTypes.bool,
   isAiAssessed: PropTypes.bool.isRequired,
   aiEvalInfo: aiEvaluationShape,
+  arrowPositionCallback: PropTypes.func,
 };

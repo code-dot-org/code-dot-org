@@ -116,4 +116,7 @@ export const blocks = {
   },
   addSerializationHooksToBlock() {},
   mathRandomIntGenerator: blockly.JavaScript.math_random_int,
+  getColourDropdownField(colours) {
+    return new Blockly.FieldColourDropdown(colours, 45, 35);
+  },
 };
