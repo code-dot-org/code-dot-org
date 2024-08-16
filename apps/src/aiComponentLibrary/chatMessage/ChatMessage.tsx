@@ -4,9 +4,8 @@ import React, {useMemo, useState} from 'react';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {commonI18n} from '@cdo/apps/types/locale';
+import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 import aiBotIcon from '@cdo/static/aichat/ai-bot-icon.svg';
-
-import {AiInteractionStatus as Status} from '../../../generated-scripts/sharedConstants';
 
 import {Role, ProfaneMessageViewToggle} from './types';
 
