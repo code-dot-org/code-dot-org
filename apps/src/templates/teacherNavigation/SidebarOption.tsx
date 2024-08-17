@@ -10,7 +10,6 @@ import {LABELED_TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
 import styles from './teacher-navigation.module.scss';
 
 interface SidebarOptionProps {
-  icon: string;
   isSelected: boolean;
   sectionId: number;
   pathKey: keyof typeof LABELED_TEACHER_NAVIGATION_PATHS;
@@ -18,7 +17,6 @@ interface SidebarOptionProps {
 }
 
 const SidebarOption: React.FC<SidebarOptionProps> = ({
-  icon,
   isSelected,
   sectionId,
   pathKey,
@@ -39,7 +37,10 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
       })}
       onClick={onClick}
     >
-      <FontAwesomeV6Icon className={styles.optionIcon} iconName={icon} />
+      <FontAwesomeV6Icon
+        className={styles.optionIcon}
+        iconName={LABELED_TEACHER_NAVIGATION_PATHS[pathKey].icon}
+      />
       <BodyTwoText className={styles.linkText}>
         {LABELED_TEACHER_NAVIGATION_PATHS[pathKey].label}
       </BodyTwoText>

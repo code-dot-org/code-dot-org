@@ -6,6 +6,8 @@ import Typography from '@cdo/apps/componentLibrary/typography';
 import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
 import i18n from '@cdo/locale';
 
+import {LABELED_TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
+
 import styles from './teacher-navigation.module.scss';
 
 interface SectionsData {
@@ -60,86 +62,55 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     );
   };
 
-  const courseContent = [
-    getSectionHeader(i18n.courseContent()),
-    <SidebarOption
-      icon={'desktop'}
-      isSelected={selectedOptionKey === 'courseOverview'}
-      sectionId={+selectedSectionId}
-      pathKey={'courseOverview'}
-      onClick={() => handleOptionClick('courseOverview')}
-    />,
-    <SidebarOption
-      sectionId={+selectedSectionId}
-      icon={'folder-open'}
-      isSelected={selectedOptionKey === 'lessonMaterials'}
-      pathKey={'lessonMaterials'}
-      onClick={() => handleOptionClick('lessonMaterials')}
-    />,
-    <SidebarOption
-      icon={'calendar'}
-      isSelected={selectedOptionKey === 'calendar'}
-      sectionId={+selectedSectionId}
-      pathKey={'calendar'}
-      onClick={() => handleOptionClick('calendar')}
-    />,
+  const coursecontentSectionTitle = getSectionHeader(i18n.courseContent());
+  const courseContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] = [
+    'courseOverview',
+    'lessonMaterials',
+    'calendar',
   ];
+
+  const performanceSectionTitle = getSectionHeader(i18n.performance());
+  const performanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
+    ['progress', 'assessments', 'projects', 'stats', 'textResponses'];
+
+  const classroomContentSectionTitle = getSectionHeader(i18n.classroom());
+  const classroomContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
+    ['manageStudents', 'settings'];
+
+  const getSidebarOptionsForSection = (sidebarKeys: string[]) => {
+    return sidebarKeys.map(key => (
+      <SidebarOption
+        isSelected={selectedOptionKey === key}
+        sectionId={+selectedSectionId}
+        pathKey={key as keyof typeof LABELED_TEACHER_NAVIGATION_PATHS}
+        onClick={() => handleOptionClick(key)}
+      />
+    ));
+  };
+
+  const courseContentSidebarOptions =
+    getSidebarOptionsForSection(courseContentKeys);
+
+  const courseContent = [
+    coursecontentSectionTitle,
+    ...courseContentSidebarOptions,
+  ];
+
+  const performanceContentSidebarOptions = getSidebarOptionsForSection(
+    performanceContentKeys
+  );
 
   const performanceContent = [
-    getSectionHeader(i18n.performance()),
-    <SidebarOption
-      icon={'chart-line'}
-      isSelected={selectedOptionKey === 'progress'}
-      sectionId={+selectedSectionId}
-      pathKey={'progress'}
-      onClick={() => handleOptionClick('progress')}
-    />,
-    <SidebarOption
-      icon={'star'}
-      isSelected={selectedOptionKey === 'assessments'}
-      sectionId={+selectedSectionId}
-      pathKey={'assessments'}
-      onClick={() => handleOptionClick('assessments')}
-    />,
-    <SidebarOption
-      icon={'code'}
-      isSelected={selectedOptionKey === 'projects'}
-      sectionId={+selectedSectionId}
-      pathKey={'projects'}
-      onClick={() => handleOptionClick('projects')}
-    />,
-    <SidebarOption
-      icon={'chart-simple'}
-      isSelected={selectedOptionKey === 'stats'}
-      sectionId={+selectedSectionId}
-      pathKey={'stats'}
-      onClick={() => handleOptionClick('stats')}
-    />,
-    <SidebarOption
-      icon={'pen-line'}
-      isSelected={selectedOptionKey === 'textResponses'}
-      sectionId={+selectedSectionId}
-      pathKey={'textResponses'}
-      onClick={() => handleOptionClick('textResponses')}
-    />,
+    performanceSectionTitle,
+    ...performanceContentSidebarOptions,
   ];
 
+  const classroomContentSidebarOptions =
+    getSidebarOptionsForSection(classroomContentKeys);
+
   const classroomContent = [
-    getSectionHeader(i18n.classroom()),
-    <SidebarOption
-      icon={'users'}
-      isSelected={selectedOptionKey === 'manageStudents'}
-      sectionId={+selectedSectionId}
-      pathKey={'manageStudents'}
-      onClick={() => handleOptionClick('manageStudents')}
-    />,
-    <SidebarOption
-      icon={'gear'}
-      isSelected={selectedOptionKey === 'settings'}
-      sectionId={+selectedSectionId}
-      pathKey={'settings'}
-      onClick={() => handleOptionClick('settings')}
-    />,
+    classroomContentSectionTitle,
+    ...classroomContentSidebarOptions,
   ];
 
   return (
