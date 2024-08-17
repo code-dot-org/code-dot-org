@@ -15,6 +15,11 @@ export const TEACHER_NAVIGATION_PATHS = {
   loginInfo: 'login_info',
   standardsReport: 'standards_report',
   aiTutorChatMessages: 'ai_tutor',
+  lessonMaterials: 'materials',
+  calendar: 'calendar',
+  courseOverview: 'course',
+  unitOverview: 'unit',
+  settings: 'settings',
 };
 
 const getAbsolutePath = (name: string) =>
@@ -65,5 +70,30 @@ export const LABELED_TEACHER_NAVIGATION_PATHS = {
     url: TEACHER_NAVIGATION_PATHS.aiTutorChatMessages,
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.aiTutorChatMessages),
     label: null,
+  },
+  lessonMaterials: {
+    url: TEACHER_NAVIGATION_PATHS.lessonMaterials,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.lessonMaterials),
+    label: i18n.lessonMaterials(),
+  },
+  calendar: {
+    url: TEACHER_NAVIGATION_PATHS.calendar,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.calendar),
+    label: i18n.calendar(),
+  },
+  courseOverview: {
+    url: TEACHER_NAVIGATION_PATHS.courseOverview,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.courseOverview),
+    label: i18n.course(),
+  },
+  unitOverview: {
+    url: TEACHER_NAVIGATION_PATHS.unitOverview,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.unitOverview),
+    label: i18n.unit(),
+  },
+  settings: {
+    url: TEACHER_NAVIGATION_PATHS.settings,
+    absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.settings),
+    label: i18n.settings(),
   },
 };

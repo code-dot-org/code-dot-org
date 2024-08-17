@@ -6,8 +6,6 @@ import Typography from '@cdo/apps/componentLibrary/typography';
 import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
 import i18n from '@cdo/locale';
 
-import {LABELED_TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
-
 import styles from './teacher-navigation.module.scss';
 
 interface SectionsData {
@@ -60,28 +58,21 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     getSectionHeader(i18n.courseContent()),
     <SidebarOption
       icon={'desktop'}
-      optionTitle={i18n.course()}
       isSelected={false}
+      sectionId={+selectedSectionId}
+      pathKey={'courseOverview'}
     />,
     <SidebarOption
+      sectionId={+selectedSectionId}
       icon={'folder-open'}
-      optionTitle={i18n.lessonMaterials()}
       isSelected={false}
-    />,
-    <SidebarOption
-      icon={'file-lines'}
-      optionTitle={i18n.lessonPlans()}
-      isSelected={false}
-    />,
-    <SidebarOption
-      icon={'presentation-screen'}
-      optionTitle={i18n.slideDecks()}
-      isSelected={false}
+      pathKey={'lessonMaterials'}
     />,
     <SidebarOption
       icon={'calendar'}
-      optionTitle={i18n.calendar()}
       isSelected={false}
+      sectionId={+selectedSectionId}
+      pathKey={'calendar'}
     />,
   ];
 
@@ -89,28 +80,33 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     getSectionHeader(i18n.performance()),
     <SidebarOption
       icon={'chart-line'}
-      optionTitle={LABELED_TEACHER_NAVIGATION_PATHS.progress.label}
       isSelected={false}
+      sectionId={+selectedSectionId}
+      pathKey={'progress'}
     />,
     <SidebarOption
       icon={'star'}
-      optionTitle={LABELED_TEACHER_NAVIGATION_PATHS.assessments.label}
       isSelected={false}
+      sectionId={+selectedSectionId}
+      pathKey={'assessments'}
     />,
     <SidebarOption
       icon={'code'}
-      optionTitle={LABELED_TEACHER_NAVIGATION_PATHS.projects.label}
       isSelected={true}
+      sectionId={+selectedSectionId}
+      pathKey={'projects'}
     />,
     <SidebarOption
       icon={'chart-simple'}
-      optionTitle={LABELED_TEACHER_NAVIGATION_PATHS.stats.label}
       isSelected={false}
+      sectionId={+selectedSectionId}
+      pathKey={'stats'}
     />,
     <SidebarOption
       icon={'pen-line'}
-      optionTitle={LABELED_TEACHER_NAVIGATION_PATHS.textResponses.label}
       isSelected={false}
+      sectionId={+selectedSectionId}
+      pathKey={'textResponses'}
     />,
   ];
 
@@ -118,13 +114,15 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     getSectionHeader(i18n.classroom()),
     <SidebarOption
       icon={'users'}
-      optionTitle={LABELED_TEACHER_NAVIGATION_PATHS.manageStudents.label}
       isSelected={false}
+      sectionId={+selectedSectionId}
+      pathKey={'manageStudents'}
     />,
     <SidebarOption
       icon={'gear'}
-      optionTitle={i18n.settings()}
       isSelected={false}
+      sectionId={+selectedSectionId}
+      pathKey={'settings'}
     />,
   ];
 
