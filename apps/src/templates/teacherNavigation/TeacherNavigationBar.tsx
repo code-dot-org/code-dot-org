@@ -77,6 +77,12 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   const classroomContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
     ['manageStudents', 'settings'];
 
+  const teacherNavigationBarContent = [
+    {title: coursecontentSectionTitle, keys: courseContentKeys},
+    {title: performanceSectionTitle, keys: performanceContentKeys},
+    {title: classroomContentSectionTitle, keys: classroomContentKeys},
+  ];
+
   const getSidebarOptionsForSection = (sidebarKeys: string[]) => {
     return sidebarKeys.map(key => (
       <SidebarOption
@@ -88,30 +94,11 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     ));
   };
 
-  const courseContentSidebarOptions =
-    getSidebarOptionsForSection(courseContentKeys);
+  const navbarComponents = teacherNavigationBarContent.map(({title, keys}) => {
+    const sidebarOptions = getSidebarOptionsForSection(keys);
 
-  const courseContent = [
-    coursecontentSectionTitle,
-    ...courseContentSidebarOptions,
-  ];
-
-  const performanceContentSidebarOptions = getSidebarOptionsForSection(
-    performanceContentKeys
-  );
-
-  const performanceContent = [
-    performanceSectionTitle,
-    ...performanceContentSidebarOptions,
-  ];
-
-  const classroomContentSidebarOptions =
-    getSidebarOptionsForSection(classroomContentKeys);
-
-  const classroomContent = [
-    classroomContentSectionTitle,
-    ...classroomContentSidebarOptions,
-  ];
+    return [title, ...sidebarOptions];
+  });
 
   return (
     <nav className={styles.sidebarContainer}>
@@ -132,9 +119,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
           className={styles.sectionDropdown}
           name="section-dropdown"
         />
-        {courseContent}
-        {performanceContent}
-        {classroomContent}
+        {navbarComponents.map(component => component)}
       </div>
     </nav>
   );
