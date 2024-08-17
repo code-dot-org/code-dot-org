@@ -74,7 +74,7 @@ module MailJet
       contact,
       EMAILS[:cap_section_warning],
       locale,
-      {capSections: sections}
+      variables: {capSections: sections}
     )
   end
 
