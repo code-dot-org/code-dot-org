@@ -85,25 +85,22 @@ async function generatePattern(
   temperature: number
 ) {
   if (!model) {
-    console.log('starting create');
-    console.time('ai_create_model');
+    console.time('AI: create model');
     model = new MusicRNN(
       'https://curriculum.code.org/media/musiclab/ai/music_rnn/drum_kit_rnn'
     );
-    console.timeLog('ai_create_model');
+    console.timeLog('AI: create model');
     await model.initialize();
-    console.timeEnd('ai_create_model');
-    console.log('ending create');
+    console.timeEnd('AI: create model');
   }
 
-  console.log('starting generate');
-  console.time('ai_generate_pattern');
+  console.time('AI: generate pattern');
   const seedSeq = toNoteSequence(seed);
   const result = model
     .continueSequence(seedSeq, length, temperature)
     .then(r => seed.concat(fromNoteSequence(r, length)));
-  console.timeEnd('ai_generate_pattern');
-  console.log('ending generate');
+  console.timeEnd('AI: generate pattern');
+
   return result;
 }
 
