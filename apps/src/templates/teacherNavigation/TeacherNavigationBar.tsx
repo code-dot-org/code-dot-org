@@ -25,6 +25,12 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     {value: string; text: string}[]
   >([]);
   const [selectedSectionId, setSelectedSectionId] = useState<string>('');
+  const [selectedOptionKey, setSelectedOptionKey] =
+    useState<string>('assessments');
+
+  const handleOptionClick = (pathKey: string) => {
+    setSelectedOptionKey(pathKey);
+  };
 
   useEffect(() => {
     const updatedSectionArray = Object.entries(sections)
@@ -58,21 +64,24 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     getSectionHeader(i18n.courseContent()),
     <SidebarOption
       icon={'desktop'}
-      isSelected={false}
+      isSelected={selectedOptionKey === 'courseOverview'}
       sectionId={+selectedSectionId}
       pathKey={'courseOverview'}
+      onClick={() => handleOptionClick('courseOverview')}
     />,
     <SidebarOption
       sectionId={+selectedSectionId}
       icon={'folder-open'}
-      isSelected={false}
+      isSelected={selectedOptionKey === 'lessonMaterials'}
       pathKey={'lessonMaterials'}
+      onClick={() => handleOptionClick('lessonMaterials')}
     />,
     <SidebarOption
       icon={'calendar'}
-      isSelected={false}
+      isSelected={selectedOptionKey === 'calendar'}
       sectionId={+selectedSectionId}
       pathKey={'calendar'}
+      onClick={() => handleOptionClick('calendar')}
     />,
   ];
 
@@ -80,33 +89,38 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     getSectionHeader(i18n.performance()),
     <SidebarOption
       icon={'chart-line'}
-      isSelected={false}
+      isSelected={selectedOptionKey === 'progress'}
       sectionId={+selectedSectionId}
       pathKey={'progress'}
+      onClick={() => handleOptionClick('progress')}
     />,
     <SidebarOption
       icon={'star'}
-      isSelected={false}
+      isSelected={selectedOptionKey === 'assessments'}
       sectionId={+selectedSectionId}
       pathKey={'assessments'}
+      onClick={() => handleOptionClick('assessments')}
     />,
     <SidebarOption
       icon={'code'}
-      isSelected={true}
+      isSelected={selectedOptionKey === 'projects'}
       sectionId={+selectedSectionId}
       pathKey={'projects'}
+      onClick={() => handleOptionClick('projects')}
     />,
     <SidebarOption
       icon={'chart-simple'}
-      isSelected={false}
+      isSelected={selectedOptionKey === 'stats'}
       sectionId={+selectedSectionId}
       pathKey={'stats'}
+      onClick={() => handleOptionClick('stats')}
     />,
     <SidebarOption
       icon={'pen-line'}
-      isSelected={false}
+      isSelected={selectedOptionKey === 'textResponses'}
       sectionId={+selectedSectionId}
       pathKey={'textResponses'}
+      onClick={() => handleOptionClick('textResponses')}
     />,
   ];
 
@@ -114,15 +128,17 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     getSectionHeader(i18n.classroom()),
     <SidebarOption
       icon={'users'}
-      isSelected={false}
+      isSelected={selectedOptionKey === 'manageStudents'}
       sectionId={+selectedSectionId}
       pathKey={'manageStudents'}
+      onClick={() => handleOptionClick('manageStudents')}
     />,
     <SidebarOption
       icon={'gear'}
-      isSelected={false}
+      isSelected={selectedOptionKey === 'settings'}
       sectionId={+selectedSectionId}
       pathKey={'settings'}
+      onClick={() => handleOptionClick('settings')}
     />,
   ];
 

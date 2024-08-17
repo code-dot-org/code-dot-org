@@ -14,6 +14,7 @@ interface SidebarOptionProps {
   isSelected: boolean;
   sectionId: number;
   pathKey: keyof typeof LABELED_TEACHER_NAVIGATION_PATHS;
+  onClick: () => void;
 }
 
 const SidebarOption: React.FC<SidebarOptionProps> = ({
@@ -21,6 +22,7 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
   isSelected,
   sectionId,
   pathKey,
+  onClick,
 }) => {
   // Perhaps UseMemo here instead of generating the path each time
   // const link = LABELED_TEACHER_NAVIGATION_PATHS[pathKey].absoluteUrl;
@@ -35,6 +37,7 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
       className={classNames(styles.sidebarOption, {
         [styles.selected]: isSelected,
       })}
+      onClick={onClick}
     >
       <FontAwesomeV6Icon className={styles.optionIcon} iconName={icon} />
       <BodyTwoText className={styles.linkText}>
