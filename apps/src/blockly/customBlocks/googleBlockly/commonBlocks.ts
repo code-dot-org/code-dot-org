@@ -10,7 +10,9 @@ import {
   BlocklyWrapperType,
   JavascriptGeneratorType,
 } from '@cdo/apps/blockly/types';
+import i18n from '@cdo/locale';
 
+import {BLOCK_TYPES} from '../../constants';
 import {readBooleanAttribute} from '../../utils';
 
 const mutatorProperties: string[] = [];
@@ -22,6 +24,20 @@ export const blocks = {
     blockly.Blocks.text_join_simple = blockly.Blocks.text_join;
     blockly.JavaScript.forBlock.text_join_simple =
       blockly.JavaScript.forBlock.text_join;
+  },
+  // We need to use a custom block so that English users will see "random color".
+  installCustomColourRandomBlock(blockly: BlocklyWrapperType) {
+    delete blockly.Blocks['colour_random'];
+    blockly.common.defineBlocks(
+      blockly.common.createBlockDefinitionsFromJsonArray([
+        {
+          type: BLOCK_TYPES.colourRandom,
+          message0: i18n.colourRandom(),
+          output: 'Colour',
+          style: 'colour_blocks',
+        },
+      ])
+    );
   },
   copyBlockGenerator(
     generator: JavascriptGeneratorType,
