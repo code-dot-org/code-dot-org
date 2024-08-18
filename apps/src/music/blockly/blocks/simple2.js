@@ -177,8 +177,17 @@ export const playPatternAtCurrentLocationSimple2 = {
 export const playPatternAiAtCurrentLocationSimple2 = {
   definition: {
     type: BlockTypes.PLAY_PATTERN_AI_AT_CURRENT_LOCATION_SIMPLE2,
-    message0: musicI18n.blockly_blockPlayPatternAi({pattern: '%1'}),
-    args0: [fieldPatternAiDefinition],
+    message0: musicI18n.blockly_blockPlayPatternAi({bot: '%1', pattern: '%2'}),
+    args0: [
+      {
+        type: 'field_image',
+        src: '/blockly/media/ai-bot-mini.svg',
+        width: 24,
+        height: 24,
+        alt: '',
+      },
+      fieldPatternAiDefinition,
+    ],
     inputsInline: true,
     previousStatement: null,
     nextStatement: null,
