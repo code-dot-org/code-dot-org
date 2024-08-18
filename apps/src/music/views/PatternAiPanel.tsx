@@ -110,6 +110,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     const isSeed = tick < 9;
     const isHighlighted = (tick - 1) % 4 === 0;
     const isActive = hasEvent(sound, tick);
+    const isPlaying = isActive && tick === currentPreviewTick;
 
     return classNames(
       styles.cell,
@@ -123,7 +124,8 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
         ? styles.cellGeneratedActive
         : !isSeed && isHighlighted
         ? styles.cellGeneratedHighlighted
-        : styles.cellGeneratedDefault
+        : styles.cellGeneratedDefault,
+      isPlaying && styles.cellPlaying
     );
   };
 

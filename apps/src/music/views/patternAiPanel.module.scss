@@ -83,6 +83,11 @@
     transition: 0.1s ease-in-out;
   }
 
+  &Playing {
+    transform: scale(1.8, 1.8);
+    transition: 0.01s ease-in-out;
+  }
+
   &Seed {
     &Default {
       background-color: #05343c;
