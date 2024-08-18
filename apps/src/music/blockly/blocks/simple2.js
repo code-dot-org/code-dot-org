@@ -5,6 +5,7 @@ import {
   TRIGGER_FIELD,
   FIELD_SOUNDS_NAME,
   FIELD_PATTERN_NAME,
+  FIELD_PATTERN_AI_NAME,
   FIELD_REST_DURATION_NAME,
   FIELD_EFFECTS_NAME,
   FIELD_EFFECTS_VALUE,
@@ -19,6 +20,7 @@ import {
 import {
   fieldSoundsDefinition,
   fieldPatternDefinition,
+  fieldPatternAiDefinition,
   fieldRestDurationDefinition,
   fieldChordDefinition,
   fieldTuneDefinition,
@@ -169,6 +171,24 @@ export const playPatternAtCurrentLocationSimple2 = {
   generator: block =>
     `Sequencer.playPattern(${JSON.stringify(
       block.getFieldValue(FIELD_PATTERN_NAME)
+    )}, "${block.id}");`,
+};
+
+export const playPatternAiAtCurrentLocationSimple2 = {
+  definition: {
+    type: BlockTypes.PLAY_PATTERN_AI_AT_CURRENT_LOCATION_SIMPLE2,
+    message0: musicI18n.blockly_blockPlayPatternAi({pattern: '%1'}),
+    args0: [fieldPatternAiDefinition],
+    inputsInline: true,
+    previousStatement: null,
+    nextStatement: null,
+    style: 'lab_blocks',
+    tooltip: musicI18n.blockly_blockPlayPatternAiTooltip(),
+    helpUrl: DOCS_BASE_URL + 'play_pattern_ai',
+  },
+  generator: block =>
+    `Sequencer.playPattern(${JSON.stringify(
+      block.getFieldValue(FIELD_PATTERN_AI_NAME)
     )}, "${block.id}");`,
 };
 

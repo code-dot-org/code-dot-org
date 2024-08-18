@@ -1,0 +1,96 @@
+@import "color.scss";
+
+.patternPanel {
+  font-size: 13px;
+  user-select: none;
+}
+
+.body {
+  display: flex;
+  justify-content: space-around;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: rgba($background_gray, 0.2);
+  }
+}
+
+.nameContainer {
+  display: inline-block;
+  width: 100px;
+  vertical-align: middle;
+  padding-left: 3px;
+
+  .name {
+    cursor: pointer;
+    user-select: none;
+  }
+}
+
+.outerCell {
+  display: inline-block;
+  padding: 5px 3px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &Playing {
+    background-color: $light-gray;
+  }
+}
+
+.aiBot {
+  width: 80px;
+  transition: 0.1s ease-in-out;
+  cursor: pointer;
+
+  &:hover{
+    transform: scale(1.05, 1.05);
+    transition: 0.1s ease-in-out;
+  }
+}
+
+.cell {
+  padding: 2px;
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+  transition: 0.1s ease-in-out;
+
+  &:hover{
+    transform: scale(1.4, 1.4);
+    transition: 0.1s ease-in-out;
+  }
+
+  &Seed {
+    &Default {
+      background-color: #05343c;
+    }
+
+    &Highlighted {
+      background-color: #074a55;
+    }
+
+    &Active {
+      background-color: #fca401;
+    }
+  }
+
+  &Generated {
+    &Default {
+      background-color: #222;
+    }
+
+    &Highlighted {
+      background-color: #222;
+    }
+
+    &Active {
+      background-color: white;
+    }
+  }
+}

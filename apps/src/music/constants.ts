@@ -54,6 +54,16 @@ export const DEFAULT_PATTERN = {
 
 export const DEFAULT_PATTERN_LENGTH = 1;
 
+// For reference, events look like this:
+// events: [{src: 'sound_1', tick: 3}]
+export const DEFAULT_PATTERN_AI = {
+  kit: 'drums',
+  length: 2,
+  events: [],
+};
+
+export const DEFAULT_PATTERN_AI_LENGTH = 2;
+
 // Type: ChordEventValue
 export const DEFAULT_CHORD = {
   instrument: 'piano',

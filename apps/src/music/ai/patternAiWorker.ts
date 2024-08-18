@@ -105,10 +105,11 @@ async function generatePattern(
 }
 
 function toNoteSequence(pattern: PatternTickEvent[]) {
+  const seedMeasures = 2;
   return sequences.quantizeNoteSequence(
     {
       ticksPerQuarter: 220,
-      totalTime: 4 / 2,
+      totalTime: (seedMeasures * 4) / 2,
       timeSignatures: [
         {
           time: 0,
@@ -150,7 +151,7 @@ function fromNoteSequence(
       ) {
         res.push({
           note: reverseMidiMapping.get(pitch) || 0,
-          tick: 4 + quantizedStartStep + 1, // 4 + quantizedStartStep * 2 + 1,
+          tick: 8 + quantizedStartStep + 1, // 4 + quantizedStartStep * 2 + 1,
           src: 'sound_' + ((reverseMidiMapping.get(pitch) || 0) + 1),
         });
       }

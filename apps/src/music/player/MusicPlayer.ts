@@ -5,6 +5,7 @@ import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import appConfig from '../appConfig';
 import {
   DEFAULT_PATTERN_LENGTH,
+  //DEFAULT_PATTERN_AI_LENGTH,
   DEFAULT_CHORD_LENGTH,
   DEFAULT_TUNE_LENGTH,
   MIN_BPM,
@@ -272,7 +273,7 @@ export default class MusicPlayer {
       when: 1,
       value: patternValue,
       triggered: false,
-      length: DEFAULT_PATTERN_LENGTH,
+      length: patternValue.length || DEFAULT_PATTERN_LENGTH,
       id: 'preview',
       blockId: 'preview',
     };
@@ -416,6 +417,9 @@ export default class MusicPlayer {
 
       const folder: SoundFolder | null = library.getFolderForFolderId(kit);
 
+      const length = patternEvent.value.length || DEFAULT_PATTERN_LENGTH;
+      const eventsLength = length * 16;
+
       if (folder === null) {
         this.metricsReporter.logWarning(`No kit ${kit}`);
         return [];
@@ -430,7 +434,7 @@ export default class MusicPlayer {
         const resultEvent = {
           id: `${folder.id}/${event.src}`,
           sampleUrl: library.generateSoundUrl(folder, soundData),
-          playbackPosition: patternEvent.when + (event.tick - 1) / 16,
+          playbackPosition: patternEvent.when + (event.tick - 1) / eventsLength,
           triggered: patternEvent.triggered,
           effects: patternEvent.effects,
           originalBpm: this.bpm,
