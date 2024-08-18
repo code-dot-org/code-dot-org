@@ -60,6 +60,7 @@ export function generateGraphDataFromPattern({
       y: 1 + padding + (soundIndex * useHeight) / (numSounds - 1),
       width: noteWidth,
       height: noteHeight,
+      tick: event.tick,
     };
   });
 }

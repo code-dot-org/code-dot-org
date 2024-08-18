@@ -157,7 +157,7 @@ class FieldPatternAi extends GoogleBlockly.Field {
       GoogleBlockly.utils.dom.createSvgElement(
         'rect',
         {
-          fill: color.neutral_light,
+          fill: graphNote.tick < 9 ? '#fca401' : color.neutral_light,
           x: graphNote.x,
           y: graphNote.y,
           width: graphNote.width,
