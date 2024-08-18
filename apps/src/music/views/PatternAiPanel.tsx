@@ -14,6 +14,8 @@ const aiBotImages = [
   require(`@cdo/static/music/ai/ai-bot-3.png`),
 ];
 
+const arrowImage = require(`@cdo/static/music/music-callout-arrow.png`);
+
 import {generatePattern} from '../ai/patternAi';
 import {PatternEventValue} from '../player/interfaces/PatternEvent';
 import MusicLibrary, {SoundData} from '../player/MusicLibrary';
@@ -66,6 +68,18 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
   const availableKits = useMemo(() => {
     return library.kits;
   }, [library.kits]);
+
+  const [userTask, setUserTask] = useState('none');
+
+  useEffect(() => {
+    if (currentValue.events.some(event => event.tick >= 9)) {
+      setUserTask('generated');
+    } else if (currentValue.events.length >= 4) {
+      if (userTask === 'none') {
+        setUserTask('drawnDrums');
+      }
+    }
+  }, [currentValue.events, userTask]);
 
   const currentFolder = useMemo(() => {
     // Default to the first available kit if the current kit is not found in this library.
@@ -120,6 +134,8 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
         ? styles.cellSeedHighlighted
         : isSeed
         ? styles.cellSeedDefault
+        : userTask !== 'generated'
+        ? styles.cellGeneratedInvisible
         : !isSeed && isActive
         ? styles.cellGeneratedActive
         : !isSeed && isHighlighted
@@ -183,6 +199,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
         events: newEvents,
       };
       onChange(newValue);
+
       startPreview(newValue);
     });
   }, [currentValue, onChange, aiTemperature, startPreview]);
@@ -211,8 +228,51 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
       </select>
 
       <LoadingOverlay show={isLoading} />
+
       <div className={styles.body}>
-        <div className={styles.editor}>
+        {userTask === 'none' && (
+          <div className={styles.helpContainer}>
+            <div className={classNames(styles.help, styles.helpDrawDrums)}>
+              Click to set up the start of your drums.
+            </div>
+            <div
+              className={classNames(
+                styles.arrowContainer,
+                styles.arrowContainerDrawDrums
+              )}
+            >
+              <div
+                id="callout-arrow"
+                className={classNames(styles.arrow, styles.arrowLeft)}
+              >
+                <img src={arrowImage} alt="" />
+              </div>
+            </div>
+          </div>
+        )}
+        {userTask === 'drawnDrums' && (
+          <div className={styles.helpContainer}>
+            <div className={classNames(styles.help, styles.helpGenerate)}>
+              Click on A.I. and it will generate more drums based on what you
+              started.
+            </div>
+            <div
+              className={classNames(
+                styles.arrowContainer,
+                styles.arrowContainerGenerate
+              )}
+            >
+              <div
+                id="callout-arrow"
+                className={classNames(styles.arrow, styles.arrowRight)}
+              >
+                <img src={arrowImage} alt="" />
+              </div>
+            </div>
+          </div>
+        )}
+
+        <div className={styles.leftArea}>
           {currentFolder.sounds.map((sound, index) => {
             return (
               <div className={styles.row} key={sound.src}>
@@ -226,45 +286,55 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
                     {sound.name}
                   </span>
                 </div>
-                {arrayOfTicks.map(tick => {
-                  return (
-                    <div
-                      className={classNames(
-                        styles.outerCell,
-                        tick === currentPreviewTick && styles.outerCellPlaying
-                      )}
-                      onClick={() => toggleEvent(sound, tick, index)}
-                      key={tick}
-                    >
-                      <div className={getCellClasses(sound, tick)} />
-                    </div>
-                  );
-                })}
+                {arrayOfTicks
+                  .filter(tick => userTask === 'generated' || tick < 9)
+                  .map(tick => {
+                    return (
+                      <div
+                        className={classNames(
+                          styles.outerCell,
+                          tick === currentPreviewTick && styles.outerCellPlaying
+                        )}
+                        onClick={() => toggleEvent(sound, tick, index)}
+                        key={tick}
+                      >
+                        <div className={getCellClasses(sound, tick)} />
+                      </div>
+                    );
+                  })}
               </div>
             );
           })}
         </div>
 
-        <div className={styles.botArea}>
-          <img
-            src={aiBotImage}
-            alt=""
-            className={styles.aiBot}
-            onClick={handleAiClick}
-          />
-          <div>
-            <input
-              type="range"
-              min={aiTemperatureMin}
-              max={aiTemperatureMax}
-              step={0.1}
-              value={aiTemperature}
-              onChange={event => {
-                setAiTemperature(event.target.valueAsNumber);
-              }}
-              className={styles.temperatureInput}
+        <div className={styles.rightArea}>
+          <div
+            className={classNames(
+              styles.botArea,
+              ['drawnDrums', 'generated'].includes(userTask) &&
+                styles.botAreaVisible
+            )}
+          >
+            <img
+              src={aiBotImage}
+              alt=""
+              className={styles.aiBot}
+              onClick={handleAiClick}
             />
-            <div className={styles.temperatureText}>{aiTemperature}</div>
+            <div>
+              <input
+                type="range"
+                min={aiTemperatureMin}
+                max={aiTemperatureMax}
+                step={0.1}
+                value={aiTemperature}
+                onChange={event => {
+                  setAiTemperature(event.target.valueAsNumber);
+                }}
+                className={styles.temperatureInput}
+              />
+              <div className={styles.temperatureText}>{aiTemperature}</div>
+            </div>
           </div>
         </div>
       </div>

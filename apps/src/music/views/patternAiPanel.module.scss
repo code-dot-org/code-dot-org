@@ -1,5 +1,25 @@
 @import "color.scss";
 
+// Move the arrow up and down.
+@keyframes up-down {
+  0%, 100% {
+    top: 10px;
+  }
+  50% {
+    top: 0;
+  }
+}
+
+// Move the arrow left and right.
+@keyframes left-right {
+  0%, 100% {
+    left: 10px;
+  }
+  50% {
+    left: 0;
+  }
+}
+
 .patternPanel {
   font-size: 13px;
   user-select: none;
@@ -8,6 +28,13 @@
 .body {
   display: flex;
   justify-content: space-around;
+}
+
+.leftArea {
+  width: 744px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .row {
@@ -42,12 +69,21 @@
   }
 }
 
+.rightArea {
+  width: 100px;
+}
+
 .botArea {
-  float: right;
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: center;
+  opacity: 0;
+  transition: 0.1s ease-in-out;
+
+  &Visible {
+    opacity: 1;
+  }
 }
 
 .temperatureInput {
@@ -103,6 +139,11 @@
   }
 
   &Generated {
+    &Invisible {
+      opacity: 0;
+      pointer-events: none;
+    }
+
     &Default {
       background-color: #222;
     }
@@ -114,5 +155,58 @@
     &Active {
       background-color: white;
     }
+  }
+}
+
+.helpContainer {
+  display: contents;
+}
+
+.help {
+  position: absolute;
+  font-size: 14px;
+  background-color: white;
+  color: black;
+  padding: 14px;
+  border-radius: 4px;
+  max-width: 300px;
+
+  &DrawDrums {
+    left: 370px;
+    top: 80px;
+  }
+
+  &Generate {
+    top: 120px;
+    right: 190px;
+  }
+}
+
+.arrowContainer {
+  position: absolute;
+
+  &DrawDrums {
+    left: 310px;
+    top: 90px;
+  }
+
+  &Generate {
+    right: 170px;
+    top: 135px;
+  }
+}
+
+.arrow {
+  position: absolute;
+  width: 32px;
+
+  &Left {
+    transform: rotate(270deg);
+    animation: left-right 0.75s infinite;
+  }
+
+  &Right {
+    transform: rotate(90deg);
+    animation: left-right 0.75s infinite;
   }
 }
