@@ -42,6 +42,23 @@
   }
 }
 
+.botArea {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.temperatureInput {
+  width: 100px;
+  height: 5px;
+}
+
+.temperatureText {
+  text-align: center;
+}
+
 .aiBot {
   width: 80px;
   transition: 0.1s ease-in-out;

@@ -132,13 +132,16 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     onChange(currentValue);
   }, [onChange, currentValue]);
 
-  const startPreview = useCallback(() => {
-    previewPattern(
-      currentValue,
-      (tick: number) => setCurrentPreviewTick(tick),
-      () => setCurrentPreviewTick(0)
-    );
-  }, [previewPattern, setCurrentPreviewTick, currentValue]);
+  const startPreview = useCallback(
+    (value: PatternEventValue) => {
+      previewPattern(
+        value,
+        (tick: number) => setCurrentPreviewTick(tick),
+        () => setCurrentPreviewTick(0)
+      );
+    },
+    [previewPattern, setCurrentPreviewTick]
+  );
 
   const stopPreview = useCallback(() => {
     setCurrentPreviewTick(0);
@@ -171,15 +174,16 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
 
   const handleAiClick = useCallback(async () => {
     const seedEvents = currentValue.events.filter(event => event.tick <= 8);
-    generatePattern(seedEvents, 32 - 8, aiTemperature, newEvents => {
+    generatePattern(seedEvents, 8, 32 - 8, aiTemperature, newEvents => {
       const newValue: PatternEventValue = {
         kit: currentValue.kit,
         length: currentValue.length,
         events: newEvents,
       };
       onChange(newValue);
+      startPreview(newValue);
     });
-  }, [currentValue, onChange, aiTemperature]);
+  }, [currentValue, onChange, aiTemperature, startPreview]);
 
   const aiTemperatureMin = 0.5;
   const aiTemperatureMax = 2;
@@ -239,15 +243,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
           })}
         </div>
 
-        <div
-          style={{
-            float: 'right',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 20,
-            alignItems: 'center',
-          }}
-        >
+        <div className={styles.botArea}>
           <img
             src={aiBotImage}
             alt=""
@@ -264,26 +260,16 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
               onChange={event => {
                 setAiTemperature(event.target.valueAsNumber);
               }}
-              style={{width: 100, height: 5}}
+              className={styles.temperatureInput}
             />
-            <div
-              style={{
-                textAlign: 'center',
-                //width: 20,
-                //marginLeft: 5,
-                //marginRight: 15,
-                //textAlign: 'right',
-              }}
-            >
-              {aiTemperature}
-            </div>
+            <div className={styles.temperatureText}>{aiTemperature}</div>
           </div>
         </div>
       </div>
 
       <PreviewControls
         enabled={currentValue.events.length > 0}
-        playPreview={startPreview}
+        playPreview={() => startPreview(currentValue)}
         onClickClear={onClear}
         cancelPreviews={stopPreview}
         isPlayingPreview={currentPreviewTick > 0}

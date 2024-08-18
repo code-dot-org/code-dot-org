@@ -74,14 +74,20 @@ const reverseMidiMapping = new Map([
 
 onmessage = async e => {
   if (e.data[0] === 'generatePattern') {
-    const result = await generatePattern(e.data[1], e.data[2], e.data[3]);
+    const result = await generatePattern(
+      e.data[1],
+      e.data[2],
+      e.data[3],
+      e.data[4]
+    );
     postMessage(['result', result]);
   }
 };
 
 async function generatePattern(
   seed: PatternTickEvent[],
-  length: number,
+  seedLength: number,
+  generateLength: number,
   temperature: number
 ) {
   if (!model) {
@@ -95,21 +101,20 @@ async function generatePattern(
   }
 
   console.time('AI: generate pattern');
-  const seedSeq = toNoteSequence(seed);
+  const seedSeq = toNoteSequence(seed, seedLength);
   const result = model
-    .continueSequence(seedSeq, length, temperature)
-    .then(r => seed.concat(fromNoteSequence(r, length)));
+    .continueSequence(seedSeq, generateLength, temperature)
+    .then(r => seed.concat(fromNoteSequence(r, generateLength)));
   console.timeEnd('AI: generate pattern');
 
   return result;
 }
 
-function toNoteSequence(pattern: PatternTickEvent[]) {
-  const seedMeasures = 2;
+function toNoteSequence(pattern: PatternTickEvent[], patternLength: number) {
   return sequences.quantizeNoteSequence(
     {
       ticksPerQuarter: 220,
-      totalTime: (seedMeasures * 4) / 2,
+      totalTime: patternLength / 2,
       timeSignatures: [
         {
           time: 0,
