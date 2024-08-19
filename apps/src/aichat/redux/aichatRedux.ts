@@ -17,6 +17,7 @@ import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {registerReducers} from '@cdo/apps/redux';
 import {RootState} from '@cdo/apps/types/redux';
+import experiments from '@cdo/apps/util/experiments';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
@@ -399,7 +400,8 @@ export const submitChatContents = createAsyncThunk(
         newUserMessage,
         chatEventsCurrent.filter(isChatMessage) as ChatMessage[],
         aiCustomizations,
-        aichatContext
+        aichatContext,
+        experiments.isEnabled(experiments.AICHAT_POLLING)
       );
     } catch (error) {
       Lab2Registry.getInstance()
@@ -407,13 +409,15 @@ export const submitChatContents = createAsyncThunk(
         .logError('Error in aichat completion request', error as Error);
 
       thunkAPI.dispatch(clearChatMessagePending());
-      addChatEvent({...newUserMessage, status: Status.ERROR});
-      addChatEvent({
-        role: Role.ASSISTANT,
-        status: Status.ERROR,
-        chatMessageText: 'error',
-        timestamp: Date.now(),
-      });
+      dispatch(addChatEvent({...newUserMessage, status: Status.ERROR}));
+      dispatch(
+        addChatEvent({
+          role: Role.ASSISTANT,
+          status: Status.ERROR,
+          chatMessageText: 'error',
+          timestamp: Date.now(),
+        })
+      );
       return;
     }
 
