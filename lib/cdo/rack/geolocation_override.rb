@@ -28,7 +28,7 @@ module Rack
 
       # Also override the data cloudfront is providing
       # See: RequestExtension.country in lib/cdo/rack/request.rb
-      location = Geocoder.search(request.ip).try(:first)
+      location = Geocoder.search(env['REMOTE_ADDR']).try(:first)
       country_code = location&.country_code.to_s.upcase
       env['HTTP_CLOUDFRONT_VIEWER_COUNTRY'] = country_code if country_code
 
