@@ -18,11 +18,17 @@ import {
 } from './types';
 
 const ROOT_URL = '/aichat';
-const CHAT_COMPLETION_URL = '/aichat/chat_completion';
-const CHAT_CHECK_SAFETY_URL = '/aichat/check_message_safety';
-const LOG_CHAT_EVENT_URL = '/aichat/log_chat_event';
+const paths = {
+  CHAT_COMPLETION_URL: `${ROOT_URL}/chat_completion`,
+  CHAT_CHECK_SAFETY_URL: `${ROOT_URL}/check_message_safety`,
+  LOG_CHAT_EVENT_URL: `${ROOT_URL}/log_chat_event`,
+  START_CHAT_COMPLETION_URL: `${ROOT_URL}/start_chat_completion`,
+  GET_CHAT_REQUEST_URL: `${ROOT_URL}/chat_request`,
+};
+
 const MAX_POLLING_TIME_MS = 45000;
 const MIN_POLLING_INTERVAL_MS = 1000;
+const DEFAULT_BACKOFF_RATE = 1;
 
 /**
  * This function formats chat completion messages and aichatParameters, sends a POST request
@@ -47,7 +53,7 @@ export async function postAichatCompletionMessage(
   };
 
   if (useAsyncPolling) {
-    return chatCompletionAsyncPolling(
+    return postChatCompletionAsyncPolling(
       newMessage,
       storedMessages,
       aichatModelCustomizations,
@@ -64,7 +70,7 @@ export async function postAichatCompletionMessage(
     ...(sessionId ? {sessionId} : {}),
   };
   const response = await HttpClient.post(
-    CHAT_COMPLETION_URL,
+    paths.CHAT_COMPLETION_URL,
     JSON.stringify(payload),
     true,
     {
@@ -88,7 +94,7 @@ export async function postLogChatEvent(
     aichatContext,
   };
   const response = await HttpClient.post(
-    LOG_CHAT_EVENT_URL,
+    paths.LOG_CHAT_EVENT_URL,
     JSON.stringify(payload),
     true,
     {
@@ -115,7 +121,7 @@ export async function postAichatCheckSafety(
     message,
   };
   const response = await HttpClient.post(
-    CHAT_CHECK_SAFETY_URL,
+    paths.CHAT_CHECK_SAFETY_URL,
     JSON.stringify(payload),
     true,
     {
@@ -140,7 +146,7 @@ export interface GetChatRequestResponse {
 /**
  * Perform chat completion by initiating an asynchronous request and polling for the response.
  */
-async function chatCompletionAsyncPolling(
+async function postChatCompletionAsyncPolling(
   newMessage: ChatMessage,
   storedMessages: ChatMessage[],
   aichatModelCustomizations: AichatModelCustomizations,
@@ -155,7 +161,7 @@ async function chatCompletionAsyncPolling(
   };
 
   const response = await HttpClient.post(
-    `${ROOT_URL}/start_chat_completion`,
+    paths.START_CHAT_COMPLETION_URL,
     JSON.stringify(payload),
     true,
     {
@@ -170,20 +176,22 @@ async function chatCompletionAsyncPolling(
   } = (await response.json()) as StartChatCompletionResponse;
 
   const startTime = Date.now();
-  const backoffRate = serverBackoffRate || 1; // In case the server doesn't return a backoff rate
+  const backoffRate = serverBackoffRate || DEFAULT_BACKOFF_RATE;
 
   let executionStatus: ValueOf<typeof AiRequestExecutionStatus> =
     AiRequestExecutionStatus.NOT_STARTED;
   let currentInterval = Math.max(pollingIntervalMs, MIN_POLLING_INTERVAL_MS);
   let modelResponse: string = '';
 
+  // Poll for the chat completion request status. We will keep checking until the
+  // request status is greater than RUNNING or QUEUED, or until we reach the max polling time.
   while (
     executionStatus < AiRequestExecutionStatus.SUCCESS &&
     Date.now() - startTime < maxPollingTimeMs
   ) {
     await new Promise(resolve => setTimeout(resolve, currentInterval));
     const chatResponse = await HttpClient.fetchJson<GetChatRequestResponse>(
-      `${ROOT_URL}/chat_request/${requestId}`
+      `${paths.GET_CHAT_REQUEST_URL}/${requestId}`
     );
     executionStatus = chatResponse.value.executionStatus;
     modelResponse = chatResponse.value.response;

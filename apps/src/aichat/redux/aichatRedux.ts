@@ -401,7 +401,7 @@ export const submitChatContents = createAsyncThunk(
         aiCustomizations,
         aichatContext,
         currentSessionId,
-        experiments.isEnabled('aichat-polling')
+        experiments.isEnabled(experiments.AICHAT_POLLING)
       );
     } catch (error) {
       Lab2Registry.getInstance()
@@ -409,13 +409,15 @@ export const submitChatContents = createAsyncThunk(
         .logError('Error in aichat completion request', error as Error);
 
       thunkAPI.dispatch(clearChatMessagePending());
-      addChatEvent({...newUserMessage, status: Status.ERROR});
-      addChatEvent({
-        role: Role.ASSISTANT,
-        status: Status.ERROR,
-        chatMessageText: 'error',
-        timestamp: Date.now(),
-      });
+      dispatch(addChatEvent({...newUserMessage, status: Status.ERROR}));
+      dispatch(
+        addChatEvent({
+          role: Role.ASSISTANT,
+          status: Status.ERROR,
+          chatMessageText: 'error',
+          timestamp: Date.now(),
+        })
+      );
       return;
     }
 
