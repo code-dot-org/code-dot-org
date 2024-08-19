@@ -637,6 +637,7 @@ const initialState = {
   studentSectionIds: [],
   plSectionIds: [],
   selectedSectionId: NO_SECTION,
+  selectedSectionName: '',
   // Array of course offerings, to populate the assignment dropdown
   // with options like "CSD", "Course A", or "Frozen". See the
   // assignmentCourseOfferingShape PropType.
@@ -844,9 +845,13 @@ export default function teacherSections(state = initialState, action) {
       sectionId = NO_SECTION;
     }
 
+    const sectionName =
+      sectionId !== NO_SECTION ? state.sections[sectionId].name : '';
+
     return {
       ...state,
       selectedSectionId: sectionId,
+      selectedSectionName: sectionName,
     };
   }
 

@@ -9,31 +9,21 @@ import {
 } from 'react-router-dom';
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
-import {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
-import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 
 import ManageStudents from '../manageStudents/ManageStudents';
-import {
-  setLoginType,
-  setShowSharingColumn,
-} from '../manageStudents/manageStudentsRedux';
 import SectionProjectsListWithData from '../projects/SectionProjectsListWithData';
 import SectionAssessments from '../sectionAssessments/SectionAssessments';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
 import SectionLoginInfo from '../teacherDashboard/SectionLoginInfo';
 import StatsTableWithData from '../teacherDashboard/StatsTableWithData';
-import {
-  selectSection,
-  setRosterProvider,
-  setRosterProviderName,
-  setStudentsForCurrentSection,
-} from '../teacherDashboard/teacherSectionsRedux';
+import {sectionProviderName} from '../teacherDashboard/teacherSectionsRedux';
 import TextResponses from '../textResponses/TextResponses';
 
 import DefaultTeacherNavRedirect from './DefaultTeacherNavRedirect';
 import ElementOrEmptyPage from './ElementOrEmptyPage';
 import PageHeader from './PageHeader';
+import {asyncLoadSelectedSection} from './selectedSectionLoader';
 import TeacherNavigationBar from './TeacherNavigationBar';
 import {
   SPECIFIC_SECTION_BASE_URL,
@@ -44,27 +34,29 @@ import {
 
 import styles from './teacher-navigation.module.scss';
 
+// Temporary typing until we add teacherSections to `RootState`
+interface TemporaryReduxState {
+  teacherSections: {
+    selectedSectionId: number | undefined;
+    selectedSectionName: string;
+    // Temporary typing
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    selectedStudents: any[];
+    rosterProviderName: string;
+    // Temporary typin
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    sections: any[];
+  };
+}
+
 interface TeacherNavigationRouterProps {
   studioUrlPrefix: string;
-  sectionId: number;
+  sectionId: number | undefined;
   sectionName: string;
   studentCount: number;
   anyStudentHasProgress: boolean;
   showAITutorTab: boolean;
   sectionProviderName: string;
-  selectSection: (selectedSectionId: number) => void;
-  setScriptId: (scriptId: number) => void;
-  setStudentsForCurrentSection: (
-    sectionId: number,
-    students: {
-      id: number;
-      name: string;
-    }[]
-  ) => void;
-  setShowSharingColumn: (showSharingColumn: boolean) => void;
-  setLoginType: (loginType: string) => void;
-  setRosterProvider: (rosterProvider: string) => void;
-  setRosterProviderName: (rosterProviderName: string) => void;
 }
 
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
@@ -79,13 +71,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   anyStudentHasProgress,
   showAITutorTab,
   sectionProviderName,
-  selectSection,
-  setScriptId,
-  setStudentsForCurrentSection,
-  setShowSharingColumn,
-  setLoginType,
-  setRosterProvider,
-  setRosterProviderName,
 }) => {
   const routes = (
     <Route
@@ -106,43 +91,9 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           </div>
         }
         loader={async ({params}) => {
-          const response = await fetch(
-            `/dashboardapi/section/${params.sectionId}`,
-            {
-              method: 'GET',
-              headers: {
-                'Content-Type': 'application/json',
-                'X-CSRF-Token': await getAuthenticityToken(),
-              },
-            }
-          );
-          response.json().then(selectedSection => {
-            console.log('lfm', selectedSection);
-
-            selectSection(selectedSection.id);
-
-            setStudentsForCurrentSection(
-              selectedSection.id,
-              selectedSection.students
-            );
-            // Default the scriptId to the script assigned to the section
-            const defaultScriptId = selectedSection.script
-              ? selectedSection.script.id
-              : null;
-            if (defaultScriptId) {
-              setScriptId(defaultScriptId);
-            }
-
-            if (
-              !selectedSection.sharing_disabled &&
-              selectedSection.script.project_sharing
-            ) {
-              setShowSharingColumn(true);
-            }
-            setLoginType(selectedSection.login_type);
-            setRosterProvider(selectedSection.login_type);
-            setRosterProviderName(selectedSection.login_type_name);
-          });
+          if (params.sectionId) {
+            await asyncLoadSelectedSection(params.sectionId);
+          }
           return null;
         }}
       >
@@ -254,7 +205,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                 showNoStudents={studentCount === 0}
                 showNoCurriculumAssigned={!anyStudentHasProgress}
                 element={applyV1TeacherDashboardWidth(
-                  <TutorTab sectionId={sectionId} />
+                  <TutorTab sectionId={sectionId || 0} />
                 )}
               />
             }
@@ -273,33 +224,12 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   );
 };
 
-export default connect(
-  state => ({}),
-  dispatch => ({
-    selectSection(selectedSectionId: number) {
-      dispatch(selectSection(selectedSectionId));
-    },
-    setScriptId(scriptId: number) {
-      console.log('lfm', scriptId);
-      dispatch(setScriptId(scriptId));
-    },
-    setStudentsForCurrentSection(
-      id: number,
-      students: {id: number; name: string}[]
-    ) {
-      dispatch(setStudentsForCurrentSection(id, students));
-    },
-    setShowSharingColumn(showSharingColumn: boolean) {
-      dispatch(setShowSharingColumn(showSharingColumn));
-    },
-    setLoginType(loginType: string) {
-      dispatch(setLoginType(loginType));
-    },
-    setRosterProvider(rosterProvider: string) {
-      dispatch(setRosterProvider(rosterProvider));
-    },
-    setRosterProviderName(rosterProviderName: string) {
-      dispatch(setRosterProviderName(rosterProviderName));
-    },
-  })
-)(TeacherNavigationRouter);
+export default connect((state: TemporaryReduxState) => ({
+  sectionId: state.teacherSections.selectedSectionId,
+  sectionName: state.teacherSections.selectedSectionName,
+  studentCount: state.teacherSections.selectedStudents.length,
+  sectionProviderName: sectionProviderName(
+    state,
+    state.teacherSections.selectedSectionId
+  ),
+}))(TeacherNavigationRouter);

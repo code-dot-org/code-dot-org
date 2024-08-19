@@ -4,7 +4,7 @@ import {generatePath, Navigate} from 'react-router-dom';
 import {TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
 
 interface DefaultTeacherNavRedirectProps {
-  sectionId: number;
+  sectionId: number | undefined;
   studentCount: number;
 }
 
