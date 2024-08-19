@@ -149,7 +149,8 @@ class MailJetTest < Minitest::Test
 
     MailJet.expects(:update_contact_field).with(mock_contactdata, 'sign_up_date', sign_up_time.rfc3339)
 
-    MailJet.expects(:add_to_contact_list).with(mock_contactdata, MailJet::CONTACT_LISTS[:welcome_series][:default])
+    MailJet.stubs(:subaccount).returns('development')
+    MailJet.expects(:add_to_contact_list).with(mock_contactdata, MailJet::CONTACT_LISTS[:welcome_series][:development][:default])
 
     MailJet.create_contact_and_add_to_welcome_series(user)
   end
@@ -170,7 +171,8 @@ class MailJetTest < Minitest::Test
 
     MailJet.expects(:update_contact_field).with(mock_contactdata, 'sign_up_date', sign_up_time.rfc3339)
 
-    MailJet.expects(:add_to_contact_list).with(mock_contactdata, MailJet::CONTACT_LISTS[:welcome_series][:'es-MX'])
+    MailJet.stubs(:subaccount).returns('development')
+    MailJet.expects(:add_to_contact_list).with(mock_contactdata, MailJet::CONTACT_LISTS[:welcome_series][:development][:'es-MX'])
 
     MailJet.create_contact_and_add_to_welcome_series(user, 'es-MX')
   end

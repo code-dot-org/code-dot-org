@@ -165,9 +165,6 @@ module CourseBlockHelper
         body: data_t_suffix('script.name', id, 'description_short'),
         teacher_guide: CDO.code_org_url("/hourofcode/playlab")
       },
-      Unit::SPORTS_NAME => {
-        url: CDO.code_org_url('/athletes')
-      },
       Unit::STARWARS_BLOCKS_NAME => {
         url: CDO.code_org_url('/starwars'),
         body: data_t_suffix('script.name', id, 'description_short'),

@@ -37,6 +37,7 @@ Feature: Age Gated Students Modal and Banner
     And I wait until element "a:contains('Untitled Section')" is visible
     And I save the section id from row 0 of the section table
     Then I navigate to teacher dashboard for the section I saved
+    And I wait until element "h3" contains text "It's a bit empty here..."
 
     # Click on Age Gated Banner Learn More button to view Age Gated Students Modal
     And I wait until element "#uitest-age-gated-banner" is visible
