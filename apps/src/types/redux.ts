@@ -20,6 +20,7 @@ import {MapboxState} from '@cdo/apps/redux/mapbox';
 import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
 
 import {BlocklyState} from '../redux/blockly';
+import {TeacherSectionsState} from '../templates/teacherDashboard/TeacherSectionsState';
 
 // The type for our global redux store. This is incomplete until we type every slice
 // of our redux store. When converting a slice to typescript, add it to this object
@@ -47,4 +48,5 @@ export interface RootState {
   music: MusicState;
   predictLevel: PredictLevelState;
   progress: ProgressState;
+  teacherSections: TeacherSectionsState;
 }
