@@ -3,9 +3,9 @@
 require_relative '../../../dashboard/config/environment'
 require 'cdo/aws/s3'
 require 'json'
-require 'json-schema'
 require 'uri'
 require 'date'
+require 'csv'
 require 'cdo/redshift'
 require 'aws-sdk-sts'
 
@@ -15,11 +15,17 @@ require 'aws-sdk-sts'
 
 CDO.log = Logger.new($stdout)
 
-options = {actually_update: false}
+options = {actually_redeliver: false}
 OptionParser.new do |opts|
   opts.banner = "Usage: #{File.basename(__FILE__)} [options]"
-  opts.on('-u', '--actually-update', 'Actually perform the update.') do
-    options[:actually_update] = true
+  opts.on('-a', '--actually-redeliver', 'Actually redeliver records batches to Redshift.') do
+    options[:actually_redeliver] = false
+  end
+  opts.on('-m', '--modify-invalid', 'Attempt to modify (truncate, remove invalid characters) invalid records.') do
+    options[:modify_invalid] = true
+  end
+  opts.on('-l', '--batch-log-file', 'Filename to log batch reprocessing status.') do
+    options[:batch_log_file] = 'batch_redelivery_log.csv'
   end
   opts.on('-h', '--help', 'Add -u to perform the update.') do
     puts opts
@@ -28,19 +34,13 @@ OptionParser.new do |opts|
 end.parse!
 CDO.log.info "Called with options: #{options}"
 
-# To speed up the queries, we limit the query to an id range that we know covers
-# all possible affected users
-START_DATE_TIME = 71_826_397
-END_DATE_TIME = 71_929_059
-
-# batches_delivered = 0
-# batches_failed = 0
-# records_delivered = 0
-# records_failed = 0
+# TODO: Limit the range of batches to reprocess. Until then, pick a single prefix and reprocess all matching error manifests.
+ERROR_MANIFESTS_PREFIX = 'errors/manifests/2024/07/14'.freeze
+# START_DATE_TIME = ???
+# END_DATE_TIME = ???
 
 FIREHOSE_STREAM = 'analysis-events'.freeze
 FIREHOSE_INTERMEDIATE_BUCKET = 'firehose-analysis-events'.freeze
-ERROR_MANIFESTS_PREFIX = 'errors/manifests/2024/07/14'.freeze
 REDELIVER_DATA_PREFIX = 'redeliveries'.freeze
 REDELIVERY_MANIFESTS_PREFIX = REDELIVER_DATA_PREFIX + '/manifests'
 REDELIVERY_ERROR_MANIFESTS_PREFIX = REDELIVER_DATA_PREFIX + '/errors'
@@ -127,7 +127,7 @@ class RecordValidationError < StandardError
   end
 end
 
-def validate_record(record, schema, truncate: false)
+def validate_record(record, schema, modify_invalid: false)
   errors = []
 
   # Validate required fields
@@ -171,14 +171,14 @@ def validate_record(record, schema, truncate: false)
     errors << error_msg
     CDO.log.error(error_msg)
 
-    if truncate
+    if modify_invalid
       truncated_value = truncate_to_byte_length(string_value, field_schema['maxLength'])
       record[field] = truncated_value.is_a?(String) ? truncated_value : JSON.parse(truncated_value)
     end
   end
 
-  raise RecordValidationError.new(errors) if errors.any? && !truncate
-  record
+  raise RecordValidationError.new(errors) if errors.any? && !modify_invalid
+  return record, errors.any?
 end
 
 def truncate_to_byte_length(string, max_bytes)
@@ -211,87 +211,122 @@ redshift_client = RedshiftClient.instance
 
 continuation_token = nil
 
-loop do
-  list_error_manifests_response = s3_client.list_objects_v2(
-    bucket: FIREHOSE_INTERMEDIATE_BUCKET,
-    prefix: ERROR_MANIFESTS_PREFIX,
-    continuation_token: continuation_token
-  )
+BatchRedeliveryStatus = Struct.new(
+  :error_manifest_object_key,           # S3 Key of Error Manifest
+  :error_batch_object_key,              # S3 Key of Error Object specified in Manifest
+  :error_batch_position_in_manifest,    # A single error manifest can reference more than one failed batch.
+  :redelivery_batch_object_key,         # S3 Key of modified batch.
+  :redelivery_manifest_object_key,      # S3 Key of redelivery manifest.
+  :redelivery_date_time,                # Date/Time redelivery to Redshift was attempted.
+  :redelivery_status,                   # true / false
+  :redelivery_status_reason             # Detailed error if status is false.
+)
 
-  CDO.log.info list_error_manifests_response.contents.length
-  list_error_manifests_response.contents.each do |error_manifest|
-    CDO.log.info error_manifest.key
-    error_manifest_response = s3_client.get_object(
+batches_processed = 0
+batches_redelivered = 0
+batches_failed = 0
+
+# Log each batch that we attempt to redeliver.
+CSV.open(options[:batch_log_file], 'a') do |batch_log_csv|
+  batch_log_csv << BatchRedeliveryStatus.members if File.empty?(options[:batch_log_file])
+  # List all Firehose error manifests matching a date prefix in batches until there are no more to list.
+  loop do
+    list_error_manifests_response = s3_client.list_objects_v2(
       bucket: FIREHOSE_INTERMEDIATE_BUCKET,
-      key: error_manifest.key
+      prefix: ERROR_MANIFESTS_PREFIX,
+      continuation_token: continuation_token
     )
-    error_manifest = error_manifest_response[:body].read
-    CDO.log.info error_manifest
-    error_manifest_json = JSON.parse(error_manifest)
-    error_manifest_entries = error_manifest_json["entries"]
-    error_manifest_entries.each do |entry|
-      undelivered_batch_uri = URI.parse(entry["url"])
-      CDO.log.info undelivered_batch_uri
-      undelivered_batch_response = s3_client.get_object(
-        bucket: undelivered_batch_uri.host,
-        key: undelivered_batch_uri.path&.delete_prefix('/')
-      )
-      undelivered_batch = undelivered_batch_response.body.read
-      modified_batch = ''
-      undelivered_records = split_json_batch(undelivered_batch)
-      undelivered_records.each do |record|
-        # CDO.log.info record
-        modified_record = validate_record(record, event_json_schema, truncate: true)
-        modified_batch += modified_record.to_json
-      rescue RecordValidationError => exception
-        CDO.log.info record
-        CDO.log.info exception.message
-      end
-      modified_batch_s3_key = REDELIVER_DATA_PREFIX + undelivered_batch_uri.path
-      raise StandardError unless options[:actually_update]
-      s3_client.put_object(bucket: FIREHOSE_INTERMEDIATE_BUCKET, key: modified_batch_s3_key, body: modified_batch)
-      redelivery_manifest = {
-        entries: [
-          {
-            url: "s3://#{FIREHOSE_INTERMEDIATE_BUCKET}/#{modified_batch_s3_key}",
-            mandatory: true,
-            meta: {
-              content_length: modified_batch.encode('UTF-8').bytesize
-            }
+
+    CDO.log.info "Retrieving #{list_error_manifests_response.contents.length} error manifests."
+    # Iterate through each Firehose error manifest within the current batch.
+    list_error_manifests_response.contents.each do |error_manifest_object|
+      CDO.log.info "Error Manifest: #{error_manifest_object.key}"
+      error_manifest_json = s3_client.get_object(
+        bucket: FIREHOSE_INTERMEDIATE_BUCKET,
+        key: error_manifest_object.key
+      ).body.read
+      # Iterate through each undelivered/errored Firehose batch identified in the current error manifest.
+      JSON.parse(error_manifest_json)["entries"].each_with_index do |entry, position_in_error_manifest|
+        batches_processed += 1
+        invalid_records_in_batch = 0
+        undelivered_batch_uri = URI.parse(entry["url"])
+        batch_status = BatchRedeliveryStatus.new
+        batch_status.error_manifest_object_key = error_manifest_object.key
+        batch_status.error_batch_object_key = undelivered_batch_uri.path&.delete_prefix('/')
+        batch_status.error_batch_position_in_manifest = position_in_error_manifest
+        undelivered_batch = s3_client.get_object(
+          bucket: undelivered_batch_uri.host,
+          key: undelivered_batch_uri.path&.delete_prefix('/')
+        ).body.read
+        modified_batch = ''
+        # Validate and modify each record in the failed batch.
+        split_json_batch(undelivered_batch).each_with_index do |record, _position_in_batch|
+          modified_record, batch_status.record_validation_status = validate_record(record, event_json_schema, modify_invalid: options[:modify_invalid])
+          modified_batch += modified_record.to_json
+        rescue RecordValidationError => exception
+          invalid_records_in_batch += 1
+          CDO.log.info record
+          CDO.log.info exception.message
+        end
+        raise StandardError unless options[:actually_redeliver]
+        batch_status.redelivery_batch_object_key = REDELIVER_DATA_PREFIX + undelivered_batch_uri.path
+        begin
+          redelivery_manifest = {
+            entries: [
+              {
+                url: "s3://#{FIREHOSE_INTERMEDIATE_BUCKET}/#{batch_status.redelivery_batch_object_key}",
+                mandatory: true,
+                meta: {
+                  content_length: modified_batch.encode('UTF-8').bytesize
+                }
+              }
+            ]
           }
-        ]
-      }
-      load_batch_query = <<~SQL
-        SET search_path TO #{REDSHIFT_SCHEMA};
-        COPY #{REDSHIFT_TABLE} (created_at, environment, study, study_group, device, uuid, user_id, script_id, level_id, project_id, event, data_int, data_float, data_string, data_json)
-        FROM 's3://#{FIREHOSE_INTERMEDIATE_BUCKET}/#{modified_batch_s3_key}'
-        CREDENTIALS 'aws_iam_role=arn:aws:iam::#{ACCOUNT_ID}:role/redshift-s3'
-        json 'auto' timeformat 'auto';
-      SQL
-      CDO.log.info load_batch_query
-      redshift_client.exec(load_batch_query)
-      s3_client.put_object(
-        bucket: FIREHOSE_INTERMEDIATE_BUCKET,
-        key: REDELIVERY_MANIFESTS_PREFIX + undelivered_batch_uri.path,
-        body: redelivery_manifest.to_json
-      )
-      CDO.log.info "Successfully redelivered #{undelivered_batch_uri.path} to Redshift."
-    rescue RedshiftClient::PostgreSQLQueryError => exception
-      CDO.log.info "Error redelivering #{undelivered_batch_uri.path}"
-      CDO.log.info exception.message
-      s3_client.put_object(
-        bucket: FIREHOSE_INTERMEDIATE_BUCKET,
-        key: REDELIVERY_ERROR_MANIFESTS_PREFIX + undelivered_batch_uri.path,
-        body: redelivery_manifest
-      )
-    rescue Aws::Errors::ServiceError => exception
-      CDO.log.info exception.message
+          # Check if there's a manifest for successful redelivery of this batch because Redshift does not enforce
+          # unique constraints and we must avoid duplicate redelivery.
+          s3_client.head_object(bucket: FIREHOSE_INTERMEDIATE_BUCKET, key: REDELIVERY_MANIFESTS_PREFIX + undelivered_batch_uri.path)
+          CDO.log.info "The batch #{undelivered_batch_uri.path} has already been redelivered."
+        rescue Aws::S3::Errors::NotFound
+          # Redelivery manifest does not exist, load the batch identified in the manifest into Redshift and then upload the manifest.
+          s3_client.put_object(bucket: FIREHOSE_INTERMEDIATE_BUCKET, key: batch_status.redelivery_batch_object_key, body: modified_batch)
+          load_batch_query = <<~SQL
+            SET search_path TO #{REDSHIFT_SCHEMA};
+            COPY #{REDSHIFT_TABLE} (created_at, environment, study, study_group, device, uuid, user_id, script_id, level_id, project_id, event, data_int, data_float, data_string, data_json)
+            FROM 's3://#{FIREHOSE_INTERMEDIATE_BUCKET}/#{batch_status.redelivery_batch_object_key}'
+            CREDENTIALS 'aws_iam_role=arn:aws:iam::#{ACCOUNT_ID}:role/redshift-s3'
+            json 'auto' timeformat 'auto';
+          SQL
+          redshift_client.exec(load_batch_query)
+          s3_client.put_object(
+            bucket: FIREHOSE_INTERMEDIATE_BUCKET,
+            key: REDELIVERY_MANIFESTS_PREFIX + undelivered_batch_uri.path,
+            body: redelivery_manifest.to_json
+          )
+          batch_status.redelivery_manifest_object_key = REDELIVERY_MANIFESTS_PREFIX + undelivered_batch_uri.path
+          batches_redelivered += 1
+          CDO.log.info "Successfully redelivered #{undelivered_batch_uri.path} to Redshift."
+        end
+      rescue RedshiftClient::PostgreSQLQueryError, Aws::Errors::ServiceError, StandardError => exception
+        batches_failed += 1
+        CDO.log.info "Error redelivering batch: #{undelivered_batch_uri.path}"
+        CDO.log.info exception.message
+        s3_client.put_object(
+          bucket: FIREHOSE_INTERMEDIATE_BUCKET,
+          key: REDELIVERY_ERROR_MANIFESTS_PREFIX + undelivered_batch_uri.path,
+          body: redelivery_manifest
+        )
+        batch_status.redelivery_manifest_object_key = REDELIVERY_ERROR_MANIFESTS_PREFIX + undelivered_batch_uri.path
+      ensure
+        batch_log_csv << batch_status.to_a
+        batch_log_csv.flush
+      end
     end
-    CDO.log.info error_manifest_json
+    break unless list_error_manifests_response.is_truncated
+    continuation_token = list_error_manifests_response.next_continuation_token
   end
-  break unless list_error_manifests_response.is_truncated
-  continuation_token = list_error_manifests_response.next_continuation_token
 end
 
-CDO.log.info "Script completed"
-# Log number of batches processed, number of records processed, success and failure for both.
+CDO.log.info "Script completed."
+CDO.log.info "Batches Processed: #{batches_processed}"
+CDO.log.info "Batches Successfully Redelivered: #{batches_redelivered}"
+CDO.log.info "Batches Failed Redelivery: #{batches_failed}"
