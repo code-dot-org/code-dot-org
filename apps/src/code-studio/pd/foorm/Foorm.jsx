@@ -3,7 +3,7 @@ import React from 'react';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import * as Survey from 'survey-react';
 
-import Spinner from '../components/spinner';
+import Spinner from '../../../sharedComponents/Spinner';
 
 const SPINNER_WAIT_MS = 2000;
 

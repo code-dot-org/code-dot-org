@@ -1,9 +1,9 @@
 import $ from 'jquery';
 import React, {CSSProperties, useState} from 'react';
 
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {LtiUpgradeAccountDialogProps} from '@cdo/apps/lib/ui/simpleSignUp/lti/upgrade/types';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import color from '@cdo/apps/util/color';

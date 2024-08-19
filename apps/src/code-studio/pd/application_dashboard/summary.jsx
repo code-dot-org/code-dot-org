@@ -9,10 +9,10 @@ import React from 'react';
 import {Row, Col} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 
+import Spinner from '../../../sharedComponents/Spinner';
 import RegionalPartnerDropdown, {
   RegionalPartnerPropType,
 } from '../components/regional_partner_dropdown';
-import Spinner from '../components/spinner';
 
 import AdminNavigationButtons from './admin_navigation_buttons';
 import ApplicantSearch from './applicant_search';

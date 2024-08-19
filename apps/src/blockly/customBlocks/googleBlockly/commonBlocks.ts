@@ -10,7 +10,9 @@ import {
   BlocklyWrapperType,
   JavascriptGeneratorType,
 } from '@cdo/apps/blockly/types';
+import i18n from '@cdo/locale';
 
+import {BLOCK_TYPES} from '../../constants';
 import {readBooleanAttribute} from '../../utils';
 
 const mutatorProperties: string[] = [];
@@ -22,6 +24,20 @@ export const blocks = {
     blockly.Blocks.text_join_simple = blockly.Blocks.text_join;
     blockly.JavaScript.forBlock.text_join_simple =
       blockly.JavaScript.forBlock.text_join;
+  },
+  // We need to use a custom block so that English users will see "random color".
+  installCustomColourRandomBlock(blockly: BlocklyWrapperType) {
+    delete blockly.Blocks['colour_random'];
+    blockly.common.defineBlocks(
+      blockly.common.createBlockDefinitionsFromJsonArray([
+        {
+          type: BLOCK_TYPES.colourRandom,
+          message0: i18n.colourRandom(),
+          output: 'Colour',
+          style: 'colour_blocks',
+        },
+      ])
+    );
   },
   copyBlockGenerator(
     generator: JavascriptGeneratorType,
@@ -128,5 +144,22 @@ export const blocks = {
     );
     const code = `${functionName}(${argument0}, ${argument1})`;
     return [code, generator.ORDER_FUNCTION_CALL];
+  },
+  // Creates and returns a 3-column colour field with an increased height/width
+  // for menu options and the field itself. Used for the K1 Artist colour picker block.
+  getColourDropdownField(colours: string[]) {
+    const configOptions = {
+      colourOptions: colours,
+      columns: 3,
+    };
+    const defaultColour = colours[0];
+    const optionalValidator = undefined;
+    const isK1 = true;
+    return new Blockly.FieldColour(
+      defaultColour,
+      optionalValidator,
+      configOptions,
+      isK1
+    );
   },
 };

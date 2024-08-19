@@ -2,10 +2,10 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {SessionAttendance} from '@cdo/apps/code-studio/pd/workshop_dashboard/attendance/session_attendance';
 import Permission from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
 import {COURSE_CSF} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshopConstants';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 
 import {expect} from '../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
