@@ -1,7 +1,7 @@
 import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
-import {Store, AnyAction} from 'redux';
+import {MemoryRouter} from 'react-router-dom';
 
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import teacherSections, {
@@ -31,7 +31,7 @@ describe('TeacherNavigationBar', () => {
   ];
   const serverSections = sections.map(serverSectionFromSection);
 
-  let store: Store<unknown, AnyAction>;
+  let store;
 
   beforeEach(() => {
     store = getStore();
@@ -44,7 +44,9 @@ describe('TeacherNavigationBar', () => {
   test('renders correctly with visible sections', () => {
     render(
       <Provider store={store}>
-        <TeacherNavigationBar />
+        <MemoryRouter>
+          <TeacherNavigationBar />
+        </MemoryRouter>
       </Provider>
     );
 

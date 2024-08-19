@@ -86,6 +86,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   const getSidebarOptionsForSection = (sidebarKeys: string[]) => {
     return sidebarKeys.map(key => (
       <SidebarOption
+        key={'ui-test-sidebar-' + key}
         isSelected={selectedOptionKey === key}
         sectionId={+selectedSectionId}
         pathKey={key as keyof typeof LABELED_TEACHER_NAVIGATION_PATHS}
@@ -94,11 +95,18 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     ));
   };
 
-  const navbarComponents = teacherNavigationBarContent.map(({title, keys}) => {
-    const sidebarOptions = getSidebarOptionsForSection(keys);
+  const navbarComponents = teacherNavigationBarContent.map(
+    ({title, keys}, index) => {
+      const sidebarOptions = getSidebarOptionsForSection(keys);
 
-    return [title, ...sidebarOptions];
-  });
+      return (
+        <div key={`section-${index}`}>
+          {title}
+          {sidebarOptions}
+        </div>
+      );
+    }
+  );
 
   return (
     <nav className={styles.sidebarContainer}>
