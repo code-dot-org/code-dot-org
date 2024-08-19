@@ -21,9 +21,6 @@ import sectionStandardsProgress from '@cdo/apps/templates/sectionProgress/standa
 import progressV2Feedback from '@cdo/apps/templates/sectionProgressV2/progressV2FeedbackRedux';
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
-import SectionNavigationRouter, {
-  SECTION_NAVIGATION_BARE_URL,
-} from '@cdo/apps/templates/teacherDashboard/teacherNavigation/SectionNavigationRouter';
 import teacherSections, {
   setSections,
   selectSection,
@@ -33,6 +30,7 @@ import teacherSections, {
   setStudentsForCurrentSection,
   sectionProviderName,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import TeacherNavigationRouter from '@cdo/apps/templates/teacherNavigation/TeacherNavigationRouter';
 import experiments from '@cdo/apps/util/experiments';
 
 import {setScriptId} from '../../../../redux/unitSelectionRedux';
@@ -126,20 +124,18 @@ $(document).ready(function () {
       {!showV2TeacherDashboard ? (
         getV1TeacherDashboard()
       ) : (
-        <BrowserRouter basename={SECTION_NAVIGATION_BARE_URL}>
-          <SectionNavigationRouter
-            studioUrlPrefix={scriptData.studioUrlPrefix}
-            sectionId={selectedSection.id}
-            sectionName={selectedSection.name}
-            studentCount={selectedSection.students.length}
-            anyStudentHasProgress={anyStudentHasProgress}
-            showAITutorTab={showAITutorTab}
-            sectionProviderName={sectionProviderName(
-              store.getState(),
-              selectedSection.id
-            )}
-          />
-        </BrowserRouter>
+        <TeacherNavigationRouter
+          studioUrlPrefix={scriptData.studioUrlPrefix}
+          sectionId={selectedSection.id}
+          sectionName={selectedSection.name}
+          studentCount={selectedSection.students.length}
+          anyStudentHasProgress={anyStudentHasProgress}
+          showAITutorTab={showAITutorTab}
+          sectionProviderName={sectionProviderName(
+            store.getState(),
+            selectedSection.id
+          )}
+        />
       )}
     </Provider>,
     document.getElementById('teacher-dashboard')

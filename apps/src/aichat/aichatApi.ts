@@ -12,9 +12,9 @@ import {
   AichatContext,
   AichatModelCustomizations,
   ChatCompletionApiResponse,
-  LogChatEventApiResponse,
-  ChatMessage,
   ChatEvent,
+  ChatMessage,
+  LogChatEventApiResponse,
 } from './types';
 
 const ROOT_URL = '/aichat';
@@ -40,7 +40,6 @@ export async function postAichatCompletionMessage(
   storedMessages: ChatMessage[],
   aiCustomizations: AiCustomizations,
   aichatContext: AichatContext,
-  sessionId?: number,
   useAsyncPolling = false,
   // Configurable for testing
   maxPollingTimeMs = MAX_POLLING_TIME_MS
@@ -67,7 +66,6 @@ export async function postAichatCompletionMessage(
     storedMessages,
     aichatModelCustomizations,
     aichatContext,
-    ...(sessionId ? {sessionId} : {}),
   };
   const response = await HttpClient.post(
     paths.CHAT_COMPLETION_URL,
@@ -130,6 +128,30 @@ export async function postAichatCheckSafety(
   );
 
   return await response.json();
+}
+
+/**
+ * This function sends a GET request to the aichat student chat history backend controller, then returns
+ * a list of chat events if successful.
+ */
+export async function getStudentChatHistory(
+  studentUserId: number,
+  levelId: number,
+  scriptId: number | null,
+  scriptLevelId: number | undefined
+): Promise<ChatEvent[]> {
+  const params: Record<string, string> = {
+    studentUserId: studentUserId.toString(),
+    levelId: levelId.toString(),
+    scriptId: scriptId?.toString() || '',
+  };
+  if (scriptLevelId) {
+    params.scriptLevelId = scriptLevelId.toString();
+  }
+  const response = await HttpClient.fetchJson<ChatEvent[]>(
+    STUDENT_CHAT_HISTORY_URL + '?' + new URLSearchParams(params)
+  );
+  return response.value;
 }
 
 interface StartChatCompletionResponse {

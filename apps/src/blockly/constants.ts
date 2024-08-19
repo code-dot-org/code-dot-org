@@ -117,6 +117,7 @@ export function stripUserCreated(xmlString: string) {
 export enum BLOCK_TYPES {
   behaviorDefinition = 'behavior_definition',
   behaviorGet = 'gamelab_behavior_get',
+  colourRandom = 'colour_random',
   danceWhenSetup = 'Dancelab_whenSetup',
   parametersGet = 'parameters_get',
   procedureDefinition = 'procedures_defnoreturn',

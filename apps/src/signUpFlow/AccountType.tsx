@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button/Button';
-import locale from '@cdo/apps/signup/locale';
+import locale from '@cdo/apps/signUpFlow/locale';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 
 import FontAwesomeV6Icon from '../componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';

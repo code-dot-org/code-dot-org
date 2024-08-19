@@ -1,4 +1,22 @@
 @import 'color.scss';
+@import 'style-constants';
+
+.pageAndSidebar {
+  display: flex;
+  flex-direction: row;
+  min-height: 100%;
+}
+
+.pageWithHeader {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.widthLockedPage {
+  max-width: $content-width;
+  padding: 10px 64px 64px 64px;
+}
 
 .sidebarContainer {
   width: 242px;
@@ -7,19 +25,75 @@
 }
 
 .sidebarContent {
-  padding-top: 20px;
-  padding-left: 16px;
   position: sticky;
   top: 0;
+}
+
+.sectionDropdown {
+  padding-left: 16px;
   width: 210px;
+}
+
+.optionIcon {
+  color: $neutral_dark80;
+  font-size: 16px;
+  line-height: normal;
+}
+
+.linkText {
+  margin-bottom: 0 !important;
+  font-weight: 600 !important;
+  color: $neutral_dark80;
+}
+
+.sidebarOption {
+  display: flex;
+  height: 32px;
+  align-items: center;
+  gap: 12px;
+  padding-left: 32px;
+
+  &.selected {
+    border-left: 4px solid $light_primary_500;
+    background-color: $neutral_gray10;
+    padding-left: 28px;
+  }
 }
 
 .sectionHeader {
   margin-top: 0;
   margin-bottom: 2px;
+  padding-left: 16px;
+  padding-top: 20px;
   color: $neutral_dark80;
 }
 
-.sectionDropdown {
-  width: 100%;
+.navLink {
+  display: inline-block;
+  background-color: $purple;
+  color: $white;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  height: auto;
+  line-height: 24px;
+  font-weight: 600;
+
+  &:hover {
+    background-color: $brand_secondary_dark;
+    color: $white;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: $brand_primary_default solid 2px;
+    outline-offset: 2px;
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+.topPadding {
+  padding-top: 24px;
 }
