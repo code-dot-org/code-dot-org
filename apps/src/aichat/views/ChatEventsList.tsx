@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useRef} from 'react';
+import React, {useEffect, useRef} from 'react';
 
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -23,18 +23,6 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   isTeacherView,
 }) => {
   const {isWaitingForChatResponse} = useAppSelector(state => state.aichat);
-
-  const displayWaitingAnimation = useCallback(() => {
-    if (isWaitingForChatResponse) {
-      return (
-        <img
-          src="/blockly/media/aichat/typing-animation.gif"
-          alt={'Waiting for response'}
-          className={moduleStyles.waitingForResponse}
-        />
-      );
-    }
-  }, [isWaitingForChatResponse]);
 
   // Compare the chat events  as a string since the object reference will change on every update.
   // This way we will only scroll when the contents of the events have changed.
@@ -63,9 +51,24 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
           isTeacherView={isTeacherView}
         />
       ))}
-      {isWaitingForChatResponse && displayWaitingAnimation()}
+      <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
     </div>
   );
+};
+
+const WaitingAnimation: React.FunctionComponent<{shouldDisplay: boolean}> = ({
+  shouldDisplay,
+}) => {
+  if (shouldDisplay) {
+    return (
+      <img
+        src="/blockly/media/aichat/typing-animation.gif"
+        alt={'Waiting for response'}
+        className={moduleStyles.waitingForResponse}
+      />
+    );
+  }
+  return null;
 };
 
 export default ChatEventsList;

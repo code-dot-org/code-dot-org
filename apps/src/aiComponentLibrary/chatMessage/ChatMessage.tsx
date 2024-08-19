@@ -83,13 +83,11 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
           <div className={moduleStyles[`container-user`]}>
             <Button
               onClick={() => {
-                if (
+                setProfaneMessageViewToggle(
                   profaneMessageViewToggle === ProfaneMessageViewToggle.VIEW
-                ) {
-                  setProfaneMessageViewToggle(ProfaneMessageViewToggle.HIDE);
-                } else {
-                  setProfaneMessageViewToggle(ProfaneMessageViewToggle.VIEW);
-                }
+                    ? ProfaneMessageViewToggle.HIDE
+                    : ProfaneMessageViewToggle.HIDE
+                );
               }}
               text={
                 profaneMessageViewToggle === ProfaneMessageViewToggle.VIEW
