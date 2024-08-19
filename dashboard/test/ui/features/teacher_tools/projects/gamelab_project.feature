@@ -69,7 +69,7 @@ Scenario: Gamelab Flow
 
   # Test navigating to /edit as a non-owner user redirects to /view
   Given I am on "http://studio.code.org/"
-  And I create a teacher named "Non-Owner" and go home
+  And I create a teacher named "Non-Owner"
   And I navigate to the last shared URL
   And I append "/edit" to the URL
   Then I get redirected to "/projects/gamelab/([^\/]*?)/view" via "pushState"

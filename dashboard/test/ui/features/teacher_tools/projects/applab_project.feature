@@ -89,7 +89,7 @@ Scenario: Save Project After Signing Out
   And I click selector "#runButton" once I see it
   Then I get redirected to "/users/sign_in" via "dashboard"
 
-  When I sign in as "Sally Student" from the sign in page
+  When I sign in as "Sally Student"
   And I get redirected to "/projects/applab/([^\/]*?)/edit" via "dashboard"
   And I wait for the lab page to fully load
   And I ensure droplet is in text mode
@@ -115,7 +115,7 @@ Scenario: Save Script Level After Signing Out
   And I click selector "#runButton" once I see it
   Then I get redirected to "/users/sign_in" via "dashboard"
 
-  When I sign in as "Sally Student" from the sign in page
+  When I sign in as "Sally Student"
   And I get redirected to "/s/csp3-2017/lessons/5/levels/3" via "dashboard"
   And I wait for the lab page to fully load
   And I ensure droplet is in text mode
