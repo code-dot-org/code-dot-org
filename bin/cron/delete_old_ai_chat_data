@@ -8,25 +8,21 @@ require_relative '../../dashboard/config/environment'
 # We want to avoid storing student chat messages any longer than
 # is necessary for analysis to prevent storing excess student PII. This deletes
 # any AichatEvent or AichatRequest older than 90 days.
-# 
-# Additionally, we delete any AichatSession older than 30 days. AichatSession is
-# no longer in use and we plan to fully delete the table.
-# See https://codedotorg.atlassian.net/browse/LABS-976 for details.
 #
-# Log the number of records deleted for each table to Slack, #cron-watcher-aichat-deletion
+# Log the number of records deleted for each table to #cron-daily Slack channel
 # so we can easily monitor the deletion process.
 def main
-  thirty_days_ago = Time.now - 30.days
   ninety_days_ago = Time.now - 90.days
+  # Pilot data collected before September 30th, 2024 is being retained for analysis.
+  pilot_end_date = DateTime.new(2024, 10, 1, 0, 0, 0)
 
-  destroyed_sessions = AichatSession.where('created_at < ?', thirty_days_ago).destroy_all
-  ChatClient.message('cron-watcher-aichat-deletion', "Deleted #{destroyed_sessions.length} AichatSession records")
- 
-  destroyed_events = AichatEvent.where('created_at < ?', ninety_days_ago).destroy_all
-  ChatClient.message('cron-watcher-aichat-deletion', "Deleted #{destroyed_events.length} AichatEvent records")
-  
-  destroyed_requests = AichatRequest.where('created_at < ?', ninety_days_ago).destroy_all
-  ChatClient.message('cron-watcher-aichat-deletion', "Deleted #{destroyed_requests.length} AichatRequest records")
+  Comment.where('created_at BETWEEN ? AND ?', @selected_date.beginning_of_day, @selected_date.end_of_day)
+
+  destroyed_events = AichatEvent.where('created_at BETWEEN ? AND ?', pilot_end_date, ninety_days_ago).destroy_all
+  ChatClient.message('cron-daily', "Deleted #{destroyed_events.length} AichatEvent records")
+
+  destroyed_requests = AichatRequest.where('created_at BETWEEN ? AND ?', pilot_end_date, ninety_days_ago).destroy_all
+  ChatClient.message('cron-daily', "Deleted #{destroyed_requests.length} AichatRequest records")
 end
 
 main
