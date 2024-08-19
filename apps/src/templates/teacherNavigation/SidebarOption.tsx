@@ -39,7 +39,11 @@ const SidebarOption: React.FC<SidebarOptionProps> = ({
     >
       <FontAwesomeV6Icon
         className={styles.optionIcon}
-        iconName={LABELED_TEACHER_NAVIGATION_PATHS[pathKey].icon}
+        iconName={
+          LABELED_TEACHER_NAVIGATION_PATHS[pathKey].icon
+            ? LABELED_TEACHER_NAVIGATION_PATHS[pathKey].icon
+            : ''
+        }
       />
       <BodyTwoText className={styles.linkText}>
         {LABELED_TEACHER_NAVIGATION_PATHS[pathKey].label}

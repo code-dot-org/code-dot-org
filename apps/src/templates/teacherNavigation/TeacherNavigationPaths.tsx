@@ -66,19 +66,19 @@ export const LABELED_TEACHER_NAVIGATION_PATHS = {
     url: TEACHER_NAVIGATION_PATHS.loginInfo,
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.loginInfo),
     label: null,
-    icon: 'users',
+    icon: null,
   },
   standardsReport: {
     url: TEACHER_NAVIGATION_PATHS.standardsReport,
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.standardsReport),
     label: null,
-    icon: 'users',
+    icon: null,
   },
   aiTutorChatMessages: {
     url: TEACHER_NAVIGATION_PATHS.aiTutorChatMessages,
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.aiTutorChatMessages),
     label: null,
-    icon: 'users',
+    icon: null,
   },
   lessonMaterials: {
     url: TEACHER_NAVIGATION_PATHS.lessonMaterials,
@@ -102,7 +102,7 @@ export const LABELED_TEACHER_NAVIGATION_PATHS = {
     url: TEACHER_NAVIGATION_PATHS.unitOverview,
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.unitOverview),
     label: i18n.unit(),
-    icon: 'users',
+    icon: null,
   },
   settings: {
     url: TEACHER_NAVIGATION_PATHS.settings,

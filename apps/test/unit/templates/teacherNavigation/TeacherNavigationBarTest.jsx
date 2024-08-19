@@ -56,4 +56,37 @@ describe('TeacherNavigationBar', () => {
     expect(screen.queryByText('Period 3')).toBeNull();
     screen.getByText('Period 2');
   });
+
+  test('renders all navbarComponents', () => {
+    render(
+      <Provider store={store}>
+        <MemoryRouter>
+          <TeacherNavigationBar />
+        </MemoryRouter>
+      </Provider>
+    );
+
+    // Check for section headers
+    screen.getByText('Course Content');
+    screen.getByText('Performance');
+    screen.getByText('Classroom');
+
+    // Check for NavBar content
+    screen.getByText(i18n.course());
+    screen.getByText(i18n.lessonMaterials());
+    screen.getByText(i18n.calendar());
+    screen.getByText(i18n.progress());
+    screen.getByText(i18n.teacherTabStatsTextResponses());
+    screen.getByText(i18n.assessments());
+    screen.getByText(i18n.teacherTabStats());
+    screen.getByText(i18n.studentProjects());
+    screen.getByText(i18n.roster());
+    screen.getByText(i18n.settings());
+
+    // Object.keys(LABELED_TEACHER_NAVIGATION_PATHS).forEach((key) => {
+    //   const label = LABELED_TEACHER_NAVIGATION_PATHS[key as keyof typeof LABELED_TEACHER_NAVIGATION_PATHS].label;
+    //   if (label) {
+    //     expect(screen.getByText(label)).toBeInTheDocument();
+    //   }
+  });
 });
