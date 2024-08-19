@@ -7,7 +7,7 @@ import i18n from '@cdo/locale';
 
 import styles from './teacher-dashboard.module.scss';
 
-export const TeacherDashboardPath = {
+export const TEACHER_DASHBOARD_PATHS = {
   progress: '/progress',
   textResponses: '/text_responses',
   assessments: '/assessments',
@@ -17,33 +17,32 @@ export const TeacherDashboardPath = {
   loginInfo: '/login_info',
   standardsReport: '/standards_report',
   aiTutorChatMessages: '/ai_tutor',
-  navTestV2: '/nav_test_v2',
 };
 
-const teacherDashboardLinks = [
+export const LABELED_TEACHER_DASHBOARD_PATHS = [
   {
     label: i18n.teacherTabProgress(),
-    url: TeacherDashboardPath.progress,
+    url: TEACHER_DASHBOARD_PATHS.progress,
   },
   {
     label: i18n.teacherTabStatsTextResponses(),
-    url: TeacherDashboardPath.textResponses,
+    url: TEACHER_DASHBOARD_PATHS.textResponses,
   },
   {
     label: i18n.teacherTabAssessments(),
-    url: TeacherDashboardPath.assessments,
+    url: TEACHER_DASHBOARD_PATHS.assessments,
   },
   {
     label: i18n.teacherTabProjects(),
-    url: TeacherDashboardPath.projects,
+    url: TEACHER_DASHBOARD_PATHS.projects,
   },
   {
     label: i18n.teacherTabStats(),
-    url: TeacherDashboardPath.stats,
+    url: TEACHER_DASHBOARD_PATHS.stats,
   },
   {
     label: i18n.teacherTabManageStudents(),
-    url: TeacherDashboardPath.manageStudents,
+    url: TEACHER_DASHBOARD_PATHS.manageStudents,
   },
 ];
 
@@ -52,11 +51,14 @@ export default function TeacherDashboardNavigation({links, showAITutorTab}) {
     ? [
         {
           label: i18n.aiTutor(),
-          url: TeacherDashboardPath.aiTutorChatMessages,
+          url: TEACHER_DASHBOARD_PATHS.aiTutorChatMessages,
         },
       ]
     : [];
-  const renderedLinks = [...(links || teacherDashboardLinks), ...aiTutorLinks];
+  const renderedLinks = [
+    ...(links || LABELED_TEACHER_DASHBOARD_PATHS),
+    ...aiTutorLinks,
+  ];
 
   return (
     <div id="uitest-teacher-dashboard-nav" className={styles.navContainer}>

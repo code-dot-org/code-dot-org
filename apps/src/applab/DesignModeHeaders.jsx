@@ -6,8 +6,8 @@ import applabMsg from '@cdo/applab/locale';
 import styleConstants from '@cdo/apps/styleConstants';
 import msg from '@cdo/locale';
 
+import SettingsCog from '../code-studio/components/SettingsCog';
 import commonStyles from '../commonStyles';
-import SettingsCog from '../lib/ui/SettingsCog';
 import PaneHeader, {PaneButton, PaneSection} from '../templates/PaneHeader';
 import ProjectTemplateWorkspaceIcon from '../templates/ProjectTemplateWorkspaceIcon';
 import color from '../util/color';

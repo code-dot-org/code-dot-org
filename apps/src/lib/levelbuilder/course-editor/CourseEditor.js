@@ -19,7 +19,7 @@ import CourseVersionPublishingEditor from '@cdo/apps/lib/levelbuilder/CourseVers
 import SaveBar from '@cdo/apps/lib/levelbuilder/SaveBar';
 import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
 import TextareaWithMarkdownPreview from '@cdo/apps/lib/levelbuilder/TextareaWithMarkdownPreview';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import color from '@cdo/apps/util/color';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 

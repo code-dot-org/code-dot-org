@@ -1,13 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-import locale from '@cdo/apps/signup/locale';
+import Button from '@cdo/apps/componentLibrary/button/Button';
+import locale from '@cdo/apps/signUpFlow/locale';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 
+import FontAwesomeV6Icon from '../componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import {Heading2} from '../componentLibrary/typography';
 import AccountCard from '../templates/account/AccountCard';
+
+import FreeCurriculumDialog from './FreeCurriculumDialog';
 
 import style from './accountType.module.scss';
 
 const AccountType: React.FunctionComponent = () => {
+  const [isFreeCurriculumDialogOpen, setIsFreeCurriculumDialogOpen] =
+    useState(false);
+
   return (
     <main className={style.wrapper}>
       <div className={style.contentContainer}>
@@ -44,6 +52,22 @@ const AccountType: React.FunctionComponent = () => {
               locale.access_assessments(),
               locale.enroll_in_pl(),
             ]}
+          />
+        </div>
+        <FreeCurriculumDialog
+          isOpen={isFreeCurriculumDialogOpen}
+          closeModal={() => setIsFreeCurriculumDialogOpen(false)}
+        />
+        <div className={style.freeCurriculumWrapper}>
+          <FontAwesomeV6Icon iconName={'book-open-cover'} />
+          <Heading2 visualAppearance="heading-xs">
+            {locale.free_curriculum_forever()}
+          </Heading2>
+          <Button
+            className={style.dialogButton}
+            size="s"
+            text={locale.read_our_commitment_free()}
+            onClick={() => setIsFreeCurriculumDialogOpen(true)}
           />
         </div>
       </div>

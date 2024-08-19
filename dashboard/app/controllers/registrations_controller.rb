@@ -24,13 +24,9 @@ class RegistrationsController < Devise::RegistrationsController
     if PartialRegistration.in_progress?(session)
       user_params = params[:user] || ActionController::Parameters.new
       user_params[:user_type] ||= session[:default_sign_up_user_type]
-      if DCDO.get('student-email-post-enabled', false)
-        user_params[:email] ||= params[:email]
+      user_params[:email] ||= params[:email]
 
-        @user = User.new_with_session(user_params.permit(:user_type, :email), session)
-      else
-        @user = User.new_with_session(user_params.permit(:user_type), session)
-      end
+      @user = User.new_with_session(user_params.permit(:user_type, :email), session)
     else
       save_default_sign_up_user_type
       SignUpTracking.begin_sign_up_tracking(session, split_test: true)
@@ -59,11 +55,9 @@ class RegistrationsController < Devise::RegistrationsController
     @user = User.new(begin_sign_up_params)
     @user.validate_for_finish_sign_up
     SignUpTracking.log_begin_sign_up(@user, session)
-    is_signup_post_enabled = DCDO.get('student-email-post-enabled', false)
 
     if @user.errors.blank?
       PartialRegistration.persist_attributes(session, @user)
-      redirect_to new_user_registration_path and return unless is_signup_post_enabled
     end
 
     render 'new'
@@ -79,6 +73,17 @@ class RegistrationsController < Devise::RegistrationsController
   # Part of the new sign up flow - work in progress
   def account_type
     view_options(full_width: true, responsive_content: true)
+  end
+
+  #
+  # Get /users/finish_teacher_account
+  #
+  def finish_teacher_account
+    # Get the request location
+    location = Geocoder.search(request.ip).try(:first)
+    country_code = location&.country_code.to_s.upcase
+    @us_ip = ['US', 'RD'].include?(country_code)
+    render 'finish_teacher_account'
   end
 
   #
@@ -138,14 +143,16 @@ class RegistrationsController < Devise::RegistrationsController
     if current_user && current_user.errors.blank?
       if current_user.teacher?
         begin
-          MailJet.create_contact_and_send_welcome_email(current_user, request.locale)
+          MailJet.create_contact_and_add_to_welcome_series(current_user, request.locale)
         rescue => exception
-          # If the welcome email fails to send, we don't want to disrupt
+          # If we can't add the user to the welcome series, we don't want to disrupt
           # sign up, but we do want to know about it.
           Honeybadger.notify(
             exception,
-            error_message: 'Failed to send MailJet welcome email',
-            context: {}
+            error_message: 'Failed to add user to welcome series',
+            context: {
+              locale: request.locale,
+            }
           )
         end
       end
@@ -159,6 +166,7 @@ class RegistrationsController < Devise::RegistrationsController
         metadata = {
           'user_type' => current_user.user_type,
           'lms_name' => lms_name,
+          'context' => 'registration_controller'
         }
         Metrics::Events.log_event(
           user: current_user,
@@ -406,7 +414,7 @@ class RegistrationsController < Devise::RegistrationsController
   # GET /users/edit
   #
   def edit
-    @permission_status = current_user.child_account_compliance_state
+    @permission_status = current_user.cap_status
 
     # Get the request location
     location = Geocoder.search(request.ip).try(:first)

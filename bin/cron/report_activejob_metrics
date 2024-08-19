@@ -29,6 +29,15 @@ def push_queue_length_metrics
         dimensions: [
           {name: 'Environment', value: CDO.rack_env},
         ],
+      },
+      {
+        metric_name: 'WorkableJobCount',
+        value: Delayed::Job.where(failed_at: nil, locked_at: nil).where('run_at <= ?', Time.now).count,
+        unit: 'Count',
+        timestamp: Time.now,
+        dimensions: [
+          {name: 'Environment', value: CDO.rack_env},
+        ],
       }
     ]
   )

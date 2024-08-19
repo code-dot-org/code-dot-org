@@ -29,9 +29,9 @@ will produce content suitable for embedding inside an existing block-level eleme
 
 ### Pegasus
 
-There are two i18n files in Pegasus: `pegasus/cache/i18n/en-US.yml` and `pegasus/sites.v3/hourofcode.com/i18n/en.yml`.
+There are two i18n files in Pegasus: `pegasus/cache/i18n/en-US.json` and `pegasus/sites.v3/hourofcode.com/i18n/en.yml`.
 Either can be used in any subdirectory; lately `pegasus/sites.v3/hourofcode.com/i18n/en.yml` has been preferred.
-To use strings in `pegasus/cache/i18n/en-US.yml`, use `I18n.t` and pass the key in as a parameter.
+To use strings in `pegasus/cache/i18n/en-US.json`, use `I18n.t` and pass the key in as a parameter.
 To use strings in `pegasus/sites.v3/hourofcode.com/i18n/en.yml`, use `hoc_s` and pass the key in as a parameter. 
 
 ### Apps

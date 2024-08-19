@@ -38,8 +38,6 @@ Dashboard::Application.routes.draw do
 
     get '/terms-and-privacy', to: 'home#terms_and_privacy'
     get '/dashboardapi/terms-and-privacy', to: "home#terms_and_privacy"
-    get '/dashboardapi/hoc-courses-teacher-guides', to: "home#hoc_courses_teacher_guides"
-    get '/dashboardapi/hoc-courses-challenge', to: "home#hoc_courses_challenge"
 
     get "/home", to: "home#home"
 
@@ -195,6 +193,7 @@ Dashboard::Application.routes.draw do
       get '/users/new_sign_up', to: 'registrations#new_sign_up'
       # Part of the new sign up flow - work in progress
       get '/users/new_sign_up/account_type', to: 'registrations#account_type'
+      get '/users/new_sign_up/finish_teacher_account', to: 'registrations#finish_teacher_account'
       patch '/dashboardapi/users', to: 'registrations#update'
       patch '/users/upgrade', to: 'registrations#upgrade'
       patch '/users/set_student_information', to: 'registrations#set_student_information'
@@ -1169,7 +1168,10 @@ Dashboard::Application.routes.draw do
 
     post '/aichat/chat_completion', to: 'aichat#chat_completion'
     post '/aichat/log_chat_event', to: 'aichat#log_chat_event'
+    get '/aichat/student_chat_history', to: 'aichat#student_chat_history'
     post '/aichat/check_message_safety', to: 'aichat#check_message_safety'
+    post '/aichat/start_chat_completion', to: 'aichat#start_chat_completion'
+    get '/aichat/chat_request/:id', to: 'aichat#chat_request'
 
     resources :ai_tutor_interactions, only: [:create, :index] do
       resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]

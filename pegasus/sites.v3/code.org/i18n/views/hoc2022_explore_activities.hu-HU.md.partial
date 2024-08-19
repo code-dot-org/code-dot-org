@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Helló világ: Világűr", body: Készíts csallagközi jeleneteket olyan figurákkal és hangokkal, amelyekkel ezt fogod mondani, \"Helló világok!\"", image: "/images/hoc2022-hello-world-space.png", url: "https://studio.code.org/s/hello-world-space-2022/reset" }}
-
-{{ featured_tutorial, title: "NASA's Space Jam", body: "Készíts egy csodás naprendszert, és közben tanulj a zenéről, a csillagászatról és a kódolásról!", image: "/images/hoc2022-nasa-space-jam.png", url: "https://chandra.si.edu/sound/code/" }}
-
-{{ featured_tutorial, title: "Csillagok háborúja", body: "Tanulj meg droidokat programozni, és készítsd el a saját Csillagok háborúja játékod egy távoli galaxisban.", image: "/shared/images/courses/logo_tall_starwars.jpg", url: "https://code.org/starwars" }}
-
-{{ featured_tutorial, title: "SciGirls Code Quest", body: "Ebben az online kódolási kalandban Subby-t, a tengeralattjárót vezeted a víz alatti próbatételeken keresztül.", image: "/images/hoc2022-scigirls-code-quest.png", url: "https://pbskids.org/scigirls/games/code-quest" }}

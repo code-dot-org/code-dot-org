@@ -19,6 +19,7 @@ const DEFAULT_PROPS = {
     {id: 4, understanding: 3, teacherDescription: 'test4'},
   ],
   learningGoalKey: 'key-1',
+  arrowPositionCallback: _ => {},
 };
 
 describe('EvidenceLevelsForTeachersV2', () => {

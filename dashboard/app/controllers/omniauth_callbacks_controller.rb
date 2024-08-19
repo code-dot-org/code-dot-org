@@ -318,15 +318,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private def register_new_user(user)
     PartialRegistration.persist_attributes(session, user)
 
-    if DCDO.get('student-email-post-enabled', false)
-      @form_data = {
-        email: user.email
-      }
+    @form_data = {
+      email: user.email
+    }
 
-      render 'omniauth/redirect', {layout: false}
-    else
-      redirect_to new_user_registration_url
-    end
+    render 'omniauth/redirect', {layout: false}
   end
 
   private def extract_powerschool_data(auth)
@@ -588,6 +584,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         event_name: 'lti_user_signin',
         metadata: metadata,
       )
+      flash[:notice] = I18n.t('lti.account_linking.successfully_linked')
       sign_in_and_redirect user and return
     end
 

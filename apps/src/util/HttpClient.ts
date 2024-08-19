@@ -136,8 +136,8 @@ async function deleteRequest(
 }
 
 export default {
-  put,
-  post,
   delete: deleteRequest,
   fetchJson,
+  post,
+  put,
 };

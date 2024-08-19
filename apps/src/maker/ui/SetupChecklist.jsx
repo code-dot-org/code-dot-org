@@ -12,7 +12,7 @@ import WebSerialPortWrapper from '@cdo/apps/maker/WebSerialPortWrapper';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
-import ValidationStep, {Status} from '../../lib/ui/ValidationStep';
+import ValidationStep, {Status} from '../../sharedComponents/ValidationStep';
 import trackEvent from '../../util/trackEvent';
 import * as utils from '../../utils';
 import {BOARD_TYPE, shouldUseWebSerial, delayPromise} from '../util/boardUtils';
