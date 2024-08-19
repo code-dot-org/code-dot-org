@@ -152,9 +152,12 @@ function initLevelGroup(levelCount, currentPage, lastAttempt) {
     const isSurvey =
       appOptions.level.anonymous === true ||
       appOptions.level.anonymous === 'true';
+    const isAssessment =
+      appOptions.level.submittable === true ||
+      appOptions.level.submittable === 'true';
     title = isSurvey ? i18n.submitSurvey() : i18n.submitAssessment();
 
-    if (!isSurvey && validCount !== requiredCount) {
+    if (isAssessment && validCount !== requiredCount) {
       // For assessments, warn if some questions were not completed
       id = 'levelgroup-submit-incomplete-dialogcontent';
       body = i18n.submittableIncomplete();
@@ -165,9 +168,12 @@ function initLevelGroup(levelCount, currentPage, lastAttempt) {
         : i18n.submittableComplete();
     }
 
-    const confirmationDialog = (
-      <LegacySingleLevelGroupDialog id={id} title={title} body={body} />
-    );
+    let confirmationDialog = null;
+    if (isSurvey || isAssessment) {
+      confirmationDialog = (
+        <LegacySingleLevelGroupDialog id={id} title={title} body={body} />
+      );
+    }
 
     return {
       response: encodeURIComponent(JSON.stringify(lastAttempt)),
