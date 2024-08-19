@@ -55,6 +55,9 @@ GenericGoogleClassroom.args = {loginType: SectionLoginType.google_classroom};
 export const GenericClever = GenericTemplate.bind({});
 GenericClever.args = {loginType: SectionLoginType.clever};
 
+export const GenericLTI = GenericTemplate.bind({});
+GenericLTI.args = {loginType: SectionLoginType.lti_v1};
+
 const PersonalizedTemplate = args => (
   <ParentLetter
     section={{
@@ -83,3 +86,6 @@ PersonalizedGoogleClassroom.args = {
 
 export const PersonalizedClever = PersonalizedTemplate.bind({});
 PersonalizedClever.args = {loginType: SectionLoginType.clever};
+
+export const PersonalizedLTI = PersonalizedTemplate.bind({});
+PersonalizedLTI.args = {loginType: SectionLoginType.lti_v1};

@@ -25,7 +25,7 @@ setStudioOrigin(scriptData.studioOrigin);
 // Register the reducers we need to show the parent letter:
 registerReducers({currentUser, teacherSections});
 
-// Populate the store with data passed down from the server:
+// Populate the store with data passed down from the server: store.dispatch(setRosterProviderName(scriptData.section.login_type_name));
 const store = getStore();
 store.dispatch(setCurrentUserName(scriptData.userName));
 store.dispatch(setSections(scriptData.sections));
@@ -43,7 +43,11 @@ window.addEventListener('DOMContentLoaded', function () {
   document.body.appendChild(mountPoint);
   ReactDOM.render(
     <Provider store={store}>
-      <ParentLetter autoPrint logoUrl={scriptData.logoUrl} />
+      <ParentLetter
+        autoPrint
+        logoUrl={scriptData.logoUrl}
+        loginTypeName={scriptData.section.login_type_name}
+      />
     </Provider>,
     mountPoint
   );
