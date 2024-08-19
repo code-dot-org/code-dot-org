@@ -32,15 +32,18 @@ const PublishNotes: React.FunctionComponent = () => {
   const {modelCardInfo} = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );
+  console.log('modelCardInfo in PublishNotes', modelCardInfo);
   const hasFilledOutModelCard = useAppSelector(selectHasFilledOutModelCard);
 
   const isReadOnly = useSelector(isReadOnlyWorkspace) || isDisabled(visibility);
   const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
   const currentSaveType = useAppSelector(state => state.aichat.currentSaveType);
   const havePropertiesChanged = useAppSelector(selectHavePropertiesChanged);
+  const showSaveReminder = useAppSelector(
+    state => state.aichat.showSaveReminder
+  );
 
-  const [showUnsavedChangesAlert, setShowUnsavedChangesAlert] =
-    useState<boolean>(false);
+  console.log('showSaveReminder in PublishNotes', showSaveReminder);
 
   const onSave = useCallback(() => {
     dispatch(saveModelCard());
@@ -78,24 +81,23 @@ const PublishNotes: React.FunctionComponent = () => {
 
   // const [alertText, type]: [string, AlertProps['type']] = getAlert();
 
-  // let showUnsavedChangesAlert = false;
   // Event listener for the 'beforeunload' event
-  window.addEventListener('beforeunload', function (e) {
-    console.log('beforeunload called');
-    // Check if any of the input fields are filled
-    if (havePropertiesChanged) {
-      setShowUnsavedChangesAlert(true);
-      // Cancel the event and show alert that
-      // the unsaved changes would be lost
-      e.preventDefault();
-      e.returnValue = '';
-    }
-  });
+  // window.addEventListener('beforeunload', function (e) {
+  //   console.log('beforeunload called');
+  //   // Check if any of the input fields are filled
+  //   if (havePropertiesChanged) {
+  //     setShowUnsavedChangesAlert(true);
+  //     // Cancel the event and show alert that
+  //     // the unsaved changes would be lost
+  //     e.preventDefault();
+  //     e.returnValue = '';
+  //   }
+  // });
 
   return (
     <div className={modelCustomizationStyles.verticalFlexContainer}>
       <div className={modelCustomizationStyles.customizationContainer}>
-        {showUnsavedChangesAlert && (
+        {showSaveReminder && (
           <Alert
             text={alerts.unsaved.text}
             type={alerts.unsaved.type}

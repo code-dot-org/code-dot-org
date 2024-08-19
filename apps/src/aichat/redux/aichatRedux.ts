@@ -79,6 +79,7 @@ export interface AichatState {
   saveInProgress: boolean;
   // The type of save action being performed (customization update, publish, model card save, etc).
   currentSaveType: SaveType | undefined;
+  showSaveReminder: boolean;
 }
 
 const initialState: AichatState = {
@@ -95,6 +96,7 @@ const initialState: AichatState = {
   viewMode: ViewMode.EDIT,
   saveInProgress: false,
   currentSaveType: undefined,
+  showSaveReminder: false,
 };
 
 // THUNKS
@@ -443,6 +445,12 @@ export const submitChatContents = createAsyncThunk(
   }
 );
 
+export const setShowSaveChangesReminder =
+  (show: boolean) => (dispatch: AppDispatch) => {
+    console.log('setShowSaveChangesReminder was called');
+    dispatch(setShowSaveReminder(show));
+  };
+
 const aichatSlice = createSlice({
   name: 'aichat',
   initialState,
@@ -484,6 +492,9 @@ const aichatSlice = createSlice({
     },
     setShowWarningModal: (state, action: PayloadAction<boolean>) => {
       state.showWarningModal = action.payload;
+    },
+    setShowSaveReminder: (state, action: PayloadAction<boolean>) => {
+      state.showSaveReminder = action.payload;
     },
     setViewMode: (state, action: PayloadAction<ViewMode>) => {
       state.viewMode = action.payload;
@@ -678,6 +689,7 @@ export const {
   setChatSessionId,
   clearChatMessages,
   setShowWarningModal,
+  setShowSaveReminder,
   resetToDefaultAiCustomizations,
   setViewMode,
   setStartingAiCustomizations,
