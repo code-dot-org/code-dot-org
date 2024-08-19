@@ -1,13 +1,19 @@
 class Policies::Ai
   # Units that enable the Differentiation feature
-  UNIT_DIFFERENTIATION_ALLOWLIST = [
-    'csd3-2023',
+  UNIT_DIFFERENTIATION_ALLOWLIST = %w[
+    csd3-2023
+    interactive-games-animations-2023
+    focus-on-creativity3-2023
+    focus-on-coding3-2023
+    interactive-games-animations-2024
+    focus-on-creativity3-2024
+    focus-on-coding3-2024
   ]
 
   # UnitGroups that enable the Differentiation feature
-  UNIT_GROUP_DIFFERENTIATION_ALLOWLIST = [
-    'csd-2023',
-    'csd-2024',
+  UNIT_GROUP_DIFFERENTIATION_ALLOWLIST = %w[
+    csd-2023
+    csd-2024
   ]
 
   # Whether or not AI rubric features (AI TA) are enabled.
