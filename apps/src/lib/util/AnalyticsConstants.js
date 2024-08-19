@@ -267,6 +267,7 @@ const EVENTS = {
 
   // videos
   VIDEO_LOADED: 'Video Loaded',
+  VIDEO_FALLBACK_LOADED: 'Video Fallback Loaded',
   VIDEO_STARTED: 'Video Started',
   VIDEO_PAUSED: 'Video Paused',
   VIDEO_ENDED: 'Video Played To Completion',

@@ -89,6 +89,10 @@ window.onYouTubeIframeAPIReady = function () {
       },
       onError: function (error) {
         if (currentVideoOptions) {
+          analyticsReporter.sendEvent(EVENTS.VIDEO_FALLBACK_LOADED, {
+            url: location.href,
+            video: player.getVideoUrl(),
+          });
           var size = error.target.f.getBoundingClientRect();
           addFallbackVideoPlayer(currentVideoOptions, size.width, size.height);
         }
