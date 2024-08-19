@@ -4,7 +4,7 @@ import React from 'react';
 import i18n from '@cdo/locale';
 
 import {pegasus} from '../../../lib/util/urlHelpers';
-import {Field} from '../SystemDialog/SystemDialog';
+import {Field} from '../../../sharedComponents/SystemDialog/SystemDialog';
 
 export default class ChangeUserTypeForm extends React.Component {
   static propTypes = {

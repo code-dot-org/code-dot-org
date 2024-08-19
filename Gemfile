@@ -164,7 +164,7 @@ gem 'devise', '~> 4.9.0'
 gem 'devise_invitable', '~> 2.0.2'
 
 # Ref: https://github.com/daynew/omniauth-clever/pull/1
-gem 'omniauth-clever', '~> 2.0.0', github: 'daynew/omniauth-clever', branch: 'clever-v2.1-upgrade'
+gem 'omniauth-clever', '~> 2.0.0', github: 'code-dot-org/omniauth-clever'
 gem 'omniauth-facebook', '~> 4.0.0'
 gem 'omniauth-google-oauth2', '~> 0.6.0'
 gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
@@ -321,7 +321,7 @@ gem 'recaptcha', require: 'recaptcha/rails'
 gem 'loofah', '~> 2.19.1'
 
 # Install pg gem only on specific production hosts and the i18n-dev server.
-require_pg = -> do
+require_pg = lambda do
   require 'socket'
   %w[production-daemon production-console i18n-dev].include?(Socket.gethostname)
 end

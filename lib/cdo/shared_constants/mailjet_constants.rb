@@ -19,4 +19,21 @@ module MailJetConstants
       from_name: 'Hadi Partovi',
     }
   }.freeze
+
+  CONTACT_LISTS = {
+    welcome_series: {
+      production: {
+        default: 10_353_815,
+        'es-MX': 10_353_822,
+        'es-ES': 10_353_822,
+      },
+      staging: {
+        default: 407_739,
+      },
+      development: {
+        default: 10_443_291,
+        'es-MX': 10_443_295,
+      },
+    }
+  }
 end

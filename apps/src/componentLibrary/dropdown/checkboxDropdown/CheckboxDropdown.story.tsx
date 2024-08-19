@@ -27,14 +27,22 @@ const SingleTemplate: StoryFn<CheckboxDropdownProps> = args => {
     [args, selectedValues, setValues]
   );
   const onSelectAll = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>) => {
+    (
+      e:
+        | React.MouseEvent<HTMLButtonElement>
+        | React.MouseEvent<HTMLAnchorElement>
+    ) => {
       setValues(args.allOptions.map(option => option.value));
       args.onSelectAll(e);
     },
     [args]
   );
   const onClearAll = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>) => {
+    (
+      e:
+        | React.MouseEvent<HTMLButtonElement>
+        | React.MouseEvent<HTMLAnchorElement>
+    ) => {
       setValues([]);
       args.onClearAll(e);
     },
@@ -92,7 +100,11 @@ const MultipleTemplate: StoryFn<{
             }
             componentArg.onChange(e);
           };
-          const onSelectAll = (e: React.MouseEvent<HTMLButtonElement>) => {
+          const onSelectAll = (
+            e:
+              | React.MouseEvent<HTMLButtonElement>
+              | React.MouseEvent<HTMLAnchorElement>
+          ) => {
             setValues({
               ...values,
               [componentArg.name]: componentArg.allOptions.map(
@@ -101,7 +113,11 @@ const MultipleTemplate: StoryFn<{
             });
             componentArg.onSelectAll(e);
           };
-          const onClearAll = (e: React.MouseEvent<HTMLButtonElement>) => {
+          const onClearAll = (
+            e:
+              | React.MouseEvent<HTMLButtonElement>
+              | React.MouseEvent<HTMLAnchorElement>
+          ) => {
             setValues({...values, [componentArg.name]: []});
             componentArg.onClearAll(e);
           };

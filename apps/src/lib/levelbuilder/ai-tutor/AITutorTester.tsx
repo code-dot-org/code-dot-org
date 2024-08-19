@@ -1,25 +1,37 @@
 import Papa from 'papaparse';
 import React, {useEffect, useState} from 'react';
 
-import {postAichatCheckSafety} from '@cdo/apps/aichat/aichatApi';
+import {
+  postAichatCheckSafety,
+  postAichatCompletionMessage,
+} from '@cdo/apps/aichat/aichatApi';
+import {ChatMessage} from '@cdo/apps/aichat/types';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import {formatQuestionForAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
-import {ChatContext} from '@cdo/apps/aiTutor/types';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 
 import AITutorTesterSampleColumns from './AITutorTesterSampleColumns';
+import {
+  availableEndpoints,
+  DEFAULT_TEMPERATURE,
+  genAIEndpointIds,
+  modelCardInfo,
+} from './constants';
 
 import styles from './ai-tutor-tester.module.scss';
 
 /**
  * Renders a series of buttons that allow levelbuilders to upload a CSV of
- * student inputs and get back AI Tutor responses in bulk.
+ * student inputs and get back AI responses in bulk.
  */
 
-interface AIInteraction extends ChatContext {
+interface AIInteraction {
+  studentInput: string;
   systemPrompt?: string | undefined;
   levelId?: number | undefined;
+  temperature?: number | undefined;
   aiResponse: string | undefined;
 }
 
@@ -58,15 +70,51 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
     setData(result.data);
   };
 
-  const getAIResponses = () => {
+  const getAIResponses = async () => {
     setResponsesPending(true);
-    for (let i = 0; i < data.length; i++) {
+    const responsePromises = data.map(async row => {
       if (selectedEndpoint === 'llm-guard') {
-        getLLMGuardToxicity(data[i]);
+        return getLLMGuardToxicity(row);
+      } else if (genAIEndpointIds.includes(selectedEndpoint)) {
+        return getGenAIResponses(row);
       } else {
-        askAI(data[i]);
+        return askAITutor(row);
       }
-    }
+    });
+
+    await Promise.allSettled(responsePromises);
+  };
+
+  const getGenAIResponses = async (row: AIInteraction) => {
+    const systemPrompt = row.systemPrompt ? row.systemPrompt : '';
+    const chatMessage: ChatMessage = {
+      chatMessageText: row.studentInput,
+      role: Role.USER,
+      status: 'ok',
+      timestamp: new Date().getTime(),
+    };
+    const temperature = row.temperature ? row.temperature : DEFAULT_TEMPERATURE;
+    const aiCustomizations = {
+      selectedModelId: selectedEndpoint,
+      temperature: temperature,
+      systemPrompt: systemPrompt,
+      retrievalContexts: [],
+      modelCardInfo: modelCardInfo,
+    };
+    const levelId = row.levelId ? row.levelId : null;
+    const aichatContext = {
+      currentLevelId: levelId,
+      scriptId: null,
+      channelId: undefined,
+    };
+    const genAIResponse = await postAichatCompletionMessage(
+      chatMessage,
+      [],
+      aiCustomizations,
+      aichatContext
+    );
+    row.aiResponse = genAIResponse?.messages[1]?.chatMessageText;
+    setResponseCount(prevResponseCount => prevResponseCount + 1);
   };
 
   const getLLMGuardToxicity = async (row: AIInteraction) => {
@@ -81,7 +129,7 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
     setResponseCount(prevResponseCount => prevResponseCount + 1);
   };
 
-  const askAI = async (row: AIInteraction) => {
+  const askAITutor = async (row: AIInteraction) => {
     const chatApiResponse = await getChatCompletionMessage(
       formatQuestionForAITutor(row),
       [],
@@ -112,31 +160,19 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
     }
   }, [aiResponded]);
 
-  const availableEndpoints = [
-    {
-      id: 'ai-tutor',
-      name: 'AI Tutor - full flow',
-    },
-    {
-      id: 'llm-guard',
-      name: 'LLM Guard',
-    },
-  ];
-
   return (
     <div>
-      <h2>Generate AI Tutor Responses</h2>
+      <h2>Generate AI Responses</h2>
       {!allowed && (
         <h3 className={styles.denied}>
           You need to be a levelbuilder with AI Tutor access to use this tool.
         </h3>
       )}
       <p>
-        Upload a CSV of student inputs that will be sent to AI Tutor. AI Tutor
-        responses will then be saved and you can download the resulting updated
-        CSV.
+        Upload a CSV of student inputs that will be sent to the selected
+        service. AI responses will then be saved and you can download the
+        resulting updated CSV.
       </p>
-      <AITutorTesterSampleColumns />
       <br />
       <SimpleDropdown
         labelText="Choose an endpoint"
@@ -151,6 +187,7 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
       />
       <br />
       <br />
+      <AITutorTesterSampleColumns endpoint={selectedEndpoint} />
       <div>
         <div className={styles.buttonSpacing}>
           <input

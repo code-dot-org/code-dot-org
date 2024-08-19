@@ -2,8 +2,11 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import LoginTypeSelection from '@cdo/apps/signup/LoginTypeSelection';
+import LoginTypeSelection from '@cdo/apps/signUpFlow/LoginTypeSelection';
 
 $(document).ready(() => {
-  ReactDOM.render(<LoginTypeSelection />, document.getElementById('root'));
+  ReactDOM.render(
+    <LoginTypeSelection />,
+    document.getElementById('login-type-selection')
+  );
 });

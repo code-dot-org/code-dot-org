@@ -466,8 +466,11 @@ class CdoAngleHelper {
     startAngle: number,
     endAngle: number
   ): string {
-    startAngle %= 360;
-    endAngle %= 360;
+    // Normalize endAngle to ensure it's within 360º of startAngle, to prevent visual glitches.
+    // Examples:
+    // - If startAngle = 0 and endAngle = 450, the result will be startAngle = 0 and endAngle = 90.
+    // - If startAngle = 270 and endAngle = 360, the result will be unchanged (startAngle = 270 and endAngle = 360).
+    endAngle = ((endAngle - startAngle) % 360) + startAngle;
     const vector = center.clone().add(new Vector(radius, 0));
     const start = Vector.rotateAroundPoint(vector, center, startAngle);
     const end = Vector.rotateAroundPoint(vector, center, endAngle);

@@ -10,7 +10,7 @@ class MailJetTest < Minitest::Test
     email = 'fake.email@test.xx'
     name = 'Fake Name'
 
-    Mailjet::Contact.expects(:create).with(is_excluded_from_campaigns: true, email: email, name: name)
+    Mailjet::Contact.expects(:create).with(is_excluded_from_campaigns: false, email: email, name: name)
 
     mock_contact = mock('Mailjet::Contact')
     Mailjet::Contact.stubs(:find).with(email).returns(nil).then.returns(mock_contact)
@@ -133,7 +133,7 @@ class MailJetTest < Minitest::Test
     MailJet.send_template_email(mock_contact, email_config, 'es-MX')
   end
 
-  def test_create_contact_and_send_welcome_email
+  def test_create_contact_and_add_to_welcome_series
     email = 'fake.email@test.xx'
     sign_up_time = Time.now.to_datetime
 
@@ -149,9 +149,32 @@ class MailJetTest < Minitest::Test
 
     MailJet.expects(:update_contact_field).with(mock_contactdata, 'sign_up_date', sign_up_time.rfc3339)
 
-    MailJet.expects(:send_template_email).with(mock_contactdata, MailJet::EMAILS[:welcome], 'en-US')
+    MailJet.stubs(:subaccount).returns('development')
+    MailJet.expects(:add_to_contact_list).with(mock_contactdata, MailJet::CONTACT_LISTS[:welcome_series][:development][:default])
 
-    MailJet.create_contact_and_send_welcome_email(user)
+    MailJet.create_contact_and_add_to_welcome_series(user)
+  end
+
+  def test_create_contact_and_add_to_welcome_series_non_en
+    email = 'fake.email@test.xx'
+    sign_up_time = Time.now.to_datetime
+
+    user = mock
+    user.stubs(:id).returns(1)
+    user.stubs(:email).returns(email)
+    user.stubs(:name).returns('Fake Name')
+    user.stubs(:teacher?).returns(true)
+    user.stubs(:created_at).returns(sign_up_time)
+
+    mock_contactdata = mock('Mailjet::Contactdata')
+    MailJet.expects(:find_or_create_contact).with(email, user.name).returns(mock_contactdata)
+
+    MailJet.expects(:update_contact_field).with(mock_contactdata, 'sign_up_date', sign_up_time.rfc3339)
+
+    MailJet.stubs(:subaccount).returns('development')
+    MailJet.expects(:add_to_contact_list).with(mock_contactdata, MailJet::CONTACT_LISTS[:welcome_series][:development][:'es-MX'])
+
+    MailJet.create_contact_and_add_to_welcome_series(user, 'es-MX')
   end
 
   def test_valid_email_deliverable
@@ -194,5 +217,16 @@ class MailJetTest < Minitest::Test
     Net::HTTP.any_instance.expects(:request).never
 
     MailJet.delete_contact(email)
+  end
+
+  def test_add_to_contact_list
+    contact = mock('Mailjet::Contact')
+    contact.stubs(:id).returns(123)
+
+    list_id = 456
+
+    Mailjet::Listrecipient.expects(:create).with(list_id: list_id, contact_id: 123)
+
+    MailJet.add_to_contact_list(contact, list_id)
   end
 end

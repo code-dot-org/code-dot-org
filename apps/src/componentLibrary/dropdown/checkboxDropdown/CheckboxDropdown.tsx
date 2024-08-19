@@ -1,5 +1,6 @@
-import React, {AriaAttributes, memo} from 'react';
+import React, {AriaAttributes, memo, MouseEvent} from 'react';
 
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox';
 import {dropdownColors} from '@cdo/apps/componentLibrary/common/constants';
 import {DropdownProviderWrapper} from '@cdo/apps/componentLibrary/common/contexts/DropdownContext';
@@ -10,7 +11,6 @@ import {
 import CustomDropdown, {
   _CustomDropdownOption,
 } from '@cdo/apps/componentLibrary/dropdown/_CustomDropdown';
-import Button from '@cdo/apps/legacySharedComponents/Button';
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
 import i18n from '@cdo/locale';
@@ -43,9 +43,17 @@ export interface CheckboxDropdownProps extends AriaAttributes {
   /** CheckboxDropdown onChange handler */
   onChange: (args: React.ChangeEvent<HTMLInputElement>) => void;
   /** CheckboxDropdown onSelectAll handler */
-  onSelectAll: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  onSelectAll: (
+    event:
+      | React.MouseEvent<HTMLButtonElement>
+      | React.MouseEvent<HTMLAnchorElement>
+  ) => void;
   /** CheckboxDropdown onClearAll handler */
-  onClearAll: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  onClearAll: (
+    event:
+      | React.MouseEvent<HTMLButtonElement>
+      | React.MouseEvent<HTMLAnchorElement>
+  ) => void;
 }
 
 const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
@@ -75,7 +83,7 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
       isSomeValueSelected={checkedOptions.length > 0}
       {...rest}
     >
-      <form className={moduleStyles.dropdownMenuContainer}>
+      <div className={moduleStyles.dropdownMenuContainer}>
         <ul>
           {allOptions.map(({value, label, isOptionDisabled}) => (
             <li key={value}>
@@ -93,21 +101,21 @@ const CheckboxDropdown: React.FunctionComponent<CheckboxDropdownProps> = ({
         </ul>
         <div className={moduleStyles.bottomButtonsContainer}>
           <Button
-            type="button"
+            type="tertiary"
+            color={buttonColors.purple}
             text={i18n.selectAll()}
             onClick={onSelectAll}
-            styleAsText
-            color={Button.ButtonColor.brandSecondaryDefault}
+            size={size}
           />
           <Button
-            type="button"
+            type="tertiary"
+            color={buttonColors.purple}
             text={i18n.clearAll()}
             onClick={onClearAll}
-            styleAsText
-            color={Button.ButtonColor.brandSecondaryDefault}
+            size={size}
           />
         </div>
-      </form>
+      </div>
     </CustomDropdown>
   );
 };

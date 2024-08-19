@@ -175,6 +175,8 @@
   explore_our_curriculum: "Explore Our Curriculum"
   start_professional_learning: "Start Professional Learning"
 
+  best_of_stem_heading: "Code.org wins Best of STEM 2024"
+
   how_ai_works_video_series: "How AI Works Video Series"
   learn_how_ai_works: "Learn How AI Works"
   ai_101_for_educators: "AI 101 for Educators"
@@ -437,7 +439,7 @@
   call_to_action_explore_learning_ages_11_plus: "Explore learning for ages 11+"
   call_to_action_get_started: "Get started"
   call_to_action_discover_district_program: "Discover our District Program"
-  call_to_action_see_district_partners: "See our District Partners"
+  call_to_action_see_district_partners: "See our Code.org Districts"
   call_to_action_read_full_story: "Read the full story"
   call_to_action_learn_about_pl: "Learn about Professional Learning"
   call_to_action_pilot_web_dev_unit: "Pilot our newly updated Web Development unit!"
@@ -1265,7 +1267,7 @@
   ai_vid_ethics1_caption: "Ethics & AI: Equal Access and Algorithmic Bias"
   ai_vid_ethics2_caption: "Ethics & AI: Privacy and the Future of Work"
 
-  admins_page_top_heading: "Expand computer science in your school or district"
+  admins_page_top_heading: "Expand computer science in your district"
   admins_page_top_subhead: "Unlock the future of education with Code.org's comprehensive computer science (CS) programs."
   admins_page_top_desc: "Join a visionary network of over 2 million educators dedicated to shaping innovative leaders, critical thinkers, and engaged digital citizens. Code.org partners with administrators to seamlessly integrate CS into schools, offering extensive resources, tailored professional development, and continual support for systemic success."
   admins_page_elevate_heading: "Elevate computer science education at your school"
@@ -1303,7 +1305,7 @@
   admins_page_resources_desc_unplugged: "Now you can teach the fundamentals of computer science to your students, whether you have computers in your classroom or not!"
 
   districts_page_top_heading: "Districts in the Code.org District Program"
-  districts_page_top_desc: "We're actively expanding our network of district partners across the US. Explore this list of districts currently enrolled in our District Partner program."
+  districts_page_top_desc: "We're actively expanding our network of Code.org Districts across the US. Explore this list of districts currently enrolled in our District Partner program."
   districts_page_join_heading: "Join our District Partner Program"
   districts_page_join_desc: "District leaders around the United States have partnered with Code.org directly, at no cost to bring computer science to their district, and teach students the skills of the future."
 
@@ -11356,7 +11358,7 @@
   about_page_section_more_description_1: "In 2013, Code.org was launched by twin brothers [Hadi](%{hadi_url}) and [Ali Partovi](%{partovi_url}) with a [video](%{video_url}) promoting computer science. This video became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded from a bootstrapped staff of volunteers to build a full organization supporting a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few."
   about_page_section_more_description_2: "To support our goal, we do work across the education spectrum: designing our own courses or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes."
   about_page_section_more_description_3: "Our work builds upon [decades of effort, by countless organizations and individuals](%{efforts_url}) who have helped establish, fund, and spread computer science education. We're thankful to benefit from the tireless help of the broader computer science education community, and [we thank all the partners and individuals who have supported our impact over the years](%{partners_url}))."
-  about_page_annual_report_2022: "[Code.org 2022 Annual Report](%{report_url_2022}) (Past reports: [2021](%{report_url_2021}), [2020](%{report_url_2020}), [2019](%{report_url_2019}), [2018](%{report_url_2018}), [2017](%{report_url_2017}), [2016](%{report_url_2016}), [2015](%{report_url_2015}), [2014](%{report_url_2014}))"
+  about_page_annual_report_2023: "[Code.org 2023 Annual Report](%{report_url_2023}) (Past reports: [2022](%{report_url_2022}), [2021](%{report_url_2021}), [2020](%{report_url_2020}), [2019](%{report_url_2019}), [2018](%{report_url_2018}), [2017](%{report_url_2017}), [2016](%{report_url_2016}), [2015](%{report_url_2015}), [2014](%{report_url_2014}))"
   about_page_section_more_list_2: "[Our core values and messaging guidelines](%{core_url})"
   about_page_section_more_list_3: "[Our curriculum and pedagogy philosophy](%{curriculum_url})"
   about_page_section_more_list_4: "[TEDx talk by our founder Hadi Partovi about why computer science is for all (VIDEO)](%{tedx_url})"
