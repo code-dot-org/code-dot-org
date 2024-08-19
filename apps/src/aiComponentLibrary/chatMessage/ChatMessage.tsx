@@ -35,31 +35,24 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   const hasWarningStyle = status === Status.PII_VIOLATION;
 
   const getDisplayText: string = useMemo(() => {
-    if (status === Status.OK || status === Status.UNKNOWN) {
-      return chatMessageText;
-    }
-
-    if (status === Status.PROFANITY_VIOLATION) {
-      if (
-        role === Role.USER &&
-        profaneMessageViewToggle === ProfaneMessageViewToggle.HIDE
-      ) {
+    switch (status) {
+      case Status.OK:
+      case Status.UNKNOWN:
         return chatMessageText;
-      }
-      return commonI18n.aiChatInappropriateUserMessage();
+      case Status.PROFANITY_VIOLATION:
+        return role === Role.USER &&
+          profaneMessageViewToggle === ProfaneMessageViewToggle.HIDE
+          ? chatMessageText
+          : commonI18n.aiChatInappropriateUserMessage();
+      case Status.PII_VIOLATION:
+        return commonI18n.aiChatTooPersonalUserMessage();
+      case Status.ERROR:
+        return role === Role.ASSISTANT
+          ? commonI18n.aiChatResponseError()
+          : chatMessageText;
+      default:
+        return '';
     }
-
-    if (status === Status.PII_VIOLATION) {
-      return commonI18n.aiChatTooPersonalUserMessage();
-    }
-
-    if (status === Status.ERROR) {
-      return role === Role.ASSISTANT
-        ? commonI18n.aiChatResponseError()
-        : chatMessageText;
-    }
-
-    return '';
   }, [chatMessageText, role, status, profaneMessageViewToggle]);
 
   return (
