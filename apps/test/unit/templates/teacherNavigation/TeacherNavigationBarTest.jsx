@@ -82,11 +82,5 @@ describe('TeacherNavigationBar', () => {
     screen.getByText(i18n.studentProjects());
     screen.getByText(i18n.roster());
     screen.getByText(i18n.settings());
-
-    // Object.keys(LABELED_TEACHER_NAVIGATION_PATHS).forEach((key) => {
-    //   const label = LABELED_TEACHER_NAVIGATION_PATHS[key as keyof typeof LABELED_TEACHER_NAVIGATION_PATHS].label;
-    //   if (label) {
-    //     expect(screen.getByText(label)).toBeInTheDocument();
-    //   }
   });
 });
