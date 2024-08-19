@@ -17,8 +17,8 @@ import {
   sampleActivities,
   sampleActivityForLessonWithoutLessonPlan,
   searchOptions,
-} from '@cdo/apps/test/unit/levelbuilder/lesson-editor/activitiesTestData';
-import {allowConsoleWarnings} from '@cdo/apps/test/util/testUtils';
+} from '../../../test/unit/levelbuilder/lesson-editor/activitiesTestData';
+import {allowConsoleWarnings} from '../../../test/util/testUtils';
 
 export default {
   component: ActivitiesEditor,
