@@ -282,23 +282,25 @@ export const isLabLoading = (state: {lab: LabState}) =>
 
 // This may depend on more factors, such as share.
 export const isReadOnlyWorkspace = (state: RootState) => {
-  const isOwner = state.lab.channel?.isOwner;
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const isEditingExemplarMode = getAppOptionsEditingExemplar();
-  const isFrozen = !!state.lab.channel?.frozen;
-  const readonlyPredictLevel = isReadonlyPredictLevel(state);
-  const hasSubmitted = getCurrentLevel(state)?.status === LevelStatus.submitted;
-  const isRunningAndReadonly =
-    state.lab2System.isRunning && shouldBeReadonlyWhileRunning(state);
 
   // We are always in edit mode if we are in start or editing exemplar mode.
   // Both of these modes have no channel.
   if (isStartMode || isEditingExemplarMode) {
     return false;
   }
+
   // Otherwise, we are in read only mode if we are not the owner of the channel,
   // the level is frozen, the level is a read only predict level, the level has been submitted.
   // or this is a lab that should be read only while running and the code is currently running.
+  const isOwner = state.lab.channel?.isOwner;
+  const isFrozen = !!state.lab.channel?.frozen;
+  const readonlyPredictLevel = isReadonlyPredictLevel(state);
+  const hasSubmitted = getCurrentLevel(state)?.status === LevelStatus.submitted;
+  const isRunningAndReadonly =
+    state.lab2System.isRunning && shouldBeReadonlyWhileRunning(state);
+
   return (
     !isOwner ||
     isFrozen ||
