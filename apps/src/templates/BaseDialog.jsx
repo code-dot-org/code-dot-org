@@ -1,11 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Button from '@cdo/apps/legacySharedComponents/Button';
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import i18n from '@cdo/locale';
 
 import {BASE_DIALOG_WIDTH} from '../constants';
-import color from '../util/color';
 
 /**
  * BaseDialog
@@ -157,9 +156,7 @@ export default class BaseDialog extends React.Component {
       top: 0,
       right: 0,
       padding: 0,
-      color: color.neutral_dark30,
       cursor: 'pointer',
-      fontSize: 24,
       border: 'none',
     };
 
@@ -183,10 +180,16 @@ export default class BaseDialog extends React.Component {
           {!this.props.uncloseable && !this.props.hideCloseButton && (
             <Button
               id="x-close"
+              color={buttonColors.gray}
+              icon={{
+                iconName: 'xmark',
+                iconStyle: 'solid',
+              }}
+              isIconOnly
               onClick={this.closeDialog}
-              icon="fa-solid fa-xmark"
+              size="l"
               style={xCloseStyle}
-              color="white"
+              type="secondary"
               aria-label={i18n.closeDialog()}
             />
           )}
