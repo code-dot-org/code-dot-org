@@ -94,7 +94,7 @@ const ControlButtons: React.FunctionComponent = () => {
   const handleRun = (runTests: boolean) => {
     if (onRun) {
       dispatch(setIsRunning(true));
-      onRun(runTests, dispatch, source).then(() =>
+      onRun(runTests, dispatch, source).finally(() =>
         dispatch(setIsRunning(false))
       );
       setHasRun(true);

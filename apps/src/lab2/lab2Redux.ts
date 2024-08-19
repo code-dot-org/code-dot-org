@@ -526,7 +526,7 @@ async function cleanUpProjectManager() {
   Lab2Registry.getInstance().clearProjectManager();
 }
 
-// Returns if the current state represents a predict level taht should be read only.
+// Returns if the current state represents a predict level that should be read only.
 // If the predict level code is not editable after submit or the user has not submitted a response,
 // the predict level is read only.
 function isReadonlyPredictLevel(state: RootState) {
