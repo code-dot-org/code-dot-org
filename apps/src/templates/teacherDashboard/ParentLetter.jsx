@@ -18,13 +18,14 @@ const RESEARCH_ARTICLE_URL =
 const ENGAGEMENT_URL =
   'https://support.code.org/hc/en-us/articles/360041539831-How-can-I-keep-track-of-what-my-child-is-working-on-on-Code-org-';
 
-const LOGIN_TYPE_NAMES = {
-  [SectionLoginType.clever]: 'Clever accounts',
-  [SectionLoginType.google_classroom]: 'Google Classroom accounts',
-  [SectionLoginType.picture]: 'picture passwords',
-  [SectionLoginType.word]: 'secret words',
-  [SectionLoginType.email]: 'personal logins',
-};
+// const LOGIN_TYPE_NAMES = {
+//   [SectionLoginType.clever]: 'Clever accounts',
+//   [SectionLoginType.google_classroom]: 'Google Classroom accounts',
+//   [SectionLoginType.lti_v1]: 'LMS accounts',
+//   [SectionLoginType.picture]: 'picture passwords',
+//   [SectionLoginType.word]: 'secret words',
+//   [SectionLoginType.email]: 'personal logins',
+// };
 
 /**
  * A letter that teachers can send home to parents, providing guidance on
@@ -50,6 +51,7 @@ class ParentLetter extends React.Component {
       loginType: PropTypes.oneOf(Object.values(SectionLoginType)).isRequired,
       code: PropTypes.string.isRequired,
     }).isRequired,
+    loginTypeName: PropTypes.string,
     students: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.number.isRequired,
@@ -73,7 +75,9 @@ class ParentLetter extends React.Component {
   }
 
   render() {
-    const {logoUrl, students, teacherName, section, studentId} = this.props;
+    console.log(this.props);
+    const {logoUrl, students, teacherName, section, loginTypeName, studentId} =
+      this.props;
     const sectionCode = section.code;
     const loginType = section.loginType;
     const student =
@@ -85,6 +89,7 @@ class ParentLetter extends React.Component {
     const studentName = student ? student.name : 'your student';
     const secretPicturePath = student ? student.secretPicturePath : null;
     const secretWords = student ? student.secretWords : null;
+    console.log(loginTypeName);
 
     return (
       <div id="printArea">
@@ -105,26 +110,43 @@ class ParentLetter extends React.Component {
             })}
           />
           <h1>{i18n.parentLetterStep2()}</h1>
-          <SignInInstructions
+          <SignInInstructions // Need to track LtiProvider here
             loginType={loginType}
+            loginTypeName={loginTypeName}
             secretPicturePath={secretPicturePath}
             secretWords={secretWords}
             sectionCode={sectionCode}
             studentName={studentName}
           />
-          <SafeMarkdown
-            markdown={i18n.parentLetterStep2Details({
-              studentName: studentName,
-              projectsLink: studio('/projects/public'),
-              atHomeLink: pegasus('/athome'),
-            })}
-          />
-          <h1>{i18n.parentLetterStep3()}</h1>
-          <SafeMarkdown
-            markdown={i18n.parentLetterStep3Details({
-              accountEditLink: studio('/users/edit'),
-            })}
-          />
+          {loginType !== SectionLoginType.lti_v1 ? (
+            <SafeMarkdown
+              markdown={i18n.parentLetterStep2Details({
+                studentName: studentName,
+                projectsLink: studio('/projects/public'),
+                atHomeLink: pegasus('/athome'),
+              })}
+            />
+          ) : (
+            <SafeMarkdown
+              markdown={i18n.parentLetterStep2DetailsLMS({
+                studentName: studentName,
+                loginTypeName: loginTypeName,
+              })}
+            />
+          )}
+          {loginType !== SectionLoginType.lti_v1 ? (
+            <div>
+              <h1>{i18n.parentLetterStep3()}</h1>
+              <SafeMarkdown
+                markdown={i18n.parentLetterStep3Details({
+                  accountEditLink: studio('/users/edit'),
+                })}
+              />
+            </div>
+          ) : (
+            <div />
+          )}
+
           <h1>{i18n.parentLetterWhy()}</h1>
           <SafeMarkdown
             markdown={i18n.parentLetterWhyDetails({
@@ -173,6 +195,7 @@ Header.defaultProps = {
 
 const SignInInstructions = ({
   loginType,
+  loginTypeName,
   secretPicturePath,
   secretWords,
   sectionCode,
@@ -180,6 +203,34 @@ const SignInInstructions = ({
 }) => {
   let steps;
   switch (loginType) {
+    case SectionLoginType.lti_v1:
+      steps = (
+        <ol>
+          <li>
+            <SafeMarkdown
+              markdown={i18n.parentLetterLMS1({
+                loginTypeName: loginTypeName,
+              })}
+            />
+          </li>
+          <li>
+            <SafeMarkdown
+              markdown={i18n.parentLetterLMS2({
+                loginTypeName: loginTypeName,
+              })}
+            />
+          </li>
+          <li>
+            <SafeMarkdown
+              markdown={i18n.parentLetterLMS3({
+                loginTypeName: loginTypeName,
+              })}
+            />
+          </li>
+        </ol>
+      );
+      break;
+
     case SectionLoginType.clever:
       steps = (
         <ol>
@@ -270,7 +321,8 @@ const SignInInstructions = ({
       );
   }
 
-  const loginTypeName = LOGIN_TYPE_NAMES[loginType];
+  //const loginTypeName = LOGIN_TYPE_NAMES[loginType];
+  console.log(loginTypeName);
   return (
     <div>
       <SafeMarkdown
@@ -284,6 +336,7 @@ const SignInInstructions = ({
 };
 SignInInstructions.propTypes = {
   loginType: PropTypes.oneOf(Object.values(SectionLoginType)),
+  loginTypeName: PropTypes.string,
   secretPicturePath: PropTypes.string,
   secretWords: PropTypes.string,
   sectionCode: PropTypes.string, // TODO: Conditional required
