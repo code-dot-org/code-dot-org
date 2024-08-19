@@ -60,23 +60,6 @@ const ControlButtons: React.FunctionComponent = () => {
   const validationState = useAppSelector(state => state.lab.validationState);
   const lifecycleNotifier = Lab2Registry.getInstance().getLifecycleNotifier();
 
-  // We disable the run button in predict levels if we are not in start mode
-  // and the user has not yet written a prediction.
-  const awaitingPredictSubmit =
-    !isStartMode && isPredictLevel && !hasPredictResponse;
-  const disableRunAndTest = awaitingPredictSubmit || isLoadingEnvironment;
-
-  // We disabled navigation for the following cases:
-  // If this level has validation and the validation has not yet passed.
-  // OR if there is no validation and the user has not run their code yet.
-  // The exception to this is if this is a submittable level and the user has already submitted.
-  // In that case "navigation" is unsubmitting their project and we want it to be enabled no matter
-  // the run state.
-  const validationHasNotPassed =
-    validationState.hasConditions && !validationState.satisfied;
-  const disableNavigation =
-    !hasSubmitted && (validationHasNotPassed || !hasRun);
-
   const resetStatus = () => {
     setHasRun(false);
     setIsRunning(false);
@@ -161,31 +144,55 @@ const ControlButtons: React.FunctionComponent = () => {
     }
   };
 
-  const getNavigationTooltip = () => {
+  // This method returns null if navigation is enabled, otherwise it returns the help tooltip text
+  // to explain why navigation is disabled.
+  // We disable navigation for the following cases:
+  // If this level has validation and the validation has not yet passed.
+  // OR if there is no validation and the user has not run their code yet.
+  // The exception to this is if this is a submittable level and the user has already submitted.
+  // In that case "navigation" is unsubmitting their project and we want it to be enabled no matter
+  // the run state.
+  const getDisabledNavigationTooltip = () => {
+    const hasValidationAndHasNotPassed =
+      validationState.hasConditions && !validationState.satisfied;
+    const doesNotHaveValidationAndHasNotRun =
+      !validationState.hasConditions && !hasRun;
+    const disableNavigation =
+      !hasSubmitted &&
+      (hasValidationAndHasNotPassed || doesNotHaveValidationAndHasNotRun);
+
     if (!disableNavigation) {
       return null;
-    }
-    if (isSubmittable) {
-      // If the level is submittable, they need to pass validation if it exists,
-      // otherwise they need to run their code.
-      return validationHasNotPassed
+    } else if (isSubmittable) {
+      // If the level is submittable and the user has not submitted,
+      // they need to pass validation if it exists, otherwise they need to run their code.
+      return hasValidationAndHasNotPassed
         ? codebridgeI18n.validationNotYetPassedSubmit()
         : codebridgeI18n.runToSubmit();
-    } else if (validationHasNotPassed) {
+    } else if (hasValidationAndHasNotPassed) {
       // If we have a next level, show the continue text, otherwise show the finish text.
       return hasNextLevel
         ? codebridgeI18n.validationNotYetPassedContinue()
         : codebridgeI18n.validationNotYetPassedFinish();
-    } else if (!hasRun) {
+    } else {
+      // The user has not yet run their code if we get to this case.
       return hasNextLevel
         ? codebridgeI18n.runToContinue()
         : codebridgeI18n.runToFinish();
     }
   };
 
-  const navigationTooltip = getNavigationTooltip();
+  const disabledNavigationTooltip = getDisabledNavigationTooltip();
 
-  const getCodeActionsTooltip = () => {
+  const awaitingPredictSubmit =
+    !isStartMode && isPredictLevel && !hasPredictResponse;
+
+  // Returns null if the code action buttons (run/test) should be enabled,
+  // otherwise returns the help tip text explaining why they are disabled.
+  // We disable the run/test buttons while the environment is loading
+  // OR if this is a predict level, we are not in start mode
+  // and the user has not yet written a prediction.
+  const getDisabledCodeActionsTooltip = () => {
     let tooltip = null;
     if (awaitingPredictSubmit) {
       tooltip = codebridgeI18n.predictRunDisabledTooltip();
@@ -195,7 +202,10 @@ const ControlButtons: React.FunctionComponent = () => {
     return tooltip;
   };
 
-  const codeActionsTooltip = getCodeActionsTooltip();
+  const disabledCodeActionsTooltip = getDisabledCodeActionsTooltip();
+  const disabledCodeActionsIcon = awaitingPredictSubmit
+    ? 'fa-question-circle-o'
+    : 'fa-spinner fa-spin';
 
   // We may want to expand the tooltip to cover the disabled button
   // as well. We will likely move these buttons; when we do consider
@@ -236,16 +246,16 @@ const ControlButtons: React.FunctionComponent = () => {
         />
       ) : (
         <span className={moduleStyles.centerButton}>
-          {codeActionsTooltip &&
+          {disabledCodeActionsTooltip &&
             renderDisabledButtonHelperIcon(
-              'fa-spinner fa-spin',
+              disabledCodeActionsIcon,
               'codeActionsTooltip',
-              codeActionsTooltip
+              disabledCodeActionsTooltip
             )}
           <Button
             text={'Run'}
             onClick={() => handleRun(false)}
-            disabled={disableRunAndTest}
+            disabled={!!disabledCodeActionsTooltip}
             iconLeft={{iconStyle: 'solid', iconName: 'play'}}
             className={moduleStyles.runButton}
             size={'s'}
@@ -254,7 +264,7 @@ const ControlButtons: React.FunctionComponent = () => {
           <Button
             text="Test"
             onClick={() => handleRun(true)}
-            disabled={disableRunAndTest}
+            disabled={!!disabledCodeActionsTooltip}
             iconLeft={{iconStyle: 'solid', iconName: 'flask'}}
             color={'black'}
             size={'s'}
@@ -262,16 +272,16 @@ const ControlButtons: React.FunctionComponent = () => {
         </span>
       )}
       <span className={moduleStyles.navigationButton}>
-        {navigationTooltip &&
+        {disabledNavigationTooltip &&
           renderDisabledButtonHelperIcon(
             'fa-question-circle-o',
             'submitButtonDisabled',
-            navigationTooltip
+            disabledNavigationTooltip
           )}
         <Button
           text={navigationText}
           onClick={handleNavigation}
-          disabled={disableNavigation}
+          disabled={!!disabledNavigationTooltip}
           color={'purple'}
           size={'s'}
           iconLeft={
