@@ -13,6 +13,7 @@ import vocabulariesEditor, {
   initVocabularies,
 } from '@cdo/apps/levelbuilder/lesson-editor/vocabulariesEditorRedux';
 import {createStoreWithReducers, registerReducers} from '@cdo/apps/redux';
+
 import {
   sampleActivities,
   sampleActivityForLessonWithoutLessonPlan,
