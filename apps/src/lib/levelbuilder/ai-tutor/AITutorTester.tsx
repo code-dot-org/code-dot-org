@@ -1,23 +1,37 @@
 import Papa from 'papaparse';
 import React, {useEffect, useState} from 'react';
 
+import {
+  postAichatCheckSafety,
+  postAichatCompletionMessage,
+} from '@cdo/apps/aichat/aichatApi';
+import {ChatMessage} from '@cdo/apps/aichat/types';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import {formatQuestionForAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
-import {ChatContext} from '@cdo/apps/aiTutor/types';
 import Button from '@cdo/apps/componentLibrary/button/Button';
+import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 
 import AITutorTesterSampleColumns from './AITutorTesterSampleColumns';
+import {
+  availableEndpoints,
+  DEFAULT_TEMPERATURE,
+  genAIEndpointIds,
+  modelCardInfo,
+} from './constants';
 
 import styles from './ai-tutor-tester.module.scss';
 
 /**
  * Renders a series of buttons that allow levelbuilders to upload a CSV of
- * student inputs and get back AI Tutor responses in bulk.
+ * student inputs and get back AI responses in bulk.
  */
 
-interface AIInteraction extends ChatContext {
+interface AIInteraction {
+  studentInput: string;
   systemPrompt?: string | undefined;
   levelId?: number | undefined;
+  temperature?: number | undefined;
   aiResponse: string | undefined;
 }
 
@@ -28,6 +42,7 @@ interface AITutorTesterProps {
 const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
   const [csvFile, setCsvFile] = useState<File | null>(null);
   const [data, setData] = useState<AIInteraction[]>([]);
+  const [selectedEndpoint, setSelectedEndpoint] = useState<string>('ai-tutor');
   const [responseCount, setResponseCount] = useState<number>(0);
   const [responsesPending, setResponsesPending] = useState<boolean>(false);
 
@@ -47,18 +62,74 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
     }
   };
 
+  const onDropdownChange = (value: string) => {
+    setSelectedEndpoint(value);
+  };
+
   const updateData = (result: {data: AIInteraction[]}) => {
     setData(result.data);
   };
 
-  const getAIResponses = () => {
+  const getAIResponses = async () => {
     setResponsesPending(true);
-    for (let i = 0; i < data.length; i++) {
-      askAI(data[i]);
-    }
+    const responsePromises = data.map(async row => {
+      if (selectedEndpoint === 'llm-guard') {
+        return getLLMGuardToxicity(row);
+      } else if (genAIEndpointIds.includes(selectedEndpoint)) {
+        return getGenAIResponses(row);
+      } else {
+        return askAITutor(row);
+      }
+    });
+
+    await Promise.allSettled(responsePromises);
   };
 
-  const askAI = async (row: AIInteraction) => {
+  const getGenAIResponses = async (row: AIInteraction) => {
+    const systemPrompt = row.systemPrompt ? row.systemPrompt : '';
+    const chatMessage: ChatMessage = {
+      chatMessageText: row.studentInput,
+      role: Role.USER,
+      status: 'ok',
+      timestamp: new Date().getTime(),
+    };
+    const temperature = row.temperature ? row.temperature : DEFAULT_TEMPERATURE;
+    const aiCustomizations = {
+      selectedModelId: selectedEndpoint,
+      temperature: temperature,
+      systemPrompt: systemPrompt,
+      retrievalContexts: [],
+      modelCardInfo: modelCardInfo,
+    };
+    const levelId = row.levelId ? row.levelId : null;
+    const aichatContext = {
+      currentLevelId: levelId,
+      scriptId: null,
+      channelId: undefined,
+    };
+    const genAIResponse = await postAichatCompletionMessage(
+      chatMessage,
+      [],
+      aiCustomizations,
+      aichatContext
+    );
+    row.aiResponse = genAIResponse?.messages[1]?.chatMessageText;
+    setResponseCount(prevResponseCount => prevResponseCount + 1);
+  };
+
+  const getLLMGuardToxicity = async (row: AIInteraction) => {
+    const llmGuardResponse = await postAichatCheckSafety(row.studentInput);
+    if (llmGuardResponse.result.statusCode === 200) {
+      row.aiResponse = 'ok';
+    } else if (llmGuardResponse.result.statusCode === 422) {
+      row.aiResponse = 'toxic';
+    } else {
+      row.aiResponse = 'error';
+    }
+    setResponseCount(prevResponseCount => prevResponseCount + 1);
+  };
+
+  const askAITutor = async (row: AIInteraction) => {
     const chatApiResponse = await getChatCompletionMessage(
       formatQuestionForAITutor(row),
       [],
@@ -91,18 +162,32 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
 
   return (
     <div>
-      <h2>Generate AI Tutor Responses</h2>
+      <h2>Generate AI Responses</h2>
       {!allowed && (
         <h3 className={styles.denied}>
           You need to be a levelbuilder with AI Tutor access to use this tool.
         </h3>
       )}
       <p>
-        Upload a CSV of student inputs that will be sent to AI Tutor. AI Tutor
-        responses will then be saved and you can download the resulting updated
-        CSV.
+        Upload a CSV of student inputs that will be sent to the selected
+        service. AI responses will then be saved and you can download the
+        resulting updated CSV.
       </p>
-      <AITutorTesterSampleColumns />
+      <br />
+      <SimpleDropdown
+        labelText="Choose an endpoint"
+        isLabelVisible={false}
+        onChange={event => onDropdownChange(event.target.value)}
+        items={availableEndpoints.map(endpoint => {
+          return {value: endpoint.id, text: endpoint.name};
+        })}
+        selectedValue={selectedEndpoint}
+        name="aiChatTesterDropdown"
+        size="s"
+      />
+      <br />
+      <br />
+      <AITutorTesterSampleColumns endpoint={selectedEndpoint} />
       <div>
         <div className={styles.buttonSpacing}>
           <input
@@ -124,7 +209,7 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
 
         <div className={styles.buttonSpacing}>
           <Button
-            text="Get AI Tutor Responses"
+            text="Get Responses"
             onClick={getAIResponses}
             disabled={!dataUploaded || !allowed}
             isPending={responsesPending}
@@ -136,7 +221,7 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
 
         <div>
           <Button
-            text=" Download CSV"
+            text="Download CSV"
             onClick={downloadCSV}
             disabled={!aiResponded || !allowed}
           />

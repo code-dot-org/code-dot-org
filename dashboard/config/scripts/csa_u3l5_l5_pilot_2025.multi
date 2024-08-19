@@ -1,0 +1,36 @@
+name 'CSA U3L5-L5_pilot-2025'
+title 'Check for Understanding'
+
+right 'The method determines whether the array `nums` contains all even numbers.'
+wrong 'The method determines whether the array `nums` contains no even numbers.'
+wrong 'The method determines whether the array `nums` has an even length.'
+wrong 'The method determines whether the first element of array `nums` is even.'
+wrong 'The method determines whether the last element of array `nums` is even.'
+
+markdown <<MARKDOWN
+What is the purpose of the following method?
+
+```
+public boolean mystery(int[] nums) {
+  boolean result = true;
+
+  for (int index = 0; index < nums.length; index++) {
+     if ((nums[index] % 2) == 1) {
+      result = false;
+    }
+  }
+
+  return result;
+}
+```
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+This method declares a `boolean` variable called `result` to keep track of the result of executing the method, and the `for` loop then traverses through each element of the 1D array `nums`.
+
+In the body of the `for` loop, the condition of the `if` statement (`nums[index] % 2 == 1`) checks if the remainder after dividing the current value by `2` equals `1`. If the condition is `true`, the variable `result` is set to `false`.
+
+If any of the values in the 1D array `nums` is odd (has a remainder of `1` after dividing it by `2`), then the value `false` is returned. Otherwise, the value `true` is returned.
+MARKDOWN
+
+allow_multiple_attempts true

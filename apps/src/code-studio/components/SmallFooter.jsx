@@ -12,11 +12,11 @@ import debounce from 'lodash/debounce';
 import PropTypes from 'prop-types';
 import React from 'react';
 
+import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
-import Button from '../../templates/Button';
 import color from '../../util/color';
 
 const MenuState = {
@@ -190,7 +190,6 @@ export default class SmallFooter extends React.Component {
         color: color.neutral_dark30,
         backgroundColor: color.background_gray,
         cursor: 'pointer',
-        fontSize: 24,
         border: 'none',
       },
       copyrightScrollArea: {
@@ -269,11 +268,17 @@ export default class SmallFooter extends React.Component {
               )}
             />
             <Button
-              id="x-close-copyright"
-              onClick={() => this.setState({menuState: MenuState.MINIMIZED})}
-              icon="fa-solid fa-xmark"
-              style={styles.copyrightXClose}
               aria-label={i18n.closeDialog()}
+              icon={{
+                iconName: 'xmark',
+                iconStyle: 'light',
+              }}
+              id="x-close-copyright"
+              isIconOnly
+              onClick={() => this.setState({menuState: MenuState.MINIMIZED})}
+              size="l"
+              style={styles.copyrightXClose}
+              type="primary"
             />
           </div>
         </div>
@@ -303,13 +308,19 @@ export default class SmallFooter extends React.Component {
     if (this.props.copyrightInBase) {
       return (
         <span className="copyright-button">
-          <button
+          <Button
+            aria-label={i18n.copyrightInfoButton()}
             className="copyright-link no-mc"
-            type="button"
+            color={buttonColors.gray}
+            icon={{
+              iconName: 'copyright',
+              iconStyle: 'light',
+            }}
+            isIconOnly
             onClick={this.clickBaseCopyright}
-          >
-            &copy;
-          </button>
+            size="xs"
+            type="secondary"
+          />
         </span>
       );
     }

@@ -31,6 +31,13 @@ GIT
       request_store (~> 1.0)
 
 GIT
+  remote: https://github.com/code-dot-org/omniauth-clever.git
+  revision: d71f68e78592d3d291995a0a313f4900e7853ded
+  specs:
+    omniauth-clever (2.0.0)
+      omniauth-oauth2 (>= 1.1, <= 1.5)
+
+GIT
   remote: https://github.com/code-dot-org/omniauth-openid-connect.git
   revision: 2397b1415896e2639a7582a36e26c90b9211f99f
   ref: cdo
@@ -78,14 +85,6 @@ GIT
     sprockets (3.7.1)
       concurrent-ruby (~> 1.1)
       rack (> 1, < 3)
-
-GIT
-  remote: https://github.com/daynew/omniauth-clever.git
-  revision: d217eb5d44ad4d68c52beb9b0b1929cb109e190a
-  branch: clever-v2.1-upgrade
-  specs:
-    omniauth-clever (2.0.0)
-      omniauth-oauth2 (>= 1.1, <= 1.5)
 
 GIT
   remote: https://github.com/dooly-ai/omniauth-microsoft_v2_auth.git
@@ -203,14 +202,17 @@ GEM
     attr_required (1.0.2)
     auto_strip_attributes (2.1.0)
       activerecord (>= 3.0)
-    aws-eventstream (1.2.0)
+    aws-eventstream (1.3.0)
     aws-google (0.2.0)
       aws-sdk-core (~> 3.130)
       google-apis-core
       launchy (~> 2)
     aws-partitions (1.793.0)
-    aws-sdk-acm (1.44.0)
-      aws-sdk-core (~> 3, >= 3.119.0)
+    aws-sdk-acm (1.74.0)
+      aws-sdk-core (~> 3, >= 3.201.0)
+      aws-sigv4 (~> 1.5)
+    aws-sdk-bedrockagentruntime (1.10.0)
+      aws-sdk-core (~> 3, >= 3.193.0)
       aws-sigv4 (~> 1.1)
     aws-sdk-cloudformation (1.55.0)
       aws-sdk-core (~> 3, >= 3.119.0)
@@ -218,16 +220,16 @@ GEM
     aws-sdk-cloudfront (1.55.0)
       aws-sdk-core (~> 3, >= 3.119.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-cloudwatch (1.54.0)
-      aws-sdk-core (~> 3, >= 3.119.0)
-      aws-sigv4 (~> 1.1)
-    aws-sdk-cloudwatchlogs (1.43.0)
-      aws-sdk-core (~> 3, >= 3.119.0)
-      aws-sigv4 (~> 1.1)
-    aws-sdk-core (3.180.0)
-      aws-eventstream (~> 1, >= 1.0.2)
-      aws-partitions (~> 1, >= 1.651.0)
+    aws-sdk-cloudwatch (1.97.0)
+      aws-sdk-core (~> 3, >= 3.201.0)
       aws-sigv4 (~> 1.5)
+    aws-sdk-cloudwatchlogs (1.88.0)
+      aws-sdk-core (~> 3, >= 3.201.0)
+      aws-sigv4 (~> 1.5)
+    aws-sdk-core (3.201.3)
+      aws-eventstream (~> 1, >= 1.3.0)
+      aws-partitions (~> 1, >= 1.651.0)
+      aws-sigv4 (~> 1.8)
       jmespath (~> 1, >= 1.6.1)
     aws-sdk-databasemigrationservice (1.56.0)
       aws-sdk-core (~> 3, >= 3.119.0)
@@ -257,13 +259,13 @@ GEM
       aws-sdk-core (~> 3, >= 3.119.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.1)
-    aws-sdk-sagemakerruntime (1.55.0)
-      aws-sdk-core (~> 3, >= 3.177.0)
+    aws-sdk-sagemakerruntime (1.60.0)
+      aws-sdk-core (~> 3, >= 3.188.0)
       aws-sigv4 (~> 1.1)
     aws-sdk-secretsmanager (1.48.0)
       aws-sdk-core (~> 3, >= 3.119.0)
       aws-sigv4 (~> 1.1)
-    aws-sigv4 (1.6.0)
+    aws-sigv4 (1.9.1)
       aws-eventstream (~> 1, >= 1.0.2)
     backports (3.11.3)
     base64 (0.2.0)
@@ -625,9 +627,6 @@ GEM
       actionpack (>= 4.2)
       omniauth (>= 1.3.1)
     open-uri (0.1.0)
-      stringio
-      time
-      uri
     open_uri_redirections (0.2.1)
     openid_connect (1.4.2)
       activemodel
@@ -673,6 +672,7 @@ GEM
       multi_json (~> 1.0)
       pusher-signature (~> 0.1.8)
     pusher-signature (0.1.8)
+    pycall (1.5.2)
     racc (1.6.2)
     rack (2.2.6.4)
     rack-cache (1.13.0)
@@ -877,7 +877,6 @@ GEM
       ip3country (~> 0.2.1)
       user_agent_parser (~> 2.15.0)
     stringex (2.5.2)
-    stringio (3.1.0)
     swd (1.3.0)
       activesupport (>= 3)
       attr_required (>= 0.0.5)
@@ -892,8 +891,6 @@ GEM
     thwait (0.2.0)
       e2mmap
     tilt (2.0.11)
-    time (0.3.0)
-      date
     timecop (0.8.1)
     timeout (0.3.2)
     trailblazer-option (0.1.2)
@@ -912,7 +909,6 @@ GEM
     unf_ext (0.0.7.2)
     unicode-display_width (2.4.2)
     unicode_utils (1.4.0)
-    uri (0.13.0)
     user_agent_parser (2.15.0)
     validate_email (0.1.6)
       activemodel (>= 3.0)
@@ -966,6 +962,7 @@ DEPENDENCIES
   auto_strip_attributes (~> 2.1)
   aws-google (~> 0.2.0)
   aws-sdk-acm
+  aws-sdk-bedrockagentruntime (~> 1.10.0)
   aws-sdk-cloudformation
   aws-sdk-cloudfront
   aws-sdk-cloudwatch
@@ -1051,8 +1048,6 @@ DEPENDENCIES
   nakayoshi_fork
   naturally
   net-http-persistent
-  net-scp
-  net-ssh
   newrelic_rpm (~> 6.14.0)
   nokogiri (>= 1.10.0)
   octokit
@@ -1077,6 +1072,7 @@ DEPENDENCIES
   puma (~> 5.6)
   puma_worker_killer
   pusher (~> 1.3.1)
+  pycall (>= 1.5.2)
   rack-cache
   rack-cors (~> 2.0.1)
   rack-mini-profiler

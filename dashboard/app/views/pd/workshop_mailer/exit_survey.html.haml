@@ -4,6 +4,7 @@
   }
 
 - code_org_link = link_to 'Code.org', 'http://code.org'
+- pl_page_link = link_to 'My Professional Learning Page', 'https://studio.code.org/my-professional-learning'
 
 %p
   Hi
@@ -13,8 +14,6 @@
   Thank you for attending a Code.org
   - if @workshop.course == Pd::Workshop::COURSE_CSF
     = @workshop.course + ' ' + @workshop.subject + ' workshop'
-  - elsif @workshop.subject == Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS
-    = @workshop.subject
   - else
     = @workshop.course + ' workshop'
   on
@@ -25,11 +24,13 @@
   = link_to('survey', @survey_url) + '.'
 
 %p
-  %i Why? Because your opinion matters!!
-
-%p
   We are committed to continually improving our programs. We want our teachers to have the best workshops possible
   and your feedback helps us build the experience that teachers have in the future!
+
+%p
+  %a{href: @survey_url,
+    style: 'width: 240px; height: 36px; border: 0; color: white; background-color: #FFA400; font: bolder 18px Arial; display: block; text-align: center; line-height: 36px; text-decoration: none; border-radius: 5px;'}
+    Take the 5 minute survey
 
 %p
   Please note that your responses will be shared
@@ -38,16 +39,13 @@
   and your name and email will not be shared with your facilitator or Regional Partner. However,
   it's possible your facilitator or Regional Partner could identify you from your written responses.
 
-%p
-  %a{href: @survey_url,
-    style: 'width: 240px; height: 36px; border: 0; color: white; background-color: #FDC62C; font: bolder 18px Arial; display: block; text-align: center; line-height: 36px; text-decoration: none; border-radius: 5px;'}
-    Take the 5 minute survey
-
-- if @workshop.course == Pd::Workshop::COURSE_CSF && @workshop.subject == Pd::Workshop::SUBJECT_CSF_101
-
-  %h3
-    Get started with
-    = @workshop.course
+  %p
+    There is a personalized certificate of completion available on your
+    = pl_page_link
+    to print.
+  %p
+    You've taken the first steps to making CS available to your students. We can't wait to see where you all go from here!
+    Remember to keep us posted on Twitter @TeachCode.
 
   %p
     If you have any questions, feel free to reach out to us at
@@ -55,25 +53,6 @@
     or connect with other teachers on our
     = link_to('teacher forum', 'https://forum.code.org/') + '.'
 
-- unless [Pd::Workshop::SUBJECT_CSF_201, Pd::Workshop::SUBJECT_CSP_FOR_RETURNING_TEACHERS].include? @workshop.subject
-  - if @workshop.course == Pd::Workshop::COURSE_CSF
-    %p
-      There's a personalized certificate attached to this email acknowledging your successful completion of Code.org's
-      = @workshop.course
-      workshop.
-
-  %p
-    You've taken the first steps to making CS available to your students. We can't wait to see where you all go from here!
-    Remember to keep us posted on Twitter @TeachCode.
-
-
-- if @workshop.course == Pd::Workshop::COURSE_CSF
-  %p
-    Thank you,
-    %br
-    = @workshop.organizer.name
-
-- else
   %p
     Thank you,
     %br

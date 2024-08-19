@@ -3,6 +3,7 @@ import SwapLayoutButton from '@codebridge/SwapLayoutButton';
 import React, {useEffect, useRef, useState} from 'react';
 import {useDispatch} from 'react-redux';
 
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -19,6 +20,7 @@ const Console: React.FunctionComponent = () => {
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
 
   const [graphModalOpen, setGraphModalOpen] = useState(false);
+  const [activeGraphIndex, setActiveGraphIndex] = useState(0);
 
   // TODO: Update this with other apps that use the console as needed.
   const systemMessagePrefix = appName === 'pythonlab' ? '[PYTHON LAB] ' : '';
@@ -33,6 +35,12 @@ const Console: React.FunctionComponent = () => {
 
   const clearOutput = () => {
     dispatch(resetOutput());
+    setGraphModalOpen(false);
+  };
+
+  const popOutGraph = (index: number) => {
+    setActiveGraphIndex(index);
+    setGraphModalOpen(true);
   };
 
   const headerButton = () => {
@@ -72,12 +80,12 @@ const Console: React.FunctionComponent = () => {
                   disabled={false}
                   icon={{iconName: 'up-right-from-square', iconStyle: 'solid'}}
                   isIconOnly={true}
-                  onClick={() => setGraphModalOpen(true)}
+                  onClick={() => popOutGraph(index)}
                   size="xs"
                   type="primary"
                   aria-label="open matplotlib_image in pop-up"
                 />
-                {graphModalOpen && (
+                {activeGraphIndex === index && graphModalOpen && (
                   <GraphModal
                     src={`data:image/png;base64,${outputLine.contents}`}
                     onClose={() => setGraphModalOpen(false)}
@@ -94,6 +102,13 @@ const Console: React.FunctionComponent = () => {
             return (
               <div key={index} className={moduleStyles.errorLine}>
                 {outputLine.contents}
+              </div>
+            );
+          } else if (outputLine.type === 'system_error') {
+            return (
+              <div key={index} className={moduleStyles.errorLine}>
+                {systemMessagePrefix}
+                {codebridgeI18n.systemCodeError()}
               </div>
             );
           } else {

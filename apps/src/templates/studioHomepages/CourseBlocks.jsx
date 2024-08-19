@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
-import {NotificationResponsive} from '@cdo/apps/templates/Notification';
+import {NotificationResponsive} from '@cdo/apps/sharedComponents/Notification';
 import {
   InternationalGradeBandCards,
   ToolsCards,

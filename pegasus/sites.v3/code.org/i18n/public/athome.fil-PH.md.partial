@@ -20,7 +20,6 @@ theme: responsive
     <li><a class="linktag" id="self-paced-nav" href="#express">Kumuha ng panimula, self-paced na kurso</a></li>
     <li><a class="linktag" id="labs-nav" href="#labs">Lumikha ng laro o app</a></li>
     <li><a class="linktag" id="unplugged-nav" href="#unplugged">Subukan ang CS nang walang computer ('unplugged' at mobile na mga opsyon)</a></li>
-    <li><a class="linktag" id="codebytes-nav" href="#livecoding">Matuto ng CS mula sa pangkat ng Code.org at mga espesyal na bisita</a></li>
 </ul>
 
 <br>
@@ -277,51 +276,6 @@ theme: responsive
   <li><a class="linktag" id="hello-ruby" href="https://www.helloruby.com/play" target="_blank">Hello Ruby</a> - Ang pinaka kakaibang paraan sa mundo para matuto tungkol sa mga computer, teknolohiya at programming. Mga aktibidad sa hanay ng mga paksa ng CS, tulad ng kakayahan na paliit-liitin ang mga problema at lutasin, mapansin ang mga pattern, mag-isip sa paraan ng algorithm, tukuyin at tanggalin ang mga mali sa problema at magtulungan. (para sa edad 4-10)</li>
   <li><a class="linktag" id="cs-unplugged" href="https://csunplugged.org/en/" target="_blank">CS Unplugged</a> - Isang koleksyon ng libreng materyal sa pagtuturo na nagtuturo ng computer science sa pamamagitan ng mga nakakaengganyong laro at puzzle na gumagamit ng mga card, string, krayola at maraming tumatakbo sa paligid. (para sa edad 5-14)</li>
 </ul>
-
-<h2>Walang computer sa bahay? Subukan ang CS sa iyong telepono gamit ang mga app na ito mula sa aming mga kasosyo</h2>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Isla ng Kahon"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>A charming mobile coding game that takes learners on an exciting adventure, while teaching the fundamentals of coding, like algorithms, pattern recognition, sequences, loops and conditionals. <i>(para sa lahat ng edad)</i>
-</div>
-
-<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">codeSpark</h3></a>Award-winning learn-to-code platform for kids ages 5-9. Lutasin ang mga puzzle at gumawa ng mga laro gamit ang The Foos habang natututong mag-code. <strong>Tandaan: ang codeSpark ay nag-aalok ng libreng 3 buwang trial. Kinakailangan ang email address at impormasyon ng credit card ng magulang sa pag-signup.</strong> <i>(para sa mga pre-reader hanggang Grade 5)</i>
-</div>
-
-<div style="clear: both; margin-bottom: 15px"></div>
-
-<p><a href="#top">[Bumalik sa itaas]</a></p>
-
-<a id="livecoding"></a>
-<h2>Matuto mula sa pangkat ng Code.org at mga espesyal na bisita!</h2>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebytes.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Logo ng CodeBytes">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes are easy-to-digest, 20 minute interactive lessons blending computer science with real-world topics. Magsanay ang isang AI na magbasa ng sign language, magdisenyo ng app para sa kabutihan, galugarin ang mundo ng Minecraft, at higit pa!</div>        <br>        <br>        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Tingnan ang mga episode</button></a>
-    </span>
-  </div>
-</div>
-</div>
-
-<div class="col-50">
-  <div class="tutorial-tile" style="padding-right:20px; margin-bottom:20px">
-      <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank">
-        <img class="tutorial-tile-img" src="/images/athome/codebreak.png" style="max-width:100%; border: 0.5px solid #808080; border-radius: 15px 15px 0 0" alt="Code Break">
-      </a>
-    <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
-      <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px">Code Break</h3>
-        <div class="smalltext" style="">Keep computer science fun by taking a Code Break! Pwede kang lumikha ng isang cypher kasama si Ashton Kutcher, alamin ang tungkol sa mga variable kasama si Yara Shahidi, at tuklasin din kung paano gumagana ang Internet kasama ang aktwal na imbentor ng Internet, si Vint Cerf!</div>        <br>        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Kumonekta</button></a>
-    </span>
-  </div>
-</div>
-</div>
 
 <div style="clear: both; margin-bottom: 20px"></div>
 

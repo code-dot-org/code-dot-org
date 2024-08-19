@@ -67,7 +67,6 @@ def replace_hostname(url)
     pegasus_host: ENV.fetch('PEGASUS_TEST_DOMAIN', nil),
     hourofcode_host: ENV.fetch('HOUROFCODE_TEST_DOMAIN', nil),
     csedweek_host: ENV.fetch('CSEDWEEK_TEST_DOMAIN', nil),
-    advocacy_host: ENV.fetch('ADVOCACY_TEST_DOMAIN', nil)
   ).replace_origin(url)
 end
 
@@ -183,7 +182,7 @@ When /^I close the instructions overlay if it exists$/ do
   steps 'When I click selector "#overlay" if it exists'
 end
 
-When /^I wait for the page to fully load$/ do
+When /^I wait for the lab page to fully load$/ do
   steps <<-GHERKIN
     When I wait to see "#runButton"
     And I wait to see ".header_user"
@@ -1506,7 +1505,9 @@ When /^I set up code review for teacher "([^"]*)" with (\d+(?:\.\d*)?) students 
     And I create a new code review group for the section I saved
     #{add_students_to_group_step_list.join("\n")}
     And I click selector ".uitest-base-dialog-confirm"
-    And I click selector ".toggle-input"
+    And I click selector "#uitest-code-review-groups-toggle"
+    And I wait until element "#uitest-code-review-groups-status-message" is visible
+    And I wait until element "#uitest-code-review-groups-save-confirm" is visible
   GHERKIN
 end
 

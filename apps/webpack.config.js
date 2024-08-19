@@ -198,6 +198,7 @@ const LOCALE_ALIASES = {
     localeDoNotImport('@cdo/applab/locale'),
     localeDoNotImport('@cdo/codebridge/locale'),
     localeDoNotImport('@cdo/javalab/locale'),
+    localeDoNotImport('@cdo/lab2/locale'),
     localeDoNotImport('@cdo/music/locale'),
     localeDoNotImport('@cdo/netsim/locale'),
     localeDoNotImport('@cdo/regionalPartnerMiniContact/locale'),
@@ -205,6 +206,7 @@ const LOCALE_ALIASES = {
     localeDoNotImport('@cdo/standaloneVideo/locale'),
     localeDoNotImport('@cdo/tutorialExplorer/locale'),
     localeDoNotImport('@cdo/weblab/locale'),
+    localeDoNotImport('@cdo/signup/locale'),
     localeDoNotImportP5Lab('@cdo/gamelab/locale'),
     localeDoNotImportP5Lab('@cdo/poetry/locale'),
     localeDoNotImportP5Lab('@cdo/spritelab/locale'),
@@ -423,6 +425,9 @@ function createWebpackConfig({
           // Excludes these from minification to avoid breaking functionality,
           // but still adds .min to the output filename suffix.
           exclude: [/\/blockly.js$/, /\/brambleHost.js$/],
+          // Temporarily disable due to
+          // https://github.com/webpack-contrib/terser-webpack-plugin/issues/589
+          extractComments: false,
           terserOptions: {
             sourceMap: envConstants.DEBUG_MINIFIED,
             // Handle Safari 10.x issues: [See FND-2108 / FND-2109]

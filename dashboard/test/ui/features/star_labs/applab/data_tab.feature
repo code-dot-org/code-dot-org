@@ -5,7 +5,7 @@ Feature: App Lab Data Tab
   Background:
     # Navigate to data tab from a new Applab project
     Given I start a new Applab project
-    And I wait for the page to fully load
+    And I wait for the lab page to fully load
     Then I click selector "#dataModeButton"
     And I wait until element "#dataTablesBody" is visible
 

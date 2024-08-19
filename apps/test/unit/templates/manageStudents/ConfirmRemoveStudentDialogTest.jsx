@@ -1,15 +1,15 @@
 import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import {
-  Header,
-  ConfirmCancelFooter,
-} from '@cdo/apps/lib/ui/SystemDialog/SystemDialog';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {
   ADD_A_PERSONAL_LOGIN_HELP_URL,
   RELEASE_OR_DELETE_RECORDS_EXPLANATION,
 } from '@cdo/apps/lib/util/urlHelpers';
-import Button from '@cdo/apps/templates/Button';
+import {
+  Header,
+  ConfirmCancelFooter,
+} from '@cdo/apps/sharedComponents/SystemDialog/SystemDialog';
 import ConfirmRemoveStudentDialog, {
   MINIMUM_TEST_PROPS,
 } from '@cdo/apps/templates/manageStudents/ConfirmRemoveStudentDialog';

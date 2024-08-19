@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import Button from '@cdo/apps/templates/Button';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import i18n from '@cdo/locale';
 
 import LessonEditorDialog from './LessonEditorDialog';

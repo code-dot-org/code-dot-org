@@ -2,7 +2,7 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import ProgressTableLessonNumber, {
   unitTestExports,
 } from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLessonNumber';

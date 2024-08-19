@@ -11,7 +11,7 @@ import {
 
 import {EMPTY_OPTION} from '../constants';
 
-type CustomMenuGenerator = CustomMenuOption[] | MenuGeneratorFunction;
+export type CustomMenuGenerator = CustomMenuOption[] | MenuGeneratorFunction;
 // Blockly's MenuOption can either be [string, string] or [ImageProperties, string]. We
 // will always use [string, string].
 type CustomMenuOption = [string, string];

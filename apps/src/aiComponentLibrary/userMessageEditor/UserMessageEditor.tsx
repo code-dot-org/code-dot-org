@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import React, {useState, useCallback, useMemo} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button/Button';
@@ -13,11 +14,16 @@ export interface UserMessageEditorProps {
   onSubmit: (userMessage: string) => void;
   disabled: boolean;
   showSubmitLabel?: boolean;
+  /** Custom className for editor container */
+  editorContainerClassName?: string;
+  customPlaceholder?: string;
 }
 
 const UserMessageEditor: React.FunctionComponent<UserMessageEditorProps> = ({
   onSubmit,
   disabled,
+  editorContainerClassName,
+  customPlaceholder,
   showSubmitLabel = false,
 }) => {
   const [userMessage, setUserMessage] = useState<string>('');
@@ -42,10 +48,15 @@ const UserMessageEditor: React.FunctionComponent<UserMessageEditorProps> = ({
 
   const icon = {iconName: 'paper-plane'};
   return (
-    <div className={moduleStyles.editorContainer}>
+    <div
+      className={classnames(
+        moduleStyles.editorContainer,
+        editorContainerClassName
+      )}
+    >
       <textarea
         className={moduleStyles.textArea}
-        placeholder={commonI18n.aiUserMessagePlaceholder()}
+        placeholder={customPlaceholder || commonI18n.aiUserMessagePlaceholder()}
         onChange={e => setUserMessage(e.target.value)}
         value={userMessage}
         disabled={disabled}

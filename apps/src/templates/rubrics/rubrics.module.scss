@@ -446,6 +446,7 @@ h2.studentName {
 
   .tipsDetailsSummary {
     font-size: 0.875rem;
+    margin-top: 20px;
 
     &:hover {
       background-color: unset;
@@ -571,19 +572,18 @@ p.errorMessage {
   border: 1px solid $neutral_dark20;
   background: $neutral_white;
   position: relative;
+}
 
-  &::after {
-    content: '';
-    position: absolute;
-    top: calc(-0.5rem * sqrt(2) + 0.125rem);
-    left: calc(50% - 0.5rem);
-    width: 1rem;
-    height: 1rem;
-    background: $neutral_white;
-    transform: rotate(45deg);
-    border-top: 1px solid $neutral_dark20;
-    border-left: 1px solid $neutral_dark20;
-  }
+.aiAssessmentArrow {
+  position: absolute;
+  top: calc(-0.5rem * sqrt(2) + 0.125rem);
+  left: calc(50% - 0.5rem);
+  width: 1rem;
+  height: 1rem;
+  background: $neutral_white;
+  transform: rotate(45deg);
+  border-top: 1px solid $neutral_dark20;
+  border-left: 1px solid $neutral_dark20;
 }
 
 .aiAssessmentBlock {
@@ -1092,7 +1092,6 @@ p.evidenceLevelHeaderText {
   border: 1px solid $light_black;
   background: $neutral_white;
   gap: 10px;
-  padding: 3px 16px 0;
   font-size: 0.875rem;
   height: 32px;
   box-shadow: 0 0 0 0.125rem $ai_rubric_cyan;
@@ -1135,6 +1134,11 @@ p.evidenceLevelHeaderText {
   h2 {
     margin-bottom: 0;
   }
+}
+
+.fabErrorBackground {
+  background: $bootstrap_error_background !important;
+  color: $bootstrap_error_text !important;
 }
 
 .sectionSelector {
@@ -1253,6 +1257,7 @@ p.detailsHidden {
   height: 22px;
   min-width: 80px;
   display: inline;
+  margin-right: 17px;
   p {
     margin-bottom: 0;
   }
@@ -1265,6 +1270,7 @@ p.detailsHidden {
   height: 22px;
   min-width: 80px;
   display: inline;
+  margin-right: 17px;
   p {
     margin: 0, 0, 0, 0;
   }
@@ -1277,6 +1283,7 @@ p.detailsHidden {
   height: 22px;
   min-width: 80px;
   display: inline;
+  margin-right: 17px;
   p {
     margin: 0, 0, 0, 0;
   }

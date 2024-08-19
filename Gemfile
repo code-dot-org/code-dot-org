@@ -164,7 +164,7 @@ gem 'devise', '~> 4.9.0'
 gem 'devise_invitable', '~> 2.0.2'
 
 # Ref: https://github.com/daynew/omniauth-clever/pull/1
-gem 'omniauth-clever', '~> 2.0.0', github: 'daynew/omniauth-clever', branch: 'clever-v2.1-upgrade'
+gem 'omniauth-clever', '~> 2.0.0', github: 'code-dot-org/omniauth-clever'
 gem 'omniauth-facebook', '~> 4.0.0'
 gem 'omniauth-google-oauth2', '~> 0.6.0'
 gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
@@ -229,6 +229,7 @@ gem 'active_model_serializers', '~> 0.10.13'
 
 # AWS SDK and associated service APIs.
 gem 'aws-sdk-acm'
+gem 'aws-sdk-bedrockagentruntime', '~> 1.10.0'
 gem 'aws-sdk-cloudformation'
 gem 'aws-sdk-cloudfront'
 gem 'aws-sdk-cloudwatch'
@@ -270,8 +271,6 @@ gem 'youtube-dl.rb', group: [:development, :staging, :levelbuilder]
 
 gem 'daemons', '1.1.9' # Pinned to old version, see PR 57938
 gem 'httparty'
-gem 'net-scp'
-gem 'net-ssh'
 gem 'oj', '~> 3.10'
 
 gem 'rest-client', '~> 2.0.1'
@@ -322,7 +321,7 @@ gem 'recaptcha', require: 'recaptcha/rails'
 gem 'loofah', '~> 2.19.1'
 
 # Install pg gem only on specific production hosts and the i18n-dev server.
-require_pg = -> do
+require_pg = lambda do
   require 'socket'
   %w[production-daemon production-console i18n-dev].include?(Socket.gethostname)
 end
@@ -350,6 +349,8 @@ gem 'pry', '~> 0.14.0'
 gem 'cld'
 
 gem 'crowdin-api', '~> 1.10.0'
+
+gem "pycall", ">= 1.5.2"
 
 gem "delayed_job_active_record", "~> 4.1"
 

@@ -16,6 +16,10 @@ require 'cdo/hash'
 require 'cdo/i18n_backend'
 require 'cdo/shared_constants'
 
+# load and configure pycall before numpy and any other python-related gems
+# can be automatically loaded just below.
+require 'cdo/pycall'
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
@@ -220,7 +224,7 @@ module Dashboard
     # Use custom routes for error codes
     config.exceptions_app = routes
 
-    config.active_job.queue_adapter = :delayed_job
+    config.active_job.queue_adapter = CDO.active_job_queue_adapter
     config.active_job.default_queue_name = CDO.active_job_queues[:default]
   end
 end

@@ -126,7 +126,6 @@ theme: responsive
 | **برای استفاده از شبیه ساز اینترنت**                                                                               | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **برای استفاده از آزمایشگاه وب**                                                                                   | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **برای استفاده از دکمه اشتراک گذاری Google Classroom**                                                             | `https://apis.google.com`                                                                                  |
-| **برای استفاده از مجموعه داده های App Lab**                                                                        | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Mobile and Tablet Support Details
 

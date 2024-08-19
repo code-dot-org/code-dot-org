@@ -4,9 +4,9 @@ import {connect} from 'react-redux';
 
 import {resetContainedLevel} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
+import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import Button from '@cdo/apps/templates/Button';
+import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import {CourseRoles} from '@cdo/apps/templates/currentUserRedux';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
@@ -42,6 +42,7 @@ export const UnconnectedContainedLevelResetButton = ({
   return (
     <div>
       <Button
+        name="containedLevelResetButton"
         text={i18n.deleteAnswer()}
         onClick={() => {
           resetContainedLevel().then(
@@ -53,8 +54,11 @@ export const UnconnectedContainedLevelResetButton = ({
           );
           logButtonClick();
         }}
-        color={Button.ButtonColor.red}
+        size={'s'}
         disabled={!hasLevelResults || !!codeIsRunning}
+        color={buttonColors.destructive}
+        iconLeft={{iconStyle: 'solid', iconName: 'trash'}}
+        type={'secondary'}
       />
       <HelpTip>{i18n.deleteAnswerHelpTip()}</HelpTip>
       {resetFailed && (

@@ -9,16 +9,18 @@ import {
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
 import EditorAnnotator from '@cdo/apps/EditorAnnotator';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {ai_rubric_cyan} from '@cdo/apps/util/color';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
 import AiAssessment from './AiAssessment';
-import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
+import AiAssessmentFeedbackContext, {
+  NO_FEEDBACK,
+} from './AiAssessmentFeedbackContext';
 import EvidenceLevels from './EvidenceLevels';
 import tipIcon from './images/AiBot_Icon.svg';
 import infoIcon from './images/info-icon.svg';
@@ -300,8 +302,14 @@ export default function LearningGoals({
   const [displayUnderstanding, setDisplayUnderstanding] = useState(
     INVALID_UNDERSTANDING
   );
-  const [aiFeedback, setAiFeedback] = useState(-1);
+  const [aiFeedback, setAiFeedback] = useState(NO_FEEDBACK);
+  const [aiFeedbackId, setAiFeedbackId] = useState(null);
   const [doneLoading, setDoneLoading] = useState(false);
+
+  // The position of the 'arrow' that points up from the AiAssessment region
+  // to the EvidenceLevels component. When this value is 0, there is no
+  // specific left and the arrow is centered.
+  const [arrowLeft, setArrowLeft] = useState(10);
 
   // The ref version of this state is used when updating the information based
   // on saved info retrieved by network requests so as not to race them.
@@ -545,8 +553,9 @@ export default function LearningGoals({
     clearAnnotations();
 
     if (!!aiEvalInfo && !productTour) {
+      const evidence = aiEvalInfo.evidence || '';
       const annotations = annotateLines(
-        aiEvalInfo.evidence,
+        evidence,
         aiEvalInfo.observations,
         onEvidenceTooltipOpened
       );
@@ -587,7 +596,8 @@ export default function LearningGoals({
       setCurrentLearningGoal(currentIndex);
 
       // Clear feedback (without sending it)
-      setAiFeedback(-1);
+      setAiFeedback(NO_FEEDBACK);
+      setAiFeedbackId(null);
 
       // Annotate the lines based on the AI observation
       clearAnnotations();
@@ -709,7 +719,7 @@ export default function LearningGoals({
         {currentLearningGoal !== learningGoals.length && (
           <div className={style.learningGoalExpanded}>
             <AiAssessmentFeedbackContext.Provider
-              value={{aiFeedback, setAiFeedback}}
+              value={{aiFeedback, setAiFeedback, aiFeedbackId, setAiFeedbackId}}
             >
               {!!submittedEvaluation && renderSubmittedFeedbackTextbox()}
               <div>
@@ -727,6 +737,7 @@ export default function LearningGoals({
                   submittedEvaluation={submittedEvaluation}
                   isStudent={isStudent}
                   isAutosaving={autosaveStatus === STATUS.IN_PROGRESS}
+                  arrowPositionCallback={setArrowLeft}
                 />
                 {teacherHasEnabledAi &&
                   !!studentLevelInfo &&
@@ -736,6 +747,14 @@ export default function LearningGoals({
                       id="tour-ai-assessment"
                       className={style.aiAssessmentOuterBlock}
                     >
+                      {/* Draw the arrow pointing at the AI suggested buttons.
+                          EvidenceLevels sets the arrowLeft parameter to reflect the
+                          position of the buttons. And we subtract some to center it.*/}
+                      <div
+                        id="ai-assessment-arrow"
+                        className={style.aiAssessmentArrow}
+                        style={arrowLeft === 0 ? {} : {left: arrowLeft - 10}}
+                      />
                       <AiAssessment
                         isAiAssessed={
                           learningGoals[currentLearningGoal].aiEnabled

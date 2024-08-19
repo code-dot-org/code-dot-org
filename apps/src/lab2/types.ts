@@ -230,11 +230,6 @@ export interface Lab2EntryPoint {
    * to the default theme if not specified.
    */
   theme?: Theme;
-  /**
-   * Optional function to run when the lab is first mounted. This is useful
-   * for any one-time setup actions such as setting up Blockly.
-   */
-  setupFunction?: () => void;
 }
 
 export type LevelData = ProjectLevelData | VideoLevelData;
@@ -321,4 +316,10 @@ export interface ExtraLinksProjectData {
     remix_ancestry: string[];
   };
   meesage?: string;
+}
+
+export interface ProjectVersion {
+  versionId: string;
+  lastModified: string;
+  isLatest: boolean;
 }

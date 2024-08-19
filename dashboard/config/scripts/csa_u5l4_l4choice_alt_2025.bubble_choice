@@ -1,0 +1,9 @@
+name 'CSA U5L4-L4choice_alt-2025'
+display_name 'Practice: Column-Major Traversal'
+description 'Practice traversing 2D arrays in column-major order to implement standard algorithms.'
+
+sublevels
+level 'CSA U5L4-L4a_alt-2025'
+level 'CSA U5L4-L4b_alt-2025'
+level 'CSA U5L4-L4c_alt-2025'
+level 'CSA U5L4-L4d_alt-2025'

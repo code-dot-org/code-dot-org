@@ -8,7 +8,7 @@ Feature: Unit overview page
     Given I create an authorized teacher-associated student named "Sally"
 
     # Make progress as student
-    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1?blocklyVersion=google"
+    And I complete the level on "http://studio.code.org/s/allthethings/lessons/2/levels/1"
 
     # Verify progress as student on script overview page
     And I am on "http://studio.code.org/s/allthethings"

@@ -3,17 +3,20 @@
   "addSubFolder": "Add sub-folder",
   "deleteFile": "Delete file",
   "deleteFolder": "Delete folder",
+  "downloadFile": "Download file",
+  "downloadFileError": "Cannot download files of type {extension}",
   "duplicateFileError": "Filename {fileName} is already in use in this folder. Please choose a different name.",
   "duplicateSupportFileError": "Filename {fileName} is already in use in this folder in the level's support code. Please choose a different name.",
   "folderExistsError": "Folder already exists with that name",
   "makeStarter": "Make starter file",
   "makeSupport": "Make support file",
   "makeValidation": "Make validation file",
-  "moveFile": "Move file", 
+  "moveFile": "Move file",
   "moveFilePrompt": "Please enter your destination folder",
   "newFilePrompt": "Please name your new file",
   "newFolderPrompt": "Please name your new folder",
   "noFileExtensionError": "Please include a file extension",
   "renameFile": "Rename file",
-  "renameFolder": "Rename folder"
+  "renameFolder": "Rename folder",
+  "systemCodeError": "We're sorry, we hit an issue running your program. Please refresh the page and try again."
 }

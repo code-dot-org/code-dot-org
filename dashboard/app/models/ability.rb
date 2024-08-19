@@ -117,7 +117,7 @@ class Ability
         # 1) the user is the project owner
         # 2) the user is the teacher of the project owner
         # 3) the user and the project owner are in the same code reivew group
-        project.owner.id == user.id || can?(:code_review, project.owner)
+        project.owner&.id == user&.id || can?(:code_review, project.owner)
       end
 
       # A user can review the code of other_user if they are the other_user's teacher or if
@@ -267,6 +267,10 @@ class Ability
 
       if user.can_view_student_ai_chat_messages?
         can :index, AiTutorInteraction
+      end
+
+      if user.has_ai_tutor_access? && user.levelbuilder?
+        can :check_message_safety, :aichat
       end
     end
 
@@ -481,6 +485,13 @@ class Ability
           (!user.teachers.empty? &&
           user.teachers.any? {|teacher| teacher.has_pilot_experiment?(GENAI_PILOT)})
         can :chat_completion, :aichat
+        can :log_chat_event, :aichat
+        can :start_chat_completion, :aichat
+        can :chat_request, :aichat
+      end
+      # Only teachers can view student chat history.
+      if user.has_pilot_experiment?(GENAI_PILOT)
+        can :student_chat_history, :aichat
       end
     end
 

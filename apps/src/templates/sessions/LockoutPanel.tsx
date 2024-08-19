@@ -2,6 +2,7 @@ import cookies from 'js-cookie';
 import React, {CSSProperties, useState, useEffect, useReducer} from 'react';
 import {useSelector} from 'react-redux';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import parentalPermissionRequestReducer, {
@@ -16,11 +17,10 @@ import i18n from '@cdo/locale';
 import headerThanksImage from '@cdo/static/common_images/penguin/dancing.png';
 import headerImage from '@cdo/static/common_images/penguin/yelling.png';
 
-import Spinner from '../../code-studio/pd/components/spinner';
 import {getStore} from '../../redux';
+import Spinner from '../../sharedComponents/Spinner';
 import * as color from '../../util/color';
 import {hashString} from '../../utils';
-import Button from '../Button';
 
 /**
  * This panel represents the page that is displayed to accounts that are being

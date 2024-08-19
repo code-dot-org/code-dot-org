@@ -17,22 +17,28 @@ import {
   WorkspaceSvg,
   Xml,
 } from 'blockly';
-import GoogleBlockly from 'blockly/core';
+import GoogleBlockly, {Connection, Names} from 'blockly/core';
 import {Abstract} from 'blockly/core/events/events_abstract';
 import {Field, FieldProto} from 'blockly/core/field';
-import {IProcedureBlock, IProcedureModel} from 'blockly/core/procedures';
+import {
+  IParameterModel,
+  IProcedureBlock,
+  IProcedureModel,
+} from 'blockly/core/procedures';
 import {ProcedureSerializer} from 'blockly/core/serialization/procedures';
 import {ToolboxDefinition} from 'blockly/core/utils/toolbox';
 import {javascriptGenerator} from 'blockly/javascript';
 
 import BlockSvgFrame from './addons/blockSvgFrame';
 import BlockSvgLimitIndicator from './addons/blockSvgLimitIndicator';
+import CdoAngleHelper from './addons/cdoAngleHelper';
 import CdoFieldAngleDropdown from './addons/cdoFieldAngleDropdown';
 import CdoFieldAngleTextInput from './addons/cdoFieldAngleTextInput';
 import CdoFieldAnimationDropdown from './addons/cdoFieldAnimationDropdown';
 import CdoFieldBehaviorPicker from './addons/cdoFieldBehaviorPicker';
 import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
 import CdoFieldButton from './addons/cdoFieldButton';
+import CdoFieldColour from './addons/cdoFieldColour';
 import CdoFieldFlyout from './addons/cdoFieldFlyout';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldParameter from './addons/cdoFieldParameter';
@@ -79,6 +85,8 @@ type GoogleBlocklyType = typeof GoogleBlockly;
 
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
+  showUnusedBlocks: boolean | undefined;
+  BlockFieldHelper: {[fieldHelper: string]: string};
   enableParamEditing: boolean;
   selected: BlockSvg;
   blockCountMap: Map<string, number> | undefined;
@@ -104,6 +112,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
     onMainBlockSpaceCreated: (callback: () => void) => void;
   };
 
+  AngleHelper: typeof CdoAngleHelper;
   FieldAngleDropdown: typeof CdoFieldAngleDropdown;
   FieldAngleTextInput: typeof CdoFieldAngleTextInput;
   FieldBehaviorPicker: typeof CdoFieldBehaviorPicker;
@@ -113,6 +122,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   FieldToggle: typeof CdoFieldToggle;
   FieldFlyout: typeof CdoFieldFlyout;
   FieldBitmap: typeof CdoFieldBitmap;
+  FieldColour: typeof CdoFieldColour;
   FieldVariable: typeof CdoFieldVariable;
   FieldParameter: typeof CdoFieldParameter;
   JavaScript: JavascriptGeneratorType;
@@ -197,11 +207,29 @@ export interface ExtendedBlockSvg extends BlockSvg {
   workspace: ExtendedWorkspaceSvg;
 }
 
+export interface FieldHelperOptions {
+  block: Block;
+  directionTitle?: string; // Ex. 'DIR'
+  direction?: string; // Ex. 'turnRight'
+}
+
+export interface FieldHelpers {
+  [fieldHelper: string]: FieldHelperOptions;
+}
 export interface ExtendedInput extends Input {
+  addFieldHelper: (
+    fieldHelper: string,
+    options: FieldHelperOptions
+  ) => ExtendedInput;
   setStrictCheck: (check: string | string[] | null) => Input;
   // Blockly explicitly uses any for this type
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   getFieldRow: () => Field<any>[];
+}
+export interface ExtendedConnection extends Connection {
+  getFieldHelperOptions: (fieldHelper: string) => FieldHelperOptions;
+  fieldHelpers_: FieldHelpers;
+  addFieldHelper(fieldHelper: string, options: FieldHelperOptions): unknown;
 }
 
 export interface ExtendedBlock extends Block {
@@ -254,6 +282,7 @@ export interface ExtendedBlocklyOptions extends BlocklyOptions {
   useBlocklyDynamicCategories: boolean;
   grayOutUndeletableBlocks: boolean | undefined;
   disableParamEditing: boolean;
+  showUnusedBlocks: boolean | undefined;
 }
 
 export interface ExtendedWorkspace extends Workspace {
@@ -270,6 +299,8 @@ export interface ExtendedGenerator extends CodeGeneratorType {
   ) => string;
   blocksToCode: (name: string, blocksToGenerate: Block[]) => string;
   prefixLines: (text: string, prefix: string) => string;
+  nameDB_: Names | undefined;
+  variableDB_: Names | undefined;
 }
 
 type XmlType = typeof Xml;
@@ -324,10 +355,11 @@ export interface ExtendedVariables extends VariablesType {
   getters: {[key: string]: string};
   registerGetter: (category: string, blockName: string) => void;
   allVariablesFromBlock: (block: Block) => string[];
-  getVars: (opt_category?: string) => {[key: string]: string[]};
+  getVars: (opt_category?: string) => string[];
 }
 
 export interface ProcedureBlock extends ExtendedBlockSvg, IProcedureBlock {
+  invisible: boolean;
   userCreated: boolean;
   getTargetWorkspace_(): Workspace;
   hasReturn_: boolean;
@@ -356,6 +388,8 @@ export interface ProcedureBlock extends ExtendedBlockSvg, IProcedureBlock {
   description?: string | null;
   // used for behavior blocks
   behaviorId?: string | null;
+  prevParams_: IParameterModel[];
+  argsMap_: Map<string, Block>;
 }
 
 // Blockly uses {[key: string]: any} to define workspace serialization.

@@ -1,0 +1,40 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T22:47:50.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "The <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PetStore</code> class declares an instance variable for a 1D array of <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> values to store the pet breeds available for adoption at a pet store. The constructor initializes the 1D array to store the number of values specified by the parameter <code style=\"background-color: #ececec; color: black; font-weight: bold;\">numBreeds</code>.\r\n\r\n✅ **TO DO #1:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PetStore.java</code>, write the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">toString()</code> method to return the a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">String</code> containing the text <code style=\"background-color: #ececec; color: black; font-weight: bold;\">\"Number of Breeds: \"</code> followed by length of the 1D array <code style=\"background-color: #ececec; color: black; font-weight: bold;\">breeds</code>.\r\n\r\n✅ **TO DO #2:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">StoreRunner.java</code>, print the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PetStore</code> object.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with accessing the length of a 1D array.\r\n</div>\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "reference_links": [
+      "/courses/csa-2023/guides/one-dimensional-arrays"
+    ],
+    "display_name": "Pet Breeds",
+    "bubble_choice_description": "Get the length of a 1D array that stores the pet breeds available for adoption at a pet store.",
+    "thumbnail_url": "https://images.code.org/f43c436a87ab12f56f2746ea3ce90e9e-pets.png",
+    "encrypted_validation": "kRSVEs1uXIVeRwK37iYZKklxHNsAB0UHniZ9CRA6nah02uukF3hQi83vAH3U\nXuggHqgf6koXwE8b5HWt/U1z93h+C3DWn0haQfeeMIJtfV9cTpP9TKFfvXVP\nVwL6Tf1OIajTOZ75Ww47JbTqrvr6FJopNPopxCW0If5TCHXOxyZ7boOcibP3\n2of6OLHLbQDxAlF9eBdSboprW2PlX2Oy0ds4iaSntI2jVeqgwDmXDcR7lOsC\nyG3Ocni8r7/bQTWpbqrNte6Xsl0IIiamySk7yNMmekqqwBpNUC4Io7cTbjCE\nq3n3wO+HJYmnDjKfDbCIbwPmo4dgfOgyjlp0eZdtM6iEZljepl2gOgV1aI/1\nEz5y5Me0wiVPgOF2JDLkWQ22OUC+M9sGGmIuAWweoF9DbJFem0JkfX3TnJgz\nptSp3CB5e9bhhY/xS7PXZ5Ig2K8N/Vb28ZWGTXIpC8DaBeEQ/AxlH4NB52yp\n8rs1kAPoK2AeLmvVOCejV41vyhbfUDsPTqyYL0aSDqc+Mzrz5dDiFO310joM\nD+zt1kJDf78t+W6SlHWEnli0REemNYL6IIjpSUkSqoaLH3u3o39PXvMYjoxB\nY9imKCTmMhrCmJCHqFc0HACResW7qv61Y1EbetvtchZGj5+vIPvmYBjkzdOJ\nva3fI8sQ+ZzSaO9aUM+oCxABgrbmV7+7BeLy1jW4XWU7394LQBFHzDRIZLhU\nh/rBlfvd3P/fB3SjlXH+7Qm6/NjRGGqxdMvt1NVjS5QZrTu/n16uRSaZ4Twz\nTaw7JCFF6hVe9VocwPkGew2dG/ipDgIRizvsQTzg3TNtMNmb8Yg6bB1ytppA\npBhFekPxSiUr6ekBxmuKMlxB4IIdDMSfC55gcG6rNX42rhmiLFJSQK/eSasZ\nuZ4a9AabdOm3xGHUM23h12F/zTbS7w3c5nsGgHpvT84wmIG1qXlsgZwQStQ2\n7doE+6DU0SKMp39+8amSptI9JY15RgVHMqICtOHecNUyEtNWV5xH7H1u0w4F\nKwNl5PoaI6dbe+FP2QIvEdc7ye4R1BGr1/v4Z9zezw7fZesU5wnlZmxnPTdY\n3bNzL+SbVOS5Y2BsvZGKCvZPIu+NQBMD1+avYNa2+oieU/mZaPTSsCq/YfWH\nqH4EvNS5fbXleBWENhUFQHEwKoC56/DTeLlkpz833ElPHCjBRAIZ6HsbynEl\nk2qhqmJ3rB0HpwABnWi6nGinIuryJ71THZ/FwCjfv2vJmZJLxC5c7P/gitYX\nwJgTnqgQ6Tbzc2e08oHWP6Bddp+tJbJRmRAFnOSPZ79ANYwZNuD10TChzToC\nueF6nDkunRptLdIvw+oWdSgd6A3VQgpbBWUS7+LJqMXRF0X0ItCQK/naGNiJ\nKqQ6v+GqC4p+MKLxTkwmITPbBkKNaRiwop7iqYZYhoDmwWVN9lewxJ6qcSD0\n3GQV7xMoM7P60ey0TWSCZh4gSn9p9RscRXKW3erzyoAw2GSxnm4YIPUGg/JW\nEsDnPhqUlawoAhEgd8GcRzeAwVGzTHKccMCbzU0481Wxn2KJizOVUwTSXA==\n",
+    "encrypted_exemplar_sources": "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\nCHJn\n",
+    "start_sources": {
+      "StoreRunner.java": {
+        "text": "public class StoreRunner {\n  public static void main(String[] args) {\n\n    PetStore neighborhoodStore = new PetStore(\"Neighborhood Pet Store\", 16);\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Print the PetStore object.\n     * -----------------------------------------------------------------------------\n     */\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      },
+      "PetStore.java": {
+        "text": "/*\n * Manages data about pet breeds available for adoption\n */\npublic class PetStore {\n\n  private String name;      // The name of a pet store\n  private String[] breeds;  // The breeds of pets available\n\n  /*\n   * Sets name to the specified name and initializes\n   * breeds to store the number of specified values\n   */\n  public PetStore(String name, int numBreeds) {\n    this.name = name;\n    breeds = new String[numBreeds];\n  }\n\n  /*\n   * Returns a String containing the number of breeds in the 1D array breeds\n   */\n  public String toString() {\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ Return a String containing the text \"Number of Breeds: \" followed\n     * by the length of the 1D array breeds.\n     * -----------------------------------------------------------------------------\n     */\n    \n    return \"\";\n  }\n  \n}",
+        "isVisible": true,
+        "tabOrder": 1
+      }
+    },
+    "video_key": "csa_one_dimensional_arrays",
+    "name_suffix": "_alt-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:47:50.657+00:00\",\"changed\":[\"cloned from \\\"CSA U3L1-L6b_pilot-2025\\\"\"],\"cloned_from\":\"CSA U3L1-L6b_pilot-2025\"}]"
+}]]></config>
+</Javalab>

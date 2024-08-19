@@ -76,9 +76,26 @@ module Pd
 
       sign_in @enrolled_summer_teacher
       create :pd_attendance, session: @summer_workshop.sessions[0], teacher: @enrolled_summer_teacher, enrollment: @summer_enrollment
-      get '/pd/workshop_post_survey'
+      get "/pd/workshop_survey/post/#{@summer_enrollment.code}"
       assert_template :new_general_foorm
       assert_response :success
+    end
+
+    test 'post-workshop special survey link shows for Build Your Own workshops when enrolled and attended' do
+      setup_build_your_own_ended_workshop
+
+      sign_in @enrolled_byo_teacher
+      create :pd_attendance, session: @byo_workshop.sessions[0], teacher: @enrolled_byo_teacher, enrollment: @byo_enrollment
+      get "/pd/workshop_survey/post/#{@byo_enrollment.code}"
+      assert_redirected_to CDO.studio_url SURVEY_LINKS[:COURSE_BUILD_YOUR_OWN_TEACHER], CDO.default_scheme
+    end
+
+    test 'post-workshop special facilitator survey link shows for ended Build Your Own workshops' do
+      setup_build_your_own_ended_workshop
+
+      sign_in @facilitator
+      get "/pd/workshop_survey/new_facilitator_post?workshop_id=#{@byo_workshop.id}"
+      assert_redirected_to CDO.studio_url SURVEY_LINKS[:COURSE_BUILD_YOUR_OWN_FACILITATOR], CDO.default_scheme
     end
 
     test 'daily workshop survey displays not enrolled message when not enrolled' do
@@ -194,7 +211,7 @@ module Pd
       setup_summer_workshop
       summer_enrollment2 = create :pd_enrollment, :from_user, workshop: @summer_workshop
       sign_in @enrolled_summer_teacher
-      get "/pd/workshop_post_survey?enrollmentCode=#{summer_enrollment2.code}"
+      get "/pd/workshop_survey/post/#{summer_enrollment2.code}"
       assert_template :invalid_enrollment_code
     end
 
@@ -521,6 +538,21 @@ module Pd
       @csf101_enrollment = create :pd_enrollment, :from_user, workshop: @csf101_workshop
       @enrolled_csf101_teacher = @csf101_enrollment.user
       @facilitators = @csf101_workshop.facilitators.order(:name, :id)
+    end
+
+    private def setup_build_your_own_ended_workshop
+      @regional_partner = create :regional_partner
+      @byo_workshop = create :pd_workshop,
+        :ended,
+        funded: false,
+        course: Pd::Workshop::COURSE_BUILD_YOUR_OWN,
+        subject: nil,
+        course_offerings: [] << (create :course_offering),
+        num_facilitators: 1
+
+      @byo_enrollment = create :pd_enrollment, :from_user, workshop: @byo_workshop
+      @enrolled_byo_teacher = @byo_enrollment.user
+      @facilitator = @byo_workshop.facilitators.first
     end
 
     private def unenrolled_teacher

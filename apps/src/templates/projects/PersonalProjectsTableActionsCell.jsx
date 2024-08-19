@@ -3,20 +3,19 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
+import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import NameFailureDialog from '../../code-studio/components/NameFailureDialog';
-import color from '../../util/color';
-import FontAwesome from '../FontAwesome';
 import QuickActionsCell from '../tables/QuickActionsCell';
 
 import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
+import ProjectNameFailureDialog from './ProjectNameFailureDialog';
 import {
   startRenamingProject,
   cancelRenamingProject,
   saveProjectName,
-  remix,
   unsetNameFailure,
 } from './projectsRedux';
 
@@ -33,7 +32,6 @@ export class PersonalProjectsTableActionsCell extends Component {
     updatedName: PropTypes.string,
     cancelRenamingProject: PropTypes.func.isRequired,
     saveProjectName: PropTypes.func.isRequired,
-    remix: PropTypes.func.isRequired,
     projectNameFailure: PropTypes.string,
     unsetNameFailure: PropTypes.func.isRequired,
     isFrozen: PropTypes.bool,
@@ -56,7 +54,7 @@ export class PersonalProjectsTableActionsCell extends Component {
   };
 
   onRemix = () => {
-    this.props.remix(this.props.projectId, this.props.projectType);
+    window.location = `/projects/${this.props.projectType}/${this.props.projectId}/remix`;
   };
 
   handleNameFailureDialogClose = () => {
@@ -110,7 +108,7 @@ export class PersonalProjectsTableActionsCell extends Component {
             />
           </div>
         )}
-        <NameFailureDialog
+        <ProjectNameFailureDialog
           flaggedText={this.props.projectNameFailure}
           isOpen={!!this.props.projectNameFailure}
           handleClose={this.handleNameFailureDialogClose}
@@ -134,9 +132,6 @@ export default connect(
     },
     saveProjectName(projectId, updatedName, lastUpdatedAt) {
       dispatch(saveProjectName(projectId, updatedName, lastUpdatedAt));
-    },
-    remix(projectId, projectType) {
-      dispatch(remix(projectId, projectType));
     },
     unsetNameFailure(projectId) {
       dispatch(unsetNameFailure(projectId));
