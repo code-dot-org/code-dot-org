@@ -24,8 +24,7 @@ export async function postAichatCompletionMessage(
   newMessage: ChatMessage,
   storedMessages: ChatMessage[],
   aiCustomizations: AiCustomizations,
-  aichatContext: AichatContext,
-  sessionId?: number
+  aichatContext: AichatContext
 ): Promise<ChatCompletionApiResponse> {
   const aichatModelCustomizations: AichatModelCustomizations = {
     selectedModelId: aiCustomizations.selectedModelId,
@@ -38,7 +37,6 @@ export async function postAichatCompletionMessage(
     storedMessages,
     aichatModelCustomizations,
     aichatContext,
-    ...(sessionId ? {sessionId} : {}),
   };
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,
