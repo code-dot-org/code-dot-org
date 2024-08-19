@@ -18847,3 +18847,20 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        sandbox-teaching-data-science:
+          lessons:
+            lesson-1:
+              name: Introduction to Teaching Data Science
+            lesson-2:
+              name: Introduction to Data Science [Chapter 1]
+            lesson-3:
+              name: Python and Data Science [Chapter 2]
+            lesson-4:
+              name: Teaching Resources for Data Science
+          lesson_groups: {}
+          name: sandbox-teaching-data-science
+          title: Teaching Data Science
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
