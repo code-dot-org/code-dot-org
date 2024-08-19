@@ -8,28 +8,34 @@ markdown <<MARKDOWN
 
 ## Content Overview
 
-##### During the Summer, we started to dig into Unit 2: Web Development and Unit 3: Interactive Animations and Games. We have covered the following:
+#### During the Summer, we started to dig into Unit 2: Web Development and Unit 3: Interactive Animations and Games. We have covered the following:
 
 ### **Unit 2: Web Development**
 
-* ##### Engaged in Lesson U2L2: Intro to HTML and U2L6: Styling Text with CSS
-* ##### Explored Web Lab
-* ##### Learned how to display a variety of HTML elements on a web page
-* ##### Learned how to style elements on a web page using CSS
+* #### Engaged in two lessons:
+	* #### <a href="https://studio.code.org/s/csd2-2024/lessons/2" target="blank" rel="noopener noreferrer">U2L2: Intro to HTML</a>
+    * #### <a href="https://studio.code.org/s/csd2-2024/lessons/6" target="blank" rel="noopener noreferrer">U2L6: Styling Text with CSS</a>
+* #### Explored Web Lab
+* #### Learned how to display a variety of HTML elements on a web page
+* #### Learned how to style elements on a web page using CSS
 
 ### **Unit 3: Interactive Animations and Games**
 
-* ##### Engaged in U3L3: Drawing in Game Lab, U3L5: Variables, U3L6: Random Numbers, and U3L8: Sprites
-* ##### Explore Game Lab
-* ##### Learned how to create shapes and sprites on the grid
-* ##### Learned how variables and randomness can make programs more interesting
+* #### Engaged in four lessons:
+	* #### <a href="https://studio.code.org/s/csd3-2024/lessons/3" target="blank" rel="noopener noreferrer">U3L3: Drawing in Game Lab</a>
+	* #### <a href="https://studio.code.org/s/csd3-2024/lessons/5" target="blank" rel="noopener noreferrer">U3L5: Variables</a>
+	* #### <a href="https://studio.code.org/s/csd3-2024/lessons/6" target="blank" rel="noopener noreferrer">U3L6: Random Numbers</a>
+	* #### <a href="https://studio.code.org/s/csd3-2024/lessons/8" target="blank" rel="noopener noreferrer">U3L8: Sprites</a>
+* #### Explore Game Lab
+* #### Learned how to create shapes and sprites on the grid
+* #### Learned how variables and randomness can make programs more interesting
 
 ## Preparing for Our Synchronous Session
 
-##### In the synchronous portion of Module 1, we will continue our exploration of Unit 2: Web Development and Unit 3: Interactive Animations and Games content as we build on the skills we learned over the summer. 
+#### In the synchronous portion of Module 1, we will continue our exploration of Unit 2: Web Development and Unit 3: Interactive Animations and Games content as we build on the skills we learned over the summer. 
 
-##### Depending on your cohort's needs, your facilitators may lead a model lesson of **U2L9: Using Images** or **U3L9: Sprite Properties**. The following levels will serve as a recap of some of the activities and skills you learned to prepare you to engage with the model lesson. You may choose to review as much or as little as you would like:
+#### Depending on your cohort's needs, your facilitators may lead a model lesson of <a href="https://studio.code.org/s/csd2-2024/lessons/8" target="blank" rel="noopener noreferrer">U2L8: Using Images</a> or <a href="https://studio.code.org/s/csd3-2024/lessons/9" target="blank" rel="noopener noreferrer">U3L9: Sprite Properties</a>. The following levels will serve as a recap of some of the activities and skills you learned to prepare you to engage with the model lesson. You may choose to review as much or as little as you would like:
 
-* ##### **Levels 3-7** - Review of Unit 2: Web Development
-* ##### **Levels 8-14** - Review of Unit 3: Interactive Animations and Games
+* #### **Levels 3 - 7**: Review of Unit 2: Web Development
+* #### **Levels 8 - 14**: Review of Unit 3: Interactive Animations and Games
 MARKDOWN
