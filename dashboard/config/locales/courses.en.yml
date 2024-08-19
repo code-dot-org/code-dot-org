@@ -776,10 +776,24 @@ en:
           description_teacher: "**Participants will:**\n\n* Prepare to teach CS Discoveries.\n* Practice key concepts in the CS Discoveries curriculum.\n* Grow in their understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
           version_title: "'24-'25"
         vpl-csd-2024:
-          title: vpl-csd-2024
+          title: CSD Virtual Professional Learning
           description_short: ''
-          description_student: ''
-          description_teacher: ''
+          description_student: |-
+            #####**You will:**
+
+            * ##### Prepare to teach CS Discoveries.
+            * ##### Practice key concepts in the CS Discoveries curriculum.
+            * ##### Grow in your understanding of equitable CS education.
+            * ##### Develop empathy for the student experience.
+            * ##### Become a part of a network of teachers who are doing similar work.
+          description_teacher: |-
+            ##### **Participants will:**
+
+            * ##### Prepare to teach CS Discoveries.
+            * ##### Practice key concepts in the CS Discoveries curriculum.
+            * ##### Grow in their understanding of equitable CS education.
+            * ##### Develop empathy for the student experience.
+            * ##### Become a part of a network of teachers who are doing similar work.
           version_title: ''
         vpl-csa-2024:
           title: vpl-csa-2024
@@ -1137,6 +1151,12 @@ en:
           version_title: "'24-'25"
         csd-ayw1-debugging:
           title: 'CSD Academic Year Workshop #1 - Debugging'
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        sandbox-data-science-pl:
+          title: sandbox-data-science-pl
           description_short: ''
           description_student: ''
           description_teacher: ''
