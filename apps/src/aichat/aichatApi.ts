@@ -24,6 +24,7 @@ const paths = {
   LOG_CHAT_EVENT_URL: `${ROOT_URL}/log_chat_event`,
   START_CHAT_COMPLETION_URL: `${ROOT_URL}/start_chat_completion`,
   GET_CHAT_REQUEST_URL: `${ROOT_URL}/chat_request`,
+  STUDENT_CHAT_HISTORY_URL: `${ROOT_URL}/student_chat_history`,
 };
 
 const MAX_POLLING_TIME_MS = 45000;
@@ -149,7 +150,7 @@ export async function getStudentChatHistory(
     params.scriptLevelId = scriptLevelId.toString();
   }
   const response = await HttpClient.fetchJson<ChatEvent[]>(
-    STUDENT_CHAT_HISTORY_URL + '?' + new URLSearchParams(params)
+    paths.STUDENT_CHAT_HISTORY_URL + '?' + new URLSearchParams(params)
   );
   return response.value;
 }
