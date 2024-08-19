@@ -16,8 +16,6 @@ def main
   # Pilot data collected before September 30th, 2024 is being retained for analysis.
   pilot_end_date = DateTime.new(2024, 10, 1, 0, 0, 0)
 
-  Comment.where('created_at BETWEEN ? AND ?', @selected_date.beginning_of_day, @selected_date.end_of_day)
-
   destroyed_events = AichatEvent.where('created_at BETWEEN ? AND ?', pilot_end_date, ninety_days_ago).destroy_all
   ChatClient.message('cron-daily', "Deleted #{destroyed_events.length} AichatEvent records")
 
