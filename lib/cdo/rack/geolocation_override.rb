@@ -16,7 +16,7 @@ module Rack
     end
 
     def call(env)
-      # Forcibly update the REMOTE_ADDR to any given by the X_REMOTE_ADDR header
+      # Forcibly update the REMOTE_ADDR to the value given by the cookie
       override = Rack::Request.new(env).cookies[KEY]
       env['REMOTE_ADDR'] = override if override
 
