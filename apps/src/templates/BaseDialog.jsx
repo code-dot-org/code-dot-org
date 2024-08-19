@@ -153,9 +153,9 @@ export default class BaseDialog extends React.Component {
     };
     xCloseStyle = {
       position: 'absolute',
-      top: 0,
-      right: 0,
-      padding: 0,
+      top: 5,
+      right: 5,
+      padding: 5,
       cursor: 'pointer',
       border: 'none',
     };
