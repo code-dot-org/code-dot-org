@@ -17,6 +17,13 @@ interface SectionsData {
   };
 }
 
+const getSectionIdFromUrl = () => {
+  const url = window.location.href;
+  const sectionIdMatch = url.match(/sections\/(\d+)/);
+
+  return sectionIdMatch ? sectionIdMatch[1] : '';
+};
+
 const TeacherNavigationBar: React.FunctionComponent = () => {
   const sections = useSelector(
     (state: {teacherSections: {sections: SectionsData}}) =>
@@ -26,7 +33,9 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   const [sectionArray, setSectionArray] = useState<
     {value: string; text: string}[]
   >([]);
-  const [selectedSectionId, setSelectedSectionId] = useState<string>('');
+  const [selectedSectionId, setSelectedSectionId] = useState<string>(
+    getSectionIdFromUrl()
+  );
   const [selectedOptionKey, setSelectedOptionKey] =
     useState<string>('assessments');
 
@@ -108,6 +117,23 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     }
   );
 
+  const handleDropdownChange = (
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    const newSelectedSectionId = event.target.value;
+    setSelectedSectionId(newSelectedSectionId);
+
+    const currentUrl = window.location.href;
+
+    // Replace the section ID in the URL
+    const newUrl = currentUrl.replace(
+      /sections\/\d+/,
+      `sections/${newSelectedSectionId}`
+    );
+
+    window.location.href = newUrl;
+  };
+
   return (
     <nav className={styles.sidebarContainer}>
       <div className={styles.sidebarContent}>
@@ -120,7 +146,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
         </Typography>
         <SimpleDropdown
           items={sectionArray}
-          onChange={value => setSelectedSectionId(value.target.value)}
+          onChange={handleDropdownChange}
           labelText=""
           size="m"
           selectedValue={selectedSectionId}
