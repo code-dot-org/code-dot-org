@@ -104,20 +104,14 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           : ''),
 
       tabContent: (
-        <ChatEventsList
-          events={studentChatHistory}
-          showWaitingAnimation={false}
-          isTeacherView={true}
-        />
+        <ChatEventsList events={studentChatHistory} isTeacherView={true} />
       ),
       iconLeft: iconValue,
     },
     {
       value: 'testStudentModel',
       text: 'Test student model',
-      tabContent: (
-        <ChatEventsList events={visibleItems} showWaitingAnimation={true} />
-      ),
+      tabContent: <ChatEventsList events={visibleItems} />,
     },
   ];
 
@@ -152,7 +146,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       {experiments.isEnabled(experiments.VIEW_CHAT_HISTORY) && viewAsUserId ? (
         <Tabs {...tabArgs} />
       ) : (
-        <ChatEventsList events={visibleItems} showWaitingAnimation={true} />
+        <ChatEventsList events={visibleItems} />
       )}
 
       {canChatWithModel && (
