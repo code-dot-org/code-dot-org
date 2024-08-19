@@ -63,7 +63,6 @@ class PegasusTest < Minitest::Test
     code.org/educate/curriculum/elementary-school
     code.org/educate/curriculum/high-school
     code.org/educate/curriculum/middle-school
-    code.org/educate/resources/inspire
     code.org/educate/resources/videos
     code.org/learn/robotics
     code.org/minecraft
