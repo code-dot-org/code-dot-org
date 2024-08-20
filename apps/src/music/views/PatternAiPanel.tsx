@@ -162,8 +162,12 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     (value: PatternEventValue) => {
       previewPattern(
         value,
-        (tick: number) => setCurrentPreviewTick(tick),
+        (tick: number) => {
+          console.log('setcurrentpreviewtick', tick);
+          setCurrentPreviewTick(tick);
+        },
         () => {
+          console.log('setcurrentpreviewtick', 0);
           setCurrentPreviewTick(0);
         }
       );
@@ -217,6 +221,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
   ]);
 
   const handleAiClick = useCallback(async () => {
+    stopPreview();
     const seedEvents = currentValue.events.filter(event => event.tick <= 8);
     generatePattern(seedEvents, 8, 32 - 8, aiTemperature, newEvents => {
       currentValue.events = newEvents;
@@ -227,7 +232,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
       playPreview();
     });
     setGenerateState('generating');
-  }, [currentValue, onChange, aiTemperature, playPreview]);
+  }, [currentValue, onChange, aiTemperature, stopPreview, playPreview]);
 
   useEffect(() => {
     if (currentPreviewTick === 0 && previewState === 'readyToPreview') {
@@ -248,6 +253,8 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     aiBotImages.length - 1
   );
   const aiBotImage = aiBotImages[aiBotImageIndex];
+
+  console.log('render', currentPreviewTick);
 
   return (
     <div className={styles.patternPanel}>
@@ -329,7 +336,10 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
                       <div
                         className={classNames(
                           styles.outerCell,
-                          tick === currentPreviewTick && styles.outerCellPlaying
+                          tick === currentPreviewTick &&
+                            generateState === 'none' &&
+                            previewState === 'none' &&
+                            styles.outerCellPlaying
                         )}
                         onClick={() => toggleEvent(sound, tick, index)}
                         key={tick}

@@ -233,10 +233,14 @@ class ToneJSPlayer implements AudioPlayer {
       // Protect against the unexpected edge case in which We can apparently get a tick
       // after we've handled a stop.
       if (this.currentSequencePreviewClock) {
+        console.log('clock: tick', tick);
         onTick?.(tick++);
+      } else {
+        console.log('clock: skip tick', tick);
       }
     }, Transport.toFrequency('16n'))
       .on('stop', () => {
+        console.log('clock: on stop');
         this.currentSequencePreviewClock = null;
         onStop?.();
       })
