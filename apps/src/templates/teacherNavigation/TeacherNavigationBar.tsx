@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {useSelector} from 'react-redux';
+import {useParams} from 'react-router-dom';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import Typography from '@cdo/apps/componentLibrary/typography';
@@ -17,14 +18,8 @@ interface SectionsData {
   };
 }
 
-const getSectionIdFromUrl = () => {
-  const url = window.location.href;
-  const sectionIdMatch = url.match(/sections\/(\d+)/);
-
-  return sectionIdMatch ? sectionIdMatch[1] : '';
-};
-
 const TeacherNavigationBar: React.FunctionComponent = () => {
+  const {sectionId} = useParams();
   const sections = useSelector(
     (state: {teacherSections: {sections: SectionsData}}) =>
       state.teacherSections.sections
@@ -34,7 +29,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     {value: string; text: string}[]
   >([]);
   const [selectedSectionId, setSelectedSectionId] = useState<string>(
-    getSectionIdFromUrl()
+    sectionId || ''
   );
   const [selectedOptionKey, setSelectedOptionKey] =
     useState<string>('assessments');
