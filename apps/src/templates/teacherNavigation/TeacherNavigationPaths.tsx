@@ -65,18 +65,21 @@ export const LABELED_TEACHER_NAVIGATION_PATHS = {
   loginInfo: {
     url: TEACHER_NAVIGATION_PATHS.loginInfo,
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.loginInfo),
+    // this is not part of the navigation sidebar so it doesn't need a label or icon
     label: null,
     icon: null,
   },
   standardsReport: {
     url: TEACHER_NAVIGATION_PATHS.standardsReport,
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.standardsReport),
+    // this is not part of the navigation sidebar so it doesn't need a label or icon
     label: null,
     icon: null,
   },
   aiTutorChatMessages: {
     url: TEACHER_NAVIGATION_PATHS.aiTutorChatMessages,
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.aiTutorChatMessages),
+    // this is not part of the navigation sidebar so it doesn't need a label or icon
     label: null,
     icon: null,
   },
@@ -102,7 +105,7 @@ export const LABELED_TEACHER_NAVIGATION_PATHS = {
     url: TEACHER_NAVIGATION_PATHS.unitOverview,
     absoluteUrl: getAbsolutePath(TEACHER_NAVIGATION_PATHS.unitOverview),
     label: i18n.unit(),
-    icon: null,
+    icon: 'desktop',
   },
   settings: {
     url: TEACHER_NAVIGATION_PATHS.settings,
