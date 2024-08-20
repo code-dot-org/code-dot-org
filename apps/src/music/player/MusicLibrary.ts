@@ -1,3 +1,5 @@
+import cloneDeep from 'lodash/cloneDeep';
+
 import currentLocale from '@cdo/apps/util/currentLocale';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient, {
@@ -62,7 +64,7 @@ async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
     }
 
     // Early return with no translations unless experiment is enabled for now.
-    if (!experiments.isEnabled('libraryLocalization')) {
+    if (!experiments.isEnabledAllowingQueryString('libraryLocalization')) {
       return new MusicLibrary(libraryName, libraryJson);
     }
 
@@ -341,9 +343,7 @@ const localizeLibrary = (
   library: LibraryJson,
   translations: Translations
 ): LibraryJson => {
-  const libraryJsonLocalized = JSON.parse(
-    JSON.stringify(library)
-  ) as LibraryJson;
+  const libraryJsonLocalized = cloneDeep(library);
   libraryJsonLocalized.instruments.forEach(
     instrument =>
       (instrument.name = translations[instrument.id] || instrument.name)
