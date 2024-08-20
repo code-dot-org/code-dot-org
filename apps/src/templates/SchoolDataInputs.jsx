@@ -72,7 +72,7 @@ export default function SchoolDataInputs({
   return (
     <div className={style.schoolAssociationWrapper}>
       {includeHeaders && (
-        <div>
+        <div className={style.headerContainer}>
           <Heading2>{i18n.censusHeading()}</Heading2>
           <BodyTwoText>{i18n.schoolInfoInterstitialTitle()}</BodyTwoText>
         </div>
