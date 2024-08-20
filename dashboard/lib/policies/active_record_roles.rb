@@ -14,6 +14,6 @@ module Policies::ActiveRecordRoles
   # Inspired by: https://medium.com/grailed-engineering/distributing-database-reads-across-replicas-with-rails-6-and-activerecord-23a24aa90c84
   def self.get_reading_role_name
     configurations = ActiveRecord::Base.configurations.configs_for(env_name: Rails.env, include_hidden: true)
-    configurations.find(&:replica?)&.spec_name&.to_sym || get_writing_role_name
+    configurations.find(&:replica?)&.name&.to_sym || get_writing_role_name
   end
 end
