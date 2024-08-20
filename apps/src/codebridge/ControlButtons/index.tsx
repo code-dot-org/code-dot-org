@@ -62,18 +62,18 @@ const ControlButtons: React.FunctionComponent = () => {
   const validationState = useAppSelector(state => state.lab.validationState);
   const lifecycleNotifier = Lab2Registry.getInstance().getLifecycleNotifier();
 
-  const resetStatus = () => {
-    setHasRun(false);
-    setIsRunning(false);
-  };
-
   useEffect(() => {
+    const resetStatus = () => {
+      setHasRun(false);
+      dispatch(setIsRunning(false));
+    };
+
     // Reset run status when the level changes.
     lifecycleNotifier.addListener(
       LifecycleEvent.LevelLoadCompleted,
       resetStatus
     );
-  }, [lifecycleNotifier]);
+  }, [lifecycleNotifier, dispatch]);
 
   const onContinue = () => dispatch(navigateToNextLevel());
   // No-op for now. TODO: figure out what the finish button should do.
