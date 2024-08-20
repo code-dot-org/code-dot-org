@@ -46,37 +46,17 @@ module Pd
       SUBJECT_CSF_101: SUBJECT_CSF_101 = 'Intro'.freeze,
       SUBJECT_CSF_201: SUBJECT_CSF_201 = 'Deep Dive'.freeze,
       SUBJECT_CSF_DISTRICT: SUBJECT_CSF_DISTRICT = 'District'.freeze,
-      SUBJECT_FIT: SUBJECT_FIT = 'Code.org Facilitator Weekend'.freeze,
       SUBJECT_SUMMER_WORKSHOP: SUBJECT_SUMMER_WORKSHOP = '5-day Summer'.freeze,
       SUBJECT_VIRTUAL_KICKOFF: SUBJECT_VIRTUAL_KICKOFF = 'Virtual Workshop Kickoff'.freeze,
-      SUBJECT_CSP_FOR_RETURNING_TEACHERS: SUBJECT_CSP_FOR_RETURNING_TEACHERS = 'Workshop for Returning Teachers'.freeze,
       SUBJECT_ADMIN_COUNSELOR_WELCOME: SUBJECT_ADMIN_COUNSELOR_WELCOME = 'Welcome'.freeze,
       SUBJECT_ADMIN_COUNSELOR_SLP_INTRO: SUBJECT_ADMIN_COUNSELOR_SLP_INTRO = 'SLP Intro'.freeze,
       SUBJECT_ADMIN_COUNSELOR_SLP_CALL1: SUBJECT_ADMIN_COUNSELOR_SLP_CALL1 = 'SLP Quarterly Call 1'.freeze,
       SUBJECT_ADMIN_COUNSELOR_SLP_CALL2: SUBJECT_ADMIN_COUNSELOR_SLP_CALL2 = 'SLP Quarterly Call 2'.freeze,
       SUBJECT_ADMIN_COUNSELOR_SLP_CALL3: SUBJECT_ADMIN_COUNSELOR_SLP_CALL3 = 'SLP Quarterly Call 3'.freeze,
-      SUBJECT_ADMIN_COUNSELOR_SLP_CALL4: SUBJECT_ADMIN_COUNSELOR_SLP_CALL4 = 'SLP Quarterly Call 4'.freeze,
-      SUBJECT_CUSTOM_WORKSHOP: SUBJECT_CUSTOM_WORKSHOP = 'Custom Workshop'.freeze
+      SUBJECT_ADMIN_COUNSELOR_SLP_CALL4: SUBJECT_ADMIN_COUNSELOR_SLP_CALL4 = 'SLP Quarterly Call 4'.freeze
     }
 
     SUBJECTS = {
-      COURSE_ECS => [
-        SUBJECT_ECS_PHASE_2 = 'Phase 2 in-person'.freeze,
-        SUBJECT_ECS_UNIT_3 = 'Unit 3 - HTML'.freeze,
-        SUBJECT_ECS_UNIT_4 = 'Unit 4 - Scratch'.freeze,
-        SUBJECT_ECS_UNIT_5 = 'Unit 5 - Data'.freeze,
-        SUBJECT_ECS_UNIT_6 = 'Unit 6 - Robotics'.freeze,
-        SUBJECT_ECS_PHASE_4 = 'Phase 4: Summer wrap-up'.freeze
-      ],
-      COURSE_CS_IN_A => [
-        SUBJECT_CS_IN_A_PHASE_2 = 'Phase 2 in-person'.freeze,
-        SUBJECT_CS_IN_A_PHASE_3 = 'Phase 3: Academic Year Development'.freeze
-      ],
-      COURSE_CS_IN_S => [
-        SUBJECT_CS_IN_S_PHASE_2 = 'Phase 2: Blended Summer Study'.freeze,
-        SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1 = 'Phase 3 - Semester 1'.freeze,
-        SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 = 'Phase 3 - Semester 2'.freeze
-      ],
       COURSE_CSP => [
         SUBJECT_CSP_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
         SUBJECT_CSP_VIRTUAL_KICKOFF = SUBJECT_VIRTUAL_KICKOFF,
@@ -85,10 +65,7 @@ module Pd
         SUBJECT_CSP_WORKSHOP_3 = SUBJECT_WORKSHOP_3,
         SUBJECT_CSP_WORKSHOP_4 = SUBJECT_WORKSHOP_4,
         SUBJECT_CSP_WORKSHOP_1_2 = SUBJECT_WORKSHOP_1_2,
-        SUBJECT_CSP_WORKSHOP_3_4 = SUBJECT_WORKSHOP_3_4,
-        SUBJECT_CSP_TEACHER_CON = SUBJECT_TEACHER_CON,
-        SUBJECT_CSP_FIT = SUBJECT_FIT,
-        SUBJECT_CSP_FOR_RETURNING_TEACHERS,
+        SUBJECT_CSP_WORKSHOP_3_4 = SUBJECT_WORKSHOP_3_4
       ],
       COURSE_CSA => [
         SUBJECT_CSA_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
@@ -98,9 +75,7 @@ module Pd
         SUBJECT_CSA_WORKSHOP_3 = SUBJECT_WORKSHOP_3,
         SUBJECT_CSA_WORKSHOP_4 = SUBJECT_WORKSHOP_4,
         SUBJECT_CSA_WORKSHOP_1_2 = SUBJECT_WORKSHOP_1_2,
-        SUBJECT_CSA_WORKSHOP_3_4 = SUBJECT_WORKSHOP_3_4,
-        SUBJECT_CSA_FIT = SUBJECT_FIT,
-        SUBJECT_CSA_CAPSTONE = 'Capstone'.freeze
+        SUBJECT_CSA_WORKSHOP_3_4 = SUBJECT_WORKSHOP_3_4
       ],
       COURSE_CSD => [
         SUBJECT_CSD_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
@@ -110,16 +85,12 @@ module Pd
         SUBJECT_CSD_WORKSHOP_3 = SUBJECT_WORKSHOP_3,
         SUBJECT_CSD_WORKSHOP_4 = SUBJECT_WORKSHOP_4,
         SUBJECT_CSD_WORKSHOP_1_2 = SUBJECT_WORKSHOP_1_2,
-        SUBJECT_CSD_WORKSHOP_3_4 = SUBJECT_WORKSHOP_3_4,
-        SUBJECT_CSD_TEACHER_CON = SUBJECT_TEACHER_CON,
-        SUBJECT_CSD_FIT = SUBJECT_FIT,
-        SUBJECT_CSD_CUSTOM_WORKSHOP = SUBJECT_CUSTOM_WORKSHOP
+        SUBJECT_CSD_WORKSHOP_3_4 = SUBJECT_WORKSHOP_3_4
       ],
       COURSE_CSF => [
         SUBJECT_CSF_101,
         SUBJECT_CSF_201,
-        SUBJECT_CSF_DISTRICT,
-        SUBJECT_CSF_FIT = SUBJECT_FIT
+        SUBJECT_CSF_DISTRICT
       ],
       COURSE_ADMIN_COUNSELOR => [
         SUBJECT_ADMIN_COUNSELOR_WELCOME,
@@ -182,11 +153,6 @@ module Pd
 
     # Used to suppress post-workshop emails and in create/edit workshop UI
     MUST_SUPPRESS_EMAIL_SUBJECTS = [
-      SUBJECT_CSP_TEACHER_CON,
-      SUBJECT_CSP_FIT,
-      SUBJECT_CSD_TEACHER_CON,
-      SUBJECT_CSD_FIT,
-      SUBJECT_CSF_FIT,
       SUBJECT_ADMIN_COUNSELOR_WELCOME,
       SUBJECT_ADMIN_COUNSELOR_SLP_INTRO,
       SUBJECT_ADMIN_COUNSELOR_SLP_CALL1,
@@ -196,6 +162,30 @@ module Pd
     ].freeze
 
     LEGACY_SUBJECTS = {
+      COURSE_ECS => [
+        SUBJECT_ECS_PHASE_2 = 'Phase 2 in-person'.freeze,
+        SUBJECT_ECS_UNIT_3 = 'Unit 3 - HTML'.freeze,
+        SUBJECT_ECS_UNIT_4 = 'Unit 4 - Scratch'.freeze,
+        SUBJECT_ECS_UNIT_5 = 'Unit 5 - Data'.freeze,
+        SUBJECT_ECS_UNIT_6 = 'Unit 6 - Robotics'.freeze,
+        SUBJECT_ECS_PHASE_4 = 'Phase 4: Summer wrap-up'.freeze
+      ],
+      COURSE_CS_IN_A => [
+        SUBJECT_CS_IN_A_PHASE_2 = 'Phase 2 in-person'.freeze,
+        SUBJECT_CS_IN_A_PHASE_3 = 'Phase 3: Academic Year Development'.freeze
+      ],
+      COURSE_CS_IN_S => [
+        SUBJECT_CS_IN_S_PHASE_2 = 'Phase 2: Blended Summer Study'.freeze,
+        SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1 = 'Phase 3 - Semester 1'.freeze,
+        SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 = 'Phase 3 - Semester 2'.freeze
+      ],
+      COURSE_CSF => [
+        SUBJECT_FIT = 'Code.org Facilitator Weekend'.freeze
+      ],
+      COURSE_CSA => [
+        SUBJECT_CSA_CAPSTONE = 'Capstone'.freeze,
+        SUBJECT_CSA_FIT = 'Code.org Facilitator Weekend'.freeze,
+      ],
       COURSE_CSP => [
         LEGACY_SUBJECT_CSP_WORKSHOP_1_1920 = 'Workshop 1: Unit 3'.freeze,
         LEGACY_SUBJECT_CSP_WORKSHOP_2_1920 = 'Workshop 2: Unit 4 and Explore Task'.freeze,
@@ -218,7 +208,11 @@ module Pd
         LEGACY_SUBJECT_CSP_VIRTUAL_5 = 'Virtual Workshop 5'.freeze,
         LEGACY_SUBJECT_CSP_VIRTUAL_6 = 'Virtual Workshop 6'.freeze,
         LEGACY_SUBJECT_CSP_VIRTUAL_7 = 'Virtual Workshop 7'.freeze,
-        LEGACY_SUBJECT_CSP_VIRTUAL_8 = 'Virtual Workshop 8'.freeze
+        LEGACY_SUBJECT_CSP_VIRTUAL_8 = 'Virtual Workshop 8'.freeze,
+
+        SUBJECT_CSP_FOR_RETURNING_TEACHERS = 'Workshop for Returning Teachers'.freeze,
+        SUBJECT_CSP_FIT = 'Code.org Facilitator Weekend'.freeze,
+        SUBJECT_CSP_TEACHER_CON = 'TeacherCon'.freeze
       ],
       COURSE_CSD => [
         LEGACY_SUBJECT_CSD_WORKSHOP_1_1920 = 'Workshop 1: Unit 3'.freeze,
@@ -242,7 +236,11 @@ module Pd
         LEGACY_SUBJECT_CSD_VIRTUAL_5 = 'Virtual Workshop 5'.freeze,
         LEGACY_SUBJECT_CSD_VIRTUAL_6 = 'Virtual Workshop 6'.freeze,
         LEGACY_SUBJECT_CSD_VIRTUAL_7 = 'Virtual Workshop 7'.freeze,
-        LEGACY_SUBJECT_CSD_VIRTUAL_8 = 'Virtual Workshop 8'.freeze
+        LEGACY_SUBJECT_CSD_VIRTUAL_8 = 'Virtual Workshop 8'.freeze,
+
+        SUBJECT_CUSTOM_WORKSHOP = 'Custom Workshop'.freeze,
+        SUBJECT_CSD_FIT = 'Code.org Facilitator Weekend'.freeze,
+        SUBJECT_CSD_TEACHER_CON = 'TeacherCon'.freeze
       ]
     }.freeze
 
