@@ -1,7 +1,7 @@
 import {render, fireEvent, screen, within} from '@testing-library/react';
 import React from 'react';
 
-import {LmsLoginTypeNames} from '@cdo/apps/lib/ui/accounts/constants';
+import {LmsLoginTypeNames} from '@cdo/apps/accounts/constants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';

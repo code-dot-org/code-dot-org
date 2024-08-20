@@ -14,7 +14,7 @@ import {
   setVerifiedResources,
 } from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import CloneLessonDialogButton from '@cdo/apps/lib/levelbuilder/CloneLessonDialogButton';
+import CloneLessonDialogButton from '@cdo/apps/levelbuilder/CloneLessonDialogButton';
 import {registerReducers} from '@cdo/apps/redux';
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import {
