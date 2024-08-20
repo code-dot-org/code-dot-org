@@ -123,7 +123,7 @@ const FinishStudentAccount: React.FunctionComponent<{
           )}
         </div>
         <TextField
-          name="userName"
+          name="displayName"
           label={locale.display_name_eg()}
           value={name}
           placeholder={locale.coder()}
