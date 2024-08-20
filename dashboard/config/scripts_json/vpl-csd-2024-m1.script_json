@@ -7,11 +7,12 @@
       "curriculum_umbrella": "PD Workshop Activity CSD",
       "hideable_lessons": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-25 22:41:11 UTC",
+    "serialized_at": "2024-08-19 23:35:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -625,6 +626,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPL - CSD-PL AYWS1 Debugging Intro_2024"
+        ],
         "progression": "Module 1 Overview"
       },
       "bonus": false,
@@ -647,6 +651,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 1 Summer Review Overview_2024"
+        ],
         "progression": "Module 1 Overview"
       },
       "bonus": false,
@@ -669,6 +676,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Variables Overview_2024"
+        ],
         "progression": "Unit 2: Web Development Review"
       },
       "bonus": false,
@@ -691,6 +701,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module Variable Video with Reflection_2024"
+        ],
         "progression": "Unit 2: Web Development Review"
       },
       "bonus": false,
@@ -713,6 +726,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-HTMLReview_2024"
+        ],
         "progression": "Unit 2: Web Development Review"
       },
       "bonus": false,
@@ -735,6 +751,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-CSSVideo_2024"
+        ],
         "progression": "Unit 2: Web Development Review"
       },
       "bonus": false,
@@ -757,6 +776,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-CSSReview_2024"
+        ],
         "progression": "Unit 2: Web Development Review"
       },
       "bonus": false,
@@ -779,6 +801,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-variablesoverview1_2024"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -801,6 +826,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-variables4_2024"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -823,6 +851,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-randomnumbersoverview_2024"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -845,6 +876,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD U3 Random random ellipse2_2018_21_2024"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -867,6 +901,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-spritesoverview_2024"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -889,6 +926,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-sprites1_2024"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -911,6 +951,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-sprites3_2024"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -933,6 +976,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL- CSD - Module 1 Debugging OverviewOPD-K5 Pair_copy_2024"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -955,6 +1001,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 1 Debugging Reflection 1_2024"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -977,6 +1026,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD Games variables practice_2024"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -999,6 +1051,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 1 Debugging Reflection 2_2024"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -1021,6 +1076,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 1 Wrap Up_2024"
+        ],
         "progression": "Module 1 Asynchronous Wrap Up"
       },
       "bonus": false,
@@ -1043,6 +1101,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 images explore_2024"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
@@ -1065,6 +1126,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag 1_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1087,6 +1151,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Credit_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1109,6 +1176,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag Debug_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1131,6 +1201,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image choose name_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1153,6 +1226,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image Tag 2_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1175,6 +1251,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image practice_pilot_vpl-2324-m1_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1197,6 +1276,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image assessment_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1219,6 +1301,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Image challenge_pilot_vpl-2324-m1_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
@@ -1241,6 +1326,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties predict_2024"
+        ],
         "progression": "Prediction"
       },
       "bonus": false,
@@ -1263,6 +1351,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties xy_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1285,6 +1376,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games properties new_2024"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1307,6 +1401,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Properties practice_vpl-csd_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -1329,6 +1426,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Games properties assessment_2024"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -1351,6 +1451,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD Games Properties challenge_vpl-csd_2024"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
