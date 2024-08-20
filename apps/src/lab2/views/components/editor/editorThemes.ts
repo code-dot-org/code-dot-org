@@ -19,8 +19,8 @@ const chalky = '#e5c07b',
   whiskey = '#d19a66',
   violet = '#c678dd',
   darkBackground = '#21252b',
-  highlightBackground = '#484D57',
-  selection = '#3E4451',
+  highlightBackground = '#2c313a',
+  selection = '#484D57',
   cursor = '#528bff';
 
 /**
