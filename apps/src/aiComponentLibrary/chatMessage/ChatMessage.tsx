@@ -7,7 +7,7 @@ import {commonI18n} from '@cdo/apps/types/locale';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 import aiBotIcon from '@cdo/static/aichat/ai-bot-icon.svg';
 
-import {Role, ProfaneMessageViewToggle} from './types';
+import {Role} from './types';
 
 import moduleStyles from './chat-message.module.scss';
 
@@ -15,18 +15,16 @@ interface ChatMessageProps {
   chatMessageText: string;
   role: Role;
   status: string;
-  isTeacherView?: boolean;
+  showProfaneUserMessageToggle?: boolean;
 }
 
 const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
   chatMessageText,
   role,
   status,
-  isTeacherView,
+  showProfaneUserMessageToggle,
 }) => {
-  const [profaneMessageViewToggle, setProfaneMessageViewToggle] = useState(
-    ProfaneMessageViewToggle.VIEW
-  );
+  const [showProfaneUserMessage, setShowProfaneUserMessage] = useState(false);
 
   const hasDangerStyle =
     status === Status.PROFANITY_VIOLATION ||
@@ -40,8 +38,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
       case Status.UNKNOWN:
         return chatMessageText;
       case Status.PROFANITY_VIOLATION:
-        return role === Role.USER &&
-          profaneMessageViewToggle === ProfaneMessageViewToggle.HIDE
+        return role === Role.USER && showProfaneUserMessage
           ? chatMessageText
           : commonI18n.aiChatInappropriateUserMessage();
       case Status.PII_VIOLATION:
@@ -53,7 +50,7 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
       default:
         return '';
     }
-  }, [chatMessageText, role, status, profaneMessageViewToggle]);
+  }, [chatMessageText, role, status, showProfaneUserMessage]);
 
   return (
     <>
@@ -77,23 +74,15 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
           <SafeMarkdown markdown={getDisplayText} />
         </div>
       </div>
-      {isTeacherView &&
+      {showProfaneUserMessageToggle &&
         role === Role.USER &&
         status === Status.PROFANITY_VIOLATION && (
           <div className={moduleStyles[`container-user`]}>
             <Button
               onClick={() => {
-                setProfaneMessageViewToggle(
-                  profaneMessageViewToggle === ProfaneMessageViewToggle.VIEW
-                    ? ProfaneMessageViewToggle.HIDE
-                    : ProfaneMessageViewToggle.HIDE
-                );
+                setShowProfaneUserMessage(!showProfaneUserMessage);
               }}
-              text={
-                profaneMessageViewToggle === ProfaneMessageViewToggle.VIEW
-                  ? 'View message'
-                  : 'Hide message'
-              }
+              text={showProfaneUserMessage ? 'Hide message' : 'Show message'}
               size="xs"
               type="tertiary"
               className={moduleStyles.userProfaneMessageButton}

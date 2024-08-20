@@ -54,28 +54,23 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
   const dispatch = useAppDispatch();
 
   if (isChatMessage(event)) {
-    const {chatMessageText, role, status} = event;
     return (
-      <ChatMessage
-        chatMessageText={chatMessageText}
-        role={role}
-        status={status}
-        isTeacherView={isTeacherView}
-      />
+      <ChatMessage {...event} showProfaneUserMessageToggle={isTeacherView} />
     );
   }
 
   if (isNotification(event)) {
     const {id, text, notificationType, timestamp} = event;
-    const alertArgs: AlertProps = {
-      text: `${text} ${timestampToLocalTime(timestamp)}`,
-      type: notificationType === 'error' ? 'danger' : 'success',
-      size: 's',
-    };
-    if (!isTeacherView) {
-      alertArgs.onClose = () => dispatch(removeUpdateMessage(id));
-    }
-    return <Alert {...alertArgs} />;
+    return (
+      <Alert
+        text={`${text} ${timestampToLocalTime(timestamp)}`}
+        type={notificationType === 'error' ? 'danger' : 'success'}
+        onClose={
+          isTeacherView ? undefined : () => dispatch(removeUpdateMessage(id))
+        }
+        size="s"
+      />
+    );
   }
 
   if (isModelUpdate(event)) {
