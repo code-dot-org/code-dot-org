@@ -10,7 +10,7 @@
     })
   }
 
-  const { deferred, unlock } = getDeferredPromise()
+  const { deferred, resolve, reject } = getDeferredPromise()
   const pendingPromise = f(deferred)
   // you now have a pendingPromise. This can be handed into anything expecting a promise, even if you don't know
   // the arguments you want to call it with yet.
