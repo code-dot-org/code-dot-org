@@ -2,13 +2,15 @@ import classNames from 'classnames';
 import React, {useCallback, useContext, useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 
-import {navigateToNextLevel} from '@cdo/apps/code-studio/progressRedux';
+import {
+  navigateToNextLevel,
+  sendSubmitReport,
+} from '@cdo/apps/code-studio/progressRedux';
 import {
   getCurrentLevel,
   nextLevelId,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {Button} from '@cdo/apps/componentLibrary/button';
-import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {
   isPredictAnswerLocked,
@@ -16,6 +18,7 @@ import {
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
 import PredictQuestion from '@cdo/apps/lab2/views/components/PredictQuestion';
 import PredictSummary from '@cdo/apps/lab2/views/components/PredictSummary';
+import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
 import {ThemeContext} from '@cdo/apps/lab2/views/ThemeWrapper';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -54,6 +57,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   className,
   manageNavigation = true,
 }) => {
+  const dialogControl = useDialogControl();
   const instructionsText = useSelector(
     (state: {lab: LabState}) => state.lab.levelProperties?.longInstructions
   );
@@ -66,13 +70,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   );
   const predictResponse = useAppSelector(state => state.predictLevel.response);
   const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
-
-  // If there are no validation conditions, we can show the continue button so long as
-  // there is another level and manageNavigation is true.
-  // If validation is present, also check that conditions are satisfied.
-  const showContinueButton =
-    manageNavigation && (!hasConditions || satisfied) && hasNextLevel;
-
+  const hasRun = useAppSelector(state => state.lab2System.hasRun);
   const hasSubmitted = useAppSelector(
     state => getCurrentLevel(state)?.status === LevelStatus.submitted
   );
@@ -80,11 +78,25 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     state => state.lab.levelProperties?.submittable
   );
 
+  const hasMetValidation =
+    (!hasConditions && hasRun) || (hasConditions && satisfied);
+
+  // If there are no validation conditions, we can show the continue button so long as
+  // there is another level, manageNavigation is true, and code has been run at least once.
+  // If validation is present, also check that conditions are satisfied.
+  const showContinueButton =
+    !isSubmittable && manageNavigation && hasMetValidation && hasNextLevel;
+
+  const appType = useAppSelector(state => state.lab.levelProperties?.appName);
+
   // If there are no validation conditions, we can show the finish button so long as
   // this is the last level in the progression and the instructions panel is managing navigation.
   // If validation is present, also check that conditions are satisfied.
   const showFinishButton =
-    manageNavigation && (!hasConditions || satisfied) && !hasNextLevel;
+    !isSubmittable && manageNavigation && hasMetValidation && !hasNextLevel;
+
+  const showSubmitButton =
+    isSubmittable && manageNavigation && (hasMetValidation || hasSubmitted);
 
   const dispatch = useAppDispatch();
 
@@ -108,15 +120,38 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     setIsFinished(false);
   }, [canShowFinishButton]);
 
-  const finalMessage =
-    'You finished this lesson! Check in with your teacher for the next activity';
-
   const onNextPanel = useCallback(() => {
     if (beforeNextLevel) {
       beforeNextLevel();
     }
     dispatch(navigateToNextLevel());
   }, [dispatch, beforeNextLevel]);
+
+  const onSubmit = () => {
+    const dialogTitle = hasSubmitted
+      ? commonI18n.unsubmitYourProject()
+      : commonI18n.submitYourProject();
+    const dialogMessage = hasSubmitted
+      ? commonI18n.unsubmitYourProjectConfirm()
+      : commonI18n.submitYourProjectConfirm();
+    dialogControl?.showDialog({
+      type: DialogType.GenericConfirmation,
+      handleConfirm: handleSubmit,
+      title: dialogTitle,
+      message: dialogMessage,
+    });
+  };
+
+  const handleSubmit = () => {
+    dispatch(
+      sendSubmitReport({appType: appType || '', submitted: !hasSubmitted})
+    );
+    // Go to the next level if we have one and we just submitted.
+    // TODO: If onContinue starts to update progress, make sure we don't override the submitted status.
+    if (hasNextLevel && !hasSubmitted) {
+      onNextPanel();
+    }
+  };
 
   const canShowContinueButton = showContinueButton && onNextPanel;
 
@@ -165,7 +200,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
             />
           </div>
         )}
-        {(canShowContinueButton || canShowFinishButton) && (
+        {(canShowContinueButton || canShowFinishButton || showSubmitButton) && (
           <div
             id="instructions-navigation"
             className={moduleStyles['bubble-' + theme]}
@@ -183,6 +218,16 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
               <Button
                 text={commonI18n.finish()}
                 onClick={onFinish}
+                color={'white'}
+                className={moduleStyles.buttonInstruction}
+              />
+            )}
+            {showSubmitButton && (
+              <Button
+                text={
+                  hasSubmitted ? commonI18n.unsubmit() : commonI18n.submit()
+                }
+                onClick={onSubmit}
                 color={'white'}
                 className={moduleStyles.buttonInstruction}
               />

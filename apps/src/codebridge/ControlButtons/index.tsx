@@ -17,7 +17,7 @@ import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
+import {setHasRun, setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
@@ -31,8 +31,9 @@ const ControlButtons: React.FunctionComponent = () => {
   const {onRun, onStop} = useCodebridgeContext();
 
   const dialogControl = useDialogControl();
-  const [hasRun, setHasRun] = useState(false);
   const dispatch = useAppDispatch();
+
+  const hasRun = useAppSelector(state => state.lab2System.hasRun);
 
   const source = useAppSelector(
     state => state.lab2Project.projectSource?.source
@@ -64,7 +65,7 @@ const ControlButtons: React.FunctionComponent = () => {
 
   useEffect(() => {
     const resetStatus = () => {
-      setHasRun(false);
+      dispatch(setHasRun(false));
       dispatch(setIsRunning(false));
     };
 
@@ -113,7 +114,7 @@ const ControlButtons: React.FunctionComponent = () => {
         dispatch(setIsRunning(false))
       );
       if (!runTests) {
-        setHasRun(true);
+        dispatch(setHasRun(true));
       }
     } else {
       dispatch(appendSystemMessage("We don't know how to run your code."));
