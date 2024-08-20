@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom';
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
+import TemporaryBlankPage from '@cdo/apps/templates/teacherDashboard/teacherNavigation/TemporaryBlankPage';
 
 import ManageStudents from '../manageStudents/ManageStudents';
 import SectionProjectsListWithData from '../projects/SectionProjectsListWithData';
@@ -193,6 +194,56 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               element={applyV1TeacherDashboardWidth(
                 <SectionAssessments sectionName={sectionName} />
               )}
+            />
+          }
+        />
+        <Route
+          path={TEACHER_NAVIGATION_PATHS.lessonMaterials}
+          element={
+            <ElementOrEmptyPage
+              showNoStudents={studentCount === 0}
+              showNoCurriculumAssigned={!anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(<TemporaryBlankPage />)}
+            />
+          }
+        />
+        <Route
+          path={TEACHER_NAVIGATION_PATHS.calendar}
+          element={
+            <ElementOrEmptyPage
+              showNoStudents={studentCount === 0}
+              showNoCurriculumAssigned={!anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(<TemporaryBlankPage />)}
+            />
+          }
+        />
+        <Route
+          path={TEACHER_NAVIGATION_PATHS.courseOverview}
+          element={
+            <ElementOrEmptyPage
+              showNoStudents={studentCount === 0}
+              showNoCurriculumAssigned={!anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(<TemporaryBlankPage />)}
+            />
+          }
+        />
+        <Route
+          path={TEACHER_NAVIGATION_PATHS.unitOverview}
+          element={
+            <ElementOrEmptyPage
+              showNoStudents={studentCount === 0}
+              showNoCurriculumAssigned={!anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(<TemporaryBlankPage />)}
+            />
+          }
+        />
+        <Route
+          path={TEACHER_NAVIGATION_PATHS.settings}
+          element={
+            <ElementOrEmptyPage
+              showNoStudents={studentCount === 0}
+              showNoCurriculumAssigned={!anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(<TemporaryBlankPage />)}
             />
           }
         />

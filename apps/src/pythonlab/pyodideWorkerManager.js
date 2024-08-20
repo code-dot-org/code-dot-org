@@ -64,13 +64,9 @@ const setUpPyodideWorker = () => {
         });
         break;
       case 'loading_pyodide':
-        getStore().dispatch(
-          appendSystemMessage('Loading your python environment...')
-        );
         getStore().dispatch(setLoadingCodeEnvironment(true));
         break;
       case 'loaded_pyodide':
-        getStore().dispatch(appendSystemMessage('Your environment is ready!'));
         getStore().dispatch(setLoadingCodeEnvironment(false));
         break;
       default:

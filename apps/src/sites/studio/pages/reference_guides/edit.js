@@ -4,8 +4,8 @@ import {Provider} from 'react-redux';
 
 import reducers, {
   initLevelSearching,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/activitiesEditorRedux';
-import ReferenceGuideEditor from '@cdo/apps/lib/levelbuilder/reference-guide-editor/ReferenceGuideEditor';
+} from '@cdo/apps/levelbuilder/lesson-editor/activitiesEditorRedux';
+import ReferenceGuideEditor from '@cdo/apps/levelbuilder/reference-guide-editor/ReferenceGuideEditor';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import instructionsDialog from '@cdo/apps/redux/instructionsDialog';
 import getScriptData from '@cdo/apps/util/getScriptData';

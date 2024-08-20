@@ -17,14 +17,38 @@ module MailJetConstants
       },
       from_address: 'hadi_partovi@code.org',
       from_name: 'Hadi Partovi',
+    },
+    cap_section_warning: {
+      template_id: {
+        production: {
+          default: 6_195_698,
+        },
+        staging: {
+          default: 6_205_189,
+        },
+        development: {
+          default: 6_205_188,
+        }
+      },
+      from_address: 'noreply@code.org',
+      from_name: 'Code.org',
     }
   }.freeze
 
   CONTACT_LISTS = {
     welcome_series: {
-      default: 10_353_815,
-      'es-MX': 10_353_822,
-      'es-ES': 10_353_822,
+      production: {
+        default: 10_353_815,
+        'es-MX': 10_353_822,
+        'es-ES': 10_353_822,
+      },
+      staging: {
+        default: 407_739,
+      },
+      development: {
+        default: 10_443_291,
+        'es-MX': 10_443_295,
+      },
     }
   }
 end

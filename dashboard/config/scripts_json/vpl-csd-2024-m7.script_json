@@ -11,8 +11,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-25 22:42:42 UTC",
-    "published_state": null,
+    "serialized_at": "2024-08-19 23:34:12 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -314,6 +314,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 7 Overview_2023_1_2024"
+        ],
         "progression": "Module 7 Overview"
       },
       "bonus": false,
@@ -336,6 +339,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD M7 Theme Introduction_2023_1_2024"
+        ],
         "progression": "Theme Introduction (~5 mins)"
       },
       "bonus": false,
@@ -358,6 +364,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI-U7_2024"
+        ],
         "progression": "Previously On... (~40 mins)"
       },
       "bonus": false,
@@ -380,6 +389,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U7L1_2024"
+        ],
         "progression": "Previously On... (~40 mins)"
       },
       "bonus": false,
@@ -402,6 +414,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U7L2_2024"
+        ],
         "progression": "Previously On... (~40 mins)"
       },
       "bonus": false,
@@ -424,6 +439,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U7L2_2_2024"
+        ],
         "progression": "Previously On... (~40 mins)"
       },
       "bonus": false,
@@ -446,6 +464,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U7L2_3_2024"
+        ],
         "progression": "Previously On... (~40 mins)"
       },
       "bonus": false,
@@ -468,6 +489,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U7L3_2024"
+        ],
         "progression": "Previously On... (~40 mins)"
       },
       "bonus": false,
@@ -490,6 +514,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U7L3_2_2024"
+        ],
         "progression": "Previously On... (~40 mins)"
       },
       "bonus": false,
@@ -512,6 +539,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U7L3_3_2024"
+        ],
         "progression": "Previously On... (~40 mins)"
       },
       "bonus": false,
@@ -534,6 +564,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U7L4_2024"
+        ],
         "progression": "Previously On... (~40 mins)"
       },
       "bonus": false,
@@ -556,6 +589,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U7L5_2024"
+        ],
         "progression": "Previously On... (~40 mins)"
       },
       "bonus": false,
@@ -578,6 +614,9 @@
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U7L6_2024"
+        ],
         "progression": "Previously On... (~40 mins)"
       },
       "bonus": false,
@@ -600,6 +639,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 Wrap Up_2023_1_2024"
+        ],
         "progression": "Module 7 Asynchronous Wrap Up (~10 mins)"
       },
       "bonus": false,

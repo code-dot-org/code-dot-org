@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "data-science-playground",
-    "serialized_at": "2024-07-01 20:01:19 UTC",
+    "serialized_at": "2024-08-19 21:03:40 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -235,8 +235,19 @@
       }
     },
     {
-      "key": "b56480fb-78a2-4a17-b82f-a45514b351af",
+      "key": "79ab08d4-8653-4633-952d-e4ba274a2f9e",
       "position": 2,
+      "properties": {
+        "progression_name": "Free Response Test"
+      },
+      "seeding_key": {
+        "activity_section.key": "79ab08d4-8653-4633-952d-e4ba274a2f9e",
+        "lesson_activity.key": "6dee76df-ab3e-45d3-818f-b92f69a72b8a"
+      }
+    },
+    {
+      "key": "b56480fb-78a2-4a17-b82f-a45514b351af",
+      "position": 3,
       "properties": {
         "progression_name": "Cleaning Data"
       },
@@ -276,6 +287,17 @@
       },
       "seeding_key": {
         "activity_section.key": "d7bcf459-fcdc-49d0-b891-f840f9079eae",
+        "lesson_activity.key": "fccb4f4b-9a21-4b5f-9057-a80c4a9d17c0"
+      }
+    },
+    {
+      "key": "cf3ed801-015d-4bba-80ea-6f3558b223cc",
+      "position": 2,
+      "properties": {
+        "progression_name": "Levelgroup You Can Keep Working On"
+      },
+      "seeding_key": {
+        "activity_section.key": "cf3ed801-015d-4bba-80ea-6f3558b223cc",
         "lesson_activity.key": "fccb4f4b-9a21-4b5f-9057-a80c4a9d17c0"
       }
     }
@@ -412,6 +434,28 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Free Response Test"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ken-allow-mutli-attempts-test"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "data-science-playground",
+        "activity_section.key": "79ab08d4-8653-4633-952d-e4ba274a2f9e"
+      },
+      "level_keys": [
+        "ken-allow-mutli-attempts-test"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "data_science_L8_level2"
         ],
@@ -432,7 +476,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -457,7 +501,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -482,11 +526,14 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ken_python_test"
+        ],
         "progression": "Python Lab"
       },
       "bonus": false,
@@ -501,6 +548,28 @@
       },
       "level_keys": [
         "ken_python_test"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Levelgroup You Can Keep Working On"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ken-levelgroup-allow-multiple-test"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "data-science-playground",
+        "activity_section.key": "cf3ed801-015d-4bba-80ea-6f3558b223cc"
+      },
+      "level_keys": [
+        "ken-levelgroup-allow-multiple-test"
       ]
     }
   ],
@@ -567,6 +636,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "ken-allow-mutli-attempts-test",
+        "script_level.level_keys": [
+          "ken-allow-mutli-attempts-test"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "data-science-playground",
+        "activity_section.key": "79ab08d4-8653-4633-952d-e4ba274a2f9e"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "data_science_L8_level2",
         "script_level.level_keys": [
           "data_science_L8_level2"
@@ -611,6 +692,18 @@
         "lesson_group.key": "",
         "script.name": "data-science-playground",
         "activity_section.key": "d7bcf459-fcdc-49d0-b891-f840f9079eae"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ken-levelgroup-allow-multiple-test",
+        "script_level.level_keys": [
+          "ken-levelgroup-allow-multiple-test"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "data-science-playground",
+        "activity_section.key": "cf3ed801-015d-4bba-80ea-6f3558b223cc"
       }
     }
   ],
