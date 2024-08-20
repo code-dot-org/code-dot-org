@@ -45,7 +45,8 @@ interface PatternAiPanelProps {
 }
 
 type UserTaskType = 'none' | 'generated' | 'drawnDrums';
-type GenerateStateType = 'none' | 'generating' | 'readyToPreview';
+type GenerateStateType = 'none' | 'generating';
+type PreviewStateType = 'none' | 'readyToPreview';
 
 /*
  * Renders a UI for designing a pattern. This is currently used within a
@@ -76,6 +77,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
 
   const [userTask, setUserTask] = useState<UserTaskType>('none');
   const [generateState, setGenerateState] = useState<GenerateStateType>('none');
+  const [previewState, setPreviewState] = useState<PreviewStateType>('none');
 
   useEffect(() => {
     if (currentValue.events.some(event => event.tick >= 9)) {
@@ -197,38 +199,42 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     registerInstrumentLoadCallback,
   ]);
 
+  const playPreview = useCallback(() => {
+    if (currentPreviewTick === 0) {
+      startPreview(currentValue);
+    } else {
+      // If a preview is already playing, we can stop the current one, and wait for
+      // it to cleanly complete, before beginning the next one.
+      stopPreview();
+      setPreviewState('readyToPreview');
+    }
+  }, [
+    currentPreviewTick,
+    currentValue,
+    startPreview,
+    stopPreview,
+    setPreviewState,
+  ]);
+
   const handleAiClick = useCallback(async () => {
     const seedEvents = currentValue.events.filter(event => event.tick <= 8);
     generatePattern(seedEvents, 8, 32 - 8, aiTemperature, newEvents => {
       currentValue.events = newEvents;
       onChange(currentValue);
 
-      if (currentPreviewTick === 0) {
-        startPreview(currentValue);
-        setGenerateState('none');
-      } else {
-        // If a preview is already playing, we can stop the current one, and wait for
-        // it to cleanly complete, before beginning the next one.
-        stopPreview();
-        setGenerateState('readyToPreview');
-      }
+      setGenerateState('none');
+
+      playPreview();
     });
     setGenerateState('generating');
-  }, [
-    currentValue,
-    onChange,
-    aiTemperature,
-    stopPreview,
-    startPreview,
-    currentPreviewTick,
-  ]);
+  }, [currentValue, onChange, aiTemperature, playPreview]);
 
   useEffect(() => {
-    if (currentPreviewTick === 0 && generateState === 'readyToPreview') {
+    if (currentPreviewTick === 0 && previewState === 'readyToPreview') {
       startPreview(currentValue);
-      setGenerateState('none');
+      setPreviewState('none');
     }
-  }, [currentPreviewTick, generateState, currentValue, startPreview]);
+  }, [currentPreviewTick, previewState, currentValue, startPreview]);
 
   const aiTemperatureMin = 0.5;
   const aiTemperatureMax = 2;
@@ -377,7 +383,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
 
       <PreviewControls
         enabled={currentValue.events.length > 0}
-        playPreview={() => startPreview(currentValue)}
+        playPreview={playPreview}
         onClickClear={onClear}
         cancelPreviews={stopPreview}
         isPlayingPreview={currentPreviewTick > 0}

@@ -230,7 +230,11 @@ class ToneJSPlayer implements AudioPlayer {
     const clockEnd = lastSampleStart + Transport.toSeconds('16n');
     let tick = 1;
     const clock = new Clock(() => {
-      onTick?.(tick++);
+      // Protect against the unexpected edge case in which We can apparently get a tick
+      // after we've handled a stop.
+      if (this.currentSequencePreviewClock) {
+        onTick?.(tick++);
+      }
     }, Transport.toFrequency('16n'))
       .on('stop', () => {
         this.currentSequencePreviewClock = null;
