@@ -53,30 +53,10 @@ social:
         =hoc_s(:hoc2023_what_is_hoc_desc)
       = view :index_video
 
-  -# Map
-  %section.map.bg-neutral-light
-    .wrapper
-      .text-wrapper.centered
-        %h2.no-margin-bottom{style: "font-size: 2.5rem;"}
-          =format_integer_with_commas(fetch_hoc_metrics['started']).to_s
-        %h3.heading-xl{style: "margin-top: 0.25rem"}
-          =hoc_s(:hours_of_code_served)
-        %p.body-one.no-margin-bottom
-          =hoc_s(:front_intro_default_2)
-        %p.body-one
-          = view :hoc_events_counter
-      = view :map
-      .text-wrapper.centered
-        %p.body-two.no-margin-bottom
-          =hoc_s(:hoc_homepage_registration_desc)
-        - if hoc_mode != false
-          %a.link-button{href: resolve_url("/events"), style: "margin-top: 2rem"}
-            =hoc_s(:call_to_action_register_your_hoc)
-
   -# Off season interest form
   -# This is only shown when hoc_mode is false
   - if hoc_mode == false
-    %section.no-padding-bottom
+    %section.bg-neutral-light
       .wrapper
         = view :off_season_interest_form
 
