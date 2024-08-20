@@ -17,7 +17,7 @@ import {
   isPredictAnswerLocked,
   setPredictResponse,
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
-import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
+import {setIsTesting} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import PredictQuestion from '@cdo/apps/lab2/views/components/PredictQuestion';
 import PredictSummary from '@cdo/apps/lab2/views/components/PredictSummary';
@@ -89,6 +89,10 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   ) as MultiFileSource | undefined;
 
   const appType = useAppSelector(state => state.lab.levelProperties?.appName);
+  const isTesting = useAppSelector(state => state.lab2System.isTesting);
+  const isLoadingEnvironment = useAppSelector(
+    state => state.lab2System.loadingCodeEnvironment
+  );
 
   const dispatch = useAppDispatch();
 
@@ -135,9 +139,9 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
 
   const handleTest = () => {
     if (onRun) {
-      dispatch(setIsRunning(true));
+      dispatch(setIsTesting(true));
       onRun(true, dispatch, source).finally(() =>
-        dispatch(setIsRunning(false))
+        dispatch(setIsTesting(false))
       );
     } else {
       dispatch(appendSystemMessage("We don't know how to run your code."));
@@ -147,10 +151,10 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   const handleStop = () => {
     if (onStop) {
       onStop();
-      dispatch(setIsRunning(false));
+      dispatch(setIsTesting(false));
     } else {
       dispatch(appendSystemMessage("We don't know how to stop your code."));
-      dispatch(setIsRunning(false));
+      dispatch(setIsTesting(false));
     }
   };
 
@@ -195,6 +199,31 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
         handleNavigation: onFinish,
       };
     }
+  };
+
+  const renderTestButton = () => {
+    if (!hasConditions) {
+      return null;
+    }
+    return isTesting ? (
+      <Button
+        text={'Stop'}
+        onClick={handleStop}
+        color={'destructive'}
+        iconLeft={{iconStyle: 'solid', iconName: 'square'}}
+        className={moduleStyles.centerButton}
+        size={'s'}
+      />
+    ) : (
+      <Button
+        text="Test"
+        onClick={() => handleTest()}
+        disabled={isLoadingEnvironment}
+        iconLeft={{iconStyle: 'solid', iconName: 'flask'}}
+        color={'black'}
+        size={'s'}
+      />
+    );
   };
 
   const {showNavigation, navigationText, navigationIcon, handleNavigation} =
@@ -245,6 +274,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
               }
               predictAnswerLocked={predictAnswerLocked}
             />
+            {renderTestButton()}
           </div>
         )}
         {showNavigation && (
