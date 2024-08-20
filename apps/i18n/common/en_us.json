@@ -157,6 +157,7 @@
   "aiChatInappropriateUserMessage": "This message has been flagged as inappropriate.",
   "aiChatTooPersonalUserMessage": "This message has been flagged as too personal.",
   "aiChatResponseError": "There was an error getting a response. Please try again.",
+  "aiChatRateLimitError": "You've sent too many messages in the last minute. Please wait a moment before sending another message.",
   "all": "All",
   "allHandouts": "All Handouts",
   "allowEditing": "Allow editing",
