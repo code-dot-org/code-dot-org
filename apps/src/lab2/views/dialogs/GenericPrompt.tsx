@@ -21,14 +21,14 @@ export type GenericPromptProps = Required<Pick<GenericDialogProps, 'title'>> & {
 type GenericPromptBodyProps = {
   placeholder?: string;
   prompt: string;
-  handlePromptChange: (newPrompt: string) => void;
+  handleInputChange: (newInput: string) => void;
   errorMessage?: string;
 };
 
 const GenericPromptBody: React.FunctionComponent<GenericPromptBodyProps> = ({
   placeholder,
   prompt,
-  handlePromptChange,
+  handleInputChange,
   errorMessage,
 }) => {
   return (
@@ -36,7 +36,7 @@ const GenericPromptBody: React.FunctionComponent<GenericPromptBodyProps> = ({
       name="prompt-field"
       placeholder={placeholder}
       value={prompt}
-      onChange={e => handlePromptChange(e.target.value)}
+      onChange={e => handleInputChange(e.target.value)}
       errorMessage={errorMessage}
     />
   );
@@ -55,10 +55,10 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
     undefined
   );
 
-  const handlePromptChange = useCallback(
-    (newPrompt: string) => {
-      setPromiseArgs(newPrompt);
-      setErrorMessage(validateInput(newPrompt));
+  const handleInputChange = useCallback(
+    (newInput: string) => {
+      setPromiseArgs(newInput);
+      setErrorMessage(validateInput(newInput));
     },
     [validateInput, setPromiseArgs, setErrorMessage]
   );
@@ -70,7 +70,7 @@ const GenericPrompt: React.FunctionComponent<GenericPromptProps> = ({
         <GenericPromptBody
           placeholder={placeholder}
           prompt={prompt}
-          handlePromptChange={handlePromptChange}
+          handleInputChange={handleInputChange}
           errorMessage={errorMessage}
         />
       }
