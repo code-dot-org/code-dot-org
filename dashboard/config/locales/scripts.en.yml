@@ -15744,48 +15744,72 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m1
         vpl-csd-2024-m2:
           title: Module 2
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m2
         vpl-csd-2024-m3:
           title: Module 3
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m3
         vpl-csd-2024-m4:
           title: Module 4
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m4
         vpl-csd-2024-m5:
           title: Module 5
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m5
         vpl-csd-2024-m6:
           title: Module 6
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m6
         vpl-csd-2024-m7:
           title: Module 7
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m7
         vpl-csd-2024-m8:
           title: Module 8
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m8
         vpl-csa-2024-m1:
           title: Module 1
           description: ''
@@ -18824,4 +18848,43 @@ en:
           description_audience: ''
           description_short: ''
           description: "## Welcome! \n##### This professional learning module is designed to help you prepare to teach Code.org’s Generative AI unit.\n\n##### The Generative AI unit is designed as standalone coursework for 6-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. \n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Computer Vision Unit. "
+          student_description: ''
+        music-ai-2024:
+          lessons:
+            lesson-1:
+              name: 'Music Lab: A.I. Edition for Hour of Code'
+          lesson_groups: {}
+          name: music-ai-2024
+          title: 'Music Lab: AI Edition'
+          description_audience: 'Hour of Code students and teachers '
+          description_short: 'Learn the basics of Music Lab and use AI to help you create new beats and tunes! '
+          description: ''
+          student_description: ''
+        csd-ayw1-debugging:
+          lessons:
+            lesson-1:
+              name: Debugging Challenges
+          lesson_groups: {}
+          name: csd-ayw1-debugging
+          title: 'CSD Academic Year Workshop #1 - Debugging'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandbox-teaching-data-science:
+          lessons:
+            lesson-1:
+              name: Introduction to Teaching Data Science
+            lesson-2:
+              name: Introduction to Data Science [Chapter 1]
+            lesson-3:
+              name: Python and Data Science [Chapter 2]
+            lesson-4:
+              name: Teaching Resources for Data Science
+          lesson_groups: {}
+          name: sandbox-teaching-data-science
+          title: Teaching Data Science
+          description_audience: ''
+          description_short: ''
+          description: ''
           student_description: ''

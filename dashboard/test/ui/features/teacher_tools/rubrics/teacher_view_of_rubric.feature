@@ -162,7 +162,6 @@ Scenario: Teacher views Rubric and Settings tabs
   And I wait until element "h5:contains(Code Quality)" is visible
   Then I see no difference for "rubric tab, Code Quality learning goal"
   And element ".uitest-run-ai-assessment" is disabled
-  And element ".uitest-info-alert" is visible
 
   When I click selector "#uitest-next-goal"
   And I wait until element "h5:contains(Sprites)" is visible

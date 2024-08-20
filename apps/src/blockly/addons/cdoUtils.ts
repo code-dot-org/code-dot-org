@@ -645,7 +645,7 @@ function updateVariableFields(
   const fields = block.fields;
   for (const key in fields) {
     const field = fields[key];
-    if (field.id && serializedVariableMap.has(field.id)) {
+    if (field?.id && serializedVariableMap.has(field.id)) {
       field.name = serializedVariableMap.get(field.id)!;
       delete field.id;
     }

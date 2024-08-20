@@ -14,17 +14,30 @@ module Services
         ActiveRecord::Base.transaction do
           user.authentication_options << rehydrated_user.authentication_options.first
           Services::Lti.create_lti_user_identity(user)
+          @lti_integration = user.lti_user_identities.first.lti_integration
           handle_sections(rehydrated_user, user)
           user.lti_roster_sync_enabled = true if user.teacher?
           user.lms_landing_opted_out = true
           PartialRegistration.delete(session)
+          unless rehydrated_user.id
+            # For fresh LTI users who are linking their account, we want to count
+            # them as "new" users for metrics, since they won't hit the registration
+            # controller like they would if they chose to create a new account.
+            Metrics::Events.log_event(
+              user: user,
+              event_name: 'lti_user_created',
+              metadata: {
+                'lms_name' => @lti_integration[:platform_name],
+                'context' => 'account_linking',
+              }
+            )
+          end
           rehydrated_user.destroy if rehydrated_user.id
         end
 
-        lti_integration = user.lti_user_identities.first.lti_integration
         metadata = {
-          'lms_name' => lti_integration[:platform_name],
-          'lms_client_id' => lti_integration[:client_id],
+          'lms_name' => @lti_integration[:platform_name],
+          'lms_client_id' => @lti_integration[:client_id],
           'login_type' => user.primary_contact_info&.credential_type,
         }
         Metrics::Events.log_event(
