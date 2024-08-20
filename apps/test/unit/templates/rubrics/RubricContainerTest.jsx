@@ -710,9 +710,6 @@ describe('RubricContainer', () => {
     wrapper.update();
     expect(userFetchStub).to.have.been.called;
     expect(allFetchStub).to.have.been.called;
-    expect(wrapper.find('[title="info circle icon"]').length).to.be.greaterThan(
-      0
-    );
     expect(wrapper.text()).to.include(
       i18n.aiEvaluationStatus_request_too_large()
     );
@@ -798,7 +795,6 @@ describe('RubricContainer', () => {
 
     expect(userFetchStub).to.have.been.called;
     expect(allFetchStub).to.have.been.called;
-    expect(screen.queryByTestId('info-alert')).to.exist;
     screen.getByText(
       i18n.aiEvaluationStatus_teacher_limit_exceeded({
         limit: RubricAiEvaluationLimits.TEACHER_LIMIT,

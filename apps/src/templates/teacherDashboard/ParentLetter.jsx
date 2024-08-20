@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
+import {LmsLoginTypeNames} from '@cdo/apps/lib/ui/accounts/constants';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {
   EmailLinks,
@@ -18,14 +19,13 @@ const RESEARCH_ARTICLE_URL =
 const ENGAGEMENT_URL =
   'https://support.code.org/hc/en-us/articles/360041539831-How-can-I-keep-track-of-what-my-child-is-working-on-on-Code-org-';
 
-// const LOGIN_TYPE_NAMES = {
-//   [SectionLoginType.clever]: 'Clever accounts',
-//   [SectionLoginType.google_classroom]: 'Google Classroom accounts',
-//   [SectionLoginType.lti_v1]: 'LMS accounts',
-//   [SectionLoginType.picture]: 'picture passwords',
-//   [SectionLoginType.word]: 'secret words',
-//   [SectionLoginType.email]: 'personal logins',
-// };
+const LOGIN_TYPE_NAMES = {
+  [SectionLoginType.clever]: LmsLoginTypeNames.clever,
+  [SectionLoginType.google_classroom]: LmsLoginTypeNames.google_classroom,
+  [SectionLoginType.picture]: i18n.loginTypePicture().toLowerCase(),
+  [SectionLoginType.word]: i18n.loginTypeWordUpdated().toLowerCase(),
+  [SectionLoginType.email]: i18n.loginTypePersonal().toLowerCase(),
+};
 
 /**
  * A letter that teachers can send home to parents, providing guidance on
@@ -75,7 +75,6 @@ class ParentLetter extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     const {logoUrl, students, teacherName, section, loginTypeName, studentId} =
       this.props;
     const sectionCode = section.code;
@@ -89,7 +88,6 @@ class ParentLetter extends React.Component {
     const studentName = student ? student.name : 'your student';
     const secretPicturePath = student ? student.secretPicturePath : null;
     const secretWords = student ? student.secretWords : null;
-    console.log(loginTypeName);
 
     return (
       <div id="printArea">
@@ -321,8 +319,9 @@ const SignInInstructions = ({
       );
   }
 
-  //const loginTypeName = LOGIN_TYPE_NAMES[loginType];
-  console.log(loginTypeName);
+  if (loginType !== SectionLoginType.lti_v1) {
+    loginTypeName = LOGIN_TYPE_NAMES[loginType];
+  }
   return (
     <div>
       <SafeMarkdown
