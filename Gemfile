@@ -290,7 +290,7 @@ gem 'omniauth-openid-connect', github: 'code-dot-org/omniauth-openid-connect', r
 
 # Ref: https://github.com/toy/image_optim/pull/145
 # Also include sRGB color profile conversion.
-gem 'image_optim', github: 'code-dot-org/image_optim', ref: 'cdo'
+gem 'image_optim', github: 'code-dot-org/image_optim', ref: 'seth/ruby-3.1'
 # Image-optimization tools and binaries.
 gem 'image_optim_pack', '~> 0.5.0', github: 'code-dot-org/image_optim_pack', ref: 'guetzli'
 gem 'image_optim_rails', '~> 0.4.0'

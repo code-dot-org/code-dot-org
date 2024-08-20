@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/code-dot-org/image_optim.git
-  revision: 939996f7ad102227c73b42bfda0058f9c66698aa
-  ref: cdo
+  revision: 80664dc6d902e5da75b5f1d162191e31b7b822ae
+  ref: seth/ruby-3.1
   specs:
     image_optim (0.24.2)
       exifr (~> 1.2, >= 1.2.2)
