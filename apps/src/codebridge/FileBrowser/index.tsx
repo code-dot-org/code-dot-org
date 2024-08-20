@@ -55,9 +55,10 @@ type FilesComponentProps = {
   setFileType: setFileType;
 };
 
-const extractPrompt = (
-  promiseResults: DialogClosePromiseReturnType
-): string => {
+// given a promise returned from DialogManager.showDialog({type : DialogType.GenericPrompt}), will return the input
+// that was typed in by the user.
+// Note that if the user did not press the `confirm` button, then an empty string will be returned instead.
+const extractInput = (promiseResults: DialogClosePromiseReturnType): string => {
   const {type, args} = promiseResults;
   if (type === 'confirm') {
     return args as string;
@@ -66,6 +67,7 @@ const extractPrompt = (
   return '';
 };
 
+// restrict typed in input to what we consider to be valid names, which for now are [a-zA-Z0-9_.].
 const validateName = (name: string = '') => !Boolean(name.match(/[^\w.]/));
 
 const InnerFileBrowser = React.memo(
@@ -350,7 +352,7 @@ export const FileBrowser = React.memo(() => {
         if (results.type !== 'confirm') {
           return;
         }
-        const folderName = extractPrompt(results);
+        const folderName = extractInput(results);
 
         const folderId = getNextFolderId(Object.values(project.folders));
         newFolder({parentId, folderName, folderId});
@@ -396,7 +398,7 @@ export const FileBrowser = React.memo(() => {
         if (results.type !== 'confirm') {
           return;
         }
-        const fileName = extractPrompt(results);
+        const fileName = extractInput(results);
 
         const fileId = getNextFileId(Object.values(project.files));
 
@@ -443,7 +445,7 @@ export const FileBrowser = React.memo(() => {
         return;
       }
 
-      const destinationFolderName = extractPrompt(results);
+      const destinationFolderName = extractInput(results);
       try {
         const folderId = findFolder(destinationFolderName.split('/'), {
           folders: Object.values(project.folders),
@@ -500,7 +502,7 @@ export const FileBrowser = React.memo(() => {
       if (results.type !== 'confirm') {
         return;
       }
-      const newName = extractPrompt(results);
+      const newName = extractInput(results);
       renameFile(fileId, newName);
     },
     [dialogControl, project.files, checkForDuplicateFilename, renameFile]
@@ -534,7 +536,7 @@ export const FileBrowser = React.memo(() => {
       if (results.type !== 'confirm') {
         return;
       }
-      const newName = extractPrompt(results);
+      const newName = extractInput(results);
       renameFolder(folderId, newName);
     },
     [dialogControl, renameFolder, project.folders]
