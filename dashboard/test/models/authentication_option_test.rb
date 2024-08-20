@@ -128,11 +128,6 @@ class AuthenticationOptionTest < ActiveSupport::TestCase
     assert option.oauth?
   end
 
-  test 'oauth? true when credential_type is The School Project' do
-    option = create :authentication_option, credential_type: AuthenticationOption::THE_SCHOOL_PROJECT
-    assert option.oauth?
-  end
-
   test 'oauth? true when credential_type is Twitter' do
     option = create :authentication_option, credential_type: AuthenticationOption::TWITTER
     assert option.oauth?

@@ -299,7 +299,6 @@ gem 'full-name-splitter', github: 'pahanix/full-name-splitter'
 gem 'rambling-trie', '>= 2.1.1'
 
 gem 'omniauth-openid'
-gem 'omniauth-openid-connect', github: 'code-dot-org/omniauth-openid-connect', ref: 'cdo'
 
 # Ref: https://github.com/toy/image_optim/pull/145
 # Also include sRGB color profile conversion.
