@@ -15744,48 +15744,72 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m1
         vpl-csd-2024-m2:
           title: Module 2
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m2
         vpl-csd-2024-m3:
           title: Module 3
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m3
         vpl-csd-2024-m4:
           title: Module 4
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m4
         vpl-csd-2024-m5:
           title: Module 5
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m5
         vpl-csd-2024-m6:
           title: Module 6
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m6
         vpl-csd-2024-m7:
           title: Module 7
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m7
         vpl-csd-2024-m8:
           title: Module 8
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m8
         vpl-csa-2024-m1:
           title: Module 1
           description: ''
