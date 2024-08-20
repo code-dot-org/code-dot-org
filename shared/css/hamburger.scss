@@ -261,4 +261,10 @@ $arrow-size: 1.5rem;
       text-align: center;
     }
   }
+
+  /* Hide the Sign in and Create account buttons
+  in the hamburger on large screens */
+  @media (min-width: 426px) {
+    display: none;
+  }
 }

@@ -5,7 +5,7 @@ import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
+import PopUpMenu, {MenuBreak} from '@cdo/apps/sharedComponents/PopUpMenu';
 import experiments from '@cdo/apps/util/experiments';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {tryGetLocalStorage, trySetLocalStorage} from '@cdo/apps/utils';

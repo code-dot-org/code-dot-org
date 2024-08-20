@@ -3,7 +3,7 @@ import {useSelector} from 'react-redux';
 
 import {handleUpdateSectionAITutorEnabled} from '@cdo/apps/aiTutor/accessControlsApi';
 import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
-import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
+import InfoHelpTip from '@cdo/apps/sharedComponents/InfoHelpTip';
 import {updateSectionAiTutorEnabled} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';

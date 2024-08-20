@@ -38,8 +38,6 @@ Dashboard::Application.routes.draw do
 
     get '/terms-and-privacy', to: 'home#terms_and_privacy'
     get '/dashboardapi/terms-and-privacy', to: "home#terms_and_privacy"
-    get '/dashboardapi/hoc-courses-teacher-guides', to: "home#hoc_courses_teacher_guides"
-    get '/dashboardapi/hoc-courses-challenge', to: "home#hoc_courses_challenge"
 
     get "/home", to: "home#home"
 
@@ -195,6 +193,8 @@ Dashboard::Application.routes.draw do
       get '/users/new_sign_up', to: 'registrations#new_sign_up'
       # Part of the new sign up flow - work in progress
       get '/users/new_sign_up/account_type', to: 'registrations#account_type'
+      get '/users/new_sign_up/finish_student_account', to: 'registrations#finish_student_account'
+      get '/users/new_sign_up/finish_teacher_account', to: 'registrations#finish_teacher_account'
       patch '/dashboardapi/users', to: 'registrations#update'
       patch '/users/upgrade', to: 'registrations#upgrade'
       patch '/users/set_student_information', to: 'registrations#set_student_information'

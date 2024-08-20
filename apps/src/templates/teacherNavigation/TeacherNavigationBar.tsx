@@ -1,9 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import {useSelector} from 'react-redux';
+import {useParams} from 'react-router-dom';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import Typography from '@cdo/apps/componentLibrary/typography';
+import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
 import i18n from '@cdo/locale';
+
+import {LABELED_TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
 
 import styles from './teacher-navigation.module.scss';
 
@@ -15,6 +19,7 @@ interface SectionsData {
 }
 
 const TeacherNavigationBar: React.FunctionComponent = () => {
+  const {sectionId} = useParams();
   const sections = useSelector(
     (state: {teacherSections: {sections: SectionsData}}) =>
       state.teacherSections.sections
@@ -23,7 +28,15 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   const [sectionArray, setSectionArray] = useState<
     {value: string; text: string}[]
   >([]);
-  const [selectedSectionId, setSelectedSectionId] = useState<string>('');
+  const [selectedSectionId, setSelectedSectionId] = useState<string>(
+    sectionId || ''
+  );
+  const [selectedOptionKey, setSelectedOptionKey] =
+    useState<string>('assessments');
+
+  const handleOptionClick = (pathKey: string) => {
+    setSelectedOptionKey(pathKey);
+  };
 
   useEffect(() => {
     const updatedSectionArray = Object.entries(sections)
@@ -41,6 +54,81 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     }
   }, [sections, selectedSectionId]);
 
+  const getSectionHeader = (label: string) => {
+    return (
+      <Typography
+        semanticTag={'h2'}
+        visualAppearance={'overline-two'}
+        className={styles.sectionHeader}
+      >
+        {label}
+      </Typography>
+    );
+  };
+
+  const coursecontentSectionTitle = getSectionHeader(i18n.courseContent());
+  const courseContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] = [
+    'courseOverview',
+    'lessonMaterials',
+    'calendar',
+  ];
+
+  const performanceSectionTitle = getSectionHeader(i18n.performance());
+  const performanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
+    ['progress', 'assessments', 'projects', 'stats', 'textResponses'];
+
+  const classroomContentSectionTitle = getSectionHeader(i18n.classroom());
+  const classroomContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
+    ['manageStudents', 'settings'];
+
+  const teacherNavigationBarContent = [
+    {title: coursecontentSectionTitle, keys: courseContentKeys},
+    {title: performanceSectionTitle, keys: performanceContentKeys},
+    {title: classroomContentSectionTitle, keys: classroomContentKeys},
+  ];
+
+  const getSidebarOptionsForSection = (sidebarKeys: string[]) => {
+    return sidebarKeys.map(key => (
+      <SidebarOption
+        key={'ui-test-sidebar-' + key}
+        isSelected={selectedOptionKey === key}
+        sectionId={+selectedSectionId}
+        pathKey={key as keyof typeof LABELED_TEACHER_NAVIGATION_PATHS}
+        onClick={() => handleOptionClick(key)}
+      />
+    ));
+  };
+
+  const navbarComponents = teacherNavigationBarContent.map(
+    ({title, keys}, index) => {
+      const sidebarOptions = getSidebarOptionsForSection(keys);
+
+      return (
+        <div key={`section-${index}`}>
+          {title}
+          {sidebarOptions}
+        </div>
+      );
+    }
+  );
+
+  const handleDropdownChange = (
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    const newSelectedSectionId = event.target.value;
+    setSelectedSectionId(newSelectedSectionId);
+
+    const currentUrl = window.location.href;
+
+    // Replace the section ID in the URL
+    const newUrl = currentUrl.replace(
+      /sections\/\d+/,
+      `sections/${newSelectedSectionId}`
+    );
+
+    window.location.href = newUrl;
+  };
+
   return (
     <nav className={styles.sidebarContainer}>
       <div className={styles.sidebarContent}>
@@ -53,13 +141,14 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
         </Typography>
         <SimpleDropdown
           items={sectionArray}
-          onChange={value => setSelectedSectionId(value.target.value)}
+          onChange={handleDropdownChange}
           labelText=""
           size="m"
           selectedValue={selectedSectionId}
+          className={styles.sectionDropdown}
           name="section-dropdown"
-          className="sectionDropdown"
         />
+        {navbarComponents.map(component => component)}
       </div>
     </nav>
   );

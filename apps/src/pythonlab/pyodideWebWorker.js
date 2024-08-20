@@ -26,8 +26,8 @@ async function loadPyodideAndPackages() {
       'matplotlib',
       // These are custom packages that we have built. They are defined in this repo:
       // https://github.com/code-dot-org/pythonlab-packages
-      `/blockly/js/pyodide/${version}/pythonlab_setup-0.0.1-py3-none-any.whl`,
-      `/blockly/js/pyodide/${version}/unittest_runner-0.0.1-py3-none-any.whl`,
+      `/blockly/js/pyodide/${version}/unittest_runner-0.1.0-py3-none-any.whl`,
+      `/blockly/js/pyodide/${version}/pythonlab_setup-0.1.0-py3-none-any.whl`,
     ],
     env: {
       HOME: `/${HOME_FOLDER}/`,
@@ -68,13 +68,14 @@ self.onmessage = async event => {
     results = await self.pyodide.runPythonAsync(python, {
       filename: `/${HOME_FOLDER}/${MAIN_PYTHON_FILE}`,
     });
-    await runInternalCode(getCleanupCode(source), id);
-
-    // We run setup code at the end to prepare the environment for the next run.
-    await runInternalCode(SETUP_CODE, id);
   } catch (error) {
     self.postMessage({type: 'error', message: error.message, id});
   }
+  // Clean up environment.
+  await runInternalCode(getCleanupCode(source), id);
+  // We run setup code at the end to prepare the environment for the next run.
+  await runInternalCode(SETUP_CODE, id);
+
   const updatedSource = getUpdatedSourceAndDeleteFiles(
     source,
     id,
@@ -83,7 +84,12 @@ self.onmessage = async event => {
   );
   self.postMessage({type: 'updated_source', message: updatedSource, id});
   resetGlobals(self.pyodide, pyodideGlobals);
-  self.postMessage({type: 'run_complete', message: results, id});
+
+  // If there is a results response, convert it to a JS object.
+  // Documentation on this method:
+  // https://pyodide.org/en/stable/usage/api/js-api.html#pyodide.ffi.PyProxy.toJs
+  const resultsObject = results?.toJs();
+  self.postMessage({type: 'run_complete', message: resultsObject, id});
 };
 
 // Run code owned by us (not the user). If there is an error, post a

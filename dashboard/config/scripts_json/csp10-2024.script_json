@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-24 04:50:36 UTC",
+    "serialized_at": "2024-08-12 18:16:55 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -34,7 +34,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Unit 10: Algortihms"
+        "display_name": "Unit 10: Algorithms"
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit10_2020",

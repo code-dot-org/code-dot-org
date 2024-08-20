@@ -186,13 +186,6 @@
 
     border-radius: 0 0 0.25rem 0.25rem;
     border-top: 1px solid $light_gray_300;
-
-    button {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 0.25rem;
-    }
   }
 }
 
@@ -391,15 +384,6 @@
       }
     }
   }
-
-  .bottomButtonsContainer {
-    button {
-      padding: 0.625rem 1rem;
-
-      @include button-one-text;
-      margin-bottom: 0;
-    }
-  }
 }
 
 .dropdownContainer-m {
@@ -448,15 +432,6 @@
           }
         }
       }
-    }
-  }
-
-  .bottomButtonsContainer {
-    button {
-      padding: 0.5rem 1rem;
-
-      @include button-two-text;
-      margin-bottom: 0;
     }
   }
 }
@@ -509,15 +484,6 @@
       }
     }
   }
-
-  .bottomButtonsContainer {
-    button {
-      padding: 0.3125rem 1rem;
-
-      @include button-three-text;
-      margin-bottom: 0;
-    }
-  }
 }
 
 .dropdownContainer-xs {
@@ -566,15 +532,6 @@
           }
         }
       }
-    }
-  }
-
-  .bottomButtonsContainer {
-    button {
-      padding: 0.125rem 0.5rem;
-
-      @include button-four-text;
-      margin-bottom: 0;
     }
   }
 }
