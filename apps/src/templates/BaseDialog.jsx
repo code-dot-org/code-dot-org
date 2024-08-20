@@ -122,7 +122,7 @@ export default class BaseDialog extends React.Component {
       modalBodyStyle = {
         background: '#fff',
         height: this.props.fixedHeight,
-        maxHeight: !this.props.fixedHeight && '80vh',
+        maxHeight: !this.props.fixedHeight && '85vh',
         overflowX: overflowX,
         overflowY: overflowY,
         borderRadius: 4,

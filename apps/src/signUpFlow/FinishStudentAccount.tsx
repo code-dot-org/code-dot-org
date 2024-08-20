@@ -91,7 +91,7 @@ const FinishStudentAccount: React.FunctionComponent<{
         <Heading2>{locale.finish_creating_student_account()}</Heading2>
         <BodyTwoText>{locale.tailor_experience()}</BodyTwoText>
       </div>
-      <div className={style.inputContainer}>
+      {/* <div className={style.inputContainer}>
         <div className={style.parentInfoContainer}>
           <span className={style.parentCheckboxContainer}>
             <div className={style.parentCheckbox}>
@@ -177,7 +177,69 @@ const FinishStudentAccount: React.FunctionComponent<{
           value={gender}
           placeholder={locale.female()}
         />
-      </div>
+      </div> */}
+      <fieldset className={style.inputContainer}>
+        <div className={style.parentInfoContainer}>
+          <Checkbox
+            name="isParentCheckbox"
+            label={locale.i_am_a_parent_or_guardian()}
+            checked={isParent}
+            onChange={onIsParentChange}
+          />
+          {isParent && (
+            <>
+              <TextField
+                name="parentEmail"
+                label={locale.parent_guardian_email()}
+                value={parentEmail}
+                placeholder={locale.parentEmailPlaceholder()}
+                onChange={onParentEmailChange}
+              />
+              <div>
+                <BodyThreeText className={style.keepMeUpdated}>
+                  <strong>{locale.keep_me_updated()}</strong>
+                </BodyThreeText>
+                <Checkbox
+                  name="parentEmailOptIn"
+                  label={locale.email_me_with_updates()}
+                  checked={parentEmailOptInChecked}
+                  onChange={onParentEmailOptInChange}
+                />
+              </div>
+            </>
+          )}
+        </div>
+        <TextField
+          name="displayName"
+          label={locale.display_name_eg()}
+          value={name}
+          placeholder={locale.coder()}
+          onChange={onNameChange}
+        />
+        <SimpleDropdown
+          name="userAge"
+          labelText={locale.what_is_your_age()}
+          size="m"
+          items={ageOptions}
+          selectedValue={age}
+          onChange={onAgeChange}
+        />
+        <SimpleDropdown
+          name="userState"
+          labelText={locale.what_state_are_you_in()}
+          size="m"
+          items={usStateOptions}
+          selectedValue={state}
+          onChange={onStateChange}
+        />
+        <TextField
+          name="userGender"
+          label={locale.what_is_your_gender()}
+          value={gender}
+          placeholder={locale.female()}
+          onChange={onGenderChange}
+        />
+      </fieldset>
       <div className={style.finishSignUpButtonContainer}>
         <Button
           className={style.finishSignUpButton}

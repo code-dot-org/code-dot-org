@@ -8,6 +8,7 @@
   "duplicateFileError": "Filename {fileName} is already in use in this folder. Please choose a different name.",
   "duplicateSupportFileError": "Filename {fileName} is already in use in this folder in the level's support code. Please choose a different name.",
   "folderExistsError": "Folder already exists with that name",
+  "loadingEnvironmentTooltip": "Your environment is loading. Please wait.",
   "makeStarter": "Make starter file",
   "makeSupport": "Make support file",
   "makeValidation": "Make validation file",
@@ -16,7 +17,14 @@
   "newFilePrompt": "Please name your new file",
   "newFolderPrompt": "Please name your new folder",
   "noFileExtensionError": "Please include a file extension",
+  "predictRunDisabledTooltip": "You must answer the question in the instructions before running the code.",
   "renameFile": "Rename file",
   "renameFolder": "Rename folder",
-  "systemCodeError": "We're sorry, we hit an issue running your program. Please refresh the page and try again."
+  "runToContinue": "You must run your code before continuing.",
+  "runToFinish": "You must run your code before finishing.",
+  "runToSubmit": "You must run your code before submitting.",
+  "systemCodeError": "We're sorry, we hit an issue running your program. Please refresh the page and try again.",
+  "validationNotYetPassedContinue": "You must pass tests before continuing.",
+  "validationNotYetPassedFinish": "You must pass tests before finishing.",
+  "validationNotYetPassedSubmit": "You must pass tests before submitting."
 }

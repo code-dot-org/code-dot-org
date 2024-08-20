@@ -14,8 +14,8 @@ import usePrevious from '@cdo/apps/util/usePrevious';
 import {ChildAccountComplianceStates} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import Spinner from '../../code-studio/pd/components/spinner';
 import {getStore} from '../../redux';
+import Spinner from '../../sharedComponents/Spinner';
 import * as color from '../../util/color';
 import {hashString} from '../../utils';
 
