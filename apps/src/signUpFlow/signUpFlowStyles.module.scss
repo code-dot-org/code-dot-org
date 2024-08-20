@@ -383,3 +383,8 @@ p {
     width: fit-content;
   }
 }
+
+.errorMessage {
+  margin-top: 0.4375rem;
+  color: $light_negative_500;
+}

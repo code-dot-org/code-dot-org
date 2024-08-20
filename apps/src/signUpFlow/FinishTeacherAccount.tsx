@@ -22,12 +22,19 @@ const FinishTeacherAccount: React.FunctionComponent<{
   usIp: boolean;
 }> = ({usIp}) => {
   const [name, setName] = useState('');
+  const [showNameError, setShowNameError] = useState(false);
   const [emailOptInChecked, setEmailOptInChecked] = useState(false);
 
   const onNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const newName = e.target.value;
     setName(newName);
     sessionStorage.setItem(DISPLAY_NAME_SESSION_KEY, newName);
+
+    if (newName === '') {
+      setShowNameError(true);
+    } else {
+      setShowNameError(false);
+    }
   };
 
   const onEmailOptInChange = (): void => {
@@ -59,6 +66,11 @@ const FinishTeacherAccount: React.FunctionComponent<{
         <BodyThreeText>
           {locale.this_is_what_your_students_will_see()}
         </BodyThreeText>
+        {showNameError && (
+          <BodyThreeText className={style.errorMessage}>
+            {locale.display_name_error_message()}
+          </BodyThreeText>
+        )}
         <SchoolDataInputs usIp={usIp} includeHeaders={false} />
         <div className={style.emailOptInContainer}>
           <BodyThreeText>
@@ -86,20 +98,22 @@ const FinishTeacherAccount: React.FunctionComponent<{
           </BodyThreeText>
         </div>
       </div>
-      <div className={style.finishSignUpButtonContainer}>
-        <Button
-          className={style.finishSignUpButton}
-          color={buttonColors.purple}
-          type="primary"
-          onClick={() => console.log('FINISH SIGN UP')}
-          text={locale.go_to_my_account()}
-          iconRight={{
-            iconName: 'arrow-right',
-            iconStyle: 'solid',
-            title: 'arrow-right',
-          }}
-        />
-      </div>
+      {name && (
+        <div className={style.finishSignUpButtonContainer}>
+          <Button
+            className={style.finishSignUpButton}
+            color={buttonColors.purple}
+            type="primary"
+            onClick={() => console.log('FINISH SIGN UP')}
+            text={locale.go_to_my_account()}
+            iconRight={{
+              iconName: 'arrow-right',
+              iconStyle: 'solid',
+              title: 'arrow-right',
+            }}
+          />
+        </div>
+      )}
     </div>
   );
 };
