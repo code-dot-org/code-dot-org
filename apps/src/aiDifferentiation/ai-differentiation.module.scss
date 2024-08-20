@@ -83,8 +83,12 @@
 .chat {
   &Content {
     height: calc(100% - 84px);
-    padding: 16px 20px;
+    padding: 20px 16px;
     overflow-y: scroll;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 
   &Footer {
@@ -103,58 +107,6 @@
       flex-direction: row;
       align-items: flex-start;
       gap: 12px;
-    }
-  }
-
-  &Message {
-    &Container {
-      display: flex;
-      flex-direction: row;
-      align-items: flex-end;
-      gap: 8px;
-      margin-bottom: 20px;
-    }
-
-    &user {
-      justify-content: flex-end;
-    }
-
-    &Icon {
-      width: 32px;
-      min-width: 32px;
-      height: 32px;
-      padding: 4px;
-    }
-
-    &assistant &Icon {
-      background-color: $light_black;
-      border-radius: 20px;
-    }
-
-    &Body {
-      padding: 10px 10px;
-      overflow: hidden;
-      border-radius: 8px;
-      color: $light_black;
-
-      & p {
-        font-size: 14px;
-      }
-
-      & p:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    &assistant &Body {
-      background-color: #DEF6F8;
-      border-end-start-radius: 0;
-    }
-
-    &user &Body {
-      background-color: #e4e6e9;
-      border-end-end-radius: 0;
-
     }
   }
 }

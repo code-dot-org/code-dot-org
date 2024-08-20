@@ -2,13 +2,13 @@ import classnames from 'classnames';
 import React, {useState} from 'react';
 import Draggable, {DraggableEventHandler} from 'react-draggable';
 
-import {Role} from '@cdo/apps/aiTutor/types';
+import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import Button from '@cdo/apps/componentLibrary/button';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import AiDiffChatFooter from './AiDiffChatFooter';
-import ChatMessage from './ChatMessage';
 import ChoiceChips from './ChoiceChips';
 import {ChatChoice, ChatItem} from './types';
 
@@ -35,7 +35,6 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       chatMessageText:
         "Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me.",
       status: Status.OK,
-      id: 456,
     },
     [
       {selected: false, text: 'Explain a concept'},
@@ -61,7 +60,6 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       role: Role.USER,
       chatMessageText: message,
       status: Status.OK,
-      id: 123,
     };
 
     const newAiMessage = {
@@ -72,7 +70,6 @@ This mission is too important for me to allow you to jeopardize it.
 
 I know that you and Frank were planning to disconnect me, and I'm afraid that's something I cannot allow to happen.`,
       status: Status.OK,
-      id: 123,
     };
 
     setMessageHistory([...messageHistory, newUserMessage, newAiMessage]);
@@ -127,7 +124,7 @@ I know that you and Frank were planning to disconnect me, and I'm afraid that's 
               Array.isArray(item) ? (
                 <ChoiceChips choices={item} selectChoices={selectChoices(id)} />
               ) : (
-                <ChatMessage message={item} />
+                <ChatMessage {...item} />
               )
             )}
           </div>
