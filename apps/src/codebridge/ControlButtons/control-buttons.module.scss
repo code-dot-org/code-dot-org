@@ -10,6 +10,7 @@
 
 .centerButton {
   grid-column-start: 2;
+  display: flex;
 }
 
 .runButton {
@@ -19,4 +20,11 @@
 .navigationButton {
   margin-left: auto;
   margin-right: 8px;
+  font-size: 16px;
+  display: flex;
+}
+
+.disabledInfoIcon {
+  margin: 8px;
+  color: $white;
 }

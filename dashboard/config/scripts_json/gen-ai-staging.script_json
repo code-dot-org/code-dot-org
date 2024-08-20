@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-staging",
-    "serialized_at": "2024-08-12 17:56:22 UTC",
+    "serialized_at": "2024-08-18 08:52:45 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -136,7 +136,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "In this lesson, students explore how language models understand and represent word meanings. Beginning with a game, they investigate the concept of words being \"close\" in meaning. This leads to an activity where students assume the roles of fictional characters, using a sequence of numbers to represent their \"character traits\" and comparing these numerical representations to others. The lesson demonstrates that language models use a similar method, known as embeddings, to represent words as sequences of numbers, with similar words being numerically close to each other. The lesson concludes with students updating the storage section of their graphic organizer to encapsulate the idea of word embeddings.",
-        "preparation": "- Print copies of the activity guide for each student\n- Print copies of the activity instructions and cut them into quarter-sheets\n- Run through the slide deck and videos ahead of time\n- (Optional) Prepare vocabulary posters for class word wall\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
+        "preparation": "- Have markers, crayons, or colored pencils prepared for students\n- Print copies of the activity guide for each student\n- Print copies of the activity instructions and cut them into quarter-sheets\n- Run through the slide deck and videos ahead of time\n- (Optional) Prepare vocabulary posters for class word wall\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
         "student_overview": "Learn how computers represent the meaning of words"
       },
       "seeding_key": {
@@ -599,8 +599,21 @@
       }
     },
     {
-      "key": "2af9c82b-9726-4877-af8e-02e5b489e576",
+      "key": "c9fc6b0f-644d-45b9-8c6d-05b39e1954f2",
       "position": 1,
+      "properties": {
+        "name": "Student Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c9fc6b0f-644d-45b9-8c6d-05b39e1954f2",
+        "lesson.key": "Input & Training Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging"
+      }
+    },
+    {
+      "key": "2af9c82b-9726-4877-af8e-02e5b489e576",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -614,7 +627,7 @@
     },
     {
       "key": "7807b649-df76-490c-823e-7cac3e6a0629",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -628,7 +641,7 @@
     },
     {
       "key": "a103b66b-6644-4dca-9da4-3a53784b9185",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -641,23 +654,10 @@
       }
     },
     {
-      "key": "b5edfe27-443d-4cf0-9d33-a83bfb3981a3",
-      "position": 4,
-      "properties": {
-        "name": "Pilot Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "b5edfe27-443d-4cf0-9d33-a83bfb3981a3",
-        "lesson.key": "Input & Training Data",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "gen-ai-staging"
-      }
-    },
-    {
       "key": "f7ec8244-a0ad-4d0b-8574-2ca7cdf3a160",
       "position": 1,
       "properties": {
-        "name": "Update 4/24"
+        "name": "Student Levels"
       },
       "seeding_key": {
         "lesson_activity.key": "f7ec8244-a0ad-4d0b-8574-2ca7cdf3a160",
@@ -709,19 +709,6 @@
       }
     },
     {
-      "key": "cf02b4f4-ba0a-4c4f-9d6f-815804e1ea14",
-      "position": 5,
-      "properties": {
-        "name": "Pilot Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "cf02b4f4-ba0a-4c4f-9d6f-815804e1ea14",
-        "lesson.key": "(Optional) Bias in the Machine",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "gen-ai-staging"
-      }
-    },
-    {
       "key": "9faaca19-d813-4250-9953-11abc4a1104f",
       "position": 1,
       "properties": {
@@ -764,8 +751,21 @@
       }
     },
     {
-      "key": "6c40196b-ce0d-4cba-8b3c-6b94654137e0",
+      "key": "4789fdfc-1afc-4973-b5a4-d0435d13dd53",
       "position": 1,
+      "properties": {
+        "name": "Student Levels"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4789fdfc-1afc-4973-b5a4-d0435d13dd53",
+        "lesson.key": "Embeddings: How They're Created",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging"
+      }
+    },
+    {
+      "key": "6c40196b-ce0d-4cba-8b3c-6b94654137e0",
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -779,7 +779,7 @@
     },
     {
       "key": "c615edd5-c552-43c7-94b9-08dfff7d73cb",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -793,7 +793,7 @@
     },
     {
       "key": "3804d084-ac73-433e-b1f2-242cd768aeb5",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -806,21 +806,21 @@
       }
     },
     {
-      "key": "4789fdfc-1afc-4973-b5a4-d0435d13dd53",
-      "position": 4,
+      "key": "ff2a2a9f-6b44-4dd1-b46c-cee129fa57de",
+      "position": 1,
       "properties": {
-        "name": "Pilot Feedback"
+        "name": "Student Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "4789fdfc-1afc-4973-b5a4-d0435d13dd53",
-        "lesson.key": "Embeddings: How They're Created",
+        "lesson_activity.key": "ff2a2a9f-6b44-4dd1-b46c-cee129fa57de",
+        "lesson.key": "Understanding Neural Networks",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "gen-ai-staging"
       }
     },
     {
       "key": "0fd1a8a2-0aa7-484d-9dcf-8675f717724f",
-      "position": 1,
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -834,7 +834,7 @@
     },
     {
       "key": "60bce878-930f-4fc6-809f-fd9c7fcd3904",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -848,7 +848,7 @@
     },
     {
       "key": "4d996b4a-cc8b-4b4b-b459-961c2d190e1b",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -861,21 +861,21 @@
       }
     },
     {
-      "key": "ff2a2a9f-6b44-4dd1-b46c-cee129fa57de",
-      "position": 4,
+      "key": "69e65700-f3fa-48e8-b286-56e7c5f66bad",
+      "position": 1,
       "properties": {
-        "name": "Pilot Feedback"
+        "name": "Student Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "ff2a2a9f-6b44-4dd1-b46c-cee129fa57de",
-        "lesson.key": "Understanding Neural Networks",
+        "lesson_activity.key": "69e65700-f3fa-48e8-b286-56e7c5f66bad",
+        "lesson.key": "Neural Networks: How They're Trained",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "gen-ai-staging"
       }
     },
     {
       "key": "9a7cc198-ed66-4319-9d2f-b70845bb297d",
-      "position": 1,
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -889,7 +889,7 @@
     },
     {
       "key": "2d0775d7-52a3-4ddc-813f-5636978629e0",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -903,7 +903,7 @@
     },
     {
       "key": "82f0e95c-2658-4487-bd93-a86575f68b25",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -916,21 +916,21 @@
       }
     },
     {
-      "key": "69e65700-f3fa-48e8-b286-56e7c5f66bad",
-      "position": 4,
+      "key": "2963a4ab-39b9-4ca0-827c-a71f3a89d495",
+      "position": 1,
       "properties": {
-        "name": "Pilot Feedback"
+        "name": "Student Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "69e65700-f3fa-48e8-b286-56e7c5f66bad",
-        "lesson.key": "Neural Networks: How They're Trained",
+        "lesson_activity.key": "2963a4ab-39b9-4ca0-827c-a71f3a89d495",
+        "lesson.key": "Attention Is All You Need",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "gen-ai-staging"
       }
     },
     {
       "key": "95f43921-82ee-4d1d-85a1-b25dbbac541a",
-      "position": 1,
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -944,7 +944,7 @@
     },
     {
       "key": "bf5bb7a5-0203-47cd-98d8-5a0cbd46d30b",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -958,7 +958,7 @@
     },
     {
       "key": "b8a6f667-e510-43cb-8c45-f8d623a08393",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -971,21 +971,21 @@
       }
     },
     {
-      "key": "2963a4ab-39b9-4ca0-827c-a71f3a89d495",
-      "position": 4,
+      "key": "b34ad52e-2e4c-4a5d-a549-0385ed616b38",
+      "position": 1,
       "properties": {
-        "name": "Pilot Feedback"
+        "name": "Student Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "2963a4ab-39b9-4ca0-827c-a71f3a89d495",
-        "lesson.key": "Attention Is All You Need",
+        "lesson_activity.key": "b34ad52e-2e4c-4a5d-a549-0385ed616b38",
+        "lesson.key": "Outputs & Probabilities",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "gen-ai-staging"
       }
     },
     {
       "key": "6e8e3d78-bcbc-42ed-b30c-94df2b9f9e31",
-      "position": 1,
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -999,7 +999,7 @@
     },
     {
       "key": "44e9f5d3-b12f-4071-ae9c-a07ca288f75d",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1013,7 +1013,7 @@
     },
     {
       "key": "dfd03f5f-ef36-4697-8c4c-4a4e95242e49",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1026,21 +1026,21 @@
       }
     },
     {
-      "key": "b34ad52e-2e4c-4a5d-a549-0385ed616b38",
-      "position": 4,
+      "key": "df5f4b43-6d8e-4912-a7e3-698dd9aaf553",
+      "position": 1,
       "properties": {
-        "name": "Pilot Feedback"
+        "name": "Student Levels"
       },
       "seeding_key": {
-        "lesson_activity.key": "b34ad52e-2e4c-4a5d-a549-0385ed616b38",
-        "lesson.key": "Outputs & Probabilities",
+        "lesson_activity.key": "df5f4b43-6d8e-4912-a7e3-698dd9aaf553",
+        "lesson.key": "Hallucinations and Fabrications",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "gen-ai-staging"
       }
     },
     {
       "key": "a3f4864e-173b-4e3a-9616-ed55e3d4d59d",
-      "position": 1,
+      "position": 2,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -1054,7 +1054,7 @@
     },
     {
       "key": "ec283ef2-1440-4c85-9b05-4aa4bd1882c1",
-      "position": 2,
+      "position": 3,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -1068,26 +1068,13 @@
     },
     {
       "key": "72cb5494-1a5c-4870-8f97-8fdcd7669975",
-      "position": 3,
+      "position": 4,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "72cb5494-1a5c-4870-8f97-8fdcd7669975",
-        "lesson.key": "Hallucinations and Fabrications",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "gen-ai-staging"
-      }
-    },
-    {
-      "key": "df5f4b43-6d8e-4912-a7e3-698dd9aaf553",
-      "position": 4,
-      "properties": {
-        "name": "Pilot Feedback"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "df5f4b43-6d8e-4912-a7e3-698dd9aaf553",
         "lesson.key": "Hallucinations and Fabrications",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "gen-ai-staging"
@@ -1301,19 +1288,6 @@
       }
     },
     {
-      "key": "ea6c3d3d-aee2-41be-97ee-e7f5e1857d45",
-      "position": 4,
-      "properties": {
-        "name": "Student Survey"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "ea6c3d3d-aee2-41be-97ee-e7f5e1857d45",
-        "lesson.key": "System Prompting - Practice",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging"
-      }
-    },
-    {
       "key": "544a2117-cf5a-4d56-8c7d-0d55c7d24b03",
       "position": 1,
       "properties": {
@@ -1350,19 +1324,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "eedce68b-76c0-4ff4-a4bc-d2c08fb8a13c",
-        "lesson.key": "System Prompting - Synthesis",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging"
-      }
-    },
-    {
-      "key": "31019912-a4f6-43ac-b597-60c1b02ac139",
-      "position": 4,
-      "properties": {
-        "name": "Student Survey"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "31019912-a4f6-43ac-b597-60c1b02ac139",
         "lesson.key": "System Prompting - Synthesis",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "gen-ai-staging"
@@ -1411,19 +1372,6 @@
       }
     },
     {
-      "key": "8b679851-0ff1-4e59-8d8a-4938945640c3",
-      "position": 4,
-      "properties": {
-        "name": "Student Survey"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "8b679851-0ff1-4e59-8d8a-4938945640c3",
-        "lesson.key": "Retrieval - Exploration",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging"
-      }
-    },
-    {
       "key": "31b73440-bff3-4bdd-be18-4ec424eec2a8",
       "position": 1,
       "properties": {
@@ -1460,19 +1408,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "06777acb-db06-4c39-90d3-d1802e4a5571",
-        "lesson.key": "Retrieval - Practice",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging"
-      }
-    },
-    {
-      "key": "f9208cb2-7002-41e7-a867-ff20463c263f",
-      "position": 4,
-      "properties": {
-        "name": "Student Survey"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "f9208cb2-7002-41e7-a867-ff20463c263f",
         "lesson.key": "Retrieval - Practice",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "gen-ai-staging"
@@ -1521,19 +1456,6 @@
       }
     },
     {
-      "key": "fa011dd9-230c-44c9-8fa8-49bb85e84960",
-      "position": 4,
-      "properties": {
-        "name": "Student Survey"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "fa011dd9-230c-44c9-8fa8-49bb85e84960",
-        "lesson.key": "Retrieval - Synthesis",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging"
-      }
-    },
-    {
       "key": "e1582443-3cd3-46c2-a7b9-43920a9f8efc",
       "position": 1,
       "properties": {
@@ -1576,19 +1498,6 @@
       }
     },
     {
-      "key": "11b4055b-619d-47fc-b672-3c8999ecc56c",
-      "position": 4,
-      "properties": {
-        "name": "Student Survey"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "11b4055b-619d-47fc-b672-3c8999ecc56c",
-        "lesson.key": "Model Cards - Exploration",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging"
-      }
-    },
-    {
       "key": "aa6a21bc-e96b-4afc-b194-f0ca2fa7bbe2",
       "position": 1,
       "properties": {
@@ -1624,20 +1533,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "83a3482e-093b-421e-8e8d-5c59921cedcb",
-        "lesson.key": "Model Cards - Practice",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging"
-      }
-    },
-    {
-      "key": "59439ff4-0c76-4097-aee4-99a42dfb5846",
-      "position": 4,
-      "properties": {
-        "duration": 5,
-        "name": "Student Survey"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "59439ff4-0c76-4097-aee4-99a42dfb5846",
         "lesson.key": "Model Cards - Practice",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "gen-ai-staging"
@@ -1769,19 +1664,6 @@
       }
     },
     {
-      "key": "91b55771-61a4-40f4-81e8-27250c599903",
-      "position": 4,
-      "properties": {
-        "name": "Student Survey"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "91b55771-61a4-40f4-81e8-27250c599903",
-        "lesson.key": "Issue Statements",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging"
-      }
-    },
-    {
       "key": "b844a676-6c17-4a7b-a5a9-798a39025ae9",
       "position": 1,
       "properties": {
@@ -1837,19 +1719,6 @@
       }
     },
     {
-      "key": "45e41b6b-03d7-464b-9cc7-130e603e6202",
-      "position": 5,
-      "properties": {
-        "name": "Student Survey"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "45e41b6b-03d7-464b-9cc7-130e603e6202",
-        "lesson.key": "User Feedback",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging"
-      }
-    },
-    {
       "key": "6b6de814-fc38-4dcf-b06e-32557d26056f",
       "position": 1,
       "properties": {
@@ -1886,19 +1755,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "e15f05ac-95c3-47ee-b71d-00639b9fab58",
-        "lesson.key": "Fine Tuning - Exploration",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging"
-      }
-    },
-    {
-      "key": "a6ac0e39-ad33-4108-aed5-0d3a132e9fc5",
-      "position": 4,
-      "properties": {
-        "name": "Student Survey"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a6ac0e39-ad33-4108-aed5-0d3a132e9fc5",
         "lesson.key": "Fine Tuning - Exploration",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "gen-ai-staging"
@@ -1982,19 +1838,6 @@
       },
       "seeding_key": {
         "lesson_activity.key": "73b6d370-9f31-4aac-af62-84b6df02e790",
-        "lesson.key": "Project: Solving Community Problems with Chatbots",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging"
-      }
-    },
-    {
-      "key": "58b8d763-5455-4f7f-a444-6ba8a5a9256e",
-      "position": 4,
-      "properties": {
-        "name": "Student Survey"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "58b8d763-5455-4f7f-a444-6ba8a5a9256e",
         "lesson.key": "Project: Solving Community Problems with Chatbots",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "gen-ai-staging"
@@ -2178,6 +2021,28 @@
       }
     },
     {
+      "key": "25d28ae0-a4f5-4ee5-9f10-6f01989405ae",
+      "position": 1,
+      "properties": {
+        "progression_name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "25d28ae0-a4f5-4ee5-9f10-6f01989405ae",
+        "lesson_activity.key": "c9fc6b0f-644d-45b9-8c6d-05b39e1954f2"
+      }
+    },
+    {
+      "key": "c28ae825-1a00-4fe4-a9c0-d44a4e078b88",
+      "position": 2,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "c28ae825-1a00-4fe4-a9c0-d44a4e078b88",
+        "lesson_activity.key": "c9fc6b0f-644d-45b9-8c6d-05b39e1954f2"
+      }
+    },
+    {
       "key": "206cd90a-3195-4546-8816-87ac3183b507",
       "position": 1,
       "properties": {
@@ -2307,22 +2172,10 @@
       }
     },
     {
-      "key": "48595cbb-fb52-46bd-b570-11e377e175b2",
-      "position": 1,
-      "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLSf-4jHfSNooPbk44HLXnxjdwnD5Rjat7PqwDkMbsJZetT3ZYQ/viewform)\n- [**Submit Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSdmFf5tZbaeaJo4IMsirKF6JM6_bGZg6sTGWWmMRL3OoS5pMQ/viewform) (required for Amazon Gift Card!)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/generative-ai-pilot/460)"
-      },
-      "seeding_key": {
-        "activity_section.key": "48595cbb-fb52-46bd-b570-11e377e175b2",
-        "lesson_activity.key": "b5edfe27-443d-4cf0-9d33-a83bfb3981a3"
-      }
-    },
-    {
       "key": "6cd4d8c7-377e-4fa1-9a80-1641205708b2",
       "position": 1,
       "properties": {
-        "description": "Early feedback on this lesson has made it clear that the main activity, as designed below, is not meeting the goals we set out for this lesson. This is why we pilot - to make sure the lessons we design match in real classrooms with real students - and we're grateful to all the folks who tried out this lesson and provided feedback.\n\nHowever - the concept of bias in generative AI is extremely important and is necessary for the final project. This puts is in a bind - we already know this lesson doesn't do a great job of introducing bias, but we also feel it's too important to skip. With that in mind, here are a few options for how to consider this day in the sequence:",
-        "name": "From the Curriculum Team"
+        "progression_name": "Warm Up"
       },
       "seeding_key": {
         "activity_section.key": "6cd4d8c7-377e-4fa1-9a80-1641205708b2",
@@ -2333,23 +2186,10 @@
       "key": "d806a931-3b88-45bb-8c64-c5aff16c5826",
       "position": 2,
       "properties": {
-        "description": "Consider showing the following videos to students on bias in artificial intelligence:\n- [3 Types of Bias in AI](https://www.youtube.com/watch?v=59bMh59JQDo)\n- [Gender Shades](https://www.youtube.com/watch?v=TWWsW1w-BVo)\n- [The Coded Gaze: Unmasking Algorithmic Bias](https://www.youtube.com/watch?v=162VzSzzoPs)\n\nWe recommend these videos because they provide concrete examples and they highlight the roles that humans and society play in how bias is encoded and perpetuated in AI systems. Through our actions (or inactions), bias can enter AI systems - which also means, by being proactive, we can have a hand in reducing harm from biased AI systems.\n\nWith that in mind, after showing the videos, consider highlighting [Dr Joy Buolmwini](https://www.csedweek.org/cs-heroes/joy-buolamwini) and investigating her work with algorithmic bias in facial recognition. This provides students with a concrete example of how algorithmic bias prioritizes some and excludes others, and provides a role model of someone working against algorithmic bias in the AI field.",
-        "name": "Option 1: Videos & Research"
+        "progression_name": "Wrap Up"
       },
       "seeding_key": {
         "activity_section.key": "d806a931-3b88-45bb-8c64-c5aff16c5826",
-        "lesson_activity.key": "f7ec8244-a0ad-4d0b-8574-2ca7cdf3a160"
-      }
-    },
-    {
-      "key": "6e95857b-6fe8-4833-941f-842b7f747b27",
-      "position": 3,
-      "properties": {
-        "description": "We plan to revise the lesson below and make some significant changes. If you were to teach the lesson below, here's what we would suggest (it may make more sense to read the lesson plan first, then return to this list):\n- The current introduction to the activity is unclear. When introducing the activity, emphasize that the job is to curate data sources that will be used to train an AI. If students are familiar with a \"web crawler\" that automatically downloads websites on the internet: we're like a version of that, where we can decide which websites to download and use as examples to train a new AI model.\n- There are too many choices. Have the entire class look up the same topic - we recommend using either recipes or movie reviews.\n- Only have students look up one article instead of two.\n- Remove the bottom portion of the activity guide. Just have students focus on headlines, author, date, and 1-2 sentence summary\n- The second half of the lesson can be run as a full class, with students sharing out articles they found. Then you (and the class) can start to notice similarities amongst all of the articles\n  - Focus on similar authors (male vs female), similar timeframe (just from the last year), and similar summaries (did everyone look up recipes for fast food? Did everyone look up movie reviews for the same kinds of movies?)\n- The takeaway from the lesson is unclear. It can be helpful to say this explicitly: \"Bias in large language models happens at a large scale - it's not just one data source that contributes to bias, but when you have a collection of sources that implicitly emphasize or exclude certain things\"\n- Help students see their role in this process, as someone who chooses what sources to include in a language model (similar to the warm-up, where we can choose where to live which influences the new words we learn). ",
-        "name": "Option 2: Adapt the Lesson Below"
-      },
-      "seeding_key": {
-        "activity_section.key": "6e95857b-6fe8-4833-941f-842b7f747b27",
         "lesson_activity.key": "f7ec8244-a0ad-4d0b-8574-2ca7cdf3a160"
       }
     },
@@ -2401,17 +2241,6 @@
       "seeding_key": {
         "activity_section.key": "0d0ef4bc-f67e-4269-828b-d2f99ce74d11",
         "lesson_activity.key": "1031675a-bb66-485f-8ed7-7a323511af35"
-      }
-    },
-    {
-      "key": "a5b4054e-bda5-4f29-a61e-eb8e879df592",
-      "position": 1,
-      "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLSf-4jHfSNooPbk44HLXnxjdwnD5Rjat7PqwDkMbsJZetT3ZYQ/viewform)\n- [**Submit Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSdmFf5tZbaeaJo4IMsirKF6JM6_bGZg6sTGWWmMRL3OoS5pMQ/viewform) (required for Amazon Gift Card!)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/generative-ai-pilot/460)"
-      },
-      "seeding_key": {
-        "activity_section.key": "a5b4054e-bda5-4f29-a61e-eb8e879df592",
-        "lesson_activity.key": "cf02b4f4-ba0a-4c4f-9d6f-815804e1ea14"
       }
     },
     {
@@ -2564,7 +2393,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Teaching Tip: Embeddings Demo** - This lesson has emphasized embeddings as a list of numbers and comparing these lists to figure out similarity between words. Another common way to make this comparison is visually, by graphing certain dimensions of words in a 2D or 3D space. If you’d like to explore this further, we recommend the <a href=\"https://www.cs.cmu.edu/~dst/WordEmbeddingDemo/\">Word Embedding Demo from Carnegie Mellon University</a>. When the page loads, it provides a visualization of several words mapped onto a 3D space. They have a <a href=\"https://www.cs.cmu.edu/~dst/WordEmbeddingDemo/tutorial.html\">tutorial available</a> that explains more about how this works. This can be an option to show students if they are interested, but graphing words on 2D or 3D spaces is not something students are expected to do in this course so we have avoided it in the lesson and instead present it as an option."
+            "markdown": "**Teaching Tip: Embeddings Demo** - This lesson has emphasized embeddings as a list of numbers and comparing these lists to figure out similarity between words. Another common way to make this comparison is visually, by graphing certain dimensions of words in a 2D or 3D space. If you’d like to explore this further, we recommend the <a href=\"https://www.cs.cmu.edu/~dst/WordEmbeddingDemo/\">Word Embedding Demo from Carnegie Mellon University</a>. When the page loads, it provides a visualization of several words mapped onto a 3D space. They have a <a href=\"https://www.cs.cmu.edu/~dst/WordEmbeddingDemo/tutorial.html\">tutorial available</a> that explains more about how this works. This can be an option to show students if they are interested, but graphing words on 2D or 3D spaces is not something students are expected to do in this course so we have avoided it in the lesson itself."
           }
         ]
       },
@@ -2593,6 +2422,28 @@
       "seeding_key": {
         "activity_section.key": "5a48cffd-d4db-4113-95d1-05867833e31c",
         "lesson_activity.key": "f630571f-1183-477c-bfae-51cc69f3fedb"
+      }
+    },
+    {
+      "key": "e813db6c-9cec-49dc-9e29-913fa873b9f1",
+      "position": 1,
+      "properties": {
+        "progression_name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "e813db6c-9cec-49dc-9e29-913fa873b9f1",
+        "lesson_activity.key": "4789fdfc-1afc-4973-b5a4-d0435d13dd53"
+      }
+    },
+    {
+      "key": "ae37bfb3-c0cd-46b1-ad73-d36eecd1c028",
+      "position": 2,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "ae37bfb3-c0cd-46b1-ad73-d36eecd1c028",
+        "lesson_activity.key": "4789fdfc-1afc-4973-b5a4-d0435d13dd53"
       }
     },
     {
@@ -2708,14 +2559,25 @@
       }
     },
     {
-      "key": "e813db6c-9cec-49dc-9e29-913fa873b9f1",
+      "key": "895a8d9b-119e-4fc5-bd16-c9f0a9fb3bdc",
       "position": 1,
       "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLSf-4jHfSNooPbk44HLXnxjdwnD5Rjat7PqwDkMbsJZetT3ZYQ/viewform)\n- [**Submit Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSdmFf5tZbaeaJo4IMsirKF6JM6_bGZg6sTGWWmMRL3OoS5pMQ/viewform) (required for Amazon Gift Card!)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/generative-ai-pilot/460)"
+        "progression_name": "Warm Up"
       },
       "seeding_key": {
-        "activity_section.key": "e813db6c-9cec-49dc-9e29-913fa873b9f1",
-        "lesson_activity.key": "4789fdfc-1afc-4973-b5a4-d0435d13dd53"
+        "activity_section.key": "895a8d9b-119e-4fc5-bd16-c9f0a9fb3bdc",
+        "lesson_activity.key": "ff2a2a9f-6b44-4dd1-b46c-cee129fa57de"
+      }
+    },
+    {
+      "key": "e426a1e9-0082-4e75-8980-01dc14c97537",
+      "position": 2,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "e426a1e9-0082-4e75-8980-01dc14c97537",
+        "lesson_activity.key": "ff2a2a9f-6b44-4dd1-b46c-cee129fa57de"
       }
     },
     {
@@ -2820,14 +2682,25 @@
       }
     },
     {
-      "key": "895a8d9b-119e-4fc5-bd16-c9f0a9fb3bdc",
+      "key": "cb4b8a48-22af-422e-8b0e-f0548b9103e2",
       "position": 1,
       "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLSf-4jHfSNooPbk44HLXnxjdwnD5Rjat7PqwDkMbsJZetT3ZYQ/viewform)\n- [**Submit Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSdmFf5tZbaeaJo4IMsirKF6JM6_bGZg6sTGWWmMRL3OoS5pMQ/viewform) (required for Amazon Gift Card!)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/generative-ai-pilot/460)"
+        "progression_name": "Warm Up"
       },
       "seeding_key": {
-        "activity_section.key": "895a8d9b-119e-4fc5-bd16-c9f0a9fb3bdc",
-        "lesson_activity.key": "ff2a2a9f-6b44-4dd1-b46c-cee129fa57de"
+        "activity_section.key": "cb4b8a48-22af-422e-8b0e-f0548b9103e2",
+        "lesson_activity.key": "69e65700-f3fa-48e8-b286-56e7c5f66bad"
+      }
+    },
+    {
+      "key": "9d852518-d2d7-4ed6-a93a-f696ffbbe186",
+      "position": 2,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "9d852518-d2d7-4ed6-a93a-f696ffbbe186",
+        "lesson_activity.key": "69e65700-f3fa-48e8-b286-56e7c5f66bad"
       }
     },
     {
@@ -2994,14 +2867,25 @@
       }
     },
     {
-      "key": "cb4b8a48-22af-422e-8b0e-f0548b9103e2",
+      "key": "6d4dc4a7-4ad0-4856-b2c9-36f70badae52",
       "position": 1,
       "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLSf-4jHfSNooPbk44HLXnxjdwnD5Rjat7PqwDkMbsJZetT3ZYQ/viewform)\n- [**Submit Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSdmFf5tZbaeaJo4IMsirKF6JM6_bGZg6sTGWWmMRL3OoS5pMQ/viewform) (required for Amazon Gift Card!)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/generative-ai-pilot/460)"
+        "progression_name": "Warm Up"
       },
       "seeding_key": {
-        "activity_section.key": "cb4b8a48-22af-422e-8b0e-f0548b9103e2",
-        "lesson_activity.key": "69e65700-f3fa-48e8-b286-56e7c5f66bad"
+        "activity_section.key": "6d4dc4a7-4ad0-4856-b2c9-36f70badae52",
+        "lesson_activity.key": "2963a4ab-39b9-4ca0-827c-a71f3a89d495"
+      }
+    },
+    {
+      "key": "71800850-ace0-4e23-9c30-91df065e0bb9",
+      "position": 2,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "71800850-ace0-4e23-9c30-91df065e0bb9",
+        "lesson_activity.key": "2963a4ab-39b9-4ca0-827c-a71f3a89d495"
       }
     },
     {
@@ -3123,14 +3007,25 @@
       }
     },
     {
-      "key": "6d4dc4a7-4ad0-4856-b2c9-36f70badae52",
+      "key": "27588310-ef96-43fe-9908-5e4b8b2dbffd",
       "position": 1,
       "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLSf-4jHfSNooPbk44HLXnxjdwnD5Rjat7PqwDkMbsJZetT3ZYQ/viewform)\n- [**Submit Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSdmFf5tZbaeaJo4IMsirKF6JM6_bGZg6sTGWWmMRL3OoS5pMQ/viewform) (required for Amazon Gift Card!)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/generative-ai-pilot/460)"
+        "progression_name": "Warm Up"
       },
       "seeding_key": {
-        "activity_section.key": "6d4dc4a7-4ad0-4856-b2c9-36f70badae52",
-        "lesson_activity.key": "2963a4ab-39b9-4ca0-827c-a71f3a89d495"
+        "activity_section.key": "27588310-ef96-43fe-9908-5e4b8b2dbffd",
+        "lesson_activity.key": "b34ad52e-2e4c-4a5d-a549-0385ed616b38"
+      }
+    },
+    {
+      "key": "dc50b8b0-f1c8-4354-95e9-b2afdf97647e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "dc50b8b0-f1c8-4354-95e9-b2afdf97647e",
+        "lesson_activity.key": "b34ad52e-2e4c-4a5d-a549-0385ed616b38"
       }
     },
     {
@@ -3263,14 +3158,25 @@
       }
     },
     {
-      "key": "dc50b8b0-f1c8-4354-95e9-b2afdf97647e",
+      "key": "42e72fee-f9f6-45fe-b3ac-17ab43bda15e",
       "position": 1,
       "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLSf-4jHfSNooPbk44HLXnxjdwnD5Rjat7PqwDkMbsJZetT3ZYQ/viewform)\n- [**Submit Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSdmFf5tZbaeaJo4IMsirKF6JM6_bGZg6sTGWWmMRL3OoS5pMQ/viewform) (required for Amazon Gift Card!)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/generative-ai-pilot/460)"
+        "progression_name": "Warm Up"
       },
       "seeding_key": {
-        "activity_section.key": "dc50b8b0-f1c8-4354-95e9-b2afdf97647e",
-        "lesson_activity.key": "b34ad52e-2e4c-4a5d-a549-0385ed616b38"
+        "activity_section.key": "42e72fee-f9f6-45fe-b3ac-17ab43bda15e",
+        "lesson_activity.key": "df5f4b43-6d8e-4912-a7e3-698dd9aaf553"
+      }
+    },
+    {
+      "key": "5dd35e0b-a2bc-4286-af05-1113e605b653",
+      "position": 2,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "5dd35e0b-a2bc-4286-af05-1113e605b653",
+        "lesson_activity.key": "df5f4b43-6d8e-4912-a7e3-698dd9aaf553"
       }
     },
     {
@@ -3327,17 +3233,6 @@
       "seeding_key": {
         "activity_section.key": "9f7acddd-aa30-439a-b5ae-5f5cd7370424",
         "lesson_activity.key": "72cb5494-1a5c-4870-8f97-8fdcd7669975"
-      }
-    },
-    {
-      "key": "42e72fee-f9f6-45fe-b3ac-17ab43bda15e",
-      "position": 1,
-      "properties": {
-        "description": "Please let us know how this lesson went!\n\n- [**Report a Typo / Bug / Unclear Directions**](https://docs.google.com/forms/d/e/1FAIpQLSf-4jHfSNooPbk44HLXnxjdwnD5Rjat7PqwDkMbsJZetT3ZYQ/viewform)\n- [**Submit Feedback on the Lesson**](https://docs.google.com/forms/d/e/1FAIpQLSdmFf5tZbaeaJo4IMsirKF6JM6_bGZg6sTGWWmMRL3OoS5pMQ/viewform) (required for Amazon Gift Card!)\n- [**Share Takeaways and Experiences in the Forum!**](https://forum.code.org/c/generative-ai-pilot/460)"
-      },
-      "seeding_key": {
-        "activity_section.key": "42e72fee-f9f6-45fe-b3ac-17ab43bda15e",
-        "lesson_activity.key": "df5f4b43-6d8e-4912-a7e3-698dd9aaf553"
       }
     },
     {
@@ -3998,18 +3893,6 @@
       }
     },
     {
-      "key": "2dca06b9-4d20-4ae8-aa6f-59989bedf683",
-      "position": 1,
-      "properties": {
-        "description": "Please encourage students to take a quick survey on how the lesson went! The link is provided here and in a student level in Code Studio.\n\nStudent Survey Link: [https://bit.ly/create-pilot-lesson-3](https://bit.ly/create-pilot-lesson-3)",
-        "progression_name": "End-Of-Lesson Survey!"
-      },
-      "seeding_key": {
-        "activity_section.key": "2dca06b9-4d20-4ae8-aa6f-59989bedf683",
-        "lesson_activity.key": "ea6c3d3d-aee2-41be-97ee-e7f5e1857d45"
-      }
-    },
-    {
       "key": "49d8fcdf-3d08-4f66-b882-cbc11b67f426",
       "position": 1,
       "properties": {
@@ -4185,18 +4068,6 @@
       }
     },
     {
-      "key": "d3c70a66-17df-4cf1-bf8d-9985a3a141e7",
-      "position": 1,
-      "properties": {
-        "description": "Please encourage students to take a quick survey on how the lesson went! The link is provided here and in a student level in Code Studio.\n\nStudent Survey Link: [https://bit.ly/create-pilot-lesson-4](https://bit.ly/create-pilot-lesson-4)",
-        "progression_name": "End-Of-Lesson Survey!"
-      },
-      "seeding_key": {
-        "activity_section.key": "d3c70a66-17df-4cf1-bf8d-9985a3a141e7",
-        "lesson_activity.key": "31019912-a4f6-43ac-b597-60c1b02ac139"
-      }
-    },
-    {
       "key": "ff96c7d7-f44c-4417-b36f-9ccbdb195466",
       "position": 1,
       "properties": {
@@ -4356,18 +4227,6 @@
       "seeding_key": {
         "activity_section.key": "c8932743-17f5-494d-b09a-aea6833d97aa",
         "lesson_activity.key": "fbf06519-2ef9-4942-a1a7-1310c2be7b59"
-      }
-    },
-    {
-      "key": "ec496a98-1aa1-441a-935b-edc132d24cd5",
-      "position": 1,
-      "properties": {
-        "description": "Please encourage students to take a quick survey on how the lesson went! The link is provided here and in a student level in Code Studio.\n\nStudent Survey Link: [https://bit.ly/create-pilot-lesson-5](https://bit.ly/create-pilot-lesson-5)",
-        "progression_name": "End-Of-Lesson Survey!"
-      },
-      "seeding_key": {
-        "activity_section.key": "ec496a98-1aa1-441a-935b-edc132d24cd5",
-        "lesson_activity.key": "8b679851-0ff1-4e59-8d8a-4938945640c3"
       }
     },
     {
@@ -4545,18 +4404,6 @@
       }
     },
     {
-      "key": "08d90830-862a-4b64-83f0-45db3ae3b4b0",
-      "position": 1,
-      "properties": {
-        "description": "Please encourage students to take a quick survey on how the lesson went! The link is provided here and in a student level in Code Studio.\n\nStudent Survey Link: [https://bit.ly/create-pilot-lesson-6](https://bit.ly/create-pilot-lesson-6)",
-        "progression_name": "End-Of-Lesson Survey!"
-      },
-      "seeding_key": {
-        "activity_section.key": "08d90830-862a-4b64-83f0-45db3ae3b4b0",
-        "lesson_activity.key": "f9208cb2-7002-41e7-a867-ff20463c263f"
-      }
-    },
-    {
       "key": "e1d549c0-5475-4f31-893d-ff1feb288a0d",
       "position": 1,
       "properties": {
@@ -4708,18 +4555,6 @@
       }
     },
     {
-      "key": "787f5e24-3f4f-4e3a-80a3-4a917faa7374",
-      "position": 1,
-      "properties": {
-        "description": "Please encourage students to take a quick survey on how the lesson went! The link is provided here and in a student level in Code Studio.\n\nStudent Survey Link: [https://bit.ly/create-pilot-lesson-7](https://bit.ly/create-pilot-lesson-7)",
-        "progression_name": "End-Of-Lesson Survey!"
-      },
-      "seeding_key": {
-        "activity_section.key": "787f5e24-3f4f-4e3a-80a3-4a917faa7374",
-        "lesson_activity.key": "fa011dd9-230c-44c9-8fa8-49bb85e84960"
-      }
-    },
-    {
       "key": "c6dd20d6-02d5-4969-9f5f-ddf7b0e94425",
       "position": 1,
       "properties": {
@@ -4835,18 +4670,6 @@
       "seeding_key": {
         "activity_section.key": "3ec21a85-8b58-4c48-a731-fc4ddaf3b839",
         "lesson_activity.key": "c0652c1d-4baf-46ef-b999-ca6ef3ecc2b6"
-      }
-    },
-    {
-      "key": "16984cc8-2984-4d92-b3c7-08b98597989b",
-      "position": 1,
-      "properties": {
-        "description": "Please encourage students to take a quick survey on how the lesson went! The link is provided here and in a student level in Code Studio.\n\nStudent Survey Link: [https://bit.ly/create-pilot-lesson-9](https://bit.ly/create-pilot-lesson-9)",
-        "progression_name": "End-Of-Lesson Survey!"
-      },
-      "seeding_key": {
-        "activity_section.key": "16984cc8-2984-4d92-b3c7-08b98597989b",
-        "lesson_activity.key": "11b4055b-619d-47fc-b672-3c8999ecc56c"
       }
     },
     {
@@ -5000,18 +4823,6 @@
       "seeding_key": {
         "activity_section.key": "6dfcd9cf-2f75-40fc-8438-174cc57b438b",
         "lesson_activity.key": "83a3482e-093b-421e-8e8d-5c59921cedcb"
-      }
-    },
-    {
-      "key": "a5b73236-98bf-48cb-a6ee-08ea67328e25",
-      "position": 1,
-      "properties": {
-        "description": "Please encourage students to take a quick survey on how the lesson went! The link is provided here and in a student level in Code Studio.\n\nStudent Survey Link: [https://bit.ly/create-pilot-lesson-10](https://bit.ly/create-pilot-lesson-10)",
-        "progression_name": "End-Of-Lesson Survey!"
-      },
-      "seeding_key": {
-        "activity_section.key": "a5b73236-98bf-48cb-a6ee-08ea67328e25",
-        "lesson_activity.key": "59439ff4-0c76-4097-aee4-99a42dfb5846"
       }
     },
     {
@@ -5180,18 +4991,6 @@
       }
     },
     {
-      "key": "bd7d98ba-c663-4973-9221-252fbb561104",
-      "position": 1,
-      "properties": {
-        "description": "Please encourage students to take a quick survey on how the lesson went! The link is provided here and in a student level in Code Studio.\n\nStudent Survey Link: [https://bit.ly/create-pilot-lesson-11](https://bit.ly/create-pilot-lesson-11)",
-        "progression_name": "End-Of-Lesson Survey!"
-      },
-      "seeding_key": {
-        "activity_section.key": "bd7d98ba-c663-4973-9221-252fbb561104",
-        "lesson_activity.key": "91b55771-61a4-40f4-81e8-27250c599903"
-      }
-    },
-    {
       "key": "9b8a8ffd-02ad-4179-987d-28cb7cd8bdfc",
       "position": 1,
       "properties": {
@@ -5350,18 +5149,6 @@
       }
     },
     {
-      "key": "57c6d861-70e7-4fc8-a5af-a90630e12f45",
-      "position": 1,
-      "properties": {
-        "description": "Please encourage students to take a quick survey on how the lesson went! The link is provided here and in a student level in Code Studio.\n\nStudent Survey Link: [https://bit.ly/create-pilot-lesson-12](https://bit.ly/create-pilot-lesson-12)",
-        "progression_name": "End-Of-Lesson Survey!"
-      },
-      "seeding_key": {
-        "activity_section.key": "57c6d861-70e7-4fc8-a5af-a90630e12f45",
-        "lesson_activity.key": "45e41b6b-03d7-464b-9cc7-130e603e6202"
-      }
-    },
-    {
       "key": "30472905-0404-46dd-8b93-683f91bd0f4f",
       "position": 1,
       "properties": {
@@ -5517,18 +5304,6 @@
       "seeding_key": {
         "activity_section.key": "fad52650-0af5-48c7-9d5c-c9db59f6b177",
         "lesson_activity.key": "e15f05ac-95c3-47ee-b71d-00639b9fab58"
-      }
-    },
-    {
-      "key": "76c66a35-a57a-45c6-a5f0-235ba54382c3",
-      "position": 1,
-      "properties": {
-        "description": "Please encourage students to take a quick survey on how the lesson went! The link is provided here and in a student level in Code Studio.\n\nStudent Survey Link: [https://bit.ly/create-pilot-lesson-8](https://bit.ly/create-pilot-lesson-8)",
-        "progression_name": "End-Of-Lesson Survey!"
-      },
-      "seeding_key": {
-        "activity_section.key": "76c66a35-a57a-45c6-a5f0-235ba54382c3",
-        "lesson_activity.key": "a6ac0e39-ad33-4108-aed5-0d3a132e9fc5"
       }
     },
     {
@@ -5739,18 +5514,6 @@
       }
     },
     {
-      "key": "9c8ad002-05ad-4374-83b6-abebfc6fc5f0",
-      "position": 1,
-      "properties": {
-        "description": "Please encourage students to take a quick survey on how the lesson went! The link is provided here and in a student level in Code Studio.\n\nStudent Survey Link: [https://bit.ly/create-pilot-lesson-13](https://bit.ly/create-pilot-lesson-13)",
-        "progression_name": "End-Of-Lesson Survey!"
-      },
-      "seeding_key": {
-        "activity_section.key": "9c8ad002-05ad-4374-83b6-abebfc6fc5f0",
-        "lesson_activity.key": "58b8d763-5455-4f7f-a444-6ba8a5a9256e"
-      }
-    },
-    {
       "key": "f90db6c3-4c0d-4da0-9410-ba03a68a720f",
       "position": 1,
       "properties": {
@@ -5819,6 +5582,131 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "genai-lesson2-warmup-lv1"
+        ],
+        "progression": "Warm Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson2-warmup-lv1"
+        ],
+        "lesson.key": "Input & Training Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "25d28ae0-a4f5-4ee5-9f10-6f01989405ae"
+      },
+      "level_keys": [
+        "genai-lesson2-warmup-lv1"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-lesson2-wrapup-lv1"
+        ],
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson2-wrapup-lv1"
+        ],
+        "lesson.key": "Input & Training Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "c28ae825-1a00-4fe4-a9c0-d44a4e078b88"
+      },
+      "level_keys": [
+        "genai-lesson2-wrapup-lv1"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-lesson3-warmup-lv1"
+        ],
+        "progression": "Warm Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson3-warmup-lv1"
+        ],
+        "lesson.key": "(Optional) Bias in the Machine",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "6cd4d8c7-377e-4fa1-9a80-1641205708b2"
+      },
+      "level_keys": [
+        "genai-lesson3-warmup-lv1"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-lesson3-warmup-lv2"
+        ],
+        "progression": "Warm Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson3-warmup-lv2"
+        ],
+        "lesson.key": "(Optional) Bias in the Machine",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "6cd4d8c7-377e-4fa1-9a80-1641205708b2"
+      },
+      "level_keys": [
+        "genai-lesson3-warmup-lv2"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-lesson3-wrapup-lv1"
+        ],
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson3-wrapup-lv1"
+        ],
+        "lesson.key": "(Optional) Bias in the Machine",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "d806a931-3b88-45bb-8c64-c5aff16c5826"
+      },
+      "level_keys": [
+        "genai-lesson3-wrapup-lv1"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "genai-lesson4-warmup-level1"
         ],
         "progression": "Warm Up"
@@ -5838,7 +5726,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 9,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5863,8 +5751,333 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 10,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-lesson5-warmup-lv1"
+        ],
+        "progression": "Warm Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson5-warmup-lv1"
+        ],
+        "lesson.key": "Embeddings: How They're Created",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "e813db6c-9cec-49dc-9e29-913fa873b9f1"
+      },
+      "level_keys": [
+        "genai-lesson5-warmup-lv1"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-lesson5-warmup-lv2"
+        ],
+        "progression": "Warm Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson5-warmup-lv2"
+        ],
+        "lesson.key": "Embeddings: How They're Created",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "e813db6c-9cec-49dc-9e29-913fa873b9f1"
+      },
+      "level_keys": [
+        "genai-lesson5-warmup-lv2"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-lesson5-wrapup-lv1"
+        ],
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson5-wrapup-lv1"
+        ],
+        "lesson.key": "Embeddings: How They're Created",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "ae37bfb3-c0cd-46b1-ad73-d36eecd1c028"
+      },
+      "level_keys": [
+        "genai-lesson5-wrapup-lv1"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-lesson6-warmup-lv1"
+        ],
+        "progression": "Warm Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson6-warmup-lv1"
+        ],
+        "lesson.key": "Understanding Neural Networks",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "895a8d9b-119e-4fc5-bd16-c9f0a9fb3bdc"
+      },
+      "level_keys": [
+        "genai-lesson6-warmup-lv1"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-lesson6-warmup-lv2"
+        ],
+        "progression": "Warm Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson6-warmup-lv2"
+        ],
+        "lesson.key": "Understanding Neural Networks",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "895a8d9b-119e-4fc5-bd16-c9f0a9fb3bdc"
+      },
+      "level_keys": [
+        "genai-lesson6-warmup-lv2"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-lesson6-wrapup-lv1"
+        ],
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson6-wrapup-lv1"
+        ],
+        "lesson.key": "Understanding Neural Networks",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "e426a1e9-0082-4e75-8980-01dc14c97537"
+      },
+      "level_keys": [
+        "genai-lesson6-wrapup-lv1"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-lesson7-warmup-lv1"
+        ],
+        "progression": "Warm Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson7-warmup-lv1"
+        ],
+        "lesson.key": "Neural Networks: How They're Trained",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "cb4b8a48-22af-422e-8b0e-f0548b9103e2"
+      },
+      "level_keys": [
+        "genai-lesson7-warmup-lv1"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-lesson7-warmup-lv2"
+        ],
+        "progression": "Warm Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson7-warmup-lv2"
+        ],
+        "lesson.key": "Neural Networks: How They're Trained",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "cb4b8a48-22af-422e-8b0e-f0548b9103e2"
+      },
+      "level_keys": [
+        "genai-lesson7-warmup-lv2"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-lesson7-wrapup-lv1"
+        ],
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson7-wrapup-lv1"
+        ],
+        "lesson.key": "Neural Networks: How They're Trained",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "9d852518-d2d7-4ed6-a93a-f696ffbbe186"
+      },
+      "level_keys": [
+        "genai-lesson7-wrapup-lv1"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-lesson8-warmup-level1"
+        ],
+        "progression": "Warm Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson8-warmup-level1"
+        ],
+        "lesson.key": "Attention Is All You Need",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "6d4dc4a7-4ad0-4856-b2c9-36f70badae52"
+      },
+      "level_keys": [
+        "genai-lesson8-warmup-level1"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-lesson8-wrapup-level1"
+        ],
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson8-wrapup-level1"
+        ],
+        "lesson.key": "Attention Is All You Need",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "71800850-ace0-4e23-9c30-91df065e0bb9"
+      },
+      "level_keys": [
+        "genai-lesson8-wrapup-level1"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-lesson9-warmup-level1"
+        ],
+        "progression": "Warm Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson9-warmup-level1"
+        ],
+        "lesson.key": "Outputs & Probabilities",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "27588310-ef96-43fe-9908-5e4b8b2dbffd"
+      },
+      "level_keys": [
+        "genai-lesson9-warmup-level1"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-lesson9-wrapup-level1"
+        ],
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson9-wrapup-level1"
+        ],
+        "lesson.key": "Outputs & Probabilities",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "dc50b8b0-f1c8-4354-95e9-b2afdf97647e"
+      },
+      "level_keys": [
+        "genai-lesson9-wrapup-level1"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -5888,7 +6101,82 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-lesson10-warmup-lv1"
+        ],
+        "progression": "Warm Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson10-warmup-lv1"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "42e72fee-f9f6-45fe-b3ac-17ab43bda15e"
+      },
+      "level_keys": [
+        "genai-lesson10-warmup-lv1"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-lesson10-warmup-lv2"
+        ],
+        "progression": "Warm Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson10-warmup-lv2"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "42e72fee-f9f6-45fe-b3ac-17ab43bda15e"
+      },
+      "level_keys": [
+        "genai-lesson10-warmup-lv2"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "genai-lesson10-wrapup-lv1"
+        ],
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "genai-lesson10-wrapup-lv1"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "5dd35e0b-a2bc-4286-af05-1113e605b653"
+      },
+      "level_keys": [
+        "genai-lesson10-wrapup-lv1"
+      ]
+    },
+    {
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5913,7 +6201,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 28,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5938,7 +6226,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 29,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5963,7 +6251,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 30,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5988,7 +6276,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 31,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -6013,7 +6301,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 32,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -6038,7 +6326,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 33,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6063,7 +6351,7 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 34,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6088,7 +6376,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 35,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -6113,7 +6401,7 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6138,7 +6426,7 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 37,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6163,7 +6451,7 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 38,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6188,7 +6476,7 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 39,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -6213,7 +6501,7 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 40,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6238,7 +6526,7 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 41,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -6263,7 +6551,7 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 42,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6288,7 +6576,7 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6313,7 +6601,7 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 44,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6338,7 +6626,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 45,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6363,7 +6651,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 46,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6388,7 +6676,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 47,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -6413,7 +6701,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 48,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -6438,7 +6726,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 49,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -6463,7 +6751,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 50,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -6488,7 +6776,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 51,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -6513,7 +6801,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 52,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6538,7 +6826,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 53,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -6563,7 +6851,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 54,
       "position": 12,
       "activity_section_position": 1,
       "assessment": true,
@@ -6588,7 +6876,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 55,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -6613,32 +6901,7 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 14,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson3_2024"
-        ],
-        "progression": "End-Of-Lesson Survey!"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson3_2024"
-        ],
-        "lesson.key": "System Prompting - Practice",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "2dca06b9-4d20-4ae8-aa6f-59989bedf683"
-      },
-      "level_keys": [
-        "gen-ai-customizing-pilotv2-survey-lesson3_2024"
-      ]
-    },
-    {
-      "chapter": 36,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6663,7 +6926,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6688,7 +6951,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 58,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6713,7 +6976,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 59,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6738,7 +7001,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 60,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6763,7 +7026,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 61,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6788,7 +7051,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 62,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6813,7 +7076,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 63,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -6838,7 +7101,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 64,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -6863,7 +7126,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 65,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6888,32 +7151,7 @@
       ]
     },
     {
-      "chapter": 46,
-      "position": 11,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson4_2024"
-        ],
-        "progression": "End-Of-Lesson Survey!"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson4_2024"
-        ],
-        "lesson.key": "System Prompting - Synthesis",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "d3c70a66-17df-4cf1-bf8d-9985a3a141e7"
-      },
-      "level_keys": [
-        "gen-ai-customizing-pilotv2-survey-lesson4_2024"
-      ]
-    },
-    {
-      "chapter": 47,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6938,7 +7176,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 67,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6963,7 +7201,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 68,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -6988,7 +7226,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 69,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7013,7 +7251,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 70,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -7038,7 +7276,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 71,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -7063,7 +7301,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 72,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7088,7 +7326,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 73,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -7113,7 +7351,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 74,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7138,32 +7376,7 @@
       ]
     },
     {
-      "chapter": 56,
-      "position": 10,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson5_2024"
-        ],
-        "progression": "End-Of-Lesson Survey!"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson5_2024"
-        ],
-        "lesson.key": "Retrieval - Exploration",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "ec496a98-1aa1-441a-935b-edc132d24cd5"
-      },
-      "level_keys": [
-        "gen-ai-customizing-pilotv2-survey-lesson5_2024"
-      ]
-    },
-    {
-      "chapter": 57,
+      "chapter": 75,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7188,7 +7401,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 76,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7213,7 +7426,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 77,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7238,7 +7451,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 78,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7263,7 +7476,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 79,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7288,7 +7501,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 80,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -7313,7 +7526,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 81,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -7338,7 +7551,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 82,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -7363,7 +7576,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 83,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7388,7 +7601,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 84,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -7413,7 +7626,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 85,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -7438,32 +7651,7 @@
       ]
     },
     {
-      "chapter": 68,
-      "position": 12,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson6_2024"
-        ],
-        "progression": "End-Of-Lesson Survey!"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson6_2024"
-        ],
-        "lesson.key": "Retrieval - Practice",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "08d90830-862a-4b64-83f0-45db3ae3b4b0"
-      },
-      "level_keys": [
-        "gen-ai-customizing-pilotv2-survey-lesson6_2024"
-      ]
-    },
-    {
-      "chapter": 69,
+      "chapter": 86,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7488,7 +7676,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 87,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7513,7 +7701,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 88,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7538,7 +7726,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 89,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7563,7 +7751,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 90,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -7588,7 +7776,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 91,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -7613,7 +7801,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 92,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -7638,7 +7826,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 93,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -7663,7 +7851,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 94,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -7688,7 +7876,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 95,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -7713,7 +7901,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 96,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -7738,57 +7926,7 @@
       ]
     },
     {
-      "chapter": 80,
-      "position": 12,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson7_2024"
-        ],
-        "progression": "End-Of-Lesson Survey!"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson7_2024"
-        ],
-        "lesson.key": "Retrieval - Synthesis",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "787f5e24-3f4f-4e3a-80a3-4a917faa7374"
-      },
-      "level_keys": [
-        "gen-ai-customizing-pilotv2-survey-lesson7_2024"
-      ]
-    },
-    {
-      "chapter": 81,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson9_2024"
-        ],
-        "progression": "End-Of-Lesson Survey!"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson9_2024"
-        ],
-        "lesson.key": "Model Cards - Exploration",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "16984cc8-2984-4d92-b3c7-08b98597989b"
-      },
-      "level_keys": [
-        "gen-ai-customizing-pilotv2-survey-lesson9_2024"
-      ]
-    },
-    {
-      "chapter": 82,
+      "chapter": 97,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7813,7 +7951,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 98,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7838,32 +7976,7 @@
       ]
     },
     {
-      "chapter": 84,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson10_2024"
-        ],
-        "progression": "End-Of-Lesson Survey!"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson10_2024"
-        ],
-        "lesson.key": "Model Cards - Practice",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "a5b73236-98bf-48cb-a6ee-08ea67328e25"
-      },
-      "level_keys": [
-        "gen-ai-customizing-pilotv2-survey-lesson10_2024"
-      ]
-    },
-    {
-      "chapter": 85,
+      "chapter": 99,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7888,7 +8001,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 100,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7913,7 +8026,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 101,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7938,32 +8051,7 @@
       ]
     },
     {
-      "chapter": 88,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson11_2024"
-        ],
-        "progression": "End-Of-Lesson Survey!"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson11_2024"
-        ],
-        "lesson.key": "Issue Statements",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "bd7d98ba-c663-4973-9221-252fbb561104"
-      },
-      "level_keys": [
-        "gen-ai-customizing-pilotv2-survey-lesson11_2024"
-      ]
-    },
-    {
-      "chapter": 89,
+      "chapter": 102,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7988,7 +8076,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 103,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8013,7 +8101,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 104,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8038,7 +8126,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 105,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -8063,7 +8151,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 106,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -8088,32 +8176,7 @@
       ]
     },
     {
-      "chapter": 94,
-      "position": 6,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson12_2024"
-        ],
-        "progression": "End-Of-Lesson Survey!"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson12_2024"
-        ],
-        "lesson.key": "User Feedback",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "57c6d861-70e7-4fc8-a5af-a90630e12f45"
-      },
-      "level_keys": [
-        "gen-ai-customizing-pilotv2-survey-lesson12_2024"
-      ]
-    },
-    {
-      "chapter": 95,
+      "chapter": 107,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8138,7 +8201,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 108,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8163,7 +8226,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 109,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -8188,7 +8251,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 110,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -8213,7 +8276,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 111,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -8238,7 +8301,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 112,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -8263,7 +8326,7 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 113,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -8288,7 +8351,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 114,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -8313,32 +8376,7 @@
       ]
     },
     {
-      "chapter": 103,
-      "position": 9,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson8_2024"
-        ],
-        "progression": "End-Of-Lesson Survey!"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson8_2024"
-        ],
-        "lesson.key": "Fine Tuning - Exploration",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "76c66a35-a57a-45c6-a5f0-235ba54382c3"
-      },
-      "level_keys": [
-        "gen-ai-customizing-pilotv2-survey-lesson8_2024"
-      ]
-    },
-    {
-      "chapter": 104,
+      "chapter": 115,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8363,7 +8401,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 116,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8385,31 +8423,6 @@
       },
       "level_keys": [
         "gen-ai-customizing-project2-L2_2024"
-      ]
-    },
-    {
-      "chapter": 106,
-      "position": 3,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson13_2024"
-        ],
-        "progression": "End-Of-Lesson Survey!"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson13_2024"
-        ],
-        "lesson.key": "Project: Solving Community Problems with Chatbots",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "9c8ad002-05ad-4374-83b6-abebfc6fc5f0"
-      },
-      "level_keys": [
-        "gen-ai-customizing-pilotv2-survey-lesson13_2024"
       ]
     }
   ],
@@ -8440,6 +8453,66 @@
     },
     {
       "seeding_key": {
+        "level.key": "genai-lesson2-warmup-lv1",
+        "script_level.level_keys": [
+          "genai-lesson2-warmup-lv1"
+        ],
+        "lesson.key": "Input & Training Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "25d28ae0-a4f5-4ee5-9f10-6f01989405ae"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson2-wrapup-lv1",
+        "script_level.level_keys": [
+          "genai-lesson2-wrapup-lv1"
+        ],
+        "lesson.key": "Input & Training Data",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "c28ae825-1a00-4fe4-a9c0-d44a4e078b88"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson3-warmup-lv1",
+        "script_level.level_keys": [
+          "genai-lesson3-warmup-lv1"
+        ],
+        "lesson.key": "(Optional) Bias in the Machine",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "6cd4d8c7-377e-4fa1-9a80-1641205708b2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson3-warmup-lv2",
+        "script_level.level_keys": [
+          "genai-lesson3-warmup-lv2"
+        ],
+        "lesson.key": "(Optional) Bias in the Machine",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "6cd4d8c7-377e-4fa1-9a80-1641205708b2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson3-wrapup-lv1",
+        "script_level.level_keys": [
+          "genai-lesson3-wrapup-lv1"
+        ],
+        "lesson.key": "(Optional) Bias in the Machine",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "d806a931-3b88-45bb-8c64-c5aff16c5826"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "genai-lesson4-warmup-level1",
         "script_level.level_keys": [
           "genai-lesson4-warmup-level1"
@@ -8464,6 +8537,162 @@
     },
     {
       "seeding_key": {
+        "level.key": "genai-lesson5-warmup-lv1",
+        "script_level.level_keys": [
+          "genai-lesson5-warmup-lv1"
+        ],
+        "lesson.key": "Embeddings: How They're Created",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "e813db6c-9cec-49dc-9e29-913fa873b9f1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson5-warmup-lv2",
+        "script_level.level_keys": [
+          "genai-lesson5-warmup-lv2"
+        ],
+        "lesson.key": "Embeddings: How They're Created",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "e813db6c-9cec-49dc-9e29-913fa873b9f1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson5-wrapup-lv1",
+        "script_level.level_keys": [
+          "genai-lesson5-wrapup-lv1"
+        ],
+        "lesson.key": "Embeddings: How They're Created",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "ae37bfb3-c0cd-46b1-ad73-d36eecd1c028"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson6-warmup-lv1",
+        "script_level.level_keys": [
+          "genai-lesson6-warmup-lv1"
+        ],
+        "lesson.key": "Understanding Neural Networks",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "895a8d9b-119e-4fc5-bd16-c9f0a9fb3bdc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson6-warmup-lv2",
+        "script_level.level_keys": [
+          "genai-lesson6-warmup-lv2"
+        ],
+        "lesson.key": "Understanding Neural Networks",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "895a8d9b-119e-4fc5-bd16-c9f0a9fb3bdc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson6-wrapup-lv1",
+        "script_level.level_keys": [
+          "genai-lesson6-wrapup-lv1"
+        ],
+        "lesson.key": "Understanding Neural Networks",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "e426a1e9-0082-4e75-8980-01dc14c97537"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson7-warmup-lv1",
+        "script_level.level_keys": [
+          "genai-lesson7-warmup-lv1"
+        ],
+        "lesson.key": "Neural Networks: How They're Trained",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "cb4b8a48-22af-422e-8b0e-f0548b9103e2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson7-warmup-lv2",
+        "script_level.level_keys": [
+          "genai-lesson7-warmup-lv2"
+        ],
+        "lesson.key": "Neural Networks: How They're Trained",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "cb4b8a48-22af-422e-8b0e-f0548b9103e2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson7-wrapup-lv1",
+        "script_level.level_keys": [
+          "genai-lesson7-wrapup-lv1"
+        ],
+        "lesson.key": "Neural Networks: How They're Trained",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "9d852518-d2d7-4ed6-a93a-f696ffbbe186"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson8-warmup-level1",
+        "script_level.level_keys": [
+          "genai-lesson8-warmup-level1"
+        ],
+        "lesson.key": "Attention Is All You Need",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "6d4dc4a7-4ad0-4856-b2c9-36f70badae52"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson8-wrapup-level1",
+        "script_level.level_keys": [
+          "genai-lesson8-wrapup-level1"
+        ],
+        "lesson.key": "Attention Is All You Need",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "71800850-ace0-4e23-9c30-91df065e0bb9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson9-warmup-level1",
+        "script_level.level_keys": [
+          "genai-lesson9-warmup-level1"
+        ],
+        "lesson.key": "Outputs & Probabilities",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "27588310-ef96-43fe-9908-5e4b8b2dbffd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson9-wrapup-level1",
+        "script_level.level_keys": [
+          "genai-lesson9-wrapup-level1"
+        ],
+        "lesson.key": "Outputs & Probabilities",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "dc50b8b0-f1c8-4354-95e9-b2afdf97647e"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "Foundations AI - Outputs - Mad Lib Widget_2024",
         "script_level.level_keys": [
           "Foundations AI - Outputs - Mad Lib Widget_2024"
@@ -8472,6 +8701,42 @@
         "lesson_group.key": "lessonGroup-2",
         "script.name": "gen-ai-staging",
         "activity_section.key": "7b778aed-c14a-473f-b4e4-9b3f2fcb5c56"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson10-warmup-lv1",
+        "script_level.level_keys": [
+          "genai-lesson10-warmup-lv1"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "42e72fee-f9f6-45fe-b3ac-17ab43bda15e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson10-warmup-lv2",
+        "script_level.level_keys": [
+          "genai-lesson10-warmup-lv2"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "42e72fee-f9f6-45fe-b3ac-17ab43bda15e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "genai-lesson10-wrapup-lv1",
+        "script_level.level_keys": [
+          "genai-lesson10-wrapup-lv1"
+        ],
+        "lesson.key": "Hallucinations and Fabrications",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "gen-ai-staging",
+        "activity_section.key": "5dd35e0b-a2bc-4286-af05-1113e605b653"
       }
     },
     {
@@ -8824,18 +9089,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "gen-ai-customizing-pilotv2-survey-lesson3_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson3_2024"
-        ],
-        "lesson.key": "System Prompting - Practice",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "2dca06b9-4d20-4ae8-aa6f-59989bedf683"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "gen-ai-customizing-prompt-synthesis-L1_2024",
         "script_level.level_keys": [
           "gen-ai-customizing-prompt-synthesis-L1_2024"
@@ -8956,18 +9209,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "gen-ai-customizing-pilotv2-survey-lesson4_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson4_2024"
-        ],
-        "lesson.key": "System Prompting - Synthesis",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "d3c70a66-17df-4cf1-bf8d-9985a3a141e7"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "gen-ai-customizing-retrieval-explore-L1_2024",
         "script_level.level_keys": [
           "gen-ai-customizing-retrieval-explore-L1_2024"
@@ -9072,18 +9313,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "gen-ai-staging",
         "activity_section.key": "0ecb0591-36ef-4968-91e2-3fc71fe18b2c"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "gen-ai-customizing-pilotv2-survey-lesson5_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson5_2024"
-        ],
-        "lesson.key": "Retrieval - Exploration",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "ec496a98-1aa1-441a-935b-edc132d24cd5"
       }
     },
     {
@@ -9220,18 +9449,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "gen-ai-customizing-pilotv2-survey-lesson6_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson6_2024"
-        ],
-        "lesson.key": "Retrieval - Practice",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "08d90830-862a-4b64-83f0-45db3ae3b4b0"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "gen-ai-customizing-retrieval-synthesis-predict-L1_2024",
         "script_level.level_keys": [
           "gen-ai-customizing-retrieval-synthesis-predict-L1_2024"
@@ -9364,30 +9581,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "gen-ai-customizing-pilotv2-survey-lesson7_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson7_2024"
-        ],
-        "lesson.key": "Retrieval - Synthesis",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "787f5e24-3f4f-4e3a-80a3-4a917faa7374"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "gen-ai-customizing-pilotv2-survey-lesson9_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson9_2024"
-        ],
-        "lesson.key": "Model Cards - Exploration",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "16984cc8-2984-4d92-b3c7-08b98597989b"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "gen-ai-customizing-modelcards-practice-L1_2024",
         "script_level.level_keys": [
           "gen-ai-customizing-modelcards-practice-L1_2024"
@@ -9408,18 +9601,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "gen-ai-staging",
         "activity_section.key": "70c95442-c0f6-41fd-a161-1f0f341f8b55"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "gen-ai-customizing-pilotv2-survey-lesson10_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson10_2024"
-        ],
-        "lesson.key": "Model Cards - Practice",
-        "lesson_group.key": "lessonGroup-3",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "a5b73236-98bf-48cb-a6ee-08ea67328e25"
       }
     },
     {
@@ -9456,18 +9637,6 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "gen-ai-staging",
         "activity_section.key": "edc3bdd7-1ee9-4135-8304-06b4b46d470c"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "gen-ai-customizing-pilotv2-survey-lesson11_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson11_2024"
-        ],
-        "lesson.key": "Issue Statements",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "bd7d98ba-c663-4973-9221-252fbb561104"
       }
     },
     {
@@ -9528,18 +9697,6 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "gen-ai-staging",
         "activity_section.key": "cb8abbe4-0490-4409-bc38-3776c4c6ff78"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "gen-ai-customizing-pilotv2-survey-lesson12_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson12_2024"
-        ],
-        "lesson.key": "User Feedback",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "57c6d861-70e7-4fc8-a5af-a90630e12f45"
       }
     },
     {
@@ -9640,18 +9797,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "gen-ai-customizing-pilotv2-survey-lesson8_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson8_2024"
-        ],
-        "lesson.key": "Fine Tuning - Exploration",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "76c66a35-a57a-45c6-a5f0-235ba54382c3"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "gen-ai-customizing-project2-L1_2024",
         "script_level.level_keys": [
           "gen-ai-customizing-project2-L1_2024"
@@ -9672,18 +9817,6 @@
         "lesson_group.key": "lessonGroup-4",
         "script.name": "gen-ai-staging",
         "activity_section.key": "bb8431d6-0a02-40c9-aa32-5fe002480643"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "gen-ai-customizing-pilotv2-survey-lesson13_2024",
-        "script_level.level_keys": [
-          "gen-ai-customizing-pilotv2-survey-lesson13_2024"
-        ],
-        "lesson.key": "Project: Solving Community Problems with Chatbots",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "gen-ai-staging",
-        "activity_section.key": "9c8ad002-05ad-4374-83b6-abebfc6fc5f0"
       }
     }
   ],

@@ -337,6 +337,12 @@ export interface SoundData {
   key?: Key;
 }
 
+export interface ImageAttribution {
+  author: string;
+  color?: string;
+  position?: 'left' | 'right';
+}
+
 export type SoundFolderType = 'sound' | 'kit' | 'instrument';
 
 export interface SoundFolder {
@@ -351,6 +357,7 @@ export interface SoundFolder {
   sounds: SoundData[];
   bpm?: number;
   key?: Key;
+  imageAttribution?: ImageAttribution;
 }
 
 export type LibraryJson = {

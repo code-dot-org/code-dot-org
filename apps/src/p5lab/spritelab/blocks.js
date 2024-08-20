@@ -107,49 +107,6 @@ const customInputTypes = {
       return `(${block.getFieldValue(arg.name)})`;
     },
   },
-  locationVariableDropdown: {
-    addInput(blockly, block, inputConfig, currentInputRow) {
-      block.getVars = function () {
-        return {
-          [Blockly.BlockValueType.LOCATION]: [
-            block.getFieldValue(inputConfig.name),
-          ],
-        };
-      };
-      block.renameVar = function (oldName, newName) {
-        if (
-          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
-        ) {
-          block.setTitleValue(newName, inputConfig.name);
-        }
-      };
-      block.removeVar = function (oldName) {
-        if (
-          Blockly.Names.equals(oldName, block.getFieldValue(inputConfig.name))
-        ) {
-          block.dispose(true, true);
-        }
-      };
-
-      currentInputRow
-        .appendField(inputConfig.label)
-        .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
-        .appendField(
-          new Blockly.FieldVariable(
-            Blockly.Msg.VARIABLES_SET_ITEM,
-            null,
-            null,
-            Blockly.BlockValueType.LOCATION,
-            null
-          ),
-          inputConfig.name
-        )
-        .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
-    },
-    generateCode(block, arg) {
-      return Blockly.JavaScript.translateVarName(block.getFieldValue(arg.name));
-    },
-  },
   soundPicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       const icon = document.createElementNS(SVG_NS, 'tspan');
@@ -306,11 +263,7 @@ const customInputTypes = {
   spritePicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       block.getVars = function () {
-        return {
-          [Blockly.BlockValueType.SPRITE]: [
-            block.getFieldValue(inputConfig.name),
-          ],
-        };
+        return [block.getFieldValue(inputConfig.name)];
       };
 
       currentInputRow
