@@ -20,6 +20,15 @@
   }
 }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .patternPanel {
   font-size: 13px;
   user-select: none;
@@ -100,6 +109,11 @@
   transition: 0.1s ease-in-out;
   cursor: pointer;
 
+  &Generating {
+    pointer-events: none;
+    cursor: initial;
+  }
+
   &:hover{
     transform: scale(1.05, 1.05);
     transition: 0.1s ease-in-out;
@@ -113,6 +127,7 @@
 
   border-radius: 50%;
   transition: 0.1s ease-in-out;
+  animation: 0.5s fade-in;
 
   &:hover{
     transform: scale(1.4, 1.4);
@@ -149,7 +164,7 @@
     }
 
     &Highlighted {
-      background-color: #222;
+      background-color: #363636;
     }
 
     &Active {

@@ -14,6 +14,8 @@ const aiBotImages = [
   require(`@cdo/static/music/ai/ai-bot-3.png`),
 ];
 
+const aiBotImageThinking = require(`@cdo/static/music/ai/ai-bot-thinking.png`);
+
 const arrowImage = require(`@cdo/static/music/music-callout-arrow.png`);
 
 import {generatePattern} from '../ai/patternAi';
@@ -42,6 +44,9 @@ interface PatternAiPanelProps {
   registerInstrumentLoadCallback: (callback: (kit: string) => void) => void;
 }
 
+type UserTaskType = 'none' | 'generated' | 'drawnDrums';
+type GenerateStateType = 'none' | 'generating' | 'readyToPreview';
+
 /*
  * Renders a UI for designing a pattern. This is currently used within a
  * custom Blockly Field {@link FieldPattern}
@@ -69,7 +74,8 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     return library.kits;
   }, [library.kits]);
 
-  const [userTask, setUserTask] = useState('none');
+  const [userTask, setUserTask] = useState<UserTaskType>('none');
+  const [generateState, setGenerateState] = useState<GenerateStateType>('none');
 
   useEffect(() => {
     if (currentValue.events.some(event => event.tick >= 9)) {
@@ -155,16 +161,17 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
       previewPattern(
         value,
         (tick: number) => setCurrentPreviewTick(tick),
-        () => setCurrentPreviewTick(0)
+        () => {
+          setCurrentPreviewTick(0);
+        }
       );
     },
     [previewPattern, setCurrentPreviewTick]
   );
 
   const stopPreview = useCallback(() => {
-    setCurrentPreviewTick(0);
     cancelPreviews();
-  }, [setCurrentPreviewTick, cancelPreviews]);
+  }, [cancelPreviews]);
 
   useEffect(() => {
     if (!isInstrumentLoaded(currentValue.kit)) {
@@ -193,16 +200,35 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
   const handleAiClick = useCallback(async () => {
     const seedEvents = currentValue.events.filter(event => event.tick <= 8);
     generatePattern(seedEvents, 8, 32 - 8, aiTemperature, newEvents => {
-      const newValue: PatternEventValue = {
-        kit: currentValue.kit,
-        length: currentValue.length,
-        events: newEvents,
-      };
-      onChange(newValue);
+      currentValue.events = newEvents;
+      onChange(currentValue);
 
-      startPreview(newValue);
+      if (currentPreviewTick === 0) {
+        startPreview(currentValue);
+        setGenerateState('none');
+      } else {
+        // If a preview is already playing, we can stop the current one, and wait for
+        // it to cleanly complete, before beginning the next one.
+        stopPreview();
+        setGenerateState('readyToPreview');
+      }
     });
-  }, [currentValue, onChange, aiTemperature, startPreview]);
+    setGenerateState('generating');
+  }, [
+    currentValue,
+    onChange,
+    aiTemperature,
+    stopPreview,
+    startPreview,
+    currentPreviewTick,
+  ]);
+
+  useEffect(() => {
+    if (currentPreviewTick === 0 && generateState === 'readyToPreview') {
+      startPreview(currentValue);
+      setGenerateState('none');
+    }
+  }, [currentPreviewTick, generateState, currentValue, startPreview]);
 
   const aiTemperatureMin = 0.5;
   const aiTemperatureMax = 2;
@@ -287,7 +313,11 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
                   </span>
                 </div>
                 {arrayOfTicks
-                  .filter(tick => userTask === 'generated' || tick < 9)
+                  .filter(
+                    tick =>
+                      (userTask === 'generated' && generateState === 'none') ||
+                      tick < 9
+                  )
                   .map(tick => {
                     return (
                       <div
@@ -316,10 +346,16 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
             )}
           >
             <img
-              src={aiBotImage}
-              alt=""
-              className={styles.aiBot}
+              src={
+                generateState === 'generating' ? aiBotImageThinking : aiBotImage
+              }
+              className={classNames(
+                styles.aiBot,
+                generateState === 'generating' && styles.aiBotGenerating
+              )}
               onClick={handleAiClick}
+              alt=""
+              draggable={false}
             />
             <div>
               <input
