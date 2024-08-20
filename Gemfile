@@ -365,4 +365,5 @@ gem 'statsig', '~> 1.33'
 gem 'mailgun-ruby', '~>1.2.14'
 gem 'mailjet', '~> 1.7.3'
 
+gem 'json-jwt', '~> 1.15'
 gem "json-schema", "~> 4.3"
