@@ -5,6 +5,7 @@ import {
   postAichatCheckSafety,
   postAichatCompletionMessage,
 } from '@cdo/apps/aichat/aichatApi';
+import {ChatMessage} from '@cdo/apps/aichat/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
 import {getChatCompletionMessage} from '@cdo/apps/aiTutor/chatApi';
 import {formatQuestionForAITutor} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
@@ -86,7 +87,7 @@ const AITutorTester: React.FC<AITutorTesterProps> = ({allowed}) => {
 
   const getGenAIResponses = async (row: AIInteraction) => {
     const systemPrompt = row.systemPrompt ? row.systemPrompt : '';
-    const chatMessage = {
+    const chatMessage: ChatMessage = {
       chatMessageText: row.studentInput,
       role: Role.USER,
       status: 'ok',

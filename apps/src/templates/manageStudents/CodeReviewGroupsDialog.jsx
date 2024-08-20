@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {useState, useEffect, useCallback} from 'react';
 
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import CodeReviewGroupsManager from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsManager';
 import color from '@cdo/apps/util/color';
