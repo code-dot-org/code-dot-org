@@ -18,11 +18,12 @@ const AccountType: React.FunctionComponent = () => {
 
   return (
     <main className={style.wrapper}>
-      <div className={style.contentContainer}>
+      <div className={style.accountTypeContentContainer}>
         <AccountBanner
           heading={locale.create_your_free_account()}
           desc={locale.create_your_free_account_desc()}
           showLogo={false}
+          className={style.headerBanner}
         />
         <div className={style.cardWrapper}>
           <AccountCard
