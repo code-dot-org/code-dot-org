@@ -6,7 +6,6 @@ import {
   matchPath,
   useLocation,
   useNavigate,
-  useParams,
 } from 'react-router-dom';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
@@ -30,11 +29,14 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     (state: {teacherSections: {sections: SectionsData}}) =>
       state.teacherSections.sections
   );
+  const selectedSectionId = useSelector(
+    (state: {teacherSections: {selectedSectionId: number}}) =>
+      state.teacherSections.selectedSectionId
+  );
 
   const [sectionArray, setSectionArray] = useState<
     {value: string; text: string}[]
   >([]);
-  const params = useParams();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -163,7 +165,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
           }}
           labelText=""
           size="m"
-          selectedValue={params.sectionId}
+          selectedValue={String(selectedSectionId)}
           className={styles.sectionDropdown}
           name="section-dropdown"
         />

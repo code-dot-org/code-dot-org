@@ -1,5 +1,5 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import {useSelector} from 'react-redux';
 import {
   Route,
   Outlet,
@@ -34,29 +34,10 @@ import {
 
 import styles from './teacher-navigation.module.scss';
 
-// Temporary typing until we add teacherSections to `RootState`
-interface TemporaryReduxState {
-  teacherSections: {
-    selectedSectionId: number | undefined;
-    selectedSectionName: string;
-    // Temporary typing
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    selectedStudents: any[];
-    rosterProviderName: string;
-    // Temporary typin
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    sections: any[];
-  };
-}
-
 interface TeacherNavigationRouterProps {
   studioUrlPrefix: string;
-  sectionId: number | undefined;
-  sectionName: string;
-  studentCount: number;
   anyStudentHasProgress: boolean;
   showAITutorTab: boolean;
-  sectionProviderName: string;
 }
 
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
@@ -65,13 +46,31 @@ const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
 
 const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   studioUrlPrefix,
-  sectionId,
-  sectionName,
-  studentCount,
   anyStudentHasProgress,
   showAITutorTab,
-  sectionProviderName,
 }) => {
+  const sectionId = useSelector(
+    (state: {teacherSections: {selectedSectionId: number}}) =>
+      state.teacherSections.selectedSectionId
+  );
+  const sectionName = useSelector(
+    (state: {teacherSections: {selectedSectionName: string}}) =>
+      state.teacherSections.selectedSectionName
+  );
+
+  const studentCount = useSelector(
+    (state: {teacherSections: {selectedStudents: object[]}}) =>
+      state.teacherSections.selectedStudents.length
+  );
+  const providerName = useSelector(
+    (state: {
+      teacherSections: {
+        section: {[id: number]: {rosterProviderName: string}};
+        selectedSectionId: number;
+      };
+    }) => sectionProviderName(state, state.teacherSections.selectedSectionId)
+  );
+
   const routes = (
     <Route
       path={TEACHER_NAVIGATION_SECTIONS_URL}
@@ -126,7 +125,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           element={applyV1TeacherDashboardWidth(
             <SectionLoginInfo
               studioUrlPrefix={studioUrlPrefix}
-              sectionProviderName={sectionProviderName}
+              sectionProviderName={providerName}
             />
           )}
         />
@@ -224,12 +223,4 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   );
 };
 
-export default connect((state: TemporaryReduxState) => ({
-  sectionId: state.teacherSections.selectedSectionId,
-  sectionName: state.teacherSections.selectedSectionName,
-  studentCount: state.teacherSections.selectedStudents.length,
-  sectionProviderName: sectionProviderName(
-    state,
-    state.teacherSections.selectedSectionId
-  ),
-}))(TeacherNavigationRouter);
+export default TeacherNavigationRouter;

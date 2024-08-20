@@ -119,6 +119,10 @@ const IMPORT_LTI_ROSTER_SUCCESS = 'teacherSections/IMPORT_LTI_ROSTER_SUCCESS';
 const UPDATE_SECTION_AI_TUTOR_ENABLED =
   'teacherSections/UPDATE_SECTION_AI_TUTOR_ENABLED';
 
+const START_LOADING_SECTION_DATA = 'teacherSections/START_LOADING_SECTION_DATA';
+const FINISH_LOADING_SECTION_DATA =
+  'teacherSections/FINISH_LOADING_SECTION_DATA';
+
 /** @const A few constants exposed for unit test setup */
 export const __testInterface__ = {
   EDIT_SECTION_REQUEST,
@@ -623,6 +627,14 @@ export const importOrUpdateRoster =
       );
   };
 
+export const startLoadingSectionData = () => ({
+  type: START_LOADING_SECTION_DATA,
+});
+
+export const finishLoadingSectionData = () => ({
+  type: FINISH_LOADING_SECTION_DATA,
+});
+
 /**
  * Initial state of this redux module.
  * Should represent the overall state shape with reasonable default values.
@@ -672,6 +684,7 @@ const initialState = {
   // DCDO Flag - show/hide Lock Section field
   showLockSectionField: null,
   ltiSyncResult: null,
+  isLoadingSectionData: false,
 };
 /**
  * Generate shape for new section
@@ -832,6 +845,7 @@ export default function teacherSections(state = initialState, action) {
 
   if (action.type === SELECT_SECTION) {
     let sectionId;
+    console.log('lfm2', {sectionId: action.sectionId});
     if (action.sectionId) {
       sectionId = parseInt(action.sectionId);
     } else {
@@ -1241,6 +1255,20 @@ export default function teacherSections(state = initialState, action) {
           aiTutorEnabled: aiTutorEnabled,
         },
       },
+    };
+  }
+
+  if (action.type === START_LOADING_SECTION_DATA) {
+    return {
+      ...state,
+      isLoadingSectionData: true,
+    };
+  }
+
+  if (action.type === FINISH_LOADING_SECTION_DATA) {
+    return {
+      ...state,
+      isLoadingSectionData: false,
     };
   }
 
