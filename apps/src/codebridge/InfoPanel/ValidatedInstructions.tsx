@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, {useCallback, useContext, useEffect, useState} from 'react';
+import React, {useCallback, useContext} from 'react';
 import {useSelector} from 'react-redux';
 
 import {
@@ -11,11 +11,14 @@ import {
   nextLevelId,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
 import {Button} from '@cdo/apps/componentLibrary/button';
+import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {
   isPredictAnswerLocked,
   setPredictResponse,
 } from '@cdo/apps/lab2/redux/predictLevelRedux';
+import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
+import {MultiFileSource} from '@cdo/apps/lab2/types';
 import PredictQuestion from '@cdo/apps/lab2/views/components/PredictQuestion';
 import PredictSummary from '@cdo/apps/lab2/views/components/PredictSummary';
 import {DialogType, useDialogControl} from '@cdo/apps/lab2/views/dialogs';
@@ -23,6 +26,9 @@ import {ThemeContext} from '@cdo/apps/lab2/views/ThemeWrapper';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+
+import {useCodebridgeContext} from '../codebridgeContext';
+import {appendSystemMessage} from '../redux/consoleRedux';
 
 import moduleStyles from '@codebridge/InfoPanel/styles/validated-instructions.module.scss';
 
@@ -57,12 +63,13 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   className,
   manageNavigation = true,
 }) => {
+  const {onRun, onStop} = useCodebridgeContext();
   const dialogControl = useDialogControl();
   const instructionsText = useSelector(
     (state: {lab: LabState}) => state.lab.levelProperties?.longInstructions
   );
   const hasNextLevel = useSelector(state => nextLevelId(state) !== undefined);
-  const {hasConditions, satisfied, index} = useSelector(
+  const {hasConditions, satisfied} = useSelector(
     (state: {lab: LabState}) => state.lab.validationState
   );
   const predictSettings = useAppSelector(
@@ -77,48 +84,21 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   const isSubmittable = useAppSelector(
     state => state.lab.levelProperties?.submittable
   );
-
-  const hasMetValidation =
-    (!hasConditions && hasRun) || (hasConditions && satisfied);
-
-  // If there are no validation conditions, we can show the continue button so long as
-  // there is another level, manageNavigation is true, and code has been run at least once.
-  // If validation is present, also check that conditions are satisfied.
-  const showContinueButton =
-    !isSubmittable && manageNavigation && hasMetValidation && hasNextLevel;
+  const source = useAppSelector(
+    state => state.lab2Project.projectSource?.source
+  ) as MultiFileSource | undefined;
 
   const appType = useAppSelector(state => state.lab.levelProperties?.appName);
-
-  // If there are no validation conditions, we can show the finish button so long as
-  // this is the last level in the progression and the instructions panel is managing navigation.
-  // If validation is present, also check that conditions are satisfied.
-  const showFinishButton =
-    !isSubmittable && manageNavigation && hasMetValidation && !hasNextLevel;
-
-  const showSubmitButton =
-    isSubmittable && manageNavigation && (hasMetValidation || hasSubmitted);
 
   const dispatch = useAppDispatch();
 
   const {theme} = useContext(ThemeContext) || 'dark';
 
-  const [isFinished, setIsFinished] = useState(false);
-
   const vertical = layout === 'vertical';
 
-  const canShowFinishButton = showFinishButton;
-
-  const onFinish = useCallback(() => {
-    if (beforeNextLevel) {
-      beforeNextLevel();
-    }
-    setIsFinished(true);
-  }, [beforeNextLevel]);
-
-  // Reset the Finish button state when it changes from shown to hidden.
-  useEffect(() => {
-    setIsFinished(false);
-  }, [canShowFinishButton]);
+  const onFinish = () => {
+    // no op for now
+  };
 
   const onNextPanel = useCallback(() => {
     if (beforeNextLevel) {
@@ -153,7 +133,72 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     }
   };
 
-  const canShowContinueButton = showContinueButton && onNextPanel;
+  const handleTest = () => {
+    if (onRun) {
+      dispatch(setIsRunning(true));
+      onRun(true, dispatch, source).finally(() =>
+        dispatch(setIsRunning(false))
+      );
+    } else {
+      dispatch(appendSystemMessage("We don't know how to run your code."));
+    }
+  };
+
+  const handleStop = () => {
+    if (onStop) {
+      onStop();
+      dispatch(setIsRunning(false));
+    } else {
+      dispatch(appendSystemMessage("We don't know how to stop your code."));
+      dispatch(setIsRunning(false));
+    }
+  };
+
+  const getNavigationButtonProps = () => {
+    const hasMetValidation =
+      (!hasConditions && hasRun) || (hasConditions && satisfied);
+
+    // If there are no validation conditions, we can show the finish button so long as
+    // this is the last level in the progression and the instructions panel is managing navigation.
+    // If validation is present, also check that conditions are satisfied.
+    const showFinishButton =
+      !isSubmittable && manageNavigation && hasMetValidation && !hasNextLevel;
+    // If there are no validation conditions, we can show the continue button so long as
+    // there is another level, manageNavigation is true, and code has been run at least once.
+    // If validation is present, also check that conditions are satisfied.
+    const showContinueButton =
+      !isSubmittable && manageNavigation && hasMetValidation && hasNextLevel;
+
+    const showSubmitButton =
+      isSubmittable && manageNavigation && (hasMetValidation || hasSubmitted);
+    const showNavigation =
+      showContinueButton || showFinishButton || showSubmitButton;
+    if (isSubmittable) {
+      return {
+        showNavigation,
+        navigationText: hasSubmitted
+          ? commonI18n.unsubmit()
+          : commonI18n.submit(),
+        handleNavigation: onSubmit,
+      };
+    } else if (hasNextLevel) {
+      return {
+        showNavigation,
+        navigationText: commonI18n.continue(),
+        handleNavigation: onNextPanel,
+        navigationIcon: {iconName: 'arrow-right', iconStyle: 'solid'},
+      };
+    } else {
+      return {
+        showNavigation,
+        navigationText: commonI18n.finish(),
+        handleNavigation: onFinish,
+      };
+    }
+  };
+
+  const {showNavigation, navigationText, navigationIcon, handleNavigation} =
+    getNavigationButtonProps();
 
   // Don't render anything if we don't have any instructions.
   if (instructionsText === undefined) {
@@ -195,43 +240,25 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
             <PredictQuestion
               predictSettings={predictSettings}
               predictResponse={predictResponse}
-              setPredictResponse={setPredictResponse}
+              setPredictResponse={response =>
+                dispatch(setPredictResponse(response))
+              }
               predictAnswerLocked={predictAnswerLocked}
             />
           </div>
         )}
-        {(canShowContinueButton || canShowFinishButton || showSubmitButton) && (
+        {showNavigation && (
           <div
             id="instructions-navigation"
             className={moduleStyles['bubble-' + theme]}
           >
-            {canShowContinueButton && (
-              <Button
-                text={commonI18n.continue()}
-                onClick={onNextPanel}
-                color={'white'}
-                className={moduleStyles.buttonInstruction}
-                iconLeft={{iconName: 'arrow-right', iconStyle: 'solid'}}
-              />
-            )}
-            {canShowFinishButton && (
-              <Button
-                text={commonI18n.finish()}
-                onClick={onFinish}
-                color={'white'}
-                className={moduleStyles.buttonInstruction}
-              />
-            )}
-            {showSubmitButton && (
-              <Button
-                text={
-                  hasSubmitted ? commonI18n.unsubmit() : commonI18n.submit()
-                }
-                onClick={onSubmit}
-                color={'white'}
-                className={moduleStyles.buttonInstruction}
-              />
-            )}
+            <Button
+              text={navigationText}
+              onClick={handleNavigation}
+              color={'white'}
+              className={moduleStyles.buttonInstruction}
+              iconLeft={navigationIcon as FontAwesomeV6IconProps | undefined}
+            />
           </div>
         )}
       </div>
