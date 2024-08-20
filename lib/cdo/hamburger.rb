@@ -149,7 +149,6 @@ class Hamburger
       {title: "about_partners", url: CDO.code_org_url("/about/partners")},
       {title: "about_team", url: CDO.code_org_url("/about/team")},
       {title: "about_news", url: CDO.code_org_url("/about/news")},
-      {title: "about_evaluation", url: CDO.code_org_url("/about/evaluation")},
       {title: "about_jobs", url: CDO.code_org_url("/about/jobs")},
       {title: "about_contact", url: CDO.code_org_url("/contact")},
       {title: "about_faqs", url: CDO.code_org_url("/faq")},
