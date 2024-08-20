@@ -196,7 +196,7 @@ const FinishStudentAccount: React.FunctionComponent<{
                 onChange={onParentEmailChange}
               />
               <div>
-                <BodyThreeText className={style.keepMeUpdated}>
+                <BodyThreeText className={style.parentKeepMeUpdated}>
                   <strong>{locale.keep_me_updated()}</strong>
                 </BodyThreeText>
                 <Checkbox
