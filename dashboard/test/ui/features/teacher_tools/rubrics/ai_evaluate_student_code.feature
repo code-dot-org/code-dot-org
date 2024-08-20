@@ -47,8 +47,7 @@ Feature: Evaluate student code against rubrics using AI
     When I click selector "#ui-floatingActionButton"
     And I wait until element "#uitest-rubric-content" is visible
     And element ".uitest-run-ai-assessment" is disabled
-    And element ".uitest-info-alert" is visible
-    Then I wait until element ".uitest-info-alert" contains text "AI analysis already completed for this project."
+    Then I wait until element ".uitest-rubric-tab-buttons .__react_component_tooltip" contains text "AI analysis already completed for this project."
 
     # Teacher views AI evaluation results in rubric
     And I wait until element "#uitest-next-goal" is visible
@@ -99,8 +98,7 @@ Feature: Evaluate student code against rubrics using AI
 
     # Teacher runs AI evaluation
     When I click selector ".uitest-run-ai-assessment"
-    Then I wait until element ".uitest-info-alert" is visible
-    And I wait until element ".uitest-info-alert" contains text "AI analysis complete."
+    Then I wait until element ".uitest-rubric-tab-buttons .__react_component_tooltip" contains text "AI analysis complete."
 
     # Teacher views AI evaluation results in rubric tab
     And I wait until element "#uitest-next-goal" is visible

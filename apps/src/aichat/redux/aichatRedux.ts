@@ -78,7 +78,6 @@ export interface AichatState {
   savedAiCustomizations: AiCustomizations;
   fieldVisibilities: FieldVisibilities;
   viewMode: ViewMode;
-  currentSessionId?: number;
   // If a save is currently in progress
   saveInProgress: boolean;
   // The type of save action being performed (customization update, publish, model card save, etc).
@@ -374,11 +373,8 @@ export const submitChatContents = createAsyncThunk(
   async (newUserMessageText: string, thunkAPI) => {
     const dispatch = thunkAPI.dispatch as AppDispatch;
     const state = thunkAPI.getState() as RootState;
-    const {
-      savedAiCustomizations: aiCustomizations,
-      chatEventsCurrent,
-      currentSessionId,
-    } = state.aichat;
+    const {savedAiCustomizations: aiCustomizations, chatEventsCurrent} =
+      state.aichat;
 
     const aichatContext: AichatContext = {
       currentLevelId: parseInt(state.progress.currentLevelId || ''),
@@ -403,8 +399,7 @@ export const submitChatContents = createAsyncThunk(
         newUserMessage,
         chatEventsCurrent.filter(isChatMessage) as ChatMessage[],
         aiCustomizations,
-        aichatContext,
-        currentSessionId
+        aichatContext
       );
     } catch (error) {
       Lab2Registry.getInstance()
@@ -430,10 +425,6 @@ export const submitChatContents = createAsyncThunk(
           value: aiCustomizations.selectedModelId,
         },
       ]);
-
-    if (chatApiResponse.session_id) {
-      thunkAPI.dispatch(setChatSessionId(chatApiResponse.session_id));
-    }
 
     if (chatApiResponse.flagged_content) {
       console.log(
@@ -507,7 +498,6 @@ const aichatSlice = createSlice({
     clearChatMessages: state => {
       state.chatEventsPast = [];
       state.chatEventsCurrent = [];
-      state.currentSessionId = undefined;
     },
     setChatMessagePending: (state, action: PayloadAction<ChatMessage>) => {
       state.chatMessagePending = action.payload;
@@ -516,10 +506,6 @@ const aichatSlice = createSlice({
     setNewChatSession: state => {
       state.chatEventsPast.push(...state.chatEventsCurrent);
       state.chatEventsCurrent = [];
-      state.currentSessionId = undefined;
-    },
-    setChatSessionId: (state, action: PayloadAction<number>) => {
-      state.currentSessionId = action.payload;
     },
     setShowWarningModal: (state, action: PayloadAction<boolean>) => {
       state.showWarningModal = action.payload;
@@ -714,7 +700,6 @@ registerReducers({aichat: aichatSlice.reducer});
 export const {
   removeUpdateMessage,
   setNewChatSession,
-  setChatSessionId,
   clearChatMessages,
   setShowWarningModal,
   resetToDefaultAiCustomizations,

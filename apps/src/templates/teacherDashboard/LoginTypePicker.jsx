@@ -8,21 +8,34 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import Typography from '@cdo/apps/componentLibrary/typography/Typography';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
+import {
+  OAuthSectionTypes,
+  LmsLoginTypeNames,
+  LmsLoginInstructionUrls,
+} from '@cdo/apps/lib/ui/accounts/constants';
 import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import color from '@cdo/apps/util/color';
 import experiments from '@cdo/apps/util/experiments';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {Heading3} from '../../legacySharedComponents/Headings';
 import styleConstants from '../../styleConstants';
 
 import CardContainer from './CardContainer';
+import LmsInformationalCard from './LmsInformationalCard';
+import {
+  canvasLogo,
+  cleverLogo,
+  googleClassroomLogo,
+  schoologyLogo,
+} from './LmsInformationalCard/assets';
 import LoginTypeCard from './LoginTypeCard';
 
 const LOGIN_TYPE_SELECTED_EVENT = 'Login Type Selected';
@@ -93,7 +106,14 @@ class LoginTypePicker extends Component {
       providers && providers.includes(OAuthSectionTypes.microsoft_classroom);
     const withClever =
       providers && providers.includes(OAuthSectionTypes.clever);
-    const hasThirdParty = withGoogle | withMicrosoft | withClever;
+    const withLti = providers && providers.includes(SectionLoginType.lti_v1);
+    const withAllLmsProviders =
+      providers &&
+      [
+        OAuthSectionTypes.google_classroom,
+        OAuthSectionTypes.clever,
+        SectionLoginType.lti_v1,
+      ].every(provider => providers.includes(provider));
     const currentUser = getStore().getState().currentUser;
     const inUSA =
       ['US', 'RD'].includes(currentUser.countryCode) ||
@@ -111,6 +131,7 @@ class LoginTypePicker extends Component {
       scroll: {
         overflowX: 'hidden',
         overflowY: 'auto',
+        marginBottom: '16px',
       },
       thirdPartyProviderUpsell: {
         marginBottom: '10px',
@@ -136,13 +157,21 @@ class LoginTypePicker extends Component {
         color: color.neutral_dark,
         ...fontConstants['main-font-semi-bold'],
       },
-      learnHow: {
-        marginTop: '12px',
-      },
       emailPolicyNote: {
         marginBottom: '31px',
         paddingTop: '8px',
         borderTop: `1px solid ${color.neutral_dark}`,
+      },
+      subheader: {
+        color: color.charcoal,
+      },
+      lmsInfoCardsContainer: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'flex-start',
+        rowGap: '16px',
+        columnGap: '16px',
+        paddingBottom: '16px',
       },
     };
 
@@ -182,6 +211,13 @@ class LoginTypePicker extends Component {
             handleClose={() => this.setState({isLearnMoreOpen: false})}
           />
         )}
+        <Typography
+          style={style.subheader}
+          semanticTag={'h6'}
+          visualAppearance={'heading-xs'}
+        >
+          {i18n.loginTypes()}
+        </Typography>
         <div style={style.scroll}>
           <CardContainer>
             {withGoogle && (
@@ -195,16 +231,54 @@ class LoginTypePicker extends Component {
             <WordLoginCard onClick={this.onLoginTypeSelect} />
             <EmailLoginCard onClick={this.onLoginTypeSelect} />
           </CardContainer>
-          {!hasThirdParty && (
-            <p style={{...style.mediumText, ...style.learnHow}}>
-              {i18n.thirdPartyProviderUpsell() + ' '}
-              <a href="https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-or-Clever">
-                {i18n.learnHow()}
-              </a>
-              {' ' + i18n.connectAccountThirdPartyProviders()}
-            </p>
-          )}
         </div>
+        {experiments.isEnabled(experiments.SECTION_CREATE_LMS_CARDS) &&
+          !withAllLmsProviders && (
+            <>
+              <Typography
+                style={style.subheader}
+                semanticTag={'h6'}
+                visualAppearance={'heading-xs'}
+              >
+                {i18n.lmsIntegrations()}
+              </Typography>
+              <div
+                style={style.lmsInfoCardsContainer}
+                data-testid={'lms-info-cards-container'}
+              >
+                {!withClever && (
+                  <LmsInformationalCard
+                    lmsName={LmsLoginTypeNames.clever}
+                    lmsLogo={cleverLogo}
+                    lmsInformationalUrl={LmsLoginInstructionUrls.clever}
+                  />
+                )}
+                {!withGoogle && (
+                  <LmsInformationalCard
+                    lmsName={LmsLoginTypeNames.google_classroom}
+                    lmsLogo={googleClassroomLogo}
+                    lmsInformationalUrl={
+                      LmsLoginInstructionUrls.google_classroom
+                    }
+                  />
+                )}
+                {!withLti && (
+                  <>
+                    <LmsInformationalCard
+                      lmsName={LmsLoginTypeNames.canvas}
+                      lmsLogo={canvasLogo}
+                      lmsInformationalUrl={LmsLoginInstructionUrls.canvas}
+                    />
+                    <LmsInformationalCard
+                      lmsName={LmsLoginTypeNames.schoology}
+                      lmsLogo={schoologyLogo}
+                      lmsInformationalUrl={LmsLoginInstructionUrls.schoology}
+                    />
+                  </>
+                )}
+              </div>
+            </>
+          )}
         <div style={style.footer}>
           <p style={{...style.mediumText, ...style.emailPolicyNote}}>
             {i18n.note()}
