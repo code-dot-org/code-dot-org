@@ -44,9 +44,8 @@ interface PatternAiPanelProps {
   registerInstrumentLoadCallback: (callback: (kit: string) => void) => void;
 }
 
-type UserTaskType = 'none' | 'generated' | 'drawnDrums';
+type UserCompletedTaskType = 'none' | 'generated' | 'drawnDrums';
 type GenerateStateType = 'none' | 'generating';
-type PreviewStateType = 'none' | 'readyToPreview';
 
 /*
  * Renders a UI for designing a pattern. This is currently used within a
@@ -75,19 +74,9 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     return library.kits;
   }, [library.kits]);
 
-  const [userTask, setUserTask] = useState<UserTaskType>('none');
+  const [userCompletedTask, setUserCompletedTask] =
+    useState<UserCompletedTaskType>('none');
   const [generateState, setGenerateState] = useState<GenerateStateType>('none');
-  const [previewState, setPreviewState] = useState<PreviewStateType>('none');
-
-  useEffect(() => {
-    if (currentValue.events.some(event => event.tick >= 9)) {
-      setUserTask('generated');
-    } else if (currentValue.events.length >= 4) {
-      if (userTask === 'none') {
-        setUserTask('drawnDrums');
-      }
-    }
-  }, [currentValue.events, userTask]);
 
   const currentFolder = useMemo(() => {
     // Default to the first available kit if the current kit is not found in this library.
@@ -142,7 +131,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
         ? styles.cellSeedHighlighted
         : isSeed
         ? styles.cellSeedDefault
-        : userTask !== 'generated'
+        : userCompletedTask !== 'generated'
         ? styles.cellGeneratedInvisible
         : !isSeed && isActive
         ? styles.cellGeneratedActive
@@ -157,27 +146,6 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     currentValue.events = [];
     onChange(currentValue);
   }, [onChange, currentValue]);
-
-  const startPreview = useCallback(
-    (value: PatternEventValue) => {
-      previewPattern(
-        value,
-        (tick: number) => {
-          console.log('setcurrentpreviewtick', tick);
-          setCurrentPreviewTick(tick);
-        },
-        () => {
-          console.log('setcurrentpreviewtick', 0);
-          setCurrentPreviewTick(0);
-        }
-      );
-    },
-    [previewPattern, setCurrentPreviewTick]
-  );
-
-  const stopPreview = useCallback(() => {
-    cancelPreviews();
-  }, [cancelPreviews]);
 
   useEffect(() => {
     if (!isInstrumentLoaded(currentValue.kit)) {
@@ -203,22 +171,40 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     registerInstrumentLoadCallback,
   ]);
 
-  const playPreview = useCallback(() => {
-    if (currentPreviewTick === 0) {
-      startPreview(currentValue);
-    } else {
-      // If a preview is already playing, we can stop the current one, and wait for
-      // it to cleanly complete, before beginning the next one.
-      stopPreview();
-      setPreviewState('readyToPreview');
+  // Tracks the tasks completed by the user.
+  useEffect(() => {
+    if (currentValue.events.some(event => event.tick >= 9)) {
+      setUserCompletedTask('generated');
+    } else if (currentValue.events.length >= 4) {
+      if (userCompletedTask === 'none') {
+        setUserCompletedTask('drawnDrums');
+      }
     }
-  }, [
-    currentPreviewTick,
-    currentValue,
-    startPreview,
-    stopPreview,
-    setPreviewState,
-  ]);
+  }, [currentValue.events, userCompletedTask]);
+
+  const startPreview = useCallback(
+    (value: PatternEventValue) => {
+      previewPattern(
+        value,
+        (tick: number) => {
+          setCurrentPreviewTick(tick);
+        },
+        () => {
+          setCurrentPreviewTick(0);
+        }
+      );
+    },
+    [previewPattern, setCurrentPreviewTick]
+  );
+
+  const stopPreview = useCallback(() => {
+    cancelPreviews();
+    setCurrentPreviewTick(0);
+  }, [cancelPreviews]);
+
+  const playPreview = useCallback(() => {
+    startPreview(currentValue);
+  }, [startPreview, currentValue]);
 
   const handleAiClick = useCallback(async () => {
     stopPreview();
@@ -234,13 +220,6 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     setGenerateState('generating');
   }, [currentValue, onChange, aiTemperature, stopPreview, playPreview]);
 
-  useEffect(() => {
-    if (currentPreviewTick === 0 && previewState === 'readyToPreview') {
-      startPreview(currentValue);
-      setPreviewState('none');
-    }
-  }, [currentPreviewTick, previewState, currentValue, startPreview]);
-
   const aiTemperatureMin = 0.5;
   const aiTemperatureMax = 2;
 
@@ -253,8 +232,6 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     aiBotImages.length - 1
   );
   const aiBotImage = aiBotImages[aiBotImageIndex];
-
-  console.log('render', currentPreviewTick);
 
   return (
     <div className={styles.patternPanel}>
@@ -269,7 +246,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
       <LoadingOverlay show={isLoading} />
 
       <div className={styles.body}>
-        {userTask === 'none' && (
+        {userCompletedTask === 'none' && (
           <div className={styles.helpContainer}>
             <div className={classNames(styles.help, styles.helpDrawDrums)}>
               Click to set up the start of your drums.
@@ -289,7 +266,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
             </div>
           </div>
         )}
-        {userTask === 'drawnDrums' && (
+        {userCompletedTask === 'drawnDrums' && (
           <div className={styles.helpContainer}>
             <div className={classNames(styles.help, styles.helpGenerate)}>
               Click on A.I. and it will generate more drums based on what you
@@ -328,7 +305,8 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
                 {arrayOfTicks
                   .filter(
                     tick =>
-                      (userTask === 'generated' && generateState === 'none') ||
+                      (userCompletedTask === 'generated' &&
+                        generateState === 'none') ||
                       tick < 9
                   )
                   .map(tick => {
@@ -338,7 +316,6 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
                           styles.outerCell,
                           tick === currentPreviewTick &&
                             generateState === 'none' &&
-                            previewState === 'none' &&
                             styles.outerCellPlaying
                         )}
                         onClick={() => toggleEvent(sound, tick, index)}
@@ -357,7 +334,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
           <div
             className={classNames(
               styles.botArea,
-              ['drawnDrums', 'generated'].includes(userTask) &&
+              ['drawnDrums', 'generated'].includes(userCompletedTask) &&
                 styles.botAreaVisible
             )}
           >

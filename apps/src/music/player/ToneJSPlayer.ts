@@ -1,5 +1,4 @@
 import {
-  Clock,
   Filter,
   GrainPlayer,
   PingPongDelay,
@@ -50,7 +49,7 @@ class ToneJSPlayer implements AudioPlayer {
     [event in PlayerEvent]?: ((payload?: string) => void)[];
   };
   private loadingInstruments: {[instrumentName: string]: boolean};
-  private currentSequencePreviewClock: Clock | null;
+  private currentSequencePreviewTimer: NodeJS.Timeout | null;
 
   constructor(
     bpm = DEFAULT_BPM,
@@ -64,7 +63,7 @@ class ToneJSPlayer implements AudioPlayer {
     this.effectBusses = {};
     this.registeredCallbacks = {};
     this.loadingInstruments = {};
-    this.currentSequencePreviewClock = null;
+    this.currentSequencePreviewTimer = null;
     this.generateEffectBusses();
   }
 
@@ -202,6 +201,7 @@ class ToneJSPlayer implements AudioPlayer {
 
   async playSequenceImmediately(
     {instrument, events}: SamplerSequence,
+    length: number,
     onTick?: (tick: number) => void,
     onStop?: () => void
   ) {
@@ -225,28 +225,19 @@ class ToneJSPlayer implements AudioPlayer {
       );
     });
 
-    // Create a clock that ticks forward every 16th note, and stops when the sequence finishes.
-    // We can assume the sequence will finish one 16th note after the last sample starts.
-    const clockEnd = lastSampleStart + Transport.toSeconds('16n');
+    // Play every tick (quarter note) of the sequence.
     let tick = 1;
-    const clock = new Clock(() => {
-      // Protect against the unexpected edge case in which We can apparently get a tick
-      // after we've handled a stop.
-      if (this.currentSequencePreviewClock) {
-        console.log('clock: tick', tick);
+    this.currentSequencePreviewTimer = setInterval(() => {
+      if (tick <= length * 4 * 4) {
+        console.log(tick);
         onTick?.(tick++);
       } else {
-        console.log('clock: skip tick', tick);
-      }
-    }, Transport.toFrequency('16n'))
-      .on('stop', () => {
-        console.log('clock: on stop');
-        this.currentSequencePreviewClock = null;
+        if (this.currentSequencePreviewTimer) {
+          clearInterval(this.currentSequencePreviewTimer);
+        }
         onStop?.();
-      })
-      .start()
-      .stop(`+${clockEnd}`);
-    this.currentSequencePreviewClock = clock;
+      }
+    }, Transport.toSeconds('16n') * 1000);
   }
 
   cancelPreviews() {
@@ -254,8 +245,9 @@ class ToneJSPlayer implements AudioPlayer {
       this.currentPreview.player.stop();
     }
 
-    if (this.currentSequencePreviewClock) {
-      this.currentSequencePreviewClock.stop();
+    if (this.currentSequencePreviewTimer) {
+      clearInterval(this.currentSequencePreviewTimer);
+      this.currentSequencePreviewTimer = null;
     }
 
     this.stopAllSamplers();

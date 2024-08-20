@@ -215,7 +215,12 @@ export default class MusicPlayer {
     if (this.audioPlayer.supportsSamplers()) {
       const sequence = this.convertChordEventToSequence(chordEvent);
       if (sequence) {
-        this.audioPlayer.playSequenceImmediately(sequence, onTick, onStop);
+        this.audioPlayer.playSequenceImmediately(
+          sequence,
+          chordEvent.length,
+          onTick,
+          onStop
+        );
       }
     } else {
       this.audioPlayer.playSamplesImmediately(
@@ -253,7 +258,12 @@ export default class MusicPlayer {
     if (this.audioPlayer.supportsSamplers()) {
       const sequence = this.tuneEventToSequence(tuneEvent);
       if (sequence) {
-        this.audioPlayer.playSequenceImmediately(sequence, onTick, onStop);
+        this.audioPlayer.playSequenceImmediately(
+          sequence,
+          tuneEvent.length,
+          onTick,
+          onStop
+        );
       }
     } else {
       this.audioPlayer.playSamplesImmediately(
@@ -281,7 +291,12 @@ export default class MusicPlayer {
     if (this.audioPlayer.supportsSamplers()) {
       const sequence = this.patternEventToSequence(patternEvent);
       if (sequence) {
-        this.audioPlayer.playSequenceImmediately(sequence, onTick, onStop);
+        this.audioPlayer.playSequenceImmediately(
+          sequence,
+          patternEvent.length,
+          onTick,
+          onStop
+        );
       }
     } else {
       this.audioPlayer.playSamplesImmediately(
