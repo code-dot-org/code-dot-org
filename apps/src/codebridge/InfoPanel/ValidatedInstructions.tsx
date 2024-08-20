@@ -3,7 +3,11 @@ import React, {useCallback, useContext, useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import {navigateToNextLevel} from '@cdo/apps/code-studio/progressRedux';
-import {nextLevelId} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {
+  getCurrentLevel,
+  nextLevelId,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
+import {Button} from '@cdo/apps/componentLibrary/button';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {
@@ -15,6 +19,7 @@ import PredictSummary from '@cdo/apps/lab2/views/components/PredictSummary';
 import {ThemeContext} from '@cdo/apps/lab2/views/ThemeWrapper';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import moduleStyles from '@codebridge/InfoPanel/styles/validated-instructions.module.scss';
 
@@ -53,7 +58,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     (state: {lab: LabState}) => state.lab.levelProperties?.longInstructions
   );
   const hasNextLevel = useSelector(state => nextLevelId(state) !== undefined);
-  const {hasConditions, message, satisfied, index} = useSelector(
+  const {hasConditions, satisfied, index} = useSelector(
     (state: {lab: LabState}) => state.lab.validationState
   );
   const predictSettings = useAppSelector(
@@ -67,6 +72,13 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   // If validation is present, also check that conditions are satisfied.
   const showContinueButton =
     manageNavigation && (!hasConditions || satisfied) && hasNextLevel;
+
+  const hasSubmitted = useAppSelector(
+    state => getCurrentLevel(state)?.status === LevelStatus.submitted
+  );
+  const isSubmittable = useAppSelector(
+    state => state.lab.levelProperties?.submittable
+  );
 
   // If there are no validation conditions, we can show the finish button so long as
   // this is the last level in the progression and the instructions panel is managing navigation.
@@ -134,7 +146,10 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
           <div
             key={instructionsText}
             id="instructions-text"
-            className={moduleStyles['text-' + theme]}
+            className={classNames(
+              moduleStyles['bubble-' + theme],
+              moduleStyles.text
+            )}
           >
             {predictSettings?.isPredictLevel && <PredictSummary />}
             <EnhancedSafeMarkdown
@@ -150,48 +165,28 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
             />
           </div>
         )}
-        {(message || canShowContinueButton || canShowFinishButton) && (
+        {(canShowContinueButton || canShowFinishButton) && (
           <div
-            key={index + ' - ' + message}
-            id="instructions-feedback"
-            className={moduleStyles.feedback}
+            id="instructions-navigation"
+            className={moduleStyles['bubble-' + theme]}
           >
-            <div
-              id="instructions-feedback-message"
-              className={moduleStyles['message-' + theme]}
-            >
-              {message && (
-                <EnhancedSafeMarkdown
-                  markdown={message}
-                  className={moduleStyles.markdownText}
-                  handleInstructionsTextClick={handleInstructionsTextClick}
-                />
-              )}
-              {canShowContinueButton && (
-                <button
-                  id="instructions-continue-button"
-                  type="button"
-                  onClick={onNextPanel}
-                  className={moduleStyles.buttonInstruction}
-                >
-                  {commonI18n.continue()}
-                </button>
-              )}
-              {canShowFinishButton && (
-                <>
-                  <button
-                    id="instructions-finish-button"
-                    type="button"
-                    onClick={onFinish}
-                    disabled={isFinished}
-                    className={moduleStyles.buttonInstruction}
-                  >
-                    {commonI18n.finish()}
-                  </button>
-                  {isFinished && <Heading6>{finalMessage}</Heading6>}
-                </>
-              )}
-            </div>
+            {canShowContinueButton && (
+              <Button
+                text={commonI18n.continue()}
+                onClick={onNextPanel}
+                color={'white'}
+                className={moduleStyles.buttonInstruction}
+                iconLeft={{iconName: 'arrow-right', iconStyle: 'solid'}}
+              />
+            )}
+            {canShowFinishButton && (
+              <Button
+                text={commonI18n.finish()}
+                onClick={onFinish}
+                color={'white'}
+                className={moduleStyles.buttonInstruction}
+              />
+            )}
           </div>
         )}
       </div>

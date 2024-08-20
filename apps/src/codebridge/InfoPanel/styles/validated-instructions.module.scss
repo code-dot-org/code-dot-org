@@ -62,106 +62,38 @@
   }
 }
 
-.imageContainer {
-  text-align: center;
-
-  &.horizontal {
-    text-align: left;
-    width: 140px;
-  }
-
-  .image {
-    cursor: pointer;
-    max-height: 120px;
-
-    &.fixedHeight {
-      height: 70px;
-    }
-  }
-
-  .bigImage {
-    position: absolute;
-    width: 440px;
-    text-align: left;
-    top: 0;
-    left: 0;
-
-    &Left {
-      left: auto;
-      right: 0;
-    }
-
-    img {
-      width: 100%;
-      position: absolute;
-      border: 10px $dark_black solid;
-      z-index: 80;
-      cursor: pointer;
-    }
-  }
-}
-
-%text {
+.text {
   overflow-y: auto;
   white-space: pre-wrap;
-
-  padding: 15px 20px 5px 20px;
-  border-radius: 4px;
 
   margin-bottom: 10px;
   animation: slidein 0.5s;
 }
 
-.text-dark {
-  @extend %text;
-  background-color: $neutral_light;
-  color: $neutral_dark;
+%bubble {
+  padding: 16px;
+  border-radius: 4px;
 }
 
-.text-light {
-  @extend %text;
+.bubble-dark {
+  @extend %bubble;
+  background-color: $neutral_dark90;
+  color: $light_white;
+
+  h1, h2, h3, h4 {
+    color: $light_white;
+  }
+}
+
+.bubble-light {
+  @extend %bubble;
   background-color: $light_white;
   color: $neutral_dark;
 }
 
-%message {
-  padding: 15px 20px 5px 20px;
-  border-radius: 4px;
-  border: dashed $neutral_dark 2px;
-  animation: slidein 0.5s;
-}
-
-.message-dark {
-  @extend %message;
-  background-color: $neutral_light;
-  color: $neutral_dark;
-  border: dashed $neutral_light 2px;
-}
-
-.message-light {
-  @extend %message;
-  background-color: $light_gray_50;
-  color: $neutral_dark;
-  border: dashed $light_gray_100 2px;
-}
-
 .buttonInstruction {
-  font-size: 14px;
-  background-color: $brand_secondary_default;
-  border-color: $brand_secondary_default;
-  color: $neutral_light;
   width: 100%;
-  padding: 5px 10px;
-  border-radius: 4px;
-  height: 38px;
-  margin: 0 0 10px 0;
-  &:disabled,
-  &[aria-disabled='true'] {
-    cursor: not-allowed;
-    border-color: $light_gray_200;
-    background-color: $light_gray_200;
-    color: $light_white;
-  }
+  height: 32px;
 }
 
 .markdownText {
