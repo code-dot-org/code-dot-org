@@ -287,6 +287,7 @@ gem 'addressable'
 gem 'bcrypt', '3.1.13'
 gem 'sshkit'
 gem 'validates_email_format_of'
+gem 'validate_url', '~> 1.0.15'
 
 gem 'composite_primary_keys', '~> 13.0'
 
