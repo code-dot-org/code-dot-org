@@ -46,6 +46,7 @@ module Pd
       SUBJECT_CSF_101: SUBJECT_CSF_101 = 'Intro'.freeze,
       SUBJECT_CSF_201: SUBJECT_CSF_201 = 'Deep Dive'.freeze,
       SUBJECT_CSF_DISTRICT: SUBJECT_CSF_DISTRICT = 'District'.freeze,
+      SUBJECT_FIT: SUBJECT_FIT = 'Code.org Facilitator Weekend'.freeze,
       SUBJECT_SUMMER_WORKSHOP: SUBJECT_SUMMER_WORKSHOP = '5-day Summer'.freeze,
       SUBJECT_VIRTUAL_KICKOFF: SUBJECT_VIRTUAL_KICKOFF = 'Virtual Workshop Kickoff'.freeze,
       SUBJECT_ADMIN_COUNSELOR_WELCOME: SUBJECT_ADMIN_COUNSELOR_WELCOME = 'Welcome'.freeze,
@@ -180,11 +181,11 @@ module Pd
         SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 = 'Phase 3 - Semester 2'.freeze
       ],
       COURSE_CSF => [
-        SUBJECT_FIT = 'Code.org Facilitator Weekend'.freeze
+        SUBJECT_CSF_FIT = SUBJECT_FIT
       ],
       COURSE_CSA => [
         SUBJECT_CSA_CAPSTONE = 'Capstone'.freeze,
-        SUBJECT_CSA_FIT = 'Code.org Facilitator Weekend'.freeze,
+        SUBJECT_CSA_FIT = SUBJECT_FIT
       ],
       COURSE_CSP => [
         LEGACY_SUBJECT_CSP_WORKSHOP_1_1920 = 'Workshop 1: Unit 3'.freeze,
@@ -211,8 +212,8 @@ module Pd
         LEGACY_SUBJECT_CSP_VIRTUAL_8 = 'Virtual Workshop 8'.freeze,
 
         SUBJECT_CSP_FOR_RETURNING_TEACHERS = 'Workshop for Returning Teachers'.freeze,
-        SUBJECT_CSP_FIT = 'Code.org Facilitator Weekend'.freeze,
-        SUBJECT_CSP_TEACHER_CON = 'TeacherCon'.freeze
+        SUBJECT_CSP_FIT = SUBJECT_FIT,
+        SUBJECT_CSP_TEACHER_CON = SUBJECT_TEACHER_CON
       ],
       COURSE_CSD => [
         LEGACY_SUBJECT_CSD_WORKSHOP_1_1920 = 'Workshop 1: Unit 3'.freeze,
@@ -239,8 +240,8 @@ module Pd
         LEGACY_SUBJECT_CSD_VIRTUAL_8 = 'Virtual Workshop 8'.freeze,
 
         SUBJECT_CUSTOM_WORKSHOP = 'Custom Workshop'.freeze,
-        SUBJECT_CSD_FIT = 'Code.org Facilitator Weekend'.freeze,
-        SUBJECT_CSD_TEACHER_CON = 'TeacherCon'.freeze
+        SUBJECT_CSD_FIT = SUBJECT_FIT,
+        SUBJECT_CSD_TEACHER_CON = SUBJECT_TEACHER_CON
       ]
     }.freeze
 
