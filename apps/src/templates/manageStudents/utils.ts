@@ -1,6 +1,6 @@
 export function getFullName(student: {
   name: string;
-  familyName: string;
+  familyName?: string;
 }): string;
 export function getFullName(name: string, familyName?: string): string;
 
