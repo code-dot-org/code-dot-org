@@ -91,93 +91,68 @@ const FinishStudentAccount: React.FunctionComponent<{
         <Heading2>{locale.finish_creating_student_account()}</Heading2>
         <BodyTwoText>{locale.tailor_experience()}</BodyTwoText>
       </div>
-      <div className={style.inputContainer}>
+      <fieldset className={style.inputContainer}>
         <div className={style.parentInfoContainer}>
-          <span className={style.parentCheckboxContainer}>
-            <div className={style.parentCheckbox}>
-              <Checkbox
-                label=""
-                checked={isParent}
-                onChange={onIsParentChange}
-                name="isParent"
-              />
-            </div>
-            <BodyTwoText>{locale.i_am_a_parent_or_guardian()}</BodyTwoText>
-          </span>
+          <Checkbox
+            name="isParentCheckbox"
+            label={locale.i_am_a_parent_or_guardian()}
+            checked={isParent}
+            onChange={onIsParentChange}
+          />
           {isParent && (
             <>
-              <BodyThreeText className={style.studentQuestionLabel}>
-                <strong>{locale.parent_guardian_email()}</strong>
-              </BodyThreeText>
               <TextField
                 name="parentEmail"
-                onChange={onParentEmailChange}
+                label={locale.parent_guardian_email()}
                 value={parentEmail}
-                className={style.parentEmailInput}
                 placeholder={locale.parentEmailPlaceholder()}
+                onChange={onParentEmailChange}
               />
-              <BodyThreeText className={style.studentQuestionLabel}>
-                <strong>{locale.keep_me_updated()}</strong>
-              </BodyThreeText>
-              <span className={style.parentCheckboxContainer}>
-                <div className={style.parentCheckbox}>
-                  <Checkbox
-                    label=""
-                    checked={parentEmailOptInChecked}
-                    onChange={onParentEmailOptInChange}
-                    name="parentEmailOptIn"
-                  />
-                </div>
-                <BodyTwoText>{locale.email_me_with_updates()}</BodyTwoText>
-              </span>
+              <div>
+                <BodyThreeText className={style.keepMeUpdated}>
+                  <strong>{locale.keep_me_updated()}</strong>
+                </BodyThreeText>
+                <Checkbox
+                  name="parentEmailOptIn"
+                  label={locale.email_me_with_updates()}
+                  checked={parentEmailOptInChecked}
+                  onChange={onParentEmailOptInChange}
+                />
+              </div>
             </>
           )}
         </div>
-        <BodyThreeText className={style.studentQuestionLabel}>
-          <strong>{locale.display_name_eg()}</strong>
-        </BodyThreeText>
         <TextField
           name="userName"
-          onChange={onNameChange}
+          label={locale.display_name_eg()}
           value={name}
           placeholder={locale.coder()}
+          onChange={onNameChange}
         />
-        <BodyThreeText className={style.studentQuestionLabel}>
-          <strong>{locale.what_is_your_age()}</strong>
-        </BodyThreeText>
         <SimpleDropdown
-          id="uitest-age-dropdown"
           name="userAge"
-          labelText=""
-          isLabelVisible={false}
+          labelText={locale.what_is_your_age()}
+          size="m"
           items={ageOptions}
           selectedValue={age}
           onChange={onAgeChange}
-          size="m"
         />
-        <BodyThreeText className={style.studentQuestionLabel}>
-          <strong>{locale.what_state_are_you_in()}</strong>
-        </BodyThreeText>
         <SimpleDropdown
-          id="uitest-state-dropdown"
           name="userState"
-          labelText=""
-          isLabelVisible={false}
+          labelText={locale.what_state_are_you_in()}
+          size="m"
           items={usStateOptions}
           selectedValue={state}
           onChange={onStateChange}
-          size="m"
         />
-        <BodyThreeText className={style.studentQuestionLabel}>
-          <strong>{locale.what_is_your_gender()}</strong>
-        </BodyThreeText>
         <TextField
           name="userGender"
-          onChange={onGenderChange}
+          label={locale.what_is_your_gender()}
           value={gender}
           placeholder={locale.female()}
+          onChange={onGenderChange}
         />
-      </div>
+      </fieldset>
       <div className={style.finishSignUpButtonContainer}>
         <Button
           className={style.finishSignUpButton}
