@@ -2,11 +2,11 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {CSSProperties, useState} from 'react';
 
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';

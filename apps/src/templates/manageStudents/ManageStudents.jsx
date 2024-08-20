@@ -3,7 +3,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import SyncOmniAuthSectionControl from '@cdo/apps/accounts/SyncOmniAuthSectionControl';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {loadSectionStudentData} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 
 import ManageStudentsTable from './ManageStudentsTable';

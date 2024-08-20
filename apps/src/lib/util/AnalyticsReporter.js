@@ -58,7 +58,7 @@ class AnalyticsReporter {
    *  StatsigReporter, or the files sending events can import that file instead
    *  and we can delete this one.
    */
-  sendEvent(eventName, payload, analyticsTool = PLATFORMS.AMPLITUDE) {
+  sendEvent(eventName, payload, analyticsTool = PLATFORMS.BOTH) {
     if ([PLATFORMS.STATSIG, PLATFORMS.BOTH].includes(analyticsTool)) {
       statsigReporter.sendEvent(eventName, payload);
     }

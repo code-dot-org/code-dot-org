@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Raqs Bazmi", body: "Raqs Bazmini Dasturlang! Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, Disneyning \"Encanto,\" musiqasi va boshqalar ishtirok etadi!", image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: "She'r Tasviri", body: "Ushbu "Dasturlash soati"da mumtoz she'rga tasvir va animatsiya qo'shing!", image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: "Rassom", body: "Rassom bilan ajoyib rasmlar va dizaynlar chizing!", image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: "Infinity Play Lab", body: "Disney Infinity qahramonlari ishtirokida hikoya yoki oʻyin yaratish uchun Play Lab’dan foydalaning.", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

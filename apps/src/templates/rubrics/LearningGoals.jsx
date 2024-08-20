@@ -306,6 +306,11 @@ export default function LearningGoals({
   const [aiFeedbackId, setAiFeedbackId] = useState(null);
   const [doneLoading, setDoneLoading] = useState(false);
 
+  // The position of the 'arrow' that points up from the AiAssessment region
+  // to the EvidenceLevels component. When this value is 0, there is no
+  // specific left and the arrow is centered.
+  const [arrowLeft, setArrowLeft] = useState(10);
+
   // The ref version of this state is used when updating the information based
   // on saved info retrieved by network requests so as not to race them.
   const [currentLearningGoal, setCurrentLearningGoal] = useState(0);
@@ -732,6 +737,7 @@ export default function LearningGoals({
                   submittedEvaluation={submittedEvaluation}
                   isStudent={isStudent}
                   isAutosaving={autosaveStatus === STATUS.IN_PROGRESS}
+                  arrowPositionCallback={setArrowLeft}
                 />
                 {teacherHasEnabledAi &&
                   !!studentLevelInfo &&
@@ -741,6 +747,14 @@ export default function LearningGoals({
                       id="tour-ai-assessment"
                       className={style.aiAssessmentOuterBlock}
                     >
+                      {/* Draw the arrow pointing at the AI suggested buttons.
+                          EvidenceLevels sets the arrowLeft parameter to reflect the
+                          position of the buttons. And we subtract some to center it.*/}
+                      <div
+                        id="ai-assessment-arrow"
+                        className={style.aiAssessmentArrow}
+                        style={arrowLeft === 0 ? {} : {left: arrowLeft - 10}}
+                      />
                       <AiAssessment
                         isAiAssessed={
                           learningGoals[currentLearningGoal].aiEnabled

@@ -82,7 +82,6 @@ const SILENCED = [
   'tutorialExplorer',
   'cookieBanner',
   'userHeaderEventLogger',
-  'userHeaderStatsigReporter',
   'regionalPartnerMiniContact',
 
   // other entry points
