@@ -354,7 +354,7 @@ gem "pycall", ">= 1.5.2"
 
 gem "delayed_job_active_record", "~> 4.1"
 
-gem 'rack-cors', '~> 2.0.1'
+gem 'rack-cors', '~> 2.0.2'
 
 # pin http to 5.0 or greater so that statsig does not pull in an older version.
 # older versions depend on http-parser which breaks some developer builds.
