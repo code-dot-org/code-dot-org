@@ -1,4 +1,11 @@
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {
+  AiInteractionStatus,
+  AiRequestExecutionStatus,
+} from '@cdo/generated-scripts/sharedConstants';
+
+import {Role} from '../aiComponentLibrary/chatMessage/types';
+import {ValueOf} from '../types/utils';
 
 import {
   AiCustomizations,
@@ -10,10 +17,19 @@ import {
   LogChatEventApiResponse,
 } from './types';
 
-const CHAT_COMPLETION_URL = '/aichat/chat_completion';
-const CHAT_CHECK_SAFETY_URL = '/aichat/check_message_safety';
-const LOG_CHAT_EVENT_URL = '/aichat/log_chat_event';
-const STUDENT_CHAT_HISTORY_URL = '/aichat/student_chat_history';
+const ROOT_URL = '/aichat';
+const paths = {
+  CHAT_COMPLETION_URL: `${ROOT_URL}/chat_completion`,
+  CHAT_CHECK_SAFETY_URL: `${ROOT_URL}/check_message_safety`,
+  LOG_CHAT_EVENT_URL: `${ROOT_URL}/log_chat_event`,
+  START_CHAT_COMPLETION_URL: `${ROOT_URL}/start_chat_completion`,
+  GET_CHAT_REQUEST_URL: `${ROOT_URL}/chat_request`,
+  STUDENT_CHAT_HISTORY_URL: `${ROOT_URL}/student_chat_history`,
+};
+
+const MAX_POLLING_TIME_MS = 45000;
+const MIN_POLLING_INTERVAL_MS = 1000;
+const DEFAULT_BACKOFF_RATE = 1;
 
 /**
  * This function formats chat completion messages and aichatParameters, sends a POST request
@@ -25,7 +41,9 @@ export async function postAichatCompletionMessage(
   storedMessages: ChatMessage[],
   aiCustomizations: AiCustomizations,
   aichatContext: AichatContext,
-  sessionId?: number
+  useAsyncPolling = false,
+  // Configurable for testing
+  maxPollingTimeMs = MAX_POLLING_TIME_MS
 ): Promise<ChatCompletionApiResponse> {
   const aichatModelCustomizations: AichatModelCustomizations = {
     selectedModelId: aiCustomizations.selectedModelId,
@@ -33,15 +51,25 @@ export async function postAichatCompletionMessage(
     retrievalContexts: aiCustomizations.retrievalContexts,
     systemPrompt: aiCustomizations.systemPrompt,
   };
+
+  if (useAsyncPolling) {
+    return postChatCompletionAsyncPolling(
+      newMessage,
+      storedMessages,
+      aichatModelCustomizations,
+      aichatContext,
+      maxPollingTimeMs
+    );
+  }
+
   const payload = {
     newMessage,
     storedMessages,
     aichatModelCustomizations,
     aichatContext,
-    ...(sessionId ? {sessionId} : {}),
   };
   const response = await HttpClient.post(
-    CHAT_COMPLETION_URL,
+    paths.CHAT_COMPLETION_URL,
     JSON.stringify(payload),
     true,
     {
@@ -65,7 +93,7 @@ export async function postLogChatEvent(
     aichatContext,
   };
   const response = await HttpClient.post(
-    LOG_CHAT_EVENT_URL,
+    paths.LOG_CHAT_EVENT_URL,
     JSON.stringify(payload),
     true,
     {
@@ -92,7 +120,7 @@ export async function postAichatCheckSafety(
     message,
   };
   const response = await HttpClient.post(
-    CHAT_CHECK_SAFETY_URL,
+    paths.CHAT_CHECK_SAFETY_URL,
     JSON.stringify(payload),
     true,
     {
@@ -122,7 +150,139 @@ export async function getStudentChatHistory(
     params.scriptLevelId = scriptLevelId.toString();
   }
   const response = await HttpClient.fetchJson<ChatEvent[]>(
-    STUDENT_CHAT_HISTORY_URL + '?' + new URLSearchParams(params)
+    paths.STUDENT_CHAT_HISTORY_URL + '?' + new URLSearchParams(params)
   );
   return response.value;
+}
+
+interface StartChatCompletionResponse {
+  requestId: number;
+  pollingIntervalMs: number;
+  backoffRate: number;
+}
+
+export interface GetChatRequestResponse {
+  executionStatus: ValueOf<typeof AiRequestExecutionStatus>;
+  response: string;
+}
+
+/**
+ * Perform chat completion by initiating an asynchronous request and polling for the response.
+ */
+async function postChatCompletionAsyncPolling(
+  newMessage: ChatMessage,
+  storedMessages: ChatMessage[],
+  aichatModelCustomizations: AichatModelCustomizations,
+  aichatContext: AichatContext,
+  maxPollingTimeMs = MAX_POLLING_TIME_MS
+): Promise<ChatCompletionApiResponse> {
+  const payload = {
+    newMessage,
+    storedMessages,
+    aichatModelCustomizations,
+    aichatContext,
+  };
+
+  const response = await HttpClient.post(
+    paths.START_CHAT_COMPLETION_URL,
+    JSON.stringify(payload),
+    true,
+    {
+      'Content-Type': 'application/json; charset=UTF-8',
+    }
+  );
+
+  const {
+    requestId,
+    pollingIntervalMs,
+    backoffRate: serverBackoffRate,
+  } = (await response.json()) as StartChatCompletionResponse;
+
+  const startTime = Date.now();
+  const backoffRate = serverBackoffRate || DEFAULT_BACKOFF_RATE;
+
+  let executionStatus: ValueOf<typeof AiRequestExecutionStatus> =
+    AiRequestExecutionStatus.NOT_STARTED;
+  let currentInterval = Math.max(pollingIntervalMs, MIN_POLLING_INTERVAL_MS);
+  let modelResponse: string = '';
+
+  // Poll for the chat completion request status. We will keep checking until the
+  // request status is greater than RUNNING or QUEUED, or until we reach the max polling time.
+  while (
+    executionStatus < AiRequestExecutionStatus.SUCCESS &&
+    Date.now() - startTime < maxPollingTimeMs
+  ) {
+    await new Promise(resolve => setTimeout(resolve, currentInterval));
+    const chatResponse = await HttpClient.fetchJson<GetChatRequestResponse>(
+      `${paths.GET_CHAT_REQUEST_URL}/${requestId}`
+    );
+    executionStatus = chatResponse.value.executionStatus;
+    modelResponse = chatResponse.value.response;
+    currentInterval *= backoffRate;
+  }
+
+  if (executionStatus < AiRequestExecutionStatus.SUCCESS) {
+    // Timed out
+    throw new Error('Chat completion request timed out');
+  }
+
+  return {
+    messages: getUpdatedMessages(newMessage, modelResponse, executionStatus),
+  };
+}
+
+/**
+ * Get the updated user and assistant message based on the status of the chat completion request.
+ */
+function getUpdatedMessages(
+  userMessage: ChatMessage,
+  modelResponse: string,
+  executionStatus: ValueOf<typeof AiRequestExecutionStatus>
+): ChatMessage[] {
+  switch (executionStatus) {
+    case AiRequestExecutionStatus.SUCCESS:
+      return [
+        {
+          ...userMessage,
+          status: AiInteractionStatus.OK,
+        },
+        {
+          chatMessageText: modelResponse,
+          role: Role.ASSISTANT,
+          timestamp: Date.now(),
+          status: AiInteractionStatus.OK,
+        },
+      ];
+    case AiRequestExecutionStatus.USER_PROFANITY:
+      return [
+        {
+          ...userMessage,
+          status: AiInteractionStatus.PROFANITY_VIOLATION,
+        },
+      ];
+    case AiRequestExecutionStatus.USER_PII:
+      return [
+        {
+          ...userMessage,
+          status: AiInteractionStatus.PII_VIOLATION,
+        },
+      ];
+    case AiRequestExecutionStatus.FAILURE:
+    case AiRequestExecutionStatus.MODEL_PROFANITY:
+    case AiRequestExecutionStatus.MODEL_PII:
+      return [
+        {
+          ...userMessage,
+          status: AiInteractionStatus.ERROR,
+        },
+        {
+          chatMessageText: modelResponse,
+          role: Role.ASSISTANT,
+          timestamp: Date.now(),
+          status: AiInteractionStatus.ERROR,
+        },
+      ];
+    default:
+      throw new Error(`Unexpected status: ${executionStatus}`);
+  }
 }

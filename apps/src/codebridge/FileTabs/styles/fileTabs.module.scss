@@ -25,6 +25,11 @@
   background-color: $dark_charcoal;
 }
 
+.fileTab > span {
+  display: flex;
+  align-items: center;
+}
+
 .inlineButton {
   border: none;
   background: none;

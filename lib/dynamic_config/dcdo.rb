@@ -56,6 +56,7 @@ class DCDOBase < DynamicConfigBase
       'cfu-pin-hide-enabled': DCDO.get('cfu-pin-hide-enabled', false),
       'teacher-local-nav-v2': DCDO.get('teacher-local-nav-v2', false),
       'best-of-stem-2024': DCDO.get('best-of-stem-2024', false),
+      section_create_lms_cards: DCDO.get('section_create_lms_cards', false),
     }
   end
 end

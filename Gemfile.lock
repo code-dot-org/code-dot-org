@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/code-dot-org/image_optim.git
-  revision: 939996f7ad102227c73b42bfda0058f9c66698aa
-  ref: cdo
+  revision: 80664dc6d902e5da75b5f1d162191e31b7b822ae
+  ref: seth/ruby-3.1
   specs:
     image_optim (0.24.2)
       exifr (~> 1.2, >= 1.2.2)
@@ -29,6 +29,13 @@ GIT
       activesupport (>= 4)
       railties (>= 4)
       request_store (~> 1.0)
+
+GIT
+  remote: https://github.com/code-dot-org/omniauth-clever.git
+  revision: d71f68e78592d3d291995a0a313f4900e7853ded
+  specs:
+    omniauth-clever (2.0.0)
+      omniauth-oauth2 (>= 1.1, <= 1.5)
 
 GIT
   remote: https://github.com/code-dot-org/omniauth-openid-connect.git
@@ -69,14 +76,6 @@ GIT
       sprockets (> 3.0)
       sprockets-rails
       tilt
-
-GIT
-  remote: https://github.com/daynew/omniauth-clever.git
-  revision: d217eb5d44ad4d68c52beb9b0b1929cb109e190a
-  branch: clever-v2.1-upgrade
-  specs:
-    omniauth-clever (2.0.0)
-      omniauth-oauth2 (>= 1.1, <= 1.5)
 
 GIT
   remote: https://github.com/dooly-ai/omniauth-microsoft_v2_auth.git
@@ -991,7 +990,7 @@ GEM
       public_suffix
     validates_email_format_of (1.6.3)
       i18n
-    vcr (3.0.3)
+    vcr (6.2.0)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.1)

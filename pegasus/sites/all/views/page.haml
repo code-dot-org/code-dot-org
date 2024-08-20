@@ -132,4 +132,4 @@
       -else
         = partial('page_footer')
 
-    = partial('google_analytics') if File.exists?(sites_dir("#{request.site}/views/google_analytics.haml"))
+    = partial('google_analytics') if File.exist?(sites_dir("#{request.site}/views/google_analytics.haml"))

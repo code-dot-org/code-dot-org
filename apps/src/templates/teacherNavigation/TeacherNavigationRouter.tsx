@@ -1,5 +1,11 @@
 import React from 'react';
-import {Routes, Route, Outlet, generatePath, Navigate} from 'react-router-dom';
+import {
+  Route,
+  Outlet,
+  createRoutesFromElements,
+  createBrowserRouter,
+  RouterProvider,
+} from 'react-router-dom';
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
 
@@ -8,18 +14,20 @@ import SectionProjectsListWithData from '../projects/SectionProjectsListWithData
 import SectionAssessments from '../sectionAssessments/SectionAssessments';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
-import EmptySection from '../teacherDashboard/EmptySection';
 import SectionLoginInfo from '../teacherDashboard/SectionLoginInfo';
 import StatsTableWithData from '../teacherDashboard/StatsTableWithData';
 import TextResponses from '../textResponses/TextResponses';
 
+import DefaultTeacherNavRedirect from './DefaultTeacherNavRedirect';
+import ElementOrEmptyPage from './ElementOrEmptyPage';
 import PageHeader from './PageHeader';
-import {
-  getSectionRouterPath,
-  SECTION_ID_PATH_PART,
-  TEACHER_DASHBOARD_PATHS,
-} from './TeacherDashboardPaths';
 import TeacherNavigationBar from './TeacherNavigationBar';
+import {
+  SPECIFIC_SECTION_BASE_URL,
+  TEACHER_NAVIGATION_BASE_URL,
+  TEACHER_NAVIGATION_PATHS,
+  TEACHER_NAVIGATION_SECTIONS_URL,
+} from './TeacherNavigationPaths';
 
 import styles from './teacher-navigation.module.scss';
 
@@ -32,8 +40,6 @@ interface TeacherNavigationRouterProps {
   showAITutorTab: boolean;
   sectionProviderName: string;
 }
-
-export const TEACHER_NAVIGATION_BARE_URL = `/teacher_dashboard/sections/`;
 
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
   return <div className={styles.widthLockedPage}>{children}</div>;
@@ -48,135 +54,153 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   showAITutorTab,
   sectionProviderName,
 }) => {
-  const renderEmptyStateOrElement = React.useCallback(
-    (element: React.ReactNode) => {
-      if (studentCount === 0 || !anyStudentHasProgress) {
-        return (
-          <EmptySection
-            hasStudents={studentCount !== 0}
-            hasCurriculumAssigned={!anyStudentHasProgress}
-          />
-        );
+  const routes = (
+    <Route
+      path={TEACHER_NAVIGATION_SECTIONS_URL}
+      element={
+        <div className={styles.pageAndSidebar}>
+          <TeacherNavigationBar />
+          <Outlet />
+        </div>
       }
-      return element;
-    },
-    [studentCount, anyStudentHasProgress]
-  );
-
-  const redirectToDefaultPath = React.useMemo(
-    () => (
-      <Navigate
-        to={generatePath(
-          getSectionRouterPath(
-            studentCount === 0
-              ? TEACHER_DASHBOARD_PATHS.manageStudents
-              : TEACHER_DASHBOARD_PATHS.progress
-          ),
-          {sectionId: sectionId}
-        )}
-        replace={true}
-      />
-    ),
-    [sectionId, studentCount]
-  );
-
-  return (
-    <Routes>
+    >
       <Route
+        path={SPECIFIC_SECTION_BASE_URL}
         element={
-          <div className={styles.pageAndSidebar}>
-            <TeacherNavigationBar />
+          <div className={styles.pageWithHeader}>
+            <PageHeader />
             <Outlet />
           </div>
         }
+        loader={async () => {
+          console.log('loading');
+          return null;
+        }}
       >
         <Route
-          path={`${SECTION_ID_PATH_PART}/`}
+          path={''}
           element={
-            <div className={styles.pageWithHeader}>
-              <PageHeader />
-              <Outlet />
-            </div>
+            <DefaultTeacherNavRedirect
+              sectionId={sectionId}
+              studentCount={studentCount}
+            />
           }
-        >
-          <Route
-            path={getSectionRouterPath('/')}
-            element={redirectToDefaultPath}
-          />
-          <Route
-            path={getSectionRouterPath('/*')}
-            element={redirectToDefaultPath}
-          />
-          <Route
-            path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.manageStudents)}
-            element={applyV1TeacherDashboardWidth(
-              <ManageStudents studioUrlPrefix={studioUrlPrefix} />
-            )}
-          />
-          <Route
-            path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.loginInfo)}
-            element={applyV1TeacherDashboardWidth(
-              <SectionLoginInfo
-                studioUrlPrefix={studioUrlPrefix}
-                sectionProviderName={sectionProviderName}
-              />
-            )}
-          />
-          <Route
-            path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.standardsReport)}
-            element={renderEmptyStateOrElement(
-              applyV1TeacherDashboardWidth(<StandardsReport />)
-            )}
-          />
-          <Route
-            path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.projects)}
-            element={renderEmptyStateOrElement(
-              applyV1TeacherDashboardWidth(
+        />
+        <Route
+          path={'*'}
+          element={
+            <DefaultTeacherNavRedirect
+              sectionId={sectionId}
+              studentCount={studentCount}
+            />
+          }
+        />
+        <Route
+          path={TEACHER_NAVIGATION_PATHS.manageStudents}
+          element={applyV1TeacherDashboardWidth(
+            <ManageStudents studioUrlPrefix={studioUrlPrefix} />
+          )}
+        />
+        <Route
+          path={TEACHER_NAVIGATION_PATHS.loginInfo}
+          element={applyV1TeacherDashboardWidth(
+            <SectionLoginInfo
+              studioUrlPrefix={studioUrlPrefix}
+              sectionProviderName={sectionProviderName}
+            />
+          )}
+        />
+        <Route
+          path={TEACHER_NAVIGATION_PATHS.standardsReport}
+          element={
+            <ElementOrEmptyPage
+              showNoStudents={studentCount === 0}
+              showNoCurriculumAssigned={!anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(<StandardsReport />)}
+            />
+          }
+        />
+        <Route
+          path={TEACHER_NAVIGATION_PATHS.projects}
+          element={
+            <ElementOrEmptyPage
+              showNoStudents={studentCount === 0}
+              // Don't show no curriculum assigned error for projects tab.
+              showNoCurriculumAssigned={false}
+              element={applyV1TeacherDashboardWidth(
                 <SectionProjectsListWithData
                   studioUrlPrefix={studioUrlPrefix}
                 />
-              )
-            )}
-          />
-          <Route
-            path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.stats)}
-            element={renderEmptyStateOrElement(
-              applyV1TeacherDashboardWidth(<StatsTableWithData />)
-            )}
-          />
-          <Route
-            path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.progress)}
-            element={renderEmptyStateOrElement(
-              renderEmptyStateOrElement(<SectionProgressSelector />)
-            )}
-          />
-          <Route
-            path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.textResponses)}
-            element={renderEmptyStateOrElement(
-              applyV1TeacherDashboardWidth(<TextResponses />)
-            )}
-          />
-          <Route
-            path={getSectionRouterPath(TEACHER_DASHBOARD_PATHS.assessments)}
-            element={renderEmptyStateOrElement(
-              applyV1TeacherDashboardWidth(
-                <SectionAssessments sectionName={sectionName} />
-              )
-            )}
-          />
-          {showAITutorTab && (
-            <Route
-              path={getSectionRouterPath(
-                TEACHER_DASHBOARD_PATHS.aiTutorChatMessages
-              )}
-              element={renderEmptyStateOrElement(
-                applyV1TeacherDashboardWidth(<TutorTab sectionId={sectionId} />)
               )}
             />
-          )}
-        </Route>
+          }
+        />
+        <Route
+          path={TEACHER_NAVIGATION_PATHS.stats}
+          element={
+            <ElementOrEmptyPage
+              showNoStudents={studentCount === 0}
+              showNoCurriculumAssigned={!anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(<StatsTableWithData />)}
+            />
+          }
+        />
+        <Route
+          path={TEACHER_NAVIGATION_PATHS.progress}
+          element={
+            <ElementOrEmptyPage
+              showNoStudents={studentCount === 0}
+              showNoCurriculumAssigned={!anyStudentHasProgress}
+              element={<SectionProgressSelector />}
+            />
+          }
+        />
+        <Route
+          path={TEACHER_NAVIGATION_PATHS.textResponses}
+          element={
+            <ElementOrEmptyPage
+              showNoStudents={studentCount === 0}
+              showNoCurriculumAssigned={!anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(<TextResponses />)}
+            />
+          }
+        />
+        <Route
+          path={TEACHER_NAVIGATION_PATHS.assessments}
+          element={
+            <ElementOrEmptyPage
+              showNoStudents={studentCount === 0}
+              showNoCurriculumAssigned={!anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(
+                <SectionAssessments sectionName={sectionName} />
+              )}
+            />
+          }
+        />
+        {showAITutorTab && (
+          <Route
+            path={TEACHER_NAVIGATION_PATHS.aiTutorChatMessages}
+            element={
+              <ElementOrEmptyPage
+                showNoStudents={studentCount === 0}
+                showNoCurriculumAssigned={!anyStudentHasProgress}
+                element={applyV1TeacherDashboardWidth(
+                  <TutorTab sectionId={sectionId} />
+                )}
+              />
+            }
+          />
+        )}
       </Route>
-    </Routes>
+    </Route>
+  );
+
+  return (
+    <RouterProvider
+      router={createBrowserRouter(createRoutesFromElements(routes), {
+        basename: TEACHER_NAVIGATION_BASE_URL,
+      })}
+    />
   );
 };
 

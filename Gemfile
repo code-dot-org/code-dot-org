@@ -169,7 +169,7 @@ gem 'devise', '~> 4.9.0'
 gem 'devise_invitable', '~> 2.0.2'
 
 # Ref: https://github.com/daynew/omniauth-clever/pull/1
-gem 'omniauth-clever', '~> 2.0.0', github: 'daynew/omniauth-clever', branch: 'clever-v2.1-upgrade'
+gem 'omniauth-clever', '~> 2.0.0', github: 'code-dot-org/omniauth-clever'
 gem 'omniauth-facebook', '~> 4.0.0'
 gem 'omniauth-google-oauth2', '~> 0.6.0'
 gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
@@ -310,7 +310,7 @@ gem 'omniauth-openid-connect', github: 'code-dot-org/omniauth-openid-connect', r
 
 # Ref: https://github.com/toy/image_optim/pull/145
 # Also include sRGB color profile conversion.
-gem 'image_optim', github: 'code-dot-org/image_optim', ref: 'cdo'
+gem 'image_optim', github: 'code-dot-org/image_optim', ref: 'seth/ruby-3.1'
 # Image-optimization tools and binaries.
 gem 'image_optim_pack', '~> 0.5.0', github: 'code-dot-org/image_optim_pack', ref: 'guetzli'
 gem 'image_optim_rails', '~> 0.4.0'

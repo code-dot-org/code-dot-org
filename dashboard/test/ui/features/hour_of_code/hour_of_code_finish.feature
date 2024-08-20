@@ -28,12 +28,14 @@ Scenario: Flappy customized dashboard certificate pages
   And I wait until current URL contains "/congrats"
   And I wait to see element with ID "uitest-certificate"
   Then the href of selector ".social-print-link" contains "/print_certificates/"
+  And I wait for 5 seconds
   And I see no difference for "flappy congrats page"
 
   When I type "Robo Códer" into "#name"
   And I press "button:contains(Submit)" using jQuery
   And I wait to see element with ID "uitest-thanks"
   Then I wait to see an image "/certificate_images/"
+  And I wait for 5 seconds
   And I see no difference for "personalixed flappy congrats page"
 
   When I press the first "#uitest-certificate img" element to load a new page
@@ -90,6 +92,7 @@ Scenario: Oceans uncustomized dashboard certificate pages
   And I wait until current URL contains "/congrats"
   And I wait to see element with ID "uitest-certificate"
   Then the href of selector ".social-print-link" contains "/print_certificates/"
+  And I wait for 5 seconds
   And I see no difference for "oceans congrats page"
 
   When I press the first "#uitest-certificate img" element to load a new page
@@ -129,6 +132,7 @@ Scenario: customized dashboard certificate pages with no course name
   Given I am on "http://studio.code.org/congrats"
   And I wait to see element with ID "uitest-certificate"
   Then the href of selector ".social-print-link" contains "/print_certificates/"
+  And I wait for 5 seconds
   And I see no difference for "uncustomized congrats page"
 
   When I type "Robo Códer" into "#name"
@@ -156,6 +160,7 @@ Scenario: congrats certificate pages
   And element "#uitest-certificate" is visible
   And I wait until element ".fa-facebook" is visible
   And I wait until element ".fa-twitter" is visible
+  And I wait for 5 seconds
   And I open my eyes to test "congrats certificate pages"
 
   When I am on "http://code.org/api/hour/finish/flappy"
@@ -165,6 +170,7 @@ Scenario: congrats certificate pages
   And I wait for image "#uitest-certificate img" to load
   And I wait until element ".fa-facebook" is visible
   And I wait until element ".fa-twitter" is visible
+  And I wait for 5 seconds
   And I see no difference for "uncustomized flappy certificate"
 
   When I type "Robo Códer" into "#name"
@@ -180,6 +186,7 @@ Scenario: congrats certificate pages
   And I wait for image "#uitest-certificate img" to load
   And I wait until element ".fa-facebook" is visible
   And I wait until element ".fa-twitter" is visible
+  And I wait for 5 seconds
   And I see no difference for "uncustomized oceans certificate"
 
   When I type "Robo Códer" into "#name"
@@ -195,6 +202,7 @@ Scenario: congrats certificate pages
   And I wait for image "#uitest-certificate img" to load
   And I wait until element ".fa-facebook" is visible
   And I wait until element ".fa-twitter" is visible
+  And I wait for 5 seconds
   And I see no difference for "uncustomized 20-hour certificate"
 
   When I type "Robo Códer" into "#name"
@@ -213,6 +221,7 @@ Scenario: congrats certificate pages
   And I wait for image "#uitest-certificate img" to load
   And I wait until element ".fa-facebook" is visible
   And I wait until element ".fa-twitter" is visible
+  And I wait for 5 seconds
   And I see no difference for "uncustomized Course A 2017 certificate"
 
   When I type "Robo Códer" into "#name"
