@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-16 18:00:07 UTC",
+    "serialized_at": "2024-08-19 17:39:19 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",
@@ -138,6 +138,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_overview_objectives"
+        ],
         "progression": "Overview of Teaching Data Science"
       },
       "bonus": false,
@@ -160,6 +163,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_ cert"
+        ],
         "progression": "Overview of Teaching Data Science"
       },
       "bonus": false,
@@ -182,6 +188,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS course_overview2"
+        ],
         "progression": "Overview of Teaching Data Science"
       },
       "bonus": false,
@@ -204,6 +213,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_definingDS"
+        ],
         "progression": "What is Data Science?"
       },
       "bonus": false,
@@ -226,6 +238,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_is_everywher"
+        ],
         "progression": "What is Data Science?"
       },
       "bonus": false,
@@ -248,6 +263,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-chk_DSisNot"
+        ],
         "progression": "What is Data Science?"
       },
       "bonus": false,
@@ -270,6 +288,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS_chk_answers"
+        ],
         "progression": "What is Data Science?"
       },
       "bonus": false,
@@ -297,6 +318,31 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "sp-pl-DS_lesson_structures"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "27d245ae-ef73-426d-b202-7233e5eb6771"
+      },
+      "level_keys": [
+        "sp-pl-DS_lesson_structures"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "sp-pl-DS_Lesson_resources"
+        ],
+        "progression": "What is Data Science?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "sp-pl-DS_Lesson_resources"
         ],
         "lesson.key": "lesson-1",
@@ -309,11 +355,14 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 9,
-      "activity_section_position": 6,
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-DS-teacher"
+        ],
         "progression": "What is Data Science?"
       },
       "bonus": false,
@@ -409,6 +458,18 @@
         "level.key": "sp-pl-DS_chk_answers",
         "script_level.level_keys": [
           "sp-pl-DS_chk_answers"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-teaching-data-science",
+        "activity_section.key": "27d245ae-ef73-426d-b202-7233e5eb6771"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-DS_lesson_structures",
+        "script_level.level_keys": [
+          "sp-pl-DS_lesson_structures"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

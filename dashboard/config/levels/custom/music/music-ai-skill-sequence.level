@@ -7,7 +7,6 @@
   "user_id": 1196,
   "properties": {
     "encrypted": "false",
-    "tts_short_instructions_override": "#Check out this code! \r\nThis is an example of a completed coding project that plays a familiar song. \r\n\r\nClick “Run” to play ______ and notice what happens.",
     "instructions_important": "false",
     "long_instructions": "####Play some sounds\r\nTry playing one sound after another.\r\n\r\n1. Drag one or more [play](#clickable=play-sound-block) blocks into the program. \r\n2. Then press [Run](#clickable=run-button).",
     "hide_share_and_remix": "false",
@@ -83,7 +82,7 @@
     },
     "preload_asset_list": null
   },
-  "audit_log": "[{\"changed_at\":\"2024-08-15T22:35:44.778+00:00\",\"changed\":[\"cloned from \\\"music-ai-tinker\\\"\"],\"cloned_from\":\"music-ai-tinker\"},{\"changed_at\":\"2024-08-15 22:36:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-15T22:35:44.778+00:00\",\"changed\":[\"cloned from \\\"music-ai-tinker\\\"\"],\"cloned_from\":\"music-ai-tinker\"},{\"changed_at\":\"2024-08-15 22:36:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-08-19 22:08:23 +0000\",\"changed\":[\"tts_short_instructions_override\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
