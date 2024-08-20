@@ -274,6 +274,7 @@ gem 'addressable'
 gem 'bcrypt', '3.1.13'
 gem 'sshkit'
 gem 'validates_email_format_of'
+gem 'validate_url', '~> 1.0.15'
 
 gem 'composite_primary_keys', '~> 13.0'
 
@@ -286,7 +287,6 @@ gem 'full-name-splitter', github: 'pahanix/full-name-splitter'
 gem 'rambling-trie', '>= 2.1.1'
 
 gem 'omniauth-openid'
-gem 'omniauth-openid-connect', github: 'code-dot-org/omniauth-openid-connect', ref: 'cdo'
 
 # Ref: https://github.com/toy/image_optim/pull/145
 # Also include sRGB color profile conversion.
@@ -352,6 +352,7 @@ gem 'statsig', '~> 1.33'
 gem 'mailgun-ruby', '~>1.2.14'
 gem 'mailjet', '~> 1.7.3'
 
+gem 'json-jwt', '~> 1.15'
 gem "json-schema", "~> 4.3"
 
 gem "csv"
