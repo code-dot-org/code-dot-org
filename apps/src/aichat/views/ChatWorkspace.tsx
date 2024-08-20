@@ -129,10 +129,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     onChange: handleOnChange,
     type: 'secondary',
     tabsContainerClassName: moduleStyles.tabsContainer,
-    tabPanelsContainerClassName:
-      selectedTab === WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY
-        ? moduleStyles.tabPanelsStudentChatHistoryActive
-        : moduleStyles.tabPanelsChatWithModelActive,
+    tabPanelsContainerClassName: moduleStyles.tabPanelsContainer,
   };
 
   const onCloseWarningModal = useCallback(

@@ -27,15 +27,14 @@ $default-spacing: 16px;
   background-color: #eaebeb;
 }
 
-.tabPanelsChatWithModelActive {
-  @extend %conversation-area;
-}
-
-.tabPanelsStudentChatHistoryActive {
+.tabPanelsContainer {
   @extend %conversation-area;
   > div {
     display: flex;
     height: 100%;
+  }
+  > div[hidden] {
+    display: none;
   }
 }
 
