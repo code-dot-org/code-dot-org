@@ -14,17 +14,20 @@ class ApplicationJobTest < ActiveJob::TestCase
   test 'enqueued jobs log PendingJobCount FailedJobCount WaitTime ExecutionTime and TotalTime' do
     expected_failed_count = 5
     expected_pending_count = 3
+    expected_workable_count = 2
 
     # Mock these helper methods because mocking the Delayed::Job calls is impossible/complex
     ApplicationJob.any_instance.stubs(:get_pending_job_count).returns(expected_pending_count)
     ApplicationJob.any_instance.stubs(:get_failed_job_count).returns(expected_failed_count)
+    ApplicationJob.any_instance.stubs(:get_workable_job_count).returns(expected_workable_count)
 
     Cdo::Metrics.expects(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
       all_of(
-        includes_metrics(PendingJobCount: expected_pending_count, FailedJobCount: expected_failed_count),
+        includes_metrics(PendingJobCount: expected_pending_count, FailedJobCount: expected_failed_count, WorkableJobCount: expected_workable_count),
         includes_dimensions(:PendingJobCount, Environment: CDO.rack_env),
-        includes_dimensions(:FailedJobCount, Environment: CDO.rack_env)
+        includes_dimensions(:FailedJobCount, Environment: CDO.rack_env),
+        includes_dimensions(:WorkableJobCount, Environment: CDO.rack_env)
       )
     )
 
@@ -145,5 +148,15 @@ class ApplicationJobTest < ActiveJob::TestCase
     failed_jobs_mock.expects(:count).returns(42)
 
     assert_equal 42, ApplicationJob.new.get_failed_job_count
+  end
+
+  test 'get_workable_job_count returns the number of workable jobs' do
+    workable_mock = mock('workable_jobs')
+    pending_mock = mock('pending_jobs')
+    Delayed::Job.expects(:where).with(failed_at: nil, locked_at: nil).returns(pending_mock)
+    pending_mock.expects(:where).with('run_at <= ?', anything).returns(workable_mock)
+    workable_mock.expects(:count).returns(42)
+
+    assert_equal 42, ApplicationJob.new.get_workable_job_count
   end
 end

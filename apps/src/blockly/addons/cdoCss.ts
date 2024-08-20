@@ -60,7 +60,7 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     }
     .fieldAngleDropDownContainer .blocklyMenu{
       float: left;
-    }    
+    }
     .fieldAngleDropDownContainer .blocklyMenu::after {
       content: '';
       border-left: 1px solid #949ca2;
@@ -71,7 +71,11 @@ export default function initializeCss(blocklyWrapper: BlocklyWrapperType) {
     }
     .fieldAngleDropDownContainer .blocklyMenuItem{
       min-width: 0em;
-    }    
+    }
+    .k1ColourDropdown>tr>td {
+      height: 35px;
+      width: 45px;
+    }
     `
   );
 }

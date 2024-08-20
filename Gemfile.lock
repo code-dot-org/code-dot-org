@@ -31,6 +31,13 @@ GIT
       request_store (~> 1.0)
 
 GIT
+  remote: https://github.com/code-dot-org/omniauth-clever.git
+  revision: d71f68e78592d3d291995a0a313f4900e7853ded
+  specs:
+    omniauth-clever (2.0.0)
+      omniauth-oauth2 (>= 1.1, <= 1.5)
+
+GIT
   remote: https://github.com/code-dot-org/omniauth-openid-connect.git
   revision: 2397b1415896e2639a7582a36e26c90b9211f99f
   ref: cdo
@@ -69,14 +76,6 @@ GIT
       sprockets (> 3.0)
       sprockets-rails
       tilt
-
-GIT
-  remote: https://github.com/daynew/omniauth-clever.git
-  revision: d217eb5d44ad4d68c52beb9b0b1929cb109e190a
-  branch: clever-v2.1-upgrade
-  specs:
-    omniauth-clever (2.0.0)
-      omniauth-oauth2 (>= 1.1, <= 1.5)
 
 GIT
   remote: https://github.com/dooly-ai/omniauth-microsoft_v2_auth.git

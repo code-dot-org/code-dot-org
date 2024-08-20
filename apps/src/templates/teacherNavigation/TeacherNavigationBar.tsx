@@ -6,6 +6,8 @@ import Typography from '@cdo/apps/componentLibrary/typography';
 import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
 import i18n from '@cdo/locale';
 
+import {LABELED_TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
+
 import styles from './teacher-navigation.module.scss';
 
 interface SectionsData {
@@ -87,27 +89,27 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     getSectionHeader(i18n.performance()),
     <SidebarOption
       icon={'chart-line'}
-      optionTitle={i18n.progress()}
+      optionTitle={LABELED_TEACHER_NAVIGATION_PATHS.progress.label}
       isSelected={false}
     />,
     <SidebarOption
       icon={'star'}
-      optionTitle={i18n.assessments()}
+      optionTitle={LABELED_TEACHER_NAVIGATION_PATHS.assessments.label}
       isSelected={false}
     />,
     <SidebarOption
       icon={'code'}
-      optionTitle={i18n.studentProjects()}
+      optionTitle={LABELED_TEACHER_NAVIGATION_PATHS.projects.label}
       isSelected={true}
     />,
     <SidebarOption
       icon={'chart-simple'}
-      optionTitle={i18n.teacherTabStats()}
+      optionTitle={LABELED_TEACHER_NAVIGATION_PATHS.stats.label}
       isSelected={false}
     />,
     <SidebarOption
       icon={'pen-line'}
-      optionTitle={i18n.teacherTabStatsTextResponses()}
+      optionTitle={LABELED_TEACHER_NAVIGATION_PATHS.textResponses.label}
       isSelected={false}
     />,
   ];
@@ -116,7 +118,7 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     getSectionHeader(i18n.classroom()),
     <SidebarOption
       icon={'users'}
-      optionTitle={i18n.roster()}
+      optionTitle={LABELED_TEACHER_NAVIGATION_PATHS.manageStudents.label}
       isSelected={false}
     />,
     <SidebarOption

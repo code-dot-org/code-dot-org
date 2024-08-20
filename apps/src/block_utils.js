@@ -618,11 +618,7 @@ const STANDARD_INPUT_TYPES = {
     addInput(blockly, block, inputConfig, currentInputRow) {
       // Make sure the variable name gets declared at the top of the program
       block.getVars = function () {
-        return {
-          [Blockly.Variables.DEFAULT_CATEGORY]: [
-            block.getFieldValue(inputConfig.name),
-          ],
-        };
+        return [block.getFieldValue(inputConfig.name)];
       };
 
       // Add the variable field to the block

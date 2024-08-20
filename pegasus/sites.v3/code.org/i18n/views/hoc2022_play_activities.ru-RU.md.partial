@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Привет, мир: футбол", body: "Когда вы пишете команды для интерактивной игры в футбол, вы становитесь капитаном команды. ГОООООООООЛ!", image: "/images/hoc2022-hello-world-soccer.png", url: "https://studio.code.org/s/hello-world-soccer-2022/reset" }}
-
-{{ featured_tutorial, title: "Спорт", body: "Сделайте бейсбольную игру или экспериментируйте с другими видами спорта.", image: "/shared/images/courses/logo_tall_sports.jpg", url: "https://code.org/athletes" }}
-
-{{ featured_tutorial, title: "Код Флэппи", body: "Хотите написать собственную игру меньше, чем за 10 минут? Попробуйте наш урок написания кода Флэппи!", image: "/shared/images/courses/logo_tall_flappy.jpg", url: "https://studio.code.org/s/flappy/reset" }}
-
-{{ featured_tutorial, title: "Майнкрафт в Часе кода", body: "Майнкрафт возвращается в час кода с новым видом активности! Путешествуйте в Майнкрафт с кодом.", image: "/images/hoc2022-mc-escape.png", url: "https://aka.ms/HourofCode2022" }}

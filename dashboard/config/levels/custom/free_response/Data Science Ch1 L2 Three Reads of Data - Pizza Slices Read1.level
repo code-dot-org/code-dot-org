@@ -12,11 +12,11 @@
     "submittable": "false",
     "peer_reviewable": "false",
     "optional": "false",
-    "allow_multiple_attempts": "false",
+    "allow_multiple_attempts": "true",
     "skip_dialog": true,
     "skip_sound": true
   },
-  "audit_log": "[{\"changed_at\":\"2024-05-13 23:07:59 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-13 23:07:59 +0000\",\"changed\":[],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-08-19 20:48:25 +0000\",\"changed\":[\"allow_multiple_attempts\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
