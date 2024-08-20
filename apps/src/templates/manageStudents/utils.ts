@@ -1,11 +1,11 @@
 export function getFullName(student: {
   name: string;
-  familyName?: string;
+  familyName: string | null;
 }): string;
 export function getFullName(name: string, familyName?: string): string;
 
 export function getFullName(
-  studentOrName: {name: string; familyName: string} | string,
+  studentOrName: {name: string; familyName: string | null} | string,
   familyName?: string
 ): string {
   if (typeof studentOrName === 'string') {
