@@ -54,7 +54,6 @@ export function isNotification(event: ChatEvent): event is Notification {
 
 export interface ChatCompletionApiResponse {
   messages: ChatMessage[];
-  session_id: number;
   flagged_content?: string;
 }
 
