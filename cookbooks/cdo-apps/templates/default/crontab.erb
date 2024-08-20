@@ -123,6 +123,7 @@
       cronjob at:'0 0 * * *', do:deploy_dir('bin', 'cron', 'send_permission_email_reminders')
       cronjob at:'*/5 * * * *', do:deploy_dir('bin', 'cron', 'monitor_projects')
       cronjob at:'0 4 * * *', do:deploy_dir('bin', 'cron', 'cleanup_mvp_ai_tutor_interactions')
+      cronjob at:'0 4 * * *', do:deploy_dir('bin', 'cron', 'delete_old_ai_chat_data')
 
       # RDS backup window is 05:17-05:47 UTC, so by 11:50 backups should definitely be ready
       cronjob at:'50 11 * * *', do:deploy_dir('bin', 'cron', 'push_latest_aurora_backup_to_secondary_account')

@@ -4,7 +4,7 @@ import React from 'react';
 
 import color from '@cdo/apps/util/color';
 
-import Spinner from '../../../components/spinner';
+import Spinner from '../../../../../sharedComponents/Spinner';
 
 import Results from './results';
 

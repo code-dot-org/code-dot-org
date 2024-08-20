@@ -1,0 +1,10 @@
+name 'ken-levelgroup-allow-multiple-test'
+title 'Levelbuilder Playground'
+submittable 'false'
+anonymous 'false'
+
+page
+level 'ken-multi-allow-multiple-test'
+level 'ken-match-allow-multiple-test'
+level 'ken-free-response-allow-multiple-test'
+
