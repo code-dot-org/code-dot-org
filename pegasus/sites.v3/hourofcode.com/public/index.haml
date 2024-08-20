@@ -12,13 +12,6 @@ social:
 %link{href: "/css/generated/hoc-banner.css", rel: "stylesheet", type: "text/css"}
 %link{href: "/css/generated/highlights-homepage.css", rel: "stylesheet", id: "highlight-styles"}
 
--# These are needed for the signup form, even if the map isn't currently showing.
-%script{src:'https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'}
-:javascript
-  mapboxgl.accessToken = "#{CDO.mapbox_access_token}";
-
--facebook = {:u=>"http://#{request.host}/us"}
-
 -# We set the DCDO default to CDO.default_hoc_mode here because we can't change the DCDO flag on the test machine, but
 -# ui tests rely on hourofcode.com being in a hoc_mode consistent with production. This default needs to be updated
 -# whenever we change the hoc_mode, to make sure we're still testing what we'll see on production.
@@ -27,8 +20,6 @@ social:
 -twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
 -twitter[:hashtags] = 'HourOfCode' unless hoc_s(:front_header_banner, locals: {campaign_date: campaign_date('full-year')}).include? '#HourOfCode'
 
-%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry"}
-%script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
 
