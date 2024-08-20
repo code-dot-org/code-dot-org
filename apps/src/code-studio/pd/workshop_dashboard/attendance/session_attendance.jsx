@@ -11,7 +11,7 @@ import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
 
-import Spinner from '../../components/spinner';
+import Spinner from '../../../../sharedComponents/Spinner';
 import VisibilitySensor from '../components/visibility_sensor';
 import {
   PermissionPropType,

@@ -9,6 +9,7 @@ import {Heading3} from '@cdo/apps/componentLibrary/typography';
 import DCDO from '@cdo/apps/dcdo';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {getFullName} from '@cdo/apps/templates/manageStudents/utils.ts';
 import i18n from '@cdo/locale';
 
 import ResponseMenuDropdown from './ResponseMenuDropdown';
@@ -17,9 +18,7 @@ import styles from './summary.module.scss';
 
 const FreeResponseResponses = ({responses, showStudentNames, eventData}) => {
   const constructStudentName = response =>
-    response.student_family_name
-      ? response.student_display_name + ' ' + response.student_family_name
-      : response.student_display_name;
+    getFullName(response.student_display_name, response.student_family_name);
 
   const [hiddenResponses, setHiddenResponses] = React.useState([]);
   const [pinnedResponseIds, setPinnedResponseIds] = React.useState([]);

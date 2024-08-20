@@ -23,3 +23,8 @@ export function getTypedKeys<K extends string | number | symbol>(object: {
 }): K[] {
   return Object.keys(object) as K[];
 }
+
+/**
+ * A type that is one of the values of an object type.
+ */
+export type ValueOf<T> = T[keyof T];

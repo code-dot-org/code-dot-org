@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-staging",
-    "serialized_at": "2024-08-14 20:19:15 UTC",
+    "serialized_at": "2024-08-18 08:52:45 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -136,7 +136,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "In this lesson, students explore how language models understand and represent word meanings. Beginning with a game, they investigate the concept of words being \"close\" in meaning. This leads to an activity where students assume the roles of fictional characters, using a sequence of numbers to represent their \"character traits\" and comparing these numerical representations to others. The lesson demonstrates that language models use a similar method, known as embeddings, to represent words as sequences of numbers, with similar words being numerically close to each other. The lesson concludes with students updating the storage section of their graphic organizer to encapsulate the idea of word embeddings.",
-        "preparation": "- Print copies of the activity guide for each student\n- Print copies of the activity instructions and cut them into quarter-sheets\n- Run through the slide deck and videos ahead of time\n- (Optional) Prepare vocabulary posters for class word wall\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
+        "preparation": "- Have markers, crayons, or colored pencils prepared for students\n- Print copies of the activity guide for each student\n- Print copies of the activity instructions and cut them into quarter-sheets\n- Run through the slide deck and videos ahead of time\n- (Optional) Prepare vocabulary posters for class word wall\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
         "student_overview": "Learn how computers represent the meaning of words"
       },
       "seeding_key": {
@@ -5581,6 +5581,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson2-warmup-lv1"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5603,6 +5606,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson2-wrapup-lv1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -5625,6 +5631,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson3-warmup-lv1"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5647,6 +5656,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson3-warmup-lv2"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5669,6 +5681,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson3-wrapup-lv1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -5741,6 +5756,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson5-warmup-lv1"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5763,6 +5781,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson5-warmup-lv2"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5785,6 +5806,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson5-wrapup-lv1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -5807,6 +5831,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson6-warmup-lv1"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5829,6 +5856,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson6-warmup-lv2"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5851,6 +5881,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson6-wrapup-lv1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -5873,6 +5906,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson7-warmup-lv1"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5895,6 +5931,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson7-warmup-lv2"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5917,6 +5956,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson7-wrapup-lv1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -5939,6 +5981,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson8-warmup-level1"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5961,6 +6006,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson8-wrapup-level1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -5983,6 +6031,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson9-warmup-level1"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -6005,6 +6056,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson9-wrapup-level1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -6052,6 +6106,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson10-warmup-lv1"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -6074,6 +6131,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson10-warmup-lv2"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -6096,6 +6156,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson10-wrapup-lv1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,

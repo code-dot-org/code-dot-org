@@ -31,6 +31,13 @@ GIT
       request_store (~> 1.0)
 
 GIT
+  remote: https://github.com/code-dot-org/omniauth-clever.git
+  revision: d71f68e78592d3d291995a0a313f4900e7853ded
+  specs:
+    omniauth-clever (2.0.0)
+      omniauth-oauth2 (>= 1.1, <= 1.5)
+
+GIT
   remote: https://github.com/code-dot-org/omniauth-openid-connect.git
   revision: 2397b1415896e2639a7582a36e26c90b9211f99f
   ref: cdo
@@ -78,14 +85,6 @@ GIT
     sprockets (3.7.1)
       concurrent-ruby (~> 1.1)
       rack (> 1, < 3)
-
-GIT
-  remote: https://github.com/daynew/omniauth-clever.git
-  revision: d217eb5d44ad4d68c52beb9b0b1929cb109e190a
-  branch: clever-v2.1-upgrade
-  specs:
-    omniauth-clever (2.0.0)
-      omniauth-oauth2 (>= 1.1, <= 1.5)
 
 GIT
   remote: https://github.com/dooly-ai/omniauth-microsoft_v2_auth.git
@@ -628,9 +627,6 @@ GEM
       actionpack (>= 4.2)
       omniauth (>= 1.3.1)
     open-uri (0.1.0)
-      stringio
-      time
-      uri
     open_uri_redirections (0.2.1)
     openid_connect (1.4.2)
       activemodel
@@ -881,7 +877,6 @@ GEM
       ip3country (~> 0.2.1)
       user_agent_parser (~> 2.15.0)
     stringex (2.5.2)
-    stringio (3.1.0)
     swd (1.3.0)
       activesupport (>= 3)
       attr_required (>= 0.0.5)
@@ -896,8 +891,6 @@ GEM
     thwait (0.2.0)
       e2mmap
     tilt (2.0.11)
-    time (0.3.0)
-      date
     timecop (0.8.1)
     timeout (0.3.2)
     trailblazer-option (0.1.2)
@@ -916,7 +909,6 @@ GEM
     unf_ext (0.0.7.2)
     unicode-display_width (2.4.2)
     unicode_utils (1.4.0)
-    uri (0.13.0)
     user_agent_parser (2.15.0)
     validate_email (0.1.6)
       activemodel (>= 3.0)
