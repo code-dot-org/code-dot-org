@@ -4,7 +4,6 @@
 #   code.org/challenge
 #   code.org/dance
 #   code.org/minecraft
-#   code.org/oceans
 #   code.org/hourofcode/overview
 #   code.org/learn
 #   code.org/hourofcode2022
@@ -52,7 +51,6 @@ def get_social_metadata_for_page(request)
     dance_2023_hoc: {path: "/images/social-media/dance-social-2023-hoc.png", width: 1200, height: 630},
     hoc_thanks: {path: "/images/hourofcode-2015-video-thumbnail.png", width: 1440, height: 900},
     hoc_2019_social: {path: "/shared/images/social-media/hoc2019_social.png", width: 1200, height: 630},
-    oceans: {path: "/shared/images/social-media/oceans_social.png", width: 1200, height: 630},
     codeorg2019_social: {path: "/shared/images/social-media/codeorg2019_social.png", width: 1200, height: 630},
     codeorg2020_social: {path: "/shared/images/social-media/codeorg2020_social.png", width: 1200, height: 630},
     hoc_2020_social: {path: "/shared/images/social-media/hoc2020_social.png", width: 1200, height: 630},
@@ -135,13 +133,6 @@ def get_social_metadata_for_page(request)
         title: hoc_s(:social_hoc2018_dance_party),
         description: hoc_s(:social_hoc2023_dance_v2),
         image: images[:dance_2023_hoc]
-      }
-    },
-    "oceans" => {
-      "default" => {
-        title: hoc_s(:social_hoc2019_oceans_title),
-        description: hoc_s(:social_hoc2019_oceans_desc),
-        image: images[:oceans]
       }
     },
     "thanks" => {
@@ -257,8 +248,6 @@ def get_social_metadata_for_page(request)
     page = "minecraft"
   elsif request.path == "/dance" && request.site == "code.org"
     page = "dance"
-  elsif request.path == "/oceans" && request.site == "code.org"
-    page = "oceans"
   elsif request.path == "/" && ["code.org", "hourofcode.com"].include?(request.site)
     page = request.site
   elsif request.path == "/thanks" && request.site == "hourofcode.com"
