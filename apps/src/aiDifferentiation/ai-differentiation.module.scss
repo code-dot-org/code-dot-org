@@ -111,6 +111,10 @@
   }
 }
 
+.chips fieldset div {
+  justify-content: flex-end;
+}
+
 .floatingActionButton {
   position: fixed;
   left: 10px;
