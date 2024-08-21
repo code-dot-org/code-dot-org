@@ -27,8 +27,8 @@ import teacherSections, {
   setRosterProvider,
   setRosterProviderName,
   setSections,
-  setShowLockSectionField,
-  setStudentsForCurrentSection, // DCDO Flag - show/hide Lock Section field
+  setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
+  setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import TeacherNavigationRouter from '@cdo/apps/templates/teacherNavigation/TeacherNavigationRouter';
 import experiments from '@cdo/apps/util/experiments';
