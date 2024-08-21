@@ -525,11 +525,6 @@ FactoryBot.define do
       provider {'powerschool'}
     end
 
-    trait :the_school_project_sso_provider do
-      sso_provider
-      provider {'the_school_project'}
-    end
-
     trait :twitter_sso_provider do
       sso_provider
       provider {'twitter'}

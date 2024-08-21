@@ -863,6 +863,7 @@ en:
         PL_ProgressFeedbackAssessment2024: 'Getting Started: Progress Feedback & Assessment'
         PL_LMSIntegrations_2024: 'Getting Started: Integrations for Learning Management Systems'
         game_design_intro: Intro to Game Design
+        llms-intro-gen-ai: Introduction to Large Language Models (Exploring Gen AI)
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

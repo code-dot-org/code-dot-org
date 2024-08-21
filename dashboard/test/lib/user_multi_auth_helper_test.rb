@@ -244,18 +244,6 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
     }
   end
 
-  # At time of writing we have 6 The School Project students and 3 teachers.
-  # These mostly look like test accounts, but presumably we want to continue
-  # supporting them.
-
-  test 'create migrated The School Project student' do
-    assert_created_sso_user create(:student, :the_school_project_sso_provider)
-  end
-
-  test 'create migrated The School Project teacher' do
-    assert_created_sso_user create(:teacher, :the_school_project_sso_provider)
-  end
-
   # Our Twitter SSO support is very old - we have a few thousand such accounts
   # but less than 10 are still active.
 
@@ -468,14 +456,6 @@ class UserMultiAuthHelperTest < ActiveSupport::TestCase
           }
         }
     end
-  end
-
-  test 'de- and re-migrate The School Project student' do
-    round_trip_sso create(:student, :the_school_project_sso_provider)
-  end
-
-  test 'de- and re-migrate The School Project teacher' do
-    round_trip_sso create(:teacher, :the_school_project_sso_provider)
   end
 
   test 'de- and re-migrate Twitter student' do
