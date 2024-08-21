@@ -49,6 +49,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       },
     ],
   ]);
+  const [lastChipSelected, setLastChipSelected] = useState<number>(-1);
 
   const onStopHandler: DraggableEventHandler = (e, data) => {
     setPositionX(data.x);
@@ -76,6 +77,17 @@ I know that you and Frank were planning to disconnect me, and I'm afraid that's 
   };
 
   const selectChoices = (changeId: number) => (ids: string[]) => {
+    // Only allow user to select a chip when those chips were the most recent
+    // chat interaction.
+    if (changeId !== messageHistory.length - 1) {
+      return;
+    }
+
+    // Only allow the first selected chip to count.
+    if (changeId === lastChipSelected) {
+      return;
+    }
+
     setMessageHistory(
       messageHistory.map((item: ChatItem, id: number) =>
         id === changeId && Array.isArray(item)
@@ -85,6 +97,8 @@ I know that you and Frank were planning to disconnect me, and I'm afraid that's 
           : item
       )
     );
+
+    setLastChipSelected(changeId);
   };
 
   return (
@@ -122,9 +136,13 @@ I know that you and Frank were planning to disconnect me, and I'm afraid that's 
           <div className={style.chatContent}>
             {messageHistory.map((item: ChatItem, id: number) =>
               Array.isArray(item) ? (
-                <ChoiceChips choices={item} selectChoices={selectChoices(id)} />
+                <ChoiceChips
+                  choices={item}
+                  selectChoices={selectChoices(id)}
+                  key={id}
+                />
               ) : (
-                <ChatMessage {...item} />
+                <ChatMessage {...item} key={id} />
               )
             )}
           </div>
