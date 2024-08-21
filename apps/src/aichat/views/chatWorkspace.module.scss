@@ -35,13 +35,16 @@ $default-spacing: 16px;
   width: 50px;
 }
 
-.messageEditorContainer {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
 .buttonRow {
   display: flex;
   gap: 8px;
-  padding: 0 20px 20px 20px;
+  padding: 0 10px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 16px 6px;
+  border-top: 1px solid $light_gray_200;
 }

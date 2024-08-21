@@ -168,22 +168,24 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         />
       )}
 
-      {canChatWithModel && (
-        <UserChatMessageEditor
-          editorContainerClassName={moduleStyles.messageEditorContainer}
-        />
-      )}
-      <div className={moduleStyles.buttonRow}>
-        <Button
-          text="Clear chat"
-          disabled={!canChatWithModel}
-          iconLeft={{iconName: 'eraser'}}
-          size="s"
-          type="secondary"
-          color="gray"
-          onClick={onClear}
-        />
-        <CopyButton />
+      <div className={moduleStyles.footer}>
+        {canChatWithModel && (
+          <UserChatMessageEditor
+            editorContainerClassName={moduleStyles.messageEditorContainer}
+          />
+        )}
+        <div className={moduleStyles.buttonRow}>
+          <Button
+            text="Clear chat"
+            disabled={!canChatWithModel}
+            iconLeft={{iconName: 'eraser'}}
+            size="s"
+            type="secondary"
+            color="gray"
+            onClick={onClear}
+          />
+          <CopyButton />
+        </div>
       </div>
     </div>
   );
