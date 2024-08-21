@@ -55,13 +55,6 @@ REDSHIFT_TABLE = 'application_events'.freeze
 sts_client = Aws::STS::Client.new
 ACCOUNT_ID = sts_client.get_caller_identity.account
 
-def split_json_batch(batch_string)
-  batch_string.delete_prefix('{').
-    delete_suffix('}').
-    split('}{').
-    map {|obj| JSON.parse("{#{obj}}")}
-end
-
 event_json_schema = {
   "type" => "object",
   "properties" => {
@@ -218,17 +211,17 @@ redshift_client = RedshiftClient.instance
 continuation_token = nil
 
 BatchRedeliveryStatus = Struct.new(
-  :error_manifest_object_key,           # S3 Key of Error Manifest
-  :error_batch_object_key,              # S3 Key of Error Object specified in Manifest
-  :error_batch_position_in_manifest,    # A single error manifest can reference more than one failed batch.
-  :redelivery_batch_object_key,         # S3 Key of modified batch.
-  :redelivery_manifest_object_key,      # S3 Key of redelivery manifest.
-  :records_in_batch,                    # Number of records in original batch.
-  :records_modified,                    # Number of invalid records that were modified for redelivery.
-  :records_skipped,                     # Number of invalid records that were skipped for redelivery (not fixable, or modify option disabled).
-  :redelivery_date_time,                # Date/Time redelivery to Redshift was attempted.
-  :redelivery_status,                   # true / false
-  :redelivery_status_reason             # Detailed error if status is false.
+  :error_manifest_object_key,               # S3 Key of Manifest Object that identifies undelivered (error) batches.
+  :undelivered_batch_object_key,            # S3 Key of undelivered (error) batch Object specified in Error Manifest
+  :undelivered_batch_position_in_manifest,  # A single error manifest can reference more than one undelivered batch.
+  :redelivery_batch_object_key,             # S3 Key of modified batch.
+  :redelivery_manifest_object_key,          # S3 Key of redelivery manifest.
+  :records_in_batch,                        # Number of records in original batch.
+  :records_modified,                        # Number of invalid records that were modified for redelivery.
+  :records_skipped,                         # Number of invalid records that were skipped for redelivery (not fixable, or modify option disabled).
+  :redelivery_date_time,                    # Date/Time redelivery to Redshift was attempted.
+  :redelivery_status,                       # true / false
+  :redelivery_status_reason                 # Detailed error if status is false.
 )
 
 batches_processed = 0
@@ -262,16 +255,22 @@ CSV.open(options[:log_filename], 'a') do |batch_log_csv|
         undelivered_batch_uri = URI.parse(entry["url"])
         batch_status = BatchRedeliveryStatus.new
         batch_status.error_manifest_object_key = error_manifest_object.key
-        batch_status.error_batch_object_key = undelivered_batch_uri.path&.delete_prefix('/')
-        batch_status.error_batch_position_in_manifest = position_in_error_manifest
-        CDO.log.info "Attempting to redeliver error batch: #{batch_status.error_batch_object_key}"
+        batch_status.undelivered_batch_object_key = undelivered_batch_uri.path&.delete_prefix('/')
+        batch_status.undelivered_batch_position_in_manifest = position_in_error_manifest
+        CDO.log.info "Attempting to redeliver error batch: #{batch_status.undelivered_batch_object_key}"
         undelivered_batch = s3_client.get_object(
           bucket: undelivered_batch_uri.host,
-          key: batch_status.error_batch_object_key
+          key: batch_status.undelivered_batch_object_key
         ).body.read
         modified_batch = ''
-        # Validate and modify each record in the failed batch.
-        split_json_batch(undelivered_batch).each_with_index do |record, _position_in_batch|
+        # Split JSON batch text into an array of JSON records and iterate over the event records, validating each one.
+        undelivered_batch.
+          delete_prefix('{').
+          delete_suffix('}').
+          split('}{').
+          map {|obj| JSON.parse("{#{obj}}")}.
+          tap {|array| batch_status.records_in_batch = array.length}.
+          each_with_index do |record, _position_in_batch|
           modified_record, record_validation_status = validate_record(record, event_json_schema, modify_invalid: options[:modify_invalid])
           invalid_records_modified += 1 if !record_validation_status && options[:modify_invalid]
           modified_batch += modified_record.to_json
