@@ -70,6 +70,30 @@
   SessionStoreEvictionsAlarm:
     Type: AWS::CloudWatch::Alarm
     Properties:
+      AlarmName: <%="Redis Session Store High Eviction Rate (#{stack_name})" %>
+      AlarmDescription: We're seeing a lot of evictions from the Redis session store.
+        A steady amount of evictions is not a bad thing, but a rapid increase in
+        eviction rate could be a sign of other instability.
+      ActionsEnabled: true
+      AlarmActions:
+        - !Ref InfraLowPriority
+      MetricName: Evictions
+      Namespace: AWS/ElastiCache
+      Statistic: Maximum
+      Dimensions:
+        - Name: CacheClusterId
+          Value: !Sub "${SessionStoreGroup}-001"
+      Period: 300
+      EvaluationPeriods: 5
+      DatapointsToAlarm: 3
+      # TODO infra: update this threshold and upgrade the alarm to Urgent once
+      # we've confirmed that this threshold and implementation are practical.
+      Threshold: 10000
+      ComparisonOperator: GreaterThanThreshold
+      TreatMissingData: missing
+  SessionStoreNetworkBytesInAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
       AlarmName: <%="Redis Session Store Incoming Network Traffic Too High (#{stack_name})" %>
       AlarmDescription:
         The cache.r7g.xlarge nodes we use have a guaranteed performance of "Up
