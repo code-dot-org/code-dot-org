@@ -10,6 +10,10 @@ class AichatController < ApplicationController
   include AichatSagemakerHelper
   authorize_resource class: false
 
+  rescue_from CanCan::AccessDenied do
+    render status: :forbidden, json: {user_type: current_user&.user_type || 'signed_out'}
+  end
+
   # params are
   # newMessage: {role: 'user'; chatMessageText: string; status: string}
   # storedMessages: Array of {role: <'user', 'system', or 'assistant'>; chatMessageText: string; status: string} - does not include user's new message
