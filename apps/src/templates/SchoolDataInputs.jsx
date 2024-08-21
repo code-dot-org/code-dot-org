@@ -2,11 +2,7 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import {
-  Heading2,
-  BodyTwoText,
-  BodyThreeText,
-} from '@cdo/apps/componentLibrary/typography';
+import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import {COUNTRIES} from '@cdo/apps/geographyConstants';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -76,20 +72,16 @@ export default function SchoolDataInputs({
   return (
     <div className={style.schoolAssociationWrapper}>
       {includeHeaders && (
-        <div>
-          <Heading2 className={style.topPadding}>
-            {i18n.censusHeading()}
-          </Heading2>
+        <div className={style.headerContainer}>
+          <Heading2>{i18n.censusHeading()}</Heading2>
           <BodyTwoText>{i18n.schoolInfoInterstitialTitle()}</BodyTwoText>
         </div>
       )}
       <div className={style.inputContainer}>
-        <BodyThreeText className={style.padding}>
-          <strong>{i18n.whatCountry()}</strong>
-        </BodyThreeText>
         <SimpleDropdown
           id="uitest-country-dropdown"
           name={fieldNames.country}
+          labelText={i18n.whatCountry()}
           items={COUNTRY_ITEMS}
           selectedValue={country}
           onChange={onCountryChange}
