@@ -79,6 +79,7 @@ export default function SchoolDataInputs({
       )}
       <div className={style.inputContainer}>
         <SimpleDropdown
+          id="uitest-country-dropdown"
           name={fieldNames.country}
           labelText={i18n.whatCountry()}
           items={COUNTRY_ITEMS}
