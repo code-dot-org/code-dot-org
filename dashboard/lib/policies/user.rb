@@ -17,6 +17,7 @@ class Policies::User
   # - Have a google_oauth2 Authentication Option
   # - Have a non-google/non-gmail email domain attached to that googele_oauth2 authentication option
   def self.verified_teacher_candidate?(user)
+    return false if user.verified_teacher?
     google_ao = user.authentication_options.find_by(credential_type: AuthenticationOption::GOOGLE)
     return false unless google_ao
 
