@@ -214,12 +214,12 @@ BatchRedeliveryStatus = Struct.new(
   :error_manifest_object_key,               # S3 Key of Manifest Object that identifies undelivered (error) batches.
   :undelivered_batch_object_key,            # S3 Key of undelivered (error) batch Object specified in Error Manifest
   :undelivered_batch_position_in_manifest,  # A single error manifest can reference more than one undelivered batch.
-  :redelivery_batch_object_key,             # S3 Key of modified batch.
-  :redelivery_manifest_object_key,          # S3 Key of redelivery manifest.
   :records_in_batch,                        # Number of records in original batch.
   :records_modified,                        # Number of invalid records that were modified for redelivery.
   :records_skipped,                         # Number of invalid records that were skipped for redelivery (not fixable, or modify option disabled).
-  :redelivery_date_time,                    # Date/Time redelivery to Redshift was attempted.
+  :redelivery_batch_object_key,             # S3 Key of modified batch.
+  :redelivery_manifest_object_key,          # S3 Key of redelivery manifest.
+  :redelivery_date_time,                    # Date/Time redelivery to Redshift was completed (if successful).
   :redelivery_status,                       # true / false
   :redelivery_status_reason                 # Detailed error if status is false.
 )
@@ -335,7 +335,7 @@ CSV.open(options[:log_filename], 'a') do |batch_log_csv|
       ensure
         batch_status.records_modified = invalid_records_modified
         batch_status.records_skipped = invalid_records_skipped
-        batch_log_csv << batch_status.to_a
+        batch_log_csv << batch_status
         batch_log_csv.flush
       end
     end
