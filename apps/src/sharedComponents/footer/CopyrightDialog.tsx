@@ -1,5 +1,6 @@
 import React from 'react';
 
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
@@ -24,9 +25,9 @@ const CopyrightDialog: React.FC<CopyrightDialogProps> = ({isOpen, onClose}) => {
         <hr />
         <SafeMarkdown
           markdown={i18n.copyright_thanks({
-            donors_link: 'https://code.org/about/donors',
-            partners_link: 'https://code.org/about/partners',
-            team_link: 'https://code.org/about/team',
+            donors_link: pegasus('about/donors'),
+            partners_link: pegasus('about/partners'),
+            team_link: pegasus('about/team'),
           })}
         />
         <p>{i18n.copyright_specialRecognition()}</p>
