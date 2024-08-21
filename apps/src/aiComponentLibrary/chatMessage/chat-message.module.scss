@@ -75,6 +75,11 @@ $assistant-color: $brand_primary_light;
   justify-content: flex-end;
 }
 
+.userProfaneMessageButton {
+  width: 120px;
+  margin-top: -10px;
+}
+
 .botIconContainer {
   flex: 0 0 32px;
   height: 32px;
