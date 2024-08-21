@@ -223,26 +223,30 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     if (!hasConditions) {
       return null;
     }
-    return isTesting ? (
-      <Button
-        text={commonI18n.stopTests()}
-        onClick={handleStop}
-        color={'destructive'}
-        iconLeft={{iconStyle: 'solid', iconName: 'square'}}
-        className={moduleStyles.buttonInstruction}
-        size={'s'}
-      />
-    ) : (
-      <Button
-        text={commonI18n.test()}
-        onClick={() => handleTest()}
-        type={'secondary'}
-        disabled={isLoadingEnvironment}
-        iconLeft={{iconStyle: 'solid', iconName: 'flask'}}
-        className={moduleStyles.buttonInstruction}
-        color={'white'}
-        size={'s'}
-      />
+    return (
+      <div className={moduleStyles['bubble-' + theme]}>
+        {isTesting ? (
+          <Button
+            text={commonI18n.stopTests()}
+            onClick={handleStop}
+            color={'destructive'}
+            iconLeft={{iconStyle: 'solid', iconName: 'square'}}
+            className={moduleStyles.buttonInstruction}
+            size={'s'}
+          />
+        ) : (
+          <Button
+            text={commonI18n.test()}
+            onClick={() => handleTest()}
+            type={'secondary'}
+            disabled={isLoadingEnvironment}
+            iconLeft={{iconStyle: 'solid', iconName: 'flask'}}
+            className={moduleStyles.buttonInstruction}
+            color={'white'}
+            size={'s'}
+          />
+        )}
+      </div>
     );
   };
 
@@ -296,11 +300,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
             />
           </div>
         )}
-        {SHOW_TEST_NAVIGATION_BUTTONS && (
-          <div className={moduleStyles['bubble-' + theme]}>
-            {renderTestButton()}
-          </div>
-        )}
+        {SHOW_TEST_NAVIGATION_BUTTONS && renderTestButton()}
         {SHOW_TEST_NAVIGATION_BUTTONS && showNavigation && (
           <div
             id="instructions-navigation"
