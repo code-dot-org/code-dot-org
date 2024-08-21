@@ -7,11 +7,14 @@ import {BrowserRouter} from 'react-router-dom';
 import DCDO from '@cdo/apps/dcdo';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
-import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
+import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser, {
   setCurrentUserHasSeenStandardsReportInfo,
 } from '@cdo/apps/templates/currentUserRedux';
-import manageStudents from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
+import manageStudents, {
+  setLoginType,
+  setShowSharingColumn,
+} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import sectionAssessments from '@cdo/apps/templates/sectionAssessments/sectionAssessmentsRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import sectionStandardsProgress from '@cdo/apps/templates/sectionProgress/standards/sectionStandardsProgressRedux';
@@ -19,8 +22,13 @@ import progressV2Feedback from '@cdo/apps/templates/sectionProgressV2/progressV2
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
 import teacherSections, {
+  sectionProviderName,
+  selectSection,
+  setRosterProvider,
+  setRosterProviderName,
   setSections,
-  setShowLockSectionField, // DCDO Flag - show/hide Lock Section field
+  setShowLockSectionField,
+  setStudentsForCurrentSection, // DCDO Flag - show/hide Lock Section field
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import TeacherNavigationRouter from '@cdo/apps/templates/teacherNavigation/TeacherNavigationRouter';
 import experiments from '@cdo/apps/util/experiments';
@@ -68,12 +76,44 @@ $(document).ready(function () {
 
   const getV1TeacherDashboard = () => {
     const baseUrl = `/teacher_dashboard/sections/${section.id}`;
+
+    const selectedSectionFromList = sections.find(s => s.id === section.id);
+    const selectedSection = {...selectedSectionFromList, ...section};
+
+    store.dispatch(selectSection(selectedSection.id));
+    store.dispatch(
+      setStudentsForCurrentSection(selectedSection.id, selectedSection.students)
+    );
+    store.dispatch(setRosterProvider(selectedSection.login_type));
+    store.dispatch(setRosterProviderName(selectedSection.login_type_name));
+    store.dispatch(setLoginType(selectedSection.login_type));
+    if (
+      !selectedSection.sharing_disabled &&
+      selectedSection.script.project_sharing
+    ) {
+      store.dispatch(setShowSharingColumn(true));
+    }
+
+    // Default the scriptId to the script assigned to the section
+    const defaultScriptId = selectedSection.script
+      ? selectedSection.script.id
+      : null;
+    if (defaultScriptId) {
+      store.dispatch(setScriptId(defaultScriptId));
+    }
     return (
       <BrowserRouter basename={baseUrl}>
         <TeacherDashboard
           studioUrlPrefix={scriptData.studioUrlPrefix}
+          sectionId={selectedSection.id}
+          sectionName={selectedSection.name}
+          studentCount={selectedSection.students.length}
           anyStudentHasProgress={anyStudentHasProgress}
           showAITutorTab={showAITutorTab}
+          sectionProviderName={sectionProviderName(
+            store.getState(),
+            selectedSection.id
+          )}
         />
       </BrowserRouter>
     );
