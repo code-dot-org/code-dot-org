@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import {Button, LinkButton} from '@cdo/apps/componentLibrary/button';
+import {Button} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {
@@ -13,6 +13,7 @@ import signupCanvas from '@cdo/apps/signUpFlow/images/signupCanvas.png';
 import signupSchoology from '@cdo/apps/signUpFlow/images/signupSchoology.png';
 import locale from '@cdo/apps/signUpFlow/locale';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
 
 import style from '@cdo/apps/signUpFlow/loginTypeSelection.module.scss';
@@ -27,6 +28,31 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   const passwordIcon = password.length >= 6 ? 'circle-check' : 'circle-x';
   const iconClass = password.length >= 6 ? style.teal : style.lightGray;
 
+  const handleOauth = async (platform: string) => {
+    try {
+      const response = await fetch(`/users/auth/${platform}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': await getAuthenticityToken(),
+        },
+        body: JSON.stringify({
+          // Add any necessary data here
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
+      const data = await response.json();
+      console.log('OAuth response data:', data);
+      // Handle the response data as needed
+    } catch (error) {
+      console.error('There was a problem with the OAuth request:', error);
+    }
+  };
+
   return (
     <div className={style.newSignupFlow}>
       <Heading1 className={style.shortBottomMargin}>
@@ -39,28 +65,28 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             {locale.sign_up_with()}
           </Heading3>
           <BodyThreeText>{locale.streamline_your_sign_in()}</BodyThreeText>
-          <LinkButton
+          <Button
             text={locale.sign_up_google()}
-            href={'#'}
             iconLeft={{iconName: 'brands fa-google', iconStyle: 'solid'}}
             className={style.googleButton}
+            onClick={() => handleOauth('google_oauth2')}
           />
-          <LinkButton
+          <Button
             text={locale.sign_up_microsoft()}
-            href={'#'}
             iconLeft={{iconName: 'brands fa-microsoft', iconStyle: 'light'}}
             className={style.microsoftButton}
+            onClick={() => handleOauth('microsoft_v2_auth')}
           />
-          <LinkButton
+          <Button
             text={locale.sign_up_facebook()}
-            href={'#'}
             iconLeft={{iconName: 'brands fa-facebook-f', iconStyle: 'solid'}}
             className={style.facebookButton}
+            onClick={() => handleOauth('facebook')}
           />
-          <LinkButton
+          <Button
             text={locale.sign_up_clever()}
-            href={'#'}
             className={style.cleverButton}
+            onClick={() => handleOauth('clever')}
           />
           <div className={style.greyTextbox}>
             <img src={signupCanvas} alt="" />
