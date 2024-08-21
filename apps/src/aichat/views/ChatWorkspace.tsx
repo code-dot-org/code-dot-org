@@ -36,6 +36,10 @@ enum WorkspaceTeacherViewTab {
   TEST_STUDENT_MODEL = 'testStudentModel',
 }
 
+const eraserIcon: FontAwesomeV6IconProps = {
+  iconName: 'eraser',
+};
+
 /**
  * Renders the AI Chat Lab main chat workspace component.
  */
@@ -146,22 +150,24 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
         <ChatEventsList events={visibleItems} />
       )}
 
-      {canChatWithModel && (
-        <UserChatMessageEditor
-          editorContainerClassName={moduleStyles.messageEditorContainer}
-        />
-      )}
-      <div className={moduleStyles.buttonRow}>
-        <Button
-          text="Clear chat"
-          disabled={!canChatWithModel}
-          iconLeft={{iconName: 'eraser'}}
-          size="s"
-          type="secondary"
-          color="gray"
-          onClick={onClear}
-        />
-        <CopyButton />
+      <div className={moduleStyles.footer}>
+        {canChatWithModel && (
+          <UserChatMessageEditor
+            editorContainerClassName={moduleStyles.messageEditorContainer}
+          />
+        )}
+        <div className={moduleStyles.buttonRow}>
+          <Button
+            text="Clear chat"
+            disabled={!canChatWithModel}
+            iconLeft={eraserIcon}
+            size="s"
+            type="secondary"
+            color="gray"
+            onClick={onClear}
+          />
+          <CopyButton />
+        </div>
       </div>
     </div>
   );
