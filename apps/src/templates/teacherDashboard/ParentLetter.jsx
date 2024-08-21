@@ -108,7 +108,7 @@ class ParentLetter extends React.Component {
             })}
           />
           <h1>{i18n.parentLetterStep2()}</h1>
-          <SignInInstructions // Need to track LtiProvider here
+          <SignInInstructions
             loginType={loginType}
             loginTypeName={loginTypeName}
             secretPicturePath={secretPicturePath}

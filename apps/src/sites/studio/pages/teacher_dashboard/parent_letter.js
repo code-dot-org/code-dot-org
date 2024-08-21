@@ -25,7 +25,7 @@ setStudioOrigin(scriptData.studioOrigin);
 // Register the reducers we need to show the parent letter:
 registerReducers({currentUser, teacherSections});
 
-// Populate the store with data passed down from the server: store.dispatch(setRosterProviderName(scriptData.section.login_type_name));
+// Populate the store with data passed down from the server:
 const store = getStore();
 store.dispatch(setCurrentUserName(scriptData.userName));
 store.dispatch(setSections(scriptData.sections));
