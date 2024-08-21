@@ -1,7 +1,5 @@
 class AiDiffController < ApplicationController
   include AiDiffBedrockHelper
-  # authorize_resource class: false
-  before_action :require_levelbuilder_mode_or_test_env, except: [:chat_completion]
   load_and_authorize_resource except: [:chat_completion]
 
   # params are
