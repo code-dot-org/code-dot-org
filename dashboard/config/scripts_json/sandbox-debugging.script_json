@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-13 16:08:35 UTC",
+    "serialized_at": "2024-08-20 23:27:34 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -42,6 +42,141 @@
       },
       "seeding_key": {
         "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Active Debugging",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging"
+      }
+    },
+    {
+      "key": "lesson-3",
+      "name": "Reflective Debugging",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging"
+      }
+    },
+    {
+      "key": "lesson-4",
+      "name": "Bug Talks",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging"
+      }
+    },
+    {
+      "key": "lesson-5",
+      "name": "Trace Code Execution",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging"
+      }
+    },
+    {
+      "key": "lesson-6",
+      "name": "Hypothesize and Test",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging"
+      }
+    },
+    {
+      "key": "lesson-7",
+      "name": "Reproducing Bugs",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging"
+      }
+    },
+    {
+      "key": "lesson-8",
+      "name": "Debugging by Comparison",
+      "absolute_position": 8,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 8,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging"
+      }
+    },
+    {
+      "key": "lesson-9",
+      "name": "Using External Resources",
+      "absolute_position": 9,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging"
+      }
+    },
+    {
+      "key": "lesson-10",
+      "name": "Choose Appropriate Techniques ",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-10",
         "lesson_group.key": "",
         "script.name": "sandbox-debugging"
       }
@@ -80,6 +215,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLOPD-K5-PLVid_2023_K5CSConceptsVideo"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -101,6 +239,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "PLCSC-SelfPaced-debugging2_2023_K5CSConcepts"
+        ]
       },
       "bonus": false,
       "seeding_key": {
