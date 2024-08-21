@@ -47,8 +47,14 @@ class Policies::UserTest < ActiveSupport::TestCase
     # Google Authentication Option has a gmail email, criteria not met
     create :google_authentication_option, user: teacher, email: 'test@gmail.com'
     assert_equal false, Policies::User.verified_teacher_candidate?(teacher)
-    # Teacher already verified, criteria not met
+  end
+
+  test 'verified_teacher_candidate? should return false when teacher is already verified' do
+    teacher = create :teacher
+    # Change teacher to verified
     teacher.verify_teacher!
+    assert_equal true, teacher.verified_teacher?
+    # Teacher already verified, not eligible for re-verification
     assert_equal false, Policies::User.verified_teacher_candidate?(teacher)
   end
 end
