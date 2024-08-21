@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {LmsLoginTypeNames} from '@cdo/apps/lib/ui/accounts/constants';
+import {LmsLoginTypeNames} from '@cdo/apps/accounts/constants';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {
   EmailLinks,
