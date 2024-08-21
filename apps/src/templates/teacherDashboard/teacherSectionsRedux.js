@@ -887,7 +887,6 @@ export default function teacherSections(state = initialState, action) {
     const sectionId = action.section.id;
     const oldSection = state.sections[sectionId] || {};
 
-    console.log('lfm1', action.section);
     return {
       ...state,
       sections: {
