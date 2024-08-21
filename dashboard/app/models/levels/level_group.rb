@@ -35,6 +35,7 @@ class LevelGroup < DSLDefined
       title 'title of the assessment here'
       submittable 'true'
       anonymous 'false'
+      isActivityGuideLevel 'false'
 
       page
       level 'level1'

@@ -152,9 +152,10 @@ function initLevelGroup(levelCount, currentPage, lastAttempt) {
     const isSurvey =
       appOptions.level.anonymous === true ||
       appOptions.level.anonymous === 'true';
-    const isAssessment =
-      appOptions.level.submittable === true ||
-      appOptions.level.submittable === 'true';
+    const isActivityGuideLevel =
+      appOptions.level.activity_guide_level === true ||
+      appOptions.level.activity_guide_level === 'true';
+    const isAssessment = !isSurvey && !isActivityGuideLevel;
     title = isSurvey ? i18n.submitSurvey() : i18n.submitAssessment();
 
     if (isAssessment && validCount !== requiredCount) {
