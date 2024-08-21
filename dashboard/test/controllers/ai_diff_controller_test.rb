@@ -13,8 +13,11 @@ class AiDiffControllerTest < ActionController::TestCase
     @lesson = create(:lesson, script: @unit_in_course, lesson_group: @lesson_group)
     create(:script_level, script: @unit_in_course, lesson: @lesson)
 
+    @teacher_sans_experiment = create(:teacher)
     @teacher = create(:teacher)
     @unit_display_name = "Beowulf Course"
+
+    create :single_user_experiment, min_user_id: @teacher.id, name: 'ai-differentiation'
 
     @session_id = "1234"
     @bedrock_client = Aws::BedrockAgentRuntime::Client.new(stub_responses: true)
@@ -58,8 +61,6 @@ class AiDiffControllerTest < ActionController::TestCase
   test "returns bad_request when getting chat_completion if bad params" do
     sign_in @teacher
 
-    SingleUserExperiment.expects(:enabled?).with(user: @teacher, experiment_name: 'ai-differentiation').returns(true)
-
     post :chat_completion, params: {
       inputText: "Hello!",
       lessonId: @lesson.id,
@@ -69,10 +70,8 @@ class AiDiffControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
-  test "returns forbidden when getting chat_completion if ai_diff experiment isn't enabled" do
-    sign_in @teacher
-
-    SingleUserExperiment.expects(:enabled?).with(user: @teacher, experiment_name: 'ai-differentiation').returns(false)
+  test "returns bad_request when getting chat_completion if ai_diff experiment isn't enabled" do
+    sign_in @teacher_sans_experiment
 
     post :chat_completion, params: {
       inputText: "Hello!",
@@ -81,7 +80,7 @@ class AiDiffControllerTest < ActionController::TestCase
       sessionId: @session_id
     }
 
-    assert_response :forbidden
+    assert_response :bad_request
   end
 
   test "does not get chat_completion if not a teacher" do
@@ -103,8 +102,6 @@ class AiDiffControllerTest < ActionController::TestCase
   test "returns success when experiment is enabled and sets session_id if session_id is absent" do
     sign_in @teacher
 
-    SingleUserExperiment.expects(:enabled?).with(user: @teacher, experiment_name: 'ai-differentiation').returns(true)
-
     post :chat_completion, params: {
       inputText: "Hello!",
       lessonId: @lesson.id,
@@ -120,8 +117,6 @@ class AiDiffControllerTest < ActionController::TestCase
 
   test "returns success when experiment is enabled and sets session_id if session_id is nil" do
     sign_in @teacher
-
-    SingleUserExperiment.expects(:enabled?).with(user: @teacher, experiment_name: 'ai-differentiation').returns(true)
 
     post :chat_completion, params: {
       inputText: "Hello!",
@@ -139,8 +134,6 @@ class AiDiffControllerTest < ActionController::TestCase
 
   test "returns success when experiment is enabled and session_id is absent" do
     sign_in @teacher
-
-    SingleUserExperiment.expects(:enabled?).with(user: @teacher, experiment_name: 'ai-differentiation').returns(true)
 
     post :chat_completion, params: {
       inputText: "Hello!",

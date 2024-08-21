@@ -10,8 +10,6 @@ class AiDiffController < ApplicationController
   # POST /ai_diff/chat_completion
   def chat_completion
     return render status: :forbidden, json: {} unless current_user&.teacher?
-    is_ai_diff_experiment_enabled = current_user && SingleUserExperiment.enabled?(user: current_user, experiment_name: 'ai-differentiation')
-    return render status: :forbidden, json: {} unless is_ai_diff_experiment_enabled
     unless has_required_params?
       return render status: :bad_request, json: {}
     end
