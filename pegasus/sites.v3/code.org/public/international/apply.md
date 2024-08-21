@@ -32,7 +32,7 @@ If you have plans to promote the Hour of Code campaign across your whole country
 - You’ll receive the latest updates on exciting news, special events, program updates, useful resources, and more.
 - You’ll be given access to an invite-only online community of global experts, including Code.org employees and fellow Code.org International Partners, who share the goal of expanding computer science education worldwide.
 
-Please note that this partnership opportunity is for organizations with broad reach. If you are an individual teacher, or your organization’s plans span a school, city, or a smaller scale, we welcome you to organize your Hour of Code and record it [on our global map](https://hourofcode.com/) (sign-ups to open by October).
+Please note that this partnership opportunity is for organizations with broad reach.
 
 ***
 
