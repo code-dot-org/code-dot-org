@@ -1,6 +1,21 @@
-@no_mobile
+@no_phone
 Feature: Self Paced PL Instructor in Training - Universal Instructor
 
+  Scenario: View Instructor In Training Applab Level as Universal Instructor
+    Given I create a teacher named "Universal Instructor"
+    And I sign in as "Universal Instructor"
+    And I get universal instructor access
+    Then I am on "http://studio.code.org/s/alltheselfpacedplthings/lessons/1/levels/1"
+    And I wait for the lab page to fully load
+
+    Then I press the first ".uitest-teacherOnlyTab" element
+    And I wait to see ".editor-column"
+    And element ".editor-column" contains text "For Teachers Only"
+    And element ".editor-column" contains text "Teacher Only Content Yay!"
+    And element ".editor-column" contains text "Example Solution 1"
+    And element "#instructor_in_training_tag" is not visible
+
+  @no_mobile
   Scenario: View Instructor In Training Dance Level as Universal Instructor
     Given I create a teacher named "Universal Instructor"
     And I sign in as "Universal Instructor"
@@ -15,6 +30,7 @@ Feature: Self Paced PL Instructor in Training - Universal Instructor
     And element ".editor-column" contains text "Some teacher only content yay!"
     And element "#instructor_in_training_tag" is not visible
 
+  @no_mobile
   Scenario: View Instructor In Training Free Response Level as Universal Instructor
     Given I create a teacher named "Universal Instructor"
     And I sign in as "Universal Instructor"
@@ -27,6 +43,7 @@ Feature: Self Paced PL Instructor in Training - Universal Instructor
     And element ".teacher.hide-as-student" contains text "The variables days, weekends, and months have the primitive data type int."
     And element "#instructor_in_training_tag" is not visible
 
+  @no_mobile
   Scenario: View Instructor In Training External Level as Universal Instructor
     Given I create a teacher named "Universal Instructor"
     And I sign in as "Universal Instructor"
@@ -39,6 +56,7 @@ Feature: Self Paced PL Instructor in Training - Universal Instructor
     And element ".teacher.hide-as-student" contains text "Teacher only markdown content yay!"
     And element "#instructor_in_training_tag" is not visible
 
+  @no_mobile
   Scenario: View Instructor In Training Bubble Choice Level as Universal Instructor
     Given I create a teacher named "Universal Instructor"
     And I sign in as "Universal Instructor"
@@ -51,6 +69,7 @@ Feature: Self Paced PL Instructor in Training - Universal Instructor
     And element ".teacher.hide-as-student" contains text "Teacher only markdown for bubble choice yay!"
     And element "#instructor_in_training_tag" is not visible
 
+  @no_mobile
   Scenario: View Instructor In Training LevelGroup Level as Universal Instructor
     Given I create a teacher named "Universal Instructor"
     And I sign in as "Universal Instructor"
