@@ -193,18 +193,12 @@ describe('teacherSectionsRedux', () => {
 
   describe('setAuthProviders', () => {
     it("sets teacher's auth providers", () => {
-      const action = setAuthProviders([
-        'google_oauth2',
-        'clever',
-        'email',
-        'windowslive',
-      ]);
+      const action = setAuthProviders(['google_oauth2', 'clever', 'email']);
       const nextState = reducer(initialState, action);
       assert.deepEqual(nextState.providers, [
         'google_classroom',
         'clever',
         'email',
-        'windowslive',
       ]);
     });
   });

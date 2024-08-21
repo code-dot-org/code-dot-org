@@ -479,7 +479,7 @@ FactoryBot.define do
 
     trait :sso_provider do
       encrypted_password {nil}
-      provider {%w(facebook windowslive clever).sample}
+      provider {%w(facebook clever).sample}
       sequence(:uid) {|n| n}
     end
 
@@ -533,11 +533,6 @@ FactoryBot.define do
     trait :qwiklabs_sso_provider do
       sso_provider
       provider {'lti_lti_prod_kids.qwikcamps.com'}
-    end
-
-    trait :windowslive_sso_provider do
-      sso_provider_with_token
-      provider {'windowslive'}
     end
 
     trait :with_facebook_authentication_option do
