@@ -36,7 +36,6 @@ import experiments from '@cdo/apps/util/experiments';
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
 const {
-  anyStudentHasProgress,
   section,
   sections,
   localeCode,
@@ -108,7 +107,7 @@ $(document).ready(function () {
           sectionId={selectedSection.id}
           sectionName={selectedSection.name}
           studentCount={selectedSection.students.length}
-          anyStudentHasProgress={anyStudentHasProgress}
+          anyStudentHasProgress={selectedSection.any_student_has_progress}
           showAITutorTab={showAITutorTab}
           sectionProviderName={sectionProviderName(
             store.getState(),
@@ -126,7 +125,6 @@ $(document).ready(function () {
       ) : (
         <TeacherNavigationRouter
           studioUrlPrefix={scriptData.studioUrlPrefix}
-          anyStudentHasProgress={anyStudentHasProgress}
           showAITutorTab={showAITutorTab}
         />
       )}

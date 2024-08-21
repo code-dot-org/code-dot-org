@@ -37,8 +37,14 @@ import styles from './teacher-navigation.module.scss';
 
 interface TeacherNavigationRouterProps {
   studioUrlPrefix: string;
-  anyStudentHasProgress: boolean;
   showAITutorTab: boolean;
+}
+
+interface Section {
+  id: number;
+  rosterProviderName: string;
+  anyStudentHasProgress: boolean;
+  name: string;
 }
 
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
@@ -47,17 +53,31 @@ const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
 
 const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   studioUrlPrefix,
-  anyStudentHasProgress,
   showAITutorTab,
 }) => {
   const sectionId = useSelector(
     (state: {teacherSections: {selectedSectionId: number}}) =>
       state.teacherSections.selectedSectionId
   );
-  const sectionName = useSelector(
-    (state: {teacherSections: {selectedSectionName: string}}) =>
-      state.teacherSections.selectedSectionName
+  const selectedSection = useSelector(
+    (state: {
+      teacherSections: {
+        selectedSectionId: number | null;
+        sections: {[id: number]: Section};
+      };
+    }) =>
+      state.teacherSections.selectedSectionId
+        ? state.teacherSections.sections[
+            state.teacherSections.selectedSectionId
+          ]
+        : null
   );
+
+  const anyStudentHasProgress = React.useMemo(
+    () => (selectedSection ? selectedSection.anyStudentHasProgress : true),
+    [selectedSection]
+  );
+  console.log('lfm', selectedSection);
 
   const studentCount = useSelector(
     (state: {teacherSections: {selectedStudents: object[]}}) =>
@@ -66,7 +86,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   const providerName = useSelector(
     (state: {
       teacherSections: {
-        section: {[id: number]: {rosterProviderName: string}};
+        section: {[id: number]: Section};
         selectedSectionId: number;
       };
     }) => sectionProviderName(state, state.teacherSections.selectedSectionId)
@@ -192,7 +212,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               showNoStudents={studentCount === 0}
               showNoCurriculumAssigned={!anyStudentHasProgress}
               element={applyV1TeacherDashboardWidth(
-                <SectionAssessments sectionName={sectionName} />
+                <SectionAssessments sectionName={selectedSection?.name || ''} />
               )}
             />
           }
