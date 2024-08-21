@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "self-paced-gen-ai",
-    "serialized_at": "2024-08-14 16:00:05 UTC",
+    "serialized_at": "2024-08-20 14:46:31 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -124,6 +124,7 @@
       "key": "37f9062e-ee5a-4c8b-9b1f-34054d95e6c9",
       "position": 1,
       "properties": {
+        "duration": 25
       },
       "seeding_key": {
         "lesson_activity.key": "37f9062e-ee5a-4c8b-9b1f-34054d95e6c9",
@@ -186,9 +187,32 @@
       "key": "502ba333-7f02-486a-b4b3-c1daa0c0c50e",
       "position": 1,
       "properties": {
+        "progression_name": "Overview of Teaching Gen AI"
       },
       "seeding_key": {
         "activity_section.key": "502ba333-7f02-486a-b4b3-c1daa0c0c50e",
+        "lesson_activity.key": "37f9062e-ee5a-4c8b-9b1f-34054d95e6c9"
+      }
+    },
+    {
+      "key": "97354c27-80cf-410c-9699-36c03c7b333f",
+      "position": 2,
+      "properties": {
+        "progression_name": "What is Generative AI?"
+      },
+      "seeding_key": {
+        "activity_section.key": "97354c27-80cf-410c-9699-36c03c7b333f",
+        "lesson_activity.key": "37f9062e-ee5a-4c8b-9b1f-34054d95e6c9"
+      }
+    },
+    {
+      "key": "d1383ea1-d007-4be1-a1c2-65df9cf588bd",
+      "position": 3,
+      "properties": {
+        "progression_name": "Generative AI Lesson Structure"
+      },
+      "seeding_key": {
+        "activity_section.key": "d1383ea1-d007-4be1-a1c2-65df9cf588bd",
         "lesson_activity.key": "37f9062e-ee5a-4c8b-9b1f-34054d95e6c9"
       }
     },
@@ -234,10 +258,348 @@
     }
   ],
   "script_levels": [
-
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview of Teaching Gen AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-GenAI_overview_objectives"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "502ba333-7f02-486a-b4b3-c1daa0c0c50e"
+      },
+      "level_keys": [
+        "sp-pl-GenAI_overview_objectives"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview of Teaching Gen AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-GenAI_ cert"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "502ba333-7f02-486a-b4b3-c1daa0c0c50e"
+      },
+      "level_keys": [
+        "sp-pl-GenAI_ cert"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview of Teaching Gen AI"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-GenAI course_overview2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "502ba333-7f02-486a-b4b3-c1daa0c0c50e"
+      },
+      "level_keys": [
+        "sp-pl-GenAI course_overview2"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "What is Generative AI?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-GenAI_definingDS"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "97354c27-80cf-410c-9699-36c03c7b333f"
+      },
+      "level_keys": [
+        "sp-pl-GenAI_definingDS"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "What is Generative AI?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-GenAI_LLM"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "97354c27-80cf-410c-9699-36c03c7b333f"
+      },
+      "level_keys": [
+        "sp-pl-GenAI_LLM"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "What is Generative AI?"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-GenAI-chk_"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "97354c27-80cf-410c-9699-36c03c7b333f"
+      },
+      "level_keys": [
+        "sp-pl-GenAI-chk_"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Generative AI Lesson Structure"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl_GenAI_Primm"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "d1383ea1-d007-4be1-a1c2-65df9cf588bd"
+      },
+      "level_keys": [
+        "self-paced-pl_GenAI_Primm"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Generative AI Lesson Structure"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-GenAI_lesson_structures"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "d1383ea1-d007-4be1-a1c2-65df9cf588bd"
+      },
+      "level_keys": [
+        "sp-pl-GenAI_lesson_structures"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Generative AI Lesson Structure"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "sp-pl-GenAI_Lesson_resources"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "d1383ea1-d007-4be1-a1c2-65df9cf588bd"
+      },
+      "level_keys": [
+        "sp-pl-GenAI_Lesson_resources"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Generative AI Lesson Structure"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-GenAI_welcome_this_PL"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "d1383ea1-d007-4be1-a1c2-65df9cf588bd"
+      },
+      "level_keys": [
+        "self-paced-pl-GenAI_welcome_this_PL"
+      ]
+    }
   ],
   "levels_script_levels": [
-
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-GenAI_overview_objectives",
+        "script_level.level_keys": [
+          "sp-pl-GenAI_overview_objectives"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "502ba333-7f02-486a-b4b3-c1daa0c0c50e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-GenAI_ cert",
+        "script_level.level_keys": [
+          "sp-pl-GenAI_ cert"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "502ba333-7f02-486a-b4b3-c1daa0c0c50e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-GenAI course_overview2",
+        "script_level.level_keys": [
+          "sp-pl-GenAI course_overview2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "502ba333-7f02-486a-b4b3-c1daa0c0c50e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-GenAI_definingDS",
+        "script_level.level_keys": [
+          "sp-pl-GenAI_definingDS"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "97354c27-80cf-410c-9699-36c03c7b333f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-GenAI_LLM",
+        "script_level.level_keys": [
+          "sp-pl-GenAI_LLM"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "97354c27-80cf-410c-9699-36c03c7b333f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-GenAI-chk_",
+        "script_level.level_keys": [
+          "sp-pl-GenAI-chk_"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "97354c27-80cf-410c-9699-36c03c7b333f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl_GenAI_Primm",
+        "script_level.level_keys": [
+          "self-paced-pl_GenAI_Primm"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "d1383ea1-d007-4be1-a1c2-65df9cf588bd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-GenAI_lesson_structures",
+        "script_level.level_keys": [
+          "sp-pl-GenAI_lesson_structures"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "d1383ea1-d007-4be1-a1c2-65df9cf588bd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "sp-pl-GenAI_Lesson_resources",
+        "script_level.level_keys": [
+          "sp-pl-GenAI_Lesson_resources"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "d1383ea1-d007-4be1-a1c2-65df9cf588bd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-GenAI_welcome_this_PL",
+        "script_level.level_keys": [
+          "self-paced-pl-GenAI_welcome_this_PL"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "d1383ea1-d007-4be1-a1c2-65df9cf588bd"
+      }
+    }
   ],
   "resources": [
 
