@@ -120,11 +120,9 @@ export default function SchoolZipSearch({fieldNames}) {
   return (
     <div className={style.inputContainer}>
       <label>
-        <BodyThreeText className={style.padding}>
-          <strong>{i18n.enterYourSchoolZip()}</strong>
-        </BodyThreeText>
         <TextField
           name={fieldNames.schoolZip}
+          label={i18n.enterYourSchoolZip()}
           onChange={e => {
             setZip(e.target.value);
           }}
