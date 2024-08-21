@@ -13,7 +13,7 @@ import {Provider} from 'react-redux';
 import applabMsg from '@cdo/applab/locale';
 import autogenerateML from '@cdo/apps/applab/ai';
 import * as aiConfig from '@cdo/apps/applab/ai/dropletConfig';
-import SmallFooter from '@cdo/apps/code-studio/components/SmallFooter';
+import SmallFooter from '@cdo/apps/sharedComponents/footer/SmallFooter';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import commonMsg from '@cdo/locale';

@@ -1,0 +1,24 @@
+.small-footer {
+  font-size: $fontSize;
+
+  .small-footer-base {
+    &.base-full-width {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  .version {
+    margin: auto 0;
+  }
+
+  .more-menu {
+    display: none;
+
+    &.expanded {
+      display: block;
+      bottom: $baseHeight;
+      width: $baseWidth;
+    }
+  }
+}

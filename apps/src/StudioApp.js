@@ -37,7 +37,7 @@ import DropletTooltipManager from './blockTooltips/DropletTooltipManager';
 import {assets as assetsApi} from './clientApi';
 import * as assets from './code-studio/assets';
 import AbuseError from './code-studio/components/AbuseError';
-import SmallFooter from './code-studio/components/SmallFooter';
+import SmallFooter from './sharedComponents/footer/SmallFooter';
 import project from './code-studio/initApp/project';
 import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
 import {closeWorkspaceAlert} from './code-studio/projectRedux';
