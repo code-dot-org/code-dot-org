@@ -405,7 +405,7 @@ export const submitChatContents = createAsyncThunk(
         experiments.isEnabled(experiments.AICHAT_POLLING)
       );
     } catch (error) {
-      handleChatCompletionError(error as Error, newUserMessage, dispatch);
+      await handleChatCompletionError(error as Error, newUserMessage, dispatch);
       return;
     }
 
@@ -431,7 +431,7 @@ export const submitChatContents = createAsyncThunk(
   }
 );
 
-function handleChatCompletionError(
+async function handleChatCompletionError(
   error: Error,
   newUserMessage: ChatMessage,
   dispatch: AppDispatch
@@ -443,13 +443,33 @@ function handleChatCompletionError(
   dispatch(clearChatMessagePending());
   dispatch(addChatEvent({...newUserMessage, status: Status.ERROR}));
 
-  // Display a specific error notification if the user was rate limited (HTTP 429).
-  // Otherwise, display a generic error assistant response.
+  // Display specific error notifications if the user was rate limited (HTTP 429) or not authorized (HTTP 403).
   if (error instanceof NetworkError && error.response.status === 429) {
     dispatch(
       addChatEvent({
         id: getNewMessageId(),
         text: commonI18n.aiChatRateLimitError(),
+        notificationType: 'error',
+        timestamp: Date.now(),
+      })
+    );
+  } else if (error instanceof NetworkError && error.response.status === 403) {
+    const responseBody = await error.response.json();
+    const userType = responseBody?.user_type;
+
+    let messageText;
+    if (userType === 'teacher') {
+      messageText = commonI18n.aiChatNotAuthorizedTeacher();
+    } else if (userType === 'student') {
+      messageText = commonI18n.aiChatNotAuthorizedStudent();
+    } else {
+      messageText = 'sign in';
+    }
+
+    dispatch(
+      addChatEvent({
+        id: getNewMessageId(),
+        text: messageText,
         notificationType: 'error',
         timestamp: Date.now(),
       })
