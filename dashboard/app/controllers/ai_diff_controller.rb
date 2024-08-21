@@ -16,18 +16,14 @@ class AiDiffController < ApplicationController
       return render status: :bad_request, json: {}
     end
 
-    @session_id = params[:sessionId].presence ? params[:sessionId] : nil
+    session_id = params[:sessionId].presence
 
-    response_body = get_response_body
+    response_body = get_response_body(session_id)
 
-    # Rails controller tests reuse the same controller instance across requests within a test,
-    # which causes tests to fail. Nulling out the session ID before responding fixes this issue.
-    # More detail/other confused developers here: https://github.com/rails/rails/issues/24566
-    @session_id = nil
     render(status: :ok, json: response_body)
   end
 
-  private def get_response_body
+  private def get_response_body(session_id)
     # TODO: Check for profanity/ PII in input text
 
     # get lesson info for prompt generation
@@ -41,7 +37,7 @@ class AiDiffController < ApplicationController
     course_name = CourseOffering.find_by(id: @unit_group.course_version.course_offering_id).display_name
     full_unit_name = format("%{course_name} %{unit_name}", course_name: course_name, unit_name: params[:unitDisplayName])
 
-    bedrock_rag_response = AiDiffBedrockHelper.request_bedrock_rag_chat(params[:inputText], lesson_name, lesson_num, full_unit_name, @session_id)
+    bedrock_rag_response = AiDiffBedrockHelper.request_bedrock_rag_chat(params[:inputText], lesson_name, lesson_num, full_unit_name, session_id)
 
     #TODO: check for profanity/PII in model response
 
