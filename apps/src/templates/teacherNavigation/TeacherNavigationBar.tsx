@@ -24,18 +24,15 @@ interface SectionsData {
 function getPathName(url: string): string {
   const match = url.match(/\/\d+\/([^\/?]+)/);
   const urlPath = match ? match[1] : '';
-  const possiblePaths = Object.entries(TEACHER_NAVIGATION_PATHS);
 
   // Since the keys are different than the values (ex. lessonMaterials: 'materials'),
   // but we reference the keys several times in this component, we want to return the
   // right key for the path we are currently on
-  for (const [key, val] of possiblePaths) {
-    if (val === urlPath) {
-      return key;
-    }
-  }
-
-  return '';
+  return (
+    Object.entries(TEACHER_NAVIGATION_PATHS).find(
+      ([, val]) => val === urlPath
+    )?.[0] || ''
+  );
 }
 
 const TeacherNavigationBar: React.FunctionComponent = () => {
