@@ -70,6 +70,9 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
             hasDangerStyle && moduleStyles.danger,
             hasWarningStyle && moduleStyles.warning
           )}
+          aria-label={getDisplayText}
+          // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+          tabIndex={0}
         >
           <SafeMarkdown markdown={getDisplayText} />
         </div>
