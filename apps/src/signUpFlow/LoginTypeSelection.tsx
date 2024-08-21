@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
@@ -9,6 +9,7 @@ import {
   BodyTwoText,
   BodyThreeText,
 } from '@cdo/apps/componentLibrary/typography';
+import cleverLogo from '@cdo/apps/signUpFlow/images/cleverLogo.png';
 import signupCanvas from '@cdo/apps/signUpFlow/images/signupCanvas.png';
 import signupSchoology from '@cdo/apps/signUpFlow/images/signupSchoology.png';
 import locale from '@cdo/apps/signUpFlow/locale';
@@ -20,6 +21,15 @@ import style from '@cdo/apps/signUpFlow/loginTypeSelection.module.scss';
 
 const LoginTypeSelection: React.FunctionComponent = () => {
   const [password, setPassword] = useState('');
+  const [authToken, setAuthToken] = useState('');
+
+  useEffect(() => {
+    async function getToken() {
+      setAuthToken(await getAuthenticityToken());
+    }
+
+    getToken();
+  }, []);
 
   const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
@@ -27,31 +37,6 @@ const LoginTypeSelection: React.FunctionComponent = () => {
 
   const passwordIcon = password.length >= 6 ? 'circle-check' : 'circle-x';
   const iconClass = password.length >= 6 ? style.teal : style.lightGray;
-
-  const handleOauth = async (platform: string) => {
-    try {
-      const response = await fetch(`/users/auth/${platform}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRF-Token': await getAuthenticityToken(),
-        },
-        body: JSON.stringify({
-          // Add any necessary data here
-        }),
-      });
-
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-
-      const data = await response.json();
-      console.log('OAuth response data:', data);
-      // Handle the response data as needed
-    } catch (error) {
-      console.error('There was a problem with the OAuth request:', error);
-    }
-  };
 
   return (
     <div className={style.newSignupFlow}>
@@ -65,29 +50,43 @@ const LoginTypeSelection: React.FunctionComponent = () => {
             {locale.sign_up_with()}
           </Heading3>
           <BodyThreeText>{locale.streamline_your_sign_in()}</BodyThreeText>
-          <Button
-            text={locale.sign_up_google()}
-            iconLeft={{iconName: 'brands fa-google', iconStyle: 'solid'}}
-            className={style.googleButton}
-            onClick={() => handleOauth('google_oauth2')}
-          />
-          <Button
-            text={locale.sign_up_microsoft()}
-            iconLeft={{iconName: 'brands fa-microsoft', iconStyle: 'light'}}
-            className={style.microsoftButton}
-            onClick={() => handleOauth('microsoft_v2_auth')}
-          />
-          <Button
-            text={locale.sign_up_facebook()}
-            iconLeft={{iconName: 'brands fa-facebook-f', iconStyle: 'solid'}}
-            className={style.facebookButton}
-            onClick={() => handleOauth('facebook')}
-          />
-          <Button
-            text={locale.sign_up_clever()}
-            className={style.cleverButton}
-            onClick={() => handleOauth('clever')}
-          />
+          <form action="/users/auth/google_oauth2" method="POST">
+            <button className={style.googleButton} type="submit">
+              <FontAwesomeV6Icon
+                iconName="brands fa-google"
+                iconStyle="solid"
+              />
+              {locale.sign_up_google()}
+            </button>
+            <input type="hidden" name="authenticity_token" value={authToken} />
+          </form>
+          <form action="/users/auth/microsoft_v2_auth" method="POST">
+            <button className={style.microsoftButton} type="submit">
+              <FontAwesomeV6Icon
+                iconName="brands fa-microsoft"
+                iconStyle="light"
+              />
+              {locale.sign_up_microsoft()}
+            </button>
+            <input type="hidden" name="authenticity_token" value={authToken} />
+          </form>
+          <form action="/users/auth/facebook" method="POST">
+            <button className={style.facebookButton} type="submit">
+              <FontAwesomeV6Icon
+                iconName="brands fa-facebook-f"
+                iconStyle="solid"
+              />
+              {locale.sign_up_facebook()}
+            </button>
+            <input type="hidden" name="authenticity_token" value={authToken} />
+          </form>
+          <form action="/users/auth/clever" method="POST">
+            <button className={style.cleverButton} type="submit">
+              <img src={cleverLogo} alt="" />
+              {locale.sign_up_clever()}
+            </button>
+            <input type="hidden" name="authenticity_token" value={authToken} />
+          </form>
           <div className={style.greyTextbox}>
             <img src={signupCanvas} alt="" />
             <img src={signupSchoology} alt="" />

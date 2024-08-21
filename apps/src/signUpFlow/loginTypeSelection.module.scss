@@ -83,14 +83,18 @@ body {
       width: 2rem;
     }
 
+    form {
+      margin-bottom: 0;
+    }
+
+    i {
+      margin-right: .5rem;
+    }
+
     .passwordMessage {
       display: flex;
       align-items: center;
       margin-top: .125rem;
-
-      i {
-        margin-right: .5rem;
-      }
 
       .teal {
         color: $teal;
@@ -113,6 +117,7 @@ body {
     .googleButton {
       background-color: $google_brand_color;
       margin-bottom: .5rem;
+      color: $white;
 
       &:hover {
         background-color: darken($google_brand_color, 10%);
@@ -132,6 +137,7 @@ body {
     .facebookButton {
       background-color: $facebook_brand_color;
       margin-bottom: .5rem;
+      color: $white;
 
       &:hover {
         background-color: darken($facebook_brand_color, 10%);
@@ -140,6 +146,13 @@ body {
 
     .cleverButton {
       background-color: $clever_brand_color;
+      color: $white;
+
+      img {
+        height: 20px;
+        width: 20px;
+        opacity: inherit;
+      }
 
       &:hover {
         background-color: darken($clever_brand_color, 10%);
@@ -164,7 +177,11 @@ body {
     }
   }
 
-  .container > * {
+  form {
     width: 100%;
+
+    button {
+      width: 100%;
+    }
   }
 }
