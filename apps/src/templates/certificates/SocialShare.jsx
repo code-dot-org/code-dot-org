@@ -23,7 +23,7 @@ export default function SocialShare({
   useEffect(() => {
     testImageAccess(
       'https://facebook.com/favicon.ico' + '?' + Math.random(),
-      () => setIsFacebookAvailable(false)
+      () => setIsFacebookAvailable(true)
     );
   }, []);
   useEffect(() => {
