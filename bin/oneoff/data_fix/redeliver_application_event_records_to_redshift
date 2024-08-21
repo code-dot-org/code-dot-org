@@ -2,6 +2,7 @@
 
 require_relative '../../../dashboard/config/environment'
 require 'cdo/aws/s3'
+require 'optparse'
 require 'json'
 require 'uri'
 require 'date'
@@ -15,24 +16,29 @@ require 'aws-sdk-sts'
 
 CDO.log = Logger.new($stdout)
 
-options = {actually_redeliver: false}
+options = {}
+options[:actually_redeliver] = false
+options[:modify_invalid] = false
+options[:log_filename] = 'batch_redelivery_log.csv'
 OptionParser.new do |opts|
-  opts.banner = "Usage: #{File.basename(__FILE__)} [options]"
-  opts.on('-a', '--actually-redeliver', 'Actually redeliver records batches to Redshift.') do
-    options[:actually_redeliver] = false
+  opts.banner = "Usage: bin/oneoff/data_fix/redeliver_application_event_records_to_redshift [options]"
+  opts.on("-a", "--actually-redeliver", "Actually redeliver messages") do
+    options[:actually_redeliver] = true
   end
-  opts.on('-m', '--modify-invalid', 'Attempt to modify (truncate, remove invalid characters) invalid records.') do
+  opts.on("-m", "--modify-invalid", "Modify invalid messages") do
     options[:modify_invalid] = true
   end
-  opts.on('-l', '--batch-log-file', 'Filename to log batch reprocessing status.') do
-    options[:batch_log_file] = 'batch_redelivery_log.csv'
+  opts.on("-l", "--log-filename FILE", "Set the log filename") do |file|
+    options[:log_filename] = file
   end
-  opts.on('-h', '--help', 'Add -u to perform the update.') do
+  opts.on("-h", "--help", "Displays this help message") do
     puts opts
     exit
   end
 end.parse!
 CDO.log.info "Called with options: #{options}"
+
+class SkipRedeliveryError < StandardError; end
 
 # TODO: Limit the range of batches to reprocess. Until then, pick a single prefix and reprocess all matching error manifests.
 ERROR_MANIFESTS_PREFIX = 'errors/manifests/2024/07/14'.freeze
@@ -227,8 +233,8 @@ batches_redelivered = 0
 batches_failed = 0
 
 # Log each batch that we attempt to redeliver.
-CSV.open(options[:batch_log_file], 'a') do |batch_log_csv|
-  batch_log_csv << BatchRedeliveryStatus.members if File.empty?(options[:batch_log_file])
+CSV.open(options[:log_filename], 'a') do |batch_log_csv|
+  batch_log_csv << BatchRedeliveryStatus.members if File.empty?(options[:log_filename])
   # List all Firehose error manifests matching a date prefix in batches until there are no more to list.
   loop do
     list_error_manifests_response = s3_client.list_objects_v2(
@@ -261,14 +267,14 @@ CSV.open(options[:batch_log_file], 'a') do |batch_log_csv|
         modified_batch = ''
         # Validate and modify each record in the failed batch.
         split_json_batch(undelivered_batch).each_with_index do |record, _position_in_batch|
-          modified_record, batch_status.record_validation_status = validate_record(record, event_json_schema, modify_invalid: options[:modify_invalid])
+          modified_record, _validation_status = validate_record(record, event_json_schema, modify_invalid: options[:modify_invalid])
           modified_batch += modified_record.to_json
         rescue RecordValidationError => exception
           invalid_records_in_batch += 1
           CDO.log.info record
           CDO.log.info exception.message
         end
-        raise StandardError unless options[:actually_redeliver]
+        raise SkipRedeliveryError.new('Skipping redelivery. --actually-redeliver is set to false.') unless options[:actually_redeliver]
         batch_status.redelivery_batch_object_key = REDELIVER_DATA_PREFIX + undelivered_batch_uri.path
         begin
           redelivery_manifest = {
@@ -306,7 +312,7 @@ CSV.open(options[:batch_log_file], 'a') do |batch_log_csv|
           batches_redelivered += 1
           CDO.log.info "Successfully redelivered #{undelivered_batch_uri.path} to Redshift."
         end
-      rescue RedshiftClient::PostgreSQLQueryError, Aws::Errors::ServiceError, StandardError => exception
+      rescue RedshiftClient::PostgreSQLQueryError, Aws::Errors::ServiceError, SkipRedeliveryError, StandardError => exception
         batches_failed += 1
         CDO.log.info "Error redelivering batch: #{undelivered_batch_uri.path}"
         CDO.log.info exception.message
