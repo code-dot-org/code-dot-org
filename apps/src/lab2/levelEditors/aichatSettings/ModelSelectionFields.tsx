@@ -6,7 +6,7 @@ import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
 import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
 
-import FieldSection from './FieldSection';
+import CollapsibleFieldSection from './CollapsibleFieldSection';
 import {UpdateContext} from './UpdateContext';
 
 import moduleStyles from './edit-aichat-settings.module.scss';
@@ -53,7 +53,7 @@ const ModelSelectionFields: React.FunctionComponent = () => {
   );
 
   return (
-    <FieldSection
+    <CollapsibleFieldSection
       fieldName="selectedModelId"
       labelText="Model Selection"
       description="The initial model selected for the chatbot."
