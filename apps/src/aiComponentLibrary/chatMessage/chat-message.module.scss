@@ -2,10 +2,8 @@
 @import '@cdo/apps/componentLibrary/typography/typography.module';
 
 $message-border-radius: 8px;
-
-// TODO: Swap these colors after Gen AI Pilot v2
-$user-color: $brand_primary_light;
-$assistant-color: $light_gray_100;
+$user-color: $light_gray_100;
+$assistant-color: $brand_primary_light;
 
 %message {
   @extend %markdown-styles;
