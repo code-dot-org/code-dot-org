@@ -229,7 +229,6 @@ class ToneJSPlayer implements AudioPlayer {
     let tick = 1;
     this.currentSequencePreviewTimer = setInterval(() => {
       if (tick <= length * 4 * 4) {
-        console.log(tick);
         onTick?.(tick++);
       } else {
         if (this.currentSequencePreviewTimer) {

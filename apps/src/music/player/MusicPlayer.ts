@@ -5,7 +5,6 @@ import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import appConfig from '../appConfig';
 import {
   DEFAULT_PATTERN_LENGTH,
-  //DEFAULT_PATTERN_AI_LENGTH,
   DEFAULT_CHORD_LENGTH,
   DEFAULT_TUNE_LENGTH,
   MIN_BPM,

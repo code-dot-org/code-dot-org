@@ -48,8 +48,8 @@ type UserCompletedTaskType = 'none' | 'generated' | 'drawnDrums';
 type GenerateStateType = 'none' | 'generating';
 
 /*
- * Renders a UI for designing a pattern. This is currently used within a
- * custom Blockly Field {@link FieldPattern}
+ * Renders a UI for designing a pattern, with AI generation. This is currently
+ * used within a custom Blockly Field {@link FieldPatternAi}
  */
 const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
   library,
@@ -212,9 +212,7 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
     generatePattern(seedEvents, 8, 32 - 8, aiTemperature, newEvents => {
       currentValue.events = newEvents;
       onChange(currentValue);
-
       setGenerateState('none');
-
       playPreview();
     });
     setGenerateState('generating');

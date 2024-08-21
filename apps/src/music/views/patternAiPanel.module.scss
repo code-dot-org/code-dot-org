@@ -1,15 +1,5 @@
 @import "color.scss";
 
-// Move the arrow up and down.
-@keyframes up-down {
-  0%, 100% {
-    top: 10px;
-  }
-  50% {
-    top: 0;
-  }
-}
-
 // Move the arrow left and right.
 @keyframes left-right {
   0%, 100% {
