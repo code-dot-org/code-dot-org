@@ -142,7 +142,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   const handleTest = () => {
     if (onRun) {
       dispatch(setIsTesting(true));
-      onRun(/* runTests */ true, dispatch, source).finally(() =>
+      onRun(true, dispatch, source).finally(() =>
         dispatch(setIsTesting(false))
       );
     } else {
