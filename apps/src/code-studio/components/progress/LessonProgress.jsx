@@ -2,9 +2,8 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {findChangedProperties} from '@cdo/apps/aichat/redux/utils';
+
 import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
-import {setShowSaveChangesReminder} from '@cdo/apps/aichat/redux/aichatRedux';
 import {
   lessonExtrasUrl,
   getCurrentLevel,
@@ -71,16 +70,7 @@ class LessonProgress extends Component {
         this.props.levels[levelIndex].teacherFeedbackReviewState !==
         nextProps.levels[levelIndex].teacherFeedbackReviewState;
 
-      const aiLevelChanged =
-        this.props.savedAiCustomizations !== nextProps.savedAiCustomizations ||
-        this.props.currentAiCustomizations !==
-          nextProps.currentAiCustomizations;
-      if (
-        currentLevelChanged ||
-        statusChanged ||
-        badgeChanged ||
-        aiLevelChanged
-      ) {
+      if (currentLevelChanged || statusChanged || badgeChanged) {
         return true;
       }
     }
@@ -185,44 +175,13 @@ class LessonProgress extends Component {
                 isCurrent = currentPageNumber === level.pageNumber;
               }
 
-              const isGenAiLevel = () => {
-                const path = new URL(document.location).pathname;
-                const pathComponents = path.split('/');
-                return pathComponents.includes('gen-ai-customizing-pilot-v1');
-              };
-
-              const hasUnsavedChanges = () => {
-                let hasUnsavedChanges = false;
-                if (
-                  this.props.savedAiCustomizations &&
-                  this.props.currentAiCustomizations
-                ) {
-                  hasUnsavedChanges =
-                    findChangedProperties(
-                      this.props.savedAiCustomizations,
-                      this.props.currentAiCustomizations
-                    ).length > 0;
-                }
-                return hasUnsavedChanges;
-              };
-
-              /**
-               * When the user clicks on a level bubble for which we support changing to
-               * that level without reloading the page, we use a click handler which
-               * calls through to the progress redux store to change to that level
-               * immediately. Unless we're on a GenAi level with unsaved changes, in which
-               * case we show a reminder to explicitly save the changes.
-               **/
-              const getOnBubbleClick = (level, currentLevel) => {
-                if (isGenAiLevel() && hasUnsavedChanges()) {
-                  console.log('show save reminder should be the function');
-                  return setShowSaveChangesReminder(true);
-                } else if (canChangeLevelInPage(currentLevel, level)) {
-                  return () => navigateToLevelId(level.id);
-                } else {
-                  return undefined;
-                }
-              };
+              // When the user clicks on a level bubble for which we support changing to
+              // that level without reloading the page, we use a click handler which
+              // calls through to the progress redux store to change to that level
+              // immediately.
+              const onBubbleClick = canChangeLevelInPage(currentLevel, level)
+                ? () => navigateToLevelId(level.id)
+                : undefined;
 
               return (
                 <div
@@ -238,7 +197,7 @@ class LessonProgress extends Component {
                     disabled={false}
                     smallBubble={!isCurrent}
                     lessonName={lessonName}
-                    onClick={getOnBubbleClick(level, currentLevel)}
+                    onClick={onBubbleClick}
                   />
                 </div>
               );
@@ -331,15 +290,10 @@ export default connect(
     isLessonExtras: state.progress.isLessonExtras,
     currentPageNumber: state.progress.currentPageNumber,
     currentLevelId: state.progress.currentLevelId,
-    savedAiCustomizations: state.aichat.savedAiCustomizations,
-    currentAiCustomizations: state.aichat.currentAiCustomizations,
   }),
   dispatch => ({
     navigateToLevelId(levelId) {
       dispatch(navigateToLevelId(levelId));
-    },
-    setShowSaveChangesReminder() {
-      dispatch(setShowSaveChangesReminder(true));
     },
   })
 )(LessonProgress);

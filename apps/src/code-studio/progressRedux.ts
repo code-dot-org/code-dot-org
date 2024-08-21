@@ -84,7 +84,6 @@ export interface ProgressState {
   unitStudentDescription: string | undefined;
   changeFocusAreaPath: string | undefined;
   unitCompleted: boolean | undefined;
-  checkForUnsavedChanges: boolean | undefined;
 }
 
 export interface MilestoneReport extends OptionalMilestoneData {
@@ -148,7 +147,6 @@ const initialState: ProgressState = {
   unitStudentDescription: undefined,
   changeFocusAreaPath: undefined,
   unitCompleted: undefined,
-  checkForUnsavedChanges: undefined,
 };
 
 const progressSlice = createSlice({
@@ -183,7 +181,6 @@ const progressSlice = createSlice({
       state.hasFullProgress = action.payload.isFullProgress;
       state.isLessonExtras = action.payload.isLessonExtras;
       state.currentPageNumber = action.payload.currentPageNumber;
-      state.checkForUnsavedChanges = action.payload.checkForUnsavedChanges;
     },
     setCurrentLevelId(state, action: PayloadAction<string>) {
       state.currentLevelId = action.payload;
@@ -286,9 +283,6 @@ const progressSlice = createSlice({
     },
     setViewAsUserId(state, action: PayloadAction<number>) {
       state.viewAsUserId = action.payload;
-    },
-    setCheckForUnsavedChanges(state, action: PayloadAction<boolean>) {
-      state.checkForUnsavedChanges = action.payload;
     },
   },
   extraReducers: {
@@ -576,7 +570,6 @@ export const {
   setScriptCompleted,
   setLessonExtrasEnabled,
   setViewAsUserId,
-  setCheckForUnsavedChanges,
 } = progressSlice.actions;
 
 export default progressSlice.reducer;
