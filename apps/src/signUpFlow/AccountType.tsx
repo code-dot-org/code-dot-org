@@ -23,7 +23,7 @@ const AccountType: React.FunctionComponent = () => {
           heading={locale.create_your_free_account()}
           desc={locale.create_your_free_account_desc()}
           showLogo={false}
-          className={style.headerBanner}
+          className={style.typeHeaderBanner}
         />
         <div className={style.cardWrapper}>
           <AccountCard

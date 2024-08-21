@@ -29,7 +29,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
         heading={locale.pick_your_login_method()}
         desc={locale.choose_one_method()}
         showLogo={false}
-        className={style.headerBanner}
+        className={style.typeHeaderBanner}
       />
       <div className={style.containerWrapper}>
         <div className={style.container}>
