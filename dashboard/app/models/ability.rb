@@ -272,6 +272,10 @@ class Ability
       if user.has_ai_tutor_access? && user.levelbuilder?
         can :check_message_safety, :aichat
       end
+
+      if SingleUserExperiment.enabled?(user: user, experiment_name: 'ai-differentiation')
+        can :chat_completion, :ai_diff
+      end
     end
 
     # Override UnitGroup, Unit, Lesson and ScriptLevel.
