@@ -170,7 +170,7 @@ function initLevelGroup(levelCount, currentPage, lastAttempt) {
     }
 
     let confirmationDialog = null;
-    if (isSurvey || isAssessment) {
+    if (!isActivityGuideLevel) {
       confirmationDialog = (
         <LegacySingleLevelGroupDialog id={id} title={title} body={body} />
       );
