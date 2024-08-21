@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 
 import ModalFunctionEditor from '@cdo/apps/blockly/components/ModalFunctionEditor';
 
-import VisualizationResizeBar from '../lib/ui/VisualizationResizeBar';
+import VisualizationResizeBar from '../code-studio/components/VisualizationResizeBar';
 import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 
 import CodeWorkspace from './CodeWorkspace';

@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "music-ai-2024",
-    "serialized_at": "2024-08-15 23:09:57 UTC",
+    "serialized_at": "2024-08-19 20:59:37 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -82,6 +82,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-ai-video-intro"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -103,6 +106,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-ai-tinker"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -124,6 +130,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-ai-skill-sequence"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -145,6 +154,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-ai-video-loops"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -166,6 +178,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-ai-practice-loops"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -187,6 +202,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_playtogether"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -208,6 +226,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-ai-skill-playtogether"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -221,6 +242,111 @@
       },
       "level_keys": [
         "music-ai-skill-playtogether"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 8,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-ai-video-trigger"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-ai-2024",
+        "activity_section.key": "48e2a093-af37-4379-bf46-2164c9ca9750"
+      },
+      "level_keys": [
+        "music-ai-video-trigger"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 9,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-ai-skill-trigger"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-ai-2024",
+        "activity_section.key": "48e2a093-af37-4379-bf46-2164c9ca9750"
+      },
+      "level_keys": [
+        "music-ai-skill-trigger"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-ai-video-aibeats"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-ai-2024",
+        "activity_section.key": "48e2a093-af37-4379-bf46-2164c9ca9750"
+      },
+      "level_keys": [
+        "music-ai-video-aibeats"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 11,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-ai-skill-aibeats"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-ai-2024",
+        "activity_section.key": "48e2a093-af37-4379-bf46-2164c9ca9750"
+      },
+      "level_keys": [
+        "music-ai-skill-aibeats"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 12,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music-ai-video-congrats"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-ai-2024",
+        "activity_section.key": "48e2a093-af37-4379-bf46-2164c9ca9750"
+      },
+      "level_keys": [
+        "music-ai-video-congrats"
       ]
     }
   ],
@@ -302,6 +428,66 @@
         "level.key": "music-ai-skill-playtogether",
         "script_level.level_keys": [
           "music-ai-skill-playtogether"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-ai-2024",
+        "activity_section.key": "48e2a093-af37-4379-bf46-2164c9ca9750"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-ai-video-trigger",
+        "script_level.level_keys": [
+          "music-ai-video-trigger"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-ai-2024",
+        "activity_section.key": "48e2a093-af37-4379-bf46-2164c9ca9750"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-ai-skill-trigger",
+        "script_level.level_keys": [
+          "music-ai-skill-trigger"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-ai-2024",
+        "activity_section.key": "48e2a093-af37-4379-bf46-2164c9ca9750"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-ai-video-aibeats",
+        "script_level.level_keys": [
+          "music-ai-video-aibeats"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-ai-2024",
+        "activity_section.key": "48e2a093-af37-4379-bf46-2164c9ca9750"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-ai-skill-aibeats",
+        "script_level.level_keys": [
+          "music-ai-skill-aibeats"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-ai-2024",
+        "activity_section.key": "48e2a093-af37-4379-bf46-2164c9ca9750"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music-ai-video-congrats",
+        "script_level.level_keys": [
+          "music-ai-video-congrats"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",

@@ -2,8 +2,8 @@ import throttle from 'lodash/debounce';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import PopUpMenu from '@cdo/apps/sharedComponents/PopUpMenu';
 
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import styleConstants from '../../styleConstants';
