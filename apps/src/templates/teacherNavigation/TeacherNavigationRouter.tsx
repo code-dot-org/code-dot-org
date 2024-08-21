@@ -10,6 +10,9 @@ import {
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
 import TemporaryBlankPage from '@cdo/apps/templates/teacherDashboard/teacherNavigation/TemporaryBlankPage';
 
+import TeacherCourseOverview, {
+  teacherCourseOverviewLoader,
+} from '../courseOverview/TeacherCourseOverview';
 import ManageStudents from '../manageStudents/ManageStudents';
 import SectionProjectsListWithData from '../projects/SectionProjectsListWithData';
 import SectionAssessments from '../sectionAssessments/SectionAssessments';
@@ -200,11 +203,12 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
         />
         <Route
           path={TEACHER_NAVIGATION_PATHS.courseOverview}
+          loader={teacherCourseOverviewLoader}
           element={
             <ElementOrEmptyPage
               showNoStudents={studentCount === 0}
               showNoCurriculumAssigned={!anyStudentHasProgress}
-              element={applyV1TeacherDashboardWidth(<TemporaryBlankPage />)}
+              element={applyV1TeacherDashboardWidth(<TeacherCourseOverview />)}
             />
           }
         />
