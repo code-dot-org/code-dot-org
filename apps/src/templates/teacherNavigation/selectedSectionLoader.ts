@@ -18,12 +18,9 @@ import {
 export const asyncLoadSelectedSection = async (sectionId: string) => {
   const state = getStore().getState().teacherSections;
 
-  console.log('lfm load section data', sectionId);
-
   if (state.selectedSectionId === sectionId || state.isLoadingSectionData) {
     return;
   }
-  console.log('lfm load section data after return', sectionId);
 
   getStore().dispatch(startLoadingSectionData());
   getStore().dispatch(selectSection(sectionId));

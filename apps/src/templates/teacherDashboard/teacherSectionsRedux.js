@@ -845,7 +845,6 @@ export default function teacherSections(state = initialState, action) {
 
   if (action.type === SELECT_SECTION) {
     let sectionId;
-    console.log('lfm2', {sectionId: action.sectionId});
     if (action.sectionId) {
       sectionId = parseInt(action.sectionId);
     } else {
@@ -861,7 +860,6 @@ export default function teacherSections(state = initialState, action) {
 
     const sectionName =
       sectionId !== NO_SECTION ? state.sections[sectionId].name : '';
-
     return {
       ...state,
       selectedSectionId: sectionId,
