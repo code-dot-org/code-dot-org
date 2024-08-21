@@ -274,6 +274,30 @@ FactoryBot.define do
           user.save validate: false
         end
       end
+      # Gives teacher ownership of a section which has CAP grace_period student.
+      trait :with_cap_grace_period_section do
+        after(:create) do |teacher|
+          student = create(:cpa_non_compliant_student, :in_grace_period)
+          section = create(:section, user: teacher)
+          section.add_student(student)
+        end
+      end
+      # Gives teacher ownership of a section which has CAP locked_out student.
+      trait :with_cap_locked_out_section do
+        after(:create) do |teacher|
+          student = create(:locked_out_child)
+          section = create(:section, user: teacher)
+          section.add_student(student)
+        end
+      end
+      # Gives teacher ownership of a section which has a CAP compliant student.
+      trait :with_cap_compliant_section do
+        after(:create) do |teacher|
+          student = create(:cpa_non_compliant_student, :with_parent_permission)
+          section = create(:section, user: teacher)
+          section.add_student(student)
+        end
+      end
     end
 
     factory :student do

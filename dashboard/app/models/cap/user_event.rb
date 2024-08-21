@@ -29,6 +29,7 @@ module CAP
       ACCOUNT_LOCKING = 'account_locking'.freeze,
       ACCOUNT_PURGING = 'account_purging'.freeze,
       COMPLIANCE_REMOVING = 'compliance_removing'.freeze,
+      SECTIONS_WARNING_EMAIL_SENT = 'sections_warning_email_sent'.freeze
     ].freeze
 
     enum policy: POLICIES.index_by(&:underscore), _suffix: true
