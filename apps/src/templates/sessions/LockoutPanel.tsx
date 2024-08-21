@@ -17,8 +17,8 @@ import i18n from '@cdo/locale';
 import headerThanksImage from '@cdo/static/common_images/penguin/dancing.png';
 import headerImage from '@cdo/static/common_images/penguin/yelling.png';
 
-import Spinner from '../../code-studio/pd/components/spinner';
 import {getStore} from '../../redux';
+import Spinner from '../../sharedComponents/Spinner';
 import * as color from '../../util/color';
 import {hashString} from '../../utils';
 

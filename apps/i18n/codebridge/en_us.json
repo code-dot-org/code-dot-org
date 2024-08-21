@@ -20,6 +20,11 @@
   "predictRunDisabledTooltip": "You must answer the question in the instructions before running the code.",
   "renameFile": "Rename file",
   "renameFolder": "Rename folder",
-  "submitDisabledTooltip": "You must run your code before submitting.",
-  "systemCodeError": "We're sorry, we hit an issue running your program. Please refresh the page and try again."
+  "runToContinue": "You must run your code before continuing.",
+  "runToFinish": "You must run your code before finishing.",
+  "runToSubmit": "You must run your code before submitting.",
+  "systemCodeError": "We're sorry, we hit an issue running your program. Please refresh the page and try again.",
+  "validationNotYetPassedContinue": "You must pass tests before continuing.",
+  "validationNotYetPassedFinish": "You must pass tests before finishing.",
+  "validationNotYetPassedSubmit": "You must pass tests before submitting."
 }

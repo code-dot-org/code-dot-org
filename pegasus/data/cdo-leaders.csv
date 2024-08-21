@@ -1,38 +1,37 @@
 name_s,url_s,description_t,role_s,kind_s
-Aileen Tang,leadership/aileen_tang,,,director
-Alberto M. Carvalho,leadership/alberto_m_carvalho,Superintendent of Los Angeles Unified School District,,director
-Alfred Lin,leadership/alfred_lin,"Partner, Sequoia Capital",,director
-Anne Dinning,leadership/anne_dinning,"Managing Director, D. E. Shaw & Co.",,director
-Bobby Schnabel,leadership/bobby_schnabel,"Professor of Computer Science, University of Colorado Boulder",,director
-David Treadwell,leadership/david_treadwell,"Senior Vice President, Amazon",,director
-Fareed Adib,leadership/fareed_adib,"Managing Director of Growth and Minority
+Aileen Tang,https://www.linkedin.com/in/aileen826/,,,director
+Alberto M. Carvalho,https://www.linkedin.com/in/alberto-carvalho-33aa66193/,Superintendent of Los Angeles Unified School District,,director
+Alfred Lin,https://www.linkedin.com/in/linalfred/,"Partner, Sequoia Capital",,director
+Anne Dinning,,"Managing Director, D. E. Shaw & Co.",,director
+Bobby Schnabel,https://www.linkedin.com/in/bobby-schnabel-860b61b/,"Professor of Computer Science, University of Colorado Boulder",,director
+David Treadwell,https://www.linkedin.com/in/david-treadwell-4a6516/,"Senior Vice President, Amazon",,director
+Fareed Adib,,"Managing Director of Growth and Minority
 Strategies, Vista",,director
-Hadi Partovi,leadership/hadi_partovi,"Founder and CEO, Code.org",,director
-Jackie Smalls,leadership/jackie_smalls,"VP Social Impact Coalitions, Discovery Education",,director
-Jeff Wilke,leadership/jeff_wilke,Chairman and co-founder of Re:Build Manufacturing,,director
-Jhone Ebert,leadership/jhone_ebert,Superintendent of Public Instruction for Nevada,,director
-Kevin Scott,leadership/kevin_scott,"CTO and Executive VP, Technology & Research, Microsoft",,director
-Palvi Mehta,leadership/palvi_mehta,"CFO, Pioneer Square Labs",,director
-Robert Runcie,leadership/robert_runcie,Chiefs for Change,,director
-"Sharon L. Contreras, Ph.D",leadership/sharon_l_contreras,"CEO, The Innovation Project",,director
-Vandana Sikka,leadership/vandana_sikka,"Founder and CEO, Learnee, Inc.",,director
-Amy Watson,leadership/amy_watson,VP of Finance,,LT
-Cameron Wilson,leadership/cameron_wilson,President,,LT
-Carolina Martin,,VP of Development,,LT
-Emily McLeod,,Director of Teaching and Learning,,LT
-Forest Key,leadership/forest_key,VP of International Partnerships,,LT
-Hadi Partovi,,CEO,,LT
-Jess Baker,,Director of Programs,,LT
-Karim Meghji,leadership/karim_meghji,Chief Product Officer,,LT
-Katie Hendrickson,leadership/katie_hendrickson,Chief of Staff,,LT
-Mac Russell,,Senior Director of Integrated Marketing,,LT
-Nimisha Mondal,,Sr. Director of Innovation,,LT
-Pat Yongpradit,leadership/pat_yongpradit,Chief Academic Officer,,LT
-Patty Izquierdo,,VP of People & Culture,,LT
-Robyn Speed,,Director of Outreach and Adoption,,LT
-Sarah Morrison,leadership/sarah_morrison,SVP of Marketing,,LT
-Sean Roberts,,VP of State Government Affairs,,LT
-Simon Guest,,CTO,,LT
+Hadi Partovi,https://www.linkedin.com/in/hadip/,"Founder and CEO, Code.org",,director
+Jackie Smalls,https://www.linkedin.com/in/jacqueline-smalls-7aa091118/,"VP Social Impact Coalitions, Discovery Education",,director
+Jeff Wilke,,Chairman and co-founder of Re:Build Manufacturing,,director
+Jhone Ebert,https://www.linkedin.com/in/jhone-ebert-a92779a/,Superintendent of Public Instruction for Nevada,,director
+Kevin Scott,https://www.linkedin.com/in/jkevinscott/,"CTO and Executive VP, Technology & Research, Microsoft",,director
+Palvi Mehta,https://www.linkedin.com/in/palvi-mehta-9052084/,"CFO, Pioneer Square Labs",,director
+Robert Runcie,https://www.linkedin.com/in/bob-runcie/,Chiefs for Change,,director
+"Sharon L. Contreras, Ph.D",,"CEO, The Innovation Project",,director
+Vandana Sikka,,"Founder and CEO, Learnee, Inc.",,director
+Amy Watson,https://www.linkedin.com/in/akwatson/,VP of Finance,,LT
+Cameron Wilson,https://www.linkedin.com/in/cameronpwilson/,President,,LT
+Carolina Martin,https://www.linkedin.com/in/carolinaamartin/,VP of Development,,LT
+Emily McLeod,https://www.linkedin.com/in/ehmcleod/,Director of Teaching and Learning,,LT
+Forest Key,,VP of International Partnerships,,LT
+Hadi Partovi,https://www.linkedin.com/in/hadip/,CEO,,LT
+Jess Baker,https://www.linkedin.com/in/jess-baker-a19baa52/,Director of Programs,,LT
+Karim Meghji,https://www.linkedin.com/in/kmeghji/,Chief Product Officer,,LT
+Katie Hendrickson,https://www.linkedin.com/in/katieahendrickson/,Chief of Staff,,LT
+Mac Russell,https://www.linkedin.com/in/macdrussell/,Senior Director of Integrated Marketing,,LT
+Nimisha Mondal,https://www.linkedin.com/in/nimishamondal/,Sr. Director of Innovation,,LT
+Pat Yongpradit,https://www.linkedin.com/in/patyongpradit/,Chief Academic Officer,,LT
+Patty Izquierdo,https://www.linkedin.com/in/patty-izquierdo/,VP of People & Culture,,LT
+Sarah Morrison,https://www.linkedin.com/in/sarahhartline/,SVP of Marketing,,LT
+Sean Roberts,https://www.linkedin.com/in/1seanroberts/,VP of State Government Affairs,,LT
+Simon Guest,https://www.linkedin.com/in/simonguest/,CTO,,LT
 Aaron Ray,http://www.linkedin.com/in/aray746,"Partner, The Collective",,advisor
 Chris Ovitz,https://www.linkedin.com/in/christopherovitz/,Co-founder of Viddy,,advisor
 Clara Shih,http://en.wikipedia.org/wiki/Clara_Shih,"CEO, Hearsay Social",,advisor
