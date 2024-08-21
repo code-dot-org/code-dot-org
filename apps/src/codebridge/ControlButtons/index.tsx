@@ -11,6 +11,7 @@ import {
   getCurrentLevel,
   nextLevelId,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Button from '@cdo/apps/componentLibrary/button';
 import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
@@ -26,6 +27,8 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import moduleStyles from './control-buttons.module.scss';
+
+const SHOW_TEST_NAVIGATION_BUTTONS = queryParams('button-bar');
 
 const ControlButtons: React.FunctionComponent = () => {
   const {onRun, onStop} = useCodebridgeContext();
@@ -266,36 +269,40 @@ const ControlButtons: React.FunctionComponent = () => {
             size={'s'}
             color={'white'}
           />
+          {SHOW_TEST_NAVIGATION_BUTTONS && (
+            <Button
+              text="Test"
+              onClick={() => handleRun(true)}
+              disabled={!!disabledCodeActionsTooltip}
+              iconLeft={{iconStyle: 'solid', iconName: 'flask'}}
+              color={'black'}
+              size={'s'}
+            />
+          )}
+        </span>
+      )}
+      {SHOW_TEST_NAVIGATION_BUTTONS && (
+        <span className={moduleStyles.navigationButton}>
+          {disabledNavigationTooltip &&
+            renderDisabledButtonHelperIcon(
+              'fa-question-circle-o',
+              'submitButtonDisabled',
+              disabledNavigationTooltip
+            )}
           <Button
-            text="Test"
-            onClick={() => handleRun(true)}
-            disabled={!!disabledCodeActionsTooltip}
-            iconLeft={{iconStyle: 'solid', iconName: 'flask'}}
-            color={'black'}
+            text={navigationText}
+            onClick={handleNavigation}
+            disabled={!!disabledNavigationTooltip}
+            color={'purple'}
             size={'s'}
+            iconLeft={
+              hasNextLevel
+                ? {iconStyle: 'solid', iconName: 'arrow-right'}
+                : undefined
+            }
           />
         </span>
       )}
-      <span className={moduleStyles.navigationButton}>
-        {disabledNavigationTooltip &&
-          renderDisabledButtonHelperIcon(
-            'fa-question-circle-o',
-            'submitButtonDisabled',
-            disabledNavigationTooltip
-          )}
-        <Button
-          text={navigationText}
-          onClick={handleNavigation}
-          disabled={!!disabledNavigationTooltip}
-          color={'purple'}
-          size={'s'}
-          iconLeft={
-            hasNextLevel
-              ? {iconStyle: 'solid', iconName: 'arrow-right'}
-              : undefined
-          }
-        />
-      </span>
     </div>
   );
 };

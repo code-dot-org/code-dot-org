@@ -10,6 +10,7 @@ import {
   getCurrentLevel,
   nextLevelId,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
@@ -32,6 +33,9 @@ import {useCodebridgeContext} from '../codebridgeContext';
 import {appendSystemMessage} from '../redux/consoleRedux';
 
 import moduleStyles from '@codebridge/InfoPanel/styles/validated-instructions.module.scss';
+
+const SHOW_TEST_NAVIGATION_BUTTONS =
+  queryParams('instructions-buttons') || !queryParams('button-bar');
 
 interface InstructionsProps {
   /** Additional callback to fire before navigating to the next level. */
@@ -225,16 +229,18 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
         onClick={handleStop}
         color={'destructive'}
         iconLeft={{iconStyle: 'solid', iconName: 'square'}}
-        className={moduleStyles.centerButton}
+        className={moduleStyles.buttonInstruction}
         size={'s'}
       />
     ) : (
       <Button
         text={commonI18n.test()}
         onClick={() => handleTest()}
+        type={'secondary'}
         disabled={isLoadingEnvironment}
         iconLeft={{iconStyle: 'solid', iconName: 'flask'}}
-        color={'black'}
+        className={moduleStyles.buttonInstruction}
+        color={'white'}
         size={'s'}
       />
     );
@@ -288,10 +294,14 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
               }
               predictAnswerLocked={predictAnswerLocked}
             />
+          </div>
+        )}
+        {SHOW_TEST_NAVIGATION_BUTTONS && (
+          <div className={moduleStyles['bubble-' + theme]}>
             {renderTestButton()}
           </div>
         )}
-        {showNavigation && (
+        {SHOW_TEST_NAVIGATION_BUTTONS && showNavigation && (
           <div
             id="instructions-navigation"
             className={moduleStyles['bubble-' + theme]}

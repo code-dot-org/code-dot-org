@@ -66,13 +66,13 @@
   overflow-y: auto;
   white-space: pre-wrap;
 
-  margin-bottom: 10px;
   animation: slidein 0.5s;
 }
 
 %bubble {
   padding: 16px;
   border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 .bubble-dark {
