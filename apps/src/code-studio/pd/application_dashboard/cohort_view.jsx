@@ -7,10 +7,10 @@ import React from 'react';
 import {Button, Col, Row} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 
+import Spinner from '../../../sharedComponents/Spinner';
 import RegionalPartnerDropdown, {
   RegionalPartnerPropType,
 } from '../components/regional_partner_dropdown';
-import Spinner from '../components/spinner';
 
 import CohortCalculator, {countAcceptedApplications} from './cohort_calculator';
 import CohortViewTable from './cohort_view_table';

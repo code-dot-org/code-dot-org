@@ -13,7 +13,7 @@ import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {findProfanity} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
-import Spinner from '../../pd/components/spinner';
+import Spinner from '../../../sharedComponents/Spinner';
 import {hideLibraryCreationDialog} from '../shareDialogRedux';
 
 import LibraryClientApi from './LibraryClientApi';

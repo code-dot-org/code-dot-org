@@ -6,7 +6,7 @@ import {Button, FormControl} from 'react-bootstrap'; // eslint-disable-line no-r
 
 import Pagination from '@cdo/apps/sharedComponents/Pagination';
 
-import Spinner from '../pd/components/spinner';
+import Spinner from '../../sharedComponents/Spinner';
 
 import PeerReviewSubmissionData from './PeerReviewSubmissionData';
 
