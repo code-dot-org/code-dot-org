@@ -36,6 +36,10 @@ enum WorkspaceTeacherViewTab {
   TEST_STUDENT_MODEL = 'testStudentModel',
 }
 
+const eraserIcon: FontAwesomeV6IconProps = {
+  iconName: 'eraser',
+};
+
 /**
  * Renders the AI Chat Lab main chat workspace component.
  */
@@ -178,7 +182,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           <Button
             text="Clear chat"
             disabled={!canChatWithModel}
-            iconLeft={{iconName: 'eraser'}}
+            iconLeft={eraserIcon}
             size="s"
             type="secondary"
             color="gray"
