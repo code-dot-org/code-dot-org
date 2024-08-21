@@ -7,7 +7,10 @@ import Typography from '@cdo/apps/componentLibrary/typography';
 import SidebarOption from '@cdo/apps/templates/teacherNavigation/SidebarOption';
 import i18n from '@cdo/locale';
 
-import {LABELED_TEACHER_NAVIGATION_PATHS} from './TeacherNavigationPaths';
+import {
+  LABELED_TEACHER_NAVIGATION_PATHS,
+  TEACHER_NAVIGATION_PATHS,
+} from './TeacherNavigationPaths';
 
 import styles from './teacher-navigation.module.scss';
 
@@ -16,6 +19,23 @@ interface SectionsData {
     name: string;
     hidden: boolean;
   };
+}
+
+function getPathName(url: string): string {
+  const match = url.match(/\/\d+\/([^\/?]+)/);
+  const urlPath = match ? match[1] : '';
+  const possiblePaths = Object.entries(TEACHER_NAVIGATION_PATHS);
+
+  // Since the keys are different than the values (ex. lessonMaterials: 'materials'),
+  // but we reference the keys several times in this component, we want to return the
+  // right key for the path we are currently on
+  for (const [key, val] of possiblePaths) {
+    if (val === urlPath) {
+      return key;
+    }
+  }
+
+  return '';
 }
 
 const TeacherNavigationBar: React.FunctionComponent = () => {
@@ -31,12 +51,16 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   const [selectedSectionId, setSelectedSectionId] = useState<string>(
     sectionId || ''
   );
-  const [selectedOptionKey, setSelectedOptionKey] =
-    useState<string>('assessments');
+  const [selectedOptionKey, setSelectedOptionKey] = useState<string>('');
 
   const handleOptionClick = (pathKey: string) => {
     setSelectedOptionKey(pathKey);
   };
+
+  useEffect(() => {
+    const initialOptionKey = getPathName(window.location.pathname);
+    setSelectedOptionKey(initialOptionKey);
+  }, []);
 
   useEffect(() => {
     const updatedSectionArray = Object.entries(sections)
