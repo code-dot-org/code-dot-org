@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
-import Alert, {AlertProps} from '@cdo/apps/componentLibrary/alert/Alert';
+import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import {modelDescriptions} from '../constants';
@@ -74,15 +74,18 @@ const ChatEventView: React.FunctionComponent<ChatEventViewProps> = ({
   }
 
   if (isModelUpdate(event)) {
-    const alertArgs: AlertProps = {
-      text: formatModelUpdateText(event),
-      type: 'success',
-      size: 's',
-    };
-    if (!isTeacherView) {
-      alertArgs.onClose = () => dispatch(removeUpdateMessage(event.id));
-    }
-    return <Alert {...alertArgs} />;
+    return (
+      <Alert
+        text={formatModelUpdateText(event)}
+        type="success"
+        size="s"
+        onClose={
+          isTeacherView
+            ? undefined
+            : () => dispatch(removeUpdateMessage(event.id))
+        }
+      />
+    );
   }
 
   if (event.descriptionKey) {
