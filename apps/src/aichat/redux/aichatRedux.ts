@@ -27,6 +27,7 @@ import ChatEventLogger from '../chatEventLogger';
 import {saveTypeToAnalyticsEvent} from '../constants';
 import {
   AichatContext,
+  AichatLevelProperties,
   AiCustomizations,
   ChatEvent,
   ChatMessage,
@@ -374,8 +375,15 @@ export const submitChatContents = createAsyncThunk(
   async (newUserMessageText: string, thunkAPI) => {
     const dispatch = thunkAPI.dispatch as AppDispatch;
     const state = thunkAPI.getState() as RootState;
-    const {savedAiCustomizations: aiCustomizations, chatEventsCurrent} =
-      state.aichat;
+    const {chatEventsCurrent, savedAiCustomizations} = state.aichat;
+    const levelSystemPrompt = (
+      state.lab.levelProperties as AichatLevelProperties | undefined
+    )?.aichatSettings?.levelSystemPrompt;
+    const aiCustomizations = {
+      ...savedAiCustomizations,
+      systemPrompt:
+        levelSystemPrompt + ' ' + savedAiCustomizations.systemPrompt,
+    };
 
     const aichatContext: AichatContext = {
       currentLevelId: parseInt(state.progress.currentLevelId || ''),
