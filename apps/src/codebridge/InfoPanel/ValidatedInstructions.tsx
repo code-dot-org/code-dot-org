@@ -34,8 +34,8 @@ import {appendSystemMessage} from '../redux/consoleRedux';
 
 import moduleStyles from '@codebridge/InfoPanel/styles/validated-instructions.module.scss';
 
-const SHOW_TEST_NAVIGATION_BUTTONS =
-  queryParams('instructions-buttons') || !queryParams('button-bar');
+// By default we show the test and navigation buttons unless the URL parameter 'button-bar' is set.
+const SHOW_TEST_NAVIGATION_BUTTONS = !queryParams('button-bar');
 
 interface InstructionsProps {
   /** Additional callback to fire before navigating to the next level. */
