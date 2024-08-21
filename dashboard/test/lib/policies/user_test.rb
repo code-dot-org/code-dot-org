@@ -50,11 +50,9 @@ class Policies::UserTest < ActiveSupport::TestCase
   end
 
   test 'verified_teacher_candidate? should return false when teacher is already verified' do
-    teacher = create :teacher
-    # Change teacher to verified
-    teacher.verify_teacher!
-    assert_equal true, teacher.verified_teacher?
-    # Teacher already verified, not eligible for re-verification
-    assert_equal false, Policies::User.verified_teacher_candidate?(teacher)
+    teacher = create :teacher, :with_google_authentication_option
+    assert_changes -> {Policies::User.verified_teacher_candidate?(teacher)}, from: true, to: false do
+      teacher.verify_teacher!
+    end
   end
 end
