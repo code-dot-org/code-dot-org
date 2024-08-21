@@ -17,6 +17,7 @@ import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
@@ -31,7 +32,6 @@ const ControlButtons: React.FunctionComponent = () => {
 
   const dialogControl = useDialogControl();
   const [hasRun, setHasRun] = useState(false);
-  const [isRunning, setIsRunning] = useState(false);
   const dispatch = useAppDispatch();
 
   const source = useAppSelector(
@@ -57,21 +57,23 @@ const ControlButtons: React.FunctionComponent = () => {
   const isLoadingEnvironment = useAppSelector(
     state => state.lab2System.loadingCodeEnvironment
   );
+  const isRunning = useAppSelector(state => state.lab2System.isRunning);
+
   const validationState = useAppSelector(state => state.lab.validationState);
   const lifecycleNotifier = Lab2Registry.getInstance().getLifecycleNotifier();
 
-  const resetStatus = () => {
-    setHasRun(false);
-    setIsRunning(false);
-  };
-
   useEffect(() => {
+    const resetStatus = () => {
+      setHasRun(false);
+      dispatch(setIsRunning(false));
+    };
+
     // Reset run status when the level changes.
     lifecycleNotifier.addListener(
       LifecycleEvent.LevelLoadCompleted,
       resetStatus
     );
-  }, [lifecycleNotifier]);
+  }, [lifecycleNotifier, dispatch]);
 
   const onContinue = () => dispatch(navigateToNextLevel());
   // No-op for now. TODO: figure out what the finish button should do.
@@ -106,8 +108,10 @@ const ControlButtons: React.FunctionComponent = () => {
 
   const handleRun = (runTests: boolean) => {
     if (onRun) {
-      setIsRunning(true);
-      onRun(runTests, dispatch, source).then(() => setIsRunning(false));
+      dispatch(setIsRunning(true));
+      onRun(runTests, dispatch, source).finally(() =>
+        dispatch(setIsRunning(false))
+      );
       if (!runTests) {
         setHasRun(true);
       }
@@ -119,10 +123,10 @@ const ControlButtons: React.FunctionComponent = () => {
   const handleStop = () => {
     if (onStop) {
       onStop();
-      setIsRunning(false);
+      dispatch(setIsRunning(false));
     } else {
       dispatch(appendSystemMessage("We don't know how to stop your code."));
-      setIsRunning(false);
+      dispatch(setIsRunning(false));
     }
   };
 
