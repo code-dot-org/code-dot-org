@@ -37,6 +37,6 @@ class TeacherMailerTest < ActionMailer::TestCase
     assert_equal I18n.t('teacher_mailer.verified_teacher_subject'), mail.subject
     assert_equal [teacher.email], mail.to
     assert_equal ['teacher@code.org'], mail.from
-    assert_match /Hi,/, mail.body.encoded
+    assert_match /Congratulations! You are now a verified teacher on Code.org. You now have access to Code.org's protected teacher materials - here's what to expect:/, mail.body.encoded
   end
 end
