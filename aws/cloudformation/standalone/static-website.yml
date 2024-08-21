@@ -1,0 +1,142 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: CloudFormation template to create an S3 bucket and a CloudFront distribution for serving static assets or a full static website. The ACM certificate is created if not provided.
+
+Parameters:
+  DomainName:
+    Type: String
+    Description: The domain name (e.g., example.com)
+  
+  SubDomainName:
+    Type: String
+    Description: The subdomain name (e.g., static)
+
+  HostedZoneId:
+    Type: String
+    Description: The hosted zone ID for the domain in Route 53
+
+  IncludeWebsiteFunctionality:
+    Type: String
+    Description: "Whether to include full website functionality (yes/no)"
+    AllowedValues:
+      - "yes"
+      - "no"
+    Default: "no"
+
+  AcmCertificateArn:
+    Type: String
+    Description: "The ARN of the ACM certificate for the CloudFront distribution (optional)"
+    Default: ""  # Default to empty string if not provided
+
+Conditions:
+  CreateCertificate: !Equals [ !Ref AcmCertificateArn, "" ]
+  IncludeWebsiteFunctionalityCondition: !Equals [ !Ref IncludeWebsiteFunctionality, "yes" ]
+
+Resources:
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "${SubDomainName}.${DomainName}"
+      WebsiteConfiguration:
+        !If 
+          - IncludeWebsiteFunctionalityCondition
+          - IndexDocument: index.html
+            ErrorDocument: error.html
+          - !Ref "AWS::NoValue"
+
+  CloudFrontOriginAccessControl:
+    Type: AWS::CloudFront::OriginAccessControl
+    Properties:
+      OriginAccessControlConfig:
+        Name: !Sub "${SubDomainName}.${DomainName}-OAC"
+        SigningBehavior: always
+        SigningProtocol: sigv4
+        OriginAccessControlOriginType: s3
+
+  S3BucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref S3Bucket
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Sid: AllowCloudFrontAccess
+            Effect: Allow
+            Principal:
+              Service: cloudfront.amazonaws.com
+            Action: "s3:GetObject"
+            Resource: !Sub "arn:aws:s3:::${S3Bucket}/*"
+            Condition:
+              StringEquals:
+                AWS:SourceArn: !Sub "arn:aws:cloudfront::${AWS::AccountId}:distribution/${CloudFrontDistribution}"
+
+  # Create ACM Certificate if not provided
+  AcmCertificate:
+    Type: AWS::CertificateManager::Certificate
+    Condition: CreateCertificate
+    Properties:
+      DomainName: !Sub "${SubDomainName}.${DomainName}"
+      ValidationMethod: DNS
+      DomainValidationOptions:
+        - DomainName: !Sub "${SubDomainName}.${DomainName}"
+          HostedZoneId: !Ref HostedZoneId
+
+  CloudFrontDistribution:
+    Type: AWS::CloudFront::Distribution
+    Properties:
+      DistributionConfig:
+        Aliases:
+          - !Sub "${SubDomainName}.${DomainName}"
+        Origins:
+          - Id: S3Origin
+            DomainName: !GetAtt S3Bucket.DomainName
+            S3OriginConfig:
+              OriginAccessIdentity: ''
+            OriginAccessControlId: !Ref CloudFrontOriginAccessControl
+        Enabled: true
+        DefaultRootObject: 
+          !If 
+            - IncludeWebsiteFunctionalityCondition
+            - index.html
+            - !Ref "AWS::NoValue"
+        DefaultCacheBehavior:
+          ViewerProtocolPolicy: redirect-to-https
+          TargetOriginId: S3Origin
+          ForwardedValues:
+            QueryString: false
+            Cookies:
+              Forward: none
+          MinTTL: 0
+          DefaultTTL: 86400
+          MaxTTL: 31536000
+        ViewerCertificate:
+          AcmCertificateArn: !If 
+            - CreateCertificate
+            - !Ref AcmCertificate
+            - !Ref AcmCertificateArn
+          SslSupportMethod: sni-only
+
+  CloudFrontDnsRecord:
+    Type: AWS::Route53::RecordSet
+    Properties:
+      HostedZoneId: !Ref HostedZoneId
+      Name: !Sub "${SubDomainName}.${DomainName}"
+      Type: A
+      AliasTarget:
+        DNSName: !GetAtt CloudFrontDistribution.DomainName
+        HostedZoneId: "Z2FDTNDATAQYW2" # This is the fixed hosted zone ID for CloudFront distributions
+
+Outputs:
+  WebsiteURL:
+    Description: "The URL of the static asset bucket"
+    Value: !Sub "https://${SubDomainName}.${DomainName}"
+
+  S3BucketName:
+    Description: "The name of the S3 bucket"
+    Value: !Ref S3Bucket
+
+  CreatedAcmCertificateArn:
+    Description: "The ARN of the created ACM certificate (if applicable)"
+    Value: !If
+      - CreateCertificate
+      - !Ref AcmCertificate
+      - "Not created"
