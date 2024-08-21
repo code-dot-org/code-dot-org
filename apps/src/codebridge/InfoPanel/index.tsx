@@ -23,7 +23,7 @@ const panelMap = {
 };
 
 const panelProps = {
-  [Panels.Instructions]: {manageNavigation: true},
+  [Panels.Instructions]: {},
   [Panels.HelpAndTips]: {},
   [Panels.ForTeachersOnly]: {},
 };

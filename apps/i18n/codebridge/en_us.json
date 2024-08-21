@@ -1,6 +1,9 @@
 {
   "addFile": "Add file",
   "addSubFolder": "Add sub-folder",
+  "cannotRun": "We don't know how to run your code. Please contact support.",
+  "cannotStop": "We don't know how to stop your code. Please contact support.",
+  "cannotTest": "We don't know how to run your tests. Please contact support.",
   "deleteFile": "Delete file",
   "deleteFolder": "Delete folder",
   "downloadFile": "Download file",
