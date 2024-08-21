@@ -140,11 +140,11 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   const handleTest = () => {
     if (onRun) {
       dispatch(setIsTesting(true));
-      onRun(true, dispatch, source).finally(() =>
+      onRun(/* runTests */ true, dispatch, source).finally(() =>
         dispatch(setIsTesting(false))
       );
     } else {
-      dispatch(appendSystemMessage("We don't know how to run your code."));
+      dispatch(appendSystemMessage("We don't know how to run your tests."));
     }
   };
 
@@ -153,7 +153,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
       onStop();
       dispatch(setIsTesting(false));
     } else {
-      dispatch(appendSystemMessage("We don't know how to stop your code."));
+      dispatch(appendSystemMessage("We don't know how to stop your tests."));
       dispatch(setIsTesting(false));
     }
   };
