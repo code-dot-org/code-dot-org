@@ -1,0 +1,59 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-08-15T22:57:54.000Z",
+  "level_num": "custom",
+  "user_id": 1196,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "#### Repeat\r\n\r\nSave time by using repeat to play the same sounds over and over.\r\n\r\n1. Click [Control](#clickable=toolbox-second-block) to find the repeat block. \r\n2. Use the [repeat](#clickable=repeat-block) block to play the same sound [3](#clickable=repeat-block-field-workspace) times.",
+    "hide_share_and_remix": "false",
+    "validations": [
+      {
+        "key": "music-ai-skill-sequence_72970c41-8593-4cb2-a028-efec3f9d143b",
+        "message": "Nice work. You successfully played a sound five times!",
+        "next": false,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 5
+          }
+        ]
+      }
+    ],
+    "level_data": {
+      "library": "intro2024",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+          "Control": [
+            "repeat_simple2"
+          ],
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        }
+      }
+    },
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-15T22:57:54.506+00:00\",\"changed\":[\"cloned from \\\"music-ai-skill-sequence\\\"\"],\"cloned_from\":\"music-ai-skill-sequence\"},{\"changed_at\":\"2024-08-15 23:03:16 +0000\",\"changed\":[\"tts_short_instructions_override\",\"long_instructions\",\"validations\",\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-08-20 18:17:18 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

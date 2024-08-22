@@ -76,6 +76,32 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   #
+  # Get /users/new_sign_up/finish_student_account
+  #
+  def finish_student_account
+    @age_options = [{value: '', text: ''}] + User::AGE_DROPDOWN_OPTIONS.map do |age|
+      {value: age.to_s, text: age.to_s}
+    end
+
+    @us_state_options = [{value: '', text: ''}] + User.us_state_dropdown_options.map do |code, name|
+      {value: code, text: name}
+    end
+
+    render 'finish_student_account'
+  end
+
+  #
+  # Get /users/new_sign_up/finish_teacher_account
+  #
+  def finish_teacher_account
+    # Get the request location
+    location = Geocoder.search(request.ip).try(:first)
+    country_code = location&.country_code.to_s.upcase
+    @us_ip = ['US', 'RD'].include?(country_code)
+    render 'finish_teacher_account'
+  end
+
+  #
   # GET /users/cancel
   #
   # Cancels the in-progress partial user registration and redirects to sign-up page.
@@ -132,14 +158,16 @@ class RegistrationsController < Devise::RegistrationsController
     if current_user && current_user.errors.blank?
       if current_user.teacher?
         begin
-          MailJet.create_contact_and_send_welcome_email(current_user, request.locale)
+          MailJet.create_contact_and_add_to_welcome_series(current_user, request.locale)
         rescue => exception
-          # If the welcome email fails to send, we don't want to disrupt
+          # If we can't add the user to the welcome series, we don't want to disrupt
           # sign up, but we do want to know about it.
           Honeybadger.notify(
             exception,
-            error_message: 'Failed to send MailJet welcome email',
-            context: {}
+            error_message: 'Failed to add user to welcome series',
+            context: {
+              locale: request.locale,
+            }
           )
         end
       end
@@ -153,6 +181,7 @@ class RegistrationsController < Devise::RegistrationsController
         metadata = {
           'user_type' => current_user.user_type,
           'lms_name' => lms_name,
+          'context' => 'registration_controller'
         }
         Metrics::Events.log_event(
           user: current_user,
@@ -400,7 +429,7 @@ class RegistrationsController < Devise::RegistrationsController
   # GET /users/edit
   #
   def edit
-    @permission_status = current_user.child_account_compliance_state
+    @permission_status = current_user.cap_status
 
     # Get the request location
     location = Geocoder.search(request.ip).try(:first)

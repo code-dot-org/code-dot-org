@@ -427,13 +427,13 @@ FactoryBot.define do
       end
 
       trait :with_parent_permission do
-        child_account_compliance_state {Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED}
-        child_account_compliance_state_last_updated {DateTime.now}
+        cap_status {Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED}
+        cap_status_date {DateTime.now}
       end
 
       trait :without_parent_permission do
-        child_account_compliance_state {nil}
-        child_account_compliance_state_last_updated {DateTime.now}
+        cap_status {nil}
+        cap_status_date {DateTime.now}
       end
 
       factory :cpa_non_compliant_student, traits: [:U13, :in_colorado], aliases: %i[non_compliant_child] do
@@ -442,16 +442,15 @@ FactoryBot.define do
         end
 
         trait :in_grace_period do
-          child_account_compliance_state {Policies::ChildAccount::ComplianceState::GRACE_PERIOD}
-          child_account_compliance_state_last_updated {DateTime.now}
+          cap_status {Policies::ChildAccount::ComplianceState::GRACE_PERIOD}
+          cap_status_date {DateTime.now}
         end
 
         factory :locked_out_child do
-          child_account_compliance_state {Policies::ChildAccount::ComplianceState::LOCKED_OUT}
-          child_account_compliance_state_last_updated {DateTime.now}
-          child_account_compliance_lock_out_date {DateTime.now}
+          cap_status {Policies::ChildAccount::ComplianceState::LOCKED_OUT}
+          cap_status_date {DateTime.now}
           trait :expired do
-            child_account_compliance_lock_out_date {7.days.ago}
+            cap_status_date {7.days.ago}
           end
         end
       end
@@ -524,11 +523,6 @@ FactoryBot.define do
     trait :powerschool_sso_provider do
       untrusted_email_sso_provider
       provider {'powerschool'}
-    end
-
-    trait :the_school_project_sso_provider do
-      sso_provider
-      provider {'the_school_project'}
     end
 
     trait :twitter_sso_provider do
@@ -2034,6 +2028,10 @@ FactoryBot.define do
     association :user
     type {SharedConstants::AI_TUTOR_TYPES[:GENERAL_CHAT]}
     status {SharedConstants::AI_TUTOR_INTERACTION_STATUS[:OK]}
+  end
+
+  factory :aichat_event do
+    association :user
   end
 
   factory :aichat_request do

@@ -11,8 +11,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-25 22:42:05 UTC",
-    "published_state": null,
+    "serialized_at": "2024-08-19 23:32:43 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -507,6 +507,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 4 Overview_2024"
+        ],
         "progression": "Module 4 Overview"
       },
       "bonus": false,
@@ -529,6 +532,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - M4 - CI_2024"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -551,6 +557,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - M4 - CI - L1_2024"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -573,6 +582,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - M4 - CI - L2_2024"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -595,6 +607,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD M4 Reflection_2024"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -617,6 +632,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - U5 Module 4 - Conclusions and Connections_2024"
+        ],
         "progression": "Conclusions and Connections (~10 min)"
       },
       "bonus": false,
@@ -639,6 +657,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD U5 Chapter 1 Project_M4_2024"
+        ],
         "progression": "Conclusions and Connections (~10 min)"
       },
       "bonus": false,
@@ -661,6 +682,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD U5 Chapter 2 Project_M4_2024"
+        ],
         "progression": "Conclusions and Connections (~10 min)"
       },
       "bonus": false,
@@ -683,6 +707,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 4 - Differentiation_2024"
+        ],
         "progression": "Differentiation  (~10 min)"
       },
       "bonus": false,
@@ -705,6 +732,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 4 Wrap Up_2024"
+        ],
         "progression": "Module 4 Asynchronous Wrap Up (~10 mins)"
       },
       "bonus": false,
