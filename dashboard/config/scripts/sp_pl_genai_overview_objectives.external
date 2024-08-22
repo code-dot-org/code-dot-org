@@ -1,0 +1,36 @@
+name 'sp-pl-GenAI_overview_objectives'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Teaching Generative AI
+
+
+#### Welcome! This professional learning module is designed to help you prepare to teach Code.org’s Generative AI unit.
+
+<img src="https://images.code.org/1cd0ec71458414495502b9598efd2028-image-1639773441510.37.01 PM.png" alt="AI bot and a model card" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
+#### The Generative AI unit is designed as a standalone unit for 9-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. 
+
+## **In this module, you will:** 
+- #### Get an introduction to Teaching Generative AI
+- #### Define and identify different uses of Generative AI
+- #### Explore Generative AI lessons
+
+
+### **Suggested total time:** 90 minutes [check this time]
+
+### **Lesson one suggested time:** 20 minutes
+
+## Take the pre-survey
+
+#### Code.org values and is responsive to feedback. Please fill out <a href="https://studio.code.org/form/linkhere" target="blank" rel="noopener noreferrer">this short pre-survey</a> to  tell us about who you are and how we can best support you.
+
+<a class="btn btn-large btn-primary" href="https://studio.code.org/form/linkhere" target="blank" rel="noopener noreferrer">Take the pre-survey</a>
+
+## Let's get started!
+
+<div style="clear:both"/>
+
+
+MARKDOWN

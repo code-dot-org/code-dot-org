@@ -151,47 +151,6 @@ Print your own posters! Simply click an image below to view and save a printable
     <p>
       
 
-<a id="help-schools"></a>
-
-    </p>
-    
-    <h3>
-      Freiwilliger an einer Schule:
-    </h3>
-    
-    <h4>
-      <a href="{{ how_to_volunteers_url }}">Hier finden Sie weitere Ressourcen und Informationen über die Freiwilligenarbeit in Schulen</a>.
-    </h4>
-    
-    <p>
-      <strong>Betreff:</strong> Wie können wir Sie bei einer Veranstaltung von Hour of Code unterstützen?
-    </p>
-    
-    <p>
-      Vom {{ campaign_date/short }} feiern zehn Prozent der SchülerInnen überall auf der Welt die Informatikwoche mit einer Hour of Code in ihrer Schule. Jedes Kind erhält die Gelegenheit zu erfahren, wie die Technologie um uns herum funktioniert.
-    </p>
-    
-    <p>
-      [Unsere Organisation/Mein Name] möchte [Schulname] helfen, eine Hour of Code durchzuführen. Wir unterstützen LehrerInnen die Hour of Code in ihren Klassenzimmern durchzuführen. (Dazu brauchen wir nicht einmal einen Computer!) Wenn Sie möchten, können wir auch eine Schulveranstaltung durchführen, einen Referenten zur Verfügung stellen oder darüber sprechen, wie Technologie funktioniert und was es heißt, ein Software-Ingenieur zu sein.
-    </p>
-    
-    <p>
-      Die SchülerInnen werden ihre eigenen Apps oder Spiele programmieren und können sie ihren Eltern zeigen. Wir drucken auch Hour of Code-Zertifikate aus, die sie mit nach Hause nehmen können. Und es macht Spaß! Mit interaktiven, praktischen Aktivitäten lernen die SchülerInnen auf verständliche Weise den Computer kennen.
-    </p>
-    
-    <p>
-      Computer sind überall und verändern alle Bereiche unserer Welt. Aber nur 51 % der Schulen bieten Informatik-Unterricht an. Die gute Nachricht ist, dass wir dabei sind, das zu ändern! Wenn Sie bereits von Code of Hour gehört haben, wissen Sie vielleicht, dass wir Geschichte geschrieben haben. Mehr als 100 Millionen SchülerInnen überall auf der Welt haben Hour of Code ausprobiert. Sogar Präsident Obama und der kanadische Premierminister Justin Trudeau schrieben ihre erste Programmzeile im Rahmen unserer Kampagne.
-    </p>
-    
-    <p>
-      Unter http://hourofcode.com können Sie mehr über die Veranstaltung lesen, oder sprechen Sie mit uns darüber, wie [Schulname] teilnehmen kann. <br />
-    </p>
-    
-    <hr />
-    
-    <p>
-      
-
 <a id="parents"></a>
 
     </p>

@@ -45,8 +45,6 @@ const ModelCardRow: React.FunctionComponent<ModelCardRowProps> = ({
     <>
       <div className={moduleStyles.modelCardAttributes}>
         <CollapsibleSection
-          collapsedIcon="caret-right"
-          expandedIcon="caret-down"
           headerContent={
             <div className={moduleStyles.sectionHeader}>
               {titleIcon && (
