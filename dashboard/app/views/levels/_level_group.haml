@@ -12,9 +12,12 @@
 -# Is this a survey where we've already submitted
 - user_level = UserLevel.find_by(user: current_user, script: @script_level&.script, level: @level)
 - submitted_survey = @script_level.try(:anonymous?) && current_user && user_level.try(:submitted?)
+- activity_guide = !@script_level.try(:anonymous?) && !@script_level.try(:submittable?)
 
 .level-group
   - @pages.each do |page|
+    - if activity_guide
+      %div#summaryEntryPoint
     - unless data["title"].blank?
       %h2= t('heading_x_of_y', heading: data["title"], x: page.page_number, y: @level.pages.length)
       %br/
