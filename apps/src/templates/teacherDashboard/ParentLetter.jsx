@@ -126,7 +126,7 @@ class ParentLetter extends React.Component {
             />
           ) : (
             <SafeMarkdown
-              markdown={i18n.parentLetterStep2DetailsLMS({
+              markdown={i18n.parentLetterStep2Details_LMS({
                 studentName: studentName,
                 loginTypeName: loginTypeName,
               })}
@@ -206,21 +206,21 @@ const SignInInstructions = ({
         <ol>
           <li>
             <SafeMarkdown
-              markdown={i18n.parentLetterLMS1({
+              markdown={i18n.parentLetter_LMS_Step1({
                 loginTypeName: loginTypeName,
               })}
             />
           </li>
           <li>
             <SafeMarkdown
-              markdown={i18n.parentLetterLMS2({
+              markdown={i18n.parentLetter_LMS_Step2({
                 loginTypeName: loginTypeName,
               })}
             />
           </li>
           <li>
             <SafeMarkdown
-              markdown={i18n.parentLetterLMS3({
+              markdown={i18n.parentLetter_LMS_Step3({
                 loginTypeName: loginTypeName,
               })}
             />

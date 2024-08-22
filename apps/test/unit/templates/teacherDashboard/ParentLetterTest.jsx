@@ -43,6 +43,8 @@ describe('ParentLetter', () => {
     const parentLetter = document.getElementById('printArea');
     const loginStep =
       parentLetter.children[1].children[5].children[1].children[0].textContent;
-    expect(loginStep).toBe(i18n.parentLetterLMS1({loginTypeName: 'Canvas'}));
+    expect(loginStep).toBe(
+      i18n.parentLetter_LMS_Step1({loginTypeName: 'Canvas'})
+    );
   });
 });
