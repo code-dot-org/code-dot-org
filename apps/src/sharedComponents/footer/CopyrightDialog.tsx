@@ -11,7 +11,7 @@ export interface CopyrightDialogProps {
   onClose: () => void;
 }
 
-const CopyrightDialog: React.FC<CopyrightDialogProps> = ({isOpen, onClose}) => {
+const CopyrightDialog: React.FC<CopyrightDialogProps> = ({onClose}) => {
   const handleClose = () => {
     if (typeof onClose === 'function') {
       onClose();
