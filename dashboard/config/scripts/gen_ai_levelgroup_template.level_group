@@ -1,7 +1,0 @@
-name 'gen-ai-levelgroup-template'
-submittable 'false'
-
-page
-level 'ECSPD1 computational thinker'  # TextMatch (with no answers)
-text 'sample external 2'              # External
-level 'ECSPD your goals_test'         # FreeResponse

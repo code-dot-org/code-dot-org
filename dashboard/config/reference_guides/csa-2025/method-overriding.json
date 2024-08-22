@@ -1,9 +1,0 @@
-{
-  "key": "method-overriding",
-  "course_version_key": "2025",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "methods",
-  "display_name": "Overriding a Method",
-  "content": "We can override superclass methods in a subclass. Overriding a method is useful when we want a subclass to have the same name as a superclass method but behave differently.\n\nTo override a superclass method in a subclass, the subclass method must have the same method signature as the superclass method. This means that the following should be the same:\n\n* Method name\n* Return type\n* Number and type of parameters",
-  "position": 5
-}

@@ -1,9 +1,0 @@
-name 'CSA Post-Survey q40_2024'
-question 'Connected lessons, classroom activities, or projects to my own life (for example: by asking about my past experiences, or applying content to my daily life).'
-
-right 'Never'
-right 'A few classes'
-right 'About half the class sessions'
-right 'Many class sessions'
-right 'Once or more per class session'
-allow_multiple_attempts true

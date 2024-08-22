@@ -1,9 +1,0 @@
-name 'CSD U6 - Test markdown'
-title 'Introduction to Machine Learning'
-description ''
-
-markdown <<MARKDOWN
-# Test Markdown In Instructions
-
-This is a markdown level. I want to embed it in an AppLab level. The goal is to make the AppLab level read-only, but still be able to see the code.
-MARKDOWN

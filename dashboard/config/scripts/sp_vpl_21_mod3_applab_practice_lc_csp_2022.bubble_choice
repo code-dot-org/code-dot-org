@@ -1,9 +1,0 @@
-name 'SP-VPL-21-mod3-AppLab-practice-lc-CSP_2022'
-display_name 'Explore projects created using App Lab'
-description '## Click on one of the options below to explore example App Lab projects students are introduced to in the CS Principles curriculum. 
-#### When you are finished, return to this screen and either explore a new app or click finish to continue on to the next activity.'
-
-sublevels
-level 'SP-VPL-21-mod3-CSP U4 L12 Practice PT 1_2022'
-level 'SP-VPL-21-mod3-CSP U5 Traversals Make Project Sample App 2020_2022'
-level 'SP-VPL-21-mod3-CSP U7 Param Return Make RPS App_2022'

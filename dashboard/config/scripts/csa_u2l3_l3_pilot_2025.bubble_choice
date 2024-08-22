@@ -1,9 +1,0 @@
-name 'CSA U2L3-L3_pilot-2025'
-display_name 'Practice: Parameterized Constructors'
-description 'Write a parameterized constructor in a class that assigns specific values to the instance variables.'
-
-sublevels
-level 'CSA U2L3-L3a_pilot-2025'
-level 'CSA U2L3-L3b_pilot-2025'
-level 'CSA U2L3-L3c_pilot-2025'
-level 'CSA U2L3-L3d_pilot-2025'

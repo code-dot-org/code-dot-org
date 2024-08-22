@@ -1,8 +1,0 @@
-{
-  "key": "soundSensor.value",
-  "name": "soundSensor.value",
-  "category": "Circuit",
-  "category_key": "circuit",
-  "short_description": "soundSensor.value",
-  "syntax": "soundSensor.value"
-}

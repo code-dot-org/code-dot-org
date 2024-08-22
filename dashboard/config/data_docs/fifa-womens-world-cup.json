@@ -1,5 +1,0 @@
-{
-  "key": "fifa-womens-world-cup",
-  "name": "FIFA Women's World Cup Results",
-  "content": "Description: Data about the FIFA Women's World Cup and competition results, detailing 1st through 4th teams, among other data.\r\n\r\nSource: [UEFA](http://www.uefa.com/womensworldcup/index.html)\r\n\r\nColumns:\r\n\r\n * Edition (numerical): What edition of the World Cup that row of data refers to. Value = 1 refers to the first ever Women's World Cup.\r\n * Year (numerical): What year that World Cup was held in\r\n* Hosts (string): What country hosted the World Cup games that year\r\n* Final score (string): The final score tally for each team in the championship game\r\n * Venue of championship game (string): The name and city of the stadium the championship game was held in\r\n* Runners-up (string): what country's team lost in the final game\r\n* Third place (string): what country's team took third place\r\n* Fourth place (string): what country's team took fourth place\r\n* Number of participating teams (numerical): how many countries had participating teams in that edition of the World Cup\r\n\r\n\r\n\r\n"
-}

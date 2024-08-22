@@ -1,6 +1,0 @@
-name 'CSA Pre-Survey q27_2025'
-question 'Did a teacher at school encourage you to take this class?'
-
-right 'Yes'
-right 'No'
-allow_multiple_attempts true

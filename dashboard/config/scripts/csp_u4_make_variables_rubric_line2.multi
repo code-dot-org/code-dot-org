@@ -1,9 +1,0 @@
-name 'CSP U4 Make Variables Rubric Line2'
-question 'Code: Variables'
-right '**No Evidence:** There are no variables which store the necessary information for the app to work correctly.'
-right '**Limited Evidence:** One variable is present that stores either the amount of likes or the comments'
-right '**Convincing Evidence:** Variables are defined to store the amount of likes and the comments'
-right '**Extensive Evidence:** Variables are defined to store the amount of likes and the comments. Variables are named in a clear and understandable way.'
-
-
-allow_multiple_attempts true

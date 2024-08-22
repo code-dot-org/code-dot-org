@@ -1,9 +1,0 @@
-{
-  "key": "animation-tab",
-  "course_version_key": "2022",
-  "course_offering_key": "vpl-csp",
-  "parent_reference_guide_key": "game-lab",
-  "display_name": "Animation Tab",
-  "content": "In Game Lab, _Animations_ are drawings or other images that you can use to change the look of your sprites. You can use the `sprite.setAnimation()` block to change your sprite's animations to any of the animations that you have added in the _Animation Tab_.\r\n\r\n## Using the Animation Tab\r\n\r\nClicking on the **Animation** button above the display area will take you to the _Animation Tab_, where you can import or draw animations to be used by your sprites.\r\n\r\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/animation_tab.png)\r\n\r\n[diagram_nums]\r\n\r\n1. Use these buttons to switch between the animation tab and the code tab.\r\n2. This column shows all of the animations you've created. Click on an animation from here to edit it.\r\n3. Click the plus sign to add a new animation. You can either select an animation from the library, import an image from your computer, or draw one from scratch.\r\n4. The drawing tools in this column allow you to draw or modify animations.\r\n5. Draw or edit your image on this canvas.\r\n6. Open up this drawer to change the overall size of your image or canvas.\r\n\r\n[/diagram_nums]",
-  "position": 7
-}

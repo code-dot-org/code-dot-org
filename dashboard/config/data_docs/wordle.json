@@ -1,5 +1,0 @@
-{
-  "key": "wordle",
-  "name": "Wordle",
-  "content": "Description: 10,000 valid \"Wordle\" guesses and answers, sourced from the New York Times.\r\n\r\n[Source](https://www.nytimes.com/games/wordle/main.bfba912f.js)\r\n\r\nColumns:\r\n\r\n* validWordleGuess (string): words that are valid guesses\r\n* validWordleAnswer (string): words that can be used as answers"
-}

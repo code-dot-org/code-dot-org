@@ -1,8 +1,0 @@
-name 'CSA U3L3-L4 Exemplar'
-display_name 'The Neighborhood: More For Loops'
-description 'Help the Painter navigate The Neighborhood and paint murals!'
-
-sublevels
-level 'CSA U3L3-L4a Exemplar'
-level 'CSA U3L3-L4b Exemplar'
-level 'CSA U3L3-L4c Exemplar'

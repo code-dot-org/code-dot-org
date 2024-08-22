@@ -1,6 +1,0 @@
-name 'intro-pulse-survey-q2_csd1_2024'
-question 'What prior experiences have you had with Problem Solving with Technology?'
-right 'This is the first I am learning about Problem Solving with Technology'
-right 'I have done smaller Problem Solving with Technology activities (for example: an hour of code), but this is my first longer class'
-right 'I have already taken classes or done longer online tutorials on Problem Solving with Technology'
-allow_multiple_attempts true

@@ -1,5 +1,0 @@
-{
-  "key": "cryptocurrency-historical-prices",
-  "name": "Cryptocurrency Historical Prices",
-  "content": "Description: Data on the prices of Bitcoin, Ethereum, and Dogecoin from 2013-2021.\r\n\r\nSource: [Kaggle](https://www.kaggle.com/datasets/sudalairajkumar/cryptocurrencypricehistory)\r\n\r\nColumns:\r\n\r\n* Name (string): Name of the cryptocurrency\r\n* Symbol (string): Symbol for the cryptocurrency\r\n* Year (numerical): The year of the date (2013-2021)\r\n* Month (numerical): The month of the date (1-12)\r\n* Day (numerical): The day of the date (1-31)\r\n* Date (string): the date in MM/DD/YYYY format\r\n* Price(numerical): the price of the cryptocurrency at the time of the market closing that day"
-}

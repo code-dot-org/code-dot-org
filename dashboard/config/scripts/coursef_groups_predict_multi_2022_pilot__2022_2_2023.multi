@@ -1,7 +1,0 @@
-name 'courseF_groups_predict_multi_2022_pilot_-2022-2_2023'
-question 'Make a prediction: After pressing Run, what will happen when you click one of the sprites?'
-right 'The sprite you click will get bigger.', feedback: 'Correct! The sprite you click will get bigger.'
-wrong 'The sprite you click will get smaller.', feedback: 'Incorrect. The sprite you click will get bigger.'
-wrong 'All of the sprites will get bigger.', feedback: 'Incorrect. The sprite you click will get bigger.'
-wrong 'All of the sprites will get smaller.', feedback: 'Incorrect. The sprite you click will get bigger.'
-allow_multiple_attempts false

@@ -1,7 +1,0 @@
-name 'subgoals_assessement_levelgroup_test2'
-title 'Test of single level levelgroup'
-submittable 'true'
-anonymous 'false'
-
-page
-level 'csp_U3_turtle_subgoal_q3_mc'

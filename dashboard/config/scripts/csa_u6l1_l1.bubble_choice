@@ -1,8 +1,0 @@
-name 'CSA U6L1-L1'
-display_name 'Neighborhood Lit Fest Project Examples'
-description 'Examples of the Neighborhood Lit Fest Project.'
-
-sublevels
-level 'CSA U6L1-L1a'
-level 'CSA U6L1-L1b'
-level 'CSA U6L1-L1c'

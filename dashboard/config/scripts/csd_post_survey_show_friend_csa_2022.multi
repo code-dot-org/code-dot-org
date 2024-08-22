@@ -1,5 +1,0 @@
-name 'csd-post-survey-show-friend_csa-2022'
-question "I showed something I made in this class to friends or family outside of class"
-right 'Yes'
-right 'No'
-allow_multiple_attempts true

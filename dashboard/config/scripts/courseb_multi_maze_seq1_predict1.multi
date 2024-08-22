@@ -1,6 +1,0 @@
-name 'courseB_multi_maze_seq1_predict1'
-question 'Look at the program below. What will happen when you click "Run"?'
-right 'The bird will get to the pig.', feedback: 'Correct!'
-wrong 'The bird will not reach the pig.', feedback: 'Incorrect. The program has all of the blocks needed to get to the pig.'
-wrong 'I don\'t know.', feedback: 'The program has all of the blocks needed to get to the pig.'
-allow_multiple_attempts false

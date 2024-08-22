@@ -1,9 +1,0 @@
-{
-  "key": "debugging-html",
-  "course_version_key": "2024",
-  "course_offering_key": "focus-on-creativity",
-  "parent_reference_guide_key": "html",
-  "display_name": "Debugging in HTML",
-  "content": "## Debugging in HTML\n\n**What is a bug?**\n\nBugs are mistakes in code that causes it not to work as planned.\n\n**What is debugging?**\n\nDebugging is the process of finding and fixing bugs. Debugging is a problem-solving process so use your problem-solving steps as you try to debug.\n\n**What are some examples of bugs?** \n\nBugs can be anything that causes code not to work as planned. Some examples are misspelling, putting code in the wrong place, using the wrong tag, or forgetting to close a tag.\n\n",
-  "position": 9
-}

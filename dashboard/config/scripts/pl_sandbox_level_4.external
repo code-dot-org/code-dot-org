@@ -1,7 +1,0 @@
-name 'PL-Sandbox-Level-4'
-title 'title'
-description 'description here'
-
-markdown <<MARKDOWN
-# This is a placeholder level.
-MARKDOWN

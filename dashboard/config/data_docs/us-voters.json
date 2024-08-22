@@ -1,5 +1,0 @@
-{
-  "key": "us-voters",
-  "name": "US Voter Registration and Demographics by State",
-  "content": "Description: Data about US registered voters who participated in the 2018 midterm elections. \"B\" represents a base amount of under 75,000, and too small to calculate for percentages.\n\n[Source](https://www.census.gov/data/tables/time-series/demo/voting-and-registration/p20-583.html)\n\nColumns:\n\n* State (string): what state the voter data is representative of\n* Demographic (string): demographic characteristic of a voter or person in a given state, such as Female or Asian alone\n* Total population (numerical): amount of people in that given state in thousands\n* Total citizen population (numerical): amount of registered citizens in that state in thousands\n* Total registered voters (numerical): amount of registered voters in that state in thousands\n* Total voted in 2018 elections (numerical): how many people voted in that given state in thousands\n* Percent voted (numerical): what percentage of people in a given state voted\n* Percent voted (citzen) (numerical): what percentage of citizens in that state voted\n"
-}

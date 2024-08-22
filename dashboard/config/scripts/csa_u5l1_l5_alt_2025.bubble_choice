@@ -1,9 +1,0 @@
-name 'CSA U5L1-L5_alt-2025'
-display_name 'Skill Building: Using Initializer Lists'
-description 'Practice declaring and initializing 2D arrays using initializer lists.'
-
-sublevels
-level 'CSA U5L1-L5a_alt-2025'
-level 'CSA U5L1-L5b_alt-2025'
-level 'CSA U5L1-L5c_alt-2025'
-level 'CSA U5L1-L5d_alt-2025'

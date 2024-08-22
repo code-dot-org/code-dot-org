@@ -1,8 +1,0 @@
-name 'CSP U4L4 Submit Choice_erik'
-display_name 'Make Project'
-description 'Pick which app you will build.'
-
-sublevels
-level 'U4 L04 Variables Make Project Submit_erik'
-level 'U4 L04 Variables Make Project Submit Budget Tracker_erik'
-level 'U4 L04 Variables Make Project Submit Emoji Quiz_erik'

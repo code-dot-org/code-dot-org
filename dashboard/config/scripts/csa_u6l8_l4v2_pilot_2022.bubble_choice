@@ -1,9 +1,0 @@
-name 'CSA U6L8-L4v2_pilot-2022'
-display_name 'Sorting Strings'
-description 'Use the `compareTo()` method in the `String` class to compare and sort `String`s.'
-
-sublevels
-level 'CSA U6L8-L4a_pilot-2022'
-level 'CSA U6L8-L4b_pilot-2022'
-level 'CSA U6L8-L4c_pilot-2022'
-level 'CSA U6L8-L4d_pilot-2022'

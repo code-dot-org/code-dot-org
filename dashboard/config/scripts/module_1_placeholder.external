@@ -1,9 +1,0 @@
-name 'Module 1 Placeholder'
-title 'title'
-description 'description here'
-
-markdown <<MARKDOWN
-#Module 1: Overview 
-
-![](https://images.code.org/b8455bd02c9f7270e4c2d575484edc21-image-1706897396635.09.53 AM.png)
-MARKDOWN

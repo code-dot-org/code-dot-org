@@ -1,9 +1,0 @@
-name 'CSA U6L6-L6_2024'
-display_name 'Practice: The compareTo() Method'
-description 'Practice using the `compareTo()` method in the `String` class.'
-
-sublevels
-level 'CSA U6L6-L6a_2024'
-level 'CSA U6L6-L6b_2024'
-level 'CSA U6L6-L6c_2024'
-level 'CSA U6L6-L6d_2024'

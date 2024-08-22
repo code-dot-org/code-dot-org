@@ -1,7 +1,0 @@
-name 'Editing CSA CB_Lab Magpie-L5-L3-Bubble_2022'
-display_name 'Adding Random Elements with Arrays'
-description 'Choose one of the activities below in order to gain an understanding of how we might use arrays to help when returning random results in our Magpie chatbot.'
-
-sublevels
-level 'CSA CB_Lab Magpie-L5-L3-B1_2022'
-level 'CSA CB_Lab Magpie-L5-L3-B2_2022'

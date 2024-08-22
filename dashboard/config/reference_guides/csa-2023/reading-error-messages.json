@@ -1,9 +1,0 @@
-{
-  "key": "reading-error-messages",
-  "course_version_key": "2023",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "common-errors",
-  "display_name": "Reading Error Messages",
-  "content": "The error messages that are displayed in the console can be helpful in identifying which line is causing the error and provide a clue about the problem.\n\nFor example, in the error message shown below, `NeighborhoodRunner.java:6`(#e7e8ea) indicates the file and line number causing the error.\n\nWe then see a `cannot find symbol`(#e7e8ea) message followed by the line from the program ( `jason.turnleft()`(#e7e8ea) ). The `symbol: method turnleft()`(#e7e8ea) line tells us that Java does not know what `turnleft()`(#e7e8ea) means in this line of code. That's because it should be `turnLeft()`(#e7e8ea) (with a capital `L`(#e7e8ea))!\n\n```\n/NeighborhoodRunner.java:6: error: cannot find symbol\n    jason.turnleft();\n          ^\n  symbol:   method turnleft()\n  location: variable jason of type org.code.neighborhood.Painter\n```",
-  "position": 1
-}

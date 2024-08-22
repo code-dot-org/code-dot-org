@@ -1,9 +1,0 @@
-{
-  "key": "printing",
-  "course_version_key": "2025",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "basics",
-  "display_name": "Printing",
-  "content": "Printing to the console is critical for developing a variety of programs, and it is also helpful for debugging your program and tracking what is happening as each line of code executes.\n\nThe general syntax for printing is `System.out.print()`(#e7e8ea) and `System.out.println()`(#e7e8ea).\n\n**Say what??** Let's break those down:\n\n* `System`(#e7e8ea) – a class defined in the `java.lang`(#e7e8ea) package\n\n* `out`(#e7e8ea) – an instance of the `PrintStream`(#e7e8ea) class, which is part of the `System`(#e7e8ea) class\n\n* `print`(#e7e8ea) and `println`(#e7e8ea) - methods to print to the console\n\n## Ok...so what's the difference between print and println?\n\n`print`(#e7e8ea) displays the text, and the cursor remains at the end of the line printed. On the other hand, `println`(#e7e8ea) displays the text, then moves the cursor to the *next* line after the line printed.\n\n## Hmm, ok...can you show me some examples?\n\nOf course! Here's an example that uses `print`(#e7e8ea) and `println`(#e7e8ea) to print some text:\n\n```\npublic class PrintRunner {\n  public static void main(String[] args) {\n    System.out.println(\"Welcome\");\n    System.out.print(\"Hello \");\n    System.out.println(\"World\");\n  }\n}\n```\n\nThis program will output:\n\n```\n####################\n#      CONSOLE     #\n####################\n\nWelcome\nHello World\n```\n\nWe can also use variables in the print statements, like this:\n\n```\npublic class PrintRunner {\n  public static void main(String[] args) {\n    int a = 4;\n    System.out.println(\"The value of a is \" + a + \".\");\n  }\n}\n```\n\nThis program will output:\n\n```\n####################\n#      CONSOLE     #\n####################\n\nThe value of a is 4.\n```",
-  "position": 2
-}

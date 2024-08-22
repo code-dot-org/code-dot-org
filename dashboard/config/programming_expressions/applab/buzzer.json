@@ -1,9 +1,0 @@
-{
-  "key": "buzzer",
-  "name": "buzzer",
-  "category": "Circuit",
-  "category_key": "circuit",
-  "content": "<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/cp_buzzer_notext.png\" alt=\"buzzer\" style=\"float: right; margin: 20px; width: 300px;\">\r\n\r\nThe [`buzzer`(#f78183)](/docs/applab/buzzer/) is an object representing the sound buzzer on the Circuit Playground, which lets you play simple sounds and notes. Internally this buzzer is connected to pin 5. \r\n\r\n### Properties and Methods\r\n\r\n* `buzzer.frequency()` - Plays a sound at a given frequency\r\n* `buzzer.note()` - Play a note\r\n* `buzzer.stop()` - Stop buzzing\r\n* `buzzer.play()` - Play an array of notes, one at a time",
-  "syntax": "buzzer",
-  "tips": "* You can only play one note at a time with the buzzer, keep this in mind when creating songs."
-}

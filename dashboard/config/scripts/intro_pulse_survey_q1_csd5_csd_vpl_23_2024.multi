@@ -1,6 +1,0 @@
-name 'intro-pulse-survey-q1_csd5_csd-vpl-23_2024'
-question 'What prior experiences have you had with computer science?'
-right 'This is the first I am learning about computer science'
-right 'I have done smaller computer science activities (for example: an hour of code), but this is my first longer class'
-right 'I have already taken classes or done longer online tutorials on computer science'
-allow_multiple_attempts true

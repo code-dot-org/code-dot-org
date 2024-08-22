@@ -1,6 +1,0 @@
-name 'U6_L03_Lists Practice_Choice Menu'
-display_name 'Lists Practice Choice Levels'
-description 'Choose one of the following apps to create. Something about the spice level here... '
-
-sublevels
-level 'U6_L03_Lists Practice_Choice_3-1'

@@ -1,9 +1,0 @@
-{
-  "key": "the-accelerometer",
-  "course_version_key": "2022",
-  "course_offering_key": "csp",
-  "parent_reference_guide_key": "maker-toolkit",
-  "display_name": "The Accelerometer",
-  "content": "<img src=\"https://curriculum.code.org/media/uploads/cp_accel.png\" style=\"float: right; margin: 20px; width: 300px;\">\n\nMost of the inputs provided by the Circuit Playground are relatively simple devices, which give a single value. The accelerometer is a more complex kind of sensor, which measures a number of different things all at once, and therefore provides more complex information to the user. An accelerometer is commonly used to detect movement and position in devices like laptops, phones, virtual reality controllers, and health trackers. For example, pedometers use the movement from accelerometers to track how many steps you take. \n\n## Measuring Orientation\n\nThe accelerometer can determine the _orientation_ of the board to figure out how the board is positioned. \n\n| Orientation  |  Type of Motion Being Tracked | Range of Values|\n|---|---| --- |\n| **Pitch**  | Forward and back motion  | -90 to 90 |\n| **Roll** | Side to side motion   |  -90 to 90 |\n|  **Inclination** | Rotational motion  | -180 to 180 |\n\n<br>\n\nUsing the [`accelerometer.getOrientation(orientationType)`(#f78183)](/docs/applab/accelerometer.getOrientation/) block, we write programs that respond to changes in pitch, roll, and inclination. This block returns a number for each of these orientations which indicates which way the board is tilting. For example, pitch is positive when it's being tilted back, and negative when being tilted forward. ",
-  "position": 9
-}

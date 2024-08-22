@@ -1,9 +1,0 @@
-{
-  "key": "body-styling",
-  "course_version_key": "2022",
-  "course_offering_key": "vpl-csd-summer-pilot-ci",
-  "parent_reference_guide_key": "css",
-  "display_name": "Body Styling",
-  "content": "The `<body>` element is a special element that wraps all of the visible content on a web page. Because everything that you see is inside this tag, any rule-set that you create for the body element will apply to every element on page, unless the element itself has a rule that contradicts it. This is useful for establishing a baseline style for everything on your page.\r\n\r\n## Example\r\n\r\nThis rule-set would make all text in your web page blue and centered.\r\n\r\n```\r\nbody {\r\n    text-align: center;\r\n    color: blue;\r\n}\r\n```",
-  "position": 2
-}

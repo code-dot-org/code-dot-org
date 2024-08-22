@@ -1,8 +1,0 @@
-#!/usr/bin/env ruby
-
-require_relative '../deployment'
-require 'cdo/aws/cloudfront'
-
-CDO.log.info 'Flushing CloudFront caches (up to 15 min)...'
-AWS::CloudFront.invalidate_caches
-CDO.log.info 'CloudFront flush triggered'

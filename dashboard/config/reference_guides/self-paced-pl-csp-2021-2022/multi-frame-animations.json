@@ -1,9 +1,0 @@
-{
-  "key": "multi-frame-animations",
-  "course_version_key": "2022",
-  "course_offering_key": "self-paced-pl-csp-2021",
-  "parent_reference_guide_key": "animation-tab",
-  "display_name": "Multi-Frame Animations",
-  "content": "Some animations include multiple-frames. This works similar to a flip-book, where each 'frame' of the image is quickly drawn over-and-over in a loop to create the illusion of movement. The Animation Tab includes tools to let you edit multi-frame animations.\r\n\r\n## Creating & Editing Multi-Frame Animations\r\n\r\nThese tools will help you create & edit your multi-frame animations\r\n\r\n![](https://curriculum.code.org/media/uploads/multi-frame-animation.png)\r\n\r\n[diagram_nums]\r\n\r\n1. The **Add new frame** button adds a blank frame to your animation, which you can draw in. If you'd like to make a copy of your current frame to make slight edits, use (3)\r\n2. The **Trash Can** icon will delete the current frame\r\n3. The **Copy** icon will create a copy of the current frame, which you can then edit.\r\n4. The **Move** icon lets you rearrange the order of your frames\r\n5. The **Onion** icon shows a transparent overlay of the previous frame and the following frame. This is useful if you would like to make small changes to a frame to create a smoother animation, and make sure it aligns with the surrounding frames.\r\n6. The **Slider** changes the speed of the animation. Moving to the right speeds-up the animation; moving to the left slows-down the animation. You can see a preview of your animation when you hover over it in this column.\r\n\r\n[/diagram_nums]",
-  "position": 1
-}

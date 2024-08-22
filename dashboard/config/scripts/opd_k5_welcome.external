@@ -1,7 +1,0 @@
-name 'OPD-K5 Welcome'
-skip_dialog true
-markdown <<MARKDOWN
-# Getting Started > Welcome!
-
-<iframe width="640" height="390" src="https://www.youtube.com/embed/yd0TQzYbnTI" frameborder="0" allowfullscreen></iframe>
-MARKDOWN

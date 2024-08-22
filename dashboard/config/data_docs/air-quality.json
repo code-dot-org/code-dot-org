@@ -1,5 +1,0 @@
-{
-  "key": "air-quality",
-  "name": "Air Quality Index by US County",
-  "content": "Description: Various recordings of Air Quality Index (AQI) by US County, for the year 2020\n\n[Source](https://aqs.epa.gov/aqsweb/airdata/download_files.html)\n\nColumns:\n\n* State (string): what state the AQI was recorded in\n* County (string): what county within a state AQI was recorded in\n* Year (numerical): what year the AQI recordings were measured in\n* Days with AQI (numerical): how many days in the given year AQI was recorded in that county\n* Good Days (numerical): amount of good AQI days in the recorded period\n* Moderate Days (numerical): amount of moderate AQI days in the recorded period\n* Unhealthy for Sensitive Groups Days (numerical): amount of unhealthy for sensitive groups AQI days in the recorded period\n* Unhealthy Days (numerical): amount of unhealthy AQI days in the recorded period\n* Very Unhealthy Days (numerical): amount of very unhealthy AQI days in the recorded period\n* Hazardous Days (numerical): amount of hazardous AQI days in the recorded period\n* Max AQI (numerical): the maximum value of AQI in the recorded period\n"
-}

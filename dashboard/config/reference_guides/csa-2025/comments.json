@@ -1,9 +1,0 @@
-{
-  "key": "comments",
-  "course_version_key": "2025",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "basics",
-  "display_name": "Comments",
-  "content": "A **comment** is text within a program that is not executed. It can be used to provide additional information to make it easier for human readers of our code to understand its purpose and functionality.\n\n## Single Line Comments\n\nWhen we need to write short comments, we can use `//`(#e7e8ea) to indicate a single line comment.\n\n```\n// I am a single line comment!\nSystem.out.println(\"Hello, World!\");\n```\n\nA single line comment can also be written after a line of code.\n\n```\nSystem.out.println(\"Hello, World!\");    // Hello to you too!\n```\n\n## Multi-Line Comments\n\nWhen we need to write longer comments, we can use `/*`(#e7e8ea) and `*/`(#e7e8ea) to indicate a multi-line comment.\n\n```\n/* I am a\nmulti-line comment! */\nSystem.out.println(\"Hello, World!\");\n```\n\n## Javadoc Comments\n\nJavadoc comments are used to create documentation for APIs (Application Programming Interfaces). We use `/**`(#e7e8ea) and `*/`(#e7e8ea) to indicate Javadoc comments. These are typically written before declaring instance variables, methods, and classes.\n\nWhen writing Javadoc comments, keep in mind that these will appear in documentation that other people might read, so be especially thoughtful when writing these comments.\n\n```\n/**\n * The Painter class represents a painter that can navigate\n * and paint in The Neighborhood.\n */\npublic class Painter {\n   . . .\n}\n```",
-  "position": 1
-}

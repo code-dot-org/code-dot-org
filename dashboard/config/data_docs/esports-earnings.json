@@ -1,5 +1,0 @@
-{
-  "key": "esports-earnings",
-  "name": "Esports Earnings",
-  "content": "Description: Data from 2021 on earnings from various Esports tournaments\r\n\r\nSource: [Esports Earnings](http://esportsearnings.com/) via [Bootstrap](https://docs.google.com/spreadsheets/d/1SqK3BP-RKrN9adFQz2XvZUMHCAPsm530XT1hC96L6w0/edit#gid=706030327) \r\n\r\nColumns:\r\n\r\n* game (string): name of the game\r\n* release-date (numerical): the year the game was released\r\n* release-era (string): the time period in which the game was released\r\n* genre (string): the genre of the game\r\n* total-earnings (numerical): the amount of money, in USD, that is won in online-only and in-person tournaments\r\n* online-earnings (numerical): the amount of money, in USD, that is won in online-only tournaments\r\n* total-winners (numerical): the number of tournament winners\r\n* total-tournaments (numerical): the number of tournaments"
-}

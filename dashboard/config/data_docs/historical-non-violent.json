@@ -1,5 +1,0 @@
-{
-  "key": "historical-non-violent",
-  "name": "Historical Non-violent Resistances",
-  "content": "Description: data about various non-violent movements and resistances throughout world history.\r\n\r\n[Source](http://en.wikipedia.org/)\r\n\r\nColumns:\r\n\r\n* Dates (string): date or range of dates / years a movement or event took place\r\n* Region (string): region of the world where the movement or resistance took place\r\n* Movement / Main Purpose or Response (string): cause or belief behind the movement (etc.), such as Women's Suffrage or Draft resistance\r\n* Summary (string): more detailed summation of the non-violent resistance"
-}

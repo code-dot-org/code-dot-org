@@ -1,9 +1,0 @@
-{
-  "key": "polymorphism",
-  "course_version_key": "2023",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "classes-and-objects",
-  "display_name": "Polymorphism",
-  "content": "## What is polymorphism?\n\n**Polymorphism** allows a subclass to share the attributes and behaviors of the superclass while also implementing its own functionality.\n\nPolymorphism allows us to store instances of different classes that share a superclass together in an array or `ArrayList`(#e7e8ea).",
-  "position": 4
-}

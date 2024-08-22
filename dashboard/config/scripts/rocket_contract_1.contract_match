@@ -1,5 +1,0 @@
-name 'Rocket Contract 1'
-title 'Contract for rocket-height'
-content1 ''
-content2 'A rocket blasts off, traveling at 15 meters per second. Write a contract for the function rocket-height that takes in the number of seconds that have passed since the rocket took off, and which produces the height of the rocket at that time.'
-answer 'rocket-height|Number|Number'

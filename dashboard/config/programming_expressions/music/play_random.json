@@ -1,8 +1,0 @@
-{
-  "key": "play_random",
-  "name": "Play Random",
-  "category": "Control",
-  "category_key": "control",
-  "content": "Each time this block is reached, one of the blocks inside it will be played at random. Use this block to add some variation into compositions.",
-  "short_description": "Plays one of the sounds at random."
-}

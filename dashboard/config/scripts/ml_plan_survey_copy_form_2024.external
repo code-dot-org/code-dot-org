@@ -1,9 +1,0 @@
-name 'ml-plan survey-copy form_2024'
-title 'Introduction to Machine Learning'
-description ''
-
-markdown <<MARKDOWN
-# Copy a Google Form
-
-## [Click Here](https://docs.google.com/forms/d/1E4sGp03dDW6TYVh1G6zlNITuuSaLFGlMox2E0Iiczzo/copy) to create a copy of a survey template we will use today
-MARKDOWN

@@ -1,9 +1,0 @@
-{
-  "key": "microbit-display",
-  "course_version_key": "2024",
-  "course_offering_key": "focus-on-creativity",
-  "parent_reference_guide_key": "microbit-parent",
-  "display_name": "The micro:bit LED Display",
-  "content": "<img src=\"https://images.code.org/126cab46e3188fc496d4c618e8cfee03-image-1676328086265.png\" style=\"width: 300px; float: right; margin: 10px\" />\n\nThe LED is probably the simplest form of output available and the micro:bit has a display of 25 red LEDs for you to program. The LEDs are arranged in a 5x5 grid allowing it to display patterns, images, letters, or numbers.\n\n<div style=\"clear:both;\"></div>\n\nThe `ledScreen` can help you...\n\n<table>\n  <tr>\n    <td><img src=\"https://images.code.org/77c51c63b972d81ad9defdbd5f2d1769-mb1.png\" style=\"width: 210px\" /></td>\n    <td>Express how you feel!</td>\n  </tr>\n  <tr>\n    <td><img src=\"https://images.code.org/f416ae03dbad5755997196ac09b2f8b1-mb2.gif\" style=\"width: 210px\" /></td>\n    <td>Make animals!</td>\n  </tr>\n  <tr>\n    <td><img src=\"https://images.code.org/f5b22c147aeefd7c49908fd352c3fd89-mb3.gif\" style=\"width: 210px\" /></td>\n    <td>Make a name badge!</td>\n  </tr>\n</table>\n\n## Useful Commands with the LED Screen\n\n- [`ledScreen.on()`(#f78183)](/docs/ide/applab/expressions/ledScreen.on)\n- [`ledScreen.off()`(#f78183)](/docs/ide/applab/expressions/ledScreen.off)\n- [`ledScreen.toggle()`(#f78183)](/docs/ide/applab/expressions/ledScreen.toggle)\n- [`ledScreen.clear()`(#f78183)](/docs/ide/applab/expressions/ledScreen.clear)\n- [`ledScreen.display()`(#f78183)](/docs/ide/applab/expressions/ledScreen.display)\n- [`ledScreen.scrollString()`(#f78183)](/docs/ide/applab/expressions/ledScreen.scrollString)\n- [`ledScreen.scrollNumber()`(#f78183)](/docs/ide/applab/expressions/ledScreen.scrollNumber)\n\n\n\n\n\n",
-  "position": 2
-}

@@ -1,9 +1,0 @@
-{
-  "key": "selection-sort",
-  "course_version_key": "2023",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "Algorithms",
-  "display_name": "Selection Sort",
-  "content": "The **selection sort** algorithm selects the smallest element from an unsorted array in each iteration and places that element at the beginning of the unsorted array.\n\n## Pseudocode\n```\nset min to location 0\nsearch for the smallest value in the list\n  swap with value at location min\n  increment min to point to next element\n  repeat until list is sorted\n\n```\n## Example\n\n```\npublic static void selectionSort(int[] elements) {\n  for (int j = 0; j < elements.length − 1; j++) {\n    int minIndex = j;\n    for (int k = j + 1; k < elements.length; k++) {\n      if (elements[k] < elements[minIndex]) {\n        minIndex = k;\n      }\n    }\n    int temp = elements[j];\n    elements[j] = elements[minIndex];\n    elements[minIndex] = temp;\n  }\n}\n```\n",
-  "position": 2
-}

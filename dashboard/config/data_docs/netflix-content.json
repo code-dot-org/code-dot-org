@@ -1,5 +1,0 @@
-{
-  "key": "netflix-content",
-  "name": "Netflix Content",
-  "content": "Description: content on Netflix (June 2017 - January 2020)\r\n\r\nSource: [Kaggle](https://www.kaggle.com/shivamb/netflix-shows)\r\n\r\nProcessing: cleaned original .csv by removing thousands of rows of older entries and removed some offensive content/titles\r\n\r\nsome foreign characters and removing superfluous sub-sub-genre columns \r\n\r\nColumns:\r\n\r\n * Type (string): lists if the content is a movie or tv show\r\n * Title (string): name of the TV show or movie\r\n * Country (string): original country where the movie/TV show was produced\r\n * Date Added (date): date the content was added to Netflix\r\n * Release Year (numerical): original year the movie or TV show was in theatres or on television, before joining Netflix\r\n * Rating (string): content rating, such as PG-13 or TV-MA\r\n * Genre (string): genre of the movie/TV show, such as comedy or documentary\r\n\r\n\r\n\r\n\r\n"
-}

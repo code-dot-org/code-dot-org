@@ -1,9 +1,0 @@
-{
-  "key": "accessor-methods",
-  "course_version_key": "2025",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "methods",
-  "display_name": "Accessor Methods",
-  "content": "## What is an accessor method?\n\nAn **accessor method** gives the value that is currently assigned to an instance variable.\n\nFor example, the `public`(#e7e8ea) **accessor method** `getTitle`(#e7e8ea) allows other classes to get the current value of the `private`(#e7e8ea) **instance variable** `title`(#e7e8ea).\n\n```\npublic class Song {\n  private String title;\n\n  public String getTitle() {\n    return title;\n  }\n}\n```\n\nThe method is `public`(#e7e8ea) so it can be accessed from outside of the class. The return type is the same as the data type of the instance variable. The name of the method is typically `get`(#e7e8ea) followed by the name of the instance variable.\n",
-  "position": 3
-}

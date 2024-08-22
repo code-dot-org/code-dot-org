@@ -1,9 +1,0 @@
-name 'CSA U3L5-L3_2024'
-display_name 'Practice: Writing Algorithms with Arrays'
-description 'Implement your algorithm to find the sum of all values in a 1D array.'
-
-sublevels
-level 'CSA U3L5-L3a_2024'
-level 'CSA U3L5-L3b_2024'
-level 'CSA U3L5-L3c_2024'
-level 'CSA U3L5-L3d_2024'

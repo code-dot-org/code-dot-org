@@ -1,9 +1,0 @@
-name 'CSA U3L5-L4_2025'
-display_name 'Practice: Writing Algorithms with Arrays'
-description 'Implement your algorithm to find the average of all values in a 1D array.'
-
-sublevels
-level 'CSA U3L5-L4a_2025'
-level 'CSA U3L5-L4b_2025'
-level 'CSA U3L5-L4c_2025'
-level 'CSA U3L5-L4d_2025'

@@ -1,5 +1,0 @@
-{
-  "key": "hbcu-enrollment",
-  "name": "HBCU Enrollment",
-  "content": "Description: Data on Fall enrollment in degree-granting historically Black colleges and universities (HBCU).\r\n\r\n[Source](https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-02-02/readme.md) and original data [source](https://data.world/nces)\r\n\r\nColumns:\r\n\r\n * Year (numerical): Year data comes from\r\n * Total Enrollment (numerical): Total enrollment across all types of HBCUs\r\n * Males (numerical): Male enrollment across all types of HBCUs\r\n * Females (numerical): Female enrollment across all types of HBCUs\r\n * 4-year (numerical): 4 year HBCU enrollment\r\n * 2-year (numerical): 4 year HBCU enrollment\r\n * Total - Public (numerical): Total public HBCU enrollment\r\n * 4-year - Public (numerical): 4 year public HBCU enrollment\r\n * 2-year - Public (numerical): 2 year public HBCU enrollment\r\n * Total - Private (numerical): Total private HBCU enrollment\r\n * 4-year - Private (numerical): 4 year private HBCU enrollment\r\n * 2-year - Private (numerical): 2 year private HBCU enrollment\r\n\r\n\r\n\r\n"
-}

@@ -1,8 +1,0 @@
-name 'Blocks to Math 4'
-title 'Convert Blocks to Math'
-placeholder 'Type the arithmetic expression here'
-content1 'Type out the arithmetic expression that matches this code'
-content2 'Blocks to Math 4.blocks.start_blocks'
-answer '(5 + 8) - 12'
-answer '5 + 8 - 12'
-answer '((5 + 8) - 12)'

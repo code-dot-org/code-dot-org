@@ -1,9 +1,0 @@
-name 'coursee-privateandpersonalinformation'
-
-
-markdown <<MARKDOWN
-# Private and Personal Information
-## How can you protect yourself from online identity theft?
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-nMUbHuffO8?ecver=1" frameborder="0" allowfullscreen></iframe>
-MARKDOWN

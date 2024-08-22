@@ -1,7 +1,0 @@
-name 'CSD U6 - Physical Output - Chal_2023'
-display_name 'Challenge Levels'
-
-sublevels
-level 'CSD U6 - Physical Output - ChalA_2023'
-level 'CSD U6 - Physical Output - ChalB_2023'
-level 'CSD U6 - Physical Output - ChalC_2023'

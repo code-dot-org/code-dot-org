@@ -1,9 +1,0 @@
-{
-  "key": "arithmetic-exception",
-  "course_version_key": "2024",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "common-errors",
-  "display_name": "ArithmeticException",
-  "content": "An `ArithmeticException`(#e7e8ea) is thrown when something went wrong in an arithmetic expression. If you divide by 0, an `ArithmeticException`(#e7e8ea) will be thrown.",
-  "position": 2
-}

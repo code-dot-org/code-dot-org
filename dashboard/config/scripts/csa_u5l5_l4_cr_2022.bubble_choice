@@ -1,9 +1,0 @@
-name 'CSA U5L5-L4 CR_2022'
-display_name 'Code Review: Using Enhanced For Loops with 2D Arrays'
-description 'Request a code review from your peers.'
-
-sublevels
-level 'CSA U5L5-L4a CR_2022'
-level 'CSA U5L5-L4b CR_2022'
-level 'CSA U5L5-L4c CR_2022'
-level 'CSA U5L5-L4d CR_2022'

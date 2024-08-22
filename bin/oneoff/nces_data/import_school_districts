@@ -1,7 +1,0 @@
-#!/usr/bin/env ruby
-
-require_relative '../../../dashboard/config/environment'
-
-CDO.log = Logger.new($stdout)
-
-SchoolDistrict.seed_from_s3

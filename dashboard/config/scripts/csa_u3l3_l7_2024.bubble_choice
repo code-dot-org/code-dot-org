@@ -1,9 +1,0 @@
-name 'CSA U3L3-L7_2024'
-display_name 'Practice: Traverse Multiple 1D Arrays'
-description 'Use a `while` loop to traverse multiple 1D arrays and return a `String` containing the values each 1D array stores.'
-
-sublevels
-level 'CSA U3L3-L7a_2024'
-level 'CSA U3L3-L7b_2024'
-level 'CSA U3L3-L7c_2024'
-level 'CSA U3L3-L7d_2024'

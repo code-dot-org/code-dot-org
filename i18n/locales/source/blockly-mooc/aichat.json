@@ -1,7 +1,0 @@
-{
-  "aichatWorkspaceHeader": "AI Chat",
-  "continue": "Continue",
-  "startOverAichatModelCustomizations": "This will reset this level to its start state and remove any model customizations or model card information you’ve added or changed.",
-  "waitingForChatResponse": "Waiting for a response...",
-  "whatIsPersonalInformation": "What is considered personal information?"
-}

@@ -1,9 +1,0 @@
-name 'CSA U2L6-L3v2_2022'
-display_name 'Refactoring Desserts'
-description 'Refactor one of the desserts to be a subclass of the `Dessert` class.'
-
-sublevels
-level 'CSA U2L6-L3a_2022'
-level 'CSA U2L6-L3b_2022'
-level 'CSA U2L6-L3c_2022'
-level 'CSA U2L6-L3d_2022'

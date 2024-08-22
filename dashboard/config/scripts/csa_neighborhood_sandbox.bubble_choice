@@ -1,9 +1,0 @@
-name 'CSA Neighborhood Sandbox'
-display_name 'The Neighborhood'
-description 'Practice your Java skills in The Neighborhood!'
-
-sublevels
-level 'CSA Neighborhood 8x8 Sandbox'
-level 'CSA Neighborhood 12x12 Sandbox'
-level 'CSA Neighborhood 16x16 Sandbox'
-level 'CSA Neighborhood 32x32 Sandbox'

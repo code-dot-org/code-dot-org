@@ -1,7 +1,0 @@
-name 'CSD web mouse practice choice_2022'
-display_name 'Mouse Input and If/else Practice'
-description 'Practice keyboard input and using conditional statements with these activities.'
-
-sublevels
-level 'CSD games mouse mousey_2022'
-level 'CSD games practice move with mouse_2022'

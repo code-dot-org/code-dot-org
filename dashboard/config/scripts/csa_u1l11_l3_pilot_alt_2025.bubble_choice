@@ -1,9 +1,0 @@
-name 'CSA U1L11-L3_pilot_alt-2025'
-display_name 'Practice: Decomposing a Problem'
-description 'Create a subclass of the `PainterPlus` class and implement your solution for your chosen problem.'
-
-sublevels
-level 'CSA U1L11-L3c_alt-2025'
-level 'CSA U1L11-L3d_alt-2025'
-level 'CSA U1L11-L3a_alt-2025'
-level 'CSA U1L11-L3b_alt-2025'

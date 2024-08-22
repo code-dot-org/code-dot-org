@@ -1,9 +1,0 @@
-name 'CSA U3L1-L7_pilot-2025'
-display_name 'Practice: Creating 1D Arrays'
-description 'Practice declaring and initializing one-dimensional (1D) arrays to store multiple values of a specific data type.'
-
-sublevels
-level 'CSA U3L1-L7a_pilot-2025'
-level 'CSA U3L1-L7b_pilot-2025'
-level 'CSA U3L1-L7c_pilot-2025'
-level 'CSA U3L1-L7d_pilot-2025'

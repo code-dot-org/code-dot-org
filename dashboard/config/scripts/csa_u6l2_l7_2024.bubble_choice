@@ -1,9 +1,0 @@
-name 'CSA U6L2-L7_2024'
-display_name 'Practice: The substring() Method'
-description 'Practice using the `substring()` method to retrieve characters between a starting and ending index in a `String`.'
-
-sublevels
-level 'CSA U6L2-L7a_2024'
-level 'CSA U6L2-L7b_2024'
-level 'CSA U6L2-L7c_2024'
-level 'CSA U6L2-L7d_2024'

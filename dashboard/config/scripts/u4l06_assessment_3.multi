@@ -1,9 +1,0 @@
-name 'U4L06 Assessment 3'
-question ' Each attribute for a record of data is kept in a'
-wrong 'row'
-right 'column'
-markdown <<MARKDOWN
-## Assessment Question 3
-MARKDOWN
-
-allow_multiple_attempts true

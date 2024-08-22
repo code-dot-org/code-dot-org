@@ -1,9 +1,0 @@
-name 'CSP U4 Make Variables Rubric Line1'
-question 'Code: Event Handlers Created'
-right '**No Evidence:** onEvents are not designed for any buttons.'
-right '**Limited Evidence:** onEvents are defined for some of the buttons.'
-right '**Convincing Evidence:** onEvents are defined for most of the required buttons.'
-right '**Extensive Evidence:** onEvents are defined for all the required buttons.'
-
-
-allow_multiple_attempts true

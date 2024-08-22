@@ -1,9 +1,0 @@
-name 'CSA U2L3-L7_2023'
-title 'Check for Understanding'
-description 'Match each term to its correct definition.'
-height '100'
-
-question 'Question'
-answer 'Answer 1'
-
-allow_multiple_attempts true

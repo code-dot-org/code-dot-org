@@ -1,9 +1,0 @@
-name 'CSD U3 collisions STOP isTouching'
-title 'STOP'
-description 'description here'
-href 'path/to/html/in/asset/folder'
-markdown <<MARKDOWN
-# STOP
-
-Stop level to talk about other things that sprite could do when they run into each other.  Students should use this time to brainstorm some ideas for how sprites could interact when they touch each other.  Maybe journaling activity.  This may be the end of the class period.  Next level is done as a group.
-MARKDOWN

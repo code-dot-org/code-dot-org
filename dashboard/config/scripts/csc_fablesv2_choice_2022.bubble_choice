@@ -1,9 +1,0 @@
-name 'csc_fablesv2_choice_2022'
-display_name 'Character Motivations'
-description 'Explore each of these programs and choose the best quote that represents the character\'s personality.'
-
-sublevels
-level 'csc_fables_choice_A_2022'
-level 'csc_fablesv2_choice_B_2022'
-level 'csc_fablesv2_choice_C_2022'
-level 'csc_fablesv2_choice_D_2022'

@@ -1,9 +1,0 @@
-name 'CSA Post-Survey q46_2024'
-question 'Reminded me that failure is a natural and expected part of a problem-solving process.'
-
-right 'Never'
-right 'A few classes'
-right 'About half the class sessions'
-right 'Many class sessions'
-right 'Once or more per class session'
-allow_multiple_attempts true

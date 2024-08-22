@@ -1,9 +1,0 @@
-name 'ml-good data-kim data'
-title 'Introduction to Machine Learning'
-description ''
-
-markdown <<MARKDOWN
-![](https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
-
-## [Click Here](https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy) to create a copy of Kim's data
-MARKDOWN

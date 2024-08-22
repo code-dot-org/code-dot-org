@@ -1,9 +1,0 @@
-name 'CSA U6L3-L6_pilot-2025'
-display_name 'Practice: The Integer Class'
-description 'Practice working with the `Integer` class and its methods.'
-
-sublevels
-level 'CSA U6L3-L6a_pilot-2025'
-level 'CSA U6L3-L6b_pilot-2025'
-level 'CSA U6L3-L6c_pilot-2025'
-level 'CSA U6L3-L6d_pilot-2025'

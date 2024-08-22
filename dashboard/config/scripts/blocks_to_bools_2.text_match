@@ -1,8 +1,0 @@
-name 'Blocks to Bools 2'
-title 'Convert Blocks to Math'
-placeholder 'Type the arithmetic expression here'
-content1 'Type out the arithmetic expression that matches this code'
-content2 '/script_assets/msm/unit6/blockstomath2.png, 500'
-answer '(10 > 11) or (7 <= 9)'
-answer '(10 > 11) OR (7 <= 9)'
-answer '(10 > 11) || (7 <= 9)'

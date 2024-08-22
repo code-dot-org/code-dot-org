@@ -1,9 +1,0 @@
-{
-  "key": "arraylists",
-  "course_version_key": "2023",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "data-structures",
-  "display_name": "ArrayLists",
-  "content": "## What is an ArrayList?\n\nThe `ArrayList`(#e7e8ea) class is used to represent a list of elements that are of the same type. With an `ArrayList`(#e7e8ea), elements can be added or removed at any time, making it more flexible than a one-dimensional (1D) array.\n\n## How do I use an ArrayList in my program?\n\nThe `ArrayList`(#e7e8ea) class is part of the `java.util`(#e7e8ea) package. To use it, add the following line to the top of your program:\n\n```\nimport java.util.ArrayList;\n```\n\nCreating an `ArrayList`(#e7e8ea) object is similar to creating a 1D array. Instead of square brackets ( `[ ]`(#e7e8ea) ), we use angle brackets ( `< >`(#e7e8ea) ) to specify the type.\n\n```\nArrayList<DataType> foo = new ArrayList<DataType>();\n```\n\n::: details [**❓What is `foo`(#e7e8ea)??**]\n  \n`foo`(#e7e8ea) is a name often used by software engineers in example code segments as a placeholder for a variable, object, or method name. You can read more about how this word is used and theories about its origins [**here**](https://www.codingem.com/what-is-foo/).\n:::\n\n## How do I modify elements in an ArrayList?\n\nThe `ArrayList`(#e7e8ea) class has several methods for adding, modifying, and removing elements. Take a look at [**the documentation**](https://studio.code.org/docs/ide/javalab/classes/ArrayLists) for the `ArrayList`(#e7e8ea) class to view its methods and examples.",
-  "position": 3
-}

@@ -1,9 +1,0 @@
-{
-  "key": "array-index-out-of-bounds-exception",
-  "course_version_key": "2024",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "common-errors",
-  "display_name": "ArrayIndexOutOfBoundsException",
-  "content": "An `ArrayIndexOutOfBoundsException`(#e7e8ea) occurs when attempting to access an index that is negative, greater than, or equal to the length of the 1D array.\n",
-  "position": 3
-}

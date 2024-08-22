@@ -1,8 +1,0 @@
-name 'CSD survey_placeholder_levelgroup'
-title 'CS Discoveries Student Survey Coming Soon'
-submittable 'true'
-anonymous 'true'
-
-page
-text 'CSD 2021 Precourse Placeholder'
-

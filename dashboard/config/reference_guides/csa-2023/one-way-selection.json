@@ -1,9 +1,0 @@
-{
-  "key": "one-way-selection",
-  "course_version_key": "2023",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "control-structures",
-  "display_name": "One-Way Selection Statements",
-  "content": "## What is a selection statement?\n\nIn Java, selection statements execute a block of code based on the result of the condition.\n\nAn `if`(#e7e8ea) statement executes a block of code when the condition is `true`(#e7e8ea).",
-  "position": 1
-}

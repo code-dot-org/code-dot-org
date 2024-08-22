@@ -1,9 +1,0 @@
-name 'CSA U2L8-L5v2 Exemplar_2022'
-display_name 'Using a Sentinel Value'
-description 'level description here'
-
-sublevels
-level 'CSA U2L8-L5a Exemplar_2022'
-level 'CSA U2L8-L5b Exemplar_2022'
-level 'CSA U2L8-L5c Exemplar_2022'
-level 'CSA U2L8-L5d Exemplar_2022'

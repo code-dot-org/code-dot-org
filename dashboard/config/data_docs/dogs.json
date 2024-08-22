@@ -1,5 +1,0 @@
-{
-  "key": "dogs",
-  "name": "Dogs",
-  "content": "Description: common dog breeds\r\n\r\n[Source](https://thedogapi.com)\r\n\r\nProcessing: cleaned original .csv  by removing unnecessary columns and any rows with blanks\r\n\r\nColumns\r\n\r\n* Name (string): name of the dog breed\r\n* Breed Group (string): category of breed such as hound or terrier\r\n* Bred For (string): activity which the dog was bred for such as hunting\r\n* Minimum Life Span (numerical): minimum life span in years of the dog breed\r\n* Maximum Life Span (numerical): maximum life span in years of the dog breed\r\n* Minimum Height (numerical): minimum height in inches of the dog breed\r\n* Maximum Height (numerical): maximum height in inches of the dog breed\r\n* Minimum Weight (numerical): minimum weight in pounds of the dog breed\r\n* Maximum Weight (numerical): maximum weight in pounds of the dog breed\r\n* Temperament (string): descriptions of the dog’s character such as friendly, protective\r\n* Image (string): image of the dog breed"
-}

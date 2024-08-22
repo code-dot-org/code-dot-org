@@ -1,8 +1,0 @@
-name 'pilot2022_l1_q3_copy2_2023'
-question 'I am excited to tell my friends or family about what I did today in coding class.'
-right '😍 Yes, definitely!'
-right '👍 Yes.'
-right '🫤 Not really.'
-right '👎 No.'
-right '🤔 I do not know.'
-allow_multiple_attempts true

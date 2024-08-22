@@ -1,9 +1,0 @@
-name 'CSA U6L10-L3v2_2022'
-display_name 'Finding the Sentiment Value'
-description 'Find the sentiment value of various text.'
-
-sublevels
-level 'CSA U6L10-L3a_2022'
-level 'CSA U6L10-L3b_2022'
-level 'CSA U6L10-L3c_2022'
-level 'CSA U6L10-L3d_2022'

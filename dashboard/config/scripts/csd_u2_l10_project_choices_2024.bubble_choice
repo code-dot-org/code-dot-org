@@ -1,9 +1,0 @@
-name 'CSD U2 L10 Project Choices_2024'
-display_name 'Mini-Project Choices'
-description 'Choose a user to start styling their page by adding a stylesheet to the HTML code!'
-
-sublevels
-level 'CSD web CSS project HTML_2024'
-level 'CSD L10_Savannah_2024'
-level 'CSD L10_Sofia_2024'
-level 'CSD L10_Pedro_2024'

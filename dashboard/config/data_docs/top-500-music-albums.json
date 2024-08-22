@@ -1,5 +1,0 @@
-{
-  "key": "top-500-music-albums",
-  "name": "Top 500 Music Albums",
-  "content": "Description: Top 500 music albums of all time \r\n\r\nSource: [Kaggle](https://www.kaggle.com/notgibs/500-greatest-albums-of-all-time-rolling-stone)\r\n\r\nProcessing: cleaned original .csv by removing some foreign characters and removing superfluous sub-sub-genre columns \r\n\r\nColumns:\r\n\r\n* Album Rank (numerical): rank of the album, 1-500\r\n* Year (numerical): year the album was released\r\n* Album (string): name of the album\r\n* Artist (string): name of the artist\r\n* Genre (string): genre of the album, such as rock, blues\r\n* Subgenre (string): more specific classification of genre, such as acoustic rock or experimental new wave\r\n* Album Art (string): cover art for each album\r\n\r\n\r\n\r\n\r\n"
-}

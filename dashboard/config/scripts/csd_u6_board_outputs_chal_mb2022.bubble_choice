@@ -1,9 +1,0 @@
-name 'CSD U6 - Board Outputs - Chal_mb2022'
-display_name 'Challenge Levels'
-
-sublevels
-level 'CSD U6 - Board Outputs - ChalA_mb2022'
-level 'CSD U6 - Board Outputs - ChalC_mb2022'
-level 'CSD U6 - Board Outputs - ChalF_mb2022'
-level 'CSD U6 - Board Outputs - ChalD_mb2022'
-level 'CSD U6 - Board Outputs - ChalE_mb2022'

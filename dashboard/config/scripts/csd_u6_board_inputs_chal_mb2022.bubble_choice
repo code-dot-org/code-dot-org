@@ -1,9 +1,0 @@
-name 'CSD U6 - Board Inputs - Chal_mb2022'
-display_name 'Challenge Levels'
-
-sublevels
-level 'CSD U6 - Board Inputs - ChalA_mb2022'
-level 'CSD U6 - Board Inputs - ChalB_mb2022'
-level 'CSD U6 - Board Inputs - ChalC_mb2022'
-level 'CSD U6 - Board Inputs - ChalD_mb2022'
-level 'CSD U6 - Board Inputs - ChalG_mb2022'

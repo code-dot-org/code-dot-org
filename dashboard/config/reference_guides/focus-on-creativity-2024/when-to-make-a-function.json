@@ -1,9 +1,0 @@
-{
-  "key": "when-to-make-a-function",
-  "course_version_key": "2024",
-  "course_offering_key": "focus-on-creativity",
-  "parent_reference_guide_key": "patterns",
-  "display_name": "When to Make a Function",
-  "content": "An important questions for new programmers is \"When should I decide to make a function\". In general, the earlier you realize you need a function, the better. This is a skill you'll get better at with practice. **By the end of this course you should aim to be in the During or Before rows.**\r\n\r\n| When You Create Functions | Description | Comments |\r\n|:---:|---|---|\r\n| Never | You never create functions at all. | Your code will be difficult to read and debug and have lots of repeated code. Aim to move on at least to the \"After\" step. |\r\n| After | You write your entire program without functions. Once you're done you look for repeated code and move those into a function. | Your code is much easier to read and debug now. You're also getting better at seeing how your program is organized. As you get more comfortable, try to move on to \"During\" or \"Before\".  |\r\n| During | As you write your code you notice when you're about to rewrite code you already wrote somewhere else in your program. Before moving on you declare a function and call that function instead. | You have a good understanding of your program and are able to keep it organized as you develop it. See if sometimes you can move on to \"Before\". |\r\n| Before | Before you write your program you make a plan and identify places you're likely to use repeated code. You create your function at the beginning. | This level reflects a strong understanding of how your program is going to be designed. You can almost \"see it in your head\" before you begin writing. That said, it's OK if sometimes you realize you need a function while you program and work in the \"During\" stage. |\r\n",
-  "position": 7
-}

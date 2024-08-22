@@ -1,7 +1,0 @@
-name 'csc_animal_adaptations_predict_batQ'
-question 'Make a prediction. Which way will the bat move to catch the spider?'
-wrong 'Only Left', feedback: 'Incorrect.'
-right 'Diagonally Down', feedback: 'Correct!'
-wrong 'Diagonally Up', feedback: 'Incorrect. '
-wrong 'Only Down', feedback: 'Incorrect'
-allow_multiple_attempts false

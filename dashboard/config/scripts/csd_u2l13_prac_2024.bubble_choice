@@ -1,9 +1,0 @@
-name 'CSD U2L13 - Prac_2024'
-display_name 'Practice Levels'
-description 'Try out what you\'ve learned on one or more of the following activities.'
-
-sublevels
-level 'CSD U2L13 practice_1'
-level 'CSD U2L13 practice_2'
-level 'CSD U2L13 practice_3'
-level 'CSD U2L13 practice_4'

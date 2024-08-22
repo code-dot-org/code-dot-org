@@ -1,8 +1,0 @@
-{
-  "key": "digitalWrite",
-  "name": "digitalWrite()",
-  "category": "Maker",
-  "category_key": "maker",
-  "short_description": "Maker Toolkit - digitalWrite()",
-  "syntax": "digitalWrite(pin, value)"
-}

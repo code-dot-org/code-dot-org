@@ -1,9 +1,0 @@
-name 'courseF_EOC_examples2022_2022_pilot_clone'
-display_name 'Artist Practice'
-description 'Great work so far! Choose your next activity. Complete as many as you can. Keep practicing with loops and the Artist!'
-
-sublevels
-level 'courseC_artist_prog72022'
-level 'ramp_artist_loops42022'
-level 'ramp_artist_loops62022'
-level 'ramp_artist_loops82022'

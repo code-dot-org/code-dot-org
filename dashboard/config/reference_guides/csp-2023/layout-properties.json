@@ -1,9 +1,0 @@
-{
-  "key": "layout-properties",
-  "course_version_key": "2023",
-  "course_offering_key": "csp",
-  "parent_reference_guide_key": "css",
-  "display_name": "Layout Properties",
-  "content": "There are many properties that help set the styles of your web pages.\r\n\r\n| Property | Description | W3 Schools Link|\r\n|---|---|---|\r\n|[`background-color`(#d3e965)](/docs/weblab/background-color/)|Sets the background color of the element|[W3 Schools](https://www.w3schools.com/css/css_background.asp)|\r\n|[`border-color`(#d3e965)](/docs/weblab/border-color/)|Sets the color of the border|[W3 Schools](https://www.w3schools.com/css/css_border.asp)|\r\n|[`border-width`(#d3e965)](/docs/weblab/border-width/)|Changes the border width of an element|[W3 Schools](https://www.w3schools.com/css/css_border.asp)|\r\n|[`border-style`(#d3e965)](/docs/weblab/border-style/)|Changes the style of border|[W3 Schools](https://www.w3schools.com/css/css_border.asp)|\r\n|[`Width`(#d3e965)](/docs/weblab/width/)|Sets the width of an element|[W3 Schools](https://www.w3schools.com/css/css_dimension.asp)|\r\n|[`Height`(#d3e965)](/docs/weblab/height/)|Sets the height of an element|[W3 Schools](https://www.w3schools.com/css/css_dimension.asp)|\r\n|[`Float`(#d3e965)](/docs/weblab/float/)|Floats an element to one side of the page|[W3 Schools](https://www.w3schools.com/css/css_float.asp)|\r\n|[`Margin`(#d3e965)](/docs/weblab/margin/)|Generates space around an element|[W3 Schools](https://www.w3schools.com/css/css_margin.asp)|",
-  "position": 4
-}

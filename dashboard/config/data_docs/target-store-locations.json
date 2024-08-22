@@ -1,5 +1,0 @@
-{
-  "key": "target-store-locations",
-  "name": "Target Store Locations",
-  "content": "Description: all target store locations in the United States as of April 2017\r\n\r\nSource: [Kaggle](https://www.kaggle.com/ben1989/target-store-dataset)\r\n\r\nProcessing: cleaned original .csv  by removing unnecessary columns, such as Target store ID or additional address fields, renamed some columns for clarity, and added state column.\r\n\r\nColumns\r\n\r\n* Address (string): street address of the store \r\n* City (string): name of the city where the store is located\r\n* County (string): name of the county where the store is located\r\n* Latitude (numerical): geographic latitude of store's location\r\n* Longitude (numerical): geographical longitude of store's location\r\n* Postal Code (numerical): zip code of the store\r\n* State Code (string): two letter state abbreviation of the state in which the store is located\r\n* State (string): state in which the store is located\r\n\r\n"
-}

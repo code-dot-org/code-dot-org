@@ -1,5 +1,0 @@
-{
-  "key": "womens-march",
-  "name": "2017 Women's March Attendance by US City",
-  "content": "Description: Estimates of crowd size / attendance of Women's March participants in January 2017, by US City.\r\n\r\n[Source](https://docs.google.com/spreadsheets/d/1xa0iLqYKz8x9Yc_rfhtmSOJQ2EGgeUVjvV4A8LsIaxY/edit#gid=0)\r\n\r\nColumns:\r\n\r\n* City (string): What city the participants marched in\r\n* State (string): State the aforementioned city is in\r\n* Low estimate (numerical): Low estimate of the attendance count, per source(s)\r\n* Best guess (numerical): Best guess of the attendance count, per source(s)\r\n* High estimate (numerical): High estimate of the attendance count, per source(s)\r\n* Source1 (string): where the estimates are sourced from\r\n"
-}

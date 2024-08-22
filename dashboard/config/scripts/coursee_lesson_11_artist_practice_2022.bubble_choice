@@ -1,8 +1,0 @@
-name 'CourseE_Lesson_11_Artist_Practice_2022'
-display_name 'Artist Practice'
-description 'Great work so far! Choose your next activity. Complete as many as you can. Keep practicing with functions and the Artist!'
-
-sublevels
-level 'courseE_artist_functions92022'
-level 'courseE_artist_functions102022'
-level 'courseE_artist_functionsProj2022'

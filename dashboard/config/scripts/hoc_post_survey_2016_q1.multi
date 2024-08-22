@@ -1,6 +1,0 @@
-name 'HOC post-survey 2016 q1'
-question 'Before today, I have...'
-right 'Never done an Hour of Code'
-right 'Only done an Hour of Code'
-right 'Done more computer science than just an Hour of Code'
-allow_multiple_attempts true

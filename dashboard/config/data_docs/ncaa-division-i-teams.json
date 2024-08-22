@@ -1,5 +1,0 @@
-{
-  "key": "ncaa-division-i-teams",
-  "name": "NCAA Division I Teams",
-  "content": "Description: data about all current Division I teams in the NCAA.\r\n\r\nSource: [CFB DataWarehouse](http://www.cfbdatawarehouse.com/index.php)\r\n\r\nColumns:\r\n\r\n * University (string): name of the college or university that holds the team\r\n* Team nickname (string): what nickname that university applies to their athletics teams, such as Bears or Cougars\r\n* City (string): what US city the team is located in\r\n* State (string): what US state the team is located in\r\n * Enrollment (numerical): how many current students attend that university (as of 2019)\r\n* Current conference (string): what conference that team is in, such as Big 10 or Pac-12"
-}

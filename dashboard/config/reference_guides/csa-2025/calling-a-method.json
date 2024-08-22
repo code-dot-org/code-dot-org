@@ -1,9 +1,0 @@
-{
-  "key": "calling-a-method",
-  "course_version_key": "2025",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "methods",
-  "display_name": "Calling a Method",
-  "content": "## How do I call a method?\n\nIn Java, we use dot notation ( `.`(#e7e8ea) ) to access the methods of an object or class.\n\nA method is called using the following syntax:\n\n  ```\n  nameOfObject.nameOfMethod();\n  \n  OR\n  \n  nameOfObject.nameOfMethod(argument);\n  ```\n\nBe sure to replace `nameOfObject`(#e7e8ea) with the name of the object and `nameOfMethod`(#e7e8ea) with the name of the method you want to use.\n\nIf the method you want to use requires an argument, include the value you want to use inside the parentheses.",
-  "position": 2
-}

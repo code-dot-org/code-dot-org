@@ -1,9 +1,0 @@
-name 'CSA U1L9-L4 CR_2022'
-display_name 'level display_name here'
-description 'level description here'
-
-sublevels
-level 'CSA U1L9-L4a CR_2022'
-level 'CSA U1L9-L4b CR_2022'
-level 'CSA U1L9-L4c CR_2022'
-level 'CSA U1L9-L4d CR_2022'

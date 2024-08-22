@@ -1,8 +1,0 @@
-name 'CSA U3L1-L3_pilot-2022'
-display_name 'Declare and Initialize 1D Arrays'
-description 'Declare and initialize 1D arrays using an initializer list to store values from a dataset.'
-
-sublevels
-level 'CSA U3L1-L3a_pilot-2022'
-level 'CSA U3L1-L3b_pilot-2022'
-level 'CSA U3L1-L3c_pilot-2022'

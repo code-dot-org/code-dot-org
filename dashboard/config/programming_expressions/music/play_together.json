@@ -1,8 +1,0 @@
-{
-  "key": "play_together",
-  "name": "Play Together",
-  "category": "Control",
-  "category_key": "control",
-  "content": "All sounds placed within this block will play at the same time, allowing multiple instruments to play at once. ",
-  "short_description": "Plays multiple sounds at the same time"
-}

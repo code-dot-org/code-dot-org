@@ -1,9 +1,0 @@
-name 'CSA U7L5-L4v2_pilot-2022'
-display_name 'Overriding Methods'
-description 'Practice overriding methods using the console, The Neighborhood, or The Theater.'
-
-sublevels
-level 'CSA U7L5-L4a_pilot-2022'
-level 'CSA U7L5-L4b_pilot-2022'
-level 'CSA U7L5-L4c_pilot-2022'
-level 'CSA U7L5-L4d_pilot-2022'

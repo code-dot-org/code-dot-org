@@ -1,9 +1,0 @@
-{
-  "key": "sprites",
-  "course_version_key": "2022",
-  "course_offering_key": "self-paced-pl-csd-2021",
-  "parent_reference_guide_key": "game-lab",
-  "display_name": "Sprites",
-  "content": "A _sprite_ is the name we give to a collection of values in Game Lab that represents a character in a story, animation, or game. A _sprite_ can be stored in a variable with a label, but unlike values you've stored in variables before, such as numbers, a _sprite_ lets you store many related values all under the same label\n\n# Creating a Sprite\n\nYou can create a new _sprite_ using the `createSprite()` block.\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/sprite_map.png)\n\n[diagram_nums]\n\n1. The _sprite_ as drawn on screen. In this case, our _sprite_ is located at (200, 200), the center of the screen, and has been assigned the animation \"bunny\"\n2. The `createSprite()` block, which creates a new _sprite_ at (200, 200) and assigns it to the variable label `my_bunny`. Note that just creating the _sprite_ **doesn't** yet draw it on the screen. That will happen later.\n3. The `sprite.setAnimation()` block assigns an animation (or image) to the _sprite_. In this case, we're using an animation named \"bunny\", which was added in the animation tab. Notice that instead of the default variable name `sprite`, we've updated this to `my_bunny.setAnimation()` so that it changes the animation of the `my_bunny` _sprite_.\n4. Because _sprites_ are just values stored as variables, they don't automatically get drawn on the screen. The `drawSprites()` block tells Game Lab to draw all of the _sprites_ that have been created onto the screen.\n\n[/diagram_nums]",
-  "position": 2
-}

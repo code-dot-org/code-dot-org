@@ -1,9 +1,0 @@
-{
-  "key": "static-methods",
-  "course_version_key": "2025",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "methods",
-  "display_name": "Static Methods",
-  "content": "## What is a static method?\n\nA **static method** is a method that can be called without creating an object of the class.\n\n```\n public class Student {\n \n  public static String school = \"Neighborhood HS\";\n \n  public static String getSchool() {\n    return school;\n  }\n \n  . . .\n}\n```\n\nStatic Methods\n- Cannot access or change the values of instance variables \n- Can access or change the values of static variables \n- Do not have a `this`(#e7e8ea) reference \n- Cannot use the class's instance variables or call non-static methods\n\nTo call a **static method**, use the `ClassName`(#e7e8ea) and the dot operator.\n\n```\nSystem.out.println(Student.getSchool());\n```\n\n",
-  "position": 10
-}

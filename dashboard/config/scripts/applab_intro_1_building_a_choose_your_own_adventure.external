@@ -1,8 +1,0 @@
-name 'AppLab Intro 1 - Building a Choose Your Own Adventure'
-markdown <<MARKDOWN
-# Build Your Own Choose Your Own Adventure
-
-#### Now you know all the skills you need to build you own Choose Your Own Adventure. A good idea is to do just a quick sketch of the story you want to tell. Each rectangle is a screen you'll need to make. You'll need buttons to get between each screen. Finally you'll need to create `onEvent()` blocks for button that use `setScreen()` to change the screens. Play sounds, add text, change colors, or edit formatting however you want to make the story more interesting and engaging.
-
-![](https://images.code.org/091b65184769cc3d4a9b2099e7d32d5c-image-1504292778594.jpg)
-MARKDOWN

@@ -1,9 +1,0 @@
-name 'CSA U2L7-L4_2023'
-display_name 'Skill Building: Accessor Methods'
-description 'Write an accessor method in a class for its instance variable.'
-
-sublevels
-level 'CSA U2L7-L4a_2023'
-level 'CSA U2L7-L4b_2023'
-level 'CSA U2L7-L4c_2023'
-level 'CSA U2L7-L4d_2023'

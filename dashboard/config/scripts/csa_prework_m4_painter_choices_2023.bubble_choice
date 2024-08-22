@@ -1,9 +1,0 @@
-name 'csa-prework-m4-painter-choices-2023'
-display_name 'Choose the right practice for you'
-description 'Now that you have learned about the `Painter` class, decide how you want to practice what you have learned.  You can do as many of these options as you like.'
-
-sublevels
-level 'csa-prework-m4-painter-choice-easy-2023'
-level 'csa-prework-m4-painter-choice-medium-2023'
-level 'csa-prework-m4-painter-choice-hard-2023'
-level 'csa-prework-m4-painter-choice-free-2023'

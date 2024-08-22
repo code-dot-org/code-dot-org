@@ -1,9 +1,0 @@
-name 'CSA U4L5-L5_2024'
-display_name 'Practice: Generating Random Numbers'
-description 'Use `Math.random()` to generate random numbers within specific ranges for various scenarios.'
-
-sublevels
-level 'CSA U4L5-L5a_2024'
-level 'CSA U4L5-L5b_2024'
-level 'CSA U4L5-L5c_2024'
-level 'CSA U4L5-L5d_2024'

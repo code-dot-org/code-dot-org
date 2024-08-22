@@ -1,9 +1,0 @@
-name 'CSA U5L3-L4_pilot-2022'
-display_name 'Traversing 2D Arrays'
-description 'Implement standard 1D array algorithms for 2D arrays using the console or The Theater.'
-
-sublevels
-level 'CSA U5L3-L4a_pilot-2022'
-level 'CSA U5L3-L4b_pilot-2022'
-level 'CSA U5L3-L4c_pilot-2022'
-level 'CSA U5L3-L4d_pilot-2022'

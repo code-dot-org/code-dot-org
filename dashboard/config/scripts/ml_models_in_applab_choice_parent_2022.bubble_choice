@@ -1,9 +1,0 @@
-name 'ml-models in applab-choice parent_2022'
-display_name 'Model Card Practice'
-description 'Try out what you\'ve learned on one or more of the following activities.'
-
-sublevels
-level 'ml-models in applab-choice predict typos_2022'
-level 'ml-models in applab-choice if quotes_2022'
-level 'ml-models in applab-choice intended warnings_2022'
-level 'ml-models in applab-choice if wrong place_2022'

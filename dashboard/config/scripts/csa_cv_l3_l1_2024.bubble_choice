@@ -1,8 +1,0 @@
-name 'CSA-CV-L3-L1_2024'
-display_name 'Modify Your App'
-description 'Incorporate your model into an existing Java program.'
-
-sublevels
-level 'CSA-CV-L3-L1a_2024'
-level 'CSA-CV-L3-L1b_2024'
-level 'CSA-CV-L3-L1c_2024'

@@ -1,9 +1,0 @@
-{
-  "key": "recursion",
-  "course_version_key": "2025",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "methods",
-  "display_name": "Recursion",
-  "content": "## What is recursion?\n\n**Recursion** is a strategy for solving problems by defining the problem in terms of itself.\n\nA recursive method consists of two parts: the base case and the recursive step.\n\n## What is the base case?\n\nA recursive method should have a **base case** with a condition that stops the method from repeating indefinitely.\n\n## What is the recursive step?\n\nA recursive method should have a **recursive step** which calls the recursive method with some input that brings it closer to its base case.",
-  "position": 11
-}

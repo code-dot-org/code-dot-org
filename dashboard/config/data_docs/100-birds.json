@@ -1,5 +1,0 @@
-{
-  "key": "100-birds",
-  "name": "100 Birds of the World",
-  "content": "Description: Dataset about 100 different species of birds of the world, and various facts / images of each bird.\r\n\r\n[Source](https://www.birds.cornell.edu/home/)\r\n\r\nColumns:\r\n\r\n* Name (string): common name for the bird species\r\n* Scientific name (string): scientific name for the bird species\r\n* Conservation status (string): the degree to which the bird species is endangered\r\n* Primary color (string): the most common / primary color of the bird species\r\n* Diet (string): the typical diet / foods eaten by the bird species\r\n* Image of range (link): an image link to a map of where the bird can typically be found worldwide\r\n* Image of bird (link): an image link to an example photo of the bird\r\n"
-}

@@ -1,9 +1,0 @@
-name 'CSA U4L2-L6_modular'
-display_name 'Practice: Using Static Variables'
-description 'Use a static variable to declare and initialize a shared value for different types of objects.'
-
-sublevels
-level 'CSA U4L2-L6a_modular'
-level 'CSA U4L2-L6b_modular'
-level 'CSA U4L2-L6c_modular'
-level 'CSA U4L2-L6d_modular'

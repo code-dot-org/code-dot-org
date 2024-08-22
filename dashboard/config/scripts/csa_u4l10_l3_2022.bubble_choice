@@ -1,9 +1,0 @@
-name 'CSA U4L10-L3_2022'
-display_name 'Multi-Selection with The Theater'
-description 'Use multi-selection statements to create interesting visuals and animations using The Theater.'
-
-sublevels
-level 'CSA U4L10-L3a_2022'
-level 'CSA U4L10-L3b_2022'
-level 'CSA U4L10-L3c_2022'
-level 'CSA U4L10-L3d_2022'

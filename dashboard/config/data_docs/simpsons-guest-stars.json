@@ -1,5 +1,0 @@
-{
-  "key": "simpsons-guest-stars",
-  "name": "Simpsons Guest Stars",
-  "content": "Description: data about guest stars on The Simpsons, seasons 1-30.\r\n\r\n[Source](https://github.com/rfordatascience/tidytuesday/tree/master/data/2019/2019-08-27)\r\n\r\nColumns:\r\n\r\n* Season (numerical): what season a given episode was aired during\r\n* Number (string): production number for that episode\r\n* Production code (string): TV production code for that episode\r\n* Episode Title (string): name of Simpsons episode\r\n* Guest Star (string): name of the guest star for that episode\r\n* Role (string): name of the character/role the guest star played, such as \"Themselves\" or a fictional role\r\n"
-}

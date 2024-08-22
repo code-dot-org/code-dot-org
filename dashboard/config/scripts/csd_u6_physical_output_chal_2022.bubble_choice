@@ -1,8 +1,0 @@
-name 'CSD U6 - Physical Output - Chal_2022'
-display_name 'Challenge Levels'
-
-sublevels
-level 'CSD U6 - Physical Output - ChalA_2022'
-level 'CSD U6 - Physical Output - ChalB_2022'
-level 'CSD U6 - Physical Output - ChalC_2022'
-level 'CSD U6 - Physical Output - ChalD_2022'

@@ -1,8 +1,0 @@
-name 'CSP U4L10 Choice_2024'
-display_name 'Reduce Repeated Code With Functions'
-description 'Practice writing functions that you call in multiple onEvents to reduce repeated code.'
-
-sublevels
-level 'U4 L10 Making Functions Practice_2024'
-level 'U4L011 Choice - Basketball Stats_2024'
-level 'U4 L10 Creating Functions practice choice hydration tracker_2024'

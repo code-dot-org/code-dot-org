@@ -1,8 +1,0 @@
-name 'csp-post-survey-2017-q60'
-question 'Asked questions when I was confused about activities or assignments.'
-right 'Never'
-right 'A few classes'
-right 'About half the class sessions'
-right 'Many class sessions'
-right 'Once or more per class session'
-allow_multiple_attempts true

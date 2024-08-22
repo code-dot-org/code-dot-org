@@ -1,9 +1,0 @@
-{
-  "key": "two-way-selection-statements",
-  "course_version_key": "2025",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "control-structures",
-  "display_name": "Two-Way Selection Statements",
-  "content": "The `else`(#e7e8ea) statement executes a block of code when the condition inside the `if`(#e7e8ea) statement is `false`(#e7e8ea).",
-  "position": 2
-}

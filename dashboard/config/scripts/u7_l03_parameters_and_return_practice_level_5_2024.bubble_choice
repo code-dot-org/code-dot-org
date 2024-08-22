@@ -1,7 +1,0 @@
-name 'U7_L03_Parameters and Return Practice_Level 5_2024'
-display_name 'Parameters and Return Practice, Part 5'
-description 'Continue working on the app that you choose in the previous level(s) in order to practice the steps involved in its development. There is a sequence of six levels associated with this Practice activity. If you want to change apps, please start back at level 1 in order to follow the full development sequence.'
-
-sublevels
-level 'U7_L03_Parameters and Return Practice_Choice_1-5_2024'
-level 'U7_L03_Parameters and Return Practice_Choice_2-5_2024'

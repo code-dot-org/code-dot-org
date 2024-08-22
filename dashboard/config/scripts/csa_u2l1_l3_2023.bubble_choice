@@ -1,9 +1,0 @@
-name 'CSA U2L1-L3_2023'
-display_name 'Skill Building: Declaring Instance Variables'
-description 'Declare instance variables in a class for the specified attributes.'
-
-sublevels
-level 'CSA U2L1-L3a_2023'
-level 'CSA U2L1-L3b_2023'
-level 'CSA U2L1-L3c_2023'
-level 'CSA U2L1-L3d_2023'

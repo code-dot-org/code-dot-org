@@ -1,7 +1,0 @@
-name 'Blocks to Math 7'
-title 'Convert Blocks to Math'
-placeholder 'Type the arithmetic expression here'
-content1 'Type out the arithmetic expression that matches this code'
-content2 'Blocks to Math 7.blocks.start_blocks'
-answer '10 / (2 * (3 + 1))'
-answer '(10 / (2 * (3 + 1))'

@@ -1,9 +1,0 @@
-name 'CSA U2L4-L6_2024'
-display_name 'Practice: The this Keyword'
-description 'Write parameterized and no-argument constructors in a class using the `this` keyword.'
-
-sublevels
-level 'CSA U2L4-L6a_2024'
-level 'CSA U2L4-L6b_2024'
-level 'CSA U2L4-L6c_2024'
-level 'CSA U2L4-L6d_2024'

@@ -1,8 +1,0 @@
-name 'VPL-CSD-PILOT-S22-AYW-M1-DebuggingToolsChoice'
-display_name 'Practice: Debugging Tools'
-description 'In the following challenges, you will have the opportunity to practice using debugging tools in student coding challenges. You may choose to do as many challenges as you like. As you work, consider how you might use these tools with your own students.'
-
-sublevels
-level 'VPL-CSD-PILOT-S22-AYW-M1-DebugTools1'
-level 'VPL-CSD-PILOT-S22-AYW-M1-DebugTools2'
-level 'VPL-CSD-PILOT-S22-AYW-M1-DebugTools3'

@@ -1,9 +1,0 @@
-{
-  "key": "importing-a-model-in-app-lab",
-  "course_version_key": "2022",
-  "course_offering_key": "vpl-csd-summer-pilot",
-  "parent_reference_guide_key": "ai-lab",
-  "display_name": "Importing a Model in App Lab",
-  "content": "<img style=\"margin-right: 10px; margin-left: 10px; margin-bottom: 15px; border: 2px solid black; width: 200px; float: left\" src=\"https://images.code.org/e81c7cead7d106ee5b32f850791c7de8-image-1616919161803.png\"/>\n\nTo import a model into App Lab, press the gear icon in the upper-left corner of the App Lab Toolbox and select Manage AI Models\n\n<hr style=\"clear:both\">\n\n<img style=\"margin-right: 10px; margin-left: 10px; border: 2px solid black\" src=\"https://curriculum.code.org/media/uploads/Import-AI-Models_2l1FmrZ.png\"/>\n\n[diagram_nums]\n\n1. You can select which model to import using the dropdown menu\n2. Press the Import button to import your model into App Lab\n3. Press the Delete button to delete the model from your account\n4. The Model Card for each model will appear on the right-hand side. You can use this to help decide whether or not you want to use this model in your app.\n\n[/diagram_nums]\n\n## Video\n\n(Opens YouTube in new tab)\n\n[![Model Cards in AI Lab](https://curriculum.code.org/media/uploads/Capture_vR2LaoG.PNG)](https://www.youtube.com/watch?v=_iAGDFmZhYI)",
-  "position": 8
-}

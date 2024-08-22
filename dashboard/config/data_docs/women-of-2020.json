@@ -1,5 +1,0 @@
-{
-  "key": "women-of-2020",
-  "name": "Women of 2020",
-  "content": "Description: Data on the BBC's list of 100 inspiring and influential women from around the world for 2020.\r\n\r\n[Source](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-12-08/readme.md) and second [source](https://www.bbc.com/news/world-55042935)\r\n\r\nColumns:\r\n\r\n * name (string): name of the woman\r\n * img Enrollment (string): image url for a headshot\r\n * category (string): category for the award\r\n * country (string): country of residence of the woman\r\n * role (string): role/career\r\n * description (string): description of the woman and their achievements\r\n\r\n\r\n\r\n\r\n"
-}

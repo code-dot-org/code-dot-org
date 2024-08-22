@@ -1,5 +1,0 @@
-{
-  "key": "cereal-nutrition",
-  "name": "Cereal Nutrition",
-  "content": "Description: cereal nutrition facts of the top selling cereals\r\n\r\nSource (data): [Kaggle](https://www.kaggle.com/crawford/80-cereals)\r\n\r\nProcessing: renamed some columns for clarity\r\n\r\nColumns:\r\n\r\n* Name (string): name of cereal\r\n* Calories (numerical): amount in grams (g) of calories in one serving of cereal\r\n* Protein (numerical): amount in grams (g) of protein in one serving of cereal\r\n* Fat (numerical): amount in grams (g) of fat in one serving of cereal\r\n* Sodium (numerical): amount in grams (g) of sodium in one serving of cereal\r\n* Fiber (numerical): amount in grams (g) of fiber in one serving of cereal\r\n* Carbs (numerical): amount in grams (g) of carbs in one serving of cereal\r\n* Sugars (numerical): amount in grams (g) of sugars in one serving of cereal\r\n* Cups Per Serving (numerical): amount of cups of cereal that comprise one serving, as prescribed on the box by the cereal manufacturer\r\n* Box Image (string): image of each cereal box"
-}

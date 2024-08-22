@@ -1,9 +1,0 @@
-{
-  "key": "modifying-arrays",
-  "course_version_key": "2023",
-  "course_offering_key": "csp",
-  "parent_reference_guide_key": "javascript",
-  "display_name": "Modifying Arrays",
-  "content": "Arrays can be modified in a few ways. Changing the values of what's inside the array is a form of modification, but taking away items or adding new ones to the array is another form of modification.\n\nYou can use the left and right arrows on the array block to add new items or delete existing ones. This will always make or delete an item at the end of your array. \n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/array_mod.gif)\n\n\n## Creating an Array\n\nArrays have many features that make them different from variables, but **most of what you've learned about variables also applies to arrays**. For example, just like a variable:\n\n* Arrays should be given a **descriptive and meaningful** name.\n* Arrays are created using `var`.\n* Arrays can be initialized/set using `=`.\n\nArray commands can be found in the Variables toolbox. \n\n<img src=\"https://images.code.org/b21cdf00a2c673437c786aef3476734b-image-1486668653247.29.06 PM.png\" style=\"width: 150px;\">\n\nThe array command looks this: \n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/arrays.png)\n\n## Example\n\n![](https://images.code.org/0b7d201db2990f0189963bb6a565a057-image-1447097600773.33.08 PM.png)\n\nThis array contains 3 values: 100, 250, 500. Notice that the values are separated with commas `,` and that the entire array is enclosed in brackets `[ ]` . We can use `console.log` to display the contents of an array just like we would a variable.\n\n![](https://images.code.org/7d4be70330108e3e5d6325fa4e721ef4-image-1447097904253.38.18 PM.png)\n\nThis will print out [100, 250, 500] in the console area.\n\n\n",
-  "position": 9
-}

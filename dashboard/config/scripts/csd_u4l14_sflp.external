@@ -1,9 +1,0 @@
-name 'CSD U4L14 SFLP'
-display_name 'Lesson Overview'
-markdown <<MARKDOWN
-# Overview
-
-Teams add a bit more polish and functionality to their apps before testing. Several examples are provided to demonstrate simple code that adds cool features.
-
-
-MARKDOWN

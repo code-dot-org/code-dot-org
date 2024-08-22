@@ -1,8 +1,0 @@
-name 'CSPFinal_Question_22'
-question 'Which of the following methods is not a common technique to translate or transform large data sets to gain insight and knowledge?'
-wrong 'Putting data into sorted order'
-right 'Copying the data to a cloud server'
-wrong 'Using data visualization tools'
-wrong 'Computing the most frequently occurring values in the data set'
-
-allow_multiple_attempts true

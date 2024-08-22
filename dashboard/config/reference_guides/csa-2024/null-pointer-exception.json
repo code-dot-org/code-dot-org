@@ -1,9 +1,0 @@
-{
-  "key": "null-pointer-exception",
-  "course_version_key": "2024",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "common-errors",
-  "display_name": "NullPointerException",
-  "content": "An `NullPointerException`(#e7e8ea) occurs when using a `null`(#e7e8ea) reference to call a method or access an instance variable.",
-  "position": 5
-}

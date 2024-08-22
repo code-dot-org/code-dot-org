@@ -1,9 +1,0 @@
-{
-  "key": "selecting-a-label",
-  "course_version_key": "2022",
-  "course_offering_key": "csp",
-  "parent_reference_guide_key": "ai-lab",
-  "display_name": "Selecting a Label",
-  "content": "<img style=\"margin-right: 10px; margin-left: 10px; border: 2px solid black\" src=\"https://curriculum.code.org/media/uploads/01-Selecting-a-Label-Drawing.png\"/>\n\n[diagram_nums]\n\n1. Click on a column to view more information about it\n2. This is a description of the column you selected. It can tell you more information about the data in this column. If the data came from a survey, this will usually contain the question that was asked on the survey\n3. A **Bar** chart shows how many times a certain value appears in the chart. For labels, its important to have a balanced representation of your data. If certain values are overrepresented or underrepresented, this can lead to a _biased_ machine learning model.\n4. Press the \"Add label\" button to use this column as the output of your machine learning model. This is what AI Bot will try to predict.\n\n[/diagram_nums]\n\n## Video\n\n(Opens YouTube in new tab)\n\n[![Introduction to AI Lab](https://curriculum.code.org/media/uploads/Capture_HBiegOA.PNG)](https://www.youtube.com/watch?v=bs3slynHTvc)",
-  "position": 3
-}

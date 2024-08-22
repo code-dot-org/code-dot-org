@@ -1,7 +1,0 @@
-name: 'Start server job actions '
-description: 'A basic, lightweight action just to validate the actions code is good before we attempt the more expensive actions. Once caching is setup, we can remove this.'
-runs:
-  using: "composite"
-  steps:
-    - run: echo "Hello! Your GitHub actions have started successfully"
-      shell: bash

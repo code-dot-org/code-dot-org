@@ -1,9 +1,0 @@
-name 'game_development_debug_choices_2024'
-display_name 'These games do not work!'
-description 'Choose a game to fix.'
-
-sublevels
-level 'game_development_try_it_2024'
-level 'game_development_environ_2024'
-level 'game_development_player_2024'
-level 'game_development_platform_2024'

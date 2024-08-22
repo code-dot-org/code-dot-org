@@ -1,9 +1,0 @@
----
-api_key: <%=CDO.pegasus_honeybadger_api_key%>
-exceptions:
-  ignore: <%= %w(Sinatra).map{|x| "#{x}::NotFound"}.to_json%>
-  notify_at_exit: false
-# Disable Sinatra auto-initialization.
-# Add Honeybadger::Rack::ErrorNotifier to Rack middleware directly.
-sinatra:
-  enabled: false
