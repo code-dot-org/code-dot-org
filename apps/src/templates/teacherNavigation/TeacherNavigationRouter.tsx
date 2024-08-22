@@ -1,4 +1,5 @@
 import React from 'react';
+import {useSelector} from 'react-redux';
 import {
   Route,
   Outlet,
@@ -8,6 +9,7 @@ import {
 } from 'react-router-dom';
 
 import TutorTab from '@cdo/apps/aiTutor/views/teacherDashboard/TutorTab';
+import TemporaryBlankPage from '@cdo/apps/templates/teacherDashboard/teacherNavigation/TemporaryBlankPage';
 
 import ManageStudents from '../manageStudents/ManageStudents';
 import SectionProjectsListWithData from '../projects/SectionProjectsListWithData';
@@ -16,11 +18,13 @@ import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
 import SectionLoginInfo from '../teacherDashboard/SectionLoginInfo';
 import StatsTableWithData from '../teacherDashboard/StatsTableWithData';
+import {sectionProviderName} from '../teacherDashboard/teacherSectionsRedux';
 import TextResponses from '../textResponses/TextResponses';
 
 import DefaultTeacherNavRedirect from './DefaultTeacherNavRedirect';
 import ElementOrEmptyPage from './ElementOrEmptyPage';
 import PageHeader from './PageHeader';
+import {asyncLoadSelectedSection} from './selectedSectionLoader';
 import TeacherNavigationBar from './TeacherNavigationBar';
 import {
   SPECIFIC_SECTION_BASE_URL,
@@ -33,12 +37,8 @@ import styles from './teacher-navigation.module.scss';
 
 interface TeacherNavigationRouterProps {
   studioUrlPrefix: string;
-  sectionId: number;
-  sectionName: string;
-  studentCount: number;
   anyStudentHasProgress: boolean;
   showAITutorTab: boolean;
-  sectionProviderName: string;
 }
 
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
@@ -47,13 +47,31 @@ const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
 
 const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   studioUrlPrefix,
-  sectionId,
-  sectionName,
-  studentCount,
   anyStudentHasProgress,
   showAITutorTab,
-  sectionProviderName,
 }) => {
+  const sectionId = useSelector(
+    (state: {teacherSections: {selectedSectionId: number}}) =>
+      state.teacherSections.selectedSectionId
+  );
+  const sectionName = useSelector(
+    (state: {teacherSections: {selectedSectionName: string}}) =>
+      state.teacherSections.selectedSectionName
+  );
+
+  const studentCount = useSelector(
+    (state: {teacherSections: {selectedStudents: object[]}}) =>
+      state.teacherSections.selectedStudents.length
+  );
+  const providerName = useSelector(
+    (state: {
+      teacherSections: {
+        section: {[id: number]: {rosterProviderName: string}};
+        selectedSectionId: number;
+      };
+    }) => sectionProviderName(state, state.teacherSections.selectedSectionId)
+  );
+
   const routes = (
     <Route
       path={TEACHER_NAVIGATION_SECTIONS_URL}
@@ -72,8 +90,10 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
             <Outlet />
           </div>
         }
-        loader={async () => {
-          console.log('loading');
+        loader={async ({params}) => {
+          if (params.sectionId) {
+            await asyncLoadSelectedSection(params.sectionId);
+          }
           return null;
         }}
       >
@@ -106,7 +126,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           element={applyV1TeacherDashboardWidth(
             <SectionLoginInfo
               studioUrlPrefix={studioUrlPrefix}
-              sectionProviderName={sectionProviderName}
+              sectionProviderName={providerName}
             />
           )}
         />
@@ -177,6 +197,56 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
             />
           }
         />
+        <Route
+          path={TEACHER_NAVIGATION_PATHS.lessonMaterials}
+          element={
+            <ElementOrEmptyPage
+              showNoStudents={studentCount === 0}
+              showNoCurriculumAssigned={!anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(<TemporaryBlankPage />)}
+            />
+          }
+        />
+        <Route
+          path={TEACHER_NAVIGATION_PATHS.calendar}
+          element={
+            <ElementOrEmptyPage
+              showNoStudents={studentCount === 0}
+              showNoCurriculumAssigned={!anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(<TemporaryBlankPage />)}
+            />
+          }
+        />
+        <Route
+          path={TEACHER_NAVIGATION_PATHS.courseOverview}
+          element={
+            <ElementOrEmptyPage
+              showNoStudents={studentCount === 0}
+              showNoCurriculumAssigned={!anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(<TemporaryBlankPage />)}
+            />
+          }
+        />
+        <Route
+          path={TEACHER_NAVIGATION_PATHS.unitOverview}
+          element={
+            <ElementOrEmptyPage
+              showNoStudents={studentCount === 0}
+              showNoCurriculumAssigned={!anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(<TemporaryBlankPage />)}
+            />
+          }
+        />
+        <Route
+          path={TEACHER_NAVIGATION_PATHS.settings}
+          element={
+            <ElementOrEmptyPage
+              showNoStudents={studentCount === 0}
+              showNoCurriculumAssigned={!anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(<TemporaryBlankPage />)}
+            />
+          }
+        />
         {showAITutorTab && (
           <Route
             path={TEACHER_NAVIGATION_PATHS.aiTutorChatMessages}
@@ -185,7 +255,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
                 showNoStudents={studentCount === 0}
                 showNoCurriculumAssigned={!anyStudentHasProgress}
                 element={applyV1TeacherDashboardWidth(
-                  <TutorTab sectionId={sectionId} />
+                  <TutorTab sectionId={sectionId || 0} />
                 )}
               />
             }

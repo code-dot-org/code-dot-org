@@ -5,8 +5,6 @@ import {GenericPromptProps} from './GenericPrompt';
 import {SkipDialogProps} from './SkipDialog';
 import {StartOverDialogProps} from './StartOverDialog';
 
-export type closeDialogType = () => void;
-
 export enum DialogType {
   GenericAlert = 'GenericAlert',
   GenericConfirmation = 'GenericConfirmation',
@@ -16,7 +14,18 @@ export enum DialogType {
   StartOver = 'StartOver',
 }
 
-export type TypedDialogProps =
+export type DialogCloseActionType = 'cancel' | 'neutral' | 'confirm';
+export type DialogCloseFunctionType = (
+  type: DialogCloseActionType,
+  args?: unknown
+) => void;
+
+export type DialogClosePromiseReturnType = {
+  type: DialogCloseActionType;
+  args?: unknown;
+};
+
+export type SpecificTypedDialogProps =
   | (GenericAlertDialogProps & {
       type: DialogType.GenericAlert;
     })
@@ -31,6 +40,10 @@ export type TypedDialogProps =
     })
   | (SkipDialogProps & {type: DialogType.Skip})
   | (StartOverDialogProps & {type: DialogType.StartOver});
+
+export type TypedDialogProps = SpecificTypedDialogProps & {
+  throwOnCancel?: boolean;
+};
 
 export type AnyDialogType =
   | GenericAlertDialogProps

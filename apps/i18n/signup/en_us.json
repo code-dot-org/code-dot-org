@@ -26,7 +26,8 @@
   "sign_up_google": "Sign up with Google",
   "sign_up_microsoft": "Sign up with Microsoft",
   "sign_up_facebook": "Sign up with Facebook",
-  "does_your_school_use_an_lms": "Does your school use Clever, Canvas, or Schoology?",
+  "sign_up_clever": "Sign up with Clever",
+  "does_your_school_use_an_lms": "Does your school use Canvas or Schoology?",
   "click_here_to_learn": "[Click here]({clickHereLink}) to learn about how to log in and get started with these platforms.",
   "or_sign_up_with_email": "Or sign up with Email",
   "by_signing_up": "By signing up for Code.org you are agreeing to our [Terms of Service]({tosLink}) and [Privacy Policy]({privacyPolicyLink})",
@@ -45,12 +46,15 @@
   "go_to_my_account": "Go to my account",
   "finish_creating_student_account": "Finish creating your student account",
   "i_am_a_parent_or_guardian": "I am a parent or guardian signing up on behalf of my child.",
-  "display_name_eg": "Display Name (e.g. Cool Coder or Jane S)",
+  "display_name_eg": "Display Name (e.g. Cool Coder or Jane S)*",
   "what_is_your_age": "What is your age?",
   "what_state_are_you_in": "What state are you in?",
   "what_is_your_gender": "What is your gender?",
   "parent_guardian_email": "Parent/Guardian Email",
   "email_me_with_updates": "Email me with updates on my child's progress and projects, as well as updates on their course, and computer science.",
   "note": "Note:",
-  "msCoder": "Ms. Coder"
+  "msCoder": "Ms. Coder",
+  "coder": "Coder",
+  "female": "Female",
+  "parentEmailPlaceholder": "parentemail@email.com"
 }
