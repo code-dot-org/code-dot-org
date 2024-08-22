@@ -47,6 +47,9 @@ const {
 } = scriptData;
 const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
+// TODO: add
+// '@cdo/apps/code-studio/hiddenLessonRedux'
+// and '@cdo/apps/code-studio/viewAsRedux'?
 $(document).ready(function () {
   registerReducers({
     teacherSections,
