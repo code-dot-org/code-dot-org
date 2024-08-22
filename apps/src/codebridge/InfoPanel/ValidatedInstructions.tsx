@@ -102,7 +102,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
 
   const dispatch = useAppDispatch();
 
-  const {theme} = useContext(ThemeContext) || 'dark';
+  const {theme} = useContext(ThemeContext);
 
   const vertical = layout === 'vertical';
 
@@ -164,18 +164,18 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     }
   };
 
+  // There are two ways to "meet validation" for a level:
+  // If the level has conditions, they must be satisfied.
+  // If the level has no conditions, the user must run their code at least once.
+  const hasMetValidation =
+    (!hasConditions && hasRun) || (hasConditions && satisfied);
+
   /**
    * Returns the props for the navigation (continue/finish/submit/unsubmit)
    * button for the current level, including if we should show a navigation button.
    * @returns NavigationButtonProps for the current level and status.
    */
   const getNavigationButtonProps: () => NavigationButtonProps = () => {
-    // There are two ways to "meet validation" for a level:
-    // If the level has conditions, they must be satisfied.
-    // If the level has no conditions, the user must run their code at least once.
-    const hasMetValidation =
-      (!hasConditions && hasRun) || (hasConditions && satisfied);
-
     // The submit button will either say "submit" or "unsubmit" depending on if
     // the user has already submitted. We only show the "submit" option if the
     // user has met validation, otherwise we show the continue button.
@@ -219,6 +219,8 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
     }
   };
 
+  // TODO: If we go with the test button in the instructions panel long-term,
+  // we should refactor this to a separate component.
   const renderTestButton = () => {
     if (!hasConditions) {
       return null;
@@ -253,6 +255,11 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
   const {showNavigation, navigationText, navigationIcon, handleNavigation} =
     getNavigationButtonProps();
 
+  const validationIcon =
+    hasMetValidation || hasSubmitted
+      ? 'fa-solid fa-circle-check'
+      : 'fa-regular fa-circle';
+
   // Don't render anything if we don't have any instructions.
   if (instructionsText === undefined) {
     return null;
@@ -281,23 +288,33 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
             id="instructions-text"
             className={classNames(
               moduleStyles['bubble-' + theme],
-              moduleStyles.text
+              moduleStyles.mainInstructions
             )}
           >
-            {predictSettings?.isPredictLevel && <PredictSummary />}
-            <EnhancedSafeMarkdown
-              markdown={instructionsText}
-              className={moduleStyles.markdownText}
-              handleInstructionsTextClick={handleInstructionsTextClick}
-            />
-            <PredictQuestion
-              predictSettings={predictSettings}
-              predictResponse={predictResponse}
-              setPredictResponse={response =>
-                dispatch(setPredictResponse(response))
-              }
-              predictAnswerLocked={predictAnswerLocked}
-            />
+            <div>
+              <i
+                className={classNames(
+                  validationIcon,
+                  moduleStyles.validationIcon
+                )}
+              />
+            </div>
+            <div>
+              {predictSettings?.isPredictLevel && <PredictSummary />}
+              <EnhancedSafeMarkdown
+                markdown={instructionsText}
+                className={moduleStyles.markdownText}
+                handleInstructionsTextClick={handleInstructionsTextClick}
+              />
+              <PredictQuestion
+                predictSettings={predictSettings}
+                predictResponse={predictResponse}
+                setPredictResponse={response =>
+                  dispatch(setPredictResponse(response))
+                }
+                predictAnswerLocked={predictAnswerLocked}
+              />
+            </div>
           </div>
         )}
         {SHOW_TEST_NAVIGATION_BUTTONS && renderTestButton()}

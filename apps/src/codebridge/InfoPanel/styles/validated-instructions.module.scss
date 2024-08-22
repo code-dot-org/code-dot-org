@@ -62,11 +62,14 @@
   }
 }
 
-.text {
+.mainInstructions {
   overflow-y: auto;
   white-space: pre-wrap;
 
   animation: slidein 0.5s;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
 }
 
 %bubble {
@@ -124,4 +127,11 @@
   p {
     font-size: 14px;
   }
+}
+
+.validationIcon {
+  color: $light_affirmative_500;
+  width: 20px;
+  height: 20px;
+  margin-top: 6px;
 }
