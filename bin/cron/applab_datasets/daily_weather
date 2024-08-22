@@ -154,7 +154,8 @@ def get_weather_data
 
     url = "http://api.openweathermap.org/data/2.5/forecast/daily?zip=#{office.zip_code},us&cnt=#{NUM_DAYS}&units=imperial&appid=#{API_KEY}"
     response = Net::HTTP.get_response(URI(url))
-    if response.code != '200'
+    raise "Response #{response} from #{office.city}" if response.code != '200'
+    rescue
       Honeybadger.notify(
         error: response.message,
         error_message: "Failed to retrieve data from Open Weather API for use with App Labs datasets.",
