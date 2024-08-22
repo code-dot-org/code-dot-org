@@ -1,0 +1,22 @@
+name 'sp-pl-DS_ThreeReads'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Making Sense of Data: Three Reads 
+
+#### After learning the basics of a spreadsheet, students will use the **Three Reads** strategy to examine the pizza party data.  
+
+<img src="https://images.code.org/30521e355ab93227d39985fcbfc3b90d-image-1724257607189.png" alt="pizza party spreadsheet" width="350px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+
+#### This strategy encourages students to look deeply at data like a data scientist by analyzing the data from three different perspectives.  
+
+- ### **Read 1: Context** - What is this data about? 
+
+- ### **Read 2: Quantities** -What quantities do you notice? 
+
+- ### **Read 3: Questions** - What questions can I answer using this data?
+
+## Let's try the three reads strategy!
+MARKDOWN

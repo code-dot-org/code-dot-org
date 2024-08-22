@@ -10,6 +10,8 @@ $assistant-color: $brand_primary_light;
   padding: 12px;
   overflow: hidden;
   white-space: pre-line;
+  border-start-start-radius: $message-border-radius;
+  border-start-end-radius: $message-border-radius;
 }
 
 %markdown-styles {
@@ -47,15 +49,15 @@ $assistant-color: $brand_primary_light;
 .message-user {
   @extend %message;
   background-color: $user_color;
-  border-radius: $message-border-radius $message-border-radius 0
-    $message-border-radius;
+  border-end-start-radius: $message-border-radius;
+  border-end-end-radius: 0;
 }
 
 .message-assistant {
   @extend %message;
   background-color: $assistant-color;
-  border-radius: $message-border-radius $message-border-radius
-    $message-border-radius 0;
+  border-end-start-radius: 0;
+  border-end-end-radius: $message-border-radius;
   overflow-x: auto;
 }
 
@@ -73,6 +75,11 @@ $assistant-color: $brand_primary_light;
 .container-user {
   @extend %container;
   justify-content: flex-end;
+}
+
+.userProfaneMessageButton {
+  width: 120px;
+  margin-top: -10px;
 }
 
 .botIconContainer {
