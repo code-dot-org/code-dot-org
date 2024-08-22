@@ -755,6 +755,10 @@ Then /^element "([^"]*)" has "([^"]*)" text from key "((?:[^"\\]|\\.)*)"$/ do |s
   element_has_i18n_text(selector, language, loc_key)
 end
 
+Then /^element "([^"]*)" has RTL "([^"]*)" text from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, loc_key|
+  element_has_rtl_i18n_text(selector, language, loc_key)
+end
+
 Then /^element "([^"]*)" has "([^"]*)" markdown from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, loc_key|
   element_has_i18n_markdown(selector, language, loc_key)
 end
