@@ -10,7 +10,6 @@ OAUTH_PROVIDERS = %w(
   facebook
   google_oauth2
   lti_lti_prod_kids.qwikcamps.com
-  the_school_project
   twitter
   windowslive
 ).freeze

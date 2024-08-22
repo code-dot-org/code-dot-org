@@ -660,6 +660,15 @@ nav.main #hamburger #hamburger-contents {
   }
 }
 
+/* Hide the Sign in and Create account buttons
+  in the header on small screens */
+@media (max-width: 425px) {
+  nav.main .button-signin.desktop,
+  nav.main .button-create-account.desktop {
+    display: none;
+  }
+}
+
 /* Start top skinny banner styles --------------- */
 aside.top-skinny-banner {
   background: var(--neutral_dark);

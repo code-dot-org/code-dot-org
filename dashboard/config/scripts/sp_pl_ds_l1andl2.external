@@ -1,0 +1,42 @@
+name 'sp-pl-DS_L1andL2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Data, Data, Data
+
+
+#### In Lessons 1 and 2, students explore the foundational role of data in our everyday lives and how it can be used to make informed decisions, starting with a simple exercise of identifying data in a pizza party scenario and progressing to hands-on work with real datasets to solve practical problems. 
+
+---
+
+## Lesson 1: Introduction to Data Science 
+
+<img src="https://images.code.org/26266fb4b5ea855ad8166b356fca74d2-image-1724268314954.png" alt="farmwise robot and crops" width="250px"  style="border-radius:10px; float:right; margin: 0 20px 40px 40px;">
+
+
+#### This is a survey lesson introducing students to all sorts of things data science can do. 
+#### Students start with a pre-assessment asking them to find data in an image of a class pizza party, to introduce the concept of data and data science.
+#### Students then learn about a specific data scientist, who they will represent in conversations with their classmates. 
+
+### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>.</b>
+
+
+
+## Lesson 2: Making Sense of Data 
+<img src="https://images.code.org/b5e2a67a75681390f709e468c050cbd3-image-1724268380001.png" alt="person squatting with exercise app" width="250px" style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+
+#### Students work with data in a spreadsheet before using a routine called Three Reads to familiarize themselves with a dataset about pizza choices.
+#### Then, students will use the dataset to try and answer some questions that will be helpful in planning a school event.
+
+
+
+### <b>Check out the entire lesson plan  <a href="LINK" target="blank" rel="noopener noreferrer">here</a>.</b>
+
+<br>
+
+
+#### In the next few levels, we will dive deeper into the activity from lesson 2. 
+
+
+MARKDOWN

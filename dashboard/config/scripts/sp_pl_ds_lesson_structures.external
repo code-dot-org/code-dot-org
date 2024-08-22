@@ -1,0 +1,23 @@
+name 'sp-pl-DS_lesson_structures'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+#Lesson Structure
+
+
+## Role of the teacher
+
+#### The lessons at the start of the unit are designed to help students build foundational knowledge about how computer vision works. All lessons within the Data Science unit are intended to be **facilitated by a teacher**. These lessons are **not designed as self-paced experiences for students** to work through at their own pace.
+
+##Course Organization
+
+#### The Data Science unit is organized into two chapters. You can decide to teach one or both depending on your classroom goals. 
+
+### **Chapter 1: Introduction to Computer Science** 
+#### This chapter introduces the foundational concepts of Data Science. From data rights to data interpretation to data storytelling, students will get a comprehensive overview of the world of data science. Students will work in CODAP, a free educational software for data analysis, to create a final data project. There is no coding in this lesson. 
+
+### **Chapter 2: Data Science with Python**
+####In this chapter, students will explore data analysis, assessment, and visualization using Python and the Pandas library. The chapter culminates in a "Data Science for Community Improvement" project, allowing students to apply their newfound skills to real-world issues. No prior experience with Python is required.
+
+MARKDOWN

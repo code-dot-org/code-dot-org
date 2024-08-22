@@ -10,7 +10,7 @@ class MailJetTest < Minitest::Test
     email = 'fake.email@test.xx'
     name = 'Fake Name'
 
-    Mailjet::Contact.expects(:create).with(is_excluded_from_campaigns: true, email: email, name: name)
+    Mailjet::Contact.expects(:create).with(is_excluded_from_campaigns: false, email: email, name: name)
 
     mock_contact = mock('Mailjet::Contact')
     Mailjet::Contact.stubs(:find).with(email).returns(nil).then.returns(mock_contact)
@@ -55,6 +55,45 @@ class MailJetTest < Minitest::Test
     mock_contact.stubs(:id).returns(mock_contact_id)
 
     MailJet.update_contact_field(mock_contact, 'field_name', 'field_value')
+  end
+
+  def test_send_template_email_default_locale_with_variables
+    to_email = 'fake.email@test.xx'
+    to_name = 'Fake Name'
+    from_address = 'test@code.org'
+    from_name = 'Test Name'
+    template_id = 123
+    variables = {'Var1' => 'Value1', 'Var2' => 'Value2'}.to_json
+
+    MailJet.stubs(:subaccount).returns('unit_test')
+
+    mock_contact = mock('Mailjet::Contact')
+    mock_contact.stubs(:email).returns(to_email)
+    mock_contact.stubs(:name).returns(to_name)
+
+    email_config = {
+      from_address: from_address,
+      from_name: from_name,
+      template_id: {
+        unit_test: {
+          default: template_id
+        }
+      }
+    }
+
+    Mailjet::Send.expects(:create).with do |params|
+      messages = params[:messages]
+      messages.length == 1 &&
+        messages[0][:From][:Email] == from_address &&
+        messages[0][:From][:Name] == from_name &&
+        messages[0][:To].length == 1 &&
+        messages[0][:To][0][:Email] == to_email &&
+        messages[0][:To][0][:Name] == to_name &&
+        messages[0][:TemplateID] == template_id &&
+        messages[0][:Variables] == variables
+    end
+
+    MailJet.send_template_email(mock_contact, email_config, 'en-US', variables: variables)
   end
 
   def test_send_template_email_default_locale
@@ -133,7 +172,7 @@ class MailJetTest < Minitest::Test
     MailJet.send_template_email(mock_contact, email_config, 'es-MX')
   end
 
-  def test_create_contact_and_send_welcome_email
+  def test_create_contact_and_add_to_welcome_series
     email = 'fake.email@test.xx'
     sign_up_time = Time.now.to_datetime
 
@@ -149,9 +188,106 @@ class MailJetTest < Minitest::Test
 
     MailJet.expects(:update_contact_field).with(mock_contactdata, 'sign_up_date', sign_up_time.rfc3339)
 
-    MailJet.expects(:send_template_email).with(mock_contactdata, MailJet::EMAILS[:welcome], 'en-US')
+    MailJet.stubs(:subaccount).returns('development')
+    MailJet.expects(:add_to_contact_list).with(mock_contactdata, MailJet::CONTACT_LISTS[:welcome_series][:development][:default])
 
-    MailJet.create_contact_and_send_welcome_email(user)
+    MailJet.create_contact_and_add_to_welcome_series(user)
+  end
+
+  def test_create_contact_and_add_to_welcome_series_non_en
+    email = 'fake.email@test.xx'
+    sign_up_time = Time.now.to_datetime
+
+    user = mock
+    user.stubs(:id).returns(1)
+    user.stubs(:email).returns(email)
+    user.stubs(:name).returns('Fake Name')
+    user.stubs(:teacher?).returns(true)
+    user.stubs(:created_at).returns(sign_up_time)
+
+    mock_contactdata = mock('Mailjet::Contactdata')
+    MailJet.expects(:find_or_create_contact).with(email, user.name).returns(mock_contactdata)
+
+    MailJet.expects(:update_contact_field).with(mock_contactdata, 'sign_up_date', sign_up_time.rfc3339)
+
+    MailJet.stubs(:subaccount).returns('development')
+    MailJet.expects(:add_to_contact_list).with(mock_contactdata, MailJet::CONTACT_LISTS[:welcome_series][:development][:'es-MX'])
+
+    MailJet.create_contact_and_add_to_welcome_series(user, 'es-MX')
+  end
+
+  def test_send_teacher_cap_section_warning
+    email = 'fake.email@test.xx'
+
+    sign_up_time = Time.now.to_datetime
+
+    user = mock
+    user.stubs(:id).returns(1)
+    user.stubs(:email).returns(email)
+    user.stubs(:name).returns('Fake Name')
+    user.stubs(:teacher?).returns(true)
+    user.stubs(:created_at).returns(sign_up_time)
+
+    sections = [
+      {'Name' => 'Section 1', 'Link' => 'https://example.com/section1'},
+      {'Name' => 'Section 2', 'Link' => 'https://example.com/section2'}
+    ]
+
+    mock_contactdata = mock('Mailjet::Contactdata')
+    MailJet.expects(:enabled?).returns(true)
+    user.expects(:persisted?).returns(true)
+
+    MailJet.expects(:find_or_create_contact).with(email, user.name).returns(mock_contactdata)
+
+    MailJet.expects(:send_template_email).with(mock_contactdata, MailJet::EMAILS[:cap_section_warning], 'en-US', variables: {capSections: sections})
+
+    MailJet.send_teacher_cap_section_warning(user, sections)
+  end
+
+  def test_send_teacher_cap_section_warning_to_student
+    email = 'fake.email@test.xx'
+
+    sign_up_time = Time.now.to_datetime
+
+    user = mock
+    user.stubs(:id).returns(1)
+    user.stubs(:email).returns(email)
+    user.stubs(:name).returns('Fake Name')
+    user.stubs(:teacher?).returns(false)
+    user.stubs(:created_at).returns(sign_up_time)
+
+    sections = [
+      {'Name' => 'Section 1', 'Link' => 'https://example.com/section1'},
+      {'Name' => 'Section 2', 'Link' => 'https://example.com/section2'}
+    ]
+
+    MailJet.expects(:enabled?).returns(true)
+    user.expects(:persisted?).returns(true)
+
+    assert_raises(ArgumentError, 'the user must be a teacher') do
+      MailJet.send_teacher_cap_section_warning(user, sections)
+    end
+  end
+
+  def test_send_teacher_cap_section_warning_to_non_persisted_user
+    email = 'fake.email@test.xx'
+
+    user = mock
+    user.stubs(:email).returns(email)
+    user.stubs(:name).returns('Fake Name')
+    user.stubs(:teacher?).returns(false)
+
+    sections = [
+      {'Name' => 'Section 1', 'Link' => 'https://example.com/section1'},
+      {'Name' => 'Section 2', 'Link' => 'https://example.com/section2'}
+    ]
+
+    MailJet.expects(:enabled?).returns(true)
+    user.expects(:persisted?).returns(false)
+
+    assert_raises(ArgumentError, 'the user must be persisted') do
+      MailJet.send_teacher_cap_section_warning(user, sections)
+    end
   end
 
   def test_valid_email_deliverable
@@ -194,5 +330,16 @@ class MailJetTest < Minitest::Test
     Net::HTTP.any_instance.expects(:request).never
 
     MailJet.delete_contact(email)
+  end
+
+  def test_add_to_contact_list
+    contact = mock('Mailjet::Contact')
+    contact.stubs(:id).returns(123)
+
+    list_id = 456
+
+    Mailjet::Listrecipient.expects(:create).with(list_id: list_id, contact_id: 123)
+
+    MailJet.add_to_contact_list(contact, list_id)
   end
 end
