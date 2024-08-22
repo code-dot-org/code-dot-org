@@ -1,6 +1,3 @@
-require 'policies/lti'
-require 'authentication_option'
-
 class Queries::Lti
   def self.get_user(id_token)
     auth_id = Services::Lti::AuthIdGenerator.new(id_token).call

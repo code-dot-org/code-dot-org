@@ -1,5 +1,3 @@
-require 'user'
-
 class Policies::Ai
   # Whether or not AI rubric features (AI TA) are enabled.
   def self.ai_rubrics_enabled?(user)
