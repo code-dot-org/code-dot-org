@@ -121,6 +121,7 @@ export default function SchoolZipSearch({fieldNames}) {
     <div className={style.inputContainer}>
       <label>
         <TextField
+          id="uitest-school-zip"
           name={fieldNames.schoolZip}
           label={i18n.enterYourSchoolZip()}
           onChange={e => {
@@ -138,6 +139,7 @@ export default function SchoolZipSearch({fieldNames}) {
       {!inputManually && (
         <div>
           <SimpleDropdown
+            id="uitest-school-dropdown"
             disabled={isSchoolDropdownDisabled}
             name={fieldNames.ncesSchoolId}
             className={labelClassName}
