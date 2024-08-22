@@ -5,8 +5,8 @@ import {Role} from '../aiComponentLibrary/chatMessage/types';
 import type {ValueOf} from '../types/utils';
 
 export const ChatEventDescriptions = {
-  CLEAR_CHAT: 'The user clears the chat workspace.',
-  LOAD_LEVEL: 'The user loads the aichat level.',
+  CLEAR_CHAT: 'The user cleared the chat workspace.',
+  LOAD_LEVEL: 'The user loaded the aichat level.',
 } as const;
 
 export interface ChatEvent {

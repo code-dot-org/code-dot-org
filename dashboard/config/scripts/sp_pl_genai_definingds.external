@@ -1,0 +1,27 @@
+name 'sp-pl-GenAI_definingDS'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What is Generative AI?
+
+#### Generative AI is a type of artificial intelligence that can create new content. In this unit, we will be exploring Large Language Models, or LLMs.
+
+
+<img src="https://images.code.org/94c91bb3b11d912f8b4c38f34b241e09-image-1712760508654.png" alt="AI bot with thought bubbles" width="250px" style="border-radius:10px; float:right; margin: 10px 50px 0px 40px;">
+
+- #### **Artificial Intelligence:** A technology that mimics human intelligence, performing tasks such as understanding language, recognizing patterns, and making decisions.
+
+
+- #### **Large Language Model:** A computer program that analyzes large amounts of raw human-created data to the point where it can represent and recreate new data to perform a variety of tasks
+
+---
+
+## Why Students Should Learn It:
+
+#### It's important for students to learn how generative AI works because it helps them understand the technology shaping our world, fostering critical thinking about its capabilities and limitations. 
+
+#### Additionally, this knowledge empowers them to use AI responsibly and creatively in their future careers.
+
+
+MARKDOWN

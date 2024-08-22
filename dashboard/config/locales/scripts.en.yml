@@ -18805,6 +18805,24 @@ en:
           lessons:
             lesson-1:
               name: What is Debugging?
+            lesson-2:
+              name: Active Debugging
+            lesson-3:
+              name: Reflective Debugging
+            lesson-4:
+              name: Bug Talks
+            lesson-5:
+              name: Trace Code Execution
+            lesson-6:
+              name: Hypothesize and Test
+            lesson-7:
+              name: Reproducing Bugs
+            lesson-8:
+              name: Debugging by Comparison
+            lesson-9:
+              name: Using External Resources
+            lesson-10:
+              name: 'Choose Appropriate Techniques '
           lesson_groups: {}
           name: sandbox-debugging
           title: Debugging Sandbox
