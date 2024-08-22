@@ -1556,7 +1556,7 @@ class User < ApplicationRecord
   end
 
   def teacher_can_access_ai_chat?
-    teacher? && (verified_instructor? || oauth? || Policies::LTI.lti?(self))
+    teacher? && (verified_instructor? || oauth? || Policies::Lti.lti?(self))
   end
 
   def student_can_access_ai_chat?
