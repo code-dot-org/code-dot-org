@@ -597,8 +597,6 @@ GEM
     octokit (6.0.1)
       faraday (>= 1, < 3)
       sawyer (~> 0.9)
-    oily_png (1.2.0)
-      chunky_png (~> 1.3.1)
     oj (3.16.5)
       bigdecimal (>= 3.0)
       ostruct (>= 0.2)
@@ -1130,7 +1128,7 @@ DEPENDENCIES
   youtube-dl.rb
 
 RUBY VERSION
-   ruby 3.0.5p211
+   ruby 3.3.4p94
 
 BUNDLED WITH
-   2.3.22
+   2.5.17
