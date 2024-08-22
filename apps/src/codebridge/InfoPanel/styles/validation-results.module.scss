@@ -17,3 +17,26 @@
   @extend %icon;
   color: $light_caution_500
 }
+
+.validationResultsTable {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid $light_white;
+
+  thead td{
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  td {
+    border: 1px solid $light_white;
+    padding: 4px;
+  }
+}
+
+.testSummary {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
