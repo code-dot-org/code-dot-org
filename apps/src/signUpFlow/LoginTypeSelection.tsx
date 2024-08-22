@@ -3,16 +3,12 @@ import React, {useState} from 'react';
 import {LinkButton} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
-import {
-  Heading1,
-  Heading3,
-  BodyTwoText,
-  BodyThreeText,
-} from '@cdo/apps/componentLibrary/typography';
+import {Heading3, BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import signupCanvas from '@cdo/apps/signUpFlow/images/signupCanvas.png';
 import signupSchoology from '@cdo/apps/signUpFlow/images/signupSchoology.png';
 import locale from '@cdo/apps/signUpFlow/locale';
+import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
@@ -30,16 +26,22 @@ const LoginTypeSelection: React.FunctionComponent = () => {
 
   return (
     <div className={style.newSignupFlow}>
-      <Heading1 className={style.shortBottomMargin}>
-        {locale.pick_your_login_method()}
-      </Heading1>
-      <BodyTwoText>{locale.choose_one_method()}</BodyTwoText>
+      <AccountBanner
+        heading={locale.pick_your_login_method()}
+        desc={locale.choose_one_method()}
+        showLogo={false}
+        className={style.typeHeaderBanner}
+      />
       <div className={style.containerWrapper}>
         <div className={style.container}>
-          <Heading3 className={style.shortBottomMargin}>
-            {locale.sign_up_with()}
-          </Heading3>
-          <BodyThreeText>{locale.streamline_your_sign_in()}</BodyThreeText>
+          <div>
+            <Heading3 className={style.signUpWithTitle}>
+              {locale.sign_up_with()}
+            </Heading3>
+            <BodyThreeText className={style.signUpWithDesc}>
+              {locale.streamline_your_sign_in()}
+            </BodyThreeText>
+          </div>
           <div className={style.ssoSignUpTypes}>
             <LinkButton
               text={locale.sign_up_google()}
@@ -84,27 +86,36 @@ const LoginTypeSelection: React.FunctionComponent = () => {
           <div className={style.verticalDividerBottom} />
         </div>
         <div className={style.container}>
-          <Heading3>{locale.or_sign_up_with_email()}</Heading3>
-          <TextField
-            label={locale.email_address()}
-            onChange={() => {}}
-            name="emailInput"
-          />
-          <TextField
-            label={locale.password()}
-            value={password}
-            onChange={handlePasswordChange}
-            name="passwordInput"
-          />
-          <div className={style.passwordMessage}>
-            <FontAwesomeV6Icon className={iconClass} iconName={passwordIcon} />
-            <BodyThreeText>{locale.minimum_six_chars()}</BodyThreeText>
+          <Heading3 className={style.signUpWithTitle}>
+            {locale.or_sign_up_with_email()}
+          </Heading3>
+          <div className={style.inputContainer}>
+            <TextField
+              label={locale.email_address()}
+              onChange={() => {}}
+              name="emailInput"
+            />
+            <div>
+              <TextField
+                label={locale.password()}
+                value={password}
+                onChange={handlePasswordChange}
+                name="passwordInput"
+              />
+              <div className={style.passwordMessage}>
+                <FontAwesomeV6Icon
+                  className={iconClass}
+                  iconName={passwordIcon}
+                />
+                <BodyThreeText>{locale.minimum_six_chars()}</BodyThreeText>
+              </div>
+            </div>
+            <TextField
+              label={locale.confirm_password()}
+              onChange={() => {}}
+              name="confirmPasswordInput"
+            />
           </div>
-          <TextField
-            label={locale.confirm_password()}
-            onChange={() => {}}
-            name="confirmPasswordInput"
-          />
           <LinkButton
             className={style.shortButton}
             text={locale.create_my_account()}
