@@ -66,7 +66,6 @@
   overflow-y: auto;
   white-space: pre-wrap;
 
-  animation: slidein 0.5s;
   display: flex;
   align-items: flex-start;
   gap: 12px;
@@ -76,6 +75,7 @@
   padding: 16px;
   border-radius: 4px;
   margin-bottom: 10px;
+  animation: slidein 0.5s;
 }
 
 .bubble-dark {

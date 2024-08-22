@@ -28,9 +28,6 @@ export const MusicConditions: ConditionNames = {
 };
 
 export default class MusicValidator extends Validator {
-  getValidationResults(): ValidationResult[] | undefined {
-    return undefined;
-  }
   constructor(
     private readonly getIsPlaying: () => boolean,
     private readonly getPlaybackEvents: () => PlaybackEvent[],
@@ -178,5 +175,9 @@ export default class MusicValidator extends Validator {
       name,
       value,
     });
+  }
+
+  getValidationResults(): ValidationResult[] | undefined {
+    return undefined;
   }
 }

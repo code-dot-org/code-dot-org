@@ -101,9 +101,6 @@ export default class ProgressManager {
       if (validation.conditions) {
         this.currentValidationState.validationResults =
           this.validator.getValidationResults();
-        console.log({
-          validationResults: this.currentValidationState.validationResults,
-        });
         // Ask the lab-specific validator if this validation's
         // conditions are met.
         if (this.validator.conditionsMet(validation.conditions)) {

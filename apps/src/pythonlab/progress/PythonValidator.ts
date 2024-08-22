@@ -9,9 +9,6 @@ export enum ConditionType {
 }
 
 export default class PythonValidator extends Validator {
-  getValidationResults() {
-    return this.pythonValidationTracker.getValidationResults();
-  }
   constructor(
     private readonly pythonValidationTracker: PythonValidationTracker
   ) {
@@ -51,5 +48,9 @@ export default class PythonValidator extends Validator {
 
   clear(): void {
     this.pythonValidationTracker.reset();
+  }
+
+  getValidationResults() {
+    return this.pythonValidationTracker.getValidationResults();
   }
 }
