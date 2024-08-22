@@ -413,6 +413,24 @@ class ApiController < ApplicationController
     render json: standards
   end
 
+  def course_summary
+    course_name = params[:course_name]
+    unit_group = UnitGroup.get_from_cache(course_name)
+
+    # When the url of a course family is requested, redirect to a specific course version.
+    if !unit_group && UnitGroup.family_names.include?(params[:course_name])
+      unit_group = UnitGroup.latest_stable_version(params[:course_name])
+      if unit_group
+        redirect_path = url_for(action: params[:action], course_name: unit_group.name)
+        redirect_query_string = request.query_string.empty? ? '' : "?#{request.query_string}"
+        redirect_to "#{redirect_path}#{redirect_query_string}"
+      end
+    end
+
+    render json: {is_verified_instructor: current_user.try(:verified_instructor?) || false,
+                  unit_group: unit_group.summarize(current_user, for_edit: false, locale_code: request.locale)}
+  end
+
   use_reader_connection_for_route(:user_progress)
 
   # Return a JSON summary of the user's progress for params[:script].

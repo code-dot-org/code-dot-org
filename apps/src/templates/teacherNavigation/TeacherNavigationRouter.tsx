@@ -44,6 +44,15 @@ interface TeacherNavigationRouterProps {
   showAITutorTab: boolean;
 }
 
+interface Section {
+  id: number;
+  rosterProviderName: string;
+  anyStudentHasProgress: boolean;
+  name: string;
+  courseVersionName: string;
+  courseOfferingId: number;
+}
+
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
   return <div className={styles.widthLockedPage}>{children}</div>;
 };
@@ -57,9 +66,18 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
     (state: {teacherSections: {selectedSectionId: number}}) =>
       state.teacherSections.selectedSectionId
   );
-  const sectionName = useSelector(
-    (state: {teacherSections: {selectedSectionName: string}}) =>
-      state.teacherSections.selectedSectionName
+  const selectedSection = useSelector(
+    (state: {
+      teacherSections: {
+        selectedSectionId: number | null;
+        sections: {[id: number]: Section};
+      };
+    }) =>
+      state.teacherSections.selectedSectionId
+        ? state.teacherSections.sections[
+            state.teacherSections.selectedSectionId
+          ]
+        : null
   );
 
   const studentCount = useSelector(
@@ -74,6 +92,8 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
       };
     }) => sectionProviderName(state, state.teacherSections.selectedSectionId)
   );
+
+  console.log('lfm', selectedSection);
 
   const routes = (
     <Route
@@ -195,7 +215,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               showNoStudents={studentCount === 0}
               showNoCurriculumAssigned={!anyStudentHasProgress}
               element={applyV1TeacherDashboardWidth(
-                <SectionAssessments sectionName={sectionName} />
+                <SectionAssessments sectionName={selectedSection?.name || ''} />
               )}
             />
           }
@@ -225,8 +245,12 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
           loader={teacherCourseOverviewLoader}
           element={
             <ElementOrEmptyPage
-              showNoStudents={studentCount === 0}
-              showNoCurriculumAssigned={!anyStudentHasProgress}
+              showNoStudents={false}
+              showNoCurriculumAssigned={
+                !!selectedSection &&
+                !selectedSection.courseVersionName &&
+                !selectedSection.courseOfferingId
+              }
               element={applyV1TeacherDashboardWidth(<TeacherCourseOverview />)}
             />
           }
