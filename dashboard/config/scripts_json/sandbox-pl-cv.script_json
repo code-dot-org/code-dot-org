@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "sandbox-pl-cv",
-    "serialized_at": "2024-05-29 15:35:04 UTC",
+    "serialized_at": "2024-08-16 17:35:02 UTC",
     "published_state": "in_development",
     "instruction_type": "self_paced",
     "instructor_audience": "facilitator",
@@ -559,6 +559,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "sp-pl-CV_reflection_wrapup"
+        ],
         "progression": "Introduction to Computer Vision"
       },
       "bonus": false,

@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-staging",
-    "serialized_at": "2024-08-14 20:19:15 UTC",
+    "serialized_at": "2024-08-20 17:35:57 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -136,7 +136,7 @@
       "relative_position": 4,
       "properties": {
         "overview": "In this lesson, students explore how language models understand and represent word meanings. Beginning with a game, they investigate the concept of words being \"close\" in meaning. This leads to an activity where students assume the roles of fictional characters, using a sequence of numbers to represent their \"character traits\" and comparing these numerical representations to others. The lesson demonstrates that language models use a similar method, known as embeddings, to represent words as sequences of numbers, with similar words being numerically close to each other. The lesson concludes with students updating the storage section of their graphic organizer to encapsulate the idea of word embeddings.",
-        "preparation": "- Print copies of the activity guide for each student\n- Print copies of the activity instructions and cut them into quarter-sheets\n- Run through the slide deck and videos ahead of time\n- (Optional) Prepare vocabulary posters for class word wall\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
+        "preparation": "- Have markers, crayons, or colored pencils prepared for students\n- Print copies of the activity guide for each student\n- Print copies of the activity instructions and cut them into quarter-sheets\n- Run through the slide deck and videos ahead of time\n- (Optional) Prepare vocabulary posters for class word wall\n- (Optional) Print out the slide deck with speaker notes as a resource during class. [Click here for steps on how to do this](https://support.code.org/hc/en-us/articles/25725738928013-How-To-Print-Code-org-Slide-Decks-with-Lesson-Plan-Notes).",
         "student_overview": "Learn how computers represent the meaning of words"
       },
       "seeding_key": {
@@ -2649,8 +2649,8 @@
         "description": "\n<table>\n\n  <tr>\n    <td style=\"width: 25%\"><img src=\"https://images.code.org/4c0c2b6593ac5099fae52f9725d600ee-image-1712425416412.png\"></td>\n    <td style=\"width: 75%\">\n      <i class=\"fa fa-comments\" aria-hidden=\"true\"></i> <strong>Discuss:</strong> The team working on this project is debating whether or not to make this change for peanuts. One engineer, Claire, says “If someone with an allergy eats a peanut, it could be life-threatening - we should not design any meals with them anymore”. Another engineer, Kim, says “They don’t have to eat the peanuts and can just pick them out. I don’t think we should change everything just for something they can avoid”. What should we do - remove peanuts completely? Or leave them in and accept some of the risk involved?\n\t\t<br />\n\t\t<br /><i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> <strong>Discussion Goal:</strong> This is an open-ended discussion hitting on some of the ethical considerations with machine learning. This particular discussion focuses on safety concerns and what an acceptable level of risk is when making decisions with machines like this. Some students may think the consequences - a life-threatening reaction - may necessitate removing this risk from the system altogether. Others may think that, since this is something where personal judgement can be applied by just a subset of users, it may be fine to let this network keep designing meals with peanuts. Focus the conversation on wrestling with both sides of the debate, elevating student voices to think critically and carefully about the scenario. It’s likely - and acceptable - for the discussion to end in a place of non-closure - instead, aim for students having come to their own decision that they can justify from the scenario and their lived experiences.\n\t\t<br />\n    </td>\n  </tr>\n\n</table>    \n    ",
         "tips": [
           {
-            "type": "teachingTip",
-            "markdown": "**Teaching Tip: Real-World Analogues:** From a food perspective, this scenario mirrors real considerations that kitchens take into account with food preparation. Some kitchens avoid nuts altogether so consumers can be sure they won’t have an allergic reaction. Others apply warnings saying “These items were baked in a facility that includes nuts” as a warning for people to use their own judgement and discretion. From a machine-learning perspective, this scenario is relatable to stories where an AI model or chatbot was released and then needed to be adjusted after the release to account for a bias or harm they had not considered or intended. This is often called rebalancing, resulting in different decisions being made based on the available inputs."
+            "type": "ethicsOpportunity",
+            "markdown": "**Pause and Reflect:** From a food perspective, this scenario mirrors real considerations that kitchens take into account with food preparation. Some kitchens avoid nuts altogether so consumers can be sure they won’t have an allergic reaction. Others apply warnings saying “These items were baked in a facility that includes nuts” as a warning for people to use their own judgement and discretion.\n\nFrom a machine-learning perspective, this scenario is relatable to stories where an AI model or chatbot was released and then needed to be adjusted after the release to account for a bias or harm they had not considered or intended. Consider pausing the lesson here and have students reflect on their own experiences or knowledge with AI or other technologies where they witnessed unintended impacts. One example could be the [Twitter Cropping Algorithm](https://blog.x.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm), which was discovered to make biased decisions on what it decided to crop out of photos. This blog post is a great example of an organization taking action once the unintended harm was discovered, although it is likely too technical for students to read and process on their own."
           }
         ]
       },
@@ -5581,6 +5581,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson2-warmup-lv1"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5603,6 +5606,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson2-wrapup-lv1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -5625,6 +5631,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson3-warmup-lv1"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5647,6 +5656,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson3-warmup-lv2"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5669,6 +5681,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson3-wrapup-lv1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -5741,6 +5756,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson5-warmup-lv1"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5763,6 +5781,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson5-warmup-lv2"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5785,6 +5806,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson5-wrapup-lv1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -5807,6 +5831,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson6-warmup-lv1"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5829,6 +5856,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson6-warmup-lv2"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5851,6 +5881,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson6-wrapup-lv1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -5873,6 +5906,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson7-warmup-lv1"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5895,6 +5931,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson7-warmup-lv2"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5917,6 +5956,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson7-wrapup-lv1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -5939,6 +5981,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson8-warmup-level1"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -5961,6 +6006,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson8-wrapup-level1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -5983,6 +6031,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson9-warmup-level1"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -6005,6 +6056,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson9-wrapup-level1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -6052,6 +6106,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson10-warmup-lv1"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -6074,6 +6131,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson10-warmup-lv2"
+        ],
         "progression": "Warm Up"
       },
       "bonus": false,
@@ -6096,6 +6156,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "genai-lesson10-wrapup-lv1"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -10242,10 +10305,11 @@
     },
     {
       "name": "Introduction to Large Language Models",
-      "url": "https://drive.google.com/file/d/1aMWH4YppBkJqYbNYfY-jpTbVc6-BPE35/view",
+      "url": "https://youtu.be/6NDEoJ4gWtM",
       "key": "introduction_to_large_language_models",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/llms-intro-video-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {
@@ -10752,6 +10816,7 @@
       "key": "what_makes_a_computer_a_computer_",
       "properties": {
         "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/computer_iosp_video-mp4.mp4",
         "type": "Video"
       },
       "seeding_key": {

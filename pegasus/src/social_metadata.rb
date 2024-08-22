@@ -4,7 +4,6 @@
 #   code.org/challenge
 #   code.org/dance
 #   code.org/minecraft
-#   code.org/oceans
 #   code.org/hourofcode/overview
 #   code.org/learn
 #   code.org/hourofcode2022
@@ -21,8 +20,6 @@
 #
 #   hourofcode.com/
 #   hourofcode.com/learn
-#   hourofcode.com/thanks
-#   hourofcode.com/ai
 
 def get_social_metadata_for_page(request)
   # Not currently used, but left here for reference in case we want to use videos again.
@@ -50,9 +47,7 @@ def get_social_metadata_for_page(request)
     dance_2022: {path: "/images/social-media/dance-social-2022.png", width: 1200, height: 630},
     dance_2023: {path: "/images/social-media/dance-social-2023-spring.png", width: 1200, height: 630},
     dance_2023_hoc: {path: "/images/social-media/dance-social-2023-hoc.png", width: 1200, height: 630},
-    hoc_thanks: {path: "/images/hourofcode-2015-video-thumbnail.png", width: 1440, height: 900},
     hoc_2019_social: {path: "/shared/images/social-media/hoc2019_social.png", width: 1200, height: 630},
-    oceans: {path: "/shared/images/social-media/oceans_social.png", width: 1200, height: 630},
     codeorg2019_social: {path: "/shared/images/social-media/codeorg2019_social.png", width: 1200, height: 630},
     codeorg2020_social: {path: "/shared/images/social-media/codeorg2020_social.png", width: 1200, height: 630},
     hoc_2020_social: {path: "/shared/images/social-media/hoc2020_social.png", width: 1200, height: 630},
@@ -137,20 +132,6 @@ def get_social_metadata_for_page(request)
         image: images[:dance_2023_hoc]
       }
     },
-    "oceans" => {
-      "default" => {
-        title: hoc_s(:social_hoc2019_oceans_title),
-        description: hoc_s(:social_hoc2019_oceans_desc),
-        image: images[:oceans]
-      }
-    },
-    "thanks" => {
-      "default" => {
-        title: hoc_s(:meta_tag_og_title_cs_movement),
-        description: hoc_s(:meta_tag_og_description_campaign),
-        image: images[:hoc_thanks]
-      },
-    },
     "learn" => {
       "default" => {
         title: hoc_s(:hoc2023_social_creativity_with_ai_title),
@@ -228,13 +209,6 @@ def get_social_metadata_for_page(request)
         image: images[:young_women_in_cs]
       }
     },
-    "ai_hoc" => {
-      "default" => {
-        title: hoc_s(:hoc2023_social_creativity_with_ai_title),
-        description: hoc_s(:hoc2023_social_creativity_with_ai_desc),
-        image: images[:hoc_2023_social]
-      }
-    },
     "music_lab" => {
       "default" => {
         title: hoc_s("music_lab.opengraph_title", markdown: :inline, locals: {music_lab: "Music Lab"}),
@@ -257,16 +231,10 @@ def get_social_metadata_for_page(request)
     page = "minecraft"
   elsif request.path == "/dance" && request.site == "code.org"
     page = "dance"
-  elsif request.path == "/oceans" && request.site == "code.org"
-    page = "oceans"
   elsif request.path == "/" && ["code.org", "hourofcode.com"].include?(request.site)
     page = request.site
-  elsif request.path == "/thanks" && request.site == "hourofcode.com"
-    page = "thanks"
   elsif request.path == "/learn" && request.site == "hourofcode.com"
     page = "learn"
-  elsif request.path == "/ai" && request.site == "hourofcode.com"
-    page = "ai_hoc"
   elsif request.path == "/hourofcode" && request.site == "code.org"
     page = "hoc-overview"
   elsif request.path == "/learn" && request.site == "code.org"

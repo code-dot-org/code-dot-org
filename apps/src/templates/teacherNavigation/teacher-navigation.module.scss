@@ -52,11 +52,18 @@
   align-items: center;
   gap: 12px;
   padding-left: 32px;
+  text-decoration: none;
+  margin-top: 4px;
 
   &.selected {
     border-left: 4px solid $light_primary_500;
     background-color: $neutral_gray10;
     padding-left: 28px;
+  }
+
+  &:hover {
+    background-color: $neutral_gray10;
+    text-decoration: none;
   }
 }
 

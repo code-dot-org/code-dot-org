@@ -108,6 +108,7 @@ export const blocks = {
       return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
     };
   },
+  installCustomColourRandomBlock() {},
   copyBlockGenerator(generator, type1, type2) {
     generator[type1] = generator[type2];
   },

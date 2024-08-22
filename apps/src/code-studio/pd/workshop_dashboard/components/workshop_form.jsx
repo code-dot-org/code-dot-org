@@ -41,8 +41,8 @@ import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import color from '@cdo/apps/util/color';
 
+import Spinner from '../../../../sharedComponents/Spinner';
 import MapboxLocationSearchField from '../../../../templates/MapboxLocationSearchField';
-import Spinner from '../../components/spinner';
 import {
   PermissionPropType,
   WorkshopAdmin,
