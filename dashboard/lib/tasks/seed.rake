@@ -30,7 +30,7 @@ namespace :seed do
   verbose false
 
   timed_task_with_logging check_migrations: :environment do
-    ActiveRecord::Migration.check_pending!
+    ActiveRecord::Migration.check_all_pending!
   end
 
   # Path to the dashboard directory from which content files (under /config) should be read.
