@@ -15,6 +15,13 @@ gem 'cgi', '~> 0.3.6'
 # see https://github.com/ruby/set/pull/2
 gem 'sorted_set'
 
+gem 'mutex_m' # needed for httpclient in Ruby >= 3.4, drop explicit dep if we upgrade httpclient
+
+gem 'abbrev' # needed for activesupport in Ruby >= 3.4, drop explicit dep after we upgrade to activesupport >= 7.2
+gem 'drb' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
+gem 'observer' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
+gem 'syslog' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
+
 gem 'rails', '~> 6.1'
 gem 'rails-controller-testing', '~> 1.0.5'
 
@@ -356,10 +363,3 @@ gem 'json-jwt', '~> 1.15'
 gem "json-schema", "~> 4.3"
 
 gem "csv"
-
-gem 'mutex_m' # needed for httpclient in Ruby >= 3.4, drop explicit dep if we upgrade httpclient
-
-gem 'abbrev' # needed for activesupport in Ruby >= 3.4, drop explicit dep after we upgrade to activesupport >= 7.2
-gem 'drb' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
-gem 'observer' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
-gem 'syslog' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
