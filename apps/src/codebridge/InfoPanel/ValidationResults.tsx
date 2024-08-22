@@ -41,7 +41,6 @@ const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
     }
   }
 
-  console.log('returning validation results');
   return (
     <div className={classNames(className, moduleStyles.validationResults)}>
       <h4>{codebridgeI18n.validationResults()}</h4>
