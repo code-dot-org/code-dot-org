@@ -48,6 +48,7 @@ import {validateModelId} from '../views/modelCustomization/utils';
 
 import {
   allFieldsHidden,
+  emptyModelCard,
   findChangedProperties,
   getNewMessageId,
   hasFilledOutModelCard,
@@ -674,6 +675,11 @@ export const selectHasFilledOutModelCard = createSelector(
 export const selectAllFieldsHidden = createSelector(
   (state: RootState) => state.aichat.fieldVisibilities,
   allFieldsHidden
+);
+
+export const selectEmptyModelCard = createSelector(
+  (state: RootState) => state.aichat.currentAiCustomizations.modelCardInfo,
+  emptyModelCard
 );
 
 export const selectAllVisibleMessages = (state: {aichat: AichatState}) => {

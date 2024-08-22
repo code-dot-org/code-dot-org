@@ -75,6 +75,16 @@ export const hasFilledOutModelCard = (modelCardInfo: ModelCardInfo) => {
   return true;
 };
 
+export const emptyModelCard = (modelCardInfo: ModelCardInfo) => {
+  let allFieldsEmpty = true;
+  for (const key of getTypedKeys(modelCardInfo)) {
+    if (modelCardInfo[key] !== '') {
+      allFieldsEmpty = false;
+    }
+  }
+  return allFieldsEmpty;
+};
+
 export const allFieldsHidden = (fieldVisibilities: FieldVisibilities) =>
   getTypedKeys(fieldVisibilities).every(
     key => fieldVisibilities[key] === Visibility.HIDDEN
