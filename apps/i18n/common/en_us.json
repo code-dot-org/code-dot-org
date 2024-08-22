@@ -157,6 +157,7 @@
   "aiChatInappropriateUserMessage": "This message has been flagged as inappropriate.",
   "aiChatNotAuthorizedTeacher": "In order to use this tool, you must be a verified teacher or have an account with single sign-on enabled. Click here to learn more about your options to access this tool.",
   "aiChatNotAuthorizedStudent": "In order to use this tool, you must be in a classroom section. Check with your teacher if you think this is an error.",
+  "aiChatNotAuthorizedSignedOut": "In order to use this tool you must be a signed-in teacher or a student in a classroom section. Learn more here about usage requirements.",
   "aiChatResponseError": "There was an error getting a response. Please try again.",
   "aiChatRateLimitError": "You've sent too many messages in the last minute. Please wait a moment before sending another message.",
   "aiChatTooPersonalUserMessage": "This message has been flagged as too personal.",

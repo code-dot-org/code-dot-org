@@ -463,7 +463,7 @@ async function handleChatCompletionError(
     } else if (userType === 'student') {
       messageText = commonI18n.aiChatNotAuthorizedStudent();
     } else {
-      messageText = 'sign in';
+      messageText = commonI18n.aiChatNotAuthorizedSignedOut();
     }
 
     dispatch(
