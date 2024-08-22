@@ -33,7 +33,7 @@ class PeerReview < ApplicationRecord
 
   SYSTEM_DELETED_DATA = ''.freeze
 
-  enum status: {
+  enum :status, {
     accepted: 0,
     rejected: 1,
     escalated: 2

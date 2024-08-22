@@ -28,7 +28,7 @@ class Pd::RegionalPartnerCohort < ApplicationRecord
     Pd::Workshop::COURSE_CS_IN_S
   ]
 
-  enum role: {
+  enum :role, {
     teacher: 0,
     facilitator: 1
   }

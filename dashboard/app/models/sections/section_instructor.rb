@@ -26,7 +26,7 @@ class SectionInstructor < ApplicationRecord
   belongs_to :invited_by, class_name: 'User', optional: true
   belongs_to :section, -> {with_deleted}
 
-  enum status: {
+  enum :status, {
     active: 0,
     invited: 1,
     declined: 2,
