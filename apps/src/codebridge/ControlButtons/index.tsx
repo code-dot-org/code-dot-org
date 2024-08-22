@@ -1,7 +1,7 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {appendSystemMessage} from '@codebridge/redux/consoleRedux';
 import classNames from 'classnames';
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 
 import {
   navigateToNextLevel,
@@ -11,13 +11,14 @@ import {
   getCurrentLevel,
   nextLevelId,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
+import {queryParams} from '@cdo/apps/code-studio/utils';
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Button from '@cdo/apps/componentLibrary/button';
 import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
-import {setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
+import {setHasRun, setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
 import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
@@ -27,12 +28,15 @@ import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import moduleStyles from './control-buttons.module.scss';
 
+const SHOW_TEST_NAVIGATION_BUTTONS = queryParams('button-bar');
+
 const ControlButtons: React.FunctionComponent = () => {
   const {onRun, onStop} = useCodebridgeContext();
 
   const dialogControl = useDialogControl();
-  const [hasRun, setHasRun] = useState(false);
   const dispatch = useAppDispatch();
+
+  const hasRun = useAppSelector(state => state.lab2System.hasRun);
 
   const source = useAppSelector(
     state => state.lab2Project.projectSource?.source
@@ -64,7 +68,7 @@ const ControlButtons: React.FunctionComponent = () => {
 
   useEffect(() => {
     const resetStatus = () => {
-      setHasRun(false);
+      dispatch(setHasRun(false));
       dispatch(setIsRunning(false));
     };
 
@@ -113,7 +117,7 @@ const ControlButtons: React.FunctionComponent = () => {
         dispatch(setIsRunning(false))
       );
       if (!runTests) {
-        setHasRun(true);
+        dispatch(setHasRun(true));
       }
     } else {
       dispatch(appendSystemMessage("We don't know how to run your code."));
@@ -265,36 +269,40 @@ const ControlButtons: React.FunctionComponent = () => {
             size={'s'}
             color={'white'}
           />
+          {SHOW_TEST_NAVIGATION_BUTTONS && (
+            <Button
+              text="Test"
+              onClick={() => handleRun(true)}
+              disabled={!!disabledCodeActionsTooltip}
+              iconLeft={{iconStyle: 'solid', iconName: 'flask'}}
+              color={'black'}
+              size={'s'}
+            />
+          )}
+        </span>
+      )}
+      {SHOW_TEST_NAVIGATION_BUTTONS && (
+        <span className={moduleStyles.navigationButton}>
+          {disabledNavigationTooltip &&
+            renderDisabledButtonHelperIcon(
+              'fa-question-circle-o',
+              'submitButtonDisabled',
+              disabledNavigationTooltip
+            )}
           <Button
-            text="Test"
-            onClick={() => handleRun(true)}
-            disabled={!!disabledCodeActionsTooltip}
-            iconLeft={{iconStyle: 'solid', iconName: 'flask'}}
-            color={'black'}
+            text={navigationText}
+            onClick={handleNavigation}
+            disabled={!!disabledNavigationTooltip}
+            color={'purple'}
             size={'s'}
+            iconLeft={
+              hasNextLevel
+                ? {iconStyle: 'solid', iconName: 'arrow-right'}
+                : undefined
+            }
           />
         </span>
       )}
-      <span className={moduleStyles.navigationButton}>
-        {disabledNavigationTooltip &&
-          renderDisabledButtonHelperIcon(
-            'fa-question-circle-o',
-            'submitButtonDisabled',
-            disabledNavigationTooltip
-          )}
-        <Button
-          text={navigationText}
-          onClick={handleNavigation}
-          disabled={!!disabledNavigationTooltip}
-          color={'purple'}
-          size={'s'}
-          iconLeft={
-            hasNextLevel
-              ? {iconStyle: 'solid', iconName: 'arrow-right'}
-              : undefined
-          }
-        />
-      </span>
     </div>
   );
 };

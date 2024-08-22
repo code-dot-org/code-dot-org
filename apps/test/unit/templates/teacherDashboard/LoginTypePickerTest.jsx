@@ -72,7 +72,7 @@ describe('LoginTypePicker', () => {
     expect(lmsCards.children).toHaveLength(4);
   });
 
-  it('does not show LTI-based LMS info cards for LTI users', () => {
+  it('shows all cards for LTI users', () => {
     render(
       <LoginTypePicker
         title="title"
@@ -88,11 +88,7 @@ describe('LoginTypePicker', () => {
     );
 
     const lmsCards = screen.getByTestId('lms-info-cards-container');
-    expect(lmsCards.children).toHaveLength(2);
-    expect(within(lmsCards).queryByText(LmsLoginTypeNames.canvas)).toBeNull();
-    expect(
-      within(lmsCards).queryByText(LmsLoginTypeNames.schoology)
-    ).toBeNull();
+    expect(lmsCards.children).toHaveLength(4);
   });
 
   it('does not show the Google LMS info card for Google users', () => {

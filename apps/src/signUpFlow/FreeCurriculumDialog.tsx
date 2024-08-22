@@ -7,7 +7,7 @@ import locale from '@cdo/apps/signUpFlow/locale';
 
 import SafeMarkdown from '../templates/SafeMarkdown';
 
-import style from './accountType.module.scss';
+import style from './signUpFlowStyles.module.scss';
 
 interface FreeCurriculumDialogProps {
   isOpen: boolean;

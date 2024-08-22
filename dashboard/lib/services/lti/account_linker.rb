@@ -18,6 +18,7 @@ module Services
           handle_sections(rehydrated_user, user)
           user.lti_roster_sync_enabled = true if user.teacher?
           user.lms_landing_opted_out = true
+          user.save!
           PartialRegistration.delete(session)
           unless rehydrated_user.id
             # For fresh LTI users who are linking their account, we want to count

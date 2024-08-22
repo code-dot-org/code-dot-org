@@ -16,7 +16,7 @@ import {
   EMAIL_OPT_IN_SESSION_KEY,
 } from './signUpFlowConstants';
 
-import style from './finishAccount.module.scss';
+import style from './signUpFlowStyles.module.scss';
 
 const FinishTeacherAccount: React.FunctionComponent<{
   usIp: boolean;
@@ -45,47 +45,37 @@ const FinishTeacherAccount: React.FunctionComponent<{
         <Heading2>{locale.finish_creating_teacher_account()}</Heading2>
         <BodyTwoText>{locale.tailor_experience()}</BodyTwoText>
       </div>
-      <div className={style.inputContainer}>
-        <BodyThreeText>
-          <strong>{locale.what_do_you_want_to_be_called()}</strong>
-        </BodyThreeText>
-        <TextField
-          name="userName"
-          onChange={onNameChange}
-          value={name}
-          className={style.nameInput}
-          placeholder={locale.msCoder()}
-        />
-        <BodyThreeText>
-          {locale.this_is_what_your_students_will_see()}
-        </BodyThreeText>
-        <SchoolDataInputs usIp={usIp} includeHeaders={false} />
-        <div className={style.emailOptInContainer}>
+      <fieldset className={style.inputContainer}>
+        <div>
+          <TextField
+            name="displayName"
+            label={locale.what_do_you_want_to_be_called()}
+            className={style.nameInput}
+            value={name}
+            placeholder={locale.msCoder()}
+            onChange={onNameChange}
+          />
           <BodyThreeText>
+            {locale.this_is_what_your_students_will_see()}
+          </BodyThreeText>
+        </div>
+        <SchoolDataInputs usIp={usIp} includeHeaders={false} />
+        <div>
+          <BodyThreeText className={style.teacherKeepMeUpdated}>
             <strong>{locale.keep_me_updated()}</strong>
           </BodyThreeText>
-          <span className={style.emailOptInCheckboxContainer}>
-            <div className={style.emailOptInCheckbox}>
-              <Checkbox
-                label=""
-                checked={emailOptInChecked}
-                onChange={onEmailOptInChange}
-                name="userEmailOptIn"
-              />
-            </div>
-            <BodyThreeText
-              className={style.emailOptInLabel}
-              visualAppearance={'body-two'}
-            >
-              {locale.get_informational_emails()}
-            </BodyThreeText>
-          </span>
+          <Checkbox
+            name="userEmailOptIn"
+            label={locale.get_informational_emails()}
+            checked={emailOptInChecked}
+            onChange={onEmailOptInChange}
+          />
           <BodyThreeText className={style.emailOptInFootnote}>
             <strong>{locale.note()}</strong>{' '}
             {locale.after_creating_your_account()}
           </BodyThreeText>
         </div>
-      </div>
+      </fieldset>
       <div className={style.finishSignUpButtonContainer}>
         <Button
           className={style.finishSignUpButton}
