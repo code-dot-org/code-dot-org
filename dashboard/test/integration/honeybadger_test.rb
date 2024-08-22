@@ -39,8 +39,8 @@ class HoneybadgerTest < ActionDispatch::IntegrationTest
 
     get raise_error_path
 
-    notice = Honeybadger::Backend::Test.notifications[:notices].first&.as_json
+    notice = Honeybadger::Backend::Test.notifications[:notices].find {|n| n.controller == "honeybadger_error"}
     refute_nil notice
-    assert_equal FILTERED, notice[:request][:session]["warden.user.user.key"]
+    assert_equal FILTERED, notice.as_json[:request][:session]["warden.user.user.key"]
   end
 end

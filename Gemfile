@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '3.0.5'
+ruby '3.3.4'
 
 # Ruby 2.7 no longer includes some libraries by default; install
 # the ones we need here
@@ -15,21 +15,8 @@ gem 'cgi', '~> 0.3.6'
 # see https://github.com/ruby/set/pull/2
 gem 'sorted_set'
 
-# Force HTTPS for github-source gems.
-# This is a temporary workaround - remove when bundler version is >=2.0
-# @see https://github.com/bundler/bundler/issues/4978
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
-
 gem 'rails', '~> 6.1'
 gem 'rails-controller-testing', '~> 1.0.5'
-
-# Compile Sprockets assets concurrently in `assets:precompile`.
-# Ref: https://github.com/rails/sprockets/pull/470
-gem 'sprockets', github: 'code-dot-org/sprockets', ref: 'concurrent_asset_bundle_3.x'
-gem 'sprockets-rails', '3.3.0'
 
 # provide `respond_to` methods
 # (see: http://guides.rubyonrails.org/4_2_release_notes.html#respond-with-class-level-respond-to)
@@ -103,7 +90,7 @@ group :development, :test do
 
   # For UI testing.
   gem 'cucumber'
-  gem 'eyes_selenium', '3.18.4'
+  gem 'eyes_selenium', '6.3.7'
   gem 'fakefs', '~> 2.5.0', require: false
   gem 'minitest', '~> 5.15'
   gem 'minitest-around'
@@ -183,13 +170,13 @@ gem 'jquery-ui-rails', '~> 6.0.1'
 
 gem 'nokogiri', '>= 1.10.0'
 
-gem 'highline', '~> 1.6.21'
+gem 'highline', '~> 3.1.0'
 
 gem 'honeybadger', '>= 4.5.6' # error monitoring
 
 gem 'newrelic_rpm', '~> 6.14.0', group: [:staging, :development, :production] # perf/error/etc monitoring
 
-gem 'redcarpet', '~> 3.5.1'
+gem 'redcarpet', '~> 3.6.0'
 
 gem 'geocoder'
 
@@ -302,7 +289,7 @@ gem 'omniauth-openid'
 
 # Ref: https://github.com/toy/image_optim/pull/145
 # Also include sRGB color profile conversion.
-gem 'image_optim', github: 'code-dot-org/image_optim', ref: 'cdo'
+gem 'image_optim', github: 'code-dot-org/image_optim', ref: 'seth/ruby-3.1'
 # Image-optimization tools and binaries.
 gem 'image_optim_pack', '~> 0.5.0', github: 'code-dot-org/image_optim_pack', ref: 'guetzli'
 gem 'image_optim_rails', '~> 0.4.0'
@@ -366,3 +353,12 @@ gem 'mailjet', '~> 1.7.3'
 
 gem 'json-jwt', '~> 1.15'
 gem "json-schema", "~> 4.3"
+
+gem "csv"
+
+gem 'mutex_m' # needed for httpclient in Ruby >= 3.4, drop explicit dep if we upgrade httpclient
+
+gem 'abbrev' # needed for activesupport in Ruby >= 3.4, drop explicit dep after we upgrade to activesupport >= 7.2
+gem 'drb' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
+gem 'observer' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
+gem 'syslog' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2

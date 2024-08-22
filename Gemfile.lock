@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/code-dot-org/image_optim.git
-  revision: 939996f7ad102227c73b42bfda0058f9c66698aa
-  ref: cdo
+  revision: 80664dc6d902e5da75b5f1d162191e31b7b822ae
+  ref: seth/ruby-3.1
   specs:
     image_optim (0.24.2)
       exifr (~> 1.2, >= 1.2.2)
@@ -69,15 +69,6 @@ GIT
       tilt
 
 GIT
-  remote: https://github.com/code-dot-org/sprockets.git
-  revision: 35caa45a78b739362b7db087b141f89e27d107c7
-  ref: concurrent_asset_bundle_3.x
-  specs:
-    sprockets (3.7.1)
-      concurrent-ruby (~> 1.1)
-      rack (> 1, < 3)
-
-GIT
   remote: https://github.com/dooly-ai/omniauth-microsoft_v2_auth.git
   revision: db19d64c2ddb017dddb9a0ff2cee1d84d2fad287
   specs:
@@ -101,6 +92,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     Ascii85 (1.1.0)
+    abbrev (0.1.2)
     acme-client (2.0.11)
       faraday (>= 1.0, < 3.0.0)
       faraday-retry (~> 1.0)
@@ -278,8 +270,7 @@ GEM
       activesupport
     cgi (0.3.6)
     chronic (0.10.2)
-    chunky_png (1.3.6)
-    cld (0.11.0)
+    cld (0.13.0)
       ffi
     climate_control (0.0.3)
       activesupport (>= 3.0)
@@ -297,8 +288,9 @@ GEM
     crowdin-api (1.10.0)
       open-uri (>= 0.1.0, < 0.2.0)
       rest-client (>= 2.0.0, < 2.2.0)
-    css_parser (1.10.0)
+    css_parser (1.17.1)
       addressable
+    csv (3.3.0)
     cucumber (3.1.1)
       builder (>= 2.1.2)
       cucumber-core (~> 3.1.0)
@@ -346,25 +338,28 @@ GEM
     dotiw (4.0.1)
       actionpack (>= 4)
       i18n
+    drb (2.2.1)
     e2mmap (0.1.0)
     erubi (1.12.0)
     eventmachine (1.2.7)
     execjs (2.7.0)
     exifr (1.2.5)
-    eyes_core (3.18.4)
-      chunky_png (= 1.3.6)
+    eyes_core (6.3.7)
+      colorize
+      eyes_universal (= 4.18.0)
       faraday
       faraday-cookie_jar
       faraday_middleware
-      oily_png (~> 1.2)
       oj
-    eyes_selenium (3.18.4)
+      sorted_set
+      websocket
+    eyes_selenium (6.3.7)
       crass
       css_parser
-      eyes_core (= 3.18.4)
-      nokogiri
-      selenium-webdriver
-      state_machine
+      eyes_core (= 6.3.7)
+      selenium-webdriver (>= 3)
+      state_machines
+    eyes_universal (4.18.0)
     factory_bot (6.2.1)
       activesupport (>= 5.0.0)
     factory_bot_rails (6.2.0)
@@ -401,7 +396,7 @@ GEM
     faraday-retry (1.0.3)
     faraday_middleware (1.2.0)
       faraday (~> 1.0)
-    ffi (1.16.3)
+    ffi (1.17.0)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
@@ -460,7 +455,8 @@ GEM
     hashdiff (1.0.1)
     hashery (2.1.2)
     hashie (5.0.0)
-    highline (1.6.21)
+    highline (3.1.0)
+      reline
     honeybadger (4.12.1)
     http (5.2.0)
       addressable (~> 2.8)
@@ -483,6 +479,7 @@ GEM
       sprockets
     image_size (1.5.0)
     in_threads (1.4.0)
+    io-console (0.7.2)
     ip3country (0.2.1)
     jmespath (1.6.2)
     jquery-rails (4.1.1)
@@ -563,6 +560,7 @@ GEM
     multipart-post (2.4.1)
     mustermann (2.0.2)
       ruby2_keywords (~> 0.0.1)
+    mutex_m (0.2.0)
     mysql2 (0.5.5)
     nakayoshi_fork (0.0.4)
     naturally (2.1.0)
@@ -593,11 +591,10 @@ GEM
       rack (>= 1.2, < 4)
       snaky_hash (~> 2.0)
       version_gem (~> 1.1)
+    observer (0.1.2)
     octokit (6.0.1)
       faraday (>= 1, < 3)
       sawyer (~> 0.9)
-    oily_png (1.2.0)
-      chunky_png (~> 1.3.1)
     oj (3.14.2)
     omniauth (1.9.2)
       hashie (>= 3.4.6)
@@ -716,7 +713,7 @@ GEM
     rbtree (0.4.6)
     recaptcha (4.6.3)
       json
-    redcarpet (3.5.1)
+    redcarpet (3.6.0)
     redis (4.8.1)
     redis-actionpack (5.4.0)
       actionpack (>= 5, < 8)
@@ -728,6 +725,8 @@ GEM
     redis-store (1.10.0)
       redis (>= 4, < 6)
     regexp_parser (2.8.1)
+    reline (0.5.9)
+      io-console (~> 0.5)
     representable (3.2.0)
       declarative (< 0.1.0)
       trailblazer-option (>= 0.1.1, < 0.2.0)
@@ -842,6 +841,9 @@ GEM
     spring (3.1.1)
     spring-commands-testunit (1.0.1)
       spring (>= 0.9.1)
+    sprockets (3.7.1)
+      concurrent-ruby (~> 1.1)
+      rack (> 1, < 3)
     sprockets-rails (3.3.0)
       actionpack (>= 5.2)
       activesupport (>= 5.2)
@@ -849,7 +851,7 @@ GEM
     sshkit (1.20.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
-    state_machine (1.2.0)
+    state_machines (0.6.0)
     statsig (1.33.2)
       concurrent-ruby (~> 1.1)
       connection_pool (~> 2.4, >= 2.4.1)
@@ -859,6 +861,7 @@ GEM
     stringex (2.5.2)
     stringio (3.1.1)
     sysexits (1.2.0)
+    syslog (0.1.2)
     temple (0.8.2)
     thin (1.8.2)
       daemons (~> 1.0, >= 1.0.9)
@@ -926,6 +929,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  abbrev
   acmesmith (~> 2.3.1)
   active_model_serializers (~> 0.10.13)
   active_record_query_trace
@@ -966,6 +970,7 @@ DEPENDENCIES
   colorize
   composite_primary_keys (~> 13.0)
   crowdin-api (~> 1.10.0)
+  csv
   cucumber
   daemons (= 1.1.9)
   dalli
@@ -975,8 +980,9 @@ DEPENDENCIES
   devise (~> 4.9.0)
   devise_invitable (~> 2.0.2)
   dotiw
+  drb
   execjs
-  eyes_selenium (= 3.18.4)
+  eyes_selenium (= 6.3.7)
   factory_bot_rails (~> 6.2)
   fakefs (~> 2.5.0)
   fakeredis
@@ -991,7 +997,7 @@ DEPENDENCIES
   haml (~> 5.2.0)
   haml-rails
   haml_lint
-  highline (~> 1.6.21)
+  highline (~> 3.1.0)
   honeybadger (>= 4.5.6)
   http (~> 5.0)
   httparty
@@ -1020,12 +1026,14 @@ DEPENDENCIES
   minitest-spec-context (~> 0.0.3)
   minitest-stub-const (~> 0.6)
   mocha
+  mutex_m
   mysql2 (>= 0.4.1)
   nakayoshi_fork
   naturally
   net-http-persistent
   newrelic_rpm (~> 6.14.0)
   nokogiri (>= 1.10.0)
+  observer
   octokit
   oj (~> 3.10)
   omniauth-clever (~> 2.0.1)!
@@ -1058,7 +1066,7 @@ DEPENDENCIES
   raindrops
   rambling-trie (>= 2.1.1)
   recaptcha
-  redcarpet (~> 3.5.1)
+  redcarpet (~> 3.6.0)
   redis (~> 4.8.1)
   redis-actionpack (~> 5.4.0)
   redis-slave-read!
@@ -1091,11 +1099,10 @@ DEPENDENCIES
   sorted_set
   spring (~> 3.1.1)
   spring-commands-testunit
-  sprockets!
-  sprockets-rails (= 3.3.0)
   sshkit
   statsig (~> 1.33)
   stringex (~> 2.5.2)
+  syslog
   thin
   thwait
   timecop
@@ -1113,7 +1120,7 @@ DEPENDENCIES
   youtube-dl.rb
 
 RUBY VERSION
-   ruby 3.0.5p211
+   ruby 3.3.4p94
 
 BUNDLED WITH
-   2.3.22
+   2.5.17
