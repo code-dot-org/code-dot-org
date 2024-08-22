@@ -15,6 +15,7 @@ class AiDiffControllerTest < ActionController::TestCase
 
     @teacher_sans_experiment = create(:teacher)
     @teacher = create(:teacher)
+    @unit_display_name = "Beowulf Course"
 
     create :single_user_experiment, min_user_id: @teacher.id, name: 'ai-differentiation'
 
@@ -75,7 +76,7 @@ class AiDiffControllerTest < ActionController::TestCase
     post :chat_completion, params: {
       inputText: "Hello!",
       lessonId: @lesson.id,
-      unitDisplayName: @unitDisplayName,
+      unitDisplayName: @unit_display_name,
       sessionId: @session_id
     }
 
@@ -91,7 +92,7 @@ class AiDiffControllerTest < ActionController::TestCase
     post :chat_completion, params: {
       inputText: "Hello!",
       lessonId: @lesson.id,
-      unitDisplayName: "Beowulf Course",
+      unitDisplayName: @unit_display_name,
       sessionId: @session_id
     }
 
@@ -104,7 +105,7 @@ class AiDiffControllerTest < ActionController::TestCase
     post :chat_completion, params: {
       inputText: "Hello!",
       lessonId: @lesson.id,
-      unitDisplayName: "Beowulf Course",
+      unitDisplayName: @unit_display_name,
     }
 
     json_response = JSON.parse(response.body)
@@ -120,7 +121,7 @@ class AiDiffControllerTest < ActionController::TestCase
     post :chat_completion, params: {
       inputText: "Hello!",
       lessonId: @lesson.id,
-      unitDisplayName: "Beowulf Course",
+      unitDisplayName: @unit_display_name,
       session_id: nil
     }
 
@@ -137,7 +138,7 @@ class AiDiffControllerTest < ActionController::TestCase
     post :chat_completion, params: {
       inputText: "Hello!",
       lessonId: @lesson.id,
-      unitDisplayName: "Beowulf Course",
+      unitDisplayName: @unit_display_name,
       sessionId: @session_id
     }
 
