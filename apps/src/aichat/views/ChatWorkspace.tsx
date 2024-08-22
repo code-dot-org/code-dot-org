@@ -36,6 +36,10 @@ enum WorkspaceTeacherViewTab {
   TEST_STUDENT_MODEL = 'testStudentModel',
 }
 
+const eraserIcon: FontAwesomeV6IconProps = {
+  iconName: 'eraser',
+};
+
 /**
  * Renders the AI Chat Lab main chat workspace component.
  */
@@ -45,8 +49,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const [selectedTab, setSelectedTab] =
     useState<WorkspaceTeacherViewTab | null>(null);
 
-  const {showWarningModal, isWaitingForChatResponse, studentChatHistory} =
-    useAppSelector(state => state.aichat);
+  const {showWarningModal, studentChatHistory} = useAppSelector(
+    state => state.aichat
+  );
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const visibleItems = useSelector(selectAllVisibleMessages);
@@ -88,18 +93,6 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     }
   }, [viewAsUserId, selectedTab]);
 
-  const showWaitingAnimation = () => {
-    if (isWaitingForChatResponse) {
-      return (
-        <img
-          src="/blockly/media/aichat/typing-animation.gif"
-          alt={'Waiting for response'}
-          className={moduleStyles.waitingForResponse}
-        />
-      );
-    }
-  };
-
   const iconValue: FontAwesomeV6IconProps = {
     iconName: 'lock',
     iconStyle: 'solid',
@@ -115,22 +108,14 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
           : ''),
 
       tabContent: (
-        <ChatEventsList
-          events={studentChatHistory}
-          showWaitingAnimation={() => null}
-        />
+        <ChatEventsList events={studentChatHistory} isTeacherView={true} />
       ),
       iconLeft: iconValue,
     },
     {
       value: 'testStudentModel',
       text: 'Test student model',
-      tabContent: (
-        <ChatEventsList
-          events={visibleItems}
-          showWaitingAnimation={showWaitingAnimation}
-        />
-      ),
+      tabContent: <ChatEventsList events={visibleItems} />,
     },
   ];
 
@@ -148,7 +133,7 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
     onChange: handleOnChange,
     type: 'secondary',
     tabsContainerClassName: moduleStyles.tabsContainer,
-    tabPanelsContainerClassName: moduleStyles.tabPanels,
+    tabPanelsContainerClassName: moduleStyles.tabPanelsContainer,
   };
 
   const onCloseWarningModal = useCallback(
@@ -162,28 +147,27 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
       {experiments.isEnabled(experiments.VIEW_CHAT_HISTORY) && viewAsUserId ? (
         <Tabs {...tabArgs} />
       ) : (
-        <ChatEventsList
-          events={visibleItems}
-          showWaitingAnimation={showWaitingAnimation}
-        />
+        <ChatEventsList events={visibleItems} />
       )}
 
-      {canChatWithModel && (
-        <UserChatMessageEditor
-          editorContainerClassName={moduleStyles.messageEditorContainer}
-        />
-      )}
-      <div className={moduleStyles.buttonRow}>
-        <Button
-          text="Clear chat"
-          disabled={!canChatWithModel}
-          iconLeft={{iconName: 'eraser'}}
-          size="s"
-          type="secondary"
-          color="gray"
-          onClick={onClear}
-        />
-        <CopyButton />
+      <div className={moduleStyles.footer}>
+        {canChatWithModel && (
+          <UserChatMessageEditor
+            editorContainerClassName={moduleStyles.messageEditorContainer}
+          />
+        )}
+        <div className={moduleStyles.buttonRow}>
+          <Button
+            text="Clear chat"
+            disabled={!canChatWithModel}
+            iconLeft={eraserIcon}
+            size="s"
+            type="secondary"
+            color="gray"
+            onClick={onClear}
+          />
+          <CopyButton />
+        </div>
       </div>
     </div>
   );

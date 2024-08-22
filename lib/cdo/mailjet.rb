@@ -50,6 +50,36 @@ module MailJet
     add_to_contact_list(contact, contact_list_id)
   end
 
+  # Sends a warning to a teacher about sections with students affected by the Child Account Policy (CAP).
+  #
+  # @note The function may exit early due to any of the following conditions:
+  #   - the feature is not enabled.
+  #   - the user is nil or does not have a valid ID.
+  #   - the user is not a teacher.
+  #
+  # @param user [User] The teacher to be warned.
+  # @param sections [Array<Hash>] The list of CAP-affected sections.
+  #   Each section is represented as a hash with keys:
+  #   - `:Name` [String] The name of the section.
+  #   - `:Link` [String] The URL link to the section.
+  # @param locale [String] The locale to use for the email. Defaults to 'en-US'.
+  #
+  # @return [void]
+  def self.send_teacher_cap_section_warning(user, sections, locale: 'en-US')
+    return unless enabled?
+
+    raise ArgumentError, 'the user must be persisted' unless user&.persisted?
+    raise ArgumentError, 'the user must be a teacher' unless user.teacher?
+
+    contact = find_or_create_contact(user.email, user.name)
+    send_template_email(
+      contact,
+      EMAILS[:cap_section_warning],
+      locale,
+      variables: {capSections: sections}
+    )
+  end
+
   def self.find_or_create_contact(email, name)
     return nil unless enabled?
     return nil unless valid_email?(email)
@@ -112,33 +142,23 @@ module MailJet
     )
   end
 
-  def self.send_template_email(contact, email_config, locale = 'en-US')
+  def self.send_template_email(contact, email_config, locale = 'en-US', variables: {})
     return unless enabled?
     return unless contact&.email.present?
 
     configure_api_v3dot1
 
-    from_address = email_config[:from_address]
-    from_name = email_config[:from_name]
     template_config = email_config[:template_id][subaccount.to_sym]
-    template_id = template_config[locale.to_sym] || template_config[:default]
+    # Each email template may have different required "messages:"" fields
+    # See https://dev.mailjet.com/email/guides for more information regarding "messages:" format
+    message = {}
+    message[:From] = {Email: email_config[:from_address], Name: email_config[:from_name]}
+    message[:To] = [{Email: contact.email, Name: contact.name}]
+    message[:TemplateID] = template_config[locale.to_sym] || template_config[:default]
+    message[:TemplateLanguage] = true
+    message[:Variables] = variables if variables.present?
 
-    Mailjet::Send.create(messages:
-      [{
-        From: {
-          Email: from_address,
-          Name: from_name
-        },
-        To: [
-          {
-            Email: contact.email,
-            Name: contact.name
-          }
-        ],
-        TemplateID: template_id,
-        TemplateLanguage: true,
-      }]
-    )
+    Mailjet::Send.create(messages: [message])
   end
 
   def self.valid_email?(email)
