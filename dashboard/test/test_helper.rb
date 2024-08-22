@@ -22,6 +22,7 @@ ENV['TZ'] = 'UTC'
 # but running unit tests in the test env for developers only sets
 # RAILS ENV. We fix it above but we need to reload some stuff...
 
+require "minitest/unit"
 require 'mocha/mini_test'
 
 CDO.stubs(:rack_env).returns(:test) if defined? CDO
