@@ -7,7 +7,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import LtiUpgradeAccountDialog from '@cdo/apps/lib/ui/simpleSignUp/lti/upgrade/LtiUpgradeAccountDialog';
+import LtiUpgradeAccountDialog from '@cdo/apps/simpleSignUp/lti/upgrade/LtiUpgradeAccountDialog';
 import getScriptData from '@cdo/apps/util/getScriptData';
 
 document.addEventListener('DOMContentLoaded', () => {

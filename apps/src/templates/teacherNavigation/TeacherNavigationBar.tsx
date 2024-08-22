@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {useSelector} from 'react-redux';
+import {useParams} from 'react-router-dom';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import Typography from '@cdo/apps/componentLibrary/typography';
@@ -18,6 +19,7 @@ interface SectionsData {
 }
 
 const TeacherNavigationBar: React.FunctionComponent = () => {
+  const {sectionId} = useParams();
   const sections = useSelector(
     (state: {teacherSections: {sections: SectionsData}}) =>
       state.teacherSections.sections
@@ -26,7 +28,15 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   const [sectionArray, setSectionArray] = useState<
     {value: string; text: string}[]
   >([]);
-  const [selectedSectionId, setSelectedSectionId] = useState<string>('');
+  const [selectedSectionId, setSelectedSectionId] = useState<string>(
+    sectionId || ''
+  );
+  const [selectedOptionKey, setSelectedOptionKey] =
+    useState<string>('assessments');
+
+  const handleOptionClick = (pathKey: string) => {
+    setSelectedOptionKey(pathKey);
+  };
 
   useEffect(() => {
     const updatedSectionArray = Object.entries(sections)
@@ -56,77 +66,68 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     );
   };
 
-  const courseContent = [
-    getSectionHeader(i18n.courseContent()),
-    <SidebarOption
-      icon={'desktop'}
-      optionTitle={i18n.course()}
-      isSelected={false}
-    />,
-    <SidebarOption
-      icon={'folder-open'}
-      optionTitle={i18n.lessonMaterials()}
-      isSelected={false}
-    />,
-    <SidebarOption
-      icon={'file-lines'}
-      optionTitle={i18n.lessonPlans()}
-      isSelected={false}
-    />,
-    <SidebarOption
-      icon={'presentation-screen'}
-      optionTitle={i18n.slideDecks()}
-      isSelected={false}
-    />,
-    <SidebarOption
-      icon={'calendar'}
-      optionTitle={i18n.calendar()}
-      isSelected={false}
-    />,
+  const coursecontentSectionTitle = getSectionHeader(i18n.courseContent());
+  const courseContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] = [
+    'courseOverview',
+    'lessonMaterials',
+    'calendar',
   ];
 
-  const performanceContent = [
-    getSectionHeader(i18n.performance()),
-    <SidebarOption
-      icon={'chart-line'}
-      optionTitle={LABELED_TEACHER_NAVIGATION_PATHS.progress.label}
-      isSelected={false}
-    />,
-    <SidebarOption
-      icon={'star'}
-      optionTitle={LABELED_TEACHER_NAVIGATION_PATHS.assessments.label}
-      isSelected={false}
-    />,
-    <SidebarOption
-      icon={'code'}
-      optionTitle={LABELED_TEACHER_NAVIGATION_PATHS.projects.label}
-      isSelected={true}
-    />,
-    <SidebarOption
-      icon={'chart-simple'}
-      optionTitle={LABELED_TEACHER_NAVIGATION_PATHS.stats.label}
-      isSelected={false}
-    />,
-    <SidebarOption
-      icon={'pen-line'}
-      optionTitle={LABELED_TEACHER_NAVIGATION_PATHS.textResponses.label}
-      isSelected={false}
-    />,
+  const performanceSectionTitle = getSectionHeader(i18n.performance());
+  const performanceContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
+    ['progress', 'assessments', 'projects', 'stats', 'textResponses'];
+
+  const classroomContentSectionTitle = getSectionHeader(i18n.classroom());
+  const classroomContentKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[] =
+    ['manageStudents', 'settings'];
+
+  const teacherNavigationBarContent = [
+    {title: coursecontentSectionTitle, keys: courseContentKeys},
+    {title: performanceSectionTitle, keys: performanceContentKeys},
+    {title: classroomContentSectionTitle, keys: classroomContentKeys},
   ];
 
-  const classroomContent = [
-    getSectionHeader(i18n.classroom()),
-    <SidebarOption
-      icon={'users'}
-      optionTitle={LABELED_TEACHER_NAVIGATION_PATHS.manageStudents.label}
-      isSelected={false}
-    />,
-    <SidebarOption
-      icon={'gear'}
-      optionTitle={i18n.settings()}
-      isSelected={false}
-    />,
-  ];
+  const getSidebarOptionsForSection = (sidebarKeys: string[]) => {
+    return sidebarKeys.map(key => (
+      <SidebarOption
+        key={'ui-test-sidebar-' + key}
+        isSelected={selectedOptionKey === key}
+        sectionId={+selectedSectionId}
+        pathKey={key as keyof typeof LABELED_TEACHER_NAVIGATION_PATHS}
+        onClick={() => handleOptionClick(key)}
+      />
+    ));
+  };
+
+  const navbarComponents = teacherNavigationBarContent.map(
+    ({title, keys}, index) => {
+      const sidebarOptions = getSidebarOptionsForSection(keys);
+
+      return (
+        <div key={`section-${index}`}>
+          {title}
+          {sidebarOptions}
+        </div>
+      );
+    }
+  );
+
+  const handleDropdownChange = (
+    event: React.ChangeEvent<HTMLSelectElement>
+  ) => {
+    const newSelectedSectionId = event.target.value;
+    setSelectedSectionId(newSelectedSectionId);
+
+    const currentUrl = window.location.href;
+
+    // Replace the section ID in the URL
+    const newUrl = currentUrl.replace(
+      /sections\/\d+/,
+      `sections/${newSelectedSectionId}`
+    );
+
+    window.location.href = newUrl;
+  };
 
   return (
     <nav className={styles.sidebarContainer}>
@@ -140,16 +141,14 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
         </Typography>
         <SimpleDropdown
           items={sectionArray}
-          onChange={value => setSelectedSectionId(value.target.value)}
+          onChange={handleDropdownChange}
           labelText=""
           size="m"
           selectedValue={selectedSectionId}
           className={styles.sectionDropdown}
           name="section-dropdown"
         />
-        {courseContent}
-        {performanceContent}
-        {classroomContent}
+        {navbarComponents.map(component => component)}
       </div>
     </nav>
   );

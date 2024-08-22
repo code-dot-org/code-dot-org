@@ -10,7 +10,7 @@ import moduleStyles from './chatWorkspace.module.scss';
 
 interface ChatEventsListProps {
   events: ChatEvent[];
-  showWaitingAnimation: () => React.ReactNode;
+  isTeacherView?: boolean;
 }
 
 /**
@@ -18,7 +18,7 @@ interface ChatEventsListProps {
  */
 const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
   events,
-  showWaitingAnimation,
+  isTeacherView,
 }) => {
   const {isWaitingForChatResponse} = useAppSelector(state => state.aichat);
 
@@ -43,11 +43,30 @@ const ChatEventsList: React.FunctionComponent<ChatEventsListProps> = ({
       ref={conversationContainerRef}
     >
       {events.map(event => (
-        <ChatEventView event={event} key={event.timestamp} />
+        <ChatEventView
+          event={event}
+          key={event.timestamp}
+          isTeacherView={isTeacherView}
+        />
       ))}
-      {showWaitingAnimation()}
+      <WaitingAnimation shouldDisplay={isWaitingForChatResponse} />
     </div>
   );
+};
+
+const WaitingAnimation: React.FunctionComponent<{shouldDisplay: boolean}> = ({
+  shouldDisplay,
+}) => {
+  if (shouldDisplay) {
+    return (
+      <img
+        src="/blockly/media/aichat/typing-animation.gif"
+        alt={'Waiting for response'}
+        className={moduleStyles.waitingForResponse}
+      />
+    );
+  }
+  return null;
 };
 
 export default ChatEventsList;

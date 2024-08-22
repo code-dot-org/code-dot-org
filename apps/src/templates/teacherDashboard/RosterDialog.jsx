@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
+import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import locale from '@cdo/locale';

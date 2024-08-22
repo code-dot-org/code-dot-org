@@ -12,13 +12,6 @@ social:
 %link{href: "/css/generated/hoc-banner.css", rel: "stylesheet", type: "text/css"}
 %link{href: "/css/generated/highlights-homepage.css", rel: "stylesheet", id: "highlight-styles"}
 
--# These are needed for the signup form, even if the map isn't currently showing.
-%script{src:'https://api.mapbox.com/mapbox-gl-js/v1.0.0/mapbox-gl.js'}
-:javascript
-  mapboxgl.accessToken = "#{CDO.mapbox_access_token}";
-
--facebook = {:u=>"http://#{request.host}/us"}
-
 -# We set the DCDO default to CDO.default_hoc_mode here because we can't change the DCDO flag on the test machine, but
 -# ui tests rely on hourofcode.com being in a hoc_mode consistent with production. This default needs to be updated
 -# whenever we change the hoc_mode, to make sure we're still testing what we'll see on production.
@@ -27,8 +20,6 @@ social:
 -twitter = {:url=>"http://hourofcode.com", :related=>'codeorg', :hashtags=>'', :text=>hoc_s(:twitter_default_text)}
 -twitter[:hashtags] = 'HourOfCode' unless hoc_s(:front_header_banner, locals: {campaign_date: campaign_date('full-year')}).include? '#HourOfCode'
 
-%script{type: "text/javascript", src: "https://maps.googleapis.com/maps/api/js?client=#{CDO.google_maps_client_id}&sensor=false&libraries=places,geometry"}
-%script{type: "text/javascript", src: "/js/jquery.geocomplete.min.js"}
 - js_locale = request.locale.to_s.downcase.tr('-', '_')
 %script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
 
@@ -53,30 +44,10 @@ social:
         =hoc_s(:hoc2023_what_is_hoc_desc)
       = view :index_video
 
-  -# Map
-  %section.map.bg-neutral-light
-    .wrapper
-      .text-wrapper.centered
-        %h2.no-margin-bottom{style: "font-size: 2.5rem;"}
-          =format_integer_with_commas(fetch_hoc_metrics['started']).to_s
-        %h3.heading-xl{style: "margin-top: 0.25rem"}
-          =hoc_s(:hours_of_code_served)
-        %p.body-one.no-margin-bottom
-          =hoc_s(:front_intro_default_2)
-        %p.body-one
-          = view :hoc_events_counter
-      = view :map
-      .text-wrapper.centered
-        %p.body-two.no-margin-bottom
-          =hoc_s(:hoc_homepage_registration_desc)
-        - if hoc_mode != false
-          %a.link-button{href: resolve_url("/events"), style: "margin-top: 2rem"}
-            =hoc_s(:call_to_action_register_your_hoc)
-
   -# Off season interest form
   -# This is only shown when hoc_mode is false
   - if hoc_mode == false
-    %section.no-padding-bottom
+    %section.bg-neutral-light
       .wrapper
         = view :off_season_interest_form
 

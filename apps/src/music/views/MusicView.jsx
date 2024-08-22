@@ -392,11 +392,15 @@ class UnconnectedMusicView extends React.Component {
   };
 
   getStartSources = () => {
-    if (this.props.levelProperties?.levelData?.startSources) {
-      return this.props.levelProperties?.levelData.startSources;
-    } else {
+    if (getBlockMode() !== BlockMode.SIMPLE2) {
       const startSourcesFilename = 'startSources' + getBlockMode();
       return require(`@cdo/static/music/${startSourcesFilename}.json`);
+    } else if (this.props.levelProperties?.levelData?.startSources) {
+      return this.props.levelProperties?.levelData.startSources;
+    } else {
+      this.props.setPageError({
+        errorMessage: 'Error finding start sources',
+      });
     }
   };
 

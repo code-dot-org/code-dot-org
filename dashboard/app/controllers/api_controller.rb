@@ -125,6 +125,11 @@ class ApiController < ApplicationController
 
       section = GoogleClassroomSection.from_service(course_id, current_user.id, students, course_name)
 
+      # If a teacher passes the criteria for becoming verified, upgrade them here
+      if section && Policies::User.verified_teacher_candidate?(current_user)
+        current_user.verify_teacher!
+      end
+
       render json: section.summarize
     end
   end

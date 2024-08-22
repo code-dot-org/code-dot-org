@@ -15,6 +15,13 @@ gem 'cgi', '~> 0.3.6'
 # see https://github.com/ruby/set/pull/2
 gem 'sorted_set'
 
+gem 'mutex_m' # needed for httpclient in Ruby >= 3.4, drop explicit dep if we upgrade httpclient
+
+gem 'abbrev' # needed for activesupport in Ruby >= 3.4, drop explicit dep after we upgrade to activesupport >= 7.2
+gem 'drb' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
+gem 'observer' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
+gem 'syslog' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
+
 gem 'rails', '~> 7.2'
 
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
@@ -168,8 +175,7 @@ gem 'cancancan', '~> 3.5.0'
 gem 'devise', '~> 4.9.0'
 gem 'devise_invitable', '~> 2.0.2'
 
-# Ref: https://github.com/daynew/omniauth-clever/pull/1
-gem 'omniauth-clever', '~> 2.0.0', github: 'code-dot-org/omniauth-clever'
+gem 'omniauth-clever', '~> 2.0.1', github: 'code-dot-org/omniauth-clever', tag: 'v2.0.1'
 gem 'omniauth-facebook', '~> 4.0.0'
 gem 'omniauth-google-oauth2', '~> 0.6.0'
 gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
@@ -292,6 +298,7 @@ gem 'addressable'
 gem 'bcrypt', '3.1.13'
 gem 'sshkit'
 gem 'validates_email_format_of'
+gem 'validate_url', '~> 1.0.15'
 
 # DISABLED during Rails 7.2 upgrade: Rails 7.1 includes composite primary key support, and this
 # gem has not been updated to support ActiveRecord >= 7.1 yet (possibly as a result of reduced demand)
@@ -306,11 +313,10 @@ gem 'full-name-splitter', github: 'pahanix/full-name-splitter'
 gem 'rambling-trie', '>= 2.1.1'
 
 gem 'omniauth-openid'
-gem 'omniauth-openid-connect', github: 'code-dot-org/omniauth-openid-connect', ref: 'cdo'
 
 # Ref: https://github.com/toy/image_optim/pull/145
 # Also include sRGB color profile conversion.
-gem 'image_optim', github: 'code-dot-org/image_optim', ref: 'seth/ruby-3.1'
+gem 'image_optim', github: 'code-dot-org/image_optim', ref: 'cdo'
 # Image-optimization tools and binaries.
 gem 'image_optim_pack', '~> 0.5.0', github: 'code-dot-org/image_optim_pack', ref: 'guetzli'
 gem 'image_optim_rails', '~> 0.4.0'
@@ -372,13 +378,7 @@ gem 'statsig', '~> 1.33'
 gem 'mailgun-ruby', '~>1.2.14'
 gem 'mailjet', '~> 1.7.3'
 
+gem 'json-jwt', '~> 1.15'
 gem "json-schema", "~> 4.3"
 
 gem "csv"
-
-gem 'mutex_m' # needed for httpclient in Ruby >= 3.4, drop explicit dep if we upgrade httpclient
-
-gem 'abbrev' # needed for activesupport in Ruby >= 3.4, drop explicit dep after we upgrade to activesupport >= 7.2
-gem 'drb' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
-gem 'observer' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
-gem 'syslog' # needed for activesupport in Ruby >= 3.4, drop explicit after we upgrade to activesupport >= 7.2
