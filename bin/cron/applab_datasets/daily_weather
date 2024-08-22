@@ -89,7 +89,6 @@ def get_weather_data
     WeatherForecastOffice.new('Blacksburg/Roanoke', 'Virginia', '24060'),
     WeatherForecastOffice.new('Wakefield', 'Virginia', '23888'),
     WeatherForecastOffice.new('Charleston', 'West Virginia', '25309'),
-    WeatherForecastOffice.new('Guam', 'Guam', '96913'),
     WeatherForecastOffice.new('Honolulu', 'Hawaii', '96822'),
     WeatherForecastOffice.new('Birmingham', 'Alabama', '35040'),
     WeatherForecastOffice.new('Huntsville', 'Alabama', '35805'),
@@ -109,7 +108,6 @@ def get_weather_data
     WeatherForecastOffice.new('Albuquerque', 'New Mexico', '87106'),
     WeatherForecastOffice.new('Norman/Oklahoma City', 'Oklahoma', '73072'),
     WeatherForecastOffice.new('Tulsa', 'Oklahoma', '74128'),
-    WeatherForecastOffice.new('San Juan', 'Puerto Rico', '00979'),
     WeatherForecastOffice.new('Memphis', 'Tennessee', '38120'),
     WeatherForecastOffice.new('Morristown/Knoxville', 'Tennessee', '37877'),
     WeatherForecastOffice.new('Nashville', 'Tennessee', '37138'),
@@ -151,10 +149,11 @@ def get_weather_data
 
   records = forecast_offices.flat_map do |office|
     forecast_number = 1
-
+    puts "Fetching weather data for #{office.zip_code}"
     url = "http://api.openweathermap.org/data/2.5/forecast/daily?zip=#{office.zip_code},us&cnt=#{NUM_DAYS}&units=imperial&appid=#{API_KEY}"
     response = Net::HTTP.get_response(URI(url))
     if response.code != '200'
+      puts "Failed to retrieve data from Open Weather API for WeatherForecastOffice with zip code #{office.zip_code}. This office will not be updated in App Labs datasets."
       Honeybadger.notify(
         error: response.message,
         error_message: "Failed to retrieve data from Open Weather API for WeatherForecastOffice with zip code #{office.zip_code}. This office will not be updated in App Labs datasets.",
