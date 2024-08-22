@@ -78,7 +78,13 @@ export const hasFilledOutModelCard = (modelCardInfo: ModelCardInfo) => {
 export const emptyModelCard = (modelCardInfo: ModelCardInfo) => {
   let allFieldsEmpty = true;
   for (const key of getTypedKeys(modelCardInfo)) {
-    if (modelCardInfo[key] !== '') {
+    if (key === 'isPublished') {
+      continue;
+    } else if (key === 'exampleTopics') {
+      if (modelCardInfo['exampleTopics'].length !== 0) {
+        allFieldsEmpty = false;
+      }
+    } else if (modelCardInfo[key] !== '') {
       allFieldsEmpty = false;
     }
   }

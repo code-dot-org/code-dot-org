@@ -7,7 +7,8 @@ import {
   publishModel,
   selectHasFilledOutModelCard,
   selectHavePropertiesChanged,
-  selectEmptyModelCard,
+  selectSavedEmptyModelCard,
+  selectCurrentEmptyModelCard,
 } from '@cdo/apps/aichat/redux/aichatRedux';
 import Alert, {AlertProps} from '@cdo/apps/componentLibrary/alert/Alert';
 import Button from '@cdo/apps/componentLibrary/button/Button';
@@ -39,7 +40,8 @@ const PublishNotes: React.FunctionComponent = () => {
   const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
   const currentSaveType = useAppSelector(state => state.aichat.currentSaveType);
   const havePropertiesChanged = useAppSelector(selectHavePropertiesChanged);
-  const emptyModelCard = useAppSelector(selectEmptyModelCard);
+  const isCurrentModelCardEmpty = useAppSelector(selectCurrentEmptyModelCard);
+  const isSavedModelCardEmpty = useAppSelector(selectSavedEmptyModelCard);
 
   const onSave = useCallback(() => {
     dispatch(saveModelCard());
@@ -136,15 +138,18 @@ const PublishNotes: React.FunctionComponent = () => {
           className={modelCustomizationStyles.saveAlert}
         />
       )}
-      {emptyModelCard && !saveInProgress && !isReadOnly && (
-        <Alert
-          text={'Remember to save your changes'}
-          type={'info'}
-          size="s"
-          className={modelCustomizationStyles.saveAlert}
-        />
-      )}
-      {!emptyModelCard &&
+      {isCurrentModelCardEmpty &&
+        isSavedModelCardEmpty &&
+        !saveInProgress &&
+        !isReadOnly && (
+          <Alert
+            text={'Remember to save your changes'}
+            type={'info'}
+            size="s"
+            className={modelCustomizationStyles.saveAlert}
+          />
+        )}
+      {!isSavedModelCardEmpty &&
         !havePropertiesChanged &&
         !saveInProgress &&
         !isReadOnly && (

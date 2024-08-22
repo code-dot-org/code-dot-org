@@ -677,8 +677,13 @@ export const selectAllFieldsHidden = createSelector(
   allFieldsHidden
 );
 
-export const selectEmptyModelCard = createSelector(
+export const selectCurrentEmptyModelCard = createSelector(
   (state: RootState) => state.aichat.currentAiCustomizations.modelCardInfo,
+  emptyModelCard
+);
+
+export const selectSavedEmptyModelCard = createSelector(
+  (state: RootState) => state.aichat.savedAiCustomizations.modelCardInfo,
   emptyModelCard
 );
 
