@@ -73,6 +73,7 @@ $(document).ready(function () {
     DCDO.get('teacher-local-nav-v2', false) ||
     experiments.isEnabled('teacher-local-nav-v2');
 
+  // When removing v1TeacherDashboard after v2 launch, remove `selectedSection` from api response.
   const getV1TeacherDashboard = () => {
     const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
