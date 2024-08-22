@@ -1,5 +1,5 @@
-# We aren't currently using ActionCable, but this is where we would configure it.
-# Here is the stock config/cable.yml from a new Rails 7.2 app:
+# We aren't currently using ActionCable, but this is where we would configure it. Rails 7.2 errors out if 
+# this file doesn't exist, so here is the stock config/cable.yml from a new Rails 7.2 app:
 
 # development:
 #   adapter: redis
