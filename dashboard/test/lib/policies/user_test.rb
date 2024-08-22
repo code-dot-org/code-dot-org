@@ -48,4 +48,11 @@ class Policies::UserTest < ActiveSupport::TestCase
     create :google_authentication_option, user: teacher, email: 'test@gmail.com'
     assert_equal false, Policies::User.verified_teacher_candidate?(teacher)
   end
+
+  test 'verified_teacher_candidate? should return false when teacher is already verified' do
+    teacher = create :teacher, :with_google_authentication_option
+    assert_changes -> {Policies::User.verified_teacher_candidate?(teacher)}, from: true, to: false do
+      teacher.verify_teacher!
+    end
+  end
 end

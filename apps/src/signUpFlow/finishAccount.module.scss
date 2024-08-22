@@ -48,9 +48,11 @@ select {
 
 p, label {
   margin-bottom: 0 !important;
+  padding-top: 0 !important;
 }
 
 label {
+  width: 100%;
   align-items: start !important;
   gap: 0 0.5rem !important;
 }
@@ -59,27 +61,12 @@ span {
   margin-bottom: 0.125rem !important;
 }
 
-.emailOptInContainer {
-  margin-top: 1.125rem;
+.teacherKeepMeUpdated {
+  margin-bottom: 0.375rem !important;
+}
 
-  .emailOptInCheckboxContainer {
-    display: flex;
-    flex-direction: row;
-    padding: 6px;
-
-    .emailOptInCheckbox {
-      flex: 1;
-      padding-top: 1px;
-    }
-
-    .emailOptInLabel {
-      flex: 12;
-    }
-  }
-
-  .emailOptInFootnote {
-    margin-top: 0.125rem;
-  }
+.emailOptInFootnote {
+  margin-top: 0.5rem;
 }
 
 .parentInfoContainer {
@@ -96,7 +83,7 @@ span {
   }
 }
 
-.keepMeUpdated {
+.parentKeepMeUpdated {
   margin-bottom: 0.125rem !important;
 }
 

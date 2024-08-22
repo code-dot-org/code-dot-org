@@ -77,7 +77,6 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
     () => (selectedSection ? selectedSection.anyStudentHasProgress : true),
     [selectedSection]
   );
-  console.log('lfm', selectedSection);
 
   const studentCount = useSelector(
     (state: {teacherSections: {selectedStudents: object[]}}) =>
