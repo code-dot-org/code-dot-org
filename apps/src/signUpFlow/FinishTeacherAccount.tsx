@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
+import {LinkButton, buttonColors} from '@cdo/apps/componentLibrary/button';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {
@@ -62,7 +62,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
             placeholder={locale.msCoder()}
             onChange={onNameChange}
           />
-          <BodyThreeText>
+          <BodyThreeText className={style.displayNameSubtext}>
             {locale.this_is_what_your_students_will_see()}
           </BodyThreeText>
           {showNameError && (
@@ -89,17 +89,18 @@ const FinishTeacherAccount: React.FunctionComponent<{
         </div>
       </fieldset>
       <div className={style.finishSignUpButtonContainer}>
-        <Button
+        <LinkButton
           className={style.finishSignUpButton}
           color={buttonColors.purple}
           type="primary"
-          onClick={() => console.log('FINISH SIGN UP')}
+          href="#"
           text={locale.go_to_my_account()}
           iconRight={{
             iconName: 'arrow-right',
             iconStyle: 'solid',
             title: 'arrow-right',
           }}
+          disabled={name === ''}
         />
       </div>
     </div>
