@@ -1,6 +1,12 @@
+import _ from 'lodash';
 import React, {useState, useEffect} from 'react';
 import {useSelector} from 'react-redux';
-import {useParams} from 'react-router-dom';
+import {
+  generatePath,
+  matchPath,
+  useLocation,
+  useNavigate,
+} from 'react-router-dom';
 
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import Typography from '@cdo/apps/componentLibrary/typography';
@@ -19,7 +25,6 @@ interface SectionsData {
 }
 
 const TeacherNavigationBar: React.FunctionComponent = () => {
-  const {sectionId} = useParams();
   const sections = useSelector(
     (state: {teacherSections: {sections: SectionsData}}) =>
       state.teacherSections.sections
@@ -28,30 +33,21 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
   const [sectionArray, setSectionArray] = useState<
     {value: string; text: string}[]
   >([]);
-  const [selectedSectionId, setSelectedSectionId] = useState<string>(
-    sectionId || ''
-  );
-  const [selectedOptionKey, setSelectedOptionKey] =
-    useState<string>('assessments');
 
-  const handleOptionClick = (pathKey: string) => {
-    setSelectedOptionKey(pathKey);
-  };
+  const selectedSectionId = useSelector(
+    (state: {teacherSections: {selectedSectionId: number}}) =>
+      state.teacherSections.selectedSectionId
+  );
 
   useEffect(() => {
     const updatedSectionArray = Object.entries(sections)
       .filter(([id, section]) => !section.hidden)
       .map(([id, section]) => ({
-        value: String(id),
+        value: id,
         text: section.name,
       }));
 
     setSectionArray(updatedSectionArray);
-
-    // Set initial selectedSectionId if not already set
-    if (updatedSectionArray.length > 0 && !selectedSectionId) {
-      setSelectedSectionId(updatedSectionArray[0].value);
-    }
   }, [sections, selectedSectionId]);
 
   const getSectionHeader = (label: string) => {
@@ -87,14 +83,48 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     {title: classroomContentSectionTitle, keys: classroomContentKeys},
   ];
 
-  const getSidebarOptionsForSection = (sidebarKeys: string[]) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const [currentPathName, currentPathObject] = React.useMemo(() => {
+    return (
+      _.find(
+        Object.entries(LABELED_TEACHER_NAVIGATION_PATHS),
+        path => !!matchPath(path[1].absoluteUrl, location.pathname)
+      ) || [null, null]
+    );
+  }, [location]);
+
+  const navigateToDifferentSection = (sectionId: string) => {
+    if (currentPathObject?.absoluteUrl) {
+      navigate(
+        generatePath(currentPathObject.absoluteUrl, {sectionId: sectionId})
+      );
+    }
+  };
+
+  const navigateToDifferentPage = (
+    page: keyof typeof LABELED_TEACHER_NAVIGATION_PATHS
+  ) => {
+    if (LABELED_TEACHER_NAVIGATION_PATHS[page]) {
+      navigate(
+        generatePath(LABELED_TEACHER_NAVIGATION_PATHS[page].absoluteUrl, {
+          sectionId: selectedSectionId,
+        })
+      );
+    }
+  };
+
+  const getSidebarOptionsForSection = (
+    sidebarKeys: (keyof typeof LABELED_TEACHER_NAVIGATION_PATHS)[]
+  ) => {
     return sidebarKeys.map(key => (
       <SidebarOption
         key={'ui-test-sidebar-' + key}
-        isSelected={selectedOptionKey === key}
+        isSelected={currentPathName === key}
         sectionId={+selectedSectionId}
         pathKey={key as keyof typeof LABELED_TEACHER_NAVIGATION_PATHS}
-        onClick={() => handleOptionClick(key)}
+        onClick={() => navigateToDifferentPage(key)}
       />
     ));
   };
@@ -112,23 +142,6 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
     }
   );
 
-  const handleDropdownChange = (
-    event: React.ChangeEvent<HTMLSelectElement>
-  ) => {
-    const newSelectedSectionId = event.target.value;
-    setSelectedSectionId(newSelectedSectionId);
-
-    const currentUrl = window.location.href;
-
-    // Replace the section ID in the URL
-    const newUrl = currentUrl.replace(
-      /sections\/\d+/,
-      `sections/${newSelectedSectionId}`
-    );
-
-    window.location.href = newUrl;
-  };
-
   return (
     <nav className={styles.sidebarContainer}>
       <div className={styles.sidebarContent}>
@@ -141,10 +154,10 @@ const TeacherNavigationBar: React.FunctionComponent = () => {
         </Typography>
         <SimpleDropdown
           items={sectionArray}
-          onChange={handleDropdownChange}
+          onChange={event => navigateToDifferentSection(event.target.value)}
           labelText=""
           size="m"
-          selectedValue={selectedSectionId}
+          selectedValue={String(selectedSectionId)}
           className={styles.sectionDropdown}
           name="section-dropdown"
         />

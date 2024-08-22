@@ -1,7 +1,7 @@
+import ValidatedInstructionsView from '@codebridge/InfoPanel/ValidatedInstructions';
 import React, {useEffect, useState} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button';
-import InstructionsView from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -17,13 +17,13 @@ enum Panels {
 }
 
 const panelMap = {
-  [Panels.Instructions]: InstructionsView,
+  [Panels.Instructions]: ValidatedInstructionsView,
   [Panels.HelpAndTips]: HelpAndTips,
   [Panels.ForTeachersOnly]: ForTeachersOnly,
 };
 
 const panelProps = {
-  [Panels.Instructions]: {manageNavigation: false},
+  [Panels.Instructions]: {},
   [Panels.HelpAndTips]: {},
   [Panels.ForTeachersOnly]: {},
 };
