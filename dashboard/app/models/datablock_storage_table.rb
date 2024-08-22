@@ -29,7 +29,7 @@ class DatablockStorageTable < ApplicationRecord
   # appropriate sections (below).
 
   # Composite primary key:
-  self.primary_keys = :project_id, :table_name
+  self.primary_key = :project_id, :table_name
 
   # Data reading methods should use read_records instead of directly accessing records
   has_many :records,

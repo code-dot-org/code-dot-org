@@ -15,7 +15,7 @@ class DatablockStorageKvp < ApplicationRecord
   # Each key-value-pair is per-project, and is stored as a row in the table,
   # which has a key column and a value column.
 
-  self.primary_keys = :project_id, :key
+  self.primary_key = :project_id, :key
 
   validate :max_kvp_count, on: :create
   validate :max_value_length, on: [:create, :update]

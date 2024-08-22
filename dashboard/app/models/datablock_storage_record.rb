@@ -18,7 +18,7 @@ class DatablockStorageRecord < ApplicationRecord
   # Data is stored as a mysql-row-per-student-record
 
   # Composite primary key:
-  self.primary_keys = :project_id, :table_name, :record_id
+  self.primary_key = :project_id, :table_name, :record_id
 
   validate :max_record_length
 

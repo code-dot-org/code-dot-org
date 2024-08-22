@@ -17,7 +17,7 @@ class RegionalPartnersSchoolDistrict < ApplicationRecord
   belongs_to :regional_partner, optional: true
   belongs_to :school_district, optional: true
 
-  self.primary_keys = :school_district_id, :regional_partner_id
+  self.primary_key = :school_district_id, :regional_partner_id
 
   CSV_HEADERS = {
     school_district_id: 'LEAID',
