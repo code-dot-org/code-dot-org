@@ -122,7 +122,7 @@ const TeacherCourseOverview: React.FC = () => {
         !!false && Object.values(courseSummary.course_versions).length > 1
       }
       showRedirectWarning={false}
-      redirectToCourseUrl={false}
+      redirectToCourseUrl={''}
       showAssignButton={courseSummary.show_assign_button}
       userId={userId}
       userType={UserTypes.TEACHER}
