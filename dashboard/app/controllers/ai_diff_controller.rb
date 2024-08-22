@@ -1,7 +1,6 @@
 class AiDiffController < ApplicationController
   include AiDiffBedrockHelper
   authorize_resource class: false
-  # load_and_authorize_resource except: [:chat_completion]
 
   # params are
   # inputText:
@@ -10,7 +9,6 @@ class AiDiffController < ApplicationController
   # sessionId:
   # POST /ai_diff/chat_completion
   def chat_completion
-    return render status: :forbidden, json: {} unless current_user&.teacher?
     unless has_required_params?
       return render status: :bad_request, json: {}
     end

@@ -273,7 +273,7 @@ class Ability
         can :check_message_safety, :aichat
       end
 
-      if SingleUserExperiment.enabled?(user: user, experiment_name: 'ai-differentiation')
+      if SingleUserExperiment.enabled?(user: user, experiment_name: 'ai-differentiation') && user.teacher?
         can :chat_completion, :ai_diff
       end
     end
