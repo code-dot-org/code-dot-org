@@ -4,13 +4,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
+import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import * as codeStudioLevels from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import Match from '@cdo/apps/code-studio/levels/match';
-import {getStore} from '@cdo/apps/redux';
-import SummaryEntryPoint from '@cdo/apps/templates/levelSummary/SummaryEntryPoint';
-import InstructorsOnly from '@cdo/apps/code-studio/components/InstructorsOnly';
 import {LegacySingleLevelGroupDialog} from '@cdo/apps/legacySharedComponents/LegacyDialogContents';
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
+import {getStore} from '@cdo/apps/redux';
+import SummaryEntryPoint from '@cdo/apps/templates/levelSummary/SummaryEntryPoint';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import i18n from '@cdo/locale';
 
