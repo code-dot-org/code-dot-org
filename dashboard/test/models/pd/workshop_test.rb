@@ -728,14 +728,8 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     workshop_bad_course = build :workshop, course: 'nonexistent'
     workshop_bad_subject = build :workshop, course: Pd::Workshop::COURSE_CSP, subject: 'nonexistent'
 
-    # Note, the Phase 2 subjects for ECS and CS_IN_A are identical: "Phase 2 in-person"
-    workshop_ambiguous_subject_ecs = build :workshop, course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
-    workshop_ambiguous_subject_cs_in_a = build :workshop, course: Pd::Workshop::COURSE_CS_IN_A, subject: Pd::Workshop::SUBJECT_CS_IN_A_PHASE_2
-
     assert_nil workshop_bad_course.time_constraint(:max_days)
     assert_nil workshop_bad_subject.time_constraint(:max_days)
-    assert_equal 5, workshop_ambiguous_subject_ecs.time_constraint(:max_days)
-    assert_equal 3, workshop_ambiguous_subject_cs_in_a.time_constraint(:max_days)
   end
 
   test 'teacherCon workshops are capped at 33.5 hours' do

@@ -701,10 +701,6 @@ class Pd::Workshop < ApplicationRecord
     Rails.application.routes.url_helpers.pd_workshop_dashboard_url + "/workshops/#{id}"
   end
 
-  def associated_online_course
-    ::UnitGroup.find_by(name: WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]).try(:plc_course) if WORKSHOP_COURSE_ONLINE_LEARNING_MAPPING[course]
-  end
-
   # Get all the teachers that have actually attended this workshop via the attendence.
   def attending_teachers
     sessions.flat_map(&:attendances).flat_map(&:teacher).uniq

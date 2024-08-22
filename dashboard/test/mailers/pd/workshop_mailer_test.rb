@@ -131,9 +131,8 @@ class WorkshopMailerTest < ActionMailer::TestCase
     test_cases = [
       {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_TEACHER_CON},
       {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP},
-      {course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2},
-      # {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_WORKSHOP_1},
-      # {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1},
+      {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_WORKSHOP_1},
+      {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1},
     ]
 
     test_cases.each do |test_case|
@@ -151,16 +150,9 @@ class WorkshopMailerTest < ActionMailer::TestCase
   test 'facilitator and organizer email links are complete urls' do
     csf_workshop = create :csf_intro_workshop
     csf_enrollment = create :pd_enrollment, workshop: csf_workshop
-    ecs_workshop = create :workshop, :ended, num_facilitators: 1, course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2
-    ecs_enrollment = create :pd_enrollment, workshop: ecs_workshop
     mails = []
 
-    mails << Pd::WorkshopMailer.facilitator_enrollment_reminder(ecs_workshop.facilitators.first, ecs_workshop)
-    mails << Pd::WorkshopMailer.organizer_enrollment_reminder(ecs_workshop)
-    mails << Pd::WorkshopMailer.organizer_cancel_receipt(ecs_enrollment)
     mails << Pd::WorkshopMailer.organizer_cancel_receipt(csf_enrollment)
-    mails << Pd::WorkshopMailer.organizer_enrollment_receipt(ecs_enrollment)
-    mails << Pd::WorkshopMailer.organizer_should_close_reminder(ecs_workshop)
     mails << Pd::WorkshopMailer.organizer_should_close_reminder(csf_workshop)
     mails << Pd::WorkshopMailer.facilitator_detail_change_notification(csf_workshop.facilitators.first, csf_workshop)
     mails << Pd::WorkshopMailer.organizer_detail_change_notification(csf_workshop)
@@ -170,8 +162,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
 
   test 'teacher cancel receipt links are complete urls' do
     test_cases = [
-      {course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_101},
-      {course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_2}
+      {course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_101}
     ]
 
     test_cases.each do |test_case|
@@ -186,9 +177,6 @@ class WorkshopMailerTest < ActionMailer::TestCase
   test 'teacher enrollment receipt links are complete urls' do
     test_cases = [
       {course: Pd::Workshop::COURSE_ADMIN_COUNSELOR, subject: Pd::Workshop::SUBJECT_ADMIN_COUNSELOR_SLP_INTRO},
-      {course: Pd::Workshop::COURSE_CS_IN_A, subject: Pd::Workshop::SUBJECT_CS_IN_A_PHASE_3},
-      {course: Pd::Workshop::COURSE_CS_IN_S, subject: Pd::Workshop::SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1},
-      {course: Pd::Workshop::COURSE_CS_IN_S, subject: Pd::Workshop::SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2},
       {course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_CSA_WORKSHOP_1},
       {course: Pd::Workshop::COURSE_CSA, subject: Pd::Workshop::SUBJECT_CSA_SUMMER_WORKSHOP},
       {course: Pd::Workshop::COURSE_CSD, subject: Pd::Workshop::SUBJECT_CSD_WORKSHOP_1},
@@ -196,11 +184,6 @@ class WorkshopMailerTest < ActionMailer::TestCase
       {course: Pd::Workshop::COURSE_CSF, subject: Pd::Workshop::SUBJECT_CSF_101},
       {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_WORKSHOP_1},
       {course: Pd::Workshop::COURSE_CSP, subject: Pd::Workshop::SUBJECT_CSP_SUMMER_WORKSHOP},
-      {course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_PHASE_4},
-      {course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_3},
-      {course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_4},
-      {course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_5},
-      {course: Pd::Workshop::COURSE_ECS, subject: Pd::Workshop::SUBJECT_ECS_UNIT_6},
     ]
 
     test_cases.each do |test_case|

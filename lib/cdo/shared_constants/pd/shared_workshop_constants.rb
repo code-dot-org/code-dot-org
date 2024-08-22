@@ -60,23 +60,6 @@ module Pd
     }
 
     SUBJECTS = {
-      COURSE_ECS => [
-        SUBJECT_ECS_PHASE_2 = 'Phase 2 in-person'.freeze,
-        SUBJECT_ECS_UNIT_3 = 'Unit 3 - HTML'.freeze,
-        SUBJECT_ECS_UNIT_4 = 'Unit 4 - Scratch'.freeze,
-        SUBJECT_ECS_UNIT_5 = 'Unit 5 - Data'.freeze,
-        SUBJECT_ECS_UNIT_6 = 'Unit 6 - Robotics'.freeze,
-        SUBJECT_ECS_PHASE_4 = 'Phase 4: Summer wrap-up'.freeze
-      ],
-      COURSE_CS_IN_A => [
-        SUBJECT_CS_IN_A_PHASE_2 = 'Phase 2 in-person'.freeze,
-        SUBJECT_CS_IN_A_PHASE_3 = 'Phase 3: Academic Year Development'.freeze
-      ],
-      COURSE_CS_IN_S => [
-        SUBJECT_CS_IN_S_PHASE_2 = 'Phase 2: Blended Summer Study'.freeze,
-        SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1 = 'Phase 3 - Semester 1'.freeze,
-        SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 = 'Phase 3 - Semester 2'.freeze
-      ],
       COURSE_CSP => [
         SUBJECT_CSP_SUMMER_WORKSHOP = SUBJECT_SUMMER_WORKSHOP,
         SUBJECT_CSP_VIRTUAL_KICKOFF = SUBJECT_VIRTUAL_KICKOFF,
@@ -195,6 +178,23 @@ module Pd
     ].freeze
 
     LEGACY_SUBJECTS = {
+      COURSE_ECS => [
+        SUBJECT_ECS_PHASE_2 = 'Phase 2 in-person'.freeze,
+        SUBJECT_ECS_UNIT_3 = 'Unit 3 - HTML'.freeze,
+        SUBJECT_ECS_UNIT_4 = 'Unit 4 - Scratch'.freeze,
+        SUBJECT_ECS_UNIT_5 = 'Unit 5 - Data'.freeze,
+        SUBJECT_ECS_UNIT_6 = 'Unit 6 - Robotics'.freeze,
+        SUBJECT_ECS_PHASE_4 = 'Phase 4: Summer wrap-up'.freeze
+      ],
+      COURSE_CS_IN_A => [
+        SUBJECT_CS_IN_A_PHASE_2 = 'Phase 2 in-person'.freeze,
+        SUBJECT_CS_IN_A_PHASE_3 = 'Phase 3: Academic Year Development'.freeze
+      ],
+      COURSE_CS_IN_S => [
+        SUBJECT_CS_IN_S_PHASE_2 = 'Phase 2: Blended Summer Study'.freeze,
+        SUBJECT_CS_IN_S_PHASE_3_SEMESTER_1 = 'Phase 3 - Semester 1'.freeze,
+        SUBJECT_CS_IN_S_PHASE_3_SEMESTER_2 = 'Phase 3 - Semester 2'.freeze
+      ],
       COURSE_CSP => [
         LEGACY_SUBJECT_CSP_WORKSHOP_1_1920 = 'Workshop 1: Unit 3'.freeze,
         LEGACY_SUBJECT_CSP_WORKSHOP_2_1920 = 'Workshop 2: Unit 4 and Explore Task'.freeze,

@@ -65,7 +65,6 @@ class Pd::Enrollment < ApplicationRecord
   before_validation :autoupdate_user_field
   before_save :set_application_id
   after_create :set_default_scholarship_info
-  after_save :enroll_in_corresponding_online_learning, if: -> {!deleted? && (saved_change_to_user_id? || saved_change_to_email?)}
   after_save :authorize_teacher_account
 
   serialized_attrs %w(
@@ -325,12 +324,6 @@ class Pd::Enrollment < ApplicationRecord
   protected def autoupdate_user_field
     resolved_user = resolve_user
     self.user = resolve_user if resolved_user
-  end
-
-  protected def enroll_in_corresponding_online_learning
-    if user && workshop.associated_online_course
-      Plc::UserCourseEnrollment.find_or_create_by(user: user, plc_course: workshop.associated_online_course)
-    end
   end
 
   protected def check_school_info(school_info_attr)
