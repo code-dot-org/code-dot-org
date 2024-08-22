@@ -9,7 +9,7 @@ import VisibilityDropdown from './VisibilityDropdown';
 
 import moduleStyles from './edit-aichat-settings.module.scss';
 
-interface AiCustomizationFieldSectionProps {
+interface FieldSectionProps {
   fieldName: keyof AiCustomizations;
   description?: string;
   inputType: 'text' | 'number' | 'textarea' | 'custom';
@@ -19,9 +19,15 @@ interface AiCustomizationFieldSectionProps {
   step?: number;
 }
 
-const AiCustomizationFieldSection: React.FunctionComponent<
-  AiCustomizationFieldSectionProps
-> = ({fieldName, description, inputType, inputNode, min, max, step}) => {
+const FieldSection: React.FunctionComponent<FieldSectionProps> = ({
+  fieldName,
+  description,
+  inputType,
+  inputNode,
+  min,
+  max,
+  step,
+}) => {
   const {aichatSettings, setPropertyValue} = useContext(UpdateContext);
   const InputTag = inputType === 'textarea' ? 'textarea' : 'input';
   const {initialCustomizations, visibilities} = aichatSettings;
@@ -59,4 +65,4 @@ const AiCustomizationFieldSection: React.FunctionComponent<
   );
 };
 
-export default AiCustomizationFieldSection;
+export default FieldSection;

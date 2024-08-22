@@ -27,8 +27,8 @@ import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 import MultiItemInput from '@cdo/apps/templates/MultiItemInput';
 import {getTypedKeys} from '@cdo/apps/types/utils';
 
-import AiCustomizationFieldSection from './AiCustomizationFieldSection';
 import CollapsibleFieldSection from './CollapsibleFieldSection';
+import FieldSection from './FieldSection';
 import ModelCardFields from './ModelCardFields';
 import ModelSelectionFields from './ModelSelectionFields';
 import {UpdateContext} from './UpdateContext';
@@ -227,7 +227,7 @@ const EditAichatSettings: React.FunctionComponent<{
             <hr />
             <div>
               <BodyTwoText>Student System Prompt</BodyTwoText>
-              <AiCustomizationFieldSection
+              <FieldSection
                 fieldName="systemPrompt"
                 inputType="textarea"
                 description="This system prompt can be displayed to student based on
