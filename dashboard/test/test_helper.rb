@@ -1,9 +1,5 @@
 require 'test_reporter'
 
-if defined? ActiveRecord
-  ActiveRecord::Migration&.check_pending!
-end
-
 # This is a workaround for https://github.com/kern/minitest-reporters/issues/230
 Minitest.load_plugins
 Minitest.extensions.delete('rails')
@@ -59,8 +55,6 @@ require 'testing/rspec_mocks'
 require 'parallel_tests/test/runtime_logger'
 
 class ActiveSupport::TestCase
-  ActiveRecord::Migration.check_pending!
-
   setup do
     AWS::S3.stubs(:upload_to_bucket).raises("Don't actually upload anything to S3 in tests... mock it if you want to test it")
     AWS::S3.stubs(:download_from_bucket).raises("Don't actually download anything to S3 in tests... mock it if you want to test it")
