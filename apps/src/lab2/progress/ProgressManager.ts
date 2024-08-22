@@ -34,8 +34,8 @@ export type TestStatus =
   | 'FAIL'
   | 'SKIP'
   | 'ERROR'
-  | 'UNEXPECTED_FAILURE'
-  | 'EXPECTED_SUCCESS';
+  | 'EXPECTED_FAILURE'
+  | 'UNEXPECTED_SUCCESS';
 
 export const getInitialValidationState: () => ValidationState = () => ({
   hasConditions: false,
@@ -99,14 +99,17 @@ export default class ProgressManager {
       }
 
       if (validation.conditions) {
+        this.currentValidationState.validationResults =
+          this.validator.getValidationResults();
+        console.log({
+          validationResults: this.currentValidationState.validationResults,
+        });
         // Ask the lab-specific validator if this validation's
         // conditions are met.
         if (this.validator.conditionsMet(validation.conditions)) {
           if (!this.currentValidationState.satisfied) {
             this.currentValidationState.satisfied = validation.next;
             this.currentValidationState.message = validation.message;
-            this.currentValidationState.validationResults =
-              this.validator.getValidationResults();
             this.onProgressChange();
           }
           return;

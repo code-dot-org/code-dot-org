@@ -32,6 +32,8 @@ import commonI18n from '@cdo/locale';
 import {useCodebridgeContext} from '../codebridgeContext';
 import {appendSystemMessage} from '../redux/consoleRedux';
 
+import ValidationResults from './ValidationResults';
+
 import moduleStyles from '@codebridge/InfoPanel/styles/validated-instructions.module.scss';
 
 // By default we show the test and navigation buttons unless the URL parameter 'button-bar' is set.
@@ -318,6 +320,7 @@ const ValidatedInstructions: React.FunctionComponent<InstructionsProps> = ({
           </div>
         )}
         {SHOW_TEST_NAVIGATION_BUTTONS && renderTestButton()}
+        <ValidationResults className={moduleStyles['bubble-' + theme]} />
         {SHOW_TEST_NAVIGATION_BUTTONS && showNavigation && (
           <div
             id="instructions-navigation"

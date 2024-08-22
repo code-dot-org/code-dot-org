@@ -1,0 +1,19 @@
+@import 'color.scss';
+
+%icon {
+  margin-right: 4px;
+}
+.passIcon {
+  @extend %icon;
+  color: $light_affirmative_500;
+}
+
+.failIcon {
+  @extend %icon;
+  color: $light_negative_500;
+}
+
+.cautionIcon {
+  @extend %icon;
+  color: $light_caution_500
+}
