@@ -11,8 +11,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-25 22:53:56 UTC",
-    "published_state": null,
+    "serialized_at": "2024-08-21 19:01:21 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -130,6 +130,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL AYWA4 Workshop Overview_2024"
+        ],
         "progression": "Module 4 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -152,6 +155,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Understanding the context for the Model Lesson overview_M4_2024"
+        ],
         "progression": "Understanding the Context for Lists (~30 minutes)"
       },
       "bonus": false,
@@ -174,6 +180,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Reflection 1_M4_2024"
+        ],
         "progression": "Understanding the Context for Lists (~30 minutes)"
       },
       "bonus": false,
@@ -196,6 +205,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP AYW4 - Mental Models in Unit 5_2024"
+        ],
         "progression": "Mental models in Unit 6 (~30 minutes)"
       },
       "bonus": false,
@@ -218,6 +230,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - M4 - Intro to CI_2024"
+        ],
         "progression": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~15 minutes)"
       },
       "bonus": false,
@@ -240,6 +255,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - M4 - Broadening the def_2024"
+        ],
         "progression": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~15 minutes)"
       },
       "bonus": false,
@@ -262,6 +280,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - M4 - Feedback in CI_2024"
+        ],
         "progression": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~15 minutes)"
       },
       "bonus": false,
@@ -284,6 +305,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - M4 - Practice feedback_2024"
+        ],
         "progression": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~15 minutes)"
       },
       "bonus": false,
@@ -306,6 +330,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 4 Wrap Up_2024"
+        ],
         "progression": "Module 4 Asynchronous Wrap Up (~10 minutes)"
       },
       "bonus": false,
