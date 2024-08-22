@@ -163,8 +163,7 @@ gem 'cancancan', '~> 3.5.0'
 gem 'devise', '~> 4.9.0'
 gem 'devise_invitable', '~> 2.0.2'
 
-# Ref: https://github.com/daynew/omniauth-clever/pull/1
-gem 'omniauth-clever', '~> 2.0.0', github: 'code-dot-org/omniauth-clever'
+gem 'omniauth-clever', '~> 2.0.1', github: 'code-dot-org/omniauth-clever', tag: 'v2.0.1'
 gem 'omniauth-facebook', '~> 4.0.0'
 gem 'omniauth-google-oauth2', '~> 0.6.0'
 gem 'omniauth-microsoft_v2_auth', github: 'dooly-ai/omniauth-microsoft_v2_auth'
@@ -287,6 +286,7 @@ gem 'addressable'
 gem 'bcrypt', '3.1.13'
 gem 'sshkit'
 gem 'validates_email_format_of'
+gem 'validate_url', '~> 1.0.15'
 
 gem 'composite_primary_keys', '~> 13.0'
 
@@ -299,7 +299,6 @@ gem 'full-name-splitter', github: 'pahanix/full-name-splitter'
 gem 'rambling-trie', '>= 2.1.1'
 
 gem 'omniauth-openid'
-gem 'omniauth-openid-connect', github: 'code-dot-org/omniauth-openid-connect', ref: 'cdo'
 
 # Ref: https://github.com/toy/image_optim/pull/145
 # Also include sRGB color profile conversion.
@@ -365,4 +364,5 @@ gem 'statsig', '~> 1.33'
 gem 'mailgun-ruby', '~>1.2.14'
 gem 'mailjet', '~> 1.7.3'
 
+gem 'json-jwt', '~> 1.15'
 gem "json-schema", "~> 4.3"
