@@ -481,16 +481,15 @@ class Ability
         user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
       end
 
-      if (user.has_pilot_experiment?(GENAI_PILOT) || (user.teacher? && user.oauth?)) ||
-          (!user.teachers.empty? &&
-          user.teachers.any? {|teacher| teacher.has_pilot_experiment?(GENAI_PILOT) || teacher.oauth?})
+      if user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
         can :chat_completion, :aichat
         can :log_chat_event, :aichat
         can :start_chat_completion, :aichat
         can :chat_request, :aichat
       end
-      # Only teachers can view student chat history.
-      if user.has_pilot_experiment?(GENAI_PILOT) || (user.teacher? && user.oauth?)
+      # Logic that confirms that a given teacher should have access
+      # to a given student's chat history is in aichat_controller.
+      if user.teacher_can_access_ai_chat?
         can :student_chat_history, :aichat
       end
     end
