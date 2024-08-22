@@ -28,8 +28,7 @@ module ActiveSupport
           if use_transactional_test_case?
             @test_case_connections = enlist_transaction_connections
             @test_case_connections.each do |connection|
-              connection.begin_transaction joinable: false, _lazy: false
-              connection.pool.lock_thread = true
+              connection.pool.pin_connection!(true)
             end
           end
         end
@@ -37,8 +36,7 @@ module ActiveSupport
         teardown_all do
           if use_transactional_test_case && @test_case_connections
             @test_case_connections.each do |connection|
-              connection.rollback_transaction if connection.transaction_open?
-              connection.pool.lock_thread = false
+              connection.pool.unpin_connection!
             end
           end
         end
