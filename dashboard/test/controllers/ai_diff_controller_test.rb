@@ -70,7 +70,7 @@ class AiDiffControllerTest < ActionController::TestCase
     assert_response :bad_request
   end
 
-  test "returns bad_request when getting chat_completion if ai_diff experiment isn't enabled" do
+  test "returns forbidden when getting chat_completion if ai_diff experiment isn't enabled" do
     sign_in @teacher_sans_experiment
 
     post :chat_completion, params: {
@@ -80,7 +80,7 @@ class AiDiffControllerTest < ActionController::TestCase
       sessionId: @session_id
     }
 
-    assert_response :bad_request
+    assert_response :forbidden
   end
 
   test "does not get chat_completion if not a teacher" do

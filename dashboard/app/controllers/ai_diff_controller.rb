@@ -1,6 +1,7 @@
 class AiDiffController < ApplicationController
   include AiDiffBedrockHelper
-  load_and_authorize_resource except: [:chat_completion]
+  authorize_resource class: false
+  # load_and_authorize_resource except: [:chat_completion]
 
   # params are
   # inputText:
