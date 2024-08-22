@@ -487,7 +487,7 @@ class Ability
         can :start_chat_completion, :aichat
         can :chat_request, :aichat
       end
-      # Logic that confirms that a given teacher should have access
+      # Additional logic that confirms that a given teacher should have access
       # to a given student's chat history is in aichat_controller.
       if user.teacher_can_access_ai_chat?
         can :student_chat_history, :aichat
