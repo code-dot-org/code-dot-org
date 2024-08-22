@@ -56,10 +56,10 @@ class Census::CensusSubmission < ApplicationRecord
     dont_know:  "I DON'T KNOW"
   }.freeze
 
-  enum how_many_do_hoc: HOW_MANY_OPTIONS, _prefix: true
-  enum how_many_after_school: HOW_MANY_OPTIONS, _prefix: true
-  enum how_many_10_hours: HOW_MANY_OPTIONS, _prefix: true
-  enum how_many_20_hours: HOW_MANY_OPTIONS, _prefix: true
+  enum :how_many_do_hoc, HOW_MANY_OPTIONS, prefix: true
+  enum :how_many_after_school, HOW_MANY_OPTIONS, prefix: true
+  enum :how_many_10_hours, HOW_MANY_OPTIONS, prefix: true
+  enum :how_many_20_hours, HOW_MANY_OPTIONS, prefix: true
 
   ROLES = {
     teacher: "TEACHER",
@@ -69,7 +69,7 @@ class Census::CensusSubmission < ApplicationRecord
     other: "OTHER"
   }.freeze
 
-  enum submitter_role: ROLES, _prefix: true
+  enum :submitter_role, ROLES, prefix: true
 
   CLASS_FREQUENCIES = {
     less_than_one_hour_per_week: 'LESS THAN ONE HOUR PER WEEK',
@@ -78,7 +78,7 @@ class Census::CensusSubmission < ApplicationRecord
     dont_know: "I DON'T KNOW"
   }.freeze
 
-  enum class_frequency: CLASS_FREQUENCIES, _prefix: true
+  enum :class_frequency, CLASS_FREQUENCIES, prefix: true
 
   validates :school_year, presence: true, numericality: {greater_than_or_equal_to: 2017, less_than_or_equal_to: 2030}
   validates :submitter_email_address, length: {maximum: 255}
