@@ -93,7 +93,7 @@ class Section < ApplicationRecord
 
   validates :participant_type, acceptance: {accept: Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.to_h.values, message: 'must be facilitator, teacher, or student'}
 
-  serialize :grade, GradesArray
+  serialize :grade, coder: GradesArray
   # Allow accessing section.grades, without a costly column rename.
   alias_attribute :grades, :grade
 
