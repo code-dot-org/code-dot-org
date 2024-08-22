@@ -22,6 +22,7 @@ import progressV2Feedback from '@cdo/apps/templates/sectionProgressV2/progressV2
 import stats from '@cdo/apps/templates/teacherDashboard/statsRedux';
 import TeacherDashboard from '@cdo/apps/templates/teacherDashboard/TeacherDashboard';
 import teacherSections, {
+  sectionProviderName,
   selectSection,
   setRosterProvider,
   setRosterProviderName,
@@ -102,8 +103,15 @@ $(document).ready(function () {
     return (
       <BrowserRouter basename={baseUrl}>
         <TeacherDashboard
-          studioUrlPrefix={scriptData.studioUrlPrefix}
+          sectionId={selectedSection.id}
+          sectionName={selectedSection.name}
+          studentCount={selectedSection.students.length}
+          anyStudentHasProgress={selectedSection.any_student_has_progress}
           showAITutorTab={showAITutorTab}
+          sectionProviderName={sectionProviderName(
+            store.getState(),
+            selectedSection.id
+          )}
         />
       </BrowserRouter>
     );
