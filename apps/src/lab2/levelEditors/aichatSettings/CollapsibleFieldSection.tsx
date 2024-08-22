@@ -1,29 +1,17 @@
 import React from 'react';
 
-import {AiCustomizations} from '@cdo/apps/aichat/types';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 
-import FieldSection from './FieldSection';
+import FieldSection, {FieldSectionProps} from './FieldSection';
 
 import moduleStyles from './edit-aichat-settings.module.scss';
 
-interface CollapsibleFieldSectionProps {
-  fieldName: keyof AiCustomizations;
-  labelText: string;
-  description?: string;
-  inputType: 'text' | 'number' | 'textarea' | 'custom';
-  inputNode?: React.ReactNode;
-  min?: number;
-  max?: number;
-  step?: number;
-}
-
 const CollapsibleFieldSection: React.FunctionComponent<
-  CollapsibleFieldSectionProps
+  FieldSectionProps & {labelText: string}
 > = ({
+  labelText,
   fieldName,
   description,
-  labelText,
   inputType,
   inputNode,
   min,

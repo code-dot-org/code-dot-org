@@ -8,8 +8,7 @@ import {UpdateContext} from './UpdateContext';
 import VisibilityDropdown from './VisibilityDropdown';
 
 import moduleStyles from './edit-aichat-settings.module.scss';
-
-interface FieldSectionProps {
+export interface FieldSectionProps {
   fieldName: keyof AiCustomizations;
   description?: string;
   inputType: 'text' | 'number' | 'textarea' | 'custom';
