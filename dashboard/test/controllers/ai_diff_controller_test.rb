@@ -15,7 +15,6 @@ class AiDiffControllerTest < ActionController::TestCase
 
     @teacher_sans_experiment = create(:teacher)
     @teacher = create(:teacher)
-    @unit_display_name = "Beowulf Course"
 
     create :single_user_experiment, min_user_id: @teacher.id, name: 'ai-differentiation'
 
@@ -132,7 +131,7 @@ class AiDiffControllerTest < ActionController::TestCase
     assert_equal "assistant", json_response["role"]
   end
 
-  test "returns success when experiment is enabled and session_id is absent" do
+  test "returns success when experiment is enabled and session_id is present" do
     sign_in @teacher
 
     post :chat_completion, params: {
