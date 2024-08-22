@@ -14,6 +14,7 @@ module ActiveSupport
 
         setup do
           pools = ActiveRecord::Base.connection_handler.connection_pool_list
+          pools.uniq! # Locking is at the pool level, so duplicate pool entries shouldn't trigger a warning
           all_connections = pools.map(&:connections).flatten
           if all_connections.many?
             warning = 'WARN: Multiple ActiveRecord connections are in use, this can make transactional tests fail in weird ways.'
