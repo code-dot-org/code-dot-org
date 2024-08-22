@@ -873,6 +873,7 @@ Dashboard::Application.routes.draw do
       get 'application_dashboard', to: 'application_dashboard#index'
     end
 
+    get '/dashboardapi/section/:section_id', to: 'api#section'
     get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
     get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
     get 'dashboardapi/section_courses/:section_id', to: 'api#show_courses_with_progress'

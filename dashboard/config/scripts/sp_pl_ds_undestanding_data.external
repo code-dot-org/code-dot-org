@@ -1,0 +1,32 @@
+name 'sp-pl-DS_Undestanding_Data'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Understanding Data 
+
+<img src="https://images.code.org/c715cdfd08dec69c2a8fcba233897b2d-image-1724253825742.png" alt="cat from the pixel activity" width="300px" style="border-radius:20px; float:right; margin: 0 0 40px 40px; transform: scaleX(-1);">
+
+#### In the pizza picture, you might have seen the following data:
+- #### Number of people
+- #### Number of adults vs. students
+- #### Number of pizzas
+- #### Types of pizzas
+- #### Set at a school
+#### And much more..
+
+#### There might have been data you chose to ignore, like: 
+- #### Number of post-it notes 
+- #### Number of blue shirts
+
+#### You may have come to the conclusion that there is a pizza party at a school celebrating something. 
+
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> This beginning exercise allows you to pre-assess what students know about data and to get them thinking about what data is and how to analyze it.  
+</p>
+</div>
+
+
+MARKDOWN
