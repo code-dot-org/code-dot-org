@@ -299,7 +299,8 @@ export const isReadOnlyWorkspace = (state: RootState) => {
   const readonlyPredictLevel = isReadonlyPredictLevel(state);
   const hasSubmitted = getCurrentLevel(state)?.status === LevelStatus.submitted;
   const isRunningAndReadonly =
-    state.lab2System.isRunning && shouldBeReadonlyWhileRunning(state);
+    (state.lab2System.isRunning || state.lab2System.isTesting) &&
+    shouldBeReadonlyWhileRunning(state);
 
   return (
     !isOwner ||
