@@ -7,8 +7,6 @@ import {
   publishModel,
   selectHasFilledOutModelCard,
   selectHavePropertiesChanged,
-  selectSavedEmptyModelCard,
-  selectCurrentEmptyModelCard,
 } from '@cdo/apps/aichat/redux/aichatRedux';
 import Alert, {AlertProps} from '@cdo/apps/componentLibrary/alert/Alert';
 import Button from '@cdo/apps/componentLibrary/button/Button';
@@ -21,6 +19,7 @@ import {ModelCardInfo} from '../../types';
 import {MODEL_CARD_FIELDS_LABELS_ICONS} from './constants';
 import ExampleTopicsInputs from './ExampleTopicsInputs';
 import FieldLabel from './FieldLabel';
+import SaveChangesAlerts from './SaveChangesAlerts';
 import {isDisabled} from './utils';
 
 import modelCustomizationStyles from '../model-customization-workspace.module.scss';
@@ -40,8 +39,6 @@ const PublishNotes: React.FunctionComponent = () => {
   const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
   const currentSaveType = useAppSelector(state => state.aichat.currentSaveType);
   const havePropertiesChanged = useAppSelector(selectHavePropertiesChanged);
-  const isCurrentModelCardEmpty = useAppSelector(selectCurrentEmptyModelCard);
-  const isSavedModelCardEmpty = useAppSelector(selectSavedEmptyModelCard);
 
   const onSave = useCallback(() => {
     dispatch(saveModelCard());
@@ -130,36 +127,7 @@ const PublishNotes: React.FunctionComponent = () => {
           className={modelCustomizationStyles.updateButton}
         />
       </div>
-      {havePropertiesChanged && !saveInProgress && !isReadOnly && (
-        <Alert
-          text={'You have unsaved changes'}
-          type={'warning'}
-          size="s"
-          className={modelCustomizationStyles.saveAlert}
-        />
-      )}
-      {isCurrentModelCardEmpty &&
-        isSavedModelCardEmpty &&
-        !saveInProgress &&
-        !isReadOnly && (
-          <Alert
-            text={'Remember to save your changes'}
-            type={'info'}
-            size="s"
-            className={modelCustomizationStyles.saveAlert}
-          />
-        )}
-      {!isSavedModelCardEmpty &&
-        !havePropertiesChanged &&
-        !saveInProgress &&
-        !isReadOnly && (
-          <Alert
-            text={'Saved'}
-            type={'success'}
-            size="s"
-            className={modelCustomizationStyles.saveAlert}
-          />
-        )}
+      <SaveChangesAlerts />
     </div>
   );
 };
