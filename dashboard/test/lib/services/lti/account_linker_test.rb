@@ -23,6 +23,20 @@ class Services::Lti::AccountLinkerTest < ActiveSupport::TestCase
     assert Policies::Lti.lti?(@user)
   end
 
+  test 'sets the lti_roster_sync_enabled and lms_landing_opted_out properties on the user' do
+    partial_lti_teacher = create :teacher
+    ao = create :lti_authentication_option
+    fake_id_token = {iss: @lti_integration.issuer, aud: @lti_integration.client_id, sub: 'foo'}
+    auth_id = Services::Lti::AuthIdGenerator.new(fake_id_token).call
+    ao.update(authentication_id: auth_id)
+    partial_lti_teacher.authentication_options = [ao]
+    PartialRegistration.persist_attributes @session, partial_lti_teacher
+    Services::Lti::AccountLinker.call(user: @user, session: @session)
+
+    assert_equal true, @user.reload.lti_roster_sync_enabled
+    assert_equal true, @user.lms_landing_opted_out
+  end
+
   test 'Swaps the existing user into the defunct user\'s sections' do
     new_student = create :student
     existing_student = create :student
