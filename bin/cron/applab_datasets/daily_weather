@@ -157,7 +157,7 @@ def get_weather_data
     if response.code != '200'
       Honeybadger.notify(
         error: response.message,
-        error_message: "Failed to retrieve data from Open Weather API for use with App Labs datasets.",
+        error_message: "Failed to retrieve data from Open Weather API for WeatherForecastOffice with zip code #{office.zip_code}. This office will not be updated in App Labs datasets.",
       )
       next
     end
