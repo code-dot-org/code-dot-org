@@ -5,7 +5,7 @@ import GenericDialog, {GenericDialogProps} from './GenericDialog';
 export type GenericConfirmationDialogProps = Required<
   Pick<GenericDialogProps, 'title' | 'message'>
 > & {
-  handleConfirm: () => void;
+  handleConfirm?: () => void;
   handleCancel?: () => void;
   confirmText?: string;
 };
