@@ -31,8 +31,8 @@ module CAP
       COMPLIANCE_REMOVING = 'compliance_removing'.freeze,
     ].freeze
 
-    enum policy: POLICIES.index_by(&:underscore), _suffix: true
-    enum name: NAMES.index_by(&:underscore)
+    enum :policy, POLICIES.index_by(&:underscore), suffix: true
+    enum :name, NAMES.index_by(&:underscore)
 
     belongs_to :user
 
