@@ -100,49 +100,24 @@ class ParentLetter extends React.Component {
               studentName: studentName,
             })}
           />
-          <h1>{i18n.parentLetterStep1()}</h1>
-          <SafeMarkdown
-            markdown={i18n.parentLetterStep1Details({
-              engagementLink: ENGAGEMENT_URL,
-              videosLink: pegasus(`/educate/resources/videos`),
-            })}
-          />
-          <h1>{i18n.parentLetterStep2()}</h1>
-          <SignInInstructions
-            loginType={loginType}
-            loginTypeName={loginTypeName}
-            secretPicturePath={secretPicturePath}
-            secretWords={secretWords}
-            sectionCode={sectionCode}
-            studentName={studentName}
-          />
           {loginType !== SectionLoginType.lti_v1 ? (
-            <SafeMarkdown
-              markdown={i18n.parentLetterStep2Details({
-                studentName: studentName,
-                projectsLink: studio('/projects/public'),
-                atHomeLink: pegasus('/athome'),
-              })}
+            <RegularParentLetterSteps
+              loginType={loginType}
+              loginTypeName={loginTypeName}
+              secretPicturePath={secretPicturePath}
+              secretWords={secretWords}
+              sectionCode={sectionCode}
+              studentName={studentName}
             />
           ) : (
-            <SafeMarkdown
-              markdown={i18n.parentLetterStep2Details_LMS({
-                studentName: studentName,
-                loginTypeName: loginTypeName,
-              })}
+            <LMSParentLetterSteps
+              loginType={loginType}
+              loginTypeName={loginTypeName}
+              secretPicturePath={secretPicturePath}
+              secretWords={secretWords}
+              sectionCode={sectionCode}
+              studentName={studentName}
             />
-          )}
-          {loginType !== SectionLoginType.lti_v1 ? (
-            <div>
-              <h1>{i18n.parentLetterStep3()}</h1>
-              <SafeMarkdown
-                markdown={i18n.parentLetterStep3Details({
-                  accountEditLink: studio('/users/edit'),
-                })}
-              />
-            </div>
-          ) : (
-            <div />
           )}
 
           <h1>{i18n.parentLetterWhy()}</h1>
@@ -189,6 +164,101 @@ Header.propTypes = {
 };
 Header.defaultProps = {
   logoUrl: '/shared/images/CodeLogo_White.png',
+};
+
+const RegularParentLetterSteps = ({
+  loginType,
+  loginTypeName,
+  secretPicturePath,
+  secretWords,
+  sectionCode,
+  studentName,
+}) => {
+  return (
+    <div>
+      <h1>{i18n.parentLetterStep1()}</h1>
+      <SafeMarkdown
+        markdown={i18n.parentLetterStep1Details({
+          engagementLink: ENGAGEMENT_URL,
+          videosLink: pegasus(`/educate/resources/videos`),
+        })}
+      />
+      <h1>{i18n.parentLetterStep2()}</h1>
+      <SignInInstructions
+        loginType={loginType}
+        loginTypeName={loginTypeName}
+        secretPicturePath={secretPicturePath}
+        secretWords={secretWords}
+        sectionCode={sectionCode}
+        studentName={studentName}
+      />
+      <SafeMarkdown
+        markdown={i18n.parentLetterStep2Details({
+          studentName: studentName,
+          projectsLink: studio('/projects/public'),
+          atHomeLink: pegasus('/athome'),
+        })}
+      />
+      <h1>{i18n.parentLetterStep3()}</h1>
+      <SafeMarkdown
+        markdown={i18n.parentLetterStep3Details({
+          accountEditLink: studio('/users/edit'),
+        })}
+      />
+    </div>
+  );
+};
+RegularParentLetterSteps.propTypes = {
+  loginType: PropTypes.oneOf(Object.values(SectionLoginType)),
+  loginTypeName: PropTypes.string,
+  secretPicturePath: PropTypes.string,
+  secretWords: PropTypes.string,
+  sectionCode: PropTypes.string,
+  studentName: PropTypes.string,
+};
+
+const LMSParentLetterSteps = ({
+  loginType,
+  loginTypeName,
+  secretPicturePath,
+  secretWords,
+  sectionCode,
+  studentName,
+}) => {
+  return (
+    <div>
+      <h1>{i18n.parentLetterStep1()}</h1>
+      <SafeMarkdown
+        markdown={i18n.parentLetterStep1Details({
+          engagementLink: ENGAGEMENT_URL,
+          videosLink: pegasus(`/educate/resources/videos`),
+        })}
+      />
+      <h1>{i18n.parentLetterStep2()}</h1>
+      <SignInInstructions
+        loginType={loginType}
+        loginTypeName={loginTypeName}
+        secretPicturePath={secretPicturePath}
+        secretWords={secretWords}
+        sectionCode={sectionCode}
+        studentName={studentName}
+      />
+      <SafeMarkdown
+        markdown={i18n.parentLetterStep2Details_LMS({
+          studentName: studentName,
+          loginTypeName: loginTypeName,
+        })}
+      />
+    </div>
+  );
+};
+LMSParentLetterSteps.propTypes = {
+  loginType: PropTypes.oneOf(Object.values(SectionLoginType)),
+  loginTypeName: PropTypes.string,
+  secretPicturePath: PropTypes.string,
+  secretWords: PropTypes.string,
+  sectionCode: PropTypes.string,
+  studentName: PropTypes.string,
 };
 
 const SignInInstructions = ({

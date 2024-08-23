@@ -1,4 +1,4 @@
-import {render} from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import React from 'react';
 
 import {UnconnectedParentLetter as ParentLetter} from '@cdo/apps/templates/teacherDashboard/ParentLetter';
@@ -22,10 +22,11 @@ describe('ParentLetter', () => {
       />
     );
 
-    const parentLetter = document.getElementById('printArea');
-    const loginStep =
-      parentLetter.children[1].children[5].children[1].children[1].textContent;
-    expect(loginStep).toBe(i18n.parentLetterSecretWords({secretWords: ''}));
+    const loginStep = screen.getByText(
+      i18n.parentLetterSecretWords({secretWords: ''}),
+      {collapseWhitespace: false}
+    );
+    expect(loginStep).toBeInTheDocument();
   });
 
   it('Canvas section login type should have Canvas instructions', () => {
@@ -40,11 +41,9 @@ describe('ParentLetter', () => {
       />
     );
 
-    const parentLetter = document.getElementById('printArea');
-    const loginStep =
-      parentLetter.children[1].children[5].children[1].children[0].textContent;
-    expect(loginStep).toBe(
+    const loginStep = screen.getByText(
       i18n.parentLetter_LMS_Step1({loginTypeName: 'Canvas'})
     );
+    expect(loginStep).toBeInTheDocument();
   });
 });
