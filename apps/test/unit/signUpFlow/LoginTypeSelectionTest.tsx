@@ -26,5 +26,13 @@ describe('LoginTypeSelection', () => {
     screen.getByText(locale.password());
     screen.getByText(locale.confirm_password());
     screen.getByText(locale.minimum_six_chars());
+
+    // Renders button that sends the user to the Account Type page
+    const accountTypePageButton = screen.getAllByRole('link')[5];
+    expect(
+      accountTypePageButton
+        .toString()
+        .includes("href: '/users/new_sign_up/account_type'")
+    ).toBeTruthy;
   });
 });
