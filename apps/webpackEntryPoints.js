@@ -217,7 +217,6 @@ const PEGASUS_ENTRIES = {
   'code.org/public/poetry': './src/sites/code.org/pages/public/poetry.js',
 
   // hourofcode.com
-  'hourofcode.com/public/events/index': './src/sites/hourofcode.com/pages/public/events/index.js',
   'hourofcode.com/views/theme_common_head_after': './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
   'hourofcode.com/views/theme_google_analytics': './src/sites/hourofcode.com/pages/views/theme_google_analytics.js',
 
