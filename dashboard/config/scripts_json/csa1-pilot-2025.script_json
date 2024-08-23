@@ -9,6 +9,7 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
+      "pilot_experiment": "csa-pilot-2025",
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
@@ -16,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-22 01:23:16 UTC",
+    "serialized_at": "2024-08-22 15:11:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -9620,6 +9621,39 @@
       }
     },
     {
+      "name": "All Resources",
+      "url": "/s/csa1-pilot-2025/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/csa1-pilot-2025/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/csa1-pilot-2025/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
       "name": "Asphalt Art Project",
       "url": "https://docs.google.com/presentation/d/1JliJ9LioCFS28DbedgICqNfE8nqsHoxyibOl1ZfXkAE/edit?usp=drive_link",
       "key": "asphalt_art_project",
@@ -11450,6 +11484,24 @@
     {
       "seeding_key": {
         "resource.key": "_exemplar_unit_1_guide",
+        "script.name": "csa1-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "csa1-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "csa1-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
         "script.name": "csa1-pilot-2025"
       }
     },

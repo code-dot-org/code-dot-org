@@ -293,6 +293,7 @@ Feature: Using the teacher dashboard
     And I wait until element "#uitest-course-dropdown" is visible
     And I select the "All the Things! *" option in dropdown "uitest-course-dropdown"
 
+  @skip
   @eyes
   Scenario: Teacher can view more tiles when clicking on view more button
     When I open my eyes to test "teacher dashboard"

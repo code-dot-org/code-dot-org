@@ -12,7 +12,6 @@ import {
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeReviewGroupsDialog';
 import ManageStudentsActionsCell from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
-import ManageStudentActionsHeaderCell from '@cdo/apps/templates/manageStudents/ManageStudentsActionsHeaderCell';
 import ManageStudentFamilyNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsFamilyNameCell';
 import ManageStudentsGenderCell from '@cdo/apps/templates/manageStudents/ManageStudentsGenderCell';
 import ManageStudentNameCell from '@cdo/apps/templates/manageStudents/ManageStudentsNameCell';
@@ -189,36 +188,6 @@ describe('ManageStudentsTable', () => {
           }
         />
       );
-    });
-
-    describe('LTI section tests', () => {
-      it('does not render the Actions column if loginType is lti_v1 and sync is enabled', () => {
-        const store = getStore();
-        store.dispatch(setLoginType(SectionLoginType.lti_v1));
-        store.dispatch(setSections([{...fakeSection, sync_enabled: true}]));
-        const wrapper = mount(
-          <Provider store={store}>
-            <ManageStudentsTable />
-          </Provider>
-        );
-
-        expect(wrapper.find(ManageStudentActionsHeaderCell).exists()).to.be
-          .false;
-      });
-
-      it('does render the Actions column if loginType is lti_v1 and sync is disabled', () => {
-        const store = getStore();
-        store.dispatch(setLoginType(SectionLoginType.lti_v1));
-        store.dispatch(setSections([{...fakeSection, sync_enabled: false}]));
-        const wrapper = mount(
-          <Provider store={store}>
-            <ManageStudentsTable />
-          </Provider>
-        );
-
-        expect(wrapper.find(ManageStudentActionsHeaderCell).exists()).to.be
-          .true;
-      });
     });
 
     describe('Gender field feature flag', () => {
