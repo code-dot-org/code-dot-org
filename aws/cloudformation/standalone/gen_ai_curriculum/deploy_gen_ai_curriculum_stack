@@ -50,12 +50,13 @@ def main
     options[:dry_run] = response == 'y'
   end
 
-  # Prompt for environment if not provided
+  # Prompt for token if not provided
   unless options[:token]
     print "HuggingFace Access Token: "
     options[:token] = gets.chomp
   end
 
+  # Prompt for image URI if not provided
   unless options.key?(:image_uri)
     unless options.key?(:image_uri_version)
       print "HuggingFace Image URI version (blank for latest): "
