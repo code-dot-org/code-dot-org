@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # What does it mean to hypothesize and test?
 
-#### This lesson covers practicing block-based coding basics, building on your understanding of computer science and its everyday applications.
+#### Observe -> Hypothesize -> Modify -> Test Cycle: Students should observe the bug, hypothesize what might be causing it, make modifications, and test to see if the issue is resolved. Repeat as necessary.
 
 <img src="https://images.code.org/4e37cf72816a90a1abccaf66d623b4ad-image-1704408444176.23.19 PM.png" alt="Image of a cartoon octopus holding a microphone and wearing a hat" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
