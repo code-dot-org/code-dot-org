@@ -1,4 +1,11 @@
-import HttpClient, {ResponseValidator} from '@cdo/apps/util/HttpClient';
+import cloneDeep from 'lodash/cloneDeep';
+
+import currentLocale from '@cdo/apps/util/currentLocale';
+import experiments from '@cdo/apps/util/experiments';
+import HttpClient, {
+  ResponseValidator,
+  GetResponse,
+} from '@cdo/apps/util/HttpClient';
 
 import AppConfig, {getBaseAssetUrl} from '../appConfig';
 import {baseAssetUrlRestricted, DEFAULT_PACK} from '../constants';
@@ -26,7 +33,7 @@ async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
       localLibrary as LibraryJson
     );
   } else {
-    const libraryJsonResponse = await HttpClient.fetchJson<LibraryJson>(
+    const libraryJsonResponsePromise = HttpClient.fetchJson<LibraryJson>(
       getBaseAssetUrl() +
         libraryFilename +
         '.json' +
@@ -34,7 +41,41 @@ async function loadLibrary(libraryName: string): Promise<MusicLibrary> {
       {},
       LibraryValidator
     );
-    return new MusicLibrary(libraryName, libraryJsonResponse.value);
+    const promises: Promise<GetResponse<Translations | LibraryJson>>[] = [
+      libraryJsonResponsePromise,
+    ];
+
+    const jsLocale = currentLocale().toLowerCase().replace('-', '_');
+    if (jsLocale !== 'en_us') {
+      const translationPromise = HttpClient.fetchJson<Translations>(
+        getBaseAssetUrl() + libraryFilename + '-loc/' + jsLocale + '.json'
+      );
+      promises.push(translationPromise);
+    }
+
+    // translations will be undefined if locale is en_us.
+    const [libraryJsonResponse, translations] = await Promise.allSettled(
+      promises
+    );
+
+    let libraryJson = {} as LibraryJson;
+    if (libraryJsonResponse.status === 'fulfilled') {
+      libraryJson = libraryJsonResponse.value.value as LibraryJson;
+    }
+
+    // Early return with no translations unless experiment is enabled for now.
+    if (!experiments.isEnabledAllowingQueryString('libraryLocalization')) {
+      return new MusicLibrary(libraryName, libraryJson);
+    }
+
+    if (translations && translations.status === 'fulfilled') {
+      libraryJson = localizeLibrary(
+        libraryJson,
+        translations.value.value as Translations
+      );
+    }
+
+    return new MusicLibrary(libraryName, libraryJson);
   }
 }
 
@@ -298,6 +339,41 @@ export const LibraryValidator: ResponseValidator<LibraryJson> = response => {
   return libraryJson;
 };
 
+const localizeLibrary = (
+  library: LibraryJson,
+  translations: Translations
+): LibraryJson => {
+  const libraryJsonLocalized = cloneDeep(library);
+  libraryJsonLocalized.instruments.forEach(
+    instrument =>
+      (instrument.name = translations[instrument.id] || instrument.name)
+  );
+
+  libraryJsonLocalized.kits.forEach(kit => {
+    const kitId = kit.id;
+    kit.name = translations[kitId] || kit.name;
+    kit.sounds.forEach(sound => {
+      const soundId = `${kitId}/${sound.src}`;
+      sound.name = translations[soundId] || sound.name;
+    });
+  });
+
+  libraryJsonLocalized.packs.forEach(pack => {
+    const packId = pack.id;
+    if (!pack.skipLocalization) {
+      pack.name = translations[packId] || pack.name;
+    }
+    pack.sounds.forEach(sound => {
+      if (!sound.skipLocalization) {
+        const soundId = `${packId}/${sound.src}`;
+        sound.name = translations[soundId] || sound.name;
+      }
+    });
+  });
+
+  return libraryJsonLocalized;
+};
+
 export type SoundType = 'beat' | 'bass' | 'lead' | 'fx' | 'vocal' | 'preview';
 
 /**
@@ -335,6 +411,7 @@ export interface SoundData {
   sequence?: SampleSequence;
   bpm?: number;
   key?: Key;
+  skipLocalization?: boolean;
 }
 
 export interface ImageAttribution {
@@ -358,6 +435,7 @@ export interface SoundFolder {
   bpm?: number;
   key?: Key;
   imageAttribution?: ImageAttribution;
+  skipLocalization?: boolean;
 }
 
 export type LibraryJson = {
@@ -376,4 +454,8 @@ export type LibraryJson = {
 
 interface Sounds {
   [index: string]: [string];
+}
+
+interface Translations {
+  [key: string]: string;
 }

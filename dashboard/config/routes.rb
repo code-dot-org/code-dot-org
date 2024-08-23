@@ -193,6 +193,7 @@ Dashboard::Application.routes.draw do
       get '/users/new_sign_up', to: 'registrations#new_sign_up'
       # Part of the new sign up flow - work in progress
       get '/users/new_sign_up/account_type', to: 'registrations#account_type'
+      get '/users/new_sign_up/finish_student_account', to: 'registrations#finish_student_account'
       get '/users/new_sign_up/finish_teacher_account', to: 'registrations#finish_teacher_account'
       patch '/dashboardapi/users', to: 'registrations#update'
       patch '/users/upgrade', to: 'registrations#upgrade'
@@ -872,6 +873,7 @@ Dashboard::Application.routes.draw do
       get 'application_dashboard', to: 'application_dashboard#index'
     end
 
+    get '/dashboardapi/section/:section_id', to: 'api#section'
     get '/dashboardapi/section_progress/:section_id', to: 'api#section_progress'
     get '/dashboardapi/section_text_responses/:section_id', to: 'api#section_text_responses'
     get 'dashboardapi/section_courses/:section_id', to: 'api#show_courses_with_progress'
@@ -1172,6 +1174,8 @@ Dashboard::Application.routes.draw do
     post '/aichat/check_message_safety', to: 'aichat#check_message_safety'
     post '/aichat/start_chat_completion', to: 'aichat#start_chat_completion'
     get '/aichat/chat_request/:id', to: 'aichat#chat_request'
+
+    post 'ai_diff/chat_completion', to: 'ai_diff#chat_completion'
 
     resources :ai_tutor_interactions, only: [:create, :index] do
       resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]
