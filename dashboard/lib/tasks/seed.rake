@@ -474,7 +474,7 @@ namespace :seed do
 
     # This command will import the data from the file into the dashboard_test database
     puts "Quick Importing data from #{sql_import_file}"
-    sh("mysql -u #{username} --password='#{password}' -h #{host} -P #{port} #{database} < #{sql_import_file}")
+    sh("zcat #{sql_import_file} | mysql -u #{username} --password='#{password}' -h #{host} -P #{port} #{database}")
   end
 
   FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :datablock_storage].freeze

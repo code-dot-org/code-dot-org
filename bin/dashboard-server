@@ -12,7 +12,7 @@ def main
     end
   else
     # Normal rerun setup for development
-    dirs = [deploy_dir('lib'), deploy_dir('shared/middleware'), deploy_dir('dashboard/legacy')]
+    dirs = ['harnessless_shims.rb', deploy_dir('lib'), deploy_dir('shared/middleware'), deploy_dir('dashboard/legacy')]
     rerun = "rerun -p '**/*.{rb,ru,yml}' -d '#{dirs.join(',')}' -i '**/migrations/*.rb' -i 'test/**/*.rb' #{ARGV.join(' ')} --"
     pids = []
 
