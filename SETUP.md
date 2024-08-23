@@ -174,8 +174,7 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
         ```
 
 1.  Install **Node.js**
-    1. Install node version specified by [.
-    rc](.nvmrc):
+    1. Install node version specified by [.nvmrc](.nvmrc):
         ```
         nvm install    # run from the project root directory
         ```
