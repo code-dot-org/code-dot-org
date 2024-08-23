@@ -6,10 +6,9 @@ provisioner:
   name: chef_zero
   data_path: test/shared
   require_chef_omnibus: 17.6.18
-verifier:
-  name: inspec
+
 platforms:
-  - name: ubuntu-20.04
+  - name: ubuntu-18.04
     run_list:
       - recipe[apt]
 suites:

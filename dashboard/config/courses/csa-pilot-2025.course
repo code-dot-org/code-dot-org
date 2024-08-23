@@ -11,7 +11,7 @@
     "csa8-pilot-2025",
     "csa9-pilot-2025"
   ],
-  "published_state": "in_development",
+  "published_state": "pilot",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
@@ -19,6 +19,7 @@
     "family_name": "csa-pilot",
     "has_numbered_units": true,
     "has_verified_resources": true,
+    "pilot_experiment": "csa-pilot-2025",
     "version_year": "2025"
   },
   "resources": [
