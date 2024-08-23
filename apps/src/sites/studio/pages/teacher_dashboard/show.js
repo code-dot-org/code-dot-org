@@ -104,6 +104,7 @@ $(document).ready(function () {
     return (
       <BrowserRouter basename={baseUrl}>
         <TeacherDashboard
+          studioUrlPrefix={scriptData.studioUrlPrefix}
           sectionId={selectedSection.id}
           sectionName={selectedSection.name}
           studentCount={selectedSection.students.length}
