@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 
-import {Button, LinkButton} from '@cdo/apps/componentLibrary/button';
+import {LinkButton} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {Heading3, BodyThreeText} from '@cdo/apps/componentLibrary/typography';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import signupCanvas from '@cdo/apps/signUpFlow/images/signupCanvas.png';
 import signupSchoology from '@cdo/apps/signUpFlow/images/signupSchoology.png';
 import locale from '@cdo/apps/signUpFlow/locale';
@@ -115,10 +116,10 @@ const LoginTypeSelection: React.FunctionComponent = () => {
               name="confirmPasswordInput"
             />
           </div>
-          <Button
+          <LinkButton
             className={style.shortButton}
             text={locale.create_my_account()}
-            onClick={() => {}}
+            href={studio('/users/new_sign_up/account_type')}
           />
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button/Button';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import locale from '@cdo/apps/signUpFlow/locale';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 
@@ -33,7 +34,7 @@ const AccountType: React.FunctionComponent = () => {
             content={locale.explore_courses_and_activities()}
             buttonText={locale.sign_up_as_a_student()}
             buttonType="primary"
-            href="#"
+            href={studio('/users/new_sign_up/finish_student_account')}
             iconList={[
               locale.save_projects_and_progress(),
               locale.join_classroom_section(),
@@ -46,7 +47,7 @@ const AccountType: React.FunctionComponent = () => {
             content={locale.all_student_account_features()}
             buttonText={locale.sign_up_as_a_teacher()}
             buttonType="primary"
-            href="#"
+            href={studio('/users/new_sign_up/finish_teacher_account')}
             iconList={[
               locale.create_classroom_sections(),
               locale.track_student_progress(),

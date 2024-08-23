@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
+import {LinkButton, buttonColors} from '@cdo/apps/componentLibrary/button';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
@@ -154,11 +154,11 @@ const FinishStudentAccount: React.FunctionComponent<{
         />
       </fieldset>
       <div className={style.finishSignUpButtonContainer}>
-        <Button
+        <LinkButton
           className={style.finishSignUpButton}
           color={buttonColors.purple}
           type="primary"
-          onClick={() => console.log('FINISH SIGN UP')}
+          href="#"
           text={locale.go_to_my_account()}
           iconRight={{
             iconName: 'arrow-right',
