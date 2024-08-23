@@ -138,24 +138,16 @@ export default function RubricContainer({
   // add more functionality to the settings tab.
   const showSettings = onLevelForEvaluation && teacherHasEnabledAi;
 
+  // Update the server to indicate that the product tour has been seen.
   const updateTourStatus = useCallback(() => {
-    const bodyData = JSON.stringify({seen: productTour});
+    setProductTour(false);
+    const bodyData = JSON.stringify({seen: true});
     const rubricId = rubric.id;
     const url = `/rubrics/${rubricId}/update_ai_rubrics_tour_seen`;
     HttpClient.post(url, bodyData, true, {
       'Content-Type': 'application/json',
-    })
-      .then(response => {
-        return response.json();
-      })
-      .then(json => {
-        if (json['seen']) {
-          setProductTour(false);
-        } else {
-          setProductTour(true);
-        }
-      });
-  }, [rubric.id, productTour]);
+    });
+  }, [rubric.id]);
 
   const getTourStatus = useCallback(() => {
     const rubricId = rubric.id;
