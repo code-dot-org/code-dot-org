@@ -1,5 +1,5 @@
 ---
-api_key: "<%=CDO.pegasus_honeybadger_api_key%>"
+api_key: <%=CDO.pegasus_honeybadger_api_key%>
 exceptions:
   ignore: <%= %w(Sinatra).map{|x| "#{x}::NotFound"}.to_json%>
   notify_at_exit: false
