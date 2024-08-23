@@ -47,6 +47,7 @@ const Template = args => <AccessibleDialog {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   children: <div>Default Accessible Dialog</div>,
+  fallbackFocus: 'div',
   onClose: action('closed'),
   onDismiss: undefined,
 };
@@ -58,6 +59,7 @@ CustomStyles.args = {
       <p>Custom Styled Accessible Dialog</p>
     </div>
   ),
+  fallbackFocus: 'div',
   onClose: action('closed'),
   onDismiss: undefined,
   styles: {
@@ -70,6 +72,7 @@ CustomStyles.args = {
 export const WithOnDismiss = Template.bind({});
 WithOnDismiss.args = {
   children: <div>Accessible Dialog with onDismiss</div>,
+  fallbackFocus: 'div',
   onClose: action('closed'),
   onDismiss: action('dismissed'),
 };
@@ -77,6 +80,7 @@ WithOnDismiss.args = {
 export const WithoutInitialFocus = Template.bind({});
 WithoutInitialFocus.args = {
   children: <div>Accessible Dialog without initial focus</div>,
+  fallbackFocus: 'div',
   initialFocus: false,
   onClose: action('closed'),
   onDismiss: undefined,
@@ -86,6 +90,7 @@ export const ClickBackdropToClose = Template.bind({});
 ClickBackdropToClose.args = {
   children: <div>Accessible Dialog with backdrop click to close</div>,
   closeOnClickBackdrop: true,
+  fallbackFocus: 'div',
   onClose: action('closed'),
   onDismiss: undefined,
 };
