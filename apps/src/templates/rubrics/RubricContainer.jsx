@@ -139,15 +139,18 @@ export default function RubricContainer({
   const showSettings = onLevelForEvaluation && teacherHasEnabledAi;
 
   // Update the server to indicate that the product tour has been seen.
-  const updateTourStatus = useCallback(() => {
-    setProductTour(false);
-    const bodyData = JSON.stringify({seen: true});
-    const rubricId = rubric.id;
-    const url = `/rubrics/${rubricId}/update_ai_rubrics_tour_seen`;
-    HttpClient.post(url, bodyData, true, {
-      'Content-Type': 'application/json',
-    });
-  }, [rubric.id]);
+  const updateTourStatus = useCallback(
+    visible => {
+      setProductTour(visible);
+      const bodyData = JSON.stringify({seen: !visible});
+      const rubricId = rubric.id;
+      const url = `/rubrics/${rubricId}/update_ai_rubrics_tour_seen`;
+      HttpClient.post(url, bodyData, true, {
+        'Content-Type': 'application/json',
+      });
+    },
+    [rubric.id]
+  );
 
   const getTourStatus = useCallback(() => {
     const rubricId = rubric.id;
@@ -171,7 +174,7 @@ export default function RubricContainer({
 
   const tourRestartHandler = () => {
     tourRestarted.current = true;
-    updateTourStatus();
+    updateTourStatus(true);
     analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_TOUR_RESTARTED, {
       ...(reportingData || {}),
     });
@@ -189,7 +192,7 @@ export default function RubricContainer({
   };
 
   const onTourExit = stepIndex => {
-    updateTourStatus();
+    updateTourStatus(false);
     analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_TOUR_CLOSED, {
       ...(reportingData || {}),
       step: stepIndex,
@@ -197,7 +200,7 @@ export default function RubricContainer({
   };
 
   const onTourComplete = () => {
-    updateTourStatus();
+    updateTourStatus(false);
     analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_TOUR_COMPLETE, {
       ...(reportingData || {}),
     });
