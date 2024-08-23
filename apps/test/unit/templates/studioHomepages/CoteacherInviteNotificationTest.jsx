@@ -1,7 +1,9 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import Notification, {
+  NotificationType,
+} from '@cdo/apps/sharedComponents/Notification';
 import {UnconnectedCoteacherInviteNotification as CoteacherInviteNotification} from '@cdo/apps/templates/studioHomepages/CoteacherInviteNotification';
 
 describe('CoteacherInviteNotification', () => {

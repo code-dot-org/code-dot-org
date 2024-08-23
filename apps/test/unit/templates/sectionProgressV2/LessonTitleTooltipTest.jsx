@@ -14,7 +14,6 @@ describe('LessonTitleTooltip', () => {
       title: 'Lesson 9999 title',
       name: 'this is a test lesson',
     });
-    console.log(lesson);
     render(<LessonTitleTooltip lesson={lesson} />);
 
     expect(screen.getByText('Lesson 9999 title')).toBeDefined();

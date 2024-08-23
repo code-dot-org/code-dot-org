@@ -46,7 +46,6 @@ class AuthenticationOption < ApplicationRecord
     GOOGLE = 'google_oauth2',
     POWERSCHOOL = 'powerschool',
     QWIKLABS = 'lti_lti_prod_kids.qwikcamps.com',
-    THE_SCHOOL_PROJECT = 'the_school_project',
     TWITTER = 'twitter',
     WINDOWS_LIVE = 'windowslive',
     MICROSOFT = 'microsoft_v2_auth',

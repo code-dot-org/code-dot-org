@@ -1,0 +1,68 @@
+@import 'color.scss';
+@import './dialog-manager.module.scss';
+
+.genericDialog {
+  @extend %dialog;
+  display: flex;
+  flex-direction: column;
+}
+
+%button {
+  border: 2px solid;
+  transition: background-color 0.1s ease;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  &:disabled {
+    opacity: 50%;
+  }
+}
+
+.buttonContainer {
+  .outerButtonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    .innerButtonContainer {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+
+  .cancel {
+    @extend %button;
+    background-color: $neutral_light;
+    border-color: $neutral_dark;
+
+    &:hover:enabled {
+      background-color: $neutral_dark20;
+    }
+  }
+
+  .neutral {
+    @extend %button;
+    background-color: $neutral_light;
+    border-color: $neutral_dark;
+
+    &:hover:enabled {
+      background-color: $neutral_dark20;
+    }
+  }
+
+  .confirm {
+    @extend %button;
+    background-color: $brand_secondary_default;
+    border-color: $brand_secondary_default;
+    color: $neutral_light;
+
+    &:hover:enabled {
+      background-color: $brand_secondary_dark;
+      border-color: $brand_secondary_dark;
+    }
+  }
+}

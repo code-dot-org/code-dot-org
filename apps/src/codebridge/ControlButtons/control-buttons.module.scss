@@ -3,17 +3,29 @@
 .controlButtonsContainer {
   grid-area: control-buttons;
   display: grid;
-  grid-template-columns: 1fr repeat(2, auto) 1fr;
+  grid-template-columns: 1fr auto 1fr;
   padding: 8px 0;
   background-color: $neutral_dark80;
-  column-gap: 8px;
 }
 
-.firstControlButton {
+.centerButton {
   grid-column-start: 2;
+  display: flex;
+}
+
+.runButton {
+  margin-right: 8px;
 }
 
 .navigationButton {
   margin-left: auto;
   margin-right: 8px;
+  font-size: 16px;
+  display: flex;
+}
+
+.disabledInfoIcon {
+  padding: 8px;
+  color: $white;
+  cursor: 'pointer'
 }

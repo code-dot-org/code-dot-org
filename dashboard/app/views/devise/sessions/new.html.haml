@@ -2,7 +2,7 @@
 %link{href: "/shared/css/phase1-design-system.css", rel: "stylesheet"}
 %script{src: webpack_asset_path('js/devise/sessions/new.js')}
 
-- if DCDO.get('lti_account_linking_enabled', false) && Policies::Lti.lti_registration_in_progress?(session)
+- if Policies::Lti.lti_registration_in_progress?(session)
   = render 'login_lti_account_linking', lms_name: params[:lms_name]
 - else
   = render 'login'

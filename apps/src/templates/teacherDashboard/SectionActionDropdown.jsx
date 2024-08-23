@@ -2,21 +2,21 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
+import PopUpMenu from '@cdo/apps/sharedComponents/PopUpMenu';
 import QuickActionsCell from '@cdo/apps/templates/tables/QuickActionsCell';
 import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import color from '../../util/color';
 import BaseDialog from '../BaseDialog';
-import FontAwesome from '../FontAwesome';
 
 import DialogFooter from './DialogFooter';
 import PrintCertificates from './PrintCertificates';

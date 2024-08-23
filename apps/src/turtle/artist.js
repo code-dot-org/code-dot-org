@@ -555,16 +555,20 @@ Artist.prototype.afterInject_ = function (config) {
   visualization.appendChild(this.visualization.displayCanvas);
 
   if (this.studioApp_.isUsingBlockly() && this.isFrozenSkin()) {
+    // Google Blockly uses forBlock, CDO Blockly does not.
+    const blockGeneratorFunctionDictionary =
+      Blockly.JavaScript.forBlock || Blockly.JavaScript;
     // Override colour_random to only generate random colors from within our frozen
     // palette
-    Blockly.JavaScript.colour_random = function () {
+    blockGeneratorFunctionDictionary.colour_random = function () {
       // Generate a random colour.
       if (!Blockly.JavaScript.definitions_.colour_random) {
         var functionName = Blockly.JavaScript.variableDB_.getDistinctName(
           'colour_random',
           Blockly.Generator.NAME_TYPE
         );
-        Blockly.JavaScript.colour_random.functionName = functionName;
+        blockGeneratorFunctionDictionary.colour_random.functionName =
+          functionName;
         var func = [];
         func.push('function ' + functionName + '() {');
         func.push(
@@ -574,7 +578,8 @@ Artist.prototype.afterInject_ = function (config) {
         func.push('}');
         Blockly.JavaScript.definitions_.colour_random = func.join('\n');
       }
-      var code = Blockly.JavaScript.colour_random.functionName + '()';
+      var code =
+        blockGeneratorFunctionDictionary.colour_random.functionName + '()';
       return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
     };
   }

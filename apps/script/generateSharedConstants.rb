@@ -31,20 +31,21 @@ CONTENT
   File.open(path, 'w') {|f| f.write(output)}
 end
 
-# This generates a JS object from its ruby equivalent based on the constant
+# This generates a JS/TS object from its ruby equivalent based on the constant
 # name in shared_constants
 # @param [String] shared_const_name
 # @param [Module] source_module: (optional, default SharedConstants)
 # @param [Boolean] transform_keys: (optional, default false) if true, transform the hash keys into js style lowerCamelCase.
-def generate_constants(shared_const_name, source_module: SharedConstants, transform_keys: false)
+# @param [String] file_type: (optional, default 'js') the file type (JavaScript or TypeScript) to generate
+def generate_constants(shared_const_name, source_module: SharedConstants, transform_keys: false, file_type: 'js')
   raw = source_module.const_get(shared_const_name)
   begin
     hash_or_array = parse_raw(raw)
     hash_or_array = hash_or_array.deep_transform_keys {|k| k.to_s.camelize(:lower)} if transform_keys && hash_or_array.is_a?(Hash)
-    "export const #{shared_const_name.downcase.camelize} = #{JSON.pretty_generate(hash_or_array)};"
+    "export const #{shared_const_name.downcase.camelize} = #{JSON.pretty_generate(hash_or_array)}" + (file_type == 'ts' ? ' as const;' : ';');
   rescue JSON::ParserError
     if raw.is_a?(String)
-      "export const #{shared_const_name.downcase.camelize} = '#{raw}';"
+      "export const #{shared_const_name.downcase.camelize} = '#{raw}'" + (file_type == 'ts' ? ' as const;' : ';');
     else
       raise "unrecognized raw type: #{raw.class}"
     end
@@ -76,40 +77,44 @@ def parse_raw(raw)
 end
 
 def main
-  shared_content = generate_multiple_constants %w(
-    DEFAULT_LOCALE
-    ARTIST_AUTORUN_OPTIONS
-    LEVEL_KIND
-    LEVEL_STATUS
-    SECTION_LOGIN_TYPE
-    STUDENT_GRADE_LEVELS
-    PL_GRADE_VALUE
-    POST_MILESTONE_MODE
-    ALWAYS_PUBLISHABLE_PROJECT_TYPES
-    ALL_PUBLISHABLE_PROJECT_TYPES
-    CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES
-    ABUSE_CONSTANTS
-    ERROR_SEVERITY_LEVELS
-    RESTRICTED_PUBLISH_PROJECT_TYPES
-    RUBRIC_UNDERSTANDING_LEVELS
-    RUBRIC_AI_EVALUATION_STATUS
-    RUBRIC_AI_EVALUATION_LIMITS
-    EMAIL_LINKS
-    CHILD_ACCOUNT_COMPLIANCE_STATES
-    CENSUS_CONSTANTS
-    DANCE_SONG_MANIFEST_FILENAME
-    AI_INTERACTION_STATUS
-    AI_TUTOR_INTERACTION_STATUS
-    AI_TUTOR_TYPES
-    FEATURED_PROJECT_STATUS
-    FEATURED_PROJECT_CONSTANTS
-    LMS_LINKS
-    USER_TYPES
+  shared_content = generate_multiple_constants(
+        %w(
+      DEFAULT_LOCALE
+      ARTIST_AUTORUN_OPTIONS
+      LEVEL_KIND
+      LEVEL_STATUS
+      SECTION_LOGIN_TYPE
+      STUDENT_GRADE_LEVELS
+      PL_GRADE_VALUE
+      POST_MILESTONE_MODE
+      ALWAYS_PUBLISHABLE_PROJECT_TYPES
+      ALL_PUBLISHABLE_PROJECT_TYPES
+      CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES
+      ABUSE_CONSTANTS
+      ERROR_SEVERITY_LEVELS
+      RESTRICTED_PUBLISH_PROJECT_TYPES
+      RUBRIC_UNDERSTANDING_LEVELS
+      RUBRIC_AI_EVALUATION_STATUS
+      RUBRIC_AI_EVALUATION_LIMITS
+      EMAIL_LINKS
+      CHILD_ACCOUNT_COMPLIANCE_STATES
+      CENSUS_CONSTANTS
+      DANCE_SONG_MANIFEST_FILENAME
+      AI_INTERACTION_STATUS
+      AI_TUTOR_INTERACTION_STATUS
+      AI_TUTOR_TYPES
+      AI_REQUEST_EXECUTION_STATUS
+      FEATURED_PROJECT_STATUS
+      FEATURED_PROJECT_CONSTANTS
+      LMS_LINKS
+      USER_TYPES
+    ), 
+    file_type: 'ts'
   )
 
   # please place all generated scripts into #{REPO_DIR}/apps/generated_scripts
   # then import with import { needed } from "@cdo/generated-scripts/generatedFile"
-  generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/generated-scripts/sharedConstants.js")
+  generate_shared_js_file(shared_content, "#{REPO_DIR}/apps/generated-scripts/sharedConstants.ts")
   generate_shared_js_file(generate_constants('VOICES'), "#{REPO_DIR}/apps/generated-scripts/sharedVoices.js")
   generate_shared_js_file(generate_constants('APPLAB_BLOCKS'), "#{REPO_DIR}/apps/generated-scripts/sharedApplabBlocks.js")
   generate_shared_js_file(generate_constants('APPLAB_GOAL_BLOCKS'), "#{REPO_DIR}/apps/generated-scripts/sharedApplabGoalBlocks.js")

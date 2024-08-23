@@ -38,6 +38,7 @@ import CdoFieldAnimationDropdown from './addons/cdoFieldAnimationDropdown';
 import CdoFieldBehaviorPicker from './addons/cdoFieldBehaviorPicker';
 import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
 import CdoFieldButton from './addons/cdoFieldButton';
+import CdoFieldColour from './addons/cdoFieldColour';
 import CdoFieldFlyout from './addons/cdoFieldFlyout';
 import {CdoFieldImageDropdown} from './addons/cdoFieldImageDropdown';
 import CdoFieldParameter from './addons/cdoFieldParameter';
@@ -84,6 +85,7 @@ type GoogleBlocklyType = typeof GoogleBlockly;
 
 // Type for the Blockly instance created and modified by googleBlocklyWrapper.
 export interface BlocklyWrapperType extends GoogleBlocklyType {
+  showUnusedBlocks: boolean | undefined;
   BlockFieldHelper: {[fieldHelper: string]: string};
   enableParamEditing: boolean;
   selected: BlockSvg;
@@ -120,6 +122,7 @@ export interface BlocklyWrapperType extends GoogleBlocklyType {
   FieldToggle: typeof CdoFieldToggle;
   FieldFlyout: typeof CdoFieldFlyout;
   FieldBitmap: typeof CdoFieldBitmap;
+  FieldColour: typeof CdoFieldColour;
   FieldVariable: typeof CdoFieldVariable;
   FieldParameter: typeof CdoFieldParameter;
   JavaScript: JavascriptGeneratorType;
@@ -279,6 +282,7 @@ export interface ExtendedBlocklyOptions extends BlocklyOptions {
   useBlocklyDynamicCategories: boolean;
   grayOutUndeletableBlocks: boolean | undefined;
   disableParamEditing: boolean;
+  showUnusedBlocks: boolean | undefined;
 }
 
 export interface ExtendedWorkspace extends Workspace {
@@ -351,7 +355,7 @@ export interface ExtendedVariables extends VariablesType {
   getters: {[key: string]: string};
   registerGetter: (category: string, blockName: string) => void;
   allVariablesFromBlock: (block: Block) => string[];
-  getVars: (opt_category?: string) => {[key: string]: string[]};
+  getVars: (opt_category?: string) => string[];
 }
 
 export interface ProcedureBlock extends ExtendedBlockSvg, IProcedureBlock {

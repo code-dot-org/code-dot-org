@@ -1,0 +1,375 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-01T22:21:03.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "Place a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PainterPlus</code> object inside the wall.\r\n\r\n🎒 **IMPORT:** Import your <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PainterPlus</code> class from your **Backpack**.\r\n\r\n*Don't have it, or it doesn't work? That's ok! Copy the code from* <a href=\"https://studio.code.org/projects/javalab/MrU6HbfE2LHNSyZIuepuzTDnvKIBCQdg7qcW5PNtDJ4\" target=\"_blank\">***here***</a> *and paste it into a new file in your project.*\r\n\r\n✅ **TO DO #1:** Write a parameterized constructor in the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PainterPlus</code> class (look at the documentation for the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">Painter</code> class in the **Documentation** tab ⬆️ for the constructor signature).\r\n\r\n✅ **TO DO #2:** In <code style=\"background-color: #ececec; color: black; font-weight: bold;\">NeighborhoodRunner.java</code>, instantiate a <code style=\"background-color: #ececec; color: black; font-weight: bold;\">PainterPlus</code> object at location <code style=\"background-color: #ececec; color: black; font-weight: bold;\">(2, 2)</code> facing <code style=\"background-color: #ececec; color: black; font-weight: bold;\">\"south\"</code> with <code style=\"background-color: #ececec; color: black; font-weight: bold;\">16</code> units of paint.\r\n\r\n<div style=\"background-color: #E0D1EC; border: 1px solid #9660bf; border-radius: 5px; font-size: 1.1em; padding: 15px; margin-bottom: 10px;\">\r\n💡 <strong>TIP:</strong> Check out the <strong>Help & Tips</strong> tab ⬆️ for help with writing no-argument and parameterized constructors, using the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">super</code> keyword, and instantiating objects.\r\n</div>\r\n\r\n## ***Don't forget to . . .***\r\n\r\n![](https://images.code.org/eb2c8910ae2e150019b8e2177405d4af-image-1668191576873.png)\r\n\r\n## 🎯 Goal\r\n\r\n![](https://images.code.org/de2ba31be31d0f498d818510cc805f34-image-1646570998528.png)",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "neighborhood",
+    "display_name": "Inside the Wall",
+    "bubble_choice_description": "Place a `PainterPlus` object inside the wall.",
+    "thumbnail_url": "https://images.code.org/de2ba31be31d0f498d818510cc805f34-image-1646570998528.png",
+    "serialized_maze": [
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 62
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 77
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 77
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 77
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 77
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 78
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 80
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 81
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 80
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 81
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 80
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 81
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 80
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 1,
+          "value": 0,
+          "assetId": 0
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 81
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 85
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 86
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 86
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 86
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 86
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 87
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ],
+      [
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        },
+        {
+          "tileType": 0,
+          "value": 0,
+          "assetId": 48
+        }
+      ]
+    ],
+    "reference_links": [
+      "/courses/csa-2023/guides/no-argument-constructors",
+      "/courses/csa-2023/guides/parameterized-constructors",
+      "/courses/csa-2023/guides/the-super-keyword",
+      "/courses/csa-2023/guides/instantiating-objects"
+    ],
+    "encrypted_exemplar_sources": "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\n",
+    "encrypted_validation": "PMXSW4h6NKQADj3HVNe/yK+I8i22EOSlisZVWrp38b041P2IZJbd21zdUdyr\nSuU4GBmpnYdOCV0HhC818FXm6e/LR6GdvuKoCX+da3KolDTJbusIe72bel+f\nLVEJ10beMX6IDHq9gMYAVattq2c1uFeDVn5/cYY/hT/57erJySo8CFW7SIap\n87AwvDGUh8C+yT9pelbEo9/4Cqv7Q9xFMrTsm6+uoLoSFbG+N6JJpgOEAvnL\nf+aqnHy3EmE4H0ajrnbqN4RIRtlVHbVAN8FBCPs3IFmg5PhKUxMgRK2++wvB\n9RMWPgQvCHIkCuhfS3qt3AHk7KD/SSwzwgPz6XM2JCfpqdDaJCDINCCHiSVX\n1D+hOLEjn2XrBA2EARQ5iZ8ZjVRnTAU7Gndi3oYoa+zSa5d/gp2wI1PKrEx6\nJgqsaU8sC3/hWaQ36dRc3Kxv9eWAdv58g98zdpdaAFsP6AgccOn44M+ZEzVt\nIjD/6MmPOL2PWWkr3tf9NAnxV8NZebECMhcNKyuRMSwCkWnApfccNzxReEXG\n9oIcgW3gcrOLZI6IEJnR5HrHosGDnYw5bSMR5AqXHvQ93KFLCKEhufPXEP9W\nyJKYA5NkmbrT+Y/AIMXHoQu0u3uZnVCq5W2KngCcAgf8S/aJrwxjj58Lah68\nQ+HDUlAuDyhV8C2SCeZR8Z29+s1SqhKCOn+eAdVfkh4j06lmp1QepYQvXmfe\npgByHfSKUKYkFfxwPb4zwKUKxYIlOfoNDszmMEkMDFivokb2G50Kkb4qdVO2\n7CMEnKl1fxNMvU2JMtdl1RnTiG2J2r5yr9NST1jIRLruKGo9MetcreNPxa4M\nAb6QUK2Gi7AULnIrTXAqlmawFw6GLealRIZnWiS1IB22QaSNBsurnZpfdPmM\nGp6D7EyjMkfYdZzrVieGE4tNCOBU0hSIzaJyZ6W18gna+brfK7UG4L3xMKpE\n+QOINNQkVBJkaPQb2ZZ3h4dfpmyRTDkzIM/U1pvlswIfG0Fzqlebfgrb4nAM\nF16yNqiG+H5AcrFbGMepi7iHb0KqHZTGcIOAHlTvkNSKrVRGCjKl7+Z/5zsE\nzmKu2bcM+qqP7LAL2UD9Eon/MWPwiOIUsAraV0P7lPAEHY0zw/7VJQ67Fwvw\nwfWSDHgiPnteOzG32aH+fpZPuGpW/ElfafUic8iaU1kKHYJiOfAduGGi8Chm\nEAJwCUqHKqa4XgEPv8FxiN7FS9fuxw8dvhOVYHAMO5UsMKKWBW2ENjU/ssQk\nD7RtJpjSYuXOuEIxThxD6PMQHKdL8aKeWgTSJCeLM+F/y4aUgFVD16i34XoF\nURQ3swIGYbVCm8zktaaY50Guv1njj55sKvte5zbH1btslNTGFsz+V51Xny31\nrW0j6SPTPlN3PuSwqGKDBt8kDNVNPRYmOufYzAS6v/27LucmUnmmJ5S0V2je\nYO7b6/wV9B4tbolL5HqgogWxEzYupPEI3cR2BY4yYbp8j5owEwb+qdXxcLYX\nWS6ZC4WV5XQQuHLW4csifiFuqCVbmnx1EFqqnWwR2qwWboG7Yyl036D8ib14\nJ7xXXIkj6mcpverjmteW0RWOzTFX+N3bzZ4ROC7k1KcTqgok9nzHbaT3H9Du\nRzHG6MO7ECK/IDGDLE4kJR9APzUu2spZGOsWKBYlsJuHKPVTM99WLMzmKYu7\nrXSv3cbrRD3tvf07WppaZDYKTEoS6lG17hhAfBRN4bPVcUf3dd7sv7ehPC8Z\nNOosHUwNd7vekFqU2xAp8gOpj7XCPECgJuZ6K6zF2Rxcajzoigh/cavTecOC\nf+quplJTdSCST4H9lmGwUpcgO3dobeHIFBxMybhoupGcMTxo0c/pSJM7bTuU\nBhmF9bmd+GQhpts7+bHTFIE+m8NTOiDujPZc7pnzkIpVWzDkeNP74PtP+QjT\navqXlGhEPOJnYaFlKKDT3SnR6+/BGbHuwxgGxMQTELCF3qUQO0IAdHupeeRc\nGh+ByFFUW2DM6ipVRuzGESH+XG+/4469GVcWnQoWkYjO0cMmXHmaSZuF45tI\nfJfLdAgak0H7RwYJpgu58QSxgTGI+/46KKmlkSHCIRpOq+M8yXMHS8nCxeNx\nxORBiVSOlOB1KIy8LsHUIwSe3a5OEOhT2TDGnPxbc/OX64bUIlfsUU5UBFnI\nnIwxkoBnLecC8oWiEIljl4OqaeVqMXO93rIrbiM9vLjeEK2p/cuE2IfO4uLn\nb48yjrEFnJBYQZWVzoyTkj72FgINhq9+nyX/LS/mIX6Er9Dle97Kq5N0d7mE\nymbLvDrhZVaycbk35ZC0tcgspPrthLr9ZGMOSVtEJNmiGHfRCs2bxwLc/YUI\nIGMgU282rTfeLI6Ymhdrow0Slbr4pEAVfTkTMrlDZ9YQ5gSBQeo4VHLFzwSW\nf0LkEfOW9Haj65PkRWBpwrH8qmrXCLkP9hKtQQf7G5z1e04Mm850p8MwXtLY\ntQdfQ1dOg5ExTgNsIbHKddJLXfoqvM9pOc87hAHXl4JbuA6YJ/QOpznIqqHN\nzx/losYo9XsjF8ghSfVP6KJAQ47zP8ugoiN1MVZl5SAu/Al1vc/pOXktl7/S\n2aDJcnDJqs9X2lUkscFbqi4cj00+cEOZiZI+TUOsYnNoRFvzE7WbAocKq7gR\nsf9fYALZtrhelpxPdagO5MbqJruYAED+nVXpNZEMvgRPky8tuMVlAjWT61uX\n1lTn5W1qGHN8p90KGUce/ChmAGSj/l9Yy1z5vkEBuy3pReRhWTqcunh3t0FN\n0i5vp/fO/+N7yyF6DL0U6yBivuW4+hg1A5jK0B5Kxpcl7lHMIx8jYJyR1IO5\nSD7R5khRbtTgMmLBkC7A+yKR1yoPTePhqQ1xFbXFfx0ieuvyrg/UTUXuEqxu\nnp+5aqXSNdccJDVRs8CJq2ed1jtE/zY2JPzLoaxKUv7RcyPGc35wmaIDaTOU\nTe5gsruUvFpG0mMDz1t9w+Tg2wscbMTTRQjZWKjUR4UvgRYSEikEP6bSSNWj\nCTcp1IwhTF+9bP+wpaQ/kOtnV0w9YHkqg6c7+R6+pAoB6+a5UjquMR8JR6Z4\nJ7SQIFaqVaXkrUntBAN7GaRLXDaMrauPjPIeZ1rv1p8HaY/eESxQ1x8TeqgF\nhabf7ojQR9BpgyU2CI5WqbElxzMNYaAZ5oI6+ITW9suto5qwbcOd16CAb5LB\nvypWT5NSaAVS+uxw2tRxoCpi13nUCe2DVIPrmu0MvMn8AHRJOBqprxJ54htN\nigBBF171Wkfv74AQLT7IjKpN8Pg6px53ykJGcF9Ay2rXF7z/RvGMxwkwt3BK\narU/oM7pKFP+481r/CaxP2T/kkKmgiqWTCvALifrMM/ClGq6YklNNLkDd0Oq\nHyzIcNXtGUWHXNgyyJyZjNKgEjX2GiIWBtWP1kpuUJ0xz1YAL/f9StbFZ7d+\nYjX1Mp81E/2RCBxOaQ2ee4lFEoALZ08H8inGbhYmkPuIi8Dbtzaca2z3WRV9\nLqEewhO25cdu/xe6gCM8/zMezsu+NGPQ/cqIsOXuKebVKsH84l8Kt6Jdysxk\nSmjbJNwXJJRV0ibG3xCZbTVCf2ZgJ2UUf8HpSLa3nz6P+SHrz0TZpPUSdGzz\nZD2FpKSY9y8GEsznJEn/Lk5QM0QgBAcF9sYpldcU7A86JYuvjDdhL26tAGTf\n1cBooEs4tqSAf479ZUpiI7kRZ+rGEMZdjnbaxtsYYK/1uHbtXSGvvWJ162IF\nCLB28iD8ITxtwJkO6Jxt07YgW4i4k/nusxgZfyPgHRKB52PEb0eA/UylgVUF\nde7u4Oz2tJz8qGIwKu8olL3GNhIPBC2OyqYjF9P3yU/L7pv7nCdIMBRFxiB2\nOlHRm54qS2QlFMFtnRuDrynQhQov+00D+nguq4FYmdVsH2sStOXs5JYqrS6J\nxEOv57fG8PothJvSwNehINsWXWejYagZbLgAEvqdOVp8KihsqtqXctW+7shx\nYHXqeeqOEfSg7gqqsgqS/on1i+r2fkQC83iuJ33aTtqyiLqbw/tXPx+iPLWl\nXBHZNrdly5i95E50htKwwWpQ08Uv4UX7it+5GndTlXUg3j653dZabVjfNIL4\nz6szcmLX0WGXnElVB1VGLQPC03zax42MkbgoRifnsvTGSZO35C2/ukI7/F3A\njA7HWQ6pO1OkUIVzayUqMvkVZMxCylmcqztw26EBCKUU/tLWJxej7jActwR5\n8KzNhn9+e9qVRMnAMQPdDqi5WGLisdwnR0Z3DLt61bdzdwrnY5QmrZ88cA5g\nw8HBuSLv71TKCZr0VRvRF7SdVgqDb18sszFgytih/NOj0OC2iW6yteRAz1ME\nlTuVHi502GuBuNdd6yn4X7qHBshUuhyVZ2xaUodxjVmiB29kwWD7LHyCQMyx\n0McSePkT7mForTs2pCKV8f78AyQqaSinjCL+nea5/FAv1ouCg1ijMDReKCBF\nsinC6RtOuCTeioSBuvO+VLTBe4VnEO2ChDuAc1LWLIO/HbWktM8g4if7sLEA\nlMYmVFTHFHms2r6ahzxLe1mnvAjGnD+1BrZsGOwg6dzqdEdpqwgSQIB+hu7y\nTqGRA9Za9CN3KTysf6o8adPtK5D6PNl386bB/8ztaM5BCMp2AnxSOku8FuaU\nA+/TvJUsBACpsJ2aw9iAA6bKqhqSNalBHJDpkrmPH5S3u5GOMgmKtQF6fmcN\n7JDy/JZm3f9TgVtY1m21YW6kh0CA2TPpjKzzaTe+sTCxHvWLubsEIwV7OArK\n9HWE2znaTX/T1ec3NuHHs+uqWfUQWyhwibzWT8qTOHs9bgwSeGXQn+9SDqbZ\nUcTpuLxJFIMYD4qQz9mjH3X9g7tz06XdnlH8F0UwYjiFGJ/v+ZWTfTdLtqPI\nGCickIppYPI+DuP1sVjGLOEtUN0gE2sT92knf+wqYlvrna2Vqj305PO19PET\nQuuaffH1jsM6sAWm6p7b16IVzMU5RkTCACzfjEwoyuicTB344/eTJuxGY5Ab\ntIvw2tqTDIpY9iENsJThbOa7vwNSTX4XL2roVb4HPCT5r+vw+LL31zsS9jG4\nQJ3Y3boLG97BpPlvXucWV3eVjEkpX0I2a5i5LdpkZu7ck+h/5w1emd0gsHdt\nvzhJvVotMEVyBFBotJ5KUuOCSxZuFh11h1WO7b8VJw==\n",
+    "start_sources": {
+      "NeighborhoodRunner.java": {
+        "text": "import org.code.neighborhood.*;\n\npublic class NeighborhoodRunner {\n  public static void main(String[] args) {\n\n    /* -------------------------------------- TO DO --------------------------------------\n     * ✅ Instantiate a PainterPlus object at (2, 2) facing south with 16 units of paint.\n     * -----------------------------------------------------------------------------------\n     */\n\n\n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "name_suffix": "_pilot-2025"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-01T22:21:03.108+00:00\",\"changed\":[\"cloned from \\\"CSA U2L5-L6a_2025\\\"\"],\"cloned_from\":\"CSA U2L5-L6a_2025\"}]"
+}]]></config>
+</Javalab>

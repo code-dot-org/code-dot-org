@@ -193,7 +193,12 @@ class EvaluateRubricJob < ApplicationJob
   # Retry on a 503 Service Unavailable error, including those returned by aiproxy
   # when openai returns 500.
   retry_on ServiceUnavailableError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_SERVICE_UNAVAILABLE do |job, error|
-    agent = error.message.downcase.include?('openai') ? 'openai' : 'none'
+    agent = 'none'
+    if error.message.downcase.include?('openai')
+      agent = 'openai'
+    elsif error.message.downcase.include?('bedrock')
+      agent = 'bedrock'
+    end
     AiRubricMetrics.log_metric(metric_name: :ServiceUnavailable, agent: agent)
     AiRubricMetrics.log_to_firehose(job: job, error: error, event_name: 'service-unavailable', agent: agent)
   end
@@ -201,7 +206,12 @@ class EvaluateRubricJob < ApplicationJob
   # Retry on a 504 Gateway Timeout error, including those returned by aiproxy
   # when openai request times out.
   retry_on GatewayTimeoutError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_GATEWAY_TIMEOUT do |job, error|
-    agent = error.message.downcase.include?('openai') ? 'openai' : 'none'
+    agent = 'none'
+    if error.message.downcase.include?('openai')
+      agent = 'openai'
+    elsif error.message.downcase.include?('bedrock')
+      agent = 'bedrock'
+    end
     AiRubricMetrics.log_metric(metric_name: :GatewayTimeout, agent: agent)
     AiRubricMetrics.log_to_firehose(job: job, error: error, event_name: 'gateway-timeout', agent: agent)
   end
@@ -330,7 +340,7 @@ class EvaluateRubricJob < ApplicationJob
     response = HTTParty.post(
       uri,
       body: URI.encode_www_form(openai_params),
-      headers: {'Content-Type' => 'application/x-www-form-urlencoded'},
+      headers: {'Content-Type' => 'application/x-www-form-urlencoded', 'Authorization' => CDO.aiproxy_api_key},
       timeout: AIPROXY_API_TIMEOUT
     )
 

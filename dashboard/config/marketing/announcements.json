@@ -1,7 +1,7 @@
 {
   "pages": {
-    "/home": "progress-launch",
-    "/student-home": "music-lab-launch"
+    "/home": "user-research-aug-2024",
+    "/student-home": ""
   },
   "banners": {
     "superhero": {
@@ -20,15 +20,6 @@
       "buttonUrl": "https://code.org/hourofcode",
       "buttonId": "hoc-2023"
     },
-    "music-lab-launch": {
-      "dcdo": "music-lab-launch-2024",
-      "image": "/shared/images/banners/music-lab-with-afe-logo.png",
-      "title": "Introducing Music Lab",
-      "body": "Get creative with your favorite artist's music and code new songs and mixes!",
-      "buttonText": "Learn more",
-      "buttonUrl": "https://code.org/music",
-      "buttonId": "music-lab-launch"
-    },
     "curriculum-launch-2024": {
       "dcdo": "curriculum-launch-2024",
       "image": "/shared/images/banners/banner-curriculum-launch-2024.png",
@@ -38,13 +29,13 @@
       "buttonUrl": "https://codeorg.medium.com/ai-game-design-and-more-in-code-orgs-2024-25-curriculum-updates-caff691935ad",
       "buttonId": "curriculum-launch-2024"
     },
-    "progress-launch": {
-      "image": "/shared/images/banners/banner-progress-launch.png",
-      "title": "Progress tracking just leveled up!",
-      "body": "Effortlessly monitor student work, provide timely feedback, and simplify grading with our fast, teacher-tested interface. Save time and gain valuable insights into your students' performance, all in one intuitive tool.",
-      "buttonText": "Try it now",
-      "buttonUrl": "/teacher_dashboard/sections/first_section_progress",
-      "buttonId": "progress-launch"
+    "user-research-aug-2024": {
+      "image": "/shared/images/banners/banner-user-research-aug-2024.png",
+      "title": "Help shape the future of Code.org",
+      "body": "Your classroom experience and feedback can help shape improvements to Code.org for all teachers. Join our research community to share your insights, try out new features, and pilot new courses.",
+      "buttonText": "Join our research community",
+      "buttonUrl": "https://greatquestion.co/codedotorg/userresearch",
+      "buttonId": "user-research-aug-2024"
     }
   }
 }

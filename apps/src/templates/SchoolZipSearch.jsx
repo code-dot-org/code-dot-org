@@ -1,17 +1,19 @@
-import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {useState, useEffect} from 'react';
 
 import {Button} from '@cdo/apps/componentLibrary/button';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
-import {
-  BodyTwoText,
-  BodyThreeText,
-} from '@cdo/apps/componentLibrary/typography';
+import TextField from '@cdo/apps/componentLibrary/textField/TextField';
+import {BodyThreeText} from '@cdo/apps/componentLibrary/typography';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import SchoolNameInput from '@cdo/apps/templates/SchoolNameInput';
 import i18n from '@cdo/locale';
+
+import {
+  SCHOOL_ID_SESSION_KEY,
+  SCHOOL_ZIP_SESSION_KEY,
+} from '../signUpFlow/signUpFlowConstants';
 
 import style from './school-association.module.scss';
 
@@ -23,15 +25,13 @@ const SEARCH_DEFAULTS = [
   {value: NO_SCHOOL_SETTING, text: i18n.noSchoolSetting()},
 ];
 const ZIP_REGEX = new RegExp(/(^\d{5}$)/);
-const SCHOOL_ZIP = 'schoolZip';
-const SCHOOL_ID = 'schoolId';
 
 // Controls the logic and components surrounding a zip input box and its error
 // messaging, the api school search filtered on zip, and the school dropdown
 // that search populates.
 export default function SchoolZipSearch({fieldNames}) {
-  const detectedSchoolId = sessionStorage.getItem(SCHOOL_ID);
-  const detectedZip = sessionStorage.getItem(SCHOOL_ZIP);
+  const detectedSchoolId = sessionStorage.getItem(SCHOOL_ID_SESSION_KEY);
+  const detectedZip = sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY);
   const [selectedSchoolNcesId, setSelectedSchoolNcesId] = useState(
     detectedSchoolId || SELECT_A_SCHOOL
   );
@@ -42,18 +42,16 @@ export default function SchoolZipSearch({fieldNames}) {
     !detectedZip
   );
 
-  const labelClassName = isSchoolDropdownDisabled
-    ? classNames(style.padding, style.disabledLabel)
-    : style.padding;
+  const labelClassName = isSchoolDropdownDisabled ? style.disabledLabel : '';
 
   useEffect(() => {
     const isValidZip = ZIP_REGEX.test(zip);
     if (isValidZip) {
-      if (zip !== sessionStorage.getItem(SCHOOL_ZIP)) {
+      if (zip !== sessionStorage.getItem(SCHOOL_ZIP_SESSION_KEY)) {
         // Clear out school from dropdown if zip has changed
         setSelectedSchoolNcesId(SELECT_A_SCHOOL);
       }
-      sessionStorage.setItem(SCHOOL_ZIP, zip);
+      sessionStorage.setItem(SCHOOL_ZIP_SESSION_KEY, zip);
       const searchUrl = `/dashboardapi/v1/schoolzipsearch/${zip}`;
       fetch(searchUrl, {headers: {'X-Requested-With': 'XMLHttpRequest'}})
         .then(response => (response.ok ? response.json() : []))
@@ -79,7 +77,7 @@ export default function SchoolZipSearch({fieldNames}) {
   }, [zip]);
 
   useEffect(() => {
-    sessionStorage.setItem(SCHOOL_ID, selectedSchoolNcesId);
+    sessionStorage.setItem(SCHOOL_ID_SESSION_KEY, selectedSchoolNcesId);
   }, [selectedSchoolNcesId]);
 
   const sendAnalyticsEvent = (eventName, data) => {
@@ -120,19 +118,17 @@ export default function SchoolZipSearch({fieldNames}) {
   ].concat(sortSchoolsByName(dropdownSchools));
 
   return (
-    <div>
+    <div className={style.inputContainer}>
       <label>
-        <BodyTwoText className={style.padding} visualAppearance={'heading-xs'}>
-          {i18n.enterYourSchoolZip()}
-        </BodyTwoText>
-        <input
+        <TextField
           id="uitest-school-zip"
-          type="text"
           name={fieldNames.schoolZip}
+          label={i18n.enterYourSchoolZip()}
           onChange={e => {
             setZip(e.target.value);
           }}
           value={zip}
+          placeholder="00000"
         />
         {zip && isSchoolDropdownDisabled && (
           <BodyThreeText className={style.errorMessage}>
@@ -142,16 +138,12 @@ export default function SchoolZipSearch({fieldNames}) {
       </label>
       {!inputManually && (
         <div>
-          <BodyTwoText
-            className={labelClassName}
-            visualAppearance={'heading-xs'}
-          >
-            {i18n.selectYourSchool()}
-          </BodyTwoText>
           <SimpleDropdown
             id="uitest-school-dropdown"
             disabled={isSchoolDropdownDisabled}
             name={fieldNames.ncesSchoolId}
+            className={labelClassName}
+            labelText={i18n.selectYourSchool()}
             itemGroups={[
               {
                 label: i18n.schools(),

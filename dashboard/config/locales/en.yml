@@ -972,7 +972,8 @@ en:
     privacy_notice: "Privacy Notice"
     accept_label: 'I agree to the <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>.'
     accept_label_markdown: I agree to the [Terms of Service](%{tos_url}) and [Privacy Policy](%{privacy_url}).
-    accept_tos: By signing up for Code.org, you agree to our [Terms of Service](%{tos_url}) and [Privacy Policy](%{privacy_url}).
+    accept_tos: By signing up for Code.org, you agree to our [Terms of Service](%{tos_url}) and [Privacy Policy](%{privacy_url}), and acknowledge that you will receive a series of onboarding emails over the next few weeks.
+    accept_new_tos: By signing up for Code.org, you agree to our [Terms of Service](%{tos_url}) and [Privacy Policy](%{privacy_url}).
     accept: "Accept"
     print: "Print"
     reminder_desc: 'We have updated our <a href="%{tos_url}" target="_blank">Terms of Service</a> and <a href="%{privacy_url}" target="_blank">Privacy Policy</a>. Please read these carefully before accepting them. Note that our tools teaching JavaScript may be unavailable to your students before explicitly accepting the updated terms.'
@@ -1454,6 +1455,7 @@ en:
       linking_page_header: "Link your %{provider} account to your existing Code.org account"
       linking_page_description: "Choose the sign-in method you normally use to access Code.org"
       sign_in_and_connect: "Sign in and connect"
+      successfully_linked: "You have successfully linked your Code.org account!"
     create_integration_success: "Successfully created your LTI integration"
     dynamic_registration_title: "Code.org Dynamic Registration"
     error:

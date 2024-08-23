@@ -113,6 +113,11 @@ class UserTest < ActiveSupport::TestCase
     assert_equal '21+', teacher.age
   end
 
+  test 'creating teacher sets show_progress_table_v2 to true' do
+    teacher = create :teacher
+    assert teacher.show_progress_table_v2
+  end
+
   # Disable this test if and when we do require teachers to complete school data
   test 'school info should not be validated' do
     school_attributes = {
@@ -4012,7 +4017,7 @@ class UserTest < ActiveSupport::TestCase
         has_ever_signed_in: @student.has_ever_signed_in?,
         ai_tutor_access_denied: !!@student.ai_tutor_access_denied,
         at_risk_age_gated: false,
-        child_account_compliance_state: @student.child_account_compliance_state,
+        child_account_compliance_state: @student.cap_status,
         latest_permission_request_sent_at: latest_permission_request_sent_at,
       },
       @student.summarize

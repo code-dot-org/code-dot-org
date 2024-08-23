@@ -48,7 +48,7 @@
     %summary=hoc_s(:resources_tabs_tab_label_assessments)
     = view :"tabs_section/resources/resources_tabs_content_assessments"
   %details.tools
-    %summary=hoc_s(:resources_tabs_tab_label_tools)
+    %summary=hoc_s(:"resources_tabs.progress.tab_label")
     = view :"tabs_section/resources/resources_tabs_content_progress"
 
-%script{src: '../js/tabs-section.js'}
+= view :tabs_section

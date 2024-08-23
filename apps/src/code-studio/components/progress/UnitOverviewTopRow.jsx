@@ -8,7 +8,7 @@ import UnitCalendarButton from '@cdo/apps/code-studio/components/progress/UnitCa
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
@@ -20,7 +20,7 @@ import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shap
 import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-import FontAwesome from '../../../templates/FontAwesome';
+import FontAwesome from '../../../legacySharedComponents/FontAwesome';
 import {unitCalendarLesson} from '../../../templates/progress/unitCalendarLessonShapes';
 
 export const NOT_STARTED = 'NOT_STARTED';
