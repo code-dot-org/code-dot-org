@@ -74,6 +74,7 @@ const SET_COTEACHER_INVITE_FOR_PL =
   'teacherDashboard/SET_COTEACHER_INVITE_FOR_PL';
 export const SELECT_SECTION = 'teacherDashboard/SELECT_SECTION';
 const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
+const UPDATED_SELECTED_SECTION = 'teacherDashboard/UPDATED_SELECTED_SECTION';
 const TOGGLE_SECTION_HIDDEN = 'teacherSections/TOGGLE_SECTION_HIDDEN';
 /** Opens add section UI */
 const CREATE_SECTION_BEGIN = 'teacherDashboard/CREATE_SECTION_BEGIN';
@@ -118,6 +119,10 @@ const IMPORT_LTI_ROSTER_SUCCESS = 'teacherSections/IMPORT_LTI_ROSTER_SUCCESS';
 /** Sets section aiTutorEnabled */
 const UPDATE_SECTION_AI_TUTOR_ENABLED =
   'teacherSections/UPDATE_SECTION_AI_TUTOR_ENABLED';
+
+const START_LOADING_SECTION_DATA = 'teacherSections/START_LOADING_SECTION_DATA';
+const FINISH_LOADING_SECTION_DATA =
+  'teacherSections/FINISH_LOADING_SECTION_DATA';
 
 /** @const A few constants exposed for unit test setup */
 export const __testInterface__ = {
@@ -202,6 +207,10 @@ export const pageTypes = {
 export const setSections = sections => ({type: SET_SECTIONS, sections});
 export const selectSection = sectionId => ({type: SELECT_SECTION, sectionId});
 export const removeSection = sectionId => ({type: REMOVE_SECTION, sectionId});
+export const updateSelectedSection = section => ({
+  type: UPDATED_SELECTED_SECTION,
+  section,
+});
 
 /**
  * Changes the hidden state of a given section, persisting these changes to the
@@ -623,6 +632,14 @@ export const importOrUpdateRoster =
       );
   };
 
+export const startLoadingSectionData = () => ({
+  type: START_LOADING_SECTION_DATA,
+});
+
+export const finishLoadingSectionData = () => ({
+  type: FINISH_LOADING_SECTION_DATA,
+});
+
 /**
  * Initial state of this redux module.
  * Should represent the overall state shape with reasonable default values.
@@ -637,6 +654,7 @@ const initialState = {
   studentSectionIds: [],
   plSectionIds: [],
   selectedSectionId: NO_SECTION,
+  selectedSectionName: '',
   // Array of course offerings, to populate the assignment dropdown
   // with options like "CSD", "Course A", or "Frozen". See the
   // assignmentCourseOfferingShape PropType.
@@ -671,6 +689,7 @@ const initialState = {
   // DCDO Flag - show/hide Lock Section field
   showLockSectionField: null,
   ltiSyncResult: null,
+  isLoadingSectionData: false,
 };
 /**
  * Generate shape for new section
@@ -844,9 +863,12 @@ export default function teacherSections(state = initialState, action) {
       sectionId = NO_SECTION;
     }
 
+    const sectionName =
+      sectionId !== NO_SECTION ? state.sections[sectionId].name : '';
     return {
       ...state,
       selectedSectionId: sectionId,
+      selectedSectionName: sectionName,
     };
   }
 
@@ -862,6 +884,22 @@ export default function teacherSections(state = initialState, action) {
       studentSectionIds: _.without(state.studentSectionIds, sectionId),
       plSectionIds: _.without(state.plSectionIds, sectionId),
       sections: _.omit(state.sections, sectionId),
+    };
+  }
+
+  if (action.type === UPDATED_SELECTED_SECTION) {
+    const sectionId = action.section.id;
+    const oldSection = state.sections[sectionId] || {};
+
+    return {
+      ...state,
+      sections: {
+        ...state.sections,
+        [sectionId]: {
+          ...oldSection,
+          ...sectionFromServerSection(action.section),
+        },
+      },
     };
   }
 
@@ -1239,6 +1277,20 @@ export default function teacherSections(state = initialState, action) {
     };
   }
 
+  if (action.type === START_LOADING_SECTION_DATA) {
+    return {
+      ...state,
+      isLoadingSectionData: true,
+    };
+  }
+
+  if (action.type === FINISH_LOADING_SECTION_DATA) {
+    return {
+      ...state,
+      isLoadingSectionData: false,
+    };
+  }
+
   return state;
 }
 
@@ -1389,6 +1441,7 @@ export const sectionFromServerSection = serverSection => ({
   sectionInstructors: serverSection.section_instructors,
   syncEnabled: serverSection.sync_enabled,
   aiTutorEnabled: serverSection.ai_tutor_enabled,
+  anyStudentHasProgress: serverSection.any_student_has_progress,
 });
 
 /**

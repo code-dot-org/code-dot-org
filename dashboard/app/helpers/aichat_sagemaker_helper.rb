@@ -1,13 +1,6 @@
 module AichatSagemakerHelper
   MAX_NEW_TOKENS = 512
   TOP_P = 0.9
-  MODELS = {
-    ARITHMO: "gen-ai-arithmo2-mistral-7b",
-    BASE: "gen-ai-mistral-7b-inst-v01",
-    BIOMISTRAL: "gen-ai-biomistral-7b",
-    KAREN: "gen-ai-karen-creative-mistral-7b",
-    PIRATE: "gen-ai-mistral-pirate-7b"
-  }
 
   def self.create_sagemaker_client
     Aws::SageMakerRuntime::Client.new
@@ -45,11 +38,11 @@ module AichatSagemakerHelper
 
   def self.get_model_processor(selected_model_id)
     case selected_model_id
-    when MODELS[:PIRATE]
+    when SharedConstants::AI_CHAT_MODEL_IDS[:PIRATE]
       return AiModelProcessors::PirateProcessor.new
-    when MODELS[:KAREN]
+    when SharedConstants::AI_CHAT_MODEL_IDS[:KAREN]
       return AiModelProcessors::KarenProcessor.new
-    when MODELS[:ARITHMO]
+    when SharedConstants::AI_CHAT_MODEL_IDS[:ARITHMO]
       return AiModelProcessors::ArithmoProcessor.new
     else
       return AiModelProcessors::MistralProcessor.new

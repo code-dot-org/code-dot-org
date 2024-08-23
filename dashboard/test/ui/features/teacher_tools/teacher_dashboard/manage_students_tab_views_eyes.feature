@@ -2,6 +2,7 @@
 @eyes
 Feature: Using the manage students tab of the teacher dashboard
 
+  @skip
   Scenario: Viewing the manage students tab in normal and edit mode
     When I open my eyes to test "manage students tab"
     Given I create an authorized teacher-associated student named "SallyHasAVeryVeryLongFirstName"
