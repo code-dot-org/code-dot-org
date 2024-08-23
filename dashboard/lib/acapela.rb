@@ -3,7 +3,6 @@ require 'uri'
 require 'cgi'
 require 'open-uri'
 require 'logger'
-require 'cdo/aws/metrics'
 
 module Acapela
   VAAS_URL = "http://vaas.acapela-group.com/Services/Synthesizer".freeze

@@ -35,7 +35,6 @@ require File.expand_path('../../config/environment', __FILE__)
 I18n.load_path += Dir[Rails.root.join('test', 'en.yml')]
 I18n.backend.reload!
 I18n.fallbacks[:'te-ST'] = [:'te-ST', :'en-US', :en]
-CDO.stubs(override_pegasus: nil)
 CDO.stubs(override_dashboard: nil)
 
 Rails.application.routes.default_url_options[:host] = CDO.dashboard_hostname
@@ -67,7 +66,6 @@ class ActiveSupport::TestCase
 
     Cdo::Metrics.client ||= Aws::CloudWatch::Client.new(stub_responses: true)
 
-    CDO.stubs(override_pegasus: nil)
     CDO.stubs(override_dashboard: nil)
 
     set_env :test

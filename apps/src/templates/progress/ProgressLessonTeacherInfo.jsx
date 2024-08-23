@@ -12,7 +12,7 @@ import {
   isLessonHiddenForSection,
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import i18n from '@cdo/locale';
 
@@ -48,7 +48,7 @@ class ProgressLessonTeacherInfo extends React.Component {
     const {unitName, section, lesson, toggleHiddenLesson} = this.props;
     const sectionId = (section && section.id.toString()) || '';
     toggleHiddenLesson(unitName, sectionId, lesson.id, value === 'hidden');
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'hidden-lessons',
         study_group: 'v0',

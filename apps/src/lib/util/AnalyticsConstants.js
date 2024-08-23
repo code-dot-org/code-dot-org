@@ -2,8 +2,6 @@
 // (See pegasus/helpers/analytics_constants.rb for constants in the
 // pegasus directory)
 const PLATFORMS = {
-  AMPLITUDE: 'Amplitude',
-  STATSIG: 'Statsig',
   BOTH: 'Both',
 };
 

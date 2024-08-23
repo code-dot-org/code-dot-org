@@ -108,7 +108,7 @@ module.exports = function (config) {
       showDiff: true,
     },
 
-    hostname: 'localhost-studio.code.org',
+    hostname: 'localhost',
 
     // web server port
     port: KARMA_CLI_FLAGS.port,

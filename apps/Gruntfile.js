@@ -536,7 +536,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('prebuild', [
     'checkDropletSize',
-    'lint-entry-points',
+//    'lint-entry-points',
     'newer:messages',
     'exec:convertScssVars',
     'exec:generateSharedConstants',

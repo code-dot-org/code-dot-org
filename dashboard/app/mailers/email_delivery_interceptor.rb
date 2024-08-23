@@ -1,4 +1,3 @@
-require 'cdo/aws/metrics'
 
 #
 # Intercepting emails before they are handed off to the delivery agents.

@@ -1,6 +1,5 @@
 require lib_dir 'cdo/data/logging/timed_task_with_logging'
 require lib_dir 'cdo/data/logging/infrastructure_logger'
-require 'cdo/github'
 require 'cdo/git_utils'
 class RakeTaskEventLogger
   STUDY_TABLE = 'rake_performance'.freeze
@@ -73,7 +72,7 @@ class RakeTaskEventLogger
         }
       )
     rescue => exception
-      Honeybadger.notify(
+      Harness.error_notify(
         exception,
         error_message: "Failed to log rake task information in firehose",
         context: {

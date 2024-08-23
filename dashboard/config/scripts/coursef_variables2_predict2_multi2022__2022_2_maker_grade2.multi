@@ -1,7 +1,0 @@
-name 'courseF_variables2_predict2_multi2022_-2022-2_maker_grade2'
-question 'Make a prediction: What will the bunny say?'
-right 'The bunny will say "5".', feedback: 'Correct! The number 5 is stored in the variable and then used again when the sprite speaks.'
-wrong 'The bunny sprite will say whatever number is typed.', feedback: 'Incorrect. There is no prompt in this program. The number is set directly in the code.'
-wrong 'The bunny will say "count".', feedback: 'Incorrect. `count` is a variable. When this block runs, it gets whatever number is stored. The bunny will say "5".'
-wrong 'Nothing will happen because `count` is not a number.', feedback: 'Incorrect. The number 5 is stored in the variable and used when the sprite speaks.'
-allow_multiple_attempts false

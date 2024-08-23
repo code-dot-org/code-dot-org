@@ -1,4 +1,4 @@
-require 'cdo/firehose'
+
 require 'dynamic_config/dcdo'
 
 module SignUpTracking

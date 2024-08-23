@@ -1,7 +1,5 @@
-require 'aws-sdk-s3'
-require 'cdo/aws/s3'
 require 'cdo/share_filtering'
-require 'cdo/firehose'
+
 
 class Api::V1::MlModelsController < Api::V1::JSONApiController
   skip_before_action :verify_authenticity_token

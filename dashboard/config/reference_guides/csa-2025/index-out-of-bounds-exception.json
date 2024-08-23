@@ -1,9 +1,0 @@
-{
-  "key": "index-out-of-bounds-exception",
-  "course_version_key": "2025",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "common-errors",
-  "display_name": "IndexOutOfBoundsException",
-  "content": "An `IndexOutOfBoundsException`(#e7e8ea) occurs when attempting to access an index that is negative, greater than, or equal to the length of the `String`(#e7e8ea).\n",
-  "position": 4
-}

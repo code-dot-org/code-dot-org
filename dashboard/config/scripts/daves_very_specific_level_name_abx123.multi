@@ -1,9 +1,0 @@
-name 'daves very specific level name abx123'
-title 'title'
-description 'description here'
-question 'Question'
-right 'right answer'
-wrong 'wrong answer'
-right 'right answer'
-
-allow_multiple_attempts true

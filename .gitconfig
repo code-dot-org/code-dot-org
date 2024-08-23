@@ -1,2 +1,0 @@
-[diff "schema_cache"]
-        textconv = dashboard/db/dump_schema_cache.sh

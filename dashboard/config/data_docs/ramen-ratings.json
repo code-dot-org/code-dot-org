@@ -1,5 +1,0 @@
-{
-  "key": "ramen-ratings",
-  "name": "Ramen Ratings",
-  "content": "Description: data about over 4000 varieties of ramen, as of April 2022.\n\nSource: [The Ramen Rater](https://www.theramenrater.com/resources-2/the-list/)\n\nColumns:\n\n* Brand (string): Brand of the ramen\n* Variety (string): The ramen variety, eg a flavor, style, ingredient\n* Style (string): Style of container (cup, pack, or tray)\n* Country (string): Origin country of the ramen brand\n* Stars (numerical): 0-5 rating of the ramen, 5 is best, 0 is worst"
-}

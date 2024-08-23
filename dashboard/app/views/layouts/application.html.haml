@@ -22,16 +22,11 @@
     = stylesheet_link_tag    'css/code-studio', media: 'all'
     = stylesheet_link_tag    'font-awesome', media: 'all'
     = stylesheet_link_tag    'application', media: 'all'
-    = render partial: 'layouts/google_analytics'
     -# data needed for dcdo.js. This tag is needed on every page because our translation code is
     -# making use of the dcdo feature.
     %script{data: {'dcdo': DCDO.frontend_config.to_json}}
     -# auth key needed for amplitude analytics.
     %script{data: {'amplitude-api-key': CDO.safe_amplitude_api_key}}
-    -# auth key needed for statsig analytics
-    %script{data: {'statsig-api-client-key': CDO.safe_statsig_api_client_key}}
-    -# for statsig to recognized managed test server
-    %script{data: {'managed-test-server': managed_test_server}}
     -# user id and type for analytics logging- may not work for cached pages
     %script{data: {'user-id': current_user&.id}}
     %script{data: {'user-type': current_user&.user_type}}

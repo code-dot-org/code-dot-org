@@ -1,6 +1,0 @@
-inherit_from: ../.rubocop.yml
-
-AllCops:
-  # Chef embeds its own version of Ruby which is used to execute these
-  # cookbooks, so we want to make sure we're validating against that version
-  TargetRubyVersion: 3.0

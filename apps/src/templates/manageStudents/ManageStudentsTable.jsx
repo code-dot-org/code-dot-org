@@ -7,7 +7,7 @@ import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
 import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
@@ -748,7 +748,7 @@ class ManageStudentsTable extends Component {
     const {sectionId, sectionCode, studioUrlPrefix} = this.props;
     const joinLink = `${studioUrlPrefix}/join/${sectionCode}`;
     copyToClipboard(joinLink);
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'teacher-dashboard',
         study_group: 'manage-students-actions',
@@ -775,7 +775,7 @@ class ManageStudentsTable extends Component {
 
   showSectionCodeDialog() {
     const {sectionId} = this.props;
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'teacher-dashboard',
         study_group: 'manage-students-actions',

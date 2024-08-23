@@ -1,6 +1,0 @@
-name 'CSA Post-Survey q69_2024'
-question 'Did you register to take the AP CSA Exam?'
-
-right 'Yes'
-right 'No'
-allow_multiple_attempts true

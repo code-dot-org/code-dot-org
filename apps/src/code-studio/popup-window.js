@@ -1,8 +1,6 @@
 import $ from 'jquery';
 
 /**
- * Note: We have similar code in pegasus:
- * pegasus/sites/all/views/popup_window.js.haml
  * @returns jQuery event handler for when we click on a share button. Pops up
  *   a new window with contents of href.
  */

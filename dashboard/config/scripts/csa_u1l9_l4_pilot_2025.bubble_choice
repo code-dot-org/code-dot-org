@@ -1,9 +1,0 @@
-name 'CSA U1L9-L4_pilot-2025'
-display_name 'Practice: Writing Algorithms'
-description 'Create a new `PainterPlus` subclass and use it in The Neighborhood.'
-
-sublevels
-level 'CSA U1L9-L4a_pilot-2025'
-level 'CSA U1L9-L4b_pilot-2025'
-level 'CSA U1L9-L4c_pilot-2025'
-level 'CSA U1L9-L4d_pilot-2025'

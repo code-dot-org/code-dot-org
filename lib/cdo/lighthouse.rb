@@ -1,8 +1,6 @@
 require 'cdo/rake_utils'
-require 'cdo/aws/s3'
 require 'tmpdir'
 require 'cdo/chat_client'
-require 'cdo/aws/metrics'
 require 'uri'
 
 # Run `lighthouse` web-page audits.

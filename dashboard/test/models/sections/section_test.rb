@@ -357,15 +357,6 @@ class SectionTest < ActiveSupport::TestCase
     assert section.valid?
   end
 
-  test 'workshop_section?' do
-    Pd::Workshop::SECTION_TYPES.each do |type|
-      assert Section.new(section_type: type).workshop_section?
-    end
-
-    refute Section.new.workshop_section?
-    refute Section.new(section_type: 'not_a_workshop').workshop_section?
-  end
-
   test 'externally_rostered?' do
     [Section::LOGIN_TYPE_GOOGLE_CLASSROOM, Section::LOGIN_TYPE_CLEVER].each do |type|
       assert Section.new(login_type: type).externally_rostered?

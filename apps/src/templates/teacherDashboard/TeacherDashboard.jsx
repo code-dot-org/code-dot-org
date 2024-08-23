@@ -12,7 +12,7 @@ import SectionAssessments from '@cdo/apps/templates/sectionAssessments/SectionAs
 import SectionLoginInfo from '@cdo/apps/templates/teacherDashboard/SectionLoginInfo';
 import TextResponses from '@cdo/apps/templates/textResponses/TextResponses';
 
-import firehoseClient from '../../lib/util/firehose';
+import harness from '../../lib/util/harness';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
 
@@ -63,7 +63,7 @@ function TeacherDashboard({
     const previousTab = _.last(_.split(prevLocation.pathname, '/'));
     const newTab = _.last(_.split(location.pathname, '/'));
     // Log if we switched tabs in the teacher dashboard
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'teacher_dashboard_actions',
         study_group: previousTab,

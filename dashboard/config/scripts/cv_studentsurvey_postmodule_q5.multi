@@ -1,8 +1,0 @@
-name 'cv-studentsurvey-postmodule-q5'
-question 'This unit made me more interested in pursuing a career in computer science.'
-right 'Strongly disagree'
-right 'Disagree'
-right 'Neutral'
-right 'Agree'
-right 'Strongly agree'
-allow_multiple_attempts true

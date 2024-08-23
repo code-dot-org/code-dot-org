@@ -159,7 +159,7 @@ class I18nSafeInterpolationTest < Minitest::Test
       test_missing_interpolation_argument: "Hello %{world}"
     )
 
-    Honeybadger.expects(:notify)
+    Harness.expects(:error_notify)
     @backend.translate(@locale, 'test_missing_interpolation_argument')
   end
 end

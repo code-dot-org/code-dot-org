@@ -217,7 +217,7 @@ describe('Applab Exporter,', function () {
         sublevelCallback: null,
       },
       isUS: true,
-      send_to_phone_url: 'http://localhost-studio.code.org:3000/sms/send',
+      send_to_phone_url: 'http://localhost:3000/sms/send',
       copyrightStrings: {
         thanks:
           'We%20thank%20our%20%3Ca%20href=%22https://code.org/about/donors%22%3Edonors%3C/a%3E,%20%3Ca%20href=%22https://code.org/about/partners%22%3Epartners%3C/a%3E,%20our%20%3Ca%20href=%22https://code.org/about/team%22%3Eextended%20team%3C/a%3E,%20and%20our%20video%20cast%20for%20their%20support%20in%20creating%20Code%20Studio.',

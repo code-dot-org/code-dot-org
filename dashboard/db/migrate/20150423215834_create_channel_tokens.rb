@@ -8,32 +8,6 @@ class CreateChannelTokens < ActiveRecord::Migration[4.2]
 
       t.timestamps
     end
-
-    # The following code is disabled because access to PEGASUS_DB from outside
-    # of the pegasus or bin directories is not allowed. For more details, see:
-    # https://github.com/code-dot-org/code-dot-org/pull/55417
-
-    # big_game_template = Level.find_by_key('Big Game Template').id
-    #
-    # Copy 'Big Game Template' channel for each user that has one saved.
-    # PEGASUS_DB[:storage_apps].where('state != "deleted"').each do |row|
-    #   begin
-    #     data = JSON.parse row[:value]
-    #   rescue JSON::ParserError
-    #     puts "Couldn't parse channel with ID '#{row[:id]}'"
-    #     next
-    #   end
-    #   next unless data['projectTemplateLevelName'] == 'Big Game Template'
-    #   channel = storage_encrypt_channel_id(row[:storage_id], row[:id])
-    #   user = user_storage_ids_table.where(id: row[:storage_id]).first
-    #   next unless user && user[:user_id]
-    #   begin
-    #     ChannelToken.create!(channel: channel, user_id: user[:user_id], level_id: big_game_template)
-    #   rescue => exception
-    #     puts "Failed to import channel '#{channel}' with ID '#{row[:id]}' and user '#{user[:user_id]}'"
-    #     puts exception.backtrace.join("\n")
-    #   end
-    # end
   end
 
   def down

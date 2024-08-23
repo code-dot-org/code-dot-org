@@ -1,5 +1,5 @@
 import clientApi from '@cdo/apps/code-studio/initApp/clientApi';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 
 const LIBRARY_NAME = 'library.json';
 export default class LibraryClientApi {
@@ -68,7 +68,7 @@ export default class LibraryClientApi {
         } else {
           // Log to Firehose on error using "event" as context.
           // See https://codedotorg.atlassian.net/browse/STAR-2140 for details.
-          firehoseClient.putRecord(
+          harness.trackAnalytics(
             {
               study: 'applab_library_versions',
               event: event,

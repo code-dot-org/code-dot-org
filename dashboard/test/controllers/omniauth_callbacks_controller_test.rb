@@ -1529,7 +1529,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     malformed_account.reload
     refute malformed_account.valid?
 
-    Honeybadger.expects(:notify).never
+    Harness.expects(:error_notify).never
 
     # Hit google callback with matching email to trigger takeover
     auth = generate_auth_user_hash(
@@ -1563,7 +1563,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     student = create :student, :demigrated, :microsoft_v2_sso_provider, email: email
     uid = 'google-takeover-id'
 
-    Honeybadger.expects(:notify).never
+    Harness.expects(:error_notify).never
 
     # Hit google callback with matching email to trigger takeover
     auth = generate_auth_user_hash(
@@ -1597,7 +1597,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     user = create :teacher, :microsoft_v2_sso_provider, email: email
     uid = 'google-takeover-id'
 
-    Honeybadger.expects(:notify).never
+    Harness.expects(:error_notify).never
 
     # Hit google callback with matching email to trigger takeover
     auth = generate_auth_user_hash(

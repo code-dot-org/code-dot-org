@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {connect} from 'react-redux';
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 
 import EmbeddedWorkspace from '../EmbeddedWorkspace';
 import SafeMarkdown from '../SafeMarkdown';
@@ -38,7 +38,7 @@ class InlineHint extends React.Component {
   }
 
   onVideoClick = () => {
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'hint-videos',
         event: 'click',

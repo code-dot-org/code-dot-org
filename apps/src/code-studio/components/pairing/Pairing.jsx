@@ -2,8 +2,8 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
+import Spinner from '@cdo/apps/sharedComponents/Spinner.jsx';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
@@ -73,7 +73,7 @@ export default class Pairing extends React.Component {
       student => studentIds.indexOf(student.id) !== -1
     );
 
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'pairing',
         study_group: 'pairing',

@@ -17,10 +17,8 @@ At time of writing, these files were referenced in the following places:
 
 **Hard coded strings**
 - Applab Exporter: apps/src/applab/Exporter.js
-- hourofcode.com: pegasus/sites.v3/hourofcode.com/styles/030-font-awesome-min.css
 - shared: shared/css/font.scss (shared strings defined here)
 
 **Usages of shared strings**
-- pegasus: pegasus/sites.v3/code.org/public/css/font-awesome.min.scss
 - dashboard: dashboard/app/stylesheets/application.scss
 

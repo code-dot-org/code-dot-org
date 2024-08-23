@@ -7,7 +7,7 @@ import ReactTooltip from 'react-tooltip';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import color from '@cdo/apps/util/color';
 
 import trackEvent from '../util/trackEvent';
@@ -86,7 +86,7 @@ const Notification = ({
       }),
     };
 
-    firehoseClient.putRecord(record, {includeUserId: true});
+    harness.trackAnalytics(record, {includeUserId: true});
   };
 
   const onAnnouncementClick = () => {

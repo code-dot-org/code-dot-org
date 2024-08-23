@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: ruby_server
+    platform: linux/amd64
+    volumes:
+      - ${CURRICULUM_CONTENT_DIR:-../curriculum-content}:/curriculum-content
+      - ${LOCALE_CONTENT_DIR:-../default-locale-content}:/locale-content
+      - .:/app
+      # keeps local-run build artifacts from mixing with docker build artifacts
+      - build_artifacts_node_modules:/app/apps/node_modules
+      - build_artifacts_webpack:/app/apps/build
+      - build_artifacts_yarn:/app/apps/.yarn
+      - build_artifacts_misc:/app/apps/generated-scripts
+      - build_artifacts_misc:/app/dashboard/tmp
+      - build_artifacts_misc:/app/assets
+      - build_artifacts_seed_flag:/app/dashboard/config/scripts
+      - student_data:/student-data
+      
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+      - redis
+    environment:
+      RAILS_ENV: development
+      DATABASE_URL: mysql2://root:@db/dashboard_development
+      REDIS_URL: redis://redis:6379/0
+      CURRICULUM_CONTENT_DIR: /curriculum-content
+      LOCALE_CONTENT_DIR: /locale-content
+    command: bash -c '/app/docker-entrypoint.sh'
+
+  db:
+    image: mysql:8.0
+    container_name: mysql_db
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_ROOT_PASSWORD: ""
+      MYSQL_DATABASE: not_used_db
+      MYSQL_USER: not_used_app_user
+      MYSQL_PASSWORD: not-used-app-password
+    ports:
+      - "13306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  redis:
+    image: redis:alpine
+    container_name: redis_server
+    ports:
+      - "16379:6379"
+
+volumes:
+  mysql_data:
+  build_artifacts_yarn:
+  build_artifacts_node_modules:
+  build_artifacts_webpack:
+  build_artifacts_misc:
+  build_artifacts_seed_flag:
+  student_data:

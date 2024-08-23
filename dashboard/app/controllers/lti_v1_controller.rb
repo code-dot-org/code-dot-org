@@ -46,7 +46,7 @@ class LtiV1Controller < ApplicationController
     begin
       write_cache(state_and_nonce[:state], state_and_nonce)
     rescue => exception
-      Honeybadger.notify(exception, context: {message: 'Error writing state and nonce to cache'})
+      Harness.error_notify(exception, context: {message: 'Error writing state and nonce to cache'})
       return render status: :internal_server_error
     end
 
@@ -95,7 +95,7 @@ class LtiV1Controller < ApplicationController
     begin
       cached_state_and_nonce = read_cache params[:state]
     rescue => exception
-      Honeybadger.notify(exception, context: {message: 'Error reading state and nonce from cache'})
+      Harness.error_notify(exception, context: {message: 'Error reading state and nonce from cache'})
       return render status: :internal_server_error
     end
     if cached_state_and_nonce.nil? || (params[:state] != cached_state_and_nonce[:state]) || (decoded_jwt_no_auth[:nonce] != cached_state_and_nonce[:nonce])
@@ -223,7 +223,7 @@ class LtiV1Controller < ApplicationController
 
   def render_sync_course_error(reason, status, error = nil, message: nil)
     @lti_section_sync_result = {error: error, message: message}
-    Honeybadger.notify(
+    Harness.error_notify(
       'LTI roster sync error',
       context: {
         reason: reason,
@@ -472,7 +472,7 @@ class LtiV1Controller < ApplicationController
   end
 
   private def log_unauthorized(exception, context = nil)
-    Honeybadger.notify(
+    Harness.error_notify(
       exception,
       context: context
     )

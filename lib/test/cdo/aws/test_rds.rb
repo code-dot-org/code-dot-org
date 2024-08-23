@@ -1,5 +1,4 @@
 require_relative '../../test_helper'
-require 'cdo/aws/rds'
 
 class TestRDS < Minitest::Test
   def setup

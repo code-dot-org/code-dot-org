@@ -3,7 +3,7 @@ import React from 'react';
 
 import i18n from '@cdo/locale';
 
-import {pegasus} from '../../../lib/util/urlHelpers';
+import {marketing} from '../../../lib/util/urlHelpers';
 import {Field} from '../../../sharedComponents/SystemDialog/SystemDialog';
 
 export default class ChangeUserTypeForm extends React.Component {
@@ -56,7 +56,7 @@ export default class ChangeUserTypeForm extends React.Component {
       <span>
         {i18n.changeUserTypeModal_emailOptIn_description()}{' '}
         <a
-          href={pegasus('/privacy')}
+          href={marketing('/privacy')}
           tabIndex="3"
           target="_blank"
           rel="noopener noreferrer"

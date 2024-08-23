@@ -2,7 +2,6 @@ require 'aws-sdk-s3'
 require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'
-require 'cdo/aws/s3'
 
 SOUND_LIBRARY_BUCKET = 'cdo-sound-library'.freeze
 RESTRICTED_BUCKET = 'cdo-restricted'.freeze

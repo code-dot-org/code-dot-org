@@ -1,8 +1,0 @@
-name 'self-paced-pl-microbit_emotionBadge_lesson_overview'
-title 'title'
-description 'description here'
-
-markdown <<MARKDOWN
-# Physical Computing 
-
-MARKDOWN

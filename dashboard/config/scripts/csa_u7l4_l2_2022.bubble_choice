@@ -1,9 +1,0 @@
-name 'CSA U7L4-L2_2022'
-display_name 'Writing Private Methods'
-description 'Practice writing private methods using the console or The Theater.'
-
-sublevels
-level 'CSA U7L4-L2a_2022'
-level 'CSA U7L4-L2b_2022'
-level 'CSA U7L4-L2c_2022'
-level 'CSA U7L4-L2d_2022'

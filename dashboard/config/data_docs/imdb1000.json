@@ -1,5 +1,0 @@
-{
-  "key": "imdb1000",
-  "name": "IMDB Top 1000",
-  "content": "Description: IMDB Dataset of top 1000 movies and tv shows.\r\n\r\n[Source 1](https://www.kaggle.com/datasets/harshitshankhdhar/imdb-dataset-of-top-1000-movies-and-tv-shows) [Source 2](https://www.imdb.com/)\r\n\r\nColumns:\r\n\r\n- Poster_Link (link) - Link of the poster that imdb using\r\n- Series_Title (string)- Name of the movie\r\n- Released_Year (number)- Year at which that movie released\r\n- Certificate (string)- Certificate earned by that movie\r\n- Runtime (number) - Total runtime of the movie\r\n- Genre (string)- Genre of the movie\r\n- IMDB_Rating(number) - Rating of the movie at IMDB site\r\n- Overview (string)- mini story/ summary\r\n- Meta_score (number) - Score earned by the movie\r\n- Director (string)- Name of the Director\r\n- Star1,Star2,Star3,Star4 (string)- Name of the Stars\r\n- No of_votes (number) - Total number of votes\r\n- Gross (string) - Money earned by that movie\r\n"
-}

@@ -1,9 +1,0 @@
-{
-  "key": "update-screen-pattern",
-  "course_version_key": "2022",
-  "course_offering_key": "vpl-csp",
-  "parent_reference_guide_key": "patterns",
-  "display_name": "The updateScreen() Pattern",
-  "content": "| Name  | Code (Block) | Code (Text) |\r\n| ------------- | ------------- | ------------- |\r\n| The updateScreen() Pattern  | ![](https://curriculum.code.org/media/uploads/Screenshot-2019-03-04-at-4.39.30-PM.png)|![](https://curriculum.code.org/media/uploads/Screenshot-2019-03-04-at-4.38.43-PM.png) |\r\n\r\n## How does it work?\r\n\r\nMany App Lab projects run in the following way. \r\n\r\n1. The user interacts with a screen element (like clicking a button or typing in a text box). This triggers an event handler.\r\n2. The event handler changes the values stored in variables.\r\n3. The information on the screen is updated to reflect the change to the variable.\r\n\r\nTypically every one of your event handlers (`onEvent` blocks) will include identical code for step 3, updating the screen. To avoid this problem, make a single function called `updateScreen` that includes the code to change every element on your screen once variables have been updated.\r\n\r\nYou will usually want to call `updateScreen` inside of every event handler and will also want to call it once at the beginning of your program. This ensures that the same code is always being used to update the information that shows up on the screen.",
-  "position": 2
-}

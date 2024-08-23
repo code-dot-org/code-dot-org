@@ -21,7 +21,7 @@ import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
 
 const DEFAULT_PROPS = {
   studioUrlPrefix: 'https://studio.code.org',
-  pegasusUrlPrefix: 'https://code.org',
+  marketingUrlPrefix: 'https://code.org',
   sectionId: 1,
   sectionName: 'My Section',
   studentCount: 5,

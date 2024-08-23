@@ -2,30 +2,19 @@ import $ from 'jquery';
 import _ from 'lodash';
 
 /**
- * Attempt to construct an absolute Pegasus url (that is,
+ * Attempt to construct an absolute Marketing url (that is,
  * starting with https://code.org or the appropriate
  * equivalent for the current environment) from a given
- * relative url.  If we're already on pegasus we'll
- * just return the relative url.
+ * relative url.
  * @param {string} relativeUrl - should start with a
  *   leading slash.
  */
-export function pegasus(relativeUrl) {
-  if (window.dashboard && window.dashboard.CODE_ORG_URL) {
-    return window.dashboard.CODE_ORG_URL + relativeUrl;
-  }
+export function marketing(relativeUrl) {
+  // if (window.dashboard && window.dashboard.CODE_ORG_URL) {
+    // Hook TBD
+    return 'https://code.org' + relativeUrl;
+  // }
   return relativeUrl;
-}
-
-/**
- * Sets the global URL prefix for pegasus
- * (e.g. "https://code.org") allowing the pegasus()
- * method above to generate absolute URLs.
- * @param {string} origin
- */
-export function setPegasusOrigin(origin) {
-  window.dashboard = window.dashboard || {};
-  window.dashboard.CODE_ORG_URL = origin;
 }
 
 /**
@@ -38,21 +27,11 @@ export function setPegasusOrigin(origin) {
  *   leading slash.
  */
 export function studio(relativeUrl) {
-  if (window.pegasus && window.pegasus.STUDIO_URL) {
-    return window.pegasus.STUDIO_URL + relativeUrl;
-  }
+  // if (window.marketing && window.marketing.STUDIO_URL) {
+  //   return window.marketing.STUDIO_URL + relativeUrl;
+  // }
+  // Hook TBD
   return relativeUrl;
-}
-
-/**
- * Sets the global URL prefix for code studio
- * (e.g. "https://studio.code.org") allowing the studio()
- * method above to generate absolute URLs.
- * @param {string} origin
- */
-export function setStudioOrigin(origin) {
-  window.pegasus = window.pegasus || {};
-  window.pegasus.STUDIO_URL = origin;
 }
 
 /**

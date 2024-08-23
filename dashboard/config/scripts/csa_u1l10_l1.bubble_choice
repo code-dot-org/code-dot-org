@@ -1,8 +1,0 @@
-name 'CSA U1L10-L1'
-display_name 'Using PainterPlus Methods'
-description 'Use your new PainterPlus methods to navigate a maze!'
-
-sublevels
-level 'CSA U1L10-L1a'
-level 'CSA U1L10-L1b'
-level 'CSA U1L10-L1c'

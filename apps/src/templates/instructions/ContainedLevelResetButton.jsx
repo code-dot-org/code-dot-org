@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import {resetContainedLevel} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {queryUserProgress} from '@cdo/apps/code-studio/progressRedux';
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import {CourseRoles} from '@cdo/apps/templates/currentUserRedux';
 import color from '@cdo/apps/util/color';
@@ -24,7 +24,7 @@ export const UnconnectedContainedLevelResetButton = ({
   const [resetFailed, setResetFailed] = useState(false);
 
   const logButtonClick = () => {
-    firehoseClient.putRecord({
+    harness.trackAnalytics({
       study: 'reset-predict-level',
       event: 'level-reset',
       user_id: userId,

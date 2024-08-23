@@ -1,9 +1,0 @@
-name 'CSA-SE-Copilot-Driver'
-display_name 'Copilot as the Driver'
-description 'Choose one of the following programs to use Copilot as the Driver to implement a solution.'
-
-sublevels
-level 'CSA-SE-L2-L2a'
-level 'CSA-SE-L2-L2b'
-level 'CSA-SE-L2-L2c'
-level 'CSA-SE-L2-L2d'

@@ -1,9 +1,0 @@
-name 'csc_ecosystems_multiple_choice_child_1_2_2023'
-question 'Read the code carefully. Predict what will happen by selecting one of the options below. Then click Run'
-wrong 'If there is too little algae, the coral gets sick. ', feedback: 'Incorrect.'
-wrong 'If there is just enough algae, the coral is removed ', feedback: 'Incorrect.'
-right 'If there is too much algae, the coral gets sick.', feedback: 'Correct!'
-wrong 'If the coral is dirty, it changes to clean coral.', feedback: 'Incorrect.'
-
-
-allow_multiple_attempts false

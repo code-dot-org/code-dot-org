@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {marketing} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import TwoColumnActionBlock from './TwoColumnActionBlock';
@@ -18,9 +18,9 @@ export default class SpecialAnnouncement extends Component {
     const headingText = i18n.announcementHoc2023DanceAIHeading();
     const descriptionText = i18n.announcementHoc2023DanceAIBody();
     const buttonId = 'student_homepage_announcement_special2020';
-    const url = pegasus('/dance');
+    const url = marketing('/dance');
     const buttonText = i18n.learnMore();
-    const imageUrl = pegasus(
+    const imageUrl = marketing(
       '/images/dance-hoc/dance-party-activity-ai-edition.png'
     );
 

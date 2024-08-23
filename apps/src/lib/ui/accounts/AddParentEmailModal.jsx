@@ -11,7 +11,7 @@ import {
 import BaseDialog from '../../../templates/BaseDialog';
 import color from '../../../util/color';
 import {isEmail} from '../../../util/formatValidation';
-import {pegasus} from '../../util/urlHelpers';
+import {marketing} from '../../util/urlHelpers';
 
 const STATE_INITIAL = 'initial';
 const STATE_SAVING = 'saving';
@@ -202,7 +202,7 @@ export default class AddParentEmailModal extends React.Component {
             <div style={styles.parentEmailOptInInput}>
               <label style={styles.label}>
                 {i18n.addParentEmailModal_emailOptIn_description()}{' '}
-                <a href={pegasus('/privacy')}>
+                <a href={marketing('/privacy')}>
                   {i18n.changeEmailModal_emailOptIn_privacyPolicy()}
                 </a>
               </label>

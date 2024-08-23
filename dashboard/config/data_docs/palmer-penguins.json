@@ -1,5 +1,0 @@
-{
-  "key": "palmer-penguins",
-  "name": "Palmer Penguins",
-  "content": "Description: Data on penguins at Palmer Station LTER, located in Antarctica.\r\n\r\n[Source](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-07-28/readme.md) and second [source](https://allisonhorst.github.io/palmerpenguins/)\r\n\r\nColumns:\r\n\r\n * species (string): Penguin species (Adelie, Gentoo, Chinstrap)\r\n * island (string): Island where recorded (Biscoe, Dream, Torgersen)\r\n * bill_length_mm (numerical): Bill length in millimeters (also known as culmen length) in millimeters\r\n * bill_depth_mm (numerical): Bill depth in millimeters (also known as culmen depth) in millimeters\r\n * flipper_length_mm (numerical): Flipper length in mm\r\n * body_mass_g (numerical): Body mass in grams\r\n * sex (string): sex of the animal\r\n * year (string): year recorded\r\n\r\n\r\n\r\n"
-}

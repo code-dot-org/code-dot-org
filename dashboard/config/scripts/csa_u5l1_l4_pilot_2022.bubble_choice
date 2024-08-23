@@ -1,9 +1,0 @@
-name 'CSA U5L1-L4_pilot-2022'
-display_name 'Using 2D Arrays'
-description 'Practice declaring and initializing 2D arrays using initializer lists.'
-
-sublevels
-level 'CSA U5L1-L4a_pilot-2022'
-level 'CSA U5L1-L4b_pilot-2022'
-level 'CSA U5L1-L4c_pilot-2022'
-level 'CSA U5L1-L4d_pilot-2022'

@@ -1,4 +1,4 @@
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 
 /*
  * The Google Classroom Share Button is only available through the google
@@ -49,7 +49,7 @@ function onLoadFinished(success, promise) {
       success: success,
       load_time: elapsedLoadTimeSeconds(getState),
     };
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'google-classroom-share-button',
         study_group: 'v0',

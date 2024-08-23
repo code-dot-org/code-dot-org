@@ -1,9 +1,0 @@
-name 'CSA U4L6-L4_2022'
-display_name 'Manipulating Sounds'
-description 'Write and call static methods using The Theater to manipulate sounds.'
-
-sublevels
-level 'CSA U4L6-L4a_2022'
-level 'CSA U4L6-L4b_2022'
-level 'CSA U4L6-L4c_2022'
-level 'CSA U4L6-L4d_2022'

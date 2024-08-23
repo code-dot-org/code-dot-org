@@ -1,9 +1,0 @@
-{
-  "key": "creative-commons-search",
-  "course_version_key": "2024",
-  "course_offering_key": "focus-on-creativity",
-  "parent_reference_guide_key": "other",
-  "display_name": "Creative Commons Search",
-  "content": "Because the Creative Commons provides such a simple way to know what media you can and can't use, a lot of search engines have integrated Creative Commons filtering to ensure they only give you results you can use. When using a search engine that supports Creative Commons filtering, you usually just need to check a few boxes to make sure the media you find are licensed for your use.\n\n## Search Settings\n\nWhen using a Creative Commons friendly search engine, you'll want to look for a setting that controls the **license** of the search results. For example, Google Image search has a dropdown that lets you select from a handful of different Creative Commons licenses.\n\n<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screenshot-2017-05-02-11.43.56.png\" alt=\"Google CC Image Search\" class=\"center\" style=\"max-width: 400px;\">\n\nIn general you should look for media that is licensed for **non-commercial** use. If you plan to make any changes to the media you find (such as adding text to an image) you'll also need to make sure you have the right to  **modify, adapt, or build upon** your search results.\n\n## Giving Credit\n\nWhen you find an image or other media file you like, make sure that you not only get a copy of the file, but that you also keep track of the information you'll need to give credit to its creator. For every file you want to use, follow these steps:\n\n* Download a copy to your computer (so that you can upload it to your website in the next step)\n* Write down all information you can find about the author, such as\n\t* Name, or screenname\n    * URL of website (not URL of the image itself)\n    * Title of image\n",
-  "position": 2
-}

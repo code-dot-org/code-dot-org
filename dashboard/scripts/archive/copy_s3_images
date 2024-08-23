@@ -4,7 +4,6 @@
 # rename the old ones.
 
 require_relative '../../config/environment'
-require 'cdo/aws/s3'
 
 START_ID = 8_531_000
 #START_ID = 1

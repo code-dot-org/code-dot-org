@@ -1,7 +1,6 @@
 # Base Rack middleware class for processing html through a Nokogiri filter on every request.
 require 'rack/utils'
 require 'nokogiri'
-require 'cdo/pegasus/string'
 
 module Rack
   class ProcessHtml

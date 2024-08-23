@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {marketing} from '@cdo/apps/lib/util/urlHelpers';
 import {
   getSelectedScriptFriendlyName,
   getSelectedScriptDescription,
@@ -164,9 +164,9 @@ class StandardsReport extends Component {
                 </h2>
                 <SafeMarkdown
                   markdown={i18n.standardsGetInvolvedDetailsForPrint({
-                    adminLink: pegasus('/administrators'),
-                    parentLink: pegasus('/help'),
-                    teacherLink: pegasus('/teach'),
+                    adminLink: marketing('/administrators'),
+                    parentLink: marketing('/help'),
+                    teacherLink: marketing('/teach'),
                   })}
                 />
               </div>

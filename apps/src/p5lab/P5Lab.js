@@ -66,7 +66,7 @@ import Sounds from '@cdo/apps/Sounds';
 import {TestResults, ResultType} from '@cdo/apps/constants';
 import {showHideWorkspaceCallouts} from '@cdo/apps/code-studio/callouts';
 import wrap from './gamelab/debugger/replay';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import {
   clearMarks,
   clearMeasures,
@@ -1486,7 +1486,7 @@ export default class P5Lab {
     const levelType = this.level.editCode
       ? 'GameLab'
       : this.level.helperLibraries && this.level.helperLibraries[0];
-    firehoseClient.putRecord({
+    harness.trackAnalytics({
       study: 'gamelab_performance',
       event: 'performance_report',
       data_string: levelType,

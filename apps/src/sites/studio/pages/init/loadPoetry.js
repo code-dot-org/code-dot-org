@@ -1,7 +1,7 @@
 import appMain from '@cdo/apps/appMain';
 import {getDefaultListMetadata} from '@cdo/apps/assetManagement/animationLibraryApi';
 import {getCurrentId} from '@cdo/apps/code-studio/initApp/project';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import levels from '@cdo/apps/p5lab/levels';
 import Poetry from '@cdo/apps/p5lab/poetry/Poetry';
 import skins from '@cdo/apps/p5lab/skins';
@@ -23,7 +23,7 @@ export default function loadPoetry(options) {
       let poetry = new Poetry(defaultSprites);
 
       // Log data that we're using the backup default animations.
-      firehoseClient.putRecord({
+      harness.trackAnalytics({
         study: 'sprite_default_load',
         study_group: 'poetry',
         event: 'backup_animations_used',

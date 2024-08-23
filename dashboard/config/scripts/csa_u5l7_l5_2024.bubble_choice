@@ -1,9 +1,0 @@
-name 'CSA U5L7-L5_2024'
-display_name 'Skill Building: The indexOf() Method'
-description 'Practice using the `indexOf()` method.'
-
-sublevels
-level 'CSA U5L7-L5a_2024'
-level 'CSA U5L7-L5b_2024'
-level 'CSA U5L7-L5c_2024'
-level 'CSA U5L7-L5d_2024'

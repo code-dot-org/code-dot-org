@@ -201,7 +201,7 @@ class Unit < ApplicationRecord
 
   after_save :generate_plc_objects
 
-  UNIT_DIRECTORY = "#{Rails.root}/config/scripts".freeze
+  UNIT_DIRECTORY = curriculum_dir("dashboard/config/scripts").freeze
 
   TEACHER_FEEDBACK_INITIATIVES = %w(CSF CSC CSD CSP CSA).freeze
 
@@ -215,7 +215,7 @@ class Unit < ApplicationRecord
     UNIT_DIRECTORY
   end
 
-  UNIT_JSON_DIRECTORY = "#{Rails.root}/config/scripts_json".freeze
+  UNIT_JSON_DIRECTORY = curriculum_dir("dashboard/config/scripts_json").freeze
 
   def self.unit_json_directory
     UNIT_JSON_DIRECTORY

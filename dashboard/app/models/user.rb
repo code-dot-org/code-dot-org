@@ -76,7 +76,6 @@
 
 require 'digest/md5'
 require 'state_abbr'
-require 'cdo/aws/metrics'
 require 'cdo/shared_constants'
 require_relative '../../legacy/middleware/helpers/user_helpers'
 require 'school_info_interstitial_helper'
@@ -216,19 +215,10 @@ class User < ApplicationRecord
   belongs_to :studio_person, optional: true
   has_many :hint_view_requests
 
-  # courses a facilitator is able to teach
-  has_many :courses_as_facilitator,
-    class_name: 'Pd::CourseFacilitator',
-    foreign_key: :facilitator_id,
-    dependent: :destroy
-
   has_many :regional_partner_program_managers,
     foreign_key: :program_manager_id
   has_many :regional_partners,
     through: :regional_partner_program_managers
-
-  has_many :pd_workshops_organized, class_name: 'Pd::Workshop', foreign_key: :organizer_id
-  has_and_belongs_to_many :pd_workshops_facilitated, class_name: 'Pd::Workshop', join_table: 'pd_workshops_facilitators', association_foreign_key: 'pd_workshop_id'
 
   has_many :authentication_options, dependent: :destroy
   accepts_nested_attributes_for :authentication_options
@@ -272,19 +262,11 @@ class User < ApplicationRecord
   after_save :update_and_add_users_school_infos, if: :saved_change_to_school_info_id?
   validate :complete_school_info, if: :school_info_id_changed?, unless: proc {|u| u.purged_at.present?}
 
-  has_many :pd_applications,
-    class_name: 'Pd::Application::ApplicationBase',
-    dependent: :destroy
-
-  has_many :pd_attendances, class_name: 'Pd::Attendance', foreign_key: :teacher_id
-
   has_many :sign_ins
   has_many :user_geos, -> {order(updated_at: :desc)}
 
   before_validation :normalize_parent_email
   validate :validate_parent_email
-
-  after_create :associate_with_potential_pd_enrollments
 
   before_create :save_show_progress_table_v2
 
@@ -437,27 +419,6 @@ class User < ApplicationRecord
     primary_contact_info.try(:hashed_email) || ''
   end
 
-  # Email used for the user's enrollments:
-  # Returns the 'alternateEmail' field from the user's latest accepted teacher application if it exists to
-  # help ensure the enrollment emails are delivered. Otherwise, returns the user's email.
-  def email_for_enrollments
-    latest_accepted_app = Pd::Application::TeacherApplication.where(
-      user: self,
-      status: 'accepted'
-    ).order(application_year: :desc).first&.form_data_hash
-    alternate_email = latest_accepted_app ? latest_accepted_app['alternateEmail'] : ''
-    alternate_email.presence || email
-  end
-
-  # assign a course to a facilitator that is qualified to teach it
-  def course_as_facilitator=(course)
-    courses_as_facilitator << courses_as_facilitator.find_or_create_by(facilitator_id: id, course: course)
-  end
-
-  def delete_course_as_facilitator(course)
-    courses_as_facilitator.find_by(course: course).try(:destroy)
-  end
-
   # Given a user_id, username, or email, attempts to find the relevant user
   def self.from_identifier(identifier)
     (identifier.to_i.to_s == identifier && where(id: identifier).first) ||
@@ -465,7 +426,6 @@ class User < ApplicationRecord
       find_by_email_or_hashed_email(identifier)
   rescue ActiveModel::RangeError
     # Given too large of a user id this can produce a range error
-    # @see https://app.honeybadger.io/projects/3240/faults/44740400
     nil
   end
 
@@ -2458,15 +2418,6 @@ class User < ApplicationRecord
     teacher? && users_school && (next_census_display.nil? || Time.zone.today >= next_census_display.to_date)
   end
 
-  # Returns the name of the donor for the donor teacher banner and donor footer, or nil if none.
-  # Donors are associated with certain schools, captured in DonorSchool and populated from a Pegasus gsheet
-  def school_donor_name
-    school_id = school_info_school&.id
-    donor_name = DonorSchool.find_by(nces_id: school_id)&.name if school_id
-
-    donor_name
-  end
-
   # Removes PII and other information from the user and marks the user as having been purged.
   # WARNING: This (permanently) destroys data and cannot be undone.
   # WARNING: This does not purge the user, only marks them as such.
@@ -2505,14 +2456,6 @@ class User < ApplicationRecord
 
   def within_united_states?
     user_geos.first&.country == 'United States'
-  end
-
-  def associate_with_potential_pd_enrollments
-    if teacher?
-      Pd::Enrollment.where(email: email, user: nil).each do |enrollment|
-        enrollment.update(user: self)
-      end
-    end
   end
 
   # Disable sharing of advanced projects for students under 13 upon
@@ -2845,10 +2788,6 @@ class User < ApplicationRecord
   # ex: ["csf", "csd"]
   private def curriculums_being_taught
     @curriculums_being_taught ||= sections_instructed.filter_map {|section| section.script&.curriculum_umbrella}.uniq
-  end
-
-  private def has_attended_pd?
-    pd_attendances.any?
   end
 
   private def school_stats

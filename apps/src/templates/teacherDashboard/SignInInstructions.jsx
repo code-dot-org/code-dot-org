@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {marketing} from '@cdo/apps/lib/util/urlHelpers';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import color from '@cdo/apps/util/color';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
@@ -26,7 +26,7 @@ export default class SignInInstructions extends React.Component {
               markdown={i18n.signingInWordPic1({
                 joinLink: `${studioUrlPrefix}/sections/${sectionCode}`,
                 sectionCode: sectionCode,
-                codeOrgLink: pegasus('/'),
+                codeOrgLink: marketing('/'),
               })}
             />
             <p style={styles.listAlign}>{i18n.signingInWordPic2()}</p>
@@ -41,7 +41,7 @@ export default class SignInInstructions extends React.Component {
               markdown={i18n.signingInWordPic1({
                 joinLink: `${studioUrlPrefix}/sections/${sectionCode}`,
                 sectionCode: sectionCode,
-                codeOrgLink: pegasus('/'),
+                codeOrgLink: marketing('/'),
               })}
             />
             <p style={styles.listAlign}>{i18n.signingInWordPic2()}</p>
@@ -54,7 +54,7 @@ export default class SignInInstructions extends React.Component {
             <p>{i18n.signingInEmailIntro()}</p>
             <SafeMarkdown
               markdown={i18n.signingInEmailGoogle1({
-                codeOrgLink: pegasus('/'),
+                codeOrgLink: marketing('/'),
               })}
             />
             <p style={styles.listAlign}>{i18n.signingInEmail2()}</p>
@@ -66,7 +66,7 @@ export default class SignInInstructions extends React.Component {
             <p>{i18n.signingInGoogleIntro()}</p>
             <SafeMarkdown
               markdown={i18n.signingInEmailGoogle1({
-                codeOrgLink: pegasus('/'),
+                codeOrgLink: marketing('/'),
               })}
             />
             <p style={styles.listAlign}>{i18n.signingInGoogle2()}</p>

@@ -32,8 +32,7 @@
 //= require details-polyfill/details-polyfill
 
 // window.dashboard is used to communicate between dashboard/apps in a variety
-// of places. In this case we want to make availale to our JS the url of the
-// pegasus portion of our site (i.e. http://code.org vs. http://studio.code.org)
+// of places.
 window.dashboard = window.dashboard || {};
 window.dashboard.CODE_ORG_URL = "<%= CDO.code_org_url %>";
 window.dashboard.rack_env = "<%= CDO.rack_env %>";

@@ -1,4 +1,3 @@
-require 'cdo/aws/cloudfront'
 require 'google-apis-classroom_v1'
 
 class ApiController < ApplicationController
@@ -45,7 +44,7 @@ class ApiController < ApplicationController
       }
       render json: response
     rescue RestClient::Exception => exception
-      Honeybadger.notify(
+      Harness.error_notify(
         exception,
         error_message: "Failed to retrieve OAuth token from Azure for use with the Immersive Reader API.",
         context: {
@@ -56,7 +55,7 @@ class ApiController < ApplicationController
       )
       render status: :failed_dependency, json: {error: 'Unable to get token from Azure.'}
     rescue JSON::JSONError => exception
-      Honeybadger.notify(
+      Harness.error_notify(
         exception,
         error_message: "Failed to parse response from Azure when trying to get OAuth token for use with the Immersive Reader API.",
         context: {

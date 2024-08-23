@@ -2,7 +2,7 @@ import _ from 'lodash';
 
 import {navigateToHref} from '@cdo/apps/utils';
 
-import firehoseClient from '../../lib/util/firehose';
+import harness from '../../lib/util/harness';
 
 import {TEACHER_DASHBOARD_PATHS} from './TeacherDashboardNavigation';
 
@@ -17,7 +17,7 @@ export function switchToSection(toSectionId, fromSectionId) {
 }
 
 export function recordSwitchToSection(toSectionId, fromSectionId, studyGroup) {
-  firehoseClient.putRecord(
+  harness.trackAnalytics(
     {
       study: 'teacher_dashboard_actions',
       study_group: studyGroup,
@@ -33,7 +33,7 @@ export function recordSwitchToSection(toSectionId, fromSectionId, studyGroup) {
 }
 
 export function recordOpenEditSectionDetails(sectionId, studyGroup) {
-  firehoseClient.putRecord(
+  harness.trackAnalytics(
     {
       study: 'teacher_dashboard_actions',
       study_group: studyGroup,

@@ -1,8 +1,0 @@
-{
-  "key": "analogWrite",
-  "name": "analogWrite()",
-  "category": "Maker",
-  "category_key": "maker",
-  "short_description": "Maker Toolkit - analogWrite()",
-  "syntax": "analogWrite(pin, value)"
-}

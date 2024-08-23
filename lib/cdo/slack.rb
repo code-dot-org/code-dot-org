@@ -2,7 +2,7 @@ require 'uri'
 require 'net/http'
 require 'retryable'
 require 'json'
-require 'cdo/honeybadger'
+
 
 class Slack
   COLOR_MAP = {
@@ -234,7 +234,7 @@ class Slack
         error_message: "Using legacy token",
         context: {url: url, payload: payload}
       }
-      Honeybadger.notify_cronjob_error opts
+      Harness.error_notify_cronjob_error opts
 
       token = SLACK_TOKEN
     end
@@ -261,7 +261,7 @@ class Slack
           error_message: parsed_res['error'],
           context: {url: url, payload: payload, response: parsed_res}
         }
-        Honeybadger.notify_cronjob_error opts
+        Harness.error_notify_cronjob_error opts
         response = false
       end
     rescue Exception => exception
@@ -270,7 +270,7 @@ class Slack
         error_message: exception,
         context: {url: url, payload: payload}
       }
-      Honeybadger.notify_cronjob_error opts
+      Harness.error_notify_cronjob_error opts
       response = false
     end
     response

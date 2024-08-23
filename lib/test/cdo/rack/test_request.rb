@@ -46,8 +46,8 @@ class RequestTest
 
     def test_referer_site_with_port
       # Returns actual referer if it's internal.
-      @mock_request.stubs(:referer).returns('http://localhost-studio.code.org:3000/home')
-      assert_equal 'localhost-studio.code.org:3000', @mock_request.referer_site_with_port
+      @mock_request.stubs(:referer).returns('http://localhost:3000/home')
+      assert_equal 'localhost:3000', @mock_request.referer_site_with_port
       @mock_request.stubs(:referer).returns('http://studio.code.org/home')
       assert_equal 'studio.code.org', @mock_request.referer_site_with_port
       @mock_request.stubs(:referer).returns('https://www.csedweek.org/')
@@ -64,16 +64,12 @@ class RequestTest
       hosts_to_expected = {
         # "Base" domains and subdomains are returned unmodified
         'studio.code.org': 'studio.code.org',
-        'code.org': 'code.org',
-        'hourofcode.com': 'hourofcode.com',
 
         # Localhost- and environment-specific subdomains are normalized to the
         # "base".
+        'localhost': 'studio.code.org',
         'localhost-studio.code.org': 'studio.code.org',
         'staging-studio.code.org': 'studio.code.org',
-        'localhost.code.org': 'code.org',
-        'test.code.org': 'code.org',
-        'localhost.hourofcode.com': 'hourofcode.com',
 
         # Entirely unrecognized domains are normalized to just code.org
         'example.com': 'code.org',

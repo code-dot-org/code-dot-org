@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'cdo/aws/s3'
 
 # Uncomment to test locally with similar constraints to what we see in the test environment
 # Don't check in uncommented - this is leaky and affects other tests!

@@ -13,7 +13,7 @@ export default {
 
 const Template = args => (
   <Provider store={args.store}>
-    <SectionLoginInfo studioUrlPrefix="http://localhost-studio.code.org:3000" />
+    <SectionLoginInfo studioUrlPrefix="http://localhost:3000" />
   </Provider>
 );
 

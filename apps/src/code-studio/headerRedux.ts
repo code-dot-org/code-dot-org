@@ -40,28 +40,6 @@ const headerSlice = createSlice({
     showProjectBackedHeader(state) {
       state.currentHeader = possibleHeaders.projectBacked;
     },
-    showLevelBuilderSaveButton: {
-      reducer(
-        state,
-        action: PayloadAction<{
-          getChanges: () => object;
-          overrideHeaderText: string;
-          overrideOnSaveUrl: string;
-        }>
-      ) {
-        state.currentHeader = possibleHeaders.levelBuilderSave;
-        state.getLevelBuilderChanges = action.payload.getChanges;
-        state.overrideHeaderText = action.payload.overrideHeaderText;
-        state.overrideOnSaveUrl = action.payload.overrideOnSaveUrl;
-      },
-      prepare(
-        getChanges: () => object,
-        overrideHeaderText: string,
-        overrideOnSaveUrl: string
-      ) {
-        return {payload: {getChanges, overrideHeaderText, overrideOnSaveUrl}};
-      },
-    },
     clearHeader(state) {
       state.currentHeader = undefined;
     },
@@ -72,7 +50,6 @@ export const {
   showProjectHeader,
   showMinimalProjectHeader,
   showProjectBackedHeader,
-  showLevelBuilderSaveButton,
   clearHeader,
 } = headerSlice.actions;
 

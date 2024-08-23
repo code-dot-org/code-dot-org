@@ -1,7 +1,5 @@
 require 'i18n'
 require 'active_support/core_ext/numeric/bytes'
-require 'cdo/honeybadger'
-require 'cdo/i18n_string_url_tracker'
 
 module Cdo
   module I18n
@@ -128,7 +126,7 @@ module Cdo
         # that was removed in the source string and we want to be notified so
         # we can update the translation.
         if result.is_a?(String) && Regexp.union(::I18n.config.interpolation_patterns).match?(result)
-          Honeybadger.notify(
+          Harness.error_notify(
             error_class: 'Interpolation Pattern present in translation',
             error_message: "String #{result.inspect} has unused interpolation patterns after translation",
             context: {
@@ -143,32 +141,10 @@ module Cdo
       end
     end
 
-    # Plugin for logging usage information about i18n strings.
-    module I18nStringUrlTrackerPlugin
-      def translate(locale, key, options = ::I18n::EMPTY_HASH)
-        result = super
-        # If we don't want to track this string lookup, just return the translation
-        # :tracking is assumed to be true unless explicitly set to false.
-        # :tracking is a custom flag we added to skip i18n string tracking for this translation
-        # lookup.
-        return result if options[:tracking] == false
-
-        url = Thread.current[:current_request_url]
-        scope = options[:scope]
-        # Note that the separator here might not cover some edge cases. If we find that the separator used here is not
-        # sufficient, then refactor the SmartTranslate module so we can use `get_valid_separator` here.
-        separator = options[:separator] || ::I18n.default_separator
-        # We don't pass in a locale because we want the union of all string keys across all locales.
-        I18nStringUrlTracker.instance.log(url, 'ruby', key, scope, separator) if key && url
-        result
-      end
-    end
-
     module Plugins
       include SmartTranslate
       include MarkdownTranslate
       include SafeInterpolation
-      include I18nStringUrlTrackerPlugin
     end
 
     class SimpleBackend < ::I18n::Backend::Simple

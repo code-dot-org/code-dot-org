@@ -1,5 +1,0 @@
-{
-  "key": "nwsl-teams",
-  "name": "NWSL Teams",
-  "content": "Description: Data about all current National Women's Soccer League (NWSL) teams, as of the 2022 season\r\n\r\nSource: [Wikipedia](https://en.wikipedia.org/wiki/National_Women%27s_Soccer_League)\r\n\r\nColumns: \r\n\r\n* Team (string): name of the team\r\n* Location (string): city and state the team is located in\r\n* Stadium (string): name of the stadium the team plays home games in\r\n* Capacity (numerical): how many seats the stadium holds for attendees\r\n* Joined (numerical): what year that team officially joined the NWSL\r\n* Founded (numerical): what year that team was founded\r\n* Head coach (string): name of that team's head coach"
-}

@@ -1,6 +1,4 @@
 require 'stringio'
-require 'cdo/aws/metrics'
-require 'cdo/aws/s3'
 require 'cdo/chat_client'
 
 #

@@ -34,7 +34,7 @@ const LtiNewAccountCard = () => {
     analyticsReporter.sendEvent(
       'lti_new_account_click',
       eventPayload,
-      PLATFORMS.STATSIG
+      null
     );
 
     finishSignupFormRef.current?.submit();

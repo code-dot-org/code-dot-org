@@ -189,7 +189,7 @@ class ExperimentTest < ActiveSupport::TestCase
   end
 
   test "creating experiments does not break get_all_enabled for signed out user" do
-    Honeybadger.stubs(:notify).raises('HoneyBadger.notify called')
+    Harness.stubs(:error_notify).raises('HoneyBadger.notify called')
     create :user_based_experiment
     create :teacher_based_experiment
     create :single_user_experiment

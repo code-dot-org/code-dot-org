@@ -1,9 +1,0 @@
-{
-  "key": "enhanced-for-loops",
-  "course_version_key": "2023",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "control-structures",
-  "display_name": "Enhanced For Loops",
-  "content": "An **enhanced for loop** loops through the entirety of an array or `ArrayList`(#e7e8ea).\n\n## Components of an Enhanced for Loop\n\n```\nfor (int value : scores)\n```\n\nAn enhanced for loop consists of two parts:\n- Declaring an enhanced for loop variable `value`(#e7e8ea). The enhanced for loop variable must be the same data type as the elements in the 1D array it is traversing.\n- The name of the 1D array to traverse `scores`(#e7e8ea)\n\n## When to Use Enhanced for Loops\n\nUse when:\n- Looping through all values in an array or `ArrayList`(#e7e8ea) without changing their values. \n- Looping through all values in an array or `ArrayList`(#e7e8ea)  in order starting at index 0. \n\nDo not use when:\n- You need the index of an element.\n- You need to change the values in an array or `ArrayList`(#e7e8ea) .\n- You want to loop through only part of an array or `ArrayList`(#e7e8ea)  or in a different order.\n",
-  "position": 7
-}

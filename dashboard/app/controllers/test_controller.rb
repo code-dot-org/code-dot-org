@@ -1,6 +1,5 @@
 # Controller actions used only to facilitate UI tests.
 class TestController < ApplicationController
-  include Pd::Application::ActiveApplicationModels
   layout false
 
   def levelbuilder_access
@@ -233,7 +232,6 @@ class TestController < ApplicationController
       agree: 'Yes',
       completing_on_behalf_of_someone_else: 'No',
       previous_yearlong_cdo_pd: ['CS in Science'],
-      enough_course_hours: Pd::Application::TeacherApplication.options[:enough_course_hours].first,
       program: 'csp',
       will_teach: 'Yes',
       csp_which_grades: ['11', '12'],
@@ -269,69 +267,11 @@ class TestController < ApplicationController
       first_name: teacher_name,
       last_name: 'Test',
       regional_partner_id: regional_partner.id,
-      program: Pd::Application::TeacherApplication::PROGRAMS[:csp]
     ).to_json
-    application = Pd::Application::TeacherApplication.create!(
-      user: teacher,
-      form_data: form_data,
-      status: 'unreviewed'
-    )
 
-    render json: {rp_id: regional_partner.id, teacher_id: teacher.id, application_id: application.id}
+    render json: {rp_id: regional_partner.id, teacher_id: teacher.id}
   end
-
-  def create_applications
-    %w(csd csp csa).each do |course|
-      (Pd::Application::TeacherApplication.statuses).each do |status|
-        teacher_email = "#{course}_#{status}@code.org"
-        teacher = User.find_or_create_teacher(
-          {name: "#{course} #{status}", email: teacher_email}, nil, nil
-        )
-        next if Pd::Application::TeacherApplication.find_by(
-          application_year: Pd::Application::ActiveApplicationModels::APPLICATION_CURRENT_YEAR,
-          user_id: teacher.id
-        )
-
-        form_data = teacher_form_data.merge(
-          first_name: course,
-          last_name: status,
-          program: Pd::Application::TeacherApplication::PROGRAMS[course.to_sym]
-        ).to_json
-
-        if status == 'incomplete'
-          Pd::Application::TeacherApplication.create!(
-            form_data: form_data,
-            user: teacher,
-            course: course,
-            status: 'incomplete'
-          )
-        else
-          application = Pd::Application::TeacherApplication.create!(
-            form_data: form_data,
-            user: teacher,
-            course: course,
-            status: 'unreviewed'
-          )
-          application.update!(status: status)
-        end
-      end
-    end
-    head :ok
-  end
-
-  def delete_rp_pm_teacher_application
-    RegionalPartner.find(params[:rp_id].to_i).destroy
-    Pd::Application::TeacherApplication.find(params[:application_id].to_i).destroy
-    User.find(params[:teacher_id].to_i).destroy
-    User.find_by(name: params[:pm_name]).destroy
-    head :ok
-  end
-
-  def delete_workshop
-    Pd::Workshop.find_by_id(params[:workshop_id]).destroy
-    head :ok
-  end
-
+  
   def create_pilot
     name = params.require(:pilot_name)
     Pilot.create_with(allow_joining_via_url: true, display_name: name).find_or_create_by(name: name)

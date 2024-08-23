@@ -11,7 +11,7 @@ require_relative 'only_one'
 abort 'Script already running' unless only_one_running?(__FILE__)
 
 require_relative '../../dashboard/config/environment'
-require 'honeybadger/ruby'
+
 
 TIME_NOW = DateTime.now.strftime('%F %T').freeze
 
@@ -173,7 +173,7 @@ def main
       SQL
     end
   rescue => exception
-    Honeybadger.notify(
+    Harness.error_notify(
       exception,
       error_message: "Error when writing contained_levels"
     )
@@ -196,7 +196,7 @@ def main
       SQL
     end
   rescue => exception
-    Honeybadger.notify(
+    Harness.error_notify(
       exception,
       error_message: "Error when writing contained_level_answers"
     )
@@ -218,21 +218,10 @@ def main
       SQL
     end
   rescue => exception
-    Honeybadger.notify(
+    Harness.error_notify(
       exception,
       error_message: "Error when writing level_sources_multi_type"
     )
-  end
-
-  # Because there may soon be > 100K application status log entries, batch the
-  # reads in addition to the writes so that we do not end up loading too many
-  # objects into memory.
-  ActiveRecord::Base.connection.execute 'TRUNCATE pd_applications_status_logs'
-  Pd::Application::TeacherApplication.find_in_batches(batch_size: 1000) do |batch|
-    row_hashes = batch.map do |application|
-      get_pd_applications_status_log_row_hashes(application)
-    end.flatten
-    insert_pd_applications_status_logs_rows(row_hashes) if row_hashes.any?
   end
 end
 
@@ -274,50 +263,6 @@ def level_sources_multi_types_row(row_hash)
       #{row_hash[:hidden]}
     )
   ROW
-end
-
-# @param [Pd::Application::TeacherApplication] application
-def get_pd_applications_status_log_row_hashes(application)
-  row_hashes = []
-  application.status_log&.each_with_index do |log_entry, i|
-    row_hashes << {
-      pd_application_id: application.id,
-      status: log_entry['status'],
-      timestamp: Time.parse(log_entry['at']).gmtime.strftime('%Y-%m-%d %H:%M:%S'),
-      position: i
-    }
-  end
-  row_hashes
-end
-
-def pd_applications_status_logs_row(row_hash)
-  <<~ROW
-    (
-      #{row_hash[:pd_application_id]},
-      "#{row_hash[:status]}",
-      "#{row_hash[:timestamp]}",
-      #{row_hash[:position]}
-    )
-  ROW
-end
-
-def insert_pd_applications_status_logs_rows(rows)
-  ActiveRecord::Base.connection.execute <<~SQL
-    INSERT INTO pd_applications_status_logs (
-      pd_application_id,
-      status,
-      timestamp,
-      position
-    )
-    VALUES
-    #{rows.map {|row| pd_applications_status_logs_row(row)}.join(",\n")}
-  SQL
-rescue => exception
-  puts exception
-  Honeybadger.notify(
-    exception,
-    error_message: "Error when writing pd_applications_status_logs"
-  )
 end
 
 main

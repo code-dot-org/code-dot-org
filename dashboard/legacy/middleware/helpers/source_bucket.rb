@@ -8,8 +8,11 @@ MAIN_JSON_FILENAME = 'main.json'.freeze unless defined? MAIN_JSON_FILENAME
 # Assumes only main.json files will be uploaded to this bucket.
 #
 class SourceBucket < BucketHelper
+  
+  
+  
   def initialize
-    super CDO.sources_s3_bucket, CDO.sources_s3_directory
+    super
   end
 
   def allowed_file_name?(filename)

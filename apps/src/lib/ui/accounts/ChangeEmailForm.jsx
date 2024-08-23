@@ -4,7 +4,6 @@ import React from 'react';
 import i18n from '@cdo/locale';
 
 import {Field} from '../../../sharedComponents/SystemDialog/SystemDialog';
-import {pegasus} from '../../util/urlHelpers';
 
 export default class ChangeEmailForm extends React.Component {
   static propTypes = {
@@ -67,7 +66,7 @@ export default class ChangeEmailForm extends React.Component {
       <span>
         {i18n.changeEmailModal_emailOptIn_description()}{' '}
         <a
-          href={pegasus('/privacy')}
+          href={marketing('/privacy')}
           tabIndex="3"
           target="_blank"
           rel="noopener noreferrer"

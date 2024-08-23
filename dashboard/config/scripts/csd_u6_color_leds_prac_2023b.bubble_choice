@@ -1,8 +1,0 @@
-name 'CSD U6 - Color LEDs - Prac_2023b'
-display_name 'Practice Levels'
-
-sublevels
-level 'CSD U6 - Color LEDs - PracA_2023b'
-level 'CSD U6 - Color LEDs - PracB_2023b'
-level 'CSD U6 - Color LEDs - PracC_2023b'
-level 'CSD U6 - Color LEDs - PracD_2023b'

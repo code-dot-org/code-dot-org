@@ -4,7 +4,7 @@ import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {sources as sourcesApi} from '@cdo/apps/clientApi';
 import project from '@cdo/apps/code-studio/initApp/project';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import VersionHistoryWithCommitsDialog from '@cdo/apps/templates/VersionHistoryWithCommitsDialog';
 import * as utils from '@cdo/apps/utils';
 
@@ -227,7 +227,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
 
       afterEach(async () => {
         await wasCalled(utils.reload);
-        firehoseClient.putRecord.restore();
+        harness.trackAnalytics.restore();
         project.getCurrentId.restore();
         project.getCurrentSourceVersionId.restore();
         project.getShareUrl.restore();
@@ -244,7 +244,7 @@ describe('VersionHistoryWithCommitsDialog', () => {
       });
 
       it('logs to firehose', () => {
-        expect(firehoseClient.putRecord).to.have.been.calledOnce.and.calledWith(
+        expect(harness.trackAnalytics).to.have.been.calledOnce.and.calledWith(
           {
             study: 'project-data-integrity',
             study_group: 'v4',

@@ -1,7 +1,0 @@
-name 'poetry_predict_mood2_multi'
-question '![](https://images.code.org/a7db11675900f6a0c04c9e00c7d1ff8f-image-1632252573308.png)Read the poem. At which line does the mood shift from lonely to surprised?'
-wrong 'Line 1', feedback: 'Incorrect. The poet is wandering and lonely in this line.'
-wrong 'Line 2', feedback: 'Incorrect. The poet is giving the reader an image of where he is wandering.'
-right 'Line 3', feedback: 'Correct! The poet uses words "all at once," which sounds like surprise.'
-wrong 'Line 4', feedback: 'Incorrect. The poet is giving the reader an image of what he sees. '
-allow_multiple_attempts false

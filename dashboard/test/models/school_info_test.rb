@@ -124,13 +124,13 @@ class SchoolInfoTest < ActiveSupport::TestCase
   end
 
   test 'consitant school data does not notify' do
-    Honeybadger.expects(:notify).never
+    Harness.expects(:error_notify).never
     school_info = build :school_info_with_public_school_only, country: 'US'
     assert school_info.valid?, school_info.errors.full_messages
   end
 
   test 'auto upgrade validation type without other overwritting does not notify' do
-    Honeybadger.expects(:notify).never
+    Harness.expects(:error_notify).never
     school_info = build :school_info_with_public_school_only, validation_type: SchoolInfo::VALIDATION_COMPLETE
     assert school_info.valid?, school_info.errors.full_messages
   end

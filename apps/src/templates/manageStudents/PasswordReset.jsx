@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import i18n from '@cdo/locale';
 
 // This min length is configured in user.rb with validates_length_of :password
@@ -88,7 +88,7 @@ class PasswordReset extends Component {
 
   recordResetSecret = () => {
     const {sectionId, studentId} = this.props;
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'teacher-dashboard',
         study_group: 'manage-students',

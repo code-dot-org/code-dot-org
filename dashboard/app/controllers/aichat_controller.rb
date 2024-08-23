@@ -197,7 +197,7 @@ class AichatController < ApplicationController
         }
       ]
 
-      Honeybadger.notify(
+      Harness.error_notify(
         'Profanity returned from aichat model (blocked before reaching student)',
         context: {
           model_response: latest_assistant_response_from_sagemaker,

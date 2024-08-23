@@ -22,7 +22,6 @@ import {beginGoogleImportRosterFlow} from '../teacherDashboard/teacherSectionsRe
 
 import IncubatorBanner from './IncubatorBanner';
 import MarketingAnnouncementBanner from './MarketingAnnouncementBanner';
-import NpsSurveyBlock from './NpsSurveyBlock';
 import RecentCourses from './RecentCourses';
 import shapes from './shapes';
 import TeacherResources from './TeacherResources';
@@ -194,7 +193,6 @@ export const UnconnectedTeacherHomepage = ({
       <div className={'container main'}>
         <ProtectedStatefulDiv ref={flashes} />
         <ProtectedStatefulDiv ref={teacherReminders} />
-        {showNpsSurvey && <NpsSurveyBlock />}
         {specialAnnouncement && (
           <MarketingAnnouncementBanner
             announcement={specialAnnouncement}

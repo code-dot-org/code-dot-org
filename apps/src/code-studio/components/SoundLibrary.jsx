@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import SearchBar from '@cdo/apps/sharedComponents/SearchBar';
 import i18n from '@cdo/locale';
 
@@ -85,7 +85,7 @@ export default class SoundLibrary extends React.Component {
   };
 
   onClickChoose = () => {
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'sound-dialog-2',
         study_group: 'library-tab',

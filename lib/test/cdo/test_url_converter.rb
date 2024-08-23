@@ -35,10 +35,7 @@ class UrlConverterTest < Minitest::Test
 
   def tst_url_converter
     UrlConverter.new(
-      pegasus_host: 'test.code.org',
       dashboard_host: 'test-studio.code.org',
-      hourofcode_host: 'test.hourofcode.com',
-      csedweek_host: 'test.csedweek.org'
     )
   end
 
@@ -68,10 +65,7 @@ class UrlConverterTest < Minitest::Test
 
   def local_url_converter
     UrlConverter.new(
-      pegasus_host: 'localhost.code.org:3000',
-      dashboard_host: 'localhost-studio.code.org:3000',
-      hourofcode_host: 'localhost.hourofcode.com:3000',
-      csedweek_host: 'localhost.csedweek.org:3000'
+      dashboard_host: 'localhost:3000',
     )
   end
 
@@ -80,7 +74,7 @@ class UrlConverterTest < Minitest::Test
     assert_equal 'https://localhost.code.org:3000', url_converter.replace_origin('https://code.org')
     assert_equal 'https://localhost.code.org:3000/', url_converter.replace_origin('https://code.org/')
     assert_equal 'https://localhost.code.org:3000/curriculum/unplugged', url_converter.replace_origin('https://code.org/curriculum/unplugged')
-    assert_equal 'https://localhost-studio.code.org:3000', url_converter.replace_origin('https://studio.code.org')
+    assert_equal 'https://localhost:3000', url_converter.replace_origin('https://studio.code.org')
     assert_equal 'https://localhost.hourofcode.com:3000', url_converter.replace_origin('https://hourofcode.com')
     assert_equal 'https://localhost.csedweek.org:3000', url_converter.replace_origin('https://csedweek.org')
     assert_equal 'https://localhost.csedweek.org:3000/about', url_converter.replace_origin('https://csedweek.org/about')
@@ -89,7 +83,7 @@ class UrlConverterTest < Minitest::Test
   def test_does_not_upgrade_protocol_in_local_configuration
     url_converter = local_url_converter
     assert_equal 'http://localhost.code.org:3000', url_converter.replace_origin('http://code.org')
-    assert_equal 'http://localhost-studio.code.org:3000', url_converter.replace_origin('http://studio.code.org')
+    assert_equal 'http://localhost:3000', url_converter.replace_origin('http://studio.code.org')
   end
 
   def test_raises_on_learn_code_org_in_local_configuration

@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import SchoolDataInputs from '@cdo/apps/templates/SchoolDataInputs';
 import {
   SELECT_A_SCHOOL,
@@ -200,7 +200,7 @@ $(document).ready(() => {
   }
 
   function trackUserType(type) {
-    firehoseClient.putRecord({
+    harness.trackAnalytics({
       study: 'account-sign-up-v5',
       study_group: 'experiment-v4',
       event: 'select-' + type,

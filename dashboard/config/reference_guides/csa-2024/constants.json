@@ -1,9 +1,0 @@
-{
-  "key": "constants",
-  "course_version_key": "2024",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "variables",
-  "display_name": "Constants",
-  "content": "## What is a constant variable?\n\nA **constant** is a variable whose value cannot be changed once it has been assigned. It is created by adding the `final`(#e7e8ea) keyword before the variable when it is declared.\n\n```\nprivate static final int MAX_PAINT = 100;\n```\n\n**Constants** follow a naming rule: use all uppercase and underscores.",
-  "position": 4
-}

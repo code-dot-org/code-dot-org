@@ -1,5 +1,0 @@
-{
-  "key": "african-american-inventors-and-scientists",
-  "name": "African American Inventors and Scientists",
-  "content": "Description: data about various famous African American inventors and scientists, and what they're famous for.\r\n\r\n[Source](http://www.blackinventor.com/)\r\n\r\nColumns:\r\n\r\n* Name (string): name of that inventor or scientist\r\n* Date of birth / death (string): what year that inventor or scientist was born and died in, if such information is available\r\n* Occupations (string): what field(s) of study that person worked in\r\n* Inventions / accomplishments (string): that person's most notable contributions to their fields or inventions"
-}

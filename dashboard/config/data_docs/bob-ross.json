@@ -1,5 +1,0 @@
-{
-  "key": "bob-ross",
-  "name": "Artistic Works of Bob Ross",
-  "content": "Description: statistical analysis of 403 episodes of Painting with Bob Ross, including details on elements he painted in each episode.\r\n\r\n[Source](https://github.com/fivethirtyeight/data/tree/master/bob-ross)\r\n\r\nColumns:\r\n\r\n* EPISODE (string): Season and episode count for that given episode\r\n* TITLE (string): Title of that given episode\r\n* All other columns, such as BEACH, BUILDING, TREES (number): how many of that given painting element were painted by Bob Ross in the episode\r\n\r\n\r\n"
-}

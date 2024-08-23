@@ -8,7 +8,7 @@ import {
   starterAssets as starterAssetsApi,
   files as filesApi,
 } from '@cdo/apps/clientApi';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import i18n from '@cdo/locale';
 
 import assetListStore from '../assets/assetListStore';
@@ -176,7 +176,7 @@ export default class AssetManager extends React.Component {
     this.setState({
       statusMessage: 'Error uploading file: ' + getErrorMessage(status),
     });
-    firehoseClient.putRecord({
+    harness.trackAnalytics({
       study: 'project-data-integrity',
       study_group: 'v4',
       event: 'asset-upload-error',
@@ -194,7 +194,7 @@ export default class AssetManager extends React.Component {
     if (this.props.assetsChanged) {
       this.props.assetsChanged();
     }
-    firehoseClient.putRecord({
+    harness.trackAnalytics({
       study: 'delete-asset',
       study_group:
         this.props.assetChosen && typeof this.props.assetChosen === 'function'

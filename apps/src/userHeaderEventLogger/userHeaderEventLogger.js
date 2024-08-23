@@ -27,7 +27,7 @@ function addClickEventToLinks(selector, eventName, additionalProperties = {}) {
           [selector]: link.href,
           ...additionalProperties,
         },
-        PLATFORMS.STATSIG
+        null
       );
     });
   });
@@ -81,7 +81,7 @@ const addMenuMetrics = (
       analyticsReporter.sendEvent(
         dropdownEventName,
         additionalOptions,
-        PLATFORMS.STATSIG
+        null
       );
     });
 
@@ -96,7 +96,7 @@ const addMenuMetrics = (
               option: option,
               ...additionalOptions,
             },
-            PLATFORMS.STATSIG
+            null
           );
         });
       }
@@ -132,7 +132,7 @@ const addSignedOutMetrics = (pageUrl, headerCreateMenu) => {
     analyticsReporter.sendEvent(
       EVENTS.SIGNED_OUT_USER_CLICKS_HELP_MENU,
       {},
-      PLATFORMS.STATSIG
+      null
     );
   });
 
@@ -181,7 +181,7 @@ const addSignedInMetrics = (pageUrl, headerCreateMenu) => {
     additionalOptions
   );
 
-  addCreateMenuMetrics(headerCreateMenu, PLATFORMS.STATSIG, additionalOptions);
+  addCreateMenuMetrics(headerCreateMenu, null, additionalOptions);
 };
 
 $(document).ready(function () {

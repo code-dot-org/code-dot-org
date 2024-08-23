@@ -1,4 +1,0 @@
-name 'U3_assessment_loop_vs_function'
-markdown <<MARKDOWN
-For each of the following scenarios related to turtle drawing, indicate whether it is better to write a loop or a function (or a set of functions) to handle the task.
-MARKDOWN

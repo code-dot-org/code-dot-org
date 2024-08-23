@@ -7,7 +7,7 @@ import CollapserIcon from '@cdo/apps/templates/CollapserIcon';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
-import firehoseClient from '../../../lib/util/firehose';
+import harness from '../../../lib/util/harness';
 
 export default class ProgressTableStudentName extends React.PureComponent {
   static propTypes = {
@@ -32,7 +32,7 @@ export default class ProgressTableStudentName extends React.PureComponent {
   }
 
   recordStudentNameClick() {
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'teacher_dashboard_actions',
         study_group: 'progress',

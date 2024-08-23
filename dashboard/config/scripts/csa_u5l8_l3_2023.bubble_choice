@@ -1,9 +1,0 @@
-name 'CSA U5L8-L3_2023'
-display_name 'Practice: Modifying Colors'
-description 'Create new image filters using the `Image` and `Pixel` classes in The Theater.'
-
-sublevels
-level 'CSA U5L8-L3a_2023'
-level 'CSA U5L8-L3b_2023'
-level 'CSA U5L8-L3c_2023'
-level 'CSA U5L8-L3d_2023'

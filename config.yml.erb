@@ -145,12 +145,6 @@ pardot_user_key:
 pardot_username:
 pardot_private_key:
 
-# Honeybadger
-honeybadger_api_token:
-cronjobs_honeybadger_api_key:  !Secret
-dashboard_honeybadger_api_key: !Secret
-pegasus_honeybadger_api_key:   !Secret
-
 # Zendesk
 zendesk_dev_token: !Secret
 
@@ -356,7 +350,7 @@ app_servers: {}
 rack_mini_profiler_enabled:
 https_development:
 default_scheme: '<%=(env == 'development') || ci ? 'http:' : 'https:'%>'
-allowed_iframe_ancestors: 'https://*.schoology.com http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_site_host%> <%=dashboard_site_host%> curriculum.code.org https://*.iap.lausd.net https://*.lausd.iap.allhere.co'
+allowed_iframe_ancestors: 'https://*.schoology.com http://*.disney.com http://*.diznee.net cuantrix.mx <%=dashboard_site_host%> curriculum.code.org https://*.iap.lausd.net https://*.lausd.iap.allhere.co'
 
 skip_locales:
 secret_pictures_csv:
@@ -409,7 +403,6 @@ ignore_eyes_mismatches:
 disable_all_eyes_running:
 
 build_dashboard: true
-build_pegasus: true
 
 # Dashboard
 override_dashboard:
@@ -422,23 +415,7 @@ dashboard_workers: 8
 dashboard_web_server_name: dashboard
 dashboard_sock:
 
-# Causes dashboard-server to run pegasus as middleware, starting both in a
-# single command.  This is preferred (and default) in development mode.
-dashboard_enable_pegasus: false
-
-# Pegasus
-override_pegasus:
-pegasus_host:
-pegasus_sock:
-pegasus_port: 3000
-pegasus_web_server_name: pegasus
-pegasus_workers: 8
 sinatra_session_secret:
-
-# Configures Pegasus `settings.read_only`, which affects some (legacy) routes. Not actively used(?)
-read_only: false
-
-proxy: false # If true, generated URLs will not include explicit port numbers in development
 
 # Run dashboard-server with the level editing interface enabled (for admins)
 levelbuilder_mode:
@@ -534,16 +511,10 @@ rds_host:
 rds_identifier:
 rds_username:
 rds_password:
-redshift_database:
-redshift_username:
 rds_backup_account:
 logs_bucket:
 
 ### Database configuration
-
-redshift_host:
-redshift_password:
-
 devinternal_db_writer: !Secret
 
 # Until we have a better configuration setting service, use AWS Secrets Manager to store these non-secret values.
@@ -566,7 +537,6 @@ db_writer: !Secret
 reporting_db_writer: <%=db_writer%>
 
 dashboard_db_name: <%= "dashboard_#{env}#{_test_env_num}" %>
-pegasus_db_name: <%= ENV['USE_PEGASUS_UNITTEST_DB'] ? 'pegasus_unittest' : "pegasus#{_env}" %>
 
 # Default reader endpoints to writer endpoint.
 db_reader: <%=db_writer%>
@@ -575,12 +545,8 @@ reporting_db_reader: <%=reporting_db_writer%>
 # Default DB-specific endpoints to base endpoint plus db name.
 dashboard_db_reader:           '<%="#{db_reader}#{dashboard_db_name}"%>'
 dashboard_db_writer:           '<%="#{db_writer}#{dashboard_db_name}"%>'
-pegasus_db_reader:             '<%="#{db_reader}#{pegasus_db_name}"%>'
-pegasus_db_writer:             '<%="#{db_writer}#{pegasus_db_name}"%>'
 dashboard_reporting_db_reader: '<%="#{reporting_db_reader}#{dashboard_db_name}"%>'
 dashboard_reporting_db_writer: '<%="#{reporting_db_writer}#{dashboard_db_name}"%>'
-pegasus_reporting_db_reader:   '<%="#{reporting_db_reader}#{pegasus_db_name}"%>'
-pegasus_reporting_db_writer:   '<%="#{reporting_db_writer}#{pegasus_db_name}"%>'
 
 # Configurations for making calls to the Immersive Reader API on Azure
 imm_reader_tenant_id:     '01521c57-6696-4ac9-b8ba-d2f2955893bd'
@@ -628,15 +594,6 @@ openai_evaluate_rubric_org_id:
 # AI Proxy for OpenAI API
 ai_proxy_origin: https://aiproxy-test.code.org
 
-# Statsig API keys
-# These are dummy values for all environments except Production and our managed
-# Test web application server, which are overridden in production.yml.erb
-# and test.yml.erb. The Statsig SDK expects the prefixed key type (secret-) in
-# the string, otherwise it will throw an error on initialization, even in
-# local_mode.
-statsig_server_secret_key: 'secret-fake-key'
-statsig_api_client_key: 'client-fake-key'
-
 # MailGun/MailJet API keys
 mailjet_api_key:
 mailjet_secret_key:
@@ -654,3 +611,9 @@ active_job_queue_adapter: :delayed_job
 
 # aiproxy credentials
 aiproxy_api_key: !Secret
+
+# harness config defaults
+# Harness configuration
+locale_content_dir: <%=__dir__%>/../default-locale-content
+curriculum_content_dir: <%=__dir__%>/../curriculum-content
+default_locale: en-US

@@ -1,4 +1,3 @@
-require 'cdo/honeybadger'
 
 # This class is used to enqueue the delivery of emails through ActiveJob.
 #
@@ -14,7 +13,7 @@ class MailDeliveryJob < ActionMailer::MailDeliveryJob
   rescue_from StandardError, with: :report_exception
 
   private def report_exception(exception)
-    Honeybadger.notify(
+    Harness.error_notify(
       exception,
       error_message: '[MailDeliveryJob] Runtime error',
       context: {

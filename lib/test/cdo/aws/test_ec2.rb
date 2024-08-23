@@ -1,5 +1,4 @@
 require_relative '../../test_helper'
-require 'cdo/aws/ec2'
 
 describe AWS::EC2 do
   let(:described_class) {AWS::EC2}

@@ -4,12 +4,15 @@ Welcome! You've found the source code for [the Code.org website](https://code.or
 
 ## Quick start
 
-1. Follow our [setup guide](./SETUP.md) to configure your workstation.
-2. `rake build` to build the application if you have not done so already
-3. `bin/dashboard-server` to launch the development server.
-4. Open your browser to [http://localhost-studio.code.org:3000/](http://localhost-studio.code.org:3000/).
+1. Install docker
+2. `docker-compose up`
+3. Open your browser to [http://localhost:3000/](http://localhost:3000/).
 
-To see a list of all build commands, run `rake` from the repository root.
+To load our curriculum and locale data, you'll also need to check out these repositories:
+- [code-dot-org-curriculum](https://github.com/unlox775-code-dot-org/code-dot-org-curriculum-content)
+- [code-dot-org-locale](https://github.com/unlox775-code-dot-org/code-dot-org-locale-content)
+
+NOTE: if you'd like to run without docker, you can follow the instructions in [BUILD-STEPS.md](./BUILD-STEPS.md).
 
 ## How to help
 
@@ -20,7 +23,6 @@ Here's a quick overview of the major landmarks:
 
 ### Documentation
 
-* [SETUP](./SETUP.md): Instructions to get everything up and running.
 * [TESTING](./TESTING.md): How to be sure nothing broke.
 * [STYLEGUIDE](./STYLEGUIDE.md): Our code style conventions.
 * Our [LICENSE](./LICENSE) and [NOTICE](./NOTICE).
@@ -38,14 +40,6 @@ The server for our [**Code Studio** learning platform](https://studio.code.org/)
 * Student progress and projects
 * The "levelbuilder" content creation tools
 
-### [pegasus](./pegasus)
-
-The server for [the **Code.org** website](https://code.org/), a [Sinatra](http://www.sinatrarb.com/) application responsible for:
-
-* [code.org](https://code.org)
-* [hourofcode.com](https://hourofcode.com)
-* [csedweek.org](https://csedweek.org)
-
 ### [apps](./apps)
 
 The JavaScript 'engine' for all of our tutorials, puzzle types and online tools.  It gets built into a static package that we serve through dashboard. Though there are currently some exceptions, the goal is that all JS code ultimately lives here, so that it gets the benefit of linting/JSX/ES6/etc.
@@ -53,13 +47,11 @@ Start here if you are looking for:
 * The Hour of Code tutorials: [Star Wars](https://code.org/starwars), [Minecraft](https://code.org/api/hour/begin/mc), [Frozen](https://studio.code.org/s/frozen) and [Classic Maze](http://studio.code.org/hoc/1)
 * Tools like [Artist](https://studio.code.org/projects/artist), [Play Lab](https://studio.code.org/projects/playlab) and [App Lab](https://code.org/educate/applab)
 * Other core puzzle types: Maze, Farmer, Bee, Bounce, Calc, Eval
-* Other JS code consumed by dashboard and pegasus.
+* Other JS code consumed by dashboard.
 
 ### Everything else
 
-* **aws**: Configuration and scripts that manage our deployments.
 * **bin**: Developer utilities.
-* **cookbooks**: Configuration management through [Chef](https://www.chef.io/).
 * **shared**: Source and assets used by many parts of our application.
 * **tools**: Git commit hooks.
 

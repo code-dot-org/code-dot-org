@@ -19,7 +19,7 @@ class AichatRequestChatCompletionJob < ApplicationJob
 
     request = arguments.first[:request]
     request.update!(response: exception.message, execution_status: SharedConstants::AI_REQUEST_EXECUTION_STATUS[:FAILURE])
-    Honeybadger.notify(
+    Harness.error_notify(
       "AichatRequestChatCompletionJob failed with unexpected error: #{exception.message}",
       context: {
         request: request.to_json
@@ -50,10 +50,10 @@ class AichatRequestChatCompletionJob < ApplicationJob
     # Make the request
     response = AichatSagemakerHelper.get_sagemaker_assistant_response(model_customizations, stored_messages, new_message)
 
-    # Check output for profanity and PII. Report to HoneyBadger if the model returned profanity.
+    # Check output for profanity and PII. Report if the model returned profanity.
     model_profanity = find_profanity(response, locale)
     if model_profanity
-      Honeybadger.notify(
+      Harness.error_notify(
         'Profanity returned from aichat model (blocked before reaching student)',
         context: {
           response: response,

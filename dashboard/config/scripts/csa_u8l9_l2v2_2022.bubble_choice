@@ -1,9 +1,0 @@
-name 'CSA U8L9-L2v2_2022'
-display_name 'Using the Binary Search'
-description 'Implement the iterative or recursive binary search.'
-
-sublevels
-level 'CSA U8L9-L2a_2022'
-level 'CSA U8L9-L2b_2022'
-level 'CSA U8L9-L2c_2022'
-level 'CSA U8L9-L2d_2022'

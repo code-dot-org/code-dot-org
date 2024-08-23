@@ -31,7 +31,7 @@ module Devise
       #
       # As a core system event related to the user model, we want to log these
       # in CloudWatch in order to preserve metrics for the long term. And as a
-      # newly-enabled feature, we want to also log them in Statsig to make the
+      # newly-enabled feature, we want to also log them to make the
       # metric available on the product team's dashboards in the short term.
 
       # @override https://github.com/heartcombo/devise/blob/v4.9.3/lib/devise/models/lockable.rb#L42-L50
@@ -43,12 +43,6 @@ module Devise
               Environment: CDO.rack_env,
               UserType: user_type
             }
-          )
-
-          # Statsig
-          Metrics::Events.log_event(
-            user: current_user,
-            event_name: 'devise-lockable-user-access-locked',
           )
         end
 
@@ -64,12 +58,6 @@ module Devise
               Environment: CDO.rack_env,
               UserType: user_type
             }
-          )
-
-          # Statsig
-          Metrics::Events.log_event(
-            user: current_user,
-            event_name: 'devise-lockable-user-access-unlocked',
           )
         end
 

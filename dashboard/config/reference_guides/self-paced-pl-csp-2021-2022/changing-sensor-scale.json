@@ -1,9 +1,0 @@
-{
-  "key": "changing-sensor-scale",
-  "course_version_key": "2022",
-  "course_offering_key": "self-paced-pl-csp-2021",
-  "parent_reference_guide_key": "maker-toolkit",
-  "display_name": "Changing Sensor Scale",
-  "content": "By default each of the analog sensors on the Circuit Playground converts their sensed data to a 10 bit number with a minimum value of 0 and a maximum of 1023. While this range provides the most detailed readings (since there are 1024 possible values), it's not always the most useful range of numbers. If you want to use a sensor input to control rgb color, display a percentage, or otherwise want to constrain the potential values of the sensor inputs you'll need to map the range of 0-1023 to another range.\n\n## Set Scale\n\nThe _setScale_ method allows you to override the default range of a an analog sensor. For example, calling `soundSensor.setScale(0, 100)` will change the scale of the `soundSensor.value` so that the lowest value (completely silent) is 0, and the highest (full noisey) is 100.  ",
-  "position": 4
-}

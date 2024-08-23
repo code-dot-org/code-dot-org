@@ -24,7 +24,6 @@ const {
   appsEntriesFor,
   CODE_STUDIO_ENTRIES,
   INTERNAL_ENTRIES,
-  PEGASUS_ENTRIES,
   PROFESSIONAL_DEVELOPMENT_ENTRIES,
   SHARED_ENTRIES,
   OTHER_ENTRIES,
@@ -392,7 +391,6 @@ function createWebpackConfig({
         ...appsEntries,
         ...CODE_STUDIO_ENTRIES,
         ...INTERNAL_ENTRIES,
-        ...PEGASUS_ENTRIES,
         ...PROFESSIONAL_DEVELOPMENT_ENTRIES,
         ...SHARED_ENTRIES,
         ...OTHER_ENTRIES,
@@ -532,7 +530,6 @@ function createWebpackConfig({
                     ...appsEntries,
                     ...CODE_STUDIO_ENTRIES,
                     ...INTERNAL_ENTRIES,
-                    ...PEGASUS_ENTRIES,
                     ...PROFESSIONAL_DEVELOPMENT_ENTRIES,
                     ...SHARED_ENTRIES,
                   });
@@ -676,7 +673,7 @@ function createWebpackConfig({
 
                   const TIMEOUT_SO_PRINT_IS_LAST = 1000;
                   setTimeout(() => {
-                    const WEBPACK_DEV_SERVER_URL = `http://localhost-studio.code.org:${WEBPACK_DEV_SERVER_PORT}`;
+                    const WEBPACK_DEV_SERVER_URL = `http://localhost:${WEBPACK_DEV_SERVER_PORT}`;
                     const BOLD = '\x1b[1m';
                     const MAGENTA_BG = `\x1b[45m\x1b[30m${BOLD}`;
                     const RESET = '\x1b[0m';
@@ -693,16 +690,15 @@ function createWebpackConfig({
     devServer: envConstants.DEV
       ? {
           allowedHosts: [
-            'localhost-studio.code.org',
-            'localhost.code.org',
-            'localhost.hourofcode.com',
+            'localhost',
+            'localhost-studio.code.org'
           ],
           client: {overlay: false},
           port: WEBPACK_DEV_SERVER_PORT,
           proxy: [
             {
               context: ['**'],
-              target: 'http://localhost-studio.code.org:3000',
+              target: 'http://localhost:3000',
               changeOrigin: false,
               logLevel: 'debug',
             },

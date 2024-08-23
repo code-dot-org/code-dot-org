@@ -101,7 +101,7 @@ module Cdo
       end
     rescue => exception
       # Log error and return original content.
-      Honeybadger.notify(exception,
+      Harness.error_notify(exception,
         context: {
           key: cache_key
         }

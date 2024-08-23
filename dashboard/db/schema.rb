@@ -703,6 +703,36 @@ ActiveRecord::Schema.define(version: 2024_08_07_174943) do
     t.index ["intro_video_id"], name: "index_games_on_intro_video_id"
   end
 
+  create_table "google_sheets_shared_cdo_donors", id: :integer, charset: "utf8mb3", force: :cascade do |t|
+    t.string "name_s"
+    t.string "url_s"
+    t.string "show_s"
+    t.string "twitter_s"
+    t.string "level_s"
+    t.float "weight_f"
+    t.float "twitter_weight_f"
+  end
+
+  create_table "google_sheets_shared_cdo_languages", id: :integer, charset: "utf8mb3", force: :cascade do |t|
+    t.string "code_s"
+    t.string "unique_language_s"
+    t.string "language_s"
+    t.string "locale_s"
+    t.string "native_name_s"
+    t.string "english_name_s"
+    t.boolean "supported_codeorg_b"
+    t.boolean "supported_hoc_b"
+    t.string "crowdin_code_s"
+    t.string "crowdin_name_s"
+    t.boolean "csf_b"
+    t.boolean "frozen_b"
+    t.boolean "starwars_b"
+    t.boolean "minecraft_adventurer_b"
+    t.boolean "minecraft_designer_b"
+    t.index ["code_s"], name: "code_s", unique: true
+    t.index ["supported_codeorg_b"], name: "google_sheets_shared_cdo_languages_supported_codeorg_b_index"
+  end
+
   create_table "hint_view_requests", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "script_id"

@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {marketing} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import ResourceCardResponsiveContainer from '../studioHomepages/ResourceCardResponsiveContainer';
@@ -44,7 +44,7 @@ class TeachersBeyondHoc extends Component {
         title: thirdPartyTeacherTitle,
         description: i18n.congratsTeacherExternalDesc(),
         buttonText: i18n.congratsTeacherExternalButton(),
-        link: pegasus('/educate/curriculum/3rd-party'),
+        link: marketing('/educate/curriculum/3rd-party'),
         image: thirdPartyTeacherImage,
       },
     ];

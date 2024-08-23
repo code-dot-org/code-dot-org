@@ -2,7 +2,7 @@ require_relative 'test_helper'
 require 'mocha/mini_test'
 
 require 'cdo/env'
-require 'cdo/honeybadger'
+
 
 class HoneybadgerTest < Minitest::Test
   def teardown
@@ -43,15 +43,15 @@ class HoneybadgerTest < Minitest::Test
     }
 
     ENV.expects(:with_sensitive_values_redacted).returns({})
-    Honeybadger.expects(:notify).with(expected_opts).once
-    Honeybadger.notify_command_error COMMAND, 1, 'captured stdout', ERROR
+    Harness.expects(:error_notify).with(expected_opts).once
+    Harness.error_notify_command_error COMMAND, 1, 'captured stdout', ERROR
   end
 
   def test_no_error
     ENV.expects(:with_sensitive_values_redacted).never
-    Honeybadger.expects(:notify).never
+    Harness.expects(:error_notify).never
 
-    Honeybadger.notify_command_error COMMAND, 0, 'captured stdout', ''
+    Harness.error_notify_command_error COMMAND, 0, 'captured stdout', ''
   end
 
   def test_non_ruby_error
@@ -69,7 +69,7 @@ class HoneybadgerTest < Minitest::Test
     }
 
     ENV.expects(:with_sensitive_values_redacted).returns({})
-    Honeybadger.expects(:notify).with(expected_opts).once
-    Honeybadger.notify_command_error 'ls', 1, '', error
+    Harness.expects(:error_notify).with(expected_opts).once
+    Harness.error_notify_command_error 'ls', 1, '', error
   end
 end

@@ -1,9 +1,0 @@
-{
-  "key": "circuit-playground",
-  "course_version_key": "2024",
-  "course_offering_key": "csd",
-  "parent_reference_guide_key": "circuit-playground-parent",
-  "display_name": "Circuit Playground Overview",
-  "content": "The Circuit Playground is a simple single board computer with many built in Inputs and Outputs for us to explore. Before digging too deep however, let's start with the basics.\n\n### The Light Emitting Diode (LED)\n\nWhen a computer only needs to communicate simple information, often a blinky light is the quickest and easiest way to do so. LEDs, or Light Emitting Diodes, are small, low power, and easy to use devices for communicating with light. Take a look at the Circuit Playground image to right.\n\n<img src=\"//curriculum.code.org/images/circuitplayground/cp_leds.png\" style=\"float: right; width: 400px; margin-left: 10px;\">\n\n1. The USB port allows you to plug the Circuit Playground in. Plugging it in lets you communicate with the board in App Lab, but it also provide electricity to the board so that it can do things like turn on LEDs.\n2. The green **Power LED** can't be controlled through code, but lets you know if the board is getting electricity. If this LED is off, don't expect anything on your board to work.\n3. The red **LED** can be controlled in App Lab using the [`led`(#f78183)](/docs/applab/led/) blocks. It also can be used to help debug your board - every time you plug the board in, you should see this LED blink for a few seconds.\n\n### Plug It In\n\nPlug your board into your computer using a USB cable, and notice how these two LEDs respond. How else might you use a single light to communicate useful information to a user?",
-  "position": 1
-}

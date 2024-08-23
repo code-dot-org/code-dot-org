@@ -1,5 +1,4 @@
 # Sending token usage to CloudWatch
-require 'cdo/aws/metrics'
 require 'csv'
 
 class EvaluateRubricJob < ApplicationJob

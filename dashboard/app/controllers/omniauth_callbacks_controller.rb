@@ -1,5 +1,5 @@
 require 'cdo/shared_cache'
-require 'honeybadger/ruby'
+
 require 'services/lti'
 require 'policies/lti'
 require 'metrics/events'
@@ -471,7 +471,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
         'Failed to update User during silent takeover'
       # This should never happen if other logic is working correctly, so notify
       # This can happen if the account being taken over is already invalid
-      Honeybadger.notify(
+      Harness.error_notify(
         error_class: error_class,
         error_message: exception.message,
         context: {
@@ -568,7 +568,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       begin
         Services::Lti::AccountLinker.call(user: user, session: session)
       rescue => exception
-        Honeybadger.notify(exception, context: {message: 'Error linking LTI account to oauth account', user_id: user.id})
+        Harness.error_notify(exception, context: {message: 'Error linking LTI account to oauth account', user_id: user.id})
         PartialRegistration.delete(session)
 
         flash.alert = I18n.t('lti.account_linking.backend_error')

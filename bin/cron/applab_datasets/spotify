@@ -44,7 +44,7 @@ def get_token
   client_secret = CDO.spotify_api_client_secret
 
   if CDO.spotify_api_client_id.blank? || CDO.spotify_api_client_secret.blank?
-    Honeybadger.notify_cronjob_error(error_message: "Environment not configured for Spotify API.")
+    Harness.error_notify_cronjob_error(error_message: "Environment not configured for Spotify API.")
     return
   end
 
@@ -59,7 +59,7 @@ def get_token
     auth_response = JSON.parse(RestClient.post(TOKEN_URL, form, headers))
     $token = auth_response['access_token']
   rescue RestClient::Exception => exception
-    Honeybadger.notify_cronjob_error(
+    Harness.error_notify_cronjob_error(
       exception,
       error_message: "Failed to retrieve OAuth token from Spotify for use in App Lab Datasets.",
       context: {
@@ -78,7 +78,7 @@ def get_playlist_data(chart_type, playlist_id)
     url = "#{BASE_URL}/playlists/#{playlist_id}?#{field_query}"
     response = RestClient.get(url, {authorization: "Bearer #{$token}"})
   rescue RestClient::Exception => exception
-    Honeybadger.notify_cronjob_error(
+    Harness.error_notify_cronjob_error(
       exception,
       error_message: "Failed to retrieve playlist data from Spotify for use in App Lab Datasets.",
       context: {
@@ -130,14 +130,14 @@ def main
   get_token
 
   if $token.nil? || $token.empty?
-    Honeybadger.notify_cronjob_error(error_message: "Did not to retrieve Spotify playlist data due to missing authentication token.")
+    Harness.error_notify_cronjob_error(error_message: "Did not to retrieve Spotify playlist data due to missing authentication token.")
     return
   end
 
   SPOTIFY_CHARTS.each do |chart|
     records = get_playlist_data(chart['type'], chart['id'])
     if records.nil? || records.empty?
-      Honeybadger.notify_cronjob_error(
+      Harness.error_notify_cronjob_error(
         error_message: "Did not to upload Spotify playlist data due to nil or empty list of records.",
         context: {
           chart_id: chart['id'],

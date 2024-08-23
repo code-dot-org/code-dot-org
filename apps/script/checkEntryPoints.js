@@ -97,18 +97,6 @@ const SITES_CONFIG = {
     templateGlobs: ['**/*.erb', '**/*.haml'],
     templateExtensions: ['erb', 'haml'],
   },
-  'code.org': {
-    entryPrefix: 'code.org/',
-    templateRoot: '../pegasus/sites.v3/code.org',
-    templateGlobs: ['**/*.erb', '**/*.haml'],
-    templateExtensions: ['erb', 'haml'],
-  },
-  'hourofcode.com': {
-    entryPrefix: 'hourofcode.com/',
-    templateRoot: '../pegasus/sites.v3/hourofcode.com',
-    templateGlobs: ['**/*.erb', '**/*.haml'],
-    templateExtensions: ['erb', 'haml'],
-  },
 };
 
 const ENTRY_POINT_FILE_PATH_PATTERN =

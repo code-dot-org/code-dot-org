@@ -6,7 +6,6 @@
 # - ffmpeg (`brew install ffmpeg` / `apt-get install ffmpeg`) - for transcoding local videos
 # - s3_access_key_id and s3_secret_access_key defined (e.g. in `locals.yml`)
 
-require 'cdo/aws/s3'
 require 'tmpdir'
 require 'open-uri'
 require 'httparty'

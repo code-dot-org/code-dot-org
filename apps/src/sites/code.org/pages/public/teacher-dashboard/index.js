@@ -2,16 +2,6 @@ var script = document.querySelector('script[data-teacherdashboard]');
 var scriptData = JSON.parse(script.dataset.teacherdashboard);
 var studioUrlPrefix = scriptData.studio_url;
 
-/**
- * Maps paths that *do not* match between pegasus and dashboard teacher dashboards.
- * The key should be the path (prefaced with a forward slash) in pegasus, and the value
- * should be the corresponding path in dashboard.
- */
-var urlMap = {
-  '/print_signin_cards': '/login_info',
-  '/manage': '/manage_students',
-};
-
 function redirectToDashboard() {
   // Our current location should look something like: #/sections/:sectionId/:path
   // where /:path is optional.
@@ -32,7 +22,7 @@ function redirectToDashboard() {
     if (path.at(0) !== '/') {
       path = '/' + path;
     }
-    studioTeacherDashboardUrl += urlMap[path] || path;
+    studioTeacherDashboardUrl += path;
   }
 
   window.location = studioTeacherDashboardUrl;

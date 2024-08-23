@@ -14,7 +14,7 @@ describe('external links remark plugin', () => {
     expect(isExternalLink('http://code.org/educate')).toEqual(false);
     expect(isExternalLink('https://code.org/educate')).toEqual(false);
     expect(isExternalLink('https://studio.code.org/')).toEqual(false);
-    expect(isExternalLink('//localhost-studio.code.org:3000/s/1')).toEqual(
+    expect(isExternalLink('//localhost:3000/s/1')).toEqual(
       false
     );
   });

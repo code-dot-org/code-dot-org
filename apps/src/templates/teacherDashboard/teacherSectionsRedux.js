@@ -6,7 +6,7 @@ import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseCo
 import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import {
   SectionLoginType,
   PlGradeValue,
@@ -215,7 +215,7 @@ export const toggleSectionHidden = sectionId => (dispatch, getState) => {
   dispatch(editSectionProperties({hidden: !currentlyHidden}));
 
   // Track archive/restore section action
-  firehoseClient.putRecord({
+  harness.trackAnalytics({
     study: 'teacher_dashboard_actions',
     study_group: 'toggleSectionHidden',
     event: currentlyHidden ? 'restoreSection' : 'archiveSection',
@@ -254,7 +254,7 @@ export const assignToSection = (
   unitId,
   pageType
 ) => {
-  firehoseClient.putRecord(
+  harness.trackAnalytics(
     {
       study: 'assignment',
       event: 'course-assigned-to-section',
@@ -327,7 +327,7 @@ export const unassignSection =
         unitId: null,
       })
     );
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'assignment',
         event: 'course-unassigned-from-section',
@@ -1043,7 +1043,7 @@ export default function teacherSections(state = initialState, action) {
       .map(section => section.id);
 
     if (section.loginType !== state.initialLoginType) {
-      firehoseClient.putRecord(
+      harness.trackAnalytics(
         {
           study: 'teacher-dashboard',
           study_group: 'edit-section-details',
@@ -1080,7 +1080,7 @@ export default function teacherSections(state = initialState, action) {
       !(typeof assignmentData.unit_id === 'undefined') ||
       !(typeof assignmentData.course_id === 'undefined')
     ) {
-      firehoseClient.putRecord(
+      harness.trackAnalytics(
         {
           study: 'assignment',
           study_group: 'v1',

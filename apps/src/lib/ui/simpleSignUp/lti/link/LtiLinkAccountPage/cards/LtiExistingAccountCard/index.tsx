@@ -41,7 +41,7 @@ const LtiExistingAccountCard = () => {
     analyticsReporter.sendEvent(
       'lti_existing_account_click',
       eventPayload,
-      PLATFORMS.STATSIG
+      null
     );
 
     navigateToHref(existingAccountUrl.href);

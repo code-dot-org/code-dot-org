@@ -1,8 +1,0 @@
-name 'HOC pre-survey 2016 q4'
-question 'I have the ability to learn computer science.'
-right 'Disagree a lot'
-right 'Disagree a little'
-right 'Agree a little'
-right 'Agree a lot'
-
-allow_multiple_attempts true

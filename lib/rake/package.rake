@@ -1,6 +1,5 @@
 require_relative '../../deployment'
 require 'cdo/chat_client'
-require 'cdo/aws/s3_packaging'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
 include TimedTaskWithLogging
 

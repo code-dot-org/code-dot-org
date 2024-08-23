@@ -10,7 +10,7 @@ require 'net/http'
 require 'json'
 require 'ostruct'
 require 'date'
-require 'honeybadger/ruby'
+
 
 WeatherForecastOffice = Struct.new(:city, :state, :zip_code)
 
@@ -155,7 +155,7 @@ def get_weather_data
     url = "http://api.openweathermap.org/data/2.5/forecast/daily?zip=#{office.zip_code},us&cnt=#{NUM_DAYS}&units=imperial&appid=#{API_KEY}"
     response = Net::HTTP.get_response(URI(url))
     if response.code != '200'
-      Honeybadger.notify(
+      Harness.error_notify(
         error: response.message,
         error_message: "Failed to retrieve data from Open Weather API for use with App Labs datasets.",
       )
@@ -205,7 +205,7 @@ def main
   records = get_weather_data
   if records.empty?
     puts "No data returned from OpenWeather API. No records will be written to datablock storage."
-    Honeybadger.notify(
+    Harness.error_notify(
       error_message: "No data returned from OpenWeather API. No records will be written to datablock storage."
       )
     return

@@ -4,7 +4,7 @@ import {FormGroup, Button} from 'react-bootstrap'; // eslint-disable-line no-res
 
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {studio, pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {studio, marketing} from '@cdo/apps/lib/util/urlHelpers';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
 import color from '@cdo/apps/util/color';
 import {isEmail} from '@cdo/apps/util/formatValidation';
@@ -62,7 +62,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     if (sessionEligibilityData.schoolEligible || this.props.schoolEligible) {
       return true;
     } else if (sessionEligibilityData.schoolEligible === false) {
-      window.location = pegasus('/afe/start-codeorg');
+      window.location = marketing('/afe/start-codeorg');
     }
 
     return null;
@@ -162,7 +162,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
 
     if (!isEligible) {
       analyticsReporter.sendEvent(EVENTS.AFE_INELIGIBLE);
-      window.location = pegasus('/afe/start-codeorg');
+      window.location = marketing('/afe/start-codeorg');
     }
   }
 
@@ -216,7 +216,7 @@ export default class AmazonFutureEngineerEligibility extends React.Component {
     }
 
     if (submissionAccepted) {
-      window.location = pegasus('/afe/success');
+      window.location = marketing('/afe/success');
     }
   };
 
@@ -338,7 +338,7 @@ const StudentAccountNotification = (
       <p>
         You'll need to sign in with a teacher account to apply to receive Amazon
         Future Engineer benefits. You can use the button below to sign out, then
-        return to <a href={pegasus('/afe')}>code.org/afe</a> to continue.
+        return to <a href={marketing('/afe')}>code.org/afe</a> to continue.
       </p>
       <Button
         id="sign_out"

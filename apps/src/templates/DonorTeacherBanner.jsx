@@ -6,7 +6,7 @@ import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {marketing} from '@cdo/apps/lib/util/urlHelpers';
 import Notification, {
   NotificationType,
 } from '@cdo/apps/sharedComponents/Notification';
@@ -37,7 +37,7 @@ export default class DonorTeacherBanner extends Component {
       analyticsReporter.sendEvent(EVENTS.AFE_HOMEPAGE_BANNER_SUBMIT);
 
       // redirect to form on amazon-future-engineer page
-      window.location.assign(pegasus('/amazon-future-engineer#eligibility'));
+      window.location.assign(marketing('/amazon-future-engineer#eligibility'));
     }
 
     this.setState({submitted: true});
@@ -73,7 +73,7 @@ export default class DonorTeacherBanner extends Component {
         <div style={styles.paragraph}>
           {i18n.afeFreeResources()}
           <span>
-            <a href={pegasus('/amazon-future-engineer')}>
+            <a href={marketing('/amazon-future-engineer')}>
               {i18n.amazonFutureEngineer()}
             </a>
           </span>
@@ -128,7 +128,7 @@ export default class DonorTeacherBanner extends Component {
             />
             <Button
               __useDeprecatedTag
-              href={pegasus('/amazon-future-engineer')}
+              href={marketing('/amazon-future-engineer')}
               style={styles.secondaryButton}
               color={Button.ButtonColor.white}
               text={i18n.learnMore()}
@@ -148,7 +148,7 @@ export default class DonorTeacherBanner extends Component {
           notice={i18n.yourResponseSubmitted()}
           details={i18n.thankYouForResponse()}
           detailsLinkText={i18n.clickHere()}
-          detailsLink={pegasus('/amazon-future-engineer#eligibility')}
+          detailsLink={marketing('/amazon-future-engineer#eligibility')}
           detailsLinkNewWindow={true}
           dismissible={true}
         />

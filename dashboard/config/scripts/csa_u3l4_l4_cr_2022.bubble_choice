@@ -1,9 +1,0 @@
-name 'CSA U3L4-L4 CR_2022'
-display_name 'Code Review: Writing Array Algorithms'
-description 'Request a code review from your peers.'
-
-sublevels
-level 'CSA U3L4-L4a CR_2022'
-level 'CSA U3L4-L4b CR_2022'
-level 'CSA U3L4-L4c CR_2022'
-level 'CSA U3L4-L4d CR_2022'

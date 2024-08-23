@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import {
   fakeLevel,
@@ -41,7 +41,7 @@ describe('ProgressTableDetailCell', () => {
   });
 
   afterEach(() => {
-    firehoseClient.putRecord.mockRestore();
+    harness.trackAnalytics.mockRestore();
   });
 
   it('renders nothing if levels array is empty', () => {
@@ -85,7 +85,7 @@ describe('ProgressTableDetailCell', () => {
       .findWhere(node => node.key() === '123_1')
       .childAt(0);
     levelBubble1.simulate('click');
-    expect(firehoseClient.putRecord).toHaveBeenCalled();
+    expect(harness.trackAnalytics).toHaveBeenCalled();
   });
 
   it('calls firehose putRecord when clicking a sublevel', () => {
@@ -94,6 +94,6 @@ describe('ProgressTableDetailCell', () => {
       node => node.key() === `${sublevel_1.id}`
     );
     sublevel.simulate('click');
-    expect(firehoseClient.putRecord).toHaveBeenCalled();
+    expect(harness.trackAnalytics).toHaveBeenCalled();
   });
 });

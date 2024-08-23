@@ -34,7 +34,7 @@ namespace :seed do
   end
 
   # Path to the dashboard directory from which content files (under /config) should be read.
-  CURRICULUM_CONTENT_DIR = ENV['CURRICULUM_CONTENT_DIR'] || '.'
+  CURRICULUM_CONTENT_DIR = ENV['OVERRIDE_CURRICULUM_CONTENT_DIR'] || curriculum_dir('dashboard') || '.'
   CURRICULUM_CONTENT_PATHNAME = Pathname(CURRICULUM_CONTENT_DIR)
 
   timed_task_with_logging videos: :environment do
@@ -47,27 +47,6 @@ namespace :seed do
 
   timed_task_with_logging games: :environment do
     Game.setup
-  end
-
-  timed_task_with_logging donors: :environment do
-    Donor.setup
-  end
-
-  timed_task_with_logging donor_schools: :environment do
-    DonorSchool.setup
-  end
-
-  timed_task_with_logging foorm_libraries: :environment do
-    Foorm::Library.setup(CURRICULUM_CONTENT_DIR)
-  end
-
-  timed_task_with_logging foorm_forms: :environment do
-    Foorm::Form.setup(CURRICULUM_CONTENT_DIR)
-  end
-
-  timed_task_with_logging foorms: :environment do
-    Foorm::Library.setup(CURRICULUM_CONTENT_DIR)
-    Foorm::Form.setup(CURRICULUM_CONTENT_DIR)
   end
 
   SCRIPTS_GLOB = Dir.glob("#{CURRICULUM_CONTENT_DIR}/config/scripts_json/**/*.script_json").sort.flatten.freeze
@@ -369,11 +348,6 @@ namespace :seed do
     School.seed_all
   end
 
-  # Seeds the data in census_summaries
-  timed_task_with_logging census_summaries: :environment do
-    Census::CensusSummary.seed_all
-  end
-
   timed_task_with_logging sample_data: :environment do
     SampleData.seed
   end
@@ -484,26 +458,39 @@ namespace :seed do
     sh('mysqldump -u root -B dashboard_test > db/ui_test_data.sql')
   end
 
-  timed_task_with_logging :import_pegasus_data do
-    db = DASHBOARD_DB
-    table_prefix = "google_sheets_shared_"
-    files_to_import = %w[data/cdo-languages.csv data/cdo-donors.csv]
-    files_to_import.each {|file_to_import| CsvToSqlTable.new(pegasus_dir(file_to_import), db, table_prefix).import}
+  timed_task_with_logging :load_from_sql_import do
+    # This task is used to load data from a SQL import file
+    # The import file should be created by running the following
+    # command in the dashboard directory:
+    sql_import_file = curriculum_dir('seed_all.sql')
+    raise "No seed_all.sql file found" unless File.exist?(sql_import_file)
+
+    writer = URI.parse(ENV['DATABASE_URL'] || CDO.dashboard_db_writer)
+    database = writer.path.sub(%r{^/}, "") || "dashboard_#{Rails.env}"
+    host = writer.host || 'localhost'
+    port = writer.port || 3306
+    username = writer.user || 'root'
+    password = writer.password || ''
+
+    # This command will import the data from the file into the dashboard_test database
+    puts "Quick Importing data from #{sql_import_file}"
+    sh("mysql -u #{username} --password='#{password}' -h #{host} -P #{port} #{database} < #{sql_import_file}")
   end
 
-  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :donor_schools, :foorms, :import_pegasus_data, :datablock_storage].freeze
-  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_ui_tests, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools, :import_pegasus_data, :datablock_storage].freeze
+  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :datablock_storage].freeze
+  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_ui_tests, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :datablock_storage].freeze
   DEFAULT_SEED_TASKS = [:adhoc, :test].include?(rack_env) ? UI_TEST_SEED_TASKS : FULL_SEED_TASKS
 
   desc "seed the data needed for this type of environment by default"
   timed_task_with_logging default: DEFAULT_SEED_TASKS
+  timed_task_with_logging quick: [:load_from_sql_import]
   desc "seed all dashboard data"
   timed_task_with_logging all: FULL_SEED_TASKS
   timed_task_with_logging ui_test: UI_TEST_SEED_TASKS
 
   desc "seed all dashboard data that has changed since last seed"
-  timed_task_with_logging incremental: [:check_migrations, :videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses, :donors, :donor_schools, :foorms, :import_pegasus_data]
+  timed_task_with_logging incremental: [:check_migrations, :videos, :concepts, :scripts_incremental, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :courses]
 
   desc "seed only dashboard data required for tests"
-  timed_task_with_logging test: [:check_migrations, :videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :standards, :foorms, :import_pegasus_data]
+  timed_task_with_logging test: [:check_migrations, :videos, :games, :concepts, :secret_words, :secret_pictures, :school_districts, :schools, :standards]
 end

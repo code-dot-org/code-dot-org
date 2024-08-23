@@ -1,6 +1,6 @@
 require 'cdo/azure_content_moderator'
-require 'honeybadger/ruby'
-require 'cdo/firehose'
+
+
 
 module ImageModeration
   # Returns a content rating from an external service.
@@ -18,7 +18,7 @@ module ImageModeration
     # If something goes wrong with the image moderation service our fallback
     # behavior is to allow everything through, but we also want to notify
     # Honeybadger so that we can figure out exactly what is going wrong.
-    Honeybadger.notify(exception)
+    Harness.error_notify(exception)
 
     # Log to firehose as well, to have longer-lived data
     FirehoseClient.instance.put_record(

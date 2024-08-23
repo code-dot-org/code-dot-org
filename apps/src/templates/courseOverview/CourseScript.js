@@ -9,7 +9,7 @@ import {
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import AssignButton from '@cdo/apps/templates/AssignButton';
 import Assigned from '@cdo/apps/templates/Assigned';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -59,7 +59,7 @@ class CourseScript extends Component {
   onClickHiddenToggle = value => {
     const {name, selectedSectionId, id, toggleHiddenScript} = this.props;
     toggleHiddenScript(name, selectedSectionId, id, value === 'hidden');
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'hidden-units',
         study_group: 'v0',

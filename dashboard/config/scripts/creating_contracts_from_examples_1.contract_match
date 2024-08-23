@@ -1,5 +1,0 @@
-name 'CREATING CONTRACTS FROM EXAMPLES 1'
-title 'Big Triangle'
-content1 'Write a contract for a big red triangle that is 100 pixels in size'
-content2 'EXAMPLE 1.solution_blocks, 300'
-answer 'Big Triangle|Image|Number|String'

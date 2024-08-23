@@ -50,7 +50,7 @@ class LibrariesTest < FilesApiTestBase
 
     soft_delete(filename) # Not a no-op - creates a delete marker
 
-    Honeybadger.expects(:notify).never
+    Harness.expects(:error_notify).never
     FirehoseClient.any_instance.expects(:put_record).never
     @api.get_object(filename)
     assert not_found?

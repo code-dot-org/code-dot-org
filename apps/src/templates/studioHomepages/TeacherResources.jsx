@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {marketing} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import styleConstants from '../../styleConstants';
@@ -27,7 +27,7 @@ export default class TeacherResources extends Component {
             description={i18n.professionalLearningDescription()}
             image="professionallearning.png"
             buttonText={i18n.exploreProfessionalLearning()}
-            link={pegasus('/educate/professional-learning')}
+            link={marketing('/educate/professional-learning')}
           />
           <ImageResourceCard
             title={i18n.csJourneys()}
@@ -35,7 +35,7 @@ export default class TeacherResources extends Component {
             description={i18n.csJourneysDescription()}
             image="csjourneys.png"
             buttonText={i18n.learnMoreCsJourneys()}
-            link={pegasus('/csjourneys')}
+            link={marketing('/csjourneys')}
           />
           <ImageResourceCard
             title={i18n.curriculumCatalogHeaderTitle()}

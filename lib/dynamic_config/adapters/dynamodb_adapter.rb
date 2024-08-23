@@ -23,7 +23,7 @@ class DynamoDBAdapter
     begin
       value = Oj.load(resp.item['data-value'])
     rescue => exception
-      Honeybadger.notify(exception)
+      Harness.error_notify(exception)
       value = nil
     end
     value
@@ -62,7 +62,7 @@ class DynamoDBAdapter
         begin
           value = Oj.load(item['data-value'])
         rescue => exception
-          Honeybadger.notify(exception)
+          Harness.error_notify(exception)
           value = nil
         end
         result[key] = value

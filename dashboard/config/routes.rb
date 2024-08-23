@@ -951,7 +951,6 @@ Dashboard::Application.routes.draw do
         get 'users/current/permissions', to: 'users#get_current_permissions'
         get 'users/netsim_signed_in', to: 'users#netsim_signed_in'
         get 'users/:user_id/school_name', to: 'users#get_school_name'
-        get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
         get 'users/:user_id/tos_version', to: 'users#get_tos_version'
 
         get 'users/cached_page_auth_redirect', to: 'users#cached_page_auth_redirect'
@@ -1021,7 +1020,6 @@ Dashboard::Application.routes.draw do
 
     get '/dashboardapi/v1/users/:user_id/contact_details', to: 'api/v1/users#get_contact_details'
     get '/dashboardapi/v1/users/:user_id/donor_teacher_banner_details', to: 'api/v1/users#get_donor_teacher_banner_details'
-    get '/dashboardapi/v1/users/:user_id/school_donor_name', to: 'api/v1/users#get_school_donor_name'
     post '/dashboardapi/v1/users/accept_data_transfer_agreement', to: 'api/v1/users#accept_data_transfer_agreement'
     get '/dashboardapi/v1/school-districts/:state', to: 'api/v1/school_districts#index', defaults: {format: 'json'}
     get '/dashboardapi/v1/schools/:id/afe_high_needs', to: 'api/v1/schools#afe_high_needs', defaults: {format: 'json'}

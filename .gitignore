@@ -103,3 +103,6 @@ npm-debug.log
 
 # Specifies the user-specific path to the venv for pdm
 .pdm-python
+/dashboard/tmp
+dashboard/log/development.log
+/dashboard/log/development.log

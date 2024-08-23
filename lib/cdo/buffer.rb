@@ -1,6 +1,6 @@
 require 'concurrent/scheduled_task'
 require 'concurrent/utility/native_integer'
-require 'honeybadger/ruby'
+
 require 'monitor'
 
 module Cdo
@@ -153,7 +153,7 @@ module Cdo
       @last_flush = now
       flush(take_batch.map(&:object))
     rescue => exception
-      Honeybadger.notify(exception)
+      Harness.error_notify(exception)
     end
 
     # Take a single batch of objects from the buffer.

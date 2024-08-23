@@ -5,7 +5,6 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 # This script updates the "DTSN" check on PRs
 
 require_relative '../../deployment'
-require 'cdo/github'
 require 'cdo/developers_topic'
 
 DTSN_FILE = '.dtsn'.freeze

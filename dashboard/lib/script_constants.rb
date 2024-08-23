@@ -1,5 +1,4 @@
 # Info on existing tutorial scripts on Code Studio,
-# sometimes referenced in Pegasus.
 # Used for conditional behaviors.
 
 module ScriptConstants

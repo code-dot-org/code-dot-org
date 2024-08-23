@@ -55,8 +55,8 @@ namespace :build do
       ChatClient.log 'Installing <b>dashboard</b> bundle...'
       RakeUtils.bundle_install
 
-      ChatClient.log 'Installing <b>dashboard</b> python dependencies'
-      RakeUtils.python_venv_install
+      # ChatClient.log 'Installing <b>dashboard</b> python dependencies'
+      # RakeUtils.python_venv_install
 
       if CDO.daemon
         ChatClient.log 'Migrating <b>dashboard</b> database...'
@@ -162,26 +162,6 @@ namespace :build do
     end
   end
 
-  desc 'Builds pegasus (install gems, migrate/seed db).'
-  timed_task_with_logging :pegasus do
-    Dir.chdir(pegasus_dir) do
-      ChatClient.log 'Installing <b>pegasus</b> bundle...'
-      RakeUtils.bundle_install
-      if CDO.daemon
-        ChatClient.log 'Updating <b>pegasus</b> database...'
-        begin
-          RakeUtils.rake_stream_output 'pegasus:setup_db', (rack_env?(:test) ? '--trace' : nil)
-        rescue => exception
-          ChatClient.log "/quote #{exception.message}\n#{CDO.backtrace exception}", message_format: 'text'
-          raise exception
-        end
-      end
-
-      ChatClient.log 'Restarting <b>pegasus</b> web server.'
-      RakeUtils.restart_service CDO.pegasus_web_server_name unless rack_env?(:development)
-    end
-  end
-
   desc 'Builds i18n'
   timed_task_with_logging :i18n do
     Dir.chdir(bin_dir('i18n')) do
@@ -193,7 +173,6 @@ namespace :build do
   tasks = []
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
-  tasks << :pegasus if CDO.build_pegasus
   tasks << :tools if rack_env?(:staging)
   tasks << :i18n if CDO.build_i18n
   timed_task_with_logging all: tasks

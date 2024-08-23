@@ -1,5 +1,4 @@
 require 'test_helper'
-require 'cdo/aws/s3'
 
 class ReportAbuseControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers

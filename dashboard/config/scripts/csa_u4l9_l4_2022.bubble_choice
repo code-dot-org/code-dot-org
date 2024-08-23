@@ -1,9 +1,0 @@
-name 'CSA U4L9-L4_2022'
-display_name 'Random Drawings and Animations'
-description 'Use random numbers to make interesting visuals and animations using The Theater.'
-
-sublevels
-level 'CSA U4L9-L4a_2022'
-level 'CSA U4L9-L4b_2022'
-level 'CSA U4L9-L4c_2022'
-level 'CSA U4L9-L4d_2022'

@@ -1,6 +1,0 @@
-name 'CSA Post-Survey q26_pilot-2025'
-question 'I showed something I made in this class to friends or family outside of class.'
-
-right 'Yes'
-right 'No'
-allow_multiple_attempts true

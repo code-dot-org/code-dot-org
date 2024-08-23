@@ -2,7 +2,7 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import LessonNavigationDropdown from '@cdo/apps/templates/lessonOverview/LessonNavigationDropdown';
 import * as utils from '@cdo/apps/utils';
@@ -200,10 +200,10 @@ describe('LessonNavigationDropdown', () => {
     expect(wrapper.find('a').at(1).contains('1 - Lesson 1')).to.be.true;
     lesson1.simulate('click', {preventDefault: () => {}});
 
-    expect(firehoseClient.putRecord).to.have.been.calledOnce;
-    firehoseClient.putRecord.yieldTo('callback');
+    expect(harness.trackAnalytics).to.have.been.calledOnce;
+    harness.trackAnalytics.yieldTo('callback');
     expect(utils.navigateToHref).to.have.been.calledOnce;
     utils.navigateToHref.restore();
-    firehoseClient.putRecord.restore();
+    harness.trackAnalytics.restore();
   });
 });

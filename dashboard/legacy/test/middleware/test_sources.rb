@@ -2,7 +2,7 @@ require_relative 'files_api_test_base' # Must be required first to establish loa
 require_relative 'files_api_test_helper'
 require 'cdo/share_filtering'
 require 'timecop'
-require 'cdo/firehose'
+
 
 MAIN_JSON = 'main.json'
 COMMENT_BLOCK_SOURCES = File.join(__dir__, '..', 'fixtures', 'comment-block-sources.json')

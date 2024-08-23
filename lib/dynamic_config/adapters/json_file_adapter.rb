@@ -26,7 +26,7 @@ class JSONFileDatastoreAdapter
     begin
       return Oj.load(@hash[key])
     rescue => exception
-      Honeybadger.notify(exception)
+      Harness.error_notify(exception)
     end
     nil
   end
@@ -39,7 +39,7 @@ class JSONFileDatastoreAdapter
       begin
         value = Oj.load(v)
       rescue => exception
-        Honeybadger.notify(exception)
+        Harness.error_notify(exception)
         nil
       end
       ret[k] = value

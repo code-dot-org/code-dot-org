@@ -1,5 +1,4 @@
 require_relative '../../test_helper'
-require 'cdo/aws/metrics'
 
 class CdoMetricsTest < Minitest::Test
   def setup

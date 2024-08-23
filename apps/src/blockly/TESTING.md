@@ -19,7 +19,7 @@ Currently, the mainline Blockly labs are: Dance, Poetry, Music, Flappy, Bounce.
 - When unused blocks are dragged to a different location in workspace, the svg frame should be removed. The svg frame appears around unused blocks when the program is run.
 
 # Dance Lab
-Create a new Dance Lab project: [[local]](http://localhost-studio.code.org:3000/projects/dance/new) [[production]](https://studio.code.org/projects/dance/new)
+Create a new Dance Lab project: [[local]](http://localhost:3000/projects/dance/new) [[production]](https://studio.code.org/projects/dance/new)
 - Check blocks that contain different types of fields such as dropdown menus, text inputs and number inputs.
 - Check blocks that contain multiple fields, for example,  '_alternate every_measures_between_and_'.
 - 'set background color' block should have a field that when click displays a 7x10 color grid while the 'set all tint' block's grid is 3x3.
@@ -27,27 +27,27 @@ Create a new Dance Lab project: [[local]](http://localhost-studio.code.org:3000/
 - Check functions. Compare with function definition blocks on production.
     - Once you create a drag out a function definition block, a 'do something' block should appear in Toolbox under 'Functions'. Once the function definition is removed from workspace, the 'do something' block should also be removed.
     - Function definition blocks also have a gray SVG frame surrounding them.
-- Go to this Dance Party level: [[local]](http://localhost-studio.code.org:3000/s/dance-2019/lessons/1/levels/1) [[production]](https://studio.code.org/s/dance-2019/lessons/1/levels/1).
+- Go to this Dance Party level: [[local]](http://localhost:3000/s/dance-2019/lessons/1/levels/1) [[production]](https://studio.code.org/s/dance-2019/lessons/1/levels/1).
 Check the block in the toolbox, in particular, that the dropdown field for type of dancer has only 2 options. Then click and drag a block to workspace and check the two dropdown menus again to see if the options and value are correctly displayed.
 
 # Flappy
-Create a new Flappy project: [[local]](http://localhost-studio.code.org:3000/projects/flappy/new) [[production]](https://studio.code.org/projects/flappy/new)
+Create a new Flappy project: [[local]](http://localhost:3000/projects/flappy/new) [[production]](https://studio.code.org/projects/flappy/new)
 - Event blocks, for example, 'when hit the ground', have fixed x/y position for blocks on workspace.
 
 # Bounce and related skins
-Create a new Bounce project: [[local_bounce]](http://localhost-studio.code.org:3000/projects/bounce/new) [[production_bounce]](https://studio.code.org/projects/bounce/new)
+Create a new Bounce project: [[local_bounce]](http://localhost:3000/projects/bounce/new) [[production_bounce]](https://studio.code.org/projects/bounce/new)
 
-Create a new Basketball project: [[local_basketball]](http://localhost-studio.code.org:3000/projects/basketball/new) [[production_basketball]](https://studio.code.org/projects/basketball/new)
+Create a new Basketball project: [[local_basketball]](http://localhost:3000/projects/basketball/new) [[production_basketball]](https://studio.code.org/projects/basketball/new)
 
-Create a new Sports project: [[local_sports]](http://localhost-studio.code.org:3000/projects/sports/new) [[production_sports]](https://studio.code.org/projects/sports/new)
+Create a new Sports project: [[local_sports]](http://localhost:3000/projects/sports/new) [[production_sports]](https://studio.code.org/projects/sports/new)
 - Has 'skins' that are very similar - Sports and Basketball projects.
 - In Basketball, the 'set hand' block has 3 hands.
 - In Sports, the 'set player' block has 3 hands + 2 items.
 
 # Poetry
-Create a new Poetry project: [[local_poetry]](http://localhost-studio.code.org:3000/projects/poetry/new) [[production_poetry]](https://studio.code.org/projects/poetry/new)
+Create a new Poetry project: [[local_poetry]](http://localhost:3000/projects/poetry/new) [[production_poetry]](https://studio.code.org/projects/poetry/new)
 
-Create a new Poetry HOC project: [[local_poetry_hoc]](http://localhost-studio.code.org:3000/projects/poetry_hoc/new) [[production_poetry_hoc]](https://studio.code.org/projects/poetry_hoc/new)
+Create a new Poetry HOC project: [[local_poetry_hoc]](http://localhost:3000/projects/poetry_hoc/new) [[production_poetry_hoc]](https://studio.code.org/projects/poetry_hoc/new)
 - Check 2 versions of Poetry lab - poetry and poetry_hoc
 - Check shadow blocks, for example, 'set title' block. Most blocks that accept text have shadow blocks. You will have to remove an actual block that is covering the shadow block to see the shadow block.
 - Check variables - variable picker (purple block with '???') with customized options - look for custom modals to rename variables.
@@ -58,12 +58,12 @@ Create a new Poetry HOC project: [[local_poetry_hoc]](http://localhost-studio.co
 
 
 # Music Lab
-Create a new Music Lab project: [[local]](http://localhost-studio.code.org:3000/projects/music/new) [[production]](https://studio.code.org/projects/music/new)
+Create a new Music Lab project: [[local]](http://localhost:3000/projects/music/new) [[production]](https://studio.code.org/projects/music/new)
 - Note that functions in music lab DO NOT have svg frames - check that function call ('do something') is added to toolbox once a function is defined.
 - Check the three Play blocks which contain customized fields - fieldSounds, fieldChords, and fieldPattern.
 
 # Pools
-Check pools for Dancelab, Poetry at [[local]](http://localhost-studio.code.org:3000/pools) [[levelbuilder]](https://levelbuilder-studio.code.org/pools)
+Check pools for Dancelab, Poetry at [[local]](http://localhost:3000/pools) [[levelbuilder]](https://levelbuilder-studio.code.org/pools)
 - Click on Dancelab and Poetry pools
     - Scroll down each pool page and make sure all blocks are rendered.
 - Check at least one block link under 'Edit an existing block'. You should see a read-only workspace for each block - config and generated code.
@@ -74,9 +74,9 @@ When checking levels below that include blocks, check the instructions in a RTL 
 
 Check that blocks are rendered as expected and check with different themes.
 
-- First level of dance lab: [[local]](http://localhost-studio.code.org:3000/s/dance-2019/lessons/1/levels/1) [[production]](https://studio.code.org/s/dance-2019/lessons/1/levels/1)
+- First level of dance lab: [[local]](http://localhost:3000/s/dance-2019/lessons/1/levels/1) [[production]](https://studio.code.org/s/dance-2019/lessons/1/levels/1)
     - This level includes embedded blocks in instructions.
-- First level in poem art: [[local]](http://localhost-studio.code.org:3000/s/poem-art-2021/lessons/1/levels/1) [[production]](https://studio.code.org/s/poem-art-2021/lessons/1/levels/1)
+- First level in poem art: [[local]](http://localhost:3000/s/poem-art-2021/lessons/1/levels/1) [[production]](https://studio.code.org/s/poem-art-2021/lessons/1/levels/1)
     - This level includes blocks in hint
-- First level in flappy: [[local]](http://localhost-studio.code.org:3000/s/flappy/1) [[production]](https://studio.code.org/s/flappy/1)
+- First level in flappy: [[local]](http://localhost:3000/s/flappy/1) [[production]](https://studio.code.org/s/flappy/1)
     - First fail the level, then you should get a hint which includes a block.

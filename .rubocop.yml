@@ -9,9 +9,7 @@ require:
   - rubocop-rails-accessibility
   - './tools/customLinters/rubocop_only_allowed_characters.rb'
   - './tools/customLinters/rubocop_prefer_mocha_stubs_to_minitest_stub.rb'
-  - './tools/customLinters/rubocop_pegasus_db_usage.rb'
   - './tools/customLinters/rubocop_dashboard_db_usage.rb'
-  - './tools/customLinters/rubocop_pegasus_requires.rb'
   - './tools/customLinters/rubocop_dashboard_requires.rb'
   - './tools/customLinters/rubocop_grouped_inline_private_methods.rb'
   - './tools/customLinters/rubocop_dashboard_webmock_require_order.rb'
@@ -21,7 +19,6 @@ AllCops:
   Exclude:
     - 'apps/**/*'
     - 'dashboard/db/schema.rb'
-    - 'pegasus/test/test_string.rb' # Parser does not support non-utf8 escape sequences
   DisplayCopNames: true
   TargetRubyVersion: 2.7
 
@@ -69,9 +66,6 @@ Layout/SpaceInsideHashLiteralBraces:
 Naming/RescuedExceptionsVariableName:
   PreferredName: exception
 
-# This Cop by default uses a custom Include directive which in our
-# project would also include pegasus
-# see https://github.com/rubocop/rubocop-rails/blob/d81af275bba3d06e30156596c2c057cf68f8272b/config/default.yml#L213C11-L213C11
 Rails/AssertNot:
   Include:
     - dashboard/**/test/**/*

@@ -1,8 +1,0 @@
-name 'CSA U8L1-L2_2022'
-display_name 'Inclusive Playground Project Examples'
-description 'Examples of the Inclusive Playground Project.'
-
-sublevels
-level 'CSA U8L1-L2a_2022'
-level 'CSA U8L1-L2b_2022'
-level 'CSA U8L1-L2c_2022'

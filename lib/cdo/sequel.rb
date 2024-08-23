@@ -76,9 +76,6 @@ module Cdo
         db_options[:flags] = Mysql2::Client::MULTI_STATEMENTS
       end
 
-      if (reader_uri = URI(reader)) != URI(writer) && Gatekeeper.allows('pegasus_read_replica')
-        db_options[:servers] = {read_only: ::Sequel::Database.send(:uri_to_options, reader_uri)}
-      end
       db = ::Sequel.connect writer, db_options
 
       # Enable read splitting with the `with_server` method.
@@ -93,10 +90,6 @@ module Cdo
         db.extension(:connection_validator)
         db.pool.connection_validation_timeout = validation_frequency
       end
-
-      # Uncomment this for Pegasus logging.  Only appears to work when started
-      # using bin/pegasus-server.
-      #db.loggers << $log if rack_env?(:development) && $log
 
       db
     end

@@ -10,7 +10,7 @@ import {
 import i18n from '@cdo/locale';
 
 import {queryParams} from '../../code-studio/utils';
-import {studio, pegasus} from '../../lib/util/urlHelpers';
+import {studio, marketing} from '../../lib/util/urlHelpers';
 import color from '../../util/color';
 
 const RESEARCH_ARTICLE_URL =
@@ -93,7 +93,7 @@ class ParentLetter extends React.Component {
           <p>{i18n.parentLetterHello()}</p>
           <SafeMarkdown
             markdown={i18n.parentLetterIntro({
-              homeLink: pegasus('/'),
+              homeLink: marketing('/'),
               studentName: studentName,
             })}
           />
@@ -101,7 +101,7 @@ class ParentLetter extends React.Component {
           <SafeMarkdown
             markdown={i18n.parentLetterStep1Details({
               engagementLink: ENGAGEMENT_URL,
-              videosLink: pegasus(`/educate/resources/videos`),
+              videosLink: marketing(`/educate/resources/videos`),
             })}
           />
           <h1>{i18n.parentLetterStep2()}</h1>
@@ -116,7 +116,7 @@ class ParentLetter extends React.Component {
             markdown={i18n.parentLetterStep2Details({
               studentName: studentName,
               projectsLink: studio('/projects/public'),
-              atHomeLink: pegasus('/athome'),
+              atHomeLink: marketing('/athome'),
             })}
           />
           <h1>{i18n.parentLetterStep3()}</h1>
@@ -226,7 +226,7 @@ const SignInInstructions = ({
               <span>
                 <br />
                 <img
-                  src={pegasus(`/images/${secretPicturePath}`)}
+                  src={marketing(`/images/${secretPicturePath}`)}
                   style={{width: 60, margin: 10}}
                   alt={i18n.parentLetterPicturePasswordImg()}
                 />

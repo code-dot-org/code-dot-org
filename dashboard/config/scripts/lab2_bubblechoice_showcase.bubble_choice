@@ -1,9 +1,0 @@
-name 'Lab2 BubbleChoice Showcase'
-display_name 'Lab2 BubbleChoice Showcase'
-description 'This Bubble Choice level is currently NOT on lab2, but all the sublevels here should be Lab2 levels'
-
-sublevels
-level 'AI Chat Sublevel'
-level 'Music Sublevel'
-level 'Python Lab Sublevel'
-level 'Weblab2 Sublevel'

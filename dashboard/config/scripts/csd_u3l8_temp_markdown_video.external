@@ -1,7 +1,0 @@
-name 'CSD U3L8 - Temp Markdown Video'
-title 'title'
-description 'description here'
-
-markdown <<MARKDOWN
-- delete later
-MARKDOWN

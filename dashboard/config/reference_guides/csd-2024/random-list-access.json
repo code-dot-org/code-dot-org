@@ -1,9 +1,0 @@
-{
-  "key": "random-list-access",
-  "course_version_key": "2024",
-  "course_offering_key": "csd",
-  "parent_reference_guide_key": "patterns",
-  "display_name": "Random List Access Pattern",
-  "content": "| Name  | Code (Block) | Code (Text) |\r\n| ------------- | ------------- | ------------- |\r\n| Random List Access Pattern  | ![](https://curriculum.code.org/media/uploads/Screenshot-2019-05-06-at-3.40.31-PM_fdI1ozq.png) | ![](https://curriculum.code.org/media/uploads/Screenshot-2019-05-06-at-3.40.00-PM.png) |\r\n\r\n## How does it work?\r\n\r\nMany App Lab projects run in the following way. \r\n\r\n1. The user is interested in seeing items in a list, like a list of favorite foods, or a list of reminders.\r\n2. The app shows the user one item in the list at a time.\r\n3. By clicking buttons (or otherwise interacting with the app) the a new random item in the list is shown to the user.\r\n\r\nThis pattern allows a user to see random elements in a list. In order to make it work, create an index variable and a list. Then generate a random number between 0 and the length of the list minus one and set the index to that value. Then update the screen.\r\n",
-  "position": 5
-}

@@ -1,5 +1,0 @@
-{
-  "key": "most-spoken-languages",
-  "name": "Most Spoken Languages of the World",
-  "content": "Description: data about most popular spoken languages worldwide.\r\n\r\nSource: [Ethnologue](https://www.ethnologue.com/statistics/size)\r\n\r\nColumns:\r\n\r\n * Rank (numerical): The languages rank in terms of speaker count\r\n* Language (string): name of a language, such as Spanish or French\r\n* Speakers in millions (numerical): how many people worldwide are speakers of that language, in millions\r\n* Percentage of world population (numerical): what percent of the world's population speaks that language\r\n* Language family (string): what family of languages a given language belongs to, such as Indo-European\r\n* Branch (string): what overarching group of languages a given language belongs to, such as Romantic or Sino-Tibetan\r\n\r\n\r\n\r\n\r\n"
-}

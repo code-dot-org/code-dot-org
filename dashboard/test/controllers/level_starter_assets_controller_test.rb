@@ -266,14 +266,3 @@ class LevelStarterAssetsControllerTest < ActionController::TestCase
   end
 end
 
-# Mock Aws::S3::ObjectSummary class since we can't request the objects from S3 in tests:
-# https://docs.aws.amazon.com/sdkforruby/api/Aws/S3/ObjectSummary.html
-class MockS3ObjectSummary
-  attr_reader :key, :size, :last_modified
-
-  def initialize(key, size, last_modified)
-    @key = key
-    @size = size
-    @last_modified = last_modified
-  end
-end

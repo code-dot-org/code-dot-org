@@ -1,7 +1,0 @@
-name 'CSP 2021 Precourse Placeholder'
-css 'unplugged'
-markdown <<MARKDOWN
-# Survey coming soon!
-
-The CS Principles Survey is still under development. It should be available here by the end of August
-MARKDOWN

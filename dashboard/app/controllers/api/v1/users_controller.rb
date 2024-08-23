@@ -1,4 +1,4 @@
-require 'cdo/firehose'
+
 
 class Api::V1::UsersController < Api::V1::JSONApiController
   before_action :load_user
@@ -141,11 +141,6 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         user_type: 'student'
       }
     end
-  end
-
-  # GET /api/v1/users/<user_id>/school_donor_name
-  def get_school_donor_name
-    render json: @user.school_donor_name.nil? ? 'null' : @user.school_donor_name.inspect
   end
 
   # GET /api/v1/users/<user_id>/tos_version

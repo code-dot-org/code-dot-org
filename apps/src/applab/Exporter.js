@@ -166,7 +166,7 @@ export function getAppOptionsFile() {
 // This list of fonts is derived from the set of fonts needed for V4 compatibility here:
 // https://dsco.code.org/assets/font-awesome-pro/1684178876/css/v4-font-face.css
 // Icons in use in student projects created in Applab are derived from an older version of FontAwesome (V3?), while
-// the rest of Code.org (ie, the pegasus/dashboard sites themselves)
+// the rest of Code.org (ie, the dashboard sites themselves)
 // are all on v6. See the following for more details:
 // https://github.com/code-dot-org/code-dot-org/blob/960e2e5766ebf4ceb526064a71a91a520dcd61bc/apps/src/code-studio/components/icons.js
 const fontAwesomeBrandsWOFFRelativeSourcePath =

@@ -1,4 +1,4 @@
-require 'cdo/honeybadger'
+
 require 'net/http'
 require 'dynamic_config/gatekeeper'
 require 'cdo/throttle'
@@ -27,7 +27,7 @@ module AzureTextToSpeech
       token_http_request.request(token_request)&.body
     end
   rescue => exception
-    Honeybadger.notify(exception, error_message: 'Request for authentication token from Azure Speech Service failed')
+    Harness.error_notify(exception, error_message: 'Request for authentication token from Azure Speech Service failed')
     nil
   end
 
@@ -61,7 +61,7 @@ module AzureTextToSpeech
 
     yield(http_request.request(request)&.body)
   rescue => exception
-    Honeybadger.notify(exception, error_message: 'Request for speech from Azure Speech Service failed')
+    Harness.error_notify(exception, error_message: 'Request for speech from Azure Speech Service failed')
     yield(nil)
   end
 
@@ -97,7 +97,7 @@ module AzureTextToSpeech
       voice_dictionary.reject {|_, opt| opt.length < 3}
     end
   rescue => exception
-    Honeybadger.notify(exception, error_message: 'Request for list of voices from Azure Speech Service failed')
+    Harness.error_notify(exception, error_message: 'Request for list of voices from Azure Speech Service failed')
     nil
   end
 

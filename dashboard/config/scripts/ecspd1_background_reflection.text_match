@@ -1,9 +1,0 @@
-name 'ECSPD1 background reflection'
-skip_sound true
-skip_dialog true
-
-markdown <<MARKDOWN
-# Pause and Reflect
-
-Drawing upon the video and related content in this stage, **why do you think students should learn computer science?**
-MARKDOWN

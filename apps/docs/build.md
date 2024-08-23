@@ -188,7 +188,7 @@ different configurations get run. Here is the approximate flow of commands/files
    the `assets:clean` step eliminates all but the newest few copies of each
    asset in the `dashboard/public/assets/` directory.
    
-   When loading an asset in dashboard or pegasus in production via the
+   When loading an asset in dashboard in production via the
    `webpack_asset_path` helper, the helper will look in the webpack manifest to
    determine the full path of the asset to load, including the content hash.
    This is the preferred method for loading an asset.
@@ -216,7 +216,7 @@ the following:
 
 0. Make sure you have `build_apps: true` and `use_my_apps: true` in locals.yml.
 
-1. set `optimize_webpack_assets: true` in locals.yml. This will make dashboard and pegasus
+1. set `optimize_webpack_assets: true` in locals.yml. This will make dashboard
    use the webpack manifest to find your js assets (which now have content 
    hashes in the filename) rather than looking for unhashed filenames.
 

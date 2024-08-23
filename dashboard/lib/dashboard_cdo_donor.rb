@@ -1,4 +1,4 @@
-require 'honeybadger/ruby'
+
 require 'cdo/cdo_donor'
 
 class DashboardCdoDonor < CdoDonor

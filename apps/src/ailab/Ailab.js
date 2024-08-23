@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
 import {TestResults} from '@cdo/apps/constants';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 
 import {getStore} from '../redux';
 import {
@@ -183,7 +183,7 @@ Ailab.prototype.initMLActivities = function () {
   };
 
   const logMetric = (eventName, details) => {
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'ai-ml',
         study_group: 'ai-lab',

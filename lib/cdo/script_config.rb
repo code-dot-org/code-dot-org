@@ -3,8 +3,6 @@
 # so that the other Dashboard code doesn't need to know where the configuration
 # comes from.
 
-require_relative 'http_cache'
-
 UNCACHED_HOC_UNITS = %w(playlab artist infinity iceage).freeze
 
 class ScriptConfig

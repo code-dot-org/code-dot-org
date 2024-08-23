@@ -1,4 +1,3 @@
-require 'cdo/aws/metrics'
 
 # A controller for reporting browser logs and metrics to Cloudwatch
 class BrowserEventsController < ApplicationController
@@ -37,7 +36,7 @@ class BrowserEventsController < ApplicationController
 
     render status: :ok, json: {}
   rescue => exception
-    Honeybadger.notify(
+    Harness.error_notify(
       exception,
       error_message: "Error publishing logs to Cloudwatch"
     )
@@ -55,7 +54,7 @@ class BrowserEventsController < ApplicationController
 
     render status: :ok, json: {}
   rescue => exception
-    Honeybadger.notify(
+    Harness.error_notify(
       exception,
       error_message: "Error publishing metrics to Cloudwatch"
     )

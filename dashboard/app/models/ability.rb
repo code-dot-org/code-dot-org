@@ -1,6 +1,5 @@
 class Ability
   include CanCan::Ability
-  include Pd::Application::ActiveApplicationModels
 
   GENAI_PILOT = 'gen-ai-lab-v1'
 
@@ -35,31 +34,6 @@ class Ability
       Plc::LearningModule,
       Plc::UserCourseEnrollment,
       Plc::CourseUnit,
-      # PD models
-      Pd::Workshop,
-      Pd::Session,
-      Pd::Enrollment,
-      Pd::DistrictPaymentTerm,
-      :pd_teacher_attendance_report,
-      :pd_workshop_summary_report,
-      Pd::CourseFacilitator,
-      :workshop_organizer_survey_report,
-      :pd_workshop_user_management,
-      :pd_workshop_admins,
-      :peer_review_submissions,
-      RegionalPartner,
-      :regional_partner_workshops,
-      Pd::RegionalPartnerMapping,
-      Pd::Application::ApplicationBase,
-      Pd::Application::TeacherApplication,
-      Pd::InternationalOptIn,
-      :edit_manifest,
-      :update_manifest,
-      :foorm_editor,
-      :pd_foorm,
-      Foorm::Form,
-      Foorm::Library,
-      Foorm::LibraryQuestion,
       :javabuilder_session,
       CodeReview,
       LearningGoalTeacherEvaluation
@@ -145,9 +119,6 @@ class Ability
           (user.teacher? && user.id == code_review_comment.code_review.user_id)
       end
 
-      can :read, Pd::Session
-      can :manage, Pd::Enrollment, user_id: user.id
-      can :workshops_user_enrolled_in, Pd::Workshop
       can :index, Section, user_id: user.id
       can [:get_feedbacks, :count, :increment_visit_count, :index], TeacherFeedback, student_id: user.id
       can :create, UserMlModel, user_id: user.id
@@ -182,71 +153,12 @@ class Ability
         end
         can [:read, :find], :regional_partner_workshops
         can [:new, :create, :show, :update], TEACHER_APPLICATION_CLASS, user_id: user.id
-        can :create, Pd::InternationalOptIn, user_id: user.id
         can :update_last_confirmation_date, UserSchoolInfo, user_id: user.id
         can [:score_lessons_for_section, :get_teacher_scores_for_script], TeacherScore, user_id: user.id
         can :manage, LearningGoalTeacherEvaluation, teacher_id: user.id
         can :manage, LearningGoalAiEvaluationFeedback, teacher_id: user.id
       end
 
-      if user.facilitator?
-        can [:read, :start, :end, :workshop_survey_report, :summary, :filter], Pd::Workshop, facilitators: {id: user.id}
-        can [:read, :update], Pd::Workshop, organizer_id: user.id
-        can :manage_attendance, Pd::Workshop, facilitators: {id: user.id}
-        can :read, Pd::CourseFacilitator, facilitator_id: user.id
-
-        if Pd::CourseFacilitator.exists?(facilitator: user, course: Pd::Workshop::COURSE_CSF)
-          can :create, Pd::Workshop, course: Pd::Workshop::COURSE_CSF
-          can :update, Pd::Workshop, facilitators: {id: user.id}
-          can :destroy, Pd::Workshop, organizer_id: user.id
-        end
-      end
-
-      if user.workshop_organizer? || user.program_manager?
-        can :create, Pd::Workshop
-        can [:read, :start, :end, :update, :destroy, :summary, :filter], Pd::Workshop, organizer_id: user.id
-        can :manage_attendance, Pd::Workshop, organizer_id: user.id, ended_at: nil
-
-        # Regional partner program managers can access workshops assigned to their regional partner
-        if user.regional_partners.any?
-          can [:read, :start, :end, :update, :destroy, :summary, :filter], Pd::Workshop, regional_partner_id: user.regional_partners.pluck(:id)
-          can :manage_attendance, Pd::Workshop, regional_partner_id: user.regional_partners.pluck(:id)
-          can :update_scholarship_info, Pd::Enrollment do |enrollment|
-            !!user.regional_partners.pluck(enrollment.workshop.regional_partner_id)
-          end
-        end
-
-        can :read, Pd::CourseFacilitator
-        can :index, :workshop_organizer_survey_report
-        can :read, :pd_workshop_summary_report
-        can :read, :pd_teacher_attendance_report
-        if user.regional_partners.any?
-          # regional partners by default have read, quick_view, and update permissions
-          can [:read, :quick_view, :cohort_view, :update, :search, :destroy], Pd::Application::ApplicationBase, regional_partner_id: user.regional_partners.pluck(:id)
-
-          # regional partners cannot see or update incomplete teacher applications
-          cannot [:show, :update, :destroy], Pd::Application::TeacherApplication, &:incomplete?
-
-          can [:send_principal_approval, :change_principal_approval_requirement], TEACHER_APPLICATION_CLASS, regional_partner_id: user.regional_partners.pluck(:id)
-        end
-      end
-
-      if user.workshop_admin?
-        can :manage, Pd::Workshop
-        can :manage, Pd::CourseFacilitator
-        can :manage, :workshop_organizer_survey_report
-        can :manage, :pd_workshop_summary_report
-        can :manage, :pd_teacher_attendance_report
-        can :manage, :pd_workshop_user_management
-        can :manage, :pd_workshop_admins
-        can :manage, RegionalPartner
-        can :report_csv, :peer_review_submissions
-        can :manage, Pd::RegionalPartnerMapping
-        can :manage, Pd::Application::ApplicationBase
-        can :manage, TEACHER_APPLICATION_CLASS
-        can :move, :workshop_enrollments
-        can :update_scholarship_info, Pd::Enrollment
-      end
 
       if user.permission?(UserPermission::PROJECT_VALIDATOR)
         can :manage, FeaturedProject

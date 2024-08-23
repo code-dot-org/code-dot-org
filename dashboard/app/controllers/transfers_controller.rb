@@ -1,4 +1,4 @@
-require 'cdo/firehose'
+
 
 class TransfersController < ApplicationController
   before_action :authenticate_user!

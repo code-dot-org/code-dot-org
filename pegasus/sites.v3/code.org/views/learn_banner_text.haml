@@ -1,7 +1,0 @@
-.wrapper
-  %h1= hoc_s(:learn_banner_heading)
-  %h2= hoc_s(:learn_banner_blurb)
-  %p!= hoc_s(:learn_banner_beyond_markdown, markdown: :inline, locals: {url: "https://hourofcode.com/beyond"})
-  %p
-    %i{:class=>"fa fa-graduation-cap", :style=>"font-size: larger"}
-    != hoc_s(:learn_banner_teachers_markdown, markdown: :inline, locals: {host_url: "https://hourofcode.com/events", howto_url: "https://hourofcode.com/how-to"})

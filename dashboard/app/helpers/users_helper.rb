@@ -1,7 +1,7 @@
 require 'cdo/activity_constants'
 require 'cdo/shared_constants'
-require 'cdo/firehose'
-require 'honeybadger/ruby'
+
+
 
 module UsersHelper
   include ApplicationHelper
@@ -22,7 +22,7 @@ module UsersHelper
     }
 
     if source_user.has_activity?
-      # We don't want to destroy an account with progress. Log to Redshift and return false.
+      # We don't want to destroy an account with progress. Log and return false.
       firehose_params[:type] = "cancelled-#{takeover_type}"
       firehose_params[:error] = "Attempted takeover for account with progress."
       log_account_takeover_to_firehose(firehose_params)
@@ -69,8 +69,8 @@ module UsersHelper
   end
 
   def log_account_takeover_to_firehose(source_user:, destination_user:, type:, provider:, error: nil)
-    FirehoseClient.instance.put_record(
-      :analysis,
+    Harness.error_notify(
+      error,
       {
         study: 'user-soft-delete-audit-v2',
         event: "#{type}-account-takeover", # Silent or OAuth takeover

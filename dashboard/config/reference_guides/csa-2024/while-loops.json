@@ -1,9 +1,0 @@
-{
-  "key": "while-loops",
-  "course_version_key": "2024",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "control-structures",
-  "display_name": "While Loops",
-  "content": "A `while`(#e7e8ea) loop is commonly used to execute a block of code while a condition is `true`(#e7e8ea).\n\n- a `while`(#e7e8ea) loop evaluates the `condition` inside the parentheses\n\n- if the condition is `true`(#e7e8ea), the body of the loop will execute\n\n- the body will be executed until the `condition` evaluates to `false`(#e7e8ea)\n\n![](https://images.code.org/a3ea872832081dd1f6b3953a0a7322fc-Screen Shot 2022-05-16 at 2.39.03 PM.png)\n\n## Examples\n### Print Numbers in a Pre-Defined Range\n```\nint i = 0;\nint n = 4;\n\nwhile(i < n) {\n   System.out.println(i);\n   i++;\n}\n\n```\n**Output:**\n\n0\n\n1\n\n2\n\n3\n\n## Syntax\n\n```\nwhile (condition) {\n   // code to execute\n}\n```",
-  "position": 5
-}

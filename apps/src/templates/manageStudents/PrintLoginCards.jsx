@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import {PrintLoginCardsButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import i18n from '@cdo/locale';
 
@@ -17,7 +17,7 @@ export default class PrintLoginCards extends Component {
 
   onClick = () => {
     const {sectionId, entryPointForMetrics} = this.props;
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'teacher-dashboard',
         study_group: 'manage-students-actions',

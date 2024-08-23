@@ -1,9 +1,0 @@
-name 'CSD U6 - Accelerometer - Prac_2022'
-display_name 'Practice Levels'
-
-sublevels
-level 'CSD U6 - Accelerometer - PA_2022'
-level 'CSD U6 - Accelerometer - PD_2022'
-level 'CSD U6 - Accelerometer - PE_2022'
-level 'CSD U6 - Accelerometer - PF_2022'
-level 'CSD U6 - Accelerometer - PG_2022'

@@ -2,9 +2,9 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
@@ -77,7 +77,7 @@ export default class ModelManagerDialog extends React.Component {
   };
 
   logImport = modelId => {
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'ai-ml',
         study_group: 'trained-models',

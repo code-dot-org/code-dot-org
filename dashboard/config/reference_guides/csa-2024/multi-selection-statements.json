@@ -1,9 +1,0 @@
-{
-  "key": "multi-selection-statements",
-  "course_version_key": "2024",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "control-structures",
-  "display_name": "Multi-Selection Statements",
-  "content": "`else-if`(#e7e8ea) statements can be chained together to check multiple conditions. Once a condition is `true`(#e7e8ea), its block of code will be executed and the selection statement will be exited.",
-  "position": 3
-}

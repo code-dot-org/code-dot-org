@@ -1,8 +1,5 @@
 /*
- * File is used in dashboard/app/assets/stylesheets/application.scss and pegasus/sites.v3/code.org/public/hourofcode/overview.haml
- * In order to add font to the Pegasus pages you should manually add this file to every page. In case you'll need
- * to add this font to many Pegasus page - you should probably think of other solution and not forget to update
-  the Pegasus pages that were using font already.
+ * File is used in dashboard/app/assets/stylesheets/application.scss
  */
 
 //100 – Thin
@@ -16,7 +13,6 @@
 //900 – Black (Heavy)
 
 // PLEASE NOTE (!): We're using base64 strings (encoded from the otf files) instead of font files
-// so we don't need to duplicate font files for apps/dashboard/pegasus.
 
 // Encoded to base64 using https://www.giftofspeed.com/base64-encoder/
 

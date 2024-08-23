@@ -104,8 +104,8 @@ class CAP::LockoutJobTest < ActiveJob::TestCase
         Services::ChildAccount::LockoutHandler.stubs(:call).with(user: user).raises(exception)
       end
 
-      it 'reports exception to Honeybadger' do
-        Honeybadger.expects(:notify).with(exception, anything).once
+      it 'reports exception' do
+        Harness.expects(:error_notify).with(exception, anything).once
 
         perform_enqueued_jobs do
           _ {described_class.perform_later(user_id: user.id)}.must_raise exception.class

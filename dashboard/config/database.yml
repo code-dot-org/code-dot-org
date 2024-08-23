@@ -6,8 +6,12 @@ require 'dynamic_config/dcdo'
 # it doesn't work with the way seamless_database_pool wants to
 # configure the read pool
 
+# default to DATABASE_URL environment variable if it is set
 writer = URI.parse(CDO.dashboard_db_writer) if CDO.dashboard_db_writer
+writer = URI.parse(ENV['DATABASE_URL']) if ENV['DATABASE_URL']
 reader = URI.parse(CDO.dashboard_db_reader) if CDO.dashboard_db_reader
+reader = URI.parse(ENV['DATABASE_URL']) if ENV['DATABASE_URL']
+reader = URI.parse(ENV['DATABASE_READER_URL']) if ENV['DATABASE_READER_URL']
 %>
 
 mysql_defaults: &mysql_defaults

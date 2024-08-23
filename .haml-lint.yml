@@ -2,10 +2,6 @@ skip_frontmatter: true
 inherits_from: .haml-lint_todo.yml
 
 linters:
-  TrailingWhitespace:
-    exclude:
-      - '/**/pegasus/**/*.haml'
-      - 'pegasus/**/*.haml'
 
   # Custom rule
   OnlyAllowedCharacters:
@@ -17,7 +13,7 @@ linters:
   # find a way to autogenerate them using `haml-lint --auto-gen-config`, because
   # it seems to want to entirely disable RuboCop. So, I generated this list by
   # temporarily removing the list of ignored cops, and then running:
-  # haml-lint pegasus dashboard shared | grep -o 'RuboCop: [A-Za-z]\+/[A-Za-z]\+' | cut -f 2 -d ' ' | sort | uniq -c | sort -r -n -k 1
+  # haml-lint dashboard shared | grep -o 'RuboCop: [A-Za-z]\+/[A-Za-z]\+' | cut -f 2 -d ' ' | sort | uniq -c | sort -r -n -k 1
   # 1253 Style/HashSyntax
   # 920 Layout/SpaceAroundOperators
   # 636 Layout/SpaceAfterColon
@@ -196,8 +192,5 @@ linters:
       - Style/YodaCondition
       - Style/ZeroLengthPredicate
 
-exclude:
-- '/**/pegasus/test/fixtures/**/*.haml'
-- 'pegasus/test/fixtures/**/*.haml'
 require:
 - './tools/customLinters/haml_lint_only_allowed_characters.rb'

@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import {navigationLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import color from '@cdo/apps/util/color';
@@ -39,7 +39,7 @@ export default class LessonNavigationDropdown extends Component {
   handleDropdownClick = (e, listItem) => {
     e.preventDefault();
     if (listItem.link) {
-      firehoseClient.putRecord(
+      harness.trackAnalytics(
         {
           study: 'lesson-plan',
           study_group: this.props.isStudentLessonPlan

@@ -1,9 +1,0 @@
-name 'CSA U2L6-L3v2 Exemplar_2022'
-display_name 'Refactoring Desserts'
-description 'level description here'
-
-sublevels
-level 'CSA U2L6-L3a Exemplar_2022'
-level 'CSA U2L6-L3b Exemplar_2022'
-level 'CSA U2L6-L3c Exemplar_2022'
-level 'CSA U2L6-L3d Exemplar_2022'

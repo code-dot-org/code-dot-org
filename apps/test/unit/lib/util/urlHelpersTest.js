@@ -1,40 +1,40 @@
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {
-  pegasus,
+  marketing,
   studio,
   metaTagDescription,
 } from '@cdo/apps/lib/util/urlHelpers';
 
 import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
-import {stubWindowDashboard, stubWindowPegasus} from '../../../util/testUtils';
+import {stubWindowDashboard, stubWindowMarketing} from '../../../util/testUtils';
 
-describe('pegasus()', () => {
+describe('marketing()', () => {
   describe('from dashboard', () => {
     stubWindowDashboard({
       CODE_ORG_URL: '//test.code.org',
     });
 
-    it('gives an absolute pegasus url', () => {
-      expect(pegasus('/relative-path')).to.equal(
+    it('gives an absolute marketing url', () => {
+      expect(marketing('/relative-path')).to.equal(
         '//test.code.org/relative-path'
       );
     });
   });
 
-  describe('from pegasus', () => {
+  describe('from marketing', () => {
     stubWindowDashboard(undefined);
 
     it('returns a relative URL', () => {
       expect(window.dashboard).to.be.undefined;
-      expect(pegasus('/relative-path')).to.equal('/relative-path');
+      expect(marketing('/relative-path')).to.equal('/relative-path');
     });
   });
 });
 
 describe('studio()', () => {
-  describe('from pegasus', () => {
-    stubWindowPegasus({
+  describe('from marketing', () => {
+    stubWindowMarketing({
       STUDIO_URL: '//test-studio.code.org',
     });
 
@@ -46,10 +46,10 @@ describe('studio()', () => {
   });
 
   describe('from studio', () => {
-    stubWindowPegasus(undefined);
+    stubWindowMarketing(undefined);
 
     it('returns a relative URL', () => {
-      expect(window.pegasus).to.be.undefined;
+      expect(window.marketing).to.be.undefined;
       expect(studio('/relative-path')).to.equal('/relative-path');
     });
   });

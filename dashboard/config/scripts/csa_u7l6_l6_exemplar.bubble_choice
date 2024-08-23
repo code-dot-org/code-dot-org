@@ -1,8 +1,0 @@
-name 'CSA U7L6-L6 Exemplar'
-display_name 'Sentinel Values'
-description 'Practice using sentinel values using the console, The Neighborhood, or The Theater.'
-
-sublevels
-level 'CSA U7L6-L6a Exemplar'
-level 'CSA U7L6-L6b Exemplar'
-level 'CSA U7L6-L6c Exemplar'

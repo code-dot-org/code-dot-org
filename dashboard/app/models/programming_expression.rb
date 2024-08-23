@@ -19,7 +19,6 @@
 #  index_programming_expressions_on_programming_environment_id  (programming_environment_id)
 #  programming_environment_key                                  (programming_environment_id,key) UNIQUE
 #
-require 'honeybadger/ruby'
 
 class ProgrammingExpression < ApplicationRecord
   include CurriculumHelper
@@ -294,7 +293,7 @@ class ProgrammingExpression < ApplicationRecord
   end
 
   def report_error_get_localized_examples_no_name(example)
-    Honeybadger.notify(
+    Harness.error_notify(
       "example needs a unique 'name', otherwise a translation cannot be shown",
       context: {
         example: example
@@ -350,7 +349,7 @@ class ProgrammingExpression < ApplicationRecord
   end
 
   def file_path
-    Rails.root.join("config/programming_expressions/#{programming_environment.name}/#{key.parameterize(preserve_case: false)}.json")
+    curriculum_dir("dashboard/config/programming_expressions/#{programming_environment.name}/#{key.parameterize(preserve_case: false)}.json")
   end
 
   def serialize

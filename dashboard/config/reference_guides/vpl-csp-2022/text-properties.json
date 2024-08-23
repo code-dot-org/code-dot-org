@@ -1,9 +1,0 @@
-{
-  "key": "text-properties",
-  "course_version_key": "2022",
-  "course_offering_key": "vpl-csp",
-  "parent_reference_guide_key": "css",
-  "display_name": "Text Properties",
-  "content": "There are many CSS properties available that allow you to style the text on your page. Here's a review of some of the more common ones\n\n| Property  | What it Changes | Example |\n| ------------- | ------------- | ------------- |\n| **color**  | The color of your text | `color: maroon;` |\n| **text-align** | The alignment of your text | `text-align: center;` |\n| **text-decoration** | Additional style | `text-decoration: underline;` |\n| **font-family** | Which font to use | `font-family: fantasy;` |\n| **font-size** | The size of your text | `font-size: 20px;` |\n\n## Styled Text Example\n\nIf we put this all together, you might get some text like this:\n\n```\np {\n  color: maroon;\n  text-align: center;\n  text-decoration: underline;\n  font-family: fantasy;\n  font-size: 20px;\n}\n```\n\n<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/Screenshot-2017-05-03-09.38.04.png\" style=\"max-width: 300px; margin: 10px auto;\" class=\"center\">\n\n## Specifying Fonts\n\nYou might notice when using CSS like `font-family: fantasy;` that your text looks different on different computers. This is because we're only telling the browser what _kind_ of font to use, not which _specific_ font.\n\n\n**W3 Schools Links**\n\n* [CSS Text Properties](https://www.w3schools.com/css/css_text.asp)",
-  "position": 1
-}

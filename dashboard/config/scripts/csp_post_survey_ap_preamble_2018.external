@@ -1,6 +1,0 @@
-name 'csp-post-survey-AP-preamble-2018'
-title 'title'
-description 'description here'
-markdown <<MARKDOWN
-## AP Exam and Performance Tasks
-MARKDOWN

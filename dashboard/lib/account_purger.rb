@@ -54,17 +54,4 @@ class AccountPurger
     raise 'Not implemented' unless @dry_run
   end
 
-  # rubocop:disable CustomCops/PegasusDbUsage
-  private def really_purge_data_for_account(user)
-    ActiveRecord::Base.transaction do
-      PEGASUS_DB.transaction do
-        DASHBOARD_DB.transaction do
-          DeleteAccountsHelper.
-            new(bypass_safety_constraints: @bypass_safety_constraints, log: @log).
-            purge_user user
-        end
-      end
-    end
-  end
-  # rubocop:enable CustomCops/PegasusDbUsage
 end

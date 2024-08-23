@@ -7,7 +7,7 @@ import onClickOutside from 'react-onclickoutside';
 import LibraryManagerDialog from '@cdo/apps/code-studio/components/libraries/LibraryManagerDialog';
 import ModelManagerDialog from '@cdo/apps/code-studio/components/ModelManagerDialog';
 import JavalabDropdown from '@cdo/apps/javalab/components/JavalabDropdown';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import msg from '@cdo/locale';
 
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
@@ -58,7 +58,7 @@ export class SettingsCog extends Component {
     this.close();
     if (!makerToolkitRedux.isEnabled(getStore().getState())) {
       // Log that a user would like to enable the maker toolkit
-      firehoseClient.putRecord({
+      harness.trackAnalytics({
         study: 'maker-toolkit',
         study_group: 'maker-toolkit',
         event: 'enable-maker-toolkit',

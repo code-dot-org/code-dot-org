@@ -1,9 +1,0 @@
-{
-  "key": "accelerometer-events",
-  "course_version_key": "2022",
-  "course_offering_key": "vpl-csp",
-  "parent_reference_guide_key": "maker-toolkit",
-  "display_name": "Accelerometer Events",
-  "content": "Just like the other sensors, the accelerometer has the `data` and `change` events. These are particularly useful because they allow you to constantly track the updated values of the accelerometer, like the orientation. \r\n\r\n| Event  |  Description |\r\n|---|---|\r\n| `data`  |  Fires every 100ms to check for data from the accelerometer. |\r\n| `change`  | Fires whenever the accelerometer detects a change in motion. This checks to see if the current data from sensor is the same as it was 100ms ago. If this is the case, the event won't trigger. Otherwise, the event triggers.|\r\n| `shake` |  Fires whenever the board is shaken. |\r\n\r\nSometimes we don't care what the orientation of the board is, we just cared that it moved at all. This is where events like `change` and `shake` come in. \r\n\r\n",
-  "position": 10
-}

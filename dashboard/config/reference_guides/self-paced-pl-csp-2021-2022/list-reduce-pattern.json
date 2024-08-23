@@ -1,9 +1,0 @@
-{
-  "key": "list-reduce-pattern",
-  "course_version_key": "2022",
-  "course_offering_key": "self-paced-pl-csp-2021",
-  "parent_reference_guide_key": "patterns",
-  "display_name": "List Reduce Pattern",
-  "content": "This pattern is used when you want to reduce the information in a list down to a single number. For example, you might want to find the average of a list of numbers or the smallest number. \r\n\r\n| Name  | Code (block) | Code (text)\r\n| ------------- | ------------- | ------------- |\r\n| List Reduce - average | ![](https://images.code.org/84f778147daa0259e566439438225287-image-1557517629405.PNG) | ![](https://images.code.org/28a0c86b43b549ea51ffd25424e7b789-image-1557517637440.PNG) |\r\n\r\n### How it works\r\n\r\n* Create a list of numbers\r\n* Create a blank variable to store the average\r\n* In a function create a local variable to store the total value of all elements in the list\r\n* Use a for loop to access each element in the list and add its value to total\r\n* After the for loop, calculate the average by dividing total by the length of the list\r\n\r\n| Name  | Code (block) | Code (text)\r\n| ------------- | ------------- | ------------- |\r\n| List Reduce - smallest| ![](https://curriculum.code.org/media/uploads/image_UYz178G.png) | ![](https://curriculum.code.org/media/uploads/image_tU3gkyJ.png) |\r\n\r\n### How it works\r\n\r\n* Create a list of numbers\r\n* Create a blank variable to store the smallest number\r\n* In a function create a local variable to store a temporary value\r\n* Use a for loop to access each element in the list\r\n* If that element is less than the the value stored in temp, set the value of temp to the current element\r\n* After the for loop set the value of smallest to the value stored in temp",
-  "position": 9
-}

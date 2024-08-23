@@ -28,7 +28,7 @@ import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import {
   pageTypes,
@@ -140,7 +140,7 @@ class TeacherPanel extends React.Component {
       ...overrideData,
     };
 
-    firehoseClient.putRecord({
+    harness.trackAnalytics({
       study: 'teacher_panel',
       event: eventName,
       data_json: JSON.stringify(data),

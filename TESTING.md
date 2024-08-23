@@ -19,19 +19,17 @@ We use automated tests to maintain quality in our codebase. Here's an overview o
     * Eyes tests - Subset of UI tests intended to test the precise layout of controls on certain UI pages. Eyes tests are run through Applitools and work by comparing an expected screenshot to an actual screenshot of a certain page. Eyes tests only run on Chrome for now. If you make a change that affects layout, you will likely break eyes tests. Work with whoever is reviewing your PR to figure out if the layout change should be accepted, and the baseline will be adjusted.
  * Shared and Lib directories
    * Ruby tests - Unit tests over Ruby code in the shared and lib directories.
-* Pegasus directory
-  * Ruby tests - Test server side logic, caching, graphics, etc.
 
 ### When tests are run
 
 <!---- Can use http://markdowntable.com/ for reformatting help --->
 
-|                        | ruby lint                 | scss lint                         | haml lint          | stylelint                | JavaScript eslint (everywhere) | apps test          | dashboard unit tests | UI tests (Chrome)  | UI tests (all browsers) | eyes UI tests      | pegasus unit tests | shared and lib unit tests  |
-|------------------------|---------------------------|-----------------------------------|--------------------|--------------------------|--------------------------------|--------------------|----------------------|--------------------|-------------------------|--------------------|--------------------|--------------------|
-| pre-commit hook        | changed `*.rb and #!ruby` | changed `dashboard/app/**/*.scss` | changed `*.haml`   | changed `apps/**/*.scss` / changed `*.js`                 |
-| circle CI (via github) |                           |                                   |                    |                          | :white_check_mark:             | :white_check_mark: | :white_check_mark:   | :white_check_mark: |                         |                    | :white_check_mark: | :white_check_mark: |
-| staging build          | :white_check_mark:        |                                   | :white_check_mark: |                          |                                | :white_check_mark: |                      |                    |                         |                    |                    |                    |
-| test build             |                           |                                   |                    |                          |                                |                    | :white_check_mark:   | :white_check_mark: | :white_check_mark:      | :white_check_mark: | :white_check_mark: | :white_check_mark: |
+|                        | ruby lint                 | scss lint                         | haml lint          | stylelint                | JavaScript eslint (everywhere) | apps test          | dashboard unit tests | UI tests (Chrome)  | UI tests (all browsers) | eyes UI tests      | shared and lib unit tests  |
+|------------------------|---------------------------|-----------------------------------|--------------------|--------------------------|--------------------------------|--------------------|----------------------|--------------------|-------------------------|--------------------|--------------------|
+| pre-commit hook        | changed `*.rb and #!ruby` | changed `dashboard/app/**/*.scss` | changed `*.haml`   | changed `apps/**/*.scss` / changed `*.js`                
+| circle CI (via github) |                           |                                   |                    |                          | :white_check_mark:             | :white_check_mark: | :white_check_mark:   | :white_check_mark: |                         |                    | :white_check_mark: |
+| staging build          | :white_check_mark:        |                                   | :white_check_mark: |                          |                                | :white_check_mark: |                      |                    |                         |                    |                    |
+| test build             |                           |                                   |                    |                          |                                |                    | :white_check_mark:   | :white_check_mark: | :white_check_mark:      | :white_check_mark: | :white_check_mark: |
 
 ## Running tests
 
@@ -43,7 +41,7 @@ Our top-level `lib/rake/test.rake` file contains a handful of tasks that can be 
 Worth noting:
 
 * `bundle exec rake test:all` - runs all tests across all sub-projects
-* `bundle exec rake test:apps`, `bundle exec rake test:pegasus`, `bundle exec rake test:blockly_core` ... etc  - runs tests for specific sub-project
+* `bundle exec rake test:apps`, `bundle exec rake test:blockly_core` ... etc  - runs tests for specific sub-project
 * `bundle exec rake test:changed` - detects which sub-projects have changed in this branch, runs those tests
 * `bundle exec rake test:changed:apps` - runs apps tests if sub-project folder has changed
 * `bundle exec rake test:dashboard` - runs dashboard tests, but see [Dashboard Tests](#dashboard-tests) below for first time setup
@@ -72,7 +70,6 @@ Before running dashboard tests for the first time, run these commands to seed th
 
 1. `RAILS_ENV=test bundle exec rake assets:precompile`
 2. `RAILS_ENV=test UTF8=1 bundle exec rake db:reset db:test:prepare` : seed the DB with test data
-3. `cd ../pegasus && RAILS_ENV=test bundle exec rake test:reset_dependencies && cd ../dashboard` : the pegasus test DB must be seeded as well.
 
 To run all dashboard tests, which takes about 15 mintues:
 
@@ -110,15 +107,6 @@ To run a test file in either directory, `cd` into it before running the tests.
 cd shared
 bundle exec ruby -Itest ./test/path/to/your/test.rb
 ``` 
-
-### Pegasus Tests
-`cd pegasus && rake test` will run all of our pegasus Ruby tests. This usually takes ~20 seconds to run.
-
-Pegasus tests depend on the `pegasus_test` database.  If you have database-related errors, you can recreate and reseed the test database with `RAILS_ENV=test rake test:reset_dependencies`.  This will take about four minutes.  (Note that this must be run from the `pegasus/` directory.  Also note that in some environments, `bundle exec` should be included like this: `RAILS_ENV=test bundle exec rake test:reset_dependencies`.)
-
-Pegasus tests also depend on some local utilities being installed.  See [SETUP.md](SETUP.md) and make sure you have `pdftk` and `enscript` installed.
-
-To run one test file in pegasus, run `rake test TEST=<path-to-test-file>` (e.g. `rake test TEST=test/test_dev_routes.rb`).
 
 ### Dealing with test failures (non-Eyes)
 Our tests are pretty reliable, but not entirely reliable. If you see a test failure, you should investigate it and not immediately assume it is spurious.

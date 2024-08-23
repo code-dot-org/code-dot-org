@@ -48,7 +48,7 @@ end.parse!
 
 video_count = 0
 error_count = 0
-CSV.foreach(dashboard_dir('config/videos.csv'), headers: true) do |row|
+CSV.foreach(curriculum_dir('dashboard/config/videos.csv'), headers: true) do |row|
   video_key = row['Key']
   youtube_code = row['YoutubeCode']
 

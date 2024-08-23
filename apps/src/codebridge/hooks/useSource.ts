@@ -71,20 +71,6 @@ export const useSource = (defaultSources: ProjectSources) => {
   ]);
 
   useEffect(() => {
-    if (isStartMode) {
-      header.showLevelBuilderSaveButton(() => {
-        return {start_sources: source};
-      });
-    } else if (isEditingExemplarMode) {
-      header.showLevelBuilderSaveButton(
-        () => ({exemplar_sources: source}),
-        'Levelbuilder: Edit Exemplar',
-        `/levels/${levelId}/update_exemplar_code`
-      );
-    }
-  }, [isStartMode, isEditingExemplarMode, levelId, source]);
-
-  useEffect(() => {
     if (levelId && previousLevelIdRef.current !== levelId) {
       // We reset the project when the levelId changes, as this means we are on a new level.
       if (initialSources) {

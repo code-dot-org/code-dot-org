@@ -168,11 +168,6 @@ class Section < ApplicationRecord
     LOGIN_TYPE_CLEVER
   ]
 
-  TYPES = [
-    # Insert non-workshop section types here.
-  ].concat(Pd::Workshop::SECTION_TYPES).freeze
-  validates_inclusion_of :section_type, in: TYPES, allow_nil: true
-
   VALID_GRADES = [
     SharedConstants::STUDENT_GRADE_LEVELS,
     SharedConstants::PL_GRADE_VALUE
@@ -219,10 +214,6 @@ class Section < ApplicationRecord
 
   def course_display_name
     unit_group ? unit_group&.course_version&.localized_title : script&.course_version&.localized_title
-  end
-
-  def workshop_section?
-    Pd::Workshop::SECTION_TYPES.include? section_type
   end
 
   def externally_rostered?

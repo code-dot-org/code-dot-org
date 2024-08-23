@@ -1,5 +1,5 @@
 // Works with the "resources_tabs.haml" and "donate_tabs.haml" partials.
-// Styles that show and hide sections are in "design-system-pegasus.scss"
+// Styles that show and hide sections are in ...
 // under the "div.resources-tabs" selector.
 
 const tabs = document.querySelectorAll('.tabs-section button.tab');

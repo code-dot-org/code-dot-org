@@ -1,8 +1,0 @@
-name 'CSA U7L9-L2'
-display_name 'Trace Recursive Methods'
-description 'Trace recursive methods with Strings, arrays, or ArrayLists.'
-
-sublevels
-level 'CSA U7L9-L2a'
-level 'CSA U7L9-L2b'
-level 'CSA U7L9-L2c'

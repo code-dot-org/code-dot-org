@@ -1,8 +1,0 @@
-name 'pilot2022_l2_q2'
-question 'I would like to keep learning how to code. '
-right '😍 Yes, definitely!'
-right '👍 Yes.'
-right '🫤 Not really.'
-right '👎 No.'
-right '🤔 I do not know.'
-allow_multiple_attempts true

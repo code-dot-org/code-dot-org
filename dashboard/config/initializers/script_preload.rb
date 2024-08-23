@@ -5,7 +5,7 @@
 # Skip if this is running a Rake task (e.g. rake db:setup) or when caching is disabled
 if File.basename($0) != 'rake' &&
     Unit.should_cache? &&
-    !ENV['SKIP_SCRIPT_PRELOAD']
+    ENV['ENABLE_SCRIPT_PRELOAD']
   # Populate the shared in-memory cache from the database.
   Unit.unit_cache_to_cache unless Rails.cache.is_a?(ActiveSupport::Cache::MemoryStore)
   Unit.script_cache

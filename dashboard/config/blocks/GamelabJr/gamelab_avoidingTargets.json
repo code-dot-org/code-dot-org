@@ -1,9 +1,0 @@
-{
-  "category": "SL1",
-  "config": {
-    "func": "avoidingTargets",
-    "blockText": "avoiding targets",
-    "returnType": "Behavior",
-    "style": "behavior_blocks"
-  }
-}

@@ -6,7 +6,6 @@ import {connect} from 'react-redux';
 import {possibleHeaders} from '../../headerRedux';
 
 import headerVignetteStyles from './HeaderVignette';
-import LevelBuilderSaveButton from './LevelBuilderSaveButton';
 import MinimalProjectHeader from './MinimalProjectHeader';
 import ProjectBackedHeader from './ProjectBackedHeader';
 import ProjectHeader from './ProjectHeader';
@@ -15,7 +14,6 @@ const headerComponents = {
   [possibleHeaders.project]: ProjectHeader,
   [possibleHeaders.minimalProject]: MinimalProjectHeader,
   [possibleHeaders.projectBacked]: ProjectBackedHeader,
-  [possibleHeaders.levelBuilderSave]: LevelBuilderSaveButton,
 };
 
 class ProjectInfo extends React.Component {

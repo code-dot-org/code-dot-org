@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import {shouldShowReviewStates} from '@cdo/apps/templates/progress/progressHelpers';
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import {
@@ -262,7 +262,7 @@ class ProgressTableView extends React.Component {
   }
 
   recordToggleRow(expanding, studentId) {
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'teacher_dashboard_actions',
         study_group: 'time_spent',

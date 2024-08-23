@@ -10,15 +10,13 @@
 # WARNING (email notification): The process exited with a non-0 exit code
 #   or returned output.
 #
-# ERROR (not currently differentiated): A non-0 exit code could be elevated to mean error and
-#   result in a HoneyBadger error.
+# ERROR (not currently differentiated): A non-0 exit code could be elevated to mean error
 #
 # CRONJOBs are defined the cdo-apps::crontab Chef recipe: `chef/cookbooks/cdo-apps/recipes/crontab.rb`.
 #
 
 require_relative '../deployment'
 require 'mail'
-require 'cdo/honeybadger'
 require 'open3'
 
 #
@@ -51,10 +49,10 @@ def email_notify(command, status, content, recipient)
 end
 
 #
-# honeybadger_notify - log an error to honeybadger.
+# error_notify - log an error.
 #
-def honeybadger_notify(command, exitstatus, stdout, stderr)
-  Honeybadger.notify_command_error "cronjob #{command}", exitstatus, stdout, stderr
+def error_notify(command, exitstatus, stdout, stderr)
+  Harness.error_notify_command_error "cronjob #{command}", exitstatus, stdout, stderr
 end
 
 #
@@ -67,10 +65,10 @@ def main
   result = stdout + stderr
   exitstatus = status.exitstatus
 
-  honeybadger_notify command, exitstatus, stdout, stderr
+  error_notify command, exitstatus, stdout, stderr
   email_notify command, exitstatus, result, ARGV[1]
 rescue => exception
-  Honeybadger.notify_cronjob_error exception
+  Harness.error_notify_cronjob_error exception
   raise
 end
 

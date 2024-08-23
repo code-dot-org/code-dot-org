@@ -32,7 +32,7 @@ const LtiContinueAccountCard = () => {
     analyticsReporter.sendEvent(
       'lti_continue_account_click',
       eventPayload,
-      PLATFORMS.STATSIG
+      null
     );
 
     navigateToHref(continueAccountUrl);

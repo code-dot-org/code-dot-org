@@ -540,7 +540,6 @@ class LevelsHelperTest < ActionView::TestCase
 
   # Regression test for problem:
   #   https://codeorg.zendesk.com/agent/tickets/115705
-  #   https://app.honeybadger.io/projects/3240/faults/35473924
   #
   # Given we have two users A and B
   # And they have pair-programming progress on a channel-backed level where

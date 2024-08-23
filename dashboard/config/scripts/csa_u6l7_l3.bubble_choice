@@ -1,8 +1,0 @@
-name 'CSA U6L7-L3'
-display_name 'Analyzing Text'
-description 'Use standard algorithms you have written before to analyze text.'
-
-sublevels
-level 'CSA U6L7-L3a'
-level 'CSA U6L7-L3b'
-level 'CSA U6L7-L3c'

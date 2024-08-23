@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import {Voices} from '@cdo/generated-scripts/sharedVoices';
 
 import trackEvent from '../../util/trackEvent';
@@ -185,7 +185,7 @@ class InlineAudio extends React.Component {
   };
 
   recordPlayEvent() {
-    firehoseClient.putRecord({
+    harness.trackAnalytics({
       study: 'tts-play',
       study_group: 'v1',
       event: 'play',

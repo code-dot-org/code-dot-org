@@ -1,7 +1,7 @@
 require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/rake_utils'
-require 'cdo/python_venv'
+# require 'cdo/python_venv'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
 include TimedTaskWithLogging
 
@@ -13,7 +13,7 @@ namespace :lint do
 
   desc 'Lints Haml code with haml-lint.'
   timed_task_with_logging :haml do
-    RakeUtils.bundle_exec 'haml-lint dashboard pegasus shared'
+    RakeUtils.bundle_exec 'haml-lint dashboard shared'
   end
 
   desc 'Lints SCSS code with scss-lint.'

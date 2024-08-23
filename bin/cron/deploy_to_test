@@ -5,7 +5,6 @@ abort 'Script already running' unless only_one_running?(__FILE__)
 require_relative '../../deployment'
 require 'cdo/chat_client'
 require 'cdo/developers_topic'
-require 'cdo/github'
 require 'cdo/infra_test_topic'
 
 TOPIC_DTT_IN_PROGRESS = 'no (robo-DTT in progress)'.freeze

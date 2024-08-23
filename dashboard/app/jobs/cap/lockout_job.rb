@@ -34,7 +34,7 @@ module CAP
     end
 
     private def report_exception(exception)
-      Honeybadger.notify(
+      Harness.error_notify(
         exception,
         error_message: '[CAP::LockoutJob] Runtime error',
         context: {

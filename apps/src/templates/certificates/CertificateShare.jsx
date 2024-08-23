@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {marketing} from '@cdo/apps/lib/util/urlHelpers';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
 
 import styleConstants from '../../styleConstants';
@@ -24,7 +24,7 @@ export default function CertificateShare({
       </a>
       {announcement && (
         <TwoColumnActionBlock
-          imageUrl={pegasus(announcement.image)}
+          imageUrl={marketing(announcement.image)}
           subHeading={announcement.title}
           description={announcement.body}
           buttons={[

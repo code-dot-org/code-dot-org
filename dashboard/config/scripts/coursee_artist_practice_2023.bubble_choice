@@ -1,9 +1,0 @@
-name 'CourseE_Artist_Practice_2023'
-display_name 'Artist Practice'
-description 'Great work so far! Choose your next activity. Complete as many as you can. Keep practicing with loops and the Artist!'
-
-sublevels
-level 'courseC_artist_prog7_2023'
-level 'ramp_artist_loops4_2023'
-level 'ramp_artist_loops6_2023'
-level 'ramp_artist_loops8_2023'

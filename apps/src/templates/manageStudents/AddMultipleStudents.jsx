@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import i18n from '@cdo/locale';
 
 import BaseDialog from '../BaseDialog';
@@ -24,7 +24,7 @@ class AddMultipleStudents extends Component {
 
   openDialog = () => {
     this.setState({isDialogOpen: true});
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'teacher-dashboard',
         study_group: 'manage-students-actions',
@@ -50,7 +50,7 @@ class AddMultipleStudents extends Component {
       return {name, familyName};
     });
     this.props.addMultipleStudents(studentDataArray);
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'teacher-dashboard',
         study_group: 'manage-students-actions',

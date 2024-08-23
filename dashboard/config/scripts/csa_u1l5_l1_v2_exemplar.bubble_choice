@@ -1,7 +1,0 @@
-name 'CSA U1L5-L1-v2 Exemplar'
-display_name 'Default Painters'
-description 'Create Painters to navigate The Neighborhood and paint the street.'
-
-sublevels
-level 'CSA U1L5-L1a-1 Exemplar'
-level 'CSA U1L5-L1b-1 Exemplar'

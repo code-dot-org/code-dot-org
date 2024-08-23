@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 require_relative '../deployment'
-require_relative '../lib/cdo/aws/s3'
 require 'cdo/sequel'
 require_relative '../shared/middleware/helpers/storage_id'
 require 'cdo/db'

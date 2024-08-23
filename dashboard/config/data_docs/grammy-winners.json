@@ -1,5 +1,0 @@
-{
-  "key": "grammy-winners",
-  "name": "Grammy Winners",
-  "content": "Description: all Grammy winners from 1959-2019\r\n\r\nSource: [Kaggle](https://www.kaggle.com/unanimad/grammy-awards )\r\n\r\nProcessing: removed nominees that did not win the award and removed any entries with inappropriate words \r\n\r\nColumns:\r\n\r\n* Year (numerical): year of the Grammy awards\r\n* Category (string): name of the category that the nominee won in\r\n* Nominee (string): name of the artist, song, album, etc. that had won the grammy"
-}

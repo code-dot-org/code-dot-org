@@ -17,7 +17,7 @@ def parse_email_address_string(string)
   # by a pair of double-quotes, and is adapted from
   # https://stackoverflow.com/a/18893443.
   if /,(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)/.match?(string)
-    Honeybadger.notify(
+    Harness.error_notify(
       error_message: "Comma outside of surrounding double-quotes detected in address string: #{string}"
     )
     return ""

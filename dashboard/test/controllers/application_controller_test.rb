@@ -126,10 +126,10 @@ class ApplicationControllerTest < ActionDispatch::IntegrationTest
         get root_path
       end
 
-      it 'notifies Honeybadger about error' do
+      it 'notifies about error' do
         request_path = root_path
 
-        Honeybadger.expects(:notify).with(
+        Harness.expects(:error_notify).with(
           error,
           error_message: 'Failed to apply the Child Account Policy to the user',
           context: {

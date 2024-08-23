@@ -1,7 +1,7 @@
 // TODO: The client API should be instantiated with the channel ID, instead of grabbing it from the `dashboard.project` global.
 import queryString from 'query-string';
 
-import firehoseClient from './lib/util/firehose';
+import harness from './lib/util/harness';
 
 function project() {
   return require('./code-studio/initApp/project');
@@ -111,7 +111,7 @@ class CollectionsApi {
     if (this._shouldCallBeforeFirstWriteHook && this._beforeFirstWriteHook) {
       this._beforeFirstWriteHook((err, success) => {
         if (err) {
-          firehoseClient.putRecord(
+          harness.trackAnalytics(
             {
               study: 'weblab_loading_investigation',
               study_group: 'empty_manifest',

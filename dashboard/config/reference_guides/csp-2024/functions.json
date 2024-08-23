@@ -1,9 +1,0 @@
-{
-  "key": "functions",
-  "course_version_key": "2024",
-  "course_offering_key": "csp",
-  "parent_reference_guide_key": "javascript",
-  "display_name": "Functions",
-  "content": "A function is a group of commands (blocks) that you give a name so that you can use it over and over again.\n\n### **Creating (Naming) a Function**\n\nTo create a function, you need to put all of the commands inside a function block and type your function's name into the space at the top of the function block.  This code is making a new function called \"resetDrawing\" that contains 4 commands.\n\n![](https://images.code.org/871749baa9c8f68f3e47be691229d70c-image-1474910778495.27.29 AM.png)\n\n### **Calling (Using) a Function**\n\nWhenever you want to use your function you need to call it by its name. To do this you just write the name of your function followed by parentheses. This will run all the commands you put inside your function when you made it.\n\n![](https://images.code.org/9ed9c91abdf2e6987ade2f73524c29cf-image-1474911372794.36.00 PM.png)\n\n### **Why Use Functions?**\n\n1. **Keeping Your Code Organized** Functions can be created anywhere in your program. If you have large blocks of code you won't be using often, you can create a function at the bottom of your code and just call it in a single line higher up.\n\n2. **Keeping Your Code Readable** By giving a group of commands a name you're helping explain how your code works. Picking good names helps you and other people reading your code understand what it is doing.\n\n3. **Removing Repetition** Once you've created a function you can call it as many times as you like in your program. If you're using the same code in many places in your program you can create a function with that code that you can call instead. This makes it easy to change code in multiple places too.",
-  "position": 11
-}

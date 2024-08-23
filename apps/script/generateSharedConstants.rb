@@ -12,7 +12,6 @@ require 'require_all'
 
 require_relative '../../lib/cdo/shared_constants'
 require_relative '../../lib/cdo/shared_constants/curriculum/shared_course_constants'
-autoload_all File.expand_path('../../lib/cdo/shared_constants/pd', File.dirname(__FILE__))
 
 REPO_DIR = File.expand_path('../../../', __FILE__)
 
@@ -141,82 +140,6 @@ def main
     "#{REPO_DIR}/apps/src/generated/curriculum/sharedCourseConstants.js"
   )
 
-  generate_shared_js_file(
-    generate_multiple_constants(
-      %w(
-        COURSES
-        ACTIVE_COURSES
-        ARCHIVED_COURSES
-        COURSE_KEY_MAP
-        SUBJECT_NAMES
-        SUBJECTS
-        VIRTUAL_ONLY_SUBJECTS
-        HIDE_FEE_INFORMATION_SUBJECTS
-        HIDE_ON_WORKSHOP_MAP_SUBJECTS
-        HIDE_FUNDED_SUBJECTS
-        MUST_SUPPRESS_EMAIL_SUBJECTS
-        ACADEMIC_YEAR_WORKSHOP_SUBJECTS
-        LEGACY_SUBJECTS
-        STATES
-        WORKSHOP_APPLICATION_STATES
-        WORKSHOP_SEARCH_ERRORS
-        ACTIVE_COURSE_WORKSHOPS
-        ACTIVE_COURSES_WITH_SURVEYS
-        WORKSHOP_TYPES
-        NOT_FUNDED_SUBJECTS
-        CSD_CUSTOM_WORKSHOP_MODULES
-      ),
-      source_module: Pd::SharedWorkshopConstants,
-      transform_keys: false
-    ),
-    "#{REPO_DIR}/apps/src/generated/pd/sharedWorkshopConstants.js"
-  )
-
-  generate_shared_js_file(
-    generate_constants(
-      'COHORT_CALCULATOR_STATUSES',
-      source_module: Pd::SharedApplicationConstants,
-      transform_keys: true
-    ),
-    "#{REPO_DIR}/apps/src/generated/pd/sharedApplicationConstants.js"
-  )
-
-  generate_shared_js_file(
-    generate_multiple_constants(
-      %w(
-        PRINCIPAL_APPROVAL_STATE
-        SEND_ADMIN_APPROVAL_EMAIL_STATUSES
-        YEAR SECTION_HEADERS
-        PAGE_LABELS
-        VALID_SCORES
-        LABEL_OVERRIDES
-        TEXT_FIELDS
-        MULTI_ANSWER_QUESTION_FIELDS
-        SCOREABLE_QUESTIONS
-      ),
-      source_module: Pd::TeacherApplicationConstants,
-      transform_keys: true
-    ),
-    "#{REPO_DIR}/apps/src/generated/pd/teacherApplicationConstants.js"
-  )
-
-  generate_shared_js_file(
-    generate_multiple_constants(
-      %w(PAGE_LABELS TEXT_FIELDS),
-      source_module: Pd::PrincipalApprovalApplicationConstants,
-      transform_keys: true
-    ),
-    "#{REPO_DIR}/apps/src/generated/pd/principalApprovalApplicationConstants.js"
-  )
-
-  generate_shared_js_file(
-    generate_constants(
-      'COURSE_SPECIFIC_SCHOLARSHIP_DROPDOWN_OPTIONS',
-      source_module: Pd::ScholarshipInfoConstants,
-      transform_keys: true
-    ),
-    "#{REPO_DIR}/apps/src/generated/pd/scholarshipInfoConstants.js"
-  )
 end
 
 main

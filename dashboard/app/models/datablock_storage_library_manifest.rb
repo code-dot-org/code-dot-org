@@ -71,8 +71,8 @@ class DatablockStorageLibraryManifest < ApplicationRecord
     instance.update!(library_manifest: manifest)
   end
 
-  def self.seed_tables(glob = "config/datablock_storage/*.csv")
-    Dir.glob(Rails.root.join(glob)).each do |path|
+  def self.seed_tables(glob = "dashboard/config/datablock_storage/*.csv")
+    Dir.glob(curriculum_dir(glob)).each do |path|
       table_name = path.match(/([^\/]+)\.csv$/)[1]
 
       # Overwrite the table if it already exists

@@ -7,9 +7,6 @@ pardot_username: !Secret
 pardot_private_key: !Secret
 pd_teacher_application_list_secret_key: !Secret
 pledge_map_table_id: !Secret
-redshift_host: !Secret
-redshift_password: !Secret
-redshift_username: !Secret
 sinatra_session_secret: !Secret
 
 # In production, only the console server populates the admin credential.
@@ -44,10 +41,6 @@ ai_proxy_origin: https://aiproxy.code.org
 mapbox_upload_tileset:    'censustiles'
 mapbox_upload_token:      !Secret
 mapbox_access_tileset:    'censustiles'
-
-# Statsig API keys
-statsig_server_secret_key: !Secret
-statsig_api_client_key: !Secret
 
 # MailGun/MailJet API keys
 mailjet_api_key: !Secret

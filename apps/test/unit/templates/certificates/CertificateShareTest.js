@@ -32,7 +32,7 @@ describe('CertificateShare', () => {
     window.dashboard = storedWindowDashboard;
   });
 
-  it('renders announcement image url relative to pegasus', () => {
+  it('renders announcement image url relative to marketing', () => {
     render(<CertificateShare {...defaultProps} />);
 
     const printLink = screen.getByRole('link', {name: defaultImageAlt});

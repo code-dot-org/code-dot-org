@@ -1,9 +1,0 @@
-name 'CSA U4L3-L4_2023'
-display_name 'Practice: Using Constants'
-description 'Use a constant to declare and initialize a constant value for different scenarios.'
-
-sublevels
-level 'CSA U4L3-L4a_2023'
-level 'CSA U4L3-L4b_2023'
-level 'CSA U4L3-L4c_2023'
-level 'CSA U4L3-L4d_2023'

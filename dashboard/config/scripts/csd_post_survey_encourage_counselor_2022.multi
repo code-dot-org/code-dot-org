@@ -1,5 +1,0 @@
-name 'csd-post-survey-encourage-counselor_2022'
-question "Did a counselor or advisor at school encourage you to take this class?"
-right 'Yes'
-right 'No'
-allow_multiple_attempts true

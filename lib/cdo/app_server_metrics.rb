@@ -1,6 +1,5 @@
 require 'raindrops'
-require 'cdo/aws/metrics'
-require 'honeybadger/ruby'
+
 require 'concurrent/timer_task'
 require 'active_support/core_ext/module/attribute_accessors'
 
@@ -44,7 +43,7 @@ module Cdo
 
     def spawn_reporting_task
       @spawn_reporting_task ||= Concurrent::TimerTask.new(execution_interval: @interval) {|task| collect_metrics(task)}.
-        with_observer {|_, _, ex| Honeybadger.notify(ex) if ex}.
+        with_observer {|_, _, ex| Harness.error_notify(ex) if ex}.
         execute
     end
 

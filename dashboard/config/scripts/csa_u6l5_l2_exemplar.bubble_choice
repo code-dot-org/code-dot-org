@@ -1,8 +1,0 @@
-name 'CSA U6L5-L2 Exemplar'
-display_name 'Standard Algorithms with ArrayLists'
-description 'Apply the standard algorithms you have written with 1D and 2D arrays to work with ArrayLists.'
-
-sublevels
-level 'CSA U6L5-L2a Exemplar'
-level 'CSA U6L5-L2b Exemplar'
-level 'CSA U6L5-L2c Exemplar'

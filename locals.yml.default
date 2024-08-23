@@ -13,11 +13,6 @@
 #bundler_use_sudo: false
 
 
-# Causes dashboard-server to run pegasus as middleware, starting both in a
-# single command.  This is preferred (and default) in development mode.
-dashboard_enable_pegasus: true
-
-
 # Run dashboard-server with the level editing interface enabled (for admins)
 #levelbuilder_mode: true
 
@@ -47,7 +42,7 @@ use_my_apps: true
 # Until you manually run `rake seed:all` or disable this flag, you won't
 # see changes to: videos, concepts, levels, scripts, trophies, prize providers,
 # callouts, hints, secret words, or secret pictures.
-#skip_seed_all: true
+skip_seed_all: true
 
 
 # Whether to store sprocket asset cache on disk or in memory. Setting this to
@@ -145,3 +140,7 @@ use_my_apps: true
 # from the dashboard/ directory to start the workers.
 #
 # active_job_queue_adapter: :delayed_job
+
+# Harness configuration
+locale_content_dir: ../default-locale-content
+curriculum_content_dir: ../curriculum-content

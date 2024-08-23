@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {marketing} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import ResourceCard from '../studioHomepages/ResourceCard';
@@ -14,7 +14,7 @@ class YourSchoolResources extends Component {
             title={i18n.administrators()}
             description={i18n.yourSchoolAdminDesc()}
             buttonText={i18n.yourSchoolAdminButton()}
-            link={pegasus('/educate/district')}
+            link={marketing('/educate/district')}
             allowWrap
           />
         </div>
@@ -23,7 +23,7 @@ class YourSchoolResources extends Component {
             title={i18n.teachers()}
             description={i18n.yourSchoolTeacherDesc()}
             buttonText={i18n.yourSchoolTeacherButton()}
-            link={pegasus('/educate')}
+            link={marketing('/educate')}
             allowWrap
           />
         </div>
@@ -32,7 +32,7 @@ class YourSchoolResources extends Component {
             title={i18n.parentsAndStudents()}
             description={i18n.yourSchoolParentDesc()}
             buttonText={i18n.yourSchoolParentButton()}
-            link={pegasus('/help')}
+            link={marketing('/help')}
             allowWrap
           />
         </div>

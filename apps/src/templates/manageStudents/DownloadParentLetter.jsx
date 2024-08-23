@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
@@ -18,7 +18,7 @@ export default class DownloadParentLetter extends Component {
   onDownloadParentLetter = () => {
     const url = teacherDashboardUrl(this.props.sectionId, '/parent_letter');
     window.open(url, '_blank', 'noopener,noreferrer');
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'teacher-dashboard',
         study_group: 'manage-students-actions',

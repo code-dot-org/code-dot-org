@@ -9,7 +9,6 @@ ENV['BUNDLE_GEMFILE'] ||= "#{ROOT}//Gemfile"
 require 'bundler'
 require 'bundler/setup'
 
-require 'cdo/aws/s3'
 require 'cdo/chat_client'
 require 'cdo/data/logging/infrastructure_logger'
 require 'cdo/git_utils'
@@ -99,10 +98,7 @@ def parse_options
     options.os_version = nil
     options.browser_version = nil
     options.features = nil
-    options.pegasus_domain = 'test.code.org'
     options.dashboard_domain = 'test-studio.code.org'
-    options.hourofcode_domain = 'test.hourofcode.com'
-    options.csedweek_domain = 'test.csedweek.org'
     options.local = nil
     options.local_headless = true
     options.html = nil
@@ -139,33 +135,17 @@ def parse_options
       end
       opts.on("-l", "--local", "Use local domains. Also use local webdriver (not Saucelabs) unless -c is specified.") do
         options.local = 'true'
-        options.pegasus_domain = 'localhost.code.org:3000'
-        options.dashboard_domain = 'localhost-studio.code.org:3000'
-        options.hourofcode_domain = 'localhost.hourofcode.com:3000'
-        options.csedweek_domain = 'localhost.csedweek.org:3000'
+        options.dashboard_domain = 'localhost:3000'
       end
       opts.on("--headed", "Open visible chrome browser windows. Runs in headless mode without this flag. Only relevant when -l is specified.") do
         options.local_headless = false
       end
-      opts.on("-p", "--pegasus Domain", String, "Specify an override domain for code.org, e.g. localhost.code.org:3000") do |p|
-        if p == 'localhost:3000'
-          print "WARNING: Some tests may fail using '-p localhost:3000' because cookies will not be available.\n" \
-                "Try '-p localhost.code.org:3000' instead (this is the default when using '-l').\n"
-        end
-        options.pegasus_domain = p
-      end
-      opts.on("-d", "--dashboard Domain", String, "Specify an override domain for studio.code.org, e.g. localhost-studio.code.org:3000") do |d|
+      opts.on("-d", "--dashboard Domain", String, "Specify an override domain for studio.code.org, e.g. localhost:3000") do |d|
         if d == 'localhost:3000'
           print "WARNING: Some tests may fail using '-d localhost:3000' because cookies will not be available.\n" \
-                "Try '-d localhost-studio.code.org:3000' instead (this is the default when using '-l').\n"
+                "Try '-d localhost:3000' instead (this is the default when using '-l').\n"
         end
         options.dashboard_domain = d
-      end
-      opts.on("--hourofcode Domain", String, "Specify an override domain for hourofcode.com, e.g. localhost.hourofcode.com:3000") do |d|
-        options.hourofcode = d
-      end
-      opts.on("--csedweek Domain", String, "Specify an override domain for csedweek.org, e.g. localhost.csedweek.org:3000") do |d|
-        options.csedweek = d
       end
       opts.on("-r", "--real_mobile_browser", "Use real mobile browser, not emulator") do
         options.realmobile = 'true'
@@ -238,16 +218,12 @@ def parse_options
       map! {|feature| feature.gsub(/^\.\//, '')}
 
     if options.force_db_access
-      options.pegasus_db_access = true
       options.dashboard_db_access = true
     elsif ENV['CI']
-      options.pegasus_db_access = true
       options.dashboard_db_access = true
     elsif rack_env?(:development)
-      options.pegasus_db_access = true if /(localhost|ngrok)/.match?(options.pegasus_domain)
       options.dashboard_db_access = true if /(localhost|ngrok)/.match?(options.dashboard_domain)
     elsif rack_env?(:test)
-      options.pegasus_db_access = true if /test/.match?(options.pegasus_domain)
       options.dashboard_db_access = true if /test/.match?(options.dashboard_domain)
     end
 
@@ -685,7 +661,6 @@ def cucumber_arguments_for_browser(browser, options)
   arguments += skip_tag('@no_safari') if browser['name'] == 'Safari'
   arguments += skip_tag('@no_firefox') if browser['browserName'] == 'firefox'
   arguments += skip_tag('@webpurify') unless CDO.webpurify_key
-  arguments += skip_tag('@pegasus_db_access') unless options.pegasus_db_access
   arguments += skip_tag('@dashboard_db_access') unless options.dashboard_db_access
   arguments
 end
@@ -735,10 +710,7 @@ def run_feature(browser, feature, options)
   run_environment['BROWSER_CONFIG'] = options.local ? browser['browser'] : browser_name
 
   run_environment['BS_ROTATABLE'] = browser['rotatable'] ? "true" : "false"
-  run_environment['PEGASUS_TEST_DOMAIN'] = options.pegasus_domain if options.pegasus_domain
   run_environment['DASHBOARD_TEST_DOMAIN'] = options.dashboard_domain if options.dashboard_domain
-  run_environment['HOUROFCODE_TEST_DOMAIN'] = options.hourofcode_domain if options.hourofcode_domain
-  run_environment['CSEDWEEK_TEST_DOMAIN'] = options.csedweek_domain if options.csedweek_domain
   run_environment['TEST_LOCAL'] = options.local ? "true" : "false"
   run_environment['TEST_LOCAL_HEADLESS'] = options.local_headless ? "true" : "false"
   run_environment['MAXIMIZE_LOCAL'] = options.maximize ? "true" : "false"
@@ -750,7 +722,6 @@ def run_feature(browser, feature, options)
   # disable some stuff to make require_rails_env run faster within cucumber.
   # These things won't be disabled in the dashboard instance we're testing against.
   run_environment['SKIP_I18N_INIT'] = 'true'
-  run_environment['SKIP_DASHBOARD_ENABLE_PEGASUS'] = 'true'
 
   max_reruns = how_many_reruns?(test_run_string)
 

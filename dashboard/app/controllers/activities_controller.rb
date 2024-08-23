@@ -1,6 +1,6 @@
 require 'cdo/activity_constants'
 require 'cdo/share_filtering'
-require 'cdo/firehose'
+
 require 'cdo/web_purify'
 require 'policies/ai'
 require 'metrics/events'

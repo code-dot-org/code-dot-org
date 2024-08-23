@@ -27,8 +27,6 @@
   cookie_key = environment_specific_cookie_name('_user_type')
   user_type = request.cookies[cookie_key]
 
-%script{data: {"amplitude-api-key": CDO.safe_amplitude_api_key}}
-%script{data: {'statsig-api-client-key': CDO.safe_statsig_api_client_key}}
 %script{data: {'managed-test-server': "#{CDO.running_web_application? && CDO.test_system?}"}}
 
 - if show_create_menu
@@ -104,8 +102,7 @@
   window.cookieEnvSuffix = '#{rack_env?(:production) ? '' : "_#{rack_env}"}';
   // Use function closure to avoid cluttering global namespace.
   (function() {
-    // Ideally would use environment_specific_cookie_name, but that's not currently
-    // available to us in pegasus
+    // Ideally would use environment_specific_cookie_name
     var cookieKey = '_shortName' + window.cookieEnvSuffix;
     // Share cookie with top-level domain.
     var topLevelDomain = document.location.hostname.split('.').slice(-2).join('.');

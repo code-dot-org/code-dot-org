@@ -1,8 +1,0 @@
-name 'cv-studentsurvey-postmodule-q2'
-question 'How confident do you now feel in your understanding of computer vision concepts?'
-right 'Very confident'
-right 'Somewhat confident'
-right 'Neutral'
-right 'Somewhat unconfident'
-right 'Very unconfident'
-allow_multiple_attempts true

@@ -25,7 +25,6 @@ export default function LtiRosterSyncSettings(props) {
     const eventName = enabled
       ? 'lti_opt_out_toggle_on'
       : 'lti_opt_out_toggle_off';
-    analyticsReporter.sendEvent(eventName, eventPayload, PLATFORMS.STATSIG);
 
     const form = document.getElementById(props.formId);
     form.elements['user_lti_roster_sync_enabled'].value = enabled;

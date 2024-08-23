@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import {isIE11} from '@cdo/apps/util/browser-detector';
 import i18n from '@cdo/locale';
 
@@ -101,7 +101,7 @@ export default class GoogleClassroomShareButton extends React.PureComponent {
   }
 
   logEvent(event) {
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'google-classroom-share-button',
         study_group: 'v0',

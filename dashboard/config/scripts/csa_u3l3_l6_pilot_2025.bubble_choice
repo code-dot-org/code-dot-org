@@ -1,9 +1,0 @@
-name 'CSA U3L3-L6_pilot-2025'
-display_name 'Practice: Traverse a 1D Array'
-description 'Use a `while` loop to traverse a 1D array and return a `String` containing the values it stores.'
-
-sublevels
-level 'CSA U3L3-L6a_pilot-2025'
-level 'CSA U3L3-L6b_pilot-2025'
-level 'CSA U3L3-L6c_pilot-2025'
-level 'CSA U3L3-L6d_pilot-2025'

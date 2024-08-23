@@ -1,13 +1,11 @@
+require_relative '../../harnessless_shims'
 require File.expand_path('../../../deployment', __FILE__)
-require 'cdo/poste'
 require 'rails/all'
 
 require 'cdo/geocoder'
-require 'varnish_environment'
 require_relative '../legacy/middleware/files_api'
 require_relative '../legacy/middleware/channels_api'
 require 'shared_resources'
-require_relative '../legacy/middleware/net_sim_api'
 require_relative '../legacy/middleware/sound_library_api'
 require_relative '../legacy/middleware/animation_library_api'
 
@@ -43,7 +41,6 @@ module Dashboard
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins CDO.pegasus_site_host
         resource '/dashboardapi/*', headers: :any, methods: [:get]
       end
     end
@@ -52,15 +49,6 @@ module Dashboard
       # Only Chef-managed environments run an HTTP-cache service alongside the Rack app.
       # For other environments (development / CI), run the HTTP cache from Rack middleware.
       require 'cdo/rack/allowlist'
-      require 'cdo/http_cache'
-      config.middleware.insert_before ActionDispatch::Cookies, Rack::Allowlist::Downstream,
-        HttpCache.config(rack_env)[:dashboard]
-
-      require 'rack/cache'
-      config.middleware.insert_before ActionDispatch::Cookies, Rack::Cache, ignore_headers: []
-
-      config.middleware.insert_after Rack::Cache, Rack::Allowlist::Upstream,
-        HttpCache.config(rack_env)[:dashboard]
     end
 
     if Rails.env.development?
@@ -76,18 +64,12 @@ module Dashboard
       config.middleware.insert_before ActionDispatch::Static, ::Rack::Optimize
     end
 
-    config.middleware.insert_after Rails::Rack::Logger, VarnishEnvironment
-    config.middleware.insert_after VarnishEnvironment, FilesApi
+    config.middleware.insert_after Rails::Rack::Logger, FilesApi
 
     config.middleware.insert_after FilesApi, ChannelsApi
     config.middleware.insert_after ChannelsApi, SharedResources
-    config.middleware.insert_after SharedResources, NetSimApi
-    config.middleware.insert_after NetSimApi, AnimationLibraryApi
+    config.middleware.insert_after SharedResources, AnimationLibraryApi
     config.middleware.insert_after AnimationLibraryApi, SoundLibraryApi
-    if CDO.dashboard_enable_pegasus && !ENV['SKIP_DASHBOARD_ENABLE_PEGASUS']
-      require 'pegasus_sites'
-      config.middleware.insert_after VarnishEnvironment, PegasusSites
-    end
 
     require 'cdo/rack/upgrade_insecure_requests'
     config.middleware.use ::Rack::UpgradeInsecureRequests
@@ -115,6 +97,7 @@ module Dashboard
 
     # By default, config/locales/*.rb,yml are auto loaded.
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.json').to_s]
+    config.i18n.load_path += Dir[Rails.root.join(CDO.locale_content_dir,'dashboard','config', 'locales', '*.{rb,yml,json}').to_s]
     config.i18n.backend = CDO.i18n_backend
     config.i18n.enforce_available_locales = false
     config.i18n.available_locales = [SharedConstants::DEFAULT_LOCALE]

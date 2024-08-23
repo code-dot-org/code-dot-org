@@ -1,9 +1,0 @@
-{
-  "key": "insertion-sort",
-  "course_version_key": "2023",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "Algorithms",
-  "display_name": "Insertion Sort",
-  "content": "The **insertion sort** algorithm shifts each item in a list one at a time to the correct position in the sorted portion of the list.\n\n## Pseudocode\n```\nloop list from index 1 to the end of the list\n  set current to the value at index\n  set next to the value at index - 1\n  while next is greater than or equal to 0 and the value at next is greater than current\n    set the element at next + 1 to the value at next\n    decrement next\n  set the element at next + 1 to current\n```\n\n## Example\n\n```\npublic static void insertionSort(int[] elements) {\n  for (int j = 1; j < elements.length; j++) {\n    int temp = elements[j];\n    int possibleIndex = j;\n    while (possibleIndex > 0 && temp < elements[possibleIndex − 1]) {\n      elements[possibleIndex] = elements[possibleIndex − 1];\n      possibleIndex−−;\n    }\n    elements[possibleIndex] = temp;\n  }\n}\n```\n",
-  "position": 3
-}

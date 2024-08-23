@@ -2,7 +2,7 @@ require 'net/http'
 require 'uri'
 require 'json'
 require 'benchmark'
-require 'cdo/firehose'
+
 
 SAFE_BROWSING_THREAT_TYPES = %w(THREAT_TYPE_UNSPECIFIED MALWARE SOCIAL_ENGINEERING UNWANTED_SOFTWARE POTENTIALLY_HARMFUL_APPLICATION)
 

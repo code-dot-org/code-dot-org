@@ -1,5 +1,0 @@
-{
-  "key": "independence-days",
-  "name": "Independence Days Worldwide",
-  "content": "Description: data about various Independence Days or similar celebrations, in various countries worldwide\r\n\r\n[Source](https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-07-06/readme.md/)\r\n\r\nColumns:\r\n\r\n* Country (string): Name of the country with an independence day (or similar)\r\n* Day (numerical): what day of the month (next column) that day of recognition is held on\r\n* Month (string): what month the day of recognition is held during\r\n* Name of Holiday (string): name of that country's day of recognition of independence\r\n* Year of event (numerical): what year the holiday was first recognized or celebrated\r\n* Independence from (string): what other country or regime etc. the country celebrates independence from\r\n* Event comments (string): more background info on that event / day of recognition\r\n* Date mdy (date): m/d/y date format of the first formal recognition of the event"
-}

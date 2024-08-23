@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 
 import {editAnimation, removePendingFramesAction} from '../redux/animationList';
 import {show, Goal} from '../redux/animationPicker';
@@ -208,7 +208,7 @@ class PiskelEditor extends React.Component {
     }
 
     if (!this.hasLoggedFirehoseEvent_) {
-      firehoseClient.putRecord({
+      harness.trackAnalytics({
         study: 'animation-library',
         study_group: 'control-2020',
         event: 'asset-editing',

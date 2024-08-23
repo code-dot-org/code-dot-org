@@ -84,9 +84,8 @@ class LessonsController < ApplicationController
       current_lesson_data[:resources]&.map! {|v| v[:id]}
       old_lesson_data['resources']&.map! {|v| v['id']}
       if old_lesson_data.to_json != current_lesson_data.to_json
-        # Log error details to firehose instead of honeybadger to minimize the
-        # chances of the data being truncated.
-        FirehoseClient.instance.put_record(
+        # Log error details
+        Harness.error_notify(
           :analysis,
           {
             study: 'lesson-update',

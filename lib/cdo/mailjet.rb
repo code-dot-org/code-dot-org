@@ -1,6 +1,6 @@
 require 'mailjet'
 require 'mailgun-ruby'
-require 'honeybadger/ruby'
+
 require_relative './shared_constants/mailjet_constants'
 
 module MailJet

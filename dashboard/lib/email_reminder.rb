@@ -1,5 +1,4 @@
 require 'stringio'
-require 'cdo/aws/metrics'
 require 'cdo/chat_client'
 require 'policies/child_account'
 

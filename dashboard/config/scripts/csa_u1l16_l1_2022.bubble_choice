@@ -1,9 +1,0 @@
-name 'CSA U1L16-L1_2022'
-display_name 'Asphalt Art Project'
-description 'Choose the grid for your Asphalt Art Project.'
-
-sublevels
-level 'CSA U1L16-L1a_2022'
-level 'CSA U1L16-L1b_2022'
-level 'CSA U1L16-L1c_2022'
-level 'CSA U1L16-L1d_2022'

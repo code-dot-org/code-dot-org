@@ -8,7 +8,6 @@ const PageAction = makeEnum(
   'RunButtonClick',
   'StartWebRequest',
   'StaticResourceFetchError',
-  'PegasusSectionsRedirect',
   'DancePartyOnInit',
   'BrambleError',
   'BrambleFilesystemResetSuccess',

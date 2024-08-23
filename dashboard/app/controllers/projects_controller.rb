@@ -1,5 +1,5 @@
 require 'active_support/core_ext/hash/indifferent_access'
-require 'cdo/firehose'
+
 
 class ProjectsController < ApplicationController
   before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config, :weblab_footer, :get_or_create_for_level, :can_publish_age_status]

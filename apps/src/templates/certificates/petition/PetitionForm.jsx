@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React, {useState, useCallback} from 'react';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
 
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {marketing} from '@cdo/apps/lib/util/urlHelpers';
 import ControlledFieldGroup from '@cdo/apps/templates/certificates/petition/ControlledFieldGroup';
 import {
   keyValidation,
@@ -65,7 +65,7 @@ const PetitionForm = ({tutorial}) => {
 
   const sendDataToEndpoint = data => {
     const handleSuccessfulSubmit = () => {
-      window.location.href = pegasus('/promote/thanks');
+      window.location.href = marketing('/promote/thanks');
     };
     const handleFailedSubmit = () => {
       setErrorMessage(i18n.formServerError());
@@ -121,7 +121,7 @@ const PetitionForm = ({tutorial}) => {
           placeholderOrLabel={i18n.age()}
           isErrored={invalidFields.includes('age_i')}
           helpText={
-            <a href={pegasus('/privacy')}>
+            <a href={marketing('/privacy')}>
               {i18n.privacyPracticesForChildren()}
             </a>
           }

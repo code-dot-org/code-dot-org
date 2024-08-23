@@ -1,8 +1,0 @@
-name 'U4_L07_Conditionals Practice_Level 5_2024'
-display_name 'Conditionals Practice, Milestone 4'
-description 'Continue working through the development sequence with the app that you chose in the previous level. There is a sequence of four total levels associated with this Practice activity. If you want to change apps, please start back at level 1 in order to follow the development sequence.'
-
-sublevels
-level 'CSP Conditionals Practice MindEase L4'
-level 'CSP Conditionals Practice VeloCity Ride L4'
-level 'CSP Conditionals Practice Tix Finder L4'

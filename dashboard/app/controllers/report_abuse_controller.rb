@@ -10,12 +10,6 @@ class ZendeskError < StandardError
     @error_details = error_details
     super("Zendesk failed with response code: #{code}")
   end
-
-  def to_honeybadger_context
-    {
-      details: JSON.parse(@error_details)
-    }
-  end
 end
 
 class ReportAbuseController < ApplicationController

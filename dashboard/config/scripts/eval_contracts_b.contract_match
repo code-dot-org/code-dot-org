@@ -1,5 +1,0 @@
-name 'Eval Contracts B'
-title 'Star Contract'
-content1 'Write a contract for the star function'
-content2 'Eval Contracts A.solution_blocks, 300'
-answer 'star|Image|Number|String|String'

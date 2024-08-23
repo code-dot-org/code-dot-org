@@ -1,5 +1,0 @@
-{
-  "key": "nobel-prize-winners",
-  "name": "Nobel Prize Winners 1901-2016",
-  "content": "Description: data about all Nobel Prize winners, 1901-2016.\r\n\r\nSource: [Data.world](https://data.world/sya/nobel-prize-winners)\r\n\r\nColumns:\r\n\r\n* First name (string): first name of the recipient\r\n* Last name (string): last name of the recipient\r\n* Date of birth (date): what calendar month / day / year that winner was born on\r\n* Country of birth (string): what city that recipient was born in\r\n* City of birth (string): what city that recipient was born in\r\n* Year of award (number): what year that person had won the Nobel Prize\r\n* Category (string): the prize winner's field of study, such as economics or medicine\r\n* Motivation (string): reason for their winning of the Nobel Prize.\r\n\r\n\r\n\r\n"
-}

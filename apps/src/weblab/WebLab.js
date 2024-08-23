@@ -17,7 +17,7 @@ import {getCurrentId} from '../code-studio/initApp/project';
 import consoleApi from '../consoleApi';
 import {TestResults} from '../constants';
 import dom from '../dom';
-import firehoseClient from '../lib/util/firehose';
+import harness from '../lib/util/harness';
 import logToCloud from '../logToCloud';
 import {getStore} from '../redux';
 import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
@@ -125,7 +125,7 @@ WebLab.prototype.init = function (config) {
       filesApi.deleteAll(
         xhr => {
           this.fileEntries = null;
-          firehoseClient.putRecord(
+          harness.trackAnalytics(
             {
               study: 'weblab_loading_investigation',
               study_group: 'empty_manifest',
@@ -523,7 +523,7 @@ WebLab.prototype.onFilesReady = function (files, filesVersionId) {
   // Gather information when the weblab manifest is empty but should
   // contain references to files (i.e. after changes have been made to the project)
   if (filesVersionId && files && files.length === 0) {
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'weblab_loading_investigation',
         study_group: 'empty_manifest',
@@ -672,7 +672,7 @@ WebLab.prototype.addPageAction = function (...args) {
 
 // Some temporary logging to diagnose possible loading issues.
 WebLab.prototype.tempLog = function (event, data = null) {
-  firehoseClient.putRecord(
+  harness.trackAnalytics(
     {
       study: 'weblab_loading_investigation_2022',
       event: event,

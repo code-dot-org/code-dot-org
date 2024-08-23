@@ -407,11 +407,11 @@ export function stubWindowDashboard(value) {
 }
 
 /**
- * Call in the `describe` block for a group of tests to stub the value of window.pegasus safely.
- * @param {object} value - The temporary value for window.pegasus
+ * Call in the `describe` block for a group of tests to stub the value of window.marketing safely.
+ * @param {object} value - The temporary value for window.marketing
  * @example
  *   describe('example', () => {
- *     stubWindowPegasus({
+ *     stubWindowMarketing({
  *       STUDIO_URL: '//test-studio.code.org'
  *     });
  *
@@ -420,9 +420,9 @@ export function stubWindowDashboard(value) {
  *     });
  *   });
  */
-export function stubWindowPegasus(value) {
-  let originalPegasus;
-  beforeAll(() => (originalPegasus = window.pegasus));
-  afterAll(() => (window.pegasus = originalPegasus));
-  beforeEach(() => (window.pegasus = value));
+export function stubWindowMarketing(value) {
+  let originalMarketing;
+  beforeAll(() => (originalMarketing = window.marketing));
+  afterAll(() => (window.marketing = originalMarketing));
+  beforeEach(() => (window.marketing = value));
 }

@@ -1,9 +1,0 @@
-{
-  "key": "using-a-for-loop-1D-array",
-  "course_version_key": "2023",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "one-dimensional-arrays",
-  "display_name": "Using a for Loop to Traverse a 1D Array",
-  "content": "We can use a `for`(#e7e8ea) loop to traverse a 1D array.\n- We use a variable called `index`(#e7e8ea) to keep track of our current position. It is initialized to 0 to start at the first element.\n- The condition for the `for`(#e7e8ea) loop checks if the current value assigned to `index`(#e7e8ea) is less than the length of the 1D array. It will repeat as long as the condition is `true`(#e7e8ea).\n- We can then use the current value assigned to `index`(#e7e8ea) to access the element at that position in the 1D array.\n- To move to the next element, we add 1 to the `index`(#e7e8ea) variable.\n\n```\nint[] numbers = {1, 2, 3, 4, 5, 6};\n\nfor(int index = 0; index < numbers.length; index++) {\n   System.out.println(numbers[index]);\n}\n```",
-  "position": 2
-}

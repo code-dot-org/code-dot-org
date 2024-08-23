@@ -20,7 +20,6 @@ import {
   showProjectHeader,
   showMinimalProjectHeader,
   showProjectBackedHeader,
-  showLevelBuilderSaveButton,
 } from './headerRedux';
 import progress from './progress';
 import {setCurrentLevelId} from './progressRedux';
@@ -234,20 +233,6 @@ setUpGlobalData(getStore());
 header.showMinimalProjectHeader = function () {
   getStore().dispatch(refreshProjectName());
   getStore().dispatch(showMinimalProjectHeader());
-};
-
-header.showLevelBuilderSaveButton = function (
-  getChanges,
-  overrideHeaderText,
-  overrideOnSaveURL
-) {
-  getStore().dispatch(
-    showLevelBuilderSaveButton(
-      getChanges,
-      overrideHeaderText,
-      overrideOnSaveURL
-    )
-  );
 };
 
 /**

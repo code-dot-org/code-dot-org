@@ -2,7 +2,7 @@
 
 import {EventEmitter} from 'events'; // provided by webpack's node-libs-browser
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import {MAKER_TOOLKIT} from '@cdo/apps/maker/util/makerConstants';
 
 import {delayPromise} from '../../util/boardUtils';
@@ -95,7 +95,7 @@ export default class MicroBitBoard extends EventEmitter {
         } else {
           if (this.boardClient_.firmwareVersion === '') {
             // Log if we were not able to determine the firmware version in time.
-            firehoseClient.putRecord({
+            harness.trackAnalytics({
               study: MAKER_TOOLKIT,
               study_group: MICROBIT,
               event: FIRMWARE_VERSION_TIMEOUT,

@@ -10,56 +10,27 @@ class ApplicationHelperTest < ActionView::TestCase
 
   test "canonical_hostname in test" do
     assert_equal 'test-studio.code.org', CDO.canonical_hostname('studio.code.org')
-    assert_equal 'test.code.org', CDO.canonical_hostname('code.org')
   end
 
   test "canonical_hostname in prod" do
     set_env :production
     assert_equal 'studio.code.org', CDO.canonical_hostname('studio.code.org')
-    assert_equal 'code.org', CDO.canonical_hostname('code.org')
   end
 
   test "canonical_hostname in staging" do
     set_env :staging
     assert_equal 'staging-studio.code.org', CDO.canonical_hostname('studio.code.org')
-    assert_equal 'staging.code.org', CDO.canonical_hostname('code.org')
   end
 
   test "canonical_hostname in CI" do
     set_env :test
     CDO.stubs(:ci_webserver?).returns(true)
-    assert_equal 'localhost-studio.code.org', CDO.canonical_hostname('studio.code.org')
-    assert_equal 'localhost.code.org', CDO.canonical_hostname('code.org')
+    assert_equal 'localhost', CDO.canonical_hostname('studio.code.org')
   end
 
   test "canonical_hostname in development" do
     set_env :development
-    assert_equal 'localhost-studio.code.org', CDO.canonical_hostname('studio.code.org')
-    assert_equal 'localhost.code.org', CDO.canonical_hostname('code.org')
-  end
-
-  test "code_org_root_path in test" do
-    assert_equal '//test.code.org', code_org_root_path
-  end
-
-  test "code_org_root_path in prod" do
-    set_env :production
-    assert_equal '//code.org', code_org_root_path
-  end
-
-  test "code_org_root_path in staging" do
-    set_env :staging
-    assert_equal '//staging.code.org', code_org_root_path
-  end
-
-  test "code_org_root_path in development" do
-    set_env :development
-    assert_equal "//localhost.code.org:#{CDO.pegasus_port}", code_org_root_path
-  end
-
-  test "code_org_url" do
-    assert_equal '//test.code.org/about/team', CDO.code_org_url('/about/team')
-    assert_equal '//test.code.org/about/team', CDO.code_org_url('about/team')
+    assert_equal 'localhost', CDO.canonical_hostname('studio.code.org')
   end
 
   test "windows phone 8.1 supported" do

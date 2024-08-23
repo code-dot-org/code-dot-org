@@ -1,8 +1,6 @@
 # Configuration defaults for development environment.
 <%= clear_secrets %>
 
-dashboard_enable_pegasus: true
-
 db_cluster_id: localhost
 db_endpoint_writer: localhost
 db_endpoint_proxy_writer: localhost
@@ -27,8 +25,6 @@ disable_s3_image_uploads: true
 chef_local_mode: true
 
 devinternal_db_writer: !Secret
-dashboard_honeybadger_api_key: '00000000'
-pegasus_honeybadger_api_key:   '00000000'
 google_safe_browsing_key: fake_api_key
 pusher_app_id:             fake_app_id
 pusher_application_key:    fake_application_key
@@ -51,12 +47,6 @@ javabuilder_private_key: !Secret
 javabuilder_key_password: !Secret
 
 pardot_private_key: !Secret
-
-redshift_host: !Secret
-redshift_password: !Secret
-redshift_username: !Secret
-
-slack_bot_token: !Secret
 
 # JSON Web Key Set and private key data, configured in locals.yml
 jwks_data:

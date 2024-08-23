@@ -81,7 +81,7 @@ global.TextEncoder = TextEncoder;
 global.TextDecoder = TextDecoder;
 global.PISKEL_DEVELOPMENT_MODE = 'false';
 
-jest.mock('@cdo/apps/lib/util/firehose', () => ({
+jest.mock('@cdo/apps/lib/util/harness', () => ({
   putRecord: jest.fn(),
 }));
 // Mock out toImage as it produces a live image relying on browser callbacks to properly instantiate

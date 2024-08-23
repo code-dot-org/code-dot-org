@@ -1,7 +1,7 @@
-import firehoseClient from '../../lib/util/firehose';
+import harness from '../../lib/util/harness';
 
 export function recordImpression(study_group) {
-  firehoseClient.putRecord({
+  harness.trackAnalytics({
     study: 'teacher_dashboard_actions',
     study_group: study_group,
     event: 'load_feature',

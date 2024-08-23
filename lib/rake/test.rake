@@ -6,8 +6,6 @@ require 'cdo/rake_utils'
 require 'cdo/git_utils'
 require 'cdo/lighthouse'
 require 'parallel'
-require 'aws-sdk-s3'
-require 'cdo/mysql_console_helper'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
 include TimedTaskWithLogging
 
@@ -103,7 +101,6 @@ namespace :test do
       ChatClient.wrap('dashboard ruby unit tests') do
         ENV['DISABLE_SPRING'] = '1'
         ENV['UNIT_TEST'] = '1'
-        ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
         ENV['PARALLEL_TEST_FIRST_IS_1'] = '1'
         # Parallel tests don't seem to run more quickly over 16 processes.
         ENV['PARALLEL_TEST_PROCESSORS'] = '16' if RakeUtils.nproc > 16
@@ -199,59 +196,36 @@ namespace :test do
         TestRunUtils.run_dashboard_tests(parallel: true)
 
         ENV.delete 'UNIT_TEST'
-        ENV.delete 'USE_PEGASUS_UNITTEST_DB'
       end
     end
   end
 
   timed_task_with_logging :dashboard_legacy_ci do
-    # isolate unit tests from the pegasus_test DB
-    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
     TestRunUtils.run_dashboard_legacy_tests
     ENV.delete 'TEST_ENV_NUMBER'
-    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
   timed_task_with_logging :shared_ci do
-    # isolate unit tests from the pegasus_test DB
-    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
     TestRunUtils.run_shared_tests
     ENV.delete 'TEST_ENV_NUMBER'
-    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
-  end
-
-  timed_task_with_logging :pegasus_ci do
-    # isolate unit tests from the pegasus_test DB
-    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
-    ENV['TEST_ENV_NUMBER'] = '1'
-    TestRunUtils.run_pegasus_tests
-    ENV.delete 'TEST_ENV_NUMBER'
-    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
   timed_task_with_logging :lib_ci do
-    # isolate unit tests from the pegasus_test DB
-    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
     TestRunUtils.run_lib_tests
     ENV.delete 'TEST_ENV_NUMBER'
-    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
   timed_task_with_logging :bin_ci do
-    # isolate unit tests from the pegasus_test DB
-    ENV['USE_PEGASUS_UNITTEST_DB'] = '1'
     ENV['TEST_ENV_NUMBER'] = '1'
     TestRunUtils.run_bin_tests
     ENV.delete 'TEST_ENV_NUMBER'
-    ENV.delete 'USE_PEGASUS_UNITTEST_DB'
   end
 
   timed_task_with_logging ci: [
     :shared_ci,
-    :pegasus_ci,
     :dashboard_ci,
     :dashboard_legacy_ci,
     :lib_ci,
@@ -267,11 +241,6 @@ namespace :test do
   desc 'Runs dashboard legacy tests.'
   timed_task_with_logging :dashboard_legacy do
     TestRunUtils.run_dashboard_legacy_tests
-  end
-
-  desc 'Runs pegasus tests.'
-  timed_task_with_logging :pegasus do
-    TestRunUtils.run_pegasus_tests
   end
 
   desc 'Runs shared tests.'
@@ -347,24 +316,6 @@ namespace :test do
       end
     end
 
-    desc 'Runs pegasus tests if pegasus might have changed from staging.'
-    timed_task_with_logging :pegasus do
-      run_tests_if_changed(
-        'pegasus',
-        [
-          'Gemfile',
-          'Gemfile.lock',
-          'deployment.rb',
-          'pegasus/**/*',
-          'lib/**/*',
-          'shared/**/*',
-          'dashboard/db/schema.rb'
-        ]
-      ) do
-        TestRunUtils.run_pegasus_tests
-      end
-    end
-
     desc 'Runs shared tests if shared might have changed from staging.'
     timed_task_with_logging :shared do
       run_tests_if_changed(
@@ -409,7 +360,6 @@ namespace :test do
                  # :interpreter,
                  :dashboard,
                  :dashboard_legacy,
-                 :pegasus,
                  :shared,
                  :lib,
                  :bin]
@@ -421,7 +371,7 @@ namespace :test do
 
   timed_task_with_logging changed: ['changed:all']
 
-  timed_task_with_logging all: [:apps, :dashboard, :dashboard_legacy, :pegasus, :shared, :lib, :bin]
+  timed_task_with_logging all: [:apps, :dashboard, :dashboard_legacy, :shared, :lib, :bin]
 end
 timed_task_with_logging test: ['test:changed']
 

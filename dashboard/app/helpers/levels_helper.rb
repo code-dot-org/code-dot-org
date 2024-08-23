@@ -3,7 +3,7 @@ require 'cdo/redcarpet/inline'
 require 'digest/sha1'
 require 'dynamic_config/gatekeeper'
 require 'image_size'
-require 'cdo/firehose'
+
 require 'cdo/languages'
 require 'net/http'
 require 'uri'

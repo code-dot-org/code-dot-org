@@ -38,12 +38,6 @@ https://github.com/code-dot-org/code-dot-org/blob/929fb8fffe8c70817630627df5766b
 
 Care was taken to [unit test](https://github.com/code-dot-org/code-dot-org/blob/staging/apps/test/unit/tutorialExplorer/TutorialExplorerTest.js) this functionality.
 
-## Spreadsheet
-
-The page's [source HTML](https://github.com/code-dot-org/code-dot-org/blob/929fb8fffe8c70817630627df5766bf2c706d9fc/pegasus/sites.v3/code.org/public/learn/index.haml#L120-L133) [initializes](https://github.com/code-dot-org/code-dot-org/blob/929fb8fffe8c70817630627df5766bf2c706d9fc/pegasus/sites.v3/code.org/public/learn/index.haml#L140-L149) the **Tutorial Explorer** in JavaScript with a parameter containing all of the tutorial metadata.  That page is rendered by [Pegasus](https://github.com/code-dot-org/code-dot-org/tree/929fb8fffe8c70817630627df5766bf2c706d9fc/pegasus), and the tutorial metadata comes from an in-house gsheet which is used to generate [cdo-tutorials.csv](https://github.com/code-dot-org/code-dot-org/blob/929fb8fffe8c70817630627df5766bf2c706d9fc/pegasus/data/cdo-tutorials.csv) which is ingested daily into our source tree and used to seed the Pegasus database in each environment, alongside a variety of other gsheets' data.
-
-Management of the source gsheet is a significant task in itself, and the sheet has some internal complexity so that it can generate the appropriate values for the variety of `displayweight_*` and `popularityrank_*` columns (which correspond to "Recommended" vs. "Most popular" in the UI).
-
 ## Components
 
 Each React component is in its own file with a brief comment at the top describing its use.
@@ -63,14 +57,6 @@ Here are some notable components, and their hierarchy:
   		- `TutorialDetail`: a popup with information about a tutorial
   	- `ToggleAllTutorialsButton`: a button to toggle showing all tutorials, for non-English users
 
-
-## Variables
-
-Three [DCDO](https://github.com/code-dot-org/code-dot-org/blob/929fb8fffe8c70817630627df5766bf2c706d9fc/lib/dynamic_config/dcdo.rb) [variables](https://github.com/code-dot-org/code-dot-org/blob/929fb8fffe8c70817630627df5766bf2c706d9fc/pegasus/sites.v3/code.org/public/learn/index.haml#L145-L147) can be used to vary the behaviour of the **Tutorial Explorer** without requiring a deploy to the site:
-
-- `learn_show_sort_dropdown`: Whether the "Sort by" dropdown should be shown at all.  Defaults to `true`.
-- `learn_hide_tutorials`: An array of tutorial "short codes" that should be hidden.  Useful if a tutorial suddenly becomes unavailable, say due to a server issue.  Defaults to `[]`.
-- `defaultSortByPopularity`: Whether the "Sort by" option defaults to sorting by "Most popular", rather than "Recommended".  The default here actually varies by site and current `hoc_mode`, with the logic captured [here](https://github.com/code-dot-org/code-dot-org/blob/929fb8fffe8c70817630627df5766bf2c706d9fc/pegasus/src/database.rb#L86-L88).
 
 ## Analytics
 

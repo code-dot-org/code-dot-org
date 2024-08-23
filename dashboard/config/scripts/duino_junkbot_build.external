@@ -1,9 +1,0 @@
-name 'duino junkbot build'
-title 'duino junkbot build'
-markdown <<MARKDOWN
-### Welcome to the Junk Bot
-
-The JunkBot is a super simple two wheeled robot that you can build with stuff lying around the house. Instead of traditional motors, the JunkBot is driven by two continuous rotation servos, which lets you control each wheel with just one pin. Using found materials, wire up the junkbot ciruit and build a chassis and wheels for it. The distance sensor should sit somewhere on the front of the bot facing forward.
-
-<iframe frameborder='0' style="width: 100%; height: 450px;" marginheight='0' marginwidth='0' scrolling='no' src='https://123d.circuits.io/circuits/1238496/embed#breadboard'></iframe>
-MARKDOWN

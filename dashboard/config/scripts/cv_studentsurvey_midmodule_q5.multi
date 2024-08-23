@@ -1,8 +1,0 @@
-name 'cv-studentsurvey-midmodule-q5'
-question 'How often have you sought out additional information or resources beyond what\'s provided in the unit?'
-right 'Very often'
-right 'Often'
-right 'Sometimes'
-right 'Rarely'
-right 'Never'
-allow_multiple_attempts true

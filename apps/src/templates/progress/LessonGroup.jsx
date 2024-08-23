@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
 import LessonGroupInfo from '@cdo/apps/templates/progress/LessonGroupInfo';
 import LessonGroupInfoDialog from '@cdo/apps/templates/progress/LessonGroupInfoDialog';
@@ -52,7 +52,7 @@ class LessonGroup extends React.Component {
       collapsed: !this.state.collapsed,
       lessonGroupInfoDialogOpen: true,
     });
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'unit_overview_page',
         study_group: 'lesson_group',

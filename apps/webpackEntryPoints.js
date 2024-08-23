@@ -102,7 +102,6 @@ const CODE_STUDIO_ENTRIES = {
   'maker/setup': './src/sites/studio/pages/maker/setup.js',
   'projects/featured': './src/sites/studio/pages/projects/featured.js',
   'projects/index': './src/sites/studio/pages/projects/index.js',
-  'regional_partners/regional_partner_search': './src/sites/studio/pages/regional_partners/regional_partner_search.js',
   'report_abuse/report_abuse_form': './src/sites/studio/pages/report_abuse/report_abuse_form.js',
   'reference_guides/show': './src/sites/studio/pages/reference_guides/show.js',
   'scripts/show': './src/sites/studio/pages/scripts/show.js',
@@ -116,25 +115,16 @@ const CODE_STUDIO_ENTRIES = {
   'teacher_dashboard/show': './src/sites/studio/pages/teacher_dashboard/show.js',
   'teacher_dashboard/parent_letter': './src/sites/studio/pages/teacher_dashboard/parent_letter.js',
   'teacher_feedbacks/index': './src/sites/studio/pages/teacher_feedbacks/index.js',
-  'vocabularies/edit': './src/sites/studio/pages/vocabularies/edit.js',
   'weblab_host/network_check': './src/sites/studio/pages/weblab_host/network_check.js',
 };
 
 // prettier-ignore
 const INTERNAL_ENTRIES = {
   'ai_tutor/tester': './src/sites/studio/pages/ai_tutor/tester.js',
-  'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
   'blocks/index': './src/sites/studio/pages/blocks/index.js',
-  'course_offerings/edit': './src/sites/studio/pages/course_offerings/edit.js',
-  'courses/edit': './src/sites/studio/pages/courses/edit.js',
-  'courses/new': './src/sites/studio/pages/courses/new.js',
-  'data_docs/new': './src/sites/studio/pages/data_docs/new.js',
-  'data_docs/edit': './src/sites/studio/pages/data_docs/edit.js',
-  'data_docs/edit_all': './src/sites/studio/pages/data_docs/edit_all.js',
   'datasets/show': './src/sites/studio/pages/datasets/show.js',
   'datasets/index': './src/sites/studio/pages/datasets/index.js',
   'datasets/edit_manifest': './src/sites/studio/pages/datasets/edit_manifest.js',
-  'lessons/edit': './src/sites/studio/pages/lessons/edit.js',
   'levelbuilder': './src/sites/studio/pages/levelbuilder.js',
   'levels/editors/_applab': './src/sites/studio/pages/levels/editors/_applab.js',
   'levels/editors/_craft': './src/sites/studio/pages/levels/editors/_craft.js',
@@ -159,24 +149,9 @@ const INTERNAL_ENTRIES = {
   'levels/editors/_pixelation': './src/sites/studio/pages/levels/editors/_pixelation.js',
   'levels/editors/_studio': './src/sites/studio/pages/levels/editors/_studio.js',
   'libraries/edit': './src/sites/studio/pages/libraries/edit.js',
-  'programming_classes/new': './src/sites/studio/pages/programming_classes/new.js',
-  'programming_classes/edit': './src/sites/studio/pages/programming_classes/edit.js',
-  'programming_environments/new': './src/sites/studio/pages/programming_environments/new.js',
-  'programming_environments/edit': './src/sites/studio/pages/programming_environments/edit.js',
-  'programming_expressions/new': './src/sites/studio/pages/programming_expressions/new.js',
-  'programming_expressions/edit': './src/sites/studio/pages/programming_expressions/edit.js',
-  'programming_methods/edit': './src/sites/studio/pages/programming_methods/edit.js',
-  'reference_guides/new': './src/sites/studio/pages/reference_guides/new.js',
-  'reference_guides/edit': './src/sites/studio/pages/reference_guides/edit.js',
-  'reference_guides/edit_all': './src/sites/studio/pages/reference_guides/edit_all.js',
   'programming_expressions/index': './src/sites/studio/pages/programming_expressions/index.js',
-  'images/new': './src/sites/studio/pages/images/new.js',
-  'rubrics/new': './src/sites/studio/pages/rubrics/new.js',
-  'rubrics/edit': './src/sites/studio/pages/rubrics/edit.js',
   'sections/new': './src/sites/studio/pages/sections/new.js',
   'sections/edit': './src/sites/studio/pages/sections/edit.js',
-  'scripts/edit': './src/sites/studio/pages/scripts/edit.js',
-  'scripts/new': './src/sites/studio/pages/scripts/new.js',
   'shared/_check_admin': './src/sites/studio/pages/shared/_check_admin.js',
   'shared_blockly_functions/edit': './src/sites/studio/pages/shared_blockly_functions/edit.js',
   'sprite_management/sprite_upload': './src/sites/studio/pages/sprite_management/sprite_upload.js',
@@ -187,81 +162,10 @@ const INTERNAL_ENTRIES = {
 };
 
 // prettier-ignore
-const PEGASUS_ENTRIES = {
-  // code.org
-  'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
-  'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
-  'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
-  'code.org/public/yourschool/thankyou': './src/sites/code.org/pages/public/yourschool/thankyou.js',
-  'code.org/views/admins_email_signup_form': './src/sites/code.org/pages/views/admins_email_signup_form.js',
-  'code.org/views/share_privacy': './src/sites/code.org/pages/views/share_privacy.js',
-  'code.org/views/theme_common_head_after': './src/sites/code.org/pages/views/theme_common_head_after.js',
-  'code.org/views/theme_google_analytics': './src/sites/code.org/pages/views/theme_google_analytics.js',
-  'code.org/views/workshop_search': './src/sites/code.org/pages/views/workshop_search.js',
-  'code.org/views/amazon_future_engineer': './src/sites/code.org/pages/views/amazon_future_engineer.js',
-  'code.org/views/amazon_future_engineer_eligibility': './src/sites/code.org/pages/views/amazon_future_engineer_eligibility.js',
-  'code.org/views/job_board': './src/sites/code.org/pages/views/job_board.js',
-  'code.org/views/analytics_event_log_helper': './src/sites/code.org/pages/views/analytics_event_log_helper.js',
-  'code.org/views/swiper': './src/sites/code.org/pages/views/swiper.js',
-  'code.org/views/swiper_page_csd': './src/sites/code.org/pages/views/swiper_page_csd.js',
-  'code.org/views/swiper_page_self_paced_pl': './src/sites/code.org/pages/views/swiper_page_self_paced_pl.js',
-  'code.org/views/swiper_page_ai': './src/sites/code.org/pages/views/swiper_page_ai.js',
-  'code.org/views/swiper_page_applab': './src/sites/code.org/pages/views/swiper_page_applab.js',
-  'code.org/views/swiper_page_videos': './src/sites/code.org/pages/views/swiper_page_videos.js',
-  'code.org/views/swiper_page_minecraft': './src/sites/code.org/pages/views/swiper_page_minecraft.js',
-  'code.org/views/swiper_page_music_lab': './src/sites/code.org/pages/views/swiper_page_music_lab.js',
-  'code.org/views/swiper_page_promote': './src/sites/code.org/pages/views/swiper_page_promote.js',
-  'code.org/views/tabs_section': './src/sites/code.org/pages/views/tabs_section.js',
-  'code.org/views/classy_embed_form': './src/sites/code.org/pages/views/classy_embed_form.js',
-  'code.org/public/poetry': './src/sites/code.org/pages/public/poetry.js',
-
-  // hourofcode.com
-  'hourofcode.com/public/events/index': './src/sites/hourofcode.com/pages/public/events/index.js',
-  'hourofcode.com/views/theme_common_head_after': './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
-  'hourofcode.com/views/hoc_events_map': './src/sites/hourofcode.com/pages/views/hoc_events_map.js',
-  'hourofcode.com/views/theme_google_analytics': './src/sites/hourofcode.com/pages/views/theme_google_analytics.js',
-  'hourofcode.com/views/swiper_page_ai': './src/sites/hourofcode.com/pages/views/swiper_page_ai.js',
-  'hourofcode.com/views/swiper_page_beyond': './src/sites/hourofcode.com/pages/views/swiper_page_beyond.js',
-
-  // shared between code.org and hourofcode.com
-  'tutorialExplorer': './src/tutorialExplorer/tutorialExplorer.js',
-};
-
-// prettier-ignore
 const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
-  'pd/_jotform_loader': './src/sites/studio/pages/pd/_jotform_loader.js',
-  'pd/_jotform_embed': './src/sites/studio/pages/pd/_jotform_embed.js',
-
-  'pd/workshop_dashboard/index': './src/sites/studio/pages/pd/workshop_dashboard/index.js',
-  'pd/pre_workshop_survey/new': './src/sites/studio/pages/pd/pre_workshop_survey/new.js',
-  'pd/teachercon_survey/new': './src/sites/studio/pages/pd/teachercon_survey/new.js',
-  'pd/application_dashboard/index': './src/sites/studio/pages/pd/application_dashboard/index.js',
-  'pd/application/teacher_application/new': './src/sites/studio/pages/pd/application/teacher_application/new.js',
-  'pd/application/principal_approval_application/new': './src/sites/studio/pages/pd/application/principal_approval_application/new.js',
-  'pd/workshop_daily_survey/new_general_foorm': './src/sites/studio/pages/pd/workshop_daily_survey/new_general_foorm.js',
-  'pd/workshop_enrollment/logged_out': './src/sites/studio/pages/pd/workshop_enrollment/logged_out.js',
-  'pd/workshop_enrollment/students_cannot_enroll': './src/sites/studio/pages/pd/workshop_enrollment/students_cannot_enroll.js',
-  'pd/workshop_enrollment/new': './src/sites/studio/pages/pd/workshop_enrollment/new.js',
-  'pd/workshop_enrollment/cancel': './src/sites/studio/pages/pd/workshop_enrollment/cancel.js',
-
-  'pd/professional_learning_landing/index': './src/sites/studio/pages/pd/professional_learning_landing/index.js',
-  'pd/regional_partner_mini_contact/new': './src/sites/studio/pages/pd/regional_partner_mini_contact/new.js',
-
-  'pd/international_opt_in/new': './src/sites/studio/pages/pd/international_opt_in/new.js',
-
-  'peer_reviews/dashboard': './src/sites/studio/pages/peer_reviews/dashboard.js',
-  'peer_reviews/show': './src/sites/studio/pages/peer_reviews/show.js',
-
-  'foorm/preview/index': './src/sites/studio/pages/foorm/preview/index.js',
-  'foorm/preview/name': './src/sites/studio/pages/foorm/preview/name.js',
-  'foorm/forms/editor': './src/sites/studio/pages/foorm/forms/editor.js',
-  'foorm/libraries/editor': './src/sites/studio/pages/foorm/libraries/editor.js',
-  'foorm/simple_survey_forms/show': './src/sites/studio/pages/foorm/simple_survey_forms/show.js',
-
-  'plc/user_course_enrollments/index': './src/sites/studio/pages/plc/user_course_enrollments/index.js',
 };
 
-// Entries which are shared between dashboard and pegasus, which are included
+// Entries which are included
 // by haml partials in the shared/haml/ directory.
 const SHARED_ENTRIES = {
   cookieBanner: './src/cookieBanner/cookieBanner.js',
@@ -320,7 +224,6 @@ module.exports = {
   appsEntriesFor,
   CODE_STUDIO_ENTRIES,
   INTERNAL_ENTRIES,
-  PEGASUS_ENTRIES,
   PROFESSIONAL_DEVELOPMENT_ENTRIES,
   SHARED_ENTRIES,
   OTHER_ENTRIES,

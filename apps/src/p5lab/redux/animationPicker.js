@@ -2,7 +2,7 @@
 import _ from 'lodash';
 
 import {animations as animationsApi} from '@cdo/apps/clientApi';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import {makeEnum} from '@cdo/apps/utils';
 
 import {changeInterfaceMode} from '../actions';
@@ -189,7 +189,7 @@ export function exitedUploadWarning() {
  * @returns {function}
  */
 export function handleUploadComplete(result) {
-  firehoseClient.putRecord({
+  harness.trackAnalytics({
     study: 'animation-library',
     study_group: 'control-2020',
     event: 'upload',
@@ -320,7 +320,7 @@ export function pickNewAnimation() {
  * @returns {function}
  */
 export function pickLibraryAnimation(animation) {
-  firehoseClient.putRecord({
+  harness.trackAnalytics({
     study: 'sprite-use',
     study_group: 'before-update-v2',
     event: 'select-sprite',

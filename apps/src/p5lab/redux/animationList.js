@@ -16,7 +16,7 @@ import {
   blobToDataURI,
   dataURIToSourceSize,
 } from '@cdo/apps/imageUtils';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import trackEvent from '@cdo/apps/util/trackEvent';
 import {createUuid} from '@cdo/apps/utils';
 
@@ -740,7 +740,7 @@ function loadAnimationFromSource(key, callback) {
         // it looks like it's already gone from the server.
 
         // Log data about when this scenario occurs
-        firehoseClient.putRecord(
+        harness.trackAnalytics(
           {
             study: 'animation_no_load',
             study_group: 'animation_no_load_v4',

@@ -3,7 +3,7 @@ import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import {UnconnectedLevelDetailsDialog as LevelDetailsDialog} from '@cdo/apps/templates/lessonOverview/activities/LevelDetailsDialog';
 import * as utils from '@cdo/apps/utils';
 
@@ -62,12 +62,12 @@ describe('LevelDetailsDialogTest', () => {
     );
     const levelLink = wrapper.find('Button').at(1);
     levelLink.simulate('click', {preventDefault: () => {}});
-    expect(firehoseClient.putRecord).to.have.been.calledOnce;
-    firehoseClient.putRecord.yieldTo('callback');
+    expect(harness.trackAnalytics).to.have.been.calledOnce;
+    harness.trackAnalytics.yieldTo('callback');
     expect(utils.windowOpen).to.have.been.calledWith('level.url?no_redirect=1');
 
     utils.windowOpen.restore();
-    firehoseClient.putRecord.restore();
+    harness.trackAnalytics.restore();
   });
 
   it('can display an external markdown level', () => {

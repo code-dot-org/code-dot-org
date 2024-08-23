@@ -20,7 +20,7 @@ class AzureTextToSpeechTest < ActionController::TestCase
     stub_request(:post, "https://#{@region}.api.cognitive.microsoft.com/sts/v1.0/issueToken").
       with(headers: {'Ocp-Apim-Subscription-Key' => @api_key}).
       to_return(status: 200, body: @mock_token)
-    Honeybadger.expects(:notify).never
+    Harness.expects(:error_notify).never
 
     assert_equal @mock_token, AzureTextToSpeech.get_token
   end
@@ -45,7 +45,7 @@ class AzureTextToSpeechTest < ActionController::TestCase
     stub_request(:post, "https://#{@region}.api.cognitive.microsoft.com/sts/v1.0/issueToken").
       with(headers: {'Ocp-Apim-Subscription-Key' => @api_key}).
       to_raise(ArgumentError)
-    Honeybadger.expects(:notify).once
+    Harness.expects(:error_notify).once
 
     assert_nil AzureTextToSpeech.get_token
   end
@@ -58,7 +58,7 @@ class AzureTextToSpeechTest < ActionController::TestCase
     stub_request(:post, "https://#{@region}.tts.speech.microsoft.com/cognitiveservices/v1").
       with(headers: {'Authorization' => "Bearer #{@mock_token}"}).
       to_return(status: 200, body: expected_speech)
-    Honeybadger.expects(:notify).never
+    Harness.expects(:error_notify).never
 
     actual_speech = nil
     AzureTextToSpeech.throttled_get_speech('hi', 'female', 'en-US', '123', 1, 1) {|speech| actual_speech = speech}
@@ -72,7 +72,7 @@ class AzureTextToSpeechTest < ActionController::TestCase
     Cdo::Throttle.expects(:throttle).once.with("azure_tts/" + id, limit, period).returns(true)
     AzureTextToSpeech.expects(:get_token).never
     AzureTextToSpeech.expects(:ssml).never
-    Honeybadger.expects(:notify).never
+    Harness.expects(:error_notify).never
 
     AzureTextToSpeech.throttled_get_speech('hi', 'female', 'en-US', id, limit, period) {raise 'Error: Block unexpectedly executed.'}
     assert_requested :post, "https://#{@region}.tts.speech.microsoft.com/cognitiveservices/v1", times: 0
@@ -81,7 +81,7 @@ class AzureTextToSpeechTest < ActionController::TestCase
   test 'throttled_get_speech: yields nil if token is nil' do
     Cdo::Throttle.expects(:throttle).once.returns(false)
     AzureTextToSpeech.expects(:get_token).once.returns(nil)
-    Honeybadger.expects(:notify).never
+    Harness.expects(:error_notify).never
 
     actual_speech = 'should-get-set-to-nil'
     AzureTextToSpeech.throttled_get_speech('hi', 'female', 'en-US', '123', 1, 1) {|speech| actual_speech = speech}
@@ -95,7 +95,7 @@ class AzureTextToSpeechTest < ActionController::TestCase
     AzureTextToSpeech.expects(:ssml).once.returns('<speak>hi</speak>')
     stub_request(:post, "https://#{@region}.tts.speech.microsoft.com/cognitiveservices/v1").
       to_raise(ArgumentError)
-    Honeybadger.expects(:notify).once
+    Harness.expects(:error_notify).once
 
     actual_speech = 'should-get-set-to-nil'
     AzureTextToSpeech.throttled_get_speech('hi', 'female', 'en-US', '123', 1, 1) {|speech| actual_speech = speech}
@@ -104,7 +104,7 @@ class AzureTextToSpeechTest < ActionController::TestCase
 
   test 'get_voices: caches and returns voices array on success' do
     AzureTextToSpeech.stubs(:get_token).returns(@mock_token)
-    Honeybadger.expects(:notify).never
+    Harness.expects(:error_notify).never
     voices_url = "https://#{@region}.tts.speech.microsoft.com/cognitiveservices/voices/list"
     mock_voice_response = [
       {'Locale' => 'en-US', 'Gender' => 'Female', 'ShortName' => 'Alice'},
@@ -124,7 +124,7 @@ class AzureTextToSpeechTest < ActionController::TestCase
 
   test 'get_voices: returns nil if voices response is empty' do
     AzureTextToSpeech.stubs(:get_token).returns(@mock_token)
-    Honeybadger.expects(:notify).never
+    Harness.expects(:error_notify).never
     voices_url = "https://#{@region}.tts.speech.microsoft.com/cognitiveservices/voices/list"
     stub_request(:get, voices_url).
       with(headers: {'Authorization' => "Bearer #{@mock_token}"}).
@@ -135,7 +135,7 @@ class AzureTextToSpeechTest < ActionController::TestCase
 
   test 'get_azure_speech_service_voices returns nil on error' do
     AzureTextToSpeech.stubs(:get_token).returns(@mock_token)
-    Honeybadger.expects(:notify).once
+    Harness.expects(:error_notify).once
     stub_request(:get, "https://#{@region}.tts.speech.microsoft.com/cognitiveservices/voices/list").
       with(headers: {'Authorization' => "Bearer #{@mock_token}"}).
       to_raise(ArgumentError)

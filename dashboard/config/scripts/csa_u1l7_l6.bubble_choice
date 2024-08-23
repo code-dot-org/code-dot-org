@@ -1,7 +1,0 @@
-name 'CSA U1L7-L6'
-display_name 'Using the ! Operator'
-description 'Help the Painter navigate The Neighborhood using the ! operator.'
-
-sublevels
-level 'CSA U1L7-L6a'
-level 'CSA U1L7-L6b'

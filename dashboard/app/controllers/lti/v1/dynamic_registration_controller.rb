@@ -20,7 +20,7 @@ module Lti
           openid_config = JSON.parse(HTTParty.get(openid_configuration_url).body)
         rescue => exception
           message = 'Error getting LMS openid_configuration'
-          Honeybadger.notify(exception, context: {message: message})
+          Harness.error_notify(exception, context: {message: message})
           return render status: :internal_server_error, json: {error: message}
         end
         # Create registration ID to pass to be used by the view as a hidden form
@@ -59,7 +59,7 @@ module Lti
         platform_name = Policies::Lti.find_platform_name_by_issuer(registration_data[:issuer])
         if platform.nil?
           message = "Unsupported issuer: #{registration_data[:issuer]}"
-          Honeybadger.notify(
+          Harness.error_notify(
             'LTI dynamic registration error',
             context: {
               message: message,
@@ -73,7 +73,7 @@ module Lti
           registration_response = dynamic_registration_client.make_registration_request
         rescue => exception
           message = 'Error creating registration'
-          Honeybadger.notify(exception, context: {message: message})
+          Harness.error_notify(exception, context: {message: message})
           return render status: :internal_server_error, json: {error: message}
         end
 

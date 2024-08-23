@@ -1,4 +1,4 @@
-import {pegasus, studio} from '@cdo/apps/lib/util/urlHelpers';
+import {marketing, studio} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 export const TeacherGradeBandCards = [
@@ -8,7 +8,7 @@ export const TeacherGradeBandCards = [
     heading: i18n.courseBlocksGradeBandsElementary(),
     description: i18n.courseBlocksGradeBandsElementaryDescription(),
     buttonText: i18n.courseBlocksGradeBandsElementaryButton(),
-    path: pegasus('/educate/curriculum/elementary-school'),
+    path: marketing('/educate/curriculum/elementary-school'),
   },
   {
     linkId: 'course-block-grade-band-middle',
@@ -16,7 +16,7 @@ export const TeacherGradeBandCards = [
     heading: i18n.courseBlocksGradeBandsMiddle(),
     description: i18n.courseBlocksGradeBandsMiddleDescription(),
     buttonText: i18n.courseBlocksGradeBandsMiddleButton(),
-    path: pegasus('/educate/curriculum/middle-school'),
+    path: marketing('/educate/curriculum/middle-school'),
   },
   {
     linkId: 'course-block-grade-band-high',
@@ -24,7 +24,7 @@ export const TeacherGradeBandCards = [
     heading: i18n.courseBlocksGradeBandsHigh(),
     description: i18n.courseBlocksGradeBandsHighDescription(),
     buttonText: i18n.courseBlocksGradeBandsHighButton(),
-    path: pegasus('/educate/curriculum/high-school'),
+    path: marketing('/educate/curriculum/high-school'),
   },
 ];
 
@@ -36,7 +36,7 @@ export const InternationalGradeBandCards = [
     description:
       i18n.courseBlocksInternationalGradeBandsElementaryDescription(),
     buttonText: i18n.courseBlocksInternationalGradeBandsElementaryButton(),
-    path: pegasus('/educate/curriculum/elementary-school'),
+    path: marketing('/educate/curriculum/elementary-school'),
   },
   {
     linkId: 'course-block-international-grade-band-10-14',
@@ -44,7 +44,7 @@ export const InternationalGradeBandCards = [
     heading: i18n.courseBlocksInternationalGradeBandsMiddle(),
     description: i18n.courseBlocksInternationalGradeBandsMiddleDescription(),
     buttonText: i18n.courseBlocksInternationalGradeBandsMiddleButton(),
-    path: pegasus('/educate/curriculum/middle-school'),
+    path: marketing('/educate/curriculum/middle-school'),
   },
   {
     linkId: 'course-block-international-grade-band-12-18',
@@ -52,7 +52,7 @@ export const InternationalGradeBandCards = [
     heading: i18n.courseBlocksInternationalGradeBandsHigh(),
     description: i18n.courseBlocksInternationalGradeBandsHighDescription(),
     buttonText: i18n.courseBlocksInternationalGradeBandsHighButton(),
-    path: pegasus('/educate/curriculum/high-school'),
+    path: marketing('/educate/curriculum/high-school'),
   },
 ];
 
@@ -61,19 +61,19 @@ export const StudentGradeBandCards = [
     heading: i18n.courseBlocksGradeBandsK5(),
     description: i18n.courseBlocksGradeBandsK5Description(),
     buttonText: i18n.courseBlocksGradeBandsK5Button(),
-    path: pegasus('/student/elementary'),
+    path: marketing('/student/elementary'),
   },
   {
     heading: i18n.courseBlocksGradeBands612(),
     description: i18n.courseBlocksGradeBands612Description(),
     buttonText: i18n.courseBlocksGradeBands612Button(),
-    path: pegasus('/student/middle-high'),
+    path: marketing('/student/middle-high'),
   },
   {
     heading: i18n.courseBlocksGradeBandsUniversity(),
     description: i18n.courseBlocksGradeBandsUniversityDescription(),
     buttonText: i18n.courseBlocksGradeBandsUniversityButton(),
-    path: pegasus('/beyond'),
+    path: marketing('/beyond'),
   },
 ];
 
@@ -82,32 +82,32 @@ export const ToolsCards = [
     heading: i18n.courseBlocksToolsAppLab(),
     description: i18n.courseBlocksToolsAppLabDescription(),
     buttonText: i18n.learnMoreApplab(),
-    path: pegasus('/applab'),
+    path: marketing('/applab'),
   },
   {
     heading: i18n.courseBlocksToolsGameLab(),
     description: i18n.courseBlocksToolsGameLabDescription(),
     buttonText: i18n.learnMoreGamelab(),
-    path: pegasus('/gamelab'),
+    path: marketing('/gamelab'),
   },
   {
     heading: i18n.courseBlocksToolsWebLab(),
     description: i18n.courseBlocksToolsWebLabDescription(),
     buttonText: i18n.learnMoreWeblab(),
-    path: pegasus('/weblab'),
+    path: marketing('/weblab'),
   },
   {
     heading: i18n.csJourneys(),
     callout: i18n.newExclame(),
     description: i18n.csJourneysDescription(),
     buttonText: i18n.learnMoreCsJourneys(),
-    path: pegasus('/csjourneys'),
+    path: marketing('/csjourneys'),
   },
   {
     heading: i18n.courseBlocksToolsVideo(),
     description: i18n.courseBlocksToolsVideoDescription(),
     buttonText: i18n.learnMoreToolsVideos(),
-    path: pegasus('/videos'),
+    path: marketing('/videos'),
   },
 ];
 
@@ -126,6 +126,6 @@ export const ToolsWidgetsCard = [
     heading: i18n.courseBlocksToolsWidgets(),
     description: i18n.courseBlocksToolsWidgetsDescription(),
     buttonText: i18n.learnMoreWidgets(),
-    path: pegasus('/widgets'),
+    path: marketing('/widgets'),
   },
 ];

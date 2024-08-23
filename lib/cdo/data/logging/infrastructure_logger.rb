@@ -1,4 +1,3 @@
-require 'cdo/aws/metrics'
 # Singleton class that keeps track of metrics owned by the infrastructure team
 # This class is design to keep all the logging centralized regardless of their destination (cloudwatch, honeybadger, etc)
 # The class can also hold common dimensions and logging information relevant to the infrastructure team
@@ -32,7 +31,7 @@ module Infrastructure
       begin
         flush!
       rescue => exception
-        Honeybadger.notify(
+        Harness.error_notify(
           exception,
           error_message: "Failed to log rake task information in cloudwatch",
           )

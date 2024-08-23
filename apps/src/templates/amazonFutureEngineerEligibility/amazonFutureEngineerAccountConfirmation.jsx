@@ -3,10 +3,10 @@ import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imp
 
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {studio, pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {studio, marketing} from '@cdo/apps/lib/util/urlHelpers';
 import color from '@cdo/apps/util/color';
 
-const RETURN_TO = `user_return_to=${pegasus('/afe')}`;
+const RETURN_TO = `user_return_to=${marketing('/afe')}`;
 const SIGN_UP_URL = studio(
   `/users/sign_up?user[user_type]=teacher&${RETURN_TO}`
 );

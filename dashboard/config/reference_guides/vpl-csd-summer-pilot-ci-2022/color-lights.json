@@ -1,9 +1,0 @@
-{
-  "key": "color-lights",
-  "course_version_key": "2022",
-  "course_offering_key": "vpl-csd-summer-pilot-ci",
-  "parent_reference_guide_key": "maker-toolkit",
-  "display_name": "Color Lights",
-  "content": "<img src=\"//curriculum.code.org/images/circuitplayground/cp_colorleds.png\" style=\"float: right; width: 400px; margin-left: 25px;\">\n\nAround the the edge of your board, you notice that there are ten additional LEDs. These LEDs are a bit different than those we've seen before; these are multi-color LEDs.\n\n### RGB LEDs\n\nThe color LEDs are actually each made up of three smaller LEDs - a Red, a Green, and a Blue. Because of this, we often call these RGB LEDs.\n\nBecause there are so many of these LEDs, we've stored them in a list called `colorLeds`. The first RGB LED in the list (position 0) is located next to the green Power LED, and the rest follow in order counter-clockwise around the board, ending at the 10th RGB LED (position 9) next to the red LED.\n\n[clearfix]\n\n[/clearfix]\n\n### Choosing a Color\n\n<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/colorLeds_color.png\" style=\"float: right; margin-left: 10px;\">\n\nBy default all of the color LEDs will be white when you turn them on. You can set the color of an RGB LED many ways, including using the name of a color (such as \"red\") a hexadecimal string (like \"#FF0000\") or using the `rgb()` command (for example `rgb(255, 0, 0)`).\n\nIf a color LED is off, `colorLeds[i].color()` will both set the color and turn it on.\n",
-  "position": 1
-}

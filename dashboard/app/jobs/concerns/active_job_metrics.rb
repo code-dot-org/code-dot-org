@@ -1,5 +1,3 @@
-require 'cdo/aws/metrics'
-require 'cdo/honeybadger'
 
 module ActiveJobMetrics
   extend ActiveSupport::Concern
@@ -79,7 +77,7 @@ module ActiveJobMetrics
       ]
     )
   rescue => exception
-    Honeybadger.notify(exception, error_message: 'Error reporting ActiveJob metrics')
+    Harness.error_notify(exception, error_message: 'Error reporting ActiveJob metrics')
   end
 
   protected def report_wait_time
@@ -105,7 +103,7 @@ module ActiveJobMetrics
       ]
     )
   rescue => exception
-    Honeybadger.notify(exception, error_message: 'Error reporting ActiveJob metrics')
+    Harness.error_notify(exception, error_message: 'Error reporting ActiveJob metrics')
   end
 
   protected def report_performance
@@ -130,6 +128,6 @@ module ActiveJobMetrics
       ]
     )
   rescue => exception
-    Honeybadger.notify(exception, error_message: 'Error reporting ActiveJob metrics')
+    Harness.error_notify(exception, error_message: 'Error reporting ActiveJob metrics')
   end
 end

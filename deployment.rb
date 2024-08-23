@@ -5,10 +5,10 @@ $LOAD_PATH.unshift File.expand_path('../shared/middleware', __FILE__)
 ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../Gemfile', __FILE__)
 require 'bundler/setup' if File.exist?(ENV['BUNDLE_GEMFILE'])
 
+require_relative 'harnessless_shims'
 require 'cdo/git_utils'
 require 'uri'
 require 'cdo'
-require 'cdo/aws/config'
 
 ####################################################################################################
 ##
@@ -60,12 +60,16 @@ def dashboard_dir(*dirs)
   deploy_dir('dashboard', *dirs)
 end
 
-def dashboard_legacy_dir(*dirs)
-  deploy_dir('dashboard', 'legacy', *dirs)
+def locale_dir(*dirs)
+  File.join(ENV['LOCALE_CONTENT_DIR'] || CDO.locale_content_dir, *dirs)
 end
 
-def pegasus_dir(*paths)
-  deploy_dir('pegasus', *paths)
+def curriculum_dir(*dirs)
+  File.join(ENV['CURRICULUM_CONTENT_DIR'] || CDO.locale_content_dir, *dirs)
+end
+
+def dashboard_legacy_dir(*dirs)
+  deploy_dir('dashboard', 'legacy', *dirs)
 end
 
 def shared_dir(*dirs)

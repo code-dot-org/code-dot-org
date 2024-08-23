@@ -16,7 +16,7 @@ class MemoryAdapter
     return nil unless @hash.key?(key)
     Oj.load(@hash[key])
   rescue => exception
-    Honeybadger.notify(exception)
+    Harness.error_notify(exception)
     nil
   end
 

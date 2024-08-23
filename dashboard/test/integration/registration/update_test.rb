@@ -6,7 +6,7 @@ module RegistrationsControllerTests
   #
   class UpdateTest < ActionDispatch::IntegrationTest
     setup do
-      Honeybadger.expects(:notify).never
+      Harness.expects(:error_notify).never
     end
 
     test "update student without user param returns 400 BAD REQUEST" do
@@ -47,7 +47,6 @@ module RegistrationsControllerTests
     test "update student with age with weird params" do
       # we are getting input that looks like this:
       # "user" => {"age" => {"Pr" => ""}}
-      # https://www.honeybadger.io/projects/3240/faults/9963470
       Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
         student = create :student, birthday: '1981/03/24'
 

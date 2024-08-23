@@ -1,5 +1,0 @@
-{
-  "key": "dc-comics",
-  "name": "DC Comics Characters",
-  "content": "Description: data on various DC Comics characters.\r\n\r\nSource [Kaggle](https://www.kaggle.com/datasets/fivethirtyeight/fivethirtyeight-comic-characters-dataset?select=marvel-wikia-data.csv)  \r\n \r\nColumns\r\n\r\n* Name (string): Name of that character, such as Batman / Bruce Wayne\r\n* ID (string): whether that given name is their secret or public identity\r\n* Align (string): whether that character is generally known as a \"good\" or \"bad\" character\r\n* Eye (string): Color of that character's eyes, if applicable\r\n* Hair (string): Color of that character's hair, if applicable\r\n* Alive (string): whether that character is alive in the DC Comics canon\r\n* Appearances (numerical): number of DC Comics appearances since its inception\r\n* First appearance (string): Month and year of that character's first appearance\r\n* Year (numerical): year of that character's first appearance"
-}

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {marketing} from '@cdo/apps/lib/util/urlHelpers';
 import {NotificationResponsive} from '@cdo/apps/sharedComponents/Notification';
 import {
   InternationalGradeBandCards,
@@ -82,13 +82,13 @@ const LegacyCSFNotification = () => (
     notice={i18n.courseBlocksLegacyNotificationSupportEndedHeading()}
     details={i18n.courseBlocksLegacyNotificationSupportEndedBody()}
     detailsLinkText={i18n.courseBlocksLegacyNotificationDetailsLinkText()}
-    detailsLink={pegasus('/educate/curriculum/csf-transition-guide')}
+    detailsLink={marketing('/educate/curriculum/csf-transition-guide')}
     detailsLinkNewWindow={true}
     dismissible={false}
     buttons={[
       {
         text: i18n.courseBlocksLegacyNotificationButtonCourses14(),
-        link: pegasus('/educate/curriculum/elementary-school'),
+        link: marketing('/educate/curriculum/elementary-school'),
         newWindow: true,
       },
       {
@@ -139,7 +139,7 @@ class AcceleratedAndUnplugged extends Component {
 const ViewMoreTile = () => (
   <div className="tutorial-block">
     <div className="courseblock-span3 courseblock-tall">
-      <a href={pegasus('/hourofcode/overview')}>
+      <a href={marketing('/hourofcode/overview')}>
         <img
           src="/shared/images/more_arrow.png"
           width="100%"
@@ -202,7 +202,7 @@ export class CourseBlocksHoc extends Component {
         heading={i18n.teacherCourseHoc()}
         description={i18n.teacherCourseHocDescription()}
         linkText={i18n.teacherCourseHocLinkText()}
-        link={pegasus('/hourofcode/overview')}
+        link={marketing('/hourofcode/overview')}
       >
         <CourseBlocks tiles={this.tiles()} showViewMoreTile />
       </ContentContainer>

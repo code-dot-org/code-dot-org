@@ -10,7 +10,6 @@
 
 require_relative '../deployment'
 
-require 'cdo/aws/s3'
 require 'tmpdir'
 require 'open-uri'
 require 'cdo/video/youtube'

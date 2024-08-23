@@ -3,10 +3,6 @@
   = tag 'meta', property: 'og:image', content: CDO.studio_url(CDO.shared_image_url('share/girl_cropped.jpg'), 'https:')
   = tag 'meta', property: 'og:description', content: t('share.description')
 
--if current_user&.school_donor_name
-  - content_for :above_footer_content do
-    = render partial: 'home/donor_footer'
-
 -# Student modal
 - if RaceInterstitialHelper.show?(current_user) || @force_race_interstitial
   = render partial: 'layouts/race_interstitial'
@@ -34,7 +30,7 @@
 %br/
 
 = render partial: 'home/admin'
-= render partial: 'home/levelbuilder'
+
 
 :javascript
   $("#section_code").placeholder();

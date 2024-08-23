@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import {setIsSummaryView} from '@cdo/apps/code-studio/progressRedux';
 import {hasGroups} from '@cdo/apps/code-studio/progressReduxSelectors';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
@@ -58,7 +58,7 @@ class ProgressDetailToggle extends React.Component {
   };
 
   recordEvent = isSummary => {
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'progress-detail-toggle',
         study_group: this.props.toggleStudyGroup,

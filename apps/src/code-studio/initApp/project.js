@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import {AbuseConstants} from '@cdo/generated-scripts/sharedConstants';
 import msg from '@cdo/locale';
 
@@ -1413,7 +1413,7 @@ var projects = (module.exports = {
     // This includes most app types, but excludes pixelation.
     const shareUrl = this.getStandaloneApp() ? this.getShareUrl() : '';
 
-    return firehoseClient.putRecord(
+    return harness.trackAnalytics(
       {
         study: 'project-data-integrity',
         study_group: 'v4',

@@ -2,7 +2,7 @@ import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {marketing} from '@cdo/apps/lib/util/urlHelpers';
 import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
 
 import {assert} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
@@ -14,13 +14,13 @@ describe('PrintCertificates', () => {
     <PrintCertificates
       sectionId={sectionId}
       courseVersionName="playlab"
-      curriedPegasusUrl={path => `${path}`}
+      curriedMarketingUrl={path => `${path}`}
     />
   );
 
   it('renders a form', () => {
     assert(wrapper.is('form'));
-    assert(wrapper.props().action, pegasus('/certificates'));
+    assert(wrapper.props().action, marketing('/certificates'));
   });
 
   it('has a hidden input for the course name', () => {

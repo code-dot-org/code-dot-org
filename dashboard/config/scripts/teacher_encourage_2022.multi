@@ -1,6 +1,0 @@
-name 'teacher_encourage_2022'
-type 'multi'
-question 'Did a teacher at school encourage you to take this class?'
-right 'yes'
-right 'no'
-allow_multiple_attempts true

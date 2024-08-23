@@ -1,5 +1,4 @@
 require 'json'
-require_relative 'http_cache'
 
 # This is the source of truth for a set of constants that are shared between JS
 # and ruby code. generateSharedConstants.rb is the file that processes this and

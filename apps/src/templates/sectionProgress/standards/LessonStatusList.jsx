@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 
 import color from '@cdo/apps/util/color';
 
-import firehoseClient from '../../../lib/util/firehose';
+import harness from '../../../lib/util/harness';
 import MultiCheckboxSelector from '../../MultiCheckboxSelector';
 
 import ProgressBoxForLessonNumber from './ProgressBoxForLessonNumber';
@@ -26,7 +26,7 @@ class LessonStatusList extends Component {
   };
 
   handleChange = (selectedLessons, changedLesson) => {
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'teacher_dashboard_actions',
         study_group: 'standards',
@@ -80,7 +80,7 @@ const styles = {
 };
 
 const handleLessonLinkClick = function (lesson) {
-  firehoseClient.putRecord(
+  harness.trackAnalytics(
     {
       study: 'teacher_dashboard_actions',
       study_group: 'standards',

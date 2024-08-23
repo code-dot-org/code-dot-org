@@ -3,7 +3,7 @@ import React from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import i18n from '@cdo/locale';
 
@@ -70,7 +70,7 @@ export default class ResourcesDropdown extends React.Component {
   };
 
   recordFirehose = (study, study_group, event, data_json, callback) => {
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study,
         study_group: study_group,

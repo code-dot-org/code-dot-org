@@ -1,3 +1,0 @@
-# cdo-redis
-
-Installs Redis.

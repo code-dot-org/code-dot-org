@@ -1,5 +1,0 @@
-{
-  "key": "mls-teams",
-  "name": "MLS Teams",
-  "content": "Description: Data about all current Major League Soccer (MLS) teams, as of the 2022 season\n\nSource: [Wikipedia](https://en.wikipedia.org/wiki/Major_League_Soccer)\n\nColumns: \n\n* Team (string): name of the team\n* Location (string): city and state the team is located in\n* Stadium (string): name of the stadium the team plays home games in\n* Capacity (numerical): how many seats the stadium holds for attendees\n* Joined (numerical): what year that team officially joined the MLS\n* Head coach (string): name of that team's head coach\n* Conference (string): whether the team is in the Eastern or Western MLS conference"
-}

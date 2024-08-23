@@ -1,7 +1,6 @@
 require 'cdo/db'
 require 'cdo/cache_method'
 # Do not use this static methods directly and only use them on a parent class that defines how to get the table
-# This allow us to share logic between dashboard and pegasus.
 class Languages
   using CacheMethod
 

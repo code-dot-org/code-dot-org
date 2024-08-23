@@ -1,3 +1,4 @@
+require_relative '../../harnessless_shims'
 require_relative '../../deployment'
 require 'cdo/rake_utils'
 require lib_dir 'cdo/data/logging/rake_task_event_logger'
@@ -42,7 +43,7 @@ namespace :install do
     if RakeUtils.local_environment?
       Dir.chdir(dashboard_dir) do
         RakeUtils.bundle_install
-        RakeUtils.python_venv_install
+        # RakeUtils.python_venv_install
 
         puts CDO.dashboard_db_writer
         if ENV['CI']
@@ -52,16 +53,6 @@ namespace :install do
         else
           RakeUtils.rake_stream_output 'dashboard:setup_db', ([:adhoc, :development].include?(rack_env) ? '--trace' : nil)
         end
-      end
-    end
-  end
-
-  desc 'Install Pegasus rubygems and setup database.'
-  timed_task_with_logging :pegasus do
-    if RakeUtils.local_environment?
-      Dir.chdir(pegasus_dir) do
-        RakeUtils.bundle_install
-        RakeUtils.rake 'pegasus:setup_db'
       end
     end
   end
@@ -80,7 +71,6 @@ namespace :install do
   tasks << :locals_yml if rack_env?(:development)
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
-  tasks << :pegasus if CDO.build_pegasus
   tasks << :i18n if CDO.build_i18n
   timed_task_with_logging all: tasks
 end

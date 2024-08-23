@@ -22,7 +22,6 @@ class Hamburger
   def self.get_visibility(options)
     show_teacher_options = HIDE_ALWAYS
     show_student_options = HIDE_ALWAYS
-    show_pegasus_options = HIDE_ALWAYS
     show_intl_about = SHOW_MOBILE
     show_help_options = SHOW_SMALL_DESKTOP
 
@@ -39,10 +38,6 @@ class Hamburger
         show_help_options = SHOW_MOBILE
       end
 
-      # Regardless of user type, then they also need the pegasus
-      # options in the hamburger.
-      show_pegasus_options = SHOW_ALWAYS
-
     else
 
       # The header is available for showing whichever options we want, but they should
@@ -55,15 +50,10 @@ class Hamburger
         show_student_options = SHOW_MOBILE
         show_help_options = SHOW_MOBILE
       end
-
-      # We want to show the pegasus options.  They're in the hamburger for desktop
-      # if they didn't fit on the header, or they're just in it for mobile if they did.
-      show_pegasus_options =
-        (options[:user_type] == "teacher" || options[:user_type] == "student" || options[:level]) ? SHOW_ALWAYS : SHOW_SMALL_DESKTOP
     end
 
     # Do we show hamburger on all widths, only mobile, or not at all?
-    show_set = [show_teacher_options, show_student_options, show_pegasus_options]
+    show_set = [show_teacher_options, show_student_options]
     hamburger_class =
       if show_set.include? SHOW_ALWAYS
         SHOW_ALWAYS
@@ -80,7 +70,6 @@ class Hamburger
       hamburger_class: hamburger_class,
       show_teacher_options: show_teacher_options,
       show_student_options: show_student_options,
-      show_pegasus_options: show_pegasus_options,
       show_intl_about: show_intl_about,
       show_help_options: show_help_options
     }
@@ -181,81 +170,6 @@ class Hamburger
     when 'student'
       entries = entries.concat(student_entries.each {|e| e[:class] = visibility[:show_student_options]})
       entries << {type: "divider", class: get_divider_visibility(visibility[:show_student_options], visibility[:show_help_options]), id: "after-student"}
-    end
-
-    # Show help links before Pegasus links for signed in users.
-    help_contents = HelpHeader.get_help_contents(options)
-    if is_teacher_or_student
-      entries.concat(help_contents.each {|e| e[:class] = visibility[:show_help_options]})
-      entries << {type: "divider", class: get_divider_visibility(visibility[:show_help_options], visibility[:show_pegasus_options]), id: "after-help"}
-    end
-
-    # Pegasus links.
-    entries << {
-      title: I18n.t("#{loc_prefix}learn"),
-      url: CDO.code_org_url("/students"),
-      class: visibility[:show_pegasus_options] + (hide_small_desktop ? "" : " hide-small-desktop"),
-      id: "learn"
-    }
-
-    entries << {
-      type: "expander",
-      title: I18n.t("#{loc_prefix}teach"),
-      id: "educate_entries",
-      subentries: educate_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
-      class: visibility[:show_pegasus_options] + (hide_small_desktop ? "" : " hide-small-desktop")
-    }
-
-    entries << {
-      title: I18n.t("#{loc_prefix}districts"),
-      url: CDO.code_org_url("/administrators"),
-      class: visibility[:show_pegasus_options] + (hide_small_desktop ? "" : " hide-small-desktop"),
-      id: "districts"
-    }
-
-    entries << {
-      title: I18n.t("#{loc_prefix}stats"),
-      url: CDO.code_org_url("/promote"),
-      class: visibility[:show_pegasus_options],
-      id: "stats"
-    }
-
-    entries << {
-      title: I18n.t("#{loc_prefix}help_us"),
-      url: CDO.code_org_url("/help"),
-      class: visibility[:show_pegasus_options],
-      id: "help-us"
-    }
-
-    unless is_teacher_or_student
-      entries << {
-        title: I18n.t("#{loc_prefix}incubator"),
-        url: CDO.studio_url("/incubator"),
-        class: visibility[:show_pegasus_options],
-        id: "incubator"
-      }
-    end
-
-    entries << {
-      type: "expander",
-      title: I18n.t("#{loc_prefix}about"),
-      id: "about_entries",
-      subentries: about_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
-      class: visibility[:show_pegasus_options]
-    }
-
-    entries << {
-      type: "expander",
-      title: I18n.t("#{loc_prefix}legal"),
-      id: "legal_entries",
-      subentries: legal_entries.each {|e| e[:class] = visibility[:show_pegasus_options]},
-      class: visibility[:show_pegasus_options]
-    }
-
-    # Show help links at the bottom of the list for signed out users.
-    unless is_teacher_or_student
-      entries << {type: "divider", class: get_divider_visibility(visibility[:show_help_options], visibility[:show_pegasus_options]) + (is_level ? "  hide-large-desktop" : ""), id: "before-help"}
-      entries.concat(help_contents.each {|e| e[:class] = visibility[:show_help_options]})
     end
 
     {entries: entries, visibility: visibility[:hamburger_class]}

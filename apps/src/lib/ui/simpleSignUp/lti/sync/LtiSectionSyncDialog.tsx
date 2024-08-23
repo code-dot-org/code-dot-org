@@ -2,11 +2,11 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {CSSProperties, useState} from 'react';
 
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
@@ -93,7 +93,7 @@ export default function LtiSectionSyncDialog({
     analyticsReporter.sendEvent(
       'lti_opt_out_click',
       eventPayload,
-      PLATFORMS.STATSIG
+      null
     );
     return (
       <div data-testid={'disable-roster-sync'}>
@@ -125,7 +125,7 @@ export default function LtiSectionSyncDialog({
         analyticsReporter.sendEvent(
           'lti_opt_out_confirm',
           eventPayload,
-          PLATFORMS.STATSIG
+          null
         );
         handleClose();
       },
@@ -139,7 +139,7 @@ export default function LtiSectionSyncDialog({
     analyticsReporter.sendEvent(
       'lti_opt_out_documentation',
       eventPayload,
-      PLATFORMS.STATSIG
+      null
     );
   };
 

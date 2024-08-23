@@ -1,31 +1,34 @@
 #!/usr/bin/env ruby
 require_relative '../deployment'
 
-# Any arguments to bin/dashboard-server will get passed through to the rerun command, for example -b to run in background,
-# which allows for pry debugging.
 def main
-  dirs = [deploy_dir('lib'), deploy_dir('shared/middleware'), deploy_dir('dashboard/legacy')]
-  dirs += [pegasus_dir] if CDO.dashboard_enable_pegasus
-  rerun = "rerun -p '**/*.{rb,ru,yml}' -d '#{dirs.join(',')}' -i '**/migrations/*.rb' -i 'test/**/*.rb' #{ARGV.join(' ')} --"
-  pids = []
-
-  unless CDO.use_my_apps
-    # Note: This will report "apps-watcher Launch Failed" because it expects something
-    # that continues to run.
-    pids.push spawn("rerun -x -d #{apps_dir}/src --background -n apps-watcher -- rake package:apps")
-  end
-
   thin_args = "-a #{CDO.dashboard_host} -p #{CDO.dashboard_port}"
   thin_args += " --ssl" if CDO.rack_env == :development && CDO.https_development
 
-  Dir.chdir(dashboard_dir) do
-    system "RAILS_ENV=#{CDO.rack_env} bundle exec #{rerun} thin start #{thin_args}"
-  end
+  if ENV['DOCKER_ENV'] || !$stdout.tty?
+    # Directly start the server without rerun
+    Dir.chdir(dashboard_dir) do
+      exec "RAILS_ENV=#{CDO.rack_env} bundle exec thin start #{thin_args}"
+    end
+  else
+    # Normal rerun setup for development
+    dirs = [deploy_dir('lib'), deploy_dir('shared/middleware'), deploy_dir('dashboard/legacy')]
+    rerun = "rerun -p '**/*.{rb,ru,yml}' -d '#{dirs.join(',')}' -i '**/migrations/*.rb' -i 'test/**/*.rb' #{ARGV.join(' ')} --"
+    pids = []
 
-  pids.each do |pid|
-    puts "Stopping watcher #{pid}"
-    Process.kill(:TERM, pid)
-    Process.wait(pid)
+    unless CDO.use_my_apps
+      pids.push spawn("rerun -x -d #{apps_dir}/src --background -n apps-watcher -- rake package:apps")
+    end
+
+    Dir.chdir(dashboard_dir) do
+      system "RAILS_ENV=#{CDO.rack_env} bundle exec #{rerun} thin start #{thin_args}"
+    end
+
+    pids.each do |pid|
+      puts "Stopping watcher #{pid}"
+      Process.kill(:TERM, pid)
+      Process.wait(pid)
+    end
   end
 end
 

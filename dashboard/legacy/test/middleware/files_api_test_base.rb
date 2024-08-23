@@ -2,7 +2,6 @@ require_relative 'middleware_test_helper' # Must be required first to establish 
 require 'mocha/mini_test'
 require_relative '../../middleware/files_api'
 require_relative '../../middleware/channels_api'
-require 'cdo/aws/s3'
 require_relative '../../../../shared/test/spy_newrelic_agent'
 
 #

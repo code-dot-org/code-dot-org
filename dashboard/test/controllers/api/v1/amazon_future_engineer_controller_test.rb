@@ -56,7 +56,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
     Services::AFEEnrollment.expects(:submit).raises(Services::AFEEnrollment::Error)
 
     # We want failures of this type to be logged to HB
-    Honeybadger.expects(:notify)
+    Harness.expects(:error_notify)
 
     sign_in create :teacher
     post '/dashboardapi/v1/amazon_future_engineer_submit', params: valid_params, as: :json
@@ -241,7 +241,7 @@ class Api::V1::AmazonFutureEngineerControllerTest < ActionDispatch::IntegrationT
     Services::CSTAEnrollment.expects(:submit).raises(Services::CSTAEnrollment::Error)
 
     # We want failures of this type to be logged to HB
-    Honeybadger.expects(:notify)
+    Harness.expects(:error_notify)
 
     sign_in create :teacher
     post '/dashboardapi/v1/amazon_future_engineer_submit',

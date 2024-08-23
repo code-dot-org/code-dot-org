@@ -106,7 +106,7 @@ namespace :circle do
       start_sauce_connect
       RakeUtils.wait_for_url('http://localhost:4445')
     end
-    RakeUtils.wait_for_url('http://localhost-studio.code.org:3000')
+    RakeUtils.wait_for_url('http://localhost:3000')
     Dir.chdir('dashboard/test/ui') do
       container_features = `find ./features -name '*.feature' | sort`.split("\n").map {|f| f[2..]}
       eyes_features = `grep -lr '@eyes' features`.split("\n")

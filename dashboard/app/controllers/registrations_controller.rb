@@ -1,9 +1,8 @@
-require 'cdo/firehose'
-require 'cdo/honeybadger'
+
+
 require 'cdo/mailjet'
 require 'cpa'
 require_relative '../../../shared/middleware/helpers/experiments'
-require 'metrics/events'
 require 'policies/lti'
 require 'queries/lti'
 
@@ -132,7 +131,7 @@ class RegistrationsController < Devise::RegistrationsController
   def create
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do |retries, exception|
       if retries > 0
-        Honeybadger.notify(
+        Harness.error_notify(
           error_class: 'User creation required multiple attempts',
           error_message: "retry ##{retries} failed with exception: #{exception}"
         )
@@ -147,7 +146,7 @@ class RegistrationsController < Devise::RegistrationsController
         rescue => exception
           # If we can't add the user to the welcome series, we don't want to disrupt
           # sign up, but we do want to know about it.
-          Honeybadger.notify(
+          Harness.error_notify(
             exception,
             error_message: 'Failed to add user to welcome series',
             context: {

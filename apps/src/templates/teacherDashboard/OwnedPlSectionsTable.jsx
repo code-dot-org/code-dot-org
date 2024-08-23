@@ -144,9 +144,7 @@ export const studentsFormatter = function (studentCount, {rowData}) {
  * a teacher owns, and allows for editing, deleting and sorting them.
  * It shows some of the same information as the SectionsAsStudentTable used on the teacher
  * homepage. However, for historical reasons it unfortunately has a somewhat
- * different set/shape of input data. This component gets its data from
- * section_api_helpers in pegasus via an AJAX call, whereas that component gets
- * its data from section.summarize on page load.
+ * different set/shape of input data.
  * Both ultimately source data from the dashboard db.
  * Long term it would be ideal if section_api_helpers went away and both components
  * used dashboard.

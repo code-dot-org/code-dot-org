@@ -1,9 +1,0 @@
-name 'CSD U3 MC Q9_2023'
-title 'Question 1'
-type 'multi'
-question 'Placeholder Question Text'
-right 'Placeholder Answer'
-wrong 'Placeholder Answer'
-wrong 'Placeholder Answer'
-wrong 'Placeholder Answer'
-allow_multiple_attempts true

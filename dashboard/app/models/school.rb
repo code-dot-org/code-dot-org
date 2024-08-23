@@ -39,7 +39,6 @@ class School < ApplicationRecord
 
   has_many :school_stats_by_year
   has_many :school_info
-  has_many :census_summaries, class_name: 'Census::CensusSummary'
 
   # Gets the full address of the school.
   # @return [String] The full address.
@@ -51,10 +50,6 @@ class School < ApplicationRecord
 
   def most_recent_school_stats
     school_stats_by_year.order(school_year: :desc).first
-  end
-
-  def census_for_year(year)
-    census_summaries.find_by(school_year: year)
   end
 
   # Determines if school meets Amazon Future Engineer criteria.

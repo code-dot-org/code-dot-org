@@ -1,4 +1,4 @@
-require 'cdo/honeybadger'
+
 
 module UserMultiAuthHelper
   def oauth_tokens_for_provider(provider)

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 import PopUpMenu from '@cdo/apps/lib/ui/PopUpMenu';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 
 import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import styleConstants from '../../styleConstants';
@@ -56,7 +56,7 @@ export default class QuickActionsCell extends Component {
     window.addEventListener('resize', throttle(this.updateMenuLocation, 50));
     this.setState({open: true, canOpen: false});
     if (this.props.experimentDetails) {
-      firehoseClient.putRecord(this.props.experimentDetails);
+      harness.trackAnalytics(this.props.experimentDetails);
     }
   };
 

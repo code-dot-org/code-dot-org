@@ -14,9 +14,5 @@ class CdoTest < Minitest::Test
     CDO.stubs(sdfsdf: true)
     assert_equal true, CDO.with_default(false).sdfsdf
     assert_equal true, CDO.with_default(true).sdfsdf
-
-    # non-boolean delegates
-    assert_equal CDO.pegasus_db_writer, CDO.with_default(false).pegasus_db_writer
-    assert_equal CDO.pegasus_db_writer, CDO.with_default(true).pegasus_db_writer
   end
 end

@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {lockContainedLevelAnswers} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {TestResults} from '@cdo/apps/constants';
@@ -202,27 +201,7 @@ Javalab.prototype.init = function (config) {
   });
 
   registerReducers({javalab, javalabConsole, javalabView});
-  // If we're in editBlock mode (for editing start_sources) we set up the save button to save
-  // the project file information into start_sources on the level.
-  if (this.isStartMode) {
-    config.level.lastAttempt = '';
-    showLevelBuilderSaveButton(() => ({
-      start_sources: getSources(getStore().getState()),
-      validation: getValidation(getStore().getState()),
-    }));
-  }
-  if (this.isEditingExemplar) {
-    showLevelBuilderSaveButton(
-      () => ({
-        exemplar_sources: getSources(getStore().getState()),
-      }),
-      'Levelbuilder: edit exemplar',
-      `/levels/${
-        getStore().getState().pageConstants.serverLevelId
-      }/update_exemplar_code`
-    );
-  }
-
+  
   const startSources = config.level.lastAttempt || config.level.startSources;
   const validation = config.level.validation || {};
   if (config.level.exemplarSources) {

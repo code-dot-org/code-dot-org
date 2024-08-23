@@ -1,9 +1,0 @@
-{
-  "key": "taking-input-with-getproperty",
-  "course_version_key": "2022",
-  "course_offering_key": "self-paced-pl-csp-2021",
-  "parent_reference_guide_key": "app-lab",
-  "display_name": "Taking Input with getProperty",
-  "content": "The `getProperty()` command allows you to get the current value of design element properties. Like `setProperty()`, its first input is the id of a design element and the second is a property of that element. Unlike `setProperty()`, the `getProperty()` command has no third input.\r\n\r\nYou can use this command on any design element, but it's particularly useful when used with the Text Input, Dropdown, Checkbox, Radio Button, and Slider elements. These elements allow the user to change their value, and by using `getProperty()` you can write programs that take advantage of that user input.\r\n\r\n## getProperty Example\r\n\r\n<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/getProperty_crop.png\" style=\"margin: 20px auto\" />\r\n\r\nIn this example, we're using `getProperty()` to take input from a Text Input, Dropdown, and Checkbox. While this example records these values to the console, you could also save them to variables or use `setProperty()` to change other design elements based on these values.",
-  "position": 1
-}

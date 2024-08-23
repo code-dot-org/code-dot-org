@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import {
   unassignSection,
   sectionName,
@@ -72,7 +72,7 @@ function UnassignSectionButton({
   };
 
   const firehoseSendRecord = event => {
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'assignment',
         event: event,

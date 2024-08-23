@@ -1,8 +1,0 @@
-name 'msm variables multi 10'
-title '/script_assets/msm/define_f.png, 300'
-question 'What is the name of the function?'
-right 'f'
-wrong 'x'
-wrong '17'
-
-allow_multiple_attempts true

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {CSVLink} from 'react-csv';
 
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {marketing} from '@cdo/apps/lib/util/urlHelpers';
 import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
@@ -40,7 +40,7 @@ export default class LoginExport extends Component {
             studentLoginSecret:
               this.props.sectionLoginType === SectionLoginType.word
                 ? student.secretWords
-                : pegasus(`/images/${student.secretPicturePath}`),
+                : marketing(`/images/${student.secretPicturePath}`),
           });
         }
       });

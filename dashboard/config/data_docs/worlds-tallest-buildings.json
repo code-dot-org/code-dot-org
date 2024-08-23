@@ -1,5 +1,0 @@
-{
-  "key": "worlds-tallest-buildings",
-  "name": "World's Tallest Buildings",
-  "content": "Description: Data about the top 70 tallest buildings in the world, as of June 2020.\r\n\r\n[Source](http://www.emporis.com/)\r\n\r\nColumns:\r\n\r\n* Rank (numerical): What rank the building falls into in terms of tallest building (Rank 1 = tallest building in the world)\r\n* Name (string): Name of the building\r\n* Image (link): A link to an image of the building\r\n* City (string): City of the world the building is in\r\n* Country (string): Country of the world the building is in\r\n* Height in feet (numerical): how tall that building is, measured in feet\r\n* Floors (numerical): how many floors that building has\r\n* Year opened (numerical): what year that building had opened to the public"
-}

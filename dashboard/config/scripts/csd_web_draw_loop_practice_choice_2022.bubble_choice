@@ -1,8 +1,0 @@
-name 'CSD web draw loop practice choice_2022'
-display_name 'Practice'
-description 'Try out using the draw loop with these activities.'
-
-sublevels
-level 'CSD U3 Draw Loop Plugged wiggle sprite rotation_2022'
-level 'CSD games draw debug blurry_2022'
-level 'CSD games draw debug not moving_2022'

@@ -1,9 +1,0 @@
-{
-  "key": "hyperlinks",
-  "course_version_key": "2022",
-  "course_offering_key": "vpl-csd-summer-pilot-ci",
-  "parent_reference_guide_key": "html",
-  "display_name": "Hyperlinks",
-  "content": "Hyperlinks can connect to local web pages or external web pages. To add navigation to your website you will need to add hyperlinks which connect your individual web pages. You can **add hyperlinks to your web page using the `<a>` element**. The text you want to display as the hyperlink goes between the opening and closing hyperlink tags. The `<a>` element has an attribute `href` which is the location to link to. The location of a local page is just the file path for that page. \n\n## Using Hyperlinks\n\nAssuming you have a website that includes a second page with the filename `houses.html`, you could create a link to that page like this:\n\n<img alt=\"Link to houses html\" src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/a_tag.png\" class=\"center\" style=\"max-width: 600px; margin: 20px auto;\">\n\n[diagram_nums]\n\n1. The `<a>` tag wraps the text that you want to turn into a clickable link. _A_ is short for _anchor_.\n2. The `href` attribute, short for _hypertext reference_, determines where your link should go to. In this case, `houses.html`.\n3. The closing tag ends your link.\n\n[/diagram_nums]\n\n**W3 Schools Link**\n\n* [&lt;a&gt;](https://www.w3schools.com/tags/tag_a.asp)",
-  "position": 4
-}

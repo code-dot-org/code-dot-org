@@ -1,9 +1,0 @@
-name 'CSA U3L2-L4_pilot-2022'
-display_name 'Changing Values in a 1D Array'
-description 'Create and modify values in 1D arrays.'
-
-sublevels
-level 'CSA U3L2-L4a_pilot-2022'
-level 'CSA U3L2-L4b_pilot-2022'
-level 'CSA U3L2-L4c_pilot-2022'
-level 'CSA U3L2-L4d_pilot-2022'

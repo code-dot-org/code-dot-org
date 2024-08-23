@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
@@ -28,7 +28,7 @@ class SectionProgressToggle extends React.Component {
   };
 
   onChange = selectedToggle => {
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'teacher_dashboard_actions',
         study_group: 'progress',

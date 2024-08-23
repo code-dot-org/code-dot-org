@@ -1,9 +1,0 @@
-name 'CSA U1L8-L5_pilot_alt-2025'
-display_name 'Practice: Conducting a Code Review'
-description 'Finish the program, then request a code review from your peers.'
-
-sublevels
-level 'CSA U1L8-L5a CR_alt-2025'
-level 'CSA U1L8-L5b CR_alt-2025'
-level 'CSA U1L8-L5c CR_alt-2025'
-level 'CSA U1L8-L5d CR_alt-2025'

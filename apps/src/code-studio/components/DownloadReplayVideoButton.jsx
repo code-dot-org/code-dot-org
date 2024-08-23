@@ -3,7 +3,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import i18n from '@cdo/locale';
 
 // Record events to Firehose to understand how often users:
@@ -31,7 +31,7 @@ const FIREHOSE_EVENT_DOWNLOAD_FAILED_TIMEOUT = 'download_failed_timeout';
  * URLs.
  */
 function downloadRemoteUrl(url, downloadName) {
-  firehoseClient.putRecord({
+  harness.trackAnalytics({
     study: FIREHOSE_STUDY,
     study_group: FIREHOSE_STUDY_GROUP,
     event: FIREHOSE_EVENT_DOWNLOAD_STARTED,
@@ -51,7 +51,7 @@ function downloadRemoteUrl(url, downloadName) {
       element.click();
       document.body.removeChild(element);
 
-      firehoseClient.putRecord({
+      harness.trackAnalytics({
         study: FIREHOSE_STUDY,
         study_group: FIREHOSE_STUDY_GROUP,
         event: FIREHOSE_EVENT_DOWNLOAD_SUCCEEDED,
@@ -60,7 +60,7 @@ function downloadRemoteUrl(url, downloadName) {
     .catch(error => {
       console.log(error);
 
-      firehoseClient.putRecord({
+      harness.trackAnalytics({
         study: FIREHOSE_STUDY,
         study_group: FIREHOSE_STUDY_GROUP,
         event: FIREHOSE_EVENT_DOWNLOAD_FAILED,
@@ -108,7 +108,7 @@ class DownloadReplayVideoButton extends React.Component {
     this.checkVideoUntilSuccess();
 
     if (this.shouldRenderButton()) {
-      firehoseClient.putRecord({
+      harness.trackAnalytics({
         study: FIREHOSE_STUDY,
         study_group: FIREHOSE_STUDY_GROUP,
         event: FIREHOSE_EVENT_DOWNLOAD_BUTTON_SEEN,
@@ -147,7 +147,7 @@ class DownloadReplayVideoButton extends React.Component {
   buttonEnabled = () => this.state.videoExists || !this.state.downloadInitiated;
 
   clickDownloadVideo = event => {
-    firehoseClient.putRecord({
+    harness.trackAnalytics({
       study: FIREHOSE_STUDY,
       study_group: FIREHOSE_STUDY_GROUP,
       event: FIREHOSE_EVENT_DOWNLOAD_CLICKED,
@@ -212,7 +212,7 @@ class DownloadReplayVideoButton extends React.Component {
         this.props.onError();
       }
 
-      firehoseClient.putRecord({
+      harness.trackAnalytics({
         study: FIREHOSE_STUDY,
         study_group: FIREHOSE_STUDY_GROUP,
         event: FIREHOSE_EVENT_DOWNLOAD_FAILED_TIMEOUT,

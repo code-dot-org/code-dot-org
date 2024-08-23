@@ -1,4 +1,4 @@
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {marketing} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 const CSFExpress = {
@@ -44,7 +44,7 @@ const CreateAccountApplab = {
 const AnotherHoC = {
   title: i18n.anotherHoCTitle(),
   description: i18n.anotherHoCDesc(),
-  link: pegasus('/hourofcode/overview'),
+  link: marketing('/hourofcode/overview'),
   image: 'another-hoc',
   buttonText: i18n.anotherHoCButton(),
 };
@@ -60,7 +60,7 @@ const ApplabTutorial = {
 const ApplabMarketing = {
   title: i18n.applabMarketingTitle(),
   description: i18n.applabMarketingDesc(),
-  link: pegasus('/applab'),
+  link: marketing('/applab'),
   image: 'applab-marketing',
   buttonText: i18n.applabMarketingButton(),
 };

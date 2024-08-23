@@ -1,9 +1,0 @@
-{
-  "key": "static-variables",
-  "course_version_key": "2023",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "variables",
-  "display_name": "Static Variables",
-  "content": "## What is a static variable?\n\nA **static variable** is a variable that is shared by all instances of a class. It is created by adding the `static`(#e7e8ea) keyword before the variable when it is declared.\n\n```\n public class Student {\n  public static String school = \"Neighborhood HS\";\n  . . .\n}\n```\n\nUse a **static variable** for attributes that are common (not unique) for all objects. For example:\n- The name of the school for all students\n- The name of the playlist for all songs \n- The number of apps on a cell phone \n- The number of employees at a business \n\nTo use a **static variable**, use the `ClassName`(#e7e8ea) and the dot operator.\n```\n public class StudentRunner {\n  public static void main(String[] args) {\n    System.out.println(Student.school);\n  }\n}\n```",
-  "position": 3
-}

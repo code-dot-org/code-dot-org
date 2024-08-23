@@ -1,9 +1,0 @@
-{
-  "key": "microbit-physical-input",
-  "course_version_key": "2024",
-  "course_offering_key": "web-development",
-  "parent_reference_guide_key": "microbit-parent",
-  "display_name": "micro:bit Physical Input",
-  "content": "<img src=\"https://images.code.org/3d9ce06038db75ad3ae8a7b03259a048-Micro_bit Physical Input.png\" style=\"width: 350px; float: right; margin: 10px\" />\n\n## Identifying the Inputs\n\n1. The A (left) and B (right) buttons are available in code as `buttonA` and `buttonB` respectively. These buttons are identical to each other aside from location on the board. \n2. The **Reset Button** isn't actually available for you to use in your program. Clicking this button causes the micro:bit to reset itself, so avoid clicking it while running a program. It is useful, however, if your board isn't functioning the way you expect.\n\n## Events and Event Types\n\n| Event Type  |  Description |  \n|---|---|\n| `down` | Triggers when the button is pressed down.|\n| `up` | Triggers when the button pops back up after being pressed.| \n\n## Button States\n\nBoth buttons and the switch have only two states. Buttons are usually off (false) and turn on (true) when pressed. You can see if a button is being pressed with [`buttonL.isPressed`(#f78183)](/docs/applab/isPressed/).",
-  "position": 3
-}

@@ -1807,7 +1807,7 @@ describe('teacherSectionsRedux', () => {
     });
 
     it('doesnt send an event when course offering is unchanged', () => {
-      jest.mock('@cdo/apps/lib/util/firehose');
+      jest.mock('@cdo/apps/lib/util/harness');
       store.dispatch(assignToSection(11, 2, 2, 3, null));
       expect(analyticsSpy).to.not.be.called;
     });

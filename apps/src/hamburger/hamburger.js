@@ -103,14 +103,6 @@ export const initHamburger = function () {
       trackEvent('help_ui', 'support', 'studio_footer');
     });
 
-    // This item is not in the hamburger, but actually in the pegasus footers for
-    // desktop and mobile.
-    $('#pagefooter #support').each(function () {
-      $(this).click(function () {
-        trackEvent('help_ui', 'support', 'studio_footer');
-      });
-    });
-
     const channelId = getChannelIdFromUrl(location.href);
     const alreadyReportedAbuse = userAlreadyReportedAbuse(channelId);
     if (alreadyReportedAbuse) {

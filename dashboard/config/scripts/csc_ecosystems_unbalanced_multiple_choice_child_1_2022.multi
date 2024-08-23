@@ -1,9 +1,0 @@
-name 'csc_ecosystems_unbalanced_multiple_choice_child_1_2022'
-question 'This is the code to set fishing limits for the boat but the code has a bug in it! What is the bug and how would you fix it?'
-wrong 'The purple `change fishCaught by 1` should be changed to `5`. ', feedback: 'Incorrect.'
-wrong 'The `if fishCaught = 5` condition should be changed to `if algae = 5`. ', feedback: 'Incorrect.'
-right 'The `remove coral` sprite should be changed to `remove boat` sprite. .', feedback: 'Correct!'
-wrong 'The `remove coral` sprite should be changed to `remove fish` sprite.', feedback: 'Incorrect.'
-
-
-allow_multiple_attempts false

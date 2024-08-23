@@ -1,9 +1,0 @@
-name 'CSA U5L9-L2_pilot-2022'
-display_name 'Finding Duplicates in a 2D Array'
-description 'Implement your algorithm to find duplicates in 2D arrays.'
-
-sublevels
-level 'CSA U5L9-L2a_pilot-2022'
-level 'CSA U5L9-L2b_pilot-2022'
-level 'CSA U5L9-L2c_pilot-2022'
-level 'CSA U5L9-L2d_pilot-2022'

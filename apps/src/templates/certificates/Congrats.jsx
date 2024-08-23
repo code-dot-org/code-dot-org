@@ -7,7 +7,7 @@ import {
   Heading3,
   Heading4,
 } from '@cdo/apps/componentLibrary/typography';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {marketing} from '@cdo/apps/lib/util/urlHelpers';
 import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import i18n from '@cdo/locale';
@@ -75,12 +75,12 @@ export default function Congrats(props) {
         '온라인 코딩 파티 인증서 받으러 가기! (과학기술정보통신부 인증)';
       if (/oceans/.test(tutorial)) {
         return {
-          extraLinkUrl: pegasus('/files/online-coding-party-2024-1-oceans.png'),
+          extraLinkUrl: marketing('/files/online-coding-party-2024-1-oceans.png'),
           extraLinkText: extraLinkText,
         };
       } else if (/hero/.test(tutorial)) {
         return {
-          extraLinkUrl: pegasus('/files/online-coding-party-2024-1-hero.png'),
+          extraLinkUrl: marketing('/files/online-coding-party-2024-1-hero.png'),
           extraLinkText: extraLinkText,
         };
       }
@@ -91,7 +91,7 @@ export default function Congrats(props) {
     const demoActive = demoStart <= currentDate && currentDate < demoEnd;
     if (demoActive) {
       return {
-        extraLinkUrl: pegasus('/files/extra-link-demo.png'),
+        extraLinkUrl: marketing('/files/extra-link-demo.png'),
         extraLinkText: `This is the Demo extra link for ${tutorial}`,
       };
     }

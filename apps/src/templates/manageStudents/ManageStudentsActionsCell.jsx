@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
 import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import {navigateToHref} from '@cdo/apps/utils';
@@ -63,7 +63,7 @@ class ManageStudentsActionsCell extends Component {
     })
       .done(() => {
         removeStudent(id);
-        firehoseClient.putRecord(
+        harness.trackAnalytics(
           {
             study: 'teacher-dashboard',
             study_group: 'manage-students-actions',
@@ -96,7 +96,7 @@ class ManageStudentsActionsCell extends Component {
   onEdit = () => {
     const {id, sectionId} = this.props;
     this.props.startEditingStudent(id);
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'teacher-dashboard',
         study_group: 'manage-students-actions',
@@ -115,7 +115,7 @@ class ManageStudentsActionsCell extends Component {
     if (this.props.rowType === RowType.NEW_STUDENT) {
       this.props.removeStudent(this.props.id);
     } else {
-      firehoseClient.putRecord(
+      harness.trackAnalytics(
         {
           study: 'teacher-dashboard',
           study_group: 'manage-students-actions',
@@ -137,7 +137,7 @@ class ManageStudentsActionsCell extends Component {
       this.onAdd();
     } else {
       this.props.saveStudent(id);
-      firehoseClient.putRecord(
+      harness.trackAnalytics(
         {
           study: 'teacher-dashboard',
           study_group: 'manage-students-actions',
@@ -155,7 +155,7 @@ class ManageStudentsActionsCell extends Component {
   onAdd = () => {
     const {id, sectionId} = this.props;
     this.props.addStudent(id);
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'teacher-dashboard',
         study_group: 'manage-students-actions',
@@ -172,7 +172,7 @@ class ManageStudentsActionsCell extends Component {
   onPrintLoginInfo = () => {
     const {id, sectionId} = this.props;
 
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'teacher-dashboard',
         study_group: 'manage-students-actions',
@@ -195,7 +195,7 @@ class ManageStudentsActionsCell extends Component {
     const url =
       teacherDashboardUrl(sectionId, '/parent_letter') + `?studentId=${id}`;
     window.open(url, '_blank', 'noopener,noreferrer');
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'teacher-dashboard',
         study_group: 'manage-students-actions',

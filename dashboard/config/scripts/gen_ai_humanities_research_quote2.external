@@ -1,8 +1,0 @@
-name 'gen-ai-humanities-research-quote2'
-
-
-markdown <<MARKDOWN
-### Quote 2
-
-![](https://images.code.org/b2a6141557edd4b769d173e6f30b0195-image-1718998064072.png)
-MARKDOWN

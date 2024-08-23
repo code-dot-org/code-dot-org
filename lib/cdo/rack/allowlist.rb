@@ -3,7 +3,6 @@
 require 'cdo/legacy_varnish_helpers'
 require 'active_support/core_ext/hash/slice'
 require 'cdo/rack/response'
-require 'cdo/aws/cloudfront'
 
 module Rack
   module Allowlist

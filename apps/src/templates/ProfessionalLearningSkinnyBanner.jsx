@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {marketing} from '@cdo/apps/lib/util/urlHelpers';
 
 import './professionalLearningSkinnyBanner.scss';
 import bgDesktop from './images/superhero-banner-bg.png';
@@ -13,7 +13,7 @@ export default function ProfessionalLearningSkinnyBanner() {
 
   return (
     <aside className="professional-learning-banner">
-      <a href={pegasus('/educate/professional-learning/middle-high')}>
+      <a href={marketing('/educate/professional-learning/middle-high')}>
         <img
           className="bg-desktop"
           src={bgDesktop}

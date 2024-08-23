@@ -6,7 +6,7 @@ import {connect} from 'react-redux';
 import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {marketing} from '@cdo/apps/lib/util/urlHelpers';
 import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
@@ -97,7 +97,7 @@ class SignInOrAgeDialog extends Component {
             <div style={styles.tooYoungButton}>
               <Button
                 __useDeprecatedTag
-                href={pegasus('/hourofcode/overview')}
+                href={marketing('/hourofcode/overview')}
                 text="See all tutorials"
                 color={Button.ButtonColor.brandSecondaryDefault}
               />

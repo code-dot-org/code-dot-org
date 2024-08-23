@@ -16,15 +16,14 @@ require 'cdo/db'
 ALERT_FILENAME = 'confirm_usage_alert'.freeze
 SECONDS_PER_MINUTE = 60
 
-# An array of [tablename, num_minutes, {DASHBOARD_DB | PEGASUS_DB}] triples.
+# An array of [tablename, num_minutes, {DASHBOARD_DB}] triples.
 CREATED_CHECKS = [
   [:activities, 3, DASHBOARD_DB],
-  [:forms, 60, PEGASUS_DB],
   [:user_levels, 5, DASHBOARD_DB],
   [:users, 30, DASHBOARD_DB]
 ].freeze
 # An array of
-#   [tablename, num_minutes, {DASHBOARD_DB | PEGASUS_DB}, column, column_value]
+#   [tablename, num_minutes, {DASHBOARD_DB}, column, column_value]
 # tuples.
 KEY_VALUE_CHECKS = [
   [:users, 120, DASHBOARD_DB, :provider, 'google_oauth2'],
@@ -67,19 +66,6 @@ def main
     alert "#{table.to_s.upcase} KEY-VALUE CREATION: " \
       "too long (#{delta_sec} seconds [threshold #{threshold_sec}]) since " \
       "last #{table} creation with column #{column} having value #{column_value}."
-  end
-
-  # Verify emails are being sent. Alert if (a) an email has not been sent for
-  # five minutes and (b) no email has been sent for five minutes.
-  if first_unsent = PEGASUS_DB[:poste_deliveries].where(sent_at: nil).order(:id).limit(1).first
-    last_sent_sec = Time.now - PEGASUS_DB[:poste_deliveries].where(sent_at: nil).invert.order(Sequel.desc(:id)).limit(1).first[:created_at]
-    first_unsent_sec = Time.now - first_unsent[:created_at]
-    threshold_sec = 5 * SECONDS_PER_MINUTE
-    if last_sent_sec > threshold_sec && first_unsent_sec > threshold_sec
-      alert "POSTE_DELIVERIES MESSAGES UNSENT: too long " \
-        "(#{first_unsent_sec} seconds [threshold #{threshold_sec}]) since " \
-        "last email delivered"
-    end
   end
 end
 

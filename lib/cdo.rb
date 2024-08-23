@@ -57,7 +57,6 @@ module Cdo
     def canonical_hostname(domain)
       # Allow hostname overrides
       return override_dashboard if override_dashboard && domain == 'studio.code.org'
-      return override_pegasus if override_pegasus && domain == 'code.org'
 
       return "#{name}.#{domain}" if ['console', 'hoc-levels'].include?(name)
       return domain if rack_env?(:production)
@@ -73,14 +72,6 @@ module Cdo
 
     def dashboard_hostname
       canonical_hostname('studio.code.org')
-    end
-
-    def pegasus_hostname
-      canonical_hostname('code.org')
-    end
-
-    def hourofcode_hostname
-      canonical_hostname('hourofcode.com')
     end
 
     def codeprojects_hostname
@@ -101,7 +92,7 @@ module Cdo
       host = canonical_hostname(domain)
       if (rack_env?(:development) && !https_development) ||
           (ENV.fetch('CI', nil) && host.include?('localhost'))
-        port = ['studio.code.org'].include?(domain) ? dashboard_port : pegasus_port
+        port = dashboard_port
         host += ":#{port}"
       end
       host
@@ -109,10 +100,6 @@ module Cdo
 
     def dashboard_site_host
       site_host('studio.code.org')
-    end
-
-    def pegasus_site_host
-      site_host('code.org')
     end
 
     def site_url(domain, path = '', scheme = '')
@@ -134,10 +121,6 @@ module Cdo
 
     def javabuilder_url(path = '', scheme = '')
       if rack_env?(:development)
-        # Since pegasus and dashboard share the same port, we have a Route53
-        # DNS record that redirects requests to localhost. Javabuilder, as a
-        # separate service, uses a different port. Therefore, we can access the
-        # the service directly.
         # On localhost, we default to using the "test" Javabuilder stack. To point
         # to your Javabuilder WebSocket server running on localhost, set
         # 'use_localhost_javabuilder: true' in your locals.yml. To point to a
@@ -243,15 +226,6 @@ module Cdo
       ''
     end
 
-    # Temporary method to allow safe (exception-free) accessing of the
-    # Statsig API key.
-    def safe_statsig_api_client_key
-      CDO.statsig_api_client_key
-    rescue ArgumentError
-      # Return an empty string instead of raising
-      ''
-    end
-
     def dir(*dirs)
       File.join(root_dir, *dirs)
     end
@@ -264,7 +238,7 @@ module Cdo
     # to ensure that other systems (such as staging-next or Continuous Integration builds) that are operating
     # with RACK_ENV=test do not carry out actions on behalf of the managed test system.
     def test_system?
-      rack_env?(:test) && pegasus_hostname == 'test.code.org'
+      rack_env?(:test) && dashboard_hostname == 'test-studio.code.org'
     end
 
     # Identify whether we are executing within a web application server as most of our Ruby classes and modules

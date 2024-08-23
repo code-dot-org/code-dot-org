@@ -1,9 +1,0 @@
-name 'CSA U2L9-L4_2023'
-display_name 'Skill Building: Mutator Methods'
-description 'Write a mutator method in a class to change the value assigned to its instance variable.'
-
-sublevels
-level 'CSA U2L9-L4a_2023'
-level 'CSA U2L9-L4b_2023'
-level 'CSA U2L9-L4c_2023'
-level 'CSA U2L9-L4d_2023'

@@ -1,7 +1,0 @@
-name 'courseF_variables2_predict_multi2022'
-question 'Make a prediction: What will happen after typing a number into the prompt?'
-wrong 'The program will print whatever number is typed.', feedback: 'Incorrect. The number is stored in the variable and used to create carrot sprites.'
-wrong 'The bunny sprite will say whatever number is typed.', feedback: 'Incorrect. The number is stored in the variable and used to create carrot sprites.'
-right 'The program will make that many new carrot sprites.', feedback: 'Correct! The number of sprites made is the number stored in the variable.'
-wrong 'Nothing will happen because `count` is not a number.', feedback: 'Incorrect. A number is stored in the variable and used to create carrot sprites.'
-allow_multiple_attempts false

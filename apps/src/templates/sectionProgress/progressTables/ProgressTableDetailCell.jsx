@@ -2,7 +2,7 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import {
   BubbleSize,
   getBubbleUrl,
@@ -35,7 +35,7 @@ export default class ProgressTableDetailCell extends React.Component {
   }
 
   recordBubbleClick(levelId) {
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'teacher_dashboard_actions',
         study_group: 'progress',

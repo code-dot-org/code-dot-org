@@ -1,5 +1,0 @@
-{
-  "key": "nhl-teams",
-  "name": "NHL Teams",
-  "content": "Description: data about all current NHL teams, as of the 2020 season.\r\n\r\nSource: [NHL](https://www.nhl.com/info/teams)\r\n\r\nColumns:\r\n\r\n* Conference (string): whether the team is in the Eastern or Western NHL conference\r\n* Division (string): what division the team is in, such as Metropolitan or Atlantic\r\n* Team (string): name of the team\r\n* City (string): city and state the team is located in\r\n* Arena (string): name of the arena the team plays home games in\r\n* Capacity (numerical): how many seats the arena holds for attendees\r\n* Joined (numerical): what year that team officially joined the NHL\r\n* General manager (string): name of that team's General Manager\r\n* Head coach (string): name of that team's head coach\r\n* Captain (string): name of that team's player captain\r\n* Logo (link): a link to an image of the team's logo\r\n\r\n\r\n\r\n\r\n"
-}

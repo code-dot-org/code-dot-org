@@ -1,5 +1,0 @@
-{
-  "key": "american-ninja-warrior-obstacles",
-  "name": "American Ninja Warrior Obstacles",
-  "content": "Description: list of all American Ninja Warrior Obstacles in Seasons 1-10\r\n\r\n[Source](https://data.world/ninja/anw-obstacle-history )\r\n\r\nProcessing: data was already in a clean format, a few column titles were changed\r\n\r\nColumns:\r\n\r\n* Season (numerical): what season the obstacle appeared in\r\n* Location (string): city or region of the season\r\n* Round/Stage (string): round or stage that the obstacle appeared in\r\n* Obstacle Name (string): official name of the obstacle\r\n* Order (numerical): the order the obstacle appeared in during the challenge"
-}

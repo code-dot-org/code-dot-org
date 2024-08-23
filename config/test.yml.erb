@@ -13,8 +13,6 @@ imm_reader_client_id:     '92ef2120-f523-41fe-a995-f9720bf70b81'
 <% if ci_test || !chef_managed -%>
 <%= clear_secrets %>
 
-dashboard_honeybadger_api_key: '00000000'
-pegasus_honeybadger_api_key:   '00000000'
 google_safe_browsing_key: fake_api_key
 pusher_app_id:             fake_app_id
 pusher_application_key:    fake_application_key
@@ -50,18 +48,6 @@ disable_s3_image_uploads: true
 ai_proxy_origin:
 
 openai_evaluate_rubric_api_key: 'stub-api-key'
-
-# Statsig API keys
-# The only type of test environment we enable Statsig is the managed test server
-# (`test.code.org / test-studio.code.org`) and only in Ruby code executing within
-# the web application server.
-<% if running_web_application? && test_system? -%>
-statsig_server_secret_key: !Secret
-statsig_api_client_key: !Secret
-<% else %>
-statsig_server_secret_key: 'secret-fake-key'
-statsig_api_client_key: 'client-fake-key'
-<% end -%>
 
 # Enables DCDO settings via cookies
 use_cookie_dcdo: true

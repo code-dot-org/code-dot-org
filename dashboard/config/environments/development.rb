@@ -16,9 +16,8 @@ Dashboard::Application.configure do
 
   # Make sure to support our custom localhost-shadowing subdomains. See
   # https://guides.rubyonrails.org/configuring.html#configuring-middleware
+  config.hosts << "localhost"
   config.hosts << "localhost-studio.code.org"
-  config.hosts << "localhost.code.org"
-  config.hosts << "localhost.hourofcode.com"
   config.hosts << "localhost.codeprojects.org"
 
   # Do not eager load code on boot.
@@ -30,12 +29,12 @@ Dashboard::Application.configure do
   # Show full error reports
   config.consider_all_requests_local = true
 
-  config.action_mailer.delivery_method = Poste2::DeliveryMethod
-
   # if you don't want to send mail in development. Messages will be logged in
   # development.log if you want to look at them
   #config.action_mailer.perform_deliveries = false
   #config.action_mailer.raise_delivery_errors = false
+  log_path = ENV['LOG_PATH'] || "./log"
+  config.paths['log'] = "#{log_path}/development.log"
 
   # If you want to use mailcatcher, specify `use_mailcatcher: true` in locals.yml.
   if CDO.use_mailcatcher

@@ -1,5 +1,0 @@
-name 'csd-post-survey-encourage-teacher-2021'
-question "Did a teacher at school encourage you to take this class?"
-right 'Yes'
-right 'No'
-allow_multiple_attempts true

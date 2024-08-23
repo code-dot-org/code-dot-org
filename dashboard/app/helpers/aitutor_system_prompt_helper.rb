@@ -72,7 +72,7 @@ module AitutorSystemPromptHelper
     if level_id
       level = begin Level.find(level_id)
       rescue ActiveRecord::RecordNotFound
-        Honeybadger.notify(exception,
+        Harness.error_notify(exception,
             error_message: 'Invalid level_id in AI Tutor system prompt helper',
             context: {
               level_id: level_id,
@@ -89,7 +89,7 @@ module AitutorSystemPromptHelper
     if unit_id
       unit = begin Unit.find(unit_id)
       rescue ActiveRecord::RecordNotFound
-        Honeybadger.notify(exception,
+        Harness.error_notify(exception,
             error_message: 'Invalid unit_id in AI Tutor system prompt helper',
             context: {
               unit_id: unit_id,

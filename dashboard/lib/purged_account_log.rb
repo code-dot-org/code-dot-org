@@ -1,4 +1,3 @@
-require 'cdo/aws/s3'
 
 class PurgedAccountLog
   VALID_REASONS = [

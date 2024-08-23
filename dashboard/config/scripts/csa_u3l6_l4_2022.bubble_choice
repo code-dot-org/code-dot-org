@@ -1,9 +1,0 @@
-name 'CSA U3L6-L4_2022'
-display_name 'Using Static Variables'
-description 'Use a static variable to declare and initialize a shared value for different types of objects.'
-
-sublevels
-level 'CSA U3L6-L4a_2022'
-level 'CSA U3L6-L4b_2022'
-level 'CSA U3L6-L4c_2022'
-level 'CSA U3L6-L4d_2022'

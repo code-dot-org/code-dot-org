@@ -1,11 +1,12 @@
 # Add your own tasks in files placed in lib/tasks ending in .rake,
 # for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
 
+require_relative '../harnessless_shims'
 require File.expand_path('../config/application', __FILE__)
 
 Dashboard::Application.load_tasks
 
 namespace :dashboard do
-  task setup_db: ['db:setup_or_migrate', 'seed:default'] do
+  task setup_db: ['db:setup_or_migrate', 'seed:quick'] do
   end
 end

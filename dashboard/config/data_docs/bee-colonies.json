@@ -1,5 +1,0 @@
-{
-  "key": "bee-colonies",
-  "name": "Bee Colonies",
-  "content": "Description: information on various bee colonies in the US, their populations, and their losses or renovations within.\r\n\r\n[Source](https://github.com/rfordatascience/tidytuesday/tree/master/data/2022/2022-01-11)\r\n\r\nColumns:\r\n\r\n* Year (numerical): year of analysis for that colony cluster\r\n* Months (string): span of months in that given year in which data was collected\r\n* State (string): US state in which colony data was collected\r\n* Colony max (numerical): maximum amount of observed bee colonies in that cluster\r\n* Colony lost (numerical): amount of bee colonies lost in that cluster\r\n* Colony added (numerical): amount of bee colonies added within that timespan\r\n* Colony renovation (numerical): amount of colonies renovated by USDA scientists\r\n* Colony renovation pct (numerical): percentage of colonies in that cluster which were renovated"
-}

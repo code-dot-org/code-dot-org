@@ -68,14 +68,14 @@ class ApplicationJobTest < ActiveJob::TestCase
     TestableJob.perform_now
   end
 
-  test 'after_enqueue notifies Honeybadger and continues upon error' do
+  test 'after_enqueue notifies and continues upon error' do
     Cdo::Metrics.stubs(:push)
     Cdo::Metrics.stubs(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
       includes_metrics(PendingJobCount: anything)
     ).raises('An error that should be squashed')
 
-    Honeybadger.expects(:notify).once
+    Harness.expects(:error_notify).once
 
     begin
       TestableJob.perform_later
@@ -84,7 +84,7 @@ class ApplicationJobTest < ActiveJob::TestCase
     end
   end
 
-  test 'before_perform notifies Honeybadger and continues upon error' do
+  test 'before_perform notifies and continues upon error' do
     Cdo::Metrics.stubs(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
       includes_metrics(WaitTime: anything)
@@ -100,7 +100,7 @@ class ApplicationJobTest < ActiveJob::TestCase
       includes_metrics(ExecutionTime: anything, TotalTime: anything)
     )
 
-    Honeybadger.expects(:notify).once
+    Harness.expects(:error_notify).once
 
     perform_enqueued_jobs do
       TestableJob.perform_later
@@ -109,7 +109,7 @@ class ApplicationJobTest < ActiveJob::TestCase
     end
   end
 
-  test 'after_perform notifies Honeybadger and continues upon error' do
+  test 'after_perform notifies and continues upon error' do
     Cdo::Metrics.stubs(:push).with(
       ApplicationJob::METRICS_NAMESPACE,
       includes_metrics(ExecutionTime: anything, TotalTime: anything)
@@ -125,7 +125,7 @@ class ApplicationJobTest < ActiveJob::TestCase
       includes_metrics(WaitTime: anything)
     )
 
-    Honeybadger.expects(:notify).once
+    Harness.expects(:error_notify).once
 
     perform_enqueued_jobs do
       TestableJob.perform_later

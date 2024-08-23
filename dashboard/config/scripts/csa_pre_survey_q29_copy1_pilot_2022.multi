@@ -1,6 +1,0 @@
-name 'CSA Pre-Survey q29_copy1_pilot-2022'
-question 'Did someone else at school encourage you to take this class?'
-
-right 'Yes'
-right 'No'
-allow_multiple_attempts true

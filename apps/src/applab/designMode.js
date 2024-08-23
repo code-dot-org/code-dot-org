@@ -16,7 +16,7 @@ import * as assetPrefix from '../assetManagement/assetPrefix';
 import {ImageMode} from '../code-studio/components/AssetManager';
 import project from '../code-studio/initApp/project';
 import {KeyCodes, NOTIFICATION_ALERT_TYPE} from '../constants';
-import firehoseClient from '../lib/util/firehose';
+import harness from '../lib/util/harness';
 import logToCloud from '../logToCloud';
 import {getStore} from '../redux';
 import {singleton as studioApp} from '../StudioApp';
@@ -625,7 +625,7 @@ designMode.onDuplicate = function (element, prevThemeName, event) {
     return elementUtils.getPrefixedElementById(newScreenId);
   }
 
-  firehoseClient.putRecord({
+  harness.trackAnalytics({
     study: FIREHOSE_STUDY,
     study_group: FIREHOSE_GROUP,
     event: 'duplicate_element',
@@ -702,7 +702,7 @@ designMode.hasCustomizedThemeProperties = function (element) {
 var batchChangeId = 1;
 
 designMode.onRestoreThemeDefaults = function (element) {
-  firehoseClient.putRecord({
+  harness.trackAnalytics({
     study: FIREHOSE_STUDY,
     study_group: FIREHOSE_GROUP,
     event: 'restore_theme_defaults',
@@ -844,7 +844,7 @@ designMode.changeThemeForScreen = function (screenElement, themeValue) {
 };
 
 function duplicateScreen(element) {
-  firehoseClient.putRecord({
+  harness.trackAnalytics({
     study: FIREHOSE_STUDY,
     study_group: FIREHOSE_GROUP,
     event: 'duplicate_screen',
@@ -906,7 +906,7 @@ function duplicateScreen(element) {
 }
 
 designMode.onCopyElementToScreen = function (element, destScreen) {
-  firehoseClient.putRecord({
+  harness.trackAnalytics({
     study: FIREHOSE_STUDY,
     study_group: FIREHOSE_GROUP,
     event: 'copy_to_screen',
@@ -962,7 +962,7 @@ designMode.onDeletePropertiesButton = function (element, event) {
 };
 
 function deleteElement(element) {
-  firehoseClient.putRecord({
+  harness.trackAnalytics({
     study: FIREHOSE_STUDY,
     study_group: FIREHOSE_GROUP,
     event: 'delete_element',

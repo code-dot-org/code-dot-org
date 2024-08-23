@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {marketing} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import BaseDialog from './BaseDialog';
@@ -59,7 +59,7 @@ class FallbackPlayerCaptionDialog extends Component {
         <div style={styles.dialogLinkContainer}>
           <a
             style={styles.dialogLink}
-            href={pegasus('/educate/it')}
+            href={marketing('/educate/it')}
             target="_blank"
             rel="noopener noreferrer"
           >

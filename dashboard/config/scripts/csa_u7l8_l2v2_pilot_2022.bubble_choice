@@ -1,9 +1,0 @@
-name 'CSA U7L8-L2v2_pilot-2022'
-display_name 'Converting Iterative Algorithms to Recursion'
-description 'Translate iterative algorithms to recursive algorithms using the console, The Neighborhood, or The Theater.'
-
-sublevels
-level 'CSA U7L8-L2a_pilot-2022'
-level 'CSA U7L8-L2b_pilot-2022'
-level 'CSA U7L8-L2c_pilot-2022'
-level 'CSA U7L8-L2d_pilot-2022'

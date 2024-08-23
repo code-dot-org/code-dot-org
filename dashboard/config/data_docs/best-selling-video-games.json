@@ -1,5 +1,0 @@
-{
-  "key": "best-selling-video-games",
-  "name": "Best Selling Video Games",
-  "content": "Description: data about the top 50 best selling video game titles, as of June 2020.\r\n\r\nSource: [Wikipedia and various sources within, see bottom of article](https://en.wikipedia.org/wiki/List_of_best-selling_video_games)\r\n\r\nColumns:\r\n\r\n* Title (string): title of the video game\r\n* Sales (numerical): how many copies of that game were sold\r\n* Platforms (string): what platform(s) or console(s) that game was released on, such as PC or Xbox\r\n* Initial release date (string): the date on which that game title was originally released to the public\r\n* Developer (string): name of the developer(s) who created the game\r\n* Publisher (string): name of the publisher(s) who published the game"
-}

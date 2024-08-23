@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {marketing} from '@cdo/apps/lib/util/urlHelpers';
 import ResourceCard from '@cdo/apps/templates/studioHomepages/ResourceCard';
 import ResourceCardResponsiveContainer from '@cdo/apps/templates/studioHomepages/ResourceCardResponsiveContainer';
 import i18n from '@cdo/locale';
@@ -34,7 +34,7 @@ export default class MiddleHighResourceCards extends Component {
           <ResourceCard
             description={card.description}
             key={card.title}
-            link={pegasus(card.link)}
+            link={marketing(card.link)}
             title={card.title}
             buttonText={card.buttonText}
           />

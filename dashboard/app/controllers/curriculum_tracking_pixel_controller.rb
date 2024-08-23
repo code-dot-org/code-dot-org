@@ -1,4 +1,4 @@
-require 'cdo/firehose'
+
 
 class CurriculumTrackingPixelController < ApplicationController
   STUDY_NAME = 'curriculum-builder-page-views'

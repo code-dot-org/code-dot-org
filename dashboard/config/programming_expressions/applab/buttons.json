@@ -1,8 +1,0 @@
-{
-  "key": "buttons",
-  "name": "button(L/R)",
-  "category": "Circuit",
-  "category_key": "circuit",
-  "content": "<img src=\"https://cdo-curriculum.s3.amazonaws.com/media/uploads/cp_buttons.png\" alt=\"buttons\" style=\"float: right; margin: 20px; width: 300px;\">\n\n`buttonL` and `buttonR` are objects representing the two pushbuttons on the Circuit Playground. Internally `buttonL` is connected to pin 4 and `buttonR` is connected to pin 19.\n\n### Properties and Methods\n\n* [`buttonL.isPressed`(#f78183)](/docs/applab/isPressed/) - Boolean property, `true` is the button is being pushed down, otherwise `false`\n* [`buttonL.holdtime`(#f78183)](/docs/applab/holdtime/) - Number of milliseconds for button to be held down before \"hold\" event is fired\n\n### Events\n\n* \"press\" - Fired when button is pressed down and then released\n* \"down\" - Fired when button is pressed down\n* \"up\" - Fired when button is released\n* \"hold\" - Fired when button has been held down for duration set by `button.holdtime`",
-  "syntax": "buttons"
-}

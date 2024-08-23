@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import styleConstants from '@cdo/apps/styleConstants';
 import ToggleGroup from '@cdo/apps/templates/ToggleGroup';
 import color from '@cdo/apps/util/color';
@@ -54,7 +54,7 @@ class P5LabVisualizationHeader extends React.Component {
         Blockly.DropDownDiv?.hide();
       }
 
-      firehoseClient.putRecord({
+      harness.trackAnalytics({
         study: 'animation-library',
         study_group: 'control-2020',
         event: 'tab-click',

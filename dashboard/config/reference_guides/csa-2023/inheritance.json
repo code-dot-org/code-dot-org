@@ -1,9 +1,0 @@
-{
-  "key": "inheritance",
-  "course_version_key": "2023",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "classes-and-objects",
-  "display_name": "Inheritance",
-  "content": "## What is inheritance?\n\nInheritance is an important principle of object-oriented programming. With inheritance, a **subclass** (also called a *child class*) can inherit the attributes and behaviors of a **superclass** (also called a *parent class*).\n\n## How do I create a subclass?\n\nUse the `extends`(#e7e8ea) keyword to indicate that the class is a subclass and the superclass it inherits from.\n\n```\npublic class NameOfSubclass extends NameOfSuperclass {\n\n}\n```\n\nBe sure to replace `NameOfSubclass`(#e7e8ea) with the name of the class you are creating as the subclass and `NameOfSuperclass`(#e7e8ea) with the name of the superclass this class should inherit from.\n\n## What is the Object class?\n\nThe `Object`(#e7e8ea) class is the superclass of all other classes.",
-  "position": 3
-}

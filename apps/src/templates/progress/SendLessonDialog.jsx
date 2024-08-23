@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
@@ -42,7 +42,7 @@ class SendLessonDialog extends Component {
       this.setState({showLinkCopied: false});
     }, 4000);
 
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'copy-lesson-link-button',
         study_group: 'v0',

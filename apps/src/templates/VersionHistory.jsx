@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import project from '@cdo/apps/code-studio/initApp/project';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import i18n from '@cdo/locale';
 
 import {sources as sourcesApi, files as filesApi} from '../clientApi';
@@ -115,7 +115,7 @@ export default class VersionHistory extends React.Component {
 
   onClearPuzzle = () => {
     this.setState({showSpinner: true});
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'project-data-integrity',
         study_group: 'v4',

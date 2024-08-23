@@ -1,4 +1,3 @@
-require 'cdo/aws/metrics'
 
 #
 # Observing emails after they have been sent.

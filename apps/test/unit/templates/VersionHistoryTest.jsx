@@ -3,7 +3,7 @@ import React from 'react';
 
 import {sources as sourcesApi, files as filesApi} from '@cdo/apps/clientApi';
 import project from '@cdo/apps/code-studio/initApp/project';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import VersionHistory from '@cdo/apps/templates/VersionHistory';
 import VersionRow from '@cdo/apps/templates/VersionRow';
 import * as utils from '@cdo/apps/utils';
@@ -276,7 +276,7 @@ describe('VersionHistory', () => {
 
       afterEach(async () => {
         await wasCalled(utils.reload);
-        firehoseClient.putRecord.mockRestore();
+        harness.trackAnalytics.mockRestore();
       });
 
       it('immediately renders spinner', () => {
@@ -288,7 +288,7 @@ describe('VersionHistory', () => {
       });
 
       it('logs to firehose', () => {
-        expect(firehoseClient.putRecord).toHaveBeenCalledWith(
+        expect(harness.trackAnalytics).toHaveBeenCalledWith(
           {
             study: 'project-data-integrity',
             study_group: 'v4',

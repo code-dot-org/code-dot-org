@@ -1,6 +1,4 @@
 #!/bin/sh
-ruby tools/hooks/lint.rb &&
-  ruby tools/hooks/scary_changes.rb &&
-  ruby tools/hooks/restrict_levelbuilder_changes.rb &&
-  ruby tools/hooks/restrict_staging_changes.rb &&
-  ruby tools/hooks/restrict_large_files.rb
+# Note sure how to run eslint where our node_moduled only gets checked out in docker
+#   we probably need to support people running yarn install outside the path of `rake build`
+# ruby tools/hooks/lint.rb

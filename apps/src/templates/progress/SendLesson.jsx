@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import i18n from '@cdo/locale';
 
 import SendLessonDialog from './SendLessonDialog';
@@ -28,7 +28,7 @@ export default class SendLesson extends React.Component {
   openDialog() {
     this.setState({isDialogOpen: true});
 
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'send-to-students-button',
         study_group: 'v0',

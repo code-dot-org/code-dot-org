@@ -1,9 +1,0 @@
-{
-  "key": "overloaded-methods",
-  "course_version_key": "2025",
-  "course_offering_key": "csa",
-  "parent_reference_guide_key": "methods",
-  "display_name": "Overloaded Methods",
-  "content": "## What is an overloaded method?\n\n**Overloading** is defining two or more constructors or methods with the same name but different signatures.\n\n```\npublic static int calcSum(int num1, int num2)\n\npublic static int calcSum(int[] numbers)\n```\n",
-  "position": 8
-}

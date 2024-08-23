@@ -9,7 +9,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
 import i18n from '@cdo/locale';
 
-import firehoseClient from '../../../lib/util/firehose';
+import harness from '../../../lib/util/harness';
 
 import {CreateStandardsReportDialog} from './CreateStandardsReportDialog';
 import LessonStatusDialog from './LessonStatusDialog';
@@ -42,7 +42,7 @@ class StandardsViewHeaderButtons extends Component {
 
   openLessonStatusDialog = () => {
     this.setState({isLessonStatusDialogOpen: true});
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'teacher_dashboard_actions',
         study_group: 'standards',
@@ -67,7 +67,7 @@ class StandardsViewHeaderButtons extends Component {
 
   openCreateReportDialog = () => {
     this.setState({isCreateReportDialogOpen: true});
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'teacher_dashboard_actions',
         study_group: 'standards',
@@ -98,7 +98,7 @@ class StandardsViewHeaderButtons extends Component {
       teacherComment: this.state.comment,
       scriptId: this.props.scriptId,
     };
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'teacher_dashboard_actions',
         study_group: 'standards',

@@ -19,13 +19,6 @@ module TestRunUtils
     end
   end
 
-  def self.run_local_ui_test
-    feature_path = File.expand_path(ENV.fetch('feature', nil))
-    Dir.chdir(dashboard_dir('test/ui/')) do
-      RakeUtils.system "./runner.rb --verbose --pegasus=localhost.code.org:3000 --dashboard=localhost-studio.code.org:3000 --local --headed --feature=#{feature_path}"
-    end
-  end
-
   def self.run_blockly_core_tests
     Dir.chdir(blockly_core_dir) do
       ChatClient.wrap('blockly core tests') do
@@ -49,25 +42,6 @@ module TestRunUtils
   def self.run_dashboard_legacy_tests
     Dir.chdir(dashboard_legacy_dir) do
       ChatClient.wrap('dashboard legacy tests') do
-        RakeUtils.rake_stream_output 'test'
-      end
-    end
-  end
-
-  def self.run_pegasus_tests
-    Dir.chdir(pegasus_dir) do
-      ChatClient.wrap('pegasus tests') do
-        # Make sure the pegasus database is created before running pegasus
-        # tests. This might be pegasus_test (on development machines) or
-        # pegasus_unittest (during ci on the test machine).
-        #
-        # This does not enforce that all migrations have been applied.
-        # Strangely, during our CI process, this is taken care of by the
-        # prepare_dbs step in shared/rake/test.rake which works because shared
-        # tests run before pegasus tests.
-        with_rack_env(:test) do
-          RakeUtils.rake_stream_output 'db:ensure_created'
-        end
         RakeUtils.rake_stream_output 'test'
       end
     end

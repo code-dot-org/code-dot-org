@@ -1,7 +1,7 @@
 @import 'color';
 @import 'font';
 
-// This file is used only for Phase 1 style updates across the pages of dashboard and pegasus/code.org
+// This file is used only for Phase 1 style updates across the pages of dashboard
 // It should be imported to the pages that are listed in Phase 1 updates.
 // Therefore never mind if you meet !important anywhere in this file. It will be used only if there is no other option than to overwrite styles
 // in a way that updating styles of shared elements would only affect Phase1 pages.

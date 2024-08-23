@@ -1,9 +1,0 @@
-name 'CSA U2L10-L2_pilot-2022'
-display_name 'Using the this Keyword'
-description 'Use the `this` keyword as you complete the given classes.'
-
-sublevels
-level 'CSA U2L10-L2a_pilot-2022'
-level 'CSA U2L10-L2b_pilot-2022'
-level 'CSA U2L10-L2c_pilot-2022'
-level 'CSA U2L10-L2d_pilot-2022'

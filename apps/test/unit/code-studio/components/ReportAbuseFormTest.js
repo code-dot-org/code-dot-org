@@ -34,7 +34,7 @@ describe('ReportAbuseForm', () => {
     ).toEqual('123abc');
     expect(
       getChannelIdFromUrl(
-        'http://localhost-studio.code.org:3000/projects/weblab/123abc/edit'
+        'http://localhost:3000/projects/weblab/123abc/edit'
       )
     ).toEqual('123abc');
   });
@@ -47,7 +47,7 @@ describe('ReportAbuseForm', () => {
     ).toEqual('123abc');
     expect(
       getChannelIdFromUrl(
-        'http://localhost-studio.code.org:3000/report_abuse?channelId=123abc'
+        'http://localhost:3000/report_abuse?channelId=123abc'
       )
     ).toEqual('123abc');
   });

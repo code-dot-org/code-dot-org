@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {marketing} from '@cdo/apps/lib/util/urlHelpers';
 import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {getCurrentUnitData} from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
@@ -50,9 +50,9 @@ class StandardsView extends Component {
           <h3>{i18n.standardsGetInvolved()}</h3>
           <SafeMarkdown
             markdown={i18n.standardsGetInvolvedDetails({
-              adminLink: pegasus('/administrators'),
-              parentLink: pegasus('/help'),
-              teacherLink: pegasus('/teach'),
+              adminLink: marketing('/administrators'),
+              parentLink: marketing('/help'),
+              teacherLink: marketing('/teach'),
             })}
           />
         </div>

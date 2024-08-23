@@ -1,6 +1,6 @@
 require 'jwt'
 require 'securerandom' unless defined?(SecureRandom)
-require 'cdo/firehose'
+
 
 class JavabuilderSessionsController < ApplicationController
   include JavalabFilesHelper

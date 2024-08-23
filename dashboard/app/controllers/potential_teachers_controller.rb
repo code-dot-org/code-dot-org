@@ -10,7 +10,7 @@ class PotentialTeachersController < ApplicationController
         @potential_teacher.save!
         render json: {message: 'Potential teacher created successfully'}, status: :created
       rescue => exception
-        Honeybadger.notify(
+        Harness.error_notify(
           exception,
           error_message: "Error saving potential teacher information"
         )

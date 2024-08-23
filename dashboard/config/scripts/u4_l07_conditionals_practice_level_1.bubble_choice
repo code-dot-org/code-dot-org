@@ -1,8 +1,0 @@
-name 'U4_L07_Conditionals Practice_Level 1'
-display_name 'Conditionals Practice, Part 1'
-description 'Choose one of the apps below in order to practice the steps involved in its development. There is a sequence of four levels associated with this Practice activity. Once you choose the app that you want to develop, please select the same app on all of the following levels. If you want to change apps, please start back at level 1 in order to follow the development sequence.'
-
-sublevels
-level 'U4_L07_Conditionals Practice_Choice_2-1'
-level 'U4_L07_Conditionals Practice_Choice_1-1'
-level 'U4_L07_Conditionals Practice_Choice_3-1'

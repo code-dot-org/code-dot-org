@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {marketing} from '@cdo/apps/lib/util/urlHelpers';
 import color from '@cdo/apps/util/color';
 
 import styleConstants from '../../styleConstants';
@@ -349,7 +349,7 @@ export default class CensusTeacherBanner extends Component {
           <Button
             __useDeprecatedTag
             onClick={this.props.onPostpone}
-            href={pegasus(link)}
+            href={marketing(link)}
             target="_blank"
             rel="noopener noreferrer"
             style={styles.button}

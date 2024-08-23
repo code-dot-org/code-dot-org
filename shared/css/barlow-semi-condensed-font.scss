@@ -1,10 +1,6 @@
 /*
- * File is used in dashboard/app/assets/stylesheets/application.scss and pegasus/sites.v3/code.org/public/hourofcode/overview.haml
- * In order to add font to the Pegasus pages you should manually add this file to every page. In case you'll need
- * to add this font to many Pegasus page - you should probably think of other solution and not forget to update
-  the Pegasus pages that were using font already.
- */
-
+ * File is used in dashboard/app/assets/stylesheets/application.scss
+*/
 @font-face {
   font-family: 'Barlow Semi Condensed Semibold';
   font-style: normal;

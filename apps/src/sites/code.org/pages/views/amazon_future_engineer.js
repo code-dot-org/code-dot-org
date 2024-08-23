@@ -15,9 +15,3 @@ async function init() {
     $('.show-if-not-eligible').show();
   }
 }
-
-async function hasSchoolDonor(assertedDonorName) {
-  const response = await fetch('/dashboardapi/v1/users/me/school_donor_name');
-  const realDonorName = await response.json();
-  return realDonorName === assertedDonorName;
-}

@@ -13,7 +13,6 @@
 #  index_level_source_images_on_level_source_id  (level_source_id)
 #
 
-require 'cdo/aws/s3'
 require 'image_lib'
 require 'digest/md5'
 

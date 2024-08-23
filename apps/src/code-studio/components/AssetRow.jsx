@@ -2,7 +2,7 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
@@ -41,7 +41,7 @@ export default class AssetRow extends React.Component {
    */
   confirmDelete = () => {
     this.setState({action: 'confirming delete', actionText: ''});
-    firehoseClient.putRecord({
+    harness.trackAnalytics({
       study: 'delete-asset',
       study_group:
         this.props.onChoose && typeof this.props.onChoose === 'function'
@@ -80,7 +80,7 @@ export default class AssetRow extends React.Component {
 
   chooseAsset = () => {
     if (!this.props.imagePicker) {
-      firehoseClient.putRecord(
+      harness.trackAnalytics(
         {
           study: 'sound-dialog-2',
           study_group: 'library-tab',

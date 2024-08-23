@@ -1,7 +1,6 @@
 require 'cdo/activity_constants'
 
 class AdminUsersController < ApplicationController
-  include Pd::PageHelper
   before_action :authenticate_user!
   before_action :require_admin
 

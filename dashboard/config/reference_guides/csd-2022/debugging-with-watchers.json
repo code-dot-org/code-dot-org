@@ -1,9 +1,0 @@
-{
-  "key": "debugging-with-watchers",
-  "course_version_key": "2022",
-  "course_offering_key": "csd",
-  "parent_reference_guide_key": "game-lab",
-  "display_name": "Debugging with Watchers",
-  "content": "When trying to debug a program, it's useful to keep track of the current value of a variable or sprite property as the program runs. Sometimes you can use `console.log()` to quickly report the value of a variable, but that's not so useful when you want to track multiple variables, or variables that change often during your program.\n\nA _watcher_ is a debugging tool that, as its name implies, _watches_ your variables while the program runs, making it easier to see what they are doing.\n\n## Using Watchers\n\nWatchers are located in the Watch section of the debugging window, you may need to uncollapse this window to see it.\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/watchers.png)\n\n[diagram_nums]\n\n1. Here we created a variable `watch_me` with an initial value of 0. You can also use watchers to track sprite properties.\n2. Every time the draw loop runs we're incrementing `watch_me` by 1. This will cause it to change _30 times a second_.\n3. This is the watcher pane. At the top are all of the currently added watchers, and below is an area to add new watchers.\n4. As the program runs, this section continually updates to show the current value of the watched variable `watch_me`.\n\n[/diagram_nums]\n\n## Adding a Variable to Watch\n\n![](https://cdo-curriculum.s3.amazonaws.com/media/uploads/add_watcher.png)\n\nYou can add watchers for any variable or object property by typing the name of a variable in the box and clicking the blue \"add\" button. If your program isn't running or the variable hasn't yet been assigned a value, the watcher will report a value of `undefined`. This isn't an error, it just means that the variable hasn't yet been assigned a value.\n",
-  "position": 7
-}

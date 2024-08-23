@@ -1,4 +1,4 @@
-require 'cdo/honeybadger'
+
 
 class ProfanityController < ApplicationController
   include ProfanityHelper

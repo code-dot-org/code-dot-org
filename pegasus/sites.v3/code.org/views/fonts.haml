@@ -1,7 +1,0 @@
--if @header['critical_font'] && request.language == 'en'
-  -# Inline critical font into page, and lazy-load the full font set.
-  %script=view 'critical_font.js'
-  %link{rel:'stylesheet', type:'text/css', href:'/css/generated/fonts.css', media: 'none', onload: "if(media!='all')media='all'"}
--else
-  -# Load the full font set, blocking render until fully loaded.
-  %link{rel:'stylesheet', type:'text/css', href:'/css/generated/fonts.css'}

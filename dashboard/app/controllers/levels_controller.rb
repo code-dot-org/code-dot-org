@@ -1,6 +1,6 @@
 require "csv"
 require "naturally"
-require 'cdo/firehose'
+
 
 EMPTY_XML = '<xml></xml>'.freeze
 
@@ -666,27 +666,5 @@ class LevelsController < ApplicationController
       true
     )
     @level.properties['solution_image_url'] = level_source_image.s3_url if level_source_image
-  end
-
-  # Gathers data on top pain points for level builders by logging error details
-  # to Firehose / Redshift.
-  private def log_save_error(level)
-    FirehoseClient.instance.put_record(
-      :analysis,
-      {
-        study: 'level-save-error',
-        # Make it easy to count most frequent field name in which errors occur.
-        event: level.errors.keys.first,
-        # Level ids are different on levelbuilder, so use the level name. The
-        # level name can be joined on, against the levels table, to determine the
-        # level type or other level properties.
-        data_string: level.name,
-        data_json: {
-          errors: level.errors.to_h,
-          # User ids are different on levelbuilder, so use the email.
-          user_email: current_user.email,
-        }.to_json
-      }
-    )
   end
 end

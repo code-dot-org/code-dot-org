@@ -1,8 +1,0 @@
-name 'game_development_environment_choices_course-e_independent'
-display_name 'Sprite Type: Environment'
-description 'Choose a game to check out how environment type sprites block all of the others!'
-
-sublevels
-level 'game_mechanics_type_choice1_independent'
-level 'game_new3_environment_choice1_independent'
-level 'game_new3_environment_choice2_independent'

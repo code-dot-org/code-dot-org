@@ -29,7 +29,6 @@ class CleverSectionTest < ActiveSupport::TestCase
 
   test 'from clever service with family name import' do
     DCDO.stubs(:get).with('clever_family_name', false).returns(true)
-    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
 
     owner = create :teacher
     student_list = [

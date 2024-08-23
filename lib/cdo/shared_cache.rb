@@ -1,7 +1,7 @@
 require 'active_support'
 require 'active_support/cache'
 require 'active_support/core_ext/object/blank'
-require 'honeybadger/ruby'
+
 require 'dalli/elasticache'
 
 # Provide a long-lived, cross-instance shared cache.
@@ -21,7 +21,7 @@ module Cdo
           begin
             memcached_hosts = Dalli::ElastiCache.new(CDO.memcached_endpoint).servers
           rescue => exception # Notify if Auto Discovery fails.
-            Honeybadger.notify(exception)
+            Harness.error_notify(exception)
           end
         end
         return nil unless memcached_hosts.present?

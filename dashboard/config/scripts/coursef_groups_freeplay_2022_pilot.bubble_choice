@@ -1,9 +1,0 @@
-name 'courseF_groups_freeplay_2022_pilot'
-display_name 'Lots of Sprites - Free Play'
-description 'Now you can use what you\'ve learned to make whatever you want! Create an interactive program with lots of sprites!'
-
-sublevels
-level 'courseF_groups_freeplay_food_2022_pilot'
-level 'courseF_groups_freeplay_animals_2022_pilot'
-level 'courseF_groups_freeplay_retro_2022_pilot'
-level 'courseF_groups_freeplay_emoji_2022_pilot'

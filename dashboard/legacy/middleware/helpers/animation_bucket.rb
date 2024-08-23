@@ -1,4 +1,4 @@
-require 'cdo/firehose'
+
 
 #
 # AnimationBucket

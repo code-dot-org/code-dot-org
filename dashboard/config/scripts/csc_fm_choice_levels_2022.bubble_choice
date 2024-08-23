@@ -1,9 +1,0 @@
-name 'csc_fm_choice_levels_2022'
-display_name 'Debug our function machines!'
-description 'Things are getting strange. All our machines are buggy. Can you help us fix our machines? '
-
-sublevels
-level 'csc_fm_choice_levels_operation_incorrect_2022'
-level 'csc_fm_choice_levels_number_incorrect_2022'
-level 'csc_fm_choice_levels_function_name_incorrect_2022'
-level 'csc_fm_choice_levels_function_order_incorrect_2022'

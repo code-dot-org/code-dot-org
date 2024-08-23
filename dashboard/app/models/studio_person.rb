@@ -8,7 +8,7 @@
 #  emails     :string(255)
 #
 
-require 'cdo/firehose'
+
 
 class StudioPerson < ApplicationRecord
   has_many :users

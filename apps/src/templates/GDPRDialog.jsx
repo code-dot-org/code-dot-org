@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {marketing} from '@cdo/apps/lib/util/urlHelpers';
 import i18n from '@cdo/locale';
 
 import BaseDialog from './BaseDialog';
@@ -12,7 +12,7 @@ export default class GDPRDialog extends Component {
   static propTypes = {
     isDialogOpen: PropTypes.bool.isRequired,
     currentUserId: PropTypes.number.isRequired,
-    // If we're coming from pegasus, studioUrlPrefix is passed in as a prop and used to construct the logout url.
+    // If we're coming from marketing, studioUrlPrefix is passed in as a prop and used to construct the logout url.
     studioUrlPrefix: PropTypes.string,
   };
 
@@ -46,7 +46,7 @@ export default class GDPRDialog extends Component {
         <div>{i18n.gdprDialogDetailsUpdated()}</div>
         <div style={styles.instructions}>
           <a
-            href={pegasus('/privacy')}
+            href={marketing('/privacy')}
             className="ui-test-gdpr-dialog-privacy-link"
             target="_blank"
             rel="noopener noreferrer"

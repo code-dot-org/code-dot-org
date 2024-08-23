@@ -2,7 +2,6 @@ require 'aws-sdk-s3'
 require 'cdo/rack/request'
 require 'sinatra/base'
 require 'cdo/sinatra'
-require 'cdo/aws/s3'
 require 'cdo/png_utils'
 
 ANIMATION_LIBRARY_BUCKET = 'cdo-animation-library'.freeze

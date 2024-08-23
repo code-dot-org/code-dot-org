@@ -1,9 +1,0 @@
-name 'VPL-CSD-PILOT-S22-CSD HTML project Review_2021'
-display_name 'HTML Review'
-description 'Select a level below to practice debugging.'
-
-sublevels
-level 'CSD Web Dev bubble choice p tag 2_2021'
-level 'CSD Web Dev choice level p tag 3_2021'
-level 'CSD Web Dev choice level headings 1_2021'
-

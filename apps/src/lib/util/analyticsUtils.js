@@ -1,6 +1,6 @@
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import harness from '@cdo/apps/lib/util/harness';
 
 export const reportTeacherReviewingStudentNonLabLevel = (
   additionalPayload = {}
@@ -14,7 +14,7 @@ export const reportTeacherReviewingStudentNonLabLevel = (
     !appOptions.isCodeReviewing &&
     !!queryParams('user_id')
   ) {
-    analyticsReporter.sendEvent(EVENTS.TEACHER_VIEWING_STUDENT_WORK, {
+    harness.trackAnalytics(EVENTS.TEACHER_VIEWING_STUDENT_WORK, {
       ...additionalPayload,
       unitId: appOptions.serverScriptId,
       levelId: appOptions.serverLevelId,

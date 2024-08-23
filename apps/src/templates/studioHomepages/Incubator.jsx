@@ -21,7 +21,7 @@ class Incubator extends Component {
     };
   }
 
-  reportEvent(eventName, platform = PLATFORMS.STATSIG) {
+  reportEvent(eventName, platform = null) {
     analyticsReporter.sendEvent(
       eventName,
       {

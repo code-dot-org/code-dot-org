@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 
 import fontConstants from '@cdo/apps/fontConstants';
 import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import {KeepWorkingBadge} from '@cdo/apps/templates/progress/BubbleBadge';
 import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
@@ -120,7 +120,7 @@ function Comment({commentText, feedbackSeenByStudent, feedbackId}) {
 
   const expandComment = () => {
     setExpanded(true);
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'all-feedback',
         event: 'expand-feedback',

@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import i18n from '@cdo/locale';
 
 import progress from '../../progress';
@@ -41,7 +41,7 @@ export default class HeaderPopup extends Component {
       this.props.currentLevelId
     );
 
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'mini_view',
         event: 'mini_view_opened',

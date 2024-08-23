@@ -1,8 +1,0 @@
-%h3
-  The
-  %a{href: CDO.studio_url('/s/mc')} Minecraft Adventurer
-  tutorial is supported in the following languages
-%ul
-  - PegasusLanguages.get_minecraft_adventurer_languages.each do |properties|
-    - if properties[:minecraft_adventurer_b]
-      %li= properties[:crowdin_name_s]

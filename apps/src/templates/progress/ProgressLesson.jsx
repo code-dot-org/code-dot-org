@@ -7,7 +7,7 @@ import ReactTooltip from 'react-tooltip';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
@@ -72,7 +72,7 @@ class ProgressLesson extends React.Component {
     });
 
   onClickStudentLessonPlan = () => {
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'script_overview_actions',
         study_group: 'student_lesson_plan',

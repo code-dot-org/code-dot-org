@@ -1,5 +1,4 @@
-# functionality for student users (teachers do this via the
-# teacher-dashboard in pegasus and the api) to manipulate Followers,
+# functionality for student users (teachers do this via the api) to manipulate Followers,
 # which means joining and leaving Sections (see Follower and Section
 # models).
 

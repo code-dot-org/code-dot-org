@@ -1,9 +1,0 @@
-name 'CSA Post-Survey q44_pilot-2025'
-question 'Asked my peers to give me feedback on my work.'
-
-right 'Never'
-right 'A few classes'
-right 'About half the class sessions'
-right 'Many class sessions'
-right 'Once or more per class session'
-allow_multiple_attempts true

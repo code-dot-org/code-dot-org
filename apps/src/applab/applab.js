@@ -406,14 +406,6 @@ Applab.init = function (config) {
     throw 'App Lab requires Droplet';
   }
 
-  if (config.level.editBlocks) {
-    config.level.lastAttempt = '';
-    header.showLevelBuilderSaveButton(() => ({
-      start_blocks: Applab.getCode(),
-      start_html: Applab.getHtml(),
-      start_libraries: JSON.stringify(project.getProjectLibraries()),
-    }));
-  }
   Applab.channelId = config.channel;
 
   Applab.storage = initStorage(DATABLOCK_STORAGE, {

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import {marketing} from '@cdo/apps/lib/util/urlHelpers';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import {ParentLetterButtonMetricsCategory} from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
@@ -25,7 +25,7 @@ class ManageStudentsLoginInfo extends Component {
     loginType: PropTypes.oneOf(Object.values(SectionLoginType)).isRequired,
     studentData: PropTypes.array,
     // The prefix for the code studio url in the current environment,
-    // e.g. 'https://studio.code.org' or 'http://localhost-studio.code.org:3000'.
+    // e.g. 'https://studio.code.org' or 'http://localhost:3000'.
     studioUrlPrefix: PropTypes.string,
 
     // Provided by Redux
@@ -176,7 +176,7 @@ class ManageStudentsLoginInfo extends Component {
         <span id="uitest-privacy-link">
           <SafeMarkdown
             markdown={i18n.privacyLinkToPolicy({
-              privacyPolicyLink: pegasus('/privacy/student-privacy'),
+              privacyPolicyLink: marketing('/privacy/student-privacy'),
             })}
           />
         </span>

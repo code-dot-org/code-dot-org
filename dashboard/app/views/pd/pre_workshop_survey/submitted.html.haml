@@ -1,9 +1,0 @@
-- content_for(:head) do
-  = stylesheet_link_tag 'css/pd', media: 'all'
-
-#thanks
-  %h1 Thank you for submitting your pre-survey!
-  %h3
-    Your
-    = 'facilitators'.pluralize(@workshop.facilitators.count)
-    will review your responses and use them to help structure your upcoming workshop.

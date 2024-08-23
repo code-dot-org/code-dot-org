@@ -5,7 +5,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {SET_SCRIPT} from '@cdo/apps/redux/unitSelectionRedux';
 import {trySetLocalStorage, tryGetLocalStorage} from '@cdo/apps/utils';
 
-import firehoseClient from '../../lib/util/firehose';
+import harness from '../../lib/util/harness';
 import {lessonHasLevels} from '../progress/progressHelpers';
 
 import {ViewType} from './sectionProgressConstants';
@@ -280,7 +280,7 @@ export const jumpToLessonDetails = lessonOfInterest => {
     const state = getState();
     dispatch(setLessonOfInterest(lessonOfInterest));
     dispatch(setCurrentView(ViewType.DETAIL));
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'teacher_dashboard_actions',
         study_group: 'progress',

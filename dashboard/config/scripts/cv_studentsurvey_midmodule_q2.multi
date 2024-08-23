@@ -1,8 +1,0 @@
-name 'cv-studentsurvey-midmodule-q2'
-question 'How would you rate the difficulty of the material covered in the unit up to this point?'
-right 'Very easy'
-right 'Somewhat easy'
-right 'Just right'
-right 'Somewhat difficult'
-right 'Very difficult'
-allow_multiple_attempts true

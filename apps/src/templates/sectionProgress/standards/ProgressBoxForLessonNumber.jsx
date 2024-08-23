@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import firehoseClient from '../../../lib/util/firehose';
+import harness from '../../../lib/util/harness';
 import ProgressBox from '../ProgressBox';
 
 class ProgressBoxForLessonNumber extends Component {
@@ -17,7 +17,7 @@ class ProgressBoxForLessonNumber extends Component {
   };
 
   handleClick = () => {
-    firehoseClient.putRecord(
+    harness.trackAnalytics(
       {
         study: 'teacher_dashboard_actions',
         study_group: 'standards',

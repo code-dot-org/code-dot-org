@@ -1,9 +1,7 @@
 # Utility methods for generating certificate images.
-# Note: requires pegasus_dir to be in scope.
-require 'honeybadger/ruby'
+
 require 'rmagick'
 # needed for force_8859_to_utf8
-require 'cdo/pegasus/string'
 
 # The area in pixels under the "Certificate of Completion" on the certificate reserved for the name.
 CERT_NAME_AREA_WIDTH = 900
@@ -93,7 +91,7 @@ class CertificateImage
       text_overlay.destroy!
     rescue Magick::ImageMagickError => exception
       # We want to know what kinds of text we are failing to render.
-      Honeybadger.notify(
+      Harness.error_notify(
         exception,
         context: {
           text: text,
@@ -146,168 +144,8 @@ class CertificateImage
     string.strip
   end
 
-  # This method returns a newly-allocated Magick::Image object.
-  # NOTE: the caller MUST ensure image#destroy! is called on the returned image object to avoid memory leaks.
-  def self.create_course_certificate_image(name, course = nil, donor_name = nil, course_title = nil, default_random_donor: false)
-    name = ' ' if name.blank?
-
-    course ||= ScriptConstants::HOC_NAME
-
-    template_file = certificate_template_for(course)
-
-    path = pegasus_dir('sites.v3', 'code.org', 'public', 'images', template_file)
-    if prefilled_title_course?(course)
-      # only need to fill in student name
-      vertical_offset = course == '20-hour' ? -125 : -120
-      image = create_certificate_image2(path, name, y: vertical_offset)
-      donor_text_y_offset = 447
-    else
-      unit_or_unit_group = CurriculumHelper.find_matching_unit_or_unit_group(course)
-      image = Magick::Image.read(path).first
-
-      text_constants = {
-        'self_paced_pl_certificate.png': {
-          name: {
-            font_size: 62,
-            x_offset: 0,
-            y_offset: -248,
-            height: 70,
-            width: CERT_NAME_AREA_WIDTH,
-          },
-          two_titles: {
-            unit_group_height: 85,
-            unit_group_font_size: 62,
-            unit_group_x_offset: 0,
-            unit_group_y_offset: -57,
-            unit_height: 71,
-            unit_font_size: 57,
-            unit_x_offset: 0,
-            unit_y_offset: 36,
-          },
-          one_title: {
-            font_size: 62,
-            x_offset: 0,
-            y_offset: 0,
-            height: 171,
-          },
-          course_title_width: 1400,
-          donor_text_y_offset: 611,
-        },
-        'blank_certificate.png': {
-          name: {
-            font_size: 75,
-            x_offset: 0,
-            y_offset: -135,
-            height: CERT_NAME_AREA_HEIGHT,
-            width: CERT_NAME_AREA_WIDTH,
-          },
-          two_titles: {
-            unit_group_width: 1000,
-            unit_group_height: 50,
-            unit_group_font_size: 40,
-            unit_group_x_offset: 0,
-            unit_group_y_offset: 0,
-            unit_width: 800,
-            unit_height: 40,
-            unit_font_size: 32,
-            unit_x_offset: 0,
-            unit_y_offset: 47,
-          },
-          one_title: {
-            font_size: 47,
-            x_offset: 0,
-            y_offset: 15,
-            height: 60,
-            width: 1000,
-          },
-          donor_text_y_offset: 447,
-        },
-      }
-      cert_text_constants = text_constants[template_file.to_sym]
-
-      name_constants = cert_text_constants[:name]
-      apply_text(image, name, name_constants[:font_size], 'Helvetica bold', 'rgb(118,101,160)', name_constants[:x_offset], name_constants[:y_offset], name_constants[:width], name_constants[:height])
-
-      # When we have a unit within a unit_group, we want to display both the unit and unit_group titles.
-      # When we have a standalone unit or the unit group, we only display the localized title of unit_or_unit_group.
-      if unit_or_unit_group.is_a?(Unit) && unit_or_unit_group.unit_group.present?
-        unit = unit_or_unit_group
-        unit_group = unit.unit_group
-
-        course_titles_constants = cert_text_constants[:two_titles]
-
-        apply_text(
-          image,
-          unit_group.localized_title,
-          course_titles_constants[:unit_group_font_size],
-          'Helvetica bold',
-          'rgb(29,173,186)',
-          course_titles_constants[:unit_group_x_offset],
-          course_titles_constants[:unit_group_y_offset],
-          cert_text_constants[:course_title_width],
-          course_titles_constants[:unit_group_height]
-        )
-
-        apply_text(
-          image,
-          unit.localized_title,
-          course_titles_constants[:unit_font_size],
-          'Helvetica bold',
-          'rgb(29,173,186)',
-          course_titles_constants[:unit_x_offset],
-          course_titles_constants[:unit_y_offset],
-          cert_text_constants[:course_title_width],
-          course_titles_constants[:unit_height]
-        )
-      else
-        course_titles_constants = cert_text_constants[:one_title]
-        apply_text(
-          image,
-          course_title,
-          course_titles_constants[:font_size],
-          'Helvetica bold',
-          'rgb(29,173,186)',
-          course_titles_constants[:x_offset],
-          course_titles_constants[:y_offset],
-          cert_text_constants[:course_title_width],
-          course_titles_constants[:height]
-        )
-      end
-
-      if template_file == 'self_paced_pl_certificate.png'
-        total_minutes = unit_or_unit_group&.duration_in_minutes || 0
-        total_hours_to_half_hour = (total_minutes / 30).round / 2.0
-        # Round up to half an hour if less than 30 minutes.
-        total_hours_to_half_hour = 0.5 if total_hours_to_half_hour == 0
-        hours_string = format('%<duration>g', duration: total_hours_to_half_hour)
-        apply_text(image, hours_string, 30, 'Times bold', 'rgb(87,87,87)', -248, 124, 80, 30)
-      end
-      donor_text_y_offset = cert_text_constants[:donor_text_y_offset]
-    end
-
-    if default_random_donor && !donor_name
-      donor = DashboardCdoDonor.get_random_donor_by_weight
-      donor_name = donor[:name_s]
-    end
-
-    if donor_name
-      # Note certificate_sponsor_message is in both the Dashboard and Pegasus string files.
-      sponsor_message = I18n.t('certificate_sponsor_message', sponsor_name: donor_name)
-      # The area in pixels which will display the sponsor message.
-      sponsor_area_width = 1400
-      sponsor_area_height = 35
-      apply_text(image, sponsor_message, 18, 'Times bold', 'rgb(87,87,87)', 0, donor_text_y_offset, sponsor_area_width, sponsor_area_height)
-    end
-    image
-  end
-
   def self.accelerated_course?(course)
     [ScriptConstants::ACCELERATED_NAME, ScriptConstants::TWENTY_HOUR_NAME].include?(course)
-  end
-
-  # assume any unrecognized course name is a hoc course
-  def self.hoc_course?(course_name)
-    course_type(course_name) == CERTIFICATE_COURSE_TYPES[:HOC]
   end
 
   def self.course_type(course_name)

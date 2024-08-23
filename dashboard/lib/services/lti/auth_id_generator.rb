@@ -1,4 +1,4 @@
-require 'cdo/honeybadger'
+
 
 module Services
   module Lti
@@ -26,7 +26,7 @@ module Services
           # Only ONE client_id identifies an LTI Tool and is sent in the JWK audience claim.
           # TODO: Remove the error logging after the Pilot if the error is not seen. https://codedotorg.atlassian.net/browse/P20-787
           if id_token[:aud].length > 1
-            Honeybadger.notify(
+            Harness.error_notify(
               'Generate Authentication ID error',
               context: {
                 message: 'Too many client_ids in the audience claim',

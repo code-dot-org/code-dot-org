@@ -41,7 +41,6 @@ gem 'mysql2', '>= 0.4.1'
 
 gem 'dalli' # memcached
 gem 'dalli-elasticache' # ElastiCache Auto Discovery memcached nodes
-gem 'google_drive'
 gem 'jumphash'
 gem 'os'
 gem 'parallel'
@@ -102,8 +101,6 @@ group :development, :test do
   gem 'timecop'
 
   # For UI testing.
-  gem 'cucumber'
-  gem 'eyes_selenium', '3.18.4'
   gem 'fakefs', '~> 2.5.0', require: false
   gem 'minitest', '~> 5.15'
   gem 'minitest-around'
@@ -119,17 +116,10 @@ group :development, :test do
   gem 'spring', '~> 3.1.1'
   gem 'spring-commands-testunit'
   gem 'webdrivers', '~> 5.2'
-
-  # For pegasus PDF generation / merging testing.
-  gem 'parallel_tests'
-  gem 'pdf-reader', require: false
 end
 
 # Needed for unit testing, and also for /rails/mailers email previews.
 gem 'factory_bot_rails', '~> 6.2', group: [:development, :staging, :test, :adhoc]
-
-# For pegasus PDF generation.
-gem 'open_uri_redirections', require: false
 
 # Optimizes copy-on-write memory usage with GC before web-application fork.
 gem 'nakayoshi_fork'
@@ -186,10 +176,6 @@ gem 'nokogiri', '>= 1.10.0'
 
 gem 'highline', '~> 1.6.21'
 
-gem 'honeybadger', '>= 4.5.6' # error monitoring
-
-gem 'newrelic_rpm', '~> 6.14.0', group: [:staging, :development, :production] # perf/error/etc monitoring
-
 gem 'redcarpet', '~> 3.5.1'
 
 gem 'geocoder'
@@ -238,7 +224,6 @@ gem 'aws-sdk-core'
 gem 'aws-sdk-databasemigrationservice'
 gem 'aws-sdk-dynamodb'
 gem 'aws-sdk-ec2'
-gem 'aws-sdk-firehose'
 gem 'aws-sdk-glue'
 gem 'aws-sdk-rds'
 gem 'aws-sdk-route53'
@@ -275,17 +260,12 @@ gem 'oj', '~> 3.10'
 
 gem 'rest-client', '~> 2.0.1'
 
-# A rest-client dependency
-# This is the latest version that's installing successfully
-gem 'unf_ext', '0.0.7.2'
-
 # Generate SSL certificates.
 gem 'acmesmith', '~> 2.3.1'
 
 gem 'addressable'
 # bcrypt version specified due to "Invalid Hash" error in Linux
 gem 'bcrypt', '3.1.13'
-gem 'sshkit'
 gem 'validates_email_format_of'
 
 gem 'composite_primary_keys', '~> 13.0'
@@ -348,19 +328,13 @@ gem 'pry', '~> 0.14.0'
 # Google's Compact Language Detector
 gem 'cld'
 
-gem 'crowdin-api', '~> 1.10.0'
-
 gem "pycall", ">= 1.5.2"
 
 gem "delayed_job_active_record", "~> 4.1"
 
 gem 'rack-cors', '~> 2.0.1'
 
-# pin http to 5.0 or greater so that statsig does not pull in an older version.
-# older versions depend on http-parser which breaks some developer builds.
 gem 'http', '~> 5.0'
-
-gem 'statsig', '~> 1.33'
 
 gem 'mailgun-ruby', '~>1.2.14'
 gem 'mailjet', '~> 1.7.3'

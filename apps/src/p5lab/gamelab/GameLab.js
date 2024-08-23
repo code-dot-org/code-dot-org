@@ -7,7 +7,6 @@ import experiments from '@cdo/apps/util/experiments';
 import getScriptData, {hasScriptData} from '@cdo/apps/util/getScriptData';
 import msg from '@cdo/gamelab/locale';
 
-import {showLevelBuilderSaveButton} from '../../code-studio/header';
 import {P5LabType} from '../constants';
 import P5Lab from '../P5Lab';
 
@@ -27,13 +26,6 @@ export default class GameLab extends P5Lab {
   init(config) {
     if (!this.studioApp_) {
       throw new Error('GameLab requires a StudioApp');
-    }
-    if (config.level.editBlocks) {
-      config.level.lastAttempt = '';
-      showLevelBuilderSaveButton(() => ({
-        start_blocks: this.studioApp_.getCode(),
-        start_libraries: JSON.stringify(project.getProjectLibraries()),
-      }));
     }
 
     return super.init(config);

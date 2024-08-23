@@ -3237,28 +3237,6 @@ class UserTest < ActiveSupport::TestCase
     assert_nil follower.student_user.terms_version
   end
 
-  test 'assign_course_as_facilitator assigns course to facilitator' do
-    facilitator = create :facilitator
-    assert_creates Pd::CourseFacilitator do
-      facilitator.course_as_facilitator = Pd::Workshop::COURSE_CS_IN_A
-    end
-    assert facilitator.courses_as_facilitator.exists?(course: Pd::Workshop::COURSE_CS_IN_A)
-  end
-
-  test 'assign_course_as_facilitator to facilitator that already has course does not create facilitator_course' do
-    facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSD).facilitator
-    assert_does_not_create(Pd::CourseFacilitator) do
-      facilitator.course_as_facilitator = Pd::Workshop::COURSE_CSD
-    end
-  end
-
-  test 'delete_course_as_facilitator removes facilitator course' do
-    facilitator = create(:pd_course_facilitator, course: Pd::Workshop::COURSE_CSF).facilitator
-    assert_destroys(Pd::CourseFacilitator) do
-      facilitator.delete_course_as_facilitator Pd::Workshop::COURSE_CSF
-    end
-  end
-
   test 'account_age_days should return days since account creation' do
     student = create :student, created_at: DateTime.now - 10
     assert student.account_age_days == 10
@@ -3456,17 +3434,6 @@ class UserTest < ActiveSupport::TestCase
       User.find_or_create_teacher params, @admin
     end
     assert_equal "'invalid' does not appear to be a valid e-mail address", e.message
-  end
-
-  test 'deleting user deletes dependent pd applications' do
-    teacher = create :teacher
-    application = create :pd_teacher_application, user: teacher
-    assert_equal application.id, teacher.pd_applications.first.id
-
-    teacher.destroy
-
-    assert teacher.reload.deleted?
-    refute Pd::Application::TeacherApplication.exists?(application.id)
   end
 
   test 'deleting teacher deletes dependent sections and followers' do

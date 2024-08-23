@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import harness from '@cdo/apps/lib/util/harness';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
 import i18n from '@cdo/locale';
@@ -54,7 +54,7 @@ export default class UnitCalendarDialog extends Component {
         script_id: this.props.scriptId,
       }),
     };
-    firehoseClient.putRecord(record, {includeUserId: true});
+    harness.trackAnalytics(record, {includeUserId: true});
   };
 
   changeMinutes = e => {

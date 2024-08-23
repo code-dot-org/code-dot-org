@@ -56,7 +56,7 @@ import Alert from './legacySharedComponents/alert';
 import {isEditWhileRun} from './lib/tools/jsdebugger/redux';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
 import WireframeButtons from './lib/ui/WireframeButtons';
-import firehoseClient from './lib/util/firehose';
+import harness from './lib/util/harness';
 import {configCircuitPlayground, configMicrobit} from './maker/dropletConfig';
 import puzzleRatingUtils from './puzzleRatingUtils';
 import {getStore} from './redux';
@@ -2758,7 +2758,7 @@ StudioApp.prototype.enableBreakpoints = function () {
       // feasibility of repurposing line number clicks for this feature.
       const currentUser = getStore().getState().currentUser;
       const userType = currentUser && currentUser.userType;
-      firehoseClient.putRecord(
+      harness.trackAnalytics(
         {
           study: 'droplet-breakpoints',
           study_group: userType,

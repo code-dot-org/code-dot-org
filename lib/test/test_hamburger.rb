@@ -15,7 +15,6 @@ class HamburgerTest < Minitest::Test
     assert_equal visibility[:hamburger_class],          Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_teacher_options],     Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_student_options],     Hamburger::HIDE_ALWAYS
-    assert_equal visibility[:show_pegasus_options],     Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_help_options],        Hamburger::SHOW_MOBILE
   end
 
@@ -25,7 +24,6 @@ class HamburgerTest < Minitest::Test
     assert_equal visibility[:hamburger_class],          Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_teacher_options],     Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_student_options],     Hamburger::HIDE_ALWAYS
-    assert_equal visibility[:show_pegasus_options],     Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_help_options],        Hamburger::SHOW_MOBILE
   end
 
@@ -35,7 +33,6 @@ class HamburgerTest < Minitest::Test
     assert_equal visibility[:hamburger_class],          Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_teacher_options],     Hamburger::HIDE_ALWAYS
     assert_equal visibility[:show_student_options],     Hamburger::SHOW_ALWAYS
-    assert_equal visibility[:show_pegasus_options],     Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_help_options],        Hamburger::SHOW_MOBILE
   end
 
@@ -45,7 +42,6 @@ class HamburgerTest < Minitest::Test
     assert_equal visibility[:hamburger_class],          Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_teacher_options],     Hamburger::HIDE_ALWAYS
     assert_equal visibility[:show_student_options],     Hamburger::SHOW_ALWAYS
-    assert_equal visibility[:show_pegasus_options],     Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_help_options],        Hamburger::SHOW_MOBILE
   end
 
@@ -55,7 +51,6 @@ class HamburgerTest < Minitest::Test
     assert_equal visibility[:hamburger_class],          Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_teacher_options],     Hamburger::HIDE_ALWAYS
     assert_equal visibility[:show_student_options],     Hamburger::HIDE_ALWAYS
-    assert_equal visibility[:show_pegasus_options],     Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_help_options],        Hamburger::SHOW_SMALL_DESKTOP
   end
 
@@ -65,7 +60,6 @@ class HamburgerTest < Minitest::Test
     assert_equal visibility[:hamburger_class],          Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_teacher_options],     Hamburger::HIDE_ALWAYS
     assert_equal visibility[:show_student_options],     Hamburger::HIDE_ALWAYS
-    assert_equal visibility[:show_pegasus_options],     Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_help_options],        Hamburger::SHOW_SMALL_DESKTOP
   end
 
@@ -75,7 +69,6 @@ class HamburgerTest < Minitest::Test
     assert_equal visibility[:hamburger_class],          Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_teacher_options],     Hamburger::SHOW_MOBILE
     assert_equal visibility[:show_student_options],     Hamburger::HIDE_ALWAYS
-    assert_equal visibility[:show_pegasus_options],     Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_help_options],        Hamburger::SHOW_MOBILE
   end
 
@@ -85,7 +78,6 @@ class HamburgerTest < Minitest::Test
     assert_equal visibility[:hamburger_class],          Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_teacher_options],     Hamburger::SHOW_MOBILE
     assert_equal visibility[:show_student_options],     Hamburger::HIDE_ALWAYS
-    assert_equal visibility[:show_pegasus_options],     Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_help_options],        Hamburger::SHOW_MOBILE
   end
 
@@ -95,7 +87,6 @@ class HamburgerTest < Minitest::Test
     assert_equal visibility[:hamburger_class],          Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_teacher_options],     Hamburger::HIDE_ALWAYS
     assert_equal visibility[:show_student_options],     Hamburger::SHOW_MOBILE
-    assert_equal visibility[:show_pegasus_options],     Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_help_options],        Hamburger::SHOW_MOBILE
   end
 
@@ -105,7 +96,6 @@ class HamburgerTest < Minitest::Test
     assert_equal visibility[:hamburger_class],          Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_teacher_options],     Hamburger::HIDE_ALWAYS
     assert_equal visibility[:show_student_options],     Hamburger::SHOW_MOBILE
-    assert_equal visibility[:show_pegasus_options],     Hamburger::SHOW_ALWAYS
     assert_equal visibility[:show_help_options],        Hamburger::SHOW_MOBILE
   end
 
@@ -115,7 +105,6 @@ class HamburgerTest < Minitest::Test
     assert_equal visibility[:hamburger_class],          Hamburger::SHOW_SMALL_DESKTOP
     assert_equal visibility[:show_teacher_options],     Hamburger::HIDE_ALWAYS
     assert_equal visibility[:show_student_options],     Hamburger::HIDE_ALWAYS
-    assert_equal visibility[:show_pegasus_options],     Hamburger::SHOW_SMALL_DESKTOP
     assert_equal visibility[:show_help_options],        Hamburger::SHOW_SMALL_DESKTOP
   end
 
@@ -125,7 +114,6 @@ class HamburgerTest < Minitest::Test
     assert_equal visibility[:hamburger_class],          Hamburger::SHOW_SMALL_DESKTOP
     assert_equal visibility[:show_teacher_options],     Hamburger::HIDE_ALWAYS
     assert_equal visibility[:show_student_options],     Hamburger::HIDE_ALWAYS
-    assert_equal visibility[:show_pegasus_options],     Hamburger::SHOW_SMALL_DESKTOP
     assert_equal visibility[:show_help_options],        Hamburger::SHOW_SMALL_DESKTOP
   end
 

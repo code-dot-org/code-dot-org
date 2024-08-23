@@ -1,9 +1,0 @@
-name 'hello_games_skill_choices_b'
-display_name 'Level Up!'
-description 'Choose a new skill to learn!'
-
-sublevels
-level 'hello_games_sounds_b'
-level 'hello_games_reset_location_b'
-level 'hello_games_design_b'
-level 'hello_games_game_over_b'
