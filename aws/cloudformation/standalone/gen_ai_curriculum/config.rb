@@ -19,10 +19,10 @@ module Config
       model_id: SharedConstants::AI_CHAT_MODEL_IDS[:MISTRAL],
       model_name: "Mistral",
       instance_type: {
-        prod: "ml.g5.2xlarge",
+        prod: "ml.g5.4xlarge",
         test: "ml.g5.xlarge"
       },
-      min_num_instances: 1,
+      min_num_instances: 3,
       max_num_instances: 4,
       autoscaling_target_value: 150
     },
@@ -34,7 +34,7 @@ module Config
         prod: "ml.g5.xlarge",
         test: "ml.g5.xlarge"
       },
-      min_num_instances: 1,
+      min_num_instances: 2,
       max_num_instances: 2,
       autoscaling_target_value: 150
     },
@@ -43,10 +43,10 @@ module Config
       model_id: SharedConstants::AI_CHAT_MODEL_IDS[:PIRATE],
       model_name: "Pirate",
       instance_type: {
-        prod: "ml.g5.2xlarge",
+        prod: "ml.g5.xlarge",
         test: "ml.g5.xlarge"
       },
-      min_num_instances: 1,
+      min_num_instances: 2,
       max_num_instances: 2,
       autoscaling_target_value: 150
     },
@@ -58,7 +58,7 @@ module Config
         prod: "ml.g5.xlarge",
         test: "ml.g5.xlarge"
       },
-      min_num_instances: 1,
+      min_num_instances: 2,
       max_num_instances: 2,
       autoscaling_target_value: 150
     }
