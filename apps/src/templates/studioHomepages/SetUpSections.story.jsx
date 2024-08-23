@@ -4,7 +4,7 @@ import {Provider} from 'react-redux';
 
 import {reduxStore} from '@cdo/storybook/decorators';
 
-import SetUpSections from './SetUpSections';
+import SetUpSections, {UnconnectedSetUpSections} from './SetUpSections';
 
 export default {
   component: SetUpSections,
@@ -12,7 +12,7 @@ export default {
 
 const Template = args => (
   <Provider store={reduxStore()}>
-    <SetUpSections
+    <UnconnectedSetUpSections
       beginEditingSection={action('beginEditingSection')}
       asyncLoadComplete={true}
       {...args}
