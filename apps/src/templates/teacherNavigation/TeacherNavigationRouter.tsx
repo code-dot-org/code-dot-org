@@ -16,6 +16,7 @@ import SectionProjectsListWithData from '../projects/SectionProjectsListWithData
 import SectionAssessments from '../sectionAssessments/SectionAssessments';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
+import SectionsSetUpContainer from '../sectionsRefresh/SectionsSetUpContainer';
 import SectionLoginInfo from '../teacherDashboard/SectionLoginInfo';
 import StatsTableWithData from '../teacherDashboard/StatsTableWithData';
 import {sectionProviderName} from '../teacherDashboard/teacherSectionsRedux';
@@ -41,6 +42,13 @@ interface TeacherNavigationRouterProps {
   showAITutorTab: boolean;
 }
 
+interface Section {
+  id: number;
+  rosterProviderName: string;
+  anyStudentHasProgress: boolean;
+  name: string;
+}
+
 const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
   return <div className={styles.widthLockedPage}>{children}</div>;
 };
@@ -54,6 +62,21 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
     (state: {teacherSections: {selectedSectionId: number}}) =>
       state.teacherSections.selectedSectionId
   );
+
+  const selectedSection = useSelector(
+    (state: {
+      teacherSections: {
+        selectedSectionId: number | null;
+        sections: {[id: number]: Section};
+      };
+    }) =>
+      state.teacherSections.selectedSectionId
+        ? state.teacherSections.sections[
+            state.teacherSections.selectedSectionId
+          ]
+        : null
+  );
+
   const sectionName = useSelector(
     (state: {teacherSections: {selectedSectionName: string}}) =>
       state.teacherSections.selectedSectionName
@@ -239,13 +262,12 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
         />
         <Route
           path={TEACHER_NAVIGATION_PATHS.settings}
-          element={
-            <ElementOrEmptyPage
-              showNoStudents={studentCount === 0}
-              showNoCurriculumAssigned={!anyStudentHasProgress}
-              element={applyV1TeacherDashboardWidth(<TemporaryBlankPage />)}
+          element={applyV1TeacherDashboardWidth(
+            <SectionsSetUpContainer
+              isUsersFirstSection={false}
+              sectionToBeEdited={selectedSection}
             />
-          }
+          )}
         />
         {showAITutorTab && (
           <Route
