@@ -47,7 +47,7 @@ module AichatSagemakerHelper
 
   def self.request_sagemaker_chat_completion(inputs, selected_model_id)
     create_sagemaker_client.invoke_endpoint(
-      endpoint_name: selected_model_id, # get_endpoint_name(selected_model_id), # required
+      endpoint_name: selected_model_id, # required
       body: inputs.to_json, # required
       content_type: "application/json"
     )
