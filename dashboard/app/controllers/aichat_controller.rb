@@ -184,7 +184,7 @@ class AichatController < ApplicationController
         ROLES_FOR_MODEL.include?(message[:role])
     end
 
-    latest_assistant_response_from_sagemaker = AichatSagemakerHelper.get_sagemaker_assistant_response(params[:aichatModelCustomizations], messages_for_model, params[:newMessage])
+    latest_assistant_response_from_sagemaker = AichatSagemakerHelper.get_sagemaker_assistant_response(params[:aichatModelCustomizations], messages_for_model, params[:newMessage], params[:aichatContext][:currentLevelId])
 
     filter_result = ShareFiltering.find_profanity_failure(latest_assistant_response_from_sagemaker, locale)
     if filter_result&.type == ShareFiltering::FailureType::PROFANITY
