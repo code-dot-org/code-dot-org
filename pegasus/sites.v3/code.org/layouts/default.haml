@@ -3,7 +3,7 @@
 .wrapper
   = view :unsupported_browser
 
-  -if request.path.include?('/global/fa/')
+  -if request.path.include?('/global/fa')
     = view :farsiheader
   -elsif request.site == 'code.org'
     = view :header
@@ -84,7 +84,7 @@
       %br/
   .push
 
-- if request.path.include?('/global/fa/')
+- if request.path.include?('/global/fa')
   = view :farsifooter
 -elsif @header['theme'] == 'responsive' || 'responsive_full_width'
   .desktop-feature
