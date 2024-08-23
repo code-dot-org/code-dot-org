@@ -1,15 +1,12 @@
 import React, {useState, useCallback} from 'react';
-import {useSelector} from 'react-redux';
 
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
-import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 
 import {Visibility} from '../../types';
 
 import FieldLabel from './FieldLabel';
-import UpdateButton from './UpdateButton';
 import {isDisabled} from './utils';
 
 import styles from './retrieval-customization.module.scss';
@@ -21,11 +18,18 @@ const MultiInputCustomization: React.FunctionComponent<{
   tooltipText: string;
   addedItems: string[];
   visibility: Visibility;
-  onUpdateItems: (items: string[]) => void;
-}> = ({label, fieldId, tooltipText, addedItems, visibility, onUpdateItems}) => {
+  isReadOnly: boolean;
+  onUpdateItems: (updatedItems: string[]) => void;
+}> = ({
+  label,
+  fieldId,
+  tooltipText,
+  addedItems,
+  visibility,
+  isReadOnly,
+  onUpdateItems,
+}) => {
   const [newItem, setNewItem] = useState('');
-
-  const isReadOnly = useSelector(isReadOnlyWorkspace) || isDisabled(visibility);
 
   const onRemove = useCallback(
     (index: number) => {
@@ -43,63 +47,55 @@ const MultiInputCustomization: React.FunctionComponent<{
   }, [newItem, addedItems, fieldId, onUpdateItems]);
 
   return (
-    <div className={modelCustomizationStyles.verticalFlexContainer}>
-      <div className={modelCustomizationStyles.customizationContainer}>
-        {!isReadOnly && (
-          <>
-            <div className={modelCustomizationStyles.inputContainer}>
-              <FieldLabel
-                label={label}
-                id={fieldId}
-                tooltipText={tooltipText}
-              />
-              <textarea
-                id={fieldId}
-                onChange={event => setNewItem(event.target.value)}
-                value={newItem}
-              />
-            </div>
-            <div className={styles.addItemContainer}>
-              <Button
-                text="Add"
-                type="secondary"
-                color="gray"
-                size="s"
-                onClick={onAdd}
-                iconLeft={{iconName: 'plus'}}
-                disabled={!newItem}
-              />
-            </div>
-          </>
-        )}
-        <div className={styles.addedItemsHeaderContainer}>
-          <StrongText>Added</StrongText>
-        </div>
-        {addedItems.map((message, index) => {
-          return (
-            <div key={index} className={styles.itemContainer}>
-              <span>{message}</span>
-              {!isReadOnly && (
-                <button
-                  type="button"
-                  onClick={() => onRemove(index)}
-                  className={styles.removeItemButton}
-                  disabled={isDisabled(visibility)}
-                >
-                  <FontAwesomeV6Icon
-                    iconName="circle-xmark"
-                    className={styles.removeItemIcon}
-                  />
-                </button>
-              )}
-            </div>
-          );
-        })}
+    <>
+      {/* Do we want the inputs to disappear in both usages of this UI? And if so, we probably want to keep the header actually... */}
+      {!isReadOnly && (
+        <>
+          <div className={modelCustomizationStyles.inputContainer}>
+            <FieldLabel label={label} id={fieldId} tooltipText={tooltipText} />
+            <textarea
+              id={fieldId}
+              onChange={event => setNewItem(event.target.value)}
+              value={newItem}
+            />
+          </div>
+          <div className={styles.addItemContainer}>
+            <Button
+              text="Add"
+              type="secondary"
+              color="gray"
+              size="s"
+              onClick={onAdd}
+              iconLeft={{iconName: 'plus'}}
+              disabled={!newItem}
+            />
+          </div>
+        </>
+      )}
+      <div className={styles.addedItemsHeaderContainer}>
+        <StrongText>Added</StrongText>
       </div>
-      <div className={modelCustomizationStyles.footerButtonContainer}>
-        <UpdateButton isDisabledDefault={isReadOnly} />
-      </div>
-    </div>
+      {addedItems.map((message, index) => {
+        return (
+          <div key={index} className={styles.itemContainer}>
+            <span>{message}</span>
+            {!isReadOnly && (
+              <button
+                type="button"
+                onClick={() => onRemove(index)}
+                className={styles.removeItemButton}
+                disabled={isDisabled(visibility)}
+              >
+                <FontAwesomeV6Icon
+                  iconName="circle-xmark"
+                  className={styles.removeItemIcon}
+                />
+              </button>
+            )}
+          </div>
+        );
+      })}
+    </>
   );
 };
 

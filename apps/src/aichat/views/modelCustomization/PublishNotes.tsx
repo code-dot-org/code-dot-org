@@ -66,38 +66,46 @@ const PublishNotes: React.FunctionComponent = () => {
           const InputTag = getInputTag(property);
 
           return (
-            <div
-              className={modelCustomizationStyles.inputContainer}
-              key={property}
-            >
-              <FieldLabel
-                label={label}
-                id={property}
-                tooltipText={editTooltip}
-              />
+            <>
               {property === 'exampleTopics' && (
                 <ExampleTopicsInputs
+                  fieldLabel={label}
+                  fieldId={property}
+                  tooltipText={editTooltip}
                   topics={modelCardInfo.exampleTopics}
                   readOnly={isReadOnly}
+                  visibility={visibility}
                 />
               )}
-              {property !== 'exampleTopics' && property !== 'isPublished' && (
-                <InputTag
-                  id={property}
-                  type="text"
-                  disabled={isReadOnly}
-                  value={modelCardInfo[property]}
-                  onChange={event =>
-                    dispatch(
-                      setModelCardProperty({
-                        property: property,
-                        value: event.target.value,
-                      })
-                    )
-                  }
-                />
+              {property !== 'exampleTopics' && (
+                <div
+                  className={modelCustomizationStyles.inputContainer}
+                  key={property}
+                >
+                  <FieldLabel
+                    label={label}
+                    id={property}
+                    tooltipText={editTooltip}
+                  />
+                  {property !== 'isPublished' && (
+                    <InputTag
+                      id={property}
+                      type="text"
+                      disabled={isReadOnly}
+                      value={modelCardInfo[property]}
+                      onChange={event =>
+                        dispatch(
+                          setModelCardProperty({
+                            property: property,
+                            value: event.target.value,
+                          })
+                        )
+                      }
+                    />
+                  )}
+                </div>
               )}
-            </div>
+            </>
           );
         })}
       </div>
