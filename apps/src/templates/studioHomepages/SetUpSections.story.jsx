@@ -14,6 +14,7 @@ const Template = args => (
   <Provider store={reduxStore()}>
     <SetUpSections
       beginEditingSection={action('beginEditingSection')}
+      asyncLoadComplete={true}
       {...args}
     />
   </Provider>
