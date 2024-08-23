@@ -25,7 +25,8 @@ module AichatSagemakerHelper
     selected_model_id = aichat_model_customizations[:selectedModelId]
     # Add system prompt and retrieval contexts if available to inputs as part of instructions that will be sent to model.
     # Get level system prompt that will be prepended to student system prompt.
-    level_system_prompt = Level.find(level_id).properties["aichat_settings"]["levelSystemPrompt"]
+    level_properties = Level.find(level_id)&.properties
+    level_system_prompt = level_properties.dig('aichat_settings', 'levelSystemPrompt') unless level_properties.nil?
     instructions = get_instructions(aichat_model_customizations[:systemPrompt], level_system_prompt, aichat_model_customizations[:retrievalContexts])
     model_processor = get_model_processor(selected_model_id)
     inputs = model_processor.format_model_inputs(instructions, new_message, stored_messages)
