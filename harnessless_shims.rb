@@ -159,7 +159,7 @@ set_trace_func proc {|event, file, line, id, _binding, _classname|
       # Walk up the stack
       caller_locations.each do |location|
         path = location.path
-        if !path.start_with?("/usr/local") && !path.include?("/vendor/")
+        next unless !path.start_with?("/usr/local") && !path.include?("/vendor/")
         filtered_file = path
         filtered_line = location.lineno
         filtered_id = location.label

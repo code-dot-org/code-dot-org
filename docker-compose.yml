@@ -8,8 +8,8 @@ services:
     container_name: ruby_server
     platform: linux/amd64
     volumes:
-      - ${CURRICULUM_CONTENT_DIR:-../curriculum-content}:/curriculum-content
-      - ${LOCALE_CONTENT_DIR:-../default-locale-content}:/locale-content
+      - ${CURRICULUM_CONTENT_DIR:-../code-dot-org-curriculum}:/curriculum-content
+      - ${LOCALE_CONTENT_DIR:-../code-dot-org-locale}:/locale-content
       - .:/app
       # keeps local-run build artifacts from mixing with docker build artifacts
       - build_artifacts_node_modules:/app/apps/node_modules
