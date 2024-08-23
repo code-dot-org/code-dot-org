@@ -200,10 +200,12 @@ describe('LessonEditor', () => {
     expect(wrapper.find('ActivitySection').length, 'ActivitySection').to.equal(
       3
     );
-    const button = wrapper.find('.add-activity-section');
-    expect(button.length, 'button').to.equal(1);
-    button.simulate('mousedown');
+    const buttons = wrapper.find('.add-activity-section');
+    expect(buttons.length, 'button').to.equal(3);
+    const lastButton = wrapper.find('.add-activity-section').last();
+    lastButton.simulate('mousedown');
     expect(wrapper.find('ActivitySection').length).to.equal(4);
+    expect(wrapper.find('.add-activity-section').length).to.equal(4);
   });
 
   it('can save and keep editing', () => {

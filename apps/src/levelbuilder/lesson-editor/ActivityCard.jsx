@@ -45,10 +45,6 @@ class ActivityCard extends Component {
   };
 
   handleAddActivitySection = insertPosition => {
-    console.log('Adding activity section');
-    console.log(this.props.activity.position);
-    console.log(this.props.generateActivitySectionKey());
-    console.log(insertPosition);
     this.props.addActivitySection(
       this.props.activity.position,
       this.props.generateActivitySectionKey(),
