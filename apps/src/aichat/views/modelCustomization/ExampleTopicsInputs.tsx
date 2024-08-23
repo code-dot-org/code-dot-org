@@ -37,6 +37,7 @@ const ExampleTopicsInputs: React.FunctionComponent<{
       addedItems={topics}
       visibility={visibility}
       isReadOnly={readOnly}
+      hideInputsWhenReadOnly={false}
       onUpdateItems={onUpdateItems}
     />
   );

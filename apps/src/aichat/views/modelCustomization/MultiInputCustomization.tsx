@@ -19,6 +19,7 @@ const MultiInputCustomization: React.FunctionComponent<{
   addedItems: string[];
   visibility: Visibility;
   isReadOnly: boolean;
+  hideInputsWhenReadOnly: boolean;
   onUpdateItems: (updatedItems: string[]) => void;
 }> = ({
   label,
@@ -27,6 +28,7 @@ const MultiInputCustomization: React.FunctionComponent<{
   addedItems,
   visibility,
   isReadOnly,
+  hideInputsWhenReadOnly,
   onUpdateItems,
 }) => {
   const [newItem, setNewItem] = useState('');
@@ -48,8 +50,7 @@ const MultiInputCustomization: React.FunctionComponent<{
 
   return (
     <>
-      {/* Do we want the inputs to disappear in both usages of this UI? And if so, we probably want to keep the header actually... */}
-      {!isReadOnly && (
+      {(!isReadOnly || !hideInputsWhenReadOnly) && (
         <>
           <div className={modelCustomizationStyles.inputContainer}>
             <FieldLabel label={label} id={fieldId} tooltipText={tooltipText} />
@@ -57,6 +58,7 @@ const MultiInputCustomization: React.FunctionComponent<{
               id={fieldId}
               onChange={event => setNewItem(event.target.value)}
               value={newItem}
+              disabled={isReadOnly}
             />
           </div>
           <div className={styles.addItemContainer}>
@@ -67,7 +69,7 @@ const MultiInputCustomization: React.FunctionComponent<{
               size="s"
               onClick={onAdd}
               iconLeft={{iconName: 'plus'}}
-              disabled={!newItem}
+              disabled={!newItem || isReadOnly}
             />
           </div>
         </>

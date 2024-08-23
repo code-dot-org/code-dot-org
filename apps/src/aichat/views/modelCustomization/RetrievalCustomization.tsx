@@ -47,6 +47,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
           addedItems={retrievalContexts}
           visibility={visibility}
           isReadOnly={isReadOnly}
+          hideInputsWhenReadOnly={true}
           onUpdateItems={onUpdateItems}
         />
       </div>
