@@ -116,4 +116,48 @@ describe('FinishTeacherAccount', () => {
     fireEvent.click(emailOptInCheckbox);
     expect(sessionStorage.getItem(EMAIL_OPT_IN_SESSION_KEY)).toBe('false');
   });
+
+  it('finish teacher signup button starts disabled', () => {
+    renderDefault();
+
+    // Link will show as "null" for React Testing Library since the component is disabled
+    expect(
+      screen.queryByRole('link', {
+        name: locale.go_to_my_account(),
+      })
+    ).toBe(null);
+  });
+
+  it('leaving the displayName field empty shows error message and disabled button until display name is entered', () => {
+    renderDefault();
+    const displayNameInput = screen.getAllByDisplayValue('')[0];
+
+    // Error message doesn't show and button is disabled by default
+    expect(screen.queryByText(locale.display_name_error_message())).toBe(null);
+    expect(
+      screen.queryByRole('link', {
+        name: locale.go_to_my_account(),
+      })
+    ).toBe(null);
+
+    // Enter display name
+    fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
+
+    // Error does not show and button is enabled when display name is entered
+    expect(screen.queryByText(locale.display_name_error_message())).toBe(null);
+    screen.getByRole('link', {
+      name: locale.go_to_my_account(),
+    });
+
+    // Clear display name
+    fireEvent.change(displayNameInput, {target: {value: ''}});
+
+    // Error shows and button is disabled with empty display name
+    screen.getByText(locale.display_name_error_message());
+    expect(
+      screen.queryByRole('link', {
+        name: locale.go_to_my_account(),
+      })
+    ).toBe(null);
+  });
 });
