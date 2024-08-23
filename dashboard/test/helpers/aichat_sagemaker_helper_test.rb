@@ -17,12 +17,20 @@ class AichatSagemakerHelperTest < ActionView::TestCase
     ]
     @new_message = {role: 'user', chatMessageText: 'new message from user'}
     @level = Level.create({name: 'Aichat level', properties: {aichat_settings: {levelSystemPrompt: "Be safe."}}})
+    @level_without_level_system_prompt = Level.create({name: 'Aichat level without system prompt', properties: {aichat_settings: {}}})
   end
 
   test 'Testing format_inputs_for_sagemaker_request with Mistral base model' do
     base_model_customizations = @common_model_customizations.merge(selectedModelId: SharedConstants::AI_CHAT_MODEL_IDS[:MISTRAL])
     inputs = AichatSagemakerHelper.format_inputs_for_sagemaker_request(base_model_customizations, @stored_messages, @new_message, @level.id)
     expected_base_model_inputs = "<s>[INST]Be safe. test prompt test retrieval[/INST][INST]hello from user[/INST]assistant response</s>[INST]new message from user[/INST]"
+    assert_equal inputs[:inputs], expected_base_model_inputs
+  end
+
+  test 'Testing format_inputs_for_sagemaker_request with Mistral base model with no level system prompt' do
+    base_model_customizations = @common_model_customizations.merge(selectedModelId: SharedConstants::AI_CHAT_MODEL_IDS[:MISTRAL])
+    inputs = AichatSagemakerHelper.format_inputs_for_sagemaker_request(base_model_customizations, @stored_messages, @new_message, @level_without_level_system_prompt.id)
+    expected_base_model_inputs = "<s>[INST]test prompt test retrieval[/INST][INST]hello from user[/INST]assistant response</s>[INST]new message from user[/INST]"
     assert_equal inputs[:inputs], expected_base_model_inputs
   end
 
