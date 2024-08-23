@@ -64,7 +64,6 @@ module AichatSagemakerHelper
   end
 
   def self.get_sagemaker_assistant_response(aichat_model_customizations, stored_messages, new_message, level_id)
-    puts "level_id is #{level_id}"
     inputs = format_inputs_for_sagemaker_request(aichat_model_customizations, stored_messages, new_message, level_id)
     selected_model_id = aichat_model_customizations[:selectedModelId]
     sagemaker_response = request_sagemaker_chat_completion(inputs, selected_model_id)
