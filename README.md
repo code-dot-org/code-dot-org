@@ -9,8 +9,8 @@ Welcome! You've found the source code for [the Code.org website](https://code.or
 3. Open your browser to [http://localhost:3000/](http://localhost:3000/).
 
 To load our curriculum and locale data, you'll also need to check out these repositories:
-- [code-dot-org-curriculum](https://github.com/unlox775-code-dot-org/code-dot-org-curriculum-content)
-- [code-dot-org-locale](https://github.com/unlox775-code-dot-org/code-dot-org-locale-content)
+- [code-dot-org-curriculum](https://github.com/unlox775-code-dot-org/code-dot-org-curriculum)
+- [code-dot-org-locale](https://github.com/unlox775-code-dot-org/code-dot-org-locale)
 
 NOTE: if you'd like to run without docker, you can follow the instructions in [BUILD-STEPS.md](./BUILD-STEPS.md).
 
