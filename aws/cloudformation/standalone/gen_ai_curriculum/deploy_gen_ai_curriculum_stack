@@ -1,0 +1,141 @@
+#!/usr/bin/env ruby
+require 'aws-sdk-applicationautoscaling'
+require 'colorize'
+require 'optparse'
+require 'open3'
+require 'pycall'
+require_relative './config'
+
+def main
+  options = {}
+  OptionParser.new do |opts|
+    opts.banner = "Usage: ./deploy_gen_ai_curriculum_stack [options]"
+
+    opts.on("-e", "--environment ENVIRONMENT", String, "Stack environment (prod or test)") do |v|
+      options[:environment] = v
+    end
+
+    opts.on("-d", "--dry-run [FLAG]", TrueClass, "Dry run (create template only but don't deploy)") do |v|
+      options[:dry_run] = v.nil? ? true : v
+    end
+
+    opts.on("-v", "--image-uri-version", Numeric, "HuggingFace Image URI version") do |v|
+      options[:image_uri_version] = v
+    end
+
+    opts.on("-i", "--image-uri IMAGE_URI", String, "HuggingFace Image URI to use") do |v|
+      options[:image_uri] = v
+    end
+  end.parse!
+
+  # Prompt for environment if not provided
+  unless options[:environment]
+    print "Environment (prod or test): "
+    options[:environment] = gets.chomp
+  end
+
+  unless %w[prod test].include?(options[:environment])
+    puts "Error: Invalid environment '#{options[:environment]}'. Must be 'prod' or 'test'."
+    exit 1
+  end
+
+  # Prompt for dry-run if not provided
+  unless options.key?(:dry_run)
+    print "Dry-run (create template only)? (y/n): "
+    response = gets.chomp.downcase
+    options[:dry_run] = response == 'y'
+  end
+
+  unless options.key?(:image_uri)
+    unless options.key?(:image_uri_version)
+      print "HuggingFace Image URI version (blank for latest): "
+      options[:image_uri_version] = gets.chomp
+    end
+    puts "\nFetching HuggingFace Image URI..."
+    sagemaker = PyCall.import_module("sagemaker.huggingface")
+    image_uri = if options[:image_uri_version].empty?
+                  sagemaker.get_huggingface_llm_image_uri("huggingface")
+                else
+                  sagemaker.get_huggingface_llm_image_uri("huggingface", options[:image_uri_version])
+                end
+  end
+
+  puts "\nHuggingFace Image URI: " + image_uri.to_s.colorize(:light_cyan)
+  puts "Environment: " + (options[:environment]).to_s.colorize(:light_cyan)
+  puts "Dry-run mode: " + (options[:dry_run]).to_s.colorize(:light_cyan)
+
+  unless options[:dry_run]
+    puts "\nChecking autoscaling targets...\n"
+    Config::ENDPOINT_CONFIGS.each do |config|
+      deregister_auto_scaling(config[:model_id], options[:environment])
+    end
+  end
+
+  puts "\nTransforming ERB to YAML..."
+  ` erb -T - environment=#{options[:environment]} -r ./config.rb gen_ai_curriculum.yml.erb > gen_ai_curriculum.yml `
+  return unless $?&.exitstatus == 0
+  puts "Success!".colorize(:light_green)
+
+  if options[:dry_run]
+    puts "\nCreated Cloudformation template. Re-run this script with dry-run: false to deploy.".colorize(:light_green)
+    return
+  end
+
+  puts "\nDeploying stack..."
+  cmd = "aws cloudformation deploy " \
+    "--stack-name gen-ai-curriculum-#{options[:environment]} " \
+    "--template-file gen_ai_curriculum.yml " \
+    "--parameter-overrides Environment=#{options[:environment]} HuggingFaceImageUri=#{image_uri}"
+
+  puts "Running command: " + cmd.colorize(:light_cyan)
+  Open3.popen3 cmd do |_stdin, stdout, _stderr, _thread|
+    while (line = stdout.gets)
+      puts line
+    end
+  end
+  puts "Success!".colorize(:light_green)
+
+  puts "\nRemoving generated template..."
+  ` rm gen_ai_curriculum.yml `
+  puts "Done!".colorize(:light_green)
+rescue StandardError => exception
+  puts "Error #{exception.message}"
+end
+
+# There is currently no Cloudformation support for deregistering scalable targets.
+# Existing scalable targets need to be deregistered before registering new scalable
+# targets if the instance_type has changed. Otherwise, the stack update will fail.
+def deregister_auto_scaling(model_id, environment)
+  client = Aws::ApplicationAutoScaling::Client.new
+  resource_id = "endpoint/#{model_id}-#{environment}/variant/AllTraffic"
+  scalable_dimension = 'sagemaker:variant:DesiredInstanceCount'
+
+  puts "Checking for existing scalable targets for #{model_id}..."
+  targets = client.describe_scalable_targets(
+    {
+      service_namespace: 'sagemaker',
+      resource_ids: [resource_id],
+      scalable_dimension: scalable_dimension
+    }
+  )
+
+  if targets[:scalable_targets].empty?
+    puts "No scalable targets found for #{model_id}."
+    return
+  end
+
+  puts "Deregistering auto scaling for #{model_id}..."
+  client.deregister_scalable_target(
+    {
+      service_namespace: 'sagemaker',
+      resource_id: resource_id,
+      scalable_dimension: scalable_dimension
+    }
+  )
+rescue StandardError => exception
+  puts "Error deregistering scalable target #{exception}"
+  # Raise to stop the script
+  raise
+end
+
+main

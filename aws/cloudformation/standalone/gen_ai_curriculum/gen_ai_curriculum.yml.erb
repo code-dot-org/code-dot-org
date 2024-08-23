@@ -1,0 +1,83 @@
+# Gen AI Curriculum Resources
+# This template is manually deployed to create/update Gen AI Curriculum resources.
+# TODO:
+  # Fix hardcoded execution role ARN
+
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: SageMaker resources for Gen AI Curriculum.
+
+Parameters:
+  Environment:
+    Type: String
+    Default: "test"
+    Description: "Environment being deployed to (prod or test)"
+  HuggingFaceToken:
+    Type: String
+    Default: "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"
+    Description: "HuggingFace token required for deploying HuggingFace models."
+  HuggingFaceImageUri:
+    Type: String
+    Default: "763104351884.dkr.ecr.us-east-1.amazonaws.com/huggingface-pytorch-tgi-inference:2.3.0-tgi2.2.0-gpu-py310-cu121-ubuntu22.04-v2.0"
+    Description: "HuggingFace Image URI to use for the model."
+Resources:
+<% Config::ENDPOINT_CONFIGS.each do |config| %>
+  <%= config[:model_name] %>Model:
+    Type: AWS::SageMaker::Model
+    Properties:
+      ModelName: !Sub "<%= "#{config[:model_name]}-${Environment}-#{Time.now.to_i}" %>"
+      ExecutionRoleArn: !Sub "arn:aws:iam::${AWS::AccountId}:role/AmazonSageMaker-ExecutionRole-test"
+      PrimaryContainer:
+        Environment:
+          {
+            "HF_MODEL_ID": "<%= config[:hf_model_id] %>",
+            "HUGGING_FACE_HUB_TOKEN": !Sub "${HuggingFaceToken}",
+            "MAX_INPUT_LENGTH": 3000,
+            "MAX_TOTAL_TOKENS": 4096,
+            "SAGEMAKER_CONTAINER_LOG_LEVEL": 20,
+            "SAGEMAKER_REGION": "us-east-1",
+            "SM_NUM_GPUS": 1,
+          }
+        Image: !Sub "${HuggingFaceImageUri}"
+        Mode: "SingleModel"
+  <%= config[:model_name] %>EndpointConfig:
+    Type: AWS::SageMaker::EndpointConfig
+    Properties:
+      EndpointConfigName: !Sub "<%= "#{config[:model_name]}-${Environment}-EndpointConfig-#{Time.now.to_i}" %>"
+      ProductionVariants:
+        - ContainerStartupHealthCheckTimeoutInSeconds: 300
+          InitialInstanceCount: <%= environment == 'prod' ? config[:min_num_instances] : 1 %>
+          InitialVariantWeight: 1
+          InstanceType: "<%= config[:instance_type][environment.to_sym] %>"
+          ModelName: !GetAtt <%= config[:model_name] %>Model.ModelName
+          VariantName: "AllTraffic"
+  <%= config[:model_name] %>Endpoint:
+    Type: AWS::SageMaker::Endpoint
+    Properties:
+      EndpointConfigName: !GetAtt <%= config[:model_name] %>EndpointConfig.EndpointConfigName
+      EndpointName: !Sub "<%= "#{config[:model_id]}-${Environment}" %>"
+  <% if environment == 'prod' %>
+  <%= config[:model_name] %>ScalingTarget:
+    Type: "AWS::ApplicationAutoScaling::ScalableTarget"
+    Properties:
+      MaxCapacity: <%= config[:max_num_instances] %>
+      MinCapacity: <%= config[:min_num_instances] %>
+      ResourceId: !Sub "endpoint/${<%= config[:model_name] %>Endpoint.EndpointName}/variant/AllTraffic"
+      ScalableDimension: sagemaker:variant:DesiredInstanceCount
+      ServiceNamespace: sagemaker
+  <%= config[:model_name] %>ScalingPolicy:
+    Type: "AWS::ApplicationAutoScaling::ScalingPolicy"
+    Properties:
+      PolicyName: !Sub "<%= "gen-ai-${Environment}-#{config[:model_name]}-scaling-policy" %>"
+      PolicyType: TargetTrackingScaling
+      ScalingTargetId:
+        Ref: <%= config[:model_name] %>ScalingTarget
+      TargetTrackingScalingPolicyConfiguration:
+        TargetValue: <%= config[:autoscaling_target_value] %>
+        ScaleInCooldown: 300
+        ScaleOutCooldown: 300
+        PredefinedMetricSpecification:
+          PredefinedMetricType: SageMakerVariantInvocationsPerInstance
+  <% end %>
+<% end %>
+
