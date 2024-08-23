@@ -1,0 +1,65 @@
+:ruby
+  topic_options = [
+    {
+      name: "topic_blocks",
+      label: hoc_s(:census_topics_blocks)
+    },
+    {
+      name: "topic_text",
+      label: hoc_s(:census_topics_text)
+    },
+    {
+      name: "topic_robots",
+      label: hoc_s(:census_topics_robots)
+    },
+    {
+      name: "topic_internet",
+      label: hoc_s(:census_topics_internet)
+    },
+    {
+      name: "topic_security",
+      label: hoc_s(:census_topics_security)
+    },
+    {
+      name: "topic_data",
+      label: hoc_s(:census_topics_data)
+    },
+    {
+      name: "topic_web_design",
+      label: hoc_s(:census_topics_web_design)
+    },
+    {
+      name: "topic_game_design",
+      label: hoc_s(:census_topics_game_design)
+    },
+    {
+      name: "topic_other",
+      label: hoc_s(:other_describe)
+    },
+    {
+      name: "topic_do_not_know",
+      label: hoc_s(:dont_know)
+    }
+  ]
+
+.form-group
+  .census_followup_heading=hoc_s(:census_followup_heading)
+  - topic_options.each do |option|
+    .checkbox
+      %label
+        %input{name: option[:name], type: "checkbox", value: "1"}
+        =option[:label]
+
+.form-group
+  %label.control-label=hoc_s(:census_followup_frequency)
+  %select#frequency.form-control{name: "class_frequency", type: "select"}
+    %option{value: "", selected: true, disabled: true}
+    %option{value: "LESS THAN ONE HOUR PER WEEK"}=hoc_s(:less_than_one)
+    %option{value: "ONE TO THREE HOURS PER WEEK"}=hoc_s(:one_to_three)
+    %option{value: "THREE PLUS HOURS PER WEEK"}=hoc_s(:three_plus)
+    %option{value: "I DON'T KNOW"}=hoc_s(:dont_know)
+
+.form-group
+  %label.control-label{for: "followup_more"}=hoc_s(:census_followup_more)
+  %div
+    %textarea#followup-more.form-control{name: "followup_more_s", type: "text_area", placeholder: hoc_s(:census_followup_more_placeholder), style: 'height: 5em;'}
