@@ -13,14 +13,18 @@ module BrowserHelpers
     expect(text).to eq(expected_html)
   end
 
-  def element_has_i18n_text(selector, language, loc_key)
-    text, response = fetch_and_normalize_text(selector, loc_key, language)
-    text.should eq response
-  end
-
-  def element_has_rtl_i18n_text(selector, language, loc_key)
-    text, response = fetch_and_normalize_text(selector, loc_key, language, rtl: true)
-    text.should eq response
+  def element_has_i18n_text(selector, language, loc_key, rtl: false)
+    loc_key.gsub!('\"', '"')
+    # grab text from the browser, replacing non-breaking spaces with regular ones
+    text = @browser.execute_script("return $(\"#{selector}\").text().replace(/\u00a0/g, ' ');").strip
+    # Get localized text from server
+    response = HTTParty.get(replace_hostname("http://studio.code.org/api/test/get_i18n_t?key=#{loc_key}&locale=#{language}")).parsed_response
+    # RTL text can include the RLM character, which can be safely ignored here
+    if rtl
+      text.should include response.strip
+    else
+      text.should eq response.strip
+    end
   end
 
   # This function checks that the text within the given selector matches the
@@ -95,24 +99,6 @@ module BrowserHelpers
 
   def element_css_value(selector, property)
     @browser.execute_script("return $(\"#{selector}\").css(\"#{property}\");")
-  end
-
-  def fetch_and_normalize_text(selector, loc_key, language, rtl: false)
-    loc_key.gsub!('\"', '"')
-
-    # Grab text from the browser, replacing non-breaking spaces with regular ones
-    text = @browser.execute_script("return $(\"#{selector}\").text().replace(/\u00a0/g, ' ');").strip
-
-    # Get localized text from the server
-    response = HTTParty.get(replace_hostname("http://studio.code.org/api/test/get_i18n_t?key=#{loc_key}&locale=#{language}")).parsed_response
-
-    # Normalize RTL-specific characters if required
-    if rtl
-      text = text.delete('‏', '')
-      response = response.delete('‏', '')
-    end
-
-    [text.strip, response.strip]
   end
 
   def generate_generic_drag_code(from_selector, to_selector, target_dx, target_dy)

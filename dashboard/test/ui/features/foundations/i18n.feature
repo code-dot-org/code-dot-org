@@ -120,11 +120,11 @@ Scenario: Translated function names in Arabic
   Given I am on "http://studio.code.org/s/allthethings/lessons/4/levels/6/lang/ar-SA"
   And I wait for the lab page to fully load
   # Toolbox call block is translated
-  Then element "[data-id='toolboxCallBlock'] .blocklyText" has RTL "ar-SA" text from key "data.function_definitions.2-3 Bee Functions 2.get 5.name"
+  Then element "[data-id='toolboxCallBlock'] .blocklyText" has "ar-SA" RTL text from key "data.function_definitions.2-3 Bee Functions 2.get 5.name"
   # Workspace call block is translated
-  And element "[data-id='workspaceCallBlock'] .blocklyText" has RTL "ar-SA" text from key "data.function_definitions.2-3 Bee Functions 2.get 5.name"
+  And element "[data-id='workspaceCallBlock'] .blocklyText" has "ar-SA" RTL text from key "data.function_definitions.2-3 Bee Functions 2.get 5.name"
   # Workspace definition block is translated
-  And element "[data-id='definitionBlock'] > .blocklyNonEditableText > .blocklyText" has RTL "ar-SA" text from key "data.function_definitions.2-3 Bee Functions 2.get 5.name"
+  And element "[data-id='definitionBlock'] > .blocklyNonEditableText > .blocklyText" has "ar-SA" RTL text from key "data.function_definitions.2-3 Bee Functions 2.get 5.name"
 
 Scenario: Toolbox Categories in Arabic (RTL)
   Given I am on "http://studio.code.org/s/allthethings/lessons/45/levels/4/lang/ar-sa"
