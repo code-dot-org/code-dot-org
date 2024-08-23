@@ -709,7 +709,8 @@ class SectionTest < ActiveSupport::TestCase
         name: section.name,
         login_type_name: "Email",
         script: {id: nil, name: nil, project_sharing: nil},
-        students: []
+        students: [],
+        any_student_has_progress: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
@@ -732,6 +733,7 @@ class SectionTest < ActiveSupport::TestCase
         login_type_name: "Email",
         script: {id: script.id, name: script.name, project_sharing: nil},
         students: [],
+        any_student_has_progress: false,
       }
       # Compare created_at separately because the object's created_at microseconds
       # don't match Time.zone.now's microseconds (different levels of precision)
