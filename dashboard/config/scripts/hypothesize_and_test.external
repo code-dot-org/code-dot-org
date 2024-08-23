@@ -1,0 +1,26 @@
+name 'Hypothesize and Test'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What does it mean to hypothesize and test?
+
+#### This lesson covers practicing block-based coding basics, building on your understanding of computer science and its everyday applications.
+
+<img src="https://images.code.org/4e37cf72816a90a1abccaf66d623b4ad-image-1704408444176.23.19 PM.png" alt="Image of a cartoon octopus holding a microphone and wearing a hat" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
+
+## In this lesson, you will:
+
+* #### Learn about block based programming.
+* #### Practice connecting, taking apart, and trashing blocks. 
+* #### Use blocks from the toolbox.
+
+
+### **Suggested time:** 5 minutes
+
+
+## Let's get started!
+
+<div style="clear:both"/>
+MARKDOWN
