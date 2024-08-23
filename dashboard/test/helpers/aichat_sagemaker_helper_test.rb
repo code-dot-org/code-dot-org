@@ -17,7 +17,7 @@ class AichatSagemakerHelperTest < ActionView::TestCase
     ]
     @new_message = {role: 'user', chatMessageText: 'new message from user'}
     @level = Level.create({name: 'Aichat level', properties: {aichat_settings: {levelSystemPrompt: "Be safe."}}})
-    @level_without_level_system_prompt = Level.create({name: 'Aichat level without system prompt', properties: {aichat_settings: {}}})
+    @level_without_level_system_prompt = Level.create({name: 'Aichat level without level system prompt', properties: {aichat_settings: {}}})
   end
 
   test 'Testing format_inputs_for_sagemaker_request with Mistral base model' do
