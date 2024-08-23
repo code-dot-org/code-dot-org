@@ -44,10 +44,15 @@ class ActivityCard extends Component {
     updateActivityField: PropTypes.func.isRequired,
   };
 
-  handleAddActivitySection = () => {
+  handleAddActivitySection = insertPosition => {
+    console.log('Adding activity section');
+    console.log(this.props.activity.position);
+    console.log(this.props.generateActivitySectionKey());
+    console.log(insertPosition);
     this.props.addActivitySection(
       this.props.activity.position,
-      this.props.generateActivitySectionKey()
+      this.props.generateActivitySectionKey(),
+      insertPosition
     );
   };
 
@@ -174,15 +179,19 @@ class ActivityCard extends Component {
                 hasLessonPlan={hasLessonPlan}
                 allowMajorCurriculumChanges={allowMajorCurriculumChanges}
               />
-              <button
-                onMouseDown={this.handleAddActivitySection.bind()}
-                className="btn add-activity-section"
-                style={styles.addButton}
-                type="button"
-              >
-                <i style={{marginRight: 7}} className="fa fa-plus-circle" />
-                Activity Section
-              </button>
+              <div key={section.key + 'add'}>
+                <button
+                  onMouseDown={() =>
+                    this.handleAddActivitySection(section.position)
+                  }
+                  className="btn add-activity-section"
+                  style={styles.addButton}
+                  type="button"
+                >
+                  <i style={{marginRight: 7}} className="fa fa-plus-circle" />
+                  Activity Section
+                </button>
+              </div>
             </>
           ))}
         </div>
