@@ -59,6 +59,7 @@ class AichatControllerTest < ActionController::TestCase
     @assistant_response = "This is an assistant response from Sagemaker"
     AichatSagemakerHelper.stubs(:get_sagemaker_assistant_response).returns(@assistant_response)
     @controller.stubs(:storage_decrypt_channel_id).returns([123, @project_id])
+    Cdo::Throttle.stubs(:throttle).returns(false)
   end
 
   # Check that non-pilot users don't have access to any aichat endpoints
@@ -145,6 +146,13 @@ class AichatControllerTest < ActionController::TestCase
     sign_in(@genai_pilot_teacher1)
     post :chat_completion, params: @valid_params_chat_completion, as: :json
     assert_response :forbidden
+  end
+
+  test 'chat_completion returns too many requests when request is throttled' do
+    Cdo::Throttle.stubs(:throttle).returns(true)
+    sign_in(@genai_pilot_teacher1)
+    post :chat_completion, params: @valid_params_chat_completion, as: :json
+    assert_response :too_many_requests
   end
 
   # log_chat_event tests
@@ -266,6 +274,13 @@ class AichatControllerTest < ActionController::TestCase
     sign_in(@genai_pilot_teacher1)
     post :start_chat_completion, params: @missing_stored_messages_params, as: :json
     assert_response :bad_request
+  end
+
+  test 'start_chat_completion returns too many requests when request is throttled' do
+    Cdo::Throttle.stubs(:throttle).returns(true)
+    sign_in(@genai_pilot_teacher1)
+    post :start_chat_completion, params: @valid_params_chat_completion, as: :json
+    assert_response :too_many_requests
   end
 
   # chat_request tests
