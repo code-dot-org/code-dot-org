@@ -473,7 +473,7 @@ namespace :seed do
     password = writer.password || ''
 
     # This command will import the data from the file into the dashboard_test database
-    puts "Quick Importing data from #{sql_import_file}"
+    puts "Quick Importing data from #{sql_import_file} to #{database}@#{host}:#{port}"
     sh("gzcat #{sql_import_file} | mysql -u #{username} --password='#{password}' -h #{host} -P #{port} #{database}")
   end
 

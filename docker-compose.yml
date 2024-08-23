@@ -56,6 +56,9 @@ services:
 
 volumes:
   mysql_data:
+    # make it larger to avoid running out of space
+    driver_opts:
+      size: 10G
   build_artifacts_yarn:
   build_artifacts_node_modules:
   build_artifacts_webpack:

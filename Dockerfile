@@ -1,11 +1,10 @@
 # Use an official Ruby image as a parent image, specifying version 3.0.5
 FROM amd64/ruby:3.0.5
 
-# Install Node.js 18.16.0 and Python 3 (with virtual environment support)
+# Install Node.js 18.16.0, Python 3 (with virtual environment support), MySQL client, and gzip for gzcat
 RUN curl -sL https://deb.nodesource.com/setup_18.x | bash - && \
-    apt-get install -y nodejs=18.16.0-1nodesource1 python3 python3-venv && \
-    apt-get update && \
-    apt-get install -y default-mysql-client
+    apt-get install -y nodejs=18.16.0-1nodesource1 python3 python3-venv default-mysql-client gzip && \
+    apt-get update
 
 # Set the working directory inside the container
 WORKDIR /app
