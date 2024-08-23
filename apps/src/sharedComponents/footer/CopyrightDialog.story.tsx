@@ -1,5 +1,5 @@
 import {StoryFn} from '@storybook/react';
-import React from 'react';
+import React, {useState} from 'react';
 
 import CopyrightDialog from '@cdo/apps/sharedComponents/footer/CopyrightDialog';
 
@@ -7,17 +7,21 @@ export default {
   component: CopyrightDialog,
 };
 
-//
-// TEMPLATE
-//
+const Template: StoryFn<typeof CopyrightDialog> = args => {
+  const [isOpen, setIsOpen] = useState(false);
 
-const Template: StoryFn<typeof CopyrightDialog> = args => (
-  <CopyrightDialog {...args} />
-);
+  const handleOpen = () => setIsOpen(true);
+  const handleClose = () => setIsOpen(false);
 
-//
-// STORIES
-//
+  return (
+    <span>
+      <button type="button" onClick={handleOpen}>
+        Open Copyright Dialog
+      </button>
+      <CopyrightDialog {...args} isOpen={isOpen} closeModal={handleClose} />
+    </span>
+  );
+};
 
 export const DefaultStory = Template.bind({
   onClose: () => {},

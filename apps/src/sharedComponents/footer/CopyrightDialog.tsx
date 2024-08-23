@@ -8,14 +8,16 @@ import i18n from '@cdo/locale';
 import styles from '@cdo/apps/sharedComponents/footer/copyright-dialog.module.scss';
 
 export interface CopyrightDialogProps {
-  onClose: () => void;
+  isOpen: boolean;
+  closeModal: () => void;
 }
 
-const CopyrightDialog: React.FC<CopyrightDialogProps> = ({onClose}) => {
-  const handleClose = () => {
-    if (typeof onClose === 'function') {
-      onClose();
-    }
+const CopyrightDialog: React.FC<CopyrightDialogProps> = ({
+  isOpen,
+  closeModal,
+}) => {
+  const onClose = () => {
+    closeModal();
   };
 
   const getDialogBody = () => {
@@ -60,15 +62,15 @@ const CopyrightDialog: React.FC<CopyrightDialogProps> = ({onClose}) => {
     );
   };
 
-  return (
+  return isOpen ? (
     <AccessibleDialog
       className={styles.copyright}
-      onClose={handleClose}
+      onClose={onClose}
       closeOnClickBackdrop={true}
     >
       {getDialogBody()}
     </AccessibleDialog>
-  );
+  ) : null;
 };
 
 export default CopyrightDialog;
