@@ -22,7 +22,7 @@ export async function handleRunClick(
     return;
   }
   if (runTests) {
-    runAllTests(source, dispatch, progressManager);
+    await runAllTests(source, dispatch, progressManager);
   } else {
     // Run main.py
     const code = getFileByName(source.files, MAIN_PYTHON_FILE)?.contents;

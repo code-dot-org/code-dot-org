@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider, useSelector} from 'react-redux';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
 import ParentalPermissionModal from '@cdo/apps/templates/policy_compliance/ParentalPermissionModal';
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const Modal = ({lockoutDate, inSection}) => {
       const reportEvent = (eventName, payload = {}) => {
         payload.inSection = inSection;
-        analyticsReporter.sendEvent(eventName, payload, PLATFORMS.AMPLITUDE);
+        analyticsReporter.sendEvent(eventName, payload);
       };
 
       const handleClose = parentalPermissionRequest => {

@@ -20,7 +20,7 @@ $default-spacing: 4px;
 
   .tabsContainer {
     background-color: #eaebeb;
-    padding-top: $default-spacing;
+    padding: $default-spacing $default-spacing 0 $default-spacing;
   }
 
   .tabPanels {
