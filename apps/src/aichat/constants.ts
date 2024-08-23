@@ -2,20 +2,20 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 import modelsJson from '@cdo/static/aichat/modelDescriptions.json';
 
+import type {ValueOf} from '../types/utils';
+
 import type {ModelDescription, SaveType} from './types';
 
-// Build the model descriptions list from the JSON file. Only include valid model IDs.
-const modelDescriptions: ModelDescription[] = [];
-Object.values(AiChatModelIds).forEach(modelId => {
-  const description = modelsJson[modelId];
-  if (description) {
-    modelDescriptions.push({
-      id: modelId,
-      ...description,
-    });
-  }
-});
-export {modelDescriptions};
+export const modelDescriptions: ModelDescription[] =
+  modelsJson.filter(isValidDescription);
+
+function isValidDescription(
+  description: (typeof modelsJson)[number]
+): description is ModelDescription {
+  return Object.values(AiChatModelIds).includes(
+    description.id as ValueOf<typeof AiChatModelIds>
+  );
+}
 
 export const saveTypeToAnalyticsEvent: {[key in SaveType]: string} = {
   updateChatbot: EVENTS.UPDATE_CHATBOT,
