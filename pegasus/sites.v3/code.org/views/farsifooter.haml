@@ -1,0 +1,21 @@
+%footer#pagefooter
+  .content
+    .left{:style=>"float:left; max-width: 80%;"}
+      %a.whitefooterlink{:href=>"https://code-org.translate.goog/privacy?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp", :style=>"color: #ffa400;"}
+        !=I18n.t(:footer_privacy_policy)
+      .dim &nbsp; | &nbsp;
+      %a.whitefooterlink{:href=>"/cookies"}
+        !=I18n.t(:footer_cookie_notice)
+      .dim &nbsp; | &nbsp;
+      %a.whitefooterlink{:href=>"https://code-org.translate.goog/tos?_x_tr_sl=auto&_x_tr_tl=fa&_x_tr_hl=en&_x_tr_pto=wapp"}
+        !=I18n.t(:footer_terms)
+      %small.dim
+        !=I18n.t(:footer_trademark, current_year: Time.now.year, cs_discoveries: "CS Discoveries&reg;")
+        %br
+        !=I18n.t(:footer_built_on_github)
+      %div.powered-by-aws
+        %a{:href=>"https://aws.amazon.com/what-is-cloud-computing"}
+          %img{:src=>"/shared/images/Powered-By_logo-horiz_RGB_REV.png", :alt=>"Powered by AWS Cloud Computing", :style=>"width: 190px"}
+    .right{:style=>"float:right"}
+      .language-dropdown
+        =view :language

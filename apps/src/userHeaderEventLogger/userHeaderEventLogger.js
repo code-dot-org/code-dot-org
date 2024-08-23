@@ -188,9 +188,11 @@ $(document).ready(function () {
   const headerCreateMenu = document.getElementById('header_create_menu');
   const pageUrl = window.location.href;
 
-  if (getScriptData('isSignedOut')) {
-    addSignedOutMetrics(pageUrl, headerCreateMenu);
-  } else {
-    addSignedInMetrics(pageUrl, headerCreateMenu);
+  if (!pageUrl.includes('/global/fa')) {
+    if (getScriptData('isSignedOut')) {
+      addSignedOutMetrics(pageUrl, headerCreateMenu);
+    } else {
+      addSignedInMetrics(pageUrl, headerCreateMenu);
+    }
   }
 });
