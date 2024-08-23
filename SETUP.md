@@ -183,6 +183,7 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
         <summary>If you get an error `nvm: command not found`</summary>
         Run `brew info nvm` and follow the instructions there. They will include making an `.nvm` folder and updating your shell configuration file.
       </details>
+
     2. Set default node version:
         ```
         nvm alias default $(cat ./.nvmrc)
