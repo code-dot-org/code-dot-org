@@ -8,8 +8,7 @@ class AichatControllerTest < ActionController::TestCase
     unit_group = create :unit_group, name: 'exploring-gen-ai-2024'
     pilot_section = create :section, user: @genai_pilot_teacher1, unit_group: unit_group
     @genai_pilot_student1 = create(:follower, section: pilot_section).student_user
-    @genai_pilot_teacher2 = create :teacher
-    @genai_pilot_teacher2.stubs(:teacher_can_access_ai_chat?).returns(true)
+    @genai_pilot_teacher2 = create :authorized_teacher
     @genai_pilot_student2 = create(:follower, section: pilot_section).student_user
     @level = create(:level, name: 'level1')
     @script = create(:script)
