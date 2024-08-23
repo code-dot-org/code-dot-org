@@ -16,6 +16,7 @@ import {
   type GetResponse,
 } from '@cdo/apps/util/HttpClient';
 import {
+  AiChatModelIds,
   AiInteractionStatus,
   AiRequestExecutionStatus,
 } from '@cdo/generated-scripts/sharedConstants';
@@ -51,7 +52,7 @@ describe('aichatApi', () => {
       },
     ];
     aiCustomizations = {
-      selectedModelId: '123',
+      selectedModelId: AiChatModelIds.ARITHMO,
       temperature: 0.5,
       retrievalContexts: ['123'],
       systemPrompt: 'hello',
