@@ -462,7 +462,7 @@ class UnitGroup < ApplicationRecord
 
   # @param user [User]
   # @return [Boolean] Whether the user can view the course.
-  def can_view_version?(user = nil)
+  def can_view_version?(user = nil, locale_code = 'en-us')
     return false unless Ability.new(user).can?(:read, self)
 
     latest_course_version = UnitGroup.latest_stable_version(family_name)

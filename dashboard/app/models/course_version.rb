@@ -145,7 +145,7 @@ class CourseVersion < ApplicationRecord
     end
   end
 
-  def latest_stable_version(family_name, locale: 'en-us')
+  def latest_stable_version(family_name, locale_code: 'en-us')
     latest_stable_unit = Unit.latest_stable_version(family_name, locale: locale_code)
     latest_stable_unitgroup = UnitGroup.latest_stable_version(family_name, locale: locale_code)
 
@@ -154,7 +154,7 @@ class CourseVersion < ApplicationRecord
     elsif !latest_stable_unit && latest_stable_unitgroup
       return latest_stable_unitgroup
     elsif latest_stable_unit && latest_stable_unitgroup
-      return latest_stable_unit.version_year > latest_stable_unitgroup.version_year ? latest_stable_unit : latest_stable_unitgroup
+      return latest_stable_unit.version_year >= latest_stable_unitgroup.version_year ? latest_stable_unit : latest_stable_unitgroup
     end
 
     nil
@@ -166,7 +166,7 @@ class CourseVersion < ApplicationRecord
 
     family_name = course_offering.key
 
-    latest_stable_version = latest_stable_version(family_name, locale: locale_code)
+    latest_stable_version = latest_stable_version(family_name, locale_code: locale_code)
 
     latest_stable_version == content_root
   end
