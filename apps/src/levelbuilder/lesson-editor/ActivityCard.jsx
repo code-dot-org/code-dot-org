@@ -152,7 +152,7 @@ class ActivityCard extends Component {
         </div>
         <div style={styles.activityBody} hidden={this.props.collapsed}>
           {activity.activitySections.map(section => (
-            <>
+            <div>
               <ActivitySectionCard
                 key={section.key}
                 activitySection={section}
@@ -188,7 +188,7 @@ class ActivityCard extends Component {
                   Activity Section
                 </button>
               </div>
-            </>
+            </div>
           ))}
         </div>
       </div>
