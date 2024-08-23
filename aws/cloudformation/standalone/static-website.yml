@@ -27,6 +27,14 @@ Parameters:
     Description: "The ARN of the ACM certificate for the CloudFront distribution (optional)"
     Default: ""  # Default to empty string if not provided
 
+  CloudFrontLogsBucketName:
+    Type: String
+    Description: "The name of the existing S3 bucket for CloudFront logs (e.g., cdo-logs)"
+  
+  AthenaCloudFrontLogsDatabase:
+    Type: String
+    Description: "The name of the existing Glue database for CloudFront logs (e.g., cdo)"
+   
 Conditions:
   CreateCertificate: !Equals [ !Ref AcmCertificateArn, "" ]
   IncludeWebsiteFunctionalityCondition: !Equals [ !Ref IncludeWebsiteFunctionality, "yes" ]
@@ -114,6 +122,10 @@ Resources:
             - !Ref AcmCertificate
             - !Ref AcmCertificateArn
           SslSupportMethod: sni-only
+        Logging:
+          Bucket: !Sub "${CloudFrontLogsBucketName}.s3.amazonaws.com"
+          Prefix: !Sub "${AWS::StackName}-cdn/"
+          IncludeCookies: false
 
   CloudFrontDnsRecord:
     Type: AWS::Route53::RecordSet
@@ -124,6 +136,80 @@ Resources:
       AliasTarget:
         DNSName: !GetAtt CloudFrontDistribution.DomainName
         HostedZoneId: "Z2FDTNDATAQYW2" # This is the fixed hosted zone ID for CloudFront distributions
+
+  AthenaCloudFrontLogsTable:
+    Type: AWS::Glue::Table
+    Properties:
+      DatabaseName: !Ref AthenaCloudFrontLogsDatabase
+      CatalogId: !Ref "AWS::AccountId"
+      TableInput:
+        Name: !Sub "${AWS::StackName}_cloudfront_logs"
+        TableType: EXTERNAL_TABLE
+        Parameters:
+          classification: "cloudfront"
+        StorageDescriptor:
+          Columns:
+            - Name: date
+              Type: string
+            - Name: time
+              Type: string
+            - Name: x_edge_location
+              Type: string
+            - Name: sc_bytes
+              Type: bigint
+            - Name: c_ip
+              Type: string
+            - Name: cs_method
+              Type: string
+            - Name: cs_host
+              Type: string
+            - Name: cs_uri_stem
+              Type: string
+            - Name: sc_status
+              Type: int
+            - Name: cs_referer
+              Type: string
+            - Name: cs_user_agent
+              Type: string
+            - Name: cs_uri_query
+              Type: string
+            - Name: cs_cookie
+              Type: string
+            - Name: x_edge_result_type
+              Type: string
+            - Name: x_edge_request_id
+              Type: string
+            - Name: x_host_header
+              Type: string
+            - Name: cs_protocol
+              Type: string
+            - Name: cs_bytes
+              Type: bigint
+            - Name: time_taken
+              Type: double
+            - Name: x_forwarded_for
+              Type: string
+            - Name: ssl_protocol
+              Type: string
+            - Name: ssl_cipher
+              Type: string
+            - Name: x_edge_response_result_type
+              Type: string
+            - Name: cs_protocol_version
+              Type: string
+            - Name: fle_status
+              Type: string
+            - Name: fle_encrypted_fields
+              Type: bigint
+          Location: !Sub "s3://${CloudFrontLogsBucketName}/${AWS::StackName}-cdn/"
+          InputFormat: org.apache.hadoop.mapred.TextInputFormat
+          OutputFormat: org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat
+          SerdeInfo:
+            SerializationLibrary: org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe
+            Parameters:
+              field.delim: " "
+              skip.header.line.count: "2"
+
 
 Outputs:
   WebsiteURL:
