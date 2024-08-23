@@ -206,6 +206,13 @@ class ApiController < ApplicationController
     render json: data
   end
 
+  use_reader_connection_for_route(:section)
+  def section
+    section = load_section
+
+    render json: section.selected_section_summarize.merge(section.concise_summarize)
+  end
+
   use_reader_connection_for_route(:section_progress)
 
   def section_progress

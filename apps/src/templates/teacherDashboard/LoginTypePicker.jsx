@@ -106,7 +106,6 @@ class LoginTypePicker extends Component {
       providers && providers.includes(OAuthSectionTypes.microsoft_classroom);
     const withClever =
       providers && providers.includes(OAuthSectionTypes.clever);
-    const withLti = providers && providers.includes(SectionLoginType.lti_v1);
     const withAllLmsProviders =
       providers &&
       [
@@ -262,20 +261,16 @@ class LoginTypePicker extends Component {
                     }
                   />
                 )}
-                {!withLti && (
-                  <>
-                    <LmsInformationalCard
-                      lmsName={LmsLoginTypeNames.canvas}
-                      lmsLogo={canvasLogo}
-                      lmsInformationalUrl={LmsLoginInstructionUrls.canvas}
-                    />
-                    <LmsInformationalCard
-                      lmsName={LmsLoginTypeNames.schoology}
-                      lmsLogo={schoologyLogo}
-                      lmsInformationalUrl={LmsLoginInstructionUrls.schoology}
-                    />
-                  </>
-                )}
+                <LmsInformationalCard
+                  lmsName={LmsLoginTypeNames.canvas}
+                  lmsLogo={canvasLogo}
+                  lmsInformationalUrl={LmsLoginInstructionUrls.canvas}
+                />
+                <LmsInformationalCard
+                  lmsName={LmsLoginTypeNames.schoology}
+                  lmsLogo={schoologyLogo}
+                  lmsInformationalUrl={LmsLoginInstructionUrls.schoology}
+                />
               </div>
             </>
           )}
