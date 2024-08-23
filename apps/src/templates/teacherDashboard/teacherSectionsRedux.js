@@ -2,8 +2,8 @@ import $ from 'jquery';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 
+import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import harness from '@cdo/apps/lib/util/harness';
@@ -118,6 +118,10 @@ const IMPORT_LTI_ROSTER_SUCCESS = 'teacherSections/IMPORT_LTI_ROSTER_SUCCESS';
 /** Sets section aiTutorEnabled */
 const UPDATE_SECTION_AI_TUTOR_ENABLED =
   'teacherSections/UPDATE_SECTION_AI_TUTOR_ENABLED';
+
+const START_LOADING_SECTION_DATA = 'teacherSections/START_LOADING_SECTION_DATA';
+const FINISH_LOADING_SECTION_DATA =
+  'teacherSections/FINISH_LOADING_SECTION_DATA';
 
 /** @const A few constants exposed for unit test setup */
 export const __testInterface__ = {
@@ -623,6 +627,14 @@ export const importOrUpdateRoster =
       );
   };
 
+export const startLoadingSectionData = () => ({
+  type: START_LOADING_SECTION_DATA,
+});
+
+export const finishLoadingSectionData = () => ({
+  type: FINISH_LOADING_SECTION_DATA,
+});
+
 /**
  * Initial state of this redux module.
  * Should represent the overall state shape with reasonable default values.
@@ -637,6 +649,7 @@ const initialState = {
   studentSectionIds: [],
   plSectionIds: [],
   selectedSectionId: NO_SECTION,
+  selectedSectionName: '',
   // Array of course offerings, to populate the assignment dropdown
   // with options like "CSD", "Course A", or "Frozen". See the
   // assignmentCourseOfferingShape PropType.
@@ -671,6 +684,7 @@ const initialState = {
   // DCDO Flag - show/hide Lock Section field
   showLockSectionField: null,
   ltiSyncResult: null,
+  isLoadingSectionData: false,
 };
 /**
  * Generate shape for new section
@@ -844,9 +858,12 @@ export default function teacherSections(state = initialState, action) {
       sectionId = NO_SECTION;
     }
 
+    const sectionName =
+      sectionId !== NO_SECTION ? state.sections[sectionId].name : '';
     return {
       ...state,
       selectedSectionId: sectionId,
+      selectedSectionName: sectionName,
     };
   }
 
@@ -1236,6 +1253,20 @@ export default function teacherSections(state = initialState, action) {
           aiTutorEnabled: aiTutorEnabled,
         },
       },
+    };
+  }
+
+  if (action.type === START_LOADING_SECTION_DATA) {
+    return {
+      ...state,
+      isLoadingSectionData: true,
+    };
+  }
+
+  if (action.type === FINISH_LOADING_SECTION_DATA) {
+    return {
+      ...state,
+      isLoadingSectionData: false,
     };
   }
 

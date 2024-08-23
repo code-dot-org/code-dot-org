@@ -838,13 +838,6 @@ class User < ApplicationRecord
     # we don't trust
     user.email = auth.info.email unless user.user_type == 'student' && AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.include?(auth.provider)
 
-    if auth.provider == :the_school_project
-      user.username = auth.extra.raw_info.nickname
-      user.user_type = auth.extra.raw_info.role
-      user.locale = auth.extra.raw_info.locale
-      user.school = auth.extra.raw_info.school.name
-    end
-
     # treat clever admin types as teachers
     if CLEVER_ADMIN_USER_TYPES.include? user.user_type
       user.user_type = User::TYPE_TEACHER
