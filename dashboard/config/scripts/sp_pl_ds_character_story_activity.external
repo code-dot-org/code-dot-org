@@ -1,0 +1,29 @@
+name 'sp-pl-DS_Character_Story_Activity'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Getting Started with CODAP 
+
+
+#### Some of the next few lessons utilize the <a href="https://codap.concord.org/for-educators/" target="blank" rel="noopener noreferrer">CODAP website</a>, a free educational tool for data analysis.
+#### Before you continue to the next lessons, take a few minutes to get acquainted with **CODAP** with the **Getting Started tutorials**.
+
+
+
+<img src="https://images.code.org/28ae5935bf2c0e8f8dae187639c90789-image-1724348267891.png" alt="design process graph of the cycle" width="250px" style="display: block; margin-left: auto; margin-right: auto;border-radius:10px;">
+
+#### 📝***Note:*** *These tutorials will open in a new tab and take about 5 minutes each to complete.*
+- #### Getting Started in CODAP,  <a href="https://codap.concord.org/app/static/dg/en/cert/index.html#file=examples:Getting%20started%20with%20CODAP" target="blank" rel="noopener noreferrer">Part 1</a>
+- #### Getting Started in CODAP,  <a href="https://codap.concord.org/app/static/dg/en/cert/index.html?url=https://concord-consortium.github.io/codap-data/example-documents/src/documents/get_started_2.codap" target="blank" rel="noopener noreferrer">Part 2</a>
+
+
+
+
+## For more information: 
+####The  <a href="https://codap.concord.org/wp-content/uploads/codap-start-up-guide.pdf" target="blank" rel="noopener noreferrer">CODAP Start-Up Guide (PDF)</a> is a comprehensive introduction to CODAP’s features and interactivity. 
+
+#### ➡️*Return back to this training you have completed the tutorials* 
+
+
+MARKDOWN
