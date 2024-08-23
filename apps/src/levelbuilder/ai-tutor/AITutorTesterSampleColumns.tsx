@@ -1,6 +1,10 @@
 import React from 'react';
 
+import {ValueOf} from '@cdo/apps/types/utils';
+import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
+
 import {genAIEndpointIds} from './constants';
+import {Endpoint} from './types';
 
 import style from './ai-tutor-tester.module.scss';
 
@@ -9,7 +13,7 @@ import style from './ai-tutor-tester.module.scss';
  */
 
 interface SampleColumnsProps {
-  endpoint: string;
+  endpoint: Endpoint;
 }
 
 const AITutorTesterSampleColumns: React.FC<SampleColumnsProps> = ({
@@ -55,7 +59,9 @@ const AITutorTesterSampleColumns: React.FC<SampleColumnsProps> = ({
 
   if (endpoint === 'ai-tutor') {
     rows = rows.concat(basicRows, aiTutorRows);
-  } else if (genAIEndpointIds.includes(endpoint)) {
+  } else if (
+    genAIEndpointIds.includes(endpoint as ValueOf<typeof AiChatModelIds>)
+  ) {
     rows = rows.concat(basicRows, genAIRows);
   }
 
