@@ -436,6 +436,7 @@ class Section < ApplicationRecord
           name: script.try(:name),
           project_sharing: script.try(:project_sharing),
         },
+        any_student_has_progress: any_student_has_progress?
       }
     end
   end
