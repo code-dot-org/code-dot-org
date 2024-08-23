@@ -1,9 +1,0 @@
-name 'ken-multi-allow-multiple-test'
-title 'title'
-description 'description here'
-question 'Pick your favorite number'
-wrong '1'
-right '2'
-wrong '3'
-wrong '4'
-allow_multiple_attempts true
