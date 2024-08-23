@@ -20,3 +20,10 @@ layout: wide
 
 .clear-styles
   = view :off_season_interest_form
+
+%hr{style: "margin-top: 3rem"}
+
+%h2.heading-xxl
+  =hoc_s(:front_join_us_n_students_served).gsub("#", format_integer_with_commas(fetch_hoc_metrics['started']).to_s)
+%p.body-one.no-margin-bottom
+  =hoc_s(:front_intro_default_2)
