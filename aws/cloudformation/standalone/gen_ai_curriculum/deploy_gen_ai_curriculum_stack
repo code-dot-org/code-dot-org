@@ -26,6 +26,10 @@ def main
     opts.on("-i", "--image-uri IMAGE_URI", String, "HuggingFace Image URI to use") do |v|
       options[:image_uri] = v
     end
+
+    opts.on("-t", "--huggingface-token HUGGINGFACE_TOKEN", String, "HuggingFace Access Token") do |v|
+      options[:token] = v
+    end
   end.parse!
 
   # Prompt for environment if not provided
@@ -44,6 +48,12 @@ def main
     print "Dry-run (create template only)? (y/n): "
     response = gets.chomp.downcase
     options[:dry_run] = response == 'y'
+  end
+
+  # Prompt for environment if not provided
+  unless options[:token]
+    print "HuggingFace Access Token: "
+    options[:token] = gets.chomp
   end
 
   unless options.key?(:image_uri)
@@ -85,7 +95,10 @@ def main
   cmd = "aws cloudformation deploy " \
     "--stack-name gen-ai-curriculum-#{options[:environment]} " \
     "--template-file gen_ai_curriculum.yml " \
-    "--parameter-overrides Environment=#{options[:environment]} HuggingFaceImageUri=#{image_uri}"
+    "--parameter-overrides " \
+    "Environment=#{options[:environment]} " \
+    "HuggingFaceImageUri=#{image_uri} " \
+    "HuggingFaceToken=#{options[:token]}"
 
   puts "Running command: " + cmd.colorize(:light_cyan)
   Open3.popen3 cmd do |_stdin, stdout, _stderr, _thread|
