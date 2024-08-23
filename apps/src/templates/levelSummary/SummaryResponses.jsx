@@ -18,6 +18,7 @@ import styles from './summary.module.scss';
 
 const FREE_RESPONSE = 'FreeResponse';
 const MULTI = 'Multi';
+//const LEVELGROUP = 'LevelGroup';
 
 const SummaryResponses = ({
   scriptData,
@@ -38,6 +39,7 @@ const SummaryResponses = ({
   const isMulti =
     scriptData.level.type === MULTI ||
     predictSettings?.questionType === PredictQuestionType.MultipleChoice;
+  //const isLevelGroup = scriptData.level.type === LEVELGROUP;
 
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
   const [showStudentNames, setShowStudentNames] = useState(false);

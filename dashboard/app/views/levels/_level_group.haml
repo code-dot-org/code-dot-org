@@ -62,6 +62,6 @@
   - init_data = nil
   - unless @script_level.nil?
     - init_data = { total_level_count: @total_level_count, page: current_page.to_i || -1, last_attempt: parsed_last_attempt}
-    - js_data = {response_count: @responses&.count || 0, is_contained_level: contained_mode}
+    - js_data = {response_count: @responses&.count || 0, is_contained_level: contained_mode, levels: @levels}
 
   %script{src: webpack_asset_path('js/levels/_level_group.js'), data: {levelData: data.to_json, initData: init_data.to_json, summaryinfo: js_data.to_json}}
