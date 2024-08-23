@@ -339,11 +339,12 @@ roles = {
       'arn:aws:iam::aws:policy/AWSBillingReadOnlyAccess',
     ]
   },
-  ProductFullAccessRole: {
-    RoleName: 'Product_FullAccess',
+  ProductManagerFullAccessRole: {
+    RoleName: 'ProductManager_FullAccess',
     GoogleIdsSSMParameter: 'ProductGoogleIDs',
     ManagedPolicyArns: [
-      '!Ref BedrockKnowledgeBaseInvocationPolicy'
+      '!Ref BedrockKnowledgeBaseInvocationPolicy',
+      '!Ref CloudwatchDashboardViewerPolicy',
     ]
   }
 }
@@ -727,6 +728,20 @@ roles.each do |name, config| %>
               - bedrock:RetrieveAndGenerate
             Resource:
               - !Sub 'arn:aws:bedrock:${AWS::Region}:${AWS::AccountId}:knowledge-base/*'
+
+  CloudwatchDashboardViewerPolicy:
+    Type: AWS::IAM::ManagedPolicy
+    Properties:
+      ManagedPolicyName: CloudwatchDashboardViewerPolicy
+      PolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Action:
+              - cloudwatch:GetDashboard
+              - cloudwatch:ListDashboards
+              - cloudwatch:GetMetricData
+            Resource: '*'
 
   # Used by FirehoseMicroservice Lambda function.
   # TODO move to Data stack
