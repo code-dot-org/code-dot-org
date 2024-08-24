@@ -8,14 +8,14 @@ import {
   Visibility,
 } from '@cdo/apps/aichat/types';
 import {
+  DEFAULT_LEVEL_AICHAT_SETTINGS,
+  DEFAULT_VISIBILITIES,
+  EMPTY_AI_CUSTOMIZATIONS,
+  EMPTY_MODEL_CARD_INFO,
   MAX_RETRIEVAL_CONTEXTS,
   MAX_TEMPERATURE,
   MIN_TEMPERATURE,
   SET_TEMPERATURE_STEP,
-  DEFAULT_LEVEL_AICHAT_SETTINGS,
-  EMPTY_AI_CUSTOMIZATIONS,
-  DEFAULT_VISIBILITIES,
-  EMPTY_MODEL_CARD_INFO,
 } from '@cdo/apps/aichat/views/modelCustomization/constants';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import {
@@ -24,7 +24,8 @@ import {
 } from '@cdo/apps/componentLibrary/typography';
 import CollapsibleSection from '@cdo/apps/templates/CollapsibleSection';
 import MultiItemInput from '@cdo/apps/templates/MultiItemInput';
-import {getTypedKeys} from '@cdo/apps/types/utils';
+import {getTypedKeys, ValueOf} from '@cdo/apps/types/utils';
+import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 import FieldSection from './FieldSection';
 import ModelCardFields from './ModelCardFields';
@@ -135,7 +136,10 @@ const EditAichatSettings: React.FunctionComponent<{
   );
 
   const setModelSelectionValues = useCallback(
-    (additionalModelIds: string[], selectedModelId: string) => {
+    (
+      additionalModelIds: ValueOf<typeof AiChatModelIds>[],
+      selectedModelId: ValueOf<typeof AiChatModelIds>
+    ) => {
       const availableModelIds = Array.from(
         new Set(additionalModelIds).add(selectedModelId)
       );

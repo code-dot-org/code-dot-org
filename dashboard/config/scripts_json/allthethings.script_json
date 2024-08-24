@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-09 15:19:34 UTC",
+    "serialized_at": "2024-08-21 19:46:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -859,6 +859,21 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "lesson-56",
+      "name": "Activity Guide Levelgroup",
+      "absolute_position": 56,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 53,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-56",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "lesson_activities": [
@@ -1567,6 +1582,18 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "e109ba15-02bd-458f-9adf-31f75dc9d531",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e109ba15-02bd-458f-9adf-31f75dc9d531",
+        "lesson.key": "lesson-56",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "activity_sections": [
@@ -2118,6 +2145,16 @@
       "seeding_key": {
         "activity_section.key": "94cf3670-cb1d-45cc-9491-c754494a2399",
         "lesson_activity.key": "2f85210c-bfe7-4eea-9d53-fe10cdf3b0dc"
+      }
+    },
+    {
+      "key": "781a45ef-23bb-4d6c-905a-a421acc0752b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "781a45ef-23bb-4d6c-905a-a421acc0752b",
+        "lesson_activity.key": "e109ba15-02bd-458f-9adf-31f75dc9d531"
       }
     }
   ],
@@ -6847,6 +6884,27 @@
       "level_keys": [
         "Lab2 BubbleChoice Showcase"
       ]
+    },
+    {
+      "chapter": 194,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test-levelgroup-activityguide"
+        ],
+        "lesson.key": "lesson-56",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "781a45ef-23bb-4d6c-905a-a421acc0752b"
+      },
+      "level_keys": [
+        "test-levelgroup-activityguide"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -9302,6 +9360,18 @@
         "lesson_group.key": "",
         "script.name": "allthethings",
         "activity_section.key": "94cf3670-cb1d-45cc-9491-c754494a2399"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "test-levelgroup-activityguide",
+        "script_level.level_keys": [
+          "test-levelgroup-activityguide"
+        ],
+        "lesson.key": "lesson-56",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "781a45ef-23bb-4d6c-905a-a421acc0752b"
       }
     }
   ],

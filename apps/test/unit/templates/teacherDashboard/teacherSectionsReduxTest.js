@@ -477,6 +477,7 @@ describe('teacherSectionsRedux', () => {
         ],
         syncEnabled: undefined,
         aiTutorEnabled: undefined,
+        anyStudentHasProgress: undefined,
       });
     });
   });
@@ -800,6 +801,7 @@ describe('teacherSectionsRedux', () => {
           sectionInstructors: [],
           syncEnabled: undefined,
           aiTutorEnabled: false,
+          anyStudentHasProgress: undefined,
         },
       });
     });

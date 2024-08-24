@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import React, {useState, useEffect, useReducer} from 'react';
 
 import Button from '@cdo/apps/legacySharedComponents/Button';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import parentalPermissionRequestReducer, {
   REQUEST_PARENTAL_PERMISSION_SUCCESS,
@@ -27,7 +27,7 @@ import {hashString} from '../../utils';
  */
 export default function LockoutLinkedAccounts(props) {
   const reportEvent = (eventName, payload = {}) => {
-    analyticsReporter.sendEvent(eventName, payload, PLATFORMS.AMPLITUDE);
+    analyticsReporter.sendEvent(eventName, payload);
   };
 
   const validateEmail = email => {
