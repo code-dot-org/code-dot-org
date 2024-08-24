@@ -28,8 +28,11 @@ import PreviewControls from './PreviewControls';
 
 import styles from './patternAiPanel.module.scss';
 
-// Generate an array containing tick numbers from 1..32.
-const arrayOfTicks = Array.from({length: 32}, (_, i) => i + 1);
+const numEvents = 32;
+const numSeedEvents = 8;
+
+// Generate an array containing tick numbers from 1..numEvents.
+const arrayOfTicks = Array.from({length: numEvents}, (_, i) => i + 1);
 
 interface PatternAiPanelProps {
   library: MusicLibrary;
@@ -208,13 +211,21 @@ const PatternAiPanel: React.FunctionComponent<PatternAiPanelProps> = ({
 
   const handleAiClick = useCallback(async () => {
     stopPreview();
-    const seedEvents = currentValue.events.filter(event => event.tick <= 8);
-    generatePattern(seedEvents, 8, 32 - 8, aiTemperature, newEvents => {
-      currentValue.events = newEvents;
-      onChange(currentValue);
-      setGenerateState('none');
-      playPreview();
-    });
+    const seedEvents = currentValue.events.filter(
+      event => event.tick <= numSeedEvents
+    );
+    generatePattern(
+      seedEvents,
+      numSeedEvents,
+      numEvents - numSeedEvents,
+      aiTemperature,
+      newEvents => {
+        currentValue.events = newEvents;
+        onChange(currentValue);
+        setGenerateState('none');
+        playPreview();
+      }
+    );
     setGenerateState('generating');
   }, [currentValue, onChange, aiTemperature, stopPreview, playPreview]);
 

@@ -30,7 +30,6 @@ export const SOUND_VALUE_TYPE = 'sound_value_type';
 export const FIELD_PATTERN_TYPE = 'field_pattern';
 export const PATTERN_VALUE_TYPE = 'pattern_value_type';
 export const FIELD_PATTERN_AI_TYPE = 'field_pattern_ai';
-//export const PATTERN_AI_VALUE_TYPE = 'pattern_ai_value_type';
 export const FIELD_CHORD_TYPE = 'field_chord';
 export const CHORD_VALUE_TYPE = 'chord_value_type';
 export const FIELD_TUNE_TYPE = 'field_tune';
