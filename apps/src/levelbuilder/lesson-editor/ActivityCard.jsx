@@ -152,7 +152,7 @@ class ActivityCard extends Component {
         </div>
         <div style={styles.activityBody} hidden={this.props.collapsed}>
           {activity.activitySections.map(section => (
-            <div>
+            <div key={section.key + '-container'}>
               <ActivitySectionCard
                 key={section.key}
                 activitySection={section}
