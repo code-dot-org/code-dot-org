@@ -65,6 +65,31 @@ class UserLevelsController < ApplicationController
     return render json: {response_count: responses.count, num_students: section.students.count}, status: :ok
   end
 
+  # GET /user_levels/levelgroup_sublevels/:levelgroup_id
+  # Get the number of responses and number of students in the section for the given level.
+  # Only instructors of the section can access this information.
+  def get_levelgroup_sublevels
+    Rails.logger.debug {"Params: #{params.inspect}"}
+
+    levelgroup = LevelGroup.find(params[:levelgroup_id])
+    Rails.logger.debug {"LevelGroup: #{levelgroup.inspect}"}
+
+    unless levelgroup
+      Rails.logger.debug "LevelGroup not found"
+      return head :bad_request, text: "LevelGroup not found"
+    end
+
+    # unless levelgroup.script.can_be_instructor?(current_user)
+    #   Rails.logger.debug "User is not an instructor of the course"
+    #   return head :forbidden, text: 'User must be instructor of course'
+    # end
+
+    levels = levelgroup.levels
+    Rails.logger.debug {"Levels: #{levels.inspect}"}
+
+    return render json: levels, status: :ok
+  end
+
   private def set_user_level
     return unless params[:id]
     @user_level = UserLevel.find(params[:id])

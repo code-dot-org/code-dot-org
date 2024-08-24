@@ -18,7 +18,7 @@ import styles from './summary.module.scss';
 
 const FREE_RESPONSE = 'FreeResponse';
 const MULTI = 'Multi';
-//const LEVELGROUP = 'LevelGroup';
+const LEVELGROUP = 'LevelGroup';
 
 const SummaryResponses = ({
   scriptData,
@@ -39,10 +39,11 @@ const SummaryResponses = ({
   const isMulti =
     scriptData.level.type === MULTI ||
     predictSettings?.questionType === PredictQuestionType.MultipleChoice;
-  //const isLevelGroup = scriptData.level.type === LEVELGROUP;
+  const isLevelGroup = scriptData.level.type === LEVELGROUP;
 
   const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
   const [showStudentNames, setShowStudentNames] = useState(false);
+  const [subLevels, setSubLevels] = useState([]);
 
   // To avoid confusion, if a teacher tries to view the summary as a student,
   // send them back to the level in Participant mode instead.
@@ -80,6 +81,15 @@ const SummaryResponses = ({
   useEffect(() => {
     logEvent(EVENTS.SUMMARY_PAGE_LOADED);
   }, [logEvent]);
+
+  useEffect(() => {
+    console.log('fetching sublevels');
+    fetch(`/user_levels/levelgroup_sublevels/${currentLevelId}`)
+      .then(response => response.json())
+      .then(data => setSubLevels(data))
+      .catch(error => console.error('Error fetching levels:', error));
+    console.log('sublevels', subLevels);
+  }, [currentLevelId, subLevels]);
 
   useEffect(() => {
     const correctAnswerElement = document.getElementById(
@@ -138,6 +148,16 @@ const SummaryResponses = ({
                 {i18n.studentsAnswered()}
               </span>
             </p>
+          </div>
+        )}
+        {isLevelGroup && (
+          <div>
+            <h1>Levels</h1>
+            <ul>
+              {subLevels.map((subLevel, index) => (
+                <li key={index}>{subLevel.name}</li>
+              ))}
+            </ul>
           </div>
         )}
 

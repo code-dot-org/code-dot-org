@@ -1,5 +1,6 @@
 - app = 'level_group'
 - data = @level.properties
+- sublevel_data = @level.levels
 - contained_mode = local_assigns.fetch :contained_mode, false
 - parsed_last_attempt = JSON.parse(@last_attempt || '{}')
 
@@ -16,6 +17,7 @@
 - activity_guide = !@script_level.try(:anonymous?) && !@script_level.try(:submittable?)
 
 .level-group
+  - puts sublevel_data.inspect
   - @pages.each do |page|
     - if activity_guide
       %div#summaryEntryPoint
