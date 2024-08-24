@@ -48,7 +48,7 @@ import {validateModelId} from '../views/modelCustomization/utils';
 
 import {
   allFieldsHidden,
-  emptyModelCard,
+  anyFieldsChanged,
   findChangedProperties,
   getNewMessageId,
   hasFilledOutModelCard,
@@ -76,6 +76,7 @@ export interface AichatState {
   showWarningModal: boolean;
   // Denotes if there is an error with the chat completion response
   chatMessageError: boolean;
+  initialAiCustomizations: AiCustomizations;
   currentAiCustomizations: AiCustomizations;
   savedAiCustomizations: AiCustomizations;
   fieldVisibilities: FieldVisibilities;
@@ -94,6 +95,7 @@ const initialState: AichatState = {
   studentChatHistory: [],
   showWarningModal: true,
   chatMessageError: false,
+  initialAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   currentAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   savedAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   fieldVisibilities: DEFAULT_VISIBILITIES,
@@ -556,6 +558,7 @@ const aichatSlice = createSlice({
         ),
       };
 
+      state.initialAiCustomizations = reconciledAiCustomizations;
       state.savedAiCustomizations = reconciledAiCustomizations;
       state.currentAiCustomizations = reconciledAiCustomizations;
       state.fieldVisibilities =
@@ -677,14 +680,16 @@ export const selectAllFieldsHidden = createSelector(
   allFieldsHidden
 );
 
-export const selectCurrentEmptyModelCard = createSelector(
-  (state: RootState) => state.aichat.currentAiCustomizations.modelCardInfo,
-  emptyModelCard
+export const selectCurrentCustomizationsMatchInitial = createSelector(
+  (state: RootState) => state.aichat.initialAiCustomizations,
+  (state: RootState) => state.aichat.currentAiCustomizations,
+  anyFieldsChanged
 );
 
-export const selectSavedEmptyModelCard = createSelector(
-  (state: RootState) => state.aichat.savedAiCustomizations.modelCardInfo,
-  emptyModelCard
+export const selectSavedCustomizationsMatchInitial = createSelector(
+  (state: RootState) => state.aichat.initialAiCustomizations,
+  (state: RootState) => state.aichat.savedAiCustomizations,
+  anyFieldsChanged
 );
 
 export const selectAllVisibleMessages = (state: {aichat: AichatState}) => {

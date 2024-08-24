@@ -75,20 +75,14 @@ export const hasFilledOutModelCard = (modelCardInfo: ModelCardInfo) => {
   return true;
 };
 
-export const emptyModelCard = (modelCardInfo: ModelCardInfo) => {
-  let allFieldsEmpty = true;
-  for (const key of getTypedKeys(modelCardInfo)) {
-    if (key === 'isPublished') {
-      continue;
-    } else if (key === 'exampleTopics') {
-      if (modelCardInfo['exampleTopics'].length !== 0) {
-        allFieldsEmpty = false;
-      }
-    } else if (modelCardInfo[key] !== '') {
-      allFieldsEmpty = false;
-    }
-  }
-  return allFieldsEmpty;
+export const anyFieldsChanged = (
+  levelDefaultAiCustomizations: AiCustomizations,
+  AiCustomizations: AiCustomizations
+) => {
+  return (
+    findChangedProperties(levelDefaultAiCustomizations, AiCustomizations)
+      .length === 0
+  );
 };
 
 export const allFieldsHidden = (fieldVisibilities: FieldVisibilities) =>
