@@ -1566,10 +1566,6 @@ class User < ApplicationRecord
     read_attribute(:locale).try(:to_sym)
   end
 
-  def confirmation_required?
-    false
-  end
-
   # There are some shenanigans going on with this age stuff. The
   # actual persisted column is birthday -- so we convert age to a
   # birthday when writing and convert birthday to an age when
