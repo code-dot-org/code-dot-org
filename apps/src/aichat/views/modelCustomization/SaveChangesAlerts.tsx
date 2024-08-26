@@ -6,7 +6,7 @@ import {
   selectHavePropertiesChanged,
   selectSavedCustomizationsMatchInitial,
 } from '@cdo/apps/aichat/redux/aichatRedux';
-import Alert from '@cdo/apps/componentLibrary/alert/Alert';
+import Alert, {alertTypes} from '@cdo/apps/componentLibrary/alert/Alert';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
@@ -26,37 +26,39 @@ const SaveChangesAlerts: React.FunctionComponent = () => {
   );
   const isSavedDefault = useAppSelector(selectSavedCustomizationsMatchInitial);
 
-  return (
+  const alerts = {
+    reminder: {text: 'Remember to save your changes', type: alertTypes.info},
+    unsaved: {
+      text: 'You have unsaved changes',
+      type: alertTypes.warning,
+    },
+    saved: {text: 'Saved', type: alertTypes.success},
+  };
+
+  const showReminder = isCurrentDefault && isSavedDefault;
+  const showUnsaved = havePropertiesChanged;
+  const showSaved = !isSavedDefault && !havePropertiesChanged;
+
+  const alert = showReminder
+    ? alerts.reminder
+    : showUnsaved
+    ? alerts.unsaved
+    : showSaved
+    ? alerts.saved
+    : null;
+
+  return !isReadOnly ? (
     <div className={styles.saveAlertContainer}>
-      {isCurrentDefault && isSavedDefault && !saveInProgress && !isReadOnly && (
+      {alert && !saveInProgress && (
         <Alert
-          text={'Remember to save your changes'}
-          type={'info'}
+          text={alert.text}
+          type={alert.type}
           size="s"
           className={styles.saveAlert}
         />
       )}
-      {havePropertiesChanged && !saveInProgress && !isReadOnly && (
-        <Alert
-          text={'You have unsaved changes'}
-          type={'warning'}
-          size="s"
-          className={styles.saveAlert}
-        />
-      )}
-      {!isSavedDefault &&
-        !havePropertiesChanged &&
-        !saveInProgress &&
-        !isReadOnly && (
-          <Alert
-            text={'Saved'}
-            type={'success'}
-            size="s"
-            className={styles.saveAlert}
-          />
-        )}
     </div>
-  );
+  ) : null;
 };
 
 export default SaveChangesAlerts;
