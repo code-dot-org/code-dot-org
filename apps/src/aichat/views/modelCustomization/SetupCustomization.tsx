@@ -6,6 +6,7 @@ import {AichatLevelProperties, ModelDescription} from '@cdo/apps/aichat/types';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown/SimpleDropdown';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import ProgressSlider from '@cdo/apps/music/views/ProgressSlider';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
 import {modelDescriptions} from '../../constants';
@@ -140,7 +141,8 @@ const SetupCustomization: React.FunctionComponent = () => {
               />
               {aiCustomizations.temperature}
             </div>
-            <input
+            <ProgressSlider percentProgress={aiCustomizations.temperature} />
+            {/* <input
               type="range"
               min={MIN_TEMPERATURE}
               max={MAX_TEMPERATURE}
@@ -155,7 +157,7 @@ const SetupCustomization: React.FunctionComponent = () => {
                   })
                 )
               }
-            />
+            /> */}
           </div>
         )}
         {isVisible(systemPrompt) && (

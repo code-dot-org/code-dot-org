@@ -1,33 +1,34 @@
 @import 'color';
 
-$slider-width: 200px;
+$slider-width: 300px;
 
 .slider {
   position: relative;
-  width: $slider-width;
-  height: 6px;
+  width: 100%;
+  height: 4px;
   border-radius: 10px;
-  background-color: $light_gray_700;
+  background-color: $light_gray_100;
 }
 
 .progressBar {
   position: absolute;
   top: 0;
   left: 0;
-  height: 6px;
+  height: 4px;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  background-color: $light_gray_100;
+  background-color: $light_gray_700;
 }
 
 .playhead {
   position: absolute;
-  top: -7px;
-  height: 20px;
-  width: 3px;
-  border-radius: 1px;
-  background-color: white;
-  box-shadow: 1px 1px $neutral_dark80;
+  top: -4px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  border: 1px solid $light_gray_700;
+  background-color: $white;
+  // box-shadow: 1px 1px $neutral_dark80;
 }
 
 :export {
