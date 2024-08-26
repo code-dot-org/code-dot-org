@@ -195,6 +195,7 @@ export default class AnalyticsReporter {
 
   onPackSelected(packId: string) {
     this.onButtonClicked('select-pack', {packId});
+    trackEvent('music', 'music_pack_selected', {value: packId});
   }
 
   onButtonClicked(buttonName: string, properties?: object) {
@@ -209,10 +210,6 @@ export default class AnalyticsReporter {
       keyName,
       ...properties,
     });
-  }
-
-  onPackSelected(packId: string) {
-    trackEvent('music', 'music_pack_selected', {value: packId});
   }
 
   private trackUIEvent(eventType: string, payload: object) {

@@ -124,7 +124,6 @@ interface PackDialogProps {
  * sound packs.
  */
 const PackDialog: React.FunctionComponent<PackDialogProps> = ({player}) => {
-  const analyticsReporter = useContext(AnalyticsContext);
   const dispatch = useAppDispatch();
 
   const currentPackId = useAppSelector(state => state.music.packId);
