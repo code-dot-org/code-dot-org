@@ -607,7 +607,12 @@ class Section < ApplicationRecord
   end
 
   def assigned_gen_ai?
-    ['exploring-gen-ai-1', 'exploring-gen-ai-2'].include?(script&.name) ||
+    [
+      'exploring-gen-ai1-2024',
+      'exploring-gen-ai2-2024',
+      'foundations-gen-ai-2024',
+      'customizing-llms-2024'
+    ].include?(script&.name) ||
       unit_group&.name == 'exploring-gen-ai-2024'
   end
 
