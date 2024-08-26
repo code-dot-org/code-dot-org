@@ -67,6 +67,7 @@ class RegistrationsController < Devise::RegistrationsController
   # Get /users/new_sign_up
   #
   def new_sign_up
+    view_options(full_width: true, responsive_content: true)
     render 'new_sign_up'
   end
 
