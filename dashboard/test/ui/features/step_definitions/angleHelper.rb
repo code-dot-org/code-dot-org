@@ -43,7 +43,6 @@ When(/^I drag the Angle Helper circle to coordinates \((\d*),(\d*)\)$/) do |x, y
   JS
 
   @browser.execute_script(script)
-  # @browser.execute_script("$('.blocklyWidgetDiv svg')[0].simulate( 'drag', {handle: 'corner', dx: #{x}, dy: #{y}, moves: 5});")
 end
 
 Then(/^the angle text is at "(\d*)"$/) do |val|
