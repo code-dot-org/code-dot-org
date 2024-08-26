@@ -1,6 +1,8 @@
 import React, {useCallback, useState} from 'react';
 
-import SuggestedPrompts, {SuggestedPrompt} from '@cdo/apps/aiComponentLibrary/suggestedPrompt/SuggestedPrompts';
+import SuggestedPrompts, {
+  SuggestedPrompt,
+} from '@cdo/apps/aiComponentLibrary/suggestedPrompt/SuggestedPrompts';
 import {
   AITutorTypes as ActionType,
   AITutorTypesValue,

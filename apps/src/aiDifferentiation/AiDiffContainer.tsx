@@ -4,7 +4,9 @@ import Draggable, {DraggableEventHandler} from 'react-draggable';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import SuggestedPrompts, {SuggestedPrompt} from '@cdo/apps/aiComponentLibrary/suggestedPrompt/SuggestedPrompts';
+import SuggestedPrompts, {
+  SuggestedPrompt,
+} from '@cdo/apps/aiComponentLibrary/suggestedPrompt/SuggestedPrompts';
 import Button from '@cdo/apps/componentLibrary/button';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
@@ -44,17 +46,15 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       setMessageHistory(
         messageHistory.map((item: ChatItem, id: number) => {
           if (id === messageId && Array.isArray(item)) {
-            return item.map(
-              (choice: SuggestedPrompt, choiceId: number) => {
-                if (choice.label === clickedChip.label) {
-                  if (!choice.selected) {
-                    // TODO: Communicate to the backend that this chip was clicked.
-                  }
-                  return {...choice, selected: true};
+            return item.map((choice: SuggestedPrompt, choiceId: number) => {
+              if (choice.label === clickedChip.label) {
+                if (!choice.selected) {
+                  // TODO: Communicate to the backend that this chip was clicked.
                 }
-                return choice;
+                return {...choice, selected: true};
               }
-            );
+              return choice;
+            });
           }
           return item;
         })
