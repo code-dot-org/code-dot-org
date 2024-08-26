@@ -1177,6 +1177,8 @@ Dashboard::Application.routes.draw do
     post '/aichat/start_chat_completion', to: 'aichat#start_chat_completion'
     get '/aichat/chat_request/:id', to: 'aichat#chat_request'
 
+    post 'ai_diff/chat_completion', to: 'ai_diff#chat_completion'
+
     resources :ai_tutor_interactions, only: [:create, :index] do
       resources :feedbacks, controller: 'ai_tutor_interaction_feedbacks', only: [:create]
     end

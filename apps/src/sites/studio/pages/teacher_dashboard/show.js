@@ -36,7 +36,6 @@ import experiments from '@cdo/apps/util/experiments';
 const script = document.querySelector('script[data-dashboard]');
 const scriptData = JSON.parse(script.dataset.dashboard);
 const {
-  anyStudentHasProgress,
   section,
   sections,
   localeCode,
@@ -77,6 +76,7 @@ $(document).ready(function () {
     DCDO.get('teacher-local-nav-v2', false) ||
     experiments.isEnabled('teacher-local-nav-v2');
 
+  // When removing v1TeacherDashboard after v2 launch, remove `selectedSection` from api response.
   const getV1TeacherDashboard = () => {
     const baseUrl = `/teacher_dashboard/sections/${section.id}`;
 
@@ -111,7 +111,7 @@ $(document).ready(function () {
           sectionId={selectedSection.id}
           sectionName={selectedSection.name}
           studentCount={selectedSection.students.length}
-          anyStudentHasProgress={anyStudentHasProgress}
+          anyStudentHasProgress={selectedSection.any_student_has_progress}
           showAITutorTab={showAITutorTab}
           sectionProviderName={sectionProviderName(
             store.getState(),
@@ -129,7 +129,6 @@ $(document).ready(function () {
       ) : (
         <TeacherNavigationRouter
           studioUrlPrefix={scriptData.studioUrlPrefix}
-          anyStudentHasProgress={anyStudentHasProgress}
           showAITutorTab={showAITutorTab}
         />
       )}

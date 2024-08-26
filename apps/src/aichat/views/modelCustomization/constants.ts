@@ -111,6 +111,7 @@ export const DEFAULT_VISIBILITIES: {
 export const DEFAULT_LEVEL_AICHAT_SETTINGS: LevelAichatSettings = {
   initialCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   visibilities: DEFAULT_VISIBILITIES,
+  levelSystemPrompt: '',
   hidePresentationPanel: false,
   availableModelIds: [modelDescriptions[0].id],
 };

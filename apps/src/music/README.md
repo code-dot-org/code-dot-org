@@ -22,6 +22,7 @@ This is the client-side code for **Music Lab**, as instantiated by a `music` lev
 - Custom blockly field implementations for specialized blocks:
   - The `play` block opens a sound library explorer.
   - The `play drums` block opens a drum pattern editor, and has a custom rendering of the drum pattern in the block itself.
+  - The `play AI drums` block opens a drum pattern editor, and has a custom rendering of the drum pattern in the block itself, and uses AI to generate drums given some initial ones.
   - The `play notes` block opens a note editor, and has a custom rendering of the note pattern in the block itself.
   - The `play tune` block opens a "piano roll" editor, and has a custom rendering of the note events.
 

@@ -40,7 +40,6 @@ import styles from './teacher-navigation.module.scss';
 
 interface TeacherNavigationRouterProps {
   studioUrlPrefix: string;
-  anyStudentHasProgress: boolean;
   showAITutorTab: boolean;
 }
 
@@ -59,7 +58,6 @@ const applyV1TeacherDashboardWidth = (children: React.ReactNode) => {
 
 const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   studioUrlPrefix,
-  anyStudentHasProgress,
   showAITutorTab,
 }) => {
   const sectionId = useSelector(
@@ -80,6 +78,11 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
         : null
   );
 
+  const anyStudentHasProgress = React.useMemo(
+    () => (selectedSection ? selectedSection.anyStudentHasProgress : true),
+    [selectedSection]
+  );
+
   const studentCount = useSelector(
     (state: {teacherSections: {selectedStudents: object[]}}) =>
       state.teacherSections.selectedStudents.length
@@ -87,7 +90,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
   const providerName = useSelector(
     (state: {
       teacherSections: {
-        section: {[id: number]: {rosterProviderName: string}};
+        section: {[id: number]: Section};
         selectedSectionId: number;
       };
     }) => sectionProviderName(state, state.teacherSections.selectedSectionId)
