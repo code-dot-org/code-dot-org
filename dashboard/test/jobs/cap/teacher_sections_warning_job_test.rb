@@ -30,6 +30,15 @@ class CAP::TeacherSectionsWarningJobTest < ActiveJob::TestCase
         },
       )
     end
+    let(:expect_event_logging) do
+      Metrics::Events.expects(:log_event).with(
+        event_name: 'cap_teacher_sections_warning',
+        metadata: {
+          teacher_id: teacher.id,
+          cap_section_ids: [section.id],
+        },
+      )
+    end
 
     around do |test|
       Timecop.freeze {test.call}
@@ -41,6 +50,8 @@ class CAP::TeacherSectionsWarningJobTest < ActiveJob::TestCase
 
     before do
       MailjetDeliveryJob.stubs(:perform_later)
+      Metrics::Events.stubs(:log_event)
+
       DCDO.stubs(:get).with('cap_teacher_section_warning_emails', []).returns(cap_teacher_section_warning_emails)
     end
 
@@ -56,6 +67,12 @@ class CAP::TeacherSectionsWarningJobTest < ActiveJob::TestCase
       assert_performed_jobs 1
     end
 
+    it 'logs event' do
+      expect_event_logging.once
+      perform_enqueued_jobs {perform_later}
+      assert_performed_jobs 1
+    end
+
     context 'when StandardError is raised' do
       let(:exception) {StandardError.new('expected_exception')}
 
@@ -65,6 +82,8 @@ class CAP::TeacherSectionsWarningJobTest < ActiveJob::TestCase
 
       it 'rescues from exception with #report_exception' do
         described_class.any_instance.expects(:report_exception).with(exception).once
+        expect_event_logging.never
+
         perform_enqueued_jobs {perform_later}
         assert_performed_jobs 1
       end
@@ -75,6 +94,8 @@ class CAP::TeacherSectionsWarningJobTest < ActiveJob::TestCase
 
       it 'does not warn teacher' do
         expect_teacher_warning_to_be_sent.never
+        expect_event_logging.never
+
         perform_enqueued_jobs {perform_later}
         assert_performed_jobs 1
       end
@@ -85,6 +106,8 @@ class CAP::TeacherSectionsWarningJobTest < ActiveJob::TestCase
 
       it 'does not warn teacher' do
         expect_teacher_warning_to_be_sent.never
+        expect_event_logging.never
+
         perform_enqueued_jobs {perform_later}
         assert_performed_jobs 1
       end
@@ -95,6 +118,8 @@ class CAP::TeacherSectionsWarningJobTest < ActiveJob::TestCase
 
       it 'does not warn teacher' do
         expect_teacher_warning_to_be_sent.never
+        expect_event_logging.never
+
         perform_enqueued_jobs {perform_later}
         assert_performed_jobs 1
       end
@@ -105,6 +130,8 @@ class CAP::TeacherSectionsWarningJobTest < ActiveJob::TestCase
 
       it 'schedules teacher warning email' do
         expect_teacher_warning_to_be_sent.once
+        expect_event_logging.once
+
         perform_enqueued_jobs {perform_later}
         assert_performed_jobs 1
       end
