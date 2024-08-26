@@ -633,17 +633,17 @@ en:
           description_teacher: "**Participants will:**\n\n-   Prepare to teach CS Discoveries.\n-   Practice key concepts in the CS Discoveries curriculum.\n-   Grow in their understanding of equitable CS education. \n-   Develop empathy for the student experience. \n-   Become a part of a network of teachers who are doing similar work."
           version_title: "'24-'25"
         vpl-csd-2024:
-          title: CSD Virtual Professional Learning
+          title: CSD Virtual Professional Learning '24-'25
           description_short: ''
           description_student: "##### **You will:**\n\n-   ##### Prepare to teach CS Discoveries.\n-   ##### Practice key concepts in the CS Discoveries curriculum.\n-   ##### Grow in your understanding of equitable CS education.\n-   ##### Develop empathy for the student experience.\n-   ##### Become a part of a network of teachers who are doing similar work."
           description_teacher: "##### **Participants will:**\n\n-   ##### Prepare to teach CS Discoveries.\n-   ##### Practice key concepts in the CS Discoveries curriculum.\n-   ##### Grow in their understanding of equitable CS education.\n-   ##### Develop empathy for the student experience.\n-   ##### Become a part of a network of teachers who are doing similar work."
-          version_title: ''
+          version_title: '2024'
         vpl-csa-2024:
-          title: vpl-csa-2024
+          title: CSA Virtual Professional Learning '24-'25
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: '2024'
         self-paced-pl-csa-2024:
           title: self-paced-pl-csa-2024
           description_short: ''
@@ -655,7 +655,7 @@ en:
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: '2024'
         self-paced-pl-csp-2024:
           title: Teaching CS Principles
           description_short: ''
