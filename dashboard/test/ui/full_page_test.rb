@@ -33,7 +33,7 @@ def then_i_see_no_difference_for(eyes, identifier, stitch_mode)
       Applitools::STITCH_MODE[:css]
   end
 
-  # eyes.check_window(identifier, 5, false)
+  # Before: eyes.check_window(identifier, 5, false)
   eyes.check_window(identifier, 5)
 
   eyes.force_full_page_screenshot = true
