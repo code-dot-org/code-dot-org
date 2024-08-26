@@ -113,7 +113,6 @@ span {
     flex-direction: column;
     align-items: flex-start;
     text-align: start;
-    gap: 1.875rem;
     
     input {
       width: 100%;
@@ -124,6 +123,19 @@ span {
     img {
       margin-right: .5rem;
       width: 2rem;
+    }
+
+    form {
+      margin-bottom: 0;
+      width: 100%;
+  
+      button {
+        width: 100%;
+      }
+    }
+
+    i {
+      margin-right: .5rem;
     }
 
     .ssoSignUpTypes {
@@ -155,11 +167,13 @@ span {
 
     .shortButton {
       width: auto;
+      margin-top: 1rem;
     }
 
     .googleButton {
       background-color: $google_brand_color;
       margin-bottom: .5rem;
+      color: $white;
 
       &:hover {
         background-color: darken($google_brand_color, 10%);
@@ -179,6 +193,7 @@ span {
     .facebookButton {
       background-color: $facebook_brand_color;
       margin-bottom: .5rem;
+      color: $white;
 
       &:hover {
         background-color: darken($facebook_brand_color, 10%);
@@ -187,6 +202,13 @@ span {
 
     .cleverButton {
       background-color: $clever_brand_color;
+      color: $white;
+
+      img {
+        height: 20px;
+        width: 20px;
+        opacity: inherit;
+      }
 
       &:hover {
         background-color: darken($clever_brand_color, 10%);
@@ -194,6 +216,7 @@ span {
     }
 
     .greyTextbox {
+      margin-top: 1rem;
       background-color: $light_gray_50;
       padding: 1rem;
       border-radius: 4px;
@@ -210,12 +233,8 @@ span {
     }
   }
 
-  .container > * {
-    width: 100%;
-  }
-
-  .signUpWithTitle {
-    margin-bottom: 0;
+  .headers {
+    margin-bottom: 1rem;
   }
 
   .signUpWithDesc {

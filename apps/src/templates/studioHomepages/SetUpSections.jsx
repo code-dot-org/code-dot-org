@@ -19,6 +19,7 @@ class SetUpSections extends Component {
     headingText: PropTypes.string,
     descriptionText: PropTypes.string,
     solidBorder: PropTypes.bool,
+    asyncLoadComplete: PropTypes.bool,
   };
 
   // Wrapped to avoid passing event args
@@ -42,6 +43,7 @@ class SetUpSections extends Component {
         buttonText={i18n.createSection()}
         className="uitest-set-up-sections"
         buttonClass="uitest-newsection"
+        buttonDisabled={!this.props.asyncLoadComplete}
         onClick={this.beginEditingSection}
         solidBorder={this.props.solidBorder || false}
       />
@@ -49,6 +51,11 @@ class SetUpSections extends Component {
   }
 }
 export const UnconnectedSetUpSections = SetUpSections;
-export default connect(undefined, {
-  beginEditingSection,
-})(SetUpSections);
+export default connect(
+  state => ({
+    asyncLoadComplete: state.teacherSections.asyncLoadComplete,
+  }),
+  {
+    beginEditingSection,
+  }
+)(SetUpSections);

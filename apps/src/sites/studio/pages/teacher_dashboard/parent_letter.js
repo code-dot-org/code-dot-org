@@ -43,7 +43,11 @@ window.addEventListener('DOMContentLoaded', function () {
   document.body.appendChild(mountPoint);
   ReactDOM.render(
     <Provider store={store}>
-      <ParentLetter autoPrint logoUrl={scriptData.logoUrl} />
+      <ParentLetter
+        autoPrint
+        logoUrl={scriptData.logoUrl}
+        loginTypeName={scriptData.section.login_type_name}
+      />
     </Provider>,
     mountPoint
   );
