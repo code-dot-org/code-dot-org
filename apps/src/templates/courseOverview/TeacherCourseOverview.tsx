@@ -89,15 +89,19 @@ interface CourseOverviewData {
   hiddenScripts: string[];
 }
 
-const courseSummaryCachedLoader = _.memoize(async courseVersionName => {
-  return fetch(`/dashboardapi/course_summary/${courseVersionName}`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      'X-CSRF-Token': await getAuthenticityToken(),
-    },
-  }).then(response => response.json());
-});
+const courseSummaryCachedLoader = _.memoize(async courseVersionName =>
+  getAuthenticityToken()
+    .then(token =>
+      fetch(`/dashboardapi/course_summary/${courseVersionName}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': token,
+        },
+      })
+    )
+    .then(response => response.json())
+);
 
 export const teacherCourseOverviewLoader =
   async (): Promise<CourseOverviewData | null> => {
@@ -109,17 +113,13 @@ export const teacherCourseOverviewLoader =
       return null;
     }
 
-    const response = courseSummaryCachedLoader(
-      selectedSection.courseVersionName
-    );
-
-    return await response.then(response => {
-      return {
+    return courseSummaryCachedLoader(selectedSection.courseVersionName).then(
+      response => ({
         courseSummary: response.unit_group,
         isVerifiedInstructor: response.is_verified_instructor,
         hiddenScripts: response.hidden_scripts,
-      };
-    });
+      })
+    );
   };
 
 const TeacherCourseOverview: React.FC = () => {
