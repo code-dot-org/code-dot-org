@@ -16,6 +16,7 @@ import {
 import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {getStore} from '@cdo/apps/redux';
 import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
@@ -104,13 +105,6 @@ export const teacherCourseOverviewLoader =
 
     const selectedSection = state.sections[state.selectedSectionId];
 
-    const viewAsState = getStore().getState().viewAs;
-
-    // If we have already set the instructor, then we don't need to load again.
-    if (viewAsState.viewAs === ViewType.Instructor) {
-      return null;
-    }
-
     if (!selectedSection || !selectedSection?.courseVersionName) {
       return null;
     }
@@ -179,7 +173,7 @@ const TeacherCourseOverview: React.FC = () => {
   }, [loadedData, dispatch]);
 
   if (!loadedData) {
-    return <div>Null loaded data</div>;
+    return <Spinner />;
   }
 
   const {courseSummary} = loadedData;
