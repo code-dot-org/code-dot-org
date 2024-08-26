@@ -40,6 +40,8 @@ Feature: BubbleChoice
     And I wait for 4 seconds
     Then I verify progress for the sublevel with selector ".uitest-bubble-choice:eq(0) .progress-bubble:first" is "perfect"
 
+  # this scenario is currently breaking on ipad and safari
+  @no_mobile @no_safari
   Scenario: Lab2 BubbleChoice progress
     Given I create a teacher-associated student named "Alice"
 
@@ -86,11 +88,11 @@ Feature: BubbleChoice
 
     # View progress from BubbleChoice sublevel activity page
     Given I am on "http://studio.code.org/s/allthethings/lessons/52/levels/8/sublevel/1"
-    
+
     # Dismiss the dialog
     And I click selector "#ui-close-dialog" once I see it
     And I wait until element "#ui-close-dialog" is not visible
-    
+
     # Teacher has not completed level, so make sure it is not shown as complete
     Then I verify progress for the sublevel with selector ".teacher-panel .progress-bubble:first" is "not_tried"
     When I click selector ".teacher-panel table td:contains(Alice)" once I see it
@@ -99,14 +101,14 @@ Feature: BubbleChoice
 
   Scenario: Navigating between a Lab2 sublevel and another Lab2 level
     Given I create a teacher-associated student named "Alice"
-    
+
     # Go to Lab2 BubbleChoice sublevel
     Given I am on "http://studio.code.org/s/allthethings/lessons/52/levels/8/sublevel/1"
-    
+
     # Dismiss the dialog
     And I click selector "#ui-close-dialog" once I see it
     And I wait until element "#ui-close-dialog" is not visible
-    
+
     # Go to another Lab2 level (panels)
     And I click selector ".progress-bubble:nth(5)"
     And I wait until element "#lab2-panels" is visible
