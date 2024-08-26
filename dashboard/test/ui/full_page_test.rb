@@ -24,7 +24,7 @@ driver = Selenium::WebDriver.for(:remote,
 ),
 )
 
-def then_i_see_no_difference_for(identifier, stitch_mode)
+def then_i_see_no_difference_for(eyes, identifier, stitch_mode)
   if stitch_mode == "none"
     eyes.force_full_page_screenshot = false
   else
@@ -33,25 +33,25 @@ def then_i_see_no_difference_for(identifier, stitch_mode)
       Applitools::STITCH_MODE[:css]
   end
 
-  # eyes.check_window(identifier + "-this doesn't work", 5, false)
-  eyes.check_window(identifier + "-this doesn't work", 5)
+  # eyes.check_window(identifier, 5, false)
+  eyes.check_window(identifier, 5)
 
   eyes.force_full_page_screenshot = true
   eyes.stitch_mode = Applitools::STITCH_MODE[:css]
 end
 
 begin
-  eyes.open(driver: driver, app_name: 'Google News', test_name: 'Google News Full Page Snapshot')
+  eyes.open(driver: driver, app_name: 'Google News', test_name: 'full_page_test.rb')
   driver.get 'https://slashdot.org'
 
-  identifier = "initial load"
+  identifier_frag = "initial load"
 
-  eyes.check(identifier + "-this works", Applitools::Selenium::Target.window.fully)
+  eyes.check(identifier_frag + " this works", Applitools::Selenium::Target.window.fully)
 
-  then_i_see_no_difference_for(identifier)
-  then_i_see_no_difference_for(identifier + "-none", "none")
-  then_i_see_no_difference_for(identifier + "-scroll", "scroll")
-  then_i_see_no_difference_for(identifier + "-css", "css")
+  then_i_see_no_difference_for(eyes, identifier_frag, "")
+  then_i_see_no_difference_for(eyes, identifier_frag + " none", "none")
+  then_i_see_no_difference_for(eyes, identifier_frag + " scroll", "scroll")
+  then_i_see_no_difference_for(eyes, identifier_frag + " css", "css")
 
   eyes.close
 ensure
