@@ -203,6 +203,7 @@ end
 When /^I press the new section button$/ do
   steps <<-GHERKIN
     Given I scroll the ".uitest-newsection" element into view
+    Then I wait until ".uitest-newsection" is not disabled
     When I press the first ".uitest-newsection" element
   GHERKIN
 end

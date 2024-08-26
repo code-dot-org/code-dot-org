@@ -406,6 +406,8 @@ en:
               name: Web Lab 2
             lesson-55:
               name: Lab2 Showcase
+            lesson-56:
+              name: Activity Guide Levelgroup
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -15746,7 +15748,9 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
-          lessons: {}
+          lessons:
+            lesson-8:
+              name: 'Synchronous Session 3: Wrap Up - 2024'
           lesson_groups: {}
           name: vpl-csd-2024-m1
         vpl-csd-2024-m2:

@@ -1,0 +1,69 @@
+name 'sp-pl-DS-teacherEnd'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Conclusion
+#### By the end of this chapter, your students should have a solid understanding of what data science is and have experience analyzing and interpreting data. 
+#### In the next chapter, students will explore data science using Python and the Pandas library to explore and analyze data. 
+
+#### *Previous Python is not necessary to complete the chapter.*
+
+
+
+
+##
+
+<hr style="clear:both">
+
+<img src="https://images.code.org/ac0c424e4b2bcffea4718e3732226b5f-image-1724435723363.png" style="float: left; height: 175px; clear: both; margin: 0 20px 20px 0;">
+
+<div style="background-color: #dccbea; border-radius: 40px 40px 5px 40px; color: #000000; width: 80%; margin-left: 10%; padding: 0.5px 10px 1px 10px;">
+
+
+<p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px;">These lessons really pushed my students to think critically about the data they were working with. They weren't just following steps—they were making decisions, discussing tradeoffs, and learning to interpret data in meaningful ways.
+</p>
+<p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
+<p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
+</p>
+</div>
+
+  <div style="clear: both;"></div>
+
+
+<img src="https://images.code.org/0c0fe73019117494160a5210443458a8-image-1724435821067.png" style="float: right; height: 175px; clear: both; margin: 0 20px 20px 0;">
+
+<div style="background-color: #ffd199; border-radius: 40px 40px 5px 40px; color: #000000; width: 80%; margin-left: 10%; padding: 0.5px 10px 1px 10px;">
+
+
+<p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
+<p style="line-height: 1.5; margin-left: 30px; margin-right: 10px;">The interactive nature of these lessons kept my students actively involved and curious. They loved seeing the immediate results of their work in CODAP, and it sparked so many insightful discussions about what the data was really telling us.
+</p>
+<p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
+<p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
+</p>
+</div>
+
+  <div style="clear: both;"></div>
+  
+<img src="https://images.code.org/2b88313b115f083f08cd2d5c10bfc67b-image-1724435882232.png" style="float: left; height: 175px; clear: both; margin: 0 20px 20px 0;">
+
+<div style="background-color: #f6a6a6; border-radius: 40px 40px 5px 40px; color: #000000; width: 80%; margin-left: 10%; padding: 0.5px 10px 1px 10px;">
+
+
+<p style="font-size: 70px; margin-bottom: -10px; margin-top: 30px; opacity: 0.5">&ldquo;</p>
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 30px;">The lesson plans, slides, and resources were so well-prepared that teaching these data science lessons was a breeze. I had no prior experience with data science, but the materials guided me and my students through the process seamlessly.
+</p>
+<p style="font-size: 70px; text-align: right; opacity: 0.5">&rdquo;</p>
+<p style="text-align: right; font-size: 125%;  font-style: italic; margin-right: 30px; margin-top: -20px">
+</p>
+</div>
+
+<div style="clear: both;"></div>
+
+
+## Let's continue to Chapter 2: Python and Pandas
+
+
+MARKDOWN
