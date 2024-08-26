@@ -9,7 +9,6 @@ require 'active_support/inflector'
 require 'active_support/core_ext/hash'
 require 'fileutils'
 require 'require_all'
-require 'ostruct'
 
 require_relative '../../lib/cdo/shared_constants'
 require_relative '../../lib/cdo/shared_constants/curriculum/shared_course_constants'
@@ -105,6 +104,7 @@ def main
       AI_TUTOR_INTERACTION_STATUS
       AI_TUTOR_TYPES
       AI_REQUEST_EXECUTION_STATUS
+      AI_CHAT_MODEL_IDS
       FEATURED_PROJECT_STATUS
       FEATURED_PROJECT_CONSTANTS
       LMS_LINKS

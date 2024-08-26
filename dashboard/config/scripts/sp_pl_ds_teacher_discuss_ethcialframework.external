@@ -1,0 +1,42 @@
+name 'sp-pl-DS-teacher-discuss-ethcialFramework'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Discussing Cleaning Data  
+
+## Discuss and Compare
+
+#### A key idea is Data Science is that information can be represented in a variety of ways; data scientists have to make choices, and these choices have trade-offs.
+
+#### When students compare their work, they have an opportunity to both communicate the choices they made and to see the choices made by another student. 
+
+#### When they connect back to the source of information - whether it be a primary source or a data set - students are pushed to consider what information is represented in their work, and what information is not.
+
+## Consider the Ethical Framework 
+
+#### **Discuss:** Which do you think should be prioritized when deciding how to clean data?
+
+![](https://images.code.org/9145933afbe673b1f8165dab633a1ed2-image-1724339822547.png)
+
+#### For **Accuracy and Bias**, students may bring up things like:
+
+- #### Changing the format allows the cleaners bias to enter the picture
+- #### Cleaned data is not accurately what the person wanted
+- #### Cleaned Data helps form a more accurate picture -- someone who misspelled pepperoni still wants pepperoni pizza
+
+#### For **Privacy**, students may bring up things like:
+
+- #### Creating categories can unintentionally identify certain members of a group
+
+#### For **Misuse and Consent**, students may bring up things like:
+
+- #### It’s possible that people have not consented to their data being used in this altered, cleaned, format
+
+
+
+
+## Let's continue to more data visualization! 
+
+
+MARKDOWN

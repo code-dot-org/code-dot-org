@@ -406,6 +406,8 @@ en:
               name: Web Lab 2
             lesson-55:
               name: Lab2 Showcase
+            lesson-56:
+              name: Activity Guide Levelgroup
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -10449,6 +10451,8 @@ en:
               name: Music Lab Testing
             lesson-14:
               name: Chatbots
+            lesson-15:
+              name: Sprite Lab Tutorial
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff
@@ -15744,7 +15748,9 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
-          lessons: {}
+          lessons:
+            lesson-8:
+              name: 'Synchronous Session 3: Wrap Up - 2024'
           lesson_groups: {}
           name: vpl-csd-2024-m1
         vpl-csd-2024-m2:
@@ -18665,8 +18671,8 @@ en:
           title: Object-Oriented Programming
           description_audience: ''
           description_short: Students learn fundamental Java concepts, discover their identity as software engineers, and use debugging strategies and code reviews to improve their programming skills.
-          description: "This unit introduces students to object-oriented programming principles as they explore The Neighborhood and discover their identity as a software engineer. Students learn fundamental Java concepts as they navigate and paint in The Neighborhood with `Painter` objects and extend the `Painter` class to expand the capabilities of their programs. Students practice predicting the outcome of program code and developing algorithms using sequencing, selection, and iteration to navigate mazes and paint murals. Students also learn to document program code using comments to describe the behavior of specific code segments and conduct code reviews to receive feedback from their peers.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, students will be able to . . .</em></strong></p>\n\n* Use inheritance to create subclasses that extend an existing class\n\n* Write methods with and without parameters to perform a specific task\n\n* Implement algorithms sequencing, selection, and iteration\n\n* Write clear and readable code using methods, control structures, and comments\n\n* Improve a program through iterative development based on feedback\n    </div>\n</details>"
-          student_description: "This unit introduces you to object-oriented programming principles as you explore The Neighborhood and discover your identity as a software engineer. You learn fundamental Java concepts as you navigate and paint in The Neighborhood with `Painter` objects and extend the `Painter` class to expand the capabilities of your programs. You practice predicting the outcome of program code and developing algorithms using sequencing, selection, and iteration to navigate mazes and paint murals. You also learn to document program code using comments to describe the behavior of specific code segments and conduct code reviews to receive feedback from your peers.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p>\n\n* Use inheritance to create subclasses that extend an existing class\n\n* Write methods with and without parameters to perform a specific task\n\n* Implement algorithms sequencing, selection, and iteration\n\n* Write clear and readable code using methods, control structures, and comments\n\n* Improve a program through iterative development based on feedback\n    </div>\n</details>"
+          description: "This unit introduces students to object-oriented programming principles as they explore The Neighborhood and discover their identity as a software engineer. Students learn fundamental Java concepts as they navigate and paint in The Neighborhood with `Painter` objects and extend the `Painter` class to expand the capabilities of their programs. Students practice predicting the outcome of program code and developing algorithms using sequencing, selection, and iteration to navigate mazes and paint murals. Students also learn to document program code using comments to describe the behavior of specific code segments and conduct code reviews to receive feedback from their peers.\n\n### \U0001F3AF Unit Objectives\n\n*By the end of this unit, students will be able to . . .*\n\n* Use inheritance to create subclasses that extend an existing class\n\n* Write methods with and without parameters to perform a specific task\n\n* Implement algorithms sequencing, selection, and iteration\n\n* Write clear and readable code using methods, control structures, and comments\n\n* Improve a program through iterative development based on feedback"
+          student_description: "This unit introduces you to object-oriented programming principles as you explore The Neighborhood and discover your identity as a software engineer. You learn fundamental Java concepts as you navigate and paint in The Neighborhood with `Painter` objects and extend the `Painter` class to expand the capabilities of your programs. You practice predicting the outcome of program code and developing algorithms using sequencing, selection, and iteration to navigate mazes and paint murals. You also learn to document program code using comments to describe the behavior of specific code segments and conduct code reviews to receive feedback from your peers.\n\n### \U0001F3AF Unit Objectives\n\n*By the end of this unit, you will be able to . . .*\n\n* Use inheritance to create subclasses that extend an existing class\n\n* Write methods with and without parameters to perform a specific task\n\n* Implement algorithms sequencing, selection, and iteration\n\n* Write clear and readable code using methods, control structures, and comments\n\n* Improve a program through iterative development based on feedback"
         csa2-pilot-2025:
           lessons:
             lesson-3:

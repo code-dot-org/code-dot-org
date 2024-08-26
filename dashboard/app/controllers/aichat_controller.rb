@@ -1,3 +1,7 @@
+require 'cdo/throttle'
+
+AICHAT_PREFIX = "aichat/".freeze
+DEFAULT_REQUEST_LIMIT_PER_MIN = 50
 ROLES_FOR_MODEL = %w(assistant user).freeze
 DEFAULT_POLLING_INTERVAL_MS = 1000
 DEFAULT_POLLING_BACKOFF_RATE = 1.2
@@ -13,6 +17,7 @@ class AichatController < ApplicationController
   # aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
   # POST /aichat/chat_completion
   def chat_completion
+    return head :too_many_requests if should_throttle?
     return render status: :forbidden, json: {} unless AichatSagemakerHelper.can_request_aichat_chat_completion?
     unless chat_completion_has_required_params?
       return render status: :bad_request, json: {}
@@ -27,6 +32,7 @@ class AichatController < ApplicationController
   # Initiate a chat completion request, which is performed asynchronously as an ActiveJob.
   # Returns the ID of the request and a base polling interval + backoff rate.
   def start_chat_completion
+    return head :too_many_requests if should_throttle?
     return render status: :forbidden, json: {} unless AichatSagemakerHelper.can_request_aichat_chat_completion?
     unless chat_completion_has_required_params?
       return render status: :bad_request, json: {}
@@ -184,7 +190,7 @@ class AichatController < ApplicationController
         ROLES_FOR_MODEL.include?(message[:role])
     end
 
-    latest_assistant_response_from_sagemaker = AichatSagemakerHelper.get_sagemaker_assistant_response(params[:aichatModelCustomizations], messages_for_model, params[:newMessage])
+    latest_assistant_response_from_sagemaker = AichatSagemakerHelper.get_sagemaker_assistant_response(params[:aichatModelCustomizations], messages_for_model, params[:newMessage], params[:aichatContext][:currentLevelId])
 
     filter_result = ShareFiltering.find_profanity_failure(latest_assistant_response_from_sagemaker, locale)
     if filter_result&.type == ShareFiltering::FailureType::PROFANITY
@@ -250,5 +256,11 @@ class AichatController < ApplicationController
       _, project_id = storage_decrypt_channel_id(context[:channelId])
       project_id
     end
+  end
+
+  private def should_throttle?
+    id = current_user&.id || session.id
+    limit = DCDO.get('aichat_request_limit_per_min', DEFAULT_REQUEST_LIMIT_PER_MIN)
+    Cdo::Throttle.throttle(AICHAT_PREFIX + id.to_s, limit, 60)
   end
 end

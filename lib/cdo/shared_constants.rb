@@ -764,4 +764,12 @@ module SharedConstants
     # PII detected in the model's output.
     MODEL_PII: 1004
   }
+
+  AI_CHAT_MODEL_IDS = {
+    ARITHMO: "gen-ai-arithmo2-mistral-7b",
+    BIOMISTRAL: "gen-ai-biomistral-7b",
+    MISTRAL: "gen-ai-mistral-7b-inst-v01",
+    KAREN: "gen-ai-karen-creative-mistral-7b",
+    PIRATE: "gen-ai-mistral-pirate-7b"
+  }
 end
