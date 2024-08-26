@@ -457,14 +457,13 @@ async function handleChatCompletionError(
     const responseBody = await error.response.json();
     const userType = responseBody?.user_type;
 
-    let messageText;
-    if (userType === 'teacher') {
-      messageText = commonI18n.aiChatNotAuthorizedTeacher();
-    } else if (userType === 'student') {
-      messageText = commonI18n.aiChatNotAuthorizedStudent();
-    } else {
-      messageText = commonI18n.aiChatNotAuthorizedSignedOut();
-    }
+    const userTypeToMessageText: {[key: string]: string} = {
+      teacher: commonI18n.aiChatNotAuthorizedTeacher(),
+      student: commonI18n.aiChatNotAuthorizedStudent(),
+    };
+    const messageText =
+      userTypeToMessageText[userType] ||
+      commonI18n.aiChatNotAuthorizedSignedOut();
 
     dispatch(
       addChatEvent({
