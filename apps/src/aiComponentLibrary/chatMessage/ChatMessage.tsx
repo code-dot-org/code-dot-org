@@ -70,6 +70,9 @@ const ChatMessage: React.FunctionComponent<ChatMessageProps> = ({
             hasDangerStyle && moduleStyles.danger,
             hasWarningStyle && moduleStyles.warning
           )}
+          aria-label={
+            role === Role.ASSISTANT ? 'AI bot' : 'User' + ' chat message'
+          }
         >
           <SafeMarkdown markdown={getDisplayText} />
         </div>
