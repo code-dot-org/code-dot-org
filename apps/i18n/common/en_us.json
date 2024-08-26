@@ -141,6 +141,7 @@
   "aiSettings": "AI Settings",
   "aiStudentAssessment": "{studentName} has achieved {understandingLevel} for this learning goal.",
   "aiSubmitShouldKeepWorking": "Student should keep working",
+  "aiTeachingAssistant": "AI Teaching Assistant",
   "aiTrainedModels": "AI Trained Models",
   "aiTrainedModelsNoModels": "You have not trained any AI models yet.",
   "aiTrainedModelsDeleteModelConfirm": "Are you sure you would like to delete this model?",
