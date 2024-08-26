@@ -120,44 +120,35 @@ describe('FinishTeacherAccount', () => {
   it('finish teacher signup button starts disabled', () => {
     renderDefault();
 
-    // Link will show as "null" for React Testing Library since the component is disabled
-    expect(
-      screen.queryByRole('link', {
-        name: locale.go_to_my_account(),
-      })
-    ).toBe(null);
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
   });
 
   it('leaving the displayName field empty shows error message and disabled button until display name is entered', () => {
     renderDefault();
     const displayNameInput = screen.getAllByDisplayValue('')[0];
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
 
     // Error message doesn't show and button is disabled by default
     expect(screen.queryByText(locale.display_name_error_message())).toBe(null);
-    expect(
-      screen.queryByRole('link', {
-        name: locale.go_to_my_account(),
-      })
-    ).toBe(null);
+    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
 
     // Enter display name
     fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
 
     // Error does not show and button is enabled when display name is entered
     expect(screen.queryByText(locale.display_name_error_message())).toBe(null);
-    screen.getByRole('link', {
-      name: locale.go_to_my_account(),
-    });
+    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe(null);
 
     // Clear display name
     fireEvent.change(displayNameInput, {target: {value: ''}});
 
     // Error shows and button is disabled with empty display name
     screen.getByText(locale.display_name_error_message());
-    expect(
-      screen.queryByRole('link', {
-        name: locale.go_to_my_account(),
-      })
-    ).toBe(null);
+    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
   });
 });
