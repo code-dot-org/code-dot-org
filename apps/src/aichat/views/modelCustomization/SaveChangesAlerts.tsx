@@ -27,7 +27,7 @@ const SaveChangesAlerts: React.FunctionComponent = () => {
   const isSavedDefault = useAppSelector(selectSavedCustomizationsMatchInitial);
 
   return (
-    <>
+    <div className={styles.saveAlertContainer}>
       {isCurrentDefault && isSavedDefault && !saveInProgress && !isReadOnly && (
         <Alert
           text={'Remember to save your changes'}
@@ -55,7 +55,7 @@ const SaveChangesAlerts: React.FunctionComponent = () => {
             className={styles.saveAlert}
           />
         )}
-    </>
+    </div>
   );
 };
 
