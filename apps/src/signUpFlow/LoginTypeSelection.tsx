@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import {LinkButton} from '@cdo/apps/componentLibrary/button';
+import {Button, LinkButton} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {Heading3, BodyThreeText} from '@cdo/apps/componentLibrary/typography';
@@ -11,6 +11,8 @@ import locale from '@cdo/apps/signUpFlow/locale';
 import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
+
+import {navigateToHref} from '../utils';
 
 import style from './signUpFlowStyles.module.scss';
 
@@ -116,10 +118,12 @@ const LoginTypeSelection: React.FunctionComponent = () => {
               name="confirmPasswordInput"
             />
           </div>
-          <LinkButton
+          <Button
             className={style.shortButton}
             text={locale.create_my_account()}
-            href={studio('/users/new_sign_up/account_type')}
+            onClick={() =>
+              navigateToHref(studio('/users/new_sign_up/account_type'))
+            }
           />
         </div>
       </div>
