@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 import {useSelector} from 'react-redux';
 import {useLoaderData} from 'react-router-dom';
@@ -87,6 +88,16 @@ interface CourseOverviewData {
   hiddenScripts: string[];
 }
 
+const courseSummaryCachedLoader = _.memoize(async courseVersionName => {
+  return fetch(`/dashboardapi/course_summary/${courseVersionName}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-CSRF-Token': await getAuthenticityToken(),
+    },
+  }).then(response => response.json());
+});
+
 export const teacherCourseOverviewLoader =
   async (): Promise<CourseOverviewData | null> => {
     const state = getStore().getState().teacherSections;
@@ -104,18 +115,11 @@ export const teacherCourseOverviewLoader =
       return null;
     }
 
-    const response = await fetch(
-      `/dashboardapi/course_summary/${selectedSection.courseVersionName}`,
-      {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRF-Token': await getAuthenticityToken(),
-        },
-      }
+    const response = courseSummaryCachedLoader(
+      selectedSection.courseVersionName
     );
 
-    return await response.json().then(response => {
+    return await response.then(response => {
       return {
         courseSummary: response.unit_group,
         isVerifiedInstructor: response.is_verified_instructor,
