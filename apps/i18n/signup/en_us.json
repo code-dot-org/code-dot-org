@@ -56,5 +56,6 @@
   "msCoder": "Ms. Coder",
   "coder": "Coder",
   "female": "Female",
-  "parentEmailPlaceholder": "parentemail@email.com"
+  "parentEmailPlaceholder": "parentemail@email.com",
+  "display_name_error_message": "Please enter your display name"
 }
