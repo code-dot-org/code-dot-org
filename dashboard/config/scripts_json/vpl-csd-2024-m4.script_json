@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-19 23:32:43 UTC",
+    "serialized_at": "2024-08-23 21:38:16 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -75,7 +75,7 @@
       "relative_position": 3,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:** This model lesson is intended to introduce participants to ASCII and binary systems while modeling classroom practices related to learning in context and differentiation.\n\n**Objectives:**\n* Participants are exposed to the essential content knowledge necessary to plan and implement U5L3.\n* Participants observe a plan for early finishers that focuses on going deeper into the content instead of faster or further.\n* Participants identify strategies for incorporating a variety of student perspectives into the classroom.\n\n\n\n**Suggested Time:** 30 minutes\n\n<a href=\"https://studio.code.org/s/csd5-2023/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> ",
+        "overview": "**Purpose:** This model lesson is intended to introduce participants to ASCII and binary systems while modeling classroom practices related to learning in context and differentiation.\n\n**Objectives:**\n* Participants are exposed to the essential content knowledge necessary to plan and implement U5L3.\n* Participants observe a plan for early finishers that focuses on going deeper into the content instead of faster or further.\n* Participants identify strategies for incorporating a variety of student perspectives into the classroom.\n\n\n\n**Suggested Time:** 30 minutes\n\n<a href=\"https://studio.code.org/s/csd5-2024/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> ",
         "preparation": "* Print copies of the activity guide - 1 per student\n* Print copies of the ASCII text resource - 1 for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)\n",
         "student_overview": "**Question of the Day:** What system do computers use to represent letters and words?\n\nIn this lesson, you will be learning about binary and the ASCII system used for representing text. "
       },
