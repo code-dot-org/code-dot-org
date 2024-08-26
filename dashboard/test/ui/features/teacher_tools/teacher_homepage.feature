@@ -162,6 +162,7 @@ Feature: Using the teacher homepage sections feature
     When I see the section set up box
     And I create a new "Elementary School" student section with course "CS Fundamentals: Course A", version "2017"
     Then the student section table should have 1 rows
+    And I wait until element "#classroom-sections" is visible
     And the section table row at index 0 has primary assignment path "/s/coursea-2017"
 
     When I click selector ".ui-test-section-dropdown"

@@ -436,6 +436,7 @@ class Section < ApplicationRecord
           name: script.try(:name),
           project_sharing: script.try(:project_sharing),
         },
+        any_student_has_progress: any_student_has_progress?
       }
     end
   end
@@ -603,6 +604,16 @@ class Section < ApplicationRecord
   # so we check both here.
   def assigned_csa?
     script&.csa? || [CSA, CSA_PILOT_FACILITATOR].include?(unit_group&.family_name)
+  end
+
+  def assigned_gen_ai?
+    [
+      'exploring-gen-ai1-2024',
+      'exploring-gen-ai2-2024',
+      'foundations-gen-ai-2024',
+      'customizing-llms-2024'
+    ].include?(script&.name) ||
+      unit_group&.name == 'exploring-gen-ai-2024'
   end
 
   def reset_code_review_groups(new_groups)

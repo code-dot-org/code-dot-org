@@ -1,12 +1,205 @@
 version: 2
 updates:
+  - package-ecosystem: "bundler"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    groups:
+      auth:
+        patterns:
+        - "devise"
+        - "devise_*"
+        - "omniauth"
+        - "omniauth-*"
+      aws:
+        patterns:
+        - "aws-sdk-*"
+      integration-tests:
+        patterns:
+        - "webmock"
+        - "mocha"
+        - "timecop"
+      rubocop:
+        patterns:
+        - "rubocop"
+        - "rubocop-*"
+      sass:
+        patterns:
+        - "sass-*"
+        - "sassc-*"
+        - "bootstrap-sass"
+      unit-tests:
+        patterns:
+        - "fakefs"
+        - "minitest"
+        - "minitest-*"
+        - "rspec"
+        - "simplecov"
+        - "parallel_tests"
   - package-ecosystem: "npm"
     directory: "/apps"
     schedule:
       interval: "daily"
     open-pull-requests-limit: 0
+    groups:
+      amplitude:
+        patterns:
+        - "@amplitude/*"
+      babel:
+        patterns:
+        - "@babel/*"
+        - "babel"
+        - "babel-*"
+      blockly:
+        patterns:
+        - "@blockly/*"
+        - "blockly"
+        - "pepjs"
+      codemirror:
+        patterns:
+        - "@codemirror/*"
+        - "codemirror"
+        - "codemirror-*"
+      dnd-kit:
+        patterns:
+        - "@dnd-kit/*"
+      eslint:
+        patterns:
+        - "eslint*"
+        - "@typescript-eslint/*"
+      grunt:
+        patterns:
+        - "grunt"
+        - "grunt-*"
+        - "chalk"
+        - "load-grunt-tasks"
+      jquery:
+        patterns:
+        - "jquery"
+        - "jquery-*"
+        - "@types/jquery"
+      react:
+        patterns:
+        - "@types/react-dom"
+        - "@types/react"
+        - "react-dom"
+        - "react"
+      redux:
+        patterns:
+        - "@reduxjs/*"
+        - "react-redux"
+        - "redux*"
+      safe-markdown:
+        patterns:
+        - "rehype-*"
+        - "remark-*"
+      storybook:
+        patterns:
+        - "@storybook/*"
+        - "storybook"
+        - "storybook-*"
+        - "magicast"
+        - "unified"
+        - "unplugin"
+      stylelint:
+        patterns:
+        - "stylelint*"
+      testing-library:
+        patterns:
+        - "@testing-library/*"
+      unit-tests:
+        patterns:
+        - "@types/chai"
+        - "@types/jest"
+        - "@types/mocha"
+        - "@types/sinon"
+        - "@wojtekmaj/enzyme-adapter-react-17"
+        - "chai"
+        - "chai-*"
+        - "enzyme"
+        - "identity-obj-proxy"
+        - "isolate-react"
+        - "jest"
+        - "jest-*"
+        - "karma"
+        - "karma-*"
+        - "mocha"
+        - "pixelmatch"
+        - "sinon"
+        - "sinon-*"
+        - "ts-jest"
+        - "ts-sinon"
+      webpack:
+        patterns:
+        - "@pmmmwh/react-refresh-webpack-plugin"
+        - "acorn-import-assertions"
+        - "circular-dependency-plugin"
+        - "copy-webpack-plugin"
+        - "css-loader"
+        - "fork-ts-checker-webpack-plugin"
+        - "loader-utils"
+        - "path-browserify"
+        - "process"
+        - "progress-bar-webpack-plugin"
+        - "react-refresh-typescript"
+        - "react-refresh"
+        - "sass-loader"
+        - "sass"
+        - "script-loader"
+        - "source-map-loader"
+        - "stream-browserify"
+        - "style-loader"
+        - "terser-webpack-plugin"
+        - "timers-browserify"
+        - "ts-loader"
+        - "unminified-webpack-plugin"
+        - "vm-browserify"
+        - "webpack"
+        - "webpack-*"
     labels:
       - "npm"
       - "dependencies"
-    ignore:
-      - dependency-name: "react*"
+  # Platform NPM/Yarn Packages
+  - package-ecosystem: "npm"
+    directories: 
+    - "/apps/eslint"
+    - "/bin/i18n"
+    - "/tools/scripts/brokenLinkChecker"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 0
+  # Infrastructure NPM/Yarn Packages
+  - package-ecosystem: "npm"
+    directories: 
+    - "/aws/cloudformation"
+    - "/aws/cloudformation/lambdas/sql-user"
+    - "/aws/offsite/aurora-snapshots-fargate"
+    - "/aws/offsite/prune-aurora-backups/src"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 0
+  # Teacher Tools NPM/Yarn Packages
+  - package-ecosystem: "npm"
+    directories: 
+    - "/bin/generate-pdf"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 0
+  # Docker Images
+  - package-ecosystem: "docker"
+    directories: 
+    - "/aws/offsite/aurora-snapshots-fargate"
+    - "/docker/dockerfiles"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 0
+  # Github Actions
+  - package-ecosystem: "github-actions"
+    directories: 
+    - "/.github"
+    - "/.github/actions/**/"
+    - "/.github/workflows"
+    schedule:
+      interval: "daily"
+    open-pull-requests-limit: 0
+

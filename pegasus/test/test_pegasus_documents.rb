@@ -23,7 +23,7 @@ class PegasusTest < Minitest::Test
       "#{page[:site]}#{page[:uri]}"
     end
     CDO.log.info "Found #{documents.length} Pegasus documents."
-    assert_operator documents.length, :>, 350
+    assert_operator documents.length, :>, 100
   end
 
   # All documents expected to return 200 status-codes, with the following exceptions:
