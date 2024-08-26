@@ -22,35 +22,24 @@ end
 
 When(/^I drag the Angle Helper circle to coordinates \((\d*),(\d*)\)$/) do |x, y|
   script = <<-JS
-    function simulateDrag(element, dx, dy) {
-        const rect = element.getBoundingClientRect();
-        const startX = rect.left + window.scrollX;
-        const startY = rect.top + window.scrollY;
-        const endX = startX + dx;
-        const endY = startY + dy;
-        const mouseDownEvent = new MouseEvent('mousedown', {
-            bubbles: true,
-            clientX: startX,
-            clientY: startY
-        });
-        const mouseMoveEvent = new MouseEvent('mousemove', {
-            bubbles: true,
-            clientX: endX,
-            clientY: endY
-        });
-        const mouseUpEvent = new MouseEvent('mouseup', {
-            bubbles: true,
-            clientX: endX,
-            clientY: endY
-        });
-        element.dispatchEvent(mouseDownEvent);
-        element.dispatchEvent(mouseMoveEvent);
-        element.dispatchEvent(mouseUpEvent);
-    }
-    const element = document.querySelector('.blocklyAngleHelperContainer svg');
-    if (element) {
-        simulateDrag(element, #{x}, #{y});
-    }
+      const element = document.querySelector('.blocklyAngleHelperContainer svg');
+      const rect = element.getBoundingClientRect();
+      const startX = rect.left + window.scrollX;
+      const startY = rect.top + window.scrollY;
+      const endX = startX + #{x};
+      const endY = startY + #{y};
+
+      const createAndDispatchEvent = (type, clientX, clientY) => {
+          const event = new MouseEvent(type, {
+              clientX: clientX,
+              clientY: clientY
+          });
+          element.dispatchEvent(event);
+      };
+
+      createAndDispatchEvent('mousedown', startX, startY);
+      createAndDispatchEvent('mousemove', endX, endY);
+      createAndDispatchEvent('mouseup', endX, endY);
   JS
 
   @browser.execute_script(script)
