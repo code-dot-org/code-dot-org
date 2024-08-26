@@ -1548,6 +1548,15 @@ class User < ApplicationRecord
       SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
   end
 
+  def teacher_can_access_ai_chat?
+    teacher? && (verified_instructor? || oauth? || Policies::Lti.lti?(self))
+  end
+
+  def student_can_access_ai_chat?
+    teachers.any?(&:teacher_can_access_ai_chat?) &&
+      sections_as_student.any?(&:assigned_gen_ai?)
+  end
+
   # Students
   def has_ai_tutor_access?
     return false if ai_tutor_access_denied || ai_tutor_feature_globally_disabled?
