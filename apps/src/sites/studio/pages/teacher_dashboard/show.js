@@ -4,6 +4,10 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {BrowserRouter} from 'react-router-dom';
 
+import announcementReducer from '@cdo/apps/code-studio/announcementsRedux';
+import hiddenLesson from '@cdo/apps/code-studio/hiddenLessonRedux';
+import verifiedInstructor from '@cdo/apps/code-studio/verifiedInstructorRedux';
+import viewAs from '@cdo/apps/code-studio/viewAsRedux';
 import DCDO from '@cdo/apps/dcdo';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import locales, {setLocaleCode} from '@cdo/apps/redux/localesRedux';
@@ -43,9 +47,6 @@ const {
   canViewStudentAIChatMessages,
 } = scriptData;
 
-// TODO: add
-// '@cdo/apps/code-studio/hiddenLessonRedux'
-// and '@cdo/apps/code-studio/viewAsRedux'?
 $(document).ready(function () {
   registerReducers({
     teacherSections,
@@ -58,6 +59,10 @@ $(document).ready(function () {
     currentUser,
     sectionStandardsProgress,
     locales,
+    viewAs,
+    hiddenLesson,
+    verifiedInstructor,
+    announcementReducer,
   });
 
   const store = getStore();

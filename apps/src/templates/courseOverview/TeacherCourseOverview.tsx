@@ -2,9 +2,29 @@ import React from 'react';
 import {useSelector} from 'react-redux';
 import {useLoaderData} from 'react-router-dom';
 
+import {
+  addAnnouncement,
+  VisibilityType,
+} from '@cdo/apps/code-studio/announcementsRedux';
+import {initializeHiddenScripts} from '@cdo/apps/code-studio/hiddenLessonRedux';
+import {getUserSignedInFromCookieAndDom} from '@cdo/apps/code-studio/initSigninState';
+import {
+  setVerified,
+  setVerifiedResources,
+} from '@cdo/apps/code-studio/verifiedInstructorRedux';
+import {setViewType, ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {getStore} from '@cdo/apps/redux';
+import {NotificationType} from '@cdo/apps/sharedComponents/Notification';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {UserTypes} from '@cdo/generated-scripts/sharedConstants';
+
+import {
+  CourseRoles,
+  setUserRoleInCourse,
+  setUserSignedIn,
+} from '../currentUserRedux';
+import {pageTypes, setPageType} from '../teacherDashboard/teacherSectionsRedux';
 
 import CourseOverview from './CourseOverview';
 
@@ -31,7 +51,7 @@ interface Version {
   type: string;
 }
 
-interface UnitGroup {
+interface CourseSummary {
   name: string;
   title: string;
   assignment_family_title: string;
@@ -46,11 +66,25 @@ interface UnitGroup {
   show_assign_button: boolean;
   participant_audience: string;
   course_versions: {[id: string]: Version};
+  announcements: Announcement[];
+  has_verified_resources: boolean;
+}
+
+interface Announcement {
+  key: string;
+  notice: string;
+  details: string;
+  link: string;
+  type: keyof typeof NotificationType;
+  visibility: keyof typeof VisibilityType;
+  dismissible: boolean;
+  buttonText: string | null;
 }
 
 interface CourseOverviewData {
-  courseSummary: UnitGroup;
+  courseSummary: CourseSummary;
   isVerifiedInstructor: boolean;
+  hiddenScripts: string[];
 }
 
 export const teacherCourseOverviewLoader =
@@ -58,6 +92,14 @@ export const teacherCourseOverviewLoader =
     const state = getStore().getState().teacherSections;
 
     const selectedSection = state.sections[state.selectedSectionId];
+
+    const viewAsState = getStore().getState().viewAs;
+
+    // If we have already set the instructor, then we don't need to load again.
+    if (viewAsState.viewAs === ViewType.Instructor) {
+      return null;
+    }
+
     if (!selectedSection || !selectedSection?.courseVersionName) {
       return null;
     }
@@ -74,10 +116,10 @@ export const teacherCourseOverviewLoader =
     );
 
     return await response.json().then(response => {
-      console.log('lfm cs', {response});
       return {
         courseSummary: response.unit_group,
         isVerifiedInstructor: response.is_verified_instructor,
+        hiddenScripts: response.hidden_scripts,
       };
     });
   };
@@ -90,12 +132,47 @@ const TeacherCourseOverview: React.FC = () => {
       teacherSections: {
         sections: {id: number; name: string}[];
       };
-    }) => state.teacherSections.sections
+    }) => Object.values(state.teacherSections.sections)
   );
 
   const userId = useSelector(
     (state: {currentUser: {userId: number}}) => state.currentUser.userId
   );
+
+  const dispatch = useAppDispatch();
+
+  React.useEffect(() => {
+    if (!loadedData) {
+      return;
+    }
+
+    const courseSummary = loadedData.courseSummary;
+    if (courseSummary.has_verified_resources) {
+      dispatch(setVerifiedResources());
+    }
+
+    dispatch(setPageType(pageTypes.courseOverview));
+
+    dispatch(setUserSignedIn(getUserSignedInFromCookieAndDom()));
+
+    dispatch(setViewType(ViewType.Instructor));
+    dispatch(setUserRoleInCourse(CourseRoles.Instructor));
+
+    if (loadedData.isVerifiedInstructor) {
+      dispatch(setVerified());
+    }
+
+    if (loadedData.hiddenScripts) {
+      dispatch(initializeHiddenScripts(loadedData.hiddenScripts));
+    }
+
+    const announcements = courseSummary.announcements as Announcement[];
+    if (announcements) {
+      announcements.forEach(announcement =>
+        dispatch(addAnnouncement(announcement))
+      );
+    }
+  }, [loadedData, dispatch]);
 
   if (!loadedData) {
     return <div>Null loaded data</div>;

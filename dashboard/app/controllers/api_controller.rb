@@ -428,7 +428,8 @@ class ApiController < ApplicationController
     end
 
     render json: {is_verified_instructor: current_user.try(:verified_instructor?) || false,
-                  unit_group: unit_group.summarize(current_user, for_edit: false, locale_code: request.locale)}
+                  unit_group: unit_group.summarize(current_user, for_edit: false, locale_code: request.locale),
+                  hidden_scripts: current_user.try(:get_hidden_unit_ids, unit_group)}
   end
 
   use_reader_connection_for_route(:user_progress)
