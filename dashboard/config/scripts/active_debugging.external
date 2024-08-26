@@ -3,24 +3,20 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# What is Active Debugging?
+#Active Debugging
 
-#### This lesson covers practicing block-based coding basics, building on your understanding of computer science and its everyday applications.
+#### Writing long chunks of code without pausing to read or test can lead to hard-to-find errors. To prevent this, we suggest implementing **active debugging**.
 
-<img src="https://images.code.org/4e37cf72816a90a1abccaf66d623b4ad-image-1704408444176.23.19 PM.png" alt="Image of a cartoon octopus holding a microphone and wearing a hat" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
-
-
-## In this lesson, you will:
-
-* #### Learn about block based programming.
-* #### Practice connecting, taking apart, and trashing blocks. 
-* #### Use blocks from the toolbox.
+<img src="https://images.code.org/a6f25215d0f359ca94029241b7fd7980-image-1724363269506.jpg" alt="Image of a cartoon octopus holding a microphone and wearing a hat" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
 
 
-### **Suggested time:** 5 minutes
+## What is Active Debugging?
+#### Active debugging describes the practice of debugging while coding. Students should take time to read, process, and test small pieces of code that they have just written during coding exercises. The practice can be tremendously helpful as students write more complex programs.
 
 
-## Let's get started!
+
+## Let's practice!
 
 <div style="clear:both"/>
+
 MARKDOWN
