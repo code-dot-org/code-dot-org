@@ -1,6 +1,6 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, useState} from 'react';
 
-import SuggestedPrompts from '@cdo/apps/aiComponentLibrary/suggestedPrompt/SuggestedPrompts';
+import SuggestedPrompts, {SuggestedPrompt} from '@cdo/apps/aiComponentLibrary/suggestedPrompt/SuggestedPrompts';
 import {
   AITutorTypes as ActionType,
   AITutorTypesValue,
@@ -12,7 +12,11 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {genericCompilation, genericValidation} from '../constants';
 import {askAITutor} from '../redux/aiTutorRedux';
 
-const QuickActions = {
+interface StringKeyValue {
+  [index: string]: string;
+}
+
+const QuickActions: StringKeyValue = {
   [ActionType.COMPILATION]: genericCompilation,
   [ActionType.VALIDATION]: genericValidation,
 };
@@ -85,6 +89,15 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
 
       dispatch(askAITutor(chatContext));
 
+      setSuggestedPrompts(suggestedPrompts =>
+        suggestedPrompts.map(prompt => {
+          if (prompt.label === QuickActions[actionType]) {
+            return {...prompt, selected: true};
+          }
+          return prompt;
+        })
+      );
+
       analyticsReporter.sendEvent(event, {
         levelId: level?.id,
         levelType: level?.type,
@@ -93,18 +106,20 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
     [studentCode, isWaitingForChatResponse, level, dispatch]
   );
 
-  const suggestedPrompts = [
+  const [suggestedPrompts, setSuggestedPrompts] = useState<SuggestedPrompt[]>([
     {
       label: QuickActions[ActionType.COMPILATION],
       onClick: () => handleClick(ActionType.COMPILATION),
       show: showCompilationOption,
+      selected: false,
     },
     {
       label: QuickActions[ActionType.VALIDATION],
       onClick: () => handleClick(ActionType.VALIDATION),
       show: showValidationOption,
+      selected: false,
     },
-  ];
+  ]);
 
   return <SuggestedPrompts suggestedPrompts={suggestedPrompts} />;
 };

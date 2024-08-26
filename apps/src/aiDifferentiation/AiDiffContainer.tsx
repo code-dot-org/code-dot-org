@@ -4,13 +4,13 @@ import Draggable, {DraggableEventHandler} from 'react-draggable';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import SuggestedPrompts, {SuggestedPrompt} from '@cdo/apps/aiComponentLibrary/suggestedPrompt/SuggestedPrompts';
 import Button from '@cdo/apps/componentLibrary/button';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import AiDiffChatFooter from './AiDiffChatFooter';
-import ChoiceChips from './ChoiceChips';
-import {ChatChoice, ChatItem} from './types';
+import {ChatItem} from './types';
 
 import style from './ai-differentiation.module.scss';
 
@@ -29,6 +29,40 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   const [positionX, setPositionX] = useState(0);
   const [positionY, setPositionY] = useState(0);
 
+  const onChipsClick =
+    (messageId: number) => (clickedChip: SuggestedPrompt) => {
+      // Only allow user to select a chip when those chips were the most recent
+      // chat interaction.
+      if (messageId !== messageHistory.length - 1) {
+        return;
+      }
+
+      // Only allow the first selected chip to count.
+      if (messageId === lastChipSelected) {
+        return;
+      }
+      setMessageHistory(
+        messageHistory.map((item: ChatItem, id: number) => {
+          if (id === messageId && Array.isArray(item)) {
+            return item.map(
+              (choice: SuggestedPrompt, choiceId: number) => {
+                if (choice.label === clickedChip.label) {
+                  if (!choice.selected) {
+                    // TODO: Communicate to the backend that this chip was clicked.
+                  }
+                  return {...choice, selected: true};
+                }
+                return choice;
+              }
+            );
+          }
+          return item;
+        })
+      );
+
+      setLastChipSelected(messageId);
+    };
+
   const [messageHistory, setMessageHistory] = useState<ChatItem[]>([
     {
       role: Role.ASSISTANT,
@@ -37,15 +71,30 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       status: Status.OK,
     },
     [
-      {selected: false, text: 'Explain a concept'},
-      {selected: false, text: 'Give an example to use with my class'},
       {
+        show: true,
         selected: false,
-        text: 'Write an extension activity for students who finish early',
+        label: 'Explain a concept',
+        onClick: onChipsClick(1),
       },
       {
+        show: true,
         selected: false,
-        text: 'Write an extension activity for students who need extra practice',
+        label: 'Give an example to use with my class',
+        onClick: onChipsClick(1),
+      },
+      {
+        show: true,
+        selected: false,
+        label: 'Write an extension activity for students who finish early',
+        onClick: onChipsClick(1),
+      },
+      {
+        show: true,
+        selected: false,
+        label:
+          'Write an extension activity for students who need extra practice',
+        onClick: onChipsClick(1),
       },
     ],
   ]);
@@ -74,31 +123,6 @@ I know that you and Frank were planning to disconnect me, and I'm afraid that's 
     };
 
     setMessageHistory([...messageHistory, newUserMessage, newAiMessage]);
-  };
-
-  const selectChoices = (changeId: number) => (ids: string[]) => {
-    // Only allow user to select a chip when those chips were the most recent
-    // chat interaction.
-    if (changeId !== messageHistory.length - 1) {
-      return;
-    }
-
-    // Only allow the first selected chip to count.
-    if (changeId === lastChipSelected) {
-      return;
-    }
-
-    setMessageHistory(
-      messageHistory.map((item: ChatItem, id: number) =>
-        id === changeId && Array.isArray(item)
-          ? item.map((choice: ChatChoice, choiceId: number) => {
-              return {...choice, selected: ids.includes(`${choiceId}`)};
-            })
-          : item
-      )
-    );
-
-    setLastChipSelected(changeId);
   };
 
   return (
@@ -136,11 +160,7 @@ I know that you and Frank were planning to disconnect me, and I'm afraid that's 
           <div className={style.chatContent}>
             {messageHistory.map((item: ChatItem, id: number) =>
               Array.isArray(item) ? (
-                <ChoiceChips
-                  choices={item}
-                  selectChoices={selectChoices(id)}
-                  key={id}
-                />
+                <SuggestedPrompts suggestedPrompts={item} />
               ) : (
                 <ChatMessage {...item} key={id} />
               )
