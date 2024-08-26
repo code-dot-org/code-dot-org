@@ -142,5 +142,5 @@ skip_seed_all: true
 # active_job_queue_adapter: :delayed_job
 
 # Harness configuration
-locale_content_dir: ../default-locale-content
-curriculum_content_dir: ../curriculum-content
+locale_content_dir: ../code-dot-org-locale
+curriculum_content_dir: ../code-dot-org-curriculum
