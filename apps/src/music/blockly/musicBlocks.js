@@ -11,6 +11,7 @@ import {
   triggeredAtSimple2,
   playSoundAtCurrentLocationSimple2,
   playPatternAtCurrentLocationSimple2,
+  playPatternAiAtCurrentLocationSimple2,
   playRestAtCurrentLocationSimple2,
   setEffectAtCurrentLocationSimple2,
   playSoundsTogether,
@@ -18,6 +19,7 @@ import {
   playSoundsRandom,
   repeatSimple2,
   playChordAtCurrentLocationSimple2,
+  playTuneAtCurrentLocationSimple2,
 } from './blocks/simple2';
 import {
   newTrackAtMeasure,
@@ -39,9 +41,11 @@ const blockList = [
   setCurrentLocationNextMeasure,
   playSoundAtCurrentLocationSimple2,
   playPatternAtCurrentLocationSimple2,
+  playPatternAiAtCurrentLocationSimple2,
   playRestAtCurrentLocationSimple2,
   setEffectAtCurrentLocationSimple2,
   playChordAtCurrentLocationSimple2,
+  playTuneAtCurrentLocationSimple2,
   playSoundsTogether,
   playSoundsSequential,
   playSoundsRandom,

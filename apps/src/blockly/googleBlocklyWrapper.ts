@@ -1,12 +1,8 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
-import './addons/plusMinusBlocks/if';
-import './addons/plusMinusBlocks/text_join';
-import './addons/extensions/logic_compare';
 import {
   ObservableProcedureModel,
   ObservableParameterModel,
 } from '@blockly/block-shareable-procedures';
-import {installAllBlocks as installColourBlocks} from '@blockly/field-colour';
 import {LineCursor, NavigationController} from '@blockly/keyboard-navigation';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
 import {
@@ -42,6 +38,7 @@ import CdoFieldAnimationDropdown from './addons/cdoFieldAnimationDropdown';
 import CdoFieldBehaviorPicker from './addons/cdoFieldBehaviorPicker';
 import {CdoFieldBitmap} from './addons/cdoFieldBitmap';
 import CdoFieldButton from './addons/cdoFieldButton';
+import CdoFieldColour from './addons/cdoFieldColour';
 import CdoFieldDropdown from './addons/cdoFieldDropdown';
 import CdoFieldFlyout from './addons/cdoFieldFlyout';
 import CdoFieldImage from './addons/cdoFieldImage';
@@ -63,9 +60,15 @@ import CdoTrashcan from './addons/cdoTrashcan';
 import * as cdoUtils from './addons/cdoUtils';
 import initializeVariables from './addons/cdoVariables';
 import CdoVerticalFlyout from './addons/cdoVerticalFlyout';
-import initializeBlocklyXml, {removeInvisibleBlocks} from './addons/cdoXml';
+import initializeBlocklyXml, {
+  removeInvisibleBlocks,
+  removeStaticCallBlocks,
+} from './addons/cdoXml';
 import {registerAllContextMenuItems} from './addons/contextMenu';
+import registerLogicCompareMutator from './addons/extensions/logic_compare';
 import FunctionEditor from './addons/functionEditor';
+import registerIfMutator from './addons/plusMinusBlocks/if';
+import registerTextJoinMutator from './addons/plusMinusBlocks/text_join';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {Themes, Renderers} from './constants';
 import {flyoutCategory as behaviorsFlyoutCategory} from './customBlocks/googleBlockly/behaviorBlocks';
@@ -194,6 +197,9 @@ const BlocklyWrapper = function (
  * Blockly.navigationController.dispose() before calling this function again.
  */
 function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
+  registerIfMutator();
+  registerLogicCompareMutator();
+  registerTextJoinMutator();
   // TODO: can we avoid using any here by converting BlocklyWrapper to a class?
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const blocklyWrapper = new (BlocklyWrapper as any)(
@@ -266,6 +272,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   const fieldOverrides: [string, string, FieldProto][] = [
     ['field_variable', 'FieldVariable', CdoFieldVariable],
     ['field_dropdown', 'FieldDropdown', CdoFieldDropdown],
+    ['field_colour', 'FieldColour', CdoFieldColour],
     ['field_number', 'FieldNumber', CdoFieldNumber],
     // CdoFieldBitmap extends from a JavaScript class without typing.
     // We know it's a field, so it's safe to cast as unknown.
@@ -400,10 +407,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   // Assign all of the properties of the javascript generator to the forBlock array
   // Prevents deprecation warnings related to https://github.com/google/blockly/pull/7150
   Object.setPrototypeOf(javascriptGenerator.forBlock, javascriptGenerator);
-  // Installs all colour blocks, the colour field, and the JS generator functions.
-  installColourBlocks({
-    javascript: javascriptGenerator,
-  });
+
   blocklyWrapper.JavaScript = javascriptGenerator;
   blocklyWrapper.LineCursor = LineCursor;
   blocklyWrapper.navigationController = new NavigationController();
@@ -442,8 +446,12 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
   };
 
   extendedBlockSvg.isUserVisible = function () {
-    // TODO - used for EXTRA_TOP_BLOCKS_FAIL feedback
-    return false;
+    // Used for EXTRA_TOP_BLOCKS_FAIL feedback
+    // Mainline Blockly doesn't support invisible blocks. If a block should be
+    // invisible, we instead load it to the hidden workspace. We use custom
+    // serialization hooks to manage this block state.
+    // Any block on the main workspace is visible.
+    return this.workspace === Blockly.getMainWorkspace();
   };
 
   // Labs like Maze and Artist turn undeletable blocks gray.
@@ -736,12 +744,14 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
       media: '/blockly/media/google_blockly',
       modalInputs: false, // Prevents pop-up editor on mobile
     };
-    // Google Blockly doesn't support invisible blocks, so we want to prevent
-    // them from showing up in the toolbox.
+    // For old levels, we remove statically-defined procedure call blocks from the
+    // auto-populated Functions category. We also remove any invisible blocks because
+    // Google Blockly doesn't support them.
     if (typeof options.toolbox === 'string') {
-      options.toolbox = Blockly.Xml.domToText(
-        removeInvisibleBlocks(Blockly.Xml.textToDom(options.toolbox))
-      );
+      const toolboxDom = Blockly.Xml.textToDom(options.toolbox);
+      const visibleBlocksDom = removeInvisibleBlocks(toolboxDom);
+      const finalToolboxDom = removeStaticCallBlocks(visibleBlocksDom);
+      options.toolbox = Blockly.Xml.domToText(finalToolboxDom);
     }
     // CDO Blockly takes assetUrl as an inject option, and it's used throughout
     // apps, so we should also set it here.
@@ -768,6 +778,7 @@ function initializeBlocklyWrapper(blocklyInstance: GoogleBlocklyInstance) {
     blocklyWrapper.isToolboxMode =
       optOptionsExtended.editBlocks === 'toolbox_blocks';
     blocklyWrapper.toolboxBlocks = options.toolbox;
+    blocklyWrapper.showUnusedBlocks = options.showUnusedBlocks;
     blocklyWrapper.blockLimitMap = cdoUtils.createBlockLimitMap();
     const workspace = blocklyWrapper.blockly_.inject(
       container,

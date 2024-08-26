@@ -776,17 +776,31 @@ en:
           description_teacher: "**Participants will:**\n\n* Prepare to teach CS Discoveries.\n* Practice key concepts in the CS Discoveries curriculum.\n* Grow in their understanding of equitable CS education. \n* Develop empathy for the student experience. \n* Become a part of a network of teachers who are doing similar work."
           version_title: "'24-'25"
         vpl-csd-2024:
-          title: vpl-csd-2024
+          title: CSD Virtual Professional Learning '24-'25
           description_short: ''
-          description_student: ''
-          description_teacher: ''
-          version_title: ''
+          description_student: |-
+            #####**You will:**
+
+            * ##### Prepare to teach CS Discoveries.
+            * ##### Practice key concepts in the CS Discoveries curriculum.
+            * ##### Grow in your understanding of equitable CS education.
+            * ##### Develop empathy for the student experience.
+            * ##### Become a part of a network of teachers who are doing similar work.
+          description_teacher: |-
+            ##### **Participants will:**
+
+            * ##### Prepare to teach CS Discoveries.
+            * ##### Practice key concepts in the CS Discoveries curriculum.
+            * ##### Grow in their understanding of equitable CS education.
+            * ##### Develop empathy for the student experience.
+            * ##### Become a part of a network of teachers who are doing similar work.
+          version_title: '2024'
         vpl-csa-2024:
-          title: vpl-csa-2024
+          title: CSA Virtual Professional Learning '24-'25
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: '2024'
         self-paced-pl-csa-2024:
           title: self-paced-pl-csa-2024
           description_short: ''
@@ -798,7 +812,7 @@ en:
           description_short: ''
           description_student: ''
           description_teacher: ''
-          version_title: ''
+          version_title: '2024'
         self-paced-pl-csp-2024:
           title: Teaching CS Principles
           description_short: ''
@@ -1097,8 +1111,53 @@ en:
           description_teacher: testing fix for getting started
           version_title: ''
         csa-alt-2025:
-          title: csa non-objects-first
+          title: Computer Science A ('25-'26)
+          description_short: Learn Java programming and software engineering skills.
+          description_student: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          description_teacher: |-
+            **This version of the CSA curriculum follows the sequence outlined in the AP CSA CED.**
+
+            Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          version_title: "'25-'26"
+        sandbox-csf-2025:
+          title: sandbox-csf-2025
           description_short: ''
           description_student: ''
           description_teacher: ''
+          version_title: ''
+        csa-2025:
+          title: Computer Science A ('25-'26)
+          description_short: Learn Java programming and software engineering skills.
+          description_student: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          description_teacher: |-
+            Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+
+            **Did You Know?**
+            * Professional development is available to help you get started teaching CSA. <a href="https://code.org/educate/professional-learning/middle-high" target="blank" rel="noopener noreferrer">Click here</a> to learn more about professional learning opportunities in your region.
+
+            * You can find the *Syllabus*, *Course Vocab*, and other resources to help you implement this curriculum in the Teacher Resources menu below.
           version_title: "'25-'26"
+        csa-pilot-2025:
+          title: Computer Science A ('24-'25 Pilot -- 2025 Framework)
+          description_short: Learn Java programming and software engineering skills.
+          description_student: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          description_teacher: Computer Science A (CSA) introduces students to software engineering and object-oriented programming and design using the Java programming language. This curriculum covers a broad range of topics, including the design of solutions to problems, the use of data structures to organize large sets of data, the development and implementation of algorithms to process data and discover new information, the analysis of potential solutions, and the ethical and social implications of computing systems.
+          version_title: "'24-'25"
+        exploring-gen-ai-2024:
+          title: Exploring Generative AI
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: "'24-'25"
+        csd-ayw1-debugging:
+          title: 'CSD Academic Year Workshop #1 - Debugging'
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''
+        sandbox-data-science-pl:
+          title: sandbox-data-science-pl
+          description_short: ''
+          description_student: ''
+          description_teacher: ''
+          version_title: ''

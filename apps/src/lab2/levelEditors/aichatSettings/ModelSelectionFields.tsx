@@ -5,8 +5,10 @@ import {Visibility} from '@cdo/apps/aichat/types';
 import Checkbox from '@cdo/apps/componentLibrary/checkbox/Checkbox';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown';
 import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
+import {ValueOf} from '@cdo/apps/types/utils';
+import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
-import FieldSection from './FieldSection';
+import CollapsibleFieldSection from './CollapsibleFieldSection';
 import {UpdateContext} from './UpdateContext';
 
 import moduleStyles from './edit-aichat-settings.module.scss';
@@ -21,25 +23,28 @@ const ModelSelectionFields: React.FunctionComponent = () => {
     aichatSettings.visibilities.selectedModelId !== Visibility.EDITABLE;
   const selectedModelId = aichatSettings.initialCustomizations.selectedModelId;
   const [additionalAvailableModelIds, setAdditionalAvailableModelIds] =
-    useState<string[]>(
+    useState<ValueOf<typeof AiChatModelIds>[]>(
       aichatSettings.availableModelIds?.filter(id => id !== selectedModelId) ||
         []
     );
 
   const onDropdownChange = useCallback(
     (e: React.ChangeEvent<HTMLSelectElement>) => {
-      setModelSelectionValues(additionalAvailableModelIds, e.target.value);
+      setModelSelectionValues(
+        additionalAvailableModelIds,
+        e.target.value as ValueOf<typeof AiChatModelIds>
+      );
     },
     [additionalAvailableModelIds, setModelSelectionValues]
   );
 
   const onCheckboxChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
-      let newAdditionalAvailableModelIds;
+      let newAdditionalAvailableModelIds: ValueOf<typeof AiChatModelIds>[];
       if (e.target.checked) {
         newAdditionalAvailableModelIds = [
           ...additionalAvailableModelIds,
-          e.target.name,
+          e.target.name as ValueOf<typeof AiChatModelIds>,
         ];
       } else {
         newAdditionalAvailableModelIds = additionalAvailableModelIds.filter(
@@ -53,7 +58,7 @@ const ModelSelectionFields: React.FunctionComponent = () => {
   );
 
   return (
-    <FieldSection
+    <CollapsibleFieldSection
       fieldName="selectedModelId"
       labelText="Model Selection"
       description="The initial model selected for the chatbot."

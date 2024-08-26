@@ -5,7 +5,6 @@
   teacher_dashboard_data[:studioUrlPrefix] = CDO.studio_url('', CDO.default_scheme)
   teacher_dashboard_data[:sections] = @sections
   teacher_dashboard_data[:section] = @section_summary
-  teacher_dashboard_data[:coursesWithProgress] = CourseVersion.courses_for_unit_selector(@section.participant_unit_ids)
   teacher_dashboard_data[:currentUserId] = @current_user.id
   teacher_dashboard_data[:hasSeenStandardsReportInfo] = @current_user.has_seen_standards_report_info_dialog || false
   teacher_dashboard_data[:userName] = @current_user.short_name

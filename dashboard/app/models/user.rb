@@ -50,13 +50,13 @@
 #  races                    :string(255)
 #  primary_contact_info_id  :integer
 #  unlock_token             :string(255)
-#  cap_state                :string(1)
-#  cap_state_date           :datetime
+#  cap_status               :string(1)
+#  cap_status_date          :datetime
 #
 # Indexes
 #
 #  index_users_on_birthday                             (birthday)
-#  index_users_on_cap_state_and_cap_state_date         (cap_state,cap_state_date)
+#  index_users_on_cap_status_and_cap_status_date       (cap_status,cap_status_date)
 #  index_users_on_current_sign_in_at                   (current_sign_in_at)
 #  index_users_on_deleted_at                           (deleted_at)
 #  index_users_on_email_and_deleted_at                 (email,deleted_at)
@@ -109,10 +109,6 @@ class User < ApplicationRecord
   #   us_state: A 2 letter code United States state code the user has given us.
   #   country_code: The country the user was in when they told us their
   #     us_state.
-  #   child_account_compliance_state: The state of a user's compliance with our
-  #     child account policy.
-  #   child_account_compliance_state_last_updated: The date the user became
-  #     compliant with our child account policy.
   #   ai_rubrics_disabled: Turns off AI assessment for a User.
   #   ai_rubrics_tour_seen: Tracks whether user has viewed the AI rubric product tour.
   #   lti_roster_sync_enabled: Enable/disable LTI roster syncing for a User.
@@ -149,9 +145,6 @@ class User < ApplicationRecord
     gender_student_input
     gender_teacher_input
     gender_third_party_input
-    child_account_compliance_state
-    child_account_compliance_state_last_updated
-    child_account_compliance_lock_out_date
     us_state
     country_code
     family_name
@@ -293,6 +286,8 @@ class User < ApplicationRecord
 
   after_create :associate_with_potential_pd_enrollments
 
+  before_create :save_show_progress_table_v2
+
   after_save :save_email_preference, if: -> {email_preference_opt_in.present?}
 
   after_save :save_parent_email_preference, if: :parent_email_preference_opt_in_required?
@@ -362,6 +357,13 @@ class User < ApplicationRecord
     if teacher? && share_teacher_email_reg_partner_opt_in_radio_choice.casecmp?("yes")
       user.share_teacher_email_regional_partner_opt_in = DateTime.now
       user.save!
+    end
+  end
+
+  # Puts teachers directly into the progress table v2 view when new account is created.
+  def save_show_progress_table_v2
+    if teacher?
+      self.show_progress_table_v2 = true
     end
   end
 
@@ -876,13 +878,6 @@ class User < ApplicationRecord
     # we don't trust
     user.email = auth.info.email unless user.user_type == 'student' && AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.include?(auth.provider)
 
-    if auth.provider == :the_school_project
-      user.username = auth.extra.raw_info.nickname
-      user.user_type = auth.extra.raw_info.role
-      user.locale = auth.extra.raw_info.locale
-      user.school = auth.extra.raw_info.school.name
-    end
-
     # treat clever admin types as teachers
     if CLEVER_ADMIN_USER_TYPES.include? user.user_type
       user.user_type = User::TYPE_TEACHER
@@ -1382,9 +1377,13 @@ class User < ApplicationRecord
   # Returns true if all progression levels in the provided script have a passing
   # result
   def completed_progression_levels?(script)
+    num_unpassed_progression_levels(script) == 0
+  end
+
+  def num_unpassed_progression_levels(script)
     user_levels_by_level = user_levels_by_level(script)
 
-    script.script_levels.none? do |script_level|
+    script.script_levels.count do |script_level|
       user_levels = []
       script_level.levels.each do |level|
         curr_user_level = user_levels_by_level[level.id]
@@ -1938,21 +1937,16 @@ class User < ApplicationRecord
     pl_user_scripts = user_scripts.select {|us| us.script.pl_course?}
     pl_scripts = pl_user_scripts.map(&:script)
 
-    levels = pl_scripts.map(&:levels).flatten
-    level_ids = levels.map(&:id)
-
-    # Handle levels-within-levels
-    levels.each {|l| level_ids << l.contained_levels.first&.id unless l.contained_levels.empty?}
-
-    user_levels = UserLevel.where(user: self, script: pl_scripts, level_id: level_ids)
-    return [] if user_levels.empty?
-    user_levels_by_script = user_levels.group_by(&:script_id)
     percent_completed_by_script = {}
     pl_scripts.each do |pl_script|
-      levels_completed = (user_levels_by_script[pl_script.id] || []).count(&:passing?)
+      if pl_user_scripts.find {|us| us.script_id == pl_script.id}.completed_at
+        percent_completed_by_script[pl_script.id] = 100
+        next
+      end
+      num_levels_unpassed = num_unpassed_progression_levels(pl_script)
       total_levels = pl_script.levels.count
       next if total_levels == 0
-      percent_completed_by_script[pl_script.id] = ((levels_completed.to_f / total_levels) * 100).round
+      percent_completed_by_script[pl_script.id] = (((total_levels - num_levels_unpassed).to_f / total_levels) * 100).round
     end
 
     pl_scripts.map do |script|
@@ -2251,7 +2245,7 @@ class User < ApplicationRecord
       has_ever_signed_in: has_ever_signed_in?,
       ai_tutor_access_denied: !!ai_tutor_access_denied,
       at_risk_age_gated: Policies::ChildAccount.parent_permission_required?(self),
-      child_account_compliance_state: child_account_compliance_state,
+      child_account_compliance_state: cap_status,
       latest_permission_request_sent_at: latest_parental_permission_request&.updated_at,
     }
   end
@@ -2767,6 +2761,19 @@ class User < ApplicationRecord
     # us_state is only a required field if the User lives in the US.
     return false unless %w[US RD].include? country_code
     new_record? || us_state_changed?
+  end
+
+  def self.delete_progress_for_unit(user_id:, script_id:)
+    raise "User id required" unless user_id
+    raise "Script id required" unless script_id
+
+    user_storage_id = storage_id_for_user_id(user_id)
+
+    UserScript.where(user_id: user_id, script_id: script_id).destroy_all
+    UserLevel.where(user_id: user_id, script_id: script_id).destroy_all
+    ChannelToken.where(storage_id: user_storage_id, script_id: script_id).destroy_all unless user_storage_id.nil?
+    TeacherFeedback.where(student_id: user_id, script_id: script_id).destroy_all
+    CodeReview.where(user_id: user_id, script_id: script_id).destroy_all
   end
 
   private def should_check_age_or_state_update?

@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
+import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {
   stubRedux,
@@ -64,6 +64,7 @@ const sections = [
     location: '/v2/sections/11',
     name: 'My Section',
     courseVersionName: 'csd-2017',
+    course_display_name: 'CS Discoveries 2017',
     login_type: 'picture',
     participant_type: 'student',
     grades: ['2'],
@@ -94,6 +95,7 @@ const sections = [
     location: '/v2/sections/12',
     name: 'My Other Section',
     courseVersionName: 'coursea-2017',
+    course_display_name: 'Course A',
     login_type: 'picture',
     participant_type: 'student',
     grades: ['11'],
@@ -130,6 +132,7 @@ const sections = [
     location: '/v2/sections/307',
     name: 'My Third Section',
     courseVersionName: undefined,
+    course_display_name: undefined,
     login_type: 'email',
     participant_type: 'student',
     grades: ['10'],
@@ -358,6 +361,7 @@ describe('teacherSectionsRedux', () => {
         courseId: null,
         courseOfferingId: null,
         courseVersionId: null,
+        courseDisplayName: null,
         unitId: null,
         hidden: false,
         restrictSection: false,
@@ -390,6 +394,7 @@ describe('teacherSectionsRedux', () => {
         courseId: null,
         courseOfferingId: courseOfferingId,
         courseVersionId: courseVersionId,
+        courseDisplayName: null,
         unitId: unitId,
         hidden: false,
         restrictSection: false,
@@ -418,6 +423,7 @@ describe('teacherSectionsRedux', () => {
         courseId: null,
         courseOfferingId: null,
         courseVersionId: null,
+        courseDisplayName: null,
         unitId: null,
         hidden: false,
         restrictSection: false,
@@ -445,6 +451,7 @@ describe('teacherSectionsRedux', () => {
         sharingDisabled: false,
         courseOfferingId: 1,
         courseVersionId: 1,
+        courseDisplayName: 'Course A',
         unitId: null,
         courseId: undefined,
         createdAt: createdAt,
@@ -470,6 +477,7 @@ describe('teacherSectionsRedux', () => {
         ],
         syncEnabled: undefined,
         aiTutorEnabled: undefined,
+        anyStudentHasProgress: undefined,
       });
     });
   });
@@ -622,6 +630,7 @@ describe('teacherSectionsRedux', () => {
       code: 'BCDFGH',
       courseOfferingId: null,
       courseVersionId: null,
+      courseDisplayName: undefined,
       unitId: null,
       createdAt: createdAt,
       hidden: false,
@@ -780,6 +789,7 @@ describe('teacherSectionsRedux', () => {
           code: 'BCDFGH',
           courseOfferingId: undefined,
           courseVersionId: undefined,
+          courseDisplayName: undefined,
           unitId: undefined,
           courseId: undefined,
           createdAt: createdAt,
@@ -791,6 +801,7 @@ describe('teacherSectionsRedux', () => {
           sectionInstructors: [],
           syncEnabled: undefined,
           aiTutorEnabled: false,
+          anyStudentHasProgress: undefined,
         },
       });
     });
@@ -1687,6 +1698,7 @@ describe('teacherSectionsRedux', () => {
           id: 11,
           name: 'My Section',
           courseVersionName: 'csd-2017',
+          courseDisplayName: 'CS Discoveries 2017',
           loginType: 'picture',
           loginTypeName: undefined,
           studentCount: 10,
@@ -1703,6 +1715,7 @@ describe('teacherSectionsRedux', () => {
           id: 12,
           name: 'My Other Section',
           courseVersionName: 'coursea-2017',
+          courseDisplayName: 'Course A',
           loginType: 'picture',
           loginTypeName: undefined,
           studentCount: 1,

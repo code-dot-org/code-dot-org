@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 
-import ParentLetter from '@cdo/apps/lib/ui/ParentLetter';
 import {setPegasusOrigin, setStudioOrigin} from '@cdo/apps/lib/util/urlHelpers';
 import {getStore, registerReducers} from '@cdo/apps/redux';
 import currentUser, {
   setCurrentUserName,
 } from '@cdo/apps/templates/currentUserRedux';
+import ParentLetter from '@cdo/apps/templates/teacherDashboard/ParentLetter';
 import teacherSections, {
   selectSection,
   setSections,
@@ -43,7 +43,11 @@ window.addEventListener('DOMContentLoaded', function () {
   document.body.appendChild(mountPoint);
   ReactDOM.render(
     <Provider store={store}>
-      <ParentLetter autoPrint logoUrl={scriptData.logoUrl} />
+      <ParentLetter
+        autoPrint
+        logoUrl={scriptData.logoUrl}
+        loginTypeName={scriptData.section.login_type_name}
+      />
     </Provider>,
     mountPoint
   );

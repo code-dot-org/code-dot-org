@@ -7,11 +7,12 @@
       "curriculum_umbrella": "PD Workshop Activity CSD",
       "hideable_lessons": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-25 22:41:11 UTC",
+    "serialized_at": "2024-08-23 21:36:47 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -67,26 +68,26 @@
       }
     },
     {
-      "key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
-      "name": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
+      "key": "Using Images",
+      "name": "Synchronous Session 2, Option A: Model Lesson U2L8 - Using Images",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n\n* **Essential Practice:** Teachers remain an active part of the classroom during the lesson activity to prompt and support students in their debugging skills.\n\n* **Lesson Decisions:**\n  * Use student pairings purposefully to allow sharing of ideas and strategies\n  * Circulate between breakout rooms to check on student progress \n  * Ask prompting questions, such as “What do you want your code to do? What is it doing instead?” to help students debug\n  * Use the Student Progress Dashboard to see which students may be stuck on a level\n<br> <br> \n\n* **Debrief Topic:** Active teaching during the activity\n\n\n**Objectives:**\n* Participants observe how teachers can actively monitor, support debugging, and assess student work throughout the Activity section of a lesson.\n* Participants generate a list of questions they can use to prompt students to debug rather than pointing them toward the answer.\n\n\n**Suggested Time:** 55 minutes\n\n<a href=\"https://studio.code.org/s/csd2-2023/lessons/9\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> ",
-        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
-        "student_overview": "**Question of the Day:** How can we add images on our websites, while making sure we respect everyone's rights?\n\nIn this lesson, you will learn how to add images to your web pages making sure to keep copyright and Creative Commons licenses in mind. \n\n"
+        "overview": "**Purpose:**\n\n* **Essential Practice:** Teachers remain an active part of the classroom during the lesson activity to prompt and support students in their debugging skills.\n\n* **Lesson Decisions:**\n  * Use student pairings purposefully to allow sharing of ideas and strategies\n  * Circulate between breakout rooms to check on student progress \n  * Ask prompting questions, such as “What do you want your code to do? What is it doing instead?” to help students debug\n  * Use the Student Progress Dashboard to see which students may be stuck on a level\n<br> <br> \n\n* **Debrief Topic:** Active teaching during the activity\n\n\n**Objectives:**\n* Participants observe how teachers can actively monitor, support debugging, and assess student work throughout the Activity section of a lesson.\n* Participants generate a list of questions they can use to prompt students to debug rather than pointing them toward the answer.\n\n\n**Suggested Time:** 55 minutes\n\n<a href=\"https://studio.code.org/s/csd2-2024/lessons/8\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> ",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "student_overview": "**Question of the Day:** How can we add images on our websites, while making sure we respect everyone's rights?\n\nIn this lesson, you will learn how to add images to your web pages making sure to keep copyright and Creative Commons licenses in mind. "
       },
       "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
+        "lesson.key": "Using Images",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1"
       }
     },
     {
-      "key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+      "key": "Sprite Properties",
       "name": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
       "absolute_position": 4,
       "lockable": false,
@@ -94,18 +95,18 @@
       "relative_position": 4,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n\n* **Essential Practice:** The teacher supports students in choice levels to ensure that they are engaged and interested in the coding challenges in the lesson.\n\n* **Lesson Decisions:**\n  * Encourage students to explore the different choice levels in levels four and six to see what is most interesting to them.\n  * Allow students to try a challenge level of any skill (instead of directing them to a prescribed level).\n  * Prompt students to tell you why they’ve chosen a particular choice level to learn more about what interests them.\n  * Highlight students who are purposefully moving through choice levels.\n\n* **Debrief Topic:** Student choice levels\n\n**Objectives:**\n* Participants observe how choice levels can help students feel engaged and like they are directing their own learning.\n* Participants observe how to cultivate joy and interest in choice levels.\n\n**Suggested Time:** 55 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2023/lessons/9\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> ",
+        "overview": "**Purpose:**\n\n* **Essential Practice:** The teacher supports students in choice levels to ensure that they are engaged and interested in the coding challenges in the lesson.\n\n* **Lesson Decisions:**\n  * Encourage students to explore the different choice levels in levels four and six to see what is most interesting to them.\n  * Allow students to try a challenge level of any skill (instead of directing them to a prescribed level).\n  * Prompt students to tell you why they’ve chosen a particular choice level to learn more about what interests them.\n  * Highlight students who are purposefully moving through choice levels.\n\n* **Debrief Topic:** Student choice levels\n\n**Objectives:**\n* Participants observe how choice levels can help students feel engaged and like they are directing their own learning.\n* Participants observe how to cultivate joy and interest in choice levels.\n\n**Suggested Time:** 55 minutes\n\n<a href=\"https://studio.code.org/s/csd3-2024/lessons/9\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> ",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
         "student_overview": "**Question of the Day:** How can we use sprite properties to change their appearance on the screen?\n\nIn this lesson, you will continue working with sprites, using their properties to change their appearance. \n"
       },
       "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1"
       }
     },
     {
-      "key": "Synchronous Session 3: Wrap Up",
+      "key": "lesson-8",
       "name": "Synchronous Session 3: Wrap Up",
       "absolute_position": 5,
       "lockable": false,
@@ -116,7 +117,7 @@
         "student_overview": "**You will:**\n\n* Be prepared to engage in the Module 2 asynchronous work\n* Ask any outstanding questions"
       },
       "seeding_key": {
-        "lesson.key": "Synchronous Session 3: Wrap Up",
+        "lesson.key": "lesson-8",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1"
       }
@@ -149,97 +150,97 @@
       }
     },
     {
-      "key": "1677f7ee-f3ef-4f87-8de6-6c749212e920",
+      "key": "85556689-af2d-49f4-b75c-baf5646ed677",
       "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "1677f7ee-f3ef-4f87-8de6-6c749212e920",
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
+        "lesson_activity.key": "85556689-af2d-49f4-b75c-baf5646ed677",
+        "lesson.key": "Using Images",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1"
       }
     },
     {
-      "key": "c31fe4ad-f373-4b35-a441-c1174a289b83",
+      "key": "b52bfc7e-9a31-4a91-83c0-b898d02d40c9",
       "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "c31fe4ad-f373-4b35-a441-c1174a289b83",
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
+        "lesson_activity.key": "b52bfc7e-9a31-4a91-83c0-b898d02d40c9",
+        "lesson.key": "Using Images",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1"
       }
     },
     {
-      "key": "f54a0141-df26-4f19-b329-c35435883061",
+      "key": "75fd7bd4-ecba-4ffc-97e4-b597af128c8e",
       "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "f54a0141-df26-4f19-b329-c35435883061",
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
+        "lesson_activity.key": "75fd7bd4-ecba-4ffc-97e4-b597af128c8e",
+        "lesson.key": "Using Images",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1"
       }
     },
     {
-      "key": "c12d3120-4206-4c51-b5cb-faa4106ab5c4",
+      "key": "decb5967-0cf0-4276-9ab7-0e9a4b8d17c8",
       "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "c12d3120-4206-4c51-b5cb-faa4106ab5c4",
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson_activity.key": "decb5967-0cf0-4276-9ab7-0e9a4b8d17c8",
+        "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1"
       }
     },
     {
-      "key": "705fd238-6038-44db-8f24-9a989d511eae",
+      "key": "1e1fdc57-7b35-447e-8e5e-7b43df3ba743",
       "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "705fd238-6038-44db-8f24-9a989d511eae",
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson_activity.key": "1e1fdc57-7b35-447e-8e5e-7b43df3ba743",
+        "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1"
       }
     },
     {
-      "key": "523f0ab7-cbf8-4e8b-a929-e39e7b14033d",
+      "key": "f8d718b0-83f0-4908-b1d7-4fa64c2da74e",
       "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "523f0ab7-cbf8-4e8b-a929-e39e7b14033d",
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson_activity.key": "f8d718b0-83f0-4908-b1d7-4fa64c2da74e",
+        "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1"
       }
     },
     {
-      "key": "d94e9d7b-7549-4a2e-84cf-ca9787befa44",
+      "key": "b1b41972-8b11-4939-a687-d7184ad064f8",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "d94e9d7b-7549-4a2e-84cf-ca9787befa44",
-        "lesson.key": "Synchronous Session 3: Wrap Up",
+        "lesson_activity.key": "b1b41972-8b11-4939-a687-d7184ad064f8",
+        "lesson.key": "lesson-8",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1"
       }
@@ -313,7 +314,7 @@
       }
     },
     {
-      "key": "a42edba8-f54c-4da1-831f-aad693930897",
+      "key": "fca8f6d0-065f-498e-9873-55190600c335",
       "position": 1,
       "properties": {
         "description": "Today, we're going to add some images to our sites. This can make the websites a lot more fun, but it also means we'll need to be extra careful about making sure that we are safe and responsible in how we use them.",
@@ -321,34 +322,34 @@
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "a42edba8-f54c-4da1-831f-aad693930897",
-        "lesson_activity.key": "1677f7ee-f3ef-4f87-8de6-6c749212e920"
+        "activity_section.key": "fca8f6d0-065f-498e-9873-55190600c335",
+        "lesson_activity.key": "85556689-af2d-49f4-b75c-baf5646ed677"
       }
     },
     {
-      "key": "9466bd61-8226-45b6-86c1-8c6c7487b37e",
+      "key": "2f9e30f6-b100-4740-b8c7-d389e7c9d617",
       "position": 2,
       "properties": {
         "description": "**Prompt:** In your journal, think of some guidelines we should keep in mind when using images. How can we make sure that we are safe and respecting the rights of others?\n\n**Discussion Goal:** As students come up with their guidelines, you may choose to prompt them by reminding them of the recent activities they have done around sharing personal information and respecting copyright. Many classes may also want to add in other guidelines, such as defining what is appropriate in a school setting, or making sure that any people depicted in the image are comfortable with the image being posted online. Regardless, make sure that you are satisfied that the guidelines are sufficient before you move on."
       },
       "seeding_key": {
-        "activity_section.key": "9466bd61-8226-45b6-86c1-8c6c7487b37e",
-        "lesson_activity.key": "1677f7ee-f3ef-4f87-8de6-6c749212e920"
+        "activity_section.key": "2f9e30f6-b100-4740-b8c7-d389e7c9d617",
+        "lesson_activity.key": "85556689-af2d-49f4-b75c-baf5646ed677"
       }
     },
     {
-      "key": "84c9d11b-e303-45b5-9595-96b7d53d9188",
+      "key": "0b20bcd5-16ad-4377-b4c3-f4d940bbf814",
       "position": 3,
       "properties": {
         "description": "**Discuss:** Have students journal individually, then share with a neighbor, and finally discuss as a whole class. You may choose to create a poster with the guidelines that students have created, and prompt them if anything seems missing from the list.\r\n\r\n**Question of the Day: How can we add images on our websites, while making sure we respect everyone's rights?**"
       },
       "seeding_key": {
-        "activity_section.key": "84c9d11b-e303-45b5-9595-96b7d53d9188",
-        "lesson_activity.key": "1677f7ee-f3ef-4f87-8de6-6c749212e920"
+        "activity_section.key": "0b20bcd5-16ad-4377-b4c3-f4d940bbf814",
+        "lesson_activity.key": "85556689-af2d-49f4-b75c-baf5646ed677"
       }
     },
     {
-      "key": "3e190754-18bb-44fd-ba9d-59a01a5e82dc",
+      "key": "83846168-afd3-4cc2-a151-fb8f2f132831",
       "position": 1,
       "properties": {
         "description": "**Transition**: Send students to Code Studio.",
@@ -361,46 +362,52 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "3e190754-18bb-44fd-ba9d-59a01a5e82dc",
-        "lesson_activity.key": "c31fe4ad-f373-4b35-a441-c1174a289b83"
+        "activity_section.key": "83846168-afd3-4cc2-a151-fb8f2f132831",
+        "lesson_activity.key": "b52bfc7e-9a31-4a91-83c0-b898d02d40c9"
       }
     },
     {
-      "key": "ac5443b5-8d21-4317-9962-a671182d692e",
+      "key": "aaf7fcfa-85f4-4ecc-87ef-20d390703b6d",
       "position": 2,
       "properties": {
         "progression_name": "Exploration"
       },
       "seeding_key": {
-        "activity_section.key": "ac5443b5-8d21-4317-9962-a671182d692e",
-        "lesson_activity.key": "c31fe4ad-f373-4b35-a441-c1174a289b83"
+        "activity_section.key": "aaf7fcfa-85f4-4ecc-87ef-20d390703b6d",
+        "lesson_activity.key": "b52bfc7e-9a31-4a91-83c0-b898d02d40c9"
       }
     },
     {
-      "key": "c836b9ea-4bfb-4656-af10-11e1bc7e6e25",
+      "key": "ef21bced-1711-4189-b546-94bb8fcb44c7",
       "position": 3,
       "properties": {
-        "description": "**Circulate**: Give students time to explore the image tag and discuss the questions on the level with their partner.\n\n**Prompt**: \n* How do you think they knew what the name of the image should be for the src (source) attribute? Where did they find this information here in Web Lab?\n* What did they put as the alternate text? Do you think that is descriptive enough?\n* What else do you notice about the image tag?\n\n**Discussion Goal**: Students should notice the new image file in the left-hand panel of Web Lab. This is where they can find the names of images for their web pages. Students may also notice that the image tag does not have a closing tag. You can explain to students that the image tag is a self-closing tag and is one of the few that do not need a closing tag. \n\n**Code Studio**: Have students continue to the next levels in Code Studio",
+        "description": "**Circulate**: Give students time to explore the image tag and discuss the questions on the level with their partner.\n\n**Prompt**: \n* How do you think they knew what the name of the image should be for the src (source) attribute? Where did they find this information here in Web Lab?\n* What did they put as the alternate text? Do you think that is descriptive enough?\n* What else do you notice about the image tag?\n\n**Discussion Goal**: Students should notice the new image file in the left-hand panel of Web Lab. This is where they can find the names of images for their web pages. Students may also notice that the image tag does not have a closing tag. You can explain to students that the image tag is a self-closing tag and is one of the few that do not need a closing tag. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the \"Adding Images\" slide to go over the three important parts needed when adding images with the `<img>` tag.\n\n**Code Studio**: Have students continue to the next levels in Code Studio",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
-        "activity_section.key": "c836b9ea-4bfb-4656-af10-11e1bc7e6e25",
-        "lesson_activity.key": "c31fe4ad-f373-4b35-a441-c1174a289b83"
+        "activity_section.key": "ef21bced-1711-4189-b546-94bb8fcb44c7",
+        "lesson_activity.key": "b52bfc7e-9a31-4a91-83c0-b898d02d40c9"
       }
     },
     {
-      "key": "f9f96ee3-479b-4583-b96c-66ad82440169",
+      "key": "c196d514-39ee-4389-b5eb-166f6acc71ae",
       "position": 4,
       "properties": {
-        "description": "**Level 1:** Students may come across some image tags that include a slash at the end, like this: `<img src=\"imgURL.jpg\" alt=\"my image\" />`\n\nThese ending slashes are there to indicate that this tag is self-closing, but they are optional and have no effect on the web page.\n\n**Level 2:** Because of the type of license used, students are not legally required to include attribution, but it is a good habit for them to get into when developing their websites.\n\n**Level 5 - Recommended Search Engines:** Because we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:\n- [Creative Commons Search](https://search.creativecommons.org/)\n- [Google Image Advanced Search](https://www.google.com/advanced_image_search)\n- [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)\n- [Flickr Creative Commons](https://www.flickr.com/creativecommons/)\n\nAs with any site with crowdsourced content, search engine results will change from day to day, and some of those results may be inappropriate for the classroom. You may want to check these sites shortly before displaying them to the class, and decide what is best for your classroom."
+        "description": "**Level 1:** Students may come across some image tags that include a slash at the end, like this: `<img src=\"imgURL.jpg\" alt=\"my image\" />`\n\nThese ending slashes are there to indicate that this tag is self-closing, but they are optional and have no effect on the web page.\n\n**Level 2:** Because of the type of license used, students are not legally required to include attribution, but it is a good habit for them to get into when developing their websites.\n\n**Level 5 - Recommended Search Engines:** Because we can't know which sites might be blocked in your district, we've avoided pointing students to a specific search engine. Not all search engines make it easy to set Creative Commons filters - some of the easiest include:\n- [Creative Commons Search](https://search.creativecommons.org/)\n- [Google Image Advanced Search](https://www.google.com/advanced_image_search)\n- [Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)\n- [Flickr Creative Commons](https://www.flickr.com/creativecommons/)\n\nAs with any site with crowdsourced content, search engine results will change from day to day, and some of those results may be inappropriate for the classroom. You may want to check these sites shortly before displaying them to the class, and decide what is best for your classroom.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "A useful way to have students name images that they find in image repositories online would be to combine  <i>description + image source + Creative Commons license type</i>. \n\nAn example might be:  <b>CatWikimediaCC0.jpg</b>\n\nThis ensures that the students know where they found the image originally, what the search terms might have been, and that they are able to provide attribution to a source if needed."
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "f9f96ee3-479b-4583-b96c-66ad82440169",
-        "lesson_activity.key": "c31fe4ad-f373-4b35-a441-c1174a289b83"
+        "activity_section.key": "c196d514-39ee-4389-b5eb-166f6acc71ae",
+        "lesson_activity.key": "b52bfc7e-9a31-4a91-83c0-b898d02d40c9"
       }
     },
     {
-      "key": "6da372ff-504e-4e0c-8dd4-171c25016523",
+      "key": "8f26902a-c54b-462e-8e42-01b3c090d9d3",
       "position": 5,
       "properties": {
         "progression_name": "Practice",
@@ -412,86 +419,86 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "6da372ff-504e-4e0c-8dd4-171c25016523",
-        "lesson_activity.key": "c31fe4ad-f373-4b35-a441-c1174a289b83"
+        "activity_section.key": "8f26902a-c54b-462e-8e42-01b3c090d9d3",
+        "lesson_activity.key": "b52bfc7e-9a31-4a91-83c0-b898d02d40c9"
       }
     },
     {
-      "key": "60671bd0-796d-428c-ba65-8488c7a179fa",
+      "key": "db99f7c0-3ae1-4d43-9f1c-a55d0388d4a9",
       "position": 6,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+            "markdown": "**Formative Assessment:** Levels 8 & 9 can be used as a formative assessment. \n\nA rubric is provided in level 8, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-).\n\nLevel 9 is a free response reflection that can be used as an opportunity to gain insight into how the students completed the assessment level and the choices they made with adding images. In addition, this reflection can be used to identify any misconceptions shared among students that should be cleared up."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "60671bd0-796d-428c-ba65-8488c7a179fa",
-        "lesson_activity.key": "c31fe4ad-f373-4b35-a441-c1174a289b83"
+        "activity_section.key": "db99f7c0-3ae1-4d43-9f1c-a55d0388d4a9",
+        "lesson_activity.key": "b52bfc7e-9a31-4a91-83c0-b898d02d40c9"
       }
     },
     {
-      "key": "7cbed963-a9f6-443c-9b51-68b29143e58a",
+      "key": "fa860c3b-b1e8-4640-b6e6-d1274ba96a5f",
       "position": 7,
       "properties": {
         "progression_name": "Challenges"
       },
       "seeding_key": {
-        "activity_section.key": "7cbed963-a9f6-443c-9b51-68b29143e58a",
-        "lesson_activity.key": "c31fe4ad-f373-4b35-a441-c1174a289b83"
+        "activity_section.key": "fa860c3b-b1e8-4640-b6e6-d1274ba96a5f",
+        "lesson_activity.key": "b52bfc7e-9a31-4a91-83c0-b898d02d40c9"
       }
     },
     {
-      "key": "e072a0ae-bd64-414a-ab85-9d7d3354e1c6",
+      "key": "77dbcf56-9277-49fb-991a-f82486910421",
       "position": 1,
       "properties": {
         "description": "**Question of the Day: How can we add images on our websites, while making sure we respect everyone's rights?**\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students update their HTML Tags chart in their journals to include the image tag and its attributes. \n\n**Journal Prompt: 3-2-1**\n\n* What are **3** ways you can use images to make your site better?\n* What are **2** challenges in adding images to a website?\n* What is **1** way you can respect people's rights when using images?",
         "name": "Using Images\r"
       },
       "seeding_key": {
-        "activity_section.key": "e072a0ae-bd64-414a-ab85-9d7d3354e1c6",
-        "lesson_activity.key": "f54a0141-df26-4f19-b329-c35435883061"
+        "activity_section.key": "77dbcf56-9277-49fb-991a-f82486910421",
+        "lesson_activity.key": "75fd7bd4-ecba-4ffc-97e4-b597af128c8e"
       }
     },
     {
-      "key": "05dea48c-4081-4557-8269-554df05c438c",
+      "key": "a7be9e36-ceb1-40de-8a99-7607548b66f4",
       "position": 1,
       "properties": {
         "description": "**Prompt:** What is your definition of a sprite?  What sprite properties do you know how to use?  What other sprite properties might be useful?\r\n\r\nAllow students time to reflect on their own and then with a partner before sharing out to the entire group. It's okay if students do not have a canonical definition of a sprite, but they should recognize that a sprite is a part of the program that has several different properties that control its location and appearance."
       },
       "seeding_key": {
-        "activity_section.key": "05dea48c-4081-4557-8269-554df05c438c",
-        "lesson_activity.key": "c12d3120-4206-4c51-b5cb-faa4106ab5c4"
+        "activity_section.key": "a7be9e36-ceb1-40de-8a99-7607548b66f4",
+        "lesson_activity.key": "decb5967-0cf0-4276-9ab7-0e9a4b8d17c8"
       }
     },
     {
-      "key": "4f6870db-48ef-441f-a9ce-d3e10d4185b4",
+      "key": "72b4aed5-0d6a-4b97-b56e-ed57ce04ae9a",
       "position": 2,
       "properties": {
         "description": "So far, we've only been able to control our sprite's location and animation, but today, we're going to learn how to update other sprite properties so we can make even better programs.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "4f6870db-48ef-441f-a9ce-d3e10d4185b4",
-        "lesson_activity.key": "c12d3120-4206-4c51-b5cb-faa4106ab5c4"
+        "activity_section.key": "72b4aed5-0d6a-4b97-b56e-ed57ce04ae9a",
+        "lesson_activity.key": "decb5967-0cf0-4276-9ab7-0e9a4b8d17c8"
       }
     },
     {
-      "key": "aff87674-8bb5-4c84-a96d-db9210c117df",
+      "key": "72f2ea9b-99fd-4d7b-b6e5-aa6e90a634d7",
       "position": 3,
       "properties": {
         "description": "**Question of the Day: How can we use sprite properties to change their appearance on the screen?**"
       },
       "seeding_key": {
-        "activity_section.key": "aff87674-8bb5-4c84-a96d-db9210c117df",
-        "lesson_activity.key": "c12d3120-4206-4c51-b5cb-faa4106ab5c4"
+        "activity_section.key": "72f2ea9b-99fd-4d7b-b6e5-aa6e90a634d7",
+        "lesson_activity.key": "decb5967-0cf0-4276-9ab7-0e9a4b8d17c8"
       }
     },
     {
-      "key": "476661ec-4a5e-4d66-b3b9-fb80f2b424ac",
+      "key": "c78d85f4-fe57-4b19-81e4-521afbbbf982",
       "position": 1,
       "properties": {
         "description": "**Transition:** Send students to Code Studio.",
@@ -503,23 +510,23 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "476661ec-4a5e-4d66-b3b9-fb80f2b424ac",
-        "lesson_activity.key": "705fd238-6038-44db-8f24-9a989d511eae"
+        "activity_section.key": "c78d85f4-fe57-4b19-81e4-521afbbbf982",
+        "lesson_activity.key": "1e1fdc57-7b35-447e-8e5e-7b43df3ba743"
       }
     },
     {
-      "key": "bc8b3e1f-e5fd-484e-9630-9f3c665ffa19",
+      "key": "08f0ee73-01a1-4d86-b470-fd583a46c14e",
       "position": 2,
       "properties": {
         "progression_name": "Prediction"
       },
       "seeding_key": {
-        "activity_section.key": "bc8b3e1f-e5fd-484e-9630-9f3c665ffa19",
-        "lesson_activity.key": "705fd238-6038-44db-8f24-9a989d511eae"
+        "activity_section.key": "08f0ee73-01a1-4d86-b470-fd583a46c14e",
+        "lesson_activity.key": "1e1fdc57-7b35-447e-8e5e-7b43df3ba743"
       }
     },
     {
-      "key": "65d1661e-da90-49a7-974f-973ee173b039",
+      "key": "bd32abdb-c723-44e9-859d-b027ba105298",
       "position": 3,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r sprite_properties_2/vpl-csd/2024] video in the slides.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Key Vocabulary:**\n- **Property:** A label for a characteristic of a sprite, such as its location and appearance\n- **Dot notation:** the way that sprites' properties are used in Game Lab, by connecting the sprite and property with a dot.",
@@ -531,34 +538,34 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "65d1661e-da90-49a7-974f-973ee173b039",
-        "lesson_activity.key": "705fd238-6038-44db-8f24-9a989d511eae"
+        "activity_section.key": "bd32abdb-c723-44e9-859d-b027ba105298",
+        "lesson_activity.key": "1e1fdc57-7b35-447e-8e5e-7b43df3ba743"
       }
     },
     {
-      "key": "6248a08e-3170-4242-935f-a1a35e5387db",
+      "key": "8802b97a-419f-4b1e-9c20-4326edda8b4f",
       "position": 4,
       "properties": {
         "progression_name": "Skill Building"
       },
       "seeding_key": {
-        "activity_section.key": "6248a08e-3170-4242-935f-a1a35e5387db",
-        "lesson_activity.key": "705fd238-6038-44db-8f24-9a989d511eae"
+        "activity_section.key": "8802b97a-419f-4b1e-9c20-4326edda8b4f",
+        "lesson_activity.key": "1e1fdc57-7b35-447e-8e5e-7b43df3ba743"
       }
     },
     {
-      "key": "e459d2db-ffb9-4caa-bcab-138902bfe989",
+      "key": "e55c355b-269c-4209-bd22-603f2d4d6697",
       "position": 5,
       "properties": {
         "progression_name": "Practice"
       },
       "seeding_key": {
-        "activity_section.key": "e459d2db-ffb9-4caa-bcab-138902bfe989",
-        "lesson_activity.key": "705fd238-6038-44db-8f24-9a989d511eae"
+        "activity_section.key": "e55c355b-269c-4209-bd22-603f2d4d6697",
+        "lesson_activity.key": "1e1fdc57-7b35-447e-8e5e-7b43df3ba743"
       }
     },
     {
-      "key": "e69c572e-a1ff-4e5a-93f3-bee761cd9d2b",
+      "key": "f0c461ed-ac42-467f-9081-b1fe3e607e56",
       "position": 6,
       "properties": {
         "progression_name": "Assessment",
@@ -570,51 +577,51 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "e69c572e-a1ff-4e5a-93f3-bee761cd9d2b",
-        "lesson_activity.key": "705fd238-6038-44db-8f24-9a989d511eae"
+        "activity_section.key": "f0c461ed-ac42-467f-9081-b1fe3e607e56",
+        "lesson_activity.key": "1e1fdc57-7b35-447e-8e5e-7b43df3ba743"
       }
     },
     {
-      "key": "e64795cf-73bc-405c-b73f-efe88bf838d1",
+      "key": "ee3fe6fa-4960-4b4b-aae2-99d8fe2928a0",
       "position": 7,
       "properties": {
         "progression_name": "Challenges"
       },
       "seeding_key": {
-        "activity_section.key": "e64795cf-73bc-405c-b73f-efe88bf838d1",
-        "lesson_activity.key": "705fd238-6038-44db-8f24-9a989d511eae"
+        "activity_section.key": "ee3fe6fa-4960-4b4b-aae2-99d8fe2928a0",
+        "lesson_activity.key": "1e1fdc57-7b35-447e-8e5e-7b43df3ba743"
       }
     },
     {
-      "key": "8e4fc423-931f-44f6-972a-c6767b85b822",
+      "key": "92f8fd22-1146-4e88-b0a0-a35dd4da99ab",
       "position": 1,
       "properties": {
         "description": "**Question of the Day: How can we use sprite properties to change their appearance on the screen?**\r\n\r\n\r\n**Journal Prompt:** What is one way sprite properties are the same as variables?  What's one way that sprite properties are different from variables?"
       },
       "seeding_key": {
-        "activity_section.key": "8e4fc423-931f-44f6-972a-c6767b85b822",
-        "lesson_activity.key": "523f0ab7-cbf8-4e8b-a929-e39e7b14033d"
+        "activity_section.key": "92f8fd22-1146-4e88-b0a0-a35dd4da99ab",
+        "lesson_activity.key": "f8d718b0-83f0-4908-b1d7-4fa64c2da74e"
       }
     },
     {
-      "key": "3479eefe-148e-47c3-9b0a-aad6f4475182",
+      "key": "5791e124-398a-4d11-9e94-c40a19f30027",
       "position": 2,
       "properties": {
         "description": "**Discuss:** Allow students to discuss in pairs or small groups before sharing out to the entire group.\n\n**Discussion Goal:** Students may note that sprite properties and variables are similar in that they both store information. They are different in that variables can be anything, but sprites have particular properties that are used in certain ways on the screen.\n\n"
       },
       "seeding_key": {
-        "activity_section.key": "3479eefe-148e-47c3-9b0a-aad6f4475182",
-        "lesson_activity.key": "523f0ab7-cbf8-4e8b-a929-e39e7b14033d"
+        "activity_section.key": "5791e124-398a-4d11-9e94-c40a19f30027",
+        "lesson_activity.key": "f8d718b0-83f0-4908-b1d7-4fa64c2da74e"
       }
     },
     {
-      "key": "6a634a15-f750-4228-997d-71090298b818",
+      "key": "efe60d7d-f829-4eb8-abca-5cd075970e3f",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "6a634a15-f750-4228-997d-71090298b818",
-        "lesson_activity.key": "d94e9d7b-7549-4a2e-84cf-ca9787befa44"
+        "activity_section.key": "efe60d7d-f829-4eb8-abca-5cd075970e3f",
+        "lesson_activity.key": "b1b41972-8b11-4939-a687-d7184ad064f8"
       }
     }
   ],
@@ -625,6 +632,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "OPL - CSD-PL AYWS1 Debugging Intro_2024"
+        ],
         "progression": "Module 1 Overview"
       },
       "bonus": false,
@@ -647,6 +657,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 1 Summer Review Overview_2024"
+        ],
         "progression": "Module 1 Overview"
       },
       "bonus": false,
@@ -669,6 +682,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Variables Overview_2024"
+        ],
         "progression": "Unit 2: Web Development Review"
       },
       "bonus": false,
@@ -691,6 +707,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module Variable Video with Reflection_2024"
+        ],
         "progression": "Unit 2: Web Development Review"
       },
       "bonus": false,
@@ -713,6 +732,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-HTMLReview_2024"
+        ],
         "progression": "Unit 2: Web Development Review"
       },
       "bonus": false,
@@ -735,6 +757,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-CSSVideo_2024"
+        ],
         "progression": "Unit 2: Web Development Review"
       },
       "bonus": false,
@@ -757,6 +782,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-CSSReview_2024"
+        ],
         "progression": "Unit 2: Web Development Review"
       },
       "bonus": false,
@@ -779,6 +807,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-variablesoverview1_2024"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -801,6 +832,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-variables4_2024"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -823,6 +857,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-randomnumbersoverview_2024"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -845,6 +882,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD U3 Random random ellipse2_2018_21_2024"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -867,6 +907,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-spritesoverview_2024"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -889,6 +932,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-sprites1_2024"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -911,6 +957,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csd-2023-m1-sprites3_2024"
+        ],
         "progression": "Unit 3: Interactive Animations and Games Review"
       },
       "bonus": false,
@@ -933,6 +982,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL- CSD - Module 1 Debugging OverviewOPD-K5 Pair_copy_2024"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -955,6 +1007,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 1 Debugging Reflection 1_2024"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -977,6 +1032,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD Games variables practice_2024"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -999,6 +1057,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 1 Debugging Reflection 2_2024"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -1021,6 +1082,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 1 Wrap Up_2024"
+        ],
         "progression": "Module 1 Asynchronous Wrap Up"
       },
       "bonus": false,
@@ -1048,15 +1112,15 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2 images explore_2024"
+          "CSD U2 images explore_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
+        "lesson.key": "Using Images",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "ac5443b5-8d21-4317-9962-a671182d692e"
+        "activity_section.key": "aaf7fcfa-85f4-4ecc-87ef-20d390703b6d"
       },
       "level_keys": [
-        "CSD U2 images explore_2024"
+        "CSD U2 images explore_csd-vpl-m1-2024"
       ]
     },
     {
@@ -1070,15 +1134,15 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2 Image Tag 1_2024"
+          "CSD U2 Image Tag 1_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
+        "lesson.key": "Using Images",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "c836b9ea-4bfb-4656-af10-11e1bc7e6e25"
+        "activity_section.key": "ef21bced-1711-4189-b546-94bb8fcb44c7"
       },
       "level_keys": [
-        "CSD U2 Image Tag 1_2024"
+        "CSD U2 Image Tag 1_csd-vpl-m1-2024"
       ]
     },
     {
@@ -1092,15 +1156,15 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2 Image Credit_2024"
+          "CSD U2 Image Credit_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
+        "lesson.key": "Using Images",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "c836b9ea-4bfb-4656-af10-11e1bc7e6e25"
+        "activity_section.key": "ef21bced-1711-4189-b546-94bb8fcb44c7"
       },
       "level_keys": [
-        "CSD U2 Image Credit_2024"
+        "CSD U2 Image Credit_csd-vpl-m1-2024"
       ]
     },
     {
@@ -1114,15 +1178,15 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2 Image Tag Debug_2024"
+          "CSD U2 Image Tag Debug_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
+        "lesson.key": "Using Images",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "c836b9ea-4bfb-4656-af10-11e1bc7e6e25"
+        "activity_section.key": "ef21bced-1711-4189-b546-94bb8fcb44c7"
       },
       "level_keys": [
-        "CSD U2 Image Tag Debug_2024"
+        "CSD U2 Image Tag Debug_csd-vpl-m1-2024"
       ]
     },
     {
@@ -1136,15 +1200,15 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2 Image choose name_2024"
+          "CSD U2 Image choose name_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
+        "lesson.key": "Using Images",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "c836b9ea-4bfb-4656-af10-11e1bc7e6e25"
+        "activity_section.key": "ef21bced-1711-4189-b546-94bb8fcb44c7"
       },
       "level_keys": [
-        "CSD U2 Image choose name_2024"
+        "CSD U2 Image choose name_csd-vpl-m1-2024"
       ]
     },
     {
@@ -1158,15 +1222,15 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2 Image Tag 2_2024"
+          "CSD U2 Image Tag 2_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
+        "lesson.key": "Using Images",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "c836b9ea-4bfb-4656-af10-11e1bc7e6e25"
+        "activity_section.key": "ef21bced-1711-4189-b546-94bb8fcb44c7"
       },
       "level_keys": [
-        "CSD U2 Image Tag 2_2024"
+        "CSD U2 Image Tag 2_csd-vpl-m1-2024"
       ]
     },
     {
@@ -1180,15 +1244,15 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2 Image practice_pilot_vpl-2324-m1_2024"
+          "CSD U2 Image practice_pilot_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
+        "lesson.key": "Using Images",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "6da372ff-504e-4e0c-8dd4-171c25016523"
+        "activity_section.key": "8f26902a-c54b-462e-8e42-01b3c090d9d3"
       },
       "level_keys": [
-        "CSD U2 Image practice_pilot_vpl-2324-m1_2024"
+        "CSD U2 Image practice_pilot_csd-vpl-m1-2024"
       ]
     },
     {
@@ -1202,20 +1266,42 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2 Image assessment_2024"
+          "CSD U2 Image assessment_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
+        "lesson.key": "Using Images",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "60671bd0-796d-428c-ba65-8488c7a179fa"
+        "activity_section.key": "db99f7c0-3ae1-4d43-9f1c-a55d0388d4a9"
       },
       "level_keys": [
-        "CSD U2 Image assessment_2024"
+        "CSD U2 Image assessment_csd-vpl-m1-2024"
       ]
     },
     {
       "chapter": 28,
       "position": 9,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD L Assess FR_csd-vpl-m1-2024"
+        ],
+        "lesson.key": "Using Images",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2024-m1",
+        "activity_section.key": "db99f7c0-3ae1-4d43-9f1c-a55d0388d4a9"
+      },
+      "level_keys": [
+        "CSD L Assess FR_csd-vpl-m1-2024"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -1224,19 +1310,19 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2 Image challenge_pilot_vpl-2324-m1_2024"
+          "CSD U2 Image challenge_pilot_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
+        "lesson.key": "Using Images",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "7cbed963-a9f6-443c-9b51-68b29143e58a"
+        "activity_section.key": "fa860c3b-b1e8-4640-b6e6-d1274ba96a5f"
       },
       "level_keys": [
-        "CSD U2 Image challenge_pilot_vpl-2324-m1_2024"
+        "CSD U2 Image challenge_pilot_csd-vpl-m1-2024"
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1246,19 +1332,19 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD Games properties predict_2024"
+          "CSD Games properties predict_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "bc8b3e1f-e5fd-484e-9630-9f3c665ffa19"
+        "activity_section.key": "08f0ee73-01a1-4d86-b470-fd583a46c14e"
       },
       "level_keys": [
-        "CSD Games properties predict_2024"
+        "CSD Games properties predict_csd-vpl-m1-2024"
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1268,19 +1354,19 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD Games properties xy_2024"
+          "CSD Games properties xy_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "6248a08e-3170-4242-935f-a1a35e5387db"
+        "activity_section.key": "8802b97a-419f-4b1e-9c20-4326edda8b4f"
       },
       "level_keys": [
-        "CSD Games properties xy_2024"
+        "CSD Games properties xy_csd-vpl-m1-2024"
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -1290,19 +1376,19 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD Games properties new_2024"
+          "CSD Games properties new_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "6248a08e-3170-4242-935f-a1a35e5387db"
+        "activity_section.key": "8802b97a-419f-4b1e-9c20-4326edda8b4f"
       },
       "level_keys": [
-        "CSD Games properties new_2024"
+        "CSD Games properties new_csd-vpl-m1-2024"
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1312,19 +1398,19 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD Games Properties practice_vpl-csd_2024"
+          "CSD Games Properties practice_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "e459d2db-ffb9-4caa-bcab-138902bfe989"
+        "activity_section.key": "e55c355b-269c-4209-bd22-603f2d4d6697"
       },
       "level_keys": [
-        "CSD Games Properties practice_vpl-csd_2024"
+        "CSD Games Properties practice_csd-vpl-m1-2024"
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -1334,19 +1420,19 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD Games properties assessment_2024"
+          "CSD Games properties assessment_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "e69c572e-a1ff-4e5a-93f3-bee761cd9d2b"
+        "activity_section.key": "f0c461ed-ac42-467f-9081-b1fe3e607e56"
       },
       "level_keys": [
-        "CSD Games properties assessment_2024"
+        "CSD Games properties assessment_csd-vpl-m1-2024"
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -1356,15 +1442,15 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD Games Properties challenge_vpl-csd_2024"
+          "CSD Games Properties challenge_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "e64795cf-73bc-405c-b73f-efe88bf838d1"
+        "activity_section.key": "ee3fe6fa-4960-4b4b-aae2-99d8fe2928a0"
       },
       "level_keys": [
-        "CSD Games Properties challenge_vpl-csd_2024"
+        "CSD Games Properties challenge_csd-vpl-m1-2024"
       ]
     }
   ],
@@ -1599,182 +1685,194 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2 images explore_2024",
+        "level.key": "CSD U2 images explore_csd-vpl-m1-2024",
         "script_level.level_keys": [
-          "CSD U2 images explore_2024"
+          "CSD U2 images explore_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
+        "lesson.key": "Using Images",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "ac5443b5-8d21-4317-9962-a671182d692e"
+        "activity_section.key": "aaf7fcfa-85f4-4ecc-87ef-20d390703b6d"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2 Image Tag 1_2024",
+        "level.key": "CSD U2 Image Tag 1_csd-vpl-m1-2024",
         "script_level.level_keys": [
-          "CSD U2 Image Tag 1_2024"
+          "CSD U2 Image Tag 1_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
+        "lesson.key": "Using Images",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "c836b9ea-4bfb-4656-af10-11e1bc7e6e25"
+        "activity_section.key": "ef21bced-1711-4189-b546-94bb8fcb44c7"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2 Image Credit_2024",
+        "level.key": "CSD U2 Image Credit_csd-vpl-m1-2024",
         "script_level.level_keys": [
-          "CSD U2 Image Credit_2024"
+          "CSD U2 Image Credit_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
+        "lesson.key": "Using Images",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "c836b9ea-4bfb-4656-af10-11e1bc7e6e25"
+        "activity_section.key": "ef21bced-1711-4189-b546-94bb8fcb44c7"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2 Image Tag Debug_2024",
+        "level.key": "CSD U2 Image Tag Debug_csd-vpl-m1-2024",
         "script_level.level_keys": [
-          "CSD U2 Image Tag Debug_2024"
+          "CSD U2 Image Tag Debug_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
+        "lesson.key": "Using Images",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "c836b9ea-4bfb-4656-af10-11e1bc7e6e25"
+        "activity_section.key": "ef21bced-1711-4189-b546-94bb8fcb44c7"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2 Image choose name_2024",
+        "level.key": "CSD U2 Image choose name_csd-vpl-m1-2024",
         "script_level.level_keys": [
-          "CSD U2 Image choose name_2024"
+          "CSD U2 Image choose name_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
+        "lesson.key": "Using Images",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "c836b9ea-4bfb-4656-af10-11e1bc7e6e25"
+        "activity_section.key": "ef21bced-1711-4189-b546-94bb8fcb44c7"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2 Image Tag 2_2024",
+        "level.key": "CSD U2 Image Tag 2_csd-vpl-m1-2024",
         "script_level.level_keys": [
-          "CSD U2 Image Tag 2_2024"
+          "CSD U2 Image Tag 2_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
+        "lesson.key": "Using Images",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "c836b9ea-4bfb-4656-af10-11e1bc7e6e25"
+        "activity_section.key": "ef21bced-1711-4189-b546-94bb8fcb44c7"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2 Image practice_pilot_vpl-2324-m1_2024",
+        "level.key": "CSD U2 Image practice_pilot_csd-vpl-m1-2024",
         "script_level.level_keys": [
-          "CSD U2 Image practice_pilot_vpl-2324-m1_2024"
+          "CSD U2 Image practice_pilot_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
+        "lesson.key": "Using Images",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "6da372ff-504e-4e0c-8dd4-171c25016523"
+        "activity_section.key": "8f26902a-c54b-462e-8e42-01b3c090d9d3"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2 Image assessment_2024",
+        "level.key": "CSD U2 Image assessment_csd-vpl-m1-2024",
         "script_level.level_keys": [
-          "CSD U2 Image assessment_2024"
+          "CSD U2 Image assessment_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
+        "lesson.key": "Using Images",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "60671bd0-796d-428c-ba65-8488c7a179fa"
+        "activity_section.key": "db99f7c0-3ae1-4d43-9f1c-a55d0388d4a9"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2 Image challenge_pilot_vpl-2324-m1_2024",
+        "level.key": "CSD L Assess FR_csd-vpl-m1-2024",
         "script_level.level_keys": [
-          "CSD U2 Image challenge_pilot_vpl-2324-m1_2024"
+          "CSD L Assess FR_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
+        "lesson.key": "Using Images",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "7cbed963-a9f6-443c-9b51-68b29143e58a"
+        "activity_section.key": "db99f7c0-3ae1-4d43-9f1c-a55d0388d4a9"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD Games properties predict_2024",
+        "level.key": "CSD U2 Image challenge_pilot_csd-vpl-m1-2024",
         "script_level.level_keys": [
-          "CSD Games properties predict_2024"
+          "CSD U2 Image challenge_pilot_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson.key": "Using Images",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "bc8b3e1f-e5fd-484e-9630-9f3c665ffa19"
+        "activity_section.key": "fa860c3b-b1e8-4640-b6e6-d1274ba96a5f"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD Games properties xy_2024",
+        "level.key": "CSD Games properties predict_csd-vpl-m1-2024",
         "script_level.level_keys": [
-          "CSD Games properties xy_2024"
+          "CSD Games properties predict_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "6248a08e-3170-4242-935f-a1a35e5387db"
+        "activity_section.key": "08f0ee73-01a1-4d86-b470-fd583a46c14e"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD Games properties new_2024",
+        "level.key": "CSD Games properties xy_csd-vpl-m1-2024",
         "script_level.level_keys": [
-          "CSD Games properties new_2024"
+          "CSD Games properties xy_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "6248a08e-3170-4242-935f-a1a35e5387db"
+        "activity_section.key": "8802b97a-419f-4b1e-9c20-4326edda8b4f"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD Games Properties practice_vpl-csd_2024",
+        "level.key": "CSD Games properties new_csd-vpl-m1-2024",
         "script_level.level_keys": [
-          "CSD Games Properties practice_vpl-csd_2024"
+          "CSD Games properties new_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "e459d2db-ffb9-4caa-bcab-138902bfe989"
+        "activity_section.key": "8802b97a-419f-4b1e-9c20-4326edda8b4f"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD Games properties assessment_2024",
+        "level.key": "CSD Games Properties practice_csd-vpl-m1-2024",
         "script_level.level_keys": [
-          "CSD Games properties assessment_2024"
+          "CSD Games Properties practice_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "e69c572e-a1ff-4e5a-93f3-bee761cd9d2b"
+        "activity_section.key": "e55c355b-269c-4209-bd22-603f2d4d6697"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD Games Properties challenge_vpl-csd_2024",
+        "level.key": "CSD Games properties assessment_csd-vpl-m1-2024",
         "script_level.level_keys": [
-          "CSD Games Properties challenge_vpl-csd_2024"
+          "CSD Games properties assessment_csd-vpl-m1-2024"
         ],
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson.key": "Sprite Properties",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2024-m1",
-        "activity_section.key": "e64795cf-73bc-405c-b73f-efe88bf838d1"
+        "activity_section.key": "f0c461ed-ac42-467f-9081-b1fe3e607e56"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD Games Properties challenge_csd-vpl-m1-2024",
+        "script_level.level_keys": [
+          "CSD Games Properties challenge_csd-vpl-m1-2024"
+        ],
+        "lesson.key": "Sprite Properties",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2024-m1",
+        "activity_section.key": "ee3fe6fa-4960-4b4b-aae2-99d8fe2928a0"
       }
     }
   ],
@@ -1801,26 +1899,26 @@
     },
     {
       "name": "Creative Commons Search",
-      "url": "https://drive.google.com/file/d/1ddtt6waueN_MlBs4SdlZvARfYHEr7H44/view?usp=sharing",
-      "key": "creative_commons_search",
+      "url": "https://drive.google.com/file/d/1W7c3XSlxyL-JuqHiwkn8kzlFZcwZ9xke/view",
+      "key": "creative_commons_search_1",
       "properties": {
         "audience": "Teacher",
         "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "creative_commons_search"
+        "resource.key": "creative_commons_search_1"
       }
     },
     {
       "name": "Images in HTML",
-      "url": "https://drive.google.com/file/d/1ewtjXeiPIp8fk8joUkCTQdP2iaLnUa3u/view",
-      "key": "images_in_html",
+      "url": "https://drive.google.com/file/d/1qd50f20T10vhLdc81x0CQlNu7EEX6_fo/view",
+      "key": "images_in_html_1",
       "properties": {
         "audience": "Teacher",
         "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "images_in_html"
+        "resource.key": "images_in_html_1"
       }
     },
     {
@@ -1837,18 +1935,6 @@
     },
     {
       "name": "Sprite Properties",
-      "url": "https://docs.google.com/presentation/d/1T7SX_rhCuVe6DkmQFMWz2QIgQMBD0G4RXwY-lCA72ug/template/preview",
-      "key": "sprite_properties_1",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
-      },
-      "seeding_key": {
-        "resource.key": "sprite_properties_1"
-      }
-    },
-    {
-      "name": "Sprite Properties",
       "url": "https://www.youtube.com/watch?v=5Op72oHFUnc",
       "key": "sprite_properties_2",
       "properties": {
@@ -1861,53 +1947,65 @@
       }
     },
     {
-      "name": "Using Images",
-      "url": "https://docs.google.com/presentation/d/16RXRcZCC1rGcrYR4XoGxN8OvRzSgyY6w4i1col84hxs/template/preview",
-      "key": "using_images",
+      "name": "Sprite Properties",
+      "url": "https://docs.google.com/presentation/d/1lXQZubMuJ4727CqmBJwd3pOy55oFYbbo9960UxLTXCc/template/preview",
+      "key": "sprite_properties_3",
       "properties": {
         "audience": "Teacher",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "using_images"
+        "resource.key": "sprite_properties_3"
+      }
+    },
+    {
+      "name": "Using Images",
+      "url": "https://docs.google.com/presentation/d/1mAUT_XTWrs1Y-nnDBnvXNc13ireAWWPZ28IlIIDdxV4/template/preview",
+      "key": "using_images_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "using_images_1"
       }
     }
   ],
   "lessons_resources": [
     {
       "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
-        "resource.key": "creative_commons_search"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
-        "resource.key": "images_in_html"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
-        "resource.key": "using_images"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson.key": "Sprite Properties",
         "resource.key": "sprite_properties"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
-        "resource.key": "sprite_properties_1"
+        "lesson.key": "Sprite Properties",
+        "resource.key": "sprite_properties_2"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
-        "resource.key": "sprite_properties_2"
+        "lesson.key": "Sprite Properties",
+        "resource.key": "sprite_properties_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Images",
+        "resource.key": "creative_commons_search_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Images",
+        "resource.key": "images_in_html_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Images",
+        "resource.key": "using_images_1"
       }
     }
   ],
@@ -1953,13 +2051,13 @@
   "lessons_vocabularies": [
     {
       "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson.key": "Sprite Properties",
         "vocabulary.key": "dot_notation"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson.key": "Sprite Properties",
         "vocabulary.key": "property"
       }
     }
@@ -1967,127 +2065,127 @@
   "lessons_programming_expressions": [
     {
       "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
-        "programming_environment.name": "weblab",
-        "programming_expression.key": "img"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson.key": "Sprite Properties",
         "programming_environment.name": "gamelab",
         "programming_expression.key": "rotation"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson.key": "Sprite Properties",
         "programming_environment.name": "gamelab",
         "programming_expression.key": "scale"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson.key": "Sprite Properties",
         "programming_environment.name": "gamelab",
         "programming_expression.key": "x"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson.key": "Sprite Properties",
         "programming_environment.name": "gamelab",
         "programming_expression.key": "y"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Images",
+        "programming_environment.name": "weblab",
+        "programming_expression.key": "img"
       }
     }
   ],
   "objectives": [
     {
-      "key": "2242f219-cf63-4960-ab3c-bdb605a0f54d",
-      "properties": {
-        "description": "Use dot notation to update a sprite's properties"
-      },
-      "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
-        "objective.key": "2242f219-cf63-4960-ab3c-bdb605a0f54d"
-      }
-    },
-    {
-      "key": "2995a377-ddc1-4568-82a1-452b94867379",
+      "key": "1d3d723e-5daf-4786-9bd6-93f920c2ea95",
       "properties": {
         "description": "Follow copyright law, accurately attributing others when using their work."
       },
       "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
-        "objective.key": "2995a377-ddc1-4568-82a1-452b94867379"
+        "lesson.key": "Using Images",
+        "objective.key": "1d3d723e-5daf-4786-9bd6-93f920c2ea95"
       }
     },
     {
-      "key": "f1063d75-7538-4909-9c08-8b64845a0fe4",
+      "key": "cb401f31-9cce-4a5d-a938-41fbdf78aea9",
+      "properties": {
+        "description": "Use dot notation to update a sprite's properties"
+      },
+      "seeding_key": {
+        "lesson.key": "Sprite Properties",
+        "objective.key": "cb401f31-9cce-4a5d-a938-41fbdf78aea9"
+      }
+    },
+    {
+      "key": "f32e331b-4620-4ee8-a906-95c8fec866e0",
       "properties": {
         "description": "Add an image to a web page."
       },
       "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
-        "objective.key": "f1063d75-7538-4909-9c08-8b64845a0fe4"
+        "lesson.key": "Using Images",
+        "objective.key": "f32e331b-4620-4ee8-a906-95c8fec866e0"
       }
     }
   ],
   "lessons_standards": [
     {
       "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-IC-21"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "2-IC-23"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option A: Model Lesson U2L9 - Using Images",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "3A-AP-20"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson.key": "Sprite Properties",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-11"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson.key": "Sprite Properties",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-13"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson.key": "Sprite Properties",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-17"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Synchronous Session 2, Option B: Model Lesson U3L9 - Sprite Properties",
+        "lesson.key": "Sprite Properties",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Images",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Images",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Images",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Images",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-20"
       }
     }
   ],

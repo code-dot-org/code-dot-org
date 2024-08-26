@@ -4,17 +4,13 @@
       icon: "fa fa-child",
       audience_heading: hoc_s(:for_students),
       url_primary: resolve_url("/learn"),
-      url_secondary: resolve_url("/ai"),
       button_label_primary: hoc_s(:call_to_action_explore_activities),
-      button_label_secondary: hoc_s(:call_to_action_learn_how_ai_works)
     },
     {
       icon: "fa fa-chalkboard-user",
       audience_heading: hoc_s(:for_educators),
       url_primary: resolve_url("/how-to"),
-      url_secondary: resolve_url("/ai"),
       button_label_primary: hoc_s(:call_to_action_host_hoc),
-      button_label_secondary: hoc_s(:call_to_action_learn_about_ai)
     },
   ]
 
@@ -26,5 +22,3 @@
         = list_item[:audience_heading]
       %a.link-button.white{href: list_item[:url_primary]}
         = list_item[:button_label_primary]
-      %a.link-button.secondary.white{href: list_item[:url_secondary]}
-        = list_item[:button_label_secondary]

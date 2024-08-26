@@ -6,7 +6,7 @@ import {
   Heading3,
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
-import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
+import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './warning-modal.module.scss';

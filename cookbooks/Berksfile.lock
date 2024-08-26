@@ -29,6 +29,8 @@ DEPENDENCIES
     path: cdo-nodejs
   cdo-postfix
     path: cdo-postfix
+  cdo-python
+    path: cdo-python
   cdo-redis
     path: cdo-redis
   cdo-repository
@@ -60,7 +62,7 @@ GRAPH
   cdo-analytics (0.1.16)
     apt (>= 0.0.0)
     ark (>= 0.0.0)
-  cdo-apps (0.2.639)
+  cdo-apps (0.2.649)
     apt (>= 0.0.0)
     cdo-analytics (>= 0.0.0)
     cdo-cloudwatch-agent (>= 0.0.0)
@@ -71,6 +73,7 @@ GRAPH
     cdo-nginx (>= 0.0.0)
     cdo-nodejs (>= 0.0.0)
     cdo-postfix (>= 0.0.0)
+    cdo-python (>= 0.0.0)
     cdo-redis (>= 0.0.0)
     cdo-repository (>= 0.0.0)
     cdo-ruby (>= 0.0.0)
@@ -93,9 +96,9 @@ GRAPH
   cdo-java-7 (0.1.2)
   cdo-jemalloc (0.1.16)
     ark (>= 0.0.0)
-  cdo-mysql (0.1.72)
+  cdo-mysql (0.1.73)
     apt (>= 0.0.0)
-  cdo-nginx (0.0.48)
+  cdo-nginx (0.0.49)
     apt (>= 0.0.0)
     ssl_certificate (>= 0.0.0)
   cdo-nodejs (0.3.49)
@@ -103,11 +106,13 @@ GRAPH
   cdo-postfix (0.2.20)
     apt (>= 0.0.0)
     postfix (>= 0.0.0)
+  cdo-python (0.1.6)
+    apt (>= 0.0.0)
   cdo-redis (0.1.14)
     redisio (>= 0.0.0)
   cdo-repository (0.2.56)
     cdo-github-access (>= 0.0.0)
-  cdo-ruby (0.2.87)
+  cdo-ruby (0.2.89)
     apt (>= 0.0.0)
   cdo-secrets (0.1.12)
   cdo-syslog (0.1.14)

@@ -4,7 +4,6 @@ import {BlockChange} from 'blockly/core/events/events_block_change';
 import {FlyoutItemInfoArray} from 'blockly/core/utils/toolbox';
 
 import BlockSvgFrame from '@cdo/apps/blockly/addons/blockSvgFrame';
-import {convertXmlToJson} from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
 import {BLOCK_TYPES} from '@cdo/apps/blockly/constants';
 import {ExtendedBlockSvg, ProcedureBlock} from '@cdo/apps/blockly/types';
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -245,19 +244,7 @@ export function flyoutCategory(
   }
 
   // Add blocks from the level toolbox XML, if present.
-  const levelToolboxBlocks = Blockly.cdoUtils.getLevelToolboxBlocks('Behavior');
-  if (!levelToolboxBlocks?.querySelector('xml')?.hasChildNodes()) {
-    return blockList;
-  }
-
-  // Blockly supports XML or JSON, but not a combination of both.
-  // We convert to JSON here because the behavior_get blocks are JSON.
-  const blocksConvertedJson = convertXmlToJson(
-    levelToolboxBlocks.documentElement
-  );
-  const blocksJson =
-    Blockly.cdoUtils.getSimplifiedStateForFlyout(blocksConvertedJson);
-  blockList.push(...blocksJson);
+  blockList.push(...Blockly.cdoUtils.getCategoryBlocksJson('Behavior'));
 
   // Workspaces to populate behaviors flyout category from
   const workspaces = [

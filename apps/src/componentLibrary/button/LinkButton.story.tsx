@@ -69,7 +69,7 @@ LinkButtonWithIcons.args = {
   text: 'Button',
   href: 'https://www.google.com',
   iconLeft: {iconName: 'house', iconStyle: 'solid'},
-  iconRight: {iconName: 'smile', iconStyle: 'solid'},
+  iconRight: {iconName: 'brands fa-facebook', iconStyle: 'solid'},
   size: 'm',
 };
 

@@ -120,7 +120,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       get :facebook
     end
 
-    assert_redirected_to 'http://test-studio.code.org/users/sign_up'
+    assert_response :ok
+    assert_template 'omniauth/redirect'
     partial_user = User.new_from_partial_registration(session)
     assert_empty partial_user.email
     assert_nil partial_user.age
@@ -233,7 +234,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
       get :clever
     end
 
-    assert_redirected_to 'http://test-studio.code.org/users/sign_up'
+    assert_response :ok
+    assert_template 'omniauth/redirect'
     partial_user = User.new_from_partial_registration(session)
     assert_empty partial_user.email
   end
@@ -714,17 +716,14 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     # Then I go to the registration page to finish signing up
-    assert_redirected_to 'http://test-studio.code.org/users/sign_up'
+    assert_response :ok
+    assert_template 'omniauth/redirect'
     partial_user = User.new_from_partial_registration(session)
     assert_equal AuthenticationOption::GOOGLE, partial_user.provider
     assert_equal uid, partial_user.uid
   end
 
   test 'google_oauth2: renders redirector to complete registration if user is not found by credentials' do
-    Cpa.stubs(:cpa_experience).with(any_parameters).returns(false)
-    SignUpTracking.stubs(:begin_sign_up_tracking).returns(false)
-    DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
-    DCDO.stubs(:get).with('student-email-post-enabled', false).returns(true)
     # Given I do not have a Code.org account
     uid = "nonexistent-google-oauth2"
 
@@ -763,7 +762,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     # Then I go to the registration page to finish signing up
-    assert_redirected_to 'http://test-studio.code.org/users/sign_up'
+    assert_response :ok
+    assert_template 'omniauth/redirect'
     assert PartialRegistration.in_progress? session
     partial_user = User.new_with_session({}, session)
 
@@ -792,7 +792,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     end
 
     # Then I go to the registration page to finish signing up
-    assert_redirected_to 'http://test-studio.code.org/users/sign_up'
+    assert_response :ok
+    assert_template 'omniauth/redirect'
     assert PartialRegistration.in_progress? session
     partial_user = User.new_with_session({}, session)
 
@@ -1738,7 +1739,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     let(:user_account_linking_lock_reason) {nil}
 
     before do
-      DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
       @controller.stubs(:account_linking_lock_reason).with(user).returns(user_account_linking_lock_reason)
       @controller.stubs(:account_linking_lock_reason).with(admin).returns(user_account_linking_lock_reason)
     end
@@ -1798,6 +1798,7 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
           # so this includes 1 email, 1 SSO, and 1 LTI auth option
           _(user.authentication_options.count).must_equal 3
           _(user.authentication_options).must_include lti_auth_option
+          assert_equal I18n.t('lti.account_linking.successfully_linked'), flash[:notice]
         end
 
         context 'if account linking is locked for user' do
@@ -1877,7 +1878,6 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
   end
 
   test 'Account linking flow doesn\'t sign up new users' do
-    DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
     OmniauthCallbacksController.stubs(:should_link_accounts?).returns(true)
     auth = generate_auth_user_hash provider: AuthenticationOption::GOOGLE, uid: 'some-uid'
     @request.env['omniauth.auth'] = auth
@@ -1885,7 +1885,8 @@ class OmniauthCallbacksControllerTest < ActionController::TestCase
     get :google_oauth2
     OmniauthCallbacksController.expects(:sign_in_google_oauth2).never
     OmniauthCallbacksController.expects(:sign_up_google_oauth2).never
-    assert_response :redirect
+    assert_response :ok
+    assert_template 'omniauth/redirect'
     assert_nil User.find_by_credential type: AuthenticationOption::GOOGLE, id: auth.uid
   end
 

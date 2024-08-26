@@ -1,6 +1,7 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {appendSystemMessage} from '@codebridge/redux/consoleRedux';
-import React, {useContext, useState} from 'react';
+import classNames from 'classnames';
+import React, {useEffect} from 'react';
 
 import {
   navigateToNextLevel,
@@ -10,31 +11,32 @@ import {
   getCurrentLevel,
   nextLevelId,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Button from '@cdo/apps/componentLibrary/button';
+import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
+import {setHasRun, setIsRunning} from '@cdo/apps/lab2/redux/systemRedux';
 import {MultiFileSource} from '@cdo/apps/lab2/types';
-import {
-  DialogContext,
-  DialogType,
-} from '@cdo/apps/lab2/views/dialogs/DialogManager';
+import {LifecycleEvent} from '@cdo/apps/lab2/utils/LifecycleNotifier';
+import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {useFetch} from '@cdo/apps/util/useFetch';
 import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import moduleStyles from './control-buttons.module.scss';
 
-interface PermissionResponse {
-  permissions: string[];
-}
+const SHOW_TEST_NAVIGATION_BUTTONS = queryParams('button-bar');
 
 const ControlButtons: React.FunctionComponent = () => {
-  const {onRun} = useCodebridgeContext();
-  const dialogControl = useContext(DialogContext);
-  const {loading, data} = useFetch('/api/v1/users/current/permissions');
-  const [hasRun, setHasRun] = useState(false);
+  const {onRun, onStop} = useCodebridgeContext();
+
+  const dialogControl = useDialogControl();
   const dispatch = useAppDispatch();
+
+  const hasRun = useAppSelector(state => state.lab2System.hasRun);
 
   const source = useAppSelector(
     state => state.lab2Project.projectSource?.source
@@ -56,11 +58,26 @@ const ControlButtons: React.FunctionComponent = () => {
     state => getCurrentLevel(state)?.status === LevelStatus.submitted
   );
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-  // We disable the run button in predict levels if we are not in start mode
-  // and the user has not yet written a prediction.
-  const awaitingPredictSubmit =
-    !isStartMode && isPredictLevel && !hasPredictResponse;
-  const disableRunAndTest = loading || awaitingPredictSubmit;
+  const isLoadingEnvironment = useAppSelector(
+    state => state.lab2System.loadingCodeEnvironment
+  );
+  const isRunning = useAppSelector(state => state.lab2System.isRunning);
+
+  const validationState = useAppSelector(state => state.lab.validationState);
+  const lifecycleNotifier = Lab2Registry.getInstance().getLifecycleNotifier();
+
+  useEffect(() => {
+    const resetStatus = () => {
+      dispatch(setHasRun(false));
+      dispatch(setIsRunning(false));
+    };
+
+    // Reset run status when the level changes.
+    lifecycleNotifier.addListener(
+      LifecycleEvent.LevelLoadCompleted,
+      resetStatus
+    );
+  }, [lifecycleNotifier, dispatch]);
 
   const onContinue = () => dispatch(navigateToNextLevel());
   // No-op for now. TODO: figure out what the finish button should do.
@@ -74,12 +91,12 @@ const ControlButtons: React.FunctionComponent = () => {
     const dialogMessage = hasSubmitted
       ? commonI18n.unsubmitYourProjectConfirm()
       : commonI18n.submitYourProjectConfirm();
-    dialogControl?.showDialog(
-      DialogType.GenericConfirmation,
-      handleSubmit,
-      dialogTitle,
-      dialogMessage
-    );
+    dialogControl?.showDialog({
+      type: DialogType.GenericConfirmation,
+      handleConfirm: handleSubmit,
+      title: dialogTitle,
+      message: dialogMessage,
+    });
   };
 
   const handleSubmit = () => {
@@ -95,20 +112,28 @@ const ControlButtons: React.FunctionComponent = () => {
 
   const handleRun = (runTests: boolean) => {
     if (onRun) {
-      const parsedPermissions = data
-        ? (data as PermissionResponse)
-        : {permissions: []};
-      onRun(runTests, dispatch, parsedPermissions.permissions, source);
-      setHasRun(true);
+      dispatch(setIsRunning(true));
+      onRun(runTests, dispatch, source).finally(() =>
+        dispatch(setIsRunning(false))
+      );
+      if (!runTests) {
+        dispatch(setHasRun(true));
+      }
     } else {
       dispatch(appendSystemMessage("We don't know how to run your code."));
     }
   };
 
-  // We disabled navigation if we are still loading, or if this is a submittable level,
-  // the user has not submitted yet, and the user has not run their code during this session.
-  const disableNavigation =
-    loading || (isSubmittable && !hasSubmitted && !hasRun);
+  const handleStop = () => {
+    if (onStop) {
+      onStop();
+      dispatch(setIsRunning(false));
+    } else {
+      dispatch(appendSystemMessage("We don't know how to stop your code."));
+      dispatch(setIsRunning(false));
+    }
+  };
+
   const getNavigationButtonProps = () => {
     if (isSubmittable) {
       return {
@@ -127,40 +152,157 @@ const ControlButtons: React.FunctionComponent = () => {
     }
   };
 
+  // This method returns null if navigation is enabled, otherwise it returns the help tooltip text
+  // to explain why navigation is disabled.
+  // We disable navigation for the following cases:
+  // If this level has validation and the validation has not yet passed.
+  // OR if there is no validation and the user has not run their code yet.
+  // The exception to this is if this is a submittable level and the user has already submitted.
+  // In that case "navigation" is unsubmitting their project and we want it to be enabled no matter
+  // the run state.
+  const getDisabledNavigationTooltip = () => {
+    const hasValidationAndHasNotPassed =
+      validationState.hasConditions && !validationState.satisfied;
+    const doesNotHaveValidationAndHasNotRun =
+      !validationState.hasConditions && !hasRun;
+    const disableNavigation =
+      !hasSubmitted &&
+      (hasValidationAndHasNotPassed || doesNotHaveValidationAndHasNotRun);
+
+    if (!disableNavigation) {
+      return null;
+    } else if (isSubmittable) {
+      // If the level is submittable and the user has not submitted,
+      // they need to pass validation if it exists, otherwise they need to run their code.
+      return hasValidationAndHasNotPassed
+        ? codebridgeI18n.validationNotYetPassedSubmit()
+        : codebridgeI18n.runToSubmit();
+    } else if (hasValidationAndHasNotPassed) {
+      // If we have a next level, show the continue text, otherwise show the finish text.
+      return hasNextLevel
+        ? codebridgeI18n.validationNotYetPassedContinue()
+        : codebridgeI18n.validationNotYetPassedFinish();
+    } else {
+      // The user has not yet run their code if we get to this case.
+      return hasNextLevel
+        ? codebridgeI18n.runToContinue()
+        : codebridgeI18n.runToFinish();
+    }
+  };
+
+  const disabledNavigationTooltip = getDisabledNavigationTooltip();
+
+  const awaitingPredictSubmit =
+    !isStartMode && isPredictLevel && !hasPredictResponse;
+
+  // Returns null if the code action buttons (run/test) should be enabled,
+  // otherwise returns the help tip text explaining why they are disabled.
+  // We disable the run/test buttons while the environment is loading
+  // OR if this is a predict level, we are not in start mode
+  // and the user has not yet written a prediction.
+  const getDisabledCodeActionsTooltip = () => {
+    let tooltip = null;
+    if (awaitingPredictSubmit) {
+      tooltip = codebridgeI18n.predictRunDisabledTooltip();
+    } else if (isLoadingEnvironment) {
+      tooltip = codebridgeI18n.loadingEnvironmentTooltip();
+    }
+    return tooltip;
+  };
+
+  const disabledCodeActionsTooltip = getDisabledCodeActionsTooltip();
+  const disabledCodeActionsIcon = awaitingPredictSubmit
+    ? 'fa-question-circle-o'
+    : 'fa-spinner fa-spin';
+
+  // We may want to expand the tooltip to cover the disabled button
+  // as well. We will likely move these buttons; when we do consider
+  // wrapping the buttons in a div with the icon and applying the tooltip to that div.
+  const renderDisabledButtonHelperIcon = (
+    iconName: string,
+    tooltipId: string,
+    helpText: string
+  ) => {
+    return (
+      <WithTooltip
+        tooltipProps={{
+          direction: 'onLeft',
+          text: helpText,
+          tooltipId: tooltipId,
+          size: 's',
+        }}
+      >
+        <i
+          className={classNames('fa', iconName, moduleStyles.disabledInfoIcon)}
+        />
+      </WithTooltip>
+    );
+  };
+
   const {navigationText, handleNavigation} = getNavigationButtonProps();
 
   return (
     <div className={moduleStyles.controlButtonsContainer}>
-      <Button
-        text="Run"
-        onClick={() => handleRun(false)}
-        disabled={disableRunAndTest}
-        iconLeft={{iconStyle: 'solid', iconName: 'play'}}
-        className={moduleStyles.firstControlButton}
-        size={'s'}
-        color={'white'}
-      />
-      <Button
-        text="Test"
-        onClick={() => handleRun(true)}
-        disabled={disableRunAndTest}
-        iconLeft={{iconStyle: 'solid', iconName: 'flask'}}
-        color={'black'}
-        size={'s'}
-      />
-      <Button
-        text={navigationText}
-        onClick={handleNavigation}
-        disabled={disableNavigation}
-        color={'purple'}
-        className={moduleStyles.navigationButton}
-        size={'s'}
-        iconLeft={
-          hasNextLevel
-            ? {iconStyle: 'solid', iconName: 'arrow-right'}
-            : undefined
-        }
-      />
+      {isRunning ? (
+        <Button
+          text={'Stop'}
+          onClick={handleStop}
+          color={'destructive'}
+          iconLeft={{iconStyle: 'solid', iconName: 'square'}}
+          className={moduleStyles.centerButton}
+          size={'s'}
+        />
+      ) : (
+        <span className={moduleStyles.centerButton}>
+          {disabledCodeActionsTooltip &&
+            renderDisabledButtonHelperIcon(
+              disabledCodeActionsIcon,
+              'codeActionsTooltip',
+              disabledCodeActionsTooltip
+            )}
+          <Button
+            text={'Run'}
+            onClick={() => handleRun(false)}
+            disabled={!!disabledCodeActionsTooltip}
+            iconLeft={{iconStyle: 'solid', iconName: 'play'}}
+            className={moduleStyles.runButton}
+            size={'s'}
+            color={'white'}
+          />
+          {SHOW_TEST_NAVIGATION_BUTTONS && (
+            <Button
+              text="Test"
+              onClick={() => handleRun(true)}
+              disabled={!!disabledCodeActionsTooltip}
+              iconLeft={{iconStyle: 'solid', iconName: 'flask'}}
+              color={'black'}
+              size={'s'}
+            />
+          )}
+        </span>
+      )}
+      {SHOW_TEST_NAVIGATION_BUTTONS && (
+        <span className={moduleStyles.navigationButton}>
+          {disabledNavigationTooltip &&
+            renderDisabledButtonHelperIcon(
+              'fa-question-circle-o',
+              'submitButtonDisabled',
+              disabledNavigationTooltip
+            )}
+          <Button
+            text={navigationText}
+            onClick={handleNavigation}
+            disabled={!!disabledNavigationTooltip}
+            color={'purple'}
+            size={'s'}
+            iconLeft={
+              hasNextLevel
+                ? {iconStyle: 'solid', iconName: 'arrow-right'}
+                : undefined
+            }
+          />
+        </span>
+      )}
     </div>
   );
 };

@@ -5,7 +5,9 @@ import {connect} from 'react-redux';
 import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
 
-import Notification, {NotificationType} from '../Notification';
+import Notification, {
+  NotificationType,
+} from '../../sharedComponents/Notification';
 import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
 
 import {

@@ -11,10 +11,6 @@ import {
   setPageError,
 } from '@cdo/apps/lab2/lab2Redux';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
-// This is the utils AnalyticsReporter
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-// This is the Music Lab specific AnalyticsReporter
 import AnalyticsReporter from '@cdo/apps/music/analytics/AnalyticsReporter';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
@@ -144,6 +140,8 @@ class UnconnectedMusicView extends React.Component {
       loadedLibrary: false,
       hasLoadedInitialSounds: false,
     };
+
+    MusicBlocklyWorkspace.setupBlocklyEnvironment();
   }
 
   componentDidMount() {
@@ -394,11 +392,14 @@ class UnconnectedMusicView extends React.Component {
   };
 
   getStartSources = () => {
-    if (this.props.levelProperties?.levelData?.startSources) {
-      return this.props.levelProperties?.levelData.startSources;
-    } else {
+    if (
+      getBlockMode() !== BlockMode.SIMPLE2 ||
+      !this.props.levelProperties?.levelData?.startSources
+    ) {
       const startSourcesFilename = 'startSources' + getBlockMode();
       return require(`@cdo/static/music/${startSourcesFilename}.json`);
+    } else {
+      return this.props.levelProperties?.levelData.startSources;
     }
   };
 
@@ -465,16 +466,6 @@ class UnconnectedMusicView extends React.Component {
     if (play) {
       this.playSong();
       this.analyticsReporter.onButtonClicked('play');
-      // Sends a Statsig event when the Run button is pressed by a signed out user
-      // This is related to the Create Account Button A/B Test; see Jira ticket:
-      // https://codedotorg.atlassian.net/browse/ACQ-1938
-      if (this.props.signInState === SignInState.SignedOut) {
-        analyticsReporter.sendEvent(
-          EVENTS.RUN_BUTTON_PRESSED_SIGNED_OUT,
-          {},
-          PLATFORMS.STATSIG
-        );
-      }
     } else {
       this.stopSong();
     }

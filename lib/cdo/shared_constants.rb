@@ -743,4 +743,33 @@ module SharedConstants
     STUDENT: 'student',
     TEACHER: 'teacher',
   ).freeze
+
+  AI_REQUEST_EXECUTION_STATUS = {
+    # The request has been created but has not yet been processed.
+    NOT_STARTED: 0,
+    # The request has been queued for processing.
+    QUEUED: 1,
+    # The request is currently being processed.
+    RUNNING: 2,
+    # The request was successfully processed.
+    SUCCESS: 3,
+    # The request failed to process for an unexpected reason.
+    FAILURE: 1000,
+    # Profanity detected in the user's input.
+    USER_PROFANITY: 1001,
+    # PII detected in the user's input.
+    USER_PII: 1002,
+    # Profanity detected in the model's output.
+    MODEL_PROFANITY: 1003,
+    # PII detected in the model's output.
+    MODEL_PII: 1004
+  }
+
+  AI_CHAT_MODEL_IDS = {
+    ARITHMO: "gen-ai-arithmo2-mistral-7b",
+    BIOMISTRAL: "gen-ai-biomistral-7b",
+    MISTRAL: "gen-ai-mistral-7b-inst-v01",
+    KAREN: "gen-ai-karen-creative-mistral-7b",
+    PIRATE: "gen-ai-mistral-pirate-7b"
+  }
 end

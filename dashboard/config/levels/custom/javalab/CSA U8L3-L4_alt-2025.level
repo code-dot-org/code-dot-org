@@ -1,0 +1,28 @@
+<Javalab>
+  <config><![CDATA[{
+  "game_id": 68,
+  "created_at": "2024-08-02T22:56:35.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "##Investigate and Modify\r\n\r\nExperiment with the program by making the following modifications, then run the program to observe the results.\r\n\r\n✅ **TO DO:** What happens when either the <code style=\"background-color: #ececec; color: black; font-weight: bold;\">binarySearch()</code> or <code style=\"background-color: #ececec; color: black; font-weight: bold;\">recursiveBinarySearch()</code> methods are applied to an unsorted list?\r\n\r\nCreate a 1D array with multiple unsorted values then call either (or both) of these methods with this list.",
+    "mini_rubric": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "csa_view_mode": "console",
+    "start_sources": {
+      "Runner.java": {
+        "text": "public class Runner {\n  public static void main(String[] args) {\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     */\n\n\n\n    /* ----------------------------------- TO DO -----------------------------------\n     * ✅ instructions for the student to complete\n     * -----------------------------------------------------------------------------\n     *\n     * description of method to write\n     */\n\n    \n\n    \n    /* ---- 🔎 ADD YOUR CODE BELOW THIS LINE ---- */\n\n\n    \n    \n    \n  }\n}",
+        "isVisible": true,
+        "tabOrder": 0
+      }
+    },
+    "project_template_level_name": "CSA U8L3-Binary Search PBT_alt-2025",
+    "name_suffix": "_alt-2025",
+    "ai_tutor_available": true
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-02T22:56:35.895+00:00\",\"changed\":[\"cloned from \\\"CSA U8L3-L4_pilot-2025\\\"\"],\"cloned_from\":\"CSA U8L3-L4_pilot-2025\"}]"
+}]]></config>
+</Javalab>

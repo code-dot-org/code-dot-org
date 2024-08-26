@@ -1,0 +1,32 @@
+name 'sp-pl-DS_L11'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Crafting Stories Project Overview 
+
+#### The chapter culminates with a data project and assessment.  
+#### The project is designed to take multiple days. 
+
+---
+
+<img src="https://images.code.org/10a9908d2caf6a6fed5b9255df213a3b-image-1724434686077.png" alt="codap logo" width="220px"   style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+
+- #### **Day 1** - pick dataset, go through three reads, form RSAIR question, select data questions
+
+- #### **Day 2&3** - make decisions with your data (clean, summarize attributes, apply formulas), create visualizations and identify insights to help answer data questions 
+
+- #### **Day 4**- write a data story, reflect on the data cycle process, reflect on ethical considerations 
+
+
+### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>.</b>
+
+<div style="clear:both;"></div>
+
+
+
+
+####Let’s take a look at a few samples! 
+
+
+MARKDOWN
