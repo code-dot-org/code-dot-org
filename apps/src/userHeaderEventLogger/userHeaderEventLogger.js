@@ -36,13 +36,16 @@ function addClickEventToLinks(selector, eventName, additionalProperties = {}) {
 const addCreateMenuMetrics = (
   headerCreateMenu,
   platforms,
+  isSignedIn,
   additionalOptions = {}
 ) => {
   if (headerCreateMenu) {
     // Log if a signed-out user clicks the "Create" menu dropdown
     headerCreateMenu.addEventListener('click', () => {
       analyticsReporter.sendEvent(
-        EVENTS.SIGNED_IN_USER_CLICKS_CREATE_DROPDOWN,
+        isSignedIn
+          ? EVENTS.SIGNED_IN_USER_CLICKS_CREATE_DROPDOWN
+          : EVENTS.SIGNED_OUT_USER_CLICKS_CREATE_DROPDOWN,
         additionalOptions,
         platforms
       );
@@ -55,7 +58,9 @@ const addCreateMenuMetrics = (
         .getElementById(`create_menu_option_${option}`)
         .addEventListener('click', () => {
           analyticsReporter.sendEvent(
-            EVENTS.SIGNED_IN_USER_SELECTS_CREATE_DROPDOWN_OPTION,
+            isSignedIn
+              ? EVENTS.SIGNED_IN_USER_SELECTS_CREATE_DROPDOWN_OPTION
+              : EVENTS.SIGNED_OUT_USER_SELECTS_CREATE_DROPDOWN_OPTION,
             {
               option: option,
               ...additionalOptions,
@@ -136,7 +141,7 @@ const addSignedOutMetrics = (pageUrl, headerCreateMenu) => {
     );
   });
 
-  addCreateMenuMetrics(headerCreateMenu, PLATFORMS.BOTH);
+  addCreateMenuMetrics(headerCreateMenu, PLATFORMS.BOTH, false);
 };
 
 const addSignedInMetrics = (pageUrl, headerCreateMenu) => {
@@ -181,7 +186,12 @@ const addSignedInMetrics = (pageUrl, headerCreateMenu) => {
     additionalOptions
   );
 
-  addCreateMenuMetrics(headerCreateMenu, PLATFORMS.STATSIG, additionalOptions);
+  addCreateMenuMetrics(
+    headerCreateMenu,
+    PLATFORMS.STATSIG,
+    true,
+    additionalOptions
+  );
 };
 
 $(document).ready(function () {
