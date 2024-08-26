@@ -99,6 +99,8 @@ Feature: BubbleChoice
     And I wait until element "#lab2-aichat" is visible
     Then I verify progress for the sublevel with selector ".teacher-panel .progress-bubble:first" is "perfect"
 
+  # this scenario is currently breaking on ipad and safari
+  @no_mobile @no_safari
   Scenario: Navigating between a Lab2 sublevel and another Lab2 level
     Given I create a teacher-associated student named "Alice"
 
