@@ -445,6 +445,30 @@ class UnitGroupTest < ActiveSupport::TestCase
       assert_equal 1, unit_group1.default_unit_group_units.length
     end
 
+    test 'cannot add UnitGroupUnits that are in another unit group' do
+      old_unit_group = create :unit_group
+      new_unit_group = create :unit_group
+
+      create :script, name: 'unit1'
+      create :script, name: 'unit2'
+
+      # add unit2 to old_unit_group
+      old_unit_group.update_scripts(['unit2'])
+
+      # cannot add unit 2 to new_unit_group, and doesn't raise
+      new_unit_group.update_scripts(['unit1', 'unit2'])
+      new_unit_group.reload
+      assert_equal ['unit1'], new_unit_group.default_units.map(&:name)
+
+      # remove unit 2 from old_unit_group
+      old_unit_group.update_scripts([])
+
+      # can add unit 2 to new_unit_group
+      new_unit_group.update_scripts(['unit1', 'unit2'])
+      new_unit_group.reload
+      assert_equal ['unit1', 'unit2'], new_unit_group.default_units.map(&:name)
+    end
+
     test "remove UnitGroupUnits" do
       unit_group = create(
         :unit_group,
