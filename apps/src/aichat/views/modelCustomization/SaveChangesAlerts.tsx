@@ -10,15 +10,10 @@ import Alert, {alertTypes} from '@cdo/apps/componentLibrary/alert/Alert';
 import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import {isDisabled} from './utils';
-
 import styles from '../model-customization-workspace.module.scss';
 
 const SaveChangesAlerts: React.FunctionComponent = () => {
-  const visibility = useAppSelector(
-    state => state.aichat.fieldVisibilities.modelCardInfo
-  );
-  const isReadOnly = useSelector(isReadOnlyWorkspace) || isDisabled(visibility);
+  const isReadOnly = useSelector(isReadOnlyWorkspace);
   const saveInProgress = useAppSelector(state => state.aichat.saveInProgress);
   const havePropertiesChanged = useAppSelector(selectHavePropertiesChanged);
   const isCurrentDefault = useAppSelector(
