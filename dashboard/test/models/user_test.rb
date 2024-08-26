@@ -5468,6 +5468,15 @@ class UserTest < ActiveSupport::TestCase
     assert student.student_can_access_ai_chat?
   end
 
+  test "student with verified teacher but not in appropriate section cannot access AI Chat" do
+    teacher = create :authorized_teacher
+    section = create :section, teacher: teacher
+    student = create :student
+    create :follower, section: section, student_user: student, user: teacher
+
+    refute student.student_can_access_ai_chat?
+  end
+
   describe '#latest_parental_permission_request' do
     let(:latest_parental_permission_request) {user.latest_parental_permission_request}
 

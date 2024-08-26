@@ -444,6 +444,7 @@ async function handleChatCompletionError(
   dispatch(addChatEvent({...newUserMessage, status: Status.ERROR}));
 
   // Display specific error notifications if the user was rate limited (HTTP 429) or not authorized (HTTP 403).
+  // Otherwise, display a generic error assistant response.
   if (error instanceof NetworkError && error.response.status === 429) {
     dispatch(
       addChatEvent({
