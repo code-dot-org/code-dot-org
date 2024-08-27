@@ -2,6 +2,7 @@ import * as aichatApi from '@cdo/apps/aichat/aichatApi';
 import ChatEventLogger from '@cdo/apps/aichat/chatEventLogger';
 import {AichatContext, ChatMessage} from '@cdo/apps/aichat/types';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {AiInteractionStatus} from '@cdo/generated-scripts/sharedConstants';
 
 describe('ChatEventLogger', () => {
   let userChatMessage: ChatMessage;
@@ -13,7 +14,7 @@ describe('ChatEventLogger', () => {
     userChatMessage = {
       role: Role.USER,
       chatMessageText: 'hello',
-      status: 'OK',
+      status: AiInteractionStatus.OK,
       timestamp: Date.now(),
     };
     aichatContext = {

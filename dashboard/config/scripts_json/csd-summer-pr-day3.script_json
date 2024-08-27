@@ -1,0 +1,4404 @@
+{
+  "script": {
+    "name": "csd-summer-pr-day3",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2024-08-26 20:13:31 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "csd-summer-pr-day3"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "The Draw Loop",
+      "name": "Lección 11: El bucle 'dibujar'",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "assessment_opportunities": "1. **Explain how the draw loop allows for the creation of animations in Game Lab**\n\n\tIn the wrap up discussion, check that students mention that the code in the draw loop is run over and over, whereas code outside the draw loop is just run once, at the beginning of the program.\n\n2. **Use the draw loop in combination with the randomNumber() command, shapes, and sprites to make simple animations**\n\n\tSee level 8 in Code Studio.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Pregunta del día**: Cómo podemos animar nuestras imágenes en Game Lab?\n\nEn esta lección, los estudiantes conocerán el ciclo de dibujo, uno de los paradigmas de programación principales en el Game Lab. Para comenzar la lección, los estudiantes revisarán algunos flipbooks no digitales, para comprender que varios cuadros con distintas animaciones dan la sensación de estar en movimiento. Luego, los estudiantes verán un video en el cual se explica cómo al utilizar el ciclo de dibujo en el Game Lab se puede crear la misma sensación de movimiento en sus programas. Los estudiantes combinarán el ciclo de dibujo con los números aleatorios para manipular animaciones simples con puntos y luego con sprites.",
+        "preparation": "* Print and assemble the manipulatives\n* Prepare the video\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+        "purpose": "The draw loop is a core component of Game Lab. The fact that the Game Lab environment repeatedly calls this function many times a second (by default 30) is what allows the tool to create animations. This lesson has two goals. The first is for students to see how animation in general depends on showing many slightly different images in a sequence. The second goal is for students to understand how the draw loop allows them to create this behavior in Game Lab. Students should leave the lesson understanding that the commands in the draw loop are called after all other code but are then called repeatedly to create animation. Students will have a chance to continue to develop an understanding of this behavior in the next two lessons, but laying a strong conceptual foundation in this lesson will serve them well for the rest of the unit.",
+        "student_overview": "**Pregunta del día: ¿Cómo podemos animar nuestras imágenes en el Game Lab?**\n\nEn esta lección, aprenderás a utilizar el ciclo de dibujo con números aleatorios para crear tus primeras animaciones."
+      },
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3"
+      }
+    },
+    {
+      "key": "Sprite Movement",
+      "name": "Lección 12: Movimiento de sprites",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "assessment_opportunities": "1. **Use the counter pattern to increment or decrement sprite properties**\r\n\r\n\tSee Level 8 in Code Studio.\r\n\r\n2. **Identify which sprite properties need to be changed, and in what way, to achieve a specific movement**\r\n\r\n\tSee Level 8 in Code Studio.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Pregunta del día**: Cómo podemos controlar el movimiento de los sprite en el Game Lab?\n\nEn esta lección, los estudiantes aprenderán a controlar el movimiento de un sprite utilizando un elemento llamado patrón de contador, el cual puede cambiar de forma progresiva las propiedades de los sprite. Los estudiantes pensarán en las distintas maneras en las que pueden animar a las sprites controlando sus propiedades, luego explorarán el patrón de contador en Code Studio. Después de examinar el código, los estudiantes intentarán usar el patrón de contador para crear varios tipos de movimientos sprite.",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+        "purpose": "This lesson builds on the draw loop that students learned previously to create programs with _purposeful_ motion. By either incrementing or decrementing sprite properties, such as [`sprite.x`(#f78183)](/docs/gamelab/sprite.x/), students can write programs that move sprites in expected patterns, instead of the randomization that they used in the past. The animations that students learn to create in this lesson lay the foundation for all of the animations and games that they will make throughout the rest of the unit.",
+        "student_overview": "**Pregunta del día: Cómo podemos controlar el movimiento de los sprite en el Game Lab?**\n\nEn esta lección, aprenderás a controlar el movimiento de los sprite utilizando un patrón de contador."
+      },
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3"
+      }
+    },
+    {
+      "key": "Conditionals",
+      "name": "Lección 14: Condicionales",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "assessment_opportunities": "1. **Use conditionals to react to changes in variables and sprite properties**\n\n\tSee Level 9 in Code Studio.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Pregunta del día**: ¿Cómo pueden los programas reaccionar a los cambios mientras se están ejecutando?\n\nEsta lección introduce las expresiones booleanas y condicionales, que permiten que un programa se ejecute de forma distinta dependiendo de si una condición es verdadera. Los estudiantes comienzan jugando un juego breve en el que deberán responder si se cumplen o no ciertas condiciones. Luego ingresan a Code Studio, en donde aprenderán cómo una computadora evalúa las expresiones booleanas y como estas pueden usarse para estructurar un programa.",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+        "purpose": "We start with using booleans directly before using booleans to trigger _if_ statements. In the following lesson we will introduce some boolean producing blocks, such as [`keyDown()`(#fff176)](/docs/gamelab/keyDown/), which can be used in place of simple boolean comparisons to write programs that respond to user input.",
+        "student_overview": "**Pregunta del día: ¿Cómo pueden los programas reaccionar a los cambios mientras se están ejecutando?**\n\nEn esta lección, aprenderás acerca de las expresiones booleanas y condicionales, las que te permiten crear programas que se ejecuten de forma distinta dependiendo de si una condición es o no verdadera."
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3"
+      }
+    },
+    {
+      "key": "Keyboard Input",
+      "name": "Lección 15: Entrada de teclado",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "assessment_opportunities": "1. **Use conditionals to react to keyboard input**\n\n\tSee Level 6 in Code Studio.\n\n2. **Move sprites in response to keyboard input**\n\n\tSee Level 6 in Code Studio.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Pregunta del día**: ¿Cómo pueden nuestros programas reaccionar a la entrada de un usuario?\n\nContinuando la introducción a booleanos y sentencias si de la lección anterior, se presenta a los estudiantes un nuevo bloque llamado `keyDown()`(#fff176) el cual devuelve a un booleano y puede ser usado en sentencias condicionales para mover los sprites por la pantalla. Al finalizar esta lección, los estudiantes habrán escrito programas en los que los sprites en la pantalla serán controlados por los usuarios utilizando el teclado como un método de entrada.",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+        "purpose": "One common way conditionals are used is to check for different types of user input, especially key presses. Having a way for a user to interact with a program makes it more interesting and dynamic. Without interaction from the user it is very difficult to create a game. Therefore the introduction of conditionals and user inputs for decision making is a critical step toward creating games.",
+        "student_overview": "**Pregunta del día: ¿Cómo pueden nuestros programas reaccionar a la entrada del usuario?**\n\nEn esta lección, aprenderás a utilizar el bloque keyDown() que permitirá a tus programas responder a la entrada del usuario."
+      },
+      "seeding_key": {
+        "lesson.key": "Keyboard Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3"
+      }
+    },
+    {
+      "key": "Mouse Input",
+      "name": "Lección 16: Entrada de Ratón",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "assessment_opportunities": "1. **Use an if-else statement to control the flow of a program.**\n\n\tSee Level 8 in Code Studio.\n\n2. **Respond to a variety of types of user input.**\n\n\tUse the wrap up discussion to check students' understanding of the different types of user input.  You may also informally check their ability to use them as they progress through the Code Studio lesson.\n\n\t",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Pregunta del día**: ¿De qué otras formas puede reaccionar una computadora a la entrada de un usuario?\n\nEn esta lección, los estudiantes continúan explorando maneras de utilizar sentencias condicionales para captar la entrada del usuario. Para complementar a los comandos de teclado que aprendieron en la lección anterior, en esta clase los estudiantes aprenderán varias formas de captar la entrada del mouse. También ampliarán sus conocimientos acerca de las condicionales para incluir \"else\", una condicional que permite que la computadora ejecute una determinada sección de código cuando una condición es verdadera, y una sección diferente de código cuando no lo es.",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+        "purpose": "Students have learned how to make simple decisions with conditionals. Sometimes, however, we want to make decisions based on whether the condition we asked about originally was false. That's where else statements come in. Else statements are a second statement which is attached to an if statement. Else statements execute when the conditions they are attached to are false.\r\n\r\nThis concept is introduced alongside several new mouse input commands, allowing students to gradually build up programs that use input in different ways.",
+        "student_overview": "**Pregunta del día: ¿De qué otras formas puede reaccionar el ordenador a la entrada del usuario?**\n\nEn esta lección, ampliarás lo que has aprendido sobre las sentencias if y explorarás las sentencias if-else. También aprenderás a utilizar el mouse para obtener información del usuario que puedes utilizar en tus sentencias condicionales."
+      },
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3"
+      }
+    },
+    {
+      "key": "Project - Interactive Card",
+      "name": "Lección 17: Proyecto - Tarjeta Interactiva",
+      "absolute_position": 6,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 6,
+      "properties": {
+        "assessment_opportunities": "Use the project rubric attached to this lesson to assess student mastery of the learning goals of this unit.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "**Pregunta del día**: ¿Qué habilidades y prácticas son importantes a la hora de crear un programa interactivo?\n\nEn este proyecto de culminación del capítulo 1, los estudiantes planifican y desarrollan una tarjeta de felicitación interactiva utilizando todas las técnicas de programación que han aprendido hasta el momento.",
+        "preparation": "* Print out a copy of the project guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-interactive-card-interactive-animations-and-games-lesson-17/36208) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+        "purpose": "This end of chapter assessment is a good place for students to bring together all the pieces they have learned (drawing, variables, sprites, images, conditionals, user input) in one place. Students should still be working with code that is easily readable and doesn't involve very many high level abstractions. Giving students the opportunity to really be creative after learning all these new concepts will help to engage them further as they head into Chapter 2.",
+        "student_overview": "**Pregunta del día: ¿Qué habilidades y prácticas son importantes a la hora de crear un programa interactivo?**\n\nEn esta lección, planificarás y desarrollarás una tarjeta de felicitación interactiva utilizando todos los conceptos y técnicas de programación que has aprendido hasta ahora."
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "ee301be2-5684-44a9-b907-1d10f962dea1",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ee301be2-5684-44a9-b907-1d10f962dea1",
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3"
+      }
+    },
+    {
+      "key": "b4fe6132-98c1-4176-b592-b585552932f7",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b4fe6132-98c1-4176-b592-b585552932f7",
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3"
+      }
+    },
+    {
+      "key": "5a99f536-a202-48d9-99a4-51023a0a3310",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5a99f536-a202-48d9-99a4-51023a0a3310",
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3"
+      }
+    },
+    {
+      "key": "a1b7df77-60f9-4d12-8e9f-cf366b4cc624",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a1b7df77-60f9-4d12-8e9f-cf366b4cc624",
+        "lesson.key": "Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3"
+      }
+    },
+    {
+      "key": "185c7a87-5bcb-48d4-aecc-0f30ea0add9b",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "185c7a87-5bcb-48d4-aecc-0f30ea0add9b",
+        "lesson.key": "Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3"
+      }
+    },
+    {
+      "key": "c912dede-151a-4876-b106-aa385eb8b769",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c912dede-151a-4876-b106-aa385eb8b769",
+        "lesson.key": "Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3"
+      }
+    },
+    {
+      "key": "e471ed5f-b545-4a48-9474-fcf7e9d0b1f1",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e471ed5f-b545-4a48-9474-fcf7e9d0b1f1",
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3"
+      }
+    },
+    {
+      "key": "d51dc87a-cfac-4a35-862f-8af5764d955a",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d51dc87a-cfac-4a35-862f-8af5764d955a",
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3"
+      }
+    },
+    {
+      "key": "6a44af84-0127-42d5-9c74-128a4f9e37af",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6a44af84-0127-42d5-9c74-128a4f9e37af",
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3"
+      }
+    },
+    {
+      "key": "15ffbdca-67d1-4551-9b62-9c895dc527fc",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "15ffbdca-67d1-4551-9b62-9c895dc527fc",
+        "lesson.key": "Keyboard Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3"
+      }
+    },
+    {
+      "key": "5fb385ac-e048-4758-960a-8b1ed0177773",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5fb385ac-e048-4758-960a-8b1ed0177773",
+        "lesson.key": "Keyboard Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3"
+      }
+    },
+    {
+      "key": "72c842e9-91ae-4132-80cf-3909d63f68fb",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "72c842e9-91ae-4132-80cf-3909d63f68fb",
+        "lesson.key": "Keyboard Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3"
+      }
+    },
+    {
+      "key": "278a93aa-dd2d-4b56-896b-f3a541625a1c",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "278a93aa-dd2d-4b56-896b-f3a541625a1c",
+        "lesson.key": "Mouse Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3"
+      }
+    },
+    {
+      "key": "6af58981-870a-4434-96ce-5bb40c2b048c",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6af58981-870a-4434-96ce-5bb40c2b048c",
+        "lesson.key": "Mouse Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3"
+      }
+    },
+    {
+      "key": "4dcb52e6-a50d-4c9d-94e2-17cf14f7d5d9",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4dcb52e6-a50d-4c9d-94e2-17cf14f7d5d9",
+        "lesson.key": "Mouse Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3"
+      }
+    },
+    {
+      "key": "970746da-50e8-48b8-b01b-a8c7b7d9477b",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "970746da-50e8-48b8-b01b-a8c7b7d9477b",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3"
+      }
+    },
+    {
+      "key": "46b1f27e-fede-4a45-9638-6059088e92f3",
+      "position": 2,
+      "properties": {
+        "duration": 215,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "46b1f27e-fede-4a45-9638-6059088e92f3",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3"
+      }
+    },
+    {
+      "key": "a59d0a0f-9333-4038-8a58-ffe3a359f038",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a59d0a0f-9333-4038-8a58-ffe3a359f038",
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "657f0d46-9786-4bd2-863d-9c59623a1e0b",
+      "position": 1,
+      "properties": {
+        "description": "**Display:** Show [Flipbook Example - by Marnic Bos - Video.](https://www.youtube.com/watch?v=hol0p29cd8o&feature=youtu.be)\n\n\n\n**Prompt:** This video shows a flipbook to make animation. In your own words, how is it working? Why does it \"trick our eyes\" into thinking something is moving?"
+      },
+      "seeding_key": {
+        "activity_section.key": "657f0d46-9786-4bd2-863d-9c59623a1e0b",
+        "lesson_activity.key": "ee301be2-5684-44a9-b907-1d10f962dea1"
+      }
+    },
+    {
+      "key": "11ef8246-97f5-4bd9-b7d1-eab1c47a2989",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** Have students write their ideas independently, then share with partners, then share as a whole group.",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:** This discussion should introduce some key understandings about animation. Students should understand that the key is seeing many pictures in a row that are slightly different. Introduce the vocabulary word \"frame\" as being one of those many pictures--a single image within an animation. Then transition to the fact that soon students will be creating animations of their own. \r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "11ef8246-97f5-4bd9-b7d1-eab1c47a2989",
+        "lesson_activity.key": "ee301be2-5684-44a9-b907-1d10f962dea1"
+      }
+    },
+    {
+      "key": "9b523c85-696a-430d-8d3f-f6a093d549d8",
+      "position": 3,
+      "properties": {
+        "description": "We're going to start learning how to make animations, not just still images. In order to do this we need a way to make our programs draw many pictures a second. Our eyes will blur them together to make it look like smooth motion. To do this, though, we're going to need to learn an important new tool.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9b523c85-696a-430d-8d3f-f6a093d549d8",
+        "lesson_activity.key": "ee301be2-5684-44a9-b907-1d10f962dea1"
+      }
+    },
+    {
+      "key": "f669b569-26b4-4406-b8c6-ea0628d96db9",
+      "position": 4,
+      "properties": {
+        "description": "**Question of the Day: How can we animate our images in Game Lab?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "f669b569-26b4-4406-b8c6-ea0628d96db9",
+        "lesson_activity.key": "ee301be2-5684-44a9-b907-1d10f962dea1"
+      }
+    },
+    {
+      "key": "37741462-ca3b-4a24-a803-18e44e131a68",
+      "position": 1,
+      "properties": {
+        "description": "**Video:** Watch the video introducing the draw loop."
+      },
+      "seeding_key": {
+        "activity_section.key": "37741462-ca3b-4a24-a803-18e44e131a68",
+        "lesson_activity.key": "b4fe6132-98c1-4176-b592-b585552932f7"
+      }
+    },
+    {
+      "key": "0cf7b4f2-a4c6-4ea3-98e7-bd8639e566f6",
+      "position": 2,
+      "properties": {
+        "description": "**Question to Consider with Video:**\n- What does the draw function do?",
+        "progression_name": "Video: Introduction to the Draw Loop",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:**\n\nThe draw function runs the same code over and over in a loop, which is why it's often called \"the draw loop\". This creates an animation effect by changing what is a drawn by a small amount each time the draw function runs. This can be compared to a physical flip book, which can animate an image by changing it slightly on each page.\n\n**Misconception Alert!**\n\nWhen the draw loop runs, it does not \"clear\" out previous drawing, so it will continue to show anything that has not been covered up by the new draw loop. If students do not add a \"background\" at the beginning of the draw loop, they will still see all the images drawn to the screen previously."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "0cf7b4f2-a4c6-4ea3-98e7-bd8639e566f6",
+        "lesson_activity.key": "b4fe6132-98c1-4176-b592-b585552932f7"
+      }
+    },
+    {
+      "key": "96f8fddf-7be1-40eb-bd1d-2b0575cc6cad",
+      "position": 3,
+      "properties": {
+        "description": "**Demo:** If you choose, use the provided manipulatives to provide a hands-on demo for exploring how the draw loop and animations are connected."
+      },
+      "seeding_key": {
+        "activity_section.key": "96f8fddf-7be1-40eb-bd1d-2b0575cc6cad",
+        "lesson_activity.key": "b4fe6132-98c1-4176-b592-b585552932f7"
+      }
+    },
+    {
+      "key": "4c6c0fa4-7567-4a7f-9c88-c5c31fa82953",
+      "position": 4,
+      "properties": {
+        "progression_name": "Exploration",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4c6c0fa4-7567-4a7f-9c88-c5c31fa82953",
+        "lesson_activity.key": "b4fe6132-98c1-4176-b592-b585552932f7"
+      }
+    },
+    {
+      "key": "3cf441af-cab1-45a0-a633-f4637d2f939c",
+      "position": 5,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "3cf441af-cab1-45a0-a633-f4637d2f939c",
+        "lesson_activity.key": "b4fe6132-98c1-4176-b592-b585552932f7"
+      }
+    },
+    {
+      "key": "1e417cd5-cf7e-49db-a202-afb4a124af8b",
+      "position": 6,
+      "properties": {
+        "progression_name": "Prediction",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "Notice that the blue background is never visible because it is immediately drawn over by the red background. Also there's only ever one yellow dot visible since as the draw loop runs over and over it is placing down new backgrounds."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1e417cd5-cf7e-49db-a202-afb4a124af8b",
+        "lesson_activity.key": "b4fe6132-98c1-4176-b592-b585552932f7"
+      }
+    },
+    {
+      "key": "771af26b-c29a-4268-8989-5848d03dc897",
+      "position": 7,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "771af26b-c29a-4268-8989-5848d03dc897",
+        "lesson_activity.key": "b4fe6132-98c1-4176-b592-b585552932f7"
+      }
+    },
+    {
+      "key": "503e49fc-ba7e-44c7-ad52-ff4c4898f8af",
+      "position": 8,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "503e49fc-ba7e-44c7-ad52-ff4c4898f8af",
+        "lesson_activity.key": "b4fe6132-98c1-4176-b592-b585552932f7"
+      }
+    },
+    {
+      "key": "b2264907-7a87-4cde-a37c-c47d8b2fbf3e",
+      "position": 9,
+      "properties": {
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b2264907-7a87-4cde-a37c-c47d8b2fbf3e",
+        "lesson_activity.key": "b4fe6132-98c1-4176-b592-b585552932f7"
+      }
+    },
+    {
+      "key": "3c31b019-bd48-43eb-a94e-0c4e31f97d0a",
+      "position": 10,
+      "properties": {
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "3c31b019-bd48-43eb-a94e-0c4e31f97d0a",
+        "lesson_activity.key": "b4fe6132-98c1-4176-b592-b585552932f7"
+      }
+    },
+    {
+      "key": "9e7fbfcf-2c73-4384-97c8-36ee5439d1ad",
+      "position": 1,
+      "properties": {
+        "description": "**Question of the Day: How can we animate our images in Game Lab?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "9e7fbfcf-2c73-4384-97c8-36ee5439d1ad",
+        "lesson_activity.key": "5a99f536-a202-48d9-99a4-51023a0a3310"
+      }
+    },
+    {
+      "key": "6a94068a-eaea-428f-bef1-483486a04fb8",
+      "position": 2,
+      "properties": {
+        "description": "**Prompt:** How does the draw loop help us make animations?",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Key Understandings:** There are many common misconceptions with the draw loop. Make sure students understand the following:\r\n\r\n* The draw loop is run after all other code in your program. It does not actually matter where it is located in your program.\r\n* The draw loop is run by Game Lab at a constant frame rate of 30 frames per second. You do not actually need to call the function yourself.\r\n* The \"frames\" in Game Lab can be thought of as transparency sheets. Unless you draw a background, then all your new shapes or sprites will simply appear on top of your old ones.\r\n* You should only have one draw loop in your program.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6a94068a-eaea-428f-bef1-483486a04fb8",
+        "lesson_activity.key": "5a99f536-a202-48d9-99a4-51023a0a3310"
+      }
+    },
+    {
+      "key": "b8147302-e9fc-451b-868b-729c453ee235",
+      "position": 3,
+      "properties": {
+        "description": "**Review:** Return to the resources students saw at the beginning of the lesson (Video, physical flip books) or under Help and Tips during the lesson. Address misconceptions that have arisen in the lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "b8147302-e9fc-451b-868b-729c453ee235",
+        "lesson_activity.key": "5a99f536-a202-48d9-99a4-51023a0a3310"
+      }
+    },
+    {
+      "key": "154a30c1-5c2f-4a6a-9a03-5cb4bdc202ce",
+      "position": 1,
+      "properties": {
+        "description": "**Review:** On a piece of scratch paper, list out all of the sprite properties you can think of and what aspect of a sprite they affect.\r\n\r\n**Prompt:** What kinds of animations could you make if you could control these properties? Consider adding and subtracting from properties, or even updating multiple properties at the same time.",
+        "name": "Reviewing Sprite Properties\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "154a30c1-5c2f-4a6a-9a03-5cb4bdc202ce",
+        "lesson_activity.key": "a1b7df77-60f9-4d12-8e9f-cf366b4cc624"
+      }
+    },
+    {
+      "key": "8120a661-caf0-46bf-9def-aea9511063ad",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** Allow students to share their ideas with a partner before sharing with the entire class.",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "The purpose of this discussion is to start students thinking about how they might use the various sprite properties they've seen so far to make animations with purposeful motion. If students struggle to come up with ideas, you can narrow down the question to specific properties. For example:\r\n\r\n* What would happen to a sprite if you constantly increased its [`x`(#f78183)](/docs/gamelab/x/) property?\r\n* What would happen to a sprite if you constantly increased its [`y`(#f78183)](/docs/gamelab/y/) property?\r\n* What about other properties, or combining multiple properties?\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8120a661-caf0-46bf-9def-aea9511063ad",
+        "lesson_activity.key": "a1b7df77-60f9-4d12-8e9f-cf366b4cc624"
+      }
+    },
+    {
+      "key": "16f02aff-e145-4310-b21d-d973e0c2acd2",
+      "position": 3,
+      "properties": {
+        "description": "**Question of the Day: How can we control sprite movement in Game Lab?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "16f02aff-e145-4310-b21d-d973e0c2acd2",
+        "lesson_activity.key": "a1b7df77-60f9-4d12-8e9f-cf366b4cc624"
+      }
+    },
+    {
+      "key": "21475d42-5af8-49e4-a7ad-c37a90e9199f",
+      "position": 1,
+      "properties": {
+        "description": "**Transition:** Send students to Code Studio.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "21475d42-5af8-49e4-a7ad-c37a90e9199f",
+        "lesson_activity.key": "185c7a87-5bcb-48d4-aecc-0f30ea0add9b"
+      }
+    },
+    {
+      "key": "2096356e-62ae-4236-a287-9d496d80fc23",
+      "position": 2,
+      "properties": {
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "2096356e-62ae-4236-a287-9d496d80fc23",
+        "lesson_activity.key": "185c7a87-5bcb-48d4-aecc-0f30ea0add9b"
+      }
+    },
+    {
+      "key": "1600eb36-d271-42c4-8f66-0a71c61c46b6",
+      "position": 3,
+      "properties": {
+        "description": "**Questions to Consider with Video:**\n- What is the counter pattern?\n- How does the counter pattern move sprites across the screen?",
+        "progression_name": "Video: Sprite Movement",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goals:**\n\nStudents may describe the counter pattern in various ways. Make sure that they go beyond just stating the blocks or code that the counter pattern uses. They should understand that the counter pattern allows the programmer to update the value of a variable in a pattern that counts up (or down) on every iteration of the draw loop. This can be used for many different things, such as spinning, growing, shrinking, or timers, but it's most often used to move sprites across the screen.\n\nWhen a sprite's x or y property is updated in a counter pattern, its position changes in a consistent way over time, causing it to move across the screen. Students should be able to explain that movement in an animation is just a change in position, and that changing a sprite's x position will cause it to move horizontally, and changing a sprite's y position will cause it to move vertically."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1600eb36-d271-42c4-8f66-0a71c61c46b6",
+        "lesson_activity.key": "185c7a87-5bcb-48d4-aecc-0f30ea0add9b"
+      }
+    },
+    {
+      "key": "30dad26a-c3b8-45ed-8f6a-d73c97daabb0",
+      "position": 4,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "30dad26a-c3b8-45ed-8f6a-d73c97daabb0",
+        "lesson_activity.key": "185c7a87-5bcb-48d4-aecc-0f30ea0add9b"
+      }
+    },
+    {
+      "key": "97441468-1162-49b6-83ef-57967f05c735",
+      "position": 5,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "97441468-1162-49b6-83ef-57967f05c735",
+        "lesson_activity.key": "185c7a87-5bcb-48d4-aecc-0f30ea0add9b"
+      }
+    },
+    {
+      "key": "245e2d83-f438-45ce-be2d-70167812667a",
+      "position": 6,
+      "properties": {
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "245e2d83-f438-45ce-be2d-70167812667a",
+        "lesson_activity.key": "185c7a87-5bcb-48d4-aecc-0f30ea0add9b"
+      }
+    },
+    {
+      "key": "ade0aa2a-0e38-44e9-b75e-c03e9cf5f478",
+      "position": 7,
+      "properties": {
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "ade0aa2a-0e38-44e9-b75e-c03e9cf5f478",
+        "lesson_activity.key": "185c7a87-5bcb-48d4-aecc-0f30ea0add9b"
+      }
+    },
+    {
+      "key": "4f978262-061b-442a-b2ca-da5e911abc84",
+      "position": 1,
+      "properties": {
+        "description": "**Question of the Day: How can we control sprite movement in Game Lab?**\r\n\r\n**Prompt:** You've seen two ways to create animations with the draw loop: random numbers and the counter pattern. What is one type of movement that you'd want to use random numbers for?  What is one type of movement that you would want to use the counter pattern for?  Are there any movements that might combine the counter pattern and random numbers?",
+        "name": "Journal\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "4f978262-061b-442a-b2ca-da5e911abc84",
+        "lesson_activity.key": "c912dede-151a-4876-b106-aa385eb8b769"
+      }
+    },
+    {
+      "key": "3a67df60-3233-4b02-9f00-c09ee540ff86",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** Allow students to discuss with a partner before sharing with the entire class.",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "Student answers may vary, but movements such as shaking use random numbers, and movements that are more purposeful use the counter pattern. It's less important that students have a specific answer than that their answers reflect a growing understanding of how the different programming constructs work.\r\n\r\nStudents may have seen random numbers used on one property (rotation) and the counter pattern used on another (x position) in one of the challenges, but if there is time, encourage them to think about what would happen if you used the counter pattern to add or subtract a random number to a sprite property, or to combine the two constructs in other ways.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3a67df60-3233-4b02-9f00-c09ee540ff86",
+        "lesson_activity.key": "c912dede-151a-4876-b106-aa385eb8b769"
+      }
+    },
+    {
+      "key": "e2d2fe26-14e6-493d-b29f-f52f66fd4d36",
+      "position": 1,
+      "properties": {
+        "description": "**Display:** Display the following questions on the board and ask students to answer them.",
+        "name": "Introducing Conditionals\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The last two prompts ask students to react to information that may change as they are answering the questions. In order to drive this point home, consider moving from the front of the room and back, as well as alternately tapping and not tapping a pencil, so that students realize that their answers may change according to when they are answering each question.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e2d2fe26-14e6-493d-b29f-f52f66fd4d36",
+        "lesson_activity.key": "e471ed5f-b545-4a48-9474-fcf7e9d0b1f1"
+      }
+    },
+    {
+      "key": "ea23bbe2-710d-4a5c-b909-af8371d5a413",
+      "position": 2,
+      "properties": {
+        "description": "1. If your last name has more than five letters, draw a square on your paper.\r\n2. If your last name less than seven letters, draw a circle.\r\n3. If you are wearing anything green, add 3 + 2.\r\n4. If the teacher is tapping their pencil, draw an 'X'.\r\n5. If the teacher is in the front of the room, fold your paper in half."
+      },
+      "seeding_key": {
+        "activity_section.key": "ea23bbe2-710d-4a5c-b909-af8371d5a413",
+        "lesson_activity.key": "e471ed5f-b545-4a48-9474-fcf7e9d0b1f1"
+      }
+    },
+    {
+      "key": "6ecd93c8-c1ff-4934-ade6-9b1c07393ae3",
+      "position": 3,
+      "properties": {
+        "description": "**Prompt:** When we program, we give the computer instructions on what to do.  How are the instructions you just followed different from the instructions that we have been giving in Game Lab?"
+      },
+      "seeding_key": {
+        "activity_section.key": "6ecd93c8-c1ff-4934-ade6-9b1c07393ae3",
+        "lesson_activity.key": "e471ed5f-b545-4a48-9474-fcf7e9d0b1f1"
+      }
+    },
+    {
+      "key": "af8f7aaf-2913-4ab4-9cee-deb74066f0c7",
+      "position": 4,
+      "properties": {
+        "description": "**Think-Pair-Share:** After students have had a chance to write down their answers, allow them to talk to a partner before sharing out as a class.",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "This discussion should prepare students to investigate programs that react to changing conditions.  Students should realize that there is no \"one way\" that these questions will be answered, and that the answers will change according to changing conditions.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "af8f7aaf-2913-4ab4-9cee-deb74066f0c7",
+        "lesson_activity.key": "e471ed5f-b545-4a48-9474-fcf7e9d0b1f1"
+      }
+    },
+    {
+      "key": "6735a817-26e9-4875-9a43-25f40c0e79f4",
+      "position": 5,
+      "properties": {
+        "description": "These instructions were a little different because we first had to decide whether something was true or not before we knew what we should do. In programming, instructions that depend on whether or not something is true are called **conditionals**, and the thing that is checked is called the **condition**.  Conditionals are especially useful when we want the program to react to situations that change while the program is running.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6735a817-26e9-4875-9a43-25f40c0e79f4",
+        "lesson_activity.key": "e471ed5f-b545-4a48-9474-fcf7e9d0b1f1"
+      }
+    },
+    {
+      "key": "44295f9c-1ea2-4957-aa74-e8d6541dc712",
+      "position": 6,
+      "properties": {
+        "description": "**Key Vocabulary:**\r\n\r\n* **Condition** - Something a program checks to see whether it is true before deciding whether to take an action.\r\n* **Conditionals** - Statements that only run under certain conditions.\r\n \r\n**Question of the Day:  How can programs react to changes as they are running?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "44295f9c-1ea2-4957-aa74-e8d6541dc712",
+        "lesson_activity.key": "e471ed5f-b545-4a48-9474-fcf7e9d0b1f1"
+      }
+    },
+    {
+      "key": "84f17c8d-22fb-4282-97c0-7267d8bb9fdf",
+      "position": 1,
+      "properties": {
+        "description": "**Transition:** Send students to Code Studio.",
+        "name": "Conditionals\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "84f17c8d-22fb-4282-97c0-7267d8bb9fdf",
+        "lesson_activity.key": "d51dc87a-cfac-4a35-862f-8af5764d955a"
+      }
+    },
+    {
+      "key": "2e938dbb-0cda-4970-9118-022f498f5df1",
+      "position": 2,
+      "properties": {
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "2e938dbb-0cda-4970-9118-022f498f5df1",
+        "lesson_activity.key": "d51dc87a-cfac-4a35-862f-8af5764d955a"
+      }
+    },
+    {
+      "key": "42fc2b48-36f5-494c-816d-1640a4b50f6f",
+      "position": 3,
+      "properties": {
+        "description": "**Questions to Consider with Video:**\n- What is a Boolean expression?\n- What’s an expression that would evaluate to true?\n- What’s an expression that would evaluate to false?",
+        "progression_name": "Video: Booleans",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goals:**\n\n**Key Vocabulary:**\n\n- **Boolean Expression** - in programming, an expression that evaluates to True or False.\n\nStudents should be able to explain that a Boolean expression is something that is either true or false, similar to a yes or no question. The more formal way to say this is that Boolean expressions evaluate to either true or false. That means that when the computer processes a Boolean expression, it checks to see whether the expression describes a situation that is true or false, and then uses the value of either true or false wherever the expression is found.\n\nSome examples of Boolean expressions that evaluate to true are `3 > 1` and `4 <= 7`, but press students to think of expressions that might be better represented by variables, such as `studentAge < 70` or `sizeOfClass > 2`.\n\nSome examples of Boolean expressions that evaluate to false are `4 == 7`, `schoolName == \"Hogwarts\"`, and `currentYear < 1000`."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "42fc2b48-36f5-494c-816d-1640a4b50f6f",
+        "lesson_activity.key": "d51dc87a-cfac-4a35-862f-8af5764d955a"
+      }
+    },
+    {
+      "key": "ea046a15-47db-4662-8111-94c3acdf9629",
+      "position": 4,
+      "properties": {
+        "progression_name": "Quick Check"
+      },
+      "seeding_key": {
+        "activity_section.key": "ea046a15-47db-4662-8111-94c3acdf9629",
+        "lesson_activity.key": "d51dc87a-cfac-4a35-862f-8af5764d955a"
+      }
+    },
+    {
+      "key": "8428acc8-2ac9-4635-9d74-7cc22e52ff3b",
+      "position": 5,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "8428acc8-2ac9-4635-9d74-7cc22e52ff3b",
+        "lesson_activity.key": "d51dc87a-cfac-4a35-862f-8af5764d955a"
+      }
+    },
+    {
+      "key": "13029d2a-7a8a-4cec-9302-2798ad516f40",
+      "position": 6,
+      "properties": {
+        "description": "**Question to Consider with Video:**\n- When would you want to use an if statement?",
+        "progression_name": "Video: Conditional Statements",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goals:**\n\nThe broad point of this question is that programmers use if statements when they want the program to run differently in response to different situations. Encourage students to think of particular situations in which this would be the case. For example, they might want their characters to move faster when a \"bonus\" is in effect, or maybe they want more enemies to appear when the player reaches a certain level. Maybe they want the program to react in some way if a user presses a key or clicks the mouse, or they want a character to change animations if it touches a particular item."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "13029d2a-7a8a-4cec-9302-2798ad516f40",
+        "lesson_activity.key": "d51dc87a-cfac-4a35-862f-8af5764d955a"
+      }
+    },
+    {
+      "key": "bb90efd8-2ef2-447d-bcf6-b9541c28f3ca",
+      "position": 7,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "bb90efd8-2ef2-447d-bcf6-b9541c28f3ca",
+        "lesson_activity.key": "d51dc87a-cfac-4a35-862f-8af5764d955a"
+      }
+    },
+    {
+      "key": "7a500ef8-ad50-49e0-b5dc-b5a9d07f7df9",
+      "position": 8,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "7a500ef8-ad50-49e0-b5dc-b5a9d07f7df9",
+        "lesson_activity.key": "d51dc87a-cfac-4a35-862f-8af5764d955a"
+      }
+    },
+    {
+      "key": "4bd189de-d673-4542-b996-ef27240a9d58",
+      "position": 9,
+      "properties": {
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "4bd189de-d673-4542-b996-ef27240a9d58",
+        "lesson_activity.key": "d51dc87a-cfac-4a35-862f-8af5764d955a"
+      }
+    },
+    {
+      "key": "d85f0f5f-0452-4b9a-96f0-fced3aa45871",
+      "position": 10,
+      "properties": {
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "d85f0f5f-0452-4b9a-96f0-fced3aa45871",
+        "lesson_activity.key": "d51dc87a-cfac-4a35-862f-8af5764d955a"
+      }
+    },
+    {
+      "key": "f9c5f72d-24e5-492b-9264-a4653129c179",
+      "position": 1,
+      "properties": {
+        "description": "**Question of the Day:  How can programs react to changes as they are running?**\r\n\r\n**Key Vocabulary:**\r\n\r\n* **Condition** - Something a program checks to see whether it is true before deciding to take an action.\r\n* **Conditionals** - Statements that only run under certain conditions.\r\n* **Boolean Expression** - In programming, an expression that evaluates to True or False.\r\n\r\n**Prompt:** Now that you know how conditionals work, where you do think that they are used in games or other programs and apps that you already use?",
+        "name": "Considering Conditions\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "f9c5f72d-24e5-492b-9264-a4653129c179",
+        "lesson_activity.key": "6a44af84-0127-42d5-9c74-128a4f9e37af"
+      }
+    },
+    {
+      "key": "9a9347ad-0ecf-48f0-9eea-e9695adfbc97",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** Have students share responses.",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "This discussion should get students thinking about how conditionals are used in games they have already seen, and help them connect those ideas to how they might want to use conditionals in their own programs.  Student responses might include:\r\n\r\n* If my username and password are correct, log me into Facebook\r\n* If Pacman has collected all the balls, start the next level\r\n* If my keyboard or mouse hasn't moved in 10 minutes, turn on the screensaver\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9a9347ad-0ecf-48f0-9eea-e9695adfbc97",
+        "lesson_activity.key": "6a44af84-0127-42d5-9c74-128a4f9e37af"
+      }
+    },
+    {
+      "key": "652e598d-b985-4975-8049-3f6e0e5ab980",
+      "position": 1,
+      "properties": {
+        "description": "**Discuss:** So far all of the programs you've written run without any input from the user. How might adding user interaction make your programs more useful, effective, or entertaining? How might a user provide input into your program?",
+        "name": "Taking Input\r",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "The goal here isn't to get into the technical specifics of how programs can take input (students will get to that in the online portion of the lesson), but rather to get students thinking about how user input could change the programs they've made. Encourage students to think back to Unit 1 and the various computer inputs and outputs they explored then. Which inputs would be most useful for the types of programs they've been making?\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "652e598d-b985-4975-8049-3f6e0e5ab980",
+        "lesson_activity.key": "15ffbdca-67d1-4551-9b62-9c895dc527fc"
+      }
+    },
+    {
+      "key": "11d6f424-3af8-44eb-9829-32e9c2f089f1",
+      "position": 2,
+      "properties": {
+        "description": "**Question of the Day: How can our programs react to user input?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "11d6f424-3af8-44eb-9829-32e9c2f089f1",
+        "lesson_activity.key": "15ffbdca-67d1-4551-9b62-9c895dc527fc"
+      }
+    },
+    {
+      "key": "85639c6b-2224-4177-9d61-1059d9dfe1e5",
+      "position": 1,
+      "properties": {
+        "description": "**Transition:** Send students to Code Studio",
+        "name": "Keyboard Input\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "85639c6b-2224-4177-9d61-1059d9dfe1e5",
+        "lesson_activity.key": "5fb385ac-e048-4758-960a-8b1ed0177773"
+      }
+    },
+    {
+      "key": "e340cc06-c12c-4075-8122-e56484d5287e",
+      "position": 2,
+      "properties": {
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "e340cc06-c12c-4075-8122-e56484d5287e",
+        "lesson_activity.key": "5fb385ac-e048-4758-960a-8b1ed0177773"
+      }
+    },
+    {
+      "key": "c34236d7-be94-4ee4-8fae-b3aa6f7cd148",
+      "position": 3,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "c34236d7-be94-4ee4-8fae-b3aa6f7cd148",
+        "lesson_activity.key": "5fb385ac-e048-4758-960a-8b1ed0177773"
+      }
+    },
+    {
+      "key": "651564d2-22d6-446e-8f43-2d831ff824c6",
+      "position": 4,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "651564d2-22d6-446e-8f43-2d831ff824c6",
+        "lesson_activity.key": "5fb385ac-e048-4758-960a-8b1ed0177773"
+      }
+    },
+    {
+      "key": "cb19b9c1-2f07-408d-832b-f5236b751213",
+      "position": 5,
+      "properties": {
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cb19b9c1-2f07-408d-832b-f5236b751213",
+        "lesson_activity.key": "5fb385ac-e048-4758-960a-8b1ed0177773"
+      }
+    },
+    {
+      "key": "b964831c-4cb1-4130-a6b7-fc00cbc4456c",
+      "position": 6,
+      "properties": {
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "b964831c-4cb1-4130-a6b7-fc00cbc4456c",
+        "lesson_activity.key": "5fb385ac-e048-4758-960a-8b1ed0177773"
+      }
+    },
+    {
+      "key": "6ed3be33-d56b-47ad-a368-5621ea0d6db3",
+      "position": 1,
+      "properties": {
+        "description": "**Question of the Day: How can our programs react to user input?**\r\n\r\n\r\n**Journal:** Think back to all of the programs you've written so far; how might you use user interaction to improve one of your programs from past lessons? What condition would you check, and how would you respond to it?",
+        "name": "Adding Conditionals\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "6ed3be33-d56b-47ad-a368-5621ea0d6db3",
+        "lesson_activity.key": "72c842e9-91ae-4132-80cf-3909d63f68fb"
+      }
+    },
+    {
+      "key": "813c6db5-7f43-4b97-bf17-24e0b25479c9",
+      "position": 1,
+      "properties": {
+        "description": "**Prompt:**  What are three different things that you've been able to do with conditionals? What are two big things that everyone should remember when using conditionals? What's one thing you still want to learn how to program?",
+        "name": " 3-2-1 Review\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "813c6db5-7f43-4b97-bf17-24e0b25479c9",
+        "lesson_activity.key": "278a93aa-dd2d-4b56-896b-f3a541625a1c"
+      }
+    },
+    {
+      "key": "e6187783-3417-4f4a-8d32-0791c09c113c",
+      "position": 2,
+      "properties": {
+        "description": "**Share:** Allow students to share out their responses.",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "Students may come up with many different specific scenarios, but make sure that they are differentiating between conditionals that respond to user input and those that respond to other changes in the program, such as a score increase, the location of a sprite, or player lives lost.  Major things to remember may include putting the conditionals in the draw loop or paying attention to how the blocks are nested.\r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e6187783-3417-4f4a-8d32-0791c09c113c",
+        "lesson_activity.key": "278a93aa-dd2d-4b56-896b-f3a541625a1c"
+      }
+    },
+    {
+      "key": "2b16dbe4-2093-4d7e-9209-a25f26e4fa69",
+      "position": 3,
+      "properties": {
+        "description": "That's great!  Today we're going to look at a way to make our conditionals even more powerful, and see some new ways to get user input.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2b16dbe4-2093-4d7e-9209-a25f26e4fa69",
+        "lesson_activity.key": "278a93aa-dd2d-4b56-896b-f3a541625a1c"
+      }
+    },
+    {
+      "key": "145af634-36d6-4c7a-ab06-6d262a7dcaa7",
+      "position": 4,
+      "properties": {
+        "description": "**Question of the Day: What are more ways that the computer can react to user input?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "145af634-36d6-4c7a-ab06-6d262a7dcaa7",
+        "lesson_activity.key": "278a93aa-dd2d-4b56-896b-f3a541625a1c"
+      }
+    },
+    {
+      "key": "2ff1da61-b5cd-4b5d-94fd-78222be5571c",
+      "position": 1,
+      "properties": {
+        "description": "**Transition:** Move the class to Code Studio, and have students complete the prediction level as a class or in small groups, then talk about what they found.",
+        "name": "If/Else and More Input\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Guide to Programming Levels:** Additional guidance for programming levels is provided in the [CSD Guide to Programming Levels](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview). This document includes strategies and best-practices for facilitating programming levels with students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2ff1da61-b5cd-4b5d-94fd-78222be5571c",
+        "lesson_activity.key": "6af58981-870a-4434-96ce-5bb40c2b048c"
+      }
+    },
+    {
+      "key": "1e9b5bf4-e276-4aa0-9edf-852506438696",
+      "position": 2,
+      "properties": {
+        "progression_name": "Prediction"
+      },
+      "seeding_key": {
+        "activity_section.key": "1e9b5bf4-e276-4aa0-9edf-852506438696",
+        "lesson_activity.key": "6af58981-870a-4434-96ce-5bb40c2b048c"
+      }
+    },
+    {
+      "key": "f30468e9-3658-481a-908c-ca920fd78bb0",
+      "position": 3,
+      "properties": {
+        "description": "**Video:**  Watch the video as a class and review the discussion questions together.\n\n**Questions to Consider with Video:**\n- What’s an example of when you would need an “if/else” statement?",
+        "progression_name": "Video: If/Else Statements",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "**Goal:**\n\nMake sure students are thinking of situations in which they want two different things to happen, depending on the situation. For example, they may say that they want one animation if the sprite is moving to the left and a different animation if the sprite is moving to the right. Challenge the students to think about when they would just use an `if` block, and when an `ifelse` block is necessary."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f30468e9-3658-481a-908c-ca920fd78bb0",
+        "lesson_activity.key": "6af58981-870a-4434-96ce-5bb40c2b048c"
+      }
+    },
+    {
+      "key": "111301d4-9cc9-40d5-8820-6d15e66252f4",
+      "position": 4,
+      "properties": {
+        "progression_name": "Skill Building"
+      },
+      "seeding_key": {
+        "activity_section.key": "111301d4-9cc9-40d5-8820-6d15e66252f4",
+        "lesson_activity.key": "6af58981-870a-4434-96ce-5bb40c2b048c"
+      }
+    },
+    {
+      "key": "324ce82b-4679-4b7b-9ef8-4a843b39a066",
+      "position": 5,
+      "properties": {
+        "progression_name": "Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "324ce82b-4679-4b7b-9ef8-4a843b39a066",
+        "lesson_activity.key": "6af58981-870a-4434-96ce-5bb40c2b048c"
+      }
+    },
+    {
+      "key": "eaa1dd0f-31e0-4924-b8f6-ce810112e76e",
+      "position": 6,
+      "properties": {
+        "progression_name": "Assessment",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "eaa1dd0f-31e0-4924-b8f6-ce810112e76e",
+        "lesson_activity.key": "6af58981-870a-4434-96ce-5bb40c2b048c"
+      }
+    },
+    {
+      "key": "88133863-7a4a-44f0-b21c-baa362fdc7fa",
+      "position": 7,
+      "properties": {
+        "progression_name": "Challenges"
+      },
+      "seeding_key": {
+        "activity_section.key": "88133863-7a4a-44f0-b21c-baa362fdc7fa",
+        "lesson_activity.key": "6af58981-870a-4434-96ce-5bb40c2b048c"
+      }
+    },
+    {
+      "key": "d862804b-39da-476b-9382-e6e6e9f83048",
+      "position": 1,
+      "properties": {
+        "description": "**Question of the Day: What are more ways that the computer can react to user input?**",
+        "name": "Wrap Up\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "d862804b-39da-476b-9382-e6e6e9f83048",
+        "lesson_activity.key": "4dcb52e6-a50d-4c9d-94e2-17cf14f7d5d9"
+      }
+    },
+    {
+      "key": "6322cdda-cc0a-4de2-991e-908fe8537076",
+      "position": 2,
+      "properties": {
+        "description": "**Prompt:** You now have many different ways to detect user input. With a partner, choose three different user input commands and think of an example of when you might use them. Be ready to share with the class!",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "This discussion serves as a brief review and assessment of the new user input commands.  As students share out, press them to explain why their choice is better than other, similar choices (mouseDown / mouseWentDown / mouseWentUp). If any commands are missing after all the groups have shared out, elicit the missing ones from the group before moving on.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6322cdda-cc0a-4de2-991e-908fe8537076",
+        "lesson_activity.key": "4dcb52e6-a50d-4c9d-94e2-17cf14f7d5d9"
+      }
+    },
+    {
+      "key": "ca85088c-0ad7-4571-9859-edda2dd1b604",
+      "position": 1,
+      "properties": {
+        "description": "**Prompt:** Think of one time you gave or received a card from someone. Who was that person? What was the purpose of the card? What about the card made it specific to that purpose?",
+        "name": "Journal\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "ca85088c-0ad7-4571-9859-edda2dd1b604",
+        "lesson_activity.key": "970746da-50e8-48b8-b01b-a8c7b7d9477b"
+      }
+    },
+    {
+      "key": "03c7c840-fd53-403c-bab5-2de194346131",
+      "position": 2,
+      "properties": {
+        "description": "**Share:** Have students share out their ideas.",
+        "tips": [
+          {
+            "type": "discussionGoal",
+            "markdown": "This discussion introduces the chapter project: creating an interactive card. This is a good chance to tie in the 'card' concept to the problem-solving process, by defining the \"problem\" as cheering someone up, or letting them know that we are thinking about them. \r\n\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "03c7c840-fd53-403c-bab5-2de194346131",
+        "lesson_activity.key": "970746da-50e8-48b8-b01b-a8c7b7d9477b"
+      }
+    },
+    {
+      "key": "afb3d36f-b76b-4684-b849-136faefccc76",
+      "position": 3,
+      "properties": {
+        "description": "We're going to start designing our own cards today. Because we have learned how to program, our cards are going to be interactive. At the end of the project, you'll be able to email or text your card to someone.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "afb3d36f-b76b-4684-b849-136faefccc76",
+        "lesson_activity.key": "970746da-50e8-48b8-b01b-a8c7b7d9477b"
+      }
+    },
+    {
+      "key": "2b20bcec-a595-40aa-bd5f-8f05cbfbb86f",
+      "position": 4,
+      "properties": {
+        "description": "**Question of the Day: What skills and practices are important when creating an interactive program?**"
+      },
+      "seeding_key": {
+        "activity_section.key": "2b20bcec-a595-40aa-bd5f-8f05cbfbb86f",
+        "lesson_activity.key": "970746da-50e8-48b8-b01b-a8c7b7d9477b"
+      }
+    },
+    {
+      "key": "8e6c189c-0d5b-4e19-8c2e-da335a79fdcc",
+      "position": 1,
+      "properties": {
+        "description": "**Goal:** Students see an example of a final project and discuss the different elements that went into making it.\r\n\r\n**Display:** Show students the sample program.",
+        "name": "Demo Project Exemplars (Level 1)",
+        "progression_name": "Demo App: Interactive Card"
+      },
+      "seeding_key": {
+        "activity_section.key": "8e6c189c-0d5b-4e19-8c2e-da335a79fdcc",
+        "lesson_activity.key": "46b1f27e-fede-4a45-9638-6059088e92f3"
+      }
+    },
+    {
+      "key": "cd50d6d4-c0c8-4ecf-9320-0afe200b3a59",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** Have students share their observations and analyses of the program. \n\nEncourage the class to consider that there are multiple approaches to programming anything, but that there may be clues as to how something was created. In particular, when they are sharing their thoughts ask them to specify the following:\n\n* Clues that suggest a sprite was used\n* Clues that suggest a conditional was used\n* Clues that suggest an iterator pattern was used\n\n**Display:** Show students the rubric and student checklist.  Review the different components of the rubric with them to make sure they understand the components of the project.\n\n**Goal:** Students should plan out what they want to create before they head to the computer so that once they get to the computer they are just executing the plan.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Scoping Student Projects:** Students may ideate projects that are beyond the skills they currently have or that would take longer than the allotted time to implement. Rather than asking students to choose a different project, consider asking students to imagine a more scaled-down version of their initial idea. As an analogy, if students initial idea is the \"Run\" step, imagine a less intense version that represents what the \"Walk\" step would look like. If necessary, you can keep going back further to a \"Crawl\" step as well. \n\n**Digging Deeper:** This is sometimes referred to as the Minimal Viable Product - you can learn more about this process and adapt it into your project strategies by reading this article: [Making Sense of MVP](https://blog.crisp.se/2016/01/25/henrikkniberg/making-sense-of-mvp) by Henrik Kniberg"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cd50d6d4-c0c8-4ecf-9320-0afe200b3a59",
+        "lesson_activity.key": "46b1f27e-fede-4a45-9638-6059088e92f3"
+      }
+    },
+    {
+      "key": "5762a3e6-c201-4a86-b2cc-5a248d0c8e9c",
+      "position": 3,
+      "properties": {
+        "description": "**Distribute:** Hand out the project guide to students. Students will use this to scope out their projects before creating them. Give students some time to brainstorm the type of card they want to create and who the recipient will be. \n\nAlso distribute a copy of the Student Checklist to each student. Students can use this to self-assess and reflect as they develop their project.\n\n#### Steps\n\n1) The first layer of the interactive card is a background drawn with just the commands in the Drawing drawer. The front of the Activity Guide provides a grid for students to lay out their background, a reference table of drawing commands, and an area for students to take notes and write pseudocode.\n\n2) Next, students think through the sprites they'll need, filling out a table with each sprite's label, images, and properties.\n\n3) Finally, students consider the conditionals they'll need in order to make their card interactive.",
+        "name": "Unplugged: Interactive Card Planning\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "5762a3e6-c201-4a86-b2cc-5a248d0c8e9c",
+        "lesson_activity.key": "46b1f27e-fede-4a45-9638-6059088e92f3"
+      }
+    },
+    {
+      "key": "f22dbcfb-6396-48d9-be05-3d204a8e38d0",
+      "position": 4,
+      "properties": {
+        "description": "**Transition:** Once students have completed their planning sheet, it's time to head to the Code.org website. The short level sequence asks students to complete each element of their project.",
+        "name": "Implementing Interactive Card (Level 2 - 7)"
+      },
+      "seeding_key": {
+        "activity_section.key": "f22dbcfb-6396-48d9-be05-3d204a8e38d0",
+        "lesson_activity.key": "46b1f27e-fede-4a45-9638-6059088e92f3"
+      }
+    },
+    {
+      "key": "fbd30a62-38ea-47df-aaad-cda5a08a012d",
+      "position": 5,
+      "properties": {
+        "progression_name": "Make an Interactive Card",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**New Code and Previous Challenge Levels:** Throughout the unit, students may have learned additional code in the challenge levels of different lessons. As students approach this project, they may want to revisit the code they learned in these levels or visit them for the first time to learn new codes to use in this project. To help guide students back to previous levels, you can use the [r extra_code_in_challenge_levels/csd-summer-puertorico-2024/unversioned] as a resource to quickly find where new codes were introduced in earlier challenge levels."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fbd30a62-38ea-47df-aaad-cda5a08a012d",
+        "lesson_activity.key": "46b1f27e-fede-4a45-9638-6059088e92f3"
+      }
+    },
+    {
+      "key": "e8171ebf-6137-4c66-ba51-db6307720882",
+      "position": 6,
+      "properties": {
+        "progression_name": "Project Work",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e8171ebf-6137-4c66-ba51-db6307720882",
+        "lesson_activity.key": "46b1f27e-fede-4a45-9638-6059088e92f3"
+      }
+    },
+    {
+      "key": "09b3c75e-5fcb-4449-b75b-afa9ee32f8ed",
+      "position": 7,
+      "properties": {
+        "description": "**Distribute:** Give each student a copy of the peer review guide.\r\n\r\nStudents should spend 15 minutes reviewing the other student's card and filling out the peer review guide.",
+        "name": "Peer Review\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "09b3c75e-5fcb-4449-b75b-afa9ee32f8ed",
+        "lesson_activity.key": "46b1f27e-fede-4a45-9638-6059088e92f3"
+      }
+    },
+    {
+      "key": "bbdede3a-1c19-4902-934f-9ea5b173d13a",
+      "position": 8,
+      "properties": {
+        "description": "**Circulate:** Students should complete the peer review guide's back side and decide how to respond to the feedback they were given. They should then use that feedback to improve their cards.\n\nStudents should use the rubric and student checklist to self-assess and make sure their project matches with the rubric.",
+        "name": "Iterate - Update Code\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Rubric and Checklist:** Students have two resources they can use for self-reflection and making sure they are on the right track: the rubric and the student checklist. We recommend having students use the checklist for their own self-assessment and reflection, since it may be easier to digest and understand when reviewing their own project. However, we recommend teachers use the full rubric for evaluating projects to give more accurate feedback to students. You can see examples of this with the Sample Marked Rubrics resource at the top of the lesson plan (only visible to verified teachers)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "bbdede3a-1c19-4902-934f-9ea5b173d13a",
+        "lesson_activity.key": "46b1f27e-fede-4a45-9638-6059088e92f3"
+      }
+    },
+    {
+      "key": "43a43411-6f04-4dbd-a341-007a06293046",
+      "position": 9,
+      "properties": {
+        "description": "Using the rubric, students should assess their own project before submitting it.\n\nSend students to Code Studio to complete their reflection on their attitudes toward computer science. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "Reflect\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "43a43411-6f04-4dbd-a341-007a06293046",
+        "lesson_activity.key": "46b1f27e-fede-4a45-9638-6059088e92f3"
+      }
+    },
+    {
+      "key": "6140c69d-28bc-4eb1-b51b-71246da979fc",
+      "position": 10,
+      "properties": {
+        "progression_name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "6140c69d-28bc-4eb1-b51b-71246da979fc",
+        "lesson_activity.key": "46b1f27e-fede-4a45-9638-6059088e92f3"
+      }
+    },
+    {
+      "key": "0d42e15b-293a-44b6-b541-3ae6c402b631",
+      "position": 1,
+      "properties": {
+        "description": "**Question of the Day:  What skills and practices are important when creating an interactive program?**\r\n\r\n**Prompt:** Have students reflect on their development of the five practices of CS Discoveries (Problem Solving, Persistence, Creativity, Collaboration, Communication).\r\n\r\n* Choose one of the five practices which you demonstrated growth in during this lesson. Write something you did that showed this practice.\r\n\r\n* Choose one practice you think you can continue to grow in. What’s one thing you’d like to do better?\r\n\r\n* Choose one practice you thought was especially important for this project. What made it so important?",
+        "name": "Reflection\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "0d42e15b-293a-44b6-b541-3ae6c402b631",
+        "lesson_activity.key": "a59d0a0f-9333-4038-8a58-ffe3a359f038"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Introduction to the Draw Loop"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD: Introduction to the Draw Loop_-pr-2024"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "0cf7b4f2-a4c6-4ea3-98e7-bd8639e566f6"
+      },
+      "level_keys": [
+        "CSD: Introduction to the Draw Loop_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Exploration"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Draw Loop Plugged predict 1_-pr-2024"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "4c6c0fa4-7567-4a7f-9c88-c5c31fa82953"
+      },
+      "level_keys": [
+        "CSD U3 Draw Loop Plugged predict 1_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Draw Loop Plugged orange and green_-pr-2024"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "3cf441af-cab1-45a0-a633-f4637d2f939c"
+      },
+      "level_keys": [
+        "CSD U3 Draw Loop Plugged orange and green_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Prediction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Draw Loop Plugged predict 2_-pr-2024"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "1e417cd5-cf7e-49db-a202-afb4a124af8b"
+      },
+      "level_keys": [
+        "CSD U3 Draw Loop Plugged predict 2_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 dancing alien_-pr-2024"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "771af26b-c29a-4268-8989-5848d03dc897"
+      },
+      "level_keys": [
+        "CSD U3 dancing alien_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Draw Loop Plugged wiggle sprite x_-pr-2024"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "771af26b-c29a-4268-8989-5848d03dc897"
+      },
+      "level_keys": [
+        "CSD U3 Draw Loop Plugged wiggle sprite x_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD web draw loop practice choice_-pr-2024"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "503e49fc-ba7e-44c7-ad52-ff4c4898f8af"
+      },
+      "level_keys": [
+        "CSD web draw loop practice choice_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Draw Loop Plugged wiggle sprite y_-pr-2024"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "b2264907-7a87-4cde-a37c-c47d8b2fbf3e"
+      },
+      "level_keys": [
+        "CSD U3 Draw Loop Plugged wiggle sprite y_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD web draw loop challenge choice_-pr-2024"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "3c31b019-bd48-43eb-a94e-0c4e31f97d0a"
+      },
+      "level_keys": [
+        "CSD web draw loop challenge choice_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Prediction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 - Simple Counter Predict_-pr-2024"
+        ],
+        "lesson.key": "Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "2096356e-62ae-4236-a287-9d496d80fc23"
+      },
+      "level_keys": [
+        "CSD U3 - Simple Counter Predict_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Sprite Movement"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD: Animating Sprite Movement_-pr-2024"
+        ],
+        "lesson.key": "Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "1600eb36-d271-42c4-8f66-0a71c61c46b6"
+      },
+      "level_keys": [
+        "CSD: Animating Sprite Movement_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprite Movement Right_-pr-2024"
+        ],
+        "lesson.key": "Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "30dad26a-c3b8-45ed-8f6a-d73c97daabb0"
+      },
+      "level_keys": [
+        "CSD U3 Sprite Movement Right_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprite Movement Left_-pr-2024"
+        ],
+        "lesson.key": "Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "30dad26a-c3b8-45ed-8f6a-d73c97daabb0"
+      },
+      "level_keys": [
+        "CSD U3 Sprite Movement Left_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Diagonal Movement_-pr-2024"
+        ],
+        "lesson.key": "Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "30dad26a-c3b8-45ed-8f6a-d73c97daabb0"
+      },
+      "level_keys": [
+        "CSD U3 Diagonal Movement_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Sprite Movement Predict_-pr-2024"
+        ],
+        "lesson.key": "Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "30dad26a-c3b8-45ed-8f6a-d73c97daabb0"
+      },
+      "level_keys": [
+        "CSD U3 Sprite Movement Predict_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD web movement practice choice_-pr-2024"
+        ],
+        "lesson.key": "Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "97441468-1162-49b6-83ef-57967f05c735"
+      },
+      "level_keys": [
+        "CSD web movement practice choice_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Movement Fish_-pr-2024"
+        ],
+        "lesson.key": "Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "245e2d83-f438-45ce-be2d-70167812667a"
+      },
+      "level_keys": [
+        "CSD U3 Movement Fish_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD web movement challenge choice_-pr-2024"
+        ],
+        "lesson.key": "Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "ade0aa2a-0e38-44e9-b75e-c03e9cf5f478"
+      },
+      "level_keys": [
+        "CSD web movement challenge choice_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Prediction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Boolean Predict_-pr-2024"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "2e938dbb-0cda-4970-9118-022f498f5df1"
+      },
+      "level_keys": [
+        "CSD U3 Boolean Predict_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Booleans"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 - Booleans Video_-pr-2024"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "42fc2b48-36f5-494c-816d-1640a4b50f6f"
+      },
+      "level_keys": [
+        "CSD U3 - Booleans Video_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Quick Check"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 - conditionals - Matching_2018_2019_pilot_-pr-2024"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "ea046a15-47db-4662-8111-94c3acdf9629"
+      },
+      "level_keys": [
+        "CSD U3 - conditionals - Matching_2018_2019_pilot_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 - conditionals - transition_-pr-2024"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "8428acc8-2ac9-4635-9d74-7cc22e52ff3b"
+      },
+      "level_keys": [
+        "CSD U3 - conditionals - transition_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 - conditionals - first conditional_-pr-2024"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "8428acc8-2ac9-4635-9d74-7cc22e52ff3b"
+      },
+      "level_keys": [
+        "CSD U3 - conditionals - first conditional_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: Conditional Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd U3 conditional statements video_-pr-2024"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "13029d2a-7a8a-4cec-9302-2798ad516f40"
+      },
+      "level_keys": [
+        "csd U3 conditional statements video_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Conditionals Apple 2_-pr-2024"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "bb90efd8-2ef2-447d-bcf6-b9541c28f3ca"
+      },
+      "level_keys": [
+        "CSD U3 Conditionals Apple 2_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD web conditionals practice choice_-pr-2024"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "7a500ef8-ad50-49e0-b5dc-b5a9d07f7df9"
+      },
+      "level_keys": [
+        "CSD web conditionals practice choice_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD web conditionals assessment_-pr-2024"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "4bd189de-d673-4542-b996-ef27240a9d58"
+      },
+      "level_keys": [
+        "CSD web conditionals assessment_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD web conditionals challenge choice_-pr-2024"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "d85f0f5f-0452-4b9a-96f0-fced3aa45871"
+      },
+      "level_keys": [
+        "CSD web conditionals challenge choice_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Prediction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Keypress Boolean_-pr-2024"
+        ],
+        "lesson.key": "Keyboard Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "e340cc06-c12c-4075-8122-e56484d5287e"
+      },
+      "level_keys": [
+        "CSD U3 Keypress Boolean_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 keydown conditional_-pr-2024"
+        ],
+        "lesson.key": "Keyboard Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "c34236d7-be94-4ee4-8fae-b3aa6f7cd148"
+      },
+      "level_keys": [
+        "CSD U3 keydown conditional_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 UP_ARROW_-pr-2024"
+        ],
+        "lesson.key": "Keyboard Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "c34236d7-be94-4ee4-8fae-b3aa6f7cd148"
+      },
+      "level_keys": [
+        "CSD U3 UP_ARROW_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 32,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Input Gears_-pr-2024"
+        ],
+        "lesson.key": "Keyboard Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "c34236d7-be94-4ee4-8fae-b3aa6f7cd148"
+      },
+      "level_keys": [
+        "CSD U3 Input Gears_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 33,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD web keyboard practice choice_-pr-2024"
+        ],
+        "lesson.key": "Keyboard Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "651564d2-22d6-446e-8f43-2d831ff824c6"
+      },
+      "level_keys": [
+        "CSD web keyboard practice choice_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 34,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Direction Arrows_-pr-2024"
+        ],
+        "lesson.key": "Keyboard Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "cb19b9c1-2f07-408d-832b-f5236b751213"
+      },
+      "level_keys": [
+        "CSD U3 Direction Arrows_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 35,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD web keyboard challenge choice_-pr-2024"
+        ],
+        "lesson.key": "Keyboard Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "b964831c-4cb1-4130-a6b7-fc00cbc4456c"
+      },
+      "level_keys": [
+        "CSD web keyboard challenge choice_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 36,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Prediction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 if else predict_-pr-2024"
+        ],
+        "lesson.key": "Mouse Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "1e9b5bf4-e276-4aa0-9edf-852506438696"
+      },
+      "level_keys": [
+        "CSD U3 if else predict_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 37,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Video: If/Else Statements"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 - Conditionals Video_-pr-2024"
+        ],
+        "lesson.key": "Mouse Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "f30468e9-3658-481a-908c-ca920fd78bb0"
+      },
+      "level_keys": [
+        "CSD U3 - Conditionals Video_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 38,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Else_-pr-2024"
+        ],
+        "lesson.key": "Mouse Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "111301d4-9cc9-40d5-8820-6d15e66252f4"
+      },
+      "level_keys": [
+        "CSD U3 Else_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 39,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD games mousedown intro_-pr-2024"
+        ],
+        "lesson.key": "Mouse Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "111301d4-9cc9-40d5-8820-6d15e66252f4"
+      },
+      "level_keys": [
+        "CSD games mousedown intro_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 40,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 - complex - mouse down_-pr-2024"
+        ],
+        "lesson.key": "Mouse Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "111301d4-9cc9-40d5-8820-6d15e66252f4"
+      },
+      "level_keys": [
+        "CSD U3 - complex - mouse down_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 41,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 If Else_-pr-2024"
+        ],
+        "lesson.key": "Mouse Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "111301d4-9cc9-40d5-8820-6d15e66252f4"
+      },
+      "level_keys": [
+        "CSD U3 If Else_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD web mouse practice choice_-pr-2024"
+        ],
+        "lesson.key": "Mouse Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "324ce82b-4679-4b7b-9ef8-4a843b39a066"
+      },
+      "level_keys": [
+        "CSD web mouse practice choice_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD web mouse assessment_-pr-2024"
+        ],
+        "lesson.key": "Mouse Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "eaa1dd0f-31e0-4924-b8f6-ce810112e76e"
+      },
+      "level_keys": [
+        "CSD web mouse assessment_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Challenges"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD web mouse challenge choice_-pr-2024"
+        ],
+        "lesson.key": "Mouse Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "88133863-7a4a-44f0-b21c-baa362fdc7fa"
+      },
+      "level_keys": [
+        "CSD web mouse challenge choice_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 45,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Demo App: Interactive Card"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Interactive Card Exemplar_-pr-2024"
+        ],
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "8e6c189c-0d5b-4e19-8c2e-da335a79fdcc"
+      },
+      "level_keys": [
+        "CSD U3 Interactive Card Exemplar_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 46,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Make an Interactive Card"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 - Interactive Card - ExampleChoice_-pr-2024"
+        ],
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "fbd30a62-38ea-47df-aaad-cda5a08a012d"
+      },
+      "level_keys": [
+        "CSD U3 - Interactive Card - ExampleChoice_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 47,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Work"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Interactive Card Background_-pr-2024"
+        ],
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "e8171ebf-6137-4c66-ba51-db6307720882"
+      },
+      "level_keys": [
+        "CSD U3 Interactive Card Background_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 4,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Work"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Interactive Card Sprites_-pr-2024"
+        ],
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "e8171ebf-6137-4c66-ba51-db6307720882"
+      },
+      "level_keys": [
+        "CSD U3 Interactive Card Sprites_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 5,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Work"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Interactive Card User Input_-pr-2024"
+        ],
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "e8171ebf-6137-4c66-ba51-db6307720882"
+      },
+      "level_keys": [
+        "CSD U3 Interactive Card User Input_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 50,
+      "position": 6,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Work"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Interactive Card Other Conditionals_-pr-2024"
+        ],
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "e8171ebf-6137-4c66-ba51-db6307720882"
+      },
+      "level_keys": [
+        "CSD U3 Interactive Card Other Conditionals_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 51,
+      "position": 7,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "progression": "Project Work"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U3 Interactive Card Final_-pr-2024"
+        ],
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "e8171ebf-6137-4c66-ba51-db6307720882"
+      },
+      "level_keys": [
+        "CSD U3 Interactive Card Final_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 52,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Reflection"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_-pr-2024"
+        ],
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "6140c69d-28bc-4eb1-b51b-71246da979fc"
+      },
+      "level_keys": [
+        "csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_-pr-2024"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "CSD: Introduction to the Draw Loop_-pr-2024",
+        "script_level.level_keys": [
+          "CSD: Introduction to the Draw Loop_-pr-2024"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "0cf7b4f2-a4c6-4ea3-98e7-bd8639e566f6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Draw Loop Plugged predict 1_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 Draw Loop Plugged predict 1_-pr-2024"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "4c6c0fa4-7567-4a7f-9c88-c5c31fa82953"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Draw Loop Plugged orange and green_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 Draw Loop Plugged orange and green_-pr-2024"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "3cf441af-cab1-45a0-a633-f4637d2f939c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Draw Loop Plugged predict 2_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 Draw Loop Plugged predict 2_-pr-2024"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "1e417cd5-cf7e-49db-a202-afb4a124af8b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 dancing alien_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 dancing alien_-pr-2024"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "771af26b-c29a-4268-8989-5848d03dc897"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Draw Loop Plugged wiggle sprite x_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 Draw Loop Plugged wiggle sprite x_-pr-2024"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "771af26b-c29a-4268-8989-5848d03dc897"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD web draw loop practice choice_-pr-2024",
+        "script_level.level_keys": [
+          "CSD web draw loop practice choice_-pr-2024"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "503e49fc-ba7e-44c7-ad52-ff4c4898f8af"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Draw Loop Plugged wiggle sprite y_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 Draw Loop Plugged wiggle sprite y_-pr-2024"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "b2264907-7a87-4cde-a37c-c47d8b2fbf3e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD web draw loop challenge choice_-pr-2024",
+        "script_level.level_keys": [
+          "CSD web draw loop challenge choice_-pr-2024"
+        ],
+        "lesson.key": "The Draw Loop",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "3c31b019-bd48-43eb-a94e-0c4e31f97d0a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 - Simple Counter Predict_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 - Simple Counter Predict_-pr-2024"
+        ],
+        "lesson.key": "Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "2096356e-62ae-4236-a287-9d496d80fc23"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD: Animating Sprite Movement_-pr-2024",
+        "script_level.level_keys": [
+          "CSD: Animating Sprite Movement_-pr-2024"
+        ],
+        "lesson.key": "Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "1600eb36-d271-42c4-8f66-0a71c61c46b6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprite Movement Right_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 Sprite Movement Right_-pr-2024"
+        ],
+        "lesson.key": "Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "30dad26a-c3b8-45ed-8f6a-d73c97daabb0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprite Movement Left_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 Sprite Movement Left_-pr-2024"
+        ],
+        "lesson.key": "Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "30dad26a-c3b8-45ed-8f6a-d73c97daabb0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Diagonal Movement_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 Diagonal Movement_-pr-2024"
+        ],
+        "lesson.key": "Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "30dad26a-c3b8-45ed-8f6a-d73c97daabb0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Sprite Movement Predict_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 Sprite Movement Predict_-pr-2024"
+        ],
+        "lesson.key": "Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "30dad26a-c3b8-45ed-8f6a-d73c97daabb0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD web movement practice choice_-pr-2024",
+        "script_level.level_keys": [
+          "CSD web movement practice choice_-pr-2024"
+        ],
+        "lesson.key": "Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "97441468-1162-49b6-83ef-57967f05c735"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Movement Fish_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 Movement Fish_-pr-2024"
+        ],
+        "lesson.key": "Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "245e2d83-f438-45ce-be2d-70167812667a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD web movement challenge choice_-pr-2024",
+        "script_level.level_keys": [
+          "CSD web movement challenge choice_-pr-2024"
+        ],
+        "lesson.key": "Sprite Movement",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "ade0aa2a-0e38-44e9-b75e-c03e9cf5f478"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Boolean Predict_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 Boolean Predict_-pr-2024"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "2e938dbb-0cda-4970-9118-022f498f5df1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 - Booleans Video_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 - Booleans Video_-pr-2024"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "42fc2b48-36f5-494c-816d-1640a4b50f6f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 - conditionals - Matching_2018_2019_pilot_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 - conditionals - Matching_2018_2019_pilot_-pr-2024"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "ea046a15-47db-4662-8111-94c3acdf9629"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 - conditionals - transition_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 - conditionals - transition_-pr-2024"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "8428acc8-2ac9-4635-9d74-7cc22e52ff3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 - conditionals - first conditional_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 - conditionals - first conditional_-pr-2024"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "8428acc8-2ac9-4635-9d74-7cc22e52ff3b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd U3 conditional statements video_-pr-2024",
+        "script_level.level_keys": [
+          "csd U3 conditional statements video_-pr-2024"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "13029d2a-7a8a-4cec-9302-2798ad516f40"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Conditionals Apple 2_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 Conditionals Apple 2_-pr-2024"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "bb90efd8-2ef2-447d-bcf6-b9541c28f3ca"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD web conditionals practice choice_-pr-2024",
+        "script_level.level_keys": [
+          "CSD web conditionals practice choice_-pr-2024"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "7a500ef8-ad50-49e0-b5dc-b5a9d07f7df9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD web conditionals assessment_-pr-2024",
+        "script_level.level_keys": [
+          "CSD web conditionals assessment_-pr-2024"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "4bd189de-d673-4542-b996-ef27240a9d58"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD web conditionals challenge choice_-pr-2024",
+        "script_level.level_keys": [
+          "CSD web conditionals challenge choice_-pr-2024"
+        ],
+        "lesson.key": "Conditionals",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "d85f0f5f-0452-4b9a-96f0-fced3aa45871"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Keypress Boolean_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 Keypress Boolean_-pr-2024"
+        ],
+        "lesson.key": "Keyboard Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "e340cc06-c12c-4075-8122-e56484d5287e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 keydown conditional_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 keydown conditional_-pr-2024"
+        ],
+        "lesson.key": "Keyboard Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "c34236d7-be94-4ee4-8fae-b3aa6f7cd148"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 UP_ARROW_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 UP_ARROW_-pr-2024"
+        ],
+        "lesson.key": "Keyboard Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "c34236d7-be94-4ee4-8fae-b3aa6f7cd148"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Input Gears_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 Input Gears_-pr-2024"
+        ],
+        "lesson.key": "Keyboard Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "c34236d7-be94-4ee4-8fae-b3aa6f7cd148"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD web keyboard practice choice_-pr-2024",
+        "script_level.level_keys": [
+          "CSD web keyboard practice choice_-pr-2024"
+        ],
+        "lesson.key": "Keyboard Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "651564d2-22d6-446e-8f43-2d831ff824c6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Direction Arrows_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 Direction Arrows_-pr-2024"
+        ],
+        "lesson.key": "Keyboard Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "cb19b9c1-2f07-408d-832b-f5236b751213"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD web keyboard challenge choice_-pr-2024",
+        "script_level.level_keys": [
+          "CSD web keyboard challenge choice_-pr-2024"
+        ],
+        "lesson.key": "Keyboard Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "b964831c-4cb1-4130-a6b7-fc00cbc4456c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 if else predict_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 if else predict_-pr-2024"
+        ],
+        "lesson.key": "Mouse Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "1e9b5bf4-e276-4aa0-9edf-852506438696"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 - Conditionals Video_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 - Conditionals Video_-pr-2024"
+        ],
+        "lesson.key": "Mouse Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "f30468e9-3658-481a-908c-ca920fd78bb0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Else_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 Else_-pr-2024"
+        ],
+        "lesson.key": "Mouse Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "111301d4-9cc9-40d5-8820-6d15e66252f4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD games mousedown intro_-pr-2024",
+        "script_level.level_keys": [
+          "CSD games mousedown intro_-pr-2024"
+        ],
+        "lesson.key": "Mouse Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "111301d4-9cc9-40d5-8820-6d15e66252f4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 - complex - mouse down_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 - complex - mouse down_-pr-2024"
+        ],
+        "lesson.key": "Mouse Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "111301d4-9cc9-40d5-8820-6d15e66252f4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 If Else_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 If Else_-pr-2024"
+        ],
+        "lesson.key": "Mouse Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "111301d4-9cc9-40d5-8820-6d15e66252f4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD web mouse practice choice_-pr-2024",
+        "script_level.level_keys": [
+          "CSD web mouse practice choice_-pr-2024"
+        ],
+        "lesson.key": "Mouse Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "324ce82b-4679-4b7b-9ef8-4a843b39a066"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD web mouse assessment_-pr-2024",
+        "script_level.level_keys": [
+          "CSD web mouse assessment_-pr-2024"
+        ],
+        "lesson.key": "Mouse Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "eaa1dd0f-31e0-4924-b8f6-ce810112e76e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD web mouse challenge choice_-pr-2024",
+        "script_level.level_keys": [
+          "CSD web mouse challenge choice_-pr-2024"
+        ],
+        "lesson.key": "Mouse Input",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "88133863-7a4a-44f0-b21c-baa362fdc7fa"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Interactive Card Exemplar_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 Interactive Card Exemplar_-pr-2024"
+        ],
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "8e6c189c-0d5b-4e19-8c2e-da335a79fdcc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 - Interactive Card - ExampleChoice_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 - Interactive Card - ExampleChoice_-pr-2024"
+        ],
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "fbd30a62-38ea-47df-aaad-cda5a08a012d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Interactive Card Background_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 Interactive Card Background_-pr-2024"
+        ],
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "e8171ebf-6137-4c66-ba51-db6307720882"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Interactive Card Sprites_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 Interactive Card Sprites_-pr-2024"
+        ],
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "e8171ebf-6137-4c66-ba51-db6307720882"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Interactive Card User Input_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 Interactive Card User Input_-pr-2024"
+        ],
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "e8171ebf-6137-4c66-ba51-db6307720882"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Interactive Card Other Conditionals_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 Interactive Card Other Conditionals_-pr-2024"
+        ],
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "e8171ebf-6137-4c66-ba51-db6307720882"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U3 Interactive Card Final_-pr-2024",
+        "script_level.level_keys": [
+          "CSD U3 Interactive Card Final_-pr-2024"
+        ],
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "e8171ebf-6137-4c66-ba51-db6307720882"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_-pr-2024",
+        "script_level.level_keys": [
+          "csd-pulse-check-survey-1-levelgroup U3Ch1_2018_2019_pilot_-pr-2024"
+        ],
+        "lesson.key": "Project - Interactive Card",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day3",
+        "activity_section.key": "6140c69d-28bc-4eb1-b51b-71246da979fc"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "Boolean Expressions",
+      "url": "https://youtu.be/_j9nvYKaOVE",
+      "key": "boolean_expressions",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/csd_booleans_sm-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "boolean_expressions"
+      }
+    },
+    {
+      "name": "Booleans and Comparison Operators",
+      "url": "https://drive.google.com/file/d/1gGmtvyZpXVcH6Vrju9FX73X7qlZLIBvt/view?usp=sharing",
+      "key": "booleans_and_comparison_operators",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "booleans_and_comparison_operators"
+      }
+    },
+    {
+      "name": "Computer Science Practices",
+      "url": "https://docs.google.com/document/d/1Ccf-WMH2qFDhycKaKSILRrZUe42lWESyRqMgdTymCPw/edit",
+      "key": "computer_science_practices",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Reflection"
+      },
+      "seeding_key": {
+        "resource.key": "computer_science_practices"
+      }
+    },
+    {
+      "name": "Conditional Statements",
+      "url": "https://youtu.be/TuLIK7DcPWs",
+      "key": "conditional_statements",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/csd_conditionals_sm-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "conditional_statements"
+      }
+    },
+    {
+      "name": "Conditionals",
+      "url": "https://docs.google.com/presentation/d/12j4KMKOvDBSz5B5ekePOBcogSglhpK9QnDf3egXv3gc/template/preview",
+      "key": "conditionals",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/12j4KMKOvDBSz5B5ekePOBcogSglhpK9QnDf3egXv3gc/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "conditionals"
+      }
+    },
+    {
+      "name": "Extra Code in Challenge Levels",
+      "url": "https://docs.google.com/document/d/1Zx8e-b_GJFNxsuXx10tIdh3EPSGoqPwpxGh2Hz70B2w/view",
+      "key": "extra_code_in_challenge_levels",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "extra_code_in_challenge_levels"
+      }
+    },
+    {
+      "name": "Flipbook Example - by Marnic Bos",
+      "url": "https://youtu.be/hol0p29cd8o",
+      "key": "flipbook_example_-_by_marnic_bos",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "flipbook_example_-_by_marnic_bos"
+      }
+    },
+    {
+      "name": "If-Else Statements",
+      "url": "https://drive.google.com/file/d/1_RzGKuxpESYxpD__X3RdeTm89pTYcfB4/view?usp=sharing",
+      "key": "if-else_statements",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "if-else_statements"
+      }
+    },
+    {
+      "name": "If/Else Statements",
+      "url": "https://youtu.be/6m6FFUJsOzo",
+      "key": "if_else_statements",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/csd_ifelse_sm-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "if_else_statements"
+      }
+    },
+    {
+      "name": "If Statements",
+      "url": "https://drive.google.com/file/d/1EmNUdnXpCIyJdd4p8k2q9OEK-4KNI7PO/view?usp=sharing",
+      "key": "if_statements",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "if_statements"
+      }
+    },
+    {
+      "name": "Interactive Card",
+      "url": "https://docs.google.com/document/d/1hc_awMc06EmiYJqBQgmKlNNfnC-1iMesNdo-atsjOEU/",
+      "key": "interactive_card",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "interactive_card"
+      }
+    },
+    {
+      "name": "Interactive Card - Marked Rubrics",
+      "url": "https://docs.google.com/document/d/17bNU6zmZMpl39I4eaKymt5uYgIVpSEfuxilmcZJzpR4/view",
+      "key": "interactive_card_-_marked_rubrics",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "interactive_card_-_marked_rubrics"
+      }
+    },
+    {
+      "name": "Interactive Card - Student Checklist",
+      "url": "https://docs.google.com/document/d/1v25XqBmYj3KmniWzQE4PTNrXcfPCsnSQGey0wTN2WHY/view",
+      "key": "interactive_card_-_student_checklist",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "interactive_card_-_student_checklist"
+      }
+    },
+    {
+      "name": "Interactive Card",
+      "url": "https://docs.google.com/document/d/1MNe3-GpESINByCaRnDTA_EmyIjENEP2R4_0sKBY9E7M/",
+      "key": "interactive_card_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Project Guide"
+      },
+      "seeding_key": {
+        "resource.key": "interactive_card_1"
+      }
+    },
+    {
+      "name": "Interactive Card",
+      "url": "https://docs.google.com/document/d/1ZbLM2oRl3eWGBY47oAtmcODga_sGi_DSq8WLVew9F5c/",
+      "key": "interactive_card_2",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Peer Review"
+      },
+      "seeding_key": {
+        "resource.key": "interactive_card_2"
+      }
+    },
+    {
+      "name": "Interactive Card",
+      "url": "https://docs.google.com/document/d/1sAILZnk26g21FluRhU0pWqVDOMBZVrNAko1mSVeuKHM/view",
+      "key": "interactive_card_3",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Rubric"
+      },
+      "seeding_key": {
+        "resource.key": "interactive_card_3"
+      }
+    },
+    {
+      "name": "Introduction to the Draw Loop",
+      "url": "https://youtu.be/G6QJeuHhqCM",
+      "key": "introduction_to_the_draw_loop",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/gamelab_draw-loop-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_the_draw_loop"
+      }
+    },
+    {
+      "name": "Keyboard Input",
+      "url": "https://docs.google.com/presentation/d/1HeJu3AlM-SdJr4uEBFewFeRCol-znx2nbiwLTyhDhA8/template/preview",
+      "key": "keyboard_input",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1HeJu3AlM-SdJr4uEBFewFeRCol-znx2nbiwLTyhDhA8/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "keyboard_input"
+      }
+    },
+    {
+      "name": "Mouse Input",
+      "url": "https://docs.google.com/presentation/d/1fEiGXNsuyjePx5irkx3KehMWvpM4i07EqQMfCw2DUDg/template/preview",
+      "key": "mouse_input",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1fEiGXNsuyjePx5irkx3KehMWvpM4i07EqQMfCw2DUDg/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "mouse_input"
+      }
+    },
+    {
+      "name": "Project - Interactive Card",
+      "url": "https://docs.google.com/presentation/d/18rn-AvzgOqgmvH1QN7JtUCInvpVqlqUD_ZOQNivdI6E/template/preview",
+      "key": "project_-_interactive_card",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/18rn-AvzgOqgmvH1QN7JtUCInvpVqlqUD_ZOQNivdI6E/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "project_-_interactive_card"
+      }
+    },
+    {
+      "name": "Random Dot Flipbook",
+      "url": "https://docs.google.com/drawings/d/1dOy6qZ1-2VlxRKz63m6bO2G9lgJnDtnLKYxvLH_W16w/edit",
+      "key": "random_dot_flipbook",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "random_dot_flipbook"
+      }
+    },
+    {
+      "name": "Random Sprite Flipbook",
+      "url": "https://docs.google.com/drawings/d/1u6hSZ108BcnasuoKM1etB4sEzShGIrmk8GgQyJZ0P8Y/edit",
+      "key": "random_sprite_flipbook",
+      "properties": {
+        "audience": "Teacher"
+      },
+      "seeding_key": {
+        "resource.key": "random_sprite_flipbook"
+      }
+    },
+    {
+      "name": "Sprite Movement",
+      "url": "https://youtu.be/G666sFzAg5g",
+      "key": "sprite_movement",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/gamelab_animatingwithsprites-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "sprite_movement"
+      }
+    },
+    {
+      "name": "Sprite Movement",
+      "url": "https://docs.google.com/presentation/d/1GJ3WTHH0YxThk8L1MCGGmwmGy4l7MnWA1WCI7dqUO1k/template/preview",
+      "key": "sprite_movement_1",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1GJ3WTHH0YxThk8L1MCGGmwmGy4l7MnWA1WCI7dqUO1k/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "sprite_movement_1"
+      }
+    },
+    {
+      "name": "The Counter Pattern",
+      "url": "https://drive.google.com/file/d/1Cuie3SFpeDBzXdSzEtZnGdL7H-NpG5dg/view?usp=sharing",
+      "key": "the_counter_pattern",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "the_counter_pattern"
+      }
+    },
+    {
+      "name": "The Draw Loop",
+      "url": "https://drive.google.com/file/d/1MxfQObaxvA82Y50YHIRTxUa55gZMNlSW/view?usp=sharing",
+      "key": "the_draw_loop",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "the_draw_loop"
+      }
+    },
+    {
+      "name": "The Draw Loop",
+      "url": "https://docs.google.com/presentation/d/1RKKRxUGfN2VL9aGxL9CjG559JI1p_wVlO_mTrs4Pj2k/template/preview",
+      "key": "the_draw_loop_1",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1RKKRxUGfN2VL9aGxL9CjG559JI1p_wVlO_mTrs4Pj2k/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "the_draw_loop_1"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "resource.key": "boolean_expressions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "resource.key": "booleans_and_comparison_operators"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "resource.key": "conditional_statements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "resource.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "resource.key": "if_statements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Keyboard Input",
+        "resource.key": "keyboard_input"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "resource.key": "if-else_statements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "resource.key": "if_else_statements"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "resource.key": "mouse_input"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "resource.key": "computer_science_practices"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "resource.key": "extra_code_in_challenge_levels"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "resource.key": "interactive_card"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "resource.key": "interactive_card_-_marked_rubrics"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "resource.key": "interactive_card_-_student_checklist"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "resource.key": "interactive_card_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "resource.key": "interactive_card_2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "resource.key": "interactive_card_3"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "resource.key": "project_-_interactive_card"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "resource.key": "sprite_movement"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "resource.key": "sprite_movement_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "resource.key": "the_counter_pattern"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "resource.key": "flipbook_example_-_by_marnic_bos"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "resource.key": "introduction_to_the_draw_loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "resource.key": "random_dot_flipbook"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "resource.key": "random_sprite_flipbook"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "resource.key": "the_draw_loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "resource.key": "the_draw_loop_1"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "boolean_expression",
+      "word": "Boolean Expression",
+      "definition": "in programming, an expression that evaluates to True or False. ",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "boolean_expression"
+      }
+    },
+    {
+      "key": "condition",
+      "word": "Condition",
+      "definition": "Something a program checks to see whether it is true before deciding to take an action.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "condition"
+      }
+    },
+    {
+      "key": "conditionals",
+      "word": "Conditionals",
+      "definition": "Statements that only run when certain conditions are true.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "conditionals"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "vocabulary.key": "boolean_expression"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "vocabulary.key": "condition"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "vocabulary.key": "conditionals"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "vocabulary.key": "conditionals"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "equalityOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "greaterThanOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "greaterThanOrEqualOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "ifBlock"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "inequalityOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "lessThanOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "lessThanOrEqualOperator"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Keyboard Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "keyDown"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "ifElseBlock"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "keyWentDown"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "keyWentUp"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "mouseDidMove"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "mouseDown"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "mouseWentDown"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "mouseWentUp"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "visible"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "World.frameRate"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "programming_environment.name": "gamelab",
+        "programming_expression.key": "draw"
+      }
+    }
+  ],
+  "objectives": [
+    {
+      "key": "2ac8a4fc-d6c8-4c5c-9de8-e48759b27b35",
+      "properties": {
+        "description": "Use conditionals to react to keyboard input or changes in variables / properties"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "objective.key": "2ac8a4fc-d6c8-4c5c-9de8-e48759b27b35"
+      }
+    },
+    {
+      "key": "2ec61add-ae7f-4af7-a79e-4977a351e5e7",
+      "properties": {
+        "description": "Sequence commands to draw in the proper order"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "objective.key": "2ec61add-ae7f-4af7-a79e-4977a351e5e7"
+      }
+    },
+    {
+      "key": "54368f43-b828-4ed2-91d7-16d0817c7737",
+      "properties": {
+        "description": "Identify which sprite properties need to be changed, and in what way, to achieve a specific movement"
+      },
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "objective.key": "54368f43-b828-4ed2-91d7-16d0817c7737"
+      }
+    },
+    {
+      "key": "76fbcdb8-f234-409a-9ac7-b81bc9f67771",
+      "properties": {
+        "description": "Use an if-else statement to control the flow of a program."
+      },
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "objective.key": "76fbcdb8-f234-409a-9ac7-b81bc9f67771"
+      }
+    },
+    {
+      "key": "872c39ee-675c-4321-a3b8-ed448792362a",
+      "properties": {
+        "description": "Use conditionals to react to changes in variables and sprite properties"
+      },
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "objective.key": "872c39ee-675c-4321-a3b8-ed448792362a"
+      }
+    },
+    {
+      "key": "8839d2ff-4630-4d03-bd85-ab6e4d5c8c1d",
+      "properties": {
+        "description": "Respond to a variety of types of user input."
+      },
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "objective.key": "8839d2ff-4630-4d03-bd85-ab6e4d5c8c1d"
+      }
+    },
+    {
+      "key": "a7381667-04e6-4ac2-89f9-dda28edb8e2c",
+      "properties": {
+        "description": "Apply an iterator pattern to variables or properties in a loop"
+      },
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "objective.key": "a7381667-04e6-4ac2-89f9-dda28edb8e2c"
+      }
+    },
+    {
+      "key": "c5b66431-d9a2-465b-a457-7e31f040224d",
+      "properties": {
+        "description": "Move sprites in response to keyboard input"
+      },
+      "seeding_key": {
+        "lesson.key": "Keyboard Input",
+        "objective.key": "c5b66431-d9a2-465b-a457-7e31f040224d"
+      }
+    },
+    {
+      "key": "c8398d46-c96f-49df-8e25-16156adfcc1c",
+      "properties": {
+        "description": "Use the counter pattern to increment or decrement sprite properties"
+      },
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "objective.key": "c8398d46-c96f-49df-8e25-16156adfcc1c"
+      }
+    },
+    {
+      "key": "d1a5c03a-7668-4143-9667-567243eedcf5",
+      "properties": {
+        "description": "Explain how the draw loop allows for the creation of animations in Game Lab"
+      },
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "objective.key": "d1a5c03a-7668-4143-9667-567243eedcf5"
+      }
+    },
+    {
+      "key": "f6acbf9f-ed44-42d2-9a83-f21fb53c3004",
+      "properties": {
+        "description": "Use the draw loop in combination with the randomNumber() command, shapes, and sprites to make simple animations"
+      },
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "objective.key": "f6acbf9f-ed44-42d2-9a83-f21fb53c3004"
+      }
+    },
+    {
+      "key": "f8bae6c3-d26f-4aba-974e-3d109514352a",
+      "properties": {
+        "description": "Use conditionals to react to keyboard input"
+      },
+      "seeding_key": {
+        "lesson.key": "Keyboard Input",
+        "objective.key": "f8bae6c3-d26f-4aba-974e-3d109514352a"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Conditionals",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Keyboard Input",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Keyboard Input",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Keyboard Input",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Keyboard Input",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Keyboard Input",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Mouse Input",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Project - Interactive Card",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Sprite Movement",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-16"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The Draw Loop",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-19"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

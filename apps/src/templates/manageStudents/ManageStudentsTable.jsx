@@ -74,6 +74,7 @@ const LOGIN_TYPES_WITH_ACTIONS_COLUMN = [
   SectionLoginType.email,
   SectionLoginType.google_classroom,
   SectionLoginType.clever,
+  SectionLoginType.lti_v1,
 ];
 const LOGIN_TYPES_WITH_GENDER_COLUMN = [
   SectionLoginType.word,
@@ -215,10 +216,7 @@ class ManageStudentsTable extends Component {
 
   shouldShowActionColumn() {
     const {loginType} = this.props;
-    return (
-      LOGIN_TYPES_WITH_ACTIONS_COLUMN.includes(loginType) ||
-      (loginType === SectionLoginType.lti_v1 && !this.props.syncEnabled)
-    );
+    return LOGIN_TYPES_WITH_ACTIONS_COLUMN.includes(loginType);
   }
 
   // Cell formatters.

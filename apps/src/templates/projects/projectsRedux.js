@@ -592,7 +592,3 @@ export const saveProjectName = (projectId, updatedName) => {
     });
   };
 };
-
-export const remix = (projectId, projectType) => {
-  window.location = `/projects/${projectType}/${projectId}/remix`;
-};

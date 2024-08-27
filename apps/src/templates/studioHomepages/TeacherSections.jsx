@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import i18n from '@cdo/locale';
 
 import ContentContainer from '../ContentContainer';

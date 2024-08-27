@@ -2,6 +2,9 @@
 @import '../../mixins.scss';
 @import './aichat-common.module.scss';
 
+// Constants
+$default-spacing: 4px;
+
 %full-width {
   width: 100%;
   box-sizing: border-box;
@@ -17,6 +20,7 @@
 
   .tabsContainer {
     background-color: #eaebeb;
+    padding: $default-spacing $default-spacing 0 $default-spacing;
   }
 
   .tabPanels {
@@ -83,7 +87,8 @@
 
 .updateButton {
   width: 100%;
-  margin: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .buttonNoMargin {
@@ -104,4 +109,16 @@
 
 .fieldLabel {
   margin: 0;
+}
+
+.saveAlertContainer {
+  height: 10px;
+}
+
+.saveAlert {
+  margin-left: 20px;
+  height: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: white;
 }

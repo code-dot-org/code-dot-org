@@ -16,7 +16,6 @@
   "instructor_audience": "facilitator",
   "properties": {
     "family_name": "vpl-csa",
-    "has_numbered_units": true,
     "version_year": "2024"
   },
   "resources": [

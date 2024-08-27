@@ -11,8 +11,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-25 22:53:50 UTC",
-    "published_state": null,
+    "serialized_at": "2024-08-21 19:01:03 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -129,6 +129,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL Module 3 - Workshop Overview_2023_Data_2024"
+        ],
         "progression": "Module 3 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -151,6 +154,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M3 - Unit 5 Overview_2023_Data_2024"
+        ],
         "progression": "Overview of Unit 5 - Data (~10 minutes)"
       },
       "bonus": false,
@@ -173,6 +179,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M3 - Google Trends_2023_Data_2024"
+        ],
         "progression": "Using the NYT Resource (~20 minutes)"
       },
       "bonus": false,
@@ -195,6 +204,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M3 - Data Viz 1_2023_Data_2024"
+        ],
         "progression": "Using the Data Visualizer Tool (~45 minutes)"
       },
       "bonus": false,
@@ -217,6 +229,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M3 - Data Viz 2_2023_Data_2024"
+        ],
         "progression": "Using the Data Visualizer Tool (~45 minutes)"
       },
       "bonus": false,
@@ -239,6 +254,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M3 - Data Viz 3_2023_Data_2024"
+        ],
         "progression": "Using the Data Visualizer Tool (~45 minutes)"
       },
       "bonus": false,
@@ -261,6 +279,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP-PL M3 - Data Viz 4_2023_Data_2024"
+        ],
         "progression": "Using the Data Visualizer Tool (~45 minutes)"
       },
       "bonus": false,
@@ -283,6 +304,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP - Module 3 Wrap Up_2023_Data_2024"
+        ],
         "progression": "Module 3 Asynchronous Wrap Up (~10 minutes)"
       },
       "bonus": false,

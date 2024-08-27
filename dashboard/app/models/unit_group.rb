@@ -462,7 +462,11 @@ class UnitGroup < ApplicationRecord
 
   # @param user [User]
   # @return [Boolean] Whether the user can view the course.
-  def can_view_version?(user = nil)
+  #
+  # locale_code is added so that it matches the signature of `unit.can_view_version?`.
+  # This is necessary because course_version.content_root is either a unit or a unit_group
+  # and script.summarize_for_unit_edit calls `can_view_version?` on the content_root with two arguments.
+  def can_view_version?(user = nil, locale_code = 'en-us')
     return false unless Ability.new(user).can?(:read, self)
 
     latest_course_version = UnitGroup.latest_stable_version(family_name)

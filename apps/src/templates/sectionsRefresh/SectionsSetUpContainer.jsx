@@ -258,6 +258,21 @@ export default function SectionsSetUpContainer({
       });
   };
 
+  const consolidatedCourseData = () => {
+    if (sections[0].courseOfferingId !== null) {
+      return {
+        courseOfferingId: sections[0].courseOfferingId,
+        versionId: sections[0].courseVersionId,
+        unitId: sections[0].unitId,
+        hasLessonExtras: sections[0].lessonExtras,
+        hasTextToSpeech: sections[0].ttsAutoplayEnabled,
+        displayName: sections[0].courseDisplayName,
+      };
+    } else {
+      return null;
+    }
+  };
+
   const onURLClick = () => {
     showVideoDialog(
       {
@@ -415,7 +430,7 @@ export default function SectionsSetUpContainer({
         id="uitest-curriculum-quick-assign"
         isNewSection={isNewSection}
         updateSection={(key, val) => updateSection(0, key, val)}
-        sectionCourse={sections[0].course}
+        sectionCourse={sections[0].course || consolidatedCourseData()}
         initialParticipantType={sections[0].participantType}
       />
 

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
+import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
 import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import locale from '@cdo/locale';
@@ -16,6 +16,7 @@ import {
   cancelImportRosterFlow,
   importOrUpdateRoster,
   isRosterDialogOpen,
+  rosterImportFailed,
 } from './teacherSectionsRedux';
 
 const COMPLETED_EVENT = 'Section Setup Completed';
@@ -151,6 +152,7 @@ class RosterDialog extends React.Component {
     // Provided by Redux
     handleImport: PropTypes.func,
     handleCancel: PropTypes.func,
+    handleImportFailure: PropTypes.func,
     isOpen: PropTypes.bool,
     classrooms: PropTypes.arrayOf(classroomShape),
     loadError: loadErrorShape,
@@ -199,7 +201,8 @@ class RosterDialog extends React.Component {
         courseName,
       })
         .done(resolve)
-        .fail(jqxhr =>
+        .fail(jqxhr => {
+          this.props.handleImportFailure(jqxhr);
           reject(
             new Error(`
             url: ${importSectionUrl}
@@ -207,8 +210,8 @@ class RosterDialog extends React.Component {
             statusText: ${jqxhr.statusText}
             responseText: ${jqxhr.responseText}
           `)
-          )
-        );
+          );
+        });
     }).then(newSection => this.redirectToEditSectionPage(newSection.id));
   };
 
@@ -353,5 +356,6 @@ export default connect(
   {
     handleImport: importOrUpdateRoster,
     handleCancel: cancelImportRosterFlow,
+    handleImportFailure: rosterImportFailed,
   }
 )(RosterDialog);

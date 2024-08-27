@@ -4017,7 +4017,7 @@ class UserTest < ActiveSupport::TestCase
         has_ever_signed_in: @student.has_ever_signed_in?,
         ai_tutor_access_denied: !!@student.ai_tutor_access_denied,
         at_risk_age_gated: false,
-        child_account_compliance_state: @student.child_account_compliance_state,
+        child_account_compliance_state: @student.cap_status,
         latest_permission_request_sent_at: latest_permission_request_sent_at,
       },
       @student.summarize
@@ -5433,6 +5433,50 @@ class UserTest < ActiveSupport::TestCase
     assert_equal student.us_state, 'WA'
   end
 
+  test "teacher with oauth account can access AI Chat" do
+    teacher = create :teacher, :google_sso_provider
+    assert teacher.teacher_can_access_ai_chat?
+  end
+
+  test "teacher with LTI account can access AI Chat" do
+    teacher = create :teacher, :with_lti_auth
+    assert teacher.teacher_can_access_ai_chat?
+  end
+
+  test "teacher with AUTHORIZED_TEACHER permissions can access AI Chat" do
+    teacher = create :authorized_teacher
+    assert teacher.teacher_can_access_ai_chat?
+  end
+
+  test "teacher with email account cannot access AI Chat" do
+    teacher = create :teacher
+    refute teacher.teacher_can_access_ai_chat?
+  end
+
+  test "student with email account cannot access AI Chat" do
+    student = create :student
+    refute student.student_can_access_ai_chat?
+  end
+
+  test "student with verified teacher and in appropriate section can access AI Chat" do
+    unit_group = create :unit_group, name: 'exploring-gen-ai-2024'
+    teacher = create :authorized_teacher
+    section = create :section, teacher: teacher, unit_group: unit_group
+    student = create :student
+    create :follower, section: section, student_user: student, user: teacher
+
+    assert student.student_can_access_ai_chat?
+  end
+
+  test "student with verified teacher but not in appropriate section cannot access AI Chat" do
+    teacher = create :authorized_teacher
+    section = create :section, teacher: teacher
+    student = create :student
+    create :follower, section: section, student_user: student, user: teacher
+
+    refute student.student_can_access_ai_chat?
+  end
+
   describe '#latest_parental_permission_request' do
     let(:latest_parental_permission_request) {user.latest_parental_permission_request}
 
@@ -5457,26 +5501,6 @@ class UserTest < ActiveSupport::TestCase
 
       it 'returns resend parental permission request' do
         _(latest_parental_permission_request).must_equal user_permission_request1
-      end
-    end
-  end
-
-  describe 'new CAP columns data assigning before save' do
-    let(:user) {create(:student)}
-
-    it 'assigns "cap_status" with data from "child_account_compliance_state"' do
-      expected_cap_status = Policies::ChildAccount::ComplianceState::LOCKED_OUT
-
-      assert_changes -> {user.reload.cap_status}, from: nil, to: expected_cap_status do
-        user.update!(child_account_compliance_state: expected_cap_status)
-      end
-    end
-
-    it 'assigns "cap_status_date" with data from "child_account_compliance_state_last_updated"' do
-      expected_cap_status_date = Time.now.change(usec: 0)
-
-      assert_changes -> {user.reload.cap_status_date}, from: nil, to: expected_cap_status_date do
-        user.update!(child_account_compliance_state_last_updated: expected_cap_status_date)
       end
     end
   end

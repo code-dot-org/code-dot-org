@@ -2,8 +2,8 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {
   setSectionCodeReviewExpiresAt,
   selectedSection,
