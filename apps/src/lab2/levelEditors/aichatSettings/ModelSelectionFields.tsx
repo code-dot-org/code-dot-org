@@ -8,7 +8,7 @@ import {BodyFourText} from '@cdo/apps/componentLibrary/typography';
 import {ValueOf} from '@cdo/apps/types/utils';
 import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
-import FieldSection from './FieldSection';
+import CollapsibleFieldSection from './CollapsibleFieldSection';
 import {UpdateContext} from './UpdateContext';
 
 import moduleStyles from './edit-aichat-settings.module.scss';
@@ -58,7 +58,7 @@ const ModelSelectionFields: React.FunctionComponent = () => {
   );
 
   return (
-    <FieldSection
+    <CollapsibleFieldSection
       fieldName="selectedModelId"
       labelText="Model Selection"
       description="The initial model selected for the chatbot."
