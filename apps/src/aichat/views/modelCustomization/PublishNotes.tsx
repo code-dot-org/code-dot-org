@@ -19,6 +19,7 @@ import {ModelCardInfo} from '../../types';
 import {MODEL_CARD_FIELDS_LABELS_ICONS} from './constants';
 import ExampleTopicsInputs from './ExampleTopicsInputs';
 import FieldLabel from './FieldLabel';
+import SaveChangesAlerts from './SaveChangesAlerts';
 import {isDisabled} from './utils';
 
 import modelCustomizationStyles from '../model-customization-workspace.module.scss';
@@ -126,6 +127,7 @@ const PublishNotes: React.FunctionComponent = () => {
           className={modelCustomizationStyles.updateButton}
         />
       </div>
+      <SaveChangesAlerts />
     </div>
   );
 };
