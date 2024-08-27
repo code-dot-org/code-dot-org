@@ -40,7 +40,7 @@ module CAP
 
     private def cap_affected_sections
       @cap_affected_sections ||= Queries::Section.cap_affected(
-        period: Policies::ChildAccount::MAX_AGE_GATE_DURATION_TO_STOP_TEACHER_SECTIONS_WARNING.ago..
+        period: Policies::ChildAccount::TEACHER_WARNING_PERIOD.ago..
       )
     end
 

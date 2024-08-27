@@ -36,7 +36,7 @@ class Policies::ChildAccount
 
   # The maximum number of days a student should be age-gated before
   # a teacher stops receiving warnings about the sections the student is following.
-  MAX_AGE_GATE_DURATION_TO_STOP_TEACHER_SECTIONS_WARNING = 30.days
+  TEACHER_WARNING_PERIOD = 30.days
 
   # Is this user compliant with our Child Account Policy(cap)?
   # For students under-13, in Colorado, with a personal email login: we require
