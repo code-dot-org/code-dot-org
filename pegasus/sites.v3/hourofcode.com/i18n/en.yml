@@ -2598,6 +2598,16 @@
       header: "Continue learning after Transformers"
       desc: "The Transformers activity is an ideal first step for classrooms before tackling the open-ended projects in our new CS Connections curriculum. Once students learn basic coding, they can advance to CS Connections' cross-curricular projects."
   
+  hello_world:
+    header: "Hello World"
+    desc: "Say hello to the world of computer science with this introductory activity that equips students with the basic coding skills and confidence to create apps."
+    theme:
+      header: "Choose your Hello World theme!"
+      desc: "Choose from these fun themes to code interactive characters in a world you create!"
+    continue:
+      header: "Continue learning after Hello World"
+      desc: "Hello World is a great starting point before doing CS connections."
+
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
   hoc_live_learn_title: 'Learn with Hour of Code Live'

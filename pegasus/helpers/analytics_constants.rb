@@ -43,6 +43,7 @@ module AnalyticsConstants
     LMS_PAGE_VISITED_EVENT = 'LMS Page Visited'.freeze,
     CANVAS_PAGE_VISITED_EVENT = 'Canvas Page Visited'.freeze,
     SCHOOLOGY_PAGE_VISITED_EVENT = 'Schoology Page Visited'.freeze,
-    TRANSFORMERS_PAGE_VISITED_EVENT = 'Transformers Page Visited'.freeze
+    TRANSFORMERS_PAGE_VISITED_EVENT = 'Transformers Page Visited'.freeze,
+    HELLOWORLD_PAGE_VISITED_EVENT = 'Hello World Page Visited'.freeze
   ].freeze
 end

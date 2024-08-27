@@ -10,11 +10,9 @@ theme: responsive_full_width
   .wrapper.flex-container.justify-space-between.align-items-center.wrap
     .text-wrapper.col-45
       %h1.white
-        =hoc_s("transformers.header")
+        =hoc_s("hello_world.header")
       %p.body-one.white
-        =hoc_s("transformers.desc")
-      %a.link-button{href: "#easy"}
-        =hoc_s(:call_to_action_start_activity_short)
+        =hoc_s("hello_world.desc")
     %figure.col-45
       %img{src: "/images/banners/banner-transformers-one.png", alt: ""}
     .clear
@@ -53,9 +51,9 @@ theme: responsive_full_width
 %section#continue.bg-neutral-light
   .wrapper
     %h2.centered
-      =hoc_s("transformers.after.header")
+      =hoc_s("hello_world.continue.header")
     %p.centered
-      =hoc_s("transformers.after.desc")
+      =hoc_s("hello_world.continue.desc")
     .action-block.action-block--two-col.white
       .media-wrapper.col-50
         = view :display_video_thumbnail, id: "intro_csc", video_code: "GDcKJ1v2W1s", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/curriculum_videos/curriculum_video_csc.mp4"
@@ -73,7 +71,7 @@ theme: responsive_full_width
       =hoc_s(:middle_high_page_additional_resources_title)
     = view :"transformers/additional_resources"
 
-= view :analytics_event_log_helper, event_name: AnalyticsConstants::TRANSFORMERS_PAGE_VISITED_EVENT
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::HELLOWORLD_PAGE_VISITED_EVENT
 
 
 {{ featured_project, title: "Food", author: "M", age: "13+", image: "images/csc/helloworld/cschelloworld_happyfood2.gif", alt_text: "A student project featuring an animated gif of a fork moving across a plate next to avocado and pizza characters", url: "https://studio.code.org/projects/spritelab/sC_ZiNi_x5GUqsWHE2M4CrcbjU8XvtD3VNT7TM0Y0N8" }}
