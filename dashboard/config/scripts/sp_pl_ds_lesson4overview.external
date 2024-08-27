@@ -1,0 +1,28 @@
+name 'sp-pl-DS-lesson4Overview'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+#Introduction to Data Science
+
+####Now that you have learned about what Data Science is, let’s dive into the content of the unit and see how these concepts come together for your students. 
+
+<img src="https://images.code.org/8cb81004d23e85f78fa35f9f84b13106-image-1697565421892.png" alt="teacher helping two CSA students on the computer" width="350px" style="border-radius:10px; float:right; margin: 20px 60px 40px 40px;">
+
+## In this lesson, you will:
+
+
+- #### Explore best practices for teaching Data Science
+- #### Evaluate tips for teaching about bias 
+- #### Identify next steps to learn more and implement CS 
+
+
+
+
+### **Suggested time:**10 minutes
+
+
+## Let's get started 
+
+
+MARKDOWN
