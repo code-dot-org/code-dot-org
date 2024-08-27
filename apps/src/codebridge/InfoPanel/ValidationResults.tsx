@@ -11,6 +11,24 @@ interface ValidationResultsProps {
   className?: string;
 }
 
+function getClassForResult(result: ValidationResult) {
+  switch (result.result) {
+    case 'PASS':
+    case 'EXPECTED_FAILURE':
+      return classNames(moduleStyles.passIcon, 'fa-solid fa-check-circle');
+    case 'FAIL':
+    case 'UNEXPECTED_SUCCESS':
+      return classNames(moduleStyles.failIcon, 'fa-solid fa-times-circle');
+    case 'SKIP':
+      return classNames(moduleStyles.cautionIcon, 'fa-solid fa-minus-circle');
+    case 'ERROR':
+      return classNames(
+        moduleStyles.failIcon,
+        'fa-solid fa-exclamation-circle'
+      );
+  }
+}
+
 const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
   className,
 }) => {
@@ -21,24 +39,6 @@ const ValidationResults: React.FunctionComponent<ValidationResultsProps> = ({
 
   if (!validationResults) {
     return null;
-  }
-
-  function getClassForResult(result: ValidationResult) {
-    switch (result.result) {
-      case 'PASS':
-      case 'EXPECTED_FAILURE':
-        return classNames(moduleStyles.passIcon, 'fa-solid fa-check-circle');
-      case 'FAIL':
-      case 'UNEXPECTED_SUCCESS':
-        return classNames(moduleStyles.failIcon, 'fa-solid fa-times-circle');
-      case 'SKIP':
-        return classNames(moduleStyles.cautionIcon, 'fa-solid fa-minus-circle');
-      case 'ERROR':
-        return classNames(
-          moduleStyles.failIcon,
-          'fa-solid fa-exclamation-circle'
-        );
-    }
   }
 
   return (
