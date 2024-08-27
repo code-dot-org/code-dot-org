@@ -190,6 +190,7 @@ updates:
     directories: 
     - "/aws/offsite/aurora-snapshots-fargate"
     - "/docker/dockerfiles"
+    - "/docker/developers"
     schedule:
       interval: "daily"
     open-pull-requests-limit: 0
