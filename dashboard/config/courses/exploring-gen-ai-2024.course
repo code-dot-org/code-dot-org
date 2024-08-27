@@ -1,8 +1,8 @@
 {
   "name": "exploring-gen-ai-2024",
   "script_names": [
-    "exploring-gen-ai-1",
-    "exploring-gen-ai-2"
+    "exploring-gen-ai1-2024",
+    "exploring-gen-ai2-2024"
   ],
   "published_state": "in_development",
   "instruction_type": "teacher_led",
