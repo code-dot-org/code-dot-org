@@ -22,3 +22,10 @@ theme: responsive_full_width
     %p=hoc_s("tools_page.labs.desc")
     = view :"tools/tools_lab_list"
 
+%section.tools-el.bg-neutral-light
+  .wrapper
+    %h2=hoc_s("tools_page.tools_el.heading")
+    %p=hoc_s("tools_page.tools_el.desc")
+    %div.content-wrapper.flex-container.justify-space-between.wrap-reverse.gap-2
+      = view :"tools/tools_empower_learning"
+      %figure.rounded-corners

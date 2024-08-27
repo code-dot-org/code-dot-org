@@ -41,3 +41,31 @@ section.hero-banner-basic {
     }
   }
 }
+
+section.tools-el {
+  ul.icon-bullet-list {
+    margin: 0;
+    width: 45%;
+
+    @media screen and (max-width: $width-md) {
+      width: 100%;
+    }
+  }
+
+  figure {
+    background: url("/images/tools/tools-el.png") center no-repeat;
+    background-size: cover;
+    height: auto;
+    flex: 1;
+    margin: 1.5rem 0;
+
+    @media screen and (max-width: $width-md) {
+      height: 28rem;
+      margin-bottom: 0;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      height: 20rem;
+    }
+  }
+}

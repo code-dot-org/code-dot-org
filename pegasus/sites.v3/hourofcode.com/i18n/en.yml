@@ -2629,6 +2629,21 @@
     labs:
       heading: "Build your way with labs"
       desc: "Discover programming environments designed to meet you at your level and elevate your skills."
+    tools_el:
+      heading: "Empower learning with standalone tools"
+      desc: "Leverage our labs to create dynamic learning experiences that resonate with each student. These tools not only teach coding but also build confidence and spark curiosity through hands-on practice."
+      scaffolding: 
+        heading: "Scaffolded learning"
+        desc: "Our programming environments are carefully scaffolded, providing the right level of support to students at every step of their coding journey."
+      independence: 
+        heading: "Guided to independent"
+        desc: "Ease the transition from structured learning to exploration, with tools that encourage students to apply their learning in open-ended projects."
+      engagement: 
+        heading: "Engagement through creativity"
+        desc: "Coding becomes an adventure with labs and widgets that make learning not just educational, but exciting and genuinely fun."
+      differentiation: 
+        heading: "Support differentiation"
+        desc: "Cater to a range of abilities and interests, with tools that adapt to different skill levels, ensuring your students can find their path."
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
@@ -11557,6 +11572,14 @@
       call_to_action_learn_more: "Learn more"
       aria_label_learn_more: "Learn more about App Lab"
       call_to_action_try: "Try App Lab"
+    musiclab:
+      overline: "Ages 10+"
+      title: "Music Lab"
+      what_you_can_make: "Create your own mix and beats with code!"
+      experience: "Beginner"
+      call_to_action_learn_more: "Learn more"
+      aria_label_learn_more: "Learn more about Music Lab"
+      call_to_action_try: "Try Music Lab"
 
   resources_tabs:
     progress:
