@@ -16,18 +16,25 @@ import {
   EMAIL_OPT_IN_SESSION_KEY,
 } from './signUpFlowConstants';
 
-import style from './finishAccount.module.scss';
+import style from './signUpFlowStyles.module.scss';
 
 const FinishTeacherAccount: React.FunctionComponent<{
   usIp: boolean;
 }> = ({usIp}) => {
   const [name, setName] = useState('');
+  const [showNameError, setShowNameError] = useState(false);
   const [emailOptInChecked, setEmailOptInChecked] = useState(false);
 
   const onNameChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     const newName = e.target.value;
     setName(newName);
     sessionStorage.setItem(DISPLAY_NAME_SESSION_KEY, newName);
+
+    if (newName === '') {
+      setShowNameError(true);
+    } else {
+      setShowNameError(false);
+    }
   };
 
   const onEmailOptInChange = (): void => {
@@ -55,9 +62,14 @@ const FinishTeacherAccount: React.FunctionComponent<{
             placeholder={locale.msCoder()}
             onChange={onNameChange}
           />
-          <BodyThreeText>
+          <BodyThreeText className={style.displayNameSubtext}>
             {locale.this_is_what_your_students_will_see()}
           </BodyThreeText>
+          {showNameError && (
+            <BodyThreeText className={style.errorMessage}>
+              {locale.display_name_error_message()}
+            </BodyThreeText>
+          )}
         </div>
         <SchoolDataInputs usIp={usIp} includeHeaders={false} />
         <div>
@@ -88,6 +100,7 @@ const FinishTeacherAccount: React.FunctionComponent<{
             iconStyle: 'solid',
             title: 'arrow-right',
           }}
+          disabled={name === ''}
         />
       </div>
     </div>

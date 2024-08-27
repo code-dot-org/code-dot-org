@@ -4,6 +4,10 @@ import React from 'react';
 import locale from '@cdo/apps/signUpFlow/locale';
 import LoginTypeSelection from '@cdo/apps/signUpFlow/LoginTypeSelection';
 
+jest.mock('@cdo/apps/util/AuthenticityTokenStore', () => ({
+  getAuthenticityToken: jest.fn().mockReturnValue('authToken'),
+}));
+
 describe('LoginTypeSelection', () => {
   function renderDefault() {
     render(<LoginTypeSelection />);
@@ -11,7 +15,6 @@ describe('LoginTypeSelection', () => {
 
   it('renders headers, buttons and inputs', () => {
     renderDefault();
-
     // Renders page title
     screen.getByText(locale.pick_your_login_method());
     screen.getByText(locale.sign_up_with());
@@ -26,5 +29,8 @@ describe('LoginTypeSelection', () => {
     screen.getByText(locale.password());
     screen.getByText(locale.confirm_password());
     screen.getByText(locale.minimum_six_chars());
+
+    // Renders button that sends the user to the Account Type page
+    screen.getByRole('button', {name: locale.create_my_account()});
   });
 });

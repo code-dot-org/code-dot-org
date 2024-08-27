@@ -116,4 +116,39 @@ describe('FinishTeacherAccount', () => {
     fireEvent.click(emailOptInCheckbox);
     expect(sessionStorage.getItem(EMAIL_OPT_IN_SESSION_KEY)).toBe('false');
   });
+
+  it('finish teacher signup button starts disabled', () => {
+    renderDefault();
+
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+  });
+
+  it('leaving the displayName field empty shows error message and disabled button until display name is entered', () => {
+    renderDefault();
+    const displayNameInput = screen.getAllByDisplayValue('')[0];
+    const finishSignUpButton = screen.getByRole('button', {
+      name: locale.go_to_my_account(),
+    });
+
+    // Error message doesn't show and button is disabled by default
+    expect(screen.queryByText(locale.display_name_error_message())).toBe(null);
+    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+
+    // Enter display name
+    fireEvent.change(displayNameInput, {target: {value: 'FirstName'}});
+
+    // Error does not show and button is enabled when display name is entered
+    expect(screen.queryByText(locale.display_name_error_message())).toBe(null);
+    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe(null);
+
+    // Clear display name
+    fireEvent.change(displayNameInput, {target: {value: ''}});
+
+    // Error shows and button is disabled with empty display name
+    screen.getByText(locale.display_name_error_message());
+    expect(finishSignUpButton.getAttribute('aria-disabled')).toBe('true');
+  });
 });

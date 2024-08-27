@@ -15,6 +15,7 @@ function AccessibleDialog({
   onDismiss,
   children,
   className,
+  fallbackFocus,
   initialFocus = true,
   closeOnClickBackdrop = false,
 }) {
@@ -36,6 +37,7 @@ function AccessibleDialog({
             initialFocus: initialFocus,
             onDeactivate: onClose,
             clickOutsideDeactivates: closeOnClickBackdrop,
+            fallbackFocus: fallbackFocus,
           }}
         >
           <div
@@ -62,6 +64,7 @@ AccessibleDialog.propTypes = {
   onDismiss: PropTypes.func,
   children: PropTypes.node,
   className: PropTypes.string,
+  fallbackFocus: PropTypes.string,
   initialFocus: PropTypes.bool,
   closeOnClickBackdrop: PropTypes.bool,
 };
