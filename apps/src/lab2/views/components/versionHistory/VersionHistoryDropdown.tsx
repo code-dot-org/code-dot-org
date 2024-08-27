@@ -1,8 +1,10 @@
 import classNames from 'classnames';
-import React, {useCallback, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
+import Tags from '@cdo/apps/componentLibrary/tags/Tags';
+import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
@@ -32,36 +34,42 @@ const VersionHistoryDropdown: React.FunctionComponent<
 > = ({versionList, updatedSourceCallback, startSource, closeDropdown}) => {
   const [loadError, setLoadError] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [selectedVersion, setSelectedVersion] = useState('');
+
+  useEffect(() => {
+    if (selectedVersion === '') {
+      setSelectedVersion(
+        versionList.find(version => version.isLatest)?.versionId || ''
+      );
+    }
+  }, [versionList, selectedVersion]);
 
   const dispatch = useAppDispatch();
-  const restoreVersion = useCallback(
-    (version: ProjectVersion) => {
-      const projectManager = Lab2Registry.getInstance().getProjectManager();
-      if (projectManager) {
-        setLoading(true);
-        setLoadError(false);
-        projectManager
-          .restoreSources(version.versionId)
-          .then(sources => {
-            if (sources) {
-              dispatch(setProjectSource(sources));
-              if (updatedSourceCallback) {
-                updatedSourceCallback(sources);
-              }
-            } else {
-              setLoadError(true);
+  const restoreSelectedVersion = useCallback(() => {
+    const projectManager = Lab2Registry.getInstance().getProjectManager();
+    if (projectManager && selectedVersion) {
+      setLoading(true);
+      setLoadError(false);
+      projectManager
+        .restoreSources(selectedVersion)
+        .then(sources => {
+          if (sources) {
+            dispatch(setProjectSource(sources));
+            if (updatedSourceCallback) {
+              updatedSourceCallback(sources);
             }
-            setLoading(false);
-            closeDropdown();
-          })
-          .catch(() => {
+          } else {
             setLoadError(true);
-            setLoading(false);
-          });
-      }
-    },
-    [dispatch, updatedSourceCallback, closeDropdown]
-  );
+          }
+          setLoading(false);
+          closeDropdown();
+        })
+        .catch(() => {
+          setLoadError(true);
+          setLoading(false);
+        });
+    }
+  }, [dispatch, updatedSourceCallback, closeDropdown, selectedVersion]);
 
   const startOver = useCallback(() => {
     // TODO: confirm
@@ -77,31 +85,48 @@ const VersionHistoryDropdown: React.FunctionComponent<
     return parsedDate.toLocaleString();
   };
 
-  const renderVersionOptions = (version: ProjectVersion) => {
-    if (version.isLatest) {
-      return (
-        <div className={moduleStyles.latestVersionLabel}>
-          {commonI18n.latestVersion()}
-        </div>
-      );
-    } else {
-      return (
-        <>
-          <Button
-            text={commonI18n.restore()}
-            color={'white'}
-            size={'s'}
-            onClick={() => restoreVersion(version)}
-          />
-        </>
-      );
-    }
+  const onVersionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log('version changed!');
+    console.log(e.target.value);
+    setSelectedVersion(e.target.value);
   };
 
   return (
     <div>
       <div className={moduleStyles.versionHistoryList}>
         {versionList.map(version => (
+          <label className={moduleStyles.versionItem}>
+            <input
+              type="radio"
+              name={version.versionId}
+              value={version.versionId}
+              onChange={onVersionChange}
+              checked={selectedVersion === version.versionId}
+            />
+            <BodyTwoText className={moduleStyles.versionLabel}>
+              {parseDate(version.lastModified)}
+              {version.isLatest && (
+                <Tags
+                  tagsList={[
+                    {
+                      label: commonI18n.current(),
+                      icon: {
+                        iconName: 'check',
+                        iconStyle: 'regular',
+                        title: 'check',
+                        placement: 'left',
+                      },
+                      tooltipContent: commonI18n.current(),
+                      tooltipId: 'current-version-tag',
+                    },
+                  ]}
+                />
+              )}
+            </BodyTwoText>
+          </label>
+        ))}
+
+        {/* {versionList.map(version => (
           <div
             key={version.versionId}
             className={moduleStyles.versionHistoryRow}
@@ -111,7 +136,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
               {renderVersionOptions(version)}
             </div>
           </div>
-        ))}
+        ))} */}
         <div className={moduleStyles.versionHistoryRow}>
           <Button
             text={commonI18n.startOver()}
@@ -143,6 +168,14 @@ const VersionHistoryDropdown: React.FunctionComponent<
           <Alert type="danger" text={lab2I18n.versionLoadFailure()} size="s" />
         </div>
       )}
+      <div className={moduleStyles.versionDropdownFooter}>
+        <Button
+          text={commonI18n.restore()}
+          color={'purple'}
+          size={'m'}
+          onClick={restoreSelectedVersion}
+        />
+      </div>
     </div>
   );
 };
