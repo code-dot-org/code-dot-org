@@ -33,7 +33,6 @@ class PegasusTest < Minitest::Test
       code.org/congrats
       code.org/educate
       code.org/educate/weblab-test
-      code.org/review-hociyskvuwa
       code.org/teach
       code.org/student
     ],
