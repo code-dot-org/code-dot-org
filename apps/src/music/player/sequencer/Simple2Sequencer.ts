@@ -227,12 +227,14 @@ export default class Simple2Sequencer extends Sequencer {
    * Play a pattern event at the current location.
    */
   playPattern(value: PatternEventValue, blockId: string) {
+    const length = value.length || DEFAULT_PATTERN_LENGTH;
+
     this.addNewEvent<PatternEvent>({
       type: 'pattern',
       id: JSON.stringify(value),
       value,
       blockId,
-      length: DEFAULT_PATTERN_LENGTH,
+      length,
       ...this.getCommonEventFields(),
     });
   }
