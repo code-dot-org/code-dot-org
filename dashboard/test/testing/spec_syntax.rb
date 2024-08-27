@@ -43,6 +43,23 @@ module ActiveSupport
           name
         end
 
+        # This method is used to define a memoized assertion helper method for the test subject within the example scope.
+        #
+        # @see https://rspec.info/features/3-13/rspec-core/subject/explicit-subject
+        # @example Defining the subject of the test
+        #   class FooTest < ActiveSupport::TestCase
+        #     describe '.bar' do
+        #       subject(:bar) { Foo.bar }
+        #
+        #       it 'returns bar' do
+        #         _bar.must_equal 'bar'
+        #       end
+        #     end
+        #   end
+        #
+        # @param name [Symbol] The name of the tested subject
+        # @param block [Proc] The block that defines the subject
+        # @return [void]
         def subject(name = :subject, &block)
           already_initialized = respond_to?(name)
 
@@ -51,6 +68,13 @@ module ActiveSupport
           let("_#{name}") {_ public_send(name)} unless already_initialized
         end
 
+        # This method is used to define a memoized helper method and ensures its invocation before each example.
+        #
+        # @see https://rspec.info/features/3-13/rspec-core/helper-methods/let/
+        #
+        # @param name [Symbol] The name of the memoized helper method
+        # @param block [Proc] The block that defines the helper method
+        # @return [void]
         def let!(name, &block)
           already_initialized = respond_to?(name)
 
