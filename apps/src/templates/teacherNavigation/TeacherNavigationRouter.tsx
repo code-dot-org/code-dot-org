@@ -16,7 +16,6 @@ import SectionProjectsListWithData from '../projects/SectionProjectsListWithData
 import SectionAssessments from '../sectionAssessments/SectionAssessments';
 import StandardsReport from '../sectionProgress/standards/StandardsReport';
 import SectionProgressSelector from '../sectionProgressV2/SectionProgressSelector';
-import SectionsSetUpContainer from '../sectionsRefresh/SectionsSetUpContainer';
 import SectionLoginInfo from '../teacherDashboard/SectionLoginInfo';
 import StatsTableWithData from '../teacherDashboard/StatsTableWithData';
 import {sectionProviderName} from '../teacherDashboard/teacherSectionsRedux';
@@ -259,12 +258,13 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
         />
         <Route
           path={TEACHER_NAVIGATION_PATHS.settings}
-          element={applyV1TeacherDashboardWidth(
-            <SectionsSetUpContainer
-              isUsersFirstSection={false}
-              sectionToBeEdited={selectedSection}
+          element={
+            <ElementOrEmptyPage
+              showNoStudents={studentCount === 0}
+              showNoCurriculumAssigned={!anyStudentHasProgress}
+              element={applyV1TeacherDashboardWidth(<TemporaryBlankPage />)}
             />
-          )}
+          }
         />
         {showAITutorTab && (
           <Route

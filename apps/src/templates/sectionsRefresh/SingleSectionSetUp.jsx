@@ -44,7 +44,7 @@ export default function SingleSectionSetUp({
             name="grades"
             required={true}
             options={gradeOptions}
-            values={section.grade || section.grades || []}
+            values={section.grade || []}
             setValues={g => updateSection('grade', g)}
           />
         </div>
