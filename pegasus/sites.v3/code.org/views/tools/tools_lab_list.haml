@@ -1,0 +1,63 @@
+:ruby
+  items = [
+    {
+      overline: hoc_s("teach_labs_section.musiclab.overline"),
+      title: hoc_s("teach_labs_section.musiclab.title"),
+      what_you_can_make: hoc_s("teach_labs_section.musiclab.what_you_can_make"),
+      experience: hoc_s("teach_labs_section.musiclab.experience"),
+      img: "images/action-blocks/action-block-music-lab.png",
+      primary_label: hoc_s("teach_labs_section.musiclab.call_to_action_learn_more"),
+      primary_url: "/music",
+      primary_aria_label: hoc_s("teach_labs_section.musiclab.aria_label_learn_more"),
+      secondary_label: hoc_s("teach_labs_section.musiclab.call_to_action_try"),
+      secondary_url: CDO.studio_url("/s/music-intro-2024/reset"),
+      secondary_aria_label: hoc_s("teach_labs_section.musiclab.call_to_action_try"),
+    },
+    {
+      overline: hoc_s("teach_labs_section.spritelab.overline"),
+      title: hoc_s("teach_labs_section.spritelab.title"),
+      what_you_can_make: hoc_s("teach_labs_section.spritelab.what_you_can_make"),
+      experience: hoc_s("teach_labs_section.spritelab.experience"),
+      img: "images/build-your-way-spritelab.png",
+      primary_label: hoc_s("teach_labs_section.spritelab.call_to_action_learn_more"),
+      primary_url: "/educate/spritelab",
+      primary_aria_label: hoc_s("teach_labs_section.spritelab.aria_label_learn_more"),
+      secondary_label: hoc_s("teach_labs_section.spritelab.call_to_action_try"),
+      secondary_url: CDO.studio_url("/projects/spritelab/new"),
+      secondary_aria_label: hoc_s("teach_labs_section.spritelab.call_to_action_try"),
+    },
+    {
+      overline: hoc_s("teach_labs_section.gamelab.overline"),
+      title: hoc_s("teach_labs_section.gamelab.title"),
+      what_you_can_make: hoc_s("teach_labs_section.gamelab.what_you_can_make"),
+      experience: hoc_s("teach_labs_section.gamelab.experience"),
+      img: "images/game-lab-banner.png",
+      primary_label: hoc_s("teach_labs_section.gamelab.call_to_action_learn_more"),
+      primary_url: "/educate/gamelab",
+      primary_aria_label: hoc_s("teach_labs_section.gamelab.aria_label_learn_more"),
+      secondary_label: hoc_s("teach_labs_section.gamelab.call_to_action_try"),
+      secondary_url: CDO.studio_url("/projects/gamelab/new"),
+      secondary_aria_label: hoc_s("teach_labs_section.gamelab.call_to_action_try"),
+    },
+  ]
+
+.action-block__wrapper.action-block__wrapper--three-col
+  - items.each do |item|
+    .action-block.action-block--one-col.flex-space-between
+      .content-wrapper
+        %p.overline
+          = item[:overline]
+        %h3
+          = item[:title]
+        %img{src: item[:img], alt: ""}
+        %p 
+          %strong What you can make:
+          = item[:what_you_can_make]
+        %p 
+          %strong Experience:
+          = item[:experience]
+      .content-footer
+        %a.link-button{href: item[:primary_url], aria:{label: item[:primary_aria_label]}}
+          = item[:primary_label]
+        %a.link-button.secondary{href: item[:secondary_url], aria:{label: item[:secondary_aria_label]}}
+          = item[:secondary_label]
