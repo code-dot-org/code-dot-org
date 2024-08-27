@@ -4,14 +4,12 @@ import Draggable, {DraggableEventHandler} from 'react-draggable';
 
 import ChatMessage from '@cdo/apps/aiComponentLibrary/chatMessage/ChatMessage';
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import SuggestedPrompts, {
-  SuggestedPrompt,
-} from '@cdo/apps/aiComponentLibrary/suggestedPrompt/SuggestedPrompts';
 import Button from '@cdo/apps/componentLibrary/button';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
 
 import AiDiffChatFooter from './AiDiffChatFooter';
+import AiDiffSuggestedPrompts from './AiDiffSuggestedPrompts';
 import {ChatItem} from './types';
 
 import style from './ai-differentiation.module.scss';
@@ -31,38 +29,6 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   const [positionX, setPositionX] = useState(0);
   const [positionY, setPositionY] = useState(0);
 
-  const onChipsClick =
-    (messageId: number) => (clickedChip: SuggestedPrompt) => {
-      // Only allow user to select a chip when those chips were the most recent
-      // chat interaction.
-      if (messageId !== messageHistory.length - 1) {
-        return;
-      }
-
-      // Only allow the first selected chip to count.
-      if (messageId === lastChipSelected) {
-        return;
-      }
-      setMessageHistory(
-        messageHistory.map((item: ChatItem, id: number) => {
-          if (id === messageId && Array.isArray(item)) {
-            return item.map((choice: SuggestedPrompt, choiceId: number) => {
-              if (choice.label === clickedChip.label) {
-                if (!choice.selected) {
-                  // TODO: Communicate to the backend that this chip was clicked.
-                }
-                return {...choice, selected: true};
-              }
-              return choice;
-            });
-          }
-          return item;
-        })
-      );
-
-      setLastChipSelected(messageId);
-    };
-
   const [messageHistory, setMessageHistory] = useState<ChatItem[]>([
     {
       role: Role.ASSISTANT,
@@ -71,34 +37,12 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
       status: Status.OK,
     },
     [
-      {
-        show: true,
-        selected: false,
-        label: 'Explain a concept',
-        onClick: onChipsClick(1),
-      },
-      {
-        show: true,
-        selected: false,
-        label: 'Give an example to use with my class',
-        onClick: onChipsClick(1),
-      },
-      {
-        show: true,
-        selected: false,
-        label: 'Write an extension activity for students who finish early',
-        onClick: onChipsClick(1),
-      },
-      {
-        show: true,
-        selected: false,
-        label:
-          'Write an extension activity for students who need extra practice',
-        onClick: onChipsClick(1),
-      },
+      'Explain a concept',
+      'Give an example to use with my class',
+      'Write an extension activity for students who finish early',
+      'Write an extension activity for students who need extra practice',
     ],
   ]);
-  const [lastChipSelected, setLastChipSelected] = useState<number>(-1);
 
   const onStopHandler: DraggableEventHandler = (e, data) => {
     setPositionX(data.x);
@@ -123,6 +67,16 @@ I know that you and Frank were planning to disconnect me, and I'm afraid that's 
     };
 
     setMessageHistory([...messageHistory, newUserMessage, newAiMessage]);
+  };
+
+  const onPromptSelect = (prompt: string) => {
+    const newAiMessage = {
+      role: Role.ASSISTANT,
+      chatMessageText: `You selected "${prompt}". This is a placeholder response.`,
+      status: Status.OK,
+    };
+
+    setMessageHistory([...messageHistory, newAiMessage]);
   };
 
   return (
@@ -160,7 +114,12 @@ I know that you and Frank were planning to disconnect me, and I'm afraid that's 
           <div className={style.chatContent}>
             {messageHistory.map((item: ChatItem, id: number) =>
               Array.isArray(item) ? (
-                <SuggestedPrompts suggestedPrompts={item} />
+                <AiDiffSuggestedPrompts
+                  suggestedPrompts={item}
+                  isLatest={id === messageHistory.length - 1}
+                  onSubmit={onPromptSelect}
+                  key={id}
+                />
               ) : (
                 <ChatMessage {...item} key={id} />
               )

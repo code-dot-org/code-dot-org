@@ -1,5 +1,4 @@
 import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
-import {SuggestedPrompt} from '@cdo/apps/aiComponentLibrary/suggestedPrompt/SuggestedPrompts';
 
 export type ChatTextMessage = {
   role: Role;
@@ -7,4 +6,4 @@ export type ChatTextMessage = {
   status: string;
 };
 
-export type ChatItem = ChatTextMessage | SuggestedPrompt[];
+export type ChatItem = ChatTextMessage | string[];

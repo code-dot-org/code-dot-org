@@ -31,12 +31,12 @@ const SuggestedPrompts: React.FC<SuggestedPromptsProps> = ({
 
   return (
     <Chips
-      options={suggestedPrompts.map(prompt => {
-        return {label: prompt.label, value: prompt.label};
-      })}
-      values={suggestedPrompts.map((prompt, id) => {
-        return prompt.selected ? prompt.label : '';
-      })}
+      options={suggestedPrompts.flatMap(prompt =>
+        prompt.show ? {label: prompt.label, value: prompt.label} : []
+      )}
+      values={suggestedPrompts.flatMap(prompt =>
+        prompt.selected ? [prompt.label] : []
+      )}
       setValues={setValues}
       name={'Suggested Prompts'}
       size={'s'}
