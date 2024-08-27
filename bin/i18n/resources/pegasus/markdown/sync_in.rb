@@ -12,27 +12,10 @@ module I18n
         class SyncIn < I18n::Utils::SyncInBase
           LOCALIZABLE_FILE_SUBPATHS = %w[
             public/athome.md.partial
-            public/break.md.partial
-            public/coldplay.md.partial
             public/csforgood.md
             public/curriculum/unplugged.md.partial
-            public/educate/csc.md.partial
-            public/educate/curriculum/csf-transition-guide.md
             public/educate/it.md
             public/helloworld.md.partial
-            public/hourofcode/artist.md.partial
-            public/hourofcode/flappy.md.partial
-            public/hourofcode/frozen.md.partial
-            public/hourofcode/hourofcode.md.partial
-            public/hourofcode/infinity.md.partial
-            public/hourofcode/mc.md.partial
-            public/hourofcode/starwars.md.partial
-            public/hourofcode/unplugged-conditionals-with-cards.md.partial
-            public/international/about.md.partial
-            public/poetry.md.partial
-            views/hoc2022_create_activities.md.partial
-            views/hoc2022_play_activities.md.partial
-            views/hoc2022_explore_activities.md.partial
           ].freeze
 
           def process
