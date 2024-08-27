@@ -18,6 +18,7 @@ const Console: React.FunctionComponent = () => {
   const levelId = useAppSelector(state => state.lab.levelProperties?.id);
   const previousLevelId = useRef(levelId);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const consoleRef = useRef<HTMLDivElement>(null);
 
   const [graphModalOpen, setGraphModalOpen] = useState(false);
   const [activeGraphIndex, setActiveGraphIndex] = useState(0);
@@ -32,6 +33,12 @@ const Console: React.FunctionComponent = () => {
       previousLevelId.current = levelId;
     }
   }, [dispatch, levelId]);
+
+  useEffect(() => {
+    if (consoleRef.current) {
+      consoleRef.current.scrollTop = consoleRef.current.scrollHeight;
+    }
+  }, [consoleRef, codeOutput]);
 
   const clearOutput = () => {
     dispatch(resetOutput());
@@ -66,7 +73,7 @@ const Console: React.FunctionComponent = () => {
       headerContent={'Console'}
       rightHeaderContent={headerButton()}
     >
-      <div className={moduleStyles.console}>
+      <div className={moduleStyles.console} ref={consoleRef}>
         {codeOutput.map((outputLine, index) => {
           if (outputLine.type === 'img') {
             return (
