@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {useCallback, useEffect, useState} from 'react';
@@ -27,6 +28,7 @@ function SectionProgressSelector({
   progressTableV2ClosedBeta,
   sectionId,
   hasSeenProgressTableInvite,
+  isInV2Navigaton,
 }) {
   const [hasJustToggledViews, setHasJustToggledViews] = useState(false);
 
@@ -142,14 +144,19 @@ function SectionProgressSelector({
   };
 
   return (
-    <div className={styles.pageContent}>
+    <div
+      className={classNames(
+        styles.pageContent,
+        isInV2Navigaton && styles.navView
+      )}
+    >
       {displayV2 && (
         <ProgressBanners hasJustSwitchedToV2={hasJustToggledViews} />
       )}
       {toggleV1OrV2Link()}
 
       {displayV2 ? (
-        <SectionProgressV2 />
+        <SectionProgressV2 hideTopHeading={isInV2Navigaton} />
       ) : (
         <>
           {includeModalIfAvailable()}
@@ -166,6 +173,7 @@ SectionProgressSelector.propTypes = {
   setShowProgressTableV2: PropTypes.func.isRequired,
   sectionId: PropTypes.number,
   hasSeenProgressTableInvite: PropTypes.bool,
+  isInV2Navigaton: PropTypes.bool,
 };
 
 export const UnconnectedSectionProgressSelector = SectionProgressSelector;
