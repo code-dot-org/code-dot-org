@@ -8,14 +8,14 @@ theme: responsive_full_width
 
 %section.hero-banner-basic.overlay
   .wrapper.flex-container.justify-space-between.align-items-center.wrap
-    .text-wrapper
+    .text-wrapper.col-50
       %h1.white
         =hoc_s("transformers.header")
       %p.white
         =hoc_s("transformers.desc")
       %a.link-button.white{href: "#easy"}
         =hoc_s(:call_to_action_start_activity_short)
-    %figure
+    %figure.col-50
       %img{src: "/images/banners/banner-transformers-one.png", alt: ""}
     .clear
 
@@ -39,8 +39,13 @@ theme: responsive_full_width
       .media-wrapper.col-50
         = view :display_video_thumbnail, id: "intro_csc", video_code: "GDcKJ1v2W1s", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/curriculum_videos/curriculum_video_csc.mp4"
       .text-wrapper.col-50
+        %p.overline=hoc_s("teach_labs_section.spritelab.overline")
         %h3=hoc_s("transformers.fun.code_card.header")
         %p=hoc_s("transformers.fun.code_card.desc")
+        %p
+          %strong
+            =hoc_s(:module_label_duration)
+          =hoc_s(:module_duration_1_hr)
         %a.link-button{href: CDO.studio_url("#")}
           =hoc_s(:call_to_action_start_activity_short)
       .clear
@@ -55,6 +60,7 @@ theme: responsive_full_width
       .media-wrapper.col-50
         = view :display_video_thumbnail, id: "intro_csc", video_code: "GDcKJ1v2W1s", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/curriculum_videos/curriculum_video_csc.mp4"
       .text-wrapper.col-50
+        %p.overline=hoc_s("game_design_page.elementary_curricula.game_design.overline")
         %h3=hoc_s(:curriculum_name_csc)
         %p=hoc_s(:csc_page_top_desc)
         %a.link-button{href: CDO.studio_url("/csc")}
