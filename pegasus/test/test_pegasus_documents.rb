@@ -69,7 +69,6 @@ class PegasusTest < Minitest::Test
     code.org/playlab
     code.org/promote
     code.org/starwars
-    code.org/leaderboards
     code.org/page_mode
   ]
 
