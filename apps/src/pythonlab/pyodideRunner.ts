@@ -63,6 +63,7 @@ export async function runAllTests(
   if (validationFile) {
     // We only support one validation file. If somehow there is more than one, just run the first one.
     dispatch(appendSystemMessage(`Running level tests...`));
+    progressManager?.resetValidation();
     const result = await runPythonCode(
       runValidationTests(validationFile.name),
       source
@@ -75,7 +76,7 @@ export async function runAllTests(
       // See this PR for details: https://github.com/code-dot-org/pythonlab-packages/pull/5
       const testResults = result.message as Map<string, string>[];
       if (progressManager) {
-        PythonValidationTracker.getInstance().setTestResults(testResults);
+        PythonValidationTracker.getInstance().setValidationResults(testResults);
         progressManager.updateProgress();
       }
     }

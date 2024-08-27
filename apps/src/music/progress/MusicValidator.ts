@@ -1,7 +1,10 @@
 // Music Lab specific validations.
 
 import ConditionsChecker from '@cdo/apps/lab2/progress/ConditionsChecker';
-import {Validator} from '@cdo/apps/lab2/progress/ProgressManager';
+import {
+  ValidationResult,
+  Validator,
+} from '@cdo/apps/lab2/progress/ProgressManager';
 import {Condition, ConditionType} from '@cdo/apps/lab2/types';
 
 import {ChordEvent} from '../player/interfaces/ChordEvent';
@@ -172,5 +175,9 @@ export default class MusicValidator extends Validator {
       name,
       value,
     });
+  }
+
+  getValidationResults(): ValidationResult[] | undefined {
+    return undefined;
   }
 }
