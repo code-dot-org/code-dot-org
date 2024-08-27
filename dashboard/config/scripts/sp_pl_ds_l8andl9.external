@@ -1,0 +1,39 @@
+name 'sp-pl-DS_L8andL9'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Cleaning and Interpreting Data 
+
+
+#### In the next lessons, students will learn how to clean raw data to make it useful and explore how different visualizations can change our understanding of that data. They'll practice making decisions, discuss the challenges and biases that can arise, and work together to critically analyze and present data.
+
+---
+
+## Lesson 8 - Data Cleaning
+
+
+<img src="https://images.code.org/01467ad73fa6fe46843fe7e62d99adb8-image-1724423225270.png" alt="codap logo" width="220px"   style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+
+#### In this lesson, students look at how raw data can be in a format that prevents useful insights from being drawn.
+#### Students practice making the decisions that go into cleaning data and debrief with each other over the challenging parts of that process.
+#### The lesson concludes with a discussion about the tradeoffs inherent in these decisions since they can introduce bias and inaccuracy into a dataset.
+
+### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>.</b>
+
+<div style="clear:both;"></div>
+
+## Lesson 9 - Data Interpretation 
+<img src="https://images.code.org/ebfa1afbe8f17eae9192bde2b7314eb6-image-1724423378353.png" alt="graph icon" width="220px"  style="border-radius:10px; float:right; margin: 0 20px 0px 40px;">
+
+#### This lesson delves into how various data visualizations can shape our understanding of the same topic, emphasizing identifying trends, patterns, and outliers. 
+#### Students will analyze individual datasets and create visualizations before participating in a jigsaw activity to merge and discuss insights from different perspectives. 
+#### This collaborative approach enhances their ability to critically assess data and understand the ethical considerations involved in its presentation.
+
+### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>.</b>
+
+
+####Let’s take a look at a cleaning data activity from lesson 8! 
+
+
+MARKDOWN

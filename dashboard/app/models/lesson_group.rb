@@ -36,7 +36,7 @@ class LessonGroup < ApplicationRecord
     presence: {
       message: 'Expect all levelbuilder created lesson groups to have key.'
     },
-    if: proc {|a| a.user_facing} # rubocop:disable Style/SymbolProc
+    if: proc {|a| a.user_facing}
 
   serialized_attrs %w(
     display_name

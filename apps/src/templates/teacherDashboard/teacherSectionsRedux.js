@@ -74,6 +74,7 @@ const SET_COTEACHER_INVITE_FOR_PL =
   'teacherDashboard/SET_COTEACHER_INVITE_FOR_PL';
 export const SELECT_SECTION = 'teacherDashboard/SELECT_SECTION';
 const REMOVE_SECTION = 'teacherDashboard/REMOVE_SECTION';
+const UPDATED_SELECTED_SECTION = 'teacherDashboard/UPDATED_SELECTED_SECTION';
 const TOGGLE_SECTION_HIDDEN = 'teacherSections/TOGGLE_SECTION_HIDDEN';
 /** Opens add section UI */
 const CREATE_SECTION_BEGIN = 'teacherDashboard/CREATE_SECTION_BEGIN';
@@ -206,6 +207,10 @@ export const pageTypes = {
 export const setSections = sections => ({type: SET_SECTIONS, sections});
 export const selectSection = sectionId => ({type: SELECT_SECTION, sectionId});
 export const removeSection = sectionId => ({type: REMOVE_SECTION, sectionId});
+export const updateSelectedSection = section => ({
+  type: UPDATED_SELECTED_SECTION,
+  section,
+});
 
 /**
  * Changes the hidden state of a given section, persisting these changes to the
@@ -582,6 +587,11 @@ export const beginGoogleImportRosterFlow = () => dispatch => {
   dispatch(beginImportRosterFlow());
 };
 
+export const rosterImportFailed = result => ({
+  type: IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED,
+  status: result.status,
+});
+
 /**
  * Import the course with the given courseId from a third-party provider
  * (like Google Classroom or Clever), creating a new section. If the course
@@ -879,6 +889,22 @@ export default function teacherSections(state = initialState, action) {
       studentSectionIds: _.without(state.studentSectionIds, sectionId),
       plSectionIds: _.without(state.plSectionIds, sectionId),
       sections: _.omit(state.sections, sectionId),
+    };
+  }
+
+  if (action.type === UPDATED_SELECTED_SECTION) {
+    const sectionId = action.section.id;
+    const oldSection = state.sections[sectionId] || {};
+
+    return {
+      ...state,
+      sections: {
+        ...state.sections,
+        [sectionId]: {
+          ...oldSection,
+          ...sectionFromServerSection(action.section),
+        },
+      },
     };
   }
 
@@ -1420,6 +1446,7 @@ export const sectionFromServerSection = serverSection => ({
   sectionInstructors: serverSection.section_instructors,
   syncEnabled: serverSection.sync_enabled,
   aiTutorEnabled: serverSection.ai_tutor_enabled,
+  anyStudentHasProgress: serverSection.any_student_has_progress,
 });
 
 /**

@@ -10,7 +10,6 @@ social:
 
 %link{href: "/css/generated/front-page.css", rel: "stylesheet", type: "text/css"}
 %link{href: "/css/generated/hoc-banner.css", rel: "stylesheet", type: "text/css"}
-%link{href: "/css/generated/highlights-homepage.css", rel: "stylesheet", id: "highlight-styles"}
 
 -# We set the DCDO default to CDO.default_hoc_mode here because we can't change the DCDO flag on the test machine, but
 -# ui tests rely on hourofcode.com being in a hoc_mode consistent with production. This default needs to be updated
@@ -47,7 +46,8 @@ social:
   -# Off season interest form
   -# This is only shown when hoc_mode is false
   - if hoc_mode == false
-    %section.bg-neutral-light
+    %hr{style: "max-width: 960px; margin-inline: auto"}
+    %section
       .wrapper
         = view :off_season_interest_form
 
@@ -65,12 +65,6 @@ social:
             %a.link-button{href: 'https://code.org/envivo'}
               = hoc_s(:hoc_live_learn_more)
         %hr
-
-  -# Highlights
-  %section.highlights.centered
-    .wrapper
-      %h2=hoc_s(:highlights_header)
-      = view :home_highlights
 
   -# Stats
   %section.stats.bg-neutral-light

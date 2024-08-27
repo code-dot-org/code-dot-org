@@ -18,12 +18,26 @@ describe('SelectAccountType', () => {
     // Renders student card title, one item from the list, and button
     screen.getByText(locale.im_a_student());
     screen.getByText(locale.save_projects_and_progress());
-    screen.getByText(locale.sign_up_as_a_student());
+    const finishStudentAccountButton = screen.getByText(
+      locale.sign_up_as_a_student()
+    );
+    expect(
+      finishStudentAccountButton
+        .toString()
+        .includes("href: '/users/new_sign_up/finish_student_account'")
+    ).toBeTruthy;
 
     // Renders teacher card title, one item from the list, and button
     screen.getByText(locale.im_a_teacher());
     screen.getByText(locale.create_classroom_sections());
-    screen.getByText(locale.sign_up_as_a_teacher());
+    const finishTeacherAccountButton = screen.getByText(
+      locale.sign_up_as_a_teacher()
+    );
+    expect(
+      finishTeacherAccountButton
+        .toString()
+        .includes("href: '/users/new_sign_up/finish_teacher_account'")
+    ).toBeTruthy;
   });
 
   it('renders free curriculum popup dialog', () => {

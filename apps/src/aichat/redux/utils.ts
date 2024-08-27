@@ -75,6 +75,16 @@ export const hasFilledOutModelCard = (modelCardInfo: ModelCardInfo) => {
   return true;
 };
 
+export const anyFieldsChanged = (
+  levelDefaultAiCustomizations: AiCustomizations,
+  AiCustomizations: AiCustomizations
+) => {
+  return (
+    findChangedProperties(levelDefaultAiCustomizations, AiCustomizations)
+      .length === 0
+  );
+};
+
 export const allFieldsHidden = (fieldVisibilities: FieldVisibilities) =>
   getTypedKeys(fieldVisibilities).every(
     key => fieldVisibilities[key] === Visibility.HIDDEN

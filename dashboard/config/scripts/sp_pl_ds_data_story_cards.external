@@ -1,0 +1,25 @@
+name 'sp-pl-DS-data-story-cards'
+title 'Spotify Year Wrapped - Music Data Cards'
+description 'Spotify Year Wrapped - Music Data Cards'
+
+markdown <<MARKDOWN
+#Spotify Year Wrapped - Music Data Cards
+
+
+<div style="background-color: #F7F8FA; border-radius: 90px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 14px; "> In this lesson, your students will use an <a href="url" target="blank" rel="noopener noreferrer">activity guide</a> a to analyze the data story of three different cards.     
+</p>
+</div>
+
+
+## 📌To Do: 
+#### Choose one character card and reflect on the following questions:
+- #### 1. What story does this card tell us about the user?
+- #### 2. What data attributes might be associated with this story?
+
+
+![](https://images.code.org/360e9fc582274e496a1330b8dba49e01-image-1721235155263.png)
+
+#### *This module just gives an overview of the lesson. If you would like a deeper dive, click on the activity guide above.*
+MARKDOWN
