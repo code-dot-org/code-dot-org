@@ -228,45 +228,6 @@ class UnitGroup < ApplicationRecord
     end.map(&:name)
     raise "Cannot add units that have resources or vocabulary: #{unaddable_unit_names}" if unaddable_unit_names.any?
 
-    # make sure a unit cannot be in multiple unit groups.
-    #
-    # update_scripts gets called either when a course is edited via
-    # levelbuilder, or during seeding. we already take steps to prevent
-    # levelbuilders from adding units that are in other courses in the
-    # levelbuilder UI. So, if we hit the following error case, it's likely
-    # during the seed process.
-
-    # one way this can happen is if a unit was moved between unit groups via the
-    # levelbuilder UI, by first removing the unit from the old location before
-    # adding it to the new location. If those two changes reached the current
-    # environment during a single deploy, then the unit may not have been
-    # removed from the old unit group by the time we are adding it to the new
-    # unit group, in particular because the old unit group comes later in
-    # alphabetical order.
-    #
-    # in this case, we make sure the deploy doesn't fail, and also that
-    # the new data is _eventually_ seeded properly, similar to how we do it here
-    # for seeding resources and vocab:
-    # https://github.com/code-dot-org/code-dot-org/blob/7e67fddbad1c77aae37858f2350774c58e864c1e/dashboard/lib/services/script_seed.rb#L432-L445
-    #
-    # what we want to happen here is:
-    # 1. levelbuilder removes unit_1 from z_old_unit_group
-    # 2. levelbuilder adds unit_1 to a_new_unit_group
-    # 3. levelbuilder scoop + deploy to staging
-    # 4. during the first staging deploy
-    #    a. we try to add unit_1 to a_new_unit_group, but it's still in z_old_unit_group, so we can't add it yet. just print a warning for now.
-    #    b. we try to remove unit_1 from z_old_unit_group, and succeed
-    # 5. during the next staging deploy, we try to add unit_1 to a_new_unit_group again, and succeed
-    taken_units = new_units_objects.select do |u|
-      u.unit_groups.any? {|ug| ug != self}
-    end
-    if taken_units.any?
-      puts "WARNING: Cannot add units that are already in another unit group: #{taken_units.map(&:name)}. " \
-             "This is only to be expected if the unit was recently moved between unit groups. " \
-             "In that case, the issue will be resolved on the next deploy."
-      new_units_objects -= taken_units
-    end
-
     new_units_objects.each_with_index do |unit, index|
       unit_group_unit = UnitGroupUnit.find_or_create_by!(unit_group: self, script: unit) do |ugu|
         ugu.position = index + 1
