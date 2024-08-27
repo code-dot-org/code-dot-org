@@ -26,9 +26,9 @@ section.hero-banner-basic {
       height: 100%;
       background-image: url('/images/banners/banner-bg-rhombus.png');
       background-repeat: repeat;
-      background-size: 100%;
+      background-size: 1500px;
       z-index: 2;
-      filter: brightness(0.6) invert(1);
+      opacity: 4%;
     }
   }
 
