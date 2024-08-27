@@ -10,6 +10,26 @@ $default-spacing: 4px;
   box-sizing: border-box;
 }
 
+@mixin slider-track {
+  width: 100%;
+  height: 4px;
+  background: $light_gray_700;
+  border-radius: .1rem;
+}
+
+@mixin slider-thumb {
+  width: 12px;
+  height: 12px;
+  background: $white;
+  border-radius: 50%;
+  border: 1px solid $light_gray_700;
+}
+
+@mixin disabled-slider-thumb {
+  background: $light_gray_200;
+  border: none;
+}
+
 .modelCustomizationWorkspace {
   @extend %panel-section;
   display: flex;
@@ -51,28 +71,39 @@ $default-spacing: 4px;
   }
 
   input[type="range"] {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 4px;
-    background: $light_gray_700;
-    border-radius: .1rem;
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+
+    @include slider-track;
     &:disabled, &[aria-disabled="true"] {
       background: $light_gray_200;
     }
   }
 
   input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 12px;
-    height: 12px;
-    background: #fff;
-    border-radius: 50%;
-    border: 1px solid $light_gray_700;    
+    -webkit-appearance: none; /* Hides the thumb so that custom thumb can be made */
+
+    @include slider-thumb;
   }
 
   input[type="range"]:disabled::-webkit-slider-thumb {
+    @include disabled-slider-thumb;
+  }
+
+  /* Firefox */
+  input[type="range"]::-moz-range-track {
+    @include slider-track;
+  }
+
+  input[type="range"]:disabled::-moz-range-track {
     background: $light_gray_200;
-    border: none;    
+  }
+
+  input[type="range"]::-moz-range-thumb {    
+    @include slider-thumb;
+  }
+
+  input[type="range"]:disabled::-moz-range-thumb {
+    @include disabled-slider-thumb;
   }
 }
 
