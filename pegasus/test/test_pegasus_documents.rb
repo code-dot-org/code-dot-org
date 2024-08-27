@@ -33,7 +33,6 @@ class PegasusTest < Minitest::Test
       code.org/congrats
       code.org/educate
       code.org/educate/weblab-test
-      code.org/review-hociyskvuwa
       code.org/teach
       code.org/student
     ],
@@ -66,7 +65,6 @@ class PegasusTest < Minitest::Test
     code.org/educate/resources/videos
     code.org/learn/robotics
     code.org/minecraft
-    code.org/playlab
     code.org/promote
     code.org/starwars
     code.org/leaderboards

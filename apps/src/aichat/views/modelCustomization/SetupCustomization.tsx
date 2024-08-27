@@ -19,6 +19,7 @@ import {
   SET_TEMPERATURE_STEP,
 } from './constants';
 import FieldLabel from './FieldLabel';
+import SaveChangesAlerts from './SaveChangesAlerts';
 import UpdateButton from './UpdateButton';
 import {isVisible, isDisabled, isEditable} from './utils';
 
@@ -184,6 +185,7 @@ const SetupCustomization: React.FunctionComponent = () => {
       <div className={styles.footerButtonContainer}>
         <UpdateButton isDisabledDefault={allFieldsDisabled} />
       </div>
+      <SaveChangesAlerts />
     </div>
   );
 };
