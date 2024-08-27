@@ -462,24 +462,6 @@ def select_dropdown(element, option_text, load)
   end
 end
 
-When /^I open the topmost blockly category "([^"]*)"$/ do |name|
-  name_selector = ".blocklyTreeLabel:contains(#{name})"
-  # seems we usually have two of these item, and want the second if the function
-  # editor is open, the first if it isn't
-  @browser.execute_script(
-    "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " \
-    "$('#{name_selector}').get(val).dispatchEvent(new MouseEvent('mousedown', {" \
-      "bubbles: true," \
-      "cancelable: true," \
-      "view: window" \
-    "}))"
-  )
-rescue
-  script = "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " \
-    "$('" + name_selector + "').eq(val).simulate('drag', function(){});"
-  @browser.execute_script(script)
-end
-
 And(/^I open the blockly category with ID "([^"]*)"$/) do |id|
   # jQuery needs \\s to allow :s and .s in ID selectors
   # Escaping those gives us \\\\ per-character
@@ -753,6 +735,10 @@ end
 
 Then /^element "([^"]*)" has "([^"]*)" text from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, loc_key|
   element_has_i18n_text(selector, language, loc_key)
+end
+
+Then /^element "([^"]*)" has "([^"]*)" RTL text from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, loc_key|
+  element_has_i18n_text(selector, language, loc_key, rtl: true)
 end
 
 Then /^element "([^"]*)" has "([^"]*)" markdown from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, loc_key|

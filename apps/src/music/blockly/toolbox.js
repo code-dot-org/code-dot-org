@@ -438,6 +438,7 @@ export function getToolbox(toolbox) {
           Events: [BlockTypes.TRIGGERED_AT],
           Control: [BlockTypes.FOR_LOOP],
           Math: [
+            'math_number',
             'math_round',
             'math_arithmetic',
             'math_random_int',

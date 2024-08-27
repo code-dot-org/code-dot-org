@@ -118,4 +118,33 @@ describe('RosterDialog', () => {
     );
     expect(wrapper.find('#import-button-and-redirect')).to.have.lengthOf(1);
   });
+
+  it('should dispatch handleImportFailure when the redirect ajax fails', async () => {
+    const handleImportFailureMock = jest.fn();
+
+    const rosterDialog = shallow(
+      <RosterDialog
+        handleImport={() => {}}
+        handleCancel={() => {}}
+        handleImportFailure={handleImportFailureMock}
+        isOpen={true}
+        classrooms={[
+          {
+            id: '2',
+            name: 'Test',
+          },
+        ]}
+        loadError={failedLoadError}
+        rosterProvider={OAuthSectionTypes.google_classroom}
+      />
+    );
+
+    rosterDialog.instance().setState({selectedId: '2'});
+    await rosterDialog
+      .instance()
+      .handleRedirect()
+      .catch(error => {
+        expect(handleImportFailureMock.mock.calls.length).to.equal(1);
+      });
+  });
 });

@@ -606,6 +606,16 @@ class Section < ApplicationRecord
     script&.csa? || [CSA, CSA_PILOT_FACILITATOR].include?(unit_group&.family_name)
   end
 
+  def assigned_gen_ai?
+    [
+      'exploring-gen-ai1-2024',
+      'exploring-gen-ai2-2024',
+      'foundations-gen-ai-2024',
+      'customizing-llms-2024'
+    ].include?(script&.name) ||
+      unit_group&.name == 'exploring-gen-ai-2024'
+  end
+
   def reset_code_review_groups(new_groups)
     ActiveRecord::Base.transaction do
       code_review_groups.destroy_all
