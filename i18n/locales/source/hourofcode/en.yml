@@ -2072,7 +2072,7 @@
       heading: "Feedback or questions?"
       subheading: "We greatly value your input and invite you to share your feedback to help shape our offerings."
       desc: "Our international program is continuously expanding, and while resources may be limited, we are committed to growth that meets the needs of educators worldwide. For any questions or suggestions, our dedicated team is ready to assist you as we strive to support your journey in computer science education."
-      cta: "Email us at [international@code.org](%{email_url})."
+      cta: "Email us at [team-global@code.org](%{email_url})."
 
   intl_pl_partners_page:
     page_title: "International Professional Learning Partners"
