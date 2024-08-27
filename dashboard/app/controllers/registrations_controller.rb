@@ -64,15 +64,17 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   #
-  # Get /users/new_sign_up
+  # Get /users/new_sign_up/account_type
   #
-  def new_sign_up
-    render 'new_sign_up'
-  end
-
-  # Part of the new sign up flow - work in progress
   def account_type
     view_options(full_width: true, responsive_content: true)
+  end
+
+  #
+  # Get /users/new_sign_up/login_type
+  #
+  def login_type
+    render 'login_type'
   end
 
   #

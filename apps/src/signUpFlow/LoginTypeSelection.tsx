@@ -16,6 +16,8 @@ import i18n from '@cdo/locale';
 
 import {navigateToHref} from '../utils';
 
+import {ACCOUNT_TYPE_SESSION_KEY} from './signUpFlowConstants';
+
 import style from './signUpFlowStyles.module.scss';
 
 const LoginTypeSelection: React.FunctionComponent = () => {
@@ -34,6 +36,10 @@ const LoginTypeSelection: React.FunctionComponent = () => {
     setPassword(event.target.value);
   };
 
+  const finishAccountUrl =
+    sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === 'teacher'
+      ? studio('/users/new_sign_up/finish_teacher_account')
+      : studio('/users/new_sign_up/finish_student_account');
   const passwordIcon = password.length >= 6 ? 'circle-check' : 'circle-x';
   const iconClass = password.length >= 6 ? style.teal : style.lightGray;
 
@@ -144,9 +150,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
           <Button
             className={style.shortButton}
             text={locale.create_my_account()}
-            onClick={() =>
-              navigateToHref(studio('/users/new_sign_up/account_type'))
-            }
+            onClick={() => navigateToHref(finishAccountUrl)}
           />
         </div>
       </div>
