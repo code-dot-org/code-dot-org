@@ -26,7 +26,6 @@ module I18n
             public/hourofcode/hourofcode.md.partial
             public/hourofcode/infinity.md.partial
             public/hourofcode/mc.md.partial
-            public/hourofcode/playlab.md.partial
             public/hourofcode/starwars.md.partial
             public/hourofcode/unplugged-conditionals-with-cards.md.partial
             public/international/about.md.partial
