@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-25 04:58:22 UTC",
+    "serialized_at": "2024-08-27 02:51:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -423,12 +423,27 @@
       }
     },
     {
-      "key": "Sandbox: The Neighborhood",
-      "name": "Sandbox: The Neighborhood",
+      "key": "lesson-2",
+      "name": "AI-Generated Code (non-AI Tutor)",
       "absolute_position": 20,
       "lockable": false,
-      "has_lesson_plan": false,
+      "has_lesson_plan": true,
       "relative_position": 20,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa1-pilot-2025"
+      }
+    },
+    {
+      "key": "Sandbox: The Neighborhood",
+      "name": "Sandbox: The Neighborhood",
+      "absolute_position": 21,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 21,
       "properties": {
       },
       "seeding_key": {
@@ -7289,6 +7304,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-AIGeneratedCode-L1_2025"
+        ],
         "progression": "Investigating AI-Generated Code"
       },
       "bonus": false,
@@ -7311,6 +7329,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-AIGeneratedCode-L2_2025"
+        ],
         "progression": "Investigating AI-Generated Code"
       },
       "bonus": false,
@@ -7333,6 +7354,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-AIGeneratedCode-L3_2025"
+        ],
         "progression": "Planning Programs"
       },
       "bonus": false,
@@ -9976,6 +10000,18 @@
       }
     },
     {
+      "name": "Are We Automating Racism",
+      "url": "https://youtu.be/Ok5sKLXqynQ?feature=shared&t=255",
+      "key": "are_we_automating_racism",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "are_we_automating_racism"
+      }
+    },
+    {
       "name": "Asphalt Art Project",
       "url": "https://docs.google.com/presentation/d/1JliJ9LioCFS28DbedgICqNfE8nqsHoxyibOl1ZfXkAE/edit?usp=drive_link",
       "key": "asphalt_art_project",
@@ -10179,6 +10215,18 @@
       },
       "seeding_key": {
         "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "name": "How Chatbots and Large Language Models Work",
+      "url": "https://youtu.be/X-AWdfSFCHQ?feature=shared",
+      "key": "how_chatbots_and_large_language_models_work",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_chatbots_and_large_language_models_work"
       }
     },
     {
@@ -11840,7 +11888,19 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-8",
+        "resource.key": "are_we_automating_racism"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
         "resource.key": "guide_to_programming_levels_in_csa"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-8",
+        "resource.key": "how_chatbots_and_large_language_models_work"
       }
     },
     {
