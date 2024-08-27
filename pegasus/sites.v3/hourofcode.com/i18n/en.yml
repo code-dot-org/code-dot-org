@@ -2644,6 +2644,10 @@
       differentiation: 
         heading: "Support differentiation"
         desc: "Cater to a range of abilities and interests, with tools that adapt to different skill levels, ensuring your students can find their path."
+    quote:
+      text: "Labs were a game changer for my classroom. My students had so much fun tapping into their creativity to build their own sprites and games in lab!"
+      byline: "CSF Teacher"
+      location: "Arizona"
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
