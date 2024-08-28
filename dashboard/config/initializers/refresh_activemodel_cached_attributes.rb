@@ -10,6 +10,10 @@ module Cdo
   # there have been any new migrations executed against the database since this
   # instance of Rails was initialized. If there have been, we attempt to
   # refresh some caches and try again before treating this as an actual error.
+  #
+  # Note that this solution was crafted for Ruby on Rails v6.1.7.7, and is
+  # unfortunately reliant on some implementation details which may change in
+  # later versions.
   module RefreshActiveModelCachedAttributes
     def initialize(*args, **kwargs)
       count_and_remember_database_migrations unless defined?(@@latest_count_of_database_migrations)
@@ -23,10 +27,12 @@ module Cdo
         # Update migration count so we only try this refresh once.
         count_and_remember_database_migrations
 
-        # Refresh model as a whole; see https://github.com/rails/rails/blob/v6.1.7.7/activerecord/lib/active_record/model_schema.rb#L510-L517
+        # Attempt to refresh model as a whole, if it is refreshable.
+        # @see https://github.com/rails/rails/blob/v6.1.7.7/activerecord/lib/active_record/model_schema.rb#L510-L517
         self.class.try(:reset_column_information)
 
-        # Refresh this instance of the model; see https://github.com/rails/rails/blob/v6.1.7.7/activemodel/lib/active_model/attributes.rb#L76
+        # Refresh this instance of the model.
+        # @see https://github.com/rails/rails/blob/v6.1.7.7/activemodel/lib/active_model/attributes.rb#L76
         @attributes = self.class._default_attributes.deep_dup
 
         # Try again now that our attributes cache is accurately mirroring the database.
@@ -49,12 +55,14 @@ module Cdo
     # rather than the length, at a small performance cost.
     private def new_database_migration_since_initialization?
       return nil unless defined?(@@latest_count_of_database_migrations)
-      current_migrations_count = ApplicationRecord.connection.migration_context.get_all_versions.length
+      current_migrations_count =
+        ApplicationRecord.connection.migration_context.get_all_versions.length
       return current_migrations_count != @@latest_count_of_database_migrations
     end
 
     private def count_and_remember_database_migrations
-      @@latest_count_of_database_migrations = ApplicationRecord.connection.migration_context.get_all_versions.length
+      @@latest_count_of_database_migrations =
+        ApplicationRecord.connection.migration_context.get_all_versions.length
     end
   end
 end
