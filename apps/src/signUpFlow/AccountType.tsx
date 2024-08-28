@@ -8,14 +8,21 @@ import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 import FontAwesomeV6Icon from '../componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {Heading2} from '../componentLibrary/typography';
 import AccountCard from '../templates/account/AccountCard';
+import {navigateToHref} from '../utils';
 
 import FreeCurriculumDialog from './FreeCurriculumDialog';
+import {ACCOUNT_TYPE_SESSION_KEY} from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
 
 const AccountType: React.FunctionComponent = () => {
   const [isFreeCurriculumDialogOpen, setIsFreeCurriculumDialogOpen] =
     useState(false);
+
+  const selectAccountType = (accountType: string) => {
+    sessionStorage.setItem(ACCOUNT_TYPE_SESSION_KEY, accountType);
+    navigateToHref(studio('/users/new_sign_up/login_type'));
+  };
 
   return (
     <main className={style.wrapper}>
@@ -34,7 +41,7 @@ const AccountType: React.FunctionComponent = () => {
             content={locale.explore_courses_and_activities()}
             buttonText={locale.sign_up_as_a_student()}
             buttonType="primary"
-            href={studio('/users/new_sign_up/finish_student_account')}
+            onClick={() => selectAccountType('student')}
             iconList={[
               locale.save_projects_and_progress(),
               locale.join_classroom_section(),
@@ -47,7 +54,7 @@ const AccountType: React.FunctionComponent = () => {
             content={locale.all_student_account_features()}
             buttonText={locale.sign_up_as_a_teacher()}
             buttonType="primary"
-            href={studio('/users/new_sign_up/finish_teacher_account')}
+            onClick={() => selectAccountType('teacher')}
             iconList={[
               locale.create_classroom_sections(),
               locale.track_student_progress(),
