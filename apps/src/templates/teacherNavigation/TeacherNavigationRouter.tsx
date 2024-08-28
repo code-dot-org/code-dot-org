@@ -196,7 +196,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               <ElementOrEmptyPage
                 showNoStudents={studentCount === 0}
                 showNoCurriculumAssigned={!anyStudentHasProgress}
-                element={<SectionProgressSelector isInV2Navigaton={true} />}
+                element={<SectionProgressSelector isInV1Navigaton={false} />}
               />
             }
           />

@@ -9,13 +9,13 @@
 
 .pageWithHeader {
   flex-grow: 1;
-  padding: 20px 48px 20px 38px;
+  padding: 20px 48px 28px 38px;
   overflow-y: auto;
 }
 
 .widthLockedPage {
   max-width: $content-width;
-  padding: 10px 64px 64px 0;
+  padding: 10px 0 64px 0;
 }
 
 .sidebarContainer {

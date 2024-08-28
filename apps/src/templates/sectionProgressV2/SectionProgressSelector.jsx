@@ -28,7 +28,7 @@ function SectionProgressSelector({
   progressTableV2ClosedBeta,
   sectionId,
   hasSeenProgressTableInvite,
-  isInV2Navigaton,
+  isInV1Navigaton,
 }) {
   const [hasJustToggledViews, setHasJustToggledViews] = useState(false);
 
@@ -147,7 +147,7 @@ function SectionProgressSelector({
     <div
       className={classNames(
         styles.pageContent,
-        isInV2Navigaton && styles.navView
+        !isInV1Navigaton && styles.navView
       )}
     >
       {displayV2 && (
@@ -156,7 +156,7 @@ function SectionProgressSelector({
       {toggleV1OrV2Link()}
 
       {displayV2 ? (
-        <SectionProgressV2 hideTopHeading={isInV2Navigaton} />
+        <SectionProgressV2 hideTopHeading={!isInV1Navigaton} />
       ) : (
         <>
           {includeModalIfAvailable()}
@@ -173,7 +173,7 @@ SectionProgressSelector.propTypes = {
   setShowProgressTableV2: PropTypes.func.isRequired,
   sectionId: PropTypes.number,
   hasSeenProgressTableInvite: PropTypes.bool,
-  isInV2Navigaton: PropTypes.bool,
+  isInV1Navigaton: PropTypes.bool,
 };
 
 export const UnconnectedSectionProgressSelector = SectionProgressSelector;
