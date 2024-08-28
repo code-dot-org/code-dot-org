@@ -120,7 +120,6 @@ describe('aichatApi', () => {
           storedMessages,
           aiCustomizations,
           aichatContext,
-          true,
           maxPollingTime
         )
       ).messages;
