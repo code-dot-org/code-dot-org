@@ -76,6 +76,10 @@
         %div.resetLevel{:style => "height: 35px; margin: 15px"}
           = label_tag 'reset', 'Reset version history when saving and loading level', {:style => "display: inline; margin-top: 4px"}
           = check_box_tag 'reset', '1', true
+        - if [Javalab, Pythonlab].include?(@level.class)
+          %div.goToEditPage{:style => "height: 35px; margin: 15px"}
+            = label_tag 'go_to_start', 'Go to edit start code page after saving', {:style => "display: inline; margin-top: 4px"}
+            = check_box_tag 'go_to_start', '1', true
         = f.submit 'Save and publish your completed work', {:class => 'publishLevel', :style => "background-color: #f0c14b; margin-bottom: 10px; height: 35px"}
 
         %div{style: "display: flex; flex-direction: column; padding: 10px 10px 0px 10px"}
