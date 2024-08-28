@@ -2,12 +2,8 @@ require 'test_helper'
 
 class TestModel
   include ActiveModel::Model
+  include ActiveModel::Attributes
   attr_accessor :foo
-
-  # See https://github.com/rails/rails/blob/v6.1.7.7/activemodel/lib/active_model/attributes.rb#L15
-  def self.reset_column_information
-    self._default_attributes = ActiveModel::AttributeSet.new({})
-  end
 end
 
 class RefreshActiveModelCachedAttributesTest < ActiveSupport::TestCase
@@ -54,5 +50,36 @@ class RefreshActiveModelCachedAttributesTest < ActiveSupport::TestCase
     @mock_migration_context.stubs(:get_all_versions).returns([9, 8, 7])
     refute u.send(:new_database_migration_since_initialization?)
     refute TestModel.new.send(:new_database_migration_since_initialization?)
+  end
+
+  test 'assign_attributes will update cached information rather than raising an error when possible' do
+    class TestUpdatableModel < TestModel
+      # To simulate the effects of resetting column information on a
+      # database-backed model (ie, an ActiveRecord object) when the underlying
+      # database has updated columns, define a custom
+      # `reset_column_information` method which will manually update column
+      # information to the new state, rather than just clearing the cache.
+      def self.reset_column_information
+        # _default_attributes is a class_attribute, so `self` is required
+        # rubocop:disable Style/RedundantSelf
+        self._default_attributes = ActiveModel::AttributeSet.new({})
+        self._default_attributes['bar'] = ActiveModel::Attribute.from_database('bar', nil, ActiveModel::Type::String.new)
+        # rubocop:enable Style/RedundantSelf
+      end
+    end
+
+    # Regular initialization works as expected
+    TestUpdatableModel.new(foo: 'bar')
+
+    # Initialization with a field that does not exist will raise an error if
+    # the underlying database has not yet been updated.
+    assert_raises ActiveModel::UnknownAttributeError do
+      TestUpdatableModel.new(bar: 'baz')
+    end
+
+    # If the underlying database is updated such that the field does exist,
+    # initialization will now work.
+    @mock_migration_context.stubs(:get_all_versions).returns([1, 2, 3, 4])
+    TestUpdatableModel.new(bar: 'baz')
   end
 end
