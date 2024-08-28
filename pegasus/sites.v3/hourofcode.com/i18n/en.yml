@@ -2682,6 +2682,20 @@
         desc: "Explore the intricacies of networked computers with our expansive Internet Simulator. Beyond learning internet protocols, engage with CS concepts such as abstraction and the binary representation of data, all while understanding the 'why' behind internet structures."
         aria_label: "try the internet simulator widget"
         button_label: "Try this widget"
+    additional_resources:
+      heading: "Additional resources"
+      catalog:
+        title: "Curriculum Catalog"
+        desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
+        button_label: "Explore the catalog"
+      video_library:
+        title: "Video Library"
+        desc: "Explore our large library of engaging and informative videos to learn about key computer science concepts on a broad range of topics."
+        button_label: "View video library"
+      hour_of_code:
+        title: "Try an Hour of Code"
+        desc: "Looking for more short-form activities and resources for all age levels? Explore our large library of Hour of Code activities and tutorials!"
+        button_label: "See Hour of Code activities"
 
 
   hoc_live: 'Hour of Code Live'
