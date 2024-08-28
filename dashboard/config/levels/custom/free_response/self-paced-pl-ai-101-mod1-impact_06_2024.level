@@ -6,7 +6,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "## Reflection\r\n\r\nThinking back on what you’ve seen so far in this module, what has resonated with you? Is there something you didn't agree with or feel differently about in regards to AI?",
+    "long_instructions": "# Reflection\r\n\r\n#### Thinking back on what you’ve seen so far in this module, what has resonated with you? Is there something you didn't agree with or feel differently about in regards to AI?",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19619,
@@ -20,7 +20,7 @@
     "allow_multiple_attempts": "true"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-10T14:10:08.921+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-ai-101-mod1-impact_2024\\\"\"],\"cloned_from\":\"self-paced-pl-ai-101-mod1-impact_2024\"},{\"changed_at\":\"2024-04-10 14:11:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-04-10T14:10:08.921+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-ai-101-mod1-impact_2024\\\"\"],\"cloned_from\":\"self-paced-pl-ai-101-mod1-impact_2024\"},{\"changed_at\":\"2024-04-10 14:11:45 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 14:31:27 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -10,6 +10,8 @@ require_relative 'http_cache'
 # result in changes to these other files.
 
 module SharedConstants
+  DEFAULT_LOCALE = 'en-US'.freeze
+
   # Used to communicate different types of levels
   LEVEL_KIND = OpenStruct.new(
     {
@@ -101,6 +103,7 @@ module SharedConstants
     poetry
     poetry_hoc
     thebadguys
+    music
   ).freeze
 
   # For privacy reasons, App Lab and Game Lab can only be shared if certain conditions are met. These project types can be shared if: the user is >= 13 years old and their teacher has NOT disabled sharing OR the user is < 13 and their teacher has enabled sharing.
@@ -631,7 +634,21 @@ module SharedConstants
     PII_VIOLATION: 1001,
     # Profanity Failure
     PROFANITY_VIOLATION: 1002,
+    # Request Too Large
+    REQUEST_TOO_LARGE: 1003,
+    # Student exceeded max number of evaluations per project
+    STUDENT_LIMIT_EXCEEDED: 1004,
+    # Teacher exceeded max number of evaluations per student per project
+    TEACHER_LIMIT_EXCEEDED: 1005,
   }.freeze
+
+  RUBRIC_AI_EVALUATION_LIMITS = {
+    # Maximum number of evaluations we will automatically run for a student per project
+    STUDENT_LIMIT: 10,
+
+    # Maximum number of evaluations a teacher can request for a rubric per student
+    TEACHER_LIMIT: 10
+  }
 
   EMAIL_LINKS = OpenStruct.new(
     {
@@ -646,8 +663,8 @@ module SharedConstants
 
   CHILD_ACCOUNT_COMPLIANCE_STATES = OpenStruct.new(
     {
+      GRACE_PERIOD: 'p',
       LOCKED_OUT: 'l',
-      REQUEST_SENT: 's',
       PERMISSION_GRANTED: 'g'
     }
   ).freeze
@@ -689,8 +706,6 @@ module SharedConstants
       INSTALL_INSTRUCTIONS_URL: 'https://support.code.org/hc/en-us/articles/23621907533965-Install-Code-org-Integrations-for-your-Learning-Management-System',
       INSTALL_GUIDE_FOR_CANVAS_URL: 'https://support.code.org/hc/en-us/articles/23123273783437-Install-the-Code-org-Integration-for-Canvas',
       ROSTER_SYNC_INSTRUCTIONS_URL: 'https://support.code.org/hc/en-us/articles/23621978654605-Sync-Rosters-with-your-Learning-Management-System',
-      INTEGRATION_EARLY_ACCESS_URL: 'https://docs.google.com/forms/d/e/1FAIpQLScjfVR4CZs8Utf5vI4mz3e1q8vdH6RNIgTUWygZXN0oovBSQg/viewform',
-      INTEGRATION_BUG_REPORT_URL: 'https://support.code.org/hc/en-us/requests/new?ticket_form_id=14998494738829&tf_23889708=lms_eaf',
       ADDITIONAL_FEEDBACK_URL: 'https://studio.code.org/form/lms_integration_modal_feedback',
       # TODO(P20-873): Replace SUPPORTED_METHODS_URL with the link to the supported methods documentation
       SUPPORTED_METHODS_URL: 'https://github.com/code-dot-org/code-dot-org/blob/staging/docs/lti-integration.md#option-2-manual-entry',
@@ -704,10 +719,11 @@ module SharedConstants
 
   # We should always specify a version for the LLM so the results don't unexpectedly change.
   # reference: https://platform.openai.com/docs/models/gpt-3-5
-  AI_TUTOR_CHAT_MODEL_VERISON = 'gpt-3.5-turbo-1106'
+  AI_TUTOR_CHAT_MODEL_VERISON = 'gpt-4o-2024-05-13'
 
-  # These reflect the 'status' of an AI Tutor Interaction
-  AI_TUTOR_INTERACTION_STATUS = {
+  # These reflect the 'status' of an AI Interaction,
+  # and are used in both AI Tutor and AI Chat.
+  AI_INTERACTION_STATUS = {
     ERROR: 'error',
     PII_VIOLATION: 'pii_violation',
     PROFANITY_VIOLATION: 'profanity_violation',
@@ -715,21 +731,45 @@ module SharedConstants
     UNKNOWN: 'unknown',
   }.freeze
 
-  # These are the types of assistance AI Tutor can provide
+  AI_TUTOR_INTERACTION_STATUS = AI_INTERACTION_STATUS
+
   AI_TUTOR_TYPES = {
     COMPILATION: 'compilation',
     VALIDATION: 'validation',
     GENERAL_CHAT: 'general_chat',
   }.freeze
 
-  PII_TYPES = {
-    EMAIL: 'email',
-    PHONE: 'phone',
-    ADDRESS: 'address',
-  }.freeze
-
   USER_TYPES = OpenStruct.new(
     STUDENT: 'student',
     TEACHER: 'teacher',
   ).freeze
+
+  AI_REQUEST_EXECUTION_STATUS = {
+    # The request has been created but has not yet been processed.
+    NOT_STARTED: 0,
+    # The request has been queued for processing.
+    QUEUED: 1,
+    # The request is currently being processed.
+    RUNNING: 2,
+    # The request was successfully processed.
+    SUCCESS: 3,
+    # The request failed to process for an unexpected reason.
+    FAILURE: 1000,
+    # Profanity detected in the user's input.
+    USER_PROFANITY: 1001,
+    # PII detected in the user's input.
+    USER_PII: 1002,
+    # Profanity detected in the model's output.
+    MODEL_PROFANITY: 1003,
+    # PII detected in the model's output.
+    MODEL_PII: 1004
+  }
+
+  AI_CHAT_MODEL_IDS = {
+    ARITHMO: "gen-ai-arithmo2-mistral-7b",
+    BIOMISTRAL: "gen-ai-biomistral-7b",
+    MISTRAL: "gen-ai-mistral-7b-inst-v01",
+    KAREN: "gen-ai-karen-creative-mistral-7b",
+    PIRATE: "gen-ai-mistral-pirate-7b"
+  }
 end

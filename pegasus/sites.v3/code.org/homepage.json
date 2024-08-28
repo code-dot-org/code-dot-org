@@ -3,7 +3,9 @@
     "homepage": [
       "hoc2023-soon-hoc",
       "hoc2023-actual-hoc",
-      "pl-launch-superhero"
+      "pl-launch-superhero",
+      "curriculum-launch-2024",
+      "best-of-stem-2024"
     ]
   },
 
@@ -98,6 +100,37 @@
           "type": "cta_button_solid_yellow",
           "text": "front_join_us_learn_more",
           "url": "/educate/professional-learning"
+        }
+      ]
+    },
+    "curriculum-launch-2024": {
+      "dcdo": "curriculum-launch-2024",
+      "class": "curriculum-banner-hero homepage",
+      "desktopImage": "/images/banners/banner-bg-school-supplies-dark-black.png",
+      "actions": [
+        {
+          "type": "flex-container",
+          "text_h1": "curriculum_launch_2024.banner.heading",
+          "text_desc": "curriculum_launch_2024.banner.desc",
+          "external_link": true,
+          "button_color_white": true,
+          "button_link": "https://codeorg.medium.com/ai-game-design-and-more-in-code-orgs-2024-25-curriculum-updates-caff691935ad",
+          "button_text": "curriculum_launch_2024.banner.button_learn_more_here",
+          "img_src": "/images/banners/banner-curriculum-catalog-illustration-black.png"
+        }
+      ]
+    },
+    "best-of-stem-2024": {
+      "dcdo": "best-of-stem-2024",
+      "class": "best-of-stem-2024",
+      "desktopImage": "/images/banners/banner-bg-best-of-stem-confetti.png",
+      "actions": [
+        {
+          "type": "best-of-stem-2024",
+          "text_h1": "best_of_stem_heading",
+          "external_link": true,
+          "button_link": "https://medium.com/@codeorg/code-org-wins-two-best-of-stem-2024-awards-155e55bde866",
+          "button_text": "call_to_action_learn_more"
         }
       ]
     }

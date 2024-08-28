@@ -1,28 +1,43 @@
-import React, {useContext} from 'react';
-import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import style from './rubrics.module.scss';
 import classnames from 'classnames';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import AiAssessmentFeedbackContext from './AiAssessmentFeedbackContext';
-import {submitAiFeedback} from './AiAssessmentFeedback';
+import PropTypes from 'prop-types';
+import React, {useContext} from 'react';
 
-export default function AiAssessmentFeedbackRadio({aiEvalId, onChosen}) {
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import i18n from '@cdo/locale';
+
+import AiAssessmentFeedbackContext, {
+  THUMBS_UP,
+  THUMBS_DOWN,
+} from './AiAssessmentFeedbackContext';
+
+import style from './rubrics.module.scss';
+
+export default function AiAssessmentFeedbackRadio({aiEvalId, setAiFeedbackId}) {
   const radioGroupName = `ai-assessment-feedback-${aiEvalId}`;
-  const thumbsupval = 1;
-  const thumbsdownval = 0;
 
   const {aiFeedback, setAiFeedback} = useContext(AiAssessmentFeedbackContext);
 
-  const updateFeedback = value => {
+  const createAiFeedback = async value => {
+    // immediately show the thumbs up or down icon as selected in the UI
     setAiFeedback(value);
 
-    if (value === thumbsupval) {
-      submitAiFeedback({
+    // send the thumbs up or down value to the server
+    const baseUrl = '/learning_goal_ai_evaluation_feedbacks';
+    const response = await HttpClient.post(
+      baseUrl,
+      JSON.stringify({
         learningGoalAiEvaluationId: aiEvalId,
-        aiFeedbackApproval: thumbsupval,
-      });
-    }
+        aiFeedbackApproval: value,
+      }),
+      true,
+      {'Content-Type': 'application/json'}
+    );
+
+    // for thumbs down, wait until we have the server id of the feedback before
+    // displaying the survey form, so that we know which feedback to update.
+    const responseData = await response.json();
+    setAiFeedbackId(responseData.id);
   };
 
   return (
@@ -31,46 +46,46 @@ export default function AiAssessmentFeedbackRadio({aiEvalId, onChosen}) {
         <label>
           <span
             className={classnames(style.aiFeedbackRadioLabel, [
-              aiFeedback === thumbsupval && style.aiFeedbackRadioLabelChecked,
+              aiFeedback === THUMBS_UP && style.aiFeedbackRadioLabelChecked,
             ])}
             aria-hidden="true"
           >
-            {aiFeedback === thumbsupval ? (
-              <FontAwesome icon="thumbs-up" />
+            {aiFeedback === THUMBS_UP ? (
+              <FontAwesome icon="thumbs-up" data-testid="thumbs-up" />
             ) : (
-              <FontAwesome icon="thumbs-o-up" />
+              <FontAwesome icon="thumbs-o-up" data-testid="thumbs-o-up" />
             )}
           </span>
           <input
             type="radio"
             className={style.aiFeedbackRadio}
             name={radioGroupName}
-            value={thumbsupval}
-            onChange={() => updateFeedback(thumbsupval)}
-            checked={aiFeedback === thumbsupval}
+            value={THUMBS_UP}
+            onChange={() => createAiFeedback(THUMBS_UP)}
+            checked={aiFeedback === THUMBS_UP}
           />
         </label>
 
         <label>
           <span
             className={classnames(style.aiFeedbackRadioLabel, [
-              aiFeedback === thumbsdownval && style.aiFeedbackRadioLabelChecked,
+              aiFeedback === THUMBS_DOWN && style.aiFeedbackRadioLabelChecked,
             ])}
             aria-hidden="true"
           >
-            {aiFeedback === thumbsdownval ? (
-              <FontAwesome icon="thumbs-down" />
+            {aiFeedback === THUMBS_DOWN ? (
+              <FontAwesome icon="thumbs-down" data-testid="thumbs-down" />
             ) : (
-              <FontAwesome icon="thumbs-o-down" />
+              <FontAwesome icon="thumbs-o-down" data-testid="thumbs-o-down" />
             )}
           </span>
           <input
             type="radio"
             className={style.aiFeedbackRadio}
             name={radioGroupName}
-            value={thumbsdownval}
-            onChange={() => updateFeedback(thumbsdownval)}
-            checked={aiFeedback === thumbsdownval}
+            value={THUMBS_DOWN}
+            onChange={() => createAiFeedback(THUMBS_DOWN)}
+            checked={aiFeedback === THUMBS_DOWN}
           />
         </label>
       </div>
@@ -90,5 +105,5 @@ export default function AiAssessmentFeedbackRadio({aiEvalId, onChosen}) {
 
 AiAssessmentFeedbackRadio.propTypes = {
   aiEvalId: PropTypes.number.isRequired,
-  onChosen: PropTypes.func.isRequired,
+  setAiFeedbackId: PropTypes.func.isRequired,
 };

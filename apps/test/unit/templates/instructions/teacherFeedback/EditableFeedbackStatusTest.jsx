@@ -1,10 +1,8 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import moment from 'moment/moment';
 import React from 'react';
 
 import EditableFeedbackStatus from '@cdo/apps/templates/instructions/teacherFeedback/EditableFeedbackStatus';
-
-import {expect} from '../../../../util/reconfiguredChai';
 
 const setUp = latestFeedback => {
   const props = {latestFeedback};
@@ -20,8 +18,8 @@ describe('EditableFeedbackStatus', () => {
     };
 
     const wrapper = setUp(latestFeedback);
-    expect(wrapper.find('FontAwesome').props().icon).to.equal('check');
-    expect(wrapper.text().includes('Seen by student today')).to.be.true;
+    expect(wrapper.find('FontAwesome').props().icon).toBe('check');
+    expect(wrapper.text().includes('Seen by student today')).toBe(true);
   });
 
   it('displays nicely formatted date if student viewed teacher feedback yesterday', () => {
@@ -33,8 +31,8 @@ describe('EditableFeedbackStatus', () => {
     };
 
     const wrapper = setUp(latestFeedback);
-    expect(wrapper.find('FontAwesome').props().icon).to.equal('check');
-    expect(wrapper.text().includes('Seen by student yesterday')).to.be.true;
+    expect(wrapper.find('FontAwesome').props().icon).toBe('check');
+    expect(wrapper.text().includes('Seen by student yesterday')).toBe(true);
   });
 
   it('displays nicely formatted date if student viewed teacher feedback two days ago', () => {
@@ -46,11 +44,12 @@ describe('EditableFeedbackStatus', () => {
     };
 
     const wrapper = setUp(latestFeedback);
-    expect(wrapper.find('FontAwesome').props().icon).to.equal('check');
+    expect(wrapper.find('FontAwesome').props().icon).toBe('check');
 
     const formattedDate = moment(twoDaysAgo).format('l');
-    expect(wrapper.text().includes(`Seen by student ${formattedDate}`)).to.be
-      .true;
+    expect(wrapper.text().includes(`Seen by student ${formattedDate}`)).toBe(
+      true
+    );
   });
 
   it('displays nicely formatted date if student updated their progress since feedback was left', () => {
@@ -63,7 +62,7 @@ describe('EditableFeedbackStatus', () => {
     };
 
     const wrapper = setUp(latestFeedback);
-    expect(wrapper.text().includes('Last updated by student today')).to.be.true;
+    expect(wrapper.text().includes('Last updated by student today')).toBe(true);
   });
 
   it('displays correct message if student has not viewed their feedback', () => {
@@ -71,6 +70,6 @@ describe('EditableFeedbackStatus', () => {
     const latestFeedback = {student_seen_feedback: null, updated_at: today};
 
     const wrapper = setUp(latestFeedback);
-    expect(wrapper.text().includes('Updated by you today')).to.be.true;
+    expect(wrapper.text().includes('Updated by you today')).toBe(true);
   });
 });

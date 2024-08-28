@@ -1,6 +1,8 @@
 import React from 'react';
-import VariableFormGroup from './VariableFormGroup';
+
 import reactBootstrapStoryDecorator from '../reactBootstrapStoryDecorator';
+
+import VariableFormGroup from './VariableFormGroup';
 
 export default {
   component: VariableFormGroup,

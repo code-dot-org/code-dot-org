@@ -1,0 +1,77 @@
+<Gamelab>
+  <config><![CDATA[{
+  "game_id": 50,
+  "created_at": "2024-05-04T02:44:32.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "skin": "gamelab",
+    "code_functions": {
+      "rect": {
+        "paletteParams": [
+          "x",
+          "y"
+        ],
+        "params": [
+          "200",
+          "200"
+        ]
+      }
+    },
+    "edit_code": true,
+    "embed": "false",
+    "instructions_important": "false",
+    "start_blocks": "//2) Change the numbers inside the block, then try running the program again.\r\n//3) Try to place the rectangle near the bottom right of the screen.\r\nrect(100,100);",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "validation_enabled": "true",
+    "text_mode_at_start": "false",
+    "hide_animation_mode": "true",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "submittable": "false",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "true",
+    "pause_animations_by_default": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"\",\r\n  \"callout_text\": \"\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"block_trigger\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"top center\",\r\n    \"at\": \"bottom right\",\r\n    \"adjust\": {\r\n     \"x\": 50,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
+    "long_instructions": "*This level follows a video that you may have watched with your class. If you missed the video, you can watch it in the Help and Tips tab of this level.*\r\n\r\n# Explore Game Lab\r\n\r\n# Do This\r\n\r\n1) Here is the same line of code from the previous level.\r\n2) Change the numbers inside the block, then try running the program again.\r\n3) Try to place the rectangle near the bottom right of the screen.",
+    "display_name": "Introduction to Game Lab",
+    "teacher_markdown": "# Tour of Game Lab\r\n\r\nDepending on the age and comfort level of your students, you may choose to use this level to tour the environment as a whole class. Make sure that students can find the level instructions, coding area, display area, and block drawers. This is also a good opportunity to point out some of the useful resources like documentation and the blocks to text button.",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "parent_level_id": 20640,
+    "name_suffix": "_CSD-PL-24",
+    "show_type_hints": "false",
+    "include_shared_functions": "false",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "libraries_enabled": "false",
+    "video_key": "csd_gamelab_draw_1",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:44:32.142+00:00\",\"changed\":[\"cloned from \\\"CSD U3 rect_2024\\\"\"],\"cloned_from\":\"CSD U3 rect_2024\"}]"
+}]]></config>
+  <blocks/>
+</Gamelab>

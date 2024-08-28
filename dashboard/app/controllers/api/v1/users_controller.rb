@@ -3,12 +3,8 @@ require 'cdo/firehose'
 class Api::V1::UsersController < Api::V1::JSONApiController
   before_action :load_user
   skip_before_action :verify_authenticity_token
-  skip_before_action :load_user, only: [:current, :netsim_signed_in, :post_sort_by_family_name, :cached_page_auth_redirect, :post_show_progress_table_v2, :get_current_permissions, :post_disable_lti_roster_sync, :update_ai_tutor_access]
+  skip_before_action :load_user, only: [:current, :netsim_signed_in, :post_sort_by_family_name, :cached_page_auth_redirect, :post_show_progress_table_v2, :post_ai_rubrics_disabled, :post_date_progress_table_invitation_last_delayed, :post_has_seen_progress_table_v2_invitation, :get_current_permissions, :post_disable_lti_roster_sync, :update_ai_tutor_access]
   skip_before_action :clear_sign_up_session_vars, only: [:current]
-
-  private def to_bool(val)
-    ActiveModel::Type::Boolean.new.cast val
-  end
 
   def load_user
     user_id = params[:user_id]
@@ -24,7 +20,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     if current_user
       render json: {
         id: current_user.id,
-        uuid: Digest::UUID.uuid_v5(Dashboard::Application.config.secret_key_base, current_user.id.to_s),
+        uuid: current_user.uuid,
         username: current_user.username,
         user_type: current_user.user_type,
         is_signed_in: true,
@@ -36,8 +32,16 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         over_21: current_user.over_21?,
         sort_by_family_name: current_user.sort_by_family_name?,
         show_progress_table_v2: current_user.show_progress_table_v2,
+        ai_rubrics_disabled: current_user.ai_rubrics_disabled,
         progress_table_v2_closed_beta: current_user.progress_table_v2_closed_beta?,
-        ai_tutor_access_denied: !!current_user.ai_tutor_access_denied
+        ai_tutor_access_denied: !!current_user.ai_tutor_access_denied,
+        has_seen_progress_table_v2_invitation: current_user.has_seen_progress_table_v2_invitation?,
+        date_progress_table_invitation_last_delayed: current_user.date_progress_table_invitation_last_delayed,
+        child_account_compliance_state: current_user.cap_status,
+        country_code: helpers.country_code(current_user, request),
+        us_state_code: current_user.us_state_code,
+        in_section: current_user.student? ? current_user.sections_as_student.present? : nil,
+        created_at: current_user.created_at,
       }
     else
       render json: {
@@ -193,7 +197,52 @@ class Api::V1::UsersController < Api::V1::JSONApiController
   def post_show_progress_table_v2
     return head :unauthorized unless current_user
 
-    current_user.show_progress_table_v2 = !!params[:show_progress_table_v2].try(:to_bool)
+    show_v2_arg = !!params[:show_progress_table_v2].try(:to_bool)
+    current_user.show_progress_table_v2 = show_v2_arg
+
+    if show_v2_arg
+      current_user.progress_table_v2_timestamp = DateTime.now
+    else
+      current_user.progress_table_v1_timestamp = DateTime.now
+    end
+    current_user.save!
+
+    head :no_content
+  end
+
+  # POST /api/v1/users/has_seen_progress_table_v2_invitation
+  def post_has_seen_progress_table_v2_invitation
+    return head :unauthorized unless current_user
+
+    current_user.has_seen_progress_table_v2_invitation = !!params[:has_seen_progress_table_v2_invitation].try(:to_bool)
+
+    show_v2_arg = !!params[:show_progress_table_v2].try(:to_bool)
+    current_user.show_progress_table_v2 = show_v2_arg
+
+    if show_v2_arg
+      current_user.progress_table_v2_timestamp = DateTime.now
+    end
+
+    current_user.save!
+
+    head :no_content
+  end
+
+  # POST /api/v1/users/date_progress_table_invitation_last_delayed
+  def post_date_progress_table_invitation_last_delayed
+    return head :unauthorized unless current_user
+
+    current_user.date_progress_table_invitation_last_delayed = params[:date_progress_table_invitation_last_delayed]
+    current_user.save
+
+    head :no_content
+  end
+
+  # POST /api/v1/users/ai_rubrics_disabled
+  def post_ai_rubrics_disabled
+    return head :unauthorized unless current_user
+
+    current_user.ai_rubrics_disabled = !!params[:ai_rubrics_disabled].try(:to_bool)
     current_user.save
 
     head :no_content
@@ -317,5 +366,9 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     else
       return head :bad_request
     end
+  end
+
+  private def to_bool(val)
+    ActiveModel::Type::Boolean.new.cast val
   end
 end

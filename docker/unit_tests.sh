@@ -31,8 +31,10 @@ ignore_eyes_mismatches: true
 localize_apps: true
 optimize_rails_assets: false
 optimize_webpack_assets: false
+session_store_server: 'redis://unit-tests-redis:6379/0/session'
 skip_seed_all: true
 use_my_apps: true
+aiproxy_api_key: 'notarealkey'
 " >> locals.yml
 echo "Wrote secrets from env vars into locals.yml."
 

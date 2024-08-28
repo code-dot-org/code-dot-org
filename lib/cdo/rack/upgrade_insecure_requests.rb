@@ -4,6 +4,7 @@
 
 require 'cdo/rack/process_html'
 require 'dynamic_config/dcdo'
+require 'set'
 
 module Rack
   class UpgradeInsecureRequests < ProcessHtml
@@ -45,12 +46,12 @@ module Rack
             "default-src 'self' https:",
             "frame-src 'self' https: blob:",
             "worker-src 'self' blob: ",
-            "child-src blob: ",
+            "child-src 'self' blob: ",
             "script-src 'self' https: 'unsafe-inline' https://vaas.acapela-group.com 'unsafe-eval'",
             "style-src 'self' https: 'unsafe-inline'",
             "img-src 'self' https: data: blob: https://*.code.org",
             "font-src 'self' https: data:",
-            "connect-src 'self' https: https://api.pusherapp.com wss://ws.pusherapp.com wss://*.firebaseio.com http://localhost:8080 https://curriculum.code.org/ wss://*.code.org",
+            "connect-src 'self' https: https://api.pusherapp.com wss://ws.pusherapp.com http://localhost:8080 https://curriculum.code.org/ wss://*.code.org",
             "media-src 'self' https: data: https://*.code.org http://vaas.acapela-group.com",
             "report-uri #{CDO.code_org_url('https/mixed-content')}"
           ]
@@ -61,9 +62,17 @@ module Rack
         # specified source list (as described in
         # http://w3c.github.io/webappsec-csp/#source-lists) to frame our
         # content.
-        allowed_iframe_ancestors = DCDO.get('allowed_iframe_ancestors', nil) || CDO.allowed_iframe_ancestors
+
+        # If the request path is an allow listed, the frame-ancestors policy is made permissive.
+        # Warning: Our default policy is to deny iframes for security concerns.  Allow list entries are only to be
+        # added when absolutely necessary, when the scope is reduced to bare minimum to meet the objectives, and once
+        # security has reviewed and signed off on the specific changed.  Please contact security for more information.
+        iframe_path_allowlist = Set.new(["/lti/v1/authenticate", "/lti/v1/dynamic_registration"])
+        cdo_allowed_iframe_ancestors = DCDO.get('allowed_iframe_ancestors', nil) || CDO.allowed_iframe_ancestors
+        allowed_iframe_ancestors = iframe_path_allowlist.include?(env['REQUEST_PATH']) ? '*' : cdo_allowed_iframe_ancestors
+
         if allowed_iframe_ancestors
-          policies << "frame-ancestors 'self' #{allowed_iframe_ancestors}"
+          (policies << "frame-ancestors 'self' #{allowed_iframe_ancestors}")
 
           # Clear the older X-Frame-Options header because it doesn't support
           # multiple domains. We need to clear this because on Chrome,

@@ -28,7 +28,12 @@ module CircleUtils
   end
 
   def self.circle?
-    ENV['CIRCLECI']
+    ENV.fetch('CIRCLECI', nil)
+  end
+
+  # In unit tests, we want to bypass the cache and recompute tags.
+  def self.__clear_cached_tags_for_test
+    @build_tags = nil
   end
 
   # @return [Set<Set<String>>] set of build tags in this build's commit message
@@ -37,10 +42,5 @@ module CircleUtils
     @build_tags ||= circle_commit_message.
       scan(/(?<=\[)[\w\d\s]+(?=\])/).
       to_set {|s| s.downcase.split.to_set}
-  end
-
-  # In unit tests, we want to bypass the cache and recompute tags.
-  def self.__clear_cached_tags_for_test
-    @build_tags = nil
   end
 end

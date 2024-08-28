@@ -1,5 +1,7 @@
 import React, {useLayoutEffect, useState} from 'react';
+
 import standaloneVideoLocale from './locale';
+
 import styles from './video.module.scss';
 
 interface VideoProps {

@@ -12,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-12 20:44:54 UTC",
+    "serialized_at": "2024-07-11 16:21:20 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6116,6 +6117,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-pre-survey-levelgroup_21_222022_csa_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6137,6 +6141,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L1_2024"
+        ],
         "progression": "Predict and Run: A Java Program"
       },
       "bonus": false,
@@ -6159,6 +6166,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L2_2024"
+        ],
         "progression": "Investigate and Modify: Working with Java Files"
       },
       "bonus": false,
@@ -6181,6 +6191,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L3_2024"
+        ],
         "progression": "Practice: Syntax Errors"
       },
       "bonus": false,
@@ -6203,6 +6216,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L4_2024"
+        ],
         "progression": "Practice: Syntax Errors"
       },
       "bonus": false,
@@ -6225,6 +6241,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L2-L5_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6247,6 +6266,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3 Predict_2024"
+        ],
         "progression": "Predict and Run: Classes and Objects"
       },
       "bonus": false,
@@ -6269,6 +6291,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3 Investigate_2024"
+        ],
         "progression": "Investigate and Modify: The Painter Class"
       },
       "bonus": false,
@@ -6291,6 +6316,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L3 Exit_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6313,6 +6341,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3 Skill Building_2024"
+        ],
         "progression": "Skill Building: Painter Objects"
       },
       "bonus": false,
@@ -6335,6 +6366,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L3 CFU_2024"
+        ],
         "progression": "Practice: Painter Objects"
       },
       "bonus": false,
@@ -6357,6 +6391,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L5_2024"
+        ],
         "progression": "Practice: Painter Objects"
       },
       "bonus": false,
@@ -6379,6 +6416,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L6_2024"
+        ],
         "progression": "Practice: Painter Objects"
       },
       "bonus": false,
@@ -6401,6 +6441,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L3-L7_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6423,6 +6466,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L1_2024"
+        ],
         "progression": "Predict and Run: Painter Class Methods"
       },
       "bonus": false,
@@ -6445,6 +6491,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L2_2024"
+        ],
         "progression": "Investigate and Modify: Painter Class Methods"
       },
       "bonus": false,
@@ -6467,6 +6516,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L2-2_2024"
+        ],
         "progression": "Investigate and Modify: Painter Class Methods"
       },
       "bonus": false,
@@ -6489,6 +6541,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L3_2024"
+        ],
         "progression": "Practice: Painter Class Methods"
       },
       "bonus": false,
@@ -6511,6 +6566,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L4_2024"
+        ],
         "progression": "Practice: Painter Class Methods"
       },
       "bonus": false,
@@ -6533,6 +6591,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L4-L5_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6555,6 +6616,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5 Predict Code_2024"
+        ],
         "progression": "Predict and Run: Painting"
       },
       "bonus": false,
@@ -6577,6 +6641,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5 Investigate_2024"
+        ],
         "progression": "Investigate and Modify: Painting"
       },
       "bonus": false,
@@ -6599,6 +6666,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5 Investigate-2_2024"
+        ],
         "progression": "Investigate and Modify: Painting"
       },
       "bonus": false,
@@ -6621,6 +6691,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5 Investigate-3_2024"
+        ],
         "progression": "Investigate and Modify: Painting"
       },
       "bonus": false,
@@ -6643,6 +6716,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5 CFU_2024"
+        ],
         "progression": "Practice: Moving and Painting"
       },
       "bonus": false,
@@ -6665,6 +6741,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5 Practice_2024"
+        ],
         "progression": "Practice: Moving and Painting"
       },
       "bonus": false,
@@ -6687,6 +6766,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5 Exit CFU_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6709,6 +6791,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L1_2024"
+        ],
         "progression": "Predict and Run: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6731,6 +6816,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2_2024"
+        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6753,6 +6841,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2-2_2024"
+        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6775,6 +6866,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2-3_2024"
+        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6797,6 +6891,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L2-4_2024"
+        ],
         "progression": "Investigate and Modify: Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6819,6 +6916,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L3_2024"
+        ],
         "progression": "Practice: Using Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6841,6 +6941,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L4_2024"
+        ],
         "progression": "Practice: Using Loops and Boolean Methods"
       },
       "bonus": false,
@@ -6863,6 +6966,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L5-L5_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6885,6 +6991,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L1_2024"
+        ],
         "progression": "Practice: Creating PainterPlus"
       },
       "bonus": false,
@@ -6907,6 +7016,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L2_2024"
+        ],
         "progression": "Practice: Creating PainterPlus"
       },
       "bonus": false,
@@ -6929,6 +7041,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L3_2024"
+        ],
         "progression": "Practice: Creating PainterPlus"
       },
       "bonus": false,
@@ -6951,6 +7066,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L6-L4_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6973,6 +7091,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L1_2024"
+        ],
         "progression": "Predict and Run: Writing Methods"
       },
       "bonus": false,
@@ -6995,6 +7116,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L2_2024"
+        ],
         "progression": "Investigate and Modify: Void Methods"
       },
       "bonus": false,
@@ -7017,6 +7141,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L2-2_2024"
+        ],
         "progression": "Investigate and Modify: Void Methods"
       },
       "bonus": false,
@@ -7039,6 +7166,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L2-3_2024"
+        ],
         "progression": "Investigate and Modify: Void Methods"
       },
       "bonus": false,
@@ -7061,6 +7191,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L3_2024"
+        ],
         "progression": "Practice: Writing Methods"
       },
       "bonus": false,
@@ -7083,6 +7216,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L4_2024"
+        ],
         "progression": "Practice: Writing Methods"
       },
       "bonus": false,
@@ -7105,6 +7241,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L5_2024"
+        ],
         "progression": "Practice: Writing Methods"
       },
       "bonus": false,
@@ -7127,6 +7266,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L7-L6_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7149,6 +7291,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L1_2024"
+        ],
         "progression": "Investigate: Programming Style and Tools"
       },
       "bonus": false,
@@ -7171,6 +7316,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L2_2024"
+        ],
         "progression": "Investigate: Programming Style and Tools"
       },
       "bonus": false,
@@ -7193,6 +7341,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L3_2024"
+        ],
         "progression": "Investigate: Programming Style and Tools"
       },
       "bonus": false,
@@ -7215,6 +7366,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L4_2024"
+        ],
         "progression": "Investigate: Programming Style and Tools"
       },
       "bonus": false,
@@ -7237,6 +7391,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L5_2024"
+        ],
         "progression": "Practice: Conducting a Code Review"
       },
       "bonus": false,
@@ -7259,6 +7416,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L8-L6_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7281,6 +7441,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L1_2024"
+        ],
         "progression": "Predict and Run: Selection Statements"
       },
       "bonus": false,
@@ -7303,6 +7466,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L2_2024"
+        ],
         "progression": "Investigate and Modify: Selection Statements"
       },
       "bonus": false,
@@ -7325,6 +7491,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L3_2024"
+        ],
         "progression": "Practice: Writing Algorithms"
       },
       "bonus": false,
@@ -7347,6 +7516,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L4_2024"
+        ],
         "progression": "Practice: Writing Algorithms"
       },
       "bonus": false,
@@ -7369,6 +7541,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L9-L5_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7391,6 +7566,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L1_2024"
+        ],
         "progression": "Predict and Run: Variables and Printing"
       },
       "bonus": false,
@@ -7413,6 +7591,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L2_2024"
+        ],
         "progression": "Investigate and Modify: Debugging"
       },
       "bonus": false,
@@ -7435,6 +7616,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L3_2024"
+        ],
         "progression": "Practice: Debugging in The Neighborhood"
       },
       "bonus": false,
@@ -7457,6 +7641,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L4_2024"
+        ],
         "progression": "Practice: Debugging in The Neighborhood"
       },
       "bonus": false,
@@ -7479,6 +7666,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L10-L5_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7501,6 +7691,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L1_2024"
+        ],
         "progression": "Investigate and Modify: Decomposition"
       },
       "bonus": false,
@@ -7523,6 +7716,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L1-2_2024"
+        ],
         "progression": "Investigate and Modify: Decomposition"
       },
       "bonus": false,
@@ -7545,6 +7741,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L1-3_2024"
+        ],
         "progression": "Investigate and Modify: Decomposition"
       },
       "bonus": false,
@@ -7567,6 +7766,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L1-4_2024"
+        ],
         "progression": "Investigate and Modify: Decomposition"
       },
       "bonus": false,
@@ -7589,6 +7791,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L2_2024"
+        ],
         "progression": "Practice: Decomposing a Problem"
       },
       "bonus": false,
@@ -7611,6 +7816,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L3_2024"
+        ],
         "progression": "Practice: Decomposing a Problem"
       },
       "bonus": false,
@@ -7633,6 +7841,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L11-L4_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7655,6 +7866,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L1_2024"
+        ],
         "progression": "Predict and Run: Selection and Logic"
       },
       "bonus": false,
@@ -7677,6 +7891,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L2_2024"
+        ],
         "progression": "Investigate and Modify: Selection and Logic"
       },
       "bonus": false,
@@ -7699,6 +7916,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L3_2024"
+        ],
         "progression": "Practice: Writing Algorithms"
       },
       "bonus": false,
@@ -7721,6 +7941,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L4_2024"
+        ],
         "progression": "Practice: Writing Algorithms"
       },
       "bonus": false,
@@ -7743,6 +7966,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1L12-L5_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -7765,6 +7991,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1 Asphalt Art Project_2024"
+        ],
         "progression": "Asphalt Art Project"
       },
       "bonus": false,
@@ -7787,6 +8016,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 1 Assessment_2024"
+        ],
         "progression": "Unit 1 Assessment"
       },
       "bonus": false,
@@ -7809,6 +8041,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa1_2024"
+        ],
         "progression": "Unit 1 Survey"
       },
       "bonus": false,
@@ -7831,6 +8066,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U1 Asphalt Art Project 1-Day_2024"
+        ],
         "progression": "Asphalt Art Project"
       },
       "bonus": false,
@@ -7853,6 +8091,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox_2024"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -7875,6 +8116,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox_2024"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -9334,7 +9578,7 @@
     },
     {
       "name": "Asphalt Art Project",
-      "url": "https://docs.google.com/presentation/d/1ZRHKtN5vv3KLNis_RfXmur2yoCqQA5d7ncE7cU805Io/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1gKCVIVkD2P9J3U7xMo_CT1DAltEC78IJ4wFMUaLJdkA/",
       "key": "asphalt_art_project",
       "properties": {
         "audience": "Verified Teacher",
@@ -9346,7 +9590,7 @@
     },
     {
       "name": "Asphalt Art Project",
-      "url": "https://docs.google.com/presentation/d/1en1KGgye2ImrJ4DDZasD8jvkRuoTdrnMVw_H9bpGEFM/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/15nryzYZPHVCqqOU77PPUYD85W7ZgrK-fLhCajgaPXOc/",
       "key": "asphalt_art_project_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -9408,7 +9652,7 @@
     },
     {
       "name": "Classes and Objects",
-      "url": "https://docs.google.com/presentation/d/1zShEU4odisNrMf1__90VklwFDu16Rjysvh-IzF1nRtY/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/119D6IFN0TgeKvKGwjdliRt5s57_EFLz2cpTKc_-k7WQ/",
       "key": "classes_and_objects",
       "properties": {
         "audience": "Verified Teacher",
@@ -9481,11 +9725,9 @@
     },
     {
       "name": "CSA Unit 1 Slides",
-      "url": "https://docs.google.com/presentation/d/1bFZJ2H9aGgtfdGgymlQJU1-04SAswwc7IbCBYVJFz34/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1OWXM3QDlUHNPejPRUOis9tpsxSRqemzxxgkW19F81KI/",
       "key": "csa_unit_1_slides",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csa_unit_1_slides"
@@ -9505,7 +9747,7 @@
     },
     {
       "name": "Debugging Strategies",
-      "url": "https://docs.google.com/presentation/d/1JebRe7kA8gc80b3vrG9zrOZjNtezlIINHuMpAzkz4gk/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1buEGsK86_qLJx5ymiycUmjlLXgUS7r8JrU-sVMSYy2E/",
       "key": "debugging_strategies",
       "properties": {
         "audience": "Verified Teacher",
@@ -9530,7 +9772,7 @@
     },
     {
       "name": "Decomposition and Design",
-      "url": "https://docs.google.com/presentation/d/1U1NEkrq_f3vRhxg77wvFko4AIVDUCy8xS7HitLJbors/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1Vu1VrVcufuGPsMXd52ttcX5CjwlcXB3tZ4TJp4vQG_o/",
       "key": "decomposition_and_design",
       "properties": {
         "audience": "Verified Teacher",
@@ -9579,7 +9821,7 @@
     },
     {
       "name": "Inheritance",
-      "url": "https://docs.google.com/presentation/d/1sZXGQkHJ92D6GmvcToWwFs74gotv7EBtgpZJOzD2LiI/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1NT4WbNLuDrUWCmPtG7SDH61t2cInmlW_AwgUxLx_H_0",
       "key": "inheritance",
       "properties": {
         "audience": "Verified Teacher",
@@ -9603,7 +9845,7 @@
     },
     {
       "name": "Instantiating Objects",
-      "url": "https://docs.google.com/presentation/d/14S28Ksj3oLnR8GYbnIlWbdY8KqgHTFpPPcHuWW7mQo8/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1LJN6VlCsWlkVmbpyCkcJGhSRx8PwYwZaH_jBbfKvkVk",
       "key": "instantiating_objects",
       "properties": {
         "audience": "Verified Teacher",
@@ -9667,7 +9909,7 @@
     },
     {
       "name": "Java Lab",
-      "url": "https://docs.google.com/presentation/d/1Ld2vwxu3keK9oKxtAPRGUkjXktfaRs9ryxI7TlxVfuo/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1L4dSTPrIQSkOZBImAYnrNLUx5A5FONov53EddqlqJsw/",
       "key": "java_lab",
       "properties": {
         "audience": "Verified Teacher",
@@ -9679,7 +9921,7 @@
     },
     {
       "name": "Loops",
-      "url": "https://docs.google.com/presentation/d/1bIR-aVo6alP-Yy6FZSb5TDGIA2zXItjJUVp3ikoHRJo/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/13sr14oTcyXvY4dH7M_9bnzMjodhHQffPyxfI3r2B38I",
       "key": "loops",
       "properties": {
         "audience": "Verified Teacher",
@@ -9691,7 +9933,7 @@
     },
     {
       "name": "Methods",
-      "url": "https://docs.google.com/presentation/d/1HsnHYwE8Ue_CJfbgT5KCyUT5vH9zLJh8lJ2BFdyw6d0/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1BNcpedjsthNGKXZmeXQ-LXCs_w8EN5gCAZb7vqed5HQ/",
       "key": "methods",
       "properties": {
         "audience": "Verified Teacher",
@@ -9703,7 +9945,7 @@
     },
     {
       "name": "Methods with Parameters",
-      "url": "https://docs.google.com/presentation/d/18h7hzR-1at1rjZJuq5ioLoU16ouGra5lcGufVph7aWw/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1_4OspOLD_cBgDh6pJKORRB2U8aUcBhtjlZgdTOK3nVk",
       "key": "methods_with_parameters",
       "properties": {
         "audience": "Verified Teacher",
@@ -9739,7 +9981,7 @@
     },
     {
       "name": "Programming Style and Feedback",
-      "url": "https://docs.google.com/presentation/d/1XE9JUSQJuCLKobCFY0-Sz-OasBDGkZH9i_2ki69livg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1psa9CtDCDvFaRE388wEJebuWrBfr__NxiV8UWWi4kMI/",
       "key": "programming_style_and_feedback",
       "properties": {
         "audience": "Verified Teacher",
@@ -9751,7 +9993,7 @@
     },
     {
       "name": "Selection Statements",
-      "url": "https://docs.google.com/presentation/d/14zJMk22_jttyT-dOaPUAAS6uKm02pPn0hG09mFQqYDg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/11c5Akmgpv0j5l6h2D7xQgydo9SicnFZ3w0cNxICMs1E/",
       "key": "selection_statements",
       "properties": {
         "audience": "Verified Teacher",
@@ -9800,7 +10042,7 @@
     },
     {
       "name": "SpiralPainter FRQ",
-      "url": "https://docs.google.com/presentation/d/1vdfMoR8X4eqfVKsWLJ1JIDprNAJmDhdJL9V-NSGQz9s/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1L5gqpcZIAQ0ZMAbuktYe4Yk3VRB0Qz6Mrn6zpccmXJ4/",
       "key": "spiralpainter_frq",
       "properties": {
         "audience": "Verified Teacher",
@@ -9874,7 +10116,7 @@
     },
     {
       "name": "Two-Way Selection Statements",
-      "url": "https://docs.google.com/presentation/d/13RVFVV4ONYAUC_oVnKc9dFbWnb55a0r_DOTnSxOvWLY/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1NGi2VO9ghd0XUAph9zYrCGNtdh3X_wVvNb-d6uVDFQc/",
       "key": "two-way_selection_statements",
       "properties": {
         "audience": "Verified Teacher",
@@ -10224,7 +10466,7 @@
     },
     {
       "name": "Unit 1 Assessment",
-      "url": "https://docs.google.com/presentation/d/1QNPB3DSerZbt9YQDYNpBog4bFxDTMMjvjSuq_zH8Lmw/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1TSvmk9Syk1BcwqkTSAycg_rsf9rxj0DBYNB3rx4DVLU/",
       "key": "unit_1_assessment",
       "properties": {
         "audience": "Verified Teacher",
@@ -10298,7 +10540,7 @@
     },
     {
       "name": "Welcome to CSA",
-      "url": "https://docs.google.com/presentation/d/1mP5UFgh1I6po_enlzpo9EMdK4r2LpBHXDt2pQMNxakA/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1qL60zJ_rjN0ccZi9Wng2hTycfO9LkJushZQSztqIzi0/",
       "key": "welcome_to_csa",
       "properties": {
         "audience": "Verified Teacher",
@@ -10360,7 +10602,7 @@
     },
     {
       "name": "Writing Methods",
-      "url": "https://docs.google.com/presentation/d/1yST_x1sNq2yOtlmWqqXYT80-WxABrUsuu_S_w12VSWM/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1qtkB4L3px9dJefv1DWURktqsA2M1g6RYd-5r0FfSRTI/",
       "key": "writing_methods",
       "properties": {
         "audience": "Verified Teacher",

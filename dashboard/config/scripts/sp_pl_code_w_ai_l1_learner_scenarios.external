@@ -15,7 +15,7 @@ markdown <<MARKDOWN
 
 ## What to Expect
 
-#### In this lesson, students embark on an exploration of AI's role in programming.
+#### In <a href="https://studio.code.org/s/coding-with-ai/lessons/1" target="blank" rel="noopener noreferrer"><b>Lesson 1</b></a>, students embark on an exploration of AI's role in programming.
 
 #### They discuss their experiences with AI tools, explore scenarios of AI-learner collaboration, delve into ethical considerations as they begin to form their opinions on how AI can support or hinder their coding journey.
 
@@ -30,5 +30,5 @@ markdown <<MARKDOWN
 #### Write your responses in the box provided in the following levels. 
 
 
-![]()
+
 MARKDOWN

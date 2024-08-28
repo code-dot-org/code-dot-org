@@ -65,15 +65,21 @@ section.bg-pattern-dark {
   }
 }
 
-// Removes the bottom margin or padding —
+// Removes the block margin or padding —
 // often helpful on a last paragraphs or list elements
 // to maintain consistent white space between sections
 
 // !important is used here to override existing margin
 // or padding bottom styles – this allows this class to
 // work on any element
+.no-margin-top {
+  margin-top: 0 !important;
+}
 .no-margin-bottom {
   margin-bottom: 0 !important;
+}
+.no-padding-top {
+  padding-top: 0 !important;
 }
 .no-padding-bottom {
   padding-bottom: 0 !important;
@@ -111,6 +117,16 @@ i.fa-fw {
   &.flex-direction-column {
     flex-direction: column;
   }
+  &.flex-direction-column-tablet {
+    @media screen and (max-width: $width-md) {
+      flex-direction: column;
+    }
+  }
+  &.flex-direction-column-mobile {
+    @media screen and (max-width: $width-sm) {
+      flex-direction: column;
+    }
+  }
   &.flex-direction-row {
     flex-direction: row;
   }
@@ -125,6 +141,9 @@ i.fa-fw {
   }
   &.align-content-baseline {
     align-content: baseline;
+  }
+  &.align-items-baseline {
+    align-items: baseline;
   }
   &.align-items-center {
     align-items: center;
@@ -150,6 +169,12 @@ i.fa-fw {
 
   & > .flex-1 {
     flex: 1;
+  }
+  & > .flex-1-5 {
+    flex: 1.5;
+  }
+  & > .flex-2 {
+    flex: 2;
   }
 }
 
@@ -209,7 +234,7 @@ div.divider {
 // Add a thick box shadow to an element
 // See code.org/teach for an example
 .box-shadow-primary {
-  box-shadow: 8px 8px 0 var(--brand_primary_light);
+  box-shadow: 8px 8px 0 rgba(171, 223, 229, 0.50);
 }
 
 // Add a soft box shadow to an element
@@ -249,6 +274,10 @@ hr {
   & > .grid-container {
     @media (min-width: $width-sm) {
       grid-template-columns: repeat(2, 1fr);
+
+      &.wider-text {
+        grid-template-columns: 1.5fr 1fr;
+      }
     }
   }
 
@@ -458,36 +487,45 @@ ul {
       }
     }
   }
-}
 
-// Ordered lists
-// Step-by-step section
-ol.steps-list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: baseline;
-  margin: unset;
-  padding: unset;
+  // Featured artists list
+  // See code.org/dance and code.org/music
+  &.featured-artists {
+    margin: 2rem auto;
+    @media (min-width: $width-sm) { gap: 1.5rem; }
 
-  &.four-col {
     li {
-      width: 20%;
+      @media (min-width: $width-sm) { flex: 1; }
+      @media (max-width: $width-sm) { width: 30%; }
 
-      @media screen and (max-width: $width-sm) {
+      img {
+        border-radius: 100%;
         width: 100%;
+        border: 4px solid var(--brand_secondary_default);
+      }
+
+      &:nth-of-type(even) img {
+        border-color: var(--brand_primary_default);
       }
     }
   }
+}
 
-  &.three-col {
-    li {
-      width: 28%;
+// Step-by-step lists
+// These styles can be used with an ordered list as seen on code.org/professional-learning/middle-high
+// or an unordered list that uses icons as seen on code.org/curriculum/game-design.
+ol.steps-list,
+ul.steps-list {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  align-items: baseline;
+  margin: 3rem auto;
+  padding: unset;
+  gap: 2rem;
 
-      @media screen and (max-width: $width-sm) {
-        width: 100%;
-      }
-    }
+  @media (max-width: $width-sm) {
+    flex-direction: column;
   }
 
   li {
@@ -495,18 +533,23 @@ ol.steps-list {
     text-indent: 0 !important;
     display: flex;
     justify-content: center;
+    flex: 1;
     flex-wrap: wrap;
     text-align: center;
-    margin: 3rem 0 2.5rem;
 
     a.link-button,
     button,
     .btn {
       min-width: unset;
     }
+
+    &::before {
+      content: "";
+    }
   }
 
-  h3 {
+  h3,
+  .icon-wrapper {
     width: 100%;
 
     & > span {
@@ -533,16 +576,30 @@ ol.steps-list {
         border: 6px solid var(--brand_primary_light);
         border-radius: 100%;
       }
+
+      &:has(i) {
+        font-size: 1.75rem;
+        line-height: 2;
+      }
+    }
+
+    &:has(i) {
+      margin-bottom: 1rem;
     }
   }
 
-  h4 {
+  h4,
+  &:has(.icon-wrapper) h3 {
     @include heading-sm;
     width: 100%;
   }
 
   p {
     @include body-three;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -750,7 +807,7 @@ form {
   // Align copy or button(s) to the bottom of a block when
   // blocks are vastly different heights due to content length
   // — use .content-wrapper and .content-footer as seen on
-  // views/maker_curriculum_microbit.haml
+  // app_lab_lessons.haml
   &.flex-space-between {
     justify-content: space-between;
   }
@@ -901,110 +958,6 @@ form {
   }
 }
 
-// Carousels
-// Uses the carouFredSel jQuery plugin: https://github.com/nzy/carouFredSel
-.carousel-wrapper {
-  margin: 2rem 0 0;
-
-  @media screen and (max-width: $width-sm) {
-    padding-bottom: 1rem;
-  }
-
-  // Carousel with prev and next button navigation
-  button.carousel__prev,
-  button.carousel__next {
-    display: none !important;
-  }
-
-  @media screen and (min-width: 1280px) {
-    button.carousel__prev {
-      position: absolute;
-      left: -3.5rem;
-    }
-
-    button.carousel__next {
-      position: absolute;
-      right: -3.5rem;
-    }
-
-    button.carousel__prev,
-    button.carousel__next {
-      display: block !important;
-      top: calc(50% - 50px);
-      background: none;
-      border: none;
-      transform: translateY(-50%);
-      transition: 0.3s;
-      padding: 0;
-      width: 1.75rem;
-
-      &:hover {
-        background: none;
-        opacity: 0.8;
-      }
-
-      img {
-        width: 100%;
-      }
-    }
-  }
-
-  // Set a min-height inline on the .carousel div
-  // inside .carousel-wrapper to account for varying
-  // quote lengths and prevent vertical height changes
-  .carousel {
-    overflow: hidden;
-
-    @media screen and (max-width: $width-md) {
-      height: unset !important;
-      overflow: unset;
-    }
-  }
-
-  // The plugin we're using disappears when <html dir="rtl">
-  // - updating the inset value fixes it; it does remove the swiping
-  // animation between slides on desktop, but keeps the content
-  .slides.rtl {
-    inset: 0 !important;
-  }
-
-  .pagination {
-    margin: 1rem 0 0 0;
-
-    @media screen and (max-width: $width-sm) {
-      margin-top: 3rem;
-    }
-
-    &.left-align {
-      text-align: left;
-
-      @media screen and (max-width: $width-md) {
-        text-align: center;
-      }
-
-      a:first-child {
-        margin-left: 0;
-      }
-    }
-
-    a {
-      background: var(--brand_primary_light);
-
-      &.selected {
-        background: var(--brand_primary_default);
-      }
-
-      &:focus {
-        @include focus-outline;
-
-        &:not(:focus-visible) {
-          outline: none;
-        }
-      }
-    }
-  }
-}
-
 // Quotes carousel
 // See code.org/educate/professional-learning/middle-high
 // and /views/pl_middle_high_carousel.haml for an example
@@ -1023,10 +976,10 @@ form {
     }
   }
 
+  // Has an image on each slide
+  // See code.org/ai for an example
   .carousel-wrapper {
     .with-image {
-      display: flex;
-      justify-content: space-between;
       align-items: center;
 
       @media screen and (max-width: $width-sm) {
@@ -1037,14 +990,9 @@ form {
       img {
         width: 150px;
         height: 150px;
-        margin-right: 3rem;
 
-        @media screen and (max-width: $width-md) {
-          display: block;
-        }
-
-        @media screen and (max-width: $width-sm) {
-          margin-right: 0;
+        @media (min-width: $width-sm) {
+          margin-inline-end: 3rem;
         }
       }
     }
@@ -1077,58 +1025,6 @@ form {
     span {
       color: var(--brand_accent_default);
       margin: 0 2px;
-    }
-  }
-}
-
-// Photo slideshow carousel
-// See code.org/educate/professional-learning/middle-high
-// and /views/pl_middle_high_carousel.haml for an example
-.photo-carousel-wrapper {
-  .with-image {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 5rem;
-
-    @media screen and (max-width: $width-md) {
-      gap: 3rem;
-    }
-
-    @media screen and (max-width: $width-sm) {
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    img {
-      width: 450px;
-      height: auto;
-      border-radius: 1rem;
-
-      @media screen and (max-width: $width-md) {
-        width: 300px;
-      }
-
-      @media screen and (max-width: $width-sm) {
-        width: 100%;
-      }
-    }
-  }
-
-  p {
-    font-size: 1.25rem;
-
-    @media screen and (max-width: $width-md) {
-      margin-bottom: 1rem;
-    }
-  }
-
-  .pagination {
-    margin-top: 2rem;
-
-    @media screen and (max-width: $width-md) {
-      margin-top: 3rem;
     }
   }
 }
@@ -1226,7 +1122,6 @@ section.quote {
 
   nav {
     border-bottom: 6px solid var(--brand_primary_default);
-    margin: 0 0 3rem;
     align-items: end;
     gap: 0.25rem;
 
@@ -1242,7 +1137,6 @@ section.quote {
       cursor: pointer;
       white-space: normal;
       height: -webkit-fit-content;
-      flex: 1;
 
       &:hover {
         background-color: var(--neutral_dark10);
@@ -1269,6 +1163,16 @@ section.quote {
         display: none;
       }
     }
+  }
+
+  .tab-content-container {
+    padding: 1.875rem;
+    border-radius: 0 0 .5rem .5rem;
+    border-right: 1px solid var(--light_gray200);
+    border-bottom: 1px solid var(--light_gray200);
+    border-left: 1px solid var(--light_gray200);
+    background: var(--neutral_white);
+    box-sizing: border-box;
   }
 
   // Hides tab content

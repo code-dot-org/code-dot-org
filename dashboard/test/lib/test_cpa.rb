@@ -31,9 +31,9 @@ class CPATest < Minitest::Test
   end
 
   def test_cpa_experience_before_new_user_lockout
-    current_time = DateTime.parse('2023-01-01T00:00:00Z')
+    current_time = DateTime.parse('2022-12-31T23:59:59Z')
     schedule = {
-      Cpa::NEW_USER_LOCKOUT => '2023-01-02T00:00:00Z',
+      Cpa::NEW_USER_LOCKOUT => '2023-01-01T00:00:00Z',
       Cpa::ALL_USER_LOCKOUT => '2023-01-03T00:00:00Z'
     }
     stub_dcdo(schedule, nil)
@@ -42,9 +42,9 @@ class CPATest < Minitest::Test
   end
 
   def test_cpa_experience_after_new_user_lockout
-    current_time = DateTime.parse('2023-01-02T00:00:01Z')
+    current_time = DateTime.parse('2023-01-01T00:00:00Z')
     schedule = {
-      Cpa::NEW_USER_LOCKOUT => '2023-01-02T00:00:00Z',
+      Cpa::NEW_USER_LOCKOUT => '2023-01-01T00:00:00Z',
       Cpa::ALL_USER_LOCKOUT => '2023-01-03T00:00:00Z'
     }
     stub_dcdo(schedule, nil)
@@ -53,9 +53,9 @@ class CPATest < Minitest::Test
   end
 
   def test_cpa_experience_after_all_user_lockout
-    current_time = DateTime.parse('2023-01-03T00:00:01Z')
+    current_time = DateTime.parse('2023-01-03T00:00:00Z')
     schedule = {
-      Cpa::NEW_USER_LOCKOUT => '2023-01-02T00:00:00Z',
+      Cpa::NEW_USER_LOCKOUT => '2023-01-01T00:00:00Z',
       Cpa::ALL_USER_LOCKOUT => '2023-01-03T00:00:00Z'
     }
     stub_dcdo(schedule, nil)

@@ -1,6 +1,8 @@
-import {showVideoDialog} from '@cdo/apps/code-studio/videos';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
+import {showVideoDialog} from '@cdo/apps/code-studio/videos';
+
 import {videoDataShape} from './types';
 
 export default class VideoThumbnail extends Component {

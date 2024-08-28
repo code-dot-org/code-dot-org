@@ -17,9 +17,11 @@ theme: responsive
 
 ## குறைந்தபட்ச ஆதரவு உலாவிகள் மற்றும் இயங்குதளங்கள்
 
+ஜூலை 2024 இல் தொடங்கி, உலாவிகள் மற்றும் இயக்க முறைமைகளுக்குத் தேவையான குறைந்தபட்ச பதிப்புகளை புதுப்பிப்போம். பழைய பதிப்புகள் இன்னும் வேலை செய்யக்கூடும் என்றாலும், பழைய பதிப்புகளில் பிழை திருத்தங்களுக்கான கோரிக்கைகளை நாங்கள் ஆதரிக்க முடியாது.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           உலாவி
@@ -40,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          உலாவி ஜூலை '24
+        </th>
+        <tr>
+          <td>குரோம் 103.x</td>
+        </tr>
+        <tr>
+          <td>சஃபாரி 14.x</td>
+        </tr>
+        <tr>
+          <td>மொபைல் சஃபாரி 14.x</td>
+        </tr>
+        <tr>
+          <td>எட்ஜ் 119.x</td>
+        </tr>
+        <tr>
+          <td>பயர்பாக்ஸ் 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           நடைமேடை
@@ -62,8 +86,30 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          மேடை ஜூலை '24
+        </th>
+        <tr>
+          <td>மேகோஸ் 10.15</td>
+        </tr>
+        <tr>
+          <td>ஐஓஎஸ் 15.x</td>
+        </tr>
+        <tr>
+          <td>விண்டோஸ் 8</td>
+        </tr>
+        <tr>
+          <td>அண்ட்ராய்டு 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## தடைநீக்க தளங்கள்
@@ -80,16 +126,15 @@ theme: responsive
 | **இணைய சிமுலேட்டரைப் பயன்படுத்த**                                                                                                      | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **இணைய ஆய்வகத்தைப் பயன்படுத்த**                                                                                                        | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **கூகுள் கிளாஸ்ரூம் ஷேர் பட்டனைப் பயன்படுத்த**                                                                                         | `https://apis.google.com`                                                                                  |
-| **ஆப் லேப் தரவுத்தொகுப்புகளைப் பயன்படுத்த**                                                                                            | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## மொபைல் மற்றும் டேப்லெட் ஆதரவு விவரங்கள்
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. பின்வரும் விதிவிலக்குகளுடன் பெரும்பாலான டேப்லெட்டுகள் ஆதரிக்கப்படவில்லை:
+அனைத்து சிஎஸ் கண்டுபிடிப்புகள், சிஎஸ் கோட்பாடுகள், சிஎஸ் ஏ மற்றும் ஆப் லேப் படிப்புகளுக்கு அறிமுகம் டேப்லெட்டுகள் அல்லது மொபைல் சாதனங்களுடன் இணக்கமானவை அல்ல - முழு விசைப்பலகை மற்றும் சுட்டி (அல்லது டச்பேட்) தேவை. பின்வரும் விதிவிலக்குகளுடன் பெரும்பாலான டேப்லெட்டுகள் ஆதரிக்கப்படவில்லை:
 
 - வெளிப்புற விசைப்பலகையுடன் மைக்ரோசாஃப்ட் சர்ஃபேஸ் ப்ரோ
 - வெளிப்புற விசைப்பலகை மற்றும் வெளிப்புற மவுஸ் அல்லது டச்பேடுடன் iPadOS 13.4 அல்லது அதற்குப் பிறகு இயங்கும் iPad
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+கே -5 படிப்புகள் (கணினி அறிவியல் அடிப்படைகள்) மற்றும் ஹவர் ஆஃப் கோட் செயல்பாடுகள் போன்ற பிற அனைத்து உள்ளடக்கங்களும் ஐபாடுகள் மற்றும் பிற நவீன டேப்லெட்டுகள் மற்றும் லேப்டாப் அல்லது டெஸ்க்டாப் கணினிகளில் இணக்கமான
 
 ### கையடக்க தொலைபேசிகள்
 
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+பாடத்திட்டம் முழுவதும் பயன்படுத்தப்படும் பிளேயர் இதுதான். இது YouTube மூலம் வீடியோவைக் காட்ட முயற்சிக்கும், மேலும் YouTube தடுக்கப்பட்டால், அதற்குப் பதிலாக எங்கள் "ஃபால்பேக்" பிளேயரைப் பயன்படுத்தி Code.org ஹோஸ்ட் செய்யப்பட்ட வீடியோவைக் காண்பிக்கும்.
 
 ### வீடியோ இயங்கவில்லையா?
 
-If video does not work, you can email us at support@code.org.
+வீடியோ வேலை செய்யவில்லை என்றால், support@code.org இல் எங்களுக்கு மின்னஞ்சல் அனுப்பலாம்.
 
-However, you can still use our tutorials without video.
+இருப்பினும், நீங்கள் வீடியோ இல்லாமல் எங்கள் பயிற்சிகளைப் பயன்படுத்தலாம்.
 
 1. எங்களின் எல்லா வீடியோக்களையும் [ஒன்றாகப் பதிவிறக்கம் செய்துள்ளோம்](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). உங்கள் பள்ளியில் குறைந்த அலைவரிசை இருந்தால், வீடியோக்களைப் பதிவிறக்கி, பகிரப்பட்ட திரையில் மாணவர்களுக்குக் காண்பிக்குமாறு பரிந்துரைக்கிறோம்.
 2. எங்கள் பயிற்சியில் ஒருங்கிணைக்கப்பட்டது, ஒவ்வொரு வீடியோவிற்கும் பச்சை பதிவிறக்க இணைப்பு ஐகானை <img src="/images/green-download.png" width=25 height=25 /> சேர்த்துள்ளோம், இது மாணவர்களை அனுமதிக்கிறது தனிப்பட்ட பயிற்சி வீடியோக்களைப் பதிவிறக்கவும்.
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## Google Apps/G-Suite பயனர்களுக்கான சிறப்பு அமைப்புகள்
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+Google Apps/G-Suite பயனர்களுக்கான சிறப்பு அமைப்புகள். நீங்கள் "கண்டிப்பான தடைசெய்யப்பட்ட YouTube அணுகல்" அமைப்பைக் குறிப்பிட்டிருந்தால் அல்லது 'இந்த வீடியோ தடைசெய்யப்பட்டுள்ளது' என்ற செய்திகளைக் கண்டால், அங்கீகரிக்கப்பட்ட சேனல்களின் பட்டியலில் எங்கள் சேனலைச் சேர்க்கலாம். அங்கீகரிக்கப்பட்ட பட்டியலில் எங்கள் சேனலை எவ்வாறு சேர்ப்பது என்பது பற்றி அறிய, Google வழங்கும் [இந்த வழிகாட்டியைப்](https://support.google.com/a/answer/6245597) பார்க்கவும். வெவ்வேறு அமைப்புகள் மற்றும் உங்கள் வகுப்பறைக்கு எது சிறந்தது என்பதைப் பற்றி மேலும் அறிய, [இந்த வழிகாட்டியைப்](https://support.google.com/a/answer/6212415?hl=en) பார்க்கலாம்.
 
 ## இன்னும் சிக்கல் உள்ளதா?
 
-We'll help you out - just email us at support@code.org!
+நாங்கள் உங்களுக்கு உதவுவோம் - support@code.org இல் எங்களுக்கு மின்னஞ்சல் அனுப்புங்கள்!

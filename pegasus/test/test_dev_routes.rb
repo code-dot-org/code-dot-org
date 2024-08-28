@@ -3,7 +3,6 @@ require 'rack/test'
 require 'mocha/mini_test'
 require_relative '../../lib/cdo/github'
 require_relative '../../lib/cdo/infra_test_topic'
-require_relative '../../lib/cdo/metrics_helper'
 require_relative 'fixtures/mock_pegasus'
 
 BUILD_STARTED_PATH = deploy_dir('build-started').freeze
@@ -173,8 +172,6 @@ class DevRoutesTest < Minitest::Test
           GitHub.expects(:sha).returns(fake_sha)
           DevelopersTopic.expects(:set_dtt).with('yes')
           InfraTestTopic.expects(:set_green_commit).with(fake_sha)
-          # TODO: (darin) write to cloudwatch logs instead of devinternal_db
-          Metrics.expects(:write_metric).with('dtt_green', fake_sha, Metrics::MANUAL)
           pegasus = make_test_pegasus
           pegasus.post '/api/dev/set-last-dtt-green', DEFAULT_PARAMS
           assert_equal 200, pegasus.last_response.status

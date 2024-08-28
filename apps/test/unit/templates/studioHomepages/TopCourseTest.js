@@ -1,17 +1,18 @@
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/componentLibrary/button/Button';
 import TopCourse from '@cdo/apps/templates/studioHomepages/TopCourse';
 import i18n from '@cdo/locale';
 
+// eslint-disable-next-line no-restricted-imports
 import {
   // assert,
   expect,
-} from '../../../util/reconfiguredChai';
+} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 import {topCourse} from './homepagesTestData';
 
@@ -38,16 +39,8 @@ describe('TopCourse', () => {
             <div>{i18n.topCourseExplanation()}</div>
           </div>
           <div>
-            <Button
-              __useDeprecatedTag
-              href={topCourse.linkToOverview}
-              text="View course"
-            />
-            <Button
-              __useDeprecatedTag
-              href={topCourse.linkToLesson}
-              text="Continue lesson"
-            />
+            <Button href={topCourse.linkToOverview} text="View course" />
+            <Button href={topCourse.linkToLesson} text="Continue lesson" />
           </div>
         </div>
       )

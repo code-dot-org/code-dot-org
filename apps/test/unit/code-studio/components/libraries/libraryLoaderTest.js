@@ -1,9 +1,11 @@
-import {expect} from '../../../../util/reconfiguredChai';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import annotationList from '@cdo/apps/acemode/annotationList';
-import sinon from 'sinon';
-import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
-import loadLibrary from '@cdo/apps/code-studio/components/libraries/libraryLoader';
 import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
+import loadLibrary from '@cdo/apps/code-studio/components/libraries/libraryLoader';
+import libraryParser from '@cdo/apps/code-studio/components/libraries/libraryParser';
+
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 describe('libraryLoader.load', () => {
@@ -11,7 +13,7 @@ describe('libraryLoader.load', () => {
   let onErrorStub, onSuccessStub, functionStub;
   let libraryName = 'Name';
   let source = 'function foo() {}';
-  before(() => {
+  beforeAll(() => {
     replaceOnWindow('dashboard', {
       project: {
         getUpdatedSourceAndHtml_: () => {},
@@ -21,7 +23,7 @@ describe('libraryLoader.load', () => {
     libraryClientApi = new LibraryClientApi('123');
   });
 
-  after(() => {
+  afterAll(() => {
     restoreOnWindow('dashboard');
   });
 

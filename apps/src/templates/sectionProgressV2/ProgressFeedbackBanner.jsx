@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import FeedbackBanner, {
   BANNER_STATUS,
-} from '@cdo/apps/lib/ui/feedback/FeedbackBanner';
+} from '@cdo/apps/sharedComponents/userFeedback/FeedbackBanner';
 import i18n from '@cdo/locale';
 
 import {
@@ -21,9 +21,9 @@ const ProgressFeedbackBanner = ({
   fetchProgressV2Feedback,
   createProgressV2Feedback,
   errorWhenCreatingOrLoading,
+  userCreatedAt,
 }) => {
   const [bannerStatus, setBannerStatus] = React.useState(BANNER_STATUS.UNSET);
-  const [answered, setAnswered] = React.useState(false);
 
   // Load feedback on mount
   React.useEffect(() => {
@@ -35,34 +35,35 @@ const ProgressFeedbackBanner = ({
     if (!canShow) {
       setBannerStatus(BANNER_STATUS.UNAVAILABLE);
       return;
-    }
-
-    // If we are loading or already closed, we shouldn't change states
-    if (isLoading || bannerStatus === BANNER_STATUS.CLOSED) {
+    } else if (bannerStatus === BANNER_STATUS.UNAVAILABLE) {
+      setBannerStatus(BANNER_STATUS.UNSET);
       return;
     }
 
-    // If we just answered the banner, set it to answered
-    if (answered && bannerStatus === BANNER_STATUS.UNANSWERED) {
-      setBannerStatus(BANNER_STATUS.ANSWERED);
-      return;
-    }
+    // V2 was launched on 2024-08-02. If the user was created before that date,
+    // we want them to see the feedback banner.
+    const userCreatedBeforeV2Released =
+      new Date(userCreatedAt) < new Date('2024-08-02');
 
     // If feedback has been loaded and empty and the user hasn't answered, it is unanswered.
-    // If we have feedback and the user did not just submit feedback, close the banner.
-    if (progressV2Feedback && !answered) {
-      if (progressV2Feedback.empty) {
+    // If we have feedback and the user did not just submit feedback, set to previously-answered.
+    if (
+      !isLoading &&
+      bannerStatus === BANNER_STATUS.UNSET &&
+      progressV2Feedback
+    ) {
+      if (progressV2Feedback.empty && userCreatedBeforeV2Released) {
         setBannerStatus(BANNER_STATUS.UNANSWERED);
       } else {
-        setBannerStatus(BANNER_STATUS.CLOSED);
+        setBannerStatus(BANNER_STATUS.PREVIOUSLY_ANSWERED);
       }
     }
   }, [
     progressV2Feedback,
+    userCreatedAt,
     bannerStatus,
     canShow,
     isLoading,
-    answered,
     fetchProgressV2Feedback,
   ]);
 
@@ -70,13 +71,16 @@ const ProgressFeedbackBanner = ({
    * Effect for handling errors.
    */
   React.useEffect(() => {
-    errorWhenCreatingOrLoading && setBannerStatus(BANNER_STATUS.UNSET);
-  }, [errorWhenCreatingOrLoading]);
+    if (errorWhenCreatingOrLoading) {
+      setBannerStatus(BANNER_STATUS.UNSET);
+      fetchProgressV2Feedback();
+    }
+  }, [errorWhenCreatingOrLoading, fetchProgressV2Feedback]);
 
   const answer = satisfied => {
     if (bannerStatus === BANNER_STATUS.UNANSWERED) {
-      setAnswered(true);
       createProgressV2Feedback(satisfied);
+      setBannerStatus(BANNER_STATUS.ANSWERED);
     }
   };
 
@@ -90,7 +94,7 @@ const ProgressFeedbackBanner = ({
       answerStatus={bannerStatus}
       answer={answer}
       close={close}
-      isLoading={isLoading}
+      isLoading={isLoading || bannerStatus === BANNER_STATUS.UNSET}
       closeLabel={i18n.closeDialog()}
       question={i18n.progressV2_feedback_question()}
       positiveAnswer={i18n.progressV2_feedback_thumbsUp()}
@@ -103,8 +107,8 @@ const ProgressFeedbackBanner = ({
 };
 
 ProgressFeedbackBanner.propTypes = {
-  currentUser: PropTypes.object.isRequired,
-  canShow: PropTypes.bool.isRequired,
+  userCreatedAt: PropTypes.string,
+  canShow: PropTypes.bool,
   isLoading: PropTypes.bool.isRequired,
   progressV2Feedback: PropTypes.object,
   fetchProgressV2Feedback: PropTypes.func.isRequired,
@@ -112,9 +116,11 @@ ProgressFeedbackBanner.propTypes = {
   errorWhenCreatingOrLoading: PropTypes.string,
 };
 
+export const UnconnectedProgressFeedbackBanner = ProgressFeedbackBanner;
+
 export default connect(
   state => ({
-    currentUser: state.currentUser,
+    userCreatedAt: state.currentUser.userCreatedAt,
     isLoading: state.progressV2Feedback.isLoading,
     progressV2Feedback: state.progressV2Feedback.progressV2Feedback,
     errorWhenCreatingOrLoading: state.progressV2Feedback.error,

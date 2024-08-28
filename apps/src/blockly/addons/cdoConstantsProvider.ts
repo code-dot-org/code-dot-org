@@ -1,6 +1,7 @@
 import GoogleBlockly, {Connection} from 'blockly/core';
-import {customConnectionBlockTypes} from './cdoConstants';
 import {PuzzleTab} from 'blockly/core/renderers/common/constants';
+
+import {customConnectionBlockTypes} from './cdoConstants';
 
 export default class CdoConstantsProvider extends GoogleBlockly.blockRendering
   .ConstantProvider {

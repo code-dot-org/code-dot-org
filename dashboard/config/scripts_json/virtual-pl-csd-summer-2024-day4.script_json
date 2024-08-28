@@ -7,11 +7,12 @@
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-27 21:51:22 UTC",
+    "serialized_at": "2024-05-07 22:25:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -79,7 +80,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "**Purpose:**\nThis session is intended to welcome and orient participants to the day.\n\n\n**Objectives:**\n* Participants are oriented to the day\n\n**Suggested Time:** 15 minutes",
+        "overview": "**Purpose:**\nThis session is intended to welcome and orient participants to the day.\n\n\n**Objectives:**\n* Participants are oriented to the day\n\n**Suggested Time:** 10 minutes",
         "student_overview": "**You will:**\n* Get an orientation to the day"
       },
       "seeding_key": {
@@ -96,7 +97,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**Purpose:**\nThe three TLOs on Day 4 are quick introductions to the final three units of CS Discoveries. This session gives participants a brief overview of Unit 5 - Data and Society before they engage with TLO #4.\n\n\n**Objectives:**\n* Participants prepare to engage in Unit 5 - Data and Society through an introduction to the content.\n\n**Suggested Time:** 15 minutes",
+        "overview": "**Purpose:**\nThe three TLOs on Day 4 are quick introductions to the final three units of CS Discoveries. This session gives participants a brief overview of Unit 5 - Data and Society before they engage with TLO #4.\n\n\n**Objectives:**\n* Participants prepare to engage in Unit 5 - Data and Society through an introduction to the content.\n\n**Suggested Time:** 10 minutes",
         "student_overview": "**You will:**\n* Prepare to engage in Unit 5 - Data and Society through an introduction to the content."
       },
       "seeding_key": {
@@ -114,9 +115,9 @@
       "relative_position": 3,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n* **Essential Practice:** The teacher prompts for and facilitates collaboration for students in small groups and whole-class discussions.\n\n\n**Potential Teaching Group Decisions:**\n  * Encourage students to make their best guess for each meal recommendation possible using the data they have and a consensus among the group.\n  * Call out exemplar moments of collaboration among students.\n  * When facilitating a whole-class discussion, ask students how they came to an answer as a group using collaborative practices.\n  * Highlight that collaborating with others helps us to see the larger picture of a story, rather than just a narrow slice of it, like they encountered in the lesson.\n\n\n**Objectives:**\n* Participants engage in Unit 5 Lesson 1 while playing the role of the student.\n* Participants reflect on their experience as a student engaging in the lesson.\n* Participants discuss the importance of group work in the CS Discoveries curriculum.\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd5-2023/lessons/1\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> ",
+        "overview": "**Purpose:**\n\n**Essential Practice:** The teacher prompts for and facilitates collaboration for students in small groups and whole-class discussions.\n\n**Potential Teaching Group Decisions:**\n  * Encourage students to make their best guess for each meal recommendation possible using the data they have and a consensus among the group.\n  * Call out exemplar moments of collaboration among students.\n  * When facilitating a whole-class discussion, ask students how they came to an answer as a group using collaborative practices.\n  * Highlight that collaborating with others helps us to see the larger picture of a story, rather than just a narrow slice of it, like they encountered in the lesson.\n\n\n**Objectives:**\n* Participants engage in Unit 5 Lesson 1 while playing the role of the student.\n* Participants reflect on their experience as a student engaging in the lesson.\n* Participants discuss the importance of group work in the CS Discoveries curriculum.\n\n**Suggested Time:** 50 minutes\n\n<a href=\"https://studio.code.org/s/csd5-2024/lessons/1\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> ",
         "preparation": "* Print copies of the Meals Data resource so that each group can get one of the four pages\n* Print one copy of the activity guide for each group\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-data-and-society-chapter-1-lessons-1-8/36196) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1c99ennCgsVgXhATRiijGl-L0QTpaMdnMax3OL151F0U/preview)",
-        "student_overview": "**Question of the Day:** How does data affect decisions we make every day?\n\nIn this lesson, you will explore what data is and how it is used to solve problems. \n\n<a href=\"https://studio.code.org/s/csd5-2023/lessons/1\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> "
+        "student_overview": "**Question of the Day:** How does data affect decisions we make every day?\n\nIn this lesson, you will explore what data is and how it is used to solve problems. \n\n<a href=\"https://studio.code.org/s/csd5-2024/lessons/1\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> "
       },
       "seeding_key": {
         "lesson.key": "TLO 4: U5L1 Representation Matters",
@@ -132,7 +133,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "**Purpose:**\nThis session serves as a brief introduction to Unit 6 - Creating Apps with Devices before the subsequent TLO.\n\n\n**Objectives:**\n* Participants prepare to engage in Unit 6 - Creating Apps with Devices through an introduction to the content.\n\n**Suggested Time:** 15 minutes",
+        "overview": "**Purpose:**\nThis session serves as a brief introduction to Unit 6 - Creating Apps with Devices before the subsequent TLO.\n\n\n**Objectives:**\n* Participants prepare to engage in Unit 6 - Creating Apps with Devices through an introduction to the content.\n\n**Suggested Time:** 10 minutes",
         "student_overview": "**You will:**\n* Prepare to engage in Unit 6 - Creating Apps with Devices through an introduction to the content.\n"
       },
       "seeding_key": {
@@ -150,9 +151,9 @@
       "relative_position": 5,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n* **Essential Practice:** Discussion is an opportunity to hear multiple voices and bring different perspectives and experiences into the conversation.\n\n\n* **Potential Teaching Group Decisions:**\n  * Make an effort to bring multiple voices into class discussions\n  * Use the Think-Pair-Share strategy to facilitate discussion\n\n\n**Objectives:**\n* Participants engage in Unit 6 Lesson 2 while playing the role of the student.\n* Participants reflect on their experience as a student engaging in the lesson.\n* Participants brainstorm ways to lead an inclusive class discussion.\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd6-2023/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n",
+        "overview": "**Purpose:**\n\n**Essential Practice:** Discussion is an opportunity to hear multiple voices and bring different perspectives and experiences into the conversation.\n**Potential Teaching Group Decisions:**\n  * Make an effort to bring multiple voices into class discussions\n  * Use the Think-Pair-Share strategy to facilitate discussion\n\n**Objectives:**\n* Participants engage in Unit 6 Lesson 2 while playing the role of the student.\n* Participants reflect on their experience as a student engaging in the lesson.\n* Participants brainstorm ways to lead an inclusive class discussion.\n\n**Suggested Time:** 50 minutes\n\n<a href=\"https://studio.code.org/s/csd6-2024/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n",
         "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
-        "student_overview": "**Question of the Day:** How can we design apps with devices based on the needs of a user?\n\nIn this lesson, you will explore how we can design apps with devices for different users and purposes\n\n<a href=\"https://studio.code.org/s/csd6-2023/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n"
+        "student_overview": "**Question of the Day:** How can we design apps with devices based on the needs of a user?\n\nIn this lesson, you will explore how we can design apps with devices for different users and purposes\n\n<a href=\"https://studio.code.org/s/csd6-2024/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n"
       },
       "seeding_key": {
         "lesson.key": "TLO 5: U6L2 Physical Designs",
@@ -219,7 +220,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "**Purpose:**\nThis session serves as a brief introduction to Unit 7 - AI and Machine Learning before the subsequent TLO.\n\n\n**Objectives:**\n* Participants prepare to engage in Unit 7 - AI and Machine Learning through an introduction to the content\n\n**Suggested Time:** 15 minutes ",
+        "overview": "**Purpose:**\nThis session serves as a brief introduction to Unit 7 - AI and Machine Learning before the subsequent TLO.\n\n\n**Objectives:**\n* Participants prepare to engage in Unit 7 - AI and Machine Learning through an introduction to the content\n\n**Suggested Time:** 10 minutes ",
         "student_overview": "**You will:**\n\n* Prepare to engage in Unit 7 - AI and Machine Learning through an introduction to the content"
       },
       "seeding_key": {
@@ -246,9 +247,9 @@
           }
         ],
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\n* **Essential Practice:** The teacher helps students manage multiple tabs and resources to keep thinking organized while learning new CS content.\n\n\n* **Potential Teaching Group Decisions:**\n  * Remind students often to refer back to and fill out Activity Guides as they are completing lesson activities.\n  * If the Activity Guide is being used virtually, remind students to switch tabs or view in split screen.\n  * If students have a question, prompt them to think of a resource they might use to answer the question before providing them with an answer.\n\n\n**Objectives:**\n* Participants engage in Unit 7 Lesson 2 while playing the role of the student.\n* Participants reflect on their experience as a student engaging in the lesson.\n* Participants share ideas for helping students manage multiple resources and tabs while engaging in a CS Discoveries lesson.\n\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://studio.code.org/s/csd7-2023/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> ",
+        "overview": "**Purpose:**\n\n**Essential Practice:** The teacher helps students manage multiple tabs and resources to keep thinking organized while learning new CS content.\n\n**Potential Teaching Group Decisions:**\n  * Remind students often to refer back to and fill out Activity Guides as they are completing lesson activities.\n  * If the Activity Guide is being used virtually, remind students to switch tabs or view in split screen.\n  * If students have a question, prompt them to think of a resource they might use to answer the question before providing them with an answer.\n\n\n**Objectives:**\n* Participants engage in Unit 7 Lesson 2 while playing the role of the student.\n* Participants reflect on their experience as a student engaging in the lesson.\n* Participants share ideas for helping students manage multiple resources and tabs while engaging in a CS Discoveries lesson.\n\n\n**Suggested Time:** 50 minutes\n\n<a href=\"https://studio.code.org/s/csd7-2024/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> ",
         "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "student_overview": "Learn the basics of machine learning by helping AI Bot recognize fish to clean up the ocean.\n\n**Question of the Day:** How can we use the Problem Solving Process to solve a problem with machine learning?\n\n<a href=\"https://studio.code.org/s/csd7-2023/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> "
+        "student_overview": "Learn the basics of machine learning by helping AI Bot recognize fish to clean up the ocean.\n\n**Question of the Day:** How can we use the Problem Solving Process to solve a problem with machine learning?\n\n<a href=\"https://studio.code.org/s/csd7-2024/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> "
       },
       "seeding_key": {
         "lesson.key": "TLO 6: U7L2 Introduction to Machine Learning",
@@ -501,6 +502,7 @@
       "key": "4f4d3a90-0676-46c5-be31-88469b0f06d1",
       "position": 1,
       "properties": {
+        "duration": 60
       },
       "seeding_key": {
         "lesson_activity.key": "4f4d3a90-0676-46c5-be31-88469b0f06d1",
@@ -628,6 +630,7 @@
       "key": "82d65689-e167-4f1f-87fb-2a948566d657",
       "position": 1,
       "properties": {
+        "duration": 60
       },
       "seeding_key": {
         "lesson_activity.key": "82d65689-e167-4f1f-87fb-2a948566d657",
@@ -1839,6 +1842,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd5_csd-vpl-23_2024"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -1861,6 +1867,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U3 L1 - Design Templates_2023a_csd-vpl-23_2024"
+        ],
         "progression": "Physical Design Prototypes"
       },
       "bonus": false,
@@ -1883,6 +1892,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "intro-pulse-survey_csd6_csd-vpl-23_2024"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -1905,6 +1917,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-Async1_2024"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -1927,6 +1942,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-BiasResponsibility2_2024"
+        ],
         "progression": "Bias and Responsibility"
       },
       "bonus": false,
@@ -1949,6 +1967,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-BiasResponsibility1_2024"
+        ],
         "progression": "Bias and Responsibility"
       },
       "bonus": false,
@@ -1971,6 +1992,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-BiasResponsibility3_2024"
+        ],
         "progression": "Bias and Responsibility"
       },
       "bonus": false,
@@ -1993,6 +2017,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-BiasResponsibility4_2024"
+        ],
         "progression": "Bias and Responsibility"
       },
       "bonus": false,
@@ -2015,6 +2042,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-Async1Close_2024"
+        ],
         "progression": "Completing TLO Activities"
       },
       "bonus": false,
@@ -2037,6 +2067,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash_2024"
+        ],
         "progression": "Recognizing Fish"
       },
       "bonus": false,
@@ -2059,6 +2092,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Short_2024"
+        ],
         "progression": "Recognizing Fish Features"
       },
       "bonus": false,
@@ -2081,6 +2117,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Long_2024"
+        ],
         "progression": "Recognizing Expressions"
       },
       "bonus": false,
@@ -2103,6 +2142,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "aiml-intro-pulse-survey_csd-vpl-23_2024"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -2125,6 +2167,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-AsyncIntro_2024"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -2147,6 +2192,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-differentiation1_2024"
+        ],
         "progression": "Differentiation"
       },
       "bonus": false,
@@ -2169,6 +2217,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-differentiation2_2024"
+        ],
         "progression": "Differentiation"
       },
       "bonus": false,
@@ -2191,6 +2242,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-differentiation3_2024"
+        ],
         "progression": "Differentiation"
       },
       "bonus": false,
@@ -2213,6 +2267,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-ContentWrapUp1_2024"
+        ],
         "progression": "Content Wrap Up"
       },
       "bonus": false,
@@ -2235,6 +2292,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-ContentWrapUp2_2024"
+        ],
         "progression": "Content Wrap Up"
       },
       "bonus": false,
@@ -2257,6 +2317,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-ContentWrapUp3_2024"
+        ],
         "progression": "Content Wrap Up"
       },
       "bonus": false,
@@ -2279,6 +2342,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day4-Async2Close_2024"
+        ],
         "progression": "Completing TLO Levels"
       },
       "bonus": false,
@@ -2552,26 +2618,6 @@
   ],
   "resources": [
     {
-      "name": "2023 Virtual CSD Summer Workshop - Day 4 Agenda",
-      "url": "https://docs.google.com/document/d/1rAYHZFEx964DG0OoscJyi-UbciWJY3IszK4aossxtAM/edit?usp=sharing",
-      "key": "2023_virtual_csd_summer_workshop_-_day_4_agenda",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "2023_virtual_csd_summer_workshop_-_day_4_agenda"
-      }
-    },
-    {
-      "name": "2023 Virtual CSD Summer Workshop - Day 4 Slides",
-      "url": "https://docs.google.com/presentation/d/1o1zZmJElPROooQt9FZ9w0dRLN7Fxu-XuypWH8C8RD6s/edit?usp=sharing",
-      "key": "2023_virtual_csd_summer_workshop_-_day_4_slides",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "2023_virtual_csd_summer_workshop_-_day_4_slides"
-      }
-    },
-    {
       "name": "[Exemplar] Physical Designs",
       "url": "https://docs.google.com/document/d/1COKnyGNlEBpB8giiVDPGl-ubK1OEUU3fxYjNIhzpQT4/edit",
       "key": "_exemplar_physical_designs",
@@ -2620,6 +2666,26 @@
       },
       "seeding_key": {
         "resource.key": "classifying_fish"
+      }
+    },
+    {
+      "name": "CSD Virtual Summer Workshop Day 4 Agenda",
+      "url": "https://docs.google.com/document/d/14ijHPfcESnvetaqWjRto4v4GpYSbeYKyKXYFg8H_Bn8/edit?usp=drive_link",
+      "key": "csd_virtual_summer_workshop_day_4_agenda",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_virtual_summer_workshop_day_4_agenda"
+      }
+    },
+    {
+      "name": "CSD Virtual Summer Workshop Day 4 Slides",
+      "url": "https://docs.google.com/presentation/d/1hSn_77ZeJX0LNOP9Quc3BUzm7mCHyyA8WsBpvTtRrXA/edit?usp=drive_link",
+      "key": "csd_virtual_summer_workshop_day_4_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csd_virtual_summer_workshop_day_4_slides"
       }
     },
     {
@@ -2836,13 +2902,13 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "2023_virtual_csd_summer_workshop_-_day_4_agenda",
+        "resource.key": "csd_virtual_summer_workshop_day_4_agenda",
         "script.name": "virtual-pl-csd-summer-2024-day4"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "2023_virtual_csd_summer_workshop_-_day_4_slides",
+        "resource.key": "csd_virtual_summer_workshop_day_4_slides",
         "script.name": "virtual-pl-csd-summer-2024-day4"
       }
     }

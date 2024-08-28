@@ -1,18 +1,21 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import color from '../../../util/color';
-import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
+
 import {navigateToLevelId} from '@cdo/apps/code-studio/progressRedux';
 import {
-  levelsForLessonId,
   lessonExtrasUrl,
+  getCurrentLevel,
+  getCurrentLevels,
 } from '@cdo/apps/code-studio/progressReduxSelectors';
+import LessonExtrasProgressBubble from '@cdo/apps/templates/progress/LessonExtrasProgressBubble';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import {levelWithProgressType} from '@cdo/apps/templates/progress/progressTypes';
-import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelKind, LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+
+import color from '../../../util/color';
 import {canChangeLevelInPage} from '../../browserNavigation';
-import $ from 'jquery';
 
 /**
  * Lesson progress component used in level header and course overview.
@@ -28,6 +31,7 @@ class LessonProgress extends Component {
     currentPageNumber: PropTypes.number,
     currentLevelId: PropTypes.string,
     navigateToLevelId: PropTypes.func,
+    currentLevel: PropTypes.object,
   };
 
   getFullWidth() {
@@ -135,8 +139,13 @@ class LessonProgress extends Component {
   }
 
   render() {
-    const {currentPageNumber, lessonExtrasUrl, lessonName, navigateToLevelId} =
-      this.props;
+    const {
+      currentPageNumber,
+      lessonExtrasUrl,
+      lessonName,
+      navigateToLevelId,
+      currentLevel,
+    } = this.props;
     let levels = this.props.levels;
 
     // Bonus levels should not count towards mastery.
@@ -146,8 +155,6 @@ class LessonProgress extends Component {
       this.getFullProgressOffset();
 
     const onBonusLevel = this.isOnBonusLevel();
-
-    const currentLevel = levels.find(level => level.isCurrentLevel);
 
     return (
       <div className="react_stage" style={styles.container}>
@@ -161,7 +168,9 @@ class LessonProgress extends Component {
             style={styles.inner}
           >
             {levels.map((level, index) => {
-              let isCurrent = level.isCurrentLevel;
+              let isCurrent =
+                level.isCurrentLevel ||
+                level.sublevels?.some(sublevel => sublevel.isCurrentLevel);
               if (isCurrent && level.kind === LevelKind.assessment) {
                 isCurrent = currentPageNumber === level.pageNumber;
               }
@@ -272,7 +281,8 @@ export const UnconnectedLessonProgress = LessonProgress;
 
 export default connect(
   state => ({
-    levels: levelsForLessonId(state.progress, state.progress.currentLessonId),
+    levels: getCurrentLevels(state),
+    currentLevel: getCurrentLevel(state),
     lessonExtrasUrl: lessonExtrasUrl(
       state.progress,
       state.progress.currentLessonId

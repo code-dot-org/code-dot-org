@@ -1,0 +1,91 @@
+<Music>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 70,
+  "created_at": "2024-04-26T04:03:10.000Z",
+  "level_num": "custom",
+  "user_id": 976,
+  "properties": {
+    "encrypted": "false",
+    "background": "music-black",
+    "long_instructions": "#### Repeat\r\n\r\nSave time by using repeat to play the same sounds over and over.\r\n\r\n1. Click [Control](#clickable=toolbox-second-block) to find the repeat block. \r\n2. Use the [repeat](#clickable=repeat-block) block to play the same sound [3](#clickable=repeat-block-field-workspace) times.",
+    "level_data": {
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false
+            }
+          ]
+        }
+      },
+      "toolbox": {
+        "blocks": {
+          "Control": [
+            "repeat_simple2"
+          ],
+          "Play": [
+            "play_sound_at_current_location_simple2"
+          ]
+        }
+      }
+    },
+    "instructions_important": "false",
+    "name_suffix": "_v2",
+    "hide_share_and_remix": "false",
+    "validations": [
+      {
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 3
+          }
+        ],
+        "message": "Nice work. You successfully played a sound three times!",
+        "next": true,
+        "key": "musiclab_intro_repeat_elementary_1eaff1ec-353f-48fb-8a07-383e4dd1f918"
+      },
+      {
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 2
+          }
+        ],
+        "message": "You repeated a sound twice. Now make it play it [three](#clickable=repeat-block-field-workspace) times.",
+        "key": "musiclab_intro_repeat_elementary_81debb7d-9c0a-466c-b618-a6f5639e0b1b",
+        "next": false
+      },
+      {
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 1
+          }
+        ],
+        "message": "You played a sound once. Now make it play it three times by putting a [3](#clickable=repeat-block-field-workspace) in the [repeat](#clickable=repeat-block) block.",
+        "key": "musiclab_intro_repeat_elementary_ef93b774-6a6b-4364-8e37-85ce20e15450",
+        "next": false
+      },
+      {
+        "message": "Play a sound three times. Attach a [repeat](#clickable=repeat-block) block to [when run](#clickable=when-run-block). Then put a [play](#clickable=play-sound-block) block inside of it.",
+        "key": "musiclab_intro_repeat_elementary_7870662b-99f3-4920-9a0e-f03a9386bb34",
+        "next": false,
+        "conditions": [
+
+        ]
+      }
+    ],
+    "hint_prompt_attempts_threshold": "1",
+    "preload_asset_list": null
+  },
+  "audit_log": "[{\"changed_at\":\"2024-04-26T04:03:10.210+00:00\",\"changed\":[\"cloned from \\\"musiclab_intro_repeat_v2\\\"\"],\"cloned_from\":\"musiclab_intro_repeat_v2\"},{\"changed_at\":\"2024-04-26 22:01:31 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-26 22:06:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-26 22:08:21 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-26 22:52:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-29 15:16:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-14 16:13:58 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-14 16:15:12 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"},{\"changed_at\":\"2024-05-20 18:50:50 +0000\",\"changed\":[],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2024-05-20 20:01:41 +0000\",\"changed\":[],\"changed_by_id\":976,\"changed_by_email\":\"michael@code.org\"},{\"changed_at\":\"2024-08-15 23:06:05 +0000\",\"changed\":[],\"changed_by_id\":1196,\"changed_by_email\":\"amy.woodman@code.org\"}]"
+}]]></config>
+  <blocks/>
+</Music>

@@ -1,6 +1,6 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../util/reconfiguredChai';
+
 import PlcHeader from '@cdo/apps/code-studio/plc/header';
 
 const TEST_UNIT_NAME = 'Test Unit';
@@ -25,7 +25,7 @@ describe('PlcHeader', () => {
           <span>{TEST_UNIT_NAME}</span>
         </div>
       )
-    ).to.be.ok;
+    ).toBeTruthy();
   });
 
   it('renders an extra layer of breadcrumb with a page name', () => {
@@ -50,6 +50,6 @@ describe('PlcHeader', () => {
           </span>
         </div>
       )
-    ).to.be.ok;
+    ).toBeTruthy();
   });
 });

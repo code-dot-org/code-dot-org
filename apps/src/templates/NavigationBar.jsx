@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import colorUtil from '@cdo/apps/util/color';
 import {Link} from '@dsco_/link';
+import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+
+import colorUtil from '@cdo/apps/util/color';
 
 export const NavigationItem = ({
   text,

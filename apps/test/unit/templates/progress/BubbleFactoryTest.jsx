@@ -1,6 +1,5 @@
-import {shallow, mount} from 'enzyme';
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {
   BasicBubble,
@@ -18,7 +17,7 @@ import {currentLocation} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import {updateQueryParam} from '../../../../src/code-studio/utils';
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('BubbleFactory', () => {
   describe('BasicBubble', () => {
@@ -125,14 +124,17 @@ describe('BubbleFactory', () => {
     });
 
     it('passes icon for the level to TooltipWithIcon', () => {
-      const getIconStub = sinon.stub(progressHelpers, 'getIconForLevel');
+      const getIconStub = jest
+        .spyOn(progressHelpers, 'getIconForLevel')
+        .mockClear()
+        .mockImplementation();
       const icon = 'test-icon';
-      getIconStub.returns(icon);
+      getIconStub.mockReturnValue(icon);
 
       const wrapper = setUp();
       expect(wrapper.find('TooltipWithIcon').props().icon).to.equal(icon);
 
-      getIconStub.restore();
+      getIconStub.mockRestore();
     });
   });
 

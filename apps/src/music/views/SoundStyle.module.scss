@@ -16,5 +16,6 @@
   @include sound-type-style(Fx, #E3CB0C, #E3CB0C, #928308, #E3CB0C);
   @include sound-type-style(Vocal, #ff8c00, #ff8c00, #a35a02, #ff8c00);
   @include sound-type-style(Pattern, black, black, black, $neutral_light);
-  @include sound-type-style(Chord, $light_cyan, $light_cyan, $light_cyan, $neutral_dark80);
+  @include sound-type-style(Chord, $light_cyan, $light_cyan, $light_cyan, #4289a3);
+  @include sound-type-style(Tune, #68d1f7, #68d1f7, #68d1f7, #48a3c4);
 }

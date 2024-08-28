@@ -1,0 +1,50 @@
+<Aichat>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 71,
+  "created_at": "2024-05-04T02:27:39.000Z",
+  "level_num": "custom",
+  "user_id": 4,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## Restaurant Chatbot\r\n\r\nLin is making a chatbot for her family's restaurant, [Sky Dragon](https://skydragonchinese.wixsite.com/tucson/dinner-menu). She thinks the chatbot will be a good option for people who may not want to fully browse the website - it could pop up in the corner and say \"Can I help you find something great to eat?\". Talking to the chatbot should feel like talking to someone who visits the restaurant all the time and is super excited by the menu.\r\n\r\nTo make this work, Lin needs to add specific information from her restaurant website to the chatbot. This should include:\r\n- The name, description, and price of at least 3 dishes\r\n- The address and phone number of the restaurant\r\n- A general description of the type of food served at the restaurant\r\n\r\nHelp Lin create this chatbot by adding a system prompt and retrieval! You should have at least 8 pieces of retrieval in the chatbot!\r\n\r\n**Optional Adjustment:** Instead of making a chatbot for this restaurant, you could make one for a different local restaurant in your city. The restaurant still needs a website to pull information from, and will still need the items listed above. Once you've confirmed this information is on the restaurant website, ask your teacher and make sure it's okay to change the assignment on this level!",
+    "system_prompt": "deprecated",
+    "bot_title": "deprecated",
+    "bot_description": "deprecated",
+    "disable_projects": true,
+    "aichat_settings": {
+      "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
+        "temperature": "0.8",
+        "systemPrompt": "",
+        "retrievalContexts": [
+
+        ],
+        "modelCardInfo": {
+          "botName": "",
+          "description": "",
+          "intendedUse": "",
+          "limitationsAndWarnings": "",
+          "testingAndEvaluation": "",
+          "exampleTopics": [
+
+          ],
+          "isPublished": false
+        }
+      },
+      "visibilities": {
+        "selectedModelId": "hidden",
+        "temperature": "hidden",
+        "systemPrompt": "editable",
+        "retrievalContexts": "editable",
+        "modelCardInfo": "hidden"
+      },
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+
+      ]
+    }
+  },
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:27:39.582+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-practice-L7\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-practice-L7\"},{\"changed_at\":\"2024-05-10 04:56:55 +0000\",\"changed\":[\"long_instructions\",\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Aichat>

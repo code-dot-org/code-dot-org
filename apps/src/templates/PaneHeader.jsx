@@ -3,13 +3,15 @@
  * places in our apps. The parent component is a PaneHeader that can be toggled
  * as focused or not. We then have child components of PaneSection and PaneButton.
  */
-import React from 'react';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import classNames from 'classnames';
+import React from 'react';
+
+import styles from '../p5lab/AnimationPicker/styles';
+
 import moduleStyles from './pane-header.module.scss';
 import commonStyles from '../common-styles.module.scss';
-import styles from '../p5lab/AnimationPicker/styles';
 
 /**
  * A purple pane header that can have be focused (purple) or unfocused (light purple).

@@ -1,7 +1,0 @@
-{{ featured_tutorial, title: "Ballando con il codice", body: "Programma un ballo tutto tuo! Con Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, musica dal cartone Disney \"Encanto\" e molti altri!", image: "/images/hoc2022-dance-party.png", url: "https://code.org/dance" }}
-
-{{ featured_tutorial, title: "L'arte della poesia", body: "Aggiungi un'animazione artistica a una poesia classica in questa attività Hour of Code!", image: "/shared/images/courses/logo_tall_poem-art.jpg", url: "https://studio.code.org/s/poem-art-2021/reset" }}
-
-{{ featured_tutorial, title: "L'Artista", body: "Disegna immagini e disegni fantastici con l'Artista!", image: "/shared/images/courses/logo_tall_artist.jpg", url: "https://studio.code.org/s/artist/reset" }}
-
-{{ featured_tutorial, title: "Lab Gioco Infinity", body: "Usa il Laboratorio per creare una storia o un gioco con i protagonisti di Disney Infinity.", image: "/shared/images/courses/logo_tall_infinity.jpg", url: "https://studio.code.org/s/infinity/reset" }}

@@ -1,16 +1,17 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import color from '@cdo/apps/util/color';
-import Button from '@cdo/apps/templates/Button';
-import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
-import {SignInState, setOver21} from '@cdo/apps/templates/currentUserRedux';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import i18n from '@cdo/locale';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import {SignInState, setOver21} from '@cdo/apps/templates/currentUserRedux';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 /*
  * SignInOrAgeDialog uses 'anon_over13' as its session storage key.

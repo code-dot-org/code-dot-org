@@ -13,6 +13,9 @@ module AWS
     # List from: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HTTPStatusCodes.html#HTTPStatusCodes-cached-errors
     CLIENT_ERROR_CODES = [400, 403, 404, 405, 414].freeze
     SERVER_ERROR_CODES = [500, 501, 502, 503, 504].freeze
+    CUSTOM_ERROR_PAGES = {
+      500 => '/assets/error-pages/500.html'
+    }.freeze
     ERROR_CACHE_TTL = 60
     # Configure CloudFront to forward these headers for S3 origins.
     S3_FORWARD_HEADERS = %w(
@@ -35,31 +38,31 @@ module AWS
       pegasus: {
         # NOTE: Keep this list in sync with the call to AWS::CloudFront.distribution_config in cloud_formation_stack.yml.erb.
         # CloudFormation stack should be refactored to reference this configuration in the future.
-        aliases: [CDO.pegasus_hostname, CDO.advocacy_hostname] + CDO.partners.map {|x| CDO.canonical_hostname("#{x}.code.org")},
-        origin: "#{ENV['RACK_ENV']}-pegasus.code.org",
+        aliases: [CDO.pegasus_hostname] + CDO.partners.map {|x| CDO.canonical_hostname("#{x}.code.org")},
+        origin: "#{ENV.fetch('RACK_ENV', nil)}-pegasus.code.org",
         # ACM domain name
         ssl_cert: 'code.org',
         log: {
           bucket: 'cdo-logs',
-          prefix: "#{ENV['RACK_ENV']}-pegasus-cdn"
+          prefix: "#{ENV.fetch('RACK_ENV', nil)}-pegasus-cdn"
         }
       },
       dashboard: {
         aliases: [CDO.dashboard_hostname],
-        origin: "#{ENV['RACK_ENV']}-dashboard.code.org",
+        origin: "#{ENV.fetch('RACK_ENV', nil)}-dashboard.code.org",
         ssl_cert: 'code.org',
         log: {
           bucket: 'cdo-logs',
-          prefix: "#{ENV['RACK_ENV']}-dashboard-cdn"
+          prefix: "#{ENV.fetch('RACK_ENV', nil)}-dashboard-cdn"
         }
       },
       hourofcode: {
         aliases: [CDO.hourofcode_hostname],
-        origin: "#{ENV['RACK_ENV']}-origin.hourofcode.com",
+        origin: "#{ENV.fetch('RACK_ENV', nil)}-origin.hourofcode.com",
         ssl_cert: 'hourofcode.com',
         log: {
           bucket: 'cdo-logs',
-          prefix: "#{ENV['RACK_ENV']}-hourofcode-cdn"
+          prefix: "#{ENV.fetch('RACK_ENV', nil)}-hourofcode-cdn"
         }
       }
     }
@@ -155,7 +158,7 @@ module AWS
                 ErrorCachingMinTTL: ERROR_CACHE_TTL,
                 ErrorCode: error,
                 ResponseCode: error,
-                ResponsePagePath: '/assets/error-pages/site-down.html'
+                ResponsePagePath: CUSTOM_ERROR_PAGES[error] || '/assets/error-pages/site-down.html'
               }.tap do |error_response_hash|
                 # Don't use friendly error pages on some environments (such as adhocs and LevelBuilder).
                 unless CDO.custom_error_response

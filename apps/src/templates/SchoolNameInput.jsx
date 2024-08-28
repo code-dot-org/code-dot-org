@@ -1,26 +1,25 @@
-import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+
+import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import i18n from '@cdo/locale';
-import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
-import style from './school-association.module.scss';
+
+import {SCHOOL_NAME_SESSION_KEY} from '../signUpFlow/signUpFlowConstants';
 
 export default function SchoolNameInput({fieldNames}) {
-  const [schoolName, setSchoolName] = useState('');
+  const detectedName = sessionStorage.getItem(SCHOOL_NAME_SESSION_KEY) || '';
+  const [schoolName, setSchoolName] = useState(detectedName);
 
   return (
-    <label>
-      <BodyTwoText className={style.padding} visualAppearance={'heading-xs'}>
-        {i18n.schoolOrganizationQuestion()}
-      </BodyTwoText>
-      <input
-        type="text"
-        name={fieldNames.schoolName}
-        onChange={e => {
-          setSchoolName(e.target.value);
-        }}
-        value={schoolName}
-      />
-    </label>
+    <TextField
+      name={fieldNames.schoolName}
+      label={i18n.schoolOrganizationQuestion()}
+      onChange={e => {
+        setSchoolName(e.target.value);
+        sessionStorage.setItem(SCHOOL_NAME_SESSION_KEY, e.target.value);
+      }}
+      value={schoolName}
+    />
   );
 }
 

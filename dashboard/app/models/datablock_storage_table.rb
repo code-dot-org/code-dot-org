@@ -41,6 +41,8 @@ class DatablockStorageTable < ApplicationRecord
 
   after_initialize -> {self.columns ||= ['id']}, if: :new_record?
 
+  validate :validate_max_table_count, on: :create
+
   # These are errors that should show up in the Applab Debug Console
   # see description in datablock_storage_controller.rb.
   class StudentFacingError < StandardError
@@ -58,12 +60,7 @@ class DatablockStorageTable < ApplicationRecord
   # the special project_id to indicate it's a shared table.
   SHARED_TABLE_PROJECT_ID = 0
 
-  # TODO: #57003, implement enforcement of MAX_TABLE_COUNT, we already have
-  # a test for it but we're skipping it until this is implemented.
   MAX_TABLE_COUNT = 10
-
-  # TODO: #57002, enforce MAX_TABLE_ROW_COUNT, we already have a test for it
-  # but we're skipping it until this is implemented.
   MAX_TABLE_ROW_COUNT = 20000
 
   def self.get_table_names(project_id)
@@ -72,6 +69,18 @@ class DatablockStorageTable < ApplicationRecord
 
   def self.get_shared_table_names
     get_table_names(SHARED_TABLE_PROJECT_ID)
+  end
+
+  def self.update_shared_table(table_name, records)
+    shared_table = DatablockStorageTable.find_or_create_by!(project_id: SHARED_TABLE_PROJECT_ID, table_name: table_name)
+    shared_table.records.delete_all
+    shared_table.columns = ['id']
+    shared_table.save!
+
+    shared_table.create_records(records)
+    shared_table.save!
+
+    shared_table
   end
 
   def self.find_shared_table(table_name)
@@ -99,7 +108,8 @@ class DatablockStorageTable < ApplicationRecord
   end
 
   def read_records
-    is_shared_table ? shared_table.records : records
+    record_rows = is_shared_table ? shared_table.records : records
+    record_rows.map(&:record_json)
   end
 
   ##########################################################
@@ -117,7 +127,7 @@ class DatablockStorageTable < ApplicationRecord
 
     CSV.generate do |csv|
       csv << column_names
-      read_records.map(&:record_json).each do |record_json|
+      read_records.each do |record_json|
         csv << column_names.map {|x| record_json[x]}
       end
     end
@@ -130,7 +140,7 @@ class DatablockStorageTable < ApplicationRecord
   def get_column(column_name)
     if get_columns.include? column_name
       read_records.map do |record|
-        record.record_json[column_name]
+        record[column_name]
       end
     else
       [] # javascript expects a list with every element undefined to indicate column doesn't exists error
@@ -158,36 +168,41 @@ class DatablockStorageTable < ApplicationRecord
   def create_records(record_jsons)
     if_shared_table_copy_on_write
 
+    return [] if record_jsons.empty?
+
+    if records.count + record_jsons.count > MAX_TABLE_ROW_COUNT
+      raise StudentFacingError.new(:MAX_ROWS_EXCEEDED), "Cannot add more than #{MAX_TABLE_ROW_COUNT} rows to a table"
+    end
+
+    # We want to do as much work as possible outside of the transaction, so validate and find new columns first
+    cols_in_records = Set.new
+    record_jsons.each do |record_json|
+      raise StudentFacingError.new(:INVALID_RECORD), 'Invalid record: nested objects and arrays are not permitted' if record_json.values.any? {|v| v.is_a?(Hash) || v.is_a?(Array)}
+      raise StudentFacingError.new(:INVALID_RECORD), 'Invalid record' unless DatablockStorageRecord.new(record_json: record_json).valid?
+      cols_in_records.merge(record_json.keys)
+    end
+
     DatablockStorageRecord.transaction do
       # Because we're using a composite primary key for records: (project_id, table_name, record_id)
       # and we want an incrementing record_id unique to that (project_id, table_name), we lock
-      # the first record in a DatablockStorageTable when we begin to insert new records,
-      # and release it once we close the transaction.
-      DatablockStorageRecord.where(project_id: project_id, table_name: table_name).lock.minimum(:record_id)
+      # the table for the transaction, compute the next record_id and insert our records
+      lock!
 
-      max_record_id = DatablockStorageRecord.where(project_id: project_id, table_name: table_name).maximum(:record_id)
-      next_record_id = (max_record_id || 0) + 1
+      max_record_id = DatablockStorageRecord.where(project_id: project_id, table_name: table_name).maximum(:record_id) || 0
 
-      cols_in_records = Set.new
-      record_jsons.each do |record_json|
-        record_json.each do |_key, json_value|
-          raise StudentFacingError.new(:INVALID_RECORD), 'Invalid record: nested objects and arrays are not permitted' if json_value.is_a?(Hash) || json_value.is_a?(Array)
+      records.insert_all(
+        record_jsons.map.with_index(max_record_id + 1) do |record_json, record_id|
+          record_json['id'] = record_id
+          {project_id: project_id, table_name: table_name, record_id: record_id, record_json: record_json}
         end
-
-        # We write the record_id into the JSON as well as storing it in its own column
-        # only create_record and update_record should be at risk of modifying this
-        record_json['id'] = next_record_id
-
-        DatablockStorageRecord.create(project_id: project_id, table_name: table_name, record_id: next_record_id, record_json: record_json)
-
-        cols_in_records.merge(record_json.keys)
-        next_record_id += 1
-      end
+      )
 
       # Preserve the old column's order while adding any new columns
       self.columns += (cols_in_records - columns).to_a
       save!
     end
+
+    record_jsons
   end
 
   def update_record(record_id, record_json)
@@ -215,11 +230,20 @@ class DatablockStorageTable < ApplicationRecord
   def import_csv(table_data_csv)
     if_shared_table_copy_on_write
 
-    records = CSV.parse(table_data_csv, headers: true).map(&:to_h)
+    max_csv_size = MAX_TABLE_ROW_COUNT * DatablockStorageRecord::MAX_RECORD_LENGTH
+    if table_data_csv.bytesize > max_csv_size
+      raise StudentFacingError.new(:IMPORT_FAILED), "CSV is too large to import, maximum CSV size is #{(max_csv_size.to_f / (1024 * 1024)).round} MB"
+    end
+
+    new_records = CSV.parse(table_data_csv, headers: true).map(&:to_h)
+
+    if new_records.empty?
+      raise StudentFacingError.new(:IMPORT_FAILED), "Could not import CSV as it was empty"
+    end
 
     # Auto-cast CSV strings on import, e.g. "5.0" => 5.0
     same_as_undefined = ['', 'undefined']
-    records.map! do |record|
+    new_records.map! do |record|
       # This is equivalent to setting the value to be 'undefined' in JS: it deletes the key
       record.reject! {|_key, value| same_as_undefined.include? value}
       record.transform_values! do |string_value|
@@ -232,9 +256,14 @@ class DatablockStorageTable < ApplicationRecord
       end
     end
 
-    create_records(records)
+    # import_csv should overwrite existing data:
+    records.delete_all
+    self.columns = ['id']
+    save!
+
+    create_records(new_records)
   rescue CSV::MalformedCSVError => exception
-    raise StudentFacingError.new(:INVALID_CSV), "Could not import CSV as it was not in the format we expected: #{exception.message}"
+    raise StudentFacingError.new(:IMPORT_FAILED), "Could not import CSV as it was not in the format we expected: #{exception.message}"
   end
 
   def add_column(column_name)
@@ -260,11 +289,15 @@ class DatablockStorageTable < ApplicationRecord
 
     # First rename the column in all the JSON records
     records.each do |record|
-      record.record_json[new_column_name] = record.record_json.delete(old_column_name)
+      record.record_json[new_column_name] = record.record_json.delete(old_column_name) if record.record_json.key?(old_column_name)
     end
 
     # Second rename the column in the table definition
-    self.columns = columns.map {|column| column == old_column_name ? new_column_name : column}
+    if columns.include? old_column_name
+      self.columns = columns.map {|column| column == old_column_name ? new_column_name : column}
+    else
+      self.columns << new_column_name
+    end
   end
 
   # Convert all values in a column to a new type
@@ -322,6 +355,12 @@ class DatablockStorageTable < ApplicationRecord
       else
         raise StudentFacingError.new(:CANNOT_CONVERT_COLUMN_TYPE), "Couldn't convert #{value.inspect} to boolean"
       end
+    end
+  end
+
+  private def validate_max_table_count
+    if DatablockStorageTable.where(project_id: project_id).count >= MAX_TABLE_COUNT && project_id != SHARED_TABLE_PROJECT_ID
+      raise StudentFacingError.new(:MAX_TABLES_EXCEEDED), "Cannot create more than #{MAX_TABLE_COUNT} tables"
     end
   end
 end

@@ -1,6 +1,13 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {FormGroup, ControlLabel, FormControl, HelpBlock} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
+import {
+  Courses,
+  ActiveCourses,
+  ArchivedCourses,
+} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
+
 import {
   Facilitator,
   Organizer,
@@ -8,11 +15,6 @@ import {
   ProgramManager,
   WorkshopAdmin,
 } from '../permission';
-import {
-  Courses,
-  ActiveCourses,
-  ArchivedCourses,
-} from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
 /**
  * A dropdown used on the Workshop form for selecting a course.

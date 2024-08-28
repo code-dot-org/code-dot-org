@@ -1,6 +1,6 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
+
 import {RegionalPartnerMiniContact} from '@cdo/apps/code-studio/pd/regional_partner_mini_contact/RegionalPartnerMiniContact';
 
 describe('RegionalPartnerMiniContactTest', () => {
@@ -29,7 +29,7 @@ describe('RegionalPartnerMiniContactTest', () => {
         );
 
         const field = findField(wrapper, fieldName);
-        expect(field.prop('required')).to.equal(expectRequired);
+        expect(field.prop('required')).toBe(expectRequired);
       });
     });
   });

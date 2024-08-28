@@ -2,6 +2,18 @@
 @import 'font';
 @import 'style-constants';
 
+.pageContainer {
+  display: flex;
+  flex-direction: row;
+  min-height: 100%;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
 .navContainer {
   background-color: $neutral_dark;
   display: flex;
@@ -85,7 +97,10 @@
       margin-inline-end: 8px;
       color: $light_secondary_500;
 
-      &:hover, :active, :visited, :focus-visible {
+      &:hover,
+      :active,
+      :visited,
+      :focus-visible {
         color: $light_secondary_500;
       }
     }
@@ -93,7 +108,6 @@
 
   &Curriculum {
     margin-bottom: 8px;
-    margin-inline-start: 7px;
   }
 
   &RightColumn {

@@ -47,7 +47,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "project_template_level_name": "U4 Model App_2023",
-    "encrypted_examples": "C+AwD8dswzDrQKrG4Ku0n150E3oYRNWK+KzCfFTy4EQ64/qA+aEmfqnCP/u9\nawotN32HpXEhoUde2sIAtqbxBg==\n",
+    "encrypted_examples": "4me1BWIqw8FSgOWGI1ErjOeokBJ7G0qZG32NhuuyTZlf//8UH0BeSDAUFsA3\nhPBX71R2QfB3X2vgKKQr7AIhxg==\n",
     "parent_level_id": 20248,
     "name_suffix": "_2023",
     "reference_links": [
@@ -58,13 +58,13 @@
     "map_reference": "/courses/csd-2022/guides/importing-screens",
     "mini_rubric": "false",
     "encrypted": "false",
-    "preload_asset_list": null,
     "widget_mode": "false",
     "libraries_enabled": "false",
-    "ai_enabled": "false"
+    "ai_enabled": "false",
+    "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:37:25.752+00:00\",\"changed\":[\"cloned from \\\"U4 Model Program 2_2022\\\"\"],\"cloned_from\":\"U4 Model Program 2_2022\"},{\"changed_at\":\"2024-03-11 15:44:33 +0000\",\"changed\":[\"long_instructions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:37:25.752+00:00\",\"changed\":[\"cloned from \\\"U4 Model Program 2_2022\\\"\"],\"cloned_from\":\"U4 Model Program 2_2022\"},{\"changed_at\":\"2024-03-11 15:44:33 +0000\",\"changed\":[\"long_instructions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-20 23:24:53 +0000\",\"changed\":[\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

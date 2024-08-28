@@ -1,8 +1,9 @@
-import React, {useEffect, useState} from 'react';
 import PropTypes from 'prop-types';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import i18n from '@cdo/locale';
+import React, {useEffect, useState} from 'react';
+
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 /**
  * A wrapper component that loads data for another component and

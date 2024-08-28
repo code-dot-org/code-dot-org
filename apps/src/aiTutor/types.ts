@@ -1,17 +1,16 @@
 import {
   AiTutorInteractionStatus as AITutorInteractionStatus,
   AiTutorTypes as AITutorTypes,
-  PiiTypes as PII,
-} from '@cdo/apps/util/sharedConstants';
+} from '@cdo/generated-scripts/sharedConstants';
 
 // TODO: Update this once https://codedotorg.atlassian.net/browse/CT-471 is resolved
 export type AITutorTypesValue = string;
 export type AITutorInteractionStatusValue = string;
 
-export {AITutorInteractionStatus, AITutorTypes, PII};
+export {AITutorInteractionStatus, AITutorTypes};
 
 export interface ChatCompletionMessage {
-  id: number;
+  id?: number;
   role: Role;
   chatMessageText: string;
   status: string;
@@ -23,7 +22,6 @@ export interface AITutorInteraction {
   levelId?: number;
   scriptId?: number;
   type: AITutorTypesValue | undefined;
-  isProjectBacked?: boolean;
   prompt: string;
   status: AITutorInteractionStatusValue;
   aiResponse?: string;
@@ -61,7 +59,6 @@ export interface Level {
   id: number;
   type: string;
   hasValidation: boolean;
-  isProjectBacked: boolean;
   aiTutorAvailable: boolean;
   isAssessment: boolean;
 }
@@ -70,8 +67,8 @@ export interface ChatContext {
   // studentInput is the last user message for general chat
   // or the student's code for compilation and validation.
   studentInput: string;
-  studentCode: string;
-  actionType: AITutorTypesValue | undefined;
+  studentCode?: string;
+  actionType?: AITutorTypesValue | undefined;
 }
 
 export enum Role {

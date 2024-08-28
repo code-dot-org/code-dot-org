@@ -75,6 +75,7 @@ Scenario: Lock settings for retake not submit scenario
   When I am on "http://studio.code.org/s/allthethings"
   Then I verify the lesson named "Anonymous student survey 2" is locked
 
+@no_mobile
 Scenario: Lock settings for retake after submit scenario
   Given I create an authorized teacher-associated student named "frank"
 

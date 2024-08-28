@@ -1,10 +1,13 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
-import PersonalRecentProjects from './PersonalRecentProjects.jsx';
-import ContentContainer from '../ContentContainer.jsx';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome.jsx';
 import i18n from '@cdo/locale';
-import _ from 'lodash';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+
+import ContentContainer from '../ContentContainer.jsx';
+
+import PersonalRecentProjects from './PersonalRecentProjects.jsx';
 import StartNewProject from './StartNewProject';
 
 class ProjectWidget extends React.Component {

@@ -13,11 +13,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-12 21:41:05 UTC",
+    "serialized_at": "2024-08-27 22:23:14 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -115,7 +116,8 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students practice writing programs with parameters and return values by creating and debugging functions that use them.",
-        "preparation": "* Review the programming levels students will complete\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-parameters-and-return-values-lessons-1-4/36484) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/12QKZZeyTmZLRTtkewPxbYnMIP3qVTcQOxqihLuYHqcg/edit?usp=sharing)",
+        "preparation": "* Review the programming levels students will complete\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-parameters-and-return-values-lessons-1-4/36484) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "purpose": "This is students' opportunity to practice using parameters and return values in a variety of contexts. The progression of levels builds in complexity from students merely calling functions with parameters to designing functions and debugging complex programs that use parameters and return values. This lesson should build students familiarity with these concepts as they prepare for the Make project in the next lesson.",
         "student_overview": "Practice programming with parameters and return values through a set of programming puzzles."
       },
       "seeding_key": {
@@ -411,53 +413,54 @@
       }
     },
     {
-      "key": "fd0ac9d6-8b46-4dd4-a383-c4bb25f8ac1a",
+      "key": "eff78abc-de82-4677-9436-67a614002811",
       "position": 1,
       "properties": {
+        "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "fd0ac9d6-8b46-4dd4-a383-c4bb25f8ac1a",
+        "lesson_activity.key": "eff78abc-de82-4677-9436-67a614002811",
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2024"
       }
     },
     {
-      "key": "b2498afb-ef6e-4234-82f6-cad324a116ee",
+      "key": "e3dde16f-1394-4fe9-a184-0f19ec6f81d0",
       "position": 2,
       "properties": {
-        "duration": 40,
-        "name": "Parameters & Return Values Practice"
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "b2498afb-ef6e-4234-82f6-cad324a116ee",
+        "lesson_activity.key": "e3dde16f-1394-4fe9-a184-0f19ec6f81d0",
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2024"
       }
     },
     {
-      "key": "66defbd1-da99-48f3-a1c2-0a0ad7b65630",
+      "key": "dd33b185-2c13-4a9c-ac3d-65fec1cbf1ec",
       "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "66defbd1-da99-48f3-a1c2-0a0ad7b65630",
+        "lesson_activity.key": "dd33b185-2c13-4a9c-ac3d-65fec1cbf1ec",
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2024"
       }
     },
     {
-      "key": "60bd1cd0-75e4-4915-a4c7-d8f453d070e0",
+      "key": "dc5c67ba-d0af-48b2-a7e9-266067f1d8ae",
       "position": 4,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "60bd1cd0-75e4-4915-a4c7-d8f453d070e0",
+        "lesson_activity.key": "dc5c67ba-d0af-48b2-a7e9-266067f1d8ae",
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2024"
@@ -1121,123 +1124,215 @@
       }
     },
     {
-      "key": "82747e48-3925-485c-821f-bd54307ed46f",
+      "key": "7228a146-10c0-4cbc-bf5f-89d3ba5956e4",
       "position": 1,
       "properties": {
-        "description": "Today we're going to have a chance to practice programming with a lot of the concepts and patterns we've explored over the last two lessons. I encourage you to go through these with a partner, but pay close attention to what each other is doing. You will be choosing one of two apps to help develop today. While the design of each of these apps is complete, it will be your job to use your knowledge of lists in order to make the apps function as intended.\n\nWhichever app you choose, please continue to choose that <strong>same </strong>app on each of the choice levels. There are a total of *seven* levels for each app.\n\nIn our next lesson you're going to have to use a lot of these skills on an independent project, and these activities are good practice for what you'll find there! Alright, let's get to it!",
-        "name": "Quick Warm Up\r",
-        "remarks": true,
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Move Quickly to the Activity:** There's a lot in the main activity of today's lesson. It is advisable to give students more time to get hands on with some code."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What is one reason why parameters and return values are useful? What is one way you think programming with parameters and return values may make programming or debugging more challenging?*\n\nHave students share responses with a neighbor before discussing with the whole class.\n\n**Discussion Goal:** Use this quick discussion to review what students should already have seen about parameters and return values while also discussing them to think about how they'll need to use those skills in today's lessons. You should use your remarks to review the fact that parameters and return help write neater programs, but they may be a little tricky at first to read and understand. That's why we practice!\n\nUp to this point, students have only seen complete traversals - that is, traversals where every element of a list is accessed. Now that they've been introduced to return, students can build partial traversals where a list is only partially accessed. For example: A list could be traversed to find a specific element. Once that element is found, \"found element x\" is returned, and the traversal stops. While students don't actually need to build partial traversals themselves, they now should know how it theoretically could be created. \n",
+        "name": "Quick Warm Up\r"
       },
       "seeding_key": {
-        "activity_section.key": "82747e48-3925-485c-821f-bd54307ed46f",
-        "lesson_activity.key": "fd0ac9d6-8b46-4dd4-a383-c4bb25f8ac1a"
+        "activity_section.key": "7228a146-10c0-4cbc-bf5f-89d3ba5956e4",
+        "lesson_activity.key": "eff78abc-de82-4677-9436-67a614002811"
       }
     },
     {
-      "key": "22edd027-f142-4649-a83f-7331ed456ea4",
-      "position": 1,
-      "properties": {
-        "description": "**Group:** It is recommended that students work in pairs for this lesson. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Code Studio, Lesson 3 Level 1. ",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Optional Resource**: There is an activity guide available in the *Resources* section that contains all of the main tasks that students need to complete over the course of the seven levels. The tasks and descriptions in this activity guide are identical to what is presented within the levels themselves. However, some students might benefit from this task list as they work on creating the practice app.  "
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "22edd027-f142-4649-a83f-7331ed456ea4",
-        "lesson_activity.key": "b2498afb-ef6e-4234-82f6-cad324a116ee"
-      }
-    },
-    {
-      "key": "27bbbaf6-7d38-450a-ae15-06da095cab91",
-      "position": 2,
-      "properties": {
-        "progression_name": "App Development Activity",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "**Create Performance Task Written Response Practice**\n\n\n\n In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\nCreate PT Learning Objective(s): *- Explain how the use of procedural abstraction manages complexity in a program.*\n\n\n[Unit Journal Template](https://docs.google.com/presentation/d/1AwWl-xkDJJ2tWWa2d73pV5FLTt8lFMHl1Hr0b8p3Idg/edit#slide=id.g245f5bd1dc2_0_0)\n\n**Sample Response for Instructors**"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "27bbbaf6-7d38-450a-ae15-06da095cab91",
-        "lesson_activity.key": "b2498afb-ef6e-4234-82f6-cad324a116ee"
-      }
-    },
-    {
-      "key": "09911757-20af-4ed9-97e4-8b6668817e2c",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What aspects of working with parameters & return values do you feel like clicked today? What do you still feel like you have trouble with?*\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. "
-      },
-      "seeding_key": {
-        "activity_section.key": "09911757-20af-4ed9-97e4-8b6668817e2c",
-        "lesson_activity.key": "66defbd1-da99-48f3-a1c2-0a0ad7b65630"
-      }
-    },
-    {
-      "key": "c25bfe73-67e6-4e98-84d3-27c0cc6413cc",
+      "key": "82938f4e-587d-4292-a7d0-99e274171907",
       "position": 2,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "c25bfe73-67e6-4e98-84d3-27c0cc6413cc",
-        "lesson_activity.key": "66defbd1-da99-48f3-a1c2-0a0ad7b65630"
+        "activity_section.key": "82938f4e-587d-4292-a7d0-99e274171907",
+        "lesson_activity.key": "eff78abc-de82-4677-9436-67a614002811"
       }
     },
     {
-      "key": "01e65704-7fc3-4164-a980-6ff343a77042",
+      "key": "c0fdebe5-8f9e-4226-aa1c-31e6c0a0962d",
       "position": 3,
       "properties": {
-        "description": "Working with parameters & return values can be tricky. We will get more practice tomorrow by making an app that uses lists to store information.",
+        "description": "Parameters and return values allow us to write code that is neater and works in a larger number of scenarios. We're going to have to practice reading, writing, and debugging code like this however, because it works a little a differently than the programs we've gotten used to writing. Let's dive in!",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "01e65704-7fc3-4164-a980-6ff343a77042",
-        "lesson_activity.key": "66defbd1-da99-48f3-a1c2-0a0ad7b65630"
+        "activity_section.key": "c0fdebe5-8f9e-4226-aa1c-31e6c0a0962d",
+        "lesson_activity.key": "eff78abc-de82-4677-9436-67a614002811"
       }
     },
     {
-      "key": "f7f93b20-5918-4119-95ac-dac3282b0481",
+      "key": "d130dcfc-a51b-4acf-afc3-9e941fd29a9f",
+      "position": 1,
+      "properties": {
+        "name": "Practice Time\r",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Providing Support:** Circulate around the room through the lesson encouraging students to use the strategies introduced at the beginning of the lesson. Students have a number of supports at their fingertips, so a big part of your role is helping build their independence in using those resources.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d130dcfc-a51b-4acf-afc3-9e941fd29a9f",
+        "lesson_activity.key": "e3dde16f-1394-4fe9-a184-0f19ec6f81d0"
+      }
+    },
+    {
+      "key": "900328b5-c84f-4a9f-ac76-c27694bc6c4b",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** It is recommended that students work in pairs for this lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "900328b5-c84f-4a9f-ac76-c27694bc6c4b",
+        "lesson_activity.key": "e3dde16f-1394-4fe9-a184-0f19ec6f81d0"
+      }
+    },
+    {
+      "key": "a202f9d7-326c-4a3f-b1a9-86cd03631cc2",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Today you're mostly going to practice what we've learned about programming with parameters and return values. In general we want to use the debugging process we've practiced all year, but here's some specific things to look out for in today's lesson.\r\n\r\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Use console.log to call functions with parameters with different values to see how they run\r\n* Slow down the code with the speed slider to see how the code is running once your function is called",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a202f9d7-326c-4a3f-b1a9-86cd03631cc2",
+        "lesson_activity.key": "e3dde16f-1394-4fe9-a184-0f19ec6f81d0"
+      }
+    },
+    {
+      "key": "972c9311-75e5-43c1-8900-6fec600529f2",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Levels 1-5:** These levels involve functions with parameters and return values, working in the console"
+      },
+      "seeding_key": {
+        "activity_section.key": "972c9311-75e5-43c1-8900-6fec600529f2",
+        "lesson_activity.key": "e3dde16f-1394-4fe9-a184-0f19ec6f81d0"
+      }
+    },
+    {
+      "key": "c43fc9ea-1513-4c8e-9e51-1db0416c0609",
+      "position": 5,
+      "properties": {
+        "description": "* Level 1: Calling a function multiple times with a single parameter\n* Level 2: Students follow a pattern to choose a random Compliment from a list that is concatenated with a name passed through a parameter. \n* Level 3: This is the same as Level 1, except now the functions use return values. Again, students follow a pattern given in another working function. \n* Level 4: Students write a function that returns the season a month is in. By this point, students should be noticing the type of commenting that is happening above each function. This format previews how students will need to write comments for libraries later on in the unit. \n",
+        "progression_name": "console.log Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "c43fc9ea-1513-4c8e-9e51-1db0416c0609",
+        "lesson_activity.key": "e3dde16f-1394-4fe9-a184-0f19ec6f81d0"
+      }
+    },
+    {
+      "key": "62b220fa-35ec-402e-9ebc-630b279073ec",
+      "position": 6,
+      "properties": {
+        "description": "* Level 5: A choice level involving different programs using parameters and return values.\n  * Level 5a - Traverse lists to find the longest and shortest words.\n  * Level 5b - Traverse lists to find states and countries with the largest and smallest populations.\n  * Level 5c -  Display track information about a random top 50 song.\n  * Level 5d - Create a program that determines if it's ok to sleep in or not.",
+        "progression_name": "Putting It Together: Console"
+      },
+      "seeding_key": {
+        "activity_section.key": "62b220fa-35ec-402e-9ebc-630b279073ec",
+        "lesson_activity.key": "e3dde16f-1394-4fe9-a184-0f19ec6f81d0"
+      }
+    },
+    {
+      "key": "2aec88bf-a091-4599-a005-1801b155d8e4",
+      "position": 7,
+      "properties": {
+        "description": "\n**Levels 6-9:** Students continue practicing, now working with apps\n\n* Level 6: Students debug and comment an ordering app. Completing this level will require students to read programs that use functions with parameters and return carefully.\n* Level 7: We return to the compliment code, this time reworking it into an app. Again students write their own comments, this time including comments for a return value. Students also complete the `updateScreen` function, which calls both of the functions with parameters. \n* Level 8: Students practice writing a `checkCorrect` function with parameters in making a quiz app function. The app uses data from theRoot: 100 Influential African-Americans dataset.\n",
+        "progression_name": "App Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "2aec88bf-a091-4599-a005-1801b155d8e4",
+        "lesson_activity.key": "e3dde16f-1394-4fe9-a184-0f19ec6f81d0"
+      }
+    },
+    {
+      "key": "16ee0e88-fe51-4846-991d-87cd5c03cc2d",
+      "position": 8,
+      "properties": {
+        "description": "\n\n**Extension Opportunities:**\n\n* Level 7: Add more greeting and compliment options to the lists\n* Level 8: Use a different dataset in place of theRoot dataset.",
+        "progression_name": "MOD Practice"
+      },
+      "seeding_key": {
+        "activity_section.key": "16ee0e88-fe51-4846-991d-87cd5c03cc2d",
+        "lesson_activity.key": "e3dde16f-1394-4fe9-a184-0f19ec6f81d0"
+      }
+    },
+    {
+      "key": "4636a3bf-7d4e-4cd2-8fbb-f7104d2b6c94",
+      "position": 9,
+      "properties": {
+        "description": "* Level 9: Choice level involving apps that all work but could be rewritten with functions that use parameters and returns to manage complexity.",
+        "progression_name": "Putting It Together: Apps"
+      },
+      "seeding_key": {
+        "activity_section.key": "4636a3bf-7d4e-4cd2-8fbb-f7104d2b6c94",
+        "lesson_activity.key": "e3dde16f-1394-4fe9-a184-0f19ec6f81d0"
+      }
+    },
+    {
+      "key": "5b54fed1-6323-41fb-8833-08faccbd726c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "5b54fed1-6323-41fb-8833-08faccbd726c",
+        "lesson_activity.key": "dd33b185-2c13-4a9c-ac3d-65fec1cbf1ec"
+      }
+    },
+    {
+      "key": "3df7576a-456a-4605-9f21-0bf50c0c31bc",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What aspects of working with parameters and return values do you feel like clicked today? What do you still feel like you have trouble with?*\n\nHave students share with one another before sharing with the whole class.\n\n**Discussion Goal:** Use this opportunity to address any lingering questions or misconceptions in the room. You can also use this as a source of discussion topics to kick off the following lesson. As you lead the discussion, call out the many resources students have access to help when they're getting stuck. \n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "3df7576a-456a-4605-9f21-0bf50c0c31bc",
+        "lesson_activity.key": "dd33b185-2c13-4a9c-ac3d-65fec1cbf1ec"
+      }
+    },
+    {
+      "key": "c19dabc7-6e7a-4730-ac19-4b85dac7bc34",
+      "position": 3,
+      "properties": {
+        "description": "Working with parameters and return values can be tricky. We will get more practice tomorrow by making an app that uses lists to store information.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c19dabc7-6e7a-4730-ac19-4b85dac7bc34",
+        "lesson_activity.key": "dd33b185-2c13-4a9c-ac3d-65fec1cbf1ec"
+      }
+    },
+    {
+      "key": "baf26cdf-40cd-43a5-a1ab-3788d3cdb6a4",
       "position": 4,
       "properties": {
         "description": "---"
       },
       "seeding_key": {
-        "activity_section.key": "f7f93b20-5918-4119-95ac-dac3282b0481",
-        "lesson_activity.key": "66defbd1-da99-48f3-a1c2-0a0ad7b65630"
+        "activity_section.key": "baf26cdf-40cd-43a5-a1ab-3788d3cdb6a4",
+        "lesson_activity.key": "dd33b185-2c13-4a9c-ac3d-65fec1cbf1ec"
       }
     },
     {
-      "key": "47fe1083-4821-49f2-b3bc-c03ff427647a",
+      "key": "3ac7328e-a37f-42f3-a5c5-f74a7c49ba9e",
       "position": 5,
       "properties": {
         "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\n\n**Question:** The procedure below will be called twice with two numbers provided as arguments to the parameter `myNumber`. Which of the following pair of numbers will `mystery` return the same value?\n\n![](https://images.code.org/df9da9dd9ffd9ad6ddedf239d66f77d1-image-1611869790276.15.01-PM.png)",
         "name": "Assessment: Check For Understanding\r"
       },
       "seeding_key": {
-        "activity_section.key": "47fe1083-4821-49f2-b3bc-c03ff427647a",
-        "lesson_activity.key": "66defbd1-da99-48f3-a1c2-0a0ad7b65630"
+        "activity_section.key": "3ac7328e-a37f-42f3-a5c5-f74a7c49ba9e",
+        "lesson_activity.key": "dd33b185-2c13-4a9c-ac3d-65fec1cbf1ec"
       }
     },
     {
-      "key": "809d5b48-1d3f-4fc1-8d55-277e48426c49",
+      "key": "1c18ff95-2b37-4eb6-8104-a169d4793256",
       "position": 1,
       "properties": {
         "progression_name": "Check For Understanding: AP Practice"
       },
       "seeding_key": {
-        "activity_section.key": "809d5b48-1d3f-4fc1-8d55-277e48426c49",
-        "lesson_activity.key": "60bd1cd0-75e4-4915-a4c7-d8f453d070e0"
+        "activity_section.key": "1c18ff95-2b37-4eb6-8104-a169d4793256",
+        "lesson_activity.key": "dc5c67ba-d0af-48b2-a7e9-266067f1d8ae"
       }
     },
     {
@@ -2333,6 +2428,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Parameters, Returns, and Libraries Q1_2024"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2355,6 +2453,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Parameters, Returns, and Libraries Q2_2024"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2377,6 +2478,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP Pre-Unit Pulse - Parameters, Returns, and Libraries Q3_2024"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2399,6 +2503,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7L1 CFU Return2022_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2421,6 +2528,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Investigate Rock_2024"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2443,6 +2553,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Investigate Poetry App_2024"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2465,6 +2578,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7L2 CSP CFU Param and Return_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2487,20 +2603,23 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App Development Activity"
+        "level_keys": [
+          "U7 Param Return Practice Part 1_2024"
+        ],
+        "progression": "console.log Practice"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U7_L03_Parameters and Return Practice_Level 1_2024"
+          "U7 Param Return Practice Part 1_2024"
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2024",
-        "activity_section.key": "27bbbaf6-7d38-450a-ae15-06da095cab91"
+        "activity_section.key": "c43fc9ea-1513-4c8e-9e51-1db0416c0609"
       },
       "level_keys": [
-        "U7_L03_Parameters and Return Practice_Level 1_2024"
+        "U7 Param Return Practice Part 1_2024"
       ]
     },
     {
@@ -2509,20 +2628,23 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "App Development Activity"
+        "level_keys": [
+          "U7 Param Return Practice Part 2_2024"
+        ],
+        "progression": "console.log Practice"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U7_L03_Parameters and Return Practice_Level 2_2024"
+          "U7 Param Return Practice Part 2_2024"
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2024",
-        "activity_section.key": "27bbbaf6-7d38-450a-ae15-06da095cab91"
+        "activity_section.key": "c43fc9ea-1513-4c8e-9e51-1db0416c0609"
       },
       "level_keys": [
-        "U7_L03_Parameters and Return Practice_Level 2_2024"
+        "U7 Param Return Practice Part 2_2024"
       ]
     },
     {
@@ -2531,20 +2653,23 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "App Development Activity"
+        "level_keys": [
+          "U7 Param Return Practice Part 4_2024"
+        ],
+        "progression": "console.log Practice"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U7_L03_Parameters and Return Practice_Level 3_2024"
+          "U7 Param Return Practice Part 4_2024"
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2024",
-        "activity_section.key": "27bbbaf6-7d38-450a-ae15-06da095cab91"
+        "activity_section.key": "c43fc9ea-1513-4c8e-9e51-1db0416c0609"
       },
       "level_keys": [
-        "U7_L03_Parameters and Return Practice_Level 3_2024"
+        "U7 Param Return Practice Part 4_2024"
       ]
     },
     {
@@ -2553,94 +2678,159 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "App Development Activity"
+        "level_keys": [
+          "U7 Param Return Practice Part 3_2024"
+        ],
+        "progression": "console.log Practice"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U7_L03_Parameters and Return Practice_Level 4_2024"
+          "U7 Param Return Practice Part 3_2024"
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2024",
-        "activity_section.key": "27bbbaf6-7d38-450a-ae15-06da095cab91"
+        "activity_section.key": "c43fc9ea-1513-4c8e-9e51-1db0416c0609"
       },
       "level_keys": [
-        "U7_L03_Parameters and Return Practice_Level 4_2024"
+        "U7 Param Return Practice Part 3_2024"
       ]
     },
     {
       "chapter": 12,
       "position": 5,
-      "activity_section_position": 5,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App Development Activity"
+        "level_keys": [
+          "CSP U7L3 Console Choice_2024"
+        ],
+        "progression": "Putting It Together: Console"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U7_L03_Parameters and Return Practice_Level 5_2024"
+          "CSP U7L3 Console Choice_2024"
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2024",
-        "activity_section.key": "27bbbaf6-7d38-450a-ae15-06da095cab91"
+        "activity_section.key": "62b220fa-35ec-402e-9ebc-630b279073ec"
       },
       "level_keys": [
-        "U7_L03_Parameters and Return Practice_Level 5_2024"
+        "CSP U7L3 Console Choice_2024"
       ]
     },
     {
       "chapter": 13,
       "position": 6,
-      "activity_section_position": 6,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "App Development Activity"
+        "level_keys": [
+          "U7 Param Investigate Calculator App_2024"
+        ],
+        "progression": "App Practice"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U7_L03_Parameters and Return Practice_Level 6_2024"
+          "U7 Param Investigate Calculator App_2024"
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2024",
-        "activity_section.key": "27bbbaf6-7d38-450a-ae15-06da095cab91"
+        "activity_section.key": "2aec88bf-a091-4599-a005-1801b155d8e4"
       },
       "level_keys": [
-        "U7_L03_Parameters and Return Practice_Level 6_2024"
+        "U7 Param Investigate Calculator App_2024"
       ]
     },
     {
       "chapter": 14,
       "position": 7,
-      "activity_section_position": 7,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "App Development Activity"
+        "level_keys": [
+          "U7 Param Practice App 2_2024"
+        ],
+        "progression": "App Practice"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "U7_L03_Parameters and Return Practice_Level 7_2024"
+          "U7 Param Practice App 2_2024"
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2024",
-        "activity_section.key": "27bbbaf6-7d38-450a-ae15-06da095cab91"
+        "activity_section.key": "2aec88bf-a091-4599-a005-1801b155d8e4"
       },
       "level_keys": [
-        "U7_L03_Parameters and Return Practice_Level 7_2024"
+        "U7 Param Practice App 2_2024"
       ]
     },
     {
       "chapter": 15,
       "position": 8,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U7 Param Practice App 3_2024"
+        ],
+        "progression": "App Practice"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U7 Param Practice App 3_2024"
+        ],
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-2024",
+        "activity_section.key": "2aec88bf-a091-4599-a005-1801b155d8e4"
+      },
+      "level_keys": [
+        "U7 Param Practice App 3_2024"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSP U7L3 App Choice_2024"
+        ],
+        "progression": "Putting It Together: Apps"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSP U7L3 App Choice_2024"
+        ],
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-2024",
+        "activity_section.key": "4636a3bf-7d4e-4cd2-8fbb-f7104d2b6c94"
+      },
+      "level_keys": [
+        "CSP U7L3 App Choice_2024"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U73 CFU Param Return AP2022_2024"
+        ],
         "progression": "Check For Understanding: AP Practice"
       },
       "bonus": false,
@@ -2651,18 +2841,21 @@
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2024",
-        "activity_section.key": "809d5b48-1d3f-4fc1-8d55-277e48426c49"
+        "activity_section.key": "1c18ff95-2b37-4eb6-8104-a169d4793256"
       },
       "level_keys": [
         "U73 CFU Param Return AP2022_2024"
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 18,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Make RPS App_2024"
+        ],
         "progression": "Try the Rock Paper Scissors App"
       },
       "bonus": false,
@@ -2680,11 +2873,14 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 19,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7 Param Return Make RPS App Project_2024"
+        ],
         "progression": "Make the Rock Paper Scissors App"
       },
       "bonus": false,
@@ -2702,11 +2898,14 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7 L04 Exit Ticket_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2724,11 +2923,14 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 21,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7L6 States App Investigation_2024"
+        ],
         "progression": "States App"
       },
       "bonus": false,
@@ -2746,11 +2948,14 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 22,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7L6 Pigify App Investigation_2024"
+        ],
         "progression": "Pigify App"
       },
       "bonus": false,
@@ -2768,11 +2973,14 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 23,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7L6 CSP CFU Libraries_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2790,11 +2998,14 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Practice 3_2024"
+        ],
         "progression": "Using Libraries"
       },
       "bonus": false,
@@ -2812,11 +3023,14 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Practice 5_2024"
+        ],
         "progression": "Using Libraries"
       },
       "bonus": false,
@@ -2834,11 +3048,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Practice 2_2024"
+        ],
         "progression": "Testing Libraries"
       },
       "bonus": false,
@@ -2856,11 +3073,14 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Practice 1_2024"
+        ],
         "progression": "Testing Libraries"
       },
       "bonus": false,
@@ -2878,11 +3098,14 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 28,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Practice 4_2024"
+        ],
         "progression": "Testing Libraries"
       },
       "bonus": false,
@@ -2900,11 +3123,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 29,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U77 CFU Libraries AP2022_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2922,11 +3148,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 30,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Project Part 1_2024"
+        ],
         "progression": "Build Your Library"
       },
       "bonus": false,
@@ -2944,11 +3173,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Project Part 2_2024"
+        ],
         "progression": "Build Your Library"
       },
       "bonus": false,
@@ -2966,11 +3198,14 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 32,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Project Test a Library_2024"
+        ],
         "progression": "Test a Classmate's Library"
       },
       "bonus": false,
@@ -2988,11 +3223,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U7 Libraries Project Part 3_2024"
+        ],
         "progression": "Build Your Library"
       },
       "bonus": false,
@@ -3010,11 +3248,14 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp7_2024"
+        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -3032,11 +3273,14 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 7 AP-Style Assessment 2022_2024"
+        ],
         "progression": "Unit 7 Exam"
       },
       "bonus": false,
@@ -3054,11 +3298,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 36,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-2021-markdown-with-link-to-survey_2024"
+        ],
         "progression": "Post-Course Survey Instructions"
       },
       "bonus": false,
@@ -3163,86 +3410,110 @@
     },
     {
       "seeding_key": {
-        "level.key": "U7_L03_Parameters and Return Practice_Level 1_2024",
+        "level.key": "U7 Param Return Practice Part 1_2024",
         "script_level.level_keys": [
-          "U7_L03_Parameters and Return Practice_Level 1_2024"
+          "U7 Param Return Practice Part 1_2024"
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2024",
-        "activity_section.key": "27bbbaf6-7d38-450a-ae15-06da095cab91"
+        "activity_section.key": "c43fc9ea-1513-4c8e-9e51-1db0416c0609"
       }
     },
     {
       "seeding_key": {
-        "level.key": "U7_L03_Parameters and Return Practice_Level 2_2024",
+        "level.key": "U7 Param Return Practice Part 2_2024",
         "script_level.level_keys": [
-          "U7_L03_Parameters and Return Practice_Level 2_2024"
+          "U7 Param Return Practice Part 2_2024"
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2024",
-        "activity_section.key": "27bbbaf6-7d38-450a-ae15-06da095cab91"
+        "activity_section.key": "c43fc9ea-1513-4c8e-9e51-1db0416c0609"
       }
     },
     {
       "seeding_key": {
-        "level.key": "U7_L03_Parameters and Return Practice_Level 3_2024",
+        "level.key": "U7 Param Return Practice Part 4_2024",
         "script_level.level_keys": [
-          "U7_L03_Parameters and Return Practice_Level 3_2024"
+          "U7 Param Return Practice Part 4_2024"
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2024",
-        "activity_section.key": "27bbbaf6-7d38-450a-ae15-06da095cab91"
+        "activity_section.key": "c43fc9ea-1513-4c8e-9e51-1db0416c0609"
       }
     },
     {
       "seeding_key": {
-        "level.key": "U7_L03_Parameters and Return Practice_Level 4_2024",
+        "level.key": "U7 Param Return Practice Part 3_2024",
         "script_level.level_keys": [
-          "U7_L03_Parameters and Return Practice_Level 4_2024"
+          "U7 Param Return Practice Part 3_2024"
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2024",
-        "activity_section.key": "27bbbaf6-7d38-450a-ae15-06da095cab91"
+        "activity_section.key": "c43fc9ea-1513-4c8e-9e51-1db0416c0609"
       }
     },
     {
       "seeding_key": {
-        "level.key": "U7_L03_Parameters and Return Practice_Level 5_2024",
+        "level.key": "CSP U7L3 Console Choice_2024",
         "script_level.level_keys": [
-          "U7_L03_Parameters and Return Practice_Level 5_2024"
+          "CSP U7L3 Console Choice_2024"
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2024",
-        "activity_section.key": "27bbbaf6-7d38-450a-ae15-06da095cab91"
+        "activity_section.key": "62b220fa-35ec-402e-9ebc-630b279073ec"
       }
     },
     {
       "seeding_key": {
-        "level.key": "U7_L03_Parameters and Return Practice_Level 6_2024",
+        "level.key": "U7 Param Investigate Calculator App_2024",
         "script_level.level_keys": [
-          "U7_L03_Parameters and Return Practice_Level 6_2024"
+          "U7 Param Investigate Calculator App_2024"
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2024",
-        "activity_section.key": "27bbbaf6-7d38-450a-ae15-06da095cab91"
+        "activity_section.key": "2aec88bf-a091-4599-a005-1801b155d8e4"
       }
     },
     {
       "seeding_key": {
-        "level.key": "U7_L03_Parameters and Return Practice_Level 7_2024",
+        "level.key": "U7 Param Practice App 2_2024",
         "script_level.level_keys": [
-          "U7_L03_Parameters and Return Practice_Level 7_2024"
+          "U7 Param Practice App 2_2024"
         ],
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2024",
-        "activity_section.key": "27bbbaf6-7d38-450a-ae15-06da095cab91"
+        "activity_section.key": "2aec88bf-a091-4599-a005-1801b155d8e4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U7 Param Practice App 3_2024",
+        "script_level.level_keys": [
+          "U7 Param Practice App 3_2024"
+        ],
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-2024",
+        "activity_section.key": "2aec88bf-a091-4599-a005-1801b155d8e4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSP U7L3 App Choice_2024",
+        "script_level.level_keys": [
+          "CSP U7L3 App Choice_2024"
+        ],
+        "lesson.key": "Parameters and Return Practice",
+        "lesson_group.key": "csp_parameters_return_values",
+        "script.name": "csp7-2024",
+        "activity_section.key": "4636a3bf-7d4e-4cd2-8fbb-f7104d2b6c94"
       }
     },
     {
@@ -3254,7 +3525,7 @@
         "lesson.key": "Parameters and Return Practice",
         "lesson_group.key": "csp_parameters_return_values",
         "script.name": "csp7-2024",
-        "activity_section.key": "809d5b48-1d3f-4fc1-8d55-277e48426c49"
+        "activity_section.key": "1c18ff95-2b37-4eb6-8104-a169d4793256"
       }
     },
     {
@@ -3580,11 +3851,10 @@
     },
     {
       "name": "CSP Unit 7 - Lesson 1 - Parameters and Return Explore",
-      "url": "https://docs.google.com/presentation/d/1mjVHT33bzPxkMzSmdy_AqBbXQ7QGjFUvzJ_iqdyeQYg/copy",
+      "url": "https://docs.google.com/presentation/d/1mKQUf1mxMfct3RSI93bpiauzEUcKRHsY_UufTVPDk5Q/template/preview",
       "key": "csp_unit_7_-_lesson_1_-_parameters_and_return_explore",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1mjVHT33bzPxkMzSmdy_AqBbXQ7QGjFUvzJ_iqdyeQYg/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3593,11 +3863,10 @@
     },
     {
       "name": "CSP Unit 7 - Lesson 2 - Parameters and Return Investigate",
-      "url": "https://docs.google.com/presentation/d/1Pu-h9NdpwnEseB_qDuw_idB_g-WQJ5PBuvsZ4gwrff4/copy",
+      "url": "https://docs.google.com/presentation/d/1o5UQ9_pcPoJ8z_M-uKHvk4P_Kmx2v8tImWb8uZ7BpGQ/template/preview",
       "key": "csp_unit_7_-_lesson_2_-_parameters_and_return_investigate",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1Pu-h9NdpwnEseB_qDuw_idB_g-WQJ5PBuvsZ4gwrff4/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3606,11 +3875,10 @@
     },
     {
       "name": "CSP Unit 7 - Lesson 3 - Parameters and Return Practice",
-      "url": "https://docs.google.com/presentation/d/1Lfksf4t8nk_NsH32-R55_ctWl0hvScnXl-yliXM8TuE/copy",
+      "url": "https://docs.google.com/presentation/d/14fqlfMnmof73nI5xCBWBEMfZMLVmFFO4JsyxqMCXsQ8/template/preview",
       "key": "csp_unit_7_-_lesson_3_-_parameters_and_return_practice",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1Lfksf4t8nk_NsH32-R55_ctWl0hvScnXl-yliXM8TuE/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3619,11 +3887,10 @@
     },
     {
       "name": "CSP Unit 7 - Lesson 4 - Parameters and Return Make",
-      "url": "https://docs.google.com/presentation/d/1GzmpSDW5z9PoEIyr5naU7ikMBVkzCX8CXy4kDzLmLhM/copy",
+      "url": "https://docs.google.com/presentation/d/1HqUitHeAa0prRTpCjoq2fS9zQQrGdy36kvIDPx9WvFE/template/preview",
       "key": "csp_unit_7_-_lesson_4_-_parameters_and_return_make",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1GzmpSDW5z9PoEIyr5naU7ikMBVkzCX8CXy4kDzLmLhM/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3632,11 +3899,10 @@
     },
     {
       "name": "CSP Unit 7 - Lesson 5 - Libraries Explore",
-      "url": "https://docs.google.com/presentation/d/1oyo2l9SPloZ1rRk-3VFpiH1Sdi5A_u84NiQOIy7GihU/copy",
+      "url": "https://docs.google.com/presentation/d/1DIOvVSdm-8w_Te_y1zCGYDnUHoxa0l12e8zQEc59XrU/template/preview",
       "key": "csp_unit_7_-_lesson_5_-_libraries_explore",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1oyo2l9SPloZ1rRk-3VFpiH1Sdi5A_u84NiQOIy7GihU/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3645,11 +3911,10 @@
     },
     {
       "name": "CSP Unit 7 - Lesson 6 - Libraries Investigate",
-      "url": "https://docs.google.com/presentation/d/1hD6TjoKNaNzQqEZDe3ZK8Bsqky9OuC0xml-tRCdXn3Q/copy",
+      "url": "https://docs.google.com/presentation/d/1ExO5Rg0Fdnqlea7cTRMZoF8M5x_fOhhPO24w8gielAE/template/preview",
       "key": "csp_unit_7_-_lesson_6_-_libraries_investigate",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1hD6TjoKNaNzQqEZDe3ZK8Bsqky9OuC0xml-tRCdXn3Q/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3658,11 +3923,10 @@
     },
     {
       "name": "CSP Unit 7 - Lesson 7 - Libraries  Practice",
-      "url": "https://docs.google.com/presentation/d/15hX_cXSbLa-jcdicM0QLBakx5kSh-OQ7GG8t5NY0BI0/copy",
+      "url": "https://docs.google.com/presentation/d/1QsMfSLx9A5X3HXwbeJaaiPa3zeVbj7sH-9D3b9gEqPo/template/preview",
       "key": "csp_unit_7_-_lesson_7_-_libraries_practice",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/15hX_cXSbLa-jcdicM0QLBakx5kSh-OQ7GG8t5NY0BI0/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -3671,15 +3935,24 @@
     },
     {
       "name": "CSP Unit 7 - Lesson 8-11 - Project & Assessment",
-      "url": "https://docs.google.com/presentation/d/13iirE_S8sg8ztqW6vFgLVw79L5of3eGAW9snFCDBst0/copy",
+      "url": "https://docs.google.com/presentation/d/1ck4tsv7Zp3gke6npUYfqmqIqucFIKjr2dmPFhAQ9Iis/template/preview",
       "key": "csp_unit_7_-_lesson_8-11_-_project_assessment",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/13iirE_S8sg8ztqW6vFgLVw79L5of3eGAW9snFCDBst0/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csp_unit_7_-_lesson_8-11_-_project_assessment"
+      }
+    },
+    {
+      "name": "CSP Unit 7 - Slides",
+      "url": "https://docs.google.com/presentation/d/1BTwX1x-F1kbRrwnqIc6d5Rgi9JBo3-4FxqRSynq-AaA/template/preview",
+      "key": "csp_unit_7_-_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_7_-_slides"
       }
     },
     {
@@ -3734,7 +4007,7 @@
     },
     {
       "name": "Parameters, Returns, and Libraries",
-      "url": "https://docs.google.com/presentation/d/1P9JATX2RDE9TJZ4_Iqx_cSxv-NMhTXYSatrHMlUrRXw/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1BTwX1x-F1kbRrwnqIc6d5Rgi9JBo3-4FxqRSynq-AaA/template/preview",
       "key": "parameters_returns_and_libraries",
       "properties": {
         "audience": "Teacher",
@@ -3750,8 +4023,7 @@
       "key": "project_guide_-_make_a_library",
       "properties": {
         "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Project Guide"
+        "include_in_pdf": true
       },
       "seeding_key": {
         "resource.key": "project_guide_-_make_a_library"
@@ -3767,30 +4039,6 @@
       },
       "seeding_key": {
         "resource.key": "syllabus"
-      }
-    },
-    {
-      "name": "Task List - Netflix Navigator",
-      "url": "https://docs.google.com/document/d/1OrmlGMWmfz52q5Z3DFl8dxKekOzKz_XJPUqLlGHRT3A/edit?usp=sharing",
-      "key": "task_list_-_netflix_navigator",
-      "properties": {
-        "audience": "Student",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "task_list_-_netflix_navigator"
-      }
-    },
-    {
-      "name": "Task List - Ramen Radar",
-      "url": "https://docs.google.com/document/d/1MKzXndOpHJmZV5LbanOXD9Pbh8KjN0B3wNEGYaoWEFs/edit?usp=sharing",
-      "key": "task_list_-_ramen_radar",
-      "properties": {
-        "audience": "Student",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "task_list_-_ramen_radar"
       }
     },
     {
@@ -3953,18 +4201,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Parameters and Return Practice",
-        "resource.key": "task_list_-_netflix_navigator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Practice",
-        "resource.key": "task_list_-_ramen_radar"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Project   Make a Library Part 1",
         "resource.key": "csp_unit_7_-_lesson_8-11_-_project_assessment"
       }
@@ -4046,6 +4282,12 @@
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
+        "script.name": "csp7-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_unit_7_-_slides",
         "script.name": "csp7-2024"
       }
     },
@@ -4244,6 +4486,16 @@
       }
     },
     {
+      "key": "131ef563-7afb-4e26-af32-3090cb3ccc2c",
+      "properties": {
+        "description": "Correctly set up a parameter in a function"
+      },
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "objective.key": "131ef563-7afb-4e26-af32-3090cb3ccc2c"
+      }
+    },
+    {
       "key": "2e344c40-b79d-4773-acad-0449b30ef08a",
       "properties": {
         "description": "Test the functions in libraries in order to understand their behavior"
@@ -4304,16 +4556,6 @@
       }
     },
     {
-      "key": "508c7748-8340-4f60-81d5-98e27fda21b8",
-      "properties": {
-        "description": "Write comments to explain the function purpose, parameters, and return values"
-      },
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Practice",
-        "objective.key": "508c7748-8340-4f60-81d5-98e27fda21b8"
-      }
-    },
-    {
       "key": "51cba59b-9664-450e-a638-def8cc96efd5",
       "properties": {
         "description": "Read library code documentation in order to select the proper functions in the library to develop an app"
@@ -4354,16 +4596,6 @@
       }
     },
     {
-      "key": "798729af-54d5-4762-808a-b96cf5731a3a",
-      "properties": {
-        "description": "Correctly set up a parameter in a function"
-      },
-      "seeding_key": {
-        "lesson.key": "Parameters and Return Practice",
-        "objective.key": "798729af-54d5-4762-808a-b96cf5731a3a"
-      }
-    },
-    {
       "key": "825c3b3b-72e1-4a95-9d68-37e94068d68f",
       "properties": {
         "description": "Remove specifics from a function so that it can be used in a variety of situations"
@@ -4381,6 +4613,16 @@
       "seeding_key": {
         "lesson.key": "Project   Make a Library Part 3",
         "objective.key": "91c5f40d-5af8-4148-92c3-17d74b2e2935"
+      }
+    },
+    {
+      "key": "97c46345-e996-4faa-805b-ff5f7f085210",
+      "properties": {
+        "description": "Correctly set up a return value in a function"
+      },
+      "seeding_key": {
+        "lesson.key": "Parameters and Return Practice",
+        "objective.key": "97c46345-e996-4faa-805b-ff5f7f085210"
       }
     },
     {
@@ -4414,13 +4656,13 @@
       }
     },
     {
-      "key": "be5895f4-b651-4c04-abf8-e68d90eb260f",
+      "key": "ac213afe-d9ab-46eb-b53c-97a5a3335a6c",
       "properties": {
-        "description": "Correctly set up a return value in a function"
+        "description": "Write comments to explain the function purpose, parameters, and return values"
       },
       "seeding_key": {
         "lesson.key": "Parameters and Return Practice",
-        "objective.key": "be5895f4-b651-4c04-abf8-e68d90eb260f"
+        "objective.key": "ac213afe-d9ab-46eb-b53c-97a5a3335a6c"
       }
     },
     {

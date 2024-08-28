@@ -9,11 +9,13 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/7551a95a3361b4ac45e59dcd6948c259-image-1707239814090.png" alt=" micro:bit with a smiley face"  width="150px" style="border-radius:10px; float:right; margin: 0 40px 0px 40px;">
 
 
-#### After exploring the features of your micro:bit in the Meet your micro:bit lesson and getting acquainted with micro:bit classroom, it’s time to get coding! 
+#### After exploring the features of your micro:bit in the "Meet your micro:bit" lesson and getting acquainted with micro:bit classroom, it’s time to get coding! 
 
-#### Remember that each pathway has 2 micro:bit lessons - Meet your micro:bit and a custom project to fit with the concepts and difficulty level of the pathway.
+#### Remember that each pathway has 2 micro:bit lessons - "Meet your micro:bit" and a custom project to fit with the concepts and difficulty level of the pathway.
 
-#### The **Emotion Badge** lesson is on the beginner pathway of **Course C**. In it, students program the micro:bit to show different emotion images when different buttons are pressed. 
+#### In this professional learning module, we will stick to the project in Grade 2 to practice the process. Remember the project might be different, but the process is the same. 
+
+#### The **Emotion Badge** lesson is on the main pathway of **Grade 2**. In it, students program the micro:bit to show different emotion images when different buttons are pressed. 
 
 ---
 
@@ -33,12 +35,11 @@ markdown <<MARKDOWN
 
 
 <li>
-<p style="font-size: 14pt; "> Thoroughly read the <a href="https://code.org/maker/assets/CSF-Booklet-Course-C-Nov2023.pdf#page=22" target="_blank" style="color: #8C52BA;">lesson plan on page 22-24</a> from the course PDF.</p>
+<p style="font-size: 14pt; "> Thoroughly read the <a href="https://studio.code.org/s/grade2-maker-2024/lessons/5" target="_blank" style="color: #8C52BA;">lesson plan </a></p>
 </li>
-
-<p style ="font-size: 12pt;"> <i>Take a few minutes to look over the projects from each pathway - beginner, intermediate, stretch. </i>
-
 
 
 </ul>
+
+
 MARKDOWN

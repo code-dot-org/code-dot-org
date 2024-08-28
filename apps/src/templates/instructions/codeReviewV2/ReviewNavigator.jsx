@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import DropdownButton from '@cdo/apps/templates/DropdownButton';
 import {VIEWING_CODE_REVIEW_URL_PARAM} from '@cdo/apps/templates/instructions/CommitsAndReviewTab';
 import {currentLocation, navigateToHref} from '@cdo/apps/utils';

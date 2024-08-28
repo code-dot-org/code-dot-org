@@ -1,0 +1,24 @@
+:ruby
+  card_list = [
+    {
+      image: "/images/lms/facebook.png",
+      title: "Facebook",
+    },
+    {
+      image: "/images/lms/microsoft.png",
+      title: "Microsoft",
+    },
+    {
+      image: "/images/lms/google.png",
+      title: "Google",
+    },
+  ]
+
+.action-block__wrapper.action-block__wrapper--three-col
+  - card_list.each do |card_list|
+    .action-block.action-block--one-col.flex-space-between.white
+      .content-wrapper
+        %figure.sso-card
+          %img{style: "width: 40px; height: 40px;", src: card_list[:image], alt: ""}
+          %h4.heading-xs
+            = card_list[:title]

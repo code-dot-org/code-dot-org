@@ -5,11 +5,12 @@
     "login_required": false,
     "properties": {
       "has_verified_resources": true,
-      "is_migrated": true
+      "is_migrated": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-25 20:43:15 UTC",
+    "serialized_at": "2024-06-25 18:14:36 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -95,9 +96,9 @@
       "relative_position": 2,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\nThis lesson is chosen so that early on in the workshop participants see manipulatives as a valuable experience for students. We want participants to “buy-in” to the benefits of manipulatives as a way to make content approachable.\n\n**Objectives:**\n* Participants see that using manipulatives makes content and tasks more approachable for students.\n* Participants experience an intentional approach to introducing vocabulary after building a common experience for learners to connect vocabulary to.\n* Participants see how the lessons build on one another.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp1-2023/lessons/3/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n**Lesson Overview:**\nStudents will create rules for ordering patterns of circles and squares. Students generate all possible messages with three place values, then create rules that explain how they ordered each message. Emphasis is placed on creating clear rules so that, if another group were to follow the rules, they would generate the same list in the same order. Using these rules, students then try to list all possible messages with four place values. As the lesson concludes, students share their rules with classmates. This lesson acts as a bridge to the next lesson where binary is formally introduced and practiced.",
+        "overview": "**Purpose:**\nThis lesson is chosen so that early on in the workshop participants see manipulatives as a valuable experience for students. We want participants to “buy-in” to the benefits of manipulatives as a way to make content approachable.\n\n**Objectives:**\n* Participants see that using manipulatives makes content and tasks more approachable for students.\n* Participants experience an intentional approach to introducing vocabulary after building a common experience for learners to connect vocabulary to.\n* Participants see how the lessons build on one another.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://studio.code.org/s/csp1-2024/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nStudents will create rules for ordering patterns of circles and squares. Students generate all possible messages with three place values, then create rules that explain how they ordered each message. Emphasis is placed on creating clear rules so that, if another group were to follow the rules, they would generate the same list in the same order. Using these rules, students then try to list all possible messages with four place values. As the lesson concludes, students share their rules with classmates. This lesson acts as a bridge to the next lesson where binary is formally introduced and practiced.",
         "preparation": "* Have scissors ready for groups to create [r shape_cutouts/virtual-pl-csp-summer/2024] or have these pre-cut and prepared before class\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-digital-information-lessons-1-11/36468) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1-_Vfwz51mO8PpNobJt8T5XG1-YjBdsdJi5uD25-26PE/edit?usp=sharing)",
-        "student_overview": "Develop a system for creating and ordering patterns of shapes.",
+        "student_overview": "Develop a system for creating and ordering patterns of shapes.\n\n<a href=\"https://studio.code.org/s/csp1-2024/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nStudents will create rules for ordering patterns of circles and squares. Students generate all possible messages with three place values, then create rules that explain how they ordered each message. Emphasis is placed on creating clear rules so that, if another group were to follow the rules, they would generate the same list in the same order. Using these rules, students then try to list all possible messages with four place values. As the lesson concludes, students share their rules with classmates. This lesson acts as a bridge to the next lesson where binary is formally introduced and practiced.",
         "unplugged": true
       },
       "seeding_key": {
@@ -165,8 +166,8 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "overview": "**Purpose:**\nThe asynchronous session is an opportunity for participants to both explore a lesson plan for a CS Discoveries lesson and begin to familiarize themselves with the content of their TLO lesson.\n\n**Objectives:**\n* Participants explore the lesson plan and additional resources for their assigned TLO lesson.\n* Participants complete the activities from their assigned TLO lesson. \n\n**Suggested Time:** 60 minutes",
-        "student_overview": "**You will:**\n\n* Explore the lesson plan and additional resources for your assigned TLO lesson.\n* Complete the activities from your assigned TLO lesson. \n"
+        "overview": "**Purpose:**\nThe asynchronous session is an opportunity for participants to both explore a lesson plan for a CS Principles lesson and begin to familiarize themselves with the content of their TLO lesson.\n\n**Objectives:**\n* Participants explore the lesson plan and additional resources for their assigned TLO lesson.\n* Participants complete the activities from their assigned TLO lesson. \n\n**Suggested Time:** 60 minutes",
+        "student_overview": "**You Will:**\n* Explore the lesson plan and additional resources for their assigned TLO lesson.\n* Complete the activities from their assigned TLO lesson. "
       },
       "seeding_key": {
         "lesson.key": "Asynchronous Part 1",
@@ -234,7 +235,7 @@
       "relative_position": 10,
       "properties": {
         "overview": "**Purpose:**\nIn this session, participants will create a plan for how to teach their lesson during a 40 minute TLO session. This plan should consider contingency plans if the lesson goes faster than expected, and consideration for how the teaching group will use formative assessment throughout the lesson to know that \"learners\" are making the needed progress toward the learning goals.\n\n**Objectives:**\n* Participants have developed a run-of-show and tech plan for their lesson.\n* Participants have developed contingency plans for short extensions or questions for deeper thinking if their lesson goes more quickly than anticipated.\n* Participants have a plan for formative assessment during the lesson.\n* Participants make sure everyone in the teaching group has a role.\n\n**Suggested time:** 75 minutes",
-        "student_overview": "**You will:**\n\n* Develop a run-of-show and tech plan for their lesson.\n* Develop contingency plans for short extensions or questions for deeper thinking if their lesson goes more quickly than anticipated.\n* Plan for formative assessment during the lesson.\n* Make sure everyone in the teaching group has a role.\n"
+        "student_overview": "**You Will:**\n* Develop a run-of-show and tech plan for their lesson.\n* Develop contingency plans for short extensions or questions for deeper thinking if their lesson goes more quickly than anticipated.\n* Have a plan for formative assessment during the lesson.\n* Make sure everyone in the teaching group has a role.\n"
       },
       "seeding_key": {
         "lesson.key": "Asynchronous Part 2",
@@ -718,14 +719,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day2-async1_1"
+          "virtual-pl-csp-summer-day1-asynch1-01-2024"
         ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-async1_1"
+          "virtual-pl-csp-summer-day1-asynch1-01-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-4",
@@ -733,7 +734,7 @@
         "activity_section.key": "58cbd724-4155-428c-b0af-00d8f90fb6ba"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day2-async1_1"
+        "virtual-pl-csp-summer-day1-asynch1-01-2024"
       ]
     },
     {
@@ -743,14 +744,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day2-async1.5_1"
+          "virtual-pl-csp-summer-day1-asynch1-02-2024"
         ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-async1.5_1"
+          "virtual-pl-csp-summer-day1-asynch1-02-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-4",
@@ -758,7 +759,7 @@
         "activity_section.key": "3471f86c-3fbf-45a7-a66e-119c2a36cfc9"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day2-async1.5_1"
+        "virtual-pl-csp-summer-day1-asynch1-02-2024"
       ]
     },
     {
@@ -768,14 +769,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day2-async2_1"
+          "virtual-pl-csp-summer-day1-asynch1-03-2024"
         ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-async2_1"
+          "virtual-pl-csp-summer-day1-asynch1-03-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-4",
@@ -783,7 +784,7 @@
         "activity_section.key": "3471f86c-3fbf-45a7-a66e-119c2a36cfc9"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day2-async2_1"
+        "virtual-pl-csp-summer-day1-asynch1-03-2024"
       ]
     },
     {
@@ -793,14 +794,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day2-async3_1"
+          "virtual-pl-csp-summer-day1-asynch1-04-2024"
         ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-async3_1"
+          "virtual-pl-csp-summer-day1-asynch1-04-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-4",
@@ -808,7 +809,7 @@
         "activity_section.key": "3471f86c-3fbf-45a7-a66e-119c2a36cfc9"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day2-async3_1"
+        "virtual-pl-csp-summer-day1-asynch1-04-2024"
       ]
     },
     {
@@ -818,14 +819,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day2-async4_1"
+          "virtual-pl-csp-summer-day1-asynch1-05-2024"
         ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-async4_1"
+          "virtual-pl-csp-summer-day1-asynch1-05-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-4",
@@ -833,7 +834,7 @@
         "activity_section.key": "3471f86c-3fbf-45a7-a66e-119c2a36cfc9"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day2-async4_1"
+        "virtual-pl-csp-summer-day1-asynch1-05-2024"
       ]
     },
     {
@@ -843,14 +844,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day2-async5_1"
+          "virtual-pl-csp-summer-day1-asynch1-06-2024"
         ],
         "progression": "Get to Know Your Lesson"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-async5_1"
+          "virtual-pl-csp-summer-day1-asynch1-06-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-4",
@@ -858,7 +859,7 @@
         "activity_section.key": "3471f86c-3fbf-45a7-a66e-119c2a36cfc9"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day2-async5_1"
+        "virtual-pl-csp-summer-day1-asynch1-06-2024"
       ]
     },
     {
@@ -868,14 +869,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day2-async6_1"
+          "virtual-pl-csp-summer-day1-asynch2-01-2024"
         ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-async6_1"
+          "virtual-pl-csp-summer-day1-asynch2-01-2024"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-5",
@@ -883,7 +884,7 @@
         "activity_section.key": "b6f078d9-6b9a-46cc-9a78-927d3f51c880"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day2-async6_1"
+        "virtual-pl-csp-summer-day1-asynch2-01-2024"
       ]
     },
     {
@@ -893,14 +894,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day2-UsingResources1_1"
+          "virtual-pl-csp-summer-day1-asynch2-02-2024"
         ],
         "progression": "Using Resources"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-UsingResources1_1"
+          "virtual-pl-csp-summer-day1-asynch2-02-2024"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-5",
@@ -908,7 +909,7 @@
         "activity_section.key": "2c4cc298-2e9b-4177-bb47-9dbf87903ae7"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day2-UsingResources1_1"
+        "virtual-pl-csp-summer-day1-asynch2-02-2024"
       ]
     }
   ],
@@ -927,9 +928,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day2-async1_1",
+        "level.key": "virtual-pl-csp-summer-day1-asynch1-01-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-async1_1"
+          "virtual-pl-csp-summer-day1-asynch1-01-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-4",
@@ -939,9 +940,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day2-async1.5_1",
+        "level.key": "virtual-pl-csp-summer-day1-asynch1-02-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-async1.5_1"
+          "virtual-pl-csp-summer-day1-asynch1-02-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-4",
@@ -951,9 +952,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day2-async2_1",
+        "level.key": "virtual-pl-csp-summer-day1-asynch1-03-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-async2_1"
+          "virtual-pl-csp-summer-day1-asynch1-03-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-4",
@@ -963,9 +964,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day2-async3_1",
+        "level.key": "virtual-pl-csp-summer-day1-asynch1-04-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-async3_1"
+          "virtual-pl-csp-summer-day1-asynch1-04-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-4",
@@ -975,9 +976,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day2-async4_1",
+        "level.key": "virtual-pl-csp-summer-day1-asynch1-05-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-async4_1"
+          "virtual-pl-csp-summer-day1-asynch1-05-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-4",
@@ -987,9 +988,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day2-async5_1",
+        "level.key": "virtual-pl-csp-summer-day1-asynch1-06-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-async5_1"
+          "virtual-pl-csp-summer-day1-asynch1-06-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-4",
@@ -999,9 +1000,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day2-async6_1",
+        "level.key": "virtual-pl-csp-summer-day1-asynch2-01-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-async6_1"
+          "virtual-pl-csp-summer-day1-asynch2-01-2024"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-5",
@@ -1011,9 +1012,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day2-UsingResources1_1",
+        "level.key": "virtual-pl-csp-summer-day1-asynch2-02-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day2-UsingResources1_1"
+          "virtual-pl-csp-summer-day1-asynch2-02-2024"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-5",

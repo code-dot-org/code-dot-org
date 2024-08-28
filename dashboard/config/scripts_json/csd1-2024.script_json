@@ -12,12 +12,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-28 18:18:20 UTC",
+    "serialized_at": "2024-07-11 19:05:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -5332,7 +5333,7 @@
     },
     {
       "name": "Apps with Processing",
-      "url": "https://docs.google.com/presentation/d/1DS3DtZOeqkkFPx25ujdJ_LB68Wxj_yNBWUquVAo1Tis/template/preview",
+      "url": "https://docs.google.com/presentation/d/1JodK1XtTwvjMiiubIgJI5Utwbkf_yk5OpArkiuB4h0U/template/preview",
       "key": "apps_with_processing_2",
       "properties": {
         "audience": "Teacher",
@@ -5369,7 +5370,7 @@
     },
     {
       "name": "Apps with Storage",
-      "url": "https://docs.google.com/presentation/d/1bXivMZwN5wWZxnmlaSO2M81twsZf_JgXBWWdrSccghE/template/preview",
+      "url": "https://docs.google.com/presentation/d/1mMDJxDUC1E6VLOtBEifwscrK7sm6MchZLtCz5KNUtZg/template/preview",
       "key": "apps_with_storage_2",
       "properties": {
         "audience": "Teacher",
@@ -5496,7 +5497,7 @@
     },
     {
       "name": "Exploring Problem Solving",
-      "url": "https://docs.google.com/presentation/d/1qEiI3VfO04CKhzpucsXmcrTLcV3wHYCyvwsOdiSoI5k/template/preview",
+      "url": "https://docs.google.com/presentation/d/1ZB7WSnkGcxToztJXk6c42LW4shC43Q-HfveOJKrKrk4/template/preview",
       "key": "exploring_problem_solving",
       "properties": {
         "audience": "Teacher",
@@ -5532,7 +5533,7 @@
     },
     {
       "name": "Exploring Problem Solving (Animals)",
-      "url": "https://docs.google.com/presentation/d/1HrzXZUsvtHJjfU2XI5FOkDQCkkxzFJ1354F6iPG2hp4/template/preview",
+      "url": "https://docs.google.com/presentation/d/1_woCzF1aNGj0NgOjCLNo3OVSDfOQHLSah0DgfMQuToA/template/preview",
       "key": "exploring_problem_solving_animals_",
       "properties": {
         "audience": "Teacher",
@@ -5544,7 +5545,7 @@
     },
     {
       "name": "Exploring Problem Solving (Games)",
-      "url": "https://docs.google.com/presentation/d/11Qw-SNahzSYo-9zX4SQhOiRgvtQN6mL8zwFeaf2gTqk/template/preview",
+      "url": "https://docs.google.com/presentation/d/1SKzknFhArzVS2uF85GRLhdYcGndLQIdxceNwhaHNlFM/template/preview",
       "key": "exploring_problem_solving_games_",
       "properties": {
         "audience": "Teacher",
@@ -5581,7 +5582,7 @@
     },
     {
       "name": "Input and Output",
-      "url": "https://docs.google.com/presentation/d/1uoMxf--EQrDqG_bmoqYWn6KraKCmWy9gC1LFOlz4OO8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1gAkWVmGJdCTUEFr5tfCW4MNE6BpUG3XrgJsRn7ZaPD0/template/preview",
       "key": "input_and_output_2",
       "properties": {
         "audience": "Teacher",
@@ -5593,7 +5594,7 @@
     },
     {
       "name": "Intro to Problem Solving",
-      "url": "https://docs.google.com/presentation/d/1TuN5qOfjgSxNjZccb6o4sUZbfaXGOSDeUolDojrJ0pM/template/preview",
+      "url": "https://docs.google.com/presentation/d/1t-1xD1Wa902jdBH83_ynhL7noL9Mm3gZC3fE3MZ7KoE/template/preview",
       "key": "intro_to_problem_solving",
       "properties": {
         "audience": "Teacher",
@@ -5617,7 +5618,7 @@
     },
     {
       "name": "Intro to Problem Solving (Newspapers)",
-      "url": "https://docs.google.com/presentation/d/1EY9Qy_ufSUgtdyfDdoEjDXfbepoW4o-66y5nkNDY_-0/template/preview",
+      "url": "https://docs.google.com/presentation/d/1efGJMK1p5uG1vJHiGOyJF1CEb3IdWqkwewOKqu0Sowk/template/preview",
       "key": "intro_to_problem_solving_newspapers_",
       "properties": {
         "audience": "Teacher",
@@ -5629,7 +5630,7 @@
     },
     {
       "name": "Intro to Problem Solving (Paper Tower)",
-      "url": "https://docs.google.com/presentation/d/1x9Zx8mdqlNkYnFcK0-uff_sv53v1_MWTHwpXdW6eJJo/template/preview",
+      "url": "https://docs.google.com/presentation/d/1qXBUTQYZv86tyAs4I0RtW7XnKWC0BwEr_ZozdkbZsHs/template/preview",
       "key": "intro_to_problem_solving_paper_tower_",
       "properties": {
         "audience": "Teacher",
@@ -5641,7 +5642,7 @@
     },
     {
       "name": "Intro to Problem Solving (Spaghetti)",
-      "url": "https://docs.google.com/presentation/d/1GOd3_LgR4y4EeYqOVx6yjdIvx_mhJ4cJAMwu0NAkovA/template/preview",
+      "url": "https://docs.google.com/presentation/d/13uyXRCgJyYcpQZZNfW0pUygoIc4QiSsEr1RICNfjcJ0/template/preview",
       "key": "intro_to_problem_solving_spaghetti_",
       "properties": {
         "audience": "Teacher",
@@ -5714,7 +5715,7 @@
     },
     {
       "name": "Project - Propose an App",
-      "url": "https://docs.google.com/presentation/d/1dFjAAwty7BeGHTDB7X8VXyCmMJ9Fh5mEs_JNZwlf9XM/template/preview",
+      "url": "https://docs.google.com/presentation/d/15En3oA9wLBHlsRlqvPEmYai72aBg0brbs9kTljp8bMU/template/preview",
       "key": "project_-_propose_an_app",
       "properties": {
         "audience": "Teacher",
@@ -5863,7 +5864,7 @@
     },
     {
       "name": "The Problem Solving Process",
-      "url": "https://docs.google.com/presentation/d/1ISxsRTRVG9D0BYkfRHYHWFHiP_HNYIvlzfkCULvxYnA/template/preview",
+      "url": "https://docs.google.com/presentation/d/1oRpS4dmzZ1ph6wSbyjBMBJ5QlHPjNQpsJ02R2TknaWU/template/preview",
       "key": "the_problem_solving_process_1",
       "properties": {
         "audience": "Teacher",
@@ -5937,7 +5938,7 @@
     },
     {
       "name": "What is a Computer",
-      "url": "https://docs.google.com/presentation/d/1qc6_t0IdvXD_jSZ84gXvNA7LvLCr94WHKC6SKPtq2po/template/preview",
+      "url": "https://docs.google.com/presentation/d/1QjUuifFXnbnMcmzsNnnEJb-dd9fXS52T5XocYNriiLQ/template/preview",
       "key": "what_is_a_computer_1",
       "properties": {
         "audience": "Teacher",

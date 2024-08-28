@@ -17,9 +17,11 @@ theme: responsive
 
 ## เบราว์เซอร์และแพลตฟอร์มขั้นต่ำที่รองรับ
 
+เริ่มตั้งแต่เดือนกรกฎาคม 2024 เราจะอัปเดตเวอร์ชันขั้นต่ำที่จำเป็นสำหรับเบราว์เซอร์และระบบปฏิบัติการ แม้ว่าเวอร์ชันเก่าอาจยังใช้งานได้ แต่เราจะไม่สามารถสนับสนุนคำขอแก้ไขข้อบกพร่องในเวอร์ชันเก่าได้
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           เบราว์เซอร์
@@ -40,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          เบราว์เซอร์ กรกฎาคม '24
+        </th>
+        <tr>
+          <td>โครเมี่ยม 103.x</td>
+        </tr>
+        <tr>
+          <td>ซาฟารี 14.x</td>
+        </tr>
+        <tr>
+          <td>ซาฟารีมือถือ 14.x</td>
+        </tr>
+        <tr>
+          <td>ขอบ119.x</td>
+        </tr>
+        <tr>
+          <td>ไฟร์ฟอกซ์ 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           แพลตฟอร์ม
@@ -62,8 +86,30 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          แพลตฟอร์ม กรกฎาคม '24
+        </th>
+        <tr>
+          <td>แมคโอส 10.15</td>
+        </tr>
+        <tr>
+          <td>ไอโอเอส 15.x</td>
+        </tr>
+        <tr>
+          <td>วินโดว์ 8</td>
+        </tr>
+        <tr>
+          <td>แอนดรอยด์ 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## เว็บไซต์ที่จำเป็นต้องปลดบล็อค
@@ -80,16 +126,15 @@ theme: responsive
 | **เพื่อใช้โปรแกรมจำลองอินเทอร์เน็ต**                                                             | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **เพื่อใช้งาน Web Lab**                                                                          | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **เพื่อใช้งานปุ่มแชร์ในโปรแกรม Google Classroom**                                                | `https://apis.google.com`                                                                                  |
-| **วิธีใช้ชุดข้อมูลแอพแล็บ**                                                                      | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## รายละเอียดกอุปกรณ์มือถือและแท็บเล็ตที่รองรับ
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. แท็บเล็ตส่วนใหญ่ไม่รองรับ แต่มีข้อยกเว้นในกรณีดังต่อไปนี้
+หลักสูตร CS Discovery, CS Principles, CS A และ Intro to App Lab ทั้งหมดไม่สามารถใช้งานร่วมกับแท็บเล็ตหรืออุปกรณ์มือถือได้ จำเป็นต้องใช้แป้นพิมพ์และเมาส์แบบเต็ม (หรือทัชแพด) แท็บเล็ตส่วนใหญ่ไม่รองรับ แต่มีข้อยกเว้นในกรณีดังต่อไปนี้
 
 - Microsoft Surface Pro พร้อมแป้นพิมพ์ภายนอก
 - iPad ที่ใช้ iPadOS 13.4 หรือรุ่นที่ใหม่กว่าที่มีแป้นพิมพ์ภายนอกและเมาส์ภายนอกหรือทัชแพด
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+เนื้อหาอื่น ๆ ทั้งหมดเช่นหลักสูตร K-5 (พื้นฐานวิทยาศาสตร์คอมพิวเตอร์) และกิจกรรมHour of Code เข้ากันได้บน iPad และแท็บเล็ตและแล็ปท็อปหรือคอมพิวเตอร์เดสก์ท็อปที่ทันสมัยอื่น ๆ
 
 ### โทรศัพท์มือถือ
 
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+เพราะตัวเล่นวิดีโอนี้จะถูกใช้ตลอดหลักสูตร ตัวเล่นนี้พยายามเล่นวิดีโอผ่าน YouTube และหาก YouTube ถูกบล็อก จะแสดงวิดีโอที่ฝังอยู่ใน Code.org โดยใช้โปรแกรมเล่น "สำรอง" ของเราแทน
 
 ### เล่นวิดีโอไม่ได้?
 
-If video does not work, you can email us at support@code.org.
+หากไม่สามารถเล่นวิดีโอได้ คุณสามารถส่งอีเมลหาเราได้ที่ support@code.org
 
-However, you can still use our tutorials without video.
+อย่างไรก็ตาม คุณยังสามารถใช้คู่มือการใช้งานของเราได้โดยไม่ต้องใช้วิดีโอ
 
 1. เราได้ทำให้วิดีโอของเรา[พร้อมสำหรับการดาวน์โหลดด้วยกัน](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH)แล้ว หากโรงเรียนของคุณมีแบนด์วิดธ์ต่ำ เราขอแนะนำให้คุณดาวน์โหลดวิดีโอและแสดงวิดีโอให้นักเรียนดูบนหน้าจอที่ใช้ร่วมกัน
 2. เช่นเดียวกับคู่มือการใช้งานของเรา เราได้เพิ่มไอคอนสีเขียวของลิงก์ดาวน์โหลด <img src="/images/green-download.png" width=25 height=25 /> สำหรับแต่ละวิดีโอ ทำให้นักเรียนสามารถดาวน์โหลดวิดีโอได้
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## การตั้งค่าพิเศษสำหรับผู้ใช้ Google Apps/G-Suite
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+หากคุณเป็นผู้ดูแลระบบ G-suite อย่าลืมตรวจสอบการตั้งค่าการจำกัดการเข้าถึงของคุณในการใช้งาน YouTube หากคุณตั้งค่า "การจำกัดการเข้าถึง YouTube อย่างเข้มงวด" หรือหากคุณเห็นข้อความที่ระบุว่า 'วิดีโอนี้ถูกจำกัดการเข้าถึง' คุณสามารถทำการเพิ่มช่องของเราลงในรายการช่องที่ได้รับอนุมัติได้ ดู[คู่มือนี้](https://support.google.com/a/answer/6245597)จาก Google เพื่อเรียนรู้เกี่ยวกับวิธีการเพิ่มช่องของเราในรายการช่องที่ได้รับอนุมัติ คุณสามารถดู[คู่มือนี้](https://support.google.com/a/answer/6212415?hl=th)เพื่อเรียนรู้เพิ่มเติมเกี่ยวกับการตั้งค่าต่างๆ และการตั้งค่าที่ดีที่สุดสำหรับห้องเรียนของคุณ
 
 ## ยังคงประสบปัญหาอยู่ใช่หรือไม่?
 
-We'll help you out - just email us at support@code.org!
+เราช่วยคุณได้ เพียงส่งอีเมลถึงเราที่ support@code.org!

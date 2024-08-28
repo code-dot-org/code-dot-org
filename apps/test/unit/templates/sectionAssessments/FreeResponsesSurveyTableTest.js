@@ -1,4 +1,4 @@
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import {
@@ -7,15 +7,13 @@ import {
 } from '@cdo/apps/templates/sectionAssessments/assessmentsTestHelpers';
 import FreeResponsesSurveyTable from '@cdo/apps/templates/sectionAssessments/FreeResponsesSurveyTable';
 
-import {expect} from '../../../util/reconfiguredChai';
-
 describe('FreeResponsesSurveyTable', () => {
   it('renders a table', () => {
     const wrapper = mount(
       <FreeResponsesSurveyTable freeResponses={surveyTwo} />
     );
 
-    expect(wrapper.find('table')).to.exist;
+    expect(wrapper.find('table')).toBeDefined();
   });
 
   it('renders the correct number of rows and headers', () => {
@@ -24,10 +22,10 @@ describe('FreeResponsesSurveyTable', () => {
     );
 
     const tableHeaders = wrapper.find('th');
-    expect(tableHeaders).to.have.length(1);
+    expect(tableHeaders).toHaveLength(1);
 
     const tableRows = wrapper.find('tr');
     // Depends on length of the fixture - one row per answer, plus a header row.
-    expect(tableRows).to.have.length(surveyOne.length + 1);
+    expect(tableRows).toHaveLength(surveyOne.length + 1);
   });
 });

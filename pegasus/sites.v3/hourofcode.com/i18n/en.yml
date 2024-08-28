@@ -137,6 +137,13 @@
   curriculum_launch_2023_title: "Introducing incredible updates to our curriculum"
   curriculum_launch_2023_desc: "Updates to CSC, CSP, CSD, and more — plus a new Curriculum Catalog and redesigned Teach page to help you find it all!"
 
+  curriculum_launch_2024:
+    banner:
+      heading: "Discover new and updated curriculum!"
+      desc: "Explore our latest units and professional learning resources to inspire future tech innovators."
+      button_learn_more_here: "Learn more here!"
+      button_learn_more: "Learn more"
+
   in_partnership_with: "In partnership with"
 
   shop_code_dot_org_heading: "Shop Code.org"
@@ -167,6 +174,8 @@
   teach_computer_science: "Teach Computer Science"
   explore_our_curriculum: "Explore Our Curriculum"
   start_professional_learning: "Start Professional Learning"
+
+  best_of_stem_heading: "Code.org wins Best of STEM 2024"
 
   how_ai_works_video_series: "How AI Works Video Series"
   learn_how_ai_works: "Learn How AI Works"
@@ -206,6 +215,28 @@
   curricula_title_high: "High School Curricula"
   curricula_desc_high: "Browse the compelling courses and activities that invite you and your high school students to dig deeper into computer science."
 
+  curricula_pages:
+    game_design:
+      title: "Game Design"
+      desc: "Discover the exciting world of game design with Code.org's curriculum. Our game design units foster creativity, problem-solving, and critical thinking skills, empowering students to bring their own interactive experiences to life."
+      button: "Explore Game Design curricula"
+    additional_resources:
+      title: "Additional resources"
+      desc: "Beyond curriculum and professional learning, we have helpful materials to support your classroom."
+      catalog:
+        title: "Curriculum Catalog"
+        desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
+        button: "Explore the catalog"
+      self_paced:
+        title: "Self-Paced Learning"
+        desc: "These modules allow you to engage at your own pace and on your own time while focusing on areas most important to your needs and teaching context."
+        button: "Explore professional learning"
+      workshops:
+        title_k_5: "K-5 Workshops"
+        title_6_12: "6-12 Workshops"
+        desc: "With our Regional Partners as hosts and our Code.org facilitators as guides, our workshops around the country focus on reflection, discussion, and growth-oriented learning."
+        button: "Explore workshops"
+
   facilitator_led_pl_heading: "Facilitator-Led Professional Learning Workshops"
   facilitator_led_pl_desc: "Learn about our professional learning workshops for elementary, middle, and high school teachers."
 
@@ -224,6 +255,7 @@
   educators_label: "Educators"
   companies_label: "Companies"
   districts_label: "Districts"
+  administrators_label: "Administrators"
   school_assemblies_label: "School Assemblies"
   parents_label: "Parents"
   public_officials_label: "Public Officials"
@@ -260,6 +292,7 @@
   call_to_action_select_activity: "Select an activity"
   call_to_action_select_coding_activity: "Select a coding activity"
   call_to_action_start_activity: "Start an activity"
+  call_to_action_start_activity_short: "Start activity"
   call_to_action_get_certificates: "Get certificates"
   call_to_action_print_certificates: "Print certificates"
   call_to_action_go_beyond_hoc: "Go beyond the Hour of Code"
@@ -336,7 +369,6 @@
   call_to_action_resources_videos: "Explore all videos"
   call_to_action_resources_slides: "Explore example slide deck"
   call_to_action_resources_assessments: "Explore an assessment lesson"
-  call_to_action_resources_tools: "Try out programming tools"
   call_to_action_sign_up_free: "Sign up for free"
   call_to_action_explore_ai_resources: "Explore AI resources"
   call_to_action_explore_ai_curricula: "Explore AI curricula"
@@ -356,6 +388,7 @@
   call_to_action_focus_on_topic: "Focus on a topic"
   call_to_action_teach_full_intro_course: "Teach a full intro course"
   call_to_action_see_module_details: "See module details"
+  call_to_action_start_module: "Start module"
   call_to_action_start_modules: "Start modules"
   call_to_action_see_course_details: "See course details"
   call_to_action_see_lesson_details: "See lesson details"
@@ -407,7 +440,7 @@
   call_to_action_explore_learning_ages_11_plus: "Explore learning for ages 11+"
   call_to_action_get_started: "Get started"
   call_to_action_discover_district_program: "Discover our District Program"
-  call_to_action_see_district_partners: "See our District Partners"
+  call_to_action_see_district_partners: "See our Code.org Districts"
   call_to_action_read_full_story: "Read the full story"
   call_to_action_learn_about_pl: "Learn about Professional Learning"
   call_to_action_pilot_web_dev_unit: "Pilot our newly updated Web Development unit!"
@@ -431,6 +464,7 @@
   aria_label_call_to_action_afe: "Learn more about Amazon Future Engineer"
   aria_label_call_to_action_facilitator_pl: "Learn more about facilitator-led professional learning workshops"
   aria_label_call_to_action_self_paced_pl: "Learn more about self-paced professional learning"
+  aria_label_call_to_action_ai_101: "Start the AI 101 self-paced professional learning program"
   aria_label_call_to_action_teaching_csf: "Start the Teaching Computer Science Fundamentals professional learning program"
   aria_label_call_to_action_teaching_csd: "Start the Teaching Computer Science Discoveries professional learning program"
   aria_label_call_to_action_teaching_csp: "Start the Teaching Computer Science Principles professional learning program"
@@ -439,9 +473,14 @@
   aria_label_call_to_action_teaching_the_design_process: "Start the Teaching The Design Process professional learning program"
   aria_label_call_to_action_teaching_csc: "Start the Teaching Computer Science Connections professional learning program"
   aria_label_call_to_action_teaching_ai: "Start the Teaching AI and Machine Learning professional learning program"
+  aria_label_call_to_action_teaching_how_ai_make_decisions: "Start the Teaching How AI Makes Decisions professional learning program"
   aria_label_call_to_action_teaching_maker_cp: "Start the Teaching Creating Apps with Devices (Circuit Playground) professional learning program"
   aria_label_call_to_action_teaching_maker_microbit: "Start the Teaching Creating Apps with Devices (micro:bit) professional learning program"
+  aria_label_call_to_action_teaching_microbit_maker_module: "Start the Teaching micro:bit Maker Module professional learning program"
   aria_label_call_to_action_teaching_web_development: "Start the Teaching Web Development professional learning program"
+  aria_label_call_to_action_teaching_elementary_game_design: "Start the Teaching Elementary Game Design professional learning program"
+  aria_label_call_to_action_teaching_coding_with_ai: "Start the Teaching Coding with AI professional learning program"
+  aria_label_call_to_action_teaching_computer_vision: "Start the Teaching Computer Vision professional learning program"
   aria_label_call_to_action_curriculum_csf: "Explore the Computer Science Fundamentals curriculum"
   aria_label_call_to_action_curriculum_csf_express: "Explore the Computer Science Fundamentals Express course"
   aria_label_call_to_action_curriculum_csf_express_pre_reader: "Explore the Computer Science Fundamentals Pre-Reader Express course"
@@ -450,14 +489,20 @@
   aria_label_call_to_action_curriculum_problem_solving: "Explore the Problem Solving and Computing curriculum"
   aria_label_call_to_action_curriculum_csc: "Explore the Computer Science Connections curriculum"
   aria_label_call_to_action_curriculum_ai: "Explore the AI and Machine Learning curriculum"
+  aria_label_call_to_action_curriculum_ai_101: "Explore our AI curriculum offerings"
+  aria_label_call_to_action_curriculum_how_ai_makes_decisions: "Explore the How AI Makes Decisions curriculum"
   aria_label_call_to_action_curriculum_maker_cp: "Explore the Creating Apps with Devices (Circuit Playground) curriculum"
   aria_label_call_to_action_curriculum_maker_microbit: "Explore the Creating Apps with Devices (micro:bit) curriculum"
+  aria_label_call_to_action_curriculum_microbit_maker_module: "Explore the micro:bit Maker curriculum"
   aria_label_call_to_action_curriculum_creating_apps_with_devices: "Explore the Creating Apps with Devices unit"
   aria_label_call_to_action_curriculum_problem_solving_computing: "Explore the Problem Solving and Computing unit"
   aria_label_call_to_action_curriculum_web_development: "Explore the Web Development unit"
   aria_label_call_to_action_curriculum_interactive_animations_games: "Explore the Interactive Animations and Games unit"
   aria_label_call_to_action_curriculum_design_process: "Explore the Design Process unit"
   aria_label_call_to_action_curriculum_data_society: "Explore the Data and Society unit"
+  aria_label_call_to_action_curriculum_elementary_game_design: "Explore the Elementary Game Design unit"
+  aria_label_call_to_action_curriculum_coding_with_ai: "Explore the Coding with AI unit"
+  aria_label_call_to_action_curriculum_computer_vision: "Explore the Computer Vision unit"
   aria_label_call_to_action_collection_hardware: "Explore the Hardware collection"
   aria_label_call_to_action_collection_design_purpose: "Explore the Design with Purpose collection"
   aria_label_call_to_action_collection_impact_society: "Explore the Impact in Society collection"
@@ -522,6 +567,7 @@
   video_title_professional_learning_program: "Code.org's Professional Learning Program"
   video_title_young_women_in_computer_science: "Young Women in Computer Science"
 
+  curriculum_name_all_ai: "Any curriculum that teaches about or with AI"
   curriculum_name_all_k5: "All K-5 Curriculum"
   curriculum_name_csf: "Computer Science Fundamentals"
   curriculum_name_csf_02: "Any CS Fundamentals (Course A-F)"
@@ -550,6 +596,7 @@
   curriculum_name_maker: "Maker"
   curriculum_name_maker_cp: "Creating Apps with Devices (Circuit Playground)"
   curriculum_name_maker_microbit: "Creating Apps with Devices (micro:bit)"
+  curriculum_name_microbit_maker_modules: "micro:bit Maker modules"
   curriculum_name_creating_apps_with_devices: "Creating Apps with Devices"
   curriculum_name_poetry: "Coding with Poetry"
   curriculum_name_dance_party: "Dance Party"
@@ -564,6 +611,10 @@
   curriculum_name_design_process: "The Design Process"
   curriculum_name_data_society: "Data & Society"
   curriculum_name_data_and_society: "Data and Society"
+  curriculum_name_how_ai_makes_decisions: "How AI Makes Decisions"
+  curriculum_name_elementary_game_design: "Elementary Game Design"
+  curriculum_name_coding_with_ai: "Coding with AI"
+  curriculum_name_computer_vision: "Computer Vision"
   curriculum_desc_dance_party_01: "In this introductory activity, use code to make a variety of colorful characters bust a move to animated backgrounds and upbeat music."
   curriculum_desc_dance_party_02: "Go beyond the introductory tutorial with extended project ideas. Browse a library of examples of more complex dance parties."
   curriculum_desc_dance_party_unplugged: "Get your groove on—no computer needed! Learn how coding concepts, like events, can be used to synchronize dancer choreography."
@@ -633,6 +684,7 @@
   module_label_self_paced: "Self-paced module"
   module_label_event_or_lessons: "Event or lessons"
   module_label_or: "Or"
+  module_label_visit_site: "Visit %{site_name}"
 
   module_ages_5_10: "5-10"
   module_ages_11_18: "11-18"
@@ -666,8 +718,12 @@
   module_age_13: "Ages 13+"
   module_age_all_age: "All Ages"
   module_professional_learning: "Professional learning"
+  module_grade_k_12_teachers: "K-12 Teachers"
   module_grade_k_5_teachers: "K-5 Teachers"
+  module_grade_2_5_teachers: "2-5 Teachers"
+  module_grade_3_5_teachers: "3-5 Teachers"
   module_grade_6_10_teachers: "6-10 Teachers"
+  module_grade_6_12_teachers: "6-12 Teachers"
   module_grade_9_12_teachers: "9-12 Teachers"
   module_level_beginner: "Beginner"
   module_level_intermediate: "Intermediate"
@@ -675,10 +731,12 @@
   module_duration_45_mins: "45 minutes"
   module_duration_2_weeks: "2 weeks"
   module_duration_1_hr: "1 hour"
+  module_duration_1_hr_30_minutes: "1.5 hours"
   module_duration_2_hrs: "2 hours"
   module_duration_2_hrs_30_minutes: "2.5 hours"
   module_duration_3_hrs: "3 hours"
   module_duration_3_hrs_20_minutes: "3 hours 20 minutes"
+  module_duration_4_hrs_30_mins: "4.5 hours"
   module_duration_5_hrs: "5 hours"
   module_duration_5_hrs_plus: "5+ hours"
   module_duration_8_hrs: "8 hours"
@@ -696,6 +754,7 @@
   module_prerequisites_none: "None"
   module_prerequisites_maker_cp: "Access to a Circuit Playground"
   module_prerequisites_maker_microbit: "Access to a micro:bit"
+  module_label_ai_101_self_paced_pl: "AI 101 Self-Paced Professional Learning"
   module_label_teaching_csf: "Teaching Computer Science Fundamentals"
   module_label_teaching_csd: "Teaching Computer Science Discoveries"
   module_label_teaching_csp: "Teaching Computer Science Principles"
@@ -704,11 +763,16 @@
   module_label_teaching_animations: "Interactive Animations and Games"
   module_label_teaching_csc: "Teaching Computer Science Connections"
   module_label_teaching_ai: "Teaching AI and Machine Learning"
+  module_label_teaching_coding_with_ai: "Teaching Coding with AI"
   module_label_teaching_maker_cp: "Teaching Creating Apps with Devices (Circuit Playground)"
   module_label_teaching_maker_microbit: "Teaching Creating Apps with Devices (micro:bit)"
+  module_label_teaching_microbit_maker_module: "Teaching micro:bit Maker Module"
   module_label_teaching_design_process: "Teaching The Design Process"
+  module_label_teaching_how_ai_makes_decisions: "Teaching How AI Makes Decisions"
+  module_label_teaching_elementary_game_design: "Teaching Elementary Game Design"
   module_label_teaching_k5_basics: "Computer Science Basics for K-5 Teachers"
   module_label_teaching_web_development: "Teaching Web Development"
+  module_label_teaching_computer_vision: "Teaching Computer Vision"
   module_subject_english_language_arts: "English Language Arts"
   module_subject_interdisciplinary: "Interdisciplinary"
   module_subject_social_studies: "Social Studies"
@@ -857,6 +921,7 @@
   subscribe_form_section_desc_csp: "Sign up to receive monthly emails about Code.org's Computer Science Principles and get helpful reminders, tips, and updates sent right to your inbox."
   subscribe_form_section_title_pl: "Get notified when Professional Learning registration opens"
   subscribe_form_section_desc_pl: "Be the first to know when registration begins! Sign up to receive an email notification when teachers can start applying for the Code.org Professional Learning Program."
+  subscribe_form_section_desc_maker: "Sign up for our monthly emails, which contain the latest news about tools, videos, and other important updates for Maker."
   subscribe_form_section_unsubscribe: "You can unsubscribe at any time."
 
   hoc_page_what_is_hoc_heading: "What is Hour of Code?"
@@ -1035,6 +1100,8 @@
   ai_pl_duration: "Duration: 2 hours"
   ai_pl_title: "Teaching AI and Machine Learning"
   ai_pl_desc: "Introduction to artificial intelligence and machine learning. Train a machine learning model using AI Lab. and engage with machine learning apps. Consider real-world implications of AI and machine learning."
+  ai_pl_101_title: "AI 101 Self-Paced Professional Learning"
+  ai_pl_101_desc: "Foundational online learning series for any teacher or educator interested in the groundbreaking world of artificial intelligence (AI) and its transformative potential in education."
   ai_promote_literacy: "Promote AI Literacy. Support Innovation. Provide Guidance."
   ai_section_body: "The latest resource from TeachAI, Foundational Policy Ideas for AI in Education, provides briefs, policy considerations, and presentation materials for policymakers to craft responsible policies for teaching with and about AI. Let's #TeachAI."
   ai_banner_body: "The latest resource from TeachAI provides briefs, policy considerations, and presentation materials for policymakers."
@@ -1056,6 +1123,59 @@
     heading: "Discover all of our AI curriculum offerings"
     desc: "Find our entire selection of AI curriculum offerings and filter to see what works best for your classroom in the curriculum catalog."
     button: "Explore all AI curricula"
+
+  ai_page:
+    curricula:
+      heading_elementary: "Elementary AI curricula"
+      heading_middle_high: "Middle and High school AI curricula"
+      tile:
+        decisions:
+          overline: "3-5"
+          title: "How AI Makes Decisions"
+          desc: "Introduce young students to AI and machine learning with hands-on activities using predictive data models. Students will practice making their own predictions and learn about data categorization and sorting."
+          duration: "1 hour"
+          button: "Explore unit"
+          aria_label: "Explore the How AI Makes Decisions unit"
+        humanities:
+          overline: "6-12"
+          title: "Generative AI for Humanities"
+          desc: "This unit includes two standalone lessons — one on writing with AI and one on researching with AI—designed for Humanities classes to demystify ethical and effective chatbot use, encouraging students to explore and reflect on these technologies."
+          duration: "Two, 45-minute lessons"
+          button: "Explore unit"
+          aria_label: "Explore the Generative AI for Humanities unit"
+        computer_vision:
+          overline: "9-12"
+          title: "Computer Vision"
+          desc: "Explore how artificial intelligence interprets visual data through our computer vision units."
+          duration: "5+ hours"
+          button: "Explore units"
+          aria_label: "Explore the Computer Vision units"
+    pl:
+      desc: "Empower yourself with the knowledge and tools to effectively teach AI and machine learning in the classroom."
+      tile:
+        decisions:
+          overline: "3-5 Teachers"
+          title: "Teaching How AI Makes Decisions"
+          desc: "This professional learning module equips educators to teach Code.org's How AI Makes Decisions module, where students (grades 3-5) explore AI concepts through engaging activities, data exploration, and decision making."
+          duration: "1 hour"
+          button: "Start module"
+          aria_label: "Start the Teaching How AI Makes Decisions module"
+        coding_with_ai:
+          overline: "6-12 Teachers"
+          title: "Teaching Coding with AI"
+          desc: "This professional learning module prepares teachers to guide students through Code.org's Coding with AI unit, where students leverage Large Language Models to write more powerful code while exploring ethical considerations and responsible AI use."
+          duration: "2 hours"
+          aria_label: "Start the Teaching Coding with AI module"
+          button: "Start module"
+        computer_vision:
+          overline: "9-12 Teachers"
+          title: "Teaching Computer Vision"
+          desc: "This professional learning module equips educators to teach Code.org's Computer Vision unit, where students (grades 6-12) explore image and video analysis through engaging activities and discussions on ethics and real-world applications."
+          duration: "1.5 hours"
+          aria_label: "Start the Teaching Computer Vision module"
+          button: "Start module"
+        ai_101:
+          aria_label: "Start the AI 101 for Teachers module"
 
   ai_integrations:
     heading: "AI Integrations"
@@ -1148,7 +1268,7 @@
   ai_vid_ethics1_caption: "Ethics & AI: Equal Access and Algorithmic Bias"
   ai_vid_ethics2_caption: "Ethics & AI: Privacy and the Future of Work"
 
-  admins_page_top_heading: "Expand computer science in your school or district"
+  admins_page_top_heading: "Expand computer science in your district"
   admins_page_top_subhead: "Unlock the future of education with Code.org's comprehensive computer science (CS) programs."
   admins_page_top_desc: "Join a visionary network of over 2 million educators dedicated to shaping innovative leaders, critical thinkers, and engaged digital citizens. Code.org partners with administrators to seamlessly integrate CS into schools, offering extensive resources, tailored professional development, and continual support for systemic success."
   admins_page_elevate_heading: "Elevate computer science education at your school"
@@ -1178,14 +1298,15 @@
   admins_page_subscribe_form_desc: "Sign up to receive monthly emails from Code.org on bringing computer science to your school or district. Get helpful reminders, tips, and updates sent right to your inbox. You can unsubscribe at any time."
   admins_page_subscribe_form_district_disclaimer: "District Administrator? [Discover our District Program](%{district_program_url})."
   admins_page_lms_heading: "Seamless LMS integration for simplified management"
-  admins_page_lms_desc: "Connect Code.org with your district or school's Learning Management System. Our platform integrates with leading LMS and LTI providers, making class management more efficient while ensuring a unified learning experience."
+  admins_page_lms_desc: "Our platform integrates seamlessly with leading LMS providers. Connect existing LMS classrooms to Code.org with one-click Roster Syncing, Single Sign-On, and integrated access to curriculum."
+  admins_page_lms_call_to_action: "Learn more about LMS integrations"
   admins_page_resources_desc: "Beyond curriculum and professional learning, we have many materials to support your classroom."
   admins_page_resources_desc_intl: "We have a growing number of partners around the world that are helping to bring computer science to students in their area."
   admins_page_resources_desc_videos: "We offer a growing library of educational videos for use by educators worldwide, online or in classrooms."
   admins_page_resources_desc_unplugged: "Now you can teach the fundamentals of computer science to your students, whether you have computers in your classroom or not!"
 
   districts_page_top_heading: "Districts in the Code.org District Program"
-  districts_page_top_desc: "We're actively expanding our network of district partners across the US. Explore this list of districts currently enrolled in our District Partner program."
+  districts_page_top_desc: "We're actively expanding our network of Code.org Districts across the US. Explore this list of districts currently enrolled in our District Partner program."
   districts_page_join_heading: "Join our District Partner Program"
   districts_page_join_desc: "District leaders around the United States have partnered with Code.org directly, at no cost to bring computer science to their district, and teach students the skills of the future."
 
@@ -1370,7 +1491,6 @@
   resources_tabs_tab_label_videos: "Videos"
   resources_tabs_tab_label_slides: "Slides"
   resources_tabs_tab_label_assessments: "Assessments"
-  resources_tabs_tab_label_tools: "Programming Tools"
   resources_tabs_lesson_plans_subhead: "Get step-by-step guidance, learning objectives, and assessment strategies for effective teaching."
   resources_tabs_lesson_plans_desc: "Helpful resources include slide decks, activity guides, rubrics, and more — all organized in one place. Each lesson plan is accompanied by tips for classroom implementation, differentiation ideas, and extension activities to cater to students of all abilities."
   resources_tabs_videos_heading: "Instructional Videos"
@@ -1381,8 +1501,6 @@
   resources_tabs_slides_desc: "Code.org slide decks provide step-by-step instructions, examples, and interactive activities that align with curricular objectives."
   resources_tabs_assessments_subhead: "Our curricula includes a comprehensive system of formative and summative assessment resources."
   resources_tabs_assessments_desc: "These include rubrics, checklists, mini-projects, end-of-chapter projects, student-facing rubrics, sample projects, and post-project tests — all designed to support teachers in measuring student growth, providing feedback, and evaluating student understanding."
-  resources_tabs_tools_subhead: "Code.org's integrated development environments (IDEs) cater to students of all skill levels."
-  resources_tabs_tools_desc: "We offer a versatile and user-friendly platform that supports a variety of programming paradigms. This enables learners to seamlessly transition from block-based coding to text-based languages, and fosters creativity and innovation."
 
   teach_page_top_heading: "Teach computer science & ignite possibilities"
   teach_page_top_desc_01: "Tap into your students' full potential with Code.org's free Computer Science (CS) curriculum."
@@ -1494,7 +1612,6 @@
   csd_page_curriculum_glance_devices: "Laptop, Chromebook"
   csd_page_curriculum_glance_tools: "App Lab, Game Lab, AI Lab, Web Lab"
   csd_page_curriculum_glance_professional_learning: "Facilitator-led Workshops, Self-paced Modules"
-  csd_page_curriculum_glance_professional_languages: "English"
   csd_page_curriculum_glance_professional_accessibility_features: "Text-to-speech, Closed captioning, Immersive reader"
   csd_page_pick_a_course_heading: "Picking the right CS Discoveries&reg; course for your classroom"
   csd_page_pick_a_course_heading_non_en: "Picking the right %{cs_discoveries} (CS Discoveries) course for your classroom"
@@ -1570,7 +1687,6 @@
   csf_page_curriculum_glance_devices: "Laptop, Chromebook, Tablet"
   csf_page_curriculum_glance_tools: "Sprite Lab, Play Lab"
   csf_page_curriculum_glance_professional_learning: "Facilitator-led Workshops, Self-paced Modules"
-  csf_page_curriculum_glance_languages: "Arabic, Bahasa Indonesian, Catalán, Chinese Simplified, Chinese Traditional, Czech, French, German, Hindi, Italian, Japanese, Korean, Kannada, Malay, Marathi, Mongolian, Polish, Portuguese-BR, Romanian, Russian, Slovak, Tagalog, Tamil, Thai, Turkish, Ukrainian, Spanish Latam, Urdu, Spanish-ES, Uzbek, Vietnamese"
   csf_page_curriculum_glance_accessibility_features: "Text-to-speech, Closed captioning, Immersive reader"
   csf_page_pick_a_course_heading: "Picking the right CS Fundamentals course for your classroom"
   csf_page_pick_a_course_desc: "With the diverse set of options offered for CS Fundamentals, there is a course for all different needs."
@@ -1598,6 +1714,23 @@
   csf_page_faq_answer_05: "Each CSF course includes 13-17 lessons designed for 45-minute periods. We recommend all students move from lesson to lesson at a pace set by the teacher. There are many teacher-led project levels designed to be experienced in unison while the skill-building lessons can be completed by students at their own pace."
   csf_page_faq_question_06: "What materials do I need for CS Fundamentals?"
   csf_page_faq_answer_06: "Many lessons have handouts that guide students through activities. These resources can be printed or assigned digitally. Some lessons call for typical classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url})."
+  csf_page:
+    intro_list_05: "Aligned to K-5 CSTA curriculum standards"
+    additional_resources:
+      heading: "Additional resources"
+      desc: "Beyond curriculum and professional learning, we have many materials to support your classroom."
+      catalog:
+        title: "Curriculum Catalog"
+        desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust, structured, and self-paced learning options."
+        button: "Explore the catalog"
+      videos:
+        title: "Explore Videos"
+        desc: "We offer a growing library of educational videos for use by educators worldwide, online or in classrooms."
+        button: "View video library"
+      support:
+        title: "Get Support"
+        desc: "Our customer support team is ready to answer your questions. Email us at [support@code.org](%{email_url}) or check out our support center, which offers useful guides and answers!"
+        button: "Visit our support center"
 
   csa_page_top_desc: "Introduce students to software engineering and object-oriented design while they learn the Java programming language in this free curriculum for [AP® Computer Science A (AP® CSA)](%{csa_url})."
   csa_page_intro_heading: "A new approach to AP® CSA"
@@ -1661,6 +1794,58 @@
   donate_tabs_bitpay_title: "Donate with Crypto via BitPay"
   donate_tabs_bitpay_desc: "Embrace the future of giving with cryptocurrency. Through BitPay, your digital currency can directly support Code.org's endeavors in expanding computer science education."
 
+  donate_page:
+    heading: "Help fund and support our mission"
+    options:
+      heading: "Donate to Code.org"
+      desc: "Explore a variety of ways to support Code.org directly through our website. Your contribution fuels our mission to expand access to computer science education."
+      contribute:
+        tab: "Contribute"
+        title: "Donate directly to Code.org"
+        desc: "Make a secure donation directly through our site using the form. Your gift can be one-time or recurring, tailored to your preference. Access our [donation system](%{system_url}), powered by Classy, to create an account or manage your contributions."
+      disclaimer: "Code.org is registered as a public 501(c)(3) nonprofit organization. Contributions to Code.org are tax-deductible to the extent permitted by law. Code.org's tax identification number is 46-0858543. Read our [donation policy](%{policy_url}) to learn about how we handle and allocate contributions."
+    empower:
+      heading: "Empower computer science education"
+      button: "Donate"
+      worldwide:
+        title: "Support students worldwide"
+        desc: "Help students worldwide try an Hour of Code! Our courses are available in over 50 languages and 180+ countries. For every dollar you give, one child is introduced to the world of computer science."
+        amount: "$50"
+      teacher:
+        title: "Support teachers like Flo"
+        desc: "How can there be computer science classes without CS teachers? Support teachers like Flo from Oakland to become computer science educators. Code.org trains thousands of teachers nationwide."
+        amount: "$250"
+      workshops:
+        title: "Support local workshops"
+        desc: "Code.org has over 60 partners in all 50 states running workshops to prepare teachers for computer science. Help create sustainable, community-driven professional development by supporting these local workshops."
+        amount: "$750"
+    campaign:
+      farsi:
+        aria_label:
+          primary: "Donate to Code.org in Farsi"
+          secondary: "Learn more about Code.org in Farsi"
+      naipi:
+        title: "Native American and Indigenous Peoples Initiative (NAIPI)"
+        desc: "Code.org's Native American and Indigenous Peoples Initiative integrates Native American perspectives into education and technology. Explore innovative approaches in Native American education and computer science, discover collaboration opportunities, and witness our collective impact."
+        aria_label:
+          primary: "Donate to Code.org's Native American and Indigenous Peoples Initiative"
+          secondary: "Learn more about Code.org's Native American and Indigenous Peoples Initiative"
+    support_mission:
+      heading: "More ways you can support our mission"
+      desc: "Support our mission to make computer science accessible for every child, everywhere. Your efforts help us inspire future innovators and bridge the tech education gap."
+      translate:
+        title: "Help us translate"
+        desc: "Volunteers have translated our tutorials in over 45 languages. Help us continue to expand our tutorials for students around the world!"
+        button: "Start translating"
+      speak_up:
+        title: "Speak up for CS education"
+        desc: "Learn more about Code.org's advocacy work across the U.S. and the ten policies we recommend states adopt to make computer science foundational for all students. Plus, find out how you can drive change in your state."
+        button: "Learn about our advocacy"
+      shop:
+        title: "Shop Code.org"
+        desc: "Support our work and wear the movement with pride. Our hats have been worn by President Obama and celebrities too."
+        button: "Visit the store"
+
   help_page_top_heading: "How you can help"
   help_page_top_desc: "Support our mission to make computer science accessible for every child, everywhere. Your efforts help us inspire future innovators and bridge the tech education gap."
   help_page_top_subhead: "Make a donation to Code.org"
@@ -1676,6 +1861,68 @@
 
   yw_page_top_heading: "Young Women in Computer Science"
   yw_page_top_desc: "Become a CS Ambassador and be a part of closing the gender gap in computer science."
+
+  lms_page:
+    heading: "Integrate Code.org with your LMS platform"
+    top_desc: "Connect existing LMS classrooms in your school to Code.org with one-click roster syncing, single sign-on (SSO), and integrated curriculum access."
+    top_module:
+      heading: "Code.org supports major learning management systems"
+      desc: "Code.org has seamless, secure, one-click integrations for most major LMS & SSO providers."
+    integrations:
+      heading: "Single sign-on integrations"
+      desc: "Use these common services as login methods for Code.org. Learn more about [logging in with SSO.](%{help_article_link})"
+    reasoning:
+      heading: "Why use Code.org LMS integrations?"
+      title_01: "Save instructor time and focus on what matters"
+      desc_01: "Instantly sync your sections, students, and co-teachers to optimize classroom prep and spend more time with your students."
+      title_02: "Streamline student access and improve participation"
+      desc_02: "No more worrying about personal logins or students getting lost — students can now access Code.org with the click of a button."
+      title_03: "Build on your existing technology and solutions"
+      desc_03: "Keep your tech together. Code.org syncs effortlessly with your existing LMS classroom."
+      title_04: "Empower digital learning with our robust curriculum"
+      desc_04: "Instantly connect to Code.org's suite of standards-aligned CS & AI curricula from home or from school"
+    teacher_quote:
+      text_01: "This is awesome for my kids; it's so nice when they can just click and go get started. This makes me really happy. It streamlines everything."
+      role_01: "Elementary Teacher"
+    get_started:
+      heading: "Ready to get started with our LMS integrations?"
+      top_label: "Administrators and teachers"
+      title: "Integrate Code.org with your LMS"
+      desc: "Easily integrate Code.org with your school's LMS. Our step-by-step guide supports both administrators and teachers, helping you make the most of your tools in your educational setting."
+      call_to_action: "See the guide to getting started"
+    additional_resources:
+      heading: "Additional resources"
+      desc: "Beyond curriculum and professional learning, we have many materials to support your classroom."
+      district_program_heading: "District Program"
+      district_program_desc: "Join the Code.org District Program — at no cost! — to bring computer science to their district, empower their educators, and teach students the skills of the future."
+      pl_desc: "Empower today's students to become tomorrow's heroes with tailored professional learning. Explore in-person workshops and self-paced online modules."
+    skinny_banner:
+      heading: "Discover our new LMS integrations!"
+      desc: "We've added new LMS integrations for %{canvas} and %{schoology}! Learn how to get started!"
+
+  lms_partner_page:
+    heading: "Integrate Code.org with %{website}"
+    desc: "Sync your rosters and sign in to code.org with one-click. Plus, Code.org content is now available directly on %{website}."
+    rosters:
+      heading: "Sync your %{website} rosters"
+      desc: "No access codes needed! Launch the Code.org Integration to instantly import your sections, students, and co-teachers direcly to Code.org. Your sections stay up to date every time you launch from %{website}."
+      link: "Learn how to create and sync rosters"
+    sso:
+      heading: "Single sign-on from %{website}"
+      desc: "Sign in to Code.org without usernames and passwords. When students launch from the Code.org integration they are automatically logged in!"
+      link: "Learn how to start using SSO with %{website}"
+    access_content:
+      heading: "Access Code.org content"
+      desc: "Browse our standards-aligned computer science and artificial intelligence curricula directly from %{website}."
+      link: "See what's available in %{website}"
+    keep_account:
+      heading: "Keep your Code.org account"
+      desc: "You and your students have worked hard. Keep your work together by linking to your existing Code.org account when launching from %{website} for the first time."
+    ready:
+      heading: "Ready to try the Code.org integration for %{website}?"
+      title: "Install the Code.org integration on %{website}"
+      list_01: "**Administrators:** Streamline your school's digital learning by using a simple and straightforward installation process."
+      list_02: "**Teachers:** Use this guide to get started and encourage your administrator to integrate Code.org."
 
   pl_page:
     heading: "Professional learning that empowers"
@@ -1828,7 +2075,7 @@
       heading: "Feedback or questions?"
       subheading: "We greatly value your input and invite you to share your feedback to help shape our offerings."
       desc: "Our international program is continuously expanding, and while resources may be limited, we are committed to growth that meets the needs of educators worldwide. For any questions or suggestions, our dedicated team is ready to assist you as we strive to support your journey in computer science education."
-      cta: "Email us at [international@code.org](%{email_url})."
+      cta: "Email us at [team-global@code.org](%{email_url})."
 
   intl_pl_partners_page:
     page_title: "International Professional Learning Partners"
@@ -1872,6 +2119,26 @@
         title: "Curriculum Catalog"
         desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
         button: "Explore the catalog"
+
+  csa_page:
+    ap_quizzes_banner: "Quizzes now available in AP Classroom! [Learn more](%{learn_more_url})"
+    additional_resources:
+      heading: "Additional AP CSA resources for educators"
+      pl:
+        overline: "Professional Learning"
+        title: "6-12 Educator Workshops"
+        desc: "Our highly supportive Professional Learning Program will bring you together with a group of teachers to learn from each other as well as expert facilitators as you take on the first year of teaching the free CSA curriculum to your students."
+        button_label: "Apply for 6-12 workshops"
+      ap_class_quiz:
+        overline: "Prep for the exam"
+        title: "Custom Quizzes for AP Classroom"
+        desc: "Unlock the full potential of AP Classroom with Code.org's custom quizzes, seamlessly mapped to our curriculum sequence. Empower your teaching and boost your students' AP exam readiness with practice materials that resonate with the way you teach."
+        button_label: "Learn more about quizzes"
+      ap_csa_computer_vision:
+        overline: "After the exam"
+        title: "AP CSA Computer Vision"
+        desc: "This two-chapter post-AP® CSA module offers high school students hands-on experience with professional software development tools, including GitHub and GitHub Copilot, and imparts them with the real-world skills to develop a computer vision program."
+        button_label: "Explore module"
 
   poetry_page:
     heading: "Coding with Poetry"
@@ -2008,21 +2275,28 @@
         how_to: "App Lab How-to: Make a Choose-Your-Own-Adventure App"
 
   music_lab:
+    opengraph_title: "%{music_lab} | Create music with code"
     introducing: "Introducing"
     music_lab: "Music Lab"
     introducing_music_lab: "Introducing Music Lab"
+    introducing_music_lab_strong: "Introducing **%{music_lab}**"
+    make_music_learn_code: "Make Music, Learn Code"
     button:
       try_music_lab: "Try Music Lab"
       learn_more: "Learn more"
       access_teachers_guide: "Access teacher's guide"
       get_teachers_guide: "Get the teacher's guide"
       amazon_career_tour: "See Career Tour"
-    in_partnerhip_with: "In partnership with"
+    in_partnership_with: "In partnership with"
     amazon_future_engineer: "Amazon Future Engineer"
     banner:
       heading: "Create music with code"
       desc: "Get creative with your favorite artist's music and code new songs and mixes!"
     featuring_songs_by: "Featuring songs by:"
+    artist_list: "%{artist_list} and more!"
+    artist:
+      singer_songwriter: "%{artist_name}, Singer-songwriter"
+      band: "%{artist_name} from %{band_name}"
     student_projects:
       heading: "Listen to what students are creating"
       subheading: "Getting started is easy!"
@@ -2050,6 +2324,7 @@
         quote_01: "It's like you're coding without even knowing you're coding."
         quote_02: "I never would have imagined I'd be making music with computer science."
         quote_03: "I think it's a cool way to compose music."
+        byline: "High School Student"
     teachers_guide:
       heading: "Get the teacher's guide to Music Lab"
       desc: "Grab your copy of the teacher's guide to Music Lab to learn how to get started, explore activity ideas, and get answers to frequently asked questions."
@@ -2057,6 +2332,7 @@
       heading: "Teach Music Lab in your Classroom"
       desc: "Use our Music Lab tutorial to unleash your students' musical creativity, combining the joy of music with the principles of coding."
       button: "Start tutorial"
+      english_only: "Available in English only"
     additional_resources:
       heading: "Additional resources"
       catalog:
@@ -2071,7 +2347,257 @@
         title: "Try an Hour of Code"
         desc: "Looking for more short-form activities and resources for all age levels? Explore our large library of Hour of Code activities and tutorials!"
         button: "See Hour of Code activities"
+    tools_page:
+      top:
+        subheading: "Create music with code"
+        desc: "Music Lab is a programming environment where students are the producers! Using its large selection of sounds, including songs from popular artists, students work in Music Lab to create new mixes using code."
+      glance:
+        heading: "Music Lab at a glance"
+        ages: "10+"
+        level: "Beginner"
+        make: "Block-based music mixes"
+        devices: "Laptop, Chromebook, Tablet"
+        browsers: "All modern browsers"
+        accessibility: "Text-to-speech, Closed captioning, Immersive reader"
+        teachers_guide_desc: "Check out the teacher's guide to learn how to get started, explore activity ideas, and get answers to common questions."
+      videos:
+        heading: "Videos to help you get started with Music Lab"
 
+  game_design_page:
+    heading: "Game design"
+    desc: "Discover the exciting world of game design with Code.org's curriculum. Our game design units foster creativity, problem-solving, and critical thinking skills, empowering students to bring their own interactive experiences to life."
+    button:
+      explore_curriculum: "Explore curriculum"
+      see_pl: "See professional learning"
+    why:
+      heading: "Why teach game design?"
+      desc: "Game design fosters engagement and creativity while unlocking skills for the future."
+      inclusive:
+        title: "Inclusive learning"
+        desc: "Game design engages students by aligning with their interests, creating a motivating environment where every student is excited to participate and succeed."
+      creative:
+        title: "Creative expression"
+        desc: "Students can explore their imagination as they design unique, interactive experiences, making game design a powerful tool for artistic expression."
+      problem_solving:
+        title: "Problem-solving skills"
+        desc: "Help develop problem-solving and computational thinking skills through the engaging process of game design, empowering students in the digital age."
+    resources:
+      heading: "Resources to support you every step of the way"
+      desc: "Get access to materials that will help you teach computer science with confidence — even without prior CS teaching experience — when you create a **free** Code.org account."
+      button: "Create a free account"
+    elementary_curricula:
+      heading: "Elementary game design curricula"
+      game_design:
+        overline: "Grades 3-5"
+        title: "Elementary Game Design"
+        desc: "Dive into game development with our 5-hour Game Design module, teaching students to create games using Sprite Lab while mastering key concepts and culminating in a Game Jam showcase."
+        duration: "5 hours"
+        button: "Explore unit"
+        aria_label: "Explore the Elementary Game Design unit"
+      sports:
+        overline: "Grades 2-12"
+        title: "Code Your Own Sports Game"
+        desc: "Score big with a sports game coded by you! Learn all about events in programming, work through puzzles, and customize the fun. Let's play and code like champs!"
+        duration: "1 hour"
+        button: "Try activity"
+        aria_label: "Try the Code Your Own Sports Game activity"
+      flappy:
+        overline: "Grades 2-12"
+        title: "Flappy Code"
+        desc: "Create a game using basic block code in this introductory computer science activity."
+        duration: "1 hour"
+        button: "Try activity"
+        aria_label: "Try the Flappy Code activity"
+      basketball:
+        overline: "Grades 2-12"
+        title: "Choose Your Team and Make a Basketball Game"
+        desc: "Learn what \"events\" are and how computers use them in programs like video games! Students work through puzzles and customize their games with speed and sound."
+        duration: "1 hour"
+        button: "Try activity"
+        aria_label: "Try the Choose Your Team and Make a Basketball Game activity"
+    mid_high_curricula:
+      heading: "Middle and high school game design curricula"
+      interactive:
+        overline: "Grades 6-10"
+        title: "Interactive Animations and Games"
+        desc: "Engaging the same design process that computer scientists use, students learn programming concepts and develop images, animations, interactive art, and games."
+        duration: "3 hours, 20 minutes"
+        button: "Explore unit"
+        aria_label: "Explore the Interactive Animations and Games unit"
+      game_lab:
+        overline: "Grades 6-12"
+        title: "Self-Paced Introduction to Game Lab"
+        desc: "Move at your own pace in this introduction to our Game Lab environment as you program animations, interactive art, and games."
+        duration: "Month"
+        button: "Explore unit"
+        aria_label: "Explore the Self-Paced Introduction to Game Lab unit"
+      star_wars:
+        overline: "Grades 6-12"
+        title: "Star Wars: Building a Galaxy With Code (JavaScript)"
+        desc: "Use JavaScript to learn to program droids, and create your own Star Wars game in a galaxy far, far away."
+        duration: "1 hour"
+        button: "Try activity"
+        aria_label: "Try the Star Wars: Building a Galaxy With Code activity"
+    quote:
+      text: "This curriculum is all inclusive, well organized, and student centered! The incredible organization in the curriculum is what makes me use it year after year."
+      byline: "AP® CSA Teacher"
+    teach:
+      heading: "Preparing to teach game design"
+      desc: "Empower yourself with the knowledge and tools to effectively teach game design in the classroom."
+      elementary:
+        overline: "3-5 Teachers"
+        title: "Teaching Elementary Game Design"
+        desc: "Prepare to teach Code.org's game design module, where students explore game design through engaging activities, exploring concepts, and collaboratively building games."
+        button: "Start professional learning"
+        aria_label: "Start the Teaching Elementary Game Design professional learning course"
+      interactive:
+        overline: "6-12 Teachers"
+        title: "Teaching Interactive Animations and Games"
+        desc: "Prepare to teach Code.org's CSD Unit 3 - Interactive Animations and Games, allowing you to engage with the content at your own pace and in the order that best suits your needs."
+        button: "Start professional learning"
+        aria_label: "Start the Teaching Interactive Animations and Games professional learning course"
+    additional_resources:
+      heading: "Additional resources"
+      desc: "Beyond curriculum and professional learning, we have many materials to support your classroom."
+      catalog:
+        title: "Curriculum Catalog"
+        desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
+        button: "Explore the catalog"
+      professional_learning:
+        title: "Professional Learning"
+        desc: "Help today's students become tomorrow's superheroes with professional learning that meets your needs."
+        button: "Explore professional learning"
+      hour_of_code:
+        title: "Hour of Code Activities"
+        desc: "One-hour tutorials in over 45 languages. No experience needed. Hour of Code activities are available for free year-round."
+        button: "Explore activities"
+
+  maker_page:
+    top:
+      heading: "Become a Maker"
+      desc: "Explore your creativity with physical computing."
+    what:
+      heading: "What is a Maker?"
+      desc_01: "Makers invent, explore, innovate, and create using technology like development boards, robotics, 3D printing, programming, and more."
+      desc_02: "Maker education takes STEM (Science, Technology, Engineering, Mathematics) a step further by inviting hands-on experience and collaboration into the classroom to help teach problem solving and critical thinking."
+    case_study:
+      overline: "Case study"
+      heading: "Bringing micro:bit to Alaskan classrooms"
+      desc: "We addressed this problem head-on by providing a complete package for successful implementation: curricula, professional development, facilitated workshops, a district support program, and classroom sets of devices."
+      button: "Read more"
+    get_started:
+      heading: "Getting started with physical computing"
+      desc: "We have curriculum options that support two different devices — see available options below."
+      button:
+        see_curriculum:
+          label: "See available curriculum"
+          aria_label: "See available %{device} curriculum"
+        learn_about: "Learn about %{device}"
+    why:
+      heading: "Why physical computing?"
+      real_world:
+        title: "Real-world applications"
+        desc: "Using a physical device can help students engage and connect the actions on a screen to their impact in the real world."
+      inclusion:
+        title: "Inclusion and engagement"
+        desc: "Surveys show female students described feeling more confident after exposure to physical computing."
+      social:
+        title: "Social + emotional learning"
+        desc: "Physical computing encourages students to work together, fostering collaboration, interpersonal skills, and active learning."
+    curricula_microbit:
+      heading: "Curriculum using the micro:bit"
+      desc: "Code.org has partnered with the Micro:bit Educational Foundation to offer teachers several resources on using the BBC micro:bit device."
+      creating_apps:
+        overline: "Grades 6-12"
+        title: "Creating Apps with Devices"
+        desc: "Explore the role of physical devices in computing. Using App Lab and the BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices."
+        duration: "25 hours"
+        button:
+          explore_unit:
+            label: "Explore the unit"
+            aria_label: "Explore the Creating Apps with Devices unit"
+          teach:
+            label: "Prepare to teach"
+            aria_label: "Prepare to teach the Creating Apps with Devices unit"
+      module_grade_2:
+        overline: "Grade 2"
+        title: "micro:bit Maker Module"
+        desc: "Learn events, sequencing, loops, data and variables while creating an emotion badge, calming LEDs, and a counter with the micro:bit."
+        duration: "9 hours"
+      module_grade_3:
+        overline: "Grade 3"
+        title: "micro:bit Maker Module"
+        desc: "Learn conditionals, events, and text inputs while saving sea turtles, creating a rock paper scissors game, and making an activity picker with the micro:bit."
+        duration: "7 hours"
+      module_grade_4:
+        overline: "Grade 4"
+        title: "micro:bit Maker Module"
+        desc: "Learn events, designing for accessibility, conditionals, and functions creating a sensory toy, simple door alarm, and tilt alarm with the micro:bit."
+        duration: "9 hours"
+      module_grade_5:
+        overline: "Grade 5"
+        title: "micro:bit Maker Module"
+        desc: "Learn events, variables, conditionals, and sounds while creating a step counter, pet, and thermometer with the micro:bit."
+        duration: "9 hours"
+      button:
+        explore_unit:
+          label: "Explore the unit"
+          aria_label: "Explore the micro:bit Maker Module unit for grade %{grade}"
+        teach:
+          label: "Prepare to teach"
+          aria_label: "Prepare to teach the micro:bit Maker Module unit for grade %{grade}"
+    curricula_circuit_playground:
+      heading: "Curriculum using the Circuit Playground"
+      creating_apps:
+        overline: "Grades 6-12"
+        title: "Creating Apps with Devices"
+        desc: "Explore the role of physical devices in computing. Using App Lab and Adafruit's Circuit Playground, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices."
+        duration: "25 hours"
+        button: "Explore the unit"
+        aria_label: "Explore the Creating Apps with Devices unit"
+      teach_creating_apps:
+        overline: "6-12 Teachers"
+        title: "Teaching Creating Apps with Devices"
+        desc: "Self-paced online professional learning experience designed to prepare educators to get started teaching the Creating Apps with Devices unit."
+        note: "**Note:** A circuit playground device is required to engage with the activities in this professional learning experience."
+        button: "Prepare to teach"
+        aria_label: "Prepare to teach the Creating Apps with Devices unit"
+    careers:
+      heading: "Maker careers"
+      subhead: "Meet Jerome Morrison at Meow Wolf"
+      desc: "Jerome is a design technologist at Meow Wolf who works on amazing interactive art installations. With technology, he helps create portals to imaginative worlds at Meow Wolf's location in Santa Fe, New Mexico."
+    additional_resources:
+      heading: "Additional resources"
+      desc: "Beyond curriculum and professional learning, we have many materials to support your classroom."
+      catalog:
+        title: "Curriculum Catalog"
+        desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
+        button: "Explore the catalog"
+      professional_learning:
+        title: "Professional Learning"
+        desc: "Help today's students become tomorrow's superheroes with professional learning that meets your needs."
+        button: "Explore professional learning"
+      hour_of_code:
+        title: "Hour of Code Activities"
+        desc: "One-hour tutorials in over 45 languages. No experience needed. Hour of Code activities are available for free year-round."
+        button: "Explore activities"
+
+  transformers:
+    header: "Code the fun: with Transformers!"
+    desc: "Build your own exciting Transformer's One world now!"
+    code_favorite:
+      header: "Code with your favorite Transformers"
+      desc: "Explore and build awesome worlds with Optimus Prime, Bumblebee, Megatron, and More!"
+    fun:
+      header: "Get in the fun! Easy-to-learn code with Transformers"
+      desc: "Code.org has teamed up with Transformers One to offer a fun and easy-to-learn coding activity for 2nd-8th graders. Now, you can create your own interactive Transformers One world with some of the movie's most beloved characters!"
+      code_card:
+        header: "Code with the Transformers"
+        desc: "Autobots, roll out! In this Transformers-themed introduction to our Sprite Lab, students learn the basics of computer science by building fun, interactive projects."
+    after:
+      header: "Continue learning after Transformers"
+      desc: "The Transformers activity is an ideal first step for classrooms before tackling the open-ended projects in our new CS Connections curriculum. Once students learn basic coding, they can advance to CS Connections' cross-curricular projects."
+  
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
   hoc_live_learn_title: 'Learn with Hour of Code Live'
@@ -10376,42 +10902,6 @@
   accessibility_card_title_10: "Quorum "
   accessibility_card_text_10: "An adaptation of Code.org’s AP Computer Science Principles curriculum using Quorum, an evidence-based language originally designed to provide accessibility for blind or visually-impaired students."
 
-  engineering_hero_heading: "Join our engineering team!"
-  engineering_hero_desc: "As we continue to expand our engineering team, we wanted to share more about our engineering organization at Code.org and some of the unique aspects of working here. If you are interested in applying for one of our roles, we'd love to hear from you!"
-  engineering_team_title: "Meet the engineering team at Code.org"
-  engineering_team_card_text_1: "This is (most of) us at our in-person get together during the summer of 2023! This crowd is divided into four sub-teams within our engineering team who work together to build and serve the platform for all our students and teachers."
-  engineering_team_card_text_2: "If you are interested in applying for one of our roles, we'd love to hear from you! You can find a list of open positions on our Careers page."
-  engineering_our_team_title: "Our engineering team"
-  engineering_our_team_desc: "The engineering team at Code.org is divided into four sub-teams that build and support different areas of our platform:"
-  engineering_our_team_sub_title_1: "Student Learning Team"
-  engineering_our_team_text_1: "Our Student Learning Team owns all our activities (we call them labs) that our students use each day. This team works mostly on front-end tech (we use React and a lot of custom JS) and we have a great working relationship with many partners and open source projects. For example, we use [Google's Blockly](%{youtube_url}) for all of our block-based programming. We support students in their learning journey all the way from Kindergarten through 12th grade."
-  engineering_our_team_sub_title_2: "Teacher Experience Team"
-  engineering_our_team_text_2: "Our Teacher Experience Team builds the tools that attract new teachers to Code.org (we call these acquisition products) and develops the platform that empowers our existing teachers to teach our curriculum (our teacher tools). As with our student tools, we rely on React to build our front-end and our server-side components are served using Ruby on Rails."
-  engineering_our_team_sub_title_3: "Platform Team"
-  engineering_our_team_text_3: "Our Platform Team owns core components that serve the needs of our student and teacher teams (for example, authentication and user profile) and also has the mission of reaching students who we can't yet reach. This includes building integrations that connect us with schools that use different Learning Management Systems (LMS) and packaging our curriculum so that it can be used in remote schools who don't have access to reliable internet."
-  engineering_our_team_sub_title_4: "Infrastructure Team"
-  engineering_our_team_text_4: "Our Infrastructure Team provides the backbone for the platform that supports our students and teachers. This includes our hosting infrastructure and related services (we use AWS), data management, security programs, developer and deployment services and much more. This team also owns our scaling and provisioning systems, which are critical during Hour of Code, where we invite every student in the world to complete an hour of coding with us."
-  engineering_faq_question_1: "What does Code.org do?"
-  engineering_faq_answer_1_a: "Code.org is an education innovation nonprofit dedicated to the vision that every student in every school has the opportunity to learn computer science as part of their core K-12 education."
-  engineering_faq_answer_1_b: "We expand access to computer science in schools, with a focus on increasing participation by young women and students from other underrepresented groups. The leading provider of K-12 computer science curriculum in the largest school districts in the United States, Code.org also organizes the annual Hour of Code campaign, which has engaged more than 15% of all students in the world."
-  engineering_faq_answer_1_c: "Code.org is supported by generous donors including Microsoft, Amazon, Google and many others."
-  engineering_faq_question_2: "What is Code.org’s developer experience and tooling?"
-  engineering_faq_answer_2: "Our developer experience may be different to what you’ve seen in your past roles. Working closely with our product team, we ship to production every weekday and we have a variety of cadences - sometimes you are writing code that goes live that day; other times you are on longer term projects - and while we do follow 2-weekly sprints, we do so in a lightweight way. We index towards getting the right things done the right way vs. taking a purist view of any particular methodology. [All our code](%{code_url}) is open source and we use JIRA and GitHub pull requests to track all of our work items. We also care a lot about quality and testing and are fortunate to have incredible support from [SauceLabs](%{saucelabs_url}), who help us run our suite of UI tests on various student devices (e.g., iPads) in their cloud device farm."
-  engineering_faq_question_3: "What is the engineer on-call rotation at Code.org?"
-  engineering_faq_answer_3: 'Our 30+ engineering team shares on-call responsibilities. Each engineer covers a 24-hour shift and uses our escalation paths and playbooks to respond to site outages or other live-site issues. We are proud of our site’s reliability - on average, each engineer is only woken up once per year for issues that are typically quick to resolve. Instead, the "Developer of the Day" usually spends a portion of their workday managing the production deployment and triaging less urgent issues.'
-  engineering_faq_question_4: "Are you a remote-friendly / WFH organization?"
-  engineering_faq_answer_4_a: "Yes! In 2019, shortly before the pandemic, Code.org became a remote-first organization. Today, we have engineers in every US time zone and accommodate working hours accordingly. Most of our meetings happen between the hours of 10am and 3pm PT."
-  engineering_faq_answer_4_b: "We also recognize the value of in-person time, and every quarter we get together in person, typically in Seattle. Two of these events (we call them Kick-off week and “Codechella”) bring everyone in the organization together in January and June - and the engineering and product teams meet separately in April and October."
-  engineering_faq_answer_4_c: "We strongly believe in spending time with our students and teachers, so many of these in-person events include trips into schools and classrooms to gather feedback or play-test our products"
-  engineering_faq_question_5: "What makes the engineering team at Code.org unique?"
-  engineering_faq_answer_5_a: "Beyond solving challenging technical problems, we have a few things that make our engineering org different from others you may have worked in:"
-  engineering_faq_answer_5_b_1: "We all share our passion for our mission."
-  engineering_faq_answer_5_b_2: "Each of us is here to support the mission to expand access to computer science for every student across the world. We all have our unique story and perspective about what drives us towards this mission."
-  engineering_faq_answer_5_c_1: "We care deeply about each other."
-  engineering_faq_answer_5_c_2: "When engineers are struggling with an issue, we step in and we help. One of our principles is that we are hard on problems, but kind to each other. We promote engineers regularly, but we don't prescribe over-engineered solutions just to support someone's promotion path. Instead, we invest in our engineers with a generous professional development budget and access to other learning opportunities."
-  engineering_faq_answer_5_d_1: "We work hard, but we set clear boundaries."
-  engineering_faq_answer_5_d_2: "While we support students across the world, we hold ourselves accountable for clear boundaries between work and home life. We enjoy no-meetings Wednesdays, 3 weeks of flexible paid time off, an additional org-wide 2-week office closure at the end of the year, and other generous benefits."
-
   careers_hero_title: "Careers"
   careers_hero_description: "Code.org is a nonprofit organization dedicated to expanding access to computer science in schools. We are especially focused on increasing participation among young women and underrepresented students."
   careers_hero_description_under: "Help us change the world, one student at a time!"
@@ -10632,6 +11122,13 @@
         title: "Get Support"
         desc: "Our customer support team is ready to answer your questions. Email us at [support@code.org](%{email_url}) or check out our support center, which offers useful guides and answers!"
         button: "Visit our support center"
+    teach:
+      heading: "Preparing to teach Coding with AI"
+      tile:
+        overline: "6-12 Teachers"
+        title: "Teaching Coding with AI"
+        desc: "This professional learning module prepares teachers to guide 6-12 students through Code.org's Coding with AI unit, where students leverage Large Language Models to write more powerful code while exploring ethical considerations and responsible AI use."
+        button: "Start professional learning"
 
   coding_with_ai_tile:
     title: "Coding with AI"
@@ -10639,6 +11136,78 @@
     duration: "Five 45 minute lessons"
     aria_label: "Explore the Coding with AI lessons"
     button_label: "Explore lessons"
+
+  computer_vision_page:
+    heading: "Computer vision"
+    top:
+      desc: "Explore how artificial intelligence interprets visual data through our computer vision units. Equip students with essential skills in image processing, object recognition, and ethical AI considerations, preparing them for future opportunities in technology."
+      button: "Explore curriculum"
+    why:
+      heading: "Why teach computer vision?"
+      desc: "Empower students to solve real-world challenges, foster innovation, and explore AI's ethical implications in visual data."
+      real_world:
+        title: "Real-world applications"
+        desc: "Empower students to solve real-world problems by understanding how AI interprets visual data, from healthcare diagnostics to autonomous vehicles."
+      innovative:
+        title: "Innovative thinking"
+        desc: "Foster innovative thinking by engaging students with cutting-edge technology, encouraging them to develop creative solutions, and explore new possibilities."
+      ethical:
+        title: "Ethical awareness"
+        desc: "Teach students to critically assess the ethical implications of AI, promoting responsible and thoughtful application of computer vision technologies."
+      button:
+        explore_curriculum: "Explore curriculum"
+        see_pl: "See professional learning"
+    resources:
+      heading: "Resources to support you every step of the way"
+      desc: "Get access to materials that will help you teach computer science with confidence — even without prior CS teaching experience — when you create a **free** Code.org account."
+      button: "Create a free account"
+    curricula:
+      heading: "Get started with computer vision"
+      computer_vision:
+        overline: "Grades 9-12"
+        title: "Computer Vision"
+        desc: "This comprehensive module introduces high school students to the principles of computer vision through hands-on projects and real-world applications. Students will learn essential skills in image processing, feature detection, and object recognition, fostering both technical proficiency and ethical awareness in AI."
+        duration: "3 Weeks"
+        button: "Explore module"
+        aria_label: "Explore the Computer Vision module"
+      csa:
+        overline: "Grades 9-12"
+        title: "AP® CSA Computer Vision"
+        desc: "This two-chapter post-AP® CSA module offers high school students hands-on experience with professional software development tools, including GitHub and GitHub Copilot, and imparts them with the real-world skills to develop a computer vision program."
+        duration: "2 Weeks"
+        button: "Explore module"
+        aria_label: "Explore the AP CSA Computer Vision module"
+    teach:
+      heading: "Preparing to teach about computer vision"
+      desc: "Boost your teaching skills with our self-paced professional learning for computer vision."
+      tile:
+        overline: "9-12 Teachers"
+        title: "Teaching Computer Vision"
+        desc: "This professional learning module equips educators to teach Code.org's Computer Vision unit, where students (grades 6-12) explore image and video analysis through engaging activities and discussions on ethics and real-world applications."
+        button: "Start professional learning"
+    learn_more:
+      heading: "Learn more about Artificial Intelligence"
+      dance:
+        overline: "Grades 3-12"
+        title: "Dance Party: AI Edition"
+        desc: "Learn about artificial intelligence (AI) concepts to create your own virtual dance party showcasing today's top artists."
+        button: "Explore Dance Party AI"
+      how_ai_works:
+        overline: "Grades 6-12"
+        title: "How AI Works"
+        desc: "This series of short videos and accompanying lessons will introduce you and your students to how artificial intelligence works and why it matters."
+        button: "View lessons"
+        aria_label: "View How AI Works lessons"
+      ai_101:
+        overline: "Professional Learning"
+        title: "AI 101 for Teachers"
+        desc: "Discover the groundbreaking world of AI and its transformative potential in education with our foundational online learning series for teachers."
+        button: "Watch videos"
+        aria_label: "Watch AI 101 for Teachers videos"
+      discover:
+        heading: "Discover our extensive AI resources"
+        desc: "We're rapidly expanding our AI offerings, including robust AI-focused curriculum, professional learning, educational videos, and more! Explore everything we have to offer and find what's right for you."
+        button: "Explore AI resources"
 
   ai_ta_page:
     heading: "AI Teaching Assistant"
@@ -10760,6 +11329,7 @@
   video_library_page_inspirational_video_title_14: "It's More Than A Game (1 min)"
   video_library_page_inspirational_video_title_15: "Create With Computer Science (1 min)"
   video_library_page_inspirational_video_title_16: "Young Women in Computer Science (2 min)"
+  video_library_page_inspirational_video_title_17: "Beyond Binary: Computer Science is for Everyone (3 min)"
   video_library_page_not_hacked_video_title_1: "How Not To Get Hacked: Introduction"
   video_library_page_not_hacked_video_title_2: "How Not To Get Hacked: Passwords"
   video_library_page_not_hacked_video_title_3: "How Not To Get Hacked: Authentication and Device Locks"
@@ -10805,7 +11375,7 @@
   about_page_section_more_description_1: "In 2013, Code.org was launched by twin brothers [Hadi](%{hadi_url}) and [Ali Partovi](%{partovi_url}) with a [video](%{video_url}) promoting computer science. This video became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded from a bootstrapped staff of volunteers to build a full organization supporting a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few."
   about_page_section_more_description_2: "To support our goal, we do work across the education spectrum: designing our own courses or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes."
   about_page_section_more_description_3: "Our work builds upon [decades of effort, by countless organizations and individuals](%{efforts_url}) who have helped establish, fund, and spread computer science education. We're thankful to benefit from the tireless help of the broader computer science education community, and [we thank all the partners and individuals who have supported our impact over the years](%{partners_url}))."
-  about_page_annual_report_2022: "[Code.org 2022 Annual Report](%{report_url_2022}) (Past reports: [2021](%{report_url_2021}), [2020](%{report_url_2020}), [2019](%{report_url_2019}), [2018](%{report_url_2018}), [2017](%{report_url_2017}), [2016](%{report_url_2016}), [2015](%{report_url_2015}), [2014](%{report_url_2014}))"
+  about_page_annual_report: "[Code.org Annual Report](%{report_url})"
   about_page_section_more_list_2: "[Our core values and messaging guidelines](%{core_url})"
   about_page_section_more_list_3: "[Our curriculum and pedagogy philosophy](%{curriculum_url})"
   about_page_section_more_list_4: "[TEDx talk by our founder Hadi Partovi about why computer science is for all (VIDEO)](%{tedx_url})"
@@ -10827,9 +11397,11 @@
   about_page_section_specific_description_7: "[Sign up to receive status updates](%{sign_up_url}) about progress in the K-12 computer science movement and about the work of Code.org. Or follow Code.org on social media:"
   about_page_section_specific_description_8: "Over 40% of our website traffic comes from outside of the United States and that number continues to climb. In order to expand global access to computer science, our team works closely with [more than 100 international partners](%{partners_url}), helping them to promote the Hour of Code, advocate for policy change, and train teachers. We are making computer science part of the international education discourse by partnering with ministries of education from around the world and working with international organizations like the Organization for Economic Co-operation and Development and the United Nations Educational, Scientific and Cultural Organization."
   about_page_section_donors_description_1: "Code.org® is a registered public 501c3 nonprofit, with support from the general public. We are grateful for the generous support we've received from [individuals and organizations](%{individuals_url}) who support our vision."
-  about_page_section_donors_description_2: "Codes accomplishments (above) demonstrate our ability to leverage those dollars into strong outcomes. But given our nonprofit ambition that every child in every school should have access to computer science — to become literate citizens in today's digital world and to test their interests in exploring CS further as a career — we have a long way to go to meet a fundraising goal that will support that vision."
+  about_page_section_donors_description_2: "Code.org's accomplishments (above) demonstrate our ability to leverage those dollars into strong outcomes. But given our nonprofit ambition that every child in every school should have access to computer science — to become literate citizens in today's digital world and to test their interests in exploring CS further as a career — we have a long way to go to meet a fundraising goal that will support that vision."
   about_page_donors_link_1: "Make a donations"
   about_page_donors_link_2: "[see our list of donors](%{donors_url})"
+
+  districts_skinny_banner_title: "Over 100+ Districts have joined our District Program! [See district partners](%{district_partners_url})"
 
   teach_ai_title: "Real-world Examples. Practical Resources."
   teach_ai_description: "The AI Guidance for Schools Toolkit is a resource for policymakers, school leaders, and staff to develop initial guidance on AI in their schools."
@@ -10911,6 +11483,55 @@
   hoc_beyond_carousel_description: "Want to keep learning after Hour of Code? Check out these activities for learners of all ages and skill levels."
   hoc_beyond_submit_activity_form: "Submit your own activity [here](%{form_url})."
   hoc_beyond_end_section_label: "The Hour of Code is organized by [Code.org](%{home_page})"
+
+  pl_curriculum_launch_skinny_banner_2024:
+    title: Introducing new professional learning!
+    description: Explore new self-paced online modules that will empower you to teach the newest additions to our curriculum.
+    call_to_action: "Start here!"
+    call_to_action_aria_label: "Start self-paced professional learning"
+
+  teach_ai_banner_july_2024:
+    headline: "Guidance on the Future of CS Education in an Age of AI"
+    subtitle: "New"
+    description: "Why is it still important for students to learn to program? How are teachers in CS classrooms already incorporating AI? Explore the guidance and engage in the future of CS education in an age of AI."
+    button_text: "Explore the guidance"
+
+  teach_labs_section:
+    header: "Build your way with labs"
+    description: "Discover programming environments tailored to meet students at their level, empowering them to express their creativity and build more freely as they grow their programming skills."
+    label_what_you_can_make: "What you can make:"
+    label_experience: "Experience:"
+    spritelab:
+      overline: "Ages 5-12"
+      title: "Sprite Lab"
+      what_you_can_make: "Simple animations and games with characters"
+      experience: "Beginner"
+      call_to_action_learn_more: "Learn more"
+      aria_label_learn_more: "Learn more about Sprite Lab"
+      call_to_action_try: "Try Sprite Lab"
+    gamelab:
+      overline: "Ages 13+"
+      title: "Game Lab"
+      what_you_can_make: "Simple animations and games with characters"
+      experience: "Beginner"
+      call_to_action_learn_more: "Learn more"
+      aria_label_learn_more: "Learn more about Game Lab"
+      call_to_action_try: "Try Game Lab"
+    applab:
+      overline: "Ages 13+"
+      title: "App Lab"
+      what_you_can_make: "Simple Javascript apps with blocks or code"
+      experience: "Beginner"
+      call_to_action_learn_more: "Learn more"
+      aria_label_learn_more: "Learn more about App Lab"
+      call_to_action_try: "Try App Lab"
+
+  resources_tabs:
+    progress:
+      tab_label: "Progress"
+      heading: "Track your students' progress"
+      desc: "Our powerful progress view helps you monitor student work by providing insights into completion status, time spent, and more. Easily track each student's learning journey, quickly assess participation, and give personalized feedback."
+      call_to_action: "Create a Code.org account"
 
   language_code:
     ar: "Arabic"

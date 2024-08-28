@@ -567,6 +567,7 @@ class BlocklyTest < ActiveSupport::TestCase
   test 'localizes authored hints with embedded behavior block' do
     DCDO.stubs(:get).with(Blockly::BLOCKLY_I18N_IN_TEXT_DCDO_KEY, false).returns(true)
     DCDO.stubs(:get).with(I18nStringUrlTracker::I18N_STRING_TRACKING_DCDO_KEY, false).returns(false)
+    DCDO.stubs(:get).with(TextToSpeech::UPDATED_TTS_PATH_DCDO_KEY, false).returns(true)
     test_locale = :'es-MX'
     level_name = 'test_localize_authored_hints_with_embedded_behavior_block'
     hint = <<~HINT
@@ -1236,6 +1237,52 @@ class BlocklyTest < ActiveSupport::TestCase
     # Expected output
     parsed_xml = Nokogiri::XML(localized_block_xml, &:noblanks)
     assert_equal parsed_xml.at_xpath('//block[@type="studio_ask"]/*[@name="VAR"]').content, localized_variable_str
+  end
+
+  test 'localizes long_instructions when present' do
+    test_locale = 'te-ST'
+    level_name = 'test localize long_instructions'
+    level = create(
+      :level,
+      :blockly,
+      name: level_name,
+      long_instructions: 'original long instructions'
+    )
+
+    custom_i18n = {
+      'data' => {
+        'long_instructions' => {
+          level_name => 'translated long instructions'
+        }
+      }
+    }
+    I18n.locale = test_locale
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    assert_equal 'translated long instructions', level.localized_long_instructions
+  end
+
+  test 'localizes long_instructions and removes escaped backticks when present' do
+    test_locale = 'te-ST'
+    level_name = 'test localize long_instructions'
+    level = create(
+      :level,
+      :blockly,
+      name: level_name,
+      long_instructions: 'original long instructions with [`block`](#bloc)'
+    )
+
+    custom_i18n = {
+      'data' => {
+        'long_instructions' => {
+          level_name => 'translated long instructions with [\`block\`](#bloc)'
+        }
+      }
+    }
+    I18n.locale = test_locale
+    I18n.backend.store_translations test_locale, custom_i18n
+
+    assert_equal 'translated long instructions with [`block`](#bloc)', level.localized_long_instructions
   end
 
   test 'localizes start_libraries when i18n_library is present' do

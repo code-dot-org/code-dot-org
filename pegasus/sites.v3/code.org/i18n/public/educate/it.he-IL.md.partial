@@ -17,9 +17,11 @@ theme: responsive
 
 ## Minimum Supported Browsers and Platforms
 
+החל מיולי 2024, נעדכן את הגרסאות המינימליות הנדרשות לדפדפנים ומערכות הפעלה. בעוד שהגרסאות הישנות עדיין עשויות לפעול, לא נוכל לתמוך בבקשות לתיקוני באגים בגירסאות הישנות יותר.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Browser
@@ -40,11 +42,33 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          Platform
+          דפדפן יולי '24
+        </th>
+        <tr>
+          <td>כרום 103.x</td>
+        </tr>
+        <tr>
+          <td>ספארי 14.x</td>
+        </tr>
+        <tr>
+          <td>ספארי נייד 14.x</td>
+        </tr>
+        <tr>
+          <td>קצה 119.x</td>
+        </tr>
+        <tr>
+          <td>פיירפוקס 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          פלטפורמה
         </th>
         <tr>
           <td>macOS 10.13</td>
@@ -62,13 +86,35 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          פלטפורמה יולי '24
+        </th>
+        <tr>
+          <td>מקאוס 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>חלונות 8</td>
+        </tr>
+        <tr>
+          <td>אנדרואיד 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Sites to Unblock
 
-For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure the following sites are allowed and aren't blocked.
+לקבלת החוויה הטובה ביותר עם כל התוכן של Code.org, אנו ממליצים להתייעץ עם מחלקת ה- IT של בית הספר או המחוז שלך כדי לוודא שהאתרים הבאים מותרים ואינם חסומים.
 
 | Priority                                                                                       | URL                                                                                                        |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -80,28 +126,27 @@ For the very best experience with all Code.org content, we recommend consulting 
 | **כדי להשתמש בסימולטור אינטרנט**                                                               | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **כדי להשתמש במעבדת אינטרנט**                                                                  | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **כדי להשתמש בלחצן השיתוף של Google Classroom**                                                | `https://apis.google.com`                                                                                  |
-| **כדי להשתמש במערכות נתונים של App Lab**                                                       | `https://*.firebaseio.com`<br />`ווס: //*.firebaseio.com`                                            |
 
 ## Mobile and Tablet Support Details
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Most tablets are not supported, with the following exceptions:
+כל הקורסים של CS Discoveries, CS Principles, CS A ו- Intro to App Lab אינם תואמים לטאבלטים או מכשירים ניידים - נדרשים מקלדת ועכבר מלאים (או משטח מגע). רוב הטאבלטים אינם נתמכים, למעט החריגים הבאים:
 
 - Microsoft Surface Pro with an external keyboard
 - iPad running iPadOS 13.4 or later with an external keyboard and an external mouse or touchpad
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+כל שאר התכנים, כגון קורסי K-5 (יסודות מדעי המחשב) ופעילויות שעת הקוד תואמים באייפדים וטאבלטים מודרניים אחרים ובמחשבים ניידים או שולחניים.
 
 ### Mobile Phones
 
-Our Hour of Code activities and CS Fundamentals courses can be completed on mobile phones. While these activities are usable, they are not optimized for a mobile phone experience and have some known limitations (e.g. touch targets may be small, accessory elements may display offscreen, and text may be difficult to input using the on-screen keyboard). The CS Discoveries, CS Principles, and Intro to App Lab courses are not usable on mobile phones.
+ניתן להשלים את פעילויות שעת הקוד וקורסי יסודות CS בטלפונים ניידים. למרות שפעילויות אלה ניתנות לשימוש, הן אינן מותאמות לחוויית טלפון סלולרי ויש להן כמה מגבלות ידועות (למשל יעדי מגע עשויים להיות קטנים, רכיבי אביזרים עשויים להופיע מחוץ למסך וייתכן שיהיה קשה להקליט טקסט באמצעות המקלדת שעל המסך). קורסי גילויי CS, עקרונות CS ומבוא למעבדת אפליקציות אינם ניתנים לשימוש בטלפונים ניידים.
 
 ## Videos
 
-We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our [online learning platform](https://studio.code.org). For schools with YouTube blocked, we attempt to display a Code.org hosted video player instead.
+אנו משתמשים ב- [YouTube](https://www.youtube.com) כדי להטמיע סרטונים ב- Code.org ופלטפורמת הלמידה המקוונת [שלנו](https://studio.code.org). עבור בתי ספר עם YouTube חסום, אנו מנסים להציג במקום זאת נגן וידאו המתארח ב- Code.org.
 
 ### Can you play this video?
 
-Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
+לפני שתתחיל בקורסים המקוונים של Code.org, בדוק את ההפעלה של הסרטון למטה כדי לוודא שאתה מוכן להתחיל.
 
 
 <!--
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+זהו השחקן המשמש לאורך כל תכנית הלימודים. הוא ינסה להציג את הסרטון דרך YouTube, ואם YouTube חסום, הצג את הסרטון המתארח ב- Code.org באמצעות נגן ה- "fallback" שלנו במקום זאת.
 
 ### Video not playing?
 
-If video does not work, you can email us at support@code.org.
+אם הסרטון לא עובד, תוכל לשלוח לנו דוא"ל לכתובת support@code.org.
 
-However, you can still use our tutorials without video.
+עם זאת, אתה עדיין יכול להשתמש במדריכים שלנו ללא וידאו.
 
 1. We've made all our videos [available for download together](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). If your school has low bandwidth, we recommend that you download videos and show them to students on a shared screen.
 2. Integrated into our tutorials, we've added a green download link icon <img src="/images/green-download.png" width=25 height=25 /> for each video, allowing students to download individual tutorial videos.
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## Special settings for Google Apps/G-Suite users
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+אם אתה מנהל G-suite, הקפד לבדוק מהן הגדרות ההגבלה שלך עבור YouTube. אם ציינת את ההגדרה "גישה מוגבלת קפדנית ל- YouTube" או אם אתה רואה הודעות המציינות 'סרטון זה הוגבל', תוכל להוסיף את הערוץ שלנו לרשימת הערוצים המאושרת. עיין במדריך [זה](https://support.google.com/a/answer/6245597) מ- Google כדי ללמוד כיצד להוסיף את הערוץ שלנו לרשימה המאושרת. אתה יכול גם לראות [מדריך זה](https://support.google.com/a/answer/6212415?hl=en) כדי ללמוד עוד על הגדרות שונות ומה הכי מתאים לכיתה שלך.
 
 ## Still having trouble?
 
-We'll help you out - just email us at support@code.org!
+אנו נעזור לך - פשוט שלח לנו דוא"ל לכתובת support@code.org!

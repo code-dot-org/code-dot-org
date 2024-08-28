@@ -1,9 +1,7 @@
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import UnitRollup from '@cdo/apps/templates/courseRollupPages/UnitRollup';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 import {courseData} from './rollupTestData';
 
@@ -20,13 +18,13 @@ describe('UnitRollup', () => {
     const wrapper = mount(<UnitRollup {...defaultProps} />);
 
     const navLink = wrapper.find('a').at(0);
-    expect(navLink.props().href).to.contain('/s/unit-1');
-    expect(navLink.contains('< Unit 1 - Unit One')).to.be.true;
+    expect(navLink.props().href).toContain('/s/unit-1');
+    expect(navLink.contains('< Unit 1 - Unit One')).toBe(true);
   });
 
   it('renders correct number of units', () => {
     const wrapper = mount(<UnitRollup {...defaultProps} />);
 
-    expect(wrapper.find('RollupUnitEntry').length).to.equal(1);
+    expect(wrapper.find('RollupUnitEntry').length).toBe(1);
   });
 });

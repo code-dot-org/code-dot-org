@@ -6,7 +6,11 @@ Feature: Music Lab block can be dragged
 
 Scenario Outline: Dragging play sound block
   Given I am on "<url>"
-  Then I wait until I am on "<url>"
+
+  # Ensure that the pack dialog doesn't show by using a library with no restricted packs.
+  Then I append "?library=intro2024" to the URL
+
+  # Rotate to landscape.
   And I rotate to landscape
 
   # Wait until we see the first category.
@@ -36,6 +40,9 @@ Scenario Outline: Dragging play sound block
   # Click on the second sound inside the sounds panel.
   And I click selector "#sounds-panel .sounds-panel-sound-row:nth-of-type(2)"
 
+  # Dismiss the sounds panel.
+  And I press keys ":escape"
+
   # The sounds panel should be dismissed.
   And I wait until element "#sounds-panel" is not visible
 
@@ -45,4 +52,4 @@ Scenario Outline: Dragging play sound block
 Examples:
   | url                                                       | test_name               |
   | http://studio.code.org/s/allthethings/lessons/46/levels/4 | music lab script level  |
-  | http://studio.code.org/projectbeats                       | music lab incubator     |
+  | http://studio.code.org/projects/music/new                 | music lab project       |

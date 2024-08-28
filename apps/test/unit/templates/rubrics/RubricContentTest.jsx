@@ -1,4 +1,4 @@
-import {mount, shallow} from 'enzyme';
+import {mount, shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
 
@@ -11,8 +11,6 @@ import {
 } from '@cdo/apps/redux';
 import RubricContent from '@cdo/apps/templates/rubrics/RubricContent';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 describe('RubricContent', () => {
   let store;
@@ -81,14 +79,14 @@ describe('RubricContent', () => {
         <RubricContent {...defaultProps} aiEvaluations={aiEvaluations} />
       </Provider>
     );
-    expect(wrapper.find('LearningGoals').length).to.equal(1);
-    expect(wrapper.find('LearningGoals').prop('studentLevelInfo')).to.equal(
+    expect(wrapper.find('LearningGoals').length).toBe(1);
+    expect(wrapper.find('LearningGoals').prop('studentLevelInfo')).toBe(
       studentLevelInfo
     );
-    expect(wrapper.find('LearningGoals').prop('learningGoals')).to.equal(
+    expect(wrapper.find('LearningGoals').prop('learningGoals')).toBe(
       defaultRubric.learningGoals
     );
-    expect(wrapper.find('LearningGoals').prop('aiEvaluations')).to.equal(
+    expect(wrapper.find('LearningGoals').prop('aiEvaluations')).toBe(
       aiEvaluations
     );
   });
@@ -99,8 +97,8 @@ describe('RubricContent', () => {
         <RubricContent {...defaultProps} />
       </Provider>
     );
-    expect(wrapper.find('SectionSelector').length).to.equal(1);
-    expect(wrapper.find('StudentSelector').length).to.equal(1);
+    expect(wrapper.find('SectionSelector').length).toBe(1);
+    expect(wrapper.find('StudentSelector').length).toBe(1);
   });
 
   it('shows learning goals with correct props when viewing student work on non assessment level', () => {
@@ -113,11 +111,11 @@ describe('RubricContent', () => {
       />
     );
     const renderedLearningGoals = wrapper.find('LearningGoals');
-    expect(renderedLearningGoals).to.have.lengthOf(1);
-    expect(renderedLearningGoals.props().learningGoals).to.equal(
+    expect(renderedLearningGoals).toHaveLength(1);
+    expect(renderedLearningGoals.props().learningGoals).toBe(
       defaultRubric.learningGoals
     );
-    expect(renderedLearningGoals.props().canProvideFeedback).to.equal(false);
+    expect(renderedLearningGoals.props().canProvideFeedback).toBe(false);
   });
 
   it('shows learning goals with correct props when not viewing student work', () => {
@@ -129,16 +127,16 @@ describe('RubricContent', () => {
       />
     );
     const renderedLearningGoals = wrapper.find('LearningGoals');
-    expect(renderedLearningGoals).to.have.lengthOf(1);
-    expect(renderedLearningGoals.props().learningGoals).to.equal(
+    expect(renderedLearningGoals).toHaveLength(1);
+    expect(renderedLearningGoals.props().learningGoals).toBe(
       defaultRubric.learningGoals
     );
-    expect(renderedLearningGoals.props().canProvideFeedback).to.equal(false);
+    expect(renderedLearningGoals.props().canProvideFeedback).toBe(false);
   });
 
   it('shows level title when teacher is viewing student work', () => {
     const wrapper = shallow(<RubricContent {...defaultProps} />);
-    expect(wrapper.find('Heading3').at(0).props().children).to.equal(
+    expect(wrapper.find('Heading3').at(0).props().children).toBe(
       'Lesson 3: Data Structures'
     );
   });
@@ -147,7 +145,7 @@ describe('RubricContent', () => {
     const wrapper = shallow(
       <RubricContent {...defaultProps} studentLevelInfo={null} />
     );
-    expect(wrapper.find('Heading3').at(0).props().children).to.equal(
+    expect(wrapper.find('Heading3').at(0).props().children).toBe(
       'Lesson 3: Data Structures'
     );
   });
@@ -159,9 +157,9 @@ describe('RubricContent', () => {
         <RubricContent {...defaultProps} />
       </Provider>
     );
-    expect(wrapper.text()).to.include('time spent 5m 5s');
-    expect(wrapper.text()).to.include('6 attempts');
-    expect(wrapper.text()).to.include('last updated');
+    expect(wrapper.text()).toContain('time spent 5m 5s');
+    expect(wrapper.text()).toContain('6 attempts');
+    expect(wrapper.text()).toContain('last updated');
   });
 
   it('handles missing student data', () => {
@@ -176,9 +174,9 @@ describe('RubricContent', () => {
         />
       </Provider>
     );
-    expect(wrapper.text()).to.not.include('time spent');
-    expect(wrapper.text()).to.include('0 attempts');
-    expect(wrapper.text()).to.not.include('last updated');
+    expect(wrapper.text()).not.toContain('time spent');
+    expect(wrapper.text()).toContain('0 attempts');
+    expect(wrapper.text()).not.toContain('last updated');
   });
 
   it('doesnt show student level data if not on level for evaluation', () => {
@@ -196,8 +194,8 @@ describe('RubricContent', () => {
         />
       </Provider>
     );
-    expect(wrapper.text()).to.not.include('6 attempts');
-    expect(wrapper.text()).to.include('Feedback will be available on Level 7');
+    expect(wrapper.text()).not.toContain('6 attempts');
+    expect(wrapper.text()).toContain('Feedback will be available on Level 7');
   });
 
   it('does not pass down AI analysis to components when teacher has disabled AI', () => {
@@ -207,7 +205,7 @@ describe('RubricContent', () => {
       </Provider>
     );
 
-    expect(wrapper.find('LearningGoals').prop('aiEvaluations')).to.not.equal(
+    expect(wrapper.find('LearningGoals').prop('aiEvaluations')).not.toBe(
       aiEvaluations
     );
   });
@@ -216,8 +214,8 @@ describe('RubricContent', () => {
     const wrapper = shallow(
       <RubricContent {...defaultProps} onLevelForEvaluation={false} />
     );
-    expect(wrapper.find('InfoAlert').length).to.equal(1);
-    expect(wrapper.find('InfoAlert').props().text).to.equal(
+    expect(wrapper.find('InfoAlert').length).toBe(1);
+    expect(wrapper.find('InfoAlert').props().text).toBe(
       'Rubrics can only be evaluated on project levels.'
     );
   });
@@ -226,8 +224,8 @@ describe('RubricContent', () => {
     const wrapper = shallow(
       <RubricContent {...defaultProps} studentLevelInfo={null} />
     );
-    expect(wrapper.find('InfoAlert').length).to.equal(1);
-    expect(wrapper.find('InfoAlert').props().text).to.equal(
+    expect(wrapper.find('InfoAlert').length).toBe(1);
+    expect(wrapper.find('InfoAlert').props().text).toBe(
       'Select a student from the dropdown menu to view and evaluate their work.'
     );
   });

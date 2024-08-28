@@ -17,27 +17,26 @@ class DatablockStorageKvp < ApplicationRecord
 
   self.primary_keys = :project_id, :key
 
+  validate :max_kvp_count, on: :create
+  validate :max_value_length, on: [:create, :update]
+
   StudentFacingError = DatablockStorageTable::StudentFacingError
 
-  # TODO: #56999, implement enforcement of MAX_VALUE_LENGTH, we already have
-  # a test for it, but we're skipping it until this is implemented.
   MAX_VALUE_LENGTH = 4096
 
-  # TODO: #57000, implement encforement of MAX_NUM_KVPS. We didn't find enfocrement
-  # of this in Firebase in our initial exploration, so we may need to partly pick
-  # a value here and start enforcing it, previous exploration:
-  # https://github.com/code-dot-org/code-dot-org/issues/55554#issuecomment-1876143286
-  MAX_NUM_KVPS = 20000 # does firebase already have a  limit? this matches max num table rows
+  MAX_NUM_KVPS = 20000
 
   def self.get_kvps(project_id)
     where(project_id: project_id).
       select(:key, :value).
-      to_h {|kvp| [kvp.key, JSON.parse(kvp.value)]}
+      to_h {|kvp| [kvp.key, kvp.value]}
   end
 
   def self.set_kvps(project_id, key_value_hashmap, upsert: true)
     kvps = key_value_hashmap.map do |key, value|
-      {project_id: project_id, key: key, value: value.to_json}
+      kvp_attr = {project_id: project_id, key: key, value: value}
+      DatablockStorageKvp.new(kvp_attr).valid?
+      kvp_attr
     end
 
     if upsert
@@ -46,6 +45,8 @@ class DatablockStorageKvp < ApplicationRecord
     else
       DatablockStorageKvp.insert_all(kvps)
     end
+  rescue ActiveRecord::ValueTooLong
+    raise StudentFacingError.new(:KEY_INVALID), "The key is too large, it must be shorter than #{columns_hash['key'].limit} bytes ('characters')"
   end
 
   def self.set_kvp(project_id, key, value)
@@ -54,6 +55,19 @@ class DatablockStorageKvp < ApplicationRecord
       DatablockStorageKvp.where(project_id: project_id, key: key).delete_all
     else
       DatablockStorageKvp.set_kvps(project_id, {key => value}, upsert: true)
+    end
+  end
+
+  private def max_kvp_count
+    current_count = DatablockStorageKvp.where(project_id: project_id).count
+    if current_count >= MAX_NUM_KVPS
+      raise StudentFacingError.new(:MAX_KVPS_EXCEEDED), "Cannot have more than #{MAX_NUM_KVPS} key-value pairs per project"
+    end
+  end
+
+  private def max_value_length
+    if value.to_json.bytesize > MAX_VALUE_LENGTH
+      raise StudentFacingError.new(:MAX_VALUE_LENGTH_EXCEEDED), "The value is too large, it must be shorter than #{MAX_VALUE_LENGTH} bytes ('characters')"
     end
   end
 end

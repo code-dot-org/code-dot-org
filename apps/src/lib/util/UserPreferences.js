@@ -1,5 +1,5 @@
-import $ from 'jquery';
 import {Record} from 'immutable';
+import $ from 'jquery';
 
 export default class UserPreferences extends Record({userId: 'me'}) {
   /**
@@ -56,6 +56,16 @@ export default class UserPreferences extends Record({userId: 'me'}) {
   setShowProgressTableV2(showProgressTableV2) {
     return $.post(`/api/v1/users/show_progress_table_v2`, {
       show_progress_table_v2: showProgressTableV2,
+    });
+  }
+
+  /**
+   * Save the preference to opt-out of AI Rubrics (AI TA).
+   * @param {boolean} aiRubricsDisabled: True if disabling AI rubric features, false otherwise.
+   */
+  setAiRubricsDisabled(aiRubricsDisabled) {
+    return $.post(`/api/v1/users/ai_rubrics_disabled`, {
+      ai_rubrics_disabled: aiRubricsDisabled,
     });
   }
 

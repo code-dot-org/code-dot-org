@@ -6,7 +6,7 @@
   "level_num": "custom",
   "user_id": 0,
   "properties": {
-    "long_instructions": "## Reflection\r\n\r\nIdentify what you would want to know in order to help support students and/or yourself in the situation you read in the previous level.\r\n\r\nIt's okay if you're not sure! You're taking this course to build your own AI literacy skills so you're better able to support students on their journey.",
+    "long_instructions": "# Reflection\r\n\r\n#### Identify what you would want to know in order to help support students and/or yourself in the situation you read in the previous level.\r\n\r\n#### It's okay if you're not sure! You're taking this course to build your own AI literacy skills so you're better able to support students on their journey.",
     "skip_dialog": true,
     "skip_sound": true,
     "parent_level_id": 19619,
@@ -20,7 +20,7 @@
     "allow_multiple_attempts": "true"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-10T14:35:53.730+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-ai-101-mod1-impact_06_2024\\\"\"],\"cloned_from\":\"self-paced-pl-ai-101-mod1-impact_06_2024\"},{\"changed_at\":\"2024-04-10 14:36:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-17 13:36:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-04-10T14:35:53.730+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-ai-101-mod1-impact_06_2024\\\"\"],\"cloned_from\":\"self-paced-pl-ai-101-mod1-impact_06_2024\"},{\"changed_at\":\"2024-04-10 14:36:25 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-17 13:36:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-05-08 14:32:35 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

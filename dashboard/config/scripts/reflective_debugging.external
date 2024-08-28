@@ -1,0 +1,20 @@
+name 'reflective debugging'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+#Reflective Debugging?
+
+#### While students are working, you will notice the same issues appearing again and again. Some students can quickly move through these issues, while others are left behind. Even with active debugging practices in place, these experiences can be disheartening for any teacher. However, they can inspire a productive reflective debugging session at some point during the class.
+
+<img src="https://images.code.org/4e37cf72816a90a1abccaf66d623b4ad-image-1704408444176.23.19 PM.png" alt="Image of a cartoon octopus holding a microphone and wearing a hat" style="border-radius:40px; float: right; padding-right: 120px; height: 275px; clear: both; margin: 0 20px 20px 0;">
+
+
+## What is Reflective Debugging?
+##### Active debugging is how individual students can find and fix bugs. On the other hand, reflective debugging is when students participate in debugging as an entire class. ‘Bug Talks’ and keeping a ‘bug tracker’ are two ways to implement reflective debugging in your classroom.
+
+
+## Let's try it out!
+
+<div style="clear:both"/>
+MARKDOWN

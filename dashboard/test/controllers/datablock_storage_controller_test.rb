@@ -64,6 +64,24 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     set_and_get_key_value('👁️👄👁️', 'value is: 🎉')
   end
 
+  test "set_key_value can't create more than MAX_NUM_KVPS kvps" do
+    # Lower the max table count to 3 so its easy to test
+    original_max_num_kvps = DatablockStorageKvp::MAX_NUM_KVPS
+    DatablockStorageKvp.const_set(:MAX_NUM_KVPS, 3)
+
+    # Create 3 kvps so we're right at the limit...
+    set_and_get_key_value('key1', 'val1')
+    set_and_get_key_value('key2', 'val2')
+    set_and_get_key_value('key3', 'val3')
+
+    post _url(:set_key_value), params: {key: 'key4', value: 'val4'.to_json}
+
+    assert_response :bad_request
+    assert_equal 'MAX_KVPS_EXCEEDED', JSON.parse(@response.body)['type']
+  ensure
+    DatablockStorageKvp.const_set(:MAX_NUM_KVPS, original_max_num_kvps)
+  end
+
   test "set_key_value should enforce MAX_VALUE_LENGTH" do
     too_many_bees = 'b' * (DatablockStorageKvp::MAX_VALUE_LENGTH + 1) # 1 more 'b' char than max
     post _url(:set_key_value), params: {
@@ -72,8 +90,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     }
     assert_response :bad_request
 
-    skip "FIXME: controller bug, test will fail, because enforcing DatablockStorageTable::MAX_VALUE_LENGTH_EXCEEDED is not yet implemented, see #57002"
-    # Is MAX_VALUE_LENGTH_EXCEEDED the right error? check the JS
     assert_equal 'MAX_VALUE_LENGTH_EXCEEDED', JSON.parse(@response.body)['type']
   end
 
@@ -136,7 +152,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
 
     post _url(:create_record), params: {table_name: 'table4', record_json: {'name' => 'bob'}.to_json}
-    skip "FIXME: controller bug, test will fail, because enforcing DatablockStorageTable::MAX_TABLE_COUNT is not yet implemented so we get :success when :bad_request is desired, see #57003"
     assert_response :bad_request
     assert_equal 'MAX_TABLES_EXCEEDED', JSON.parse(@response.body)['type']
   ensure
@@ -155,9 +170,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
 
     post _url(:create_record), params: {table_name: 'mytable', record_json: {'name' => 'bob'}.to_json}
 
-    skip "FIXME: controller bug, test will fail, because enforcing DatablockStorageTable::MAX_TABLE_ROW_COUNT is not yet implemented so we get :success when :bad_request is desired, see #57002"
     assert_response :bad_request
-    # Is MAX_ROWS_EXCEEDED the right error? check the JS
     assert_equal 'MAX_ROWS_EXCEEDED', JSON.parse(@response.body)['type']
   ensure
     DatablockStorageTable.const_set(:MAX_TABLE_ROW_COUNT, original_max_table_row_count)
@@ -172,8 +185,6 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     post _url(:create_record), params: {table_name: 'mytable', record_json: {'name' => too_many_bees}.to_json}
     assert_response :bad_request
 
-    skip "FIXME: controller bug, test will fail, because enforcing DatablockStorageRecord::MAX_RECORD_LENGTH is not yet implemented at the DatablockStorage level, see #57001"
-    # Is MAX_RECORD_LENGTH_EXCEEDED the right error? check the JS
     assert_equal 'MAX_RECORD_LENGTH_EXCEEDED', JSON.parse(@response.body)['type']
   end
 
@@ -201,6 +212,19 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     get _url(:get_table_names)
     assert_response :success
     assert_equal ['👁️👄👁️'], JSON.parse(@response.body)
+  end
+
+  test "create_table enforces max table_name length" do
+    max_table_name_length = 700
+    not_too_many_bees = 'b' * (max_table_name_length - 1) # 1 less 'b' chars than max
+    post _url(:create_table), params: {table_name: not_too_many_bees}
+    assert_response :success
+
+    too_many_bees = 'b' * (max_table_name_length + 1) # 1 more 'b' char than max
+    post _url(:create_table), params: {table_name: too_many_bees}
+    assert_response :bad_request
+
+    assert_equal 'TABLE_NAME_INVALID', JSON.parse(@response.body)['type']
   end
 
   test "get_key_values" do
@@ -295,6 +319,20 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
 
     get _url(:read_records), params: {table_name: 'mytable'}
     assert_equal [{"first_name" => 'bob', "age" => 8, "id" => 1}], JSON.parse(@response.body)
+  end
+
+  test "rename_column creates a new column if the old column doesn't exist" do
+    create_bob_record
+
+    put _url(:rename_column), params: {
+      table_name: 'mytable',
+      old_column_name: 'nonexistent',
+      new_column_name: 'newcol'
+    }
+    assert_response :success
+
+    get _url(:get_columns_for_table), params: {table_name: 'mytable'}
+    assert_equal ['id', 'name', 'age', 'newcol'], JSON.parse(@response.body)
   end
 
   test "get_column" do
@@ -461,6 +499,15 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     assert_equal ({"click_count" => 5}), JSON.parse(@response.body)
   end
 
+  test "populate_key_values_with_string_value" do
+    put _url(:populate_key_values), params: {key_values_json: '{"click_count": "backends"}'}
+    assert_response :success
+
+    get _url(:get_key_values)
+    assert_response :success
+    assert_equal ({"click_count" => "backends"}), JSON.parse(@response.body)
+  end
+
   test "populate_key_values does not overwrite existing data" do
     post _url(:set_key_value), params: {key: 'click_count', value: 1.to_json}
     assert_response :success
@@ -621,14 +668,14 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "import_csv" do
-    CSV_DATA = <<~CSV
+    csv_data = <<~CSV
       id,name,age,male
       4,alice,7,false
       5,bob,8,true
       6,charlie,9,true
     CSV
 
-    EXPECTED_RECORDS = [
+    expected_records = [
       {"id" => 1, "name" => "alice", "age" => 7, "male" => false},
       {"id" => 2, "name" => "bob", "age" => 8, "male" => true},
       {"id" => 3, "name" => "charlie", "age" => 9, "male" => true},
@@ -636,11 +683,11 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
 
     post _url(:import_csv), params: {
       table_name: 'mytable',
-      table_data_csv: CSV_DATA,
+      table_data_csv: csv_data,
     }
     assert_response :success
 
-    assert_equal EXPECTED_RECORDS, read_records
+    assert_equal expected_records, read_records
   end
 
   test "import_csv overwrites existing data" do
@@ -650,14 +697,14 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     }
     assert_response :success
 
-    CSV_DATA = <<~CSV
+    csv_data = <<~CSV
       id,name
       1,alice
       2,bob
       3,charlie
     CSV
 
-    EXPECTED_RECORDS = [
+    expected_records = [
       {"id" => 1, "name" => "alice"},
       {"id" => 2, "name" => "bob"},
       {"id" => 3, "name" => "charlie"},
@@ -665,16 +712,16 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
 
     post _url(:import_csv), params: {
       table_name: 'mytable',
-      table_data_csv: CSV_DATA,
+      table_data_csv: csv_data,
     }
     assert_response :success
 
     # Tim, age 2 record should be gone:
-    assert_equal EXPECTED_RECORDS, read_records
+    assert_equal expected_records, read_records
   end
 
   test "export csv" do
-    CSV_DATA = <<~CSV
+    csv_data = <<~CSV
       id,name,age,male
       1,alice,7,false
       2,bob,8,true
@@ -683,7 +730,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
 
     post _url(:import_csv), params: {
       table_name: 'mytable',
-      table_data_csv: CSV_DATA,
+      table_data_csv: csv_data,
     }
     assert_response :success
 
@@ -692,7 +739,7 @@ class DatablockStorageControllerTest < ActionDispatch::IntegrationTest
     }
     assert_response :success
 
-    assert_equal CSV_DATA, @response.body
+    assert_equal csv_data, @response.body
   end
 
   test "project_has_data" do

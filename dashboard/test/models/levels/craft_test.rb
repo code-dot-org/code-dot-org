@@ -2,16 +2,10 @@ require 'test_helper'
 
 class CraftTest < ActiveSupport::TestCase
   def setup
-    @gamelab_jr = Craft.new
+    @craft = Craft.new
   end
 
-  test 'uses_google_blockly? returns true when DCDO flag is true' do
-    DCDO.stubs(:get).with('minecraft_google_blockly', true).returns(true)
-    assert @gamelab_jr.uses_google_blockly?
-  end
-
-  test 'uses_google_blockly? returns false when DCDO flag is false' do
-    DCDO.stubs(:get).with('minecraft_google_blockly', true).returns(false)
-    refute @gamelab_jr.uses_google_blockly?
+  test 'uses_google_blockly? returns true' do
+    assert @craft.uses_google_blockly?
   end
 end

@@ -31,14 +31,12 @@ GIT
       request_store (~> 1.0)
 
 GIT
-  remote: https://github.com/code-dot-org/omniauth-openid-connect.git
-  revision: 2397b1415896e2639a7582a36e26c90b9211f99f
-  ref: cdo
+  remote: https://github.com/code-dot-org/omniauth-clever.git
+  revision: 995409e9be86a9864e344e360869ca982c834845
+  tag: v2.0.1
   specs:
-    omniauth-openid-connect (0.2.2)
-      addressable (~> 2.3)
-      omniauth (~> 1.1)
-      openid_connect (~> 1.0, >= 1.0.3)
+    omniauth-clever (2.0.1)
+      omniauth-oauth2 (>= 1.1, <= 1.8)
 
 GIT
   remote: https://github.com/code-dot-org/omniauth-windowslive.git
@@ -78,14 +76,6 @@ GIT
     sprockets (3.7.1)
       concurrent-ruby (~> 1.1)
       rack (> 1, < 3)
-
-GIT
-  remote: https://github.com/daynew/omniauth-clever.git
-  revision: d217eb5d44ad4d68c52beb9b0b1929cb109e190a
-  branch: clever-v2.1-upgrade
-  specs:
-    omniauth-clever (2.0.0)
-      omniauth-oauth2 (>= 1.1, <= 1.5)
 
 GIT
   remote: https://github.com/dooly-ai/omniauth-microsoft_v2_auth.git
@@ -200,17 +190,19 @@ GEM
       rake (>= 10.4, < 14.0)
     ansi (1.5.0)
     ast (2.4.2)
-    attr_required (1.0.2)
     auto_strip_attributes (2.1.0)
       activerecord (>= 3.0)
-    aws-eventstream (1.2.0)
+    aws-eventstream (1.3.0)
     aws-google (0.2.0)
       aws-sdk-core (~> 3.130)
       google-apis-core
       launchy (~> 2)
     aws-partitions (1.793.0)
-    aws-sdk-acm (1.44.0)
-      aws-sdk-core (~> 3, >= 3.119.0)
+    aws-sdk-acm (1.74.0)
+      aws-sdk-core (~> 3, >= 3.201.0)
+      aws-sigv4 (~> 1.5)
+    aws-sdk-bedrockagentruntime (1.10.0)
+      aws-sdk-core (~> 3, >= 3.193.0)
       aws-sigv4 (~> 1.1)
     aws-sdk-cloudformation (1.55.0)
       aws-sdk-core (~> 3, >= 3.119.0)
@@ -218,16 +210,16 @@ GEM
     aws-sdk-cloudfront (1.55.0)
       aws-sdk-core (~> 3, >= 3.119.0)
       aws-sigv4 (~> 1.1)
-    aws-sdk-cloudwatch (1.54.0)
-      aws-sdk-core (~> 3, >= 3.119.0)
-      aws-sigv4 (~> 1.1)
-    aws-sdk-cloudwatchlogs (1.43.0)
-      aws-sdk-core (~> 3, >= 3.119.0)
-      aws-sigv4 (~> 1.1)
-    aws-sdk-core (3.180.0)
-      aws-eventstream (~> 1, >= 1.0.2)
-      aws-partitions (~> 1, >= 1.651.0)
+    aws-sdk-cloudwatch (1.97.0)
+      aws-sdk-core (~> 3, >= 3.201.0)
       aws-sigv4 (~> 1.5)
+    aws-sdk-cloudwatchlogs (1.88.0)
+      aws-sdk-core (~> 3, >= 3.201.0)
+      aws-sigv4 (~> 1.5)
+    aws-sdk-core (3.201.3)
+      aws-eventstream (~> 1, >= 1.3.0)
+      aws-partitions (~> 1, >= 1.651.0)
+      aws-sigv4 (~> 1.8)
       jmespath (~> 1, >= 1.6.1)
     aws-sdk-databasemigrationservice (1.56.0)
       aws-sdk-core (~> 3, >= 3.119.0)
@@ -257,10 +249,13 @@ GEM
       aws-sdk-core (~> 3, >= 3.119.0)
       aws-sdk-kms (~> 1)
       aws-sigv4 (~> 1.1)
+    aws-sdk-sagemakerruntime (1.60.0)
+      aws-sdk-core (~> 3, >= 3.188.0)
+      aws-sigv4 (~> 1.1)
     aws-sdk-secretsmanager (1.48.0)
       aws-sdk-core (~> 3, >= 3.119.0)
       aws-sigv4 (~> 1.1)
-    aws-sigv4 (1.6.0)
+    aws-sigv4 (1.9.1)
       aws-eventstream (~> 1, >= 1.0.2)
     backports (3.11.3)
     base64 (0.2.0)
@@ -320,7 +315,7 @@ GEM
     cucumber-expressions (6.0.1)
     cucumber-tag_expressions (1.1.1)
     cucumber-wire (0.0.1)
-    daemons (1.4.1)
+    daemons (1.1.9)
     dalli (2.7.6)
     dalli-elasticache (1.0.1)
       dalli (>= 2.0.0)
@@ -328,12 +323,6 @@ GEM
       activerecord (>= 5.a)
       database_cleaner-core (~> 2.0.0)
     database_cleaner-core (2.0.1)
-    datapackage (1.1.1)
-      colorize
-      json-schema
-      ruby_dig
-      rubyzip
-      tableschema
     date (3.3.3)
     declarative (0.0.20)
     delayed_job (4.1.11)
@@ -382,6 +371,8 @@ GEM
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
     fakefs (2.5.0)
+    faker (3.4.2)
+      i18n (>= 1.8.11, < 2)
     fakeredis (0.9.2)
       redis (~> 4.8)
     faraday (1.10.3)
@@ -405,7 +396,7 @@ GEM
     faraday-httpclient (1.0.1)
     faraday-multipart (1.0.4)
       multipart-post (~> 2)
-    faraday-net_http (1.0.1)
+    faraday-net_http (1.0.2)
     faraday-net_http_persistent (1.2.0)
     faraday-patron (1.0.0)
     faraday-rack (1.0.0)
@@ -416,10 +407,6 @@ GEM
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
-    firebase (0.2.6)
-      httpclient
-      json
-    firebase_token_generator (2.0.0)
     fspath (3.1.0)
     gemoji (4.1.0)
     geocoder (1.6.4)
@@ -474,7 +461,7 @@ GEM
       sysexits (~> 1.1)
     hashdiff (1.0.1)
     hashery (2.1.2)
-    hashie (3.6.0)
+    hashie (5.0.0)
     highline (1.6.21)
     honeybadger (4.12.1)
     http (5.2.0)
@@ -512,8 +499,8 @@ GEM
       aes_key_wrap
       bindata
       httpclient
-    json-schema (2.8.1)
-      addressable (>= 2.4)
+    json-schema (4.3.1)
+      addressable (>= 2.8)
     jsonapi-renderer (0.2.2)
     jumphash (0.1.0)
     jwt (2.7.1)
@@ -532,13 +519,13 @@ GEM
     loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
-    macaddr (1.7.2)
-      systemu (~> 2.6.5)
     mail (2.8.1)
       mini_mime (>= 0.1.1)
       net-imap
       net-pop
       net-smtp
+    mailgun-ruby (1.2.14)
+      rest-client (>= 2.0.2)
     mailjet (1.7.3)
       activesupport (>= 3.1.0)
       rack (>= 1.4.0)
@@ -559,6 +546,9 @@ GEM
     minitest (5.18.0)
     minitest-around (0.5.0)
       minitest (~> 5.0)
+    minitest-rails (6.1.1)
+      minitest (~> 5.10)
+      railties (~> 6.1.0)
     minitest-reporters (1.2.0)
       ansi
       builder
@@ -572,7 +562,7 @@ GEM
     multi_json (1.15.0)
     multi_test (0.1.2)
     multi_xml (0.6.0)
-    multipart-post (2.2.3)
+    multipart-post (2.4.1)
     mustermann (2.0.2)
       ruby2_keywords (~> 0.0.1)
     mysql2 (0.5.5)
@@ -598,20 +588,21 @@ GEM
     nokogiri (1.14.3)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
-    oauth2 (1.4.11)
+    oauth2 (2.0.9)
       faraday (>= 0.17.3, < 3.0)
       jwt (>= 1.0, < 3.0)
-      multi_json (~> 1.3)
       multi_xml (~> 0.5)
       rack (>= 1.2, < 4)
+      snaky_hash (~> 2.0)
+      version_gem (~> 1.1)
     octokit (6.0.1)
       faraday (>= 1, < 3)
       sawyer (~> 0.9)
     oily_png (1.2.0)
       chunky_png (~> 1.3.1)
     oj (3.14.2)
-    omniauth (1.9.0)
-      hashie (>= 3.4.6, < 3.7.0)
+    omniauth (1.9.2)
+      hashie (>= 3.4.6)
       rack (>= 1.6.2, < 3)
     omniauth-facebook (4.0.0)
       omniauth-oauth2 (~> 1.2)
@@ -619,9 +610,9 @@ GEM
       jwt (>= 2.0)
       omniauth (>= 1.1.1)
       omniauth-oauth2 (>= 1.5)
-    omniauth-oauth2 (1.5.0)
-      oauth2 (~> 1.1)
-      omniauth (~> 1.2)
+    omniauth-oauth2 (1.7.3)
+      oauth2 (>= 1.4, < 3)
+      omniauth (>= 1.9, < 3)
     omniauth-openid (1.0.1)
       omniauth (~> 1.0)
       rack-openid (~> 1.3.1)
@@ -633,17 +624,6 @@ GEM
       time
       uri
     open_uri_redirections (0.2.1)
-    openid_connect (1.4.2)
-      activemodel
-      attr_required (>= 1.0.0)
-      json-jwt (>= 1.15.0)
-      net-smtp
-      rack-oauth2 (~> 1.21)
-      swd (~> 1.3)
-      tzinfo
-      validate_email
-      validate_url
-      webfinger (~> 1.2)
     orm_adapter (0.5.0)
     os (1.1.4)
     parallel (1.23.0)
@@ -677,25 +657,22 @@ GEM
       multi_json (~> 1.0)
       pusher-signature (~> 0.1.8)
     pusher-signature (0.1.8)
+    pycall (1.5.2)
     racc (1.6.2)
-    rack (2.2.6.4)
+    rack (2.2.9)
     rack-cache (1.13.0)
       rack (>= 0.4)
     rack-cors (2.0.1)
       rack (>= 2.0.0)
     rack-mini-profiler (3.0.0)
       rack (>= 1.2.0)
-    rack-oauth2 (1.21.3)
-      activesupport
-      attr_required
-      httpclient
-      json-jwt (>= 1.11.0)
-      rack (>= 2.1.0)
     rack-openid (1.3.1)
       rack (>= 1.1.0)
       ruby-openid (>= 2.1.8)
     rack-protection (2.2.3)
       rack
+    rack-session (1.0.2)
+      rack (< 3)
     rack-ssl-enforcer (0.2.9)
     rack-test (2.0.2)
       rack (>= 1.3)
@@ -743,6 +720,15 @@ GEM
       json
     redcarpet (3.5.1)
     redis (4.8.1)
+    redis-actionpack (5.4.0)
+      actionpack (>= 5, < 8)
+      redis-rack (>= 2.1.0, < 4)
+      redis-store (>= 1.1.0, < 2)
+    redis-rack (3.0.0)
+      rack-session (>= 0.2.0)
+      redis-store (>= 1.2, < 2)
+    redis-store (1.10.0)
+      redis (>= 4, < 6)
     regexp_parser (2.8.1)
     representable (3.2.0)
       declarative (< 0.1.0)
@@ -801,11 +787,10 @@ GEM
     rubocop-rails-accessibility (0.2.0)
       rubocop (>= 1.0.0)
     ruby-openid (2.9.2)
-    ruby-prof (0.15.9)
+    ruby-prof (1.7.0)
     ruby-progressbar (1.13.0)
     ruby-rc4 (0.1.5)
     ruby2_keywords (0.0.5)
-    ruby_dig (0.0.2)
     rubyzip (2.3.2)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
@@ -850,6 +835,9 @@ GEM
       rack (~> 2.2)
       rack-protection (= 2.2.3)
       tilt (~> 2.0)
+    snaky_hash (2.0.1)
+      hashie
+      version_gem (~> 1.1, >= 1.1.1)
     sorted_set (1.0.3)
       rbtree
       set (~> 1.0)
@@ -871,18 +859,8 @@ GEM
       ip3country (~> 0.2.1)
       user_agent_parser (~> 2.15.0)
     stringex (2.5.2)
-    stringio (3.1.0)
-    swd (1.3.0)
-      activesupport (>= 3)
-      attr_required (>= 0.0.5)
-      httpclient (>= 2.4)
+    stringio (3.1.1)
     sysexits (1.2.0)
-    systemu (2.6.5)
-    tableschema (1.0.4)
-      activesupport
-      json-schema (~> 2.8.0)
-      tod (~> 2.1.0)
-      uuid (~> 2.3.8)
     temple (0.8.2)
     thin (1.8.2)
       daemons (~> 1.0, >= 1.0.9)
@@ -896,7 +874,6 @@ GEM
       date
     timecop (0.8.1)
     timeout (0.3.2)
-    tod (2.1.1)
     trailblazer-option (0.1.2)
     ttfunk (1.7.0)
     twilio-ruby (5.77.0)
@@ -915,17 +892,13 @@ GEM
     unicode_utils (1.4.0)
     uri (0.13.0)
     user_agent_parser (2.15.0)
-    uuid (2.3.9)
-      macaddr (~> 1.0)
-    validate_email (0.1.6)
-      activemodel (>= 3.0)
-      mail (>= 2.2.5)
     validate_url (1.0.15)
       activemodel (>= 3.0.0)
       public_suffix
     validates_email_format_of (1.6.3)
       i18n
     vcr (3.0.3)
+    version_gem (1.1.4)
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.1)
@@ -937,9 +910,6 @@ GEM
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
       selenium-webdriver (~> 4.0)
-    webfinger (1.2.0)
-      activesupport
-      httpclient (>= 2.4)
     webmock (3.14.0)
       addressable (>= 2.8.0)
       crack (>= 0.3.2)
@@ -969,6 +939,7 @@ DEPENDENCIES
   auto_strip_attributes (~> 2.1)
   aws-google (~> 0.2.0)
   aws-sdk-acm
+  aws-sdk-bedrockagentruntime (~> 1.10.0)
   aws-sdk-cloudformation
   aws-sdk-cloudfront
   aws-sdk-cloudwatch
@@ -982,6 +953,7 @@ DEPENDENCIES
   aws-sdk-rds
   aws-sdk-route53
   aws-sdk-s3
+  aws-sdk-sagemakerruntime
   aws-sdk-secretsmanager
   bcrypt (= 3.1.13)
   benchmark-ips
@@ -997,11 +969,10 @@ DEPENDENCIES
   composite_primary_keys (~> 13.0)
   crowdin-api (~> 1.10.0)
   cucumber
-  daemons
+  daemons (= 1.1.9)
   dalli
   dalli-elasticache
   database_cleaner-active_record (~> 2.1.0)
-  datapackage
   delayed_job_active_record (~> 4.1)
   devise (~> 4.9.0)
   devise_invitable (~> 2.0.2)
@@ -1010,9 +981,8 @@ DEPENDENCIES
   eyes_selenium (= 3.18.4)
   factory_bot_rails (~> 6.2)
   fakefs (~> 2.5.0)
+  faker (~> 3.4)
   fakeredis
-  firebase
-  firebase_token_generator
   full-name-splitter!
   gemoji
   geocoder
@@ -1034,17 +1004,21 @@ DEPENDENCIES
   image_size
   jquery-rails
   jquery-ui-rails (~> 6.0.1)
+  json-jwt (~> 1.15)
+  json-schema (~> 4.3)
   jumphash
   jwt (~> 2.7.0)
   kaminari
   lograge!
   loofah (~> 2.19.1)
+  mailgun-ruby (~> 1.2.14)
   mailjet (~> 1.7.3)
   memory_profiler
   mini_magick (>= 4.10.0)
   mini_racer
   minitest (~> 5.15)
   minitest-around
+  minitest-rails (~> 6.1)
   minitest-reporters (~> 1.2.0.beta3)
   minitest-spec-context (~> 0.0.3)
   minitest-stub-const (~> 0.6)
@@ -1053,18 +1027,15 @@ DEPENDENCIES
   nakayoshi_fork
   naturally
   net-http-persistent
-  net-scp
-  net-ssh
   newrelic_rpm (~> 6.14.0)
   nokogiri (>= 1.10.0)
   octokit
   oj (~> 3.10)
-  omniauth-clever (~> 2.0.0)!
+  omniauth-clever (~> 2.0.1)!
   omniauth-facebook (~> 4.0.0)
   omniauth-google-oauth2 (~> 0.6.0)
   omniauth-microsoft_v2_auth!
   omniauth-openid
-  omniauth-openid-connect!
   omniauth-rails_csrf_protection (~> 0.1)
   omniauth-windowslive (~> 0.0.11)!
   open_uri_redirections
@@ -1079,6 +1050,7 @@ DEPENDENCIES
   puma (~> 5.6)
   puma_worker_killer
   pusher (~> 1.3.1)
+  pycall (>= 1.5.2)
   rack-cache
   rack-cors (~> 2.0.1)
   rack-mini-profiler
@@ -1091,7 +1063,9 @@ DEPENDENCIES
   recaptcha
   redcarpet (~> 3.5.1)
   redis (~> 4.8.1)
+  redis-actionpack (~> 5.4.0)
   redis-slave-read!
+  request_store (~> 1.6.0)
   require_all
   rerun
   responders (~> 3.0)
@@ -1104,7 +1078,7 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rails
   rubocop-rails-accessibility
-  ruby-prof
+  ruby-prof (>= 1.7.0)
   ruby-progressbar
   sass-rails (~> 6.0.0)
   sassc-rails!
@@ -1132,6 +1106,7 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   unf_ext (= 0.0.7.2)
   user_agent_parser
+  validate_url (~> 1.0.15)
   validates_email_format_of
   vcr
   web-console (~> 4.2.0)

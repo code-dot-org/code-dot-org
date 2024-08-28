@@ -1,0 +1,14 @@
+name 'gen-ai-customizing-prompt-explore-L5'
+editor_experiment ''
+display_name 'You Try: Modify These Chatbots!'
+description 'Choose at least 2 levels to attempt before continuing'
+
+sublevels
+level 'gen-ai-customizing-prompt-explore-L5A'
+level 'gen-ai-customizing-prompt-explore-L5B'
+level 'gen-ai-customizing-prompt-explore-L5C'
+level 'gen-ai-customizing-prompt-explore-L5D'
+
+markdown <<MARKDOWN
+
+MARKDOWN

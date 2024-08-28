@@ -1,53 +1,61 @@
-import {shallow, mount} from 'enzyme';
+import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
-import sinon from 'sinon';
 
+import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants.js';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import Button from '@cdo/apps/templates/Button';
-import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import {UnconnectedSetUpSections as SetUpSections} from '@cdo/apps/templates/studioHomepages/SetUpSections';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 describe('SetUpSections', () => {
   it('renders as expected', () => {
-    const wrapper = shallow(<SetUpSections beginEditingSection={() => {}} />);
-    const instance = wrapper.instance();
-
-    expect(
-      wrapper.containsMatchingElement(
-        <BorderedCallToAction
-          type="sections"
-          headingText="Set up your classroom"
-          descriptionText="Create a new classroom section to start assigning courses and seeing your student progress."
-          buttonText="Create a section"
-          onClick={instance.beginEditingSection}
-        />
-      )
+    render(
+      <SetUpSections beginEditingSection={() => {}} asyncLoadComplete={true} />
     );
+
+    screen.getByText('Add a new classroom section');
+    screen.getByText(
+      'Create a new classroom section to start assigning courses and seeing your student progress.'
+    );
+    screen.getByRole('button', {name: 'Create a section'});
   });
 
   it('calls beginEditingSection with no arguments when button is clicked', () => {
-    const spy = sinon.spy();
-    const wrapper = mount(<SetUpSections beginEditingSection={spy} />);
-    expect(spy).not.to.have.been.called;
+    const spy = jest.fn();
+    render(
+      <SetUpSections beginEditingSection={spy} asyncLoadComplete={true} />
+    );
+    expect(spy).not.toHaveBeenCalled();
 
-    wrapper.find(Button).simulate('click', {fake: 'event'});
-    expect(spy).to.have.been.calledOnce;
-    expect(spy.firstCall.args).to.be.empty;
+    const button = screen.getByRole('button', {name: 'Create a section'});
+    fireEvent.click(button);
+    expect(spy).toHaveBeenCalledTimes(1);
+    expect(spy.mock.calls[0]).toHaveLength(0);
   });
 
   it('sends start event when button is clicked', () => {
-    const wrapper = mount(<SetUpSections beginEditingSection={() => {}} />);
-    const analyticsSpy = sinon.spy(analyticsReporter, 'sendEvent');
+    render(
+      <SetUpSections beginEditingSection={() => {}} asyncLoadComplete={true} />
+    );
+    const analyticsSpy = jest.spyOn(analyticsReporter, 'sendEvent').mockClear();
 
-    wrapper.find(Button).simulate('click', {fake: 'event'});
-    expect(analyticsSpy).to.have.been.calledOnce;
-    expect(analyticsSpy.firstCall.args).to.deep.eq([
+    const button = screen.getByRole('button', {name: 'Create a section'});
+    fireEvent.click(button);
+
+    expect(analyticsSpy).toHaveBeenCalledTimes(1);
+    expect(analyticsSpy.mock.calls[0]).toEqual([
       'Section Setup Started',
       {},
+      PLATFORMS.BOTH,
     ]);
 
-    analyticsSpy.restore();
+    analyticsSpy.mockRestore();
+  });
+
+  it('has disabled button if asyncLoadComplete is false', () => {
+    render(
+      <SetUpSections beginEditingSection={() => {}} asyncLoadComplete={false} />
+    );
+    expect(
+      screen.getByRole('button', {name: 'Create a section'})
+    ).toBeDisabled();
   });
 });

@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-11-28T21:16:19.000Z",
   "level_num": "custom",
@@ -212,17 +213,21 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "false",
     "widget_mode": "false",
     "parent_level_id": 18759,
     "libraries_enabled": "false",
     "validation_enabled": "false",
     "name_suffix": "_2024",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ],
+    "display_name": "Water Conservation",
+    "thumbnail_url": "https://images.code.org/f09fd20b7451597951054ec0712b22fe-Screenshot 2024-05-05 at 5.25.39 PM.png",
+    "ai_enabled": "false"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T21:16:19.285+00:00\",\"changed\":[\"cloned from \\\"csd-apps for good-2_2023\\\"\"],\"cloned_from\":\"csd-apps for good-2_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T21:16:19.285+00:00\",\"changed\":[\"cloned from \\\"csd-apps for good-2_2023\\\"\"],\"cloned_from\":\"csd-apps for good-2_2023\"},{\"changed_at\":\"2024-05-06 00:26:57 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

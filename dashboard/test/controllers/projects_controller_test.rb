@@ -1,5 +1,5 @@
-require 'webmock/minitest'
 require 'test_helper'
+require 'webmock/minitest'
 
 class ProjectsControllerTest < ActionController::TestCase
   include Devise::Test::ControllerHelpers
@@ -425,6 +425,98 @@ class ProjectsControllerTest < ActionController::TestCase
     refute_nil @response.body['channel']
   end
 
+  test 'get_or_create_for_level with user returns forbiddden if not teacher of student' do
+    student = create :user
+    script = create(:script)
+    level = create(:level, :blockly)
+    create(:script_level, script: script, levels: [level])
+    get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id, user_id: student.id}
+    assert_response :forbidden
+  end
+
+  test 'get_or_create_for_level with user returns not started if student has not started' do
+    teacher = create(:teacher)
+    section = create(:section, user: teacher, login_type: 'word')
+    student = create :user
+    create(:follower, section: section, student_user: student)
+    sign_in teacher
+
+    script = create(:script)
+    level = create(:level, :blockly)
+    create(:script_level, script: script, levels: [level])
+    get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id, user_id: student.id}
+    assert_response :success
+    body = JSON.parse(@response.body)
+    assert_equal body['started'], false
+  end
+
+  test 'get_or_create_for_level with user returns channel' do
+    teacher = create(:teacher)
+    section = create(:section, user: teacher, login_type: 'word')
+    student = create :user
+    create(:follower, section: section, student_user: student)
+
+    # The student should do some work.
+    sign_in_with_request(student)
+    script = create(:script)
+    level = create(:level, :blockly)
+    create(:script_level, script: script, levels: [level])
+    create :user_level, level: level, user: student, script: script
+    get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id}
+    assert_response :success
+    refute_nil @response.body['channel']
+    sign_out student
+
+    # Now that the channel has been created, check that the teacher can retrieve it for their student.
+    sign_in teacher
+    get :get_or_create_for_level, params: {script_id: script.id, level_id: level.id, user_id: student.id}
+    assert_response :success
+    refute_nil @response.body['channel']
+  end
+
+  test 'get_or_create_for_level with user uses script level ID if provided' do
+    teacher = create(:teacher)
+    section = create(:section, user: teacher, login_type: 'word')
+    student = create :user
+    other_student = create :user
+    create(:follower, section: section, student_user: student)
+    sign_in teacher
+
+    script = create(:script)
+    sublevel = create(:level, :blockly)
+    parent_level = create(:bubble_choice_level, sublevels: [sublevel])
+    script_level = create(:script_level, script: script, levels: [parent_level])
+
+    # Teacher should be able to get the channel for the given sublevel for the student.
+    get :get_or_create_for_level, params: {script_id: script.id, level_id: sublevel.id, script_level_id: script_level.id, user_id: student.id}
+    assert_response :success
+
+    # Teacher should be able to get the channel for the parent level for the student since it matches the script level ID.
+    get :get_or_create_for_level, params: {script_id: script.id, level_id: parent_level.id, script_level_id: script_level.id, user_id: student.id}
+    assert_response :success
+
+    # Teacher should not be able to get the channel for the given sublevel for a student not in their section.
+    get :get_or_create_for_level, params: {script_id: script.id, level_id: sublevel.id, script_level_id: script_level.id, user_id: other_student.id}
+    assert_response :forbidden
+  end
+
+  test 'get_or_create_for_level with user returns forbidden if script level ID does not match level ID' do
+    teacher = create(:teacher)
+    section = create(:section, user: teacher, login_type: 'word')
+    student = create :user
+    create(:follower, section: section, student_user: student)
+    sign_in teacher
+
+    script = create(:script)
+    sublevel = create(:level, :blockly)
+    other_level = create(:level, :blockly)
+    script_level = create(:script_level, script: script, levels: [other_level])
+
+    # Teacher should not be able to get the channel for the given sublevel since the provided level ID does not match the script level ID.
+    get :get_or_create_for_level, params: {script_id: script.id, level_id: sublevel.id, script_level_id: script_level.id, user_id: student.id}
+    assert_response :forbidden
+  end
+
   test 'on lab2 levels navigating to /view redirects to /edit if user is project owner' do
     channel_id = '12345'
     Projects.any_instance.stubs(:get).returns({isOwner: true})
@@ -443,38 +535,11 @@ class ProjectsControllerTest < ActionController::TestCase
     assert_redirected_to "/projects/music/#{channel_id}/view"
   end
 
-  test 'on lab2 levels navigating to a share URL redirects to /edit if user is project owner' do
+  test 'on lab2 levels navigating to /edit redirects to /view if project is frozen' do
     channel_id = '12345'
-    Projects.any_instance.stubs(:get).returns({isOwner: true})
+    Projects.any_instance.stubs(:get).returns({isFrozen: true})
 
-    get :show, params: {path: "/projects/music/#{channel_id}", key: 'music', channel_id: channel_id, share: true}
-    assert_response :redirect
-    assert_redirected_to "/projects/music/#{channel_id}/edit"
-  end
-
-  test 'on lab2 levels navigating to a share URL redirects to /view if user is not project owner' do
-    channel_id = '12345'
-    Projects.any_instance.stubs(:get).returns({isOwner: false})
-
-    get :edit, params: {path: "/projects/music/#{channel_id}", key: 'music', channel_id: channel_id, share: true}
-    assert_response :redirect
-    assert_redirected_to "/projects/music/#{channel_id}/view"
-  end
-
-  test 'on lab2 levels navigating to an embed URL redirects to /edit if user is project owner' do
-    channel_id = '12345'
-    Projects.any_instance.stubs(:get).returns({isOwner: true})
-
-    get :show, params: {path: "/projects/music/#{channel_id}/embed", key: 'music', channel_id: channel_id, iframe_embed: true}
-    assert_response :redirect
-    assert_redirected_to "/projects/music/#{channel_id}/edit"
-  end
-
-  test 'on lab2 levels navigating to an embed URL redirects to /view if user is not project owner' do
-    channel_id = '12345'
-    Projects.any_instance.stubs(:get).returns({isOwner: false})
-
-    get :edit, params: {path: "/projects/music/#{channel_id}/embed", key: 'music', channel_id: channel_id, iframe_embed: true}
+    get :edit, params: {path: "/projects/music/#{channel_id}/edit", key: 'music', channel_id: channel_id}
     assert_response :redirect
     assert_redirected_to "/projects/music/#{channel_id}/view"
   end

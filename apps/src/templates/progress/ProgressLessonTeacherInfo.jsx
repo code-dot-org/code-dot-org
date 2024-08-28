@@ -6,19 +6,21 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import {lessonType} from './progressTypes';
-import HiddenForSectionToggle from './HiddenForSectionToggle';
-import LessonLock from './LessonLock';
+
 import {
   toggleHiddenLesson,
   isLessonHiddenForSection,
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
-import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import Button from '../Button';
-import TeacherInfoBox from './TeacherInfoBox';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import {sectionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import i18n from '@cdo/locale';
+
+import HiddenForSectionToggle from './HiddenForSectionToggle';
+import LessonLock from './LessonLock';
+import {lessonType} from './progressTypes';
 import SendLesson from './SendLesson';
+import TeacherInfoBox from './TeacherInfoBox';
 
 class ProgressLessonTeacherInfo extends React.Component {
   static propTypes = {

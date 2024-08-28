@@ -1,0 +1,87 @@
+{
+  "logoPosition": "right",
+  "pages": [
+    {
+      "name": "page1",
+      "title": "New Progress View (beta) - Give Detailed Feedback",
+      "description": "Your feedback is invaluable in creating the best possible experience on Code.org. By filling out this survey, you'll help shape the continued improvement of the new progress view. We appreciate your input!",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "overall_satisfaction",
+          "title": "Overall, how satisfied are you with the new progress view? ",
+          "choices": [
+            {
+              "value": 5,
+              "text": "5 = Very satisfied"
+            },
+            {
+              "value": 4,
+              "text": "4 = Somewhat satisfied"
+            },
+            {
+              "value": 3,
+              "text": "3 = Neutral"
+            },
+            {
+              "value": 2,
+              "text": "2 = Somewhat dissatisfied"
+            },
+            {
+              "value": 1,
+              "text": "1 = Very dissatisfied"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "version_preference",
+          "title": "Which version of the progress view are most likely to use going forward (new vs old)?",
+          "choices": [
+            {
+              "value": 5,
+              "text": "5 = Definitely stay with the new version"
+            },
+            {
+              "value": 4,
+              "text": "4 = Probably stay with the new version"
+            },
+            {
+              "value": 3,
+              "text": "3 = Use both equally"
+            },
+            {
+              "value": 2,
+              "text": "2 = Probably stay with the old version"
+            },
+            {
+              "value": 1,
+              "text": "1 = Definitely stay with the old version"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "like_the_most",
+          "title": "What do you like most about the new progress view?"
+        },
+        {
+          "type": "comment",
+          "name": "like_the_least",
+          "title": "What could be improved about the new progress view?"
+        },
+        {
+          "type": "comment",
+          "name": "issues_encountered",
+          "title": "Please describe any issues you encountered in the new progress view (if any)."
+        },
+        {
+          "type": "comment",
+          "name": "other_feedback",
+          "title": "Is there any other feedback you'd like to share?"
+        }
+      ]
+    }
+  ],
+  "published": true
+}

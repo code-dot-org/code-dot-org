@@ -60,11 +60,6 @@ Lint/EmptyBlock:
 Lint/EmptyClass:
   Enabled: false
 
-# Offense count: 1
-# Configuration parameters: AllowComments.
-Lint/EmptyFile:
-  Enabled: false
-
 # Offense count: 9
 Lint/MissingSuper:
   Enabled: false
@@ -115,11 +110,6 @@ Naming/MethodParameterName:
 # SupportedStyles: snake_case, normalcase, non_integer
 # AllowedIdentifiers: capture3, iso8601, rfc1123_date, rfc822, rfc2822, rfc3339, x86_64
 Naming/VariableNumber:
-  Enabled: false
-
-# Offense count: 1
-# This cop supports unsafe autocorrection (--autocorrect-all).
-Rails/ApplicationMailer:
   Enabled: false
 
 # Offense count: 469
@@ -205,26 +195,6 @@ Style/CommentAnnotation:
 Style/ExpandPathArguments:
   Enabled: false
 
-# Offense count: 115
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: AllowedVars.
-Style/FetchEnvVar:
-  Enabled: false
-
-# Offense count: 2
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: left_coerce, right_coerce, single_coerce, fdiv
-Style/FloatDivision:
-  Enabled: false
-
-# Offense count: 99
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyle, MaxUnannotatedPlaceholdersAllowed, AllowedMethods, AllowedPatterns.
-# SupportedStyles: annotated, template, unannotated
-Style/FormatStringToken:
-  Enabled: false
-
 # Offense count: 3539
 # This cop supports unsafe autocorrection (--autocorrect-all).
 # Configuration parameters: EnforcedStyle.
@@ -242,23 +212,6 @@ Style/GlobalVars:
 Style/HashLikeCase:
   Enabled: false
 
-# Offense count: 2
-# This cop supports unsafe autocorrection (--autocorrect-all).
-Style/HashTransformKeys:
-  Enabled: false
-
-# Offense count: 12
-# This cop supports unsafe autocorrection (--autocorrect-all).
-Style/HashTransformValues:
-  Enabled: false
-
-# Offense count: 1
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: AllowedMethods.
-# AllowedMethods: nonzero?
-Style/IfWithBooleanLiteralBranches:
-  Enabled: false
-
 # Offense count: 21
 # This cop supports unsafe autocorrection (--autocorrect-all).
 # Configuration parameters: InverseMethods, InverseBlocks.
@@ -268,13 +221,6 @@ Style/InverseMethods:
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).
 Style/KeywordParametersOrder:
-  Enabled: false
-
-# Offense count: 31
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: line_count_dependent, lambda, literal
-Style/Lambda:
   Enabled: false
 
 # Offense count: 57

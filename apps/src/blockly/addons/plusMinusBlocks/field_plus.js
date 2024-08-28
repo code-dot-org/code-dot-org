@@ -11,6 +11,7 @@
  */
 
 import * as GoogleBlockly from 'blockly/core';
+
 import {getExtraBlockState} from './serialization_helper';
 
 /**

@@ -4,7 +4,7 @@ module CoreExtensions
   module Hash
     module Camelizing
       def camelize_keys
-        map {|key, value| [key.to_s.camelize(:lower), value]}.to_h
+        transform_keys {|key| key.to_s.camelize(:lower)}
       end
     end
   end

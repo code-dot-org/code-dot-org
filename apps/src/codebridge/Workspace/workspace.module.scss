@@ -1,0 +1,17 @@
+@import 'color.scss';
+
+.workspace {
+  height: 100%;
+  grid-area: workspace;
+  background-color: $darkest_gray;
+  color: $white;
+}
+
+.warningBanner {
+  z-index: 99;
+  background-color: $light_yellow;
+  height: 20px;
+  padding: 5px;
+  width: 100%;
+  color: $black;
+}

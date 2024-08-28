@@ -1,11 +1,11 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertificates';
 import {UnconnectedSectionActionDropdown as SectionActionDropdown} from '@cdo/apps/templates/teacherDashboard/SectionActionDropdown';
 import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const sections = [
   {
@@ -15,7 +15,7 @@ const sections = [
     loginType: 'word',
     studentCount: 0,
     code: 'ABCD',
-    grade: '10',
+    grades: ['10'],
     providerManaged: false,
     hidden: false,
   },
@@ -26,7 +26,7 @@ const sections = [
     loginType: 'google_classroom',
     studentCount: 0,
     code: 'EFGH',
-    grade: '11',
+    grades: ['11'],
     providerManaged: true,
     hidden: false,
   },
@@ -37,7 +37,7 @@ const sections = [
     loginType: 'picture',
     studentCount: 4,
     code: 'IJKL',
-    grade: '9',
+    grades: ['9'],
     providerManaged: false,
     hidden: false,
   },
@@ -48,9 +48,21 @@ const sections = [
     loginType: 'email',
     studentCount: 2,
     code: 'MNOP',
-    grade: '6',
+    grades: ['6'],
     providerManaged: false,
     hidden: true,
+  },
+  {
+    id: 5,
+    name: 'PL',
+    courseVersionName: 'cv',
+    loginType: 'email',
+    participantType: 'teacher',
+    studentCount: 2,
+    code: 'QRST',
+    grades: ['pl'],
+    providerManaged: false,
+    hidden: false,
   },
 ];
 
@@ -142,6 +154,21 @@ describe('SectionActionDropdown', () => {
     );
     const sectionId = wrapper.instance().props.sectionData.id;
     const expectedUrl = '/sections/' + sectionId + '/edit';
+    expect(wrapper).to.contain('Edit Section Details');
+    expect(wrapper.find('.edit-section-details-link').props().href).to.equal(
+      expectedUrl
+    );
+  });
+
+  it('sends selected user to the new edit page with redirect for pl section', () => {
+    const wrapper = shallow(
+      <SectionActionDropdown {...DEFAULT_PROPS} sectionData={sections[4]} />
+    );
+    const sectionId = wrapper.instance().props.sectionData.id;
+    const expectedUrl =
+      '/sections/' +
+      sectionId +
+      '/edit?redirectToPage=my-professional-learning';
     expect(wrapper).to.contain('Edit Section Details');
     expect(wrapper.find('.edit-section-details-link').props().href).to.equal(
       expectedUrl

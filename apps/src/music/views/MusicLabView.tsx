@@ -1,26 +1,33 @@
+import classNames from 'classnames';
 import React, {useCallback, useContext, useEffect} from 'react';
+
+import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
+import Instructions from '@cdo/apps/lab2/views/components/Instructions';
+import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import AnalyticsReporter from '../analytics/AnalyticsReporter';
+import AppConfig, {getBaseAssetUrl} from '../appConfig';
+import musicI18n from '../locale';
+import MusicPlayer from '../player/MusicPlayer';
 import MusicValidator from '../progress/MusicValidator';
-import moduleStyles from './music-view.module.scss';
 import {
   InstructionsPosition,
   setCurrentPlayheadPosition,
   showCallout,
 } from '../redux/musicRedux';
-import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import musicI18n from '../locale';
-import HeaderButtons from './HeaderButtons';
-import AppConfig, {getBaseAssetUrl} from '../appConfig';
-import classNames from 'classnames';
-import Instructions from '@cdo/apps/lab2/views/components/Instructions';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import Controls from './Controls';
-import Timeline from './Timeline';
-import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
-import usePlaybackUpdate from './hooks/usePlaybackUpdate';
-import MusicPlayer from '../player/MusicPlayer';
-import useUpdatePlayer from './hooks/useUpdatePlayer';
+
 import AdvancedControls from './AdvancedControls';
+import Controls from './Controls';
+import HeaderButtons from './HeaderButtons';
+import usePlaybackUpdate from './hooks/usePlaybackUpdate';
+import useUpdateAnalytics from './hooks/useUpdateAnalytics';
+import useUpdatePlayer from './hooks/useUpdatePlayer';
+import MusicPlayView from './MusicPlayView';
 import PackDialog from './PackDialog';
+import Timeline from './Timeline';
+
+import moduleStyles from './music-view.module.scss';
 
 interface MusicLabViewProps {
   blocklyDivId: string;
@@ -35,6 +42,7 @@ interface MusicLabViewProps {
   validator: MusicValidator;
   player: MusicPlayer;
   allowPackSelection: boolean;
+  analyticsReporter: AnalyticsReporter;
 }
 
 const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
@@ -50,8 +58,10 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   validator,
   player,
   allowPackSelection,
+  analyticsReporter,
 }) => {
   useUpdatePlayer(player);
+  useUpdateAnalytics(analyticsReporter);
   const dispatch = useAppDispatch();
   const showInstructions = useAppSelector(
     state => state.music.showInstructions
@@ -63,6 +73,7 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const hideHeaders = useAppSelector(state => state.music.hideHeaders);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
   const skipUrl = useAppSelector(state => state.lab.levelProperties?.skipUrl);
+  const isPlayView = useAppSelector(state => state.lab.isShareView);
 
   const progressManager = useContext(ProgressManagerContext);
 
@@ -160,7 +171,11 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
             </PanelContainer>
           </div>
 
-          <div id="timeline-area" className={moduleStyles.timelineArea}>
+          <div
+            dir="ltr"
+            id="timeline-area"
+            className={moduleStyles.timelineArea}
+          >
             <PanelContainer
               id="timeline-panel"
               headerContent={musicI18n.panelHeaderTimeline()}
@@ -178,6 +193,10 @@ const MusicLabView: React.FunctionComponent<MusicLabViewProps> = ({
   const showAdvancedControls =
     AppConfig.getValue('player') === 'tonejs' &&
     AppConfig.getValue('advanced-controls-enabled') === 'true';
+
+  if (isPlayView) {
+    return <MusicPlayView setPlaying={setPlaying} />;
+  }
 
   return (
     <div id="music-lab" className={moduleStyles.musicLab}>

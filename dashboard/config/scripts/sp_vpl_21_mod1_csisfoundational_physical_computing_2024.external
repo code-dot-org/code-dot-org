@@ -7,24 +7,22 @@ markdown <<MARKDOWN
 
 > <img src="https://images.code.org/d7b27d5c36fea4bfa38e9415bd712d0e-image-1667244505864.png" alt="code.org logo" style="float: left; height: 50px; clear: both; margin: 0 20px 20px 0;"> Code.org is a nonprofit dedicated to **expanding access to computer science** in schools and increasing participation by young women and students from other underrepresented groups. 
 
-##### Code.org's vision for CS education is that **every student in every school** has the opportunity to learn computer science. In order to make this vision a reality, Code.org:
+#### Code.org's vision for CS education is that **every student in every school** has the opportunity to learn computer science. In order to make this vision a reality, Code.org:
 
-* ##### Builds free computer science curriculum.
-* ##### Trains teachers to teach computer science. 
-* ##### Advocates for policy change in support of CS Education. 
+* #### Builds free computer science curriculum.
+* #### Trains teachers to teach computer science. 
+* #### Advocates for policy change in support of CS Education. 
 
 ## Access to Computer Science Education
 
-> #### More important than the tech workforce pipeline, **computer science is now a foundational subject for all 21st century careers,** making access to this knowledge an equity issue that must be addressed. **A student’s opportunity should not be determined by the color of their skin, their family income, or the neighborhood they grow up in.** Access to computer science education is improving, but in many regions or the United States, disparities in access still exist.
+#### More important than the tech workforce pipeline, **computer science is now a foundational subject for all 21st century careers,** making access to this knowledge an equity issue that must be addressed. **A student’s opportunity should not be determined by the color of their skin, their family income, or the neighborhood they grow up in.** Access to computer science education is improving, but in many regions or the United States, disparities in access still exist.
 
-<img src="https://images.code.org/55796825e8f6440c0f173512513ed235-image-1667243203402.06.00 PM.png" alt="text" style="padding-left:40px; height: 300px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/4893a9b328b7e2b5f9adfff834ac0c1a-image-1713984410599.46.21 AM.png" alt="A chart showing the percentage of public high school that offer foundational computer science by school year, geography, and school size." style="padding-left:0px; clear: both; margin: 0 20px 20px 0;">
 
 
-<img src="https://images.code.org/73d27eff2bad39aa2955b26df82c774b-image-1667243221636.05.33 PM.png" alt="text" style="padding-left:100px; height: 400px; clear: both; margin: 0 20px 20px 0;">
+<img src="https://images.code.org/f10370b33e99ff5e4319b6e45c269835-image-1713984424079.46.32 AM.png" alt="A chart showing access to computer science by race and ethnicity. " style="padding-left:0px; clear: both; margin: 0 20px 20px 0;">
 
 <div style="clear:both"/>
 
 #### <a href="https://advocacy.code.org/stateofcs" target="blank" rel="noopener noreferrer">Click here</a> and select your state handout to learn more about computer science access in your region. 
-
-
 MARKDOWN

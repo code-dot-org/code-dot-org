@@ -13,13 +13,14 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-01 18:47:40 UTC",
-    "published_state": null,
+    "serialized_at": "2024-08-27 22:25:34 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -1499,6 +1500,18 @@
       }
     },
     {
+      "name": "Create PT Prep Unit Slides",
+      "url": "https://docs.google.com/presentation/d/1ZrbWqbI3vLGUJgtYpkByMFP63Wm2knDgy6r_YEtjqnM/template/preview",
+      "key": "create_pt_prep_unit_slides",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "create_pt_prep_unit_slides"
+      }
+    },
+    {
       "name": "Create PT Survival Guide 23-24",
       "url": "https://docs.google.com/document/d/1TgVzXFCMqLLu8U2wHCWfj6rC9yUSBAWLOsdaEV8xxF8/edit?usp=sharing",
       "key": "create_pt_survival_guide_23-24",
@@ -1513,11 +1526,10 @@
     },
     {
       "name": "CSP Unit 9 - Lesson 1 - Deep Dive",
-      "url": "https://docs.google.com/presentation/d/1dsD-lgtWxLdsVx4w550hnI6S9kBVvE0wXGCUVz6CBXI/copy",
+      "url": "https://docs.google.com/presentation/d/1JS5mum0fYIPzMalI2BAj3z7OWcapT6cCx0vP03BYEXI/template/preview",
       "key": "csp_unit_9_-_lesson_1_-_deep_dive",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1dsD-lgtWxLdsVx4w550hnI6S9kBVvE0wXGCUVz6CBXI/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -1526,11 +1538,10 @@
     },
     {
       "name": "CSP Unit 9 - Lesson 2 - Make a Plan",
-      "url": "https://docs.google.com/presentation/d/1TbiwTPCsPiXrM_TJYZTuPR_ndhnCL2idVYl0EMKdU3c/copy",
+      "url": "https://docs.google.com/presentation/d/18xTvcFOYsOneiO_Dgm99FhFxaitTNhtEjSAClidvDok/template/preview",
       "key": "csp_unit_9_-_lesson_2_-_make_a_plan",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1TbiwTPCsPiXrM_TJYZTuPR_ndhnCL2idVYl0EMKdU3c/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -1539,15 +1550,24 @@
     },
     {
       "name": "CSP Unit 9 - Lesson 3 - Complete the Task",
-      "url": "https://docs.google.com/presentation/d/1YT1jYL6gbsKi_LbkpPzesdedQjvNzYWXXsY8_YuDpJU/copy",
+      "url": "https://docs.google.com/presentation/d/1f1CTBIYAY24GzUz0Z1nm2UseiDDatXzPEQcDAGk3jbg/template/preview",
       "key": "csp_unit_9_-_lesson_3_-_complete_the_task",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1YT1jYL6gbsKi_LbkpPzesdedQjvNzYWXXsY8_YuDpJU/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csp_unit_9_-_lesson_3_-_complete_the_task"
+      }
+    },
+    {
+      "name": "CSP Unit 9 - Slides",
+      "url": "https://docs.google.com/presentation/d/1ZrbWqbI3vLGUJgtYpkByMFP63Wm2knDgy6r_YEtjqnM/template/preview",
+      "key": "csp_unit_9_-_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_9_-_slides"
       }
     },
     {
@@ -1588,7 +1608,7 @@
     },
     {
       "name": "Unit 9 Lesson 4 - Create PT Mock Exam - Slides",
-      "url": "https://docs.google.com/presentation/d/1ndJrvTZB2rcUnV502a1KIuCoH21_b0IAPZtIpgnUInE/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1Rpvj3kbGbce1x9ednUVH1NSndvefY84s9Q5tU160-ac/template/preview",
       "key": "unit_9_lesson_4_-_create_pt_mock_exam_-_slides",
       "properties": {
         "audience": "Teacher",
@@ -1596,18 +1616,6 @@
       },
       "seeding_key": {
         "resource.key": "unit_9_lesson_4_-_create_pt_mock_exam_-_slides"
-      }
-    },
-    {
-      "name": "Why Should You Take The AP CSP Exam?",
-      "url": "https://drive.google.com/file/d/1g5t9kBhrNgXcM2US67CJy17f4JEfTevW/view?usp=drive_link",
-      "key": "why_should_you_take_the_ap_csp_exam_",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "why_should_you_take_the_ap_csp_exam_"
       }
     }
   ],
@@ -1670,6 +1678,12 @@
       "seeding_key": {
         "lesson.key": "Create PT Deep Dive",
         "resource.key": "ap_computer_science_principles_student_handouts"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Create PT Deep Dive",
+        "resource.key": "create_pt_prep_unit_slides"
       }
     },
     {
@@ -1748,6 +1762,12 @@
     },
     {
       "seeding_key": {
+        "resource.key": "csp_unit_9_-_slides",
+        "script.name": "csp9-2024"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "help_students_sign_up_for_the_ap_exam",
         "script.name": "csp9-2024"
       }
@@ -1766,12 +1786,7 @@
     }
   ],
   "scripts_student_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "why_should_you_take_the_ap_csp_exam_",
-        "script.name": "csp9-2024"
-      }
-    }
+
   ],
   "vocabularies": [
 

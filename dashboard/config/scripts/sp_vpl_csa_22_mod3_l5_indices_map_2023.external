@@ -12,7 +12,7 @@ Let’s look at the example below.
 
 To declare and initialize an array, we can write
 ```
-int topScores = {98, 96, 95, 94, 91};
+int topScores = [98, 96, 95, 94, 91];
 ```
 We can visualize this with a grid showing the index at the top, and the element stored in each position at the bottom. 
 

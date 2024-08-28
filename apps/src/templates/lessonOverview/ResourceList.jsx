@@ -1,18 +1,22 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {windowOpen} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
 import DropdownButton from '../DropdownButton';
-import Button from '../Button';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+
 import {
   isGDocsUrl,
   gDocsPdfUrl,
   gDocsMsOfficeUrl,
   gDocsCopyUrl,
 } from './googleDocsUtils';
+
 import style from './resource-list.module.scss';
 
 export default class ResourceList extends Component {

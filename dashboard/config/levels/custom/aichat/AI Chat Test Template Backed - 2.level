@@ -9,13 +9,14 @@
     "encrypted": "false",
     "aichat_settings": {
       "initialCustomizations": {
-        "botName": "",
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
         "temperature": 0.5,
         "systemPrompt": "",
         "retrievalContexts": [
 
         ],
         "modelCardInfo": {
+          "botName": "",
           "description": "",
           "intendedUse": "",
           "limitationsAndWarnings": "",
@@ -23,21 +24,24 @@
           "exampleTopics": [
 
           ],
-          "botName": ""
+          "isPublished": false
         }
       },
       "visibilities": {
-        "botName": "editable",
+        "selectedModelId": "readonly",
         "temperature": "editable",
         "systemPrompt": "editable",
         "retrievalContexts": "editable",
         "modelCardInfo": "editable"
       },
-      "hidePresentationPanel": false
+      "hidePresentationPanel": false,
+      "availableModelIds": [
+        "gen-ai-mistral-7b-inst-v01"
+      ]
     },
     "project_template_level_name": "Aichat Test - Template",
     "long_instructions": "Project Template Backed Level #2"
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-08 17:11:07 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2024-04-08 17:16:09 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2024-04-08 18:34:48 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2024-04-09 10:53:09 -0700\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-08 17:11:07 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2024-04-08 17:16:09 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2024-04-08 18:34:48 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2024-04-09 10:53:09 -0700\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2024-04-30 17:57:41 -0700\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"}]"
 }]]></config>
 </Aichat>

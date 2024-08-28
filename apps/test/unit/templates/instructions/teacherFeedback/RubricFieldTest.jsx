@@ -1,9 +1,7 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import {UnwrappedRubricField as RubricField} from '@cdo/apps/templates/instructions/teacherFeedback/RubricField';
-
-import {expect} from '../../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   showFeedbackInputAreas: true,
@@ -22,18 +20,18 @@ describe('RubricField', () => {
     const confirmCheckedRadioButton = wrapper
       .find('CheckedRadioButton')
       .first();
-    expect(confirmCheckedRadioButton.props().checked).to.equal(false);
+    expect(confirmCheckedRadioButton.props().checked).toBe(false);
 
     // Details
     const confirmDetails = wrapper.find('details').first();
-    expect(confirmDetails.contains('Extensive Evidence')).to.equal(true);
-    expect(confirmDetails.contains('exceeded expectations')).to.equal(true);
+    expect(confirmDetails.contains('Extensive Evidence')).toBe(true);
+    expect(confirmDetails.contains('exceeded expectations')).toBe(true);
   });
   it('does not have a CheckedRadioButton when showFeedbackInputAreas is false', () => {
     const wrapper = shallow(
       <RubricField {...DEFAULT_PROPS} showFeedbackInputAreas={false} />
     );
-    expect(wrapper.find('CheckedRadioButton')).to.have.lengthOf(0);
+    expect(wrapper.find('CheckedRadioButton')).toHaveLength(0);
   });
   it('has a radio button that is checked if currentlyChecked is true', () => {
     const wrapper = shallow(
@@ -43,7 +41,7 @@ describe('RubricField', () => {
     const confirmCheckedRadioButton = wrapper
       .find('CheckedRadioButton')
       .first();
-    expect(confirmCheckedRadioButton.props().checked).to.equal(true);
+    expect(confirmCheckedRadioButton.props().checked).toBe(true);
   });
   it('has a disabled radio button if disabledMode is true.', () => {
     const wrapper = shallow(
@@ -53,6 +51,6 @@ describe('RubricField', () => {
     const confirmCheckedRadioButton = wrapper
       .find('CheckedRadioButton')
       .first();
-    expect(confirmCheckedRadioButton.props().disabledMode).to.equal(true);
+    expect(confirmCheckedRadioButton.props().disabledMode).toBe(true);
   });
 });

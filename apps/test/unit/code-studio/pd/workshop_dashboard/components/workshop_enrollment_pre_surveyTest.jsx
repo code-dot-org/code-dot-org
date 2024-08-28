@@ -1,7 +1,7 @@
-import WorkshopEnrollmentPreSurvey from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_enrollment_pre_survey';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from 'chai';
+
+import WorkshopEnrollmentPreSurvey from '@cdo/apps/code-studio/pd/workshop_dashboard/components/workshop_enrollment_pre_survey';
 
 describe('WorkshopEnrollmentPreSurvey', () => {
   const fakeWorkshopDate = 'October 4th';
@@ -9,7 +9,7 @@ describe('WorkshopEnrollmentPreSurvey', () => {
   describe('getSortableUnitLessonShortName()', () => {
     let getSortableUnitLessonShortName;
 
-    before(() => {
+    beforeAll(() => {
       getSortableUnitLessonShortName = shallow(
         <WorkshopEnrollmentPreSurvey
           enrollments={[]}
@@ -19,12 +19,12 @@ describe('WorkshopEnrollmentPreSurvey', () => {
     });
 
     it('correctly zero-pads the supplied unitLessonShortName', () => {
-      expect(getSortableUnitLessonShortName('U1 L1')).to.equal('U0001 L0001');
-      expect(getSortableUnitLessonShortName('U2 L10')).to.equal('U0002 L0010');
+      expect(getSortableUnitLessonShortName('U1 L1')).toBe('U0001 L0001');
+      expect(getSortableUnitLessonShortName('U2 L10')).toBe('U0002 L0010');
     });
 
     it("returns empty string if it can't parse the supplied string", () => {
-      expect(getSortableUnitLessonShortName('unparseable')).to.equal('');
+      expect(getSortableUnitLessonShortName('unparseable')).toBe('');
     });
   });
 
@@ -33,7 +33,7 @@ describe('WorkshopEnrollmentPreSurvey', () => {
     let fakeEnrollments;
     let workshopEnrollmentPreSurvey;
     let tableRows;
-    before(() => {
+    beforeAll(() => {
       const generateFakeEnrollment = survey => {
         userIndex++;
         return {
@@ -97,14 +97,14 @@ describe('WorkshopEnrollmentPreSurvey', () => {
         .find('Table caption')
         .text();
       const expectedCaption = `On the pre-survey, attendees indicate where they predict they will be in the curriculum on ${fakeWorkshopDate}.`;
-      expect(tableCaption).to.eq(expectedCaption);
+      expect(tableCaption).toBe(expectedCaption);
     });
 
     it('Has the expected table column headers', () => {
       const columnHeaders = workshopEnrollmentPreSurvey
         .find('Table thead tr th')
         .map(h => h.text());
-      expect(columnHeaders).to.eql([
+      expect(columnHeaders).toEqual([
         '#',
         'First Name',
         'Last Name',
@@ -116,7 +116,7 @@ describe('WorkshopEnrollmentPreSurvey', () => {
     });
 
     it('Displays one table row for each enrollment', () => {
-      expect(tableRows).to.have.length(6);
+      expect(tableRows).toHaveLength(6);
     });
 
     it('Displays survey responses', () => {
@@ -125,7 +125,7 @@ describe('WorkshopEnrollmentPreSurvey', () => {
         .at(ROW_FULL_RESPONSE)
         .find('td')
         .map(td => td.text());
-      expect(responseCellText).to.eql([
+      expect(responseCellText).toEqual([
         `${ROW_FULL_RESPONSE + 1}`,
         fakeEnrollments[ROW_FULL_RESPONSE].first_name,
         fakeEnrollments[ROW_FULL_RESPONSE].last_name,
@@ -142,7 +142,7 @@ describe('WorkshopEnrollmentPreSurvey', () => {
         .at(ROW_NO_QUESTION)
         .find('td')
         .map(td => td.text());
-      expect(responseCellText).to.eql([
+      expect(responseCellText).toEqual([
         `${ROW_NO_QUESTION + 1}`,
         fakeEnrollments[ROW_NO_QUESTION].first_name,
         fakeEnrollments[ROW_NO_QUESTION].last_name,
@@ -159,7 +159,7 @@ describe('WorkshopEnrollmentPreSurvey', () => {
         .at(ROW_NO_RESPONSE)
         .find('td')
         .map(td => td.text());
-      expect(noResponseCellText).to.eql([
+      expect(noResponseCellText).toEqual([
         `${ROW_NO_RESPONSE + 1}`,
         fakeEnrollments[5].first_name,
         fakeEnrollments[5].last_name,
@@ -172,16 +172,16 @@ describe('WorkshopEnrollmentPreSurvey', () => {
 
     describe('Histogram chart', () => {
       let chart;
-      before(() => {
+      beforeAll(() => {
         chart = workshopEnrollmentPreSurvey.find('Chart');
       });
 
       it('Is a column chart', () => {
-        expect(chart.props().chartType).to.equal('ColumnChart');
+        expect(chart.props().chartType).toBe('ColumnChart');
       });
 
       it('Displays units and lessons in order', () => {
-        expect(chart.props().data).to.eql([
+        expect(chart.props().data).toEqual([
           ['Unit and Lesson', '# of Attendees'],
           ['U1 L1', 1],
           ['U1 L2', 1],

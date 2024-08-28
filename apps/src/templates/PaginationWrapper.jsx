@@ -1,9 +1,10 @@
 /** Pagination controls */
-import React, {Component} from 'react';
+import {Pagination} from '@react-bootstrap/pagination';
 import PropTypes from 'prop-types';
 import Radium, {Style} from 'radium'; // eslint-disable-line no-restricted-imports
+import React, {Component} from 'react';
+
 import color from '../util/color';
-import {Pagination} from '@react-bootstrap/pagination';
 
 /**
  * Pagination control for navigating between pages of a list.

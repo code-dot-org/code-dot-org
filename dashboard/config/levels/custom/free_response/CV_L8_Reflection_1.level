@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-04-19T17:52:26.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "# Training Computer Vision Models\r\n\r\n#### Can you explain how datasets like COCO and ImageNet are used in training computer vision models?\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 20662,
+    "name_suffix": "_2024",
+    "allow_multiple_attempts": "false",
+    "teacher_markdown": "Students should discuss the role of large image datasets in providing the labeled data necessary for training computer vision models to recognize and classify objects within images\r\n"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-04-19T17:52:26.767+00:00\",\"changed\":[\"cloned from \\\"CV_L7_Reflection_2\\\"\"],\"cloned_from\":\"CV_L7_Reflection_2\"},{\"changed_at\":\"2024-04-19 17:53:07 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-19 19:19:41 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

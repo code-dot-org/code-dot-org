@@ -1,31 +1,35 @@
+import classNames from 'classnames';
 import $ from 'jquery';
-import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import {connect} from 'react-redux';
-import ProtectedStatefulDiv from './ProtectedStatefulDiv';
-import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
-import PaneHeader, {PaneSection, PaneButton} from './PaneHeader';
-import i18n from '@cdo/locale';
-import commonStyles from '../commonStyles';
-import color from '../util/color';
-import * as utils from '@cdo/apps/utils';
-import {shouldUseRunModeIndicators} from '../redux/selectors';
-import SettingsCog from '../lib/ui/SettingsCog';
-import ShowCodeToggle from './ShowCodeToggle';
-import {singleton as studioApp} from '../StudioApp';
-import ProjectTemplateWorkspaceIcon from './ProjectTemplateWorkspaceIcon';
-import {queryParams} from '../code-studio/utils';
+
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
-import {closeWorkspaceAlert} from '../code-studio/projectRedux';
+import JsDebugger from '@cdo/apps/lib/tools/jsdebugger/JsDebugger';
 import styleConstants from '@cdo/apps/styleConstants';
-import classNames from 'classnames';
+import * as utils from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import SettingsCog from '../code-studio/components/SettingsCog';
+import {closeWorkspaceAlert} from '../code-studio/projectRedux';
+import {queryParams} from '../code-studio/utils';
+import commonStyles from '../commonStyles';
+import {shouldUseRunModeIndicators} from '../redux/selectors';
+import {singleton as studioApp} from '../StudioApp';
+import color from '../util/color';
+
+import PaneHeader, {PaneSection, PaneButton} from './PaneHeader';
+import ProjectTemplateWorkspaceIcon from './ProjectTemplateWorkspaceIcon';
+import ProtectedStatefulDiv from './ProtectedStatefulDiv';
+import ShowCodeToggle from './ShowCodeToggle';
 
 class CodeWorkspace extends React.Component {
   static propTypes = {
     displayNotStartedBanner: PropTypes.bool,
     displayOldVersionBanner: PropTypes.bool,
     inStartBlocksMode: PropTypes.bool,
+    inToolboxBlocksMode: PropTypes.bool,
     isRtl: PropTypes.bool.isRequired,
     editCode: PropTypes.bool.isRequired,
     readonlyWorkspace: PropTypes.bool.isRequired,
@@ -259,7 +263,9 @@ class CodeWorkspace extends React.Component {
             id="codeTextbox"
             className={classNames(
               this.props.pinWorkspaceToBottom ? 'pin_bottom' : '',
-              this.props.inStartBlocksMode ? 'has_banner' : ''
+              this.props.inStartBlocksMode || this.props.inToolboxBlocksMode
+                ? 'has_banner'
+                : ''
             )}
             canUpdate={true}
           >
@@ -291,6 +297,16 @@ class CodeWorkspace extends React.Component {
               {this.props.isProjectTemplateLevel
                 ? i18n.startBlocksTemplateWarning()
                 : i18n.inStartBlocksMode()}
+            </div>
+          </>
+        )}
+        {this.props.inToolboxBlocksMode && (
+          <>
+            <div
+              id="toolboxBlocksBanner"
+              style={{...styles.topBanner, ...styles.toolboxBlocksBanner}}
+            >
+              {i18n.inToolboxBlocksMode()}
             </div>
           </>
         )}
@@ -344,6 +360,9 @@ const styles = {
   startBlocksBanner: {
     backgroundColor: color.lighter_yellow,
   },
+  toolboxBlocksBanner: {
+    backgroundColor: color.lighter_teal,
+  },
   topBanner: {
     zIndex: 99,
     padding: 5,
@@ -382,6 +401,7 @@ export default connect(
     displayOldVersionBanner: state.pageConstants.displayOldVersionBanner,
     editCode: state.pageConstants.isDroplet,
     inStartBlocksMode: state.pageConstants.inStartBlocksMode,
+    inToolboxBlocksMode: state.pageConstants.inToolboxBlocksMode,
     isRtl: state.isRtl,
     readonlyWorkspace: state.pageConstants.isReadOnlyWorkspace,
     isRunning: !!state.runState.isRunning,

@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
+
 import ContentContainer from './ContentContainer';
 import ResourceCardResponsiveContainer from './studioHomepages/ResourceCardResponsiveContainer';
-import VerticalImageResourceCard from './VerticalImageResourceCard';
 import shapes from './studioHomepages/shapes';
+import VerticalImageResourceCard from './VerticalImageResourceCard';
 
 /**
  * A responsive row of 3 VerticalImageResourceCards, that stack on mobile.

@@ -1,0 +1,24 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2024-05-06T17:18:05.000Z",
+  "level_num": "custom",
+  "user_id": 155,
+  "properties": {
+    "video_key": "csd_weblab_css_2",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 20023,
+    "name_suffix": "_CSD-PL-24",
+    "display_name": "Video: Intro to CSS Part 2",
+    "long_instructions": "#### This video is included in the CS Discoveries curriculum. \r\n\r\n#### As you watch the video, consider the following:\r\n\r\n* #### How does the web page know what stylesheet it should be using?",
+    "encrypted": "false"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-06T17:18:05.254+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-Video: Intro to CSS Part 2_-csd-2023\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-Video: Intro to CSS Part 2_-csd-2023\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

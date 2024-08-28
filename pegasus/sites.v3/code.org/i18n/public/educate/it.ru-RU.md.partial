@@ -17,9 +17,11 @@ theme: responsive
 
 ## Минимальные поддерживаемые браузеры и платформы
 
+Начиная с июля 2024 года мы обновим минимальные версии, необходимые для браузеров и операционных систем. Хотя старые версии все еще могут работать, мы не сможем удовлетворить запросы на исправление ошибок в старых версиях.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Браузер
@@ -40,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Браузер, июль '24
+        </th>
+        <tr>
+          <td>Хром 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Мобильный браузер Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Edge 119.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Платформа
@@ -62,8 +86,30 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Платформа 24 июля
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Виндовс 8</td>
+        </tr>
+        <tr>
+          <td>Андроид 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Какие сайты нужно разблокировать
@@ -80,16 +126,15 @@ theme: responsive
 | **Для использования интернет-симулятора**                                                                      | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Для использования Web Lab**                                                                                  | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Для использования кнопки Google Classroom Share**                                                            | `https://apis.google.com`                                                                                  |
-| **Для использования наборов данных App Lab**                                                                   | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Информация о поддержке мобильных устройств и планшетов
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Большинство планшетов не поддерживаются, за исключением перечисленных ниже:
+Все курсы CS Discoveries, CS Principles, CS A и Intro to App Lab несовместимы с планшетами или мобильными устройствами — требуется полноценная клавиатура и мышь (или сенсорная панель). Большинство планшетов не поддерживаются, за исключением перечисленных ниже:
 
 - Microsoft Surface Pro с внешней клавиатурой
 - iPad на ОС iPadOS 13.4 или более поздней версии с внешней клавиатурой и внешней мышью или сенсорной панелью
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+Все остальные материалы, такие как курсы K-5 («Основы компьютерных наук») и задания «Час программирования», совместимы с iPad и другими современными планшетами, ноутбуками или настольными компьютерами.
 
 ### Мобильные телефоны
 
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+Этот проигрыватель используется на протяжении всего учебного курса. Он пытается показать видео через YouTube а если YouTube заблокирован, он переключится на резервное видео, размещенное на Code.org.
 
 ### Видео не воспроизводится?
 
-If video does not work, you can email us at support@code.org.
+Если видео не воспроизводится, напишите в нашу службу поддержки по адресу support@code.org.
 
-However, you can still use our tutorials without video.
+В любом случае, вы можете проводить уроки без видео.
 
 1. Вы также можете [скачать все наши видео](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). Если в вашей школе низкая скорость интернета, мы рекомендуем вам скачать видео и показывать их учащимся на общем экране.
 2. В уроках вы можете увидеть зеленый значок скачиванияi <img src="/images/green-download.png" width=25 height=25 /> у каждого видео, который указывает, что учащиеся могут самостоятельно скачать отдельные обучающие видео.
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## Специальные настройки для пользователей Google Apps/G-Suite
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+Если вы являетесь администратором G-suite, обязательно проверьте настройки ограничений для YouTube. Если вы установили параметр «Строгий ограниченный доступ к YouTube» или если вы видите сообщения о том, что «это видео было ограничено», добавьте наш канал в список одобренных каналов. Чтобы узнать, как добавить наш канал в список одобренных каналов, см. [это руководство](https://support.google.com/a/answer/6245597) от Google. Вы также можете просмотреть [это руководство](https://support.google.com/a/answer/6212415?hl=ru), чтобы узнать больше о разных настройках и о том, какие из них лучше подойдут для вашего класса.
 
 ## Есть другие вопросы?
 
-We'll help you out - just email us at support@code.org!
+Мы поможем вам — просто напишите нам по адресу support@code.org!

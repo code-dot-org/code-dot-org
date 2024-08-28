@@ -2,14 +2,15 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
+import {connect} from 'react-redux';
+
+import msg from '@cdo/locale';
+
+import ToggleGroup from '../templates/ToggleGroup';
 
 import {ApplabInterfaceMode} from './constants';
-import msg from '@cdo/locale';
 import {actions} from './redux/applab';
-import {connect} from 'react-redux';
 import ScreenSelector from './ScreenSelector';
-import ToggleGroup from '../templates/ToggleGroup';
-import {isDatablockStorage} from '../storage/storage';
 
 class PlaySpaceHeader extends React.Component {
   static propTypes = {
@@ -28,22 +29,6 @@ class PlaySpaceHeader extends React.Component {
     onScreenCreate: PropTypes.func.isRequired,
     onInterfaceModeChange: PropTypes.func.isRequired,
   };
-
-  // Visually flag that a project is part of the Datablock Storage experiment
-  // by squaring the otherwise rounded-on-the-right corners of the [Data] tab.
-  //
-  // Why? We are gradually rolling out Datablock Storage in a small percentage
-  // of Applab projects. For bug triage, we need a quick way for CS to identify
-  // projects using Datablock Storage that is likely to be recognizable even if
-  // screenshots are taken with a cell phone, or cropped.
-  //
-  // TODO: post-firebase-cleanup, remove this method, #56994
-  squareCornersIfUsingDatablockStorage() {
-    const STYLE_TO_FLAG_DATABLOCK_STORAGE = {
-      borderRadius: 0,
-    };
-    return isDatablockStorage() ? STYLE_TO_FLAG_DATABLOCK_STORAGE : {};
-  }
 
   render() {
     let leftSide, rightSide;
@@ -74,7 +59,6 @@ class PlaySpaceHeader extends React.Component {
               type="button"
               id="dataModeButton"
               value={ApplabInterfaceMode.DATA}
-              style={this.squareCornersIfUsingDatablockStorage()}
             >
               {msg.dataMode()}
             </button>

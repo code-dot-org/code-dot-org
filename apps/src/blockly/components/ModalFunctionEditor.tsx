@@ -1,15 +1,17 @@
+import classNames from 'classnames';
 import React from 'react';
+import {useSelector} from 'react-redux';
+
 import {
   MODAL_EDITOR_ID,
   MODAL_EDITOR_DELETE_ID,
   MODAL_EDITOR_CLOSE_ID,
 } from '@cdo/apps/blockly/addons/functionEditorConstants';
-import moduleStyles from './modal-function-editor.module.scss';
-import classNames from 'classnames';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {commonI18n} from '@cdo/apps/types/locale';
-import {useSelector} from 'react-redux';
 import color from '@cdo/apps/util/color';
+
+import moduleStyles from './modal-function-editor.module.scss';
 
 export default function ModalFunctionEditor() {
   const isRtl = useSelector((state: {isRtl: boolean}) => state.isRtl);

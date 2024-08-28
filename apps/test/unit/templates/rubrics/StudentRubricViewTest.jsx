@@ -1,9 +1,7 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import StudentRubricView from '@cdo/apps/templates/rubrics/StudentRubricView';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 describe('StudentRubricView', () => {
   const defaultRubric = {
@@ -36,16 +34,16 @@ describe('StudentRubricView', () => {
   it('shows learning goals', () => {
     const wrapper = shallow(<StudentRubricView rubric={defaultRubric} />);
     const renderedLearningGoals = wrapper.find('LearningGoal');
-    expect(renderedLearningGoals).to.have.lengthOf(2);
-    expect(
-      renderedLearningGoals.at(0).props().learningGoal.learningGoal
-    ).to.equal('goal 1');
-    expect(renderedLearningGoals.at(0).props().canProvideFeedback).to.be.false;
-    expect(
-      renderedLearningGoals.at(1).props().learningGoal.learningGoal
-    ).to.equal('goal 2');
-    expect(renderedLearningGoals.at(1).props().canProvideFeedback).to.be.false;
-    expect(renderedLearningGoals.at(1).props().isStudent).to.be.true;
+    expect(renderedLearningGoals).toHaveLength(2);
+    expect(renderedLearningGoals.at(0).props().learningGoal.learningGoal).toBe(
+      'goal 1'
+    );
+    expect(renderedLearningGoals.at(0).props().canProvideFeedback).toBe(false);
+    expect(renderedLearningGoals.at(1).props().learningGoal.learningGoal).toBe(
+      'goal 2'
+    );
+    expect(renderedLearningGoals.at(1).props().canProvideFeedback).toBe(false);
+    expect(renderedLearningGoals.at(1).props().isStudent).toBe(true);
   });
 
   it('passes evaluation down to learning goals', async () => {
@@ -70,19 +68,19 @@ describe('StudentRubricView', () => {
     );
 
     const renderedLearningGoals = wrapper.find('LearningGoal');
-    expect(renderedLearningGoals).to.have.lengthOf(2);
+    expect(renderedLearningGoals).toHaveLength(2);
     expect(
       renderedLearningGoals.at(0).props().submittedEvaluation.understanding
-    ).to.equal(2);
+    ).toBe(2);
     expect(
       renderedLearningGoals.at(0).props().submittedEvaluation.feedback
-    ).to.equal('feedback for learning goal 1');
+    ).toBe('feedback for learning goal 1');
 
     expect(
       renderedLearningGoals.at(1).props().submittedEvaluation.understanding
-    ).to.equal(3);
+    ).toBe(3);
     expect(
       renderedLearningGoals.at(1).props().submittedEvaluation.feedback
-    ).to.equal('feedback for learning goal 2');
+    ).toBe('feedback for learning goal 2');
   });
 });

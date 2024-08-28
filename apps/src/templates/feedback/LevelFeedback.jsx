@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
-import {levelFeedbackType} from './types';
-import LevelFeedbackEntry from '@cdo/apps/templates/feedback/LevelFeedbackEntry';
-import Button from '@cdo/apps/templates/Button';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import LevelFeedbackEntry from '@cdo/apps/templates/feedback/LevelFeedbackEntry';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import {levelFeedbackType} from './types';
 
 function LevelFeedback({
   lessonName,

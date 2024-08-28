@@ -1,14 +1,16 @@
+import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/templates/Button';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
-import {canShowGoogleShareButton} from './googlePlatformApiRedux';
+import i18n from '@cdo/locale';
+
 import GoogleClassroomShareButton from './GoogleClassroomShareButton';
+import {canShowGoogleShareButton} from './googlePlatformApiRedux';
 
 class SendLessonDialog extends Component {
   static propTypes = {

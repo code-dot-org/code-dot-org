@@ -1,16 +1,17 @@
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
 
 import isRtl, {setRtl} from '@cdo/apps/code-studio/isRtlRedux';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
 
+// eslint-disable-next-line no-restricted-imports
 import {
   expect,
   // assert
-} from '../../../util/reconfiguredChai';
+} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 import {courses} from './homepagesTestData';
 

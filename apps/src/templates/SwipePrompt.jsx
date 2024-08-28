@@ -1,7 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
 import cookies from 'js-cookie';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
+
 import {dismissSwipeOverlay} from '@cdo/apps/templates/arrowDisplayRedux';
 import trackEvent from '@cdo/apps/util/trackEvent';
 

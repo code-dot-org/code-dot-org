@@ -6,7 +6,7 @@
 
 #special-levels.in.collapse
   -# Dance and Spritelab are special types of Gamelab levels
-  - if @level.is_a?(Gamelab) || @level.is_a?(Applab) || @level.is_a?(Weblab) || @level.is_a?(FreeResponse) || @level.is_a?(Javalab)
+  - if @level.is_a?(Gamelab) || @level.is_a?(Applab) || @level.is_a?(Weblab) || @level.is_a?(FreeResponse) || @level.is_a?(Javalab) || @level.is_a?(Pythonlab)
     = render partial: 'levels/editors/fields/checkboxes', locals: {f: f, field_name: :submittable, description: "Submittable"}
     %p
       If checked, students with teachers can "submit" a solution for
@@ -26,7 +26,7 @@
         %li For users: The coding workspace, design mode, data mode, the reset button, and sharing are all disabled.
         %li For levelbuilders: The coding workspace and design mode are available in start mode.
 
-  - if (@level.is_a?(Blockly) || @level.is_a?(Weblab) || @level.is_a?(Javalab) || @level.is_a?(Aichat))
+  - if (@level.is_a?(Blockly) || @level.is_a?(Weblab) || @level.is_a?(Javalab) || @level.is_a?(Aichat)) || @level.is_a?(Pythonlab)
     .field
       = f.label :project_template_level_name, 'Project Template Level Name'
       %p What this does:

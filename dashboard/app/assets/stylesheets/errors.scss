@@ -101,6 +101,13 @@
     font-size: 28px;
     line-height: 1.2em;
   }
+
+  a {
+    &.design-system-btn {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+  }
 }
 
 #lti-unsupported-message-type.error-page {

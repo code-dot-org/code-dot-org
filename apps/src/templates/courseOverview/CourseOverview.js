@@ -1,39 +1,44 @@
+import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import $ from 'jquery';
 import {connect} from 'react-redux';
+
+import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
+import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
+import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import CourseScript from './CourseScript';
-import CourseOverviewTopRow from './CourseOverviewTopRow';
-import {resourceShape} from '@cdo/apps/lib/levelbuilder/shapes';
+import fontConstants from '@cdo/apps/fontConstants';
+import {resourceShape} from '@cdo/apps/levelbuilder/shapes';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import Notification, {
+  NotificationType,
+} from '@cdo/apps/sharedComponents/Notification';
 import styleConstants from '@cdo/apps/styleConstants';
-import VerifiedResourcesNotification from './VerifiedResourcesNotification';
-import * as utils from '../../utils';
-import {queryParams} from '../../code-studio/utils';
-import i18n from '@cdo/locale';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
+import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
+import {
+  assignmentCourseVersionShape,
+  sectionForDropdownShape,
+} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import color from '@cdo/apps/util/color';
 import {
   onDismissRedirectDialog,
   dismissedRedirectDialog,
   onDismissRedirectWarning,
   dismissedRedirectWarning,
 } from '@cdo/apps/util/dismissVersionRedirect';
-import RedirectDialog from '@cdo/apps/code-studio/components/RedirectDialog';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
-import color from '@cdo/apps/util/color';
-import fontConstants from '@cdo/apps/fontConstants';
-import {
-  assignmentCourseVersionShape,
-  sectionForDropdownShape,
-} from '@cdo/apps/templates/teacherDashboard/shapes';
-import AssignmentVersionSelector from '@cdo/apps/templates/teacherDashboard/AssignmentVersionSelector';
-import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
-import {sectionsForDropdown} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import i18n from '@cdo/locale';
+
+import {queryParams} from '../../code-studio/utils';
+import * as utils from '../../utils';
 import SafeMarkdown from '../SafeMarkdown';
-import Announcements from '@cdo/apps/code-studio/components/progress/Announcements';
-import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+
+import CourseOverviewTopRow from './CourseOverviewTopRow';
+import CourseScript from './CourseScript';
+import VerifiedResourcesNotification from './VerifiedResourcesNotification';
 
 class CourseOverview extends Component {
   static propTypes = {
@@ -82,7 +87,8 @@ class CourseOverview extends Component {
         EVENTS.COURSE_OVERVIEW_PAGE_VISITED_BY_TEACHER_EVENT,
         {
           'unit group name': props.name,
-        }
+        },
+        PLATFORMS.BOTH
       );
     }
   }

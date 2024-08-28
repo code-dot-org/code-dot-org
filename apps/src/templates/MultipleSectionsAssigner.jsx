@@ -2,22 +2,21 @@ import PropTypes from 'prop-types';
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 
-import i18n from '@cdo/locale';
-import Button from '@cdo/apps/templates/Button';
-import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
-import {
-  assignToSection,
-  unassignSection,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
-import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-
+import Checkbox from '@cdo/apps/componentLibrary/checkbox';
 import {
   Heading3,
   Heading5,
   BodyTwoText,
 } from '@cdo/apps/componentLibrary/typography';
-import Checkbox from '@cdo/apps/componentLibrary/checkbox';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
+import {sectionForDropdownShape} from '@cdo/apps/templates/teacherDashboard/shapes';
+import {
+  assignToSection,
+  unassignSection,
+} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import i18n from '@cdo/locale';
 
 import moduleStyle from './multiple-sections-assigner.module.scss';
 

@@ -1,11 +1,13 @@
-import React, {useEffect, useMemo, useState} from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import {reportingDataShape, rubricShape} from './rubricShapes';
-import Button from '@cdo/apps/templates/Button';
-import {RubricAiEvaluationStatus} from '@cdo/apps/util/sharedConstants';
+import React, {useEffect, useMemo, useState} from 'react';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {RubricAiEvaluationStatus} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
+import {reportingDataShape, rubricShape} from './rubricShapes';
 
 export const STATUS = {
   // we are waiting for initial status from the server
@@ -28,6 +30,10 @@ export const STATUS = {
   PII_ERROR: 'pii_error',
   // profanity present in code
   PROFANITY_ERROR: 'profanity_error',
+  // request too large
+  REQUEST_TOO_LARGE: 'request_too_large',
+  // teacher exceeded limit of evaluations per student project
+  TEACHER_LIMIT_EXCEEDED: 'teacher_limit_exceeded',
 };
 
 const fetchAiEvaluationStatus = (rubricId, studentUserId) => {
@@ -86,6 +92,14 @@ export default function RunAIAssessmentButton({
               data.status === RubricAiEvaluationStatus.PROFANITY_VIOLATION
             ) {
               setStatus(STATUS.PROFANITY_ERROR);
+            } else if (
+              data.status === RubricAiEvaluationStatus.REQUEST_TOO_LARGE
+            ) {
+              setStatus(STATUS.REQUEST_TOO_LARGE);
+            } else if (
+              data.status === RubricAiEvaluationStatus.TEACHER_LIMIT_EXCEEDED
+            ) {
+              setStatus(STATUS.TEACHER_LIMIT_EXCEEDED);
             } else {
               setStatus(STATUS.READY);
             }
@@ -124,6 +138,14 @@ export default function RunAIAssessmentButton({
                 data.status === RubricAiEvaluationStatus.PROFANITY_VIOLATION
               ) {
                 setStatus(STATUS.PROFANITY_ERROR);
+              } else if (
+                data.status === RubricAiEvaluationStatus.REQUEST_TOO_LARGE
+              ) {
+                setStatus(STATUS.REQUEST_TOO_LARGE);
+              } else if (
+                data.status === RubricAiEvaluationStatus.TEACHER_LIMIT_EXCEEDED
+              ) {
+                setStatus(STATUS.TEACHER_LIMIT_EXCEEDED);
               }
             });
           }

@@ -1,6 +1,5 @@
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
 import {
   blankStudentTransfer,
@@ -8,9 +7,7 @@ import {
   TransferStatus,
 } from '@cdo/apps/templates/manageStudents/manageStudentsRedux';
 import {UnconnectedMoveStudents as MoveStudents} from '@cdo/apps/templates/manageStudents/MoveStudents';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
-
-import {expect} from '../../../util/reconfiguredChai';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
 const studentData = [
   {id: 1, name: 'studentb'},
@@ -31,9 +28,9 @@ describe('MoveStudents', () => {
   let DEFAULT_PROPS;
 
   beforeEach(() => {
-    updateStudentTransfer = sinon.spy();
-    transferStudents = sinon.spy();
-    cancelStudentTransfer = sinon.spy();
+    updateStudentTransfer = jest.fn();
+    transferStudents = jest.fn();
+    cancelStudentTransfer = jest.fn();
     DEFAULT_PROPS = {
       studentData,
       transferData: blankStudentTransfer,
@@ -49,9 +46,9 @@ describe('MoveStudents', () => {
   it('renders only movable sections in dropdown', () => {
     const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
     let dropdownOptions = wrapper.instance().getOptions();
-    expect(dropdownOptions).to.have.length(2);
-    expect(dropdownOptions[0].name).to.equal('sectiond');
-    expect(dropdownOptions[1].name).to.equal('Other teacher');
+    expect(dropdownOptions).toHaveLength(2);
+    expect(dropdownOptions[0].name).toBe('sectiond');
+    expect(dropdownOptions[1].name).toBe('Other teacher');
   });
 
   it('renders additional inputs if other teacher is selected', () => {
@@ -65,7 +62,7 @@ describe('MoveStudents', () => {
 
     wrapper.instance().openDialog();
     wrapper.update();
-    expect(wrapper.find('#uitest-other-teacher').exists()).to.be.true;
+    expect(wrapper.find('#uitest-other-teacher').exists()).toBe(true);
   });
 
   it('calls transferStudents on submit', () => {
@@ -78,17 +75,17 @@ describe('MoveStudents', () => {
       <MoveStudents {...DEFAULT_PROPS} transferData={transferData} />
     );
 
-    expect(transferStudents).not.to.have.been.called;
+    expect(transferStudents).not.toHaveBeenCalled();
     wrapper.instance().transfer();
-    expect(transferStudents).to.have.been.calledOnce;
+    expect(transferStudents).toHaveBeenCalledTimes(1);
   });
 
   it('calls cancelStudentTransfer on close', () => {
     const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
 
-    expect(cancelStudentTransfer).not.to.have.been.called;
+    expect(cancelStudentTransfer).not.toHaveBeenCalled();
     wrapper.instance().closeDialog();
-    expect(cancelStudentTransfer).to.have.been.calledOnce;
+    expect(cancelStudentTransfer).toHaveBeenCalledTimes(1);
   });
 
   it('renders an error message if the transfer status is fail', () => {
@@ -102,20 +99,20 @@ describe('MoveStudents', () => {
 
     wrapper.find('Button').simulate('click');
     const errorElement = wrapper.find('#uitest-error');
-    expect(errorElement.exists()).to.be.true;
-    expect(errorElement.text()).to.equal(transferStatus.error);
+    expect(errorElement.exists()).toBe(true);
+    expect(errorElement.text()).toBe(transferStatus.error);
   });
 
   it('toggleStudentSelected calls updateStudentTransfer with an updated set of IDs', () => {
     const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
     wrapper.instance().toggleStudentSelected(1);
-    expect(updateStudentTransfer).to.have.been.calledWith({studentIds: [1]});
+    expect(updateStudentTransfer).toHaveBeenCalledWith({studentIds: [1]});
   });
 
   it('toggleStudentSelected adds a missing ID', () => {
     const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
     wrapper.instance().toggleStudentSelected(1);
-    expect(updateStudentTransfer).to.have.been.calledWith({studentIds: [1]});
+    expect(updateStudentTransfer).toHaveBeenCalledWith({studentIds: [1]});
   });
 
   it('toggleStudentSelected removes an existing ID', () => {
@@ -123,13 +120,13 @@ describe('MoveStudents', () => {
     const props = {...DEFAULT_PROPS, transferData: studentTransfer};
     const wrapper = mount(<MoveStudents {...props} />);
     wrapper.instance().toggleStudentSelected(1);
-    expect(updateStudentTransfer).to.have.been.calledWith({studentIds: []});
+    expect(updateStudentTransfer).toHaveBeenCalledWith({studentIds: []});
   });
 
   it('toggleAll true adds all IDs', () => {
     const wrapper = mount(<MoveStudents {...DEFAULT_PROPS} />);
     wrapper.instance().toggleAll(true);
-    expect(updateStudentTransfer).to.have.been.calledWith({
+    expect(updateStudentTransfer).toHaveBeenCalledWith({
       studentIds: [1, 3, 0],
     });
   });
@@ -139,6 +136,6 @@ describe('MoveStudents', () => {
     const props = {...DEFAULT_PROPS, transferData: studentTransfer};
     const wrapper = mount(<MoveStudents {...props} />);
     wrapper.instance().toggleAll(false);
-    expect(updateStudentTransfer).to.have.been.calledWith({studentIds: []});
+    expect(updateStudentTransfer).toHaveBeenCalledWith({studentIds: []});
   });
 });

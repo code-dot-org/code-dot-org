@@ -1,0 +1,25 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2024-04-19T17:14:44.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "####Setting sprite types\n\nSetting a sprite’s type determines how it interacts with other sprites. \n\nSprites can be set to either **player** type or **environment** type. For example, **player** sprites are able to jump, while **environment** sprites stop other sprites from moving through them.",
+        "imageUrl": "https://images.code.org/4de92b04b3a637d2bd6c7fcdc0bd052e-typesPanel.gif",
+        "key": "game_new_panel-dcd59a3f-edf7-45b3-af02-d61f32eb3e58"
+      },
+      {
+        "text": "####Environment sprites:\n- Stop all other sprites from moving\n\n<img src=\"https://images.code.org/53d9d2dc7654fda0de590191b6b69935-image-1712165117321.jpg\" style=\"margin-right: 40px; width: 75%\">",
+        "imageUrl": "https://images.code.org/3994599cf40d84d29e2f3e424d70938f-environmentPanel.gif",
+        "key": "game_new_panel-e5efed81-986d-4e21-8002-fc66f595b1e0"
+      }
+    ]
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-04-19T17:14:44.447+00:00\",\"changed\":[\"cloned from \\\"game_development_sprites_type_panel\\\"\"],\"cloned_from\":\"game_development_sprites_type_panel\"}]"
+}]]></config>
+</Panels>

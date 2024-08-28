@@ -1,0 +1,19 @@
+{
+  "key": "k5-ai-data",
+  "display_name": "How AI Makes Decisions",
+  "is_featured": false,
+  "assignable": true,
+  "curriculum_type": "Module",
+  "marketing_initiative": "CSC",
+  "grade_levels": "3,4,5",
+  "header": "csc",
+  "image": "https://images.code.org/7d69ce847bb8ee46b875dd2313ce980f-intro-k5-ai.png",
+  "cs_topic": "artificial_intelligence,data",
+  "school_subject": null,
+  "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"ideal\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
+  "description": null,
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null,
+  "self_paced_pl_course_offering_key": "elementaryai"
+}

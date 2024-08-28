@@ -555,16 +555,20 @@ Artist.prototype.afterInject_ = function (config) {
   visualization.appendChild(this.visualization.displayCanvas);
 
   if (this.studioApp_.isUsingBlockly() && this.isFrozenSkin()) {
+    // Google Blockly uses forBlock, CDO Blockly does not.
+    const blockGeneratorFunctionDictionary =
+      Blockly.JavaScript.forBlock || Blockly.JavaScript;
     // Override colour_random to only generate random colors from within our frozen
     // palette
-    Blockly.JavaScript.colour_random = function () {
+    blockGeneratorFunctionDictionary.colour_random = function () {
       // Generate a random colour.
       if (!Blockly.JavaScript.definitions_.colour_random) {
         var functionName = Blockly.JavaScript.variableDB_.getDistinctName(
           'colour_random',
           Blockly.Generator.NAME_TYPE
         );
-        Blockly.JavaScript.colour_random.functionName = functionName;
+        blockGeneratorFunctionDictionary.colour_random.functionName =
+          functionName;
         var func = [];
         func.push('function ' + functionName + '() {');
         func.push(
@@ -574,7 +578,8 @@ Artist.prototype.afterInject_ = function (config) {
         func.push('}');
         Blockly.JavaScript.definitions_.colour_random = func.join('\n');
       }
-      var code = Blockly.JavaScript.colour_random.functionName + '()';
+      var code =
+        blockGeneratorFunctionDictionary.colour_random.functionName + '()';
       return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
     };
   }
@@ -637,10 +642,9 @@ Artist.prototype.drawLogOnCanvas = function (log, canvas) {
  * Evaluates blocks or code, and draws onto given canvas.
  */
 Artist.prototype.drawBlocksOnCanvas = function (blocksOrCode, canvas) {
-  var code;
+  let code;
   if (this.studioApp_.isUsingBlockly()) {
-    var domBlocks = Blockly.Xml.textToDom(blocksOrCode);
-    code = Blockly.Generator.xmlToCode('JavaScript', domBlocks);
+    code = Blockly.cdoUtils.getCodeFromBlockXmlSource(blocksOrCode);
   } else {
     code = blocksOrCode;
   }
@@ -893,13 +897,10 @@ Artist.prototype.execute = function (executionInfo) {
   if (this.level.editCode) {
     this.initInterpreter();
   } else {
-    let codeBlocks = Blockly.mainBlockSpace.getTopBlocks(true);
-    if (this.studioApp_.initializationBlocks) {
-      codeBlocks = this.studioApp_.initializationBlocks.concat(codeBlocks);
-    }
-
-    this.code = Blockly.Generator.blocksToCode('JavaScript', codeBlocks);
-    this.evalCode(this.code, executionInfo);
+    const code = Blockly.cdoUtils.getAllGeneratedCode(
+      this.studioApp_.initializationCode
+    );
+    this.evalCode(code, executionInfo);
   }
 
   // api.log now contains a transcript of all the user's actions.

@@ -10,10 +10,10 @@ markdown <<MARKDOWN
 ## Educator’s Choice
 
 #### Choose an education-focused AI tool from the list below or take this time to explore another one you’ve heard about. Make an account as needed and try out some of the features.
-* #### <a href="https://www.magicschool.ai/">MagicSchool AI</a>
-* #### <a href="https://schoolai.com/">SchoolAI</a>
-* #### <a href="https://web.diffit.me/">Diffit</a>
-* #### <a href="https://www.khanmigo.ai/">Khanmigo</a>
+* #### <a href="https://www.magicschool.ai/" target="_blank">MagicSchool AI</a>
+* #### <a href="https://schoolai.com/" target="_blank">SchoolAI</a>
+* #### <a href="https://web.diffit.me/" target="_blank">Diffit</a>
+* #### <a href="https://www.khanmigo.ai/" target="_blank">Khanmigo</a>
 
 #### **Note:** Some of these tools are free and available to everyone, some require a login, and some are paid. As this technology is developing rapidly we are unable to provide guidance on which tools fall into each category. If you’re unhappy with one tool, try another.
 
@@ -25,7 +25,7 @@ markdown <<MARKDOWN
     <p>
 
 #### Start with Diffit, a tool specifically designed to differentiate text.
-* #### Go to https://beta.diffit.me/#topic.
+* #### Go to <a href="https://web.diffit.me/" target="_blank">Diffit</a>.
 * #### Copy and paste a reading from a recent lesson plan or any news article.
 * #### Choose the reading level to differentiate it to and/or language to translate it into.
 * #### Click “Generate Resource”.

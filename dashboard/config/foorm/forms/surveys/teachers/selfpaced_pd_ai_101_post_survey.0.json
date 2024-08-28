@@ -1,0 +1,180 @@
+{
+  "title": "Post-module survey",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "header",
+          "html": "<h1>Code.org AI 101 Self-paced Online Professional Learning for Educators</h1><p><strong>Welcome to the program!</strong></p>\n\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org and our Regional Partners for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>AI 101 For Educators: Post-Module Survey</h2>"
+        },
+        {
+          "type": "rating",
+          "name": "confidence_use_ai",
+          "title": "After completing this module, do you feel more or less confident than before about using AI in your school or classroom?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Less confident",
+          "maxRateDescription": "Much more confident"
+        },
+        {
+          "type": "rating",
+          "name": "content_relevant_role",
+          "title": "Was the content of the module relevant to your role?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not relevant at all",
+          "maxRateDescription": "Extremely relevant"
+        },
+        {
+          "type": "rating",
+          "name": "nps_self_paced_pd_ai_101",
+          "title": "How likely are you to recommend the AI 101 Self-Paced Professional Learning experience to other educators?",
+          "rateCount": 11,
+          "rateMin": 0,
+          "rateMax": 10,
+          "minRateDescription": "Not likely at all",
+          "maxRateDescription": "Extremely likely"
+        },
+        {
+          "type": "radiogroup",
+          "name": "plan_use_content_learned",
+          "title": "Are you planning to use what you learned in this module in your role as an educator?",
+          "choices": [
+            {
+              "value": "yes_already_did",
+              "text": "Yes, I already did"
+            },
+            {
+              "value": "yes_plan",
+              "text": "Yes, I plan to use what I learned"
+            },
+            {
+              "value": "not_relevant",
+              "text": "No, I didn’t find it relevant to my classroom/role"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "selfpaced_pd_ai_101_barriers_implementation",
+          "title": "What are the main barriers to using what you’ve learned?",
+          "description": "(Select all that apply)",
+          "choices": [
+            {
+              "value": "none",
+              "text": "None"
+            },
+            {
+              "value": "application_unclear",
+              "text": "It is not clear to me how to apply what I’ve learned"
+            },
+            {
+              "value": "school_discouraged_use",
+              "text": "AI use has been discouraged in my school/district"
+            },
+            {
+              "value": "need_learn_more",
+              "text": "I need to learn more about AI before using it in my classroom/role"
+            },
+            {
+              "value": "need_more_practice",
+              "text": "I need more practice on my own before using it in my classroom/role"
+            },
+            {
+              "value": "lack_access_ai_tools",
+              "text": "My school restricts access to AI tools"
+            },
+            {
+              "value": "lack_school_ai_policy",
+              "text": "My school doesn't have clear guidance or policies around using and teaching about AI"
+            },
+            {
+              "value": "other",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "how_long_to_complete",
+          "title": "How long did it take you to complete this professional learning experience?",
+          "choices": [
+            {
+              "value": "00_30",
+              "text": "Fewer than 30 minutes"
+            },
+            {
+              "value": "30_60",
+              "text": "Between 30 minutes and 60 minutes"
+            },
+            {
+              "value": "60_90",
+              "text": "Between 60 minutes and 90 minutes"
+            },
+            {
+              "value": "90_120",
+              "text": "Between 90 minutes and 120 minutes"
+            },
+            {
+              "value": "over_120",
+              "text": "Over 120 minutes"
+            }
+          ]
+        },
+        {
+          "type": "comment",
+          "name": "other_feedback",
+          "title": "Do you have any feedback about this module that you would like to share with the Code.org team?"
+        },
+        {
+          "type": "radiogroup",
+          "name": "permission_to_quote",
+          "title": "I give Code.org permission to quote my written comments from this survey for use on social media, promotional materials, and other communications.",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes, I give the workshop organizer permission to quote me and use my name."
+            },
+            {
+              "value": "yes_anon",
+              "text": "Yes, I give the workshop organizer permission to quote me, but I want to be anonymous."
+            },
+            {
+              "value": "no",
+              "text": "No, I do not give the workshop organizer my permission."
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "participate_focus_group",
+          "title": "OPTIONAL: Would you be willing to participate in a follow-up discussion to provide direct feedback about this online course?",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes"
+            },
+            {
+              "value": "no",
+              "text": "No"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "email_focus_group",
+          "visibleIf": "{participate_focus_group}='yes'",
+          "title": "Great! Please share an email address where we may contact you."
+        },
+        {
+          "type": "html",
+          "name": "thank_you",
+          "html": "<h3><strong>Thank You!</strong></h3>\n<p><span style='font-size: 12pt;'>Thanks from Code.org for your time, thoughts, and passion for teaching.</span>&nbsp;</p>"
+        }
+      ]
+    }
+  ],
+  "published": true
+}

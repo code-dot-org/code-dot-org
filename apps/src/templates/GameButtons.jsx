@@ -1,15 +1,16 @@
-import React from 'react';
-import msg from '@cdo/locale';
-
-import ProtectedStatefulDiv from './ProtectedStatefulDiv';
-import commonStyles from '../commonStyles';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import SkipButton from './SkipButton';
+import React from 'react';
 import {connect} from 'react-redux';
 
+import msg from '@cdo/locale';
+
 import blankImg from '../../static/common_images/1x1.gif';
+import commonStyles from '../commonStyles';
+
+import ProtectedStatefulDiv from './ProtectedStatefulDiv';
+import SkipButton from './SkipButton';
 
 export const FinishButton = () => (
   <button type="button" id="finishButton" className="share">

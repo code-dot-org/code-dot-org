@@ -1,10 +1,12 @@
-import PropTypes from 'prop-types';
-import React, {PureComponent} from 'react';
 import _ from 'lodash';
-import {standardShape} from './lessonPlanShapes';
-import color from '@cdo/apps/util/color';
+import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React, {PureComponent} from 'react';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import color from '@cdo/apps/util/color';
+
+import {standardShape} from './lessonPlanShapes';
 
 export const styles = {
   frameworkName: {

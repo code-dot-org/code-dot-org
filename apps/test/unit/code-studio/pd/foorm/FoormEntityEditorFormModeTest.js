@@ -1,33 +1,36 @@
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {mount} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import {assert} from 'chai';
+import {Provider} from 'react-redux';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import FoormEntityEditor from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityEditor';
+import FoormFormSaveBar, {
+  UnconnectedFoormFormSaveBar,
+} from '@cdo/apps/code-studio/pd/foorm/editor/form/FoormFormSaveBar';
 import {
   stubRedux,
   restoreRedux,
   getStore,
   registerReducers,
 } from '@cdo/apps/redux';
-import {Provider} from 'react-redux';
-import FoormEntityEditor from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityEditor';
-import FoormFormSaveBar, {
-  UnconnectedFoormFormSaveBar,
-} from '@cdo/apps/code-studio/pd/foorm/editor/form/FoormFormSaveBar';
+
 import foorm, {
   setFormData,
 } from '../../../../../src/code-studio/pd/foorm/editor/foormEditorRedux';
-import sinon from 'sinon';
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {allowConsoleWarnings} from '../../../../util/throwOnConsole';
 
 global.$ = require('jquery');
 
 describe('FoormEntityEditor in Form editing mode', () => {
   let defaultProps, store, server;
-  beforeEach(() => {
-    // Warnings allowed due to usage of deprecated componentWillMount
-    // lifecycle method.
-    allowConsoleWarnings();
 
+  // Warnings allowed due to usage of deprecated componentWillMount
+  // lifecycle method.
+  allowConsoleWarnings();
+
+  beforeEach(() => {
     stubRedux();
     registerReducers({foorm});
 

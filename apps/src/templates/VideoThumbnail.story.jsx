@@ -1,4 +1,5 @@
 import React from 'react';
+
 import VideoThumbnail from './VideoThumbnail';
 
 export default {

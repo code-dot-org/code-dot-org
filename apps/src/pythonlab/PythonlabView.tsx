@@ -1,51 +1,71 @@
 // Pythonlab view
-import React, {useEffect, useMemo, useState} from 'react';
-import moduleStyles from './pythonlab-view.module.scss';
-import {ConfigType} from '@cdo/apps/weblab2/CDOIDE/types';
-import Editor from '@cdo/apps/weblab2/CDOIDE/CenterPane/Editor';
-import {LanguageSupport} from '@codemirror/language';
+import {Codebridge} from '@codebridge/Codebridge';
+import {useSource} from '@codebridge/hooks/useSource';
+import {ConfigType} from '@codebridge/types';
 import {python} from '@codemirror/lang-python';
-import {CDOIDE} from '@cdo/apps/weblab2/CDOIDE';
-import {MultiFileSource} from '@cdo/apps/lab2/types';
-import Lab2Registry from '../lab2/Lab2Registry';
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {setSource} from './pythonlabRedux';
-import PythonConsole from './PythonConsole';
+import {LanguageSupport} from '@codemirror/language';
+import React, {useContext, useEffect, useState} from 'react';
+
+import {sendPredictLevelReport} from '@cdo/apps/code-studio/progressRedux';
 import {MAIN_PYTHON_FILE} from '@cdo/apps/lab2/constants';
+import {ProgressManagerContext} from '@cdo/apps/lab2/progress/ProgressContainer';
+import {isPredictAnswerLocked} from '@cdo/apps/lab2/redux/predictLevelRedux';
+import {MultiFileSource, ProjectSources} from '@cdo/apps/lab2/types';
+import {AppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import PythonValidationTracker from './progress/PythonValidationTracker';
+import PythonValidator from './progress/PythonValidator';
+import {handleRunClick, stopPythonCode} from './pyodideRunner';
+
+import moduleStyles from './pythonlab-view.module.scss';
 
 const pythonlabLangMapping: {[key: string]: LanguageSupport} = {
   py: python(),
 };
 
-const defaultProject: MultiFileSource = {
-  files: {
-    '0': {
-      id: '0',
-      name: MAIN_PYTHON_FILE,
-      language: 'py',
-      contents: 'print("Hello world!")',
-      folderId: '1',
-      active: true,
-      open: true,
+const defaultProject: ProjectSources = {
+  source: {
+    files: {
+      '0': {
+        id: '0',
+        name: MAIN_PYTHON_FILE,
+        language: 'py',
+        contents: 'print("Hello world!")',
+        folderId: '0',
+        active: true,
+        open: true,
+      },
     },
-  },
-  folders: {
-    '1': {
-      id: '1',
-      name: 'src',
-      parentId: '0',
-    },
+    folders: {},
   },
 };
 
+const labeledGridLayouts = {
+  horizontal: {
+    gridLayoutRows: '2fr 1fr 48px',
+    gridLayoutColumns: '300px minmax(0, 1fr)',
+    gridLayout: `
+  "info-panel workspace"
+  "file-browser console"
+  "file-browser control-buttons"`,
+  },
+  vertical: {
+    gridLayoutRows: '1fr 1fr 48px',
+    gridLayoutColumns: '300px minmax(0, 1fr) minmax(0, 1fr)',
+    gridLayout: `
+    "info-panel workspace console"
+    "file-browser workspace console"
+    "file-browser control-buttons control-buttons"`,
+  },
+};
 const defaultConfig: ConfigType = {
-  showPreview: false,
   activeLeftNav: 'Files',
-  EditorComponent: () => Editor(pythonlabLangMapping, ['py', 'csv', 'txt']),
+  languageMapping: pythonlabLangMapping,
+  editableFileTypes: ['py', 'csv', 'txt'],
   leftNav: [
     {
       icon: 'fa-square-check',
-      component: 'Instructions',
+      component: 'info-panel',
     },
     {
       icon: 'fa-file',
@@ -68,56 +88,61 @@ const defaultConfig: ConfigType = {
       action: () => window.alert('You are already on the file browser'),
     },
   ],
-  instructions: 'Welcome to Python Lab!',
+
+  labeledGridLayouts,
+  activeGridLayout: 'horizontal',
 };
 
 const PythonlabView: React.FunctionComponent = () => {
-  const [currentProject, setCurrentProject] = useState<MultiFileSource>();
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const initialSources = useAppSelector(state => state.lab.initialSources);
-  const channelId = useAppSelector(state => state.lab.channel?.id);
-  const dispatch = useAppDispatch();
-
-  // TODO: This is (mostly) repeated in Weblab2View. Can we extract this out somewhere?
-  // https://codedotorg.atlassian.net/browse/CT-499
-  const setProject = useMemo(
-    () => (newProject: MultiFileSource) => {
-      setCurrentProject(newProject);
-      dispatch(setSource(newProject));
-      if (Lab2Registry.getInstance().getProjectManager()) {
-        const projectSources = {
-          source: newProject,
-        };
-        Lab2Registry.getInstance().getProjectManager()?.save(projectSources);
-      }
-    },
-    [dispatch]
+  const {source, setSource, getStartSource} = useSource(defaultProject);
+  const isPredictLevel = useAppSelector(
+    state => state.lab.levelProperties?.predictSettings?.isPredictLevel
   );
+  const predictResponse = useAppSelector(state => state.predictLevel.response);
+  const predictAnswerLocked = useAppSelector(isPredictAnswerLocked);
+  const progressManager = useContext(ProgressManagerContext);
+  const appName = useAppSelector(state => state.lab.levelProperties?.appName);
 
   useEffect(() => {
-    // We reset the project when the channelId changes, as this means we are on a new level.
-    setCurrentProject(
-      (initialSources?.source as MultiFileSource) || defaultProject
-    );
-    dispatch(setSource(initialSources?.source as MultiFileSource));
-  }, [channelId, dispatch, initialSources]);
+    if (progressManager && appName === 'pythonlab') {
+      progressManager.setValidator(
+        new PythonValidator(PythonValidationTracker.getInstance())
+      );
+    }
+  }, [progressManager, appName]);
+
+  const onRun = async (
+    runTests: boolean,
+    dispatch: AppDispatch,
+    source: MultiFileSource | undefined
+  ) => {
+    await handleRunClick(runTests, dispatch, source, progressManager);
+    // Only send a predict level report if this is a predict level and the predict
+    // answer was not locked.
+    if (isPredictLevel && !predictAnswerLocked) {
+      dispatch(
+        sendPredictLevelReport({
+          appType: 'pythonlab',
+          predictResponse: predictResponse,
+        })
+      );
+    }
+  };
 
   return (
     <div className={moduleStyles.pythonlab}>
-      <div className={moduleStyles.editor}>
-        {currentProject && (
-          <CDOIDE
-            project={currentProject}
-            config={config}
-            setProject={setProject}
-            setConfig={setConfig}
-          />
-        )}
-      </div>
-      {/** TODO: Should the console be a part of CDOIDE? */}
-      <div className={moduleStyles.console}>
-        <PythonConsole />
-      </div>
+      {source && (
+        <Codebridge
+          project={source}
+          config={config}
+          setProject={setSource}
+          setConfig={setConfig}
+          startSource={getStartSource()}
+          onRun={onRun}
+          onStop={stopPythonCode}
+        />
+      )}
     </div>
   );
 };

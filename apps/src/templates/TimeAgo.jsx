@@ -1,7 +1,7 @@
+import moment from 'moment';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import moment from 'moment';
 
 class TimeAgo extends React.Component {
   static propTypes = {

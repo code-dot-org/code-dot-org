@@ -1,11 +1,13 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import JavalabButton from '@cdo/apps/javalab/JavalabButton';
-import StudentGroup from './StudentGroup';
+import React from 'react';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import JavalabButton from '@cdo/apps/javalab/JavalabButton';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import StudentGroup from './StudentGroup';
 
 export default function UnassignedStudentsPanel({
   unassignedGroup,

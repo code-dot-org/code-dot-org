@@ -17,9 +17,11 @@ theme: responsive
 
 ## 支援的最低瀏覽器和平臺
 
+從 2024 年 7 月開始，我們將更新瀏覽器和作業系統所需的最低版本。 雖然舊版本可能仍然有效，但我們將無法支持舊版本中的錯誤修復請求。
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           瀏覽器
@@ -40,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          瀏覽器七月 '24
+        </th>
+        <tr>
+          <td>鉻合金 103. x</td>
+        </tr>
+        <tr>
+          <td>野生動物園 14.x 版</td>
+        </tr>
+        <tr>
+          <td>行動 Safari 14.x 版</td>
+        </tr>
+        <tr>
+          <td>邊緣 119.x</td>
+        </tr>
+        <tr>
+          <td>火狐瀏覽器 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           平臺
@@ -62,8 +86,30 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          七月二十四日平台
+        </th>
+        <tr>
+          <td>馬克索 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x 版</td>
+        </tr>
+        <tr>
+          <td>視窗 8</td>
+        </tr>
+        <tr>
+          <td>安卓 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## 要解除阻止的網站
@@ -80,16 +126,15 @@ theme: responsive
 | **使用網路模擬器**                             | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **使用網路實驗室**                             | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **使用Google課堂共用按鈕**                      | `https://apis.google.com`                                                                                  |
-| **使用應用程式實驗室資料集**                        | `https://*.firebaseio.com`<br />`常見問題：//*.火焰兵庫`                                                      |
 
 ## 移動設備/平板電腦支援詳情
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. 大多數平板電腦不支援，但有以下例外：
+所有 CS 發現、CS 原則、CS A 和應用實驗室簡介課程都不相容於平板電腦或移動設備-需要完整的鍵盤和鼠標（或觸控板）。 大多數平板電腦不支援，但有以下例外：
 
 - 帶外接鍵盤的微軟Surface Pro
 - 帶外接鍵盤和外接滑鼠或觸控板且運行iPadOS 13.4及以上版本的iPad
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+所有其他內容，例如 K-5 課程（計算機科學基礎知識）和編碼一小時活動，都適用於 iPad 和其他現代平板電腦和筆記本電腦或台式電腦。
 
 ### 手機
 
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+這是貫穿整個課程的播放機。 它將嘗試通過YouTube顯示視訊，如果YouTube被阻止，將使用我們的“後備”播放機顯示Code.org託管視訊。
 
 ### 視訊無法播放？
 
-If video does not work, you can email us at support@code.org.
+如果視訊無法播放，你可以給我們發送電子郵件：support@code.org。
 
-However, you can still use our tutorials without video.
+然而，你仍然可以在沒有視訊的情況下使用我們的教程。
 
 1. 我們已經使所有的視訊[可以一起下載](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH)。 如果你的學校頻寬較低，我們建議你下載視訊並在共用螢幕上給學生展示。
 2. 在我們的教程中，我們為每個視訊添加了一個綠色下載連結圖示<img src="/images/green-download.png" width=25 height=25 />，讓學生可以下載單個教程視訊。
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## Google應用程式/G-Suite用戶的特殊設定
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+如果你是G-suite管理員，記得檢查你對YouTube的限制設定。 如果你已指定“嚴格限制YouTube訪問”設定，或如果你看到“此視訊已被限制”的訊息，你可以將我們的頻道添加到已批准頻道清單。 請參閱來自Google的[這個指南](https://support.google.com/a/answer/6245597)，瞭解如何將我們的頻道添加到已批准清單。 你也可以參閱[這個指南](https://support.google.com/a/answer/6212415?hl=en)以進一步瞭解不同的設定以及哪種設定最適合你的課堂。
 
 ## 仍然存在困難？
 
-We'll help you out - just email us at support@code.org!
+我們將為你提供幫助，只需給我們發送電子郵件：support@code.org！

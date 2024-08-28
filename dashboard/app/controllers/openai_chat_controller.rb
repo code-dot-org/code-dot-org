@@ -7,27 +7,29 @@ class OpenaiChatController < ApplicationController
     unless has_required_messages_param?
       return render(status: :bad_request, json: {})
     end
-
     # Check for PII / Profanity
     locale = params[:locale] || "en"
     # Just look at the most recent message from the student.
     message = params[:messages].last[:content]
-    filter_result = ShareFiltering.find_failure(message, locale) if message
-    # If the content is inappropriate, we skip sending to OpenAI and instead hardcode a warning response on the front-end.
-    return render(status: :ok, json: {status: filter_result.type, flagged_content: filter_result.content}) if filter_result
+    filter_result = ShareFiltering.find_failure(message, locale, {}) if message
+    # If the content is profane, we skip sending to OpenAI and instead hardcode a warning response on the front-end.
+    return render(status: :ok, json: {safety_status: filter_result.type, flagged_content: filter_result.content}) if filter_result && filter_result.type == 'profanity'
 
-    if validated_level?
-      level_id = params[:levelId]
-      test_file_contents = get_validated_level_test_file_contents(level_id)
-      messages = params[:messages]
-      messages.first["content"] = messages.first["content"] + " The contents of the test file are: #{test_file_contents}"
-      messages.second["content"] = "The student's code is: " + messages.second["content"]
-    else
-      messages = params[:messages]
-    end
+    # The system prompt can be passed in as a param for testing purposes. If there isn't a custom
+    # system prompt, create one based on the level context.
+    level_id = params[:levelId]
+    script_id = params[:scriptId]
+
+    system_prompt = !!params[:systemPrompt] ? params[:systemPrompt] : AitutorSystemPromptHelper.get_system_prompt(level_id, script_id)
+
+    messages = prepend_system_prompt(system_prompt, params[:messages])
 
     response = OpenaiChatHelper.request_chat_completion(messages)
     chat_completion_return_message = OpenaiChatHelper.get_chat_completion_response_message(response)
+    # We currently allow PII flagged content through to OpenAI because false positives were impacting user experience.
+    # We send the flagged content along in the request so we can log it for analysis.
+    chat_completion_return_message[:json][:safety_status] = filter_result.type if filter_result
+    chat_completion_return_message[:json][:flagged_content] = filter_result.content if filter_result
     return render(status: chat_completion_return_message[:status], json: chat_completion_return_message[:json])
   end
 
@@ -35,25 +37,13 @@ class OpenaiChatController < ApplicationController
     params[:messages].present?
   end
 
-  def validated_level?
-    params[:type].present? && params[:type] == 'validation'
-  end
+  private def prepend_system_prompt(system_prompt, messages)
+    system_prompt_message = {
+      content: system_prompt,
+      role: "system"
+    }
 
-  def get_validated_level_test_file_contents(level_id)
-    level = Level.find(level_id)
-
-    unless level
-      return render(status: :bad_request, json: {message: "Couldn't find level with id=#{level_id}."})
-    end
-
-    if level.validation.values.empty?
-      return render(status: :bad_request, json: {message: "There are no test files associated with level id=#{level_id}."})
-    else
-      test_file_contents = ""
-      level.validation.each_value do |validation|
-        test_file_contents += validation["text"]
-      end
-      return test_file_contents
-    end
+    messages.unshift(system_prompt_message)
+    messages
   end
 end

@@ -1,9 +1,9 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import PromptIcon from '@cdo/apps/templates/instructions/PromptIcon';
 
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const TEST_SRC_URL = 'example.jpg';
 

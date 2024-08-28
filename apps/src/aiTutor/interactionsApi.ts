@@ -1,7 +1,8 @@
-import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
-import {AITutorInteraction} from './types';
-import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 import {MetricEvent} from '@cdo/apps/lib/metrics/events';
+import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+
+import {AITutorInteraction} from './types';
 
 // TODO: Pagination options can be added here
 interface FetchAITutorInteractionsOptions {
@@ -13,7 +14,7 @@ export async function savePromptAndResponse(
   interactionData: AITutorInteraction
 ) {
   try {
-    await fetch('/ai_tutor_interactions', {
+    const response = await fetch('/ai_tutor_interactions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -21,6 +22,11 @@ export async function savePromptAndResponse(
       },
       body: JSON.stringify(interactionData),
     });
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data = await response.json();
+    return data;
   } catch (error) {
     MetricsReporter.logError({
       event: MetricEvent.AI_TUTOR_CHAT_SAVE_FAIL,
@@ -68,3 +74,31 @@ export const fetchAITutorInteractions = async (
     return null;
   }
 };
+
+export interface FeedbackData {
+  thumbsUp?: boolean | null;
+  thumbsDown?: boolean | null;
+  details?: string | null;
+}
+
+export async function saveFeedback(
+  aiTutorInteractionId: number,
+  feedbackData: FeedbackData
+) {
+  try {
+    await fetch(`/ai_tutor_interactions/${aiTutorInteractionId}/feedbacks`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-CSRF-Token': await getAuthenticityToken(),
+      },
+      body: JSON.stringify(feedbackData),
+    });
+  } catch (error) {
+    MetricsReporter.logError({
+      event: MetricEvent.AI_TUTOR_FEEDBACK_SAVE_FAIL,
+      errorMessage:
+        (error as Error).message || 'Failed to save AI Tutor feedback',
+    });
+  }
+}

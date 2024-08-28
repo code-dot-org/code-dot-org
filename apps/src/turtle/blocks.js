@@ -80,6 +80,7 @@ const DIRECTION_VALUES = [
 
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function (blockly, blockInstallOptions) {
+  Blockly.cdoUtils.registerCustomProcedureBlocks();
   var skin = blockInstallOptions.skin;
 
   var generator = blockly.getGenerator();
@@ -142,10 +143,7 @@ exports.install = function (blockly, blockInstallOptions) {
       );
       this.appendDummyInput()
         .appendField(
-          new blockly.FieldTextInput(
-            '100',
-            blockly.FieldTextInput.numberValidator
-          ),
+          new blockly.FieldTextInput('100', blockly.cdoUtils.numberValidator),
           'VALUE'
         )
         .appendField(msg.dots());
@@ -700,10 +698,13 @@ exports.install = function (blockly, blockInstallOptions) {
         BlockStyles.LOOP
       );
       this.appendDummyInput()
-        .appendField(blockly.Msg.CONTROLS_FOR_INPUT_WITH)
+        .appendField(
+          blockly.Msg.CONTROLS_FOR_INPUT_WITH || msg.controlsForInputWith()
+        )
         .appendField(new blockly.FieldLabel(msg.loopVariable()), 'VAR');
       this.interpolateMsg(
-        blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY,
+        blockly.Msg.CONTROLS_FOR_INPUT_FROM_TO_BY ||
+          msg.controlsForInputFromToBy(),
         ['FROM', 'Number', blockly.ALIGN_RIGHT],
         ['TO', 'Number', blockly.ALIGN_RIGHT],
         ['BY', 'Number', blockly.ALIGN_RIGHT],
@@ -737,8 +738,9 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setTitleValue(counter, 'VAR');
     },
   };
-
-  generator.controls_for_counter = generator.controls_for;
+  // Google Blockly uses forBlock, CDO Blockly does not.
+  generator.controls_for_counter =
+    generator.controls_for || generator.forBlock.controls_for;
 
   // Delete these standard blocks.
   delete blockly.Blocks.procedures_defreturn;
@@ -1111,10 +1113,7 @@ exports.install = function (blockly, blockInstallOptions) {
       );
       this.appendDummyInput()
         .appendField(
-          new blockly.FieldTextInput(
-            '100',
-            blockly.FieldTextInput.numberValidator
-          ),
+          new blockly.FieldTextInput('100', blockly.cdoUtils.numberValidator),
           'VALUE'
         )
         .appendField(msg.dots());
@@ -1216,19 +1215,13 @@ exports.install = function (blockly, blockInstallOptions) {
         msg.jumpToOverDown(),
         () => {
           this.appendDummyInput().appendField(
-            new blockly.FieldTextInput(
-              '0',
-              blockly.FieldTextInput.numberValidator
-            ),
+            new blockly.FieldTextInput('0', blockly.cdoUtils.numberValidator),
             'XPOS'
           );
         },
         () => {
           this.appendDummyInput().appendField(
-            new blockly.FieldTextInput(
-              '0',
-              blockly.FieldTextInput.numberValidator
-            ),
+            new blockly.FieldTextInput('0', blockly.cdoUtils.numberValidator),
             'YPOS'
           );
         },
@@ -1337,7 +1330,7 @@ exports.install = function (blockly, blockInstallOptions) {
       this.setInputsInline(true);
       this.appendDummyInput().appendField(msg.setWidth());
       this.appendDummyInput().appendField(
-        new blockly.FieldTextInput('1', blockly.FieldTextInput.numberValidator),
+        new blockly.FieldTextInput('1', blockly.cdoUtils.numberValidator),
         'WIDTH'
       );
       this.setPreviousStatement(true);
@@ -1441,7 +1434,7 @@ exports.install = function (blockly, blockInstallOptions) {
   blockly.Blocks.draw_colour_simple = {
     // Simplified dropdown block for setting the colour.
     init: function () {
-      var colours = [
+      const colours = [
         Colours.RED,
         Colours.BLACK,
         Colours.PINK,
@@ -1457,7 +1450,7 @@ exports.install = function (blockly, blockInstallOptions) {
         BlockColors.LOGIC,
         BlockStyles.LOGIC
       );
-      var colourField = new Blockly.FieldColourDropdown(colours, 45, 35);
+      const colourField = Blockly.customBlocks.getColourDropdownField(colours);
       this.appendDummyInput()
         .appendField(msg.setColour())
         .appendField(colourField, 'COLOUR');
@@ -1606,10 +1599,7 @@ exports.install = function (blockly, blockInstallOptions) {
       block
         .appendDummyInput()
         .appendField(
-          new blockly.FieldTextInput(
-            '0',
-            blockly.FieldTextInput.numberValidator
-          ),
+          new blockly.FieldTextInput('0', blockly.cdoUtils.numberValidator),
           'SIZE'
         )
         .appendField(msg.pixels());
@@ -1665,7 +1655,11 @@ exports.install = function (blockly, blockInstallOptions) {
     return {
       helpUrl: '',
       init: function () {
-        this.setHSV(184, 1.0, 0.74);
+        Blockly.cdoUtils.handleColorAndStyle(
+          this,
+          BlockColors.DEFAULT,
+          BlockStyles.DEFAULT
+        );
         var dropdown;
         var input = this.appendDummyInput();
         input.appendField(msg.drawShape());
@@ -1700,10 +1694,7 @@ exports.install = function (blockly, blockInstallOptions) {
       block
         .appendDummyInput()
         .appendField(
-          new blockly.FieldTextInput(
-            '0',
-            blockly.FieldTextInput.numberValidator
-          ),
+          new blockly.FieldTextInput('0', blockly.cdoUtils.numberValidator),
           'SIZE'
         )
         .appendField(msg.pixels());

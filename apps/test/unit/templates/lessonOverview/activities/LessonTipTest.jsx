@@ -1,9 +1,7 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import LessonTip from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
-
-import {expect} from '../../../../util/reconfiguredChai';
 
 describe('LessonTip', () => {
   let defaultProps;
@@ -19,22 +17,23 @@ describe('LessonTip', () => {
 
   it('renders default props', () => {
     const wrapper = shallow(<LessonTip {...defaultProps} />);
-    expect(wrapper.contains('Teaching Tip'), 'tip').to.be.true;
-    expect(wrapper.find('SafeMarkdown').length).to.equal(1);
+    // tip
+    expect(wrapper.contains('Teaching Tip')).toBe(true);
+    expect(wrapper.find('SafeMarkdown').length).toBe(1);
     const safeMarkdown = wrapper.find('SafeMarkdown').first();
-    expect(safeMarkdown.props().markdown).to.contain('Teaching tip content');
+    expect(safeMarkdown.props().markdown).toContain('Teaching tip content');
   });
 
   it('collapses tip when header is pressed', () => {
     const wrapper = shallow(<LessonTip {...defaultProps} />);
     wrapper.find('.unit-test-tip-tab').simulate('click');
-    expect(wrapper.find('SafeMarkdown').length).to.equal(0);
+    expect(wrapper.find('SafeMarkdown').length).toBe(0);
   });
 
   it('expands a collapsed tip when header is pressed', () => {
     const wrapper = shallow(<LessonTip {...defaultProps} />);
     wrapper.instance().setState({expanded: false});
     wrapper.find('.unit-test-tip-tab').simulate('click');
-    expect(wrapper.find('SafeMarkdown').length).to.equal(1);
+    expect(wrapper.find('SafeMarkdown').length).toBe(1);
   });
 });

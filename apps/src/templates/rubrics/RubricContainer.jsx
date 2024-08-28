@@ -1,31 +1,37 @@
-import React, {useCallback, useEffect, useState} from 'react';
-import PropTypes from 'prop-types';
-import style from './rubrics.module.scss';
-import i18n from '@cdo/locale';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React, {useCallback, useEffect, useState, useRef} from 'react';
+import Draggable from 'react-draggable';
+
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
+
+import RubricContent from './RubricContent';
+import {TAB_NAMES} from './rubricHelpers';
+import RubricSettings from './RubricSettings';
 import {
   reportingDataShape,
   rubricShape,
   studentLevelInfoShape,
 } from './rubricShapes';
-import RubricContent from './RubricContent';
-import RubricSettings from './RubricSettings';
-import RubricTabButtons from './RubricTabButtons';
 import RubricSubmitFooter from './RubricSubmitFooter';
-import {tryGetSessionStorage, trySetSessionStorage} from '@cdo/apps/utils';
-import Draggable from 'react-draggable';
-import {TAB_NAMES} from './rubricHelpers';
-import aiBotOutlineIcon from '@cdo/static/ai-bot-outline.png';
-import HttpClient from '@cdo/apps/util/HttpClient';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import RubricTabButtons from './RubricTabButtons';
+
+import style from './rubrics.module.scss';
 
 // product Tour
+/* eslint-disable import/order */
+// Disabling import/order rule for grouped product tour imports.
 import './introjs.scss';
 import {Steps} from 'intro.js-react';
 import {INITIAL_STEP, STEPS, DUMMY_PROPS} from './productTourHelpers';
+/* eslint-enable import/order */
 
 export default function RubricContainer({
   rubric,
@@ -61,6 +67,8 @@ export default function RubricContainer({
   const [feedbackAdded, setFeedbackAdded] = useState(false);
 
   const [productTour, setProductTour] = useState(false);
+  const tourStep = useRef(null);
+  const tourRestarted = useRef(false);
 
   const tabSelectCallback = tabSelection => {
     setSelectedTab(tabSelection);
@@ -130,24 +138,19 @@ export default function RubricContainer({
   // add more functionality to the settings tab.
   const showSettings = onLevelForEvaluation && teacherHasEnabledAi;
 
-  const updateTourStatus = useCallback(() => {
-    const bodyData = JSON.stringify({seen: productTour});
-    const rubricId = rubric.id;
-    const url = `/rubrics/${rubricId}/update_ai_rubrics_tour_seen`;
-    HttpClient.post(url, bodyData, true, {
-      'Content-Type': 'application/json',
-    })
-      .then(response => {
-        return response.json();
-      })
-      .then(json => {
-        if (json['seen']) {
-          setProductTour(false);
-        } else {
-          setProductTour(true);
-        }
+  // Update the server to indicate that the product tour has been seen.
+  const updateTourStatus = useCallback(
+    visible => {
+      setProductTour(visible);
+      const bodyData = JSON.stringify({seen: !visible});
+      const rubricId = rubric.id;
+      const url = `/rubrics/${rubricId}/update_ai_rubrics_tour_seen`;
+      HttpClient.post(url, bodyData, true, {
+        'Content-Type': 'application/json',
       });
-  }, [rubric.id, productTour]);
+    },
+    [rubric.id]
+  );
 
   const getTourStatus = useCallback(() => {
     const rubricId = rubric.id;
@@ -169,13 +172,59 @@ export default function RubricContainer({
     getTourStatus();
   }, [getTourStatus]);
 
-  const onTourExit = () => {
-    updateTourStatus();
+  const tourRestartHandler = () => {
+    tourRestarted.current = true;
+    updateTourStatus(true);
+    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_TOUR_RESTARTED, {
+      ...(reportingData || {}),
+    });
+  };
+
+  const onTourStart = stepIndex => {
+    tourStep.current = stepIndex;
+    if (tourRestarted.current) {
+      tourRestarted.current = false;
+    } else {
+      analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_TOUR_STARTED, {
+        ...(reportingData || {}),
+      });
+    }
+  };
+
+  const onTourExit = stepIndex => {
+    updateTourStatus(false);
+    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_TOUR_CLOSED, {
+      ...(reportingData || {}),
+      step: stepIndex,
+    });
+  };
+
+  const onTourComplete = () => {
+    updateTourStatus(false);
+    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_TOUR_COMPLETE, {
+      ...(reportingData || {}),
+    });
   };
 
   const onStepChange = (nextStepIndex, nextElement) => {
-    if (nextStepIndex === 1) {
-      document.getElementById('tour-fab-bg').scrollBy(0, 1000);
+    if (tourStep.current !== null && nextStepIndex !== tourStep.current) {
+      if (nextStepIndex < tourStep.current) {
+        analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_TOUR_BACK, {
+          ...(reportingData || {}),
+          step: tourStep.current,
+          nextStep: nextStepIndex,
+        });
+      } else {
+        analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_TOUR_NEXT, {
+          ...(reportingData || {}),
+          step: tourStep.current,
+          nextStep: nextStepIndex,
+        });
+      }
+      tourStep.current = nextStepIndex;
+      if (nextStepIndex === 1) {
+        document.getElementById('tour-fab-bg').scrollBy(0, 1000);
+      }
     }
   };
 
@@ -201,12 +250,14 @@ export default function RubricContainer({
         })}
       >
         <Steps
-          enabled={canProvideFeedback && productTour}
+          enabled={canProvideFeedback && productTour && teacherHasEnabledAi}
           initialStep={INITIAL_STEP}
           steps={STEPS}
+          onStart={onTourStart}
           onExit={onTourExit}
           onChange={onStepChange}
           onBeforeChange={onBeforeStepChange}
+          onComplete={onTourComplete}
           options={{
             scrollToElement: false,
             exitOnOverlayClick: false,
@@ -228,12 +279,12 @@ export default function RubricContainer({
             <span>{i18n.rubricAiHeaderText()}</span>
           </div>
           <div className={style.rubricHeaderRightSide}>
-            {canProvideFeedback && (
+            {canProvideFeedback && teacherHasEnabledAi && (
               <button
                 id="ui-restart-product-tour"
-                data-testid="restart-product-tour"
+                aria-label="restart product tour"
                 type="button"
-                onClick={updateTourStatus}
+                onClick={tourRestartHandler}
                 className={classnames(style.buttonStyle, style.closeButton)}
               >
                 <FontAwesome icon="circle-question" />
@@ -264,13 +315,13 @@ export default function RubricContainer({
           <RubricContent
             productTour={productTour}
             rubric={
-              canProvideFeedback && productTour
+              canProvideFeedback && productTour && teacherHasEnabledAi
                 ? DUMMY_PROPS['rubricDummy']
                 : rubric
             }
             open={open}
             studentLevelInfo={
-              canProvideFeedback && productTour
+              canProvideFeedback && productTour && teacherHasEnabledAi
                 ? DUMMY_PROPS['studentLevelInfoDummy']
                 : studentLevelInfo
             }
@@ -280,7 +331,7 @@ export default function RubricContainer({
             reportingData={reportingData}
             visible={selectedTab === TAB_NAMES.RUBRIC}
             aiEvaluations={
-              canProvideFeedback && productTour
+              canProvideFeedback && productTour && teacherHasEnabledAi
                 ? DUMMY_PROPS['aiEvaluationsDummy']
                 : aiEvaluations
             }

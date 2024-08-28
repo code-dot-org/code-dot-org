@@ -1,10 +1,11 @@
-import {expect} from '../../../../util/reconfiguredChai';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
+
+import UnitCalendar from '@cdo/apps/code-studio/components/progress/UnitCalendar';
 import UnitCalendarDialog, {
   WEEK_WIDTH,
 } from '@cdo/apps/code-studio/components/progress/UnitCalendarDialog';
-import UnitCalendar from '@cdo/apps/code-studio/components/progress/UnitCalendar';
+
 import {testLessons} from './unitCalendarTestData';
 
 describe('UnitCalendarDialog', () => {
@@ -26,7 +27,7 @@ describe('UnitCalendarDialog', () => {
           weekWidth={WEEK_WIDTH}
         />
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('sets the provided weeklyInstructionalMinutes as default if it is already in the option list', () => {
@@ -39,14 +40,14 @@ describe('UnitCalendarDialog', () => {
         scriptId={123}
       />
     );
-    expect(wrapper.find('option').length).to.equal(10);
+    expect(wrapper.find('option').length).toBe(10);
     expect(
       wrapper.containsMatchingElement(
         <option value={45} key={`minutes-45`}>
           45 minutes
         </option>
       )
-    ).to.be.true;
+    ).toBe(true);
     expect(
       wrapper.containsMatchingElement(
         <UnitCalendar
@@ -55,7 +56,7 @@ describe('UnitCalendarDialog', () => {
           weekWidth={WEEK_WIDTH}
         />
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('adds the provided weeklyInstructionalMinutes to the dropdown and sets it as default', () => {
@@ -68,14 +69,14 @@ describe('UnitCalendarDialog', () => {
         scriptId={123}
       />
     );
-    expect(wrapper.find('option').length).to.equal(11);
+    expect(wrapper.find('option').length).toBe(11);
     expect(
       wrapper.containsMatchingElement(
         <option value={20} key={`minutes-20`}>
           20 minutes
         </option>
       )
-    ).to.be.true;
+    ).toBe(true);
     expect(
       wrapper.containsMatchingElement(
         <UnitCalendar
@@ -84,7 +85,7 @@ describe('UnitCalendarDialog', () => {
           weekWidth={WEEK_WIDTH}
         />
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('changes weeklyInstructionalMinutes when the dropdown value changes', () => {
@@ -97,9 +98,9 @@ describe('UnitCalendarDialog', () => {
         scriptId={123}
       />
     );
-    expect(wrapper.state('instructionalMinutes')).to.equal(45);
+    expect(wrapper.state('instructionalMinutes')).toBe(45);
     wrapper.find('select').simulate('change', {target: {value: 90}});
-    expect(wrapper.state('instructionalMinutes')).to.equal(90);
+    expect(wrapper.state('instructionalMinutes')).toBe(90);
     expect(
       wrapper.containsMatchingElement(
         <UnitCalendar
@@ -108,6 +109,6 @@ describe('UnitCalendarDialog', () => {
           weekWidth={WEEK_WIDTH}
         />
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 });

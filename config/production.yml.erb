@@ -19,8 +19,6 @@ db_credential_admin: {"username":"ACCESS_DISABLED", "password":"ACCESS_DISABLED"
 
 newrelic_logging: true
 stack_name: autoscale-prod
-firebase_name: cdo-v3-prod
-db_cluster_id: production-aurora-cluster
 solr_server:                            solr.code.org
 use_pusher:                             true
 
@@ -51,6 +49,7 @@ mapbox_access_tileset:    'censustiles'
 statsig_server_secret_key: !Secret
 statsig_api_client_key: !Secret
 
-# MailJet API keys
+# MailGun/MailJet API keys
 mailjet_api_key: !Secret
 mailjet_secret_key: !Secret
+mailgun_api_key: !Secret

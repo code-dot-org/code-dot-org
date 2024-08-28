@@ -14,12 +14,14 @@
     "disable_projects": true,
     "aichat_settings": {
       "initialCustomizations": {
+        "selectedModelId": "gen-ai-mistral-7b-inst-v01",
         "temperature": "0.8",
         "systemPrompt": "",
         "retrievalContexts": [
 
         ],
         "modelCardInfo": {
+          "botName": "",
           "description": "",
           "intendedUse": "",
           "limitationsAndWarnings": "",
@@ -27,18 +29,22 @@
           "exampleTopics": [
 
           ],
-          "botName": ""
+          "isPublished": false
         }
       },
       "visibilities": {
+        "selectedModelId": "readonly",
         "temperature": "hidden",
         "systemPrompt": "editable",
         "retrievalContexts": "hidden",
         "modelCardInfo": "hidden"
       },
-      "hidePresentationPanel": true
+      "hidePresentationPanel": true,
+      "availableModelIds": [
+
+      ]
     }
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-17T20:59:35.222+00:00\",\"changed\":[\"cloned from \\\"gen-ai-chatbot-test1-L12D\\\"\"],\"cloned_from\":\"gen-ai-chatbot-test1-L12D\"},{\"changed_at\":\"2024-04-17 20:59:42 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-04-17 23:44:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-04-18 20:23:31 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-17T20:59:35.222+00:00\",\"changed\":[\"cloned from \\\"gen-ai-chatbot-test1-L12D\\\"\"],\"cloned_from\":\"gen-ai-chatbot-test1-L12D\"},{\"changed_at\":\"2024-04-17 20:59:42 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-04-17 23:44:51 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-04-18 20:23:31 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-03 17:34:19 +0000\",\"changed\":[\"aichat_settings\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
 </Aichat>

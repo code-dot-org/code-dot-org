@@ -1,10 +1,13 @@
+import {createContext} from 'react';
+
 import {
   AiCustomizations,
   LevelAichatSettings,
   ModelCardInfo,
   Visibility,
 } from '@cdo/apps/aichat/types';
-import {createContext} from 'react';
+import {ValueOf} from '@cdo/apps/types/utils';
+import {AiChatModelIds} from '@cdo/generated-scripts/sharedConstants';
 
 export const UpdateContext = createContext({
   aichatSettings: {} as LevelAichatSettings,
@@ -19,5 +22,9 @@ export const UpdateContext = createContext({
   setModelCardPropertyValue: (
     property: keyof ModelCardInfo,
     value: ModelCardInfo[keyof ModelCardInfo]
+  ) => {},
+  setModelSelectionValues: (
+    additionalModelIds: ValueOf<typeof AiChatModelIds>[],
+    selectedModelId: ValueOf<typeof AiChatModelIds>
   ) => {},
 });

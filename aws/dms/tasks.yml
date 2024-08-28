@@ -48,6 +48,9 @@ cron-pii:
 - dashboard.projects
 - dashboard.foorm_%
 - dashboard.potential_teachers
+- dashboard.learning_goal_ai_evaluations
+- dashboard.learning_goal_teacher_evaluations
+- dashboard.learning_goal_ai_evaluation_feedbacks
 cron:
 - dashboard.experiments
 - dashboard.authored_hint_view_requests
@@ -111,6 +114,8 @@ cron:
 - dashboard.lti_feedbacks
 - dashboard.lti_sections
 - dashboard.lti_user_identities
+- dashboard.new_feature_feedbacks
+- dashboard.cap_user_events
 cron-user-hierarchy:
 - dashboard.users:
     remove_column:
@@ -142,6 +147,7 @@ cron-user-hierarchy:
     - invitation_by_id
     - invitations_count
     - parent_email
+    - unlock_token
 - dashboard.user_geos:
     remove_column:
     - ip_address

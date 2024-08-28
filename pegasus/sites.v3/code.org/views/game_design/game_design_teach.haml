@@ -1,0 +1,44 @@
+:ruby
+  block_items = [
+    {
+      overline: hoc_s("game_design_page.teach.elementary.overline"),
+      title: hoc_s("game_design_page.teach.elementary.title"),
+      img: "/images/action-blocks/action-block-game-design.png",
+      desc: hoc_s("game_design_page.teach.elementary.desc"),
+      url: CDO.studio_url("/courses/3-5gamedesign-2024"),
+      aria_label: hoc_s("game_design_page.teach.elementary.aria_label"),
+      button_label: hoc_s("game_design_page.teach.elementary.button"),
+      new: true,
+    },
+    {
+      overline: hoc_s("game_design_page.teach.interactive.overline"),
+      title: hoc_s("game_design_page.teach.interactive.title"),
+      img: "/images/action-blocks/action-block-interactive-animation.png",
+      desc: hoc_s("game_design_page.teach.interactive.desc"),
+      url: CDO.studio_url("/courses/self-paced-pl-csd-unit3"),
+      aria_label: hoc_s("game_design_page.teach.interactive.aria_label"),
+      button_label: hoc_s("game_design_page.teach.interactive.button"),
+    }
+  ]
+
+.action-block__wrapper.action-block__wrapper--two-col
+  - block_items.each do |block_item|
+    .action-block.action-block--one-col.flex-space-between.white
+      .content-wrapper
+        - if block_item[:new]
+          .flex-container.justify-space-between.align-items-start
+            %p.overline
+              = block_item[:overline]
+            %p.new
+              =hoc_s(:new)
+        - else
+          %p.overline
+            = block_item[:overline]
+        %h3
+          = block_item[:title]
+        %img{src: block_item[:img], alt: ""}
+        %p
+          = block_item[:desc]
+      .content-footer
+        %a.link-button{href: block_item[:url], aria:{label: block_item[:aria_label]}}
+          = block_item[:button_label]

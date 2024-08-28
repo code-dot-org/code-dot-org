@@ -13,12 +13,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-15 03:35:44 UTC",
+    "serialized_at": "2024-08-27 22:01:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -352,28 +353,13 @@
       "relative_position": 14,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson students spend most of their time practicing using the skills and processes they have learned about conditionals. At the conclusion of the lesson students discuss the main things they realized and still have questions about at the conclusion of this lesson.",
+        "overview": "In this lesson students spend most of their time practicing using the skills and processes they have learned about conditionals. At the conclusion of the lesson students discuss the main things they realized and still have questions about at the conclusion of this lesson.\n\n**Note:** This is an alternate activity to [Unit 4, Lesson 7: Conditionals Practice](https://studio.code.org/s/csp4-2024/lessons/7). It is not expected that both lessons are taught.",
         "preparation": "* Review the programming challenges students will be completing\n* Review the Debugging Guide for ideas on how to support your students during the lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-conditionals-lessons-5-8/36475) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "purpose": "This lesson is students primary opportunity to get hands on with conditionals in code prior to the Make activity in the following lesson. Give students as much class time as you can to work through these. For this lesson it's recommended that you place students in pairs as a support and to encourage discussion about the challenges or concepts they're seeing. In the following lesson students are encouraged to work independently.",
         "student_overview": "Practice programming with conditionals through a set of programming puzzles."
       },
       "seeding_key": {
         "lesson.key": "Conditionals Practice (Alternative)",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp4-2024"
-      }
-    },
-    {
-      "key": "lesson-2",
-      "name": "Conditonals New Practice",
-      "absolute_position": 15,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 15,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csp4-2024"
       }
@@ -1017,7 +1003,7 @@
       "key": "4b0cb014-8046-48fe-9f74-3e80627c4e1c",
       "position": 1,
       "properties": {
-        "name": "Lesson Modifications"
+        "name": "Alternative Lesson Option"
       },
       "seeding_key": {
         "lesson_activity.key": "4b0cb014-8046-48fe-9f74-3e80627c4e1c",
@@ -1076,18 +1062,6 @@
       "seeding_key": {
         "lesson_activity.key": "d2f55191-e82b-415b-b05b-2040be726087",
         "lesson.key": "Conditionals Practice (Alternative)",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp4-2024"
-      }
-    },
-    {
-      "key": "bb5cb4e9-3efb-4a07-ba48-af45e831fcfa",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "bb5cb4e9-3efb-4a07-ba48-af45e831fcfa",
-        "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-5",
         "script.name": "csp4-2024"
       }
@@ -2411,7 +2385,7 @@
       "key": "d90383d2-f266-4096-a087-6924aa67deb3",
       "position": 1,
       "properties": {
-        "description": "**Group:** It is recommended that students work in pairs for this lesson. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Code Studio, Lesson 3 Level 1. ",
+        "description": "**Group:** It is recommended that students work in pairs for this lesson. Consider using pair programming, having drivers and navigators switch every 3 minutes, not every level.\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Code Studio, Lesson 7 Level 1. ",
         "name": "Practice Time",
         "tips": [
           {
@@ -3597,7 +3571,7 @@
       "key": "4ba9848a-4fed-4057-a039-196dc164e3a9",
       "position": 1,
       "properties": {
-        "description": "![](https://images.code.org/15bac51234517077f8b728deca154d01-image-1631060129387.png)\n**Attention, teachers!** If you are teaching virtually or in a socially-distanced classroom, please read the full lesson plan below, then click [here](https://docs.google.com/document/d/1qlZ1jETAivu185K88GCIdcZWYlj0suAIrf0gWy2-Mrc/edit?usp=sharing) to access the modifications."
+        "description": "This is an alternate activity to [Unit 4, Lesson 7: Conditionals Practice](https://studio.code.org/s/csp4-2024/lessons/7). It is not expected that both lessons are taught.\n\n"
       },
       "seeding_key": {
         "activity_section.key": "4ba9848a-4fed-4057-a039-196dc164e3a9",
@@ -3815,17 +3789,6 @@
       "seeding_key": {
         "activity_section.key": "319bae62-8b2a-4dc8-925b-064d610c8df7",
         "lesson_activity.key": "d2f55191-e82b-415b-b05b-2040be726087"
-      }
-    },
-    {
-      "key": "0b66d8c6-f058-4467-9f80-0d7708eab08f",
-      "position": 1,
-      "properties": {
-        "progression_name": "Conditionals Practice"
-      },
-      "seeding_key": {
-        "activity_section.key": "0b66d8c6-f058-4467-9f80-0d7708eab08f",
-        "lesson_activity.key": "bb5cb4e9-3efb-4a07-ba48-af45e831fcfa"
       }
     }
   ],
@@ -4833,6 +4796,81 @@
     {
       "chapter": 41,
       "position": 5,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4_L07_Conditionals Practice_Level 5_2024"
+        ],
+        "progression": "Conditional Statements with App Development"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4_L07_Conditionals Practice_Level 5_2024"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2024",
+        "activity_section.key": "3bf5d7ac-c2ae-4321-860d-aa797099488f"
+      },
+      "level_keys": [
+        "U4_L07_Conditionals Practice_Level 5_2024"
+      ]
+    },
+    {
+      "chapter": 42,
+      "position": 6,
+      "activity_section_position": 6,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4_L07_Conditionals Practice_Level 6_2024"
+        ],
+        "progression": "Conditional Statements with App Development"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4_L07_Conditionals Practice_Level 6_2024"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2024",
+        "activity_section.key": "3bf5d7ac-c2ae-4321-860d-aa797099488f"
+      },
+      "level_keys": [
+        "U4_L07_Conditionals Practice_Level 6_2024"
+      ]
+    },
+    {
+      "chapter": 43,
+      "position": 7,
+      "activity_section_position": 7,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "U4_L07_Conditionals Practice_Level 7_2024"
+        ],
+        "progression": "Conditional Statements with App Development"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "U4_L07_Conditionals Practice_Level 7_2024"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2024",
+        "activity_section.key": "3bf5d7ac-c2ae-4321-860d-aa797099488f"
+      },
+      "level_keys": [
+        "U4_L07_Conditionals Practice_Level 7_2024"
+      ]
+    },
+    {
+      "chapter": 44,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -4856,8 +4894,8 @@
       ]
     },
     {
-      "chapter": 42,
-      "position": 6,
+      "chapter": 45,
+      "position": 9,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
@@ -4881,7 +4919,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4906,7 +4944,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -4931,7 +4969,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 48,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4956,7 +4994,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 49,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4981,7 +5019,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 50,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5006,7 +5044,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 51,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -5031,7 +5069,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 52,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -5056,7 +5094,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 53,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -5081,7 +5119,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 54,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5106,7 +5144,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 55,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5131,7 +5169,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 56,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5156,7 +5194,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 57,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5181,7 +5219,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 58,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5206,7 +5244,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 59,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -5231,7 +5269,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 60,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -5256,7 +5294,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 61,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5281,7 +5319,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 62,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -5306,7 +5344,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 63,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -5331,7 +5369,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 64,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5356,7 +5394,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 65,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
@@ -5381,7 +5419,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 66,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5406,7 +5444,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 67,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -5431,7 +5469,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 68,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5456,7 +5494,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 69,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5481,7 +5519,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 70,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5506,7 +5544,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 71,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5531,7 +5569,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 72,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5556,7 +5594,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 73,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5581,7 +5619,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 74,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5606,7 +5644,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 75,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -5631,7 +5669,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 76,
       "position": 9,
       "activity_section_position": 1,
       "assessment": true,
@@ -5656,7 +5694,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 77,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -5681,7 +5719,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 78,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5706,7 +5744,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 79,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5731,7 +5769,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 80,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -5756,7 +5794,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 81,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5781,7 +5819,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 82,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5806,7 +5844,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 83,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -5831,7 +5869,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 84,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -5856,7 +5894,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 85,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -5881,7 +5919,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 86,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -5906,7 +5944,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 87,
       "position": 10,
       "activity_section_position": 2,
       "assessment": false,
@@ -5931,7 +5969,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 88,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -5956,7 +5994,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 89,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -5981,7 +6019,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 90,
       "position": 13,
       "activity_section_position": 1,
       "assessment": true,
@@ -6006,7 +6044,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 91,
       "position": 14,
       "activity_section_position": 2,
       "assessment": true,
@@ -6028,160 +6066,6 @@
       },
       "level_keys": [
         "U4L10 CFU Conditionals Psuedocode 22022_2024"
-      ]
-    },
-    {
-      "chapter": 89,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "Conditionals Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSP Conditionals Practice MindEase L0"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp4-2024",
-        "activity_section.key": "0b66d8c6-f058-4467-9f80-0d7708eab08f"
-      },
-      "level_keys": [
-        "CSP Conditionals Practice MindEase L0"
-      ]
-    },
-    {
-      "chapter": 90,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "Conditionals Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSP Conditionals Practice MindEase L1"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp4-2024",
-        "activity_section.key": "0b66d8c6-f058-4467-9f80-0d7708eab08f"
-      },
-      "level_keys": [
-        "CSP Conditionals Practice MindEase L1"
-      ]
-    },
-    {
-      "chapter": 91,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "Conditionals Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSP Conditionals Practice MindEase L2"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp4-2024",
-        "activity_section.key": "0b66d8c6-f058-4467-9f80-0d7708eab08f"
-      },
-      "level_keys": [
-        "CSP Conditionals Practice MindEase L2"
-      ]
-    },
-    {
-      "chapter": 92,
-      "position": 4,
-      "activity_section_position": 4,
-      "assessment": false,
-      "properties": {
-        "progression": "Conditionals Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSP Conditionals Practice MindEase L3"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp4-2024",
-        "activity_section.key": "0b66d8c6-f058-4467-9f80-0d7708eab08f"
-      },
-      "level_keys": [
-        "CSP Conditionals Practice MindEase L3"
-      ]
-    },
-    {
-      "chapter": 93,
-      "position": 5,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "progression": "Conditionals Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSP Conditionals Practice MindEase L4"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp4-2024",
-        "activity_section.key": "0b66d8c6-f058-4467-9f80-0d7708eab08f"
-      },
-      "level_keys": [
-        "CSP Conditionals Practice MindEase L4"
-      ]
-    },
-    {
-      "chapter": 94,
-      "position": 6,
-      "activity_section_position": 6,
-      "assessment": false,
-      "properties": {
-        "progression": "Conditionals Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSP Conditionals Practice MindEase L5"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp4-2024",
-        "activity_section.key": "0b66d8c6-f058-4467-9f80-0d7708eab08f"
-      },
-      "level_keys": [
-        "CSP Conditionals Practice MindEase L5"
-      ]
-    },
-    {
-      "chapter": 95,
-      "position": 7,
-      "activity_section_position": 7,
-      "assessment": false,
-      "properties": {
-        "progression": "Conditionals Practice"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSP Conditionals Practice MindEase L6"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp4-2024",
-        "activity_section.key": "0b66d8c6-f058-4467-9f80-0d7708eab08f"
-      },
-      "level_keys": [
-        "CSP Conditionals Practice MindEase L6"
       ]
     }
   ],
@@ -6659,6 +6543,42 @@
         "level.key": "U4_L07_Conditionals Practice_Level 4_2024",
         "script_level.level_keys": [
           "U4_L07_Conditionals Practice_Level 4_2024"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2024",
+        "activity_section.key": "3bf5d7ac-c2ae-4321-860d-aa797099488f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4_L07_Conditionals Practice_Level 5_2024",
+        "script_level.level_keys": [
+          "U4_L07_Conditionals Practice_Level 5_2024"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2024",
+        "activity_section.key": "3bf5d7ac-c2ae-4321-860d-aa797099488f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4_L07_Conditionals Practice_Level 6_2024",
+        "script_level.level_keys": [
+          "U4_L07_Conditionals Practice_Level 6_2024"
+        ],
+        "lesson.key": "Conditionals Practice",
+        "lesson_group.key": "csp_conditionals",
+        "script.name": "csp4-2024",
+        "activity_section.key": "3bf5d7ac-c2ae-4321-860d-aa797099488f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "U4_L07_Conditionals Practice_Level 7_2024",
+        "script_level.level_keys": [
+          "U4_L07_Conditionals Practice_Level 7_2024"
         ],
         "lesson.key": "Conditionals Practice",
         "lesson_group.key": "csp_conditionals",
@@ -7241,90 +7161,6 @@
         "script.name": "csp4-2024",
         "activity_section.key": "319bae62-8b2a-4dc8-925b-064d610c8df7"
       }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSP Conditionals Practice MindEase L0",
-        "script_level.level_keys": [
-          "CSP Conditionals Practice MindEase L0"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp4-2024",
-        "activity_section.key": "0b66d8c6-f058-4467-9f80-0d7708eab08f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSP Conditionals Practice MindEase L1",
-        "script_level.level_keys": [
-          "CSP Conditionals Practice MindEase L1"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp4-2024",
-        "activity_section.key": "0b66d8c6-f058-4467-9f80-0d7708eab08f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSP Conditionals Practice MindEase L2",
-        "script_level.level_keys": [
-          "CSP Conditionals Practice MindEase L2"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp4-2024",
-        "activity_section.key": "0b66d8c6-f058-4467-9f80-0d7708eab08f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSP Conditionals Practice MindEase L3",
-        "script_level.level_keys": [
-          "CSP Conditionals Practice MindEase L3"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp4-2024",
-        "activity_section.key": "0b66d8c6-f058-4467-9f80-0d7708eab08f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSP Conditionals Practice MindEase L4",
-        "script_level.level_keys": [
-          "CSP Conditionals Practice MindEase L4"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp4-2024",
-        "activity_section.key": "0b66d8c6-f058-4467-9f80-0d7708eab08f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSP Conditionals Practice MindEase L5",
-        "script_level.level_keys": [
-          "CSP Conditionals Practice MindEase L5"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp4-2024",
-        "activity_section.key": "0b66d8c6-f058-4467-9f80-0d7708eab08f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSP Conditionals Practice MindEase L6",
-        "script_level.level_keys": [
-          "CSP Conditionals Practice MindEase L6"
-        ],
-        "lesson.key": "lesson-2",
-        "lesson_group.key": "lessonGroup-5",
-        "script.name": "csp4-2024",
-        "activity_section.key": "0b66d8c6-f058-4467-9f80-0d7708eab08f"
-      }
     }
   ],
   "resources": [
@@ -7352,7 +7188,7 @@
     },
     {
       "name": "Conditionals Explore",
-      "url": "https://docs.google.com/presentation/d/1S4xbbUjsoyT2l39oqS6a65bF4nD9e1Tx6kZr3QNETFE/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Vsf-yfAlYk-JRyAe2fPkDLAAr0oEhlO9yn0ouvrV7CE/edit?usp=drive_link",
       "key": "conditionals_explore",
       "properties": {
         "audience": "Teacher",
@@ -7364,7 +7200,7 @@
     },
     {
       "name": "Conditionals Investigate",
-      "url": "https://docs.google.com/presentation/d/1ONSphcHDrBvZYoWZAcs2FaQ4FCuL3nQRVg1BAzkvmLE/template/preview",
+      "url": "https://docs.google.com/presentation/d/1LdCT1PQ_0LoLpXrhSKVaUWbLJnlb7CLlflL3-7CG_nc/edit?usp=drive_link",
       "key": "conditionals_investigate",
       "properties": {
         "audience": "Teacher",
@@ -7376,7 +7212,7 @@
     },
     {
       "name": "Conditionals Make",
-      "url": "https://docs.google.com/presentation/d/1UfeT6m4TX0o5FKVkrGB0ve7FIUdVKcvpCQoFFHM460k/template/preview",
+      "url": "https://docs.google.com/presentation/d/1kuGZvclqYMHxS5AyJw4FMCemkCU_CiyArchxzRfmlzo/edit?usp=drive_link",
       "key": "conditionals_make",
       "properties": {
         "audience": "Teacher",
@@ -7388,7 +7224,7 @@
     },
     {
       "name": "Conditionals Practice",
-      "url": "https://docs.google.com/presentation/d/1o6leQrNxM6ggnxS9AIfKFemTsSdTjLYAfu7tRH3uevg/template/preview",
+      "url": "https://docs.google.com/presentation/d/17fMN0EGNldq2Ufu1XrT4C5I0yXaMDT2JZuRT00-9Sns/edit?usp=drive_link",
       "key": "conditionals_practice",
       "properties": {
         "audience": "Teacher",
@@ -7524,23 +7360,20 @@
     },
     {
       "name": "CSP Unit 4 - Slides",
-      "url": "https://docs.google.com/presentation/d/1PN_NJEC3mwa7-Ii1OP_6AV4Fle1CgXd26RIWZqH-Ip8/copy",
+      "url": "https://docs.google.com/presentation/d/1sn4EE3dLf-zUyUJgl-qrBwytwCI_pSz4JUlepFJEg6k/template/preview",
       "key": "csp_unit_4_-_slides",
       "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csp_unit_4_-_slides"
       }
     },
     {
-      "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
-      "url": "https://docs.google.com/presentation/d/17DOii-3gPXZrNszMyiLnHUt7VhbCULJ9Jddlb_Xss5o/copy",
+      "name": "CSP Unit 4 Lesson 14 - Conditionals Practice (Alternative)",
+      "url": "https://docs.google.com/presentation/d/1BBWir1LgjxST5hQB2sdSLE_hTdHf9ymyqvVQZXuusEs/edit?usp=drive_link",
       "key": "csp_unit_4_-_variables_conditionals_and_functions",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/17DOii-3gPXZrNszMyiLnHUt7VhbCULJ9Jddlb_Xss5o/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7549,7 +7382,7 @@
     },
     {
       "name": "CSP Unit 4 -Variables, Conditionals, and Functions",
-      "url": "https://docs.google.com/presentation/d/1PN_NJEC3mwa7-Ii1OP_6AV4Fle1CgXd26RIWZqH-Ip8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1sn4EE3dLf-zUyUJgl-qrBwytwCI_pSz4JUlepFJEg6k/edit?usp=drive_link",
       "key": "csp_unit_4_-variables_conditionals_and_functions",
       "properties": {
         "audience": "Teacher",
@@ -7561,7 +7394,7 @@
     },
     {
       "name": "CSP Unit 4 Lesson 1 - Variables Explore",
-      "url": "https://docs.google.com/presentation/d/11KzYhEMmug6IQJarTkZwV5SDndmn9M1VhKSxEaWhgfU/template/preview",
+      "url": "https://docs.google.com/presentation/d/1lRPWh4VzbFSKx9JcrzyaYWUvbEyqf1dmr1fZqNjzEsQ/edit?usp=drive_link",
       "key": "csp_unit_4_lesson_1_-_variables_explore",
       "properties": {
         "audience": "Teacher",
@@ -7650,7 +7483,7 @@
     },
     {
       "name": "Functions Explore/Investigate",
-      "url": "https://docs.google.com/presentation/d/16ha3j5a_Ls-SBiWDdGQed8W0S8bTQgYdXbRPx2rpNGE/template/preview",
+      "url": "https://docs.google.com/presentation/d/1xVLDR2ow56MeCgo2gmoMY9bbMRvXx8mcmCgk-GPbjI8/edit?usp=drive_link",
       "key": "functions_explore_investigate",
       "properties": {
         "audience": "Teacher",
@@ -7662,7 +7495,7 @@
     },
     {
       "name": "Functions Make",
-      "url": "https://docs.google.com/presentation/d/1irMNTLJTsa8zmG0tBL9rqZwzCgq02jzfp6SZweMozcU/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Fg1y7j2nJDjc49lubT1MYzitCkhojwc0-luJ0ydwZGE/edit?usp=drive_link",
       "key": "functions_make",
       "properties": {
         "audience": "Teacher",
@@ -7811,7 +7644,7 @@
     },
     {
       "name": "Project - Decision Maker App",
-      "url": "https://docs.google.com/presentation/d/1rddTRuz2TqWzeLHuCWcQ3_oLutX50FTageNRfkqsk4Q/template/preview",
+      "url": "https://docs.google.com/presentation/d/16eWLd90XYiltHwPjYsrxL8YQug5HcDq5nXGG1cXeLwc/edit?usp=drive_link",
       "key": "project_-_decision_maker_app",
       "properties": {
         "audience": "Teacher",
@@ -7844,42 +7677,6 @@
       },
       "seeding_key": {
         "resource.key": "syllabus"
-      }
-    },
-    {
-      "name": "Task List - CodeFeed Quiz",
-      "url": "https://docs.google.com/document/d/16RtQlmxzgc1rLsKDBGVpDoEpIHQjfs5OYKlAzhhhLG0/edit?usp=sharing",
-      "key": "task_list_-_codefeed_quiz",
-      "properties": {
-        "audience": "Student",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "task_list_-_codefeed_quiz"
-      }
-    },
-    {
-      "name": "Task List - Emoji Movie App",
-      "url": "https://docs.google.com/document/d/1A5G6VMMXN7AnwD-JTRMWi4NGNJrz9eFTqayWCpmR7Hc/edit?usp=sharing",
-      "key": "task_list_-_emoji_movie_app",
-      "properties": {
-        "audience": "Student",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "task_list_-_emoji_movie_app"
-      }
-    },
-    {
-      "name": "Task List - Tic Tac Toe",
-      "url": "https://docs.google.com/document/d/1tJYFkPH3yRDP7xvlKX-S808mc1ILsge8nlq-UAomZSg/edit?usp=sharing",
-      "key": "task_list_-_tic_tac_toe",
-      "properties": {
-        "audience": "Student",
-        "type": "Activity Guide"
-      },
-      "seeding_key": {
-        "resource.key": "task_list_-_tic_tac_toe"
       }
     },
     {
@@ -7968,7 +7765,7 @@
     },
     {
       "name": "Variables Investigate",
-      "url": "https://docs.google.com/presentation/d/1bcGSedBhAq2isVnGHakQT8eXR1Zz3fpPU6kg37Z6jz0/template/preview",
+      "url": "https://docs.google.com/presentation/d/1xc4gqBPx9ERIraf23-1FX9fdeDP_5H_MHRLEp8p9N0g/edit?usp=drive_link",
       "key": "variables_investigate",
       "properties": {
         "audience": "Teacher",
@@ -7980,7 +7777,7 @@
     },
     {
       "name": "Variables Make",
-      "url": "https://docs.google.com/presentation/d/1FFll2GB0Qwkqaxf6KNEbYKY_nuDCmBNNl4pKm6r5reo/template/preview",
+      "url": "https://docs.google.com/presentation/d/1k1ngU-00Mn6fFj_bzEJS0R-MHJvp_ZbVQiApaUPCNwg/edit?usp=drive_link",
       "key": "variables_make",
       "properties": {
         "audience": "Teacher",
@@ -7992,7 +7789,7 @@
     },
     {
       "name": "Variables Practice",
-      "url": "https://docs.google.com/presentation/d/1_N6J1Tzt4Hmf2NzL3aba5U_K4zjSE5crAJJeNW-aQdo/template/preview",
+      "url": "https://docs.google.com/presentation/d/1X_KwGeEeovFn__x9ly6w5Wa0IV72EjXuO9OJPugmipk/edit?usp=drive_link",
       "key": "variables_practice",
       "properties": {
         "audience": "Teacher",
@@ -8122,24 +7919,6 @@
       "seeding_key": {
         "lesson.key": "Conditionals Practice",
         "resource.key": "guide_to_practice_lessons"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "resource.key": "task_list_-_codefeed_quiz"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "resource.key": "task_list_-_emoji_movie_app"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Conditionals Practice",
-        "resource.key": "task_list_-_tic_tac_toe"
       }
     },
     {

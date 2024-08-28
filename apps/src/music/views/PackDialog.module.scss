@@ -49,63 +49,86 @@
       margin-bottom: 14px;
     }
 
-    .packs {
+    .packsContainer {
       width: 100%;
       height: 100%;
       overflow-y: auto;
       flex: 1;
-      display: grid;
-      grid-template-columns: 25% 25% 25% 25%;
-
       background-color: $neutral_dark;
       border: solid $neutral_dark 2px;
       box-sizing: border-box;
       border-radius: 5px;
+      padding: 16px;
 
-      .pack {
-        box-sizing: border-box;
-        padding: 16px;
-        cursor: pointer;
+      .packs {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 232px);
+        grid-gap: 4px;
+        justify-content: space-around;
 
-        &Selected {
-          background-color: $dark_black;
-          border-radius: 5px;
-        }
+        .pack {
+          box-sizing: border-box;
+          cursor: pointer;
+          width: 232px;
+          padding: 16px;
 
-        &Image {
-          width: 100%;
-          transform: scale(1, 1);
-          transition: 0.1s ease-in-out;
+          &Selected {
+            background-color: $dark_black;
+            border-radius: 5px;
+          }
 
-          &:hover, &Selected {
-            transform: scale(1.03, 1.03);
+          &ImageContainer {
+            width: 100%;
+            transform: scale(1, 1);
             transition: 0.1s ease-in-out;
-          }
-        }
 
-        &Footer {
-          margin-top: 10px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-
-          &Name {
-            font-size: 16px;
+            &:hover, &Selected {
+              transform: scale(1.03, 1.03);
+              transition: 0.1s ease-in-out;
+            }
           }
 
-          &Artist {
-            font-size: 11px;
+          &Image {
+            border-radius: 5px;
+
+            &Attribution {
+              transform: rotate(270deg) translate(0, 0);
+              position: absolute;
+              top: 6px;
+              right: 18px;
+              transform-origin: top right;
+              font-size: 8px;
+              opacity: 0.3;
+
+              &Left {
+                top: -10px;
+                right: initial;
+                transform: translate(-100%, 100%) rotate(270deg);
+              }
+            }
           }
 
-          &Preview {
-            margin-right: 10px;
+          &Footer {
+            margin-top: 8px;
+            display: flex;
+            justify-content: space-between;
 
-            .preview {
-              color: $neutral_dark40;
+            &Name {
+              font-size: 18px;
+              font-weight: 600;
+              line-height: 1.3;
+            }
 
-              &Playing {
-                color: $neutral_dark70;
-                cursor: default;
+            &Artist {
+              font-size: 11px;
+            }
+
+            &Preview {
+              margin: 3px 6px 0 3px;
+              font-size: 18px;
+
+              .preview {
+                color: $neutral_dark40;
               }
             }
           }

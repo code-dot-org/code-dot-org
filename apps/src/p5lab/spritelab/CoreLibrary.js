@@ -1,16 +1,18 @@
-import {createUuid, stringToChunks, ellipsify} from '@cdo/apps/utils';
 import * as drawUtils from '@cdo/apps/p5lab/drawUtils';
 import * as locationUtils from '@cdo/apps/p5lab/locationUtils';
-import commands from './commands/index';
 import {getStore} from '@cdo/apps/redux';
-import {APP_HEIGHT, APP_WIDTH} from '../constants';
-import {MAX_NUM_SPRITES, SPRITE_WARNING_BUFFER} from './constants';
+import {createUuid, stringToChunks, ellipsify} from '@cdo/apps/utils';
+import msg from '@cdo/locale';
+
 import {
   workspaceAlertTypes,
   displayWorkspaceAlert,
 } from '../../code-studio/projectRedux';
-import msg from '@cdo/locale';
+import {APP_HEIGHT, APP_WIDTH} from '../constants';
 import {formatForPlayspace} from '../utils';
+
+import commands from './commands/index';
+import {MAX_NUM_SPRITES, SPRITE_WARNING_BUFFER} from './constants';
 
 export default class CoreLibrary {
   constructor(p5, jsInterpreter) {
@@ -576,6 +578,7 @@ export default class CoreLibrary {
       sprite.initialAngle = opts.initialAngle;
     }
 
+    const minimumScale = opts.minimumScale || 100;
     sprite.baseScale = 1;
     sprite.setScale = function (scale) {
       sprite.scale = scale * sprite.baseScale;
@@ -589,7 +592,7 @@ export default class CoreLibrary {
       sprite.baseScale =
         100 /
         Math.max(
-          100,
+          minimumScale,
           sprite.animation.getHeight(),
           sprite.animation.getWidth()
         );

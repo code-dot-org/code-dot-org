@@ -1,14 +1,19 @@
+import classNames from 'classnames';
 import React, {useMemo} from 'react';
-import ModelCardRow from './ModelCardRow';
+
 import {
   MODEL_CARD_FIELDS_LABELS_ICONS,
   TECHNICAL_INFO_FIELDS,
 } from '@cdo/apps/aichat/views/modelCustomization/constants';
-import styles from '@cdo/apps/aichat/views/model-customization-workspace.module.scss';
 import {Heading4} from '@cdo/apps/componentLibrary/typography';
-import moduleStyles from './presentation-view.module.scss';
 import {useAppSelector} from '@cdo/apps/util/reduxHooks';
+
 import {modelDescriptions} from '../../constants';
+
+import ModelCardRow from './ModelCardRow';
+
+import moduleStyles from './presentation-view.module.scss';
+import styles from '@cdo/apps/aichat/views/model-customization-workspace.module.scss';
 
 const PresentationView: React.FunctionComponent = () => {
   const savedAiCustomizations = useAppSelector(
@@ -17,8 +22,11 @@ const PresentationView: React.FunctionComponent = () => {
   const {selectedModelId, systemPrompt, temperature, retrievalContexts} =
     savedAiCustomizations;
   const modelCardInfo = savedAiCustomizations.modelCardInfo;
-  const {name: modelName = '', trainingData = ''} =
-    modelDescriptions.find(model => model.id === selectedModelId) ?? {};
+  const {
+    name: modelName = '',
+    trainingData = '',
+    overview = '',
+  } = modelDescriptions.find(model => model.id === selectedModelId) ?? {};
 
   const technicalInfo = useMemo(() => {
     const technicalInfoData: {
@@ -28,6 +36,7 @@ const PresentationView: React.FunctionComponent = () => {
         | boolean;
     } = {
       'Model Name': modelName,
+      Overview: overview,
       'Training Data': trainingData,
       'System Prompt': systemPrompt,
       Temperature: temperature,
@@ -40,32 +49,48 @@ const PresentationView: React.FunctionComponent = () => {
       return `${field}: ${technicalInfoData[field]}`;
     });
     return technicalInfo;
-  }, [retrievalContexts, systemPrompt, temperature, modelName, trainingData]);
+  }, [
+    retrievalContexts,
+    systemPrompt,
+    temperature,
+    modelName,
+    overview,
+    trainingData,
+  ]);
 
   return (
-    <div className={styles.verticalFlexContainer}>
-      <div>
-        <Heading4 className={moduleStyles.modelCardTitle}>
-          {modelCardInfo['botName']}
-        </Heading4>
-        {MODEL_CARD_FIELDS_LABELS_ICONS.map(([property, label, iconName]) => {
-          if (property === 'botName') {
-            return null;
+    <div
+      className={classNames(
+        styles.verticalFlexContainer,
+        moduleStyles.container
+      )}
+    >
+      <Heading4 className={moduleStyles.modelCardTitle}>
+        {modelCardInfo['botName']}
+      </Heading4>
+      <div className={moduleStyles.modelCardFields}>
+        {MODEL_CARD_FIELDS_LABELS_ICONS.map(
+          ({property, label, icon, displayTooltip}) => {
+            if (property === 'botName' || property === 'isPublished') {
+              return null;
+            }
+            return (
+              <ModelCardRow
+                title={label}
+                titleIcon={icon}
+                expandedContent={modelCardInfo[property]}
+                key={property}
+                tooltipText={displayTooltip}
+              />
+            );
           }
-          return (
-            <ModelCardRow
-              title={label}
-              titleIcon={iconName}
-              expandedContent={modelCardInfo[property]}
-              key={property}
-            />
-          );
-        })}
+        )}
         <ModelCardRow
           title="Technical Info"
           titleIcon="screwdriver-wrench"
           expandedContent={technicalInfo}
           key="technicalInfo"
+          tooltipText="Behind-the-scenes technical information for the underlying language model."
         />
       </div>
     </div>

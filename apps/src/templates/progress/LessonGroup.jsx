@@ -1,18 +1,20 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React from 'react';
 import {connect} from 'react-redux';
-import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
-import SummaryProgressTable from '@cdo/apps/templates/progress/SummaryProgressTable';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import {groupedLessonsType} from '@cdo/apps/templates/progress/progressTypes';
-import color from '@cdo/apps/util/color';
-import LessonGroupInfoDialog from '@cdo/apps/templates/progress/LessonGroupInfoDialog';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {lessonIsVisible} from './progressHelpers';
+
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import LessonGroupInfo from '@cdo/apps/templates/progress/LessonGroupInfo';
 import fontConstants from '@cdo/apps/fontConstants';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
+import LessonGroupInfo from '@cdo/apps/templates/progress/LessonGroupInfo';
+import LessonGroupInfoDialog from '@cdo/apps/templates/progress/LessonGroupInfoDialog';
+import {groupedLessonsType} from '@cdo/apps/templates/progress/progressTypes';
+import SummaryProgressTable from '@cdo/apps/templates/progress/SummaryProgressTable';
+import color from '@cdo/apps/util/color';
+
+import {lessonIsVisible} from './progressHelpers';
 
 /**
  * A component that shows a group of lessons. That group has a name and is

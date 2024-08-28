@@ -3,7 +3,7 @@
   "name": "buzzer.frequency()",
   "category": "Circuit",
   "category_key": "circuit",
-  "content": "Makes the buzzer play at a specific frequency and duration.\r\n\r\n[`buzzer.frequency()`(#f78183)](/docs/applab/buzzer.frequency/) determines what tone the buzzer will play, and for how long this tone will play for. This command is more customizable than `.note()` because you can choose the frequency you want up to around 500hz (About the 4th octave on the musical scale). Any frequency above 500hz cannot play on the buzzer.\r\n\r\n[`buzzer.frequency()`(#f78183)](/docs/applab/buzzer.frequency/) has a parameter for duration too. If the duration is not specified, then the tone will play continuously.\r\n",
+  "content": "Makes the buzzer play at a specific frequency and duration.\n\n[`buzzer.frequency()`(#f78183)](/docs/applab/buzzer.frequency/) determines what tone the buzzer will play, and for how long this tone will play for. This command is more customizable than `.note()` because you can choose the frequency you want up to around 500hz (About the 4th octave on the musical scale). Any frequency above 1000hz cannot play on the buzzer.\n\n[`buzzer.frequency()`(#f78183)](/docs/applab/buzzer.frequency/) has a parameter for duration too. If the duration is not specified, then the tone will play continuously.\n",
   "examples": [
     {
       "name": "",
@@ -28,6 +28,10 @@
       "required": false,
       "description": "Length of how long the buzzer will play the frequency for in milliseconds. "
     }
+  ],
+  "parameters": [
+    "frequency",
+    "duration"
   ],
   "short_description": "Makes the buzzer play at a specific frequency and duration.",
   "syntax": "buzzer.frequency(frequency, duration)",

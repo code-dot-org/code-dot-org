@@ -1,0 +1,35 @@
+:ruby
+  videos = [
+    {
+      code: "GqlP5s7KTl4",
+      download_path: "//videos.code.org/music_lab/Music_Lab_Make_Music_Learn_Code.mp4",
+      caption: hoc_s("music_lab.make_music_learn_code"),
+    },
+    {
+      code: "oZhFQ1yjWhY",
+      download_path: "//videos.code.org/music_lab/Music_Lab_Aloe_Blacc.mp4",
+      caption: hoc_s("music_lab.artist.singer_songwriter", markdown: :inline, locals: {artist_name: "Aloe Blacc"}),
+    },
+    {
+      code: "Fysf1rD-RX0",
+      download_path: "//videos.code.org/music_lab/Music_Lab_Rosa_Linn.mp4",
+      caption: hoc_s("music_lab.artist.singer_songwriter", markdown: :inline, locals: {artist_name: "Rosa Linn"}),
+    },
+    {
+      code: "1TDma4wg3dE",
+      download_path: "//videos.code.org/music_lab/Music_Lab_Drew_Taggart_from_The_Chainsmokers.mp4",
+      caption: hoc_s("music_lab.artist.band", markdown: :inline, locals: {artist_name: "Drew Taggart", band_name: "The Chainsmokers"}),
+    },
+  ]
+
+.carousel-wrapper.video-carousel
+  %swiper-container.music-lab-videos{navigation: "true", "navigation-next-el": ".nav-next-music-lab-videos", "navigation-prev-el": ".nav-prev-music-lab-videos", pagination: "true", init: "false", "allow-touch-move": "false"}
+    - videos.each do |video|
+      %swiper-slide
+        %figure
+          = view :video_with_fallback, video_code: video[:code], download_path: video[:download_path]
+          %figcaption.no-margin-bottom
+            = video[:caption]
+
+  %button.swiper-nav-prev.nav-prev-music-lab-videos
+  %button.swiper-nav-next.nav-next-music-lab-videos

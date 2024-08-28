@@ -1,7 +1,8 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {assert, expect} from '../../../util/reconfiguredChai';
+
 import LessonExtras from '@cdo/apps/code-studio/components/lessonExtras/LessonExtras';
+
 import {bonusLevels} from './lessonExtrasTestHelpers';
 
 const DEFAULT_PROPS = {
@@ -21,23 +22,23 @@ describe('LessonExtras', () => {
     const wrapper = shallow(
       <LessonExtras {...DEFAULT_PROPS} showLessonExtrasWarning={false} />
     );
-    expect(wrapper.find('LessonExtrasNotification')).to.have.lengthOf(0);
+    expect(wrapper.find('LessonExtrasNotification')).toHaveLength(0);
   });
 
   it('does not show lesson extras warning if sectionId is not provided', () => {
     const wrapper = shallow(
       <LessonExtras {...DEFAULT_PROPS} sectionId={null} />
     );
-    expect(wrapper.find('LessonExtrasNotification')).to.have.lengthOf(0);
+    expect(wrapper.find('LessonExtrasNotification')).toHaveLength(0);
   });
 
   it('show lesson extra warning if showLessonExtrasWarning and have sectionId', () => {
     const wrapper = shallow(<LessonExtras {...DEFAULT_PROPS} />);
-    expect(wrapper.find('LessonExtrasNotification')).to.have.lengthOf(1);
+    expect(wrapper.find('LessonExtrasNotification')).toHaveLength(1);
   });
 
   it('renders BonusLevels area', () => {
     const wrapper = shallow(<LessonExtras {...DEFAULT_PROPS} />);
-    assert.equal(1, wrapper.find('BonusLevels').length);
+    expect(1).toEqual(wrapper.find('BonusLevels').length);
   });
 });

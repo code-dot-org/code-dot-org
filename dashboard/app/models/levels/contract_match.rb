@@ -42,4 +42,8 @@ class ContractMatch < DSLDefined
   def icon
     'fa fa-list-ul'
   end
+
+  def deprecated?
+    true
+  end
 end

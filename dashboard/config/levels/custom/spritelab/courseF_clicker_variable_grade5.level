@@ -1,0 +1,152 @@
+<GamelabJr>
+  <config><![CDATA[{
+  "game_id": 64,
+  "created_at": "2024-04-23T19:52:57.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "skin": "gamelab",
+    "show_debug_watch": "true",
+    "helper_libraries": [
+      "NativeSpriteLab",
+      "variableLog",
+      "zTimerPrototype"
+    ],
+    "use_default_sprites": "true",
+    "hide_animation_mode": "false",
+    "show_type_hints": "true",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "use_modal_function_editor": "true",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "true",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "hide_view_data_button": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "true",
+    "pause_animations_by_default": "false",
+    "hide_custom_blocks": "true",
+    "parent_level_id": 21671,
+    "block_pool": "gamelab",
+    "include_shared_functions": "true",
+    "name_suffix": "_grade5",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "block_pools": [
+      "GamelabJr"
+    ],
+    "mini_toolbox": "true",
+    "validation_enabled": "true",
+    "hide_pause_button": "false",
+    "instructions_icon": "purplebunny",
+    "short_instructions": "Use a variable to set the player's score at the beginning of the game and to give them points each time they click a sprite.",
+    "long_instructions": "# Track the score with a variable\r\n\r\nYou need to keep track of the player's score. Let's use a variable to do two things:\r\n1. Set the score to 0 at the beginning of the game.\r\n2. Give a point each time the user clicks a sprite.\r\n\r\n## Do This\r\n*Under `when run`:*\r\n* Set a variable like `score` to 0.\r\n\r\n*Under `when clicked`:*\r\n* Give the user points by changing the same variable.",
+    "authored_hints": "[]",
+    "hint_prompt_attempts_threshold": "1",
+    "project_template_level_name": "courseF_clicker_template_grade5",
+    "validation_code": "// This level requires the variableLog Helper Library\r\n\r\nif (World.frameCount == 1) {\r\n  varLog = buildVariableLog();\r\n  addCriteria(function(){\r\n    return minimumSprites(3);\r\n  }, 'createAtLeastThreeSprites');\r\n  addCriteria(function(){\r\n    return allSpriteHaveSameCostume();\r\n  }, 'spritesNeedSameCostumes');\r\n  addCriteria(function(){\r\n    return Object.keys(varLog).length >0;\r\n  }, 'createVariable');\r\n  addCriteria(function(){\r\n    return !varLabelStartsWithUnderscore();\r\n  }, 'renameVariable');\r\n  addCriteria(function(){\r\n    return clickEventFound();\r\n  }, 'spriteNotClicked');\r\n  addCriteria(function(){\r\n    return spriteRemoved()&&clickEventFound();\r\n  }, 'removeSpriteWhenClicked');\r\n  addCriteria(function() {\r\n    return onlyEventSpriteRemoved();\r\n  }, 'removeOnlyClickedSprite');\r\n  addCriteria(function(){\r\n    return detectVariableLogChange();\r\n  }, 'changeVariableBlock');\r\n}\r\n\r\ndelayEndInActiveApp();\r\ncheck();\r\n",
+    "encrypted_examples": "qXmsidzvsZpb40wzdtZnvdfWyqu2AZ7YHRDhcHQYIjAqavMeOo/4sFaWUUPo\nO75Keg6PfkCLR3SYFSMsTSPANw==\n",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-04-23T19:52:57.388+00:00\",\"changed\":[\"cloned from \\\"courseF_clicker_variable_maker\\\"\"],\"cloned_from\":\"courseF_clicker_variable_maker\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="when_run" deletable="false">
+  </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="World">
+          <block type="gamelab_setBackgroundImageAs">
+            <field name="IMG">"cave"</field>
+          </block>
+          <block type="gamelab_setBackground">
+            <value name="COLOR">
+              <block type="colour_picker">
+                <field name="COLOUR">#3333ff</field>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Sprites">
+          <block type="gamelab_makeNumSprites">
+            <field name="ANIMATION_NAME">"gold coin"</field>
+            <value name="NUM">
+              <block type="math_number">
+                <field name="NUM">3</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_setProp">
+            <field name="PROPERTY">"scale"</field>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation">
+                <field name="ANIMATION">"gold coin"</field>
+              </block>
+            </value>
+            <value name="VAL">
+              <block type="math_number">
+                <field name="NUM">50</field>
+              </block>
+            </value>
+          </block>
+          <block type="gamelab_destroy"/>
+        </category>
+        <category name="Events">
+          <block type="gamelab_spriteClicked">
+            <field name="CONDITION">"when"</field>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation" can_disconnect_from_parent="false">
+                <field name="ANIMATION">"gold coin"</field>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Variables" custom="VARIABLE">
+          <block type="variables_set">
+            <field name="VAR">???</field>
+            <value name="VALUE">
+              <block type="math_number">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+          <block type="math_change">
+            <field name="VAR">???</field>
+            <value name="DELTA">
+              <block type="math_number">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+          </block>
+        </category>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</GamelabJr>

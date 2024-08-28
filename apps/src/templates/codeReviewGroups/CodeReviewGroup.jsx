@@ -1,8 +1,11 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import FontAwesome from '../FontAwesome';
+import React from 'react';
+
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+
 import StudentGroup from './StudentGroup';
 
 export default function CodeReviewGroup({

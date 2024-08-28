@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-05-03T23:11:00.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "<img style=\"width:40%; float: right; margin: 10px; border: solid 2px black\" src=\"https://images.code.org/5f30ad2b376c2f53f1c4b46e0b173a50-image-1714967571111.png\" />\r\n\r\n# Predict (Part 1)\r\n\r\n#### This chatbot has an additional setting called a system prompt. We'll explore what this does throughout this lesson, but for now we're going to try and make some predictions about what this might do to our chatbot.\r\n\r\n> Looking at the screenshot above, **What do you notice? What do you wonder?** Write 1 sentence for each of these. _There is no wrong answer - it's just your observation_.\r\n>\r\n> Type in your response, then press the `Run`(#FFA400) button to lock it in!",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19018,
+    "name_suffix": "2022",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "placeholder": "What do you notice? What do you wonder?"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-03T23:11:00.582+00:00\",\"changed\":[\"cloned from \\\"gen-ai-response-template\\\"\"],\"cloned_from\":\"gen-ai-response-template\"},{\"changed_at\":\"2024-05-06 03:42:32 +0000\",\"changed\":[\"long_instructions\",\"optional\",\"title\",\"placeholder\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-06 03:42:55 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-06 03:52:59 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-10 23:23:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-11 00:00:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-11 00:01:00 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-11 00:01:37 +0000\",\"changed\":[\"long_instructions\",\"title\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-11 00:06:29 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-11 00:07:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-11 00:08:28 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-11 00:08:56 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-11 00:11:22 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-11 00:12:24 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-11 00:13:48 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-11 03:46:52 +0000\",\"changed\":[],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-11 03:58:13 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

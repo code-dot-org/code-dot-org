@@ -1,38 +1,51 @@
-import evidenceDemo from '@cdo/static/ai-evidence-demo.gif';
+import React from 'react';
+
 import i18n from '@cdo/locale';
+import evidenceDemo from '@cdo/static/ai-evidence-demo.gif';
+
+// intro.js-react allows a string or a react component for the intro prop.
+// Providing a string that was written by a translator is risky, because it
+// could contain malicious HTML. This helper method wraps the string in a react
+// fragment, which will take care of sanitizing the string.
+const sanitize = unsafe => <>{unsafe}</>;
 
 export const INITIAL_STEP = 0;
 export const STEPS = [
   {
     element: '#ui-floatingActionButton',
     title: i18n.rubricTourStepOneTitle(),
-    intro: i18n.rubricTourStepOneText(),
+    intro: sanitize(i18n.rubricTourStepOneText()),
   },
   {
     element: '#tour-ai-assessment',
     title: i18n.rubricTourStepTwoTitle(),
-    intro: i18n.rubricTourStepTwoText(),
+    intro: sanitize(i18n.rubricTourStepTwoText()),
   },
   {
     element: '#tour-ai-evidence',
     title: i18n.rubricTourStepThreeTitle(),
     position: 'top',
-    intro: `<p>${i18n.rubricTourStepThreeText()}</p><img src=${evidenceDemo}>`,
+    intro: (
+      <>
+        <p>{i18n.rubricTourStepThreeText()}</p>
+        <img src={evidenceDemo} alt={i18n.rubricTourStepThreeAltText()} />
+      </>
+    ),
   },
   {
     element: '#tour-ai-confidence',
     title: i18n.rubricTourStepFourTitle(),
-    intro: i18n.rubricTourStepFourText(),
+    intro: sanitize(i18n.rubricTourStepFourText()),
   },
   {
     element: '#tour-evidence-levels',
     title: i18n.rubricTourStepFiveTitle(),
-    intro: i18n.rubricTourStepFiveText(),
+    intro: sanitize(i18n.rubricTourStepFiveText()),
   },
   {
     element: '#tour-ai-assessment-feedback',
     title: i18n.rubricTourStepSixTitle(),
-    intro: i18n.rubricTourStepSixText(),
+    intro: sanitize(i18n.rubricTourStepSixText()),
   },
 ];
 

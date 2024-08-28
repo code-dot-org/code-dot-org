@@ -1,9 +1,11 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import ProgressLevelSet from '@cdo/apps/templates/progress/ProgressLevelSet';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
-import LevelDetailsDialog from './LevelDetailsDialog';
+
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import ProgressLevelSet from '@cdo/apps/templates/progress/ProgressLevelSet';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+
+import LevelDetailsDialog from './LevelDetailsDialog';
 
 export default class ProgressionDetails extends Component {
   static propTypes = {

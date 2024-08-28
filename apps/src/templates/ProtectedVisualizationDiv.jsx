@@ -1,7 +1,8 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import classNames from 'classnames';
+
 import ProtectedStatefulDiv from './ProtectedStatefulDiv';
 
 export const VISUALIZATION_DIV_ID = 'visualization';

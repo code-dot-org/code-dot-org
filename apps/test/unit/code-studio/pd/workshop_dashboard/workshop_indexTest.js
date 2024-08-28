@@ -1,8 +1,8 @@
-import {WorkshopIndex} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshop_index';
+import {expect} from 'chai'; // eslint-disable-line no-restricted-imports
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from 'chai';
-import {shallow} from 'enzyme';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import Permission, {
   Facilitator,
   CsfFacilitator,
@@ -10,6 +10,7 @@ import Permission, {
   ProgramManager,
   WorkshopAdmin,
 } from '@cdo/apps/code-studio/pd/workshop_dashboard/permission';
+import {WorkshopIndex} from '@cdo/apps/code-studio/pd/workshop_dashboard/workshop_index';
 
 describe('WorkshopIndex', () => {
   const fakeRouter = {

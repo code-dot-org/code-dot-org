@@ -19,7 +19,6 @@ class I18nScriptUtils
   PROGRESS_BAR_FORMAT = '%t: |%B| %p% %a'.freeze
   PARALLEL_PROCESSES = Parallel.processor_count.freeze
   SOURCE_LOCALE = I18n.default_locale.to_s.freeze
-  TTS_LOCALES = (::TextToSpeech::VOICES.keys - %I[#{SOURCE_LOCALE}]).freeze
   TESTING_BY_DEFAULT = false
 
   # @return [Hash] the Crowdin credentials.
@@ -322,10 +321,18 @@ class I18nScriptUtils
   end
 
   def self.parse_file(file_path)
-    return JSON.load_file(file_path) if json_file?(file_path)
-    return YAML.load_file(file_path) if yaml_file?(file_path)
+    file_content = File.read(file_path)
+
+    return JSON.parse(file_content) if json_file?(file_path)
+    return YAML.safe_load(file_content) if yaml_file?(file_path)
 
     raise "do not know how to parse file #{file_path.inspect}"
+  rescue Errno::ENOENT => exception
+    raise "File not found: #{file_path.inspect} - #{exception.message}"
+  rescue JSON::ParserError => exception
+    raise "JSON parsing error in file #{file_path.inspect} - #{exception.message}"
+  rescue Psych::SyntaxError => exception
+    raise "YAML parsing error in file #{file_path.inspect} - #{exception.message}"
   end
 
   def self.sanitize_file_and_write(loc_path, dest_path)

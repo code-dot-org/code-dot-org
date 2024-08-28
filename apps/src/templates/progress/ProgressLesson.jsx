@@ -1,24 +1,27 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import ProgressLessonContent from './ProgressLessonContent';
-import FontAwesome from '../FontAwesome';
-import color from '@cdo/apps/util/color';
-import {levelWithProgressType, lessonType} from './progressTypes';
+import ReactTooltip from 'react-tooltip';
+
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+
+import FocusAreaIndicator from './FocusAreaIndicator';
 import {
   lessonIsVisible,
   lessonIsLockedForUser,
   lessonIsLockedForAllStudents,
 } from './progressHelpers';
+import ProgressLessonContent from './ProgressLessonContent';
 import ProgressLessonTeacherInfo from './ProgressLessonTeacherInfo';
-import FocusAreaIndicator from './FocusAreaIndicator';
-import ReactTooltip from 'react-tooltip';
-import _ from 'lodash';
-import Button from '../Button';
-import fontConstants from '@cdo/apps/fontConstants';
+import {levelWithProgressType, lessonType} from './progressTypes';
 
 class ProgressLesson extends React.Component {
   static propTypes = {

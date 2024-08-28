@@ -3,45 +3,38 @@
 
 👋 This document describes how to set up your workstation to develop for Code.org.
 
-You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in a VM/WSL). Setup for Windows is more complicated and relatively few developers use it. Make sure you follow the instructions for your platform in the subsections below.
+You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu in a VM/WSL). Setup for Windows is more complicated and relatively few developers use it. Make sure you follow the instructions for your platform in the subsections below.
 
 ## Overview
 
 1. Request and Configure AWS access (code.org staff) or configure local secrets (open source contributors). See [Configure AWS Access or Secrets](#configure-aws-access-or-secrets) below. This step is not required until rake is first run below, but staff may wish to submit the request first so its ready when rake is.
-    <details> 
-      <summary>Troubleshoot: wrong version of ruby</summary>
-      If you run into issues with your ruby version during this step, you may need to complete the OS-specific  prerequisites below before proceeding. 
-      </details>
 
-1. Install OS-specific prerequisites
-   - See the appropriate section below: [macOS](#macos), [Ubuntu](#ubuntu-2004), [Windows](#windows)
-   - *Important*: When done, check for correct versions of these dependencies:
-
-     ```sh
-     ruby --version  # --> ruby 3.0.5
-     node --version  # --> v18.16.0
-     ```
-
-1. Clone the repo, which also may take a while.
-    - Note you should have `git lfs --version` >= 3.0 installed prior to cloning, see OS-specific install steps referenced above.
-    - The simplest option is to clone via SSH with: `git clone git@github.com:code-dot-org/code-dot-org.git`
-    - The fastest option is to clone via HTTP with: `git clone https://github.com/code-dot-org/code-dot-org.git`. Although faster than SSH, this option requires you to reauthenticate every time you want to update. You will therefore probably want to switch to SSH after the initial clone with `git remote set-url origin git@github.com:code-dot-org/code-dot-org.git`
+1. Clone the repo:
+    - Via SSH (simpler): `git clone git@github.com:code-dot-org/code-dot-org.git`
+    - OR via HTTP (faster): `git clone https://github.com/code-dot-org/code-dot-org.git`.
+        - Although faster than SSH, this option requires you to reauthenticate every time you want to update. You will therefore probably want to switch to SSH after the initial clone with: `git remote set-url origin git@github.com:code-dot-org/code-dot-org.git`
 
 1. `cd code-dot-org`
 
-1. `gem install bundler -v 2.3.22`
+1. Install OS-specific prerequisites
+    - See the appropriate section below: [macOS](#macos), [Ubuntu](#ubuntu-2004), [Windows](#windows)
+    - *Important*: When done, check for correct versions of these dependencies:
 
-1. `rbenv rehash`
+     ```sh
+     ruby --version     # --> ruby 3.0.5
+     node --version     # --> v18.16.0
+     git-lfs --version  #  >= git-lfs/3.0
+     pdm --version    #  >= 2.17
+     ```
+
+1. `git lfs pull`
+
+1. `gem install bundler -v 2.3.22 && rbenv rehash`
 
 1. `bundle install`
     - This step often fails to due environment-specific issues. Look in the [Bundle Install Tips](#bundle-install-tips) section below for steps to resolve many common issues.
 
 1. `bundle exec rake install:hooks`
-    <details>
-      <summary>Troubleshoot: `rake aborted! Gem::LoadError: You have already activated...` </summary>
-
-      - If you have issue `"rake aborted! Gem::LoadError: You have already activated rake 12.3.0, but your Gemfile requires rake 11.3.0."`, make sure you add `bundle exec` in front of the `rake install:hooks` command
-    </details>
     <details>
       <summary>Troubleshoot: wrong version of rake </summary>
 
@@ -54,19 +47,28 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
     </details>
     <details>
-      <summary>Troubleshoot: `FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError` or similar `Aws::SecretsManager` errors</summary>
+      <summary>Troubleshoot: <code>FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError</code> or similar <code>Aws::SecretsManager</code> errors</summary>
       Reported when missing credentials for access to our AWS Account or local secret configuration.
 
       See [Configure AWS Access or Secrets](#configure-aws-access-or-secrets)
     </details>
     <details>
-      <summary>Troubleshoot: `WSL: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock'` </summary>
+      <summary>Troubleshoot: <code>WSL: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock'</code> </summary>
 
       - This is an issue specific to Windows System for Linux (WSL) OS configuration where connection to mysql without sudo would fail with the above error. This can be rectified with some permission updates on mysql files and updating SQL client side configuration as called out [in this SO post](https://stackoverflow.com/a/66949451)
     </details>
 
 1. `bundle exec rake install`
-    - This can take a long time, ~30 minutes or more. The most expensive are the "seeding" tasks, where your local DB is populated from data in the repository. Some of the seeding rake tasks can take several minutes. The longest one, `seed:scripts`, can take > 10 minutes, but it should at least print out progress as it goes.
+    <details>
+        <summary>This will take 30 minutes, or more</summary>
+        The most expensive are the "seeding" tasks, where your local DB is populated from data in the repository. Some of the seeding rake tasks can take several minutes. The longest one, <code>seed:scripts</code>, can take > 10 minutes, but it should at least print out progress as it goes.
+    </details>
+    <details>
+        <summary>If <code>bundle exec rake install</code> is interrupted before finishing...</summary>
+        If, for any reason, you are forced to interrupt the <code>bundle exec rake install</code> command before it completes,
+        cd into dashboard and run <code>bundle exec rake db:drop</code> before trying <code>bundle exec rake install</code> again.
+        <code>bundle exec rake install</code> must always be called from the local project's root directory, or it won't work.
+    </details>
 
 1. fix your database charset and collation to match our servers
     - `bin/mysql-client-admin`
@@ -74,16 +76,13 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
     - `ALTER DATABASE dashboard_test CHARACTER SET utf8 COLLATE utf8_unicode_ci;`
 
 1. `bundle exec rake build`
-    - This may fail if you are on a Mac and your OSX XCode Command Line Tools were not installed properly. See [Bundle Install Tips](#bundle-install-tips) for more information.
     - This may fail for external contributors who don't have permissions to access Code.org AWS Secrets. Assign placeholder values to any configuration settings that are [ordinarily populated in Development environments from AWS Secrets](https://github.com/code-dot-org/code-dot-org/blob/staging/config/development.yml.erb) as indicated in this example: https://github.com/code-dot-org/code-dot-org/blob/5b3baed4a9c2e7226441ca4492a3bca23a4d7226/locals.yml.default#L136-L139
 
 1. Run the website `bin/dashboard-server`
 
-1. Visit <http://localhost-studio.code.org:3000/> to verify it is running.
+1. **Open <http://localhost-studio.code.org:3000/>** to verify its running.
 
-1. Install necessary plugins described in the [Editor configuration](#editor-configuration) section below.
-
-After setup, read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
+After setup, [configure your editor](#editor-configuration), read about our [code styleguide](./STYLEGUIDE.md), our [test suites](./TESTING.md), or find more docs on [the wiki](https://github.com/code-dot-org/code-dot-org/wiki/For-Developers).
 
 ## Configure AWS Access or Secrets
 
@@ -94,112 +93,115 @@ Some functionality will not work on your local site without this, for example, s
 ### For external contributors
 
 External contributors can supply alternate placeholder values for secrets normally retrieved from AWS Secrets Manager by creating a file named "locals.yml", copying contents from ["locals.yml.default"](locals.yml.default) and uncommenting following configurations to use placeholder values
-          - slack_bot_token: localoverride
-          - pardot_private_key: localoverride
-          - firebase_secret: localoverride
-          - firebase_shared_secret: localoverride
-          - properties_encryption_key: ''
+
+```
+slack_bot_token: localoverride
+pardot_private_key: localoverride
+properties_encryption_key: ''
+```
 
 ## OS-specific prerequisites
 
 ### macOS
 
-These steps are for Apple devices running **macOS Monterey and Ventura**, including those running on [Apple Silicon (M1|M2)](https://en.wikipedia.org/wiki/Apple_silicon#M_series). 
+These steps are for Apple devices running **macOS 14.x**, including those running on [Apple Silicon (M1|M2|M3) ARM architecture CPUs](https://en.wikipedia.org/wiki/Apple_silicon#M_series). 
 
-Notes:
-- At this time, if you are using an M1 Macbook, we recommend using Rosetta to set up an Intel-based development environment vs. trying to make things work with the ARM-based Apple Silicon environment.
-- These steps may need to change over time as 3rd party tools update to have versions compatible with the new architecture.
-- As macOS Catalina is no longer receiving security updates, we cannot recommend using it. If you still need support, see [old setup.md instructions for Catalina](https://github.com/code-dot-org/code-dot-org/blob/138d08a6f304c289e2b4388f513d81954ec85158/SETUP.md#os-x-catalina)
+1. Open a Terminal.
 
-Setup steps for macOS:
+1. Install **Xcode Command Line Tools**:
+    ```
+    xcode-select --install
+    ```
 
-1. _(M1 Mac users only)_ Install Rosetta 2.
+1. Install **[brew](https://brew.sh/)**: 
+   ```
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
 
-  - Check if Rosetta is already installed: `/usr/bin/pgrep -q oahd && echo Yes || echo No`
-  - If not, install Rosetta using
-    - `softwareupdate --install-rosetta` (launches the Rosetta installer) or
-    - `/usr/sbin/softwareupdate --install-rosetta --agree-to-license` (skips installer and license agreement)
-  - Follow these steps to enable Rosetta:
-    - Select the app (Terminal) in Finder from Applications/Utilities.
-    - Right-click on the app (Terminal) and select `Get Info`.
-    - In `General`, check the `Open using Rosetta` checkbox.
-    - Close the Terminal and open it again.
-    - To verify that you are using a Rosetta terminal, run the command `arch` from the command line and it should output `i386`. The native terminal without Rosetta would output `arm64` for the above command. If you still do not see `i386` in the terminal then try restarting your machine. 
+1. Install **brew packages**:
+   ```
+   brew install rbenv ruby-build nvm pdm mysql@8.0 redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi pdftk-java
+   ```
 
+1. Initialize **Git LFS**:
+   ```
+   git lfs install --skip-repo
+   ```
+1. Start your local **Redis server**
+   1. Start redis server:
+       ```
+       brew services start redis
+       ```
+   2. The output from `brew` should confirm that `redis` has started
+       ```
+       ==> Successfully started `redis` (label: homebrew.mxcl.redis)
+       ```
+   3. macOS will notify you that `redis` has been configured to start automatically upon user login. Confirm this in System Settings --> General --> Login Items --> `redis-server` 
+1. Setup your local **MySQL database server**
+   1. Link MySQL 8
+        ```
+        brew link --force --overwrite mysql@8.0
+        ```
+   2. Verify Link
+        ```
+        mysql --version  # should show: mysql  Ver 8.0.[xx]
+        ```
+   3. Start mysql server:
+        ```
+        brew services start mysql # Should notify you that MySQL server has been added to Login Items
+        ```
+   2. Confirm that MySQL has started by running:
+        ```
+        brew services    # should show: "started"
+        ```
 
-1. Open your Terminal. These steps assume you are using **zsh**, the default shell for OSX.
+      If the status is instead "stopped", you may need initialize your mysql database:
+        ```
+        brew services stop mysql
+        mysqld --initialize-insecure  # this will leave the root password blank, which is required
+        brew services start mysql
+        brew services   # should show: "started"
+        ```
 
-1. Optionally configure your **zsh** experience.
-   1. Either install [oh-my-zsh](https://ohmyz.sh/) and add the [git-prompt](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git-prompt) plugin, or install the plugin directly without oh-my-zsh as described under the [OS X Catalina](#os-x-catalina) instructions.
+1.  Install **Ruby**
+    1. Configure zsh to load rbenv ([other shells](https://github.com/rbenv/rbenv#basic-git-checkoutshells)): 
+        ```
+        echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc && source ~/.zshrc
+        ```
+    2. Install ruby version specified by [.ruby-version](.ruby-version):
+        ```
+        rbenv install --skip-existing    # run from the project root directory
+        ```
 
-1. Install/Update **Xcode Command Line Tools** via `xcode-select --install`
+1.  Install **Node.js**
+    1. Install node version specified by [.nvmrc](.nvmrc):
+        ```
+        nvm install    # run from the project root directory
+        ```
+      <details>
+        <summary>If you get an error <code>nvm: command not found</code></summary>
+        Run `brew info nvm` and follow the instructions there. They will include making an `.nvm` folder and updating your shell configuration file.
+      </details>
 
-1. Install [Homebrew](https://brew.sh/), a macOS package manager
+    2. Set default node version:
+        ```
+        nvm alias default $(cat ./.nvmrc)
+        ```
+    3. Enable corepack to install **yarn**:
+        ```
+        corepack enable
+        ```
 
-1. Install **Git LFS**
-    1. `brew install git-lfs`
-    1. From your homedir, run: `git lfs install`
-       - This adds a `[filter "lfs"]` section to your `~/.gitconfig`.
-       - Note: the install command must be run while you are **outside** a git repo directory. If you run it from inside a git repo, it'll instead attempt to install git hooks in that repo.
+1. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
 
-2. Install [Redis](https://redis.io/) via `brew install redis`
-
-3. Install [MySql 5.7](https://dev.mysql.com/doc/refman/5.7/en/) via `brew install mysql@5.7`
-   1. Set up your local MySQL server
-      1. Force link 5.7 version via `brew link mysql@5.7 --force`
-      2. Start mysql with `brew services start mysql@5.7`, which uses [Homebrew services](https://github.com/Homebrew/homebrew-services) to manage things for you.
-      3. Confirm that MySQL has started by running `brew services`. The status should show "started". If the status shows "stopped", you may need to initialize mysql first.
-          1. `brew services stop mysql@5.7`
-          2. `mysqld --initialize-insecure` (this will leave the root password blank, which is required)
-          3. `brew services start mysql@5.7`
-          4. Confirm MySQL has started by running `brew services` again.
-
-4. Install the **Java 8 JSK**
-   1. `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`
-   2. Or by installing [sdkman](https://sdkman.io/) and installing a suitable JDK. Similar to **rbenv** and **nvm**, **sdkman** allows you to switch between versions of Java.
-      1. Different versions will be available depending on your system architecture, use `sdk list java` to identify a Java 8 JDK available for ARM architecture.
-      2. `sdk install java <version identifier>` to install a version
-      3. `sdk default java <installed version>` to ensure it is the default for future shells.
-
-5. Install and configure **rbenv**
-    1. Install: `brew install rbenv`
-    2. Run `echo 'eval "$(rbenv init - zsh)"' >> ~/.zshrc` to configure ZSH to use **rbenv**. See https://github.com/rbenv/rbenv#basic-git-checkout for instructions on configuring bash and other shells.
-    3. Reload your .zshrc to load **rbenv**: `source ~/.zshrc`
-
-6. Install **Ruby**
-    1. For non-M1 systems (including M1 systems using Rosetta), running `rbenv install --skip-existing` from the project root directory should be sufficient.
-    2. For Apple Silicon, special configuration is required to set *libffi* options correctly. The following is a single line to execute.
-
-      ```sh
-      optflags="-Wno-error=implicit-function-declaration" LDFLAGS="-L/opt/homebrew/opt/libffi/lib" CPPFLAGS="-I/opt/homebrew/opt/libffi/include" PKG_CONFIG_PATH="/opt/homebrew/opt/libffi/lib/pkgconfig" rbenv install --skip-existing
-      ```
-
-7. *(Optional)* Install **pdftk**, which is not available as a standard Homebrew formula. Skipping this will cause some PDF related tests to fail. See <https://leancrew.com/all-this/2017/01/pdftk/> and <https://github.com/turforlag/homebrew-cervezas/pull/1> for more information about pdftk on macOS.
-
-    ```sh
+1. *(Optional)* Install **pdftk.rb**. Skipping this will cause some PDF related tests to fail.
+    ```
     curl -O https://raw.githubusercontent.com/zph/homebrew-cervezas/master/pdftk.rb
     brew install ./pdftk.rb
     rm ./pdftk.rb
     ```
 
-8. Install an assortment of additional packages via `brew install enscript gs imagemagick ruby-build coreutils parallel tidy-html5`
-
-9. Install [Node Version Manager](https://github.com/nvm-sh/nvm) and install Node
-    1. Install NVM via `brew install nvm`
-
-    2. Running `nvm install` or `nvm use` within the project directory will install and use the version specified in [.nvmrc](.nvmrc)
-
-    3. Running `nvm alias default $(cat ./.nvmrc)` will set your default node version for future shells.
-
-10. Enable **corepack** to install **yarn**: `corepack enable`
-
-11. Install **OpenSSL**
-    1. Run `brew install openssl`
-    2. Following the instructions in the output, run a form of `export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/`
-
-12. Install [Google Chrome](https://www.google.com/chrome/), needed for some local app tests.
-
-13. Return to the [Overview](#overview) to continue installation and clone the code-dot-org repo. Note that there are additional steps for Apple Silicon (M1) / Intel Mac when it comes to `bundle install` and `bundle exec rake ...` commands, which are noted in their respective steps.
+1. Return to the [Overview](#overview) to continue setup.
 
 ### Ubuntu 20.04
 [Ubuntu 20.04 iso download][ubuntu-iso-url]
@@ -207,10 +209,10 @@ Setup steps for macOS:
 Note: Virtual Machine Users should check the [Alternative note](#alternative-use-an-ubuntu-vm) below before starting
 
 1. `sudo apt-get update`
-1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-11-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript build-essential redis-server rbenv chromium-browser parallel`
+1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-11-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript build-essential redis-server rbenv chromium-browser parallel python3-pip`
     * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
     <details> 
-      <summary>Troubleshoot: `E: Package 'pdftk' has no installation candidate`.</summary>
+      <summary>Troubleshoot: <code>E: Package 'pdftk' has no installation candidate</code>.</summary>
       - If you run into this error, remove `pdftk` from the previous command and run it again. Then try installing `pdftk` another way:
           - Ubuntu 18.04: `sudo snap install pdftk`.
           - If you can't get `pdftk` installed, it is ok to skip installing this package, and keep in mind that the `PDFMergerTest` test may fail when you try to run the pegasus tests locally.
@@ -242,8 +244,6 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
     1. Install [ruby-build as a rbenv plugin](https://github.com/rbenv/ruby-build#readme)
         1. `mkdir -p "$(rbenv root)"/plugins`
         1. `git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build`
-    1. Use the rbenv-doctor from the [`rbenv` installation instructions](https://github.com/rbenv/rbenv#basic-github-checkout) to verify rbenv is set up correctly:
-        1. `curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash`
     1. If there are any errors (they appear red), follow the [`rbenv` installation instructions] (https://github.com/rbenv/rbenv#basic-github-checkout) to properly configure `rbenv`, following steps for **Ubuntu Desktop** so that config changes go into `.bashrc`.
     1. **Note:** Ubuntu 22.04 ships with versions of `libssl` and `openssl` that are incompatible with `ruby-build`; see https://github.com/rbenv/ruby-build/discussions/1940 for context
         1. As a result, attempts to run `rbenv install` will fail. To resolve, compile a valid version of `openssl` locally and direct `rbenv` to configure ruby to use it as described here: https://github.com/rbenv/ruby-build/discussions/1940#discussioncomment-2663209
@@ -252,17 +252,16 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
     1. If your PATH is missing `~/.rbenv/shims`, the next two commands might not work. Edit your .bashrc to include the following line:
        `export PATH="$HOME/.rbenv/bin:~/.rbenv/shims:$PATH"`, then run `source .bashrc` for the change to take effect (as seen in [this github issue](https://github.com/rbenv/rbenv/issues/877)).
     1. `rbenv rehash`
+1. Install pdm, which will be used later by `rake install` to install python
+    1. `sudo pip3 install --prefix=/usr/local --upgrade pdm`
+        - alternatively, if you prefer pipx and have it configured path-wise: `pipx install pdm`
 1. Enable **corepack** to install **yarn**: `corepack enable`
 1. Make it so that you can run apps tests locally
     1. Add the following to `~/.bashrc` or your desired shell configuration file:
         1. `export CHROME_BIN=$(which chromium-browser)`
 1. Finally, configure your mysql to allow for a proper installation. You may run into errors if you did not leave mysql passwords blank
     1. `echo "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '';" | sudo mysql`
-1. **IMPORTANT:** Read the following notes, then go back up to the [overview](#overview) and run the commands there.
-    1. If, for any reason, you are forced to interrupt the `bundle exec rake install` command before it completes,
-       cd into dashboard and run `bundle exec rake db:drop` before trying `bundle exec rake install` again
-    1. `bundle exec rake install` must always be called from the local project's root directory, or it won't work.
-    1. Finally, don't worry if your versions don't match the versions in the overview if you're following this method; the installation should still work properly regardless
+1. Return to the [overview](#overview) and continue setup.
 
 ### Windows
 
@@ -414,27 +413,7 @@ Wondering where to start?  See our [contribution guidelines](CONTRIBUTING.md) fo
 ---
 ### Bundle Install Tips
 
-#### Apple Silicon (M1) or Intel Mac bundle install steps
-
-On Apple Silicon/Intel Mac, additional steps are required to get `bundle install` to work.
-
-First, run the following commands to successfully complete a bundle install:
-
-```sh
-gem install bundler -v 2.3.22
-rbenv rehash
-export LIBRARY_PATH=$LIBRARY_PATH:/opt/homebrew/opt/openssl/lib/
-bundle install
-```
-
-After `bundle install` completes successfully, before attempting the `bundle exec rake ...` commands, execute the following command to avoid errors with **ffi**
-
-```sh
-bundle update ffi
-```
-
-
-### ImageMagick with Pango
+#### ImageMagick with Pango
 
 **Note:** Most developers won't need to peronsonalize certificates locally, but some will.  Here are notes on getting this working on macOS.
 

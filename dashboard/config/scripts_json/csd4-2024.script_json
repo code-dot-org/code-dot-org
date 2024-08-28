@@ -12,12 +12,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-28 18:21:08 UTC",
+    "serialized_at": "2024-07-11 19:01:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7141,7 +7142,7 @@
     },
     {
       "name": "Bugs and Features",
-      "url": "https://docs.google.com/presentation/d/1y6QCAd_xow-sik_VBFXv3iPxe4lut6QPUj_AdUj7YRY/template/preview",
+      "url": "https://docs.google.com/presentation/d/1ms_qU7p-LJluP-1WWki6SLjTMUA_zeFPwNKyJoNQvw4/template/preview",
       "key": "bugs_and_features_2",
       "properties": {
         "audience": "Teacher",
@@ -7153,7 +7154,7 @@
     },
     {
       "name": "Build a Digital Prototype",
-      "url": "https://docs.google.com/presentation/d/1m_wCIIDoIp_ErwXCfiLR7C0gz76UT_SOXpE0zehxDFI/template/preview",
+      "url": "https://docs.google.com/presentation/d/1CCldBGliwXw04-IAVJo2xoMDit8EDgsg0ZIKCvfcGeo/template/preview",
       "key": "build_a_digital_prototype",
       "properties": {
         "audience": "Teacher",
@@ -7165,7 +7166,7 @@
     },
     {
       "name": "Build a Paper Prototype",
-      "url": "https://docs.google.com/presentation/d/16FI22pYInGobcTyY-d_gT6I1-0yy8csglrXFGuOZnaU/template/preview",
+      "url": "https://docs.google.com/presentation/d/1S6a0QxqE0oKBsLGBLKt5Tgkp4w3kf4YXHTazxNwssts/template/preview",
       "key": "build_a_paper_prototype",
       "properties": {
         "audience": "Teacher",
@@ -7292,7 +7293,7 @@
     },
     {
       "name": "Design Mode in App Lab",
-      "url": "https://docs.google.com/presentation/d/1OaU4Usq0hBND-uOEQ94p14bODWZXwEgDxmszDQmQUZw/template/preview",
+      "url": "https://docs.google.com/presentation/d/1x8n4MBVA_er4Ql8Zqcznbd4jy-wgDfWT80r7QcrUUJM/template/preview",
       "key": "design_mode_in_app_lab",
       "properties": {
         "audience": "Teacher",
@@ -7304,7 +7305,7 @@
     },
     {
       "name": "Designing Apps for Good",
-      "url": "https://docs.google.com/presentation/d/1Jgq8VFas_arxyvooUEleRJhVJNeWoOfkIOvEb-zkdDA/template/preview",
+      "url": "https://docs.google.com/presentation/d/1UTuFOvi3bgtvB32a5Y-53MlL1U5ZsKEKF1xvcQVg5Tc/template/preview",
       "key": "designing_apps_for_good",
       "properties": {
         "audience": "Teacher",
@@ -7341,7 +7342,7 @@
     },
     {
       "name": "Designing With Empathy",
-      "url": "https://docs.google.com/presentation/d/1J7jcGlNc_NcAZVKRPjYh6HZklX4u8SvUfN446zye8TE/template/preview",
+      "url": "https://docs.google.com/presentation/d/10LKvtv_d3V2-sY9qyBzGBpg87pugrc9gmXtgc1OmR1Y/template/preview",
       "key": "designing_with_empathy_2",
       "properties": {
         "audience": "Teacher",
@@ -7378,7 +7379,7 @@
     },
     {
       "name": "Events in App Lab",
-      "url": "https://docs.google.com/presentation/d/1jYIPe_TXe63sjGUzED8sUyzWXWGJHrA-GQzXe7_tmHU/view",
+      "url": "https://docs.google.com/presentation/d/1z7jOPHf7ieNL-JRvaxc8mbIMTZsxWsC-E4yfu_JAVvc/template/preview",
       "key": "events_in_app_lab_1",
       "properties": {
         "audience": "Teacher",
@@ -7488,7 +7489,7 @@
     },
     {
       "name": "Exploring UI Elements",
-      "url": "https://docs.google.com/presentation/d/1K3K8qyAnkNFQCEgvXJ_k8K_YahKclHGDc9FQAEAaung/template/preview",
+      "url": "https://docs.google.com/presentation/d/1zqZIrFRz7b45JXRj5nFb_I9ZQ5UdwlnN1ukT0-ldrH0/template/preview",
       "key": "exploring_ui_elements",
       "properties": {
         "audience": "Teacher",
@@ -7500,7 +7501,7 @@
     },
     {
       "name": "Feedback and Testing",
-      "url": "https://docs.google.com/presentation/d/1Ei2opMNsuFVaIhGQz1RBtF1BI-uzEWpCxhTqh0TTH7c/template/preview",
+      "url": "https://docs.google.com/presentation/d/1qOURzacBWoQU9vBzlkDfuc_4c7t5qU3CeyavM5IRqCI/template/preview",
       "key": "feedback_and_testing",
       "properties": {
         "audience": "Teacher",
@@ -7512,7 +7513,7 @@
     },
     {
       "name": "Identifying User Needs",
-      "url": "https://docs.google.com/presentation/d/1QCkVC0MWzi0JiuLMmgfddVwhPrSIklpbDF7_18iGsj8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1fTfisiibLUemChrWGXT49xaVH7ZycjlZ7ibmpoY-aJU/template/preview",
       "key": "identifying_user_needs",
       "properties": {
         "audience": "Teacher",
@@ -7573,7 +7574,7 @@
     },
     {
       "name": "Linking Prototype Screens",
-      "url": "https://docs.google.com/presentation/d/1FEpaeO9Sc0oBboRKbfOO_n8nn8b3PJNALpytfAEVzJI/template/preview",
+      "url": "https://docs.google.com/presentation/d/1LDygdtxznWMP7giYLSFUsKkM73FBoH-Z0WndF2Iure8/template/preview",
       "key": "linking_prototype_screens",
       "properties": {
         "audience": "Teacher",
@@ -7622,7 +7623,7 @@
     },
     {
       "name": "Market Research",
-      "url": "https://docs.google.com/presentation/d/1VewZgc4VzXFSQDlc5QUrdV6Xm8hN58gEKH3DWSzoByY/template/preview",
+      "url": "https://docs.google.com/presentation/d/1GxbcqzjgeOvOph4_ZASTGRD4Fes6-zNJjWpmXAqw2Zc/template/preview",
       "key": "market_research_2",
       "properties": {
         "audience": "Teacher",
@@ -7845,7 +7846,7 @@
     },
     {
       "name": "Project - App Presentation",
-      "url": "https://docs.google.com/presentation/d/17u_op3RN3iyBebwv2ubMUMx83-MXza-wNzxDlpxnY1Q/template/preview",
+      "url": "https://docs.google.com/presentation/d/1U7xnPZWxvuPu3ZCkPUn1p8EdzE1J0DjxxykXd4G__2Y/template/preview",
       "key": "project_-_app_presentation",
       "properties": {
         "audience": "Teacher",
@@ -7857,7 +7858,7 @@
     },
     {
       "name": "Project - Paper Prototype",
-      "url": "https://docs.google.com/presentation/d/19DdVVqSlOtAXoh_s92NR9dqqkka6udzl6JF-qyOWhEc/template/preview",
+      "url": "https://docs.google.com/presentation/d/1NPFLu7quARhjhzIDKs94UgHptm6IPI2HYNq8yArDhfw/template/preview",
       "key": "project_-_paper_prototype",
       "properties": {
         "audience": "Teacher",
@@ -7882,7 +7883,7 @@
     },
     {
       "name": "Prototype Testing",
-      "url": "https://docs.google.com/presentation/d/1n6k7rNlAurR70Gsko5wAHR5rZiIyyzdLv2jy1sC8ptc/template/preview",
+      "url": "https://docs.google.com/presentation/d/1kIeXBZLLfFXfPqFqI1YR7wdt_2r-DP9igq_POPNgRko/template/preview",
       "key": "prototype_testing",
       "properties": {
         "audience": "Teacher",
@@ -8015,7 +8016,7 @@
     },
     {
       "name": "Testing the App",
-      "url": "https://docs.google.com/presentation/d/1iPfbJe630o40RCFnGKCSlujZfvozajPc4J3el9MlHgg/template/preview",
+      "url": "https://docs.google.com/presentation/d/1UoFvA0d2YtHK24veL4zdV9rOx5WsY-qzO8S5kNyXOMQ/template/preview",
       "key": "testing_the_app",
       "properties": {
         "audience": "Teacher",
@@ -8049,7 +8050,7 @@
     },
     {
       "name": "Understanding Your User",
-      "url": "https://docs.google.com/presentation/d/1ay4VDFZ1PTA6LBUksPJRz_6aU7cVy5FXHSHuMrmfUl8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1XaQqqo2AHh7L_P3z2nQIKdq37kOoMIy249mGZsR5stU/template/preview",
       "key": "understanding_your_user",
       "properties": {
         "audience": "Teacher",
@@ -8074,7 +8075,7 @@
     },
     {
       "name": "Updating Your Prototype",
-      "url": "https://docs.google.com/presentation/d/1EB3cF4d1MdQ7FkL29IbZOL7VyAiRTADRnGlIFZGWKTA/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Q5Bdq9D1MWcc2siYub61R8QeLFBdOnjMqiFF7I8ueEg/template/preview",
       "key": "updating_your_prototype_1",
       "properties": {
         "audience": "Teacher",
@@ -8086,7 +8087,7 @@
     },
     {
       "name": "User Centered Design - Define and Prepare",
-      "url": "https://docs.google.com/presentation/d/1g2tfwNongYEZQI_0SCMW1fCuzGxtUAxWj6RDNA75PE4/template/preview",
+      "url": "https://docs.google.com/presentation/d/1uuFzndkmhpgptbh6WMcZMhHjBcOFaonwJPzwa89Zkco/template/preview",
       "key": "user_centered_design_-_define_and_prepare",
       "properties": {
         "audience": "Teacher",
@@ -8098,7 +8099,7 @@
     },
     {
       "name": "User Centered Design - Try and Reflect",
-      "url": "https://docs.google.com/presentation/d/1WFIH7J7MIVcc7l3uSOMynL1F1TMZTi7wqTvZML8ENxE/template/preview",
+      "url": "https://docs.google.com/presentation/d/1tzMzSCSyWlyZcu-_2R25d7tFzuZ78wZgUL3yuX_LOfk/template/preview",
       "key": "user_centered_design_-_try_and_reflect",
       "properties": {
         "audience": "Teacher",
@@ -8173,7 +8174,7 @@
     },
     {
       "name": "User Interfaces",
-      "url": "https://docs.google.com/presentation/d/1lQ8QF0NB5hSNqcSQiEXsX8704TxVM6tk9Goq9ajvMoA/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Ey9Y40sGnWMxqmQHUeQ87EbWYcPRNJ5MJNz3iSE20xI/template/preview",
       "key": "user_interfaces",
       "properties": {
         "audience": "Teacher",

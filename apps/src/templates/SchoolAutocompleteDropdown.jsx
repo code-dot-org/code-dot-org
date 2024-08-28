@@ -1,10 +1,13 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import loadable from '../util/loadable';
-const VirtualizedSelect = loadable(() => import('./VirtualizedSelect'));
-import _ from 'lodash';
-import i18n from '@cdo/locale';
+
 import experiments from '@cdo/apps/util/experiments';
+import i18n from '@cdo/locale';
+
+import loadable from '../util/loadable';
+
+const VirtualizedSelect = loadable(() => import('./VirtualizedSelect'));
 
 export default class SchoolAutocompleteDropdown extends Component {
   static propTypes = {

@@ -15,7 +15,8 @@ answer 'Events'
 
 
 markdown <<MARKDOWN
-Drag the correct answer to the middle column to match the vocabulary with the definition. 
+#### Now that you have practiced using the micro:bit, let's see what you have learned!
+####**Drag the correct answer** to the middle column to match the vocabulary with the definition. 
 MARKDOWN
 
 teacher_markdown <<MARKDOWN

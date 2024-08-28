@@ -1,13 +1,17 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import PendingButton from '../../templates/PendingButton';
-import {castValue, displayableValue, editableValue} from './dataUtils';
-import dataStyles from './data-styles.module.scss';
 import classNames from 'classnames';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
+import React from 'react';
+
 import msg from '@cdo/locale';
-import {refreshCurrentDataView} from './loadDataForView';
+
+import PendingButton from '../../legacySharedComponents/PendingButton';
 import {storageBackend} from '../storage';
+
+import {castValue, displayableValue, editableValue} from './dataUtils';
+import {refreshCurrentDataView} from './loadDataForView';
+
+import dataStyles from './data-styles.module.scss';
 
 const INITIAL_STATE = {
   isDeleting: false,

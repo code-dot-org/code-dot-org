@@ -1,0 +1,209 @@
+{
+  "title": "Pre-module survey",
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "html",
+          "name": "header",
+          "html": "<h1>Code.org AI 101 Self-paced Online Professional Learning for Educators</h1><p><strong>Welcome to the program!</strong></p>\n\n<p>Code.org relies on surveys as a crucial tool through which we remain connected to teachers, and to give you the opportunity to provide feedback about our curriculum and your teaching experience, as well as to improve our programs.</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul><li>Your individual responses here are completely confidential.</li>\n<li>Your identity will never be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share anonymous, aggregate data (representing all responses) publicly.</li>\n<li>Your anonymized responses will be used by Code.org and our Regional Partners for program improvement.</li></ul>\n\n<p><strong>Your honesty and candor are appreciated.</strong></p><hr><h2>AI 101 For Educators: Pre-Module Survey</h2>"
+        },
+        {
+          "type": "radiogroup",
+          "name": "main_goal",
+          "title": "What is your main goal for this professional learning?",
+          "choices": [
+            {
+              "value": "better_understand_ai",
+              "text": "Better understand Artificial Intelligence"
+            },
+            {
+              "value": "learn_basics_ai",
+              "text": "Learn the basics of using Artificial Intelligence as an educator"
+            },
+            {
+              "value": "learn_ai_teaching_strategies",
+              "text": "Learn best strategies for teaching  for teaching with and/or about Artificial Intelligence"
+            },
+            {
+              "value": "other",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "main_goal_other",
+          "visibleIf": "{main_goal} = 'other'",
+          "title": "Please describe your main goal for this professional learning"
+        },
+        {
+          "type": "rating",
+          "name": "plan_use_ai_educator",
+          "title": "Do you plan to use Artificial Intelligence (AI) in your role as an educator?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "I don't plan to use AI",
+          "maxRateDescription": "I definitely plan to use AI"
+        },
+        {
+          "type": "rating",
+          "name": "interest_learn_ai",
+          "title": "How interested are you in learning about Artificial Intelligence (AI)?\n\n",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not interested at all",
+          "maxRateDescription": "Very interested"
+        },
+        {
+          "type": "rating",
+          "name": "perception_students_need_learn_ai",
+          "title": "How necessary do you think it is for students to learn about Artificial Intelligence (AI)?",
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not necessary at all",
+          "maxRateDescription": "Very necessary"
+        },
+        {
+          "type": "radiogroup",
+          "name": "familiarity_ai",
+          "title": "Which best describes your current level of familiarity with Artificial Intelligence (AI)?",
+          "choices": [
+            {
+              "value": "limited",
+              "text": "I haven't used AI much"
+            },
+            {
+              "value": "used_few_times",
+              "text": "I have used AI a few times"
+            },
+            {
+              "value": "attended_pd_ai",
+              "text": "I have attended professional development around using AI"
+            },
+            {
+              "value": "regular_use",
+              "text": "I regularly use AI in my role as an educator"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "page3",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "teacher_role",
+          "title": "Which best describes you in your role as an educator? ",
+          "choices": [
+            {
+              "value": "classroom",
+              "text": "Classroom teacher"
+            },
+            {
+              "value": "stem_tech_techer",
+              "text": "STEM / Tech teacher"
+            },
+            {
+              "value": "other_specialist",
+              "text": "Other specialist teacher"
+            },
+            {
+              "value": "librarian",
+              "text": "Librarian / school media specialist"
+            },
+            {
+              "value": "paraprofessional",
+              "text": "Paraprofessional/aide"
+            },
+            {
+              "value": "district_coach",
+              "text": "District level coach/specialist"
+            },
+            {
+              "value": "outside_school",
+              "text": "Out-of-school educator (e.g. tutor, after school teacher)"
+            },
+            {
+              "value": "administrator",
+              "text": "Administrator"
+            },
+            {
+              "value": "parent",
+              "text": "Parent"
+            },
+            {
+              "value": "other",
+              "text": "Other"
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "gender",
+          "title": "Gender (optional):",
+          "choices": [
+            {
+              "value": "male",
+              "text": "Male"
+            },
+            {
+              "value": "female",
+              "text": "Female"
+            },
+            {
+              "value": "non_binary",
+              "text": "Non-binary"
+            },
+            {
+              "value": "not_listed",
+              "text": "Preferred term not listed"
+            },
+            {
+              "value": "prefer_no_answer",
+              "text": "Prefer not to answer"
+            }
+          ]
+        },
+        {
+          "type": "checkbox",
+          "name": "race_eth",
+          "title": "Which of the following best represents your racial or ethnic background? Please select all that apply. (optional)",
+          "choices": [
+            {
+              "value": "white",
+              "text": "White/Caucasian"
+            },
+            {
+              "value": "hispanic",
+              "text": "Hispanic or Latino/Latina"
+            },
+            {
+              "value": "black",
+              "text": "African American/Black"
+            },
+            {
+              "value": "hawaiian_pi",
+              "text": "Asian, Hawaiian, or Pacific Islander"
+            },
+            {
+              "value": "native_am",
+              "text": "Native American or American Indian"
+            },
+            {
+              "value": "not_listed",
+              "text": "Racial or ethnic background not listed"
+            },
+            {
+              "value": "prefer_no_answer",
+              "text": "Prefer not to answer"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "published": true
+}

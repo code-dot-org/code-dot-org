@@ -1,9 +1,11 @@
-import PropTypes from 'prop-types';
 import $ from 'jquery';
-import designMode from './designMode';
-import * as elementUtils from './designElements/elementUtils';
-import * as applabConstants from './constants';
+import PropTypes from 'prop-types';
+
 import {assets as assetsApi} from '../clientApi';
+
+import * as applabConstants from './constants';
+import * as elementUtils from './designElements/elementUtils';
+import designMode from './designMode';
 
 let DATA_PREFIX_REGEX = applabConstants.DATA_URL_PREFIX_REGEX;
 
@@ -38,11 +40,24 @@ function getImportableScreen(dom) {
   const id = dom.id;
   const willReplace = designMode.getAllScreenIds().includes(id);
   const conflictingIds = [];
+
+  // Catch edge case where the ID of the imported screen
+  // conflicts with an existing element ID.
+  if (!willReplace && !elementUtils.isIdAvailable(id)) {
+    conflictingIds.push(id);
+  }
+
   Array.from(dom.children).forEach(child => {
     if (!elementUtils.isIdAvailable(child.id)) {
-      var existingElement = elementUtils.getPrefixedElementById(child.id);
+      const existingElement = elementUtils.getPrefixedElementById(child.id);
       if (existingElement) {
-        const existingElementScreen = $(existingElement).parents('.screen')[0];
+        let existingElementScreen = $(existingElement).parents('.screen')[0];
+
+        // Catch edge case where the found existingElement is a screen itself,
+        // rather than a child element.
+        if ($(existingElement).hasClass('screen')) {
+          existingElementScreen = existingElement;
+        }
         if (elementUtils.getId(existingElementScreen) !== id) {
           conflictingIds.push(child.id);
         }

@@ -10,12 +10,13 @@
       "is_course": true,
       "is_migrated": true,
       "lesson_extras_available": true,
+      "tts": true,
       "version_year": "2024"
     },
     "new_name": null,
     "family_name": "coursed",
-    "serialized_at": "2024-04-16 21:47:16 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2024-08-01 16:22:52 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -49,9 +50,21 @@
       }
     },
     {
-      "key": "csf_events",
+      "key": "lessonGroup-7",
       "user_facing": true,
       "position": 3,
+      "properties": {
+        "display_name": "Computing Systems"
+      },
+      "seeding_key": {
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursed-2024"
+      }
+    },
+    {
+      "key": "csf_events",
+      "user_facing": true,
+      "position": 4,
       "properties": {
         "display_name": "Events"
       },
@@ -63,7 +76,7 @@
     {
       "key": "csf_loops",
       "user_facing": true,
-      "position": 4,
+      "position": 5,
       "properties": {
         "display_name": "Loops"
       },
@@ -75,7 +88,7 @@
     {
       "key": "csf_conditionals",
       "user_facing": true,
-      "position": 5,
+      "position": 6,
       "properties": {
         "display_name": "Conditionals"
       },
@@ -87,7 +100,7 @@
     {
       "key": "end_of_course_project",
       "user_facing": true,
-      "position": 6,
+      "position": 7,
       "properties": {
         "display_name": "End of Course Project"
       },
@@ -128,7 +141,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **context-setting** lesson, students use symbols to instruct each other to color squares on graph paper. By \"programming\" one another to draw pictures, students get an opportunity to experience some of the core concepts of programming in a fun and accessible way. ",
-        "preparation": "- (Optional) Watch the ***Lesson in Action** video.\n- Print out one ***worksheet** and ***assessment** for each student.\n\n",
+        "preparation": "- (Optional) Watch the ***Lesson in Action** video.\n- Print out one ***worksheet** and ***assessment** for each student.\n- **Note:** You may want to teach an unplugged lesson on debugging before moving onto the coding lessons that follow this lesson. Have your students practice their debugging skills with an unplugged **<a href=\"https://studio.code.org/s/coursed-2023/lessons/4\" target=\"_blank\">Relay Programming lesson.</a>**\n\n",
         "purpose": "The goal of this activity is to build critical thinking skills and excitement for the course, while introducing some of the fundamental programming concepts that will be used throughout the course. By introducing basic concepts like sequencing and algorithms to the class in an unplugged activity, students who are intimidated by computers can still build a foundation of understanding on these topics. In this lesson, students will learn how to develop an algorithm and encode it into a program. ",
         "student_overview": "In this lesson, you will program your classmate to draw pictures!",
         "unplugged": true
@@ -160,33 +173,12 @@
       }
     },
     {
-      "key": "Relay Programming",
-      "name": "Relay Programming",
+      "key": "Debugging with Laurel",
+      "name": "Debugging with Laurel",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
-      "properties": {
-        "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This **context-setting** lesson will begin with a short lesson on debugging and persistence, then will quickly move to a race against the clock as students break into teams and work together to write a program one instruction at a time.",
-        "preparation": "- Watch the ***Teacher Video**.\n- Locate a wide open space for this activity, such as the gym or outdoor field.\n- Print out one ***Activity Packet** for each group.\n- Supply each group with plenty of paper and pens/pencils.\n- Print one ***Worksheet** for each student.\n",
-        "purpose": "Teamwork is very important in computer science. Teams write and debug code with each other, instead of working as individuals. In this lesson, students will learn to work together while being as efficient as possible. \n\nThis activity also provides a sense of urgency that will teach students to balance their time carefully and avoid mistakes without falling too far behind.  This experience can be stressful (which is expected!)  Make sure you provide students with the tools to deal with potential frustration.",
-        "student_overview": "Remember at the beginning of the course when you made drawings with code? In this lesson, you will be working with a team to do something very similar!",
-        "unplugged": true
-      },
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "lesson_group.key": "csf_sequencing",
-        "script.name": "coursed-2024"
-      }
-    },
-    {
-      "key": "Debugging with Laurel",
-      "name": "Debugging with Laurel",
-      "absolute_position": 5,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 5,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will practice debugging in the \"collector\" environment. Students will get to practice reading and editing code to fix puzzles with simple algorithms, loops and nested loops.",
@@ -197,6 +189,24 @@
       "seeding_key": {
         "lesson.key": "Debugging with Laurel",
         "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2024"
+      }
+    },
+    {
+      "key": "lesson-1",
+      "name": "Hardware and Software Skits",
+      "absolute_position": 5,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 5,
+      "properties": {
+        "overview": "In this unplugged lesson students will act out the ways internal and external parts of a computer work together. They will take on roles such as: CPU, Keyboard, Monitor, User and more.",
+        "preparation": "- Print the skit outlines and cut them out for each group of students\n- Print out one classroom set of the skit roles\n- Create heterogeneous groups of students \n",
+        "purpose": "The purpose of this lesson is to understand the ways internal and external parts of a computer work together to perform their functions. Today you will collaborate with a group of students to create short skits showing how various computer parts work together to complete tasks.\n"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-7",
         "script.name": "coursed-2024"
       }
     },
@@ -261,12 +271,28 @@
       }
     },
     {
-      "key": "Loops in Ice Age",
-      "name": "Loops in Ice Age",
+      "key": "Music Lab Intro Tutorial ",
+      "name": "Music Lab Intro Tutorial ",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
+      "properties": {
+        "overview": "In this engaging and interactive lesson, students will dive into the world of music creation through coding. Using Music Lab, a block-based integrated development environment (IDE), learners will discover the power of programming to make their own unique sounds, compose songs, and perform live music. By the end of this lesson, students will not only have developed foundational coding skills but also an appreciation for the interdisciplinary connection between music and technology. All the skills they learn in this tutorial will set them up for success when they get to the Music Lab project, which is an open space for students to create any song they'd like!\n\n"
+      },
+      "seeding_key": {
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024"
+      }
+    },
+    {
+      "key": "Loops in Ice Age",
+      "name": "Loops in Ice Age",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **context-setting/skill-building** lesson will quickly introduce students to loops.",
@@ -283,10 +309,10 @@
     {
       "key": "Drawing Shapes with Loops",
       "name": "Drawing Shapes with Loops",
-      "absolute_position": 10,
+      "absolute_position": 11,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 10,
+      "relative_position": 11,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **skill-building** lesson builds on the understanding of loops from the previous lesson and doubles as a debugging exercise for extra problem-solving practice.",
@@ -303,10 +329,10 @@
     {
       "key": "Nested Loops in Maze",
       "name": "Nested Loops in Maze",
-      "absolute_position": 11,
+      "absolute_position": 12,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 11,
+      "relative_position": 12,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will learn how to program a loop inside of another loop.",
@@ -323,10 +349,10 @@
     {
       "key": "Conditionals with Cards",
       "name": "Conditionals with Cards",
-      "absolute_position": 12,
+      "absolute_position": 13,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 12,
+      "relative_position": 13,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **context-setting** lesson, students will write *conditional (if/else) statements* to state the rules of simple card games. ",
@@ -344,10 +370,10 @@
     {
       "key": "Looking Ahead with Minecraft",
       "name": "Looking Ahead with Minecraft",
-      "absolute_position": 13,
+      "absolute_position": 14,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 13,
+      "relative_position": 14,
       "properties": {
         "overview": "This **skill-building** lesson gives students the chance to practice concepts that they have learned up to this point and get their first experience with conditionals!",
         "preparation": " - Play through the puzzles associated with this lesson to find any potential problem areas for your class.\n",
@@ -363,10 +389,10 @@
     {
       "key": "If/Else with Bee",
       "name": "If/Else with Bee",
-      "absolute_position": 14,
+      "absolute_position": 15,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 14,
+      "relative_position": 15,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, your class will continue to code with conditionals, allowing them to write code that functions differently depending on the specific conditions the program encounters.",
@@ -383,10 +409,10 @@
     {
       "key": "While Loops in Farmer",
       "name": "While Loops in Farmer",
-      "absolute_position": 15,
+      "absolute_position": 16,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 15,
+      "relative_position": 16,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will be working to fill holes and dig dirt in Farmer, but they will not know the size of the holes or the height of the mounds of dirt. To solve these puzzles, students will use a new kind of loop.",
@@ -403,10 +429,10 @@
     {
       "key": "Until Loops in Maze",
       "name": "Until Loops in Maze",
-      "absolute_position": 16,
+      "absolute_position": 17,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 16,
+      "relative_position": 17,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this **skill-building** lesson, students will learn about \"until\" loops. Students will build programs that have the main character repeat actions \"until\" they reach their desired stopping point.",
@@ -423,10 +449,10 @@
     {
       "key": "End of Course Project",
       "name": "End of Course Project",
-      "absolute_position": 17,
+      "absolute_position": 18,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 17,
+      "relative_position": 18,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This **project** lesson takes students through the process of designing, developing, and showcasing new projects!",
@@ -648,73 +674,6 @@
       }
     },
     {
-      "key": "adab0741-b678-4e5f-af20-aad29550f2cc",
-      "position": 1,
-      "properties": {
-        "duration": 15,
-        "name": "Warm Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "adab0741-b678-4e5f-af20-aad29550f2cc",
-        "lesson.key": "Relay Programming",
-        "lesson_group.key": "csf_sequencing",
-        "script.name": "coursed-2024"
-      }
-    },
-    {
-      "key": "79da8c92-8fb6-4e42-88dc-442d0c1a22c0",
-      "position": 2,
-      "properties": {
-        "duration": 20,
-        "name": "Main Activity"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "79da8c92-8fb6-4e42-88dc-442d0c1a22c0",
-        "lesson.key": "Relay Programming",
-        "lesson_group.key": "csf_sequencing",
-        "script.name": "coursed-2024"
-      }
-    },
-    {
-      "key": "179cd51e-b2e6-4b9d-8135-db4c7ef81d34",
-      "position": 3,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "179cd51e-b2e6-4b9d-8135-db4c7ef81d34",
-        "lesson.key": "Relay Programming",
-        "lesson_group.key": "csf_sequencing",
-        "script.name": "coursed-2024"
-      }
-    },
-    {
-      "key": "e8f7e80f-f5ad-4621-a06a-b99337bae25c",
-      "position": 4,
-      "properties": {
-        "duration": 15,
-        "name": "Wrap Up"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "e8f7e80f-f5ad-4621-a06a-b99337bae25c",
-        "lesson.key": "Relay Programming",
-        "lesson_group.key": "csf_sequencing",
-        "script.name": "coursed-2024"
-      }
-    },
-    {
-      "key": "2b8f32c0-874d-4f5c-840c-0c62cc73cf03",
-      "position": 5,
-      "properties": {
-        "name": "Extended Learning"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "2b8f32c0-874d-4f5c-840c-0c62cc73cf03",
-        "lesson.key": "Relay Programming",
-        "lesson_group.key": "csf_sequencing",
-        "script.name": "coursed-2024"
-      }
-    },
-    {
       "key": "682ed839-d085-4166-93be-22a47174ba8c",
       "position": 1,
       "properties": {
@@ -767,6 +726,61 @@
         "lesson_activity.key": "f43ae465-b703-4a00-956c-c6238ae7f112",
         "lesson.key": "Debugging with Laurel",
         "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2024"
+      }
+    },
+    {
+      "key": "e38cd7e4-8faf-4d1f-90bb-0cd8ff33d410",
+      "position": 1,
+      "properties": {
+        "duration": 7,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e38cd7e4-8faf-4d1f-90bb-0cd8ff33d410",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursed-2024"
+      }
+    },
+    {
+      "key": "b18a1a9b-71a8-41ae-a811-546a7700db23",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b18a1a9b-71a8-41ae-a811-546a7700db23",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursed-2024"
+      }
+    },
+    {
+      "key": "49ec6c67-d0a2-4a90-8937-5076e41ca222",
+      "position": 3,
+      "properties": {
+        "duration": 3,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "49ec6c67-d0a2-4a90-8937-5076e41ca222",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursed-2024"
+      }
+    },
+    {
+      "key": "543787de-a5ce-4561-ab22-e5552903c08f",
+      "position": 4,
+      "properties": {
+        "name": "[Optional] Assessment"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "543787de-a5ce-4561-ab22-e5552903c08f",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-7",
         "script.name": "coursed-2024"
       }
     },
@@ -943,6 +957,20 @@
       "seeding_key": {
         "lesson_activity.key": "8684d174-8c38-4e51-8f14-bba666b84624",
         "lesson.key": "Dance Party",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024"
+      }
+    },
+    {
+      "key": "9ce2416b-a679-4387-88f0-e806d000af9c",
+      "position": 1,
+      "properties": {
+        "duration": 60,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "9ce2416b-a679-4387-88f0-e806d000af9c",
+        "lesson.key": "Music Lab Intro Tutorial ",
         "lesson_group.key": "csf_events",
         "script.name": "coursed-2024"
       }
@@ -1531,24 +1559,25 @@
       }
     },
     {
-      "key": "3d607088-bfaa-49e6-9eb6-08075ac72e05",
-      "position": 5,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "3d607088-bfaa-49e6-9eb6-08075ac72e05",
-        "lesson_activity.key": "78cc202d-c8c1-4216-88ab-fca311e83f4d"
-      }
-    },
-    {
       "key": "bdf82a94-e48d-4528-b70c-9c32cbfa51eb",
       "position": 1,
       "properties": {
         "name": "Graph Paper Programming",
-        "progression_name": "Graph Paper Programming - Unplugged Activity"
+        "progression_name": "Graph Paper Programming - Video"
       },
       "seeding_key": {
         "activity_section.key": "bdf82a94-e48d-4528-b70c-9c32cbfa51eb",
+        "lesson_activity.key": "08f2c8d8-6ae3-4e5d-bfcb-00f75a4117bb"
+      }
+    },
+    {
+      "key": "80c14d09-edd3-45b6-a8dc-eaba43f8cf55",
+      "position": 2,
+      "properties": {
+        "progression_name": "Graph Paper Programming - Student Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "80c14d09-edd3-45b6-a8dc-eaba43f8cf55",
         "lesson_activity.key": "08f2c8d8-6ae3-4e5d-bfcb-00f75a4117bb"
       }
     },
@@ -1835,160 +1864,6 @@
       }
     },
     {
-      "key": "65d79ccf-0f7b-4353-844e-422ef1347b48",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide \n\n**Reflect:** _When have you “debugged” a frustrating problem in your life?_",
-        "name": "Reflect",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Make sure that students understand that the question refers to a real life problem - not a previous computer problem. Give an example that is relevant for your students, or come up with an example from your own life."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "65d79ccf-0f7b-4353-844e-422ef1347b48",
-        "lesson_activity.key": "adab0741-b678-4e5f-af20-aad29550f2cc"
-      }
-    },
-    {
-      "key": "56937a58-c4c3-46f3-89bf-2dd717551704",
-      "position": 2,
-      "properties": {
-        "description": "\n\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n\n- **Algorithm** - A list of steps to finish a task.\n\n\n- **Bug** - Part of a program that does not work correctly.\n\n- **Debugging** - Finding and fixing problems in an algorithm or program.\n\n- **Program** - An algorithm that has been coded into something that can be run by a machine.\n\n&nbsp\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary: (continued)” slide\n\n- **Frustrated** - Feeling annoyed or angry because something is not the way you want it. \n\n- **Persistence** - Trying again and again, even when something is very hard.\n",
-        "name": "Vocabulary"
-      },
-      "seeding_key": {
-        "activity_section.key": "56937a58-c4c3-46f3-89bf-2dd717551704",
-        "lesson_activity.key": "adab0741-b678-4e5f-af20-aad29550f2cc"
-      }
-    },
-    {
-      "key": "a3b82559-a7b8-41ff-bd76-ba85fee7505a",
-      "position": 3,
-      "properties": {
-        "description": "Recall that in \"Graph Paper Programming\" we guided our teammate's Automatic Realization Machine (ARM) using arrows. This warm up will bring back these ideas, which will be needed in the main activity.",
-        "name": "Introduction"
-      },
-      "seeding_key": {
-        "activity_section.key": "a3b82559-a7b8-41ff-bd76-ba85fee7505a",
-        "lesson_activity.key": "adab0741-b678-4e5f-af20-aad29550f2cc"
-      }
-    },
-    {
-      "key": "5e7a4112-24f3-49f9-9610-60caaa4ec991",
-      "position": 4,
-      "properties": {
-        "description": "\n####Where did I go wrong?\n**Goal:** In this lesson, we want to help students learn to identify and fix bugs in their own programs.  The easiest way to do that is to first present students with a program that contains bugs that are not their fault.  Once they've helped you fix \"your\" program, share with them how frustrating it can be to make mistakes, and help them see that those feelings are completely normal and they shouldn't feel embarrassed by them.\n\n&nbsp\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debugging” slide\n\n![](https://curriculum.code.org/media/uploads/Screenshot-2018-05-11-12.30.53.png)\n\n**Discuss:** Get the attention of the class and let them know that you are stuck!  You have this challenge, and you thought you had solved it, but it doesn't seem to be working.  Your program has a bug, can they help you fix it?\n\nTake a moment to walk them through the rules:\n- _Start at the star._\n- _Follow the instructions step-by-step._\n- _End when all of the right squares are filled in._\n\n*Optional:*  Follow along by filling in a blank grid. Express frustration when the picture doesn't turn out the way that you wanted it to.\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Think, Pair, Share” slide\n\n**Think:** *Can you figure out why my program doesn't work?*\n\n**Pair:** Let students work together to see if they can figure out what the program is supposed to say.\n\n**Share:** Ask students if anyone was able to figure out a way to solve the problem.  When you get a correct answer, let the students know that they are great at debugging!"
-      },
-      "seeding_key": {
-        "activity_section.key": "5e7a4112-24f3-49f9-9610-60caaa4ec991",
-        "lesson_activity.key": "adab0741-b678-4e5f-af20-aad29550f2cc"
-      }
-    },
-    {
-      "key": "49332b28-8051-49c8-a426-69ae1113d81d",
-      "position": 5,
-      "properties": {
-        "description": "**Discuss:** Ask the students if they could tell how you were feeling when you couldn't figure out the answer.  They might suggest that you were \"mad\" or \"sad\".  Instead of telling them \"no\", describe that you were feeling a little bit mad, a little bit sad, and a little bit confused.  When you put all of those emotions together, it makes a feeling called \"frustration\".  \n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Frustration” slide\n\nWhen you are \"frustrated\" you might think you are mad, sad, or confused -- and you might be tempted to give up -- but frustration is a natural feeling and it's a big hint that you are about to learn something!  Instead of quitting, practice persistence.  Keep trying over and over again.  After a few times, you will start to understand how to debug your problems!",
-        "tips": [
-          {
-            "type": "contentCorner",
-            "markdown": "##### Tips to Help With Frustration\n- Count to 10\n- Take deep breaths\n- Journal about them\n- Talk to a partner about them\n- Ask for help\n\n##### Tips for Being Persistent\n- Keep track of what you have already tried\n- Describe what is happening\n- Describe what is supposed to happen\n- What does that tell you?\n- Make a change and try again\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "49332b28-8051-49c8-a426-69ae1113d81d",
-        "lesson_activity.key": "adab0741-b678-4e5f-af20-aad29550f2cc"
-      }
-    },
-    {
-      "key": "45771870-2bb0-4052-b978-fca230228f93",
-      "position": 6,
-      "properties": {
-        "description": "\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Finding and Fixing Errors - Debugging” slide\n\n\n**Distribute:** To make sure that students understand the idea of finding and fixing errors (debugging) pass out the  ***Worksheet** and have students complete the task in pairs.  \n\n*Optional:* If you want to move the activity along more quickly, feel free to complete these as a class, instead.\n\n**Transition:** Now it's time to play the game!"
-      },
-      "seeding_key": {
-        "activity_section.key": "45771870-2bb0-4052-b978-fca230228f93",
-        "lesson_activity.key": "adab0741-b678-4e5f-af20-aad29550f2cc"
-      }
-    },
-    {
-      "key": "03c9c94c-a532-43a8-910d-32904b4d5d4f",
-      "position": 1,
-      "properties": {
-        "name": "Relay Programming",
-        "progression_name": "Relay Programming - Unplugged Activity"
-      },
-      "seeding_key": {
-        "activity_section.key": "03c9c94c-a532-43a8-910d-32904b4d5d4f",
-        "lesson_activity.key": "79da8c92-8fb6-4e42-88dc-442d0c1a22c0"
-      }
-    },
-    {
-      "key": "9977bf74-9cc7-462a-b955-823709249172",
-      "position": 1,
-      "properties": {
-        "description": "With Graph Paper Programming in mind, it's time to split up into teams and prepare to run the activity as a relay!  \n\n**Set-Up:** Prepare the ***Activity Packet** by printing out one copy for each team of 4-5 students. Cut or fold each page along the center dotted line."
-      },
-      "seeding_key": {
-        "activity_section.key": "9977bf74-9cc7-462a-b955-823709249172",
-        "lesson_activity.key": "179cd51e-b2e6-4b9d-8135-db4c7ef81d34"
-      }
-    },
-    {
-      "key": "bdeba810-ce27-4311-a7a4-2cb949702919",
-      "position": 2,
-      "properties": {
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Here are some clarifications that need to be shared from time to time:\r\n\r\n- Only one person from each group can be at the image at one time.\r\n- It is okay to discuss algorithms with the rest of the group in line, even up to the point of planning who is going to write what when they get to the image.\r\n- When a student debugs a program by crossing out an incorrect instruction (or a grouping of incorrect instructions) this counts as their entire turn. The next player will need to figure out how to correct the removed item.\r\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "bdeba810-ce27-4311-a7a4-2cb949702919",
-        "lesson_activity.key": "179cd51e-b2e6-4b9d-8135-db4c7ef81d34"
-      }
-    },
-    {
-      "key": "59f47188-d7e3-4468-b295-b43ed4184244",
-      "position": 3,
-      "properties": {
-        "description": "\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Relay Programming” slide\n\nGo over the rules of the game with your class:\n\n- Divide students into groups of 3-5.\n- Have each group queue up relay-style.\n- Place an identical image at the other side of the room/gym/field from each team.\n- Have the first student in line dash over to the image, review it, and write down the first symbol in the program to reproduce that image.\n- The first student then runs back and tags the next person in line, then goes to the back of the queue.\n- The next person in line dashes to the image, reviews the image, reviews the program that has already been written, then either debugs the program by crossing out an incorrect symbol, or adds a new one. That student then dashes back to tag the next person, and the process continues until one group has finished their program.\n\nFirst group to finish with a program that matches the image is the winner! \nPlay through this several times, with images of increasing difficulty.\n\nGo through the game as many times as you can before time runs out or your students begin feeling exhausted.\n\n**Transition:** Once the game is over, circle everyone up to share lessons learned.\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Give credit!” slide\n\n**Say:** Sometimes when we create our own programs we find inspiration from other people’s work. \n\nIf you have gotten permission to use someone else’s work or if multiple people worked together, make sure to give credit to all of the original coders.\n\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “What did we learn today?” slide\n\n**Discuss:** *What did we learn today?*\n\n- *What if each person on a team were allowed to do five arrows at a time?*\n\t- *How important would it be to debug our own work and the work of the programmer before us?*\n\t- *How about with 10 arrows?*\n\t- *10,000? Would it be more or less important?*\n\n\n&nbsp\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show the next slide.\n- *Do you think a program is better or worse when more than one person has worked on it?*\n- *Do you think people make more or fewer mistakes when they're in a hurry?*\n- *If you find a mistake, do you have to throw out the entire program and start over?*"
-      },
-      "seeding_key": {
-        "activity_section.key": "59f47188-d7e3-4468-b295-b43ed4184244",
-        "lesson_activity.key": "179cd51e-b2e6-4b9d-8135-db4c7ef81d34"
-      }
-    },
-    {
-      "key": "1c75b3c7-e0ab-44c9-85b3-3f1b9132e429",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflect” slide\n\n**Reflect:**\n\n - *How can you support your teammates when they get frustrated? How can they support you?*\n",
-        "name": "Reflection"
-      },
-      "seeding_key": {
-        "activity_section.key": "1c75b3c7-e0ab-44c9-85b3-3f1b9132e429",
-        "lesson_activity.key": "e8f7e80f-f5ad-4621-a06a-b99337bae25c"
-      }
-    },
-    {
-      "key": "d4783c67-5271-41b9-9289-b7668c853f89",
-      "position": 1,
-      "properties": {
-        "description": "Use these activities to enhance student learning. They can be used as outside of class activities or other enrichment.\n\n\n**Pass the paper**\n\n- If you don't have the time or room for a relay, you can have students pass the paper around their desk grouping, each writing one arrow before they move the paper along.\n\n\n**Fill It, Move It**\n\n- As the teacher, draw an image with as many filled squares as children in each group.\n- Have the students write as many arrows in the program as it takes to get to a filled-in square (including actually filling that square in) before passing to the next person.\n\n\n**Debugging Together**\n\nDraw an image on the board. Have each student create a program for the image. Ask students to trade with their elbow partner and debug each other's code.\n\n  - Circle the first incorrect step, then pass it back.\n  - Give the students another chance to review and debug their own work.\n  - Ask for a volunteer to share their program.\n\nAsk the class: \n\n - *How many students had the same program?*\n - *Anyone have something different?*"
-      },
-      "seeding_key": {
-        "activity_section.key": "d4783c67-5271-41b9-9289-b7668c853f89",
-        "lesson_activity.key": "2b8f32c0-874d-4f5c-840c-0c62cc73cf03"
-      }
-    },
-    {
       "key": "85ddd425-8051-4117-b60b-0d7727a08f06",
       "position": 1,
       "properties": {
@@ -2093,6 +1968,102 @@
       "seeding_key": {
         "activity_section.key": "5f924302-e2ea-4d3f-a513-069422d8c133",
         "lesson_activity.key": "f43ae465-b703-4a00-956c-c6238ae7f112"
+      }
+    },
+    {
+      "key": "786e592d-6751-4665-bd20-2805d567b4d2",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Vocabulary” slide\n- Go through some of the terms that might be unfamiliar to students\n- Have students refer back to these definitions throughout the main activity as needed\n",
+        "duration": "2",
+        "name": "Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "786e592d-6751-4665-bd20-2805d567b4d2",
+        "lesson_activity.key": "e38cd7e4-8faf-4d1f-90bb-0cd8ff33d410"
+      }
+    },
+    {
+      "key": "0ccd7f06-98d5-49c4-8098-a72a7bcdad2b",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Warm Up” slide\n\n**Discuss:** \n- _Think about an electronic device you use often. For example, a laptop, phone or tablet. What do you think it looks like inside?_\n\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Looking Inside” slide\n\n**Discuss:** \n- _What do you notice?_\n\n**Discussion Goal:** These images show many of the computer parts that students will be using in their skits later in the lesson. This view may be totally new to students and present a new concept they hadn’t considered before - what is inside a computer (or electronic device)? Students may start naming some easily identifiable internal computer parts such as wires. Let students know that by the end of the lesson they will have a much better idea of how everything inside the computer works together!\n\n\n",
+        "duration": "5",
+        "name": "Looking Inside"
+      },
+      "seeding_key": {
+        "activity_section.key": "0ccd7f06-98d5-49c4-8098-a72a7bcdad2b",
+        "lesson_activity.key": "e38cd7e4-8faf-4d1f-90bb-0cd8ff33d410"
+      }
+    },
+    {
+      "key": "236d99f6-0fc2-4263-850a-b12a553fb979",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Preparing Your Skit” slide\n\n**Do This:** Put students into groups of 5 and assign them a skit number from the **<a href=\"https://docs.google.com/document/d/1aVJ2CtnvVzde3eDzFOhOWA5f30UTreDZKOSZ2lJ1XYc/template/preview\" target=\"_blank\">skit outline</a>**. Give each student a sheet of paper with their **<a href=\"https://docs.google.com/document/d/19TF1oQThf0ZINZ2Eu37_S_b0aKXDdwVBUm6QnEZLTwc/template/preview\" target=\"_blank\">skit role</a>** on it. First, students should decide who will take on the role of each computer part. Then, students should read through the skit and start brainstorming how they will bring it to life. Finally, students should rehearse their skit and be ready to present it.\n",
+        "duration": "15",
+        "name": "Preparing your Skit ",
+        "progression_name": "Unplugged Activity - Hardware and Software Skits"
+      },
+      "seeding_key": {
+        "activity_section.key": "236d99f6-0fc2-4263-850a-b12a553fb979",
+        "lesson_activity.key": "b18a1a9b-71a8-41ae-a811-546a7700db23"
+      }
+    },
+    {
+      "key": "db4066eb-fc3d-4c45-9c8e-63299dce0dc3",
+      "position": 2,
+      "properties": {
+        "progression_name": "Hardware and Software Skits - Student Reminder",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "- Make sure to encourage student creativity. Students can have the freedom to add details to their skit or prepare quick props. Create a positive environment where students will feel comfortable taking a risk by performing the skit.\n\n- Circulate and provide feedback to students emphasizing both strengths and areas for improvement.\nSupport with time management by routinely letting students know how much time is left.\n\n- If you are unable to create even groups of students, a 6th member of a group could be added. The extra person’s role would be the narrator. They can start off the skit by introducing each character and telling what the computer parts are going to work together to do. It can be at the group’s discretion if any extra narration is needed. \n\n- Alternatively, a smaller group could be formed with only 4 members. The “user” role would be eliminated from the skit. The group would creatively decide how to make up for this missing element.\n\n- If you have more students and require extra skit outlines, two groups can work on the same skit. \n\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "db4066eb-fc3d-4c45-9c8e-63299dce0dc3",
+        "lesson_activity.key": "b18a1a9b-71a8-41ae-a811-546a7700db23"
+      }
+    },
+    {
+      "key": "93c5232e-24f0-4dfe-a973-c55f6ece36fa",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Performing Your Skit” slide\n\n**Do This:** It is up to your discretion how students will present their skits. You may choose based on your knowledge of your class and time constraints. Some ideas:\n\n- Skits could be recorded via video using a computer device. Flip allows students to record and edit videos and then watch their classmates videos. There are settings that allow students to comment and like each others videos. \n\n- Groups could be paired up and show each other their skits. In this option, students perform in front of another small group of peers. The audience is small so stakes are lower. Then they have the opportunity to watch another skit live.\n\n- Groups could volunteer to present to the whole class. Before calling students back to the rug, have groups discuss whether they would like to present in front of everyone. Tell groups that all group members must agree that they wish to present. \n",
+        "duration": "20",
+        "name": "Performing Your Skit "
+      },
+      "seeding_key": {
+        "activity_section.key": "93c5232e-24f0-4dfe-a973-c55f6ece36fa",
+        "lesson_activity.key": "b18a1a9b-71a8-41ae-a811-546a7700db23"
+      }
+    },
+    {
+      "key": "530cc20f-ac1f-43ed-8422-41157e6f6c26",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Reflection” slide\n\n**Do This:** Have students share a glow (positive), grow (constructive feedback), and question they have for another group who performed.",
+        "duration": "3",
+        "name": "Reflection"
+      },
+      "seeding_key": {
+        "activity_section.key": "530cc20f-ac1f-43ed-8422-41157e6f6c26",
+        "lesson_activity.key": "49ec6c67-d0a2-4a90-8937-5076e41ca222"
+      }
+    },
+    {
+      "key": "abc28004-6bf4-4e7b-a6b0-2eece156897e",
+      "position": 1,
+      "properties": {
+        "description": "**Do This:** This can be used for an exit ticket or other formative assessment. \n\n**Question:** \n- _What is something new you figured out about an internal or external computer part?_\n",
+        "duration": "5",
+        "name": "Check For Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "abc28004-6bf4-4e7b-a6b0-2eece156897e",
+        "lesson_activity.key": "543787de-a5ce-4561-ab22-e5552903c08f"
       }
     },
     {
@@ -2594,6 +2565,146 @@
       }
     },
     {
+      "key": "eff30f1b-8cf4-4701-87b7-9271bf349331",
+      "position": 1,
+      "properties": {
+        "description": "Today, we'll learn how to make music with code! First, you'll learn how to add simple sounds to a song. Then, you'll learn how to play lots of sounds at the same time, just like real songs have drums, bass, and guitars playing at the same time.\n\nThen, you'll explore how loops can make beats repeat, how functions organize sections of your song, and how events can start new sounds with the press of a button.\n\nFollow the directions on every level to learn how to make your own song. By the end, you'll have coded a song that you can share.\n\nLet's start making music!",
+        "name": "Intro",
+        "progression_name": "Introduction",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To ensure all students read the instructions in the first level, consider displaying them on the board and going over them as a class.\n\nProgress to Level 2 and demonstrate how to click on the bold words to trigger an arrow that points to the block or Music Lab feature the word is referring to."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "eff30f1b-8cf4-4701-87b7-9271bf349331",
+        "lesson_activity.key": "9ce2416b-a679-4387-88f0-e806d000af9c"
+      }
+    },
+    {
+      "key": "a7ccf685-de62-463c-8af7-b58bd1c13f2b",
+      "position": 2,
+      "properties": {
+        "description": "Read the instructions on the left. Click on the bold words to see the block or feature it is referring to.\n\nIn this level, drag the play sound block from the toolbox and connect it under when run in the workspace.\n\nNotice there is a preview of the sound in the timeline at the bottom of your screen. To play your code, click the \"Run\" button. If you like it, click \"Continue\" to move on to the next level.",
+        "name": "Play a sound",
+        "progression_name": "Play a sound"
+      },
+      "seeding_key": {
+        "activity_section.key": "a7ccf685-de62-463c-8af7-b58bd1c13f2b",
+        "lesson_activity.key": "9ce2416b-a679-4387-88f0-e806d000af9c"
+      }
+    },
+    {
+      "key": "9281d137-6b59-48a3-965b-4a9d44b5d73f",
+      "position": 3,
+      "properties": {
+        "name": "Play more sounds",
+        "progression_name": "Play more sounds"
+      },
+      "seeding_key": {
+        "activity_section.key": "9281d137-6b59-48a3-965b-4a9d44b5d73f",
+        "lesson_activity.key": "9ce2416b-a679-4387-88f0-e806d000af9c"
+      }
+    },
+    {
+      "key": "16ba742f-b644-419f-b625-e9de52cd801c",
+      "position": 4,
+      "properties": {
+        "description": "Loops are a fundamental concept in programming that allow a sequence of instructions to be repeated multiple times. In the context of Music Lab, loops can be used to repeat a series of notes or rhythms, making it easier to create repetitive patterns in music, such as choruses or verses, without needing to code each repetition individually.",
+        "name": "Repeat",
+        "progression_name": "Repeat"
+      },
+      "seeding_key": {
+        "activity_section.key": "16ba742f-b644-419f-b625-e9de52cd801c",
+        "lesson_activity.key": "9ce2416b-a679-4387-88f0-e806d000af9c"
+      }
+    },
+    {
+      "key": "93db31c6-25df-4335-9a16-0a63093caed5",
+      "position": 5,
+      "properties": {
+        "name": "Play together",
+        "progression_name": "Play together",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider stopping the class to go over Level 6 together. Display the level on the board and read the instructions as a class. Ensure students understand that two different sounds can be played at the same time if they are both in the play together block. \n\nContrast the `play together` block with the `repeat` block to notice that play together plays the sounds at the same time while repeat plays the sounds sequentially over and over. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "93db31c6-25df-4335-9a16-0a63093caed5",
+        "lesson_activity.key": "9ce2416b-a679-4387-88f0-e806d000af9c"
+      }
+    },
+    {
+      "key": "26e69c9e-f11e-4754-9c3d-e8229bbe2c9b",
+      "position": 6,
+      "properties": {
+        "description": "Functions are blocks of code designed to perform a particular task. When composing music, students can use functions to encapsulate parts of their songs, such as a melody or a beat. This not only organizes the song's structure but also enables students to reuse these parts, making the coding process more efficient and the code itself more readable.",
+        "name": "Functions",
+        "progression_name": "Functions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider going over Level 8 as a whole class. Direct students to notice how a function is a chunk of code that stands on its own. It's not connected to the when `run block`. Once they have coded what they want in their function, students need to \"call\" the function. This means they need to use the new function block, like `chorus`, and connect it under `when run`.\n\nYou can also mention how it's important to name your function something you can easily remember. For example, if students want a function that triggers a chunk of code that acts as the verse of the song, they should name their function `verse`."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "26e69c9e-f11e-4754-9c3d-e8229bbe2c9b",
+        "lesson_activity.key": "9ce2416b-a679-4387-88f0-e806d000af9c"
+      }
+    },
+    {
+      "key": "1b9e26e3-b1c6-46dc-9b96-4f0cd70fe27c",
+      "position": 7,
+      "properties": {
+        "description": "Events are actions or occurrences that happen during the runtime of a program, which can trigger specific blocks of code to execute. In music coding, events can be used to make the composition interactive. For example, pressing a number key could trigger a function that plays a sound effect or starts a beat. Events allow students to play live music or add dynamic elements to their compositions.",
+        "name": "Play live",
+        "progression_name": "Triggers",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider going over Level 10 as a whole class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1b9e26e3-b1c6-46dc-9b96-4f0cd70fe27c",
+        "lesson_activity.key": "9ce2416b-a679-4387-88f0-e806d000af9c"
+      }
+    },
+    {
+      "key": "de7d4956-2821-4b12-a034-0a1583663755",
+      "position": 8,
+      "properties": {
+        "description": "The `play notes` and `play drums` blocks allow students to compose a new melody or custom drum beats to add to their song. Clicking on the rectangle field on the block will open a window to customize the notes or drums. ",
+        "name": "Compose ",
+        "progression_name": "Custom notes & beats"
+      },
+      "seeding_key": {
+        "activity_section.key": "de7d4956-2821-4b12-a034-0a1583663755",
+        "lesson_activity.key": "9ce2416b-a679-4387-88f0-e806d000af9c"
+      }
+    },
+    {
+      "key": "5a57ab3d-66ca-4627-9a3d-e93772104d02",
+      "position": 9,
+      "properties": {
+        "description": "Clicking \"Continue\" after this final level will send students to the Music Lab free play project where they can build their own musical compositions. If a student gets stuck, direct them back to the tutorial to jog their memory.",
+        "name": "Outro",
+        "progression_name": "Outro"
+      },
+      "seeding_key": {
+        "activity_section.key": "5a57ab3d-66ca-4627-9a3d-e93772104d02",
+        "lesson_activity.key": "9ce2416b-a679-4387-88f0-e806d000af9c"
+      }
+    },
+    {
       "key": "d09f366a-63e6-4b5b-92fa-a9e75d453b30",
       "position": 1,
       "properties": {
@@ -3076,7 +3187,7 @@
       "position": 1,
       "properties": {
         "name": "Conditionals with Cards",
-        "progression_name": "Conditionals with Cards - Unplugged Activity"
+        "progression_name": "Conditionals with Cards - Video"
       },
       "seeding_key": {
         "activity_section.key": "2743e27e-75f5-4ff7-9d00-5afa3ca0a030",
@@ -3084,8 +3195,19 @@
       }
     },
     {
-      "key": "49f75ffc-ba6c-4c21-82c6-7ddbb230330e",
+      "key": "e80c50c9-8d4e-4f4b-9430-ffe2a636f500",
       "position": 2,
+      "properties": {
+        "progression_name": "Conditionals with Cards - Student Resources "
+      },
+      "seeding_key": {
+        "activity_section.key": "e80c50c9-8d4e-4f4b-9430-ffe2a636f500",
+        "lesson_activity.key": "bfd5bb8d-a980-4f32-9370-1423b86c3049"
+      }
+    },
+    {
+      "key": "49f75ffc-ba6c-4c21-82c6-7ddbb230330e",
+      "position": 3,
       "properties": {
         "description": "\n####Conditionals with Cards Sample Program - Teacher Prep Guide\n\n\n\n**Directions:**\n\n- Create a few programs with your class that depend on things like a card's suit, color, or value to award or subtract points. You can write the program as an algorithm, pseudocode, or actual code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Sample” slide\n\nHere is a sample algorithm:\n\n\tif (CARD is RED)\n\t\tAward YOUR team 1 point\n\t\n\tElse\n\t\tAward OTHER team 1 point\n\n\nHere is a sample of the same program in pseudocode:\n\n\n\tIf (card.color == RED){\n\t\tpoints.yours = points.yours + 1;\n\t}\n\t\n\tElse {\n\t\tpoints.other = points.other + 1;\n\t}\n\n\n- Decide how you want to split your class into teams.\n- Each team should have a pile of cards (at least as many cards as team members) nearby.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Let's play a game!” slide\n\n- Put one of your “Programs” up on the board for all to see.\n- Have the teams take turns drawing cards and following the program to see how many points they score in each round.\n- Play several times with several different programs to help the students really understand conditionals. (Three additional slides have been provided for this part of the activity if needed.)\n\n\n\n\nOnce the class has had some practice, you can encourage students to nest conditionals inside one another. Make sure they understand that if the card is red, YOUR team is awarded 1 point, and then _nothing else happens_, since the condition was met:\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show \"Let's nest conditionals” slide\n\n\n\n\tIf (CARD is RED)\n\t\tAward YOUR team 1 point\n\t\n\tElse\n\t\tIf (CARD is higher than 9)\n\t\t\tAward OTHER team 1 point\n\t\tElse\n\t\t\tAward YOUR team the same number of points on the card\n\n\n\nHere is the same program in pseudocode:\n\n\tIf (card.color == RED ){\n\t\tpoints.yours = points.yours + 1;\n\t}\n\tElse {\n\t\tif (card.value > 9){\n\t\t\tpoints.other = points.other + 1;\n\t\t}\n\t\tElse {\n\t\t\tpoints.yours = points.yours + card.value;\n\t\t}\n\t}"
       },
@@ -3096,7 +3218,7 @@
     },
     {
       "key": "24f47773-61af-4bee-884b-f3c815631189",
-      "position": 3,
+      "position": 4,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Assessment” slide\n\nHand out ***Conditionals with Cards - Assessment** and allow students to complete the activity independently after the instructions have been well explained. This should feel familiar, thanks to the previous activities. If needed, refer to the **Assessment Video** resource as a guide.",
         "duration": "5",
@@ -4058,7 +4180,7 @@
         "level_keys": [
           "GraphPaperProgramming-Unplugged2022_2024"
         ],
-        "progression": "Graph Paper Programming - Unplugged Activity"
+        "progression": "Graph Paper Programming - Video"
       },
       "bonus": false,
       "seeding_key": {
@@ -4076,6 +4198,31 @@
     },
     {
       "chapter": 3,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "unplugged_graph paper programming_markdown"
+        ],
+        "progression": "Graph Paper Programming - Student Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unplugged_graph paper programming_markdown"
+        ],
+        "lesson.key": "Graph Paper Programming",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2024",
+        "activity_section.key": "80c14d09-edd3-45b6-a8dc-eaba43f8cf55"
+      },
+      "level_keys": [
+        "unplugged_graph paper programming_markdown"
+      ]
+    },
+    {
+      "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4100,7 +4247,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 5,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4125,7 +4272,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4150,7 +4297,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 7,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4175,7 +4322,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 8,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -4200,7 +4347,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 9,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -4225,7 +4372,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 10,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -4250,7 +4397,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4276,7 +4423,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 9,
       "activity_section_position": 2,
       "assessment": false,
@@ -4301,7 +4448,7 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 10,
       "activity_section_position": 3,
       "assessment": false,
@@ -4323,31 +4470,6 @@
       },
       "level_keys": [
         "courseD_maze_ramp5d_2024"
-      ]
-    },
-    {
-      "chapter": 13,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "RelayProgramming-Unplugged2022_2024"
-        ],
-        "progression": "Relay Programming - Unplugged Activity"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "RelayProgramming-Unplugged2022_2024"
-        ],
-        "lesson.key": "Relay Programming",
-        "lesson_group.key": "csf_sequencing",
-        "script.name": "coursed-2024",
-        "activity_section.key": "03c9c94c-a532-43a8-910d-32904b4d5d4f"
-      },
-      "level_keys": [
-        "RelayProgramming-Unplugged2022_2024"
       ]
     },
     {
@@ -4583,6 +4705,56 @@
       "assessment": false,
       "properties": {
         "level_keys": [
+          "HardwareSkits-Unplugged2022_2024"
+        ],
+        "progression": "Unplugged Activity - Hardware and Software Skits"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "HardwareSkits-Unplugged2022_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursed-2024",
+        "activity_section.key": "236d99f6-0fc2-4263-850a-b12a553fb979"
+      },
+      "level_keys": [
+        "HardwareSkits-Unplugged2022_2024"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "unplugged_hardware and software skits_markdown"
+        ],
+        "progression": "Hardware and Software Skits - Student Reminder"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unplugged_hardware and software skits_markdown"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursed-2024",
+        "activity_section.key": "db4066eb-fc3d-4c45-9c8e-63299dce0dc3"
+      },
+      "level_keys": [
+        "unplugged_hardware and software skits_markdown"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
           "courseD_bounce_events1s_2024"
         ],
         "progression": "Skill-Building"
@@ -4602,7 +4774,7 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 26,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -4627,7 +4799,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 27,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -4652,7 +4824,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 28,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -4677,7 +4849,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 29,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
@@ -4702,7 +4874,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 30,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
@@ -4727,7 +4899,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 31,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
@@ -4752,7 +4924,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 32,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -4777,7 +4949,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 33,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -4802,7 +4974,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 34,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -4827,7 +4999,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 35,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -4852,7 +5024,7 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 36,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -4877,7 +5049,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 37,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
@@ -4902,7 +5074,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 38,
       "position": 6,
       "activity_section_position": 5,
       "assessment": false,
@@ -4927,7 +5099,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 39,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
@@ -4952,7 +5124,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 40,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
@@ -4977,7 +5149,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 9,
       "activity_section_position": 8,
       "assessment": false,
@@ -5002,7 +5174,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -5027,7 +5199,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5052,7 +5224,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5077,7 +5249,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5102,7 +5274,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 46,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5127,7 +5299,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5152,7 +5324,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 48,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -5177,7 +5349,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 49,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -5202,7 +5374,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 50,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -5227,7 +5399,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 51,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -5252,7 +5424,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 52,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -5277,7 +5449,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 53,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -5302,7 +5474,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 54,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -5327,7 +5499,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 55,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
@@ -5352,7 +5524,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 56,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -5377,7 +5549,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 57,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -5402,7 +5574,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 58,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -5427,7 +5599,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 59,
       "position": 17,
       "activity_section_position": 2,
       "assessment": false,
@@ -5452,7 +5624,382 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 60,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music_lab_intro_panels_start2_course-d"
+        ],
+        "progression": "Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music_lab_intro_panels_start2_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "eff30f1b-8cf4-4701-87b7-9271bf349331"
+      },
+      "level_keys": [
+        "music_lab_intro_panels_start2_course-d"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_play_sound_course-d"
+        ],
+        "progression": "Play a sound"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_play_sound_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "a7ccf685-de62-463c-8af7-b58bd1c13f2b"
+      },
+      "level_keys": [
+        "musiclab_tutorial_play_sound_course-d"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_change_sound_course-d"
+        ],
+        "progression": "Play more sounds"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_change_sound_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "9281d137-6b59-48a3-965b-4a9d44b5d73f"
+      },
+      "level_keys": [
+        "musiclab_tutorial_change_sound_course-d"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_repeat_course-d"
+        ],
+        "progression": "Repeat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_repeat_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "16ba742f-b644-419f-b625-e9de52cd801c"
+      },
+      "level_keys": [
+        "musiclab_tutorial_panels_repeat_course-d"
+      ]
+    },
+    {
+      "chapter": 64,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_repeat_course-d"
+        ],
+        "progression": "Repeat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_repeat_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "16ba742f-b644-419f-b625-e9de52cd801c"
+      },
+      "level_keys": [
+        "musiclab_tutorial_repeat_course-d"
+      ]
+    },
+    {
+      "chapter": 65,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_playtogether_course-d"
+        ],
+        "progression": "Play together"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_playtogether_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "93db31c6-25df-4335-9a16-0a63093caed5"
+      },
+      "level_keys": [
+        "musiclab_tutorial_panels_playtogether_course-d"
+      ]
+    },
+    {
+      "chapter": 66,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_play_together_course-d"
+        ],
+        "progression": "Play together"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_play_together_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "93db31c6-25df-4335-9a16-0a63093caed5"
+      },
+      "level_keys": [
+        "musiclab_tutorial_play_together_course-d"
+      ]
+    },
+    {
+      "chapter": 67,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_function_course-d"
+        ],
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_function_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "26e69c9e-f11e-4754-9c3d-e8229bbe2c9b"
+      },
+      "level_keys": [
+        "musiclab_tutorial_panels_function_course-d"
+      ]
+    },
+    {
+      "chapter": 68,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_function_course-d"
+        ],
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_function_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "26e69c9e-f11e-4754-9c3d-e8229bbe2c9b"
+      },
+      "level_keys": [
+        "musiclab_tutorial_function_course-d"
+      ]
+    },
+    {
+      "chapter": 69,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_trigger_course-d"
+        ],
+        "progression": "Triggers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_trigger_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "1b9e26e3-b1c6-46dc-9b96-4f0cd70fe27c"
+      },
+      "level_keys": [
+        "musiclab_tutorial_panels_trigger_course-d"
+      ]
+    },
+    {
+      "chapter": 70,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_trigger_course-d"
+        ],
+        "progression": "Triggers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_trigger_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "1b9e26e3-b1c6-46dc-9b96-4f0cd70fe27c"
+      },
+      "level_keys": [
+        "musiclab_tutorial_trigger_course-d"
+      ]
+    },
+    {
+      "chapter": 71,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_notes_course-d"
+        ],
+        "progression": "Custom notes & beats"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_notes_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "de7d4956-2821-4b12-a034-0a1583663755"
+      },
+      "level_keys": [
+        "musiclab_tutorial_panels_notes_course-d"
+      ]
+    },
+    {
+      "chapter": 72,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_notes_course-d"
+        ],
+        "progression": "Custom notes & beats"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_notes_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "de7d4956-2821-4b12-a034-0a1583663755"
+      },
+      "level_keys": [
+        "musiclab_tutorial_notes_course-d"
+      ]
+    },
+    {
+      "chapter": 73,
+      "position": 14,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_drums_course-d"
+        ],
+        "progression": "Custom notes & beats"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_drums_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "de7d4956-2821-4b12-a034-0a1583663755"
+      },
+      "level_keys": [
+        "musiclab_tutorial_drums_course-d"
+      ]
+    },
+    {
+      "chapter": 74,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "usiclab_tutorial_panels_end_course-d"
+        ],
+        "progression": "Outro"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "usiclab_tutorial_panels_end_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "5a57ab3d-66ca-4627-9a3d-e93772104d02"
+      },
+      "level_keys": [
+        "usiclab_tutorial_panels_end_course-d"
+      ]
+    },
+    {
+      "chapter": 75,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5477,7 +6024,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 76,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -5502,7 +6049,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 77,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -5527,7 +6074,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 78,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5552,7 +6099,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 79,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -5577,7 +6124,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 80,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -5602,7 +6149,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 81,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -5627,7 +6174,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 82,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -5652,7 +6199,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 83,
       "position": 9,
       "activity_section_position": 6,
       "assessment": false,
@@ -5677,7 +6224,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 84,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -5703,7 +6250,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 85,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -5728,7 +6275,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 86,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -5753,7 +6300,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 87,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -5778,7 +6325,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 88,
       "position": 14,
       "activity_section_position": 2,
       "assessment": false,
@@ -5803,7 +6350,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 89,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -5828,7 +6375,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 90,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -5853,7 +6400,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 91,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -5878,7 +6425,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 92,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -5903,7 +6450,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 93,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -5928,7 +6475,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 94,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -5953,7 +6500,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 95,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -5978,7 +6525,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 96,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -6003,7 +6550,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 97,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
@@ -6028,7 +6575,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 98,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6054,7 +6601,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 99,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -6079,7 +6626,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 100,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -6104,7 +6651,7 @@
       ]
     },
     {
-      "chapter": 84,
+      "chapter": 101,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
@@ -6129,7 +6676,7 @@
       ]
     },
     {
-      "chapter": 85,
+      "chapter": 102,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6154,7 +6701,7 @@
       ]
     },
     {
-      "chapter": 86,
+      "chapter": 103,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6179,7 +6726,7 @@
       ]
     },
     {
-      "chapter": 87,
+      "chapter": 104,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -6204,7 +6751,7 @@
       ]
     },
     {
-      "chapter": 88,
+      "chapter": 105,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -6229,7 +6776,7 @@
       ]
     },
     {
-      "chapter": 89,
+      "chapter": 106,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6254,7 +6801,7 @@
       ]
     },
     {
-      "chapter": 90,
+      "chapter": 107,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6279,7 +6826,7 @@
       ]
     },
     {
-      "chapter": 91,
+      "chapter": 108,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6304,7 +6851,7 @@
       ]
     },
     {
-      "chapter": 92,
+      "chapter": 109,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -6329,7 +6876,7 @@
       ]
     },
     {
-      "chapter": 93,
+      "chapter": 110,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
@@ -6354,7 +6901,7 @@
       ]
     },
     {
-      "chapter": 94,
+      "chapter": 111,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -6380,7 +6927,7 @@
       ]
     },
     {
-      "chapter": 95,
+      "chapter": 112,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -6405,7 +6952,7 @@
       ]
     },
     {
-      "chapter": 96,
+      "chapter": 113,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -6430,7 +6977,7 @@
       ]
     },
     {
-      "chapter": 97,
+      "chapter": 114,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -6455,7 +7002,7 @@
       ]
     },
     {
-      "chapter": 98,
+      "chapter": 115,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -6480,7 +7027,7 @@
       ]
     },
     {
-      "chapter": 99,
+      "chapter": 116,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
@@ -6505,7 +7052,7 @@
       ]
     },
     {
-      "chapter": 100,
+      "chapter": 117,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6513,7 +7060,7 @@
         "level_keys": [
           "ConditionalsWithCards-Unplugged2022_2024"
         ],
-        "progression": "Conditionals with Cards - Unplugged Activity"
+        "progression": "Conditionals with Cards - Video"
       },
       "bonus": false,
       "seeding_key": {
@@ -6530,7 +7077,32 @@
       ]
     },
     {
-      "chapter": 101,
+      "chapter": 118,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "unplugged_conditionals with cards_markdown"
+        ],
+        "progression": "Conditionals with Cards - Student Resources "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "unplugged_conditionals with cards_markdown"
+        ],
+        "lesson.key": "Conditionals with Cards",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2024",
+        "activity_section.key": "e80c50c9-8d4e-4f4b-9430-ffe2a636f500"
+      },
+      "level_keys": [
+        "unplugged_conditionals with cards_markdown"
+      ]
+    },
+    {
+      "chapter": 119,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6555,7 +7127,7 @@
       ]
     },
     {
-      "chapter": 102,
+      "chapter": 120,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -6580,7 +7152,7 @@
       ]
     },
     {
-      "chapter": 103,
+      "chapter": 121,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -6605,7 +7177,7 @@
       ]
     },
     {
-      "chapter": 104,
+      "chapter": 122,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -6630,7 +7202,7 @@
       ]
     },
     {
-      "chapter": 105,
+      "chapter": 123,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -6655,7 +7227,7 @@
       ]
     },
     {
-      "chapter": 106,
+      "chapter": 124,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -6680,7 +7252,7 @@
       ]
     },
     {
-      "chapter": 107,
+      "chapter": 125,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -6705,7 +7277,7 @@
       ]
     },
     {
-      "chapter": 108,
+      "chapter": 126,
       "position": 8,
       "activity_section_position": 4,
       "assessment": false,
@@ -6730,7 +7302,7 @@
       ]
     },
     {
-      "chapter": 109,
+      "chapter": 127,
       "position": 9,
       "activity_section_position": 5,
       "assessment": false,
@@ -6755,7 +7327,7 @@
       ]
     },
     {
-      "chapter": 110,
+      "chapter": 128,
       "position": 10,
       "activity_section_position": 6,
       "assessment": false,
@@ -6780,7 +7352,7 @@
       ]
     },
     {
-      "chapter": 111,
+      "chapter": 129,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -6806,7 +7378,7 @@
       ]
     },
     {
-      "chapter": 112,
+      "chapter": 130,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -6832,7 +7404,7 @@
       ]
     },
     {
-      "chapter": 113,
+      "chapter": 131,
       "position": 13,
       "activity_section_position": 3,
       "assessment": false,
@@ -6857,7 +7429,7 @@
       ]
     },
     {
-      "chapter": 114,
+      "chapter": 132,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -6882,7 +7454,7 @@
       ]
     },
     {
-      "chapter": 115,
+      "chapter": 133,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -6907,7 +7479,7 @@
       ]
     },
     {
-      "chapter": 116,
+      "chapter": 134,
       "position": 16,
       "activity_section_position": 2,
       "assessment": false,
@@ -6932,7 +7504,7 @@
       ]
     },
     {
-      "chapter": 117,
+      "chapter": 135,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -6957,7 +7529,7 @@
       ]
     },
     {
-      "chapter": 118,
+      "chapter": 136,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -6982,7 +7554,7 @@
       ]
     },
     {
-      "chapter": 119,
+      "chapter": 137,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7007,7 +7579,7 @@
       ]
     },
     {
-      "chapter": 120,
+      "chapter": 138,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7032,7 +7604,7 @@
       ]
     },
     {
-      "chapter": 121,
+      "chapter": 139,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -7057,7 +7629,7 @@
       ]
     },
     {
-      "chapter": 122,
+      "chapter": 140,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -7082,7 +7654,7 @@
       ]
     },
     {
-      "chapter": 123,
+      "chapter": 141,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -7107,7 +7679,7 @@
       ]
     },
     {
-      "chapter": 124,
+      "chapter": 142,
       "position": 8,
       "activity_section_position": 1,
       "assessment": false,
@@ -7132,7 +7704,7 @@
       ]
     },
     {
-      "chapter": 125,
+      "chapter": 143,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7157,7 +7729,7 @@
       ]
     },
     {
-      "chapter": 126,
+      "chapter": 144,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -7182,7 +7754,7 @@
       ]
     },
     {
-      "chapter": 127,
+      "chapter": 145,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -7208,7 +7780,7 @@
       ]
     },
     {
-      "chapter": 128,
+      "chapter": 146,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -7233,7 +7805,7 @@
       ]
     },
     {
-      "chapter": 129,
+      "chapter": 147,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
@@ -7258,7 +7830,7 @@
       ]
     },
     {
-      "chapter": 130,
+      "chapter": 148,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -7283,7 +7855,7 @@
       ]
     },
     {
-      "chapter": 131,
+      "chapter": 149,
       "position": 15,
       "activity_section_position": 2,
       "assessment": false,
@@ -7308,7 +7880,7 @@
       ]
     },
     {
-      "chapter": 132,
+      "chapter": 150,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -7333,7 +7905,7 @@
       ]
     },
     {
-      "chapter": 133,
+      "chapter": 151,
       "position": 17,
       "activity_section_position": 2,
       "assessment": false,
@@ -7358,7 +7930,7 @@
       ]
     },
     {
-      "chapter": 134,
+      "chapter": 152,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7383,7 +7955,7 @@
       ]
     },
     {
-      "chapter": 135,
+      "chapter": 153,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7408,7 +7980,7 @@
       ]
     },
     {
-      "chapter": 136,
+      "chapter": 154,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7433,7 +8005,7 @@
       ]
     },
     {
-      "chapter": 137,
+      "chapter": 155,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7458,7 +8030,7 @@
       ]
     },
     {
-      "chapter": 138,
+      "chapter": 156,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7483,7 +8055,7 @@
       ]
     },
     {
-      "chapter": 139,
+      "chapter": 157,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
@@ -7508,7 +8080,7 @@
       ]
     },
     {
-      "chapter": 140,
+      "chapter": 158,
       "position": 7,
       "activity_section_position": 2,
       "assessment": false,
@@ -7533,7 +8105,7 @@
       ]
     },
     {
-      "chapter": 141,
+      "chapter": 159,
       "position": 8,
       "activity_section_position": 3,
       "assessment": false,
@@ -7558,7 +8130,7 @@
       ]
     },
     {
-      "chapter": 142,
+      "chapter": 160,
       "position": 9,
       "activity_section_position": 4,
       "assessment": false,
@@ -7583,7 +8155,7 @@
       ]
     },
     {
-      "chapter": 143,
+      "chapter": 161,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -7609,7 +8181,7 @@
       ]
     },
     {
-      "chapter": 144,
+      "chapter": 162,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -7634,7 +8206,7 @@
       ]
     },
     {
-      "chapter": 145,
+      "chapter": 163,
       "position": 12,
       "activity_section_position": 2,
       "assessment": false,
@@ -7659,7 +8231,7 @@
       ]
     },
     {
-      "chapter": 146,
+      "chapter": 164,
       "position": 13,
       "activity_section_position": 1,
       "assessment": false,
@@ -7684,7 +8256,7 @@
       ]
     },
     {
-      "chapter": 147,
+      "chapter": 165,
       "position": 14,
       "activity_section_position": 1,
       "assessment": false,
@@ -7709,7 +8281,7 @@
       ]
     },
     {
-      "chapter": 148,
+      "chapter": 166,
       "position": 15,
       "activity_section_position": 1,
       "assessment": false,
@@ -7734,7 +8306,7 @@
       ]
     },
     {
-      "chapter": 149,
+      "chapter": 167,
       "position": 16,
       "activity_section_position": 2,
       "assessment": false,
@@ -7759,7 +8331,7 @@
       ]
     },
     {
-      "chapter": 150,
+      "chapter": 168,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7784,7 +8356,7 @@
       ]
     },
     {
-      "chapter": 151,
+      "chapter": 169,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7809,7 +8381,7 @@
       ]
     },
     {
-      "chapter": 152,
+      "chapter": 170,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -7834,7 +8406,7 @@
       ]
     },
     {
-      "chapter": 153,
+      "chapter": 171,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -7859,7 +8431,7 @@
       ]
     },
     {
-      "chapter": 154,
+      "chapter": 172,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -7884,7 +8456,7 @@
       ]
     },
     {
-      "chapter": 155,
+      "chapter": 173,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -7909,7 +8481,7 @@
       ]
     },
     {
-      "chapter": 156,
+      "chapter": 174,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
@@ -7934,7 +8506,7 @@
       ]
     },
     {
-      "chapter": 157,
+      "chapter": 175,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
@@ -7959,7 +8531,7 @@
       ]
     },
     {
-      "chapter": 158,
+      "chapter": 176,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
@@ -7985,7 +8557,7 @@
       ]
     },
     {
-      "chapter": 159,
+      "chapter": 177,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
@@ -8010,7 +8582,7 @@
       ]
     },
     {
-      "chapter": 160,
+      "chapter": 178,
       "position": 11,
       "activity_section_position": 1,
       "assessment": false,
@@ -8035,7 +8607,7 @@
       ]
     },
     {
-      "chapter": 161,
+      "chapter": 179,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -8060,7 +8632,7 @@
       ]
     },
     {
-      "chapter": 162,
+      "chapter": 180,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
@@ -8085,7 +8657,7 @@
       ]
     },
     {
-      "chapter": 163,
+      "chapter": 181,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8110,7 +8682,7 @@
       ]
     },
     {
-      "chapter": 164,
+      "chapter": 182,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8158,6 +8730,18 @@
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursed-2024",
         "activity_section.key": "bdf82a94-e48d-4528-b70c-9c32cbfa51eb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "unplugged_graph paper programming_markdown",
+        "script_level.level_keys": [
+          "unplugged_graph paper programming_markdown"
+        ],
+        "lesson.key": "Graph Paper Programming",
+        "lesson_group.key": "csf_sequencing",
+        "script.name": "coursed-2024",
+        "activity_section.key": "80c14d09-edd3-45b6-a8dc-eaba43f8cf55"
       }
     },
     {
@@ -8282,18 +8866,6 @@
     },
     {
       "seeding_key": {
-        "level.key": "RelayProgramming-Unplugged2022_2024",
-        "script_level.level_keys": [
-          "RelayProgramming-Unplugged2022_2024"
-        ],
-        "lesson.key": "Relay Programming",
-        "lesson_group.key": "csf_sequencing",
-        "script.name": "coursed-2024",
-        "activity_section.key": "03c9c94c-a532-43a8-910d-32904b4d5d4f"
-      }
-    },
-    {
-      "seeding_key": {
         "level.key": "courseD_video_debugging_2024",
         "script_level.level_keys": [
           "courseD_video_debugging_2024"
@@ -8398,6 +8970,30 @@
         "lesson_group.key": "csf_sequencing",
         "script.name": "coursed-2024",
         "activity_section.key": "be4a2a92-ce80-4af9-8bf2-28305f0ef90b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "HardwareSkits-Unplugged2022_2024",
+        "script_level.level_keys": [
+          "HardwareSkits-Unplugged2022_2024"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursed-2024",
+        "activity_section.key": "236d99f6-0fc2-4263-850a-b12a553fb979"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "unplugged_hardware and software skits_markdown",
+        "script_level.level_keys": [
+          "unplugged_hardware and software skits_markdown"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-7",
+        "script.name": "coursed-2024",
+        "activity_section.key": "db4066eb-fc3d-4c45-9c8e-63299dce0dc3"
       }
     },
     {
@@ -8818,6 +9414,186 @@
         "lesson_group.key": "csf_events",
         "script.name": "coursed-2024",
         "activity_section.key": "07db007e-abfd-4e2c-b285-7d9801eae9e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music_lab_intro_panels_start2_course-d",
+        "script_level.level_keys": [
+          "music_lab_intro_panels_start2_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "eff30f1b-8cf4-4701-87b7-9271bf349331"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_play_sound_course-d",
+        "script_level.level_keys": [
+          "musiclab_tutorial_play_sound_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "a7ccf685-de62-463c-8af7-b58bd1c13f2b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_change_sound_course-d",
+        "script_level.level_keys": [
+          "musiclab_tutorial_change_sound_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "9281d137-6b59-48a3-965b-4a9d44b5d73f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_panels_repeat_course-d",
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_repeat_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "16ba742f-b644-419f-b625-e9de52cd801c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_repeat_course-d",
+        "script_level.level_keys": [
+          "musiclab_tutorial_repeat_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "16ba742f-b644-419f-b625-e9de52cd801c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_panels_playtogether_course-d",
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_playtogether_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "93db31c6-25df-4335-9a16-0a63093caed5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_play_together_course-d",
+        "script_level.level_keys": [
+          "musiclab_tutorial_play_together_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "93db31c6-25df-4335-9a16-0a63093caed5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_panels_function_course-d",
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_function_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "26e69c9e-f11e-4754-9c3d-e8229bbe2c9b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_function_course-d",
+        "script_level.level_keys": [
+          "musiclab_tutorial_function_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "26e69c9e-f11e-4754-9c3d-e8229bbe2c9b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_panels_trigger_course-d",
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_trigger_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "1b9e26e3-b1c6-46dc-9b96-4f0cd70fe27c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_trigger_course-d",
+        "script_level.level_keys": [
+          "musiclab_tutorial_trigger_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "1b9e26e3-b1c6-46dc-9b96-4f0cd70fe27c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_panels_notes_course-d",
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_notes_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "de7d4956-2821-4b12-a034-0a1583663755"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_notes_course-d",
+        "script_level.level_keys": [
+          "musiclab_tutorial_notes_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "de7d4956-2821-4b12-a034-0a1583663755"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_drums_course-d",
+        "script_level.level_keys": [
+          "musiclab_tutorial_drums_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "de7d4956-2821-4b12-a034-0a1583663755"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "usiclab_tutorial_panels_end_course-d",
+        "script_level.level_keys": [
+          "usiclab_tutorial_panels_end_course-d"
+        ],
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "lesson_group.key": "csf_events",
+        "script.name": "coursed-2024",
+        "activity_section.key": "5a57ab3d-66ca-4627-9a3d-e93772104d02"
       }
     },
     {
@@ -9334,6 +10110,18 @@
         "lesson_group.key": "csf_conditionals",
         "script.name": "coursed-2024",
         "activity_section.key": "2743e27e-75f5-4ff7-9d00-5afa3ca0a030"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "unplugged_conditionals with cards_markdown",
+        "script_level.level_keys": [
+          "unplugged_conditionals with cards_markdown"
+        ],
+        "lesson.key": "Conditionals with Cards",
+        "lesson_group.key": "csf_conditionals",
+        "script.name": "coursed-2024",
+        "activity_section.key": "e80c50c9-8d4e-4f4b-9430-ffe2a636f500"
       }
     },
     {
@@ -10108,7 +10896,7 @@
   "resources": [
     {
       "name": "All Resources",
-      "url": "/s/coursed-2023/resources",
+      "url": "/s/coursed-2024/resources",
       "key": "all_resources",
       "properties": {
         "is_rollup": true
@@ -10119,7 +10907,7 @@
     },
     {
       "name": "All Standards",
-      "url": "/s/coursed-2023/standards",
+      "url": "/s/coursed-2024/standards",
       "key": "all_standards",
       "properties": {
         "is_rollup": true
@@ -10130,7 +10918,7 @@
     },
     {
       "name": "All Vocabulary",
-      "url": "/s/coursed-2023/vocab",
+      "url": "/s/coursed-2024/vocab",
       "key": "all_vocabulary",
       "properties": {
         "is_rollup": true
@@ -10253,6 +11041,19 @@
       }
     },
     {
+      "name": "CSF Change Log 2024-25",
+      "url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/template/preview",
+      "key": "csf_change_log_2024-25",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1Xbo3W7uLcrOtl3qPWcuAaJuBu4cFa1ukldDAwJBLFAE/template/export",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "csf_change_log_2024-25"
+      }
+    },
+    {
       "name": "CSF Course D End of Course Project Planning Guide",
       "url": "https://docs.google.com/document/d/1REjnJsmhZTmUsH5ulglEse4wpmF41zOk08ctqLShUgI/edit?usp=sharing",
       "key": "csf_course_d_end_of_course_project_planning_guide",
@@ -10266,15 +11067,16 @@
       }
     },
     {
-      "name": "CSF Course Syllabus",
-      "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link",
-      "key": "csf_course_syllabus",
+      "name": "CSF Syllabus 2024-25",
+      "url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/edit#heading=h.d1b2pnqkkc57/template/preivew",
+      "key": "csf_syllabus_2024-25",
       "properties": {
         "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1tLktQXrzd01ehF4WlNJNX6-G8F--yvug53tc6-uX-RE/edit#heading=h.d1b2pnqkkc57/export",
         "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "csf_course_syllabus"
+        "resource.key": "csf_syllabus_2024-25"
       }
     },
     {
@@ -10414,6 +11216,32 @@
       },
       "seeding_key": {
         "resource.key": "graph_paper_programming_5"
+      }
+    },
+    {
+      "name": "Hardware and Software Skits",
+      "url": "https://docs.google.com/document/d/1aVJ2CtnvVzde3eDzFOhOWA5f30UTreDZKOSZ2lJ1XYc/template/preview",
+      "key": "hardware_and_software_skits",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/1aVJ2CtnvVzde3eDzFOhOWA5f30UTreDZKOSZ2lJ1XYc/export/pdf",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "hardware_and_software_skits"
+      }
+    },
+    {
+      "name": "Hardware and Software Skits - Roles",
+      "url": "https://docs.google.com/document/d/19TF1oQThf0ZINZ2Eu37_S_b0aKXDdwVBUm6QnEZLTwc/template/preview",
+      "key": "hardware_and_software_skits_-_roles",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/document/d/19TF1oQThf0ZINZ2Eu37_S_b0aKXDdwVBUm6QnEZLTwc/export/pdf",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "hardware_and_software_skits_-_roles"
       }
     },
     {
@@ -10589,70 +11417,6 @@
     },
     {
       "name": "Relay Programming",
-      "url": "https://docs.google.com/document/d/1nneTPNTpboCBMYCr2qpK8DcHSZD6lDi0ovkqkdRDeSc/edit",
-      "key": "relay_programming",
-      "properties": {
-        "audience": "Teacher",
-        "include_in_pdf": true,
-        "type": "Worksheet Answer Key"
-      },
-      "seeding_key": {
-        "resource.key": "relay_programming"
-      }
-    },
-    {
-      "name": "Relay Programming",
-      "url": "https://docs.google.com/document/d/1az8K9tDW0XcU2mvQ_1D7CXpZbq7aq5T-x0RiemGlv5s/edit",
-      "key": "relay_programming_1",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Worksheet"
-      },
-      "seeding_key": {
-        "resource.key": "relay_programming_1"
-      }
-    },
-    {
-      "name": "Relay Programming",
-      "url": "https://docs.google.com/document/d/1UyiAK9sxuMP3AWjbP0TlsMahNa98LxJwyGWKhcdYpig/edit",
-      "key": "relay_programming_2",
-      "properties": {
-        "audience": "Teacher",
-        "include_in_pdf": true,
-        "type": "Teacher Debugging Image"
-      },
-      "seeding_key": {
-        "resource.key": "relay_programming_2"
-      }
-    },
-    {
-      "name": "Relay Programming",
-      "url": "https://youtu.be/l5MKkXbzOsk",
-      "key": "relay_programming_3",
-      "properties": {
-        "audience": "Student",
-        "download_url": "http://videos.code.org/2014/C2-relay-programming.mp4",
-        "type": "Unplugged Video"
-      },
-      "seeding_key": {
-        "resource.key": "relay_programming_3"
-      }
-    },
-    {
-      "name": "Relay Programming",
-      "url": "https://youtu.be/ZULpfAVJOBo",
-      "key": "relay_programming_4",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Teacher Video"
-      },
-      "seeding_key": {
-        "resource.key": "relay_programming_4"
-      }
-    },
-    {
-      "name": "Relay Programming",
       "url": "https://docs.google.com/document/d/1O7nVu6CYhQ_5rWXdAGWEh-e79jZvR__D9xrqSg8Q05o/edit",
       "key": "relay_programming_5",
       "properties": {
@@ -10685,6 +11449,16 @@
       },
       "seeding_key": {
         "resource.key": "spotify_playlist_all_ages_"
+      }
+    },
+    {
+      "name": "CSF State Standards for CS - Master Crosswalk List",
+      "url": "https://docs.google.com/document/d/1sw5P6ejdXTK5H-TWxFCtYeI77sxxJwlY5V0k6p96reQ/edit#heading=h.73du1rws92dv/template/preview",
+      "key": "state_standards_for_computer_science_-_master_crosswalk_list",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "state_standards_for_computer_science_-_master_crosswalk_list"
       }
     },
     {
@@ -11033,48 +11807,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "resource.key": "csf_-_course_d_-_slides_2022-2023"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "resource.key": "relay_programming"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "resource.key": "relay_programming_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "resource.key": "relay_programming_2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "resource.key": "relay_programming_3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "resource.key": "relay_programming_4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "resource.key": "relay_programming_5"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Until Loops in Maze",
         "resource.key": "csf_-_course_d_-_slides_2022-2023"
       }
@@ -11095,6 +11827,24 @@
       "seeding_key": {
         "lesson.key": "While Loops in Farmer",
         "resource.key": "unplugged_blocks_courses_c-f_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "csf_-_course_d_-_slides_2022-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "hardware_and_software_skits"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "resource.key": "hardware_and_software_skits_-_roles"
       }
     }
   ],
@@ -11131,7 +11881,13 @@
     },
     {
       "seeding_key": {
-        "resource.key": "csf_course_syllabus",
+        "resource.key": "csf_change_log_2024-25",
+        "script.name": "coursed-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csf_syllabus_2024-25",
         "script.name": "coursed-2024"
       }
     },
@@ -11156,6 +11912,12 @@
     {
       "seeding_key": {
         "resource.key": "lesson_type_guide",
+        "script.name": "coursed-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "state_standards_for_computer_science_-_master_crosswalk_list",
         "script.name": "coursed-2024"
       }
     },
@@ -11200,6 +11962,26 @@
       },
       "seeding_key": {
         "vocabulary.key": "bug"
+      }
+    },
+    {
+      "key": "central_processing_unit_cpu_",
+      "word": "Central Processing Unit (CPU)",
+      "definition": "Controls all functions of the computer and executes all instructions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "central_processing_unit_cpu_"
+      }
+    },
+    {
+      "key": "cloud_storage",
+      "word": "Cloud storage",
+      "definition": "Saves your files and other data on the internet",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "cloud_storage"
       }
     },
     {
@@ -11253,6 +12035,16 @@
       }
     },
     {
+      "key": "cooling_fan",
+      "word": "Cooling fan",
+      "definition": "Hardware inside of a computer that cools down the device",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "cooling_fan"
+      }
+    },
+    {
       "key": "debugging",
       "word": "Debugging",
       "definition": "Finding and fixing problems in an algorithm or program.",
@@ -11273,6 +12065,16 @@
       }
     },
     {
+      "key": "ethernet_cable",
+      "word": "Ethernet Cable",
+      "definition": "Special cable that allows access to the internet",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "ethernet_cable"
+      }
+    },
+    {
       "key": "event",
       "word": "Event",
       "definition": "An action that causes something to happen.",
@@ -11283,13 +12085,23 @@
       }
     },
     {
-      "key": "frustrated",
-      "word": "Frustrated",
-      "definition": "Feeling annoyed or angry because something is not the way you want it.",
+      "key": "events",
+      "word": "Events",
+      "definition": "Events are actions or occurrences that happen during the runtime of a program, which can trigger specific blocks of code to execute.",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "frustrated"
+        "vocabulary.key": "events"
+      }
+    },
+    {
+      "key": "functions",
+      "word": "Functions",
+      "definition": "Functions are blocks of code designed to perform a particular task. When composing music, students can use functions to encapsulate parts of their songs, such as a melody or a beat.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "functions"
       }
     },
     {
@@ -11303,6 +12115,26 @@
       }
     },
     {
+      "key": "keyboard",
+      "word": "Keyboard",
+      "definition": "A device that allows you to type letters, numbers and other symbols on a computers",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "keyboard"
+      }
+    },
+    {
+      "key": "laptop",
+      "word": "Laptop",
+      "definition": "A personal computer that can be easily moved and used in a variety of locations",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "laptop"
+      }
+    },
+    {
       "key": "loop",
       "word": "Loop",
       "definition": "The action of doing something over and over again.",
@@ -11310,6 +12142,36 @@
       },
       "seeding_key": {
         "vocabulary.key": "loop"
+      }
+    },
+    {
+      "key": "loops",
+      "word": "Loops",
+      "definition": "Loops allow a sequence of instructions to be repeated multiple times.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loops"
+      }
+    },
+    {
+      "key": "monitor",
+      "word": "Monitor",
+      "definition": "The screen that displays pictures and text for a computer",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "monitor"
+      }
+    },
+    {
+      "key": "mouse",
+      "word": "Mouse",
+      "definition": "The hand-held device that allows you to point to a place on a screen and to take action from that place",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "mouse"
       }
     },
     {
@@ -11324,13 +12186,13 @@
       }
     },
     {
-      "key": "persistence",
-      "word": "Persistence",
-      "definition": "Trying again and again, even when something is very hard.",
+      "key": "power_cord",
+      "word": "Power cord",
+      "definition": "Connects the computer to a power source",
       "properties": {
       },
       "seeding_key": {
-        "vocabulary.key": "persistence"
+        "vocabulary.key": "power_cord"
       }
     },
     {
@@ -11384,6 +12246,16 @@
       }
     },
     {
+      "key": "stylus",
+      "word": "Stylus",
+      "definition": "Used for writing on a screen",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "stylus"
+      }
+    },
+    {
       "key": "until",
       "word": "Until",
       "definition": "A command that tells you to do something only up to the point that something becomes true.",
@@ -11391,6 +12263,16 @@
       },
       "seeding_key": {
         "vocabulary.key": "until"
+      }
+    },
+    {
+      "key": "user",
+      "word": "User",
+      "definition": "The person using a device",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "user"
       }
     },
     {
@@ -11599,6 +12481,24 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "vocabulary.key": "events"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "vocabulary.key": "functions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "vocabulary.key": "loops"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Nested Loops in Maze",
         "vocabulary.key": "command"
       }
@@ -11619,48 +12519,6 @@
       "seeding_key": {
         "lesson.key": "Password Power-Up",
         "vocabulary.key": "password_csm"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "vocabulary.key": "algorithm"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "vocabulary.key": "bug"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "vocabulary.key": "collaborate"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "vocabulary.key": "debugging"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "vocabulary.key": "frustrated"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "vocabulary.key": "persistence"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "vocabulary.key": "program"
       }
     },
     {
@@ -11715,6 +12573,84 @@
       "seeding_key": {
         "lesson.key": "While Loops in Farmer",
         "vocabulary.key": "while_loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "central_processing_unit_cpu_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "cloud_storage"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "cooling_fan"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "ethernet_cable"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "hardware"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "keyboard"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "laptop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "monitor"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "mouse"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "power_cord"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "software"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "stylus"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "user"
       }
     }
   ],
@@ -11780,6 +12716,16 @@
       "seeding_key": {
         "lesson.key": "Dance Party",
         "objective.key": "30e74e26-687c-4123-9df0-2888cb48cb98"
+      }
+    },
+    {
+      "key": "31f3d6ad-3429-441a-8a0b-a755afea52f1",
+      "properties": {
+        "description": "Understand how internal and external computer parts function as a system"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "31f3d6ad-3429-441a-8a0b-a755afea52f1"
       }
     },
     {
@@ -11853,13 +12799,23 @@
       }
     },
     {
-      "key": "5d688c93-60bc-4733-8e7d-46e4af9a3f8c",
+      "key": "5c9337db-fdfe-44c9-b9d5-a320cfe2305c",
       "properties": {
-        "description": "Identify signs of frustration "
+        "description": "Collaborate with a group to creatively dramatize a skit outline"
       },
       "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "objective.key": "5d688c93-60bc-4733-8e7d-46e4af9a3f8c"
+        "lesson.key": "lesson-1",
+        "objective.key": "5c9337db-fdfe-44c9-b9d5-a320cfe2305c"
+      }
+    },
+    {
+      "key": "5eb53b5b-d856-40df-9036-ecbae3370dbe",
+      "properties": {
+        "description": "Define various internal and external computer parts"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "5eb53b5b-d856-40df-9036-ecbae3370dbe"
       }
     },
     {
@@ -11880,16 +12836,6 @@
       "seeding_key": {
         "lesson.key": "Events in Bounce",
         "objective.key": "69ed33ad-e67e-4394-a6f9-7562a2fab33a"
-      }
-    },
-    {
-      "key": "6a83aa48-6268-46ad-ab83-556d14c79f86",
-      "properties": {
-        "description": "Define ideas using code and symbols."
-      },
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "objective.key": "6a83aa48-6268-46ad-ab83-556d14c79f86"
       }
     },
     {
@@ -11963,6 +12909,16 @@
       }
     },
     {
+      "key": "91486b95-4074-42f1-a27b-779d9fa07e73",
+      "properties": {
+        "description": "Utilize sound generation, loops, functions, and events in a project to craft and share a unique composition."
+      },
+      "seeding_key": {
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "objective.key": "91486b95-4074-42f1-a27b-779d9fa07e73"
+      }
+    },
+    {
       "key": "931ca47b-327f-4307-b79b-1b407b403cbf",
       "properties": {
         "description": "Identify the benefits of using a loop structure instead of manual repetition."
@@ -12010,16 +12966,6 @@
       "seeding_key": {
         "lesson.key": "Build a Star Wars Game",
         "objective.key": "a41db838-9984-4c33-81f1-93d53ca3522c"
-      }
-    },
-    {
-      "key": "a5fb4759-6d94-4f84-b992-2295429a0475",
-      "properties": {
-        "description": "Verify work done by teammates."
-      },
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "objective.key": "a5fb4759-6d94-4f84-b992-2295429a0475"
       }
     },
     {
@@ -12518,6 +13464,27 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Music Lab Intro Tutorial ",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Nested Loops in Maze",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-10"
@@ -12553,48 +13520,6 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-11"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-12"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-15"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Relay Programming",
-        "framework.shortcode": "csta",
-        "standard.shortcode": "1B-AP-16"
-      }
-    },
-    {
-      "seeding_key": {
         "lesson.key": "Until Loops in Maze",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-10"
@@ -12633,6 +13558,13 @@
         "lesson.key": "While Loops in Farmer",
         "framework.shortcode": "csta",
         "standard.shortcode": "1B-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-CS-01"
       }
     }
   ],

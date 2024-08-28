@@ -1,12 +1,15 @@
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import color from '../../../util/color';
-import i18n from '@cdo/locale';
+
 import fontConstants from '@cdo/apps/fontConstants';
-import {lessonOfBonusLevels} from './shapes';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import i18n from '@cdo/locale';
+
+import color from '../../../util/color';
 import SublevelCard from '../SublevelCard';
+
+import {lessonOfBonusLevels} from './shapes';
 
 const CARD_AREA_SIZE = 900;
 const RadiumFontAwesome = Radium(FontAwesome);

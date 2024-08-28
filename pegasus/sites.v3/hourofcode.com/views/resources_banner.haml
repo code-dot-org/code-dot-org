@@ -17,8 +17,3 @@
         = hoc_s(:resources_banner_howto_button)
 
 %div{style: "clear:both"}
-
-- if @country != 'us'
-  %a{:href => resolve_url('/promote/country-resources')}
-    %button= hoc_s(:resources_country_resources).gsub("Country", HOC_COUNTRIES[@country]['full_name'])
-

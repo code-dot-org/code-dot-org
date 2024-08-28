@@ -1,7 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
 import {Droppable} from 'react-beautiful-dnd';
+
 import color from '@cdo/apps/util/color';
+
 import Student from './Student';
 
 // A StudentGroup is a component that

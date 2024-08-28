@@ -5,7 +5,7 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 import Chips from '@cdo/apps/componentLibrary/chips';
 import {Heading2} from '@cdo/apps/componentLibrary/typography';
 import {ParticipantAudience} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
-import {StudentGradeLevels} from '@cdo/apps/util/sharedConstants';
+import {StudentGradeLevels} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import moduleStyles from './sections-refresh.module.scss';

@@ -1,0 +1,43 @@
+:ruby
+  quote_list = [
+    {
+      quote: hoc_s("music_lab.quotes.bryant.quote"),
+      name: "Bryant",
+      byline: hoc_s("music_lab.quotes.bryant.byline")
+    },
+    {
+      quote: hoc_s("music_lab.quotes.student.quote_01"),
+      byline: hoc_s("music_lab.quotes.student.byline")
+    },
+    {
+      quote: hoc_s("music_lab.quotes.lori.quote"),
+      name: "Lori",
+      byline: hoc_s("music_lab.quotes.lori.byline")
+    },
+    {
+      quote: hoc_s("music_lab.quotes.student.quote_02"),
+      byline: hoc_s("music_lab.quotes.student.byline")
+    },
+    {
+      quote: hoc_s("music_lab.quotes.joe.quote"),
+      name: "Joe",
+      byline: hoc_s("music_lab.quotes.joe.byline")
+    },
+    {
+      quote: hoc_s("music_lab.quotes.student.quote_03"),
+      byline: hoc_s("music_lab.quotes.student.byline")
+    },
+  ]
+
+.carousel-wrapper.no-padding-bottom
+  %swiper-container.music-lab-quotes{navigation: false, init: "false"}
+    - quote_list.each do |quote|
+      %swiper-slide
+        .text-wrapper
+          %p.quote-text{class: !quote[:name] ? "large" : nil}
+            = quote[:quote]
+          %p
+            - if quote[:name]
+              = quote[:name]
+              %span •
+            = quote[:byline]

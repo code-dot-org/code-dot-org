@@ -1,7 +1,7 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import {isolateComponent} from 'isolate-react';
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {
   WorkshopApplicationStates,
@@ -10,7 +10,7 @@ import {
 import {UnconnectedRegionalPartnerSearch as RegionalPartnerSearch} from '@cdo/apps/templates/RegionalPartnerSearch';
 import * as utils from '@cdo/apps/utils';
 
-import {expect} from '../../util/reconfiguredChai';
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const MINIMUM_PROPS = {
   responsiveSize: 'md',

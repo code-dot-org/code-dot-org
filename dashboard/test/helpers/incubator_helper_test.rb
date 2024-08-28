@@ -9,7 +9,7 @@ class IncubatorHelperTest < ActionView::TestCase
   end
 
   setup do
-    @teacher_yes = create(:teacher, id: 80)
+    @teacher_yes = create(:teacher)
     @student = create(:student)
   end
 

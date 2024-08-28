@@ -1,0 +1,29 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-05-04T02:19:47.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "What is something new that retrieval lets you do and a prompt couldn't do by itself?\r\n\r\nWhat's a new type of chatbot you could imagine creating now that you can use retrieval?",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19018,
+    "name_suffix": "2022",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "title": "Check-In",
+    "placeholder": "Type your answer here!"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:19:47.250+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-explore-L3\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-explore-L3\"},{\"changed_at\":\"2024-05-08 22:20:38 +0000\",\"changed\":[\"long_instructions\",\"optional\",\"title\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

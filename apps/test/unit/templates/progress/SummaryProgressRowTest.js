@@ -1,4 +1,4 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
@@ -7,8 +7,6 @@ import {
   fakeLevels,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import {UnconnectedSummaryProgressRow as SummaryProgressRow} from '@cdo/apps/templates/progress/SummaryProgressRow';
-
-import {assert} from '../../../util/reconfiguredChai';
 
 const baseProps = {
   dark: false,
@@ -29,7 +27,7 @@ describe('SummaryProgressRow', () => {
   // This ID is used by the EndOfLessonDialog to scroll the recently completed lesson into view
   it('renders with the expected ID', () => {
     const wrapper = setUp();
-    assert.equal(wrapper.props().id, 'summary-progress-row-3');
+    expect(wrapper.props().id).toEqual('summary-progress-row-3');
   });
 
   describe('when viewing as Participant', () => {
@@ -38,7 +36,7 @@ describe('SummaryProgressRow', () => {
         viewAs: ViewType.Participant,
         lessonIsHiddenForStudents: true,
       });
-      assert.equal(wrapper.isEmptyRender(), true);
+      expect(wrapper.isEmptyRender()).toEqual(true);
     });
 
     it('renders as faded and with a dashed border when locked', () => {
@@ -48,9 +46,9 @@ describe('SummaryProgressRow', () => {
         lessonIsLockedForUser: () => true,
       });
 
-      assert.equal(wrapper.props().style.borderStyle, 'dashed');
-      assert.equal(wrapper.find('td').at(0).props().style.opacity, 0.6);
-      assert.equal(wrapper.find('td').at(1).props().style.opacity, 0.6);
+      expect(wrapper.props().style.borderStyle).toEqual('dashed');
+      expect(wrapper.find('td').at(0).props().style.opacity).toEqual(0.6);
+      expect(wrapper.find('td').at(1).props().style.opacity).toEqual(0.6);
     });
 
     it('disables bubbles when locked', () => {
@@ -60,8 +58,7 @@ describe('SummaryProgressRow', () => {
         lessonIsLockedForUser: () => true,
       });
 
-      assert.strictEqual(
-        wrapper.find('Connect(ProgressBubbleSet)').props().disabled,
+      expect(wrapper.find('Connect(ProgressBubbleSet)').props().disabled).toBe(
         true
       );
     });
@@ -73,7 +70,7 @@ describe('SummaryProgressRow', () => {
         lessonIsLockedForUser: () => true,
       });
 
-      assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'lock');
+      expect(wrapper.find('FontAwesome').at(0).props().icon).toEqual('lock');
     });
   });
 
@@ -85,7 +82,7 @@ describe('SummaryProgressRow', () => {
         lessonIsLockedForAllStudents: () => false,
       });
 
-      assert.equal(wrapper.props().style.borderStyle, 'dashed');
+      expect(wrapper.props().style.borderStyle).toEqual('dashed');
     });
 
     it('renders with dashed border and not faded when lockable lesson and lesson locked for participants in section', () => {
@@ -95,9 +92,9 @@ describe('SummaryProgressRow', () => {
         lessonIsLockedForAllStudents: () => true,
       });
 
-      assert.equal(wrapper.props().style.borderStyle, 'dashed');
-      assert.equal(wrapper.find('td').at(0).props().style.opacity, undefined);
-      assert.equal(wrapper.find('td').at(1).props().style.opacity, undefined);
+      expect(wrapper.props().style.borderStyle).toEqual('dashed');
+      expect(wrapper.find('td').at(0).props().style.opacity).toEqual(undefined);
+      expect(wrapper.find('td').at(1).props().style.opacity).toEqual(undefined);
     });
 
     it('does not disable bubbles when lockable lesson and unlocked for instructor', () => {
@@ -107,8 +104,7 @@ describe('SummaryProgressRow', () => {
         lessonIsLockedForAllStudents: () => true,
       });
 
-      assert.strictEqual(
-        wrapper.find('Connect(ProgressBubbleSet)').props().disabled,
+      expect(wrapper.find('Connect(ProgressBubbleSet)').props().disabled).toBe(
         false
       );
     });
@@ -120,8 +116,7 @@ describe('SummaryProgressRow', () => {
         lessonIsLockedForUser: () => true,
       });
 
-      assert.strictEqual(
-        wrapper.find('Connect(ProgressBubbleSet)').props().disabled,
+      expect(wrapper.find('Connect(ProgressBubbleSet)').props().disabled).toBe(
         true
       );
     });
@@ -132,7 +127,7 @@ describe('SummaryProgressRow', () => {
         lessonIsLockedForUser: () => true,
       });
 
-      assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'lock');
+      expect(wrapper.find('FontAwesome').at(0).props().icon).toEqual('lock');
     });
 
     it('has a lock icon when lockable and locked for section', () => {
@@ -142,7 +137,7 @@ describe('SummaryProgressRow', () => {
         lessonIsLockedForAllStudents: () => true,
       });
 
-      assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'lock');
+      expect(wrapper.find('FontAwesome').at(0).props().icon).toEqual('lock');
     });
 
     it('has an eye slash icon when hidden for participants', () => {
@@ -150,8 +145,7 @@ describe('SummaryProgressRow', () => {
         lessonIsHiddenForStudents: true,
       });
 
-      assert.equal(
-        wrapper.find('FontAwesome').first().props().icon,
+      expect(wrapper.find('FontAwesome').first().props().icon).toEqual(
         'eye-slash'
       );
     });
@@ -163,7 +157,7 @@ describe('SummaryProgressRow', () => {
         lesson: fakeLesson('Maze', 1, true),
       });
 
-      assert.equal(wrapper.find('FontAwesome').at(0).props().icon, 'unlock');
+      expect(wrapper.find('FontAwesome').at(0).props().icon).toEqual('unlock');
     });
   });
 });

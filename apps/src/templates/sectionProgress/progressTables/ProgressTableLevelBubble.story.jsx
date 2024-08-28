@@ -2,7 +2,7 @@ import React from 'react';
 
 import {BubbleSize} from '@cdo/apps/templates/progress/BubbleFactory';
 import color from '@cdo/apps/util/color';
-import {LevelKind, LevelStatus} from '@cdo/apps/util/sharedConstants';
+import {LevelKind, LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 
 import ProgressTableLevelBubble from './ProgressTableLevelBubble';
 

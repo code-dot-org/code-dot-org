@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2024-05-07T21:27:15.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "variables_sprite_lab_games",
+    "instructions_important": "false",
+    "display_name": "How to Make a Sprite",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 27335,
+    "name_suffix": "_2024",
+    "encrypted": "false"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-07T21:27:15.527+00:00\",\"changed\":[\"cloned from \\\"game_variables_video_intro\\\"\"],\"cloned_from\":\"game_variables_video_intro\"},{\"changed_at\":\"2024-05-16 15:20:41 +0000\",\"changed\":[\"video_key\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>

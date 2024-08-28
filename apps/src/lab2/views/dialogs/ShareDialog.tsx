@@ -1,13 +1,15 @@
-import React, {useCallback, useState} from 'react';
-import Typography from '@cdo/apps/componentLibrary/typography';
-import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
-import FocusLock from 'react-focus-lock';
-import moduleStyles from './ShareDialog.module.scss';
 import QRCode from 'qrcode.react';
-import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import React, {useCallback, useState} from 'react';
+import FocusLock from 'react-focus-lock';
+
 import {hideShareDialog} from '@cdo/apps/code-studio/components/shareDialogRedux';
+import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
+import Typography from '@cdo/apps/componentLibrary/typography';
+import copyToClipboard from '@cdo/apps/util/copyToClipboard';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import i18n from '@cdo/locale';
+
+import moduleStyles from './ShareDialog.module.scss';
 
 const CopyToClipboardButton: React.FunctionComponent<{shareUrl: string}> = ({
   shareUrl,
@@ -38,7 +40,7 @@ const CopyToClipboardButton: React.FunctionComponent<{shareUrl: string}> = ({
 
 /**
  * A new implementation of the project share dialog for Lab2 labs.  Currently only used
- * by Music Lab and only supports a minimal subset of functionality.
+ * by Music Lab and Python Lab, and only supports a minimal subset of functionality.
  */
 const ShareDialog: React.FunctionComponent<{shareUrl: string}> = ({
   shareUrl,

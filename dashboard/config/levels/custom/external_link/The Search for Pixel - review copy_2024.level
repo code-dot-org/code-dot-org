@@ -1,0 +1,17 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 55,
+  "created_at": "2024-06-17T22:34:19.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "## The Search for Pixel\r\n\r\nPixel the cat, the beloved pet of the mayor of CeeVeeville, has gone missing! You have been hired to become a digital detective and to help bring the feline back home. In this activity, you will examine a variety of different locations and scenes within the city, using computer vision techniques to help solve Pixel's strange disappearance.",
+    "link_title": "The Search for Pixel Activity",
+    "url": "https://docs.google.com/presentation/d/1mcW2L7KLCkYDab6kufMuA-NnCW8aQQ49ahHWS_4rZPs/preview",
+    "name_suffix": "_2024"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-06-17T22:34:19.549+00:00\",\"changed\":[\"cloned from \\\"The Search for Pixel - review copy\\\"\"],\"cloned_from\":\"The Search for Pixel - review copy\"},{\"changed_at\":\"2024-07-04 00:39:50 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"},{\"changed_at\":\"2024-07-04 00:40:49 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16889,\"changed_by_email\":\"jamila+lb@code.org\"}]"
+}]]></config>
+</ExternalLink>

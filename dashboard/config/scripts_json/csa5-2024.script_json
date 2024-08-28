@@ -12,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-12 21:02:24 UTC",
+    "serialized_at": "2024-07-11 16:13:47 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -116,7 +117,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/5/topic/2) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U5L2 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/0393d5fd1ac7474e954d5593c6e4775e) on AP Classroom can be assigned as a formative assessment for this lesson.\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/5/topic/2) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I access and modify rows and elements in a 2D array?**\n\nStudents now know how to declare and initialize a two-dimensional (2D) array using the `new` keyword and an initializer list. In this lesson, students explore how to access and modify individual rows and elements in a 2D array and identify similarities and differences between accessing elements in a 2D array and a 1D array. They then practice accessing and modifying rows and elements in a 2D array.",
         "preparation": "* **(Optional)** Print copies of the U5L2 Guided Notes (one for each student)\n* Preview the *Working with 2D Array Elements* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-2-2d-array-elements/37911) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I access and modify rows and elements in a 2D array?**\n\nYou now know how to declare and initialize a two-dimensional (2D) array using the `new` keyword and an initializer list. In this lesson, you explore how to access and modify individual rows and elements in a 2D array and identify similarities and differences between accessing elements in a 2D array and a 1D array. You then practice accessing and modifying rows and elements in a 2D array."
@@ -173,7 +174,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/5/topic/5) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U5L5 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/f523e3a63d33454eb1b6e0ff63ed6e03) on AP Classroom can be assigned as a formative assessment for this lesson.\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/5/topic/5) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I use enhanced `for` loops to traverse a 2D array?**\n\nStudents revisit enhanced `for` loops to explore how these are used with 2D arrays. In the process, students discover that objects can be modified using an enhanced `for` loop because the loop variable is an alias of the object reference in the array. Students explore how enhanced `for` loops can be used with 2D arrays and identify similarities and differences between using enhanced `for` loops with 1D arrays and 2D arrays. Students then practice using enhanced `for` loops with 2D arrays.",
         "preparation": "* **(Optional)** Print copies of the U5L5 Guided Notes (one for each student)\n* Preview the *Enhanced For Loops and 2D Arrays* video\n* Print copies of the Enhanced For Loops Anticipation Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-5-5-enhanced-for-loops/37914) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I use enhanced `for` loops to traverse a 2D array?**\n\nYou used enhanced `for` loops with 1D arrays to access each element from first to last. In this lesson, you revisit enhanced `for` loops to explore how these are used with 2D arrays. In the process, you discover that objects can be modified using an enhanced `for` loop because the loop variable is an alias of the object reference in the array. You explore how enhanced `for` loops can be used with 2D arrays and identify similarities and differences between using enhanced `for` loops with 1D arrays and 2D arrays. You then practice using enhanced `for` loops with 2D arrays."
@@ -4063,6 +4064,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L1_2024"
+        ],
         "progression": "Predict and Run: 2D Arrays"
       },
       "bonus": false,
@@ -4085,6 +4089,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L2_2024"
+        ],
         "progression": "Skill Building: Creating 2D Arrays"
       },
       "bonus": false,
@@ -4107,6 +4114,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L3_2024"
+        ],
         "progression": "Skill Building: Creating 2D Arrays"
       },
       "bonus": false,
@@ -4129,6 +4139,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L4_2024"
+        ],
         "progression": "Skill Building: Using Initializer Lists"
       },
       "bonus": false,
@@ -4151,6 +4164,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L5_2024"
+        ],
         "progression": "Skill Building: Using Initializer Lists"
       },
       "bonus": false,
@@ -4173,6 +4189,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L1-L6_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4195,6 +4214,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L1_2024"
+        ],
         "progression": "Predict and Run: 2D Array Elements"
       },
       "bonus": false,
@@ -4217,6 +4239,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L2_2024"
+        ],
         "progression": "Investigate and Modify: 2D Array Elements"
       },
       "bonus": false,
@@ -4239,6 +4264,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L3_2024"
+        ],
         "progression": "Investigate and Modify: 2D Array Elements"
       },
       "bonus": false,
@@ -4261,6 +4289,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L4_2024"
+        ],
         "progression": "Investigate and Modify: 2D Array Elements"
       },
       "bonus": false,
@@ -4283,6 +4314,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L5_2024"
+        ],
         "progression": "Practice: 2D Array Elements"
       },
       "bonus": false,
@@ -4305,6 +4339,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L6_2024"
+        ],
         "progression": "Practice: 2D Array Elements"
       },
       "bonus": false,
@@ -4327,6 +4364,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L7_2024"
+        ],
         "progression": "Practice: 2D Array Elements"
       },
       "bonus": false,
@@ -4349,6 +4389,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L2-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4371,6 +4414,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L1_2024"
+        ],
         "progression": "Predict and Run: Nested Loops and 2D Arrays"
       },
       "bonus": false,
@@ -4393,6 +4439,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L2_2024"
+        ],
         "progression": "Practice: Traversing 2D Arrays"
       },
       "bonus": false,
@@ -4415,6 +4464,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L3_2024"
+        ],
         "progression": "Practice: Traversing 2D Arrays"
       },
       "bonus": false,
@@ -4437,6 +4489,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L4_2024"
+        ],
         "progression": "Practice: Traversing 2D Arrays"
       },
       "bonus": false,
@@ -4459,6 +4514,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L3-L5_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4481,6 +4539,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L4_2024"
+        ],
         "progression": "Predict and Run: Column-Major Traversal"
       },
       "bonus": false,
@@ -4503,6 +4564,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L2_2024"
+        ],
         "progression": "Practice: Column-Major Traversal"
       },
       "bonus": false,
@@ -4525,6 +4589,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L3_2024"
+        ],
         "progression": "Practice: Column-Major Traversal"
       },
       "bonus": false,
@@ -4547,6 +4614,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L4choice_2024"
+        ],
         "progression": "Practice: Column-Major Traversal"
       },
       "bonus": false,
@@ -4569,6 +4639,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L4-L5_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4591,6 +4664,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L1_2024"
+        ],
         "progression": "Predict and Run: Enhanced For Loops and Objects"
       },
       "bonus": false,
@@ -4613,6 +4689,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L2_2024"
+        ],
         "progression": "Investigate and Modify: Enhanced For Loops"
       },
       "bonus": false,
@@ -4635,6 +4714,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L3_2024"
+        ],
         "progression": "Investigate and Modify: Enhanced For Loops"
       },
       "bonus": false,
@@ -4657,6 +4739,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L4_2024"
+        ],
         "progression": "Investigate and Modify: Enhanced For Loops"
       },
       "bonus": false,
@@ -4679,6 +4764,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L5_2024"
+        ],
         "progression": "Practice: Enhanced For Loops and 2D Arrays"
       },
       "bonus": false,
@@ -4701,6 +4789,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L6_2024"
+        ],
         "progression": "Practice: Enhanced For Loops and 2D Arrays"
       },
       "bonus": false,
@@ -4723,6 +4814,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L7_2024"
+        ],
         "progression": "Practice: Enhanced For Loops and 2D Arrays"
       },
       "bonus": false,
@@ -4745,6 +4839,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L5-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4767,6 +4864,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L1_2024"
+        ],
         "progression": "Predict and Run: Image Filters"
       },
       "bonus": false,
@@ -4789,6 +4889,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L2_2024"
+        ],
         "progression": "Investigate and Modify: Image Filters"
       },
       "bonus": false,
@@ -4811,6 +4914,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L3_2024"
+        ],
         "progression": "Investigate and Modify: Image Filters"
       },
       "bonus": false,
@@ -4833,6 +4939,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L4_2024"
+        ],
         "progression": "Investigate and Modify: Image Filters"
       },
       "bonus": false,
@@ -4855,6 +4964,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L5_2024"
+        ],
         "progression": "Practice: Creating Image Filters"
       },
       "bonus": false,
@@ -4877,6 +4989,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L6_2024"
+        ],
         "progression": "Practice: Creating Image Filters"
       },
       "bonus": false,
@@ -4899,6 +5014,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L7_2024"
+        ],
         "progression": "Practice: Creating Image Filters"
       },
       "bonus": false,
@@ -4921,6 +5039,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L6-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4943,6 +5064,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L1_2024"
+        ],
         "progression": "Predict and Run: The indexOf() Method"
       },
       "bonus": false,
@@ -4965,6 +5089,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L2_2024"
+        ],
         "progression": "Investigate and Modify: The indexOf() Method"
       },
       "bonus": false,
@@ -4987,6 +5114,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L3_2024"
+        ],
         "progression": "Investigate and Modify: The indexOf() Method"
       },
       "bonus": false,
@@ -5009,6 +5139,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L4_2024"
+        ],
         "progression": "Investigate and Modify: The indexOf() Method"
       },
       "bonus": false,
@@ -5031,6 +5164,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L5_2024"
+        ],
         "progression": "Skill Building: The indexOf() Method"
       },
       "bonus": false,
@@ -5053,6 +5189,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L6_2024"
+        ],
         "progression": "Practice: 2D Array Algorithms"
       },
       "bonus": false,
@@ -5075,6 +5214,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L7_2024"
+        ],
         "progression": "Practice: 2D Array Algorithms"
       },
       "bonus": false,
@@ -5097,6 +5239,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L7-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5119,6 +5264,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L1_2024"
+        ],
         "progression": "Predict and Run: Image Filters"
       },
       "bonus": false,
@@ -5141,6 +5289,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L2_2024"
+        ],
         "progression": "Practice: Image Filters"
       },
       "bonus": false,
@@ -5163,6 +5314,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L3_2024"
+        ],
         "progression": "Practice: Image Filters"
       },
       "bonus": false,
@@ -5185,6 +5339,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L4_2024"
+        ],
         "progression": "Practice: Image Filters"
       },
       "bonus": false,
@@ -5207,6 +5364,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L5_2024"
+        ],
         "progression": "Practice: Image Filters"
       },
       "bonus": false,
@@ -5229,6 +5389,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L8-L6_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5251,6 +5414,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L1_2024"
+        ],
         "progression": "Investigate and Modify: Image Manipulations"
       },
       "bonus": false,
@@ -5273,6 +5439,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L2_2024"
+        ],
         "progression": "Investigate and Modify: Image Manipulations"
       },
       "bonus": false,
@@ -5295,6 +5464,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L3_2024"
+        ],
         "progression": "Investigate and Modify: Image Manipulations"
       },
       "bonus": false,
@@ -5317,6 +5489,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5L9-L4_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5339,6 +5514,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5 Personal Narrative Project_2024"
+        ],
         "progression": "Personal Narrative Project"
       },
       "bonus": false,
@@ -5361,6 +5539,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 5 Assessment_2024"
+        ],
         "progression": "Unit 5 Assessment"
       },
       "bonus": false,
@@ -5383,6 +5564,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa5_2024"
+        ],
         "progression": "Unit 5 Survey"
       },
       "bonus": false,
@@ -5405,6 +5589,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U5 Personal Narrative Project 1-Day_2024"
+        ],
         "progression": "Personal Narrative Project"
       },
       "bonus": false,
@@ -5427,6 +5614,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5448,6 +5638,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox_2024"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -5470,6 +5663,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox_2024"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -5492,6 +5688,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Theater Sandbox_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6305,7 +6504,7 @@
   "resources": [
     {
       "name": "2D Array Algorithms",
-      "url": "https://docs.google.com/presentation/d/1GXtijS1Yl9vaqyirVYMP9zEtFKO5reZiHFkkbfqpaV8/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1Mr96424adsHFQZkGnS849mTXk7R9xJEUXw5Hp6e-Na4/edit?usp=drive_link",
       "key": "2d_array_algorithms",
       "properties": {
         "audience": "Verified Teacher",
@@ -6317,7 +6516,7 @@
     },
     {
       "name": "2D Array Elements",
-      "url": "https://docs.google.com/presentation/d/1bdrE_CxWGucOTVh0Ry9l7JcvxHoE1aN_3Qu0aax6Ums/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1KDXfhFezZ-7f3hKl8Ac-1PxthMg2q_hBw54AFRPaYxo/edit?usp=drive_link",
       "key": "2d_array_elements",
       "properties": {
         "audience": "Verified Teacher",
@@ -6710,7 +6909,7 @@
     },
     {
       "name": "Column-Major Traversal",
-      "url": "https://docs.google.com/presentation/d/1ouaFfonE710Whme4LGVAqkV6eQ1FdkIe6GaSa-Dxqvs/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/15IVN1zGdmR-vvj9WV8Q2sIel2HOWHdCnMHxd8F2hSj8/edit?usp=drive_link",
       "key": "column-major_traversal",
       "properties": {
         "audience": "Verified Teacher",
@@ -6747,11 +6946,9 @@
     },
     {
       "name": "CSA Unit 5 Slides",
-      "url": "https://docs.google.com/presentation/d/1cIdMWFqVAjkKXCjSNafe_yySdswkSCh75fqVOKfTmms/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1GNYyhymAm6SQSLOXbsPq5zJXVRNwM-sDLIo2B14afkU/edit?usp=drive_link",
       "key": "csa_unit_5_slides",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csa_unit_5_slides"
@@ -6771,7 +6968,7 @@
     },
     {
       "name": "Enhanced For Loops",
-      "url": "https://docs.google.com/presentation/d/1vu3ObiYpOYba0ORGV-gF3OJT7JTGI8hU4WkzHN9Naog/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1nXX6IzZbeTIrrkCRh1yChOCpYD4O5MiHtsjL3nhqVDw/edit?usp=drive_link",
       "key": "enhanced_for_loops_2",
       "properties": {
         "audience": "Verified Teacher",
@@ -6821,7 +7018,7 @@
     },
     {
       "name": "GrayscaleImage FRQ",
-      "url": "https://docs.google.com/presentation/d/1ghDXil7SfcIMKm6EZgqxGxOdkvkKdqkgw9rNtkINIbA/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/14Xk4qD9WUihvF2rEt_l7AGIxlQcCw8uOE8Gvn7HV3q4/edit?usp=drive_link",
       "key": "grayscaleimage_frq",
       "properties": {
         "audience": "Verified Teacher",
@@ -6882,7 +7079,7 @@
     },
     {
       "name": "Images in The Theater",
-      "url": "https://docs.google.com/presentation/d/1txY2_0noV1tujNvIoCrF6D8_JBn79f6KeJmwUMTa0rM/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1BuOECo-wpqtduv756pdZSTco-PlymSehX4IPVdw7xGE/edit?usp=drive_link",
       "key": "images_in_the_theater",
       "properties": {
         "audience": "Verified Teacher",
@@ -6894,7 +7091,7 @@
     },
     {
       "name": "Impacts of Programs",
-      "url": "https://docs.google.com/presentation/d/1aqs2crOUPLs5yeSKEuk-7rpkKs1HuRzP4RgZI7ighCI/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/18NEIaM24XZMlrD3JWH8zosNvTJ08m-Mv0wsIjdSiNRA/edit?usp=drive_link",
       "key": "impacts_of_programs",
       "properties": {
         "audience": "Verified Teacher",
@@ -6932,7 +7129,7 @@
     },
     {
       "name": "Modifying Images",
-      "url": "https://docs.google.com/presentation/d/1JMDCGHmuH6HoVN8xWG68Ji3B44LReEgnnUkKMGRz_BM/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/15DqfTsrOtQX9BluzHqITA7E5PEHHw_RTDXze25EH16E/edit?usp=drive_link",
       "key": "modifying_images",
       "properties": {
         "audience": "Verified Teacher",
@@ -6944,7 +7141,7 @@
     },
     {
       "name": "Personal Narrative Project",
-      "url": "https://docs.google.com/presentation/d/1DxA0rXABD7yW_hpbA4hDeP0zj3qvRtjOrFY-c4mKJJQ/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1otn2iBFN650SmogPixq7jLvGa4u6GPz3lrn2Cb1f8Hw/edit?usp=drive_link",
       "key": "personal_narrative_project",
       "properties": {
         "audience": "Verified Teacher",
@@ -6952,6 +7149,18 @@
       },
       "seeding_key": {
         "resource.key": "personal_narrative_project"
+      }
+    },
+    {
+      "name": "Personal Narrative Project [1-Day Version]",
+      "url": "https://docs.google.com/presentation/d/10ZhsmzxtnVF-t9XlIK-UifVAON-EJ18Xee-Mte_gk08/edit?usp=drive_link",
+      "key": "personal_narrative_project_1-day_version_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "personal_narrative_project_1-day_version_"
       }
     },
     {
@@ -7007,7 +7216,7 @@
     },
     {
       "name": "Row-Major Traversal",
-      "url": "https://docs.google.com/presentation/d/1rFZGLV-6AxGL-qrKwqE9w_r_cnPOaeCHWpYr0MZum4M/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1V_E2-YkbKuraIoGaNjLTobqyWpXDD1fhQ35O-soHPQ8/edit?usp=drive_link",
       "key": "row-major_traversal",
       "properties": {
         "audience": "Verified Teacher",
@@ -7069,7 +7278,7 @@
     },
     {
       "name": "Two-Dimensional (2D) Arrays",
-      "url": "https://docs.google.com/presentation/d/1mYvzL8ufZ1CbpPE50ASzOicPlGrh_PY4nCGCzUqc_NI/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1sKm2piYFdSt_-Gj7sPkKQidoGkT4bc-D7JZmuW7Jfmo/edit?usp=drive_link",
       "key": "two-dimensional_2d_arrays",
       "properties": {
         "audience": "Verified Teacher",
@@ -7327,7 +7536,7 @@
     },
     {
       "name": "Unit 5 Assessment",
-      "url": "https://docs.google.com/presentation/d/1YAACBBZKLHnp9Wan0C5RaeLxtjjSCF6o4KDAslMcPok/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1vhY69WEtfFFJDachZFbn6PsdLwsZf78rwDUdvvIoiTg/edit?usp=drive_link",
       "key": "unit_5_assessment",
       "properties": {
         "audience": "Verified Teacher",
@@ -7815,6 +8024,12 @@
       "seeding_key": {
         "lesson.key": "Personal Narrative Project [1-Day Version]",
         "resource.key": "_exemplar_personal_narrative_project_planning_guide_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Personal Narrative Project [1-Day Version]",
+        "resource.key": "personal_narrative_project_1-day_version_"
       }
     },
     {

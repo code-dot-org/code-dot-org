@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import msg from '@cdo/locale';
-import color from '../../util/color';
+
 import SafeMarkdown from '../../templates/SafeMarkdown';
+import color from '../../util/color';
 
 class DataEntryError extends React.Component {
   static propTypes = {

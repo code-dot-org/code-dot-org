@@ -1,8 +1,10 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import msg from '@cdo/locale';
+
 import dataStyles from './data-styles.module.scss';
-import classNames from 'classnames';
 
 const INITIAL_STATE = {
   newTableName: '',

@@ -1,5 +1,6 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "published": true,
   "game_id": 54,
   "created_at": "2024-03-28T21:10:35.000Z",
   "level_num": "custom",
@@ -10,11 +11,10 @@
     "instructions_important": "false",
     "skip_dialog": true,
     "skip_sound": true,
-    "long_instructions": "## Chapter 1 Project: Paper Prototype\r\n\r\n##### The following video covers the Chapter 1 Project. It references <a href=\"https://studio.code.org/s/csd4-2023/lessons/7\" target=\"blank\" rel=\"noopener noreferrer\">Lesson 7 - Identifying User Needs</a> and <a href=\"https://studio.code.org/s/csd4-2023/lessons/8\" target=\"blank\" rel=\"noopener noreferrer\">Lesson 8 - Project: Paper Prototype</a>. \r\n\r\n##### While you watch, consider how you will lead this project with your students.",
+    "long_instructions": "## Chapter 1 Project: Paper Prototype\r\n\r\n#### The following video covers the Chapter 1 Project. It references <a href=\"https://studio.code.org/s/csd4-2024/lessons/7\" target=\"blank\" rel=\"noopener noreferrer\">Lesson 7 - Identifying User Needs</a> and <a href=\"https://studio.code.org/s/csd4-2024/lessons/8\" target=\"blank\" rel=\"noopener noreferrer\">Lesson 8 - Project: Paper Prototype</a>. \r\n\r\n#### While you watch, consider how you will lead this project with your students.",
     "name_suffix": "_2024"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-03-28T21:10:35.069+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-U4SelfPaced_Project Video\\\"\"],\"cloned_from\":\"VPL-CSD-U4SelfPaced_Project Video\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-28T21:10:35.069+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-U4SelfPaced_Project Video\\\"\"],\"cloned_from\":\"VPL-CSD-U4SelfPaced_Project Video\"},{\"changed_at\":\"2024-05-06 00:42:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

@@ -1,8 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import color from '@cdo/apps/util/color';
 import {tableLayoutStyles} from '@cdo/apps/templates/tables/tableConstants';
+import color from '@cdo/apps/util/color';
 
 export default function MethodSummaryTable({methods}) {
   return (

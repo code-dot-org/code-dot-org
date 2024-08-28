@@ -9,13 +9,13 @@ import React, {
 import {connect} from 'react-redux';
 
 import project from '@cdo/apps/code-studio/initApp/project';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {
   setIsReadOnlyWorkspace,
   setHasOpenCodeReview,
 } from '@cdo/apps/javalab/redux/javalabRedux';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import CodeReviewDataApi from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewDataApi';
 import CodeReviewError from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewError';
 import CodeReviewTimeline from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewTimeline';

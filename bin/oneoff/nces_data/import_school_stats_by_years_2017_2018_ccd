@@ -69,7 +69,7 @@ end
 AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/school_stats_201718.csv") do |filename|
   SchoolStatsByYear.transaction do
     SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00"}) do |row|
-      row = row.to_h.map {|k, v| [k, sanitize_string_for_db(v)]}.to_h
+      row = row.to_h.transform_values {|v| sanitize_string_for_db(v)}
 
       {
         school_id:          row['School ID - NCES Assigned [Public School] Latest available year'].to_i.to_s,

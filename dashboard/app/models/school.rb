@@ -325,7 +325,7 @@ class School < ApplicationRecord
       CDO.log.info "Seeding 2019-2020 public school data."
       AWS::S3.seed_from_file('cdo-nces', "2019-2020/ccd/schools.csv") do |filename|
         merge_from_csv(filename, {headers: true, quote_char: "\x00"}, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open']) do |row|
-          row = row.to_h.map {|k, v| [k, sanitize_string_for_db(v)]}.to_h
+          row = row.to_h.transform_values {|v| sanitize_string_for_db(v)}
           {
             id:                           row['School ID - NCES Assigned [Public School] Latest available year'].to_i.to_s,
             name:                         row['School Name'].upcase,
@@ -349,7 +349,7 @@ class School < ApplicationRecord
       CDO.log.info "Seeding 2020-2021 public school data."
       AWS::S3.seed_from_file('cdo-nces', "2020-2021/ccd/schools_public.csv") do |filename|
         merge_from_csv(filename, {headers: true, quote_char: "\x00"}, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open']) do |row|
-          row = row.to_h.map {|k, v| [k, sanitize_string_for_db(v)]}.to_h
+          row = row.to_h.transform_values {|v| sanitize_string_for_db(v)}
           {
             id:                           row['School ID - NCES Assigned [Public School] Latest available year'].to_i.to_s,
             name:                         row['School Name'].upcase,
@@ -404,7 +404,7 @@ class School < ApplicationRecord
       CDO.log.info "Seeding 2021-2022 public school data."
       AWS::S3.seed_from_file('cdo-nces', "2021-2022/ccd/schools_public.csv") do |filename|
         merge_from_csv(filename, {headers: true, quote_char: "\x00", encoding: 'bom|utf-8'}, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open']) do |row|
-          row = row.to_h.map {|k, v| [k, sanitize_string_for_db(v)]}.to_h
+          row = row.to_h.transform_values {|v| sanitize_string_for_db(v)}
           {
             id:                           row['School ID - NCES Assigned [Public School] Latest available year'].to_i.to_s,
             name:                         row['School Name'].upcase,
@@ -428,7 +428,7 @@ class School < ApplicationRecord
       CDO.log.info "Seeding 2022-2023 public school data."
       AWS::S3.seed_from_file('cdo-nces', "2022-2023/ccd/schools_public.csv") do |filename|
         merge_from_csv(filename, {headers: true, quote_char: "\x00", encoding: 'bom|utf-8'}, true, is_dry_run: false, ignore_attributes: ['last_known_school_year_open']) do |row|
-          row = row.to_h.map {|k, v| [k, sanitize_string_for_db(v)]}.to_h
+          row = row.to_h.transform_values {|v| sanitize_string_for_db(v)}
           {
             id:                           row['School ID - NCES Assigned [Public School] Latest available year'].to_i.to_s,
             name:                         row['School Name'].upcase,

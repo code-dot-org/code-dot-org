@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "# Problem Statements\r\n\r\nHow did you transition from your user story to developing a core problem statement? Provide an example from your work.\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
+    "long_instructions": "# Problem Statements\r\n\r\n#### How did you transition from your user story to developing a core problem statement? Provide an example from your work.\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -21,7 +21,7 @@
     "teacher_markdown": "Students should explain the process of identifying core issues from user stories by asking \"Why?\" multiple times, showcasing their understanding of digging deeper into user needs to define a core problem.\r\n"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-19T00:04:24.844+00:00\",\"changed\":[\"cloned from \\\"CV_L5_Reflection_2\\\"\"],\"cloned_from\":\"CV_L5_Reflection_2\"},{\"changed_at\":\"2024-04-19 00:04:49 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-04-19T00:04:24.844+00:00\",\"changed\":[\"cloned from \\\"CV_L5_Reflection_2\\\"\"],\"cloned_from\":\"CV_L5_Reflection_2\"},{\"changed_at\":\"2024-04-19 00:04:49 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-19 19:14:11 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

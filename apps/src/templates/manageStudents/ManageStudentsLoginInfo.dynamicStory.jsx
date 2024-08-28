@@ -1,4 +1,4 @@
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 
 const loginTypes = Object.values(SectionLoginType);
 

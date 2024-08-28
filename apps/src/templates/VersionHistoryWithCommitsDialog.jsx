@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {sources as sourcesApi} from '../clientApi';
+
 import project from '@cdo/apps/code-studio/initApp/project';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import * as utils from '../utils';
-import i18n from '@cdo/locale';
-import StylizedBaseDialog from '@cdo/apps/componentLibrary/StylizedBaseDialog';
-import Button from '@cdo/apps/templates/Button';
+import StylizedBaseDialog from '@cdo/apps/sharedComponents/StylizedBaseDialog';
 import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import {sources as sourcesApi} from '../clientApi';
+import * as utils from '../utils';
 
 const DEFAULT_FILE_NAME = 'main.json';
 

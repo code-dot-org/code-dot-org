@@ -17,18 +17,20 @@
         }
       ],
       "curriculum_umbrella": "CSD",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-04-18 20:14:34 UTC",
+    "serialized_at": "2024-08-09 19:12:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -74,7 +76,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day:** How can we choose websites based on the needs of a user?\n\nTo kick off a unit devoted to group problem solving and developing websites for other users, students begin by investigating the design of different websites. Students look at a variety of websites and attempt to match each design with a potential user. Then students choose a user and attempt to prototype a website design for them on paper or in a digital template. To conclude the activity, students consider what it means to be a web designer and create resources for other users.",
-        "preparation": "* Print a copy of the activity guide for each student.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "preparation": "* Print a copy of the activity guide for each student.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day: How can we choose websites based on the needs of a user?**\n\nIn this lesson, you will explore the relationship between users, their needs, and the design of websites that meet their needs."
       },
       "seeding_key": {
@@ -93,7 +95,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson introduces many new concepts and tools to students: they are introduced to HTML, the Web Lab tool, and how to navigate lesson resources on Code.org in general. In this lesson, students are introduced to HTML as a solution to the problem of how to communicate both the content and structure of a website to a computer. The lesson begins with a brief unplugged activity demonstrating the challenges of effectively communicating the structure of a web page. Students then look at an exemplar HTML page in Web Lab and discuss with their classmates how HTML tags help solve this problem. Students then write their first HTML. A wrap-up discussion helps to solidify the understanding of content vs. structure that was developed throughout the lesson.\n\n**Question of the Day:** How can we tell the computer both *what* to put on the web page, and *how* to organize it?\n",
-        "preparation": "* Review the Code Studio levels\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "preparation": "* Review the Code Studio levels\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:** How can we tell the computer both *what* to put on the web page, and *how* to organize it?\n\n\nYou will look at an HTML page in Web Lab and use HTML to write your first web page of the unit.\n"
       },
       "seeding_key": {
@@ -112,7 +114,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson introduces the core practices of pair programming and debugging. In this lesson, students continue to use HTML to structure text on web pages, this time in pairs, with a focus on working together and debugging problems with their sites.  Students learn how to use the different heading and list elements and practice using them to give their web pages more structure.  \n\n**Question of the Day:** How can we work together to fix problems with our websites?\n",
-        "preparation": "* Have student journals ready to give back.\n* If you want to use an anchor chart, prepare poster paper to do so as a whole class.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "preparation": "* Have student journals ready to give back.\n* If you want to use an anchor chart, prepare poster paper to do so as a whole class.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:** How can we work together to fix problems with our websites?\n\nIn this lesson, you will learn about HTML headings and HTML lists and how to use them to give your web pages a more organized structure\n\n"
       },
       "seeding_key": {
@@ -131,7 +133,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "**Question of the Day: How can you make sure that your private information stays private?**\n\nIn this lesson, students pause their own on developing web pages so they can develop an understanding of how personal information is surfaced on the internet, sometimes intentionally and sometimes unintentionally. Students look at several fictitious social media pages to see what they can learn about different people purely from publicly available information. They then reflect on what guidelines are appropriate for posting their own information online, especially as they prepare to create more personalized websites.",
-        "preparation": "* Print out copies of \"Social Sleuth\" for each student (or one for each group if grouping)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "preparation": "* Print out copies of \"Social Sleuth\" for each student (or one for each group if grouping)\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day: How can you make sure that your private information stays private?**\n\nIn this lesson, you will think about the personal information that you choose to share digitally through various websites, apps, and social media. \n\n"
       },
       "seeding_key": {
@@ -150,7 +152,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this mini-project, students use what they have learned to create a web page for a user. Students begin their project by using the Problem Solving Process to help them design a web page for a user. As they determine what content to include on the web page for their user, they will identify which tags they will use to implement their design. Students then build their user’s web page in Web Lab. Optionally, after engaging in a formal feedback process, they may change their web pages based on feedback before reflecting on their process. The lesson also includes an optional review of the HTML students have learned ‌before building the web page.\n\n**Question of the Day:** How can I use HTML to design and build a web page for a user?\n",
-        "preparation": "* Print out a copy of the project guide for each student.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-html-web-page-web-development-lesson-4/36202) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "preparation": "* Determine which project guide option your students will complete\n* Print out a copy of the project guide for each student.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:** How can I use HTML to design and build a web page for a user?\n\nIn this lesson, you will build a simple web page for a user of your choice.\n"
       },
       "seeding_key": {
@@ -169,7 +171,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson introduces CSS as a way to style elements on the page. Students learn the basic syntax for CSS rule-sets and then explore properties that impact HTML text elements. They work on an HTML page about Guinness World Record holders, adding their own style to the provided page. While only a few CSS properties are introduced in the core lesson, students are encouraged to use the optional activities at the end of the lesson to explore more ways that they can express themselves using CSS.\n\n**Question of the Day:** How can we change the style of text on a web page?\n",
-        "preparation": "* Create a new poster titled **CSS Properties** if your students will not be tracking new CSS properties in their journals\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "preparation": "* Create a new poster titled **CSS Properties** if your students will not be tracking new CSS properties in their journals\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:** How can we change the style of text on a web page?\n\nIn this lesson, you will learn how to use CSS to style the HTML elements on your web page. \n\n"
       },
       "seeding_key": {
@@ -188,7 +190,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Until this point, the only content that students have used on their web pages is their own, but in the next lesson, they will be adding images to their sites. Before they do so, they need to understand the rules governing how to legally use content they find on the web. Starting with a discussion of their personal opinions on how others should be allowed to use their work, the class explores the purpose and role of copyright for both creators and users of creative content. They then move on to an activity exploring the various Creative Commons licenses as a solution to the difficulty in dealing with copyright. \n\n**Question of the Day:** What kind of rules protect everyone's rights when we use each other's content?\n",
-        "preparation": "* Preview Creative Commons Overview - Video. You may need to download it before school if YouTube is blocked.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "preparation": "* Preview Creative Commons Overview - Video. You may need to download it before school if YouTube is blocked.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:** What kind of rules protect everyone's rights when we use each other's content?\n\nIn this lesson, you will explore the various Creative Commons licenses. \n"
       },
       "seeding_key": {
@@ -207,7 +209,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson introduces images, which are different from earlier tags in that they are 'self-closing' and include attributes.  Students should understand that these tags do not surround content in the same way as other tags. Students start the class by considering the ethical implications of using images on their websites, specifically in terms of intellectual property. They then learn how to add images to their web pages using the &lt;img&gt; tag and how to cite the image sources appropriately.\n\n**Question of the Day:** How can we add images on our websites, while making sure we respect everyone's rights?\n",
-        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:** How can we add images on our websites, while making sure we respect everyone's rights?\n\nIn this lesson, you will learn how to add images to your web pages making sure to keep copyright and Creative Commons licenses in mind. \n\n"
       },
       "seeding_key": {
@@ -226,7 +228,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson continues the introduction to CSS style properties, this time focusing more on non-text elements. Students begin this lesson by looking at a website about Desserts of the World. They investigate and modify the new CSS styles on this website, adding their own styles to the page. After working on the Desserts page, students apply their knowledge of new CSS properties to their personal websites.\n\n**Question of the Day:** How can we style the images and layouts of our pages?\n",
-        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:** How can we style the images and layouts of our pages?\n\nIn this lesson, you will learn more CSS style properties, this time focusing on non-text elements.\n"
       },
       "seeding_key": {
@@ -245,7 +247,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this mini-project, students use what they have learned to style a web page for a user. Students begin their project using the Problem Solving Process to help them determine how they will style a web page for a user. Students then style their users' web pages in Web Lab. Optionally, after engaging in a formal feedback process, they may change their web pages based on feedback before reflecting on their process. The lesson also includes an optional review of the HTML and CSS students learned ‌before styling the web page.\n\n**Question of the Day:** How can I use CSS to style a web page for a user?\n\n",
-        "preparation": "* Print a copy of the project guide for each student.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-your-personal-style-web-development-lesson-7/36203) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "preparation": "* Print a copy of the project guide for each student.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:** How can I use CSS to style a web page for a user?\n\nIn this lesson, you will style a web page for a user of your choice.\n\n"
       },
       "seeding_key": {
@@ -264,7 +266,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Up until this point, the only styling students have been able to do is styling by the element, which means that every element of a particular kind has the same style. This lesson expands on the CSS that students have already learned by introducing classes, which allow web developers to treat groups of elements they want to be styled differently than other elements of the same type. Students first investigate and modify classes on various pages, then create their own classes and use them to better control the appearance of their pages.  They then reflect on how they could use this skill to improve their team websites.\n\n**Question of the Day:**  How can we create different styles for the same type of element?\n\n*Note: Single elements can also be selected by id, but this type of selection is possible with a class applied only to that single element. Because id selection does not add any extra functionality, it is not taught in this course.*\n",
-        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:**  How can we create different styles for the same type of element?\n\nYou will learn about CSS classes in this lesson which will allow you to style groups of elements differently than other elements of the same type. \n"
       },
       "seeding_key": {
@@ -283,7 +285,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson introduces students to two new web development tools: div tags and Flexbox styling. This lesson introduces students to div tags to organize their HTML code into sections. They then learn about Flexbox and how it can be used with their div containers to style and position items. Students practice using Flexbox properties to control the layout of web pages.\n\n**Question of the Day:** What are div tags and Flexbox and why are they important in web design?\n",
-        "preparation": "* Prepare journals or optionally print copies of the activity guide\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Print copies of the handout\n- If you would like more information on what Flexbox is and how to use it with CSS, **check out [this video](https://youtu.be/H2O5NcXhBPc)!**\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:** What are div tags and Flexbox and why are they important in web design?\n\nIn this lesson, you will explore two new concepts that will help you solve design and layout issues: `div` tags and Flexbox. "
       },
       "seeding_key": {
@@ -302,7 +304,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson introduces students to advanced Flexbox child properties including `order`, `align-self`, `flex-grow`, and `flex-shrink` through an interactive warm-up and the various level exercises. They’ll deepen their understanding of how these properties affect web page layouts and conclude with a creative group drawing game to reinforce their learning.\n\n**Question of the Day:** How do Flexbox child properties affect the layout and organization of elements within a webpage?\n",
-        "preparation": "* Print out one copy of the activity guide and handout for each student.\n* Print and cut out the Pictionary Terms slips.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "preparation": "* Print out one copy of the activity guide and handout for each student.\n* Print and cut out the Pictionary Terms slips.\n- If you would like more information on how to use Flexbox Children **check out [this video](https://youtu.be/pPdEXY_LfcU)!**\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:** How do Flexbox child properties affect the layout and organization of elements within a webpage?\n\nIn this lesson, you will learn about \"child\" Flexbox properties that can be applied directly to items within a container. \n\n"
       },
       "seeding_key": {
@@ -343,7 +345,7 @@
         ],
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this chapter project, students use what they have learned to style and organize a web page for a user. Students begin their project by using the Problem Solving Process to help them determine how they will organize the content of a user’s web page. Students then use CSS classes and flexbox to organize their user’s web page in Web Lab. Optionally, after engaging in a formal feedback process, they may change their web pages based on feedback before reflecting on their process.\n\n**Question of the Day:** How can I use CSS classes and Flexbox to organize webpage content for a user?\n",
-        "preparation": "* Ensure students have access to the Project Guide from the last lesson.\n* Print copies of the reflection and peer feedback documents.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-personal-web-page-web-development-lesson-13/36204) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "preparation": "* Determine which project option your students will complete.\n* Print copies of the project guide and any accompanying handouts for your students\n* Print copies of the reflection and peer feedback documents.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:** How can I use CSS classes and Flexbox to organize webpage content for a user?\n\nIn this lesson, you will use CSS Classes and Flexbox to style and organize the content of a user’s webpage.\n"
       },
       "seeding_key": {
@@ -362,7 +364,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson explicitly addresses the challenges students may find working in a group and supports them in crafting a plan to overcome these challenges. Students work together to set group norms and brainstorm what features they would like their websites to have. The class starts by thinking of some popular teams in different contexts, then reflects on what makes teams successful. They then get into their own teams and make a plan for how they will interact and reach success in their own projects. Afterward, the teams begin to brainstorm ideas for their website project.\n\n**Question of the Day:** How can we work together to make a great team?\n",
-        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:** How can we work together to make a great team?\n\nYou will work together with a team to brainstorm possible features you'd like your websites to have and discuss how you will interact with your team in order to be successful. "
       },
       "seeding_key": {
@@ -381,7 +383,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson encourages students to think more about their responsibilities as consumers of information and how to find relevant and trustworthy information online. After viewing and discussing a video about how search engines work, students will search for information relevant to their site. They'll need to analyze the sites they find for credibility to decide which are appropriate to use on their own website. By the end of this lesson, students should have developed strategies for determining which websites are more trustworthy and tie these strategies back to their own role as content producers by looking for ways to make their own sites appear more trustworthy.\n\n**Question of the Day:** How do we find relevant and trustworthy information on the Internet?\n",
-        "preparation": "* Print a copy of the Internet Scavenger Hunt activity guide for each pair of students, or prepare to project the questions to the class.\n* Create a blank poster titled **Trustworthiness Checklist** and place it on the wall.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "preparation": "* Print a copy of the Internet Scavenger Hunt activity guide for each pair of students, or prepare to project the questions to the class.\n* Create a blank poster titled **Trustworthiness Checklist** and place it on the wall.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:** How do we find relevant and trustworthy information on the Internet?\n\nIn this lesson, you will discover how to find relevant and trustworthy information online!\n"
       },
       "seeding_key": {
@@ -400,7 +402,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson will give students practice in using links and introduce them to good navigation practices for their sites. Students begin by looking online for the first web page and discussing how its use of links was what started the web. They then transition to Web Lab where they learn how to make their own links, as well as good conventions that make it easier for users to navigate on a page.  Finally, they reflect on their group project and what their personal goals are for the final stretch.\n\n**Question of the Day:** How can we combine several different web pages into one website?\n",
-        "preparation": "* Make sure students have access to their website plans from the previous lesson.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "preparation": "* Make sure students have access to their website plans from the previous lesson.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:** How can we combine several different web pages into one website?\n\nIn this lesson, you will learn how to use hyperlinks on a web page. "
       },
       "seeding_key": {
@@ -419,7 +421,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson introduces students to the dynamic world of CSS pseudo-classes. Students will learn about their role in enhancing web page interactivity and style. They will explore, practice, and apply various pseudo-classes like `link`, `visited`, `hover`, and `active`, understanding how these selectors can transform the user experience on websites.\n\n**Question of the Day:** What is a CSS pseudo-class, and how does it change the way an element looks or behaves on a web page?\n",
-        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:** What is a CSS pseudo-class, and how does it change the way an element looks or behaves on a web page?\n\nIn this lesson, you will explore various pseudo-classes and learn how they can transform the user experience on websites.  \n\n"
       },
       "seeding_key": {
@@ -438,7 +440,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students work in teams to plan out their websites and create a sketch of each page. They then download the media that they will need for their sites. At the end of the activity, they decide how the work will be distributed among team members and report whether the entire group agreed to the plan.\n\n**Question of the Day:**  How do we plan a web page as a group?\n",
-        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:**  How do we plan a web page as a group?\n\nYou will work together with a team today to plan out your final websites and decide how the work will be distributed among yourselves.  \n\n"
       },
       "seeding_key": {
@@ -457,7 +459,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Teams have spent a lot of time throughout the chapter planning their websites. In this lesson, they are finally able to code their pages. Using the project guide, the team works together and individually to code all of the pages, then puts all of the work together into a single site.\n\n**Question of the Day:** What skills and practices will help us work together to make a great website?\n",
-        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-website-for-a-purpose-web-development-lesson-20/36205) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:** What skills and practices will help us work together to make a great website?\n\nIn this lesson, your team will finally code the pages that you have been planning!"
       },
       "seeding_key": {
@@ -498,7 +500,7 @@
         ],
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "This lesson focuses on the value of peer feedback. Students first reflect on what they are proud of, and what they would like feedback on. Teams then work with peers to get that feedback through a structured process that includes the project rubric criteria. Afterward, students decide how they would like to respond to the feedback and put the finishing touches on their sites.  After a final review of the rubric, they reflect on their process. To cap off the unit, they will share their projects and also an overview of the process they took to get to that final design.\n\n**Question of the Day:**  How can we use feedback to make our websites better?*\n",
-        "preparation": "* Print a copy of the peer review guide for each student.\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "preparation": "* Print a copy of the peer review guide for each student.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-2/36191) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
         "student_overview": "**Question of the Day:**  How can we use feedback to make our websites better?\n\nIn this lesson, you will give and get feedback on your finished website.\n"
       },
       "seeding_key": {
@@ -5133,7 +5135,7 @@
       "key": "fec7cad8-9547-4f8b-b2d6-03c19583b6e5",
       "position": 4,
       "properties": {
-        "description": "**Distribute:** Hand out the activity guide.\n\nThe teams should already have the topic for their project, but they should check that they are all in agreement about the topic.",
+        "description": "**Distribute:** Hand out the activity guide.\n\nThe teams should start by discussing possible topics for their project and eventually, they should make a decision and all be in agreement about the topic.",
         "name": "Team Goal\r"
       },
       "seeding_key": {
@@ -12144,7 +12146,7 @@
     },
     {
       "name": "Web Design for Users (A)",
-      "url": "https://docs.google.com/document/d/1dZxd7DuruNKhqjp9nxAzr0RSICJFyb3sc-B6bgY2bIs/view",
+      "url": "https://docs.google.com/document/d/1NYVEB_fULN0TwhKRyIBP7j2e-EZreodBpBhURM9aT8Y/edit",
       "key": "web_design_for_users_a_",
       "properties": {
         "audience": "Student",
@@ -13729,16 +13731,6 @@
       }
     },
     {
-      "key": "45e6e834-b1f7-4ee3-8b9f-b5d6952f7347",
-      "properties": {
-        "description": "Apply Flexbox properties in CSS"
-      },
-      "seeding_key": {
-        "lesson.key": "Websites for Expression",
-        "objective.key": "45e6e834-b1f7-4ee3-8b9f-b5d6952f7347"
-      }
-    },
-    {
       "key": "4c5d3778-7924-4696-a8d7-80573652342a",
       "properties": {
         "description": "Write a simple HTML document that uses opening and closing tags to structure content"
@@ -13766,6 +13758,16 @@
       "seeding_key": {
         "lesson.key": "Team Problem Solving",
         "objective.key": "500a9c65-79a8-494b-a0a0-a9dff0f9fd98"
+      }
+    },
+    {
+      "key": "52651590-94dc-4432-8fa3-2c1d4a123c0c",
+      "properties": {
+        "description": "Apply Flexbox properties in CSS"
+      },
+      "seeding_key": {
+        "lesson.key": "Websites for Expression",
+        "objective.key": "52651590-94dc-4432-8fa3-2c1d4a123c0c"
       }
     },
     {
@@ -13866,26 +13868,6 @@
       "seeding_key": {
         "lesson.key": "Websites for a Purpose",
         "objective.key": "694e5850-ccd9-47ba-a2cd-bc755ac1b28a"
-      }
-    },
-    {
-      "key": "69cf2c6b-e8ac-47ab-8ffd-aa80d419f492",
-      "properties": {
-        "description": "Analyze and solve common web design layout challenges using div tags and Flexbox"
-      },
-      "seeding_key": {
-        "lesson.key": "Websites for Expression",
-        "objective.key": "69cf2c6b-e8ac-47ab-8ffd-aa80d419f492"
-      }
-    },
-    {
-      "key": "71cf9da7-f188-4b32-bf5c-968a82caecfe",
-      "properties": {
-        "description": "Identify and explain the purpose and use of div tags in HTML"
-      },
-      "seeding_key": {
-        "lesson.key": "Websites for Expression",
-        "objective.key": "71cf9da7-f188-4b32-bf5c-968a82caecfe"
       }
     },
     {
@@ -14029,6 +14011,16 @@
       }
     },
     {
+      "key": "d29092a2-0a57-451e-8bbc-e2b5b23cd5a5",
+      "properties": {
+        "description": "Analyze and solve common web design layout challenges using div tags and Flexbox"
+      },
+      "seeding_key": {
+        "lesson.key": "Websites for Expression",
+        "objective.key": "d29092a2-0a57-451e-8bbc-e2b5b23cd5a5"
+      }
+    },
+    {
       "key": "d85ab2ef-0091-4823-afec-2873f5f5382e",
       "properties": {
         "description": "Design a webpage based on user needs"
@@ -14076,6 +14068,16 @@
       "seeding_key": {
         "lesson.key": "Mini-Project: HTML Web Page",
         "objective.key": "f4b15a53-b0f8-45ff-8dcd-72faabed7a5a"
+      }
+    },
+    {
+      "key": "f8cc060a-ffdc-47b5-9f44-4ba5ed6d63e2",
+      "properties": {
+        "description": "Identify and explain the purpose and use of div tags in HTML"
+      },
+      "seeding_key": {
+        "lesson.key": "Websites for Expression",
+        "objective.key": "f8cc060a-ffdc-47b5-9f44-4ba5ed6d63e2"
       }
     },
     {

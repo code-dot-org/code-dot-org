@@ -1,7 +1,7 @@
 // Load all .story.jsx files and render them with enzyme, checking for
 // render errors and other problems.
-import enzyme from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+import enzyme from 'enzyme'; // eslint-disable-line no-restricted-imports
 import $ from 'jquery';
 
 import {

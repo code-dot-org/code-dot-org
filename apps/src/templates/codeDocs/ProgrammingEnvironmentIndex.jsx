@@ -1,7 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 
 export function ProgrammingEnvironmentCard({programmingEnvironment}) {

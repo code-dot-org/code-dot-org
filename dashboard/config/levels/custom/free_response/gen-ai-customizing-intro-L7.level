@@ -1,0 +1,30 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-05-06T18:05:47.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "Based on the last few levels:\r\n\r\n1) What types of tasks do you think a **⬆️ high** temperature is better suited for?\r\n1) What types of tasks do you think a **⬇️ low** temperature is better suited for?",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19018,
+    "name_suffix": "2022",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "title": "Mid-Lesson Check-In",
+    "placeholder": "Write your answer here!",
+    "teacher_markdown": "Students should notice that higher temperature is better for more creative and open-ended tasks (like the poetry level), while lower temperature can be better for more fact and information based tasks (like the historical biography level). Mid temperatures are better for a combination of the two (like making an argument, that requires both logical and emotional appeals).\r\n\r\nStudents may also call out places where bias and hallucinations are important. Lower temperatures can be better for places where we want to try and eliminate hallucinations, although we will learn some better tricks for this later in the unit."
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-06T18:05:47.340+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-finetuning-explore-L2\\\"\"],\"cloned_from\":\"gen-ai-customizing-finetuning-explore-L2\"},{\"changed_at\":\"2024-05-06 23:57:16 +0000\",\"changed\":[\"long_instructions\",\"optional\",\"title\",\"placeholder\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-12 06:17:45 +0000\",\"changed\":[\"title\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

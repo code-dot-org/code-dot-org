@@ -1,23 +1,26 @@
 import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import applabMsg from '@cdo/applab/locale';
-import PropertyRow from './PropertyRow';
+
+import * as utils from '../../utils';
+import designMode from '../designMode';
+import themeValues, {CLASSIC_TEXT_AREA_PADDING} from '../themeValues';
+
 import BooleanPropertyRow from './BooleanPropertyRow';
+import BorderProperties from './BorderProperties';
 import ColorPickerPropertyRow from './ColorPickerPropertyRow';
-import ZOrderRow from './ZOrderRow';
+import * as elementUtils from './elementUtils';
 import EventHeaderRow from './EventHeaderRow';
 import EventRow from './EventRow';
 import FontFamilyPropertyRow from './FontFamilyPropertyRow';
+import elementLibrary from './library';
+import PropertyRow from './PropertyRow';
 import TextAlignmentPropertyRow, {
   TEXT_ALIGNMENT_LEFT,
 } from './TextAlignmentPropertyRow';
-import BorderProperties from './BorderProperties';
-import * as utils from '../../utils';
-import * as elementUtils from './elementUtils';
-import designMode from '../designMode';
-import themeValues, {CLASSIC_TEXT_AREA_PADDING} from '../themeValues';
-import elementLibrary from './library';
+import ZOrderRow from './ZOrderRow';
 
 class TextAreaProperties extends React.Component {
   static propTypes = {

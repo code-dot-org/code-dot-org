@@ -20,7 +20,10 @@
   --neutral_dark: #292F36;
   --orange: #ffa400; /* legacy color */
   /* Typography */
-  --main-font: 'Metropolis', sans-serif;
+  --main-font: 'Metropolis', 'Noto Sans', 'Noto Sans Arabic', 'Noto Sans Armenian', 'Noto Sans Bengali', 'Noto Sans SC',
+               'Noto Sans TC', 'Noto Sans Devanagari', 'Noto Sans Georgian', 'Noto Sans Hebrew', 'Noto Sans JP',
+               'Noto Sans Kannada', 'Noto Sans Khmer', 'Noto Sans KR', 'Noto Sans Myanmar', 'Noto Sans Sinhala',
+               'Noto Sans Tamil', 'Noto Sans Telugu', 'Noto Sans Thai', 'Noto Sans Thaana', sans-serif;
   --thin-font-weight: 100;
   --extra-light-font-weight: 200;
   --light-font-weight: 300;
@@ -32,6 +35,12 @@
   --black-font-weight: 900;
   /* Border radius */
   --border-radius: 4px;
+  /* Swiper carousel styles */
+  --swiper-pagination-color: var(--brand_primary_default);
+  --swiper-pagination-bullet-size: 1rem;
+  --swiper-pagination-bullet-inactive-color: var(--brand_primary_light);
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-horizontal-gap: 0.5rem;
 }
 
 html {
@@ -283,6 +292,72 @@ td {
 /* Use these classes to change a section's background color */
 section.bg-neutral-light { background-color: var(--neutral_light); }
 section.bg-neutral-dark { background-color: var(--neutral_dark); }
+
+/* Start carousel styles ------------------------ */
+.carousel-wrapper {
+  position: relative;
+  margin: 2rem 0 0;
+}
+
+/* Sets the font-family for .action-block carousels */
+.carousel-wrapper .action-block p {
+  font-family: var(--main-font), sans-serif;
+}
+
+/* Swiper carousel library styles */
+swiper-slide {
+  display: flex;
+  align-items: stretch;
+  height: auto;
+}
+
+.carousel-wrapper .swiper-nav-prev,
+.carousel-wrapper .swiper-nav-next {
+  position: absolute;
+  top: 40%;
+  border: 0;
+  height: 48px;
+}
+
+.carousel-wrapper .swiper-nav-prev {
+  background: url("/images/carousel/prev.svg") no-repeat;
+  left: -4rem;
+  border: 0;
+}
+
+.carousel-wrapper .swiper-nav-next {
+  background: url("/images/carousel/next.svg") no-repeat;
+  right: -4rem;
+}
+
+.carousel-wrapper .swiper-button-disabled {
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel-wrapper .swiper-nav-prev,
+  .carousel-wrapper .swiper-nav-next {
+    display: none;
+  }
+}
+
+/* Video carousel styles */
+.carousel-wrapper.video-carousel swiper-slide {
+  display: block;
+  text-align: left;
+}
+
+.carousel-wrapper.video-carousel iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.carousel-wrapper.video-carousel .swiper-nav-prev,
+.carousel-wrapper.video-carousel .swiper-nav-next {
+  top: 28%;
+}
+
+/* Begin legacy styles ------------------------ */
 
 .narrow_hr {
   margin-top: 10px;
@@ -584,24 +659,6 @@ a.link-button.secondary.white {
   border-radius: 5px;
 }
 
-.btn-carousel-slide {
-  background: #ffa401;
-}
-.course-carousel .slide-prev, .course-carousel .slide-next {
-  background-color: #7765a1;
-}
-#stats-carousel .slide-prev > span {
-  border-right-color: #b9bf15;
-}
-#stats-carousel .slide-next > span {
-  border-left-color: #b9bf15;
-}
-.carousel-wrapper .pagination a {
-  background: var(--brand_secondary_light);
-}
-.carousel-wrapper .pagination a.selected {
-  background: var(--brand_secondary_default);
-}
 .container_nonresponsive { width: 970px; margin: 0 auto; max-width: none !important; }
 
 .lines_of_code_header {

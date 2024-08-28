@@ -1,7 +1,8 @@
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
-import {assert} from 'chai';
-import {shallow} from 'enzyme';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import RailsAuthenticityToken from '@cdo/apps/lib/util/RailsAuthenticityToken';
 import logToCloud from '@cdo/apps/logToCloud';
 

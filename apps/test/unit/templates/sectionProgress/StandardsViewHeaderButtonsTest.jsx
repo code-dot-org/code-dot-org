@@ -1,9 +1,7 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import {UnconnectedStandardsViewHeaderButtons as StandardsViewHeaderButtons} from '@cdo/apps/templates/sectionProgress/standards/StandardsViewHeaderButtons';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 describe('StandardsViewHeaderButtons', () => {
   it('does not show update unplugged progress button if no unplugged lessons', () => {
@@ -16,7 +14,7 @@ describe('StandardsViewHeaderButtons', () => {
         unpluggedLessons={[]}
       />
     );
-    expect(wrapper.find('Button')).to.have.lengthOf(1);
+    expect(wrapper.find('Button')).toHaveLength(1);
   });
   it('opens lesson status dialog', () => {
     const wrapper = shallow(
@@ -37,7 +35,7 @@ describe('StandardsViewHeaderButtons', () => {
     );
 
     wrapper.find('Button').at(0).simulate('click');
-    expect(wrapper.find('LessonStatusDialog')).to.have.lengthOf(1);
+    expect(wrapper.find('LessonStatusDialog')).toHaveLength(1);
   });
   it('opens create report dialog', () => {
     const wrapper = shallow(
@@ -58,6 +56,6 @@ describe('StandardsViewHeaderButtons', () => {
     );
 
     wrapper.find('Button').at(1).simulate('click');
-    expect(wrapper.find('CreateStandardsReportDialog')).to.have.length(1);
+    expect(wrapper.find('CreateStandardsReportDialog')).toHaveLength(1);
   });
 });

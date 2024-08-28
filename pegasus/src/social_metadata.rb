@@ -2,13 +2,10 @@
 #
 #   code.org/
 #   code.org/challenge
-#   code.org/coldplay
 #   code.org/dance
 #   code.org/minecraft
-#   code.org/oceans
 #   code.org/hourofcode/overview
 #   code.org/learn
-#   code.org/prize
 #   code.org/hourofcode2022
 #   code.org/maker
 #   code.org/blockchain
@@ -18,11 +15,11 @@
 #   code.org/videos
 #   code.org/10years
 #   code.org/youngwomen
+#   code.org/music
+#   code.org/lms
 #
 #   hourofcode.com/
 #   hourofcode.com/learn
-#   hourofcode.com/thanks
-#   hourofcode.com/ai
 
 def get_social_metadata_for_page(request)
   # Not currently used, but left here for reference in case we want to use videos again.
@@ -50,16 +47,12 @@ def get_social_metadata_for_page(request)
     dance_2022: {path: "/images/social-media/dance-social-2022.png", width: 1200, height: 630},
     dance_2023: {path: "/images/social-media/dance-social-2023-spring.png", width: 1200, height: 630},
     dance_2023_hoc: {path: "/images/social-media/dance-social-2023-hoc.png", width: 1200, height: 630},
-    hoc_thanks: {path: "/images/hourofcode-2015-video-thumbnail.png", width: 1440, height: 900},
     hoc_2019_social: {path: "/shared/images/social-media/hoc2019_social.png", width: 1200, height: 630},
-    oceans: {path: "/shared/images/social-media/oceans_social.png", width: 1200, height: 630},
     codeorg2019_social: {path: "/shared/images/social-media/codeorg2019_social.png", width: 1200, height: 630},
     codeorg2020_social: {path: "/shared/images/social-media/codeorg2020_social.png", width: 1200, height: 630},
     hoc_2020_social: {path: "/shared/images/social-media/hoc2020_social.png", width: 1200, height: 630},
     hoc_cse_social: {path: "/shared/images/social-media/hoc_cse_social.png", width: 1200, height: 630},
-    coldplay: {path: "/shared/images/social-media/coldplay_social.png", width: 1920, height: 1080},
     hoc_2022_social: {path: "/shared/images/social-media/hoc2022_social.png", width: 1200, height: 630},
-    cs_leaders_prize: {path: "/images/social-media/cs-leaders-prize-opengraph.png", width: 1200, height: 630},
     maker_physical_computing: {path: "/shared/images/social-media/maker_social.png", width: 1200, height: 630},
     blockchain: {path: "/shared/images/social-media/blockchain-social.png", width: 1200, height: 630},
     ai: {path: "/shared/images/social-media/ai-social.png", width: 1200, height: 630},
@@ -69,6 +62,8 @@ def get_social_metadata_for_page(request)
     videos_page: {path: "/shared/images/social-media/videos-page.png", width: 1200, height: 630},
     ten_years: {path: "/shared/images/social-media/10years-social.png", width: 1200, height: 630},
     young_women_in_cs: {path: "/shared/images/social-media/young-women-social.png", width: 1200, height: 630},
+    music_lab: {path: "/shared/images/social-media/music-lab.png", width: 1200, height: 630},
+    lms: {path: "/shared/images/social-media/lms.png", width: 1200, height: 630},
   }
 
   # Important:
@@ -108,13 +103,6 @@ def get_social_metadata_for_page(request)
         image: images[:celeb_challenge]
       }
     },
-    "coldplay" => {
-      "default" => {
-        title: hoc_s(:social_coldplay_title),
-        description: hoc_s(:social_coldplay_desc),
-        image: images[:coldplay]
-      }
-    },
     "minecraft" => {
       "soon-hoc" => {
         title: hoc_s(:tutorial_mchoc_name),
@@ -144,20 +132,6 @@ def get_social_metadata_for_page(request)
         image: images[:dance_2023_hoc]
       }
     },
-    "oceans" => {
-      "default" => {
-        title: hoc_s(:social_hoc2019_oceans_title),
-        description: hoc_s(:social_hoc2019_oceans_desc),
-        image: images[:oceans]
-      }
-    },
-    "thanks" => {
-      "default" => {
-        title: hoc_s(:meta_tag_og_title_cs_movement),
-        description: hoc_s(:meta_tag_og_description_campaign),
-        image: images[:hoc_thanks]
-      },
-    },
     "learn" => {
       "default" => {
         title: hoc_s(:hoc2023_social_creativity_with_ai_title),
@@ -177,13 +151,6 @@ def get_social_metadata_for_page(request)
         title: hoc_s(:social_hoc_anybody),
         description: hoc_s(:social_hoc2022_explore_play_create),
         image: images[:hoc_2022_social]
-      }
-    },
-    "cs-leaders-prize" => {
-      "default" => {
-        title: "CS Leaders Prize - $1 Million for U.S. Schools",
-        description: "Tell us how your school will expand computer science, and you could win $10,000 to make it happen!",
-        image: images[:cs_leaders_prize]
       }
     },
     "maker" => {
@@ -242,39 +209,36 @@ def get_social_metadata_for_page(request)
         image: images[:young_women_in_cs]
       }
     },
-    "ai_hoc" => {
+    "music_lab" => {
       "default" => {
-        title: hoc_s(:hoc2023_social_creativity_with_ai_title),
-        description: hoc_s(:hoc2023_social_creativity_with_ai_desc),
-        image: images[:hoc_2023_social]
+        title: hoc_s("music_lab.opengraph_title", markdown: :inline, locals: {music_lab: "Music Lab"}),
+        description: hoc_s("music_lab.banner.desc"),
+        image: images[:music_lab]
+      }
+    },
+    "lms" => {
+      "default" => {
+        title: hoc_s("lms_page.heading"),
+        description: hoc_s("lms_page.top_desc"),
+        image: images[:lms]
       }
     },
   }
 
   if request.path == "/challenge" && request.site == "code.org"
     page = "challenge"
-  elsif request.path == "/coldplay" && request.site == "code.org"
-    page = "coldplay"
   elsif request.path == "/minecraft" && request.site == "code.org"
     page = "minecraft"
   elsif request.path == "/dance" && request.site == "code.org"
     page = "dance"
-  elsif request.path == "/oceans" && request.site == "code.org"
-    page = "oceans"
   elsif request.path == "/" && ["code.org", "hourofcode.com"].include?(request.site)
     page = request.site
-  elsif request.path == "/thanks" && request.site == "hourofcode.com"
-    page = "thanks"
   elsif request.path == "/learn" && request.site == "hourofcode.com"
     page = "learn"
-  elsif request.path == "/ai" && request.site == "hourofcode.com"
-    page = "ai_hoc"
   elsif request.path == "/hourofcode" && request.site == "code.org"
     page = "hoc-overview"
   elsif request.path == "/learn" && request.site == "code.org"
     page = "learn-cdo"
-  elsif request.path == "/prize" && request.site == "code.org"
-    page = "cs-leaders-prize"
   elsif request.path == "/maker" && request.site == "code.org"
     page = "maker"
   elsif request.path == "/blockchain" && request.site == "code.org"
@@ -291,6 +255,10 @@ def get_social_metadata_for_page(request)
     page = "ten_years"
   elsif request.path == "/youngwomen" && request.site == "code.org"
     page = "young_women_in_cs"
+  elsif request.path == "/music" && request.site == "code.org"
+    page = "music_lab"
+  elsif request.path == "/lms" && request.site == "code.org"
+    page = "lms"
   else
     return {}
   end

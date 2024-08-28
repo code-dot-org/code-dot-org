@@ -1,6 +1,8 @@
-import {assert, expect} from '../util/reconfiguredChai';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import AzureTextToSpeech from '@cdo/apps/AzureTextToSpeech';
+
+import {assert, expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const assertSoundResponsesEqual = (expected, actual) => {
   assert.deepEqual(expected.bytes, actual.bytes);
@@ -16,15 +18,11 @@ const assertSoundResponsesEqual = (expected, actual) => {
 };
 
 describe('AzureTextToSpeech', () => {
-  let azureTTS, playBytesStub;
+  let azureTTS;
 
   beforeEach(() => {
     azureTTS = new AzureTextToSpeech();
-    playBytesStub = sinon.stub(azureTTS, 'playBytes_');
-  });
-
-  afterEach(() => {
-    playBytesStub.restore();
+    jest.spyOn(azureTTS, 'playBytes_');
   });
 
   describe('createSoundPromise', () => {
@@ -171,9 +169,9 @@ describe('AzureTextToSpeech', () => {
         describe('on success', () => {
           beforeEach(() => {
             const bytes = new ArrayBuffer();
-            sinon
-              .stub(azureTTS, 'convertTextToSpeech')
-              .returns(new Promise(resolve => resolve(bytes)));
+            jest
+              .spyOn(azureTTS, 'convertTextToSpeech')
+              .mockResolvedValue(bytes);
             options = {
               text: 'hello',
               gender: 'male',
@@ -205,9 +203,9 @@ describe('AzureTextToSpeech', () => {
         describe('on failure', () => {
           beforeEach(() => {
             const error = {status: 400};
-            sinon
-              .stub(azureTTS, 'convertTextToSpeech')
-              .returns(new Promise((_, reject) => reject(error)));
+            jest
+              .spyOn(azureTTS, 'convertTextToSpeech')
+              .mockRejectedValue(error);
             options = {
               text: 'hello',
               gender: 'male',
@@ -257,35 +255,31 @@ describe('AzureTextToSpeech', () => {
     });
 
     it('no-ops if sound is already playing', async () => {
-      const dequeueStub = sinon.stub(azureTTS, 'dequeue_');
+      const dequeueStub = jest.spyOn(azureTTS, 'dequeue_');
       azureTTS.playing = true;
 
       await azureTTS.asyncPlayFromQueue_(playSpy);
-      expect(dequeueStub).not.to.have.been.called;
+      expect(dequeueStub.mock.calls.length).to.equal(0);
       expect(playSpy).not.to.have.been.called;
-
-      dequeueStub.restore();
     });
 
     it('no-ops if queue is empty', async () => {
-      const dequeueStub = sinon.stub(azureTTS, 'dequeue_').returns(undefined);
+      const dequeueStub = jest
+        .spyOn(azureTTS, 'dequeue_')
+        .mockReturnValue(undefined);
 
       await azureTTS.asyncPlayFromQueue_(playSpy);
-      expect(dequeueStub).to.have.been.calledOnce;
+      expect(dequeueStub.mock.calls.length).to.equal(1);
       expect(playSpy).not.to.have.been.called;
-
-      dequeueStub.restore();
     });
 
     it('plays sound if response was successful', async () => {
-      const dequeueStub = sinon
-        .stub(azureTTS, 'dequeue_')
-        .returns(() => Promise.resolve(successfulResponse));
+      jest
+        .spyOn(azureTTS, 'dequeue_')
+        .mockReturnValue(() => Promise.resolve(successfulResponse));
 
       await azureTTS.asyncPlayFromQueue_(playSpy);
       expect(playSpy).to.have.been.calledOnce;
-
-      dequeueStub.restore();
     });
 
     it('ends sound if response was unsuccessful', async () => {
@@ -293,16 +287,14 @@ describe('AzureTextToSpeech', () => {
         error: new Error(),
       });
       unsuccessfulResponse.playbackOptions.onEnded = sinon.spy();
-      const dequeueStub = sinon
-        .stub(azureTTS, 'dequeue_')
-        .returns(() => Promise.resolve(unsuccessfulResponse));
+      jest
+        .spyOn(azureTTS, 'dequeue_')
+        .mockReturnValue(() => Promise.resolve(unsuccessfulResponse));
 
       await azureTTS.asyncPlayFromQueue_(playSpy);
       expect(unsuccessfulResponse.playbackOptions.onEnded).to.have.been
         .calledOnce;
       expect(playSpy).not.to.have.been.called;
-
-      dequeueStub.restore();
     });
   });
 });

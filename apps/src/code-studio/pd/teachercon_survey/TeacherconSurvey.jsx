@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import FormController from '../form_components/FormController';
 
 import FridayOnly from './FridayOnly';

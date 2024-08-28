@@ -1,21 +1,19 @@
 import React, {useState} from 'react';
 
 import {handleUpdateAITutorAccess} from '@cdo/apps/aiTutor/accessControlsApi';
-import {StudentAccessData} from '@cdo/apps/aiTutor/types';
 import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
 
-import style from './interactions-table.module.scss';
-
 interface StudentAccessToggleProps {
-  student: StudentAccessData;
+  studentId: number;
+  aiTutorAccessDenied: boolean;
   displayGlobalError: (error: string) => void;
 }
 
 const StudentAccessToggle: React.FunctionComponent<
   StudentAccessToggleProps
-> = ({student, displayGlobalError}) => {
+> = ({studentId, aiTutorAccessDenied, displayGlobalError}) => {
   const [hasAITutorAccess, setHasAITutorAccess] = useState(
-    !student.aiTutorAccessDenied
+    !aiTutorAccessDenied
   );
 
   const handleToggle = () => {
@@ -23,26 +21,20 @@ const StudentAccessToggle: React.FunctionComponent<
     const newValue = !hasAITutorAccess;
 
     setHasAITutorAccess(newValue);
-    handleUpdateAITutorAccess(student.id, newValue).catch(() => {
+    handleUpdateAITutorAccess(studentId, newValue).catch(() => {
       setHasAITutorAccess(originalValue);
       displayGlobalError('Failed to update student access. Please try again.');
     });
   };
 
   return (
-    <tr className={style.row}>
-      <td className={style.cell}>{student.id}</td>
-      <td className={style.cell}>{student.name}</td>
-      <td>
-        <Toggle
-          checked={hasAITutorAccess}
-          onChange={handleToggle}
-          name="aiTutorAccessToggle"
-          position={'right'}
-          size={'s'}
-        />
-      </td>
-    </tr>
+    <Toggle
+      checked={hasAITutorAccess}
+      onChange={handleToggle}
+      name="aiTutorStudentAccessToggle"
+      position={'right'}
+      size={'s'}
+    />
   );
 };
 

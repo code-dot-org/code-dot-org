@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
+
 import ActivitySection from '@cdo/apps/templates/lessonOverview/activities/ActivitySection';
-import color from '@cdo/apps/util/color';
 import {activityShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
+import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
 export default class Activity extends Component {

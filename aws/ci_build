@@ -33,7 +33,6 @@ require 'cdo/honeybadger'
 require 'cdo/infra_production_topic'
 require 'cdo/rake_utils'
 require 'cdo/test_server_status'
-require 'cdo/metrics_helper'
 require 'dynamic_config/dcdo'
 require 'aws-sdk-cloudwatch'
 
@@ -75,10 +74,8 @@ def build
     File.write(deploy_dir('rebuild'), log)
 
     git_revision = RakeUtils.git_revision
-    git_revision_short = GitUtils.git_revision_short
 
     ChatClient.log "https://github.com/code-dot-org/code-dot-org/commit/#{git_revision}", message_format: 'text', color: 'purple'
-    write_build_status rack_env, git_revision_short, :start
 
     # Ensure updated Gemfile.lock dependencies are installed.
     RakeUtils.bundle_install
@@ -120,7 +117,6 @@ def main
     projects = 'websites' if projects.empty?
 
     commit_hash = RakeUtils.git_revision
-    commit_hash_short = GitUtils.git_revision_short
     commit_url = "https://github.com/code-dot-org/code-dot-org/commit/#{commit_hash}"
 
     duration = Time.now.to_i - start_time.to_i
@@ -146,8 +142,6 @@ def main
     if status == 0
       message = "<b>#{projects}</b> built." + time_message + log_link
       ChatClient.log message, color: 'green'
-
-      write_build_status rack_env, commit_hash_short, :success
 
       if CDO.test_system?
         ChatClient.log "<@#{DevelopersTopic.dotd}> DTT finished", color: 'purple'
@@ -182,11 +176,12 @@ def main
       ChatClient.message 'server operations', message, color: 'red', notify: 1
       ChatClient.message 'server operations', commit_url, color: 'gray', message_format: 'text'
 
-      write_build_status rack_env, commit_hash_short, :failed
-
       if CDO.test_system?
         DevelopersTopic.set_dtt 'no (robo-DTT failed)'
-        ChatClient.log "*** Before you manually re-run a test, please ensure that the team who owns that test is actively tracking de-flaking. ***", color: 'yellow'
+        msg = "***<@#{DevelopersTopic.dotd}> See instructions in " \
+          "<https://docs.google.com/document/d/1T4gZD6A5jOflEQH0i9_y2VA4trlJTsmdZXWTdGRzGWA/edit?usp=sharing|this document> " \
+          "for current guidance on tracking flaky tests.***"
+        ChatClient.log msg, color: 'yellow'
       end
     end
 
@@ -248,20 +243,7 @@ def mark_dtt_green
   ChatClient.log msg
   ChatClient.message 'deploy-status', msg
 
-  TestServerStatus.mark_green test_branch_sha, Metrics::AUTOMATIC
-end
-
-# Log details of a build to metrics database.
-# TODO: (suresh) This method will eventually be used to write build status for all managed environments.
-# TODO: (darin) write to cloudwatch logs instead of devinternal_db
-# @param [Symbol] environment
-# @param [String] commit_hash
-# @param [Symbol] status - :start, :success, :failed
-def write_build_status(environment, commit_hash, status)
-  event = "#{environment}_#{status}"
-  if environment == :staging
-    Metrics.write_metric(event, commit_hash, Metrics::AUTOMATIC)
-  end
+  TestServerStatus.mark_green test_branch_sha
 end
 
 def emit_deploy_metric(deployment_stage, successful)

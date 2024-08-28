@@ -1,27 +1,31 @@
-import {commonI18n} from '@cdo/apps/types/locale';
-import {SVG_NS} from '@cdo/apps/constants';
-import Button from '@cdo/apps/templates/Button';
-import {updatePointerBlockImage} from '@cdo/apps/blockly/addons/cdoSpritePointer';
+import {ObservableProcedureModel} from '@blockly/block-shareable-procedures';
+import {Block, Field, WorkspaceSvg} from 'blockly';
+import {Abstract} from 'blockly/core/events/events_abstract';
+import {BlockChange} from 'blockly/core/events/events_block_change';
+import {BlockCreate} from 'blockly/core/events/events_block_create';
+import {BlockDrag} from 'blockly/core/events/events_block_drag';
+import {BlockInfo, FlyoutItemInfoArray} from 'blockly/core/utils/toolbox';
+
+import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
 import CdoFieldFlyout from '@cdo/apps/blockly/addons/cdoFieldFlyout';
-import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
-import {blocks as behaviorBlocks} from './behaviorBlocks';
+import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
+import {getAddParameterButtonWithCallback} from '@cdo/apps/blockly/addons/cdoFieldParameter';
+import CdoFieldToggle from '@cdo/apps/blockly/addons/cdoFieldToggle';
+import {updatePointerBlockImage} from '@cdo/apps/blockly/addons/cdoSpritePointer';
 import {BLOCK_TYPES, NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
+import {ExtendedBlockSvg, ProcedureBlock} from '@cdo/apps/blockly/types';
 import {FALSEY_DEFAULT, readBooleanAttribute} from '@cdo/apps/blockly/utils';
+import {SVG_NS} from '@cdo/apps/constants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {spriteLabPointers} from '@cdo/apps/p5lab/spritelab/blockly/constants';
+import {commonI18n} from '@cdo/apps/types/locale';
+import {getAlphanumericId} from '@cdo/apps/utils';
+
+import {blocks as behaviorBlocks} from './behaviorBlocks';
 import {
   editButtonHandler,
   toolboxConfigurationSupportsEditButton,
 } from './proceduresBlocks';
-import {getAlphanumericId} from '@cdo/apps/utils';
-import {Block, Field, WorkspaceSvg} from 'blockly';
-import {BlockInfo, FlyoutItemInfoArray} from 'blockly/core/utils/toolbox';
-import {ExtendedBlockSvg, ProcedureBlock} from '@cdo/apps/blockly/types';
-import {Abstract} from 'blockly/core/events/events_abstract';
-import {BlockDrag} from 'blockly/core/events/events_block_drag';
-import {BlockCreate} from 'blockly/core/events/events_block_create';
-import {BlockChange} from 'blockly/core/events/events_block_change';
-import CdoFieldImage from '@cdo/apps/blockly/addons/cdoFieldImage';
-import CdoFieldToggle from '@cdo/apps/blockly/addons/cdoFieldToggle';
-import CdoFieldDropdown from '@cdo/apps/blockly/addons/cdoFieldDropdown';
 
 const INPUTS = {
   FLYOUT: 'flyout_input',
@@ -148,7 +152,32 @@ export const blocks = {
                 imageSourceId: this.id,
               };
             }
-            blocks.push(block);
+            if (blockType === BLOCK_TYPES.parametersGet) {
+              // Set up the "new parameter" button in the mini-toolbox
+              const newParamButton = getAddParameterButtonWithCallback(
+                this.workspace as WorkspaceSvg,
+                (
+                  this as ProcedureBlock
+                ).getProcedureModel() as ObservableProcedureModel
+              );
+              blocks.push(newParamButton);
+              const parameters = (this as ProcedureBlock)
+                .getProcedureModel()
+                .getParameters();
+              parameters.forEach(parameter => {
+                blocks.push({
+                  ...block,
+                  fields: {
+                    VAR: {
+                      name: parameter.getName(),
+                      type: '',
+                    },
+                  },
+                });
+              });
+            } else {
+              blocks.push(block);
+            }
           });
           return blocks;
         }

@@ -1,21 +1,23 @@
 import classNames from 'classnames';
-import {connect} from 'react-redux';
-import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import commonStyles from '../commonStyles';
-import color from '../util/color';
-import {singleton as studioApp} from '../StudioApp';
+import React from 'react';
+import {connect} from 'react-redux';
+
 import project from '../code-studio/initApp/project';
-import VisualizationOverlay from '../templates/VisualizationOverlay';
+import commonStyles from '../commonStyles';
+import MakerStatusOverlay from '../maker/ui/MakerStatusOverlay';
+import {singleton as studioApp} from '../StudioApp';
 import {
   VISUALIZATION_DIV_ID,
   isResponsiveFromState,
 } from '../templates/ProtectedVisualizationDiv';
-import * as applabConstants from './constants';
+import VisualizationOverlay from '../templates/VisualizationOverlay';
+import color from '../util/color';
+
 import AppLabCrosshairOverlay from './AppLabCrosshairOverlay';
 import AppLabTooltipOverlay from './AppLabTooltipOverlay';
-import MakerStatusOverlay from '../lib/kits/maker/ui/MakerStatusOverlay';
+import * as applabConstants from './constants';
 
 class Visualization extends React.Component {
   static propTypes = {

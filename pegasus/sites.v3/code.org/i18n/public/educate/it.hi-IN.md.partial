@@ -17,9 +17,11 @@ theme: responsive
 
 ## न्यूनतम समर्थित ब्राउज़र्स और प्लेटफॉर्म्स
 
+जुलाई 2024 से, हम ब्राउज़र और ऑपरेटिंग सिस्टम के लिए आवश्यक न्यूनतम संस्करण अपडेट करेंगे। हालांकि पुराने संस्करण अभी भी काम कर सकते हैं, हम पुराने संस्करणों में बग फिक्स के अनुरोधों का समर्थन करने में असमर्थ होंगे।
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           ब्राउज़र
@@ -40,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          ब्राउज़र जुलाई '24
+        </th>
+        <tr>
+          <td>क्रोम 103.x</td>
+        </tr>
+        <tr>
+          <td>सफारी 14.x</td>
+        </tr>
+        <tr>
+          <td>मोबाइल सफारी 14.x</td>
+        </tr>
+        <tr>
+          <td>एज 119.x</td>
+        </tr>
+        <tr>
+          <td>फ़ायरफ़ॉक्स 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           प्लेटफार्म
@@ -62,8 +86,30 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          प्लेटफ़ॉर्म जुलाई '24
+        </th>
+        <tr>
+          <td>मैकओएस 10.15</td>
+        </tr>
+        <tr>
+          <td>आईओएस 15.x</td>
+        </tr>
+        <tr>
+          <td>विन्डोज़ 8</td>
+        </tr>
+        <tr>
+          <td>एंड्राइड 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## अनब्लॉक करने के लिए साइटें
@@ -80,16 +126,15 @@ theme: responsive
 | **इंटरनेट सिम्युलेटर का उपयोग करने के लिए**                                                                     | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **वेब लैब का उपयोग करने के लिए**                                                                                | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **गूगल क्लासरूम शेयर बटन का उपयोग करने के लिए**                                                                 | `https://apis.google.com`                                                                                  |
-| **ऐप लैब डेटासेट का उपयोग करने के लिए**                                                                         | `https://*.firebaseio.com`<br />`था: //*.firebaseio.com`                                             |
 
 ## मोबाइल और टैबलेट समर्थन विवरण
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. अधिकांश टैबलेट निम्नलिखित अपवादों के साथ समर्थित नहीं हैं:
+सभी CS डिस्कवरी, CS सिद्धांत, CS A, और Intro to App Lab कोर्स टैबलेट या मोबाइल डिवाइस के साथ संगत नहीं हैं - एक पूर्ण कीबोर्ड और माउस (या टचपैड) की आवश्यकता होती है। अधिकांश टैबलेट निम्नलिखित अपवादों के साथ समर्थित नहीं हैं:
 
 - एक बाहरी कीबोर्ड के साथ माइक्रोसॉफ्ट सरफेस प्रो
 - एक बाहरी कीबोर्ड और एक बाहरी माउस या टचपैड के साथ iPadOS 13.4 या बाद का संस्करण चला रहा iPad
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+अन्य सभी सामग्री, जैसे कि K-5 पाठ्यक्रम (कंप्यूटर साइंस फंडामेंटल्स) और ऑवर ऑफ़ कोड गतिविधियाँ iPads और अन्य आधुनिक टैबलेट और लैपटॉप या डेस्कटॉप कंप्यूटर पर संगत हैं।
 
 ### मोबाइल फोन्स
 
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+यह पूरे पाठ्यक्रम में उपयोग किया जाने वाला प्लेयर है। यह YouTube के जरिए वीडियो दिखाने का प्रयास करेगा और, यदि YouTube ब्लॉक है, तो इसके बजाय हमारे "fallback" प्लेयर का उपयोग करके Code.org द्वारा होस्ट किए गए वीडियो दिखाएं।
 
 ### विडियो प्ले नहीं हो रहे?
 
-If video does not work, you can email us at support@code.org.
+यदि वीडियो काम नहीं करता है, तो आप हमें support@code.org पर ईमेल कर सकते हैं।
 
-However, you can still use our tutorials without video.
+हालाँकि, आप अभी भी वीडियो के बिना हमारे ट्यूटोरियल्स का उपयोग कर सकते हैं।
 
 1. हमने अपने सभी वीडियोस [एक साथ डाउनलोड करने के लिए उपलब्ध](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH) करा दिए हैं। यदि आपके विद्यालय में कम बैंडविड्थ है, तो हम सिफारिश करते हैं कि आप वीडियोस डाउनलोड करें और उन्हें साझा की गई स्क्रीन पर छात्रों को दिखाएं।
 2. हमारे ट्यूटोरियल में एकीकृत, हमने प्रत्येक वीडियो के लिए एक हरे रंग का डाउनलोड लिंक आइकन <img src="/images/green-download.png" width=25 height=25 /> शामिल किया है, जिससे छात्र व्यक्तिगत ट्यूटोरियल वीडियो डाउनलोड करें।
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## Google Apps/G-Suite उपयोगकर्ताओं के लिए विशेष सेटिंग्स
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+यदि आप एक G-suite व्यवस्थापक हैं, तो यह जांचना सुनिश्चित करें कि YouTube के लिए आपकी प्रतिबंध सेटिंग्स क्या हैं। यदि आपने "Strict Restricted YouTube Access" सेटिंग निर्दिष्ट की है या यदि आप 'इस वीडियो को प्रतिबंधित कर दिया गया है' बताते हुए संदेश देखते हैं, तो आप हमारे चैनल को चैनलों की स्वीकृत सूची में जोड़ सकते हैं। हमारे चैनल को स्वीकृत सूची में जोड़ने के तरीके के बारे में जानने के लिए Google की [इस मार्गदर्शिका](https://support.google.com/a/answer/6245597) को देखें। आप अलग-अलग सेटिंग्स और आपकी कक्षा के लिए सबसे अच्छी सेटिंग के बारे में अधिक जानने के लिए भी [इस मार्गदर्शिका](https://support.google.com/a/answer/6212415?hl=en) को देख सकते हैं।
 
 ## अभी भी परेशानी हो रही है?
 
-We'll help you out - just email us at support@code.org!
+हम आपकी मदद करेंगे - बस हमें support@code.org पर ईमेल करें!

@@ -2,27 +2,50 @@ import {
   Role,
   AITutorInteractionStatus as Status,
   AITutorInteractionStatusValue,
-  AITutorTypesValue,
   ChatCompletionMessage,
 } from '@cdo/apps/aiTutor/types';
+import {MetricEvent} from '@cdo/apps/lib/metrics/events';
+import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 import HttpClient from '@cdo/apps/util/HttpClient';
-import Lab2Registry from '../lab2/Lab2Registry';
+
+// These are the possible statuses returned by ShareFiltering.find_failure
+enum ShareFilterStatus {
+  Email = 'email',
+  Phone = 'phone',
+  Address = 'address',
+  Profanity = 'profanity',
+}
 
 const CHAT_COMPLETION_URL = '/openai/chat_completion';
 
+// Analogous to https://github.com/code-dot-org/ml-playground/pull/299
+// We want to expose enough information to help troubleshoot false positives
+const logViolationDetails = (response: OpenaiChatCompletionMessage) => {
+  console.info('Violation detected in chat completion response', {
+    type: response.safety_status,
+    content: response.flagged_content,
+  });
+  MetricsReporter.logWarning({
+    event: MetricEvent.AI_TUTOR_CHAT_PROFANITY_PII_VIOLATION,
+    content: response.flagged_content,
+  });
+};
+
 /**
  * This function sends a POST request to the chat completion backend controller.
- * Note: This function needs access to the tutorType so it can decide whether to include
- * validation code on the backend.
  */
 export async function postOpenaiChatCompletion(
   messagesToSend: OpenaiChatCompletionMessage[],
   levelId?: number,
-  tutorType?: AITutorTypesValue
+  scriptId?: number,
+  systemPrompt?: string
 ): Promise<OpenaiChatCompletionMessage | null> {
-  const payload = levelId
-    ? {levelId: levelId, messages: messagesToSend, type: tutorType}
-    : {messages: messagesToSend, type: tutorType};
+  const payload = {
+    messages: messagesToSend,
+    levelId: levelId,
+    scriptId: scriptId,
+    systemPrompt: systemPrompt,
+  };
 
   const response = await HttpClient.post(
     CHAT_COMPLETION_URL,
@@ -35,7 +58,7 @@ export async function postOpenaiChatCompletion(
   if (response.ok) {
     return await response.json();
   } else {
-    return null;
+    throw new Error('Error getting chat completion response');
   }
 }
 
@@ -52,62 +75,72 @@ const formatForChatCompletion = (
  * to `postOpenaiChatCompletion`, then returns the status of the response and assistant message if successful.
  */
 export async function getChatCompletionMessage(
-  systemPrompt: string,
-  userMessageId: number,
   formattedQuestion: string,
   chatMessages: ChatCompletionMessage[],
+  systemPrompt?: string,
   levelId?: number,
-  tutorType?: AITutorTypesValue
+  scriptId?: number
 ): Promise<ChatCompletionResponse> {
   const messagesToSend = [
-    {role: Role.SYSTEM, content: systemPrompt},
     ...formatForChatCompletion(chatMessages),
     {role: Role.USER, content: formattedQuestion},
   ];
   let response;
+
   try {
     response = await postOpenaiChatCompletion(
       messagesToSend,
       levelId,
-      tutorType
+      scriptId,
+      systemPrompt
     );
   } catch (error) {
-    Lab2Registry.getInstance()
-      .getMetricsReporter()
-      .logError('Error in chat completion request', error as Error);
+    MetricsReporter.logError({
+      event: MetricEvent.AI_TUTOR_CHAT_COMPLETION_FAIL,
+      errorMessage:
+        (error as Error).message || 'Error in chat completion request',
+    });
   }
 
-  // For now, response will be null if there was an error.
-  if (!response) {
-    return {status: Status.ERROR, id: userMessageId};
-  } else if (response?.status === Status.PROFANITY_VIOLATION) {
+  if (!response)
     return {
-      status: Status.PROFANITY_VIOLATION,
-      id: userMessageId,
+      status: Status.ERROR,
       assistantResponse:
-        "I can't respond because your message is inappropriate. Please don't use profanity.",
+        'There was an error processing your request. Please try again.',
     };
-  } else if (response?.status === Status.PII_VIOLATION) {
-    return {
-      status: Status.PII_VIOLATION,
-      id: userMessageId,
-      assistantResponse: `I can't respond because your message is inappropriate. Please don't include personal information like your ${response.status}.`,
-    };
+
+  switch (response.safety_status) {
+    case ShareFilterStatus.Profanity:
+      logViolationDetails(response);
+      return {
+        status: Status.PROFANITY_VIOLATION,
+        assistantResponse:
+          'Please revise your message to remove any profanity so that I can assist you further.',
+      };
+    case ShareFilterStatus.Email:
+    case ShareFilterStatus.Phone:
+    case ShareFilterStatus.Address:
+      // False positives with the PII filter (e.g. `for loops` flagged as addresses,
+      // and curriculum fake emails) were significantly impacting user experience.
+      // We're effectively turning PII filtering off for AI Tutor
+      // but still logging the violation for future analysis.
+      logViolationDetails(response);
+      return {status: Status.OK, assistantResponse: response.content};
+    default:
+      return {status: Status.OK, assistantResponse: response.content};
   }
-  return {
-    status: Status.OK,
-    id: userMessageId,
-    assistantResponse: response.content,
-  };
 }
 
 type OpenaiChatCompletionMessage = {
   status?: AITutorInteractionStatusValue;
   role: Role;
   content: string;
+  // Only used in case of PII or profanity violation
+  flagged_content?: string;
+  safety_status?: AITutorInteractionStatusValue;
 };
+
 type ChatCompletionResponse = {
   status: AITutorInteractionStatusValue;
-  id: number;
   assistantResponse?: string;
 };

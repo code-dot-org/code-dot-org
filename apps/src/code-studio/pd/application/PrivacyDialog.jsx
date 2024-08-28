@@ -5,7 +5,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Modal, Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
+
 import color from '@cdo/apps/util/color';
+
 import {PrivacyDialogMode} from '../constants';
 
 export default class PrivacyDialog extends React.Component {

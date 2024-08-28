@@ -10,7 +10,8 @@ import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Spinner from '../../components/spinner';
+
+import Spinner from '../../../../sharedComponents/Spinner';
 
 export default class WorkshopTableLoader extends React.Component {
   static propTypes = {

@@ -8,11 +8,12 @@
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-04-11 19:22:31 UTC",
+    "serialized_at": "2024-05-09 22:00:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -44,7 +45,7 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "overview": "**Purpose:**\nThis session serves as both a welcome and an opportunity to begin building community within the cohort. Participants will be asked to reflect on their personal CS journey. This activity will serve as a foundation for reflections that will occur throughout the day centered around understanding self.\n\n**Objectives:**\n\n* Participants feel a sense of belonging in the program cohort\n\n**Suggested time:** 25 minutes\n",
+        "overview": "**Purpose:**\nThis session serves as both a welcome and an opportunity to begin building community within the cohort. Participants will be asked to reflect on their personal CS journey. This activity will serve as a foundation for reflections that will occur throughout the day centered around understanding self.\n\n**Objectives:**\n\n* Participants feel a sense of belonging in the program cohort\n\n**Suggested time:** 35 minutes\n",
         "student_overview": "**You will:**\n\n* Get to know your program cohort"
       },
       "seeding_key": {
@@ -61,8 +62,8 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "overview": "**Purpose:**\nThis session is intended to orient participants to Code.org, the CS Discoveries curriculum and the PL program. This is a lot of new information for participants so it is important to ground conversations in the content of the curriculum guide to reinforce for participants that all of this information is available for them to come back to and dig deeper into later. At a minimum, participants should walk away from this session knowing what information about the course is available to them and where to find it in the future.\n\n**Objectives:**\n\n* Participants have been introduced to the Code.org curriculum values and equity “why”\n* Participants understand that they are not expected to be CS experts, but they are expected to be open to learning together\n* Participants have a high-level understanding of the overall themes and structure of the CS Discoveries course\n* Participants are aware of CS Discoveries course collections and how and why they would assign them to their students\n\n\n**Suggested time:** 45 minutes",
-        "student_overview": "**You will:**\n\n* Get an introduction to the Code.org curriculum values and equity “why”.\n* Understand that you are not expected to be CS experts, but are expected to be open to learning together.\n* Gain a high-level understanding of the overall themes and structure of the CS Discoveries course.\n* Be made aware of CS Discoveries course collections and how and why you can assign them to their students. \n"
+        "overview": "**Purpose:**\nThis session is intended to orient participants to Code.org, the CS Discoveries curriculum and the PL program. This is a lot of new information for participants so it is important to ground conversations in the content of the curriculum guide to reinforce for participants that all of this information is available for them to come back to and dig deeper into later. At a minimum, participants should walk away from this session knowing what information about the course is available to them and where to find it in the future.\n\n**Objectives:**\n\n* Participants have been introduced to Code.org's stance on equity\n* Participants understand that they are not expected to be CS experts, but they are expected to be open to learning together\n* Participants have a high-level understanding of the overall themes and structure of the CS Discoveries course\n\n**Suggested time:** 35 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to Code.org's stance on equity\n* Understand that you are not expected to be CS experts, but are expected to be open to learning together.\n* Gain a high-level understanding of the overall themes and structure of the CS Discoveries course.\n"
       },
       "seeding_key": {
         "lesson.key": "CS Discoveries Overview",
@@ -129,8 +130,8 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "overview": "**Purpose:**\nThis session comes just before the first Unit 2 - Web Development model lesson. The goal of this session, Model Lesson #1, and Model Lesson #2 is to ensure that participants feel comfortable using HTML and CSS. With this knowledge, participants have a foundation for the rest of the lessons in this unit.\n\n**Objectives:**\n\n* Participants see the big picture of Unit 2 - Web Development\n* Participants know what HTML and CSS are\n\n\n\n**Suggested time:** 15 minutes",
-        "student_overview": "**You will:**\n\n* See the big picture of Unit 2 - Web Development\n* Get an introduction to HTML and CSS "
+        "overview": "**Purpose:**\nThis session comes just before the first Unit 2 - Web Development model lesson. The goal of this session, Model Lesson #1, and Model Lesson #2 is to ensure that participants feel comfortable using HTML and CSS. With this knowledge, participants have a foundation for the rest of the lessons in this unit.\n\n**Objectives:**\n\n* Participants see the big picture of Unit 2 - Web Development\n\n\n\n**Suggested time:** 5 minutes",
+        "student_overview": "**You will:**\n\n* See the big picture of Unit 2 - Web Development"
       },
       "seeding_key": {
         "lesson.key": "Intro to Unit 2 - Web Development",
@@ -147,9 +148,9 @@
       "relative_position": 7,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Purpose:\n\nEssential Practice: Teachers provide opportunities for exploration coupled with opportunities for sensemaking.\n\nLesson Decisions:\n\nAllow participants time to explore Web Lab before discussing its capabilities as a whole group\nWatch videos together as a whole group and utilize the discussion questions from the teacher resources to facilitate group sense making\nDo not answer questions directly, instead point participants to resources that might help them answer the question themselves.\nCreate a poster with a list of resources throughout the lesson and refer to it often. Have participants keep a similar list in their journals.\nDebrief Topic: Exploration\n\nObjectives:\n\nParticipants understand the value of exploration along with how resources can support student exploration\nParticipants gain experience using HTML and Web Lab\nSuggested Time: 55 minutes",
+        "overview": "**Essential Practice**: Teachers provide opportunities for exploration coupled with opportunities for sensemaking.\n\n**Lesson Decisions**:\n\n* Allow participants time to explore Web Lab before discussing its capabilities as a whole group\n* Watch videos together as a whole group and utilize the discussion questions from the teacher resources to facilitate group sense-making\n* Do not answer questions directly, instead point participants to resources that might help them answer the question themselves.\n* Create a poster with a list of resources throughout the lesson and refer to it often. Have participants keep a similar list in their journals.\n\n**Debrief Topic**: Exploration\n\n**Objectives**:\n\n* Participants understand the value of exploration along with how resources can support student exploration\n* Participants gain experience using HTML and Web Lab\n\n**Suggested Time**: 60 minutes",
         "preparation": "* Review the Code Studio levels\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
-        "student_overview": "**Question of the Day:** How can we tell the computer both *what* to put on the web page, and *how* to organize it?\n\n\nYou will look at an HTML page in Web Lab and use HTML to write your first web page of the unit.\n"
+        "student_overview": "**Question of the Day:** How can we tell the computer both *what* to put on the web page, and *how* to organize it?\n\n**You will:**\n \n* Look at an HTML page in Web Lab and use HTML to write your first web page of the unit.\n"
       },
       "seeding_key": {
         "lesson.key": "Intro to HTML",
@@ -175,20 +176,20 @@
       }
     },
     {
-      "key": "Styling Elements with CSS",
-      "name": "Styling Elements with CSS",
+      "key": "Styling Text with CSS",
+      "name": "Model Lesson 2 - Styling Text with CSS",
       "absolute_position": 9,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "This lesson continues the introduction to CSS style properties, this time focusing more on non-text elements. Students begin this lesson by looking at a website about Desserts of the World. They investigate and modify the new CSS styles on this website, adding their own styles to the page. After working on the Desserts page, students apply their knowledge of new CSS properties to their personal websites.\n\n**Question of the Day:** How can we style the images and layouts of our pages?\n",
-        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1-lessons-1-13/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
-        "student_overview": "**Question of the Day:** How can we style the images and layouts of our pages?\n\nIn this lesson, you will learn more CSS style properties, this time focusing on non-text elements.\n"
+        "overview": "**Essential Practice**: Teachers incorporate opportunities for student collaboration into the lesson\n\n**Lesson Decisions**:\n* Encourage students to discuss questions with a partner before asking for help from the teacher\n* During discussions, have participants collaborate with table teams to develop group answers\nEncourage participants to work together to solve bugs\n\n**Debrief Topic**: Peer Collaboration\n\n**Objectives:**\n* Participants brainstorm ways to promote student collaboration during skill building lessons\n* Participants are able to use CSS to change the style of text on a web page\n\n**Suggested time:** 60 minutes\n",
+        "preparation": "* Create a new poster titled **CSS Properties** if your students will not be tracking new CSS properties in their journals\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-web-development-chapter-1/36190) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
+        "student_overview": "**Question of the Day:** How can we change the style of text on a web page?\n\nIn this lesson, you will learn how to use CSS to style the HTML elements on your web page. \n\n"
       },
       "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-2024-day1"
       }
@@ -356,43 +357,43 @@
       }
     },
     {
-      "key": "c35c6079-2677-4979-8d14-8b35db195a9f",
+      "key": "1abd5eea-b670-4115-8a17-9ac782e3f280",
       "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "c35c6079-2677-4979-8d14-8b35db195a9f",
-        "lesson.key": "Styling Elements with CSS",
+        "lesson_activity.key": "1abd5eea-b670-4115-8a17-9ac782e3f280",
+        "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-2024-day1"
       }
     },
     {
-      "key": "23b2e900-fe47-484e-be70-92e267d4533c",
+      "key": "486fa22b-7474-4018-bc7e-1fed2863a4b0",
       "position": 2,
       "properties": {
-        "duration": 35,
-        "name": "Activity "
+        "duration": 30,
+        "name": "Activity"
       },
       "seeding_key": {
-        "lesson_activity.key": "23b2e900-fe47-484e-be70-92e267d4533c",
-        "lesson.key": "Styling Elements with CSS",
+        "lesson_activity.key": "486fa22b-7474-4018-bc7e-1fed2863a4b0",
+        "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-2024-day1"
       }
     },
     {
-      "key": "ce1d9fcb-e0fe-45a8-b18e-5016d926a134",
+      "key": "dde3b9cb-3239-428f-a074-5cd4cd119759",
       "position": 3,
       "properties": {
-        "duration": 5,
+        "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "ce1d9fcb-e0fe-45a8-b18e-5016d926a134",
-        "lesson.key": "Styling Elements with CSS",
+        "lesson_activity.key": "dde3b9cb-3239-428f-a074-5cd4cd119759",
+        "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-2024-day1"
       }
@@ -878,68 +879,70 @@
       }
     },
     {
-      "key": "fe880cc2-e093-4d54-9fe5-7dc9a03e05d3",
+      "key": "e6455b83-c7a0-4ec4-90bc-16f107e432f6",
       "position": 1,
       "properties": {
-        "description": "**Display:**  Send students to the sample web page in Code Studio or display it on the board.\r\n\r\n**Prompt:** What are two CSS styles on this page that you already know?  What are two styles on the page that you don’t know how to code yet?",
-        "name": "Discuss: What Styles Do You Want?\r"
-      },
-      "seeding_key": {
-        "activity_section.key": "fe880cc2-e093-4d54-9fe5-7dc9a03e05d3",
-        "lesson_activity.key": "c35c6079-2677-4979-8d14-8b35db195a9f"
-      }
-    },
-    {
-      "key": "e644bbeb-abd2-4ac2-8fef-76b3044838c3",
-      "position": 2,
-      "properties": {
+        "description": "**Do This:** Send students to the sample web page in Code Studio or display it on the board.",
+        "name": "Journal: HTML Appearance\r",
         "progression_name": "Sample Website"
       },
       "seeding_key": {
-        "activity_section.key": "e644bbeb-abd2-4ac2-8fef-76b3044838c3",
-        "lesson_activity.key": "c35c6079-2677-4979-8d14-8b35db195a9f"
+        "activity_section.key": "e6455b83-c7a0-4ec4-90bc-16f107e432f6",
+        "lesson_activity.key": "1abd5eea-b670-4115-8a17-9ac782e3f280"
       }
     },
     {
-      "key": "60404ea1-6858-4ad6-a2b2-9997056fae51",
-      "position": 3,
+      "key": "c9d9e71a-6d2a-4efe-b5c6-21f9eae6035c",
+      "position": 2,
       "properties": {
-        "description": "**Discuss:** Have students share different stylings on the page.\n\n**Discussion Goal:** This discussion serves as a review of the CSS properties students have already learned and showcases some of the new properties they will be learning in this lesson. Some of the new properties showcased are:\n\n* Adding background colors to things\n* Being able to move things around on the page (the images to the left of the text)\n* Being able to add borders to and round corners of images"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** Check out the web page on Code Studio. If you wanted to create a page like this, what do you already know how to do? What do you still need to learn how to do?"
       },
       "seeding_key": {
-        "activity_section.key": "60404ea1-6858-4ad6-a2b2-9997056fae51",
-        "lesson_activity.key": "c35c6079-2677-4979-8d14-8b35db195a9f"
+        "activity_section.key": "c9d9e71a-6d2a-4efe-b5c6-21f9eae6035c",
+        "lesson_activity.key": "1abd5eea-b670-4115-8a17-9ac782e3f280"
       }
     },
     {
-      "key": "96ece7b7-c413-4ade-a375-1fdd9a53aa70",
+      "key": "f75f470e-1de5-46bf-9e00-25ecbfe4c05d",
+      "position": 3,
+      "properties": {
+        "description": "**Discuss:** Have students share which parts they know and don't know\n\n**Discussion Goal:** Students should notice that they can get the structure and size of the text right using headings (e.g. `<h1>`) and paragraphs `<p>`. They may notice that they cannot change the color of the text. Some other styles to notice are that all the paragraphs are in italics, the speech names are underlined, and the citations are much smaller than the paragraphs."
+      },
+      "seeding_key": {
+        "activity_section.key": "f75f470e-1de5-46bf-9e00-25ecbfe4c05d",
+        "lesson_activity.key": "1abd5eea-b670-4115-8a17-9ac782e3f280"
+      }
+    },
+    {
+      "key": "e6ce0959-5d15-411f-be32-d009dc10cda5",
       "position": 4,
       "properties": {
-        "description": "Today we are going to learn more properties we can use to style our web pages, which will  allow you to add some of the styles we listed in this discussion.",
+        "description": "So far we have only made web pages where we control the content and structure, such as which parts of the pages are headings or paragraphs.  We've been using HTML as the language to specify the content and structure of the pages.  While HTML allows us some control over how the page looks, it doesn't give developers much control over the specific look and style of each element. To do that, we need a language to express _style_.",
         "remarks": true
       },
       "seeding_key": {
-        "activity_section.key": "96ece7b7-c413-4ade-a375-1fdd9a53aa70",
-        "lesson_activity.key": "c35c6079-2677-4979-8d14-8b35db195a9f"
+        "activity_section.key": "e6ce0959-5d15-411f-be32-d009dc10cda5",
+        "lesson_activity.key": "1abd5eea-b670-4115-8a17-9ac782e3f280"
       }
     },
     {
-      "key": "3560c9e4-4a42-4463-bafd-6ffcaa8d48b6",
+      "key": "3f5eded6-c273-4e71-9df3-2454872e1662",
       "position": 5,
       "properties": {
-        "description": "**Question of the Day: How can we style the images and layouts of our pages?**"
+        "description": "**Question of the Day: How can we change the style of text on a web page?**"
       },
       "seeding_key": {
-        "activity_section.key": "3560c9e4-4a42-4463-bafd-6ffcaa8d48b6",
-        "lesson_activity.key": "c35c6079-2677-4979-8d14-8b35db195a9f"
+        "activity_section.key": "3f5eded6-c273-4e71-9df3-2454872e1662",
+        "lesson_activity.key": "1abd5eea-b670-4115-8a17-9ac782e3f280"
       }
     },
     {
-      "key": "dcaba8f0-5d77-4e37-881a-319501519ece",
+      "key": "9a1dc687-fa63-4a30-ba4a-345cb6d89fb3",
       "position": 1,
       "properties": {
-        "description": "**Transition:** Send students to Code Studio.",
-        "name": "Web Lab: Styling Elements with CSS\r",
+        "description": "**Group:** Put students in pairs.\n\n**Transition:** Send students to Code Studio to explore Level 2 with their partner.",
+        "name": "Web Lab: Introduction to CSS\r",
+        "progression_name": "Sample Website",
         "tips": [
           {
             "type": "teachingTip",
@@ -948,80 +951,213 @@
         ]
       },
       "seeding_key": {
-        "activity_section.key": "dcaba8f0-5d77-4e37-881a-319501519ece",
-        "lesson_activity.key": "23b2e900-fe47-484e-be70-92e267d4533c"
+        "activity_section.key": "9a1dc687-fa63-4a30-ba4a-345cb6d89fb3",
+        "lesson_activity.key": "486fa22b-7474-4018-bc7e-1fed2863a4b0"
       }
     },
     {
-      "key": "e60f65c4-4862-4f18-9a77-58b842f8da39",
+      "key": "944ec239-85fa-4b14-9da1-217d10c00882",
       "position": 2,
       "properties": {
-        "progression_name": "Exploration"
+        "progression_name": "Exploration",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Have students explore this level with a partner. Afterward, lead a short share out so that partners can share with the class their responses to the three questions in the instructions. The subsequent video should help reinforce what students discovered so there's no need to lead a lengthy debrief conversation."
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "e60f65c4-4862-4f18-9a77-58b842f8da39",
-        "lesson_activity.key": "23b2e900-fe47-484e-be70-92e267d4533c"
+        "activity_section.key": "944ec239-85fa-4b14-9da1-217d10c00882",
+        "lesson_activity.key": "486fa22b-7474-4018-bc7e-1fed2863a4b0"
       }
     },
     {
-      "key": "5b10d8e2-7f1b-4b05-9838-ad6d06fde4c9",
+      "key": "504db5f9-c609-49bb-a61f-40e164bb264b",
       "position": 3,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_css_-_part_1/pl-csd-summer/2024] video in the slides and discuss the CSS video as a class.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement and reflection, use one or more of the strategies discussed in the **[Guide to Curriculum Videos](https://docs.google.com/document/d/1c2hF3CaTJacvwDy4y_9-m1jSkSPmK__F6pDPetXVvy4/view)**."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "504db5f9-c609-49bb-a61f-40e164bb264b",
+        "lesson_activity.key": "486fa22b-7474-4018-bc7e-1fed2863a4b0"
+      }
+    },
+    {
+      "key": "3ccd1523-bb9f-4718-92d9-3ffab08edc1e",
+      "position": 4,
+      "properties": {
+        "description": "**Questions to Consider with the video:**\n- How is the style of a web page different from the structure?\n- Why might you want your web page to have a certain style?\n\n**Discussion Goal:** Key Vocabulary:\n\n**CSS** - Cascading Style Sheets; a language used to describe how HTML elements should be styled\n\n**CSS Selector** - the part of a CSS rule-set that defines which HTML elements the style should be applied to\n\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Images in the Video**: Around the 40 second mark, the video briefly mentions that students have learned how to add images to their website. In a previous version of the curriculum when this video was originally recorded, students learned images before learning CSS. In the current version of the curriculum, students haven't seen videos yet. It's a small moment in the video, but if students ask about it, use the moment to build excitement since students will be learning about images in just a few lessons!"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "3ccd1523-bb9f-4718-92d9-3ffab08edc1e",
+        "lesson_activity.key": "486fa22b-7474-4018-bc7e-1fed2863a4b0"
+      }
+    },
+    {
+      "key": "0093076e-d32d-4628-b414-3c4765b95361",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the slide that displays the  \"Content-Structure-Style\" paradigm.\n\n**Discussion Goal:** Students should understand that the structure of the page is there to organize the information in a logical way, but doesn't tell the computer how to display it. So, for example, the structure could include different headings and paragraphs but would say nothing about the color of text or how big it is displayed. The style of the page is the specifics of its appearance. Without a particular style, each web browser would decide how to display different web page elements on its own.\n\nStyles are important to allow web developers to decide exactly how a web page looks on the screen. Because styles are separate from structure and content, web developers can change the style of an entire page very easily, without having to make any changes to the structure and content of the web page. This means that it's very easy for web pages to have an individual look and feel that is unified across the entire page.\n\n**Circulate:** Support students as they continue through the first set of skill building levels."
+      },
+      "seeding_key": {
+        "activity_section.key": "0093076e-d32d-4628-b414-3c4765b95361",
+        "lesson_activity.key": "486fa22b-7474-4018-bc7e-1fed2863a4b0"
+      }
+    },
+    {
+      "key": "7821003d-b443-42d5-abc0-f525b7f1ceed",
+      "position": 6,
+      "properties": {
+        "progression_name": "Skill Building",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Normalizing Mistakes and Supporting Debugging:** As programming levels become more complex, students may find themselves with bugs in their code that they need to untangle. If this happens frequently, this can be a demoralizing experience for students and can affect their self-perception of how capable they are in class. \n\nTo counter this, we recommend normalizing bugs and mistakes as something that happens to everyone - it’s just part of the process. You can show students our [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s), which includes several students normalizing mistakes and discussing debugging strategies that students can use. Additionally, consider displaying the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) for students to reference throughout the unit and having [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) available for students to use."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7821003d-b443-42d5-abc0-f525b7f1ceed",
+        "lesson_activity.key": "486fa22b-7474-4018-bc7e-1fed2863a4b0"
+      }
+    },
+    {
+      "key": "e9bd3f87-f9d1-4bfe-a1e5-41b7aba1953d",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Show students the [r intro_to_css_-_part_2/pl-csd-summer/2024] video in the slides and discuss it as a class.\n\n**Question to Consider with Video:**\n- How does the web page know what stylesheet it should be using?\n\n**Discussion Goal:** Make sure all the students understand how to link to their stylesheet from each web page.",
+        "progression_name": "Video: Intro to CSS - Part 2"
+      },
+      "seeding_key": {
+        "activity_section.key": "e9bd3f87-f9d1-4bfe-a1e5-41b7aba1953d",
+        "lesson_activity.key": "486fa22b-7474-4018-bc7e-1fed2863a4b0"
+      }
+    },
+    {
+      "key": "eda5e221-8884-4fe4-b355-d9033b62c4e2",
+      "position": 8,
+      "properties": {
+        "description": "**Circulate:** Support students as they continue through the remaining levels.",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
-        "activity_section.key": "5b10d8e2-7f1b-4b05-9838-ad6d06fde4c9",
-        "lesson_activity.key": "23b2e900-fe47-484e-be70-92e267d4533c"
+        "activity_section.key": "eda5e221-8884-4fe4-b355-d9033b62c4e2",
+        "lesson_activity.key": "486fa22b-7474-4018-bc7e-1fed2863a4b0"
       }
     },
     {
-      "key": "26b25697-6a87-42b2-b3ce-7bf00f09f11d",
-      "position": 4,
+      "key": "04dd64de-1254-40e3-a562-0867930931b3",
+      "position": 9,
       "properties": {
         "progression_name": "Practice"
       },
       "seeding_key": {
-        "activity_section.key": "26b25697-6a87-42b2-b3ce-7bf00f09f11d",
-        "lesson_activity.key": "23b2e900-fe47-484e-be70-92e267d4533c"
+        "activity_section.key": "04dd64de-1254-40e3-a562-0867930931b3",
+        "lesson_activity.key": "486fa22b-7474-4018-bc7e-1fed2863a4b0"
       }
     },
     {
-      "key": "a942ef20-5659-401b-8efb-ff5d487b0a61",
-      "position": 5,
+      "key": "8de39524-d8b0-4efa-a0ef-d1e8ab9be7e7",
+      "position": 10,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "**Formative Assessment:** Levels 8 & 9 can be used as a formative assessment. \n\nA rubric is provided in level 8, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-).\n\nLevel 9 is a free response reflection that can be used as an opportunity to gain insight into how the students completed the assessment level and the choices they made with styling HTML elements with CSS. In addition, this reflection can be used to identify any misconceptions shared among students that should be cleared up."
+            "markdown": "**Formative Assessment:** Levels 10 & 11 can be used as a formative assessment. \n\nA rubric is provided in level 10, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-).\n\nLevel 1 is a free response reflection that can be used as an opportunity to gain insight into how the students completed the assessment level and the choices they made with the CSS rule sets and properties. In addition, this reflection can be used to identify any misconceptions shared among students that should be cleared up."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "a942ef20-5659-401b-8efb-ff5d487b0a61",
-        "lesson_activity.key": "23b2e900-fe47-484e-be70-92e267d4533c"
+        "activity_section.key": "8de39524-d8b0-4efa-a0ef-d1e8ab9be7e7",
+        "lesson_activity.key": "486fa22b-7474-4018-bc7e-1fed2863a4b0"
       }
     },
     {
-      "key": "b378b94b-d742-4eeb-a880-124eef675279",
-      "position": 6,
+      "key": "a2f4b5a1-9c03-495d-9d18-dedff955a658",
+      "position": 11,
       "properties": {
-        "progression_name": "Challenges"
+        "progression_name": "Challenges",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Note on fonts and font families**\n\nFor a web browser to display font, the **font** must be available on the device the web browser is running on. There's no guarantee that any device has a particular font, so it's much safer to use font **families**, which allows for many different fonts that have the same general look at feel.\n\nIf students want to specify an exact font, they'll need to use a font from the web, so the browser can download that specific font to use when rendering the page. More information on these fonts can be found at **Google Fonts** and **W3Schools**."
+          }
+        ]
       },
       "seeding_key": {
-        "activity_section.key": "b378b94b-d742-4eeb-a880-124eef675279",
-        "lesson_activity.key": "23b2e900-fe47-484e-be70-92e267d4533c"
+        "activity_section.key": "a2f4b5a1-9c03-495d-9d18-dedff955a658",
+        "lesson_activity.key": "486fa22b-7474-4018-bc7e-1fed2863a4b0"
       }
     },
     {
-      "key": "4fdf5ef9-5797-4dba-aac9-55279d5fc22d",
+      "key": "fecd4a54-d91b-4a1a-b1f3-530a6438e2eb",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Review:** Briefly review the \"Content-Structure-Style\" paradigm found in the \"Help and Tips\" area of the Code Studio levels. Draw a T-chart on the board and label one side HTML and one side CSS.  Have students work in small groups to think of as many differences they can between the two languages, then come back together as a group and share.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "Make sure students are distinguishing between how HTML indicates the structure of a document and how CSS allows students to set the styles, as well as the differences in how the languages look on the screen and where they are used.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fecd4a54-d91b-4a1a-b1f3-530a6438e2eb",
+        "lesson_activity.key": "486fa22b-7474-4018-bc7e-1fed2863a4b0"
+      }
+    },
+    {
+      "key": "22a1f9c5-6d30-4967-a60a-a6fe0dc20e2e",
       "position": 1,
       "properties": {
-        "description": "**Question of the Day: How can we style the images and layouts of our pages?**\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students add the new properties they learned to the CSS Properties page in their journal or the class poster.\n\n**Prompt:** How might you want to use these new styles in your personal web page?"
+        "description": "**Question of the Day: How can we change the style of text on a web page?**",
+        "name": "Recording CSS Properties\r"
       },
       "seeding_key": {
-        "activity_section.key": "4fdf5ef9-5797-4dba-aac9-55279d5fc22d",
-        "lesson_activity.key": "ce1d9fcb-e0fe-45a8-b18e-5016d926a134"
+        "activity_section.key": "22a1f9c5-6d30-4967-a60a-a6fe0dc20e2e",
+        "lesson_activity.key": "dde3b9cb-3239-428f-a074-5cd4cd119759"
+      }
+    },
+    {
+      "key": "82d13909-f36c-45d0-aabd-2817fd86825e",
+      "position": 2,
+      "properties": {
+        "description": "**Set Up:** Have students create a new page in their journals called CSS Properties.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "<img src=\"https://images.code.org/3d122473886889443e423633d7346994-css properties 2.png\" style=\"margin-left:20px; width:200px; float:right\">\n\n**Journal or Poster?** Just as with the \"HTML Tags\" page in their journals, you may choose to have your class keep track of CSS Properties in a shared class poster.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "82d13909-f36c-45d0-aabd-2817fd86825e",
+        "lesson_activity.key": "dde3b9cb-3239-428f-a074-5cd4cd119759"
+      }
+    },
+    {
+      "key": "5a402470-57e8-4b9c-8a01-d5996143595e",
+      "position": 3,
+      "properties": {
+        "description": "**Group:** Place students in groups of two to five - you'll need at least one group for each of the properties introduced in this lesson.\n\n**Jigsaw:** Assign each group one of the properties introduced today. Each group needs to come up with a description and example for their property.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Share:** Have groups add the properties they learned today to their new \"CSS Properties\" chart or to the class \"CSS Properties\" poster.\n\n**Key Vocabulary:**\n\n* **CSS** - Cascading Style Sheets; a language used to describe how HTML elements should be styled\n* **CSS Selector** - the part of a CSS rule-set that defines which HTML elements the style should be applied to\n\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "5a402470-57e8-4b9c-8a01-d5996143595e",
+        "lesson_activity.key": "dde3b9cb-3239-428f-a074-5cd4cd119759"
       }
     },
     {
@@ -1272,223 +1408,303 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 Sample CSS text_CSD-PL-23"
+        ],
         "progression": "Sample Website"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2 Sample CSS layout_-csd2024"
+          "CSD U2 Sample CSS text_CSD-PL-23"
         ],
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-2024-day1",
-        "activity_section.key": "e644bbeb-abd2-4ac2-8fef-76b3044838c3"
+        "activity_section.key": "e6455b83-c7a0-4ec4-90bc-16f107e432f6"
       },
       "level_keys": [
-        "CSD U2 Sample CSS layout_-csd2024"
+        "CSD U2 Sample CSS text_CSD-PL-23"
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 11,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 CSS explore CSS_CSD-PL-23"
+        ],
         "progression": "Exploration"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2 layout style sample_-csd2024"
+          "CSD U2 CSS explore CSS_CSD-PL-23"
         ],
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-2024-day1",
-        "activity_section.key": "e60f65c4-4862-4f18-9a77-58b842f8da39"
+        "activity_section.key": "944ec239-85fa-4b14-9da1-217d10c00882"
       },
       "level_keys": [
-        "CSD U2 layout style sample_-csd2024"
+        "CSD U2 CSS explore CSS_CSD-PL-23"
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 12,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style h1_CSD-PL-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2 layout style bgcolor_-csd2024"
+          "CSD U2 text style h1_CSD-PL-23"
         ],
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-2024-day1",
-        "activity_section.key": "5b10d8e2-7f1b-4b05-9838-ad6d06fde4c9"
+        "activity_section.key": "7821003d-b443-42d5-abc0-f525b7f1ceed"
       },
       "level_keys": [
-        "CSD U2 layout style bgcolor_-csd2024"
+        "CSD U2 text style h1_CSD-PL-23"
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 13,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style h3_CSD-PL-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2 layout style body_-csd2024"
+          "CSD U2 text style h3_CSD-PL-23"
         ],
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-2024-day1",
-        "activity_section.key": "5b10d8e2-7f1b-4b05-9838-ad6d06fde4c9"
+        "activity_section.key": "7821003d-b443-42d5-abc0-f525b7f1ceed"
       },
       "level_keys": [
-        "CSD U2 layout style body_-csd2024"
+        "CSD U2 text style h3_CSD-PL-23"
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 14,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style rgb practice_CSD-PL-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2 layout style float_-csd2024"
+          "CSD U2 text style rgb practice_CSD-PL-23"
         ],
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-2024-day1",
-        "activity_section.key": "5b10d8e2-7f1b-4b05-9838-ad6d06fde4c9"
+        "activity_section.key": "7821003d-b443-42d5-abc0-f525b7f1ceed"
       },
       "level_keys": [
-        "CSD U2 layout style float_-csd2024"
+        "CSD U2 text style rgb practice_CSD-PL-23"
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 15,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 text style rgb practice 2_CSD-PL-23"
+        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2 layout style width_-csd2024"
+          "CSD U2 text style rgb practice 2_CSD-PL-23"
         ],
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-2024-day1",
-        "activity_section.key": "5b10d8e2-7f1b-4b05-9838-ad6d06fde4c9"
+        "activity_section.key": "7821003d-b443-42d5-abc0-f525b7f1ceed"
       },
       "level_keys": [
-        "CSD U2 layout style width_-csd2024"
+        "CSD U2 text style rgb practice 2_CSD-PL-23"
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 16,
       "position": 7,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 text style size_CSD-PL-23"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 text style size_CSD-PL-23"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2024-day1",
+        "activity_section.key": "7821003d-b443-42d5-abc0-f525b7f1ceed"
+      },
+      "level_keys": [
+        "CSD U2 text style size_CSD-PL-23"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 add file_CSD-PL-23"
+        ],
+        "progression": "Skill Building"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSD U2 add file_CSD-PL-23"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2024-day1",
+        "activity_section.key": "eda5e221-8884-4fe4-b355-d9033b62c4e2"
+      },
+      "level_keys": [
+        "CSD U2 add file_CSD-PL-23"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSD U2 CSS practice_pilot_CSD-PL-23"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2 layout style practice_pilot_-csd2024"
+          "CSD U2 CSS practice_pilot_CSD-PL-23"
         ],
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-2024-day1",
-        "activity_section.key": "26b25697-6a87-42b2-b3ce-7bf00f09f11d"
+        "activity_section.key": "04dd64de-1254-40e3-a562-0867930931b3"
       },
       "level_keys": [
-        "CSD U2 layout style practice_pilot_-csd2024"
+        "CSD U2 CSS practice_pilot_CSD-PL-23"
       ]
     },
     {
-      "chapter": 36,
-      "position": 8,
+      "chapter": 19,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD Web CSS Assessment_CSD-PL-23"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2 add style_-csd2024"
+          "CSD Web CSS Assessment_CSD-PL-23"
         ],
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-2024-day1",
-        "activity_section.key": "a942ef20-5659-401b-8efb-ff5d487b0a61"
+        "activity_section.key": "8de39524-d8b0-4efa-a0ef-d1e8ab9be7e7"
       },
       "level_keys": [
-        "CSD U2 add style_-csd2024"
+        "CSD Web CSS Assessment_CSD-PL-23"
       ]
     },
     {
-      "chapter": 37,
-      "position": 9,
+      "chapter": 20,
+      "position": 11,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSD L6 Assess FR_CSD-PL-23"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD L9 Assess FR_-csd2024"
+          "CSD L6 Assess FR_CSD-PL-23"
         ],
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-2024-day1",
-        "activity_section.key": "a942ef20-5659-401b-8efb-ff5d487b0a61"
+        "activity_section.key": "8de39524-d8b0-4efa-a0ef-d1e8ab9be7e7"
       },
       "level_keys": [
-        "CSD L9 Assess FR_-csd2024"
+        "CSD L6 Assess FR_CSD-PL-23"
       ]
     },
     {
-      "chapter": 38,
-      "position": 10,
+      "chapter": 21,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSD U2 CSS challenge_pilot_CSD-PL-23"
+        ],
         "progression": "Challenges"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U2 layout style challenge_pilot_-csd2024"
+          "CSD U2 CSS challenge_pilot_CSD-PL-23"
         ],
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-2024-day1",
-        "activity_section.key": "b378b94b-d742-4eeb-a880-124eef675279"
+        "activity_section.key": "a2f4b5a1-9c03-495d-9d18-dedff955a658"
       },
       "level_keys": [
-        "CSD U2 layout style challenge_pilot_-csd2024"
+        "CSD U2 CSS challenge_pilot_CSD-PL-23"
       ]
     }
   ],
@@ -1603,175 +1819,188 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2 Sample CSS layout_-csd2024",
+        "level.key": "CSD U2 Sample CSS text_CSD-PL-23",
         "script_level.level_keys": [
-          "CSD U2 Sample CSS layout_-csd2024"
+          "CSD U2 Sample CSS text_CSD-PL-23"
         ],
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-2024-day1",
-        "activity_section.key": "e644bbeb-abd2-4ac2-8fef-76b3044838c3"
+        "activity_section.key": "e6455b83-c7a0-4ec4-90bc-16f107e432f6"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2 layout style sample_-csd2024",
+        "level.key": "CSD U2 CSS explore CSS_CSD-PL-23",
         "script_level.level_keys": [
-          "CSD U2 layout style sample_-csd2024"
+          "CSD U2 CSS explore CSS_CSD-PL-23"
         ],
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-2024-day1",
-        "activity_section.key": "e60f65c4-4862-4f18-9a77-58b842f8da39"
+        "activity_section.key": "944ec239-85fa-4b14-9da1-217d10c00882"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2 layout style bgcolor_-csd2024",
+        "level.key": "CSD U2 text style h1_CSD-PL-23",
         "script_level.level_keys": [
-          "CSD U2 layout style bgcolor_-csd2024"
+          "CSD U2 text style h1_CSD-PL-23"
         ],
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-2024-day1",
-        "activity_section.key": "5b10d8e2-7f1b-4b05-9838-ad6d06fde4c9"
+        "activity_section.key": "7821003d-b443-42d5-abc0-f525b7f1ceed"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2 layout style body_-csd2024",
+        "level.key": "CSD U2 text style h3_CSD-PL-23",
         "script_level.level_keys": [
-          "CSD U2 layout style body_-csd2024"
+          "CSD U2 text style h3_CSD-PL-23"
         ],
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-2024-day1",
-        "activity_section.key": "5b10d8e2-7f1b-4b05-9838-ad6d06fde4c9"
+        "activity_section.key": "7821003d-b443-42d5-abc0-f525b7f1ceed"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2 layout style float_-csd2024",
+        "level.key": "CSD U2 text style rgb practice_CSD-PL-23",
         "script_level.level_keys": [
-          "CSD U2 layout style float_-csd2024"
+          "CSD U2 text style rgb practice_CSD-PL-23"
         ],
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-2024-day1",
-        "activity_section.key": "5b10d8e2-7f1b-4b05-9838-ad6d06fde4c9"
+        "activity_section.key": "7821003d-b443-42d5-abc0-f525b7f1ceed"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2 layout style width_-csd2024",
+        "level.key": "CSD U2 text style rgb practice 2_CSD-PL-23",
         "script_level.level_keys": [
-          "CSD U2 layout style width_-csd2024"
+          "CSD U2 text style rgb practice 2_CSD-PL-23"
         ],
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-2024-day1",
-        "activity_section.key": "5b10d8e2-7f1b-4b05-9838-ad6d06fde4c9"
+        "activity_section.key": "7821003d-b443-42d5-abc0-f525b7f1ceed"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2 layout style practice_pilot_-csd2024",
+        "level.key": "CSD U2 text style size_CSD-PL-23",
         "script_level.level_keys": [
-          "CSD U2 layout style practice_pilot_-csd2024"
+          "CSD U2 text style size_CSD-PL-23"
         ],
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-2024-day1",
-        "activity_section.key": "26b25697-6a87-42b2-b3ce-7bf00f09f11d"
+        "activity_section.key": "7821003d-b443-42d5-abc0-f525b7f1ceed"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2 add style_-csd2024",
+        "level.key": "CSD U2 add file_CSD-PL-23",
         "script_level.level_keys": [
-          "CSD U2 add style_-csd2024"
+          "CSD U2 add file_CSD-PL-23"
         ],
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-2024-day1",
-        "activity_section.key": "a942ef20-5659-401b-8efb-ff5d487b0a61"
+        "activity_section.key": "eda5e221-8884-4fe4-b355-d9033b62c4e2"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD L9 Assess FR_-csd2024",
+        "level.key": "CSD U2 CSS practice_pilot_CSD-PL-23",
         "script_level.level_keys": [
-          "CSD L9 Assess FR_-csd2024"
+          "CSD U2 CSS practice_pilot_CSD-PL-23"
         ],
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-2024-day1",
-        "activity_section.key": "a942ef20-5659-401b-8efb-ff5d487b0a61"
+        "activity_section.key": "04dd64de-1254-40e3-a562-0867930931b3"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSD U2 layout style challenge_pilot_-csd2024",
+        "level.key": "CSD Web CSS Assessment_CSD-PL-23",
         "script_level.level_keys": [
-          "CSD U2 layout style challenge_pilot_-csd2024"
+          "CSD Web CSS Assessment_CSD-PL-23"
         ],
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "pl-csd-summer-2024-day1",
-        "activity_section.key": "b378b94b-d742-4eeb-a880-124eef675279"
+        "activity_section.key": "8de39524-d8b0-4efa-a0ef-d1e8ab9be7e7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD L6 Assess FR_CSD-PL-23",
+        "script_level.level_keys": [
+          "CSD L6 Assess FR_CSD-PL-23"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2024-day1",
+        "activity_section.key": "8de39524-d8b0-4efa-a0ef-d1e8ab9be7e7"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSD U2 CSS challenge_pilot_CSD-PL-23",
+        "script_level.level_keys": [
+          "CSD U2 CSS challenge_pilot_CSD-PL-23"
+        ],
+        "lesson.key": "Styling Text with CSS",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "pl-csd-summer-2024-day1",
+        "activity_section.key": "a2f4b5a1-9c03-495d-9d18-dedff955a658"
       }
     }
   ],
   "resources": [
     {
-      "name": "Activity Packet",
-      "url": "https://docs.google.com/document/d/15gERZooKYoMlBjeHTEb63zlkG9oaCayUUblHzaSW9VE/view",
-      "key": "activity_packet",
+      "name": "CSD Activity Packet 2024",
+      "url": "https://docs.google.com/document/d/1e6h0_yN0txqYVXmxUEco5ldh0l1K8cU4tukxdnXh3Xo/edit?usp=drive_link",
+      "key": "csd_activity_packet_2024",
       "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/document/d/15gERZooKYoMlBjeHTEb63zlkG9oaCayUUblHzaSW9VE/view",
-        "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "activity_packet"
+        "resource.key": "csd_activity_packet_2024"
       }
     },
     {
-      "name": "Body Styling",
-      "url": "https://drive.google.com/file/d/1litE09XshxkmQDw2OjhhmdHyvCDLyup4/view",
-      "key": "body_styling",
+      "name": "CSD In-Person Summer Workshop Day 1 Agenda",
+      "url": "https://docs.google.com/document/d/19yDO9ZvDvwaoOJq7xsHpWMTt9M2NoSLb2QG9WwTqgmo/edit?usp=drive_link",
+      "key": "csd_in-person_summer_workshop_day_1_agenda_1",
       "properties": {
-        "audience": "Teacher"
       },
       "seeding_key": {
-        "resource.key": "body_styling"
+        "resource.key": "csd_in-person_summer_workshop_day_1_agenda_1"
       }
     },
     {
-      "name": "Day 1 Agenda",
-      "url": "https://docs.google.com/document/d/1gHO0llCfUmKVlmanE_ihc9F-3zI6_hy7F1z2UqqLGZ8/edit#",
-      "key": "day_1_agenda",
+      "name": "CSD In-Person Summer Workshop Day 1 Slides",
+      "url": "https://docs.google.com/presentation/d/1Bi6jmjag7-ZdKhmcZLfX6jyBrYMMt7gAyBxLmTkmIlk/edit?usp=drive_link",
+      "key": "csd_in-person_summer_workshop_day_1_slides_1",
       "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/document/d/1gHO0llCfUmKVlmanE_ihc9F-3zI6_hy7F1z2UqqLGZ8/edit#",
-        "include_in_pdf": true,
-        "type": "Resource"
       },
       "seeding_key": {
-        "resource.key": "day_1_agenda"
+        "resource.key": "csd_in-person_summer_workshop_day_1_slides_1"
       }
     },
     {
-      "name": "Day 1 Slides Template",
-      "url": "https://docs.google.com/presentation/d/1Q_gFGh9AjjMiXgjqjZF1E8sH9LwLpiV9HpzzO0oy298/view",
-      "key": "day_1_slides_template",
+      "name": "CSD Resource Packet 2024",
+      "url": "https://docs.google.com/document/d/17b0KVjqOsr2X3NUyE6gS82SEkXOsAuEE815H_Z6FRGU/edit?usp=drive_link",
+      "key": "csd_resource_packet_2024",
       "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1Q_gFGh9AjjMiXgjqjZF1E8sH9LwLpiV9HpzzO0oy298/view",
-        "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "day_1_slides_template"
+        "resource.key": "csd_resource_packet_2024"
       }
     },
     {
@@ -1796,6 +2025,32 @@
       },
       "seeding_key": {
         "resource.key": "html_tags_1"
+      }
+    },
+    {
+      "name": "Intro to CSS - Part 1",
+      "url": "https://www.youtube.com/watch?v=EP9QMdoXvXE",
+      "key": "intro_to_css_-_part_1",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/weblab_introtocss-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "intro_to_css_-_part_1"
+      }
+    },
+    {
+      "name": "Intro to CSS - Part 2",
+      "url": "https://youtu.be/VgBVKlpLqsE",
+      "key": "intro_to_css_-_part_2",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/weblab_usingastylesheet-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "intro_to_css_-_part_2"
       }
     },
     {
@@ -1824,18 +2079,6 @@
       }
     },
     {
-      "name": "Layout Properties",
-      "url": "https://drive.google.com/file/d/1M26yx_lXwBwoH4uln6nQuBQ5SdIedVWu/view",
-      "key": "layout_properties",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource Page"
-      },
-      "seeding_key": {
-        "resource.key": "layout_properties"
-      }
-    },
-    {
       "name": "Pair Programming",
       "url": "https://www.youtube.com/watch?v=q7d_JtyCq1A&t=1s",
       "key": "pair_programming",
@@ -1861,15 +2104,39 @@
       }
     },
     {
-      "name": "Styling Elements with CSS",
-      "url": "https://docs.google.com/presentation/d/14BYGoCn3gDy5dcP18LTgvKbwKirCi6ayso8hU1Decgw/template/preview",
-      "key": "styling_elements_with_css",
+      "name": "Style Sheets",
+      "url": "https://drive.google.com/file/d/1Tm6ZJ6lM_XmmgRn_e6HeVVyh4ukqkBiA/view",
+      "key": "style_sheets_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "style_sheets_1"
+      }
+    },
+    {
+      "name": "Styling Text with CSS",
+      "url": "https://docs.google.com/presentation/d/1lN9kHUL9w7hwMV5I6hc-TnnBnFENRCK2gxDBBR4jrXs/template/preview",
+      "key": "styling_text_with_css_1",
       "properties": {
         "audience": "Teacher",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "styling_elements_with_css"
+        "resource.key": "styling_text_with_css_1"
+      }
+    },
+    {
+      "name": "Text Properties",
+      "url": "https://drive.google.com/file/d/1NoseEakxt9yOSuPbpnLgUu9-_Yso3EOB/view?usp=sharing",
+      "key": "text_properties",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "text_properties"
       }
     },
     {
@@ -1937,53 +2204,84 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
-        "resource.key": "body_styling"
+        "lesson.key": "Styling Text with CSS",
+        "resource.key": "intro_to_css_-_part_1"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
-        "resource.key": "layout_properties"
+        "lesson.key": "Styling Text with CSS",
+        "resource.key": "intro_to_css_-_part_2"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
-        "resource.key": "styling_elements_with_css"
+        "lesson.key": "Styling Text with CSS",
+        "resource.key": "style_sheets_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "resource.key": "styling_text_with_css_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "resource.key": "text_properties"
       }
     }
   ],
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "activity_packet",
+        "resource.key": "csd_in-person_summer_workshop_day_1_agenda_1",
         "script.name": "pl-csd-summer-2024-day1"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "day_1_agenda",
-        "script.name": "pl-csd-summer-2024-day1"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "day_1_slides_template",
-        "script.name": "pl-csd-summer-2024-day1"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "resource_packet",
+        "resource.key": "csd_in-person_summer_workshop_day_1_slides_1",
         "script.name": "pl-csd-summer-2024-day1"
       }
     }
   ],
   "scripts_student_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "csd_activity_packet_2024",
+        "script.name": "pl-csd-summer-2024-day1"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csd_resource_packet_2024",
+        "script.name": "pl-csd-summer-2024-day1"
+      }
+    }
   ],
   "vocabularies": [
+    {
+      "key": "css",
+      "word": "CSS",
+      "definition": "Cascading Style Sheets; a language used to describe how HTML elements should be styled",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "css"
+      }
+    },
+    {
+      "key": "css_selector",
+      "word": "CSS Selector",
+      "definition": "the part of a CSS rule-set that defines which HTML elements the style should be applied to",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "css_selector"
+      }
+    },
     {
       "key": "html",
       "word": "HTML",
@@ -2065,6 +2363,18 @@
         "lesson.key": "Intro to HTML",
         "vocabulary.key": "website_structure"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "vocabulary.key": "css"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "vocabulary.key": "css_selector"
+      }
     }
   ],
   "lessons_programming_expressions": [
@@ -2105,65 +2415,37 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "programming_environment.name": "weblab",
-        "programming_expression.key": "background-color"
+        "programming_expression.key": "Text-Dec"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "programming_environment.name": "weblab",
-        "programming_expression.key": "border-color"
+        "programming_expression.key": "color"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "programming_environment.name": "weblab",
-        "programming_expression.key": "border-radius"
+        "programming_expression.key": "font-family"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "programming_environment.name": "weblab",
-        "programming_expression.key": "border-style"
+        "programming_expression.key": "font-size"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "programming_environment.name": "weblab",
-        "programming_expression.key": "border-width"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
-        "programming_environment.name": "weblab",
-        "programming_expression.key": "float"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
-        "programming_environment.name": "weblab",
-        "programming_expression.key": "height"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
-        "programming_environment.name": "weblab",
-        "programming_expression.key": "margin"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
-        "programming_environment.name": "weblab",
-        "programming_expression.key": "width"
+        "programming_expression.key": "text-align"
       }
     }
   ],
@@ -2179,13 +2461,13 @@
       }
     },
     {
-      "key": "59b33c28-32a0-42af-9094-bca6b78bc707",
+      "key": "1892aea4-651d-471e-90c1-cf2ac9c2b5b0",
       "properties": {
-        "description": "Create a CSS rule-set for the body element that impacts all elements on the page."
+        "description": "Explain the differences between HTML and CSS in both use and syntax."
       },
       "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
-        "objective.key": "59b33c28-32a0-42af-9094-bca6b78bc707"
+        "lesson.key": "Styling Text with CSS",
+        "objective.key": "1892aea4-651d-471e-90c1-cf2ac9c2b5b0"
       }
     },
     {
@@ -2199,6 +2481,16 @@
       }
     },
     {
+      "key": "8c9ea197-b618-4c36-849a-7a69a91208a5",
+      "properties": {
+        "description": "Link to an external style sheet."
+      },
+      "seeding_key": {
+        "lesson.key": "Styling Text with CSS",
+        "objective.key": "8c9ea197-b618-4c36-849a-7a69a91208a5"
+      }
+    },
+    {
       "key": "cc7b0a87-e4bc-4ce4-929d-19ac12d1afa5",
       "properties": {
         "description": "Write a simple HTML document that uses opening and closing tags to structure content"
@@ -2209,13 +2501,13 @@
       }
     },
     {
-      "key": "f4cb8fab-2ce1-4fd8-ab66-0d64a9479f25",
+      "key": "e6ea1f0b-2598-4e61-ab4f-2b3807940ef5",
       "properties": {
-        "description": "Use CSS properties to change the size, position, and borders of elements."
+        "description": "Use CSS selectors to style HTML text elements."
       },
       "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
-        "objective.key": "f4cb8fab-2ce1-4fd8-ab66-0d64a9479f25"
+        "lesson.key": "Styling Text with CSS",
+        "objective.key": "e6ea1f0b-2598-4e61-ab4f-2b3807940ef5"
       }
     }
   ],
@@ -2229,14 +2521,14 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-16"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Styling Elements with CSS",
+        "lesson.key": "Styling Text with CSS",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-AP-19"
       }

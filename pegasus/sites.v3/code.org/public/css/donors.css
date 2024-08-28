@@ -10,17 +10,17 @@ table td {
   text-align: center;
 }
 
-.small {
+td.small {
   height: 100px;
   width: 260px;
 }
 
-.medium {
+td.medium {
   height: 200px;
   width: 260px;
 }
 
-.large {
+td.large {
   height: 150px;
   width: 390px;
 }

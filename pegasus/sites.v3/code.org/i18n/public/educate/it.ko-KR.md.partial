@@ -17,9 +17,11 @@ theme: responsive
 
 ## 최소로 지원되는 브라우저 및 플랫폼
 
+2024년 7월부터 브라우저 및 운영 체제에 필요한 최소 버전을 업데이트할 예정입니다. 이전 버전은 여전히 작동할 수 있지만 이전 버전의 버그 수정 요청은 지원할 수 없습니다.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           브라우저
@@ -40,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          브라우저 7월 24일
+        </th>
+        <tr>
+          <td>크롬 103.x</td>
+        </tr>
+        <tr>
+          <td>사파리 14.x</td>
+        </tr>
+        <tr>
+          <td>모바일 사파리 14.x</td>
+        </tr>
+        <tr>
+          <td>엣지 119.x</td>
+        </tr>
+        <tr>
+          <td>파이어폭스 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           플랫폼
@@ -62,8 +86,30 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          플랫폼 '24년 7월
+        </th>
+        <tr>
+          <td>맥오에스 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>윈도우 8</td>
+        </tr>
+        <tr>
+          <td>안드로이드 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## 차단 사이트
@@ -80,16 +126,15 @@ theme: responsive
 | **인터넷 시뮬레이터를 사용하기 위해**                                      | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **웹 랩을 사용하기 위해**                                            | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Google Classroom 공유 버튼을 사용하기 위해**                         | `https://apis.google.com`                                                                                  |
-| **App Lab 데이터세트를 사용하려면**                                    | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## 모바일 및 태블릿 지원 세부사항
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. 대부분의 태블릿은 지원되지 않지만 다음의 예외가 있습니다:
+모든 CS 디스커버리, CS 원칙, CS A 및 App Lab 입문 과정은 태블릿 또는 모바일 장치와 호환되지 않습니다. 완전한 키보드와 마우스 (또는 터치패드) 가 필요합니다. 대부분의 태블릿은 지원되지 않지만 다음의 예외가 있습니다:
 
 - 외부 키보드가 있는 Microsoft Surface Pro
 - iPadOS 13.4 이상에서 실행되는 iPad와 외부 키보드 및 외부 마우스 또는 터치패드
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+K-5 과정 (컴퓨터 과학 기초) 및 아워오브코드 활동과 같은 기타 모든 콘텐츠는 iPad 및 기타 최신 태블릿, 노트북 또는 데스크톱 컴퓨터에서 호환됩니다.
 
 ### 휴대폰
 
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+이것은 커리큘럼 전체에서 사용하는 플레이어입니다. 이 플레이어는 유튜브를 통해 동영상을 보여주려고 하며, 유튜브가 차단된 경우, 그에 "대비한" 플레이어를 사용하여 Code.org 동영상을 보여줍니다.
 
 ### 동영상이 재생되지 않나요?
 
-If video does not work, you can email us at support@code.org.
+동영상이 재생되지 않으면 support@code.org로 이메일을 보낼 수 있습니다.
 
-However, you can still use our tutorials without video.
+하지만, 동영상없이 계속 튜토리얼을 이용할 수 있습니다.
 
 1. 모든 동영상을 [함께 다운로드할 수 있도록 제작했습니다](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). 학교의 대역폭이 낮으면, 교사가 동영상을 다운로드 받아 학생들에게 공유된 화면으로 보여주길 권합니다.
 2. 튜토리얼에 통합되어 있으며, 각 동영상마다 녹색 다운로드 링크 아이콘 <img src="/images/green-download.png" width=25 height=25 /> 을 추가하여 학생들이 개별 튜토리얼 동영상을 다운로드할 수 있게 했습니다.
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## Google Apps/G-Suite 사용자를 위한 특별 설정
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+G-suite 관리자이면, 유튜브를 위한 어떤 제약 설정이 있는지 확인해 보십시오. "엄격한 유튜브 접근 제한" 설정을 명시했거나 또는 '이 동영상은 이용이 제한됩니다'라고 기술된 메시지가 있다면, 저희 채널을 승인된 채널 목록에 추가할 수 있습니다. 저희 채널을 승인 목록에 추가하는 방법에 대해서는 Google의 [이 가이드](https://support.google.com/a/answer/6245597) 를 참조하세요. 다른 설정에 대해 더 자세히 알아보고 어느 설정이 학급에 가장 좋은지 결정하기 위한 경우에도 [이 가이드](https://support.google.com/a/answer/6212415?hl=en) 를 참조할 수 있습니다.
 
 ## 여전히 해결되지 않은 문제가 있나요?
 
-We'll help you out - just email us at support@code.org!
+저희가 도와드리겠습니다. support@code.org로 이메일을 보내주세요!

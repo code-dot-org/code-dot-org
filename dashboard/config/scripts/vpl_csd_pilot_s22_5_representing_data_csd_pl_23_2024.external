@@ -7,7 +7,7 @@ markdown <<MARKDOWN
 
 <div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
 
-### **Key Vocabulary**
+## **Key Vocabulary**
 
 * #### **Decode** - to change how information is represented so that it can be read by a person.
 * #### **Encode** - to change how information is represented so that it can be read by a computer.
@@ -18,7 +18,7 @@ markdown <<MARKDOWN
 
 ## Creating a Data Representation System
 
-#### Students begin by creating their own system for representing information in <a href="https://studio.code.org/s/csd5-2023/lessons/2" target="blank" rel="noopener noreferrer">Lesson 2: Patterns and Representation</a>. This prompts students to explore for themselves the qualities of good systems for representing information. They should find through creating and testing their systems that:
+#### Students begin by creating their own system for representing information in <a href="https://studio.code.org/s/csd5-2024/lessons/2" target="blank" rel="noopener noreferrer">Lesson 2: Patterns and Representation</a>. This prompts students to explore for themselves the qualities of good systems for representing information. They should find through creating and testing their systems that:
 
 * #### There are typically many possible systems for representing information.
 * #### People must agree on a common set of rules for a system to work.

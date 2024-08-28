@@ -64,7 +64,7 @@
   },
   "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-03T21:29:50.375+00:00\",\"changed\":[\"cloned from \\\"CourseE_Project_SpriteLab_2023\\\"\"],\"cloned_from\":\"CourseE_Project_SpriteLab_2023\"},{\"changed_at\":\"2024-04-12 23:02:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-03T21:29:50.375+00:00\",\"changed\":[\"cloned from \\\"CourseE_Project_SpriteLab_2023\\\"\"],\"cloned_from\":\"CourseE_Project_SpriteLab_2023\"},{\"changed_at\":\"2024-04-12 23:02:03 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-06 23:43:32 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-07 17:26:20 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-05-08 21:53:59 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
 }]]></config>
   <blocks>
     <start_blocks>
@@ -593,6 +593,9 @@
             </value>
           </block>
           <block type="gamelab_randomColor" id="QtKa|pZeKfGpnCNqh;cA"/>
+          <block type="gamelab_playSoundOptions" id="HSSFW4)#A@+@K*^^T0tn">
+            <field name="SOUND">'sound://category_accent/puzzle_game_accent_a_01.mp3'</field>
+          </block>
           <block type="gamelab_printText" id="HCq?PI#dD~mPm[|zDk-s">
             <value name="TEXT">
               <block type="text" id="jS`v`53OcmNQ0$/gq%}h">
@@ -678,6 +681,14 @@
               </block>
             </value>
           </block>
+          <block type="gamelab_spriteThink" id="j,Ch7-rOlss6X6K9Bt12">
+            <field name="SPEECH"/>
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation" id="s1KbixDLEqCS]OTY}SG2" movable="false">
+                <field name="ANIMATION">"green monster"</field>
+              </block>
+            </value>
+          </block>
           <block type="gamelab_randomColor" id="|VS|E+epT`go,UmHU0$$"/>
           <block type="gamelab_removeTint" id="{+i!Zc16zj730p+eGnRI">
             <value name="THIS">
@@ -697,6 +708,16 @@
               <block type="math_number" id="2r){_hI-iEUMe_g,r{fQ">
                 <field name="NUM">10</field>
               </block>
+            </value>
+          </block>
+          <block type="gamelab_jumpTo" id="{i;M#qzJOA%u#`dTGUBo">
+            <value name="SPRITE">
+              <block type="gamelab_allSpritesWithAnimation" id="vpB6+uY2-2=x8_7T^Yy0">
+                <field name="ANIMATION">"green monster"</field>
+              </block>
+            </value>
+            <value name="LOCATION">
+              <block type="gamelab_randomLocation" id="N?cTwW=Dwvs%FEgUeFF_"/>
             </value>
           </block>
           <block type="gamelab_destroy" id="H)[nx,qWg2@gZCkLIxyD">

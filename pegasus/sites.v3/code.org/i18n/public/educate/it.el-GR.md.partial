@@ -17,9 +17,11 @@ theme: responsive
 
 ## Minimum Supported Browsers and Platforms
 
+Από τον Ιούλιο του 2024, θα ενημερώσουμε τις ελάχιστες εκδόσεις που απαιτούνται για προγράμματα περιήγησης και λειτουργικά συστήματα. Ενώ οι παλιές εκδόσεις ενδέχεται να εξακολουθούν να λειτουργούν, δεν θα μπορέσουμε να υποστηρίξουμε αιτήματα για διορθώσεις σφαλμάτων στις παλαιότερες εκδόσεις.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Browser
@@ -40,11 +42,33 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          Platform
+          Πρόγραμμα περιήγησης Ιούλιος '24
+        </th>
+        <tr>
+          <td>Χρώμιο 103.x</td>
+        </tr>
+        <tr>
+          <td>Σαφάρι 14.x</td>
+        </tr>
+        <tr>
+          <td>Σαφάρι για κινητά 14.x</td>
+        </tr>
+        <tr>
+          <td>Άκρη 119.x</td>
+        </tr>
+        <tr>
+          <td>Φάροξ 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Πλατφόρμα
         </th>
         <tr>
           <td>macOS 10.13</td>
@@ -62,13 +86,35 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Πλατφόρμα Ιούλιος '24
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Παράθυρα 8</td>
+        </tr>
+        <tr>
+          <td>Ανδροειδές 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Sites to Unblock
 
-For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure the following sites are allowed and aren't blocked.
+Για την καλύτερη εμπειρία με όλο το περιεχόμενο του Code.org, σας συνιστούμε να συμβουλευτείτε το τμήμα πληροφορικής του σχολείου ή της περιοχής σας για να βεβαιωθείτε ότι οι ακόλουθοι ιστότοποι επιτρέπονται και δεν αποκλείονται.
 
 | Priority                                                                                                                                 | URL                                                                                                        |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -80,28 +126,27 @@ For the very best experience with all Code.org content, we recommend consulting 
 | **Για να χρησιμοποιήσετε τον προσομοιωτή Διαδικτύου**                                                                                    | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Για να χρησιμοποιήσετε το Web Lab**                                                                                                    | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Για να χρησιμοποιήσετε το κουμπί κοινής χρήσης της Google Classroom**                                                                  | `https://apis.google.com`                                                                                  |
-| **Για να χρησιμοποιήσετε σύνολα δεδομένων App Lab**                                                                                      | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Mobile and Tablet Support Details
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Most tablets are not supported, with the following exceptions:
+Όλα τα μαθήματα CS Discoveries, CS Principles, CS A και Intro to App Lab δεν είναι συμβατά με tablet ή κινητές συσκευές - απαιτείται πλήρες πληκτρολόγιο και ποντίκι (ή touchpad). Τα περισσότερα tablet δεν υποστηρίζονται, με τις ακόλουθες εξαιρέσεις:
 
 - Microsoft Surface Pro with an external keyboard
 - iPad running iPadOS 13.4 or later with an external keyboard and an external mouse or touchpad
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+Όλο το άλλο περιεχόμενο, όπως μαθήματα K-5 (Βασικές αρχές πληροφορικής) και δραστηριότητες Ώρας κώδικα είναι συμβατά σε iPad και άλλα σύγχρονα tablet και φορητούς ή επιτραπέζιους υπολογιστές.
 
 ### Mobile Phones
 
-Our Hour of Code activities and CS Fundamentals courses can be completed on mobile phones. While these activities are usable, they are not optimized for a mobile phone experience and have some known limitations (e.g. touch targets may be small, accessory elements may display offscreen, and text may be difficult to input using the on-screen keyboard). The CS Discoveries, CS Principles, and Intro to App Lab courses are not usable on mobile phones.
+Οι δραστηριότητες Hour of Code και τα μαθήματα CS Fundamentals μπορούν να ολοκληρωθούν σε κινητά τηλέφωνα. Αν και αυτές οι δραστηριότητες είναι χρησιμοποιήσιμες, δεν έχουν βελτιστοποιηθεί για μια εμπειρία κινητού τηλεφώνου και έχουν ορισμένους γνωστούς περιορισμούς (π.χ. οι στόχοι αφής μπορεί να είναι μικροί, τα εξαρτήματα ενδέχεται να εμφανίζονται εκτός οθόνης και το κείμενο μπορεί να είναι δύσκολο να εισαχθεί χρησιμοποιώντας το πληκτρολόγιο οθόνης). Τα μαθήματα CS Discoveries, CS Principles και Intro to App Lab δεν μπορούν να χρησιμοποιηθούν σε κινητά τηλέφωνα.
 
 ## Videos
 
-We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our [online learning platform](https://studio.code.org). For schools with YouTube blocked, we attempt to display a Code.org hosted video player instead.
+Χρησιμοποιούμε το [YouTube](https://www.youtube.com) για να ενσωματώσουμε βίντεο στο Code.org και την διαδικτυακή πλατφόρμα μάθησης [](https://studio.code.org). Για σχολεία με αποκλεισμένο το YouTube, προσπαθούμε να εμφανίσουμε ένα πρόγραμμα αναπαραγωγής βίντεο που φιλοξενείται από το Code.org.
 
 ### Can you play this video?
 
-Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
+Πριν ξεκινήσετε τα διαδικτυακά μαθήματα του Code.org, δοκιμάστε την αναπαραγωγή για το παρακάτω βίντεο για να βεβαιωθείτε ότι είστε έτοιμοι.
 
 
 <!--
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+Αυτός είναι ο παίκτης που χρησιμοποιείται σε όλο το πρόγραμμα σπουδών. Θα προσπαθήσει να εμφανίσει το βίντεο μέσω του YouTube και, εάν το YouTube είναι αποκλεισμένο, θα δείξει το βίντεο που φιλοξενείται στο Code.org χρησιμοποιώντας το πρόγραμμα αναπαραγωγής «fallback».
 
 ### Video not playing?
 
-If video does not work, you can email us at support@code.org.
+Εάν το βίντεο δεν λειτουργεί, μπορείτε να μας στείλετε email στο support@code.org.
 
-However, you can still use our tutorials without video.
+Ωστόσο, μπορείτε ακόμα να χρησιμοποιήσετε τα σεμινάρια μας χωρίς βίντεο.
 
 1. We've made all our videos [available for download together](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). If your school has low bandwidth, we recommend that you download videos and show them to students on a shared screen.
 2. Integrated into our tutorials, we've added a green download link icon <img src="/images/green-download.png" width=25 height=25 /> for each video, allowing students to download individual tutorial videos.
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## Special settings for Google Apps/G-Suite users
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+Εάν είστε διαχειριστής G-suite, βεβαιωθείτε ότι έχετε ελέγξει ποιες είναι οι ρυθμίσεις περιορισμού για το YouTube. Εάν έχετε ορίσει τη ρύθμιση «Αυστηρά περιορισμένη πρόσβαση στο YouTube» ή εάν δείτε μηνύματα που δηλώνουν «αυτό το βίντεο έχει περιοριστεί», μπορείτε να προσθέσετε το κανάλι μας στην εγκεκριμένη λίστα καναλιών. Ανατρέξτε στο [αυτόν τον οδηγό](https://support.google.com/a/answer/6245597) από την Google για να μάθετε πώς μπορείτε να προσθέσετε το κανάλι μας στην εγκεκριμένη λίστα. Μπορείτε επίσης να δείτε το [αυτόν τον οδηγό](https://support.google.com/a/answer/6212415?hl=en) για να μάθετε περισσότερα σχετικά με τις διαφορετικές ρυθμίσεις και ποια είναι η καλύτερη για την τάξη σας.
 
 ## Still having trouble?
 
-We'll help you out - just email us at support@code.org!
+Θα σας βοηθήσουμε - απλά στείλτε μας email στο support@code.org!

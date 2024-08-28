@@ -8,19 +8,6 @@
   "properties": {
     "encrypted": "false",
     "background": "music-black",
-    "level_data": {
-      "panels": [
-        {
-          "imageUrl": "https://images.code.org/294f99cfd6e1d55a2738e91a71b53570-musiclab_intro_end_2.png",
-          "text": "#### You're good to go!\n\nYou've learned the basics, and now you're ready to make your own mix! Be sure to explore the sound library - there is a lot to explore and use to make an amazing track."
-        },
-        {
-          "imageUrl": "https://images.code.org/aa31c5258bbb31a623d50ba9482e6a00-musiclab_intro_end_1.png",
-          "text": "You'll see even more new things in the toolbox, including:\n\n- A beat-making block\n\n- Sound effects like reverb and filter\n\n- A synthesizer block\n\n- A block for randomizing what gets played\n\n- ...and more!\n\nHave fun!",
-          "nextUrl": "/projects/music/new"
-        }
-      ]
-    },
     "panels": [
       {
         "imageUrl": "https://images.code.org/bb54629c8b6c3c6fa6b90c44f9e9c675-additional.png",

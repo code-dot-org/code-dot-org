@@ -12,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-12 20:59:46 UTC",
+    "serialized_at": "2024-07-11 16:15:01 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -134,7 +135,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/4/topic/3) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U4L3 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/7a0864b01b4143e28834dd2972338726) on AP Classroom can be assigned as a formative assessment for this lesson.\n\nAdditionally, the following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/4/topic/3) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**What can I do with the `Math` class?**\n\nStudents have used classes like `Scanner` and `Object` from the Java API as well as classes from The Neighborhood and The Theater. In this lesson, students learn about the `Math` class and how the `static` keyword can be used with the `final` keyword to create constants. They explore the documentation for the `Math` class to identify its methods and learn about their functionalities. Students then practice creating and using constants and calling methods in the `Math` class.",
         "preparation": "* **(Optional)** Print copies of the U4L3 Guided Notes (one for each student)\n* Preview the *Constants* video\n* Print copies of The Math Class handout (one for each student)\n* Print copies of the Math Class Graphic Organizer handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-3-the-math-class/37899) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What can I do with the `Math` class?**\n\nYou have used classes like `Scanner` and `Object` from the Java API as well as classes from The Neighborhood and The Theater. In this lesson, you learn about the `Math` class and how the `static` keyword can be used with the `final` keyword to create constants. You explore the documentation for the `Math` class to identify its methods and learn about their functionalities. You then practice creating and using constants and calling methods in the `Math` class."
@@ -153,7 +154,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.5\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/4/topic/4) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U4L4 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/0f54a30c3360408aa5fa41ed38c057b5) on AP Classroom can be assigned as a formative assessment for this lesson.\n\nAdditionally, the following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.5\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/4/topic/4) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**What is casting useful for in a program?**\n\nStudents have previously learned that dividing two `int` values results in an `int` value and that Java treats a value based on the declared data type. In this lesson, students learn about casting operators and how they can be used to temporarily convert a value to a different type. They explore the effect of using the `(int)` and `(double)` casting operators on a value and expression and experiment with using these operators to return a value of a desired data type. Students also learn how to use casting operators to round a `double` value to the nearest integer.",
         "preparation": "* **(Optional)** Print copies of the U4L4 Guided Notes (one for each student)\n* Preview the *Casting* video\n* Print copies of the Investigating Casting handout (one for each student)\n* Print copies of the Dataset Summaries handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-4-casting-and-rounding/37900) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What is casting useful for in a program?**\n\nYou have previously learned that dividing two `int` values results in an `int` value and that Java treats a value based on the declared data type. In this lesson, you learn about casting operators and how they can be used to temporarily convert a value to a different type. You explore the effect of using the `(int)` and `(double)` casting operators on a value and expression and experiment with using these operators to return a value of a desired data type. You also learn how to use casting operators to round a `double` value to the nearest integer."
@@ -172,7 +173,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.9\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/4/topic/5) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U4L5 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/bb763833e7764eeb8b8ef2564085e67c) on AP Classroom can be assigned as a formative assessment for this lesson.\n\nAdditionally, the following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.9\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/4/topic/5) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I generate and use random numbers?**\n\nStudents learned about the `Math` class in the previous lesson and explored using some of its methods to perform calculations. In this lesson, students learn about the functionality of `Math.random()` and discover its benefits and limitations. Students consider how they can use `Math.random()` with casting operators to generate random numbers within a specific range and consider how random is used in programs they use every day. They then practice generating and using random numbers within specified ranges and retrieving random elements from a 1D array.",
         "preparation": "* **(Optional)** Print copies of the U4L5 Guided Notes (one for each student)\n* Preview the *Random Numbers* video\n* Gather the Dataset Summaries handouts collected in Lesson 4\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-5-random/37901) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I generate and use random numbers?**\n\nYou learned about the `Math` class in the previous lesson and explored using some of its methods to perform calculations. In this lesson, you learn about the functionality of `Math.random()` and discover its benefits and limitations. You consider how you can use `Math.random()` with casting operators to generate random numbers within a specific range and consider how random is used in programs you use every day. You then practice generating and using random numbers within specified ranges and retrieving random elements from a 1D array."
@@ -191,7 +192,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/4/topic/6) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U4L6 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/6af03548c4b24dcb92f5bb01b547e900) on AP Classroom can be assigned as a formative assessment for this lesson.\n\nAdditionally, the following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/4/topic/6) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I check if two objects are equal?**\n\nIn this lesson, students discover the difference between comparing primitive values and object references. Students learn that two object references are considered aliases when they both reference the same object and how to identify aliases or `null` values using the `==` and `!=` operators. They revisit the `Object` class and learn how to override the `equals()` method to determine whether two instances of a class are equivalent. Students then practice overriding the `equals()` method in a class and comparing objects for equality.",
         "preparation": "* **(Optional)** Print copies of the U4L6 Guided Notes (one for each student)\n* Preview the *Aliasing* and *The equals() Method* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-6-object-aliases-and-equality/37902) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I check if two objects are equal?**\n\nIn this lesson, you discover the difference between comparing primitive values and object references. You learn that two object references are considered aliases when they both reference the same object and how to identify aliases or `null` values using the `==` and `!=` operators. You revisit the `Object` class and learn how to override the `equals()` method to determine whether two instances of a class are equivalent. You then practice overriding the `equals()` method in a class and comparing objects for equality."
@@ -229,7 +230,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.5\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/4/topic/8) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U4L8 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/a5489bf2b4c24e04963124a059089932) on AP Classroom can be assigned as a formative assessment for this lesson.\n\nAdditionally, the following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.5\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/4/topic/8) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can logical operators be used to evaluate multiple conditions?**\n\nStudents have previously learned to use the NOT ( `!` ) operator to reverse the outcome of a Boolean expression. In this lesson, they explore the use of the AND ( `&&` ) and OR ( `||` ) operators and how these can be used instead of nested `if` statements to test multiple conditions. Students learn about short-circuit evaluation and practice using truth tables to evaluate a Boolean expression involving logical operators.",
         "preparation": "* **(Optional)** Print copies of the U4L8 Guided Notes (one for each student)\n* Print copies of the Truth Tables handout (one for each student)\n* Gather the Dataset Summaries handouts collected in Lesson 5\n* Print copies of the Finding Patterns handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-8-logical-operators/37904) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can logical operators be used to evaluate multiple conditions?**\n\nYou have previously learned to use the NOT ( `!` ) operator to reverse the outcome of a Boolean expression. In this lesson, you explore the use of the AND ( `&&` ) and OR ( `||` ) operators and how these can be used instead of nested `if` statements to test multiple conditions. You learn about short-circuited evaluation and practice using truth tables to evaluate a Boolean expression involving logical operators."
@@ -248,7 +249,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U4L9 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/4a9733ac2b514b9088ab7c872bdb53a9) on AP Classroom can be assigned as a formative assessment for this lesson.\n\nAdditionally, the following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**What are De Morgan's Laws?**\n\nIn this lesson, students learn about De Morgan's Laws and how they are applied to Boolean expressions. They explore how equivalent Boolean expressions evaluate to the same value in all cases. Students then use truth tables to evaluate compound Boolean expressions and prove De Morgan's Laws.",
         "preparation": "* **(Optional)** Print copies of the U4L9 Guided Notes (one for each student)\n* Print copies of the De Morgan's Laws handout (one for each student)\n* Print the De Morgan's Laws Stations resource\n* Create stations around the classroom as indicated on the De Morgan's Laws Stations resource\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-9-de-morgans-laws/37905) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What are De Morgan's Laws?**\n\nYou have learned to use logical operators to create compound Boolean expressions. In this lesson, you learn about De Morgan's Laws and how they are applied to Boolean expressions. You explore how equivalent Boolean expressions evaluate to the same value in all cases. You then use truth tables to evaluate compound Boolean expressions and prove De Morgan's Laws."
@@ -267,7 +268,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/4/topic/10) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U4L10 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/4a9733ac2b514b9088ab7c872bdb53a9) on AP Classroom can be assigned as a formative assessment for this lesson.\n\nAdditionally, the following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unit/4/topic/10) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I specify different outcomes for different conditions?**\n\nIn this lesson, students expand their knowledge of selection statements to evaluate and implement multi-selection statements. They explore the functionality of multi-selection statements and learn to use these to test a combination of conditions. Students then practice writing algorithms using multi-selection statements to solve problems.",
         "preparation": "* **(Optional)** Print copies of the U4L10 Guided Notes (one for each student)\n* Preview the *Multi-Selection Statements* video\n* Print copies of the Unit 4 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-4-10-multi-selection-statements/37906) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I specify different outcomes for different conditions?**\n\nIn this lesson, you expand your knowledge of selection statements to evaluate and implement multi-selection statements. You explore the functionality of multi-selection statements and learn to use these to test a combination of conditions. You then practice writing algorithms using multi-selection statements to solve problems."
@@ -4749,6 +4750,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L1_2024"
+        ],
         "progression": "Predict and Run: The Theater"
       },
       "bonus": false,
@@ -4771,6 +4775,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L2_2024"
+        ],
         "progression": "Investigate and Modify: The Theater"
       },
       "bonus": false,
@@ -4793,6 +4800,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L3_2024"
+        ],
         "progression": "Practice: Creating Drawings and Animations"
       },
       "bonus": false,
@@ -4815,6 +4825,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L4_2024"
+        ],
         "progression": "Practice: Creating Drawings and Animations"
       },
       "bonus": false,
@@ -4837,6 +4850,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L5_2024"
+        ],
         "progression": "Practice: Creating Drawings and Animations"
       },
       "bonus": false,
@@ -4859,6 +4875,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L6_2024"
+        ],
         "progression": "Practice: Creating Drawings and Animations"
       },
       "bonus": false,
@@ -4881,6 +4900,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L1-L7_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4903,6 +4925,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L1_2024"
+        ],
         "progression": "Predict and Run: Static Variables and Methods"
       },
       "bonus": false,
@@ -4925,6 +4950,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L2_2024"
+        ],
         "progression": "Investigate and Modify: The static Keyword"
       },
       "bonus": false,
@@ -4947,6 +4975,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L3_2024"
+        ],
         "progression": "Investigate and Modify: The static Keyword"
       },
       "bonus": false,
@@ -4969,6 +5000,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L4_2024"
+        ],
         "progression": "Investigate and Modify: The static Keyword"
       },
       "bonus": false,
@@ -4991,6 +5025,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L5_2024"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -5013,6 +5050,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L6_2024"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -5035,6 +5075,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L7_2024"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -5057,6 +5100,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L8_2024"
+        ],
         "progression": "Practice: Static Variables and Methods"
       },
       "bonus": false,
@@ -5079,6 +5125,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L2-L9_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5101,6 +5150,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L1_2024"
+        ],
         "progression": "Predict and Run: The Math Class"
       },
       "bonus": false,
@@ -5123,6 +5175,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L2_2024"
+        ],
         "progression": "Investigate and Modify: The Math Class"
       },
       "bonus": false,
@@ -5145,6 +5200,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L3_2024"
+        ],
         "progression": "Practice: The Math Class"
       },
       "bonus": false,
@@ -5167,6 +5225,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L4_2024"
+        ],
         "progression": "Practice: The Math Class"
       },
       "bonus": false,
@@ -5189,6 +5250,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L5_2024"
+        ],
         "progression": "Practice: The Math Class"
       },
       "bonus": false,
@@ -5211,6 +5275,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L6_2024"
+        ],
         "progression": "Practice: The Math Class"
       },
       "bonus": false,
@@ -5233,6 +5300,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L7_2024"
+        ],
         "progression": "Practice: The Math Class"
       },
       "bonus": false,
@@ -5255,6 +5325,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L3-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5277,6 +5350,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L1_2024"
+        ],
         "progression": "Investigate and Modify: Casting"
       },
       "bonus": false,
@@ -5299,6 +5375,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L2_2024"
+        ],
         "progression": "Investigate and Modify: Division"
       },
       "bonus": false,
@@ -5321,6 +5400,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L3_2024"
+        ],
         "progression": "Investigate and Modify: Rounding"
       },
       "bonus": false,
@@ -5343,6 +5425,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L4-L4_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5365,6 +5450,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L1_2024"
+        ],
         "progression": "Predict and Run: Random Numbers"
       },
       "bonus": false,
@@ -5387,6 +5475,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L2_2024"
+        ],
         "progression": "Investigate and Modify: Random Numbers"
       },
       "bonus": false,
@@ -5409,6 +5500,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L3_2024"
+        ],
         "progression": "Investigate and Modify: Random Numbers"
       },
       "bonus": false,
@@ -5431,6 +5525,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L4_2024"
+        ],
         "progression": "Practice: Using Random Numbers"
       },
       "bonus": false,
@@ -5453,6 +5550,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L5_2024"
+        ],
         "progression": "Practice: Using Random Numbers"
       },
       "bonus": false,
@@ -5475,6 +5575,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L6_2024"
+        ],
         "progression": "Practice: Using Random Numbers"
       },
       "bonus": false,
@@ -5497,6 +5600,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L5-L7_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5519,6 +5625,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L1_2024"
+        ],
         "progression": "Predict and Run: Comparing Objects"
       },
       "bonus": false,
@@ -5541,6 +5650,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L2_2024"
+        ],
         "progression": "Investigate and Modify: Comparing Objects"
       },
       "bonus": false,
@@ -5563,6 +5675,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L3_2024"
+        ],
         "progression": "Investigate and Modify: Comparing Objects"
       },
       "bonus": false,
@@ -5585,6 +5700,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L4_2024"
+        ],
         "progression": "Investigate and Modify: Comparing Objects"
       },
       "bonus": false,
@@ -5607,6 +5725,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L5_2024"
+        ],
         "progression": "Practice: The equals() Method"
       },
       "bonus": false,
@@ -5629,6 +5750,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L6_2024"
+        ],
         "progression": "Practice: The equals() Method"
       },
       "bonus": false,
@@ -5651,6 +5775,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L7_2024"
+        ],
         "progression": "Practice: The equals() Method"
       },
       "bonus": false,
@@ -5673,6 +5800,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L6-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5695,6 +5825,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L1_2024"
+        ],
         "progression": "Predict and Run: Nested if Statements"
       },
       "bonus": false,
@@ -5717,6 +5850,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L2_2024"
+        ],
         "progression": "Investigate and Modify: Nested if Statements"
       },
       "bonus": false,
@@ -5739,6 +5875,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L3_2024"
+        ],
         "progression": "Investigate and Modify: Nested if Statements"
       },
       "bonus": false,
@@ -5761,6 +5900,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L4_2024"
+        ],
         "progression": "Practice: Nested if Statements"
       },
       "bonus": false,
@@ -5783,6 +5925,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L5_2024"
+        ],
         "progression": "Practice: Nested if Statements"
       },
       "bonus": false,
@@ -5805,6 +5950,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L6_2024"
+        ],
         "progression": "Practice: Nested if Statements"
       },
       "bonus": false,
@@ -5827,6 +5975,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L7-L7_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5849,6 +6000,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L1_2024"
+        ],
         "progression": "Predict and Run: Logical Operators"
       },
       "bonus": false,
@@ -5871,6 +6025,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L2_2024"
+        ],
         "progression": "Investigate and Modify: Logical Operators"
       },
       "bonus": false,
@@ -5893,6 +6050,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L3_2024"
+        ],
         "progression": "Investigate and Modify: Logical Operators"
       },
       "bonus": false,
@@ -5915,6 +6075,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L4_2024"
+        ],
         "progression": "Investigate and Modify: Logical Operators"
       },
       "bonus": false,
@@ -5937,6 +6100,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L5 Finding Patterns_2024"
+        ],
         "progression": "Finding Patterns"
       },
       "bonus": false,
@@ -5959,6 +6125,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L8-L6_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5981,6 +6150,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L9-L1_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6003,6 +6175,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L1_2024"
+        ],
         "progression": "Predict and Run: Multi-Selection Statements"
       },
       "bonus": false,
@@ -6025,6 +6200,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L2_2024"
+        ],
         "progression": "Investigate and Modify: Multi-Selection Statements"
       },
       "bonus": false,
@@ -6047,6 +6225,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L3_2024"
+        ],
         "progression": "Investigate and Modify: Multi-Selection Statements"
       },
       "bonus": false,
@@ -6069,6 +6250,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L4_2024"
+        ],
         "progression": "Investigate and Modify: Multi-Selection Statements"
       },
       "bonus": false,
@@ -6091,6 +6275,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L5_2024"
+        ],
         "progression": "Practice: Multi-Selection Statements"
       },
       "bonus": false,
@@ -6113,6 +6300,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L6_2024"
+        ],
         "progression": "Practice: Multi-Selection Statements"
       },
       "bonus": false,
@@ -6135,6 +6325,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L7_2024"
+        ],
         "progression": "Practice: Multi-Selection Statements"
       },
       "bonus": false,
@@ -6157,6 +6350,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4L10-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6179,6 +6375,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4 Abstract Data Art Project_2024"
+        ],
         "progression": "Abstract Data Art Project"
       },
       "bonus": false,
@@ -6201,6 +6400,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 4 Assessment_2024"
+        ],
         "progression": "Unit 4 Assessment"
       },
       "bonus": false,
@@ -6223,6 +6425,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa4_2024"
+        ],
         "progression": "Unit 4 Survey"
       },
       "bonus": false,
@@ -6245,6 +6450,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U4 Abstract Data Art Project 1-Day_2024"
+        ],
         "progression": "Abstract Data Art Project"
       },
       "bonus": false,
@@ -6267,6 +6475,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6288,6 +6499,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox_2024"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -6310,6 +6524,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox_2024"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -6332,6 +6549,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Theater Sandbox_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7613,7 +7833,7 @@
     },
     {
       "name": "Abstract Data Art Project",
-      "url": "https://docs.google.com/presentation/d/1p0XTkK0jPFt2ki-gOuNXzLHhR6AXxvX9eewmGhyfjdk/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1J-yIJtwo-Fgjv4FXQHgR2yBjLOjtmjXlRuGsavEjB50/edit?usp=drive_link",
       "key": "abstract_data_art_project",
       "properties": {
         "audience": "Verified Teacher",
@@ -7625,7 +7845,7 @@
     },
     {
       "name": "Abstract Data Art Project",
-      "url": "https://docs.google.com/presentation/d/1rWRCD67ZSGoG9npnStCWbDbAY2_OGgEkB7_i959w50k/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1TnCKdOqwxX2fLM1ZIsKzXKq3U59OoIHb8XwHqAMYCXU/edit?usp=drive_link",
       "key": "abstract_data_art_project_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -7707,7 +7927,7 @@
     },
     {
       "name": "BingoCaller FRQ",
-      "url": "https://docs.google.com/presentation/d/1zWknOZk_WgBVORYUGyRtT6Wq6EpzPzPo4rAoEAMTtxA/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1u9F_mzarc2fW95xAOkpXer3wu-LSNaZHDRAd4MT5qNM/edit?usp=drive_link",
       "key": "bingocaller_frq",
       "properties": {
         "audience": "Verified Teacher",
@@ -7757,7 +7977,7 @@
     },
     {
       "name": "Casting and Rounding",
-      "url": "https://docs.google.com/presentation/d/1Ov571dOvLtWGz_nmIh_SIx76ANF20kqmTqlBviyfH8E/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1wLMEUidX-HchvtoKTcAzVYFZ4HU0EWEY2TDL9a0toKY/edit?usp=drive_link",
       "key": "casting_and_rounding",
       "properties": {
         "audience": "Verified Teacher",
@@ -7781,11 +8001,9 @@
     },
     {
       "name": "CSA Unit 4 Slides",
-      "url": "https://docs.google.com/presentation/d/1fQ5U_CHAs_Mbgc47Cf9CdH-HU12llSLl9N7_fiSSJWg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1nEifZ178Au-iZFWFHbtfGRdby_sV3bopL_rYK2-reXg/edit?usp=drive_link",
       "key": "csa_unit_4_slides",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csa_unit_4_slides"
@@ -7818,7 +8036,7 @@
     },
     {
       "name": "De Morgan's Laws",
-      "url": "https://docs.google.com/presentation/d/1moTgZvwiGc5l2vfEDO6xK63kC_rpltGNzmhMGUWOQxo/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1tMkznKULU2jaOdm8asJrwHGwUTESjPNab4U2Mr3126I/edit?usp=drive_link",
       "key": "de_morgan_s_laws",
       "properties": {
         "audience": "Verified Teacher",
@@ -7918,7 +8136,7 @@
     },
     {
       "name": "Logical Operators",
-      "url": "https://docs.google.com/presentation/d/1JyK6boBm2ufia8OOYhf1mrartpFUYOsXkCzM5LTTivY/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1tqD0Ntbv_FZlrQ_8o8MqUR3N1viaw-3GrBQWTdmYD0Q/edit?usp=drive_link",
       "key": "logical_operators",
       "properties": {
         "audience": "Verified Teacher",
@@ -7943,7 +8161,7 @@
     },
     {
       "name": "Multi-Selection Statements",
-      "url": "https://docs.google.com/presentation/d/1yHCPp6jI7jwmXtn4FCh8KBGSd3EkpmQPnRWxb6SIo1o/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1HqmMQhpOqCISz9lFPWko9pWje3cm0de1ctoGANd_dlI/edit?usp=drive_link",
       "key": "multi-selection_statements",
       "properties": {
         "audience": "Verified Teacher",
@@ -7967,7 +8185,7 @@
     },
     {
       "name": "Nested If Statements",
-      "url": "https://docs.google.com/presentation/d/1k8IMh1PiFVilw-Oqi-AiWbySFzbVoUWVnmkwG_v6ujQ/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1KCzuow1Dne_k3xePknuKsSDKmjEXcbsomPTMaa9c2nM/edit?usp=drive_link",
       "key": "nested_if_statements",
       "properties": {
         "audience": "Verified Teacher",
@@ -7979,7 +8197,7 @@
     },
     {
       "name": "Object Aliases and Equality",
-      "url": "https://docs.google.com/presentation/d/1RLoDviznF_MliNGpxO-Ao7T7HyEgzV52VWV6m2H7Eag/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1JjCoqrDekU3vaPna_juNk5PlX8oKnWAa9p_znnsamT0/edit?usp=drive_link",
       "key": "object_aliases_and_equality",
       "properties": {
         "audience": "Verified Teacher",
@@ -7991,7 +8209,7 @@
     },
     {
       "name": "Random",
-      "url": "https://docs.google.com/presentation/d/10Oi5yzHeycikvA4BgJxuD1FDT-drSB976PN76_2Kx2U/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1f9l_HWwb1dykKJnwb_JIPbNIc-G5xAH9Jj5dfX4UWGo/edit?usp=drive_link",
       "key": "random",
       "properties": {
         "audience": "Verified Teacher",
@@ -8039,7 +8257,7 @@
     },
     {
       "name": "Static Variables and Methods",
-      "url": "https://docs.google.com/presentation/d/1GUF7kIY5-CqKawO2Ljc-9xLQCSn3peGS3fZ8d_aZBo4/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1pFHIFRe2rzBVJPGArDR-cFQwSLWTEhXjzJxAqpLdQTM/edit?usp=drive_link",
       "key": "static_variables_and_methods",
       "properties": {
         "audience": "Verified Teacher",
@@ -8063,7 +8281,7 @@
     },
     {
       "name": "The Math Class",
-      "url": "https://docs.google.com/presentation/d/1bUhXmjeEfmXuiiTRwJLtCuK2BF-DEQposRXgYY66wRg/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1OIoiqCPw2Gk2WN_CAwM4chSsUeusQk3SlNoIi2aqyfQ/edit?usp=drive_link",
       "key": "the_math_class",
       "properties": {
         "audience": "Verified Teacher",
@@ -8088,7 +8306,7 @@
     },
     {
       "name": "The Theater",
-      "url": "https://docs.google.com/presentation/d/1USdmfj6RRnhnVG4G9lb9cyxg4yBpjvYSE5a2V1cAeWs/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1ZfjfjlDL91iZagG40QSZMeENQqcjkPdmtpnnl7AKG7I/edit?usp=drive_link",
       "key": "the_theater",
       "properties": {
         "audience": "Verified Teacher",
@@ -8373,7 +8591,7 @@
     },
     {
       "name": "Unit 4 Assessment",
-      "url": "https://docs.google.com/presentation/d/1kLbs0Ppy8BTV332assDj3KoM4UzbUEM11dkhDMcAm5s/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1kGYRJUgH_-hmIfm_YV089zny4qieWNNMkkEedYb2Bxc/edit?usp=drive_link",
       "key": "unit_4_assessment",
       "properties": {
         "audience": "Verified Teacher",

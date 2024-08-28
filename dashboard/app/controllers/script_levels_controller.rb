@@ -11,6 +11,7 @@ class ScriptLevelsController < ApplicationController
   before_action :disable_session_for_cached_pages
   before_action :redirect_admin_from_labs, only: [:reset, :next, :show, :lesson_extras]
   before_action :set_redirect_override, only: [:show]
+  before_action :check_script_id_is_name, only: [:show, :lesson_extras]
 
   # Return true if request is one that can be publicly cached.
   def cachable_request?(request)
@@ -64,8 +65,11 @@ class ScriptLevelsController < ApplicationController
     @current_user = current_user && User.includes(:teachers).where(id: current_user.id).first
     authorize! :read, ScriptLevel
     @script = ScriptLevelsController.get_script(request)
+    @script_level = ScriptLevelsController.get_script_level(@script, params)
 
-    if @script.is_deprecated
+    # Check if the script or current level is deprecated
+    level_is_deprecated = @script_level&.level_deprecated?
+    if @script.is_deprecated || level_is_deprecated
       return render 'errors/deprecated_course'
     end
 
@@ -103,7 +107,6 @@ class ScriptLevelsController < ApplicationController
 
     @public_caching = configure_caching(@script)
 
-    @script_level = ScriptLevelsController.get_script_level(@script, params)
     raise ActiveRecord::RecordNotFound unless @script_level
 
     if @script.login_required? || (!params.nil? && params[:login_required] == "true")
@@ -170,7 +173,7 @@ class ScriptLevelsController < ApplicationController
       level = @level.contained_levels.any? ? @level.contained_levels.first : @level
 
       # TODO: Change/remove this check as we add support for more level types.
-      if level.is_a?(FreeResponse) || level.is_a?(Multi)
+      if level.is_a?(FreeResponse) || level.is_a?(Multi) || level.predict_level?
         @responses = UserLevel.where(level: level, user: @section&.students)
       end
     end
@@ -217,9 +220,9 @@ class ScriptLevelsController < ApplicationController
     @script_level = ScriptLevelsController.get_script_level(@script, params)
     raise ActiveRecord::RecordNotFound unless @script_level
 
-    @level = @script_level.level
+    @level = select_level
 
-    render json: @level.summarize_for_lab2_properties(@script)
+    render json: @level.summarize_for_lab2_properties(@script, @script_level, @current_user)
   end
 
   # Get a list of hidden lessons for the current users section
@@ -537,13 +540,16 @@ class ScriptLevelsController < ApplicationController
       current_user.present? &&
       (current_user.teacher? || (current_user&.sections_as_student&.any?(&:code_review_enabled?) && !current_user.code_review_groups.empty?))
 
-    # Javalab exemplar URLs include ?exemplar=true as a URL param
+    # Javalab and Code Bridge exemplar URLs include ?exemplar=true as a URL param
     if params[:exemplar]
       return render 'levels/no_access_exemplar' unless current_user&.verified_instructor?
 
       @is_viewing_exemplar = true
       exemplar_sources = @level.try(:exemplar_sources)
-      return render 'levels/no_exemplar' unless exemplar_sources
+      # Java Lab shows the no exemplar page for levels that don't have exemplar sources.
+      # Lab2 handles this on the client side to enable switching between exemplar levels
+      # without a page reload.
+      return render 'levels/no_exemplar' unless exemplar_sources || @level.uses_lab2?
 
       level_view_options(@level.id, {is_viewing_exemplar: true, exemplar_sources: exemplar_sources})
       readonly_view_options
@@ -589,6 +595,18 @@ class ScriptLevelsController < ApplicationController
     if params[:script_id] && params[:no_redirect]
       VersionRedirectOverrider.set_unit_redirect_override(session, params[:script_id])
     end
+  end
+
+  # showing script levels by script id is no longer supported. Other codepaths
+  # still need underlying helper methods to support lookup by id, so we filter
+  # out numerical ids on a per-action basis rather than removing support for
+  # ids from those methods.
+  private def check_script_id_is_name
+    # Unfortunately, scripts routes sometimes pass the name and sometimes pass
+    # the id, making params[:script_id] a misnomer when passing the name.
+    script_id = request.params[:script_id]
+    is_id = script_id.to_i.to_s == script_id.to_s
+    raise ActiveRecord::RecordNotFound if is_id
   end
 
   private def redirect_script(script, locale)

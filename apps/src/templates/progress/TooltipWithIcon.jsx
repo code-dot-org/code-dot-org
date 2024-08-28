@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactTooltip from 'react-tooltip';
-import FontAwesome from '../FontAwesome';
+
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+
 import {DOT_SIZE} from './progressStyles';
 
 /**

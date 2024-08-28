@@ -1,7 +1,7 @@
 import {WorkspaceSvg} from 'blockly';
-import {convertXmlToJson} from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
-import {commonI18n} from '@cdo/apps/types/locale';
 import {BlockInfo, FlyoutItemInfoArray} from 'blockly/core/utils/toolbox';
+
+import {commonI18n} from '@cdo/apps/types/locale';
 
 /**
  * Constructs the blocks required by the flyout for the variables category.
@@ -15,19 +15,11 @@ export function flyoutCategory(workspace: WorkspaceSvg) {
 
   const categoryBlocks = flyoutCategoryBlocks(workspace);
   blockList.push(...categoryBlocks);
-  const levelToolboxBlocks = Blockly.cdoUtils.getLevelToolboxBlocks('VARIABLE');
-  if (!levelToolboxBlocks) {
-    return [];
-  }
-  const blocksConvertedJson = convertXmlToJson(
-    levelToolboxBlocks.documentElement
-  );
-  const flyoutJson =
-    Blockly.cdoUtils.getSimplifiedStateForFlyout(blocksConvertedJson);
 
-  blockList.push(...flyoutJson);
+  // Add blocks from the level toolbox XML, if present.
+  blockList.push(...Blockly.cdoUtils.getCategoryBlocksJson('VARIABLE'));
 
-  // The may include "change [var] by" blocks with custom default values.
+  // The toolox may include "change [var] by" blocks with custom default values.
   // If any of these blocks are found, we can remove the auto-generated block.
   // Count the 'math_change' blocks in blockList.
   const mathChangeBlocksCount = blockList.filter(
@@ -49,14 +41,14 @@ export function flyoutCategory(workspace: WorkspaceSvg) {
 const getNewVariableButtonWithCallback = (workspace: WorkspaceSvg) => {
   const callbackKey = 'newVariableCallback';
   workspace.registerButtonCallback(callbackKey, () => {
-    Blockly.FieldVariable.modalPromptName(
-      commonI18n.renameThisPromptTitle(),
-      commonI18n.create(),
-      '',
-      newName => {
+    Blockly.FieldVariable.variableNamePrompt({
+      promptText: commonI18n.renameThisPromptTitle(),
+      confirmButtonLabel: commonI18n.create(),
+      defaultText: '',
+      callback: newName => {
         workspace.createVariable(newName);
-      }
-    );
+      },
+    });
   });
 
   return {

@@ -1,5 +1,9 @@
 @import 'color';
 @import '../../mixins.scss';
+@import './aichat-common.module.scss';
+
+// Constants
+$default-spacing: 4px;
 
 %full-width {
   width: 100%;
@@ -7,9 +11,27 @@
 }
 
 .modelCustomizationWorkspace {
-  height: 100%;
+  @extend %panel-section;
   display: flex;
+  flex: 1;
+  overflow: hidden;
   flex-direction: column;
+  background: $light_white;
+
+  .tabsContainer {
+    background-color: #eaebeb;
+    padding: $default-spacing $default-spacing 0 $default-spacing;
+  }
+
+  .tabPanels {
+    padding: 16px 0;
+    flex: 1;
+    overflow: hidden;
+
+    > div {
+      height: 100%;
+    }
+  }
 
   textarea {
     @extend %full-width;
@@ -27,10 +49,6 @@
     border-radius: 4px;
     border-color: $light_black;
   }
-
-  .inputContainer {
-    padding: 5px 0;
-  }
 }
 
 .horizontalFlexContainer {
@@ -42,12 +60,16 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 8px;
 }
 
 .customizationContainer {
   overflow-y: auto;
-  height: 65vh;
+  flex: 1;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .footerButtonContainer {
@@ -55,8 +77,7 @@
   justify-content: center;
   align-items: center;
   border-top: 1px solid $light_gray_200;
-  padding: 10px;
-  height: 50px;
+  padding: 10px 26px;
 }
 
 .selectedModelDropdown {
@@ -66,7 +87,8 @@
 
 .updateButton {
   width: 100%;
-  margin: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .buttonNoMargin {
@@ -77,4 +99,26 @@
 .compareModelsButton {
   padding: 5px 16px;
   margin: 10px 0;
+}
+
+.fieldLabelContainer {
+  display: flex;
+  gap: 6px;
+  align-items: baseline;
+}
+
+.fieldLabel {
+  margin: 0;
+}
+
+.saveAlertContainer {
+  height: 10px;
+}
+
+.saveAlert {
+  margin-left: 20px;
+  height: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: white;
 }

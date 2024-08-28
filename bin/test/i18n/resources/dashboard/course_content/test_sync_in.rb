@@ -55,7 +55,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     ScriptConstants.expects(:i18n?).with(script.name).in_sequence(exec_seq).returns(true)
     I18nScriptUtils.expects(:get_level_url_key).with(script, level).in_sequence(exec_seq).returns('expected_level_url')
     sync_in_instance.expects(:get_i18n_strings).with(level).in_sequence(exec_seq).returns(expected_level_i18n_strings)
-    Unit.expects(:unit_in_category?).with('hoc', script.name).in_sequence(exec_seq).returns(true)
+    script.expects(:in_initiative?).with('HOC').returns(true)
     I18nScriptUtils.expects(:unit_directory_change?).with(expected_i18n_source_dir_path, expected_i18n_source_file_path).in_sequence(exec_seq).returns(false)
     I18nScriptUtils.expects(:write_json_file).with(expected_i18n_source_file_path, {'expected_level_url' => {'expected_script_string_key' => 'expected_script_string_value'}}).in_sequence(exec_seq)
     sync_in_instance.expects(:redact_json_file).with(expected_i18n_source_file_path).in_sequence(exec_seq)
@@ -97,7 +97,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     ScriptConstants.expects(:i18n?).with(script.name).in_sequence(exec_seq).returns(true)
     I18nScriptUtils.expects(:get_level_url_key).with(script, level).in_sequence(exec_seq).returns('expected_level_url')
     sync_in_instance.expects(:get_i18n_strings).with(level).in_sequence(exec_seq).returns(expected_level_i18n_strings)
-    Unit.expects(:unit_in_category?).with('hoc', script.name).in_sequence(exec_seq).returns(false)
+    script.expects(:in_initiative?).with('HOC').in_sequence(exec_seq).returns(false)
     script.expects(:unversioned?).in_sequence(exec_seq).returns(true)
     I18nScriptUtils.expects(:unit_directory_change?).with(expected_i18n_source_dir_path, expected_i18n_source_file_path).in_sequence(exec_seq).returns(false)
     I18nScriptUtils.expects(:write_json_file).with(expected_i18n_source_file_path, {'expected_level_url' => {'expected_script_string_key' => 'expected_script_string_value'}}).in_sequence(exec_seq)
@@ -140,7 +140,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     ScriptConstants.expects(:i18n?).with(script.name).in_sequence(exec_seq).returns(true)
     I18nScriptUtils.expects(:get_level_url_key).with(script, level).in_sequence(exec_seq).returns('expected_level_url')
     sync_in_instance.expects(:get_i18n_strings).with(level).in_sequence(exec_seq).returns(expected_level_i18n_strings)
-    Unit.expects(:unit_in_category?).with('hoc', script.name).in_sequence(exec_seq).returns(false)
+    script.expects(:in_initiative?).with('HOC').in_sequence(exec_seq).returns(false)
     script.expects(:unversioned?).in_sequence(exec_seq).returns(false)
     I18nScriptUtils.expects(:unit_directory_change?).with(expected_i18n_source_dir_path, expected_i18n_source_file_path).in_sequence(exec_seq).returns(false)
     I18nScriptUtils.expects(:write_json_file).with(expected_i18n_source_file_path, {'expected_level_url' => {'expected_script_string_key' => 'expected_script_string_value'}}).in_sequence(exec_seq)
@@ -183,7 +183,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     ScriptConstants.expects(:i18n?).with(script.name).in_sequence(exec_seq).returns(true)
     I18nScriptUtils.expects(:get_level_url_key).with(script, level).in_sequence(exec_seq).returns('expected_level_url')
     sync_in_instance.expects(:get_i18n_strings).with(level).in_sequence(exec_seq).returns(expected_level_i18n_strings)
-    Unit.expects(:unit_in_category?).with('hoc', script.name).in_sequence(exec_seq).returns(false)
+    script.expects(:in_initiative?).with('HOC').in_sequence(exec_seq).returns(false)
     script.expects(:unversioned?).in_sequence(exec_seq).returns(false)
     I18nScriptUtils.expects(:unit_directory_change?).with(expected_i18n_source_dir_path, expected_i18n_source_file_path).in_sequence(exec_seq).returns(true)
     I18nScriptUtils.expects(:write_json_file).with(expected_i18n_source_file_path, {'expected_level_url' => {'expected_script_string_key' => 'expected_script_string_value'}}).never
@@ -226,7 +226,7 @@ class I18n::Resources::Dashboard::CourseContent::SyncInTest < Minitest::Test
     ScriptConstants.expects(:i18n?).with(script.name).in_sequence(exec_seq).returns(false)
     I18nScriptUtils.expects(:get_level_url_key).with(script, level).never.returns('expected_level_url')
     sync_in_instance.expects(:get_i18n_strings).with(level).never.returns(expected_level_i18n_strings)
-    Unit.expects(:unit_in_category?).with('hoc', script.name).never.returns(false)
+    script.expects(:in_initiative?).with('HOC').never.returns(false)
     script.expects(:unversioned?).never.returns(false)
     I18nScriptUtils.expects(:unit_directory_change?).with(expected_i18n_source_dir_path, expected_i18n_source_file_path).never.returns(false)
     I18nScriptUtils.expects(:write_json_file).with(expected_i18n_source_file_path, {'expected_level_url' => {'expected_script_string_key' => 'expected_script_string_value'}}).never
@@ -740,6 +740,328 @@ describe I18n::Resources::Dashboard::CourseContent::SyncIn do
 
   around do |test|
     FakeFS.with_fresh {test.call}
+  end
+
+  describe '#get_i18n_strings' do
+    let(:get_i18n_strings) {described_instance.send(:get_i18n_strings, level)}
+
+    context 'when level has Categories' do
+      let(:level) {FactoryBot.build :level, toolbox_blocks: toolbox_blocks}
+
+      let(:toolbox_blocks) do
+        <<~XML.strip
+          <xml>
+            <category name="expected_category_name"/>
+          </xml>
+        XML
+      end
+
+      it 'includes "block_categories"' do
+        _(get_i18n_strings['block_categories']).must_equal(
+          'expected_category_name' => 'expected_category_name',
+        )
+      end
+    end
+
+    context 'when level has Functions' do
+      let(:level) {FactoryBot.build(:level, solution_blocks: solution_blocks)}
+
+      let(:solution_blocks) do
+        <<~XML.strip
+          <xml>
+            <block type="procedures_defnoreturn">
+              <title name="NAME">expected_func_name</title>
+              <mutation>
+                <description>expected_func_desc</description>
+                <arg name="expected_func_param1"/>
+                <arg name="expected_func_param2"/>
+              </mutation>
+            </block>
+          </xml>
+        XML
+      end
+
+      it 'includes "function_definitions"' do
+        _(get_i18n_strings['function_definitions']).must_equal(
+          'expected_func_name' => {
+            'name' => 'expected_func_name',
+            'description' => 'expected_func_desc',
+            'parameters' => {
+              'expected_func_param1' => 'expected_func_param1',
+              'expected_func_param2' => 'expected_func_param2',
+            }
+          }
+        )
+      end
+
+      context 'with name in "field" tag' do
+        let(:solution_blocks) do
+          <<~XML.strip
+            <xml>
+              <block type="procedures_defnoreturn">
+                <field name="NAME">expected_func_name</title>
+                <mutation>
+                  <description>expected_func_desc</description>
+                  <arg name="expected_func_param"/>
+                </mutation>
+              </block>
+            </xml>
+          XML
+        end
+
+        it 'includes "function_definitions"' do
+          _(get_i18n_strings['function_definitions']).must_equal(
+            'expected_func_name' => {
+              'name' => 'expected_func_name',
+              'description' => 'expected_func_desc',
+              'parameters' => {
+                'expected_func_param' => 'expected_func_param',
+              }
+            }
+          )
+        end
+      end
+
+      context 'without name tag' do
+        let(:solution_blocks) do
+          <<~XML.strip
+            <xml>
+              <block type="procedures_defnoreturn">
+                <mutation>
+                  <description>expected_func_desc</description>
+                  <arg name="expected_func_param"/>
+                </mutation>
+              </block>
+            </xml>
+          XML
+        end
+
+        it 'does not include "function_definitions"' do
+          _(get_i18n_strings['function_definitions']).must_be_nil
+        end
+      end
+    end
+
+    context 'when level has Spritelab behaviors' do
+      let(:level) {FactoryBot.build(:level, start_blocks: start_blocks)}
+
+      let(:start_blocks) do
+        <<~XML.strip
+          <xml>
+            <block type="behavior_definition">
+              <title name="NAME">expected_behavior_name</title>
+              <mutation>
+                <description>expected_behavior_desc</description>
+              </mutation>
+            </block>
+          </xml>
+        XML
+      end
+
+      it 'includes "behavior_names"' do
+        _(get_i18n_strings['behavior_names']).must_equal(
+          'expected_behavior_name' => 'expected_behavior_name',
+        )
+      end
+
+      it 'includes "behavior_descriptions"' do
+        _(get_i18n_strings['behavior_descriptions']).must_equal(
+          'expected_behavior_desc' => 'expected_behavior_desc',
+        )
+      end
+
+      context 'with name in "field" tag' do
+        let(:start_blocks) do
+          <<~XML.strip
+            <xml>
+              <block type="behavior_definition">
+                <field name="NAME">expected_behavior_name</title>
+              </block>
+            </xml>
+          XML
+        end
+
+        it 'includes "behavior_names"' do
+          _(get_i18n_strings['behavior_names']).must_equal(
+            'expected_behavior_name' => 'expected_behavior_name',
+          )
+        end
+      end
+
+      context 'without name tag and mutation/description tag' do
+        let(:start_blocks) do
+          <<~XML.strip
+            <xml>
+              <block type="behavior_definition" />
+            </xml>
+          XML
+        end
+
+        it 'does not include "behavior_names"' do
+          _(get_i18n_strings['behavior_names']).must_be_nil
+        end
+
+        it 'does not include "behavior_descriptions"' do
+          _(get_i18n_strings['behavior_descriptions']).must_be_nil
+        end
+      end
+    end
+
+    context 'when level has Variable gets' do
+      let(:level) {FactoryBot.build(:level, start_blocks: start_blocks)}
+
+      let(:start_blocks) do
+        <<~XML.strip
+          <xml>
+            <block type="variables_get">
+              <title name="VAR">expected_var_get_name</title>
+            </block>
+          </xml>
+        XML
+      end
+
+      it 'includes "variable_names"' do
+        _(get_i18n_strings['variable_names']).must_equal(
+          'expected_var_get_name' => 'expected_var_get_name',
+        )
+      end
+
+      context 'with name in "field" tag' do
+        let(:start_blocks) do
+          <<~XML.strip
+            <xml>
+              <block type="variables_get">
+                <field name="VAR">expected_var_get_name</title>
+              </block>
+            </xml>
+          XML
+        end
+
+        it 'includes "variable_names"' do
+          _(get_i18n_strings['variable_names']).must_equal(
+            'expected_var_get_name' => 'expected_var_get_name',
+          )
+        end
+      end
+
+      context 'without name in tag' do
+        let(:start_blocks) do
+          <<~XML.strip
+            <xml>
+              <block type="variables_get" />
+            </xml>
+          XML
+        end
+
+        it 'does not include "variable_names"' do
+          _(get_i18n_strings['variable_names']).must_be_nil
+        end
+      end
+    end
+
+    context 'when level has Variable sets' do
+      let(:level) {FactoryBot.build(:level, start_blocks: start_blocks)}
+
+      let(:start_blocks) do
+        <<~XML.strip
+          <xml>
+            <block type="variables_set">
+              <title name="VAR">expected_var_set_name</title>
+            </block>
+          </xml>
+        XML
+      end
+
+      it 'includes "variable_names"' do
+        _(get_i18n_strings['variable_names']).must_equal(
+          'expected_var_set_name' => 'expected_var_set_name',
+        )
+      end
+
+      context 'with name in "field" tag' do
+        let(:start_blocks) do
+          <<~XML.strip
+            <xml>
+              <block type="variables_set">
+                <field name="VAR">expected_var_set_name</title>
+              </block>
+            </xml>
+          XML
+        end
+
+        it 'includes "variable_names"' do
+          _(get_i18n_strings['variable_names']).must_equal(
+            'expected_var_set_name' => 'expected_var_set_name',
+          )
+        end
+      end
+
+      context 'without name in tag' do
+        let(:start_blocks) do
+          <<~XML.strip
+            <xml>
+              <block type="variables_set" />
+            </xml>
+          XML
+        end
+
+        it 'does not include "variable_names"' do
+          _(get_i18n_strings['variable_names']).must_be_nil
+        end
+      end
+    end
+
+    context 'when level has Parameter gets' do
+      let(:level) {FactoryBot.build(:level, start_blocks: start_blocks)}
+
+      let(:start_blocks) do
+        <<~XML.strip
+          <xml>
+            <block type="parameters_get">
+              <title name="VAR">expected_param_get_name</title>
+            </block>
+          </xml>
+        XML
+      end
+
+      it 'includes "parameter_names"' do
+        _(get_i18n_strings['parameter_names']).must_equal(
+          'expected_param_get_name' => 'expected_param_get_name',
+        )
+      end
+
+      context 'with name in "field" tag' do
+        let(:start_blocks) do
+          <<~XML.strip
+            <xml>
+              <block type="parameters_get">
+                <field name="VAR">expected_param_get_name</title>
+              </block>
+            </xml>
+          XML
+        end
+
+        it 'includes "parameter_names"' do
+          _(get_i18n_strings['parameter_names']).must_equal(
+            'expected_param_get_name' => 'expected_param_get_name',
+          )
+        end
+      end
+
+      context 'without name in tag' do
+        let(:start_blocks) do
+          <<~XML.strip
+            <xml>
+              <block type="parameters_get" />
+            </xml>
+          XML
+        end
+
+        it 'does not include "parameter_names"' do
+          _(get_i18n_strings['parameter_names']).must_be_nil
+        end
+      end
+    end
   end
 
   describe '#redact_json_file' do

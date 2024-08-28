@@ -17,9 +17,11 @@ theme: responsive
 
 ## Minimum Supported Browsers and Platforms
 
+Počevši od srpnja 2024. ažurirat ćemo minimalne verzije potrebne za preglednike i operativne sustave. Iako stare verzije mogu i dalje raditi, nećemo moći podržati zahtjeve za ispravke pogrešaka u starijim verzijama.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Browser
@@ -40,11 +42,33 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          Platform
+          Preglednik Srpanj '24
+        </th>
+        <tr>
+          <td>Chrome 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Mobilni Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Rub 119,x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Platforma
         </th>
         <tr>
           <td>macOS 10.13</td>
@@ -62,13 +86,35 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platforma srpnja '24
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Sites to Unblock
 
-For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure the following sites are allowed and aren't blocked.
+Za najbolje iskustvo sa svim Code.org sadržajima preporučujemo da se posavjetujete s IT odjelom vaše škole ili okruga kako biste bili sigurni da su sljedeće stranice dopuštene i nisu blokirane.
 
 | Priority                                                                                                                | URL                                                                                                        |
 | ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -80,28 +126,27 @@ For the very best experience with all Code.org content, we recommend consulting 
 | **Za korištenje Internet Simulatora**                                                                                   | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Korištenje Web Lab-a**                                                                                                | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Korištenje gumba za dijeljenje u Google učionici**                                                                    | `https://apis.google.com`                                                                                  |
-| **Korištenje skupova podataka App Lab**                                                                                 | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Mobile and Tablet Support Details
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Most tablets are not supported, with the following exceptions:
+Svi tečajevi CS Discovery, CS Principles, CS A i Intro to App Lab nisu kompatibilni s tabletima ili mobilnim uređajima - potrebni su puna tipkovnica i miš (ili touchpad). Većina tableta nije podržana, uz sljedeće iznimke:
 
 - Microsoft Surface Pro with an external keyboard
 - iPad running iPadOS 13.4 or later with an external keyboard and an external mouse or touchpad
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+Svi ostali sadržaji, kao što su K-5 tečajevi (Osnove računalnih znanosti) i aktivnosti Hour of Code kompatibilni su na iPadima i drugim modernim tabletima i prijenosnim ili stolnim računalima.
 
 ### Mobile Phones
 
-Our Hour of Code activities and CS Fundamentals courses can be completed on mobile phones. While these activities are usable, they are not optimized for a mobile phone experience and have some known limitations (e.g. touch targets may be small, accessory elements may display offscreen, and text may be difficult to input using the on-screen keyboard). The CS Discoveries, CS Principles, and Intro to App Lab courses are not usable on mobile phones.
+Naše aktivnosti Sat koda i tečajevi CS Fundamentals mogu se završiti na mobilnim telefonima. Iako su ove aktivnosti upotrebljive, nisu optimizirane za iskustvo mobilnog telefona i imaju neka poznata ograničenja (npr. ciljevi dodira mogu biti mali, dodatni elementi mogu se prikazati izvan zaslona, a tekst može biti teško unositi pomoću zaslonske tipkovnice). Tečajevi CS Discovery, CS Principles i Uvod u App Lab nisu upotrebljivi na mobilnim telefonima.
 
 ## Videos
 
-We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our [online learning platform](https://studio.code.org). For schools with YouTube blocked, we attempt to display a Code.org hosted video player instead.
+Koristimo [YouTube](https://www.youtube.com) za ugradnju videozapisa u Code.org i našu [internetsku platformu za učenje](https://studio.code.org). Za škole s blokiranim uslugom YouTube pokušavamo umjesto toga prikazati video player koji hostuje Code.org.
 
 ### Can you play this video?
 
-Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
+Prije nego što započnete internetske tečajeve Code.org, testirajte reprodukciju videozapisa u nastavku kako biste bili sigurni da ste spremni.
 
 
 <!--
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+Ovo je igrač koji se koristi tijekom nastavnog plana i programa. Pokušat će prikazati videozapis putem YouTubea i, ako je YouTube blokiran, umjesto toga prikazati video hostiran Code.org pomoću našeg "rezervnog" playera.
 
 ### Video not playing?
 
-If video does not work, you can email us at support@code.org.
+Ako video ne radi, možete nam poslati e-poštu na support@code.org.
 
-However, you can still use our tutorials without video.
+Međutim, i dalje možete koristiti naše tutorijale bez videozapisa.
 
 1. We've made all our videos [available for download together](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). If your school has low bandwidth, we recommend that you download videos and show them to students on a shared screen.
 2. Integrated into our tutorials, we've added a green download link icon <img src="/images/green-download.png" width=25 height=25 /> for each video, allowing students to download individual tutorial videos.
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## Special settings for Google Apps/G-Suite users
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+Ako ste administrator G-suite, svakako provjerite koje su postavke ograničenja za YouTube. Ako ste odredili postavku "Strogo ograničeni pristup YouTubeu" ili ako vidite poruke u kojima se navodi "ovaj je videozapis ograničen", možete dodati naš kanal na odobrenu listu kanala. Pogledajte [ovaj vodič](https://support.google.com/a/answer/6245597) od Googlea da biste saznali kako dodati naš kanal na odobrenu listu. Također možete vidjeti [ovaj vodič](https://support.google.com/a/answer/6212415?hl=en) da biste saznali više o različitim postavkama i što je najbolje za vašu učionicu.
 
 ## Still having trouble?
 
-We'll help you out - just email us at support@code.org!
+Pomoći ćemo vam - samo nam pošaljite e-poštu na support@code.org!

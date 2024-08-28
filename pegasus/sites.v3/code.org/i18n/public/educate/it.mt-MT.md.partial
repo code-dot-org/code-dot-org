@@ -17,9 +17,11 @@ theme: responsive
 
 ## Minimum Supported Browsers and Platforms
 
+Nibdew f'Lulju 2024, se naġġornaw il-verżjonijiet minimi meħtieġa għall-brawżers u s-sistemi operattivi. Filwaqt li l-verżjonijiet qodma jistgħu xorta jaħdmu, aħna se nkunu nistgħu nappoġġjaw talbiet għal bug fixes fil-verżjonijiet anzjani.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Browser
@@ -40,11 +42,33 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          Platform
+          Browser Lulju '24
+        </th>
+        <tr>
+          <td>Krom 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Safari mobbli 14.x</td>
+        </tr>
+        <tr>
+          <td>Xifer 119.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Pjattaforma
         </th>
         <tr>
           <td>macOS 10.13</td>
@@ -62,13 +86,35 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Pjattaforma ta' Lulju '24
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Sites to Unblock
 
-For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure the following sites are allowed and aren't blocked.
+Għall-aħjar esperjenza bil-kontenut kollu tal-Code.org, nirrakkomandaw li tikkonsulta mal-iskola tiegħek jew id-dipartiment tal-IT tad-distrett biex tiżgura li s-siti li ġejjin huma permessi u mhumiex imblukkati.
 
 | Priority                                                                                                             | URL                                                                                                        |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -80,28 +126,27 @@ For the very best experience with all Code.org content, we recommend consulting 
 | **Biex tuża Internet Simulator**                                                                                     | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Biex tuża Web Lab**                                                                                                | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Biex tuża l-buttuna Share tal-Google Classroom**                                                                   | `https://apis.google.com`                                                                                  |
-| **Biex tuża settijiet tad-dejta tal-App Lab**                                                                        | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Mobile and Tablet Support Details
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Most tablets are not supported, with the following exceptions:
+Kollha CS Skoperti, Prinċipji CS, CS A, u Intro to App Lab korsijiet mhumiex kompatibbli ma 'pilloli jew apparat mobbli - tastiera sħiħa u maws (jew touchpad) huma meħtieġa. Il-biċċa l-kbira tal-pilloli mhumiex appoġġjati, bl-eċċezzjonijiet li ġejjin:
 
 - Microsoft Surface Pro with an external keyboard
 - iPad running iPadOS 13.4 or later with an external keyboard and an external mouse or touchpad
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+Il-kontenut l-ieħor kollu, bħal korsijiet K-5 (Fondamenti tax-Xjenza tal-Kompjuter) u l-attivitajiet tas-Siegħa tal-Kodiċi huma kompatibbli fuq iPads u pilloli moderni oħra u kompjuters laptop jew desktop.
 
 ### Mobile Phones
 
-Our Hour of Code activities and CS Fundamentals courses can be completed on mobile phones. While these activities are usable, they are not optimized for a mobile phone experience and have some known limitations (e.g. touch targets may be small, accessory elements may display offscreen, and text may be difficult to input using the on-screen keyboard). The CS Discoveries, CS Principles, and Intro to App Lab courses are not usable on mobile phones.
+L-attivitajiet tas-Siegħa tal-Kodiċi tagħna u l-korsijiet CS Fundamentals jistgħu jitlestew fuq mowbajls. Filwaqt li dawn l-attivitajiet huma użabbli, mhumiex ottimizzati għal esperjenza tat-telefon ċellulari u għandhom xi limitazzjonijiet magħrufa (eż. miri touch jistgħu jkunu żgħar, elementi aċċessorji jistgħu juru offscreen, u test jista 'jkun diffiċli biex jiddaħħal bl-użu tat-tastiera fuq l-iskrin). Il-korsijiet CS Skoperti, Prinċipji CS, u Intro to App Lab mhumiex użabbli fuq mowbajls.
 
 ## Videos
 
-We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our [online learning platform](https://studio.code.org). For schools with YouTube blocked, we attempt to display a Code.org hosted video player instead.
+Aħna nużaw [YouTube](https://www.youtube.com) biex inkorporaw vidjows fil-Code.org u l-pjattaforma tagħna [tagħlim onlajn](https://studio.code.org). Għall-iskejjel b'YouTube imblukkat, aħna nippruvaw juru plejer tal-vidjow ospitat Code.org minflok.
 
 ### Can you play this video?
 
-Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
+Qabel ma tibda l-korsijiet onlajn tal-Code.org, it-test daqq għall-vidjo hawn taħt biex tiżgura li int tajjeb biex tmur.
 
 
 <!--
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+Dan huwa l-attur użat matul il-kurrikulu. Se tipprova juri l-vidjo permezz ta 'YouTube u, jekk YouTube huwa mblukkat, turi l-vidjo ospitat Code.org billi tuża plejer “fallback” tagħna minflok.
 
 ### Video not playing?
 
-If video does not work, you can email us at support@code.org.
+Jekk il-vidjo ma jaħdimx, tista 'tibgħat email lilna fuq support@code.org.
 
-However, you can still use our tutorials without video.
+Madankollu, xorta tista 'tuża t-tutorials tagħna mingħajr vidjow.
 
 1. We've made all our videos [available for download together](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). If your school has low bandwidth, we recommend that you download videos and show them to students on a shared screen.
 2. Integrated into our tutorials, we've added a green download link icon <img src="/images/green-download.png" width=25 height=25 /> for each video, allowing students to download individual tutorial videos.
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## Special settings for Google Apps/G-Suite users
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+Jekk int amministratur G-suite, kun żgur li tivverifika x'inhuma s-settings tar-restrizzjoni tiegħek għal YouTube. Jekk speċifikajt l-issettjar “Strett Ristrett Aċċess YouTube” jew jekk tara messaġġi li jiddikjaraw 'dan il-vidjo ġie ristrett', tista 'żżid il-kanal tagħna mal-lista approvata ta' kanali. Ara [din il-gwida](https://support.google.com/a/answer/6245597) minn Google biex titgħallem dwar kif iżżid il-kanal tagħna mal-lista approvata. Tista 'wkoll tara [din il-gwida](https://support.google.com/a/answer/6212415?hl=en) biex titgħallem aktar dwar settings differenti u liema hija l-aħjar għall-klassi tiegħek.
 
 ## Still having trouble?
 
-We'll help you out - just email us at support@code.org!
+Aħna ser ngħinuk - sempliċement ibgħatilna email fuq support@code.org!

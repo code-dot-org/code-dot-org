@@ -1,10 +1,9 @@
 {
   "key": "virtual-pl-csa-summer",
   "display_name": "virtual-pl-csa-summer",
-  "category": "other",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": null,
+  "curriculum_type": "Professional Learning",
   "marketing_initiative": null,
   "grade_levels": null,
   "header": null,
@@ -13,9 +12,8 @@
   "school_subject": null,
   "device_compatibility": null,
   "description": null,
-  "professional_learning_program": null,
+  "professional_learning_program": "https://code.org/apply",
   "video": null,
   "published_date": null,
-  "self_paced_pl_course_offering_id": null,
   "self_paced_pl_course_offering_key": null
 }

@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 import {navigateToHref} from '@cdo/apps/utils';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import BaseDialog from '../BaseDialog';
@@ -25,9 +25,11 @@ import {
 // Navigates to the new section setup page if both params are non-null.
 const redirectToNewSectionPage = (participantType, loginType) => {
   if (!!participantType && !!loginType) {
-    navigateToHref(
-      `/sections/new?participantType=${participantType}&loginType=${loginType}`
-    );
+    const createSectionFromMyPl = participantType !== 'student';
+    const hrefNav =
+      `/sections/new?participantType=${participantType}&loginType=${loginType}` +
+      (createSectionFromMyPl ? '&redirectToPage=my-professional-learning' : '');
+    navigateToHref(hrefNav);
   }
 };
 

@@ -17,9 +17,11 @@ theme: responsive
 
 ## 支持的最低浏览器和平台
 
+从 2024 年 7 月开始，我们将更新浏览器和操作系统所需的最低版本。 虽然旧版本可能仍然有效，但我们将无法支持旧版本中的错误修复请求。
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           浏览器
@@ -40,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          浏览器 24 年 7 月
+        </th>
+        <tr>
+          <td>Chrome 103.x</td>
+        </tr>
+        <tr>
+          <td>苹果浏览器 14.x</td>
+        </tr>
+        <tr>
+          <td>手机 Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Edge 119.x</td>
+        </tr>
+        <tr>
+          <td>火狐浏览器 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           平台
@@ -62,8 +86,30 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          24年7月24日平台
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>安卓 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## 要解除屏蔽的网站
@@ -80,16 +126,15 @@ theme: responsive
 | **使用互联网模拟器**                              | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **使用网络实验室**                               | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **使用谷歌课堂共享按钮**                            | `https://apis.google.com`                                                                                  |
-| **使用 App Lab 数据集**                        | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## 移动设备/平板电脑支持详情
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. 大多数平板电脑不支持，但有以下例外：
+所有 CS Discoveries、CS 原则、CS A 和 App Lab 入门课程均不兼容平板电脑或移动设备——需要完整的键盘和鼠标（或触摸板）。 大多数平板电脑不支持，但有以下例外：
 
 - 带外接键盘的微软Surface Pro
 - 带外接键盘和外接鼠标或触摸板且运行iPadOS 13.4及以上版本的iPad
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+所有其他内容，例如 K-5 课程（计算机科学基础知识）和 “编程一小时” 活动，均在 iPad 和其他现代平板电脑、笔记本电脑或台式计算机上兼容。
 
 ### 手机
 
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+这是贯穿整个课程的播放器。 它将尝试通过YouTube显示视频，如果YouTube被屏蔽，将使用我们的“后备”播放器显示Code.org托管视频。
 
 ### 视频无法播放？
 
-If video does not work, you can email us at support@code.org.
+如果视频无法播放，你可以给我们发送电子邮件：support@code.org。
 
-However, you can still use our tutorials without video.
+然而，你仍然可以在没有视频的情况下使用我们的教程。
 
 1. 我们已经使所有的视频[可以一起下载](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH)。 如果你的学校带宽较低，我们建议你下载视频并在共享屏幕上给学生展示。
 2. 在我们的教程中，我们为每个视频添加了一个绿色下载链接图标<img src="/images/green-download.png" width=25 height=25 />，让学生可以下载单个教程视频。
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## 谷歌应用程序/G-Suite用户的特殊设置
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+如果你是G-suite管理员，记得检查你对YouTube的限制设置。 如果你已指定“严格限制YouTube访问”设置，或如果你看到“此视频已被限制”的消息，你可以将我们的频道添加到已批准频道列表。 请参阅来自谷歌的[这个指南](https://support.google.com/a/answer/6245597)，了解如何将我们的频道添加到已批准列表。 你也可以参阅[这个指南](https://support.google.com/a/answer/6212415?hl=en)以进一步了解不同的设置以及哪种设置最适合你的课堂。
 
 ## 仍然存在困难？
 
-We'll help you out - just email us at support@code.org!
+我们将为你提供帮助，只需给我们发送电子邮件：support@code.org！

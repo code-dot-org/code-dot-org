@@ -7,8 +7,8 @@ import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import CodeReviewGroupsDataApi from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsDataApi';
 import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
 import {
@@ -22,11 +22,13 @@ import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpe
 import color from '@cdo/apps/util/color';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import experiments from '@cdo/apps/util/experiments';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import Button from '../Button';
-import Notification, {NotificationType} from '../Notification';
+import Button from '../../legacySharedComponents/Button';
+import Notification, {
+  NotificationType,
+} from '../../sharedComponents/Notification';
 import SafeMarkdown from '../SafeMarkdown';
 import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
 import wrappedSortable from '../tables/wrapped_sortable';
@@ -72,6 +74,7 @@ const LOGIN_TYPES_WITH_ACTIONS_COLUMN = [
   SectionLoginType.email,
   SectionLoginType.google_classroom,
   SectionLoginType.clever,
+  SectionLoginType.lti_v1,
 ];
 const LOGIN_TYPES_WITH_GENDER_COLUMN = [
   SectionLoginType.word,
@@ -213,10 +216,7 @@ class ManageStudentsTable extends Component {
 
   shouldShowActionColumn() {
     const {loginType} = this.props;
-    return (
-      LOGIN_TYPES_WITH_ACTIONS_COLUMN.includes(loginType) ||
-      (loginType === SectionLoginType.lti_v1 && !this.props.syncEnabled)
-    );
+    return LOGIN_TYPES_WITH_ACTIONS_COLUMN.includes(loginType);
   }
 
   // Cell formatters.

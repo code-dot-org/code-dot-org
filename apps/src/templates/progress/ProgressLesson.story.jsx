@@ -1,14 +1,16 @@
 import React from 'react';
-import {UnconnectedProgressLesson as ProgressLesson} from './ProgressLesson';
-import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
-import {combineReducers, createStore} from 'redux';
 import {Provider} from 'react-redux';
-import {fakeLesson, fakeLevels} from './progressTestHelpers';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
-import progress from '@cdo/apps/code-studio/progressRedux';
-import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {combineReducers, createStore} from 'redux';
+
 import hiddenLesson from '@cdo/apps/code-studio/hiddenLessonRedux';
 import lessonLock from '@cdo/apps/code-studio/lessonLockRedux';
+import progress from '@cdo/apps/code-studio/progressRedux';
+import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
+
+import {UnconnectedProgressLesson as ProgressLesson} from './ProgressLesson';
+import {fakeLesson, fakeLevels} from './progressTestHelpers';
 
 export default {
   component: ProgressLesson,

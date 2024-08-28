@@ -7,18 +7,18 @@ markdown <<MARKDOWN
 
 ## What will students learn?
 
-##### In the first few lessons of the Interactive Animations and Games unit, students will start to become familiar with Game Lab as they learn to draw and color shapes. Through the process they are also learning basic programming skills such as:
+#### In the first few lessons of the Interactive Animations and Games unit, students will start to become familiar with Game Lab as they learn to draw and color shapes. Through the process they are also learning basic programming skills such as:
 
-* ##### Only one command can be added per line.
-* ##### Commands run in order from top to bottom.
-* ##### The order of inputs into shape commands matters.
-* ##### Each input into shape commands is separated by commas.
-* ##### (0,0) is in the upper left corner of the display.
-* ##### All x and y values on the display are positive.
+* #### Only one command can be added per line.
+* #### Commands run in order from top to bottom.
+* #### The order of inputs into shape commands matters.
+* #### Each input into shape commands is separated by commas.
+* #### (0,0) is in the upper left corner of the display.
+* #### All x and y values on the display are positive.
 
 ## How to Draw Shapes
 
-##### The following drop-down sections include the key information you need to know to draw shapes in Game Lab. If you forget how to do so, we recommend coming back to this page to review the information below.
+#### The following drop-down sections include the key information you need to know to draw shapes in Game Lab. If you forget how to do so, we recommend coming back to this page to review the information below.
 <br>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
@@ -30,15 +30,15 @@ markdown <<MARKDOWN
 
 ### <strong>Rect</strong>
 
-##### The [`rect()`(#4dd0e1)](/docs/ide/gamelab/expressions/rect) block will plot a square at the x and y coordinates it is given.  The x and y coordinates tell it where the top left corner of the square goes in the display area.
+#### The [`rect()`(#4dd0e1)](/docs/ide/gamelab/expressions/rect) block will plot a square at the x and y coordinates it is given.  The x and y coordinates tell it where the top left corner of the square goes in the display area.
 
 ### <strong>Ellipse</strong>
 
-##### The [`ellipse()`(#4dd0e1)](/docs/ide/gamelab/expressions/ellipse) block will plot a circle at the x and y coordinates it is given.  The x and y coordinates tell it where the center of the circle goes in the display area.
+#### The [`ellipse()`(#4dd0e1)](/docs/ide/gamelab/expressions/ellipse) block will plot a circle at the x and y coordinates it is given.  The x and y coordinates tell it where the center of the circle goes in the display area.
 
 ### <strong>Fill</strong>
 
-##### The [`fill()`(#4dd0e1)](/docs/ide/gamelab/expressions/fill) block changes the color that Game Lab uses to color in the shapes you draw.  Once you use the [`fill()`(#4dd0e1)](/docs/ide/gamelab/expressions/fill) block, all the new shapes you draw will be filled in with that color, until you use the [`fill()`(#4dd0e1)](/docs/ide/gamelab/expressions/fill) block to change the color again.
+#### The [`fill()`(#4dd0e1)](/docs/ide/gamelab/expressions/fill) block changes the color that Game Lab uses to color in the shapes you draw.  Once you use the [`fill()`(#4dd0e1)](/docs/ide/gamelab/expressions/fill) block, all the new shapes you draw will be filled in with that color, until you use the [`fill()`(#4dd0e1)](/docs/ide/gamelab/expressions/fill) block to change the color again.
 
 </p></div>
 </details>
@@ -51,21 +51,21 @@ markdown <<MARKDOWN
 <img src="https://images.code.org/bb48d43af72b17e245007ae96da757b4-image-1648169121141.45.06 PM.png" style="padding-left: 130px;  height: 300px; clear: both; margin: 0 20px 20px 0;" alt="Two Game Lab coordinates side-by-side. The left coordinate grid contains a blue circle, while the right one contains a purple square.">
 
 
-##### In the image above, the [`rect()`(#4dd0e1)](/docs/ide/gamelab/expressions/rect) and [`ellipse()`(#4dd0e1)](/docs/ide/gamelab/expressions/ellipse) blocks both have two inputs that control where the shapes are drawn - the x and y position. These inputs are called <strong>parameters</strong>. As students progress through the unit, they will expand their drawing skills by adding width and height parameters to their shapes.
+#### In the image above, the [`rect()`(#4dd0e1)](/docs/ide/gamelab/expressions/rect) and [`ellipse()`(#4dd0e1)](/docs/ide/gamelab/expressions/ellipse) blocks both have two inputs that control where the shapes are drawn - the x and y position. These inputs are called <strong>parameters</strong>. As students progress through the unit, they will expand their drawing skills by adding width and height parameters to their shapes.
 
 </p></div>
 </details>
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
-<summary style="font-size: 1.5em; font-weight: bold;">🔎 Key vocabulary</summary>
+<summary style="font-size: 1.5em; font-weight: bold;">🔎 Key Vocabulary</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
 
-##### <strong>Parameter</strong> - additional information provided as input to a block to customize it's functionality
+#### <strong>Parameter</strong> - additional information provided as input to a block to customize it's functionality
 </p></div>
 </details>
 
-#### Let's continue practicing! 
+### **Up Next:** Let's continue practicing! 
 
 MARKDOWN

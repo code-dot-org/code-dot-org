@@ -1,12 +1,17 @@
 ---
 AWSTemplateFormatVersion: 2010-09-09
 Description: AWS CloudFormation Template for Code.org application
+Metadata:
+  cfn-lint:
+    config:
+      ignore_checks:
+        - W2001 # Allow unused parameters
 Parameters:
   # ---------------------------------------------
   # Domain Names - Each Stack operates 5 sites (examples are for production):
   # 1) Learning Platform ("Dashboard") - https://studio.code.org
   # 2) Corporate Website ("Pegasus") - https://code.org
-  # 3) Advocacy Website (runs on Pegasus) - https://advocacy.code.org
+  # 3) Advocacy Website (runs on LeadPages) - https://advocacy.code.org
   # 4) Hour of Code (runs on Pegasus) - https://hourofcode.com
   # 5) Code Projects (host user created content) - https://codeprojects.org
   # ---------------------------------------------
@@ -186,6 +191,10 @@ Resources:
           - Effect: Allow
             Action: 's3:*'
             Resource: '*'
+          # SageMaker Invoke Endpoint access
+          - Effect: Allow
+            Action: 'sagemaker:InvokeEndpoint'
+            Resource: !Sub "arn:aws:sagemaker:${AWS::Region}:${AWS::AccountId}:endpoint/gen-ai-*"
 
   # ---------------------------------------------
   # Frontend Servers
@@ -561,6 +570,7 @@ Resources:
     Type: AWS::EC2::Instance
 <% unless rack_env?(:adhoc) -%>
     DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
 <% end -%>
     CreationPolicy:
       ResourceSignal:
@@ -644,6 +654,7 @@ Resources:
   Console:
     Type: AWS::EC2::Instance
     DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
     CreationPolicy: {ResourceSignal: {Timeout: PT2H}}
     Properties:
       # Temporarily hardcode the Ubuntu 20 image just for this server, so we can gradually roll out the update.

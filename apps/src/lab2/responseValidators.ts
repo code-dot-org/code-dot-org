@@ -1,13 +1,13 @@
 import {ResponseValidator} from '@cdo/apps/util/HttpClient';
+
+import {BLOCKLY_LABS, LABS_WITH_JSON_SOURCES} from './constants';
+import Lab2Registry from './Lab2Registry';
 import {
   BlocklySource,
   LevelProperties,
   MultiFileSource,
   ProjectSources,
 } from './types';
-import Lab2Registry from './Lab2Registry';
-import {BLOCKLY_LABS, MAIN_PYTHON_FILE} from './constants';
-import {getFileByName} from './projects/utils';
 
 // Validator for Blockly sources.
 const BlocklySourceResponseValidator: ResponseValidator<
@@ -31,23 +31,35 @@ const BlocklySourceResponseValidator: ResponseValidator<
   return sourceValidatorHelper(response, blocklyValidator);
 };
 
-// Validator for Python sources.
-const PythonSourceResponseValidator: ResponseValidator<
+// Validator for Codebridge sources.
+const CodebridgeSourceResponseValidator: ResponseValidator<
   ProjectSources
 > = response => {
-  const pythonValidator = (responseToValidate: Record<string, unknown>) => {
+  const codebridgeValidator = (responseToValidate: Record<string, unknown>) => {
     if (typeof responseToValidate.source === 'string') {
-      throw new ValidationError('Python sources must be a JSON object');
+      throw new ValidationError('Codebridge sources must be a JSON object');
     }
     const source = responseToValidate.source as MultiFileSource;
-    if (
-      !source?.files ||
-      getFileByName(source.files, MAIN_PYTHON_FILE) === null
-    ) {
-      throwMissingFieldError(MAIN_PYTHON_FILE);
+    if (!source?.files || !source.folders) {
+      throw new ValidationError('Invalid source code');
     }
   };
-  return sourceValidatorHelper(response, pythonValidator);
+  return sourceValidatorHelper(response, codebridgeValidator);
+};
+
+// Validator for non-Blockly labs that use JSON sources
+const JsonSourceResponseValidator: ResponseValidator<
+  ProjectSources
+> = response => {
+  const jsonValidator = (responseToValidate: Record<string, unknown>) => {
+    try {
+      JSON.parse(responseToValidate.source as string);
+    } catch (e) {
+      throw new ValidationError('Error parsing JSON: ' + e);
+    }
+  };
+
+  return sourceValidatorHelper(response, jsonValidator);
 };
 
 // Default source validator. This just checks if there is a source field.
@@ -61,11 +73,13 @@ export const SourceResponseValidator: ResponseValidator<
   ProjectSources
 > = response => {
   const appName = Lab2Registry.getInstance().getAppName();
-  if (appName === 'pythonlab') {
-    return PythonSourceResponseValidator(response);
+  if (appName === 'pythonlab' || appName === 'weblab2') {
+    return CodebridgeSourceResponseValidator(response);
   } else if (appName !== null && BLOCKLY_LABS.includes(appName)) {
     // Blockly labs
     return BlocklySourceResponseValidator(response);
+  } else if (appName !== null && LABS_WITH_JSON_SOURCES.includes(appName)) {
+    return JsonSourceResponseValidator(response);
   } else {
     // Everything else uses the default validator
     return DefaultSourceResponseValidator(response);

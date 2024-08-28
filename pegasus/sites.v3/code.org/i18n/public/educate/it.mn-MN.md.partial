@@ -17,9 +17,11 @@ theme: responsive
 
 ## Minimum Supported Browsers and Platforms
 
+2024 оны 7-р сараас эхлэн бид хөтөч болон үйлдлийн системд шаардагдах хамгийн бага хувилбаруудыг шинэчлэх болно. Хуучин хувилбарууд нь ажилласаар байж болох ч хуучин хувилбаруудад алдааны засварлах хүсэлтийг бид дэмжих боломжгүй болно.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Browser
@@ -40,11 +42,33 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          Platform
+          Хөтөч долдугаар сарын '24
+        </th>
+        <tr>
+          <td>Хром 103.x</td>
+        </tr>
+        <tr>
+          <td>Сафари 14.х</td>
+        </tr>
+        <tr>
+          <td>Гар утасны Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Зах 119.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Платформ
         </th>
         <tr>
           <td>macOS 10.13</td>
@@ -62,13 +86,35 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Платформ долдугаар сарын 24
+        </th>
+        <tr>
+          <td>Макос 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Андройд 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Sites to Unblock
 
-For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure the following sites are allowed and aren't blocked.
+Бүх Code.org контентыг хамгийн сайн туршлагахын тулд дараах сайтуудыг зөвшөөрсөн, хаагаагүй эсэхийг баталгаажуулахын тулд сургууль эсвэл дүүргийн мэдээллийн технологийн хэлтэстэй зөвлөлдөхийг зөвлөж байна.
 
 | Priority                                                                                                                        | URL                                                                                                        |
 | ------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -80,28 +126,27 @@ For the very best experience with all Code.org content, we recommend consulting 
 | **Интернет симуляторыг ашиглахын тулд**                                                                                         | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Вэб лабораторийг ашиглахын тулд**                                                                                             | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Google Classroom Хуваалцах товчийг ашиглахын тулд**                                                                           | `https://apis.google.com`                                                                                  |
-| **Апп лабораторийн өгөгдлийн багцыг ашиглах**                                                                                   | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Mobile and Tablet Support Details
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Most tablets are not supported, with the following exceptions:
+Бүх CS Discovery, CS зарчмууд, CS A, Intro to App Lab хичээлүүд нь таблет эсвэл хөдөлгөөнт төхөөрөмжтэй нийцэхгүй - бүрэн гар, хулгана (эсвэл touchpad) шаардлагатай. Ихэнх таблетууд нь дараахь үл хамааран дэмжигддэггүй:
 
 - Microsoft Surface Pro with an external keyboard
 - iPad running iPadOS 13.4 or later with an external keyboard and an external mouse or touchpad
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+K-5 курс (Компьютерийн шинжлэх ухааны үндэс) болон Hour of Code үйл ажиллагаа зэрэг бусад бүх агуулга нь iPads болон бусад орчин үеийн таблет болон зөөврийн компьютер эсвэл ширээний компьютер дээр нийцтэй байдаг.
 
 ### Mobile Phones
 
-Our Hour of Code activities and CS Fundamentals courses can be completed on mobile phones. While these activities are usable, they are not optimized for a mobile phone experience and have some known limitations (e.g. touch targets may be small, accessory elements may display offscreen, and text may be difficult to input using the on-screen keyboard). The CS Discoveries, CS Principles, and Intro to App Lab courses are not usable on mobile phones.
+Манай Hour of Code үйл ажиллагаа болон CS Fundamentals хичээлүүдийг гар утсаар дүүргэж болно. Эдгээр үйл ажиллагаа нь ашиглах боломжтой боловч гар утасны туршлагад оновчтой биш бөгөөд зарим мэдэгдэж буй хязгаарлалттай байдаг (жишээ нь мэдрэгчтэй зорилтууд нь бага байж болно, дагалдах элементүүд нь дэлгэцээс гадуур харуулж болох бөгөөд текстийг дэлгэцэн дээрх гарыг ашиглан оруулахад хэцүү байж болно). CS Discovery, CS Principles, Intro to App Lab сургалтууд нь гар утсан дээр ашиглах боломжгүй юм.
 
 ## Videos
 
-We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our [online learning platform](https://studio.code.org). For schools with YouTube blocked, we attempt to display a Code.org hosted video player instead.
+Бид Code.org болон манай [онлайн сургалтын платформ](https://studio.code.org)руу видеог суулгахын тулд [YouTube](https://www.youtube.com) ашигладаг. YouTube-ийн хаагдсан сургуулиудын хувьд бид оронд нь Code.org зохион видео тоглуулагч харуулах оролдлого.
 
 ### Can you play this video?
 
-Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
+Та Code.org-ийн онлайн курс эхлэхээсээ өмнө та явах сайн байгаа эсэхийг шалгахын тулд доорх видео нь тоглуулах тест.
 
 
 <!--
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+Энэ бол сургалтын хөтөлбөрийн туршид ашиглагддаг тоглогч юм. Энэ нь YouTube-аар дамжуулан видеог харуулахыг оролдох бөгөөд хэрэв YouTube хаагдсан бол оронд нь бидний “fallback” тоглуулагч ашиглан Code.org зохион байгуулсан видеог харуулах болно.
 
 ### Video not playing?
 
-If video does not work, you can email us at support@code.org.
+Хэрэв видео ажиллахгүй бол та support@code.org хаягаар бидэнд и-мэйл илгээж болно.
 
-However, you can still use our tutorials without video.
+Гэсэн хэдий ч та манай хичээлийг видеогүйгээр ашиглах боломжтой хэвээр байна.
 
 1. We've made all our videos [available for download together](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). If your school has low bandwidth, we recommend that you download videos and show them to students on a shared screen.
 2. Integrated into our tutorials, we've added a green download link icon <img src="/images/green-download.png" width=25 height=25 /> for each video, allowing students to download individual tutorial videos.
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## Special settings for Google Apps/G-Suite users
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+Хэрэв та G-suite-ийн администратор бол YouTube-ийн хувьд таны хязгаарлалтын тохиргоо юу болохыг шалгахаа мартуузай. Хэрэв та “YouTube-ийн хатуу хязгаарлагдмал хандалт” тохиргоог зааж өгсөн эсвэл 'энэ видеог хязгаарлагдсан' гэсэн мессежийг харвал батлагдсан сувгуудын жагсаалтад манай сувгийг нэмж болно. Батлагдсан жагсаалтад манай сувгийг хэрхэн нэмэх талаар мэдэхийн тулд Google-ээс [энэ гарын авлага](https://support.google.com/a/answer/6245597) -ийг үзнэ үү. Та мөн өөр өөр тохиргооны талаар илүү ихийг мэдэхийн тулд [энэ гарын авлага](https://support.google.com/a/answer/6212415?hl=en) үзнэ үү, аль нь танай ангид хамгийн тохиромжтой.
 
 ## Still having trouble?
 
-We'll help you out - just email us at support@code.org!
+Бид танд туслах болно - support@code.org хаягаар бидэнд и-мэйл илгээнэ үү!

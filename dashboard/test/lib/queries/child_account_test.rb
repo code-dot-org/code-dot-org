@@ -20,50 +20,39 @@ class Queries::ChildAccountTest < ActiveSupport::TestCase
     assert_equal expired_accounts.count, actual_expired_accounts.count
   end
 
-  test "finds student state by indirectly using school state" do
-    school_info = create :school_info, state: 'WA'
-    teacher = create :teacher, :with_school_info, school_info: school_info
-    section = create :section, user: teacher
-    student = create(:follower, section: section).student_user
+  describe '.cap_affected' do
+    subject(:cap_affected_students) {described_class.cap_affected}
 
-    assert_equal 'WA', Queries::ChildAccount.teacher_us_state(student)
-  end
+    let!(:student) {create(:student, cap_status: nil)}
 
-  test "returns nil when finding student state from teacher state when the student has no sections" do
-    student = create :student
-    assert_nil Queries::ChildAccount.teacher_us_state(student)
-  end
+    it 'does not return students not affected by CAP' do
+      _cap_affected_students.wont_include student
+    end
 
-  test "returns nil when finding student state from teacher state when teacher has no school" do
-    teacher = create :teacher
-    section = create :section, user: teacher
-    student = create(:follower, section: section).student_user
+    context 'when student with parental permission granted' do
+      let!(:student) {create(:student, :with_parent_permission)}
 
-    assert_nil Queries::ChildAccount.teacher_us_state(student)
-  end
+      it 'does not return student' do
+        _cap_affected_students.wont_include student
+      end
+    end
 
-  test "when finding student state from teacher state, finds the most recent section" do
-    school_info = create :school_info, state: 'WA'
-    teacher = create :teacher, :with_school_info, school_info: school_info
-    school_info_old = create :school_info, state: 'CO'
-    teacher_old = create :teacher, :with_school_info, school_info: school_info_old
+    SharedConstants::CHILD_ACCOUNT_COMPLIANCE_STATES.to_h.except(:PERMISSION_GRANTED).each do |key, value|
+      context %Q[when student CAP status is "#{key}"] do
+        let!(:student) {create(:student, cap_status: value)}
 
-    section = create :section, user: teacher
-    section_old = create :section, created_at: 1.year.ago, user: teacher_old
-    student = create(:follower, section: section).student_user
-    create :follower, section: section_old, student_user: student
+        it 'returns student' do
+          _cap_affected_students.must_include student
+        end
 
-    assert_equal 'WA', Queries::ChildAccount.teacher_us_state(student)
-  end
+        context 'and is not in users scope' do
+          subject(:cap_affected_students) {described_class.cap_affected(scope: User.where.not(id: student.id))}
 
-  test "when finding student state from teacher state, finds the most recent school" do
-    school_info_old = create :school_info, state: 'CO'
-    school_info_new = create :school_info, state: 'WA'
-    teacher = create :teacher, :with_school_info, school_info: school_info_new
-    create :user_school_info, user: teacher, school_info: school_info_old, start_date: 1.year.ago
-    section = create :section, user: teacher
-    student = create(:follower, section: section).student_user
-
-    assert_equal 'WA', Queries::ChildAccount.teacher_us_state(student)
+          it 'does not return student' do
+            _cap_affected_students.wont_include student
+          end
+        end
+      end
+    end
   end
 end

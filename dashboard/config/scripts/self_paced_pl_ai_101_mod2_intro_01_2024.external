@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Practice
 
-#### Below are examples of various technology. Mentally classify each ones as something that does use or do not use AI. Click on the box to get the answer and explanation. It’s okay if you don’t get them all on the first try!
+#### Below are examples of various technologies. Mentally classify each ones as something that does use or do not use AI. Click on the box to get the answer and explanation. It’s okay if you don’t get them all on the first try!
 
 <br>
 
@@ -84,7 +84,7 @@ markdown <<MARKDOWN
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
 
-#### **AI** Chatbots, especially those capable of conducting conversations in a way that feels natural to users, use AI. They apply NLP and machine learning to understand and respond to user inquiries, learning over time to improve their responses.
+#### **AI** Chatbots, especially those capable of conducting conversations in a way that feels natural to users, use AI. They apply natural language processing and machine learning to understand and respond to user inquiries, learning over time to improve their responses.
 
 </p></div>
 </details>

@@ -5,12 +5,14 @@ description 'description here'
 markdown <<MARKDOWN
 # Course Closing
 
+#### **This is the last module in the AI 101 Professional Learning Series! Let’s take a look at everything we covered.**
+
 #### In this five-part series we demystified AI, explored responsible implementation, addressed bias, and showcased how AI-powered learning can revolutionize student outcomes. More specifically you...
 * #### Realized the benefits and address the risks of AI in an educational setting.
 * #### Described AI Literacy and explain the benefits of AI literacy for both educators and students.
 * #### Defined artificial intelligence and explain its fundamental concepts.
 * #### Identified common applications of AI in various fields, illustrating its broad impact and potential.
-* #### Learned guiding principles when using AI in an education context.
+* #### Learned guiding principles when using AI in an educational context.
 * #### Practiced how to effectively use AI tools to support various educational tasks.
 * #### Assessed the suitability of different AI tools and platforms for their specific teaching contexts.
 * #### Critically evaluated AI tools and resources for their applicability and effectiveness in the classroom.

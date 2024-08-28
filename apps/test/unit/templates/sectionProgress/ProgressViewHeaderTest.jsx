@@ -1,9 +1,7 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import {UnconnectedProgressViewHeader as ProgressViewHeader} from '@cdo/apps/templates/sectionProgress/ProgressViewHeader';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 describe('ProgressViewHeader', () => {
   let DEFAULT_PROPS = {
@@ -26,15 +24,11 @@ describe('ProgressViewHeader', () => {
     const wrapper = shallow(
       <ProgressViewHeader {...DEFAULT_PROPS} currentView={'standards'} />
     );
-    expect(
-      wrapper.find('Connect(StandardsViewHeaderButtons)')
-    ).to.have.lengthOf(1);
+    expect(wrapper.find('Connect(StandardsViewHeaderButtons)')).toHaveLength(1);
   });
 
   it('does not show buttons when in standards view', () => {
     const wrapper = shallow(<ProgressViewHeader {...DEFAULT_PROPS} />);
-    expect(
-      wrapper.find('Connect(StandardsViewHeaderButtons)')
-    ).to.have.lengthOf(0);
+    expect(wrapper.find('Connect(StandardsViewHeaderButtons)')).toHaveLength(0);
   });
 });

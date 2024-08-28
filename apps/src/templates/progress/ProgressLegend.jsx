@@ -1,18 +1,22 @@
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
+import {LevelStatus} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
+
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+
+import BubbleBadge, {BadgeType} from './BubbleBadge';
 import {
   BasicBubble,
   BubbleShape,
   BasicTooltip,
   BubbleSize,
 } from './BubbleFactory';
-import BubbleBadge, {BadgeType} from './BubbleBadge';
 import {defaultBubbleIcon} from './progressHelpers';
 import {levelProgressStyle} from './progressStyles';
-import FontAwesome from '../FontAwesome';
-import {LevelStatus} from '@cdo/apps/util/sharedConstants';
-import _ from 'lodash';
+
 import './styles.scss';
 
 const MAX_UNSPLIT_STATUS_COLUMNS = 5;

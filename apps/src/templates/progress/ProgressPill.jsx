@@ -1,13 +1,10 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
-import FontAwesome from '../FontAwesome';
-import color from '@cdo/apps/util/color';
-import {levelWithProgressType} from './progressTypes';
-import {levelProgressStyle, hoverStyle} from './progressStyles';
-import {queryParams} from '@cdo/apps/code-studio/utils';
-import {isLevelAssessment} from './progressHelpers';
+import React from 'react';
 import {connect} from 'react-redux';
+
+import {queryParams} from '@cdo/apps/code-studio/utils';
+import fontConstants from '@cdo/apps/fontConstants';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import BubbleBadge, {BadgeType} from '@cdo/apps/templates/progress/BubbleBadge';
 import {
@@ -15,7 +12,13 @@ import {
   BubbleSize,
   getBubbleUrl,
 } from '@cdo/apps/templates/progress/BubbleFactory';
-import fontConstants from '@cdo/apps/fontConstants';
+import color from '@cdo/apps/util/color';
+
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+
+import {isLevelAssessment} from './progressHelpers';
+import {levelProgressStyle, hoverStyle} from './progressStyles';
+import {levelWithProgressType} from './progressTypes';
 
 /**
  * This component is similar to our ProgressBubble, except that instead of being

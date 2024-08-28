@@ -1,7 +1,8 @@
 import GoogleBlockly from 'blockly/core';
-import CdoPathObject from './cdoPathObjectThrasos';
-import CdoConstantsProvider from './cdoConstantsProvider';
 import {BlockStyle} from 'blockly/core/theme';
+
+import CdoConstantsProvider from './cdoConstantsProvider';
+import CdoPathObject from './cdoPathObjectThrasos';
 
 export default class CdoRendererThrasosBase extends GoogleBlockly.thrasos
   .Renderer {

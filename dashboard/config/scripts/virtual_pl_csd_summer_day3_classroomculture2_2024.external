@@ -4,18 +4,13 @@ description 'description here'
 
 markdown <<MARKDOWN
 # Inclusion
-
-<div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 0.5px 20px 1px 20px;">
-
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; ">
-Inclusion is creating learning environments as well as using curricula and resources that are accessible, welcoming, and reflective of all students’ identities, backgrounds, differences, and perspectives.
- </p>
- 
-</div>
-<br>
-<img src="https://images.code.org/99f1b43cfbddb89ca53f2a12912f159e-image-1628540543391.jpg" alt="Five students posing together and smiling. The middle student is holding a laptop." width="365px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+<div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;"><b>Inclusion</b> is creating learning environments as well as using curricula and resources that are accessible, welcoming, and reflective of all students’ identities, backgrounds, differences, and perspectives. </p> </div>
 
 ## What is my role as the teacher? 
+
+<img src="https://images.code.org/99f1b43cfbddb89ca53f2a12912f159e-image-1628540543391.jpg" alt="Five students posing together and smiling. The middle student is holding a laptop." width="365px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+
 
 #### Your role as the teacher is to create a culture within your classroom where all students regardless of race, gender, language, ability, or socioeconomic background feel like they belong.  
 
@@ -37,42 +32,45 @@ Inclusion is creating learning environments as well as using curricula and resou
 <details>
 <summary><strong>Be a lead learner</strong></summary>
 
-Students will encounter bugs in their code and run into problems that are challenging to solve. Normalizing failure and promoting a growth mindset within your classroom will help students know how to respond to and overcome these challenges. 
+#### Students will encounter bugs in their code and run into problems that are challenging to solve. Normalizing failure and promoting a growth mindset within your classroom will help students know how to respond to and overcome these challenges. 
 
 </details>
-
 <div style="clear:both"/>
+<br>
 
 <details>
 <summary><strong>Provide multiple opportunities for students to showcase their knowledge</strong></summary>
 
-Students will likely excel in different ways. Providing multiples ways for students to showcase their knowledge creates new opportunities for students to feel successful in CS. 
+#### Students will likely excel in different ways. Providing multiples ways for students to showcase their knowledge creates new opportunities for students to feel successful in CS. 
 
 </details>
 
 <div style="clear:both"/>
+<br>
 
 <details>
 <summary><strong>Consider your classroom environment</strong></summary>
 
-What story does your classroom tell about who belongs in CS? Do all students see themselves represented in the images on your walls? Do the projects displayed on your walls feel approachable to new to CS students? Are there aspects of your classroom promote a growth mindset? 
+#### What story does your classroom tell about who belongs in CS? Do all students see themselves represented in the images on your walls? Do the projects displayed on your walls feel approachable to new to CS students? Are there aspects of your classroom promote a growth mindset? 
 
 </details>
 
 <div style="clear:both"/>
+<br>
 
 <details>
 <summary><strong>Pay attention to student groupings</strong></summary>
 
-CS Discoveries includes many opportunities for students to collaborate and work together. Student groupings can have a big impact on whether or not a student feels like they belong in CS. Consider student personalities, prior knowledge, and needs when selecting groups of students to work together. 
+#### CS Discoveries includes many opportunities for students to collaborate and work together. Student groupings can have a big impact on whether or not a student feels like they belong in CS. Consider student personalities, prior knowledge, and needs when selecting groups of students to work together. 
 </details>
 
 <div style="clear:both"/>
+<br>
 
 <details>
 <summary><strong>Incorporate multiple student voices into class discussions</strong></summary>
 
-When students are engaging in whole group discussions, look for ways to draw in participation from students who might be more hesitant to contribute. You may even choose to highlight examples of something you observed during a time when students were working independently or in groups. 
+#### When students are engaging in whole group discussions, look for ways to draw in participation from students who might be more hesitant to contribute. You may even choose to highlight examples of something you observed during a time when students were working independently or in groups. 
 
 </details>
 

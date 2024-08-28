@@ -1,4 +1,3 @@
-import {expect} from '../../util/reconfiguredChai';
 import {
   isBlank,
   ignoreMissingValues,
@@ -12,16 +11,16 @@ import {
 
 describe('isBlank', () => {
   it('counts null, undefined, and empty string as blank', () => {
-    expect(isBlank(null)).to.be.true;
-    expect(isBlank(undefined)).to.be.true;
-    expect(isBlank('')).to.be.true;
+    expect(isBlank(null)).toBe(true);
+    expect(isBlank(undefined)).toBe(true);
+    expect(isBlank('')).toBe(true);
   });
 
   it('counts other falsy values as not blank', () => {
-    expect(isBlank(0)).to.be.false;
-    expect(isBlank(false)).to.be.false;
-    expect(isBlank(-1)).to.be.false;
-    expect(isBlank(' ')).to.be.false;
+    expect(isBlank(0)).toBe(false);
+    expect(isBlank(false)).toBe(false);
+    expect(isBlank(-1)).toBe(false);
+    expect(isBlank(' ')).toBe(false);
   });
 });
 
@@ -37,15 +36,15 @@ describe('ignoreMissingValues', () => {
     {category1: '', category2: null, category3: undefined},
   ];
   it('returns [] if there are no records', () => {
-    expect(ignoreMissingValues([], [])).to.deep.equal([]);
-    expect(ignoreMissingValues(undefined, undefined)).to.deep.equal([]);
+    expect(ignoreMissingValues([], [])).toEqual([]);
+    expect(ignoreMissingValues(undefined, undefined)).toEqual([]);
   });
   it('returns all records if there are no columns to filter by', () => {
-    expect(ignoreMissingValues(records, [])).to.deep.equal(records);
-    expect(ignoreMissingValues(records, undefined)).to.deep.equal(records);
+    expect(ignoreMissingValues(records, [])).toEqual(records);
+    expect(ignoreMissingValues(records, undefined)).toEqual(records);
   });
   it('filters out records missing value for one column', () => {
-    expect(ignoreMissingValues(records, ['category1'])).to.deep.equal([
+    expect(ignoreMissingValues(records, ['category1'])).toEqual([
       {category1: 'red', category2: 1, category3: 10},
       {category1: 'blue', category2: 1, category3: 20},
       {category1: 'red', category2: 3, category3: 10},
@@ -53,7 +52,7 @@ describe('ignoreMissingValues', () => {
       {category1: 'blue', category2: 1, category3: null},
     ]);
 
-    expect(ignoreMissingValues(records, ['category2'])).to.deep.equal([
+    expect(ignoreMissingValues(records, ['category2'])).toEqual([
       {category1: 'red', category2: 1, category3: 10},
       {category1: 'blue', category2: 1, category3: 20},
       {category1: 'red', category2: 3, category3: 10},
@@ -62,7 +61,7 @@ describe('ignoreMissingValues', () => {
       {category1: '', category2: 3, category3: 10},
     ]);
 
-    expect(ignoreMissingValues(records, ['category3'])).to.deep.equal([
+    expect(ignoreMissingValues(records, ['category3'])).toEqual([
       {category1: 'red', category2: 1, category3: 10},
       {category1: 'blue', category2: 1, category3: 20},
       {category1: 'red', category2: 3, category3: 10},
@@ -73,17 +72,13 @@ describe('ignoreMissingValues', () => {
   });
 
   it('filters out records missing a value for any provided column', () => {
-    expect(
-      ignoreMissingValues(records, ['category1', 'category2'])
-    ).to.deep.equal([
+    expect(ignoreMissingValues(records, ['category1', 'category2'])).toEqual([
       {category1: 'red', category2: 1, category3: 10},
       {category1: 'blue', category2: 1, category3: 20},
       {category1: 'red', category2: 3, category3: 10},
       {category1: 'blue', category2: 1, category3: null},
     ]);
-    expect(
-      ignoreMissingValues(records, ['category2', 'category3'])
-    ).to.deep.equal([
+    expect(ignoreMissingValues(records, ['category2', 'category3'])).toEqual([
       {category1: 'red', category2: 1, category3: 10},
       {category1: 'blue', category2: 1, category3: 20},
       {category1: 'red', category2: 3, category3: 10},
@@ -93,7 +88,7 @@ describe('ignoreMissingValues', () => {
 
     expect(
       ignoreMissingValues(records, ['category1', 'category2', 'category3'])
-    ).to.deep.equal([
+    ).toEqual([
       {category1: 'red', category2: 1, category3: 10},
       {category1: 'blue', category2: 1, category3: 20},
       {category1: 'red', category2: 3, category3: 10},
@@ -103,51 +98,51 @@ describe('ignoreMissingValues', () => {
 
 describe('isNumber', () => {
   it('detects valid numerical values', () => {
-    expect(isNumber(1)).to.be.true;
-    expect(isNumber('2')).to.be.true;
-    expect(isNumber(0.3)).to.be.true;
-    expect(isNumber('0.4')).to.be.true;
-    expect(isNumber(1e5)).to.be.true;
-    expect(isNumber('1e6')).to.be.true;
+    expect(isNumber(1)).toBe(true);
+    expect(isNumber('2')).toBe(true);
+    expect(isNumber(0.3)).toBe(true);
+    expect(isNumber('0.4')).toBe(true);
+    expect(isNumber(1e5)).toBe(true);
+    expect(isNumber('1e6')).toBe(true);
   });
   it('detects invalid numerical values', () => {
-    expect(isNumber('123abc')).to.be.false;
-    expect(isNumber('foo')).to.be.false;
-    expect(isNumber(null)).to.be.false;
-    expect(isNumber(false)).to.be.false;
-    expect(isNumber(undefined)).to.be.false;
-    expect(isNumber(NaN)).to.be.false;
-    expect(isNumber('NaN')).to.be.false;
+    expect(isNumber('123abc')).toBe(false);
+    expect(isNumber('foo')).toBe(false);
+    expect(isNumber(null)).toBe(false);
+    expect(isNumber(false)).toBe(false);
+    expect(isNumber(undefined)).toBe(false);
+    expect(isNumber(NaN)).toBe(false);
+    expect(isNumber('NaN')).toBe(false);
   });
 });
 
 describe('isBoolean', () => {
   it('detects valid boolean values', () => {
-    expect(isBoolean(false)).to.be.true;
-    expect(isBoolean(true)).to.be.true;
-    expect(isBoolean('false')).to.be.true;
-    expect(isBoolean('true')).to.be.true;
+    expect(isBoolean(false)).toBe(true);
+    expect(isBoolean(true)).toBe(true);
+    expect(isBoolean('false')).toBe(true);
+    expect(isBoolean('true')).toBe(true);
   });
   it('detects invalid boolean values', () => {
-    expect(isBoolean(0)).to.be.false;
-    expect(isBoolean(null)).to.be.false;
-    expect(isBoolean('')).to.be.false;
-    expect(isBoolean('foo')).to.be.false;
+    expect(isBoolean(0)).toBe(false);
+    expect(isBoolean(null)).toBe(false);
+    expect(isBoolean('')).toBe(false);
+    expect(isBoolean('foo')).toBe(false);
   });
 });
 
 describe('toBoolean', () => {
   it('recognizes valid boolean values', () => {
-    expect(toBoolean(false)).to.be.false;
-    expect(toBoolean(true)).to.be.true;
-    expect(toBoolean('false')).to.be.false;
-    expect(toBoolean('true')).to.be.true;
+    expect(toBoolean(false)).toBe(false);
+    expect(toBoolean(true)).toBe(true);
+    expect(toBoolean('false')).toBe(false);
+    expect(toBoolean('true')).toBe(true);
   });
   it('throws on invalid boolean values', done => {
     try {
       toBoolean('foo');
     } catch (e) {
-      expect(e.message).to.contain('Unable to convert to boolean');
+      expect(e.message).toContain('Unable to convert to boolean');
       done();
     }
   });
@@ -155,42 +150,42 @@ describe('toBoolean', () => {
 
 describe('castValue', () => {
   it('converts boolean strings to booleans', () => {
-    expect('true').to.not.equal(true);
-    expect(castValue('true')).to.equal(true);
-    expect(castValue('false')).to.equal(false);
+    expect('true').not.toBe(true);
+    expect(castValue('true')).toBe(true);
+    expect(castValue('false')).toBe(false);
   });
 
   it('converts numerical strings to numbers', () => {
-    expect('1').to.not.equal(1);
-    expect(castValue('1')).to.equal(1);
-    expect(castValue('0.2')).to.equal(0.2);
-    expect(castValue('1.2345e3')).to.equal(1234.5);
+    expect('1').not.toBe(1);
+    expect(castValue('1')).toBe(1);
+    expect(castValue('0.2')).toBe(0.2);
+    expect(castValue('1.2345e3')).toBe(1234.5);
   });
 
   it("converts 'null' to null", () => {
-    expect(castValue('null')).to.equal(null);
+    expect(castValue('null')).toBeNull();
   });
 
   it('treats quoted strings as strings', () => {
-    expect(castValue('"foo"')).to.equal('foo');
-    expect(castValue('"1"')).to.equal('1');
-    expect(castValue('"true"')).to.equal('true');
+    expect(castValue('"foo"')).toBe('foo');
+    expect(castValue('"1"')).toBe('1');
+    expect(castValue('"true"')).toBe('true');
   });
 
   it('does not allow objects or arrays', () => {
-    expect(() => castValue('[1, 2, 3]')).to.throw(/Invalid entry type: object/);
-    expect(() => castValue('{"a": 1, "b": 2, "c": 3}')).to.throw(
+    expect(() => castValue('[1, 2, 3]')).toThrow(/Invalid entry type: object/);
+    expect(() => castValue('{"a": 1, "b": 2, "c": 3}')).toThrow(
       /Invalid entry type: object/
     );
   });
 
   it('converts "undefined" to undefined', () => {
-    expect(castValue('undefined')).to.equal(undefined);
+    expect(castValue('undefined')).toBeUndefined();
   });
 
   it('only allows unquoted strings if allowUnquotedStrings is true', () => {
-    expect(castValue('abc', /* allowUnquotedStrings */ true)).to.equal('abc');
-    expect(() => castValue('abc', /* allowUnquotedStrings */ false)).to.throw(
+    expect(castValue('abc', /* allowUnquotedStrings */ true)).toBe('abc');
+    expect(() => castValue('abc', /* allowUnquotedStrings */ false)).toThrow(
       //      PhantomJS|Chrome
       /JSON Parse error|Unexpected token/
     );
@@ -199,75 +194,73 @@ describe('castValue', () => {
 
 describe('editableValue', () => {
   it('doesnt put quotes around numbers', () => {
-    expect(editableValue(1)).to.equal('1');
+    expect(editableValue(1)).toBe('1');
   });
 
   it('puts quotes around numerical strings', () => {
-    expect(editableValue('1')).to.equal('"1"');
+    expect(editableValue('1')).toBe('"1"');
   });
 
   it('puts quotes around boolean strings', () => {
-    expect(editableValue('true')).to.equal('"true"');
+    expect(editableValue('true')).toBe('"true"');
   });
 
   it('doesnt puts quotes around other strings', () => {
-    expect(editableValue('foo')).to.equal('"foo"');
+    expect(editableValue('foo')).toBe('"foo"');
   });
 
   it('shows undefined', () => {
-    expect(editableValue(undefined)).to.equal('undefined');
+    expect(editableValue(undefined)).toBe('undefined');
   });
 });
 
 describe('what happens if you edit and then immediately save a value', () => {
   it('preserves numbers', () => {
-    expect(castValue(editableValue(1))).to.equal(1);
+    expect(castValue(editableValue(1))).toBe(1);
   });
 
   it('preserves booleans', () => {
-    expect(castValue(editableValue(false))).to.equal(false);
-    expect(castValue(editableValue(true))).to.equal(true);
+    expect(castValue(editableValue(false))).toBe(false);
+    expect(castValue(editableValue(true))).toBe(true);
   });
 
   it('preserves numerical strings', () => {
-    expect(castValue(editableValue('2'))).to.equal('2');
+    expect(castValue(editableValue('2'))).toBe('2');
   });
 
   it('preserves boolean strings', () => {
-    expect(castValue(editableValue('false'))).to.equal('false');
-    expect(castValue(editableValue('true'))).to.equal('true');
+    expect(castValue(editableValue('false'))).toBe('false');
+    expect(castValue(editableValue('true'))).toBe('true');
   });
 
   it('preserves other strings', () => {
-    expect(castValue(editableValue('foo'))).to.equal('foo');
+    expect(castValue(editableValue('foo'))).toBe('foo');
   });
 
   it('preserves null', () => {
-    expect(castValue(editableValue(null))).to.equal(null);
+    expect(castValue(editableValue(null))).toBeNull();
   });
 });
 
 describe('what we show based on what the user enters', () => {
   describe('when the user enters values without quotes', () => {
     it('shows numbers and booleans without quotes', () => {
-      expect(displayableValue(castValue('1'))).to.equal('1');
-      expect(displayableValue(castValue('true'))).to.equal('true');
+      expect(displayableValue(castValue('1'))).toBe('1');
+      expect(displayableValue(castValue('true'))).toBe('true');
     });
   });
 
   describe('when the user enters values with matching quotes', () => {
     it('shows quotes around numbers and booleans', () => {
-      expect(displayableValue(castValue('"1"'))).to.equal('"1"');
-      expect(displayableValue(castValue('"true"'))).to.equal('"true"');
+      expect(displayableValue(castValue('"1"'))).toBe('"1"');
+      expect(displayableValue(castValue('"true"'))).toBe('"true"');
     });
     it('shows quotes around other string values', () => {
-      expect(displayableValue(castValue('"foo"'))).to.equal('"foo"');
+      expect(displayableValue(castValue('"foo"'))).toBe('"foo"');
     });
     it('preserves properly quoted and escaped quotes', () => {
-      expect(displayableValue(castValue('"\\"foo"'))).to.equal('"\\"foo"');
-      expect(displayableValue(castValue('"\\"foo\\""'))).to.equal(
-        '"\\"foo\\""'
-      );
+      expect(displayableValue(castValue('"\\"foo"'))).toBe('"\\"foo"');
+      expect(displayableValue(castValue('"\\"foo\\""'))).toBe('"\\"foo\\""');
     });
   });
 });

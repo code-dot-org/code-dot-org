@@ -1,0 +1,16 @@
+<ExternalLink>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 55,
+  "created_at": "2024-05-21T20:52:19.000Z",
+  "level_num": "custom",
+  "user_id": 16889,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Answering A Data Question\r\n\r\nUse the dataset linked below and the [Answering A Data Question Activity Guide](https://docs.google.com/document/d/1b8acFM8GLCR1U4LZays88VE6cJNKTVe78xUxIRo_EfM/edit?usp=sharing)",
+    "link_title": "Pizza Slice Dataset",
+    "url": "https://codap.concord.org/app/static/dg/en/cert/index.html#shared=https%3A%2F%2Fcfm-shared.concord.org%2FDP0IizAF33xrAPz2yucB%2Ffile.json"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-05-21T20:52:19.481+00:00\",\"changed\":[\"cloned from \\\"The Search for Pixel - review copy\\\"\"],\"cloned_from\":\"The Search for Pixel - review copy\"},{\"changed_at\":\"2024-05-21 20:54:13 +0000\",\"changed\":[\"long_instructions\",\"link_title\",\"url\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+}]]></config>
+</ExternalLink>

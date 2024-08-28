@@ -8,7 +8,7 @@ import {
   BodyThreeText,
   BodyFourText,
 } from '@cdo/apps/componentLibrary/typography';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 
 import styles from './twoColumnActionBlock.module.scss';
 
@@ -67,6 +67,7 @@ export default function TwoColumnActionBlock({
                   target={button.target}
                   id={button.id}
                   onClick={button.onClick}
+                  aria-label={button.ariaLabel}
                 />
                 {button.extraText && (
                   <BodyFourText>{button.extraText}</BodyFourText>

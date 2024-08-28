@@ -1,9 +1,7 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import FilterGroupContainer from '@cdo/apps/tutorialExplorer/filterGroupContainer';
-
-import {assert} from '../../util/reconfiguredChai';
 
 describe('FilterGroupContainer', () => {
   it('renders', () => {
@@ -18,13 +16,13 @@ describe('FilterGroupContainer', () => {
     const wrapper = shallow(
       <FilterGroupContainer text={title}>{content}</FilterGroupContainer>
     );
-    assert(
+    expect(
       wrapper.containsMatchingElement(
         <div>
           <div>{title}</div>
           {content}
         </div>
       )
-    );
+    ).toBeTruthy();
   });
 });

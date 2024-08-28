@@ -5,21 +5,18 @@ description 'description here'
 markdown <<MARKDOWN
 # Day 1, Asynchronous Part 1
 
-##### Welcome! This asynchronous module is designed to give you an overview of the CS Discoveries curriculum and a preview of how the problem solving process is used throughout the course.
+#### Welcome! This asynchronous module is designed to give you an overview of the CS Discoveries curriculum and a preview of how the problem solving process is used throughout the course.
 
 
-<img src="https://images.code.org/1e83c73c5f6b6fdda21937c5a54d8f25-image-1651593790029.jpg" alt="Image CS Discoveries students" width="350px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+<img src="https://images.code.org/1e83c73c5f6b6fdda21937c5a54d8f25-image-1651593790029.jpg" alt="Three students crowd around a computer and smile while they look on." width="350px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
 
-## In this module, you will:
+### **In this module, you will:**
 
-* ##### Learn more about the different units of the CS Discoveries curriculum.
-* ##### Review a Problem Solving Process lesson in one of units 2-7. 
+* #### Learn more about the different units of the CS Discoveries curriculum.
+* #### Review a Problem Solving Process lesson in one of units 2-7. 
+<br>
 
-### **Suggested time:** 60 minutes
-
-## Let's get started!
-
-<div style="clear:both"/>
-
+#### **Suggested time:** 60 minutes
+<br><br><br><br><br>
 
 MARKDOWN

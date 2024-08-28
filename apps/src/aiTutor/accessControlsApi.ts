@@ -1,6 +1,7 @@
-import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
-import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 import {MetricEvent} from '@cdo/apps/lib/metrics/events';
+import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+
 import {StudentServerData} from './types';
 
 const formatServerData = (student: StudentServerData) => ({
@@ -28,6 +29,35 @@ export const handleUpdateAITutorAccess = async (
   } catch (error) {
     MetricsReporter.logError({
       event: MetricEvent.AI_TUTOR_UPDATE_USER_ACCESS_FAIL,
+      errorMessage: JSON.stringify(error),
+    });
+    // We need to rethrow the error so that the toggle can revert to its original state.
+    throw error;
+  }
+};
+
+export const handleUpdateSectionAITutorEnabled = async (
+  sectionId: number,
+  newEnabled: boolean
+) => {
+  try {
+    const response = await fetch(
+      `/api/v1/sections/${sectionId}/ai_tutor_enabled`,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-CSRF-Token': await getAuthenticityToken(),
+        },
+        body: JSON.stringify({ai_tutor_enabled: newEnabled}),
+      }
+    );
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+  } catch (error) {
+    MetricsReporter.logError({
+      event: MetricEvent.AI_TUTOR_UPDATE_SECTION_ACCESS_FAIL,
       errorMessage: JSON.stringify(error),
     });
     // We need to rethrow the error so that the toggle can revert to its original state.

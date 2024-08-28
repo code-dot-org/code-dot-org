@@ -7,7 +7,6 @@ require 'cdo/chat_client'
 require 'cdo/developers_topic'
 require 'cdo/github'
 require 'cdo/infra_test_topic'
-require 'cdo/metrics_helper'
 
 TOPIC_DTT_IN_PROGRESS = 'no (robo-DTT in progress)'.freeze
 TOPIC_DTT_FAILED = 'no (robo-DTT failed)'.freeze
@@ -37,8 +36,6 @@ def main
     "robo-DTT created and merged <a href=\"#{GitHub.url(pr_number)}\">PR#{pr_number}</a>",
     color: 'green'
   )
-  # TODO: (darin) write to cloudwatch logs instead of devinternal_db
-  Metrics.write_metric('dtt_start', GitHub.sha('test'), Metrics::AUTOMATIC)
 rescue Exception => exception
   ChatClient.message(
     'infra-test',

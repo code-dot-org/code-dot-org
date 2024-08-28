@@ -1,4 +1,4 @@
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
@@ -6,8 +6,6 @@ import {combineReducers, createStore} from 'redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import SectionsAsStudentTable from '@cdo/apps/templates/studioHomepages/SectionsAsStudentTable';
 import i18n from '@cdo/locale';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 import {joinedSections} from './homepagesTestData';
 
@@ -39,21 +37,21 @@ describe('SectionsAsStudentTable', () => {
     const wrapper = wrapped(
       <SectionsAsStudentTable sections={joinedSections} canLeave={false} />
     );
-    expect(wrapper.find('Button').exists()).to.be.false;
+    expect(wrapper.find('Button').exists()).toBe(false);
   });
 
   it('shows a leave section button for students who do not have teacher-managed accounts', () => {
     const wrapper = wrapped(
       <SectionsAsStudentTable sections={joinedSections} canLeave={true} />
     );
-    expect(wrapper.find('Button').exists()).to.be.true;
+    expect(wrapper.find('Button').exists()).toBe(true);
   });
 
   it('renders a row for each joined section', () => {
     const wrapper = wrapped(
       <SectionsAsStudentTable sections={joinedSections} canLeave={false} />
     );
-    expect(wrapper.find('.test-row')).to.have.length(4);
+    expect(wrapper.find('.test-row')).toHaveLength(4);
     expect(wrapper.containsMatchingElement(<div>Current unit:</div>));
     joinedSections.forEach(section => {
       expect(
@@ -99,8 +97,8 @@ describe('SectionsAsStudentTable', () => {
     expect(wrapper.containsMatchingElement(<td>ClassOneCode</td>));
     expect(wrapper.containsMatchingElement(<td>ClassTwoCode</td>));
     expect(wrapper.containsMatchingElement(<td>Google Classroom</td>));
-    expect(wrapper.containsMatchingElement(<td>DoNotShowThis</td>)).to.be.false;
+    expect(wrapper.containsMatchingElement(<td>DoNotShowThis</td>)).toBe(false);
     expect(wrapper.containsMatchingElement(<td>Clever</td>));
-    expect(wrapper.containsMatchingElement(<td>OrThisEither</td>)).to.be.false;
+    expect(wrapper.containsMatchingElement(<td>OrThisEither</td>)).toBe(false);
   });
 });

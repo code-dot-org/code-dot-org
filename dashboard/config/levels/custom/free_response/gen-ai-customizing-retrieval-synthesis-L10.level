@@ -1,0 +1,29 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-05-08T22:39:25.000Z",
+  "level_num": "custom",
+  "user_id": 0,
+  "properties": {
+    "long_instructions": "When you're designing a chatbot to solve a problem or accomplish a task:\r\n1) When is it better to use a **system prompt**? What types of problems make you think \"I'll try to use a system prompt to address this\"?\r\n2) When is it better to use **retrieval**? What types of problems make you think \"I'll try to use retrieval statements to address this\"?",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 19018,
+    "name_suffix": "2022",
+    "encrypted": "false",
+    "instructions_important": "false",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "true",
+    "title": "Check-In",
+    "placeholder": "Type your answer here!"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-08T22:39:25.120+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-retrieval-synthesis-L1\\\"\"],\"cloned_from\":\"gen-ai-customizing-retrieval-synthesis-L1\"},{\"changed_at\":\"2024-05-08 22:43:16 +0000\",\"changed\":[\"long_instructions\",\"optional\",\"title\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

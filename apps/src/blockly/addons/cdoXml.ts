@@ -1,5 +1,6 @@
 import {Workspace, WorkspaceSvg} from 'blockly';
-import {BLOCK_TYPES, PROCEDURE_DEFINITION_TYPES} from '../constants';
+
+import {BLOCK_TYPES} from '../constants';
 import {BlocklyWrapperType, XmlBlockConfig} from '../types';
 import {
   FALSEY_DEFAULT,
@@ -148,7 +149,8 @@ export function removeIdsFromBlocks(
  */
 export function addMutationToMiniToolboxBlocks(blockElement: Element) {
   const miniflyoutAttribute = blockElement.getAttribute('miniflyout');
-  const existingMutationElement = blockElement.querySelector('mutation');
+  const existingMutationElement =
+    blockElement.querySelector(':scope > mutation');
   if (!miniflyoutAttribute || existingMutationElement) {
     // The block is the wrong type or has somehow already been processed.
     return;
@@ -201,7 +203,7 @@ export function addMutationToBehaviorBlocks(blockElement: Element) {
     return;
   }
   const mutationElement =
-    blockElement.querySelector('mutation') ||
+    blockElement.querySelector(':scope > mutation') ||
     blockElement.ownerDocument.createElement('mutation');
   // Place mutator before fields, values, and other nested blocks.
   blockElement.insertBefore(mutationElement, blockElement.firstChild);
@@ -243,7 +245,7 @@ export function addMutationToProcedureDefBlocks(blockElement: Element) {
     return;
   }
   const mutationElement =
-    blockElement.querySelector('mutation') ||
+    blockElement.querySelector(':scope > mutation') ||
     blockElement.ownerDocument.createElement('mutation');
   // Place mutator before fields, values, and other nested blocks.
   blockElement.insertBefore(mutationElement, blockElement.firstChild);
@@ -266,11 +268,6 @@ export function addMutationToProcedureDefBlocks(blockElement: Element) {
  * @param {Element} blockElement - The XML element for a single block.
  */
 export function addMutationToInvisibleBlocks(blockElement: Element) {
-  const blockType = blockElement.getAttribute('type');
-  if (blockType && PROCEDURE_DEFINITION_TYPES.includes(blockType)) {
-    return;
-  }
-
   const invisible = !readBooleanAttribute(
     blockElement,
     'uservisible',
@@ -281,7 +278,7 @@ export function addMutationToInvisibleBlocks(blockElement: Element) {
     return;
   }
   const mutationElement =
-    blockElement.querySelector('mutation') ||
+    blockElement.querySelector(':scope > mutation') ||
     blockElement.ownerDocument.createElement('mutation');
   // Place mutator before fields, values, and other nested blocks.
   blockElement.insertBefore(mutationElement, blockElement.firstChild);
@@ -320,7 +317,7 @@ export function addNameToBlockFunctionCallBlock(blockElement: Element) {
     return;
   }
   const mutationElement =
-    blockElement.querySelector('mutation') ||
+    blockElement.querySelector(':scope > mutation') ||
     blockElement.ownerDocument.createElement('mutation');
   // Place mutator before fields, values, and other nested blocks.
   blockElement.insertBefore(mutationElement, blockElement.firstChild);
@@ -378,7 +375,7 @@ export function addMutationToTextJoinBlock(blockElement: Element) {
     return;
   }
   const mutationElement =
-    blockElement.querySelector('mutation') ||
+    blockElement.querySelector(':scope > mutation') ||
     blockElement.ownerDocument.createElement('mutation');
   // Place mutator before fields, values, and other nested blocks.
   blockElement.insertBefore(mutationElement, blockElement.firstChild);
@@ -456,4 +453,52 @@ function makeLockedBlockImmovable(block: Element) {
 export function getBlockElements(xml: Element) {
   // Convert XML to an array of block elements
   return Array.from(xml.querySelectorAll('xml > block'));
+}
+
+/**
+ * Removes all top-level invisible blocks from a Blockly xml element. "Top-level" blocks
+ * in this case also includes blocks that nested directly within a category element.
+ * Used to (unsupported) invisible blocks from a toolbox definition
+ */
+export function removeInvisibleBlocks(xml: Element) {
+  const categories = xml.getElementsByTagName('category');
+  const blocks = xml.getElementsByTagName('block');
+
+  // Convert HTMLCollection to an array to iterate safely
+  const blocksArray = Array.from(blocks);
+  const categoriesArray = Array.from(categories);
+
+  blocksArray.forEach(block => {
+    if (
+      (block.parentElement === xml ||
+        categoriesArray.includes(block.parentElement as Element)) &&
+      block.getAttribute('uservisible') === 'false'
+    ) {
+      block.remove();
+    }
+  });
+  return xml;
+}
+
+/**
+ * Removes statically-defined procedure call blocks from the auto-populated
+ * Functions toolbox category. Call blocks are automatically supplied by the
+ * flyout category callback.
+ */
+export function removeStaticCallBlocks(xml: Element) {
+  // Find the auto-populated Functions category, if it exists.
+  const procedureCategory = Array.from(
+    xml.getElementsByTagName('category')
+  ).find(category => category.getAttribute('custom') === 'PROCEDURE');
+
+  if (procedureCategory) {
+    // Find any procedure call blocks defined within the XML for this category
+    const procedureCallBlocks = Array.from(
+      procedureCategory.getElementsByTagName('block')
+    ).filter(block => block.getAttribute('type') === BLOCK_TYPES.procedureCall);
+
+    // Remove each of the filtered blocks
+    procedureCallBlocks.forEach(block => block.remove());
+  }
+  return xml;
 }

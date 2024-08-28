@@ -41,13 +41,6 @@ separately.
 * Findings show that after completing one Hour of Code activity students report liking computer science more, feel that they are better able to learn computer science, and are better at computer science than their peers.
 
 
-Other reports
-
-- [Code.org Evaluation Report 2015-16 (PDF)](/files/EvaluationReport2015-16.pdf)
-- [Hour of Code impact report and teacher survey 2015](/about/evaluation/hourofcode)
-- [Code.org Evaluation Report 2014-15](/about/evaluation/summary)
-
-
 ## Research Partnerships
 
 

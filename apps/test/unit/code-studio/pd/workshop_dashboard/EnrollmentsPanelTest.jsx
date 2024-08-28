@@ -1,9 +1,10 @@
+import {assert} from 'chai'; // eslint-disable-line no-restricted-imports
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
-import {shallow, mount} from 'enzyme';
-import {assert} from 'chai';
-import sinon from 'sinon';
 import {Factory} from 'rosie';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import EnrollmentsPanel, {
   MOVE_ENROLLMENT_BUTTON_NAME,
   EDIT_ENROLLMENT_NAME_BUTTON_NAME,

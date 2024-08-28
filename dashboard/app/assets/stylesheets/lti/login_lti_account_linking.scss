@@ -1,0 +1,46 @@
+@import 'color';
+
+#linking-page-header {
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+#linking-page-description {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#oauth-side {
+  flex-grow: 0;
+  margin-left: auto;
+}
+
+#email-side {
+  margin-right: auto;
+}
+
+#signin-connect-button {
+  background: $purple;
+  color: $white;
+}
+
+#flash-messages {
+  text-align: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.call-to-action-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.go-back-link {
+  display: block;
+}
+
+.oauth-sign-in {
+  padding-right: 20px;
+}

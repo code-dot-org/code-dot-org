@@ -1,8 +1,7 @@
-import _ from 'lodash';
-import {WORKSPACE_PADDING, SETUP_TYPES, BLOCK_TYPES} from '../constants';
-import {frameSizes} from './cdoConstants';
-import {shouldSkipHiddenWorkspace} from '../utils';
 import {Block, WorkspaceSvg} from 'blockly';
+import _ from 'lodash';
+
+import {WORKSPACE_PADDING, SETUP_TYPES, BLOCK_TYPES} from '../constants';
 import {
   Collider,
   ExtendedBlockSvg,
@@ -10,6 +9,9 @@ import {
   WorkspaceSerialization,
   XmlBlockConfig,
 } from '../types';
+import {shouldSkipHiddenWorkspace} from '../utils';
+
+import {frameSizes} from './cdoConstants';
 
 const {
   BLOCK_HEADER_HEIGHT,

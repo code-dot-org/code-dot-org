@@ -1,24 +1,29 @@
-import React, {useCallback, useState} from 'react';
 import classNames from 'classnames';
+import React, {useState, useMemo} from 'react';
+import {useSelector} from 'react-redux';
 
-import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
+import {AichatLevelProperties, ModelDescription} from '@cdo/apps/aichat/types';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import SimpleDropdown from '@cdo/apps/componentLibrary/dropdown/simpleDropdown/SimpleDropdown';
+import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
+
+import {modelDescriptions} from '../../constants';
+import {setAiCustomizationProperty} from '../../redux/aichatRedux';
+
+import CompareModelsDialog from './CompareModelsDialog';
 import {
-  setAiCustomizationProperty,
-  updateAiCustomization,
-} from '../../redux/aichatRedux';
-import styles from '../model-customization-workspace.module.scss';
-import {
+  DEFAULT_VISIBILITIES,
   MAX_TEMPERATURE,
   MIN_TEMPERATURE,
   SET_TEMPERATURE_STEP,
 } from './constants';
-import {isVisible, isDisabled} from './utils';
-import CompareModelsDialog from './CompareModelsDialog';
-import {modelDescriptions} from '../../constants';
-import {AichatLevelProperties} from '@cdo/apps/aichat/types';
+import FieldLabel from './FieldLabel';
+import SaveChangesAlerts from './SaveChangesAlerts';
+import UpdateButton from './UpdateButton';
+import {isVisible, isDisabled, isEditable} from './utils';
+
+import styles from '../model-customization-workspace.module.scss';
 
 const SetupCustomization: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
@@ -26,37 +31,62 @@ const SetupCustomization: React.FunctionComponent = () => {
   const [isShowingModelDialog, setIsShowingModelDialog] =
     useState<boolean>(false);
 
-  const {temperature, systemPrompt} = useAppSelector(
-    state => state.aichat.fieldVisibilities
-  );
+  // we default selectedModelId because it was added later and may not exist in all levels
+  const {
+    temperature,
+    systemPrompt,
+    selectedModelId = DEFAULT_VISIBILITIES.selectedModelId,
+  } = useAppSelector(state => state.aichat.fieldVisibilities);
   const aiCustomizations = useAppSelector(
     state => state.aichat.currentAiCustomizations
   );
 
-  /** defaults to all models if not set in levelProperties */
   const availableModelIds = useAppSelector(
     state =>
       (state.lab.levelProperties as AichatLevelProperties | undefined)
         ?.aichatSettings?.availableModelIds
   );
-  const availableModels = availableModelIds
-    ? modelDescriptions.filter(model => availableModelIds.includes(model.id))
-    : modelDescriptions;
 
-  const chosenModelId =
-    aiCustomizations.selectedModelId || availableModels[0].id;
-  const allFieldsDisabled = isDisabled(temperature) && isDisabled(systemPrompt);
+  // Handle the possibility that modelDescription can change but levels
+  // may be using outdated model ids. Fall back to first modelDescription.
+  const availableModels = useMemo(() => {
+    let models: ModelDescription[] = [];
+    if (availableModelIds && availableModelIds.length) {
+      // Exclude any models that we don't have descriptions for
+      models = modelDescriptions.filter(model =>
+        availableModelIds.includes(model.id)
+      );
+    }
+    return models.length ? models : [modelDescriptions[0]];
+  }, [availableModelIds]);
 
-  const onUpdate = useCallback(
-    () => dispatch(updateAiCustomization()),
-    [dispatch]
-  );
+  const chosenModelId = useMemo(() => {
+    return (
+      availableModels.find(
+        model => model.id === aiCustomizations.selectedModelId
+      )?.id || availableModels[0].id
+    );
+  }, [aiCustomizations.selectedModelId, availableModels]);
+
+  const readOnlyWorkspace: boolean = useSelector(isReadOnlyWorkspace);
+
+  const allFieldsDisabled =
+    (isDisabled(temperature) &&
+      isDisabled(systemPrompt) &&
+      isDisabled(selectedModelId)) ||
+    readOnlyWorkspace;
 
   const renderChooseAndCompareModels = () => {
     return (
       <div className={styles.inputContainer}>
+        <FieldLabel
+          id="selected-model"
+          label="Selected model"
+          tooltipText="This is the underlying language model being used by the chatbot. Use the dropdown to select from additional fine-tuned models."
+        />
         <SimpleDropdown
-          labelText="Selected model:"
+          labelText="Selected model"
+          isLabelVisible={false}
           onChange={event =>
             dispatch(
               setAiCustomizationProperty({
@@ -72,16 +102,21 @@ const SetupCustomization: React.FunctionComponent = () => {
           name="model"
           size="s"
           className={styles.selectedModelDropdown}
+          disabled={isDisabled(selectedModelId) || readOnlyWorkspace}
         />
-        <Button
-          text="Compare Models"
-          onClick={() => setIsShowingModelDialog(true)}
-          type="secondary"
-          className={classNames(
-            styles.updateButton,
-            styles.compareModelsButton
-          )}
-        />
+        {isEditable(selectedModelId) && (
+          <Button
+            text="Compare Models"
+            onClick={() => setIsShowingModelDialog(true)}
+            type="secondary"
+            color="gray"
+            className={classNames(
+              styles.updateButton,
+              styles.compareModelsButton
+            )}
+            disabled={readOnlyWorkspace}
+          />
+        )}
         {isShowingModelDialog && (
           <CompareModelsDialog
             onClose={() => setIsShowingModelDialog(false)}
@@ -95,13 +130,15 @@ const SetupCustomization: React.FunctionComponent = () => {
   return (
     <div className={styles.verticalFlexContainer}>
       <div className={styles.customizationContainer}>
-        {renderChooseAndCompareModels()}
+        {isVisible(selectedModelId) && renderChooseAndCompareModels()}
         {isVisible(temperature) && (
           <div className={styles.inputContainer}>
             <div className={styles.horizontalFlexContainer}>
-              <label htmlFor="temperature">
-                <StrongText>Temperature</StrongText>
-              </label>
+              <FieldLabel
+                id="temperature"
+                label="Temperature"
+                tooltipText="Temperature affects which words are generated as a response. Use the slider to change the temperature."
+              />
               {aiCustomizations.temperature}
             </div>
             <input
@@ -110,7 +147,7 @@ const SetupCustomization: React.FunctionComponent = () => {
               max={MAX_TEMPERATURE}
               step={SET_TEMPERATURE_STEP}
               value={aiCustomizations.temperature}
-              disabled={isDisabled(temperature)}
+              disabled={isDisabled(temperature) || readOnlyWorkspace}
               onChange={event =>
                 dispatch(
                   setAiCustomizationProperty({
@@ -124,13 +161,15 @@ const SetupCustomization: React.FunctionComponent = () => {
         )}
         {isVisible(systemPrompt) && (
           <div className={styles.inputContainer}>
-            <label htmlFor="system-prompt">
-              <StrongText>System prompt</StrongText>
-            </label>
+            <FieldLabel
+              id="system-prompt"
+              label="System Prompt"
+              tooltipText="The system prompt controls how the chatbot behaves. Type your instructions into the text box."
+            />
             <textarea
               id="system-prompt"
               value={aiCustomizations.systemPrompt}
-              disabled={isDisabled(systemPrompt)}
+              disabled={isDisabled(systemPrompt) || readOnlyWorkspace}
               onChange={event =>
                 dispatch(
                   setAiCustomizationProperty({
@@ -144,14 +183,9 @@ const SetupCustomization: React.FunctionComponent = () => {
         )}
       </div>
       <div className={styles.footerButtonContainer}>
-        <Button
-          text="Update"
-          disabled={allFieldsDisabled}
-          iconLeft={{iconName: 'edit'}}
-          onClick={onUpdate}
-          className={styles.updateButton}
-        />
+        <UpdateButton isDisabledDefault={allFieldsDisabled} />
       </div>
+      <SaveChangesAlerts />
     </div>
   );
 };

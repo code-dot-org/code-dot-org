@@ -1,0 +1,17 @@
+name 'course_c_maker_emotion_badge_coursed'
+title 'Making Counters'
+
+
+markdown <<MARKDOWN
+<h2 style="text-align: center;">Emotion Badge</h2>
+
+<div style="text-align: center;">
+<p>
+Now you’re ready to code  <b>events</b> for the micro:bit.
+Ask your teacher for the micro:bit project link! </p>
+</div>
+
+
+<img src="https://images.code.org/f0ac453771c56b3f186fc3d40fc94af7-image-1702499895753.png" style="display: block; margin: auto; width: 30%">
+
+MARKDOWN

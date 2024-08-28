@@ -1,19 +1,28 @@
-import React, {useMemo, useState, useEffect} from 'react';
-import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
 import classnames from 'classnames';
-import style from './rubrics.module.scss';
-import {aiEvaluationShape, evidenceLevelShape} from './rubricShapes';
+import PropTypes from 'prop-types';
+import React, {
+  useMemo,
+  useState,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+} from 'react';
+
 import {
   BodyThreeText,
   BodyFourText,
   StrongText,
 } from '@cdo/apps/componentLibrary/typography';
+import {RubricUnderstandingLevels} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
 import {
   UNDERSTANDING_LEVEL_STRINGS,
   UNDERSTANDING_LEVEL_STRINGS_V2,
 } from './rubricHelpers';
-import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import {aiEvaluationShape, evidenceLevelShape} from './rubricShapes';
+
+import style from './rubrics.module.scss';
 
 const INVALID_UNDERSTANDING = -1;
 
@@ -26,7 +35,10 @@ export default function EvidenceLevelsForTeachersV2({
   isAutosaving,
   isAiAssessed,
   aiEvalInfo,
+  arrowPositionCallback,
 }) {
+  const ref = useRef(null);
+
   // Generates a list of evidence levels to highlight, indicating the AI
   // recommendation. Using the precomputed value showExactMatch, decides whether
   // to highlight a single evidence level (exact match) or a range of two
@@ -72,15 +84,43 @@ export default function EvidenceLevelsForTeachersV2({
     }
   }, [productTour]);
 
+  useLayoutEffect(() => {
+    if (!ref.current) {
+      return;
+    }
+
+    // Get the position of the suggested buttons and determine the position of the arrow
+    const edge = ref.current.getBoundingClientRect().left;
+    const nodes = ref.current.querySelectorAll('button[data-ai-suggested]');
+    const node = nodes[0];
+    const dim = node?.getBoundingClientRect();
+
+    let left = 0;
+    if (nodes.length === 1) {
+      // If there is just one node, we center it on that suggested level
+      left = (dim.right - dim.left) / 2 + dim.left - edge;
+    } else if (nodes.length === 2) {
+      // If there are two nodes, we place it between the two
+      const nextDim = nodes[1].getBoundingClientRect();
+      left = (nextDim.left - dim.right) / 2 + dim.right - edge;
+    }
+    arrowPositionCallback(left);
+  }, [ref, arrowPositionCallback, suggestedEvidenceLevels]);
+
   if (canProvideFeedback) {
     return (
       <div id="tour-evidence-levels">
         <BodyThreeText className={style.evidenceLevelHeaderText}>
           <StrongText>{i18n.assignARubricScore()}</StrongText>
         </BodyThreeText>
-        <div className={style.evidenceLevelSetHorizontal}>
+        <div className={style.evidenceLevelSetHorizontal} ref={ref}>
           {evidenceLevels.map(evidenceLevel => (
             <button
+              data-ai-suggested={
+                suggestedEvidenceLevels.includes(evidenceLevel.understanding)
+                  ? ''
+                  : null
+              }
               disabled={isAutosaving}
               type="button"
               key={evidenceLevel.id}
@@ -111,10 +151,10 @@ export default function EvidenceLevelsForTeachersV2({
           <BodyFourText>
             {showDescription !== INVALID_UNDERSTANDING
               ? evidenceLevels.find(e => e.understanding === showDescription)
-                  .teacherDescription
+                  ?.teacherDescription
               : understanding >= 0 &&
                 evidenceLevels.find(e => e.understanding === understanding)
-                  .teacherDescription}
+                  ?.teacherDescription}
           </BodyFourText>
         </div>
       </div>
@@ -151,4 +191,5 @@ EvidenceLevelsForTeachersV2.propTypes = {
   isAutosaving: PropTypes.bool,
   isAiAssessed: PropTypes.bool.isRequired,
   aiEvalInfo: aiEvaluationShape,
+  arrowPositionCallback: PropTypes.func,
 };

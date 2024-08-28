@@ -3,12 +3,23 @@
 // This file contains some functionality related to navigating through
 // levels without doing page reloads.
 
-import {getStore} from '../redux';
 import {setCurrentLevelId} from '@cdo/apps/code-studio/progressRedux';
+
+import notifyLevelChange from '../lab2/utils/notifyLevelChange';
+import {getStore} from '../redux';
 
 // Returns whether we can safely navigate between the two given levels
 // without reloading the whole page.
 export function canChangeLevelInPage(currentLevel, newLevel) {
+  // If we are on the summary page, we can't navigate to a new level without
+  // reloading the page. Summary is used for viewing student responses to
+  // predict levels.
+  const path = new URL(document.location).pathname;
+  const pathComponents = path.split('/');
+  if (pathComponents.includes('summary')) {
+    return false;
+  }
+  // Otherwise, we can navigate between any 2 lab2 levels.
   return currentLevel?.usesLab2 && newLevel?.usesLab2;
 }
 
@@ -16,31 +27,18 @@ export function canChangeLevelInPage(currentLevel, newLevel) {
 // handler, for user-initiated browser back & forward button
 // presses, which is fired when arriving on a page that we pushed onto the
 // browser session history stack.
-export function setupNavigationHandler(lessonData) {
+export function setupNavigationHandler(initialLevelId) {
+  // Store the starting level ID in the browser history stack.
+  window.history.replaceState({levelId: initialLevelId}, '');
   window.addEventListener('popstate', function (event) {
-    // A path looks like this: /s/allthethings/lessons/46/levels/2
-    // The level number will be at index 6 of a string split on '/'.
-    const levelNumberStringIndex = 6;
-
-    const path = new URL(document.location).pathname;
-    if (!path) {
+    const levelId = event.state?.levelId;
+    if (!levelId) {
       return;
     }
-
-    const values = path.split('/', levelNumberStringIndex + 1);
-    if (values.length < levelNumberStringIndex + 1) {
-      return;
-    }
-
-    const levelNumber = Number(values[6]);
-    if (!Number.isInteger(levelNumber) || levelNumber <= 0) {
-      return;
-    }
-
-    const levelIndex = levelNumber - 1;
-    const levelId = lessonData.levels[levelIndex].activeId;
-
-    // Update the progress redux store.
+    // Notify the Lab2 system (that handles changing levels without reload) about the level change.
+    // The browser history API does not provide access to the state of the page we just came from,
+    // so we don't know the previous level ID.
+    notifyLevelChange(null, levelId);
     getStore().dispatch(setCurrentLevelId(levelId));
   });
 }
@@ -52,7 +50,7 @@ export function updateBrowserForLevelNavigation(
   levelPath,
   levelId
 ) {
-  window.history.pushState({}, '', levelPath + window.location.search);
+  window.history.pushState({levelId}, '', levelPath + window.location.search);
   setWindowTitle(progressStoreState, levelId);
 }
 

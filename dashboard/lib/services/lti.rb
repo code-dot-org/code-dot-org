@@ -105,6 +105,7 @@ module Services
 
       if account_type == ::User::TYPE_TEACHER && email_address.present?
         user.user_type = ::User::TYPE_TEACHER
+        user.lti_roster_sync_enabled = true
       else
         user.user_type = ::User::TYPE_STUDENT
         user.family_name = get_claim(nrps_member_message, :family_name)
@@ -190,8 +191,19 @@ module Services
           issuer: issuer,
           nrps_member: nrps_member
         )
-        had_changes ||= (user.new_record? || user.changed?)
+        user_was_new = user.new_record?
+        had_changes ||= (user_was_new || user.changed?)
         user.save!
+        if user_was_new
+          Metrics::Events.log_event(
+            user: user,
+            event_name: 'lti_user_created',
+            metadata: {
+              lms_name: lti_integration[:platform_name],
+              context: 'roster_sync'
+            }
+          )
+        end
         if account_type == ::User::TYPE_TEACHER
           # Skip adding the instructor and reporting changes if the user is already an instructor
           unless section.instructors.include?(user)
@@ -234,6 +246,7 @@ module Services
         name: lti_section.section.name,
         short_name: nrps_section[:short_name],
         instructors: instructor_list,
+        lti_section_id: lti_section.id,
       }
     end
 
@@ -296,6 +309,14 @@ module Services
         end
       end
       course_sync_result
+    end
+
+    def self.initialize_lms_landing_session(session, lti_provider_name, new_cta_type, user_type)
+      session[:lms_landing] = {
+        lti_provider_name: lti_provider_name,
+        new_cta_type: new_cta_type,
+        user_type: user_type,
+      }
     end
   end
 end

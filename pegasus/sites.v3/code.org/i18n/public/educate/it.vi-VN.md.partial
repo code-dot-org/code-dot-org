@@ -17,9 +17,11 @@ theme: responsive
 
 ## Các trình duyệt và nền tảng được hỗ trợ tối thiểu
 
+Bắt đầu từ tháng 7 năm 2024, chúng tôi sẽ cập nhật các phiên bản tối thiểu cần thiết cho trình duyệt và hệ điều hành. Mặc dù các phiên bản cũ vẫn có thể hoạt động, chúng tôi sẽ không thể hỗ trợ các yêu cầu sửa lỗi trong các phiên bản cũ hơn.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Trình duyệt
@@ -40,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Trình duyệt tháng 7 '24
+        </th>
+        <tr>
+          <td>Chrome 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Safari di động 14.x</td>
+        </tr>
+        <tr>
+          <td>Cạnh 119.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Nền tảng
@@ -62,8 +86,30 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Nền tảng tháng 7 '24
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Trang web cần bỏ chặn
@@ -80,16 +126,15 @@ theme: responsive
 | **Sử dụng Trình mô phỏng Internet**                                                                          | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Sử dụng Web Lab**                                                                                          | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Sử dụng Nút Chia sẻ Lớp học của Google**                                                                   | `https://apis.google.com`                                                                                  |
-| **Cách sử dụng bộ dữ liệu App Lab**                                                                          | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Thông tin hỗ trợ thiết bị di động và máy tính bảng
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Hầu hết các loại máy tính bảng đều không được hỗ trợ, ngoại trừ:
+Tất cả các khóa học CS Discoveries, CS Principles, CS A và Intro to App Lab đều không tương thích với máy tính bảng hoặc thiết bị di động - cần có bàn phím và chuột (hoặc bàn di chuột) đầy đủ. Hầu hết các loại máy tính bảng đều không được hỗ trợ, ngoại trừ:
 
 - Microsoft Surface Pro có bàn phím rời
 - iPad chạy iPadOS 13.4 trở lên có bàn phím và chuột rời hoặc bàn di chuột
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+Tất cả các nội dung khác, chẳng hạn như các khóa học K-5 (Cơ bản về Khoa học Máy tính) và các hoạt động Giờ Mã hóa đều tương thích trên iPad và các máy tính bảng hiện đại khác và máy tính xách tay hoặc máy tính để bàn.
 
 ### Điện thoại di động
 
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+Đây là trình phát được sử dụng trong suốt chương trình học. Trình phát này sẽ cố gắng hiển thị video qua YouTube và nếu YouTube bị chặn thì sẽ hiển thị video lưu trên Code.org bằng trình phát “dự phòng” của chúng tôi.
 
 ### Video không chạy ư?
 
-If video does not work, you can email us at support@code.org.
+Nếu video không hoạt động, bạn có thể gửi email cho chúng tôi theo địa chỉ support@code.org.
 
-However, you can still use our tutorials without video.
+Tuy nhiên, bạn vẫn có thể sử dụng bài hướng dẫn của chúng tôi mà không cần video.
 
 1. Chúng tôi đã tải lên toàn bộ video của mình [để bạn tải xuống cùng lúc](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). Nếu trường của bạn có băng thông thấp, chúng tôi khuyên bạn nên tải video xuống và cho học sinh xem trên màn hình chung.
 2. Chúng tôi đã thêm biểu tượng liên kết tải xuống màu xanh lá cây <img src="/images/green-download.png" width=25 height=25 /> tích hợp vào bài hướng dẫn cho mỗi video để học sinh tải xuống các video hướng dẫn riêng lẻ.
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## Cài đặt đặc biệt cho người dùng Google Apps/G-Suite
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+Nếu bạn là quản trị viên G-suite, đừng quên kiểm tra cài đặt hạn chế của bạn dành cho YouTube. Nếu bạn đã xác định cài đặt “Quyền truy cập YouTube bị hạn chế nghiêm ngặt” hoặc nếu bạn thấy thông báo cho biết ‘video này bị hạn chế’, bạn có thể thêm kênh của chúng tôi vào danh sách kênh phê duyệt. Xem [hướng dẫn sau đây](https://support.google.com/a/answer/6245597) của Google để tìm hiểu cách thêm kênh của chúng tôi vào danh sách phê duyệt. Bạn cũng có thể xem [hướng dẫn này](https://support.google.com/a/answer/6212415?hl=en) để tìm hiểu thêm về các cài đặt khác nhau và cài đặt nào phù hợp nhất cho lớp học của bạn.
 
 ## Bạn vẫn gặp sự cố?
 
-We'll help you out - just email us at support@code.org!
+Chúng tôi sẽ hỗ trợ – chỉ cần gửi email cho chúng tôi theo địa chỉ support@code.org!

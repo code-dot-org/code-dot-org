@@ -194,8 +194,6 @@ export function shouldDisplayChatTips(skinId) {
   /*eslint-disable no-fallthrough*/
   switch (skinId) {
     // skins without avatars
-    case 'calc':
-    case 'eval':
     case 'jigsaw':
     // skins with licensed avatars
     case 'infinity':

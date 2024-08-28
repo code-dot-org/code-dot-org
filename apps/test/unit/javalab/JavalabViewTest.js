@@ -1,8 +1,8 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from '../../util/reconfiguredChai';
-import {shallow} from 'enzyme';
-import {UnconnectedJavalabView as JavalabView} from '@cdo/apps/javalab/JavalabView';
+
 import JavalabCaptchaDialog from '@cdo/apps/javalab/JavalabCaptchaDialog';
+import {UnconnectedJavalabView as JavalabView} from '@cdo/apps/javalab/JavalabView';
 
 describe('Javalab View', () => {
   let defaultProps;
@@ -31,6 +31,6 @@ describe('Javalab View', () => {
 
   it('includes captcha dialog to prompt unverified teachers', () => {
     const wrapper = shallow(<JavalabView {...defaultProps} />);
-    expect(wrapper.find(JavalabCaptchaDialog)).to.have.lengthOf(1);
+    expect(wrapper.find(JavalabCaptchaDialog)).toHaveLength(1);
   });
 });

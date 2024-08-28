@@ -15,7 +15,7 @@ module Cdo
     def self.clone_cluster(
       source_cluster_id: CDO.db_cluster_id,
       clone_cluster_id: "#{source_cluster_id}-clone",
-      instance_type: 'db.r4.large',
+      instance_type: 'db.r5.large',
       max_attempts: 30,  # It takes ~15 minutes to clone the production cluster, so default to 30 minutes.
       delay: 60
     )
@@ -51,18 +51,17 @@ module Cdo
           db_instances.
           first
 
-        copy_source_writer_instance_parameter_group = rds_client.copy_db_parameter_group(
-          source_db_parameter_group_identifier: source_writer_instance[:db_parameter_groups][0][:db_parameter_group_name],
-          target_db_parameter_group_description: clone_instance_parameter_group,
-          target_db_parameter_group_identifier: clone_instance_parameter_group,
-        ).db_parameter_group
+        copy_source_writer_instance_parameter_group_name = copy_parameter_group_unless_default(
+          source_writer_instance[:db_parameter_groups][0][:db_parameter_group_name],
+          clone_instance_parameter_group
+        )
 
         rds_client.create_db_instance(
           db_instance_identifier: clone_instance_id,
           db_instance_class: instance_type,
           engine: source_cluster.engine,
           db_cluster_identifier: clone_cluster_id,
-          db_parameter_group_name: copy_source_writer_instance_parameter_group.db_parameter_group_name
+          db_parameter_group_name: copy_source_writer_instance_parameter_group_name
         )
         # The RDS SDK doesn't provide a waiter for cluster operations.  Once the db instance is provisioned, the
         # cluster is ready.
@@ -146,6 +145,28 @@ module Cdo
         "#{db_cluster_id} deletion to complete.  Current cluster status - #{cluster_state}"
         )
       end
+    end
+
+    # You can't copy a default parameter group, so we provide a helper method
+    # which if the specified parameter group is a default will return the name
+    # of that same default to be reused, and will otherwise create a copy and
+    # return the name of that copy.
+    #
+    # See https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithDBClusterParamGroups.html#USER_WorkingWithParamGroups.CopyingCluster
+    private_class_method def self.copy_parameter_group_unless_default(source_name, target_name, target_description = nil)
+      # It really seems like there should be a more reliable way to determine
+      # whether a given parameter group is default or custom than inspecting
+      # the name, but I haven't been able to find one.
+      return source_name if source_name.start_with?('default.')
+
+      rds_client = Aws::RDS::Client.new
+      copied_parameter_group = rds_client.copy_db_parameter_group(
+        source_db_parameter_group_identifier: source_name,
+        target_db_parameter_group_identifier: target_name,
+        # reuse identifier for description if none specified
+        target_db_parameter_group_description: target_description || target_name,
+      ).db_parameter_group
+      return copied_parameter_group.db_parameter_group_name
     end
   end
 end

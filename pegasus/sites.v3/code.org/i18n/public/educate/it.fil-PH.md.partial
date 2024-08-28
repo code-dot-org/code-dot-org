@@ -17,9 +17,11 @@ theme: responsive
 
 ## Minimum na Mga Sinusuportahang Browser at Platform
 
+Starting in July 2024, we will update the minimum versions required for browsers and operating systems. While the old versions may still work, we will be unable to support requests for bug fixes in the older versions.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Browser
@@ -40,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Browser July '24
+        </th>
+        <tr>
+          <td>Chrome 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Mobile Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Edge 119.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Platform
@@ -62,8 +86,30 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platform July '24
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Mga Site na I-unblock
@@ -80,7 +126,6 @@ Para sa pinakamagandang karanasan sa lahat ng nilalaman ng Code.org, inirerekume
 | **Upang gamitin ang Internet Simulator**                                                            | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Upang gamitin ang Web Lab**                                                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Para gamitin ang Google Classroom Share na Button**                                               | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                                                                         | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
 ## Mga Detalye ng Suporta sa Mobile at Tablet
 
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+Ito ang player na ginagamit sa buong kurikulum. Susubukan nitong ipakita ang video sa pamamagitan ng YouTube at, kung naka-block ang YouTube, ipakita sa halip ang Code.org na naka-host na video gamit ang "fallback" player namin.
 
 ### Hindi gumagana ang video?
 
-If video does not work, you can email us at support@code.org.
+Kung hindi gumana ang video, mag-email sa amin sa support@code.org.
 
-However, you can still use our tutorials without video.
+Gayunpaman, maaari mo pa ring gamitin ang mga tutorial namin nang walang video.
 
 1. Ginawa namin ang lahat ng mga video na [magagamit sa pag-download nang magkasama](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). Kung mababa ang bandwidth ng paaralan mo, inirerekomenda namin na mag-download ka ng mga video at ipakita ang mga ito sa mga mag-aaral sa isang shared screen.
 2. Isinama sa mga tutorial namin, nagdagdag kami ng berdeng icon ng link sa pag-download <img src="/images/green-download.png" width=25 height=25 /> sa bawat video, na nagpapahintulot sa mga mag-aaral na mag-download ng mga tutorial ng indibidwal na video.
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## Mga espesyal na setting sa mga user ng Google Apps/G-Suite
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+Kung isa kang G-suite administrator, tiyaking tingnan kung ano ang mga setting ng restriksiyon mo para sa YouTube. Kung tinukoy mo ang setting na "Mahigpit na Pinaghihigpitang Pag-access sa YouTube" o kung nakakita ka ng mga mensaheng nagsasaad na 'nililimitahan ang video na ito', maaari mong idagdag ang channel namin sa naaprubahang listahan ng mga channel. Tingnan ang [gabay na ito](https://support.google.com/a/answer/6245597) mula sa Google upang matutunan ang tungkol sa kung paano idagdag ang channel namin sa naaprubahang listahan. Pwede mo ring matingnan ang [gabay na ito](https://support.google.com/a/answer/6212415?hl=en) upang matuto nang higit pa tungkol sa iba't ibang setting at kung alin ang pinakamainam para sa silid-aralan mo.
 
 ## Nahihirapan pa rin?
 
-We'll help you out - just email us at support@code.org!
+Tutulungan ka namin - mag-email lang sa support@code.org!

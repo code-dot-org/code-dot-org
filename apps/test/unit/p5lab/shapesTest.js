@@ -1,5 +1,4 @@
 import {throwIfSerializedAnimationListIsInvalid} from '@cdo/apps/p5lab/shapes';
-import {expect} from '../../util/reconfiguredChai';
 
 describe('GameLab Shapes', function () {
   const propsByKeyOneItem = {
@@ -35,7 +34,7 @@ describe('GameLab Shapes', function () {
       orderedKeys: ['123'],
     };
     throwIfSerializedAnimationListIsInvalid(attributesNoDupes);
-    expect(attributesNoDupes['orderedKeys'].length).to.equal(1);
+    expect(attributesNoDupes['orderedKeys'].length).toBe(1);
   });
 
   it('does not throw an error for a single duplicated key from ordered keys and deletes the duplicate', function () {
@@ -44,7 +43,7 @@ describe('GameLab Shapes', function () {
       orderedKeys: ['123', '123'],
     };
     throwIfSerializedAnimationListIsInvalid(attributesOneDupe);
-    expect(attributesOneDupe['orderedKeys'].length).to.equal(1);
+    expect(attributesOneDupe['orderedKeys'].length).toBe(1);
   });
 
   it('does not throw an error for a key with multiple duplicates in ordered keys and deletes the duplicates', function () {
@@ -53,7 +52,7 @@ describe('GameLab Shapes', function () {
       orderedKeys: ['123', '123', '123'],
     };
     throwIfSerializedAnimationListIsInvalid(attributesMultiDupe);
-    expect(attributesMultiDupe['orderedKeys'].length).to.equal(1);
+    expect(attributesMultiDupe['orderedKeys'].length).toBe(1);
   });
 
   it('does not throw an error for ordered keys with multiple keys with duplicates and deletes the duplicates', function () {
@@ -62,8 +61,8 @@ describe('GameLab Shapes', function () {
       orderedKeys: ['123', '123', '456', '456'],
     };
     throwIfSerializedAnimationListIsInvalid(attributesMultiDupe);
-    expect(attributesMultiDupe['orderedKeys'].length).to.equal(2);
-    expect(attributesMultiDupe['orderedKeys'][0]).to.equal('123');
-    expect(attributesMultiDupe['orderedKeys'][1]).to.equal('456');
+    expect(attributesMultiDupe['orderedKeys'].length).toBe(2);
+    expect(attributesMultiDupe['orderedKeys'][0]).toBe('123');
+    expect(attributesMultiDupe['orderedKeys'][1]).toBe('456');
   });
 });

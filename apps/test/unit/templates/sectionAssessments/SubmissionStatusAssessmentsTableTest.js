@@ -1,4 +1,4 @@
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import {
@@ -8,8 +8,6 @@ import {
 import SubmissionStatusAssessmentsTable from '@cdo/apps/templates/sectionAssessments/SubmissionStatusAssessmentsTable';
 import i18n from '@cdo/locale';
 
-import {assert, expect} from '../../../util/reconfiguredChai';
-
 describe('SubmissionStatusAssessmentsTable', () => {
   it('renders a table', () => {
     const wrapper = mount(
@@ -18,7 +16,7 @@ describe('SubmissionStatusAssessmentsTable', () => {
       />
     );
 
-    expect(wrapper.find('table')).to.exist;
+    expect(wrapper.find('table')).toBeDefined();
   });
 
   it('renders the correct number of rows and headers', () => {
@@ -29,10 +27,10 @@ describe('SubmissionStatusAssessmentsTable', () => {
     );
 
     const tableHeaders = wrapper.find('th');
-    expect(tableHeaders).to.have.length(6);
+    expect(tableHeaders).toHaveLength(6);
 
     const tableRows = wrapper.find('tr');
-    expect(tableRows).to.have.length(11);
+    expect(tableRows).toHaveLength(11);
   });
 
   it('renders with an icon if specified', () => {
@@ -44,7 +42,7 @@ describe('SubmissionStatusAssessmentsTable', () => {
     );
 
     const icon = wrapper.find('FontAwesome');
-    assert(icon);
+    expect(icon).toBeTruthy();
   });
 
   it('renders a checkmark when an assessment is submitted', () => {
@@ -55,7 +53,7 @@ describe('SubmissionStatusAssessmentsTable', () => {
     );
 
     const checkMarkIcons = wrapper.find('.fa-check-circle');
-    assert.equal(checkMarkIcons.length, 6);
+    expect(checkMarkIcons.length).toEqual(6);
   });
 
   it('sorts submissions by date accurately', () => {
@@ -66,95 +64,75 @@ describe('SubmissionStatusAssessmentsTable', () => {
     );
 
     const timeStampCells = wrapper.find('.timestampCell');
-    assert.equal(timeStampCells.length, 10);
+    expect(timeStampCells.length).toEqual(10);
 
     const timestampHeaderCell = wrapper.find('#timestampHeaderCell');
 
     // Sort with oldest first
     timestampHeaderCell.simulate('click');
 
-    assert.equal(
-      wrapper.find('.timestampCell').at(0).text(),
+    expect(wrapper.find('.timestampCell').at(0).text()).toEqual(
       i18n.notStarted()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(1).text(),
+    expect(wrapper.find('.timestampCell').at(1).text()).toEqual(
       i18n.notStarted()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(2).text(),
+    expect(wrapper.find('.timestampCell').at(2).text()).toEqual(
       i18n.inProgress()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(3).text(),
+    expect(wrapper.find('.timestampCell').at(3).text()).toEqual(
       i18n.inProgress()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(4).text(),
+    expect(wrapper.find('.timestampCell').at(4).text()).toEqual(
       testDataTimestamps.oldest.toLocaleString()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(5).text(),
+    expect(wrapper.find('.timestampCell').at(5).text()).toEqual(
       testDataTimestamps.older.toLocaleString()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(6).text(),
+    expect(wrapper.find('.timestampCell').at(6).text()).toEqual(
       testDataTimestamps.old.toLocaleString()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(7).text(),
+    expect(wrapper.find('.timestampCell').at(7).text()).toEqual(
       testDataTimestamps.new.toLocaleString()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(8).text(),
+    expect(wrapper.find('.timestampCell').at(8).text()).toEqual(
       testDataTimestamps.newer.toLocaleString()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(9).text(),
+    expect(wrapper.find('.timestampCell').at(9).text()).toEqual(
       testDataTimestamps.newest.toLocaleString()
     );
 
     //Sort with newest first
     timestampHeaderCell.simulate('click');
 
-    assert.equal(
-      wrapper.find('.timestampCell').at(9).text(),
+    expect(wrapper.find('.timestampCell').at(9).text()).toEqual(
       i18n.notStarted()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(8).text(),
+    expect(wrapper.find('.timestampCell').at(8).text()).toEqual(
       i18n.notStarted()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(7).text(),
+    expect(wrapper.find('.timestampCell').at(7).text()).toEqual(
       i18n.inProgress()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(6).text(),
+    expect(wrapper.find('.timestampCell').at(6).text()).toEqual(
       i18n.inProgress()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(5).text(),
+    expect(wrapper.find('.timestampCell').at(5).text()).toEqual(
       testDataTimestamps.oldest.toLocaleString()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(4).text(),
+    expect(wrapper.find('.timestampCell').at(4).text()).toEqual(
       testDataTimestamps.older.toLocaleString()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(3).text(),
+    expect(wrapper.find('.timestampCell').at(3).text()).toEqual(
       testDataTimestamps.old.toLocaleString()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(2).text(),
+    expect(wrapper.find('.timestampCell').at(2).text()).toEqual(
       testDataTimestamps.new.toLocaleString()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(1).text(),
+    expect(wrapper.find('.timestampCell').at(1).text()).toEqual(
       testDataTimestamps.newer.toLocaleString()
     );
-    assert.equal(
-      wrapper.find('.timestampCell').at(0).text(),
+    expect(wrapper.find('.timestampCell').at(0).text()).toEqual(
       testDataTimestamps.newest.toLocaleString()
     );
   });
@@ -167,16 +145,16 @@ describe('SubmissionStatusAssessmentsTable', () => {
     );
 
     // Renders a user-friendly formatted time string
-    expect(wrapper.find('.timestampCell').first().text()).to.equal(
+    expect(wrapper.find('.timestampCell').first().text()).toBe(
       '10/7/2018, 8:52:05 PM'
     );
 
     // Also renders a machine/screen-reader-friendly (Date)Time Element
-    expect(wrapper.find('.timestampCell').first().find('time')).to.exist;
+    expect(wrapper.find('.timestampCell').first().find('time')).toBeDefined();
 
     expect(
       wrapper.find('.timestampCell').first().find('time').prop('dateTime')
-    ).to.equal('2018-10-07T20:52:05.000Z');
+    ).toBe('2018-10-07T20:52:05.000Z');
   });
 
   // This test is flaky based on the browser version.
@@ -189,9 +167,9 @@ describe('SubmissionStatusAssessmentsTable', () => {
         localeCode={'es-MX'}
       />
     );
-    expect(
-      basicNonEnglishWrapper.find('.timestampCell').first().text()
-    ).to.equal('7/10/2018 20:52:05');
+    expect(basicNonEnglishWrapper.find('.timestampCell').first().text()).toBe(
+      '7/10/2018 20:52:05'
+    );
 
     // localeCode will undefined by default here, but it defaults to null in
     // redux; so, make sure we explicitly test that particular falsy value
@@ -201,7 +179,7 @@ describe('SubmissionStatusAssessmentsTable', () => {
         localeCode={null}
       />
     );
-    expect(nullLocaleWrapper.find('.timestampCell').first().text()).to.equal(
+    expect(nullLocaleWrapper.find('.timestampCell').first().text()).toBe(
       '10/7/2018, 8:52:05 PM'
     );
   });

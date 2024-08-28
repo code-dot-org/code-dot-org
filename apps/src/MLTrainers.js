@@ -1,4 +1,5 @@
 import KNN from 'ml-knn';
+
 import {stripSpaceAndSpecial} from '@cdo/apps/aiUtils';
 
 const KNNTrainers = ['knnClassify', 'knnRegress'];

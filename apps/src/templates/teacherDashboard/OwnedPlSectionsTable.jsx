@@ -5,10 +5,10 @@ import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
 
-import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
-import Button from '@cdo/apps/templates/Button';
+import {OAuthSectionTypes} from '@cdo/apps/accounts/constants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import {stringifyQueryParams} from '../../utils';
@@ -40,10 +40,7 @@ const participantNames = {
 // Cell formatters for sortable OwnedPlSectionsTable.
 export const sectionLinkFormatter = function (name, {rowData}) {
   return (
-    <a
-      style={plTableLayoutStyles.sectionLink}
-      href={teacherDashboardUrl(rowData.id)}
-    >
+    <a style={plTableLayoutStyles.link} href={teacherDashboardUrl(rowData.id)}>
       {rowData.name}
     </a>
   );
@@ -110,7 +107,7 @@ export const loginInfoFormatter = function (loginType, {rowData}) {
   }
   return (
     <a
-      style={plTableLayoutStyles.link}
+      style={plTableLayoutStyles.sectionCodeLink}
       href={teacherDashboardUrl(rowData.id, '/login_info')}
     >
       {sectionCode}
@@ -143,8 +140,8 @@ export const studentsFormatter = function (studentCount, {rowData}) {
 };
 
 /**
- * This is a component that shows information about the sections that a teacher
- * owns, and allows for editing, deleting and sorting them.
+ * This is a component that shows information about the Professional Learning sections that
+ * a teacher owns, and allows for editing, deleting and sorting them.
  * It shows some of the same information as the SectionsAsStudentTable used on the teacher
  * homepage. However, for historical reasons it unfortunately has a somewhat
  * different set/shape of input data. This component gets its data from

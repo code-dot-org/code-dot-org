@@ -1,6 +1,7 @@
-import {ProcedureBlock} from '@cdo/apps/blockly/types';
 import {Abstract} from 'blockly/core/events/events_abstract';
 import {BlockCreate} from 'blockly/core/events/events_block_create';
+
+import {ProcedureBlock} from '@cdo/apps/blockly/types';
 
 // This is copied and modified from
 // https://github.com/google/blockly-samples/blob/82f1c35be007a99b7446e199448d083ac68a9f84/plugins/block-shareable-procedures/src/blocks.ts#L1184-L1285

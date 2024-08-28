@@ -14,7 +14,14 @@ markdown <<MARKDOWN
 
 #### Choose one of the following LLMs to try.
 
-<br>
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">But my school/district uses another LLM...</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
+    <p>
+
+#### Not a problem! The prompting practice that you develop in these activities will help you develop skills that are transferable to any LLM. Or, feel free to do these activities using the LLM your school or district uses, just know that not all LLMs have the same functionality so you may not be able to complete the activity as written.
+</p></div>
+</details>
 
 #### A few quick notes before you get started:
 * #### Bard is now Gemini! Google has rebranded their AI as Gemini. It’ll look a bit different from the videos, but it has similar functionality.
@@ -29,8 +36,8 @@ markdown <<MARKDOWN
     <p>
 
 #### **To Do:** 
-* #### Go to https://chat.openai.com/.
-* #### Sign-up to make a free account. *Need Help Getting Started?*
+* #### Go to <a href="https://chat.openai.com/" target="_blank">https://chat.openai.com/</a>.
+* #### Sign-up to make a free account.
 * #### Feel free to explore as you wish, but we recommend you take this time to use the tool as if you were one of your students. What might you want to learn more about? What recent assignment would you ask for help on? How might you try to break it?
 
 </p></div>
@@ -43,8 +50,8 @@ markdown <<MARKDOWN
     <p>
 
 #### **To Do:** 
-* #### Open Microsoft’s Edge Browser. *Need Help Getting Started?*
-* #### Go to https://www.bing.com/chat.
+* #### Open Microsoft’s Edge Browser.
+* #### Go to <a href="https://www.bing.com/chat" target="_blank">https://www.bing.com/chat</a>.
 * #### Sign-up to make a free account. 
 * #### Feel free to explore as you wish, but we recommend you take this time to use the tool as if you were one of your students. What might you want to learn more about? What recent assignment would you ask for help on? How might you try to break it?
 </p></div>
@@ -56,8 +63,8 @@ markdown <<MARKDOWN
     <p>
 
 #### **To Do:** 
-* #### Go to https://gemini.google.com/. 
-* #### Sign-up to make a free account. *Need Help Getting Started?*
+* #### Go to <a href="https://gemini.google.com/" target="_blank">https://gemini.google.com/</a>. 
+* #### Sign-up to make a free account.
 * #### Feel free to explore as you wish, but we recommend you take this time to use the tool as if you were one of your students. What might you want to learn more about? What recent assignment would you ask for help on? How might you try to break it?
 
 </p></div>
@@ -69,8 +76,8 @@ markdown <<MARKDOWN
     <p>
 
 #### **To Do:** 
-* #### Go to https://www.magicschool.ai/.
-* #### Sign-up to make a free account. *Need Help Getting Started?*
+* #### Go to <a href="https://www.magicschool.ai/" target="_blank">Magic School AI</a>.
+* #### Sign-up to make a free account.
 * #### Explore on your own! We recommend you explore the Reading Quiz Generator, Restorative Reflection Generator, or the Clear Directions tools.
 
 </p></div>

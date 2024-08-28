@@ -1,7 +1,7 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from '../../../../util/reconfiguredChai';
+
 import StudentSelector from '@cdo/apps/code-studio/components/pairing/StudentSelector';
-import {shallow} from 'enzyme';
 
 describe('StudentSelector', () => {
   describe('with more than 4 students selected', () => {
@@ -17,9 +17,9 @@ describe('StudentSelector', () => {
       const wrapper = shallow(
         <StudentSelector students={students} handleSubmit={() => {}} />
       );
-      expect(wrapper.find('p')).to.have.lengthOf(0);
+      expect(wrapper.find('p')).toHaveLength(0);
       wrapper.setState({selectedStudentIds: [1, 2, 3, 4]});
-      expect(wrapper.find('p')).to.have.lengthOf(1);
+      expect(wrapper.find('p')).toHaveLength(1);
     });
 
     it('disables remaining buttons', () => {
@@ -30,23 +30,23 @@ describe('StudentSelector', () => {
         wrapper.find('button').filterWhere(item => {
           return item.prop('disabled') === true;
         })
-      ).to.have.lengthOf(0);
+      ).toHaveLength(0);
       wrapper.setState({selectedStudentIds: [1, 2, 3, 4]});
       expect(
         wrapper.find('button').filterWhere(item => {
           return item.prop('disabled') === true;
         })
-      ).to.have.lengthOf(1);
+      ).toHaveLength(1);
     });
 
     it('assigns class names to buttons correctly', () => {
       const wrapper = shallow(
         <StudentSelector students={students} handleSubmit={() => {}} />
       );
-      expect(wrapper.find('.selectable')).to.have.lengthOf(5);
+      expect(wrapper.find('.selectable')).toHaveLength(5);
       wrapper.setState({selectedStudentIds: [1, 2, 3]});
-      expect(wrapper.find('.selectable')).to.have.lengthOf(2);
-      expect(wrapper.find('.selected')).to.have.lengthOf(3);
+      expect(wrapper.find('.selectable')).toHaveLength(2);
+      expect(wrapper.find('.selected')).toHaveLength(3);
     });
 
     it('assigns updated styles to clicked buttons', () => {
@@ -55,11 +55,11 @@ describe('StudentSelector', () => {
       );
       let btnBackground = wrapper.find('button').at(0).props()
         .style.backgroundColor;
-      expect(btnBackground).to.equal('white');
+      expect(btnBackground).toBe('white');
       wrapper.setState({selectedStudentIds: [1]});
       btnBackground = wrapper.find('button').at(0).props()
         .style.backgroundColor;
-      expect(btnBackground).to.equal('#0094ca');
+      expect(btnBackground).toBe('#0094ca');
     });
   });
 });

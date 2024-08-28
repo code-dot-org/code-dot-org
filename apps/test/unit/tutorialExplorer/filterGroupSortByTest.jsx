@@ -1,12 +1,12 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import FilterGroupSortBy from '@cdo/apps/tutorialExplorer/filterGroupSortBy';
 import {TutorialsSortByOptions} from '@cdo/apps/tutorialExplorer/util';
 import i18n from '@cdo/tutorialExplorer/locale';
 
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const FAKE_ON_SORT_BY = () => {};
 const DEFAULT_PROPS = {

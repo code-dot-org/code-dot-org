@@ -1,17 +1,21 @@
 @import 'color.scss';
 @import './common.scss';
 
-
 .labContainer {
   position: fixed;
-  top: 52px;
-  bottom: 2px;
+  top: $top-spacing;
+  bottom: 0;
   left: 0;
   right: 0;
   font-size: 13px;
 
   &Loading {
     pointer-events: none;
+  }
+
+  &ShareView {
+    top: 0;
+    bottom: 0;
   }
 
   .pageErrorContainer {

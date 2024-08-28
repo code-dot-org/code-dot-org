@@ -13,12 +13,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-12 20:15:11 UTC",
+    "serialized_at": "2024-07-11 16:27:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2317,6 +2318,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2InterestInventoryQ1_2024"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2339,6 +2343,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2InterestInventoryQ3_2024"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2361,6 +2368,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2InterestInventoryQ2_2024"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2383,6 +2393,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U2L1 Internet Simulator: Sending Text_2024"
+        ],
         "progression": "Internet Simulator"
       },
       "bonus": false,
@@ -2405,6 +2418,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L1 CFU how use internet_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2427,6 +2443,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L1 CFU paths_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2449,6 +2468,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L2 CSP Internet Simulator Broadcast_2024"
+        ],
         "progression": "Internet Simulator"
       },
       "bonus": false,
@@ -2471,6 +2493,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L2 CSP CFU IP Addresses2022_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2493,6 +2518,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L2 CSP CFU IP works_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2515,6 +2543,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L3 CSP Internet Simulator Routers_2024"
+        ],
         "progression": "Internet Simulator"
       },
       "bonus": false,
@@ -2537,6 +2568,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L3 CSP CFU Routers2022_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2559,6 +2593,9 @@
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L3 CSP CFU Redundancy_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2581,6 +2618,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L4 CSP Internet Simulator Packets 2_2024"
+        ],
         "progression": "Internet Simulator"
       },
       "bonus": false,
@@ -2603,6 +2643,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L4 Multiple Choice packets2022_2024"
+        ],
         "progression": "Check for Understanding - Packets"
       },
       "bonus": false,
@@ -2625,6 +2668,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L4 CSP CFU terms2022_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2647,6 +2693,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L5 CSP Internet Simulator DNS_2024"
+        ],
         "progression": "Internet Simulator"
       },
       "bonus": false,
@@ -2669,6 +2718,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L5 CSP CFU subgroups_2024"
+        ],
         "progression": "Check For Understanding - DNS"
       },
       "bonus": false,
@@ -2691,6 +2743,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L4 CSP CFU scale2022_2024"
+        ],
         "progression": "Check For Understanding - HTTP"
       },
       "bonus": false,
@@ -2713,6 +2768,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp2_2024"
+        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -2735,6 +2793,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 2 MC Assessment 2022_2024"
+        ],
         "progression": "Unit 2 Exam"
       },
       "bonus": false,
@@ -3019,7 +3080,7 @@
     },
     {
       "name": "Assessment Day - The Internet",
-      "url": "https://docs.google.com/presentation/d/1C7TRNRrwA9kjLpx5ywlwqF0S3f-iIaSGYiUGBsn63Cg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1deaLdS9SrCahtgIZcA8NojrZuLEzRNrfI9fQ-_pxLxs/template/preview",
       "key": "assessment_day_-_the_internet",
       "properties": {
         "audience": "Teacher",
@@ -3031,7 +3092,7 @@
     },
     {
       "name": "Building a Network",
-      "url": "https://docs.google.com/presentation/d/1kxB2sHjJvwG0tyYUz2I2-aeL5FUfXFNDsAd--ALT9cY/template/preview",
+      "url": "https://docs.google.com/presentation/d/1h0mvTsBtJWVVTsafQvtDKGPJ3FGOtUczcjOnwF-Utmg/template/preview",
       "key": "building_a_network",
       "properties": {
         "audience": "Teacher",
@@ -3078,7 +3139,7 @@
     },
     {
       "name": "CSP Unit 2 Slides",
-      "url": "https://docs.google.com/presentation/d/1TCbTiyJC7hDJs43AjMBlo_wjAbvZhfGc8NCs654mLKc/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1iCQiPJm2hnAIK36e59dUw-qeb3WRIcrQV5xj749-XG4/template/preview",
       "key": "csp_unit_2_slides",
       "properties": {
         "audience": "Teacher",
@@ -3151,7 +3212,7 @@
     },
     {
       "name": "HTTP and DNS",
-      "url": "https://docs.google.com/presentation/d/1c-xMjaoO_cE4RAk71mDPg9LCyHnvjxo5yZF90-eQYCk/template/preview",
+      "url": "https://docs.google.com/presentation/d/1fwfC6Wa4BNo0U-WVv6Hsr43y9YZfJMx0AVMUThwxTpg/template/preview",
       "key": "http_and_dns",
       "properties": {
         "audience": "Teacher",
@@ -3201,7 +3262,7 @@
     },
     {
       "name": "Packets",
-      "url": "https://docs.google.com/presentation/d/10bLpLwyNIg4tXMlAS0YhEpUaesAdy2Yqvcg8fo1ZlZQ/template/preview",
+      "url": "https://docs.google.com/presentation/d/1wjUUTlrbDUvKiV-KDbVmhvUqFujlOkUrzQYJJRIYPCg/template/preview",
       "key": "packets",
       "properties": {
         "audience": "Teacher",
@@ -3213,7 +3274,7 @@
     },
     {
       "name": "Project - Internet Dilemmas",
-      "url": "https://docs.google.com/presentation/d/1TgJ5dvncE-Ch_svWzAn53-9jryR-k1XF4Oue6MhVEso/template/preview",
+      "url": "https://docs.google.com/presentation/d/1WrR84F0ZbSI_GOITsn-ESBv18GWk3cynKPPtxlgitVc/template/preview",
       "key": "project_-_internet_dilemmas",
       "properties": {
         "audience": "Teacher",
@@ -3225,7 +3286,7 @@
     },
     {
       "name": "Routers and Redundancy",
-      "url": "https://docs.google.com/presentation/d/1Jg8fCWRrk-7XE5ZV0OrOZiWtxu3YzQ_FZGhWW-uqVEM/template/preview",
+      "url": "https://docs.google.com/presentation/d/1lz4044iPKTDcAj-ZM7ovFw0w5wfPVm4jQ0ryMab7H1U/template/preview",
       "key": "routers_and_redundancy",
       "properties": {
         "audience": "Teacher",
@@ -3326,7 +3387,7 @@
     },
     {
       "name": "The Need for Addressing",
-      "url": "https://docs.google.com/presentation/d/1wjYGFjh5BfWDRmrdPlabPvx9ctfaxjVxWptfa0khpUo/template/preview",
+      "url": "https://docs.google.com/presentation/d/1o1uXWuf6SUXsjT15nQd6xJCU2fC1-BQqg0_XcyKK5Go/template/preview",
       "key": "the_need_for_addressing",
       "properties": {
         "audience": "Teacher",
@@ -3424,7 +3485,7 @@
     },
     {
       "name": "Welcome to the Internet",
-      "url": "https://docs.google.com/presentation/d/10FQTUZnQE_H6pfaNhQ2S28hQAkZ8ITqFMJUjESVoZF0/template/preview",
+      "url": "https://docs.google.com/presentation/d/1CQOI7NBBJhARewmfOvAXllN3foZaB6k4fP51wzX3caA/template/preview",
       "key": "welcome_to_the_internet",
       "properties": {
         "audience": "Teacher",

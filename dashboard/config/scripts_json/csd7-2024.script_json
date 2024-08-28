@@ -12,12 +12,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-28 18:24:34 UTC",
+    "serialized_at": "2024-07-11 18:54:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -11480,7 +11481,7 @@
     },
     {
       "name": "AI Code of Ethics",
-      "url": "https://docs.google.com/presentation/d/1RWBw8fsV2HuLZzkuYTvHvIeubKvZg73EBB0VtBEFOWw/template/preview",
+      "url": "https://docs.google.com/presentation/d/1oT1rOrwFo0HitLNsTMNNxWg1CtwBP9TQQw-itF2VYKM/template/preview",
       "key": "ai_code_of_ethics",
       "properties": {
         "audience": "Teacher",
@@ -11611,7 +11612,7 @@
     },
     {
       "name": "Classification Models",
-      "url": "https://docs.google.com/presentation/d/1k1CbZpukeDIMzXknkigoxJDGsg4PkLe3GMV-lyoxtHs/template/preview",
+      "url": "https://docs.google.com/presentation/d/1u3GFiaH_eumRcMqJoMPrel1ca7Li-ZaWpnYE95GjTpc/template/preview",
       "key": "classification_models_1",
       "properties": {
         "audience": "Teacher",
@@ -11696,7 +11697,7 @@
     },
     {
       "name": "Creating an App",
-      "url": "https://docs.google.com/presentation/d/1orxGDc4fT_-OiklE1dISBAchmzPmdsQYaz8Wg3st61c/template/preview",
+      "url": "https://docs.google.com/presentation/d/1bZAHiLhuPVqn6I3GYjD0vgLs115zr5QUuD82OVrrwqw/template/preview",
       "key": "creating_an_app",
       "properties": {
         "audience": "Teacher",
@@ -11774,7 +11775,7 @@
     },
     {
       "name": "Customizing Apps",
-      "url": "https://docs.google.com/presentation/d/1mroNd1d6wJqOTwS6jIxOsjB_VIX792xpe-0oECCfQik/template/preview",
+      "url": "https://docs.google.com/presentation/d/1qt10UDJrYyCaqNZHDI74efNZDFVww7BNKKR5Xs2x-1E/template/preview",
       "key": "customizing_apps",
       "properties": {
         "audience": "Teacher",
@@ -11786,7 +11787,7 @@
     },
     {
       "name": "Design an AI App",
-      "url": "https://docs.google.com/presentation/d/14KQvTgTDbCsbj4OwyjcllthuFgc1-6Ay9AB-L7Kf7y0/template/preview",
+      "url": "https://docs.google.com/presentation/d/1XZDJCHYs8t-Ut88NnDBxaRPfuhxhUGyLMa-Z3an-djA/template/preview",
       "key": "design_an_ai_app",
       "properties": {
         "audience": "Teacher",
@@ -11928,7 +11929,7 @@
     },
     {
       "name": "Importing Models in App Lab",
-      "url": "https://docs.google.com/presentation/d/1MmDk9KQ67u5-_587yyWCSCg4PnEX-76bYiH8IWOqMTg/template/preview",
+      "url": "https://docs.google.com/presentation/d/1s5lAQYrXmmBO6NSxql8HVXvL7lckSkcu_b8v69EdCN0/template/preview",
       "key": "importing_models_in_app_lab",
       "properties": {
         "audience": "Teacher",
@@ -11940,7 +11941,7 @@
     },
     {
       "name": "Innovations in AI",
-      "url": "https://docs.google.com/presentation/d/1P4guv1tKEcVrWhV7Cf1g3r6De2kIBkHAlJEUggOgmOc/template/preview",
+      "url": "https://docs.google.com/presentation/d/1e9UpkcfckFEm4OxKNAvuSiLaHODieGhhQYC5QxVwM_c/template/preview",
       "key": "innovations_in_ai",
       "properties": {
         "audience": "Teacher",
@@ -11989,7 +11990,7 @@
     },
     {
       "name": "Introduction to AI Lab",
-      "url": "https://docs.google.com/presentation/d/1bStRdf2CkIJxdiyIIqMeAOdq4jqvMaQ4OZZ6iMYp5Ww/template/preview",
+      "url": "https://docs.google.com/presentation/d/1h3omzzY2Ov-XOGc9vS4T7AElz-i6eGUVoCJmXVVRLm4/template/preview",
       "key": "introduction_to_ai_lab",
       "properties": {
         "audience": "Teacher",
@@ -12013,7 +12014,7 @@
     },
     {
       "name": "Introduction to Machine Learning",
-      "url": "https://docs.google.com/presentation/d/1ZOSt4G-bEqIiFIWFWQjvY54I2YgHlCURXmtX1FYnpFw/template/preview",
+      "url": "https://docs.google.com/presentation/d/1NIfCsefss-p6bOG13nYRIJWC0i99PguRxcH9uD89MT8/template/preview",
       "key": "introduction_to_machine_learning",
       "properties": {
         "audience": "Teacher",
@@ -12036,7 +12037,7 @@
     },
     {
       "name": "Issue Statements",
-      "url": "https://docs.google.com/presentation/d/1h26VlnEpI96YmZVqgsaSqYXUsnyjeoh6SeHYg3Z_n4A/template/preview",
+      "url": "https://docs.google.com/presentation/d/1zi-y_foZdSnLmrbC6eFr7HZfPAuHP5xf9lqQLINm10Y/template/preview",
       "key": "issue_statements",
       "properties": {
         "audience": "Teacher",
@@ -12059,7 +12060,7 @@
     },
     {
       "name": "Make a Machine Learning App",
-      "url": "https://docs.google.com/presentation/d/1ippNYS2AFhv4wp95KKIHP6cxUIxWnIYMlun62-xkTqY/template/preview",
+      "url": "https://docs.google.com/presentation/d/1oP4kynUDd7LDbU7gSpogV_HpOBVLa8IIPYbnKGdsbfk/template/preview",
       "key": "make_a_machine_learning_app",
       "properties": {
         "audience": "Teacher",
@@ -12095,7 +12096,7 @@
     },
     {
       "name": "Model Cards",
-      "url": "https://docs.google.com/presentation/d/1WYIFb5KSvsmllWEWCRyadM7KXp8zERjfBJ1TwmMtySA/template/preview",
+      "url": "https://docs.google.com/presentation/d/1tJgkXsYx1Ru47NEXj5t2jCnAC0rzgPoUNSe5QnLaxxM/template/preview",
       "key": "model_cards",
       "properties": {
         "audience": "Teacher",
@@ -12132,7 +12133,7 @@
     },
     {
       "name": "Model Cards in App Lab",
-      "url": "https://docs.google.com/presentation/d/1OwOs1FbnA3FUbm9e4QV6bQWcphOn8LTfifrg0hupUqo/template/preview",
+      "url": "https://docs.google.com/presentation/d/1oTfowHcn4VxkgkAil8Gwa9wt8CQ6zzASbQeIk7zZP_w/template/preview",
       "key": "model_cards_in_app_lab",
       "properties": {
         "audience": "Teacher",
@@ -12157,7 +12158,7 @@
     },
     {
       "name": "Numerical Data in AI Lab",
-      "url": "https://docs.google.com/presentation/d/1RMRXGf2sQhzujRY4p6KHHCF98kVSnYXvvkBWwqmCbEY/template/preview",
+      "url": "https://docs.google.com/presentation/d/1hBppP-h3h2Bv4lBcz0QosGLXeY2e-IPHfoI4LcRxsxc/template/preview",
       "key": "numerical_data_in_ai_lab",
       "properties": {
         "audience": "Teacher",
@@ -12194,7 +12195,7 @@
     },
     {
       "name": "Numerical Models",
-      "url": "https://docs.google.com/presentation/d/1933wdhwpGeJnJLFjtgi_UvGkPEOALsImH58Fwz0ydAI/template/preview",
+      "url": "https://docs.google.com/presentation/d/1eUL1kPcAHxjIAZMucBVScS_dL6T7K1SqInIm-CBdT9Q/template/preview",
       "key": "numerical_models",
       "properties": {
         "audience": "Teacher",
@@ -12218,7 +12219,7 @@
     },
     {
       "name": "Patterns in Data",
-      "url": "https://docs.google.com/presentation/d/1rf0nrsftZegYxbHrsGIOf6yiyL2ItHiFweQ68mMltB8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1tXw345jGdjcLnq56BhDOKV70CppdpgFWmGE8gKFiO6Y/template/preview",
       "key": "patterns_in_data",
       "properties": {
         "audience": "Teacher",
@@ -12255,7 +12256,7 @@
     },
     {
       "name": "Saving Models in AI Lab",
-      "url": "https://docs.google.com/presentation/d/1VAtkWeEY9FwyLykuTlJr58El62Xz7CLxNeL44jOZqvs/template/preview",
+      "url": "https://docs.google.com/presentation/d/1OWC2HDOJr48y8Y7oWVOFRv3aZf8ehECTvvnc-mzcF60/template/preview",
       "key": "saving_models_in_ai_lab",
       "properties": {
         "audience": "Teacher",
@@ -12315,7 +12316,7 @@
     },
     {
       "name": "Survey Data in AI Lab",
-      "url": "https://docs.google.com/presentation/d/15fxpekeW4564LMtEyaqqOJazdCaM8CMXveNqd2eKFw8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1rdSOE0I3UxdNVw4L723F1upmz_RDVwZFCm2E0VxJJHA/template/preview",
       "key": "survey_data_in_ai_lab",
       "properties": {
         "audience": "Teacher",
@@ -12327,7 +12328,7 @@
     },
     {
       "name": "Survey Planning",
-      "url": "https://docs.google.com/presentation/d/1CrX-BcrBirQIZ6fcaX6KRE0WWOn11kYQqCkv2qwAS68/template/preview",
+      "url": "https://docs.google.com/presentation/d/1stF16dldACQXr8Vh60LAN_xZ8BZLIL9SOTcjo6FaeZc/template/preview",
       "key": "survey_planning",
       "properties": {
         "audience": "Teacher",
@@ -12419,7 +12420,7 @@
     },
     {
       "name": "Troubleshooting Models",
-      "url": "https://docs.google.com/presentation/d/1SYRgBzxxq2oM_qynytBYf5tVQUgkzG4DmCPfGTGIbrI/template/preview",
+      "url": "https://docs.google.com/presentation/d/1t1o0_879BWi2ExPeKVbI8nA7TaA1LlPiUOAqFCQSA2A/template/preview",
       "key": "troubleshooting_models",
       "properties": {
         "audience": "Teacher",
@@ -12443,7 +12444,7 @@
     },
     {
       "name": "Types of Machine Learning",
-      "url": "https://docs.google.com/presentation/d/1w2aMrTfjvyUJNQKXsy_01cUSFvSFLmB4-r3LIo3ZFVM/template/preview",
+      "url": "https://docs.google.com/presentation/d/1gnQJW8Rh1Q_rE7xDF3DM_LtVncEQLSzGgvMoe-kVRlM/template/preview",
       "key": "types_of_machine_learning",
       "properties": {
         "audience": "Teacher",

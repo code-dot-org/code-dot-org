@@ -1,9 +1,11 @@
-import {assert} from 'chai';
-import cookies from 'js-cookie';
+import cookies from 'js-cookie'; // eslint-disable-line no-restricted-imports
+
 import {getUserSignedInFromCookieAndDom} from '@cdo/apps/code-studio/initSigninState';
-import {allowConsoleErrors} from '../../util/testUtils';
 import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
 
+import {allowConsoleErrors, setExternalGlobals} from '../../util/testUtils';
+
+setExternalGlobals();
 describe('initSigninStateTest', () => {
   describe('getUserSignedInFromCookieAndDom', () => {
     allowConsoleErrors();
@@ -24,12 +26,12 @@ describe('initSigninStateTest', () => {
       headerDiv.appendChild(name);
     }
 
-    before(() => {
+    beforeAll(() => {
       stashedRackEnv = window.dashboard.rack_env;
       window.dashboard.rack_env = 'unit_test';
       cookieName = environmentSpecificCookieName('_shortName');
     });
-    after(() => {
+    afterAll(() => {
       window.dashboard.rack_env = stashedRackEnv;
     });
 
@@ -46,33 +48,31 @@ describe('initSigninStateTest', () => {
 
     it('returns true if cookie is defined', () => {
       cookies.set(cookieName, 'CoolUser');
-      assert.strictEqual(getUserSignedInFromCookieAndDom(), true);
+      expect(getUserSignedInFromCookieAndDom()).toBe(true);
     });
 
     it('returns true if cookie is not defined but DOM contains id', () => {
       // Make sure this DOM didn't leak in from some other test
-      assert.equal(
+      expect(
         document.querySelector(
           '.header_button.header_user.user_menu .display_name'
-        ),
-        null
-      );
+        )
+      ).toEqual(null);
 
       createHeaderDom(123);
-      assert.strictEqual(getUserSignedInFromCookieAndDom(), true);
+      expect(getUserSignedInFromCookieAndDom()).toBe(true);
     });
 
     it('returns false if cookie is not defined and DOM does not contain id', () => {
       // Make sure this DOM didn't leak in from some other test
-      assert.equal(
+      expect(
         document.querySelector(
           '.header_button.header_user.user_menu .display_name'
-        ),
-        null
-      );
+        )
+      ).toEqual(null);
 
       createHeaderDom();
-      assert.strictEqual(getUserSignedInFromCookieAndDom(), false);
+      expect(getUserSignedInFromCookieAndDom()).toBe(false);
     });
   });
 });

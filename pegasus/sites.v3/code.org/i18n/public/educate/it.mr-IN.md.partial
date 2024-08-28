@@ -17,9 +17,11 @@ theme: responsive
 
 ## किमान सपोर्ट असलेले ब्राउझर्स आणि प्लॅटफॉर्म्स
 
+Starting in July 2024, we will update the minimum versions required for browsers and operating systems. While the old versions may still work, we will be unable to support requests for bug fixes in the older versions.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           ब्राउझर
@@ -40,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Browser July '24
+        </th>
+        <tr>
+          <td>Chrome 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Mobile Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Edge 119.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           प्लॅटफॉर्म
@@ -62,8 +86,30 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platform July '24
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## अनब्लॉक करण्यासाठी साइट
@@ -80,7 +126,6 @@ theme: responsive
 | **इंटरनेट सिम्युलेटर वापरण्यासाठी**                                                                 | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **वेब लॅब वापरण्यासाठी**                                                                            | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **गुगल क्लासरूम शेअर बटण वापरण्यासाठी**                                                             | `https://apis.google.com`                                                                                  |
-| **To use App Lab datasets**                                                                         | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
 ## मोबाइल आणि टॅब्लेट सपोर्ट तपशील
 
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+संपूर्ण अभ्यासक्रमात वापरण्यात येणारा हा खेळाडू आहे. ते YouTube द्वारे व्हिडिओ दर्शविण्याचा प्रयत्न करेल आणि, YouTube ब्लॉक असल्यास, त्याऐवजी आमच्या "फॉलबॅक" प्लेयरचा वापर करून Code.org होस्ट केलेला व्हिडिओ दर्शवेल.
 
 ### व्हिडिओ प्ले होत नाहीये का?
 
-If video does not work, you can email us at support@code.org.
+जर व्हिडिओ काम करत नसेल, तर तुम्ही आम्हाला support@code.org वर ईमेल करू शकता.
 
-However, you can still use our tutorials without video.
+तथापि, तुम्ही आमची ट्यूटोरियल व्हिडिओशिवाय वापरू शकता.
 
 1. आम्ही आमचे सर्व व्हिडिओ [एकत्र डाउनलोड करण्यासाठी उपलब्ध](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH) केले आहेत. तुमच्या शाळेत कमी बँडविड्थ असल्यास, आम्ही शिफारस करतो की तुम्ही व्हिडिओ डाउनलोड करा आणि त्यांना शेअर केलेल्या स्क्रीनवर विद्यार्थ्यांना दाखवा.
 2. आमच्या ट्यूटोरियलमध्ये एकत्रितपणे, आम्ही प्रत्येक व्हिडिओमध्ये हिरवे डाउनलोड लिंक चिन्ह <img src="/images/green-download.png" width=25 height=25 /> जोडले आहे, जेणेकरून विद्यार्थी वैयक्तिक ट्यूटोरियल व्हिडिओ डाउनलोड करू शकतील.
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## Google Apps/G-Suite वापरकर्त्यांसाठी खास सेटिंग्ज
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+तुम्ही G-suite अॅडमिनिस्ट्रेटर असल्यास, YouTube साठी तुमची प्रतिबंध सेटिंग्ज काय आहेत ते तपासा. तुम्ही "कठोरपणे प्रतिबंधित YouTube प्रवेश" सेटिंग निर्दिष्ट केल्यास किंवा तुम्हाला 'हा व्हिडिओ प्रतिबंधित करण्यात आला आहे' असा संदेश दिसल्यास, तुम्ही आमच्या चॅनेलला चॅनेलच्या मंजूर सूचीमध्ये जोडू शकता. आमचे चॅनल मंजूर सूचीमध्ये कसे जोडायचे हे जाणून घेण्यासाठी Google चे [हे गाइड](https://support.google.com/a/answer/6245597) पहा. वेगवेगळ्या सेटिंग्जबद्दल आणि तुमच्या वर्गासाठी कोणते सर्वोत्तम आहे याबद्दल अधिक जाणून घेण्यासाठी तुम्ही [हे गाइड](https://support.google.com/a/answer/6212415?hl=en) देखील पाहू शकता.
 
 ## अजूनही समस्या आहे का?
 
-We'll help you out - just email us at support@code.org!
+आम्ही तुमची मदत करू - फक्त आम्हाला support@code.org वर ईमेल करा!

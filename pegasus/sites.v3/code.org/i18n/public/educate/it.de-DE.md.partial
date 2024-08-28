@@ -17,9 +17,11 @@ theme: responsive
 
 ## Mindestvoraussetzung für Browser und Plattformen
 
+Ab Juli 2024 werden wir die für Browser und Betriebssysteme erforderlichen Mindestversionen aktualisieren. Obwohl die alten Versionen möglicherweise noch funktionieren, können wir Anfragen nach Bugfixes in den älteren Versionen nicht unterstützen.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Browser
@@ -40,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Browser Juli '24
+        </th>
+        <tr>
+          <td>Chrome 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x für Mobilgeräte</td>
+        </tr>
+        <tr>
+          <td>Edge 119.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Plattform
@@ -62,8 +86,30 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Plattform Juli '24
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8 x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Nicht gesperrte Websites
@@ -80,16 +126,15 @@ Wir empfehlen Ihnen, mit der IT-Abteilung Ihrer Schule oder der Stadt zu spreche
 | **Website des Internetsimulators**                                                                                                    | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Website von Web Lab**                                                                                                               | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Verwendung der Schaltfläche Teilen von Google Classroom**                                                                           | `https://apis.google.com`                                                                                  |
-| **So verwenden Sie App Lab-Datensätze**                                                                                               | `https://*.firebaseio.com`<br />`ss: //*.firebaseio.com`                                             |
 
 ## Informationen zu mobilen Geräten und Tablets
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Tablets werden nur in folgenden Ausnahmefällen unterstützt:
+Alle CS Discoveries-, CS Principles-, CS A- und Intro to App Lab-Kurse sind nicht mit Tablets oder Mobilgeräten kompatibel. Eine vollständige Tastatur und Maus (oder ein Touchpad) sind erforderlich. Tablets werden nur in folgenden Ausnahmefällen unterstützt:
 
 - Microsoft Surface Pro mit externer Tastatur
 - iPad mit iPadOS 13.4 oder höher mit einer externen Tastatur und Maus oder Touchpad
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+Alle anderen Inhalte wie K-5-Kurse (Grundlagen der Informatik) und Hour of Code-Aktivitäten sind auf iPads und anderen modernen Tablets sowie Laptop- oder Desktop-Computern kompatibel.
 
 ### Mobiltelefone
 
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+Das ist der Player, der währende des gesamten Lehrplans verwendet wird. Er wird versuchen, das Video über YouTube wiederzugeben, und wenn YouTube gesperrt ist, wird das von Code.org gehostete Video mit unserem eigenen Player angezeigt.
 
 ### Das Video wird nicht wiedergegeben?
 
-If video does not work, you can email us at support@code.org.
+Falls Ihr Video nicht funktioniert, senden Sie uns eine E-Mail an support@code.org.
 
-However, you can still use our tutorials without video.
+Sie können unsere Tutorials aber auch ohne Video nutzen.
 
 1. Unsere Videos können unter [zusammen heruntergeladen werden](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). Falls die Bandbreite Ihrer Schule gering ist, empfehlen wir Ihnen, die Videos herunterzuladen und sie den SchülerInnen auf einem freigegebenen Bildschirm zu zeigen.
 2. In unsere Tutorial-Videos ist ein grünes Download-Symbol <img src="/images/green-download.png" width=25 height=25 /> integriert und die SchülerInnen können jedes einzelne Video der Tutorials herunterladen.
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## Besondere Einstellungen für die Benutzer von Google Apps/G-Suite
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+Wenn Sie ein G-Suite-Administrator sind, überprüfen Sie, welche Einschränkungen für YouTube in Ihren Einstellungen festgelegt sind. Wenn die Einstellung "YouTube-Zugang stark eingeschränkt" angegeben ist oder wenn die Meldung "dieses Video ist gesperrt" angezeigt wird, können Sie unseren Kanal zur Liste der erlaubten Kanäle hinzufügen. Lesen Sie [diese Anleitung](https://support.google.com/a/answer/6245597) von Google zum Hinzufügen unseres Kanals zur erlaubten Liste. Auch in [dieser Anleitung](https://support.google.com/a/answer/6212415?hl=en) erfahren Sie mehr über die verschiedenen Einstellungen und welche für Ihren Unterricht am besten geeignet sind.
 
 ## Besteht das Problem weiterhin?
 
-We'll help you out - just email us at support@code.org!
+Wir helfen Ihnen gern. Senden Sie uns einfach eine E-Mail an support@code.org!

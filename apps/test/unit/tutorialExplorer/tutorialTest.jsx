@@ -1,12 +1,9 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import LazyLoad from 'react-lazy-load';
-import sinon from 'sinon';
 
 import Image from '@cdo/apps/tutorialExplorer/image';
 import Tutorial from '@cdo/apps/tutorialExplorer/tutorial';
-
-import {expect} from '../../util/reconfiguredChai';
 
 const CALLBACK = () => {};
 const FAKE_TUTORIAL = {
@@ -36,14 +33,14 @@ describe('Tutorial', () => {
     const descriptionText = wrapper.findWhere(
       element => element.text() === 'Ages 8 and up. | FORTRAN | iOS'
     );
-    expect(wrapper.find(LazyLoad)).to.have.lengthOf(1);
-    expect(imageSrc).to.equal('/images/fill-480x360/httyd.jpg');
-    expect(titleText).to.exist;
-    expect(descriptionText).to.exist;
+    expect(wrapper.find(LazyLoad)).toHaveLength(1);
+    expect(imageSrc).toBe('/images/fill-480x360/httyd.jpg');
+    expect(titleText).toBeDefined();
+    expect(descriptionText).toBeDefined();
   });
 
   it('[accessibility] can be selected via keyboard', () => {
-    var clickedSpy = sinon.spy();
+    var clickedSpy = jest.fn();
     const wrapper = shallow(
       <Tutorial item={FAKE_TUTORIAL} tutorialClicked={clickedSpy} />
     );
@@ -53,6 +50,6 @@ describe('Tutorial', () => {
     wrapper
       .instance()
       .keyboardSelectTutorial({keyCode: 13, preventDefault: () => {}});
-    expect(clickedSpy).to.have.been.calledTwice;
+    expect(clickedSpy).toHaveBeenCalledTimes(2);
   });
 });

@@ -1,10 +1,13 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import style from './rubrics.module.scss';
-import {learningGoalShape} from './rubricShapes';
-import color from '@cdo/apps/util/color';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
+import {learningGoalShape} from './rubricShapes';
+
+import style from './rubrics.module.scss';
 
 export default function ProgressRing({
   className,

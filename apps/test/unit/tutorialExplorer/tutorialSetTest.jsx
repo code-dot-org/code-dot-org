@@ -1,4 +1,4 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import Tutorial from '@cdo/apps/tutorialExplorer/tutorial';
@@ -6,7 +6,7 @@ import TutorialDetail from '@cdo/apps/tutorialExplorer/tutorialDetail';
 import TutorialSet from '@cdo/apps/tutorialExplorer/tutorialSet';
 import i18n from '@cdo/tutorialExplorer/locale';
 
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const TUTORIAL_1 = {
   name: 'Tutorial 1',

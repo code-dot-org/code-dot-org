@@ -1,9 +1,12 @@
-import {commonI18n} from '@cdo/apps/types/locale';
-import {frameSizes} from './cdoConstants';
-import SvgFrame from './svgFrame';
 import {WorkspaceSvg} from 'blockly';
 import {Abstract} from 'blockly/core/events/events_abstract.js';
+
+import {commonI18n} from '@cdo/apps/types/locale';
+
 import {EditorWorkspaceSvg} from '../types.js';
+
+import {frameSizes} from './cdoConstants';
+import SvgFrame from './svgFrame';
 
 /**
  * Represents an SVG frame specifically designed for workspaces.

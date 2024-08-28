@@ -1,4 +1,5 @@
 import {TestResults} from '@cdo/apps/constants';
+
 var blockUtils = require('@cdo/apps/block_utils');
 
 var REPEAT_REQUIREMENT = {

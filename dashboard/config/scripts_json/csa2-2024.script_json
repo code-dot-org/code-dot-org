@@ -12,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-12 20:50:30 UTC",
+    "serialized_at": "2024-07-11 16:17:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -116,7 +117,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.1\n* Topic Questions 5.8\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/2) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U2L2 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/1dac85583ab24bd788868581067471e8) on AP Classroom can be assigned as a formative assessment for this lesson.\n\nAdditionally, the following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.1\n* Topic Questions 5.8\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/2) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How does a constructor assign values to instance variables?**\n\nStudents have used constructors to create a variety of objects, including `Painter` objects. Students build on their knowledge of instance variables to explore how to assign values to the instance variables when an object is created. Students recall that the constructor they have used in the `Painter` class instantiates a `Painter` object with the same values every time, and they consider the decisions a software engineer needs to make to decide what default values should be assigned to instance variables. Students practice writing no-argument constructors and continue developing the `Dessert` class for the Joyful Pastries food truck.",
         "preparation": "* **(Optional)** Print copies of the U2L2 Guided Notes (one for each student)\n* Preview the *Constructors* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-2-no-argument-constructors/37873) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How does a constructor assign values to instance variables?**\n\nYou have used constructors to create a variety of objects, including `Painter` objects. In this lesson, you build on your knowledge of instance variables to explore how to assign values to the instance variables when an object is created. You recall that the constructor you have used in the `Painter` class instantiates a `Painter` object with the same values every time, and you consider the decisions a software engineer needs to make to decide what default values should be assigned to instance variables. You practice writing no-argument constructors and continue developing the `Dessert` class for the Joyful Pastries food truck."
@@ -135,7 +136,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.2\n* Topic Questions 5.2\n* Topic Questions 9.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/3) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U2L3 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/18e802384c474af9911ca3fcd116b733) on AP Classroom can be assigned as a formative assessment for this lesson.\n\nAdditionally, the following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.2\n* Topic Questions 5.2\n* Topic Questions 9.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/3) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I create objects with specific values for its instance variables?**\n\nStudents have learned how to write no-argument constructors to assign default values to instance variables and use these to instantiate objects. In this lesson, students consider the limitations of no-argument constructors and learn about using parameterized constructors to assign specific values to the instance variables. Students explore the components of a parameterized constructor and its functionality, then practice writing parameterized constructors in a class.",
         "preparation": "* **(Optional)** Print copies of the U2L3 Guided Notes (one for each student)\n* Preview the *Overloaded Constructors* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-3-parameterized-constructors/37874) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I create objects with specific values for its instance variables?**\n\nYou have learned how to write no-argument constructors to assign default values to instance variables and use these to instantiate objects. In this lesson, you consider the limitations of no-argument constructors and learn about using parameterized constructors to assign specific values to the instance variables. You explore the components of a parameterized constructor and its functionality, then practice writing parameterized constructors in a class."
@@ -192,7 +193,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/6) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U2L6 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/0119749ddb334493964b759d0a9f263b) on AP Classroom can be assigned as a formative assessment for this lesson.\n\nAdditionally, the following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/6) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How are the types of variables in Java similar and different?**\n\nIn this lesson, students revisit variables and data types and learn the difference between primitive and reference types. Students investigate variables of type `int`, `double`, `boolean`, and `String` and explore using the assignment operator to initialize or change the value stored in a variable. Students then practice tracing code segments to identify the current values stored in variables.",
         "preparation": "* **(Optional)** Print copies of the U2L6 Guided Notes (one for each student)\n* Preview the *Creating Variables* video\n* Print copies of the Investigate: Variables handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-6-variables/37877) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How are the types of variables in Java similar and different?**\n\nIn this lesson, you revisit variables and data types and learn the difference between primitive and reference types. You investigate variables of type `int`, `double`, `boolean`, and `String` and explore using the assignment operator to initialize or change the value stored in a variable. You then practice tracing code segments to identify the current values stored in variables."
@@ -211,7 +212,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.5\n* Topic Questions 5.1\n* Topic Questions 5.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/7) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U2L7 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/216faeac7129402ead3ab2245ab39091) on AP Classroom can be assigned as a formative assessment for this lesson.\n\nAdditionally, the following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.5\n* Topic Questions 5.1\n* Topic Questions 5.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/7) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I access the values of an object's instance variables?**\n\nStudents have previously used methods in the `Painter` class to get information about the state of a `Painter` object. In this lesson, students learn about accessor methods and explore their syntax and functionality. They consider why they would use accessor methods in a program and how they might decide when to provide an accessor method for an instance variable. Students then practice writing an accessor method in a class before writing accessor methods in the `Dessert` class and subclass.",
         "preparation": "* **(Optional)** Print copies of the U2L7 Guided Notes (one for each student)\n* Preview the *Creating a Scanner Object* and *Accessor Methods* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-7-accessor-methods/37878) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I access the values of an object's instance variables?**\n\nYou have previously used methods in the `Painter` class to get information about the state of a `Painter` object. In this lesson, you learn about accessor methods and explore their syntax and functionality. You consider why you would use accessor methods in a program and how you might decide when to provide an accessor method for an instance variable. You then practice writing an accessor method in a class before writing accessor methods in the `Dessert` class and subclass."
@@ -230,7 +231,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/8) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U2L8 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/6211c802feb64dd1b3af65a85284acc5) on AP Classroom can be assigned as a formative assessment for this lesson.\n\nAdditionally, the following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/8) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I use variables and operators to perform calculations?**\n\nStudents have learned how to use variables to store primitive values and object references. In this lesson, students explore writing and evaluating expressions using arithmetic operators and compound assignment operators. Students discover how the data type impacts the way an expression is evaluated and the result of dividing an `int` or a `double` value by zero. They also learn about using compound assignment operators and explore the mod ( `%` ) operator.",
         "preparation": "* **(Optional)** Print copies of the U2L8 Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-8-operators-and-expressions/37879) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I use variables and operators to perform calculations?**\n\nYou have learned how to use variables to store primitive values and object references. In this lesson, you explore writing and evaluating expressions using arithmetic operators and compound assignment operators. You discover how the data type impacts the way an expression is evaluated and the result of dividing an `int` or a `double` value by zero. You also learn about using compound assignment operators and explore the mod ( `%` ) operator."
@@ -268,7 +269,7 @@
       "has_lesson_plan": true,
       "relative_position": 10,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.4\n* Topic Questions 9.1\n* Topic Questions 9.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/10) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U2L10 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/4ebb6ce58ead498e91df425f0a79197d) on AP Classroom can be assigned as a formative assessment for this lesson.\n\nAdditionally, the following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.4\n* Topic Questions 9.1\n* Topic Questions 9.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/10) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I easily display information about an object?**\n\nStudents have learned to use accessor methods to obtain information about the state of an object. In this lesson, students explore how to print an object reference and the `toString()` method to easily obtain information about an object. Students revisit the `Object` class and learn how to override its `toString()` method and practice writing a `toString()` method in a class using escape sequences to format output. Students then write a `toString()` method in the `Dessert` class and subclass.",
         "preparation": "* **(Optional)** Print copies of the U2L10 Guided Notes (one for each student)\n* Preview *The toString() Method* video\n* Print copies of the Unit 2 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-10-printing-objects/37881) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teacher",
         "student_overview": "**How can I easily display information about an object?**\n\nYou have learned to use accessor methods to obtain information about the state of an object. In this lesson, you explore how to print an object reference and the `toString()` method to easily obtain information about an object. You revisit the `Object` class and learn how to override its `toString()` method and practice writing a `toString()` method in a class using escape sequences to format output. You then write a `toString()` method in the `Dessert` class and subclass."
@@ -4786,6 +4787,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L1_2024"
+        ],
         "progression": "Predict and Run: Attributes"
       },
       "bonus": false,
@@ -4808,6 +4812,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L2_2024"
+        ],
         "progression": "Investigate and Modify: Classes and Attributes"
       },
       "bonus": false,
@@ -4830,6 +4837,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L2-2_2024"
+        ],
         "progression": "Investigate and Modify: Classes and Attributes"
       },
       "bonus": false,
@@ -4852,6 +4862,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L2-3_2024"
+        ],
         "progression": "Investigate and Modify: Classes and Attributes"
       },
       "bonus": false,
@@ -4874,6 +4887,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L3_2024"
+        ],
         "progression": "Skill Building: Declaring Instance Variables"
       },
       "bonus": false,
@@ -4896,6 +4912,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L4_2024"
+        ],
         "progression": "Investigate and Modify: Refactoring Code"
       },
       "bonus": false,
@@ -4918,6 +4937,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L4-2_2024"
+        ],
         "progression": "Investigate and Modify: Refactoring Code"
       },
       "bonus": false,
@@ -4940,6 +4962,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L5_2024"
+        ],
         "progression": "Practice: The Food Truck"
       },
       "bonus": false,
@@ -4962,6 +4987,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L6_2024"
+        ],
         "progression": "Practice: The Food Truck"
       },
       "bonus": false,
@@ -4984,6 +5012,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L1-L7_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5006,6 +5037,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L1_2024"
+        ],
         "progression": "Predict and Run: No-Argument Constructors"
       },
       "bonus": false,
@@ -5028,6 +5062,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L2_2024"
+        ],
         "progression": "Investigate and Modify: Constructors"
       },
       "bonus": false,
@@ -5050,6 +5087,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L2-2_2024"
+        ],
         "progression": "Investigate and Modify: Constructors"
       },
       "bonus": false,
@@ -5072,6 +5112,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L2-3_2024"
+        ],
         "progression": "Investigate and Modify: Constructors"
       },
       "bonus": false,
@@ -5094,6 +5137,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L3_2024"
+        ],
         "progression": "Skill Building: Writing a Constructor"
       },
       "bonus": false,
@@ -5116,6 +5162,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L4_2024"
+        ],
         "progression": "Practice: Writing a Class"
       },
       "bonus": false,
@@ -5138,6 +5187,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L5_2024"
+        ],
         "progression": "Practice: Writing a Class"
       },
       "bonus": false,
@@ -5160,6 +5212,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L6_2024"
+        ],
         "progression": "Practice: The Food Truck"
       },
       "bonus": false,
@@ -5182,6 +5237,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L2-L7_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5204,6 +5262,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L1_2024"
+        ],
         "progression": "Predict and Run: Parameterized Constructors"
       },
       "bonus": false,
@@ -5226,6 +5287,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L2_2024"
+        ],
         "progression": "Investigate and Modify: Parameterized Constructors"
       },
       "bonus": false,
@@ -5248,6 +5312,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L2-2_2024"
+        ],
         "progression": "Investigate and Modify: Parameterized Constructors"
       },
       "bonus": false,
@@ -5270,6 +5337,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L2-3_2024"
+        ],
         "progression": "Investigate and Modify: Parameterized Constructors"
       },
       "bonus": false,
@@ -5292,6 +5362,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L3 CFU_2024"
+        ],
         "progression": "Practice: Parameterized Constructors"
       },
       "bonus": false,
@@ -5314,6 +5387,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L3_2024"
+        ],
         "progression": "Practice: Parameterized Constructors"
       },
       "bonus": false,
@@ -5336,6 +5412,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L4_2024"
+        ],
         "progression": "Practice: Parameterized Constructors"
       },
       "bonus": false,
@@ -5358,6 +5437,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L3-L10_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5380,6 +5462,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L1_2024"
+        ],
         "progression": "Predict and Run: Constructors and Scope"
       },
       "bonus": false,
@@ -5402,6 +5487,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L2_2024"
+        ],
         "progression": "Investigate and Modify: The this Keyword"
       },
       "bonus": false,
@@ -5424,6 +5512,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L3_2024"
+        ],
         "progression": "Investigate and Modify: The this Keyword"
       },
       "bonus": false,
@@ -5446,6 +5537,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L4_2024"
+        ],
         "progression": "Investigate and Modify: The this Keyword"
       },
       "bonus": false,
@@ -5468,6 +5562,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L5_2024"
+        ],
         "progression": "Practice: The this Keyword"
       },
       "bonus": false,
@@ -5490,6 +5587,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L6_2024"
+        ],
         "progression": "Practice: The this Keyword"
       },
       "bonus": false,
@@ -5512,6 +5612,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L7_2024"
+        ],
         "progression": "Practice: The this Keyword"
       },
       "bonus": false,
@@ -5534,6 +5637,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L4-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5556,6 +5662,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L1_2024"
+        ],
         "progression": "Predict and Run: Constructors and Inheritance"
       },
       "bonus": false,
@@ -5578,6 +5687,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L2_2024"
+        ],
         "progression": "Investigate and Modify: The super Keyword"
       },
       "bonus": false,
@@ -5600,6 +5712,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L3_2024"
+        ],
         "progression": "Investigate and Modify: The super Keyword"
       },
       "bonus": false,
@@ -5622,6 +5737,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L4_2024"
+        ],
         "progression": "Investigate and Modify: The super Keyword"
       },
       "bonus": false,
@@ -5644,6 +5762,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L5_2024"
+        ],
         "progression": "Practice: The super Keyword"
       },
       "bonus": false,
@@ -5666,6 +5787,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L6_2024"
+        ],
         "progression": "Practice: The super Keyword"
       },
       "bonus": false,
@@ -5688,6 +5812,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L7 Practice_2024"
+        ],
         "progression": "Practice: The super Keyword"
       },
       "bonus": false,
@@ -5710,6 +5837,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L5-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5732,6 +5862,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L6-L1_2024"
+        ],
         "progression": "Predict and Run: Variables"
       },
       "bonus": false,
@@ -5754,6 +5887,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L6-L2_2024"
+        ],
         "progression": "Investigate and Modify: Variables"
       },
       "bonus": false,
@@ -5776,6 +5912,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L6-L3_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5798,6 +5937,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L1_2024"
+        ],
         "progression": "Predict and Run: Accessor Methods"
       },
       "bonus": false,
@@ -5820,6 +5962,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L2_2024"
+        ],
         "progression": "Investigate and Modify: Accessor Methods"
       },
       "bonus": false,
@@ -5842,6 +5987,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L3_2024"
+        ],
         "progression": "Investigate and Modify: Accessor Methods"
       },
       "bonus": false,
@@ -5864,6 +6012,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L4_2024"
+        ],
         "progression": "Skill Building: Accessor Methods"
       },
       "bonus": false,
@@ -5886,6 +6037,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L5_2024"
+        ],
         "progression": "Practice: Accessor Methods"
       },
       "bonus": false,
@@ -5908,6 +6062,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L6_2024"
+        ],
         "progression": "Practice: Accessor Methods"
       },
       "bonus": false,
@@ -5930,6 +6087,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L7 Practice_2024"
+        ],
         "progression": "Practice: Accessor Methods"
       },
       "bonus": false,
@@ -5952,6 +6112,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L7-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5974,6 +6137,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L1_2024"
+        ],
         "progression": "Predict and Run: Operators and Expressions"
       },
       "bonus": false,
@@ -5996,6 +6162,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L2_2024"
+        ],
         "progression": "Investigate and Modify: Expressions"
       },
       "bonus": false,
@@ -6018,6 +6187,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L3_2024"
+        ],
         "progression": "Investigate and Modify: Expressions"
       },
       "bonus": false,
@@ -6040,6 +6212,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L4_2024"
+        ],
         "progression": "Investigate and Modify: Expressions"
       },
       "bonus": false,
@@ -6062,6 +6237,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L5_2024"
+        ],
         "progression": "Investigate and Modify: Operators"
       },
       "bonus": false,
@@ -6084,6 +6262,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L6_2024"
+        ],
         "progression": "Investigate and Modify: Operators"
       },
       "bonus": false,
@@ -6106,6 +6287,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L8-L7_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6128,6 +6312,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L1_2024"
+        ],
         "progression": "Predict and Run: Mutator Methods"
       },
       "bonus": false,
@@ -6150,6 +6337,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L2_2024"
+        ],
         "progression": "Investigate and Modify: Mutator Methods"
       },
       "bonus": false,
@@ -6172,6 +6362,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L3_2024"
+        ],
         "progression": "Investigate and Modify: Mutator Methods"
       },
       "bonus": false,
@@ -6194,6 +6387,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L4_2024"
+        ],
         "progression": "Skill Building: Mutator Methods"
       },
       "bonus": false,
@@ -6216,6 +6412,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L5_2024"
+        ],
         "progression": "Practice: Mutator Methods"
       },
       "bonus": false,
@@ -6238,6 +6437,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L6_2024"
+        ],
         "progression": "Practice: Mutator Methods"
       },
       "bonus": false,
@@ -6260,6 +6462,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L7 Practice_2024"
+        ],
         "progression": "Practice: Mutator Methods"
       },
       "bonus": false,
@@ -6282,6 +6487,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L9-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6304,6 +6512,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L1_2024"
+        ],
         "progression": "Predict and Run: Printing Objects"
       },
       "bonus": false,
@@ -6326,6 +6537,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L2_2024"
+        ],
         "progression": "Investigate and Modify: Printing Objects"
       },
       "bonus": false,
@@ -6348,6 +6562,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L3_2024"
+        ],
         "progression": "Investigate and Modify: Printing Objects"
       },
       "bonus": false,
@@ -6370,6 +6587,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L4_2024"
+        ],
         "progression": "Practice: The toString() Method"
       },
       "bonus": false,
@@ -6392,6 +6612,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L5_2024"
+        ],
         "progression": "Practice: The toString() Method"
       },
       "bonus": false,
@@ -6414,6 +6637,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L6_2024"
+        ],
         "progression": "Practice: The toString() Method"
       },
       "bonus": false,
@@ -6436,6 +6662,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L7 Practice_2024"
+        ],
         "progression": "Practice: The toString() Method"
       },
       "bonus": false,
@@ -6458,6 +6687,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2L10-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -6480,6 +6712,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2 Store Management Project_2024"
+        ],
         "progression": "Store Management Project"
       },
       "bonus": false,
@@ -6502,6 +6737,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 2 Assessment_2024"
+        ],
         "progression": "Unit 2 Assessment"
       },
       "bonus": false,
@@ -6524,6 +6762,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa2_2024"
+        ],
         "progression": "Unit 2 Survey"
       },
       "bonus": false,
@@ -6546,6 +6787,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U2 Store Management Project 1-Day_2024"
+        ],
         "progression": "Store Management Project"
       },
       "bonus": false,
@@ -6568,6 +6812,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6589,6 +6836,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox_2024"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -6611,6 +6861,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox_2024"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -7953,7 +8206,7 @@
     },
     {
       "name": "Accessor Methods",
-      "url": "https://docs.google.com/presentation/d/1UIF33TNI4dC_onYCn18eRi5XtWYnqGRoyZtoUEiVyXY/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1HZUcOQYHR4RP3dIbpZybYSoKKl6YNvjvisYG0XN5XsQ/",
       "key": "accessor_methods",
       "properties": {
         "audience": "Verified Teacher",
@@ -8023,7 +8276,7 @@
     },
     {
       "name": "Attributes",
-      "url": "https://docs.google.com/presentation/d/1TDW4lLm9ASPr8BkNfjdEFOWUpgjGXbwpZf8kfWg6qhA/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1xor-tGKCJ1aX6kIVxdtwbQbvP7haL3NHe78bIdTtvIQ/",
       "key": "attributes",
       "properties": {
         "audience": "Verified Teacher",
@@ -8035,7 +8288,7 @@
     },
     {
       "name": "Burger Class FRQ",
-      "url": "https://docs.google.com/presentation/d/17PEkVk8-0LhSP9GgziHROq_Yqsyk2ZXkQUkkoViqds0/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1_UTixUq0ihmQMo4rMjWVxqKiMURKJqY348tsBHT8WMQ/",
       "key": "burger_class_frq",
       "properties": {
         "audience": "Verified Teacher",
@@ -8110,7 +8363,7 @@
     },
     {
       "name": "Constructors and Inheritance",
-      "url": "https://docs.google.com/presentation/d/1AG3dZ85l3CdkKpqQt7jpaEPYZnKzBjWsa48NBmhk6Eo/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1Np8Jh2pVxf_Gbbv8AZxAzJEbtxGMDFUU6RTRfPP-RNE/",
       "key": "constructors_and_inheritance",
       "properties": {
         "audience": "Verified Teacher",
@@ -8146,11 +8399,9 @@
     },
     {
       "name": "CSA Unit 2 Slides",
-      "url": "https://docs.google.com/presentation/d/1nhCPN0RoHtQMdQ0jgJndUrMPejom-2w5vhGbVFTf3i8/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1L4SIB_N2DlLOAf_FqB7-VCOiLmXBPg9dVedqnjbJJ0g/",
       "key": "csa_unit_2_slides",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csa_unit_2_slides"
@@ -8219,7 +8470,7 @@
     },
     {
       "name": "Mutator Methods",
-      "url": "https://docs.google.com/presentation/d/1zLWA75y7dtE3f6Bayu9NUr7RDwJZu_S0B-6gE1ySc7Y/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1RQiYt-Y5sQJy7GJnkC9SwA4XZfoT4tnYqr_bLjrUfAs/",
       "key": "mutator_methods",
       "properties": {
         "audience": "Verified Teacher",
@@ -8243,7 +8494,7 @@
     },
     {
       "name": "No-Argument Constructors",
-      "url": "https://docs.google.com/presentation/d/1KkYAHeAmkY1O-LaASVqAFg8sAM2pfGEiW84ybqz3eeg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1PuCXvByEdLE18hD3EQDYg2bXz1x-zNUy70SQwK04AvU/",
       "key": "no-argument_constructors",
       "properties": {
         "audience": "Verified Teacher",
@@ -8255,7 +8506,7 @@
     },
     {
       "name": "Operators and Expressions",
-      "url": "https://docs.google.com/presentation/d/15Vx46VJj1wxa8YHcNW0-b_RqujR1ueHwN6mXzPq01Hg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1jGJg4X0uZPu9sM64g8xdWyksgfzcRiGDySIEdaLarCY/",
       "key": "operators_and_expressions",
       "properties": {
         "audience": "Verified Teacher",
@@ -8279,7 +8530,7 @@
     },
     {
       "name": "Parameterized Constructors",
-      "url": "https://docs.google.com/presentation/d/1LE5wrMmHvWLlcon8CEnLUQocPMiDvvkk8JAk6dZOhbo/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1qFe2VeA8MCj5lyySNDTDlqdgHrG1sIQHCHwmMbZ5oEM/",
       "key": "parameterized_constructors",
       "properties": {
         "audience": "Verified Teacher",
@@ -8291,7 +8542,7 @@
     },
     {
       "name": "Printing Objects",
-      "url": "https://docs.google.com/presentation/d/1WZisgFzkH3eHG7VPl1C3RNKqBz4_Omg7hPxKtWGBy6I/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1iSGWV1IC-7azbEnj-qf1qUrxBGbBL6BkloZEvLX570o/",
       "key": "printing_objects",
       "properties": {
         "audience": "Verified Teacher",
@@ -8315,7 +8566,7 @@
     },
     {
       "name": "Store Management Project",
-      "url": "https://docs.google.com/presentation/d/1SHwRgaBAbNGhMy4hn_a7UuYT1Fz2E43qjnAyGBQG9dg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1f4xelawJ6HoNIjXpvXhbVlyOcNj4iHeWFtHPlF9OyTU/",
       "key": "store_management_project",
       "properties": {
         "audience": "Verified Teacher",
@@ -8327,7 +8578,7 @@
     },
     {
       "name": "Store Management Project",
-      "url": "https://docs.google.com/presentation/d/1LT9gqXWwpS-M1Igis_lRowFAi42_LK8hknH-0dPVDmw/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1NYovPYTum_AtvwsdM8wia9P3v9dlz42zjxEnSr3oLfM/",
       "key": "store_management_project_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -8364,7 +8615,7 @@
     },
     {
       "name": "The this Keyword",
-      "url": "https://docs.google.com/presentation/d/1t5Spp8xU2AT4z0tjofAIbqiU1UKpWbu0ZiL1cfkpX68/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/191NPKYfB_JLnErE2zr0861VUoSyIjPVWaF2R9gdE7vs/",
       "key": "the_this_keyword",
       "properties": {
         "audience": "Verified Teacher",
@@ -8660,7 +8911,7 @@
     },
     {
       "name": "Unit 2 Assessment",
-      "url": "https://docs.google.com/presentation/d/1tnM7y3LNJJEwUUzDIndJ3xFSyzBgKuLgJN14fnYFGQQ/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/17RnSfuhl99uPUn8XGMH_r1JN2i8kkFZAqjDrSd-ZL14/",
       "key": "unit_2_assessment",
       "properties": {
         "audience": "Verified Teacher",
@@ -8722,7 +8973,7 @@
     },
     {
       "name": "Variables",
-      "url": "https://docs.google.com/presentation/d/1ZA123gAg_DXKdO9c05fMDHE7YsUmzMxuJXAsyatW57U/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1AodAJ4gMeKD4KF6jxjshYXXBbAi6KFygtryTWgle2j8/",
       "key": "variables",
       "properties": {
         "audience": "Verified Teacher",

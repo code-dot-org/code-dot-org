@@ -1,6 +1,6 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import * as utils from '@cdo/apps/code-studio/utils';
 import CodeReviewCommentEditor from '@cdo/apps/templates/instructions/codeReviewV2/CodeReviewCommentEditor';
@@ -13,7 +13,7 @@ import {UnconnectedCodeReviewTimelineReview as CodeReviewTimelineReview} from '@
 import Comment from '@cdo/apps/templates/instructions/codeReviewV2/Comment';
 import javalabMsg from '@cdo/javalab/locale';
 
-import {expect} from '../../../../util/reconfiguredChai';
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const DEFAULT_REVIEW = {
   id: 1,

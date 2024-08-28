@@ -5,7 +5,9 @@
 .tabs-section.donate-tabs.show-desktop
   -# Tabs nav
   %nav.flex-container.justify-space-between
-    %button.tab.daf-direct.active{"data-content": "#daf-direct"}
+    %button.tab.daf-direct.active{"data-content": "#classy"}
+      =hoc_s("donate_page.options.contribute.tab")
+    %button.tab.daf-direct{"data-content": "#daf-direct"}
       =hoc_s(:donate_tabs_tab_label_daf_direct)
     %button.tab.amazon{"data-content": "#amazon"}
       =hoc_s(:donate_tabs_tab_label_amazon)
@@ -14,17 +16,23 @@
     %button.tab.employee-match{"data-content": "#employee-match"}
       =hoc_s(:donate_tabs_tab_label_employee_match)
   -# Tabs content
-  %div#daf-direct.content.show
-    = view :"tabs_section/donate/donate_tabs_daf_direct"
-  %div#amazon.content
-    = view :"tabs_section/donate/donate_tabs_amazon"
-  %div#bitpay.content.has-external-link
-    = view :"tabs_section/donate/donate_tabs_bitpay"
-  %div#employee-match.content
-    = view :"tabs_section/donate/donate_tabs_employee_match"
+  %div.tab-content-container
+    %div#classy.content.show
+      = view :"tabs_section/donate/donate_tabs_classy"
+    %div#daf-direct.content
+      = view :"tabs_section/donate/donate_tabs_daf_direct"
+    %div#amazon.content
+      = view :"tabs_section/donate/donate_tabs_amazon"
+    %div#bitpay.content.has-external-link
+      = view :"tabs_section/donate/donate_tabs_bitpay"
+    %div#employee-match.content
+      = view :"tabs_section/donate/donate_tabs_employee_match"
 
 -# Shows accordion UI on smaller screens
 .tabs-section.donate-tabs.show-tablet-and-mobile
+  %details.classy
+    %summary=hoc_s("donate_page.options.contribute.tab")
+    = view :"tabs_section/donate/donate_tabs_classy"
   %details.daf-direct
     %summary=hoc_s(:donate_tabs_tab_label_daf_direct)
     = view :"tabs_section/donate/donate_tabs_daf_direct"
@@ -38,4 +46,4 @@
     %summary=hoc_s(:donate_tabs_tab_label_employee_match)
     = view :"tabs_section/donate/donate_tabs_employee_match"
 
-%script{src: '../js/tabs-section.js'}
+= view :tabs_section

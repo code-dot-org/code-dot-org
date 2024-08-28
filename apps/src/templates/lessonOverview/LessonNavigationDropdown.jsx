@@ -1,13 +1,14 @@
-import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
-import Button from '@cdo/apps/templates/Button';
-import DropdownButton from '@cdo/apps/templates/DropdownButton';
-import color from '@cdo/apps/util/color';
-import {navigationLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
-import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
+import React, {Component} from 'react';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import firehoseClient from '@cdo/apps/lib/util/firehose';
+import DropdownButton from '@cdo/apps/templates/DropdownButton';
+import {navigationLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
+import color from '@cdo/apps/util/color';
+import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
 
 /*
  Component used to navigate between lesson plans. List

@@ -1,17 +1,27 @@
+import musicI18n from '../locale';
+
 import {
   DEFAULT_TRACK_NAME_EXTENSION,
   DOCS_BASE_URL,
   FIELD_CHORD_TYPE,
   FIELD_PATTERN_TYPE,
+  FIELD_PATTERN_AI_TYPE,
+  FIELD_TUNE_TYPE,
   FIELD_SOUNDS_TYPE,
   PLAY_MULTI_MUTATOR,
+  FIELD_EFFECTS_EXTENSION,
 } from './constants';
-import {getDefaultTrackNameExtension, playMultiMutator} from './extensions';
+import {
+  getDefaultTrackNameExtension,
+  playMultiMutator,
+  effectsFieldExtension,
+} from './extensions';
 import FieldChord from './FieldChord';
 import FieldPattern from './FieldPattern';
+import FieldPatternAi from './FieldPatternAi';
 import FieldSounds from './FieldSounds';
+import FieldTune from './FieldTune';
 import {MUSIC_BLOCKS} from './musicBlocks';
-import musicI18n from '../locale';
 import {BlockConfig} from './types';
 
 /**
@@ -25,6 +35,7 @@ export function setUpBlocklyForMusicLab() {
     getDefaultTrackNameExtension()
   );
 
+  Blockly.Extensions.register(FIELD_EFFECTS_EXTENSION, effectsFieldExtension);
   Blockly.Extensions.registerMutator(PLAY_MULTI_MUTATOR, playMultiMutator);
 
   // Needed for TypeScript to recognize the type of the MUSIC_BLOCKS. Remove
@@ -44,7 +55,9 @@ export function setUpBlocklyForMusicLab() {
   Blockly.cdoUtils.registerCustomProcedureBlocks();
   Blockly.fieldRegistry.register(FIELD_SOUNDS_TYPE, FieldSounds);
   Blockly.fieldRegistry.register(FIELD_PATTERN_TYPE, FieldPattern);
+  Blockly.fieldRegistry.register(FIELD_PATTERN_AI_TYPE, FieldPatternAi);
   Blockly.fieldRegistry.register(FIELD_CHORD_TYPE, FieldChord);
+  Blockly.fieldRegistry.register(FIELD_TUNE_TYPE, FieldTune);
 
   // Remove two default entries in the toolbox's Functions category that
   // we don't want.

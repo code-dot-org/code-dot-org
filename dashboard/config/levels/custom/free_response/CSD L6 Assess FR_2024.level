@@ -1,0 +1,28 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "game_id": 52,
+  "created_at": "2024-05-15T21:03:47.000Z",
+  "level_num": "custom",
+  "user_id": 324,
+  "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "# Style the Page Reflection\r\n\r\n🤔 Take a minute to reflect on the last level where you were tasked with linking the stylsheet and styling the paragraph's color and size and answer the following questions:\r\n\r\n1. ✔️ How do you think you did according to the Rubric below and why?\r\n2. 🏁 How did you know how to complete this assessment?\r\n3. 👍🏼 What was easy about the task? / ❗ What was the most challenging? \r\n   - What did you do to overcome the challenging part?\r\n4. ❓ What questions do you still have?\r\n\r\n<hr>\r\n\r\n![](https://images.code.org/8d8ed5df6f08808f22538f96ed5cdd85-image-1708467340852.png)\r\n",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 20662,
+    "name_suffix": "_2024",
+    "allow_multiple_attempts": "false",
+    "teacher_markdown": "Use this reflection as an opportunity to gain insight into how the students completed the assessment level and the choices they made with the CSS rule sets and properties as well as identify any misconceptions that should be cleared up."
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-15T21:03:47.693+00:00\",\"changed\":[\"cloned from \\\"CSD L6 Assess FR\\\"\"],\"cloned_from\":\"CSD L6 Assess FR\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

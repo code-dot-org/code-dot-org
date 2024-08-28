@@ -1,53 +1,66 @@
 @import 'color.scss';
 @import 'font.scss';
 
-.outerContainer {
+.schoolAssociationWrapper {
   text-align: center;
   display: grid;
-  padding: 0.75rem;
 
   h2 {
     margin-bottom: 0.25rem;
   }
+
+  p {
+    margin-bottom: 0.375rem;
+  }
+
+  label {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  input {
+    width: 100%;
+    box-sizing: border-box;
+    height: 46px !important;
+    text-indent: 0.25rem;
+  }
+
+  select {
+    font-weight: 400 !important;
+    width: 100% !important;
+  }
+
+  button {
+    border: 0;
+    padding-inline: 0;
+
+    &:hover {
+      background: none !important;
+      text-decoration: underline !important;
+    }
+  }
+
+  .errorMessage {
+    margin-block: 0.4375rem 0;
+    color: $light_negative_500;
+  }
+}
+
+.headerContainer {
+  margin-bottom: 1.75rem;
 }
 
 .inputContainer {
   justify-self: center;
-  text-align: left;
+  text-align: start;
   width: 400px;
   display: flex;
   flex-direction: column;
+  gap: 1.125rem;
+}
 
-  & > div > label > * {
-    width: 100%;
-  }
-
-  & > div > label > input {
-    box-sizing: border-box;
-    height: 46px !important;
-    font-size: 1rem;
-    margin-top: 0.37rem !important;
-    border-radius: 0.25rem;
-    border: 1px solid;
-    background-color: inherit;
-    text-indent: 0.75rem;
-  }
-
-  .padding {
-    padding-top: 0.75rem;
-    margin-bottom: 0;
-  }
-
-  .disabledLabel {
-      color: $light_gray_300 !important;
-    }
-  }
-
-.dropdown {
-  & > div {
-    select {
-      font-weight: 400 !important;
-      width: 100% !important;
-    }
+.disabledLabel {
+  span {
+    color: $light_gray_300 !important;
   }
 }

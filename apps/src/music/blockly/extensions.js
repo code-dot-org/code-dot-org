@@ -5,6 +5,10 @@ import {
   PLUS_IMAGE,
   SOUND_VALUE_TYPE,
   TRACK_NAME_FIELD,
+  FIELD_EFFECTS_NAME,
+  FIELD_EFFECTS_VALUE,
+  FIELD_EFFECTS_VALUE_OPTIONS,
+  DEFAULT_EFFECT_VALUE,
 } from './constants';
 
 export const getDefaultTrackNameExtension = player =>
@@ -110,4 +114,40 @@ export const playMultiMutator = {
 
     this.updateShape_(this.extraSoundInputCount_ - 1);
   },
+};
+
+/*
+ * Extension for the effects field, which replaces the input_dummy in the block
+ * with a dynamic field_dropdown and updates the effect value dropdown
+ * based on the selected effect name.
+ */
+export const effectsFieldExtension = function () {
+  // Set the initial state when the block gets created
+  const thisBlock = this;
+  const valuesDropdown = new Blockly.FieldDropdown(function () {
+    return FIELD_EFFECTS_VALUE_OPTIONS[
+      thisBlock.getFieldValue(FIELD_EFFECTS_NAME)
+    ];
+  });
+  valuesDropdown.setValue(DEFAULT_EFFECT_VALUE);
+  this.getInput(FIELD_EFFECTS_VALUE).appendField(
+    valuesDropdown,
+    FIELD_EFFECTS_VALUE
+  );
+
+  // Set up handler to update the effect value when the effect name changes
+  const fieldEffectsName = this.getField(FIELD_EFFECTS_NAME);
+
+  // Override the default onItemSelected_ handler
+  const baseHandler = fieldEffectsName.onItemSelected_;
+  fieldEffectsName.onItemSelected_ = (menu, menuItem) => {
+    // Update the effect value dropdown's options to match the newly selected effect
+    const selectedEffectName = menuItem.opt_value;
+    const effectValueField = this.getField(FIELD_EFFECTS_VALUE);
+    effectValueField.menuGenerator_ =
+      FIELD_EFFECTS_VALUE_OPTIONS[selectedEffectName];
+    effectValueField.setValue(DEFAULT_EFFECT_VALUE);
+
+    baseHandler.call(fieldEffectsName, menu, menuItem);
+  };
 };

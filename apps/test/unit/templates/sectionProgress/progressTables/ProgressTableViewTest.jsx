@@ -1,10 +1,9 @@
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
 import {Provider} from 'react-redux';
 import * as Sticky from 'reactabular-sticky';
 import {createStore, combineReducers} from 'redux';
-import sinon from 'sinon';
 
 import progress from '@cdo/apps/code-studio/progressRedux';
 import locales from '@cdo/apps/redux/localesRedux';
@@ -32,8 +31,6 @@ import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConst
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-import {expect} from '../../../../util/reconfiguredChai';
-
 const LESSON_1 = fakeLessonWithLevels({position: 1});
 const LESSON_2 = fakeLessonWithLevels({position: 2}, 2);
 const STUDENTS = fakeStudents(2);
@@ -44,6 +41,13 @@ const initialState = fakeProgressTableReduxInitialState(
   LESSONS,
   SCRIPT_DATA,
   STUDENTS
+);
+
+jest.mock(
+  '@cdo/apps/templates/sectionProgress/progressTables/progress-table-constants.module.scss',
+  () => ({
+    MAX_ROWS: 14,
+  })
 );
 
 const setUp = (currentView = ViewType.SUMMARY, overrideState = {}) => {
@@ -68,12 +72,12 @@ const setUp = (currentView = ViewType.SUMMARY, overrideState = {}) => {
 describe('ProgressTableView', () => {
   it('renders a ProgressTableStudentList', () => {
     const wrapper = setUp();
-    expect(wrapper.find(ProgressTableStudentList)).to.have.length(1);
+    expect(wrapper.find(ProgressTableStudentList)).toHaveLength(1);
   });
 
   it('renders a ProgressTableContentView', () => {
     const wrapper = setUp();
-    expect(wrapper.find(ProgressTableContentView)).to.have.length(1);
+    expect(wrapper.find(ProgressTableContentView)).toHaveLength(1);
   });
 
   it('passes needsGutter true to the ProgressTableContentView when the student row height exceeds the body height', () => {
@@ -89,22 +93,24 @@ describe('ProgressTableView', () => {
     );
 
     const wrapper = setUp(ViewType.SUMMARY, overrideState);
-    expect(wrapper.find(ProgressTableContentView).props().needsGutter).to.be
-      .true;
+    expect(wrapper.find(ProgressTableContentView).props().needsGutter).toBe(
+      true
+    );
   });
 
   it('passes needsGutter false to the ProgressTableContentView when the student row height is less than the body height', () => {
     // 2 students will not exceed max height (default props)
     const wrapper = setUp();
 
-    expect(wrapper.find(ProgressTableContentView).props().needsGutter).to.be
-      .false;
+    expect(wrapper.find(ProgressTableContentView).props().needsGutter).toBe(
+      false
+    );
   });
 
   describe('summary view', () => {
     it('renders a SummaryViewLegend', () => {
       const wrapper = setUp(ViewType.SUMMARY);
-      expect(wrapper.find(SummaryViewLegend)).to.have.length(1);
+      expect(wrapper.find(SummaryViewLegend)).toHaveLength(1);
     });
 
     it('SummaryViewLegend prop showCSFProgressBox is true if scriptData.csf is true', () => {
@@ -115,14 +121,15 @@ describe('ProgressTableView', () => {
       );
 
       const wrapper = setUp(ViewType.SUMMARY, overrideState);
-      expect(wrapper.find(SummaryViewLegend).props().showCSFProgressBox).to.be
-        .true;
+      expect(wrapper.find(SummaryViewLegend).props().showCSFProgressBox).toBe(
+        true
+      );
     });
 
     it('renders a ProgressTableSummaryCell for each lesson for each student', () => {
       const wrapper = setUp(ViewType.SUMMARY);
       const expectedSummaryCellCount = STUDENTS.length * LESSONS.length;
-      expect(wrapper.find(ProgressTableSummaryCell)).to.have.length(
+      expect(wrapper.find(ProgressTableSummaryCell)).toHaveLength(
         expectedSummaryCellCount
       );
     });
@@ -133,23 +140,23 @@ describe('ProgressTableView', () => {
       const contentViewHeaders = wrapper
         .find(ProgressTableContentView)
         .find(Sticky.Header);
-      expect(contentViewHeaders).to.have.length(1);
+      expect(contentViewHeaders).toHaveLength(1);
 
       const studentListHeaders = wrapper
         .find(ProgressTableStudentList)
         .find(Sticky.Header);
-      expect(studentListHeaders).to.have.length(1);
+      expect(studentListHeaders).toHaveLength(1);
     });
 
     it('calls getSummaryCellFormatters formatters when a row is expanded', () => {
-      const timeSpentFormatterStub = sinon.spy();
-      const lastUpdatedFormatterStub = sinon.spy();
+      const timeSpentFormatterStub = jest.fn();
+      const lastUpdatedFormatterStub = jest.fn();
 
-      const getSummaryCellFormattersStub = sinon.stub(
-        progressTableHelpers,
-        'getSummaryCellFormatters'
-      );
-      getSummaryCellFormattersStub.returns([
+      const getSummaryCellFormattersStub = jest
+        .spyOn(progressTableHelpers, 'getSummaryCellFormatters')
+        .mockClear()
+        .mockImplementation();
+      getSummaryCellFormattersStub.mockReturnValue([
         () => <div />, // main cell formatter
         timeSpentFormatterStub,
         lastUpdatedFormatterStub,
@@ -162,33 +169,34 @@ describe('ProgressTableView', () => {
       container.onToggleRow(rowData.student.id);
 
       // one call for each of the two lessons
-      expect(timeSpentFormatterStub.callCount).to.equal(2);
-      expect(lastUpdatedFormatterStub.callCount).to.equal(2);
+      expect(timeSpentFormatterStub).toHaveBeenCalledTimes(2);
+      expect(lastUpdatedFormatterStub).toHaveBeenCalledTimes(2);
     });
   });
 
   describe('detail view', () => {
     it('renders the ProgressLegend', () => {
       const wrapper = setUp(ViewType.DETAIL);
-      expect(wrapper.find(ProgressLegend)).to.have.length(1);
+      expect(wrapper.find(ProgressLegend)).toHaveLength(1);
     });
 
     it('passes `includeReviewStates` to ProgressLegend when unit is CSD', () => {
       const wrapper = setUp(ViewType.DETAIL);
-      expect(wrapper.find(ProgressLegend).props().includeReviewStates).to.be
-        .true;
+      expect(wrapper.find(ProgressLegend).props().includeReviewStates).toBe(
+        true
+      );
     });
 
     it('renders ProgressTableDetailCells', () => {
       const wrapper = setUp(ViewType.DETAIL);
       // 2 students * 2 lessons = 4
-      expect(wrapper.find(ProgressTableDetailCell)).to.have.length(4);
+      expect(wrapper.find(ProgressTableDetailCell)).toHaveLength(4);
     });
 
     it('renders header arrows', () => {
       const wrapper = setUp(ViewType.DETAIL);
       // 1 arrow for LESSON_2 with 2 levels
-      expect(wrapper.find(unitTestExports.LessonArrow)).to.have.length(1);
+      expect(wrapper.find(unitTestExports.LessonArrow)).toHaveLength(1);
     });
 
     it('renders extra header rows', () => {
@@ -196,8 +204,8 @@ describe('ProgressTableView', () => {
       // there are two tableHeaders, 1 for the student list, and 1 for the content view
       // both should have two rows
       const tableHeaders = wrapper.find(Sticky.Header);
-      expect(tableHeaders.at(0).props().headerRows.length).to.equal(2);
-      expect(tableHeaders.at(1).props().headerRows.length).to.equal(2);
+      expect(tableHeaders.at(0).props().headerRows.length).toBe(2);
+      expect(tableHeaders.at(1).props().headerRows.length).toBe(2);
     });
 
     it('formats extra header with ProgressTableLevelIcons in the content view', () => {
@@ -206,20 +214,20 @@ describe('ProgressTableView', () => {
         .find(ProgressTableContentView)
         .find(Sticky.Header);
       // one ProgressTableLevelIconSet for each of the 2 lessons
-      expect(contentViewHeaders.find(ProgressTableLevelIconSet)).to.have.length(
+      expect(contentViewHeaders.find(ProgressTableLevelIconSet)).toHaveLength(
         2
       );
     });
 
     it('calls timeSpent/lastUpdated formatters when a row is expanded', () => {
-      const timeSpentFormatterStub = sinon.spy();
-      const lastUpdatedFormatterStub = sinon.spy();
+      const timeSpentFormatterStub = jest.fn();
+      const lastUpdatedFormatterStub = jest.fn();
 
-      const getDetailCellFormattersStub = sinon.stub(
-        progressTableHelpers,
-        'getDetailCellFormatters'
-      );
-      getDetailCellFormattersStub.returns([
+      const getDetailCellFormattersStub = jest
+        .spyOn(progressTableHelpers, 'getDetailCellFormatters')
+        .mockClear()
+        .mockImplementation();
+      getDetailCellFormattersStub.mockReturnValue([
         () => <div />, // main cell formatter
         timeSpentFormatterStub,
         lastUpdatedFormatterStub,
@@ -232,39 +240,35 @@ describe('ProgressTableView', () => {
       container.onToggleRow(rowData.student.id);
 
       // one call for each of the two lessons
-      expect(timeSpentFormatterStub.callCount).to.equal(2);
-      expect(lastUpdatedFormatterStub.callCount).to.equal(2);
+      expect(timeSpentFormatterStub).toHaveBeenCalledTimes(2);
+      expect(lastUpdatedFormatterStub).toHaveBeenCalledTimes(2);
     });
   });
 
   it('adds rows to state when a row is toggled', () => {
     const wrapper = setUp().find(UnconnectedProgressTableView).instance();
 
-    expect(wrapper.state.rows).to.have.lengthOf(STUDENTS.length);
+    expect(wrapper.state.rows).toHaveLength(STUDENTS.length);
 
     const numDetailRows = wrapper.numDetailRowsPerStudent();
 
     const rowData = wrapper.state.rows[0];
     wrapper.onToggleRow(rowData.student.id);
-    expect(wrapper.state.rows).to.have.lengthOf(
-      STUDENTS.length + numDetailRows
-    );
+    expect(wrapper.state.rows).toHaveLength(STUDENTS.length + numDetailRows);
   });
 
   it('restores original rows when a row is toggled twice', () => {
     const wrapper = setUp().find(UnconnectedProgressTableView).instance();
 
-    expect(wrapper.state.rows).to.have.lengthOf(STUDENTS.length);
+    expect(wrapper.state.rows).toHaveLength(STUDENTS.length);
 
     const numDetailRows = wrapper.numDetailRowsPerStudent();
 
     const rowData = wrapper.state.rows[0];
     wrapper.onToggleRow(rowData.student.id);
-    expect(wrapper.state.rows).to.have.lengthOf(
-      STUDENTS.length + numDetailRows
-    );
+    expect(wrapper.state.rows).toHaveLength(STUDENTS.length + numDetailRows);
     wrapper.onToggleRow(rowData.student.id);
-    expect(wrapper.state.rows).to.have.lengthOf(STUDENTS.length);
+    expect(wrapper.state.rows).toHaveLength(STUDENTS.length);
   });
 
   it('sorts by family name', () => {
@@ -278,13 +282,13 @@ describe('ProgressTableView', () => {
       .find(UnconnectedProgressTableView)
       .instance();
 
-    expect(givenNameWrapper.state.rows).to.have.lengthOf(STUDENTS.length);
-    expect(familyNameWrapper.state.rows).to.have.lengthOf(STUDENTS.length);
+    expect(givenNameWrapper.state.rows).toHaveLength(STUDENTS.length);
+    expect(familyNameWrapper.state.rows).toHaveLength(STUDENTS.length);
 
     // The student generator makes the first student have the first given name
     // alphabetically. The last student has the first family name alphabetically
-    expect(givenNameWrapper.state.rows[0].student.id).to.equal(0);
-    expect(familyNameWrapper.state.rows[0].student.id).to.equal(
+    expect(givenNameWrapper.state.rows[0].student.id).toBe(0);
+    expect(familyNameWrapper.state.rows[0].student.id).toBe(
       STUDENTS.length - 1
     );
   });

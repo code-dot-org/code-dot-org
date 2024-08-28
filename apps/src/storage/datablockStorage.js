@@ -1,5 +1,7 @@
 import _ from 'lodash';
 
+import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
+
 // DatablockStorage powers the "Data" tab in App Lab and Game Lab, including the
 // datasets library, and the data blocks such as `readRecords` and `getKeyValue`.
 //
@@ -33,6 +35,7 @@ async function _fetch(path, method, params) {
       headers: {
         'Content-Type': 'application/json',
         'X-Requested-With': 'XMLHttpRequest',
+        'X-CSRF-Token': await getAuthenticityToken(),
       },
       credentials: 'same-origin',
     });
@@ -58,7 +61,7 @@ DatablockStorage.setKeyValue = function (key, value, onSuccess, onError) {
   _fetch('set_key_value', 'POST', {
     key,
     value: JSON.stringify(value),
-  }).then(onSuccess, onError);
+  }).then(() => onSuccess(), onError);
 };
 
 async function createRecord(tableName, record) {
@@ -144,7 +147,7 @@ DatablockStorage.deleteRecord = function (
   _fetch('delete_record', 'DELETE', {
     table_name: tableName,
     record_id: record.id,
-  }).then(onSuccess, onError);
+  }).then(() => onSuccess(true), onError);
 };
 
 async function getTableNames({isSharedTable = false} = {}) {
@@ -154,7 +157,6 @@ async function getTableNames({isSharedTable = false} = {}) {
   return await response.json();
 }
 
-// This is only called if isDatablockStorage()
 DatablockStorage.getTableNames = function () {
   return getTableNames();
 };
@@ -387,7 +389,7 @@ DatablockStorage.clearAllData = function (onSuccess, onError) {
 
 // This is a new method for DatablockStorage which replaces the above APIs
 DatablockStorage.addSharedTable = function (tableName, onSuccess, onError) {
-  _fetch('add_shared_table', 'POST', {
+  return _fetch('add_shared_table', 'POST', {
     table_name: tableName,
   }).then(onSuccess, onError);
 };

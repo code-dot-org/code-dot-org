@@ -1,8 +1,11 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
 import color from '@cdo/apps/util/color';
-import FontAwesome from '../FontAwesome';
 import {makeEnum} from '@cdo/apps/utils';
+
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
+
 import {BubbleSize, BubbleShape} from './BubbleFactory';
 
 export const BadgeType = makeEnum('assessment', 'keepWorking');

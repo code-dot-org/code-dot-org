@@ -17,9 +17,11 @@ theme: responsive
 
 ## Minimum Supported Browsers and Platforms
 
+2024 ජූලි මාසයේ සිට අපි බ්රව්සර් සහ මෙහෙයුම් පද්ධති සඳහා අවශ්ය අවම අනුවාදයන් යාවත්කාලීන කරන්නෙමු. පැරණි අනුවාදයන් තවමත් ක්රියාත්මක විය හැකි වුවත්, පැරණි අනුවාදවල දෝෂ නිවැරදි කිරීම් සඳහා වන ඉල්ලීම්වලට සහාය දැක්වීමට අපට නොහැකි වනු ඇත.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Browser
@@ -40,11 +42,33 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          Platform
+          බ්රවුසරය ජූලි '24
+        </th>
+        <tr>
+          <td>ක්රෝම් 103.x</td>
+        </tr>
+        <tr>
+          <td>සෆාරි 14.x</td>
+        </tr>
+        <tr>
+          <td>ජංගම සෆාරි 14.x</td>
+        </tr>
+        <tr>
+          <td>එජ් 119.x</td>
+        </tr>
+        <tr>
+          <td>ෆයර්ෆොක්ස් 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          වේදිකාව
         </th>
         <tr>
           <td>macOS 10.13</td>
@@ -62,13 +86,35 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          වේදිකාව ජූලි '24
+        </th>
+        <tr>
+          <td>මැකෝස් 10.15</td>
+        </tr>
+        <tr>
+          <td>අයිඕඑස් 15.x</td>
+        </tr>
+        <tr>
+          <td>වින්ඩෝස් 8</td>
+        </tr>
+        <tr>
+          <td>ඇන්ඩ්රොයිඩ් 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Sites to Unblock
 
-For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure the following sites are allowed and aren't blocked.
+සියලුම Code.org අන්තර්ගතයන් සමඟ හොඳම අත්දැකීම් සඳහා, පහත වෙබ් අඩවි අවසර දී ඇති අතර අවහිර කර නොමැති බව සහතික කිරීම සඳහා ඔබේ පාසල හෝ දිස්ත්රික්කයේ තොරතුරු තාක්ෂණ දෙපාර්තමේන්තුව සමඟ සාකච්ඡා කිරීමට අපි නිර්දේශ කරමු.
 
 | Priority                                                                                                             | URL                                                                                                        |
 | -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -80,28 +126,27 @@ For the very best experience with all Code.org content, we recommend consulting 
 | **අන්තර්ජාල සිමියුලේටරය භාවිතා කිරීම**                                                                               | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **වෙබ් විද්යාගාරය භාවිතා කිරීම**                                                                                     | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **ගූගල් පන්ති කාමර බෙදා ගැනීමේ බොත්තම භාවිතා කිරීම**                                                                 | `https://apis.google.com`                                                                                  |
-| **යෙදුම් විද්යාගාර දත්ත කට්ටල භාවිතා කිරීම**                                                                         | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Mobile and Tablet Support Details
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Most tablets are not supported, with the following exceptions:
+සියලුම සීඑස් සොයාගැනීම්, සීඑස් මූලධර්ම, CS A, සහ Intro to App Lab පාඨමාලා ටැබ්ලට් හෝ ජංගම උපාංග සමඟ අනුකූල නොවේ - සම්පූර්ණ යතුරු පුවරුව සහ මූසිකය (හෝ ස්පර්ශක පෑඩ්) අවශ්ය වේ. පහත සඳහන් ව්යතිරේක සහිතව බොහෝ ටැබ්ලට් වලට සහාය නොදක්වයි:
 
 - Microsoft Surface Pro with an external keyboard
 - iPad running iPadOS 13.4 or later with an external keyboard and an external mouse or touchpad
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+K-5 පාඨමාලා (පරිගණක විද්යා මූලධර්ම) සහ Hour of Code ක්රියාකාරකම් වැනි අනෙකුත් සියලුම අන්තර්ගතයන් අයිපෑඩ් සහ අනෙකුත් නවීන ටැබ්ලට් සහ ලැප්ටොප් හෝ ඩෙස්ක්ටොප් පරිගණක මත අනුකූල වේ.
 
 ### Mobile Phones
 
-Our Hour of Code activities and CS Fundamentals courses can be completed on mobile phones. While these activities are usable, they are not optimized for a mobile phone experience and have some known limitations (e.g. touch targets may be small, accessory elements may display offscreen, and text may be difficult to input using the on-screen keyboard). The CS Discoveries, CS Principles, and Intro to App Lab courses are not usable on mobile phones.
+අපගේ Hour of Code ක්රියාකාරකම් සහ CS Fundamentals පාඨමාලා ජංගම දුරකථනවලින් සම්පූර්ණ කළ හැකිය. මෙම ක්රියාකාරකම් භාවිතා කළ හැකි වුවද, ඒවා ජංගම දුරකථන අත්දැකීමක් සඳහා ප්රශස්තිකරණය කර නොමැති අතර සමහර දන්නා සීමාවන් ඇත (උදා: ස්පර්ශ ඉලක්ක කුඩා විය හැකිය, උපාංග අංග තිරයෙන් බැහැර දර්ශනය විය හැකි අතර තිරයේ යතුරු පුවරුව භාවිතා කරමින් පෙළ ආදානය කිරීම අපහසු විය හැකිය). CS Discovery, CS මූලධර්ම සහ Intro to App Lab පාඨමාලා ජංගම දුරකථනවල භාවිතා කළ නොහැක.
 
 ## Videos
 
-We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our [online learning platform](https://studio.code.org). For schools with YouTube blocked, we attempt to display a Code.org hosted video player instead.
+Code.org සහ අපගේ [මාර්ගගත ඉගෙනුම් වේදිකාව](https://studio.code.org)වෙත වීඩියෝ කාවැද්දීම සඳහා අපි [යූ ටියුබ්](https://www.youtube.com) භාවිතා කරමු. යූ ටියුබ් අවහිර කර ඇති පාසල් සඳහා, අපි ඒ වෙනුවට Code.org සත්කාරකත්වය සපයන වීඩියෝ ප්ලේයරයක් ප්රදර්ශනය කිරීමට උත්සාහ කරමු.
 
 ### Can you play this video?
 
-Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
+ඔබ Code.org ගේ මාර්ගගත පාඨමාලා ආරම්භ කිරීමට පෙර, ඔබ යන්න හොඳ බව තහවුරු කර ගැනීමට පහත වීඩියෝව සඳහා නැවත ධාවනය පරීක්ෂා කරන්න.
 
 
 <!--
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+විෂය නිර්දේශය පුරාම භාවිතා කරන ක්රීඩකයා මෙයයි. එය යූ ටියුබ් හරහා වීඩියෝව පෙන්වීමට උත්සාහ කරනු ඇති අතර, යූ ටියුබ් අවහිර කර ඇත්නම්, ඒ වෙනුවට අපගේ “fallback” ප්ලේයරය භාවිතා කරමින් Code.org සත්කාරකත්වය සපයන වීඩියෝව පෙන්වන්න.
 
 ### Video not playing?
 
-If video does not work, you can email us at support@code.org.
+වීඩියෝව ක්රියා නොකරන්නේ නම්, ඔබට support@code.org වෙත අපට විද්යුත් තැපෑල කළ හැකිය.
 
-However, you can still use our tutorials without video.
+කෙසේ වෙතත්, ඔබට තවමත් වීඩියෝවක් නොමැතිව අපගේ නිබන්ධන භාවිතා කළ හැකිය.
 
 1. We've made all our videos [available for download together](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). If your school has low bandwidth, we recommend that you download videos and show them to students on a shared screen.
 2. Integrated into our tutorials, we've added a green download link icon <img src="/images/green-download.png" width=25 height=25 /> for each video, allowing students to download individual tutorial videos.
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## Special settings for Google Apps/G-Suite users
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+ඔබ ජී-සූට් පරිපාලකයෙකු නම්, යූ ටියුබ් සඳහා ඔබේ සීමා සැකසුම් මොනවාද යන්න පරීක්ෂා කිරීමට වග බලා ගන්න. ඔබ “දැඩි සීමා සහිත යූ ටියුබ් ප්රවේශය” සැකසුම නියම කර ඇත්නම් හෝ 'මෙම වීඩියෝව සීමා කර ඇත' යනුවෙන් සඳහන් පණිවිඩ ඔබ දකින්නේ නම්, ඔබට අපගේ නාලිකාව අනුමත නාලිකා ලැයිස්තුවට එක් කළ හැකිය. අනුමත ලැයිස්තුවට අපගේ නාලිකාව එක් කරන්නේ කෙසේද යන්න ගැන දැන ගැනීමට ගූගල් වෙතින් [මෙම මාර්ගෝපදේශය](https://support.google.com/a/answer/6245597) බලන්න. ඔබ ද බලන්න පුළුවන් [මෙම මාර්ගෝපදේශය](https://support.google.com/a/answer/6212415?hl=en) විවිධ සැකසුම් සහ ඔබේ පන්ති කාමරය සඳහා හොඳම දේ ගැන වැඩි විස්තර දැන ගැනීමට.
 
 ## Still having trouble?
 
-We'll help you out - just email us at support@code.org!
+අපි ඔබට උදව් කරන්නෙමු - support@code.org වෙත අපට විද්යුත් තැපෑල කරන්න!

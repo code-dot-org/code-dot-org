@@ -1,11 +1,12 @@
-import LandingPage from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import {getStore} from '@cdo/apps/redux';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import getScriptData from '@cdo/apps/util/getScriptData';
+
+import LandingPage from '@cdo/apps/code-studio/pd/professional_learning_landing/LandingPage';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {getStore} from '@cdo/apps/redux';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 // Execute after page has fully loaded so the Amplitude event only fires on full page load
 $(() => {
@@ -26,9 +27,17 @@ $(() => {
         currentYearApplicationId={
           landingPageData['current_year_application_id']
         }
-        workshopsAsParticipant={landingPageData['workshops_as_participant']}
+        hasEnrolledInWorkshop={landingPageData['has_enrolled_in_workshop']}
+        workshopsAsFacilitator={landingPageData['workshops_as_facilitator']}
+        workshopsAsOrganizer={landingPageData['workshops_as_organizer']}
+        workshopsAsRegionalPartner={
+          landingPageData['workshops_for_regional_partner']
+        }
         plCoursesStarted={landingPageData['pl_courses_started']}
         userPermissions={landingPageData['user_permissions']}
+        joinedStudentSections={landingPageData['joined_student_sections']}
+        joinedPlSections={landingPageData['joined_pl_sections']}
+        coursesAsFacilitator={landingPageData['courses_as_facilitator']}
       />
     </Provider>,
     document.getElementById('pl-landing-page-container')

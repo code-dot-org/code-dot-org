@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class ActionMailerMetricsTest < ActionMailer::TestCase
-  class TestActionMailer < ActionMailer::Base
+  class TestActionMailer < ApplicationMailer
     include ActionMailerMetrics
     def testing_email
       mail to: "test@example.com", subject: "the subject", body: "Hello"

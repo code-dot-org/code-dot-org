@@ -9,11 +9,11 @@
       overline: "Available on Kahoot!"
     },
     {
-      title: "Discover how Amazon keeps data safe and sustainable",
-      image: "/images/csjourneys/cloud-tour.gif",
-      desc: "You want to upload your photos to the cloud, but what if something happens at a data center? Learn how AWS and data center professionals keep data safe and sustainable.",
-      url: "https://www.amazonfutureengineer.com/datacentertour2?utm_campaign=Code.org&utm_medium=AWS2&utm_source=US&utm_content=Website",
-      aria_label: "View details about the Amazon data safety tour",
+      title: "Careers Behind the Beats",
+      image: "/images/csjourneys/musictour.gif",
+      desc: "How does a song go from the studio to streaming? Come behind the scenes at Amazon Music to learn about the computer science and careers behind your favorite songs.",
+      url: "https://www.amazonfutureengineer.com/music?utm_campaign=Code.org&utm_medium=Direct%20Promotion&utm_source=DP%20Music&utm_content=CS%20journeys",
+      aria_label: "View details about the Amazon music tour",
       overline: "Available on Kahoot!"
     },
     {
@@ -54,7 +54,7 @@
   - block_item.each do |block_item|
     .action-block.action-block--one-col.flex-space-between
       .content-wrapper
-        %img{src: "#{block_item[:image]}", alt: ""}
+        %img{src: block_item[:image], alt: ""}
         %p.overline
           = block_item[:overline]
         %h3

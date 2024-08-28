@@ -5,11 +5,17 @@ description 'description here'
 markdown <<MARKDOWN
 # Exploring Large Language Models 
 
-#### There are many different large language models available. Let’s begin by exploring some of the most popular models. You may have experience with one or more of these LLMs. For this activity, feel free to explore one or all of them to get comfortable with how they work. If you have never used these LLMs, you will need to sign up for a free account.
+#### There are many different large language models available. Let’s begin by exploring some of the most popular models. You may have experience with one or more of these LLMs. If you have never used these LLMs, you will need to sign up for a free account.
+
+---
 
 ##  ✏️To do: 
 
-#### **First, decide which LLM you want to start with.**
+### **1. Decide which LLM you want to start with.**
+#### Each of these LLMs have similar features with a few slight differences. Take time to explore each of them, or just choose one. 
+
+#### *Be mindful that one or more of these might not be available on your school network.* 
+
 
  <table>
         <tr>
@@ -43,7 +49,7 @@ markdown <<MARKDOWN
 </table>
 <br>
 
-#### **Next, start exploring by chatting with the bot.** 
+### **2. Start exploring by chatting with the bot.** 
 
 #### *Spend about 10 - 15 minutes exploring the capabilities of the LLM of your choice.* 
 

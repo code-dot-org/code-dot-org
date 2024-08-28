@@ -69,7 +69,7 @@ end
 AWS::S3.process_file('cdo-nces', "#{SURVEY_YEAR}/ccd/schools_public.csv") do |filename|
   SchoolStatsByYear.merge_from_csv(filename, {col_sep: ",", headers: true, quote_char: "\x00", encoding: 'bom|utf-8'}, dry_run: DRY_RUN) do |row|
     # remove quote and eq sign from ="12345" (the ="" is required to preserve leading 0's in zip codes)
-    row = row.to_h.map {|k, v| [k, sanitize_string_for_db(v)]}.to_h
+    row = row.to_h.transform_values {|v| sanitize_string_for_db(v)}
     school_id = row['School ID - NCES Assigned [Public School] Latest available year'].to_i.to_s
     # NCES did not provide Title 1 Status in the table this year so we are using last year's as a placeholder
     previous_year_entry = SchoolStatsByYear.where(school_id: school_id, school_year: LAST_SURVEY_YEAR)

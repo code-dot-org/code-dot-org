@@ -1,7 +1,6 @@
 {
   "key": "csa",
   "display_name": "Computer Science A",
-  "category": "full_course",
   "is_featured": true,
   "assignable": true,
   "curriculum_type": "Course",
@@ -15,7 +14,6 @@
   "description": "Introduce students to software engineering and design as they learn the Java programming language in this free curriculum for AP® Computer Science A (AP® CSA).",
   "professional_learning_program": "https://code.org/apply",
   "video": "https://www.youtube-nocookie.com/embed/lFkFi2jGs70/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=lFkFi2jGs70&wmode=transparent",
-  "published_date": "2023-07-10 09:00:00 UTC",
-  "self_paced_pl_course_offering_id": null,
+  "published_date": "2024-07-10 05:00:00 UTC",
   "self_paced_pl_course_offering_key": null
 }

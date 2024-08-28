@@ -13,12 +13,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-28 16:49:55 UTC",
+    "serialized_at": "2024-08-27 22:26:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -33,7 +34,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Unit 10: Algortihms"
+        "display_name": "Unit 10: Algorithms"
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit10_2020",
@@ -2519,7 +2520,7 @@
   "resources": [
     {
       "name": "Algorithmic Efficiency",
-      "url": "https://docs.google.com/presentation/d/1veCmcrjJbloASd7zMXOvmUt6QxuWFik_EwjC41U-h60/template/preview",
+      "url": "https://docs.google.com/presentation/d/1dkeXRI7h444exZ-NxeM0wxcs26jMTYeh8bfCiQEQeuk/template/preview",
       "key": "algorithmic_efficiency",
       "properties": {
         "audience": "Teacher",
@@ -2531,7 +2532,7 @@
     },
     {
       "name": "Algorithms Solve Problems",
-      "url": "https://docs.google.com/presentation/d/1m-AeFFpQ6oNfVzHNL9OqDmn3ocoZw8rj6ZanCFlgq_Q/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Q7XAfpV8TyupvayMkhCz9V1-NOthun-I63FpoP17Y60/template/preview",
       "key": "algorithms_solve_problems",
       "properties": {
         "audience": "Teacher",
@@ -2543,7 +2544,7 @@
     },
     {
       "name": "Algorithms (Unit Slides)",
-      "url": "https://docs.google.com/presentation/d/1bJ1adhM_5CfPlIHdlEZbhPITohq2PrE_byGwSZM2XqM/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1R9n57GGvVd8HAbHqU77N86FDGBUaMjkmYyY11vPL6tg/template/preview",
       "key": "algorithms_unit_slides_",
       "properties": {
         "audience": "Teacher",
@@ -2621,12 +2622,11 @@
       }
     },
     {
-      "name": "CSP Unit 10 - Lesson 4 - The Limits of Algorithms",
-      "url": "https://docs.google.com/presentation/d/1PCnIYmmx_CIXXbiDaXwmTEqVluv8CKI33LY8x5THPWo/copy",
+      "name": "The Limits of Algorithms",
+      "url": "https://docs.google.com/presentation/d/1KrS64CEchE0WBOGo3sp-cvs3yDDxjRylky7H0mIxxV4/template/preview",
       "key": "csp_unit_10_-_lesson_4_-_the_limits_of_algorithms",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1PCnIYmmx_CIXXbiDaXwmTEqVluv8CKI33LY8x5THPWo/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -2634,12 +2634,11 @@
       }
     },
     {
-      "name": "CSP Unit 10 - Lesson 5 - Distributed Algorithms",
-      "url": "https://docs.google.com/presentation/d/13eO3OhjnXLrb3KXz0Lld_fi0EDqdC8h2hNAZhe50Sc8/copy",
+      "name": "Distributed Algorithms",
+      "url": "https://docs.google.com/presentation/d/16APZqf7GCRmOeoDvp3x9Y_mgArzomlxECbPUZocgcr8/template/preview",
       "key": "csp_unit_10_-_lesson_5_-_distributed_algorithms",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/13eO3OhjnXLrb3KXz0Lld_fi0EDqdC8h2hNAZhe50Sc8/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -2647,16 +2646,25 @@
       }
     },
     {
-      "name": "CSP Unit 10 - Lesson 6 - Assessment Day",
-      "url": "https://docs.google.com/presentation/d/1gQvfTP1M4G32E4kPG3GuEzPqkX_IC0DU3EHiY5Jod4o/copy",
+      "name": "Assessment Day",
+      "url": "https://docs.google.com/presentation/d/1j_uVygDdLBf9JRCxspJf8m-gyBmshhVsYA7DARwHE5w/template/preview",
       "key": "csp_unit_10_-_lesson_6_-_assessment_day",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/1gQvfTP1M4G32E4kPG3GuEzPqkX_IC0DU3EHiY5Jod4o/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csp_unit_10_-_lesson_6_-_assessment_day"
+      }
+    },
+    {
+      "name": "CSP Unit 10 - Slides",
+      "url": "https://docs.google.com/presentation/d/1R9n57GGvVd8HAbHqU77N86FDGBUaMjkmYyY11vPL6tg/template/preview",
+      "key": "csp_unit_10_-_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_10_-_slides"
       }
     },
     {
@@ -2758,7 +2766,7 @@
     },
     {
       "name": "Unreasonable Time",
-      "url": "https://docs.google.com/presentation/d/17cWIyCFMJIuGcUoI8eRAkWAK9uP1iAeFJyAhEvCMtG0/template/preview",
+      "url": "https://docs.google.com/presentation/d/1lsU9GaOZBxtt8LueQnhJUcI5Rq8RtoNWcy7pkDGmy58/template/preview",
       "key": "unreasonable_time_1",
       "properties": {
         "audience": "Teacher",
@@ -2883,6 +2891,12 @@
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
+        "script.name": "csp10-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_unit_10_-_slides",
         "script.name": "csp10-2024"
       }
     },

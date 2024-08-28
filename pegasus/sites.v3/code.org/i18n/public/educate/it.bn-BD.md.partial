@@ -17,9 +17,11 @@ theme: responsive
 
 ## Minimum Supported Browsers and Platforms
 
+জুলাই 2024 থেকে শুরু করে আমরা ব্রাউজার এবং অপারেটিং সিস্টেমের জন্য প্রয়োজনীয় ন্যূনতম সংস্করণগুলি আপডেট করব। যদিও পুরানো সংস্করণগুলি এখনও কাজ করতে পারে, আমরা পুরানো সংস্করণগুলিতে বাগ সংশোধনের জন্য অনুরোধগুলি সমর্থন করতে অক্ষম হব।
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Browser
@@ -40,11 +42,33 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          Platform
+          ব্রাউজার জুলাই '24
+        </th>
+        <tr>
+          <td>ক্রোম 103.x</td>
+        </tr>
+        <tr>
+          <td>সাফারি 14.x</td>
+        </tr>
+        <tr>
+          <td>মোবাইল সাফারি 14.x</td>
+        </tr>
+        <tr>
+          <td>এজ 119.x</td>
+        </tr>
+        <tr>
+          <td>ফায়ারফক্স 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          প্লাটফর্ম
         </th>
         <tr>
           <td>macOS 10.13</td>
@@ -62,13 +86,35 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          প্ল্যাটফর্ম জুলাই '24
+        </th>
+        <tr>
+          <td>ম্যাকোস 10.15</td>
+        </tr>
+        <tr>
+          <td>আইওএস 15.x</td>
+        </tr>
+        <tr>
+          <td>উইন্ডোজ 8</td>
+        </tr>
+        <tr>
+          <td>অ্যান্ড্রয়েড 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Sites to Unblock
 
-For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure the following sites are allowed and aren't blocked.
+সমস্ত Code.org বিষয়বস্তু নিয়ে সর্বোত্তম অভিজ্ঞতার জন্য, আমরা নিম্নলিখিত সাইটগুলি অনুমোদিত এবং অবরুদ্ধ নয় তা নিশ্চিত করার জন্য আপনার স্কুল বা জেলার আইটি বিভাগের সাথে পরামর্শ করার পরামর্শ দিই।
 
 | Priority                                                                                                     | URL                                                                                                        |
 | ------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
@@ -80,28 +126,27 @@ For the very best experience with all Code.org content, we recommend consulting 
 | **ইন্টারনেট সিমুলেটর ব্যবহার করতে**                                                                          | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **ওয়েব ল্যাব ব্যবহার করতে**                                                                                 | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **গুগল ক্লাসরুম শেয়ার বোতাম ব্যবহার করতে**                                                                  | `https://apis.google.com`                                                                                  |
-| **অ্যাপ ল্যাব ডেটাসেট ব্যবহার করতে**                                                                         | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Mobile and Tablet Support Details
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Most tablets are not supported, with the following exceptions:
+সমস্ত সিএস আবিষ্কার, সিএস নীতিমালা, সিএস এ এবং অ্যাপ ল্যাব কোর্সগুলির পরিচিতি ট্যাবলেট বা মোবাইল ডিভাইসের সাথে সামঞ্জস্যপূর্ণ নয় - একটি সম্পূর্ণ কীবোর্ড এবং মাউস (বা টাচপ্যাড) প্রয়োজন। বেশিরভাগ ট্যাবলেট নিম্নলিখিত ব্যতিক্রম সহ সমর্থিত নয়:
 
 - Microsoft Surface Pro with an external keyboard
 - iPad running iPadOS 13.4 or later with an external keyboard and an external mouse or touchpad
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+অন্যান্য সমস্ত সামগ্রী, যেমন K-5 কোর্স (কম্পিউটার সায়েন্স ফান্ডামেন্টাল) এবং আওয়ার অফ কোড ক্রিয়াকলাপ আইপ্যাড এবং অন্যান্য আধুনিক ট্যাবলেট এবং ল্যাপটপ বা ডেস্কটপ কম্পিউটার
 
 ### Mobile Phones
 
-Our Hour of Code activities and CS Fundamentals courses can be completed on mobile phones. While these activities are usable, they are not optimized for a mobile phone experience and have some known limitations (e.g. touch targets may be small, accessory elements may display offscreen, and text may be difficult to input using the on-screen keyboard). The CS Discoveries, CS Principles, and Intro to App Lab courses are not usable on mobile phones.
+আমাদের আওয়ার অফ কোড কার্যক্রম এবং সিএস ফান্ডামেন্টাল কোর্স মোবাইল ফোনে সম্পন্ন করা যেতে পারে যদিও এই ক্রিয়াকলাপগুলি ব্যবহারযোগ্য, সেগুলি মোবাইল ফোনের অভিজ্ঞতার জন্য অনুকূল করা হয় না এবং এর কিছু পরিচিত সীমাবদ্ধতা রয়েছে (যেমন স্পর্শ লক্ষ্যগুলি ছোট হতে পারে, আনুষঙ্গিক উপাদানগুলি অফস্ক্রিন প্রদর্শন করতে পারে এবং অন-স্ক্রিন কীবোর্ড ব্যবহার করে টেক্সট ইনপুট করা সিএস ডিসকভারি, সিএস প্রিন্সিপলিপস এবং ইন্ট্রো টু অ্যাপ ল্যাব কোর্সগুলি মোবাইল ফোনে ব্যবহারযোগ্য নয়।
 
 ## Videos
 
-We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our [online learning platform](https://studio.code.org). For schools with YouTube blocked, we attempt to display a Code.org hosted video player instead.
+আমরা Code.org এবং আমাদের [অনলাইন লার্নিং প্ল্যাটফর্ম](https://studio.code.org)এ ভিডিও এম্বেড করতে [ইউটিউব](https://www.youtube.com) ব্যবহার করি। ইউটিউব ব্লক করা স্কুলগুলির জন্য, আমরা পরিবর্তে একটি Code.org হোস্ট করা ভিডিও প্লেয়ার প্রদর্শন করার চেষ্টা করি।
 
 ### Can you play this video?
 
-Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
+আপনি Code.org এর অনলাইন কোর্স শুরু করার আগে, নিচের ভিডিওর জন্য প্লেব্যাক পরীক্ষা করুন যাতে আপনি যেতে ভাল কিনা তা নিশ্চিত করুন।
 
 
 <!--
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+এটি পুরো পাঠ্যক্রম জুড়ে ব্যবহৃত প্লেয়ার। এটি ইউটিউবের মাধ্যমে ভিডিওটি দেখানোর চেষ্টা করবে এবং যদি ইউটিউব ব্লক করা হয় তবে পরিবর্তে আমাদের “ফলব্যাক” প্লেয়ার ব্যবহার করে Code.org হোস্ট করা ভিডিওটি দেখাবে।
 
 ### Video not playing?
 
-If video does not work, you can email us at support@code.org.
+যদি ভিডিও কাজ না করে তবে আপনি আমাদের support@code.org এ ইমেল করতে পারেন।
 
-However, you can still use our tutorials without video.
+যাইহোক, আপনি এখনও ভিডিও ছাড়াই আমাদের টিউটোরিয়ালগুলি ব্যবহার করতে পারেন।
 
 1. We've made all our videos [available for download together](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). If your school has low bandwidth, we recommend that you download videos and show them to students on a shared screen.
 2. Integrated into our tutorials, we've added a green download link icon <img src="/images/green-download.png" width=25 height=25 /> for each video, allowing students to download individual tutorial videos.
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## Special settings for Google Apps/G-Suite users
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+আপনি যদি জি-স্যুট প্রশাসক হন তবে ইউটিউবের জন্য আপনার সীমাবদ্ধতা সেটিংস কী তা পরীক্ষা করতে ভুলবেন না। আপনি যদি “কঠোর সীমাবদ্ধ ইউটিউব অ্যাক্সেস” সেটিংটি নির্দিষ্ট করে থাকেন বা আপনি যদি 'এই ভিডিওটি সীমাবদ্ধ হয়েছে' বলে বার্তা দেখেন তবে আপনি চ্যানেলগুলির অনুমোদিত তালিকায় আমাদের চ্যানেলটি যুক্ত করতে পারেন অনুমোদিত তালিকায় আমাদের চ্যানেলটি কীভাবে যুক্ত করবেন সে সম্পর্কে জানতে Google থেকে [এই গাইড](https://support.google.com/a/answer/6245597) দেখুন। আপনি বিভিন্ন সেটিংস সম্পর্কে আরও জানতে এবং আপনার শ্রেণিকক্ষের জন্য কোনটি সেরা তা সম্পর্কে আরও জানতে [এই গাইড](https://support.google.com/a/answer/6212415?hl=en) দেখতে পারেন।
 
 ## Still having trouble?
 
-We'll help you out - just email us at support@code.org!
+আমরা আপনাকে সাহায্য করব - কেবল আমাদের support@code.org এ ইমেল করুন!

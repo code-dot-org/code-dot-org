@@ -1,12 +1,10 @@
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
 
 import SummaryEntryPoint from '@cdo/apps/templates/levelSummary/SummaryEntryPoint';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 import styles from '@cdo/apps/templates/levelSummary/summary-entry-point.module.scss';
 
@@ -46,10 +44,10 @@ describe('SummaryEntryPoint', () => {
     const wrapper = setUpWrapper();
 
     // Renders link correctly.
-    expect(wrapper.find('a').length).to.eq(1);
-    expect(wrapper.find('a').prop('href')).to.match(/^\/[^\/]*\/summary/);
+    expect(wrapper.find('a').length).toBe(1);
+    expect(wrapper.find('a').prop('href')).toMatch(/^\/[^\/]*\/summary/);
     // Student/response counter
-    expect(wrapper.find(`.${styles.responseCounter}`).text()).to.eq(
+    expect(wrapper.find(`[data-testid="response-counter"]`).text()).toBe(
       '1/1 students answered'
     );
   });
@@ -57,13 +55,13 @@ describe('SummaryEntryPoint', () => {
   it('adds standalone class on non-contained levels', () => {
     const wrapper = setUpWrapper();
 
-    expect(wrapper.find(`.${styles.isStandalone}`).length).to.eq(1);
+    expect(wrapper.find(`.${styles.isStandalone}`).length).toBe(1);
   });
 
   it('does not add standalone class on contained levels', () => {
     const wrapper = setUpWrapper({}, {is_contained_level: true});
 
-    expect(wrapper.find(`.${styles.isStandalone}`).length).to.eq(0);
+    expect(wrapper.find(`.${styles.isStandalone}`).length).toBe(0);
   });
 
   it('does not render response counter/text if no section selected', () => {
@@ -76,7 +74,7 @@ describe('SummaryEntryPoint', () => {
       },
     });
 
-    expect(wrapper.find(`.${styles.responseIcon}`).length).to.eq(0);
-    expect(wrapper.find(`.${styles.responseCounter}`).length).to.eq(0);
+    expect(wrapper.find(`.fa`).length).toBe(0);
+    expect(wrapper.find(`[data-testid="response-counter"]`).length).toBe(0);
   });
 });

@@ -1,8 +1,8 @@
 /** @file Row of buttons for switching editor modes. */
 import PropTypes from 'prop-types';
-
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+
 import ToggleButton from './ToggleButton';
 
 class ToggleGroup extends Component {

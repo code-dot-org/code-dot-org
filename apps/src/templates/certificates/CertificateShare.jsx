@@ -1,7 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import TwoColumnActionBlock from '@cdo/apps/templates/studioHomepages/TwoColumnActionBlock';
+
 import styleConstants from '../../styleConstants';
 
 export default function CertificateShare({

@@ -14,3 +14,17 @@ export function convertOptionalStringToBoolean(
     return value === 'true';
   }
 }
+
+/**
+ * Return the keys of an object as a typed array.
+ */
+export function getTypedKeys<K extends string | number | symbol>(object: {
+  [key in K]: unknown;
+}): K[] {
+  return Object.keys(object) as K[];
+}
+
+/**
+ * A type that is one of the values of an object type.
+ */
+export type ValueOf<T> = T[keyof T];

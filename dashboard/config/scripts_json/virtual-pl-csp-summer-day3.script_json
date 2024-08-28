@@ -4,11 +4,12 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "is_migrated": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-10-23 15:26:11 UTC",
+    "serialized_at": "2024-06-25 18:15:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -111,9 +112,9 @@
       "relative_position": 3,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\nThe importance of unplugged lessons are reinforced in this lesson. This lesson is also a foundational lesson for the unit.\n\n**Objectives:**\n* Participants understand that mental models and manipulatives provide equitable access to content\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp2-2023/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n**Lesson Overview:**\nIn this lesson, students are formed into groups of 5-7 and given string so they can connect themselves together to form a computer network. Students are given several specific networks to form, along with several guidelines for how to best form computer networks. Students are also forced to wrestle with conflicting guidelines in determining the ‘best’ way to connect together to form a network, and will need to justify why they chose the networks that they did. ",
+        "overview": "**Purpose:**\nThe importance of unplugged lessons are reinforced in this lesson. This lesson is also a foundational lesson for the unit.\n\n**Objectives:**\n* Participants understand that mental models and manipulatives provide equitable access to content\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp2-2023/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nIn this lesson, students are formed into groups of 5-7 and given string so they can connect themselves together to form a computer network. Students are given several specific networks to form, along with several guidelines for how to best form computer networks. Students are also forced to wrestle with conflicting guidelines in determining the ‘best’ way to connect together to form a network, and will need to justify why they chose the networks that they did. ",
         "preparation": "* Cut strings between 1.5 and 3 feet long. Each student will need 2 of these strings. A ball of yarn can work really well here. \n* Decide how you would like students to physically form their networks - standing, in seats, etc.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-internet-lessons-1-6/36470) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1Z23SBjpjfAdBxPCupnKuwb_Y4vsyVFAHpPGriLObWuI/edit?usp=sharing)",
-        "student_overview": "Learn how computers are connected into networks and the tradeoffs involved in building different types of networks.",
+        "student_overview": "Learn how computers are connected into networks and the tradeoffs involved in building different types of networks.\n\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp2-2023/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nIn this lesson, students are formed into groups of 5-7 and given string so they can connect themselves together to form a computer network. Students are given several specific networks to form, along with several guidelines for how to best form computer networks. Students are also forced to wrestle with conflicting guidelines in determining the ‘best’ way to connect together to form a network, and will need to justify why they chose the networks that they did. ",
         "unplugged": true
       },
       "seeding_key": {
@@ -131,9 +132,9 @@
       "relative_position": 4,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\nThis is our first layer of the internet that is introduced to participants.\n\n**Objectives:**\n* Participants understand how to make choices and use strategies to increase student engagement at different points in a lesson.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp2-2023/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n**Lesson Overview:**\nStudents complete a scheduling challenge three times, once unplugged, and twice on the Internet Simulator, to explore the need for addressing messages online. Students first complete a challenge where they are allowed to talk to one another to fill out a weekly schedule. They then move on to a version of the Internet Simulator where all of their messages are \"broadcast\" or sent to everyone in the same simulator room. This challenge forces students to develop shared rules for communicating to complete the scheduling activity a second and then third time. The wrap up helps students connect their experiences to real-life rules, or protocols, used on the Internet for addressing messages.",
+        "overview": "**Purpose:**\nThis is our first layer of the internet that is introduced to participants.\n\n**Objectives:**\n* Participants understand how to make choices and use strategies to increase student engagement at different points in a lesson.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp2-2023/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nStudents complete a scheduling challenge three times, once unplugged, and twice on the Internet Simulator, to explore the need for addressing messages online. Students first complete a challenge where they are allowed to talk to one another to fill out a weekly schedule. They then move on to a version of the Internet Simulator where all of their messages are \"broadcast\" or sent to everyone in the same simulator room. This challenge forces students to develop shared rules for communicating to complete the scheduling activity a second and then third time. The wrap up helps students connect their experiences to real-life rules, or protocols, used on the Internet for addressing messages.",
         "preparation": "* Preview the Internet Simulator (Broadcast version)\n* Preview the Wrap Up slides in [r csp_unit_2_-_the_internet/virtual-pl-csp-summer/2024]\n* Preview the [The Internet: IP Addresses - Video](https://www.youtube.com/watch?v=5o8CwafCxnU) \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-internet-lessons-1-6/36470) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1h6M7ZaOlcXqvZmkLA6w4n9Uds9awoYnQHkIy5Jn1Vv8/edit?usp=sharing)",
-        "student_overview": "Learn how computers are able to send information across a network even though the computers may not be directly connected. Investigate the protocols used on the Internet to make this possible."
+        "student_overview": "Learn how computers are able to send information across a network even though the computers may not be directly connected. Investigate the protocols used on the Internet to make this possible.\n\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp2-2023/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nStudents complete a scheduling challenge three times, once unplugged, and twice on the Internet Simulator, to explore the need for addressing messages online. Students first complete a challenge where they are allowed to talk to one another to fill out a weekly schedule. They then move on to a version of the Internet Simulator where all of their messages are \"broadcast\" or sent to everyone in the same simulator room. This challenge forces students to develop shared rules for communicating to complete the scheduling activity a second and then third time. The wrap up helps students connect their experiences to real-life rules, or protocols, used on the Internet for addressing messages."
       },
       "seeding_key": {
         "lesson.key": "The Need for Addressing",
@@ -201,9 +202,9 @@
       "relative_position": 8,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\nParticipants see another layer of the internet.\n\n**Objectives:**\n* Participants understand the ways the purpose of and strategies for formative assessment may change throughout a lesson.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp2-2023/lessons/4\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n**Lesson Overview:**\nStudents spend most of today’s lesson in an updated Internet Simulator that lets students send messages with a dedicated To and From IP  Address. Students start by connecting to a dedicated router and sending messages only to each other. They look at the router logs to find other students on different routers, then send messages to those students. They look at the router logs again to notice that messages are being passed between routers in order to reach their destination. Students continue to send messages and view the logs one last time to notice that the messages are also taking different paths to reach the same destination. The lesson wraps-up by introducing new vocabulary and using these words to summarize today’s activity.",
+        "overview": "**Purpose:**\nParticipants see another layer of the internet.\n\n**Objectives:**\n* Participants understand the ways the purpose of and strategies for formative assessment may change throughout a lesson.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp2-2023/lessons/4\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nStudents spend most of today’s lesson in an updated Internet Simulator that lets students send messages with a dedicated To and From IP  Address. Students start by connecting to a dedicated router and sending messages only to each other. They look at the router logs to find other students on different routers, then send messages to those students. They look at the router logs again to notice that messages are being passed between routers in order to reach their destination. Students continue to send messages and view the logs one last time to notice that the messages are also taking different paths to reach the same destination. The lesson wraps-up by introducing new vocabulary and using these words to summarize today’s activity.",
         "preparation": "* Read through [r teacher_guide_-_routers_redundancy_-_unit_2_lesson_4/virtual-pl-csp-summer/2024] in order to:\n\t* Test the Internet Simulator to understand how the tool works\n\t* Prepare routers ahead of time so they are available for students to join when the activity starts\n\t* Decide how you will be proactive to avoid students sending inappropriate messages and prepare for how you will react should this happen anyway\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-internet-lessons-1-6/36470) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1j5XBQprztqal_96Jje78aiDaQFMzu_ljCSsFyJEDQbQ/edit?usp=sharing)",
-        "student_overview": "Learn how information is routed through the Internet and the reasons networks often will include many multiple paths between different points in the network."
+        "student_overview": "Learn how information is routed through the Internet and the reasons networks often will include many multiple paths between different points in the network.\n\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp2-2023/lessons/4\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nStudents spend most of today’s lesson in an updated Internet Simulator that lets students send messages with a dedicated To and From IP  Address. Students start by connecting to a dedicated router and sending messages only to each other. They look at the router logs to find other students on different routers, then send messages to those students. They look at the router logs again to notice that messages are being passed between routers in order to reach their destination. Students continue to send messages and view the logs one last time to notice that the messages are also taking different paths to reach the same destination. The lesson wraps-up by introducing new vocabulary and using these words to summarize today’s activity."
       },
       "seeding_key": {
         "lesson.key": "Routers and Redundancy",
@@ -1321,14 +1322,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csp-summer-day3-Context1-2"
+          "virtual-pl-csp-summer-day3-asynch1-01-2024"
         ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csp-summer-day3-Context1-2"
+          "virtual-pl-csp-summer-day3-asynch1-01-2024"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-3",
@@ -1336,7 +1337,7 @@
         "activity_section.key": "f701553f-e1c4-4997-9ecd-0f8353b1821f"
       },
       "level_keys": [
-        "virtual-pl-csp-summer-day3-Context1-2"
+        "virtual-pl-csp-summer-day3-asynch1-01-2024"
       ]
     },
     {
@@ -1346,14 +1347,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext3_1_video"
+          "virtual-pl-csp-summer-day3-asynch1-02-2024"
         ],
         "progression": "Unconscious Bias"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext3_1_video"
+          "virtual-pl-csp-summer-day3-asynch1-02-2024"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-3",
@@ -1361,7 +1362,7 @@
         "activity_section.key": "7f66d31c-3d9d-48bd-84f9-f1f0fd027fb0"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-UnderstandingContext3_1_video"
+        "virtual-pl-csp-summer-day3-asynch1-02-2024"
       ]
     },
     {
@@ -1371,14 +1372,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext3_2"
+          "virtual-pl-csp-summer-day3-asynch1-03-2024"
         ],
         "progression": "Unconscious Bias"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext3_2"
+          "virtual-pl-csp-summer-day3-asynch1-03-2024"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-3",
@@ -1386,7 +1387,7 @@
         "activity_section.key": "7f66d31c-3d9d-48bd-84f9-f1f0fd027fb0"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-UnderstandingContext3_2"
+        "virtual-pl-csp-summer-day3-asynch1-03-2024"
       ]
     },
     {
@@ -1396,14 +1397,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext4_2"
+          "virtual-pl-csp-summer-day3-asynch1-04-2024"
         ],
         "progression": "Assessments in Unit 1"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext4_2"
+          "virtual-pl-csp-summer-day3-asynch1-04-2024"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-3",
@@ -1411,7 +1412,7 @@
         "activity_section.key": "57a1a3e5-0276-415d-8df4-0950d562d8a7"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-UnderstandingContext4_2"
+        "virtual-pl-csp-summer-day3-asynch1-04-2024"
       ]
     },
     {
@@ -1421,14 +1422,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day3-Context5_2"
+          "virtual-pl-csp-summer-day3-asynch1-05-2024"
         ],
         "progression": "Assessments in Unit 1"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-Context5_2"
+          "virtual-pl-csp-summer-day3-asynch1-05-2024"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-3",
@@ -1436,7 +1437,7 @@
         "activity_section.key": "57a1a3e5-0276-415d-8df4-0950d562d8a7"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-Context5_2"
+        "virtual-pl-csp-summer-day3-asynch1-05-2024"
       ]
     },
     {
@@ -1521,14 +1522,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csp-summer-day2-P2-Context1_2"
+          "virtual-pl-csp-summer-day3-asynch2-01-2024"
         ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csp-summer-day2-P2-Context1_2"
+          "virtual-pl-csp-summer-day3-asynch2-01-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
@@ -1536,7 +1537,7 @@
         "activity_section.key": "19f81ad6-e74b-4eea-b4cd-048ea1f8fdcf"
       },
       "level_keys": [
-        "virtual-pl-csp-summer-day2-P2-Context1_2"
+        "virtual-pl-csp-summer-day3-asynch2-01-2024"
       ]
     },
     {
@@ -1546,14 +1547,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext3_3_video"
+          "virtual-pl-csp-summer-day3-asynch2-02-2024"
         ],
         "progression": "Unit 2 Connections and Conclusions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext3_3_video"
+          "virtual-pl-csp-summer-day3-asynch2-02-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
@@ -1561,7 +1562,7 @@
         "activity_section.key": "0ec3a0b8-90cd-426f-a237-5920a4506d4b"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-UnderstandingContext3_3_video"
+        "virtual-pl-csp-summer-day3-asynch2-02-2024"
       ]
     },
     {
@@ -1571,14 +1572,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2"
+          "virtual-pl-csp-summer-day3-asynch2-03-2024"
         ],
         "progression": "Unit 2 Connections and Conclusions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2"
+          "virtual-pl-csp-summer-day3-asynch2-03-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
@@ -1586,7 +1587,7 @@
         "activity_section.key": "0ec3a0b8-90cd-426f-a237-5920a4506d4b"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2"
+        "virtual-pl-csp-summer-day3-asynch2-03-2024"
       ]
     },
     {
@@ -1596,14 +1597,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext3_1_2"
+          "virtual-pl-csp-summer-day3-asynch2-04-2024"
         ],
         "progression": "Unit 2 Connections and Conclusions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext3_1_2"
+          "virtual-pl-csp-summer-day3-asynch2-04-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
@@ -1611,7 +1612,7 @@
         "activity_section.key": "0ec3a0b8-90cd-426f-a237-5920a4506d4b"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-UnderstandingContext3_1_2"
+        "virtual-pl-csp-summer-day3-asynch2-04-2024"
       ]
     },
     {
@@ -1621,14 +1622,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext3_4_video"
+          "virtual-pl-csp-summer-day3-asynch2-05-2024"
         ],
         "progression": "Previously, On...Unit 3"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext3_4_video"
+          "virtual-pl-csp-summer-day3-asynch2-05-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
@@ -1636,7 +1637,7 @@
         "activity_section.key": "e20d1d2c-68ee-43e4-981e-8c5c89f91727"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-UnderstandingContext3_4_video"
+        "virtual-pl-csp-summer-day3-asynch2-05-2024"
       ]
     }
   ],
@@ -1691,9 +1692,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csp-summer-day3-Context1-2",
+        "level.key": "virtual-pl-csp-summer-day3-asynch1-01-2024",
         "script_level.level_keys": [
-          "virtual-pl-csp-summer-day3-Context1-2"
+          "virtual-pl-csp-summer-day3-asynch1-01-2024"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-3",
@@ -1703,9 +1704,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext3_1_video",
+        "level.key": "virtual-pl-csp-summer-day3-asynch1-02-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext3_1_video"
+          "virtual-pl-csp-summer-day3-asynch1-02-2024"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-3",
@@ -1715,9 +1716,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext3_2",
+        "level.key": "virtual-pl-csp-summer-day3-asynch1-03-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext3_2"
+          "virtual-pl-csp-summer-day3-asynch1-03-2024"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-3",
@@ -1727,9 +1728,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext4_2",
+        "level.key": "virtual-pl-csp-summer-day3-asynch1-04-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext4_2"
+          "virtual-pl-csp-summer-day3-asynch1-04-2024"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-3",
@@ -1739,9 +1740,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-Context5_2",
+        "level.key": "virtual-pl-csp-summer-day3-asynch1-05-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-Context5_2"
+          "virtual-pl-csp-summer-day3-asynch1-05-2024"
         ],
         "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-3",
@@ -1787,9 +1788,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csp-summer-day2-P2-Context1_2",
+        "level.key": "virtual-pl-csp-summer-day3-asynch2-01-2024",
         "script_level.level_keys": [
-          "virtual-pl-csp-summer-day2-P2-Context1_2"
+          "virtual-pl-csp-summer-day3-asynch2-01-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
@@ -1799,9 +1800,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext3_3_video",
+        "level.key": "virtual-pl-csp-summer-day3-asynch2-02-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext3_3_video"
+          "virtual-pl-csp-summer-day3-asynch2-02-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
@@ -1811,9 +1812,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2",
+        "level.key": "virtual-pl-csp-summer-day3-asynch2-03-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2"
+          "virtual-pl-csp-summer-day3-asynch2-03-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
@@ -1823,9 +1824,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext3_1_2",
+        "level.key": "virtual-pl-csp-summer-day3-asynch2-04-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext3_1_2"
+          "virtual-pl-csp-summer-day3-asynch2-04-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",
@@ -1835,9 +1836,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext3_4_video",
+        "level.key": "virtual-pl-csp-summer-day3-asynch2-05-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext3_4_video"
+          "virtual-pl-csp-summer-day3-asynch2-05-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-5",

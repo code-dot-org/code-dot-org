@@ -1,4 +1,4 @@
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import {UnconnectedStandardsProgressTable as StandardsProgressTable} from '../../../../src/templates/sectionProgress/standards/StandardsProgressTable';
@@ -6,7 +6,6 @@ import {
   standardsData,
   lessonCompletedByStandard,
 } from '../../../../src/templates/sectionProgress/standards/standardsTestHelpers';
-import {expect} from '../../../util/reconfiguredChai';
 
 describe('StandardsProgressTable', () => {
   it('renders a description cell for each standard', () => {
@@ -16,7 +15,7 @@ describe('StandardsProgressTable', () => {
         lessonsByStandard={lessonCompletedByStandard}
       />
     );
-    expect(wrapper.find('StandardDescriptionCell')).to.have.lengthOf(
+    expect(wrapper.find('StandardDescriptionCell')).toHaveLength(
       standardsData.length
     );
   });

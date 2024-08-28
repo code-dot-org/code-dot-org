@@ -65,57 +65,6 @@ $container-width: 309px;
   }
 }
 
-.labelsContainer {
-  display: flex;
-  column-gap: 0.5em;
-
-  > div {
-    // font styles
-    @include main-font-semi-bold;
-    font-size: 0.75em;
-    line-height: 0.875em;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: $neutral-dark;
-
-    // label styles
-    padding: 0.6em 0.75em 0 0.75em;
-    background-color: $brand_primary_light;
-    border-radius: 1em;
-
-    // ellipsis overflow
-    max-width: 15em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-
-.labelTooltip {
-  opacity: 1;
-  margin-bottom: 0.75em;
-  pointer-events: none;
-
-  :global(.tooltip-inner) { /* stylelint-disable-line selector-pseudo-class-no-unknown */
-    border-radius: 5px;
-    color: #fff;
-    background-color: #222;
-
-    p {
-      color: #fff;
-      margin: 0;
-    }
-  }
-
-  :global(.tooltip-arrow) { /* stylelint-disable-line selector-pseudo-class-no-unknown */
-    left: 50%;
-    bottom: 0;
-    border: 15px solid transparent;
-    border-top: 15px solid #222;
-    transform: translate(-50%, calc(100% - 8px));
-  }
-}
-
 .iconWithDescription {
   display: flex;
   align-items: center;
@@ -209,10 +158,11 @@ $container-width: 309px;
   flex: 1;
 }
 
-// !important tags needed here in order to override Button styling that makes the Learn More button appear at all times.
-.teacherAndSignedOutLearnMoreButton {
-  display: none !important;
+.buttonsContainer a.teacherAndSignedOutLearnMoreButton {
+  display: none;
   text-align: center;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .studentLearnMoreButton {
@@ -228,7 +178,7 @@ $container-width: 309px;
     display: none !important;
   }
 
-  .teacherAndSignedOutLearnMoreButton {
+  .buttonsContainer a.teacherAndSignedOutLearnMoreButton {
     display: block !important;
   }
 

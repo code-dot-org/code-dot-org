@@ -11,7 +11,7 @@ markdown <<MARKDOWN
 
 #### Find and read at least one news article from a reputable source. You’ll reflect on what you read in the next level.
 
-#### Bonus points if you use Copilot to help you in your search!
+#### Bonus points if you use <a href="https://www.bing.com/chat" target="_blank">Copilot</a> to help you in your search!
 
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
@@ -19,7 +19,7 @@ markdown <<MARKDOWN
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px; padding-bottom:20px;">
     <p>
 
-#### If you don’t have time to search for an article, you can read the Bloomberg.com article <a href="https://www.bloomberg.com/graphics/2023-generative-ai-bias/">“Humans Are Biased. Generative AI Is Even Worse”</a>.
+#### If you don’t have time to search for an article, you can read the Bloomberg.com article <a href="https://www.bloomberg.com/graphics/2023-generative-ai-bias/" target="_blank">“Humans Are Biased. Generative AI Is Even Worse”</a>.
 
 </p></div>
 </details>

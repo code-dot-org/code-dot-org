@@ -17,9 +17,11 @@ theme: responsive
 
 ## ಕನಿಷ್ಠ ಬೆಂಬಲಿತ ಬ್ರೌಸರ್‌ಗಳು ಮತ್ತು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್‌ಗಳು
 
+ಜುಲೈ 2024 ರಲ್ಲಿ ಪ್ರಾರಂಭವಾಗಿ, ಬ್ರೌಸರ್ಗಳು ಮತ್ತು ಆಪರೇಟಿಂಗ್ ಸಿಸ್ಟಮ್ಗಳಿಗೆ ಅಗತ್ಯವಿರುವ ಕನಿಷ್ಠ ಆವೃತ್ತಿಗಳನ್ನು ನಾವು ನವೀಕರಿಸುತ್ತೇವೆ. ಹಳೆಯ ಆವೃತ್ತಿಗಳು ಇನ್ನೂ ಕಾರ್ಯನಿರ್ವಹಿಸಬಹುದಾದರೂ, ಹಳೆಯ ಆವೃತ್ತಿಗಳಲ್ಲಿ ದೋಷ ಪರಿಹಾರಗಳಿಗಾಗಿ ವಿನಂತಿಗಳನ್ನು ಬೆಂಬಲಿಸಲು ನಮಗೆ ಸಾಧ್ಯವಾಗುವುದಿಲ್ಲ.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           ಬ್ರೌಸರ್
@@ -40,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          ಬ್ರೌಸರ್ ಜುಲೈ '24
+        </th>
+        <tr>
+          <td>ಕ್ರೋಮ್ 103.x</td>
+        </tr>
+        <tr>
+          <td>ಸಫಾರಿ 14.x</td>
+        </tr>
+        <tr>
+          <td>ಮೊಬೈಲ್ ಸಫಾರಿ 14.x</td>
+        </tr>
+        <tr>
+          <td>ಎಡ್ಜ್ 119.x</td>
+        </tr>
+        <tr>
+          <td>ಫೈರ್ಫಾಕ್ಸ್ 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           ಪ್ಲಾಟ್ಫಾರಂ
@@ -62,8 +86,30 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          ಪ್ಲಾಟ್ಫಾರ್ಮ್ ಜುಲೈ '24
+        </th>
+        <tr>
+          <td>ಮ್ಯಾಕೋಸ್ 10.15</td>
+        </tr>
+        <tr>
+          <td>ಐಒಎಸ್ 15.x</td>
+        </tr>
+        <tr>
+          <td>ವಿಂಡೋಸ್ 8</td>
+        </tr>
+        <tr>
+          <td>ಆಂಡ್ರಾಯ್ಡ್ 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## ಅನ್‌ಬ್ಲಾಕ್ ಮಾಡಬೇಕಿರುವ ಸೈಟ್‌ಗಳು
@@ -80,16 +126,15 @@ theme: responsive
 | **ಇಂಟರ್ನೆಟ್ ಸಿಮ್ಯುಲೇಟರ್ ಅನ್ನು ಬಳಸಲು**                                                                                | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **ವೆಬ್ ಲ್ಯಾಬ್ ಬಳಸಲು**                                                                                                | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Google ಕ್ಲಾಸ್‌ರೂಮ್ ಹಂಚಿಕೆ ಬಟನ್ ಬಳಸಲು**                                                                             | `https://apis.google.com`                                                                                  |
-| **ಆಪ್ ಲ್ಯಾಬ್ ಡೇಟಾಸೆಟ್ಗಳನ್ನು ಬಳಸಲು**                                                                                  | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## ಮೊಬೈಲ್ ಮತ್ತು ಟ್ಯಾಬ್ಲೆಟ್ ಬೆಂಬಲ ವಿವರಗಳು
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. ಕೆಳಗಿನ ವಿನಾಯಿತಿಗಳೊಂದಿಗೆ ಹೆಚ್ಚಿನ ಟ್ಯಾಬ್ಲೆಟ್‌ಗಳು ಬೆಂಬಲಿತವಾಗಿಲ್ಲ:
+ಎಲ್ಲಾ ಸಿಎಸ್ ಡಿಸ್ಕವರಿ, ಸಿಎಸ್ ಪ್ರಿನ್ಸಿಪಲ್ಸ್, ಸಿಎಸ್ ಎ, ಮತ್ತು ಇಂಟ್ರೋ ಟು ಆಪ್ ಲ್ಯಾಬ್ ಕೋರ್ಸ್ಗಳು ಮಾತ್ರೆಗಳು ಅಥವಾ ಮೊಬೈಲ್ ಸಾಧನಗಳೊಂದಿಗೆ ಹೊಂದಿಕೆಯಾಗುವುದಿಲ್ಲ - ಪೂರ್ಣ ಕೀಬೋರ್ಡ್ ಮತ್ತು ಮೌಸ್ (ಅಥವಾ ಟಚ್ಪ್ಯಾಡ್) ಅಗತ್ಯವಿದೆ. ಕೆಳಗಿನ ವಿನಾಯಿತಿಗಳೊಂದಿಗೆ ಹೆಚ್ಚಿನ ಟ್ಯಾಬ್ಲೆಟ್‌ಗಳು ಬೆಂಬಲಿತವಾಗಿಲ್ಲ:
 
 - ಬಾಹ್ಯ ಕೀಬೋರ್ಡ್‌ನೊಂದಿಗೆ ಮೈಕ್ರೋಸಾಫ್ಟ್ ಸರ್ಫೇಸ್ ಪ್ರೊ
 - iPad ಚಾಲನೆಯಲ್ಲಿರುವ iPadOS 13.4 ಅಥವಾ ನಂತರದ ಕೀಬೋರ್ಡ್ ಮತ್ತು ಬಾಹ್ಯ ಮೌಸ್ ಅಥವಾ ಟಚ್‌ಪ್ಯಾಡ್‌ನೊಂದಿಗೆ
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+ಕೆ-5 ಕೋರ್ಸ್ಗಳು (ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್) ಮತ್ತು ಅವರ್ ಆಫ್ ಕೋಡ್ ಚಟುವಟಿಕೆಗಳಂತಹ ಎಲ್ಲಾ ಇತರ ವಿಷಯಗಳು ಐಪ್ಯಾಡ್ಗಳು ಮತ್ತು ಇತರ ಆಧುನಿಕ ಮಾತ್ರೆಗಳು ಮತ್ತು ಲ್ಯಾಪ್ಟಾಪ್ ಅಥವಾ ಡೆಸ್ಕ್ಟಾಪ್ ಕಂಪ್ಯೂಟರ್ಗಳಲ್ಲಿ ಹೊಂದಿಕೊಳ್ಳುತ್ತವೆ.
 
 ### ಮೊಬೈಲ್ ಫೋನ್
 
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+ಪಠ್ಯಕ್ರಮದ ಉದ್ದಕ್ಕೂ ಬಳಸುವ ಪ್ಲೇಯರ್ ಇದು. ಇದು YouTube ಮೂಲಕ ವೀಡಿಯೊವನ್ನು ತೋರಿಸಲು ಪ್ರಯತ್ನಿಸುತ್ತದೆ ಮತ್ತು YouTube ಅನ್ನು ನಿರ್ಬಂಧಿಸಿದರೆ, ಬದಲಿಗೆ ನಮ್ಮ "ಫಾಲ್‌ಬ್ಯಾಕ್" ಪ್ಲೇಯರ್ ಅನ್ನು ಬಳಸಿಕೊಂಡು Code.org ಹೋಸ್ಟ್ ಮಾಡಿದ ವೀಡಿಯೊವನ್ನು ತೋರಿಸುತ್ತದೆ.
 
 ### ವೀಡಿಯೊ ಪ್ಲೇ ಆಗುತ್ತಿಲ್ಲವೇ?
 
-If video does not work, you can email us at support@code.org.
+ವೀಡಿಯೊ ಕಾರ್ಯನಿರ್ವಹಿಸದಿದ್ದರೆ, ನೀವು support@code.org ನಲ್ಲಿ ನಮಗೆ ಇಮೇಲ್ ಮಾಡಬಹುದು.
 
-However, you can still use our tutorials without video.
+ಆದಾಗ್ಯೂ, ನೀವು ಇನ್ನೂ ನಮ್ಮ ಟ್ಯುಟೋರಿಯಲ್‌ಗಳನ್ನು ವೀಡಿಯೊ ಇಲ್ಲದೆ ಬಳಸಬಹುದು.
 
 1. ನಾವು ನಮ್ಮ ಎಲ್ಲಾ ವೀಡಿಯೊಗಳನ್ನು [ಒಟ್ಟಿಗೆ ಡೌನ್‌ಲೋಡ್ ಮಾಡಲು ಲಭ್ಯವಾಗುವಂತೆ](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH) ಮಾಡಿದ್ದೇವೆ. ನಿಮ್ಮ ಶಾಲೆಯು ಕಡಿಮೆ ಬ್ಯಾಂಡ್‌ವಿಡ್ತ್ ಹೊಂದಿದ್ದರೆ, ನೀವು ವೀಡಿಯೊಗಳನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಲು ಮತ್ತು ಅವುಗಳನ್ನು ಹಂಚಿಕೊಂಡ ಪರದೆಯಲ್ಲಿ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ತೋರಿಸಲು ನಾವು ಶಿಫಾರಸು ಮಾಡುತ್ತೇವೆ.
 2. ನಮ್ಮ ಟ್ಯುಟೋರಿಯಲ್‌ಗಳಲ್ಲಿ ಸಂಯೋಜಿಸಲಾಗಿದೆ, ನಾವು ಪ್ರತಿ ವೀಡಿಯೊಗೆ ಹಸಿರು ಡೌನ್‌ಲೋಡ್ ಲಿಂಕ್ ಐಕಾನ್ ಅನ್ನು ಸೇರಿಸಿದ್ದೇವೆ, ಇದು ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ <img src="/images/green-download.png" width=25 height=25 />ಪ್ರತ್ಯೇಕ ಟ್ಯುಟೋರಿಯಲ್ ವೀಡಿಯೊಗಳನ್ನು ಡೌನ್‌ಲೋಡ್ ಮಾಡಲು ಅನುವು ಮಾಡಿಕೊಡುತ್ತದೆ.
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## Google Apps/G-Suite ಬಳಕೆದಾರರಿಗಾಗಿ ವಿಶೇಷ ಸೆಟ್ಟಿಂಗ್‌ಗಳು
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+ನೀವು ಜಿ-ಸೂಟ್ ನಿರ್ವಾಹಕರಾಗಿದ್ದರೆ, YouTube ಗಾಗಿ ನಿಮ್ಮ ನಿರ್ಬಂಧದ ಸೆಟ್ಟಿಂಗ್‌ಗಳು ಏನೆಂದು ಪರೀಕ್ಷಿಸಲು ಮರೆಯದಿರಿ. ನೀವು "ಕಟ್ಟುನಿಟ್ಟಾದ ನಿರ್ಬಂಧಿತ YouTube ಪ್ರವೇಶ" ಸೆಟ್ಟಿಂಗ್ ಅನ್ನು ನಿರ್ದಿಷ್ಟಪಡಿಸಿದ್ದರೆ ಅಥವಾ 'ಈ ವೀಡಿಯೊವನ್ನು ನಿರ್ಬಂಧಿಸಲಾಗಿದೆ' ಎಂಬ ಸಂದೇಶಗಳನ್ನು ನೀವು ನೋಡಿದರೆ, ನೀವು ನಮ್ಮ ಚಾನಲ್ ಅನ್ನು ಅನುಮೋದಿತ ಚಾನಲ್‌ಗಳ ಪಟ್ಟಿಗೆ ಸೇರಿಸಬಹುದು. ಅನುಮೋದಿತ ಪಟ್ಟಿಗೆ ನಮ್ಮ ಚಾನಲ್ ಅನ್ನು ಹೇಗೆ ಸೇರಿಸುವುದು ಎಂಬುದರ ಕುರಿತು ತಿಳಿಯಲು Google ನಿಂದ [ಈ ಮಾರ್ಗದರ್ಶಿಯನ್ನು](https://support.google.com/a/answer/6245597) ನೋಡಿ. ವಿಭಿನ್ನ ಸೆಟ್ಟಿಂಗ್‌ಗಳ ಕುರಿತು ಮತ್ತು ನಿಮ್ಮ ತರಗತಿಗೆ ಯಾವುದು ಉತ್ತಮ ಎಂಬುದರ ಕುರಿತು ಇನ್ನಷ್ಟು ತಿಳಿದುಕೊಳ್ಳಲು ನೀವು [ಈ ಮಾರ್ಗದರ್ಶಿಯನ್ನು](https://support.google.com/a/answer/6212415?hl=en) ಸಹ ನೋಡಬಹುದು.
 
 ## ಇನ್ನೂ ತೊಂದರೆ ಇದೆಯೇ?
 
-We'll help you out - just email us at support@code.org!
+ನಾವು ನಿಮಗೆ ಸಹಾಯ ಮಾಡುತ್ತೇವೆ - support@code.org ನಲ್ಲಿ ನಮಗೆ ಇಮೇಲ್ ಮಾಡಿ!

@@ -37,6 +37,10 @@
     width: initial;
     padding: 0 6px 0 2px;
 
+    html[dir="rtl"] & {
+      padding: 0 2px 0 6px;
+    }
+
     &Image {
       height: 20px;
       border-radius: 2px;
@@ -44,6 +48,10 @@
 
     &Content {
       padding: 0 16px 0 8px;
+
+      html[dir="rtl"] & {
+        padding: 0 8px 0 16px;
+      }
 
       &NoRightPadding {
         padding-right: 0;
@@ -58,9 +66,6 @@
   &Skip {
     width: initial;
     padding: 0 11px;
-
-    &Content {
-      margin-right: 9px;
-    }
+    gap: 9px;
   }
 }

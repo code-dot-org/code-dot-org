@@ -34,6 +34,24 @@ section {
   margin-top: 1.5rem;
 }
 
+.joinedPlSectionsWithNoSections {
+  margin-bottom: 4rem;
+}
+
+.celebrationContainer {
+  place-content: center;
+  display: flex;
+  text-align: center;
+
+  img {
+    width: 264px;
+  }
+
+  .containerMargin {
+    margin: 1rem;
+  }
+}
+
 // TODO - this can be removed once the components on this page
 // are updated to use the Typography component.
 h2 {

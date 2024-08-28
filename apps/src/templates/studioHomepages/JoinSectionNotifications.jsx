@@ -2,7 +2,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import Notification from '@cdo/apps/templates/Notification';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
+import Notification from '@cdo/apps/sharedComponents/Notification';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
 
 export default function JoinSectionNotifications({
@@ -11,9 +13,17 @@ export default function JoinSectionNotifications({
   name,
   id,
   sectionCapacity,
+  showingPlSections,
+  joiningPlSection,
 }) {
   if (action === 'join' && result === 'success') {
-    return <JoinSectionSuccessNotification sectionName={name} />;
+    return (
+      <JoinSectionSuccessNotification
+        sectionName={name}
+        showingPlSections={showingPlSections}
+        joiningPlSection={joiningPlSection}
+      />
+    );
   } else if (action === 'leave' && result === 'success') {
     return (
       <LeaveSectionSuccessNotification sectionName={name} sectionId={id} />
@@ -46,18 +56,55 @@ JoinSectionNotifications.propTypes = {
   name: PropTypes.string,
   id: PropTypes.string,
   sectionCapacity: PropTypes.number,
+  showingPlSections: PropTypes.bool,
+  joiningPlSection: PropTypes.bool,
 };
 
-const JoinSectionSuccessNotification = ({sectionName}) => (
-  <Notification
-    type="success"
-    notice={i18n.sectionsNotificationSuccess()}
-    details={i18n.sectionsNotificationJoinSuccess({sectionName})}
-    dismissible={true}
-  />
-);
+const JoinSectionSuccessNotification = ({
+  sectionName,
+  showingPlSections,
+  joiningPlSection,
+}) => {
+  let notificationMessage = null;
+  if (showingPlSections && !joiningPlSection) {
+    // Notify user if they are joining a non-PL section on the My PL page so they'll have to
+    // go to the Teacher Homepage if they want to view it.
+    notificationMessage = (
+      <SafeMarkdown
+        markdown={i18n.sectionsNotificationJoinSuccessForNonPlWrongPage({
+          sectionName: sectionName,
+          teacherHomepageUrl: studio('/home'),
+        })}
+      />
+    );
+  } else if (!showingPlSections && joiningPlSection) {
+    // Notify user if they are joining a Professional Learning section not on the My PL page
+    // so they'll have to go to the My PL page if they want to view it.
+    notificationMessage = (
+      <SafeMarkdown
+        markdown={i18n.sectionsNotificationJoinSuccessForPlWrongPage({
+          sectionName: sectionName,
+          myPlUrl: studio('/my-professional-learning'),
+        })}
+      />
+    );
+  } else {
+    notificationMessage = i18n.sectionsNotificationJoinSuccess({sectionName});
+  }
+
+  return (
+    <Notification
+      type="success"
+      notice={i18n.sectionsNotificationSuccess()}
+      details={notificationMessage}
+      dismissible={true}
+    />
+  );
+};
 JoinSectionSuccessNotification.propTypes = {
   sectionName: PropTypes.string.isRequired,
+  showingPlSections: PropTypes.bool,
+  joiningPlSection: PropTypes.bool,
 };
 
 const LeaveSectionSuccessNotification = ({sectionName, sectionId}) => (

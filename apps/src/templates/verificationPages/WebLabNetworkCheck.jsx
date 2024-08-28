@@ -3,8 +3,8 @@ import React, {Component} from 'react';
 
 import i18n from '@cdo/locale';
 
-import ValidationStep, {Status} from '../../lib/ui/ValidationStep';
 import testImageAccess from '../../code-studio/url_test';
+import ValidationStep, {Status} from '../../sharedComponents/ValidationStep';
 import {
   BRAMBLE_READY_STATE,
   FILE_SYSTEM_ERROR,

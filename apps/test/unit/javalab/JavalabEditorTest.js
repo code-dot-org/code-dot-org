@@ -1,22 +1,13 @@
-import React from 'react';
-import {expect} from '../../util/reconfiguredChai';
-import sinon from 'sinon';
-import {mount} from 'enzyme';
-import JavalabEditor from '@cdo/apps/javalab/JavalabEditor';
-import {Provider} from 'react-redux';
-import {
-  getStore,
-  registerReducers,
-  stubRedux,
-  restoreRedux,
-} from '@cdo/apps/redux';
-import {EditorView} from '@codemirror/view';
 import {EditorState} from '@codemirror/state';
-import javalab, {
-  setIsReadOnlyWorkspace,
-  setHasOpenCodeReview,
-  setBackpackEnabled,
-} from '@cdo/apps/javalab/redux/javalabRedux';
+import {EditorView} from '@codemirror/view';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
+import React from 'react';
+import {Provider} from 'react-redux';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
+import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
+import JavalabEditor from '@cdo/apps/javalab/JavalabEditor';
 import javalabEditor, {
   sourceFileOrderUpdated,
   sourceVisibilityUpdated,
@@ -30,20 +21,30 @@ import javalabEditor, {
   setAllValidation,
   openEditorDialog,
 } from '@cdo/apps/javalab/redux/editorRedux';
+import javalab, {
+  setIsReadOnlyWorkspace,
+  setHasOpenCodeReview,
+  setBackpackEnabled,
+} from '@cdo/apps/javalab/redux/javalabRedux';
 import javalabView, {setDisplayTheme} from '@cdo/apps/javalab/redux/viewRedux';
-
-import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
-import commonReducers from '@cdo/apps/redux/commonReducers';
-import {setPageConstants} from '@cdo/apps/redux/pageConstants';
-import {allowConsoleWarnings} from '../../util/throwOnConsole';
-import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
-import javalabMsg from '@cdo/javalab/locale';
 import {JavalabEditorDialog} from '@cdo/apps/javalab/types';
 import {
   darkMode,
   lightMode,
 } from '@cdo/apps/lab2/views/components/editor/editorThemes';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
+import commonReducers from '@cdo/apps/redux/commonReducers';
+import {setPageConstants} from '@cdo/apps/redux/pageConstants';
+import javalabMsg from '@cdo/javalab/locale';
+
 import {BackpackAPIContext} from '../../../src/javalab/BackpackAPIContext';
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {allowConsoleWarnings} from '../../util/throwOnConsole';
 
 describe('Java Lab Editor Test', () => {
   // Warnings allowed due to usage of deprecated componentWillReceiveProps

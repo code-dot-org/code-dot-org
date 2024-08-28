@@ -10,7 +10,7 @@ import PrintLoginCards from '@cdo/apps/templates/manageStudents/PrintLoginCards'
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import SignInInstructions from '@cdo/apps/templates/teacherDashboard/SignInInstructions';
 import color from '@cdo/apps/util/color';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import oauthSignInButtons from '../../../static/teacherDashboard/oauthSignInButtons.png';
@@ -34,7 +34,7 @@ class SectionLoginInfo extends React.Component {
     // Provided by redux.
     section: PropTypes.shape({
       id: PropTypes.number.isRequired,
-      loginType: PropTypes.string.isRequired,
+      loginType: PropTypes.string,
       code: PropTypes.string,
     }).isRequired,
     students: PropTypes.array.isRequired,

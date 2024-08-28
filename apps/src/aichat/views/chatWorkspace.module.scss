@@ -1,26 +1,57 @@
 @import 'color.scss';
+@import './aichat-common.module.scss';
 
-$default-spacing: 2px;
+$default-spacing: 16px;
 
 .chatWorkspace {
+  @extend %panel-section;
   height: 100%;
   display: flex;
   flex-direction: column;
   background-color: $light_white;
-  padding: 10px;
+  overflow: hidden;
 }
 
+%conversation-area,
 .conversationArea {
-  margin: 5px 2%;
-  height: 65vh;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   gap: $default-spacing;
   box-sizing: border-box;
-  overflow-y: scroll;
+  overflow-y: auto;
+  padding: $default-spacing;
+}
+
+.tabsContainer {
+  background-color: #eaebeb;
+}
+
+.tabPanelsContainer {
+  @extend %conversation-area;
+  > div {
+    display: flex;
+    height: 100%;
+  }
+  > div[hidden] {
+    display: none;
+  }
 }
 
 .waitingForResponse {
   width: 50px;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 8px;
+  padding: 0 10px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 16px 6px;
+  border-top: 1px solid $light_gray_200;
 }

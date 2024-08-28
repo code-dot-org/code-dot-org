@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import ToggleSwitch from '@cdo/apps/code-studio/components/ToggleSwitch';
-import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
+import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
+import InfoHelpTip from '@cdo/apps/sharedComponents/InfoHelpTip';
 import i18n from '@cdo/locale';
 
 import style from './sections-refresh.module.scss';
@@ -44,10 +44,10 @@ export default function AdvancedSettingToggles({
   return (
     <div>
       <div className={style.toolTipContainer}>
-        <ToggleSwitch
+        <Toggle
           id={'uitest-pair-toggle'}
-          isToggledOn={section.pairingAllowed}
-          onToggle={e => {
+          checked={section.pairingAllowed}
+          onChange={e => {
             handlePairProgrammingToggle(e);
           }}
           label={i18n.pairProgramming()}
@@ -58,10 +58,12 @@ export default function AdvancedSettingToggles({
         />
       </div>
       <div className={style.toolTipContainer}>
-        <ToggleSwitch
+        <Toggle
           id={'uitest-lock-toggle'}
-          isToggledOn={section.restrictSection}
-          onToggle={e => handleLockSectionToggle(e)}
+          checked={section.restrictSection}
+          onChange={e => {
+            handleLockSectionToggle(e);
+          }}
           label={i18n.restrictSectionAccess()}
         />
         <InfoHelpTip
@@ -71,10 +73,10 @@ export default function AdvancedSettingToggles({
       </div>
       {hasTextToSpeech && (
         <div className={style.toolTipContainer}>
-          <ToggleSwitch
+          <Toggle
             id={'uitest-tts-toggle'}
-            isToggledOn={section.ttsAutoplayEnabled}
-            onToggle={e => handleTtsAutoplayEnabledToggle(e)}
+            checked={section.ttsAutoplayEnabled}
+            onChange={e => handleTtsAutoplayEnabledToggle(e)}
             label={i18n.enableTtsAutoplayToggle()}
           />
           <InfoHelpTip
@@ -85,10 +87,10 @@ export default function AdvancedSettingToggles({
       )}
       {hasLessonExtras && (
         <div className={style.toolTipContainer}>
-          <ToggleSwitch
+          <Toggle
             id={'uitest-lesson-extras-toggle'}
-            isToggledOn={section.lessonExtras}
-            onToggle={e => handleLessonExtrasToggle(e)}
+            checked={section.lessonExtras}
+            onChange={e => handleLessonExtrasToggle(e)}
             label={i18n.enableLessonExtrasToggle()}
           />
           <InfoHelpTip
@@ -99,10 +101,10 @@ export default function AdvancedSettingToggles({
       )}
       {aiTutorAvailable && (
         <div className={style.toolTipContainer}>
-          <ToggleSwitch
+          <Toggle
             id={'uitest-ai-tutor-toggle'}
-            isToggledOn={section.aiTutorEnabled}
-            onToggle={e => handleAITutorEnabledToggle(e)}
+            checked={section.aiTutorEnabled}
+            onChange={e => handleAITutorEnabledToggle(e)}
             label={i18n.enableAITutor()}
           />
           <InfoHelpTip

@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "# Research Questions\r\n\r\nWhat was one research question you wrote down to learn more about the users' needs and why would that be important to learn about?\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
+    "long_instructions": "# Research Questions\r\n\r\n#### What was one research question you wrote down to learn more about the users' needs and why would that be important to learn about?\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -21,7 +21,7 @@
     "teacher_markdown": "The goal here is to evaluate students' understanding of how to translate observations about a community's challenges into open-ended questions that can effectively guide user research and data gathering.\r\n"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-18T23:41:58.243+00:00\",\"changed\":[\"cloned from \\\"CV_L2_Reflection_1\\\"\"],\"cloned_from\":\"CV_L2_Reflection_1\"},{\"changed_at\":\"2024-04-18 23:42:56 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-04-18T23:41:58.243+00:00\",\"changed\":[\"cloned from \\\"CV_L2_Reflection_1\\\"\"],\"cloned_from\":\"CV_L2_Reflection_1\"},{\"changed_at\":\"2024-04-18 23:42:56 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-19 19:08:23 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-19 19:10:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

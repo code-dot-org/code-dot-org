@@ -3,17 +3,17 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
-import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import PopUpMenu, {MenuBreak} from '@cdo/apps/sharedComponents/PopUpMenu';
 import {asyncLoadSectionData} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {teacherDashboardUrl} from '@cdo/apps/templates/teacherDashboard/urlHelpers';
-import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import {navigateToHref} from '@cdo/apps/utils';
+import {SectionLoginType} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 import color from '../../util/color';
-import Button from '../Button';
-import FontAwesome from '../FontAwesome';
 import QuickActionsCell from '../tables/QuickActionsCell';
 
 import ConfirmRemoveStudentDialog from './ConfirmRemoveStudentDialog';
@@ -219,7 +219,7 @@ class ManageStudentsActionsCell extends Component {
 
     return (
       <div>
-        {!isEditing && (
+        {!isEditing && loginType !== SectionLoginType.lti_v1 && (
           <QuickActionsCell>
             {this.props.canEdit && (
               <PopUpMenu.Item onClick={this.onEdit}>

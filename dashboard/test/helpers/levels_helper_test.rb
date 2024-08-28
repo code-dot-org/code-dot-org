@@ -1134,4 +1134,26 @@ class LevelsHelperTest < ActionView::TestCase
     set_hint_prompt_options(level_options)
     assert_nil level_options[:hintPromptAttemptsThreshold]
   end
+
+  test "lab2_options refuses to generate options for non-Lab2 levels" do
+    @level = create(:gamelab)
+    assert_raises(ArgumentError) do
+      lab2_options
+    end
+  end
+
+  test "lab2_options generates options for Lab2 levels" do
+    @level = create(:music)
+
+    channel = 'channel123'
+    view_options(channel: channel)
+    level_view_options(@level.id, share: true)
+
+    options = lab2_options
+    assert_equal channel, options["channel"]
+    assert_equal @level.id, options["levelId"]
+    assert_equal true, options["share"]
+
+    reset_view_options
+  end
 end

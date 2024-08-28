@@ -17,9 +17,11 @@ theme: responsive
 
 ## Minimum Supported Browsers and Platforms
 
+Alates juulist 2024 värskendame brauserite ja opsüsteemide jaoks vajalikke minimaalseid versioone. Kuigi vanad versioonid võivad endiselt töötada, me ei saa vanemate versioonide veaparanduse taotlusi toetada.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Browser
@@ -40,11 +42,33 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          Platform
+          Brauser juuli '24
+        </th>
+        <tr>
+          <td>Kroom 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Mobiilne Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Serv 119,x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Platvorm
         </th>
         <tr>
           <td>macOS 10.13</td>
@@ -62,13 +86,35 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platvorm juuli '24
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Sites to Unblock
 
-For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure the following sites are allowed and aren't blocked.
+Parima kogemuse saamiseks kogu Code.org sisuga soovitame konsulteerida oma kooli või piirkonna IT-osakonnaga, et veenduda, et järgmised saidid on lubatud ja pole blokeeritud.
 
 | Priority                                                                                                          | URL                                                                                                        |
 | ----------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -80,28 +126,27 @@ For the very best experience with all Code.org content, we recommend consulting 
 | **Interneti-simulaatori kasutamine**                                                                              | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Veebilabori kasutamine**                                                                                        | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Google'i klassiruumi jagamise nupu kasutamine**                                                                 | `https://apis.google.com`                                                                                  |
-| **App Labi andmekogumite kasutamine**                                                                             | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Mobile and Tablet Support Details
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Most tablets are not supported, with the following exceptions:
+Kõik CS Discovery, CS Principles, CS A ja Intro to App Lab kursused ei ühildu tahvelarvutite ega mobiilseadmetega - vajalik on täielik klaviatuur ja hiir (või puuteplaat). Enamikku tablette ei toetata, välja arvatud järgmised erandid:
 
 - Microsoft Surface Pro with an external keyboard
 - iPad running iPadOS 13.4 or later with an external keyboard and an external mouse or touchpad
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+Kogu muu sisu, näiteks K-5 kursused (arvutiteaduse põhialused) ja kooditunni tegevused, ühilduvad iPadides ja muudes kaasaegsetes tahvelarvutites ning sülearvutites või lauaarvutites.
 
 ### Mobile Phones
 
-Our Hour of Code activities and CS Fundamentals courses can be completed on mobile phones. While these activities are usable, they are not optimized for a mobile phone experience and have some known limitations (e.g. touch targets may be small, accessory elements may display offscreen, and text may be difficult to input using the on-screen keyboard). The CS Discoveries, CS Principles, and Intro to App Lab courses are not usable on mobile phones.
+Meie kooditunni tegevusi ja CS-i põhialuste kursusi saab läbida mobiiltelefonides. Kuigi need tegevused on kasutatavad, ei ole need optimeeritud mobiiltelefoni kasutuskogemuse jaoks ja neil on mõned teadaolevad piirangud (nt puutesihtmärgid võivad olla väikesed, lisaseadmed võivad kuvada ekraanist väljas ja teksti võib olla raske sisestada ekraaniklaviatuuri abil). CS-i avastuste, CS-põhimõtete ja rakenduslabori sissejuhatuse kursused ei ole mobiiltelefonides kasutatavad.
 
 ## Videos
 
-We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our [online learning platform](https://studio.code.org). For schools with YouTube blocked, we attempt to display a Code.org hosted video player instead.
+Kasutame [YouTube](https://www.youtube.com) videote manustamiseks Code.org ja meie [veebiõppeplatvormi](https://studio.code.org). Koolides, kus YouTube on blokeeritud, proovime selle asemel kuvada Code.org hostitud videomängijat.
 
 ### Can you play this video?
 
-Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
+Enne Code.org veebikursuste alustamist testige alloleva video taasesitust, et veenduda, et olete valmis minema.
 
 
 <!--
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+See on mängija, mida kogu õppekavas kasutatakse. See üritab videot YouTube'i kaudu näidata ja kui YouTube on blokeeritud, kuvatakse Code.org hostitud videot, kasutades hoopis meie varusmängijat.
 
 ### Video not playing?
 
-If video does not work, you can email us at support@code.org.
+Kui video ei tööta, võite meile e-kiri aadressil support@code.org.
 
-However, you can still use our tutorials without video.
+Kuid, saate ikkagi kasutada meie õpetusi ilma videota.
 
 1. We've made all our videos [available for download together](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). If your school has low bandwidth, we recommend that you download videos and show them to students on a shared screen.
 2. Integrated into our tutorials, we've added a green download link icon <img src="/images/green-download.png" width=25 height=25 /> for each video, allowing students to download individual tutorial videos.
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## Special settings for Google Apps/G-Suite users
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+Kui olete G-suite'i administraator, kontrollige kindlasti, millised on teie YouTube'i piirangusätted. Kui olete määranud sätte „Ranged piiratud YouTube'i juurdepääs” või kui näete sõnumeid, milles öeldakse, et see video on piiratud, saate lisada meie kanali kinnitatud kanalite loendisse. Vaadake Google'i [seda juhendit](https://support.google.com/a/answer/6245597) , et saada teada, kuidas lisada meie kanal heakskiidetud loendisse. Samuti saate vaadata [seda juhendit](https://support.google.com/a/answer/6212415?hl=en) , et saada lisateavet erinevate seadete ja selle kohta, mis sobib teie klassiruumi jaoks kõige paremini.
 
 ## Still having trouble?
 
-We'll help you out - just email us at support@code.org!
+Aitame teid - saatke meile e-kiri aadressil support@code.org!

@@ -5,9 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # The Problem Solving Process 
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
-
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">The Problem Solving Process is a framework for structured problem solving. This process is woven throughout <strong>the entire CS Discoveries course</strong> to promote student growth and development. The Problem Solving Process is first introduced in Chapter 1 of the Problem Solving and Computing unit. 
+<div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">The Problem Solving Process is a framework for structured problem solving. This process is woven throughout <strong>the entire CS Discoveries course</strong> to promote student growth and development. The Problem Solving Process is first introduced in Chapter 1 of the Problem Solving and Computing unit. 
 </p>
 </div>
 
@@ -15,21 +13,21 @@ markdown <<MARKDOWN
 
 ## 🔎 Define
 
-* ##### Determine the problem you are trying to solve
-* ##### Identify your constraints
-* ##### Describe what success will look like
+* #### Determine the problem you are trying to solve
+* #### Identify your constraints
+* #### Describe what success will look like
 
 ## 📝 Prepare
-* ##### Brainstorm/research possible solutions
-* ##### Compare pros and cons
-* ##### Make a plan
+* #### Brainstorm/research possible solutions
+* #### Compare pros and cons
+* #### Make a plan
 
 ## 🖥️ Try
-* ##### Put your plan into action
+* #### Put your plan into action
 
 ## 🤔 Reflect
-* ##### Compare your results to the goals you set while defining the problem
-* ##### Decide what you can learn from this or do better next time
-* ##### Identify any new problems you have discovered
+* #### Compare your results to the goals you set while defining the problem
+* #### Decide what you can learn from this or do better next time
+* #### Identify any new problems you have discovered
 
 MARKDOWN

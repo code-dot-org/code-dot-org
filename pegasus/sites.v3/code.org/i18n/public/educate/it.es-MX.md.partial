@@ -17,9 +17,11 @@ theme: responsive
 
 ## Plataformas y navegadores compatibles
 
+A partir de julio de 2024, actualizaremos las versiones mínimas requeridas para navegadores y sistemas operativos. Si bien es posible que las versiones antiguas sigan funcionando, no podremos admitir solicitudes de corrección de errores en las versiones anteriores.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Navegador
@@ -40,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Navegador Julio '24
+        </th>
+        <tr>
+          <td>Cromo 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Safari móvil 14.x</td>
+        </tr>
+        <tr>
+          <td>Borde 119.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Plataforma
@@ -62,8 +86,30 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Plataforma Julio '24
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Androide 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Sitios que debes desbloquear
@@ -80,16 +126,15 @@ Con el objetivo de obtener la mejor experiencia con el contenido de Code.org, te
 | **Para usar el Simulador de Internet**                                                                                 | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Para usar el Web Lab**                                                                                               | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Para usar el botón Compartir de Google Classroom**                                                                   | `https://apis.google.com`                                                                                  |
-| **Para usar conjuntos de datos de App Lab**                                                                            | `https://*.firebaseio.com`<br />`ss: //*.firebaseo.com`                                              |
 
 ## Detalles de dispositivos móviles y tablets compatibles
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Las únicas tablets compatibles son las siguientes:
+Todos los cursos CS Discoveries, CS Principles, CS A e Intro to App Lab no son compatibles con tabletas o dispositivos móviles; se requiere un teclado y un mouse completos (o touchpad). Las únicas tablets compatibles son las siguientes:
 
 - Microsoft Surface Pro con un teclado externo
 - iPad con iPadOS 13.4 o posterior con un teclado externo y un mouse o panel táctil externo
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+Todos los demás contenidos, como los cursos K-5 (Fundamentos de Ciencias de la Computación) y las actividades de Hora del Código son compatibles en iPads y otras tabletas modernas y computadoras portátiles o de escritorio.
 
 ### Teléfonos móviles
 

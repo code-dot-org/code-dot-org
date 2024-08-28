@@ -1,8 +1,13 @@
-import sinon from 'sinon';
-import {getCode, moveHiddenBlocks} from '@cdo/apps/blockly/addons/cdoUtils';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
 import * as cdoSerializationHelpers from '@cdo/apps/blockly/addons/cdoSerializationHelpers';
+import {getCode, moveHiddenBlocks} from '@cdo/apps/blockly/addons/cdoUtils';
 import * as cdoXml from '@cdo/apps/blockly/addons/cdoXml';
-import {expect} from '../../../util/reconfiguredChai';
+
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import setBlocklyGlobal from '../../../util/setupBlocklyGlobal';
+
+setBlocklyGlobal();
 
 describe('CdoUtils', () => {
   describe('moveHiddenBlocks', () => {

@@ -1,7 +1,0 @@
-#!/usr/bin/env ruby
-require_relative '../deployment'
-require_relative '../lib/cdo/mysql_console_helper'
-
-raise 'please define CDO.devinternal_db_writer' unless CDO.devinternal_db_writer
-
-MysqlConsoleHelper.run(CDO.devinternal_db_writer, ARGV.join(' ').strip)

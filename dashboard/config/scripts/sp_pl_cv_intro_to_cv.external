@@ -1,0 +1,29 @@
+name 'sp-pl-CV_Intro-to-CV'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson 1: Introduction to Computer Vision
+
+<img src="https://images.code.org/d84e29dc1d036a5fd755e0f1ca039ffa-image-1715268406186.png" alt="cat from the pixel activity" width="300px" style="border-radius:20px; float:right; margin: 0 0 40px 40px; transform: scaleX(-1);">
+
+#### In this introductory lesson on computer vision, students explore the fundamentals of **how computers interpret visual data**. 
+
+#### The core activity, **"The Search for Pixel,"** provides a hands-on approach to understanding image processing through a series of problem-solving rounds. 
+
+#### By the end of the lesson, students should be able to construct a working definition of **computer vision** and identify its **real-world applications.**
+
+## Check it out!
+
+#### Explore the **Search for Pixel** activity on the next level. Read the directions carefully and click through the provided slides to experience some of the activity. 
+
+#### You can work through the entire activity, or just part of it to get an idea of what your students will learn. 
+
+<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> Practice this activity ahead of time. Some students may get confused with the navigation of the exploration map. It could be helpful to complete the first round together as a whole class.  
+</p>
+</div>
+
+
+MARKDOWN

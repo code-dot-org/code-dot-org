@@ -1,22 +1,20 @@
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import {
-  Header,
-  ConfirmCancelFooter,
-} from '@cdo/apps/lib/ui/SystemDialog/SystemDialog';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {
   ADD_A_PERSONAL_LOGIN_HELP_URL,
   RELEASE_OR_DELETE_RECORDS_EXPLANATION,
 } from '@cdo/apps/lib/util/urlHelpers';
-import Button from '@cdo/apps/templates/Button';
+import {
+  Header,
+  ConfirmCancelFooter,
+} from '@cdo/apps/sharedComponents/SystemDialog/SystemDialog';
 import ConfirmRemoveStudentDialog, {
   MINIMUM_TEST_PROPS,
 } from '@cdo/apps/templates/manageStudents/ConfirmRemoveStudentDialog';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
-
-import {assert} from '../../../util/reconfiguredChai';
 
 const studentName = MINIMUM_TEST_PROPS.studentName;
 
@@ -25,7 +23,7 @@ describe('ConfirmRemoveStudentDialog', () => {
     const wrapper = mount(
       <ConfirmRemoveStudentDialog {...MINIMUM_TEST_PROPS} isOpen={false} />
     );
-    assert.equal('<div></div>', wrapper.html());
+    expect('<div></div>').toEqual(wrapper.html());
   });
 
   it('renders minimal content if student has never signed in', () => {
@@ -35,7 +33,7 @@ describe('ConfirmRemoveStudentDialog', () => {
         hasEverSignedIn={false}
       />
     );
-    assert(
+    expect(
       wrapper.containsMatchingElement(
         <div>
           <Header text={i18n.removeUnusedStudentHeader({studentName})} />
@@ -50,7 +48,7 @@ describe('ConfirmRemoveStudentDialog', () => {
           />
         </div>
       )
-    );
+    ).toBeTruthy();
   });
 
   it('renders warning text if student has ever signed in', () => {
@@ -60,7 +58,7 @@ describe('ConfirmRemoveStudentDialog', () => {
         hasEverSignedIn={true}
       />
     );
-    assert(
+    expect(
       wrapper.containsMatchingElement(
         <div>
           <Header text={i18n.removeStudentAndRecordsHeader({studentName})} />
@@ -87,7 +85,7 @@ describe('ConfirmRemoveStudentDialog', () => {
           />
         </div>
       )
-    );
+    ).toBeTruthy();
   });
 
   it('renders personal login help if student depends on this section for login', () => {
@@ -98,7 +96,7 @@ describe('ConfirmRemoveStudentDialog', () => {
         dependsOnThisSectionForLogin={true}
       />
     );
-    assert(
+    expect(
       wrapper.containsMatchingElement(
         <div>
           <Header text={i18n.removeStudentAndRecordsHeader({studentName})} />
@@ -138,6 +136,6 @@ describe('ConfirmRemoveStudentDialog', () => {
           />
         </div>
       )
-    );
+    ).toBeTruthy();
   });
 });

@@ -8,7 +8,7 @@
   "properties": {
     "encrypted": "false",
     "instructions_important": "false",
-    "long_instructions": "# Introduction to Computer Vision Reflection\r\n\r\nWhat is your definition of computer vision?\r\n\r\n**Use the space below to describe what computer vision is to you and why**\r\n\r\n![]()",
+    "long_instructions": "# Introduction to Computer Vision Reflection\r\n\r\n### What is your definition of computer vision?\r\n\r\n**Use the space below to answer the above prompt**\r\n\r\n![]()",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -21,7 +21,7 @@
     "teacher_markdown": "Allows students to share what they have constructed as their working definition of computer vision thus far. This definition is sure to evolve and grow as the module progresses. Some possible examples for a working definition might include:\r\n* Computer vision is like when your computer tries to figure out what's in a picture, kind of like how we recognize our friends' faces or stuff in photos\r\n* Computer vision helps computers 'see' and understand the images and videos like we do, but through cameras and algorithms\r\n* It's like teaching a computer to see and interpret the world around it, so it can recognize objects, people, and even actions\r\n* It's a part of artificial intelligence where computers are trained to interpret and understand the visual world\r\n"
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-04-18T23:34:23.678+00:00\",\"changed\":[\"cloned from \\\"Code wAI_CFU_L1_1\\\"\"],\"cloned_from\":\"Code wAI_CFU_L1_1\"},{\"changed_at\":\"2024-04-18 23:36:03 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-04-18T23:34:23.678+00:00\",\"changed\":[\"cloned from \\\"Code wAI_CFU_L1_1\\\"\"],\"cloned_from\":\"Code wAI_CFU_L1_1\"},{\"changed_at\":\"2024-04-18 23:36:03 +0000\",\"changed\":[\"long_instructions\",\"teacher_markdown\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-19 19:07:01 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-04-19 19:10:43 +0000\",\"changed\":[],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

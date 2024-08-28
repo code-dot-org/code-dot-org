@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
@@ -12,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "pilot-coursee-maker-2024",
-    "serialized_at": "2024-04-04 15:56:08 UTC",
+    "serialized_at": "2024-05-06 23:30:34 UTC",
     "published_state": "pilot",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

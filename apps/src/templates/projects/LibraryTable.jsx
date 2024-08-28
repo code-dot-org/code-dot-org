@@ -1,18 +1,21 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import {connect} from 'react-redux';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
+import React from 'react';
+import {connect} from 'react-redux';
 import * as Table from 'reactabular-table';
 import * as sort from 'sortabular';
-import wrappedSortable from '../tables/wrapped_sortable';
-import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
-import {unpublishProjectLibrary} from './projectsRedux';
-import PersonalProjectsNameCell from './PersonalProjectsNameCell';
-import Button from '@cdo/apps/templates/Button';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import color from '@cdo/apps/util/color';
 import {reload} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
+
+import {tableLayoutStyles, sortableOptions} from '../tables/tableConstants';
+import wrappedSortable from '../tables/wrapped_sortable';
+
+import PersonalProjectsNameCell from './PersonalProjectsNameCell';
+import {unpublishProjectLibrary} from './projectsRedux';
 
 export const COLUMNS = {
   LIBRARY_NAME: 0,

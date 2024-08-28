@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "Foundations of CS",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -11,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-13 15:50:37 UTC",
+    "serialized_at": "2024-07-11 17:52:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -46,18 +48,9 @@
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
-        "announcements": [
-          {
-            "notice": "AI/ML Professional Development",
-            "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
-            "link": "https://studio.code.org/courses/self-paced-pl-aiml-2023",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students are introduced to a form of artificial intelligence called machine learning and how they can use the Problem Solving Process to help train a robot to solve problems. They participate in three machine learning activities where a robot - A.I. Bot - is learning how to detect patterns in fish.\n\n**Question of the Day:** How can we use the Problem Solving Process to solve a problem with machine learning?",
-        "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student",
         "student_overview": "Learn the basics of machine learning by helping AI Bot recognize fish to clean up the ocean"
       },
       "seeding_key": {
@@ -74,19 +67,9 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "announcements": [
-          {
-            "notice": "AI/ML Professional Development",
-            "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
-            "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students will consider how they create “mental” models when learning new concepts, and how those can be similar to a “machine learning” model. They participate in a color pattern activity to simulate building a machine learning model without help, then they play a game called \"Green Glass Door\" as an example of supervised learning, and finally, they will sort several scenarios into “supervised” or “unsupervised” learning.\n\n**Question of the Day:** What are different types of machine learning?",
-        "preparation": "- Review all materials for today’s lesson.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
-        "purpose": "- Review the Code Studio levels before the lesson so you know how to play the game called “the Green Glass Door”\n- Print or prepare to share online copies of the activity guide for each student",
+        "preparation": "- Review the Code Studio levels before the lesson so you know how to play the game called “the Green Glass Door”\n- Print or prepare to share online copies of the activity guide for each student",
         "student_overview": "Learn two different types of machine learning - supervised and unsupervised learning. Then compare how machine learning can be similar or different to how humans learn."
       },
       "seeding_key": {
@@ -103,18 +86,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "announcements": [
-          {
-            "notice": "AI/ML Professional Development",
-            "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
-            "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
-            "type": "information",
-            "visibility": "Teacher-only"
-          }
-        ],
-        "assessment_opportunities": "1) **Describe how Artificial Intelligence is having an impact on society**\n\n\tSee the activity guide for this lesson as a way to measure each step of the problem solving process.",
         "overview": "In this lesson, students explore an application of AI called Seeing AI and examine how it is supporting people with visual impairments. Then, students research other examples of how AI is impacting society, focusing on users who are impacted by the examples they find. Finally, students share their findings with each other.\n\n**Question of the Day:** How is AI helping to solve problems around the world?",
-        "preparation": "- Print copies of the activity guide for each student\n- Prepare to digitally distribute the AI Research Areas resource to students. \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Print copies of the activity guide for each student\n- Prepare to digitally distribute the AI Research Areas resource to students. ",
         "student_overview": "Research different examples of how Artificial Intelligence is being used to solve problems in the world."
       },
       "seeding_key": {
@@ -133,7 +106,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students will examine several apps that make decisions about what shoes to wear, ultimately building up to an understanding of how machine learning can help make this decision. Students are guided to the conclusion that surveying their users can help them make the best decision by looking for patterns in the data and basing their decisions on these patterns.\n\n**Question of the Day:** What strategies do computer models use to make decisions?",
-        "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student",
         "student_overview": "Explore three different ways computers can make recommendations and how important data can be in making accurate decisions."
       },
       "seeding_key": {
@@ -152,7 +125,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students will participate in an unplugged activity simulating one of the machine learning algorithms computers use to separate data into groups to help make decisions. Students will be tasked with helping a computer learn to classify food as fruits or vegetables, graph 20 different fruits on two axes comparing “sweetness” to “easy to eat”, and then try to separate the data into groups - a fruit area, and a veggie area.\n\n**Question of the Day:** How do computers learn to classify data?",
-        "preparation": "- Review all materials for today’s lesson.\n- Cut out fruit & veggie cards - one set of cards for each group\n- Ruler or straightedge for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Review all materials for today’s lesson.\n- Cut out fruit & veggie cards - one set of cards for each group\n- Ruler or straightedge for each student",
         "student_overview": "Learn how to create a machine learning model by helping a computer classify foods as fruits or veggies"
       },
       "seeding_key": {
@@ -171,7 +144,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students will dive into the AI Lab tool for the first time, where they select features to train a model that predicts a given label. They start by exploring AI Lab and training a model to recognize shapes. Then they pretend they have been hired by several restaurants who would like to make recommendations to new customers based on survey data they’re collected, go through each dataset, and use data visualization tools to identify features with high relationships in the data.\n\n**Question of the Day:** How can we use machine learning to make recommendations?",
-        "preparation": "- Review the Code Studio levels before the lesson\n- Watch the two videos in this lesson and be familiar with AI Lab\n- Print or prepare to share online copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Review the Code Studio levels before the lesson\n- Watch the two videos in this lesson and be familiar with AI Lab\n- Print or prepare to share online copies of the activity guide for each student",
         "student_overview": "Learn how to use AI Lab to train machine learning models, such as how to recognize shapes or how to make food recommendations for a restaurant."
       },
       "seeding_key": {
@@ -190,7 +163,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson students are introduced to importing their models into App Lab and linking their model to their screens. They help create a book recommendation app and learn how to add a welcome screen and events to their code. This lesson assumes students are already familiar with App Lab - for classrooms that have not seen App Lab before, consider extending this lesson and including additional videos or activities that are recommended in the lesson plan.\n\n**Question of the Day:** How can I create an app using machine learning?",
-        "preparation": "- Review the Code Studio levels before the lesson so you will be familiar with importing a model into App Lab\n- Decide if you would like to provide additional resources for students to become familiar with App Lab, as outlined in the lesson plan.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Review the Code Studio levels before the lesson so you will be familiar with importing a model into App Lab\n- Decide if you would like to provide additional resources for students to become familiar with App Lab, as outlined in the lesson plan.",
         "student_overview": "Learn how to import a model into App Lab to help create a Book Recommendation app for a middle school classroom."
       },
       "seeding_key": {
@@ -209,7 +182,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will investigate a model for bias and be introduced to a Model Card, which is a way of representing important information about a trained model that could help uncover bias. They will be investigating a Medical Priority app, which helps a hospital decide how soon to view patients based on their symptoms. As students go through the activity, they realize that the app is biased based on personal information and examine how this could happen.\n\n**Question of the Day:** How can we evaluate machine learning models once they've been trained?",
-        "preparation": "- Review the Code Studio levels before the lesson\n- Anticipate how you will guide the discussion on racial and gender bias, considering that some students may have experiences similar to those discussed in this lesson.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Review the Code Studio levels before the lesson\n- Anticipate how you will guide the discussion on racial and gender bias, considering that some students may have experiences similar to those discussed in this lesson.",
         "student_overview": "Help decide which model a hospital should use for it's emergency room prioritization system, and determine which models include unintended biases. You will also learn how Model Cards can help evaluate and analyze machine learning models."
       },
       "seeding_key": {
@@ -228,7 +201,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students complete the full process of training and saving a model, then importing into App Lab. For the first time, students are able to choose the label they would like to predict and spend time deciding the features they will use to help predict their label of choice. Students also create a model card for their models in order to save them and import it into App Lab\n\n**Question of the Day:** How can I use Model Cards to document my decisions when training a machine learning model?",
-        "preparation": "- Review the Code Studio levels before the lesson to be familiar with investigating columns in AI Lab and training their  model\n- Print copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Review the Code Studio levels before the lesson to be familiar with investigating columns in AI Lab and training their  model\n- Print copies of the activity guide for each student",
         "student_overview": "Help train several models to help a zoo create educational apps for their customers. You will create Model Cards for each of your models, then import one of them into App Lab to create an app."
       },
       "seeding_key": {
@@ -247,7 +220,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students practice importing their models into App Lab, this time including models that have numerical data and using model cards to help improve the user experience of filling out their form. They will then learn how to view the model card within App Lab and use this to add more descriptive elements to an app. Next, they focus on improving the user experience by adding informational text to help guide users through completing the form and adding a style to their app to improve the user experience.\n\n**Question of the Day:** How can I use a Model Card to improve my app?",
-        "preparation": "- Review the Code Studio levels before the lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Review the Code Studio levels before the lesson",
         "student_overview": "Learn how to use Model Cards to improve a machine learning app, and how to update the final screen based on the model prediction."
       },
       "seeding_key": {
@@ -266,7 +239,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students participate in an unplugged activity simulating a zombie outbreak. Students must predict which parts of town have the least amount of zombies using data from a neighboring town. Students will use degrees of similarity and averages to make predictions about the number of zombies at a particular location. Then, students are rescued and get to compare their predictions to the actual numbers as a way to discuss how accuracy is different for numerical data compared to categorical data.\n\n**Question of the Day:** How do computers learn to make predictions with numerical data?",
-        "preparation": "- Review all materials for today’s lesson.\n- Print or prepare to share online the activity guide - one per student or group.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Review all materials for today’s lesson.\n- Print or prepare to share online the activity guide - one per student or group.",
         "student_overview": "Zombies have invaded your town and you need to use data to predict which parts of town have the least amount of zombies so you can lead people to safety."
       },
       "seeding_key": {
@@ -285,7 +258,6 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will be introduced to numerical data which represents a range of values. Students are presented with a scenario where every feature and label is represented with numerical data, and they learn to use the new data visualization tools within AI Lab to help find patterns.\n\n**Question of the Day:** How can we use AI Lab to predict numerical data?",
-        "preparation": "- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
         "student_overview": "Use AI Lab and numerical data to make predictions about real-world scenarios"
       },
       "seeding_key": {
@@ -304,7 +276,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students will explore how to customize the code of their app to make additional changes to the design of their app. They will start by exploring a single-screen app and then practice expanding the app to two-screens and updating the code to use the new design mode elements. After this, students help create a Driver Alert app that requires changes to the code using new design mode elements. Using the skills from this lesson, students will be able to create multi-screen apps where questions can appear on multiple screens instead of a single screen.\n\n**Question of the Day:** How can I customize the code for a machine learning app?",
-        "preparation": "- Review the Code Studio levels before the lesson to be familiar with changing the input element \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Review the Code Studio levels before the lesson to be familiar with changing the input element ",
         "student_overview": "Learn how to edit the code for a machine learning app by helping to create a driver alert system, where each sensor is on a different screen of the app."
       },
       "seeding_key": {
@@ -323,7 +295,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In small groups, students conduct research using articles and videos that expose ethical pitfalls in an Artificial Intelligence (AI) area of their choice. Afterward, each group develops at least one solution-oriented principle that addresses their chosen area. These principles are then assembled into a class-wide “Our AI Code of Ethics” resource (e.g. a slide presentation, document, or webpage) for AI creators and legislators everywhere.\n\n**Question of the Day:** What are guidelines we can use to create ethical machine learning apps?",
-        "preparation": "- Prepare to share online one **AI Ethics Research Areas** handout per group.\n- Print or prepare to share online one **AI Ethics Research Reflection** handout per group.\n- Prepare a shareable web document, slide presentation, video template, or any other form of media to be used to comprise your class’ “Our AI Code of Ethics” resource.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Prepare to share online one **AI Ethics Research Areas** handout per group.\n- Print or prepare to share online one **AI Ethics Research Reflection** handout per group.\n- Prepare a shareable web document, slide presentation, video template, or any other form of media to be used to comprise your class’ “Our AI Code of Ethics” resource.",
         "student_overview": "What does it mean for artificial intelligence to be used ethically? In this lesson, you'll help create an AI Code of Ethics and research examples of artificial intelligence that are or are not following your code of ethics."
       },
       "seeding_key": {
@@ -341,7 +313,7 @@
       "relative_position": 15,
       "properties": {
         "overview": "In this one or two day project, students apply their skills from the unit so far and create a machine learning app using real-world data. Students are provided with several real-world datasets from a variety of contexts, and they choose which dataset they would like to investigate. They train and save their model, then make a simple App Lab app that uses the model. This mini-project is an opportunity to assess how well students can use features to create accurate machine learning models, and how well they can create apps that use machine learning.\n\n**Question of the Day:** Can I use real-world data to create an app that uses machine learning?",
-        "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-make-a-machine-learning-app-ai-and-machine-learning-lesson-15/36219) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "preparation": "- Review the Code Studio levels before the lesson\n- Print copies of the activity guide for each student",
         "student_overview": "Choose from several real-world datasets to train a model and create an app that uses machine learning"
       },
       "seeding_key": {
@@ -353,21 +325,8 @@
   ],
   "lesson_activities": [
     {
-      "key": "a1e9200d-1f36-4976-b800-9f4512722b4a",
-      "position": 1,
-      "properties": {
-        "name": "Before the Lesson"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "a1e9200d-1f36-4976-b800-9f4512722b4a",
-        "lesson.key": "Introduction to Machine Learning",
-        "lesson_group.key": "",
-        "script.name": "fcs3-beta-2024"
-      }
-    },
-    {
       "key": "98d9a536-daf8-4ecf-a496-378b5710102b",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 10,
         "name": "Warm Up"
@@ -381,7 +340,7 @@
     },
     {
       "key": "3371e790-2aa6-4b9a-bf52-8686806412b0",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -395,7 +354,7 @@
     },
     {
       "key": "1807699c-feba-4fd3-9099-f976080fb93f",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -1022,18 +981,6 @@
     }
   ],
   "activity_sections": [
-    {
-      "key": "cc8744de-61bc-442f-8710-c9033ca12f6a",
-      "position": 1,
-      "properties": {
-        "description": "**Getting Started with Code.org:** Consider watching our [Getting Started with Code.org](https://www.youtube.com/playlist?list=PLzdnOPI1iJNdX7P76yGw7YUM4Csm1ZZmM) video series for an overview of how to navigate lesson plans, setup a classroom section, and other important features of the Code.org platform. Each video also has a support article if you'd prefer to read or print instructions - [click here to learn more](https://support.code.org/hc/en-us/articles/4405629586957-New-how-to-walkthrough-videos-for-teachers-).\n\n**Setup a Classroom Section:** You can use a class section in Code.org to manage your students, view their progress, and assign specific curriculum - [click here to learn more](https://support.code.org/hc/en-us/articles/115000488132-Creating-a-classroom-section).\n\nIf you are using a learning management system, there may be additional steps to sync your classes with Code.org:\n\n- [Click here](https://support.code.org/hc/en-us/articles/115001319312-Setting-up-sections-with-Google-Classroom-sync) for steps to setup your classes with Google Classroom\n- [Click Here](https://support.code.org/hc/en-us/articles/115002716111-Setting-up-sections-with-Clever-sync) for steps to setup your classes with Clever\n\n**Become a Verified Teacher:** Lesson plans and levels have additional resources and answer keys for Verified Teachers, which is quick process that verifies your position at an educational institution. [Click here to complete a form](https://docs.google.com/forms/d/e/1FAIpQLSdGGAJuaDMBVIRYnimPhAL96w6fCl4UdvhwmynGONM75TWwWw/viewform) and you should have access to verified teacher resources in ~1 business day. Verified teachers also have access to the [\"Teacher's Lounge\"](https://forum.code.org/c/csd/csd-teachers-lounge/444) section of the forums.\n\n**Get Inspired:** Consider watching our [Teacher Tips video playlist](https://www.youtube.com/playlist?list=PLzdnOPI1iJNcc7Q-PvUVqV249l2JzhJes), featuring current CS Discoveries teachers.\n\n**Technical Requirements:** For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to _ensure specific sites **are allowed** and **are not blocked**_. **[Click here to see a list of sites to unblock](https://code.org/educate/it)**. \n\nYou can also find mobile and tablet support details, hardware recommendation information such as minimum Internet connection speed, smallest screen size supported, and other hardware recommendations, as well as a list of supported browsers and platforms at the same [technical requirements website](https://code.org/educate/it). ",
-        "name": "Preparing for the Unit"
-      },
-      "seeding_key": {
-        "activity_section.key": "cc8744de-61bc-442f-8710-c9033ca12f6a",
-        "lesson_activity.key": "a1e9200d-1f36-4976-b800-9f4512722b4a"
-      }
-    },
     {
       "key": "73ecdb99-42a6-4563-b25a-245f02cb5484",
       "position": 1,
@@ -3362,13 +3309,7 @@
       "position": 13,
       "properties": {
         "description": "**Choice Levels:** Once students have created their Book Recommender app, they can choose from several example activities to continue improving their app. Each level uses the same Book Recommender app they’ve already built as a template to add to. Students can choose to complete as many of these levels as they would like - each one lets them continue to customize and improve their app.",
-        "progression_name": "Choice Levels: Customize Your App",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Student Choice and Practice Levels:** Having students choose their own practice levels are one way to differentiate instruction with your students. To learn more about how these levels support differentiation, as well as other strategies, you can review the [CSD Guide to Differentiation](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)"
-          }
-        ]
+        "progression_name": "Choice Levels: Customize Your App"
       },
       "seeding_key": {
         "activity_section.key": "dc7acdc4-c245-4e12-9c0e-db589dd07a85",
@@ -3900,10 +3841,6 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "**Formative Assessment:** This level can be used as a formative assessment. "
-          },
-          {
-            "type": "assessmentOpportunity",
             "markdown": "**Formative Assessment:** This level can be used as a formative assessment. A rubric is provided in the level, and written feedback can be given to students. [Click here to learn more about giving feedback to students](https://support.code.org/hc/en-us/articles/360035582612-How-do-I-leave-feedback-for-my-students-).\n"
           }
         ]
@@ -4230,13 +4167,7 @@
       "position": 16,
       "properties": {
         "description": "**Practice Levels:** Have students choose one or two practice levels to complete in order to deepen their understanding of model cards and if-statements. Students don't need to complete all practice levels - once they feel comfortable, they can continue to the next level to see how well they've mastered the concepts in this lesson.",
-        "progression_name": "Practice",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Student Choice and Practice Levels:** Having students choose their own practice levels are one way to differentiate instruction with your students. To learn more about how these levels support differentiation, as well as other strategies, you can review the [CSD Guide to Differentiation](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)"
-          }
-        ]
+        "progression_name": "Practice"
       },
       "seeding_key": {
         "activity_section.key": "9b01af2f-e7d7-45ad-a84d-89a784be2c47",
@@ -5610,6 +5541,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_FishVTrash_2023"
+        ],
         "progression": "Recognizing Fish"
       },
       "bonus": false,
@@ -5632,6 +5566,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Short_2023"
+        ],
         "progression": "Recognizing Fish Features"
       },
       "bonus": false,
@@ -5654,6 +5591,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Oceans_Long_2023"
+        ],
         "progression": "Recognizing Expressions"
       },
       "bonus": false,
@@ -5676,6 +5616,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "aiml-intro-pulse-survey_2023"
+        ],
         "progression": "Check-In Survey"
       },
       "bonus": false,
@@ -5698,6 +5641,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-L2 unsupervised - 1_2023"
+        ],
         "progression": "Looking for Patterns"
       },
       "bonus": false,
@@ -5720,6 +5666,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-L2 supervised - green glass door_2023"
+        ],
         "progression": "Green Glass Door"
       },
       "bonus": false,
@@ -5742,6 +5691,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models-shoes random_2023"
+        ],
         "progression": "Shoe Recommender"
       },
       "bonus": false,
@@ -5764,6 +5716,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models-shoes decision tree_2023"
+        ],
         "progression": "Improved Shoe Recommender"
       },
       "bonus": false,
@@ -5786,6 +5741,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models-shoe survey_2023"
+        ],
         "progression": "Shoe Recommendation Survey"
       },
       "bonus": false,
@@ -5808,6 +5766,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models-shoes points_2023"
+        ],
         "progression": "Ultimate Shoe Recommender"
       },
       "bonus": false,
@@ -5830,6 +5791,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro ai lab- fruit veggie widget_2023"
+        ],
         "progression": "Fruit and Veggie Explorer"
       },
       "bonus": false,
@@ -5852,6 +5816,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro ai lab-shapes v1_2023"
+        ],
         "progression": "Recognizing Shapes"
       },
       "bonus": false,
@@ -5874,6 +5841,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro categorical-pizza_2023"
+        ],
         "progression": "Pizza Recommendations"
       },
       "bonus": false,
@@ -5896,6 +5866,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro categorical-food choices_2023"
+        ],
         "progression": "You Choose: Restaurant Recommendations"
       },
       "bonus": false,
@@ -5918,6 +5891,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender demo_2023"
+        ],
         "progression": "Book Recommender App"
       },
       "bonus": false,
@@ -5940,6 +5916,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 0_2023"
+        ],
         "progression": "Import a Model"
       },
       "bonus": false,
@@ -5962,6 +5941,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 1_2023"
+        ],
         "progression": "Customize Your App"
       },
       "bonus": false,
@@ -5984,6 +5966,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 2_2023"
+        ],
         "progression": "Customize Your App"
       },
       "bonus": false,
@@ -6006,6 +5991,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 3_2023"
+        ],
         "progression": "Customize Your App"
       },
       "bonus": false,
@@ -6028,6 +6016,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 4_2023"
+        ],
         "progression": "Customize Your App"
       },
       "bonus": false,
@@ -6050,6 +6041,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-intro app lab-book recommender 5_2023"
+        ],
         "progression": "Choice Levels: Customize Your App"
       },
       "bonus": false,
@@ -6072,6 +6066,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-model card-medical app v2 2021-2_2023"
+        ],
         "progression": "Medical Priority App"
       },
       "bonus": false,
@@ -6094,6 +6091,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-model cards-book recommender model card_2023"
+        ],
         "progression": "Book Recommender Model Card"
       },
       "bonus": false,
@@ -6116,6 +6116,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-model card-medical-1_2023"
+        ],
         "progression": "Medical Dataset Model Cards"
       },
       "bonus": false,
@@ -6138,6 +6141,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-model card-medical-2_2023"
+        ],
         "progression": "Medical Dataset Model Cards"
       },
       "bonus": false,
@@ -6160,6 +6166,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-model card-medical-3_2023"
+        ],
         "progression": "Medical Dataset Model Cards"
       },
       "bonus": false,
@@ -6182,6 +6191,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions-zoo1_2023"
+        ],
         "progression": "Zoo Predictions"
       },
       "bonus": false,
@@ -6204,6 +6216,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions-zoo2_2023"
+        ],
         "progression": "Zoo Predictions"
       },
       "bonus": false,
@@ -6226,6 +6241,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions-zoo3_2023"
+        ],
         "progression": "Zoo Predictions"
       },
       "bonus": false,
@@ -6248,6 +6266,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions- import app_2023"
+        ],
         "progression": "Importing Your Model"
       },
       "bonus": false,
@@ -6270,6 +6291,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-data decisions- customize app_2023"
+        ],
         "progression": "Customizing Your App"
       },
       "bonus": false,
@@ -6292,6 +6316,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-zoo model embed_2023"
+        ],
         "progression": "Example App: Zoo Classification"
       },
       "bonus": false,
@@ -6314,6 +6341,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example1A_2023"
+        ],
         "progression": "Pet Recommender"
       },
       "bonus": false,
@@ -6336,6 +6366,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-pet model card_2023"
+        ],
         "progression": "Pet Recommender"
       },
       "bonus": false,
@@ -6358,6 +6391,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example1B_2023"
+        ],
         "progression": "Pet Recommender"
       },
       "bonus": false,
@@ -6380,6 +6416,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-screens-2_2023"
+        ],
         "progression": "Adding New Screens"
       },
       "bonus": false,
@@ -6402,6 +6441,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-screens-1_2023"
+        ],
         "progression": "Adding New Screens"
       },
       "bonus": false,
@@ -6424,6 +6466,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-screens-3_2023"
+        ],
         "progression": "Adding New Screens"
       },
       "bonus": false,
@@ -6446,6 +6491,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-choice parent_2023"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -6468,6 +6516,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ml-models in applab-zoo assessment_2023"
+        ],
         "progression": "Assessment"
       },
       "bonus": false,
@@ -6490,6 +6541,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use models applab-practice choice_2023"
+        ],
         "progression": "Challenge"
       },
       "bonus": false,
@@ -6512,6 +6566,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ml-numerical ai lab-safari 1_2023"
+        ],
         "progression": "Safari Model"
       },
       "bonus": false,
@@ -6534,6 +6591,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-numerical data- import app_2023"
+        ],
         "progression": "Safari App"
       },
       "bonus": false,
@@ -6556,6 +6616,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-customize-raspado_2023"
+        ],
         "progression": "Raspado Recommender"
       },
       "bonus": false,
@@ -6578,6 +6641,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3A_2023"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -6600,6 +6666,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3_EditA_2023"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -6622,6 +6691,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3_EditB_2023"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -6644,6 +6716,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3_EditC_2023"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -6666,6 +6741,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3C_2023"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -6688,6 +6766,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3D_2023"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -6710,6 +6791,9 @@
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "ml-use model card-example3E_2023"
+        ],
         "progression": "Driver Alert System"
       },
       "bonus": false,
@@ -6732,6 +6816,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-customize apps-practice choice_2023"
+        ],
         "progression": "You Choose: Improve Your App"
       },
       "bonus": false,
@@ -6754,6 +6841,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-mini project-ai lab 2_2023"
+        ],
         "progression": "Train a Model in AI Lab"
       },
       "bonus": false,
@@ -6776,6 +6866,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "ml-mini project-app lab_2023"
+        ],
         "progression": "Create an App in App Lab"
       },
       "bonus": false,
@@ -6798,6 +6891,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "aiml-ch1-pulse-survey_2023"
+        ],
         "progression": "Reflection"
       },
       "bonus": false,
@@ -7635,6 +7731,50 @@
       },
       "seeding_key": {
         "resource.key": "ai_what_is_machine_learning_"
+      }
+    },
+    {
+      "name": "All Code",
+      "url": "/s/fcs3-beta-2024/code",
+      "key": "all_code_3",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code_3"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/fcs3-beta-2024/resources",
+      "key": "all_resources_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_5"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/fcs3-beta-2024/standards",
+      "key": "all_standards_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_5"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/fcs3-beta-2024/vocab",
+      "key": "all_vocabulary_5",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_5"
       }
     },
     {
@@ -8595,7 +8735,30 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_code_3",
+        "script.name": "fcs3-beta-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_5",
+        "script.name": "fcs3-beta-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_5",
+        "script.name": "fcs3-beta-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_5",
+        "script.name": "fcs3-beta-2024"
+      }
+    }
   ],
   "scripts_student_resources": [
 

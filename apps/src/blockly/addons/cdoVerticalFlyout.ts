@@ -1,4 +1,5 @@
 import GoogleBlockly from 'blockly/core';
+
 import {ExtendedWorkspaceSvg} from '../types';
 
 export default class VerticalFlyout extends GoogleBlockly.VerticalFlyout {

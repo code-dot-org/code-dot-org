@@ -1,0 +1,21 @@
+name 'unplugged_binary bracelets_markdown'
+title 'binary bracelets markdown'
+
+markdown <<MARKDOWN
+##Binary Bracelets
+<div>
+<img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/6eb8b81ed68b2169aaf494db63964aad-image-1719938394267.39.51 AM.png" />
+
+<div style="float: left; width: 70%; padding-left:20px">
+<h4>
+<strong>This is an Unplugged Activity! </strong>
+</h4>
+
+> Ask your teacher for what you need:
+> - **<a href="https://docs.google.com/document/d/1YV1Oer_1DMzilyHriimgPVZnaC6JUjU5YDE8Ui065hE/edit" target="_blank">Worksheet</a>**
+> - **<a href="https://docs.google.com/document/d/14Huy1clX_WgDnQQFugnF5fwoF6POWRZ-8skc1Eyr4bU/edit" target="_blank">Assessment</a>**
+
+</div>
+
+
+MARKDOWN

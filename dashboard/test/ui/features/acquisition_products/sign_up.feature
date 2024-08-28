@@ -8,9 +8,7 @@ Scenario: Teacher can create an account with the new school association flow
   And I press keys "password" for element "#user_password"
   And I press keys "password" for element "#user_password_confirmation"
   And I press "#signup_form_submit" using jQuery
-  # Add the experiment flag
-  And I am on "http://studio.code.org/users/sign_up?enableExperiments=school_association_v2"
-  And I press "select-user-type-teacher"
+  And I click selector "#select-user-type-teacher" once I see it
   And I press keys "myDisplayName" for element "#user_name"
   And I select the "United States" option in dropdown "uitest-country-dropdown"
   And I press keys "31513" for element "#uitest-school-zip"
@@ -20,3 +18,4 @@ Scenario: Teacher can create an account with the new school association flow
   When I press "user_email_preference_opt_in_no"
   And I press "#signup_finish_submit" using jQuery
   And I wait until I see selector "#uitest-accept-section-creation"
+  And I close my eyes

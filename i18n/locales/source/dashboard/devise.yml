@@ -11,7 +11,8 @@ en:
       inactive: "Your account was not activated yet."
       invalid: "Invalid email or password."
       invalid_token: "Invalid authentication token."
-      locked: "Your account is locked."
+      locked: "Too many failed login attempts. Your account has been temporarily locked. You will receive an email with instructions to recover your account shortly."
+      last_attempt: "Warning! You have one more failed login attempt before your account is temporarily locked."
       not_found_in_database: "Invalid email or password."
       timeout: "Your session expired, please sign in again to continue."
       unauthenticated: "You need to sign in or sign up before continuing."
@@ -45,6 +46,7 @@ en:
       send_instructions: "You will receive an email with instructions about how to unlock your account in a few minutes."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions about how to unlock it in a few minutes."
       unlocked: "Your account has been unlocked successfully. Please sign in to continue."
+      resend_instructions: "Resend unlock instructions"
   errors:
     messages:
       already_confirmed: "was already confirmed, please try signing in"

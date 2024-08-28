@@ -1,12 +1,16 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Provider} from 'react-redux';
-import {useAppSelector} from '@cdo/apps/util/reduxHooks';
-import {getStore} from '@cdo/apps/redux';
-import style from './ai-tutor.module.scss';
-import aiFabIcon from '@cdo/static/ai-fab-background.png';
-import AITutorContainer from './AITutorContainer';
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+
+import {setIsChatOpen} from '@cdo/apps/aiTutor/redux/aiTutorRedux';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {getStore} from '@cdo/apps/redux';
+import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import aiFabIcon from '@cdo/static/ai-fab-background.png';
+
+import AITutorContainer from './AITutorContainer';
+
+import style from './ai-tutor.module.scss';
 
 /**
  * Renders an AI Bot icon button in the bottom left corner over other UI elements that controls
@@ -15,18 +19,19 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 
 const AITutorFloatingActionButton: React.FunctionComponent = () => {
   const store = getStore();
-  const [isOpen, setIsOpen] = useState(false);
+  const dispatch = useAppDispatch();
   const level = useAppSelector(state => state.aiTutor.level);
+  const isChatOpen = useAppSelector(state => state.aiTutor.isChatOpen);
 
   const handleClick = () => {
-    const event = isOpen
+    const event = isChatOpen
       ? EVENTS.AI_TUTOR_PANEL_CLOSED
       : EVENTS.AI_TUTOR_PANEL_OPENED;
     analyticsReporter.sendEvent(event, {
       levelId: level?.id,
       levelType: level?.type,
     });
-    setIsOpen(!isOpen);
+    dispatch(setIsChatOpen(!isChatOpen));
   };
 
   return (
@@ -39,7 +44,7 @@ const AITutorFloatingActionButton: React.FunctionComponent = () => {
         type="button"
       />
       <Provider store={store}>
-        <AITutorContainer open={isOpen} closeTutor={handleClick} />
+        <AITutorContainer open={isChatOpen} closeTutor={handleClick} />
       </Provider>
     </div>
   );

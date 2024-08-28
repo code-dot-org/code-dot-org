@@ -1,72 +1,42 @@
-import {OverlayTrigger, Tooltip} from 'react-bootstrap-2';
-import React from 'react';
-import style from '@cdo/apps/templates/curriculumCatalog/curriculum_catalog_card.module.scss';
 import PropTypes from 'prop-types';
+import React from 'react';
 
-// The arrowProps passed down in ReactBootstrap use styles that
-// conflict with the custom styles that we want, so they
-// are extracted out here.
-const LabelTooltip = React.forwardRef(
-  (
-    {arrowProps, ...props}, // eslint-disable-line react/prop-types
-    ref
-  ) => <Tooltip ref={ref} {...props} />
-);
+import Tags from '@cdo/apps/componentLibrary/tags/Tags';
 
-// Allow the tooltips to display on focus so that the information
-// can be shown via keyboard
-const LabelOverlayTrigger = props => (
-  <OverlayTrigger placement="top" trigger={['hover', 'focus']} {...props} />
-);
+export default function CardLabels({subjectsAndTopics}) {
+  if (subjectsAndTopics.length === 0) {
+    return null;
+  }
 
-const CardLabels = ({subjectsAndTopics}) => (
-  <>
-    {subjectsAndTopics.length > 0 && (
-      <LabelOverlayTrigger
-        overlay={props => (
-          <LabelTooltip
-            id="first-label-tooltip"
-            className={style.labelTooltip}
-            {...props}
-          >
-            {subjectsAndTopics[0]}
-          </LabelTooltip>
-        )}
-      >
-        <div
-          tabIndex="0" // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
-          role="tooltip"
-        >
-          {subjectsAndTopics[0]}
-        </div>
-      </LabelOverlayTrigger>
-    )}
-    {subjectsAndTopics.length > 1 && (
-      <LabelOverlayTrigger
-        overlay={props => (
-          <LabelTooltip
-            id="remaining-labels-tooltip"
-            className={style.labelTooltip}
-            {...props}
-          >
-            {subjectsAndTopics.slice(1).map(label => (
-              <p key={label}>{label}</p>
-            ))}
-          </LabelTooltip>
-        )}
-      >
-        <div
-          tabIndex="0" // eslint-disable-line jsx-a11y/no-noninteractive-tabindex
-          role="tooltip"
-          aria-label={subjectsAndTopics.slice(1).join(', ')}
-        >{`+${subjectsAndTopics.length - 1}`}</div>
-      </LabelOverlayTrigger>
-    )}
-  </>
-);
+  const tagsList = [];
+
+  const firstSubjectOrTopic = subjectsAndTopics[0];
+  tagsList.push({
+    label: firstSubjectOrTopic,
+    tooltipContent: firstSubjectOrTopic,
+    tooltipId: 'first-label-tooltip',
+  });
+
+  if (subjectsAndTopics.length > 1) {
+    const remainingSubjectsAndTopics = subjectsAndTopics.slice(1);
+    const tooltipContent = (
+      <>
+        {remainingSubjectsAndTopics.map(subjectOrTopic => (
+          <p key={subjectOrTopic}>{subjectOrTopic}</p>
+        ))}
+      </>
+    );
+    tagsList.push({
+      label: `+${remainingSubjectsAndTopics.length}`,
+      tooltipContent,
+      'aria-label': remainingSubjectsAndTopics.join(', '),
+      tooltipId: 'remaining-subjects-topics-tooltip',
+    });
+  }
+
+  return <Tags tagsList={tagsList} />;
+}
 
 CardLabels.propTypes = {
   subjectsAndTopics: PropTypes.arrayOf(PropTypes.string),
 };
-
-export default CardLabels;

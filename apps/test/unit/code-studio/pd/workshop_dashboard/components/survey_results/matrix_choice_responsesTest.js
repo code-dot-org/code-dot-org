@@ -1,7 +1,7 @@
-import React from 'react';
-import {expect} from 'chai';
-import MatrixChoiceResponses from '@cdo/apps/code-studio/pd/workshop_dashboard/components/survey_results/matrix_choice_responses';
 import mount from 'enzyme/build/mount';
+import React from 'react';
+
+import MatrixChoiceResponses from '@cdo/apps/code-studio/pd/workshop_dashboard/components/survey_results/matrix_choice_responses';
 
 describe('Matrix Choice Responses', () => {
   const sampleMatrixAnswers = {
@@ -51,8 +51,8 @@ describe('Matrix Choice Responses', () => {
 
     // there are 4 questions but only 3 have responses
     const choiceResponses = matrixChoiceResponses.find('ChoiceResponses');
-    expect(choiceResponses).to.have.length(3);
-    expect(choiceResponses.last().props().question).to.equal(
+    expect(choiceResponses).toHaveLength(3);
+    expect(choiceResponses.last().props().question).toBe(
       'sample -> I feel more prepared to teach the material covered in this workshop than before I came.'
     );
   });
@@ -84,13 +84,13 @@ describe('Matrix Choice Responses', () => {
 
     // there are 4 questions with responses across both facilitators
     const choiceResponses = matrixChoiceResponses.find('ChoiceResponses');
-    expect(choiceResponses).to.have.length(4);
+    expect(choiceResponses).toHaveLength(4);
 
     const expectedPdAnswers = {
       1: {7: 2},
       2: {6: 1},
     };
-    expect(choiceResponses.first().props().answers.toString()).to.equal(
+    expect(choiceResponses.first().props().answers.toString()).toBe(
       expectedPdAnswers.toString()
     );
 
@@ -98,7 +98,7 @@ describe('Matrix Choice Responses', () => {
     const expectedSuitableAnswers = {
       2: {5: 2},
     };
-    expect(choiceResponses.last().props().answers.toString()).to.equal(
+    expect(choiceResponses.last().props().answers.toString()).toBe(
       expectedSuitableAnswers.toString()
     );
   });

@@ -1,9 +1,10 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import PropTypes from 'prop-types';
-import color from '@cdo/apps/util/color';
+
 import {actions, selectors} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
+import color from '@cdo/apps/util/color';
 
 class PauseButton extends React.Component {
   static propTypes = {

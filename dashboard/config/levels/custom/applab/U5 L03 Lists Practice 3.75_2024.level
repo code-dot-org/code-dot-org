@@ -1,0 +1,63 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2024-05-09T18:29:28.000Z",
+  "level_num": "custom",
+  "user_id": 106,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "console.log": null,
+      "declareAssign_list_abd": null,
+      "accessListItem": null,
+      "listLength": null,
+      "addOperator": null,
+      "subtractOperator": null
+    },
+    "embed": "false",
+    "instructions_important": "false",
+    "long_instructions": "# Do This\r\n\r\n* Print to the console the first, third, fifth and last animals in the list using the list name and index.\r\n\r\n\r\n###### **Don't forget list indexes in Javascript start at 0 so the last index is always `list.length - 1`**\r\n\r\n::: details [**Show Me How**]\r\nYou can access a value from a list as shown below:\r\n\r\n![](https://images.code.org/59d4e5ecadd5b6b84593e4c1439df1a0-image-1661362380717.png)\r\n\r\n`myList`(#e7e8ea) refers to the name of the list, and `index`(#e7e8ea) refers to the location in the list. \r\n:::\r\n\r\n",
+    "submittable": "false",
+    "start_blocks": "var animals = [\"cat\", \"dog\", \"bird\", \"raccoon\", \"bear\", \"rabbit\", \"coyote\", \"deer\", \"buffalo\", \"lizard\", \"turtle\"];\r\n\r\nconsole.log(\"The first animal in the list is a: \");\r\nconsole.log(animals[0]);\r\n\r\nconsole.log(\"The third animal in the list is a: \");\r\n// print to the console the third animal using the list name and index\r\n\r\nconsole.log(\"The fifth animal in the list is a: \");\r\n// print to the console the fifth animal using the list name and index\r\n\r\nconsole.log(\"The last animal in the list is a: \");\r\n// print the last animal in the list to the console.",
+    "never_autoplay_video": "true",
+    "hide_share_and_remix": "true",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "free_play": "false",
+    "validation_enabled": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "true",
+    "execute_palette_apis_only": "false",
+    "text_mode_at_start": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "true",
+    "expand_debugger": "true",
+    "fail_on_lint_errors": "true",
+    "debugger_disabled": "true",
+    "makerlab_enabled": "false",
+    "parent_level_id": 17898,
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"></div></div>",
+    "palette_category_at_start": "variables",
+    "reference_links": [
+      "/docs/concepts/patterns/list-scrolling-pattern/",
+      "/docs/concepts/patterns/random-list-access/"
+    ],
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "encrypted_examples": "TN/cExuScZM3AxPHBdZ0kEuRE+1SxjooVrPvKghRcXb8TVzTNEVHVsVrEnd6\n8yhGgA0FWEV9rw/ZOVLWBnnD9w==\n",
+    "name_suffix": "_2024",
+    "video_key": "csp_applab_lists_2",
+    "ai_enabled": "false",
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-05-09T18:29:28.948+00:00\",\"changed\":[\"cloned from \\\"U5 L03 Lists Practice 3.752022\\\"\"],\"cloned_from\":\"U5 L03 Lists Practice 3.752022\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

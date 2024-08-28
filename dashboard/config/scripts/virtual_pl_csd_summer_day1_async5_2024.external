@@ -7,16 +7,31 @@ markdown <<MARKDOWN
 <br>
 <img src="https://images.code.org/ea1028ad53d0de66f5f5b523b715eb3c-image-1684266381955.png" alt="A red push pin. This icon is used to signal a callback to synchronous work in the workshop." width="30px" style="border-radius:10px; float:left; margin: 10px 10px 5px 0px;">
 
-#### In the synchronous portion of our workshop, you engaged with the Problem Solving Process. You also completed three activities from <a href="https://studio.code.org/s/csd1-2023/lessons/3" target="blank">U1L3: Exploring Problem Solving</a>. Below is a reminder of the Problem Solving Process. 
-
-#### The Problem Solving Process is a connecting thread throughout CS Discoveries. In the next few levels, you'll read and explore more about this theme.
+#### In the synchronous portion of our workshop, you engaged with the Problem Solving Process. The Problem Solving Process is a connecting thread throughout CS Discoveries. In the next few levels, you'll read and explore more about this theme.
 ___
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
+#### **The Problem Solving Process** is a tool for structured problem solving that is woven throughout the entire CS Discoveries course to promote student growth and development. The Problem Solving Process is first introduced to students in Unit 1 and thereafter, students use a version of the Problem-Solving Process that is specific to the unit content. 
 
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">The Problem Solving Process is a tool for structured problem solving that is woven throughout the entire CS Discoveries course to promote student growth and development. The Problem Solving Process is first introduced to students in Unit 1 and thereafter, students use a version of the Problem-Solving Process that is specific to the unit content. 
-</p>
-</div>
 
-![](https://images.code.org/060a26e0d3a718196847c583bba8392c-image-1680300694774.png)
+<img src="https://images.code.org/061813546d7208e471d1fd9e2336fdf1-image-1650060582414.09.21 PM.png" alt="Diagram of the four steps of the problem-solving process, including Define, Prepare, Try, Reflect" style="border-radius:40px; float: right; padding-right: 30px; height: 275px; clear: both; margin: 20px 20px 20px 0;">
+
+## 🔎 Define
+
+* #### Determine the problem you are trying to solve
+* #### Identify your constraints
+* #### Describe what success will look like
+
+## 📝 Prepare
+* #### Brainstorm/research possible solutions
+* #### Compare pros and cons
+* #### Make a plan
+
+## 🖥️ Try
+* #### Put your plan into action
+
+## 🤔 Reflect
+* #### Compare your results to the goals you set while defining the problem
+* #### Decide what you can learn from this or do better next time
+* #### Identify any new problems you have discovered
+
 MARKDOWN

@@ -5,16 +5,19 @@
     "login_required": true,
     "properties": {
       "curriculum_umbrella": "CSA",
+      "has_verified_resources": true,
       "hideable_lessons": true,
+      "include_student_lesson_plans": true,
       "is_migrated": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "unversioned",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "csa-software-engineering",
-    "serialized_at": "2024-04-17 16:46:49 UTC",
+    "serialized_at": "2024-07-26 19:50:39 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3637,7 +3640,7 @@
     },
     {
       "name": "Build with Copilot",
-      "url": "https://docs.google.com/presentation/d/1eo7EGBBbHtrr-I0FU6odL8xQwdQffJOGNALLv2HZ4hE/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1BCo8whiB4GHkUEC9YCEBMD51kxvl-59njt2GzvX-e8s/template/preview",
       "key": "build_with_copilot",
       "properties": {
         "audience": "Verified Teacher",
@@ -3722,7 +3725,7 @@
     },
     {
       "name": "Frame of Reference: Teamwork and Collaboration",
-      "url": "https://docs.google.com/document/d/1MNTpgngHWVlkWkQR\\_Vg1xgDV2j96XQ39X33INECIYfc/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1MNTpgngHWVlkWkQR_Vg1xgDV2j96XQ39X33INECIYfc/edit?usp=sharing",
       "key": "frame_of_reference_teamwork_and_collaboration",
       "properties": {
         "audience": "Student",
@@ -3858,7 +3861,7 @@
     },
     {
       "name": "Intro to AI Models",
-      "url": "https://docs.google.com/presentation/d/1fCLQ_tjJbp5eFxrbQ1BFA0RPdJutiUbcl9aAMGKmM80/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1JJPzjx1XpEzYE9YudNzOzvvLrjLrChllNDAVY1ZkUWU/template/preview",
       "key": "intro_to_ai_models",
       "properties": {
         "audience": "Verified Teacher",
@@ -3895,7 +3898,7 @@
     },
     {
       "name": "Intro to GitHub",
-      "url": "https://docs.google.com/presentation/d/1NCxGnTcSxzXHpeLK1pimdqro0mg5uIg2P35vsXlgE9U/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1SA5tVs9ASMgQJEuGRZ-VgonyKbH68Al5qP06p6IwSSs/template/preview",
       "key": "intro_to_github",
       "properties": {
         "audience": "Verified Teacher",
@@ -3992,7 +3995,7 @@
     },
     {
       "name": "Submitting an Assignment on GitHub Classroom",
-      "url": "https://docs.google.com/document/d/1eOlMx2YW3qRI5DJzpInnN10dSGEupIRa-qOfL\\_xNMR0/edit?usp=share\\_link",
+      "url": "https://docs.google.com/document/d/1eOlMx2YW3qRI5DJzpInnN10dSGEupIRa-qOfL_xNMR0/edit?usp=share\\_link",
       "key": "submitting_an_assignment_on_github_classroom",
       "properties": {
         "audience": "Student",
@@ -4090,7 +4093,7 @@
     },
     {
       "name": "Training Your Model",
-      "url": "https://docs.google.com/presentation/d/1UL78CHMg64FYEu5afQpzxZm2D0AsFxebmdNhI4WOOeA/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1RwxN1dHPxq70BTjkja2oFaoI_n55xGyom1IZlxYl7DI/template/preview",
       "key": "training_your_model",
       "properties": {
         "audience": "Verified Teacher",

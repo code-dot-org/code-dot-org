@@ -60,9 +60,8 @@ class SessionsController < Devise::SessionsController
     # If the student isn't signed in, go to the login page
     return redirect_to new_user_session_path unless current_user
 
-    # If the user is compliant with the Child Account Policy, redirect them to
-    # /home
-    redirect_to home_path if Policies::ChildAccount.compliant? current_user
+    # If the user is npt locked out with the Child Account Policy, redirect them to /home
+    return redirect_to home_path unless Policies::ChildAccount::ComplianceState.locked_out?(current_user)
 
     # Basic defaults. If the @pending_email is empty, the request was never sent
     @pending_email = ''
@@ -74,18 +73,21 @@ class SessionsController < Devise::SessionsController
       @disallowed_email = current_user.hashed_email
     end
 
-    # Determine the deletion date as the creation time of the account + 7 days
-    @delete_date = current_user.created_at.since(7.days)
+    # Determine the deletion date as the lockout date of the account + 7 days
+    @delete_date = current_user.cap_status_date&.since(7.days)
 
     # Find any existing permission request for this user
     # Students might have issued a few requests. We render the latest one.
-    permission_request = ParentalPermissionRequest.where(user: current_user).order(updated_at: :desc).limit(1).first
+    permission_request = current_user.latest_parental_permission_request
 
     # If it exists, set the appropriate fields before rendering the lockout UI
     if permission_request
       @pending_email = permission_request.parent_email
       @request_date = permission_request.updated_at
     end
+
+    @permission_status = current_user.cap_status
+    @in_section = current_user.sections_as_student.present?
   end
 
   # Override default Devise sign_out path method

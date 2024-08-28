@@ -6,7 +6,10 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
+import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import i18n from '@cdo/tutorialExplorer/locale';
+
+import analyticsReporter from '../lib/util/AnalyticsReporter';
 
 import Image from './image';
 import shapes from './shapes';
@@ -46,9 +49,19 @@ export default class TutorialDetail extends React.Component {
   };
 
   startTutorialClicked = () => {
+    // Send event to Google Analytics
     const shortCode = this.props.item.short_code;
     ga('send', 'event', 'learn', 'start', shortCode);
     ga('send', 'event', 'learn', `start-${this.props.grade}`, shortCode);
+    // Send event to Statsig
+    const activityUrl = this.props.item.url;
+    analyticsReporter.sendEvent(
+      EVENTS.HOC_ACTIVITY_START_BUTTON_CLICKED,
+      {
+        activityUrl: activityUrl,
+      },
+      PLATFORMS.STATSIG
+    );
   };
 
   render() {

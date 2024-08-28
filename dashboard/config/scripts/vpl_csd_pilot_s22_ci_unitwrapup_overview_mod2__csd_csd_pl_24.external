@@ -1,0 +1,17 @@
+name 'VPL-CSD-PILOT-S22-CI-UnitWrapUp-Overview-Mod2_-csd_CSD-PL-24'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Unit Wrap Up
+<img src="https://images.code.org/38b78a55a33fdb2ba631a5182217eaeb-image-1711652195311.56.32 AM.png" alt="Two students smile as they look at a laptop together." style="border-radius:40px; float: right; padding-right: 10px; height: 250px; clear: both; margin: 20px 20px 0px 20px;">
+
+#### In the next section of this professional learning module, you will have the opportunity to see sample student projects. 
+
+### **You will**:
+
+* #### Explore end-of-chapter projects.
+
+### **Suggested time:** 10 minutes
+<br><br><br><br><br><br>
+MARKDOWN

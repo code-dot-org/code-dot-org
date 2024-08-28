@@ -1,0 +1,19 @@
+{
+  "key": "gen-ai-customizing-pilot-v2",
+  "display_name": "[Create and Learn] Customizing Language Models",
+  "is_featured": false,
+  "assignable": true,
+  "curriculum_type": "Standalone Unit",
+  "marketing_initiative": null,
+  "grade_levels": "6,7,8,9,10,11,12",
+  "header": "teacher_led",
+  "image": null,
+  "cs_topic": null,
+  "school_subject": null,
+  "device_compatibility": null,
+  "description": null,
+  "professional_learning_program": null,
+  "video": null,
+  "published_date": null,
+  "self_paced_pl_course_offering_key": null
+}

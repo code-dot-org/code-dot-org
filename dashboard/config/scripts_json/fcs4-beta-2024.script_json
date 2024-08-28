@@ -4,17 +4,20 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "Foundations of CS",
+      "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
       "is_migrated": true,
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-13 15:55:12 UTC",
+    "serialized_at": "2024-07-11 17:52:30 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -46,8 +49,8 @@
       "relative_position": 1,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "After a short transition from representing information in Unit 1 to communicating information in Unit 2, students take time to think about their knowledge of the Internet and how it works. Following this, students are introduced to a new widget: The Internet Simulator which they will use throughout this unit to explore the inner workings of the Internet. Students should leave this lesson primed to know more about the Internet. ",
-        "preparation": "* Test out the Internet Simulator. If you open up the level on two different tabs, you can use it by yourself. \n* Prepare for the Teacher Demo.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-internet-lessons-1-6/36470) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1ooxp4FBAsjl56kM5z0rUdRDIAUm9x3AOR_GirYSDooE/edit?usp=sharing)",
+        "overview": "Students begin the lesson taking time to think about their knowledge of the Internet and how it works. Following this, students are introduced to a new widget: The Internet Simulator which they will use throughout this unit to explore the inner workings of the Internet. Students should leave this lesson primed to know more about the Internet. ",
+        "preparation": "* Test out the Internet Simulator. If you open up the level on two different tabs, you can use it by yourself. \n* Prepare for the Teacher Demo.",
         "student_overview": "Learn how computers are connected into networks and the tradeoffs involved in building different types of networks."
       },
       "seeding_key": {
@@ -66,9 +69,8 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "In this lesson, students are formed into groups of 5-7 and given string so they can connect themselves together to form a computer network. Students are given several specific networks to form, along with several guidelines for how to best form computer networks. Students are also forced to wrestle with conflicting guidelines in determining the ‘best’ way to connect together to form a network, and will need to justify why they chose the networks that they did. ",
-        "preparation": "* Cut strings between 1.5 and 3 feet long. Each student will need 2 of these strings. A ball of yarn can work really well here. \n* Decide how you would like students to physically form their networks - standing, in seats, etc.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-internet-lessons-1-6/36470) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1Z23SBjpjfAdBxPCupnKuwb_Y4vsyVFAHpPGriLObWuI/edit?usp=sharing)",
-        "student_overview": "Learn how computers are connected into networks and the tradeoffs involved in building different types of networks.",
-        "unplugged": true
+        "preparation": "* Cut strings between 1.5 and 3 feet long. Each student will need 2 of these strings. A ball of yarn can work really well here. \n* Decide how you would like students to physically form their networks - standing, in seats, etc.",
+        "student_overview": "Learn how computers are connected into networks and the tradeoffs involved in building different types of networks."
       },
       "seeding_key": {
         "lesson.key": "Building a Network",
@@ -86,7 +88,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students complete a scheduling challenge three times, once unplugged, and twice on the Internet Simulator, to explore the need for addressing messages online. Students first complete a challenge where they are allowed to talk to one another to fill out a weekly schedule. They then move on to a version of the Internet Simulator where all of their messages are \"broadcast\" or sent to everyone in the same simulator room. This challenge forces students to develop shared rules for communicating to complete the scheduling activity a second and then third time. The wrap up helps students connect their experiences to real-life rules, or protocols, used on the Internet for addressing messages.",
-        "preparation": "* Preview the Internet Simulator (Broadcast version)\n* Preview the Wrap Up slides in [r csp_unit_2_-_the_internet/foundations-of-cs-beta/2024]\n* Preview the [The Internet: IP Addresses - Video](https://www.youtube.com/watch?v=5o8CwafCxnU) \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-internet-lessons-1-6/36470) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1h6M7ZaOlcXqvZmkLA6w4n9Uds9awoYnQHkIy5Jn1Vv8/edit?usp=sharing)",
+        "preparation": "* Preview the Internet Simulator (Broadcast version)\n* Preview the Wrap Up slides in [r csp_unit_2_-_the_internet/foundations-of-cs-beta/2024]\n* Preview the [The Internet: IP Addresses - Video](https://www.youtube.com/watch?v=5o8CwafCxnU) ",
         "student_overview": "Learn how computers are able to send information across a network even though the computers may not be directly connected. Investigate the protocols used on the Internet to make this possible."
       },
       "seeding_key": {
@@ -105,7 +107,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students spend most of today’s lesson in an updated Internet Simulator that lets students send messages with a dedicated To and From IP  Address. Students start by connecting to a dedicated router and sending messages only to each other. They look at the router logs to find other students on different routers, then send messages to those students. They look at the router logs again to notice that messages are being passed between routers in order to reach their destination. Students continue to send messages and view the logs one last time to notice that the messages are also taking different paths to reach the same destination. The lesson wraps-up by introducing new vocabulary and using these words to summarize today’s activity.",
-        "preparation": "* Read through [r teacher_guide_-_routers_redundancy_-_unit_2_lesson_4/foundations-of-cs-beta/2024] in order to:\n\t* Test the Internet Simulator to understand how the tool works\n\t* Prepare routers ahead of time so they are available for students to join when the activity starts\n\t* Decide how you will be proactive to avoid students sending inappropriate messages and prepare for how you will react should this happen anyway\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-internet-lessons-1-6/36470) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1j5XBQprztqal_96Jje78aiDaQFMzu_ljCSsFyJEDQbQ/edit?usp=sharing)",
+        "preparation": "* Read through [r teacher_guide_-_routers_redundancy_-_unit_2_lesson_4/foundations-of-cs-beta/2024] in order to:\n\t* Test the Internet Simulator to understand how the tool works\n\t* Prepare routers ahead of time so they are available for students to join when the activity starts\n\t* Decide how you will be proactive to avoid students sending inappropriate messages and prepare for how you will react should this happen anyway",
         "student_overview": "Learn how information is routed through the Internet and the reasons networks often will include many multiple paths between different points in the network."
       },
       "seeding_key": {
@@ -124,7 +126,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students learn that large messages sent over the Internet are actually divided into individual packets and explore the challenges this creates. First students explore a version of the Internet Simulator that breaks messages into packets to get a sense for how it works. Students then use an activity guide that walks them through the challenges that dropped or out-of-order packets create. They then design their own protocol that addresses these challenges. At the end of the lesson students watch a video and learn and the User Datagram Protocol (UDP) and The Transmission Control Protocol (TCP), two different protocols for sending messages broken into packets.",
-        "preparation": "* You can test out versions of the Internet Simulator by opening it in two tabs and communicating with yourself. Briefly try out the activity in the activity guide, including sending the messages and reading the logs, to understand what students will see.\n* Preview [r the_internet_packets_routing_and_reliability/foundations-of-cs-beta/2024].\t\n* The previous lesson's [r teacher_guide_-_routers_redundancy_-_unit_2_lesson_4/foundations-of-cs-beta/2024] contains helpful tips on setting up routers and managing student conversations.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-internet-lessons-1-6/36470) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/107_EYOre7kGgkt8fRXb4Bq4SmL4LhKCj6w8o4dXU9Kc/edit?usp=sharing)",
+        "preparation": "* You can test out versions of the Internet Simulator by opening it in two tabs and communicating with yourself. Briefly try out the activity in the activity guide, including sending the messages and reading the logs, to understand what students will see.\n* Preview [r the_internet_packets_routing_and_reliability/foundations-of-cs-beta/2024].\t\n* The previous lesson's [r teacher_guide_-_routers_redundancy_-_unit_2_lesson_4/foundations-of-cs-beta/2024] contains helpful tips on setting up routers and managing student conversations.",
         "student_overview": "Learn how information travelling over the Internet is divided into many packets that travel separately through the network as well as the protocols that allow this process to work even when some packets are lost or delayed."
       },
       "seeding_key": {
@@ -143,7 +145,7 @@
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students conclude their study of the layers of the Internet by learning about two top-level protocols, HTTP and DNS. The lesson begins with a review of the layers students have already learned, namely the physical Internet, IP, and TCP / UDP. The lesson then dives into the core of the unit which is \"What happens when I type an address into my browser?\" Students will complete two brief activities, one unplugged, and one plugged, that explore how the DNS works. Students then watch videos explaining how both DNS and HTTP work, taking notes in a provided activity guide. The lesson concludes with a review of how the different layers of the Internet work.\r\n",
-        "preparation": "* Preview the version of the Internet Simulator used in this lesson. You can quickly practice using this version with a single browser window and no partner.\n* Preview [r the_internet_ip_addresses_and_dns_1/foundations-of-cs-beta/2024].  Specifically the portion starting after 4:09 on DNS. \n* Preview [r the_internet_http_and_html/foundations-of-cs-beta/2024]\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-the-internet-lessons-1-6/36470) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1xAuTuuZnrSz_F3D2vHTUKpMaFslqYm6SRbU42CNYZHk/edit?usp=sharing)",
+        "preparation": "* Preview the version of the Internet Simulator used in this lesson. You can quickly practice using this version with a single browser window and no partner.\n* Preview [r the_internet_ip_addresses_and_dns_1/foundations-of-cs-beta/2024].  Specifically the portion starting after 4:09 on DNS. \n* Preview [r the_internet_http_and_html/foundations-of-cs-beta/2024]",
         "student_overview": "Learn how websites are shared on the Internet and then examine whether everyone actually has equal access to information on the World Wide Web."
       },
       "seeding_key": {
@@ -163,7 +165,7 @@
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
         "overview": "Students work on a two-day project exploring a dilemma at the intersection of the Internet and society. In this project, students explore a relevant Internet dilemma: Net Neutrality, Internet Censorship, or the Digital Divide. Students apply their knowledge of how the Internet works to address the core question related to their chosen dilemma. This project addresses the \"so what\" question - why is it important to learn about how the Internet works?",
-        "preparation": "* Review the poster from Lesson 1 and pick a few sticky notes to talk about it in the Warm Up. \n* Preview the articles in order to answer student questions. \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-internet-dilemmas-unit-2-lessons-7-8/36471) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our Virtual Lesson Modifications [Day 1](https://docs.google.com/document/d/134Qj6cmMUgyh8Oc53Dof61qmTjvwhkswQ-Rr0ocCLu0/edit?usp=sharing) and [Day 2](https://docs.google.com/document/d/18eYxv3mEQXbeTFTrKY1dNy6b0UT8XD_ulBMzxfHdKFg/edit?usp=sharing)\n",
+        "preparation": "* Review the poster from Lesson 1 and pick a few sticky notes to talk about it in the Warm Up. \n* Preview the articles in order to answer student questions. ",
         "student_overview": "Begin forming your own answer to the question \"Has the Internet made the world better or worse\" by considering your own experiences and then reading articles about the impact of the Internet on the world."
       },
       "seeding_key": {
@@ -175,21 +177,8 @@
   ],
   "lesson_activities": [
     {
-      "key": "536c5302-b62c-4518-aa48-d74939375a06",
-      "position": 1,
-      "properties": {
-        "name": "The Pre-Unit Pulse"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "536c5302-b62c-4518-aa48-d74939375a06",
-        "lesson.key": "Welcome to the Internet",
-        "lesson_group.key": "",
-        "script.name": "fcs4-beta-2024"
-      }
-    },
-    {
       "key": "87073db2-7eee-49fb-9a29-ece5cd09ceb8",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm Up"
@@ -203,7 +192,7 @@
     },
     {
       "key": "090fd32f-e45d-4635-a700-8e554b9875f6",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 35,
         "name": "Activity"
@@ -217,7 +206,7 @@
     },
     {
       "key": "12bd9868-9d34-46b0-9c22-ad2b4bb7ee13",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
@@ -470,45 +459,10 @@
   ],
   "activity_sections": [
     {
-      "key": "9f284124-512d-4189-9b2d-0aafa97ce85c",
-      "position": 1,
-      "properties": {
-        "description": "Have your students complete these questions independently some time before starting this unit. ",
-        "progression_name": "The Pre-Unit Pulse",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Pre-Unit Pulse Questions:** The answers to these questions can provide insights into the preferences, strengths, and motivations of your students. If you'd like to adapt the questions or add in your own, you may want to make a copy of [this Google Form](https://docs.google.com/forms/d/1gqzFd8b9sxTVsi7PBPyM48l75Y43w_F55eEo3b8PkY8/copy) which already has the existing questions populated.\n\nFor more tips and ideas of how to use these questions, check out the [CSP Guide to Pre-Unit Pulse Questions](https://docs.google.com/document/d/1jx43dakN6og2n7iey_uQrNwcpMHQRbv1RCPZFHpQdYw/edit?usp=sharing)"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "9f284124-512d-4189-9b2d-0aafa97ce85c",
-        "lesson_activity.key": "536c5302-b62c-4518-aa48-d74939375a06"
-      }
-    },
-    {
-      "key": "f809fa57-82b7-44f7-9ef5-de4dc44aec68",
-      "position": 1,
-      "properties": {
-        "description": "**Distribute:** Give each student a copy of the Unit 2 Journal ([Digital](https://docs.google.com/presentation/d/1NtMSIh3MvntilZoShxE5VhXdxS6Aqfo3SxGIdrbc_Cs/edit?usp=share_link\t\n)/[Interactive Notebook](https://docs.google.com/presentation/d/1K-07DfJX10UdwaW07KAjLeOlJJ5VZhPjsfQ2RWTWMbw/edit?usp=drive_link\t\n)) or have students set up this unit's section in their CSP journals.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Journaling:** Journaling can take many different forms, but in general, it’s a tool for individual processing and reflection in a form that can be revisited as students develop their skills and understandings. The medium used for journaling can vary depending on classroom needs. \n\nFor more guidance and examples, check out the [**CSP Guide to Journaling**](https://docs.google.com/document/d/1d9Lq_-K5vNi8osaI-VNVqcgbb-aDr4BJtHADe-MRoKU/edit?usp=sharing)\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "f809fa57-82b7-44f7-9ef5-de4dc44aec68",
-        "lesson_activity.key": "87073db2-7eee-49fb-9a29-ece5cd09ceb8"
-      }
-    },
-    {
       "key": "5a4bfbf3-757d-41b6-9fbd-04229e33ed39",
-      "position": 2,
+      "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>    **Discuss:**  *We’ve learned to represent images, text, and sound digitally - but, we haven’t discussed what we do with all this digital data. How do you see people sharing this kind of data in the real world? Who do they want to share it with and why?*\n\n**Discussion Goal:** This discussion can be open-ended and feel like a brainstorm to help setup the transition from Unit 1 into Unit 2. It is important to draw on students’ personal experiences with sharing data on the internet, social media websites & apps, and connected devices. \n\nThinking about this unit as a whole, it is helpful to validate ideas that consider the motivations and consequences of how digital information is shared. These can be important points to return to at the end of the unit when introducing the Internet Dilemma’s project.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>    **Discuss:**  *We’ve learned to represent images, text, and sound digitally - but, we haven’t discussed what we do with all this digital data. How do you see people sharing this kind of data in the real world? Who do they want to share it with and why?*\n\n**Discussion Goal:** This discussion can be open-ended and feel like a brainstorm. It is important to draw on students’ personal experiences with sharing data on the internet, social media websites & apps, and connected devices. \n\nThinking about this unit as a whole, it is helpful to validate ideas that consider the motivations and consequences of how digital information is shared. These can be important points to return to at the end of the unit when introducing the Internet Dilemma’s project.\n"
       },
       "seeding_key": {
         "activity_section.key": "5a4bfbf3-757d-41b6-9fbd-04229e33ed39",
@@ -517,7 +471,7 @@
     },
     {
       "key": "f8ae147b-66ff-4cd8-8c70-5d97c1f52c85",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "So far this year, we’ve investigated how to represent information digitally. Today, we’re going to investigate what it would take to communicate this information with others.",
         "remarks": true
@@ -810,7 +764,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Use the **Retrieve-Pair-Share** strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class.\n\nFor more ideas on how to adapt this strategy to fit the needs of your class, check out the [**CSP Guide to Classroom Discussions**](https://docs.google.com/document/d/1vTJpyZllcSG5T5aFfSuPs9CByoejkEMnh4U_MMMOr9g/edit?usp=sharing)\n"
+            "markdown": "Use the **Retrieve-Pair-Share** strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class."
           }
         ]
       },
@@ -852,13 +806,7 @@
       "key": "bbc6fb3a-4bd4-43a5-b8eb-371f4adc2a99",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Vocabulary words for students to add to their Vocabulary Canvas.\n\n* Computing Device\n* Computing System\n* Computing Network\n* Path\n* Bandwidth",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Vocabulary Canvas:** You may choose to add your own examples to the slides. The image below shows an example of a Vocabulary Canvas. Also, you can find definitions and graphics for the vocabulary words in the hidden slides at the end of the lesson slides if you'd like to use those with your students.\n\n\n![](https://images.code.org/41e2d57a9754d5eaf279b3646d50a711-Screenshot 2023-04-14 at 3.39.47 PM.png)\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Vocabulary words for students to add to their Vocabulary Canvas.\n\n* Computing Device\n* Computing System\n* Computing Network\n* Path\n* Bandwidth"
       },
       "seeding_key": {
         "activity_section.key": "bbc6fb3a-4bd4-43a5-b8eb-371f4adc2a99",
@@ -1104,13 +1052,7 @@
       "key": "5b24b337-28a6-4d3d-99ca-83489b5197c1",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Journal:** Add the following vocab words and to your journal: protocol and IP address.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Vocabulary Canvas:** You may choose to add your own examples to the slides. The image below shows an example of a Vocabulary Canvas. Also, you can find definitions and graphics for the vocabulary words in the hidden slides at the end of the lesson slides if you'd like to use those with your students.\n\n\n![](https://images.code.org/41e2d57a9754d5eaf279b3646d50a711-Screenshot 2023-04-14 at 3.39.47 PM.png)\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Journal:** Add the following vocab words and to your journal: protocol and IP address."
       },
       "seeding_key": {
         "activity_section.key": "5b24b337-28a6-4d3d-99ca-83489b5197c1",
@@ -1303,7 +1245,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Use the **Retrieve-Pair-Share** strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class.\n\nFor more ideas on how to adapt this strategy to fit the needs of your class, check out the [**CSP Guide to Classroom Discussions**](https://docs.google.com/document/d/1vTJpyZllcSG5T5aFfSuPs9CByoejkEMnh4U_MMMOr9g/edit?usp=sharing)\n"
+            "markdown": "Use the **Retrieve-Pair-Share** strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class."
           }
         ]
       },
@@ -1399,25 +1341,8 @@
       }
     },
     {
-      "key": "a7d82e8a-740c-4fbf-a27e-21daad9d57e3",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:**  *One of Venn Diagrams from the Unit 2 Journal.*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:**  *Students should use the Venn Diagram to brainstorm situations / events / experiences where doing something quickly was most important (speed), determine where being correct and precise was most important (accuracy), and brainstorm situations when both speed and accuracy are needed.*\n\n**Discuss:** Have students offer some of their situations where speed / accuracy / both are needed.\n\n**Discussion Goals:** This prompt foreshadows the challenge students will see in today's lesson and also the core difference between the two protocols they'll look at, TCP, and UDP. You don't need to cover either of those at this point in the lesson. \n\nNote this is a tight lesson with a significant wrap up. Aim to keep this warm up short and move to the main activity quickly.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 2 Journal provides a Venn Diagram template you could have students use to respond to this warm up and/or add to throughout the lesson. There are three versions of the Unit Journal template available: [Digital](https://docs.google.com/presentation/d/1NtMSIh3MvntilZoShxE5VhXdxS6Aqfo3SxGIdrbc_Cs/edit#slide=id.g22e1838f557_0_346) / [Interactive Journal](https://docs.google.com/presentation/d/1K-07DfJX10UdwaW07KAjLeOlJJ5VZhPjsfQ2RWTWMbw/edit#slide=id.g2379381df00_0_0) / [Handout](https://docs.google.com/document/d/1SFZlGDDuoNDUy_FIyzG05d5s2fYNQ8mtjBoHXhemalI/edit#heading=h.q13xmms02etg)\n"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "a7d82e8a-740c-4fbf-a27e-21daad9d57e3",
-        "lesson_activity.key": "c16ed99e-4f2b-4448-95cc-fb1c6c8b408e"
-      }
-    },
-    {
       "key": "714cc80c-c6af-4b0a-adc4-090f583b6ea1",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In the last lesson we learned that messages can take different paths to get to the same place on the Internet.  Sometimes, we need to send really large messages over the internet, like movies or large pictures.  However, there are problems that arise when we want to send large messages on the internet.  Today we're going to learn about two different protocols for sending information online, one that's used when all we care about is speed, and one that's used when accuracy is more important.",
         "remarks": true
@@ -1489,7 +1414,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "This Check for Understanding question can be used formatively assess your students and gauge understanding of packets.\n\nFor more information, check out the [**CSP Guide to Assessment**](https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit#heading=h.fasyb3figrc0).\n"
+            "markdown": "This Check for Understanding question can be used formatively assess your students and gauge understanding of packets."
           }
         ]
       },
@@ -1819,7 +1744,7 @@
         "tips": [
           {
             "type": "assessmentOpportunity",
-            "markdown": "Use this question to help formatively assess your students. You can use the flowchart below to help use the data you get from student responses to inform your instruction.\n\nFor more information, check out the [**CSP Guide to Assessment**](https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit#heading=h.fasyb3figrc0).\n\n![](https://images.code.org/c0c5b92541281d7901e7d2b9a5a33d49-CFU_Next_Steps_Flowchart_25percent.png)\n"
+            "markdown": "Use this question to help formatively assess your students. You can use the flowchart below to help use the data you get from student responses to inform your instruction."
           }
         ]
       },
@@ -1885,13 +1810,7 @@
       "key": "250e7fe0-a83d-4923-8332-6b2d5c0cd4e0",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Review the key takeaways of the lesson and have students add new vocabulary to their journals: scalability, DNS, World Wide Web, HTTP\n\n\n\n**Distribute:** Give students a copy of the [r layers_of_the_internet/foundations-of-cs-beta/2024]\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**  *Using your Layers of the Internet activity guide to help you, explain how each of the different layers is involved when you go to a link like code.org?*",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "The Unit 2 Journal has a template students can use to process this information in their own way."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Review the key takeaways of the lesson and have students add new vocabulary to their journals: scalability, DNS, World Wide Web, HTTP\n\n\n\n**Distribute:** Give students a copy of the [r layers_of_the_internet/foundations-of-cs-beta/2024]\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:**  *Using your Layers of the Internet activity guide to help you, explain how each of the different layers is involved when you go to a link like code.org?*"
       },
       "seeding_key": {
         "activity_section.key": "250e7fe0-a83d-4923-8332-6b2d5c0cd4e0",
@@ -2012,13 +1931,7 @@
       "key": "b0edd5e6-24ac-4312-b8f3-b11f7ef3ba1c",
       "position": 5,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Distribute:** Give students copies of [r internet_dilemmas/foundations-of-cs-beta/2024]",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Role of the Assessment:** In this lesson, students begin a two day project where they will demonstrate their understanding of key issues surrounding the Internet. This project is designed to be used in tandem with the Unit 2 Assessment to evaluate student progress in Unit 2 content. \n\nFor more information about assessment check out the [**CSP Guide to Assessment**](https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit?usp=sharing)."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Distribute:** Give students copies of [r internet_dilemmas/foundations-of-cs-beta/2024]"
       },
       "seeding_key": {
         "activity_section.key": "b0edd5e6-24ac-4312-b8f3-b11f7ef3ba1c",
@@ -2054,13 +1967,7 @@
       "key": "e3d733b5-9354-4178-93ee-00720edb28b6",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Journal:** Students add to their journal the definition for digital divide.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Why is Digital Divide the only vocabulary word?** \r\nDigital Divide is a term covered in the AP CSP Conceptual Framework. We want to make sure all students - even those who don't choose it as a Digital Dilemma understand the meaning of the phrase. \r\n"
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Journal:** Students add to their journal the definition for digital divide."
       },
       "seeding_key": {
         "activity_section.key": "e3d733b5-9354-4178-93ee-00720edb28b6",
@@ -2092,13 +1999,7 @@
       "properties": {
         "description": "####Policy One Pagers\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This (30 mins):** Students complete each section of the Internet Dilemma Policy One Pager found in [r internet_dilemmas/foundations-of-cs-beta/2024].",
         "duration": " 40",
-        "name": "Activity",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Role of the Assessment:** In this lesson, students finish a two day project where they  demonstrate their understanding of key issues surrounding the Internet. This project is designed to be used in tandem with the Unit 2 Assessment to evaluate student progress in Unit 2 content. "
-          }
-        ]
+        "name": "Activity"
       },
       "seeding_key": {
         "activity_section.key": "335aac18-f287-4601-873e-78b09b842096",
@@ -2109,7 +2010,8 @@
       "key": "9217c7fd-71c9-49b6-b312-89e6de996d49",
       "position": 3,
       "properties": {
-        "description": "####Share Out"
+        "duration": "5",
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "activity_section.key": "9217c7fd-71c9-49b6-b312-89e6de996d49",
@@ -2146,33 +2048,8 @@
       }
     },
     {
-      "key": "9108690d-d3f4-4b6d-b9b5-7e720bedb0b1",
-      "position": 6,
-      "properties": {
-        "description": "Now that we are near the end of the unit, we are going to play CSP Vocabulary BINGO once again. You have been working hard on learning the definitions of all of the different vocabulary words throughout the unit, and now we will put your amazing memories to the test.\n\nI will give each of your a BINGO card that has randomized vocabulary on it. When you hear the definition for a word that you have on your card, mark that square. If you have 4 in a row horizontally, vertically, or diagonally, yell, \"BINGO!\"\n\nAre there any questions?",
-        "duration": "5",
-        "name": "Wrap Up",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "9108690d-d3f4-4b6d-b9b5-7e720bedb0b1",
-        "lesson_activity.key": "933922e5-06d0-4b3f-87fe-05c56b256156"
-      }
-    },
-    {
-      "key": "4602fb4e-3c52-4af5-9b48-f72b78ab3c78",
-      "position": 7,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Pass out a BINGO Card to all students. A printable PDF is located in the Resources section of this lesson plan.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Use the <a href=\"https://studio.code.org/s/csp-bingo-2023\" target=\"_blank\">CSP Bingo Generator</a> for Unit Two in order to generate clues for the students."
-      },
-      "seeding_key": {
-        "activity_section.key": "4602fb4e-3c52-4af5-9b48-f72b78ab3c78",
-        "lesson_activity.key": "933922e5-06d0-4b3f-87fe-05c56b256156"
-      }
-    },
-    {
       "key": "a0add6b6-89ab-4936-9d0f-09329f26e26a",
-      "position": 8,
+      "position": 6,
       "properties": {
         "description": "---"
       },
@@ -2183,23 +2060,12 @@
     },
     {
       "key": "e6d34976-f349-451b-abb3-f767c6c950da",
-      "position": 9,
+      "position": 7,
       "properties": {
         "description": "####Assessment: Submit\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Students turn in the Project Guide for assessment."
       },
       "seeding_key": {
         "activity_section.key": "e6d34976-f349-451b-abb3-f767c6c950da",
-        "lesson_activity.key": "933922e5-06d0-4b3f-87fe-05c56b256156"
-      }
-    },
-    {
-      "key": "c00663a0-b03b-452f-b613-04907082343a",
-      "position": 10,
-      "properties": {
-        "progression_name": "End-of-Unit Survey"
-      },
-      "seeding_key": {
-        "activity_section.key": "c00663a0-b03b-452f-b613-04907082343a",
         "lesson_activity.key": "933922e5-06d0-4b3f-87fe-05c56b256156"
       }
     }
@@ -2211,72 +2077,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "The Pre-Unit Pulse"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSP U2InterestInventoryQ1"
+        "level_keys": [
+          "CSP U2L1 Internet Simulator: Sending Text_2023"
         ],
-        "lesson.key": "Welcome to the Internet",
-        "lesson_group.key": "",
-        "script.name": "fcs4-beta-2024",
-        "activity_section.key": "9f284124-512d-4189-9b2d-0aafa97ce85c"
-      },
-      "level_keys": [
-        "CSP U2InterestInventoryQ1"
-      ]
-    },
-    {
-      "chapter": 2,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "The Pre-Unit Pulse"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSP U2InterestInventoryQ3"
-        ],
-        "lesson.key": "Welcome to the Internet",
-        "lesson_group.key": "",
-        "script.name": "fcs4-beta-2024",
-        "activity_section.key": "9f284124-512d-4189-9b2d-0aafa97ce85c"
-      },
-      "level_keys": [
-        "CSP U2InterestInventoryQ3"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 3,
-      "assessment": false,
-      "properties": {
-        "progression": "The Pre-Unit Pulse"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSP U2InterestInventoryQ2"
-        ],
-        "lesson.key": "Welcome to the Internet",
-        "lesson_group.key": "",
-        "script.name": "fcs4-beta-2024",
-        "activity_section.key": "9f284124-512d-4189-9b2d-0aafa97ce85c"
-      },
-      "level_keys": [
-        "CSP U2InterestInventoryQ2"
-      ]
-    },
-    {
-      "chapter": 4,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
         "progression": "Internet Simulator"
       },
       "bonus": false,
@@ -2294,11 +2097,14 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
+      "chapter": 2,
+      "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L1 CFU how use internet_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2316,11 +2122,14 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L1 CFU paths_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2338,11 +2147,14 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 4,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U2L2 CSP Internet Simulator Broadcast_2023"
+        ],
         "progression": "Internet Simulator"
       },
       "bonus": false,
@@ -2360,11 +2172,14 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 5,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L2 CSP CFU IP Addresses2022_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2382,11 +2197,14 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 6,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L2 CSP CFU IP works_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2404,11 +2222,14 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L3 CSP Internet Simulator Routers_2023"
+        ],
         "progression": "Internet Simulator"
       },
       "bonus": false,
@@ -2426,11 +2247,14 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 8,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L3 CSP CFU Routers2022_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2448,11 +2272,14 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 9,
       "position": 3,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L3 CSP CFU Redundancy_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2470,11 +2297,14 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 10,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L4 CSP Internet Simulator Packets 2_2023"
+        ],
         "progression": "Internet Simulator"
       },
       "bonus": false,
@@ -2492,11 +2322,14 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 11,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L4 Multiple Choice packets2022_2023"
+        ],
         "progression": "Check for Understanding - Packets"
       },
       "bonus": false,
@@ -2514,11 +2347,14 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 12,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L4 CSP CFU terms2022_2023"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2536,11 +2372,14 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U1L5 CSP Internet Simulator DNS_2023"
+        ],
         "progression": "Internet Simulator"
       },
       "bonus": false,
@@ -2558,11 +2397,14 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 14,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L5 CSP CFU subgroups_2023"
+        ],
         "progression": "Check For Understanding - DNS"
       },
       "bonus": false,
@@ -2580,11 +2422,14 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 15,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U2L4 CSP CFU scale2022_2023"
+        ],
         "progression": "Check For Understanding - HTTP"
       },
       "bonus": false,
@@ -2600,67 +2445,9 @@
       "level_keys": [
         "U2L4 CSP CFU scale2022_2023"
       ]
-    },
-    {
-      "chapter": 19,
-      "position": 1,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "progression": "End-of-Unit Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Student End of Unit Survey_csp2_2023"
-        ],
-        "lesson.key": "Project - Internet Dilemmas",
-        "lesson_group.key": "",
-        "script.name": "fcs4-beta-2024",
-        "activity_section.key": "c00663a0-b03b-452f-b613-04907082343a"
-      },
-      "level_keys": [
-        "Student End of Unit Survey_csp2_2023"
-      ]
     }
   ],
   "levels_script_levels": [
-    {
-      "seeding_key": {
-        "level.key": "CSP U2InterestInventoryQ1",
-        "script_level.level_keys": [
-          "CSP U2InterestInventoryQ1"
-        ],
-        "lesson.key": "Welcome to the Internet",
-        "lesson_group.key": "",
-        "script.name": "fcs4-beta-2024",
-        "activity_section.key": "9f284124-512d-4189-9b2d-0aafa97ce85c"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSP U2InterestInventoryQ3",
-        "script_level.level_keys": [
-          "CSP U2InterestInventoryQ3"
-        ],
-        "lesson.key": "Welcome to the Internet",
-        "lesson_group.key": "",
-        "script.name": "fcs4-beta-2024",
-        "activity_section.key": "9f284124-512d-4189-9b2d-0aafa97ce85c"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSP U2InterestInventoryQ2",
-        "script_level.level_keys": [
-          "CSP U2InterestInventoryQ2"
-        ],
-        "lesson.key": "Welcome to the Internet",
-        "lesson_group.key": "",
-        "script.name": "fcs4-beta-2024",
-        "activity_section.key": "9f284124-512d-4189-9b2d-0aafa97ce85c"
-      }
-    },
     {
       "seeding_key": {
         "level.key": "CSP U2L1 Internet Simulator: Sending Text_2023",
@@ -2840,21 +2627,42 @@
         "script.name": "fcs4-beta-2024",
         "activity_section.key": "177d0dca-543f-43c4-816d-c65114462911"
       }
-    },
-    {
-      "seeding_key": {
-        "level.key": "Student End of Unit Survey_csp2_2023",
-        "script_level.level_keys": [
-          "Student End of Unit Survey_csp2_2023"
-        ],
-        "lesson.key": "Project - Internet Dilemmas",
-        "lesson_group.key": "",
-        "script.name": "fcs4-beta-2024",
-        "activity_section.key": "c00663a0-b03b-452f-b613-04907082343a"
-      }
     }
   ],
   "resources": [
+    {
+      "name": "All Resources",
+      "url": "/s/fcs4-beta-2024/resources",
+      "key": "all_resources_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_6"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/fcs4-beta-2024/standards",
+      "key": "all_standards_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_6"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/fcs4-beta-2024/vocab",
+      "key": "all_vocabulary_6",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_6"
+      }
+    },
     {
       "name": "Building a Network",
       "url": "https://docs.google.com/presentation/d/1kxB2sHjJvwG0tyYUz2I2-aeL5FUfXFNDsAd--ALT9cY/template/preview",
@@ -2865,31 +2673,6 @@
       },
       "seeding_key": {
         "resource.key": "building_a_network"
-      }
-    },
-    {
-      "name": "CSP Bingo Cards - Unit Two",
-      "url": "https://drive.google.com/file/d/1cKEiIhVlEjKUqgNM4-pLVZmlO4gD5kBT/view?usp=sharing",
-      "key": "csp_bingo_cards_-_unit_two",
-      "properties": {
-        "audience": "Teacher",
-        "download_url": "https://drive.google.com/uc?export=download&id=1cKEiIhVlEjKUqgNM4-pLVZmlO4gD5kBT",
-        "type": "Handout"
-      },
-      "seeding_key": {
-        "resource.key": "csp_bingo_cards_-_unit_two"
-      }
-    },
-    {
-      "name": "CSP Bingo Generator",
-      "url": "https://studio.code.org/s/csp-bingo-2023",
-      "key": "csp_bingo_generator",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "csp_bingo_generator"
       }
     },
     {
@@ -3131,42 +2914,6 @@
       }
     },
     {
-      "name": "Unit 2 Journal - Digital",
-      "url": "https://docs.google.com/presentation/d/1NtMSIh3MvntilZoShxE5VhXdxS6Aqfo3SxGIdrbc_Cs/edit?usp=share_link",
-      "key": "unit_2_journal_-_digital",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "unit_2_journal_-_digital"
-      }
-    },
-    {
-      "name": "Unit 2 Journal - Example",
-      "url": "https://docs.google.com/presentation/d/1PtznQoPehn41MPOofC3DtMbV0yQ05e35SlrfgKIbJcA/edit?usp=drive_link",
-      "key": "unit_2_journal_-_example",
-      "properties": {
-        "audience": "Verified Teacher",
-        "type": "Exemplar"
-      },
-      "seeding_key": {
-        "resource.key": "unit_2_journal_-_example"
-      }
-    },
-    {
-      "name": "Unit 2 Journal - Interactive Notebook",
-      "url": "https://docs.google.com/presentation/d/1K-07DfJX10UdwaW07KAjLeOlJJ5VZhPjsfQ2RWTWMbw/edit?usp=drive_link",
-      "key": "unit_2_journal_-_interactive_notebook",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "unit_2_journal_-_interactive_notebook"
-      }
-    },
-    {
       "name": "Welcome to the Internet",
       "url": "https://docs.google.com/presentation/d/10FQTUZnQE_H6pfaNhQ2S28hQAkZ8ITqFMJUjESVoZF0/template/preview",
       "key": "welcome_to_the_internet",
@@ -3250,18 +2997,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Internet Dilemmas",
-        "resource.key": "csp_bingo_cards_-_unit_two"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas",
-        "resource.key": "csp_bingo_generator"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas",
         "resource.key": "exemplar_internet_dilemmas"
       }
     },
@@ -3328,24 +3063,6 @@
     {
       "seeding_key": {
         "lesson.key": "Welcome to the Internet",
-        "resource.key": "unit_2_journal_-_digital"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to the Internet",
-        "resource.key": "unit_2_journal_-_example"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to the Internet",
-        "resource.key": "unit_2_journal_-_interactive_notebook"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Welcome to the Internet",
         "resource.key": "welcome_to_the_internet"
       }
     },
@@ -3357,7 +3074,24 @@
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_resources_6",
+        "script.name": "fcs4-beta-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards_6",
+        "script.name": "fcs4-beta-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary_6",
+        "script.name": "fcs4-beta-2024"
+      }
+    }
   ],
   "scripts_student_resources": [
 
@@ -3791,62 +3525,6 @@
     {
       "seeding_key": {
         "lesson.key": "Building a Network",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.A.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Building a Network",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.A.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Building a Network",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.A.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Building a Network",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.A.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Building a Network",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.A.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Building a Network",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.A.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Building a Network",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.A.7"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Building a Network",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.A.8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Building a Network",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-NI-04"
       }
@@ -3863,41 +3541,6 @@
         "lesson.key": "Building a Network",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-NI-03"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "HTTP and DNS",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.B.7"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "HTTP and DNS",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.D.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "HTTP and DNS",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.D.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "HTTP and DNS",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.D.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "HTTP and DNS",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-2.B.6"
       }
     },
     {
@@ -3924,48 +3567,6 @@
     {
       "seeding_key": {
         "lesson.key": "Packets",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.B.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Packets",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.B.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Packets",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.C.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Packets",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.C.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Packets",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.C.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Packets",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.C.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Packets",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-NI-04"
       }
@@ -3982,48 +3583,6 @@
         "lesson.key": "Packets",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-NI-03"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.C.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.C.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.C.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.C.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.C.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Internet Dilemmas",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "IOC-1.F.10"
       }
     },
     {
@@ -4064,62 +3623,6 @@
     {
       "seeding_key": {
         "lesson.key": "Routers and Redundancy",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.B.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Routers and Redundancy",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.E.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Routers and Redundancy",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.E.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Routers and Redundancy",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.E.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Routers and Redundancy",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.E.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Routers and Redundancy",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.E.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Routers and Redundancy",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.E.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Routers and Redundancy",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.E.7"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Routers and Redundancy",
         "framework.shortcode": "csta",
         "standard.shortcode": "2-NI-04"
       }
@@ -4136,34 +3639,6 @@
         "lesson.key": "Routers and Redundancy",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-NI-03"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Need for Addressing",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.B.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Need for Addressing",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.B.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Need for Addressing",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.B.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "The Need for Addressing",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "CSN-1.B.4"
       }
     },
     {

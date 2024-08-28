@@ -125,11 +125,11 @@ class CertificateImageTest < ActiveSupport::TestCase
 
     hello = create :script, name: 'hello', is_course: true
     cv = create :course_version, content_root: hello
-    create :course_offering, course_versions: [cv], key: 'hello', category: 'hoc'
+    create :course_offering, course_versions: [cv], key: 'hello', marketing_initiative: 'HOC'
 
     other = create :script, name: 'other', is_course: true
     cv = create :course_version, content_root: other
-    create :course_offering, course_versions: [cv], key: 'other', category: 'other'
+    create :course_offering, course_versions: [cv], key: 'other', marketing_initiative: 'CSF'
 
     assert CertificateImage.hoc_course?('flappy')
     assert CertificateImage.hoc_course?('oceans')

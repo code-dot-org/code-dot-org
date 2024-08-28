@@ -54,8 +54,6 @@ theme: responsive_full_width
             %p.no-margin-bottom=hoc_s(:ai_intro_list_desc_03)
     .clear
 
-= view :dance_party_ai_skinny_banner
-
 %section.bg-neutral-light
   .wrapper
     %h2=hoc_s(:ai_why_heading)
@@ -67,110 +65,63 @@ theme: responsive_full_width
       %li
         %i{class: "#{icon_person_chalkboard}"}
         %a{href:"#ai-pl"}=hoc_s(:ai_why_link_02)
-      -# TODO - Remove the DCDO logic after the AI Teaching Assistant launch
-      - if !!DCDO.get('ai-teaching-assistant-launch', false)
-        %li
-          %i{class: "#{icon_robot}"}
-          %a{href:"#ai-integrations"}=hoc_s("ai_integrations.heading")
+      %li
+        %i{class: "#{icon_robot}"}
+        %a{href:"#ai-integrations"}=hoc_s("ai_integrations.heading")
       %li
         %i{class: "#{icon_video}"}
         %a{href:"#ai-videos"}=hoc_s(:ai_why_link_03)
 
 %section#ai-curricula
   .wrapper
-    %h2=hoc_s(:ai_curricula_heading)
-    %p=hoc_s(:ai_curricula_desc)
-    = view :ai_carousel_curricula_blocks
+    %h2=hoc_s("ai_page.curricula.heading_elementary")
+    = view :"ai_landing_page/ai_carousel_curricula_elementary"
     %hr.light
-    %h3.heading-lg
-      =hoc_s("ai_curriculum_offerings.heading")
-    %p.wrap-pretty
-      =hoc_s("ai_curriculum_offerings.desc")
-    %a.link-button.secondary{href: CDO.studio_url("/catalog?topic=artificial_intelligence")}
-      =hoc_s("ai_curriculum_offerings.button")
+    %h2=hoc_s("ai_page.curricula.heading_middle_high")
+    = view :"ai_landing_page/ai_carousel_curricula_middle_high"
 
 %section.bg-neutral-light
   .wrapper
     %h2=hoc_s(:ai_carousel_heading)
     .quotes-wrapper
-      = view :ai_carousel_quotes
+      = view :"ai_landing_page/ai_carousel_quotes"
 
 %section#ai-pl
   .wrapper
     %h2=hoc_s(:ai_pl_heading)
-    .action-block__wrapper.action-block__wrapper--two-col
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %p.overline
-            =hoc_s(:module_label_video_series)
-          %h3=hoc_s(:ai_pl_101_hero_heading)
-          %img{src: "/shared/images/announcement/announcement_ai_pl_2023.png", alt: ""}
-          %p=hoc_s(:ai_pl_101_hero_desc)
-        .content-footer
-          %p
-            %strong
-              =hoc_s(:module_label_duration)
-            =hoc_s(:module_duration_5_hrs)
-          %a.link-button{href: "/ai/pl/101"}
-            =hoc_s(:call_to_action_watch_videos)
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %p.overline
-            =hoc_s(:module_label_self_paced)
-          %h3=hoc_s(:ai_pl_title)
-          %img{src: "/images/ai/ai-professional-learning.png", alt: ""}
-          %p=hoc_s(:ai_pl_desc)
-        .content-footer
-          %p
-            %strong
-              =hoc_s(:module_label_duration)
-            =hoc_s(:module_duration_2_hrs)
-          %a.link-button{href: CDO.studio_url("/courses/self-paced-pl-aiml")}
-            =hoc_s(:call_to_action_self_paced_pl)
+    %p=hoc_s("ai_page.pl.desc")
+    = view :"ai_landing_page/ai_carousel_pl"
 
--# TODO - Remove the DCDO logic after the AI Teaching Assistant launch
-- if !!DCDO.get('ai-teaching-assistant-launch', false)
-  = view :section_divider_line
+%section#ai-integrations.bg-neutral-light
+  .wrapper
+    %h2=hoc_s("ai_integrations.heading")
+    %p=hoc_s("ai_integrations.desc")
+    = view :ai_integrations
 
-  %section#ai-integrations
-    .wrapper
-      %h2=hoc_s("ai_integrations.heading")
-      %p=hoc_s("ai_integrations.desc")
-      = view :ai_integrations
-
-%section#ai-videos.bg-neutral-light
+%section#ai-videos
   .wrapper
     %h2=hoc_s(:ai_video_series_title)
     %p=hoc_s(:ai_video_series_desc, markdown: :inline, locals: {how_ai_works_url: "/ai/how-ai-works"})
-    .video-series
-      = view :ai_vid_intro
-      = view :ai_vid_mlintro
-      = view :ai_vid_trainingdata
-      = view :ai_vid_neuralnetworks
-      = view :ai_vid_computervision
-      = view :ai_vid_chatbots
-      = view :ai_vid_creativity
-      = view :ai_vid_ethics1
-      = view :ai_vid_ethics2
-
-%section
-  .wrapper
-    = view :subscribe_form, subscribe_form_section_title: hoc_s("ai_ta_page.form.heading"), subscribe_form_section_desc: hoc_s("ai_ta_page.form.desc"), form_height: "375px", form_src: "https://go.pardot.com/l/153401/2024-03-27/pqwtxx"
+    = view :carousel_how_ai_works_video
 
 %section.bg-neutral-light
   .wrapper.flex-container.justify-space-between.align-items-center.wrap
     %figure.col-45{style: "margin-bottom: 1rem"}
-      %img{src: "/images/ai/pl/101/TeachAI.png", alt: "", style: "width: 100%"}
+      %img{src: "/images/ai/pl/101/teach-ai-future-of-cs.png", alt: "", style: "width: 100%"}
     .text-wrapper.col-50{style: "margin-bottom: 1rem"}
       %p.new
-        =hoc_s(:new)
+        =hoc_s('teach_ai_banner_july_2024.subtitle')
       %h2.heading-lg
-        =hoc_s(:ai_promote_literacy)
+        =hoc_s('teach_ai_banner_july_2024.headline')
       %p.body-three
-        =hoc_s(:ai_section_body)
-      %a.link-button.has-external-link{href: "https://teachai.org/policy", target: "_blank", rel: "noopener noreferrer"}
-        =hoc_s(:ai_explore_the_resources)
+        =hoc_s('teach_ai_banner_july_2024.description')
+      %a.link-button.has-external-link{href: "https://teachai.org/cs", target: "_blank", rel: "noopener noreferrer"}
+        =hoc_s('teach_ai_banner_july_2024.button_text')
   .clear
+
+%section.no-padding-bottom
+  .wrapper
+    = view :subscribe_form, subscribe_form_section_title: hoc_s("ai_ta_page.form.heading"), subscribe_form_section_desc: hoc_s("ai_ta_page.form.desc"), form_height: "375px", form_src: "https://go.pardot.com/l/153401/2024-03-27/pqwtxx"
 
 %section
   .wrapper.centered
@@ -178,8 +129,10 @@ theme: responsive_full_width
       =hoc_s("ai_donors.desc")
     .logos-wrapper.no-margin-bottom
       %img{src: "/images/avatars/microsoft.png", alt: "Microsoft logo", style: "max-width: 150px"}
+      %img{src: "/images/avatars/infosys_foundation_usa.png", alt: "Infosys logo", style: "max-width: 50px"}
       %img{src: "/images/avatars/schmidt-futures.png", alt: "Schmidt Futures logo", style: "max-width: 340px"}
-
+      %img{src: "/images/avatars/fortive.png", alt: "Fortive logo", style: "max-width: 160px"}
+      %img{src: "/images/avatars/amd.png", alt: "AMD logo", style: "max-width: 100px"}
 
 = view :swiper_page_ai
 

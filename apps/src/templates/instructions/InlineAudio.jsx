@@ -5,7 +5,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {Voices} from '@cdo/apps/util/sharedVoices';
+import {Voices} from '@cdo/generated-scripts/sharedVoices';
 
 import trackEvent from '../../util/trackEvent';
 

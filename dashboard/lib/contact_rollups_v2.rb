@@ -1,10 +1,11 @@
 require 'cdo/log_collector'
 require 'honeybadger/ruby'
+require 'cdo/sequel'
 
 class ContactRollupsV2
   MAX_EXECUTION_TIME_SEC = 18_000
 
-  DASHBOARD_DB_WRITER = sequel_connect(
+  DASHBOARD_DB_WRITER = Cdo::Sequel.database_connection_pool(
     CDO.dashboard_db_writer,
     CDO.dashboard_db_reader,
     query_timeout: MAX_EXECUTION_TIME_SEC
@@ -57,7 +58,7 @@ class ContactRollupsV2
     # Its default value is 1024, too short for the amount of data we need to concat.
     # @see:
     #   ContactRollupsProcessed.get_data_aggregation_query
-    #   https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_group_concat_max_len
+    #   https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_group_concat_max_len
     DASHBOARD_DB_WRITER.run('SET SESSION group_concat_max_len = 65535')
   end
 

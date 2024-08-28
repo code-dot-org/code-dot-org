@@ -1,0 +1,31 @@
+name 'sp-pl-CV_definingCv'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# What is Computer Vision?
+
+
+<img src="https://images.code.org/0ec49f831a315a6e3d9df9398d14302f-image-1714587189025.png" alt="Image of AI bot and a model card" style="border-radius:10px; float: right; ; height: 150px; margin: 20px 20px 0px 10px; ">
+
+## Defining Computer Vision:
+
+#### Computer vision is a field of artificial intelligence that enables computers and systems to **derive meaningful information** from digital images, videos, and other visual inputs. 
+
+#### It is commonly seen in everyday applications such as facial recognition, autonomous vehicles, and image processing software.
+
+
+
+<br>
+<br>
+
+---
+
+## Why Students Should Learn It:
+
+#### Learning computer vision equips students with cutting-edge skills relevant in numerous industries, fostering a blend of technical proficiency and critical thinking. 
+
+#### This knowledge not only prepares them for future careers in technology but also helps them **understand and ethically engage** with the increasingly digital world around them.
+
+
+MARKDOWN

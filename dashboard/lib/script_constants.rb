@@ -147,7 +147,6 @@ module ScriptConstants
       HOC_ENCRYPTION_NAME = 'hoc-encryption'.freeze,
       TEXT_COMPRESSION_NAME = 'text-compression'.freeze,
       BASKETBALL_NAME = 'basketball'.freeze,
-      SPORTS_NAME = 'sports'.freeze,
       HOC_NAME = 'hourofcode'.freeze, # 2014 hour of code
       DANCE_PARTY_NAME = 'dance'.freeze, # 2018 hour of code
       DANCE_PARTY_EXTRAS_NAME = 'dance-extras'.freeze, # 2018 hour of code
@@ -258,6 +257,7 @@ module ScriptConstants
     K1HOC_2017 = 'k1hoc2017'.freeze,
     MUSIC_INTRO_2024 = 'music-intro-2024'.freeze,
     MUSIC_ONBOARD = 'music-onboard'.freeze,
+    MUSIC_TUTORIAL_2024 = 'music-tutorial-2024'.freeze,
     NETSIM = 'netsim'.freeze,
     ODOMETER = 'odometer'.freeze,
     OUTBREAK = 'outbreak'.freeze,
@@ -266,9 +266,13 @@ module ScriptConstants
     POETRY_HOC3 = 'poetry-hoc3'.freeze,
     VIGENERE = 'vigenere'.freeze,
     K5_ONLINEPD_2019 = 'k5-onlinepd-2019'.freeze,
+    CS_BASICS_K5_TEACHERS = 'self-paced-pl-k5-2024'.freeze,
     K5_ONLINEPD = 'K5-OnlinePD'.freeze,
     KODEA_PD_2021 = 'kodea-pd-2021'.freeze,
-    ALLTHETHINGS = 'allthethings'.freeze
+    ALLTHETHINGS = 'allthethings'.freeze,
+    COMPUTER_VISION = 'computer-vision'.freeze,
+    CSD2_2024 = 'csd2-2024'.freeze,
+    K5_UNPLUGGED = 'k5-unplugged'.freeze
   ]
 
   DEFAULT_VERSION_YEAR = '2017'

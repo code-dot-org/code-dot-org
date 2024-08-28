@@ -1,11 +1,12 @@
 /**
  * @overview Component for description of a data table.
  */
+import {Link} from '@dsco_/link';
 import PropTypes from 'prop-types';
 import React from 'react';
-import msg from '@cdo/locale';
+
 import {getDatasetInfo} from '@cdo/apps/storage/dataBrowser/dataUtils';
-import {Link} from '@dsco_/link';
+import msg from '@cdo/locale';
 
 export default class TableDescription extends React.Component {
   static propTypes = {

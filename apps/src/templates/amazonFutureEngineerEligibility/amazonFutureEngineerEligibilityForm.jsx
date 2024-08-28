@@ -1,18 +1,22 @@
-import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import classnames from 'classnames';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {Button} from 'react-bootstrap'; // eslint-disable-line no-restricted-imports
-import _ from 'lodash';
-import ValidationStep, {Status} from '@cdo/apps/lib/ui/ValidationStep';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import ValidationStep, {
+  Status,
+} from '@cdo/apps/sharedComponents/ValidationStep';
 import SchoolAutocompleteDropdownWithLabel from '@cdo/apps/templates/census2017/SchoolAutocompleteDropdownWithLabel';
-import FieldGroup from '../../code-studio/pd/form_components/FieldGroup';
-import SingleCheckbox from '../../code-studio/pd/form_components/SingleCheckbox';
 import color from '@cdo/apps/util/color';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import i18n from '@cdo/locale';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import classnames from 'classnames';
+
+import FieldGroup from '../../code-studio/pd/form_components/FieldGroup';
+import SingleCheckbox from '../../code-studio/pd/form_components/SingleCheckbox';
 
 const VALIDATION_STATE_ERROR = 'error';
 

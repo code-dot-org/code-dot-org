@@ -7,6 +7,7 @@ require 'yaml'
 require 'erb'
 require 'digest'
 require 'highline'
+require 'tempfile'
 
 module AWS
   # Manages configuration and deployment of AWS CloudFormation stacks.
@@ -48,12 +49,41 @@ module AWS
       stack_name.gsub!(STACK_NAME_INVALID_REGEX, '-')
     end
 
-    # Validates that the template is valid CloudFormation syntax.
+    # Validates that the template is valid CloudFormation syntax by creating a change set.
     # First prints the rendered template (if `verbose`), then either raises an error (if invalid)
     # or prints the pending stack-resource changes.
     def validate
       stack.dry_run = true
       change_stack
+    end
+
+    # Lints the template, similar to validate but simply performs
+    # local static analysis on the generated template
+    def lint
+      stack.dry_run = true
+      template = stack.render
+      if options[:verbose]
+        log.info template.lines.map.with_index(1) {|line, i| format("[%4d] %s", i, line)}.join
+      end
+      Tempfile.create(['template', '.yml']) do |tempfile|
+        tempfile.write(template)
+        tempfile.close
+
+        cfn_lint_installed = system('which cfn-lint > /dev/null 2>&1')
+        unless cfn_lint_installed
+          log.info "WARNING: cfn-lint is not installed, skipping lint task.\nInstall from https://github.com/aws-cloudformation/cfn-lint?tab=readme-ov-file#install"
+          next
+        end
+
+        command = "cfn-lint #{tempfile.path}"
+        success = system(command)
+
+        if success
+          log.info "SUCCESS: cfn-lint passed successfully. Run `validate` task to further check for CloudFormation syntax errors."
+        else
+          warn "WARNING: cfn-lint detected issues in the template."
+        end
+      end
     end
 
     # Creates a new stack or updates an existing stack if it already exists.
@@ -81,7 +111,7 @@ module AWS
     private def change_stack
       template = stack.render
       if options[:verbose]
-        log.info template.lines.map.with_index(1) {|line, i| format("[%3d] %s", i, line)}.join
+        log.info template.lines.map.with_index(1) {|line, i| format("[%4d] %s", i, line)}.join
       end
       stack_options = change_set_options(template)
       params = stack_options[:parameters].reject {|x| x[:parameter_value].nil?}
@@ -180,7 +210,7 @@ module AWS
       # rubocop:enable Security/YAMLLoad
       return [] unless params
       params.filter_map do |key, properties|
-        value = CDO[key.underscore] || ENV[key.underscore.upcase]
+        value = CDO[key.underscore] || ENV.fetch(key.underscore.upcase, nil)
         param = {parameter_key: key}
         if value
           param[:parameter_value] = value

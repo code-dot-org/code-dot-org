@@ -1,11 +1,14 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 import queryString from 'query-string';
+import React, {Component} from 'react';
+
 import i18n from '@cdo/locale';
-import TooltipWithIcon from './TooltipWithIcon';
+
 import {currentLocation} from '../../utils';
+
 import LessonExtrasFlagIcon from './LessonExtrasFlagIcon';
+import TooltipWithIcon from './TooltipWithIcon';
 
 const LARGE_FLAG_SIZE = 24;
 const SMALL_FLAG_SIZE = 16;

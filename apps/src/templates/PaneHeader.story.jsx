@@ -1,4 +1,5 @@
 import React from 'react';
+
 import PaneHeader, {PaneSection, PaneButton} from './PaneHeader';
 
 const styles = {

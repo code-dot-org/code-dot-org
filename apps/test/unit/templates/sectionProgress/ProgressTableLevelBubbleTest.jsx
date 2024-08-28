@@ -1,9 +1,9 @@
-import {shallow, mount} from 'enzyme';
+import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import BubbleBadge, {
   KeepWorkingBadge,
   BadgeType,
@@ -17,10 +17,10 @@ import {
 import ProgressTableLevelBubble from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelBubble';
 import {unitTestExports as cacheExports} from '@cdo/apps/util/CachedElement';
 import color from '@cdo/apps/util/color';
-import {LevelStatus, LevelKind} from '@cdo/apps/util/sharedConstants';
+import {LevelStatus, LevelKind} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const TITLE = '1';
 
@@ -125,7 +125,7 @@ describe('ProgressTableLevelBubble', () => {
     cacheExports.clearElementsCache('BasicBubble');
   });
 
-  after(() => {
+  afterAll(() => {
     renderPropsSpy.resetHistory();
     cacheExports.clearElementsCache('BasicBubble');
   });

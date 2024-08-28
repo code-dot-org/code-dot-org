@@ -1,14 +1,16 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
-import Button from '@cdo/apps/templates/Button';
-import i18n from '@cdo/locale';
-import {hidePublishDialog, publishProject} from './publishDialogRedux';
-import {RestrictedPublishProjectTypes} from '@cdo/apps/util/sharedConstants';
 import color from '@cdo/apps/util/color';
+import {RestrictedPublishProjectTypes} from '@cdo/generated-scripts/sharedConstants';
+import i18n from '@cdo/locale';
+
+import {hidePublishDialog, publishProject} from './publishDialogRedux';
 
 const PUBLISH_FAILED_RESPONSE_MESSAGES = {
   sharingDisabled: 'Sharing disabled for user account',

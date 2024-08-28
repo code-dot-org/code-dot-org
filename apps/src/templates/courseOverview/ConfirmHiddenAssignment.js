@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import Button from '@cdo/apps/templates/Button';
 
 /**
  * Confirmation dialog for when assigning a script or course from the course or script overview page

@@ -1,14 +1,16 @@
 import React, {useState, useEffect, useCallback} from 'react';
-import classNames from 'classnames';
-import {getNoteName, isBlackKey} from '../utils/Notes';
-import MusicLibrary from '../player/MusicLibrary';
-import {ChordEventValue, PlayStyle} from '../player/interfaces/ChordEvent';
-import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
-import PreviewControls from './PreviewControls';
+
 import musicI18n from '../locale';
-import moduleStyles from './chordPanel.module.scss';
+import {ChordEventValue, PlayStyle} from '../player/interfaces/ChordEvent';
+import MusicLibrary from '../player/MusicLibrary';
+import MusicPlayer from '../player/MusicPlayer';
+import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
+
+import Keybed from './Keybed';
 import LoadingOverlay from './LoadingOverlay';
-import {LoadFinishedCallback} from '../types';
+import PreviewControls from './PreviewControls';
+
+import moduleStyles from './chordPanel.module.scss';
 
 const NUM_OCTAVES = 3;
 const START_OCTAVE = 4;
@@ -25,15 +27,12 @@ export interface ChordPanelProps {
   library: MusicLibrary;
   initValue: ChordEventValue;
   onChange: (value: ChordEventValue) => void;
-  previewChord: (chord: ChordEventValue, onStop?: () => void) => void;
-  previewNote: (note: number, instrument: string, onStop?: () => void) => void;
-  cancelPreviews: () => void;
-  setupSampler: (
-    instrument: string,
-    onLoadFinished?: LoadFinishedCallback
-  ) => void;
-  isInstrumentLoading: (instrument: string) => boolean;
-  isInstrumentLoaded: (instrument: string) => boolean;
+  previewChord: MusicPlayer['previewChord'];
+  previewNote: MusicPlayer['previewNote'];
+  cancelPreviews: MusicPlayer['cancelPreviews'];
+  setupSampler: MusicPlayer['setupSampler'];
+  isInstrumentLoading: MusicPlayer['isInstrumentLoading'];
+  isInstrumentLoaded: MusicPlayer['isInstrumentLoaded'];
   registerInstrumentLoadCallback: (
     callback: (instrumentName: string) => void
   ) => void;
@@ -58,6 +57,7 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
     selectedNotes.length >= MAX_NOTES
   );
   const [isLoading, setIsLoading] = useState(false);
+  const [isPlayingPreview, setIsPlayingPreview] = useState(false);
 
   const instruments: [string, string][] = library.instruments.map(folder => [
     folder.name,
@@ -114,15 +114,23 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
     setIsDisabled(selectedNotes.length >= MAX_NOTES);
   }, [selectedNotes]);
 
-  const playPreview = useCallback(
-    () =>
-      previewChord({
+  const playPreview = useCallback(() => {
+    previewChord(
+      {
         notes: selectedNotes,
         playStyle,
         instrument,
-      }),
-    [previewChord, selectedNotes, playStyle, instrument]
-  );
+      },
+      undefined, // TODO: use onTick() callback to highlight notes
+      () => setIsPlayingPreview(false)
+    );
+    setIsPlayingPreview(true);
+  }, [previewChord, selectedNotes, playStyle, instrument]);
+
+  const stopPreview = useCallback(() => {
+    cancelPreviews();
+    setIsPlayingPreview(false);
+  }, [cancelPreviews, setIsPlayingPreview]);
 
   const onClear = useCallback(() => setSelectedNotes([]), [setSelectedNotes]);
 
@@ -159,6 +167,7 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
         selectedNotes={selectedNotes}
         onPressKey={onPressKey}
         isDisabled={isDisabled || isLoading}
+        isVertical={false}
       />
       <NoteGrid
         numOctaves={NUM_OCTAVES}
@@ -172,81 +181,9 @@ const ChordPanel: React.FunctionComponent<ChordPanelProps> = ({
         enabled={selectedNotes.length > 0 && !isLoading}
         playPreview={playPreview}
         onClickClear={onClear}
-        cancelPreviews={cancelPreviews}
+        cancelPreviews={stopPreview}
+        isPlayingPreview={isPlayingPreview}
       />
-    </div>
-  );
-};
-
-interface KeybedProps {
-  numOctaves: number;
-  startOctave: number;
-  selectedNotes: number[];
-  onPressKey: (note: number) => void;
-  isDisabled: boolean;
-}
-
-const Keybed: React.FunctionComponent<KeybedProps> = ({
-  numOctaves,
-  startOctave,
-  selectedNotes,
-  onPressKey,
-  isDisabled,
-}) => {
-  const keys = [];
-  const startingNote = startOctave * 12;
-
-  for (
-    let currentNote = startingNote;
-    currentNote < startingNote + numOctaves * 12;
-    currentNote++
-  ) {
-    keys.push(
-      <Key
-        key={currentNote}
-        type={isBlackKey(currentNote) ? 'black' : 'white'}
-        isDisabled={isDisabled}
-        isSelected={selectedNotes.includes(currentNote)}
-        onClick={() => onPressKey(currentNote)}
-        text={!isBlackKey(currentNote) ? getNoteName(currentNote) : undefined}
-      />
-    );
-  }
-
-  return (
-    <div id="keypad" className={moduleStyles.keybed}>
-      {keys}
-    </div>
-  );
-};
-
-interface KeyProps {
-  type: 'white' | 'black';
-  isSelected: boolean;
-  isDisabled: boolean;
-  onClick: () => void;
-  text?: string;
-}
-
-const Key: React.FunctionComponent<KeyProps> = ({
-  type,
-  isSelected,
-  isDisabled,
-  onClick,
-  text,
-}: KeyProps) => {
-  return (
-    <div
-      className={classNames(
-        moduleStyles.key,
-        isDisabled && moduleStyles.disabled,
-        isSelected && moduleStyles.selected,
-        type === 'white' && moduleStyles.whiteKey,
-        type === 'black' && moduleStyles.blackKey
-      )}
-      onClick={isSelected || !isDisabled ? onClick : undefined}
-    >
-      <div className={moduleStyles.noteLabel}>{text}</div>
     </div>
   );
 };

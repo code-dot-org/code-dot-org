@@ -6,7 +6,6 @@ en:
       Advanced: Advanced
       Behaviors: Behaviors
       'Behaviors ': 'Behaviors '
-      Boolean: Boolean
       Brushes: Brushes
       Category: Category
       Color: Color
@@ -22,21 +21,18 @@ en:
       Game/Score: Game/Score
       Games/Score: Games/Score
       Groups: Groups
-      Image: Image
       Input: Input
       Location: Location
       Locations: Locations
       Logic: Logic
       Loops: Loops
       Math: Math
-      Number: Number
       Numbers: Numbers
       Picker: Picker
       Prebuilt: Prebuilt
       Properties: Properties
       Shapes: Shapes
       Sprites: Sprites
-      String: String
       Text: Text
       Variables: Variables
       'Variables ': 'Variables '

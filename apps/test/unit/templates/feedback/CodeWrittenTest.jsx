@@ -1,9 +1,9 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import CodeWritten from '@cdo/apps/templates/feedback/CodeWritten';
 
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   numLinesWritten: 0,

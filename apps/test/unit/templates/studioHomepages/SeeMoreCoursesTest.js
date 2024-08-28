@@ -1,36 +1,30 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import ContentContainer from '@cdo/apps/templates/ContentContainer';
 import CourseCard from '@cdo/apps/templates/studioHomepages/CourseCard';
 import SeeMoreCourses from '@cdo/apps/templates/studioHomepages/SeeMoreCourses';
 import color from '@cdo/apps/util/color';
-
-import {assert, expect} from '../../../util/reconfiguredChai';
 
 import {courses} from './homepagesTestData';
 
 describe('SeeMoreCourses', () => {
   it('shows a button when closed', () => {
     const wrapper = shallow(<SeeMoreCourses courses={courses} />);
-    assert(
+    expect(
       wrapper.containsMatchingElement(
-        <Button
-          color={Button.ButtonColor.neutralDark}
-          icon="caret-down"
-          text="View more"
-        />
+        <Button icon="caret-down" text="View more" />
       )
-    );
+    ).toBeTruthy();
   });
 
   it('shows CourseCards when clicked', () => {
     const wrapper = shallow(<SeeMoreCourses courses={courses} />);
     expect(wrapper.find('Button').exists());
     wrapper.find('Button').simulate('click');
-    expect(wrapper.find('Button').exists()).to.be.false;
-    assert(
+    expect(wrapper.find('Button').exists()).toBe(false);
+    expect(
       wrapper.containsMatchingElement(
         <div>
           <ContentContainer heading="" linkText="" link="" showLink={false}>
@@ -60,7 +54,7 @@ describe('SeeMoreCourses', () => {
           </ContentContainer>
         </div>
       )
-    );
+    ).toBeTruthy();
   });
 
   it('shows PL CourseCards when clicked for PL Recent Courses area', () => {
@@ -69,8 +63,8 @@ describe('SeeMoreCourses', () => {
     );
     expect(wrapper.find('Button').exists());
     wrapper.find('Button').simulate('click');
-    expect(wrapper.find('Button').exists()).to.be.false;
-    assert(
+    expect(wrapper.find('Button').exists()).toBe(false);
+    expect(
       wrapper.containsMatchingElement(
         <div>
           <ContentContainer heading="" linkText="" link="" showLink={false}>
@@ -102,6 +96,6 @@ describe('SeeMoreCourses', () => {
           </ContentContainer>
         </div>
       )
-    );
+    ).toBeTruthy();
   });
 });

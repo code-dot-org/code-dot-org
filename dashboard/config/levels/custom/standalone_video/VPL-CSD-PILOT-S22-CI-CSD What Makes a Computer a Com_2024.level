@@ -1,5 +1,6 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "published": true,
   "game_id": 54,
   "created_at": "2024-03-25T22:21:18.000Z",
   "level_num": "custom",
@@ -12,12 +13,11 @@
     "skip_sound": true,
     "parent_level_id": 20188,
     "name_suffix": "_2024",
-    "long_instructions": "##### This video is included in lesson 4 of Unit 1 - Problem Solving and Computing. After watching the video, students should understand that computers are machines designed to help people with thinking work, as opposed to physical work.  Within a problem solving context, computers are designed to solve information problems.\r\n\r\n## As you watch the video, consider the following:\r\n\r\n#### What makes computer a computer? \r\n",
+    "long_instructions": "#### This video is included in lesson 4 of Unit 1 - Problem Solving and Computing. After watching the video, students should understand that computers are machines designed to help people with thinking work, as opposed to physical work.  Within a problem solving context, computers are designed to solve information problems.\r\n\r\n### **As you watch the video, consider the following:**\r\n\r\n#### What makes computer a computer? \r\n",
     "encrypted": "false"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-25T22:21:18.663+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CSD What Makes a Computer a Com_-self-paced-unit1\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CSD What Makes a Computer a Com_-self-paced-unit1\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-25T22:21:18.663+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-PILOT-S22-CI-CSD What Makes a Computer a Com_-self-paced-unit1\\\"\"],\"cloned_from\":\"VPL-CSD-PILOT-S22-CI-CSD What Makes a Computer a Com_-self-paced-unit1\"},{\"changed_at\":\"2024-05-05 22:43:44 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

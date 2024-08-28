@@ -24,9 +24,24 @@
 # https://github.com/code-dot-org/code-dot-org/pull/56279
 
 class DatablockStorageController < ApplicationController
+  # These methods can be called by data blocks in applab/gamelab
+  METHODS_CALLED_BY_DATA_BLOCKS = [
+    :set_key_value,
+    :get_key_value,
+    :get_column,
+    :create_record,
+    :read_records,
+    :update_record,
+    :delete_record,
+    :get_library_manifest,
+  ]
+
   before_action :validate_channel_id
-  before_action :authenticate_user!
-  skip_before_action :verify_authenticity_token
+
+  # Methods that are called directly by data blocks need to be accessible
+  # even when the applab/gamelab project is shared. In this case we won't
+  # necessarily have a logged-in user.
+  before_action :authenticate_user!, except: METHODS_CALLED_BY_DATA_BLOCKS
 
   StudentFacingError = DatablockStorageTable::StudentFacingError
 
@@ -47,22 +62,11 @@ class DatablockStorageController < ApplicationController
   ]
 
   ##########################################################
-  #   Debug View                                           #
-  ##########################################################
-  def index
-    @key_value_pairs = DatablockStorageKvp.where(project_id: @project_id)
-    @records = DatablockStorageRecord.where(project_id: @project_id)
-    @tables = DatablockStorageTable.where(project_id: @project_id)
-    @library_manifest = DatablockStorageLibraryManifest.instance.library_manifest
-    @storage_backend = ProjectUseDatablockStorage.use_data_block_storage_for?(params[:channel_id]) ? "Datablock Storage" : "Firebase"
-  end
-
-  ##########################################################
   #   Key-Value-Pair API                                   #
   ##########################################################
 
   def set_key_value
-    raise StudentFacingError, "The value is too large. The maximum allowable size is #{DatablockStorageKvp::MAX_VALUE_LENGTH} bytes" if params[:value].length > DatablockStorageKvp::MAX_VALUE_LENGTH
+    raise StudentFacingError, "Value must be specified" unless params[:value]
     value = JSON.parse params[:value]
     DatablockStorageKvp.set_kvp @project_id, params[:key], value
     render json: {key: params[:key], value: value}
@@ -70,7 +74,8 @@ class DatablockStorageController < ApplicationController
 
   def get_key_value
     kvp = DatablockStorageKvp.find_by(project_id: @project_id, key: params[:key])
-    render json: kvp ? JSON.parse(kvp.value).to_json : nil
+    # render json: assumes a string is already json encoded, so to_json is necessary.
+    render json: kvp&.value.to_json
   end
 
   def delete_key_value
@@ -117,9 +122,6 @@ class DatablockStorageController < ApplicationController
 
   def import_csv
     table = table_or_create
-
-    # import_csv should overwrite existing data:
-    table.records.delete_all
 
     table.import_csv params[:table_data_csv]
     table.save!
@@ -223,12 +225,13 @@ class DatablockStorageController < ApplicationController
   ##########################################################
 
   def create_record
-    raise StudentFacingError, "The record is too large. The maximum allowable size is #{DatablockStorageRecord::MAX_RECORD_LENGTH} bytes" if params[:record_json].length > DatablockStorageRecord::MAX_RECORD_LENGTH
     record_json = JSON.parse params[:record_json]
     raise "record must be a hash" unless record_json.is_a? Hash
 
     table = table_or_create
-    table.create_records [record_json]
+    Retryable.retryable(tries: 1, on: [ActiveRecord::RecordNotUnique]) do
+      table.create_records [record_json]
+    end
     table.save!
 
     render json: record_json
@@ -237,12 +240,10 @@ class DatablockStorageController < ApplicationController
   def read_records
     table = find_table_or_shared_table
 
-    render json: table.read_records.map(&:record_json)
+    render json: table.read_records
   end
 
   def update_record
-    raise StudentFacingError, "The record is too large. The maximum allowable size is #{DatablockStorageRecord::MAX_RECORD_LENGTH} bytes" if params[:record_json].length > DatablockStorageRecord::MAX_RECORD_LENGTH
-
     table = find_table
     record_json = table.update_record params[:record_id], JSON.parse(params[:record_json])
     table.save!
@@ -294,22 +295,6 @@ class DatablockStorageController < ApplicationController
   end
 
   ##########################################################
-  #   Project Use Datablock Storage API                    #
-  ##########################################################
-
-  # TODO: post-firebase-cleanup, remove this code: #56994
-  def use_datablock_storage
-    ProjectUseDatablockStorage.set_data_block_storage_for!(params[:channel_id], true)
-    render json: true
-  end
-
-  # TODO: post-firebase-cleanup, remove this code: #56994
-  def use_firebase_storage
-    ProjectUseDatablockStorage.set_data_block_storage_for!(params[:channel_id], false)
-    render json: true
-  end
-
-  ##########################################################
   #   Private                                              #
   ##########################################################
 
@@ -330,11 +315,17 @@ class DatablockStorageController < ApplicationController
   end
 
   private def where_table
-    DatablockStorageTable.where(project_id: @project_id, table_name: params[:table_name])
+    if params[:table_name] && params[:table_name].is_a?(String)
+      DatablockStorageTable.where(project_id: @project_id, table_name: params[:table_name])
+    else
+      raise StudentFacingError, "Table parameter value must be a string"
+    end
   end
 
   private def table_or_create
     where_table.first_or_create
+  rescue ActiveRecord::ValueTooLong
+    raise StudentFacingError.new(:TABLE_NAME_INVALID), "The table name is too long, it must be shorter than #{DatablockStorageTable.columns_hash['table_name'].limit} bytes ('characters')"
   rescue ActiveRecord::RecordNotUnique
     # first_or_create() is not atomic, retry in case a create was done in parallel
     where_table.first_or_create

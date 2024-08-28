@@ -1,14 +1,14 @@
-import ChartApi from './ChartApi';
-import EventSandboxer from './EventSandboxer';
-import sanitizeHtml from './sanitizeHtml';
-import * as utils from '../utils';
-import elementLibrary from './designElements/library';
-import * as elementUtils from './designElements/elementUtils';
-import * as setPropertyDropdown from './setPropertyDropdown';
+import $ from 'jquery';
+
+import i18n from '@cdo/applab/locale';
+import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
+import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
+import {commands as mlCommands} from '@cdo/apps/lib/util/mlApi';
+import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
+import * as makerCommands from '@cdo/apps/maker/commands';
+import {rateLimit} from '@cdo/apps/storage/rateLimit';
+
 import * as assetPrefix from '../assetManagement/assetPrefix';
-import applabTurtle from './applabTurtle';
-import ChangeEventHandler from './ChangeEventHandler';
-import logToCloud from '../logToCloud';
 import {
   OPTIONAL,
   apiValidateType,
@@ -17,20 +17,23 @@ import {
   outputError,
   outputWarning,
 } from '../lib/util/javascriptMode';
-import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
-import {commands as timeoutCommands} from '@cdo/apps/lib/util/timeoutApi';
-import {commands as mlCommands} from '@cdo/apps/lib/util/mlApi';
-import * as makerCommands from '@cdo/apps/lib/kits/maker/commands';
-import {getAppOptions} from '@cdo/apps/code-studio/initApp/loadApp';
-import {actions, REDIRECT_RESPONSE} from './redux/applab';
+import logToCloud from '../logToCloud';
 import {getStore} from '../redux';
-import $ from 'jquery';
-import i18n from '@cdo/applab/locale';
+import * as utils from '../utils';
+
+import applabTurtle from './applabTurtle';
+import ChangeEventHandler from './ChangeEventHandler';
+import ChartApi from './ChartApi';
+import {ICON_PREFIX_REGEX} from './constants';
+import * as elementUtils from './designElements/elementUtils';
+import elementLibrary from './designElements/library';
+import EventSandboxer from './EventSandboxer';
+import {actions, REDIRECT_RESPONSE} from './redux/applab';
+import sanitizeHtml from './sanitizeHtml';
+import * as setPropertyDropdown from './setPropertyDropdown';
 
 // For proxying non-https xhr requests
 var XHR_PROXY_PATH = '//' + location.host + '/xhr';
-
-import {ICON_PREFIX_REGEX} from './constants';
 
 var applabCommands = {};
 export default applabCommands;
@@ -1760,7 +1763,12 @@ applabCommands.createRecord = function (opts) {
   }
   var onSuccess = applabCommands.handleCreateRecord.bind(this, opts);
   var onError = opts.onError || getAsyncOutputWarning();
-  Applab.storage.createRecord(opts.table, opts.record, onSuccess, onError);
+  try {
+    rateLimit();
+    Applab.storage.createRecord(opts.table, opts.record, onSuccess, onError);
+  } catch (e) {
+    outputError(e.message);
+  }
 };
 
 applabCommands.handleCreateRecord = function (opts, record) {
@@ -1783,7 +1791,12 @@ applabCommands.getKeyValue = function (opts) {
   );
   var onSuccess = applabCommands.handleReadValue.bind(this, opts);
   var onError = opts.onError || getAsyncOutputWarning();
-  Applab.storage.getKeyValue(opts.key, onSuccess, onError);
+  try {
+    rateLimit();
+    Applab.storage.getKeyValue(opts.key, onSuccess, onError);
+  } catch (e) {
+    outputError(e.message);
+  }
 };
 
 applabCommands.handleReadValue = function (opts, value) {
@@ -1796,7 +1809,12 @@ applabCommands.getKeyValueSync = function (opts) {
   apiValidateType(opts, 'getKeyValueSync', 'key', opts.key, 'string');
   var onSuccess = handleGetKeyValueSync.bind(this, opts);
   var onError = handleGetKeyValueSyncError.bind(this, opts);
-  Applab.storage.getKeyValue(opts.key, onSuccess, onError);
+  try {
+    rateLimit();
+    Applab.storage.getKeyValue(opts.key, onSuccess, onError);
+  } catch (e) {
+    outputError(e.message);
+  }
 };
 
 var handleGetKeyValueSync = function (opts, value) {
@@ -1831,7 +1849,12 @@ applabCommands.setKeyValue = function (opts) {
   );
   var onSuccess = applabCommands.handleSetKeyValue.bind(this, opts);
   var onError = opts.onError || getAsyncOutputWarning();
-  Applab.storage.setKeyValue(opts.key, opts.value, onSuccess, onError);
+  try {
+    rateLimit();
+    Applab.storage.setKeyValue(opts.key, opts.value, onSuccess, onError);
+  } catch (e) {
+    outputError(e.message);
+  }
 };
 
 applabCommands.handleSetKeyValue = function (opts) {
@@ -1845,7 +1868,12 @@ applabCommands.setKeyValueSync = function (opts) {
   apiValidateType(opts, 'setKeyValueSync', 'value', opts.value, 'primitive');
   var onSuccess = handleSetKeyValueSync.bind(this, opts);
   var onError = handleSetKeyValueSyncError.bind(this, opts);
-  Applab.storage.setKeyValue(opts.key, opts.value, onSuccess, onError);
+  try {
+    rateLimit();
+    Applab.storage.setKeyValue(opts.key, opts.value, onSuccess, onError);
+  } catch (e) {
+    outputError(e.message);
+  }
 };
 
 var handleSetKeyValueSync = function (opts) {
@@ -1862,13 +1890,17 @@ var handleSetKeyValueSyncError = function (opts, message) {
 applabCommands.getColumn = function (opts) {
   apiValidateType(opts, 'getColumn', 'table', opts.table, 'string');
   apiValidateType(opts, 'getColumn', 'column', opts.column, 'string');
-
-  Applab.storage.getColumn(
-    opts.table,
-    opts.column,
-    handleGetColumn.bind(this, opts),
-    handleGetColumnError.bind(this, opts)
-  );
+  try {
+    rateLimit();
+    Applab.storage.getColumn(
+      opts.table,
+      opts.column,
+      handleGetColumn.bind(this, opts),
+      handleGetColumnError.bind(this, opts)
+    );
+  } catch (e) {
+    outputError(e.message);
+  }
 };
 
 var handleGetColumn = function (opts, columnValues) {
@@ -1917,7 +1949,17 @@ applabCommands.readRecords = function (opts) {
   }
   var onSuccess = applabCommands.handleReadRecords.bind(this, opts);
   var onError = opts.onError || getAsyncOutputWarning();
-  Applab.storage.readRecords(opts.table, opts.searchParams, onSuccess, onError);
+  try {
+    rateLimit();
+    Applab.storage.readRecords(
+      opts.table,
+      opts.searchParams,
+      onSuccess,
+      onError
+    );
+  } catch (e) {
+    outputError(e.message);
+  }
 };
 
 applabCommands.handleReadRecords = function (opts, records) {
@@ -1978,8 +2020,16 @@ applabCommands.updateRecord = function (opts) {
     return;
   }
   var onComplete = applabCommands.handleUpdateRecord.bind(this, opts);
-  var onError = opts.onError || getAsyncOutputWarning();
-  Applab.storage.updateRecord(opts.table, opts.record, onComplete, onError);
+  var onError = error => {
+    getAsyncOutputWarning()(error);
+    onComplete(null, false);
+  };
+  try {
+    rateLimit();
+    Applab.storage.updateRecord(opts.table, opts.record, onComplete, onError);
+  } catch (e) {
+    outputError(e.message);
+  }
 };
 
 applabCommands.handleUpdateRecord = function (opts, record, success) {
@@ -2036,8 +2086,16 @@ applabCommands.deleteRecord = function (opts) {
     return;
   }
   var onComplete = applabCommands.handleDeleteRecord.bind(this, opts);
-  var onError = opts.onError || getAsyncOutputWarning();
-  Applab.storage.deleteRecord(opts.table, opts.record, onComplete, onError);
+  var onError = error => {
+    getAsyncOutputWarning()(error);
+    onComplete(false);
+  };
+  try {
+    rateLimit();
+    Applab.storage.deleteRecord(opts.table, opts.record, onComplete, onError);
+  } catch (e) {
+    outputError(e.message);
+  }
 };
 
 applabCommands.handleDeleteRecord = function (opts, success) {
@@ -2229,16 +2287,21 @@ applabCommands.drawChartFromRecords = function (opts) {
     outputError(error.message);
   };
 
-  startLoadingSpinnerFor(opts.chartId);
-  chartApi
-    .drawChartFromRecords(
-      opts.chartId,
-      opts.chartType,
-      opts.tableName,
-      opts.columns,
-      opts.options
-    )
-    .then(onSuccess, onError);
+  try {
+    rateLimit();
+    startLoadingSpinnerFor(opts.chartId);
+    chartApi
+      .drawChartFromRecords(
+        opts.chartId,
+        opts.chartType,
+        opts.tableName,
+        opts.columns,
+        opts.options
+      )
+      .then(onSuccess, onError);
+  } catch (e) {
+    outputError(e.message);
+  }
 };
 
 /**

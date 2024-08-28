@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
+
 import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
-import Button from '@cdo/apps/templates/Button';
 import LessonGroupInfo from '@cdo/apps/templates/progress/LessonGroupInfo';
+import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 // Dialog with information about a lesson group
 export default class LessonGroupInfoDialog extends Component {

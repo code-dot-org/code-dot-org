@@ -398,78 +398,9 @@
     "title": "Strategies for Teaching Computer Science"
   },
   "https://studio.code.org/s/allthethings/lessons/13/levels/1": {
-    "short_instructions": "This Evaluation Block is a multiplication function which takes two numbers and returns the product of those numbers. Edit this block so that it multiplies 2 \\* 5",
-    "long_instructions": "This Evaluation Block is a multiplication function which takes two numbers and returns the product of those numbers. Edit this block so that it multiplies 2 \\* 5",
-    "callouts": {
-      "calc_question_marks": "Select the right number from this dropdown"
-    }
-  },
-  "https://studio.code.org/s/allthethings/lessons/13/levels/2": {
-    "short_instructions": "The string-append function takes two Strings and returns a single combined String. Add a String \"Universe\" to the second argument of string-append.",
-    "long_instructions": "The `string-append` function takes two Strings and returns a single combined String. Add a String \"Universe\" to the second argument of `string-append`.",
-    "failure_message_override": "Make sure you append the string \"Universe\" to make the code create \"Hello, Universe\"",
-    "callouts": {
-      "": "Teal colored blocks, like this one, output string values"
-    }
-  },
-  "https://studio.code.org/s/allthethings/lessons/13/levels/3": {
     "dsls": {
-      "answers": [
-        "text|Image|String|Number|String"
-      ],
-      "content1": "Write a contract for the text function",
-      "content2": "Eval Contracts E.solution_blocks, 300",
-      "title": "Text Contract"
-    }
-  },
-  "https://studio.code.org/s/allthethings/lessons/13/levels/4": {
-    "short_instructions": "Use the star function to produce a solid red star with a 60 pixel radius",
-    "long_instructions": "Use the `star` function to produce a solid red star with a 60 pixel radius"
-  },
-  "https://studio.code.org/s/allthethings/lessons/13/levels/5": {
-    "short_instructions": "Variables allow us to name values so that we can easily refer to them repeatedly throughout our programs. Here's a variable called age. Set its value to your age and click run.",
-    "long_instructions": "Variables allow us to name values so that we can easily refer to them repeatedly throughout our programs. Here's a variable called `age`. Set its value to your age and click run.",
-    "callouts": {
-      "Calc Vars 1_edit_option": "Click on edit to change the value of this variable"
-    }
-  },
-  "https://studio.code.org/s/allthethings/lessons/13/levels/6": {
-    "short_instructions": "Let's get started on your Big Game! Here you'll see a whole bunch of placeholder code that you'll eventually replace with your own, but for now we're only going to worry about defining variables. Click \"Run\" to see what the game looks like with the default values.",
-    "long_instructions": "Let's get started on your Big Game! Here you'll see a whole bunch of placeholder code that you'll eventually replace with your own, but for now we're only going to worry about defining variables. Click \"Run\" to see what the game looks like with the default values.",
-    "callouts": {
-      "big_game_finish": "Click the finish button when you're ready to move to the next level."
-    }
-  },
-  "https://studio.code.org/s/allthethings/lessons/13/levels/7": {
-    "short_instructions": "Here's the start of another new function called purple-circle with a domain of one Number (the radius) and a range of Image. The body of the function is broken though - fix it and then make a purple circle with 150 pixel radius",
-    "long_instructions": "Here's the start of another new function called `purple-circle` with a domain of one Number (the radius) and a range of Image. The body of the function is broken though, it always draws a circle of 50 pixel radius instead of using the radius parameter. Replace the current Number with the `radius` block from the domain.\n\nWhen you've fixed the function, test your new function with a 150 pixel radius.",
-    "callouts": {
-      "Eval Define Funcs 3": "Make our function use the radius parameter instead of always having a radius of 50."
-    }
-  },
-  "https://studio.code.org/s/allthethings/lessons/13/levels/8": {
-    "short_instructions": "Can you set the values so that this expression evaluates as true?",
-    "long_instructions": "Can you set the values so that this expression evaluates as _true_?",
-    "callouts": {
-      "Eval Booleans 2 1": "Select a number that will make this expression evaluate to true"
-    }
-  },
-  "https://studio.code.org/s/allthethings/lessons/13/levels/9": {
-    "short_instructions": "Sam's mom wants to make sure that she can always see at least a bit of him, so lets write some functions that help make sure he doesn't go too far out of the yard. Here's a function called safe-left? - it should take a Number for its domain that represents Sam's x-coordinates and return true if he's completely visible on screen. If your function works, Sam shouldn't be able to leave the yard from the left side.",
-    "long_instructions": "Sam's mom wants to make sure that she can always see at least a bit of him, so lets write some functions that help make sure he doesn't go too far out of the yard. Here's a function called `safe-left?` - it should take a Number for its domain that represents Sam's x-coordinates and return _true_ if he's completely visible on screen. If your function works, Sam shouldn't be able to leave the yard from the left side."
-  },
-  "https://studio.code.org/s/allthethings/lessons/13/levels/10": {
-    "short_instructions": "Welcome to Luigi's Pizza! To order a pizza, type the name of a topping into the cost function, and we'll return the price of that pizza. Try ordering a pepperoni pizza to start.",
-    "long_instructions": "Welcome to Luigi's Pizza! To order a pizza, type the name of a topping into the `cost` function, and we'll return the price of that pizza. Try ordering a pepperoni pizza to start.",
-    "callouts": {
-      "luigi's pizza 1": "Try ordering a pepperoni pizza"
-    }
-  },
-  "https://studio.code.org/s/allthethings/lessons/13/levels/11": {
-    "short_instructions": "Here's the start of another new function called purple-circle with a domain of one Number (the radius) and a range of Image. The body of the function is broken though - fix it and then make a purple circle with 150 pixel radius",
-    "long_instructions": "Here's the start of another new function called `purple-circle` with a domain of one Number (the radius) and a range of Image. The body of the function is broken though, it always draws a circle of 50 pixel radius instead of using the radius parameter. Replace the current Number with the `radius` block from the domain.\n\nWhen you've fixed the function, test your new function with a 150 pixel radius.",
-    "callouts": {
-      "Eval Define Funcs 3": "Make our function use the radius parameter instead of always having a radius of 50."
+      "content1": "description here",
+      "markdown": "\n## Today you're going to learn how to use and create: **functions**\n\nCreating a function lets you make your own blocks! There are two parts to a function: \n\n* Making a newly named block that has all of the code you want to run inside of it.  \n <xml>\n <block type=\"procedures_defnoreturn\" editable=\"false\">\n    <mutation/>\n    <title name=\"NAME\">get only nectar</title>\n    <statement name=\"STACK\">\n      <block type=\"bee_ifFlower\">\n        <title name=\"LOC\">atFlower</title>\n        <statement name=\"DO\">\n          <block type=\"maze_nectar\" deletable=\"false\"/>\n        </statement>\n      </block>\n    </statement>\n  </block>\n  </xml>\n\n* The single green block itself that you use, or call, to run the function you created.  \n<xml>  \n<block type=\"when_run\" deletable=\"false\" movable=\"false\"/>\n  <block type=\"procedures_callnoreturn\" id=\"callMe\">\n    <mutation name=\"get only nectar\"/>\n  </block>\n  </xml>\n\nPrepare to get familiar with functions, learn how to edit them, and create your own!\n"
     }
   },
   "https://studio.code.org/s/allthethings/lessons/14/levels/1": {
@@ -2543,6 +2474,33 @@
   },
   "https://studio.code.org/s/allthethings/lessons/36/levels/3": {
     "long_instructions": "This is an allthethings level used to test the modal function editor.",
+    "function_definitions": {
+      "set background": {
+        "name": "set background"
+      }
+    },
+    "behavior_names": {
+      "spinning left": "spinning left",
+      "growing": "growing",
+      "jittering": "jittering",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "swimming left and right": "swimming left and right",
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "wobbling": "wobbling",
+      "driving with arrow keys": "driving with arrow keys",
+      "moving east and looping": "moving east and looping",
+      "fluttering": "fluttering",
+      "moving west and looping": "moving west and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
+    },
     "behavior_descriptions": {
       "rotate a sprite to its left": "rotate a sprite to its left",
       "change the size of a sprite": "change the size of a sprite",
@@ -2565,6 +2523,28 @@
   },
   "https://studio.code.org/s/allthethings/lessons/36/levels/4": {
     "long_instructions": "This is an allthethings Sprite Lab level that uses a variety of blocks",
+    "behavior_names": {
+      "spinning left": "spinning left",
+      "growing": "growing",
+      "jittering": "jittering",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "moving south": "moving south",
+      "moving west": "moving west",
+      "swimming left and right": "swimming left and right",
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "moving north": "moving north",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "wobbling": "wobbling",
+      "driving with arrow keys": "driving with arrow keys",
+      "moving east and looping": "moving east and looping",
+      "fluttering": "fluttering",
+      "moving west and looping": "moving west and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
+    },
     "behavior_descriptions": {
       "rotate a sprite to its left": "rotate a sprite to its left",
       "change the size of a sprite": "change the size of a sprite",
@@ -2969,11 +2949,39 @@
   "https://studio.code.org/s/allthethings/lessons/45/levels/4": {
     "long_instructions": "This is a Poetry level which includes the auto-populated `PROCEDURES` category and uses the modal function editor."
   },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/2": {
+    "long_instructions": "First, please play one sound.",
+    "validations": {
+      "Music Level 1_391b0b44-af8d-4559-a985-d5b643aed908": "Nice work.",
+      "Music Level 1_c0da3b0b-c4d6-490c-8bfb-4faf4188ff32": "Please play one sound."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/3": {
+    "long_instructions": "Second, please play three sounds at the same time.",
+    "validations": {
+      "Music Level 2_b4505750-86bb-40d7-8c31-ca015980d7ee": "Nice work.",
+      "Music Level 2_f5ef3af6-0010-4e06-937c-d35b5cb8e0be": "It's good that you played two sounds, but you need to play another one.",
+      "Music Level 2_3e35e104-7422-4fb8-80e1-b9da580384f2": "It's good that you played one sound, but you need to play two more.",
+      "Music Level 2_dc4dddf1-5e9d-4664-b9a1-00d73e728a06": "Please play three sounds together."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/46/levels/4": {
+    "long_instructions": "Try everything!"
+  },
   "https://studio.code.org/s/allthethings/lessons/47/levels/1": {
     "long_instructions": "## Sample Instructions\n\nThis is a chat bot which allows you to talk to historical figures.\n\n### Do This\n\nType in a question and press the `Submit`(#7435b2) button. What can you learn about Ada Lovelace?"
   },
   "https://studio.code.org/s/allthethings/lessons/47/levels/2": {
     "long_instructions": "# AI Chat 2\n\n## Sample Instructions\n\nThis is a chat bot which helps you with grammar and punctuation to improve your writing.\n\n### Do This\n\nType in a paragraph that you'd like to revise and press the `Submit`(#7435b2) button."
+  },
+  "https://studio.code.org/s/allthethings/lessons/47/levels/3": {
+    "long_instructions": "Project Template Backed Level #1"
+  },
+  "https://studio.code.org/s/allthethings/lessons/47/levels/4": {
+    "long_instructions": "Project Template Backed Level #2"
+  },
+  "https://studio.code.org/s/allthethings/lessons/47/levels/5": {
+    "long_instructions": "Project Template Backed Level #3"
   },
   "https://studio.code.org/s/allthethings/lessons/48/levels/1": {
     "long_instructions": "# Create Your Scene - Sprites\n\nWith your background in place, it's time to add your sprites.\n\n# Do This\n\n1.  Add or draw at least 2 sprite animations in the Animation Tab.\n2.  Create at least 2 sprites and assign each one an animation.\n3.  Set the value for any sprite properties you'd like to use.\n    -   _Try to use at least 1 sprite property (such as rotation, scale, tint or any others in the Toolbox) with each sprite._\n4.  Draw all of your sprites to the screen."
@@ -2987,5 +2995,78 @@
   },
   "https://studio.code.org/s/allthethings/lessons/49/levels/2": {
     "long_instructions": "Let's get this moose dancing! Click the `\"dancer1\" do \"Floss\" forever` block onto the \"at 4 measures\" block to make him start flossing at the second measure."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/1": {
+    "long_instructions": "## Welcome to Python Lab\n\nPress the Run button and see what happens.",
+    "teacher_markdown": "Teachers should see this extra info."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/2": {
+    "long_instructions": "## Python Lab with Validation\n\nThis level has some built-in validation code."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/3": {
+    "long_instructions": "## Project-backed level\n\nThis level shares a project with level 4 in the progression."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/4": {
+    "long_instructions": "## Project-backed level\n\nThis level shares a project with level 3 in the progression."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/5": {
+    "long_instructions": "## Predict and Run\n\n**What do you think this program does?**\n\nTake a look at the code in this program. Write down what you think this program will do. There are no wrong answers!",
+    "teacher_markdown": "Teachers should see this extra info."
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/6": {
+    "long_instructions": "## Predict and Run\n\n**What do you think this program does?**\n\nTake a look at the code in this program. Which of the following matches what the program will print?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/50/levels/7": {
+    "long_instructions": "## Submittable Level\n\nHere's a sample submittable level!",
+    "teacher_markdown": "Teachers should see this extra info."
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/1": {
+    "long_instructions": "Add **html** pages and preview them in the right pane.\n\nAdd **css** pages (and link them to your html).\n\nUse the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)"
+  },
+  "https://studio.code.org/s/allthethings/lessons/51/levels/2": {
+    "long_instructions": "## Web Lab 2 Basics\n\nCreate your own web page!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/1": {
+    "long_instructions": "Try everything!"
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/2": {
+    "long_instructions": "## Sample Instructions\n\nThis is a chat bot which allows you to talk to historical figures.\n\n### Do This\n\nType in a question and press the `Submit`(#7435b2) button. What can you learn about Ada Lovelace?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/3": {
+    "long_instructions": "## Welcome to Python Lab\n\nPress the Run button and see what happens."
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/4": {
+    "long_instructions": "Add **html** pages and preview them in the right pane.\n\nAdd **css** pages (and link them to your html).\n\nUse the file browser to add/rename/delete files, or to add/rename/delete folders (including hierarchically!)"
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/5": {
+    "long_instructions": "Let's get this moose dancing! Click the `\"dancer1\" do \"Floss\" forever` block onto the \"at 4 measures\" block to make him start flossing at the second measure."
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/6": {
+    "panels": {
+      "musiclab_intro_panels_start-421d64b2-c4db-42cb-ac1f-de66a4d22fa7": "#### Welcome to Project Beats!\n\nProject Beats lets you mix, remix, and even perform music using code. Don’t worry if you don’t know much about code, or even music! All you need is a little time and some curiosity to start making your own creations."
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/52/levels/8": {
+    "dsls": {
+      "description": "This Bubble Choice level is currently NOT on lab2, but all the sublevels here should be Lab2 levels",
+      "display_name": "Lab2 BubbleChoice Showcase"
+    },
+    "sublevels": {
+      "AI Chat Sublevel": {
+        "long_instructions": "# AI Chat 2\r\n\r\n## Sample Instructions\r\n\r\nThis is a chat bot which helps you with grammar and punctuation to improve your writing.\r\n\r\n### Do This\r\n\r\nType in a paragraph that you'd like to revise and press the `Submit`(#7435b2) button."
+      },
+      "Music Sublevel": {
+        "validations": {
+          "Music Sublevel_20cb71d4-b13c-4494-8ca0-a234414ec12d": "Nice work.",
+          "Music Sublevel_e826dcbb-1947-42a8-b66f-aa676119b013": "Please play one sound."
+        }
+      },
+      "Python Lab Sublevel": {
+        "long_instructions": "## Python Lab Basics\r\n\r\nTry adding some new code."
+      },
+      "Weblab2 Sublevel": {
+        "long_instructions": "## Web Lab 2 Basics\r\n\r\nCreate your own web page!"
+      }
+    }
   }
 }

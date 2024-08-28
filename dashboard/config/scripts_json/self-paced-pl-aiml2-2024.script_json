@@ -7,11 +7,12 @@
       "curriculum_umbrella": "CSD Self Paced PL",
       "has_verified_resources": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-27 21:55:36 UTC",
+    "serialized_at": "2024-05-06 19:02:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -37,7 +38,7 @@
   "lessons": [
     {
       "key": "Introduction to AI and machine learning",
-      "name": "Introduction to AI and machine learning",
+      "name": "Introduction to AI and Machine Learning",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
@@ -54,7 +55,7 @@
     },
     {
       "key": "Train a machine learning model",
-      "name": "Train a machine learning model",
+      "name": "Train a Machine Learning Model",
       "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": false,
@@ -71,7 +72,7 @@
     },
     {
       "key": "Engage with machine learning apps",
-      "name": "Engage with machine learning apps",
+      "name": "Engage with Machine Learning Apps",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": false,
@@ -88,7 +89,7 @@
     },
     {
       "key": "Consider real world implications",
-      "name": "Consider real world implications",
+      "name": "Consider Real-World Implications",
       "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": false,
@@ -105,7 +106,7 @@
     },
     {
       "key": "Unit wrap up",
-      "name": "Unit wrap up",
+      "name": "Unit Wrap Up",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": false,
@@ -121,18 +122,18 @@
       }
     },
     {
-      "key": "Teaching AI and Machine Learning ",
-      "name": "Teaching AI and Machine Learning ",
+      "key": "Teaching Creating Apps with Devices ",
+      "name": "Teaching AI and Machine Learning",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": false,
       "relative_position": 6,
       "properties": {
-        "overview": "**You will:**\n\n* Consider the role of the teacher in a computer science classroom.\n* Learn about authentic CS practices that students will develop throughout the Creating Apps for Devices unit.\n* Reflect on how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.\n\n**Suggested Time:** 20 minutes",
-        "student_overview": "**You will:**\n\n* Consider the role of the teacher in a computer science classroom.\n* Learn about authentic CS practices that students will develop throughout the Creating Apps for Devices unit.\n* Reflect on how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.\n\n**Suggested Time:** 20 minutes"
+        "overview": "**You will:**\n\n* Consider the role of the teacher in a computer science classroom.\n* Learn about authentic CS practices that students will develop throughout the AI and Machine Learning unit.\n* Reflect on how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.\n\n**Suggested Time:** 25 minutes",
+        "student_overview": "**You will:**\n\n* Consider the role of the teacher in a computer science classroom.\n* Learn about authentic CS practices that students will develop throughout the AI and Machine Learning unit.\n* Reflect on how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion.\n\n**Suggested Time:** 25 minutes"
       },
       "seeding_key": {
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024"
       }
@@ -205,14 +206,14 @@
       }
     },
     {
-      "key": "007ca8bd-0e78-4cd5-bcbf-dbe096dba00a",
+      "key": "eaacd272-b055-4783-a53d-96c155baf4f9",
       "position": 1,
       "properties": {
-        "duration": 20
+        "duration": 25
       },
       "seeding_key": {
-        "lesson_activity.key": "007ca8bd-0e78-4cd5-bcbf-dbe096dba00a",
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson_activity.key": "eaacd272-b055-4783-a53d-96c155baf4f9",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024"
       }
@@ -234,7 +235,7 @@
       "key": "31bc78e0-04bc-4d09-a673-c45a30f91e6c",
       "position": 2,
       "properties": {
-        "progression_name": "Practice training A.I. Bot "
+        "progression_name": "Practice Training A.I. Bot "
       },
       "seeding_key": {
         "activity_section.key": "31bc78e0-04bc-4d09-a673-c45a30f91e6c",
@@ -245,7 +246,7 @@
       "key": "fe3efa97-a2a5-4518-872a-14485e967d5f",
       "position": 3,
       "properties": {
-        "progression_name": "Explore the first week of curriculum"
+        "progression_name": "Explore the First Week of Curriculum"
       },
       "seeding_key": {
         "activity_section.key": "fe3efa97-a2a5-4518-872a-14485e967d5f",
@@ -278,7 +279,7 @@
       "key": "a3c896dc-464b-485e-95ef-a56c64b9de6d",
       "position": 3,
       "properties": {
-        "progression_name": "Practice training a machine learning model"
+        "progression_name": "Practice Training a Machine Learning Model"
       },
       "seeding_key": {
         "activity_section.key": "a3c896dc-464b-485e-95ef-a56c64b9de6d",
@@ -300,7 +301,7 @@
       "key": "d157b77d-6b1c-44a8-ab94-69c110fc6028",
       "position": 2,
       "properties": {
-        "progression_name": "Explore machine learning apps"
+        "progression_name": "Explore Machine Learning Apps"
       },
       "seeding_key": {
         "activity_section.key": "d157b77d-6b1c-44a8-ab94-69c110fc6028",
@@ -322,7 +323,7 @@
       "key": "3de7af0e-31da-4a12-b4fb-4b3156a3876e",
       "position": 2,
       "properties": {
-        "progression_name": "AI and ethics"
+        "progression_name": "AI and Ethics"
       },
       "seeding_key": {
         "activity_section.key": "3de7af0e-31da-4a12-b4fb-4b3156a3876e",
@@ -344,7 +345,7 @@
       "key": "7a2b075a-7d69-4f13-836c-586187450126",
       "position": 2,
       "properties": {
-        "progression_name": "Unit projects"
+        "progression_name": "Unit Projects"
       },
       "seeding_key": {
         "activity_section.key": "7a2b075a-7d69-4f13-836c-586187450126",
@@ -355,7 +356,7 @@
       "key": "fc12a632-68a2-4cc8-af08-6deffc075459",
       "position": 3,
       "properties": {
-        "progression_name": "Make a plan"
+        "progression_name": "Make a Plan"
       },
       "seeding_key": {
         "activity_section.key": "fc12a632-68a2-4cc8-af08-6deffc075459",
@@ -363,80 +364,69 @@
       }
     },
     {
-      "key": "7897154b-0405-4a9a-b57f-7bc9f360b5f4",
+      "key": "ba8e4ae3-c87e-4377-a8ff-8b2504e5895e",
       "position": 1,
       "properties": {
         "progression_name": "Overview"
       },
       "seeding_key": {
-        "activity_section.key": "7897154b-0405-4a9a-b57f-7bc9f360b5f4",
-        "lesson_activity.key": "007ca8bd-0e78-4cd5-bcbf-dbe096dba00a"
+        "activity_section.key": "ba8e4ae3-c87e-4377-a8ff-8b2504e5895e",
+        "lesson_activity.key": "eaacd272-b055-4783-a53d-96c155baf4f9"
       }
     },
     {
-      "key": "e5b724da-c4d1-41ef-a6ee-c7da9c795e2c",
+      "key": "9a2cb2a2-77c5-4f31-9bd9-ca890721ba29",
       "position": 2,
       "properties": {
-        "progression_name": "The role of the teacher"
+        "progression_name": "The Role of the Teacher"
       },
       "seeding_key": {
-        "activity_section.key": "e5b724da-c4d1-41ef-a6ee-c7da9c795e2c",
-        "lesson_activity.key": "007ca8bd-0e78-4cd5-bcbf-dbe096dba00a"
+        "activity_section.key": "9a2cb2a2-77c5-4f31-9bd9-ca890721ba29",
+        "lesson_activity.key": "eaacd272-b055-4783-a53d-96c155baf4f9"
       }
     },
     {
-      "key": "2f561ebc-1646-4555-82b6-4306d42dc673",
+      "key": "ab44b9ba-4cdc-45de-a91f-974355081807",
       "position": 3,
       "properties": {
-        "progression_name": "Teaching and learning strategies"
+        "progression_name": "Teaching and Learning Strategies"
       },
       "seeding_key": {
-        "activity_section.key": "2f561ebc-1646-4555-82b6-4306d42dc673",
-        "lesson_activity.key": "007ca8bd-0e78-4cd5-bcbf-dbe096dba00a"
+        "activity_section.key": "ab44b9ba-4cdc-45de-a91f-974355081807",
+        "lesson_activity.key": "eaacd272-b055-4783-a53d-96c155baf4f9"
       }
     },
     {
-      "key": "2aac1b82-409b-49f9-9fc8-26dc4a605148",
+      "key": "67f7cc49-b94d-400a-bc85-d1373488be76",
       "position": 4,
       "properties": {
-        "progression_name": "Meeting student needs"
+        "progression_name": "Meeting Student Needs"
       },
       "seeding_key": {
-        "activity_section.key": "2aac1b82-409b-49f9-9fc8-26dc4a605148",
-        "lesson_activity.key": "007ca8bd-0e78-4cd5-bcbf-dbe096dba00a"
+        "activity_section.key": "67f7cc49-b94d-400a-bc85-d1373488be76",
+        "lesson_activity.key": "eaacd272-b055-4783-a53d-96c155baf4f9"
       }
     },
     {
-      "key": "8b6847c3-08bf-42b8-87b7-ac5329740236",
+      "key": "bff73932-1a9b-462f-a383-d2353899b738",
       "position": 5,
       "properties": {
         "progression_name": "Assessment"
       },
       "seeding_key": {
-        "activity_section.key": "8b6847c3-08bf-42b8-87b7-ac5329740236",
-        "lesson_activity.key": "007ca8bd-0e78-4cd5-bcbf-dbe096dba00a"
+        "activity_section.key": "bff73932-1a9b-462f-a383-d2353899b738",
+        "lesson_activity.key": "eaacd272-b055-4783-a53d-96c155baf4f9"
       }
     },
     {
-      "key": "3304cfe3-5df6-437e-90b3-84c607dc6bf9",
+      "key": "9b76364d-5d04-4e9a-bb74-4b960684cd35",
       "position": 6,
       "properties": {
-        "progression_name": "Wrap up"
+        "progression_name": "Wrap Up"
       },
       "seeding_key": {
-        "activity_section.key": "3304cfe3-5df6-437e-90b3-84c607dc6bf9",
-        "lesson_activity.key": "007ca8bd-0e78-4cd5-bcbf-dbe096dba00a"
-      }
-    },
-    {
-      "key": "aedae1d7-8c89-48c1-b87a-5cded840c152",
-      "position": 7,
-      "properties": {
-        "progression_name": "AYW Test"
-      },
-      "seeding_key": {
-        "activity_section.key": "aedae1d7-8c89-48c1-b87a-5cded840c152",
-        "lesson_activity.key": "007ca8bd-0e78-4cd5-bcbf-dbe096dba00a"
+        "activity_section.key": "9b76364d-5d04-4e9a-bb74-4b960684cd35",
+        "lesson_activity.key": "eaacd272-b055-4783-a53d-96c155baf4f9"
       }
     }
   ],
@@ -447,6 +437,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23_2024"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -474,6 +467,31 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
+          "SP-VPL-24-mod1-Certificate"
+        ],
+        "lesson.key": "Introduction to AI and machine learning",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-aiml2-2024",
+        "activity_section.key": "b0bca173-82fb-4602-b40d-cc96f1c4e7bd"
+      },
+      "level_keys": [
+        "SP-VPL-24-mod1-Certificate"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-UnitOverview-AIML_-22_23_2024"
+        ],
+        "progression": "Unit Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
           "SP-VPL-21-CSD-mod5-UnitOverview-AIML_-22_23_2024"
         ],
         "lesson.key": "Introduction to AI and machine learning",
@@ -486,11 +504,14 @@
       ]
     },
     {
-      "chapter": 3,
-      "position": 3,
-      "activity_section_position": 3,
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-ML-vid_2024"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -508,11 +529,14 @@
       ]
     },
     {
-      "chapter": 4,
-      "position": 4,
-      "activity_section_position": 4,
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-Intro-Quotes_-22_23_2024"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -530,11 +554,14 @@
       ]
     },
     {
-      "chapter": 5,
-      "position": 5,
-      "activity_section_position": 5,
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-lesson1-Overview-AIML_-22_23_2024"
+        ],
         "progression": "Unit Overview"
       },
       "bonus": false,
@@ -552,12 +579,15 @@
       ]
     },
     {
-      "chapter": 6,
-      "position": 6,
+      "chapter": 7,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice training A.I. Bot "
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-U7L1L1_2024"
+        ],
+        "progression": "Practice Training A.I. Bot "
       },
       "bonus": false,
       "seeding_key": {
@@ -574,12 +604,15 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 7,
+      "chapter": 8,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Practice training A.I. Bot "
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-MLintro-c4u_-22_23_2024"
+        ],
+        "progression": "Practice Training A.I. Bot "
       },
       "bonus": false,
       "seeding_key": {
@@ -596,12 +629,15 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 8,
+      "chapter": 9,
+      "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Explore the first week of curriculum"
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-2-4Overview-AIML_-22_23_2024"
+        ],
+        "progression": "Explore the First Week of Curriculum"
       },
       "bonus": false,
       "seeding_key": {
@@ -618,12 +654,15 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 9,
+      "chapter": 10,
+      "position": 10,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Explore the first week of curriculum"
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-L5overview-AIML_-22_23_2024"
+        ],
+        "progression": "Explore the First Week of Curriculum"
       },
       "bonus": false,
       "seeding_key": {
@@ -640,11 +679,14 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod5-PL-lesson2-overview_-22_23_2024"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -662,11 +704,14 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 12,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-AILab-vid_2024"
+        ],
         "progression": "Introduction to AI Lab"
       },
       "bonus": false,
@@ -684,11 +729,14 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 13,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-L6overview-AIML_-22_23_2024"
+        ],
         "progression": "Introduction to AI Lab"
       },
       "bonus": false,
@@ -706,12 +754,15 @@
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 14,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Practice training a machine learning model"
+        "level_keys": [
+          "SP-VPL-CSD-Mod5-ml-intro ai lab-shapes v1_2024"
+        ],
+        "progression": "Practice Training a Machine Learning Model"
       },
       "bonus": false,
       "seeding_key": {
@@ -728,12 +779,15 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 15,
       "position": 5,
       "activity_section_position": 2,
       "assessment": true,
       "properties": {
-        "progression": "Practice training a machine learning model"
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-AILabVocab-c4u_-22_23_2024"
+        ],
+        "progression": "Practice Training a Machine Learning Model"
       },
       "bonus": false,
       "seeding_key": {
@@ -750,12 +804,15 @@
       ]
     },
     {
-      "chapter": 15,
+      "chapter": 16,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Practice training a machine learning model"
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-AILabPart2-vid_2024"
+        ],
+        "progression": "Practice Training a Machine Learning Model"
       },
       "bonus": false,
       "seeding_key": {
@@ -772,12 +829,15 @@
       ]
     },
     {
-      "chapter": 16,
+      "chapter": 17,
       "position": 7,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Practice training a machine learning model"
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-L6overviewCont-AIML_-22_23_2024"
+        ],
+        "progression": "Practice Training a Machine Learning Model"
       },
       "bonus": false,
       "seeding_key": {
@@ -794,12 +854,15 @@
       ]
     },
     {
-      "chapter": 17,
+      "chapter": 18,
       "position": 8,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Practice training a machine learning model"
+        "level_keys": [
+          "SP-VPL-CSD-Mod5-ml-intro categorical-pizza_2024"
+        ],
+        "progression": "Practice Training a Machine Learning Model"
       },
       "bonus": false,
       "seeding_key": {
@@ -816,12 +879,15 @@
       ]
     },
     {
-      "chapter": 18,
+      "chapter": 19,
       "position": 9,
       "activity_section_position": 6,
       "assessment": true,
       "properties": {
-        "progression": "Practice training a machine learning model"
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-DataVisualizations-c4u_-22_23_2024"
+        ],
+        "progression": "Practice Training a Machine Learning Model"
       },
       "bonus": false,
       "seeding_key": {
@@ -838,11 +904,14 @@
       ]
     },
     {
-      "chapter": 19,
+      "chapter": 20,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod5-PL-lesson3-overview_-22_23_2024"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -860,12 +929,15 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 21,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Explore machine learning apps"
+        "level_keys": [
+          "SP-VPL-21-CSD-Mod5ml-intro app lab-book recommender 0_2024"
+        ],
+        "progression": "Explore Machine Learning Apps"
       },
       "bonus": false,
       "seeding_key": {
@@ -882,12 +954,15 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 22,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Explore machine learning apps"
+        "level_keys": [
+          "SP-VPL-CSD-Mod5-ml-intro app lab-book recommender demo_2024"
+        ],
+        "progression": "Explore Machine Learning Apps"
       },
       "bonus": false,
       "seeding_key": {
@@ -904,12 +979,15 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 23,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Explore machine learning apps"
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-ml-use model card-example3A_2024"
+        ],
+        "progression": "Explore Machine Learning Apps"
       },
       "bonus": false,
       "seeding_key": {
@@ -926,11 +1004,14 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 24,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod5-PL-lesson4-overview_-22_23_2024"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -948,12 +1029,15 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "AI and ethics"
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-BiasOverview-AIML_-22_23_2024"
+        ],
+        "progression": "AI and Ethics"
       },
       "bonus": false,
       "seeding_key": {
@@ -970,12 +1054,15 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "AI and ethics"
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-TrainingDataBias-vid_2024"
+        ],
+        "progression": "AI and Ethics"
       },
       "bonus": false,
       "seeding_key": {
@@ -992,12 +1079,15 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "AI and ethics"
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-ml-model card-medical app v2 2021-2_2024"
+        ],
+        "progression": "AI and Ethics"
       },
       "bonus": false,
       "seeding_key": {
@@ -1014,12 +1104,15 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 28,
       "position": 5,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "AI and ethics"
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-ml-model card-medical-3_-22_23_2024"
+        ],
+        "progression": "AI and Ethics"
       },
       "bonus": false,
       "seeding_key": {
@@ -1036,12 +1129,15 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 29,
       "position": 6,
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
-        "progression": "AI and ethics"
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-ModelCards-c4u_-22_23_2024"
+        ],
+        "progression": "AI and Ethics"
       },
       "bonus": false,
       "seeding_key": {
@@ -1058,12 +1154,15 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 30,
       "position": 7,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "AI and ethics"
+        "level_keys": [
+          "SP-VPL-CSD-21-mod5-EqualAccessAndBias-vid_2024"
+        ],
+        "progression": "AI and Ethics"
       },
       "bonus": false,
       "seeding_key": {
@@ -1080,12 +1179,15 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 31,
       "position": 8,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "AI and ethics"
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-L14examples-AIML_-22_23_2024"
+        ],
+        "progression": "AI and Ethics"
       },
       "bonus": false,
       "seeding_key": {
@@ -1102,11 +1204,14 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 32,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "SP-VPL-21-mod5-PL-lesson5-overview_-22_23_2024"
+        ],
         "progression": "Overview"
       },
       "bonus": false,
@@ -1124,12 +1229,15 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 33,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Unit projects"
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-ProjectOverview-AIML_-22_23_2024"
+        ],
+        "progression": "Unit Projects"
       },
       "bonus": false,
       "seeding_key": {
@@ -1146,12 +1254,15 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 34,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Unit projects"
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-ChapterProjectOverview-AIML_-22_23_2024"
+        ],
+        "progression": "Unit Projects"
       },
       "bonus": false,
       "seeding_key": {
@@ -1168,12 +1279,15 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 35,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Unit projects"
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-ProjectExamples-AIML_-22_23_2024"
+        ],
+        "progression": "Unit Projects"
       },
       "bonus": false,
       "seeding_key": {
@@ -1190,12 +1304,15 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Make a plan"
+        "level_keys": [
+          "SP-VPL-21-CSD-mod5-MakeAPlan-AIML_-22_23_2024"
+        ],
+        "progression": "Make a Plan"
       },
       "bonus": false,
       "seeding_key": {
@@ -1212,7 +1329,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1222,327 +1339,327 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-physical-computing-22-Overview-TeachingLearning_aiml_2024"
+          "SP-VPL-physical-computing-22-Overview-TeachingLearning_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "7897154b-0405-4a9a-b57f-7bc9f360b5f4"
+        "activity_section.key": "ba8e4ae3-c87e-4377-a8ff-8b2504e5895e"
       },
       "level_keys": [
-        "SP-VPL-physical-computing-22-Overview-TeachingLearning_aiml_2024"
-      ]
-    },
-    {
-      "chapter": 37,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "The role of the teacher"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "SP-VPL-PC-22-LeadLearner_aiml_2024"
-        ],
-        "lesson.key": "Teaching AI and Machine Learning ",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "e5b724da-c4d1-41ef-a6ee-c7da9c795e2c"
-      },
-      "level_keys": [
-        "SP-VPL-PC-22-LeadLearner_aiml_2024"
+        "SP-VPL-physical-computing-22-Overview-TeachingLearning_CSD-PL-24"
       ]
     },
     {
       "chapter": 38,
-      "position": 3,
-      "activity_section_position": 2,
+      "position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "The role of the teacher"
+        "progression": "The Role of the Teacher"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-PC-22-LeadLearner-vid_2024"
+          "SP-VPL-PC-22-LeadLearner_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "e5b724da-c4d1-41ef-a6ee-c7da9c795e2c"
+        "activity_section.key": "9a2cb2a2-77c5-4f31-9bd9-ca890721ba29"
       },
       "level_keys": [
-        "SP-VPL-PC-22-LeadLearner-vid_2024"
+        "SP-VPL-PC-22-LeadLearner_CSD-PL-24"
       ]
     },
     {
       "chapter": 39,
-      "position": 4,
-      "activity_section_position": 3,
+      "position": 3,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "The role of the teacher"
+        "progression": "The Role of the Teacher"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-PC-22-ClassroomCulture_aiml_2024"
+          "SP-VPL-PC-22-LeadLearner-vid_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "e5b724da-c4d1-41ef-a6ee-c7da9c795e2c"
+        "activity_section.key": "9a2cb2a2-77c5-4f31-9bd9-ca890721ba29"
       },
       "level_keys": [
-        "SP-VPL-PC-22-ClassroomCulture_aiml_2024"
+        "SP-VPL-PC-22-LeadLearner-vid_CSD-PL-24"
       ]
     },
     {
       "chapter": 40,
-      "position": 5,
-      "activity_section_position": 1,
+      "position": 4,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Teaching and learning strategies"
+        "progression": "The Role of the Teacher"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-PC-22-PairProgramming_aiml_2024"
+          "SP-VPL-PC-22-ClassroomCulture_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "2f561ebc-1646-4555-82b6-4306d42dc673"
+        "activity_section.key": "9a2cb2a2-77c5-4f31-9bd9-ca890721ba29"
       },
       "level_keys": [
-        "SP-VPL-PC-22-PairProgramming_aiml_2024"
+        "SP-VPL-PC-22-ClassroomCulture_CSD-PL-24"
       ]
     },
     {
       "chapter": 41,
-      "position": 6,
-      "activity_section_position": 2,
+      "position": 5,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Teaching and learning strategies"
+        "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-PC-22-PairProgramming-TipVid_2024"
+          "SP-VPL-PC-22-PairProgramming_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "2f561ebc-1646-4555-82b6-4306d42dc673"
+        "activity_section.key": "ab44b9ba-4cdc-45de-a91f-974355081807"
       },
       "level_keys": [
-        "SP-VPL-PC-22-PairProgramming-TipVid_2024"
+        "SP-VPL-PC-22-PairProgramming_CSD-PL-24"
       ]
     },
     {
       "chapter": 42,
-      "position": 7,
-      "activity_section_position": 3,
+      "position": 6,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Teaching and learning strategies"
+        "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-PC-22-Resources_aiml_2024"
+          "SP-VPL-PC-22-PairProgramming-TipVid_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "2f561ebc-1646-4555-82b6-4306d42dc673"
+        "activity_section.key": "ab44b9ba-4cdc-45de-a91f-974355081807"
       },
       "level_keys": [
-        "SP-VPL-PC-22-Resources_aiml_2024"
+        "SP-VPL-PC-22-PairProgramming-TipVid_CSD-PL-24"
       ]
     },
     {
       "chapter": 43,
-      "position": 8,
-      "activity_section_position": 4,
+      "position": 7,
+      "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "progression": "Teaching and learning strategies"
+        "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-PC-22-Debugging_aiml_2024"
+          "SP-VPL-PC-22-Resources_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "2f561ebc-1646-4555-82b6-4306d42dc673"
+        "activity_section.key": "ab44b9ba-4cdc-45de-a91f-974355081807"
       },
       "level_keys": [
-        "SP-VPL-PC-22-Debugging_aiml_2024"
+        "SP-VPL-PC-22-Resources_CSD-PL-24"
       ]
     },
     {
       "chapter": 44,
-      "position": 9,
-      "activity_section_position": 5,
+      "position": 8,
+      "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "progression": "Teaching and learning strategies"
+        "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-PC-22-Debugging-TipVid_2024"
+          "SP-VPL-PC-22-Debugging_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "2f561ebc-1646-4555-82b6-4306d42dc673"
+        "activity_section.key": "ab44b9ba-4cdc-45de-a91f-974355081807"
       },
       "level_keys": [
-        "SP-VPL-PC-22-Debugging-TipVid_2024"
+        "SP-VPL-PC-22-Debugging_CSD-PL-24"
       ]
     },
     {
       "chapter": 45,
-      "position": 10,
-      "activity_section_position": 6,
+      "position": 9,
+      "activity_section_position": 5,
       "assessment": false,
       "properties": {
-        "progression": "Teaching and learning strategies"
+        "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-CP-22-teamworkOverview_aiml_2024"
+          "SP-VPL-PC-22-Debugging-TipVid_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "2f561ebc-1646-4555-82b6-4306d42dc673"
+        "activity_section.key": "ab44b9ba-4cdc-45de-a91f-974355081807"
       },
       "level_keys": [
-        "SP-VPL-CP-22-teamworkOverview_aiml_2024"
+        "SP-VPL-PC-22-Debugging-TipVid_CSD-PL-24"
       ]
     },
     {
       "chapter": 46,
-      "position": 11,
-      "activity_section_position": 7,
+      "position": 10,
+      "activity_section_position": 6,
       "assessment": false,
       "properties": {
-        "progression": "Teaching and learning strategies"
+        "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-PC-22-Strategies-StudentVideos_aiml_2024"
+          "SP-VPL-CP-22-teamworkOverview_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "2f561ebc-1646-4555-82b6-4306d42dc673"
+        "activity_section.key": "ab44b9ba-4cdc-45de-a91f-974355081807"
       },
       "level_keys": [
-        "SP-VPL-PC-22-Strategies-StudentVideos_aiml_2024"
+        "SP-VPL-CP-22-teamworkOverview_CSD-PL-24"
       ]
     },
     {
       "chapter": 47,
-      "position": 12,
-      "activity_section_position": 8,
+      "position": 11,
+      "activity_section_position": 7,
       "assessment": false,
       "properties": {
-        "progression": "Teaching and learning strategies"
+        "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-CP-22-ProgrammingLevelsOverview_aiml_2024"
+          "SP-VPL-PC-22-Strategies-StudentVideos_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "2f561ebc-1646-4555-82b6-4306d42dc673"
+        "activity_section.key": "ab44b9ba-4cdc-45de-a91f-974355081807"
       },
       "level_keys": [
-        "SP-VPL-CP-22-ProgrammingLevelsOverview_aiml_2024"
+        "SP-VPL-PC-22-Strategies-StudentVideos_CSD-PL-24"
       ]
     },
     {
       "chapter": 48,
-      "position": 13,
-      "activity_section_position": 1,
+      "position": 12,
+      "activity_section_position": 8,
       "assessment": false,
       "properties": {
-        "progression": "Meeting student needs"
+        "progression": "Teaching and Learning Strategies"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-CP-22-Inclusion_aiml_2024"
+          "SP-VPL-CP-22-ProgrammingLevelsOverview_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "2aac1b82-409b-49f9-9fc8-26dc4a605148"
+        "activity_section.key": "ab44b9ba-4cdc-45de-a91f-974355081807"
       },
       "level_keys": [
-        "SP-VPL-CP-22-Inclusion_aiml_2024"
+        "SP-VPL-CP-22-ProgrammingLevelsOverview_CSD-PL-24"
       ]
     },
     {
       "chapter": 49,
-      "position": 14,
-      "activity_section_position": 2,
+      "position": 13,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Meeting student needs"
+        "progression": "Meeting Student Needs"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-PC-22-Differentiation_aiml_2024"
+          "SP-VPL-CP-22-Inclusion_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "2aac1b82-409b-49f9-9fc8-26dc4a605148"
+        "activity_section.key": "67f7cc49-b94d-400a-bc85-d1373488be76"
       },
       "level_keys": [
-        "SP-VPL-PC-22-Differentiation_aiml_2024"
+        "SP-VPL-CP-22-Inclusion_CSD-PL-24"
       ]
     },
     {
       "chapter": 50,
-      "position": 15,
-      "activity_section_position": 3,
+      "position": 14,
+      "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "progression": "Meeting student needs"
+        "progression": "Meeting Student Needs"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-PC-22-DifferentiationContinued_aiml_2024"
+          "SP-VPL-PC-22-Differentiation_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "2aac1b82-409b-49f9-9fc8-26dc4a605148"
+        "activity_section.key": "67f7cc49-b94d-400a-bc85-d1373488be76"
       },
       "level_keys": [
-        "SP-VPL-PC-22-DifferentiationContinued_aiml_2024"
+        "SP-VPL-PC-22-Differentiation_CSD-PL-24"
       ]
     },
     {
       "chapter": 51,
+      "position": 15,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Meeting Student Needs"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-PC-22-DifferentiationContinued_CSD-PL-24"
+        ],
+        "lesson.key": "Teaching Creating Apps with Devices ",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-aiml2-2024",
+        "activity_section.key": "67f7cc49-b94d-400a-bc85-d1373488be76"
+      },
+      "level_keys": [
+        "SP-VPL-PC-22-DifferentiationContinued_CSD-PL-24"
+      ]
+    },
+    {
+      "chapter": 52,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -1552,19 +1669,19 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-PC-22-Assessment_aiml_2024"
+          "SP-VPL-PC-22-Assessment_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "8b6847c3-08bf-42b8-87b7-ac5329740236"
+        "activity_section.key": "bff73932-1a9b-462f-a383-d2353899b738"
       },
       "level_keys": [
-        "SP-VPL-PC-22-Assessment_aiml_2024"
+        "SP-VPL-PC-22-Assessment_CSD-PL-24"
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 17,
       "activity_section_position": 2,
       "assessment": false,
@@ -1574,37 +1691,37 @@
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-PC-22-AssessmentPlan_aiml_2024"
+          "SP-VPL-PC-22-AssessmentPlan_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "8b6847c3-08bf-42b8-87b7-ac5329740236"
+        "activity_section.key": "bff73932-1a9b-462f-a383-d2353899b738"
       },
       "level_keys": [
-        "SP-VPL-PC-22-AssessmentPlan_aiml_2024"
+        "SP-VPL-PC-22-AssessmentPlan_CSD-PL-24"
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 18,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Wrap up"
+        "progression": "Wrap Up"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "SP-VPL-PC-22-mod2-WrapUp_aiml_2024"
+          "SP-VPL-PC-22-mod2-WrapUp_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "3304cfe3-5df6-437e-90b3-84c607dc6bf9"
+        "activity_section.key": "9b76364d-5d04-4e9a-bb74-4b960684cd35"
       },
       "level_keys": [
-        "SP-VPL-PC-22-mod2-WrapUp_aiml_2024"
+        "SP-VPL-PC-22-mod2-WrapUp_CSD-PL-24"
       ]
     }
   ],
@@ -1614,6 +1731,18 @@
         "level.key": "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23_2024",
         "script_level.level_keys": [
           "SP-VPL-21-CSD-mod5-Overview-AIML_-22_23_2024"
+        ],
+        "lesson.key": "Introduction to AI and machine learning",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "self-paced-pl-aiml2-2024",
+        "activity_section.key": "b0bca173-82fb-4602-b40d-cc96f1c4e7bd"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-24-mod1-Certificate",
+        "script_level.level_keys": [
+          "SP-VPL-24-mod1-Certificate"
         ],
         "lesson.key": "Introduction to AI and machine learning",
         "lesson_group.key": "lessonGroup-2",
@@ -2031,218 +2160,218 @@
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-physical-computing-22-Overview-TeachingLearning_aiml_2024",
+        "level.key": "SP-VPL-physical-computing-22-Overview-TeachingLearning_CSD-PL-24",
         "script_level.level_keys": [
-          "SP-VPL-physical-computing-22-Overview-TeachingLearning_aiml_2024"
+          "SP-VPL-physical-computing-22-Overview-TeachingLearning_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "7897154b-0405-4a9a-b57f-7bc9f360b5f4"
+        "activity_section.key": "ba8e4ae3-c87e-4377-a8ff-8b2504e5895e"
       }
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-PC-22-LeadLearner_aiml_2024",
+        "level.key": "SP-VPL-PC-22-LeadLearner_CSD-PL-24",
         "script_level.level_keys": [
-          "SP-VPL-PC-22-LeadLearner_aiml_2024"
+          "SP-VPL-PC-22-LeadLearner_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "e5b724da-c4d1-41ef-a6ee-c7da9c795e2c"
+        "activity_section.key": "9a2cb2a2-77c5-4f31-9bd9-ca890721ba29"
       }
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-PC-22-LeadLearner-vid_2024",
+        "level.key": "SP-VPL-PC-22-LeadLearner-vid_CSD-PL-24",
         "script_level.level_keys": [
-          "SP-VPL-PC-22-LeadLearner-vid_2024"
+          "SP-VPL-PC-22-LeadLearner-vid_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "e5b724da-c4d1-41ef-a6ee-c7da9c795e2c"
+        "activity_section.key": "9a2cb2a2-77c5-4f31-9bd9-ca890721ba29"
       }
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-PC-22-ClassroomCulture_aiml_2024",
+        "level.key": "SP-VPL-PC-22-ClassroomCulture_CSD-PL-24",
         "script_level.level_keys": [
-          "SP-VPL-PC-22-ClassroomCulture_aiml_2024"
+          "SP-VPL-PC-22-ClassroomCulture_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "e5b724da-c4d1-41ef-a6ee-c7da9c795e2c"
+        "activity_section.key": "9a2cb2a2-77c5-4f31-9bd9-ca890721ba29"
       }
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-PC-22-PairProgramming_aiml_2024",
+        "level.key": "SP-VPL-PC-22-PairProgramming_CSD-PL-24",
         "script_level.level_keys": [
-          "SP-VPL-PC-22-PairProgramming_aiml_2024"
+          "SP-VPL-PC-22-PairProgramming_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "2f561ebc-1646-4555-82b6-4306d42dc673"
+        "activity_section.key": "ab44b9ba-4cdc-45de-a91f-974355081807"
       }
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-PC-22-PairProgramming-TipVid_2024",
+        "level.key": "SP-VPL-PC-22-PairProgramming-TipVid_CSD-PL-24",
         "script_level.level_keys": [
-          "SP-VPL-PC-22-PairProgramming-TipVid_2024"
+          "SP-VPL-PC-22-PairProgramming-TipVid_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "2f561ebc-1646-4555-82b6-4306d42dc673"
+        "activity_section.key": "ab44b9ba-4cdc-45de-a91f-974355081807"
       }
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-PC-22-Resources_aiml_2024",
+        "level.key": "SP-VPL-PC-22-Resources_CSD-PL-24",
         "script_level.level_keys": [
-          "SP-VPL-PC-22-Resources_aiml_2024"
+          "SP-VPL-PC-22-Resources_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "2f561ebc-1646-4555-82b6-4306d42dc673"
+        "activity_section.key": "ab44b9ba-4cdc-45de-a91f-974355081807"
       }
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-PC-22-Debugging_aiml_2024",
+        "level.key": "SP-VPL-PC-22-Debugging_CSD-PL-24",
         "script_level.level_keys": [
-          "SP-VPL-PC-22-Debugging_aiml_2024"
+          "SP-VPL-PC-22-Debugging_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "2f561ebc-1646-4555-82b6-4306d42dc673"
+        "activity_section.key": "ab44b9ba-4cdc-45de-a91f-974355081807"
       }
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-PC-22-Debugging-TipVid_2024",
+        "level.key": "SP-VPL-PC-22-Debugging-TipVid_CSD-PL-24",
         "script_level.level_keys": [
-          "SP-VPL-PC-22-Debugging-TipVid_2024"
+          "SP-VPL-PC-22-Debugging-TipVid_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "2f561ebc-1646-4555-82b6-4306d42dc673"
+        "activity_section.key": "ab44b9ba-4cdc-45de-a91f-974355081807"
       }
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-CP-22-teamworkOverview_aiml_2024",
+        "level.key": "SP-VPL-CP-22-teamworkOverview_CSD-PL-24",
         "script_level.level_keys": [
-          "SP-VPL-CP-22-teamworkOverview_aiml_2024"
+          "SP-VPL-CP-22-teamworkOverview_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "2f561ebc-1646-4555-82b6-4306d42dc673"
+        "activity_section.key": "ab44b9ba-4cdc-45de-a91f-974355081807"
       }
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-PC-22-Strategies-StudentVideos_aiml_2024",
+        "level.key": "SP-VPL-PC-22-Strategies-StudentVideos_CSD-PL-24",
         "script_level.level_keys": [
-          "SP-VPL-PC-22-Strategies-StudentVideos_aiml_2024"
+          "SP-VPL-PC-22-Strategies-StudentVideos_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "2f561ebc-1646-4555-82b6-4306d42dc673"
+        "activity_section.key": "ab44b9ba-4cdc-45de-a91f-974355081807"
       }
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-CP-22-ProgrammingLevelsOverview_aiml_2024",
+        "level.key": "SP-VPL-CP-22-ProgrammingLevelsOverview_CSD-PL-24",
         "script_level.level_keys": [
-          "SP-VPL-CP-22-ProgrammingLevelsOverview_aiml_2024"
+          "SP-VPL-CP-22-ProgrammingLevelsOverview_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "2f561ebc-1646-4555-82b6-4306d42dc673"
+        "activity_section.key": "ab44b9ba-4cdc-45de-a91f-974355081807"
       }
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-CP-22-Inclusion_aiml_2024",
+        "level.key": "SP-VPL-CP-22-Inclusion_CSD-PL-24",
         "script_level.level_keys": [
-          "SP-VPL-CP-22-Inclusion_aiml_2024"
+          "SP-VPL-CP-22-Inclusion_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "2aac1b82-409b-49f9-9fc8-26dc4a605148"
+        "activity_section.key": "67f7cc49-b94d-400a-bc85-d1373488be76"
       }
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-PC-22-Differentiation_aiml_2024",
+        "level.key": "SP-VPL-PC-22-Differentiation_CSD-PL-24",
         "script_level.level_keys": [
-          "SP-VPL-PC-22-Differentiation_aiml_2024"
+          "SP-VPL-PC-22-Differentiation_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "2aac1b82-409b-49f9-9fc8-26dc4a605148"
+        "activity_section.key": "67f7cc49-b94d-400a-bc85-d1373488be76"
       }
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-PC-22-DifferentiationContinued_aiml_2024",
+        "level.key": "SP-VPL-PC-22-DifferentiationContinued_CSD-PL-24",
         "script_level.level_keys": [
-          "SP-VPL-PC-22-DifferentiationContinued_aiml_2024"
+          "SP-VPL-PC-22-DifferentiationContinued_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "2aac1b82-409b-49f9-9fc8-26dc4a605148"
+        "activity_section.key": "67f7cc49-b94d-400a-bc85-d1373488be76"
       }
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-PC-22-Assessment_aiml_2024",
+        "level.key": "SP-VPL-PC-22-Assessment_CSD-PL-24",
         "script_level.level_keys": [
-          "SP-VPL-PC-22-Assessment_aiml_2024"
+          "SP-VPL-PC-22-Assessment_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "8b6847c3-08bf-42b8-87b7-ac5329740236"
+        "activity_section.key": "bff73932-1a9b-462f-a383-d2353899b738"
       }
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-PC-22-AssessmentPlan_aiml_2024",
+        "level.key": "SP-VPL-PC-22-AssessmentPlan_CSD-PL-24",
         "script_level.level_keys": [
-          "SP-VPL-PC-22-AssessmentPlan_aiml_2024"
+          "SP-VPL-PC-22-AssessmentPlan_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "8b6847c3-08bf-42b8-87b7-ac5329740236"
+        "activity_section.key": "bff73932-1a9b-462f-a383-d2353899b738"
       }
     },
     {
       "seeding_key": {
-        "level.key": "SP-VPL-PC-22-mod2-WrapUp_aiml_2024",
+        "level.key": "SP-VPL-PC-22-mod2-WrapUp_CSD-PL-24",
         "script_level.level_keys": [
-          "SP-VPL-PC-22-mod2-WrapUp_aiml_2024"
+          "SP-VPL-PC-22-mod2-WrapUp_CSD-PL-24"
         ],
-        "lesson.key": "Teaching AI and Machine Learning ",
+        "lesson.key": "Teaching Creating Apps with Devices ",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "self-paced-pl-aiml2-2024",
-        "activity_section.key": "3304cfe3-5df6-437e-90b3-84c607dc6bf9"
+        "activity_section.key": "9b76364d-5d04-4e9a-bb74-4b960684cd35"
       }
     }
   ],

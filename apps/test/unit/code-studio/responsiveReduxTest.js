@@ -1,6 +1,3 @@
-import {expect} from '../../util/reconfiguredChai';
-import sinon from 'sinon';
-
 import {
   getResponsiveBreakpoint,
   ResponsiveSize,
@@ -8,20 +5,20 @@ import {
 
 describe('responsiveRedux', () => {
   it('getResponsiveBreakpoint returns lg', () => {
-    expect(getResponsiveBreakpoint(1000)).to.equal(ResponsiveSize.lg);
+    expect(getResponsiveBreakpoint(1000)).toBe(ResponsiveSize.lg);
   });
   it('getResponsiveBreakpoint returns md', () => {
-    expect(getResponsiveBreakpoint(800)).to.equal(ResponsiveSize.md);
+    expect(getResponsiveBreakpoint(800)).toBe(ResponsiveSize.md);
   });
   it('getResponsiveBreakpoint returns sm', () => {
-    expect(getResponsiveBreakpoint(700)).to.equal(ResponsiveSize.sm);
+    expect(getResponsiveBreakpoint(700)).toBe(ResponsiveSize.sm);
   });
   it('getResponsiveBreakpoint returns xs', () => {
-    expect(getResponsiveBreakpoint(500)).to.equal(ResponsiveSize.xs);
+    expect(getResponsiveBreakpoint(500)).toBe(ResponsiveSize.xs);
   });
   it('getResponsiveBreakpoint returns xs if 0', () => {
-    sinon.stub(console, 'error');
-    expect(getResponsiveBreakpoint(0)).to.equal(ResponsiveSize.xs);
-    expect(console.error).to.have.been.calledOnce;
+    jest.spyOn(console, 'error').mockClear().mockImplementation();
+    expect(getResponsiveBreakpoint(0)).toBe(ResponsiveSize.xs);
+    expect(console.error).toHaveBeenCalledTimes(1);
   });
 });

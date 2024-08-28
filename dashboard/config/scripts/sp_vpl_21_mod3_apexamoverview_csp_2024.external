@@ -17,48 +17,16 @@ markdown <<MARKDOWN
 
 ##### The AP CS Principles exam is comprised of two components to be completed at separate times: 
 
-* ##### The Create Performance Task (PT), submitted to the AP Digital Portfolio on the College Board website
 * ##### The multiple-choice exam
+* ##### Create Performance Task and Written Response
 
 ##### Expand the lines below to learn more about each portion of the exam.
 <br>
 
 <details>
-<summary><strong>Create Performance Task</strong></summary>
+<summary><strong>Section I: End-of-Course Multiple-Choice Exam</strong></summary>
 
 <img src="https://images.code.org/2e1815439ed2771eb6e8310a7d9456f2-image-1639427568773.32.44 PM.png" alt="Image of an App Lab poem app." width="150px" style="border-radius:10px; float:right; margin: 0 0 0px 0px;  padding-left: 30px;">
-
-##### **Exam weighting**: 30% <br>
-##### **Timing**: Students must be provided at least 12 hours of class time
-
-##### The Create Performance Task is a substantial independent programming project that students complete during the school year and submit at the end of April. The program can be about a topic entirely of your students' choosing, and should demonstrate mastery of the programming skills that students learn throughout the school year. Additionally, students submit written responses explaining the purpose, functionality, data abstractions, and procedural abstractions they used.
-
-
-##### The following must be submitted to the AP Digital Portfolio for the Create Performance Task:
-
-* A PDF of program code
-* A video of the program running
-* Four written responses explaining different parts of the program
-##
-
-##### Code.org's curriculum provides students with the following opportunities to prepare for the **Create Performance Task**:
-
-* **Unit Projects**: By far the most significant preparation for the Create PT are the unit projects in units 3, 4, 6, and 7 which include significant components of the task. Through completing these projects students will not only see the specific programming skills and prompts that appear on the Create PT, but they will also practice independently completing a major programming project.
-
-* **Make Lessons**: EIPM sequences found in units 4, 5, and 7 conclude with projects that give students targeted practice with independently programming an app. These one-day activities give students a chance to practice independently using programming skills in between unit projects
-
-* **The Create PT Prep Unit**: Unit 8 - Create PT Prep is designed to make sure students understand every aspect of the task. This unit includes sample submissions, activities, checklists, and a "Create PT Survival Guide" that walks students through every aspect of the task.
-##
-___
-
-</details>
-
-
-<div style="clear:both"/>
-
-<details><summary><strong>Multiple choice exam</strong></summary>
-
-<img src="https://images.code.org/a5d0f8a3cbc916d5d7ace3af6dd8cbb5-image-1639528336685.30.27 PM.png" alt="Flow chart with two logic gates." width="200px" style="border-radius:10px; float:right; margin: 0px 0px 0px 0px;  padding-left: 30px;">
 
 ##### **Exam weighting**: 70% <br>
 ##### **Timing**: 70 questions in 120 minutes
@@ -73,6 +41,37 @@ ___
 ##
 
 ##### Our curriculum provides students with **multiple choice assessments** at the end of each unit, which are written in a style that closely resembles the format of questions that students find on the multiple choice exam. These assessments are excellent practice for the questions students see at the end of the year.
+
+___
+
+</details>
+
+
+<div style="clear:both"/>
+
+<details><summary><strong>Section II: Create Performance Task and Written Response</strong></summary>
+
+<img src="https://images.code.org/a5d0f8a3cbc916d5d7ace3af6dd8cbb5-image-1639528336685.30.27 PM.png" alt="Flow chart with two logic gates." width="200px" style="border-radius:10px; float:right; margin: 0px 0px 0px 0px;  padding-left: 30px;">
+
+
+
+##### **Exam weighting**: 30% total <br>
+##### **Format**: 
+* ##### Create performance task program code, video, and student-authored Personalized Project Reference | 9 hours in-class | 10% of score
+* ##### 2 written response questions | 60 minutes end-of-course exam | 20% of score
+
+##### The second section of the AP Computer Science Principles Exam consists of a through-course Create performance task where students will develop a computer program of their choice and an end-of-course written response section where students demonstrate their understanding of their personal Create performance task by answering four prompts. Students will be provided 9 hours of in-class time to complete their program, video, and develop a Personalized Project Reference.  
+
+##### On the end-of-course exam, students will respond to two questions related to the code in their Personalized Project Reference. 
+
+##### Code.org's curriculum provides students with the following opportunities to prepare for the **Create Performance Task**:
+
+* **Unit Projects**: By far the most significant preparation for the Create PT are the unit projects in units 3, 4, 6, and 7 which include significant components of the task. Through completing these projects students will not only see the specific programming skills and prompts that appear on the Create PT, but they will also practice independently completing a major programming project.
+
+* **Make Lessons**: EIPM sequences found in units 4, 5, and 7 conclude with projects that give students targeted practice with independently programming an app. These one-day activities give students a chance to practice independently using programming skills in between unit projects
+
+* **The Create PT Prep Unit**: Unit 8 - Create PT Prep is designed to make sure students understand every aspect of the task. This unit includes sample submissions, activities, checklists, and a "Create PT Survival Guide" that walks students through every aspect of the task.
+
 
 </details>
 

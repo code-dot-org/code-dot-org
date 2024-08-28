@@ -1,20 +1,21 @@
-var errorDialogStack = require('@cdo/apps/p5lab/redux/errorDialogStack');
-import {expect} from '../../util/reconfiguredChai';
-import {UnconnectedErrorDialogStack as ErrorDialogStack} from '@cdo/apps/p5lab/ErrorDialogStack';
-import {mount} from 'enzyme';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
+
+import {UnconnectedErrorDialogStack as ErrorDialogStack} from '@cdo/apps/p5lab/ErrorDialogStack';
+
+var errorDialogStack = require('@cdo/apps/p5lab/redux/errorDialogStack');
 
 describe('ErrorDialogStack', function () {
   describe('reducer', function () {
     var reducer = errorDialogStack.default;
 
     it('has empty array as default state', function () {
-      expect(reducer(undefined, {})).to.deep.equal([]);
+      expect(reducer(undefined, {})).toEqual([]);
     });
 
     it('returns original state on unhandled action', function () {
       var state = [];
-      expect(reducer(state, {})).to.equal(state);
+      expect(reducer(state, {})).toBe(state);
     });
 
     describe('action: reportError', function () {
@@ -23,8 +24,8 @@ describe('ErrorDialogStack', function () {
       it('pushes an error object onto the stack', function () {
         var state = [];
         var newState = reducer([], reportError('a mistake'));
-        expect(newState).not.to.equal(state);
-        expect(newState).to.deep.equal([
+        expect(newState).not.toBe(state);
+        expect(newState).toEqual([
           {message: 'a mistake', error_type: undefined, error_cause: undefined},
         ]);
       });
@@ -34,8 +35,8 @@ describe('ErrorDialogStack', function () {
           {message: 'original', error_type: undefined, error_cause: undefined},
         ];
         var newState = reducer(state, reportError('new'));
-        expect(newState).not.to.equal(state);
-        expect(newState).to.deep.equal([
+        expect(newState).not.toBe(state);
+        expect(newState).toEqual([
           {message: 'new', error_type: undefined, error_cause: undefined},
           {message: 'original', error_type: undefined, error_cause: undefined},
         ]);
@@ -47,8 +48,8 @@ describe('ErrorDialogStack', function () {
           [],
           reportError('a mistake', 'anim_load', '1234')
         );
-        expect(newState).not.to.equal(state);
-        expect(newState).to.deep.equal([
+        expect(newState).not.toBe(state);
+        expect(newState).toEqual([
           {message: 'a mistake', error_type: 'anim_load', error_cause: '1234'},
         ]);
       });
@@ -67,11 +68,11 @@ describe('ErrorDialogStack', function () {
             isSpriteLab={false}
           />
         );
-        expect(dialog.text()).to.contain(
+        expect(dialog.text()).toContain(
           'It looks like we are having trouble loading your animation'
         );
-        expect(dialog.text()).to.contain('https://code.org/contact');
-        expect(dialog.find('Button')).to.have.length(2);
+        expect(dialog.text()).toContain('https://code.org/contact');
+        expect(dialog.find('Button')).toHaveLength(2);
       });
 
       it('does not display additional message and buttons for a generic error', function () {
@@ -85,11 +86,11 @@ describe('ErrorDialogStack', function () {
             isSpriteLab={false}
           />
         );
-        expect(dialog.text()).to.not.contain(
+        expect(dialog.text()).not.toContain(
           'It looks like we are having trouble loading your animation'
         );
         // only shows the close dialog 'X' button
-        expect(dialog.find('Button')).to.have.length(1);
+        expect(dialog.find('Button')).toHaveLength(1);
       });
     });
 
@@ -99,14 +100,14 @@ describe('ErrorDialogStack', function () {
       it('removes the first error object from the stack', function () {
         var state = [{message: 'first'}, {message: 'second'}];
         var newState = reducer(state, dismissError());
-        expect(newState).not.to.equal(state);
-        expect(newState).to.deep.equal([{message: 'second'}]);
+        expect(newState).not.toBe(state);
+        expect(newState).toEqual([{message: 'second'}]);
       });
 
       it('does nothing when stack is already empty', function () {
         var state = [];
         var newState = reducer(state, dismissError());
-        expect(newState).to.equal(state);
+        expect(newState).toBe(state);
       });
     });
   });

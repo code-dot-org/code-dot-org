@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React, {
   ChangeEvent,
   useCallback,
@@ -5,28 +6,29 @@ import React, {
   useMemo,
   useState,
 } from 'react';
-import classNames from 'classnames';
-import styles from './patternPanel.module.scss';
-import PreviewControls from './PreviewControls';
-import MusicLibrary, {SoundData} from '../player/MusicLibrary';
+
 import {PatternEventValue} from '../player/interfaces/PatternEvent';
+import MusicLibrary, {SoundData} from '../player/MusicLibrary';
+import MusicPlayer from '../player/MusicPlayer';
+
 import LoadingOverlay from './LoadingOverlay';
-import {LoadFinishedCallback} from '../types';
+import PreviewControls from './PreviewControls';
+
+import styles from './patternPanel.module.scss';
 
 // Generate an array containing tick numbers from 1..16.
 const arrayOfTicks = Array.from({length: 16}, (_, i) => i + 1);
 
 interface PatternPanelProps {
-  bpm: number;
   library: MusicLibrary;
   initValue: PatternEventValue;
   onChange: (value: PatternEventValue) => void;
-  previewSound: (path: string) => void;
-  previewPattern: (pattern: PatternEventValue, onStop: () => void) => void;
-  cancelPreviews: () => void;
-  setupSampler: (kit: string, onLoadFinished?: LoadFinishedCallback) => void;
-  isInstrumentLoading: (kit: string) => boolean;
-  isInstrumentLoaded: (kit: string) => boolean;
+  previewSound: MusicPlayer['previewSound'];
+  previewPattern: MusicPlayer['previewPattern'];
+  cancelPreviews: MusicPlayer['cancelPreviews'];
+  setupSampler: MusicPlayer['setupSampler'];
+  isInstrumentLoading: MusicPlayer['isInstrumentLoading'];
+  isInstrumentLoaded: MusicPlayer['isInstrumentLoaded'];
   registerInstrumentLoadCallback: (callback: (kit: string) => void) => void;
 }
 
@@ -35,7 +37,6 @@ interface PatternPanelProps {
  * custom Blockly Field {@link FieldPattern}
  */
 const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
-  bpm,
   library,
   initValue,
   onChange,
@@ -112,17 +113,17 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
   }, [onChange, currentValue]);
 
   const startPreview = useCallback(() => {
-    setCurrentPreviewTick(1);
-    const intervalId = setInterval(
-      () => setCurrentPreviewTick(tick => tick + 1),
-      // Tick forward every 16th note, i.e. 4 times per beat.
-      (60 / bpm / 4) * 1000
+    previewPattern(
+      currentValue,
+      (tick: number) => setCurrentPreviewTick(tick),
+      () => setCurrentPreviewTick(0)
     );
-    previewPattern(currentValue, () => {
-      clearInterval(intervalId);
-      setCurrentPreviewTick(0);
-    });
-  }, [previewPattern, bpm, setCurrentPreviewTick, currentValue]);
+  }, [previewPattern, setCurrentPreviewTick, currentValue]);
+
+  const stopPreview = useCallback(() => {
+    setCurrentPreviewTick(0);
+    cancelPreviews();
+  }, [setCurrentPreviewTick, cancelPreviews]);
 
   useEffect(() => {
     if (!isInstrumentLoaded(currentValue.kit)) {
@@ -190,7 +191,8 @@ const PatternPanel: React.FunctionComponent<PatternPanelProps> = ({
         enabled={currentValue.events.length > 0}
         playPreview={startPreview}
         onClickClear={onClear}
-        cancelPreviews={cancelPreviews}
+        cancelPreviews={stopPreview}
+        isPlayingPreview={currentPreviewTick > 0}
       />
     </div>
   );

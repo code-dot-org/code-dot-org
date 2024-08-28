@@ -1,0 +1,245 @@
+<Dancelab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 63,
+  "created_at": "2024-04-23T19:52:45.000Z",
+  "level_num": "custom",
+  "user_id": 182,
+  "properties": {
+    "skin": "dance",
+    "helper_libraries": [
+      "DanceLab"
+    ],
+    "hide_animation_mode": "true",
+    "show_type_hints": "true",
+    "use_modal_function_editor": "false",
+    "embed": "false",
+    "instructions_important": "false",
+    "submittable": "false",
+    "is_k1": "false",
+    "never_autoplay_video": "true",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "top_level_procedure_autopopulate": "false",
+    "hide_share_and_remix": "false",
+    "disable_if_else_editing": "false",
+    "include_shared_functions": "false",
+    "free_play": "true",
+    "hide_view_data_button": "false",
+    "show_debug_watch": "false",
+    "expand_debugger": "false",
+    "debugger_disabled": "false",
+    "start_in_animation_tab": "false",
+    "all_animations_single_frame": "false",
+    "pause_animations_by_default": "false",
+    "hide_custom_blocks": "true",
+    "use_default_sprites": "false",
+    "parent_level_id": 21705,
+    "block_pool": "Dancelab",
+    "name_suffix": "_grade5",
+    "skip_autosave": true,
+    "default_song": "ificanthaveyou_shawnmendes",
+    "long_instructions": "\r\nGet your groove on! Create a dance of your own to share with your friends.",
+    "soft_buttons": [
+      "leftButton",
+      "rightButton",
+      "upButton",
+      "downButton"
+    ],
+    "short_instructions": "Get your groove on! Create a dance of your own to share with your friends.",
+    "video_key": "hoc_dance_congrats_2019",
+    "encrypted": "false",
+    "mini_rubric": "false",
+    "tts_short_instructions_override": "Get your groove on! Create a dance of your own to share with your friends.",
+    "tts_long_instructions_override": "Get your groove on! Create a dance of your own to share with your friends.",
+    "hint_prompt_attempts_threshold": "1",
+    "validation_enabled": "false",
+    "hide_pause_button": "false",
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-04-23T19:52:45.088+00:00\",\"changed\":[\"cloned from \\\"CourseD_Dance_2020_10_maker\\\"\"],\"cloned_from\":\"CourseD_Dance_2020_10_maker\"},{\"changed_at\":\"2024-06-25 18:53:17 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"},{\"changed_at\":\"2024-06-26 17:47:36 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18981,\"changed_by_email\":\"melissa.toohey@code.org\"}]",
+  "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": 1,
+    "repeat_loops": 1,
+    "events": 1
+  }
+}]]></config>
+  <blocks>
+    <start_blocks>
+      <xml>
+        <block type="Dancelab_whenSetup" deletable="false" movable="false">
+          <statement name="DO">
+            <block type="Dancelab_setBackgroundEffectWithPalette">
+              <title name="PALETTE">"electronic"</title>
+              <title name="EFFECT">"spiral"</title>
+              <next>
+                <block type="Dancelab_makeNewDanceSpriteGroup">
+                  <title name="N">12</title>
+                  <title name="COSTUME">"ALIEN"</title>
+                  <title name="LAYOUT">"circle"</title>
+                  <next>
+                    <block type="Dancelab_makeAnonymousDanceSprite">
+                      <title name="COSTUME">"MOOSE"</title>
+                      <title name="LOCATION">{x: 200, y: 200}</title>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </xml>
+    </start_blocks>
+    <toolbox_blocks>
+      <xml>
+        <category name="World">
+          <block type="Dancelab_setBackgroundEffectWithPalette">
+            <field name="PALETTE">"neon"</field>
+            <field name="EFFECT">"higher_power"</field>
+          </block>
+          <block type="Dancelab_setForegroundEffectExtended">
+            <field name="EFFECT">"rain"</field>
+          </block>
+          <block type="Dancelab_setBackground">
+            <value name="COLOR">
+              <shadow type="colour_picker">
+                <field name="COLOUR">#ff0000</field>
+              </shadow>
+            </value>
+          </block>
+          <block type="Dancelab_randomColor"/>
+          <block type="Dancelab_mixColors">
+            <value name="COLOR1">
+              <shadow type="colour_picker">
+                <field name="COLOUR">#ff0000</field>
+              </shadow>
+            </value>
+            <value name="COLOR2">
+              <shadow type="colour_picker">
+                <field name="COLOUR">#000099</field>
+              </shadow>
+            </value>
+          </block>
+          <block type="Dancelab_changeColorBy">
+            <field name="METHOD">"hue"</field>
+            <value name="COLOR">
+              <shadow type="colour_picker">
+                <field name="COLOUR">#ff0000</field>
+              </shadow>
+            </value>
+            <value name="AMOUNT">
+              <shadow type="math_number">
+                <field name="NUM">10</field>
+              </shadow>
+            </value>
+          </block>
+        </category>
+        <category name="Dancers">
+          <block type="Dancelab_makeAnonymousDanceSprite">
+            <field name="COSTUME">"CAT"</field>
+            <field name="LOCATION">{x: 200, y: 100}</field>
+          </block>
+          <block type="Dancelab_makeNewDanceSpriteGroup">
+            <field name="N">20</field>
+            <field name="COSTUME">"BEAR"</field>
+            <field name="LAYOUT">"infinity"</field>
+          </block>
+          <block type="Dancelab_layoutSprites">
+            <field name="GROUP">"BEAR"</field>
+            <field name="FORMAT">"spiral"</field>
+          </block>
+          <block type="Dancelab_jumpToEach">
+            <field name="GROUP">"BEAR"</field>
+            <field name="LOCATION">{x: 200, y: 100}</field>
+          </block>
+          <block type="Dancelab_changeMoveEachLR">
+            <field name="GROUP">sprites</field>
+            <field name="MOVE">"next"</field>
+            <field name="DIR">-1</field>
+          </block>
+          <block type="Dancelab_doMoveEachLR">
+            <field name="GROUP">sprites</field>
+            <field name="MOVE">MOVES.XBend</field>
+            <field name="DIR">-1</field>
+          </block>
+          <block type="Dancelab_startMappingEach">
+            <field name="GROUP">sprites</field>
+            <field name="PROPERTY">"scale"</field>
+            <field name="RANGE">"bass"</field>
+          </block>
+          <block type="Dancelab_stopMappingEach">
+            <field name="GROUP">sprites</field>
+            <field name="PROPERTY">"scale"</field>
+            <field name="RANGE">"bass"</field>
+          </block>
+          <block type="Dancelab_alternateMoves">
+            <field name="GROUP">sprites</field>
+            <field name="N">2</field>
+            <field name="MOVE1">MOVES.Roll</field>
+            <field name="MOVE2">MOVES.ClapHigh</field>
+          </block>
+        </category>
+        <category name="Properties">
+          <block type="Dancelab_setTintEachInline">
+            <field name="THIS">sprites</field>
+            <field name="VAL">#ff0000</field>
+          </block>
+          <block type="Dancelab_setPropEach">
+            <field name="GROUP">sprites</field>
+            <field name="PROPERTY">"scale"</field>
+            <field name="VAL">50</field>
+          </block>
+          <block type="Dancelab_changePropEachBy">
+            <field name="GROUP">sprites</field>
+            <field name="PROPERTY">"scale"</field>
+            <field name="VAL">0</field>
+          </block>
+          <block type="Dancelab_setPropRandomEach">
+            <field name="GROUP">sprites</field>
+            <field name="PROPERTY">"scale"</field>
+          </block>
+          <block type="Dancelab_setVisibleEach">
+            <field name="THIS">sprites</field>
+            <field name="VISIBILITY">true</field>
+          </block>
+          <block type="Dancelab_setDanceSpeedEach">
+            <field name="GROUP">sprites</field>
+            <field name="SPEED">2</field>
+          </block>
+          <block type="Dancelab_startMappingEach">
+            <field name="GROUP">sprites</field>
+            <field name="PROPERTY">"scale"</field>
+            <field name="RANGE">"bass"</field>
+          </block>
+          <block type="Dancelab_stopMappingEach">
+            <field name="GROUP">sprites</field>
+            <field name="PROPERTY">"scale"</field>
+            <field name="RANGE">"bass"</field>
+          </block>
+        </category>
+        <category name="Events">
+          <block type="Dancelab_whenKey">
+            <field name="KEY">"up"</field>
+          </block>
+          <block type="Dancelab_whenPeak">
+            <field name="RANGE">0</field>
+          </block>
+          <block type="Dancelab_atTimestamp">
+            <field name="TIMESTAMP">4</field>
+            <field name="UNIT">"measures"</field>
+          </block>
+          <block type="Dancelab_everySeconds">
+            <field name="N">4</field>
+            <field name="UNIT">"measures"</field>
+          </block>
+        </category>
+      </xml>
+    </toolbox_blocks>
+  </blocks>
+</Dancelab>

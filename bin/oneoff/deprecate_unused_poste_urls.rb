@@ -2,6 +2,7 @@
 
 require 'sequel'
 require File.expand_path('../../../pegasus/src/env', __FILE__)
+require 'cdo/sequel'
 require src_dir 'database'
 require_relative './poste_urls_constants'
 
@@ -13,7 +14,7 @@ require_relative './poste_urls_constants'
 MAX_EXECUTION_TIME_SEC = 300
 
 # Connection to write to Pegasus production database.
-PEGASUS_DB_WRITER = sequel_connect(
+PEGASUS_DB_WRITER = Cdo::Sequel.database_connection_pool(
   CDO.pegasus_db_writer,
   CDO.pegasus_db_reader,
   query_timeout: MAX_EXECUTION_TIME_SEC

@@ -1,15 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import classNames from 'classnames';
 import {uniqueId} from 'lodash';
+import PropTypes from 'prop-types';
 import queryString from 'query-string';
-import i18n from '@cdo/locale';
+import React from 'react';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import {currentLocation, makeEnum} from '@cdo/apps/utils';
-import TooltipWithIcon from './TooltipWithIcon';
+import i18n from '@cdo/locale';
+
 import {getIconForLevel, isLevelAssessment} from './progressHelpers';
 import {flex, font, marginLeftRight, marginTopBottom} from './progressStyles';
 import {levelWithProgressType} from './progressTypes';
+import TooltipWithIcon from './TooltipWithIcon';
 import './styles.scss';
 
 export const BubbleSize = makeEnum('dot', 'letter', 'full');

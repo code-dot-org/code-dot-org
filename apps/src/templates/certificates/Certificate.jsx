@@ -1,14 +1,12 @@
-import React, {useEffect, useRef, useState} from 'react';
-import {connect} from 'react-redux';
+import classNames from 'classnames';
 import $ from 'jquery';
-import BackToFrontConfetti from '../BackToFrontConfetti';
-import i18n from '@cdo/locale';
 import PropTypes from 'prop-types';
 import queryString from 'query-string';
-import SocialShare from './SocialShare';
-import LargeChevronLink from './LargeChevronLink';
+import React, {useEffect, useRef, useState} from 'react';
+import {connect} from 'react-redux';
+import {register} from 'swiper/element/bundle';
+
 import {ResponsiveSize} from '@cdo/apps/code-studio/responsiveRedux';
-import style from './congrats.module.scss';
 import {
   BodyTwoText,
   BodyThreeText,
@@ -16,7 +14,15 @@ import {
   Heading2,
   Heading3,
 } from '@cdo/apps/componentLibrary/typography';
-import {register} from 'swiper/element/bundle';
+import i18n from '@cdo/locale';
+
+import BackToFrontConfetti from '../BackToFrontConfetti';
+
+import LargeChevronLink from './LargeChevronLink';
+import SocialShare from './SocialShare';
+
+import style from './congrats.module.scss';
+
 register();
 
 /**
@@ -141,7 +147,10 @@ function Certificate(props) {
           `
             :host .swiper-pagination {
               position: relative;
-              margin-top: 2rem;
+              margin-top: -1rem;
+              .swiper-pagination-bullet {
+                margin-block: 0.5rem;
+              }
             }
             `,
         ],
@@ -207,9 +216,15 @@ function Certificate(props) {
               className={style.confetti}
             />
           }
-          <swiper-container ref={swiperRef} class={style.swiperContainer}>
+          <swiper-container
+            init="false"
+            ref={swiperRef}
+            class={style.swiperContainer}
+            navigation-next-el="#certificate-swiper-next-el"
+            navigation-prev-el="#certificate-swiper-prev-el"
+          >
             {certificateData.map(image => (
-              <swiper-slide key={image.courseName} class={style.swiperSlide}>
+              <swiper-slide key={image.courseName}>
                 <a href={getCertificateSharePath(image.courseName)}>
                   <img
                     src={getCertificateImagePath(image.courseName)}
@@ -223,12 +238,22 @@ function Certificate(props) {
                             courseTitle: image.courseTitle,
                           })
                     }
-                    style={{width: 470}}
+                    className={style.certificateImage}
                   />
                 </a>
               </swiper-slide>
             ))}
           </swiper-container>
+          <button
+            id="certificate-swiper-prev-el"
+            className={classNames(style.navButton, style.prevElNav)}
+            type="button"
+          />
+          <button
+            id="certificate-swiper-next-el"
+            className={classNames(style.navButton, style.nextElNav)}
+            type="button"
+          />
         </div>
         <div className={`${certificateStyle} ${style.inputContainer}`}>
           {courseName && !personalized && (

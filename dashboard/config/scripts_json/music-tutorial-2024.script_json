@@ -1,0 +1,905 @@
+{
+  "script": {
+    "name": "music-tutorial-2024",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "curriculum_umbrella": "CSF",
+      "is_course": true,
+      "is_migrated": true,
+      "supported_locales": [
+        "ar-SA",
+        "es-ES",
+        "es-MX",
+        "fa-IR",
+        "fil-PH",
+        "fr-FR",
+        "hi-IN",
+        "id-ID",
+        "it-IT",
+        "ja-JP",
+        "ko-KR",
+        "pl-PL",
+        "pt-BR",
+        "sk-SK",
+        "th-TH",
+        "tr-TR",
+        "vi-VN",
+        "zh-TW"
+      ],
+      "version_year": "unversioned"
+    },
+    "new_name": null,
+    "family_name": "music-tutorial-2024",
+    "serialized_at": "2024-08-01 16:22:18 UTC",
+    "published_state": "stable",
+    "instruction_type": "teacher_led",
+    "instructor_audience": "teacher",
+    "participant_audience": "student",
+    "seeding_key": {
+      "script.name": "music-tutorial-2024"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "lesson-1",
+      "name": "Music Lab Intro Tutorial ",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "overview": "In this interactive lesson, students will use Music Lab, a block-based IDE, to learn about events, functions, and loops while creating unique sounds, composing songs, and performing live music. They will utilize sound generation, loops, functions, and events to craft and share a unique composition, developing foundational coding skills and an appreciation for the connection between music and technology."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "67dd257c-6b1b-429e-8c09-65b6e3d8e4c4",
+      "position": 1,
+      "properties": {
+        "duration": 60,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "67dd257c-6b1b-429e-8c09-65b6e3d8e4c4",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "9fa5c579-fc56-4d21-b653-0236cde28f3c",
+      "position": 1,
+      "properties": {
+        "description": "Today, we'll learn how to make music with code! First, you'll learn how to add simple sounds to a song. Then, you'll learn how to play lots of sounds at the same time, just like real songs have drums, bass, and guitars playing at the same time.\n\nThen, you'll explore how loops can make beats repeat, how functions organize sections of your song, and how events can start new sounds with the press of a button.\n\nFollow the directions on every level to learn how to make your own song. By the end, you'll have coded a song that you can share.\n\nLet's start making music!",
+        "name": "Intro",
+        "progression_name": "Introduction",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To ensure all students read the instructions in the first level, consider displaying them on the board and going over them as a class.\n\nProgress to Level 2 and demonstrate how to click on the bold words to trigger an arrow that points to the block or Music Lab feature the word is referring to."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9fa5c579-fc56-4d21-b653-0236cde28f3c",
+        "lesson_activity.key": "67dd257c-6b1b-429e-8c09-65b6e3d8e4c4"
+      }
+    },
+    {
+      "key": "07085cd5-2d5a-4ee5-a254-fa3b55bf324e",
+      "position": 2,
+      "properties": {
+        "description": "Read the instructions on the left. Click on the bold words to see the block or feature it is referring to.\n\nIn this level, drag the play sound block from the toolbox and connect it under when run in the workspace.\n\nNotice there is a preview of the sound in the timeline at the bottom of your screen. To play your code, click the \"Run\" button. If you like it, click \"Continue\" to move on to the next level.",
+        "name": "Play a sound",
+        "progression_name": "Play a sound"
+      },
+      "seeding_key": {
+        "activity_section.key": "07085cd5-2d5a-4ee5-a254-fa3b55bf324e",
+        "lesson_activity.key": "67dd257c-6b1b-429e-8c09-65b6e3d8e4c4"
+      }
+    },
+    {
+      "key": "ec49adfe-4aed-414e-b54d-a19de60dbf77",
+      "position": 3,
+      "properties": {
+        "name": "Play more sounds",
+        "progression_name": "Play more sounds"
+      },
+      "seeding_key": {
+        "activity_section.key": "ec49adfe-4aed-414e-b54d-a19de60dbf77",
+        "lesson_activity.key": "67dd257c-6b1b-429e-8c09-65b6e3d8e4c4"
+      }
+    },
+    {
+      "key": "1f583816-2880-4dbe-a791-a5bed7b3e656",
+      "position": 4,
+      "properties": {
+        "description": "Loops are a fundamental concept in programming that allow a sequence of instructions to be repeated multiple times. In the context of Music Lab, loops can be used to repeat a series of notes or rhythms, making it easier to create repetitive patterns in music, such as choruses or verses, without needing to code each repetition individually.",
+        "name": "Repeat",
+        "progression_name": "Repeat"
+      },
+      "seeding_key": {
+        "activity_section.key": "1f583816-2880-4dbe-a791-a5bed7b3e656",
+        "lesson_activity.key": "67dd257c-6b1b-429e-8c09-65b6e3d8e4c4"
+      }
+    },
+    {
+      "key": "1b3023ca-495e-47b6-84c7-031d142116e4",
+      "position": 5,
+      "properties": {
+        "name": "Play together",
+        "progression_name": "Play together",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider stopping the class to go over Level 6 together. Display the level on the board and read the instructions as a class. Ensure students understand that two different sounds can be played at the same time if they are both in the play together block. \n\nContrast the `play together` block with the `repeat` block to notice that play together plays the sounds at the same time while repeat plays the sounds sequentially over and over. "
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1b3023ca-495e-47b6-84c7-031d142116e4",
+        "lesson_activity.key": "67dd257c-6b1b-429e-8c09-65b6e3d8e4c4"
+      }
+    },
+    {
+      "key": "46890823-7695-469c-acb6-5043049df475",
+      "position": 6,
+      "properties": {
+        "description": "Functions are blocks of code designed to perform a particular task. When composing music, students can use functions to encapsulate parts of their songs, such as a melody or a beat. This not only organizes the song's structure but also enables students to reuse these parts, making the coding process more efficient and the code itself more readable.",
+        "name": "Functions",
+        "progression_name": "Functions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider going over Level 8 as a whole class. Direct students to notice how a function is a chunk of code that stands on its own. It's not connected to the when `run block`. Once they have coded what they want in their function, students need to \"call\" the function. This means they need to use the new function block, like `chorus`, and connect it under `when run`.\n\nYou can also mention how it's important to name your function something you can easily remember. For example, if students want a function that triggers a chunk of code that acts as the verse of the song, they should name their function `verse`."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "46890823-7695-469c-acb6-5043049df475",
+        "lesson_activity.key": "67dd257c-6b1b-429e-8c09-65b6e3d8e4c4"
+      }
+    },
+    {
+      "key": "c75f56d3-8eea-4b46-8b71-c04db7e4a997",
+      "position": 7,
+      "properties": {
+        "description": "Events are actions or occurrences that happen during the runtime of a program, which can trigger specific blocks of code to execute. In music coding, events can be used to make the composition interactive. For example, pressing a number key could trigger a function that plays a sound effect or starts a beat. Events allow students to play live music or add dynamic elements to their compositions.",
+        "name": "Play live",
+        "progression_name": "Triggers",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider going over Level 10 as a whole class."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c75f56d3-8eea-4b46-8b71-c04db7e4a997",
+        "lesson_activity.key": "67dd257c-6b1b-429e-8c09-65b6e3d8e4c4"
+      }
+    },
+    {
+      "key": "7b384978-e31b-448f-b828-21ba9af23a2b",
+      "position": 8,
+      "properties": {
+        "description": "The `play notes` and `play drums` blocks allow students to compose a new melody or custom drum beats to add to their song. Clicking on the rectangle field on the block will open a window to customize the notes or drums. ",
+        "name": "Compose ",
+        "progression_name": "Custom notes & beats"
+      },
+      "seeding_key": {
+        "activity_section.key": "7b384978-e31b-448f-b828-21ba9af23a2b",
+        "lesson_activity.key": "67dd257c-6b1b-429e-8c09-65b6e3d8e4c4"
+      }
+    },
+    {
+      "key": "ceea3e03-6a3a-432e-b8a8-493f4a2b737a",
+      "position": 9,
+      "properties": {
+        "description": "Clicking \"Continue\" after this final level will send students to the Music Lab free play project where they can build their own musical compositions. If a student gets stuck, direct them back to the tutorial to jog their memory.",
+        "name": "Outro",
+        "progression_name": "Outro"
+      },
+      "seeding_key": {
+        "activity_section.key": "ceea3e03-6a3a-432e-b8a8-493f4a2b737a",
+        "lesson_activity.key": "67dd257c-6b1b-429e-8c09-65b6e3d8e4c4"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music_lab_intro_panels_start2"
+        ],
+        "progression": "Introduction"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music_lab_intro_panels_start2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "9fa5c579-fc56-4d21-b653-0236cde28f3c"
+      },
+      "level_keys": [
+        "music_lab_intro_panels_start2"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_play_sound"
+        ],
+        "progression": "Play a sound"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_play_sound"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "07085cd5-2d5a-4ee5-a254-fa3b55bf324e"
+      },
+      "level_keys": [
+        "musiclab_tutorial_play_sound"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_change_sound"
+        ],
+        "progression": "Play more sounds"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_change_sound"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "ec49adfe-4aed-414e-b54d-a19de60dbf77"
+      },
+      "level_keys": [
+        "musiclab_tutorial_change_sound"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_repeat"
+        ],
+        "progression": "Repeat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_repeat"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "1f583816-2880-4dbe-a791-a5bed7b3e656"
+      },
+      "level_keys": [
+        "musiclab_tutorial_panels_repeat"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_repeat"
+        ],
+        "progression": "Repeat"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_repeat"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "1f583816-2880-4dbe-a791-a5bed7b3e656"
+      },
+      "level_keys": [
+        "musiclab_tutorial_repeat"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_playtogether"
+        ],
+        "progression": "Play together"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_playtogether"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "1b3023ca-495e-47b6-84c7-031d142116e4"
+      },
+      "level_keys": [
+        "musiclab_tutorial_panels_playtogether"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_play_together"
+        ],
+        "progression": "Play together"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_play_together"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "1b3023ca-495e-47b6-84c7-031d142116e4"
+      },
+      "level_keys": [
+        "musiclab_tutorial_play_together"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_function"
+        ],
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_function"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "46890823-7695-469c-acb6-5043049df475"
+      },
+      "level_keys": [
+        "musiclab_tutorial_panels_function"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_function"
+        ],
+        "progression": "Functions"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_function"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "46890823-7695-469c-acb6-5043049df475"
+      },
+      "level_keys": [
+        "musiclab_tutorial_function"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_trigger"
+        ],
+        "progression": "Triggers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_trigger"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "c75f56d3-8eea-4b46-8b71-c04db7e4a997"
+      },
+      "level_keys": [
+        "musiclab_tutorial_panels_trigger"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_trigger"
+        ],
+        "progression": "Triggers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_trigger"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "c75f56d3-8eea-4b46-8b71-c04db7e4a997"
+      },
+      "level_keys": [
+        "musiclab_tutorial_trigger"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_panels_notes"
+        ],
+        "progression": "Custom notes & beats"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_notes"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "7b384978-e31b-448f-b828-21ba9af23a2b"
+      },
+      "level_keys": [
+        "musiclab_tutorial_panels_notes"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_notes"
+        ],
+        "progression": "Custom notes & beats"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_notes"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "7b384978-e31b-448f-b828-21ba9af23a2b"
+      },
+      "level_keys": [
+        "musiclab_tutorial_notes"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 14,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "musiclab_tutorial_drums"
+        ],
+        "progression": "Custom notes & beats"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "musiclab_tutorial_drums"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "7b384978-e31b-448f-b828-21ba9af23a2b"
+      },
+      "level_keys": [
+        "musiclab_tutorial_drums"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 15,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "usiclab_tutorial_panels_end"
+        ],
+        "progression": "Outro"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "usiclab_tutorial_panels_end"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "ceea3e03-6a3a-432e-b8a8-493f4a2b737a"
+      },
+      "level_keys": [
+        "usiclab_tutorial_panels_end"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "music_lab_intro_panels_start2",
+        "script_level.level_keys": [
+          "music_lab_intro_panels_start2"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "9fa5c579-fc56-4d21-b653-0236cde28f3c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_play_sound",
+        "script_level.level_keys": [
+          "musiclab_tutorial_play_sound"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "07085cd5-2d5a-4ee5-a254-fa3b55bf324e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_change_sound",
+        "script_level.level_keys": [
+          "musiclab_tutorial_change_sound"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "ec49adfe-4aed-414e-b54d-a19de60dbf77"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_panels_repeat",
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_repeat"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "1f583816-2880-4dbe-a791-a5bed7b3e656"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_repeat",
+        "script_level.level_keys": [
+          "musiclab_tutorial_repeat"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "1f583816-2880-4dbe-a791-a5bed7b3e656"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_panels_playtogether",
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_playtogether"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "1b3023ca-495e-47b6-84c7-031d142116e4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_play_together",
+        "script_level.level_keys": [
+          "musiclab_tutorial_play_together"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "1b3023ca-495e-47b6-84c7-031d142116e4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_panels_function",
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_function"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "46890823-7695-469c-acb6-5043049df475"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_function",
+        "script_level.level_keys": [
+          "musiclab_tutorial_function"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "46890823-7695-469c-acb6-5043049df475"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_panels_trigger",
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_trigger"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "c75f56d3-8eea-4b46-8b71-c04db7e4a997"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_trigger",
+        "script_level.level_keys": [
+          "musiclab_tutorial_trigger"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "c75f56d3-8eea-4b46-8b71-c04db7e4a997"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_panels_notes",
+        "script_level.level_keys": [
+          "musiclab_tutorial_panels_notes"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "7b384978-e31b-448f-b828-21ba9af23a2b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_notes",
+        "script_level.level_keys": [
+          "musiclab_tutorial_notes"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "7b384978-e31b-448f-b828-21ba9af23a2b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "musiclab_tutorial_drums",
+        "script_level.level_keys": [
+          "musiclab_tutorial_drums"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "7b384978-e31b-448f-b828-21ba9af23a2b"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "usiclab_tutorial_panels_end",
+        "script_level.level_keys": [
+          "usiclab_tutorial_panels_end"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-tutorial-2024",
+        "activity_section.key": "ceea3e03-6a3a-432e-b8a8-493f4a2b737a"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "events",
+      "word": "Events",
+      "definition": "Events are actions or occurrences that happen during the runtime of a program, which can trigger specific blocks of code to execute.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "events"
+      }
+    },
+    {
+      "key": "functions",
+      "word": "Functions",
+      "definition": "Functions are blocks of code designed to perform a particular task. When composing music, students can use functions to encapsulate parts of their songs, such as a melody or a beat.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "functions"
+      }
+    },
+    {
+      "key": "loops",
+      "word": "Loops",
+      "definition": "Loops allow a sequence of instructions to be repeated multiple times.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loops"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "events"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "functions"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "vocabulary.key": "loops"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "9ee514fa-07d9-4637-995f-8b522164665c",
+      "properties": {
+        "description": "Utilize sound generation, loops, functions, and events in a project to craft and share a unique composition."
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "objective.key": "9ee514fa-07d9-4637-995f-8b522164665c"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-10"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1B-AP-15"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

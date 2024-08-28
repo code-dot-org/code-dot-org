@@ -5,23 +5,17 @@ description 'description here'
 markdown <<MARKDOWN
 # The Draw Loop
 
-<div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px; margin-bottom:10px;">
-
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; "><strong>The draw loop</strong> is one of the core programming paradigms in Game Lab. After it is introduced, students will continue developing their understanding of the power of the draw loop throughout the Interactive Animations and Game unit. However, it is important that students understand that <strong>the commands in the draw loop are called after all other code but are then called repeatedly to create animation.</strong> Laying a strong conceptual foundation of the draw loop early on will serve students well for the rest of the unit as they move into more open ended creative tasks.
+<div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">
+<strong>The draw loop</strong> is one of the core programming paradigms in Game Lab. After it is introduced, students will continue developing their understanding of the power of the draw loop throughout the Interactive Animations and Game unit. However, it is important that students understand that <strong>the commands in the draw loop are called after all other code but are then called repeatedly to create animation.</strong> Laying a strong conceptual foundation of the draw loop early on will serve students well for the rest of the unit as they move into more open ended creative tasks.
 </p></div>
+<br>
 
 <img src="https://curriculum.code.org/media/uploads/animation4.gif" style="padding-left: 80px;  height: 150px; clear: both; margin-left:50px; margin-top:10px;" alt="A gif showing various figures walking.">
 
-## Key understandings:
+## Key Understandings:
 
-* ##### The draw loop is run after all other code in your program. It does not actually matter where it is located in your program.
-* ##### The draw loop is run by Game Lab at a constant frame rate of 30 frames per second. You do not actually need to call the function yourself.
-* ##### The "frames" in Game Lab can be thought of as transparency sheets. Unless you draw a background, then all your new shapes or sprites will simply appear on top of your old ones.
-* ##### You should only have one draw loop in your program.
-
-
-#### Let's continue learning! 
-
-
-
+* #### The draw loop is run after all other code in your program. It does not actually matter where it is located in your program.
+* #### The draw loop is run by Game Lab at a constant frame rate of 30 frames per second. You do not actually need to call the function yourself.
+* #### The "frames" in Game Lab can be thought of as transparency sheets. Unless you draw a background, then all your new shapes or sprites will simply appear on top of your old ones.
+* #### You should only have one draw loop in your program.
 MARKDOWN

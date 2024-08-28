@@ -18,7 +18,7 @@ markdown <<MARKDOWN
     <p>
 
 #### **To Do:** 
-* #### Go to <a href="https://www.craiyon.com">Craiyon</a>. 
+* #### Go to <a href="https://www.craiyon.com" target="_blank">Craiyon</a>. 
 * #### Put in whatever prompt you’d like and choose your art type.
 * #### Click the “Draw” button.
 * #### If you’d like, explore “Expert Mode”.
@@ -55,7 +55,7 @@ markdown <<MARKDOWN
     <p>
 
 #### **To Do:** 
-* #### Go to <a href="https://beta.diffit.me/#topic">diffit</a>.
+* #### Go to <a href="https://beta.diffit.me/#topic" target="_blank">Diffit</a>.
 * #### Copy and paste a reading from a recent lesson plan or any news article.
 * #### Choose the reading level to differentiate it to and/or language to translate it into.
 * #### Click “Generate Resource”.

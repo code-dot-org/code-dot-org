@@ -5,36 +5,34 @@ description 'description here'
 markdown <<MARKDOWN
 # Unit Overview
 
-<div style="background-color: #a6e3e8; border-radius: 40px 40px 40px 40px; color: #000000; width: 95%; padding: 0.5px 20px 1px 20px;">
-
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 16px; "><b>Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems.</b> 
-
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom: 20px; font-size: 16px; ">In the first part of the unit, students practice using a <b>problem solving process</b> to address a series of puzzles, challenges, and real-world scenarios. Next, students learn how computers <b>input, output, store, and process (IOSP)</b> information to help humans solve problems. The unit concludes with a project in which students design an application that helps solve a problem of their choosing.
+<div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">Problem Solving and Computing is a <b>highly interactive and collaborative</b> introduction to the field of computer science, as framed within the broader pursuit of solving problems.
 </p></div>
+<br>
+
+#### In the first part of the unit, students practice using a <b>problem solving process</b> to address a series of puzzles, challenges, and real-world scenarios. Next, students learn how computers <b>input, output, store, and process (IOSP)</b> information to help humans solve problems. The unit concludes with a project in which students design an application that helps solve a problem of their choosing.
 
 <img src="https://images.code.org/bd7a10ac7cf259ed7284cc0bcd23e13c-image-1650060916845.15.01 PM.png" alt="Image of input, output, storage, processing process"  style="width:450px; float: right; margin-left:10px; margin-right:10px; margin-top:20px;">
 
-
 ## **Students will:**
-* ##### Identify the defined characteristics of a computer and how it is used to solve information problems. 
-* ##### Use a structured problem solving process to address problems and design solutions that use computing technology. 
-* ##### Create a collaborative classroom environment where students view computer science as relevant, fun, and empowering.
+
+* #### Identify the defined characteristics of a computer and how it is used to solve information problems. 
+* #### Use a structured problem solving process to address problems and design solutions that use computing technology. 
+* #### Create a collaborative classroom environment where students view computer science as relevant, fun, and empowering.
+<br>
+
+#### You can view the <a href="https://docs.google.com/document/d/1MdzbIovdWzLimQZeYkWNIC614J_tshmhrKnt-7ne-48/view" target="blank" rel="noopener noreferrer">Unit Guide</a> and <a href="https://docs.google.com/document/d/1wNaYFmhH62KfkSjDY9zLat5bwwK4nuvKChJasvSMHeM/view" target="blank" rel="noopener noreferrer">Guide to Implementation</a> for more information about this unit
+
+## **Implementation Guidance** 
+#### Alternate lessons are provided for some lessons in Unit 1, depending on your classroom context.
 
 
-
-## **Implementation guidance** 
-* ##### Alternate lessons are provided for some lessons in Unit 1, depending on your classroom context.
-
-* ##### View the <a href="https://docs.google.com/document/d/1MdzbIovdWzLimQZeYkWNIC614J_tshmhrKnt-7ne-48/view" target="blank" rel="noopener noreferrer">Unit Guide</a> and <a href="https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view" target="blank" rel="noopener noreferrer">Guide to Implementation</a> for more information about this unit
-
-
-## **Suggested time to complete the unit:** 3 weeks 
-##### The suggested time is based on 225 instructional minutes per week. Visit the <a href="https://studio.code.org/s/csd1-2023" target="blank" rel="noopener noreferrer">Unit Overview Page</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week. 
+### **Suggested time to complete the unit:** 3 weeks 
+#### The suggested time is based on 225 instructional minutes per week. Visit the <a href="https://studio.code.org/s/csd1-2024" target="blank" rel="noopener noreferrer">Unit Overview Page</a> and use the unit calendar to adjust the instructional minutes to reflect the time you have with your students each week. 
 ___
 
 <img src="https://images.code.org/37353b374cece47b58fde41cd29174bc-image-1698275297090.png" alt="A blue circle with an exclamation point in the middle, used to signal an important point."  style="width:50px; float: left; margin-left:10px; margin-right:10px; margin-top:0px;">
 
-###### <b>Heads up!</b> This unit starts with a pre-course survey. We appreciate your help in collecting crucial (and anonymous!) data about your students' beliefs and attitudes about computer science. The pre-course survey is about 30 questions long, so you may want to plan for it to be early homework or taken on an admin day before you being teaching. You can find more information about this pre-course survey in <a href="https://studio.code.org/s/csd1-2023/lessons/1" target="blank" rel="noopener noreferrer">Lesson 1</a>.
+#### <b>Heads up!</b> This unit starts with a pre-course survey. We appreciate your help in collecting crucial (and anonymous!) data about your students' beliefs and attitudes about computer science. The pre-course survey is about 30 questions long, so you may want to plan for it to be early homework or taken on an admin day before you being teaching. You can find more information about this pre-course survey in <a href="https://studio.code.org/s/csd1-2024/lessons/1" target="blank" rel="noopener noreferrer">Lesson 1</a>.
 
 <div style="clear:both"/>
 

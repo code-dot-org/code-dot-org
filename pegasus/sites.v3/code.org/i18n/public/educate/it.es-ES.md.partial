@@ -17,9 +17,11 @@ theme: responsive
 
 ## Minimum Supported Browsers and Platforms
 
+A partir de julio de 2024, actualizaremos las versiones mínimas requeridas para los navegadores y sistemas operativos. Si bien es posible que las versiones anteriores sigan funcionando, no podremos atender las solicitudes de corrección de errores en las versiones anteriores.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Browser
@@ -40,11 +42,33 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          Platform
+          Navegador, julio del 24
+        </th>
+        <tr>
+          <td>Cromo 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Safari móvil 14.x</td>
+        </tr>
+        <tr>
+          <td>Edge 119x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Plataforma
         </th>
         <tr>
           <td>macOS 10.13</td>
@@ -62,13 +86,35 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Plataforma: julio del 24
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Sites to Unblock
 
-For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure the following sites are allowed and aren't blocked.
+Para disfrutar de la mejor experiencia con todo el contenido de Code.org, te recomendamos que consultes con el departamento de TI de tu escuela o distrito para asegurarte de que los siguientes sitios estén permitidos y no bloqueados.
 
 | Priority                                                                                                               | URL                                                                                                        |
 | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -80,28 +126,27 @@ For the very best experience with all Code.org content, we recommend consulting 
 | **Para usar Internet Simulator**                                                                                       | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Para usar Web Lab**                                                                                                  | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Para usar el botón de compartir de Google Classroom**                                                                | `https://apis.google.com`                                                                                  |
-| **Para usar conjuntos de datos de App Lab**                                                                            | `https://*.firebaseio.com`<br />`fue: //*.firebaseio.com`                                            |
 
 ## Mobile and Tablet Support Details
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Most tablets are not supported, with the following exceptions:
+Todos los cursos de CS Discoveries, CS Principles, CS A e Introducción a App Lab no son compatibles con tabletas o dispositivos móviles; se requieren un teclado y un ratón (o panel táctil) completos. La mayoría de las tabletas no son compatibles, con las siguientes excepciones:
 
 - Microsoft Surface Pro with an external keyboard
 - iPad running iPadOS 13.4 or later with an external keyboard and an external mouse or touchpad
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+Todos los demás contenidos, como los cursos de K-5 (fundamentos de informática) y las actividades de la Hora del Código, son compatibles con los iPads y otras tabletas y ordenadores portátiles o de escritorio modernos.
 
 ### Mobile Phones
 
-Our Hour of Code activities and CS Fundamentals courses can be completed on mobile phones. While these activities are usable, they are not optimized for a mobile phone experience and have some known limitations (e.g. touch targets may be small, accessory elements may display offscreen, and text may be difficult to input using the on-screen keyboard). The CS Discoveries, CS Principles, and Intro to App Lab courses are not usable on mobile phones.
+Nuestras actividades de la Hora del Código y los cursos de Fundamentos de Informática se pueden completar en teléfonos móviles. Si bien estas actividades son utilizables, no están optimizadas para la experiencia con el teléfono móvil y tienen algunas limitaciones conocidas (por ejemplo, los objetivos táctiles pueden ser pequeños, los elementos accesorios pueden mostrarse fuera de la pantalla y puede ser difícil introducir texto con el teclado en pantalla). Los cursos CS Discoveries, CS Principles e Intro to App Lab no se pueden usar en teléfonos móviles.
 
 ## Videos
 
-We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our [online learning platform](https://studio.code.org). For schools with YouTube blocked, we attempt to display a Code.org hosted video player instead.
+Usamos [YouTube](https://www.youtube.com) para incrustar vídeos en Code.org y en nuestra plataforma de aprendizaje en línea [](https://studio.code.org). En el caso de los centros educativos con YouTube bloqueado, intentamos mostrar en su lugar un reproductor de vídeo alojado en Code.org.
 
 ### Can you play this video?
 
-Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
+Antes de comenzar los cursos en línea de Code.org, prueba la reproducción del siguiente vídeo para asegurarte de que estás listo.
 
 
 <!--
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+Este es el reproductor que se utiliza en todo el plan de estudios. Intentará mostrar el vídeo a través de YouTube y, si YouTube está bloqueado, mostrará el vídeo alojado en Code.org utilizando nuestro reproductor «alternativo».
 
 ### Video not playing?
 
-If video does not work, you can email us at support@code.org.
+Si el vídeo no funciona, puede enviarnos un correo electrónico a support@code.org.
 
-However, you can still use our tutorials without video.
+Sin embargo, puedes seguir usando nuestros tutoriales sin vídeo.
 
 1. We've made all our videos [available for download together](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). If your school has low bandwidth, we recommend that you download videos and show them to students on a shared screen.
 2. Integrated into our tutorials, we've added a green download link icon <img src="/images/green-download.png" width=25 height=25 /> for each video, allowing students to download individual tutorial videos.
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## Special settings for Google Apps/G-Suite users
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+Si eres administrador de G-suite, asegúrate de comprobar cuáles son tus ajustes de restricción para YouTube. Si has especificado la configuración de «Acceso restringido estricto a YouTube» o si ves mensajes que dicen «este vídeo ha sido restringido», puedes añadir nuestro canal a la lista de canales aprobados. Consulta [en esta guía](https://support.google.com/a/answer/6245597) de Google para obtener información sobre cómo añadir nuestro canal a la lista aprobada. También puedes consultar [esta guía](https://support.google.com/a/answer/6212415?hl=en) para obtener más información sobre los diferentes entornos y cuál es el mejor para tu clase.
 
 ## Still having trouble?
 
-We'll help you out - just email us at support@code.org!
+Te ayudaremos, ¡envíanos un correo electrónico a support@code.org!

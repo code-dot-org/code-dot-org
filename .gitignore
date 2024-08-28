@@ -51,13 +51,10 @@ npm-debug.log
 /apps/src/generated/*
 !/apps/src/generated/README.md
 /apps/src/util/color.js
-/apps/src/util/sharedConstants.js
-/apps/src/applab/sharedApplabBlocks.js
-/apps/src/applab/sharedApplabGoalBlocks.js
-/apps/src/p5lab/gamelab/sharedGamelabBlocks.js
 /apps/src/styleConstants.js
 /apps/src/fontConstants.js
 /apps/storybook-deploy
+/apps/generated-scripts/
 /apps/yarn-error.log
 
 # Yarn ignores based on documentation at https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
@@ -103,4 +100,6 @@ npm-debug.log
 /i18n/locales/*/piskel/
 /i18n/locales/*/standards/
 /i18n/locales/*/docs/
-apps/src/util/sharedVoices.js
+
+# Specifies the user-specific path to the venv for pdm
+.pdm-python

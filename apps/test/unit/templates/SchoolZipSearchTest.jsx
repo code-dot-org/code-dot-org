@@ -1,18 +1,13 @@
 import {render, screen, fireEvent, waitFor} from '@testing-library/react';
 import React from 'react';
-import sinon from 'sinon';
 
 import SchoolZipSearch from '@cdo/apps/templates/SchoolZipSearch';
-
-import {expect} from '../../util/deprecatedChai';
 
 const DEFAULT_PROPS = {
   fieldNames: {
     ncesSchoolId: 'ncesSchoolId',
     schoolName: 'schoolName',
   },
-  zip: '10024',
-  disabled: false,
 };
 
 const fakeSchools = [
@@ -37,14 +32,14 @@ describe('SchoolZipSearch', () => {
   let fetchStub;
 
   beforeEach(() => {
-    fetchStub = sinon.stub(window, 'fetch');
-    fetchStub.returns(
+    fetchStub = jest.spyOn(window, 'fetch').mockClear().mockImplementation();
+    fetchStub.mockReturnValue(
       Promise.resolve(new Response(JSON.stringify(fakeSchools)))
     );
   });
 
   afterEach(() => {
-    fetchStub.restore();
+    fetchStub.mockRestore();
   });
 
   function renderDefault(propOverrides = {}) {

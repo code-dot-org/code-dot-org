@@ -13,16 +13,163 @@
     "csp10-2024",
     "csp-post-survey-2024"
   ],
-  "published_state": "in_development",
+  "published_state": "stable",
   "instruction_type": "teacher_led",
   "participant_audience": "student",
   "instructor_audience": "teacher",
   "properties": {
+    "announcements": [
+      {
+        "key": "0c99406c-746f-4883-9593-76e566be61b7",
+        "notice": "Create PT Unit Coming This Fall",
+        "details": "We will be updating the Create PT Unit (Unit 9) based on updates from the College Board and the first round of scoring the new format implemented in the May 2024 AP CS Principles Exam. This unit will become live in the Fall. If you'd like to check out information about the updates implemented last year, click \"Learn More\"",
+        "link": "https://apcentral.collegeboard.org/courses/ap-computer-science-principles/course/frequently-asked-questions/about-create-performance-task-updates",
+        "type": "bullhorn",
+        "visibility": "Teacher-only",
+        "dismissible": true,
+        "buttonText": "Learn More"
+      }
+    ],
     "family_name": "csp",
     "has_numbered_units": true,
+    "has_verified_resources": true,
     "version_year": "2024"
   },
   "resources": [
+    {
+      "name": "All Code",
+      "url": "/courses/csp-2024/code",
+      "key": "all_code",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/courses/csp-2024/resources",
+      "key": "all_resources_10",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources_10"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/courses/csp-2024/standards",
+      "key": "all_standards_10",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards_10"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/courses/csp-2024/vocab",
+      "key": "all_vocabulary_1",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary_1"
+      }
+    },
+    {
+      "name": "Course Changelog '24-'25",
+      "url": "https://docs.google.com/document/d/1JJqAWqR9XufLGf4F1Pa2MbUXp4iYlCeqrq3GXpVtGck/edit?usp=sharing",
+      "key": "course_changelong_24-_25",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "course_changelong_24-_25"
+      }
+    },
+    {
+      "name": "Course Vocabulary",
+      "url": "https://docs.google.com/document/d/142LD4u8_K84e20kjQwoz1Ez8LQEcYGKZAL_cujAhrmI/edit?usp=sharing",
+      "key": "course_vocabulary_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "course_vocabulary_1"
+      }
+    },
+    {
+      "name": "Create PT Written Response Practice Opportunities",
+      "url": "https://docs.google.com/document/d/1MElyqUf08j_M69PDmeGianVGqWT3RyXhFEFHgxlU5RQ/edit?usp=sharing",
+      "key": "create_pt_written_response_practice_opportunities",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "create_pt_written_response_practice_opportunities"
+      }
+    },
+    {
+      "name": "Create PT Written Response Practice Opportunities",
+      "url": "https://docs.google.com/document/d/1MElyqUf08j_M69PDmeGianVGqWT3RyXhFEFHgxlU5RQ/edit?usp=sharing",
+      "key": "create_pt_written_response_practice_opportunities_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "create_pt_written_response_practice_opportunities_1"
+      }
+    },
+    {
+      "name": "Debugging",
+      "url": "https://docs.google.com/document/d/17EvJ2lQBUwg_FkafIs143frPpk6nuXvhmJhxWA8qGP4/preview",
+      "key": "debugging_2",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "debugging_2"
+      }
+    },
+    {
+      "name": "Guide to Assessment",
+      "url": "https://docs.google.com/document/d/17lrbpaNF3znb1rDuesBFcWp3zn7tQ_TTHaTr0AHPp34/edit?usp=sharing",
+      "key": "guide_to_assessment_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_assessment_1"
+      }
+    },
+    {
+      "name": "Guide to Classroom Discussions",
+      "url": "https://docs.google.com/document/d/1Y3HdoKknnw5tdH_I5XtcONQrDxueMi0Xdgp3Nyr-Atk/edit?usp=sharing",
+      "key": "guide_to_classroom_discussions_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_classroom_discussions_1"
+      }
+    },
+    {
+      "name": "Guide to Curriculum Videos",
+      "url": "https://docs.google.com/document/d/1f8IkB75jpoFHg48FAtC8Kz1pD-5P7DKIGOytJM6o2oM/view",
+      "key": "guide_to_curriculum_videos_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_curriculum_videos_1"
+      }
+    },
+    {
+      "name": "Guide to Pre-Unit Pulse Questions",
+      "url": "https://docs.google.com/document/d/1jx43dakN6og2n7iey_uQrNwcpMHQRbv1RCPZFHpQdYw/view",
+      "key": "guide_to_pre-unit_pulse_questions_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "guide_to_pre-unit_pulse_questions_1"
+      }
+    },
     {
       "name": "Help Students Sign Up For The AP Exam",
       "url": "https://drive.google.com/file/d/1zwC1ZVW1ug9EUJfZ9a9ZitqMFQ0DScbU/view?usp=drive_link",
@@ -34,20 +181,69 @@
       "seeding_key": {
         "resource.key": "help_students_sign_up_for_the_ap_exam"
       }
+    },
+    {
+      "name": "Journaling",
+      "url": "https://docs.google.com/document/d/1d9Lq_-K5vNi8osaI-VNVqcgbb-aDr4BJtHADe-MRoKU/view",
+      "key": "journaling",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "journaling"
+      }
+    },
+    {
+      "name": "Pair Programming",
+      "url": "https://docs.google.com/document/d/18Na1Cx8Bqz2zndiYVjGXFJ3ST2IBzwldJoSyWHIF1C4/view",
+      "key": "pair_programming_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "pair_programming_1"
+      }
+    },
+    {
+      "name": "Peer Feedback",
+      "url": "https://docs.google.com/document/d/1y_KbKYYdwNypMIE8bbt9Y4nPsTEDUemR-swBFQDaJSs/view",
+      "key": "peer_feedback",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "peer_feedback"
+      }
+    },
+    {
+      "name": "Syllabus",
+      "url": "https://docs.google.com/document/d/1w8N5Hd-URvs_xiIFNWwhw06v9PiFO2ccjJf-pp_hOYE/",
+      "key": "syllabus_1",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "syllabus_1"
+      }
+    },
+    {
+      "name": "Tech Requirements and Required Materials",
+      "url": "https://docs.google.com/document/d/1bz9KZcgb92D2-DZZdfghQy_HyTG7FRkOE4us3pwpRHY/edit?usp=sharing",
+      "key": "tech_requirements_and_required_materials",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "tech_requirements_and_required_materials"
+      }
+    },
+    {
+      "name": "Unplugged and Plugged",
+      "url": "https://docs.google.com/document/d/12ZvJzA0Owyq_HCDJ73M1nhPrnAX3hpNdWHvWCVd_bGc/view",
+      "key": "unplugged_and_plugged",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "unplugged_and_plugged"
+      }
     }
   ],
   "student_resources": [
-    {
-      "name": "Why Should You Take The AP CSP Exam?",
-      "url": "https://drive.google.com/file/d/1g5t9kBhrNgXcM2US67CJy17f4JEfTevW/view?usp=drive_link",
-      "key": "why_should_you_take_the_ap_csp_exam_",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "why_should_you_take_the_ap_csp_exam_"
-      }
-    }
+
   ]
 }

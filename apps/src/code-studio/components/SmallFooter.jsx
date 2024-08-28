@@ -8,14 +8,16 @@ https://github.com/code-dot-org/code-dot-org/blob/b2efc7ca8331f8261ebd55a326e23f
 /* eslint-disable react/no-danger */
 import $ from 'jquery';
 import _ from 'lodash';
+import debounce from 'lodash/debounce';
 import PropTypes from 'prop-types';
 import React from 'react';
-import debounce from 'lodash/debounce';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+
+import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
-import Button from '../../templates/Button';
-import color from '../../util/color';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import i18n from '@cdo/locale';
+
+import color from '../../util/color';
 
 const MenuState = {
   MINIMIZING: 'MINIMIZING',
@@ -108,17 +110,18 @@ export default class SmallFooter extends React.Component {
     );
   }
 
-  clickBase = () => {
+  clickBase = e => {
     if (this.props.copyrightInBase) {
       // When we have multiple items in our base row, ignore clicks to the
       // row that aren't on those particular items
       return;
     }
-    this.clickBaseMenu();
+    this.clickBaseMenu(e);
   };
 
   clickBaseCopyright = e => {
     e.preventDefault();
+    e.stopPropagation();
 
     if (this.state.menuState === MenuState.MINIMIZING) {
       return;
@@ -134,16 +137,21 @@ export default class SmallFooter extends React.Component {
   };
 
   clickMenuCopyright = event => {
+    event.stopPropagation();
     this.setState({menuState: MenuState.COPYRIGHT});
     this.minimizeOnClickAnywhere();
   };
 
-  clickBaseMenu = () => {
+  clickBaseMenu = e => {
+    e.stopPropagation();
     if (this.state.menuState === MenuState.MINIMIZING) {
       return;
     }
 
-    if (this.state.menuState === MenuState.EXPANDED) {
+    if (
+      this.state.menuState === MenuState.EXPANDED ||
+      this.state.menuState === MenuState.COPYRIGHT
+    ) {
       this.setState({menuState: MenuState.MINIMIZED});
       return;
     }
@@ -182,7 +190,6 @@ export default class SmallFooter extends React.Component {
         color: color.neutral_dark30,
         backgroundColor: color.background_gray,
         cursor: 'pointer',
-        fontSize: 24,
         border: 'none',
       },
       copyrightScrollArea: {
@@ -261,11 +268,17 @@ export default class SmallFooter extends React.Component {
               )}
             />
             <Button
-              id="x-close-copyright"
-              onClick={() => this.setState({menuState: MenuState.MINIMIZED})}
-              icon="fa-solid fa-xmark"
-              style={styles.copyrightXClose}
               aria-label={i18n.closeDialog()}
+              icon={{
+                iconName: 'xmark',
+                iconStyle: 'light',
+              }}
+              id="x-close-copyright"
+              isIconOnly
+              onClick={() => this.setState({menuState: MenuState.MINIMIZED})}
+              size="l"
+              style={styles.copyrightXClose}
+              type="primary"
             />
           </div>
         </div>
@@ -295,13 +308,19 @@ export default class SmallFooter extends React.Component {
     if (this.props.copyrightInBase) {
       return (
         <span className="copyright-button">
-          <button
+          <Button
+            aria-label={i18n.copyrightInfoButton()}
             className="copyright-link no-mc"
-            type="button"
+            color={buttonColors.gray}
+            icon={{
+              iconName: 'copyright',
+              iconStyle: 'light',
+            }}
+            isIconOnly
             onClick={this.clickBaseCopyright}
-          >
-            &copy;
-          </button>
+            size="xs"
+            type="secondary"
+          />
         </span>
       );
     }

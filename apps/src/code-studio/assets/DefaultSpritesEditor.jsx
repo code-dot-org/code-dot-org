@@ -1,11 +1,12 @@
 import React from 'react';
+
 import {
   getDefaultListMetadata,
   regenerateDefaultSpriteMetadata,
 } from '@cdo/apps/assetManagement/animationLibraryApi';
 import DefaultSpriteRow from '@cdo/apps/code-studio/assets/DefaultSpriteRow';
-import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import Spinner from '@cdo/apps/sharedComponents/Spinner';
 
 export default class DefaultSpritesEditor extends React.Component {
   state = {

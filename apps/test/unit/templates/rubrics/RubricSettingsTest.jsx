@@ -1,23 +1,28 @@
-import {mount} from 'enzyme';
+import {screen} from '@testing-library/dom';
+import {render, fireEvent, act} from '@testing-library/react';
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {act} from 'react-dom/test-utils';
 import {Provider} from 'react-redux';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import * as utils from '@cdo/apps/code-studio/utils';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
+import currentUser, {
+  setAiRubricsDisabled,
+} from '@cdo/apps/templates/currentUserRedux';
 import RubricSettings from '@cdo/apps/templates/rubrics/RubricSettings';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import i18n from '@cdo/locale';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('RubricSettings', () => {
   let clock;
@@ -39,13 +44,19 @@ describe('RubricSettings', () => {
       .returns(Promise.resolve(new Response(JSON.stringify(data))));
   }
 
+  function stubFetchTeacherEvaluations(data) {
+    return fetchStub
+      .withArgs(sinon.match(/rubrics\/\d+\/get_teacher_evaluations_for_all.*/))
+      .returns(Promise.resolve(new Response(JSON.stringify(data))));
+  }
+
   beforeEach(() => {
     fetchStub = sinon.stub(window, 'fetch');
-    fetchStub.returns(Promise.resolve(new Response('')));
+    fetchStub.returns(Promise.resolve(new Response(JSON.stringify(''))));
     refreshAiEvaluationsSpy = sinon.spy();
     sinon.stub(utils, 'queryParams').withArgs('section_id').returns('1');
     stubRedux();
-    registerReducers({teacherSections});
+    registerReducers({teacherSections, currentUser});
     store = getStore();
   });
 
@@ -134,6 +145,7 @@ describe('RubricSettings', () => {
 
   it('displays Section selector', () => {
     stubFetchEvalStatusForAll(ready);
+    stubFetchTeacherEvaluations(evals);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -145,11 +157,13 @@ describe('RubricSettings', () => {
         />
       </Provider>
     );
+
     expect(wrapper.find('SectionSelector').length).to.equal(1);
   });
 
   it('allows teacher to run AI assessment for all students when AI status is ready', async () => {
     stubFetchEvalStatusForAll(ready);
+    stubFetchTeacherEvaluations(evals);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -171,6 +185,7 @@ describe('RubricSettings', () => {
 
   it('disables run AI assessment for all button when no students have attempted', async () => {
     stubFetchEvalStatusForAll(noAttempts);
+    stubFetchTeacherEvaluations(evals);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -192,6 +207,7 @@ describe('RubricSettings', () => {
 
   it('disables run AI assessment for all button when all student work has been evaluated', async () => {
     stubFetchEvalStatusForAll(noUnevaluated);
+    stubFetchTeacherEvaluations(evals);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -215,6 +231,7 @@ describe('RubricSettings', () => {
     // show ready state on initial load
 
     stubFetchEvalStatusForAll(ready);
+    stubFetchTeacherEvaluations(evals);
 
     const wrapper = mount(
       <Provider store={store}>
@@ -251,6 +268,7 @@ describe('RubricSettings', () => {
 
   it('runs AI assessment for all unevaluated projects when requested by teacher', async () => {
     stubFetchEvalStatusForAll(ready);
+    stubFetchTeacherEvaluations(evals);
     const sendEventSpy = sinon.spy(analyticsReporter, 'sendEvent');
 
     clock = sinon.useFakeTimers();
@@ -402,5 +420,76 @@ describe('RubricSettings', () => {
       }
     );
     sendEventSpy.restore();
+  });
+
+  it('displays the AI enable toggle', () => {
+    stubFetchEvalStatusForAll(ready);
+    stubFetchTeacherEvaluations(evals);
+
+    render(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+        />
+      </Provider>
+    );
+
+    const input = screen.getByRole('checkbox', {name: i18n.useAiFeatures()});
+    expect(input.checked).to.be.true;
+  });
+
+  it('ensures the AI enable toggle represents the current value of the AI disabled user setting', () => {
+    stubFetchEvalStatusForAll(ready);
+    stubFetchTeacherEvaluations(evals);
+
+    // Set the user's opt-out setting to true (our setting will now be false)
+    store.dispatch(setAiRubricsDisabled(true));
+
+    render(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+        />
+      </Provider>
+    );
+
+    const input = screen.getByRole('checkbox', {name: i18n.useAiFeatures()});
+    expect(input.checked).to.be.false;
+  });
+
+  it('updates the AI disabled user setting when the toggle is used', async () => {
+    stubFetchEvalStatusForAll(ready);
+    stubFetchTeacherEvaluations(evals);
+
+    render(
+      <Provider store={store}>
+        <RubricSettings
+          visible
+          refreshAiEvaluations={refreshAiEvaluationsSpy}
+          rubric={defaultRubric}
+          sectionId={1}
+        />
+      </Provider>
+    );
+
+    // Let's stub out setting the field via UserPreferences
+    const setStub = sinon.stub(
+      UserPreferences.prototype,
+      'setAiRubricsDisabled'
+    );
+
+    const input = screen.getByRole('checkbox', {name: i18n.useAiFeatures()});
+    fireEvent.click(input);
+    fireEvent.change(input);
+
+    expect(input.checked).to.be.false;
+    expect(setStub).to.have.been.calledWith(true);
+    setStub.restore();
   });
 });

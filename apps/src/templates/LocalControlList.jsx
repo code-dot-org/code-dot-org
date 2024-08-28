@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
 import SafeMarkdown from './SafeMarkdown';
 
 export const styles = {

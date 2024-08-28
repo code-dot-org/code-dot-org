@@ -1,4 +1,5 @@
 import {SoundLoadCallbacks} from '../types';
+
 import {Effects} from './interfaces/Effects';
 
 /**
@@ -45,14 +46,26 @@ export interface AudioPlayer {
     onStop?: () => void
   ): Promise<void>;
 
-  /** Play a sequence of notes immediately (used for previews) */
-  playSequenceImmediately(sequence: SamplerSequence): Promise<void>;
+  /**
+   * Play a sequence of notes immediately (used for previews)
+   * @param onTick Callback to call each interval of the sequence (assumed to be a 16th note)
+   * @param onStop Callback to call when the sequence is done playing
+   */
+  playSequenceImmediately(
+    sequence: SamplerSequence,
+    length: number,
+    onTick?: (tick: number) => void,
+    onStop?: () => void
+  ): Promise<void>;
 
   /** Cancel active previews */
   cancelPreviews(): void;
 
   /** Schedule a sample to played */
-  scheduleSample(sample: SampleEvent): void;
+  scheduleSample(
+    sample: SampleEvent,
+    onSampleStart: (id: string) => void
+  ): void;
 
   /** Schedule a sampler sequence to be played */
   scheduleSamplerSequence(sequence: SamplerSequence): void;
@@ -88,6 +101,8 @@ export interface AudioPlayer {
 export interface SampleEvent {
   // 1-based playback position in measures
   playbackPosition: number;
+  // ID of the sound
+  id: string;
   // URL of the sample
   sampleUrl: string;
   // Whether the sound was triggered
@@ -100,6 +115,8 @@ export interface SampleEvent {
   effects?: Effects;
   // Length in measures to play the sample for
   length?: number;
+  // Whether tempo should not be adjusted.
+  disableTempoAdjustment?: boolean;
 }
 
 /** A sequence of notes played on a sampler instrument */

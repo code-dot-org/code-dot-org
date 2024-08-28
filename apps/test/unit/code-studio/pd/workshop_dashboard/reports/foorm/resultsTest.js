@@ -1,17 +1,17 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
+
+import workshopDashboard, {
+  setPermission,
+} from '@cdo/apps/code-studio/pd/workshop_dashboard/reducers';
+import Results from '@cdo/apps/code-studio/pd/workshop_dashboard/reports/foorm/results';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
-import workshopDashboard, {
-  setPermission,
-} from '@cdo/apps/code-studio/pd/workshop_dashboard/reducers';
-import {expect} from 'chai';
-import Results from '@cdo/apps/code-studio/pd/workshop_dashboard/reports/foorm/results';
-import {mount} from 'enzyme';
 
 describe('Foorm Daily Survey Results', () => {
   beforeEach(() => {
@@ -300,7 +300,7 @@ describe('Foorm Daily Survey Results', () => {
     );
     // should have 3 tabs--Day 0 summary, workshop rollups and
     // facilitator rollups
-    expect(results.find('Tab')).to.have.length(3);
+    expect(results.find('Tab')).toHaveLength(3);
 
     let summaryTab = results.find('Tab').first();
     let workshopRollupTab = results.find('Tab').at(1);
@@ -308,38 +308,36 @@ describe('Foorm Daily Survey Results', () => {
 
     // Check for expected # of question summaries per type
     let sectionResults = summaryTab.find('SectionResults');
-    expect(sectionResults).to.have.length(2);
+    expect(sectionResults).toHaveLength(2);
     let generalSectionResults = sectionResults.first();
     expect(
       generalSectionResults.find('SingleQuestionChoiceResponses')
-    ).to.have.length(2);
-    expect(generalSectionResults.find('TextResponses')).to.have.length(1);
+    ).toHaveLength(2);
+    expect(generalSectionResults.find('TextResponses')).toHaveLength(1);
 
     let generalMatrixResponses = generalSectionResults.find(
       'MatrixChoiceResponses'
     );
-    expect(generalMatrixResponses).to.have.length(1);
-    expect(
-      generalMatrixResponses.first().find('ChoiceResponses')
-    ).to.have.length(2);
+    expect(generalMatrixResponses).toHaveLength(1);
+    expect(generalMatrixResponses.first().find('ChoiceResponses')).toHaveLength(
+      2
+    );
 
     let facilitatorSectionResults = sectionResults.last();
     expect(
       facilitatorSectionResults.find('SingleQuestionChoiceResponses')
-    ).to.have.length(2);
-    expect(facilitatorSectionResults.find('TextResponses')).to.have.length(1);
+    ).toHaveLength(2);
+    expect(facilitatorSectionResults.find('TextResponses')).toHaveLength(1);
     let facilitatorMatrixResponses = facilitatorSectionResults.find(
       'MatrixChoiceResponses'
     );
-    expect(facilitatorMatrixResponses).to.have.length(1);
+    expect(facilitatorMatrixResponses).toHaveLength(1);
     expect(
       facilitatorMatrixResponses.first().find('ChoiceResponses')
-    ).to.have.length(1);
+    ).toHaveLength(1);
 
     // Check that rollup tabs each have a rollup table
-    expect(workshopRollupTab.find('SurveyRollupTableFoorm')).to.have.length(1);
-    expect(facilitatorRollupTab.find('SurveyRollupTableFoorm')).to.have.length(
-      1
-    );
+    expect(workshopRollupTab.find('SurveyRollupTableFoorm')).toHaveLength(1);
+    expect(facilitatorRollupTab.find('SurveyRollupTableFoorm')).toHaveLength(1);
   });
 });

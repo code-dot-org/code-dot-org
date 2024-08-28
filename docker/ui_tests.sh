@@ -24,9 +24,6 @@ export CIRCLE_ARTIFACTS=/home/circleci/artifacts
 
 mkdir $CIRCLE_ARTIFACTS
 
-# rbenv-doctor https://github.com/rbenv/rbenv-installer#readme
-curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash
-
 # set up locals.yml
 # Need to actually write all the commented out lines also
 echo "
@@ -45,9 +42,6 @@ dashboard_port: 3000
 dashboard_workers: 5
 disable_all_eyes_running: true
 files_s3_directory: files_circle/$CIRCLE_BUILD_NUM
-firebase_name: $FIREBASE_NAME
-firebase_secret: $FIREBASE_SECRET
-firebase_shared_secret: $FIREBASE_SHARED_SECRET
 ignore_eyes_mismatches: true
 libraries_s3_directory: libraries_circle/$CIRCLE_BUILD_NUM
 localize_apps: true
@@ -60,9 +54,11 @@ pegasus_port: 3000
 properties_encryption_key: $PROPERTIES_ENCRYPTION_KEY
 saucelabs_authkey: $SAUCE_ACCESS_KEY
 saucelabs_username: $SAUCE_USERNAME
+session_store_server: 'redis://ui-tests-redis:6379/0/session'
 skip_seed_all: true
 sources_s3_directory: sources_circle/$CIRCLE_BUILD_NUM
 use_my_apps: true
+aiproxy_api_key: 'fake_key'
 " >> locals.yml
 echo "Wrote secrets from env vars into locals.yml."
 

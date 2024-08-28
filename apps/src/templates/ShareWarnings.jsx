@@ -1,9 +1,12 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import color from '../util/color';
-import AgeDropdown from './AgeDropdown';
+
 import commonMsg from '@cdo/locale';
+
+import color from '../util/color';
+
+import AgeDropdown from './AgeDropdown';
 
 /**
  * Dialog contents for when you visit a shared Applab page. If not signed in,

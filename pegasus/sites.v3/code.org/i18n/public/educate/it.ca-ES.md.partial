@@ -17,9 +17,11 @@ theme: responsive
 
 ## Plataformes i navegadors compatibles
 
+A partir del juliol de 2024, actualitzarem les versions mínimes requerides per als navegadors i sistemes operatius. Tot i que les versions antigues encara poden funcionar, no serem capaços de donar suport a les sol·licituds de correccions d'errors en les versions antigues.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Navegador
@@ -40,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Navegador Juliol '24
+        </th>
+        <tr>
+          <td>Crom 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Safari mòbil 14.x</td>
+        </tr>
+        <tr>
+          <td>Vora 119,x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Plataforma
@@ -62,8 +86,30 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Plataforma Juliol '24
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Pàgines que cal desbloquejar
@@ -80,16 +126,15 @@ Per poder gaudir de la millor experiència possible amb el contingut de Code.org
 | **Per utilitzar el simulador d'internet**                                                                             | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Per utilitzar el Laboratori Web**                                                                                   | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Per utilitzar el botó de compartir a Google Classroom**                                                             | `https://apis.google.com`                                                                                  |
-| **Per utilitzar els conjunts de dades del Laboratori d'Aplicacions**                                                  | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
 ## Informació de suport tècnic per a dispositius mòbils i tauletes
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. La majoria de les tauletes no són compatibles, amb les següents excepcions:
+Tots els cursos CS Discovery, CS Principles, CS A, i Intro to App Lab no són compatibles amb tauletes o dispositius mòbils - es requereix un teclat i un ratolí complet (o touchpad). La majoria de les tauletes no són compatibles, amb les següents excepcions:
 
 - Microsoft Surface Pro amb teclat extern
 - iPad amb sistema operatiu iPadOS 13.4 o superior amb un teclat extern i un ratolí o ratolí tàctil extern
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+Tots els altres continguts, com els cursos K-5 (Fonaments de Ciències de la Computació) i les activitats Hora del Codi són compatibles en iPads i altres tauletes modernes i ordinadors portàtils o de sobretaula.
 
 ### Telèfons mòbils
 
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+Aquest és el reproductor que fem servir durant tot el pla d'estudis. Intentarà reproduir el vídeo a través de YouTube, i si YouTube està restringit, mostrarà el vídeo allotjat a Code.org amb el nostre reproductor "alternatiu".
 
 ### No el podeu reproduir?
 
-If video does not work, you can email us at support@code.org.
+Si el vídeo no funciona, ens podeu enviar un correu a support@code.org.
 
-However, you can still use our tutorials without video.
+Tot i això, podeu fer servir els nostres tutorials encara que el vídeo no funcioni.
 
 1. Tots els nostres vídeos estan [disponibles per descarregar-los tots junts](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). Si la vostra escola té poca amplada de banda, us recomanem que descarregueu els vídeos i els reproduïu per als alumnes en una pantalla compartida.
 2. Hem integrat una icona verda de descàrrega als nostres tutorials <img src="/images/green-download.png" width=25 height=25 /> per a cada vídeo per tal que els alumnes puguin descarregar-se els vídeos de cada tutorial per separat.
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## Configuració especial per usuaris d'aplicacions de Google/Google Workspace
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+Si sou administradors de Google Workspace, assegureu-vos de comprovar quins paràmetres de restricció teniu activats per a YouTube. Si heu activat l'opció "Accés restringit a YouTube" o si veieu missatges que diuen que "aquest vídeo ha estat restringit", podeu afegir el nostre canal a la llista de canals aprovats. Consulteu [aquesta guia](https://support.google.com/a/answer/6245597) de Google per saber com afegir el nostre canal a la llista de canals aprovats. També podeu consultar [aquesta guia](https://support.google.com/a/answer/6212415?hl=en) per saber més sobre els diferents paràmetres i quin és el més adequat per a la vostra classe.
 
 ## Encara teniu problemes?
 
-We'll help you out - just email us at support@code.org!
+Estarem encantats d'ajudar-vos, només cal que ens envieu un correu a support@code.org!

@@ -1,15 +1,21 @@
 import $ from 'jquery';
-import React from 'react';
-import ReactDOM from 'react-dom';
 import _ from 'lodash';
 import queryString from 'query-string';
-import clientState from './clientState';
-import DisabledBubblesModal from './DisabledBubblesModal';
-import DisabledBubblesAlert from './DisabledBubblesAlert';
-import {getStore} from './redux';
-import {setViewType, ViewType} from './viewAsRedux';
-import {getHiddenLessons} from './hiddenLessonRedux';
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
 import {TestResults} from '@cdo/apps/constants';
+import {
+  setUserRoleInCourse,
+  CourseRoles,
+} from '@cdo/apps/templates/currentUserRedux';
+import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+
+import clientState from './clientState';
+import DisabledBubblesAlert from './components/DisabledBubblesAlert';
+import DisabledBubblesModal from './components/DisabledBubblesModal';
+import {getHiddenLessons} from './hiddenLessonRedux';
 import {
   initProgress,
   overwriteResults,
@@ -20,13 +26,9 @@ import {
   queryUserProgress as reduxQueryUserProgress,
   useDbProgress,
 } from './progressRedux';
-import {setVerified} from '@cdo/apps/code-studio/verifiedInstructorRedux';
-import {pageTypes} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import {getStore} from './redux';
 import {renderTeacherPanel} from './teacherPanelHelpers';
-import {
-  setUserRoleInCourse,
-  CourseRoles,
-} from '@cdo/apps/templates/currentUserRedux';
+import {setViewType, ViewType} from './viewAsRedux';
 
 var progress = module.exports;
 

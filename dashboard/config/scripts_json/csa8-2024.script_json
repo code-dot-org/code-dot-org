@@ -12,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-12 21:09:42 UTC",
+    "serialized_at": "2024-07-11 16:09:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -134,7 +135,7 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U8L3 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/55ac8ef5a1af46df926aa3c41fe20c08) on AP Classroom can be assigned as a formative assessment for this lesson.",
         "overview": "**How is a binary search more efficient than a linear search?**\n\nStudents previously learned how to evaluate the linear search algorithm to determine its efficiency using execution counts and identified limitations of this approach to searching. In this lesson, they discover a better searching algorithm that can perform more efficiently if the list is already sorted. Students explore the binary search algorithm to evaluate its efficiency and compare it to the linear search. Students also revisit recursion and explore how the binary search algorithm can be implemented recursively.",
         "preparation": "* **(Optional)** Print copies of the U8L3 Guided Notes (one for each student)\n* Print copies of the Binary Search handout (one for each pair of students)\n* Gather or prepare enough cards so that each pair of students can have five cards (actual playing cards, printed cards, or index cards that are numbered)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-3-binary-search/37953) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How is a binary search more efficient than a linear search?**\n\nYou previously learned how to evaluate the linear search algorithm to determine its efficiency using execution counts and identified limitations of this approach to searching. In this lesson, you discover a better searching algorithm that can perform more efficiently if the list is already sorted. You explore the binary search algorithm to evaluate its efficiency and compare it to the linear search. You also revisit recursion and explore how the binary search algorithm can be implemented recursively."
@@ -191,7 +192,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 10.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U8L3 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/55ac8ef5a1af46df926aa3c41fe20c08) on AP Classroom can be assigned as a formative assessment for this lesson.\n\nAdditionally, the following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 10.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How does the merge sort algorithm compare in efficiency with the selection and insertion sort algorithms?**\n\nStudents explore the merge sort algorithm to organize elements in a list using a divide-and-conquer approach and identify the components of the algorithm. They learn how the algorithm uses helper functions to implement the divide-and-conquer approach and practice tracing the algorithm to understand its functionality. Students determine its efficiency using execution counts and compare it with the insertion and selection sort algorithms.",
         "preparation": "* **(Optional)** Print copies of the U8L6 Guided Notes (one for each student)\n* Print copies of the Merge Sort handout (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-8-6-merge-sort/37956) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How does the merge sort algorithm compare in efficiency with the selection and insertion sort algorithms?**\n\nYou explore the merge sort algorithm to organize elements in a list using a divide-and-conquer approach and identify the components of the algorithm. You learn how the algorithm uses helper functions to implement the divide-and-conquer approach and practice tracing the algorithm to understand its functionality. You determine its efficiency using execution counts and compare it with the insertion and selection sort algorithms."
@@ -3900,6 +3901,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L1-L1_2024"
+        ],
         "progression": "Creative Coding with the Console Example Projects"
       },
       "bonus": false,
@@ -3922,6 +3926,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L1-L2_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3944,6 +3951,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L2-L1_2024"
+        ],
         "progression": "Investigate and Modify: Linear Search"
       },
       "bonus": false,
@@ -3966,6 +3976,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L2-L2_2024"
+        ],
         "progression": "Investigate and Modify: Linear Search"
       },
       "bonus": false,
@@ -3988,6 +4001,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L2-L3_2024"
+        ],
         "progression": "Investigate and Modify: Linear Search"
       },
       "bonus": false,
@@ -4010,6 +4026,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L2-L4_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4032,6 +4051,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L3-L1_2024"
+        ],
         "progression": "Predict and Run: Binary Search"
       },
       "bonus": false,
@@ -4054,6 +4076,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L3-L2_2024"
+        ],
         "progression": "Investigate and Modify: Recursive Binary Search"
       },
       "bonus": false,
@@ -4076,6 +4101,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L3-L3_2024"
+        ],
         "progression": "Investigate and Modify: Recursive Binary Search"
       },
       "bonus": false,
@@ -4098,6 +4126,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L3-L4_2024"
+        ],
         "progression": "Investigate and Modify: Recursive Binary Search"
       },
       "bonus": false,
@@ -4120,6 +4151,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L3-L5_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4142,6 +4176,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L4-L1_2024"
+        ],
         "progression": "Investigate and Modify: Selection Sort"
       },
       "bonus": false,
@@ -4164,6 +4201,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L4-L2_2024"
+        ],
         "progression": "Investigate and Modify: Selection Sort"
       },
       "bonus": false,
@@ -4186,6 +4226,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L4-L3_2024"
+        ],
         "progression": "Investigate and Modify: Selection Sort"
       },
       "bonus": false,
@@ -4208,6 +4251,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L4-L4_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4230,6 +4276,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L5-L1_2024"
+        ],
         "progression": "Investigate and Modify: Insertion Sort"
       },
       "bonus": false,
@@ -4252,6 +4301,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L5-L2_2024"
+        ],
         "progression": "Investigate and Modify: Insertion Sort"
       },
       "bonus": false,
@@ -4274,6 +4326,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L5-L3_2024"
+        ],
         "progression": "Investigate and Modify: Insertion Sort"
       },
       "bonus": false,
@@ -4296,6 +4351,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L5-L4_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4318,6 +4376,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L6-L1_2024"
+        ],
         "progression": "Investigate and Modify: Merge Sort"
       },
       "bonus": false,
@@ -4340,6 +4401,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L6-L2_2024"
+        ],
         "progression": "Investigate and Modify: Merge Sort"
       },
       "bonus": false,
@@ -4362,6 +4426,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L6-L3_2024"
+        ],
         "progression": "Investigate and Modify: Merge Sort"
       },
       "bonus": false,
@@ -4384,6 +4451,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L6-L4_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4406,6 +4476,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L1_2024"
+        ],
         "progression": "Predict and Run: Multiple Lists"
       },
       "bonus": false,
@@ -4428,6 +4501,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L2_2024"
+        ],
         "progression": "Investigate and Modify: Multiple Lists"
       },
       "bonus": false,
@@ -4450,6 +4526,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L3_2024"
+        ],
         "progression": "Investigate and Modify: Multiple Lists"
       },
       "bonus": false,
@@ -4472,6 +4551,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L4_2024"
+        ],
         "progression": "Investigate and Modify: Multiple Lists"
       },
       "bonus": false,
@@ -4494,6 +4576,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L5_2024"
+        ],
         "progression": "Practice: Searching and Sorting"
       },
       "bonus": false,
@@ -4516,6 +4601,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L6_2024"
+        ],
         "progression": "Practice: Searching and Sorting"
       },
       "bonus": false,
@@ -4538,6 +4626,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L7_2024"
+        ],
         "progression": "Practice: Searching and Sorting"
       },
       "bonus": false,
@@ -4560,6 +4651,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L8_2024"
+        ],
         "progression": "Practice: Searching and Sorting"
       },
       "bonus": false,
@@ -4582,6 +4676,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L7-L9_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4604,6 +4701,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U8L8-L1_2024"
+        ],
         "progression": "Creative Coding with the Console Project"
       },
       "bonus": false,
@@ -4626,6 +4726,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L8-L2_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4648,6 +4751,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8L9-L1_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4670,6 +4776,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8 Creative Coding with the Console Project_2024"
+        ],
         "progression": "Creative Coding with the Console Project"
       },
       "bonus": false,
@@ -4692,6 +4801,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 8 Assessment_2024"
+        ],
         "progression": "Unit 8 Assessment"
       },
       "bonus": false,
@@ -4714,6 +4826,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "csp-post-survey-levelgroup_csa_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4735,6 +4850,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U8 Creative Coding with the Console Project 1-Day_2024"
+        ],
         "progression": "Creative Coding with the Console Project"
       },
       "bonus": false,
@@ -4757,6 +4875,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4778,6 +4899,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox_2024"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -4800,6 +4924,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox_2024"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -4822,6 +4949,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Theater Sandbox_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5716,7 +5846,7 @@
     },
     {
       "name": "Binary Search",
-      "url": "https://docs.google.com/presentation/d/1ypeV8WZK1HNnSpE8jtbLz4G5gcpN5_9stJqJo0EIZ3k/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1Njgy8USq72M1AluTH2wvo7Sadv6wZ21NlDXfviy2SUM/edit?usp=drive_link",
       "key": "binary_search",
       "properties": {
         "audience": "Verified Teacher",
@@ -5754,7 +5884,7 @@
     },
     {
       "name": "Creative Coding with the Console Project",
-      "url": "https://docs.google.com/presentation/d/1lh6onAMuWynslLCa8GRJ3ukMI9lZYLOXl0LVO15UhM4/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1MbSPzQfURx8gKP7cL72LnjADDzDzLMjk-ZFCTmtLkOY/edit?usp=drive_link",
       "key": "creative_coding_with_the_console_project",
       "properties": {
         "audience": "Verified Teacher",
@@ -5766,7 +5896,7 @@
     },
     {
       "name": "Creative Coding with the Console Project",
-      "url": "https://docs.google.com/presentation/d/12W6s4nkkjIOdDFQB6mm-jTG-vAA9mHbbyZ3gudH3wKs/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1kPV9GxrhYiWLkLhNlIrS8f55yLD5ZKXveYKXY9posNk/edit?usp=drive_link",
       "key": "creative_coding_with_the_console_project_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -5803,11 +5933,9 @@
     },
     {
       "name": "CSA Unit 8 Slides",
-      "url": "https://docs.google.com/presentation/d/1hA9CuUlJ7h7FDWYp8l1zATltkiLm27Rz9tnVnU1X-bU/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1An2-9G15bnxGNFEIC3n8telkQgpHTlMU2RH6GajyX5M/edit?usp=drive_link",
       "key": "csa_unit_8_slides",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csa_unit_8_slides"
@@ -5876,7 +6004,7 @@
     },
     {
       "name": "Insertion Sort",
-      "url": "https://docs.google.com/presentation/d/1N3QQqMHYV9tfETmjcAoCjuOQXAKx8aHsQdm-6kdq2E4/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1mCOsMtAofK-ot32dbGTxBIwOxVUjrwcM9j2-xSQyii8/edit?usp=drive_link",
       "key": "insertion_sort",
       "properties": {
         "audience": "Verified Teacher",
@@ -5901,7 +6029,7 @@
     },
     {
       "name": "Merge Sort",
-      "url": "https://docs.google.com/presentation/d/1K5fF52rulQT2BVohn8vWU3NGg2DS57KlZy2SDWr0yw0/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1IBCJmh0VnKzrJgZvyU7gB_XaTJnQLQA7bzx-hTQ1CxA/edit?usp=drive_link",
       "key": "merge_sort",
       "properties": {
         "audience": "Verified Teacher",
@@ -5926,7 +6054,7 @@
     },
     {
       "name": "Privacy and Security",
-      "url": "https://docs.google.com/presentation/d/1taykJ95cb7Uu6cpoAh_t_5yUhHg7ELu2KLJU1CdIejA/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/15_Oor0CdJ4juLh1A9a6ibuCtgJkyd8cstfWfyT1oE9A/edit?usp=drive_link",
       "key": "privacy_and_security",
       "properties": {
         "audience": "Verified Teacher",
@@ -5938,7 +6066,7 @@
     },
     {
       "name": "Project Development",
-      "url": "https://docs.google.com/presentation/d/1srz1NN78zKEgL3sIw9JUJpezX4qYgBZTzw-arXBfBi8/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1xh-ptKqzpD2NYxkrUNj1UBvofsx-yMuwk_DK07jAMpg/edit?usp=drive_link",
       "key": "project_development_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -5950,7 +6078,7 @@
     },
     {
       "name": "Project Planning",
-      "url": "https://docs.google.com/presentation/d/1glFHQzsAn1qgXZk2hM0Zvf_vzGH3dc-1Ipxkv9qgPEg/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1u4AHjQ614AKmSolWrSTwwTM_E5XjM3gLsSfpbQ89ddk/edit?usp=drive_link",
       "key": "project_planning_2",
       "properties": {
         "audience": "Verified Teacher",
@@ -5975,7 +6103,7 @@
     },
     {
       "name": "Searching",
-      "url": "https://docs.google.com/presentation/d/1e3nIXSEzvS87Nd35K07H9gmOLg3fks6OcEo_NRk1g98/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1uRWdhBCQxjp0vHqou64xT3inYufYzG-ms4K2ObKmHWw/edit?usp=drive_link",
       "key": "searching",
       "properties": {
         "audience": "Verified Teacher",
@@ -5999,7 +6127,7 @@
     },
     {
       "name": "Searching and Sorting",
-      "url": "https://docs.google.com/presentation/d/1S0cZ8DEeLtLHXyanq-nWAzrVm_ht_g6GMkcg_f7iWVw/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1K4T2zN7RXFIodHeLgQpgwPhv_MQUU9e1ZRMdhTtU8H4/edit?usp=drive_link",
       "key": "searching_and_sorting",
       "properties": {
         "audience": "Verified Teacher",
@@ -6011,7 +6139,7 @@
     },
     {
       "name": "SeatingChart FRQ",
-      "url": "https://docs.google.com/presentation/d/1xcJCgJeQrbqSHLU_T20Yy1zPRAqGRYIOH060l0ArGPc/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1_QfRqKxW9yobtOkC4svUPWDcuBu4qqm8ARUq3m8ZgQA/edit?usp=drive_link",
       "key": "seatingchart_frq",
       "properties": {
         "audience": "Verified Teacher",
@@ -6049,7 +6177,7 @@
     },
     {
       "name": "Selection Sort",
-      "url": "https://docs.google.com/presentation/d/1bEJRjqqUgYBDPhMZ4TE4OdOQyiEAlZbV63GghjSeFRI/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/11LC73SV1veCnv2e76ZmNe5IHdrCd3w-nmwlniW4Y1e0/edit?usp=drive_link",
       "key": "selection_sort",
       "properties": {
         "audience": "Verified Teacher",
@@ -6332,7 +6460,7 @@
     },
     {
       "name": "Unit 8 Assessment",
-      "url": "https://docs.google.com/presentation/d/1VoBeZgs-q6BP7PemgZxG3cdN5H-oJBWkMhtiNctnbIQ/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1pzt-J42rt0dkJ-He4hPIoQeuAkNMexUDjSObkEg6Tn0/edit?usp=drive_link",
       "key": "unit_8_assessment",
       "properties": {
         "audience": "Verified Teacher",

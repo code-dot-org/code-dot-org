@@ -1,19 +1,18 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
-import sinon from 'sinon';
 
 import {
   fakeLessonWithLevels,
   fakeLesson,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
-import LessonProgressColumnHeader from '@cdo/apps/templates/sectionProgressV2/LessonProgressColumnHeader.jsx';
+import {UnconnectedLessonProgressColumnHeader} from '@cdo/apps/templates/sectionProgressV2/LessonProgressColumnHeader.jsx';
 import i18n from '@cdo/locale';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 const LESSON = fakeLessonWithLevels({numberedLesson: true}, 1);
 
 const DEFAULT_PROPS = {
+  sectionId: 1,
+  unitId: 1,
   lesson: LESSON,
   addExpandedLesson: () => {},
   allLocked: true,
@@ -21,7 +20,7 @@ const DEFAULT_PROPS = {
 
 const renderDefault = overrideProps => {
   const props = {...DEFAULT_PROPS, ...overrideProps};
-  render(<LessonProgressColumnHeader {...props} />);
+  render(<UnconnectedLessonProgressColumnHeader {...props} />);
 };
 
 describe('LessonProgressColumnHeader', () => {
@@ -36,7 +35,7 @@ describe('LessonProgressColumnHeader', () => {
     lesson.numberedLesson = true;
     renderDefault({lesson});
 
-    expect(screen.queryByTitle(i18n.expand())).to.be.null;
+    expect(screen.queryByTitle(i18n.expand())).toBeNull();
   });
 
   it('Shows uninteractive if lockable lesson', () => {
@@ -44,12 +43,12 @@ describe('LessonProgressColumnHeader', () => {
     lesson.lockable = true;
     renderDefault({lesson});
 
-    expect(screen.queryByTitle(i18n.expand())).to.be.null;
+    expect(screen.queryByTitle(i18n.expand())).toBeNull();
     screen.getByTitle(i18n.locked());
   });
 
   it('Shows lesson header and expands on click', () => {
-    const addExpandedLesson = sinon.spy();
+    const addExpandedLesson = jest.fn();
     renderDefault({addExpandedLesson: addExpandedLesson});
 
     screen.getByText(LESSON.relative_position);
@@ -57,6 +56,6 @@ describe('LessonProgressColumnHeader', () => {
     const caret = screen.getByTitle(i18n.expand());
 
     fireEvent.click(caret);
-    expect(addExpandedLesson).to.have.been.calledOnce;
+    expect(addExpandedLesson).toHaveBeenCalledTimes(1);
   });
 });

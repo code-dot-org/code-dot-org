@@ -1,4 +1,3 @@
-import {expect} from '../../../util/reconfiguredChai';
 import {
   addMutationToMiniToolboxBlocks,
   processBlockAndChildren,
@@ -31,11 +30,11 @@ describe('addMutationToMiniToolboxBlocks', function () {
       expectedMutation.getAttribute('useDefaultIcon');
 
     // Ensure that the mutation element is added and has the correct useDefaultIcon attribute.
-    expect(expectedMutation).to.exist;
+    expect(expectedMutation).toBeDefined();
     // An open flyout will NOT use the default icon, since the default state is closed.
-    expect(expectedUseDefaultIcon).to.equal('false');
+    expect(expectedUseDefaultIcon).toBe('false');
     // Ensure that the miniflyout attribute is removed.
-    expect(blockElement.getAttribute('miniflyout')).to.be.null;
+    expect(blockElement.getAttribute('miniflyout')).toBeNull();
   });
 
   it('should not add a mutation element to block without miniflyout attribute', function () {
@@ -50,7 +49,7 @@ describe('addMutationToMiniToolboxBlocks', function () {
     addMutationToMiniToolboxBlocks(blockElement);
 
     // Compare the modified blockElement with the original copy
-    expect(blockElement.isEqualNode(originalBlockElement)).to.be.true;
+    expect(blockElement.isEqualNode(originalBlockElement)).toBe(true);
   });
 });
 
@@ -71,6 +70,6 @@ describe('processBlockAndChildren', function () {
     const nestedNode = xmlDoc.documentElement.querySelector(
       'block[type="level_2"]'
     );
-    expect(nestedNode.getAttribute('movable')).to.equal('true');
+    expect(nestedNode.getAttribute('movable')).toBe('true');
   });
 });

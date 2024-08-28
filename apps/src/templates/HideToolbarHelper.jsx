@@ -1,9 +1,11 @@
-import React from 'react';
-import msg from '@cdo/locale';
 import cookies from 'js-cookie';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import trackEvent from '../util/trackEvent';
 import _ from 'lodash';
+import React from 'react';
+
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import msg from '@cdo/locale';
+
+import trackEvent from '../util/trackEvent';
 
 // Note that additional styling can be found in apps/style/HideToolbarHelper.scss.
 

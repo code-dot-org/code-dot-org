@@ -1,18 +1,20 @@
 import React, {useCallback} from 'react';
 import {useSelector} from 'react-redux';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+
+import Typography from '@cdo/apps/componentLibrary/typography/Typography';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import DialogFooter from '@cdo/apps/templates/teacherDashboard/DialogFooter';
-import Button from '@cdo/apps/templates/Button';
+import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import i18n from '@cdo/locale';
+
 import {
   FrozenProjectInfoDialogState,
   hideFrozenProjectInfoDialog,
 } from './frozenProjectInfoDialogRedux';
-import Typography from '@cdo/apps/componentLibrary/typography/Typography';
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import i18n from '@cdo/locale';
-import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 
 const FrozenProjectInfoDialog: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();

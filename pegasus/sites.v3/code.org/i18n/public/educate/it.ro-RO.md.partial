@@ -17,9 +17,11 @@ theme: responsive
 
 ## Browsere și Platforme Minimum Sprijinite
 
+Începând cu iulie 2024, vom actualiza versiunile minime necesare pentru browsere și sisteme de operare. Deși versiunile vechi pot funcționa în continuare, nu vom putea accepta cererile de remediere a erorilor în versiunile mai vechi.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Browser
@@ -40,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Browser iulie '24
+        </th>
+        <tr>
+          <td>Chrome 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Safari mobil 14.x</td>
+        </tr>
+        <tr>
+          <td>Margine 119.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Platformă
@@ -62,8 +86,30 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platforma iulie '24
+        </th>
+        <tr>
+          <td>MacOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Site-uri pentru Debloare
@@ -80,16 +126,15 @@ Pentru cea mai bună experiență cu întreg conținutul Code.org, vă recomand�
 | **Pentru utilizarea Simulatorului de Internet**                                                                       | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Pentru utilizarea Web Lab-ului**                                                                                    | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Pentru utilizarea Butonului de Partajare a Clasei Google**                                                          | `https://apis.google.com`                                                                                  |
-| **Pentru a utiliza seturile de date App Lab**                                                                         | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Detalii de Sprijinire a Mobilului și a Tabletei
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Majoritatea tabletelor nu sunt acceptate, cu următoarele excepții:
+Toate cursurile CS Discoveries, CS Principles, CS A și Intro to App Lab nu sunt compatibile cu tablete sau dispozitive mobile - sunt necesare o tastatură completă și un mouse (sau touchpad). Majoritatea tabletelor nu sunt acceptate, cu următoarele excepții:
 
 - Microsoft Surface Pro cu o tastatură externă
 - iPad care rulează iPadOS 13.4 sau mai actuală cu o tastatură externă și un mouse sau tastatură tactilă externe
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+Toate celelalte conținuturi, cum ar fi cursurile K-5 (Computer Science Fundamentals) și activitățile Hour of Code sunt compatibile pe iPad-uri și alte tablete moderne și computere laptop sau desktop.
 
 ### Telefoane Mobile
 
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+Acesta este executantul utilizat pe tot parcursul programei. Acesta va încerca să afișeze videoclipul prin YouTube și, dacă YouTube este blocat, va afișa videoclipul găzduit de Code.org folosind în schimb executantul nostru "de rezervă".
 
 ### Nu se redă videoclipul?
 
-If video does not work, you can email us at support@code.org.
+Dacă videoclipul nu funcționează, puteți să ne trimiteți un email la support@code.org.
 
-However, you can still use our tutorials without video.
+Totuși, puteți utiliza tutorialele noastre fără videoclipuri.
 
 1. Am făcut ca toate videoclipurile noastre [să fie disponibile pentru a fi descărcate împreună](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). Dacă școala dumneavoastră are o lățime de bandă redusă, vă recomandăm să descărcați videoclipuri și să le arătați elevilor pe un ecran partajat.
 2. Integrat în tutorialele noastre, am adăugat o pictogramă verde cu link de descărcare <img src="/images/green-download.png" width=25 height=25 /> pentru fiecare videoclip, permițând studenților să descarce videoclipuri tutoriale individuale.
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## Setări speciale pentru utilizatorii Aplicațiilor Google/G-Suite
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+Dacă sunteți un administrator G-suite, asigurați-vă că ați verificat setările de restricție pentru YouTube. Dacă ați specificat setarea "Acces restricționat strict pe YouTube" sau dacă vedeți mesaje cu mențiunea "acest videoclip a fost restricționat", puteți adăuga canalul nostru la lista de canale aprobate. Consultați [acest ghid](https://support.google.com/a/answer/6245597) de la Google pentru a afla cum să adăugați canalul nostru pe lista aprobată. De asemenea, puteți vedea [acest ghid](https://support.google.com/a/answer/6212415?hl=en) pentru a afla mai multe despre diferitele setări și care dintre ele este mai bună pentru cursurile dv.
 
 ## Încă mai aveți probleme?
 
-We'll help you out - just email us at support@code.org!
+Vă vom ajuta - doar trimiteți-ne un e-mail la support@code.org!

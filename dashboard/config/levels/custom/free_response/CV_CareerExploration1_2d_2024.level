@@ -1,0 +1,29 @@
+<FreeResponse>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 52,
+  "created_at": "2024-06-26T20:02:42.000Z",
+  "level_num": "custom",
+  "user_id": 18603,
+  "properties": {
+    "encrypted": "false",
+    "title": "Johanna Jaskowska Interview",
+    "display_name": "Johanna Jaskowska",
+    "bubble_choice_description": "Johanna Jaskowska’s hyper-shiny, highlight-perfect Instagram face filters have experienced viral success since the beginning of this year. ",
+    "thumbnail_url": "https://images.code.org/eabdece07453423775fc24c28ed29b39-1d_1.png",
+    "height": "150",
+    "placeholder": "What do you notice? What do you wonder?",
+    "allow_user_uploads": "false",
+    "submittable": "false",
+    "peer_reviewable": "false",
+    "optional": "false",
+    "allow_multiple_attempts": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "long_instructions": "##How do you describe what you do?\r\nI’m a weird hybrid creative, but ‘digital creative’ is the umbrella that captures all the skills I use. I have a design and art direction background so I can do a bit of everything, including some developing, focusing on new media and technologies and innovations. My main focus, though, is concept: if there’s no story, none of the work makes sense. I find a lot of brands get into using augmented reality (AR) but they don't always understand the purpose of these technologies.\r\n\r\n##How did you go about creating your first filters?\r\nWhen I published my first filter, I had to shape the face of the users in a plastic material in order to cast light on the face. From the users feedback I realised that the thing that folks were talking about was the plastic effect. It says a lot about society (smooth skin, perfect, the idea that everything has to be sleek without imperfection). It also really attracts the eye, like looking at the reflection of water.\r\n\r\nI thought ‘OK I’ll make the 100% plastic face filter.’ That’s how I got the idea to make Beauty 3000, I just exaggerated it. And when I did it, I was really surprised with the result, even on my own face. It’s important to understand social media and how people use it, so if you hide the face people don’t have the space to tell the story of themselves, and people like to talk about themselves.\r\n\r\n![](https://images.code.org/1f838b37f886de8d45ad48f63ddc64c4-image-1719432734642.png)\r\n\r\n##Have you had any surprising moments since the filters went viral?\r\nIt was very intense – I didn’t expect any of it and I had to learn a lot. The social media pressure was overwhelming, so many people contacted me for interviews, work or features, it was too much and it was very difficult to handle everything. I was trying to respond to everyone but I realised I needed to think about myself, so I slowed down and I’m learning to say no...\r\n\r\nWhat I find so fascinating with AR is when it’s actually impossible in real life – you can play with physics, textures, you can wear imagery or a dress that is like wood or water.\r\n\r\n##How useful were your studies to the work you do now?\r\nI had a hard time after my studies when I was looking for a ‘real job’ to define myself as either a designer or art director or developer. I didn’t want to be categorised. I chose the digital field because I'm very curious and I knew the field would continue to fascinate me and that there would always be something new. I knew I’d be captivated and have food for my brain."
+  },
+  "audit_log": "[{\"changed_at\":\"2024-06-26 20:02:46 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 20:15:29 +0000\",\"changed\":[],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-06-26 20:19:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</FreeResponse>

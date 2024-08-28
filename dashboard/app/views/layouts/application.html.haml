@@ -67,9 +67,10 @@
     - else
       - unless Rails.env.production?
         = render partial: 'layouts/environment_tag'
-    - if current_user&.student? && (current_user.age.nil? || (current_user.us_state.nil? && Policies::Lti.lti?(current_user)))
-      = render partial: 'layouts/student_information_interstitial'
-
+    - if current_user&.student?
+      - forceStudentInterstitial = params[:forceStudentInterstitial]
+      - if current_user.age.nil? || lti_user_info_required?(current_user) || cap_user_info_required?(current_user, request.country) || forceStudentInterstitial
+        = render partial: 'layouts/student_information_interstitial', locals: {student: current_user, country: request.country, forceStudentInterstitial: forceStudentInterstitial}
     - cookie_key = environment_specific_cookie_name('_user_type')
     - user_type = request.cookies[cookie_key]
     -# The _user_type cookie is set in devise.rb to differentiate under13 students as 'student_y'.
@@ -94,8 +95,9 @@
         = render partial: 'layouts/header', locals: {script: @script, script_level: @script_level, level: @level, lesson: @lesson, full_width: view_options[:full_width]}
       - if view_options[:code_studio_logo]
         = render partial: 'layouts/logo'
-      - if current_user && Policies::Lti.early_access_banner_available?(current_user)
-        = render partial: 'lti/v1/early_access_banner'
+      - if current_user
+        = render_parental_permission_modal(current_user, request)
+
       - page = yield
 
       - if view_options[:full_width]

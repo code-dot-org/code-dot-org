@@ -12,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-12 21:10:44 UTC",
+    "serialized_at": "2024-07-11 16:08:43 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2818,6 +2819,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA Curriculum Videos_2024"
+        ],
         "progression": "CSA Curriculum Videos"
       },
       "bonus": false,
@@ -2840,6 +2844,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2861,6 +2868,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox_2024"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -2883,6 +2893,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox_2024"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -2905,6 +2918,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Theater Sandbox_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3117,6 +3133,30 @@
       }
     },
     {
+      "name": "Code.org U9L2 MCQ Pre-Assessment",
+      "url": "https://apclassroom.collegeboard.org/8/shared-quizzes/c6eb9e5d6bbe4e7bad4eb7910519027b",
+      "key": "code_org_u9l2_mcq_pre-assessment",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "code_org_u9l2_mcq_pre-assessment"
+      }
+    },
+    {
+      "name": "Code.org U9L6 FRQ Pre-Assessment",
+      "url": "https://apclassroom.collegeboard.org/8/shared-quizzes/7f77322ede9d43ac8a40cf938631331c",
+      "key": "code_org_u9l6_frq_pre-assessment",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "code_org_u9l6_frq_pre-assessment"
+      }
+    },
+    {
       "name": "Course and Exam Description",
       "url": "https://docs.google.com/document/d/13plMgDK_6RDMdtAs52nP8R9obQf9i4RM6UsdhD0GnRU/edit?usp=sharing",
       "key": "course_and_exam_description",
@@ -3143,11 +3183,9 @@
     },
     {
       "name": "CSA Unit 9 Slides",
-      "url": "https://docs.google.com/presentation/d/1Lhz4LAKSbeJ1Ef8CJR_GG2u06rQpUa05uBVynYUUXeM/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/17cmMq1ZIo0egoYqSQDdT2bMdV-_7bFPYFyxYRK9gzdc/template/preview",
       "key": "csa_unit_9_slides",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csa_unit_9_slides"
@@ -3164,6 +3202,18 @@
       },
       "seeding_key": {
         "resource.key": "exploring_exam_expectations"
+      }
+    },
+    {
+      "name": "Fishbowl Skills Answer Key",
+      "url": "https://docs.google.com/document/d/1nuH9w4kn83PHS9udr0x6VktELC1DRiENEbw0xP6kRCU",
+      "key": "fishbowl_skills_answer_key",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "fishbowl_skills_answer_key"
       }
     },
     {
@@ -3219,7 +3269,7 @@
     },
     {
       "name": "FRQ Practice - Day 1",
-      "url": "https://docs.google.com/presentation/d/1AhXt1dMeXTr8K2r45_0YuSoAk_TwgV-1bpbHqlGqwyI/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1Dvw_0LfZJ87uG4gAaUbz1woZevKTdIwFt1bvY9NnunI/template/preview",
       "key": "frq_practice_-_day_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -3231,7 +3281,7 @@
     },
     {
       "name": "FRQ Practice - Day 2",
-      "url": "https://docs.google.com/presentation/d/17mQTAKW_1GajW913RmpzXevxCh2k-UVicDgsORSO4YM/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/104fXntFE-Y-_NPH4qyWytlM0TCcDKO3n3qFcglpn2yg/template/preview",
       "key": "frq_practice_-_day_2",
       "properties": {
         "audience": "Verified Teacher",
@@ -3255,7 +3305,7 @@
     },
     {
       "name": "FRQ Pre-Assessment",
-      "url": "https://docs.google.com/presentation/d/1wi6kNZvTY8B2TwwLh888IRDeYPX9OFbToVIycu6ZLEQ/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1qbqhP7m5Ok_d5tqadUp9o7exxSqCTeZi07k_puHVzKk/template/preview",
       "key": "frq_pre-assessment",
       "properties": {
         "audience": "Verified Teacher",
@@ -3280,7 +3330,7 @@
     },
     {
       "name": "FRQ Study Plan",
-      "url": "https://docs.google.com/presentation/d/1uZ1fobCQpJ1KKVDzKJNaHGiQd9GjUmTlxNrUa2KmHhc/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1tZR9aX74MpjW5Z4XXE3tcFkB15LfOMbPkERwZQCPg_Q/template/preview",
       "key": "frq_study_plan_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -3343,7 +3393,7 @@
     },
     {
       "name": "MCQ Practice - Day 1",
-      "url": "https://docs.google.com/presentation/d/1FJb5vViedO_sH-NH3Iqwq0qRUgdWIAezEDxcapZnqT4/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/13Xu5Kb_S45N8p_RXlpgjV8hTf15d6_J3tB0FZ3PNI8E/template/preview",
       "key": "mcq_practice_-_day_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -3355,7 +3405,7 @@
     },
     {
       "name": "MCQ Practice - Day 2",
-      "url": "https://docs.google.com/presentation/d/1MA5hnHwLD_gjY4umuFwvszzeMt50drDi-kPeRkoQIIs/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1kanBNHu4Ile-23XfOa_0Xj4sThI2SdWgw84ro1UiVH8/template/preview",
       "key": "mcq_practice_-_day_2",
       "properties": {
         "audience": "Verified Teacher",
@@ -3379,7 +3429,7 @@
     },
     {
       "name": "MCQ Pre-Assessment",
-      "url": "https://docs.google.com/presentation/d/1O3ucv2sT7DdwFXmGQdTdBTJCP-tf9Ty1VZJvrVvc_-8/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1oJTNpzvdpfGxMrzdPLOq8qKo5wz0AtLOSsIg5GGsqB4/template/preview",
       "key": "mcq_pre-assessment",
       "properties": {
         "audience": "Verified Teacher",
@@ -3417,7 +3467,7 @@
     },
     {
       "name": "MCQ Study Plan",
-      "url": "https://docs.google.com/presentation/d/1Dr5QgE3qHxtLVhb-T3pr1yMX9R8_bNSRGKCLG273pmc/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1e97I2ummcKjPXMcVypBjpr1C2gdsP0GmImtWrX5L_hc/template/preview",
       "key": "mcq_study_plan_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -3465,7 +3515,7 @@
     },
     {
       "name": "Mock MCQ Exam - Day 1",
-      "url": "https://docs.google.com/presentation/d/1O9O-75_Y1ef5ENE8B-BA-916318K51PGRj4kdkluOjg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/10Pui7xsERAr-M57Kq2sv_RYujKYmlSCFXnryMUXMxJU/template/preview",
       "key": "mock_mcq_exam_-_day_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -3477,7 +3527,7 @@
     },
     {
       "name": "Mock MCQ Exam - Day 2",
-      "url": "https://docs.google.com/presentation/d/1yVTiex0bHlczXSVeqxDJF4YX72EQ-HUUoMLYPuLsvkk/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1mp575oaCeHr8BX8ddopMAn1rGlXdDVtqtzoqM8-ZmGw/template/preview",
       "key": "mock_mcq_exam_-_day_2",
       "properties": {
         "audience": "Verified Teacher",
@@ -3489,7 +3539,7 @@
     },
     {
       "name": "Mock MCQ Exam - Day 3",
-      "url": "https://docs.google.com/presentation/d/1D01ix7dcSd6haUNT9VPBhbJ1AJ0LfogJRYUiOyXtQEg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1CFMTfgR5Xm3Pbg3Jm7a615zQcHKnpnERKXMzWxZCtCk/template/preview",
       "key": "mock_mcq_exam_-_day_3",
       "properties": {
         "audience": "Verified Teacher",
@@ -3501,7 +3551,7 @@
     },
     {
       "name": "The AP CSA Exam",
-      "url": "https://docs.google.com/presentation/d/1xECPozWZr3acpq2SnQPfYI_ne1a2vwYuxMakm9yzFAg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1bO__etSiSmDVEJ3gl4u9GScNJ-hhIpMdRWsQ9370FOE/view#slide=id.g1e2a38355c7_0_1164",
       "key": "the_ap_csa_exam",
       "properties": {
         "audience": "Verified Teacher",
@@ -3513,6 +3563,12 @@
     }
   ],
   "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Practice – Day 1",
+        "resource.key": "fishbowl_skills_answer_key"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "FRQ Practice – Day 1",
@@ -3565,6 +3621,12 @@
       "seeding_key": {
         "lesson.key": "FRQ Pre-Assessment",
         "resource.key": "ap_classroom_practice_exams"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Pre-Assessment",
+        "resource.key": "code_org_u9l6_frq_pre-assessment"
       }
     },
     {
@@ -3637,6 +3699,12 @@
       "seeding_key": {
         "lesson.key": "MCQ Pre-Assessment",
         "resource.key": "ap_classroom_user_guide_for_students"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "MCQ Pre-Assessment",
+        "resource.key": "code_org_u9l2_mcq_pre-assessment"
       }
     },
     {

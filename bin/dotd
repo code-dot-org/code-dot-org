@@ -26,14 +26,13 @@ LOG_FILE = "#{Dir.tmpdir}/dotd.log".freeze
   "[#{time.strftime('%I:%M %p')}]: #{msg}\n"
 end
 
-# Checks that CDO.github_access_token, CDO.slack_bot_token, CDO.honeybadger_api_token, and CDO.devinternal_db_writer
+# Checks that CDO.github_access_token, CDO.slack_bot_token, CDO.honeybadger_api_token
 # are defined. If not, exits the program.
 def check_for_cdo_keys
   missing_cdo_keys = [
     CDO.github_access_token ? nil :   "#{bold 'CDO.github_access_token'}: set `github_access_token: <your token>` in locals.yml. Get <your token> from https://github.com/settings/tokens, by creating a classic token with the \"public_repo\" permission.",
     CDO.honeybadger_api_token ? nil : "#{bold 'CDO.honeybadger_api_token'}: this should be pulled in automatically from AWS Secrets Manager, does `bin/aws_access` succeed?",
-    CDO.slack_bot_token ? nil :       "#{bold 'CDO.slack_bot_token'}: this should be pulled in automatically from AWS Secrets Manager, does `bin/aws_access` succeed?",
-    CDO.devinternal_db_writer ? nil : "#{bold 'CDO.devinternal_db_writer'}: set `devinternal_db_writer: <your token>` locals.yml. Get <your token> from https://app.honeybadger.io/users/edit#authentication."
+    CDO.slack_bot_token ? nil :       "#{bold 'CDO.slack_bot_token'}: this should be pulled in automatically from AWS Secrets Manager, does `bin/aws_access` succeed?"
   ].compact
 
   return if missing_cdo_keys.empty?
@@ -525,7 +524,7 @@ def main
   check_for_cdo_keys
   check_github_token
 
-  dotd_name = ENV['CDODEV_DOTD_NAME'] || ENV['USER']
+  dotd_name = ENV['CDODEV_DOTD_NAME'] || ENV.fetch('USER', nil)
   @logger.info("#{Time.new.strftime('%A, %B %d %Y')}: #{dotd_name} is DOTD")
 
   puts_script_intro(dotd_name)

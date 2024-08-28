@@ -1,5 +1,6 @@
 <FreeResponse>
   <config><![CDATA[{
+  "published": true,
   "game_id": 52,
   "created_at": "2024-03-25T22:41:42.000Z",
   "level_num": "custom",
@@ -9,7 +10,7 @@
     "tts_short_instructions_override": "How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
     "tts_long_instructions_override": "Congratulations! You just wrote some code. You are officially a programmer!\r\n\r\nDid you notice that the last puzzle was a little more difficult? It was a challenge puzzle. Challenge puzzles are meant to stretch the boundaries of what students will do. We make it clear that they should be attempted, but do not require that they be completed for students to succeed for the lesson.\r\n\r\nNow take a moment to reflect. How would you describe the difference between computer science and coding? How would you explain sequencing and algorithms to your students? ",
     "instructions_important": "false",
-    "long_instructions": "# Reflection\r\n\r\n\r\n## Active Learning with The Design Process\r\n\r\n##### This module provides context and background for the upcoming synchronous workshop. It also began with a general reflection of what active learning can look like in the classroom.  After reviewing the first four lessons of The Design Process, let's revisit what active learning can look like when starting The Design Process.\r\n\r\n##### Respond to the following questions:\r\n\r\n* ##### What can active learning look like when introducing The Design Process?\r\n* ##### What are students doing?  What are you doing?\r\n\r\n",
+    "long_instructions": "# Reflection\r\n\r\n## Active Learning with The Design Process\r\n\r\n#### This module provides context and background for the upcoming synchronous workshop. It also began with a general reflection of what active learning can look like in the classroom.  After reviewing the first four lessons of The Design Process, let's revisit what active learning can look like when starting The Design Process.\r\n\r\n### **Respond to the following questions:**\r\n\r\n* #### What can active learning look like when introducing The Design Process?\r\n* #### What are students doing?  What are you doing?\r\n<br>\r\n\r\n##### **Note**: You can change the size of the text box by clicking and dragging the bottom-right corner of the text box.",
     "allow_user_uploads": "false",
     "submittable": "false",
     "peer_reviewable": "false",
@@ -20,9 +21,8 @@
     "name_suffix": "_2024",
     "allow_multiple_attempts": "true"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-25T22:41:42.950+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD Module 3 U4L2 Reflection_2023\\\"\"],\"cloned_from\":\"VPL - CSD Module 3 U4L2 Reflection_2023\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-25T22:41:42.950+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD Module 3 U4L2 Reflection_2023\\\"\"],\"cloned_from\":\"VPL - CSD Module 3 U4L2 Reflection_2023\"},{\"changed_at\":\"2024-08-22 22:58:54 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"},{\"changed_at\":\"2024-08-22 22:59:14 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

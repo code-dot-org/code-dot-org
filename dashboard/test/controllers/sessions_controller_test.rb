@@ -295,33 +295,107 @@ class SessionsControllerTest < ActionController::TestCase
     assert @response.cookies["remember_user_token"]
   end
 
-  class Lockout < ActionDispatch::IntegrationTest
-    test 'a compliant user should not be able to visit /lockout' do
-      [
-        [:student],
-        [:teacher],
-        [:locked_out_child, :with_parent_permission],
-      ].each do |traits|
-        user = create(*traits)
-        sign_in user
+  class LtiAccountLinkingSignInPageTest < ActionDispatch::IntegrationTest
+    test 'renders alternative account linking login page during LTI registration' do
+      DCDO.stubs(:get)
+      Policies::Lti.stubs(:lti_registration_in_progress?).returns(true)
 
-        get '/lockout'
+      get user_session_path
+      assert_template partial: 'devise/sessions/_login_lti_account_linking'
+    end
 
-        assert_redirected_to '/home', "user#{traits} should be redirected to /home"
+    test 'renders normal login page for non-LTI/non-partial registrations' do
+      DCDO.stubs(:get)
+      Policies::Lti.stubs(:lti_registration_in_progress?).returns(false)
+
+      get user_session_path
+      assert_template partial: 'devise/sessions/_login'
+    end
+  end
+
+  describe 'GET lockout' do
+    let(:user) {create(:parent_managed_student)}
+
+    let(:user_is_locked_out) {true}
+
+    around do |test|
+      Timecop.freeze {test.call}
+    end
+
+    before do
+      Policies::ChildAccount::ComplianceState.stubs(:locked_out?).with(user).returns(user_is_locked_out)
+      user.update(cap_status_date: DateTime.now)
+
+      sign_in user
+    end
+
+    it 'assigns @pending_email with empty string' do
+      get :lockout
+      _(assigns[:pending_email]).must_equal ''
+    end
+
+    it 'assigns @disallowed_email with empty string' do
+      get :lockout
+      _(assigns[:disallowed_email]).must_equal ''
+    end
+
+    it 'assigns @delete_date with 7 day after user lockout date' do
+      get :lockout
+      _(assigns[:delete_date]).must_equal user.cap_status_date.since(7.days)
+    end
+
+    it 'renders lockout page' do
+      get :lockout
+      assert_template :lockout
+    end
+
+    context 'when user is not signed in' do
+      before do
+        sign_out user
+      end
+
+      it 'redirects to login page' do
+        get :lockout
+        assert_redirected_to new_user_session_path
       end
     end
 
-    test 'a non-compliant user should be able to visit /lockout' do
-      [
-        [:locked_out_child],
-        [:locked_out_child, :with_pending_parent_permission],
-      ].each do |traits|
-        user = create(*traits)
-        sign_in user
+    context 'when user is not locked out' do
+      let(:user_is_locked_out) {false}
 
-        get '/lockout'
+      it 'redirects to home page' do
+        get :lockout
+        assert_redirected_to home_path
+      end
+    end
 
-        assert_response :ok, "user#{traits} can visit /lockout"
+    context 'when permission request is already sent' do
+      before do
+        create(:parental_permission_request, user: user, parent_email: parent_email, updated_at: request_date)
+      end
+
+      let(:parent_email) {'latest_permission_request@parent.email'}
+      let(:request_date) {99.years.ago}
+
+      it 'assigns @pending_email with data from latest parental permission request' do
+        get :lockout
+        _(assigns[:pending_email]).must_equal parent_email
+      end
+
+      it 'assigns @request_date with data from latest parental permission request' do
+        get :lockout
+        _(assigns[:request_date].iso8601).must_equal request_date.iso8601
+      end
+    end
+
+    context 'when user is not parent managed' do
+      let(:user) {create(:student, email: user_email)}
+
+      let(:user_email) {'cap@test.org'}
+
+      it 'assigns @disallowed_email with its hashed email' do
+        get :lockout
+        _(assigns[:disallowed_email]).must_equal User.hash_email(user_email)
       end
     end
   end

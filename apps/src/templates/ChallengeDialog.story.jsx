@@ -1,12 +1,14 @@
+import React from 'react';
+
+import BirdsWinAvatar from '@cdo/static/skins/birds/win_avatar.png';
+import HarvesterStaticAvatar from '@cdo/static/skins/harvester/static_avatar.png';
+import HarvesterWinAvatar from '@cdo/static/skins/harvester/win_avatar.png';
+import StudioWinAvatar from '@cdo/static/skins/studio/win_avatar.png';
+import SpriteLabAvatar from '@cdo/static/spritelab/avatar.png';
+
 import ChallengeDialog from './ChallengeDialog';
 import CodeWritten from './feedback/CodeWritten';
 import GeneratedCode from './feedback/GeneratedCode';
-import React from 'react';
-import HarvesterStaticAvatar from '@cdo/static/skins/harvester/static_avatar.png';
-import HarvesterWinAvatar from '@cdo/static/skins/harvester/win_avatar.png';
-import BirdsWinAvatar from '@cdo/static/skins/birds/win_avatar.png';
-import StudioWinAvatar from '@cdo/static/skins/studio/win_avatar.png';
-import SpriteLabAvatar from '@cdo/static/spritelab/avatar.png';
 
 export default {
   component: ChallengeDialog,

@@ -1,10 +1,14 @@
 import React, {Component} from 'react';
+
+import {MAKER_DEPRECATION_SUPPORT_URL} from '@cdo/apps/maker/util/makerConstants';
+import Notification, {
+  NotificationType,
+} from '@cdo/apps/sharedComponents/Notification';
+import i18n from '@cdo/locale';
+
+import shapes from './studioHomepages/shapes';
 import TopCourse from './studioHomepages/TopCourse';
 import VerticalImageResourceCardRow from './VerticalImageResourceCardRow';
-import shapes from './studioHomepages/shapes';
-import i18n from '@cdo/locale';
-import {MAKER_DEPRECATION_SUPPORT_URL} from '@cdo/apps/lib/kits/maker/util/makerConstants';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
 
 export default class MakerLanding extends Component {
   static propTypes = {

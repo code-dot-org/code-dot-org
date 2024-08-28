@@ -1,9 +1,7 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import AiAssessment from '@cdo/apps/templates/rubrics/AiAssessment';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 describe('AiAssessment', () => {
   const mockAiInfo = {
@@ -23,17 +21,17 @@ describe('AiAssessment', () => {
 
   it('renders AiAssessmentBox and passes down properties', () => {
     const wrapper = shallow(<AiAssessment {...props} />);
-    expect(wrapper.find('AiAssessmentBox')).to.have.lengthOf(1);
-    expect(wrapper.find('AiAssessmentBox').props().isAiAssessed).to.equal(
+    expect(wrapper.find('AiAssessmentBox')).toHaveLength(1);
+    expect(wrapper.find('AiAssessmentBox').props().isAiAssessed).toBe(
       props.isAiAssessed
     );
-    expect(wrapper.find('AiAssessmentBox').props().studentName).to.equal(
+    expect(wrapper.find('AiAssessmentBox').props().studentName).toBe(
       props.studentName
     );
-    expect(
-      wrapper.find('AiAssessmentBox').props().aiUnderstandingLevel
-    ).to.equal(props.aiUnderstandingLevel);
-    expect(wrapper.find('AiAssessmentBox').props().aiConfidence).to.equal(
+    expect(wrapper.find('AiAssessmentBox').props().aiUnderstandingLevel).toBe(
+      props.aiUnderstandingLevel
+    );
+    expect(wrapper.find('AiAssessmentBox').props().aiConfidence).toBe(
       props.aiConfidence
     );
   });

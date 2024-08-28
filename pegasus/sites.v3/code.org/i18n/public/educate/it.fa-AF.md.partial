@@ -17,9 +17,11 @@ theme: responsive
 
 ## Minimum Supported Browsers and Platforms
 
+از جولای 2024، ما حداقل نسخه های مورد نیاز برای مرورگرها و سیستم عامل را به روز خواهیم کرد. در حالی که نسخه های قدیمی ممکن است هنوز کار کنند، ما قادر به پشتیبانی از درخواست های رفع اشکال در نسخه های قدیمی نخواهیم بود.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Browser
@@ -40,11 +42,33 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          Platform
+          مرورگر ژوئیه '24
+        </th>
+        <tr>
+          <td>کروم 103.x</td>
+        </tr>
+        <tr>
+          <td>سافاری 14.x</td>
+        </tr>
+        <tr>
+          <td>سافاری موبایل 14.x</td>
+        </tr>
+        <tr>
+          <td>لبه 119.x</td>
+        </tr>
+        <tr>
+          <td>فایرفاکس 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          پلت فرم
         </th>
         <tr>
           <td>macOS 10.13</td>
@@ -62,13 +86,35 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          پلت فرم جولای ۲۴
+        </th>
+        <tr>
+          <td>ماکوس 10.15</td>
+        </tr>
+        <tr>
+          <td>آی او اس ۱۵.اکس</td>
+        </tr>
+        <tr>
+          <td>ویندوز ۸</td>
+        </tr>
+        <tr>
+          <td>آندروید 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Sites to Unblock
 
-For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure the following sites are allowed and aren't blocked.
+برای بهترین تجربه با تمام محتوای Code.org، توصیه می کنیم با بخش فناوری اطلاعات مدرسه یا منطقه خود مشورت کنید تا اطمینان حاصل کنید که سایت های زیر مجاز هستند و مسدود نشده اند.
 
 | Priority                                                                                                           | URL                                                                                                        |
 | ------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
@@ -80,28 +126,27 @@ For the very best experience with all Code.org content, we recommend consulting 
 | **برای استفاده از شبیه ساز اینترنت**                                                                               | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **برای استفاده از آزمایشگاه وب**                                                                                   | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **برای استفاده از دکمه اشتراک گذاری Google Classroom**                                                             | `https://apis.google.com`                                                                                  |
-| **برای استفاده از مجموعه داده های App Lab**                                                                        | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Mobile and Tablet Support Details
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Most tablets are not supported, with the following exceptions:
+تمام دوره های CS Discovery، CS Principles، CS A و Intro to App Lab با تبلت ها یا دستگاه های تلفن همراه سازگار نیستند - یک صفحه کلید و ماوس کامل (یا صفحه لمسی) مورد نیاز است. اکثر تبلت ها با استثنائات زیر پشتیبانی نمی شوند:
 
 - Microsoft Surface Pro with an external keyboard
 - iPad running iPadOS 13.4 or later with an external keyboard and an external mouse or touchpad
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+تمام محتوای دیگر مانند دوره های K-5 (اصول علوم کامپیوتر) و فعالیت های ساعت کد در آیپد ها و سایر تبلت های مدرن و لپ تاپ یا رایانه های رومیزی سازگار هستند.
 
 ### Mobile Phones
 
-Our Hour of Code activities and CS Fundamentals courses can be completed on mobile phones. While these activities are usable, they are not optimized for a mobile phone experience and have some known limitations (e.g. touch targets may be small, accessory elements may display offscreen, and text may be difficult to input using the on-screen keyboard). The CS Discoveries, CS Principles, and Intro to App Lab courses are not usable on mobile phones.
+فعالیت های ساعت کد و دوره های CS Fundamentals را می توان بر روی تلفن های همراه تکمیل کرد. در حالی که این فعالیت ها قابل استفاده هستند، اما برای تجربه تلفن همراه بهینه نمی شوند و برخی محدودیت های شناخته شده دارند (به عنوان مثال اهداف لمسی ممکن است کوچک باشد، عناصر لوازم جانبی ممکن است خارج از صفحه نمایش داده شود و وارد کردن متن با استفاده از صفحه کلید روی صفحه نمایش دشوار باشد). دوره های CS Discovery، CS Principles و Intro to App Lab در تلفن های همراه قابل استفاده نیست.
 
 ## Videos
 
-We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our [online learning platform](https://studio.code.org). For schools with YouTube blocked, we attempt to display a Code.org hosted video player instead.
+ما از [YouTube](https://www.youtube.com) برای جاسازی فیلم ها در Code.org و پلتفرم یادگیری آنلاین [](https://studio.code.org)استفاده می کنیم. برای مدارس که YouTube مسدود شده است، ما سعی می کنیم پخش کننده ویدیویی میزبانی شده Code.org را به جای آن نمایش دهیم.
 
 ### Can you play this video?
 
-Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
+قبل از شروع دوره های آنلاین Code.org، پخش فیلم زیر را آزمایش کنید تا مطمئن شوید که آماده رفتن هستید.
 
 
 <!--
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+این بازیکنی است که در طول برنامه درسی مورد استفاده قرار می گیرد. سعی می کند ویدیو را از طریق YouTube نشان دهد و اگر YouTube مسدود شود، ویدیوی میزبانی شده Code.org را به جای آن با استفاده از پخش کننده «بازگشت» ما نشان می دهد.
 
 ### Video not playing?
 
-If video does not work, you can email us at support@code.org.
+اگر ویدئو کار نمی کند، می توانید به ما به support@code.org ایمیل بزنید.
 
-However, you can still use our tutorials without video.
+با این حال، شما هنوز هم می توانید از آموزش های ما بدون ویدئو استفاده کنید.
 
 1. We've made all our videos [available for download together](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). If your school has low bandwidth, we recommend that you download videos and show them to students on a shared screen.
 2. Integrated into our tutorials, we've added a green download link icon <img src="/images/green-download.png" width=25 height=25 /> for each video, allowing students to download individual tutorial videos.
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## Special settings for Google Apps/G-Suite users
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+اگر مدیر G-suite هستید، حتماً تنظیمات محدودیت شما برای YouTube چیست را بررسی کنید. اگر تنظیمات «دسترسی محدود دقیق به YouTube» را مشخص کرده اید یا اگر پیام هایی را مشاهده می کنید که «این ویدیو محدود شده است»، می توانید کانال ما را به لیست تایید شده کانال اضافه کنید. به [این راهنمای](https://support.google.com/a/answer/6245597) از گوگل مراجعه کنید تا درباره نحوه اضافه کردن کانال ما به لیست تایید شده آشنا شوید. همچنین می توانید [این راهنما](https://support.google.com/a/answer/6212415?hl=en) را ببینید تا در مورد تنظیمات مختلف و اینکه کدام یک برای کلاس درس شما بهترین است بدانید.
 
 ## Still having trouble?
 
-We'll help you out - just email us at support@code.org!
+ما به شما کمک خواهیم کرد - فقط به ما به support@code.org ایمیل دهید!

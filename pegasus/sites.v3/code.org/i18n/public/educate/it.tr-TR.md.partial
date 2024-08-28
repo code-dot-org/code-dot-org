@@ -17,9 +17,11 @@ theme: responsive
 
 ## En az desteklenen Tarayıcılar ve Platformlar
 
+Temmuz 2024'ten itibaren tarayıcılar ve işletim sistemleri için gereken minimum sürümleri güncelleyeceğiz. Eski sürümler hala çalışabilirken, eski sürümlerde hata düzeltmeleri taleplerini destekleyemeyeceğiz.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Tarayıcı
@@ -40,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Tarayıcı Temmuz '24
+        </th>
+        <tr>
+          <td>Krom 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Mobil Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Kenar 119.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Platform
@@ -62,8 +86,30 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platform Temmuz '24
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Engeli Kaldırılacak Siteler
@@ -80,16 +126,15 @@ Tüm Code.org içeriklerinde en iyi deneyimi yaşamak için, aşağıdaki sitele
 | **İnternet simülatörü kullanmak için**                                                                                 | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Web Laboratuvarı kullanmak için**                                                                                    | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Google Classroom Paylaş Butonunu kullanmak için**                                                                    | `https://apis.google.com`                                                                                  |
-| **App Lab veri kümelerini kullanmak için**                                                                             | `https://*.firebaseio.com`<br />`wss://*.firebaseio.com`                                             |
 
 ## Mobil ve Tablet Destek detayları
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Aşağıdaki istisnalar hariç, çoğu tablet desteklenmez:
+Tüm CS Discoveries, CS Principles, CS A ve Intro to App Lab kursları tabletler veya mobil cihazlarla uyumlu değildir - tam bir klavye ve fare (veya dokunmatik yüzey) gereklidir. Aşağıdaki istisnalar hariç, çoğu tablet desteklenmez:
 
 - Harici klavyesi olan Microsoft Surface Pro
 - iPadOS 13.4 veya daha sonraki sürümleri kullanan ve harici klavyesi, harici faresi veya dokunmatik ekranı olan iPad
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+K-5 kursları (Bilgisayar Bilimi Temelleri) ve Kod Saati etkinlikleri gibi diğer tüm içerikler iPad'lerde ve diğer modern tabletlerde ve dizüstü veya masaüstü bilgisayarlarda uyumludur.
 
 ### Cep Telefonları
 

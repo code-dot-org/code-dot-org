@@ -1,9 +1,10 @@
 /** @file SVG Visualization Overlay */
 
+import debounce from 'lodash/debounce';
 import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
-import debounce from 'lodash/debounce';
+
 import {createEvent} from '@cdo/apps/utils';
 
 const resizeEventName = 'visualizationOverlayResize';

@@ -1,14 +1,13 @@
-import {mount} from 'enzyme';
+import {render, screen} from '@testing-library/react';
 import React from 'react';
 
 import {PersonalProjectsTableActionsCell} from '@cdo/apps/templates/projects/PersonalProjectsTableActionsCell';
-
-import {expect} from '../../../util/reconfiguredChai';
+import i18n from '@cdo/locale';
 
 describe('PersonalProjectsTableActionsCell', () => {
-  it('shows NameFailureDialog when there is a projectNameFailure', () => {
+  it('shows ProjectNameFailureDialog when there is a projectNameFailure', () => {
     const profanity = 'farts';
-    const wrapper = mount(
+    render(
       <PersonalProjectsTableActionsCell
         projectId="abcd4"
         projectType="applab"
@@ -24,12 +23,11 @@ describe('PersonalProjectsTableActionsCell', () => {
         unsetNameFailure={() => {}}
       />
     );
-    expect(wrapper.find('h1').text()).to.include('Unable to rename project');
-    expect(wrapper.find('p').text()).to.include(profanity);
+    screen.getByText(i18n.nameFailureDialogTitle());
   });
 
-  it('does not show NameFailureDialog without projectNameFailure', () => {
-    const wrapper = mount(
+  it('does not show ProjectNameFailureDialog without projectNameFailure', () => {
+    render(
       <PersonalProjectsTableActionsCell
         projectId="abcd4"
         projectType="applab"
@@ -45,7 +43,9 @@ describe('PersonalProjectsTableActionsCell', () => {
         unsetNameFailure={() => {}}
       />
     );
-    expect(wrapper.find('h1')).to.have.lengthOf(0);
-    expect(wrapper.find('p')).to.have.lengthOf(0);
+    const projectNameFailureDialog = screen.queryByText(
+      i18n.nameFailureDialogTitle()
+    );
+    expect(projectNameFailureDialog).toBeNull(); // it doesn't exist
   });
 });

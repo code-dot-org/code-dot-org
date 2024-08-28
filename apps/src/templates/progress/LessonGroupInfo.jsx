@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
+
 import fontConstants from '@cdo/apps/fontConstants';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
 
 // Information about a lesson group
 export default class LessonGroupInfo extends Component {

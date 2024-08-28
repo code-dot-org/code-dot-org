@@ -1,4 +1,5 @@
 import $ from 'jquery';
+
 import initResponsive from '@cdo/apps/code-studio/responsive';
 
 $(document).ready(init);

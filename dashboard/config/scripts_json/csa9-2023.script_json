@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-15 19:34:05 UTC",
+    "serialized_at": "2024-05-02 18:48:28 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -2844,6 +2844,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -2865,6 +2868,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -2887,6 +2893,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -2909,6 +2918,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Theater Sandbox"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -3206,6 +3218,18 @@
       },
       "seeding_key": {
         "resource.key": "frq_fishbowl_skills_practice_slips"
+      }
+    },
+    {
+      "name": "FRQ Fishbowl Slips Answer Key",
+      "url": "https://docs.google.com/document/d/1nuH9w4kn83PHS9udr0x6VktELC1DRiENEbw0xP6kRCU",
+      "key": "frq_fishbowl_slips_answer_key",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "frq_fishbowl_slips_answer_key"
       }
     },
     {
@@ -3527,6 +3551,12 @@
       "seeding_key": {
         "lesson.key": "FRQ Practice – Day 1",
         "resource.key": "frq_fishbowl_skills_practice_slips"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "FRQ Practice – Day 1",
+        "resource.key": "frq_fishbowl_slips_answer_key"
       }
     },
     {

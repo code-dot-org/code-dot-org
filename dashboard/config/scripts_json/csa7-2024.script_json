@@ -12,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-12 21:07:22 UTC",
+    "serialized_at": "2024-07-11 16:10:52 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -172,7 +173,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe following practice on AP Classroom can be assigned as formative assessments for this lesson:\n\n* [**Code.org U7L5 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/c610f6aa13c8417ea4eb5b5d57df6cbd)\n\n* [**Code.org U7L5 Practice Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/4adaf200003741bda55d201aabbd93cf)\n\nAdditionally, the following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**How can I override methods from other classes?**\n\nIn this lesson, students have an opportunity to continue planning their Creative Coding with The Theater project. Students should spend this time finalizing their UML diagrams and algorithms and updating their Project Planning Board with tasks they have completed and still need to complete. Students then revisit overriding methods and how they used the `super` keyword to call the superclass version of a class. They consider scenarios for overriding methods and practice writing and calling overridden methods of their own. Students then revisit their Need to Knows to determine what they have learned that will be useful for their project and what they still need to learn.",
         "preparation": "* **(Optional)** Print copies of the U7L5 Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-5-overriding-methods/37943) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I override methods from other classes?**\n\nIn this lesson, you have an opportunity to continue planning your Creative Coding with The Theater project. You should spend this time finalizing your UML diagrams and algorithms and updating your Project Planning Board with tasks you have completed and still need to complete. You then revisit overriding methods and how you used the `super` keyword to call the superclass version of a class. You consider scenarios for overriding methods and practice writing and calling overridden methods of your own. You then revisit your Need to Knows to determine what you have learned that will be useful for your project and what you still need to learn."
@@ -210,7 +211,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 10.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe following practice on AP Classroom can be assigned as formative assessments for this lesson:\n\n* [**Code.org U7L7 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/6f3c0e490193496b922076d01bd4d0d9)\n\n* [**Code.org U7L7 Practice Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/bb55efc8091b4203a77eb503e72d1f8b)\n\nAdditionally, the following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 10.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
         "overview": "**What is recursion?**\n\nIn this lesson, students are introduced to recursion through an unplugged activity and realize how these algorithms differ from how they have implemented algorithms throughout the year. Students learn how to identify the base case and recursive case of a recursive algorithm and how to translate an iterative algorithm into a recursive one. They then practice tracing recursive algorithms and consider the benefits and drawbacks of writing an algorithm using recursion.",
         "preparation": "* Preview the *Recursion* video\n* Print copies of the Recursion Unplugged handout (one for each pair of students)\n* Print copies of the Coloring Page handout\n* Print and cut out the Method Cards\n* Gather sets of ten disposable cups and markers or colored pencils\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-7-7-recursion/37945) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**What is recursion?**\n\nIn this lesson, you are introduced to recursion through an unplugged activity and realize how these algorithms differ from how you have implemented algorithms throughout the year. You learn how to identify the base case and recursive case of a recursive algorithm and how to translate an iterative algorithm into a recursive one. You then practice tracing recursive algorithms and consider the benefits and drawbacks of writing an algorithm using recursion."
@@ -3867,6 +3868,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L1-L1_2024"
+        ],
         "progression": "Creative Coding with The Theater Example Projects"
       },
       "bonus": false,
@@ -3889,6 +3893,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L1-L2_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3911,6 +3918,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L1_2024"
+        ],
         "progression": "Predict and Run: Object References as Parameters"
       },
       "bonus": false,
@@ -3933,6 +3943,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L2_2024"
+        ],
         "progression": "Investigate and Modify: Object References as Parameters"
       },
       "bonus": false,
@@ -3955,6 +3968,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L3_2024"
+        ],
         "progression": "Investigate and Modify: Object References as Parameters"
       },
       "bonus": false,
@@ -3977,6 +3993,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L4_2024"
+        ],
         "progression": "Investigate and Modify: Object References as Parameters"
       },
       "bonus": false,
@@ -3999,6 +4018,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L5_2024"
+        ],
         "progression": "Practice: Object References as Parameters"
       },
       "bonus": false,
@@ -4021,6 +4043,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L6_2024"
+        ],
         "progression": "Practice: Object References as Parameters"
       },
       "bonus": false,
@@ -4043,6 +4068,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L7_2024"
+        ],
         "progression": "Practice: Object References as Parameters"
       },
       "bonus": false,
@@ -4065,6 +4093,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L2-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4087,6 +4118,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L1_2024"
+        ],
         "progression": "Predict and Run: Overloaded Methods"
       },
       "bonus": false,
@@ -4109,6 +4143,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L2_2024"
+        ],
         "progression": "Investigate and Modify: Overloaded Methods"
       },
       "bonus": false,
@@ -4131,6 +4168,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L3_2024"
+        ],
         "progression": "Investigate and Modify: Overloaded Methods"
       },
       "bonus": false,
@@ -4153,6 +4193,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L4_2024"
+        ],
         "progression": "Investigate and Modify: Overloaded Methods"
       },
       "bonus": false,
@@ -4175,6 +4218,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L5_2024"
+        ],
         "progression": "Practice: Overloaded Methods"
       },
       "bonus": false,
@@ -4197,6 +4243,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L6_2024"
+        ],
         "progression": "Practice: Overloaded Methods"
       },
       "bonus": false,
@@ -4219,6 +4268,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L7_2024"
+        ],
         "progression": "Practice: Overloaded Methods"
       },
       "bonus": false,
@@ -4241,6 +4293,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L3-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4263,6 +4318,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L1_2024"
+        ],
         "progression": "Investigate and Modify: Private Methods"
       },
       "bonus": false,
@@ -4285,6 +4343,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L2_2024"
+        ],
         "progression": "Investigate and Modify: Private Methods"
       },
       "bonus": false,
@@ -4307,6 +4368,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L3_2024"
+        ],
         "progression": "Investigate and Modify: Private Methods"
       },
       "bonus": false,
@@ -4329,6 +4393,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L4_2024"
+        ],
         "progression": "Practice: Private Methods"
       },
       "bonus": false,
@@ -4351,6 +4418,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L5_2024"
+        ],
         "progression": "Practice: Private Methods"
       },
       "bonus": false,
@@ -4373,6 +4443,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L6_2024"
+        ],
         "progression": "Practice: Private Methods"
       },
       "bonus": false,
@@ -4395,6 +4468,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L4-L7_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4417,6 +4493,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L1_2024"
+        ],
         "progression": "Investigate and Modify: Overriding Methods"
       },
       "bonus": false,
@@ -4439,6 +4518,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L2_2024"
+        ],
         "progression": "Investigate and Modify: Overriding Methods"
       },
       "bonus": false,
@@ -4461,6 +4543,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L3_2024"
+        ],
         "progression": "Investigate and Modify: Overriding Methods"
       },
       "bonus": false,
@@ -4483,6 +4568,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L4_2024"
+        ],
         "progression": "Practice: Overriding Methods"
       },
       "bonus": false,
@@ -4505,6 +4593,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L5_2024"
+        ],
         "progression": "Practice: Overriding Methods"
       },
       "bonus": false,
@@ -4527,6 +4618,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L6_2024"
+        ],
         "progression": "Practice: Overriding Methods"
       },
       "bonus": false,
@@ -4549,6 +4643,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L5-L7_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4571,6 +4668,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L6-L1_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4593,6 +4693,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L7-L1_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4615,6 +4718,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U7L8-L1_2024"
+        ],
         "progression": "Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -4637,6 +4743,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L8-L2_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4659,6 +4768,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7L9-L1_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4681,6 +4793,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7 Creative Coding with The Theater Project_2024"
+        ],
         "progression": "Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -4703,6 +4818,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 7 Assessment_2024"
+        ],
         "progression": "Unit 7 Assessment"
       },
       "bonus": false,
@@ -4725,6 +4843,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa7_2024"
+        ],
         "progression": "Unit 7 Survey"
       },
       "bonus": false,
@@ -4747,6 +4868,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U7 Creative Coding with The Theater Project 1-Day_2024"
+        ],
         "progression": "Creative Coding with The Theater Project"
       },
       "bonus": false,
@@ -4769,6 +4893,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -4790,6 +4917,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox_2024"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -4812,6 +4942,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox_2024"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -4834,6 +4967,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Theater Sandbox_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -5490,6 +5626,18 @@
       }
     },
     {
+      "name": "[EXEMPLAR] U7L7 Guided Notes",
+      "url": "https://docs.google.com/document/d/14mjtcPZPErsFXgjtb2pC7AdqEN2urrJc-yDe4IiiB_A/edit?usp=sharing",
+      "key": "_exemplar_u7l7_guided_notes",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_u7l7_guided_notes"
+      }
+    },
+    {
       "name": "[EXEMPLAR] U7L9 Guided Notes",
       "url": "https://docs.google.com/document/d/1f87HaFOh5yBSEIkFr-yGXozIJb71gEVVtI612-xpOeU/edit?usp=sharing",
       "key": "_exemplar_u7l9_guided_notes",
@@ -5741,7 +5889,7 @@
     },
     {
       "name": "Creative Coding with The Theater Project",
-      "url": "https://docs.google.com/presentation/d/1PLgzAEep1M_0ESlO2Oc3d56I5Z5btlcfSY6z_Cl71fw/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1hbh4wa9zcBguKlh8TpwYzu1ioW-yTJvAesPPqQIHELw/edit?usp=drive_link",
       "key": "creative_coding_with_the_theater_project",
       "properties": {
         "audience": "Verified Teacher",
@@ -5753,7 +5901,7 @@
     },
     {
       "name": "Creative Coding with The Theater Project",
-      "url": "https://docs.google.com/presentation/d/15HgbxJV1-xidPa5ZBnT5zLwb8tjk-ApkZ34WLDenkaw/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1oRPdYAcjyNz6rnhfzlg6y1_LIXnHFreyIHRFCqPowuI/edit?usp=drive_link",
       "key": "creative_coding_with_the_theater_project_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -5802,11 +5950,9 @@
     },
     {
       "name": "CSA Unit 7 Slides",
-      "url": "https://docs.google.com/presentation/d/1qAgDU-g-Uf5Mx-rQKRfgsaGyf3DlTgkTHuEMATBWs6o/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1tENL4VbvskvgegwdBru_UMyth-j0LXNBS7mq-JDauGY/edit?usp=drive_link",
       "key": "csa_unit_7_slides",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csa_unit_7_slides"
@@ -5874,7 +6020,7 @@
     },
     {
       "name": "Intellectual Property",
-      "url": "https://docs.google.com/presentation/d/1KYAvrTtfhsQRjw5kby8JIcdb40eKM_8-z0BJaFWhZJ4/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1jPDFS8dDkhfcSGaaY-0CjNfGKA7_yLa-qmvV42APsxQ/edit?usp=drive_link",
       "key": "intellectual_property",
       "properties": {
         "audience": "Verified Teacher",
@@ -5912,7 +6058,7 @@
     },
     {
       "name": "MusicQueue FRQ",
-      "url": "https://docs.google.com/presentation/d/1hXhij3s5LKKIf_2W4QUNd_e_PKeoEhhwjQg90bf5MJM/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1TzPmbD4CwJ3FtcoqKVFqXEkeXSOWJh5Cdoi52gNy5y0/edit?usp=drive_link",
       "key": "musicqueue_frq",
       "properties": {
         "audience": "Verified Teacher",
@@ -5950,7 +6096,7 @@
     },
     {
       "name": "Object References as Parameters",
-      "url": "https://docs.google.com/presentation/d/1yLQ9f0z5aQkHauNgYu-6eiStTUCOa_M6VuD6aXHbVgs/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1z-hdvWEEkr8uEE5Y8AiXx-e7Sx-_9ZG6R-4_4zpoM10/edit?usp=drive_link",
       "key": "object_references_as_parameters",
       "properties": {
         "audience": "Verified Teacher",
@@ -6001,7 +6147,7 @@
     },
     {
       "name": "Overloaded Methods",
-      "url": "https://docs.google.com/presentation/d/10-EQNaEO0pa2eOXPFyHLANXt863NzCfLzsQyicmi8qE/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1TKLXz10rrmEII_ggfu-AuxJGcU_ASgKoJKtm4sMD_X4/edit?usp=drive_link",
       "key": "overloaded_methods",
       "properties": {
         "audience": "Verified Teacher",
@@ -6013,7 +6159,7 @@
     },
     {
       "name": "Overriding Methods",
-      "url": "https://docs.google.com/presentation/d/1QKJV_wi1OZGZIR-2Dl4oy9-Jdv1jtC9CaegxxJD83us/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1hmFje_lCATLEYgNtpYUWnz2j9mhiiUGX3sy31y6zUv4/edit?usp=drive_link",
       "key": "overriding_methods",
       "properties": {
         "audience": "Verified Teacher",
@@ -6025,7 +6171,7 @@
     },
     {
       "name": "Private Methods",
-      "url": "https://docs.google.com/presentation/d/1ik508agnZyVz3cnK_W-1JsZOwXWLpjEsSmToVT4D4Ls/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1oiaqvboG7rJEBElHpi54xJT-ae4Vysp35Qi0RbIGeKE/edit?usp=drive_link",
       "key": "private_methods",
       "properties": {
         "audience": "Verified Teacher",
@@ -6049,7 +6195,7 @@
     },
     {
       "name": "Project Development",
-      "url": "https://docs.google.com/presentation/d/1rcIiBhmUPZxrO61RagfyR9C5u3wjnneEnHIa48Z3euw/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1a9oVFCuUQEWvfgtG_c2-Rqy0nGpNi9YqhDvi4fJR23g/edit?usp=drive_link",
       "key": "project_development",
       "properties": {
         "audience": "Verified Teacher",
@@ -6061,7 +6207,7 @@
     },
     {
       "name": "Project Planning",
-      "url": "https://docs.google.com/presentation/d/1TqCT5v3QGQOTzShVrVEDfKMT7L9iwNe4JbMGg31xrZw/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1hOYhxpX0Ho18GZPSGmPnXG65fpPLzjqNElfEGiSOvbY/edit?usp=drive_link",
       "key": "project_planning_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -6099,7 +6245,7 @@
     },
     {
       "name": "Recursion",
-      "url": "https://docs.google.com/presentation/d/1iWXwv7ZhncHIZxSA0fcl-ELGILhXLtaeo_AB1MTQWi4/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/15uaX9pPOKm6jGqYnIqj1nnQD65OXgum7uSvt6vQ-rvg/edit?usp=drive_link",
       "key": "recursion",
       "properties": {
         "audience": "Verified Teacher",
@@ -6160,7 +6306,7 @@
     },
     {
       "name": "System Reliability",
-      "url": "https://docs.google.com/presentation/d/1DzXSX8Nn-hkKqK3GpJDAcuAe9fx_9T91HaUmK7fJmrI/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/1vKcvBoDiE6lrENMNix5iOl7gj5G919-YrdsUItkjr9w/edit?usp=drive_link",
       "key": "system_reliability",
       "properties": {
         "audience": "Verified Teacher",
@@ -6352,6 +6498,19 @@
       }
     },
     {
+      "name": "U7L7 Guided Notes",
+      "url": "https://docs.google.com/document/d/1VRW4YWrRlHH6lJN789c_fJ-GW5LGa7l0X1XMupY2BDA/edit?usp=sharing",
+      "key": "u7l7_guided_notes",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "u7l7_guided_notes"
+      }
+    },
+    {
       "name": "U7L8 Extra Practice",
       "url": "https://docs.google.com/document/d/1yh2nWu2ErbFYjzsiZvYHmIpSh9fYimlFZf6yo6vtdDs/edit?usp=share_link",
       "key": "u7l8_extra_practice",
@@ -6379,7 +6538,7 @@
     },
     {
       "name": "Unit 7 Assessment",
-      "url": "https://docs.google.com/presentation/d/1U5kqfQyeoXefD2-mUehedQb6ppVarALo76e_hdkpH7o/edit?usp=share_link",
+      "url": "https://docs.google.com/presentation/d/11IbEN9AP-73Rz4lrBj0tq_a7oLH_ioL8A8nbqL0lqyQ/edit?usp=drive_link",
       "key": "unit_7_assessment",
       "properties": {
         "audience": "Verified Teacher",
@@ -6780,6 +6939,12 @@
     {
       "seeding_key": {
         "lesson.key": "Recursion",
+        "resource.key": "_exemplar_u7l7_guided_notes"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Recursion",
         "resource.key": "_key_recursion_unplugged"
       }
     },
@@ -6823,6 +6988,12 @@
       "seeding_key": {
         "lesson.key": "Recursion",
         "resource.key": "u7l7_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Recursion",
+        "resource.key": "u7l7_guided_notes"
       }
     },
     {

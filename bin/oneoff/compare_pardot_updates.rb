@@ -26,6 +26,7 @@
 
 require File.expand_path('../../../pegasus/src/env', __FILE__)
 require_relative '../../deployment'
+require 'cdo/sequel'
 require src_dir 'database'
 require 'cdo/pegasus'
 
@@ -34,21 +35,21 @@ require 'cdo/pegasus'
 MAX_EXECUTION_TIME_SEC = 1800
 
 # Connection to read from Pegasus production database.
-PEGASUS_DB_READER = sequel_connect(
+PEGASUS_DB_READER = Cdo::Sequel.database_connection_pool(
   CDO.pegasus_db_reader,
   CDO.pegasus_db_reader,
   query_timeout: MAX_EXECUTION_TIME_SEC
 )
 
 # Connection to read from Pegasus reporting database.
-PEGASUS_REPORTING_DB_READER = sequel_connect(
+PEGASUS_REPORTING_DB_READER = Cdo::Sequel.database_connection_pool(
   CDO.pegasus_reporting_db_reader,
   CDO.pegasus_reporting_db_reader,
   query_timeout: MAX_EXECUTION_TIME_SEC
 )
 
 # Connection to write to Pegasus reporting database.
-PEGASUS_REPORTING_DB_WRITER = sequel_connect(
+PEGASUS_REPORTING_DB_WRITER = Cdo::Sequel.database_connection_pool(
   CDO.pegasus_reporting_db_writer,
   CDO.pegasus_reporting_db_writer,
   query_timeout: MAX_EXECUTION_TIME_SEC

@@ -1,13 +1,13 @@
 import {render} from '@testing-library/react';
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import {
   AudioQueue,
   AudioQueueContext,
 } from '@cdo/apps/templates/instructions/AudioQueue';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 import {setExternalGlobals} from '../../../util/testUtils';
 
 interface QueueContext {

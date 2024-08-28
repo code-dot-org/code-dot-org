@@ -1,21 +1,24 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import QuickActionsCell from '../tables/QuickActionsCell';
-import PopUpMenu, {MenuBreak} from '@cdo/apps/lib/ui/PopUpMenu';
-import color from '../../util/color';
-import FontAwesome from '../FontAwesome';
-import Button from '../Button';
+
+import Button, {buttonColors} from '@cdo/apps/componentLibrary/button';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import PopUpMenu, {MenuBreak} from '@cdo/apps/sharedComponents/PopUpMenu';
+import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
+
+import QuickActionsCell from '../tables/QuickActionsCell';
+
+import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
+import ProjectNameFailureDialog from './ProjectNameFailureDialog';
 import {
   startRenamingProject,
   cancelRenamingProject,
   saveProjectName,
-  remix,
   unsetNameFailure,
 } from './projectsRedux';
-import {showDeleteDialog} from './deleteDialog/deleteProjectDialogRedux';
-import NameFailureDialog from '../../code-studio/components/NameFailureDialog';
+
 import moduleStyles from './personal-projects-table-actions-cell.module.scss';
 
 export class PersonalProjectsTableActionsCell extends Component {
@@ -29,7 +32,6 @@ export class PersonalProjectsTableActionsCell extends Component {
     updatedName: PropTypes.string,
     cancelRenamingProject: PropTypes.func.isRequired,
     saveProjectName: PropTypes.func.isRequired,
-    remix: PropTypes.func.isRequired,
     projectNameFailure: PropTypes.string,
     unsetNameFailure: PropTypes.func.isRequired,
     isFrozen: PropTypes.bool,
@@ -52,7 +54,7 @@ export class PersonalProjectsTableActionsCell extends Component {
   };
 
   onRemix = () => {
-    this.props.remix(this.props.projectId, this.props.projectType);
+    window.location = `/projects/${this.props.projectType}/${this.props.projectId}/remix`;
   };
 
   handleNameFailureDialogClose = () => {
@@ -89,23 +91,24 @@ export class PersonalProjectsTableActionsCell extends Component {
         {isEditing && (
           <div>
             <Button
-              __useDeprecatedTag
               onClick={this.onSave}
-              color={Button.ButtonColor.brandSecondaryDefault}
               text={i18n.save()}
+              size="s"
+              color={buttonColors.purple}
               disabled={isSaving}
-              className="ui-projects-rename-save"
+              id="ui-projects-rename-save"
+              className={moduleStyles.buttonMargin}
             />
-            <br />
             <Button
-              __useDeprecatedTag
               onClick={this.onCancel}
-              color={Button.ButtonColor.gray}
               text={i18n.cancel()}
+              size="s"
+              type="secondary"
+              color={buttonColors.gray}
             />
           </div>
         )}
-        <NameFailureDialog
+        <ProjectNameFailureDialog
           flaggedText={this.props.projectNameFailure}
           isOpen={!!this.props.projectNameFailure}
           handleClose={this.handleNameFailureDialogClose}
@@ -129,9 +132,6 @@ export default connect(
     },
     saveProjectName(projectId, updatedName, lastUpdatedAt) {
       dispatch(saveProjectName(projectId, updatedName, lastUpdatedAt));
-    },
-    remix(projectId, projectType) {
-      dispatch(remix(projectId, projectType));
     },
     unsetNameFailure(projectId) {
       dispatch(unsetNameFailure(projectId));

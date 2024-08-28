@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "Foundations of CS",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -11,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-13 16:22:14 UTC",
+    "serialized_at": "2024-07-11 17:52:40 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -47,10 +49,9 @@
       "relative_position": 1,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "In this lesson students explore the challenges of clearly communicating instructions. They build a small arrangement of blocks (LEGO® pieces or paper cutouts) and then create text instructions a classmate could follow to construct the same arrangement. Groups then trade instructions to see if they were clear enough to allow reconstruction of the original arrangement. The wrap-up discussion is used to highlight the inherent ambiguities of human language and call out the need for the creation of a programming language which leaves no room for interpretation.",
-        "preparation": "* Prepare either a small set of LEGO blocks or paper cutouts for each pair of students\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-intro-to-app-design-lessons-1-2-5-7/36472) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1ro6_apaSbhb3Ff16xK9fVyJX3vszVcknaEdjnzemVP8/edit?usp=sharing)",
-        "student_overview": "This is the first in a series of lessons where students will make progress on building their own functional app. ",
-        "unplugged": true
+        "overview": "**Why is it challenging to use everyday language to give precise instructions?**\n\nIn this lesson students explore the challenges of clearly communicating instructions. They build a small arrangement of blocks (LEGO® pieces or paper cutouts) and then create text instructions a classmate could follow to construct the same arrangement. Groups then trade instructions to see if they were clear enough to allow reconstruction of the original arrangement. The wrap-up discussion is used to highlight the inherent ambiguities of human language and call out the need for the creation of a programming language which leaves no room for interpretation.",
+        "preparation": "* Prepare either a small set of LEGO blocks or paper cutouts for each pair of students",
+        "student_overview": "**Why is it challenging to use everyday language to give precise instructions?**\n\nThis is the first in a series of lessons where students will make progress on building their own functional app. "
       },
       "seeding_key": {
         "lesson.key": "The Need for Programming Languages",
@@ -67,10 +68,9 @@
       "relative_position": 2,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "Students will complete two exploratory activities that introduce the concept of a problem and an algorithm. In the first students answer a series of questions about birthdates and names of their classmates. They then discuss the similarities and differences between the problems. In the second activity students are given six different algorithms and must analyze them to determine which they think are the same or different. At the end of the lesson they are introduced to the formal definitions of a problem and an algorithm.",
-        "preparation": "* Review the algorithms students will be comparing in the second activity to make sure you are prepared to support students in trying them out.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-algorithms-lessons-1-5/36483) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1NOrv8vcuPS_vyQfwgFuX7CO8B7-YoZouad-tOmPHsEA/edit?usp=sharing)",
-        "student_overview": "Learn how computer scientists think about problems and the way different algorithms can be designed to solve them.",
-        "unplugged": true
+        "overview": "**How can identifying similarities between different problems or algorithms improve our problem-solving skills in programming and other areas?**\n\nStudents will complete two exploratory activities that introduce the concept of a problem and an algorithm. In the first students answer a series of questions about birthdates and names of their classmates. They then discuss the similarities and differences between the problems. In the second activity students are given six different algorithms and must analyze them to determine which they think are the same or different. At the end of the lesson they are introduced to the formal definitions of a problem and an algorithm.",
+        "preparation": "* Review the algorithms students will be comparing in the second activity to make sure you are prepared to support students in trying them out.",
+        "student_overview": "**How can identifying similarities between different problems or algorithms improve our problem-solving skills in programming and other areas?**\n\nLearn how computer scientists think about problems and the way different algorithms can be designed to solve them."
       },
       "seeding_key": {
         "lesson.key": "Algorithms Solve Problems",
@@ -86,7 +86,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "preparation": "* Practice the levels yourself so you're familiar with the challenges.\n* Familiarize yourself with opening remarks and comments for background knowledge."
+        "overview": "**How does pair programming influence the efficiency and creativity of solving programming challenges?**\n\nThis lesson introduces students to computer programming through the engaging practice of pair programming. It builds on previous experiences with the human machine language activities and emphasizes collaboration, attention to detail, and perseverance.",
+        "student_overview": "**How does pair programming influence the efficiency and creativity of solving programming challenges?**\n\nWelcome to an exciting journey into the world of programming! Today, we're going to take the teamwork and problem-solving skills you've developed in our previous lessons and apply them to programming on computers using a fun tool called Turtle Programming."
       },
       "seeding_key": {
         "lesson.key": "Using Simple Commands",
@@ -102,6 +103,8 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "overview": "**How can creating your own functions in programming make problem-solving more efficient?**\n\nThis lesson introduces students to the concept of functions in programming, highlighting how they can create and use their own functions to simplify code and enhance problem-solving capabilities.",
+        "student_overview": "**How can creating your own functions in programming make problem-solving more efficient?**\n\nWelcome to a new adventure in programming! Today, you're going to learn about an incredibly useful tool in coding: functions. Functions are like your own custom commands that make your programs smarter, cleaner, and way more efficient"
       },
       "seeding_key": {
         "lesson.key": "Creating Functions",
@@ -117,6 +120,8 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "overview": "**How can using documentation enhance your ability to write more effective code?**\n\nThis lesson aims to deepen students' understanding of programming through the use of functions with parameters and to emphasize the importance of using documentation as a fundamental tool in learning and applying programming concepts.",
+        "student_overview": "**How can using documentation enhance your ability to write more effective code?**\n\nToday, we're going to dive deeper into the world of coding by exploring functions with parameters and learning how to effectively use documentation to enhance your programming skills."
       },
       "seeding_key": {
         "lesson.key": "APIs and Function Parameters",
@@ -126,12 +131,14 @@
     },
     {
       "key": "Creating functions with Parameters",
-      "name": "Creating functions with Parameters",
+      "name": "Creating Functions with Parameters",
       "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "overview": "**How do parameters in programming functions enhance our ability to solve problems more efficiently?**\n\nThis lesson aims to deepen students' understanding and application of functions with parameters in programming. By exploring how parameters make functions more flexible and powerful, students will learn to write more dynamic code and think critically about the practical use of parameters in both programming and real-world scenarios.",
+        "student_overview": "**How do parameters in programming functions enhance our ability to solve problems more efficiently?**\n\nToday, we're diving into the world of functions with parameters, a crucial tool that will take your coding skills to the next level. By the end of this lesson, you'll be creating more complex and interesting programs using Turtle graphics."
       },
       "seeding_key": {
         "lesson.key": "Creating functions with Parameters",
@@ -147,6 +154,8 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "overview": "**How do loops enhance the efficiency of a program?**\n\nThis lesson aims to deepen students' understanding of loops in programming, focusing on their practical application to automate repetitive tasks and the decision-making process involved in choosing loops versus functions. The lesson is designed to enhance students' algorithmic thinking and coding efficiency.",
+        "student_overview": "**How do loops enhance the efficiency of a program?**\n\nToday, we're going to master the art of loops, a fundamental concept that allows you to perform repetitive tasks efficiently in your code. By the end of this lesson, you'll know how to use loops to create dynamic and complex designs, particularly with our \"Under the Sea\" theme using Turtle graphics."
       },
       "seeding_key": {
         "lesson.key": "Looping and Random Numbers",
@@ -156,12 +165,16 @@
     },
     {
       "key": "Make your own Digital Scene",
-      "name": "Make your own Digital Scene",
+      "name": "Digital Scene Project",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
+        "assessment": true,
+        "overview": "**How can we use programming concepts such as functions, loops, and randomization to effectively solve complex visual problems and create engaging, dynamic scenes?**\n\nThis two-day project challenges students to apply their knowledge of programming concepts to design and implement a unique digital scene. Students will use functions, loops, and randomization to create dynamic and visually appealing scenes in a programming environment. The project encourages creativity, problem-solving, and application of programming skills, culminating in a presentation where students showcase their work.",
+        "preparation": "* Print copies of the Design a Digital Scene Project Planning Guide (one for each student)",
+        "student_overview": "**How can we use programming concepts such as functions, loops, and randomization to effectively solve complex visual problems and create engaging, dynamic scenes?**\n\nOver the next two days, you’ll dive deep into the world of programming to design and build your own unique digital scene. This project is your chance to showcase your coding skills and imagination by using functions, loops, and even random elements to bring your vision to life."
       },
       "seeding_key": {
         "lesson.key": "Make your own Digital Scene",
@@ -214,33 +227,8 @@
       }
     },
     {
-      "key": "4e1dbdbc-f1d9-4b2e-a2b4-947eb1578095",
-      "position": 4,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "4e1dbdbc-f1d9-4b2e-a2b4-947eb1578095",
-        "lesson.key": "The Need for Programming Languages",
-        "lesson_group.key": "",
-        "script.name": "fcs6-beta-2024"
-      }
-    },
-    {
-      "key": "3a56c442-dcb8-481d-ad15-26981d458f03",
-      "position": 1,
-      "properties": {
-        "name": "The Pre-Unit Pulse"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "3a56c442-dcb8-481d-ad15-26981d458f03",
-        "lesson.key": "Algorithms Solve Problems",
-        "lesson_group.key": "",
-        "script.name": "fcs6-beta-2024"
-      }
-    },
-    {
       "key": "114f4f67-d847-4c82-b438-04f8fec9b4e6",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 5,
         "name": "Warm  Up"
@@ -254,7 +242,7 @@
     },
     {
       "key": "18e0060b-bb80-4f03-a53e-3169bd5c488d",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -268,25 +256,13 @@
     },
     {
       "key": "df0bee05-f577-4ea7-b41f-b857b387d2e7",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "df0bee05-f577-4ea7-b41f-b857b387d2e7",
-        "lesson.key": "Algorithms Solve Problems",
-        "lesson_group.key": "",
-        "script.name": "fcs6-beta-2024"
-      }
-    },
-    {
-      "key": "1766dfa6-a75b-4ef2-80bc-f9a191b116d8",
-      "position": 5,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "1766dfa6-a75b-4ef2-80bc-f9a191b116d8",
         "lesson.key": "Algorithms Solve Problems",
         "lesson_group.key": "",
         "script.name": "fcs6-beta-2024"
@@ -310,7 +286,7 @@
       "key": "0476f89c-e4ef-4e48-99d5-2e207f3865ab",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 25,
         "name": "Activity"
       },
       "seeding_key": {
@@ -324,7 +300,7 @@
       "key": "5a6277a8-45a3-4f5e-a7e2-6156503ddab4",
       "position": 3,
       "properties": {
-        "duration": 15,
+        "duration": 10,
         "name": "Wrap Up"
       },
       "seeding_key": {
@@ -335,11 +311,25 @@
       }
     },
     {
-      "key": "b18c82c4-0c2f-47ec-8851-a7982bea3259",
+      "key": "5c4a25a4-61bb-49f6-bdd3-d6e276cfca7d",
       "position": 1,
       "properties": {
-        "duration": 45,
-        "name": "Levels"
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5c4a25a4-61bb-49f6-bdd3-d6e276cfca7d",
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "b18c82c4-0c2f-47ec-8851-a7982bea3259",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "b18c82c4-0c2f-47ec-8851-a7982bea3259",
@@ -349,11 +339,39 @@
       }
     },
     {
-      "key": "adcd9689-c093-44c9-97fd-9177fbbaaf8e",
+      "key": "3d51c927-18cf-4c1e-a153-f9bfc1b5aab5",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3d51c927-18cf-4c1e-a153-f9bfc1b5aab5",
+        "lesson.key": "Creating Functions",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "283e7669-d8c9-406a-be55-98e6322163eb",
       "position": 1,
       "properties": {
-        "duration": 45,
-        "name": "Levels"
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "283e7669-d8c9-406a-be55-98e6322163eb",
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "adcd9689-c093-44c9-97fd-9177fbbaaf8e",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "adcd9689-c093-44c9-97fd-9177fbbaaf8e",
@@ -363,11 +381,39 @@
       }
     },
     {
-      "key": "bf0284eb-b385-49f8-9122-15fe2b2e6ca3",
+      "key": "c5dabead-d31e-4d5b-8781-9e8289fb49ac",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c5dabead-d31e-4d5b-8781-9e8289fb49ac",
+        "lesson.key": "APIs and Function Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "5e03c64c-7446-4ba5-b4a3-d4e281bfade9",
       "position": 1,
       "properties": {
-        "duration": 45,
-        "name": "Levels"
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5e03c64c-7446-4ba5-b4a3-d4e281bfade9",
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "bf0284eb-b385-49f8-9122-15fe2b2e6ca3",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "bf0284eb-b385-49f8-9122-15fe2b2e6ca3",
@@ -377,14 +423,56 @@
       }
     },
     {
-      "key": "daaef171-c691-4426-9071-83168c86d58c",
+      "key": "0b882202-ce7b-4bb3-b996-6d3d5dbe78d2",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "0b882202-ce7b-4bb3-b996-6d3d5dbe78d2",
+        "lesson.key": "Creating functions with Parameters",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "94109673-b9fc-4578-816d-a4afe39440ee",
       "position": 1,
       "properties": {
-        "duration": 45,
-        "name": "Levels"
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "94109673-b9fc-4578-816d-a4afe39440ee",
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "daaef171-c691-4426-9071-83168c86d58c",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
       },
       "seeding_key": {
         "lesson_activity.key": "daaef171-c691-4426-9071-83168c86d58c",
+        "lesson.key": "Looping and Random Numbers",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "ac00827b-bdc7-4e19-9388-ce8e3dcd13af",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ac00827b-bdc7-4e19-9388-ce8e3dcd13af",
         "lesson.key": "Looping and Random Numbers",
         "lesson_group.key": "",
         "script.name": "fcs6-beta-2024"
@@ -395,10 +483,24 @@
       "position": 1,
       "properties": {
         "duration": 45,
-        "name": "Levels"
+        "name": "Day 1"
       },
       "seeding_key": {
         "lesson_activity.key": "3c5b1dd7-09dd-475b-928d-e9b50952db15",
+        "lesson.key": "Make your own Digital Scene",
+        "lesson_group.key": "",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "key": "6e0a5730-7e49-409d-b320-8ec4ca64d96d",
+      "position": 2,
+      "properties": {
+        "duration": 45,
+        "name": "Day 2"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "6e0a5730-7e49-409d-b320-8ec4ca64d96d",
         "lesson.key": "Make your own Digital Scene",
         "lesson_group.key": "",
         "script.name": "fcs6-beta-2024"
@@ -426,7 +528,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Use the **Retrieve-Pair-Share** strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class.\n\nFor more ideas on how to adapt this strategy to fit the needs of your class, check out the [**CSP Guide to Classroom Discussions**](https://docs.google.com/document/d/1vTJpyZllcSG5T5aFfSuPs9CByoejkEMnh4U_MMMOr9g/edit?usp=sharing)"
+            "markdown": "Use the **Retrieve-Pair-Share** strategy to facilitate this discussion by directing students to write down their thoughts and ideas first, then pair up students to compare their answers and expand their notes. This allows time for individual processing and idea generation before sharing thoughts with others. Ask students to share the ideas they discussed with their partners as a class."
           }
         ]
       },
@@ -436,8 +538,18 @@
       }
     },
     {
-      "key": "182a676b-fc30-4c19-a9e8-9292e006aac5",
+      "key": "166f9a57-9dbf-4255-a220-92bafa3fb001",
       "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "166f9a57-9dbf-4255-a220-92bafa3fb001",
+        "lesson_activity.key": "f595af15-8bfe-4ee8-86a4-af5832503b21"
+      }
+    },
+    {
+      "key": "182a676b-fc30-4c19-a9e8-9292e006aac5",
+      "position": 4,
       "properties": {
         "description": "Alright, so we have an idea of what \"bad\" instructions look like. Let's see if we can use this brainstorm to help us write good instructions in the next activity!",
         "remarks": true
@@ -483,7 +595,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "<div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px; height: 150px\">\n<img src=\"https://images.code.org/3583b6026b2be005e035a93b4a5065f0-image-1678136357579.png\" style=\"margin-right: 40px; float: left\">\n<p><strong>Make it a Gallery Walk:</strong> Depending on your room set-up you may be able to have students run this activity in a more open-ended way. Students should leave their unconstructed blocks and instructions at their table with the target image face down. They can then make their way to a few different groups' instructions over the course of 10-15 minutes. \n\n**Mark What's Confusing:** You may optionally have students leave suggestions on instructions when they use them explaining where they were confused or wanted more detail. This is a good way to practice giving and receiving feedback. It also forces groups to think more clearly about what is causing their confusion since they'll have to leave it in writing.</p>\n</div>\n\n\n\n\n"
+            "markdown": "**Make it a Gallery Walk:** Depending on your room set-up you may be able to have students run this activity in a more open-ended way. Students should leave their unconstructed blocks and instructions at their table with the target image face down. They can then make their way to a few different groups' instructions over the course of 10-15 minutes. \n\n**Mark What's Confusing:** You may optionally have students leave suggestions on instructions when they use them explaining where they were confused or wanted more detail. This is a good way to practice giving and receiving feedback. It also forces groups to think more clearly about what is causing their confusion since they'll have to leave it in writing."
           }
         ]
       },
@@ -540,7 +652,7 @@
       "key": "39ff1159-db5e-4647-91fc-3c2c54fd9745",
       "position": 5,
       "properties": {
-        "description": "Today we talked a lot about instructions because soon we're going start programming your apps. When you write a program you're just giving instructions to a computer for what it should do to run your app. As you'll see, the programming language we use to give these instructions sometimes looks like English, but then has a lot of weird (and sometimes confusing) differences. This is because it needs to be more precise and unambiguous than normal human language. We'll dive into this more next time we meet!\r\n\r\n---",
+        "description": "Today we talked a lot about instructions because soon we're going start programming your apps. When you write a program you're just giving instructions to a computer for what it should do to run your app. As you'll see, the programming language we use to give these instructions sometimes looks like English, but then has a lot of weird (and sometimes confusing) differences. This is because it needs to be more precise and unambiguous than normal human language. We'll dive into this more next time we meet!",
         "remarks": true
       },
       "seeding_key": {
@@ -549,11 +661,23 @@
       }
     },
     {
-      "key": "06baf804-e9aa-4a5f-8103-1931a7e32aa9",
+      "key": "0ac179af-a73e-48aa-99f1-441a0915838d",
       "position": 6,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** What is the difference between a programming language and natural (every-day) language?",
-        "name": "Assessment: Check For Understanding\r"
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "0ac179af-a73e-48aa-99f1-441a0915838d",
+        "lesson_activity.key": "abfcf36d-614a-4d37-a3c2-c834ca8385f6"
+      }
+    },
+    {
+      "key": "06baf804-e9aa-4a5f-8103-1931a7e32aa9",
+      "position": 7,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "06baf804-e9aa-4a5f-8103-1931a7e32aa9",
@@ -561,64 +685,13 @@
       }
     },
     {
-      "key": "5d8c6c53-090d-4078-83cc-8105a22dbdc1",
-      "position": 1,
-      "properties": {
-        "progression_name": "Check For Understanding"
-      },
-      "seeding_key": {
-        "activity_section.key": "5d8c6c53-090d-4078-83cc-8105a22dbdc1",
-        "lesson_activity.key": "4e1dbdbc-f1d9-4b2e-a2b4-947eb1578095"
-      }
-    },
-    {
-      "key": "da906cbe-8163-44ef-bad8-0ab68cef170f",
-      "position": 1,
-      "properties": {
-        "description": "Have your students complete these questions independently some time before starting this unit. \n",
-        "progression_name": "The Pre-Unit Pulse",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Pre-Unit Pulse Questions:** The answers to these questions can provide insights into the preferences, strengths, and motivations of your students. If you'd like to adapt the questions or add in your own, you may want to make a copy of [this Google Form](https://docs.google.com/forms/d/168EbC-sGJ6vhUqbJTkzPJbSedHzHpr2LLdU_SUdN4o0/copy) which already has the existing questions populated.\n\nFor more tips and ideas of how to use these questions, check out the [CSP Guide to Pre-Unit Pulse Questions](https://docs.google.com/document/d/1jx43dakN6og2n7iey_uQrNwcpMHQRbv1RCPZFHpQdYw/edit?usp=sharing)"
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "da906cbe-8163-44ef-bad8-0ab68cef170f",
-        "lesson_activity.key": "3a56c442-dcb8-481d-ad15-26981d458f03"
-      }
-    },
-    {
-      "key": "8c1e8a60-7bc4-4a94-83ee-ff3323f4eb8a",
-      "position": 1,
-      "properties": {
-        "description": "**Distribute:** Give each student a copy of the Unit 10 Journal ([Digital](https://docs.google.com/presentation/d/154-pse0dsVK436ktT_HMZ4951vsIn8BK4Jg3sMrqoy0/edit?usp=drive_link)/[Interactive Notebook](https://docs.google.com/presentation/d/1NNgv5tK3Dgs6H5jA5hf9F0W3vuybvI6B7qXTxiv6Y5I/edit?usp=drive_link)) or have students set up this unit's section in their CSP journals."
-      },
-      "seeding_key": {
-        "activity_section.key": "8c1e8a60-7bc4-4a94-83ee-ff3323f4eb8a",
-        "lesson_activity.key": "114f4f67-d847-4c82-b438-04f8fec9b4e6"
-      }
-    },
-    {
       "key": "30641348-33d4-420a-a8e1-4744e0329f2f",
-      "position": 2,
+      "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What makes two pieces of code “the same”? Could there ever be two pieces of code that you consider to be “the same” even if they aren’t identical?*\n\n**Discussion Goal:** This is an optional discussion. If you are able to move directly to the main activity you should do so. This discussion should get students thinking about the themes of the lesson. \n\nThere are no \"wrong answers\" here though you should expect answers that focus on the fact that often there's lots of ways to write code that does the same thing.\n   \n\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *What makes two pieces of code “the same”? Could there ever be two pieces of code that you consider to be “the same” even if they aren’t identical?*\n\n**Discussion Goal:** There are no \"wrong answers\" here though you should expect answers that focus on the fact that often there's lots of ways to write code that does the same thing.\n   \n\n"
       },
       "seeding_key": {
         "activity_section.key": "30641348-33d4-420a-a8e1-4744e0329f2f",
-        "lesson_activity.key": "114f4f67-d847-4c82-b438-04f8fec9b4e6"
-      }
-    },
-    {
-      "key": "50d8d01c-115c-4de2-a5f2-0c6ffe252b64",
-      "position": 3,
-      "properties": {
-        "description": "Have students think about their answers on their own, then share with a partner, and then finally discuss responses with the entire room."
-      },
-      "seeding_key": {
-        "activity_section.key": "50d8d01c-115c-4de2-a5f2-0c6ffe252b64",
         "lesson_activity.key": "114f4f67-d847-4c82-b438-04f8fec9b4e6"
       }
     },
@@ -627,6 +700,7 @@
       "position": 1,
       "properties": {
         "description": "Today we are going to kick off a short unit about how computer scientists think about problem solving. A really important skill will be recognizing patterns and similarities.",
+        "name": "Comparing Problems",
         "remarks": true
       },
       "seeding_key": {
@@ -638,8 +712,7 @@
       "key": "7af7f819-7833-4230-b015-c76cadba3a66",
       "position": 2,
       "properties": {
-        "description": "**Distribute:** Ask students to take out their journals or give them some blank paper for working on the following problems\n\nShow the slides for the ten problems students will need to solve.",
-        "name": "Comparing Problems"
+        "description": "**Distribute:** Ask students to take out their journals or give them some blank paper for working on the following problems\n\nShow the slides for the ten problems students will need to solve."
       },
       "seeding_key": {
         "activity_section.key": "7af7f819-7833-4230-b015-c76cadba3a66",
@@ -661,7 +734,7 @@
       "key": "12950e31-a27d-4153-84e2-46ccca77d7b3",
       "position": 4,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Which problems did you need to do something similar in order to solve them?*\n\n**Discussion Goal:** This discussion should focus on what made the problems that students solved similar to one another. You likely will want to put the problems back on the screen to make it easier to talk through. Here are some connections you may pull out though there are more students may make.\n\n* Problems 1 and 2 are very similar. As soon as you find one person who meets the criteria you know you're done.\n* Problem 3 and 4 are very similar but you need to talk to every other student to answer it. You only need to keep track of the closest birthday you've heard so far, however.\n* Problem 5 is easy to solve as soon as you've solved problems 3 and 4.\n* Problem 6 - 10 require you to have written down everyone's birthday, likely in order.\n* Problems 7 - 9 are the same problem but for different numbers of people. Whatever strategy you use for one of those would be helpful to solve the others\n* Problem 10 is a different version of problem 7 but instead of finding the smallest gap you're finding the largest.\n"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:** *Which problems did you need to do something similar in order to solve them?*\n\n**Discussion Goal:** This discussion should focus on what made the problems that students solved similar to one another. You likely will want to put the problems back on the screen to make it easier to talk through. Here are some connections you may pull out though there are more students may make.\n\n* Problems 1 and 2 are very similar. As soon as you find one person who meets the criteria you know you're done.\n* Problem 3 and 4 are very similar but you need to talk to every other student to answer it. You only need to keep track of the closest birthday you've heard so far, however.\n* Problem 5 is easy to solve as soon as you've solved problems 3 and 4.\n* Problem 6 - 10 require you to have written down everyone's birthday, likely in order.\n* Problems 7 - 9 are the same problem but for different numbers of people. Whatever strategy you use for one of those would be helpful to solve the others\n* Problem 10 is a different version of problem 7 but instead of finding the smallest gap you're finding the largest."
       },
       "seeding_key": {
         "activity_section.key": "12950e31-a27d-4153-84e2-46ccca77d7b3",
@@ -719,13 +792,7 @@
       "key": "9e31a0ab-2d14-4543-8658-d5473a75ca03",
       "position": 9,
       "properties": {
-        "description": "**Circulate:** Ask students to review the algorithms with a partner and group them into categories. Move around the room making sure students are not getting stuck. If they finish early push them to see if they can think about the problem in a different way.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Discuss with another group. which of these algorithms are “the same” as one another?*\n\n\nHave students discuss with another before asking them to share with the room. Lead a discussion on their experiences using tips from the discussion goal at the side.",
-        "tips": [
-          {
-            "type": "assessmentOpportunity",
-            "markdown": "**Create Performance Task Written Response Practice**\n\n In order to help prepare students for the new component of the AP Create Performance Task, there will be several opportunities throughout the curriculum to practice creating written responses aligned with the learning objectives that might be assessed on the exam.\n\nSample Prompt: <i> What makes two pieces of code “the same”? Could there ever be two pieces of code that you consider to be “the same” even if they aren’t identical?</i>\n\n[Unit Journal Template](https://docs.google.com/presentation/d/154-pse0dsVK436ktT_HMZ4951vsIn8BK4Jg3sMrqoy0/edit#slide=id.g24cbae510b7_0_100)\n\n**Sample Response for Instructors**\n\n![](https://images.code.org/c9f55c9f1b052fce6f62d8569709f071-Screenshot 2023-11-03 at 1.46.31 PM.png)"
-          }
-        ]
+        "description": "**Circulate:** Ask students to review the algorithms with a partner and group them into categories. Move around the room making sure students are not getting stuck. If they finish early push them to see if they can think about the problem in a different way.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Discuss with another group. which of these algorithms are “the same” as one another?*\n\n\nHave students discuss with another before asking them to share with the room. Lead a discussion on their experiences using tips from the discussion goal at the side."
       },
       "seeding_key": {
         "activity_section.key": "9e31a0ab-2d14-4543-8658-d5473a75ca03",
@@ -733,19 +800,8 @@
       }
     },
     {
-      "key": "e909e098-0d24-4419-b82d-3982e875a883",
-      "position": 1,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Journal:** Students add the following vocabulary words and definitions to their journals: problem, algorithm, sequencing, selection, iteration."
-      },
-      "seeding_key": {
-        "activity_section.key": "e909e098-0d24-4419-b82d-3982e875a883",
-        "lesson_activity.key": "df0bee05-f577-4ea7-b41f-b857b387d2e7"
-      }
-    },
-    {
       "key": "f149d5ed-7eb0-4248-9d38-ae94c23a1a1d",
-      "position": 2,
+      "position": 1,
       "properties": {
         "description": "**Discuss:** *How did today’s activities change the way you think about algorithms and problems?*\n\n"
       },
@@ -756,7 +812,7 @@
     },
     {
       "key": "bdc0d5e3-b2b2-4de5-b083-6a9d975eec49",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "Have students think about their answers on their own, then share with a partner, and then finally discuss responses with the entire room.\n\n**Discussion Goal:** Use this discussion to reinforce vocabulary introduced in the slides and check in on whether students have begun the transition towards thinking on a higher level about algorithms and problems. \n"
       },
@@ -767,7 +823,7 @@
     },
     {
       "key": "07d8c6af-aef8-4eb3-833b-b8c21b55b2cb",
-      "position": 4,
+      "position": 3,
       "properties": {
         "description": "Computer scientists don't just think about \"code\", they think about problems and the algorithms that solve them. In this unit we're going to explore what makes two problems, or two algorithms, similar or different from one another, and the way computer scientists talk about them. Not only will you be a better programmer, but you'll get to work on some really interesting problems along the way.",
         "remarks": true
@@ -778,11 +834,23 @@
       }
     },
     {
+      "key": "a259c733-2977-4cd2-97a8-9d0438e82855",
+      "position": 4,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "a259c733-2977-4cd2-97a8-9d0438e82855",
+        "lesson_activity.key": "df0bee05-f577-4ea7-b41f-b857b387d2e7"
+      }
+    },
+    {
       "key": "ac893caa-b1f7-4c37-8bac-15420193002e",
       "position": 5,
       "properties": {
-        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*\r\n\r\n**Question:** In your own words explain the difference between a problem and an algorithm.",
-        "name": "Assessment: Check For Understanding\r"
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check For Understanding\r",
+        "progression_name": "Check for Understanding"
       },
       "seeding_key": {
         "activity_section.key": "ac893caa-b1f7-4c37-8bac-15420193002e",
@@ -790,83 +858,52 @@
       }
     },
     {
-      "key": "2bd8bf81-d206-4c94-b02c-25fe614aca76",
+      "key": "2f752f84-7789-4d75-ba79-3afcb6a082cc",
       "position": 1,
       "properties": {
-        "progression_name": "Check For Understanding"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think back over the human machine language lessons we just completed. Write down some advice or encouragement you'd give to students in next year's class before they complete those same lessons. What attitudes or skills will be important?*\n\n**Discussion Goal:** This should be a quick discussion aimed at building confidence. Many students are likely excited to program, but others may be apprehensive. This prompt and the following quick words should be used to quickly reassure students they've already practiced many skills necessary to learn programming. They're ready for this!",
+        "name": "Getting Started"
       },
       "seeding_key": {
-        "activity_section.key": "2bd8bf81-d206-4c94-b02c-25fe614aca76",
-        "lesson_activity.key": "1766dfa6-a75b-4ef2-80bc-f9a191b116d8"
-      }
-    },
-    {
-      "key": "0e1de2e3-9417-4f89-a0c6-4eb9cbb4bc05",
-      "position": 1,
-      "properties": {
-        "description": "Today we'll be using a practice called pair programming. Pair progamming helps people make better programs by working together. The main idea is that two programmers use a single computer to collaboratively develop code. There's a few rules to make sure this system works effectively.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "0e1de2e3-9417-4f89-a0c6-4eb9cbb4bc05",
+        "activity_section.key": "2f752f84-7789-4d75-ba79-3afcb6a082cc",
         "lesson_activity.key": "957cc737-3f5b-4efb-9b3e-96ee38a05d11"
       }
     },
     {
-      "key": "86fc760c-aa09-4567-831c-4e9777bfb9bb",
+      "key": "0218d46c-e137-4cfd-a18c-af05055766b9",
       "position": 2,
       "properties": {
-        "description": "Review: Introduce the rules of pair programming below.\n\nThere is only one computer and two programmers.\nAssign one student \"driver\" and the other \"navigator\". Don't worry, you'll switch often.\nThe driver is the only one to touch the keyboard/mouse.\nThe navigator should look for problems in the code and keep track of the high-level plan.\nBoth driver and navigator should be communicating constantly by talking out loud and sharing ideas.\nDriver and navigator roles must switch when the teacher indicates, typically every 3-5 minutes.",
+        "description": "These are some great pieces of advice. Now I'm going to reveal that this advice isn't really for next year's students, but for all of you! Today we're going to begin programming on the computer, and while that's obviously different from the human machine language activities we just completed, a lot will be the same. You'll need to stick with it, pay attention to detail, and collaborate with others. In fact, before we jump in there's one new collaboration skill I want to teach you all.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0218d46c-e137-4cfd-a18c-af05055766b9",
+        "lesson_activity.key": "957cc737-3f5b-4efb-9b3e-96ee38a05d11"
+      }
+    },
+    {
+      "key": "0759c0bd-677f-4fd0-8f6b-c56d75390b83",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce pair programming.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "Pair Programming: Pair programming is practiced in education and in industry. Students who pair program are more confident in their abilities and are more likely to continue to study computer science. This practice is most effective if it is introduced early and the rules for switching partners are enforced by the teacher. You can read more about Pair Programming in the Computer Science Principles Curriculum Guide on page 8.\n\nEnforcing Timing: A particularly important role of the teacher of this lesson is introducing the logistics of pair programming. Enforce students trading who is driver or navigator every few minutes (3 minutes). Use a timer and actually force pairs to show you that they are switching roles.\n\nWhen to Use Pair Programming: You don't need to always pair program. You may even opt to stop pair programming after 15 minutes or so of this lesson. Introducing the practice early and reinforcing its value will ensure it's a practice you can return to throughout this unit.\n\nHere is a helpful video to show students to explain Pair Programming: [**Pair Programming CSP**](https://www.youtube.com/watch?v=q7d_JtyCq1A)"
+            "markdown": "Pair programming is practiced in education and in industry. Students who pair program are more confident in their abilities and are more likely to continue to study computer science. This practice is most effective if it is introduced early and the rules for switching partners are enforced by the teacher.\n\nA particularly important role of the teacher of this lesson is introducing the logistics of pair programming. Enforce students trading who is driver or navigator every few minutes (3 minutes). Use a timer and actually force pairs to show you that they are switching roles.\n\nYou don't need to always pair program. You may even opt to stop pair programming after 15 minutes or so of this lesson. Introducing the practice early and reinforcing its value will ensure it's a practice you can return to throughout this unit.\n\nHere is a [**helpful video**](https://youtu.be/q7d_JtyCq1A) to show students to explain pair programming."
           }
         ]
       },
       "seeding_key": {
-        "activity_section.key": "86fc760c-aa09-4567-831c-4e9777bfb9bb",
+        "activity_section.key": "0759c0bd-677f-4fd0-8f6b-c56d75390b83",
         "lesson_activity.key": "957cc737-3f5b-4efb-9b3e-96ee38a05d11"
       }
     },
     {
-      "key": "fd2e556a-62c8-4272-8b48-fbee9c59c37e",
+      "key": "f32ee6cc-1462-4d60-97ee-fe8f8a3463ad",
       "position": 1,
       "properties": {
-        "description": "Group: Place students in pairs. If you need to make one group of three you may do so and assign two members at each time to be \"navigators\"."
-      },
-      "seeding_key": {
-        "activity_section.key": "fd2e556a-62c8-4272-8b48-fbee9c59c37e",
-        "lesson_activity.key": "0476f89c-e4ef-4e48-99d5-2e207f3865ab"
-      }
-    },
-    {
-      "key": "0239fd1b-3a4d-4f7c-bcfd-bae7928b2ff4",
-      "position": 2,
-      "properties": {
-        "description": "To get you situated in App Lab there's a quick video. Once everyone is through that we'll get started. I'll keep track of time and remind you to switch who is driver and navigator every 3 minutes or so. Make sure you're ready to switch by talking out loud and sharing ideas.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "0239fd1b-3a4d-4f7c-bcfd-bae7928b2ff4",
-        "lesson_activity.key": "0476f89c-e4ef-4e48-99d5-2e207f3865ab"
-      }
-    },
-    {
-      "key": "8af83a2f-531b-4616-a591-9b65c61fce45",
-      "position": 3,
-      "properties": {
-        "progression_name": "Video: Turtle Programming"
-      },
-      "seeding_key": {
-        "activity_section.key": "8af83a2f-531b-4616-a591-9b65c61fce45",
-        "lesson_activity.key": "0476f89c-e4ef-4e48-99d5-2e207f3865ab"
-      }
-    },
-    {
-      "key": "f32ee6cc-1462-4d60-97ee-fe8f8a3463ad",
-      "position": 4,
-      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the video – *Turtle Programming*.\n\n**Group:** Place students in pairs. If you need to make a group of three you may do so and assign two members at each time to be \"navigators\".\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 to complete Levels 1, 2, and 3.",
+        "name": "Turtle Programming",
         "progression_name": "Using Simple Turtle Commands"
       },
       "seeding_key": {
@@ -876,9 +913,9 @@
     },
     {
       "key": "d2c6af2c-54d2-4282-a19e-366fba4bf181",
-      "position": 5,
+      "position": 2,
       "properties": {
-        "progression_name": "Challenge: Draw a 3x3 Grid Using Turtle Commands"
+        "progression_name": "Challenge: Draw a 3x3 Grid"
       },
       "seeding_key": {
         "activity_section.key": "d2c6af2c-54d2-4282-a19e-366fba4bf181",
@@ -886,37 +923,20 @@
       }
     },
     {
-      "key": "3e912646-4955-471d-b296-274a16288ca7",
+      "key": "231b0f6d-4f0e-4e75-9c71-69038f0811f1",
       "position": 1,
       "properties": {
-        "description": "Compare Solutions and Discuss: Each pair of students should get together with another pair to compare their solutions for each of the three problems to determine which is the most efficient. Once they have shared and compared their solutions they can consider the questions below.\n\nWhat strategies or reasoning did you use to identify possible solutions?\nIs the solution that you or another group found the most efficient? How do you know?\nPrompt: What is the “most efficient” way to program the solution for the 3x3 grid?\n\n Discuss: Have students share at their tables before moving to a full class discussion.\n\nPrompts:\n\nToday’s activity challenged us to find the most efficient solution to a problem. We care about efficiency when we don’t want to waste something valuable, like money, time, or space. We measured the efficiency of our programs in terms of lines of code, but there are other ways to think about efficiency when talking about code or programs that run on a computer. When we try to create efficient programs, what other valuable resources might we be concerned about conserving?\n\nList the things that students come up with somewhere that can be read by the class. These can be used to motivate portions of the next and future lessons.\n\nDiscussion Goal: The point of this discussion is to highlight the fact that \"efficiency\" can mean different things depending on the context.\n\nPotential answers to this question can include the time they take to run on a computer, the time or number of people they require to create, the number of resources they require to run, etc. Students will likely come up with others.\n\nDon’t fixate on any one solution and encourage students to come up with the most comprehensive list possible.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "There are a lot of points in this “What’s the Point?” section. They all go together and they are not all points you have to make in this lesson right now.\nYou should keep these big ideas in your back pocket, because you may want to refer back them in the future.\nThe short version:\nCreativity in programming comes from the fact that all programming languages have constraints; your job is to figure out how to use the language to get the computer to do what you want it to do or to solve a problem.\nCollaboration is a huge help when solving problems with programming. It’s helpful to work through problems with a partner."
-          }
-        ]
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have each pair of students get together with another pair to compare their solutions for each of the three problems to determine which is the most efficient. Students should consider the following questions:\n* *What strategies or reasoning did you use to identify possible solutions?*\n* *Is the solution that you or another group found the most efficient? How do you know?*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What is the \"most efficient\" way to program the solution for the 3x3 grid?*\n\n**Discussion Goal:** Students should evaluate and compare various approaches to solve the 3x3 grid problem and share how they define \"efficient.\" Encourage students to identify the strengths and weaknesses of each method and why an approach is or is not more efficient than another approach.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Today’s activity challenged us to find the most efficient solution to a problem. We care about efficiency when we don’t want to waste something valuable, like money, time, or space. We measured the efficiency of our programs in terms of lines of code, but there are other ways to think about efficiency when talking about code or programs that run on a computer. When we try to create efficient programs, what other valuable resources might we be concerned about conserving?*\n\n**Discussion Goal:** The point of this discussion is to highlight the fact that \"efficiency\" can mean different things depending on the context. Potential answers to this question can include the time they take to run on a computer, the time or number of people they require to create, the number of resources they require to run, etc. Students will likely come up with others. Don’t fixate on any one solution and encourage students to come up with the most comprehensive list possible.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "name": "Efficiency"
       },
       "seeding_key": {
-        "activity_section.key": "3e912646-4955-471d-b296-274a16288ca7",
-        "lesson_activity.key": "5a6277a8-45a3-4f5e-a7e2-6156503ddab4"
-      }
-    },
-    {
-      "key": "461e7ea6-f2e4-47d5-a757-341d689d985a",
-      "position": 2,
-      "properties": {
-        "description": "Why did we constrain you to only working with 4 possible commands? We begin programming with only a few commands for a few main reasons:\n\nWhat you did today is what you always do when programming: use a language to express a solution to a problem. Collaborative problem-solving skills are important factors in programming. Being able to get together with other people to talk about and make reasoned arguments about the best ways to code things is what professionals do.\nLearning to program isn’t just a matter of memorizing commands. The art of programming - the creative part - is always about understanding how to use the features of a programming language to solve a problem.\nWhether you know 4 commands of a language or hundreds, you will always be constrained by the programming language. The reason you need to learn how to program is because there isn’t a command to do every little thing; you have to understand the set of things that a programming language can do, and then use your creativity and problem-solving skills to get the computer to do what you want.\nIn this class, we will repeatedly run into the challenges we encountered today. Even seemingly simple problems will require us to creatively apply the tools we have available: the commands or instructions provided by the programming language.\nMultiple approaches are always possible to solve a problem. Furthermore, we may never be sure we have found the most efficient one. We may not even agree about how we should measure efficiency.\nAs we saw today, even when designing programs using four commands to draw with a turtle, the solutions are not always easy. We will definitely need to keep practicing as we start tackling more complex challenges.",
-        "remarks": true
-      },
-      "seeding_key": {
-        "activity_section.key": "461e7ea6-f2e4-47d5-a757-341d689d985a",
+        "activity_section.key": "231b0f6d-4f0e-4e75-9c71-69038f0811f1",
         "lesson_activity.key": "5a6277a8-45a3-4f5e-a7e2-6156503ddab4"
       }
     },
     {
       "key": "1c2bc189-6f90-4944-8e5c-69f07a93bda5",
-      "position": 3,
+      "position": 2,
       "properties": {
         "description": "---"
       },
@@ -927,8 +947,9 @@
     },
     {
       "key": "51c62c94-1572-46d4-aa57-0f538bbaf6db",
-      "position": 4,
+      "position": 3,
       "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
         "name": "Assessment: Check for Understanding",
         "progression_name": "Check for Understanding"
       },
@@ -938,10 +959,30 @@
       }
     },
     {
+      "key": "78140a36-9263-49cb-99d4-0b134e5d9daf",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *In the previous lesson we created simple turtle drawings using only four commands. At some point you probably wished that more commands were available to you. Describe a command you wanted to be able to use and explain why you wanted to use it.*\n\n**Discussion Goal:** Students have been solving turtle challenges with a limited set of commands. Recognize their desire to have access to more commands to solve these challenges. Motivate the fact they can create these new commands themselves, using the original turtle commands as building blocks.\n\nResponses might include:\n* A command that turns the turtle to the right\n* A command that moves forward more than one space\n* A command that creates a repeated pattern or shape\n* Students may also just wish for different colors, curved lines, etc.",
+        "name": "The Need for Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "78140a36-9263-49cb-99d4-0b134e5d9daf",
+        "lesson_activity.key": "5c4a25a4-61bb-49f6-bdd3-d6e276cfca7d"
+      }
+    },
+    {
       "key": "8bf07143-d705-4efc-9ccb-f92d796246f1",
       "position": 1,
       "properties": {
-        "progression_name": "Defining and Calling Functions"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the video – *Defining and Calling Functions*.\n\n**Group:** Place students in pairs.",
+        "name": "Programming with Functions",
+        "progression_name": "Defining and Calling Functions",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Consider using pair programming for this activity. If each student will work on their own computer, have them check in with their partner throughout the activity."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "8bf07143-d705-4efc-9ccb-f92d796246f1",
@@ -952,6 +993,7 @@
       "key": "7464b352-e04a-4790-bdad-3b1a63c62d01",
       "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 to complete Levels 1 through 9.",
         "progression_name": "Using Functions With Turtle Commands"
       },
       "seeding_key": {
@@ -982,21 +1024,111 @@
       }
     },
     {
-      "key": "de064b9a-8fbc-4a2a-a068-7ab28c55e32e",
-      "position": 5,
+      "key": "216b04bb-ad08-481f-84e2-3a7171654a6d",
+      "position": 1,
       "properties": {
-        "name": "Check Your Understanding",
-        "progression_name": "Check Your Understanding"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are the benefits of being able to define and call functions in a program? Who specifically gets to enjoy those benefits?*\n\n**Discussion Goal:** Possible responses:\n* programs are easier to read and write\n* functions remove the need to repeat large chunks of code\n* functions break the program into logical chunks\n* functions are a way to give concise human-readable names to complex sections of code\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How is the use of a function an example of abstraction?*\n\n**Discussion Goal:** Possible responses:\n* Abstractions simplify the representation of something more complex. A function gives a simple name to what might be a complex chunk of code.\n* Writing a function is a way to compartmentalize an idea\n* Abstraction helps manage complexity - so do functions because they let you break a problem into smaller parts.\n* Writing a function is a way to solve and then ignore lower-level, nitty-gritty problems in your program so you can focus on higher level problems.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "name": "Abstractions"
       },
       "seeding_key": {
-        "activity_section.key": "de064b9a-8fbc-4a2a-a068-7ab28c55e32e",
-        "lesson_activity.key": "b18c82c4-0c2f-47ec-8851-a7982bea3259"
+        "activity_section.key": "216b04bb-ad08-481f-84e2-3a7171654a6d",
+        "lesson_activity.key": "3d51c927-18cf-4c1e-a153-f9bfc1b5aab5"
+      }
+    },
+    {
+      "key": "7e7d5c9b-9a42-49c5-9d95-b100d75bf87a",
+      "position": 2,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "7e7d5c9b-9a42-49c5-9d95-b100d75bf87a",
+        "lesson_activity.key": "3d51c927-18cf-4c1e-a153-f9bfc1b5aab5"
+      }
+    },
+    {
+      "key": "ccf94277-10c9-42ec-ba78-81e7e85926c9",
+      "position": 3,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "ccf94277-10c9-42ec-ba78-81e7e85926c9",
+        "lesson_activity.key": "3d51c927-18cf-4c1e-a153-f9bfc1b5aab5"
+      }
+    },
+    {
+      "key": "09096bfd-20b9-431f-aad0-8f73ffa8561e",
+      "position": 1,
+      "properties": {
+        "description": "So far in this unit we have been exploring programming by drawing turtle art with only a few commands. It will probably not surprise you to learn that there are many more commands included in most programming languages. In fact, most programming languages include hundreds if not thousands of commands.",
+        "name": "Learning Programming Languages",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "09096bfd-20b9-431f-aad0-8f73ffa8561e",
+        "lesson_activity.key": "283e7669-d8c9-406a-be55-98e6322163eb"
+      }
+    },
+    {
+      "key": "eb3eac78-a3c7-4e3b-ae02-ea6c4e1d6959",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Do you think programmers memorize all of the commands in a programming language? If not, how is anyone ever able to use an entire programming language?*\n\n**Discussion Goal:** Introduce the fact that most programming languages contain many commands. Motivate the need for documentation to help programmers learn and recall how to use these commands. Responses might include:\n* Programmers ask each other for help.\n* There are reference guides online or in print to help programmers use a language.\n* Programmers read old code in the language to learn how to write new code.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "This discussion is a great opportunity to emphasize that programming is not some innate talent. Every programmer has to learn by seeing examples of a language being used and reading documentation. In fact, even professional programmers will frequently reference documentation while designing software. Becoming a good programmer is much less about memorizing a language and more about learning habits of mind and patterns that allow you to use a language (including its documentation) effectively!"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "eb3eac78-a3c7-4e3b-ae02-ea6c4e1d6959",
+        "lesson_activity.key": "283e7669-d8c9-406a-be55-98e6322163eb"
+      }
+    },
+    {
+      "key": "abce04ee-d084-4e79-b262-5673bb02b70b",
+      "position": 3,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "abce04ee-d084-4e79-b262-5673bb02b70b",
+        "lesson_activity.key": "283e7669-d8c9-406a-be55-98e6322163eb"
+      }
+    },
+    {
+      "key": "84897376-d2e5-4562-8700-b5e441eb4a21",
+      "position": 4,
+      "properties": {
+        "description": "Programmers weren’t born knowing how a programming language works, and, like you and me, they don’t have perfect memories. Instead they rely on written documentation to help them learn new features of a language and recall how it works. Today we are going to be exploring how useful documentation can be when learning a programming language or just writing software.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "84897376-d2e5-4562-8700-b5e441eb4a21",
+        "lesson_activity.key": "283e7669-d8c9-406a-be55-98e6322163eb"
+      }
+    },
+    {
+      "key": "3714e1c8-13ce-4539-ade7-9ed83ba8d916",
+      "position": 1,
+      "properties": {
+        "description": "At the end of the day we hope to be much more talented turtle artists, but we’re also going to be learning another important skill: reading the documentation of a programming language.\n\nBefore you ask me or a classmate for help today, I want you to read through the documentation, try the examples, talk with friends, and then talk to me. It may be slower going today, but in the long term it will make you much more confident programmers.",
+        "name": "Using Functions with Parameters",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3714e1c8-13ce-4539-ade7-9ed83ba8d916",
+        "lesson_activity.key": "adcd9689-c093-44c9-97fd-9177fbbaaf8e"
       }
     },
     {
       "key": "37e9858b-a820-4caa-8f5c-fd15dfe3774a",
-      "position": 1,
+      "position": 2,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 to complete Levels 1 through 9.",
         "progression_name": "Introduction to Parameters"
       },
       "seeding_key": {
@@ -1006,7 +1138,7 @@
     },
     {
       "key": "8451708b-6bdd-4771-9d6a-1cb9c764829d",
-      "position": 2,
+      "position": 3,
       "properties": {
         "progression_name": "Make Your Own Turtle Drawing"
       },
@@ -1016,32 +1148,71 @@
       }
     },
     {
-      "key": "fc154681-8685-4e5f-99e2-b1e0d7ce365c",
-      "position": 3,
+      "key": "b7e3dd5e-d355-4e11-9f3c-400ea2281084",
+      "position": 1,
       "properties": {
-        "name": "Check Your Understanding",
-        "progression_name": "Check Your Understanding"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n* *What did we learn today?*\n* *So what?*\n* *Now what?*\n\n**Discussion Goal:** Encourage students to reflect on their learning experience by considering the utility of documentation in programming. Guide them to discuss what they learned about functions and parameters, the relevance of this knowledge in programming, and how they can apply this understanding in future coding projects.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "name": "Three W's"
       },
       "seeding_key": {
-        "activity_section.key": "fc154681-8685-4e5f-99e2-b1e0d7ce365c",
-        "lesson_activity.key": "adcd9689-c093-44c9-97fd-9177fbbaaf8e"
+        "activity_section.key": "b7e3dd5e-d355-4e11-9f3c-400ea2281084",
+        "lesson_activity.key": "c5dabead-d31e-4d5b-8781-9e8289fb49ac"
       }
     },
     {
-      "key": "e549e8c4-c95e-44f3-871a-387d09d3bf14",
-      "position": 1,
+      "key": "9e8e9b3d-d70d-4b27-8fae-6464c35c65c4",
+      "position": 2,
       "properties": {
-        "progression_name": "Functions with Parameters"
+        "description": "---"
       },
       "seeding_key": {
-        "activity_section.key": "e549e8c4-c95e-44f3-871a-387d09d3bf14",
-        "lesson_activity.key": "bf0284eb-b385-49f8-9122-15fe2b2e6ca3"
+        "activity_section.key": "9e8e9b3d-d70d-4b27-8fae-6464c35c65c4",
+        "lesson_activity.key": "c5dabead-d31e-4d5b-8781-9e8289fb49ac"
+      }
+    },
+    {
+      "key": "e83db2e3-6fad-4f2f-8852-cacb156a675e",
+      "position": 3,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "e83db2e3-6fad-4f2f-8852-cacb156a675e",
+        "lesson_activity.key": "c5dabead-d31e-4d5b-8781-9e8289fb49ac"
+      }
+    },
+    {
+      "key": "e58b3482-c277-43fc-868d-ae053729b275",
+      "position": 1,
+      "properties": {
+        "description": "In the previous lesson, we learned to use a lot of new turtle commands. Some of these commands accept a parameter, or even many parameters, which allow us to pass values to the function. This allowed us to make much more interesting images by specifying precisely how far the turtle should move or turn, and introduced the ability to choose specific pen sizes and colors.",
+        "name": "Parameters in Everyday Life",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e58b3482-c277-43fc-868d-ae053729b275",
+        "lesson_activity.key": "5e03c64c-7446-4ba5-b4a3-d4e281bfade9"
+      }
+    },
+    {
+      "key": "bf1a40ab-f945-425b-a4e4-c4b9a534df09",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What are some everyday activities or tasks that require input or choices to complete?*\n\n**Discussion Goal:** Encourage students to realize that parameters are not just a programming concept but a fundamental aspect of how we interact with various systems and tools in our lives. This realization will help them understand the versatility and necessity of parameters in programming."
+      },
+      "seeding_key": {
+        "activity_section.key": "bf1a40ab-f945-425b-a4e4-c4b9a534df09",
+        "lesson_activity.key": "5e03c64c-7446-4ba5-b4a3-d4e281bfade9"
       }
     },
     {
       "key": "a1a8e28a-3ea1-4780-adc1-6e3401855105",
-      "position": 2,
+      "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the video - *Functions with Parameters*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 to complete Levels 1 through 13.",
+        "name": "Writing Functions with Parameters",
         "progression_name": "Drawing Shapes With Parameters"
       },
       "seeding_key": {
@@ -1051,9 +1222,9 @@
     },
     {
       "key": "5dd8567d-d343-4a29-be4f-29b05c17f556",
-      "position": 3,
+      "position": 2,
       "properties": {
-        "progression_name": "Check Your Understanding: Defining Functions"
+        "progression_name": "Check for Understanding: Defining Functions"
       },
       "seeding_key": {
         "activity_section.key": "5dd8567d-d343-4a29-be4f-29b05c17f556",
@@ -1062,9 +1233,9 @@
     },
     {
       "key": "a611d9d1-f475-4b9d-91a2-cc05d1a2180f",
-      "position": 4,
+      "position": 3,
       "properties": {
-        "progression_name": "How to add comments to code"
+        "progression_name": "Adding Comments"
       },
       "seeding_key": {
         "activity_section.key": "a611d9d1-f475-4b9d-91a2-cc05d1a2180f",
@@ -1073,7 +1244,7 @@
     },
     {
       "key": "be2a208e-9310-4e26-9fcb-357cb8844ec4",
-      "position": 5,
+      "position": 4,
       "properties": {
         "progression_name": "Under the Sea Drawing with Parameters"
       },
@@ -1084,7 +1255,7 @@
     },
     {
       "key": "a797b3e7-3a44-41d9-9f15-22761b6584d3",
-      "position": 6,
+      "position": 5,
       "properties": {
         "progression_name": "Challenge: Continue Your Drawing With More Functions"
       },
@@ -1094,32 +1265,77 @@
       }
     },
     {
-      "key": "d5680202-3c62-4df4-add9-fe5bc57e7a74",
-      "position": 7,
+      "key": "dc384733-8590-484b-8850-e7bd82df3e8d",
+      "position": 1,
       "properties": {
-        "name": "Check Your Understanding",
-        "progression_name": "Check Your Understanding"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Develop a rule for deciding when to create a function with a parameter rather than a normal function. Below your rule write a couple sentences justifying your rule.*\n\n**Discussion Goal:** Having used parameters to generalize the behavior of many functions, students should attempt to formalize their understanding of what parameters are and why they are beneficial. Important points to draw out are:\nParameters allow the creation of a generalized solution to a whole class of problems, rather than individually solving many specific problems.\nParameters remove the need to create repetitive functions, making code easier to write, read, and change.",
+        "name": "With or Without Parameters"
       },
       "seeding_key": {
-        "activity_section.key": "d5680202-3c62-4df4-add9-fe5bc57e7a74",
-        "lesson_activity.key": "bf0284eb-b385-49f8-9122-15fe2b2e6ca3"
+        "activity_section.key": "dc384733-8590-484b-8850-e7bd82df3e8d",
+        "lesson_activity.key": "0b882202-ce7b-4bb3-b996-6d3d5dbe78d2"
       }
     },
     {
-      "key": "45ddf5d8-5aff-4352-9289-d90e30c556e1",
-      "position": 1,
+      "key": "4e815e96-1aca-4482-af28-21d0a1228e83",
+      "position": 2,
       "properties": {
-        "progression_name": "Using Loops"
+        "description": "---"
       },
       "seeding_key": {
-        "activity_section.key": "45ddf5d8-5aff-4352-9289-d90e30c556e1",
-        "lesson_activity.key": "daaef171-c691-4426-9071-83168c86d58c"
+        "activity_section.key": "4e815e96-1aca-4482-af28-21d0a1228e83",
+        "lesson_activity.key": "0b882202-ce7b-4bb3-b996-6d3d5dbe78d2"
+      }
+    },
+    {
+      "key": "d92150c9-3035-484f-917e-2234425c42b7",
+      "position": 3,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "d92150c9-3035-484f-917e-2234425c42b7",
+        "lesson_activity.key": "0b882202-ce7b-4bb3-b996-6d3d5dbe78d2"
+      }
+    },
+    {
+      "key": "a1f6b6c5-bf75-4f65-88f7-881c5602dbc1",
+      "position": 1,
+      "properties": {
+        "description": "As we have developed as programmers, we have focused on the process of breaking down large tasks into smaller pieces and assigning each piece a function.\n\nWhen we break down a large task, often we will find that some portion of the task needs to be repeated many times. As programmers, we would simply call the same function many times. This might work if we need to call the same function five times, but if that function needs to be run 1,000,000 times, we’ll need a better solution.\n\nToday we’ll be exploring how a programming construct called a loop solves this problem by allowing us to repeat a set of commands many times.",
+        "name": "Everyday Repetitions",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a1f6b6c5-bf75-4f65-88f7-881c5602dbc1",
+        "lesson_activity.key": "94109673-b9fc-4578-816d-a4afe39440ee"
+      }
+    },
+    {
+      "key": "8ef20335-6b40-4c5a-9271-c69d2989521b",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Ask students to think about and write down repetitive tasks they perform every day, such as brushing teeth, checking social media, or walking a specific route.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share their examples in small groups and discuss if these tasks could be simplified or automated somehow in real life.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Guide them to consider how these repetitive tasks relate to the concept of loops in programming—doing something over and over again until a condition changes or a certain number of iterations is reached.\n\nBriefly introduce how these real-life repetitions can be thought of as \"loops,\" and explain that in programming, loops help automate repetitive tasks efficiently."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "8ef20335-6b40-4c5a-9271-c69d2989521b",
+        "lesson_activity.key": "94109673-b9fc-4578-816d-a4afe39440ee"
       }
     },
     {
       "key": "92d94619-a16c-4ff5-a38d-149bf2ee2bb5",
-      "position": 2,
+      "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the video – *Loops*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 to complete Levels 1 through 12.",
+        "name": "Improving Under the Sea with Loops",
         "progression_name": "Introduction to Loops"
       },
       "seeding_key": {
@@ -1129,7 +1345,7 @@
     },
     {
       "key": "c4717681-9d12-4c02-a464-394f85868ac6",
-      "position": 3,
+      "position": 2,
       "properties": {
         "progression_name": "Using Loops to Add Detail to Your Drawing"
       },
@@ -1140,10 +1356,10 @@
     },
     {
       "key": "f7a96a99-5571-4955-8b83-09fb5d7d43e6",
-      "position": 4,
+      "position": 3,
       "properties": {
-        "name": "Project: Under the Sea",
-        "progression_name": "Project: Under the Sea"
+        "name": "Challenge: Under the Sea",
+        "progression_name": "Challenge: Under the Sea"
       },
       "seeding_key": {
         "activity_section.key": "f7a96a99-5571-4955-8b83-09fb5d7d43e6",
@@ -1151,15 +1367,251 @@
       }
     },
     {
-      "key": "ed197c91-f575-4d0a-810d-758895a5255d",
+      "key": "631efd80-f4ae-46fa-b141-62c454402665",
       "position": 1,
       "properties": {
-        "name": "Personal Digital Scene",
-        "progression_name": "Personal Digital Scene"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Develop a rule for deciding when to use a loop within a program. Perhaps think about when to use a loop versus a function. Try to make connections to Top-Down Design in your response. Below your rule, write a couple sentences justifying your rule.*\n\n**Discussion Goal:** Important points to draw out are related to when to use a function v. when to use a loop. While you can get code to function similarly with a function or a loop the general rule of thumb is:\n* Write a function when you have a piece of code - a procedure - that you might reuse in other places in your program.\n   * A function might also help you encapsulate a solution to a common problem in one place that you can call on repeatedly with different inputs (e.g. drawSquare(size))\n   * Writing a function is often more of a design decision. You are trying to encapsulate and abstract details so you think about other parts of a larger program\n* Write a loop when there is something you need to do over and over again and it doesn’t make sense to split it up any more.\n   * Writing a loop is more of an algorithmic decision - you actually just need repetitive behavior to solve some problem.\n   * For example, we don’t want to manually call functions many times in a row. If you’re calling the same function many times in a row, it’s time to make a loop.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary",
+        "name": "Loops vs Functions"
+      },
+      "seeding_key": {
+        "activity_section.key": "631efd80-f4ae-46fa-b141-62c454402665",
+        "lesson_activity.key": "ac00827b-bdc7-4e19-9388-ce8e3dcd13af"
+      }
+    },
+    {
+      "key": "70bc17bc-2cf5-4c88-84d7-7e6f940bfd48",
+      "position": 1,
+      "properties": {
+        "description": "I want you to think about a scene from your favorite movie, game, or book that really stuck with you. What made it memorable? Was it the colors, the action, the characters? Keep that scene in mind because it's going to inspire our project work today. Let’s share and explore how we can bring similar elements into our own programming projects to make them just as engaging and memorable.",
+        "duration": "5",
+        "name": "Warm Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "70bc17bc-2cf5-4c88-84d7-7e6f940bfd48",
+        "lesson_activity.key": "3c5b1dd7-09dd-475b-928d-e9b50952db15"
+      }
+    },
+    {
+      "key": "643ad986-d0ce-4d56-b28d-d9a59459d840",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Think of a memorable scene from a movie, game, or book that you really like. What elements make this scene stand out to you, and how could you incorporate similar elements into your own programming project?*\n\n**Discussion Goal:** Encourage students to connect with creative and memorable elements from familiar media and explore how these elements can be translated into their own programming projects. The aim is to inspire creativity and foster an understanding of how to bring dynamic storytelling or visual components into their scene designs, enhancing their ability to think critically and innovatively about their coding projects."
+      },
+      "seeding_key": {
+        "activity_section.key": "643ad986-d0ce-4d56-b28d-d9a59459d840",
+        "lesson_activity.key": "3c5b1dd7-09dd-475b-928d-e9b50952db15"
+      }
+    },
+    {
+      "key": "bab8277f-f916-4b7e-8168-f6b9f146cb73",
+      "position": 3,
+      "properties": {
+        "description": "Alright, now that we've shared some inspiring scenes, it's time to bring your own ideas to life. Take a few minutes to brainstorm what kind of scene you'd like to create. Think about the setting, characters, and any actions that might take place. Once you have a clear idea, go ahead and sketch a quick outline of your scene on paper. This doesn't have to be perfect—it's just a blueprint to help you visualize and plan your project. Let your creativity flow and remember, the more detailed your plan, the easier it will be to translate it into code!",
+        "duration": "35",
+        "name": "Activity",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "bab8277f-f916-4b7e-8168-f6b9f146cb73",
+        "lesson_activity.key": "3c5b1dd7-09dd-475b-928d-e9b50952db15"
+      }
+    },
+    {
+      "key": "8d0cb00a-7fbf-477e-a821-6c2656567140",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Design a Digital Scene Project Planning Guide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students brainstorm ideas for their scene. Encourage them to think broadly at first about the setting, characters, and actions that could take place in their scene. Once they have a concept, they should make a quick sketch of the scene layout."
+      },
+      "seeding_key": {
+        "activity_section.key": "8d0cb00a-7fbf-477e-a821-6c2656567140",
+        "lesson_activity.key": "3c5b1dd7-09dd-475b-928d-e9b50952db15"
+      }
+    },
+    {
+      "key": "944e76dd-a319-4d4e-99c8-95ff9b1a714f",
+      "position": 5,
+      "properties": {
+        "description": "Now that you have a sketch of your scene, let's start breaking it down into programmable parts. Think about the different elements in your scene that can be created using functions—these might be trees, buildings, animals, or any repeating pattern. Then, consider where loops can help you repeat certain actions or elements efficiently. Identify what parameters your functions will need, and how loops can simplify your coding process. This step is crucial for turning your creative ideas into functional code, so take your time to map it out clearly!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "944e76dd-a319-4d4e-99c8-95ff9b1a714f",
+        "lesson_activity.key": "3c5b1dd7-09dd-475b-928d-e9b50952db15"
+      }
+    },
+    {
+      "key": "815322d5-3dda-4686-93f0-92e1c6cda660",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students which parts of their scene can be created using functions and where loops could be used to repeat elements or actions. They should write a brief description of each function they plan to use, what parameters it might need, and how loops will be integrated."
+      },
+      "seeding_key": {
+        "activity_section.key": "815322d5-3dda-4686-93f0-92e1c6cda660",
+        "lesson_activity.key": "3c5b1dd7-09dd-475b-928d-e9b50952db15"
+      }
+    },
+    {
+      "key": "4a42ea20-f4c4-481f-a970-6096301ef0fb",
+      "position": 7,
+      "properties": {
+        "description": "Great work on planning and organizing your functions and loops! Now comes the exciting part—let's start bringing your scenes to life with code. Begin by coding the functions you've outlined, testing each one as you go to make sure it works as expected. Remember, it's okay if everything isn't perfect on the first try. Programming is an iterative process, and every error is an opportunity to learn and refine your skills. Let's get coding and see your creative ideas take form on the screen!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4a42ea20-f4c4-481f-a970-6096301ef0fb",
+        "lesson_activity.key": "3c5b1dd7-09dd-475b-928d-e9b50952db15"
+      }
+    },
+    {
+      "key": "ed197c91-f575-4d0a-810d-758895a5255d",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 to start their Design a Digital Scene project.",
+        "progression_name": "Personal Digital Scene",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to start with simple functions and test these as they go to ensure they work correctly before moving on to more complex functions or adding loops."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "ed197c91-f575-4d0a-810d-758895a5255d",
         "lesson_activity.key": "3c5b1dd7-09dd-475b-928d-e9b50952db15"
+      }
+    },
+    {
+      "key": "35bb21d5-c21e-4f4d-9d95-d9024d4c6113",
+      "position": 9,
+      "properties": {
+        "description": "Alright, everyone, let's take a few minutes to wrap up today's session. I'd love for you to pair up and share the concept of your scene and the functions you've started to implement. Discuss how your initial planning helped shape your coding so far and consider any challenges you might be facing. This reflection is key to understanding the progress you've made today and preparing for what's next. Let's share some thoughts and get ready to dive back in tomorrow!",
+        "duration": "5",
+        "name": "Wrap Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "35bb21d5-c21e-4f4d-9d95-d9024d4c6113",
+        "lesson_activity.key": "3c5b1dd7-09dd-475b-928d-e9b50952db15"
+      }
+    },
+    {
+      "key": "3e4540be-de47-4a66-ae23-812a66851c59",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students briefly share their scene concept and the functions they plan to implement with a partner or small group.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How has the planning process influenced your approach to starting your scene design? What challenges do you anticipate as you continue to develop your project?*\n\n**Discussion Goal:** The goal of this discussion is to have students reflect on the value of the initial planning and brainstorming phase in setting a strong foundation for their coding projects. Encourage them to articulate how this preparation has helped organize their thoughts and approach to building their scenes. Additionally, the discussion should help students identify potential challenges they may face, fostering a proactive mindset and encouraging problem-solving as they move forward with their projects."
+      },
+      "seeding_key": {
+        "activity_section.key": "3e4540be-de47-4a66-ae23-812a66851c59",
+        "lesson_activity.key": "3c5b1dd7-09dd-475b-928d-e9b50952db15"
+      }
+    },
+    {
+      "key": "cf219345-5dcd-4445-8446-b71c1c9b1496",
+      "position": 1,
+      "properties": {
+        "description": "Let’s start today by taking a moment to reflect on the work you did yesterday. Think about the part of your project that you’re really proud of, and also consider an area you’d like to improve as we continue today. This reflection will help us set our goals for this session and ensure that you leave today feeling accomplished and satisfied with your projects.",
+        "duration": "5",
+        "name": "Warm Up",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cf219345-5dcd-4445-8446-b71c1c9b1496",
+        "lesson_activity.key": "6e0a5730-7e49-409d-b320-8ec4ca64d96d"
+      }
+    },
+    {
+      "key": "63f24833-366a-44a3-90de-7142ff51ed73",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Reflecting on yesterday's session, what part of your project are you most proud of? What is one aspect you hope to improve by the end of today?*\n\n**Discussion Goal:** Encourage students to engage in self-reflection on their coding projects, acknowledging their successes while also identifying areas for improvement. The goal is to help students develop a growth mindset, where they recognize the value of their achievements and also see challenges as opportunities for learning and skill enhancement. This reflection should motivate them to focus their efforts effectively during the day’s activities and foster a supportive environment where sharing insights and strategies is encouraged."
+      },
+      "seeding_key": {
+        "activity_section.key": "63f24833-366a-44a3-90de-7142ff51ed73",
+        "lesson_activity.key": "6e0a5730-7e49-409d-b320-8ec4ca64d96d"
+      }
+    },
+    {
+      "key": "76a435f4-fbf9-4c2b-8cae-1204738a11a5",
+      "position": 3,
+      "properties": {
+        "description": "Alright, let’s get started with today’s main activity! You’ve all done some excellent planning and have set clear goals for today based on our warm-up discussion. Now it’s time to dive back into your projects and bring all those creative ideas to life. Remember, focus on refining your functions, integrating those loops effectively, and don’t hesitate to experiment with adding random elements to make your scenes truly unique. Let’s make the most of this session, code creatively, and if you run into any challenges, I’m here to help.",
+        "duration": "35",
+        "name": "Activity",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "76a435f4-fbf9-4c2b-8cae-1204738a11a5",
+        "lesson_activity.key": "6e0a5730-7e49-409d-b320-8ec4ca64d96d"
+      }
+    },
+    {
+      "key": "fe95ddcd-b97e-490c-a2e2-399e9182aea0",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to return to Level 1 to finish developing their project.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Remind students about incorporating random elements to their scenes, such as random colors, sizes, or positions, to add variety and visual interest."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "fe95ddcd-b97e-490c-a2e2-399e9182aea0",
+        "lesson_activity.key": "6e0a5730-7e49-409d-b320-8ec4ca64d96d"
+      }
+    },
+    {
+      "key": "65923167-70de-417e-9d2d-696bd2de61c0",
+      "position": 5,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "65923167-70de-417e-9d2d-696bd2de61c0",
+        "lesson_activity.key": "6e0a5730-7e49-409d-b320-8ec4ca64d96d"
+      }
+    },
+    {
+      "key": "cc5bff2a-b9eb-4665-9ea8-bf07b8d116af",
+      "position": 6,
+      "properties": {
+        "description": "Great work on your projects, everyone! Now comes the exciting part—sharing what you've created. As we start the project presentations, remember, this is a fantastic opportunity to showcase your hard work and creativity. Explain not just what you made, but how you made it, the challenges you overcame, and what you learned in the process. Let's all give supportive feedback and celebrate each other's achievements. Let’s see those amazing scenes you’ve all been working on!",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "cc5bff2a-b9eb-4665-9ea8-bf07b8d116af",
+        "lesson_activity.key": "6e0a5730-7e49-409d-b320-8ec4ca64d96d"
+      }
+    },
+    {
+      "key": "37b38f35-2ebd-4e45-aa1a-f580d2693d60",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students present their completed scenes to the class, describing their design process, the functions and loops used, and how they incorporated randomization.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Encourage students to provide constructive feedback on each other's projects, focusing on what they liked and suggestions for improvement."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "37b38f35-2ebd-4e45-aa1a-f580d2693d60",
+        "lesson_activity.key": "6e0a5730-7e49-409d-b320-8ec4ca64d96d"
+      }
+    },
+    {
+      "key": "fcbd3715-5546-4ef7-8b5b-f82b36334565",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *If you were to do this project again, what would you do differently, and why?*\n\n**Discussion Goal:** The goal of this question is to encourage students to engage in critical thinking about their own work and decision-making processes. This discussion aims to foster a mindset of iterative improvement, where students identify potential enhancements or different approaches they could take in future projects. The objective is to help students learn from their experiences, understand the value of self-evaluation, and develop strategies for continuous personal and academic growth.",
+        "duration": "5",
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "fcbd3715-5546-4ef7-8b5b-f82b36334565",
+        "lesson_activity.key": "6e0a5730-7e49-409d-b320-8ec4ca64d96d"
       }
     }
   ],
@@ -1170,7 +1622,10 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "level_keys": [
+          "U3L5 CSP CFU natural language_2023"
+        ],
+        "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -1180,7 +1635,7 @@
         "lesson.key": "The Need for Programming Languages",
         "lesson_group.key": "",
         "script.name": "fcs6-beta-2024",
-        "activity_section.key": "5d8c6c53-090d-4078-83cc-8105a22dbdc1"
+        "activity_section.key": "06baf804-e9aa-4a5f-8103-1931a7e32aa9"
       },
       "level_keys": [
         "U3L5 CSP CFU natural language_2023"
@@ -1190,53 +1645,12 @@
       "chapter": 2,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
-        "progression": "The Pre-Unit Pulse"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSP Pre-Unit Pulse - Algorithms Q1"
-        ],
-        "lesson.key": "Algorithms Solve Problems",
-        "lesson_group.key": "",
-        "script.name": "fcs6-beta-2024",
-        "activity_section.key": "da906cbe-8163-44ef-bad8-0ab68cef170f"
-      },
-      "level_keys": [
-        "CSP Pre-Unit Pulse - Algorithms Q1"
-      ]
-    },
-    {
-      "chapter": 3,
-      "position": 2,
-      "activity_section_position": 2,
-      "assessment": false,
-      "properties": {
-        "progression": "The Pre-Unit Pulse"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSP Pre-Unit Pulse - Algorithms Q2"
-        ],
-        "lesson.key": "Algorithms Solve Problems",
-        "lesson_group.key": "",
-        "script.name": "fcs6-beta-2024",
-        "activity_section.key": "da906cbe-8163-44ef-bad8-0ab68cef170f"
-      },
-      "level_keys": [
-        "CSP Pre-Unit Pulse - Algorithms Q2"
-      ]
-    },
-    {
-      "chapter": 4,
-      "position": 3,
-      "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check For Understanding"
+        "level_keys": [
+          "U6 L01 Algorithms vs Problems_2023"
+        ],
+        "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -1246,40 +1660,21 @@
         "lesson.key": "Algorithms Solve Problems",
         "lesson_group.key": "",
         "script.name": "fcs6-beta-2024",
-        "activity_section.key": "2bd8bf81-d206-4c94-b02c-25fe614aca76"
+        "activity_section.key": "ac893caa-b1f7-4c37-8bac-15420193002e"
       },
       "level_keys": [
         "U6 L01 Algorithms vs Problems_2023"
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 3,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Video: Turtle Programming"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csp_applab_turtle_virtual"
+        "level_keys": [
+          "U3L2 Using Simple Commands_virtual"
         ],
-        "lesson.key": "Using Simple Commands",
-        "lesson_group.key": "",
-        "script.name": "fcs6-beta-2024",
-        "activity_section.key": "8af83a2f-531b-4616-a591-9b65c61fce45"
-      },
-      "level_keys": [
-        "csp_applab_turtle_virtual"
-      ]
-    },
-    {
-      "chapter": 6,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
         "progression": "Using Simple Turtle Commands"
       },
       "bonus": false,
@@ -1297,11 +1692,14 @@
       ]
     },
     {
-      "chapter": 7,
-      "position": 3,
+      "chapter": 4,
+      "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L2_TurtleSquare_right_virtual"
+        ],
         "progression": "Using Simple Turtle Commands"
       },
       "bonus": false,
@@ -1319,12 +1717,15 @@
       ]
     },
     {
-      "chapter": 8,
-      "position": 4,
+      "chapter": 5,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Challenge: Draw a 3x3 Grid Using Turtle Commands"
+        "level_keys": [
+          "U3L2_Turtle3by3Grid_virtual"
+        ],
+        "progression": "Challenge: Draw a 3x3 Grid"
       },
       "bonus": false,
       "seeding_key": {
@@ -1341,11 +1742,14 @@
       ]
     },
     {
-      "chapter": 9,
-      "position": 5,
+      "chapter": 6,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U3L1 Virtual CFU"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -1363,33 +1767,14 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Defining and Calling Functions"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csp_applab_functions_virtual"
+        "level_keys": [
+          "U3L03 Define and use turnAround_virtual"
         ],
-        "lesson.key": "Creating Functions",
-        "lesson_group.key": "",
-        "script.name": "fcs6-beta-2024",
-        "activity_section.key": "8bf07143-d705-4efc-9ccb-f92d796246f1"
-      },
-      "level_keys": [
-        "csp_applab_functions_virtual"
-      ]
-    },
-    {
-      "chapter": 11,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
         "progression": "Using Functions With Turtle Commands"
       },
       "bonus": false,
@@ -1407,11 +1792,14 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 3,
+      "chapter": 8,
+      "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 Draw a T using turnAround_virtual"
+        ],
         "progression": "Using Functions With Turtle Commands"
       },
       "bonus": false,
@@ -1429,11 +1817,14 @@
       ]
     },
     {
-      "chapter": 13,
-      "position": 4,
+      "chapter": 9,
+      "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 define turnRight and draw a rectangle_virtual"
+        ],
         "progression": "Using Functions With Turtle Commands"
       },
       "bonus": false,
@@ -1451,11 +1842,14 @@
       ]
     },
     {
-      "chapter": 14,
-      "position": 5,
+      "chapter": 10,
+      "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 - draw rect function_virtual"
+        ],
         "progression": "Using Functions With Turtle Commands"
       },
       "bonus": false,
@@ -1473,11 +1867,14 @@
       ]
     },
     {
-      "chapter": 15,
-      "position": 6,
+      "chapter": 11,
+      "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 - draw step_virtual"
+        ],
         "progression": "Using Functions With Turtle Commands"
       },
       "bonus": false,
@@ -1495,11 +1892,14 @@
       ]
     },
     {
-      "chapter": 16,
-      "position": 7,
+      "chapter": 12,
+      "position": 6,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 Three Steps_virtual"
+        ],
         "progression": "Using Functions With Turtle Commands"
       },
       "bonus": false,
@@ -1517,11 +1917,14 @@
       ]
     },
     {
-      "chapter": 17,
-      "position": 8,
+      "chapter": 13,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L03 draw diamond_virtual"
+        ],
         "progression": "Challenge: Draw a Diamond Using Functions"
       },
       "bonus": false,
@@ -1539,11 +1942,14 @@
       ]
     },
     {
-      "chapter": 18,
-      "position": 9,
+      "chapter": 14,
+      "position": 8,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L04 - snowflake_virtual"
+        ],
         "progression": "Using Functions with Turtle Commands"
       },
       "bonus": false,
@@ -1561,11 +1967,14 @@
       ]
     },
     {
-      "chapter": 19,
-      "position": 10,
+      "chapter": 15,
+      "position": 9,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L04 - 3 by 3 with functions_virtual"
+        ],
         "progression": "Using Functions with Turtle Commands"
       },
       "bonus": false,
@@ -1583,12 +1992,15 @@
       ]
     },
     {
-      "chapter": 20,
-      "position": 11,
+      "chapter": 16,
+      "position": 10,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check Your Understanding"
+        "level_keys": [
+          "CSP U3L2 Virtual CFU"
+        ],
+        "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -1598,18 +2010,21 @@
         "lesson.key": "Creating Functions",
         "lesson_group.key": "",
         "script.name": "fcs6-beta-2024",
-        "activity_section.key": "de064b9a-8fbc-4a2a-a068-7ab28c55e32e"
+        "activity_section.key": "ccf94277-10c9-42ec-ba78-81e7e85926c9"
       },
       "level_keys": [
         "CSP U3L2 Virtual CFU"
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 - moveForwardwithParams_virtual"
+        ],
         "progression": "Introduction to Parameters"
       },
       "bonus": false,
@@ -1627,11 +2042,14 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 18,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 1 triangle_virtual"
+        ],
         "progression": "Introduction to Parameters"
       },
       "bonus": false,
@@ -1649,11 +2067,14 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 19,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 2 purple square_virtual"
+        ],
         "progression": "Introduction to Parameters"
       },
       "bonus": false,
@@ -1671,11 +2092,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 20,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 3 fill pink_virtual"
+        ],
         "progression": "Introduction to Parameters"
       },
       "bonus": false,
@@ -1693,11 +2117,14 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 21,
       "position": 5,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 4 bullseye_virtual"
+        ],
         "progression": "Introduction to Parameters"
       },
       "bonus": false,
@@ -1715,11 +2142,14 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 22,
       "position": 6,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 6 squiggles_virtual"
+        ],
         "progression": "Introduction to Parameters"
       },
       "bonus": false,
@@ -1737,11 +2167,14 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 23,
       "position": 7,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 5 overlapping circles_virtual"
+        ],
         "progression": "Introduction to Parameters"
       },
       "bonus": false,
@@ -1759,11 +2192,14 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 24,
       "position": 8,
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 7 smiley face_virtual"
+        ],
         "progression": "Introduction to Parameters"
       },
       "bonus": false,
@@ -1781,11 +2217,14 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 25,
       "position": 9,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L06 Challenge 8 make your own_virtual"
+        ],
         "progression": "Make Your Own Turtle Drawing"
       },
       "bonus": false,
@@ -1803,12 +2242,15 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 26,
       "position": 10,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check Your Understanding"
+        "level_keys": [
+          "U3L06 Assessment2_2018_2019_virtual"
+        ],
+        "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -1818,40 +2260,21 @@
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "",
         "script.name": "fcs6-beta-2024",
-        "activity_section.key": "fc154681-8685-4e5f-99e2-b1e0d7ce365c"
+        "activity_section.key": "e83db2e3-6fad-4f2f-8852-cacb156a675e"
       },
       "level_keys": [
         "U3L06 Assessment2_2018_2019_virtual"
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 27,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Functions with Parameters"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csp_applab_functions_parameters_virtual"
+        "level_keys": [
+          "U3L08 - drawSquareWithParam_virtual"
         ],
-        "lesson.key": "Creating functions with Parameters",
-        "lesson_group.key": "",
-        "script.name": "fcs6-beta-2024",
-        "activity_section.key": "e549e8c4-c95e-44f3-871a-387d09d3bf14"
-      },
-      "level_keys": [
-        "csp_applab_functions_parameters_virtual"
-      ]
-    },
-    {
-      "chapter": 32,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
         "progression": "Drawing Shapes With Parameters"
       },
       "bonus": false,
@@ -1869,11 +2292,14 @@
       ]
     },
     {
-      "chapter": 33,
-      "position": 3,
+      "chapter": 28,
+      "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - createTriangleParam_virtual"
+        ],
         "progression": "Drawing Shapes With Parameters"
       },
       "bonus": false,
@@ -1891,11 +2317,14 @@
       ]
     },
     {
-      "chapter": 34,
-      "position": 4,
+      "chapter": 29,
+      "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - squareTwoParams_virtual"
+        ],
         "progression": "Drawing Shapes With Parameters"
       },
       "bonus": false,
@@ -1913,11 +2342,14 @@
       ]
     },
     {
-      "chapter": 35,
-      "position": 5,
+      "chapter": 30,
+      "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - createTwoParamTriangle_virtual"
+        ],
         "progression": "Drawing Shapes With Parameters"
       },
       "bonus": false,
@@ -1935,12 +2367,15 @@
       ]
     },
     {
-      "chapter": 36,
-      "position": 6,
+      "chapter": 31,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check Your Understanding: Defining Functions"
+        "level_keys": [
+          "csp_U3_turtle_subgoal_q3_mc_2018_2019_virtual"
+        ],
+        "progression": "Check for Understanding: Defining Functions"
       },
       "bonus": false,
       "seeding_key": {
@@ -1957,12 +2392,15 @@
       ]
     },
     {
-      "chapter": 37,
-      "position": 7,
+      "chapter": 32,
+      "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "How to add comments to code"
+        "level_keys": [
+          "U3L08 how to add comments_virtual"
+        ],
+        "progression": "Adding Comments"
       },
       "bonus": false,
       "seeding_key": {
@@ -1979,11 +2417,14 @@
       ]
     },
     {
-      "chapter": 38,
-      "position": 8,
+      "chapter": 33,
+      "position": 7,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - introUnderTheSea_virtual"
+        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
       "bonus": false,
@@ -2001,11 +2442,14 @@
       ]
     },
     {
-      "chapter": 39,
-      "position": 9,
+      "chapter": 34,
+      "position": 8,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - paramsToStarfish_virtual"
+        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
       "bonus": false,
@@ -2023,11 +2467,14 @@
       ]
     },
     {
-      "chapter": 40,
-      "position": 10,
+      "chapter": 35,
+      "position": 9,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - seaGrass_virtual"
+        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
       "bonus": false,
@@ -2045,11 +2492,14 @@
       ]
     },
     {
-      "chapter": 41,
-      "position": 11,
+      "chapter": 36,
+      "position": 10,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - fish_virtual"
+        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
       "bonus": false,
@@ -2067,11 +2517,14 @@
       ]
     },
     {
-      "chapter": 42,
-      "position": 12,
+      "chapter": 37,
+      "position": 11,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - multiParamFish_virtual"
+        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
       "bonus": false,
@@ -2089,11 +2542,14 @@
       ]
     },
     {
-      "chapter": 43,
-      "position": 13,
+      "chapter": 38,
+      "position": 12,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - randomInput_virtual"
+        ],
         "progression": "Under the Sea Drawing with Parameters"
       },
       "bonus": false,
@@ -2111,11 +2567,14 @@
       ]
     },
     {
-      "chapter": 44,
-      "position": 14,
+      "chapter": 39,
+      "position": 13,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L08 - freePlay_virtual"
+        ],
         "progression": "Challenge: Continue Your Drawing With More Functions"
       },
       "bonus": false,
@@ -2133,12 +2592,15 @@
       ]
     },
     {
-      "chapter": 45,
-      "position": 15,
+      "chapter": 40,
+      "position": 14,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
-        "progression": "Check Your Understanding"
+        "level_keys": [
+          "CSP U3L4 Virtual CFU"
+        ],
+        "progression": "Check for Understanding"
       },
       "bonus": false,
       "seeding_key": {
@@ -2148,40 +2610,21 @@
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "",
         "script.name": "fcs6-beta-2024",
-        "activity_section.key": "d5680202-3c62-4df4-add9-fe5bc57e7a74"
+        "activity_section.key": "d92150c9-3035-484f-917e-2234425c42b7"
       },
       "level_keys": [
         "CSP U3L4 Virtual CFU"
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 41,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Using Loops"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "csp_applab_loops_virtual"
+        "level_keys": [
+          "U3L07 - introSquare_virtual"
         ],
-        "lesson.key": "Looping and Random Numbers",
-        "lesson_group.key": "",
-        "script.name": "fcs6-beta-2024",
-        "activity_section.key": "45ddf5d8-5aff-4352-9289-d90e30c556e1"
-      },
-      "level_keys": [
-        "csp_applab_loops_virtual"
-      ]
-    },
-    {
-      "chapter": 47,
-      "position": 2,
-      "activity_section_position": 1,
-      "assessment": false,
-      "properties": {
         "progression": "Introduction to Loops"
       },
       "bonus": false,
@@ -2199,11 +2642,14 @@
       ]
     },
     {
-      "chapter": 48,
-      "position": 3,
+      "chapter": 42,
+      "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - randomSquare_virtual"
+        ],
         "progression": "Introduction to Loops"
       },
       "bonus": false,
@@ -2221,11 +2667,14 @@
       ]
     },
     {
-      "chapter": 49,
-      "position": 4,
+      "chapter": 43,
+      "position": 3,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - randomDots1_virtual"
+        ],
         "progression": "Introduction to Loops"
       },
       "bonus": false,
@@ -2243,11 +2692,14 @@
       ]
     },
     {
-      "chapter": 50,
-      "position": 5,
+      "chapter": 44,
+      "position": 4,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - loopsWithRandom_virtual"
+        ],
         "progression": "Introduction to Loops"
       },
       "bonus": false,
@@ -2265,11 +2717,14 @@
       ]
     },
     {
-      "chapter": 51,
-      "position": 6,
+      "chapter": 45,
+      "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - topDownDesign_virtual"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
       "bonus": false,
@@ -2287,11 +2742,14 @@
       ]
     },
     {
-      "chapter": 52,
-      "position": 7,
+      "chapter": 46,
+      "position": 6,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - bubbles_virtual"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
       "bonus": false,
@@ -2309,11 +2767,14 @@
       ]
     },
     {
-      "chapter": 53,
-      "position": 8,
+      "chapter": 47,
+      "position": 7,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - fish_virtual"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
       "bonus": false,
@@ -2331,11 +2792,14 @@
       ]
     },
     {
-      "chapter": 54,
-      "position": 9,
+      "chapter": 48,
+      "position": 8,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - seaStar_virtual"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
       "bonus": false,
@@ -2353,11 +2817,14 @@
       ]
     },
     {
-      "chapter": 55,
-      "position": 10,
+      "chapter": 49,
+      "position": 9,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - seaGrass_virtual"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
       "bonus": false,
@@ -2375,11 +2842,14 @@
       ]
     },
     {
-      "chapter": 56,
-      "position": 11,
+      "chapter": 50,
+      "position": 10,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - allSeaGrass_virtual"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
       "bonus": false,
@@ -2397,11 +2867,14 @@
       ]
     },
     {
-      "chapter": 57,
-      "position": 12,
+      "chapter": 51,
+      "position": 11,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3L07 - sunBeams_virtual"
+        ],
         "progression": "Using Loops to Add Detail to Your Drawing"
       },
       "bonus": false,
@@ -2419,12 +2892,15 @@
       ]
     },
     {
-      "chapter": 58,
-      "position": 13,
+      "chapter": 52,
+      "position": 12,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Project: Under the Sea"
+        "level_keys": [
+          "U3L07 - Free Play Loops and Random_virtual"
+        ],
+        "progression": "Challenge: Under the Sea"
       },
       "bonus": false,
       "seeding_key": {
@@ -2441,11 +2917,14 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 53,
       "position": 1,
       "activity_section_position": 1,
-      "assessment": false,
+      "assessment": true,
       "properties": {
+        "level_keys": [
+          "Free_play_digital_scene_virtual"
+        ],
         "progression": "Personal Digital Scene"
       },
       "bonus": false,
@@ -2473,31 +2952,7 @@
         "lesson.key": "The Need for Programming Languages",
         "lesson_group.key": "",
         "script.name": "fcs6-beta-2024",
-        "activity_section.key": "5d8c6c53-090d-4078-83cc-8105a22dbdc1"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSP Pre-Unit Pulse - Algorithms Q1",
-        "script_level.level_keys": [
-          "CSP Pre-Unit Pulse - Algorithms Q1"
-        ],
-        "lesson.key": "Algorithms Solve Problems",
-        "lesson_group.key": "",
-        "script.name": "fcs6-beta-2024",
-        "activity_section.key": "da906cbe-8163-44ef-bad8-0ab68cef170f"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSP Pre-Unit Pulse - Algorithms Q2",
-        "script_level.level_keys": [
-          "CSP Pre-Unit Pulse - Algorithms Q2"
-        ],
-        "lesson.key": "Algorithms Solve Problems",
-        "lesson_group.key": "",
-        "script.name": "fcs6-beta-2024",
-        "activity_section.key": "da906cbe-8163-44ef-bad8-0ab68cef170f"
+        "activity_section.key": "06baf804-e9aa-4a5f-8103-1931a7e32aa9"
       }
     },
     {
@@ -2509,19 +2964,7 @@
         "lesson.key": "Algorithms Solve Problems",
         "lesson_group.key": "",
         "script.name": "fcs6-beta-2024",
-        "activity_section.key": "2bd8bf81-d206-4c94-b02c-25fe614aca76"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csp_applab_turtle_virtual",
-        "script_level.level_keys": [
-          "csp_applab_turtle_virtual"
-        ],
-        "lesson.key": "Using Simple Commands",
-        "lesson_group.key": "",
-        "script.name": "fcs6-beta-2024",
-        "activity_section.key": "8af83a2f-531b-4616-a591-9b65c61fce45"
+        "activity_section.key": "ac893caa-b1f7-4c37-8bac-15420193002e"
       }
     },
     {
@@ -2570,18 +3013,6 @@
         "lesson_group.key": "",
         "script.name": "fcs6-beta-2024",
         "activity_section.key": "51c62c94-1572-46d4-aa57-0f538bbaf6db"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csp_applab_functions_virtual",
-        "script_level.level_keys": [
-          "csp_applab_functions_virtual"
-        ],
-        "lesson.key": "Creating Functions",
-        "lesson_group.key": "",
-        "script.name": "fcs6-beta-2024",
-        "activity_section.key": "8bf07143-d705-4efc-9ccb-f92d796246f1"
       }
     },
     {
@@ -2701,7 +3132,7 @@
         "lesson.key": "Creating Functions",
         "lesson_group.key": "",
         "script.name": "fcs6-beta-2024",
-        "activity_section.key": "de064b9a-8fbc-4a2a-a068-7ab28c55e32e"
+        "activity_section.key": "ccf94277-10c9-42ec-ba78-81e7e85926c9"
       }
     },
     {
@@ -2821,19 +3252,7 @@
         "lesson.key": "APIs and Function Parameters",
         "lesson_group.key": "",
         "script.name": "fcs6-beta-2024",
-        "activity_section.key": "fc154681-8685-4e5f-99e2-b1e0d7ce365c"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csp_applab_functions_parameters_virtual",
-        "script_level.level_keys": [
-          "csp_applab_functions_parameters_virtual"
-        ],
-        "lesson.key": "Creating functions with Parameters",
-        "lesson_group.key": "",
-        "script.name": "fcs6-beta-2024",
-        "activity_section.key": "e549e8c4-c95e-44f3-871a-387d09d3bf14"
+        "activity_section.key": "e83db2e3-6fad-4f2f-8852-cacb156a675e"
       }
     },
     {
@@ -3001,19 +3420,7 @@
         "lesson.key": "Creating functions with Parameters",
         "lesson_group.key": "",
         "script.name": "fcs6-beta-2024",
-        "activity_section.key": "d5680202-3c62-4df4-add9-fe5bc57e7a74"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "csp_applab_loops_virtual",
-        "script_level.level_keys": [
-          "csp_applab_loops_virtual"
-        ],
-        "lesson.key": "Looping and Random Numbers",
-        "lesson_group.key": "",
-        "script.name": "fcs6-beta-2024",
-        "activity_section.key": "45ddf5d8-5aff-4352-9289-d90e30c556e1"
+        "activity_section.key": "d92150c9-3035-484f-917e-2234425c42b7"
       }
     },
     {
@@ -3176,7 +3583,7 @@
   "resources": [
     {
       "name": "Algorithms Solve Problems",
-      "url": "https://docs.google.com/presentation/d/1m-AeFFpQ6oNfVzHNL9OqDmn3ocoZw8rj6ZanCFlgq_Q/template/preview",
+      "url": "https://docs.google.com/presentation/d/1D79uUJmzvR1YH1FBsANlCobBZEmFy3CTnl4R8MnhzRQ/edit?usp=sharing",
       "key": "algorithms_solve_problems",
       "properties": {
         "audience": "Teacher",
@@ -3187,15 +3594,144 @@
       }
     },
     {
-      "name": "Algorithms (Unit Slides)",
-      "url": "https://docs.google.com/presentation/d/1bJ1adhM_5CfPlIHdlEZbhPITohq2PrE_byGwSZM2XqM/edit?usp=sharing",
-      "key": "algorithms_unit_slides_",
+      "name": "All Code",
+      "url": "/s/fcs6-beta-2024/code",
+      "key": "all_code",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_code"
+      }
+    },
+    {
+      "name": "All Resources",
+      "url": "/s/fcs6-beta-2024/resources",
+      "key": "all_resources",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_resources"
+      }
+    },
+    {
+      "name": "All Standards",
+      "url": "/s/fcs6-beta-2024/standards",
+      "key": "all_standards",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_standards"
+      }
+    },
+    {
+      "name": "All Vocabulary",
+      "url": "/s/fcs6-beta-2024/vocab",
+      "key": "all_vocabulary",
+      "properties": {
+        "is_rollup": true
+      },
+      "seeding_key": {
+        "resource.key": "all_vocabulary"
+      }
+    },
+    {
+      "name": "APIs and Function Parameters",
+      "url": "https://docs.google.com/presentation/d/1toj1-S60v1uE2ZCFXjNu52osmLnVkJ_r-QLWvY6aZXc/edit?usp=sharing",
+      "key": "apis_and_function_parameters",
       "properties": {
         "audience": "Teacher",
         "type": "Slides"
       },
       "seeding_key": {
-        "resource.key": "algorithms_unit_slides_"
+        "resource.key": "apis_and_function_parameters"
+      }
+    },
+    {
+      "name": "Creating Functions",
+      "url": "https://docs.google.com/presentation/d/1a3s1wsH7swRDIdBA5RVzR8wt3vpXB3_F7rcWrzCYgVI/edit?usp=sharing",
+      "key": "creating_functions",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "creating_functions"
+      }
+    },
+    {
+      "name": "Creating Functions with Parameters",
+      "url": "https://docs.google.com/presentation/d/1iXK164VUxGGcGEqnCjkXF08Z7nTh_dTJXwfcOisY2AE/edit?usp=sharing",
+      "key": "creating_functions_with_parameters",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "creating_functions_with_parameters"
+      }
+    },
+    {
+      "name": "Defining and Calling Functions",
+      "url": "https://youtu.be/yPWQfa4CHbw",
+      "key": "defining_and_calling_functions",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "defining_and_calling_functions"
+      }
+    },
+    {
+      "name": "Design a Digital Scene Project Planning Guide",
+      "url": "https://docs.google.com/document/d/1GYZlDlCXq7p_LGYZFg7oRP64080_xeZx3-knMC7jXfQ/edit?usp=sharing",
+      "key": "design_a_digital_scene_project_planning_guide",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "design_a_digital_scene_project_planning_guide"
+      }
+    },
+    {
+      "name": "Digital Scene Project",
+      "url": "https://docs.google.com/presentation/d/1qi2aGrmNbYNXNbdaEyrBzyJDZmc3sngPN6X6H9co3R0/edit?usp=sharing",
+      "key": "digital_scene_project",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "digital_scene_project"
+      }
+    },
+    {
+      "name": "Functions with Parameters",
+      "url": "https://www.youtube.com/watch?v=k7Ji1E97-V0&feature=youtu.be",
+      "key": "functions_with_parameters",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "functions_with_parameters"
+      }
+    },
+    {
+      "name": "Looping and Random Numbers",
+      "url": "https://docs.google.com/presentation/d/1eQN8NW6PSjbcmtUhVxsJrqJl9waqctbYQM-kx5Tro80/edit?usp=sharing",
+      "key": "looping_and_random_numbers",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "looping_and_random_numbers"
       }
     },
     {
@@ -3212,7 +3748,7 @@
     },
     {
       "name": "The Need for Programming Languages",
-      "url": "https://docs.google.com/presentation/d/1vKDoFifrWW11cYJPtblcSb4OxFZJLKs9n4wLlWF4p3w/template/preview",
+      "url": "https://docs.google.com/presentation/d/1-3XjF4f0y_VD4w17p_ywB-qrgYNxSBNIbDYdpRSJpDg/edit?usp=sharing",
       "key": "the_need_for_programming_languages",
       "properties": {
         "audience": "Teacher",
@@ -3223,31 +3759,49 @@
       }
     },
     {
-      "name": "Unit 10 Journal (Digital)",
-      "url": "https://docs.google.com/presentation/d/154-pse0dsVK436ktT_HMZ4951vsIn8BK4Jg3sMrqoy0/edit?usp=drive_link",
-      "key": "unit_10_journal_digital_",
+      "name": "Turtle Programming",
+      "url": "https://youtu.be/i2KHYUhtOlM",
+      "key": "turtle_programming",
       "properties": {
         "audience": "Student",
-        "type": "Resource"
+        "type": "Video"
       },
       "seeding_key": {
-        "resource.key": "unit_10_journal_digital_"
+        "resource.key": "turtle_programming"
       }
     },
     {
-      "name": "Unit 10 Journal (Interactive Notebook)",
-      "url": "https://docs.google.com/presentation/d/1NNgv5tK3Dgs6H5jA5hf9F0W3vuybvI6B7qXTxiv6Y5I/edit?usp=drive_link",
-      "key": "unit_10_journal_interactive_notebook_",
+      "name": "Using Loops",
+      "url": "https://youtu.be/G8hfAk4PfOM",
+      "key": "using_loops",
       "properties": {
         "audience": "Student",
-        "type": "Resource"
+        "type": "Video"
       },
       "seeding_key": {
-        "resource.key": "unit_10_journal_interactive_notebook_"
+        "resource.key": "using_loops"
+      }
+    },
+    {
+      "name": "Using Simple Commands",
+      "url": "https://docs.google.com/presentation/d/1Zw_RMnTAE1oAudM4fgf23z2GS0bKR6LNykGL7qeFWSA/edit?usp=sharing",
+      "key": "using_simple_commands",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "using_simple_commands"
       }
     }
   ],
   "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "APIs and Function Parameters",
+        "resource.key": "apis_and_function_parameters"
+      }
+    },
     {
       "seeding_key": {
         "lesson.key": "Algorithms Solve Problems",
@@ -3256,20 +3810,50 @@
     },
     {
       "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "resource.key": "algorithms_unit_slides_"
+        "lesson.key": "Creating Functions",
+        "resource.key": "creating_functions"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "resource.key": "unit_10_journal_digital_"
+        "lesson.key": "Creating Functions",
+        "resource.key": "defining_and_calling_functions"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "resource.key": "unit_10_journal_interactive_notebook_"
+        "lesson.key": "Creating functions with Parameters",
+        "resource.key": "creating_functions_with_parameters"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Creating functions with Parameters",
+        "resource.key": "functions_with_parameters"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Looping and Random Numbers",
+        "resource.key": "looping_and_random_numbers"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Looping and Random Numbers",
+        "resource.key": "using_loops"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Make your own Digital Scene",
+        "resource.key": "design_a_digital_scene_project_planning_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Make your own Digital Scene",
+        "resource.key": "digital_scene_project"
       }
     },
     {
@@ -3283,15 +3867,60 @@
         "lesson.key": "Using Simple Commands",
         "resource.key": "pair_programming"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Simple Commands",
+        "resource.key": "turtle_programming"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Simple Commands",
+        "resource.key": "using_simple_commands"
+      }
     }
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "all_code",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_resources",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_standards",
+        "script.name": "fcs6-beta-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "all_vocabulary",
+        "script.name": "fcs6-beta-2024"
+      }
+    }
   ],
   "scripts_student_resources": [
 
   ],
   "vocabularies": [
+    {
+      "key": "abstraction",
+      "word": "abstraction",
+      "definition": "a simplified representation of something more complex",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "abstraction"
+      }
+    },
     {
       "key": "algorithm",
       "word": "Algorithm",
@@ -3300,6 +3929,56 @@
       },
       "seeding_key": {
         "vocabulary.key": "algorithm"
+      }
+    },
+    {
+      "key": "api",
+      "word": "API",
+      "definition": "a collection of commands made available to a programmer",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "api"
+      }
+    },
+    {
+      "key": "documentation",
+      "word": "documentation",
+      "definition": "a description of the behavior of a command, function, library, API, etc.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "documentation"
+      }
+    },
+    {
+      "key": "for_loop",
+      "word": "for loop",
+      "definition": "a type of loop that has a predetermined beginning, end, and increment (step interval)",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "for_loop"
+      }
+    },
+    {
+      "key": "function",
+      "word": "function",
+      "definition": "a named group of programming instructions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "function"
+      }
+    },
+    {
+      "key": "hexadecimal",
+      "word": "hexadecimal",
+      "definition": "a base-16 number system that uses sixteen distinct symbols 0-9 and A-F to represent numbers from 0 to 15",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "hexadecimal"
       }
     },
     {
@@ -3313,13 +3992,43 @@
       }
     },
     {
+      "key": "library",
+      "word": "library",
+      "definition": "a collection of functions, typically with a shared purpose",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "library"
+      }
+    },
+    {
+      "key": "loop",
+      "word": "loop",
+      "definition": "the action of doing something over and over again",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "loop"
+      }
+    },
+    {
       "key": "pair_programming",
       "word": "pair programming",
-      "definition": "A method of programming in which two programmers write code using a single computer. One programmer in the \"driver\" role uses the mouse and keyboard to actually write the code while a second acts as a \"navigator\", keeping track of the big picture, catching errors, and making suggestions. Programmers switch roles frequently and communicate throughout the process.",
+      "definition": "a method of programming in which two programmers write code using a single computer",
       "properties": {
       },
       "seeding_key": {
         "vocabulary.key": "pair_programming"
+      }
+    },
+    {
+      "key": "parameter",
+      "word": "parameter",
+      "definition": "an extra piece of information passed to a function to customize it for a specific need",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "parameter"
       }
     },
     {
@@ -3356,6 +4065,36 @@
   "lessons_vocabularies": [
     {
       "seeding_key": {
+        "lesson.key": "APIs and Function Parameters",
+        "vocabulary.key": "api"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "APIs and Function Parameters",
+        "vocabulary.key": "documentation"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "APIs and Function Parameters",
+        "vocabulary.key": "hexadecimal"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "APIs and Function Parameters",
+        "vocabulary.key": "library"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "APIs and Function Parameters",
+        "vocabulary.key": "parameter"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Algorithms Solve Problems",
         "vocabulary.key": "algorithm"
       }
@@ -3386,29 +4125,173 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "Creating Functions",
+        "vocabulary.key": "abstraction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Creating Functions",
+        "vocabulary.key": "function"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Looping and Random Numbers",
+        "vocabulary.key": "for_loop"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Looping and Random Numbers",
+        "vocabulary.key": "loop"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "Using Simple Commands",
         "vocabulary.key": "pair_programming"
       }
     }
   ],
   "lessons_programming_expressions": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "APIs and Function Parameters",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "arcLeft"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "APIs and Function Parameters",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "arcRight"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "APIs and Function Parameters",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "moveTo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "APIs and Function Parameters",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "penColor"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "APIs and Function Parameters",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "penRGB"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "APIs and Function Parameters",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "penWidth"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "APIs and Function Parameters",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "turnTo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Creating Functions",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "callMyFunction"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Creating Functions",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "functionParams_none"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Simple Commands",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "moveForward"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Simple Commands",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "penDown"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Simple Commands",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "penUp"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Simple Commands",
+        "programming_environment.name": "applab",
+        "programming_expression.key": "turnLeft"
+      }
+    }
   ],
   "objectives": [
     {
-      "key": "23aec374-d4ae-498d-b7e7-c07ed6344c27",
+      "key": "14489604-6384-4883-93f0-7dfc315d54b0",
       "properties": {
-        "description": "Use App Lab to write programs that create simple drawings with “turtle graphics.”"
+        "description": "Explain how loops function to perform repetitive tasks within a program"
       },
       "seeding_key": {
-        "lesson.key": "Using Simple Commands",
-        "objective.key": "23aec374-d4ae-498d-b7e7-c07ed6344c27"
+        "lesson.key": "Looping and Random Numbers",
+        "objective.key": "14489604-6384-4883-93f0-7dfc315d54b0"
+      }
+    },
+    {
+      "key": "25b49688-dbb5-4cf4-aa12-a6175c71eb86",
+      "properties": {
+        "description": "Describe how parameters enhance the functionality of a function"
+      },
+      "seeding_key": {
+        "lesson.key": "Creating functions with Parameters",
+        "objective.key": "25b49688-dbb5-4cf4-aa12-a6175c71eb86"
+      }
+    },
+    {
+      "key": "2c90e182-05b0-4f08-95d7-1f3af785a6c2",
+      "properties": {
+        "description": "Use documentation to understand and implement functions with parameters"
+      },
+      "seeding_key": {
+        "lesson.key": "APIs and Function Parameters",
+        "objective.key": "2c90e182-05b0-4f08-95d7-1f3af785a6c2"
+      }
+    },
+    {
+      "key": "5f351b2d-300d-46b0-b4e3-f564f8ca9b82",
+      "properties": {
+        "description": "Implement functions with parameters"
+      },
+      "seeding_key": {
+        "lesson.key": "Creating functions with Parameters",
+        "objective.key": "5f351b2d-300d-46b0-b4e3-f564f8ca9b82"
       }
     },
     {
       "key": "625d2236-b4b9-4680-94aa-5c1245cbfd53",
       "properties": {
-        "description": "Create a program with a partner following the pair programming model"
+        "description": "Develop solutions using pair programming"
       },
       "seeding_key": {
         "lesson.key": "Using Simple Commands",
@@ -3418,11 +4301,41 @@
     {
       "key": "97aeb772-dc56-484e-902c-4553e7928c7a",
       "properties": {
-        "description": "Explain different ways one might measure the efficiency of a program."
+        "description": "Explain different ways one might measure the efficiency of a program"
       },
       "seeding_key": {
         "lesson.key": "Using Simple Commands",
         "objective.key": "97aeb772-dc56-484e-902c-4553e7928c7a"
+      }
+    },
+    {
+      "key": "a0954040-02a9-49c0-8b93-e9140f33c091",
+      "properties": {
+        "description": "Use functions to create more efficient and organized code"
+      },
+      "seeding_key": {
+        "lesson.key": "Creating Functions",
+        "objective.key": "a0954040-02a9-49c0-8b93-e9140f33c091"
+      }
+    },
+    {
+      "key": "a41a4d17-3c7e-48cf-bc08-953d549c99f8",
+      "properties": {
+        "description": "Use functions, loops, and randomization to create dynamic and interactive scenes"
+      },
+      "seeding_key": {
+        "lesson.key": "Make your own Digital Scene",
+        "objective.key": "a41a4d17-3c7e-48cf-bc08-953d549c99f8"
+      }
+    },
+    {
+      "key": "ab3a22f8-8758-4ba0-afc9-0e4fe5f19789",
+      "properties": {
+        "description": "Explain the project development process and outcomes"
+      },
+      "seeding_key": {
+        "lesson.key": "Make your own Digital Scene",
+        "objective.key": "ab3a22f8-8758-4ba0-afc9-0e4fe5f19789"
       }
     },
     {
@@ -3433,6 +4346,16 @@
       "seeding_key": {
         "lesson.key": "The Need for Programming Languages",
         "objective.key": "b51587e2-595e-4b45-8679-b7e850f7a693"
+      }
+    },
+    {
+      "key": "ba782375-dacb-48d3-bd2a-32575f9bca29",
+      "properties": {
+        "description": "Assess the effectiveness of using functions by discussing their benefits and limitations"
+      },
+      "seeding_key": {
+        "lesson.key": "Creating Functions",
+        "objective.key": "ba782375-dacb-48d3-bd2a-32575f9bca29"
       }
     },
     {
@@ -3456,6 +4379,26 @@
       }
     },
     {
+      "key": "cf93e642-b1aa-4a20-a218-af6e6cdabcb5",
+      "properties": {
+        "description": "Describe the role and function of documentation in programming languages"
+      },
+      "seeding_key": {
+        "lesson.key": "APIs and Function Parameters",
+        "objective.key": "cf93e642-b1aa-4a20-a218-af6e6cdabcb5"
+      }
+    },
+    {
+      "key": "d6f84081-0926-4d9b-8bd7-0cffc9d78315",
+      "properties": {
+        "description": "Compare and contrast the use of loops versus functions in programming"
+      },
+      "seeding_key": {
+        "lesson.key": "Looping and Random Numbers",
+        "objective.key": "d6f84081-0926-4d9b-8bd7-0cffc9d78315"
+      }
+    },
+    {
       "key": "e0b5d819-bc32-4cb6-90c4-3fb71c44c3a2",
       "properties": {
         "description": "Explain that some algorithms may look or operate differently but still solve the same problem."
@@ -3474,77 +4417,136 @@
         "lesson.key": "Algorithms Solve Problems",
         "objective.key": "e3b47570-785e-4514-b965-4a55bb12cb46"
       }
+    },
+    {
+      "key": "f0d259a6-8e4f-4ebc-b520-407a54627622",
+      "properties": {
+        "description": "Use loops to complete various programming challenges"
+      },
+      "seeding_key": {
+        "lesson.key": "Looping and Random Numbers",
+        "objective.key": "f0d259a6-8e4f-4ebc-b520-407a54627622"
+      }
     }
   ],
   "lessons_standards": [
     {
       "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.A.1"
+        "lesson.key": "APIs and Function Parameters",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.A.2"
+        "lesson.key": "APIs and Function Parameters",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.A.3"
+        "lesson.key": "APIs and Function Parameters",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.A.4"
+        "lesson.key": "Creating Functions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.B.1"
+        "lesson.key": "Creating Functions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-CS-01"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.G.1"
+        "lesson.key": "Creating Functions",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.J.1"
+        "lesson.key": "Creating functions with Parameters",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-14"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.L.1"
+        "lesson.key": "Creating functions with Parameters",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.L.2"
+        "lesson.key": "Creating functions with Parameters",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
       }
     },
     {
       "seeding_key": {
-        "lesson.key": "Algorithms Solve Problems",
-        "framework.shortcode": "csp2021",
-        "standard.shortcode": "AAP-2.L.5"
+        "lesson.key": "Creating functions with Parameters",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Looping and Random Numbers",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-15"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Make your own Digital Scene",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Make your own Digital Scene",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Make your own Digital Scene",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-18"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Make your own Digital Scene",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Make your own Digital Scene",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-27"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Make your own Digital Scene",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-14"
       }
     },
     {
@@ -3580,6 +4582,20 @@
         "lesson.key": "The Need for Programming Languages",
         "framework.shortcode": "csta",
         "standard.shortcode": "3A-AP-23"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Simple Commands",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-AP-13"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Using Simple Commands",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-11"
       }
     }
   ],

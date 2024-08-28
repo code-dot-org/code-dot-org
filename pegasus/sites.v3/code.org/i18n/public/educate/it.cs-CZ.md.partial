@@ -17,9 +17,11 @@ theme: responsive
 
 ## Minimální podporované prohlížeče a platformy
 
+Počínaje červencem 2024 aktualizujeme minimální verze požadované pro prohlížeče a operační systémy. Zatímco staré verze mohou stále fungovat, nebudeme moci podporovat požadavky na opravy chyb ve starších verzích.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Prohlížeč
@@ -40,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Prohlížeč červenec '24
+        </th>
+        <tr>
+          <td>Chrome 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Mobilní Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Okraj 119.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Platforma
@@ -62,8 +86,30 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platforma červenec '24
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Servery k odblokování
@@ -80,16 +126,15 @@ Pro co nejlepší prožitek s veškerým obsahem od Code.org Vám doporučujeme 
 | **Používat simulátor internetu**                                                                         | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Používat Web Lab**                                                                                     | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Používat tlačítko sdílení Třídy Google**                                                               | `https://apis.google.com`                                                                                  |
-| **Použití datových sad App Lab**                                                                         | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Údaje o podpoře mobilů a tabletů
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Tablety většinou podporovány nejsou, s následujícími výjimkami:
+Všechny kurzy CS Discoveries, CS Principles, CS A a Intro to App Lab nejsou kompatibilní s tablety nebo mobilními zařízeními - vyžaduje se plná klávesnice a myš (nebo touchpad). Tablety většinou podporovány nejsou, s následujícími výjimkami:
 
 - Microsoft Surface Pro s externí klávesnicí
 - iPad, na němž je spuštěn iPadOS 13.4 nebo novější s externí klávesnicí a externí myší nebo touchpadem
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+Veškerý další obsah, jako jsou kurzy K-5 (Základy informatiky) a aktivity Hour of Code jsou kompatibilní na iPadech a dalších moderních tabletech a přenosných nebo stolních počítačích.
 
 ### Mobilní telefony
 
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+Toto je přehrávač používaný v těchto výukových materiálech. Pokusí se zobrazit video přes YouTube, a jestliže bude YouTube zablokováno, zobrazí namísto něho video umístěné na serveru Code.org pomocí našeho „náhradního“ prohlížeče.
 
 ### Nelze přehrávat video?
 
-If video does not work, you can email us at support@code.org.
+Jestliže video nefunguje, můžete nám poslat e-mail na adresu support@code.org.
 
-However, you can still use our tutorials without video.
+I tak však můžete používat naše výukové kurzy bez videa.
 
 1. Zařídili jsme, aby všechna naše videa [bylo možno stáhnout najednou](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). Jestliže má Vaše škola nízkou přenosovou šířku, doporučujeme Vám videa stáhnout a zobrazovat je studentům na společnou obrazovku.
 2. Do našich výukových kurzů jsme integrovali zelenou ikonu odkazu ke stahování <img src="/images/green-download.png" width=25 height=25 /> pro jednotlivá videa, která studentům umožní stahovat si jednotlivá výuková videa.
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## Speciální nastavení pro uživatele Google Apps/G-Suite
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+Jestliže jste správcem G-suite, nezapomeňte si zkontrolovat, jaká jsou nastavení Vašich omezení pro YouTube. Jestliže jste specifikovali nastavení „Přísně omezený přístup na YouTube“ nebo jestliže se Vám zobrazují zprávy uvádějící „toto video bylo omezeno“, můžete přidat náš kanál do schváleného seznamu kanálů. Chcete-li se dozvědět, jak přidat náš kanál do sezanmu schválených, podívejte se do  [tohoto průvodce](https://support.google.com/a/answer/6245597) od společnosti Google. Chcete-li se dozvědět více o různých nastaveních a o tom, které je nejlepší pro Vaši třídu, můžete se podívat také do [tohoto průvodce](https://support.google.com/a/answer/6212415?hl=en).
 
 ## Ještě stále máte problémy?
 
-We'll help you out - just email us at support@code.org!
+Pomůžeme Vám — jen nám napište e-mail na adresu support@code.org!

@@ -1,6 +1,6 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {ReviewStates} from '@cdo/apps/templates/feedback/types';
@@ -10,7 +10,7 @@ import EditableReviewState from '@cdo/apps/templates/instructions/teacherFeedbac
 import {UnconnectedEditableTeacherFeedback as EditableTeacherFeedback} from '@cdo/apps/templates/instructions/teacherFeedback/EditableTeacherFeedback';
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 
-import {expect, assert} from '../../../../util/reconfiguredChai';
+import {expect, assert} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const DEFAULT_PROPS = {
   user: 5,

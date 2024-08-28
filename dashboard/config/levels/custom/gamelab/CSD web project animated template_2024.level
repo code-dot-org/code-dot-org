@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2023-11-28T21:12:00.000Z",
   "level_num": "custom",
@@ -80,14 +81,21 @@
       "alpha": null,
       "sprite.height": null,
       "sprite.width": null,
-      "World.frameRate": null
+      "World.frameRate": null,
+      "strokeWeight": null,
+      "arc": null,
+      "point": null,
+      "regularPolygon": null,
+      "shape": null
     },
     "validation_enabled": "false",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T21:12:00.173+00:00\",\"changed\":[\"cloned from \\\"CSD web project animated template_2023\\\"\"],\"cloned_from\":\"CSD web project animated template_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T21:12:00.173+00:00\",\"changed\":[\"cloned from \\\"CSD web project animated template_2023\\\"\"],\"cloned_from\":\"CSD web project animated template_2023\"},{\"changed_at\":\"2024-04-30 15:46:54 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

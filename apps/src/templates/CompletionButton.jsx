@@ -1,7 +1,9 @@
-import msg from '@cdo/locale';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+
+import msg from '@cdo/locale';
+
 import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 
 /**

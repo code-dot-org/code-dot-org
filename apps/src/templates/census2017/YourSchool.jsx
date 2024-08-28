@@ -1,17 +1,21 @@
 import PropTypes from 'prop-types';
-
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import i18n from '@cdo/locale';
+
+import Notification, {
+  NotificationType,
+} from '../../sharedComponents/Notification';
+import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
+
 import {
   UnconnectedCensusForm as CensusForm,
   censusFormPrefillDataShape,
 } from './CensusForm';
-import YourSchoolResources from './YourSchoolResources';
-import Notification, {NotificationType} from '../Notification';
-import i18n from '@cdo/locale';
-import SchoolAutocompleteDropdown from '../SchoolAutocompleteDropdown';
 import CensusMapReplacement from './CensusMapReplacement';
-import fontConstants from '@cdo/apps/fontConstants';
+import YourSchoolResources from './YourSchoolResources';
 
 class YourSchool extends Component {
   static propTypes = {

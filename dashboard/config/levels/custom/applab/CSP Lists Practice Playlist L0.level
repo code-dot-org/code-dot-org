@@ -72,9 +72,12 @@
     "preload_asset_list": null,
     "encrypted_examples": [
 
-    ]
+    ],
+    "display_name": "Build a Playlist",
+    "bubble_choice_description": "Build an app that helps a user to create a playlist of Top 5 tunes.",
+    "thumbnail_url": "https://images.code.org/cf44b5dc50aff51cdf2982f3314480b8-Playlist.png"
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-17T20:58:34.215+00:00\",\"changed\":[\"cloned from \\\"CSP Lists Practice Birds L0\\\"\"],\"cloned_from\":\"CSP Lists Practice Birds L0\"},{\"changed_at\":\"2024-04-17 21:02:11 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"start_html\",\"long_instructions\",\"data_library_tables\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-17T20:58:34.215+00:00\",\"changed\":[\"cloned from \\\"CSP Lists Practice Birds L0\\\"\"],\"cloned_from\":\"CSP Lists Practice Birds L0\"},{\"changed_at\":\"2024-04-17 21:02:11 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"start_html\",\"long_instructions\",\"data_library_tables\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-04-19 18:51:48 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

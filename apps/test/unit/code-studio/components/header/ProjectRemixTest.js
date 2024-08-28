@@ -1,11 +1,12 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
-import {shallow} from 'enzyme';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
-import {expect} from '../../../../util/reconfiguredChai';
-import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
-import * as utils from '@cdo/apps/utils';
 import {UnconnectedProjectRemix as ProjectRemix} from '@cdo/apps/code-studio/components/header/ProjectRemix';
+import * as utils from '@cdo/apps/utils';
+
+import {expect} from '../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+import {replaceOnWindow, restoreOnWindow} from '../../../../util/testUtils';
 
 const defaultProps = {
   refreshProjectName: () => {},
@@ -59,11 +60,8 @@ describe('ProjectRemix', () => {
     const wrapper = shallow(<ProjectRemix {...defaultProps} />);
     wrapper.simulate('click');
     expect(utils.navigateToHref.calledOnce).to.be.true;
-    expect(
-      utils.navigateToHref.calledWith(
-        '/users/sign_in?user_return_to=/context.html'
-      )
-    ).to.be.true;
+    expect(utils.navigateToHref.calledWith('/users/sign_in?user_return_to=/'))
+      .to.be.true;
 
     utils.navigateToHref.restore();
   });

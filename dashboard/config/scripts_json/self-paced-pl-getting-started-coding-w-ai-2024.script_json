@@ -1,0 +1,1410 @@
+{
+  "script": {
+    "name": "self-paced-pl-getting-started-coding-w-ai-2024",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2024-06-18 18:23:46 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "self-paced-pl-getting-started-coding-w-ai-2024"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Welcome to Codeorg",
+      "name": "Welcome to Code.org",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 1,
+      "properties": {
+        "overview": "**You will:**\n\n* Get an introduction to Code.org's mission.\n\n**Suggested Time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Get an introduction to Code.org's mission.\n\n**Suggested Time:** 10 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024"
+      }
+    },
+    {
+      "key": "Navigating the Codeorg Learning Platform",
+      "name": "Navigating the Code.org Learning Platform",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 2,
+      "properties": {
+        "overview": "**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n\n**Suggested time:** 35 minutes",
+        "student_overview": "**You will:**\n\n* Navigate the Code.org website and teacher tools.\n* Set up a classroom section.\n\n**Suggested time:** 35 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024"
+      }
+    },
+    {
+      "key": "Navigating Lesson Plans and Resources",
+      "name": "Navigating Lesson Plans and Resources",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 3,
+      "properties": {
+        "overview": "**You will:**\n\n* Locate and use course lesson plans and teacher resources.\n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Locate and use course lesson plans and teacher resources.\n\n**Suggested time:** 20 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024"
+      }
+    },
+    {
+      "key": "Navigating Support",
+      "name": "Navigating Support",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": false,
+      "relative_position": 4,
+      "properties": {
+        "overview": "**You will:**\n\n* Access support while teaching Code.org curricula. \n\n**Suggested time:** 15 minutes",
+        "student_overview": "**You will:**\n\n* Access support while teaching Code.org curricula. \n\n**Suggested time:** 15 minutes"
+      },
+      "seeding_key": {
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "e4f16ef3-0631-4344-a81f-7179fab98835",
+      "position": 1,
+      "properties": {
+        "duration": 10
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e4f16ef3-0631-4344-a81f-7179fab98835",
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024"
+      }
+    },
+    {
+      "key": "cc595278-d68a-4c54-9672-015123c0c8a5",
+      "position": 1,
+      "properties": {
+        "duration": 35
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cc595278-d68a-4c54-9672-015123c0c8a5",
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024"
+      }
+    },
+    {
+      "key": "90bc7b94-f48a-4388-a265-acbb5267c435",
+      "position": 1,
+      "properties": {
+        "duration": 20
+      },
+      "seeding_key": {
+        "lesson_activity.key": "90bc7b94-f48a-4388-a265-acbb5267c435",
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024"
+      }
+    },
+    {
+      "key": "802ee3a0-ffcf-4869-a26f-84d831981d46",
+      "position": 1,
+      "properties": {
+        "duration": 15
+      },
+      "seeding_key": {
+        "lesson_activity.key": "802ee3a0-ffcf-4869-a26f-84d831981d46",
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "d390184e-cd4e-4cee-9584-f7ac32d37b93",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "d390184e-cd4e-4cee-9584-f7ac32d37b93",
+        "lesson_activity.key": "e4f16ef3-0631-4344-a81f-7179fab98835"
+      }
+    },
+    {
+      "key": "3077d949-0f23-467e-b779-d30a4c5d173a",
+      "position": 2,
+      "properties": {
+        "progression_name": "Welcome to Code.org"
+      },
+      "seeding_key": {
+        "activity_section.key": "3077d949-0f23-467e-b779-d30a4c5d173a",
+        "lesson_activity.key": "e4f16ef3-0631-4344-a81f-7179fab98835"
+      }
+    },
+    {
+      "key": "e1453019-2857-4f97-97f6-1a4793bca3c9",
+      "position": 3,
+      "properties": {
+        "progression_name": "Welcome to Creating Apps for Devices"
+      },
+      "seeding_key": {
+        "activity_section.key": "e1453019-2857-4f97-97f6-1a4793bca3c9",
+        "lesson_activity.key": "e4f16ef3-0631-4344-a81f-7179fab98835"
+      }
+    },
+    {
+      "key": "43085e68-316a-4591-b778-f9ba5e087c11",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "43085e68-316a-4591-b778-f9ba5e087c11",
+        "lesson_activity.key": "cc595278-d68a-4c54-9672-015123c0c8a5"
+      }
+    },
+    {
+      "key": "fbc8b0fb-aba1-4d6f-bb4e-12fc01f1159d",
+      "position": 2,
+      "properties": {
+        "progression_name": "Tour the Code.org Learning Platform"
+      },
+      "seeding_key": {
+        "activity_section.key": "fbc8b0fb-aba1-4d6f-bb4e-12fc01f1159d",
+        "lesson_activity.key": "cc595278-d68a-4c54-9672-015123c0c8a5"
+      }
+    },
+    {
+      "key": "bc0bc8b5-02da-4012-8039-10bd60276036",
+      "position": 3,
+      "properties": {
+        "progression_name": "Set Up a Class Section"
+      },
+      "seeding_key": {
+        "activity_section.key": "bc0bc8b5-02da-4012-8039-10bd60276036",
+        "lesson_activity.key": "cc595278-d68a-4c54-9672-015123c0c8a5"
+      }
+    },
+    {
+      "key": "f523edf3-9b59-4c38-904b-7a602b92bd2e",
+      "position": 4,
+      "properties": {
+        "progression_name": "Explore the Student View"
+      },
+      "seeding_key": {
+        "activity_section.key": "f523edf3-9b59-4c38-904b-7a602b92bd2e",
+        "lesson_activity.key": "cc595278-d68a-4c54-9672-015123c0c8a5"
+      }
+    },
+    {
+      "key": "52e2aad8-8f01-481f-957d-11acc4637af6",
+      "position": 5,
+      "properties": {
+        "progression_name": "Track Student Progress and Provide Feedback"
+      },
+      "seeding_key": {
+        "activity_section.key": "52e2aad8-8f01-481f-957d-11acc4637af6",
+        "lesson_activity.key": "cc595278-d68a-4c54-9672-015123c0c8a5"
+      }
+    },
+    {
+      "key": "b2699954-4fb2-4d12-9c81-73ec0c879b36",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "b2699954-4fb2-4d12-9c81-73ec0c879b36",
+        "lesson_activity.key": "90bc7b94-f48a-4388-a265-acbb5267c435"
+      }
+    },
+    {
+      "key": "d03e9be4-1c19-43ac-a0c1-6897778b65b1",
+      "position": 2,
+      "properties": {
+        "progression_name": "Explore Course Lesson Plans"
+      },
+      "seeding_key": {
+        "activity_section.key": "d03e9be4-1c19-43ac-a0c1-6897778b65b1",
+        "lesson_activity.key": "90bc7b94-f48a-4388-a265-acbb5267c435"
+      }
+    },
+    {
+      "key": "19554c96-9711-49e0-bb67-c94bbcadbcc8",
+      "position": 3,
+      "properties": {
+        "progression_name": "Explore Additional Teacher Resources"
+      },
+      "seeding_key": {
+        "activity_section.key": "19554c96-9711-49e0-bb67-c94bbcadbcc8",
+        "lesson_activity.key": "90bc7b94-f48a-4388-a265-acbb5267c435"
+      }
+    },
+    {
+      "key": "22822a5a-cc7b-4f0e-bb88-2332dcbff232",
+      "position": 1,
+      "properties": {
+        "progression_name": "Overview"
+      },
+      "seeding_key": {
+        "activity_section.key": "22822a5a-cc7b-4f0e-bb88-2332dcbff232",
+        "lesson_activity.key": "802ee3a0-ffcf-4869-a26f-84d831981d46"
+      }
+    },
+    {
+      "key": "2e6dad97-55dc-4121-8f61-72a88c4d3343",
+      "position": 2,
+      "properties": {
+        "progression_name": "Additional support for teachers"
+      },
+      "seeding_key": {
+        "activity_section.key": "2e6dad97-55dc-4121-8f61-72a88c4d3343",
+        "lesson_activity.key": "802ee3a0-ffcf-4869-a26f-84d831981d46"
+      }
+    },
+    {
+      "key": "610086be-4ca7-4968-885c-9b37c924c5c8",
+      "position": 3,
+      "properties": {
+        "progression_name": "Wrap Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "610086be-4ca7-4968-885c-9b37c924c5c8",
+        "lesson_activity.key": "802ee3a0-ffcf-4869-a26f-84d831981d46"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_physical-computing_24"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "d390184e-cd4e-4cee-9584-f7ac32d37b93"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-Overview-Welcome_physical-computing_24"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_ModuleOverview_24"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "d390184e-cd4e-4cee-9584-f7ac32d37b93"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-Overview-Welcome_ModuleOverview_24"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-24-mod1-Certificate_24"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "d390184e-cd4e-4cee-9584-f7ac32d37b93"
+      },
+      "level_keys": [
+        "SP-VPL-24-mod1-Certificate_24"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Welcome to Code.org"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_24"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "3077d949-0f23-467e-b779-d30a4c5d173a"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-welcome-vid_24"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Welcome to Code.org"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_physical-computing_24"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "3077d949-0f23-467e-b779-d30a4c5d173a"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-CSisFoundational_physical-computing_24"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Welcome to Code.org"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Advice-TipVid_24"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "3077d949-0f23-467e-b779-d30a4c5d173a"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod1-Advice-TipVid_24"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Overview-WebsiteNavigation_physical-computing_24"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "43085e68-316a-4591-b778-f9ba5e087c11"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-Overview-WebsiteNavigation_physical-computing_24"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Tour the Code.org Learning Platform"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-tour-vid_24"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "fbc8b0fb-aba1-4d6f-bb4e-12fc01f1159d"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-tour-vid_24"
+      ]
+    },
+    {
+      "chapter": 9,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Tour the Code.org Learning Platform"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-VerifiedTeacher_physical-computing_24"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "fbc8b0fb-aba1-4d6f-bb4e-12fc01f1159d"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-Task-VerifiedTeacher_physical-computing_24"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Set Up a Class Section"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ClassSection-vid_24"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "bc0bc8b5-02da-4012-8039-10bd60276036"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ClassSection-vid_24"
+      ]
+    },
+    {
+      "chapter": 11,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Set Up a Class Section"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-LMSIntegrations_24"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "bc0bc8b5-02da-4012-8039-10bd60276036"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-LMSIntegrations_24"
+      ]
+    },
+    {
+      "chapter": 12,
+      "position": 6,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Set Up a Class Section"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-ClassSection_physical-computing_24"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "bc0bc8b5-02da-4012-8039-10bd60276036"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-Task-ClassSection_physical-computing_24"
+      ]
+    },
+    {
+      "chapter": 13,
+      "position": 7,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Set Up a Class Section"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL_21-mod2-MakeAPlan-StudentLogIn_physical-computing_24"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "bc0bc8b5-02da-4012-8039-10bd60276036"
+      },
+      "level_keys": [
+        "SP-VPL_21-mod2-MakeAPlan-StudentLogIn_physical-computing_24"
+      ]
+    },
+    {
+      "chapter": 14,
+      "position": 8,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore the Student View"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-StudentExperience-vid_24"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "f523edf3-9b59-4c38-904b-7a602b92bd2e"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-StudentExperience-vid_24"
+      ]
+    },
+    {
+      "chapter": 15,
+      "position": 9,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore the Student View"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-StudentView_physical-computing_24"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "f523edf3-9b59-4c38-904b-7a602b92bd2e"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-Task-StudentView_physical-computing_24"
+      ]
+    },
+    {
+      "chapter": 16,
+      "position": 10,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Track Student Progress and Provide Feedback"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ProgessAndFeedback-vid_24"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "52e2aad8-8f01-481f-957d-11acc4637af6"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ProgessAndFeedback-vid_24"
+      ]
+    },
+    {
+      "chapter": 17,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": true,
+      "properties": {
+        "progression": "Track Student Progress and Provide Feedback"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-progress-c4u_physical-computing_24"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "52e2aad8-8f01-481f-957d-11acc4637af6"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-progress-c4u_physical-computing_24"
+      ]
+    },
+    {
+      "chapter": 18,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": true,
+      "properties": {
+        "progression": "Track Student Progress and Provide Feedback"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-feedback-c4u_physical-computing_24"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "52e2aad8-8f01-481f-957d-11acc4637af6"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-feedback-c4u_physical-computing_24"
+      ]
+    },
+    {
+      "chapter": 19,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-TeachersInClassrooms_physical-computing_24"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "b2699954-4fb2-4d12-9c81-73ec0c879b36"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-TeachersInClassrooms_physical-computing_24"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore Course Lesson Plans"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-NavigatingLessonPlans_physical-computing_24"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "d03e9be4-1c19-43ac-a0c1-6897778b65b1"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-NavigatingLessonPlans_physical-computing_24"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore Course Lesson Plans"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ExploreLessonPlan_physical-computing_24"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "d03e9be4-1c19-43ac-a0c1-6897778b65b1"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ExploreLessonPlan_physical-computing_24"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore Course Lesson Plans"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL_21-mod2-MakeAPlan-LessonPlanning_physical-computing_24"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "d03e9be4-1c19-43ac-a0c1-6897778b65b1"
+      },
+      "level_keys": [
+        "SP-VPL_21-mod2-MakeAPlan-LessonPlanning_physical-computing_24"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore Additional Teacher Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-NavigatingTeacherResources_physical-computing_24"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "19554c96-9711-49e0-bb67-c94bbcadbcc8"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-NavigatingTeacherResources_physical-computing_24"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 6,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Explore Additional Teacher Resources"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-UnitCalendar_physical-computing_24"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "19554c96-9711-49e0-bb67-c94bbcadbcc8"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-UnitCalendar_physical-computing_24"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Overview"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-TaskResources_physical-computing_24"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "22822a5a-cc7b-4f0e-bb88-2332dcbff232"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-TaskResources_physical-computing_24"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Additional support for teachers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-navigating support_physical-computing_24"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "2e6dad97-55dc-4121-8f61-72a88c4d3343"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-navigating support_physical-computing_24"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Additional support for teachers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ReadSupportArticles_physical-computing_24"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "2e6dad97-55dc-4121-8f61-72a88c4d3343"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ReadSupportArticles_physical-computing_24"
+      ]
+    },
+    {
+      "chapter": 28,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Additional support for teachers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ReportAProblem_physical-computing_24"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "2e6dad97-55dc-4121-8f61-72a88c4d3343"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-ReportAProblem_physical-computing_24"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Additional support for teachers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-JoinTheTeacherCommunity_physical-computing_24"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "2e6dad97-55dc-4121-8f61-72a88c4d3343"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-JoinTheTeacherCommunity_physical-computing_24"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": true,
+      "properties": {
+        "progression": "Additional support for teachers"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Support-c4u_physical-computing_24"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "2e6dad97-55dc-4121-8f61-72a88c4d3343"
+      },
+      "level_keys": [
+        "SP-VPL-21-mod2-Support-c4u_physical-computing_24"
+      ]
+    },
+    {
+      "chapter": 31,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Wrap Up"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-CSD-Unit1-Module1WrapUp_24"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "610086be-4ca7-4968-885c-9b37c924c5c8"
+      },
+      "level_keys": [
+        "SP-CSD-Unit1-Module1WrapUp_24"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-Overview-Welcome_physical-computing_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_physical-computing_24"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "d390184e-cd4e-4cee-9584-f7ac32d37b93"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-Overview-Welcome_ModuleOverview_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Overview-Welcome_ModuleOverview_24"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "d390184e-cd4e-4cee-9584-f7ac32d37b93"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-24-mod1-Certificate_24",
+        "script_level.level_keys": [
+          "SP-VPL-24-mod1-Certificate_24"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "d390184e-cd4e-4cee-9584-f7ac32d37b93"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-welcome-vid_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-welcome-vid_24"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "3077d949-0f23-467e-b779-d30a4c5d173a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-CSisFoundational_physical-computing_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-CSisFoundational_physical-computing_24"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "3077d949-0f23-467e-b779-d30a4c5d173a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod1-Advice-TipVid_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod1-Advice-TipVid_24"
+        ],
+        "lesson.key": "Welcome to Codeorg",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "3077d949-0f23-467e-b779-d30a4c5d173a"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-Overview-WebsiteNavigation_physical-computing_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Overview-WebsiteNavigation_physical-computing_24"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "43085e68-316a-4591-b778-f9ba5e087c11"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-tour-vid_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-tour-vid_24"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "fbc8b0fb-aba1-4d6f-bb4e-12fc01f1159d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-Task-VerifiedTeacher_physical-computing_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-VerifiedTeacher_physical-computing_24"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "fbc8b0fb-aba1-4d6f-bb4e-12fc01f1159d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ClassSection-vid_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ClassSection-vid_24"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "bc0bc8b5-02da-4012-8039-10bd60276036"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-LMSIntegrations_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-LMSIntegrations_24"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "bc0bc8b5-02da-4012-8039-10bd60276036"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-Task-ClassSection_physical-computing_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-ClassSection_physical-computing_24"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "bc0bc8b5-02da-4012-8039-10bd60276036"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL_21-mod2-MakeAPlan-StudentLogIn_physical-computing_24",
+        "script_level.level_keys": [
+          "SP-VPL_21-mod2-MakeAPlan-StudentLogIn_physical-computing_24"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "bc0bc8b5-02da-4012-8039-10bd60276036"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-StudentExperience-vid_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-StudentExperience-vid_24"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "f523edf3-9b59-4c38-904b-7a602b92bd2e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-Task-StudentView_physical-computing_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Task-StudentView_physical-computing_24"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "f523edf3-9b59-4c38-904b-7a602b92bd2e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ProgessAndFeedback-vid_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ProgessAndFeedback-vid_24"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "52e2aad8-8f01-481f-957d-11acc4637af6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-progress-c4u_physical-computing_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-progress-c4u_physical-computing_24"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "52e2aad8-8f01-481f-957d-11acc4637af6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-feedback-c4u_physical-computing_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-feedback-c4u_physical-computing_24"
+        ],
+        "lesson.key": "Navigating the Codeorg Learning Platform",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "52e2aad8-8f01-481f-957d-11acc4637af6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-TeachersInClassrooms_physical-computing_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-TeachersInClassrooms_physical-computing_24"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "b2699954-4fb2-4d12-9c81-73ec0c879b36"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-NavigatingLessonPlans_physical-computing_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-NavigatingLessonPlans_physical-computing_24"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "d03e9be4-1c19-43ac-a0c1-6897778b65b1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ExploreLessonPlan_physical-computing_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ExploreLessonPlan_physical-computing_24"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "d03e9be4-1c19-43ac-a0c1-6897778b65b1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL_21-mod2-MakeAPlan-LessonPlanning_physical-computing_24",
+        "script_level.level_keys": [
+          "SP-VPL_21-mod2-MakeAPlan-LessonPlanning_physical-computing_24"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "d03e9be4-1c19-43ac-a0c1-6897778b65b1"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-NavigatingTeacherResources_physical-computing_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-NavigatingTeacherResources_physical-computing_24"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "19554c96-9711-49e0-bb67-c94bbcadbcc8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-UnitCalendar_physical-computing_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-UnitCalendar_physical-computing_24"
+        ],
+        "lesson.key": "Navigating Lesson Plans and Resources",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "19554c96-9711-49e0-bb67-c94bbcadbcc8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-TaskResources_physical-computing_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-TaskResources_physical-computing_24"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "22822a5a-cc7b-4f0e-bb88-2332dcbff232"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-navigating support_physical-computing_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-navigating support_physical-computing_24"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "2e6dad97-55dc-4121-8f61-72a88c4d3343"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ReadSupportArticles_physical-computing_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ReadSupportArticles_physical-computing_24"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "2e6dad97-55dc-4121-8f61-72a88c4d3343"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-ReportAProblem_physical-computing_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-ReportAProblem_physical-computing_24"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "2e6dad97-55dc-4121-8f61-72a88c4d3343"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-JoinTheTeacherCommunity_physical-computing_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-JoinTheTeacherCommunity_physical-computing_24"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "2e6dad97-55dc-4121-8f61-72a88c4d3343"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-VPL-21-mod2-Support-c4u_physical-computing_24",
+        "script_level.level_keys": [
+          "SP-VPL-21-mod2-Support-c4u_physical-computing_24"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "2e6dad97-55dc-4121-8f61-72a88c4d3343"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-CSD-Unit1-Module1WrapUp_24",
+        "script_level.level_keys": [
+          "SP-CSD-Unit1-Module1WrapUp_24"
+        ],
+        "lesson.key": "Navigating Support",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-getting-started-coding-w-ai-2024",
+        "activity_section.key": "610086be-4ca7-4968-885c-9b37c924c5c8"
+      }
+    }
+  ],
+  "resources": [
+
+  ],
+  "lessons_resources": [
+
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+
+  ],
+  "lessons_vocabularies": [
+
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+
+  ],
+  "lessons_standards": [
+
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

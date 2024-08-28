@@ -2,6 +2,7 @@
  * Defines blocks useful in multiple blockly apps
  */
 var commonMsg = require('@cdo/locale');
+
 var BlockStyles = require('./blockly/constants').BlockStyles;
 var BlockColors = require('./blockly/constants').BlockColors;
 
@@ -21,6 +22,8 @@ exports.install = function (blockly, blockInstallOptions) {
   installWhenRun(blockly, skin, isK1);
   installJoinBlock(blockly);
   installCommentBlock(blockly);
+  // The custom block supports the US English spelling of "color"
+  installCustomColourRandomBlock(blockly);
 };
 
 function installControlsRepeatSimplified(blockly, skin) {
@@ -52,7 +55,7 @@ function installControlsRepeatSimplified(blockly, skin) {
         .appendField(
           new blockly.FieldTextInput(
             '10',
-            blockly.FieldTextInput.nonnegativeIntegerValidator
+            blockly.cdoUtils.nonnegativeIntegerValidator
           ),
           'TIMES'
         );
@@ -274,6 +277,9 @@ function installWhenRun(blockly, skin, isK1) {
 
 function installJoinBlock(blockly) {
   Blockly.customBlocks.installJoinBlock(blockly);
+}
+function installCustomColourRandomBlock(blockly) {
+  Blockly.customBlocks.installCustomColourRandomBlock(blockly);
 }
 
 function installCommentBlock(blockly) {

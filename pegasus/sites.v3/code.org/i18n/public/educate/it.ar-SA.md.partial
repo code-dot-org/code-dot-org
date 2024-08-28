@@ -17,9 +17,11 @@ theme: responsive
 
 ## الحد الأدنى من المتصفحات والمنصات المدعومة
 
+بدءًا من يوليو 2024، سنقوم بتحديث الحد الأدنى من الإصدارات المطلوبة للمتصفحات وأنظمة التشغيل. على الرغم من أن الإصدارات القديمة قد لا تزال تعمل، إلا أننا لن نتمكن من دعم طلبات إصلاح الأخطاء في الإصدارات القديمة.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           المتصفح
@@ -40,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          المتصفح 24 يوليو
+        </th>
+        <tr>
+          <td>كروم 103.x</td>
+        </tr>
+        <tr>
+          <td>سفاري 14.x</td>
+        </tr>
+        <tr>
+          <td>موبايل سفاري 14.x</td>
+        </tr>
+        <tr>
+          <td>إيدج 119.x</td>
+        </tr>
+        <tr>
+          <td>فايرفوكس 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           المنصة
@@ -62,8 +86,30 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          منصة 24 يوليو
+        </th>
+        <tr>
+          <td>ماك أو إس 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>نظام التشغيل Windows 8</td>
+        </tr>
+        <tr>
+          <td>أندرويد 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## مواقع لإلغاء الحظر
@@ -80,16 +126,15 @@ theme: responsive
 | **لاستخدام محاكي الإنترنت**                                                         | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **لاستخدام معمل الويب**                                                             | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **لاستخدام زر المشاركة في Google Classroom**                                        | `https://apis.google.com`                                                                                  |
-| **لاستخدام مجموعات بيانات App Lab**                                                 | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## تفاصيل دعم الهاتف المحمول والكمبيوتر اللوحي
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. معظم الأجهزة اللوحية غير مدعومة، مع الاستثناءات التالية:
+لا تتوافق جميع دورات CS Discoveries وCS Principles وCS A وIntro to App Lab مع الأجهزة اللوحية أو الأجهزة المحمولة - يلزم وجود لوحة مفاتيح كاملة وماوس (أو لوحة لمس). معظم الأجهزة اللوحية غير مدعومة، مع الاستثناءات التالية:
 
 - جهاز Microsoft Surface Pro مع لوحة مفاتيح خارجية
 - جهاز iPad يعمل بنظام iPadOS 13.4 أو أحدث مع لوحة مفاتيح خارجية وفأرة خارجية أو لوحة لمس
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+جميع المحتويات الأخرى، مثل دورات K-5 (أساسيات علوم الكمبيوتر) وأنشطة «ساعة البرمجة» متوافقة مع أجهزة iPad وغيرها من الأجهزة اللوحية الحديثة وأجهزة الكمبيوتر المحمولة أو أجهزة الكمبيوتر المكتبية.
 
 ### الهواتف المحمولة
 
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+هذا هو مشغل الفيديو المستخدم في المنهج. سيحاول عرض الفيديو عبر يوتيوب، وإذا تم حظر موقع يوتيوب، يمكنك إظهار الفيديو المستضاف على منصة Code.org باستخدام المشغل "الاحتياطي" بدلاً من ذلك.
 
 ### الفيديو لا يعمل؟
 
-If video does not work, you can email us at support@code.org.
+إذا لم يعمل الفيديو، يمكنك مراسلتنا عبر البريد الإلكتروني على support@code.org.
 
-However, you can still use our tutorials without video.
+ومع ذلك، لا يزال بإمكانك استخدام دروسنا بدون فيديو.
 
 1. لقد جعلنا جميع مقاطع الفيديو الخاصة بنا [متوفرة للتنزيل](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). إذا كانت مدرستك ذات نطاق ترددي منخفض، نوصيك بتنزيل مقاطع الفيديو وعرضها على الطلاب على شاشة مشتركة.
 2. تم دمج رمز رابط التنزيل الأخضر في برامجنا التعليمية <img src="/images/green-download.png" width=25 height=25 /> لكل مقطع فيديو، مما يسمح للطلاب بتنزيل مقاطع فيديو تعليمية فردية.
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## إعدادات خاصة لمستخدمي Google Apps / G-Suite
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+إذا كنت مسؤولًا في G-suite، فتأكد من التحقق من إعدادات التقييد الخاصة بك على موقع يوتيوب. إذا حددت إعداد "وصول مقيد صارم إلى يوتيوب" أو إذا رأيت رسائل تنص على "تم حظر هذا الفيديو"، يمكنك إضافة قناتنا إلى قائمة القنوات المعتمدة. انظر [هذا الدليل](https://support.google.com/a/answer/6245597) من جوجل للتعرف على كيفية إضافة قناتنا إلى القائمة المعتمدة. يمكنك أيضًا الاطلاع على [هذا الدليل](https://support.google.com/a/answer/6212415?hl=en) لمعرفة المزيد حول الإعدادات المختلفة وأفضلها لفصلك الدراسي.
 
 ## هل ما زلت تواجه مشكلة؟
 
-We'll help you out - just email us at support@code.org!
+يمكننا مساعدتك - فقط راسلنا على support@code.org!

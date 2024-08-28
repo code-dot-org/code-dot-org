@@ -1,8 +1,11 @@
-import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
-import i18n from '@cdo/locale';
 import $ from 'jquery';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+
+import Notification, {
+  NotificationType,
+} from '@cdo/apps/sharedComponents/Notification';
+import i18n from '@cdo/locale';
 
 export default class ParticipantFeedbackNotification extends Component {
   static propTypes = {

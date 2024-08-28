@@ -1,5 +1,4 @@
-import {expect} from 'chai';
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import {updateHiddenScript} from '@cdo/apps/code-studio/hiddenLessonRedux';
@@ -30,25 +29,25 @@ describe('MultipleAssignButtonTest', () => {
 
   it('renders a MultipleSectionsAssigner when clicked on unit page', () => {
     const wrapper = setUp();
-    expect(wrapper.find('.uitest-assign-button')).to.exist;
-    expect(wrapper.exists('Connect(MultipleSectionsAssigner)')).to.be.false;
+    expect(wrapper.find('.uitest-assign-button')).toBeDefined();
+    expect(wrapper.exists('Connect(MultipleSectionsAssigner)')).toBe(false);
     wrapper.find('Button').simulate('click');
     expect(
       wrapper.find('Connect(MultipleSectionsAssigner)').first().props()
         .isAssigningCourse
-    ).to.be.false;
-    expect(wrapper.exists('Connect(MultipleSectionsAssigner)')).to.be.true;
+    ).toBe(false);
+    expect(wrapper.exists('Connect(MultipleSectionsAssigner)')).toBe(true);
   });
 
   it('renders a MultipleSectionsAssigner when clicked on course page', () => {
     const wrapper = setUp({isAssigningCourse: true});
-    expect(wrapper.find('.uitest-assign-button')).to.exist;
-    expect(wrapper.exists('Connect(MultipleSectionsAssigner)')).to.be.false;
+    expect(wrapper.find('.uitest-assign-button')).toBeDefined();
+    expect(wrapper.exists('Connect(MultipleSectionsAssigner)')).toBe(false);
     wrapper.find('Button').simulate('click');
     expect(
       wrapper.find('Connect(MultipleSectionsAssigner)').first().props()
         .isAssigningCourse
-    ).to.be.true;
-    expect(wrapper.exists('Connect(MultipleSectionsAssigner)')).to.be.true;
+    ).toBe(true);
+    expect(wrapper.exists('Connect(MultipleSectionsAssigner)')).toBe(true);
   });
 });

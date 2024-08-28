@@ -1,8 +1,8 @@
-import {assert, expect} from 'chai';
-import {mount} from 'enzyme';
+import {assert, expect} from 'chai'; // eslint-disable-line no-restricted-imports
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import SchoolAutocompleteDropdown from '@cdo/apps/templates/SchoolAutocompleteDropdown';
 
@@ -95,12 +95,12 @@ describe('SchoolAutocompleteDropdown', () => {
     describe('(stubbing debounce)', () => {
       let debounceStub;
 
-      before(() => {
+      beforeAll(() => {
         // stub out debounce to return the original function, so it's called immediately
         debounceStub = sinon.stub(_, 'debounce').callsFake(f => f);
       });
 
-      after(() => {
+      afterAll(() => {
         debounceStub.restore();
       });
 

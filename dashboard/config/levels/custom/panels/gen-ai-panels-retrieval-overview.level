@@ -9,12 +9,30 @@
     "encrypted": "false",
     "panels": [
       {
-        "text": "",
-        "imageUrl": "",
-        "key": "gen-ai-panels-chatbot-overview-d3f0947e-62e1-42b4-a1af-7c29c6c57ed8"
+        "text": "You can use the retrieval tab to add information to the chatbot that is outside of its training data.",
+        "imageUrl": "https://images.code.org/fc8bc8f34e8d3d12a5b9a80d03a354fb-navigate_to_retrieval_tab-chatbot_retrieval.png",
+        "key": "gen-ai-panels-chatbot-overview-d3f0947e-62e1-42b4-a1af-7c29c6c57ed8",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "Press the \"Add\" button when you're ready to add your retrieval information.",
+        "imageUrl": "https://images.code.org/c9948837ddd6ad53658d62b0f9dee36f-add_retrieval_info-chatbot_retrieval.png",
+        "key": "gen-ai-panels-retrieval-overview-e9a50c5a-1782-4b5d-85e4-3a5c49c5f36c"
+      },
+      {
+        "text": "You can remove retrieval information by pressing the X next to the prompt you want to remove.",
+        "imageUrl": "https://images.code.org/1afc3ce1c0bea15cc881cb40b7b6db23-remove_retrieval_info-chatbot_retrieval.png",
+        "key": "gen-ai-panels-retrieval-overview-fd2d4746-5ba5-4619-b91d-d9d703b2574c",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "Press the \"Update\" button when you're ready to add the retrieval information to the chatbot.",
+        "imageUrl": "https://images.code.org/ccb2966a5062a86d1aafd5c0b4b561c3-updating_retrieval_info-chatbot_retrieval.png",
+        "key": "gen-ai-panels-retrieval-overview-f30de70e-2cea-4bf5-ad3e-a0c8e3a780e1",
+        "layout": "text-bottom-left"
       }
     ]
   },
-  "audit_log": "[{\"changed_at\":\"2024-04-18T19:44:28.669+00:00\",\"changed\":[\"cloned from \\\"gen-ai-panels-chatbot-overview\\\"\"],\"cloned_from\":\"gen-ai-panels-chatbot-overview\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-04-18T19:44:28.669+00:00\",\"changed\":[\"cloned from \\\"gen-ai-panels-chatbot-overview\\\"\"],\"cloned_from\":\"gen-ai-panels-chatbot-overview\"},{\"changed_at\":\"2024-04-20 07:33:09 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-04-21 05:16:41 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-04-21 05:18:34 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-04-21 05:19:49 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"},{\"changed_at\":\"2024-04-21 05:20:45 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19378,\"changed_by_email\":\"cody.diliberto@code.org\"}]"
 }]]></config>
 </Panels>

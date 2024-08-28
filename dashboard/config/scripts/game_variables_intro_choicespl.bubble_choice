@@ -1,0 +1,21 @@
+name 'game_variables_intro_choicesPL'
+display_name 'Choose a game to play'
+description 'Try out these simple games! Watch for similarities in how the games work.
+
+The spicy peppers indicate how difficult the game is to win. 
+
+🌶️: Mild and easy 
+
+🌶️🌶️: Medium with some spice
+
+🌶️🌶️🌶️: Spicy! Difficult! 
+
+🌶️🌶️🌶️🌶️: Extra hot! Can you handle it? '
+
+
+sublevels
+level 'game_variables_intro_choices_a'
+level 'game_variables_intro_choices_b'
+level 'game_variables_intro_choices_c'
+level 'game_variables_intro_choices_d'
+

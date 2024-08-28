@@ -5,7 +5,7 @@ import React, {Component} from 'react';
 import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
 
-import PopUpMenu, {STANDARD_PADDING} from '../../lib/ui/PopUpMenu';
+import PopUpMenu, {STANDARD_PADDING} from '../../sharedComponents/PopUpMenu';
 
 import AssignmentVersionMenuHeader from './AssignmentVersionMenuHeader';
 import AssignmentVersionMenuItem, {
@@ -36,9 +36,12 @@ export default class AssignmentVersionSelector extends Component {
     e.preventDefault();
   };
 
-  handleClick = () => {
+  handleClick = e => {
+    e.stopPropagation();
     if (!this.state.isMenuOpen) {
       this.openMenu();
+    } else {
+      this.closeMenu();
     }
   };
 

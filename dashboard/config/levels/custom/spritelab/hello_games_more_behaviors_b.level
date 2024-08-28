@@ -49,7 +49,7 @@
     "preload_asset_list": null
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-02-26T20:50:47.169+00:00\",\"changed\":[\"cloned from \\\"hello_games_more_behaviors_simplified\\\"\"],\"cloned_from\":\"hello_games_more_behaviors_simplified\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-02-26T20:50:47.169+00:00\",\"changed\":[\"cloned from \\\"hello_games_more_behaviors_simplified\\\"\"],\"cloned_from\":\"hello_games_more_behaviors_simplified\"},{\"changed_at\":\"2024-08-27 17:43:28 +0000\",\"changed\":[\"start_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-27 17:44:08 +0000\",\"changed\":[\"toolbox_blocks\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -71,25 +71,9 @@
                   <field name="COSTUME">"sticker_14"</field>
                   <value name="NUM">
                     <block type="math_number">
-                      <field name="NUM">5</field>
+                      <field name="NUM">4</field>
                     </block>
                   </value>
-                  <next>
-                    <block type="adaptations_toggleBehaviorSimple">
-                      <field name="TOGGLE">"begins"</field>
-                      <value name="SPRITE">
-                        <block type="gamelab_allSpritesWithAnimation">
-                          <field name="ANIMATION">"bunny2"</field>
-                        </block>
-                      </value>
-                      <value name="BEHAVIOR">
-                        <block type="gamelab_behavior_get">
-                          <mutation behaviorId="swimming left and right" name="swimming left and right"/>
-                          <field name="NAME">swimming left and right</field>
-                        </block>
-                      </value>
-                    </block>
-                  </next>
                 </block>
               </next>
             </block>
@@ -1235,6 +1219,13 @@
     </start_blocks>
     <toolbox_blocks>
       <xml>
+        <block type="gamelab_keyPressed" id="NUtAr$;}0*|RaRJuo_5U" x="61" y="136">
+          <field name="CONDITION">"when"</field>
+          <field name="KEY">"up"</field>
+        </block>
+        <block type="gamelab_setBackgroundImageAs" id="nBV.r4eLJpJ_QA77B}yW" x="66" y="212">
+          <field name="IMG">"gradient_01"</field>
+        </block>
         <block type="adaptations_toggleBehaviorSimple" id="Aq4=9rT%U|r::$T(tO/h" x="58" y="302">
           <field name="TOGGLE">"begins"</field>
           <value name="SPRITE">

@@ -4,18 +4,16 @@ content1 ' '
 
 
 markdown <<MARKDOWN
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
-
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">As the teacher, you play an active role in customizing the learning experience for your students.</p></div>
+#### As the teacher, you play an active role in customizing the learning experience for your students.</p></div>
 
 ## Use the space below to document your plan for implementing CS Discoveries. 
 
-#### Consider the following when making your plan:
+### **Consider the following when making your plan:**
 
-* Which units will you include in your course? 
-* Which unit will you start with? 
-* Will you teach full units, or one chapter from multiple units? 
-* When will you teach each unit that you have selected? 
-* Will you teach different units across grade levels? If yes, which content will you include in each grade level course?
+* #### Which units will you include in your course? 
+* #### Which unit will you start with? 
+* #### Will you teach full units, or one chapter from multiple units? 
+* #### When will you teach each unit that you have selected? 
+* #### Will you teach different units across grade levels? If yes, which content will you include in each grade level course?
 
 MARKDOWN

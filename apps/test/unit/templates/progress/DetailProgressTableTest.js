@@ -1,4 +1,4 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
@@ -6,8 +6,6 @@ import {
   fakeLesson,
   fakeLevels,
 } from '@cdo/apps/templates/progress/progressTestHelpers';
-
-import {assert} from '../../../util/reconfiguredChai';
 
 describe('DetailProgressTable', () => {
   const lessons = [
@@ -32,11 +30,11 @@ describe('DetailProgressTable', () => {
     );
 
     const rows = wrapper.props().children;
-    assert.equal(rows.length, 4);
+    expect(rows.length).toEqual(4);
   });
 
   it('throws if passed mismatched props', () => {
-    assert.throws(() =>
+    expect(() =>
       shallow(
         <DetailProgressTable
           groupedLesson={{
@@ -45,6 +43,6 @@ describe('DetailProgressTable', () => {
           }}
         />
       )
-    );
+    ).toThrow();
   });
 });

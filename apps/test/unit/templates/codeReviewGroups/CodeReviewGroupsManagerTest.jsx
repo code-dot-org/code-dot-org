@@ -1,4 +1,4 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
 import {DragDropContext} from 'react-beautiful-dnd';
@@ -10,8 +10,6 @@ import {
   DROPPABLE_ID_UNASSIGNED,
 } from '@cdo/apps/templates/codeReviewGroups/CodeReviewGroupsUtils';
 import UnassignedStudentsPanel from '@cdo/apps/templates/codeReviewGroups/UnassignedStudentsPanel';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 describe('Code Review Groups Manager', () => {
   let wrapper,
@@ -48,9 +46,9 @@ describe('Code Review Groups Manager', () => {
     draggedMember = getAssignedGroup(0).members[1];
 
     confirmDefaultBeforeActionExpectations = () => {
-      expect(getUnassignedGroup().members.length).to.equal(4);
-      expect(getAssignedGroup(0).members.length).to.equal(4);
-      expect(getAssignedGroup(1).members.length).to.equal(4);
+      expect(getUnassignedGroup().members.length).toBe(4);
+      expect(getAssignedGroup(0).members.length).toBe(4);
+      expect(getAssignedGroup(1).members.length).toBe(4);
     };
   });
 
@@ -61,16 +59,16 @@ describe('Code Review Groups Manager', () => {
     };
 
     confirmDefaultBeforeActionExpectations();
-    expect(getAssignedGroup(0).members[1].followerId).to.equal(
+    expect(getAssignedGroup(0).members[1].followerId).toBe(
       draggedMember.followerId
     );
 
     wrapper.find(DragDropContext).invoke('onDragEnd')(dragResult);
     wrapper.setProps({groups: groups});
 
-    expect(getAssignedGroup(0).members.length).to.equal(3);
-    expect(getAssignedGroup(1).members.length).to.equal(5);
-    expect(getAssignedGroup(1).members[1].followerId).to.equal(
+    expect(getAssignedGroup(0).members.length).toBe(3);
+    expect(getAssignedGroup(1).members.length).toBe(5);
+    expect(getAssignedGroup(1).members[1].followerId).toBe(
       draggedMember.followerId
     );
   });
@@ -82,15 +80,15 @@ describe('Code Review Groups Manager', () => {
     };
 
     confirmDefaultBeforeActionExpectations();
-    expect(getAssignedGroup(0).members[1].followerId).to.equal(
+    expect(getAssignedGroup(0).members[1].followerId).toBe(
       draggedMember.followerId
     );
 
     wrapper.find(DragDropContext).invoke('onDragEnd')(dragResult);
     wrapper.setProps({groups: groups});
 
-    expect(getAssignedGroup(0).members.length).to.equal(4);
-    expect(getAssignedGroup(0).members[0].followerId).to.equal(
+    expect(getAssignedGroup(0).members.length).toBe(4);
+    expect(getAssignedGroup(0).members[0].followerId).toBe(
       draggedMember.followerId
     );
   });
@@ -101,15 +99,15 @@ describe('Code Review Groups Manager', () => {
     };
 
     confirmDefaultBeforeActionExpectations();
-    expect(getAssignedGroup(0).members[1].followerId).to.equal(
+    expect(getAssignedGroup(0).members[1].followerId).toBe(
       draggedMember.followerId
     );
 
     wrapper.find(DragDropContext).invoke('onDragEnd')(dragResult);
     wrapper.setProps({groups: groups});
 
-    expect(getAssignedGroup(0).members.length).to.equal(4);
-    expect(getAssignedGroup(0).members[1].followerId).to.equal(
+    expect(getAssignedGroup(0).members.length).toBe(4);
+    expect(getAssignedGroup(0).members[1].followerId).toBe(
       draggedMember.followerId
     );
   });
@@ -121,16 +119,16 @@ describe('Code Review Groups Manager', () => {
     };
 
     confirmDefaultBeforeActionExpectations();
-    expect(getAssignedGroup(0).members[1].followerId).to.equal(
+    expect(getAssignedGroup(0).members[1].followerId).toBe(
       draggedMember.followerId
     );
 
     wrapper.find(DragDropContext).invoke('onDragEnd')(dragResult);
     wrapper.setProps({groups: groups});
 
-    expect(getAssignedGroup(0).members.length).to.equal(3);
-    expect(getUnassignedGroup().members.length).to.equal(5);
-    expect(getUnassignedGroup().members[0].followerId).to.equal(
+    expect(getAssignedGroup(0).members.length).toBe(3);
+    expect(getUnassignedGroup().members.length).toBe(5);
+    expect(getUnassignedGroup().members[0].followerId).toBe(
       draggedMember.followerId
     );
   });
@@ -144,16 +142,16 @@ describe('Code Review Groups Manager', () => {
     draggedMember = getUnassignedGroup().members[1];
 
     confirmDefaultBeforeActionExpectations();
-    expect(getUnassignedGroup().members[1].followerId).to.equal(
+    expect(getUnassignedGroup().members[1].followerId).toBe(
       draggedMember.followerId
     );
 
     wrapper.find(DragDropContext).invoke('onDragEnd')(dragResult);
     wrapper.setProps({groups: groups});
 
-    expect(getUnassignedGroup().members.length).to.equal(3);
-    expect(getAssignedGroup(0).members.length).to.equal(5);
-    expect(getAssignedGroup(0).members[0].followerId).to.equal(
+    expect(getUnassignedGroup().members.length).toBe(3);
+    expect(getAssignedGroup(0).members.length).toBe(5);
+    expect(getAssignedGroup(0).members[0].followerId).toBe(
       draggedMember.followerId
     );
   });
@@ -163,9 +161,9 @@ describe('Code Review Groups Manager', () => {
     wrapper.find(UnassignedStudentsPanel).invoke('onUnassignAllClick')();
     wrapper.setProps({groups: groups});
 
-    expect(getUnassignedGroup().members.length).to.equal(12);
-    expect(getAssignedGroup(0).members).to.be.empty;
-    expect(getAssignedGroup(1).members).to.be.empty;
+    expect(getUnassignedGroup().members.length).toBe(12);
+    expect(getAssignedGroup(0).members).toHaveLength(0);
+    expect(getAssignedGroup(1).members).toHaveLength(0);
   });
 });
 

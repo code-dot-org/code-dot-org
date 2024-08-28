@@ -5,34 +5,41 @@ description 'description here'
 markdown <<MARKDOWN
 # Next Steps
 
-#### Thank you for completing the **CSF Maker** self-paced professional learning module. Now that you've learned some basic physical computing skills, check out our curriculum and professional learning offerings to continue your journey.
+#### Thank you for completing the **Maker with micro:bit** self-paced professional learning module. Now that you've learned some basic physical computing skills, check out our curriculum and professional learning offerings to continue your journey.
 
-## Teach CSF Maker in your class
-#### Explore these curriculum options to get started teaching CSF Maker in your class right away. 
+## Help us make this module better!
+
+#### Code.org values and is responsive to feedback. Please fill out this <a href="https://studio.code.org/form/csf_maker_microbit_selfpaced_pl_postsurvey" target="blank" rel="noopener noreferrer">short survey</a> to provide your feedback on this module.
+
+<a class="btn btn-large btn-primary" href="https://studio.code.org/form/csf_maker_microbit_selfpaced_pl_postsurvey" target="blank" rel="noopener noreferrer">Take the survey</a>
+
+
+## Teach Maker with micro:bit in your class
+#### Explore these curriculum options to get started teaching **Maker with micro:bit** in your class right away. 
 
 
 <table width="1000px">
 	<tr> 
-    	<th style="font-size: 16px;"> <b>Course C  </b> &nbsp <i>(2nd-3rd grade)</i></th>
-        <th style="font-size: 16px;"> <b>Course D  </b> &nbsp <i>(3rd-4th grade)</i></th>
-        <th style="font-size: 16px;"> <b>Course E  </b> &nbsp <i>(3rd-4th grade)</i></th>
-        <th style="font-size: 16px;"> <b>Course F  </b> &nbsp <i>(3rd-4th grade)</i></th>
+    	<th style="font-size: 16px;"> <b>Grade 2 </b> </th>
+        <th style="font-size: 16px;"> <b>Grade 3  </b> </th>
+        <th style="font-size: 16px;"> <b>Grade 4  </b> </th>
+        <th style="font-size: 16px;"> <b>Grade 5  </b> </th>
     </tr>
     <tr>
     	<td>
-         <a href="https://studio.code.org/s/coursec-2023" target="blank" rel="noopener noreferrer">Course C: Maker with micro:bit </a> 
+         <a href="https://studio.code.org/s/grade2-maker-2024" target="blank" rel="noopener noreferrer">Grade 2: Maker with micro:bit </a> 
         	
         </td>
     	<td>
-         <a href="https://studio.code.org/s/coursed-2023" target="blank" rel="noopener noreferrer">Course D: Maker with micro:bit </a> 
+         <a href="https://studio.code.org/s/grade3-maker-2024" target="blank" rel="noopener noreferrer">Grade 3: Maker with micro:bit </a> 
         	
         </td>
         <td>
-         <a href="https://studio.code.org/s/coursee-2023" target="blank" rel="noopener noreferrer">Course E: Maker with micro:bit </a> 
+         <a href="https://studio.code.org/s/grade4-maker-2024" target="blank" rel="noopener noreferrer">Grade 4: Maker with micro:bit </a> 
         	
         </td>
         <td>
-         <a href="https://studio.code.org/s/coursef-2023" target="blank" rel="noopener noreferrer">Course F: Maker with micro:bit </a> 
+         <a href="https://studio.code.org/s/grade5-maker-2024" target="blank" rel="noopener noreferrer">Grade 5: Maker with micro:bit </a> 
         	
         </td>
       </tr>
@@ -46,7 +53,7 @@ markdown <<MARKDOWN
 <br>
 
 ## Continue learning
-#### Learn more about teaching CS with these self-paced professional learning modules. 
+#### Learn more about teaching CS with these **self-paced professional learning modules**. 
 
 <table width="1000px">
 	<tr> 
@@ -84,12 +91,6 @@ markdown <<MARKDOWN
   </table>
 
 <p>
-
-## Help us make this module better!
-
-#### Code.org values and is responsive to feedback. Please fill out this <a href="https://studio.code.org/form/*****" target="blank" rel="noopener noreferrer">short survey</a> to provide your feedback on this module.
-
-<a class="btn btn-large btn-primary" href="https://studio.code.org/for*****" target="blank" rel="noopener noreferrer">Take the survey</a>
 
 ## Stay connected 
 

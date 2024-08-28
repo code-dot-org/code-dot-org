@@ -1,17 +1,18 @@
+import cookies from 'js-cookie';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import cookies from 'js-cookie';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
-import color from '@cdo/apps/util/color';
-import fontConstants from '@cdo/apps/fontConstants';
-import Button from '@cdo/apps/templates/Button';
-import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
-import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-import i18n from '@cdo/locale';
-import {reload} from '@cdo/apps/utils';
+
 import {environmentSpecificCookieName} from '@cdo/apps/code-studio/utils';
+import fontConstants from '@cdo/apps/fontConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import AgeDropdown from '@cdo/apps/templates/AgeDropdown';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+import color from '@cdo/apps/util/color';
+import {reload} from '@cdo/apps/utils';
+import i18n from '@cdo/locale';
 
 const sessionStorageKey = 'anon_over13';
 

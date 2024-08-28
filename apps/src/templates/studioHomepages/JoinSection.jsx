@@ -4,7 +4,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import Button from '@cdo/apps/templates/Button';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import color from '@cdo/apps/util/color';
 import i18n from '@cdo/locale';
 
@@ -62,15 +62,19 @@ class JoinSection extends React.Component {
       dataType: 'json',
     })
       .done(data => {
-        const sectionName = data.sections.find(
+        const section = data.sections.find(
           s => s.code === normalizedSectionCode
-        ).name;
+        );
+        const sectionName = section.name;
+        const joiningPlSection = section.grades?.includes('pl');
         this.props.updateSections(data.studentSections, data.plSections);
         this.props.updateSectionsResult(
           'join',
           data.result,
           sectionName,
-          sectionCode
+          sectionCode,
+          null,
+          joiningPlSection
         );
       })
       .fail(data => {

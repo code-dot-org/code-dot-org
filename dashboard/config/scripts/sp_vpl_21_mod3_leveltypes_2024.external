@@ -5,43 +5,38 @@ description 'description here'
 markdown <<MARKDOWN
 # Levels
 
-
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
-
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">When students are on the computer, activities look like a series of bubbles, called <strong>levels</strong>, that students complete in order. Read the information below to learn more about the different types of levels found in the CS Discoveries curriculum.
-</p>
-</div>
+#### When students are on the computer, activities look like a series of bubbles, called <strong>levels</strong>, that students complete in order. Read the information below to learn more about the different types of levels found in the CS Discoveries curriculum.
 
 <img src="https://images.code.org/fee3b12c1bc5874413af0ce621aa53b1-image-1626106561565.14.54 AM.png" alt="Screenshot of a series of five levels" style="float: right; height: 100px; clear: both; margin: 20px 80px 20px 20px;">
 
 ## Level Icons 
 
-##### When looking at lesson plans and course resources, you will notice several different icons representing different types of levels within a given lesson. 
+#### When looking at lesson plans and course resources, you will notice several different icons representing different types of levels within a given lesson. 
 
 <hr style="clear:both">
 
 <img src="https://images.code.org/834a0cc70c5e0f1dc0051b2053a418d0-image-1626370011346.26.32 PM.png" alt="Icon with the text 'Online'" style="float: left; height: 50px; clear: both; margin: 0 20px 20px 0;">
 
-##### These levels feature Code.org tools, including online tools and environments for creating projects. An instructions panel appears on these levels to explain any new content introduced in the level and provide a list of tasks to complete. Teachers can review their students’ code.
+#### These levels feature Code.org tools, including online tools and environments for creating projects. An instructions panel appears on these levels to explain any new content introduced in the level and provide a list of tasks to complete. Teachers can review their students’ code.
 
 <hr style="clear:both">
 
 
 <img src="https://images.code.org/280e96b9103553ce3d7f3eaa487eed2e-image-1656088427070.33.23 AM.png" alt="Icon with the text 'Video'" style="float: left; height: 55px; clear: both; margin: 0 20px 20px 0;">
 
-##### All Code.org courses feature videos for students designed to introduce tools or to help explain new concepts. Students can watch the videos together as a class or individually on their computers.
+#### All Code.org courses feature videos for students designed to introduce tools or to help explain new concepts. Students can watch the videos together as a class or individually on their computers.
 
 <hr style="clear:both">
 
 <img src="https://images.code.org/806354054a33353ef8e52ac9ef23b345-image-1626370792635.39.41 PM.png" alt="Icon with the text 'Choice'" style="float: left; height: 46px; clear: both; margin: 0 20px 20px 0;">
 
-##### Choice levels contain multiple activities for students to choose from. Some choice levels are practice levels intended to provide students with multiple opportunities to practice skills learned in previous levels. Some choice levels are challenge levels intended to allow students and opportunity to explore new concepts not covered in the lesson objectives. 
+#### Choice levels contain multiple activities for students to choose from. Some choice levels are practice levels intended to provide students with multiple opportunities to practice skills learned in previous levels. Some choice levels are challenge levels intended to allow students and opportunity to explore new concepts not covered in the lesson objectives. 
 
 <hr style="clear:both">
 
 <img src="https://images.code.org/60256f99854707f41b9673c564452011-image-1626371876256.57.46 PM.png" alt="Icon with the text 'Text'" style="float: left; height: 50px; clear: both; margin: 0 20px 20px 0;">
 
-##### Text levels contain instructions, text, or images to help run a class activity. Lesson instructions will indicate how these levels should be incorporated into the activity. 
+#### Text levels contain instructions, text, or images to help run a class activity. Lesson instructions will indicate how these levels should be incorporated into the activity. 
 
 <hr style="clear:both">
 
@@ -50,23 +45,26 @@ markdown <<MARKDOWN
 
 #### Alongside a level's icon are labels that indicate the purpose of that level within the lesson. These labels can help you develop expectations for students or think about your role as the teacher.
 
+<br>
 
 <img src="https://images.code.org/b9a7f8b2a0073e97c21ab11b54fd211c-image-1682451424029.png" alt="Screenshot of a lesson's level progression including multiple level types." style="float: right; height: 350px; clear: both; margin: 0 20px 20px 0; padding-left: 30px">
 
-##### **Predict:** These levels present students with a completed program and asked to predict what the code will do. After typing in a response, students can run the code and see the result. These are best completed in pairs or as whole-class discussion.
+#### **Predict:** These levels present students with a completed program and asked to predict what the code will do. After typing in a response, students can run the code and see the result. These are best completed in pairs or as whole-class discussion.
+<br>
 
-##### **Skill building:** These levels are usually targeted tasks that are focused on specific skill building rather than open ended creation. At the beginning of a lesson, these tasks are highly scaffolded, and this scaffolding falls away as students develop the target skills. 
+#### **Skill building:** These levels are usually targeted tasks that are focused on specific skill building rather than open ended creation. At the beginning of a lesson, these tasks are highly scaffolded, and this scaffolding falls away as students develop the target skills. 
+<br>
 
-##### **Assessment:**  Assessment levels are levels that can be used to assess student mastery of the target skill of the lesson. These levels are marked with a purple bubble and a small check mark. Some assessment levels include multiple choice or matching levels that are auto graded. Teachers are able to view and provide feedback on programming assessment levels. 
+#### **Assessment:**  Assessment levels are levels that can be used to assess student mastery of the target skill of the lesson. These levels are marked with a purple bubble and a small check mark. Some assessment levels include multiple choice or matching levels that are auto graded. Teachers are able to view and provide feedback on programming assessment levels. 
+<br>
 
+#### **Challenge:** These levels present students with more open-ended tasks to complete as an extension of the skills they've learned in the lesson. Any new skills or coding commands introduced in these levels are not required for future lessons, but are offered as enrichment and additional practice.
+<br>
 
-##### **Challenge:** These levels present students with more open-ended tasks to complete as an extension of the skills they've learned in the lesson. Any new skills or coding commands introduced in these levels are not required for future lessons, but are offered as enrichment and additional practice.
+#### **Project:** _(not pictured)_ In these levels, students build more extensive programs using skills learned throughout the unit. Project levels are often accompanied by an activity guide that is intended to help students plan their project and reflect on their process.  
+<br>
 
-##### **Project:** _(not pictured)_ In these levels, students build more extensive programs using skills learned throughout the unit. Project levels are often accompanied by an activity guide that is intended to help students plan their project and reflect on their process.  
-
-##### <a href="https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view" target="blank" rel="noopener noreferrer" >Click here</a> to learn more about teaching a programming lesson. 
+#### <a href="https://docs.google.com/document/d/1fwXnkosoiHTJJuc2CGF9zEwl0NsUa20Z7THRk8cuZwg/view" target="blank" rel="noopener noreferrer" >Click here</a> to learn more about teaching a programming lesson. 
 
 <div style="clear:both"/>
-
-![]()
 MARKDOWN

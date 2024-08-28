@@ -1,0 +1,103 @@
+<Applab>
+  <config><![CDATA[{
+  "game_id": 41,
+  "created_at": "2024-07-12T01:15:34.000Z",
+  "level_num": "custom",
+  "user_id": 1,
+  "properties": {
+    "skin": "applab",
+    "code_functions": {
+      "onEvent": null,
+      "setProperty": null,
+      "getProperty": null,
+      "declareAssign_x": null,
+      "equalityOperator": null,
+      "ifBlock": null,
+      "ifElseBlock": null,
+      "onBoardEvent": {
+        "dropdown": {
+          "0": [
+            "buttonA",
+            "buttonB"
+          ],
+          "1": [
+            "\"down\"",
+            "\"up\""
+          ]
+        }
+      },
+      "ledScreen.on": null,
+      "ledScreen.off": null,
+      "ledScreen.toggle": null,
+      "ledScreen.clear": null
+    },
+    "edit_code": true,
+    "embed": "false",
+    "long_instructions": "# Using the micro:bit \r\n\r\nHere's the same code you saw in the last level, but this time there's another dropdown menu to control the top and bottom LEDs. You'll have to add the code to make it work.\r\n\r\nUsing the first dropdown as a model, add variables and an if-statement to light up the other LEDs.\r\n\r\n# Do This\r\n1. Find the section of the code that says \"Add your code here\" [(Show me where)](#triggercallout=add_code)\r\n2. Get the value from the dropdown and store it in a variable\r\n\t- Add a [`var x =`(#BB77C7)](/docs/applab/declareAssign_x/) and [`getProperty()`(#fff176)](/docs/applab/getProperty/) block to get the value from the `LED2Dropdown` element\r\n3. Use two [`if-statements`(#64B5F6)](/docs/applab/ifBlock/) to check the value from the dropdown\r\n\t- Use the [`==`(#FFB74D)](/docs/applab/equalityOperator/) block to check if the value from the dropdown is `top row` or `bottom row`\r\n4. Light up the top or bottom LEDs depending on what the user chose\r\n\t- Use [`ledScreen.on()`(#f78183)](/docs/ide/applab/expressions/ledScreen.on) blocks to light up the top or bottom rows of LEDs\r\n\r\nRun your code and verify that program works correctly! Your micro:bit should light up \"corners\" depending on which rows and columns are selected!",
+    "instructions_important": "false",
+    "submittable": "false",
+    "start_blocks": "onBoardEvent(buttonA, \"down\", function() {\r\n  setText(\"lightLabel\", \"On\");\r\n  var LEDtype = getProperty(\"LEDDropdown\", \"value\");\r\n  if (LEDtype == \"left side\") {\r\n    ledScreen.on(0, 0);\r\n    ledScreen.on(0, 1);\r\n    ledScreen.on(0, 2);\r\n    ledScreen.on(0, 3);\r\n    ledScreen.on(0, 4);\r\n  }\r\n  if (LEDtype == \"right side\") {\r\n    ledScreen.on(4, 0);\r\n    ledScreen.on(4, 1);\r\n    ledScreen.on(4, 2);\r\n    ledScreen.on(4, 3);\r\n    ledScreen.on(4, 4);\r\n  }\r\n  \r\n  //Add your code here\r\n  //2) Get the value from the dropdown and store it in a variable\r\n  \r\n  //3) Use two if-statements to check the value from the dropdown\r\n  \r\n  //4) Light up the top or bottom row of LEDs to what the user chose\r\n  \r\n});\r\nonBoardEvent(buttonB, \"down\", function() {\r\n  setText(\"lightLabel\", \"Off\");\r\n  ledScreen.clear();\r\n});\r\n\r\n\r\n",
+    "is_k1": "false",
+    "skip_instructions_popup": "false",
+    "never_autoplay_video": "false",
+    "disable_param_editing": "true",
+    "disable_variable_editing": "false",
+    "disable_procedure_autopopulate": "false",
+    "use_modal_function_editor": "false",
+    "use_contract_editor": "false",
+    "contract_highlight": "false",
+    "contract_collapse": "false",
+    "examples_highlight": "false",
+    "examples_collapse": "false",
+    "examples_required": "false",
+    "definition_highlight": "false",
+    "definition_collapse": "false",
+    "disable_examples": "false",
+    "hide_share_and_remix": "false",
+    "droplet_tooltips_disabled": "false",
+    "lock_zero_param_functions": "false",
+    "disable_if_else_editing": "false",
+    "free_play": "false",
+    "validation_enabled": "true",
+    "show_turtle_before_run": "false",
+    "autocomplete_palette_apis_only": "false",
+    "execute_palette_apis_only": "false",
+    "design_mode_at_start": "false",
+    "hide_design_mode": "true",
+    "beginner_mode": "false",
+    "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\">\r\n  \r\n  <select id=\"LEDDropdown\" style=\"width: 200px; height: 30px; font-size: 14px; margin: 0px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 60px; top: 55px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif; background-image: url(&quot;data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20448%22%20enable-background%3D%22new%200%200%20256%20448%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.arrow%7Bfill%3A%23ffffff%3B%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22arrow%22%20d%3D%22M255.9%20168c0-4.2-1.6-7.9-4.8-11.2-3.2-3.2-6.9-4.8-11.2-4.8H16c-4.2%200-7.9%201.6-11.2%204.8S0%20163.8%200%20168c0%204.4%201.6%208.2%204.8%2011.4l112%20112c3.1%203.1%206.8%204.6%2011.2%204.6%204.4%200%208.2-1.5%2011.4-4.6l112-112c3-3.2%204.5-7%204.5-11.4z%22%2F%3E%3C%2Fsvg%3E&quot;); padding: 0px 30px 0px 10px;\"><option>left side</option><option>right side</option></select>\r\n  \r\n  <select id=\"LED2Dropdown\" style=\"width: 200px; height: 30px; font-size: 14px; margin: 0px; color: rgb(255, 255, 255); background-color: rgb(26, 188, 156); position: absolute; left: 60px; top: 95px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif; background-image: url(&quot;data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20448%22%20enable-background%3D%22new%200%200%20256%20448%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.arrow%7Bfill%3A%23ffffff%3B%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22arrow%22%20d%3D%22M255.9%20168c0-4.2-1.6-7.9-4.8-11.2-3.2-3.2-6.9-4.8-11.2-4.8H16c-4.2%200-7.9%201.6-11.2%204.8S0%20163.8%200%20168c0%204.4%201.6%208.2%204.8%2011.4l112%20112c3.1%203.1%206.8%204.6%2011.2%204.6%204.4%200%208.2-1.5%2011.4-4.6l112-112c3-3.2%204.5-7%204.5-11.4z%22%2F%3E%3C%2Fsvg%3E&quot;); padding: 0px 30px 0px 10px;\"><option>top row</option><option>bottom row</option></select>\r\n  \r\n  <label id=\"instructions\" style=\"width: 270px; font-size: 20px; position: absolute; top: 150px; left: 25px; background-color: rgba(0, 0, 0, 0); text-rendering: optimizespeed; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\">Choose your LED styles, then use the left and right buttons on your micro:bit to turn the them on and off.</label>\r\n  \r\n    <label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(51, 51, 51); background-color: rgba(0, 0, 0, 0); border-color: rgb(153, 153, 153); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 70px; padding: 2px; width: 185px; height: 105px; position: absolute; left: 65px; top: 275px; text-align: center;\" id=\"lightLabel\">Off</label></div></div>",
+    "hide_view_data_button": "true",
+    "show_debug_watch": "true",
+    "expand_debugger": "false",
+    "fail_on_lint_errors": "false",
+    "debugger_disabled": "false",
+    "makerlab_enabled": "microbit",
+    "top_level_procedure_autopopulate": "false",
+    "parent_level_id": 20435,
+    "name_suffix": "_-foundations-24",
+    "map_reference": "/courses/csd-2022/guides/taking-input-with-getproperty",
+    "mini_rubric": "false",
+    "text_mode_at_start": "false",
+    "encrypted": "false",
+    "widget_mode": "false",
+    "libraries_enabled": "false",
+    "ai_enabled": "false",
+    "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD U6L10.2 - add_code\",\r\n  \"callout_text\": \"Add your code here!\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"add_code\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"//Add your code here\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]\r\n",
+    "encrypted_examples": "7pXV4W0/TCUu7DfWhMuWbZv0B+qhMfxouPMvtetfCE+HS4z8/7y+tVp1BiAY\nsYeuCcY16k0R7ml+bGSUJUK58Q==\n",
+    "reference_links": [
+      "/courses/csd-2022/guides/if-statements-2",
+      "/courses/csd-2022/guides/booleans-and-comparison-operators",
+      "/courses/csd-2022/guides/variables",
+      "/courses/csd-2022/guides/counter-patterns-with-event",
+      "/courses/csd-2022/guides/microbit-physical-input",
+      "/courses/csd-2022/guides/microbit-display",
+      "/courses/csd-2022/guides/microbit-overview"
+    ],
+    "preload_asset_list": null
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-07-12T01:15:34.093+00:00\",\"changed\":[\"cloned from \\\"VPL-CSD-CI-U6MB-Combine Inputs2_2024\\\"\"],\"cloned_from\":\"VPL-CSD-CI-U6MB-Combine Inputs2_2024\"}]"
+}]]></config>
+  <blocks/>
+</Applab>

@@ -49,7 +49,7 @@ Whereas the week of {{ campaign_date/start_long }}, in honor of Grace Hopper's b
 
 Resolved, That the (HOUSE OR SENATE, STATE, COUNTY, CITY OR SCHOOL BOARD) --
 
-(1) supports the designation of Computer Science Education Week ({{ campaign_date/full }});
+(1) apoya la designación de la Semana por la Educación en Ciencias de la Computación ({{ campaign_date/full }});
 
 (2) encourages schools, educators, parents and policymakers to participate in Computer Science Education Week by enabling their students to participate in the Hour of Code;
 

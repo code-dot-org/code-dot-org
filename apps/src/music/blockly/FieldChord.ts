@@ -1,14 +1,16 @@
+import GoogleBlockly, {BlockSvg, DropDownDiv, Field} from 'blockly/core';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ChordPanel, {ChordPanelProps} from '../views/ChordPanel';
-import GoogleBlockly, {BlockSvg, DropDownDiv, Field} from 'blockly/core';
+
 import {ChordEventValue} from '../player/interfaces/ChordEvent';
 import MusicLibrary from '../player/MusicLibrary';
-import {getNoteName} from '../utils/Notes';
+import MusicPlayer from '../player/MusicPlayer';
 import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
-import {LoadFinishedCallback} from '../types';
-const experiments = require('@cdo/apps/util/experiments');
+import {getNoteName} from '../utils/Notes';
+import ChordPanel, {ChordPanelProps} from '../views/ChordPanel';
+
 const color = require('@cdo/apps/util/color');
+const experiments = require('@cdo/apps/util/experiments');
 
 const MAX_DISPLAY_NOTES = 3;
 const FIELD_WIDTH = 51;
@@ -17,16 +19,13 @@ const FIELD_PADDING = 2;
 
 interface FieldChordOptions {
   getLibrary: () => MusicLibrary;
-  previewChord: (value: ChordEventValue) => void;
-  previewNote: (note: number, instrument: string, onStop?: () => void) => void;
-  cancelPreviews: () => void;
+  previewChord: MusicPlayer['previewChord'];
+  previewNote: MusicPlayer['previewNote'];
+  cancelPreviews: MusicPlayer['cancelPreviews'];
   currentValue: ChordEventValue;
-  setupSampler: (
-    instrument: string,
-    onLoadFinished?: LoadFinishedCallback
-  ) => void;
-  isInstrumentLoading: (instrument: string) => boolean;
-  isInstrumentLoaded: (instrument: string) => boolean;
+  setupSampler: MusicPlayer['setupSampler'];
+  isInstrumentLoading: MusicPlayer['isInstrumentLoading'];
+  isInstrumentLoaded: MusicPlayer['isInstrumentLoaded'];
   registerInstrumentLoadCallback: (
     callback: (instrumentName: string) => void
   ) => void;

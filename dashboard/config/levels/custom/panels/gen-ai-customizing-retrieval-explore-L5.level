@@ -1,0 +1,38 @@
+<Panels>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 73,
+  "created_at": "2024-05-04T02:17:41.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "You can use the retrieval tab to add information to the chatbot that is outside of its training data.",
+        "imageUrl": "https://images.code.org/fc8bc8f34e8d3d12a5b9a80d03a354fb-navigate_to_retrieval_tab-chatbot_retrieval.png",
+        "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "Press the \"Add\" button when you're ready to add your retrieval information.",
+        "imageUrl": "https://images.code.org/c9948837ddd6ad53658d62b0f9dee36f-add_retrieval_info-chatbot_retrieval.png",
+        "key": "gen-ai-customizing-retrieval-explore-L5-eb123342-6d4c-4001-90b5-0a42512701bb"
+      },
+      {
+        "text": "You can remove retrieval information by pressing the X next to the prompt you want to remove.",
+        "imageUrl": "https://images.code.org/1afc3ce1c0bea15cc881cb40b7b6db23-remove_retrieval_info-chatbot_retrieval.png",
+        "key": "gen-ai-customizing-retrieval-explore-L5-9f0eb8c0-3401-4c95-be80-86d28aba6526",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "Press the \"Update\" button when you're ready to add the retrieval information to the chatbot.",
+        "imageUrl": "https://images.code.org/ccb2966a5062a86d1aafd5c0b4b561c3-updating_retrieval_info-chatbot_retrieval.png",
+        "key": "gen-ai-customizing-retrieval-explore-L5-90ef177f-49e5-4136-8115-1b61df0cb147",
+        "layout": "text-bottom-left"
+      }
+    ]
+  },
+  "audit_log": "[{\"changed_at\":\"2024-05-04T02:17:41.239+00:00\",\"changed\":[\"cloned from \\\"gen-ai-customizing-prompt-synthesis-L5\\\"\"],\"cloned_from\":\"gen-ai-customizing-prompt-synthesis-L5\"},{\"changed_at\":\"2024-05-08 21:41:43 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2024-05-08 21:42:18 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+}]]></config>
+</Panels>

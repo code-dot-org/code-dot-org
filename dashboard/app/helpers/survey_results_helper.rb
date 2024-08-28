@@ -13,6 +13,11 @@ module SurveyResultsHelper
     return false unless has_any_students?
     return false unless has_any_student_under_13?
 
+    diversity_audience = DCDO.get('diversity_audience', 'all')
+    return false if diversity_audience == 'none'
+    return false if diversity_audience == 'odd' && current_user.id.even?
+    return false if diversity_audience == 'even' && current_user.id.odd?
+
     # There is no reason not to show the survey, so show the survey.
     return true
   end

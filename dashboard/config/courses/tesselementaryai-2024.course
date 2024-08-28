@@ -1,0 +1,21 @@
+{
+  "name": "tesselementaryai-2024",
+  "script_names": [
+    "tess-getting-started"
+  ],
+  "published_state": "in_development",
+  "instruction_type": "teacher_led",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "tesselementaryai",
+    "has_numbered_units": true,
+    "version_year": "2024"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

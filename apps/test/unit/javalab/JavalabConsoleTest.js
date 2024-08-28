@@ -1,23 +1,25 @@
+import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {expect} from '../../util/reconfiguredChai';
-import {mount} from 'enzyme';
-import JavalabConsole from '@cdo/apps/javalab/JavalabConsole';
 import {Provider} from 'react-redux';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
+
+import PhotoSelectionView from '@cdo/apps/javalab/components/PhotoSelectionView';
+import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
+import JavalabConsole from '@cdo/apps/javalab/JavalabConsole';
+import javalabConsole, {
+  openPhotoPrompter,
+  closePhotoPrompter,
+} from '@cdo/apps/javalab/redux/consoleRedux';
+import javalab from '@cdo/apps/javalab/redux/javalabRedux';
+import javalabView, {setDisplayTheme} from '@cdo/apps/javalab/redux/viewRedux';
 import {
   getStore,
   registerReducers,
   stubRedux,
   restoreRedux,
 } from '@cdo/apps/redux';
-import javalabView, {setDisplayTheme} from '@cdo/apps/javalab/redux/viewRedux';
-import javalabConsole, {
-  openPhotoPrompter,
-  closePhotoPrompter,
-} from '@cdo/apps/javalab/redux/consoleRedux';
-import javalab from '@cdo/apps/javalab/redux/javalabRedux';
-import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
-import sinon from 'sinon';
-import PhotoSelectionView from '@cdo/apps/javalab/components/PhotoSelectionView';
+
+import {expect} from '../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('Java Lab Console Test', () => {
   let store;

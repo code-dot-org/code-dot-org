@@ -1,8 +1,9 @@
 /**
  * Defines blocks useful in multiple blockly apps
  */
-var commonMsg = require('@cdo/locale');
 var blockly = require('@code-dot-org/blockly');
+
+var commonMsg = require('@cdo/locale');
 
 export const blocks = {
   installJoinBlock(blockly) {
@@ -107,6 +108,7 @@ export const blocks = {
       return [code, Blockly.JavaScript.ORDER_FUNCTION_CALL];
     };
   },
+  installCustomColourRandomBlock() {},
   copyBlockGenerator(generator, type1, type2) {
     generator[type1] = generator[type2];
   },
@@ -115,4 +117,7 @@ export const blocks = {
   },
   addSerializationHooksToBlock() {},
   mathRandomIntGenerator: blockly.JavaScript.math_random_int,
+  getColourDropdownField(colours) {
+    return new Blockly.FieldColourDropdown(colours, 45, 35);
+  },
 };

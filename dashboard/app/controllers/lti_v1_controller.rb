@@ -8,9 +8,6 @@ require "cdo/honeybadger"
 require 'metrics/events'
 
 class LtiV1Controller < ApplicationController
-  before_action -> {redirect_to lti_v1_integrations_path, alert: I18n.t('lti.integration.early_access.closed')},
-                if: -> {Policies::Lti.early_access_closed?}, only: :create_integration
-
   # Don't require an authenticity token because LTI Platforms POST to this
   # controller.
   skip_before_action :verify_authenticity_token
@@ -125,11 +122,16 @@ class LtiV1Controller < ApplicationController
     # in a new tab. This flow appends a 'new_tab=true' query param, so it will
     # pass this block once the iframe "jail break" has happened.
     if Policies::Lti.force_iframe_launch?(decoded_jwt[:iss]) && !params[:new_tab]
-      id_token = params[:id_token]
-      state = params[:state]
-      token_hash = {id_token: id_token, state: state}
-      redirect_to "#{lti_v1_iframe_url}?#{token_hash.to_query}"
-      return
+      auth_url_base = CDO.studio_url('/lti/v1/authenticate', CDO.default_scheme)
+
+      query_params = {
+        id_token: params[:id_token],
+        state: params[:state],
+        new_tab: "true",
+      }
+
+      @auth_url = "#{auth_url_base}?#{query_params.to_query}"
+      render 'lti/v1/iframe', layout: false and return
     end
 
     jwt_verifier = JwtVerifier.new(decoded_jwt, integration)
@@ -163,6 +165,7 @@ class LtiV1Controller < ApplicationController
       }
 
       destination_url = "#{target_link_uri}?#{redirect_params.to_query}"
+      session[:user_return_to] = destination_url
 
       if user
         sign_in user
@@ -176,6 +179,15 @@ class LtiV1Controller < ApplicationController
           event_name: 'lti_user_signin',
           metadata: metadata,
         )
+
+        # If this is the user's first login, send them into the account linking flow
+        unless user.lms_landing_opted_out
+          Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'continue', user.user_type)
+          PartialRegistration.persist_attributes(session, user)
+          publish_linking_page_visit(user, integration[:platform_name])
+          render 'lti/v1/account_linking/landing', locals: {email: Services::Lti.get_claim(decoded_jwt, :email)} and return
+        end
+
         # If on code.org, the user is a student and the LTI has the same user as a teacher, upgrade the student to a teacher.
         if lti_account_type == User::TYPE_TEACHER && user.user_type == User::TYPE_STUDENT
           @form_data = {
@@ -189,9 +201,12 @@ class LtiV1Controller < ApplicationController
         redirect_to destination_url
       else
         user = Services::Lti.initialize_lti_user(decoded_jwt)
+        # PartialRegistration removes the email address, so store it in a local variable first
+        email_address = Services::Lti.get_claim(decoded_jwt, :email)
+        Services::Lti.initialize_lms_landing_session(session, integration[:platform_name], 'new', user.user_type)
         PartialRegistration.persist_attributes(session, user)
-        session[:user_return_to] = destination_url
-        redirect_to new_user_registration_url
+        publish_linking_page_visit(user, integration[:platform_name])
+        render 'lti/v1/account_linking/landing', locals: {email: email_address} and return
       end
     else
       jwt_error_message = jwt_verifier.errors.empty? ? 'Invalid JWT' : jwt_verifier.errors.join(', ')
@@ -223,22 +238,6 @@ class LtiV1Controller < ApplicationController
     end
   end
 
-  # GET /lti/v1/iframe
-  # Detects if an LMS is trying open Code.org in an iframe and prompts user to
-  # open in new tab. The experience is unchanged to non-iframe users.
-  def iframe
-    auth_url_base = CDO.studio_url('/lti/v1/authenticate', CDO.default_scheme)
-
-    query_params = {
-      id_token: ERB::Util.url_encode(params[:id_token]),
-      state: ERB::Util.url_encode(params[:state]),
-      new_tab: ERB::Util.url_encode("true"),
-    }
-
-    @auth_url = "#{auth_url_base}?#{query_params.to_query}"
-    render 'lti/v1/iframe', layout: false
-  end
-
   # GET /lti/v1/sync_course
   # Syncs an LMS course from an LTI launch or from the teacher dashboard sync button.
   # It can respond to either HTML or JSON content requests.
@@ -261,7 +260,9 @@ class LtiV1Controller < ApplicationController
       end
     end
 
-    lti_course, lti_integration, deployment_id, context_id, resource_link_id, nrps_url = nil
+    lti_course, lti_integration, deployment_id, context_id,  nrps_url = nil
+    resource_link_id = params[:rlid]
+
     if params[:section_code].present?
       # Section code present, meaning this is a sync from the teacher dashboard.
       # Populate vars from the section associated with the input code.
@@ -272,8 +273,13 @@ class LtiV1Controller < ApplicationController
       lti_integration = lti_course.lti_integration
       deployment_id = lti_course.lti_deployment_id
       context_id = lti_course.context_id
-      resource_link_id = lti_course.resource_link_id
       nrps_url = lti_course.nrps_url
+      # Prefer the resource link from the SSO parameter instead of the course one. The resource link could have changed.
+      # For example, the teacher could have had Code.org in one material/module but deleted that material/module and
+      # made a new one (deleted the old LtiResourceLink and created a brand new one). This results in a mismatch between
+      # what is stored on Code.org's LtiCourse. Therefore, when doing an SSO sync, prefer the latest RLID and update our
+      # records with that.
+      resource_link_id ||= lti_course.resource_link_id
     else
       # Section code isn't present, meaning this is a sync from an LTI launch.
       # Populate vars from the request params.
@@ -284,7 +290,6 @@ class LtiV1Controller < ApplicationController
       end
       deployment_id = params[:deployment_id]
       context_id = params[:context_id]
-      resource_link_id = params[:rlid]
       nrps_url = params[:nrps_url]
     end
 
@@ -345,6 +350,8 @@ class LtiV1Controller < ApplicationController
     respond_to do |format|
       format.html do
         if had_changes || params[:force]
+          session[:keep_flashes] = true
+          flash.keep
           render lti_v1_sync_course_path
         else
           redirect_to home_path
@@ -397,6 +404,15 @@ class LtiV1Controller < ApplicationController
 
       @integration_status = :created
       LtiMailer.lti_integration_confirmation(admin_email).deliver_now
+
+      metadata = {
+        lms_name: platform_name,
+      }
+      Metrics::Events.log_event_with_session(
+        session: session,
+        event_name: 'lti_portal_registration_completed',
+        metadata: metadata,
+      )
     end
     render 'lti/v1/integration_status'
   end
@@ -409,7 +425,7 @@ class LtiV1Controller < ApplicationController
       {platform: key, name: value[:name]}
     end
 
-    render template: Policies::Lti.early_access? ? 'lti/v1/integrations/early_access' : 'lti/v1/integrations'
+    render lti_v1_integrations_path
   end
 
   # POST /lti/v1/upgrade_account
@@ -461,5 +477,16 @@ class LtiV1Controller < ApplicationController
       context: context
     )
     unauthorized_status
+  end
+
+  private def publish_linking_page_visit(user, platform_name)
+    metadata = {
+      'lms_name' => platform_name,
+    }
+    Metrics::Events.log_event(
+      user: user,
+      event_name: 'lti_account_linking_page_visit',
+      metadata: metadata,
+    )
   end
 end

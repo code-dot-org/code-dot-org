@@ -1,5 +1,6 @@
 <StandaloneVideo>
   <config><![CDATA[{
+  "published": true,
   "game_id": 54,
   "created_at": "2024-03-22T19:10:05.000Z",
   "level_num": "custom",
@@ -12,11 +13,10 @@
     "parent_level_id": 28811,
     "name_suffix": "_2024",
     "encrypted": "false",
-    "long_instructions": "\r\n\r\n##### This video is included in the CS Discoveries curriculum to introduce students to training data bias.\r\n##\r\n\r\n##### **Bias** - when a decision favors some things and deprioritizes or excludes others\r\n\r\n## As you watch the video, consider the following:\r\n\r\n#### Why is it important for my students to consider training bias when learning about AI and machine learning? \r\n"
+    "long_instructions": "<div style=\"background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;\"> <p style=\"line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;\">\r\n\r\n#### **Bias** - when a decision favors some things and deprioritizes or excludes others\r\n</p></div>\r\n<br>\r\n\r\n#### This video is included in the CS Discoveries curriculum to introduce students to **training data bias**.\r\n\r\n### **As you watch the video, consider the following:**\r\n\r\n#### Why is it important for my students to consider training bias when learning about AI and machine learning? \r\n"
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-22T19:10:05.279+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSD-21-mod5-TrainingDataBias-vid_-22\\\"\"],\"cloned_from\":\"SP-VPL-CSD-21-mod5-TrainingDataBias-vid_-22\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-03-22T19:10:05.279+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-CSD-21-mod5-TrainingDataBias-vid_-22\\\"\"],\"cloned_from\":\"SP-VPL-CSD-21-mod5-TrainingDataBias-vid_-22\"},{\"changed_at\":\"2024-05-06 18:39:17 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>

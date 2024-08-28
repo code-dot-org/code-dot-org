@@ -1,0 +1,21 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "game_id": 54,
+  "created_at": "2024-07-12T01:15:13.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "PL_CSD_TeacherTips_ProblemSolvingProcess",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 29107,
+    "name_suffix": "_-foundations-24",
+    "encrypted": "false",
+    "long_instructions": "## Consider the following when watching this video:\r\n#### How might your students benefit from using the problem solving process to solve problems?\r\n"
+  },
+  "published": true,
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-07-12T01:15:13.096+00:00\",\"changed\":[\"cloned from \\\"SP-VPL-PC-22-PSP-vid_2024\\\"\"],\"cloned_from\":\"SP-VPL-PC-22-PSP-vid_2024\"}]"
+}]]></config>
+</StandaloneVideo>

@@ -1,24 +1,27 @@
-import React, {useState} from 'react';
+import classnames from 'classnames';
 import PropTypes from 'prop-types';
-import style from './rubrics.module.scss';
-import i18n from '@cdo/locale';
+import React, {useState} from 'react';
+
 import {
   BodyThreeText,
   BodyTwoText,
   Heading3,
   Heading4,
 } from '@cdo/apps/componentLibrary/typography';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import i18n from '@cdo/locale';
+
+import LearningGoals from './LearningGoals';
 import {
   aiEvaluationShape,
   reportingDataShape,
   rubricShape,
   studentLevelInfoShape,
 } from './rubricShapes';
-import LearningGoals from './LearningGoals';
-import classnames from 'classnames';
-import StudentSelector from './StudentSelector';
 import SectionSelector from './SectionSelector';
+import StudentSelector from './StudentSelector';
+
+import style from './rubrics.module.scss';
 
 const formatTimeSpent = timeSpent => {
   const minutes = Math.floor(timeSpent / 60);
@@ -175,9 +178,14 @@ export const InfoAlert = ({text, dismissable}) => {
         [style.infoAlert]: !closed,
         [style.infoAlertClosed]: !!closed,
       })}
+      data-testid="info-alert"
     >
       <div className={style.infoAlertLeft}>
-        <FontAwesome icon="info-circle" className={style.infoAlertIcon} />
+        <FontAwesome
+          icon="info-circle"
+          className={style.infoAlertIcon}
+          title="info circle icon"
+        />
         <BodyTwoText>{text}</BodyTwoText>
       </div>
       {!!dismissable && (

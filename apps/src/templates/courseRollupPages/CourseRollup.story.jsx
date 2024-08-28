@@ -1,7 +1,8 @@
 import React from 'react';
+import {Provider} from 'react-redux';
+
 import CourseRollup from '@cdo/apps/templates/courseRollupPages/CourseRollup';
 import UnitRollup from '@cdo/apps/templates/courseRollupPages/UnitRollup';
-import {Provider} from 'react-redux';
 import {reduxStore} from '@cdo/storybook/decorators';
 
 const defaultProps = {

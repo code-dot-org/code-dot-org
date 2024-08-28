@@ -12,11 +12,12 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-12 20:53:10 UTC",
+    "serialized_at": "2024-07-11 16:16:06 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -116,7 +117,7 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/2) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U3L2 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/dac7fecb17b44011851be58851a84e10) on AP Classroom can be assigned as a formative assessment for this lesson.\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/2) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I easily assign multiple elements to a one-dimensional (1D) array?**\n\nIn this lesson, students explore using initializer lists to create one-dimensional (1D) arrays and learn how to access and modify elements. They discover that the size of a 1D array cannot be changed after it is created and identify similarities and differences between assigning values to a 1D array and to a variable. Students then practice creating a 1D array using initializer lists and modifying the values stored in a 1D array.",
         "preparation": "* **(Optional)** Print copies of the U3L2 Guided Notes (one for each student)\n* Preview the *Modifying Values in a 1D Array* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-2-modifying-elements/37886) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I easily assign multiple elements to a one-dimensional (1D) array?**\n\nIn this lesson, you explore using initializer lists to create one-dimensional (1D) arrays and learn how to access and modify elements. You discover that the size of a 1D array cannot be changed after it is created and identify similarities and differences between assigning values to a 1D array and to a variable. You then practice creating a 1D array using initializer lists and modifying the values stored in a 1D array."
@@ -154,7 +155,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.4\n* Topic Questions 6.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/4) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U3L4 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/dac7fecb17b44011851be58851a84e10) on AP Classroom can be assigned as a formative assessment for this lesson.\n\nAdditionally, the following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.4\n* Topic Questions 6.2\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/4) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I write more efficient code to traverse a 1D array?**\n\nStudents learn about the structure and functionality of a `for` loop and explore how it can be used to traverse a one-dimensional (1D) array. They identify similarities and differences between `while` loops and `for` loops and practice tracing code segments involving a `for` loop to determine the output. Students then practice converting `while` loops to `for` loops and using `for` loops to traverse 1D arrays to access and modify elements and identify ideal scenarios for using each type of loop.",
         "preparation": "* **(Optional)** Print copies of the U3L4 Guided Notes (one for each student)\n* Preview the *For Loops* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-4-for-loops/37888) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I write more efficient code to traverse a 1D array?**\n\nYou learn about the structure and functionality of a `for` loop and explore how it can be used to traverse a one-dimensional (1D) array. You identify similarities and differences between `while` loops and `for` loops and practice tracing code segments involving a `for` loop to determine the output. You then practice converting `while` loops to `for` loops and using `for` loops to traverse 1D arrays to access and modify elements and identify ideal scenarios for using each type of loop."
@@ -173,7 +174,7 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/5) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U3L5 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/12ac93ad31d242ab8a4a3e3124a4f622) on AP Classroom can be assigned as a formative assessment for this lesson.\n\nAdditionally, the following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/5) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I perform calculations on the values stored in a 1D array?**\n\nStudents have learned how to create one-dimensional (1D) arrays using the `new` keyword and initializer lists and access and modify one or multiple elements. In this lesson, students explore how values from a text file can be read and stored in a 1D array and consider the preconditions and postconditions an algorithm should satisfy. Students then apply their knowledge of 1D arrays, loops, and returning values from methods to plan and implement algorithms to calculate the sum and average of the values in a 1D array. ",
         "preparation": "* **(Optional)** Print copies of the U3L5 Guided Notes (one for each student)\n* Print copies of the CS Bingo Cards (one card for each student)\n* Print the CS Bingo Definitions resource and mix them up OR use [**this web-based version**](https://csabingo.up.railway.app/) to show the terms and definitions\n* Print copies of the Writing Algorithms with Arrays (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-5-preconditions-and-postconditions/37889) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I perform calculations on the values stored in a 1D array?**\n\nYou have learned how to create one-dimensional (1D) arrays using the `new` keyword and initializer lists and access and modify one or multiple elements. In this lesson, you explore how values from a text file can be read and stored in a 1D array and consider the preconditions and postconditions an algorithm should satisfy. You then apply your knowledge of 1D arrays, loops, and returning values from methods to plan and implement algorithms to calculate the sum and average of the values in a 1D array."
@@ -192,7 +193,7 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 6.1\n* Topic Questions 9.5\n* Topic Questions 9.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/6) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U3L6 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/d2eea9f26637445aabdc052ba89d0c95) on AP Classroom can be assigned as a formative assessment for this lesson.\n\nAdditionally, the following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 6.1\n* Topic Questions 9.5\n* Topic Questions 9.6\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/6) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can polymorphism improve the efficiency and flexibility of my program code?**\n\nIn this lesson, students expand on what they know about inheritance to explore how they can create arrays of objects. They learn about polymorphism and discover how it can be implemented to make program code more efficient and flexible. Students recall overriding the `toString()` method and how this approach can be applied to override a superclass method in a subclass. Students then practice using superclass references to create and work with 1D arrays.",
         "preparation": "* **(Optional)** Print copies of the U3L6 Guided Notes (one for each student)\n* Preview the *Polymorphism* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-6-polymorphism/37890) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can polymorphism improve the efficiency and flexibility of my program code?**\n\nIn this lesson, you expand on what you know about inheritance to explore how you can create arrays of objects. You learn about polymorphism and discover how it can be implemented to make program code more efficient and flexible. You recall overriding the `toString()` method and how this approach can be applied to override a superclass method in a subclass. You then practice using superclass references to create and work with 1D arrays."
@@ -211,7 +212,7 @@
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 6.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/7) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U3L7 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/0c25961090ae48fda655655714b24ada) on AP Classroom can be assigned as a formative assessment for this lesson.\n\nAdditionally, the following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 6.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/7) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**When would I want to traverse an array with an enhanced `for` loop?**\n\nStudents have learned to use `while` and `for` loops to traverse a 1D array. In this lesson, students explore the syntax and functionality of an enhanced `for` loop and identify scenarios where this type of loop would be useful. Students practice converting `while` and `for` loops to enhanced `for` loops and implementing algorithms to find the sum and average of the values in a 1D array using an enhanced `for` loop.",
         "preparation": "* **(Optional)** Print copies of the U3L7 Guided Notes (one for each student)\n* Preview the *Careers in Tech: My Name is Polina* and *Enhanced For Loops* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-7-enhanced-for-loops/37891) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**When would I want to traverse an array with an enhanced `for` loop?**\n\nYou have learned to use `while` and `for` loops to traverse a 1D array. In this lesson, you explore the syntax and functionality of an enhanced `for` loop and identify scenarios where this type of loop would be useful. You practice converting `while` and `for` loops to enhanced `for` loops and implementing algorithms to find the sum and average of the values in a 1D array using an enhanced `for` loop."
@@ -230,7 +231,7 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/8) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U3L8 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/3d354fa0cee241a3992031797b9ce2e0) on AP Classroom can be assigned as a formative assessment for this lesson.\n\nAdditionally, the following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/8) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I use what I know about object-oriented programming and 1D arrays to plan and implement algorithms?**\n\nIn this lesson, students apply what they have learned so far to plan and implement standard algorithms to search or modify a one-dimensional (1D) array. Students discover the need for the `equals()` method when comparing `String` objects for equality and explore the difference between executing a return statement inside of a loop and at the end of a method. Students then work with a partner and use manipulatives to plan and implement an algorithm to determine the minimum or maximum value in a 1D array, determine if at least one element in a 1D array has a particular property, determine if all elements in a 1D array have a particular property, or determine the number of elements in a 1D array meet specific criteria. After implementing their algorithm, students conduct a code review to refine and improve their code.",
         "preparation": "* **(Optional)** Print copies of the U3L8 Guided Notes (one for each student)\n* Print copies of the Writing Algorithms with Arrays handout (one for each pair of students)\n* Print copies of the Planning Algorithms Manipulatives (one set for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-8-array-algorithms/37892) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I use what I know about object-oriented programming and 1D arrays to plan and implement algorithms?**\n\nIn this lesson, you apply what you have learned so far to plan and implement standard algorithms to search or modify a one-dimensional (1D) array. You discover the need for the `equals()` method when comparing `String` objects for equality and explore the difference between executing a return statement inside of a loop and at the end of a method. You then work with a partner and use manipulatives to plan and implement an algorithm to determine the minimum or maximum value in a 1D array, determine if at least one element in a 1D array has a particular property, determine if all elements in a 1D array have a particular property, or determine the number of elements in a 1D array meet specific criteria. After implementing your algorithm, you conduct a code review to refine and improve your code."
@@ -249,7 +250,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.4\n* Topic Questions 6.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/9) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
+        "assessment_opportunities": "### AP Classroom Topic Questions\n\nThe [**Code.org U3L9 Topic Questions**](https://apclassroom.collegeboard.org/8/shared-quizzes/ffb6b316fc7c4547881c180908c3355e) on AP Classroom can be assigned as a formative assessment for this lesson.\n\nAdditionally, the following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.4\n* Topic Questions 6.4\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/3/topicNumber/9) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I check if a 1D array contains duplicate elements?**\n\nStudents have learned how to traverse one-dimensional (1D) arrays and implement algorithms to search and modify elements. They expand on their knowledge of loops to explore using nested loops with 1D arrays and practice tracing these to determine the output of code segments using nested loops. Students then work with a partner and use manipulatives to plan and implement an algorithm to find duplicate values in a 1D array.",
         "preparation": "* **(Optional)** Print copies of the U3L9 Guided Notes (one for each student)\n* Print copies of the Finding Duplicates handout (one for each pair of students)\n* Print copies of the Planning Algorithms Manipulatives (one set for each pair of students)\n* (Optional) Cut out the Planning Algorithms Manipulatives and place in baggies\n* Preview the *Nested Loops* video\n* Print copies of the Unit 3 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-3-9-finding-duplicates/37893) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
         "student_overview": "**How can I check if a 1D array contains duplicate elements?**\n\nYou have learned how to traverse one-dimensional (1D) arrays and implement algorithms to search and modify elements. You expand on your knowledge of loops to explore using nested loops with 1D arrays and practice tracing these to determine the output of code segments using nested loops. You then work with a partner and use manipulatives to plan and implement an algorithm to find duplicate values in a 1D array."
@@ -4521,6 +4522,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L1-L1_2024"
+        ],
         "progression": "Predict and Run: Storing Multiple Values"
       },
       "bonus": false,
@@ -4543,6 +4547,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L1-L2_2024"
+        ],
         "progression": "Investigate and Modify: 1D Arrays"
       },
       "bonus": false,
@@ -4565,6 +4572,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L1-L3_2024"
+        ],
         "progression": "Investigate and Modify: 1D Arrays"
       },
       "bonus": false,
@@ -4587,6 +4597,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L1-L4_2024"
+        ],
         "progression": "Investigate and Modify: 1D Arrays"
       },
       "bonus": false,
@@ -4609,6 +4622,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L1-L5_2024"
+        ],
         "progression": "Practice: Creating 1D Arrays"
       },
       "bonus": false,
@@ -4631,6 +4647,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L1-L6_2024"
+        ],
         "progression": "Practice: Creating 1D Arrays"
       },
       "bonus": false,
@@ -4653,6 +4672,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L1-L7_2024"
+        ],
         "progression": "Practice: Creating 1D Arrays"
       },
       "bonus": false,
@@ -4675,6 +4697,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L1-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4697,6 +4722,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L1_2024"
+        ],
         "progression": "Predict and Run: Initializer Lists"
       },
       "bonus": false,
@@ -4719,6 +4747,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L2_2024"
+        ],
         "progression": "Investigate and Modify: Assigning and Accessing Elements"
       },
       "bonus": false,
@@ -4741,6 +4772,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L3_2024"
+        ],
         "progression": "Investigate and Modify: Assigning and Accessing Elements"
       },
       "bonus": false,
@@ -4763,6 +4797,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L4_2024"
+        ],
         "progression": "Investigate and Modify: Assigning and Accessing Elements"
       },
       "bonus": false,
@@ -4785,6 +4822,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L5_2024"
+        ],
         "progression": "Practice: Creating 1D Arrays"
       },
       "bonus": false,
@@ -4807,6 +4847,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L6_2024"
+        ],
         "progression": "Practice: Creating 1D Arrays"
       },
       "bonus": false,
@@ -4829,6 +4872,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L7_2024"
+        ],
         "progression": "Practice: Creating 1D Arrays"
       },
       "bonus": false,
@@ -4851,6 +4897,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L2-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -4873,6 +4922,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L1_2024"
+        ],
         "progression": "Predict and Run: Traversing 1D Arrays"
       },
       "bonus": false,
@@ -4895,6 +4947,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L2_2024"
+        ],
         "progression": "Investigate and Modify: Traversing 1D Arrays"
       },
       "bonus": false,
@@ -4917,6 +4972,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L3_2024"
+        ],
         "progression": "Investigate and Modify: Traversing 1D Arrays"
       },
       "bonus": false,
@@ -4939,6 +4997,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L4_2024"
+        ],
         "progression": "Investigate and Modify: Traversing 1D Arrays"
       },
       "bonus": false,
@@ -4961,6 +5022,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L5_2024"
+        ],
         "progression": "Practice: Traversing 1D Arrays"
       },
       "bonus": false,
@@ -4983,6 +5047,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L6_2024"
+        ],
         "progression": "Practice: Traversing 1D Arrays"
       },
       "bonus": false,
@@ -5005,6 +5072,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L7_2024"
+        ],
         "progression": "Practice: Traversing 1D Arrays"
       },
       "bonus": false,
@@ -5027,6 +5097,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L3-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5049,6 +5122,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L1_2024"
+        ],
         "progression": "Predict and Run: For Loops"
       },
       "bonus": false,
@@ -5071,6 +5147,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L2_2024"
+        ],
         "progression": "Investigate and Modify: For Loops"
       },
       "bonus": false,
@@ -5093,6 +5172,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L3_2024"
+        ],
         "progression": "Investigate and Modify: For Loops"
       },
       "bonus": false,
@@ -5115,6 +5197,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L4_2024"
+        ],
         "progression": "Investigate and Modify: For Loops"
       },
       "bonus": false,
@@ -5137,6 +5222,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L5_2024"
+        ],
         "progression": "Practice: Using for Loops"
       },
       "bonus": false,
@@ -5159,6 +5247,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L6_2024"
+        ],
         "progression": "Practice: Using for Loops"
       },
       "bonus": false,
@@ -5181,6 +5272,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L7_2024"
+        ],
         "progression": "Practice: Using for Loops"
       },
       "bonus": false,
@@ -5203,6 +5297,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L4-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5225,6 +5322,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L5-L1_2024"
+        ],
         "progression": "Investigate and Modify: Reading a File"
       },
       "bonus": false,
@@ -5247,6 +5347,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L5-L2_2024"
+        ],
         "progression": "Practice: Writing Algorithms with Arrays"
       },
       "bonus": false,
@@ -5269,6 +5372,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L5-L3_2024"
+        ],
         "progression": "Practice: Writing Algorithms with Arrays"
       },
       "bonus": false,
@@ -5291,6 +5397,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L5-L4_2024"
+        ],
         "progression": "Practice: Writing Algorithms with Arrays"
       },
       "bonus": false,
@@ -5313,6 +5422,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L5-L5_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5335,6 +5447,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L6-L1_2024"
+        ],
         "progression": "Predict and Run: Polymorphism"
       },
       "bonus": false,
@@ -5357,6 +5472,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L6-L2_2024"
+        ],
         "progression": "Investigate and Modify: Polymorphism"
       },
       "bonus": false,
@@ -5379,6 +5497,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L6-L3_2024"
+        ],
         "progression": "Investigate and Modify: Polymorphism"
       },
       "bonus": false,
@@ -5401,6 +5522,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L6-L4_2024"
+        ],
         "progression": "Investigate and Modify: Polymorphism"
       },
       "bonus": false,
@@ -5423,6 +5547,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L6-L5_2024"
+        ],
         "progression": "Practice: Using Polymorphism"
       },
       "bonus": false,
@@ -5445,6 +5572,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L6-L6_2024"
+        ],
         "progression": "Practice: Using Polymorphism"
       },
       "bonus": false,
@@ -5467,6 +5597,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L6-L7_2024"
+        ],
         "progression": "Practice: Using Polymorphism"
       },
       "bonus": false,
@@ -5489,6 +5622,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L6-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5511,6 +5647,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L7-L1_2024"
+        ],
         "progression": "Predict and Run: Enhanced For Loops"
       },
       "bonus": false,
@@ -5533,6 +5672,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L7-L2_2024"
+        ],
         "progression": "Investigate and Modify: Enhanced For Loops"
       },
       "bonus": false,
@@ -5555,6 +5697,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L7-L3_2024"
+        ],
         "progression": "Investigate and Modify: Enhanced For Loops"
       },
       "bonus": false,
@@ -5577,6 +5722,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L7-L4_2024"
+        ],
         "progression": "Investigate and Modify: Enhanced For Loops"
       },
       "bonus": false,
@@ -5599,6 +5747,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L7-L5_2024"
+        ],
         "progression": "Practice: Traversing 1D Arrays"
       },
       "bonus": false,
@@ -5621,6 +5772,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L7-L6_2024"
+        ],
         "progression": "Practice: Traversing 1D Arrays"
       },
       "bonus": false,
@@ -5643,6 +5797,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L7-L7_2024"
+        ],
         "progression": "Practice: Traversing 1D Arrays"
       },
       "bonus": false,
@@ -5665,6 +5822,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L7-L8_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5687,6 +5847,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L8-L1_2024"
+        ],
         "progression": "Predict and Run: Comparing String Objects"
       },
       "bonus": false,
@@ -5709,6 +5872,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L8-L2_2024"
+        ],
         "progression": "Investigate and Modify: Comparing and Returning"
       },
       "bonus": false,
@@ -5731,6 +5897,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L8-L3_2024"
+        ],
         "progression": "Investigate and Modify: Comparing and Returning"
       },
       "bonus": false,
@@ -5753,6 +5922,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L8-L4_2024"
+        ],
         "progression": "Investigate and Modify: Comparing and Returning"
       },
       "bonus": false,
@@ -5775,6 +5947,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L8-L5_2024"
+        ],
         "progression": "Practice: Array Algorithms"
       },
       "bonus": false,
@@ -5797,6 +5972,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L8-L6_2024"
+        ],
         "progression": "Practice: Array Algorithms"
       },
       "bonus": false,
@@ -5819,6 +5997,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L8-L7_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5841,6 +6022,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L1_2024"
+        ],
         "progression": "Predict and Run: Nested Loops"
       },
       "bonus": false,
@@ -5863,6 +6047,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L2_2024"
+        ],
         "progression": "Investigate and Modify: Nested Loops"
       },
       "bonus": false,
@@ -5885,6 +6072,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L3_2024"
+        ],
         "progression": "Investigate and Modify: Nested Loops"
       },
       "bonus": false,
@@ -5907,6 +6097,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L4_2024"
+        ],
         "progression": "Investigate and Modify: Nested Loops"
       },
       "bonus": false,
@@ -5929,6 +6122,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L5_2024"
+        ],
         "progression": "Practice: Finding Duplicate Values"
       },
       "bonus": false,
@@ -5951,6 +6147,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L6_2024"
+        ],
         "progression": "Practice: Finding Duplicate Values"
       },
       "bonus": false,
@@ -5973,6 +6172,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3L9-L7_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -5995,6 +6197,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3 Data for Social Good Project_2024"
+        ],
         "progression": "Data for Social Good Project"
       },
       "bonus": false,
@@ -6017,6 +6222,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA Unit 3 Assessment_2024"
+        ],
         "progression": "Unit 3 Assessment"
       },
       "bonus": false,
@@ -6039,6 +6247,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csa3_2024"
+        ],
         "progression": "Unit 3 Survey"
       },
       "bonus": false,
@@ -6061,6 +6272,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA U3 Data for Social Good Project 1-Day_2024"
+        ],
         "progression": "Data for Social Good Project"
       },
       "bonus": false,
@@ -6083,6 +6297,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Console Sandbox_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -6104,6 +6321,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood Sandbox_2024"
+        ],
         "progression": "With Paint Bucket"
       },
       "bonus": false,
@@ -6126,6 +6346,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Neighborhood - No Bucket Sandbox_2024"
+        ],
         "progression": "No Paint Bucket"
       },
       "bonus": false,
@@ -6148,6 +6371,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA 2023 Theater Sandbox_2024"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -7414,7 +7640,7 @@
     },
     {
       "name": "Array Algorithms",
-      "url": "https://docs.google.com/presentation/d/1Ks7hI6Ig7WPUhQN0Pp2WIbxqAYD4PvsuzHvfPcVDXOA/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/12QSD7JsuQVpICsCmw4lJCfrC1dRuwp-vCHeYWbw-5Vo/edit?usp=drive_link",
       "key": "array_algorithms",
       "properties": {
         "audience": "Verified Teacher",
@@ -7463,11 +7689,9 @@
     },
     {
       "name": "CSA Unit 3 Slides",
-      "url": "https://docs.google.com/presentation/d/1qqv3Hc7KndBVGlT0HVH2oaLzftqFhUvxSwMOlhJ1mlU/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1irXu3okX58tDdfeAE2Ih8SRKnciekgBpq2LgKRvv-xw/",
       "key": "csa_unit_3_slides",
       "properties": {
-        "audience": "Verified Teacher",
-        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csa_unit_3_slides"
@@ -7487,7 +7711,7 @@
     },
     {
       "name": "Data for Social Good Project",
-      "url": "https://docs.google.com/presentation/d/13I--7OBNkGr2tuu9Kn_hMHowew_w4O1667NxJ5HuLw0/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/12hTH4FwO19_5uZ8Gm01xTYwSLwJtLiCBChwutaFfvTU/edit?usp=drive_link",
       "key": "data_for_social_good_project",
       "properties": {
         "audience": "Verified Teacher",
@@ -7499,7 +7723,7 @@
     },
     {
       "name": "Data for Social Good Project",
-      "url": "https://docs.google.com/presentation/d/15-oUt8-MMzLVqX-CrAKCJg0vzPPH1SdgKUr03wjxinY/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1Jvxl69zTY1GrW0eaQkMj_9R0KO914LqQ-1O4BbY_tQo/edit?usp=drive_link",
       "key": "data_for_social_good_project_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -7537,7 +7761,7 @@
     },
     {
       "name": "Enhanced For Loops",
-      "url": "https://docs.google.com/presentation/d/1e7RR2SUn6ip2MZ2LyjT5f_F_evcGNwkf5Po7Upeccf0/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1h-uwahv28WmospR5qO_q4X1uEAPmYBobQBQYnJO6WSM/edit?usp=drive_link",
       "key": "enhanced_for_loops",
       "properties": {
         "audience": "Verified Teacher",
@@ -7561,7 +7785,7 @@
     },
     {
       "name": "Finding Duplicates",
-      "url": "https://docs.google.com/presentation/d/1uAb-x1BIssUKs6zFzafyX_C0YvQJVA99oNVq74WGh7Q/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/11LseZvMN9nfeb3_ePDeI5fZPnUIXo1tftC8WLokfCio/edit?usp=drive_link",
       "key": "finding_duplicates",
       "properties": {
         "audience": "Verified Teacher",
@@ -7586,7 +7810,7 @@
     },
     {
       "name": "For Loops",
-      "url": "https://docs.google.com/presentation/d/1O1MCBkgwAtO73vll5Efn1OGqJsSeNg7Bfoh2JJLfk5c/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/18UxFZSWEnMgh1_Hsvt04-hQ5rqLMd1mf6nHtKc4-6ik/edit?usp=drive_link",
       "key": "for_loops",
       "properties": {
         "audience": "Verified Teacher",
@@ -7634,7 +7858,7 @@
     },
     {
       "name": "Modifying Elements",
-      "url": "https://docs.google.com/presentation/d/1E8G1t0h4bX3jnUITNVcR4IjtZI2kUA4DWezfYDy8JDU/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1ZcCUur4w79TsRPfyX0sksMvOzqJUbdLaN8hrln20BK0/edit?usp=drive_link",
       "key": "modifying_elements",
       "properties": {
         "audience": "Verified Teacher",
@@ -7670,7 +7894,7 @@
     },
     {
       "name": "One-Dimensional (1D) Arrays",
-      "url": "https://docs.google.com/presentation/d/1ILRcTvqHwzkyKoYf9i_REBoWZQuF_ooafnmvL0mm-8k/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1mz7onMCIdd9sUR9cla-3bg_DawRv48Ewar_VXihaTy0/edit?usp=drive_link",
       "key": "one-dimensional_1d_arrays",
       "properties": {
         "audience": "Verified Teacher",
@@ -7720,7 +7944,7 @@
     },
     {
       "name": "Polymorphism",
-      "url": "https://docs.google.com/presentation/d/1rUrsc10AR9UmXvCuZH2Jm3MAhocJjHnW5FqtibZJR3Q/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1aKMOsCk9wrH99D5D8GXx9_pW9xSqu8J7fkGDFBX9V5A/edit?usp=drive_link",
       "key": "polymorphism",
       "properties": {
         "audience": "Verified Teacher",
@@ -7744,7 +7968,7 @@
     },
     {
       "name": "Preconditions and Postconditions",
-      "url": "https://docs.google.com/presentation/d/1rFiKkjhTcak9pE3U6rzw4SG6EXGu2p3H90OcvgNFVvQ/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1OQ_ksJePZ5D12TOVTBVFAk1ht_YDnSnq69oaw_g11sI/edit?usp=drive_link",
       "key": "preconditions_and_postconditions",
       "properties": {
         "audience": "Verified Teacher",
@@ -7756,7 +7980,7 @@
     },
     {
       "name": "TicketTracker FRQ",
-      "url": "https://docs.google.com/presentation/d/1Ln5cdnJRGE2sukfoS3Z-8j-YGOLqB62sTkDQ9who56g/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1l1aQOrlcRAw-cnZ4q217tN__rSnWw-qDGKNdPUO916w/edit?usp=drive_link",
       "key": "tickettracker_frq",
       "properties": {
         "audience": "Verified Teacher",
@@ -7807,7 +8031,7 @@
     },
     {
       "name": "Traversing 1D Arrays",
-      "url": "https://docs.google.com/presentation/d/1di6gI9wOwCs4OjIB_BDgenO6qSXaqXKb3LSjfFnBHas/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1xiGUMLM-AiFToLABILAjLaDLkX8tHxSagRD_ZlMgofs/edit?usp=drive_link",
       "key": "traversing_1d_arrays",
       "properties": {
         "audience": "Verified Teacher",
@@ -8053,7 +8277,7 @@
     },
     {
       "name": "Unit 3 Assessment",
-      "url": "https://docs.google.com/presentation/d/10XQ29DXj4IzD138M0oTG2YADaWPp05DgSqV4SPTJQCs/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1RcqpS45W5bBN_QPYlRZYANKaJsCDBqdbyGisioYmpH4/edit?usp=drive_link",
       "key": "unit_3_assessment",
       "properties": {
         "audience": "Verified Teacher",

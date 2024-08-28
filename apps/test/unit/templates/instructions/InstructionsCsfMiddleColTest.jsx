@@ -1,15 +1,12 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
 
+import LegacyButton from '@cdo/apps/legacySharedComponents/LegacyButton';
 import HintPrompt from '@cdo/apps/templates/instructions/HintPrompt';
 import InlineFeedback from '@cdo/apps/templates/instructions/InlineFeedback';
 import InlineHint from '@cdo/apps/templates/instructions/InlineHint';
 import Instructions from '@cdo/apps/templates/instructions/Instructions';
 import {UnconnectedInstructionsCsfMiddleCol as InstructionsCsfMiddleCol} from '@cdo/apps/templates/instructions/InstructionsCsfMiddleCol';
-import LegacyButton from '@cdo/apps/templates/LegacyButton';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   dismissHintPrompt: () => {},
@@ -54,7 +51,7 @@ describe('InstructionsCsfMiddleCol', () => {
       collapsed: true,
       shortInstructions,
     });
-    expect(wrapper.find(Instructions).prop('instructions')).to.equal(
+    expect(wrapper.find(Instructions).prop('instructions')).toBe(
       shortInstructions
     );
   });
@@ -68,7 +65,7 @@ describe('InstructionsCsfMiddleCol', () => {
       shortInstructions,
       longInstructions,
     });
-    expect(wrapper.find(Instructions).prop('instructions')).to.equal(
+    expect(wrapper.find(Instructions).prop('instructions')).toBe(
       shortInstructions
     );
   });
@@ -80,7 +77,7 @@ describe('InstructionsCsfMiddleCol', () => {
       collapsed: false,
       longInstructions,
     });
-    expect(wrapper.find(Instructions).prop('instructions')).to.equal(
+    expect(wrapper.find(Instructions).prop('instructions')).toBe(
       longInstructions
     );
   });
@@ -88,7 +85,7 @@ describe('InstructionsCsfMiddleCol', () => {
   it('passes inputOutputTable to Instructions when not collapsed', () => {
     const inputOutputTable = [[1, 2, 3, 4]];
     const wrapper = setUp({collapsed: false, inputOutputTable});
-    expect(wrapper.find(Instructions).props().inputOutputTable).to.equal(
+    expect(wrapper.find(Instructions).props().inputOutputTable).toBe(
       inputOutputTable
     );
   });
@@ -96,26 +93,24 @@ describe('InstructionsCsfMiddleCol', () => {
   it('passes undefined for inputOutputTable to Instructions when collapsed', () => {
     const inputOutputTable = [[1, 2, 3, 4]];
     const wrapper = setUp({collapsed: true, inputOutputTable});
-    expect(wrapper.find(Instructions).props().inputOutputTable).to.equal(
-      undefined
-    );
+    expect(wrapper.find(Instructions).props().inputOutputTable).toBeUndefined();
   });
 
   it('display secondary instructions when shortInstructions2 exists', () => {
     const wrapper = setUp({shortInstructions2: 'short instructions 2'});
-    expect(wrapper.find('.secondary-instructions')).to.have.length(1);
+    expect(wrapper.find('.secondary-instructions')).toHaveLength(1);
   });
 
   it('display LegacyButton when overlayVisible', () => {
     const wrapper = setUp({overlayVisible: true});
-    expect(wrapper.find(LegacyButton)).to.have.length(1);
+    expect(wrapper.find(LegacyButton)).toHaveLength(1);
   });
 
   it('calls hideOverlay when overlayVisible and LegacyButton is clicked', () => {
-    const hideOverlaySpy = sinon.spy();
+    const hideOverlaySpy = jest.fn();
     const wrapper = setUp({overlayVisible: true, hideOverlay: hideOverlaySpy});
     wrapper.find(LegacyButton).simulate('click');
-    expect(hideOverlaySpy.calledOnce).to.be.true;
+    expect(hideOverlaySpy).toHaveBeenCalledTimes(1);
   });
 
   it('display InlineHint when hints and not collapsed', () => {
@@ -124,7 +119,7 @@ describe('InstructionsCsfMiddleCol', () => {
       markdown: 'hint markdown',
     };
     const wrapper = setUp({hints: [hint], collapsed: false});
-    expect(wrapper.find(InlineHint)).to.have.length(1);
+    expect(wrapper.find(InlineHint)).toHaveLength(1);
   });
 
   it('hide InlineHints when hints exist and collapsed', () => {
@@ -133,7 +128,7 @@ describe('InstructionsCsfMiddleCol', () => {
       markdown: 'hint markdown',
     };
     const wrapper = setUp({hints: [hint], collapsed: true});
-    expect(wrapper.find(InlineHint)).to.have.length(0);
+    expect(wrapper.find(InlineHint)).toHaveLength(0);
   });
 
   it('displays InlineFeedback when feedback and not collapsed', () => {
@@ -142,7 +137,7 @@ describe('InstructionsCsfMiddleCol', () => {
       isFailure: false,
     };
     const wrapper = setUp({feedback, collapsed: false});
-    expect(wrapper.find(InlineFeedback)).to.have.length(1);
+    expect(wrapper.find(InlineFeedback)).toHaveLength(1);
   });
 
   it('hides InlineFeedback when feedback exists and collapsed', () => {
@@ -151,11 +146,11 @@ describe('InstructionsCsfMiddleCol', () => {
       isFailure: false,
     };
     const wrapper = setUp({feedback, collapsed: true});
-    expect(wrapper.find(InlineFeedback)).to.have.length(0);
+    expect(wrapper.find(InlineFeedback)).toHaveLength(0);
   });
 
   it('displays HintPrompt when shouldDisplayHintPrompt returns true', () => {
     const wrapper = setUp({shouldDisplayHintPrompt: () => true});
-    expect(wrapper.find(HintPrompt)).to.have.length(1);
+    expect(wrapper.find(HintPrompt)).toHaveLength(1);
   });
 });

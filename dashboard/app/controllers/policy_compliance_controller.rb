@@ -23,7 +23,19 @@ class PolicyComplianceController < ApplicationController
     Services::ChildAccount.grant_permission_request!(permission_request)
     @permission_granted = true
     user = permission_request.user
-    @permission_granted_date = user.child_account_compliance_state_last_updated
+    @permission_granted_date = user.cap_status_date
+    @student_id = user.id
+  end
+
+  # GET /policy_compliance/pending_permission_request
+  def pending_permission_request
+    @pending_permission_request = current_user.latest_parental_permission_request
+
+    if @pending_permission_request
+      render json: ChildAccount::PendingPermissionRequestSerializer.new(@pending_permission_request).as_json
+    else
+      head :no_content
+    end
   end
 
   # POST /policy_compliance/child_account_consent
@@ -42,75 +54,29 @@ class PolicyComplianceController < ApplicationController
   # When such a limit is reached, this logic silently 'succeeds'. That is, it
   # acts like the email was sent and sends no notice to the student it was not.
   def child_account_consent_request
-    # If we already comply, don't suddenly invalid it
-    if current_user.child_account_compliance_state == Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED
-      redirect_back fallback_location: lockout_path and return
-    end
-
     parent_email = params.require(:'parent-email')
-    unless Cdo::EmailValidator.email_address?(parent_email)
-      return head :bad_request
-    end
-    # Validate that the parent email is not the same as the student email
-    # Also remove any subaddressing from the email to prevent abuse
-    sanitized_parent_email = parent_email.sub(/\+[^@]+@/, '@')
-    if current_user.hashed_email == Digest::MD5.hexdigest(sanitized_parent_email)
-      redirect_back fallback_location: lockout_path and return
-    end
 
-    # Only allow three unique permission requests per day
-    date = Time.zone.today
-    daily_request_count = ParentalPermissionRequest.where(
-      user: current_user,
-      created_at: date.midnight..date.end_of_day
-    ).limit(3).count
-
-    # Create a ParentalPermissionRequest token for user and parent email
-    # When the student 'updates' the parental email, we actually just create a
-    # new request row.
-    permission_request = ParentalPermissionRequest.find_or_initialize_by(
-      user: current_user,
-      parent_email: parent_email
+    permission_request_form = Forms::ChildAccount::ParentalPermissionRequest.new(
+      child_account: current_user, parent_email: parent_email
     )
 
-    # If we are making a new request but already sent too many today,
-    # just bail and return whence we came
-    if permission_request.new_record? && daily_request_count >= 3
-      redirect_back fallback_location: lockout_path and return
+    respond_to do |format|
+      format.html do
+        return head :bad_request unless Cdo::EmailValidator.email_address?(parent_email)
+
+        permission_request_form.request
+
+        # Redirect back to the page spawning the request
+        redirect_back fallback_location: lockout_path
+      end
+
+      format.json do
+        if permission_request_form.request
+          render status: :created, json: ChildAccount::PendingPermissionRequestSerializer.new(permission_request_form.record).as_json
+        else
+          render status: :unprocessable_entity, json: {error: permission_request_form.errors.full_messages.first}
+        end
+      end
     end
-
-    # If this is not a new row, we are resending the email
-    if permission_request.persisted?
-      permission_request.resends_sent += 1
-    end
-
-    # Do not send more than three emails to the same email
-    if permission_request.resends_sent >= 3
-      redirect_back fallback_location: lockout_path and return
-    end
-
-    # Save (will reassign the updated_at date)
-    permission_request.save!
-
-    # Send the request email
-    ParentMailer.parent_permission_request(
-      permission_request.parent_email,
-      url_for(
-        action: :child_account_consent,
-        controller: :policy_compliance,
-        token: permission_request.uuid,
-        only_path: false,
-      )
-    ).deliver_now
-
-    # Update the User
-    Services::ChildAccount.update_compliance(
-      current_user,
-      Policies::ChildAccount::ComplianceState::REQUEST_SENT
-    )
-    current_user.save!
-
-    # Redirect back to the page spawning the request
-    redirect_back fallback_location: lockout_path
   end
 end

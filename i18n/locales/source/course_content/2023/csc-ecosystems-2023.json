@@ -5,6 +5,34 @@
     "authored_hints": {
       "No Code": "There isn't anything to code yet. Just observe this system in action. "
     },
+    "function_definitions": {
+      "oceanSetup": {
+        "name": "oceanSetup",
+        "description": "Setup the basics for the student for this level."
+      }
+    },
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east and looping": "moving east and looping",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "driving with arrow keys": "driving with arrow keys",
+      "fluttering": "fluttering",
+      "wobbling": "wobbling",
+      "moving west and looping": "moving west and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
+    },
     "behavior_descriptions": {
       "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
       "move a sprite to the right across the screen": "move a sprite to the right across the screen",
@@ -29,6 +57,28 @@
     "long_instructions": "## Food Chain - Fish Eat Algae\n\n**When the fish touches an algae, the fish eats the algae**\n\n-   Find the event <code style=\"color:black; background-color:#6AF36C\">when fish touches algae</code>\n-   Connect an <code style=\"color:black; background-color:#5ED5DD\">eat object</code> block under the event\n-   Press <code style=\"color:black; background-color:#FFBD46\">Run</code>. **Are the fish eating the algae?**",
     "authored_hints": {
       "Connect": "Make sure the eat block is connected to the event block. \n\nThey should snap together like puzzle pieces!"
+    },
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east and looping": "moving east and looping",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "driving with arrow keys": "driving with arrow keys",
+      "fluttering": "fluttering",
+      "wobbling": "wobbling",
+      "moving west and looping": "moving west and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
     },
     "behavior_descriptions": {
       "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
@@ -55,6 +105,28 @@
     "authored_hints": {
       "Catch": "Use the catch object block so that the boat catches the fish",
       "CatchUnder": "The catch object block should be\nconnected under the boats touches \nfish event."
+    },
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east and looping": "moving east and looping",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "driving with arrow keys": "driving with arrow keys",
+      "fluttering": "fluttering",
+      "wobbling": "wobbling",
+      "moving west and looping": "moving west and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
     },
     "behavior_descriptions": {
       "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
@@ -110,6 +182,28 @@
       "Costume": "If there's too much algae, the coral will be damaged. \n\nUse the `change costume` block next.",
       "BlockInside": "Place the `change costume` block inside the if too much algae block."
     },
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east and looping": "moving east and looping",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "driving with arrow keys": "driving with arrow keys",
+      "fluttering": "fluttering",
+      "wobbling": "wobbling",
+      "moving west and looping": "moving west and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
+    },
     "behavior_descriptions": {
       "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
       "move a sprite to the right across the screen": "move a sprite to the right across the screen",
@@ -137,6 +231,28 @@
       "TooLittle": "Connect the if too little algae block to the when fish touches algae event.",
       "BlocksInside": "If there's too little algae, the fish will leave. \n\nPlace the other blocks inside the if too little algae block."
     },
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east and looping": "moving east and looping",
+      "leaving the area": "leaving the area",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "driving with arrow keys": "driving with arrow keys",
+      "fluttering": "fluttering",
+      "wobbling": "wobbling",
+      "moving west and looping": "moving west and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
+    },
     "behavior_descriptions": {
       "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
       "move a sprite to the right across the screen": "move a sprite to the right across the screen",
@@ -163,6 +279,28 @@
       "Bellow": "Keep connecting blocks at the bottom of the workspace where you ended last level!",
       "JustRight": "Connect the if just right algae block to the when fish touches algae event.",
       "costume": "If the algae is just right, the coral\nwill be healthy. \n\nUse the change costume block inside the if just right algae block."
+    },
+    "behavior_names": {
+      "leaving the area": "leaving the area",
+      "wandering": "wandering",
+      "moving east and looping": "moving east and looping",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "driving with arrow keys": "driving with arrow keys",
+      "fluttering": "fluttering",
+      "wobbling": "wobbling",
+      "moving west and looping": "moving west and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
     },
     "behavior_descriptions": {
       "move a sprite to the right across the screen": "move a sprite to the right across the screen",
@@ -218,6 +356,28 @@
       "change": "Make a couple changes to the simulation!",
       "YouCan": "You can: \n\n-   Change the number of fish\n-   Change the number of algae\n-   Change how many seconds \n    until the fish & algae regrow\n-   Make other modifications"
     },
+    "behavior_names": {
+      "leaving the area": "leaving the area",
+      "wandering": "wandering",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "driving with arrow keys": "driving with arrow keys",
+      "fluttering": "fluttering",
+      "wobbling": "wobbling",
+      "moving west and looping": "moving west and looping",
+      "moving east and looping": "moving east and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
+    },
     "behavior_descriptions": {
       "move a sprite to the right across the screen": "move a sprite to the right across the screen",
       "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
@@ -248,8 +408,30 @@
     "long_instructions": "## Sustainable Practice 1: Fishing Zones\n\n**Change the boat’s behavior so it stays in the fishing zone.** \n\n-   First, run the code to see the boat catch fish everywhere.\n\n-   Next, under <code style=\"color:black; background-color:#FFBD46\">when run</code>, change the <code style=\"color:black; background-color:#B3B2FB\">background</code> to underwater with zone buoy. \n\n-   Then, under the new background, add a block so the boat <code style=\"color:black; background-color:#5ED5DD\">begins fishing only in fishing zone</code>  \n\n-   Click <code style=\"color:black; background-color:#FFBD46\">Run</code> to see the boat fish only in one area!",
     "authored_hints": {
       "Hint1": "**Note**: You may have to drag some of the  <code style=\"color:black; background-color:#6AF36C\">when touches</code> code lower on your screen to fit the new blocks.",
-      "hint2": "At the top of the worskpace, connect the background block to when run.",
+      "hint2": "At the top of the workspace, connect the background block to when run.",
       "hint3": "Under the background\nconnect the begins\nfishing only in fishing\nzone"
+    },
+    "behavior_names": {
+      "fishing everywhere": "fishing everywhere",
+      "fishing only in fishing zone": "fishing only in fishing zone",
+      "driving with arrow keys": "driving with arrow keys",
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "moving with arrow keys": "moving with arrow keys",
+      "fluttering": "fluttering",
+      "wobbling": "wobbling",
+      "moving east and looping": "moving east and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
     },
     "behavior_descriptions": {
       "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
@@ -284,6 +466,29 @@
       "hint2": "Connect the `No Fishing background`\nnear the top of the workspace under \nthe `every 4 seconds` block.",
       "hint3": "Connect `begin no fishing`\nunder the `no fishing \nbackground`."
     },
+    "behavior_names": {
+      "no fishing season": "no fishing season",
+      "fishing": "fishing",
+      "wandering": "wandering",
+      "moving east and looping": "moving east and looping",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "moving with arrow keys": "moving with arrow keys",
+      "driving with arrow keys": "driving with arrow keys",
+      "fluttering": "fluttering",
+      "wobbling": "wobbling",
+      "moving west and looping": "moving west and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
+    },
     "behavior_descriptions": {
       "move a sprite across the screen, reversing direction if it touches the edges": "move a sprite across the screen, reversing direction if it touches the edges",
       "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
@@ -309,6 +514,28 @@
     "authored_hints": {
       "hint1": "Add the new blocks underneath\nthe repeat `every 9 seconds` block",
       "hint2": "Use the `no fishing background`\nand the `begin no fishing season` behavior"
+    },
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east and looping": "moving east and looping",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "fishing season": "fishing season",
+      "moving with arrow keys": "moving with arrow keys",
+      "driving with arrow keys": "driving with arrow keys",
+      "fluttering": "fluttering",
+      "wobbling": "wobbling",
+      "moving west and looping": "moving west and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
     },
     "behavior_descriptions": {
       "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
@@ -342,6 +569,28 @@
       "hint2": "Use the change `fishCaught by 1`\nunder the catch fish block to count\neach fish that the boat catches.",
       "hint3": "Connect the `boat says`\nblock **underneath** the \n`change fishCaught by 1` \nblock"
     },
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "driving with arrow keys": "driving with arrow keys",
+      "fluttering": "fluttering",
+      "wobbling": "wobbling",
+      "moving west and looping": "moving west and looping",
+      "moving east and looping": "moving east and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
+    },
     "behavior_descriptions": {
       "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
       "move a sprite to the right across the screen": "move a sprite to the right across the screen",
@@ -369,6 +618,34 @@
       "hint1": "Keep connecting blocks \nunder the `when boat touches fish` event where you \nended last level!",
       "hint2": "To make the boat stop fishing at 5 fish, connect the `if fishCaught = 5` block at the end of the `when boat touches fish` event.",
       "hint3": "Then add the `remove boat` block to\n**inside** the `if fishCaught = 5`block"
+    },
+    "function_definitions": {
+      "oceanSetup": {
+        "name": "oceanSetup",
+        "description": "Setup the basics for the student for this level."
+      }
+    },
+    "behavior_names": {
+      "wandering": "wandering",
+      "moving east and looping": "moving east and looping",
+      "moving east": "moving east",
+      "spinning left": "spinning left",
+      "spinning right": "spinning right",
+      "shrinking": "shrinking",
+      "growing": "growing",
+      "moving south": "moving south",
+      "swimming left and right": "swimming left and right",
+      "moving north": "moving north",
+      "jittering": "jittering",
+      "moving west": "moving west",
+      "patrolling": "patrolling",
+      "moving with arrow keys": "moving with arrow keys",
+      "driving with arrow keys": "driving with arrow keys",
+      "fluttering": "fluttering",
+      "wobbling": "wobbling",
+      "moving west and looping": "moving west and looping",
+      "moving north and looping": "moving north and looping",
+      "moving south and looping": "moving south and looping"
     },
     "behavior_descriptions": {
       "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
@@ -435,6 +712,55 @@
         "authored_hints": {
           "hint1": "There are too many parrots! Change the number\nof parrots to be less than 8."
         },
+        "function_definitions": {
+          "RainforestSetup": {
+            "name": "RainforestSetup"
+          },
+          "newGrowthSetup": {
+            "name": "newGrowthSetup"
+          }
+        },
+        "behavior_names": {
+          "wandering": "wandering",
+          "spinning left": "spinning left",
+          "spinning right": "spinning right",
+          "shrinking": "shrinking",
+          "leaving the area2": "leaving the area2",
+          "growing": "growing",
+          "moving south": "moving south",
+          "wandering2": "wandering2",
+          "swimming left and right": "swimming left and right",
+          "spinning left2": "spinning left2",
+          "moving north": "moving north",
+          "jittering": "jittering",
+          "spinning right2": "spinning right2",
+          "moving west": "moving west",
+          "shrinking2": "shrinking2",
+          "patrolling": "patrolling",
+          "growing2": "growing2",
+          "moving south2": "moving south2",
+          "moving with arrow keys": "moving with arrow keys",
+          "swimming left and right2": "swimming left and right2",
+          "driving with arrow keys": "driving with arrow keys",
+          "moving north2": "moving north2",
+          "jittering2": "jittering2",
+          "moving west2": "moving west2",
+          "fluttering": "fluttering",
+          "patrolling2": "patrolling2",
+          "wobbling": "wobbling",
+          "moving west and looping": "moving west and looping",
+          "moving with arrow keys2": "moving with arrow keys2",
+          "moving east and looping": "moving east and looping",
+          "moving north and looping": "moving north and looping",
+          "driving with arrow keys2": "driving with arrow keys2",
+          "moving south and looping": "moving south and looping",
+          "fluttering2": "fluttering2",
+          "wobbling2": "wobbling2",
+          "moving west and looping2": "moving west and looping2",
+          "moving east and looping2": "moving east and looping2",
+          "moving north and looping2": "moving north and looping2",
+          "moving south and looping2": "moving south and looping2"
+        },
         "behavior_descriptions": {
           "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
           "rotate a sprite to its left": "rotate a sprite to its left",
@@ -461,6 +787,55 @@
         "long_instructions": "##Welcome to the Desert \r\n\r\n**Off-road vehicle use and mining are causing many injured rabbits and now they aren't moving!** They should be able to eat the cactus and run from the falcon.\r\n\r\n- **Observe:**  Click <code style=\"color:black; background-color:#FFBD46\">Run</code> to test out the simulation.\r\n\r\n- **Modify:** Change the speed in the <code style=\"color:black; background-color:#5ED5DD\">set rabbit speed</code> block under <code style=\"color:black; background-color:#FFBD46\">when run</code> in the workspace.\r\n\r\n- **Record:** Press <code style=\"color:black; background-color:#FFBD46\">Run</code> again and watch how the simulation has changed. Are the rabbits searching for food and running from the falcon?",
         "authored_hints": {
           "hint1": "The rabbits need to move faster! Change the \nspeed of the rabbits to be more than 0."
+        },
+        "function_definitions": {
+          "newGrowthSetup": {
+            "name": "newGrowthSetup"
+          },
+          "DesertSetup": {
+            "name": "DesertSetup"
+          }
+        },
+        "behavior_names": {
+          "wandering": "wandering",
+          "spinning left": "spinning left",
+          "spinning right": "spinning right",
+          "shrinking": "shrinking",
+          "leaving the area2": "leaving the area2",
+          "growing": "growing",
+          "moving south": "moving south",
+          "wandering2": "wandering2",
+          "swimming left and right": "swimming left and right",
+          "spinning left2": "spinning left2",
+          "moving north": "moving north",
+          "jittering": "jittering",
+          "spinning right2": "spinning right2",
+          "moving west": "moving west",
+          "shrinking2": "shrinking2",
+          "patrolling": "patrolling",
+          "growing2": "growing2",
+          "moving south2": "moving south2",
+          "moving with arrow keys": "moving with arrow keys",
+          "swimming left and right2": "swimming left and right2",
+          "driving with arrow keys": "driving with arrow keys",
+          "moving north2": "moving north2",
+          "jittering2": "jittering2",
+          "moving west2": "moving west2",
+          "fluttering": "fluttering",
+          "patrolling2": "patrolling2",
+          "wobbling": "wobbling",
+          "moving west and looping": "moving west and looping",
+          "moving with arrow keys2": "moving with arrow keys2",
+          "moving east and looping": "moving east and looping",
+          "moving north and looping": "moving north and looping",
+          "driving with arrow keys2": "driving with arrow keys2",
+          "moving south and looping": "moving south and looping",
+          "fluttering2": "fluttering2",
+          "wobbling2": "wobbling2",
+          "moving west and looping2": "moving west and looping2",
+          "moving east and looping2": "moving east and looping2",
+          "moving north and looping2": "moving north and looping2",
+          "moving south and looping2": "moving south and looping2"
         },
         "behavior_descriptions": {
           "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
@@ -489,6 +864,55 @@
         "authored_hints": {
           "Hint1": "We need more frogs! Change the number of frogs to be more than 0."
         },
+        "function_definitions": {
+          "WetlandsSetup": {
+            "name": "WetlandsSetup"
+          },
+          "newGrowthSetup": {
+            "name": "newGrowthSetup"
+          }
+        },
+        "behavior_names": {
+          "wandering": "wandering",
+          "spinning left": "spinning left",
+          "spinning right": "spinning right",
+          "shrinking": "shrinking",
+          "leaving the area2": "leaving the area2",
+          "growing": "growing",
+          "moving south": "moving south",
+          "wandering2": "wandering2",
+          "swimming left and right": "swimming left and right",
+          "spinning left2": "spinning left2",
+          "moving north": "moving north",
+          "jittering": "jittering",
+          "spinning right2": "spinning right2",
+          "moving west": "moving west",
+          "shrinking2": "shrinking2",
+          "patrolling": "patrolling",
+          "growing2": "growing2",
+          "moving south2": "moving south2",
+          "moving with arrow keys": "moving with arrow keys",
+          "swimming left and right2": "swimming left and right2",
+          "driving with arrow keys": "driving with arrow keys",
+          "moving north2": "moving north2",
+          "jittering2": "jittering2",
+          "moving west2": "moving west2",
+          "fluttering": "fluttering",
+          "patrolling2": "patrolling2",
+          "wobbling": "wobbling",
+          "moving west and looping": "moving west and looping",
+          "moving with arrow keys2": "moving with arrow keys2",
+          "moving east and looping": "moving east and looping",
+          "moving north and looping": "moving north and looping",
+          "driving with arrow keys2": "driving with arrow keys2",
+          "moving south and looping": "moving south and looping",
+          "fluttering2": "fluttering2",
+          "wobbling2": "wobbling2",
+          "moving west and looping2": "moving west and looping2",
+          "moving east and looping2": "moving east and looping2",
+          "moving north and looping2": "moving north and looping2",
+          "moving south and looping2": "moving south and looping2"
+        },
         "behavior_descriptions": {
           "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",
           "rotate a sprite to its left": "rotate a sprite to its left",
@@ -516,6 +940,55 @@
         "authored_hints": {
           "hint2": "Change the background so there is more ice for the polar bear to hunt on. ",
           "hint1": "The polar bear needs to be bigger! Change its size to be more than 30."
+        },
+        "function_definitions": {
+          "newGrowthSetup": {
+            "name": "newGrowthSetup"
+          },
+          "ArcticSetup": {
+            "name": "ArcticSetup"
+          }
+        },
+        "behavior_names": {
+          "wandering": "wandering",
+          "spinning left": "spinning left",
+          "spinning right": "spinning right",
+          "shrinking": "shrinking",
+          "leaving the area2": "leaving the area2",
+          "growing": "growing",
+          "moving south": "moving south",
+          "wandering2": "wandering2",
+          "swimming left and right": "swimming left and right",
+          "spinning left2": "spinning left2",
+          "moving north": "moving north",
+          "jittering": "jittering",
+          "spinning right2": "spinning right2",
+          "moving west": "moving west",
+          "shrinking2": "shrinking2",
+          "patrolling": "patrolling",
+          "growing2": "growing2",
+          "moving south2": "moving south2",
+          "moving with arrow keys": "moving with arrow keys",
+          "swimming left and right2": "swimming left and right2",
+          "driving with arrow keys": "driving with arrow keys",
+          "moving north2": "moving north2",
+          "jittering2": "jittering2",
+          "moving west2": "moving west2",
+          "fluttering": "fluttering",
+          "patrolling2": "patrolling2",
+          "wobbling": "wobbling",
+          "moving west and looping": "moving west and looping",
+          "moving with arrow keys2": "moving with arrow keys2",
+          "moving east and looping": "moving east and looping",
+          "moving north and looping": "moving north and looping",
+          "driving with arrow keys2": "driving with arrow keys2",
+          "moving south and looping": "moving south and looping",
+          "fluttering2": "fluttering2",
+          "wobbling2": "wobbling2",
+          "moving west and looping2": "moving west and looping2",
+          "moving east and looping2": "moving east and looping2",
+          "moving north and looping2": "moving north and looping2",
+          "moving south and looping2": "moving south and looping2"
         },
         "behavior_descriptions": {
           "move a sprite, changing its direction randomly": "move a sprite, changing its direction randomly",

@@ -1,4 +1,5 @@
 require 'rack/request'
+require 'rack/session/abstract/id'
 require 'ipaddr'
 require 'json'
 require 'country_codes'
@@ -58,8 +59,8 @@ module Cdo
       host_parts.sub!('-', '.') unless rack_env?(:production)
       parts = host_parts.split('.')
 
-      if parts.count >= 3
-        domains = (%w(studio learn advocacy) + CDO.partners).map {|x| x + '.code.org'}
+      if parts.count >= 2
+        domains = (%w(studio learn) + CDO.partners).map {|x| x + '.code.org'}
         domain = parts.last(3).join('.').split(':').first
         return domain if domains.include? domain
       end
@@ -88,27 +89,27 @@ module Cdo
     end
 
     def user_id
-      @user_id ||= user_id_from_session_cookie
+      @user_id ||= user_id_from_session_store
     end
 
-    def user_id_from_session_cookie
+    # Fetch the user ID directly from the underlying Rails session store. This
+    # is a bit of a hack, but is necessary to preserve backwards compatibility.
+    def user_id_from_session_store
       session_cookie_key = "_learn_session"
       session_cookie_key += "_#{rack_env}" unless rack_env?(:production)
 
       message = CGI.unescape(cookies[session_cookie_key].to_s)
+      session_id = Rack::Session::SessionId.new(message)
 
-      key_generator = ActiveSupport::KeyGenerator.new(
-        CDO.dashboard_secret_key_base,
-        iterations: 1000
-      )
-
-      encryptor = ActiveSupport::MessageEncryptor.new(
-        key_generator.generate_key('encrypted cookie')[0, ActiveSupport::MessageEncryptor.key_len],
-        key_generator.generate_key('signed encrypted cookie')
-      )
-
-      return nil unless cookie = encryptor.decrypt_and_verify(message)
-      return nil unless warden = cookie['warden.user.user.key']
+      # Fetch session data from the session store; this is essentially a manual
+      # reimplementation of the private `get_session_with_fallback` method
+      # which is used by `find_session` under the hood.
+      # See https://github.com/redis-store/redis-rack/blob/v3.0.0/lib/rack/session/redis.rb#L87-L89
+      session = dashboard_session_store.with do |connection|
+        connection.get(session_id.private_id) || connection.get(session_id.public_id)
+      end
+      return nil unless session
+      return nil unless warden = session['warden.user.user.key']
       warden.first.first
     rescue
       return nil
@@ -121,6 +122,15 @@ module Cdo
 
     def gdpr?
       gdpr_country_code?(country)
+    end
+
+    # Initialize a private instance of the SessionStore used in Dashboard, so
+    # we can access data stored there (ie, the id of the current user).
+    private def dashboard_session_store
+      @dashboard_session_store ||= Dashboard::Application.config.session_store.new(
+        Dashboard::Application,
+        Dashboard::Application.config.session_options
+      )
     end
   end
 end

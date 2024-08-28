@@ -17,9 +17,11 @@ theme: responsive
 
 ## Browser dan Platform Minimum yang Didukung
 
+Mulai Juli 2024, kami akan memperbarui versi minimum yang diperlukan untuk browser dan sistem operasi. Meskipun versi lama mungkin masih berfungsi, kami tidak akan dapat mendukung permintaan untuk perbaikan bug di versi yang lebih lama.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Browser
@@ -40,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Browser Juli '24
+        </th>
+        <tr>
+          <td>Chrome 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Safari Seluler 14.x</td>
+        </tr>
+        <tr>
+          <td>Tepi 119.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Platform
@@ -62,8 +86,30 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platform Juli '24
+        </th>
+        <tr>
+          <td>MacOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Situs yang Tidak Boleh Diblokir
@@ -80,16 +126,15 @@ Untuk mendapatkan pengalaman terbaik dengan semua konten Code.org, kami sarankan
 | **Untuk menggunakan Internet Simulator**                                                                      | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Untuk menggunakan Web Lab**                                                                                 | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Untuk menggunakan Tombol Berbagi Google Classroom**                                                         | `https://apis.google.com`                                                                                  |
-| **Untuk menggunakan kumpulan data App Lab**                                                                   | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Detail Dukungan untuk Ponsel dan Tablet
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Sebagian besar tablet tidak didukung, dengan pengecualian berikut:
+Semua kursus CS Discoveries, CS Principles, CS A, dan Intro to App Lab tidak kompatibel dengan tablet atau perangkat seluler - keyboard dan mouse lengkap (atau touchpad) diperlukan. Sebagian besar tablet tidak didukung, dengan pengecualian berikut:
 
 - Microsoft Surface Pro dengan keyboard eksternal
 - iPad yang menggunakan iPadOS 13.4 atau di atasnya dengan keyboard eksternal dan mouse atau touchpad eksternal
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+Semua konten lainnya, seperti kursus K-5 (Dasar-Dasar Ilmu Komputer) dan kegiatan Hour of Code kompatibel di iPad dan tablet modern lainnya dan laptop atau komputer desktop.
 
 ### Ponsel
 
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+Inilah pemutar video yang digunakan dalam kurikulum. Pemutar ini akan mencoba menampilkan video melalui YouTube dan, jika YouTube diblokir, akan menampilkan video yang dihosting oleh Code.org dengan menggunakan pemutar "fallback" kami.
 
 ### Video tidak dapat diputar?
 
-If video does not work, you can email us at support@code.org.
+Jika videonya tidak terputar, silakan kirim email kepada kami di support@code.org.
 
-However, you can still use our tutorials without video.
+Meski demikian, Anda tetap dapat menggunakan tutorial kami tanpa video.
 
 1. Kami telah menyediakan semua video kami [untuk diunduh](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). Jika sekolah Anda memiliki bandwidth yang rendah, kami sarankan untuk mengunduh videonya dan memperlihatkannya kepada siswa di layar bersama (shared screen).
 2. Di dalam tutorialnya, kami juga telah menambahkan ikon tautan unduhan berwarna hijau <img src="/images/green-download.png" width=25 height=25 /> untuk tiap video, sehingga siswa dapat mengunduh video tutorial.
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## Pengaturan khusus untuk pengguna Google AppsG-Suite
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+Jika Anda adalah administrator G-suite, pastikan untuk memeriksa pengaturan pembatasan Anda untuk YouTube. Jika Anda telah menetapkan pengaturan "Akses YouTube Terbatas Ketat" atau jika Anda melihat pesan 'video ini telah dibatasi', Anda dapat menambahkan saluran kami ke daftar saluran yang disetujui. Lihat [panduan ini](https://support.google.com/a/answer/6245597) dari Google untuk mempelajari cara menambahkan saluran kami ke daftar yang disetujui. Anda juga dapat melihat [panduan ini](https://support.google.com/a/answer/6212415?hl=en) untuk mempelajari berbagai pengaturan dan apa yang terbaik bagi kelas Anda.
 
 ## Masih ada masalah?
 
-We'll help you out - just email us at support@code.org!
+Kami akan membantu Anda - cukup kirim email kepada kami di support@code.org!

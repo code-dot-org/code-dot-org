@@ -29,14 +29,6 @@ class CoursesController < ApplicationController
     @course_families_course_types = @course_families_course_types.to_h
   end
 
-  def index
-    view_options(full_width: true, responsive_content: true, no_padding_container: true, has_i18n: true)
-    @is_english = request.language == 'en'
-    @is_signed_out = current_user.nil?
-    @force_race_interstitial = params[:forceRaceInterstitial]
-    @modern_elementary_courses_available = Unit.modern_elementary_courses_available?(request.locale)
-  end
-
   def show
     if !params[:section_id] && current_user&.last_section_id
       redirect_to "#{request.path}?section_id=#{current_user.last_section_id}"
@@ -97,9 +89,10 @@ class CoursesController < ApplicationController
     raise ActiveRecord::ReadOnlyRecord if @unit_group.try(:plc_course)
     @unit_group_data = {
       course_summary: @unit_group.summarize(@current_user, for_edit: true),
-      script_names: Unit.all.select {|unit| unit.is_course? == false}.map(&:name),
+      script_names: Unit.all.select {|unit| unit.is_course? == false && !unit.unit_groups.any?}.map(&:name),
       course_families: UnitGroup.family_names,
-      version_year_options: UnitGroup.get_version_year_options
+      version_year_options: UnitGroup.get_version_year_options,
+      missing_required_device_compatibilities: @unit_group&.course_version&.course_offering&.missing_required_device_compatibility?
     }
     render 'edit', locals: {unit_group: @unit_group}
   end

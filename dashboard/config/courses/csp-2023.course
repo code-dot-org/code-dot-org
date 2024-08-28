@@ -233,17 +233,6 @@
     }
   ],
   "student_resources": [
-    {
-      "name": "Why Take The AP CSP Exam?",
-      "url": "https://drive.google.com/file/d/1g5t9kBhrNgXcM2US67CJy17f4JEfTevW/view?usp=drive_link",
-      "key": "why_take_the_ap_csp_exam_",
-      "properties": {
-        "audience": "Student",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "why_take_the_ap_csp_exam_"
-      }
-    }
+
   ]
 }

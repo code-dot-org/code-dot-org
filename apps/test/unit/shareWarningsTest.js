@@ -1,10 +1,13 @@
-var testUtils = require('../util/testUtils');
-import {assert, expect} from '../util/reconfiguredChai';
+import * as utils from '@cdo/apps/utils';
+
+import {assert, expect} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
+
 var ReactDOM = require('react-dom');
 var sinon = require('sinon');
 
 var shareWarnings = require('@cdo/apps/shareWarnings');
-import * as utils from '@cdo/apps/utils';
+
+var testUtils = require('../util/testUtils');
 
 describe('shareWarnings', function () {
   testUtils.setExternalGlobals();

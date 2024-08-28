@@ -1,8 +1,11 @@
-import React from 'react';
-import commonMsg from '@cdo/locale';
-import commonStyles from '../../commonStyles';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
+import React from 'react';
+
+import commonMsg from '@cdo/locale';
+
+import commonStyles from '../../commonStyles';
+
 import style from './delete-element-button.module.scss';
 
 /**

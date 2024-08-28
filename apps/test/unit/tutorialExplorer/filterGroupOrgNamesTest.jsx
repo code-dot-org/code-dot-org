@@ -1,12 +1,12 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import FilterGroupContainer from '@cdo/apps/tutorialExplorer/filterGroupContainer';
 import FilterGroupOrgNames from '@cdo/apps/tutorialExplorer/filterGroupOrgNames';
 import i18n from '@cdo/tutorialExplorer/locale';
 
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const TEST_ORG_NAME = 'Code Studio';
 const ORG_1 = 'Hogwarts School';

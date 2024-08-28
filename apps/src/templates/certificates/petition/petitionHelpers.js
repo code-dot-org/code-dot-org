@@ -1,5 +1,6 @@
-import {isEmail, isInt} from '@cdo/apps/util/formatValidation';
 import {forEach, has, merge} from 'lodash';
+
+import {isEmail, isInt} from '@cdo/apps/util/formatValidation';
 import i18n from '@cdo/locale';
 
 export const keyValidation = {

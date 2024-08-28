@@ -52,12 +52,6 @@ class CoursesControllerTest < ActionController::TestCase
       @unit_group_regular = create :unit_group, name: 'non-plc-course', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.beta
     end
 
-    test_user_gets_response_for :index, response: :success, user: :teacher, queries: 4
-
-    test_user_gets_response_for :index, response: :success, user: :admin, queries: 4
-
-    test_user_gets_response_for :index, response: :success, user: :user, queries: 6
-
     test_user_gets_response_for :show, response: :success, user: :teacher, params: -> {{course_name: @unit_group_regular.name}}, queries: 10
 
     test_user_gets_response_for :show, response: :forbidden, user: :admin, params: -> {{course_name: @unit_group_regular.name}}, queries: 4

@@ -1,9 +1,9 @@
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
-import {shallow} from 'enzyme';
-import {expect} from '../../../../util/reconfiguredChai';
-import BaseDialog from '@cdo/apps/templates/BaseDialog';
+
 import Pairing from '@cdo/apps/code-studio/components/pairing/Pairing';
 import PairingDialog from '@cdo/apps/code-studio/components/pairing/PairingDialog';
+import BaseDialog from '@cdo/apps/templates/BaseDialog';
 
 describe('PairingDialog', () => {
   it('renders a dialog containing the Pairing component', () => {
@@ -15,7 +15,7 @@ describe('PairingDialog', () => {
           <Pairing source="Any old test string" />
         </BaseDialog>
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 
   it('can be opened and closed with public methods', () => {
@@ -23,7 +23,7 @@ describe('PairingDialog', () => {
 
     expect(() => {
       wrapper.instance().open();
-    }).not.to.throw();
+    }).not.toThrow();
 
     expect(
       wrapper.containsMatchingElement(
@@ -31,11 +31,11 @@ describe('PairingDialog', () => {
           <Pairing source="Another test string" />
         </BaseDialog>
       )
-    ).to.be.true;
+    ).toBe(true);
 
     expect(() => {
       wrapper.instance().close();
-    }).not.to.throw();
+    }).not.toThrow();
 
     expect(
       wrapper.containsMatchingElement(
@@ -43,6 +43,6 @@ describe('PairingDialog', () => {
           <Pairing source="Another test string" />
         </BaseDialog>
       )
-    ).to.be.true;
+    ).toBe(true);
   });
 });

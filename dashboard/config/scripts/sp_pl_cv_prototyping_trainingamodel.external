@@ -1,0 +1,27 @@
+name 'sp-pl-CV_prototyping_trainingAModel'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Training a Model Activity
+
+#### Students will work in groups for the Teachable Machine activity. Each group will create an image or pose project while documenting their learning on the <a href="https://docs.google.com/document/d/12CaimKcrHjEbxK8ZPAUsxS0cQGI1t6k9JeOVbJEJHC0/copy?usp=sharing" target="blank" rel="noopener noreferrer"><b>Activity Guide</b></a> 
+
+---
+
+> #### **Teacher Tip:** Inspire students to think creatively about the practical applications of their AI models, fostering a forward-thinking mindset. This encourages students to connect their technical skills with the real-world problem they are trying to solve, envisioning how their work could have a tangible impact.
+
+
+
+
+ <table style="width: 100%; height: 100%; border: none;">
+        <tr>
+            <td style="text-align: center; vertical-align: middle;">
+                <img src="https://images.code.org/76f7ee81e9e7e891633a064cff6522a2-image-1715027330550.png" alt="top portion of handout" width="650px" style="border-radius:10px; border: 2px solid black;">
+            </td>
+        </tr>
+    </table>
+<br>
+
+
+MARKDOWN

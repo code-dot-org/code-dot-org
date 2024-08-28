@@ -1,12 +1,15 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import ProjectCard from './ProjectCard.jsx';
-import {personalProjectDataPropType} from './projectConstants';
-import color from '../../util/color';
-import fontConstants from '@cdo/apps/fontConstants';
-import i18n from '@cdo/locale';
 import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+
+import fontConstants from '@cdo/apps/fontConstants';
+import i18n from '@cdo/locale';
+
+import color from '../../util/color';
+
+import ProjectCard from './ProjectCard.jsx';
+import {personalProjectDataPropType} from './projectConstants';
 
 class PersonalRecentProjects extends Component {
   static propTypes = {

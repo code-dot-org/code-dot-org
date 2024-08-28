@@ -1,4 +1,4 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import DetailProgressTable from '@cdo/apps/templates/progress/DetailProgressTable';
@@ -9,7 +9,7 @@ import {
 } from '@cdo/apps/templates/progress/ProgressTable';
 import SummaryProgressTable from '@cdo/apps/templates/progress/SummaryProgressTable';
 
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const FAKE_LESSONS = [];
 const FAKE_LEVELS = [];

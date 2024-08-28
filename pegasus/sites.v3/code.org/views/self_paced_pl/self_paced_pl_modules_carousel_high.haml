@@ -1,5 +1,44 @@
 :ruby
-  block_item = [
+  block_items = [
+    {
+      overline: hoc_s(:module_grade_k_12_teachers),
+      title: hoc_s(:module_label_ai_101_self_paced_pl),
+      image: '/images/self-paced-pl-tile-ai-101.jpg',
+      curriculum: hoc_s(:curriculum_name_all_ai),
+      duration: hoc_s(:module_duration_5_hrs),
+      prerequisites: hoc_s(:module_prerequisites_none),
+      url_primary: CDO.studio_url("/courses/self-paced-pl-ai-101"),
+      url_secondary: '/ai#ai-curricula',
+      aria_label_primary: hoc_s(:aria_label_call_to_action_ai_101),
+      aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_ai_101),
+      new: true,
+    },
+    {
+      overline: hoc_s(:module_grade_6_12_teachers),
+      title: hoc_s(:module_label_teaching_coding_with_ai),
+      image: '/images/self-paced-pl-tile-coding-with-ai.png',
+      curriculum: hoc_s(:curriculum_name_coding_with_ai),
+      duration: hoc_s(:module_duration_2_hrs),
+      prerequisites: hoc_s(:module_prerequisites_none),
+      url_primary: CDO.studio_url("/courses/self-paced-pl-coding-with-ai-2024"),
+      url_secondary: '/curriculum/coding-with-ai',
+      aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_coding_with_ai),
+      aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_coding_with_ai),
+      new: true,
+    },
+    {
+      overline: hoc_s(:module_grade_9_12_teachers),
+      title: hoc_s(:module_label_teaching_computer_vision),
+      image: '/images/self-paced-pl-tile-computer-vision.png',
+      curriculum: hoc_s(:curriculum_name_computer_vision),
+      duration: hoc_s(:module_duration_1_hr_30_minutes),
+      prerequisites: hoc_s(:module_prerequisites_none),
+      url_primary: CDO.studio_url("/courses/self-paced-pl-computer-vision-2024"),
+      url_secondary: '/curriculum/computer-vision',
+      aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_computer_vision),
+      aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_computer_vision),
+      new: true,
+    },
     {
       overline: hoc_s(:module_grade_9_12_teachers),
       title: hoc_s(:module_label_teaching_csp),
@@ -68,7 +107,7 @@
       duration: hoc_s(:module_duration_3_hrs_20_minutes),
       prerequisites: hoc_s(:module_prerequisites_none),
       url_primary: CDO.studio_url("/courses/self-paced-pl-csd-unit3"),
-      url_secondary: CDO.studio_url("/s/interactive-games-animations"),
+      url_secondary: CDO.studio_url("/s/interactive-games-animations?viewAs=Instructor"),
       aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_interactive_animations_games),
       aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_interactive_animations_games),
     },
@@ -80,7 +119,7 @@
       duration: hoc_s(:module_duration_2_hrs),
       prerequisites: hoc_s(:module_prerequisites_none),
       url_primary: CDO.studio_url("/courses/self-paced-pl-csd-unit1"),
-      url_secondary: CDO.studio_url("/s/problem-solving-computing"),
+      url_secondary: CDO.studio_url("/s/problem-solving-computing?viewAs=Instructor"),
       aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_problem_solving),
       aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_problem_solving),
     },
@@ -91,8 +130,8 @@
       curriculum: hoc_s(:curriculum_name_data_and_society),
       duration: hoc_s(:module_duration_2_hrs_30_minutes),
       prerequisites: hoc_s(:module_prerequisites_none),
-      url_primary: CDO.studio_url("/courses/self-paced-pl-csd-unit5-2023"),
-      url_secondary: CDO.studio_url("/s/data-society"),
+      url_primary: CDO.studio_url("/courses/self-paced-pl-csd-unit5"),
+      url_secondary: CDO.studio_url("/s/data-society?viewAs=Instructor"),
       aria_label_primary: hoc_s(:aria_label_call_to_action_explore_data_society_pl),
       aria_label_secondary: hoc_s(:aria_label_call_to_action_explore_data_society_curriculum),
     },
@@ -104,23 +143,30 @@
       duration: hoc_s(:module_duration_2_hrs),
       prerequisites: hoc_s(:module_prerequisites_none),
       url_primary: CDO.studio_url("/courses/self-paced-pl-csd-unit4"),
-      url_secondary: CDO.studio_url("/s/design-process"),
+      url_secondary: CDO.studio_url("/s/design-process?viewAs=Instructor"),
       aria_label_primary: hoc_s(:aria_label_call_to_action_teaching_the_design_process),
       aria_label_secondary: hoc_s(:aria_label_call_to_action_curriculum_design_process),
     },
   ]
 
 .carousel-wrapper
-  %swiper-container.swiper-02{navigation: "true", "navigation-next-el": ".nav-next-02", "navigation-prev-el": ".nav-prev-02", pagination: "true", init: "false"}
-    - block_item.each do |block_item|
+  %swiper-container.swiper-high{navigation: "true", "navigation-next-el": ".nav-next-high", "navigation-prev-el": ".nav-prev-high", pagination: "true", init: "false"}
+    - block_items.each do |block_item|
       %swiper-slide
         .action-block.action-block--one-col.flex-space-between
           .content-wrapper
-            %p.overline
-              = block_item[:overline]
+            - if block_item[:new]
+              .flex-container.justify-space-between.align-items-start
+                %p.overline
+                  = block_item[:overline]
+                %p.new
+                  =hoc_s(:new)
+            - else
+              %p.overline
+                = block_item[:overline]
             %h3
               = block_item[:title]
-            %img{src: "#{block_item[:image]}", alt: "", style: "width: 100%"}
+            %img{src: block_item[:image], alt: "", style: "width: 100%"}
             %p
               %strong=hoc_s(:module_label_curriculum)
               = block_item[:curriculum]
@@ -136,5 +182,5 @@
             %a.link-button.secondary{href: block_item[:url_secondary], aria:{label: "#{block_item[:aria_label_secondary]}"}}
               =hoc_s(:call_to_action_explore_curriculum)
 
-  %button.swiper-nav-prev.nav-prev-02
-  %button.swiper-nav-next.nav-next-02
+  %button.swiper-nav-prev.nav-prev-high
+  %button.swiper-nav-next.nav-next-high

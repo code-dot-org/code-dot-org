@@ -1,8 +1,10 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import i18n from '@cdo/locale';
+import React from 'react';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import Button from '@cdo/apps/templates/Button';
+import i18n from '@cdo/locale';
+
 import SendLessonDialog from './SendLessonDialog';
 
 export default class SendLesson extends React.Component {

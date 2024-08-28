@@ -1,11 +1,11 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import FilterChoice from '@cdo/apps/tutorialExplorer/filterChoice';
 import FilterGroup from '@cdo/apps/tutorialExplorer/filterGroup';
 import FilterGroupContainer from '@cdo/apps/tutorialExplorer/filterGroupContainer';
 
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const TEST_GROUP_NAME = 'Redwall';
 const TEST_TEXT = 'Mossflower';

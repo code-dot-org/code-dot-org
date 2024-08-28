@@ -7,11 +7,12 @@
       "has_verified_resources": true,
       "hideable_lessons": true,
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-27 21:51:31 UTC",
+    "serialized_at": "2024-05-07 22:25:31 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -94,18 +95,18 @@
       }
     },
     {
-      "key": "Assessment",
-      "name": "Assessment",
+      "key": "Previewing Academic Year Workshops",
+      "name": "Previewing Academic Year Workshops",
       "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
-        "overview": "**Purpose:**\nParticipants will take a deeper look at assessment resources available in the curriculum and discuss with other teachers who grade and assess in similar ways.\n\n**Objectives:**\n* Participants develop concrete strategies and plans for assessment while using the curriculum.\n* Participants make plans for sharing resources and think about how they can build off of each other’s work.\n* Participants become more familiar with the assessment resources in the curriculum.\n\n**Suggested Time:** 20 minutes",
-        "student_overview": "**You will:**\n* Develop concrete strategies and plans for assessment while using this curriculum\n* Make plans for sharing resources and think about how you can build off of each other’s work\n* Become more familiar with the assessment resources in the curriculum"
+        "overview": "**Purpose:**\nThis session provides participants with a roadmap for the Academic Year Workshops. Those who plan to teach the later units will get an idea of when they can expect a deeper dive into content.\n\n\n**Objectives:**\n* Participants know when they will learn about future units of the curriculum\n\n**Suggested Time:** 20 minutes",
+        "student_overview": "**You will:**\n* Preview what you will learn about in future units of the curriculum"
       },
       "seeding_key": {
-        "lesson.key": "Assessment",
+        "lesson.key": "Previewing Academic Year Workshops",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "virtual-pl-csd-summer-2024-day5"
       }
@@ -118,7 +119,7 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
-        "overview": "**Purpose:**\nThis session is intended to provide a space for participants to revisit important topics from earlier in the week and share implementation ideas with each other. These ideas can be revisited later in the day when participants begin to work on their plans for the year.\n\n\n**Objectives:**\n* Participants have shared implementation ideas with each other\n* Participants have written down ideas they would like to implement in their classroom\n\n**Suggested Time:** 45 minutes",
+        "overview": "**Purpose:**\nThis session is intended to provide a space for participants to revisit important topics from earlier in the week and share implementation ideas with each other. These ideas can be revisited later in the day when participants begin to work on their plans for the year.\n\n\n**Objectives:**\n* Participants have shared implementation ideas with each other\n* Participants have written down ideas they would like to implement in their classroom\n\n**Suggested Time:** 65 minutes",
         "student_overview": "**You will:**\n* Share implementation ideas with other teachers\n* Write down ideas you would like to implement in your classroom"
       },
       "seeding_key": {
@@ -128,29 +129,12 @@
       }
     },
     {
-      "key": "Previewing Academic Year Workshops",
-      "name": "Previewing Academic Year Workshops",
+      "key": "Intro to Async",
+      "name": "Intro to Async",
       "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
-      "properties": {
-        "overview": "**Purpose:**\nThis session provides participants with a roadmap for the Academic Year Workshops. Those who plan to teach the later units will get an idea of when they can expect a deeper dive into content.\n\n\n**Objectives:**\n* Participants know when they will learn about future units of the curriculum\n\n**Suggested Time:** 20 minutes",
-        "student_overview": "**You will:**\n* Preview what you will learn about in future units of the curriculum"
-      },
-      "seeding_key": {
-        "lesson.key": "Previewing Academic Year Workshops",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "virtual-pl-csd-summer-2024-day5"
-      }
-    },
-    {
-      "key": "Intro to Async",
-      "name": "Intro to Async",
-      "absolute_position": 6,
-      "lockable": false,
-      "has_lesson_plan": true,
-      "relative_position": 6,
       "properties": {
         "overview": "**Purpose:**\nThis session is a facilitator-led orientation to the asynchronous activities. Before sending participants off to complete the asynchronous activities, facilitators should ensure that all participants understand what they are supposed to do and how to access the asynchronous work\n\n**Objectives:**\n\n\n* Participants get an introduction to the asynchronous activities. \n* Participants navigate to the asynchronous activities.\n\n\n**Suggested time:** 10 minutes",
         "student_overview": "**You will:**\n\n* Get an introduction to the asynchronous activities. \n* Navigate to the asynchronous activities.\n"
@@ -164,10 +148,10 @@
     {
       "key": "Asynchronous Part 1",
       "name": "Asynchronous Part 1",
-      "absolute_position": 7,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
-      "relative_position": 7,
+      "relative_position": 6,
       "properties": {
         "overview": "**Purpose:**\nThe CS community can help students see the real-world relevance of CS and how they fit into CS. It is also important for teachers to connect with other CS educators in order to learn and grow as professionals. The asynchronous work helps guide participants to connect with the CS community after the workshop.\n\n**Objectives:**\n* Participants explore CS Journeys.\n* Participants make a plan for connecting with their local community.\n* Participants make a plan for connecting with other CS educators.\n\n**Suggested Time:** 60 minutes",
         "student_overview": "**You will:**\n\n* Explore CS Journeys.\n* Make a plan for connecting with your local community.\n* Make a plan for connecting with other CS educators.\n"
@@ -181,16 +165,33 @@
     {
       "key": "Async Debrief",
       "name": "Async Debrief",
+      "absolute_position": 7,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 7,
+      "properties": {
+        "overview": "**Purpose:**\nIn this session, participants will have the opportunity to debrief the activities completed as a part of the asynchronous portion of this workshop. \n\n**Objectives:**\n\n* Participants discuss questions that came up during the asynchronous time. \n* Participants reflect on the content introduced in the asynchronous activities. \n* Participants share ideas with the cohort. \n\n**Suggested time:** 10 minutes",
+        "student_overview": "**You will:**\n\n* Discuss questions that came up during the asynchronous time. \n* Reflect on the content introduced in the asynchronous activities. \n* Share ideas with the cohort. \n"
+      },
+      "seeding_key": {
+        "lesson.key": "Async Debrief",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-2024-day5"
+      }
+    },
+    {
+      "key": "Assessment",
+      "name": "Assessment",
       "absolute_position": 8,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "**Purpose:**\nIn this session, participants will have the opportunity to debrief the activities completed as a part of the asynchronous portion of this workshop. \n\n**Objectives:**\n\n* Participants discuss questions that came up during the asynchronous time. \n* Participants reflect on the content introduced in the asynchronous activities. \n* Participants share ideas with the cohort. \n\n**Suggested time:** 15 minutes",
-        "student_overview": "**You will:**\n\n* Discuss questions that came up during the asynchronous time. \n* Reflect on the content introduced in the asynchronous activities. \n* Share ideas with the cohort. \n"
+        "overview": "**Purpose:**\nParticipants will take a deeper look at assessment resources available in the curriculum and discuss with other teachers who grade and assess in similar ways.\n\n**Objectives:**\n* Participants develop concrete strategies and plans for assessment while using the curriculum.\n* Participants make plans for sharing resources and think about how they can build off of each other’s work.\n* Participants become more familiar with the assessment resources in the curriculum.\n\n**Suggested Time:** 40 minutes",
+        "student_overview": "**You will:**\n* Develop concrete strategies and plans for assessment while using this curriculum\n* Make plans for sharing resources and think about how you can build off of each other’s work\n* Become more familiar with the assessment resources in the curriculum"
       },
       "seeding_key": {
-        "lesson.key": "Async Debrief",
+        "lesson.key": "Assessment",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "virtual-pl-csd-summer-2024-day5"
       }
@@ -203,7 +204,7 @@
       "has_lesson_plan": true,
       "relative_position": 9,
       "properties": {
-        "overview": "**Purpose:**\nTeachers think about what questions they still have. Teachers are given time to take out their schedule and create a timeline for the course. They can think about assessment or other things they want to start digging into. Mostly work time.\n\n\n**Objectives:**\n* Make an action plan for getting through the first month of school\n* Teachers have time to prep for fall\n\n**Suggested Time:** 65 minutes",
+        "overview": "**Purpose:**\nTeachers think about what questions they still have. Teachers are given time to take out their schedule and create a timeline for the course. They can think about assessment or other things they want to start digging into. Mostly work time.\n\n\n**Objectives:**\n* Make an action plan for getting through the first month of school\n* Teachers have time to prep for fall\n\n**Suggested Time:** 30 minutes",
         "student_overview": "**You will:**\n* Make an action plan for getting through the first month of school\n* Prepare for the first day of class"
       },
       "seeding_key": {
@@ -256,13 +257,13 @@
       }
     },
     {
-      "key": "3bcd4ffa-ce46-4933-a152-1160066ebb1f",
+      "key": "ce984ead-2584-4eaa-83e0-d0ecca293361",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "lesson_activity.key": "3bcd4ffa-ce46-4933-a152-1160066ebb1f",
-        "lesson.key": "Assessment",
+        "lesson_activity.key": "ce984ead-2584-4eaa-83e0-d0ecca293361",
+        "lesson.key": "Previewing Academic Year Workshops",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "virtual-pl-csd-summer-2024-day5"
       }
@@ -275,18 +276,6 @@
       "seeding_key": {
         "lesson_activity.key": "9bf963db-1b37-4bf5-9dab-dca8065269bc",
         "lesson.key": "Revisiting Topics from the Week",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "virtual-pl-csd-summer-2024-day5"
-      }
-    },
-    {
-      "key": "ce984ead-2584-4eaa-83e0-d0ecca293361",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "lesson_activity.key": "ce984ead-2584-4eaa-83e0-d0ecca293361",
-        "lesson.key": "Previewing Academic Year Workshops",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "virtual-pl-csd-summer-2024-day5"
       }
@@ -307,6 +296,7 @@
       "key": "c201f362-4d1b-4760-8dc7-4271f5fba69e",
       "position": 1,
       "properties": {
+        "duration": 60
       },
       "seeding_key": {
         "lesson_activity.key": "c201f362-4d1b-4760-8dc7-4271f5fba69e",
@@ -323,6 +313,18 @@
       "seeding_key": {
         "lesson_activity.key": "cb057535-d6cd-48ca-8367-3bad0c28d622",
         "lesson.key": "Async Debrief",
+        "lesson_group.key": "lessonGroup-4",
+        "script.name": "virtual-pl-csd-summer-2024-day5"
+      }
+    },
+    {
+      "key": "3bcd4ffa-ce46-4933-a152-1160066ebb1f",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "3bcd4ffa-ce46-4933-a152-1160066ebb1f",
+        "lesson.key": "Assessment",
         "lesson_group.key": "lessonGroup-4",
         "script.name": "virtual-pl-csd-summer-2024-day5"
       }
@@ -374,13 +376,13 @@
       }
     },
     {
-      "key": "55784ab7-9c06-439e-87ac-3c5cf10bbf7c",
+      "key": "328d8594-aa3e-4a82-8f81-f26f9349a6a2",
       "position": 1,
       "properties": {
       },
       "seeding_key": {
-        "activity_section.key": "55784ab7-9c06-439e-87ac-3c5cf10bbf7c",
-        "lesson_activity.key": "3bcd4ffa-ce46-4933-a152-1160066ebb1f"
+        "activity_section.key": "328d8594-aa3e-4a82-8f81-f26f9349a6a2",
+        "lesson_activity.key": "ce984ead-2584-4eaa-83e0-d0ecca293361"
       }
     },
     {
@@ -391,16 +393,6 @@
       "seeding_key": {
         "activity_section.key": "f35536d7-6b9a-402a-9876-17205145cc21",
         "lesson_activity.key": "9bf963db-1b37-4bf5-9dab-dca8065269bc"
-      }
-    },
-    {
-      "key": "328d8594-aa3e-4a82-8f81-f26f9349a6a2",
-      "position": 1,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "328d8594-aa3e-4a82-8f81-f26f9349a6a2",
-        "lesson_activity.key": "ce984ead-2584-4eaa-83e0-d0ecca293361"
       }
     },
     {
@@ -468,6 +460,16 @@
       }
     },
     {
+      "key": "55784ab7-9c06-439e-87ac-3c5cf10bbf7c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "55784ab7-9c06-439e-87ac-3c5cf10bbf7c",
+        "lesson_activity.key": "3bcd4ffa-ce46-4933-a152-1160066ebb1f"
+      }
+    },
+    {
       "key": "5cc09862-e0fa-4fc4-82cc-aa17eb782cfb",
       "position": 1,
       "properties": {
@@ -495,6 +497,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-AsyncIntro_2024"
+        ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
@@ -517,6 +522,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-Community1_2024"
+        ],
         "progression": "Explore CS Journeys"
       },
       "bonus": false,
@@ -539,6 +547,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-Community2_2024"
+        ],
         "progression": "Explore CS Journeys"
       },
       "bonus": false,
@@ -561,6 +572,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-Community3_2024"
+        ],
         "progression": "Explore CS Journeys"
       },
       "bonus": false,
@@ -583,6 +597,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-Community4_2024"
+        ],
         "progression": "Explore CS Journeys"
       },
       "bonus": false,
@@ -605,6 +622,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-Community5_2024"
+        ],
         "progression": "Connect with the CS Community"
       },
       "bonus": false,
@@ -627,6 +647,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-Community6_2024"
+        ],
         "progression": "Connect with the CS Community"
       },
       "bonus": false,
@@ -649,6 +672,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-Community7_2024"
+        ],
         "progression": "Connect with the CS Community"
       },
       "bonus": false,
@@ -671,6 +697,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-Community8_2024"
+        ],
         "progression": "Connect with the CS Community"
       },
       "bonus": false,
@@ -693,6 +722,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "virtual-pl-csd-summer-day5-WrapUp_2024"
+        ],
         "progression": "Wrap Up"
       },
       "bonus": false,
@@ -834,23 +866,23 @@
   ],
   "resources": [
     {
-      "name": "2023 Virtual CSD Summer Workshop - Day 5 Agenda",
-      "url": "https://docs.google.com/document/d/1rUwyNN00XhwFuOafLNSQBkPAI7BNQRX4Cr8NSQ4MH5Q/edit?usp=sharing",
-      "key": "2023_virtual_csd_summer_workshop_-_day_5_agenda",
+      "name": "CSD Virtual Summer Workshop Day 5 Agenda",
+      "url": "https://docs.google.com/document/d/1u5e6n5N9zH_r4Z2AwQAGJ7VXOgzbLdgHgvLQ6AjaOqw/edit?usp=drive_link",
+      "key": "csd_virtual_summer_workshop_day_5_agenda",
       "properties": {
       },
       "seeding_key": {
-        "resource.key": "2023_virtual_csd_summer_workshop_-_day_5_agenda"
+        "resource.key": "csd_virtual_summer_workshop_day_5_agenda"
       }
     },
     {
-      "name": "2023 Virtual CSD Summer Workshop - Day 5 Slides",
-      "url": "https://docs.google.com/presentation/d/1TMM_5fxSOOE3TeKK4bYDQ4CGYiZO4ZjaNUuEk-y7Yzo/edit?usp=sharing",
-      "key": "2023_virtual_csd_summer_workshop_-_day_5_slides",
+      "name": "CSD Virtual Summer Workshop Day 5 Slides",
+      "url": "https://docs.google.com/presentation/d/18vlA7PnVReW41SgCjTqaXShB1ywlpAHMcsLoQZXZsnc/edit?usp=drive_link",
+      "key": "csd_virtual_summer_workshop_day_5_slides",
       "properties": {
       },
       "seeding_key": {
-        "resource.key": "2023_virtual_csd_summer_workshop_-_day_5_slides"
+        "resource.key": "csd_virtual_summer_workshop_day_5_slides"
       }
     }
   ],
@@ -860,13 +892,13 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "2023_virtual_csd_summer_workshop_-_day_5_agenda",
+        "resource.key": "csd_virtual_summer_workshop_day_5_agenda",
         "script.name": "virtual-pl-csd-summer-2024-day5"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "2023_virtual_csd_summer_workshop_-_day_5_slides",
+        "resource.key": "csd_virtual_summer_workshop_day_5_slides",
         "script.name": "virtual-pl-csd-summer-2024-day5"
       }
     }

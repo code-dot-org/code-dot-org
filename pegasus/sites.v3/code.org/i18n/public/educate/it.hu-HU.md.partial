@@ -17,9 +17,11 @@ theme: responsive
 
 ## Minimum Supported Browsers and Platforms
 
+2024 júliusától frissítjük a böngészőkhöz és az operációs rendszerekhez szükséges minimális verziókat. Bár a régi verziók továbbra is működhetnek, a régebbi verziókban nem tudjuk támogatni a hibajavítások iránti kérelmeket.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Browser
@@ -40,8 +42,30 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Böngésző július '24
+        </th>
+        <tr>
+          <td>Chrome 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Mobil Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Él 119,x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Platform
@@ -62,13 +86,35 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Platform július '24
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Sites to Unblock
 
-For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure the following sites are allowed and aren't blocked.
+A Code.org összes tartalommal kapcsolatos legjobb élmény érdekében javasoljuk, hogy konzultáljon iskolája vagy kerületi informatikai osztályával annak biztosítása érdekében, hogy a következő webhelyek engedélyezettek legyenek és nincsenek blokkolva.
 
 | Priority                                                                                                                                          | URL                                                                                                        |
 | ------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
@@ -80,28 +126,27 @@ For the very best experience with all Code.org content, we recommend consulting 
 | **Az Internet Simulator használata**                                                                                                              | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **A Web Lab használata**                                                                                                                          | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **A Google Classroom Share gomb használata**                                                                                                      | `https://apis.google.com`                                                                                  |
-| **Az App Lab adatkészletek használata**                                                                                                           | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Mobile and Tablet Support Details
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Most tablets are not supported, with the following exceptions:
+Minden CS Discovery, CS Principles, CS A és Intro to App Lab tanfolyam nem kompatibilis táblagépekkel vagy mobileszközökkel - teljes billentyűzet és egér (vagy érintőpad) szükséges. A legtöbb táblagép nem támogatott, a következő kivételektől eltekintve:
 
 - Microsoft Surface Pro with an external keyboard
 - iPad running iPadOS 13.4 or later with an external keyboard and an external mouse or touchpad
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+Az összes többi tartalom, például a K-5 tanfolyamok (Computer Science Fundamentals) és a Hour of Code tevékenységek kompatibilisek az iPadeken és más modern táblagépeken, valamint laptop vagy asztali számítógépeken.
 
 ### Mobile Phones
 
-Our Hour of Code activities and CS Fundamentals courses can be completed on mobile phones. While these activities are usable, they are not optimized for a mobile phone experience and have some known limitations (e.g. touch targets may be small, accessory elements may display offscreen, and text may be difficult to input using the on-screen keyboard). The CS Discoveries, CS Principles, and Intro to App Lab courses are not usable on mobile phones.
+A Hour of Code tevékenységeink és a CS Fundamentals tanfolyamaink mobiltelefonon is elvégezhetők. Bár ezek a tevékenységek használhatóak, nincsenek optimalizálva a mobiltelefonos élményre, és bizonyos ismert korlátozásokkal rendelkeznek (pl. az érintési célok kicsiek lehetnek, a kiegészítő elemek képernyőn kívül jelenhetnek meg, és a szöveget a képernyőn megjelenő billentyűzet segítségével nehéz lehet megadni). A CS Discovery, CS Principles és Intro to App Lab tanfolyamok mobiltelefonokon nem használhatók.
 
 ## Videos
 
-We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our [online learning platform](https://studio.code.org). For schools with YouTube blocked, we attempt to display a Code.org hosted video player instead.
+A [YouTube](https://www.youtube.com) használatával videókat ágyazzunk be a Code.org-ba és [online tanulási platformunkba](https://studio.code.org). Azokban az iskolákban, ahol a YouTube blokkolva van, inkább egy Code.org által üzemeltetett videolejátszót próbálunk megjeleníteni.
 
 ### Can you play this video?
 
-Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
+Mielőtt elkezdené a Code.org online tanfolyamait, tesztelje az alábbi videó lejátszását, hogy megbizonyosodjon arról, hogy készen áll.
 
 
 <!--
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+Ez az a játékos, amelyet a tanterv során használnak. Megpróbálja megjeleníteni a videót a YouTube-on keresztül, és ha a YouTube blokkolva van, akkor a Code.org által tárolt videót a „tartalék” lejátszónk segítségével jeleníti meg.
 
 ### Video not playing?
 
-If video does not work, you can email us at support@code.org.
+Ha a videó nem működik, írjon nekünk e-mailt a support@code.org címre.
 
-However, you can still use our tutorials without video.
+Videó nélkül azonban továbbra is használhatja oktatóanyagainkat.
 
 1. We've made all our videos [available for download together](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). If your school has low bandwidth, we recommend that you download videos and show them to students on a shared screen.
 2. Integrated into our tutorials, we've added a green download link icon <img src="/images/green-download.png" width=25 height=25 /> for each video, allowing students to download individual tutorial videos.
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## Special settings for Google Apps/G-Suite users
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+Ha Ön G-Suite rendszergazda, feltétlenül ellenőrizze, hogy milyen korlátozási beállításai vannak a YouTube-on. Ha megadta a „Szigorúan korlátozott YouTube-hozzáférés” beállítást, vagy ha olyan üzeneteket lát, amelyek szerint „ez a videó korlátozott”, hozzáadhatja csatornánkat a jóváhagyott csatornák listájához. Tekintse meg, hogyan adhatjuk hozzá csatornánkat a jóváhagyott listához, lásd a Google [útmutatóját](https://support.google.com/a/answer/6245597) . A [útmutató](https://support.google.com/a/answer/6212415?hl=en) oldalán is megtekintheti, hogy többet tudjon meg a különböző beállításokról és arról, hogy melyik a legjobb az osztálytermi számára.
 
 ## Still having trouble?
 
-We'll help you out - just email us at support@code.org!
+Segítünk Önnek - írjon nekünk e-mailt a support@code.org címre!

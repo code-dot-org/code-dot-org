@@ -12,12 +12,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2024-03-28 18:22:53 UTC",
+    "serialized_at": "2024-07-11 19:01:45 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -10935,7 +10936,7 @@
     },
     {
       "name": "Accelerometer",
-      "url": "https://docs.google.com/presentation/d/1khj4dJR2mG4V0Z3jZmcSdy73JrKkUrrDM0Ycrbm0RGs/template/preview",
+      "url": "https://docs.google.com/presentation/d/1NYts3KmFd6zo0_d07xjXOStc3DqisAtGmutMrHVWHZ0/template/preview",
       "key": "accelerometer",
       "properties": {
         "audience": "Teacher",
@@ -11039,7 +11040,7 @@
     },
     {
       "name": "Board Events",
-      "url": "https://docs.google.com/presentation/d/1hoithd_tYZU8JBwxC240H_U_hChndW-JitAnfxC1ciE/template/preview",
+      "url": "https://docs.google.com/presentation/d/1flj0XqDR7dqw1lEvsIppwY593HEvfWEfnPhHWlPrh0A/template/preview",
       "key": "board_events_1",
       "properties": {
         "audience": "Teacher",
@@ -11051,7 +11052,7 @@
     },
     {
       "name": "Board Sensors",
-      "url": "https://docs.google.com/presentation/d/1cV0PxHgnSKAaRlH0d9gAWVP7O_IyhM9BgBg3ZZRCqXM/template/preview",
+      "url": "https://docs.google.com/presentation/d/1IyU59Y_F6d60m82TdOyCKgOSRLRInvi8qdK65cjfKRk/template/preview",
       "key": "board_sensors",
       "properties": {
         "audience": "Teacher",
@@ -11123,7 +11124,7 @@
     },
     {
       "name": "Color LEDs",
-      "url": "https://docs.google.com/presentation/d/1LllEWUxr4JHGkcTwU2dpe8DMFQoM5mYkAEZ9uf27piA/template/preview",
+      "url": "https://docs.google.com/presentation/d/1QgukRnMUinscoXsWJDCv9mQfwOVFpgF3u4YzqnDsc5w/template/preview",
       "key": "color_leds",
       "properties": {
         "audience": "Teacher",
@@ -11147,7 +11148,7 @@
     },
     {
       "name": "Combining Inputs and Outputs",
-      "url": "https://docs.google.com/presentation/d/15YZFNIDCfGR45rlF9oXTPPvcCui9yfYdzj3_LwyiTyk/template/preview",
+      "url": "https://docs.google.com/presentation/d/1_aQGzVqEx2SvDdtVl1V6X-ldVGOHdHmAc5VLU1VR8TI/template/preview",
       "key": "combining_inputs_and_outputs",
       "properties": {
         "audience": "Teacher",
@@ -11393,7 +11394,7 @@
     },
     {
       "name": "Functions",
-      "url": "https://docs.google.com/presentation/d/1GaKD2JihCwsreJPzSTpSrl3MltFWpdwvFgej0QqFQ_s/template/preview",
+      "url": "https://docs.google.com/presentation/d/19gABe67DnUsn-yJ2WPJ8jH-2AwZ-5Pzrfi4Z8865Xiw/template/preview",
       "key": "functions_3",
       "properties": {
         "audience": "Teacher",
@@ -11417,7 +11418,7 @@
     },
     {
       "name": "Getting Screen Inputs",
-      "url": "https://docs.google.com/presentation/d/1kJP_AEDDHIGrYkCd6-Gv27uGAL7cYyWZv-GybsfyKfM/template/preview",
+      "url": "https://docs.google.com/presentation/d/1dyFKKjSo6ETNmuuy3kPkPxoSAHfa4WjgnJV6gRXDhU8/template/preview",
       "key": "getting_screen_inputs",
       "properties": {
         "audience": "Teacher",
@@ -11477,7 +11478,7 @@
     },
     {
       "name": "Making Music",
-      "url": "https://docs.google.com/presentation/d/1I_DT1G6WXZYBSE3QA_AOFf0qdWk_1Gn7LDd8vGSGpbU/template/preview",
+      "url": "https://docs.google.com/presentation/d/1DfAaFqCKrhsZDDLybxC4HzmWIezhOF-CMobGOs8GlQ0/template/preview",
       "key": "making_music",
       "properties": {
         "audience": "Teacher",
@@ -11489,7 +11490,7 @@
     },
     {
       "name": "Mini-Project: Field Collector App",
-      "url": "https://docs.google.com/presentation/d/1nWJCoStbh-n2ge19PlBR6bBSOJ3Up1RbsJ7vJUopn5Q/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Nyw-7Jfampy5Y-pVp-CdTPXdxAB8lrZchDopI5SaKnY/template/preview",
       "key": "mini-project_field_collector_app",
       "properties": {
         "audience": "Teacher",
@@ -11501,7 +11502,7 @@
     },
     {
       "name": "Mini-Project: Interactive Art",
-      "url": "https://docs.google.com/presentation/d/1lucUJczAOLMzFKVUS26FbSUUg5j1aqmoIIMx5OiIJds/template/preview",
+      "url": "https://docs.google.com/presentation/d/1JqUnriZfRw0It6bYSIfM-GO6Bg6bsXI19j89esUhNQo/template/preview",
       "key": "mini-project_interactive_art",
       "properties": {
         "audience": "Teacher",
@@ -11576,7 +11577,7 @@
     },
     {
       "name": "Physical Designs",
-      "url": "https://docs.google.com/presentation/d/1huAoWQOJE4k1S-spsESj3IBmI9Xr_laNE-_ibborMwY/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Riy0B1eS_jvSXldEDelzt4-wCJy_Sz03nj5965sSGKI/template/preview",
       "key": "physical_designs_1",
       "properties": {
         "audience": "Teacher",
@@ -11600,7 +11601,7 @@
     },
     {
       "name": "Physical Inputs and Buttons",
-      "url": "https://docs.google.com/presentation/d/1bUuT6vvQ0gdS_lgVXsZSvw6za5jJU2e56Pcc0VU_BfU/template/preview",
+      "url": "https://docs.google.com/presentation/d/1_kXGjM7TXxkQVoRurN7TvUgMrM7Hil4yYuqxnH9m9wI/template/preview",
       "key": "physical_inputs_and_buttons",
       "properties": {
         "audience": "Teacher",
@@ -11624,7 +11625,7 @@
     },
     {
       "name": "Physical Outputs and LEDs",
-      "url": "https://docs.google.com/presentation/d/1UlJC9ToNsvL6YEWolELXyR9DiVYeQQSqFFGxoVBA6-M/template/preview",
+      "url": "https://docs.google.com/presentation/d/1PYDAxPMNilhoBOF9VX7jW3kavN0WgwO1WEPhRqM115Q/template/preview",
       "key": "physical_outputs_and_leds",
       "properties": {
         "audience": "Teacher",
@@ -11712,7 +11713,7 @@
     },
     {
       "name": "Project: Human Device Interaction",
-      "url": "https://docs.google.com/presentation/d/1aeN0T8pPCGL17sCH5idatYhSexQK2H1H6JDxuhUWyW8/template/preview",
+      "url": "https://docs.google.com/presentation/d/1vvTt31q8GOHk28tfpcLR7QhN1ber0yKII0B9g1RM0Uc/template/preview",
       "key": "project_human_device_interaction",
       "properties": {
         "audience": "Teacher",
@@ -11724,7 +11725,7 @@
     },
     {
       "name": "Project: Prototype an Innovation",
-      "url": "https://docs.google.com/presentation/d/1aNOOKIyb7AF3skSEB7t6HCxB3mJ-u-mTknCvAiJ8Tls/template/preview",
+      "url": "https://docs.google.com/presentation/d/1_snS7_LpC7Xso0nOIxvrlPxuaY9i3avGUmMeUtRAVzA/template/preview",
       "key": "project_prototype_an_innovation",
       "properties": {
         "audience": "Teacher",
@@ -11934,7 +11935,7 @@
     },
     {
       "name": "The Circuit Playground",
-      "url": "https://docs.google.com/presentation/d/1yoX_Fil6asHn1FrJbEr-oGba6T3ihFha0HRCSqz7zz4/template/preview",
+      "url": "https://docs.google.com/presentation/d/1Rs6bmELGlDsYU3nuFMK0v4n10gczJzhBn9BX606WdGI/template/preview",
       "key": "the_circuit_playground",
       "properties": {
         "audience": "Teacher",
@@ -12004,7 +12005,7 @@
     },
     {
       "name": "Updating Screen Elements",
-      "url": "https://docs.google.com/presentation/d/1ZmA8bEBWC7TsUidqzcJYW63kK7ztZFtqE9mAxtDfI1k/template/preview",
+      "url": "https://docs.google.com/presentation/d/1uM2raJI2dSLV8WZTKadSrM7A3qnHIhKkb-YQaEd6ZZo/template/preview",
       "key": "updating_screen_elements",
       "properties": {
         "audience": "Teacher",
@@ -12040,7 +12041,7 @@
     },
     {
       "name": "Variables and If Statements",
-      "url": "https://docs.google.com/presentation/d/13fBd2Wz8k5cDxcSj4ezHBP7Kec3NAEWbGcoqEFbit0M/template/preview",
+      "url": "https://docs.google.com/presentation/d/1meIgaXqGJeq7FPfzYRIdMSg533cM8xQQk3VnfdS68p8/template/preview",
       "key": "variables_and_if_statements",
       "properties": {
         "audience": "Teacher",

@@ -1,8 +1,10 @@
-import React from 'react';
 import {action} from '@storybook/addon-actions';
-import {UnconnectedProgressDetailToggle as ProgressDetailToggle} from './ProgressDetailToggle';
-import {reduxStore} from '@cdo/storybook/decorators';
+import React from 'react';
 import {Provider} from 'react-redux';
+
+import {reduxStore} from '@cdo/storybook/decorators';
+
+import {UnconnectedProgressDetailToggle as ProgressDetailToggle} from './ProgressDetailToggle';
 
 export default {
   component: ProgressDetailToggle,

@@ -1,10 +1,11 @@
-import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import React, {useCallback} from 'react';
-import i18n from '@cdo/locale';
-import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
-import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
+import {connect} from 'react-redux';
+
 import {SimpleDropdown} from '@cdo/apps/componentLibrary/dropdown';
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
+import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
+import i18n from '@cdo/locale';
 
 const FAMILY_NAME = 'familyName';
 const DISPLAY_NAME = 'displayName';
@@ -40,6 +41,7 @@ function SortByNameDropdown({
       className={className}
       size="s"
       dropdownTextThickness="thin"
+      color="gray"
     />
   );
 }

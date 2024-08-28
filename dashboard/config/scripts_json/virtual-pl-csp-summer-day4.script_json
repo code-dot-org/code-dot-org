@@ -4,11 +4,12 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
-      "is_migrated": true
+      "is_migrated": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-12-13 18:52:12 UTC",
+    "serialized_at": "2024-06-25 18:16:38 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -94,9 +95,9 @@
       "relative_position": 2,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\nThe purpose of this session is to demonstrate how student’s first experiences with “programming” can be very approachable.\n\n**Objectives:**\n* Participants understand how the curriculum and AppLab are designed to remove barriers to the content for students.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp3-2023/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n**Lesson Overview:**\nStudents work through a progression of levels to build an understanding of how to use Design Mode to layout an app. The final level has students setting up the screen of an app by attempting to copy an image of an app. ",
+        "overview": "**Purpose:**\nThe purpose of this session is to demonstrate how student’s first experiences with “programming” can be very approachable.\n\n**Objectives:**\n* Participants understand how the curriculum and AppLab are designed to remove barriers to the content for students.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp3-2023/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nStudents work through a progression of levels to build an understanding of how to use Design Mode to layout an app. The final level has students setting up the screen of an app by attempting to copy an image of an app. ",
         "preparation": "* Review the programming levels to ensure you understand the fundamentals of Design Mode in App Lab and how elements are created and their properties are modified.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-intro-to-app-design-lessons-1-2-5-7/36472) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/19sZq9TrPXas5dhs2ZjhwhXX500ljGM50MHP5zbQjbHs/edit?usp=sharing)",
-        "student_overview": "Learn how to create screens, buttons, images, text, and more inside of App Lab."
+        "student_overview": "Learn how to create screens, buttons, images, text, and more inside of App Lab.\n\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp3-2023/lessons/2\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nStudents work through a progression of levels to build an understanding of how to use Design Mode to layout an app. The final level has students setting up the screen of an app by attempting to copy an image of an app. "
       },
       "seeding_key": {
         "lesson.key": "Introduction to Design Mode",
@@ -114,9 +115,9 @@
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\nThis session gives participants a start on the project that runs through the unit. In the last model lesson of the day, participants will create this app. The goal of this session is to ensure that participants have an idea for an app that they and a partner could make. We want to emphasize the excitement around making your own app.\n\n**Objectives:**\n* Participants have been introduced to the project in Unit 3\n* Participants have engaged in the brainstorming process for creating their own app in this unit.\n* Participants have built the UI for their app.\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp3-2023/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n**Lesson Overview:**\nThis is the first in a series of lessons where students will make progress on building their own functional app. \n* On Day 1, students brainstorm app ideas and sketch out user interfaces in preparation for the next lesson where they will return to App Lab.  \n* On Day 2, students continue working on the unit projects in what is primarily designed to be work time. Students continue to follow the app development process outlined in their App Development Guide by transferring their user interfaces designs from their planning guides over to App Lab",
+        "overview": "**Purpose:**\nThis session gives participants a start on the project that runs through the unit. In the last model lesson of the day, participants will create this app. The goal of this session is to ensure that participants have an idea for an app that they and a partner could make. We want to emphasize the excitement around making your own app.\n\n**Objectives:**\n* Participants have been introduced to the project in Unit 3\n* Participants have engaged in the brainstorming process for creating their own app in this unit.\n* Participants have built the UI for their app.\n\n**Suggested Time:** 45 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp3-2023/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nThis is the first in a series of lessons where students will make progress on building their own functional app. \n* On Day 1, students brainstorm app ideas and sketch out user interfaces in preparation for the next lesson where they will return to App Lab.  \n* On Day 2, students continue working on the unit projects in what is primarily designed to be work time. Students continue to follow the app development process outlined in their App Development Guide by transferring their user interfaces designs from their planning guides over to App Lab",
         "preparation": "* Read over the [r app_development_planning_guide/virtual-pl-csp-summer/2024]\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-designing-an-app-unit-3-lessons-3-4-8-10/36473) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our Virtual Lesson Modifications [Day 1](https://docs.google.com/document/d/1XA7mXpjzcvOeihfrU4WckgTxSQLpi2gSDseFOZnmgNc/edit?usp=sharing) and [Day 2](https://docs.google.com/document/d/1ll3y-flunEOVSk3iBBOkCG35yUuaxuSfm0LLm9i022g/edit?usp=sharing)",
-        "student_overview": "This is the first part of a project where students will make progress on building their own functional app. ",
+        "student_overview": "This is the first part of a project where students will make progress on building their own functional app. \n\n<a href=\"https://levelbuilder-studio.code.org/s/csp3-2023/lessons/3\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nThis is the first in a series of lessons where students will make progress on building their own functional app. \n* On Day 1, students brainstorm app ideas and sketch out user interfaces in preparation for the next lesson where they will return to App Lab.  \n* On Day 2, students continue working on the unit projects in what is primarily designed to be work time. Students continue to follow the app development process outlined in their App Development Guide by transferring their user interfaces designs from their planning guides over to App Lab",
         "unplugged": true
       },
       "seeding_key": {
@@ -134,9 +135,9 @@
       "relative_position": 4,
       "properties": {
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\nThis session shows participants how the role of the teacher is similar and different in programming lessons to other lesson types.\n\n**Objectives:**\n* Participants learn how event handlers work.\n* Participants see how to navigate students working on computers and holding classroom discussions back and forth in programming units.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp3-2023/lessons/5\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n**Lesson Overview:**\nStudents use and modify a series of simple apps to get familiar with a small set of programming commands. They observe the way the code runs by slowing down the code and compare programs that run all at once to those that respond to user actions like buttons clicks. At the end of the lesson students discuss what they observed and are introduced to some key vocabulary for describing the running of programs.",
+        "overview": "**Purpose:**\nThis session shows participants how the role of the teacher is similar and different in programming lessons to other lesson types.\n\n**Objectives:**\n* Participants learn how event handlers work.\n* Participants see how to navigate students working on computers and holding classroom discussions back and forth in programming units.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp3-2023/lessons/5\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nStudents use and modify a series of simple apps to get familiar with a small set of programming commands. They observe the way the code runs by slowing down the code and compare programs that run all at once to those that respond to user actions like buttons clicks. At the end of the lesson students discuss what they observed and are introduced to some key vocabulary for describing the running of programs.",
         "preparation": "* Review the example apps and the prompts that students will be asked to respond to for each\n* Review the information covered in the slides at the conclusion of the lesson\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-intro-to-app-design-lessons-1-2-5-7/36472) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our [Virtual Lesson Modifications](https://docs.google.com/document/d/1TfLlWANuZcXn4tljTl6_Mp9FqUAYnLQXkTwmaG0_Sgk/edit?usp=sharing)",
-        "student_overview": "Get familiar with what programs are and how they run by using and modifying several working apps."
+        "student_overview": "Get familiar with what programs are and how they run by using and modifying several working apps.\n\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp3-2023/lessons/5\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nStudents use and modify a series of simple apps to get familiar with a small set of programming commands. They observe the way the code runs by slowing down the code and compare programs that run all at once to those that respond to user actions like buttons clicks. At the end of the lesson students discuss what they observed and are introduced to some key vocabulary for describing the running of programs."
       },
       "seeding_key": {
         "lesson.key": "Intro to Programming",
@@ -205,9 +206,9 @@
       "properties": {
         "assessment": true,
         "creative_commons_license": "Creative Commons BY-NC-SA",
-        "overview": "**Purpose:**\nThis session shows participants what active teaching looks like when teaching programming.\n\n**Objectives:**\n* Participants have seen what it looks like to teach with pair programming and the debugging process in mind.\n* Participants are excited about what they can create in App Lab.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp3-2023/lessons/7\" target=\"blank\" rel=\"noopener noreferrer\">Lessson Plan</a> \n\n**Lesson Overview:**\nThis lesson covers the last three days of the unit project. Students add code to make their apps function. \n* On Day 3, students learn about Pair Programming by watching a video and then practicing it themselves while working on their project apps. At this stage, students are adding their first lines of code to their app using debugging skills from the previous lesson. \n* On Day 4, students continue working on their apps. Halfway through class the focus of the lesson shifts to getting feedback. Students watch other groups test their apps and collect feedback that will be used to make updates.\n* On Day 5, students complete their apps, making any final adjustments based on feedback from their peers. Students spend some time reviewing other apps that classmates made and then complete a short set of reflection prompts before submitting their projects.",
+        "overview": "**Purpose:**\nThis session shows participants what active teaching looks like when teaching programming.\n\n**Objectives:**\n* Participants have seen what it looks like to teach with pair programming and the debugging process in mind.\n* Participants are excited about what they can create in App Lab.\n\n**Suggested Time:** 60 minutes\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp3-2023/lessons/7\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nThis lesson covers the last three days of the unit project. Students add code to make their apps function. \n* On Day 3, students learn about Pair Programming by watching a video and then practicing it themselves while working on their project apps. At this stage, students are adding their first lines of code to their app using debugging skills from the previous lesson. \n* On Day 4, students continue working on their apps. Halfway through class the focus of the lesson shifts to getting feedback. Students watch other groups test their apps and collect feedback that will be used to make updates.\n* On Day 5, students complete their apps, making any final adjustments based on feedback from their peers. Students spend some time reviewing other apps that classmates made and then complete a short set of reflection prompts before submitting their projects.",
         "preparation": "* Make sure students have access to their App Development Planning Guides\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/project-hub-designing-an-app-unit-3-lessons-3-4-8-10/36473) forum for verified teachers to find additional strategies or resources shared by fellow teachers\n- If you are teaching virtually, consider checking our Virtual Lesson Modifications for [Day 3](https://docs.google.com/document/d/1kBx4fXvt8obUsTbzGc70qhwbMubp1Pg7e59FbLqbvYs/edit?usp=sharing), [Day 4](https://docs.google.com/document/d/1hrU8a61iIz-tKlzmTTdFYS7-RDmak0NGtL3gfUXu9gA/edit?usp=sharing), and [Day 5](https://docs.google.com/document/d/1G7PK2YHIn3n84VNrk3yskWRhMtmGUFYedoI9A7u9PGc/edit?usp=sharing).",
-        "student_overview": "Start programming your app and learn how to effectively use pair programming to collaborate while writing code."
+        "student_overview": "Start programming your app and learn how to effectively use pair programming to collaborate while writing code.\n\n<a href=\"https://levelbuilder-studio.code.org/s/csp3-2023/lessons/7\" target=\"blank\" rel=\"noopener noreferrer\">Lesson Plan</a> \n\n**Lesson Overview:**\nThis lesson covers the last three days of the unit project. Students add code to make their apps function. \n* On Day 3, students learn about Pair Programming by watching a video and then practicing it themselves while working on their project apps. At this stage, students are adding their first lines of code to their app using debugging skills from the previous lesson. \n* On Day 4, students continue working on their apps. Halfway through class the focus of the lesson shifts to getting feedback. Students watch other groups test their apps and collect feedback that will be used to make updates.\n* On Day 5, students complete their apps, making any final adjustments based on feedback from their peers. Students spend some time reviewing other apps that classmates made and then complete a short set of reflection prompts before submitting their projects."
       },
       "seeding_key": {
         "lesson.key": "Project - Designing an App Part 2",
@@ -1977,14 +1978,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csp-summer-day3-Context1-2_2"
+          "virtual-pl-csp-summer-day4-asynch1-01-2024"
         ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csp-summer-day3-Context1-2_2"
+          "virtual-pl-csp-summer-day4-asynch1-01-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-3",
@@ -1992,7 +1993,7 @@
         "activity_section.key": "40a51a7f-073a-4f35-bbbe-aa8acff2e62d"
       },
       "level_keys": [
-        "virtual-pl-csp-summer-day3-Context1-2_2"
+        "virtual-pl-csp-summer-day4-asynch1-01-2024"
       ]
     },
     {
@@ -2002,14 +2003,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_2_2"
+          "virtual-pl-csp-summer-day4-asynch1-02-2024"
         ],
         "progression": "Applying Our Knowledge of Identity and Bias"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_2_2"
+          "virtual-pl-csp-summer-day4-asynch1-02-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-3",
@@ -2017,7 +2018,7 @@
         "activity_section.key": "bfbf4d87-be2b-4dcd-a787-0f5fc9cd1403"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-UnderstandingContext2_2_2"
+        "virtual-pl-csp-summer-day4-asynch1-02-2024"
       ]
     },
     {
@@ -2027,14 +2028,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext3_2_2"
+          "virtual-pl-csp-summer-day4-asynch1-03-2024"
         ],
         "progression": "Applying Our Knowledge of Identity and Bias"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext3_2_2"
+          "virtual-pl-csp-summer-day4-asynch1-03-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-3",
@@ -2042,7 +2043,7 @@
         "activity_section.key": "bfbf4d87-be2b-4dcd-a787-0f5fc9cd1403"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-UnderstandingContext3_2_2"
+        "virtual-pl-csp-summer-day4-asynch1-03-2024"
       ]
     },
     {
@@ -2052,14 +2053,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext4_2_2"
+          "virtual-pl-csp-summer-day4-asynch1-04-2024"
         ],
         "progression": "Applying Our Knowledge of Identity and Bias"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext4_2_2"
+          "virtual-pl-csp-summer-day4-asynch1-04-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-3",
@@ -2067,7 +2068,7 @@
         "activity_section.key": "bfbf4d87-be2b-4dcd-a787-0f5fc9cd1403"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-UnderstandingContext4_2_2"
+        "virtual-pl-csp-summer-day4-asynch1-04-2024"
       ]
     },
     {
@@ -2077,14 +2078,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day3-Context5_2_2"
+          "virtual-pl-csp-summer-day4-asynch1-05-2024"
         ],
         "progression": "Applying Our Knowledge of Identity and Bias"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-Context5_2_2"
+          "virtual-pl-csp-summer-day4-asynch1-05-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-3",
@@ -2092,7 +2093,7 @@
         "activity_section.key": "bfbf4d87-be2b-4dcd-a787-0f5fc9cd1403"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-Context5_2_2"
+        "virtual-pl-csp-summer-day4-asynch1-05-2024"
       ]
     },
     {
@@ -2102,14 +2103,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_3_video"
+          "virtual-pl-csp-summer-day4-asynch1-06-2024"
         ],
         "progression": "Previously On...U3L7"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_3_video"
+          "virtual-pl-csp-summer-day4-asynch1-06-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-3",
@@ -2117,7 +2118,7 @@
         "activity_section.key": "27b7fa52-9d6e-49bb-ab61-7689738609a1"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-UnderstandingContext2_3_video"
+        "virtual-pl-csp-summer-day4-asynch1-06-2024"
       ]
     },
     {
@@ -2347,44 +2348,19 @@
     },
     {
       "chapter": 34,
-      "position": 4,
-      "activity_section_position": 1,
-      "assessment": true,
-      "properties": {
-        "level_keys": [
-          "Student End of Unit Survey_csp3_1"
-        ],
-        "progression": "End-of-Unit Survey"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "Student End of Unit Survey_csp3_1"
-        ],
-        "lesson.key": "Project - Designing an App Part 2",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csp-summer-day4",
-        "activity_section.key": "62a4e1ac-190c-42c9-a48d-dcad37f3557d"
-      },
-      "level_keys": [
-        "Student End of Unit Survey_csp3_1"
-      ]
-    },
-    {
-      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csp-summer-day2-P2-Context1_2_2"
+          "virtual-pl-csp-summer-day4-asynch2-01-2024"
         ],
         "progression": "Asynchronous Overview"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csp-summer-day2-P2-Context1_2_2"
+          "virtual-pl-csp-summer-day4-asynch2-01-2024"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-5",
@@ -2392,24 +2368,24 @@
         "activity_section.key": "2a0fb83d-7acc-4300-af39-fe00d7b4bbab"
       },
       "level_keys": [
-        "virtual-pl-csp-summer-day2-P2-Context1_2_2"
+        "virtual-pl-csp-summer-day4-asynch2-01-2024"
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 35,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2_3"
+          "virtual-pl-csp-summer-day4-asynch2-02-2024"
         ],
         "progression": "Recruiting And Retaining Students Gallery Walk"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2_3"
+          "virtual-pl-csp-summer-day4-asynch2-02-2024"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-5",
@@ -2417,24 +2393,24 @@
         "activity_section.key": "4d3901e3-33c9-4fa7-a805-333634ad4b04"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2_3"
+        "virtual-pl-csp-summer-day4-asynch2-02-2024"
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 36,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2_2"
+          "virtual-pl-csp-summer-day4-asynch2-03-2024"
         ],
         "progression": "Recruiting And Retaining Students Gallery Walk"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2_2"
+          "virtual-pl-csp-summer-day4-asynch2-03-2024"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-5",
@@ -2442,24 +2418,24 @@
         "activity_section.key": "4d3901e3-33c9-4fa7-a805-333634ad4b04"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2_2"
+        "virtual-pl-csp-summer-day4-asynch2-03-2024"
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 37,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day3-Context4_1_2_2"
+          "virtual-pl-csp-summer-day4-asynch2-04-2024"
         ],
         "progression": "Belonging and Differentiation"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-Context4_1_2_2"
+          "virtual-pl-csp-summer-day4-asynch2-04-2024"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-5",
@@ -2467,24 +2443,24 @@
         "activity_section.key": "c26efa08-605a-40fc-ba17-2a3c25ea8763"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-Context4_1_2_2"
+        "virtual-pl-csp-summer-day4-asynch2-04-2024"
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 38,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_6_video"
+          "virtual-pl-csp-summer-day4-asynch2-05-2024"
         ],
         "progression": "Unit 3 Connections And Conclusions"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_6_video"
+          "virtual-pl-csp-summer-day4-asynch2-05-2024"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-5",
@@ -2492,24 +2468,24 @@
         "activity_section.key": "26539809-3c3c-44f4-87db-2609c917d726"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day3-UnderstandingContext2_6_video"
+        "virtual-pl-csp-summer-day4-asynch2-05-2024"
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 39,
       "position": 6,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
         "level_keys": [
-          "virtual-pl-csd-summer-day4-Context6"
+          "virtual-pl-csp-summer-day4-asynch2-06-2024"
         ],
         "progression": "Breakout Groups Poll"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day4-Context6"
+          "virtual-pl-csp-summer-day4-asynch2-06-2024"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-5",
@@ -2517,7 +2493,7 @@
         "activity_section.key": "9b3784b1-0f91-46ea-9d0f-45ed0c674efa"
       },
       "level_keys": [
-        "virtual-pl-csd-summer-day4-Context6"
+        "virtual-pl-csp-summer-day4-asynch2-06-2024"
       ]
     }
   ],
@@ -2740,9 +2716,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csp-summer-day3-Context1-2_2",
+        "level.key": "virtual-pl-csp-summer-day4-asynch1-01-2024",
         "script_level.level_keys": [
-          "virtual-pl-csp-summer-day3-Context1-2_2"
+          "virtual-pl-csp-summer-day4-asynch1-01-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-3",
@@ -2752,9 +2728,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext2_2_2",
+        "level.key": "virtual-pl-csp-summer-day4-asynch1-02-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_2_2"
+          "virtual-pl-csp-summer-day4-asynch1-02-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-3",
@@ -2764,9 +2740,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext3_2_2",
+        "level.key": "virtual-pl-csp-summer-day4-asynch1-03-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext3_2_2"
+          "virtual-pl-csp-summer-day4-asynch1-03-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-3",
@@ -2776,9 +2752,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext4_2_2",
+        "level.key": "virtual-pl-csp-summer-day4-asynch1-04-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext4_2_2"
+          "virtual-pl-csp-summer-day4-asynch1-04-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-3",
@@ -2788,9 +2764,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-Context5_2_2",
+        "level.key": "virtual-pl-csp-summer-day4-asynch1-05-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-Context5_2_2"
+          "virtual-pl-csp-summer-day4-asynch1-05-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-3",
@@ -2800,9 +2776,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext2_3_video",
+        "level.key": "virtual-pl-csp-summer-day4-asynch1-06-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_3_video"
+          "virtual-pl-csp-summer-day4-asynch1-06-2024"
         ],
         "lesson.key": "Asynchronous Part 1",
         "lesson_group.key": "lessonGroup-3",
@@ -2920,21 +2896,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "Student End of Unit Survey_csp3_1",
+        "level.key": "virtual-pl-csp-summer-day4-asynch2-01-2024",
         "script_level.level_keys": [
-          "Student End of Unit Survey_csp3_1"
-        ],
-        "lesson.key": "Project - Designing an App Part 2",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "virtual-pl-csp-summer-day4",
-        "activity_section.key": "62a4e1ac-190c-42c9-a48d-dcad37f3557d"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "virtual-pl-csp-summer-day2-P2-Context1_2_2",
-        "script_level.level_keys": [
-          "virtual-pl-csp-summer-day2-P2-Context1_2_2"
+          "virtual-pl-csp-summer-day4-asynch2-01-2024"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-5",
@@ -2944,9 +2908,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2_3",
+        "level.key": "virtual-pl-csp-summer-day4-asynch2-02-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2_3"
+          "virtual-pl-csp-summer-day4-asynch2-02-2024"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-5",
@@ -2956,9 +2920,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2_2",
+        "level.key": "virtual-pl-csp-summer-day4-asynch2-03-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_1_2_2"
+          "virtual-pl-csp-summer-day4-asynch2-03-2024"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-5",
@@ -2968,9 +2932,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-Context4_1_2_2",
+        "level.key": "virtual-pl-csp-summer-day4-asynch2-04-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-Context4_1_2_2"
+          "virtual-pl-csp-summer-day4-asynch2-04-2024"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-5",
@@ -2980,9 +2944,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day3-UnderstandingContext2_6_video",
+        "level.key": "virtual-pl-csp-summer-day4-asynch2-05-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day3-UnderstandingContext2_6_video"
+          "virtual-pl-csp-summer-day4-asynch2-05-2024"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-5",
@@ -2992,9 +2956,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "virtual-pl-csd-summer-day4-Context6",
+        "level.key": "virtual-pl-csp-summer-day4-asynch2-06-2024",
         "script_level.level_keys": [
-          "virtual-pl-csd-summer-day4-Context6"
+          "virtual-pl-csp-summer-day4-asynch2-06-2024"
         ],
         "lesson.key": "Asynchronous Part 2",
         "lesson_group.key": "lessonGroup-5",

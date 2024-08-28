@@ -3,38 +3,14 @@ require 'cdo/aws/metrics'
 require 'csv'
 
 class EvaluateRubricJob < ApplicationJob
-  queue_as :default
-
-  S3_AI_BUCKET = 'cdo-ai'.freeze
-
-  # The path to the release directory in S3 which contains the AI rubric evaluation config.
-  # When launching AI config changes, this path should be updated to point to the new release.
-  #
-  # Basic validation of the new AI config is done by UI tests, or can be done locally
-  # by running `EvaluateRubricJob.new.validate_ai_config` from the rails console.
-  S3_AI_RELEASE_PATH = 'teaching_assistant/releases/2024-03-25-confidence-exact/'.freeze
-
   STUB_AI_PROXY_PATH = '/api/test/ai_proxy'.freeze
 
-  # 2D Map from unit name and level name, to the name of the lesson files within
-  # the release dir in S3 which will be used for AI evaluation.
-  UNIT_AND_LEVEL_TO_LESSON_S3_NAME = {
-    'csd3-2023' => {
-      'CSD U3 Sprites scene challenge_2023' => 'csd3-2023-L11',
-      'CSD web project animated review_2023' => 'csd3-2023-L14',
-      'CSD U3 Interactive Card Final_2023' => 'csd3-2023-L18',
-      'CSD games sidescroll review_2023' => 'csd3-2023-L21',
-      'CSD U3 collisions flyman bounceOff_2023' => 'csd3-2023-L24',
-      'CSD games project review_2023' => 'csd3-2023-L28',
-    },
-    'allthethings' => {
-      'CSD U3 Sprites scene challenge_allthethings' => 'allthethings-L48',
-    },
-  }
-  UNIT_AND_LEVEL_TO_LESSON_S3_NAME['interactive-games-animations-2023'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2023']
-  UNIT_AND_LEVEL_TO_LESSON_S3_NAME['focus-on-creativity3-2023'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2023']
-  UNIT_AND_LEVEL_TO_LESSON_S3_NAME['focus-on-coding3-2023'] = UNIT_AND_LEVEL_TO_LESSON_S3_NAME['csd3-2023']
-  UNIT_AND_LEVEL_TO_LESSON_S3_NAME.freeze
+  AIPROXY_API_TIMEOUT = 165
+
+  ATTEMPTS_ON_RATE_LIMIT = 3
+  ATTEMPTS_ON_TIMEOUT_ERROR = 2
+  ATTEMPTS_ON_SERVICE_UNAVAILABLE = 3
+  ATTEMPTS_ON_GATEWAY_TIMEOUT = 3
 
   # This is raised if there is any raised error due to a rate limit, e.g. a 429
   # received from the aiproxy service.
@@ -51,76 +27,57 @@ class EvaluateRubricJob < ApplicationJob
     end
   end
 
-  # For testing purposes, we can raise this error to simulate a missing key
-  class StubNoSuchKey < StandardError
-  end
+  # This is raised if the request is too large for the openai, indicating that
+  # the code was too long relative to the LLM's context window.
+  class RequestTooLargeError < StandardError
+    attr_reader :response
 
-  # The CloudWatch metric namespace
-  AI_RUBRIC_METRICS_NAMESPACE = 'AiRubric'.freeze
+    # Creates a RequestTooLargeError for the given response.
+    #
+    # @param [HTTParty::Response] response The HTTP response that exhibits this error.
+    def initialize(response)
+      @response = response
 
-  # Write out metrics reflected in the response to CloudWatch
-  #
-  # Currently, this keeps track of a curated set of metrics returned
-  # within the 'metadata.usage' field of the returned response from
-  # the AI proxy service.
-  #
-  # @param [Hash] response The parsed JSON response from the AI proxy.
-  def self.log_metrics(response)
-    # Record the metadata
-    # The aiproxy service will report the usage in the metadata via:
-    # { metadata: { agent: 'openai', usage: { total_tokens: 1234, prompt_tokens: 432, completion_tokens: 802 } } }
-    [:TotalTokens, :PromptTokens, :CompletionTokens].each do |name|
-      # Send a metric to the AIRubric namespace under categories for both the
-      # service used (openai, etc) and the current environment.
-      tokens = response.dig('metadata', 'usage', name.to_s.underscore)
-      next if tokens.nil?
-      Cdo::Metrics.push(
-        AI_RUBRIC_METRICS_NAMESPACE,
-        [
-          {
-            metric_name: name,
-            value: tokens,
-            dimensions: [
-              {name: 'Environment', value: CDO.rack_env},
-              {name: 'Agent', value: response.dig('metadata', 'agent') || 'unknown'},
-            ],
-            unit: 'Count'
-          }
-        ]
-      )
+      super("Request too large for #{response.request.uri}: #{response.code} #{response.message} #{response.body}")
     end
   end
 
-  # Ensure that the RubricAiEvaluation exists as an argument to the job
-  private def pass_in_or_create_rubric_ai_evaluation(job)
-    # Get the first argument to perform() which is the hash of named arguments
-    options = job.arguments.first
+  class ServiceUnavailableError < StandardError
+    attr_reader :response
 
-    # Get the level containing the rubric
-    script_level = ScriptLevel.find(options[:script_level_id])
+    # Creates a ServiceUnavailableError for the given response.
+    #
+    # @param [HTTParty::Response] response The HTTP response that exhibits this error.
+    def initialize(response)
+      @response = response
 
-    # Will raise an exception if the rubric does not exist
-    rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
+      super("Service unavailable for #{response.request.uri}: #{response.code} #{response.message} #{response.body}")
+    end
+  end
 
-    user = User.find(options[:user_id])
-    channel_id = get_channel_id(user, script_level)
-    _owner_id, project_id = storage_decrypt_channel_id(channel_id)
+  class GatewayTimeoutError < StandardError
+    attr_reader :response
 
-    # Create a queued record of this work request (if none were given)
-    rubric_ai_evaluation_id = options[:rubric_ai_evaluation_id]
-    rubric_ai_evaluation = (rubric_ai_evaluation_id && RubricAiEvaluation.find(rubric_ai_evaluation_id)) || RubricAiEvaluation.create!(
-      user_id: options[:user_id],
-      requester_id: options[:requester_id],
-      rubric: rubric,
-      status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:QUEUED],
-      project_id: project_id,
-    )
+    # Creates a GatewayTimeoutError for the given response.
+    #
+    # @param [HTTParty::Response] response The HTTP response that exhibits this error.
+    def initialize(response)
+      @response = response
 
-    # Set it back so the job can reference it
-    options[:rubric_ai_evaluation_id] = rubric_ai_evaluation.id
+      super("Gateway Timeout for #{response.request.uri}: #{response.code} #{response.message} #{response.body}")
+    end
+  end
 
-    # Return the Rubric
-    rubric_ai_evaluation
+  class StudentLimitError < StandardError
+    def initialize(user_id:, rubric_id:)
+      super("Student #{user_id} has exceeded the limit of evaluations for rubric #{rubric_id}")
+    end
+  end
+
+  class TeacherLimitError < StandardError
+    def initialize(user_id:, requester_id:, rubric_id:)
+      super("Teacher #{requester_id} has exceeded the limit of evaluations for student #{user_id} on rubric #{rubric_id}")
+    end
   end
 
   before_enqueue do |job|
@@ -188,42 +145,84 @@ class EvaluateRubricJob < ApplicationJob
     # We gracefully just fail, here, and we do not file this exception
   end
 
-  RETRIES_ON_RATE_LIMIT = 3
+  rescue_from(RequestTooLargeError) do |exception|
+    if rack_env?(:development)
+      puts "EvaluateRubricJob RequestTooLargeError: #{exception.message}"
+    end
 
-  # Retry on any reported rate limit (429 status) 'exponentially_longer' waits 3s, 18s, and then 83s.
-  retry_on TooManyRequestsError, wait: :exponentially_longer, attempts: RETRIES_ON_RATE_LIMIT do |job, error|
-    # Job arguments are always serializable, so we just pull out the hash
-    # and send it as context.
-    options = job.arguments.first
-
-    # Send it to honeybadger even though we are handling the error via retry
-    Honeybadger.notify(
-      error,
-      error_message: "Retrying rubric evaluation job due to rate limiting (429).",
-      context: options
-    )
+    # Record the failure mode, so we can show the right message to the teacher
+    rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(self)
+    rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:REQUEST_TOO_LARGE]
+    rubric_ai_evaluation.save!
   end
 
-  RETRIES_ON_TIMEOUT = 2
+  rescue_from(StudentLimitError) do |exception|
+    if rack_env?(:development)
+      puts "EvaluateRubricJob StudentLimitError: #{exception.message}"
+    end
+
+    # Record the failure mode, so we can show the right message to the teacher
+    rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(self)
+    rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:STUDENT_LIMIT_EXCEEDED]
+    rubric_ai_evaluation.save!
+  end
+
+  rescue_from(TeacherLimitError) do |exception|
+    if rack_env?(:development)
+      puts "EvaluateRubricJob TeacherLimitError: #{exception.message}"
+    end
+
+    # Record the failure mode, so we can show the right message to the teacher
+    rubric_ai_evaluation = pass_in_or_create_rubric_ai_evaluation(self)
+    rubric_ai_evaluation.status = SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:TEACHER_LIMIT_EXCEEDED]
+    rubric_ai_evaluation.save!
+  end
+
+  # Retry on any reported rate limit (429 status). With 3 attempts, 'exponentially_longer' waits 3s, then 18s.
+  retry_on TooManyRequestsError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_RATE_LIMIT do |job, error|
+    AiRubricMetrics.log_metric(metric_name: :RateLimit)
+    AiRubricMetrics.log_to_firehose(job: job, error: error, event_name: 'rate-limit')
+  end
 
   # Retry just once on a timeout. It is likely to timeout again.
-  retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: RETRIES_ON_TIMEOUT do |job, error|
-    # Job arguments are always serializable, so we just pull out the hash
-    # and send it as context.
-    options = job.arguments.first
+  retry_on Net::ReadTimeout, Timeout::Error, wait: 10.seconds, attempts: ATTEMPTS_ON_TIMEOUT_ERROR do |job, error|
+    AiRubricMetrics.log_metric(metric_name: :TimeoutError)
+    AiRubricMetrics.log_to_firehose(job: job, error: error, event_name: 'timeout-error')
+  end
 
-    # Send it to honeybadger even though we are handling the error via retry
-    Honeybadger.notify(
-      error,
-      error_message: "Retrying rubric evaluation job due to timeout.",
-      context: options
-    )
+  # Retry on a 503 Service Unavailable error, including those returned by aiproxy
+  # when openai returns 500.
+  retry_on ServiceUnavailableError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_SERVICE_UNAVAILABLE do |job, error|
+    agent = 'none'
+    if error.message.downcase.include?('openai')
+      agent = 'openai'
+    elsif error.message.downcase.include?('bedrock')
+      agent = 'bedrock'
+    end
+    AiRubricMetrics.log_metric(metric_name: :ServiceUnavailable, agent: agent)
+    AiRubricMetrics.log_to_firehose(job: job, error: error, event_name: 'service-unavailable', agent: agent)
+  end
+
+  # Retry on a 504 Gateway Timeout error, including those returned by aiproxy
+  # when openai request times out.
+  retry_on GatewayTimeoutError, wait: :exponentially_longer, attempts: ATTEMPTS_ON_GATEWAY_TIMEOUT do |job, error|
+    agent = 'none'
+    if error.message.downcase.include?('openai')
+      agent = 'openai'
+    elsif error.message.downcase.include?('bedrock')
+      agent = 'bedrock'
+    end
+    AiRubricMetrics.log_metric(metric_name: :GatewayTimeout, agent: agent)
+    AiRubricMetrics.log_to_firehose(job: job, error: error, event_name: 'gateway-timeout', agent: agent)
   end
 
   def perform(user_id:, requester_id:, script_level_id:, rubric_ai_evaluation_id: nil)
+    # prevent the job from running if per-user limits have been exceeded.
+    check_evaluation_limits(user_id: user_id, requester_id: requester_id, script_level_id: script_level_id)
+
     user = User.find(user_id)
     script_level = ScriptLevel.find(script_level_id)
-    lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(script_level)
+    lesson_s3_name = AiRubricConfig.get_lesson_s3_name(script_level)
 
     # Find the rubric evaluation record (or raise RecordNotFound)
     raise "ERROR: must provide rubric ai evaluation record id" unless rubric_ai_evaluation_id
@@ -243,37 +242,72 @@ class EvaluateRubricJob < ApplicationJob
     locale = (user.locale || 'en')[0...2]
     ShareFiltering.find_share_failure(code, locale, exceptions: true)
 
-    openai_params = get_openai_params(lesson_s3_name, code)
+    openai_params = AiRubricConfig.get_openai_params(lesson_s3_name, code)
     response = get_openai_evaluations(openai_params)
 
     # Log tokens and usage information
-    EvaluateRubricJob.log_metrics(response)
+    AiRubricMetrics.log_token_metrics(response)
 
     # Get and validate the response data
     ai_evaluations = response['data']
     validate_evaluations(ai_evaluations, rubric)
 
-    ai_confidence_levels_pass_fail = JSON.parse(read_file_from_s3(lesson_s3_name, 'confidence.json'))
-    confidence_exact_json = read_file_from_s3(lesson_s3_name, 'confidence-exact.json', allow_missing: true)
+    ai_confidence_levels_pass_fail = JSON.parse(AiRubricConfig.read_file_from_s3(lesson_s3_name, 'confidence.json'))
+    confidence_exact_json = AiRubricConfig.read_file_from_s3(lesson_s3_name, 'confidence-exact.json', allow_missing: true)
     ai_confidence_levels_exact_match = confidence_exact_json ? JSON.parse(confidence_exact_json) : nil
     merged_evaluations = merge_confidence_levels(ai_evaluations, ai_confidence_levels_pass_fail, ai_confidence_levels_exact_match)
 
     write_ai_evaluations(user, merged_evaluations, rubric, rubric_ai_evaluation, project_version)
   end
 
-  def self.ai_enabled?(script_level)
-    !!get_lesson_s3_name(script_level)
+  # Ensure that the RubricAiEvaluation exists as an argument to the job
+  private def pass_in_or_create_rubric_ai_evaluation(job)
+    # Get the first argument to perform() which is the hash of named arguments
+    options = job.arguments.first
+
+    # Get the level containing the rubric
+    script_level = ScriptLevel.find(options[:script_level_id])
+
+    # Will raise an exception if the rubric does not exist
+    rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
+
+    user = User.find(options[:user_id])
+    channel_id = get_channel_id(user, script_level)
+    _owner_id, project_id = storage_decrypt_channel_id(channel_id)
+
+    # Create a queued record of this work request (if none were given)
+    rubric_ai_evaluation_id = options[:rubric_ai_evaluation_id]
+    rubric_ai_evaluation = (rubric_ai_evaluation_id && RubricAiEvaluation.find(rubric_ai_evaluation_id)) || RubricAiEvaluation.create!(
+      user_id: options[:user_id],
+      requester_id: options[:requester_id],
+      rubric: rubric,
+      status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:QUEUED],
+      project_id: project_id,
+    )
+
+    # Set it back so the job can reference it
+    options[:rubric_ai_evaluation_id] = rubric_ai_evaluation.id
+
+    # Return the Rubric
+    rubric_ai_evaluation
   end
 
-  # returns the path suffix of the location in S3 which contains the config
-  # needed to evaluate the rubric for the given script level.
-  def self.get_lesson_s3_name(script_level)
-    UNIT_AND_LEVEL_TO_LESSON_S3_NAME[script_level&.script&.name].try(:[], script_level&.level&.name)
-  end
+  # Check if the student or teacher has exceeded the evaluation limit for the rubric.
+  private def check_evaluation_limits(user_id:, requester_id:, script_level_id:)
+    script_level = ScriptLevel.find(script_level_id)
+    rubric = Rubric.find_by!(lesson_id: script_level.lesson.id, level_id: script_level.level.id)
 
-  # The client for s3 access made directly by this job, not via SourceBucket.
-  def s3_client
-    @s3_client ||= AWS::S3.create_client
+    requested_by_self = user_id == requester_id
+
+    count = RubricAiEvaluation.where(
+      user_id: user_id,
+      requester_id: requester_id,
+      rubric_id: rubric.id,
+      status: SharedConstants::RUBRIC_AI_EVALUATION_STATUS[:SUCCESS]
+    ).count
+
+    raise StudentLimitError.new(user_id: user_id, rubric_id: rubric.id) if requested_by_self && count >= SharedConstants::RUBRIC_AI_EVALUATION_LIMITS[:STUDENT_LIMIT]
+    raise TeacherLimitError.new(user_id: user_id, requester_id: requester_id, rubric_id: rubric.id) if !requested_by_self && count >= SharedConstants::RUBRIC_AI_EVALUATION_LIMITS[:TEACHER_LIMIT]
   end
 
   # get the channel id of the project which stores the user's code on this script level.
@@ -300,117 +334,25 @@ class EvaluateRubricJob < ApplicationJob
     [code, version]
   end
 
-  private def read_file_from_s3(lesson_s3_name, key_suffix, allow_missing: false)
-    key = "#{S3_AI_RELEASE_PATH}#{lesson_s3_name}/#{key_suffix}"
-    if [:development, :test].include?(rack_env) && File.exist?(File.join("local-aws", S3_AI_BUCKET, key))
-      puts "Note: Reading AI prompt from local file: #{key}"
-      File.read(File.join("local-aws", S3_AI_BUCKET, key))
-    else
-      s3_client.get_object(bucket: S3_AI_BUCKET, key: key)[:body].read
-    end
-  rescue Aws::S3::Errors::NoSuchKey, StubNoSuchKey => exception
-    raise exception unless allow_missing
-    nil
-  end
-
-  private def read_examples(lesson_s3_name, response_type)
-    raise "invalid response type #{response_type.inspect}" unless ['tsv', 'json'].include?(response_type)
-    prefix = "#{S3_AI_RELEASE_PATH}#{lesson_s3_name}/examples/"
-    response = s3_client.list_objects_v2(bucket: S3_AI_BUCKET, prefix: prefix)
-    file_names = response.contents.map(&:key)
-    file_names = file_names.map {|name| name.gsub(prefix, '')}
-    js_files = file_names.select {|name| name.end_with?('.js')}
-    js_files.map do |file_name|
-      base_name = file_name.gsub('.js', '')
-      code = s3_client.get_object(bucket: S3_AI_BUCKET, key: "#{prefix}#{file_name}")[:body].read
-      response = s3_client.get_object(bucket: S3_AI_BUCKET, key: "#{prefix}#{base_name}.#{response_type}")[:body].read
-      [code, response]
-    end
-  end
-
-  private def get_openai_params(lesson_s3_name, code)
-    params = JSON.parse(read_file_from_s3(lesson_s3_name, 'params.json'))
-    prompt = read_file_from_s3(lesson_s3_name, 'system_prompt.txt')
-    rubric = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
-    response_type = params['response-type'] || 'tsv'
-    examples = read_examples(lesson_s3_name, response_type)
-    params.merge(
-      'code' => code,
-      'prompt' => prompt,
-      'rubric' => rubric,
-      'examples' => examples.to_json,
-      'api-key' => CDO.openai_evaluate_rubric_api_key,
-    )
-  end
-
-  def validate_ai_config
-    lesson_s3_names = UNIT_AND_LEVEL_TO_LESSON_S3_NAME.values.map(&:values).flatten.uniq
-    code = 'hello world'
-    lesson_s3_names.each do |lesson_s3_name|
-      validate_ai_config_for_lesson(lesson_s3_name, code)
-    end
-    validate_learning_goals
-    S3_AI_RELEASE_PATH
-  end
-
-  def validate_ai_config_for_lesson(lesson_s3_name, code)
-    # this step should raise an error if any essential config files are missing
-    # from the S3 release directory
-    get_openai_params(lesson_s3_name, code)
-  rescue Aws::S3::Errors::NoSuchKey => exception
-    raise "Error validating AI config for lesson #{lesson_s3_name}: #{exception.message}\n request params: #{exception.context.params.to_h}"
-  end
-
-  # For each lesson in UNIT_AND_LEVEL_TO_LESSON_S3_NAME, validate that every
-  # ai-enabled learning goal in its rubric in the database has a corresponding
-  # learning goal in the rubric in S3.
-  def validate_learning_goals
-    UNIT_AND_LEVEL_TO_LESSON_S3_NAME.each do |unit_name, level_to_lesson|
-      levels = level_to_lesson.keys
-      unless Unit.find_by_name(unit_name)
-        raise "Unit not found: #{unit_name.inspect}. Make sure you ran `rake seed:scripts` locally, and added it to UI_TEST_SCRIPTS for drone/ci."
-      end
-      levels.each do |level_name|
-        level = Level.find_by_name!(level_name)
-        script_level = level.script_levels.select {|sl| sl.script.name == unit_name}.first
-        lesson = script_level.lesson
-        rubric = Rubric.find_by!(lesson: lesson, level: level)
-        validate_learning_goals_for_rubric(rubric)
-      rescue StandardError => exception
-        raise "Error validating learning goals for unit #{unit_name} lesson #{lesson&.relative_position.inspect} level #{level_name.inspect}: #{exception.message}"
-      end
-    end
-  end
-
-  def validate_learning_goals_for_rubric(rubric)
-    lesson_s3_name = EvaluateRubricJob.get_lesson_s3_name(rubric.get_script_level)
-    db_learning_goals = rubric.learning_goals.select(&:ai_enabled).map(&:learning_goal)
-    s3_learning_goals = get_s3_learning_goals(lesson_s3_name)
-    missing_learning_goals = db_learning_goals - s3_learning_goals
-    if missing_learning_goals.any?
-      raise "Missing AI config in S3 for lesson #{lesson_s3_name} learning goals: #{missing_learning_goals.inspect}"
-    end
-  end
-
-  def get_s3_learning_goals(lesson_s3_name)
-    rubric_csv = read_file_from_s3(lesson_s3_name, 'standard_rubric.csv')
-    rubric_rows = CSV.parse(rubric_csv, headers: true).map(&:to_h)
-    rubric_rows.map {|row| row['Key Concept']}
-  end
-
   private def get_openai_evaluations(openai_params)
     origin = get_ai_proxy_origin
     uri = URI.parse("#{origin}/assessment")
     response = HTTParty.post(
       uri,
       body: URI.encode_www_form(openai_params),
-      headers: {'Content-Type' => 'application/x-www-form-urlencoded'},
-      timeout: 120
+      headers: {'Content-Type' => 'application/x-www-form-urlencoded', 'Authorization' => CDO.aiproxy_api_key},
+      timeout: AIPROXY_API_TIMEOUT
     )
 
     # Raise too many requests error if we see a 429
     # The proxy service will bubble up the 429 error from the service itself
     raise TooManyRequestsError.new(response) if response.code == 429
+
+    raise RequestTooLargeError.new(response) if response.code == 413
+
+    raise ServiceUnavailableError.new(response) if response.code == 503
+
+    raise GatewayTimeoutError.new(response) if response.code == 504
 
     # General error will raise a generic StandardError
     raise "ERROR: #{response.code} #{response.message} #{response.body}" unless response.success?
@@ -451,6 +393,12 @@ class EvaluateRubricJob < ApplicationJob
       end
       evaluation
     end
+  end
+
+  private def confidence_s_to_i(confidence_level)
+    confidence_levels = LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS.keys.map(&:to_s)
+    raise "Unexpected confidence level: #{confidence_level.inspect}" unless confidence_levels.include?(confidence_level)
+    LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS[confidence_level.to_sym]
   end
 
   private def write_ai_evaluations(user, ai_evaluations, rubric, rubric_ai_evaluation, project_version)
@@ -502,11 +450,5 @@ class EvaluateRubricJob < ApplicationJob
     else
       raise "Unexpected understanding: #{understanding}"
     end
-  end
-
-  private def confidence_s_to_i(confidence_level)
-    confidence_levels = LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS.keys.map(&:to_s)
-    raise "Unexpected confidence level: #{confidence_level.inspect}" unless confidence_levels.include?(confidence_level)
-    LearningGoalAiEvaluation::AI_CONFIDENCE_LEVELS[confidence_level.to_sym]
   end
 end

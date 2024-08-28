@@ -1,7 +1,9 @@
 import React from 'react';
-import Congrats from './Congrats';
-import {reduxStore} from '@cdo/storybook/decorators';
 import {Provider} from 'react-redux';
+
+import {reduxStore} from '@cdo/storybook/decorators';
+
+import Congrats from './Congrats';
 
 export default {
   title: 'Congrats/Congrats', // eslint-disable-line storybook/no-title-property-in-meta
@@ -44,6 +46,12 @@ export const EnglishStudentOtherTutorial = Template.bind({});
 EnglishStudentOtherTutorial.args = {
   userType: 'student',
   isHocTutorial: false,
+};
+
+export const EnglishStudentExtraLink = Template.bind({});
+EnglishStudentExtraLink.args = {
+  userType: 'student',
+  currentDate: new Date('2000-01-02T00:00:00Z'),
 };
 
 export const NonEnglishStudentHOCTutorial = Template.bind({});

@@ -13,12 +13,13 @@
       "project_sharing": true,
       "show_calendar": true,
       "student_detail_progress_view": true,
+      "tts": true,
       "version_year": "2021",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-01-12 20:19:15 UTC",
+    "serialized_at": "2024-07-16 16:49:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1505,7 +1506,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Prepping for this lesson:** The best way to prepare for this lesson is to go through the experience yourself. Check out the three apps in Code Studio to get a sense for how they work. Then move on to the Code Investigation and actually try to answer all the questions for each app. To help you out, however, answers are provided in the \"For Teachers Only\" tab for verified teachers.\n\n**Show code at the front:** If your room allows it, display the code at the front of the room. When students mentions specific lines of code actually scroll to that line and read through it together.\n\n**Discuss specific lines of code:** As you run discussions, model talking about programs by specifically calling out lines of code, as in \"I can see that when the playSound block on line 2 is highlighted the sound plays....\"\n\n**Save modifications for the end:** This lesson can be tight on time. Rather than have students modify the code all at once, you can save modifications for the end of the Code Investigation and have students pick a single app they wish to modify.\n\n**OK to Break Things:** When using the widgets in Units 1 and 2 it's not really possible to \"break things\". That's a little different than how things work in App Lab where it is possible to write code that may not run at all. Encourage students that this is ok. Using blocks makes it easier to avoid errors, and if students need to they can use the version history to set the code back to its original state.\n"
+            "markdown": "**Prepping for this lesson:** The best way to prepare for this lesson is to go through the experience yourself. Check out the first three tasks in Code Studio to get a sense for how they work. Then move on to the Code Investigation and actually try to answer all the questions for each app. To help you out, however, answers are provided in the \"For Teachers Only\" tab for verified teachers.\n\n**Show code at the front:** If your room allows it, display the code at the front of the room. When students mentions specific lines of code actually scroll to that line and read through it together.\n\n**Discuss specific lines of code:** As you run discussions, model talking about programs by specifically calling out lines of code, as in \"I can see that when the playSound block on line 2 is highlighted the sound plays....\"\n\n**Save modifications for the end:** This lesson can be tight on time. Rather than have students modify the code all at once, you can save modifications for the end of the Code Investigation and have students pick a single app they wish to modify.\n\n**OK to Break Things:** When using the widgets in Units 1 and 2 it's not really possible to \"break things\". That's a little different than how things work in App Lab where it is possible to write code that may not run at all. Encourage students that this is ok. Using blocks makes it easier to avoid errors, and if students need to they can use the version history to set the code back to its original state.\n"
           }
         ]
       },
@@ -1518,7 +1519,7 @@
       "key": "db5cb3af-feee-4bc7-9fa6-784f21ad6b72",
       "position": 2,
       "properties": {
-        "description": "**Display:** If possible in your room, display the Code Studio levels at the front of the class.\n\n**Level 1:** Have students work on the three tasks for a few minutes. Circulate the room making sure that pairs are actually discussing the prompt and are collaborating to modify the program. Once it seems all groups have had a chance to do this bring the class together.\n\n**Discuss:** Have students share the results of their discussions with the class. You do not need to use formal vocabulary yet, but make sure all students are seeing the same things.\n\n* Code is running one line at a time.\n* Strings need to go in quotes. Numbers do not need to.\n* Yellow highlighting shows you which line of code is running in either block or text mode.\n* The turtle slider changes the speed at which the code runs. At full speed (all the way to the right) there is no longer any highlighting.\n\n**Level 2:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Once again have students share the results of their discussions and modifications with the room. Here are some good points to draw out if they don't come up naturally in the discussion.\n\n* [`console.log`(#BB77C7)](/docs/applab/console.log/) prints text in the Debug Console\n* [`setProperty`(#fff176)](/docs/applab/setProperty/) changes the properties of elements on the screen. These should be familiar from using Design Mode.\n* [`console.log`(#BB77C7)](/docs/applab/console.log/) needs one input while [`setProperty`(#fff176)](/docs/applab/setProperty/) needs three\n* Hovering over a block in the toolbox helps you know what kind of information to put in each input.\n\n**Level 3:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Once again have students share the results of their discussions and modifications with the room. Here are some good points to draw out if they don't come up naturally in the discussion.\n\n* [`onEvent`(#fff176)](/docs/applab/onEvent/) makes the program respond to the user. You can add code inside of it that will only run when something happens.\n* Changing the second input changes the type of interaction that will make the code inside the [`onEvent`(#fff176)](/docs/applab/onEvent/) run. \n* Code outside the [`onEvent`(#fff176)](/docs/applab/onEvent/) runs right away. Code inside an [`onEvent`(#fff176)](/docs/applab/onEvent/) will only run when the event happens.\n* Even if code is after an [`onEvent`(#fff176)](/docs/applab/onEvent/), it will run first if it's outside of any [`onEvent`(#fff176)](/docs/applab/onEvent/)\n\n**Level 4:** This is a predict level to help students apply what they learned from the first three levels and associated discussions. Have students complete the prediction level discussing the answers to the questions with a partner.\n\n",
+        "description": "**Display:** If possible in your room, display the Code Studio levels at the front of the class.\n\n**Level 1:** Have students work on the task for a few minutes. Circulate the room making sure that pairs are actually discussing the prompt and are collaborating to modify the program. Once it seems all groups have had a chance to do this bring the class together.\n\n**Discuss:** Have students share the results of their discussions with the class. You do not need to use formal vocabulary yet, but make sure all students are seeing the same things.\n\n* Code is running one line at a time.\n* Strings need to go in quotes. Numbers do not need to.\n* Yellow highlighting shows you which line of code is running in either block or text mode.\n* The turtle slider changes the speed at which the code runs. At full speed (all the way to the right) there is no longer any highlighting.\n\n**Level 2:** Run this level in the same way. Have students complete the prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Once again have students share the results of their discussions and modifications with the room. Here are some good points to draw out if they don't come up naturally in the discussion.\n\n* [`console.log`(#BB77C7)](/docs/applab/console.log/) prints text in the Debug Console\n* [`setProperty`(#fff176)](/docs/applab/setProperty/) changes the properties of elements on the screen. These should be familiar from using Design Mode.\n* [`console.log`(#BB77C7)](/docs/applab/console.log/) needs one input while [`setProperty`(#fff176)](/docs/applab/setProperty/) needs three\n* Hovering over a block in the toolbox helps you know what kind of information to put in each input.\n\n**Level 3:** Run this level in the same way. Have students complete the prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Once again have students share the results of their discussions and modifications with the room. Here are some good points to draw out if they don't come up naturally in the discussion.\n\n* [`onEvent`(#fff176)](/docs/applab/onEvent/) makes the program respond to the user. You can add code inside of it that will only run when something happens.\n* Changing the second input changes the type of interaction that will make the code inside the [`onEvent`(#fff176)](/docs/applab/onEvent/) run. \n* Code outside the [`onEvent`(#fff176)](/docs/applab/onEvent/) runs right away. Code inside an [`onEvent`(#fff176)](/docs/applab/onEvent/) will only run when the event happens.\n* Even if code is after an [`onEvent`(#fff176)](/docs/applab/onEvent/), it will run first if it's outside of any [`onEvent`(#fff176)](/docs/applab/onEvent/)\n\n**Level 4:** This is a predict level to help students apply what they learned from the first three levels and associated discussions. Have students complete the prediction level discussing the answers to the questions with a partner.\n\n",
         "tips": [
           {
             "type": "assessmentOpportunity",
@@ -1535,7 +1536,7 @@
       "key": "482c875d-3af1-4dbc-a085-313f1a54a5ee",
       "position": 3,
       "properties": {
-        "description": "**Level 5:** Run this level in the same way as the first three. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.\n\n* [`setScreen(screenId)`(#fff176)](/docs/applab/setScreen/) inside an [`onEvent`(#fff176)](/docs/applab/onEvent/) allows the user to navigate between app screens.\n\n**Level 6:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.\n\n* [`playSound`(#fff176)](/docs/applab/playSound/) will play a sound you pick from the Sound Library\n*  Lines that start with ` // ` are called comments and don't actually run. They just help you understand your code.\n\n**Level 7:** Run this level in the same way. Have students complete all three prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.\n\n* Random number chooses a new random number each time, between the high and low value given\n* [`onEvent`(#fff176)](/docs/applab/onEvent/) takes many different event types, not just `\"mouseOver\"` and `\"click\"`. Depending on the situation different ones make more sense.",
+        "description": "**Level 5:** Run this level in the same way as the first three. Have students complete all the prompt and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.\n\n* [`setScreen(screenId)`(#fff176)](/docs/applab/setScreen/) inside an [`onEvent`(#fff176)](/docs/applab/onEvent/) allows the user to navigate between app screens.\n\n**Level 6:** Run this level in the same way. Have students complete the prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.\n\n* [`playSound`(#fff176)](/docs/applab/playSound/) will play a sound you pick from the Sound Library\n*  Lines that start with ` // ` are called comments and don't actually run. They just help you understand your code.\n\n**Level 7:** Run this level in the same way. Have students complete the prompts and then bring the class together after a few minutes for a discussion.\n\n**Discuss:** Have students share the results of their discussion and anything else they noticed. Here are good points to draw out.\n\n* Random number chooses a new random number each time, between the high and low value given\n* [`onEvent`(#fff176)](/docs/applab/onEvent/) takes many different event types, not just `\"mouseOver\"` and `\"click\"`. Depending on the situation different ones make more sense.",
         "progression_name": "Code Investigation",
         "tips": [
           {
@@ -2301,6 +2302,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Pre-Unit Pulse Q1_2024"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2323,6 +2327,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Pre-Unit Pulse Q2_2024"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2345,6 +2352,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Pre-Unit Pulse Q3_2024"
+        ],
         "progression": "The Pre-Unit Pulse"
       },
       "bonus": false,
@@ -2367,6 +2377,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Water Conservation Sample App_2024"
+        ],
         "progression": "App Exploration"
       },
       "bonus": false,
@@ -2389,6 +2402,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Bird Quiz App_2024"
+        ],
         "progression": "App Exploration"
       },
       "bonus": false,
@@ -2411,6 +2427,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Hamilton Township App_2024"
+        ],
         "progression": "App Exploration"
       },
       "bonus": false,
@@ -2433,6 +2452,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Four Square App_2024"
+        ],
         "progression": "App Exploration"
       },
       "bonus": false,
@@ -2455,6 +2477,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Monarch Butterfly App_2024"
+        ],
         "progression": "App Exploration"
       },
       "bonus": false,
@@ -2477,6 +2502,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Water Conservation Sample App Investigate_2024"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2499,6 +2527,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Bird Quiz App Investigation_2024"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2521,6 +2552,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Hamilton Township App Investigation_2024"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2543,6 +2577,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Four Square App Investigation_2024"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2565,6 +2602,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Monarch Butterfly App Investigation_2024"
+        ],
         "progression": "App Investigation"
       },
       "bonus": false,
@@ -2587,6 +2627,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U3 L1 Input Output Matching2022_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2609,6 +2652,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Hamilton Township Design Mode_2024"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -2631,6 +2677,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode Themes_2024"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -2653,6 +2702,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode Colors_2024"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -2675,6 +2727,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode Images_2024"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -2697,6 +2752,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode Icons_2024"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -2719,6 +2777,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Design Mode ids_2024"
+        ],
         "progression": "Design Mode Exploration"
       },
       "bonus": false,
@@ -2741,6 +2802,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L2 Copy an App_2024"
+        ],
         "progression": "Copy an App"
       },
       "bonus": false,
@@ -2763,6 +2827,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L2 CSP CFU ID names_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2785,6 +2852,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 Bird Quiz Storyboard_2024"
+        ],
         "progression": "Sample Prototype"
       },
       "bonus": false,
@@ -2807,6 +2877,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L4 Design Screens_2024"
+        ],
         "progression": "Build Your Screens"
       },
       "bonus": false,
@@ -2829,6 +2902,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L5 CSP CFU natural language_2024"
+        ],
         "progression": "Check For Understanding"
       },
       "bonus": false,
@@ -2851,6 +2927,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Sequential 1_2024"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -2873,6 +2952,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Sequential 2_2024"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -2895,6 +2977,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Event-Driven 1_2024"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -2917,6 +3002,9 @@
       "activity_section_position": 4,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Event vs Seq Predict_2024"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -2939,6 +3027,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Event-Driven setScreen_2024"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -2961,6 +3052,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Event-Driven 2_2024"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -2983,6 +3077,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Investigate Event-Driven 3_2024"
+        ],
         "progression": "Code Investigation"
       },
       "bonus": false,
@@ -3005,6 +3102,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L6 CSP CFU Sequential vs Event Driven_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3027,6 +3127,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 1_2024"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -3049,6 +3152,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 2_2024"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -3071,6 +3177,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 4_2024"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -3093,6 +3202,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "U3 Program Practice Pt 6_2024"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -3115,6 +3227,9 @@
       "activity_section_position": 5,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3 Debugging Predict_2024"
+        ],
         "progression": "Debugging"
       },
       "bonus": false,
@@ -3137,6 +3252,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3L7 Choice_2024"
+        ],
         "progression": "Practice"
       },
       "bonus": false,
@@ -3159,6 +3277,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "U3L7 CSP CFU What was confusing_2024"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -3181,6 +3302,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L4 Add Code_2024"
+        ],
         "progression": "Add Code"
       },
       "bonus": false,
@@ -3203,6 +3327,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSP U3 L9 Add More Code_2024"
+        ],
         "progression": "Add More Code"
       },
       "bonus": false,
@@ -3225,6 +3352,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP U3 L10 Submit App_2024"
+        ],
         "progression": "Submit Your App"
       },
       "bonus": false,
@@ -3247,6 +3377,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "Student End of Unit Survey_csp3_2024"
+        ],
         "progression": "End-of-Unit Survey"
       },
       "bonus": false,
@@ -3269,6 +3402,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSP Unit 3 MC Assessment 2022_2024"
+        ],
         "progression": "Unit Assessment - Intro to App Design"
       },
       "bonus": false,
@@ -3866,7 +4002,7 @@
     },
     {
       "name": "Assessment Day - Intro to App Development",
-      "url": "https://docs.google.com/presentation/d/10seNCnYOXM3rbamENm6uq91HEHob3UjbFtF5zhyTllY/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/16pBOhj2W2JQ0O-_kkeNMesABf3fObLqmMsLEYDIOOro/edit?usp=drive_link",
       "key": "assessment_day_-_intro_to_app_development",
       "properties": {
         "audience": "Teacher",
@@ -3926,11 +4062,9 @@
     },
     {
       "name": "CSP Unit 3 Slides",
-      "url": "https://docs.google.com/presentation/d/1LqpV9F_G2K97HbSywfMupo-HAnzCxP_TNR40hSyA9Hk/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1fhkhXMCx7LAwkjzq3r4oXLkCn2m6A9EA2e5NoNnndhg/edit?usp=drive_link",
       "key": "csp_unit_3_slides",
       "properties": {
-        "audience": "Teacher",
-        "type": "Slides"
       },
       "seeding_key": {
         "resource.key": "csp_unit_3_slides"
@@ -3950,7 +4084,7 @@
     },
     {
       "name": "Debugging",
-      "url": "https://docs.google.com/presentation/d/1lbA2-DeAGIyw6wXoSr5upyvyzgnwnxk5Mr2QT8m5s00/template/preview",
+      "url": "https://docs.google.com/presentation/d/1C9bXPRlfG4u-o2ZNzhdQHxBiX20ItmQJCd1cPBAYCLc/edit?usp=drive_link",
       "key": "debugging_1",
       "properties": {
         "audience": "Teacher",
@@ -3962,7 +4096,7 @@
     },
     {
       "name": "Designing an App - Days 1-2",
-      "url": "https://docs.google.com/presentation/d/1E_AOW9LFj51KIPILNuXB78mGwi8UTZ6c4mzP-RYEVnQ/template/preview",
+      "url": "https://docs.google.com/presentation/d/1GkR1OzozJ5b4gWQ0-OWydxGY5n_Pe5duDS854HbqMlM/edit?usp=drive_link",
       "key": "designing_an_app_-_days_1-2",
       "properties": {
         "audience": "Teacher",
@@ -3974,7 +4108,7 @@
     },
     {
       "name": "Designing an App - Days 3-5",
-      "url": "https://docs.google.com/presentation/d/1at074YyYXix_cXDm79DThpcdqsZ5F9NgAcMzfdUqUu8/template/preview",
+      "url": "https://docs.google.com/presentation/d/19C9oe3Uihh3N3BvCWt4HXIFModtZ96YLoSxlXcDc9So/edit?usp=drive_link",
       "key": "designing_an_app_-_days_3-5",
       "properties": {
         "audience": "Teacher",
@@ -4012,7 +4146,7 @@
     },
     {
       "name": "Intro to Programming",
-      "url": "https://docs.google.com/presentation/d/1ho6pc2u4yVg0ggMSx3qGumU0HO9zjWnkuh0x7GzXVTE/template/preview",
+      "url": "https://docs.google.com/presentation/d/1mRpR7FKPCKrkMLB5uGr6P2O0aQj1J-MIk6VYsDiMK54/edit?usp=drive_link",
       "key": "intro_to_programming",
       "properties": {
         "audience": "Teacher",
@@ -4024,7 +4158,7 @@
     },
     {
       "name": "Introduction to Apps",
-      "url": "https://docs.google.com/presentation/d/1updHVqzKC0pbnVLIR3VOvL72v2sNuYBz_r1muMaa6iI/template/preview",
+      "url": "https://docs.google.com/presentation/d/1g6LFNgWIB6RQtBwLVM6Oub8MwCb7esjlspivaMmr_GI/edit?usp=drive_link",
       "key": "introduction_to_apps",
       "properties": {
         "audience": "Teacher",
@@ -4036,7 +4170,7 @@
     },
     {
       "name": "Introduction to Design Mode",
-      "url": "https://docs.google.com/presentation/d/1C-L-ajuryUMFWYCaNqK9H7XdgxiEMsxagqdMX9HfNcI/template/preview",
+      "url": "https://docs.google.com/presentation/d/1t5uWQ3OqPWfuT7HXSU98zw7vAfkvTB0HJHQAUOSBKX8/edit?usp=drive_link",
       "key": "introduction_to_design_mode",
       "properties": {
         "audience": "Teacher",
@@ -4085,7 +4219,7 @@
     },
     {
       "name": "The Need for Programming Languages",
-      "url": "https://docs.google.com/presentation/d/1vKDoFifrWW11cYJPtblcSb4OxFZJLKs9n4wLlWF4p3w/template/preview",
+      "url": "https://docs.google.com/presentation/d/1oXCko_CKu9SnMCYy4Gw5BTAG3YVtg8okK9G1SGVdlUI/edit?usp=drive_link",
       "key": "the_need_for_programming_languages",
       "properties": {
         "audience": "Teacher",

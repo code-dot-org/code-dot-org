@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import i18n from '@cdo/locale';
 import {connect} from 'react-redux';
+
+import i18n from '@cdo/locale';
 /**
  * A search box that loads a Mapbox location search control.
  *

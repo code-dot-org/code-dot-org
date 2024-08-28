@@ -1,12 +1,15 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+
+import experiments from '@cdo/apps/util/experiments';
+import i18n from '@cdo/locale';
+
+import styleConstants from '../../styleConstants';
+import color from '../../util/color';
+
 import ProjectAppTypeArea from './ProjectAppTypeArea.jsx';
 import {publishedFeaturedProjectPropType, Galleries} from './projectConstants';
-import i18n from '@cdo/locale';
-import {connect} from 'react-redux';
-import color from '../../util/color';
-import styleConstants from '../../styleConstants';
-import experiments from '@cdo/apps/util/experiments';
 
 const NUM_PROJECTS_ON_PREVIEW = 16;
 const NUM_PROJECTS_IN_APP_VIEW = 16;
@@ -27,8 +30,6 @@ class ProjectCardGrid extends Component {
     }).isRequired,
     galleryType: PropTypes.oneOf(['personal', 'public']).isRequired,
     selectedGallery: PropTypes.string.isRequired,
-    // Controls hiding/showing view more links for App Lab and Game Lab.
-    limitedGallery: PropTypes.bool,
   };
 
   UNSAFE_componentWillReceiveProps(nextProps) {
@@ -83,14 +84,13 @@ class ProjectCardGrid extends Component {
             <ProjectAppTypeArea
               labKey="featured"
               labName={i18n.featuredProjects()}
-              labViewMoreString={i18n.projectTypeDanceViewMore()}
               projectList={projectLists.featured}
               numProjectsToShow={numProjects}
               galleryType={this.props.galleryType}
               navigateFunction={this.onSelectApp}
               isDetailView={false}
               hideViewMoreLink={true}
-              hideWithoutThumbnails={true}
+              hideWithoutThumbnails={false}
             />
           </div>
         )}

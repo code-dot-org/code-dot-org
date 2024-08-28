@@ -1,12 +1,16 @@
 /** @file Redux actions and reducer for the Projects Gallery */
-import {combineReducers} from 'redux';
+
 import $ from 'jquery';
 import _ from 'lodash';
+import {combineReducers} from 'redux';
+
+import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
+
+import {channels as channelsApi} from '../../clientApi';
+
+import {DELETE_SUCCESS} from './deleteDialog/deleteProjectDialogRedux';
 import {Galleries} from './projectConstants';
 import {PUBLISH_SUCCESS} from './publishDialog/publishDialogRedux';
-import {DELETE_SUCCESS} from './deleteDialog/deleteProjectDialogRedux';
-import {channels as channelsApi} from '../../clientApi';
-import LibraryClientApi from '@cdo/apps/code-studio/components/libraries/LibraryClientApi';
 
 // Action types
 
@@ -587,8 +591,4 @@ export const saveProjectName = (projectId, updatedName) => {
       }
     });
   };
-};
-
-export const remix = (projectId, projectType) => {
-  window.location = `/projects/${projectType}/${projectId}/remix`;
 };

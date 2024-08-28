@@ -5,28 +5,21 @@ description 'description here'
 markdown <<MARKDOWN
 # Teaching and Learning CS Discoveries
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
-
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">Welcome to Module 4! In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course.
-</p>
-</div>
+#### Welcome to Module 4! In this module, you will be introduced to authentic CS practices that students will engage with throughout the CS Discoveries course. These practices include debugging, using resources, and pair programming. You will also explore the role of the teacher within a CS Discoveries classroom and make a plan for how you will support student learning while teaching the course.
 
 <img src="https://images.code.org/1573cbac6d34320400fe59ec45012fc2-image-1628884672983.jpg" alt="Three students programming a circuit playground." style="border-radius:10px; float: right; height: 175px; clear: both; margin: 20px 20px 20px 0;">
 
-## You will:
+### **You will:**
 
-* ##### Consider the role of the teacher in a CS Discoveries classroom.
-* ##### Learn about authentic CS practices that students will develop throughout the CS Discoveries course.
-* ##### Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion within your CS classroom.
+* #### Consider the role of the teacher in a CS Discoveries classroom.
+* #### Learn about authentic CS practices that students will develop throughout the CS Discoveries course.
+* #### Make a plan for how you will support student learning through differentiation, ongoing assessment, and promoting a culture of inclusion within your CS classroom.
 
+#### You will begin with a lesson focused on the role of the teacher in a CS Discoveries classroom. 
+<br>
 
-### **Suggested time:** 50 minutes
+#### **Suggested time:** 50 minutes
 
 <div style="clear:both"/>
-
-### You will begin with a lesson focused on the role of the teacher in a CS Discoveries classroom. 
-
-## Let's get started!
-
 
 MARKDOWN

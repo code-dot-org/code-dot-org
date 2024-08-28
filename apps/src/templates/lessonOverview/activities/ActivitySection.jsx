@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import LessonTip from '@cdo/apps/templates/lessonOverview/activities/LessonTip';
 import ProgressionDetails from '@cdo/apps/templates/lessonOverview/activities/ProgressionDetails';
 import {activitySectionShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';

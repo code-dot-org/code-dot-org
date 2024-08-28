@@ -1,12 +1,13 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+
+import EvidenceLevelsForStudents from './EvidenceLevelsForStudents';
+import EvidenceLevelsForTeachersV2 from './EvidenceLevelsForTeachersV2';
 import {
   aiEvaluationShape,
   evidenceLevelShape,
   submittedEvaluationShape,
 } from './rubricShapes';
-import EvidenceLevelsForStudents from './EvidenceLevelsForStudents';
-import EvidenceLevelsForTeachersV2 from './EvidenceLevelsForTeachersV2';
 
 export default function EvidenceLevels({
   productTour,
@@ -20,6 +21,7 @@ export default function EvidenceLevels({
   isAutosaving,
   isAiAssessed,
   aiEvalInfo,
+  arrowPositionCallback,
 }) {
   const sortedEvidenceLevels = () => {
     const newArray = [...evidenceLevels];
@@ -44,6 +46,7 @@ export default function EvidenceLevels({
         radioButtonCallback={radioButtonCallback}
         canProvideFeedback={canProvideFeedback}
         isAutosaving={isAutosaving}
+        arrowPositionCallback={arrowPositionCallback}
       />
     );
   }
@@ -61,4 +64,5 @@ EvidenceLevels.propTypes = {
   isAutosaving: PropTypes.bool,
   isAiAssessed: PropTypes.bool.isRequired,
   aiEvalInfo: aiEvaluationShape,
+  arrowPositionCallback: PropTypes.func,
 };

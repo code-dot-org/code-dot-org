@@ -5,10 +5,9 @@ description 'description here'
 markdown <<MARKDOWN
 # Micro:bit Setup
 
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px; margin-bottom:10px;">
-
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; ">These steps are designed for Google Chrome and Microsoft Edge web browsers released in March 2021 or later. If you are using a Chromebook, you will need to be on V90 or above.
+<div style="background-color: #C6E3E7; border-radius: 40px; color: #000000; width: 95%; padding: 10px 10px 10px 10px;"> <p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px;">These steps are designed for Google Chrome and Microsoft Edge web browsers released in March 2021 or later. If you are using a Chromebook, you will need to be on V90 or above.
 </p></div>
+<br>
 
 ### Expand one step at a time as you work through the steps to help you stay organized.
 
@@ -29,8 +28,8 @@ markdown <<MARKDOWN
  <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
 
-##### Visit <a href="https://studio.code.org/maker/setup" target="blank" rel="noopener noreferrer">maker setup page</a>.
-##### Have this page open for any quick reference needed.
+#### Visit <a href="https://studio.code.org/maker/setup" target="blank" rel="noopener noreferrer">maker setup page</a>.
+#### Have this page open for any quick reference needed.
 
 </p></div>
 </details>
@@ -52,7 +51,7 @@ markdown <<MARKDOWN
 #### A window will pop up - something similar to a micro:bit device will appear in this window such as 'BBC micro:bit CMSIS-DAP' or 'mbed Serial Port'. Select it, then press the **Connect** button. 
 
 
-##### **If this window doesn't pop up or if the screen is blank:** See our <a href="https://support.code.org/hc/en-us/articles/9953258694669" target="blank" rel="noopener noreferrer">Troubleshooting WebSerial Support Article</a>
+#### **If this window doesn't pop up or if the screen is blank:** See our <a href="https://support.code.org/hc/en-us/articles/9953258694669" target="blank" rel="noopener noreferrer">Troubleshooting WebSerial Support Article</a>
 
 </p></div>
 </details>
@@ -64,7 +63,7 @@ markdown <<MARKDOWN
 
 #### This process will **fail on the Board Connectable step** (this is expected!) - press the **Update micro:bit** button.
 
-##### **If you continue to see a red X after pressing this button:** <a href="https://support.code.org/hc/en-us/articles/13937009908877-Installing-BBC-micro-bit-software-for-Code-org#h_01GVCCV0VX7G7HNYMYFSSSFK9N" target="blank" rel="noopener noreferrer">Skip to the alternative installation method.</a>
+#### **If you continue to see a red X after pressing this button:** <a href="https://support.code.org/hc/en-us/articles/13937009908877-Installing-BBC-micro-bit-software-for-Code-org#h_01GVCCV0VX7G7HNYMYFSSSFK9N" target="blank" rel="noopener noreferrer">Skip to the alternative installation method.</a>
 
 </p></div>
 </details>
@@ -77,7 +76,7 @@ markdown <<MARKDOWN
 #### A second window will pop-up, listing a micro:bit device (the name may be different from the first window). Select the  micro:bit device, then click **Connect**.
 
 
-##### If this window doesn't pop up or is blank: <a href="https://support.code.org/hc/en-us/articles/13937009908877-Installing-BBC-micro-bit-software-for-Code-org#h_01GVCCV0VX7G7HNYMYFSSSFK9N" target="blank" rel="noopener noreferrer">Skip to the alternative installation method.</a>
+#### If this window doesn't pop up or is blank: <a href="https://support.code.org/hc/en-us/articles/13937009908877-Installing-BBC-micro-bit-software-for-Code-org#h_01GVCCV0VX7G7HNYMYFSSSFK9N" target="blank" rel="noopener noreferrer">Skip to the alternative installation method.</a>
 
 </p></div>
 </details>

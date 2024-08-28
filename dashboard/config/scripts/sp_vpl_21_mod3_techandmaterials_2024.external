@@ -10,69 +10,74 @@ markdown <<MARKDOWN
 
 <img src="https://images.code.org/cc9bba15d569c43953236c97f474708f-image-1626310403549.jpg" alt="Two students smiling behind a laptop." width="350px" style="border-radius: 10px; float:right; margin: 0 0 40px 40px; ">
 
-##### **This course requires each student to have access to their own internet-connected computer for each CS Discoveries lesson, whether in a classroom or computer lab setting.** Each computer must have a modern web browser installed. All of the course tools and resources (lesson plans, teacher dashboard, videos, student tools, programming environment, etc.) are online and accessible through a web browser. For more information about tech setup go to: <a href="https://code.org/educate/it" target="blank" rel="noopener noreferrer">code.org/educate/it</a>
+#### **This course requires each student to have access to their own internet-connected computer for each CS Discoveries lesson, whether in a classroom or computer lab setting.** Each computer must have a modern web browser installed. All of the course tools and resources (lesson plans, teacher dashboard, videos, student tools, programming environment, etc.) are online and accessible through a web browser. For more information about tech setup go to: <a href="https://code.org/educate/it" target="blank" rel="noopener noreferrer">code.org/educate/it</a>
 
-##### **It is NOT required that students have access to internet-connected computers at home.**
+#### **It is NOT required that students have access to internet-connected computers at home.**
 
 ## Suggested Materials / Supplies
 
-### General course materials:
+### **General Course Materials:**
 
-* ##### **Printed handouts:** Many lessons have handouts that are designed to guide students through activities. While it is not required that all of these handouts be printed, many were designed to be printed and we highly recommend printing when possible.
+* #### **Printed handouts:** Many lessons have handouts that are designed to guide students through activities. While it is not required that all of these handouts be printed, many were designed to be printed and we highly recommend printing when possible.
 
-* ##### **Classroom supplies:** Beyond printing, some lessons call for typical classroom supplies and manipulatives such as:
+* #### **Classroom supplies:** Beyond printing, some lessons call for typical classroom supplies and manipulatives such as:
 
-	* Student journals
-    * Poster paper
-    * Markers/colored pencils
-    * Scissors
-    * Scrap paper
-    * Glue or tape
-    * Post-it notes (or similar sized scrap paper)
-    * Rulers or a straight edge of some kind
-    * Index cards (or similar sized scrap paper)
+	* #### Student journals
+    * #### Poster paper
+    * #### Markers/colored pencils
+    * #### Scissors
+    * #### Scrap paper
+    * #### Glue or tape
+    * #### Post-it notes (or similar sized scrap paper)
+    * #### Rulers or a straight edge of some kind
+    * #### Index cards (or similar sized scrap paper)
+    
+___
 
-### Unit-specific materials:
+### **Unit-Specific Materials:**
 
-##### In addition to those general course materials, the following items are called for in specific units:
+#### In addition to those general course materials, the following items are called for in specific units:
 
-**Unit 1 - Problem Solving and Computing**
+### **Unit 1 - Problem Solving and Computing**
 
-* Lesson 1 - <a href="https://studio.code.org/s/csd1-2023/lessons/1" target="blank" rel="noopener noreferrer" >Introduction to Problem Solving (Aluminum Boats):</a> 
-   * Aluminum foil
-   * Container for water
-   * Pennies *(pennies can be replaced with some other kind of weight of the same size.*
+* #### Lesson 1 - <a href="https://studio.code.org/s/csd1-2024/lessons/1" target="blank" rel="noopener noreferrer" >Introduction to Problem Solving (Aluminum Boats):</a> 
+   * #### Aluminum foil
+   * #### Container for water
+   * #### Pennies *(pennies can be replaced with some other kind of weight of the same size.*
    
-_**Note:** Alternate activities are available if you do not have access to these supplies. See the dropdown section below to view the alternate options._
-
-
-**Unit 6 - Creating Apps with Devices (Option A and Option B)**
-
-* Option A: Classroom set of Circuit Playgrounds. Check out <a href="https://code.org/maker/circuitplayground" target="blank" rel="noopener noreferrer">code.org/maker/circuitplayground</a> for more details.
-* Option B: Classroom set of micro:bit devices. Check out <a href="https://code.org/maker/microbit" target="blank" rel="noopener noreferrer">code.org/maker/microbit</a> for more details.
-* Maker supplies, such as empty tissue boxes or cardboard rolls or scratch paper
-
-_**Note:** The Creating Apps with Devices unit has **two** implementation options - one for those using circuit playgrounds and one for those using micro:bit. Teachers should **not** buy both sets of devices or teach both unit options as they are equivalent and cover the same content._
-
-<br>
+##### _**Note:** Alternate activities are available if you do not have access to these supplies. See the dropdown section below to view the alternate options._
 
 <details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
 <summary style="font-size: 1.2em; font-weight: bold;">Alternate Lesson 1 Activities</summary>
 <div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
     <p>
-Lesson 1 has alternate lesson activities available if you do not have access to the supplies listed above. These alternate lessons include:
 
-* Lesson 1: Alternate Lesson Option 1 - <a href="https://studio.code.org/s/csd1-2023/lessons/9/" target="blank" rel="noopener noreferrer" >Introduction to Problem Solving (Newspaper Table):</a> 
-   * A set of newspapers
-   * Several tape dispensers
+#### Lesson 1 has alternate lesson activities available if you do not have access to the supplies listed above. These alternate lessons include:
 <br>
-* Lesson 1: Alternate Lesson Option 2 - <a href="https://studio.code.org/s/csd1-2023/lessons/10" target="blank" rel="noopener noreferrer">Introduction to Problem Solving (Spaghetti Bridge):</a>
-   * Several boxes of spaghetti
-   * Several glue guns
+
+* #### **Lesson 1: Alternate Lesson Option 1** - <a href="https://studio.code.org/s/csd1-2024/lessons/9/" target="blank" rel="noopener noreferrer" >Introduction to Problem Solving (Newspaper Table):</a> 
+   * #### A set of newspapers
+   * #### Several tape dispensers
 <br>
-* Lesson 1: Alternate Lesson Option 3 - <a href="https://studio.code.org/s/csd1-2023/lessons/11" target="blank" rel="noopener noreferrer" >Introduction to Problem Solving (Paper Tower):</a>
-   * A ream of printer paper
+* #### **Lesson 1: Alternate Lesson Option 2** - <a href="https://studio.code.org/s/csd1-2024/lessons/10" target="blank" rel="noopener noreferrer">Introduction to Problem Solving (Spaghetti Bridge):</a>
+   * #### Several boxes of spaghetti
+   * #### Several glue guns
+<br>
+* #### **Lesson 1: Alternate Lesson Option 3** - <a href="https://studio.code.org/s/csd1-2024/lessons/11" target="blank" rel="noopener noreferrer" >Introduction to Problem Solving (Paper Tower):</a>
+   * #### A ream of printer paper
     </p>
     </div>
     </details>
+<br>
+
+### **Unit 6 - Creating Apps with Devices (Option A and Option B)**
+
+* #### **Option A**: Classroom set of Circuit Playgrounds. Check out <a href="https://code.org/maker/circuitplayground" target="blank" rel="noopener noreferrer">code.org/maker/circuitplayground</a> for more details.
+* #### **Option B**: Classroom set of micro:bit devices. Check out <a href="https://code.org/maker/microbit" target="blank" rel="noopener noreferrer">code.org/maker/microbit</a> for more details.
+* #### Maker supplies, such as empty tissue boxes or cardboard rolls or scratch paper
+
+##### _**Note:** The Creating Apps with Devices unit has **two** implementation options - one for those using circuit playgrounds and one for those using micro:bit. Teachers should **not** buy both sets of devices or teach both unit options as they are equivalent and cover the same content._
+
+<br>
+
 MARKDOWN

@@ -1,17 +1,22 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import Certificate from './Certificate';
-import style from './certificate_batch.module.scss';
-import i18n from '@cdo/locale';
-import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
+
+import {hasQueryParam, queryParams} from '@cdo/apps/code-studio/utils';
 import {
   BodyTwoText,
   Heading3,
   Heading4,
 } from '@cdo/apps/componentLibrary/typography';
+import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
+import GraduateToNextLevel from '@cdo/apps/templates/certificates/GraduateToNextLevel';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
-import selfPacedPlBanner from '@cdo/static/selfPacedPlBanner.png';
+import i18n from '@cdo/locale';
 import facilitatorLedPlBanner from '@cdo/static/facilitatorLedPlBanner.png';
+import selfPacedPlBanner from '@cdo/static/selfPacedPlBanner.png';
+
+import Certificate from './Certificate';
+
+import style from './certificate_batch.module.scss';
 
 export default function Congrats(props) {
   /**
@@ -23,11 +28,15 @@ export default function Congrats(props) {
    * Renders links to certificate alternatives when there is a special event going on.
    * @param {string} language The language code related to the special event i.e. 'en', 'es', 'ko', etc
    * @param {string} tutorial The type of tutorial the student finished i.e. 'dance', 'oceans', etc
+   * @param {Date} currentDate The Date to use when rendering the links.
    * @returns {HTMLElement} HTML for rendering the extra certificate links.
    */
-  const renderExtraCertificateLinks = (language, tutorial) => {
-    let extraLinkUrl, extraLinkText;
-    // If Adding extra links see this PR: https://github.com/code-dot-org/code-dot-org/pull/48515
+  const renderExtraCertificateLinks = (language, tutorial, currentDate) => {
+    const {extraLinkUrl, extraLinkText} = getExtraLinkData(
+      language,
+      tutorial,
+      currentDate
+    );
     if (!extraLinkUrl || !extraLinkText) {
       // There are no extra links to render.
       return;
@@ -44,6 +53,49 @@ export default function Congrats(props) {
         </a>
       </div>
     );
+  };
+
+  /**
+   * Uses the given parameters to select the extra link campaign to display
+   * to the user.
+   * @param {string} language The language code related to the special event i.e. 'en', 'es', 'ko', etc
+   * @param {string} tutorial The type of tutorial the student finished i.e. 'dance', 'oceans', etc
+   * @param {Date} currentDate The Date to use when rending the links. You can
+   * use the queryString param currentDate= to manually test these campaigns.
+   * @returns {Object} extraLinkUrl, extraLinkText
+   */
+  const getExtraLinkData = (language, tutorial, currentDate) => {
+    // https://codedotorg.atlassian.net/browse/P20-948
+    const codingPartyStart = new Date('2024-06-17T00:00:00+09:00');
+    const codingPartyEnd = new Date('2024-07-28T00:00:00+09:00');
+    const codingPartyActive =
+      codingPartyStart <= currentDate && currentDate < codingPartyEnd;
+    if (language === 'ko' && codingPartyActive) {
+      const extraLinkText =
+        '온라인 코딩 파티 인증서 받으러 가기! (과학기술정보통신부 인증)';
+      if (/oceans/.test(tutorial)) {
+        return {
+          extraLinkUrl: pegasus('/files/online-coding-party-2024-1-oceans.png'),
+          extraLinkText: extraLinkText,
+        };
+      } else if (/hero/.test(tutorial)) {
+        return {
+          extraLinkUrl: pegasus('/files/online-coding-party-2024-1-hero.png'),
+          extraLinkText: extraLinkText,
+        };
+      }
+    }
+    // Mock extra link campaign used for testing
+    const demoStart = new Date('2000-01-01T00:00:00+00:00');
+    const demoEnd = new Date('2000-02-01T00:00:00+00:00');
+    const demoActive = demoStart <= currentDate && currentDate < demoEnd;
+    if (demoActive) {
+      return {
+        extraLinkUrl: pegasus('/files/extra-link-demo.png'),
+        extraLinkText: `This is the Demo extra link for ${tutorial}`,
+      };
+    }
+    return {};
   };
 
   const {
@@ -63,6 +115,15 @@ export default function Congrats(props) {
     nextCourseDesc,
     curriculumUrl,
   } = props;
+
+  // Determine what time we should consider the current time to be when
+  // rendering the page. This is useful for testing UI changes which happen
+  // at particular times of the year.
+  // the currentDate can be overridden using the query string param 'currentDate'
+  const currentDateOverride =
+    hasQueryParam('currentDate') && new Date(queryParams('currentDate'));
+  // default to the real current time.
+  const currentDate = currentDateOverride || props['currentDate'] || new Date();
 
   const teacherCourses = [
     {
@@ -371,7 +432,7 @@ export default function Congrats(props) {
               isPlCourse={isPlCourse}
               userType={userType}
             >
-              {renderExtraCertificateLinks(language, tutorial)}
+              {renderExtraCertificateLinks(language, tutorial, currentDate)}
             </Certificate>
           </div>
           {renderRecommendedOptions()}
@@ -406,4 +467,5 @@ Congrats.propTypes = {
   nextCourseScriptName: PropTypes.string,
   nextCourseTitle: PropTypes.string,
   nextCourseDesc: PropTypes.string,
+  currentDate: PropTypes.object,
 };

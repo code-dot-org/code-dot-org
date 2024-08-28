@@ -17,9 +17,11 @@ theme: responsive
 
 ## Minimum Supported Browsers and Platforms
 
+Ag tosú i mí Iúil 2024, déanfaimid nuashonrú ar na leaganacha íosta atá riachtanach do bhrabhsálaithe agus Cé go bhféadfadh na seanleaganacha a bheith ag obair fós, ní bheidh muid in ann tacú le hiarratais ar shocruithe fabht sna leaganacha níos sine.
+
 <table>
- <tr>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+  <tr>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
           Browser
@@ -40,11 +42,33 @@ theme: responsive
           <td>Firefox 91.x</td>
         </tr>
       </table>
-  </td>
-  <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
       <table>
         <th>
-          Platform
+          Brabhsálaí Iúil '24
+        </th>
+        <tr>
+          <td>Chrome 103.x</td>
+        </tr>
+        <tr>
+          <td>Safari 14.x</td>
+        </tr>
+        <tr>
+          <td>Safari Soghluaiste 14.x</td>
+        </tr>
+        <tr>
+          <td>Imeall 119.x</td>
+        </tr>
+        <tr>
+          <td>Firefox 98.x</td>
+        </tr>
+      </table>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 12px 0px 0px;">
+      <table>
+        <th>
+          Ardán
         </th>
         <tr>
           <td>macOS 10.13</td>
@@ -62,13 +86,35 @@ theme: responsive
           <td>ChromeOS (Chromebooks)</td>
         </tr>
       </table>
-  </td>
- </tr>
+    </td>
+    <td style="vertical-align: top; border-color: transparent; padding: 0px 0px 0px 0px;">
+      <table>
+        <th>
+          Ardán Iúil '24
+        </th>
+        <tr>
+          <td>macOS 10.15</td>
+        </tr>
+        <tr>
+          <td>iOS 15.x</td>
+        </tr>
+        <tr>
+          <td>Windows 8</td>
+        </tr>
+        <tr>
+          <td>Android 8.x</td>
+        </tr>
+        <tr>
+          <td>ChromeOS (Chromebooks)</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
 </table>
 
 ## Sites to Unblock
 
-For the very best experience with all Code.org content, we recommend consulting with your school or district's IT department to ensure the following sites are allowed and aren't blocked.
+Le haghaidh an taithí is fearr le gach ábhar Code.org, molaimid dul i gcomhairle le roinn TF do scoile nó do cheantar chun a chinntiú go gceadaítear na suíomhanna seo a leanas agus nach gcuirtear bac orthu.
 
 | Priority                                                                                                                       | URL                                                                                                        |
 | ------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------- |
@@ -80,28 +126,27 @@ For the very best experience with all Code.org content, we recommend consulting 
 | **Insamhlóir Idirlín a úsáid**                                                                                                 | `https://api.pusherapp.com`<br/>`wss://ws.pusherapp.com:443`                                         |
 | **Chun Web Lab a úsáid**                                                                                                       | `https://downloads.computinginthecore.org`<br/>`https://codeprojects.org`                            |
 | **Chun Cnaipe Comhroinnte Google Classroom a úsáid**                                                                           | `https://apis.google.com`                                                                                  |
-| **Tacair sonraí App Lab a úsáid**                                                                                              | `https://*.firebaseio.com`<br />`wss: //*.firebaseio.com`                                            |
 
 ## Mobile and Tablet Support Details
 
-All CS Discoveries, CS Principles, CS A, and Intro to App Lab courses are not compatible with tablets or mobile devices - a full keyboard and mouse (or touchpad) are required. Most tablets are not supported, with the following exceptions:
+Níl gach cúrsa Fionnachtana CS, Prionsabail CS, CS A, agus Intro to App Lab comhoiriúnach le táibléad nó le gléasanna soghluaiste - teastaíonn méarchlár iomlán agus luch (nó tadhaill). Ní thacaítear leis an gcuid is mó de na táibléad, leis na heisceachtaí
 
 - Microsoft Surface Pro with an external keyboard
 - iPad running iPadOS 13.4 or later with an external keyboard and an external mouse or touchpad
 
-All other content, such as K-5 courses (Computer Science Fundamentals) and Hour of Code activities are compatible on iPads and other modern tablets and laptop or desktop computers.
+Tá gach ábhar eile, mar shampla cúrsaí K-5 (Bunúsacha Ríomhaireachta) agus gníomhaíochtaí Uair an Chód comhoiriúnach ar iPads agus táibléad nua-aimseartha eile agus ríomhairí glúine nó deisce.
 
 ### Mobile Phones
 
-Our Hour of Code activities and CS Fundamentals courses can be completed on mobile phones. While these activities are usable, they are not optimized for a mobile phone experience and have some known limitations (e.g. touch targets may be small, accessory elements may display offscreen, and text may be difficult to input using the on-screen keyboard). The CS Discoveries, CS Principles, and Intro to App Lab courses are not usable on mobile phones.
+Is féidir ár ngníomhaíochtaí Uair an Chód agus cúrsaí CS Fundamentals a chríochnú ar fhóin phóca. Cé go bhfuil na gníomhaíochtaí seo inúsáidte, níl siad optamaithe le haghaidh eispéireas fón póca agus tá roinnt teorainneacha ar eolas acu (m.sh. d'fhéadfadh spriocanna tadhaill a bheith beag, d'fhéadfadh eilimintí cúlpháirtí a thaispeáint lasmuigh den scáileán, agus d'fhéadfadh sé a bheith deacair téacs a Ní féidir na cúrsaí Fionnachtana CS, Prionsabail CS, agus Intro to App Lab inúsáidte ar fhóin phóca.
 
 ## Videos
 
-We use [YouTube](https://www.youtube.com) to embed videos into Code.org and our [online learning platform](https://studio.code.org). For schools with YouTube blocked, we attempt to display a Code.org hosted video player instead.
+Úsáidimid [YouTube](https://www.youtube.com) chun físeáin a leabú i Code.org agus inár [ardán foghlama ar líne](https://studio.code.org). Maidir le scoileanna a bhfuil YouTube cosc orthu, déanaimid iarracht seinnteoir físe óstáilte Code.org a thaispeáint
 
 ### Can you play this video?
 
-Before you start Code.org's online courses, test playback for the video below to make sure you're good to go.
+Sula dtosaíonn tú ar chúrsaí ar líne Code.org, déan tástáil athsheinm don fhíseán thíos chun a chinntiú go bhfuil tú go maith le dul.
 
 
 <!--
@@ -115,13 +160,13 @@ The following HTML is a copy of video_with_fallback.haml. once this file can be 
   </div>
 </figure>
 
-This is the player used throughout the curriculum. It will try to show the video through YouTube and, if YouTube is blocked, show the Code.org hosted video using our "fallback" player instead.
+Is é seo an t-imreoir a úsáidtear ar fud an churaclam. Déanfaidh sé iarracht an físeán a thaispeáint trí YouTube agus, má chuirtear bac ar YouTube, taispeáint an físeán óstáilte Code.org ag baint úsáide as ár n-imreoir “fallback” ina ionad sin.
 
 ### Video not playing?
 
-If video does not work, you can email us at support@code.org.
+Mura n-oibríonn físeán, is féidir leat ríomhphost a chur chugainn ag support@code.org.
 
-However, you can still use our tutorials without video.
+Mar sin féin, is féidir leat ár ranganna teagaisc a úsáid fós gan físeán.
 
 1. We've made all our videos [available for download together](https://www.dropbox.com/sh/aax85b3850olxcx/mso9d17QtH). If your school has low bandwidth, we recommend that you download videos and show them to students on a shared screen.
 2. Integrated into our tutorials, we've added a green download link icon <img src="/images/green-download.png" width=25 height=25 /> for each video, allowing students to download individual tutorial videos.
@@ -131,8 +176,8 @@ However, you can still use our tutorials without video.
 
 ## Special settings for Google Apps/G-Suite users
 
-If you're a G-suite administrator, be sure to check what your restriction settings are for YouTube. If you have specified the "Strict Restricted YouTube Access" setting or if you see messages stating 'this video has been restricted', you can add our channel to the approved list of channels. See [this guide](https://support.google.com/a/answer/6245597) from Google to learn about how to add our channel to the approved list. You can also see [this guide](https://support.google.com/a/answer/6212415?hl=en) to learn more about different settings and which is best for your classroom.
+Más riarthóir G-suite tú, bí cinnte a sheiceáil cad iad na socruithe srianta do YouTube. Má shonraigh tú an socrú “Rochtain Srianta docht YouTube” nó má fheiceann tú teachtaireachtaí ag rá 'tá srian ar an bhfíseán seo ', is féidir leat ár gcainéal a chur leis an liosta ceadaithe cainéal. Féach [an treoir seo](https://support.google.com/a/answer/6245597) ó Google chun foghlaim faoi conas ár gcainéal a chur leis an liosta ceadaithe. Is féidir leat [an treoir seo](https://support.google.com/a/answer/6212415?hl=en) a fheiceáil freisin chun níos mó a fhoghlaim faoi shuíomhanna éagsúla agus cé acu is fearr do do sheomra ranga.
 
 ## Still having trouble?
 
-We'll help you out - just email us at support@code.org!
+Cuideoidh muid leat - ní gá ach ríomhphost chugainn ag support@code.org!

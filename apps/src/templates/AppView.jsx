@@ -1,14 +1,17 @@
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import classNames from 'classnames';
 import {connect} from 'react-redux';
-import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
-import StudioAppWrapper from './StudioAppWrapper';
-import InstructionsWithWorkspace from './instructions/InstructionsWithWorkspace';
-import CodeWorkspace from './CodeWorkspace';
-import Overlay from './Overlay';
-import VisualizationResizeBar from '../lib/ui/VisualizationResizeBar';
+
 import ModalFunctionEditor from '@cdo/apps/blockly/components/ModalFunctionEditor';
+
+import VisualizationResizeBar from '../code-studio/components/VisualizationResizeBar';
+import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
+
+import CodeWorkspace from './CodeWorkspace';
+import InstructionsWithWorkspace from './instructions/InstructionsWithWorkspace';
+import Overlay from './Overlay';
+import StudioAppWrapper from './StudioAppWrapper';
 
 /**
  * Top-level React wrapper for our standard blockly apps.

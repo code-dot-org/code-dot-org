@@ -1,8 +1,11 @@
-import React from 'react';
-import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
 import {html} from '@codemirror/lang-html';
-import {htmlLinter} from './htmlLinter';
 import {lintGutter} from '@codemirror/lint';
+import React from 'react';
+
+import CodeEditor from '@cdo/apps/lab2/views/components/editor/CodeEditor';
+
+import {htmlLinter} from './htmlLinter';
+
 // import {css} from '@codemirror/lang-css';
 // import {cssLinter} from './cssLinter';
 

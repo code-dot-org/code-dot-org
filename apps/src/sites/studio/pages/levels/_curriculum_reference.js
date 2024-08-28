@@ -1,11 +1,12 @@
+import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import $ from 'jquery';
+
 import {registerGetResult} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {onContinue} from '@cdo/apps/code-studio/levels/postOnContinue';
-import getScriptData from '@cdo/apps/util/getScriptData';
-import ReferenceGuide from '@cdo/apps/templates/referenceGuides/ReferenceGuide';
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
+import ReferenceGuide from '@cdo/apps/templates/referenceGuides/ReferenceGuide';
+import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   registerGetResult();

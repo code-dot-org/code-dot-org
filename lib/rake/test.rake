@@ -122,6 +122,7 @@ namespace :test do
           Dir["#{fixture_path}/{**,*}/*.yml"].
             push(dashboard_dir('db/schema.rb')).
             push(dashboard_dir('config/videos.csv')).
+            push("#{fixture_path}/schools.tsv").
             push(dashboard_dir('lib/tasks/seed.rake')).
             select {|filename| File.file?(filename)}.
             sort.

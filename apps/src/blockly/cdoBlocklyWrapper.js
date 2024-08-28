@@ -3,22 +3,25 @@ import {
   CLAMPED_NUMBER_REGEX,
   stringIsXml,
 } from '@cdo/apps/blockly/constants';
+import {MetricEvent} from '@cdo/apps/lib/metrics/events';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
-import customBlocks from './customBlocks/cdoBlockly/index.js';
-import {parseElement as parseXmlElement} from '../xml';
 import {getStore} from '@cdo/apps/redux';
 import {
   setFailedToGenerateCode,
   setHasIncompatibleSources,
 } from '@cdo/apps/redux/blockly';
+
 import * as blockUtils from '../block_utils';
+import {parseElement as parseXmlElement} from '../xml';
+
+import customBlocks from './customBlocks/cdoBlockly/index.js';
 import {
   INFINITE_LOOP_TRAP,
   LOOP_HIGHLIGHT,
+  getCodeBlocks,
   handleCodeGenerationFailure,
   strip,
 } from './utils';
-import {MetricEvent} from '@cdo/apps/lib/metrics/events';
 
 /**
  * Wrapper class for https://github.com/code-dot-org/blockly
@@ -288,6 +291,12 @@ function initializeBlocklyWrapper(blocklyInstance) {
     bindBrowserEvent: function (element, name, thisObject, func, useCapture) {
       return Blockly.bindEvent_(element, name, thisObject, func, useCapture);
     },
+    nonnegativeIntegerValidator: function (text) {
+      return Blockly.FieldTextInput.nonnegativeIntegerValidator(text);
+    },
+    numberValidator: function (text) {
+      return Blockly.FieldTextInput.numberValidator(text);
+    },
     getField: function (type) {
       return new Blockly.FieldTextInput('', getFieldInputChangeHandler(type));
     },
@@ -348,6 +357,20 @@ function initializeBlocklyWrapper(blocklyInstance) {
     },
     processToolboxXml(toolbox) {
       return toolbox;
+    },
+    highlightBlock(id, spotlight) {
+      Blockly.mainBlockSpace.highlightBlock(id, spotlight);
+    },
+    getAllGeneratedCode(extraCode) {
+      const studentCode = Blockly.Generator.blocksToCode(
+        'JavaScript',
+        getCodeBlocks()
+      );
+      return (extraCode || '') + studentCode;
+    },
+    getCodeFromBlockXmlSource(xmlString) {
+      const domBlocks = Blockly.Xml.textToDom(xmlString);
+      return Blockly.Generator.xmlToCode('JavaScript', domBlocks);
     },
   };
   blocklyWrapper.customBlocks = customBlocks;

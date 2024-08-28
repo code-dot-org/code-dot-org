@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import i18n from '@cdo/locale';
-import Button from './Button';
+
+import Spinner from '../sharedComponents/Spinner';
+
 import BaseDialog from './BaseDialog';
 import DialogFooter from './teacherDashboard/DialogFooter';
-import Spinner from '../code-studio/pd/components/spinner';
 
 /*
 Note that the version of reCAPTCHA supported by this dialog (v2 - I am not a robot)

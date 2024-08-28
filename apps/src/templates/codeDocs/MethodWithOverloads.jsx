@@ -1,11 +1,13 @@
-import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import React, {useState} from 'react';
+
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
+import color from '@cdo/apps/util/color';
+import i18n from '@cdo/locale';
+
 import Example from './Example';
 import ParametersTable from './ParametersTable';
-import EnhancedSafeMarkdown from '@cdo/apps/templates/EnhancedSafeMarkdown';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import i18n from '@cdo/locale';
-import color from '@cdo/apps/util/color';
 
 export function SingleMethod({
   method,

@@ -87,6 +87,22 @@ class Api::V1::UsersControllerTest < ActionController::TestCase
     refute @user.show_progress_table_v2
   end
 
+  test 'a post request to show_progress_table_v2 updates appropriate timestamp' do
+    sign_in(@user)
+    assert_nil @user.progress_table_v2_timestamp
+    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: true}
+    assert_response :success
+    @user.reload
+    assert @user.progress_table_v2_timestamp
+    assert_nil @user.progress_table_v1_timestamp
+
+    post :post_show_progress_table_v2, params: {user_id: 'me', show_progress_table_v2: false}
+    assert_response :success
+    @user.reload
+    assert @user.progress_table_v2_timestamp
+    assert @user.progress_table_v1_timestamp
+  end
+
   test 'a post request to disable_lti_roster_sync updates lti_roster_sync_enabled' do
     teacher = create :teacher, lti_roster_sync_enabled: true
     sign_in(teacher)

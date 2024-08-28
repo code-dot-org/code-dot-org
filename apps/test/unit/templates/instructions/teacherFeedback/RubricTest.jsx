@@ -1,10 +1,8 @@
-import {shallow} from 'enzyme';
+import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
 import Rubric from '@cdo/apps/templates/instructions/teacherFeedback/Rubric';
 import i18n from '@cdo/locale';
-
-import {expect} from '../../../../util/reconfiguredChai';
 
 const DEFAULT_PROPS = {
   rubric: {
@@ -27,40 +25,38 @@ const setUp = overrideProps => {
 describe('Rubric', () => {
   it('displays key concept', () => {
     const wrapper = setUp();
-    expect(wrapper.contains(i18n.rubricKeyConceptHeader())).to.equal(true);
-    expect(wrapper.contains('This is the Key Concept')).to.equal(true);
+    expect(wrapper.contains(i18n.rubricKeyConceptHeader())).toBe(true);
+    expect(wrapper.contains('This is the Key Concept')).toBe(true);
   });
 
   it('displays rubric header', () => {
     const wrapper = setUp();
-    expect(wrapper.contains(i18n.rubric())).to.equal(true);
+    expect(wrapper.contains(i18n.rubric())).toBe(true);
   });
 
   it('has 4 rubric fields', () => {
     const wrapper = setUp();
-    expect(wrapper.find('RubricField')).to.have.lengthOf(4);
+    expect(wrapper.find('RubricField')).toHaveLength(4);
   });
 
   it('RubricField prop rubricLevel gets the correct value', () => {
     const wrapper = setUp();
 
     const firstRubricField = wrapper.find('RubricField').first();
-    expect(firstRubricField.props().rubricLevel).to.equal('performanceLevel1');
+    expect(firstRubricField.props().rubricLevel).toBe('performanceLevel1');
 
     const secondRubricField = wrapper.find('RubricField').at(1);
-    expect(secondRubricField.props().rubricLevel).to.equal('performanceLevel2');
+    expect(secondRubricField.props().rubricLevel).toBe('performanceLevel2');
   });
 
   it('RubricField prop rubricValue gets the correct value', () => {
     const wrapper = setUp();
 
     const firstRubricField = wrapper.find('RubricField').first();
-    expect(firstRubricField.props().rubricValue).to.equal(
-      'exceeded expectations'
-    );
+    expect(firstRubricField.props().rubricValue).toBe('exceeded expectations');
 
     const secondRubricField = wrapper.find('RubricField').at(1);
-    expect(secondRubricField.props().rubricValue).to.equal('met expectations');
+    expect(secondRubricField.props().rubricValue).toBe('met expectations');
   });
 
   it('does not check any RubricFields if there is no performance value', () => {
@@ -68,14 +64,14 @@ describe('Rubric', () => {
     const rubricFields = wrapper.find('RubricField');
 
     rubricFields.forEach(node => {
-      expect(node.props().currentlyChecked).to.equal(false);
+      expect(node.props().currentlyChecked).toBe(false);
     });
   });
 
   it('checks a RubricField if it matches the performance value', () => {
     const wrapper = setUp({performance: 'performanceLevel1'});
     const firstRubricField = wrapper.find('RubricField').first();
-    expect(firstRubricField.props().currentlyChecked).to.be.true;
+    expect(firstRubricField.props().currentlyChecked).toBe(true);
   });
 
   it('RubricField prop showFeedbackInputAreas is true if isEditable = true', () => {
@@ -84,7 +80,7 @@ describe('Rubric', () => {
     });
 
     const firstRubricField = wrapper.find('RubricField').first();
-    expect(firstRubricField.props().showFeedbackInputAreas).to.be.true;
+    expect(firstRubricField.props().showFeedbackInputAreas).toBe(true);
   });
 
   it('RubricField prop showFeedbackInputAreas is false if isEditable = false and there is no performance', () => {
@@ -93,7 +89,7 @@ describe('Rubric', () => {
     });
 
     const firstRubricField = wrapper.find('RubricField').first();
-    expect(firstRubricField.props().showFeedbackInputAreas).to.be.false;
+    expect(firstRubricField.props().showFeedbackInputAreas).toBe(false);
   });
 
   it('RubricField prop expandByDefault is false if isEditable = true and no performance', () => {
@@ -102,7 +98,7 @@ describe('Rubric', () => {
     });
 
     const firstRubricField = wrapper.find('RubricField').first();
-    expect(firstRubricField.props().expandByDefault).to.be.false;
+    expect(firstRubricField.props().expandByDefault).toBe(false);
   });
 
   it('RubricField prop expandByDefault is true if isEditable = false', () => {
@@ -111,7 +107,7 @@ describe('Rubric', () => {
     });
 
     const firstRubricField = wrapper.find('RubricField').first();
-    expect(firstRubricField.props().expandByDefault).to.be.true;
+    expect(firstRubricField.props().expandByDefault).toBe(true);
   });
 
   it('expands rubric value with feedback', () => {
@@ -121,9 +117,9 @@ describe('Rubric', () => {
     });
 
     const firstRubricField = wrapper.find('RubricField').first();
-    expect(firstRubricField.props().expandByDefault).to.be.false;
+    expect(firstRubricField.props().expandByDefault).toBe(false);
 
     const secondRubricField = wrapper.find('RubricField').at(1);
-    expect(secondRubricField.props().expandByDefault).to.be.true;
+    expect(secondRubricField.props().expandByDefault).toBe(true);
   });
 });

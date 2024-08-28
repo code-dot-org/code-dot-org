@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "emmas-playground",
-    "serialized_at": "2024-02-28 23:40:12 UTC",
+    "serialized_at": "2024-07-01 17:34:01 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -167,6 +167,24 @@
         "lesson_group.key": "",
         "script.name": "emmas-playground"
       }
+    },
+    {
+      "key": "Emotion badge with micro:bit",
+      "name": "Emotion badge with micro:bit",
+      "absolute_position": 10,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 10,
+      "properties": {
+        "overview": "In today's **skill-building** lesson, the goal is to program the micro:bit to show different emotion images when you press different buttons. This could be used to help people who have difficulty reading facial expressions. The key concepts are: **events**, **inputs** and **outputs**. ",
+        "preparation": "- Make sure students have completed the **Meet your micro:bit** exploration lesson.\n- Make sure you know how to create **<a href=\"https://www.youtube.com/watch?v=QD8kpuSC0Vc\" target=\"_blank\">a new classroom section </a>** where students will code their micro:bit project.\n",
+        "student_overview": "Program the micro:bit to show different emotion icons when you press different buttons."
+      },
+      "seeding_key": {
+        "lesson.key": "Emotion badge with micro:bit",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
     }
   ],
   "lesson_activities": [
@@ -274,6 +292,61 @@
       "seeding_key": {
         "lesson_activity.key": "c6f52723-f5ec-4ef5-a8d4-3a8d82a94fad",
         "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "5982359a-ba3c-4a91-a1e6-75682d8b923c",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "5982359a-ba3c-4a91-a1e6-75682d8b923c",
+        "lesson.key": "Emotion badge with micro:bit",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "1e6e8f4b-a976-4ab9-807a-f4d2dba8e978",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Main Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1e6e8f4b-a976-4ab9-807a-f4d2dba8e978",
+        "lesson.key": "Emotion badge with micro:bit",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "33279f8e-ba30-4deb-9bb2-eaf5fee2ebd4",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "33279f8e-ba30-4deb-9bb2-eaf5fee2ebd4",
+        "lesson.key": "Emotion badge with micro:bit",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground"
+      }
+    },
+    {
+      "key": "f4a8d324-a7df-4031-83f6-c9df2fcc378c",
+      "position": 4,
+      "properties": {
+        "name": "[Optional] Extended learning"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f4a8d324-a7df-4031-83f6-c9df2fcc378c",
+        "lesson.key": "Emotion badge with micro:bit",
         "lesson_group.key": "",
         "script.name": "emmas-playground"
       }
@@ -419,6 +492,16 @@
       }
     },
     {
+      "key": "3217ee15-54da-4f80-a5f2-70f95167ca63",
+      "position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "3217ee15-54da-4f80-a5f2-70f95167ca63",
+        "lesson_activity.key": "d3fc9cb6-5c5e-4647-991d-d3842148534a"
+      }
+    },
+    {
       "key": "04e96728-1a77-4680-b173-0f9093bb684b",
       "position": 1,
       "properties": {
@@ -493,6 +576,121 @@
       "seeding_key": {
         "activity_section.key": "efff6bf6-a6bf-431f-818a-b19daaae2b35",
         "lesson_activity.key": "c6f52723-f5ec-4ef5-a8d4-3a8d82a94fad"
+      }
+    },
+    {
+      "key": "c208f936-b745-4c28-a822-33eb2f35ef5f",
+      "position": 3,
+      "properties": {
+        "progression_name": "Sorting Items with Validation (Shape)"
+      },
+      "seeding_key": {
+        "activity_section.key": "c208f936-b745-4c28-a822-33eb2f35ef5f",
+        "lesson_activity.key": "c6f52723-f5ec-4ef5-a8d4-3a8d82a94fad"
+      }
+    },
+    {
+      "key": "5cd0883b-d847-498d-9957-a4c0bda19bfc",
+      "position": 4,
+      "properties": {
+        "progression_name": "Sorting Items with Validation (Border)"
+      },
+      "seeding_key": {
+        "activity_section.key": "5cd0883b-d847-498d-9957-a4c0bda19bfc",
+        "lesson_activity.key": "c6f52723-f5ec-4ef5-a8d4-3a8d82a94fad"
+      }
+    },
+    {
+      "key": "a0151e87-df22-4559-a158-67c70fb05ac5",
+      "position": 5,
+      "properties": {
+        "progression_name": "Sorting Animals with Validation"
+      },
+      "seeding_key": {
+        "activity_section.key": "a0151e87-df22-4559-a158-67c70fb05ac5",
+        "lesson_activity.key": "c6f52723-f5ec-4ef5-a8d4-3a8d82a94fad"
+      }
+    },
+    {
+      "key": "d11495c9-a944-46c1-aa68-5cec0095be17",
+      "position": 6,
+      "properties": {
+        "progression_name": "Final Project: Choice Level"
+      },
+      "seeding_key": {
+        "activity_section.key": "d11495c9-a944-46c1-aa68-5cec0095be17",
+        "lesson_activity.key": "c6f52723-f5ec-4ef5-a8d4-3a8d82a94fad"
+      }
+    },
+    {
+      "key": "62f3ddc5-47bb-424e-ae50-97bb51e661b3",
+      "position": 1,
+      "properties": {
+        "description": "**Say**: Today's aim is to program the micro:bit to show different emotion images when you press different buttons. This could be used to help people who have difficulty reading facial expressions.\n\n[Option 1] **Do this**: Watch the **<a href=\"https://mbit.io/csf-c2-intro\" target=\"_blank\">introduction video.</a>**  \n\n[Option 2] **Do this:** Explore the **<a href=\"https://mbit.io/csf-c2-project\" target=\"_blank\">project</a>** uploaded onto micro:bits prior to the lesson. \n\n**Discuss** where these concepts are being used and where students may have used them before:\n- **Events**: actions that cause something to happen\n- **Inputs**: information computers get from users or sensors\n- **Outputs**: information users get from computers\n\n**Do this:** Share the **<a href=\"https://mbit.io/csf-c2-project\" target=\"_blank\">project</a>**  working in the simulator with your students and look at the code together prior to students coding the main activity.",
+        "duration": "10",
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "activity_section.key": "62f3ddc5-47bb-424e-ae50-97bb51e661b3",
+        "lesson_activity.key": "5982359a-ba3c-4a91-a1e6-75682d8b923c"
+      }
+    },
+    {
+      "key": "9a87a950-3df3-4c36-bedc-1c6456a5e21b",
+      "position": 1,
+      "properties": {
+        "description": "Students will make the project themselves using the MakeCode editor and micro:bit simulator. Once they have tested their code in the simulator, they will download their code onto the micro:bits.\n\nPick one:\n- Step by step coding **<a href=\"https://mbit.io/csf-c2-coding\" target=\"_blank\">video</a>**\n- Live micro:bit **<a href=\"https://mbit.io/csf-c2-classroom\" target=\"_blank\">classroom session</a>** ",
+        "name": "Student Coding"
+      },
+      "seeding_key": {
+        "activity_section.key": "9a87a950-3df3-4c36-bedc-1c6456a5e21b",
+        "lesson_activity.key": "1e6e8f4b-a976-4ab9-807a-f4d2dba8e978"
+      }
+    },
+    {
+      "key": "c6008023-681f-429f-ac37-eeaf4bffabff",
+      "position": 2,
+      "properties": {
+        "progression_name": "Emotion Badge"
+      },
+      "seeding_key": {
+        "activity_section.key": "c6008023-681f-429f-ac37-eeaf4bffabff",
+        "lesson_activity.key": "1e6e8f4b-a976-4ab9-807a-f4d2dba8e978"
+      }
+    },
+    {
+      "key": "4cbeff97-cba4-4e37-8ad0-777bd082a7e0",
+      "position": 3,
+      "properties": {
+        "progression_name": "Content Assessment"
+      },
+      "seeding_key": {
+        "activity_section.key": "4cbeff97-cba4-4e37-8ad0-777bd082a7e0",
+        "lesson_activity.key": "1e6e8f4b-a976-4ab9-807a-f4d2dba8e978"
+      }
+    },
+    {
+      "key": "e4394a03-551f-4d69-b42e-040c873ad0e2",
+      "position": 1,
+      "properties": {
+        "description": "Share student work, revisit key concepts used, and explore ideas for extended learning.",
+        "duration": "5",
+        "name": "Discussion"
+      },
+      "seeding_key": {
+        "activity_section.key": "e4394a03-551f-4d69-b42e-040c873ad0e2",
+        "lesson_activity.key": "33279f8e-ba30-4deb-9bb2-eaf5fee2ebd4"
+      }
+    },
+    {
+      "key": "61cbec77-876f-4be2-b408-cefa4f35957f",
+      "position": 1,
+      "properties": {
+        "description": "**A + B input**: Add another input block to react to the event when you press buttons A+B together. The output should show a different emotion.\n\n**Use the \"show LEDs\" block**: Design your own emotion.\n\n**Find this project and more on <a href=\"https://microbit.org\" target=\"_blank\">microbit.org</a>**"
+      },
+      "seeding_key": {
+        "activity_section.key": "61cbec77-876f-4be2-b408-cefa4f35957f",
+        "lesson_activity.key": "f4a8d324-a7df-4031-83f6-c9df2fcc378c"
       }
     }
   ],
@@ -1298,6 +1496,27 @@
     },
     {
       "chapter": 34,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "test_k5_ai_matching_background_emoji"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "3217ee15-54da-4f80-a5f2-70f95167ca63"
+      },
+      "level_keys": [
+        "test_k5_ai_matching_background_emoji"
+      ]
+    },
+    {
+      "chapter": 35,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1322,7 +1541,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 36,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1347,7 +1566,7 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 37,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -1372,7 +1591,7 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 38,
       "position": 4,
       "activity_section_position": 1,
       "assessment": false,
@@ -1397,7 +1616,7 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 39,
       "position": 5,
       "activity_section_position": 2,
       "assessment": false,
@@ -1422,7 +1641,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 6,
       "activity_section_position": 3,
       "assessment": false,
@@ -1447,7 +1666,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 7,
       "activity_section_position": 1,
       "assessment": false,
@@ -1472,7 +1691,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 8,
       "activity_section_position": 2,
       "assessment": false,
@@ -1497,7 +1716,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 9,
       "activity_section_position": 3,
       "assessment": false,
@@ -1522,7 +1741,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 10,
       "activity_section_position": 4,
       "assessment": false,
@@ -1547,7 +1766,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 11,
       "activity_section_position": 5,
       "assessment": false,
@@ -1572,7 +1791,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 12,
       "activity_section_position": 1,
       "assessment": false,
@@ -1597,7 +1816,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 13,
       "activity_section_position": 2,
       "assessment": false,
@@ -1622,7 +1841,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 14,
       "activity_section_position": 3,
       "assessment": false,
@@ -1647,7 +1866,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 15,
       "activity_section_position": 4,
       "assessment": false,
@@ -1672,7 +1891,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 16,
       "activity_section_position": 1,
       "assessment": false,
@@ -1697,7 +1916,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 17,
       "activity_section_position": 2,
       "assessment": false,
@@ -1722,7 +1941,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1747,11 +1966,14 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "emmaplayground_helloworld_freeplay_food"
+        ],
         "progression": "Feature Vector"
       },
       "bonus": false,
@@ -1766,6 +1988,256 @@
       },
       "level_keys": [
         "emmaplayground_helloworld_freeplay_food"
+      ]
+    },
+    {
+      "chapter": 54,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "k5_ai_pilot_sorting_items_emmatest"
+        ],
+        "progression": "Sorting Items with Validation (Shape)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "k5_ai_pilot_sorting_items_emmatest"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "c208f936-b745-4c28-a822-33eb2f35ef5f"
+      },
+      "level_keys": [
+        "k5_ai_pilot_sorting_items_emmatest"
+      ]
+    },
+    {
+      "chapter": 55,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "k5_ai_pilot_sorting_items_emmatest_2"
+        ],
+        "progression": "Sorting Items with Validation (Border)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "k5_ai_pilot_sorting_items_emmatest_2"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "5cd0883b-d847-498d-9957-a4c0bda19bfc"
+      },
+      "level_keys": [
+        "k5_ai_pilot_sorting_items_emmatest_2"
+      ]
+    },
+    {
+      "chapter": 56,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "k5_ai_pilot_sorting_items_emmatest_3"
+        ],
+        "progression": "Sorting Animals with Validation"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "k5_ai_pilot_sorting_items_emmatest_3"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "a0151e87-df22-4559-a158-67c70fb05ac5"
+      },
+      "level_keys": [
+        "k5_ai_pilot_sorting_items_emmatest_3"
+      ]
+    },
+    {
+      "chapter": 57,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "courseE_EOC_choice_level_emma_test"
+        ],
+        "progression": "Final Project: Choice Level"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "courseE_EOC_choice_level_emma_test"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "d11495c9-a944-46c1-aa68-5cec0095be17"
+      },
+      "level_keys": [
+        "courseE_EOC_choice_level_emma_test"
+      ]
+    },
+    {
+      "chapter": 58,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "course_c_maker_emotion_badge_grade2_assessment"
+        ],
+        "progression": "Emotion Badge"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "course_c_maker_emotion_badge_grade2_assessment"
+        ],
+        "lesson.key": "Emotion badge with micro:bit",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "c6008023-681f-429f-ac37-eeaf4bffabff"
+      },
+      "level_keys": [
+        "course_c_maker_emotion_badge_grade2_assessment"
+      ]
+    },
+    {
+      "chapter": 59,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "grade2-maker-content-assessment-matching-1_assessment"
+        ],
+        "progression": "Content Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade2-maker-content-assessment-matching-1_assessment"
+        ],
+        "lesson.key": "Emotion badge with micro:bit",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "4cbeff97-cba4-4e37-8ad0-777bd082a7e0"
+      },
+      "level_keys": [
+        "grade2-maker-content-assessment-matching-1_assessment"
+      ]
+    },
+    {
+      "chapter": 60,
+      "position": 3,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "grade2-maker-content-assessment-matching-2_assessment"
+        ],
+        "progression": "Content Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade2-maker-content-assessment-matching-2_assessment"
+        ],
+        "lesson.key": "Emotion badge with micro:bit",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "4cbeff97-cba4-4e37-8ad0-777bd082a7e0"
+      },
+      "level_keys": [
+        "grade2-maker-content-assessment-matching-2_assessment"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 4,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "grade2-maker-content-assessment-3_assessment"
+        ],
+        "progression": "Content Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade2-maker-content-assessment-3_assessment"
+        ],
+        "lesson.key": "Emotion badge with micro:bit",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "4cbeff97-cba4-4e37-8ad0-777bd082a7e0"
+      },
+      "level_keys": [
+        "grade2-maker-content-assessment-3_assessment"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 5,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "grade2-maker-content-assessment-4_assessment"
+        ],
+        "progression": "Content Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade2-maker-content-assessment-4_assessment"
+        ],
+        "lesson.key": "Emotion badge with micro:bit",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "4cbeff97-cba4-4e37-8ad0-777bd082a7e0"
+      },
+      "level_keys": [
+        "grade2-maker-content-assessment-4_assessment"
+      ]
+    },
+    {
+      "chapter": 63,
+      "position": 6,
+      "activity_section_position": 5,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "grade2-maker-content-assessment-5_assessment"
+        ],
+        "progression": "Content Assessment"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "grade2-maker-content-assessment-5_assessment"
+        ],
+        "lesson.key": "Emotion badge with micro:bit",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "4cbeff97-cba4-4e37-8ad0-777bd082a7e0"
+      },
+      "level_keys": [
+        "grade2-maker-content-assessment-5_assessment"
       ]
     }
   ],
@@ -2168,6 +2640,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "test_k5_ai_matching_background_emoji",
+        "script_level.level_keys": [
+          "test_k5_ai_matching_background_emoji"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "3217ee15-54da-4f80-a5f2-70f95167ca63"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "Games are fun!_b",
         "script_level.level_keys": [
           "Games are fun!_b"
@@ -2393,13 +2877,240 @@
         "script.name": "emmas-playground",
         "activity_section.key": "efff6bf6-a6bf-431f-818a-b19daaae2b35"
       }
+    },
+    {
+      "seeding_key": {
+        "level.key": "k5_ai_pilot_sorting_items_emmatest",
+        "script_level.level_keys": [
+          "k5_ai_pilot_sorting_items_emmatest"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "c208f936-b745-4c28-a822-33eb2f35ef5f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "k5_ai_pilot_sorting_items_emmatest_2",
+        "script_level.level_keys": [
+          "k5_ai_pilot_sorting_items_emmatest_2"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "5cd0883b-d847-498d-9957-a4c0bda19bfc"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "k5_ai_pilot_sorting_items_emmatest_3",
+        "script_level.level_keys": [
+          "k5_ai_pilot_sorting_items_emmatest_3"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "a0151e87-df22-4559-a158-67c70fb05ac5"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "courseE_EOC_choice_level_emma_test",
+        "script_level.level_keys": [
+          "courseE_EOC_choice_level_emma_test"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "d11495c9-a944-46c1-aa68-5cec0095be17"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "course_c_maker_emotion_badge_grade2_assessment",
+        "script_level.level_keys": [
+          "course_c_maker_emotion_badge_grade2_assessment"
+        ],
+        "lesson.key": "Emotion badge with micro:bit",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "c6008023-681f-429f-ac37-eeaf4bffabff"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade2-maker-content-assessment-matching-1_assessment",
+        "script_level.level_keys": [
+          "grade2-maker-content-assessment-matching-1_assessment"
+        ],
+        "lesson.key": "Emotion badge with micro:bit",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "4cbeff97-cba4-4e37-8ad0-777bd082a7e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade2-maker-content-assessment-matching-2_assessment",
+        "script_level.level_keys": [
+          "grade2-maker-content-assessment-matching-2_assessment"
+        ],
+        "lesson.key": "Emotion badge with micro:bit",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "4cbeff97-cba4-4e37-8ad0-777bd082a7e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade2-maker-content-assessment-3_assessment",
+        "script_level.level_keys": [
+          "grade2-maker-content-assessment-3_assessment"
+        ],
+        "lesson.key": "Emotion badge with micro:bit",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "4cbeff97-cba4-4e37-8ad0-777bd082a7e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade2-maker-content-assessment-4_assessment",
+        "script_level.level_keys": [
+          "grade2-maker-content-assessment-4_assessment"
+        ],
+        "lesson.key": "Emotion badge with micro:bit",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "4cbeff97-cba4-4e37-8ad0-777bd082a7e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "grade2-maker-content-assessment-5_assessment",
+        "script_level.level_keys": [
+          "grade2-maker-content-assessment-5_assessment"
+        ],
+        "lesson.key": "Emotion badge with micro:bit",
+        "lesson_group.key": "",
+        "script.name": "emmas-playground",
+        "activity_section.key": "4cbeff97-cba4-4e37-8ad0-777bd082a7e0"
+      }
     }
   ],
   "resources": [
-
+    {
+      "name": "**Grade 2 - Maker with micro:bit slides",
+      "url": "https://docs.google.com/presentation/d/17yc3y-VSBIoje0CKLKiYz_Q2cgtCkOQrfHnDmS6iZzQ/template/preview",
+      "key": "_grade_2_-_maker_with_micro_bit_slides",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/17yc3y-VSBIoje0CKLKiYz_Q2cgtCkOQrfHnDmS6iZzQ/export/pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "_grade_2_-_maker_with_micro_bit_slides"
+      }
+    },
+    {
+      "name": "CS talking points for code",
+      "url": "https://drive.google.com/file/d/1hL1nFtd8SQKpUhEETXIsBZqPPbpGWUEe/view?usp=drive_link",
+      "key": "cs_talking_points_for_code",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "cs_talking_points_for_code"
+      }
+    },
+    {
+      "name": "Emotion Badge: Finished project",
+      "url": "https://mbit.io/csf-c2-project",
+      "key": "emotion_badge_finished_project",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "emotion_badge_finished_project"
+      }
+    },
+    {
+      "name": "Emotion Badge: Introduction Video",
+      "url": "https://www.youtube.com/watch?v=wSXwc3rlJ7s",
+      "key": "emotion_badge_introduction_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "emotion_badge_introduction_video"
+      }
+    },
+    {
+      "name": "Emotion Badge: Step by step coding video",
+      "url": "https://mbit.io/csf-c2-coding",
+      "key": "emotion_badge_step_by_step_coding_video",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "emotion_badge_step_by_step_coding_video"
+      }
+    },
+    {
+      "name": "Live micro:bit classroom session",
+      "url": "https://mbit.io/csf-c2-classroom",
+      "key": "live_micro_bit_classroom_session",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "live_micro_bit_classroom_session"
+      }
+    }
   ],
   "lessons_resources": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Emotion badge with micro:bit",
+        "resource.key": "_grade_2_-_maker_with_micro_bit_slides"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Emotion badge with micro:bit",
+        "resource.key": "cs_talking_points_for_code"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Emotion badge with micro:bit",
+        "resource.key": "emotion_badge_finished_project"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Emotion badge with micro:bit",
+        "resource.key": "emotion_badge_introduction_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Emotion badge with micro:bit",
+        "resource.key": "emotion_badge_step_by_step_coding_video"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Emotion badge with micro:bit",
+        "resource.key": "live_micro_bit_classroom_session"
+      }
+    }
   ],
   "scripts_resources": [
 
@@ -2408,19 +3119,120 @@
 
   ],
   "vocabularies": [
-
+    {
+      "key": "light_emitting_diode_led_",
+      "word": "Light Emitting Diode (LED)",
+      "definition": "the micro:bit has 25 LEDs on the front arranged in a 5 x 5 grid for showing pictures, numbers, and words.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "light_emitting_diode_led_"
+      }
+    },
+    {
+      "key": "makecode",
+      "word": "MakeCode",
+      "definition": "The microsoft block editor used for creating programs for your micro:bit. It's similar to Scratch and the block code editors used in CS Fundamentals.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "makecode"
+      }
+    },
+    {
+      "key": "sensor",
+      "word": "Sensor",
+      "definition": "A device that detects and records changes in the environment, such as the micro:bit's sensor for temperature, light, movement, and magnetism.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "sensor"
+      }
+    },
+    {
+      "key": "simulator",
+      "word": "Simulator",
+      "definition": "A pretend, or virtual, micro:bit in the MakeCode editor that lets you test your programs before transferring them to a real micro:bit.",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "simulator"
+      }
+    }
   ],
   "lessons_vocabularies": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Emotion badge with micro:bit",
+        "vocabulary.key": "light_emitting_diode_led_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Emotion badge with micro:bit",
+        "vocabulary.key": "makecode"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Emotion badge with micro:bit",
+        "vocabulary.key": "sensor"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Emotion badge with micro:bit",
+        "vocabulary.key": "simulator"
+      }
+    }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
-
+    {
+      "key": "32697ead-3b85-4cf2-88ab-1fa094178874",
+      "properties": {
+        "description": "Use the simulator to test the program before transferring it to the micro:bit"
+      },
+      "seeding_key": {
+        "lesson.key": "Emotion badge with micro:bit",
+        "objective.key": "32697ead-3b85-4cf2-88ab-1fa094178874"
+      }
+    },
+    {
+      "key": "d2dc41ba-d68b-43e7-b5d8-6c33da94da6f",
+      "properties": {
+        "description": "Program events on the micro:bit that are triggered by pressing button A or B"
+      },
+      "seeding_key": {
+        "lesson.key": "Emotion badge with micro:bit",
+        "objective.key": "d2dc41ba-d68b-43e7-b5d8-6c33da94da6f"
+      }
+    }
   ],
   "lessons_standards": [
-
+    {
+      "seeding_key": {
+        "lesson.key": "Emotion badge with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-09"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Emotion badge with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Emotion badge with micro:bit",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "1A-CS-02"
+      }
+    }
   ],
   "lessons_opportunity_standards": [
 

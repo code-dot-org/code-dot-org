@@ -1,0 +1,35 @@
+name 'sp-pl-CV_defining_digDeeper'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Creating User Personas from Data
+
+
+
+
+#### Let’s start by looking at an **example problem** a group might be working on related to school lunch. 
+
+####This group noticed an issue with how students were interacting and collected some data from students to better understand this issue.
+
+## Student data visualization:
+
+<img src="https://images.code.org/6a792e9148dc3eb63459b0617b4d17cb-image-1715006950018.png" alt="top portion of handout" width="450px" style="border-radius:10px; margin: 10px 35px 20px 20px; border: 2px solid black;">
+
+### **Take a minute to look at the graph and consider these questions:** 
+- #### What do you notice? 
+- #### What do you wonder? 
+
+#### For both of these questions, there are no right or wrong answers so let your ideas flow. 
+
+---
+
+#### Once you have examined the data, use your observations to create fictional characters called user personas that will help continue to make sure you are defining the problem from the perspective of your users.
+
+<img src="https://images.code.org/2d8c6828a72ccad547a674246fdea3af-image-1715287098224.png" alt="top portion of handout" width="450px" style="border-radius:10px; margin: 10px 35px 20px 20px; border: 2px solid black;">
+
+##Activity
+### Explore the activity guide to dive deeper into this lesson <a href="https://docs.google.com/document/d/1De0SEfO_JFKND4IzXfe7v-dyqq0ok0efysG1iBk3OOI/edit?usp=sharing" target="blank" rel="noopener noreferrer"><b>User Stories and Problem Statements</b></a> 
+
+
+MARKDOWN

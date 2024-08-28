@@ -50,16 +50,19 @@ export interface Level {
   display_as_unplugged: boolean;
   freePlay: boolean;
   icon: string | null;
-  id: number;
+  id: string;
   ids: string[];
   inactiveIds: string[];
   is_concept_level: boolean;
   kind: string;
+  levelNumber: number;
   position: number;
   title: number;
   url: string;
   path: string;
+  scriptLevelId: string;
   status?: string;
+  sublevels?: Level[];
   usesLab2: boolean;
 }
 
@@ -68,6 +71,7 @@ export interface LevelWithProgress extends Level {
   paired?: boolean;
   isLocked?: boolean;
   isCurrentLevel?: boolean;
+  sublevels?: LevelWithProgress[];
 }
 
 export interface UnitProgress {

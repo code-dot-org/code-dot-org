@@ -1,7 +1,8 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import msg from '@cdo/locale';
+import React from 'react';
+
 import * as rowStyle from '@cdo/apps/applab/designElements/rowStyle';
+import msg from '@cdo/locale';
 
 class DropdownField extends React.Component {
   static propTypes = {
