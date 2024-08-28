@@ -35,9 +35,10 @@ const Console: React.FunctionComponent = () => {
   }, [dispatch, levelId]);
 
   useEffect(() => {
-    if (consoleRef.current) {
-      consoleRef.current.scrollTop = consoleRef.current.scrollHeight;
-    }
+    consoleRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'end',
+    });
   }, [consoleRef, codeOutput]);
 
   const clearOutput = () => {
@@ -73,60 +74,65 @@ const Console: React.FunctionComponent = () => {
       headerContent={'Console'}
       rightHeaderContent={headerButton()}
     >
-      <div className={moduleStyles.console} ref={consoleRef}>
-        {codeOutput.map((outputLine, index) => {
-          if (outputLine.type === 'img') {
-            return (
-              <div key={index}>
-                <img
-                  src={`data:image/png;base64,${outputLine.contents}`}
-                  alt="matplotlib_image"
-                />
-                <Button
-                  color={buttonColors.black}
-                  disabled={false}
-                  icon={{iconName: 'up-right-from-square', iconStyle: 'solid'}}
-                  isIconOnly={true}
-                  onClick={() => popOutGraph(index)}
-                  size="xs"
-                  type="primary"
-                  aria-label="open matplotlib_image in pop-up"
-                />
-                {activeGraphIndex === index && graphModalOpen && (
-                  <GraphModal
+      <div className={moduleStyles.console}>
+        <div ref={consoleRef}>
+          {codeOutput.map((outputLine, index) => {
+            if (outputLine.type === 'img') {
+              return (
+                <div key={index}>
+                  <img
                     src={`data:image/png;base64,${outputLine.contents}`}
-                    onClose={() => setGraphModalOpen(false)}
+                    alt="matplotlib_image"
                   />
-                )}
-              </div>
-            );
-          } else if (
-            outputLine.type === 'system_out' ||
-            outputLine.type === 'system_in'
-          ) {
-            return <div key={index}>{outputLine.contents}</div>;
-          } else if (outputLine.type === 'error') {
-            return (
-              <div key={index} className={moduleStyles.errorLine}>
-                {outputLine.contents}
-              </div>
-            );
-          } else if (outputLine.type === 'system_error') {
-            return (
-              <div key={index} className={moduleStyles.errorLine}>
-                {systemMessagePrefix}
-                {codebridgeI18n.systemCodeError()}
-              </div>
-            );
-          } else {
-            return (
-              <div key={index}>
-                {systemMessagePrefix}
-                {outputLine.contents}
-              </div>
-            );
-          }
-        })}
+                  <Button
+                    color={buttonColors.black}
+                    disabled={false}
+                    icon={{
+                      iconName: 'up-right-from-square',
+                      iconStyle: 'solid',
+                    }}
+                    isIconOnly={true}
+                    onClick={() => popOutGraph(index)}
+                    size="xs"
+                    type="primary"
+                    aria-label="open matplotlib_image in pop-up"
+                  />
+                  {activeGraphIndex === index && graphModalOpen && (
+                    <GraphModal
+                      src={`data:image/png;base64,${outputLine.contents}`}
+                      onClose={() => setGraphModalOpen(false)}
+                    />
+                  )}
+                </div>
+              );
+            } else if (
+              outputLine.type === 'system_out' ||
+              outputLine.type === 'system_in'
+            ) {
+              return <div key={index}>{outputLine.contents}</div>;
+            } else if (outputLine.type === 'error') {
+              return (
+                <div key={index} className={moduleStyles.errorLine}>
+                  {outputLine.contents}
+                </div>
+              );
+            } else if (outputLine.type === 'system_error') {
+              return (
+                <div key={index} className={moduleStyles.errorLine}>
+                  {systemMessagePrefix}
+                  {codebridgeI18n.systemCodeError()}
+                </div>
+              );
+            } else {
+              return (
+                <div key={index}>
+                  {systemMessagePrefix}
+                  {outputLine.contents}
+                </div>
+              );
+            }
+          })}
+        </div>
       </div>
     </PanelContainer>
   );
