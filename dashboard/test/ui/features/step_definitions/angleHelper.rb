@@ -46,7 +46,9 @@ When(/^I drag the Angle Helper circle to coordinates \((\d*),(\d*)\)$/) do |x, y
 end
 
 Then(/^the angle text is at "(\d*)"$/) do |val|
-  expect(@browser.execute_script("return $('.blocklyWidgetDiv .blocklyHtmlInput').val()")).to be_between(val - 1, val + 1)
+  val_int = val.to_i
+  # Firefox and Chrome are off by one in the pixel location of the angle text, so we need to allow for a small range in values.
+  expect(@browser.execute_script("return $('.blocklyWidgetDiv .blocklyHtmlInput').val()").to_i).to be_between(val_int - 1, val_int + 1)
 end
 
 Then(/^the angle dropdown is at "(\d*)"$/) do |val|
