@@ -135,6 +135,7 @@ const styles = {
   },
   dropdownLabel: {
     ...fontConstants['main-font-semi-bold'],
+    fontSize: '16px',
   },
   popUpMenuStyle: {
     // must appear in front of .modal from application.scss
