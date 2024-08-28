@@ -293,7 +293,7 @@ When /^I wait until (?:element )?"([.#])([^"]*)" is (not )?enabled$/ do |selecto
   end
 end
 
-When /^I wait testchange until element "([^"]*)" is enabled$/ do |_selector_symbol, _name, _negation|
+When /^I wait testchange until element "([^"]*)" is enabled$/ do |selection_criteria|
   wait_until do
     element = @browser.find_element(css: selection_criteria)
     element.enabled?
