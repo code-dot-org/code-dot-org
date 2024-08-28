@@ -67,7 +67,6 @@ class PegasusTest < Minitest::Test
     code.org/minecraft
     code.org/promote
     code.org/starwars
-    code.org/leaderboards
     code.org/page_mode
   ]
 

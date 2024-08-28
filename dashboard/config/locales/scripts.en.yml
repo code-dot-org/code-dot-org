@@ -18472,8 +18472,36 @@ en:
           description: ''
           student_description: ''
         data-science-with-python-2024:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Project Kickoff
+            lesson-2:
+              name: Introduction to Python
+            lesson-3:
+              name: Introduction to Pandas
+            lesson-4:
+              name: Introduction to Matplotlib
+            lesson-5:
+              name: Getting to Know Your Data
+            lesson-6:
+              name: Accessing and Grouping Values
+            lesson-7:
+              name: Cleaning Data
+            lesson-8:
+              name: More Visualization Types
+            lesson-9:
+              name: Exploratory Data Analysis
+            lesson-10:
+              name: Querying Your Data
+            lesson-11:
+              name: Data Science for Community Impact Project
+            lesson-12:
+              name: Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
           name: data-science-with-python-2024
           title: Data Science with Python
           description_audience: ''
@@ -19013,6 +19041,17 @@ en:
           lesson_groups: {}
           name: csd-summer-pr-day5
           title: Dìa 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pilot-elem-music-lab:
+          lessons:
+            lesson-1:
+              name: Intro & Sequencing
+          lesson_groups: {}
+          name: pilot-elem-music-lab
+          title: Intro to Programming with Music Lab
           description_audience: ''
           description_short: ''
           description: ''

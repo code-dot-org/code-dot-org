@@ -1,0 +1,9 @@
+name 'music-intro-coding-seq-choice'
+display_name 'Practice'
+description 'Choose a level to complete.'
+
+sublevels
+level 'music-intro-coding-seq-choice-change'
+level 'music-intro-coding-seq-choice-create'
+level 'music-intro-coding-seq-choice-preview'
+level 'music-intro-coding-seq-choice-beat'
