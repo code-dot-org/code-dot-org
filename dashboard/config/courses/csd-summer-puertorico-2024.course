@@ -1,0 +1,24 @@
+{
+  "name": "csd-summer-puertorico-2024",
+  "script_names": [
+    "csd-summer-pr-day1",
+    "csd-summer-pr-day2",
+    "csd-summer-pr-day3",
+    "csd-summer-pr-day4",
+    "csd-summer-pr-day5"
+  ],
+  "published_state": "stable",
+  "instruction_type": "teacher_led",
+  "participant_audience": "teacher",
+  "instructor_audience": "facilitator",
+  "properties": {
+    "family_name": "csd-summer-puertorico-2024",
+    "version_year": "unversioned"
+  },
+  "resources": [
+
+  ],
+  "student_resources": [
+
+  ]
+}

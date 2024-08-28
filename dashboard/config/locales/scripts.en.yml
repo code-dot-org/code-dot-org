@@ -18472,8 +18472,36 @@ en:
           description: ''
           student_description: ''
         data-science-with-python-2024:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Project Kickoff
+            lesson-2:
+              name: Introduction to Python
+            lesson-3:
+              name: Introduction to Pandas
+            lesson-4:
+              name: Introduction to Matplotlib
+            lesson-5:
+              name: Getting to Know Your Data
+            lesson-6:
+              name: Accessing and Grouping Values
+            lesson-7:
+              name: Cleaning Data
+            lesson-8:
+              name: More Visualization Types
+            lesson-9:
+              name: Exploratory Data Analysis
+            lesson-10:
+              name: Querying Your Data
+            lesson-11:
+              name: Data Science for Community Impact Project
+            lesson-12:
+              name: Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
           name: data-science-with-python-2024
           title: Data Science with Python
           description_audience: ''
@@ -18649,7 +18677,7 @@ en:
             lesson-8:
               name: AI-Generated Code
             lesson-2:
-              name: CSA Pre-Survey
+              name: AI-Generated Code (non-AI Tutor)
             lesson-1:
               name: Unit 1 Survey
           lesson_groups:
@@ -18864,7 +18892,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: exploring-gen-ai-1
-          title: Foundations of Generative AI
+          title: "[Don't Use - use /s/exploring-gen-ai1-2024 instead]"
           description_audience: ''
           description_short: ''
           description: ''
@@ -18873,7 +18901,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: exploring-gen-ai-2
-          title: Customizing Large Language Models
+          title: "[Don't Use - use /s/exploring-gen-ai2-2024 instead]"
           description_audience: ''
           description_short: ''
           description: ''
@@ -18932,6 +18960,98 @@ en:
           lesson_groups: {}
           name: sandbox-teaching-data-science
           title: Teaching Data Science
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        foundations-gen-ai-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: foundations-gen-ai-2024
+          title: Foundations of Generative AI
+          description_audience: ''
+          description_short: ''
+          description: This unit aims to build a foundational understanding of text-based generative AI models, focusing on core concepts over technical skills. Students will demystify generative AI models by exploring their internal structures through the familiar lens of input, storage, process, and output. They will gain insights into how these models represent language, the impact of training data on model performance, and the potential for bias. Using this knowledge they will be presented with scenarios throughout the unit where they can help educate individuals who feel powerless or lack agency in how AI is impacting their lives, or respond to individuals who have only read the hype headlines and offer feedback or criticism based on their knowledge of how these AI systems work.
+          student_description: ''
+        customizing-llms-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: customizing-llms-2024
+          title: Customizing Language Models
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        exploring-gen-ai1-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: exploring-gen-ai1-2024
+          title: Foundations of Generative AI
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        exploring-gen-ai2-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: exploring-gen-ai2-2024
+          title: Customizing Language Models
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd-summer-pr-day1:
+          lessons: {}
+          lesson_groups: {}
+          name: csd-summer-pr-day1
+          title: Dìa 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd-summer-pr-day2:
+          lessons: {}
+          lesson_groups: {}
+          name: csd-summer-pr-day2
+          title: Dìa 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd-summer-pr-day3:
+          lessons: {}
+          lesson_groups: {}
+          name: csd-summer-pr-day3
+          title: Dìa 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd-summer-pr-day4:
+          lessons: {}
+          lesson_groups: {}
+          name: csd-summer-pr-day4
+          title: Dìa 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd-summer-pr-day5:
+          lessons: {}
+          lesson_groups: {}
+          name: csd-summer-pr-day5
+          title: Dìa 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pilot-elem-music-lab:
+          lessons:
+            lesson-1:
+              name: Intro & Sequencing
+          lesson_groups: {}
+          name: pilot-elem-music-lab
+          title: Intro to Programming with Music Lab
           description_audience: ''
           description_short: ''
           description: ''

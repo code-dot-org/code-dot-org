@@ -9,6 +9,7 @@ import {isReadOnlyWorkspace} from '@cdo/apps/lab2/lab2Redux';
 import {useAppSelector, useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import FieldLabel from './FieldLabel';
+import SaveChangesAlerts from './SaveChangesAlerts';
 import UpdateButton from './UpdateButton';
 import {isDisabled} from './utils';
 
@@ -115,6 +116,7 @@ const RetrievalCustomization: React.FunctionComponent = () => {
       <div className={modelCustomizationStyles.footerButtonContainer}>
         <UpdateButton isDisabledDefault={isReadOnly} />
       </div>
+      <SaveChangesAlerts />
     </div>
   );
 };

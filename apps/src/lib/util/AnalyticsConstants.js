@@ -249,6 +249,8 @@ const EVENTS = {
   AGE_21_SELECTED_EVENT: 'Age 21+ Selected',
   HOC_GUIDE_DIALOG_SHOWN: 'HOC Guide Dialog Shown',
   GUIDE_SENT_EVENT: 'Guide Sent',
+  HOC_ACTIVITY_START_BUTTON_CLICKED:
+    'Hour of Code Activity Start Button Clicked',
 
   // Hour of Code - Dance Party
   DANCE_PARTY_ACTIVITY_STARTED: 'Dance Party Activity Started',

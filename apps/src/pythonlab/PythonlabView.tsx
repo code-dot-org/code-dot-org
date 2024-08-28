@@ -42,11 +42,10 @@ const defaultProject: ProjectSources = {
 
 const labeledGridLayouts = {
   horizontal: {
-    gridLayoutRows: '1fr 1fr 1fr 48px',
+    gridLayoutRows: '2fr 1fr 48px',
     gridLayoutColumns: '300px minmax(0, 1fr)',
     gridLayout: `
   "info-panel workspace"
-  "file-browser workspace"
   "file-browser console"
   "file-browser control-buttons"`,
   },

@@ -1,5 +1,6 @@
 <Artist>
   <config><![CDATA[{
+  "published": true,
   "game_id": 23,
   "created_at": "2016-10-24T20:10:16.000Z",
   "level_num": "custom",
@@ -31,11 +32,17 @@
     "top_level_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "contained_level_names": null
+    "encrypted": "false",
+    "encrypted_examples": [
+
+    ],
+    "show_type_hints": "false",
+    "validation_enabled": "false",
+    "enable_download_image": "false",
+    "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2018-02-16 16:17:11 -0800\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"nkiru.onwuneme+teacher@code.org\"}]",
+  "audit_log": "[{\"changed_at\":\"2018-02-16 16:17:11 -0800\",\"changed\":[\"start_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"nkiru.onwuneme+teacher@code.org\"},{\"changed_at\":\"2024-08-09 16:26:07 -0400\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"contained_level_names\"],\"changed_by_id\":1,\"changed_by_email\":\"mike@code.org\"}]",
   "level_concept_difficulty": {
   }
 }]]></config>
@@ -44,18 +51,18 @@
       <xml>
         <block type="when_run">
           <next>
-            <block type="draw_turn_by_constant">
+            <block type="draw_turn_by_constant" id="turnConstant">
               <title name="DIR">turnRight</title>
               <title name="VALUE">90</title>
               <next>
-                <block type="draw_turn_by_constant_dropdown">
+                <block type="draw_turn_by_constant_dropdown" id="turnDropdown">
                   <title name="DIR">turnRight</title>
                   <title name="VALUE" config="0,45,60,90,120,180,270">270</title>
                   <next>
-                    <block type="draw_turn" inline="true">
+                    <block type="draw_turn" inline="true" id="turnInput">
                       <title name="DIR">turnRight</title>
                       <value name="VALUE">
-                        <block type="math_number">
+                        <block type="math_number" id="mathNumber">
                           <title name="NUM">30</title>
                         </block>
                       </value>

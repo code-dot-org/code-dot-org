@@ -882,6 +882,8 @@ Dashboard::Application.routes.draw do
       concerns :assessments_routes
     end
 
+    get 'dashboardapi/course_summary/:course_name', to: 'api#course_summary'
+
     # Wildcard routes for API controller: select all public instance methods in the controller,
     # and all template names in `app/views/api/*`.
     api_methods = (ApiController.instance_methods(false) +

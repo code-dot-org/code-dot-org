@@ -49,6 +49,7 @@ import {validateModelId} from '../views/modelCustomization/utils';
 
 import {
   allFieldsHidden,
+  anyFieldsChanged,
   findChangedProperties,
   getNewMessageId,
   hasFilledOutModelCard,
@@ -76,6 +77,7 @@ export interface AichatState {
   showWarningModal: boolean;
   // Denotes if there is an error with the chat completion response
   chatMessageError: boolean;
+  initialAiCustomizations: AiCustomizations;
   currentAiCustomizations: AiCustomizations;
   savedAiCustomizations: AiCustomizations;
   fieldVisibilities: FieldVisibilities;
@@ -94,6 +96,7 @@ const initialState: AichatState = {
   studentChatHistory: [],
   showWarningModal: true,
   chatMessageError: false,
+  initialAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   currentAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   savedAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   fieldVisibilities: DEFAULT_VISIBILITIES,
@@ -405,7 +408,7 @@ export const submitChatContents = createAsyncThunk(
         experiments.isEnabled(experiments.AICHAT_POLLING)
       );
     } catch (error) {
-      handleChatCompletionError(error as Error, newUserMessage, dispatch);
+      await handleChatCompletionError(error as Error, newUserMessage, dispatch);
       return;
     }
 
@@ -431,7 +434,7 @@ export const submitChatContents = createAsyncThunk(
   }
 );
 
-function handleChatCompletionError(
+async function handleChatCompletionError(
   error: Error,
   newUserMessage: ChatMessage,
   dispatch: AppDispatch
@@ -443,13 +446,33 @@ function handleChatCompletionError(
   dispatch(clearChatMessagePending());
   dispatch(addChatEvent({...newUserMessage, status: Status.ERROR}));
 
-  // Display a specific error notification if the user was rate limited (HTTP 429).
+  // Display specific error notifications if the user was rate limited (HTTP 429) or not authorized (HTTP 403).
   // Otherwise, display a generic error assistant response.
   if (error instanceof NetworkError && error.response.status === 429) {
     dispatch(
       addChatEvent({
         id: getNewMessageId(),
         text: commonI18n.aiChatRateLimitError(),
+        notificationType: 'error',
+        timestamp: Date.now(),
+      })
+    );
+  } else if (error instanceof NetworkError && error.response.status === 403) {
+    const responseBody = await error.response.json();
+    const userType = responseBody?.user_type;
+
+    const userTypeToMessageText: {[key: string]: string} = {
+      teacher: commonI18n.aiChatNotAuthorizedTeacher(),
+      student: commonI18n.aiChatNotAuthorizedStudent(),
+    };
+    const messageText =
+      userTypeToMessageText[userType] ||
+      commonI18n.aiChatNotAuthorizedSignedOut();
+
+    dispatch(
+      addChatEvent({
+        id: getNewMessageId(),
+        text: messageText,
         notificationType: 'error',
         timestamp: Date.now(),
       })
@@ -578,6 +601,7 @@ const aichatSlice = createSlice({
         ),
       };
 
+      state.initialAiCustomizations = reconciledAiCustomizations;
       state.savedAiCustomizations = reconciledAiCustomizations;
       state.currentAiCustomizations = reconciledAiCustomizations;
       state.fieldVisibilities =
@@ -697,6 +721,18 @@ export const selectHasFilledOutModelCard = createSelector(
 export const selectAllFieldsHidden = createSelector(
   (state: RootState) => state.aichat.fieldVisibilities,
   allFieldsHidden
+);
+
+export const selectCurrentCustomizationsMatchInitial = createSelector(
+  (state: RootState) => state.aichat.initialAiCustomizations,
+  (state: RootState) => state.aichat.currentAiCustomizations,
+  anyFieldsChanged
+);
+
+export const selectSavedCustomizationsMatchInitial = createSelector(
+  (state: RootState) => state.aichat.initialAiCustomizations,
+  (state: RootState) => state.aichat.savedAiCustomizations,
+  anyFieldsChanged
 );
 
 export const selectAllVisibleMessages = (state: {aichat: AichatState}) => {

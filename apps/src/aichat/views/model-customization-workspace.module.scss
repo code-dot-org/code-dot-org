@@ -87,7 +87,8 @@ $default-spacing: 4px;
 
 .updateButton {
   width: 100%;
-  margin: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .buttonNoMargin {
@@ -108,4 +109,16 @@ $default-spacing: 4px;
 
 .fieldLabel {
   margin: 0;
+}
+
+.saveAlertContainer {
+  height: 10px;
+}
+
+.saveAlert {
+  margin-left: 20px;
+  height: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: white;
 }
