@@ -125,18 +125,6 @@ const VersionHistoryDropdown: React.FunctionComponent<
             </BodyTwoText>
           </label>
         ))}
-
-        {/* {versionList.map(version => (
-          <div
-            key={version.versionId}
-            className={moduleStyles.versionHistoryRow}
-          >
-            <div>{parseDate(version.lastModified)}</div>
-            <div className={moduleStyles.versionOptions}>
-              {renderVersionOptions(version)}
-            </div>
-          </div>
-        ))} */}
         <div className={moduleStyles.versionHistoryRow}>
           <Button
             text={commonI18n.startOver()}
