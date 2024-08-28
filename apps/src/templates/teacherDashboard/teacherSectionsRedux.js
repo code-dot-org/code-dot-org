@@ -587,6 +587,11 @@ export const beginGoogleImportRosterFlow = () => dispatch => {
   dispatch(beginImportRosterFlow());
 };
 
+export const rosterImportFailed = result => ({
+  type: IMPORT_ROSTER_FLOW_LIST_LOAD_FAILED,
+  status: result.status,
+});
+
 /**
  * Import the course with the given courseId from a third-party provider
  * (like Google Classroom or Clever), creating a new section. If the course

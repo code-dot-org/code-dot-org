@@ -371,6 +371,8 @@ GEM
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
     fakefs (2.5.0)
+    faker (3.4.2)
+      i18n (>= 1.8.11, < 2)
     fakeredis (0.9.2)
       redis (~> 4.8)
     faraday (1.10.3)
@@ -979,6 +981,7 @@ DEPENDENCIES
   eyes_selenium (= 3.18.4)
   factory_bot_rails (~> 6.2)
   fakefs (~> 2.5.0)
+  faker (~> 3.4)
   fakeredis
   full-name-splitter!
   gemoji

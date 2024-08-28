@@ -160,7 +160,7 @@
       "content": "Returns `true` if the `Painter` object is currently facing `\"North\"`.",
       "parameters": "[]",
       "examples": "[{\"code\":\"![](https://images.code.org/040dd0b55ad97a20c4344297fedd1e00-isfacingnorth.png)\\n\\n`isFacingNorth()` returns `true`\",\"image\":\"\"}]",
-      "syntax": "`public boolean facingNorth()`",
+      "syntax": "`public boolean isFacingNorth()`",
       "external_link": null,
       "overload_of": null,
       "return_value": null

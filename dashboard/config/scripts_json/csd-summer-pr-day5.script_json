@@ -1,0 +1,2475 @@
+{
+  "script": {
+    "name": "csd-summer-pr-day5",
+    "wrapup_video_id": null,
+    "login_required": false,
+    "properties": {
+      "is_migrated": true
+    },
+    "new_name": null,
+    "family_name": null,
+    "serialized_at": "2024-08-26 20:16:55 UTC",
+    "published_state": null,
+    "instruction_type": null,
+    "instructor_audience": null,
+    "participant_audience": null,
+    "seeding_key": {
+      "script.name": "csd-summer-pr-day5"
+    }
+  },
+  "lesson_groups": [
+    {
+      "key": "",
+      "user_facing": false,
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5"
+      }
+    }
+  ],
+  "lessons": [
+    {
+      "key": "Types of Machine Learning",
+      "name": "Lección 2: Tipos de Aprendizaje Automático",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+        "announcements": [
+          {
+            "notice": "AI/ML Professional Development",
+            "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+            "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
+            "type": "information",
+            "visibility": "Teacher-only"
+          }
+        ],
+        "assessment_opportunities": "1) **Describe the differences between supervised and unsupervised learning.**\n\n\tCheck student responses on the activity guide at the end of the class period.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "En esta lección, los estudiantes pensarán en cómo pueden crear modelos “mentales” al aprender conceptos nuevos, y cómo éstos pueden ser similares a un modelo de “aprendizaje automático”. Los estudiantes realizarán una actividad sobre patrones de colores, sin la ayuda del docente, con el objetivo de simular la creación de un modelo de aprendizaje automático. Luego, jugarán a “Green Glass Door” como ejemplo de aprendizaje supervisado. Para finalizar, clasificarán diversos escenarios entre aprendizaje “supervisado” y “no supervisado”.\n\n**Pregunta del día**: ¿Cuáles son los diferentes tipos de aprendizaje automático?",
+        "preparation": "- Review all materials for today’s lesson.\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "purpose": "- Review the Code Studio levels before the lesson so you know how to play the game called “the Green Glass Door”\n- Print or prepare to share online copies of the activity guide for each student",
+        "student_overview": "Aprenda dos tipos diferentes de aprendizaje automático: aprendizaje supervisado y no supervisado. Luego compare cómo el aprendizaje automático puede ser similar o diferente a cómo aprenden los humanos."
+      },
+      "seeding_key": {
+        "lesson.key": "Types of Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5"
+      }
+    },
+    {
+      "key": "Innovations in AI",
+      "name": "Lección 3: Innovaciones en IA (Inteligencia Artificial)",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+        "announcements": [
+          {
+            "notice": "AI/ML Professional Development",
+            "details": "Before starting this unit, consider exploring our free online self-paced professional development module that introduces you to the key concepts, tools, and projects of this unit.",
+            "link": "https://studio.code.org/s/self-paced-pl-csd5-2021",
+            "type": "information",
+            "visibility": "Teacher-only"
+          }
+        ],
+        "assessment_opportunities": "1) **Describe how Artificial Intelligence is having an impact on society**\n\n\tSee the activity guide for this lesson as a way to measure each step of the problem solving process.",
+        "overview": "En esta lección, los estudiantes explorarán una aplicación de inteligencia artificial llamada Seeing Al y estudiarán cómo ofrece ayuda a personas con discapacidad visual. Luego, los estudiantes investigarán otros ejemplos del impacto que la inteligencia artificial genera en la sociedad, enfocándose en los usuarios que se ven afectados. Para finalizar, los estudiantes compartirán sus hallazgos con los demás.\n\n**Pregunta del día**: ¿Cómo la inteligencia artificial está ayudando a resolver problemas en el mundo?",
+        "preparation": "- Print copies of the activity guide for each student\n- Prepare to digitally distribute the AI Research Areas resource to students. \n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "Investiga diferentes ejemplos de cómo se está utilizando la Inteligencia Artificial para resolver problemas en el mundo."
+      },
+      "seeding_key": {
+        "lesson.key": "Innovations in AI",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5"
+      }
+    },
+    {
+      "key": "Introduction to AI Lab",
+      "name": "Lección 6: Introducción al Laboratorio de Inteligencia Artificial",
+      "absolute_position": 3,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 3,
+      "properties": {
+        "assessment_opportunities": "1) **Use AI Lab to select features to train a model**\n\n\tEach level requires a minimum accuracy score to continue. Checking that students fully complete each level is enough to verify that they have met this objective.\n\n2) **Use data visualization tools to decide which features to include when training a model**\n\n\tCheck the free responses in the activity guide to assess this objective.\n",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "En esta lección, los estudiantes trabajarán por primera vez con la herramienta AI Lab, donde seleccionarán características para entrenar un modelo que predice una etiqueta determinada. Los estudiantes comenzarán explorando AI Lab y entrenando un modelo para reconocer formas. A continuación, ellos simularán haber sido contratados por varios restaurantes que quieren hacer recomendaciones a nuevos clientes basándose en datos recopilados por encuestas, recorrerán cada conjunto de datos, y utilizarán las herramientas de visualización de datos para identificar las características con altas relaciones en los datos.\n\n**Pregunta del día**: ¿Cómo podemos utilizar el aprendizaje automático para hacer recomendaciones?",
+        "preparation": "- Review the Code Studio levels before the lesson\n- Watch the two videos in this lesson and be familiar with AI Lab\n- Print or prepare to share online copies of the activity guide for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "Aprenda a usar AI Lab para entrenar modelos de aprendizaje automático, por ejemplo, cómo reconocer formas o cómo hacer recomendaciones de comida para un restaurante."
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5"
+      }
+    },
+    {
+      "key": "Classification Models",
+      "name": "Lección 5: Modelos de Clasificación",
+      "absolute_position": 4,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 4,
+      "properties": {
+        "assessment_opportunities": "1) **Explain how computers can separate data to make a decision**\n\n\tSee the activity guide and the wrap-up response.",
+        "creative_commons_license": "Creative Commons BY-NC-SA",
+        "overview": "En esta lección, los estudiantes participarán en una actividad que no requiere computadora, la cual simulará uno de los algoritmos de aprendizaje automático utilizados por las computadoras con el objetivo de separar los datos en grupos para ayudar en la toma de decisiones. Los estudiantes tendrán que ayudar a una computadora a aprender a clasificar alimentos en frutas o vegetales. También, tendrán que graficar 20 frutas en dos ejes diferentes comparando su “dulzor” con su “facilidad para comer”. Luego, tendrán que separar los datos en grupos: un área de frutas y otra de vegetales.\n\n**Pregunta del día**: ¿Cómo aprenden las computadoras a clasificar datos?",
+        "preparation": "- Review all materials for today’s lesson.\n- Cut out fruit & veggie cards - one set of cards for each group\n- Ruler or straightedge for each student\n- Check the [\"Teacher's Lounge\"](https://forum.code.org/t/resource-hub-ai-and-machine-learning-chapter-1-lessons-1-15/36198) forum for verified teachers to find additional strategies or resources shared by fellow teachers",
+        "student_overview": "Aprenda a crear un modelo de aprendizaje automático ayudando a una computadora a clasificar los alimentos en frutas o vegetales."
+      },
+      "seeding_key": {
+        "lesson.key": "Classification Models",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5"
+      }
+    }
+  ],
+  "lesson_activities": [
+    {
+      "key": "52f68454-cb1f-4462-a595-52e394257b95",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "52f68454-cb1f-4462-a595-52e394257b95",
+        "lesson.key": "Types of Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5"
+      }
+    },
+    {
+      "key": "11e97c8f-57c3-43b3-ad05-34aac51aff53",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "11e97c8f-57c3-43b3-ad05-34aac51aff53",
+        "lesson.key": "Types of Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5"
+      }
+    },
+    {
+      "key": "a17c0b0b-eaa3-46aa-9762-ef43b6545bbd",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a17c0b0b-eaa3-46aa-9762-ef43b6545bbd",
+        "lesson.key": "Types of Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5"
+      }
+    },
+    {
+      "key": "01c74af0-5118-43cd-aba8-5638910acf2b",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "01c74af0-5118-43cd-aba8-5638910acf2b",
+        "lesson.key": "Innovations in AI",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5"
+      }
+    },
+    {
+      "key": "d1a1d205-cb71-4138-9d32-7f49c402165c",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d1a1d205-cb71-4138-9d32-7f49c402165c",
+        "lesson.key": "Innovations in AI",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5"
+      }
+    },
+    {
+      "key": "e425d73d-6866-4a66-ba98-6c00abaef342",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e425d73d-6866-4a66-ba98-6c00abaef342",
+        "lesson.key": "Innovations in AI",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5"
+      }
+    },
+    {
+      "key": "27fd54e6-1790-4d12-9308-9c23798c1d3a",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "27fd54e6-1790-4d12-9308-9c23798c1d3a",
+        "lesson.key": "Introduction to AI Lab",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5"
+      }
+    },
+    {
+      "key": "b3df76cf-2d0e-4625-9a65-2aa613259725",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b3df76cf-2d0e-4625-9a65-2aa613259725",
+        "lesson.key": "Introduction to AI Lab",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5"
+      }
+    },
+    {
+      "key": "f5e4ecaf-cc41-4a03-a796-0beed756cb28",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "f5e4ecaf-cc41-4a03-a796-0beed756cb28",
+        "lesson.key": "Introduction to AI Lab",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5"
+      }
+    },
+    {
+      "key": "1a12c38b-44a8-4d3d-ad64-ed12acbaa9ab",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "1a12c38b-44a8-4d3d-ad64-ed12acbaa9ab",
+        "lesson.key": "Classification Models",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5"
+      }
+    },
+    {
+      "key": "ad3a72cc-9d03-4be4-a733-634c7ba3cce9",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ad3a72cc-9d03-4be4-a733-634c7ba3cce9",
+        "lesson.key": "Classification Models",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5"
+      }
+    },
+    {
+      "key": "d1d75779-ff3b-458e-97da-0683911c7807",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d1d75779-ff3b-458e-97da-0683911c7807",
+        "lesson.key": "Classification Models",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5"
+      }
+    }
+  ],
+  "activity_sections": [
+    {
+      "key": "541b909e-8297-48bc-997f-c1bcf5a75cd8",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Think of a skill you commonly use, like speaking, tying your shoes, cooking, or playing a game. How did you learn this skill?_\r\n\r\nAllow students a minute or two to write their responses, then ask for volunteers to share their ideas with the class. As students share, keep a list of themes that emerge in the front of the room.",
+        "name": "Journal Prompt\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "541b909e-8297-48bc-997f-c1bcf5a75cd8",
+        "lesson_activity.key": "52f68454-cb1f-4462-a595-52e394257b95"
+      }
+    },
+    {
+      "key": "d51512fd-009b-4446-a33f-9b37a8b50d66",
+      "position": 2,
+      "properties": {
+        "description": " **Discussion Goal:** Hopefully student responses will fall into one of three categories:\r\n\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "d51512fd-009b-4446-a33f-9b37a8b50d66",
+        "lesson_activity.key": "52f68454-cb1f-4462-a595-52e394257b95"
+      }
+    },
+    {
+      "key": "5ed03fa0-700f-4d27-b072-6fea215f8938",
+      "position": 3,
+      "properties": {
+        "description": "- They learned it with the help of someone else (like tying your shoes or playing an instrument)\r\n- They learned it on their own just by observation and chance (like how to speak, or hidden rules like if a family member has you take your shoes off before entering a house)\r\n- They learned it through trial and error and adjusting based on their mistakes (like scoring a goal or shooting a ball in certain sports, or improving at a game)"
+      },
+      "seeding_key": {
+        "activity_section.key": "5ed03fa0-700f-4d27-b072-6fea215f8938",
+        "lesson_activity.key": "52f68454-cb1f-4462-a595-52e394257b95"
+      }
+    },
+    {
+      "key": "f146adbd-e43f-4101-9b92-a7e2707fc910",
+      "position": 4,
+      "properties": {
+        "description": "This is a great list, and we can see there are a variety of ways that we learn new things as humans. Today, we’re going to talk more about how computers learn new things and think about how they might be similar or different from how we learn.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f146adbd-e43f-4101-9b92-a7e2707fc910",
+        "lesson_activity.key": "52f68454-cb1f-4462-a595-52e394257b95"
+      }
+    },
+    {
+      "key": "93e185ae-c89e-4e84-9c97-c2df95fc02f6",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day:**  What are different types of machine learning?"
+      },
+      "seeding_key": {
+        "activity_section.key": "93e185ae-c89e-4e84-9c97-c2df95fc02f6",
+        "lesson_activity.key": "52f68454-cb1f-4462-a595-52e394257b95"
+      }
+    },
+    {
+      "key": "e64016a8-1b05-4370-9cf2-51220424c846",
+      "position": 1,
+      "properties": {
+        "description": "**Preparation:** Have students keep their journal out so they can take notes on the vocabulary from today.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Vocabulary:** This lesson introduces a lot of vocabulary that is used throughout the unit. Introducing it early gives students a chance to familiarize themselves with these terms so they can begin using them to describe their work. But, it's still a lot of vocabulary, which can be challenging. Consider some of the following strategies to help students internalize these words:\n\n- Create a Word Wall that contains the word, a definition, and a drawing illustrating the concept\n- Have students record each vocabulary word in their journal along with a sketch\n- Have students read the slides aloud and practice saying the vocabulary words as they are presented.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e64016a8-1b05-4370-9cf2-51220424c846",
+        "lesson_activity.key": "11e97c8f-57c3-43b3-ad05-34aac51aff53"
+      }
+    },
+    {
+      "key": "8b841ab1-9eb5-4c0c-b79c-8d8997307131",
+      "position": 2,
+      "properties": {
+        "description": "**Display:** Show the next slide, which displays a graphic comparing A.I. Bot and a human brain.",
+        "duration": "10",
+        "name": "Unsupervised Learning"
+      },
+      "seeding_key": {
+        "activity_section.key": "8b841ab1-9eb5-4c0c-b79c-8d8997307131",
+        "lesson_activity.key": "11e97c8f-57c3-43b3-ad05-34aac51aff53"
+      }
+    },
+    {
+      "key": "40831a20-3a34-407c-a7a7-1d9c58b5cbe8",
+      "position": 3,
+      "properties": {
+        "description": "When we learn something new, we create a “Mental Model” in our brain to help represent information and break it down into pieces. For example, when learning about the solar system, we think of small orbs rotating around each other to represent the planets. Computers do this too  - when they learn something new, they create a “Machine Learning Model” to help represent the information. This model helps them make a decision. Yesterday, we helped A.I. Bot develop a model for deciding whether something is a fish or not.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "40831a20-3a34-407c-a7a7-1d9c58b5cbe8",
+        "lesson_activity.key": "11e97c8f-57c3-43b3-ad05-34aac51aff53"
+      }
+    },
+    {
+      "key": "4c6676db-e665-4f10-a4a5-bc5d2a30c8b8",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:** \n\n- **Model:** a computer program designed to make a decision"
+      },
+      "seeding_key": {
+        "activity_section.key": "4c6676db-e665-4f10-a4a5-bc5d2a30c8b8",
+        "lesson_activity.key": "11e97c8f-57c3-43b3-ad05-34aac51aff53"
+      }
+    },
+    {
+      "key": "6227964d-f21c-48d0-8a4a-2dbc4315a260",
+      "position": 5,
+      "properties": {
+        "description": "We’re going to simulate how a computer might create it's first model to learn someting new. In this example, we don't really know what we're learning yet - much like a young child, we’re trying to notice patterns and see what we can discover.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "6227964d-f21c-48d0-8a4a-2dbc4315a260",
+        "lesson_activity.key": "11e97c8f-57c3-43b3-ad05-34aac51aff53"
+      }
+    },
+    {
+      "key": "a7cb0b45-c2ce-4413-ba22-e3013b5a0faf",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Pass out a copy of the Types of Machine Learning Activity Guide to each student. Students will use this activity guide while working through levels in Code Studio.\n",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Answer Keys & Exemplars:** An answer key or exemplar is provided for verified teachers as part of the resources in this lesson plan. If you do not see an answer key or exemplar listed as a resource, [follow these steps](https://support.code.org/hc/en-us/articles/115001550131-Becoming-a-verified-teacher-CS-Principles-and-CS-Discoveries-only-) to become a verified teacher."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "a7cb0b45-c2ce-4413-ba22-e3013b5a0faf",
+        "lesson_activity.key": "11e97c8f-57c3-43b3-ad05-34aac51aff53"
+      }
+    },
+    {
+      "key": "991f1cda-b396-43bb-8a7d-da9da102017d",
+      "position": 7,
+      "properties": {
+        "description": "\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. Students will follow the directions on the level, clicking and dragging to group the rectangles together in whatever way makes sense to them. After completing this and pressing the “Next” button, students will see that they’ve created groupings of colors. Remind students to complete the activity guide as they work through this level.",
+        "progression_name": "Looking for Patterns",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Colors and Data:** The triplets of numbers in each box represents Red, Green, and Blue color values. Students may have seen this before in previous units, but it's also okay if they haven't - that's what makes this an example of unsupervised learning. After the lesson, if students want to learn more about colors and data, consider showing them this [video on colors and pixels](https://www.youtube.com/watch?v=15aqFQQVBWU) to help explain what is happening."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "991f1cda-b396-43bb-8a7d-da9da102017d",
+        "lesson_activity.key": "11e97c8f-57c3-43b3-ad05-34aac51aff53"
+      }
+    },
+    {
+      "key": "b83ef272-5f63-443d-b7f0-72e913dcf00d",
+      "position": 8,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What groupings did you create? Is there a pattern?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "b83ef272-5f63-443d-b7f0-72e913dcf00d",
+        "lesson_activity.key": "11e97c8f-57c3-43b3-ad05-34aac51aff53"
+      }
+    },
+    {
+      "key": "2c344f59-b171-4cbe-aa40-91a3e8e7d162",
+      "position": 9,
+      "properties": {
+        "description": " **Discussion Goal:** Have several students share or call on a few that you noticed while circulating around the classroom. Students may find that they unintentionally grouped cards together by color (red, green, blue) or by shade (light vs dark) or other factors. It’s okay for students to have many different answers to this, and it’s also okay for students to not have any noticeable patterns.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Vocabulary:**\n\n- **Unsupervised Learning:** Finding patterns in data that doesn't have any labels\n- **Features:** The inputs that a model uses to make decisions"
+      },
+      "seeding_key": {
+        "activity_section.key": "2c344f59-b171-4cbe-aa40-91a3e8e7d162",
+        "lesson_activity.key": "11e97c8f-57c3-43b3-ad05-34aac51aff53"
+      }
+    },
+    {
+      "key": "d7fe3413-33fd-4bd8-ade8-63544029a5c7",
+      "position": 10,
+      "properties": {
+        "description": "This is really fascinating! Just by grouping similar numbers together, we were able to find patterns and create different color groupings. This is an example of **Unsupervised Learning**, where we were able to learn something using just the data itself. The only thing we paid attention to were the numbers on the cards, called the **features**. This is similar to how online recommendations work - computers try to find patterns in the items we buy so they can suggest new items for us.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d7fe3413-33fd-4bd8-ade8-63544029a5c7",
+        "lesson_activity.key": "11e97c8f-57c3-43b3-ad05-34aac51aff53"
+      }
+    },
+    {
+      "key": "8eeca9af-d542-4910-b391-944d99e4ab20",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Which examples from the warm-up are similar to unsupervised learning?_\n\nHave students reflect on the examples shared during the warm-up, trying to identify which ones are are likely to be unsupervised learning. Try to identify situations where students were noticing patterns without clear directions, such as the unspoken rules of their home or community. They will likely think of situations from when they were much younger, especially when they thought they learned something from observation, but it didn't actually end up being true."
+      },
+      "seeding_key": {
+        "activity_section.key": "8eeca9af-d542-4910-b391-944d99e4ab20",
+        "lesson_activity.key": "11e97c8f-57c3-43b3-ad05-34aac51aff53"
+      }
+    },
+    {
+      "key": "3698a1a7-c56e-4b68-800c-0544602287a3",
+      "position": 12,
+      "properties": {
+        "description": "Unsupervised Learning is one way that computers can learn something new. But this isn't like what we did yesterday - yesterday we helped the computer learn something new by providing examples. This is like when you get older and a coach or mentor can help teach you something new. In the next level, we're going to try and learn something new with somebody's help.",
+        "duration": "10",
+        "name": "Supervised Learning",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3698a1a7-c56e-4b68-800c-0544602287a3",
+        "lesson_activity.key": "11e97c8f-57c3-43b3-ad05-34aac51aff53"
+      }
+    },
+    {
+      "key": "68bb78de-8f34-46ef-9e27-70fa7b8c42af",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio, where they will play a game called the Green Glass Door. The goal is to notice patterns in different types of words to try and get words accepted through the door."
+      },
+      "seeding_key": {
+        "activity_section.key": "68bb78de-8f34-46ef-9e27-70fa7b8c42af",
+        "lesson_activity.key": "11e97c8f-57c3-43b3-ad05-34aac51aff53"
+      }
+    },
+    {
+      "key": "2baed3dc-c469-4315-9302-916a81a394c2",
+      "position": 14,
+      "properties": {
+        "progression_name": "Green Glass Door"
+      },
+      "seeding_key": {
+        "activity_section.key": "2baed3dc-c469-4315-9302-916a81a394c2",
+        "lesson_activity.key": "11e97c8f-57c3-43b3-ad05-34aac51aff53"
+      }
+    },
+    {
+      "key": "b5296200-628e-4879-b188-4219b5b9e6f8",
+      "position": 15,
+      "properties": {
+        "description": "**Circulate:** Check in with students as they complete this activity. This activity can frustrate students, especially if they’re not sure what to be looking for. Encourage students to click the “See all results” button to see which words have been accepted and which words have been rejected. Help them notice what all the accepted words have in common, and what makes them different from the rejected works. If students figure out the secret early, encourage them to keep it a secret until the class discussion.\n\nRemind students to complete the activity guide as they work through this level.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Green Glass Door:** The secret of the game is: words with double letters are accepted and all others are rejected. Some students may have seen this game before - if so, encourage them to keep the secret to themselves until others have discovered it. If students get stuck, encourage them to look at the name of the game - green, glass, and door all have two of the same letters in a row and will be accepted. \n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b5296200-628e-4879-b188-4219b5b9e6f8",
+        "lesson_activity.key": "11e97c8f-57c3-43b3-ad05-34aac51aff53"
+      }
+    },
+    {
+      "key": "e4ac2ec8-f64a-4373-9532-7cb356dadf41",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What’s the secret - which words are accepted or rejected? How did you figure it out?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "e4ac2ec8-f64a-4373-9532-7cb356dadf41",
+        "lesson_activity.key": "11e97c8f-57c3-43b3-ad05-34aac51aff53"
+      }
+    },
+    {
+      "key": "3d887927-a778-457e-8fa8-8734ad0de92d",
+      "position": 17,
+      "properties": {
+        "description": " **Discussion Goal:** This should be an exciting moment, as students finally share the secret to how the game works. Ask a few students to share how they figured out the secret. Focus on responses that highlight how they looked for similarities within each group (like noticing the double letters) and differences between groups. Highlight how the wizard was helpful in noticing the pattern - without their examples, it would have been a lot more difficult to determine the pattern.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:** These words are spread across two slides. Use the visualizations to help explain each concept as students record the vocabulary in their notes.\n\n- **Supervised Learning** - When a human trains a model to learn with examples.\n- **Label** - the output you are trying to decide or predict with a model\n- **Training** - giving examples to a model so it can learn"
+      },
+      "seeding_key": {
+        "activity_section.key": "3d887927-a778-457e-8fa8-8734ad0de92d",
+        "lesson_activity.key": "11e97c8f-57c3-43b3-ad05-34aac51aff53"
+      }
+    },
+    {
+      "key": "3b3b164c-7e06-4ae4-8410-4c3ad8b949cf",
+      "position": 18,
+      "properties": {
+        "description": "This activity is an example of **Supervised Learning**, where we learn something new by looking at examples. The wizard was helping to **train** us by providing **labels** for each of the words - either accept or reject. After looking at enough examples, we can start to figure out the pattern ourselves. This is similar to the activity we did yesterday, or when you’re asked to identify street lights or stop signs from an image - we’re helping to train a driverless car by providing more data.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3b3b164c-7e06-4ae4-8410-4c3ad8b949cf",
+        "lesson_activity.key": "11e97c8f-57c3-43b3-ad05-34aac51aff53"
+      }
+    },
+    {
+      "key": "43839879-5508-4de7-9879-379bd01e41a2",
+      "position": 19,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Which examples from the warm up are supervised learning?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "43839879-5508-4de7-9879-379bd01e41a2",
+        "lesson_activity.key": "11e97c8f-57c3-43b3-ad05-34aac51aff53"
+      }
+    },
+    {
+      "key": "e4af4fe8-c542-424f-a053-a102f673935b",
+      "position": 20,
+      "properties": {
+        "description": " **Discussion Goal:** Have students reflect on the examples shared during the warm-up, trying to identify which ones are supervised learning. Help students understand that the key distinction is that learning happens by examples from someone who is helping or coaching during the learning.\n"
+      },
+      "seeding_key": {
+        "activity_section.key": "e4af4fe8-c542-424f-a053-a102f673935b",
+        "lesson_activity.key": "11e97c8f-57c3-43b3-ad05-34aac51aff53"
+      }
+    },
+    {
+      "key": "1ce3f8ea-4094-4c0f-b6ba-dc7b18e5e1a6",
+      "position": 21,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** On the second page of the activity guide, students are given several scenarios to identify as supervised or unsupervised learning. Have students read through the scenarios and complete the task individually, then have students pair-up to compare answers and talk through their reasoning.\n\n**Circulate:** Monitor students as they complete this activity, checking that they can reason through the differences between supervised and unsupervised learning. An answer key is provided to help check student responses.",
+        "duration": "15",
+        "name": "Supervised and Unsupervised Learning",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Human Learning vs Machine Learning:** These scenarios are provided as a way for students to think about how their own learning experiences may be similar to machine learning and to help internalize the vocabulary in this lesson, but human learning and machine learning are still fundamentally very different. \n\nFor now, guide students to see how scenarios where someone is learning by training with a teacher or mentor is similar to Supervised Learning, and scenarios where they learn independently by drawing their own conclusions is similar to Unsupervised Learning."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1ce3f8ea-4094-4c0f-b6ba-dc7b18e5e1a6",
+        "lesson_activity.key": "11e97c8f-57c3-43b3-ad05-34aac51aff53"
+      }
+    },
+    {
+      "key": "8d53e5a3-ea3d-4571-bc7e-d9d15e413b17",
+      "position": 22,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Cycle through the next several slides and invite students to share their responses. This is an opportunity to have a discussion about each scenario and hear why students think certain scenarios are similar to supervised or unsupervised learning.\n\n**Discussion Goal:** These discussion are less about being absolutely right or wrong, and more about the reasoning being used to compare why certain situations are supervised or unsupervised. Encourage students to discuss with each other, especially if they disagree about a certain scenario. Students may be unsure about some scenarios, which is a good opportunity to clarify the differences between supervised and unsupervised learning as a full class."
+      },
+      "seeding_key": {
+        "activity_section.key": "8d53e5a3-ea3d-4571-bc7e-d9d15e413b17",
+        "lesson_activity.key": "11e97c8f-57c3-43b3-ad05-34aac51aff53"
+      }
+    },
+    {
+      "key": "ede8c2b9-fc1a-4870-8473-a9ff3afc8554",
+      "position": 23,
+      "properties": {
+        "description": "Today we've seen two examples of machine learning, and how they can be similar to some of our own learning experiences as humans. Tomorrow, we'll have a chance to research examples of machine learning and see how this type of learning can be used to solve problems in the world.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "ede8c2b9-fc1a-4870-8473-a9ff3afc8554",
+        "lesson_activity.key": "11e97c8f-57c3-43b3-ad05-34aac51aff53"
+      }
+    },
+    {
+      "key": "76be7c93-5dbd-466a-b14f-7b11d15da210",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _How are human learning and machine learning similar? How are they different?_\n\n**Discussion Goal:** This is an opportunity to summarize the learning from today and apply vocabulary correctly. While discussing, try to have students use the vocabulary from the lesson (feature, label, training, etc) correctly.\n\nHave students record their thoughts in their journals, and invite a few students to share their examples with the class.",
+        "name": "Journal\r",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** Reading through student responses to this prompt can help determine how well students internalized the differences between supervised and unsupervised learning. The activity guide from today can also be used as a formative assessment with students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "76be7c93-5dbd-466a-b14f-7b11d15da210",
+        "lesson_activity.key": "a17c0b0b-eaa3-46aa-9762-ef43b6545bbd"
+      }
+    },
+    {
+      "key": "315f1e8d-bc3c-458c-91da-13f60c4a9887",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt**: _What are some examples we’ve seen so far in class of how AI is being used to solve problems? Or, what are some examples you might know of from outside of class?_",
+        "name": "Journal"
+      },
+      "seeding_key": {
+        "activity_section.key": "315f1e8d-bc3c-458c-91da-13f60c4a9887",
+        "lesson_activity.key": "01c74af0-5118-43cd-aba8-5638910acf2b"
+      }
+    },
+    {
+      "key": "bdb79e02-b297-4ba1-bbb6-82527c97d21a",
+      "position": 2,
+      "properties": {
+        "description": "Have students write in their journals, then discuss with a neighbor before sharing as a full class. Keep a list of ideas at the front of the room."
+      },
+      "seeding_key": {
+        "activity_section.key": "bdb79e02-b297-4ba1-bbb6-82527c97d21a",
+        "lesson_activity.key": "01c74af0-5118-43cd-aba8-5638910acf2b"
+      }
+    },
+    {
+      "key": "b74a00cc-e79a-4932-98af-1728f3b70523",
+      "position": 3,
+      "properties": {
+        "description": "**Discussion Goal:** This prompt helps focus attention on how Artificial Intelligence specifically is helping to solve problems, as opposed to other forms of technology. Many of the videos so far have mentioned ways that AI is being used, such as helping to screen for cancer or being used in driverless cars. Students may also draw in examples of AI from outside the classroom, especially if there has been a recent story in the news. Make sure to focus on examples that use AI specifically, especially examples that involve making decisions from data (as have been shown in class)."
+      },
+      "seeding_key": {
+        "activity_section.key": "b74a00cc-e79a-4932-98af-1728f3b70523",
+        "lesson_activity.key": "01c74af0-5118-43cd-aba8-5638910acf2b"
+      }
+    },
+    {
+      "key": "0990e567-4602-43ce-bd05-c429e59a3057",
+      "position": 4,
+      "properties": {
+        "description": "These are excellent examples, and they show a wide range of issues that artificial intelligence can help solve. Today, we’ll have a chance to dive in and see other ways that AI is making an impact on the rest of the world.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "0990e567-4602-43ce-bd05-c429e59a3057",
+        "lesson_activity.key": "01c74af0-5118-43cd-aba8-5638910acf2b"
+      }
+    },
+    {
+      "key": "90d03f67-0d11-41a2-8869-090488996b6e",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day**:  How is AI helping to solve problems around the world?"
+      },
+      "seeding_key": {
+        "activity_section.key": "90d03f67-0d11-41a2-8869-090488996b6e",
+        "lesson_activity.key": "01c74af0-5118-43cd-aba8-5638910acf2b"
+      }
+    },
+    {
+      "key": "da87f8e9-76da-44a0-8272-53149aad0e74",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the slide with the Problem Solving Process"
+      },
+      "seeding_key": {
+        "activity_section.key": "da87f8e9-76da-44a0-8272-53149aad0e74",
+        "lesson_activity.key": "d1a1d205-cb71-4138-9d32-7f49c402165c"
+      }
+    },
+    {
+      "key": "07bce960-447a-4d2d-a71e-85f79669e0cc",
+      "position": 2,
+      "properties": {
+        "description": "**Remarks**: When we use artificial intelligence to solve problems, we still go through the problem-solving process - define, prepare, try, and reflect. As we do that, it’s important to empathize with our users and ask “Who is included? Who is excluded?”. This can be harder to think about - let’s look at an example of how AI can help include people who are sometimes left out of the latest technology.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "07bce960-447a-4d2d-a71e-85f79669e0cc",
+        "lesson_activity.key": "d1a1d205-cb71-4138-9d32-7f49c402165c"
+      }
+    },
+    {
+      "key": "d9aa4779-198c-4d25-a6cd-cc8ccd984696",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Display the [r seeing_ai/csd-summer-puertorico-2024/unversioned]. Prompt students with the Questions to Consider before starting the video."
+      },
+      "seeding_key": {
+        "activity_section.key": "d9aa4779-198c-4d25-a6cd-cc8ccd984696",
+        "lesson_activity.key": "d1a1d205-cb71-4138-9d32-7f49c402165c"
+      }
+    },
+    {
+      "key": "5ff68d3c-e924-45dd-b6d0-54a356c749a3",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** \n\n* _What problems does this app help Andre solve?_\n* _What data does it use?_\n* _How does Andre interact with the app?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "5ff68d3c-e924-45dd-b6d0-54a356c749a3",
+        "lesson_activity.key": "d1a1d205-cb71-4138-9d32-7f49c402165c"
+      }
+    },
+    {
+      "key": "3fedceaa-a385-48c9-9b4b-3b3f04ebb17e",
+      "position": 5,
+      "properties": {
+        "description": "**Discussion Goal:** Students should recall several examples from the video, such as describing the outside world while riding in a taxi or recognizing handwriting or reading social media posts. Students should also be able to describe how Andre interacts with the app - usually by pointing at an object and having it recognize it. Students may struggle describing the data that it uses, but guide students to realize that it probably had to look at a lot of similar images of the world as training data before it could recognize what Andre was looking at."
+      },
+      "seeding_key": {
+        "activity_section.key": "3fedceaa-a385-48c9-9b4b-3b3f04ebb17e",
+        "lesson_activity.key": "d1a1d205-cb71-4138-9d32-7f49c402165c"
+      }
+    },
+    {
+      "key": "2387a05e-c15b-455d-985e-50e13112d837",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What could be an unintended consequence of this app? For example, maybe it could be helpful and used in a different way to solve another problem. Or, maybe it could have unintended consequences that could be harmful for users?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "2387a05e-c15b-455d-985e-50e13112d837",
+        "lesson_activity.key": "d1a1d205-cb71-4138-9d32-7f49c402165c"
+      }
+    },
+    {
+      "key": "20b1cc29-3834-4bf1-84a2-3d38d2eb7812",
+      "position": 7,
+      "properties": {
+        "description": "Clarify for students that, for this question, they do not have to refer to anything in the video - they can come up with their own ideas using their imaginations or drawing from personal experiences. Have students discuss with a neighbor first before sharing as a full group."
+      },
+      "seeding_key": {
+        "activity_section.key": "20b1cc29-3834-4bf1-84a2-3d38d2eb7812",
+        "lesson_activity.key": "d1a1d205-cb71-4138-9d32-7f49c402165c"
+      }
+    },
+    {
+      "key": "ab2a4d75-4c33-4d6e-944c-ca9d9f854b6f",
+      "position": 8,
+      "properties": {
+        "description": "**Discussion Goal:** There is no single right answer to this question - it’s more important that students share the reasoning behind their thoughts. Students may comment on how image recognition isn’t perfect and it may incorrectly identify something for Andre that could be harmful. Students may also wonder if this app could be used for deaf people as well, using audio from their environment to tell what’s going on. Or, they may remember the handwriting comment from the video and suggest that the app could be used to help students improve their handwriting."
+      },
+      "seeding_key": {
+        "activity_section.key": "ab2a4d75-4c33-4d6e-944c-ca9d9f854b6f",
+        "lesson_activity.key": "d1a1d205-cb71-4138-9d32-7f49c402165c"
+      }
+    },
+    {
+      "key": "d2d27d4f-5f07-42f8-8017-b75bbb2ab337",
+      "position": 9,
+      "properties": {
+        "description": "This is one example of how artificial intelligence is making an impact on the world. Today, you’ll have a chance to investigate other examples of AI as we investigate these same questions.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d2d27d4f-5f07-42f8-8017-b75bbb2ab337",
+        "lesson_activity.key": "d1a1d205-cb71-4138-9d32-7f49c402165c"
+      }
+    },
+    {
+      "key": "3f749a51-7221-47d8-b4df-7d01406449c9",
+      "position": 10,
+      "properties": {
+        "description": "**Distribute:** Pass out the [r innovations_in_ai_-_activity_guide/csd-summer-puertorico-2024/unversioned] to each student. "
+      },
+      "seeding_key": {
+        "activity_section.key": "3f749a51-7221-47d8-b4df-7d01406449c9",
+        "lesson_activity.key": "d1a1d205-cb71-4138-9d32-7f49c402165c"
+      }
+    },
+    {
+      "key": "5ea263ea-5f8c-4665-a82b-024efab1d486",
+      "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the instructions for the activity guide. Have students choose a topic they would like to research. They can change topics during class, but selecting one initially is helpful when starting their research."
+      },
+      "seeding_key": {
+        "activity_section.key": "5ea263ea-5f8c-4665-a82b-024efab1d486",
+        "lesson_activity.key": "d1a1d205-cb71-4138-9d32-7f49c402165c"
+      }
+    },
+    {
+      "key": "e2836a51-cacd-4f46-97fd-47038234bf49",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Research:** Have students log into a computer to begin researching. Digitally distribute a copy of the [r innovations_in_ai_research_areas_-_student_resource/csd-summer-puertorico-2024/unversioned] so students have access to some starting resources to begin their search. Students can also find this in the Student Resources section of this lesson on Code Studio."
+      },
+      "seeding_key": {
+        "activity_section.key": "e2836a51-cacd-4f46-97fd-47038234bf49",
+        "lesson_activity.key": "d1a1d205-cb71-4138-9d32-7f49c402165c"
+      }
+    },
+    {
+      "key": "ed9c312e-ac5d-4ea3-8022-7c3c17b750ef",
+      "position": 13,
+      "properties": {
+        "description": "**Circulate:** Monitor students as they research different applications of AI. Make sure students are finding examples that truly involve artificial intelligence, especially making decisions from data."
+      },
+      "seeding_key": {
+        "activity_section.key": "ed9c312e-ac5d-4ea3-8022-7c3c17b750ef",
+        "lesson_activity.key": "d1a1d205-cb71-4138-9d32-7f49c402165c"
+      }
+    },
+    {
+      "key": "d6433507-71cd-459f-a2d4-a0bf51c759ab",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Have students begin filling out the back of their activity guide, where they will describe the innovation that they found. Remind students that the final question is their opinion based on their imagination or other experiences - it does not have to come from a video or news article."
+      },
+      "seeding_key": {
+        "activity_section.key": "d6433507-71cd-459f-a2d4-a0bf51c759ab",
+        "lesson_activity.key": "d1a1d205-cb71-4138-9d32-7f49c402165c"
+      }
+    },
+    {
+      "key": "70f73f5c-00b8-492e-9e61-2a5dcd0ec607",
+      "position": 15,
+      "properties": {
+        "description": "**Circulate:** Monitor students as they answer the questions on the their activity guide. If students are struggling to write down responses, ask them to explain their innovation to you and then prompt them to write down some of their responses on the activity guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "70f73f5c-00b8-492e-9e61-2a5dcd0ec607",
+        "lesson_activity.key": "d1a1d205-cb71-4138-9d32-7f49c402165c"
+      }
+    },
+    {
+      "key": "2e82421c-1e3f-4c6b-ae1f-2b834a65ed64",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Pair-Share:** Have students find one other person in the class. Each person takes turns describing the innovation that they found, summarizing their responses to the activity guide. This activity can be repeated several times, but students should have at least one other example of an AI innovation that isn’t their own."
+      },
+      "seeding_key": {
+        "activity_section.key": "2e82421c-1e3f-4c6b-ae1f-2b834a65ed64",
+        "lesson_activity.key": "d1a1d205-cb71-4138-9d32-7f49c402165c"
+      }
+    },
+    {
+      "key": "d761f008-cf2b-4b4f-89c1-fd886f95833f",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt**: _Describe one other AI innovation you heard about during today’s lesson. What problem was it solving? What data did it use?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "d761f008-cf2b-4b4f-89c1-fd886f95833f",
+        "lesson_activity.key": "e425d73d-6866-4a66-ba98-6c00abaef342"
+      }
+    },
+    {
+      "key": "82f9450a-571d-4830-8fca-d1ab61e96b20",
+      "position": 2,
+      "properties": {
+        "description": "Students shouldn’t summarize the innovation they researched - instead, they should summarize one of the innovations they heard from their peers.",
+        "tips": [
+          {
+            "type": "assessmentOpportunity",
+            "markdown": "**Formative Assessment:** Consider using this prompt as an exit \"ticket out the door\" where students can describe the innovation they heard from a partner. Alternatively, these responses can be collected and read later to determine how well students were able to research different applications of AI."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "82f9450a-571d-4830-8fca-d1ab61e96b20",
+        "lesson_activity.key": "e425d73d-6866-4a66-ba98-6c00abaef342"
+      }
+    },
+    {
+      "key": "ec9a2a55-7ab4-4696-ae7f-e74e36d9bb69",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Yesterday we compared fruits based on how sweet they were and how easy they were to eat. What is another feature we could have used to compare foods?_\n\nHave students journal individually, then share with a neighbor before having several students share with the class",
+        "name": "Journal\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "ec9a2a55-7ab4-4696-ae7f-e74e36d9bb69",
+        "lesson_activity.key": "27fd54e6-1790-4d12-9308-9c23798c1d3a"
+      }
+    },
+    {
+      "key": "76f5442a-2b1b-498d-a964-858a822403b6",
+      "position": 2,
+      "properties": {
+        "description": " **Discussion Goal:** This prompt is meant to bridge yesterday's activity to today's lesson. Have some students share out, but keep this discussion brief so students can move into the widget portion of the warm up."
+      },
+      "seeding_key": {
+        "activity_section.key": "76f5442a-2b1b-498d-a964-858a822403b6",
+        "lesson_activity.key": "27fd54e6-1790-4d12-9308-9c23798c1d3a"
+      }
+    },
+    {
+      "key": "ab9ebde7-2631-4445-8c24-f6e52c889dae",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students log into Code Studio. The first level has a Fruit Explorer widget, which recreates some of the experience students had yesterday classifying fruits and veggies by hand."
+      },
+      "seeding_key": {
+        "activity_section.key": "ab9ebde7-2631-4445-8c24-f6e52c889dae",
+        "lesson_activity.key": "27fd54e6-1790-4d12-9308-9c23798c1d3a"
+      }
+    },
+    {
+      "key": "42f52618-05da-4a44-aa2a-a1379a5f67d8",
+      "position": 4,
+      "properties": {
+        "progression_name": "Fruit and Veggie Explorer"
+      },
+      "seeding_key": {
+        "activity_section.key": "42f52618-05da-4a44-aa2a-a1379a5f67d8",
+        "lesson_activity.key": "27fd54e6-1790-4d12-9308-9c23798c1d3a"
+      }
+    },
+    {
+      "key": "b2c76e8f-b178-45a9-b610-69816f2aef2b",
+      "position": 5,
+      "properties": {
+        "description": "**Model:** Read through the directions on the level and demonstrate how the widget works. As you explore the available features, refer back to the discussion especially if some student responses appear in the widget.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Exploring, Not Mastering:** This widget has a lot going on and students aren't expected to master how to use it. The complexity of the widget is part of the point - as the lesson continues, students will see how AI Lab can simplify this process of exploring and analyzing data."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b2c76e8f-b178-45a9-b610-69816f2aef2b",
+        "lesson_activity.key": "27fd54e6-1790-4d12-9308-9c23798c1d3a"
+      }
+    },
+    {
+      "key": "e94fa8aa-185c-4f8a-bcdf-e0eda546012f",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Using the dropdowns to adjust the features, draw a line that creates a model that correctly classifies at least 80% of the fruits and 80% of the veggies. An example is provided of what this can look like.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Overlapping Points:** Sometimes a model will _look_ like it's 100% accurate, but may not display as 100% accurate. This is because some points may overlap when they're drawn on the graph. This isn't always easy for students to see, since hovering over the points will only show one of the points. If students are struggling with this, have them watch the graphing process carefully to see the points overlap with each other."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "e94fa8aa-185c-4f8a-bcdf-e0eda546012f",
+        "lesson_activity.key": "27fd54e6-1790-4d12-9308-9c23798c1d3a"
+      }
+    },
+    {
+      "key": "e50b639e-c21b-40f8-8857-fb99dbf8628a",
+      "position": 7,
+      "properties": {
+        "description": "**Share Out:** Ask students to quickly share out the features they used to create accurate models. Students should be able to find many different combinations of features and many possible lines that can create accurate models."
+      },
+      "seeding_key": {
+        "activity_section.key": "e50b639e-c21b-40f8-8857-fb99dbf8628a",
+        "lesson_activity.key": "27fd54e6-1790-4d12-9308-9c23798c1d3a"
+      }
+    },
+    {
+      "key": "4d5ab929-899f-43d2-9cd7-a00c6f8fa67d",
+      "position": 8,
+      "properties": {
+        "description": "This activity shows how, just adding a few more features and a few additional foods to our data, it becomes much more complex for us to create the same types of models as yesterday. Sometimes this process can become overwhelming as we try to keep track of all of our data and all of our features. Today, we'll learn how machines can make this process easier for us using a new tool called AI Lab",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "4d5ab929-899f-43d2-9cd7-a00c6f8fa67d",
+        "lesson_activity.key": "27fd54e6-1790-4d12-9308-9c23798c1d3a"
+      }
+    },
+    {
+      "key": "410d9292-a9ab-41f5-829b-259327ed29b6",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day:** How can you use AI Lab to create an accurate machine learning model?"
+      },
+      "seeding_key": {
+        "activity_section.key": "410d9292-a9ab-41f5-829b-259327ed29b6",
+        "lesson_activity.key": "27fd54e6-1790-4d12-9308-9c23798c1d3a"
+      }
+    },
+    {
+      "key": "218c81de-be8f-4509-9917-d208adf4a965",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the the slide with the grid of 100 images",
+        "duration": "20",
+        "name": "Recognizing Shapes"
+      },
+      "seeding_key": {
+        "activity_section.key": "218c81de-be8f-4509-9917-d208adf4a965",
+        "lesson_activity.key": "b3df76cf-2d0e-4625-9a65-2aa613259725"
+      }
+    },
+    {
+      "key": "3e09b5c0-318e-49f2-9879-d2d7745f071e",
+      "position": 2,
+      "properties": {
+        "description": "**Discuss:** _We're going to practice using AI Lab to classify shapes. Based on these images, what are some features you think we can use in AI Lab to train a machine learning model?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "3e09b5c0-318e-49f2-9879-d2d7745f071e",
+        "lesson_activity.key": "b3df76cf-2d0e-4625-9a65-2aa613259725"
+      }
+    },
+    {
+      "key": "7e4b9d5e-5e27-4db6-a631-e1dfab7172ab",
+      "position": 3,
+      "properties": {
+        "description": "**Discussion Goal:** Encourage students to notice different properties of the shapes. Some of them may be geometric, like number of sides or angle measurements. Also encourage students to identify visual features that a machine learning model might pick up on, like the border color or fill color."
+      },
+      "seeding_key": {
+        "activity_section.key": "7e4b9d5e-5e27-4db6-a631-e1dfab7172ab",
+        "lesson_activity.key": "b3df76cf-2d0e-4625-9a65-2aa613259725"
+      }
+    },
+    {
+      "key": "f44975e5-261d-48b0-b494-1cee0585d051",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the  (5:25) video as a class.\n[r introduction_to_ai_lab_1/csd-summer-puertorico-2024/unversioned]",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Videos for Students:** Videos are intended to be watched and discussed as a class, and so they are not provided as individual levels in Code Studio. If a student needs to re-watch a video, they can be found in the Help and Tips section of levels or by visiting the Student Resources page of each lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f44975e5-261d-48b0-b494-1cee0585d051",
+        "lesson_activity.key": "b3df76cf-2d0e-4625-9a65-2aa613259725"
+      }
+    },
+    {
+      "key": "f6346ea8-a95a-4a2a-b01e-3112681c7937",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students advance to the next level in Code Studio, which has the shapes dataset preloaded. Point out the features that are included in the dataset especially if they match the predictions from the earlier discussion. ",
+        "progression_name": "Recognizing Shapes"
+      },
+      "seeding_key": {
+        "activity_section.key": "f6346ea8-a95a-4a2a-b01e-3112681c7937",
+        "lesson_activity.key": "b3df76cf-2d0e-4625-9a65-2aa613259725"
+      }
+    },
+    {
+      "key": "509ba294-1ec4-432e-a73d-9d0de9226ef4",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click on each column and look at the right-panel to notice patterns that AI Bot found in the data. Try to create sentences like \"When a AI Bot sees [blank], it tends to be a [blank] shape\" Do _not_ press the Train button yet!\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _What types of patterns did AI Bot notice?_\n\n**Discussion Goal:** Hopefully students will notice that the number of sides has a 100% relationship with each shape, which shouldn't be surprising. However, students may also notice additional patterns in the data, for example: small shapes tend to be triangles, or circles are only pink or yellow.\n\nAs students share their responses, refer back to the grid of shapes and ask them to notice if they can see the same patterns in the grid. Point out how quickly AI Bot was able to discover patterns, and that we can verify those patterns in the data - for example, when you focus just on the small shapes in the grid, most of them are triangles just like AI Bot identified.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Using the hot spots in data as a guide, select one or two features to use in your model. Then press the Train button to train your model\n\n**Circulate:** As students press the train button, they will be taken to the second half of AI Lab - the training, testing, and accuracy screens. Students can explore these screens and may have questions, but reserve explanations for now. Once the majority of the class has trained a model, regroup and continue to the next slide.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Video:** Watch the [r training_and_testing_in_ai_lab/csd-summer-puertorico-2024/unversioned] (3:59) video as a class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** pass out a copy of [r training_a_model_in_ai_lab/csd-summer-puertorico-2024/unversioned] to each student.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explore AI Lab to create models that can classify a shape. You should train multiple models from the same dataset and keep track of the accuracy by filling in the table on your activity guide\n\nOnce students have completed the table, regroup for a class discussion",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Widget Fluency:** For now, focus on helping students become fluent with AI Lab by making sure they can click columns and buttons, focus on appropriate panels, and navigate between screens. Students can also get help by reading the instructions, which update with each panel, or using the Help and Tips section to read help documents or re-watch the video.\n\n**Iterating on Features:** Students should remain in this same level and not press the Continue button until told to do so. This represents how students will typically use AI Lab with more complex datasets - training multiple models in the same level and comparing accuracy, rather than training a model just once and continuing.\n\n**Do We Really Need AI For This?** No - probably not for this particular problem. However, this exercise helps students become fluent with the flow of AI Lab while still cross-referencing with a visual dataset to confirm their understanding. This exercise also surfaces some important problems that will be important throughout the unit, such as when too much conflicting data can confuse AI Bot and lower accuracy or when AI Bot _thinks_ it knows something with high accuracy but with features that are not practical in the real-world."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "509ba294-1ec4-432e-a73d-9d0de9226ef4",
+        "lesson_activity.key": "b3df76cf-2d0e-4625-9a65-2aa613259725"
+      }
+    },
+    {
+      "key": "c669e865-4e7b-4959-839c-7db4d862ba7a",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _This model is trained only on colors and is 90% accurate. What would happen if we tried to use this model in the real-world? Do you think it would be just as accurate?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "c669e865-4e7b-4959-839c-7db4d862ba7a",
+        "lesson_activity.key": "b3df76cf-2d0e-4625-9a65-2aa613259725"
+      }
+    },
+    {
+      "key": "295bcd92-938b-4e34-800b-2806876088f0",
+      "position": 8,
+      "properties": {
+        "description": "**Discussion Goal:** Guide students to realize that just because this dataset has patterns with how the shapes are drawn doesn't mean it will represent shapes in the real world. Students can also verify this by testing the data in AI Lab - it shouldn't feel intuitive that our model can predict a shape just from its size and colors, especially if we tried showing it a wider variety of shapes. Remind students of the video, where high accuracy only means that the model can reproduce patterns in the data and that we - as humans -  have control over deciding what features are important.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Human Responsibility in AI:** Focusing on our role in selecting data and features for machine learning models foreshadows future lessons where students consider whether it is appropriate to include demographic features, such as race or gender, in machine learning models. Trying to classify a shape based on an unrelated property like its color can be analogous to trying to make a decision where unrelated features like race or gender are taken into consideration. This shouldn't be a focus in this discussion, but it can be helpful to refer back to this moment in later lessons."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "295bcd92-938b-4e34-800b-2806876088f0",
+        "lesson_activity.key": "b3df76cf-2d0e-4625-9a65-2aa613259725"
+      }
+    },
+    {
+      "key": "6657d3d7-3565-4011-85ec-8d50c54fec2b",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _Training with all possible features created a model that was less accurate than just training on one feature. Why do you think this happened?_\n\n**Discussion Goal:** Students may have a hard time articulating this particular phenomenon, and it's okay to keep this discussion short and not come to a firm conclusions. Instead, use this brief brainstorm to transition to the next slide where it will be easier to explain how this happened.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Misconception Alert:** This prompt and the following remarks are directly addressing the misconception that that training with all of the features will lead to the most accurate model. Breaking students of this habit now will lead to  more fruitful investigations in future levels as students iterate and experiment in AI Lab to find the best models."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6657d3d7-3565-4011-85ec-8d50c54fec2b",
+        "lesson_activity.key": "b3df76cf-2d0e-4625-9a65-2aa613259725"
+      }
+    },
+    {
+      "key": "9ed40c55-3530-42e4-9b56-43bb910a265f",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the following slide, which has a picture of the shape that AI Bot identified incorrectly and a picture of the shape grid that was used to train AI Bot.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Looking at the training data, why did AI Bot think this small brown shape with a red border was a triangle?_\n\n**Discussion Goal:** Encourage students to refer to the training data and see patterns with each of these features individually. For example: \n- most small shapes in the training data were triangles with very few squares\n- most shapes with a red outline in the training data were triangles with very few squares\n- there aren't a lot of brown squares in the training data\n\nIf students don't notice these patterns explicitly, that's okay - you can summarize these observations in the remarks below."
+      },
+      "seeding_key": {
+        "activity_section.key": "9ed40c55-3530-42e4-9b56-43bb910a265f",
+        "lesson_activity.key": "b3df76cf-2d0e-4625-9a65-2aa613259725"
+      }
+    },
+    {
+      "key": "71d732d1-fa22-40f8-b6a5-f0776a564921",
+      "position": 11,
+      "properties": {
+        "description": "In this example, AI Bot thought this small brown square with a red border was a triangle. If we look at the rest of the training data, we see a lot of small shapes are triangles, a lot of triangles have red borders, and not a lot of squares are brown. With all these extra features, AI Bot got confused and thought these other patterns were more important than the number of sides. This is why it's important to only use data with a strong relationship to your model and not include extra features that don't have strong relationships.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "71d732d1-fa22-40f8-b6a5-f0776a564921",
+        "lesson_activity.key": "b3df76cf-2d0e-4625-9a65-2aa613259725"
+      }
+    },
+    {
+      "key": "50ea5182-759f-469c-bf6e-65874494eedb",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the next slide, which introduces a new problem of creating recommendations based on user survey data. The class has been hired by a pizza restaurant to help figure out what customers like best based on the toppings they pick.",
+        "duration": "15",
+        "name": "Restaurant Recommendations"
+      },
+      "seeding_key": {
+        "activity_section.key": "50ea5182-759f-469c-bf6e-65874494eedb",
+        "lesson_activity.key": "b3df76cf-2d0e-4625-9a65-2aa613259725"
+      }
+    },
+    {
+      "key": "b6e7cbac-1695-4240-8b57-af5e8261a2a8",
+      "position": 13,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Code Studio:** Have students continue to the next level in Code Studio. If they are on a different panel in AI Lab, they can use the bubbles at the top of their screen and click the next bubble to jump straight to the level.",
+        "progression_name": "Pizza Recommendations"
+      },
+      "seeding_key": {
+        "activity_section.key": "b6e7cbac-1695-4240-8b57-af5e8261a2a8",
+        "lesson_activity.key": "b3df76cf-2d0e-4625-9a65-2aa613259725"
+      }
+    },
+    {
+      "key": "931cc5b3-4a93-450e-aa19-25394345054f",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students train a model to with at least 80% accuracy using the pizza data. They should record their results on their activity guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "931cc5b3-4a93-450e-aa19-25394345054f",
+        "lesson_activity.key": "b3df76cf-2d0e-4625-9a65-2aa613259725"
+      }
+    },
+    {
+      "key": "6cadd9a7-f80b-434c-ae4a-2ffc4acde504",
+      "position": 15,
+      "properties": {
+        "description": "**Circulate:** Monitor students as they complete this task, focusing on how they are using the cross tab tables to inform their decisions. Students are able to continue to the next level only if they've trained a model with 80% accuracy.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Feature Selection:** Now that students are familiar with AI Lab, this dataset emphasizes the decision making process involved with training machine learning models. Students should be using the cross-tab visualizations to make decisions about which features are useful for making recommendations, noticing when features have strong relationships and when features appear “random”. Help students see that choosing all the features or choosing features at random isn’t useful if it leads to an inaccurate model.\n\n**Order Matters**: Students may discover that the order they select their features can sometimes matter - for example, choosing \"peppers, fried chicken\" may end up with different accuracy than \"fried chicken, peppers\". This is not a vital topic for using AI Lab fluently, and happens more often in these early levels because of the smaller dataset sizes. If students ask, one way to think about it is that the first feature represents how AI Bot first tries to separate the data before continuing on to the other features. Therefore: the stronger the relationship is with the first feature you pick, the stronger the patterns AI Bot will find."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6cadd9a7-f80b-434c-ae4a-2ffc4acde504",
+        "lesson_activity.key": "b3df76cf-2d0e-4625-9a65-2aa613259725"
+      }
+    },
+    {
+      "key": "b4267481-aae6-43db-a006-05e63334f156",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Do This:** The final level has several choices for datasets that students can investigate. All of them are similar to the ones we just investigated, with different foods available that they can make recommendations for. Students should select a dataset, then investigate how they can train a recommendation model for their situation. They should also keep track of their model on their Activity Guide.",
+        "progression_name": "You Choose: Restaurant Recommendations",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Activity Completeness:** It’s important for students to feel like investigators and experimenters as they try to find an accurate machine learning model, which means they may run out of time to finish the activity guide. This is okay, especially if they spend a long time investigating their data and deciding which features to choose. Even if they don't finish, make sure they complete the last question about the strategy they used to select their features.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b4267481-aae6-43db-a006-05e63334f156",
+        "lesson_activity.key": "b3df76cf-2d0e-4625-9a65-2aa613259725"
+      }
+    },
+    {
+      "key": "1a93f186-9bc5-40d2-8244-83f04928c75c",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _What is one example from today of how humans can influence the machine learning process?_",
+        "name": "Journal"
+      },
+      "seeding_key": {
+        "activity_section.key": "1a93f186-9bc5-40d2-8244-83f04928c75c",
+        "lesson_activity.key": "f5e4ecaf-cc41-4a03-a796-0beed756cb28"
+      }
+    },
+    {
+      "key": "91fd1aa0-2cab-4698-879b-f5b3614d109c",
+      "position": 2,
+      "properties": {
+        "description": " **Discussion Goal:** Student answers may vary, but may focus on how the choice of data and features is something humans influence when creating a machine learning model. Students may also comment on our role in deciding to use a model even when it's highly accurate, such as with the shapes dataset from the first part of the lesson."
+      },
+      "seeding_key": {
+        "activity_section.key": "91fd1aa0-2cab-4698-879b-f5b3614d109c",
+        "lesson_activity.key": "f5e4ecaf-cc41-4a03-a796-0beed756cb28"
+      }
+    },
+    {
+      "key": "190b8127-ccab-4816-9bce-cb38a94a01e3",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _How many colors are in the image below? Try finding “yellow”. Where does it start? Where does it end?_\r\n\r\nAllow students to share their ideas with a neighbor before sharing with the class. Students will probably have different opinions about where yellow “starts” and “stops” - encourage several students to share their descriptions. It’s okay to not come to a consensus - the main purpose of the discussion is to motivate the following prompt.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _If you could teach a computer to separate the colors, how would you do it?_\r\n\r\nHave a few students share their ideas with the class, building off of the language they used in the last prompt. There is no right answer here - it’s more important for students to generate ideas and practice describing a process to a computer.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Vocabulary:** Display the slide with today’s vocabulary on it:\r\n\r\n- **Classification:** predicting a category based on other features.\r\n- **Categorical Data:** data that can be separated into groups.",
+        "name": "Journal\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "190b8127-ccab-4816-9bce-cb38a94a01e3",
+        "lesson_activity.key": "1a12c38b-44a8-4d3d-ad64-ed12acbaa9ab"
+      }
+    },
+    {
+      "key": "3cc0e0ea-db4a-457a-b727-84c4947af152",
+      "position": 2,
+      "properties": {
+        "description": "Colors are an example of categorical data, which means they can be grouped into different categories like “yellow” or “green” or “blue”. When we ask a computer to look at a color and tell us what it is, we’re asking the computer to classify which color it belongs to. Classification is something we learn how to do with our senses, but computers must be taught to do. Today we’re going to investigate how computers can use classification to solve problems. We’re going to start with a simple example: determining if something is a fruit or a vegetable.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3cc0e0ea-db4a-457a-b727-84c4947af152",
+        "lesson_activity.key": "1a12c38b-44a8-4d3d-ad64-ed12acbaa9ab"
+      }
+    },
+    {
+      "key": "70442fd7-b8da-455f-9850-c38b2f89e40f",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Question of the Day:**  How do computers learn to classify data?"
+      },
+      "seeding_key": {
+        "activity_section.key": "70442fd7-b8da-455f-9850-c38b2f89e40f",
+        "lesson_activity.key": "1a12c38b-44a8-4d3d-ad64-ed12acbaa9ab"
+      }
+    },
+    {
+      "key": "222e1140-8b0b-45f5-af03-a3c4c9090c61",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Let’s say you go to a friend’s house and they make a meal that you’ve never eaten before, so you’re not sure if you’ll like it or dislike it. What are some qualities you look for in foods that you think help decide whether you’ll like it or dislike it?",
+        "name": "Creating Our Model\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "222e1140-8b0b-45f5-af03-a3c4c9090c61",
+        "lesson_activity.key": "ad3a72cc-9d03-4be4-a733-634c7ba3cce9"
+      }
+    },
+    {
+      "key": "c723029f-5869-45c9-9a3b-8375728b71da",
+      "position": 2,
+      "properties": {
+        "description": " **Discussion Goal:** This prompt helps seed ideas that we’ll return to later in the lesson. The goal is to brainstorm as many food qualities that students can think of. Some examples might include: \r\n\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "c723029f-5869-45c9-9a3b-8375728b71da",
+        "lesson_activity.key": "ad3a72cc-9d03-4be4-a733-634c7ba3cce9"
+      }
+    },
+    {
+      "key": "1e6d3297-a5f1-44f3-a5ce-6995d517252c",
+      "position": 3,
+      "properties": {
+        "description": "- how sweet the food is\r\n- what color the food is\r\n- whether it’s hot or cold\r\n- whether it’s crispy or mushy\r\n- how spicy the food is\r\n\r\nIt may be helpful to share some of your own answers as a way to jump-start the conversation with students."
+      },
+      "seeding_key": {
+        "activity_section.key": "1e6d3297-a5f1-44f3-a5ce-6995d517252c",
+        "lesson_activity.key": "ad3a72cc-9d03-4be4-a733-634c7ba3cce9"
+      }
+    },
+    {
+      "key": "d96996d3-4dcc-469a-ac60-4d16c386bfa7",
+      "position": 4,
+      "properties": {
+        "description": "This is a great list! What we’ve basically come up with are different features of food - things we can use to help make decisions. Today, we’re going to see if we can teach a computer to decide if a food is a fruit or vegetable. For now, we’re going to focus on only two features: how sweet the food is, and how easy it is to eat. We’ve also got 20 foods that we can use to train the computer to help it tell the difference between fruits and veggies.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d96996d3-4dcc-469a-ac60-4d16c386bfa7",
+        "lesson_activity.key": "ad3a72cc-9d03-4be4-a733-634c7ba3cce9"
+      }
+    },
+    {
+      "key": "11a27318-c05a-48b4-a7e9-773592a5b4de",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:** Pass out a copy of the Fruit or Veggie Worksheet to each student. Pass out a set of Fruit and Veggies Cards to each group of students. If possible, have the cards cut-out ahead of time to make it easier to share between students in the same group.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Create a Class Graph:** If you have the classroom space available, we recommend adapting this activity to be completed physically as an entire class on a graph that has been created on the floor of the classroom. The flow of the activity remains the same, except each student takes a card and physically stands in their recommended spot on the graph. The class then decides on how to use string to divide the students into “fruit” and “vegetable” groups. Any remaining students then take on the role of the “test” foods and see how they would be classified as either a fruit or vegetable.\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "11a27318-c05a-48b4-a7e9-773592a5b4de",
+        "lesson_activity.key": "ad3a72cc-9d03-4be4-a733-634c7ba3cce9"
+      }
+    },
+    {
+      "key": "b224355d-6661-4cf2-8094-630360d3252e",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show students the directions for this task and walk through them with students. Point out that students will need to use the food cards to create the points on their graphs."
+      },
+      "seeding_key": {
+        "activity_section.key": "b224355d-6661-4cf2-8094-630360d3252e",
+        "lesson_activity.key": "ad3a72cc-9d03-4be4-a733-634c7ba3cce9"
+      }
+    },
+    {
+      "key": "225a371a-29db-43bb-a55f-066d06f038cf",
+      "position": 7,
+      "properties": {
+        "description": "**Model:** Graph at least one fruit or vegetable. Emphasize that students can use the recommended values, or they can use their own judgement to rate how sweet and easy to eat a food item is - this helps create slightly different graphs that can be compared in the next part of the activity.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Graphing Skills:** Consider this an opportunity to reinforce skills that students are learning in their math class, and be careful not to assume students are already fluent with graphing points. You may decide to model several points to help students graph their points, and you may encourage them to use the labels on the graphs to help place their points.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "225a371a-29db-43bb-a55f-066d06f038cf",
+        "lesson_activity.key": "ad3a72cc-9d03-4be4-a733-634c7ba3cce9"
+      }
+    },
+    {
+      "key": "d80efb9f-f934-4cd1-9d0f-175ee722b769",
+      "position": 8,
+      "properties": {
+        "description": "**Circulate:** Monitor students as they graph their points. For fruits and veggies that students have eaten before, encourage them to make their own decisions about how “sweet” and “easy to eat” the foods are. If a student hasn’t heard of the food before, encourage them to use the recommended values instead."
+      },
+      "seeding_key": {
+        "activity_section.key": "d80efb9f-f934-4cd1-9d0f-175ee722b769",
+        "lesson_activity.key": "ad3a72cc-9d03-4be4-a733-634c7ba3cce9"
+      }
+    },
+    {
+      "key": "b1a5cdeb-fbca-4e4d-a0c9-93d6093d2e91",
+      "position": 9,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "b1a5cdeb-fbca-4e4d-a0c9-93d6093d2e91",
+        "lesson_activity.key": "ad3a72cc-9d03-4be4-a733-634c7ba3cce9"
+      }
+    },
+    {
+      "key": "2d24cf03-3f1c-48fb-b5e2-24d4e93a2e10",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Display:** Show students the example graph that you get when using only the recommended values. Point out that it appears that fruits and veggies seem to naturally group together. Ask students to raise their hands if their graphs also have fruits and vegetables clustered together.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Imperfect Groups:** since students have the option to use their own judgement on where to place their fruits, they may end up in a situation where some foods are intermixed with the opposite group. This is okay, and reflects what happens in the real-world where sometimes data is messy and can’t be perfectly separated.\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "2d24cf03-3f1c-48fb-b5e2-24d4e93a2e10",
+        "lesson_activity.key": "ad3a72cc-9d03-4be4-a733-634c7ba3cce9"
+      }
+    },
+    {
+      "key": "14e608bc-c310-4439-acac-c72507989f61",
+      "position": 11,
+      "properties": {
+        "description": "It looks like we picked two really great features to focus on - these are doing a really great job of separating our foods into fruits and veggies. This is really great for a computer - if it wants to determine whether a food is a fruit or a vegetable, it just needs to see where it is on the graph! Things get a little tricky in the middle of the graph though, so we need to make a decision: how can we divide our graph into a fruit side or a veggie side?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "14e608bc-c310-4439-acac-c72507989f61",
+        "lesson_activity.key": "ad3a72cc-9d03-4be4-a733-634c7ba3cce9"
+      }
+    },
+    {
+      "key": "5d2efcba-d72a-4aa8-9a6a-0522af3fc466",
+      "position": 12,
+      "properties": {
+        "description": "**Model:** Demonstrate on the slide how there are many different lines you could draw that separate the graph into a fruit-side and a veggie side. The most important factors to consider are that you have as many fruits as you can on one side, and as many vegetables as you can on the other. As a class, decide on a line you want to use to divide the example graph on the slides and draw it in.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students draw their own line to split the graph into a fruits side and a veggies side."
+      },
+      "seeding_key": {
+        "activity_section.key": "5d2efcba-d72a-4aa8-9a6a-0522af3fc466",
+        "lesson_activity.key": "ad3a72cc-9d03-4be4-a733-634c7ba3cce9"
+      }
+    },
+    {
+      "key": "cfb21b4c-2403-44da-855b-bad0d85b0b6f",
+      "position": 13,
+      "properties": {
+        "description": "Congratulations! We just created a model that we can use to help a computer make a decision! When a computer sees a new food, it will plot a new point on the graph and use that to decide whether it’s a fruit or a vegetable. Let’s see how our models do with some test foods!",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "This activity simulates the **Support Vector Machine (SVM)** machine learning algorithm for making predictions based on data. This algorithm focuses on separating data while maximizing the margin of separation.\n\nIf you would like to learn more about SVM and other machine learning algorithms, [ml-playground.com](https://ml-playground.com/) has an interactive widget and links to additional resources. This website is intended for adults looking to learn more about machine learning, especially considering the amount of math involved, so we do not recommend sharing this with students."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "cfb21b4c-2403-44da-855b-bad0d85b0b6f",
+        "lesson_activity.key": "ad3a72cc-9d03-4be4-a733-634c7ba3cce9"
+      }
+    },
+    {
+      "key": "a95e535a-30fe-4ab1-809a-e4987cbaab07",
+      "position": 14,
+      "properties": {
+        "description": "**Display:** The next several slides have different foods to test against the model. These examples have been designed to motivate certain conversations. Have students keep track of how many examples their models get correct and incorrect.\r\n\r\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display - Raspberry & Pumpkin:** These two examples are designed to match the expectations of the model. Most students’ models should correctly identify the Raspberry as a fruit and the pumpkin as a vegetable.",
+        "name": "Testing Our Model\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "a95e535a-30fe-4ab1-809a-e4987cbaab07",
+        "lesson_activity.key": "ad3a72cc-9d03-4be4-a733-634c7ba3cce9"
+      }
+    },
+    {
+      "key": "6c7d1bf5-d290-48d0-85e0-ad74012508c0",
+      "position": 15,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "6c7d1bf5-d290-48d0-85e0-ad74012508c0",
+        "lesson_activity.key": "ad3a72cc-9d03-4be4-a733-634c7ba3cce9"
+      }
+    },
+    {
+      "key": "7be6fff1-7067-4b05-a3de-cb6e810e12e8",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>   **Display - Tomato and Cucumber:** These two examples are more ambiguous and, even within your classroom, students may not know whether these are fruits or vegetables. Both of these items are technically fruits because they contain seeds, but are usually used as vegetables when making foods. Ask the class to share how their models classified these items, noting that students may have different answers depending on how they drew their lines.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Right on the Line:** Depending on how your students draw their lines, they may have a situation where a test fruit is exactly on the line they drew. If this happens, remind students that the model has to make some kind of decision, so they need to come up with their own rule for what happens when a point lands right on the line - is it always a fruit? Or always a vegetable?\r\n"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7be6fff1-7067-4b05-a3de-cb6e810e12e8",
+        "lesson_activity.key": "ad3a72cc-9d03-4be4-a733-634c7ba3cce9"
+      }
+    },
+    {
+      "key": "be06804b-dc7a-4795-afb4-903860e57df1",
+      "position": 17,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** _Without looking at anyone else’s paper, why do you think some people got different answers than others?_"
+      },
+      "seeding_key": {
+        "activity_section.key": "be06804b-dc7a-4795-afb4-903860e57df1",
+        "lesson_activity.key": "ad3a72cc-9d03-4be4-a733-634c7ba3cce9"
+      }
+    },
+    {
+      "key": "f43752ab-0217-4c80-b8aa-cfc462c1187f",
+      "position": 18,
+      "properties": {
+        "description": " **Discussion Goal:** Students should realize that how they decided to draw their line impacts the decision that their model makes. You can model this in the front of the room with the example graph on the slides - if the line becomes a little more tilted or goes completely vertical, it can change the way that some foods are classified. Emphasize that this is why testing is important - it helps make sure the decisions we’re making are correct.\r\n\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "f43752ab-0217-4c80-b8aa-cfc462c1187f",
+        "lesson_activity.key": "ad3a72cc-9d03-4be4-a733-634c7ba3cce9"
+      }
+    },
+    {
+      "key": "aca4e05f-bdda-4bac-aa30-f12ba6b5ce19",
+      "position": 19,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display - Lemon and Sweet Potato:** These two examples are intentionally designed to be incorrect. Students will likely misclassify these two items - their model will think a lemon is a vegetable and that a sweet potato is a fruit."
+      },
+      "seeding_key": {
+        "activity_section.key": "aca4e05f-bdda-4bac-aa30-f12ba6b5ce19",
+        "lesson_activity.key": "ad3a72cc-9d03-4be4-a733-634c7ba3cce9"
+      }
+    },
+    {
+      "key": "8c7ebaa0-aa8e-4de0-a1f4-98054273806c",
+      "position": 20,
+      "properties": {
+        "description": "Most models will probably get this answer incorrect, which means our foods were misclassified. This happens in real-life too - sometimes models make mistakes and get incorrect answers. For something like classifying fruits and vegetables, it may not be a huge deal. But if we were making decisions about people instead, this could be a really big deal. This is why testing is so important - we need to make sure our models are doing a good job before letting them make decisions for us.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8c7ebaa0-aa8e-4de0-a1f4-98054273806c",
+        "lesson_activity.key": "ad3a72cc-9d03-4be4-a733-634c7ba3cce9"
+      }
+    },
+    {
+      "key": "3847af6f-5959-41fe-b4cd-fcc6551f714f",
+      "position": 21,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display - Ice Cream and Flaming Hot Cheetos:** These two examples are deliberately silly and fun, and you should lean-in to how the model will likely classify Ice Cream as a fruit and Flaming Hot Cheetos as a vegetable."
+      },
+      "seeding_key": {
+        "activity_section.key": "3847af6f-5959-41fe-b4cd-fcc6551f714f",
+        "lesson_activity.key": "ad3a72cc-9d03-4be4-a733-634c7ba3cce9"
+      }
+    },
+    {
+      "key": "a0737078-8db2-41a0-957c-6111817963ea",
+      "position": 22,
+      "properties": {
+        "description": "I think we can all agree these examples are pretty silly. They’re an example of using a model for something other than what it was intended for. Since we trained our model only on fruits and vegetables, it doesn’t work very well on other types of foods. If we wanted to improve our model, we’d probably need a lot more data and a lot more features - more than just how sweet and easy-to-eat food is. This gets a lot harder for us as humans to understand, and we couldn’t use our graph paper anymore. Luckily, computers can help us with this! Tomorrow we’ll see how a computer looks at lots of data and lots of features to help make decisions",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a0737078-8db2-41a0-957c-6111817963ea",
+        "lesson_activity.key": "ad3a72cc-9d03-4be4-a733-634c7ba3cce9"
+      }
+    },
+    {
+      "key": "0d42bcae-5132-4368-9d95-84433e73585b",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** _If you were to break down the process we went through today to create a model and use it into steps for a computer to follow, how would you describe those steps?_\n\n**Discussion Goal:** This prompt bridges today’s lesson to tomorrow’s, where a computer will be doing most of this work behind-the-scenes. Read through student responses to see how well they understood the process of today. Answers could be as simple as:\n\n- Graph the data\n- Draw a line to separate the data into zones\n- When new data comes, see which zone it lands in to make a decision",
+        "name": "Journal\r"
+      },
+      "seeding_key": {
+        "activity_section.key": "0d42bcae-5132-4368-9d95-84433e73585b",
+        "lesson_activity.key": "d1d75779-ff3b-458e-97da-0683911c7807"
+      }
+    }
+  ],
+  "script_levels": [
+    {
+      "chapter": 1,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Looking for Patterns"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-L2 unsupervised - 1_-pr-2024"
+        ],
+        "lesson.key": "Types of Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5",
+        "activity_section.key": "991f1cda-b396-43bb-8a7d-da9da102017d"
+      },
+      "level_keys": [
+        "ml-L2 unsupervised - 1_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Green Glass Door"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-L2 supervised - green glass door_-pr-2024"
+        ],
+        "lesson.key": "Types of Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5",
+        "activity_section.key": "2baed3dc-c469-4315-9302-916a81a394c2"
+      },
+      "level_keys": [
+        "ml-L2 supervised - green glass door_-pr-2024"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Fruit and Veggie Explorer"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-intro ai lab- fruit veggie widget_-pr-2025"
+        ],
+        "lesson.key": "Introduction to AI Lab",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5",
+        "activity_section.key": "42f52618-05da-4a44-aa2a-a1379a5f67d8"
+      },
+      "level_keys": [
+        "ml-intro ai lab- fruit veggie widget_-pr-2025"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Recognizing Shapes"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-intro ai lab-shapes v1_-pr-2025"
+        ],
+        "lesson.key": "Introduction to AI Lab",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5",
+        "activity_section.key": "f6346ea8-a95a-4a2a-b01e-3112681c7937"
+      },
+      "level_keys": [
+        "ml-intro ai lab-shapes v1_-pr-2025"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Pizza Recommendations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-intro categorical-pizza_-pr-2025"
+        ],
+        "lesson.key": "Introduction to AI Lab",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5",
+        "activity_section.key": "b6e7cbac-1695-4240-8b57-af5e8261a2a8"
+      },
+      "level_keys": [
+        "ml-intro categorical-pizza_-pr-2025"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "You Choose: Restaurant Recommendations"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "ml-intro categorical-food choices_-pr-2025"
+        ],
+        "lesson.key": "Introduction to AI Lab",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5",
+        "activity_section.key": "b4267481-aae6-43db-a006-05e63334f156"
+      },
+      "level_keys": [
+        "ml-intro categorical-food choices_-pr-2025"
+      ]
+    }
+  ],
+  "levels_script_levels": [
+    {
+      "seeding_key": {
+        "level.key": "ml-L2 unsupervised - 1_-pr-2024",
+        "script_level.level_keys": [
+          "ml-L2 unsupervised - 1_-pr-2024"
+        ],
+        "lesson.key": "Types of Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5",
+        "activity_section.key": "991f1cda-b396-43bb-8a7d-da9da102017d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-L2 supervised - green glass door_-pr-2024",
+        "script_level.level_keys": [
+          "ml-L2 supervised - green glass door_-pr-2024"
+        ],
+        "lesson.key": "Types of Machine Learning",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5",
+        "activity_section.key": "2baed3dc-c469-4315-9302-916a81a394c2"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-intro ai lab- fruit veggie widget_-pr-2025",
+        "script_level.level_keys": [
+          "ml-intro ai lab- fruit veggie widget_-pr-2025"
+        ],
+        "lesson.key": "Introduction to AI Lab",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5",
+        "activity_section.key": "42f52618-05da-4a44-aa2a-a1379a5f67d8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-intro ai lab-shapes v1_-pr-2025",
+        "script_level.level_keys": [
+          "ml-intro ai lab-shapes v1_-pr-2025"
+        ],
+        "lesson.key": "Introduction to AI Lab",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5",
+        "activity_section.key": "f6346ea8-a95a-4a2a-b01e-3112681c7937"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-intro categorical-pizza_-pr-2025",
+        "script_level.level_keys": [
+          "ml-intro categorical-pizza_-pr-2025"
+        ],
+        "lesson.key": "Introduction to AI Lab",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5",
+        "activity_section.key": "b6e7cbac-1695-4240-8b57-af5e8261a2a8"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "ml-intro categorical-food choices_-pr-2025",
+        "script_level.level_keys": [
+          "ml-intro categorical-food choices_-pr-2025"
+        ],
+        "lesson.key": "Introduction to AI Lab",
+        "lesson_group.key": "",
+        "script.name": "csd-summer-pr-day5",
+        "activity_section.key": "b4267481-aae6-43db-a006-05e63334f156"
+      }
+    }
+  ],
+  "resources": [
+    {
+      "name": "[KEY] Classification Models",
+      "url": "https://docs.google.com/document/d/1mCap8x_7umJbt3x7tRQj6J_txrfJNjHosNNSnyb5FKc/view",
+      "key": "_key_classification_models",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_classification_models"
+      }
+    },
+    {
+      "name": "[KEY] Training a Model in AI Lab",
+      "url": "https://docs.google.com/document/d/1B1PstB4HD-nWmOvUvyb0bpaZPm-ecx9iBMn9bj9fP4c/view",
+      "key": "_key_training_a_model_in_ai_lab",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_training_a_model_in_ai_lab"
+      }
+    },
+    {
+      "name": "Accuracy in AI Lab",
+      "url": "https://drive.google.com/file/d/1T_YmYjGf4xEauRt7uBwI4ty_NE7KShgY/view?usp=sharing",
+      "key": "accuracy_in_ai_lab",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "accuracy_in_ai_lab"
+      }
+    },
+    {
+      "name": "Classification Models",
+      "url": "https://docs.google.com/document/d/12gAWt2e0r-RSWFFUDaV9KgiPMhqFzfr8AoY0Mdm9uRY/edit",
+      "key": "classification_models",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "classification_models"
+      }
+    },
+    {
+      "name": "Classification Models",
+      "url": "https://docs.google.com/presentation/d/1f5PG9ASPlRlXNM7gBMOribyQaYpVAaVW9EXWjtrqk1c/template/preview",
+      "key": "classification_models_1",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "classification_models_1"
+      }
+    },
+    {
+      "name": "Fruit & Veggie Cards",
+      "url": "https://docs.google.com/document/d/1tHBrTeEpIflpl06y4wYqLNnT476X8X--wfPZsMjMTiM/edit",
+      "key": "fruit_veggie_cards",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "fruit_veggie_cards"
+      }
+    },
+    {
+      "name": "Innovations in AI",
+      "url": "https://docs.google.com/presentation/d/1JqvABbuAj3LiCxZQw91KuesvIxlJdXxU5iOabI-FjrM/template/preview",
+      "key": "innovations_in_ai",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "innovations_in_ai"
+      }
+    },
+    {
+      "name": "Innovations in AI - Activity Guide",
+      "url": "https://docs.google.com/document/d/1YBbNfg7H4dAGGANAESiX8cXcqbTX_ml-KiG8HjDatpE/edit#",
+      "key": "innovations_in_ai_-_activity_guide",
+      "properties": {
+        "audience": "Student"
+      },
+      "seeding_key": {
+        "resource.key": "innovations_in_ai_-_activity_guide"
+      }
+    },
+    {
+      "name": "Innovations in AI Research Areas - Student Resource",
+      "url": "https://docs.google.com/document/d/1l63nyHKHrONkgQY5u07tEGyjDuI661559EggvnyQftU/edit#",
+      "key": "innovations_in_ai_research_areas_-_student_resource",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true
+      },
+      "seeding_key": {
+        "resource.key": "innovations_in_ai_research_areas_-_student_resource"
+      }
+    },
+    {
+      "name": "Introduction to AI Lab",
+      "url": "https://docs.google.com/presentation/d/1lxgUDjozD9CF0Nv5n9sWmdguEp3lFX9k90cN-NGQnms/template/preview",
+      "key": "introduction_to_ai_lab",
+      "properties": {
+        "audience": "Teacher",
+        "download_url": "https://docs.google.com/presentation/d/1lxgUDjozD9CF0Nv5n9sWmdguEp3lFX9k90cN-NGQnms/export?format=pdf",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_ai_lab"
+      }
+    },
+    {
+      "name": "Introduction to AI Lab",
+      "url": "https://www.youtube.com/watch?v=bGJ05vdI3xA",
+      "key": "introduction_to_ai_lab_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "introduction_to_ai_lab_1"
+      }
+    },
+    {
+      "name": "Seeing AI",
+      "url": "https://www.youtube.com/watch?v=DybczED-GKE",
+      "key": "seeing_ai",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "seeing_ai"
+      }
+    },
+    {
+      "name": "Selecting Features",
+      "url": "https://drive.google.com/file/d/1GLf_xq333r4tR2XHMoP24rq0KQVLM8z_/view?usp=sharing",
+      "key": "selecting_features",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "selecting_features"
+      }
+    },
+    {
+      "name": "Training a Model in AI Lab",
+      "url": "https://docs.google.com/document/d/17gVZ5E_0_bBddvEKnO_wFTlorJnGkW-KNAcz0zWRbAE/edit",
+      "key": "training_a_model_in_ai_lab",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "training_a_model_in_ai_lab"
+      }
+    },
+    {
+      "name": "Training and Testing in AI Lab",
+      "url": "https://www.youtube.com/watch?v=HcCtdaiMWPQ",
+      "key": "training_and_testing_in_ai_lab",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "training_and_testing_in_ai_lab"
+      }
+    },
+    {
+      "name": "Types of Machine Learning",
+      "url": "https://docs.google.com/presentation/d/1FwOsAQW3y0eQ7NwdUitWwXbj74egitdSdrHGnSxXuOg/template/preview",
+      "key": "types_of_machine_learning",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "types_of_machine_learning"
+      }
+    },
+    {
+      "name": "Types of Machine Learning",
+      "url": "https://docs.google.com/document/d/1-riv3aqTarYTrUJlrrzWDU86Aga5gx1f7es6MoLg5bY/edit#",
+      "key": "types_of_machine_learning_1",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "types_of_machine_learning_1"
+      }
+    },
+    {
+      "name": "Types of Machine Learning",
+      "url": "https://docs.google.com/document/d/1vFoKH-h2k6wZRtlOeXYRzVORv1dzTsFO7EJ7l_CxV6Q/edit#",
+      "key": "types_of_machine_learning_2",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "types_of_machine_learning_2"
+      }
+    },
+    {
+      "name": "Using Data with Categorical Features",
+      "url": "https://drive.google.com/file/d/1blY6e6hX5DszuAdHXTEeB735kYUy1Hyj/view?usp=sharing",
+      "key": "using_data_with_categorical_features",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "using_data_with_categorical_features"
+      }
+    }
+  ],
+  "lessons_resources": [
+    {
+      "seeding_key": {
+        "lesson.key": "Classification Models",
+        "resource.key": "_key_classification_models"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Classification Models",
+        "resource.key": "classification_models"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Classification Models",
+        "resource.key": "classification_models_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Classification Models",
+        "resource.key": "fruit_veggie_cards"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in AI",
+        "resource.key": "innovations_in_ai"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in AI",
+        "resource.key": "innovations_in_ai_-_activity_guide"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in AI",
+        "resource.key": "innovations_in_ai_research_areas_-_student_resource"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in AI",
+        "resource.key": "seeing_ai"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
+        "resource.key": "_key_training_a_model_in_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
+        "resource.key": "accuracy_in_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
+        "resource.key": "introduction_to_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
+        "resource.key": "introduction_to_ai_lab_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
+        "resource.key": "selecting_features"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
+        "resource.key": "training_a_model_in_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
+        "resource.key": "training_and_testing_in_ai_lab"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
+        "resource.key": "using_data_with_categorical_features"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Types of Machine Learning",
+        "resource.key": "types_of_machine_learning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Types of Machine Learning",
+        "resource.key": "types_of_machine_learning_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Types of Machine Learning",
+        "resource.key": "types_of_machine_learning_2"
+      }
+    }
+  ],
+  "scripts_resources": [
+
+  ],
+  "scripts_student_resources": [
+
+  ],
+  "vocabularies": [
+    {
+      "key": "categorical_data",
+      "word": "Categorical Data",
+      "definition": "data that can be separated into groups",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "categorical_data"
+      }
+    },
+    {
+      "key": "classification",
+      "word": "Classification",
+      "definition": "predicting a category based on other features",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "classification"
+      }
+    },
+    {
+      "key": "features",
+      "word": "Features",
+      "definition": "The inputs that a model uses to make decisions",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "features"
+      }
+    },
+    {
+      "key": "label",
+      "word": "Label",
+      "definition": "the output you are trying to decide or predict with a model",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "label"
+      }
+    },
+    {
+      "key": "model",
+      "word": "Model",
+      "definition": "a computer program designed to make a decision",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "model"
+      }
+    },
+    {
+      "key": "supervised_learning",
+      "word": "Supervised Learning",
+      "definition": "When a human trains a model to learn with examples",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "supervised_learning"
+      }
+    },
+    {
+      "key": "training",
+      "word": "Training",
+      "definition": "giving examples to a model so it can learn",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "training"
+      }
+    },
+    {
+      "key": "unsupervised_learning",
+      "word": "Unsupervised Learning",
+      "definition": "Finding patterns in data that doesn't have any labels",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "unsupervised_learning"
+      }
+    }
+  ],
+  "lessons_vocabularies": [
+    {
+      "seeding_key": {
+        "lesson.key": "Classification Models",
+        "vocabulary.key": "categorical_data"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Classification Models",
+        "vocabulary.key": "classification"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Types of Machine Learning",
+        "vocabulary.key": "features"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Types of Machine Learning",
+        "vocabulary.key": "label"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Types of Machine Learning",
+        "vocabulary.key": "model"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Types of Machine Learning",
+        "vocabulary.key": "supervised_learning"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Types of Machine Learning",
+        "vocabulary.key": "training"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Types of Machine Learning",
+        "vocabulary.key": "unsupervised_learning"
+      }
+    }
+  ],
+  "lessons_programming_expressions": [
+
+  ],
+  "objectives": [
+    {
+      "key": "091b549e-9cb0-4d8b-be40-c2e03debb1bc",
+      "properties": {
+        "description": "Describe the differences between supervised and unsupervised learning."
+      },
+      "seeding_key": {
+        "lesson.key": "Types of Machine Learning",
+        "objective.key": "091b549e-9cb0-4d8b-be40-c2e03debb1bc"
+      }
+    },
+    {
+      "key": "1e1c7906-7be6-4629-9b41-40ebe2e9ccb4",
+      "properties": {
+        "description": "Use data visualization tools to decide which features to include when training a model"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
+        "objective.key": "1e1c7906-7be6-4629-9b41-40ebe2e9ccb4"
+      }
+    },
+    {
+      "key": "582d4b12-c178-41f4-bc41-e18ece9a31e8",
+      "properties": {
+        "description": "Describe how Artificial Intelligence is having an impact on society"
+      },
+      "seeding_key": {
+        "lesson.key": "Innovations in AI",
+        "objective.key": "582d4b12-c178-41f4-bc41-e18ece9a31e8"
+      }
+    },
+    {
+      "key": "8ed595c2-fd6a-4e66-a681-ed24a51e5ef4",
+      "properties": {
+        "description": "Use AI Lab to select features to train a model"
+      },
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
+        "objective.key": "8ed595c2-fd6a-4e66-a681-ed24a51e5ef4"
+      }
+    },
+    {
+      "key": "bdc1cf71-b1df-4063-a6d0-a9592f69d397",
+      "properties": {
+        "description": "Explain how computers can separate data to make a decision"
+      },
+      "seeding_key": {
+        "lesson.key": "Classification Models",
+        "objective.key": "bdc1cf71-b1df-4063-a6d0-a9592f69d397"
+      }
+    }
+  ],
+  "lessons_standards": [
+    {
+      "seeding_key": {
+        "lesson.key": "Classification Models",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-ii.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Classification Models",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Classification Models",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Innovations in AI",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-i.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-AP-17"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-DA-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Introduction to AI Lab",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-DA-05"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Types of Machine Learning",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-i.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Types of Machine Learning",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-i.9-12"
+      }
+    }
+  ],
+  "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
+  ]
+}

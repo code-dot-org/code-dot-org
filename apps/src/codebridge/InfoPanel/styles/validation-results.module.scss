@@ -1,0 +1,42 @@
+@import 'color.scss';
+
+%icon {
+  margin-right: 4px;
+}
+.passIcon {
+  @extend %icon;
+  color: $light_affirmative_500;
+}
+
+.failIcon {
+  @extend %icon;
+  color: $light_negative_500;
+}
+
+.cautionIcon {
+  @extend %icon;
+  color: $light_caution_500
+}
+
+.validationResultsTable {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid $light_white;
+
+  thead td{
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  td {
+    border: 1px solid $light_white;
+    padding: 4px;
+  }
+}
+
+.testSummary {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}

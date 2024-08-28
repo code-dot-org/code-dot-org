@@ -29,5 +29,8 @@ describe('LoginTypeSelection', () => {
     screen.getByText(locale.password());
     screen.getByText(locale.confirm_password());
     screen.getByText(locale.minimum_six_chars());
+
+    // Renders button that sends the user to the Account Type page
+    screen.getByRole('button', {name: locale.create_my_account()});
   });
 });
