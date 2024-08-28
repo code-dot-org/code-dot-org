@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "music-ai-2024",
-    "serialized_at": "2024-08-19 20:59:37 UTC",
+    "serialized_at": "2024-08-27 20:13:52 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -68,6 +68,8 @@
       "key": "48e2a093-af37-4379-bf46-2164c9ca9750",
       "position": 1,
       "properties": {
+        "name": "Music Lab: A.I. Edition",
+        "progression_name": "Video: Introduction to Music Lab with A.I. "
       },
       "seeding_key": {
         "activity_section.key": "48e2a093-af37-4379-bf46-2164c9ca9750",
@@ -84,7 +86,8 @@
       "properties": {
         "level_keys": [
           "music-ai-video-intro"
-        ]
+        ],
+        "progression": "Video: Introduction to Music Lab with A.I. "
       },
       "bonus": false,
       "seeding_key": {
@@ -108,7 +111,8 @@
       "properties": {
         "level_keys": [
           "music-ai-tinker"
-        ]
+        ],
+        "progression": "Video: Introduction to Music Lab with A.I. "
       },
       "bonus": false,
       "seeding_key": {
@@ -132,7 +136,8 @@
       "properties": {
         "level_keys": [
           "music-ai-skill-sequence"
-        ]
+        ],
+        "progression": "Video: Introduction to Music Lab with A.I. "
       },
       "bonus": false,
       "seeding_key": {
@@ -156,7 +161,8 @@
       "properties": {
         "level_keys": [
           "music-ai-video-loops"
-        ]
+        ],
+        "progression": "Video: Introduction to Music Lab with A.I. "
       },
       "bonus": false,
       "seeding_key": {
@@ -180,7 +186,8 @@
       "properties": {
         "level_keys": [
           "music-ai-practice-loops"
-        ]
+        ],
+        "progression": "Video: Introduction to Music Lab with A.I. "
       },
       "bonus": false,
       "seeding_key": {
@@ -204,7 +211,8 @@
       "properties": {
         "level_keys": [
           "musiclab_tutorial_panels_playtogether"
-        ]
+        ],
+        "progression": "Video: Introduction to Music Lab with A.I. "
       },
       "bonus": false,
       "seeding_key": {
@@ -228,7 +236,8 @@
       "properties": {
         "level_keys": [
           "music-ai-skill-playtogether"
-        ]
+        ],
+        "progression": "Video: Introduction to Music Lab with A.I. "
       },
       "bonus": false,
       "seeding_key": {
@@ -250,6 +259,10 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-ai-video-trigger"
+        ],
+        "progression": "Video: Introduction to Music Lab with A.I. "
       },
       "bonus": false,
       "seeding_key": {
@@ -271,6 +284,32 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "progression": "Video: Introduction to Music Lab with A.I. "
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "music_ai_panels_grayson"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-ai-2024",
+        "activity_section.key": "48e2a093-af37-4379-bf46-2164c9ca9750"
+      },
+      "level_keys": [
+        "music_ai_panels_grayson"
+      ]
+    },
+    {
+      "chapter": 10,
+      "position": 10,
+      "activity_section_position": 10,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "music-ai-skill-trigger"
+        ],
+        "progression": "Video: Introduction to Music Lab with A.I. "
       },
       "bonus": false,
       "seeding_key": {
@@ -287,11 +326,15 @@
       ]
     },
     {
-      "chapter": 10,
-      "position": 10,
-      "activity_section_position": 10,
+      "chapter": 11,
+      "position": 11,
+      "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-ai-video-aibeats"
+        ],
+        "progression": "Video: Introduction to Music Lab with A.I. "
       },
       "bonus": false,
       "seeding_key": {
@@ -308,11 +351,15 @@
       ]
     },
     {
-      "chapter": 11,
-      "position": 11,
-      "activity_section_position": 11,
+      "chapter": 12,
+      "position": 12,
+      "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-ai-skill-aibeats"
+        ],
+        "progression": "Video: Introduction to Music Lab with A.I. "
       },
       "bonus": false,
       "seeding_key": {
@@ -329,11 +376,15 @@
       ]
     },
     {
-      "chapter": 12,
-      "position": 12,
-      "activity_section_position": 12,
+      "chapter": 13,
+      "position": 13,
+      "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "music-ai-video-congrats"
+        ],
+        "progression": "Video: Introduction to Music Lab with A.I. "
       },
       "bonus": false,
       "seeding_key": {
@@ -440,6 +491,18 @@
         "level.key": "music-ai-video-trigger",
         "script_level.level_keys": [
           "music-ai-video-trigger"
+        ],
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "music-ai-2024",
+        "activity_section.key": "48e2a093-af37-4379-bf46-2164c9ca9750"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "music_ai_panels_grayson",
+        "script_level.level_keys": [
+          "music_ai_panels_grayson"
         ],
         "lesson.key": "lesson-1",
         "lesson_group.key": "",
