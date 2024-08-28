@@ -4,6 +4,7 @@ import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import Tags from '@cdo/apps/componentLibrary/tags/Tags';
+import {BodyTwoText, Heading6} from '@cdo/apps/componentLibrary/typography';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
@@ -103,6 +104,9 @@ const VersionHistoryDropdown: React.FunctionComponent<
 
   return (
     <div>
+      <Heading6 className={moduleStyles.versionHistoryHeader}>
+        {commonI18n.versionHistory_header()}
+      </Heading6>
       <div className={moduleStyles.versionHistoryList}>
         {versionList.map(version => (
           <label className={moduleStyles.versionItem} key={version.versionId}>
@@ -114,7 +118,9 @@ const VersionHistoryDropdown: React.FunctionComponent<
               checked={selectedVersion === version.versionId}
             />
             <div className={moduleStyles.versionLabel}>
-              <div>{parseDate(version.lastModified)}</div>
+              <BodyTwoText className={moduleStyles.versionDate}>
+                {parseDate(version.lastModified)}
+              </BodyTwoText>
               {version.isLatest && (
                 <Tags
                   tagsList={[
@@ -128,8 +134,10 @@ const VersionHistoryDropdown: React.FunctionComponent<
                       },
                       tooltipContent: commonI18n.current(),
                       tooltipId: 'current-version-tag',
+                      ariaLabel: commonI18n.current(),
                     },
                   ]}
+                  className={moduleStyles.currentVersionTag}
                 />
               )}
             </div>
@@ -146,32 +154,29 @@ const VersionHistoryDropdown: React.FunctionComponent<
           />
         </div>
       </div>
-      {loading && (
-        <div
-          className={classNames(
-            moduleStyles.loadingVersionSpinner,
-            moduleStyles.versionDropdownFooter
-          )}
-        >
-          <i className="fa fa-spinner fa-spin" />
-        </div>
-      )}
-      {loadError && (
-        <div
-          className={classNames(
-            moduleStyles.versionLoadError,
-            moduleStyles.versionDropdownFooter
-          )}
-        >
-          <Alert type="danger" text={lab2I18n.versionLoadFailure()} size="s" />
-        </div>
-      )}
+
       <div className={moduleStyles.versionDropdownFooter}>
+        {loading && (
+          <div className={classNames(moduleStyles.loadingVersionSpinner)}>
+            <i className="fa fa-spinner fa-spin" />
+          </div>
+        )}
+        {loadError && (
+          <div className={classNames(moduleStyles.versionLoadError)}>
+            <Alert
+              type="danger"
+              text={lab2I18n.versionLoadFailure()}
+              size="s"
+            />
+          </div>
+        )}
         <Button
           text={commonI18n.restore()}
           color={'purple'}
           size={'m'}
           onClick={restoreSelectedVersion}
+          disabled={loading}
+          className={moduleStyles.restoreButton}
         />
       </div>
     </div>

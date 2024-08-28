@@ -13,6 +13,12 @@
   right: 0;
 }
 
+.versionHistoryHeader {
+  color: $white;
+  padding: 12px;
+  border-bottom: 1px solid #54595E;
+}
+
 .versionHistoryMessage {
   margin: 20px;
   font-size: 16px;
@@ -24,12 +30,14 @@
 }
 
 .versionHistoryRow {
-  margin: 8px 8px;
+  margin: 8px 12px;
+  //height: 48px;
+  line-height: 35px;
   display: flex;
   text-align: center;
   vertical-align: middle;
-  line-height: 35px;
   justify-content: space-between;
+  color: $white;
 }
 
 .latestVersionLabel {
@@ -43,15 +51,22 @@
 .versionDropdownFooter {
   margin-top: 8px;
   padding: 8px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .loadingVersionSpinner {
   font-size: 32px;
   text-align: center;
+  margin-right: 12px;
 }
 
 .versionLoadError {
   font-size: 14px;
+}
+
+.versionDate {
+  color: $white;
 }
 
 .versionLabel {
@@ -64,4 +79,16 @@
 
 .versionItem {
   display: flex;
+}
+
+.versionItem:has(input[type="radio"]:checked) {
+  background-color: #3F444B;
+}
+
+.restoreButton {
+  margin-right: 8px;
+}
+
+.currentVersionTag {
+  height: 24px;
 }
