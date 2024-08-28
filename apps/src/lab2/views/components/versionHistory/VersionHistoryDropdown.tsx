@@ -4,7 +4,7 @@ import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import Tags from '@cdo/apps/componentLibrary/tags/Tags';
-import {BodyTwoText, Heading6} from '@cdo/apps/componentLibrary/typography';
+import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
@@ -109,18 +109,22 @@ const VersionHistoryDropdown: React.FunctionComponent<
       </Heading6>
       <div className={moduleStyles.versionHistoryList}>
         {versionList.map(version => (
-          <label className={moduleStyles.versionItem} key={version.versionId}>
+          <label
+            className={moduleStyles.versionHistoryRow}
+            key={version.versionId}
+          >
             <input
               type="radio"
               name={version.versionId}
               value={version.versionId}
               onChange={onVersionChange}
               checked={selectedVersion === version.versionId}
+              className={moduleStyles.radioButton}
             />
             <div className={moduleStyles.versionLabel}>
-              <BodyTwoText className={moduleStyles.versionDate}>
+              <div className={moduleStyles.versionDate}>
                 {parseDate(version.lastModified)}
-              </BodyTwoText>
+              </div>
               {version.isLatest && (
                 <Tags
                   tagsList={[
