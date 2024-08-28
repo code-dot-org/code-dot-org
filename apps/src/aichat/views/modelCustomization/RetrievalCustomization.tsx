@@ -14,13 +14,11 @@ import modelCustomizationStyles from '../model-customization-workspace.module.sc
 
 const RetrievalCustomization: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
-
-  const {retrievalContexts} = useAppSelector(
-    state => state.aichat.currentAiCustomizations
-  );
-
   const visibility = useAppSelector(
     state => state.aichat.fieldVisibilities.retrievalContexts
+  );
+  const {retrievalContexts} = useAppSelector(
+    state => state.aichat.currentAiCustomizations
   );
 
   const isReadOnly = useSelector(isReadOnlyWorkspace) || isDisabled(visibility);
