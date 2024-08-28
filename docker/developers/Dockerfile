@@ -112,6 +112,10 @@ RUN sudo curl -sSL https://pdm-project.org/install-pdm.py | python3 -
 # Add pdm binaries to path
 RUN echo -n "\n# Add pdm binaries on path\nexport PATH=\$PATH:/home/${USERNAME}/.local/bin\n" >> ~/.bashrc
 
+# Ensure that the .venv path is writable by the user
+RUN mkdir -p /app/src/.venv
+RUN mkdir -p /app/src/.local/share/pdm
+
 # Development Environment
 # -----------------------
 
