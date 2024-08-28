@@ -1296,3 +1296,30 @@ p.detailsHidden {
     margin-bottom: 0;
   }
 }
+
+.announcementDialog {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  max-width: 670px;
+  margin: 12px;
+
+  h2 {
+    margin: 8px 0 20px 0;
+  }
+}
+
+.announcementModal {
+  max-width: 980px !important;
+  max-height: 90% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 980px) {
+  .announcementModal {
+    width: 90% !important; /* Set width to 90% of the viewport width */
+  }
+}
