@@ -1,7 +1,7 @@
-import {TestResult} from './PythonValidator';
+import {ValidationResult} from '@cdo/apps/lab2/progress/ProgressManager';
 
 export default class PythonValidationTracker {
-  private testResults: TestResult[] | null = null;
+  private validationResults: ValidationResult[] | undefined = undefined;
 
   private static _instance: PythonValidationTracker;
 
@@ -16,22 +16,22 @@ export default class PythonValidationTracker {
     PythonValidationTracker._instance = new PythonValidationTracker();
   }
 
-  getTestResults(): TestResult[] | null {
-    return this.testResults;
+  getValidationResults(): ValidationResult[] | undefined {
+    return this.validationResults;
   }
 
-  setTestResults(results: Map<string, string>[]) {
+  setValidationResults(results: Map<string, string>[]) {
     if (results) {
-      this.testResults = results.map(result => ({
-        name: result.get('name') || 'unknown',
-        result: result.get('result') as TestResult['result'],
+      this.validationResults = results.map(result => ({
+        message: result.get('name') || 'unknown',
+        result: result.get('result') as ValidationResult['result'],
       }));
     } else {
-      this.testResults = null;
+      this.validationResults = undefined;
     }
   }
 
   reset() {
-    this.testResults = null;
+    this.validationResults = undefined;
   }
 }

@@ -1,7 +1,9 @@
 - require deploy_dir('shared/middleware/helpers/experiments')
+
 -# OneTrust Cookies Consent Notice scripts for code.org
 -# default to loading the prod OneTrust configuration.
-- cookie_script_env = experiment_value('onetrust_cookie_scripts', request) || 'prod'
+- onetrust_version = experiment_value('onetrust_cookie_scripts', request) || 'prod'
+- cookie_script_env = onetrust_version == 'self_hosted' ? 'prod' : onetrust_version
 -# The OneTrust config to load should be passed in.
 - domain ||= nil
 :ruby
@@ -19,8 +21,11 @@
 -# domain was given.
 - one_trust_domain = one_trust_domains.dig(domain, cookie_script_env)
 - if cookie_script_env != 'off' && one_trust_domain.present?
-  - auto_block_src = "https://cdn.cookielaw.org/consent/#{one_trust_domain}/OtAutoBlock.js"
-  %script{src: auto_block_src, type: 'text/javascript'}
-  %script{src: 'https://cdn.cookielaw.org/scripttemplates/otSDKStub.js', type: 'text/javascript', charset: 'UTF-8', 'data-domain-script' => one_trust_domain}
+  - base_url = onetrust_version == 'self_hosted' ? "/onetrust" : "https://cdn.cookielaw.org"
+  - auto_block_src = "#{base_url}/consent/#{one_trust_domain}/OtAutoBlock.js"
+  - consent_banner_src = "#{base_url}/scripttemplates/otSDKStub.js"
+  %script{src: auto_block_src, type: 'text/javascript', charset: 'UTF-8'}
+  %script{src: consent_banner_src, type: 'text/javascript', charset: 'UTF-8', 'data-domain-script' => one_trust_domain}
   :javascript
     function OptanonWrapper() { }
+
