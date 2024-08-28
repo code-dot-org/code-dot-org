@@ -55,7 +55,7 @@ const CODE_STUDIO_ENTRIES = {
   'sessions/lockout': './src/sites/studio/pages/sessions/lockout.js',
   'devise/sessions/new': './src/sites/studio/pages/devise/sessions/new.js',
   'devise/registrations/_sign_up': './src/sites/studio/pages/devise/registrations/_sign_up.js',
-  'devise/registrations/new_sign_up': './src/sites/studio/pages/devise/registrations/new_sign_up.js',
+  'devise/registrations/login_type': './src/sites/studio/pages/devise/registrations/login_type.js',
   'devise/registrations/finish_student_account': './src/sites/studio/pages/devise/registrations/finish_student_account.js',
   'devise/registrations/finish_teacher_account': './src/sites/studio/pages/devise/registrations/finish_teacher_account.js',
   'devise/shared/_oauth_links': './src/sites/studio/pages/devise/shared/_oauth_links.js',
@@ -220,6 +220,7 @@ const PEGASUS_ENTRIES = {
   // hourofcode.com
   'hourofcode.com/views/theme_common_head_after': './src/sites/hourofcode.com/pages/views/theme_common_head_after.js',
   'hourofcode.com/views/theme_google_analytics': './src/sites/hourofcode.com/pages/views/theme_google_analytics.js',
+  'hourofcode.com/views/analytics_event_log_helper': './src/sites/hourofcode.com/pages/views/analytics_event_log_helper.js',
 
   // shared between code.org and hourofcode.com
   'tutorialExplorer': './src/tutorialExplorer/tutorialExplorer.js',

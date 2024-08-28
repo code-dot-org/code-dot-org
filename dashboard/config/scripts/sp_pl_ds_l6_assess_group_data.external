@@ -1,0 +1,31 @@
+name 'sp-pl-DS_L6-assess-group-data'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+## Lesson 6: Assessing and Grouping Data 
+
+<img src="https://images.code.org/67ffc2f509435221421772542505b6c6-image-1724776688847.png" alt="data aggregation sample" width="230px"  style="border-radius:10px; float:right; margin: 0 20px 40px 40px;">
+
+
+#### Students will learn the basics of using the indexing operator, iloc, loc, and the groupby() functions in order to create subgroups of data.
+#### They will have the opportunity to analyze and draw insight from their groupings that will help to answer a data question.
+
+### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>.</b>
+
+
+
+## Key concepts 
+
+- #### **aggregation** - a useful summary of a larger set of data.
+- #### **Indexing operator** - Used to access column(s) in a DataFrame
+- #### **iloc** - Used to access rows and columns by their index positions
+- #### **loc** - Used to access rows and columns by their labels
+- #### **groupby()** - Used to group DataFrame rows based on column value
+
+
+
+## Let's practice!  
+
+![]()
+MARKDOWN
