@@ -77,6 +77,14 @@ def main
     day += 1
   end
 
+  Properties.set :hoc_metrics, {
+    started: total_started,
+    finished: total_finished,
+    tutorials: total_tutorials,
+    total_hoc_count: total_hoc_count,
+    total_codedotorg_count: total_codedotorg,
+  }
+
   # In the production environment, begin with a known previous value in case we
   # are unable to obtain a more recent number.
   lines_of_code = rack_env?(:production) ? DEFAULT_LINES_OF_CODE : 0
