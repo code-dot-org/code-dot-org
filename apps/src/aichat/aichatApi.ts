@@ -41,7 +41,6 @@ export async function postAichatCompletionMessage(
   storedMessages: ChatMessage[],
   aiCustomizations: AiCustomizations,
   aichatContext: AichatContext,
-  useAsyncPolling = false,
   // Configurable for testing
   maxPollingTimeMs = MAX_POLLING_TIME_MS
 ): Promise<ChatCompletionApiResponse> {
@@ -52,32 +51,13 @@ export async function postAichatCompletionMessage(
     systemPrompt: aiCustomizations.systemPrompt,
   };
 
-  if (useAsyncPolling) {
-    return postChatCompletionAsyncPolling(
-      newMessage,
-      storedMessages,
-      aichatModelCustomizations,
-      aichatContext,
-      maxPollingTimeMs
-    );
-  }
-
-  const payload = {
+  return postChatCompletionAsyncPolling(
     newMessage,
     storedMessages,
     aichatModelCustomizations,
     aichatContext,
-  };
-  const response = await HttpClient.post(
-    paths.CHAT_COMPLETION_URL,
-    JSON.stringify(payload),
-    true,
-    {
-      'Content-Type': 'application/json; charset=UTF-8',
-    }
+    maxPollingTimeMs
   );
-
-  return await response.json();
 }
 
 /**
