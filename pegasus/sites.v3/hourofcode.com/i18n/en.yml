@@ -2648,6 +2648,41 @@
       text: "Labs were a game changer for my classroom. My students had so much fun tapping into their creativity to build their own sprites and games in lab!"
       byline: "CSF Teacher"
       location: "Arizona"
+    widgets:
+      overline: "Grades 6-12"
+      heading: "Explore computer science concepts with widgets"
+      desc: "Delve into the fundamentals of computer science with our interactive widgets. Grasp complex concepts like network communication with the Internet Simulator, or understand data efficiency through the Text Compression Widget. These tools make abstract principles tangible and engaging."
+      text_compression:
+        overline: "compression"
+        title: "Text Compression"
+        desc: "Learn the essentials of text compression as you condense content dynamically. This widget allows immediate visualization of compression effects, challenging students to find optimal patterns and understand file size efficiency."
+        aria_label: "try the text compression widget"
+        button_label: "Try this widget"
+      pixelation:
+        overline: "pixelation"
+        title: "Images and Pixels"
+        desc: "Create images from the ground up with binary code using our Pixelation Widget. Start with simple black and white pixels and progress to intricate, full-color visuals, learning how binary translates into the images we see."
+        aria_label: "try the pixelation widget"
+        button_label: "Try this widget"
+      frequency_analysis:
+        overline: "cryptography"
+        title: "Frequency Analysis"
+        desc: "Unlock the secrets of classic ciphers with the Frequency Analysis Widget. Experiment with the Caesar Shift and random substitution methods to encrypt messages and challenge students to decrypt them without the key."
+        aria_label: "try the frequency analysis widget"
+        button_label: "Try this widget"
+      cipher:
+        overline: "cryptography"
+        title: "Vigenere cipher"
+        desc: "Dive into the world of complex encryption with the Vigenère Cipher Widget. Once deemed unbreakable, this cipher changes with each letter, inviting you to both encode secret messages and test your skills at cracking them."
+        aria_label: "try the vigenere cipher widget"
+        button_label: "Try this widget"
+      internet_simulator:
+        overline: "internet"
+        title: "Internet Simulator"
+        desc: "Explore the intricacies of networked computers with our expansive Internet Simulator. Beyond learning internet protocols, engage with CS concepts such as abstraction and the binary representation of data, all while understanding the 'why' behind internet structures."
+        aria_label: "try the internet simulator widget"
+        button_label: "Try this widget"
+
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'

@@ -1,0 +1,82 @@
+:ruby
+  block_items = [
+    {
+      overline: hoc_s("tools_page.widgets.text_compression.overline"),
+      title: hoc_s("tools_page.widgets.text_compression.title"),
+      video_code: "By30SCp-Tsw",
+      download_path: "https://video.code.org/2015/csp/textcompression_blacc.mp4",
+      desc: hoc_s("tools_page.widgets.text_compression.desc"),
+      url: CDO.studio_url("/s/text-compression"),
+      aria_label: hoc_s("tools_page.widgets.text_compression.aria_label"),
+      button_label: hoc_s("tools_page.widgets.text_compression.button_label"),
+    },
+    {
+      overline: hoc_s("tools_page.widgets.pixelation.overline"),
+      title: hoc_s("tools_page.widgets.pixelation.title"),
+      video_code: "15aqFQQVBWU",
+      download_path: "https://videos.code.org/2015/csp/pixelation_bw.mp4",
+      desc: hoc_s("tools_page.widgets.pixelation.desc"),
+      url: CDO.studio_url("/s/pixelation"),
+      aria_label: hoc_s("tools_page.widgets.pixelation.aria_label"),
+      button_label: hoc_s("tools_page.widgets.pixelation.button_label"),
+    },
+    {
+      overline: hoc_s("tools_page.widgets.frequency_analysis.overline"),
+      title: hoc_s("tools_page.widgets.frequency_analysis.title"),
+      img: "/images/tools/frequency_analysis.png",
+      desc: hoc_s("tools_page.widgets.frequency_analysis.desc"),
+      url: CDO.studio_url("/s/frequency_analysis"),
+      aria_label: hoc_s("tools_page.widgets.frequency_analysis.aria_label"),
+      button_label: hoc_s("tools_page.widgets.frequency_analysis.button_label"),
+    },
+    {
+      overline: hoc_s("tools_page.widgets.cipher.overline"),
+      title: hoc_s("tools_page.widgets.cipher.title"),
+      img: "/images/app-lab/vigenere-cipher.png",
+      desc: hoc_s("tools_page.widgets.cipher.desc"),
+      url: CDO.studio_url("/s/vigenere"),
+      aria_label: hoc_s("tools_page.widgets.cipher.aria_label"),
+      button_label: hoc_s("tools_page.widgets.cipher.button_label"),
+    },
+    {
+      overline: hoc_s("tools_page.widgets.internet_simulator.overline"),
+      title: hoc_s("tools_page.widgets.internet_simulator.title"),
+      video_code: "Dxcc6ycZ73M",
+      desc: hoc_s("tools_page.widgets.internet_simulator.desc"),
+      url: CDO.studio_url("/s/netsim"),
+      aria_label: hoc_s("tools_page.widgets.internet_simulator.aria_label"),
+      button_label: hoc_s("tools_page.widgets.internet_simulator.button_label"),
+    },
+  ]
+
+.carousel-wrapper
+  %swiper-container.three-col{navigation: "true", "navigation-next-el": ".swiper-nav-next", "navigation-prev-el": ".swiper-nav-prev", init: "false"}
+    - block_items.each do |block_item|
+      %swiper-slide
+        .action-block.action-block--one-col.flex-space-between
+          .content-wrapper
+            - if block_item[:new]
+              .flex-container.justify-space-between.align-items-start
+                %p.overline
+                  = block_item[:overline]
+                %p.new
+                  =hoc_s(:new)
+            - else
+              %p.overline
+                = block_item[:overline]
+            %h3
+              = block_item[:title]
+            - if block_item[:video_code]
+              = view :video_with_fallback, video_code: block_item[:video_code], download_path: block_item[:download_path]
+            - else
+              %img{src: block_item[:img], alt: ""}
+            %p
+              = block_item[:desc]
+          .content-footer
+            %a.link-button{href: block_item[:url], aria:{label: block_item[:aria_label]}}
+              = block_item[:button_label]
+
+  %button.swiper-nav-prev
+  %button.swiper-nav-next
+
+= view :swiper

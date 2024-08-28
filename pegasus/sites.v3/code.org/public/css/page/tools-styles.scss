@@ -1,4 +1,5 @@
-@import 'breakpoints';
+@import "typography", "breakpoints";
+
 
 section.hero-banner-basic {
   &.overlay {
@@ -66,6 +67,15 @@ section.tools-el {
 
     @media screen and (max-width: $width-sm) {
       height: 20rem;
+    }
+  }
+}
+
+section.widgets {
+  p {
+    &.header-overline {
+      @include overline-one;
+      color: var(--brand_primary_default);
     }
   }
 }
