@@ -1,0 +1,19 @@
+# These are all command services that perform our git hooks within the container
+
+services:
+  git-pre-commit: &command-base
+    extends:
+      file: docker-compose.dashboard.yml
+      service: web
+    environment:
+      SILENT: 'true'
+    tty: false
+    command: /bin/bash -l -c './docker/developers/run.sh ./tools/hooks/pre-commit'
+
+  git-post-merge:
+    <<: *command-base
+    command: /bin/bash -l -c './docker/developers/run.sh ./tools/hooks/post-merge'
+
+  git-post-checkout:
+    <<: *command-base
+    command: /bin/bash -l -c './docker/developers/run.sh ./tools/hooks/post-checkout'
