@@ -336,6 +336,10 @@ class Ability
       can?(:read, course_or_unit)
     end
 
+    can :log_chat_event, :aichat do
+      true
+    end
+
     # Handle standalone projects as a special case.
     # They don't necessarily have a model, permissions and redirects are run
     # through ProjectsController and their view/edit requirements are defined
@@ -483,7 +487,7 @@ class Ability
         user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
       end
 
-      can [:chat_completion, :log_chat_event, :start_chat_completion, :chat_request], :aichat do
+      can [:chat_completion, :start_chat_completion, :chat_request], :aichat do
         user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
       end
       # Additional logic that confirms that a given teacher should have access

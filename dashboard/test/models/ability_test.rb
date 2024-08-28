@@ -961,15 +961,15 @@ class AbilityTest < ActiveSupport::TestCase
   test 'teacher meeting AI Chat access requirements can perform AI Chat actions' do
     teacher = create :teacher
     teacher.stubs(:teacher_can_access_ai_chat?).returns(true)
-    [:chat_completion, :log_chat_event, :start_chat_completion, :chat_request, :student_chat_history].each do |action|
+    [:chat_completion, :start_chat_completion, :chat_request, :student_chat_history, :log_chat_event].each do |action|
       assert Ability.new(teacher).can? action, :aichat
     end
   end
 
-  test 'teacher not meeting AI Chat access requirements cannot perform AI Chat actions' do
+  test 'teacher not meeting AI Chat access requirements cannot perform selected AI Chat actions' do
     teacher = create :teacher
     teacher.stubs(:teacher_can_access_ai_chat?).returns(false)
-    [:chat_completion, :log_chat_event, :start_chat_completion, :chat_request, :student_chat_history].each do |action|
+    [:chat_completion, :start_chat_completion, :chat_request, :student_chat_history].each do |action|
       refute Ability.new(teacher).can? action, :aichat
     end
   end
@@ -982,12 +982,24 @@ class AbilityTest < ActiveSupport::TestCase
     end
   end
 
-  test 'student not meeting AI Chat access requirements cannot perform AI Chat actions' do
+  test 'student not meeting AI Chat access requirements cannot perform selected AI Chat actions' do
     student = create :student
     student.stubs(:student_can_access_ai_chat?).returns(false)
-    [:chat_completion, :log_chat_event, :start_chat_completion, :chat_request].each do |action|
+    [:chat_completion, :start_chat_completion, :chat_request].each do |action|
       refute Ability.new(student).can? action, :aichat
     end
+  end
+
+  test 'still logs chat events for student not meeting AI Chat access requirements' do
+    student = create :student
+    student.stubs(:student_can_access_ai_chat?).returns(false)
+    assert Ability.new(student).can? :log_chat_event, :aichat
+  end
+
+  test 'still logs chat events for teacher not meeting AI Chat access requirements' do
+    teacher = create :teacher
+    teacher.stubs(:teacher_can_access_ai_chat?).returns(false)
+    assert Ability.new(teacher).can? :log_chat_event, :aichat
   end
 
   private def put_students_in_section_and_code_review_group(students, section)
