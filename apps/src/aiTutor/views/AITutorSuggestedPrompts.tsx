@@ -1,8 +1,6 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback} from 'react';
 
-import SuggestedPrompts, {
-  SuggestedPrompt,
-} from '@cdo/apps/aiComponentLibrary/suggestedPrompt/SuggestedPrompts';
+import DeprecatedSuggestedPrompts from '@cdo/apps/aiComponentLibrary/suggestedPrompt/DeprecatedSuggestedPrompts';
 import {
   AITutorTypes as ActionType,
   AITutorTypesValue,
@@ -14,11 +12,7 @@ import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 import {genericCompilation, genericValidation} from '../constants';
 import {askAITutor} from '../redux/aiTutorRedux';
 
-interface StringKeyValue {
-  [index: string]: string;
-}
-
-const QuickActions: StringKeyValue = {
+const QuickActions = {
   [ActionType.COMPILATION]: genericCompilation,
   [ActionType.VALIDATION]: genericValidation,
 };
@@ -91,15 +85,6 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
 
       dispatch(askAITutor(chatContext));
 
-      setSuggestedPrompts(suggestedPrompts =>
-        suggestedPrompts.map(prompt => {
-          if (prompt.label === QuickActions[actionType]) {
-            return {...prompt, selected: true};
-          }
-          return prompt;
-        })
-      );
-
       analyticsReporter.sendEvent(event, {
         levelId: level?.id,
         levelType: level?.type,
@@ -108,22 +93,20 @@ const AITutorSuggestedPrompts: React.FunctionComponent = () => {
     [studentCode, isWaitingForChatResponse, level, dispatch]
   );
 
-  const [suggestedPrompts, setSuggestedPrompts] = useState<SuggestedPrompt[]>([
+  const suggestedPrompts = [
     {
       label: QuickActions[ActionType.COMPILATION],
       onClick: () => handleClick(ActionType.COMPILATION),
       show: showCompilationOption,
-      selected: false,
     },
     {
       label: QuickActions[ActionType.VALIDATION],
       onClick: () => handleClick(ActionType.VALIDATION),
       show: showValidationOption,
-      selected: false,
     },
-  ]);
+  ];
 
-  return <SuggestedPrompts suggestedPrompts={suggestedPrompts} />;
+  return <DeprecatedSuggestedPrompts suggestedPrompts={suggestedPrompts} />;
 };
 
 export default AITutorSuggestedPrompts;
