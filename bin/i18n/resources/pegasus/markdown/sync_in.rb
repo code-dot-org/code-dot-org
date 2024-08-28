@@ -12,7 +12,6 @@ module I18n
         class SyncIn < I18n::Utils::SyncInBase
           LOCALIZABLE_FILE_SUBPATHS = %w[
             public/athome.md.partial
-            public/csforgood.md
             public/curriculum/unplugged.md.partial
             public/educate/it.md
             public/helloworld.md.partial
