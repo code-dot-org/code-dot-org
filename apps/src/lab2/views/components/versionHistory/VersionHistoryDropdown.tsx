@@ -3,7 +3,6 @@ import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {Button} from '@cdo/apps/componentLibrary/button';
-import Tags from '@cdo/apps/componentLibrary/tags/Tags';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -15,6 +14,8 @@ import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
 import {commonI18n} from '@cdo/apps/types/locale';
 import currentLocale from '@cdo/apps/util/currentLocale';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+
+import VersionHistoryRow from './VersionHistoryRow';
 
 import moduleStyles from './version-history.module.scss';
 
@@ -111,56 +112,30 @@ const VersionHistoryDropdown: React.FunctionComponent<
     setSelectedVersion(e.target.value);
   };
 
-  const getVersionRow = (version?: ProjectVersion) => {
-    const versionId = version?.versionId || INITIAL_VERSION_ID;
-    const isLatest = version?.isLatest || false;
-    const label = version
-      ? parseDate(version.lastModified)
-      : lab2I18n.initialVersion();
-    return (
-      <label className={moduleStyles.versionHistoryRow} key={versionId}>
-        <input
-          type="radio"
-          name={versionId}
-          value={versionId}
-          onChange={onVersionChange}
-          checked={selectedVersion === versionId}
-          className={moduleStyles.radioButton}
-        />
-        <div className={moduleStyles.versionLabel}>
-          <div className={moduleStyles.versionDate}>{label}</div>
-          {isLatest && (
-            <Tags
-              tagsList={[
-                {
-                  label: commonI18n.current(),
-                  icon: {
-                    iconName: 'check',
-                    iconStyle: 'regular',
-                    title: 'check',
-                    placement: 'left',
-                  },
-                  tooltipContent: commonI18n.current(),
-                  tooltipId: 'current-version-tag',
-                  ariaLabel: commonI18n.current(),
-                },
-              ]}
-              className={moduleStyles.currentVersionTag}
-            />
-          )}
-        </div>
-      </label>
-    );
-  };
-
   return (
     <div>
       <Heading6 className={moduleStyles.versionHistoryHeader}>
         {commonI18n.versionHistory_header()}
       </Heading6>
       <div className={moduleStyles.versionHistoryList}>
-        {versionList.map(version => getVersionRow(version))}
-        {getVersionRow()}
+        {versionList.map(version => (
+          <VersionHistoryRow
+            key={version.versionId}
+            versionId={version.versionId}
+            versionLabel={parseDate(version.lastModified)}
+            isLatest={version.isLatest}
+            isSelected={selectedVersion === version.versionId}
+            onChange={onVersionChange}
+          />
+        ))}
+        <VersionHistoryRow
+          key={INITIAL_VERSION_ID}
+          versionId={INITIAL_VERSION_ID}
+          versionLabel={lab2I18n.initialVersion()}
+          isLatest={versionList.length === 0}
+          isSelected={selectedVersion === INITIAL_VERSION_ID}
+          onChange={onVersionChange}
+        />
       </div>
 
       <div className={moduleStyles.versionDropdownFooter}>
