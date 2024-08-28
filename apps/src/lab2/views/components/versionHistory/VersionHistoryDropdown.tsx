@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
-import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
+import {Button} from '@cdo/apps/componentLibrary/button';
 import Tags from '@cdo/apps/componentLibrary/tags/Tags';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
@@ -24,6 +24,8 @@ interface VersionHistoryDropdownProps {
   startSource: ProjectSources;
   closeDropdown: () => void;
 }
+
+const INITIAL_VERSION_ID = 'initial-version';
 
 /**
  * Dropdown that displays a list of versions for the current project.
@@ -56,9 +58,21 @@ const VersionHistoryDropdown: React.FunctionComponent<
   }, [versionList, selectedVersion]);
 
   const dispatch = useAppDispatch();
+
+  const startOver = useCallback(() => {
+    // TODO: confirm
+    dispatch(setAndSaveProjectSource(startSource));
+    if (updatedSourceCallback) {
+      updatedSourceCallback(startSource);
+    }
+    closeDropdown();
+  }, [dispatch, startSource, updatedSourceCallback, closeDropdown]);
+
   const restoreSelectedVersion = useCallback(() => {
     const projectManager = Lab2Registry.getInstance().getProjectManager();
-    if (projectManager && selectedVersion) {
+    if (selectedVersion === INITIAL_VERSION_ID) {
+      startOver();
+    } else if (projectManager && selectedVersion) {
       setLoading(true);
       setLoadError(false);
       projectManager
@@ -80,16 +94,13 @@ const VersionHistoryDropdown: React.FunctionComponent<
           setLoading(false);
         });
     }
-  }, [dispatch, updatedSourceCallback, closeDropdown, selectedVersion]);
-
-  const startOver = useCallback(() => {
-    // TODO: confirm
-    dispatch(setAndSaveProjectSource(startSource));
-    if (updatedSourceCallback) {
-      updatedSourceCallback(startSource);
-    }
-    closeDropdown();
-  }, [dispatch, startSource, updatedSourceCallback, closeDropdown]);
+  }, [
+    selectedVersion,
+    startOver,
+    closeDropdown,
+    dispatch,
+    updatedSourceCallback,
+  ]);
 
   const parseDate = (date: string) => {
     const dateObject = new Date(date);
@@ -97,9 +108,49 @@ const VersionHistoryDropdown: React.FunctionComponent<
   };
 
   const onVersionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    console.log('version changed!');
-    console.log(e.target.value);
     setSelectedVersion(e.target.value);
+  };
+
+  const getVersionRow = (version?: ProjectVersion) => {
+    const versionId = version?.versionId || INITIAL_VERSION_ID;
+    const isLatest = version?.isLatest || false;
+    const label = version
+      ? parseDate(version.lastModified)
+      : lab2I18n.initialVersion();
+    return (
+      <label className={moduleStyles.versionHistoryRow} key={versionId}>
+        <input
+          type="radio"
+          name={versionId}
+          value={versionId}
+          onChange={onVersionChange}
+          checked={selectedVersion === versionId}
+          className={moduleStyles.radioButton}
+        />
+        <div className={moduleStyles.versionLabel}>
+          <div className={moduleStyles.versionDate}>{label}</div>
+          {isLatest && (
+            <Tags
+              tagsList={[
+                {
+                  label: commonI18n.current(),
+                  icon: {
+                    iconName: 'check',
+                    iconStyle: 'regular',
+                    title: 'check',
+                    placement: 'left',
+                  },
+                  tooltipContent: commonI18n.current(),
+                  tooltipId: 'current-version-tag',
+                  ariaLabel: commonI18n.current(),
+                },
+              ]}
+              className={moduleStyles.currentVersionTag}
+            />
+          )}
+        </div>
+      </label>
+    );
   };
 
   return (
@@ -108,55 +159,8 @@ const VersionHistoryDropdown: React.FunctionComponent<
         {commonI18n.versionHistory_header()}
       </Heading6>
       <div className={moduleStyles.versionHistoryList}>
-        {versionList.map(version => (
-          <label
-            className={moduleStyles.versionHistoryRow}
-            key={version.versionId}
-          >
-            <input
-              type="radio"
-              name={version.versionId}
-              value={version.versionId}
-              onChange={onVersionChange}
-              checked={selectedVersion === version.versionId}
-              className={moduleStyles.radioButton}
-            />
-            <div className={moduleStyles.versionLabel}>
-              <div className={moduleStyles.versionDate}>
-                {parseDate(version.lastModified)}
-              </div>
-              {version.isLatest && (
-                <Tags
-                  tagsList={[
-                    {
-                      label: commonI18n.current(),
-                      icon: {
-                        iconName: 'check',
-                        iconStyle: 'regular',
-                        title: 'check',
-                        placement: 'left',
-                      },
-                      tooltipContent: commonI18n.current(),
-                      tooltipId: 'current-version-tag',
-                      ariaLabel: commonI18n.current(),
-                    },
-                  ]}
-                  className={moduleStyles.currentVersionTag}
-                />
-              )}
-            </div>
-          </label>
-        ))}
-        <div className={moduleStyles.versionHistoryRow}>
-          <Button
-            text={commonI18n.startOver()}
-            size={'s'}
-            onClick={startOver}
-            color={buttonColors.destructive}
-            className={moduleStyles.startOverButton}
-            iconLeft={{iconStyle: 'solid', iconName: 'trash-undo'}}
-          />
-        </div>
+        {versionList.map(version => getVersionRow(version))}
+        {getVersionRow()}
       </div>
 
       <div className={moduleStyles.versionDropdownFooter}>
