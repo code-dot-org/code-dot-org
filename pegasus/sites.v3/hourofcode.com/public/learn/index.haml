@@ -59,9 +59,8 @@ social:
       tutorials: #{raw tutorials_contents.to_json},
       locale: "#{locale_code}",
       roboticsButtonUrl: "#{resolve_url('/learn/robotics')}",
-      showSortDropdown: #{DCDO.get('learn_show_sort_dropdown', true)},
+      showSortDropdown: #{DCDO.get('learn_show_sort_dropdown', false)},
       disabledTutorials: #{raw DCDO.get('learn_hide_tutorials', [])},
-      defaultSortByPopularity: #{Tutorials.sort_by_popularity?(request.site, DCDO.get("hoc_mode", CDO.default_hoc_mode))}
     });
     tutorialExplorerManager.renderToElement(document.getElementById('tutorials'));
 
