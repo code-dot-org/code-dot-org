@@ -6,8 +6,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import fontConstants from '@cdo/apps/fontConstants';
-import trackEvent from '@cdo/apps/util/trackEvent';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import trackEvent from '@cdo/apps/util/trackEvent';
 import i18n from '@cdo/tutorialExplorer/locale';
 
 import analyticsReporter from '../lib/util/AnalyticsReporter';
