@@ -2,6 +2,15 @@ require 'aws-sdk-autoscaling'
 
 module AWS
   class EC2Autoscaling
+    # Refresh the instances in the autoscaling group for the current environment.
+    def self.refresh_instances
+      refresh_instances_in_group(get_autoscaling_group_for_current_environment)
+    end
+
+    # Refresh the instances in the autoscaling group with the given name.
+    #
+    # @param [String] group_name The name of the autoscaling group to refresh.
+    # @param [Boolean] wait Whether to wait for the instance refresh to complete.
     def self.refresh_instances_in_group(group_name, wait: false)
       asg = Aws::AutoScaling::Client.new
 
@@ -15,7 +24,10 @@ module AWS
       asg.wait_until(:instances_healthy, auto_scaling_group_names: [group_name])
     end
 
-    # Returns the name of the autoscaling group for the current environment.
+    # Finds the name of the autoscaling group for the current environment.
+    #
+    # @return [String] The name of the autoscaling group for the current environment.
+    # @raise [RuntimeError] If no autoscaling group is found for the current environment.
     def self.get_autoscaling_group_for_current_environment
       stack_name = CDO.stack_name
       logical_id = 'Frontends'
