@@ -89,6 +89,8 @@ services:
     volumes:
       - rbenv:/home/cdodev/.rbenv
       - nvm:/home/cdodev/.nvm
+      - python-venv:/app/src/.venv
+      - python-pdm:/home/cdodev/.local/share/pdm
       - ../..:/app/src
     ports:
       - "3000:3000"
@@ -123,6 +125,8 @@ services:
     volumes:
       - rbenv:/home/cdodev/.rbenv
       - nvm:/home/cdodev/.nvm
+      - python-venv:/app/src/.venv
+      - python-pdm:/home/cdodev/.local/share/pdm
       - ../..:/app/src
       - ~/.aws:/home/cdodev/.aws
 
@@ -153,3 +157,9 @@ volumes:
 
   # Holds nvm and our global node binaries
   nvm:
+
+  # Holds the venv for Python
+  python-venv:
+
+  # Hold the local pdm installation
+  python-pdm:
