@@ -2607,6 +2607,20 @@
     continue:
       header: "Continue learning after Hello World"
       desc: "Hello World is a great starting point before doing CS connections."
+    carousel:
+      transformers: "Transformers"
+      space: "Space"
+      space_desc: "3, 2, 1... blast off! In this space-themed introduction to our Sprite Lab, students learn the basics of computer science by building fun, interactive projects."
+      soccer: "Soccer"
+      soccer_desc: "Goooooal! In this soccer-themed introduction to our Sprite Lab, students learn the basics of computer science by building fun, interactive projects."
+      food: "Food"
+      food_desc: "Let's see what's on the menu! In this food-themed intro to Sprite Lab, students learn computer science basics by building fun, interactive projects."
+      animals: "Animals"
+      animals_desc: "Lions and tigers and bears, oh my! In this animal-themed intro to Sprite Lab, students learn computer science basics by building fun, interactive projects."
+      retro: "Retro"
+      retro_desc: "Go old school! In this retro-themed intro to Sprite Lab, students learn computer science basics by building fun, interactive projects"
+      emoji: "Emoji"
+      emoji_desc: "In this emoji-themed intro to Sprite Lab, students learn computer science basics by building fun, interactive projects."
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'

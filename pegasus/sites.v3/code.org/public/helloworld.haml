@@ -1,10 +1,18 @@
 ---
-title: Transformers
+title: Hello World
 theme: responsive_full_width
 ---
 
+:javascript
+  window.pegasus = window.pegasus || {};
+  window.pegasus.STUDIO_URL = "#{CDO.studio_url}";
+
+- js_locale = request.locale.to_s.downcase.tr('-', '_')
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: webpack_asset_path('js/code.org/public/helloworld.js')}
+
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
-%link{href: "/css/generated/page/transformers-styles.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/helloworld-styles.css", rel: "stylesheet"}
 
 %section.hero-banner-basic.overlay
   .wrapper.flex-container.justify-space-between.align-items-center.wrap
@@ -17,36 +25,16 @@ theme: responsive_full_width
       %img{src: "/images/banners/banner-transformers-one.png", alt: ""}
     .clear
 
-%section#code-favorite.bg-neutral-light
-  .wrapper.flex-container.justify-space-between.align-items-center.gap-1.wrap.flex-direction-column-mobile
-    .text-wrapper.flex-1
-      %h2.heading-lg
-        =hoc_s("transformers.code_favorite.header")
-      %p.no-margin-bottom
-        =hoc_s("transformers.code_favorite.desc")
-    .flex-1
-      = view :"transformers/favorite_transformers"
-
-%section#easy
+%section#choose-theme
   .wrapper
-    %h2.centered
-      =hoc_s("transformers.fun.header")
-    %p.centered
-      =hoc_s("transformers.fun.desc")
-    .action-block.action-block--two-col.bg-neutral-light
-      .media-wrapper.col-50
-        %img{src: "/images/transformers/action_poster.png", alt: ""}
-      .text-wrapper.col-50
-        %p.overline=hoc_s("teach_labs_section.spritelab.overline")
-        %h3=hoc_s("transformers.fun.code_card.header")
-        %p=hoc_s("transformers.fun.code_card.desc")
-        %p
-          %strong
-            =hoc_s(:module_label_duration)
-          =hoc_s(:module_duration_1_hr)
-        %a.link-button{href: CDO.studio_url("s/hello-world-transformers-one-2024/lessons/1/levels/1")}
-          =hoc_s(:call_to_action_start_activity_short)
-      .clear
+    %h2=hoc_s("hello_world.theme.header")
+    %p=hoc_s("hello_world.theme.desc")
+    = view :carousel_helloworld
+
+%section.quote.bg-neutral-dark
+  .wrapper
+    %h2.white.centered=hoc_s(:heading_featured_student_projects)
+    #helloworld_student_projects
 
 %section#continue.bg-neutral-light
   .wrapper
@@ -72,10 +60,3 @@ theme: responsive_full_width
     = view :"transformers/additional_resources"
 
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::HELLOWORLD_PAGE_VISITED_EVENT
-
-
-{{ featured_project, title: "Food", author: "M", age: "13+", image: "images/csc/helloworld/cschelloworld_happyfood2.gif", alt_text: "A student project featuring an animated gif of a fork moving across a plate next to avocado and pizza characters", url: "https://studio.code.org/projects/spritelab/sC_ZiNi_x5GUqsWHE2M4CrcbjU8XvtD3VNT7TM0Y0N8" }}
-{{ featured_project, title: "Emoji", author: "D", age: "8+", image: "images/csc/helloworld/cschelloworld_emoji.gif", alt_text: "A student project featuring an animated gif of different emojis that say Click Me", url: "https://studio.code.org/projects/spritelab/9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc" }}
-{{ featured_project, title: "Animals", author: "B", age: "18+", image: "images/csc/helloworld/cschelloworld_animals.gif", alt_text: "A student project featuring an animated gif of an underwater scene with dolphin, fish, and jellyfish characters in front of a shipwreck", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN4HAtis4ykKTIjGcNPP9zD4" }}
-{{ featured_project, title: "Retro", author: "W", age: "13+", image: "images/csc/helloworld/cschelloworld_retro.gif", alt_text: "A student project featuring an animated gif of a game of tag with two alien characters on a distant planet", url: "https://studio.code.org/projects/spritelab/rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo" }}
-

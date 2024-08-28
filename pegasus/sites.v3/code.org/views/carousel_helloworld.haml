@@ -1,0 +1,89 @@
+:ruby
+  block_item = [
+    {
+      new: true,
+      overline: hoc_s("game_design_page.elementary_curricula.sports.overline"),
+      title: hoc_s("hello_world.carousel.transformers"),
+      image: "images/transformers/action_poster.png",
+      desc: hoc_s("transformers.fun.code_card.desc"),
+      url: CDO.studio_url("s/hello-world-transformers-one-2024/lessons/1/levels/1"),
+      aria_label: hoc_s(:call_to_action_start_activity_short),
+    },
+    {
+      overline: hoc_s("game_design_page.elementary_curricula.sports.overline"),
+      title: hoc_s("hello_world.carousel.space"),
+      image: "images/csc/helloworld/helloworldspacetheme.png",
+      desc: hoc_s("hello_world.carousel.space_desc"),
+      url: CDO.studio_url("s/hello-world-space-2022/reset"),
+      aria_label: hoc_s(:call_to_action_start_activity_short),
+    },
+    {
+      overline: hoc_s("game_design_page.elementary_curricula.sports.overline"),
+      title: hoc_s("hello_world.carousel.soccer"),
+      image: "images/csc/helloworld/helloworldsoccertheme.png",
+      desc: hoc_s("hello_world.carousel.soccer_desc"),
+      url: CDO.studio_url("s/hello-world-soccer-2022/reset"),
+      aria_label: hoc_s(:call_to_action_start_activity_short),
+    },
+    {
+      overline: hoc_s("game_design_page.elementary_curricula.sports.overline"),
+      title: hoc_s("hello_world.carousel.food"),
+      image: "images/csc/helloworld/helloworldhappyfoodtheme.png",
+      desc: hoc_s("hello_world.carousel.food_desc"),
+      url: CDO.studio_url("s/hello-world-food-2021/reset"),
+      aria_label: hoc_s(:call_to_action_start_activity_short),
+    },
+    {
+      overline: hoc_s("game_design_page.elementary_curricula.sports.overline"),
+      title: hoc_s("hello_world.carousel.animals"),
+      image: "images/csc/helloworld/helloworldanimalstheme.png",
+      desc: hoc_s("hello_world.carousel.animals_desc"),
+      url: CDO.studio_url("s/hello-world-animals-2021/reset"),
+      aria_label: hoc_s(:call_to_action_start_activity_short),
+    },
+    {
+      overline: hoc_s("game_design_page.elementary_curricula.sports.overline"),
+      title: hoc_s("hello_world.carousel.retro"),
+      image: "images/csc/helloworld/helloworldretrotheme.png",
+      desc: hoc_s("hello_world.carousel.retro_desc"),
+      url: CDO.studio_url("s/hello-world-retro-2021/reset"),
+      aria_label: hoc_s(:call_to_action_start_activity_short),
+    },
+    {
+      overline: hoc_s("game_design_page.elementary_curricula.sports.overline"),
+      title: hoc_s("hello_world.carousel.emoji"),
+      image: "images/csc/helloworld/helloworldemojitheme.png",
+      desc: hoc_s("hello_world.carousel.emoji_desc"),
+      url: CDO.studio_url("s/hello-world-emoji-2021/reset"),
+      aria_label: hoc_s(:call_to_action_start_activity_short),
+    },
+  ]
+
+.carousel-wrapper
+  %swiper-container.three-col{navigation: "true", "navigation-next-el": ".swiper-nav-next", "navigation-prev-el": ".swiper-nav-prev", init: "false"}
+    - block_item.each do |block_item|
+      %swiper-slide
+        .action-block.action-block--one-col.flex-space-between
+          .content-wrapper
+            - if block_item[:new]
+              .flex-container.justify-space-between.align-items-start
+                %p.overline
+                  = block_item[:overline]
+                %p.new
+                  =hoc_s(:new)
+            - else
+              %p.overline
+                = block_item[:overline]
+            %h3
+              = block_item[:title]
+            %img{src: block_item[:image], alt: ""}
+            %p
+              = block_item[:desc]
+          .content-footer
+            %a.link-button{href: block_item[:url], aria:{label: "#{block_item[:aria_label]}"}}
+              =hoc_s(:call_to_action_see_module_details)
+
+  %button.swiper-nav-prev.nav-prev-01
+  %button.swiper-nav-next.nav-next-01
+
+= view :swiper
