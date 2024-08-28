@@ -47,9 +47,15 @@ export const AssessmentsAnnouncementDialog = () => {
         aria-label={i18n.aiAssessmentsAnnouncementHeading()}
         className={styles.announcementDialog}
       >
-        <img src={announcementImage} alt="" />
+        <img
+          src={announcementImage}
+          className={styles.announcementImage}
+          alt=""
+        />
         <Heading2>{i18n.aiAssessmentsAnnouncementHeading()}</Heading2>
-        <BodyTwoText>{i18n.aiAssessmentsAnnouncementBody()}</BodyTwoText>
+        <BodyTwoText className={styles.announcementBody}>
+          {i18n.aiAssessmentsAnnouncementBody()}
+        </BodyTwoText>
         <Button
           id="accept-invitation"
           text={i18n.learnMore()}

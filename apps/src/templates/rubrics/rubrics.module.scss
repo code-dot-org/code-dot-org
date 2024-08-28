@@ -1311,7 +1311,7 @@ p.detailsHidden {
 }
 
 .announcementModal {
-  max-width: 980px !important;
+  max-width: 682px !important;
   max-height: 90% !important;
   display: flex;
   align-items: center;
@@ -1322,4 +1322,16 @@ p.detailsHidden {
   .announcementModal {
     width: 90% !important; /* Set width to 90% of the viewport width */
   }
+}
+
+.announcementImage {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 400px;
+  max-height: 218px;
+  border-radius: 4px;
+}
+
+.announcementBody {
+  max-width: 551px;
 }
