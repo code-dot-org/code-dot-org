@@ -293,6 +293,13 @@ When /^I wait until (?:element )?"([.#])([^"]*)" is (not )?enabled$/ do |selecto
   end
 end
 
+When /^I wait testchange until element "([^"]*)" is enabled$/ do |_selector_symbol, _name, _negation|
+  wait_until do
+    element = @browser.find_element(css: selection_criteria)
+    element.enabled?
+  end
+end
+
 Then /^I wait up to ([\d\.]+) seconds for element "([^"]*)" to be visible$/ do |seconds, selector|
   wait_for_jquery
   Selenium::WebDriver::Wait.new(timeout: seconds.to_f).until do
