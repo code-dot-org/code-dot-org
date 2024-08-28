@@ -56,4 +56,12 @@
 
 .versionLabel {
   color: $white;
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  margin: 4px 8px;
+}
+
+.versionItem {
+  display: flex;
 }

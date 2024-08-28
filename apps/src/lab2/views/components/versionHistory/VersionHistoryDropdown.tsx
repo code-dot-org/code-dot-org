@@ -1,10 +1,9 @@
 import classNames from 'classnames';
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {Button, buttonColors} from '@cdo/apps/componentLibrary/button';
 import Tags from '@cdo/apps/componentLibrary/tags/Tags';
-import {BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import lab2I18n from '@cdo/apps/lab2/locale';
 import {
@@ -13,6 +12,7 @@ import {
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
 import {commonI18n} from '@cdo/apps/types/locale';
+import currentLocale from '@cdo/apps/util/currentLocale';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 
 import moduleStyles from './version-history.module.scss';
@@ -35,6 +35,16 @@ const VersionHistoryDropdown: React.FunctionComponent<
   const [loadError, setLoadError] = useState(false);
   const [loading, setLoading] = useState(false);
   const [selectedVersion, setSelectedVersion] = useState('');
+  const locale = currentLocale();
+
+  const dateFormatter = useMemo(() => {
+    return new Intl.DateTimeFormat(locale, {
+      month: 'short',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: 'numeric',
+    });
+  }, [locale]);
 
   useEffect(() => {
     if (selectedVersion === '') {
@@ -81,8 +91,8 @@ const VersionHistoryDropdown: React.FunctionComponent<
   }, [dispatch, startSource, updatedSourceCallback, closeDropdown]);
 
   const parseDate = (date: string) => {
-    const parsedDate = new Date(date);
-    return parsedDate.toLocaleString();
+    const dateObject = new Date(date);
+    return dateFormatter.format(dateObject);
   };
 
   const onVersionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -95,7 +105,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
     <div>
       <div className={moduleStyles.versionHistoryList}>
         {versionList.map(version => (
-          <label className={moduleStyles.versionItem}>
+          <label className={moduleStyles.versionItem} key={version.versionId}>
             <input
               type="radio"
               name={version.versionId}
@@ -103,8 +113,8 @@ const VersionHistoryDropdown: React.FunctionComponent<
               onChange={onVersionChange}
               checked={selectedVersion === version.versionId}
             />
-            <BodyTwoText className={moduleStyles.versionLabel}>
-              {parseDate(version.lastModified)}
+            <div className={moduleStyles.versionLabel}>
+              <div>{parseDate(version.lastModified)}</div>
               {version.isLatest && (
                 <Tags
                   tagsList={[
@@ -122,7 +132,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
                   ]}
                 />
               )}
-            </BodyTwoText>
+            </div>
           </label>
         ))}
         <div className={moduleStyles.versionHistoryRow}>
