@@ -97,6 +97,7 @@ group :development, :test do
   # For unit testing.
   gem 'webmock', '~> 3.8', require: false
 
+  gem 'faker', '~> 3.4', require: false
   gem 'fakeredis', require: false
   gem 'mocha', require: false
   gem 'timecop'
