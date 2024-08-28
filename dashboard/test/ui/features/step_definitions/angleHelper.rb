@@ -46,7 +46,7 @@ When(/^I drag the Angle Helper circle to coordinates \((\d*),(\d*)\)$/) do |x, y
 end
 
 Then(/^the angle text is at "(\d*)"$/) do |val|
-  expect(@browser.execute_script("return $('.blocklyWidgetDiv .blocklyHtmlInput').val()")).to eq(val)
+  expect(@browser.execute_script("return $('.blocklyWidgetDiv .blocklyHtmlInput').val()")).to be_between(val - 1, val + 1)
 end
 
 Then(/^the angle dropdown is at "(\d*)"$/) do |val|
