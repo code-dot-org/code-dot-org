@@ -1,5 +1,5 @@
 :ruby
-  list_item = [
+  block_items = [
     {
       icon: "fa-solid fa-layer-group",
       title: hoc_s("tools_page.tools_el.scaffolding.heading"),
@@ -23,12 +23,12 @@
   ]
 
 %ul.icon-bullet-list.full-width
-  - list_item.each do |list_item|
+  - block_items.each do |block_item|
     %li
       %div
-        %i{class: "#{list_item[:icon]}"}
+        %i{class: "#{block_item[:icon]}"}
       .text-wrapper
         %h3
-          = list_item[:title]
+          = block_item[:title]
         %p.no-margin-bottom
-          = list_item[:desc]
+          = block_item[:desc]
