@@ -1,7 +1,6 @@
 require_relative './developers_topic'
 require_relative './infra_test_topic'
 
-# TODO: (darin) write to cloudwatch logs instead of devinternal_db
 module TestServerStatus
   # Notes that a new DTT has started, updating Slack topics to set "DTT: no"
   # and recording relevant metrics.
