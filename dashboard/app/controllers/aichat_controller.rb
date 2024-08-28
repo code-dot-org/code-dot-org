@@ -16,6 +16,11 @@ class AichatController < ApplicationController
   # POST /aichat/start_chat_completion
   # Initiate a chat completion request, which is performed asynchronously as an ActiveJob.
   # Returns the ID of the request and a base polling interval + backoff rate.
+  # params are
+  # newMessage: {role: 'user'; chatMessageText: string; status: string}
+  # storedMessages: Array of {role: <'user', 'system', or 'assistant'>; chatMessageText: string; status: string} - does not include user's new message
+  # aichatModelCustomizations: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
+  # aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
   def start_chat_completion
     return head :too_many_requests if should_throttle?
     return render status: :forbidden, json: {} unless AichatSagemakerHelper.can_request_aichat_chat_completion?
