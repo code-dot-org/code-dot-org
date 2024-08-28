@@ -1,0 +1,28 @@
+name 'sp-pl-DS-lesson3Overview'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+#Python and Pandas 
+
+####Now that you have explored data visualizations and storytelling, Chapter 2 in the Data Science Unit focuses on how to use Panda libraries in Python. 
+
+<img src="https://images.code.org/d413739658a53d9c68d3bfa3e0ac25ae-image-1724770105942.png" alt="pixel grid of an X" style="border-radius:40px; float: right; padding-right: 10px; height: 200px; clear: both; margin: 0 60px 20px 0;">
+
+## In this lesson, you will:
+
+- #### Review the content of the Python and Pandas Lessons
+- #### Preview activities in the lessons
+- #### Analyze data using the Python, Pandas, and Matplotlib
+- #### Create a plan for teaching Chapter 2 of the Data Science Unit
+
+
+
+
+### **Suggested time:** 60 minutes
+
+
+## Let's get started 
+
+
+MARKDOWN
