@@ -3,6 +3,7 @@ import React, {useCallback, useEffect, useMemo, useState} from 'react';
 
 import Alert from '@cdo/apps/componentLibrary/alert/Alert';
 import {Button} from '@cdo/apps/componentLibrary/button';
+import CloseButton from '@cdo/apps/componentLibrary/closeButton/CloseButton';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import lab2I18n from '@cdo/apps/lab2/locale';
@@ -109,14 +110,22 @@ const VersionHistoryDropdown: React.FunctionComponent<
   };
 
   const onVersionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    // TODO: preview this version
     setSelectedVersion(e.target.value);
   };
 
   return (
     <div>
-      <Heading6 className={moduleStyles.versionHistoryHeader}>
-        {commonI18n.versionHistory_header()}
-      </Heading6>
+      <div className={moduleStyles.versionHistoryHeader}>
+        <Heading6 className={moduleStyles.versionHistoryTitle}>
+          {commonI18n.versionHistory_header()}
+        </Heading6>
+        <CloseButton
+          onClick={closeDropdown}
+          aria-label={lab2I18n.closeVersionHistory()}
+        />
+      </div>
+
       <div className={moduleStyles.versionHistoryList}>
         {versionList.map(version => (
           <VersionHistoryRow
@@ -159,7 +168,15 @@ const VersionHistoryDropdown: React.FunctionComponent<
           size={'m'}
           onClick={restoreSelectedVersion}
           disabled={loading}
-          className={moduleStyles.restoreButton}
+          className={moduleStyles.actionButton}
+        />
+        <Button
+          text={commonI18n.cancel()}
+          color={'white'}
+          size={'m'}
+          onClick={closeDropdown}
+          disabled={loading}
+          className={moduleStyles.actionButton}
         />
       </div>
     </div>

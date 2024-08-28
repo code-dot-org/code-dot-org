@@ -1,0 +1,35 @@
+@import 'color.scss';
+
+.versionHistoryRow {
+  padding: 8px 12px;
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+  color: $white;
+
+  input[type="radio"] {
+    margin-top: 0;
+  }
+}
+
+.versionDate {
+  color: $white;
+}
+
+.versionLabel {
+  color: $white;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  margin: 8px;
+  font-size: 16px;
+}
+
+.versionHistoryRow:has(input[type="radio"]:checked) {
+  background-color: #3F444B;
+}
+
+.currentVersionTag {
+  height: 24px;
+}

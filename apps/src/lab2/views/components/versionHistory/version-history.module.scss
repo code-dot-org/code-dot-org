@@ -14,9 +14,14 @@
 }
 
 .versionHistoryHeader {
-  color: $white;
   padding: 12px;
   border-bottom: 1px solid #54595E;
+  display: flex;
+  justify-content: space-between;
+}
+
+.versionHistoryTitle {
+  color: $white;
 }
 
 .versionHistoryMessage {
@@ -27,18 +32,6 @@
 .versionHistoryList {
   max-height: 300px;
   overflow-y: scroll;
-}
-
-.versionHistoryRow {
-  padding: 8px 12px;
-  height: 32px;
-  display: flex;
-  justify-content: space-between;
-  color: $white;
-
-  input[type="radio"] {
-    margin-top: 0;
-  }
 }
 
 .startOverButton {
@@ -62,28 +55,6 @@
   font-size: 14px;
 }
 
-.versionDate {
-  color: $white;
-}
-
-.versionLabel {
-  color: $white;
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-  width: 100%;
-  margin: 8px;
-  font-size: 16px;
-}
-
-.versionHistoryRow:has(input[type="radio"]:checked) {
-  background-color: #3F444B;
-}
-
-.restoreButton {
+.actionButton {
   margin-right: 8px;
-}
-
-.currentVersionTag {
-  height: 24px;
 }

@@ -3,7 +3,7 @@ import React from 'react';
 import Tags from '@cdo/apps/componentLibrary/tags';
 import {commonI18n} from '@cdo/apps/types/locale';
 
-import moduleStyles from './version-history.module.scss';
+import moduleStyles from './version-history-row.module.scss';
 
 interface VersionHistoryRowProps {
   versionId: string;
@@ -28,7 +28,6 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
         value={versionId}
         onChange={onChange}
         checked={isSelected}
-        className={moduleStyles.radioButton}
       />
       <div className={moduleStyles.versionLabel}>
         <div className={moduleStyles.versionDate}>{versionLabel}</div>
