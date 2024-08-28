@@ -43,7 +43,12 @@ module MailJet
     return unless user.teacher?
 
     contact = find_or_create_contact(user.email, user.name)
-    update_contact_field(contact, 'sign_up_date', user.created_at.to_datetime.rfc3339)
+    contact_data = [
+      {name: 'sign_up_date', value: user.created_at.to_datetime.rfc3339},
+      {name: 'firstname', value: user.name}, # existing templates use 'firstname'
+      {name: 'display_name', value: user.name},
+    ]
+    update_contact_fields(contact, contact_data)
 
     subaccount_contact_list_config = CONTACT_LISTS[:welcome_series][subaccount.to_sym]
     contact_list_id = subaccount_contact_list_config[locale.to_sym] || subaccount_contact_list_config[:default]
@@ -97,19 +102,19 @@ module MailJet
     Mailjet::Contact.find(email)
   end
 
-  def self.update_contact_field(contact, field_name, field_value)
+  # data must be in the format:
+  # [
+  #   {
+  #     name: "field_name",
+  #     value: "field_value"
+  #   }
+  # ]
+  def self.update_contact_fields(contact, data)
     return unless enabled?
     return if contact.nil?
 
     contactdata = Mailjet::Contactdata.find(contact.id)
-    contactdata.update_attributes(
-      data: [
-        {
-          name: field_name,
-          value: field_value
-        }
-      ]
-    )
+    contactdata.update_attributes(data: data)
   end
 
   def self.delete_contact(email)
