@@ -1,0 +1,14 @@
+name 'sp-pl-DS-chk-panda'
+title 'Matching Assessment: Vocabulary'
+description 'Match term with the definition'
+question 'data storytelling'
+question 'data ethics'
+question 'data question'
+question 'data science'
+answer ' presenting narratives to a specific audience'
+answer 'guidelines that ensure the responsible use of data'
+answer 'a question that can be answered by the data'
+answer ' the process of making meaning from data'
+
+
+allow_multiple_attempts true
