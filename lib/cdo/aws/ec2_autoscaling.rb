@@ -25,8 +25,8 @@ module AWS
       asg_client = Aws::AutoScaling::Client.new
 
       group = asg_client.describe_auto_scaling_groups.auto_scaling_groups.find do |g|
-        has_stack_name = g.tags.any? {|tag| tag.key == 'aws:cloudformation:stack-name' && tag.value == stack_name}
-        has_logical_id = g.tags.any? {|tag| tag.key == 'aws:cloudformation:logical-id' && tag.value == logical_id}
+        has_stack_name = g.tags&.any? {|tag| tag.key == 'aws:cloudformation:stack-name' && tag.value == stack_name}
+        has_logical_id = g.tags&.any? {|tag| tag.key == 'aws:cloudformation:logical-id' && tag.value == logical_id}
         has_stack_name && has_logical_id
       end
 

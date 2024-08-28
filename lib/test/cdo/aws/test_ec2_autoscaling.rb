@@ -74,10 +74,37 @@ class TestEC2Autoscaling < Minitest::Test
     AWS::EC2Autoscaling.refresh_instances_in_group('test-group', wait: true)
   end
 
+  # get_autoscaling_group_for_current_environment
   def test_get_autoscaling_group_for_current_environment_raises_when_no_matching_group_found
     empty_response = Aws::AutoScaling::Types::AutoScalingGroupsType.new(auto_scaling_groups: [])
     Aws::AutoScaling::Client.any_instance.stubs(:describe_auto_scaling_groups).returns(empty_response)
 
     assert_raises(RuntimeError) {AWS::EC2Autoscaling.get_autoscaling_group_for_current_environment}
+  end
+
+  def test_get_autoscaling_group_for_current_environment_returns_group_matching_stack_name_and_logical_id
+    CDO.stubs(:stack_name).returns('test-stack')
+
+    groups = mock_autoscaling_groups(4)
+    # This soup is too cold
+    groups[0].tags = [
+      Aws::AutoScaling::Types::TagDescription.new(key: 'aws:cloudformation:stack-name', value: 'test-stack')
+    ]
+    # This soup is too hot
+    groups[1].tags = [
+      Aws::AutoScaling::Types::TagDescription.new(key: 'aws:cloudformation:logical-id', value: 'Frontends')
+    ]
+    # Good soup
+    groups[2].tags = [
+      Aws::AutoScaling::Types::TagDescription.new(key: 'aws:cloudformation:stack-name', value: 'test-stack'),
+      Aws::AutoScaling::Types::TagDescription.new(key: 'aws:cloudformation:logical-id', value: 'Frontends')
+    ]
+    # No soup for you
+    groups[3].tags = nil
+
+    describe_response = Aws::AutoScaling::Types::AutoScalingGroupsType.new(auto_scaling_groups: groups)
+    Aws::AutoScaling::Client.any_instance.stubs(:describe_auto_scaling_groups).returns(describe_response)
+
+    assert_equal(groups[2].auto_scaling_group_name, AWS::EC2Autoscaling.get_autoscaling_group_for_current_environment)
   end
 end
