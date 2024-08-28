@@ -7,18 +7,19 @@ import moduleStyles from './suggested-prompt.module.scss';
  */
 
 export interface SuggestedPromptProps {
-  onClick: (prompt: SuggestedPromptProps) => void;
+  onClick: () => void;
   label: string;
   show: boolean;
-  selected: boolean;
 }
 
-const DeprecatedSuggestedPrompt: React.FunctionComponent<
-  SuggestedPromptProps
-> = ({onClick, label, show}) =>
+const SuggestedPrompt: React.FunctionComponent<SuggestedPromptProps> = ({
+  onClick,
+  label,
+  show,
+}) =>
   !show ? null : (
-    <div className={moduleStyles.prompt}>
+    <div onClick={onClick} className={moduleStyles.prompt}>
       <span>{label}</span>
     </div>
   );
-export default DeprecatedSuggestedPrompt;
+export default SuggestedPrompt;
