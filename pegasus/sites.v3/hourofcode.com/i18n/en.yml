@@ -2599,6 +2599,7 @@
       desc: "The Transformers activity is an ideal first step for classrooms before tackling the open-ended projects in our new CS Connections curriculum. Once students learn basic coding, they can advance to CS Connections' cross-curricular projects."
   
   hello_world:
+    tiny_banner: "Check out the new [Transformers theme](%{url}) of Hello World!"
     header: "Hello World"
     desc: "Say hello to the world of computer science with this introductory activity that equips students with the basic coding skills and confidence to create apps."
     theme:

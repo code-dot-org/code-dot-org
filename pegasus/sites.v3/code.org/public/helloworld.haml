@@ -14,15 +14,19 @@ theme: responsive_full_width
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/helloworld-styles.css", rel: "stylesheet"}
 
+- transformers_url = "https://code.org/transformers"
+
+= view :top_skinny_banner, banner_id: "banner-transformers", banner_url: nil, banner_icon: "fa-solid fa-megaphone", banner_text: hoc_s("hello_world.tiny_banner", markdown: :inline, locals: {url: transformers_url}), external_link: false, light_theme: true
+
 %section.hero-banner-basic.overlay
-  .wrapper.flex-container.justify-space-between.align-items-center.wrap
-    .text-wrapper.col-45
+  .wrapper.flex-container.justify-space-between.align-items-center
+    .text-wrapper
       %h1.white
         =hoc_s("hello_world.header")
       %p.body-one.white
         =hoc_s("hello_world.desc")
-    %figure.col-45
-      %img{src: "/images/banners/banner-transformers-one.png", alt: ""}
+    .media-wrapper
+      = view :display_video_thumbnail, id: "hello_world_intro", video_code: "blePeROA7fA", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/hello_world_intro_spritelab.mp4"
     .clear
 
 %section#choose-theme
