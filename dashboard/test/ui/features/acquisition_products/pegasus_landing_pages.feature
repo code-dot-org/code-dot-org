@@ -14,4 +14,3 @@ Examples:
   | url                                                               | test_name                  |
   | http://code.org/minecraft                                         | minecraft tutorial landing |
   | http://code.org/starwars                                          | starwars tutorial landing  |
-  | http://code.org/oceans                                            | oceans tutorial landing    |
