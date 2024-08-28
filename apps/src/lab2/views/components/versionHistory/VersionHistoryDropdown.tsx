@@ -147,19 +147,15 @@ const VersionHistoryDropdown: React.FunctionComponent<
         />
       </div>
 
+      {loadError && (
+        <div className={classNames(moduleStyles.versionLoadError)}>
+          <Alert type="danger" text={lab2I18n.versionLoadFailure()} size="s" />
+        </div>
+      )}
       <div className={moduleStyles.versionDropdownFooter}>
         {loading && (
           <div className={classNames(moduleStyles.loadingVersionSpinner)}>
             <i className="fa fa-spinner fa-spin" />
-          </div>
-        )}
-        {loadError && (
-          <div className={classNames(moduleStyles.versionLoadError)}>
-            <Alert
-              type="danger"
-              text={lab2I18n.versionLoadFailure()}
-              size="s"
-            />
           </div>
         )}
         <Button

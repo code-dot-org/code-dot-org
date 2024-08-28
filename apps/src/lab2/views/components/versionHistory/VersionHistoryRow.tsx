@@ -29,7 +29,7 @@ const VersionHistoryRow: React.FunctionComponent<VersionHistoryRowProps> = ({
         onChange={onChange}
         checked={isSelected}
       />
-      <div className={moduleStyles.versionLabel}>
+      <div className={moduleStyles.versionInfo}>
         <div className={moduleStyles.versionDate}>{versionLabel}</div>
         {isLatest && (
           <Tags
