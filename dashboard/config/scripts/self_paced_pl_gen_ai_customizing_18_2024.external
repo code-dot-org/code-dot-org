@@ -1,0 +1,16 @@
+name 'self-paced-pl-gen-ai-customizing_18_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# User Stories
+
+### Key Concept - When to apply retrieval vs system prompting in certain situations.
+
+
+## Up Next!
+
+#### User stories
+
+
+MARKDOWN

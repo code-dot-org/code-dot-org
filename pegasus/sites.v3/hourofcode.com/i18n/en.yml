@@ -2598,6 +2598,31 @@
       header: "Continue learning after Transformers"
       desc: "The Transformers activity is an ideal first step for classrooms before tackling the open-ended projects in our new CS Connections curriculum. Once students learn basic coding, they can advance to CS Connections' cross-curricular projects."
   
+  hello_world:
+    tiny_banner: "Check out the new [Transformers theme](%{url}) of Hello World!"
+    header: "Hello World"
+    desc: "Say hello to the world of computer science with this introductory activity that equips students with the basic coding skills and confidence to create apps."
+    theme:
+      header: "Choose your Hello World theme!"
+      desc: "Choose from these fun themes to code interactive characters in a world you create!"
+    continue:
+      header: "Continue learning after Hello World"
+      desc: "Hello World is a great starting point before doing CS connections."
+    carousel:
+      transformers: "Transformers"
+      space: "Space"
+      space_desc: "3, 2, 1... blast off! In this space-themed introduction to our Sprite Lab, students learn the basics of computer science by building fun, interactive projects."
+      soccer: "Soccer"
+      soccer_desc: "Goooooal! In this soccer-themed introduction to our Sprite Lab, students learn the basics of computer science by building fun, interactive projects."
+      food: "Food"
+      food_desc: "Let's see what's on the menu! In this food-themed intro to Sprite Lab, students learn computer science basics by building fun, interactive projects."
+      animals: "Animals"
+      animals_desc: "Lions and tigers and bears, oh my! In this animal-themed intro to Sprite Lab, students learn computer science basics by building fun, interactive projects."
+      retro: "Retro"
+      retro_desc: "Go old school! In this retro-themed intro to Sprite Lab, students learn computer science basics by building fun, interactive projects"
+      emoji: "Emoji"
+      emoji_desc: "In this emoji-themed intro to Sprite Lab, students learn computer science basics by building fun, interactive projects."
+
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
   hoc_live_learn_title: 'Learn with Hour of Code Live'

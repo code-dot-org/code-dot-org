@@ -47,7 +47,14 @@ const FieldSection: React.FunctionComponent<FieldSectionProps> = ({
               id={fieldName}
               type={inputType}
               value={initialCustomizations[fieldName] as string | number}
-              onChange={e => setPropertyValue(fieldName, e.target.value)}
+              onChange={e =>
+                setPropertyValue(
+                  fieldName,
+                  fieldName === 'temperature'
+                    ? parseFloat(e.target.value)
+                    : e.target.value
+                )
+              }
               className={classNames(
                 inputType === 'textarea' && moduleStyles.textarea
               )}

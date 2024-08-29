@@ -2,8 +2,6 @@ import $ from 'jquery';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-import trackEvent from '../../util/trackEvent';
-
 // Similar UI exists in sharing.html.ejs. At some point int he future, it may
 // make sense to see if we can get rid of the stuff in the .ejs file
 
@@ -97,13 +95,11 @@ export default class SendToPhone extends React.Component {
       .done(
         function () {
           this.setState({sendState: SendState.sent});
-          trackEvent('SendToPhone', 'success');
         }.bind(this)
       )
       .fail(
         function () {
           this.setState({sendState: SendState.error});
-          trackEvent('SendToPhone', 'error');
         }.bind(this)
       );
   };

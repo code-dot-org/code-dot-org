@@ -4,7 +4,7 @@
 .pageAndSidebar {
   display: flex;
   flex-direction: row;
-  min-height: 100%;
+  min-height: 100vh;
 }
 
 .pageWithHeader {
@@ -22,11 +22,13 @@
   width: 242px;
   flex: 0 0 242px;
   background-color: $light_gray_50;
+  height: auto;
 }
 
 .sidebarContent {
   position: sticky;
   top: 0;
+  padding-bottom: 16px;
 }
 
 .sectionDropdown {
