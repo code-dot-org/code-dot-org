@@ -16,7 +16,7 @@ import GoogleClassroomAttributionLabel from '@cdo/apps/templates/progress/Google
 import ProgressLegend from '@cdo/apps/templates/progress/ProgressLegend';
 import ProgressTable from '@cdo/apps/templates/progress/ProgressTable';
 import {unitCalendarLesson} from '@cdo/apps/templates/progress/unitCalendarLessonShapes';
-import {AssessmentsAnnouncementDialog} from '@cdo/apps/templates/rubrics/AssessmentsAnnouncementDialog';
+import AssessmentsAnnouncementDialog from '@cdo/apps/templates/rubrics/AssessmentsAnnouncementDialog';
 import {assignmentCourseVersionShape} from '@cdo/apps/templates/teacherDashboard/shapes';
 import color from '@cdo/apps/util/color';
 import {

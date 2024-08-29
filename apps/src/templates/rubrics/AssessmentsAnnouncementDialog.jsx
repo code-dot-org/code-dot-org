@@ -8,13 +8,14 @@ import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 // import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import HttpClient from '@cdo/apps/util/HttpClient';
+import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
 import announcementImage from './images/ta-assessments-launch-graphic.jpg';
 
 import styles from './rubrics.module.scss';
 
-export const AssessmentsAnnouncementDialog = () => {
+export default function AssessmentsAnnouncementDialog() {
   const [dialogOpen, setDialogOpen] = React.useState(true);
 
   if (!dialogOpen) {
@@ -39,7 +40,7 @@ export const AssessmentsAnnouncementDialog = () => {
     // wait for the post request to complete before navigating, otherwise the
     // post request may be cancelled when navigation occurs.
     postAnnouncementSeen().then(() => {
-      window.location.href = 'https://code.org/ai/teaching-assistant';
+      navigateToHref('https://code.org/ai/teaching-assistant');
     });
   };
 
@@ -74,4 +75,4 @@ export const AssessmentsAnnouncementDialog = () => {
       </div>
     </AccessibleDialog>
   );
-};
+}
