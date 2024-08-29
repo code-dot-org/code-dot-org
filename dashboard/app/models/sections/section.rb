@@ -495,7 +495,7 @@ class Section < ApplicationRecord
         linkToCurrentUnit: link_to_current_unit,
         courseVersionName: course_version_name,
         numberOfStudents: num_students,
-        linkToStudents: "#{base_url}#{id}/manage_students",
+        linkToStudents: manage_students_url,
         code: code,
         lesson_extras: lesson_extras,
         pairing_allowed: pairing_allowed,
@@ -528,6 +528,10 @@ class Section < ApplicationRecord
         ai_tutor_enabled: ai_tutor_enabled,
       }
     end
+  end
+
+  def manage_students_url
+    CDO.studio_url("/teacher_dashboard/sections/#{id}/manage_students")
   end
 
   def provider_managed?
@@ -604,6 +608,16 @@ class Section < ApplicationRecord
   # so we check both here.
   def assigned_csa?
     script&.csa? || [CSA, CSA_PILOT_FACILITATOR].include?(unit_group&.family_name)
+  end
+
+  def assigned_gen_ai?
+    [
+      'exploring-gen-ai1-2024',
+      'exploring-gen-ai2-2024',
+      'foundations-gen-ai-2024',
+      'customizing-llms-2024'
+    ].include?(script&.name) ||
+      unit_group&.name == 'exploring-gen-ai-2024'
   end
 
   def reset_code_review_groups(new_groups)
