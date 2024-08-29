@@ -3,7 +3,7 @@ require 'aws-sdk-applicationautoscaling'
 require 'colorize'
 require 'optparse'
 require 'open3'
-require 'pycall'
+require_relative '../../../../lib/cdo/pycall'
 require_relative './config'
 
 def main
