@@ -35,5 +35,7 @@
   "validationNotYetPassedContinue": "You must pass tests before continuing.",
   "validationNotYetPassedFinish": "You must pass tests before finishing.",
   "validationNotYetPassedSubmit": "You must pass tests before submitting.",
-  "validationResults": "Validation Results"
+  "validationResults": "Validation Results",
+  "viewingOldVersion": "You are viewing an older version",
+  "versionRestored": "Version successfully restored"
 }

@@ -14,11 +14,13 @@ import Lab2Registry from '../Lab2Registry';
 export interface Lab2ProjectState {
   projectSource: ProjectSources | undefined;
   viewingOldVersion: boolean;
+  restoredOldVersion: boolean;
 }
 
 const initialState: Lab2ProjectState = {
   projectSource: undefined,
   viewingOldVersion: false,
+  restoredOldVersion: false,
 };
 
 // THUNKS
@@ -39,9 +41,12 @@ export const setAndSaveProjectSource = (
 export const loadVersion = createAsyncThunk(
   'lab2Project/loadVersion',
   async (payload: {versionId: string}, thunkAPI) => {
+    console.log('in loadVersion');
     const projectManager = Lab2Registry.getInstance().getProjectManager();
     if (projectManager) {
+      console.log('loading sources...');
       const sources = await projectManager.loadSources(payload.versionId);
+      console.log(`got sources`);
       thunkAPI.dispatch(setPreviousVersionSource(sources));
     }
   }
@@ -78,6 +83,9 @@ const projectSlice = createSlice({
     setViewingOldVersion(state, action: PayloadAction<boolean>) {
       state.viewingOldVersion = action.payload;
     },
+    setRestoredOldVersion(state, action: PayloadAction<boolean>) {
+      state.restoredOldVersion = action.payload;
+    },
   },
 });
 
@@ -85,6 +93,7 @@ export const {
   setProjectSource,
   setPreviousVersionSource,
   setViewingOldVersion,
+  setRestoredOldVersion,
 } = projectSlice.actions;
 
 export default projectSlice.reducer;

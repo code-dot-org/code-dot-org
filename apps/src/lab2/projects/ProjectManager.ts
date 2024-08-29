@@ -118,6 +118,7 @@ export default class ProjectManager {
    * @returns sources for the project.
    */
   async loadSources(versionId?: string) {
+    console.log(`loading version ${versionId}`);
     let sources: ProjectSources | undefined;
     try {
       sources = await this.sourcesStore.load(this.channelId, versionId);
@@ -127,6 +128,7 @@ export default class ProjectManager {
       // we will default to empty sources. Source can return not found if the project
       // is new. If neither of these cases, throw the error.
       if (error instanceof ValidationError) {
+        console.log('validation error');
         this.metricsReporter.logWarning(
           `Error validating sources (${error.message}). Defaulting to empty sources.`
         );
@@ -134,11 +136,13 @@ export default class ProjectManager {
         error instanceof NetworkError &&
         (error as NetworkError).response.status === 404
       ) {
+        console.log('got a 404');
         // This is expected if the project is new. Default to empty sources.
       } else {
         throw new Error('Error loading sources', {cause: error});
       }
     }
+    console.log({sources});
     return sources;
   }
 

@@ -38,6 +38,9 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
   const [loadError, setLoadError] = useState(false);
 
   const isReadOnly = useAppSelector(isReadOnlyWorkspace);
+  const isViewingOldVersion = useAppSelector(
+    state => state.lab2Project.viewingOldVersion
+  );
   const toggleVersionHistory = (
     e: React.MouseEvent<HTMLButtonElement> | React.MouseEvent<HTMLAnchorElement>
   ) => {
@@ -81,7 +84,7 @@ const VersionHistoryButton: React.FunctionComponent<VersionHistoryProps> = ({
         onClick={toggleVersionHistory}
         ariaLabel={commonI18n.versionHistory_header()}
         size={'xs'}
-        disabled={isReadOnly}
+        disabled={isReadOnly && !isViewingOldVersion}
       />
       {(isVersionHistoryOpen || loading || loadError) && (
         <div className={moduleStyles.versionHistoryDropdown} ref={menuRef}>

@@ -12,6 +12,8 @@ import {
   setAndSaveProjectSource,
   loadVersion,
   resetToCurrentVersion,
+  setViewingOldVersion,
+  setRestoredOldVersion,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -63,14 +65,23 @@ const VersionHistoryDropdown: React.FunctionComponent<
 
   const dispatch = useAppDispatch();
 
+  const successfulRestoreCleanUp = useCallback(
+    (sources: ProjectSources) => {
+      dispatch(setViewingOldVersion(false));
+      dispatch(setRestoredOldVersion(true));
+      if (updatedSourceCallback) {
+        updatedSourceCallback(sources);
+      }
+    },
+    [dispatch, updatedSourceCallback]
+  );
+
   const startOver = useCallback(() => {
     // TODO: confirm
     dispatch(setAndSaveProjectSource(startSource));
-    if (updatedSourceCallback) {
-      updatedSourceCallback(startSource);
-    }
+    successfulRestoreCleanUp(startSource);
     closeDropdown();
-  }, [dispatch, startSource, updatedSourceCallback, closeDropdown]);
+  }, [dispatch, startSource, successfulRestoreCleanUp, closeDropdown]);
 
   const restoreSelectedVersion = useCallback(() => {
     const projectManager = Lab2Registry.getInstance().getProjectManager();
@@ -84,9 +95,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
         .then(sources => {
           if (sources) {
             dispatch(setProjectSource(sources));
-            if (updatedSourceCallback) {
-              updatedSourceCallback(sources);
-            }
+            successfulRestoreCleanUp(sources);
           } else {
             setLoadError(true);
           }
@@ -104,7 +113,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
     startOver,
     closeDropdown,
     dispatch,
-    updatedSourceCallback,
+    successfulRestoreCleanUp,
   ]);
 
   const parseDate = (date: string) => {
