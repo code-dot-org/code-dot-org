@@ -90,17 +90,18 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
     })
       .then(response => response.json())
       .then(json => {
-        console.log(json);
         const newAiMessage = {
           role: Role.ASSISTANT,
           chatMessageText: json.chat_message_text,
           status: json.status,
         };
-        setIsWaitingForResponse(false);
         setSessionId(json.session_id);
         setMessageHistory(prevMessages => [...prevMessages, newAiMessage]);
       })
-      .catch(error => console.log(error));
+      .catch(error => console.log(error))
+      .finally(() => {
+        setIsWaitingForResponse(false);
+      });
   };
 
   const selectChoices = (changeId: number) => (ids: string[]) => {
