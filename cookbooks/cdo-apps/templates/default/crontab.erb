@@ -125,8 +125,9 @@
       cronjob at:'0 4 * * *', do:deploy_dir('bin', 'cron', 'cleanup_mvp_ai_tutor_interactions')
       cronjob at:'0 4 * * *', do:deploy_dir('bin', 'cron', 'delete_old_ai_chat_data')
 
-      # Send daily warning emails to teachers about their sections with CAP affected students at 4:00 AM UTC
-      cronjob at:'0 4 * * *', do:"#{deploy_dir('bin', 'cron', 'perform_job')} CAP::TeacherSectionsWarningJob"
+      # Send warning emails to teachers about their sections with CAP affected students
+      # every Monday and Wednesday at 12:00 AM EST (04:00 AM UTC)
+      cronjob at:'0 4 * * 1,3', do:"#{deploy_dir('bin', 'cron', 'perform_job')} CAP::TeacherSectionsWarningJob"
 
       # RDS backup window is 05:17-05:47 UTC, so by 11:50 backups should definitely be ready
       cronjob at:'50 11 * * *', do:deploy_dir('bin', 'cron', 'push_latest_aurora_backup_to_secondary_account')
