@@ -10,6 +10,8 @@ import lab2I18n from '@cdo/apps/lab2/locale';
 import {
   setProjectSource,
   setAndSaveProjectSource,
+  loadVersion,
+  resetToCurrentVersion,
 } from '@cdo/apps/lab2/redux/lab2ProjectRedux';
 import {ProjectSources, ProjectVersion} from '@cdo/apps/lab2/types';
 import {commonI18n} from '@cdo/apps/types/locale';
@@ -113,6 +115,20 @@ const VersionHistoryDropdown: React.FunctionComponent<
   const onVersionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     // TODO: preview this version
     setSelectedVersion(e.target.value);
+    dispatch(loadVersion({versionId: e.target.value}));
+  };
+
+  // Function called when clicking 'x' or 'cancel'. This will reset the project to the current version
+  // if the user is viewing an old version, then close the dropdown.
+  const handleCancel = () => {
+    // Go back to current version if we are viewing an old version
+    const versionBeingViewed = versionList.find(
+      version => version.versionId === selectedVersion
+    );
+    if (versionBeingViewed && !versionBeingViewed.isLatest) {
+      dispatch(resetToCurrentVersion());
+    }
+    closeDropdown();
   };
 
   return (
@@ -122,7 +138,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
           {commonI18n.versionHistory_header()}
         </Heading6>
         <CloseButton
-          onClick={closeDropdown}
+          onClick={handleCancel}
           aria-label={lab2I18n.closeVersionHistory()}
         />
       </div>
@@ -171,7 +187,7 @@ const VersionHistoryDropdown: React.FunctionComponent<
           text={commonI18n.cancel()}
           color={'white'}
           size={'m'}
-          onClick={closeDropdown}
+          onClick={handleCancel}
           disabled={loading}
           className={moduleStyles.actionButton}
         />
