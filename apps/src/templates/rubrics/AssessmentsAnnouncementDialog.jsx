@@ -7,6 +7,7 @@ import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 // import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 // import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import i18n from '@cdo/locale';
 
 import announcementImage from './images/ta-assessments-launch-graphic.jpg';
@@ -20,13 +21,26 @@ export const AssessmentsAnnouncementDialog = () => {
     return null;
   }
 
+  // post to the server indicating the announcement has been seen.
+  // @return {Promise} A promise that resolves when the post request completes.
+  const postAnnouncementSeen = () => {
+    const url = '/api/v1/users/has_seen_ai_assessments_announcement';
+    return HttpClient.post(url, null, true);
+  };
+
   const handleClose = () => {
+    // dialog should close immediately, before post request completes
     setDialogOpen(false);
+    postAnnouncementSeen();
   };
   const handleDismiss = handleClose;
 
   const handleButtonClick = () => {
-    window.location.href = 'https://code.org/ai/teaching-assistant';
+    // wait for the post request to complete before navigating, otherwise the
+    // post request may be cancelled when navigation occurs.
+    postAnnouncementSeen().then(() => {
+      window.location.href = 'https://code.org/ai/teaching-assistant';
+    });
   };
 
   return (
