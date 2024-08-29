@@ -28,6 +28,7 @@ import {
 } from '../code-studio/projectRedux';
 import {RootState} from '../types/redux';
 import HttpClient, {NetworkError} from '../util/HttpClient';
+import {AppDispatch} from '../util/reduxHooks';
 
 import {START_SOURCES} from './constants';
 import Lab2Registry from './Lab2Registry';
@@ -74,6 +75,7 @@ export interface LabState {
   levelProperties: LevelProperties | undefined;
   // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
   isShareView: boolean | undefined;
+  alreadyResetHistory: boolean;
 }
 
 const initialState: LabState = {
@@ -85,6 +87,7 @@ const initialState: LabState = {
   validationState: getInitialValidationState(),
   levelProperties: undefined,
   isShareView: undefined,
+  alreadyResetHistory: false,
 };
 
 // Thunks
@@ -94,138 +97,137 @@ const initialState: LabState = {
 // If we are given a channel id, we will use that to load the project, otherwise we will
 // get the channel id based on the level and script id.
 // If we get an aborted signal, we will exit early.
-export const setUpWithLevel = createAsyncThunk(
-  'lab/setUpWithLevel',
-  async (
-    payload: {
-      levelId: number;
-      scriptId?: number;
-      levelPropertiesPath: string;
-      channelId?: string;
-      userId?: number;
-      scriptLevelId?: string;
-    },
-    thunkAPI
-  ) => {
+export const setUpWithLevel = createAsyncThunk<
+  void,
+  {
+    levelId: number;
+    scriptId?: number;
+    levelPropertiesPath: string;
+    channelId?: string;
+    userId?: number;
+    scriptLevelId?: string;
+  },
+  {dispatch: AppDispatch; state: RootState}
+>('lab/setUpWithLevel', async (payload, thunkAPI) => {
+  Lab2Registry.getInstance()
+    .getLifecycleNotifier()
+    .notify(LifecycleEvent.LevelLoadStarted, payload.levelId);
+  try {
+    // Update properties for reporting as early as possible in case of errors.
+    Lab2Registry.getInstance().getMetricsReporter().updateProperties({
+      currentLevelId: payload.levelId,
+      scriptId: payload.scriptId,
+      channelId: payload.channelId,
+    });
+
+    await cleanUpProjectManager();
+    const isViewingExemplar = getAppOptionsViewingExemplar();
+    const isEditingExemplar = getAppOptionsEditingExemplar();
+
+    // Load level properties if we have a levelPropertiesPath.
+    const levelProperties = await loadLevelProperties(
+      payload.levelPropertiesPath
+    );
+
     Lab2Registry.getInstance()
-      .getLifecycleNotifier()
-      .notify(LifecycleEvent.LevelLoadStarted, payload.levelId);
-    try {
-      // Update properties for reporting as early as possible in case of errors.
-      Lab2Registry.getInstance().getMetricsReporter().updateProperties({
-        currentLevelId: payload.levelId,
-        scriptId: payload.scriptId,
-        channelId: payload.channelId,
-      });
+      .getMetricsReporter()
+      .updateProperties({appName: levelProperties.appName});
 
-      await cleanUpProjectManager();
-      const isViewingExemplar = getAppOptionsViewingExemplar();
-      const isEditingExemplar = getAppOptionsEditingExemplar();
+    const {isProjectLevel, usesProjects} = levelProperties;
 
-      // Load level properties if we have a levelPropertiesPath.
-      const levelProperties = await loadLevelProperties(
-        payload.levelPropertiesPath
-      );
+    Lab2Registry.getInstance().setAppName(levelProperties.appName);
 
-      Lab2Registry.getInstance()
-        .getMetricsReporter()
-        .updateProperties({appName: levelProperties.appName});
-
-      const {isProjectLevel, usesProjects} = levelProperties;
-
-      Lab2Registry.getInstance().setAppName(levelProperties.appName);
-
-      if (!usesProjects) {
-        // If projects are disabled on this level, we can skip loading projects data.
-        setProjectAndLevelData(
-          {levelProperties},
-          thunkAPI.signal.aborted,
-          thunkAPI.dispatch
-        );
-        return;
-      }
-
-      // If we are in start mode or are editing or viewing exemplars,
-      // we don't use a channel id.
-      // We can skip creating a project manager and just set the level data.
-      const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
-      if (isStartMode || isViewingExemplar || isEditingExemplar) {
-        setProjectAndLevelData(
-          {levelProperties},
-          thunkAPI.signal.aborted,
-          thunkAPI.dispatch
-        );
-        return;
-      }
-
-      // If we have a predict level, we should try to load the existing response.
-      // We only can load predict responses if we have a script id.
-      if (levelProperties.predictSettings?.isPredictLevel && payload.scriptId) {
-        const predictResponse =
-          (await getPredictResponse(payload.levelId, payload.scriptId)) || '';
-        thunkAPI.dispatch(setLoadedPredictResponse(predictResponse));
-      } else {
-        // If this isn't a predict level, reset the response to an empty string
-        // to avoid potentially confusing behavior.
-        thunkAPI.dispatch(setLoadedPredictResponse(''));
-      }
-
-      // Create a new project manager. If we have a channel id,
-      // default to loading the project for that channel. Otherwise
-      // create a project manager for the given level and script id.
-      const projectManager =
-        payload.channelId && isProjectLevel
-          ? ProjectManagerFactory.getProjectManager(
-              ProjectManagerStorageType.REMOTE,
-              payload.channelId
-            )
-          : await ProjectManagerFactory.getProjectManagerForLevel(
-              ProjectManagerStorageType.REMOTE,
-              payload.levelId,
-              payload.userId,
-              payload.scriptId,
-              payload.scriptLevelId
-            );
-
-      // Only set the project manager and initiate load
-      // if this request hasn't been cancelled.
-      if (thunkAPI.signal.aborted) {
-        return;
-      }
-
-      // We might be a teacher attempting to view a student level that hasn't been
-      // started, and there is no project manager available.
-      if (!projectManager) {
-        // If the level hasn't been started, we can skip loading projects data.
-        setProjectAndLevelData(
-          {levelProperties},
-          thunkAPI.signal.aborted,
-          thunkAPI.dispatch
-        );
-        return;
-      }
-
-      // Set channel ID for reporting in case we hit an error and can't update the store.
-      Lab2Registry.getInstance().getMetricsReporter().updateProperties({
-        channelId: projectManager.getChannelId(),
-      });
-
-      Lab2Registry.getInstance().setProjectManager(projectManager);
-      // Load channel and source.
-      const {sources, channel} = await setUpAndLoadProject(
-        projectManager,
-        thunkAPI.dispatch
-      );
+    if (!usesProjects) {
+      // If projects are disabled on this level, we can skip loading projects data.
       setProjectAndLevelData(
-        {initialSources: sources, channel, levelProperties},
+        {levelProperties},
         thunkAPI.signal.aborted,
         thunkAPI.dispatch
       );
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error);
+      return;
     }
+
+    // If we are in start mode or are editing or viewing exemplars,
+    // we don't use a channel id.
+    // We can skip creating a project manager and just set the level data.
+    const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
+    if (isStartMode || isViewingExemplar || isEditingExemplar) {
+      setProjectAndLevelData(
+        {levelProperties},
+        thunkAPI.signal.aborted,
+        thunkAPI.dispatch
+      );
+      return;
+    }
+
+    // If we have a predict level, we should try to load the existing response.
+    // We only can load predict responses if we have a script id.
+    if (levelProperties.predictSettings?.isPredictLevel && payload.scriptId) {
+      const predictResponse =
+        (await getPredictResponse(payload.levelId, payload.scriptId)) || '';
+      thunkAPI.dispatch(setLoadedPredictResponse(predictResponse));
+    } else {
+      // If this isn't a predict level, reset the response to an empty string
+      // to avoid potentially confusing behavior.
+      thunkAPI.dispatch(setLoadedPredictResponse(''));
+    }
+
+    // Create a new project manager. If we have a channel id,
+    // default to loading the project for that channel. Otherwise
+    // create a project manager for the given level and script id.
+    const projectManager =
+      payload.channelId && isProjectLevel
+        ? ProjectManagerFactory.getProjectManager(
+            ProjectManagerStorageType.REMOTE,
+            payload.channelId
+          )
+        : await ProjectManagerFactory.getProjectManagerForLevel(
+            ProjectManagerStorageType.REMOTE,
+            payload.levelId,
+            payload.userId,
+            payload.scriptId,
+            payload.scriptLevelId
+          );
+
+    // Only set the project manager and initiate load
+    // if this request hasn't been cancelled.
+    if (thunkAPI.signal.aborted) {
+      return;
+    }
+
+    // We might be a teacher attempting to view a student level that hasn't been
+    // started, and there is no project manager available.
+    if (!projectManager) {
+      // If the level hasn't been started, we can skip loading projects data.
+      setProjectAndLevelData(
+        {levelProperties},
+        thunkAPI.signal.aborted,
+        thunkAPI.dispatch
+      );
+      return;
+    }
+
+    // Set channel ID for reporting in case we hit an error and can't update the store.
+    Lab2Registry.getInstance().getMetricsReporter().updateProperties({
+      channelId: projectManager.getChannelId(),
+    });
+
+    Lab2Registry.getInstance().setProjectManager(projectManager);
+    // Load channel and source.
+    const {sources, channel} = await setUpAndLoadProject(
+      projectManager,
+      thunkAPI.dispatch,
+      thunkAPI.getState().lab.alreadyResetHistory
+    );
+    setProjectAndLevelData(
+      {initialSources: sources, channel, levelProperties},
+      thunkAPI.signal.aborted,
+      thunkAPI.dispatch
+    );
+  } catch (error) {
+    return thunkAPI.rejectWithValue(error);
   }
-);
+});
 
 // Given a channel id and app name as the payload, set up the lab for that channel id.
 // This consists of cleaning up the existing project manager (if applicable), then
@@ -257,7 +259,8 @@ export const setUpWithoutLevel = createAsyncThunk(
       // Load channel and source.
       const {sources, channel} = await setUpAndLoadProject(
         projectManager,
-        thunkAPI.dispatch
+        thunkAPI.dispatch,
+        false
       );
       setProjectAndLevelData(
         {
@@ -371,6 +374,9 @@ const labSlice = createSlice({
     setIsShareView(state, action: PayloadAction<boolean>) {
       state.isShareView = action.payload;
     },
+    setAlreadyResetHistory(state, action: PayloadAction<boolean>) {
+      state.alreadyResetHistory = action.payload;
+    },
   },
   extraReducers: builder => {
     builder.addCase(setUpWithLevel.fulfilled, state => {
@@ -457,7 +463,8 @@ function getErrorFromThunkAction(
 // thunk dispatch method.
 async function setUpAndLoadProject(
   projectManager: ProjectManager,
-  dispatch: ThunkDispatch<unknown, unknown, AnyAction>
+  dispatch: ThunkDispatch<unknown, unknown, AnyAction>,
+  alreadyResetHistory: boolean
 ) {
   projectManager.addSaveStartListener(() =>
     dispatch(setProjectUpdatedSaving())
@@ -475,7 +482,14 @@ async function setUpAndLoadProject(
     }
   });
   projectManager.addSaveFailListener(() => dispatch(setProjectUpdatedError()));
-  return await projectManager.load();
+  const url = new URL(document.URL);
+  const params = new URLSearchParams(url.search);
+  let resetToStartSources = false;
+  if (params.get('reset') && !alreadyResetHistory) {
+    dispatch(setAlreadyResetHistory(true));
+    resetToStartSources = true;
+  }
+  return await projectManager.load(resetToStartSources);
 }
 
 // Helper function to set the channel, source, and level data in redux.
@@ -568,6 +582,6 @@ export const {
 } = labSlice.actions;
 
 // These should not be set outside of the lab slice.
-const {setChannel, onLevelChange} = labSlice.actions;
+const {setChannel, onLevelChange, setAlreadyResetHistory} = labSlice.actions;
 
 export default labSlice.reducer;
