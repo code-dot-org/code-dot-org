@@ -2,7 +2,7 @@ const {
   modelNames,
   headerWidgetConfig,
   crossModelWidgetsConfig,
-} = require('./dashboardConfigConstants');
+} = require('./constants');
 
 const getModelSpecificConfig = modelName => [
   {

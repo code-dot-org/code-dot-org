@@ -4,7 +4,7 @@ const {
 } = require('@aws-sdk/client-cloudwatch');
 const fs = require('fs');
 
-const getDashboard = async () => {
+const getDashboardConfig = async () => {
   const client = new CloudWatchClient({region: 'us-east-1'});
   const input = {
     // GetDashboardInput
@@ -14,10 +14,10 @@ const getDashboard = async () => {
   const response = await client.send(command);
 
   fs.writeFile(
-    './dashboardConfig.json',
+    './existingConfig.json',
     JSON.stringify(JSON.parse(response.DashboardBody), null, 2),
     () => console.log('done')
   );
 };
 
-getDashboard();
+getDashboardConfig();
