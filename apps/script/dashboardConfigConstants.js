@@ -18,6 +18,8 @@ const headerWidgetConfig = {
   },
 };
 
+// Note that the second widget here still has some hard coded model names in it.
+// This could probably be adjusted to accommodate parameterized model names in the future.
 const crossModelWidgetsConfig = [
   {
     height: 9,
