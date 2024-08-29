@@ -86,10 +86,10 @@
               = block_item[:title]
             %img{src: block_item[:img], alt: ""}
             %p 
-              %strong What you can make:
+              %strong=hoc_s(:"teach_labs_section.label_what_you_can_make")
               = block_item[:what_you_can_make]
             %p 
-              %strong Experience:
+              %strong=hoc_s(:"teach_labs_section.label_experience")
               = block_item[:experience]
           .content-footer
             %a.link-button{href: block_item[:primary_url], aria:{label: block_item[:primary_aria_label]}}
