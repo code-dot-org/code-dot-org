@@ -21,7 +21,7 @@
     "name": "Firefox",
     "browserName": "firefox",
     "browserVersion": "112",
-    "platformName": "Windows 11"
+    "platformName": "Windows 10"
   },
   {
     "name": "iPhone",
