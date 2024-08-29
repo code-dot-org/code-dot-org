@@ -1,4 +1,6 @@
-{
+const modelName = 'gen-ai-mistral-7b-inst-v01';
+
+const config = `{
     "widgets": [
       {
         "height": 9,
@@ -14,7 +16,7 @@
               "/aws/sagemaker/Endpoints",
               "CPUUtilization",
               "EndpointName",
-              "gen-ai-mistral-7b-inst-v01",
+              "${modelName}",
               "VariantName",
               "AllTraffic",
               {
@@ -23,7 +25,7 @@
             ]
           ],
           "region": "us-east-1",
-          "title": "CPU Utilization - gen-ai-mistral-7b-inst-v01",
+          "title": "CPU Utilization - ${modelName}",
           "period": 300,
           "yAxis": {
             "left": {
@@ -47,7 +49,7 @@
               "/aws/sagemaker/Endpoints",
               "GPUUtilization",
               "EndpointName",
-              "gen-ai-mistral-7b-inst-v01",
+              "${modelName}",
               "VariantName",
               "AllTraffic",
               {
@@ -68,7 +70,7 @@
           ],
           "region": "us-east-1",
           "period": 300,
-          "title": "GPU Utilization - gen-ai-mistral-7b-inst-v01",
+          "title": "GPU Utilization - ${modelName}",
           "yAxis": {
             "left": {
               "min": 0,
@@ -91,7 +93,7 @@
               "/aws/sagemaker/Endpoints",
               "DiskUtilization",
               "EndpointName",
-              "gen-ai-mistral-7b-inst-v01",
+              "${modelName}",
               "VariantName",
               "AllTraffic",
               {
@@ -111,7 +113,7 @@
             ]
           ],
           "region": "us-east-1",
-          "title": "Memory & Disk Utilization - gen-ai-mistral-7b-inst-v01",
+          "title": "Memory & Disk Utilization - ${modelName}",
           "period": 300,
           "yAxis": {
             "left": {
@@ -134,11 +136,11 @@
               "AWS/SageMaker",
               "Invocations",
               "EndpointName",
-              "gen-ai-mistral-7b-inst-v01",
+              "${modelName}",
               "VariantName",
               "AllTraffic",
               "EndpointConfigName",
-              "gen-ai-mistral-7b-inst-v01",
+              "${modelName}",
               {
                 "region": "us-east-1"
               }
@@ -158,7 +160,7 @@
           "view": "timeSeries",
           "stacked": false,
           "region": "us-east-1",
-          "title": "Invocations - gen-ai-mistral-7b-inst-v01",
+          "title": "Invocations - ${modelName}",
           "period": 300,
           "stat": "Sum"
         }
@@ -177,11 +179,11 @@
               "AWS/SageMaker",
               "ModelLatency",
               "EndpointName",
-              "gen-ai-mistral-7b-inst-v01",
+              "${modelName}",
               "VariantName",
               "AllTraffic",
               "EndpointConfigName",
-              "gen-ai-mistral-7b-inst-v01",
+              "${modelName}",
               {
                 "region": "us-east-1"
               }
@@ -196,7 +198,7 @@
             ]
           ],
           "region": "us-east-1",
-          "title": "Latency - gen-ai-mistral-7b-inst-v01",
+          "title": "Latency - ${modelName}",
           "period": 300
         }
       },
@@ -214,11 +216,11 @@
               "AWS/SageMaker",
               "InvocationModelErrors",
               "EndpointName",
-              "gen-ai-mistral-7b-inst-v01",
+              "${modelName}",
               "VariantName",
               "AllTraffic",
               "EndpointConfigName",
-              "gen-ai-mistral-7b-inst-v01"
+              "${modelName}"
             ],
             [
               ".",
@@ -242,7 +244,7 @@
             ]
           ],
           "region": "us-east-1",
-          "title": "Invocation Errors - gen-ai-mistral-7b-inst-v01"
+          "title": "Invocation Errors - ${modelName}"
         }
       },
       {
@@ -252,7 +254,7 @@
         "x": 0,
         "type": "text",
         "properties": {
-          "markdown": "## **gen-ai-mistral-7b-inst-v01**"
+          "markdown": "## **${modelName}**"
         }
       },
       {
@@ -269,7 +271,7 @@
               "AWS/SageMaker",
               "OverheadLatency",
               "EndpointName",
-              "gen-ai-mistral-7b-inst-v01",
+              "${modelName}",
               "VariantName",
               "AllTraffic"
             ],
@@ -290,4 +292,7 @@
         }
       }
     ]
-  }
+  }`;
+
+const jsonObject = JSON.parse(config);
+module.exports = jsonObject;
