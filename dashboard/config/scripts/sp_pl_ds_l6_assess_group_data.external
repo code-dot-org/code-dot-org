@@ -3,6 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
+#Data Science
 ## Lesson 6: Assessing and Grouping Data 
 
 <img src="https://images.code.org/67ffc2f509435221421772542505b6c6-image-1724776688847.png" alt="data aggregation sample" width="230px"  style="border-radius:10px; float:right; margin: 0 20px 40px 40px;">

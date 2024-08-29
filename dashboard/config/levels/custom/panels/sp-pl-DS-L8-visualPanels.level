@@ -1,5 +1,6 @@
 <Panels>
   <config><![CDATA[{
+  "published": true,
   "game_id": 73,
   "created_at": "2024-08-27T16:05:43.000Z",
   "level_num": "custom",
@@ -9,45 +10,44 @@
     "panels": [
       {
         "text": "\n\n",
-        "imageUrl": "https://images.code.org/775c0449ca7b31c50a9a9fe3a6a0577d-data.png",
+        "imageUrl": "https://images.code.org/eec392815707430ded5da42d1682759d-stacked1.png",
         "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c"
       },
       {
         "text": "",
-        "imageUrl": "https://images.code.org/7ab1285bb5d3e0fed89b68359d520e06-cells.png",
+        "imageUrl": "https://images.code.org/23633ab92cf72403d531f4e2ab2feedd-pie2.png",
         "key": "game_design_spr_types-53c92e2f-0462-48a7-8070-e1224840f013"
       },
       {
         "text": "",
-        "imageUrl": "https://images.code.org/ccfef65fa2851a7abdabb4c01ea5b145-rows&columns.png",
+        "imageUrl": "https://images.code.org/994f52d04f688b6bbea58a5164affad6-groupby3.png",
         "key": "game_design_spr_types-4936be88-574e-4dd8-a31f-e671e54e482b",
         "layout": "text-bottom-right"
       },
       {
         "text": "",
-        "imageUrl": "https://images.code.org/3e6835b141f76bb76d5c80ee3e0ad497-attribute.png",
+        "imageUrl": "https://images.code.org/4c0ebfb8babe73d38d3fbe74177bec55-stacked4.png",
         "key": "gen-ai-panels-test-L1-a74895ac-5363-4d66-9831-a3d899ea8ed7",
         "layout": "text-top-left"
       },
       {
         "text": "",
-        "imageUrl": "https://images.code.org/d81f21078f0e313ba2c083e3c67a97dd-case.png",
+        "imageUrl": "https://images.code.org/3aec59e300a0353462d1ce3343a09d67-labels5.png",
         "key": "sp-pl-DS-SpreadsheetVocab-643a23e5-54c4-4eb0-a0bb-bde8f986587c"
       },
       {
         "text": "",
-        "imageUrl": "https://images.code.org/99dad0482042405decf5546bdd8c0336-sample size.png",
+        "imageUrl": "https://images.code.org/bdacb9147e96dd9486a72e24fb118782-size6.png",
         "key": "sp-pl-DS-SpreadsheetVocab-79e6faa9-6b7f-4aab-a8d7-c91fdc3ca442"
       },
       {
         "text": "",
-        "imageUrl": "https://images.code.org/8d53017684ead3434cc1be119a16a391-spreadsheet.png",
+        "imageUrl": "https://images.code.org/fcf734d76f775396de2c0ac328dae3bd-pltpie7.png",
         "key": "sp-pl-DS-SpreadsheetVocab-23803e7b-4230-4c32-ac36-59aaf29309ce"
       }
     ],
     "name_suffix": "_2024"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-08-27T16:05:43.726+00:00\",\"changed\":[\"cloned from \\\"sp-pl-DS-SpreadsheetVocab\\\"\"],\"cloned_from\":\"sp-pl-DS-SpreadsheetVocab\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-08-27T16:05:43.726+00:00\",\"changed\":[\"cloned from \\\"sp-pl-DS-SpreadsheetVocab\\\"\"],\"cloned_from\":\"sp-pl-DS-SpreadsheetVocab\"},{\"changed_at\":\"2024-08-28 15:24:48 +0000\",\"changed\":[\"panels\"],\"changed_by_id\":19028,\"changed_by_email\":\"amanda.dennard@code.org\"}]"
 }]]></config>
 </Panels>
