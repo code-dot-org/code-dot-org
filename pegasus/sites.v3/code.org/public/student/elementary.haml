@@ -7,11 +7,13 @@ theme: responsive_full_width
 
 = view :poetry_banner
 
-%section.no-padding-bottom
+%section
   .wrapper
     %h1=hoc_s(:elemeentary_page_main_title)
     %p.body-one
       =hoc_s(:elementary_page_main_description)
+
+= view :"transformers/skinny_banner"
 
 %section
   .wrapper
