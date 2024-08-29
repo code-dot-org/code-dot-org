@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import UnitCalendar from '@cdo/apps/code-studio/components/progress/UnitCalendar';
+import UnitCalendarGrid from '@cdo/apps/code-studio/components/progress/UnitCalendar';
 import UnitCalendarDialog, {
   WEEK_WIDTH,
 } from '@cdo/apps/code-studio/components/progress/UnitCalendarDialog';
@@ -21,7 +21,7 @@ describe('UnitCalendarDialog', () => {
     );
     expect(
       wrapper.containsMatchingElement(
-        <UnitCalendar
+        <UnitCalendarGrid
           lessons={testLessons}
           weeklyInstructionalMinutes={90}
           weekWidth={WEEK_WIDTH}
@@ -50,7 +50,7 @@ describe('UnitCalendarDialog', () => {
     ).toBe(true);
     expect(
       wrapper.containsMatchingElement(
-        <UnitCalendar
+        <UnitCalendarGrid
           lessons={testLessons}
           weeklyInstructionalMinutes={45}
           weekWidth={WEEK_WIDTH}
@@ -79,7 +79,7 @@ describe('UnitCalendarDialog', () => {
     ).toBe(true);
     expect(
       wrapper.containsMatchingElement(
-        <UnitCalendar
+        <UnitCalendarGrid
           lessons={testLessons}
           weeklyInstructionalMinutes={20}
           weekWidth={WEEK_WIDTH}
@@ -103,7 +103,7 @@ describe('UnitCalendarDialog', () => {
     expect(wrapper.state('instructionalMinutes')).toBe(90);
     expect(
       wrapper.containsMatchingElement(
-        <UnitCalendar
+        <UnitCalendarGrid
           lessons={testLessons}
           weeklyInstructionalMinutes={90}
           weekWidth={WEEK_WIDTH}

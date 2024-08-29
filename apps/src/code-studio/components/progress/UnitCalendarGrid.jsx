@@ -9,7 +9,7 @@ import i18n from '@cdo/locale';
 
 import UnitCalendarLessonChunk from './UnitCalendarLessonChunk';
 
-export default class UnitCalendar extends React.Component {
+export default class UnitCalendarGrid extends React.Component {
   static propTypes = {
     weeklyInstructionalMinutes: PropTypes.number.isRequired,
     lessons: PropTypes.arrayOf(unitCalendarLesson).isRequired,

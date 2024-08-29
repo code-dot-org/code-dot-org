@@ -24,7 +24,7 @@ import {
 } from '@cdo/apps/util/dismissVersionRedirect';
 import i18n from '@cdo/locale';
 
-import UnitCalendar from './UnitCalendar';
+import UnitCalendarGrid from './UnitCalendarGrid';
 import UnitOverviewHeader from './UnitOverviewHeader';
 import UnitOverviewTopRow from './UnitOverviewTopRow';
 
@@ -184,7 +184,7 @@ class UnitOverview extends React.Component {
           />
           {showCalendar && viewAs === ViewType.Instructor && (
             <div className="unit-calendar-for-printing print-only">
-              <UnitCalendar
+              <UnitCalendarGrid
                 lessons={unitCalendarLessons}
                 weeklyInstructionalMinutes={weeklyInstructionalMinutes || 225}
                 weekWidth={550}
