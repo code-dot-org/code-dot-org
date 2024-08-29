@@ -748,7 +748,8 @@ GEM
       netrc (~> 0.8)
     retriable (3.1.2)
     retryable (2.0.4)
-    rexml (3.2.5)
+    rexml (3.3.6)
+      strscan
     rinku (2.0.4)
     rmagick (4.2.5)
     rouge (4.1.2)
@@ -860,6 +861,7 @@ GEM
       user_agent_parser (~> 2.15.0)
     stringex (2.5.2)
     stringio (3.1.1)
+    strscan (3.1.0)
     sysexits (1.2.0)
     temple (0.8.2)
     thin (1.8.2)
