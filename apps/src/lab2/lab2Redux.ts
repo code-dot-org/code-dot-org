@@ -75,6 +75,8 @@ export interface LabState {
   levelProperties: LevelProperties | undefined;
   // If this lab should presented in a "share" or "play-only" view, which may hide certain UI elements.
   isShareView: boolean | undefined;
+  // If we have already reset history in this session. Resetting history happens due to a query parameter,
+  // and we only want to do it for the first level load of a session.
   alreadyResetHistory: boolean;
 }
 
@@ -235,47 +237,48 @@ export const setUpWithLevel = createAsyncThunk<
 // This method is used for loading a lab that is not associated with a level.
 // (This was previously used for /projectbeats).
 // If we get an aborted signal, we will exit early.
-export const setUpWithoutLevel = createAsyncThunk(
-  'lab/setUpWithoutLevel',
-  async (payload: {channelId: string; appName: AppName}, thunkAPI) => {
-    try {
-      // Update properties for reporting as early as possible in case of errors.
-      Lab2Registry.getInstance().getMetricsReporter().updateProperties({
-        channelId: payload.channelId,
-        appName: payload.appName,
-      });
+export const setUpWithoutLevel = createAsyncThunk<
+  void,
+  {channelId: string; appName: AppName},
+  {dispatch: AppDispatch; state: RootState}
+>('lab/setUpWithoutLevel', async (payload, thunkAPI) => {
+  try {
+    // Update properties for reporting as early as possible in case of errors.
+    Lab2Registry.getInstance().getMetricsReporter().updateProperties({
+      channelId: payload.channelId,
+      appName: payload.appName,
+    });
 
-      await cleanUpProjectManager();
+    await cleanUpProjectManager();
 
-      Lab2Registry.getInstance().setAppName(payload.appName);
+    Lab2Registry.getInstance().setAppName(payload.appName);
 
-      // Create the new project manager.
-      const projectManager = ProjectManagerFactory.getProjectManager(
-        ProjectManagerStorageType.REMOTE,
-        payload.channelId
-      );
-      Lab2Registry.getInstance().setProjectManager(projectManager);
+    // Create the new project manager.
+    const projectManager = ProjectManagerFactory.getProjectManager(
+      ProjectManagerStorageType.REMOTE,
+      payload.channelId
+    );
+    Lab2Registry.getInstance().setProjectManager(projectManager);
 
-      // Load channel and source.
-      const {sources, channel} = await setUpAndLoadProject(
-        projectManager,
-        thunkAPI.dispatch,
-        false
-      );
-      setProjectAndLevelData(
-        {
-          initialSources: sources,
-          channel,
-          levelProperties: {id: 0, appName: payload.appName},
-        },
-        thunkAPI.signal.aborted,
-        thunkAPI.dispatch
-      );
-    } catch (error) {
-      return thunkAPI.rejectWithValue(error);
-    }
+    // Load channel and source.
+    const {sources, channel} = await setUpAndLoadProject(
+      projectManager,
+      thunkAPI.dispatch,
+      thunkAPI.getState().lab.alreadyResetHistory
+    );
+    setProjectAndLevelData(
+      {
+        initialSources: sources,
+        channel,
+        levelProperties: {id: 0, appName: payload.appName},
+      },
+      thunkAPI.signal.aborted,
+      thunkAPI.dispatch
+    );
+  } catch (error) {
+    return thunkAPI.rejectWithValue(error);
   }
-);
+});
 
 // Selectors
 
@@ -482,6 +485,9 @@ async function setUpAndLoadProject(
     }
   });
   projectManager.addSaveFailListener(() => dispatch(setProjectUpdatedError()));
+  // Figure out if we should reset to start sources. This happens if the url parameter
+  // ?reset=true is present and we have not already reset in this session.
+  // This parameter is only used by levelbuilders.
   const url = new URL(document.URL);
   const params = new URLSearchParams(url.search);
   let resetToStartSources = false;
