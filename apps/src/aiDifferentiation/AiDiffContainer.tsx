@@ -44,9 +44,7 @@ const AiDiffContainer: React.FC<AiDiffContainerProps> = ({
   const [messageHistory, setMessageHistory] = useState<ChatItem[]>([
     {
       role: Role.ASSISTANT,
-      chatMessageText: `Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me.
-        lesson id: ${lessonId}
-        unit name: ${unitDisplayName}`,
+      chatMessageText: `Hi! I'm your AI Teaching Assistant. What can I help you with? Here are some things you can ask me.`,
       status: Status.OK,
     },
     [
