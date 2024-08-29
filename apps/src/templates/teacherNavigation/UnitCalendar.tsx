@@ -1,20 +1,28 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+import {useSelector} from 'react-redux';
 
+import UnitCalendarGrid from '@cdo/apps//code-studio/components/progress/UnitCalendarGrid';
 import i18n from '@cdo/locale';
+
+import {getCurrentUnitData} from '../sectionProgress/sectionProgressRedux';
 
 const WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS = [
   45, 90, 135, 180, 225, 270, 315, 360, 405, 450,
 ];
 export const WEEK_WIDTH = 585;
 
-// interface UnitCalendarProps {
-//   weeklyInstructionalMinutes: number;
-//   scriptId: number;
-// }
-
 const UnitCalendar: React.FC = () => {
+  const lessons = useSelector(state => getCurrentUnitData(state)?.lessons);
+  const [isLoading, setIsLoading] = useState(true);
   const [weeklyInstructionalMinutes, setWeeklyInstructionalMinutes] =
     useState<number>(WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS[0]);
+
+  useEffect(() => {
+    if (lessons) {
+      setIsLoading(false);
+    }
+  }, [lessons]);
+
   const generateDropdownOptions = () => {
     const options = WEEKLY_INSTRUCTIONAL_MINUTES_OPTIONS;
     if (!options.includes(weeklyInstructionalMinutes)) {
@@ -32,7 +40,9 @@ const UnitCalendar: React.FC = () => {
     <div>
       <h2>{i18n.weeklyLessonLayout()}</h2>
       <div style={styles.minutesPerWeekWrapper}>
-        <div>{i18n.instructionalMinutesPerWeek()}</div>
+        <div style={styles.minutesPerWeekDescription}>
+          {i18n.instructionalMinutesPerWeek()}
+        </div>
         <select
           onChange={e =>
             setWeeklyInstructionalMinutes(parseInt(e.target.value))
@@ -43,6 +53,13 @@ const UnitCalendar: React.FC = () => {
           {generateDropdownOptions()}
         </select>
       </div>
+      {!isLoading && (
+        <UnitCalendarGrid
+          lessons={lessons}
+          weeklyInstructionalMinutes={weeklyInstructionalMinutes}
+          weekWidth={WEEK_WIDTH}
+        />
+      )}
     </div>
   );
 };
@@ -70,7 +87,7 @@ const styles = {
     alignItems: 'center',
   },
   minutesPerWeekDescription: {
-    fontWeight: 'bold',
+    fontWeight: 'bold' as const,
     marginRight: 10,
   },
 };
