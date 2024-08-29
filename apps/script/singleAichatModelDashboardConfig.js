@@ -1,7 +1,7 @@
-const modelName = 'gen-ai-mistral-7b-inst-v01';
+const modelNames = ['gen-ai-mistral-7b-inst-v01', 'gen-ai-biomistral-7b'];
 
-const config = `{
-    "widgets": [
+const getModelSpecificConfig = modelName => `
+[
       {
         "height": 9,
         "width": 8,
@@ -291,8 +291,12 @@ const config = `{
           "title": "Average Latency"
         }
       }
-    ]
-  }`;
+      ]`;
 
-const jsonObject = JSON.parse(config);
+const jsonObject = {
+  widgets: modelNames
+    .map(modelName => JSON.parse(getModelSpecificConfig(modelName)))
+    .flat(),
+};
+console.log(jsonObject);
 module.exports = jsonObject;
