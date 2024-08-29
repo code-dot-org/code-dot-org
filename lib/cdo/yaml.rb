@@ -29,7 +29,7 @@ module Cdo
     # method, we need to do so.
     def load_erb_file(path, binding = nil)
       # rubocop:disable Security/YAMLLoad
-      YAML.load(erb_file_to_string(path, binding))
+      YAML.load(erb_file_to_string(path, binding), path)
       # rubocop:enable Security/YAMLLoad
     rescue Errno::ENOENT
       nil
