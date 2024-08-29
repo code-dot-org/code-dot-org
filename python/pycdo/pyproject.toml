@@ -11,6 +11,7 @@ dependencies = [
     "boto3",
     "numpy",
     "openai",
+    "sagemaker",
 ]
 
 [tool.pytest.ini_options]
