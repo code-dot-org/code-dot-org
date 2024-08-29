@@ -37,8 +37,7 @@ theme: responsive_full_width
     %p=hoc_s("tools_page.widgets.desc")
     = view :"tools/tools_widgets"
 
-.divider
-  %hr.light
+= view :section_divider_line
 
 %section
   .wrapper.centered
@@ -46,4 +45,3 @@ theme: responsive_full_width
     = view :"tools/tools_additional_resources"
 
 = view :swiper_page_tools
-
