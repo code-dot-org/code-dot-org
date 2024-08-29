@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2023-11-28T21:13:38.000Z",
   "level_num": "custom",
@@ -61,9 +62,8 @@
     "validation_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-11-28T21:13:38.594+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Functions Reset Sprite_2023\\\"\"],\"cloned_from\":\"CSD U3 Functions Reset Sprite_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-11-28T21:13:38.594+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Functions Reset Sprite_2023\\\"\"],\"cloned_from\":\"CSD U3 Functions Reset Sprite_2023\"},{\"changed_at\":\"2024-08-28 20:37:55 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"},{\"changed_at\":\"2024-08-28 20:39:40 +0000\",\"changed\":[\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":1574,\"changed_by_email\":\"ken.akiha@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

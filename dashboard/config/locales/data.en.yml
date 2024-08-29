@@ -864,6 +864,11 @@ en:
         PL_LMSIntegrations_2024: 'Getting Started: Integrations for Learning Management Systems'
         game_design_intro: Intro to Game Design
         llms-intro-gen-ai: Introduction to Large Language Models (Exploring Gen AI)
+        gen-ai-input-pretraining: 'Generative AI: Input & Pre-training'
+        gen-ai-storage-embeddings: 'Generative AI: Storage & Embeddings'
+        gen-ai-processing-neuralnets: 'Generative AI: Processing & Neural Networks'
+        gen-ai-attention: 'Generative AI: Attention'
+        gen-ai-output-probabilities: 'Generative AI: Output & Probabilities'
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
