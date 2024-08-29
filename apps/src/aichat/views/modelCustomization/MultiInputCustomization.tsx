@@ -9,7 +9,6 @@ import {Visibility} from '../../types';
 import FieldLabel from './FieldLabel';
 import {isDisabled} from './utils';
 
-import styles from './retrieval-customization.module.scss';
 import modelCustomizationStyles from '../model-customization-workspace.module.scss';
 
 const MultiInputCustomization: React.FunctionComponent<{
@@ -61,7 +60,7 @@ const MultiInputCustomization: React.FunctionComponent<{
               disabled={isReadOnly}
             />
           </div>
-          <div className={styles.addItemContainer}>
+          <div className={modelCustomizationStyles.addItemContainer}>
             <Button
               text="Add"
               type="secondary"
@@ -74,23 +73,23 @@ const MultiInputCustomization: React.FunctionComponent<{
           </div>
         </>
       )}
-      <div className={styles.addedItemsHeaderContainer}>
+      <div className={modelCustomizationStyles.addedItemsHeaderContainer}>
         <StrongText>Added</StrongText>
       </div>
       {addedItems.map((message, index) => {
         return (
-          <div key={index} className={styles.itemContainer}>
+          <div key={index} className={modelCustomizationStyles.itemContainer}>
             <span>{message}</span>
             {!isReadOnly && (
               <button
                 type="button"
                 onClick={() => onRemove(index)}
-                className={styles.removeItemButton}
+                className={modelCustomizationStyles.removeItemButton}
                 disabled={isDisabled(visibility)}
               >
                 <FontAwesomeV6Icon
                   iconName="circle-xmark"
-                  className={styles.removeItemIcon}
+                  className={modelCustomizationStyles.removeItemIcon}
                 />
               </button>
             )}
