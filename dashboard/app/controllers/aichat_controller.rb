@@ -1,4 +1,7 @@
-ROLES_FOR_MODEL = %w(assistant user).freeze
+require 'cdo/throttle'
+
+AICHAT_PREFIX = "aichat/".freeze
+DEFAULT_REQUEST_LIMIT_PER_MIN = 50
 DEFAULT_POLLING_INTERVAL_MS = 1000
 DEFAULT_POLLING_BACKOFF_RATE = 1.2
 
@@ -6,27 +9,20 @@ class AichatController < ApplicationController
   include AichatSagemakerHelper
   authorize_resource class: false
 
-  # params are
-  # newMessage: {role: 'user'; chatMessageText: string; status: string}
-  # storedMessages: Array of {role: <'user', 'system', or 'assistant'>; chatMessageText: string; status: string} - does not include user's new message
-  # aichatModelCustomizations: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
-  # aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
-  # POST /aichat/chat_completion
-  def chat_completion
-    return render status: :forbidden, json: {} unless AichatSagemakerHelper.can_request_aichat_chat_completion?
-    unless chat_completion_has_required_params?
-      return render status: :bad_request, json: {}
-    end
-
-    response_body = get_response_body
-
-    render(status: :ok, json: response_body)
+  rescue_from CanCan::AccessDenied do
+    render status: :forbidden, json: {user_type: current_user&.user_type || 'signed_out'}
   end
 
   # POST /aichat/start_chat_completion
   # Initiate a chat completion request, which is performed asynchronously as an ActiveJob.
   # Returns the ID of the request and a base polling interval + backoff rate.
+  # params are
+  # newMessage: {role: 'user'; chatMessageText: string; status: string}
+  # storedMessages: Array of {role: <'user', 'system', or 'assistant'>; chatMessageText: string; status: string} - does not include user's new message
+  # aichatModelCustomizations: {temperature: number; retrievalContexts: string[]; systemPrompt: string;}
+  # aichatContext: {currentLevelId: number; scriptId: number; channelId: string;}
   def start_chat_completion
+    return head :too_many_requests if should_throttle?
     return render status: :forbidden, json: {} unless AichatSagemakerHelper.can_request_aichat_chat_completion?
     unless chat_completion_has_required_params?
       return render status: :bad_request, json: {}
@@ -164,63 +160,6 @@ class AichatController < ApplicationController
     render(status: :ok, json: response_body)
   end
 
-  private def get_response_body
-    # Check for profanity
-    locale = params[:locale] || "en"
-    filter_result = ShareFiltering.find_profanity_failure(params[:newMessage][:chatMessageText], locale)
-    if filter_result&.type == ShareFiltering::FailureType::PROFANITY
-      messages = [
-        get_user_message(SharedConstants::AI_INTERACTION_STATUS[:PROFANITY_VIOLATION])
-      ]
-
-      return {
-        messages: messages,
-        flagged_content: filter_result.content,
-      }
-    end
-
-    messages_for_model = params[:storedMessages].filter do |message|
-      message[:status] == SharedConstants::AI_INTERACTION_STATUS[:OK] &&
-        ROLES_FOR_MODEL.include?(message[:role])
-    end
-
-    latest_assistant_response_from_sagemaker = AichatSagemakerHelper.get_sagemaker_assistant_response(params[:aichatModelCustomizations], messages_for_model, params[:newMessage])
-
-    filter_result = ShareFiltering.find_profanity_failure(latest_assistant_response_from_sagemaker, locale)
-    if filter_result&.type == ShareFiltering::FailureType::PROFANITY
-      messages = [
-        get_user_message(SharedConstants::AI_INTERACTION_STATUS[:ERROR]),
-        {
-          role: "assistant",
-          status: SharedConstants::AI_INTERACTION_STATUS[:ERROR],
-          chatMessageText: '[redacted - model generated profanity]',
-        }
-      ]
-
-      Honeybadger.notify(
-        'Profanity returned from aichat model (blocked before reaching student)',
-        context: {
-          model_response: latest_assistant_response_from_sagemaker,
-          flagged_content: filter_result.content,
-        }
-      )
-
-      return {messages: messages}
-    end
-
-    assistant_message = {
-      role: "assistant",
-      status: SharedConstants::AI_INTERACTION_STATUS[:OK],
-      chatMessageText: latest_assistant_response_from_sagemaker,
-    }
-
-    messages = [
-      get_user_message(SharedConstants::AI_INTERACTION_STATUS[:OK]),
-      assistant_message
-    ]
-    {messages: messages}
-  end
-
   private def chat_completion_has_required_params?
     begin
       params.require([:newMessage, :aichatModelCustomizations, :aichatContext])
@@ -231,10 +170,6 @@ class AichatController < ApplicationController
     # If so, the above require check will not pass.
     # Check storedMessages param separately.
     params[:storedMessages].is_a?(Array)
-  end
-
-  private def get_user_message(status)
-    params[:newMessage].merge({status: status})
   end
 
   private def get_polling_interval_ms
@@ -250,5 +185,11 @@ class AichatController < ApplicationController
       _, project_id = storage_decrypt_channel_id(context[:channelId])
       project_id
     end
+  end
+
+  private def should_throttle?
+    id = current_user&.id || session.id
+    limit = DCDO.get('aichat_request_limit_per_min', DEFAULT_REQUEST_LIMIT_PER_MIN)
+    Cdo::Throttle.throttle(AICHAT_PREFIX + id.to_s, limit, 60)
   end
 end

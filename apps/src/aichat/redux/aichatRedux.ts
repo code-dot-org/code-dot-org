@@ -16,6 +16,7 @@ import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {registerReducers} from '@cdo/apps/redux';
+import {commonI18n} from '@cdo/apps/types/locale';
 import {RootState} from '@cdo/apps/types/redux';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
@@ -47,6 +48,7 @@ import {validateModelId} from '../views/modelCustomization/utils';
 
 import {
   allFieldsHidden,
+  anyFieldsChanged,
   findChangedProperties,
   getNewMessageId,
   hasFilledOutModelCard,
@@ -74,11 +76,11 @@ export interface AichatState {
   showWarningModal: boolean;
   // Denotes if there is an error with the chat completion response
   chatMessageError: boolean;
+  initialAiCustomizations: AiCustomizations;
   currentAiCustomizations: AiCustomizations;
   savedAiCustomizations: AiCustomizations;
   fieldVisibilities: FieldVisibilities;
   viewMode: ViewMode;
-  currentSessionId?: number;
   // If a save is currently in progress
   saveInProgress: boolean;
   // The type of save action being performed (customization update, publish, model card save, etc).
@@ -93,6 +95,7 @@ const initialState: AichatState = {
   studentChatHistory: [],
   showWarningModal: true,
   chatMessageError: false,
+  initialAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   currentAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   savedAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   fieldVisibilities: DEFAULT_VISIBILITIES,
@@ -374,11 +377,8 @@ export const submitChatContents = createAsyncThunk(
   async (newUserMessageText: string, thunkAPI) => {
     const dispatch = thunkAPI.dispatch as AppDispatch;
     const state = thunkAPI.getState() as RootState;
-    const {
-      savedAiCustomizations: aiCustomizations,
-      chatEventsCurrent,
-      currentSessionId,
-    } = state.aichat;
+    const {savedAiCustomizations: aiCustomizations, chatEventsCurrent} =
+      state.aichat;
 
     const aichatContext: AichatContext = {
       currentLevelId: parseInt(state.progress.currentLevelId || ''),
@@ -403,22 +403,10 @@ export const submitChatContents = createAsyncThunk(
         newUserMessage,
         chatEventsCurrent.filter(isChatMessage) as ChatMessage[],
         aiCustomizations,
-        aichatContext,
-        currentSessionId
+        aichatContext
       );
     } catch (error) {
-      Lab2Registry.getInstance()
-        .getMetricsReporter()
-        .logError('Error in aichat completion request', error as Error);
-
-      thunkAPI.dispatch(clearChatMessagePending());
-      addChatEvent({...newUserMessage, status: Status.ERROR});
-      addChatEvent({
-        role: Role.ASSISTANT,
-        status: Status.ERROR,
-        chatMessageText: 'error',
-        timestamp: Date.now(),
-      });
+      await handleChatCompletionError(error as Error, newUserMessage, dispatch);
       return;
     }
 
@@ -430,10 +418,6 @@ export const submitChatContents = createAsyncThunk(
           value: aiCustomizations.selectedModelId,
         },
       ]);
-
-    if (chatApiResponse.session_id) {
-      thunkAPI.dispatch(setChatSessionId(chatApiResponse.session_id));
-    }
 
     if (chatApiResponse.flagged_content) {
       console.log(
@@ -447,6 +431,61 @@ export const submitChatContents = createAsyncThunk(
     });
   }
 );
+
+async function handleChatCompletionError(
+  error: Error,
+  newUserMessage: ChatMessage,
+  dispatch: AppDispatch
+) {
+  Lab2Registry.getInstance()
+    .getMetricsReporter()
+    .logError('Error in aichat completion request', error as Error);
+
+  dispatch(clearChatMessagePending());
+  dispatch(addChatEvent({...newUserMessage, status: Status.ERROR}));
+
+  // Display specific error notifications if the user was rate limited (HTTP 429) or not authorized (HTTP 403).
+  // Otherwise, display a generic error assistant response.
+  if (error instanceof NetworkError && error.response.status === 429) {
+    dispatch(
+      addChatEvent({
+        id: getNewMessageId(),
+        text: commonI18n.aiChatRateLimitError(),
+        notificationType: 'error',
+        timestamp: Date.now(),
+      })
+    );
+  } else if (error instanceof NetworkError && error.response.status === 403) {
+    const responseBody = await error.response.json();
+    const userType = responseBody?.user_type;
+
+    const userTypeToMessageText: {[key: string]: string} = {
+      teacher: commonI18n.aiChatNotAuthorizedTeacher(),
+      student: commonI18n.aiChatNotAuthorizedStudent(),
+    };
+    const messageText =
+      userTypeToMessageText[userType] ||
+      commonI18n.aiChatNotAuthorizedSignedOut();
+
+    dispatch(
+      addChatEvent({
+        id: getNewMessageId(),
+        text: messageText,
+        notificationType: 'error',
+        timestamp: Date.now(),
+      })
+    );
+  } else {
+    dispatch(
+      addChatEvent({
+        role: Role.ASSISTANT,
+        status: Status.ERROR,
+        chatMessageText: 'error',
+        timestamp: Date.now(),
+      })
+    );
+  }
+}
 
 // This thunk's callback function submits a teacher's student's id along with the level/script id
 // (and the scriptLevelId if the level is a sublevel) to the student chat history endpoint,
@@ -507,7 +546,6 @@ const aichatSlice = createSlice({
     clearChatMessages: state => {
       state.chatEventsPast = [];
       state.chatEventsCurrent = [];
-      state.currentSessionId = undefined;
     },
     setChatMessagePending: (state, action: PayloadAction<ChatMessage>) => {
       state.chatMessagePending = action.payload;
@@ -516,10 +554,6 @@ const aichatSlice = createSlice({
     setNewChatSession: state => {
       state.chatEventsPast.push(...state.chatEventsCurrent);
       state.chatEventsCurrent = [];
-      state.currentSessionId = undefined;
-    },
-    setChatSessionId: (state, action: PayloadAction<number>) => {
-      state.currentSessionId = action.payload;
     },
     setShowWarningModal: (state, action: PayloadAction<boolean>) => {
       state.showWarningModal = action.payload;
@@ -565,6 +599,7 @@ const aichatSlice = createSlice({
         ),
       };
 
+      state.initialAiCustomizations = reconciledAiCustomizations;
       state.savedAiCustomizations = reconciledAiCustomizations;
       state.currentAiCustomizations = reconciledAiCustomizations;
       state.fieldVisibilities =
@@ -686,6 +721,18 @@ export const selectAllFieldsHidden = createSelector(
   allFieldsHidden
 );
 
+export const selectCurrentCustomizationsMatchInitial = createSelector(
+  (state: RootState) => state.aichat.initialAiCustomizations,
+  (state: RootState) => state.aichat.currentAiCustomizations,
+  anyFieldsChanged
+);
+
+export const selectSavedCustomizationsMatchInitial = createSelector(
+  (state: RootState) => state.aichat.initialAiCustomizations,
+  (state: RootState) => state.aichat.savedAiCustomizations,
+  anyFieldsChanged
+);
+
 export const selectAllVisibleMessages = (state: {aichat: AichatState}) => {
   const {chatEventsPast, chatEventsCurrent, chatMessagePending} = state.aichat;
   const messages = [...chatEventsPast, ...chatEventsCurrent];
@@ -714,7 +761,6 @@ registerReducers({aichat: aichatSlice.reducer});
 export const {
   removeUpdateMessage,
   setNewChatSession,
-  setChatSessionId,
   clearChatMessages,
   setShowWarningModal,
   resetToDefaultAiCustomizations,

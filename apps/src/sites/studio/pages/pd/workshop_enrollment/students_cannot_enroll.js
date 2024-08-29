@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import WorkshopStudentEnrollPage from '@cdo/apps/lib/ui/simpleSignUp/workshop/WorkshopStudentEnrollPage';
+import WorkshopStudentEnrollPage from '@cdo/apps/simpleSignUp/workshop/WorkshopStudentEnrollPage';
 
 document.addEventListener('DOMContentLoaded', function () {
   ReactDOM.render(

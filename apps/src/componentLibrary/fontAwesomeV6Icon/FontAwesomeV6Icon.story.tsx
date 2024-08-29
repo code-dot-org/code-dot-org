@@ -37,6 +37,13 @@ DefaultFontAwesomeV6Icon.args = {
   title: 'check',
 };
 
+export const ClassExampleFontAwesomeV6Icon = SingleTemplate.bind({});
+ClassExampleFontAwesomeV6Icon.args = {
+  iconStyle: 'light',
+  iconName: 'brands fa-microsoft',
+  title: 'microsoft',
+};
+
 export const GroupOfStylesOfFontAwesomeV6Icon = MultipleTemplate.bind({});
 GroupOfStylesOfFontAwesomeV6Icon.args = {
   components: [

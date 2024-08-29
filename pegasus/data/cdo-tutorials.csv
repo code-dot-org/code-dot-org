@@ -3073,3 +3073,13 @@ SL.4.1, RF.5.4.A, SL.5.1
 CSTA:​ 1A-AP-09, 1A-AP-10, 1A-AP-11, 1A-AP-14 ,1A-AP-15, 1B-AP-10, 1B-AP-12, 1B-AP-15, 1B-AP-17
 CS CA: K-2.AP.10, K-2.AP.11, K-2.AP.12, 3-5.AP.10, 3-5.AP.11, 3-5.AP.12, 3-5.AP.17
 ISTE: 1.c, 1.d, 5.d, 6.b, 7.c",999,999,999,999,999
+400,400,1,1,1,ca_keyboard,Keyboard Quest: CS100 Software & Hardware,Code Avengers,https://www.codeavengers.com/computing-systems/100,"Join Juno and Max on an electrifying educational journey exploring computing systems. Dive into portable electronic devices, decode hardware/software glitches, master inputs/outputs, and conquer navigation. Sharpen literacy skills, letter recognition and capitalization, and troubleshoot problems. Complete the 5 tasks in an hour or split for junior students. Additional activities included.",/images/tutorials/hoc2023/ca_keyboard.png,2023-tutorial,https://learn.codeavengers.com/hoc/computing-systems/100#0.1,en,cakeyboard,"all,pre",Pre-reader,beginner,beginner,online-tutorial,la,computers,All modern browsers,do-not-show,1hour,other,Language independent,"tts,highcontrast","K-2 Computing Systems
+1A-CS-01 Devices: Select and operate appropriate software to perform a variety of tasks, and recognize that  users have different needs and preferences for the technology they use.
+1A-CS-02 Hardware & Software: Use appropriate terminology in identifying and describing the function of common physical components of computing systems (hardware)
+1A-CS-03 Troubleshooting: Describe basic hardware and software problems using accurate terminology.
+
+K-2 English Language Arts
+K-PR1.a: Follow words from left to right, top to bottom, and page by page.
+K-PR1.b: Recognize that spoken words are represented in written language by specific sequences of letters. 
+K-PR1.c: Understand that words are separated by spaces in print.
+K-PR1.d: Recognize and name all upper- and lowercase letters of the alphabet",999,25,999,999,999

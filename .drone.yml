@@ -69,7 +69,8 @@ steps:
       filename: unit-tests-cache-ubuntu-20.tar
 
   - name: unit-tests
-    # see: docker/dockerfiles/Dockerfile
+    # see: docker/continuous-integration/Dockerfile
+    # TODO: switch to codedotorg/cdo-ci
     image: codedotorg/code-dot-org:1.10.0
     pull: always
     volumes:
@@ -188,7 +189,8 @@ steps:
       filename: ui-tests-cache-ubuntu-20.tar
 
   - name: ui-tests
-    # see: docker/dockerfiles/Dockerfile
+    # see: docker/continuous-integration/Dockerfile
+    # TODO: switch to codedotorg/cdo-ci
     image: codedotorg/code-dot-org:1.10.0
     pull: always
     volumes:
@@ -287,6 +289,6 @@ trigger:
     - push
 ---
 kind: signature
-hmac: 952c3f87b96b6a57cfbb52f6c9e9b0adb88bc5ec0c775e79b2791349d80b0daa
+hmac: 8551f3e768d263e92bb0c8060de2b6bfd8cf939aa31c52047621485746726d16
 
 ...

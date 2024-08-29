@@ -2,6 +2,7 @@
 
 import {
   DEFAULT_PATTERN,
+  DEFAULT_PATTERN_AI,
   DEFAULT_CHORD,
   DEFAULT_TUNE,
   Triggers,
@@ -16,10 +17,12 @@ import {
   FIELD_SOUNDS_TYPE,
   FIELD_PATTERN_NAME,
   FIELD_PATTERN_TYPE,
+  FIELD_PATTERN_AI_NAME,
+  FIELD_PATTERN_AI_TYPE,
   FIELD_CHORD_TYPE,
   FIELD_CHORD_NAME,
-  FIELD_TUNE_TYPE,
   FIELD_TUNE_NAME,
+  FIELD_TUNE_TYPE,
   TRIGGER_FIELD,
 } from './constants';
 
@@ -61,6 +64,19 @@ export const fieldPatternDefinition = {
     Globals.getPlayer().previewPattern(patternValue, onTick, onStop);
   },
   currentValue: DEFAULT_PATTERN,
+  ...instrumentCommonOptions,
+};
+
+export const fieldPatternAiDefinition = {
+  type: FIELD_PATTERN_AI_TYPE,
+  name: FIELD_PATTERN_AI_NAME,
+  previewSound: (id, onStop) => {
+    Globals.getPlayer().previewSound(id, onStop);
+  },
+  previewPattern: (patternValue, onTick, onStop) => {
+    Globals.getPlayer().previewPattern(patternValue, onTick, onStop);
+  },
+  currentValue: DEFAULT_PATTERN_AI,
   ...instrumentCommonOptions,
 };
 

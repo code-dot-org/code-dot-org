@@ -16,7 +16,7 @@ markdown <<MARKDOWN
 * ##### In the project students work in pairs to create an app that helps a person make a decision.  This project includes a rubric and has specific requirements such as using one number and one string to make a decision and having at least three different possible output answers.
 * ##### After this unit, students go on to learn more advanced programming topics such as lists, loops, and traversals. 
 
-![Screenshot showing the Unit 4 calendar with the first four lessons, making up the Variables EIPM sequence, in an orange circle.](https://images.code.org/8dd8c6175d1c11046e291de25181b65b-image-1594994860858.06.36 AM.png)
+<img src="https://images.code.org/8dd8c6175d1c11046e291de25181b65b-image-1594994860858.06.36 AM.png" style="border: 2px solid black; border-radius: 8px;" alt="Screenshot showing the Unit 4 calendar with the first four lessons, making up the Variables EIPM sequence, in an orange circle.">
 
 ##### Throughout the programming units, you can determine how you want to encourage students to work collaboratively while programming.  In the next section, we are going to think more deeply about the role of collaboration and independent work in your classroom.
 

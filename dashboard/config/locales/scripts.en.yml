@@ -406,6 +406,8 @@ en:
               name: Web Lab 2
             lesson-55:
               name: Lab2 Showcase
+            lesson-56:
+              name: Activity Guide Levelgroup
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -10449,6 +10451,8 @@ en:
               name: Music Lab Testing
             lesson-14:
               name: Chatbots
+            lesson-15:
+              name: Sprite Lab Tutorial
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff
@@ -15744,48 +15748,74 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons:
+            lesson-8:
+              name: 'Synchronous Session 3: Wrap Up - 2024'
+          lesson_groups: {}
+          name: vpl-csd-2024-m1
         vpl-csd-2024-m2:
           title: Module 2
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m2
         vpl-csd-2024-m3:
           title: Module 3
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m3
         vpl-csd-2024-m4:
           title: Module 4
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m4
         vpl-csd-2024-m5:
           title: Module 5
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m5
         vpl-csd-2024-m6:
           title: Module 6
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m6
         vpl-csd-2024-m7:
           title: Module 7
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m7
         vpl-csd-2024-m8:
           title: Module 8
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m8
         vpl-csa-2024-m1:
           title: Module 1
           description: ''
@@ -15983,36 +16013,54 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2024-m3
         vpl-csp-2024-m4:
           title: Module 4
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2024-m4
         vpl-csp-2024-m5:
           title: Module 5
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2024-m5
         vpl-csp-2024-m6:
           title: Module 6
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2024-m6
         vpl-csp-2024-m7:
           title: Module 7
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2024-m7
         vpl-csp-2024-m8:
           title: Module 8
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2024-m8
         self-paced-pl-csp1-2024:
           title: Welcome
           description: "This module is a short introduction to both Code.org and professional learning modules. \n\n**You will:**\n* Get an introduction to Code.org and CS Principles.\n* Learn how to engage in professional learning modules.\n\n**Suggested Time:** 10 minutes"
@@ -18424,8 +18472,36 @@ en:
           description: ''
           student_description: ''
         data-science-with-python-2024:
-          lessons: {}
-          lesson_groups: {}
+          lessons:
+            lesson-1:
+              name: Project Kickoff
+            lesson-2:
+              name: Introduction to Python
+            lesson-3:
+              name: Introduction to Pandas
+            lesson-4:
+              name: Introduction to Matplotlib
+            lesson-5:
+              name: Getting to Know Your Data
+            lesson-6:
+              name: Accessing and Grouping Values
+            lesson-7:
+              name: Cleaning Data
+            lesson-8:
+              name: More Visualization Types
+            lesson-9:
+              name: Exploratory Data Analysis
+            lesson-10:
+              name: Querying Your Data
+            lesson-11:
+              name: Data Science for Community Impact Project
+            lesson-12:
+              name: Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
           name: data-science-with-python-2024
           title: Data Science with Python
           description_audience: ''
@@ -18600,6 +18676,10 @@ en:
           lessons:
             lesson-8:
               name: AI-Generated Code
+            lesson-2:
+              name: AI-Generated Code (non-AI Tutor)
+            lesson-1:
+              name: Unit 1 Survey
           lesson_groups:
             lessonGroup-2:
               display_name: Survey
@@ -18608,17 +18688,19 @@ en:
             lessonGroup-4:
               display_name: Show What You Know
             lessonGroup-5:
-              display_name: End of Unit Survey
+              display_name: Pre-Survey
             lessonGroup-6:
               display_name: Alternate Lessons
             lessonGroup-7:
               display_name: Sandboxes
+            lessonGroup-8:
+              display_name: End of Unit Survey
           name: csa1-pilot-2025
           title: Object-Oriented Programming
           description_audience: ''
           description_short: Students learn fundamental Java concepts, discover their identity as software engineers, and use debugging strategies and code reviews to improve their programming skills.
-          description: "This unit introduces students to object-oriented programming principles as they explore The Neighborhood and discover their identity as a software engineer. Students learn fundamental Java concepts as they navigate and paint in The Neighborhood with `Painter` objects and extend the `Painter` class to expand the capabilities of their programs. Students practice predicting the outcome of program code and developing algorithms using sequencing, selection, and iteration to navigate mazes and paint murals. Students also learn to document program code using comments to describe the behavior of specific code segments and conduct code reviews to receive feedback from their peers.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, students will be able to . . .</em></strong></p>\n\n* Use inheritance to create subclasses that extend an existing class\n\n* Write methods with and without parameters to perform a specific task\n\n* Implement algorithms sequencing, selection, and iteration\n\n* Write clear and readable code using methods, control structures, and comments\n\n* Improve a program through iterative development based on feedback\n    </div>\n</details>\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=1) to let the Code.org curriculum team know how the unit went."
-          student_description: "This unit introduces you to object-oriented programming principles as you explore The Neighborhood and discover your identity as a software engineer. You learn fundamental Java concepts as you navigate and paint in The Neighborhood with `Painter` objects and extend the `Painter` class to expand the capabilities of your programs. You practice predicting the outcome of program code and developing algorithms using sequencing, selection, and iteration to navigate mazes and paint murals. You also learn to document program code using comments to describe the behavior of specific code segments and conduct code reviews to receive feedback from your peers.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p>\n\n* Use inheritance to create subclasses that extend an existing class\n\n* Write methods with and without parameters to perform a specific task\n\n* Implement algorithms sequencing, selection, and iteration\n\n* Write clear and readable code using methods, control structures, and comments\n\n* Improve a program through iterative development based on feedback\n    </div>\n</details>"
+          description: "This unit introduces students to object-oriented programming principles as they explore The Neighborhood and discover their identity as a software engineer. Students learn fundamental Java concepts as they navigate and paint in The Neighborhood with `Painter` objects and extend the `Painter` class to expand the capabilities of their programs. Students practice predicting the outcome of program code and developing algorithms using sequencing, selection, and iteration to navigate mazes and paint murals. Students also learn to document program code using comments to describe the behavior of specific code segments and conduct code reviews to receive feedback from their peers.\n\n### \U0001F3AF Unit Objectives\n\n*By the end of this unit, students will be able to . . .*\n\n* Use inheritance to create subclasses that extend an existing class\n\n* Write methods with and without parameters to perform a specific task\n\n* Implement algorithms sequencing, selection, and iteration\n\n* Write clear and readable code using methods, control structures, and comments\n\n* Improve a program through iterative development based on feedback"
+          student_description: "This unit introduces you to object-oriented programming principles as you explore The Neighborhood and discover your identity as a software engineer. You learn fundamental Java concepts as you navigate and paint in The Neighborhood with `Painter` objects and extend the `Painter` class to expand the capabilities of your programs. You practice predicting the outcome of program code and developing algorithms using sequencing, selection, and iteration to navigate mazes and paint murals. You also learn to document program code using comments to describe the behavior of specific code segments and conduct code reviews to receive feedback from your peers.\n\n### \U0001F3AF Unit Objectives\n\n*By the end of this unit, you will be able to . . .*\n\n* Use inheritance to create subclasses that extend an existing class\n\n* Write methods with and without parameters to perform a specific task\n\n* Implement algorithms sequencing, selection, and iteration\n\n* Write clear and readable code using methods, control structures, and comments\n\n* Improve a program through iterative development based on feedback"
         csa2-pilot-2025:
           lessons:
             lesson-3:
@@ -18781,6 +18863,24 @@ en:
           lessons:
             lesson-1:
               name: What is Debugging?
+            lesson-2:
+              name: Active Debugging
+            lesson-3:
+              name: Reflective Debugging
+            lesson-4:
+              name: Bug Talks
+            lesson-5:
+              name: Trace Code Execution
+            lesson-6:
+              name: Hypothesize and Test
+            lesson-7:
+              name: Reproducing Bugs
+            lesson-8:
+              name: Debugging by Comparison
+            lesson-9:
+              name: Using External Resources
+            lesson-10:
+              name: 'Choose Appropriate Techniques '
           lesson_groups: {}
           name: sandbox-debugging
           title: Debugging Sandbox
@@ -18792,7 +18892,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: exploring-gen-ai-1
-          title: Foundations of Generative AI
+          title: "[Don't Use - use /s/exploring-gen-ai1-2024 instead]"
           description_audience: ''
           description_short: ''
           description: ''
@@ -18801,7 +18901,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: exploring-gen-ai-2
-          title: Customizing Large Language Models
+          title: "[Don't Use - use /s/exploring-gen-ai2-2024 instead]"
           description_audience: ''
           description_short: ''
           description: ''
@@ -18824,4 +18924,137 @@ en:
           description_audience: ''
           description_short: ''
           description: "## Welcome! \n##### This professional learning module is designed to help you prepare to teach Code.org’s Generative AI unit.\n\n##### The Generative AI unit is designed as standalone coursework for 6-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. \n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Computer Vision Unit. "
+          student_description: ''
+        music-ai-2024:
+          lessons:
+            lesson-1:
+              name: 'Music Lab: A.I. Edition for Hour of Code'
+          lesson_groups: {}
+          name: music-ai-2024
+          title: 'Music Lab: AI Edition'
+          description_audience: 'Hour of Code students and teachers '
+          description_short: 'Learn the basics of Music Lab and use AI to help you create new beats and tunes! '
+          description: ''
+          student_description: ''
+        csd-ayw1-debugging:
+          lessons:
+            lesson-1:
+              name: Debugging Challenges
+          lesson_groups: {}
+          name: csd-ayw1-debugging
+          title: 'CSD Academic Year Workshop #1 - Debugging'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandbox-teaching-data-science:
+          lessons:
+            lesson-1:
+              name: Introduction to Teaching Data Science
+            lesson-2:
+              name: Introduction to Data Science [Chapter 1]
+            lesson-3:
+              name: Python and Data Science [Chapter 2]
+            lesson-4:
+              name: Teaching Resources for Data Science
+          lesson_groups: {}
+          name: sandbox-teaching-data-science
+          title: Teaching Data Science
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        foundations-gen-ai-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: foundations-gen-ai-2024
+          title: Foundations of Generative AI
+          description_audience: ''
+          description_short: ''
+          description: This unit aims to build a foundational understanding of text-based generative AI models, focusing on core concepts over technical skills. Students will demystify generative AI models by exploring their internal structures through the familiar lens of input, storage, process, and output. They will gain insights into how these models represent language, the impact of training data on model performance, and the potential for bias. Using this knowledge they will be presented with scenarios throughout the unit where they can help educate individuals who feel powerless or lack agency in how AI is impacting their lives, or respond to individuals who have only read the hype headlines and offer feedback or criticism based on their knowledge of how these AI systems work.
+          student_description: ''
+        customizing-llms-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: customizing-llms-2024
+          title: Customizing Language Models
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        exploring-gen-ai1-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: exploring-gen-ai1-2024
+          title: Foundations of Generative AI
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        exploring-gen-ai2-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: exploring-gen-ai2-2024
+          title: Customizing Language Models
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd-summer-pr-day1:
+          lessons: {}
+          lesson_groups: {}
+          name: csd-summer-pr-day1
+          title: Dìa 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd-summer-pr-day2:
+          lessons: {}
+          lesson_groups: {}
+          name: csd-summer-pr-day2
+          title: Dìa 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd-summer-pr-day3:
+          lessons: {}
+          lesson_groups: {}
+          name: csd-summer-pr-day3
+          title: Dìa 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd-summer-pr-day4:
+          lessons: {}
+          lesson_groups: {}
+          name: csd-summer-pr-day4
+          title: Dìa 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd-summer-pr-day5:
+          lessons: {}
+          lesson_groups: {}
+          name: csd-summer-pr-day5
+          title: Dìa 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pilot-elem-music-lab:
+          lessons:
+            lesson-1:
+              name: Intro & Sequencing
+            lesson-2:
+              name: Loops
+          lesson_groups: {}
+          name: pilot-elem-music-lab
+          title: Intro to Programming with Music Lab
+          description_audience: ''
+          description_short: ''
+          description: ''
           student_description: ''

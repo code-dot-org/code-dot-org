@@ -236,7 +236,7 @@ $(document).ready(() => {
   function renderSchoolInfo() {
     if (schoolInfoMountPoint) {
       ReactDOM.render(
-        <div style={{padding: 10}}>
+        <div style={{padding: 22}}>
           <SchoolDataInputs usIp={usIp} />
         </div>,
         schoolInfoMountPoint

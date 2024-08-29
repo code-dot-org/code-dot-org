@@ -109,10 +109,6 @@ class User < ApplicationRecord
   #   us_state: A 2 letter code United States state code the user has given us.
   #   country_code: The country the user was in when they told us their
   #     us_state.
-  #   child_account_compliance_state: The state of a user's compliance with our
-  #     child account policy.
-  #   child_account_compliance_state_last_updated: The date the user became
-  #     compliant with our child account policy.
   #   ai_rubrics_disabled: Turns off AI assessment for a User.
   #   ai_rubrics_tour_seen: Tracks whether user has viewed the AI rubric product tour.
   #   lti_roster_sync_enabled: Enable/disable LTI roster syncing for a User.
@@ -149,9 +145,6 @@ class User < ApplicationRecord
     gender_student_input
     gender_teacher_input
     gender_third_party_input
-    child_account_compliance_state
-    child_account_compliance_state_last_updated
-    child_account_compliance_lock_out_date
     us_state
     country_code
     family_name
@@ -331,14 +324,6 @@ class User < ApplicationRecord
 
   validate :lti_roster_sync_enabled, if: -> {lti_roster_sync_enabled.present?} do
     self.lti_roster_sync_enabled = ActiveRecord::Type::Boolean.new.cast(lti_roster_sync_enabled)
-  end
-
-  # TODO(P20-1055): Remove in "CAP data migration Phase 2" once new CAP columns are populated
-  before_save if: -> {property_changed?('child_account_compliance_state')} do
-    self.cap_status = child_account_compliance_state.presence
-  end
-  before_save if: -> {property_changed?('child_account_compliance_state_last_updated')} do
-    self.cap_status_date = child_account_compliance_state_last_updated.presence
   end
 
   def save_email_preference
@@ -892,13 +877,6 @@ class User < ApplicationRecord
     # Store emails, except when using an authentication provider whose emails
     # we don't trust
     user.email = auth.info.email unless user.user_type == 'student' && AuthenticationOption::UNTRUSTED_EMAIL_CREDENTIAL_TYPES.include?(auth.provider)
-
-    if auth.provider == :the_school_project
-      user.username = auth.extra.raw_info.nickname
-      user.user_type = auth.extra.raw_info.role
-      user.locale = auth.extra.raw_info.locale
-      user.school = auth.extra.raw_info.school.name
-    end
 
     # treat clever admin types as teachers
     if CLEVER_ADMIN_USER_TYPES.include? user.user_type
@@ -1568,6 +1546,15 @@ class User < ApplicationRecord
   def can_view_student_ai_chat_messages?
     sections.any?(&:assigned_csa?) &&
       SingleUserExperiment.enabled?(user: self, experiment_name: AI_TUTOR_EXPERIMENT_NAME)
+  end
+
+  def teacher_can_access_ai_chat?
+    teacher? && (verified_instructor? || oauth? || Policies::Lti.lti?(self))
+  end
+
+  def student_can_access_ai_chat?
+    teachers.any?(&:teacher_can_access_ai_chat?) &&
+      sections_as_student.any?(&:assigned_gen_ai?)
   end
 
   # Students
@@ -2267,7 +2254,7 @@ class User < ApplicationRecord
       has_ever_signed_in: has_ever_signed_in?,
       ai_tutor_access_denied: !!ai_tutor_access_denied,
       at_risk_age_gated: Policies::ChildAccount.parent_permission_required?(self),
-      child_account_compliance_state: child_account_compliance_state,
+      child_account_compliance_state: cap_status,
       latest_permission_request_sent_at: latest_parental_permission_request&.updated_at,
     }
   end

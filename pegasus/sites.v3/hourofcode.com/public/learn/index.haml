@@ -49,6 +49,8 @@ social:
 
 .clear{style: "clear: both"}
 
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::HOC_ACTIVITIES_PAGE_VISITED
+
 :javascript
 
   $(document).ready(function() {
@@ -67,14 +69,6 @@ social:
     // Add the rel tag to attempt to mitigate the inherent danger in opening
     // links in a new tab; will only work for modern browsers, though.
     $(".banner a").attr({target: "_blank", rel: "noopener noreferrer nofollow"});
-
-    // Set up google analytics tracking
-    $('.bannerTeachers a[href$="join"]').click(function () {
-      ga('send', 'event', 'learn', 'click', 'teacher_banner_host');
-    });
-    $('.bannerTeachers a[href$="how-to"]').click(function () {
-      ga('send', 'event', 'learn', 'click', 'teacher_banner_howto');
-    });
 
     $(".bannerTeachers").fadeTo('slow', 1);
   });

@@ -31,8 +31,6 @@ dashboard_microsoft_key:        !Secret
 dashboard_microsoft_secret:     !Secret
 dashboard_clever_key:           !Secret
 dashboard_clever_secret:        !Secret
-dashboard_schoolproject_key:    !Secret
-dashboard_schoolproject_secret: !Secret
 
 # Recaptcha
 recaptcha_site_key: !Secret
@@ -356,7 +354,7 @@ app_servers: {}
 rack_mini_profiler_enabled:
 https_development:
 default_scheme: '<%=(env == 'development') || ci ? 'http:' : 'https:'%>'
-allowed_iframe_ancestors: 'https://*.schoology.com http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_site_host%> <%=dashboard_site_host%> curriculum.code.org https://*.lausd.iap.allhere.co'
+allowed_iframe_ancestors: 'https://*.schoology.com http://*.disney.com http://*.diznee.net cuantrix.mx <%=pegasus_site_host%> <%=dashboard_site_host%> curriculum.code.org https://*.iap.lausd.net https://*.lausd.iap.allhere.co'
 
 skip_locales:
 secret_pictures_csv:
@@ -648,6 +646,7 @@ mailgun_api_key:
 active_job_queues:
   :default: :default
   :mailers: :mailers
+  :mailjet: :mailjet
 
 # ActiveJob Queue Adapter
 active_job_queue_adapter: :delayed_job

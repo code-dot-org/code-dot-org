@@ -5,7 +5,7 @@ import React, {Component} from 'react';
 import fontConstants from '@cdo/apps/fontConstants';
 import i18n from '@cdo/locale';
 
-import PopUpMenu, {STANDARD_PADDING} from '../../lib/ui/PopUpMenu';
+import PopUpMenu, {STANDARD_PADDING} from '../../sharedComponents/PopUpMenu';
 
 import AssignmentVersionMenuHeader from './AssignmentVersionMenuHeader';
 import AssignmentVersionMenuItem, {
@@ -135,6 +135,7 @@ const styles = {
   },
   dropdownLabel: {
     ...fontConstants['main-font-semi-bold'],
+    fontSize: '16px',
   },
   popUpMenuStyle: {
     // must appear in front of .modal from application.scss

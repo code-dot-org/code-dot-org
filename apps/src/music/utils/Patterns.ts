@@ -1,3 +1,4 @@
+import {DEFAULT_PATTERN_LENGTH} from '../constants';
 import {
   PatternEventValue,
   PatternTickEvent,
@@ -31,8 +32,11 @@ export function generateGraphDataFromPattern({
   padding,
   library,
 }: GenerateGraphDataFromPatternOptions): PatternGraphEvent[] {
+  const length = patternEventValue.length || DEFAULT_PATTERN_LENGTH;
+  const eventsLength = length * 16;
+
   // Event widths fit in the space; event heights match the widths.
-  const noteWidth = Math.ceil((width - 2 * padding) / 16);
+  const noteWidth = Math.ceil((width - 2 * padding) / eventsLength);
   const noteHeight = noteWidth;
 
   // Blocks' locations will be for their upper-left corners, so ensure
@@ -52,10 +56,11 @@ export function generateGraphDataFromPattern({
       sound => sound.src === event.src
     );
     return {
-      x: 1 + ((event.tick - 1) * useWidth) / (16 - 1) + padding,
+      x: 1 + ((event.tick - 1) * useWidth) / (eventsLength - 1) + padding,
       y: 1 + padding + (soundIndex * useHeight) / (numSounds - 1),
       width: noteWidth,
       height: noteHeight,
+      tick: event.tick,
     };
   });
 }
