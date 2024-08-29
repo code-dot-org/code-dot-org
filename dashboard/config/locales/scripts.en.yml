@@ -19049,6 +19049,8 @@ en:
           lessons:
             lesson-1:
               name: Intro & Sequencing
+            lesson-2:
+              name: Loops
           lesson_groups: {}
           name: pilot-elem-music-lab
           title: Intro to Programming with Music Lab
