@@ -2583,23 +2583,23 @@
         button: "Explore activities"
 
   transformers:
-    header: "Code the fun: with Transformers!"
-    desc: "Build your own exciting Transformer's One world now!"
+    header: "Code the fun: with Transformers One!"
+    desc: "Build your own exciting Transformers One world now!"
     code_favorite:
       header: "Code with your favorite Transformers"
       desc: "Explore and build awesome worlds with Optimus Prime, Bumblebee, Megatron, and More!"
     fun:
-      header: "Get in the fun! Easy-to-learn code with Transformers"
+      header: "Get in the fun! Easy-to-learn code with Transformers One"
       desc: "Code.org has teamed up with Transformers One to offer a fun and easy-to-learn coding activity for 2nd-8th graders. Now, you can create your own interactive Transformers One world with some of the movie's most beloved characters!"
       code_card:
         header: "Code with the Transformers"
-        desc: "Autobots, roll out! In this Transformers-themed introduction to our Sprite Lab, students learn the basics of computer science by building fun, interactive projects."
+        desc: "Autobots, roll out! In this Transformers One-themed introduction to our Sprite Lab, students learn the basics of computer science by building fun, interactive projects."
     after:
-      header: "Continue learning after Transformers"
-      desc: "The Transformers activity is an ideal first step for classrooms before tackling the open-ended projects in our new CS Connections curriculum. Once students learn basic coding, they can advance to CS Connections' cross-curricular projects."
+      header: "Continue learning after Transformers One"
+      desc: "The Transformers One activity is an ideal first step for classrooms before tackling the open-ended projects in our new CS Connections curriculum. Once students learn basic coding, they can advance to CS Connections' cross-curricular projects."
   
   hello_world:
-    tiny_banner: "Check out the new [Transformers theme](%{url}) of Hello World!"
+    tiny_banner: "Check out the new [Transformers One theme](%{url}) of Hello World!"
     header: "Hello World"
     desc: "Say hello to the world of computer science with this introductory activity that equips students with the basic coding skills and confidence to create apps."
     theme:
@@ -2609,7 +2609,7 @@
       header: "Continue learning after Hello World"
       desc: "Hello World is a great starting point before doing CS connections."
     carousel:
-      transformers: "Transformers"
+      transformers: "Transformers One"
       space: "Space"
       space_desc: "3, 2, 1... blast off! In this space-themed introduction to our Sprite Lab, students learn the basics of computer science by building fun, interactive projects."
       soccer: "Soccer"
