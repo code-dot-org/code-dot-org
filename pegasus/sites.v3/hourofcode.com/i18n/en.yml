@@ -2629,6 +2629,32 @@
     labs:
       heading: "Build your way with labs"
       desc: "Discover programming environments designed to meet you at your level and elevate your skills."
+      label_what_you_can_make: "What you can make:"
+      label_experience: "Experience:"
+      spritelab:
+        overline: "Ages 5-12"
+        title: "Sprite Lab"
+        what_you_can_make: "Simple animations and games with characters"
+        experience: "Beginner"
+        call_to_action_learn_more: "Learn more"
+        aria_label_learn_more: "Learn more about Sprite Lab"
+        call_to_action_try: "Try Sprite Lab"
+      gamelab:
+        overline: "Ages 13+"
+        title: "Game Lab"
+        what_you_can_make: "Simple animations and games with characters"
+        experience: "Beginner"
+        call_to_action_learn_more: "Learn more"
+        aria_label_learn_more: "Learn more about Game Lab"
+        call_to_action_try: "Try Game Lab"
+      applab:
+        overline: "Ages 13+"
+        title: "App Lab"
+        what_you_can_make: "Simple Javascript apps with blocks or code"
+        experience: "Beginner"
+        call_to_action_learn_more: "Learn more"
+        aria_label_learn_more: "Learn more about App Lab"
+        call_to_action_try: "Try App Lab"
       musiclab:
         overline: "Ages 10+"
         title: "Music Lab"
