@@ -64,6 +64,7 @@ class UnitOverview extends React.Component {
     isProfessionalLearningCourse: PropTypes.bool,
     publishedState: PropTypes.oneOf(Object.values(PublishedState)),
     participantAudience: PropTypes.string,
+    showAiAssessmentsAnnouncement: PropTypes.bool,
 
     // redux provided
     scriptId: PropTypes.number.isRequired,
@@ -135,6 +136,7 @@ class UnitOverview extends React.Component {
       isProfessionalLearningCourse,
       publishedState,
       participantAudience,
+      showAiAssessmentsAnnouncement,
     } = this.props;
 
     const displayRedirectDialog =
@@ -147,11 +149,6 @@ class UnitOverview extends React.Component {
 
     const showUnversionedRedirectWarningDialog =
       showUnversionedRedirectWarning && !this.state.showRedirectDialog;
-
-    // TODO: use per-unit setting from server
-    const aiAssessmentUnitNames = ['csd3-2023', 'csd3-2024'];
-    const showAiAssessmentAnnouncement =
-      aiAssessmentUnitNames.includes(scriptName);
 
     return (
       <div>
@@ -223,7 +220,7 @@ class UnitOverview extends React.Component {
           includeReviewStates={isCsdOrCsp}
         />
         <GoogleClassroomAttributionLabel />
-        {showAiAssessmentAnnouncement && <AssessmentsAnnouncementDialog />}
+        {showAiAssessmentsAnnouncement && <AssessmentsAnnouncementDialog />}
       </div>
     );
   }

@@ -7,11 +7,6 @@ import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 // import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 // import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
-// import {
-//   setHasSeenProgressTableInvite,
-//   setDateProgressTableInvitationDelayed,
-//   setShowProgressTableV2,
-// } from '@cdo/apps/templates/currentUserRedux';
 import i18n from '@cdo/locale';
 
 import announcementImage from './images/ta-assessments-launch-graphic.jpg';
@@ -19,7 +14,6 @@ import announcementImage from './images/ta-assessments-launch-graphic.jpg';
 import styles from './rubrics.module.scss';
 
 export const AssessmentsAnnouncementDialog = () => {
-  // TODO: check per-user setting
   const [dialogOpen, setDialogOpen] = React.useState(true);
 
   if (!dialogOpen) {

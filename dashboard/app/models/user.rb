@@ -163,6 +163,7 @@ class User < ApplicationRecord
     lms_landing_opted_out
     failed_attempts
     locked_at
+    has_seen_ai_assessments_announcement
   )
 
   attr_accessor(

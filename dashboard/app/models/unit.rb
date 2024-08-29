@@ -1579,7 +1579,8 @@ class Unit < ApplicationRecord
         scriptOverviewPdfUrl: get_unit_overview_pdf_url,
         scriptResourcesPdfUrl: get_unit_resources_pdf_url,
         updated_at: updated_at.to_s,
-        isPlCourse: pl_course?
+        isPlCourse: pl_course?,
+        showAiAssessmentsAnnouncement: show_ai_assessments_announcement?(user),
       }
 
       #TODO: lessons should be summarized through lesson groups in the future
@@ -2103,6 +2104,11 @@ class Unit < ApplicationRecord
     lessons.any? do |lesson|
       lesson.rubric&.learning_goals&.any?(&:ai_enabled?)
     end
+  end
+
+  def show_ai_assessments_announcement?(user)
+    puts "username: #{user&.username}"
+    user.teacher? && ai_assessment_enabled? && !user.has_seen_ai_assessments_announcement?
   end
 
   private def teacher_feedback_enabled?
