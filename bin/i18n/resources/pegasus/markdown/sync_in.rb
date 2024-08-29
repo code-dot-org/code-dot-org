@@ -14,7 +14,6 @@ module I18n
             public/athome.md.partial
             public/curriculum/unplugged.md.partial
             public/educate/it.md
-            public/helloworld.md.partial
           ].freeze
 
           def process

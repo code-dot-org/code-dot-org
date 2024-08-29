@@ -1,0 +1,66 @@
+---
+title: Hello World
+theme: responsive_full_width
+---
+
+:javascript
+  window.pegasus = window.pegasus || {};
+  window.pegasus.STUDIO_URL = "#{CDO.studio_url}";
+
+- js_locale = request.locale.to_s.downcase.tr('-', '_')
+%script{src: webpack_asset_path("js/#{js_locale}/common_locale.js")}
+%script{src: webpack_asset_path('js/code.org/public/helloworld.js')}
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/helloworld-styles.css", rel: "stylesheet"}
+
+- transformers_url = "https://code.org/transformers"
+
+= view :top_skinny_banner, banner_id: "banner-transformers", banner_url: nil, banner_icon: "fa-solid fa-megaphone", banner_text: hoc_s("hello_world.tiny_banner", markdown: :inline, locals: {url: transformers_url}), external_link: false, light_theme: true
+
+%section.hero-banner-basic.overlay
+  .wrapper.flex-container.justify-space-between.align-items-center
+    .text-wrapper
+      %h1.white
+        =hoc_s("hello_world.header")
+      %p.body-one.white
+        =hoc_s("hello_world.desc")
+    .media-wrapper
+      = view :display_video_thumbnail, id: "hello_world_intro", video_code: "blePeROA7fA", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/hello_world_intro_spritelab.mp4"
+    .clear
+
+%section#choose-theme
+  .wrapper
+    %h2=hoc_s("hello_world.theme.header")
+    %p=hoc_s("hello_world.theme.desc")
+    = view :carousel_helloworld
+
+%section.quote.bg-neutral-dark
+  .wrapper
+    %h2.white.centered=hoc_s(:heading_featured_student_projects)
+    #helloworld_student_projects
+
+%section#continue.bg-neutral-light
+  .wrapper
+    %h2.centered
+      =hoc_s("hello_world.continue.header")
+    %p.centered
+      =hoc_s("hello_world.continue.desc")
+    .action-block.action-block--two-col.white.add-margin-top
+      .media-wrapper.col-50
+        = view :display_video_thumbnail, id: "intro_csc", video_code: "GDcKJ1v2W1s", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/curriculum_videos/curriculum_video_csc.mp4"
+      .text-wrapper.col-50
+        %p.overline=hoc_s("game_design_page.elementary_curricula.game_design.overline")
+        %h3=hoc_s(:curriculum_name_csc)
+        %p=hoc_s(:csc_page_top_desc)
+        %a.link-button{href: "/csc"}
+          =hoc_s(:call_to_action_learn_more)
+    .clear
+
+%section
+  .wrapper
+    %h2.centered
+      =hoc_s(:middle_high_page_additional_resources_title)
+    = view :"tools/additional_resources"
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::HELLOWORLD_PAGE_VISITED_EVENT
