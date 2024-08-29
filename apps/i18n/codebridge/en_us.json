@@ -1,6 +1,7 @@
 {
   "addFile": "Add file",
   "addSubFolder": "Add sub-folder",
+  "allTestsPassed": "All tests passed!",
   "cannotRun": "We don't know how to run your code. Please contact support.",
   "cannotStop": "We don't know how to stop your code. Please contact support.",
   "cannotTest": "We don't know how to run your tests. Please contact support.",
@@ -24,11 +25,15 @@
   "predictRunDisabledTooltip": "You must answer the question in the instructions before running the code.",
   "renameFile": "Rename file",
   "renameFolder": "Rename folder",
+  "result": "Result",
   "runToContinue": "You must run your code before continuing.",
   "runToFinish": "You must run your code before finishing.",
   "runToSubmit": "You must run your code before submitting.",
   "systemCodeError": "We're sorry, we hit an issue running your program. Please refresh the page and try again.",
+  "testName": "Test Name",
+  "testsDidNotPass": "Tests did not all pass.",
   "validationNotYetPassedContinue": "You must pass tests before continuing.",
   "validationNotYetPassedFinish": "You must pass tests before finishing.",
-  "validationNotYetPassedSubmit": "You must pass tests before submitting."
+  "validationNotYetPassedSubmit": "You must pass tests before submitting.",
+  "validationResults": "Validation Results"
 }

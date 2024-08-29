@@ -1,0 +1,14 @@
+name 'sp-pl-DS-chk-panda'
+title 'Matching Assessment: Vocabulary'
+description 'Match term with the definition'
+question 'Pandas'
+question 'library'
+question 'CSV file'
+question 'DataFrame'
+answer ' a Python library used for analyzing data'
+answer 'a collection of pre-written code used to perform common tasks'
+answer ' a type of text file that stores tabular data'
+answer ' a spreadsheet that allows data manipulation in Python'
+
+
+allow_multiple_attempts true

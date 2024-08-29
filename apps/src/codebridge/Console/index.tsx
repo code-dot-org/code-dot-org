@@ -18,6 +18,7 @@ const Console: React.FunctionComponent = () => {
   const levelId = useAppSelector(state => state.lab.levelProperties?.id);
   const previousLevelId = useRef(levelId);
   const appName = useAppSelector(state => state.lab.levelProperties?.appName);
+  const scrollAnchorRef = useRef<HTMLDivElement>(null);
 
   const [graphModalOpen, setGraphModalOpen] = useState(false);
   const [activeGraphIndex, setActiveGraphIndex] = useState(0);
@@ -32,6 +33,12 @@ const Console: React.FunctionComponent = () => {
       previousLevelId.current = levelId;
     }
   }, [dispatch, levelId]);
+
+  useEffect(() => {
+    scrollAnchorRef.current?.scrollIntoView({
+      behavior: 'smooth',
+    });
+  }, [codeOutput]);
 
   const clearOutput = () => {
     dispatch(resetOutput());
@@ -78,7 +85,10 @@ const Console: React.FunctionComponent = () => {
                 <Button
                   color={buttonColors.black}
                   disabled={false}
-                  icon={{iconName: 'up-right-from-square', iconStyle: 'solid'}}
+                  icon={{
+                    iconName: 'up-right-from-square',
+                    iconStyle: 'solid',
+                  }}
                   isIconOnly={true}
                   onClick={() => popOutGraph(index)}
                   size="xs"
@@ -120,6 +130,7 @@ const Console: React.FunctionComponent = () => {
             );
           }
         })}
+        <div ref={scrollAnchorRef} />
       </div>
     </PanelContainer>
   );

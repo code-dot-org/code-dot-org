@@ -1,0 +1,31 @@
+name 'sp-pl-DS_L9-exploratory-data'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Python and Pandas
+
+## Lesson 9: Exploratory Data Analysis
+
+<img src="https://images.code.org/ac316ba5dc67bc81c762c9053eb02ee6-image-1724861750251.png" alt="data outlier icon" width="250px" style="border-radius:10px; float:right; margin: 0 0 40px 40px;">
+
+#### Students explore how to identify and analyze outliers and other statistical values in a dataset using pandas functions such as min(), max(), nsmallest(), nlargest(), and agg().
+#### They engage in discussions to share their insights and understand trends, patterns, and anomalies in the data.
+
+### <b>Check out the entire lesson plan  <a href="LINK" rel="noopener noreferrer">here</a>.</b>
+
+
+
+## Key concepts 
+
+- #### **min()** - finds the smallest value in a column
+- #### **max()** - finds the largest value in a column
+- #### **sum** - adds up values in a column to give the total
+- #### **nsmallest()** - finds the smallest value in a column 
+- #### **nlargest()** - finds the largest value in a column
+- #### **agg()** - provides a table of aggregated values
+
+## Let's practice!  
+
+
+MARKDOWN

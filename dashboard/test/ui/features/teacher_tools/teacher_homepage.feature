@@ -173,6 +173,7 @@ Feature: Using the teacher homepage sections feature
     And I click selector ".assignment-version-title:contains(2019)" once I see it
     And I press the first "#uitest-save-section-changes" element to load a new page
     And I wait until element "#classroom-sections" is visible
+    And I wait until element ".uitest-owned-sections" is visible
     And the section table row at index 0 has primary assignment path "/s/coursea-2019"
 
   Scenario: Navigate to course pages with course versions enabled

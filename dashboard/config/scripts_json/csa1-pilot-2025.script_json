@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-27 02:51:45 UTC",
+    "serialized_at": "2024-08-28 05:03:37 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -212,9 +212,9 @@
       "has_lesson_plan": true,
       "relative_position": 8,
       "properties": {
-        "overview": "**How can a programmer use AI effectively and ethically to develop code?**\n\nArtificial Intelligence (AI) has permeated nearly every aspect of modern life. In this lesson, students first recognize the ways in which AI-developed programs and data sets can have inherent bias. Then, students learn how to harness the power of AI to develop code while exploring the challenges associated with AI-developed code. Finally, students practice designing a program in order to more effectively make use of AI-assistance in developing programs.",
-        "preparation": "* **(Optional)** Print copies of the AI-Generated Code Guided notes (one for each student)\n* Print copies of the Planning Programs handout (one for each student)\n* Preview the videos included in the lesson: *Are We Automating Racism*, *Chatbots and Large-Language Models (Part 1)*, and *Chatbots and Large-Language Models (Part 2)*.",
-        "student_overview": "**How can a programmer use AI effectively and ethically to develop code?**\n\nArtificial Intelligence (AI) is a big part of modern life. In this lesson, you'll first recognize how AI programs and data sets can have built-in biases. Then, you'll learn how to use AI to develop code while understanding the challenges that come with AI-created code. Finally, you'll practice designing a program to make better use of AI when developing your own programs."
+        "overview": "**How can a programmer use AI effectively and ethically to develop code?**\n\nArtificial intelligence (AI) has permeated nearly every aspect of modern life. In this lesson, students first recognize the ways in which AI-developed programs and data sets can have inherent bias. Then, students learn how to harness the power of AI to develop code while exploring the challenges associated with AI-developed code. Finally, students practice designing a program in order to more effectively make use of AI-assistance in developing programs.",
+        "preparation": "* **(Optional)** Print copies of the AI-Generated Code Guided notes (one for each student)\n* Print copies of the Planning Programs handout (one for each student)\n* Preview the videos *Are We Automating Racism*, *Chatbots and Large-Language Models (Part 1)*, and *Chatbots and Large-Language Models (Part 2)*.",
+        "student_overview": "**How can a programmer use AI effectively and ethically to develop code?**\n\nArtificial intelligence (AI) is a big part of modern life. In this lesson, you'll first recognize how AI programs and data sets can have built-in biases. Then, you'll learn how to use AI to develop code while understanding the challenges that come with AI-created code. Finally, you'll practice designing a program to make better use of AI when developing your own programs."
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -3298,18 +3298,6 @@
       }
     },
     {
-      "key": "bc2c43be-52d5-423d-811f-331b9eeea815",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 4.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "bc2c43be-52d5-423d-811f-331b9eeea815",
-        "lesson_activity.key": "5b7a1377-74de-472c-a174-80eee0277843"
-      }
-    },
-    {
       "key": "abfe419b-19f3-4b02-b8d1-4ed10ab6eb45",
       "position": 1,
       "properties": {
@@ -3474,13 +3462,47 @@
       }
     },
     {
-      "key": "df2a20fd-0562-49e3-961a-0ec2bf3f61ec",
+      "key": "569902fe-acf3-4cf8-95d6-8de3e25377da",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulart\nDisplay: Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "569902fe-acf3-4cf8-95d6-8de3e25377da",
+        "lesson_activity.key": "e78ce827-2535-47ba-a158-d61f084d561c"
+      }
+    },
+    {
+      "key": "df2a20fd-0562-49e3-961a-0ec2bf3f61ec",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary\n"
       },
       "seeding_key": {
         "activity_section.key": "df2a20fd-0562-49e3-961a-0ec2bf3f61ec",
+        "lesson_activity.key": "e78ce827-2535-47ba-a158-d61f084d561c"
+      }
+    },
+    {
+      "key": "950b0702-ef58-4d77-bf99-699c70ed418f",
+      "position": 5,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "950b0702-ef58-4d77-bf99-699c70ed418f",
+        "lesson_activity.key": "e78ce827-2535-47ba-a158-d61f084d561c"
+      }
+    },
+    {
+      "key": "00a01879-100a-497b-9ad1-da54b374b067",
+      "position": 6,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Checking for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "00a01879-100a-497b-9ad1-da54b374b067",
         "lesson_activity.key": "e78ce827-2535-47ba-a158-d61f084d561c"
       }
     },
@@ -3747,18 +3769,6 @@
       },
       "seeding_key": {
         "activity_section.key": "f72c8889-755f-4c3c-b27f-831f29ad4d2b",
-        "lesson_activity.key": "6bfc6c3c-ae77-43af-989d-e283918a921b"
-      }
-    },
-    {
-      "key": "0a632db3-d270-4153-bb1d-238034d1637d",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 9.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "0a632db3-d270-4153-bb1d-238034d1637d",
         "lesson_activity.key": "6bfc6c3c-ae77-43af-989d-e283918a921b"
       }
     },
@@ -4633,18 +4643,6 @@
       }
     },
     {
-      "key": "1f4ca01c-95df-45cb-a23e-a5e14ab46573",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 3.2\n* Topic Questions 5.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "1f4ca01c-95df-45cb-a23e-a5e14ab46573",
-        "lesson_activity.key": "b14b9f9e-5c7e-47e5-a410-3fb4735384ad"
-      }
-    },
-    {
       "key": "f40170e8-c5f5-4016-a672-9add88680d2a",
       "position": 1,
       "properties": {
@@ -4920,18 +4918,6 @@
       },
       "seeding_key": {
         "activity_section.key": "1a9929d7-62b4-49bd-94eb-9e16c6e63512",
-        "lesson_activity.key": "a0ea636e-1fcb-4768-86fc-e3117aa04230"
-      }
-    },
-    {
-      "key": "8b2e28f0-87b0-4b64-ac8f-c4df05890fa1",
-      "position": 6,
-      "properties": {
-        "description": "To assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*",
-        "name": "AP Classroom Topic Questions"
-      },
-      "seeding_key": {
-        "activity_section.key": "8b2e28f0-87b0-4b64-ac8f-c4df05890fa1",
         "lesson_activity.key": "a0ea636e-1fcb-4768-86fc-e3117aa04230"
       }
     },
@@ -7375,6 +7361,28 @@
     },
     {
       "chapter": 38,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "progression": "Checking for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-AIGeneratedCode-L4_2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-pilot-2025",
+        "activity_section.key": "00a01879-100a-497b-9ad1-da54b374b067"
+      },
+      "level_keys": [
+        "CSA-AIGeneratedCode-L4_2025"
+      ]
+    },
+    {
+      "chapter": 39,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -7399,7 +7407,7 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 40,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7424,7 +7432,7 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 41,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7449,7 +7457,7 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 42,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -7474,7 +7482,7 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 43,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7499,7 +7507,7 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 44,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7524,7 +7532,7 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 45,
       "position": 3,
       "activity_section_position": 2,
       "assessment": false,
@@ -7549,7 +7557,7 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 46,
       "position": 4,
       "activity_section_position": 3,
       "assessment": false,
@@ -7574,7 +7582,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -7599,7 +7607,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -7624,7 +7632,7 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 49,
       "position": 7,
       "activity_section_position": 3,
       "assessment": false,
@@ -7649,7 +7657,7 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 50,
       "position": 8,
       "activity_section_position": 1,
       "assessment": true,
@@ -7674,7 +7682,7 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 51,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7699,7 +7707,7 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 52,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -7724,7 +7732,7 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 53,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -7749,7 +7757,7 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 54,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -7774,7 +7782,7 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 55,
       "position": 5,
       "activity_section_position": 1,
       "assessment": false,
@@ -7799,7 +7807,7 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 56,
       "position": 6,
       "activity_section_position": 1,
       "assessment": true,
@@ -7824,7 +7832,7 @@
       ]
     },
     {
-      "chapter": 56,
+      "chapter": 57,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7849,7 +7857,7 @@
       ]
     },
     {
-      "chapter": 57,
+      "chapter": 58,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7874,7 +7882,7 @@
       ]
     },
     {
-      "chapter": 58,
+      "chapter": 59,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -7899,7 +7907,7 @@
       ]
     },
     {
-      "chapter": 59,
+      "chapter": 60,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -7924,7 +7932,7 @@
       ]
     },
     {
-      "chapter": 60,
+      "chapter": 61,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -7949,7 +7957,7 @@
       ]
     },
     {
-      "chapter": 61,
+      "chapter": 62,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -7974,7 +7982,7 @@
       ]
     },
     {
-      "chapter": 62,
+      "chapter": 63,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -7999,7 +8007,7 @@
       ]
     },
     {
-      "chapter": 63,
+      "chapter": 64,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -8024,7 +8032,7 @@
       ]
     },
     {
-      "chapter": 64,
+      "chapter": 65,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -8049,7 +8057,7 @@
       ]
     },
     {
-      "chapter": 65,
+      "chapter": 66,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -8074,7 +8082,7 @@
       ]
     },
     {
-      "chapter": 66,
+      "chapter": 67,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8099,7 +8107,7 @@
       ]
     },
     {
-      "chapter": 67,
+      "chapter": 68,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -8124,7 +8132,7 @@
       ]
     },
     {
-      "chapter": 68,
+      "chapter": 69,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -8149,7 +8157,7 @@
       ]
     },
     {
-      "chapter": 69,
+      "chapter": 70,
       "position": 4,
       "activity_section_position": 4,
       "assessment": false,
@@ -8174,7 +8182,7 @@
       ]
     },
     {
-      "chapter": 70,
+      "chapter": 71,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -8199,7 +8207,7 @@
       ]
     },
     {
-      "chapter": 71,
+      "chapter": 72,
       "position": 6,
       "activity_section_position": 2,
       "assessment": false,
@@ -8224,7 +8232,7 @@
       ]
     },
     {
-      "chapter": 72,
+      "chapter": 73,
       "position": 7,
       "activity_section_position": 1,
       "assessment": true,
@@ -8249,7 +8257,7 @@
       ]
     },
     {
-      "chapter": 73,
+      "chapter": 74,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8274,7 +8282,7 @@
       ]
     },
     {
-      "chapter": 74,
+      "chapter": 75,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8299,7 +8307,7 @@
       ]
     },
     {
-      "chapter": 75,
+      "chapter": 76,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -8324,7 +8332,7 @@
       ]
     },
     {
-      "chapter": 76,
+      "chapter": 77,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -8349,7 +8357,7 @@
       ]
     },
     {
-      "chapter": 77,
+      "chapter": 78,
       "position": 5,
       "activity_section_position": 1,
       "assessment": true,
@@ -8374,7 +8382,7 @@
       ]
     },
     {
-      "chapter": 78,
+      "chapter": 79,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -8399,7 +8407,7 @@
       ]
     },
     {
-      "chapter": 79,
+      "chapter": 80,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -8424,7 +8432,7 @@
       ]
     },
     {
-      "chapter": 80,
+      "chapter": 81,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -8449,7 +8457,7 @@
       ]
     },
     {
-      "chapter": 81,
+      "chapter": 82,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -8474,7 +8482,7 @@
       ]
     },
     {
-      "chapter": 82,
+      "chapter": 83,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -8942,6 +8950,18 @@
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa1-pilot-2025",
         "activity_section.key": "7ab7f1c3-8a5c-465a-a5be-2e6135351945"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-AIGeneratedCode-L4_2025",
+        "script_level.level_keys": [
+          "CSA-AIGeneratedCode-L4_2025"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa1-pilot-2025",
+        "activity_section.key": "00a01879-100a-497b-9ad1-da54b374b067"
       }
     },
     {
@@ -9667,7 +9687,7 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U1L8 Guided Notes",
+      "name": "[EXEMPLAR] AI-Generated Code Guided Notes",
       "url": "https://docs.google.com/document/d/1Whx0j6rOrfxdTOQxBJ8z9u_h3o8WSIQkHbMZKsvQUHY/edit?usp=drive_link",
       "key": "_exemplar_u1l8_guided_notes_1",
       "properties": {
@@ -10396,6 +10416,7 @@
       "key": "planning_programs",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -10884,11 +10905,12 @@
       }
     },
     {
-      "name": "U1L8 Guided Notes",
+      "name": "AI-Generated Code Guided Notes",
       "url": "https://docs.google.com/document/d/1s_YaJ6lPH5ebCtB1TjM-BoiaHac2_L6M_DFodG-Q-gA/edit?usp=drive_link",
       "key": "u1l8_guided_notes_1",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -10963,6 +10985,16 @@
       },
       "seeding_key": {
         "resource.key": "unit_1_overview"
+      }
+    },
+    {
+      "name": "Unit 1 Slides",
+      "url": "https://docs.google.com/presentation/d/1IpHfMtpXEUfKnmiIebe9aNQSrrzkuLbjVjTR-G4fzRQ/edit?usp=sharing",
+      "key": "unit_1_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "unit_1_slides"
       }
     },
     {
@@ -11967,6 +11999,12 @@
     },
     {
       "seeding_key": {
+        "resource.key": "unit_1_slides",
+        "script.name": "csa1-pilot-2025"
+      }
+    },
+    {
+      "seeding_key": {
         "resource.key": "unit_1_study_guide_1",
         "script.name": "csa1-pilot-2025"
       }
@@ -12888,7 +12926,7 @@
     {
       "key": "333da29d-b9cd-4907-89ab-80ae51c15042",
       "properties": {
-        "description": "recognize the risk of bias in programs developed with AI"
+        "description": "Recognize the risk of bias in programs developed with AI"
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -12908,7 +12946,7 @@
     {
       "key": "3dd17ce3-4ebe-4eca-a4e3-25516967097a",
       "properties": {
-        "description": "identify the challenges of using AI to develop code"
+        "description": "Identify the challenges of using AI to develop code"
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -13038,7 +13076,7 @@
     {
       "key": "883655cc-0c73-4859-98af-a8c3911e760f",
       "properties": {
-        "description": "create a well-designed program plan in order to increase the effectiveness of using AI to develop a program"
+        "description": "Create a well-designed program plan in order to increase the effectiveness of using AI to develop a program"
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
@@ -13048,7 +13086,7 @@
     {
       "key": "8d9b85c5-4002-4f9b-9f7b-c22f71435bb9",
       "properties": {
-        "description": "explain how the use of artificial intelligence (AI) can decrease the time it takes to develop code"
+        "description": "Explain how the use of artificial intelligence (AI) can decrease the time it takes to develop code"
       },
       "seeding_key": {
         "lesson.key": "lesson-8",
