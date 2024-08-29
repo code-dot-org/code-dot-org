@@ -300,8 +300,7 @@ class LevelsController < ApplicationController
 
     if @level.save
       reset = !!params[:reset]
-      go_to_start = !!params[:go_to_start]
-      redirect = if go_to_start
+      redirect = if params[:redirect_start_mode]
                    edit_blocks_level_path(@level, :start_sources)
                  else
                    if reset
@@ -386,7 +385,7 @@ class LevelsController < ApplicationController
     rescue ActiveRecord::RecordInvalid => exception
       render(status: :not_acceptable, plain: exception) && return
     end
-    if params[:go_to_start]
+    if params[:redirect_start_mode]
       render json: {redirect: edit_blocks_level_path(@level, :start_sources)}
     elsif params[:do_not_redirect]
       render json: @level
