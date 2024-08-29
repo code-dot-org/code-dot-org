@@ -238,6 +238,7 @@ Scenario: congrats certificate pages show social media icons
   And element "#uitest-certificate" is visible
   And I wait until element ".fa-facebook" is visible
   And I wait until element ".fa-twitter" is visible
+  Then the href of selector ".social-print-link" contains "/print_certificates/"
 
   When I am on "http://code.org/api/hour/finish/flappy"
   And I wait until current URL contains "/congrats"
@@ -246,6 +247,7 @@ Scenario: congrats certificate pages show social media icons
   And I wait for image "#uitest-certificate img" to load
   And I wait until element ".fa-facebook" is visible
   And I wait until element ".fa-twitter" is visible
+  Then the href of selector ".social-print-link" contains "/print_certificates/"
 
   When I am on "http://code.org/api/hour/finish/oceans"
   And I wait until current URL contains "/congrats"
@@ -254,6 +256,7 @@ Scenario: congrats certificate pages show social media icons
   And I wait for image "#uitest-certificate img" to load
   And I wait until element ".fa-facebook" is visible
   And I wait until element ".fa-twitter" is visible
+  Then the href of selector ".social-print-link" contains "/print_certificates/"
 
   When I am on "http://code.org/api/hour/finish/accelerated"
   And I wait until current URL contains "/congrats"
@@ -262,6 +265,7 @@ Scenario: congrats certificate pages show social media icons
   And I wait for image "#uitest-certificate img" to load
   And I wait until element ".fa-facebook" is visible
   And I wait until element ".fa-twitter" is visible
+  Then the href of selector ".social-print-link" contains "/print_certificates/"
 
   When I am on "http://code.org/api/hour/finish/coursea-2017"
   And I wait until current URL contains "/congrats"
@@ -270,3 +274,4 @@ Scenario: congrats certificate pages show social media icons
   And I wait for image "#uitest-certificate img" to load
   And I wait until element ".fa-facebook" is visible
   And I wait until element ".fa-twitter" is visible
+  Then the href of selector ".social-print-link" contains "/print_certificates/"
