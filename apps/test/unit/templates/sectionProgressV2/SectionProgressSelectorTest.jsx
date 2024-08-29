@@ -29,7 +29,7 @@ const V2_PAGE_LINK_TEXT = 'Switch to old progress view';
 const V1_TEST_ID = 'section-progress-v1';
 const V2_TEST_ID = 'section-progress-v2';
 
-const DEFAULT_PROPS = {};
+const DEFAULT_PROPS = {isInV1Navigaton: true};
 
 jest.mock('@cdo/apps/templates/sectionProgress/sectionProgressLoader');
 
