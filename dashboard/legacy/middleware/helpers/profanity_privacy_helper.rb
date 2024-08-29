@@ -89,13 +89,6 @@ def share_failure_from_body(body, locale)
   blockly_source = parsed_json['source']
   return false unless blockly_source
 
-  # This probably means the filter only works on blockly-based labs
-  # as e.g. Java Lab stores an object in the `main.json` source field like:
-  # blockly_source = {"MyClass.java"=>{"text"=>"my source code for MyClass.java here", "isVisible"=>true, "tabOrder"=>0}}
-  #
-  # See: https://github.com/code-dot-org/code-dot-org/pull/60329#issuecomment-2282270302
-  return false unless blockly_source.is_a? String
-
   begin
     ShareFiltering.find_share_failure(blockly_source, locale)
   rescue WebPurify::TextTooLongError, OpenURI::HTTPError, IO::EAGAINWaitReadable

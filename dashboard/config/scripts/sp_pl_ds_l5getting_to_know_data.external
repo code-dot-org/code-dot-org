@@ -3,6 +3,7 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
+#Data Science
 ## Lesson 5: Getting to Know your Data  
 
 #### Students will learn four of the major data types which they will work with while using pandas: int64, float64, object, and datetime.
@@ -28,5 +29,4 @@ markdown <<MARKDOWN
 
 ## Let's practice!  
 
-![]()
 MARKDOWN

@@ -21,7 +21,6 @@ import Sounds from '../../Sounds';
 import AppView from '../../templates/AppView';
 import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
 import {captureThumbnailFromCanvas} from '../../util/thumbnail';
-import trackEvent from '../../util/trackEvent';
 
 var Provider = require('react-redux').Provider;
 
@@ -156,7 +155,6 @@ Craft.init = function (config) {
         handlePlayerSelection(DEFAULT_CHARACTER, onPlayerSelected);
       } else if (config.level.showPopupOnLoad === 'houseLayoutSelection') {
         Craft.showHouseSelectionPopup(function (selectedHouse) {
-          trackEvent('Minecraft', 'ChoseHouse', selectedHouse);
           if (!levelConfig.edit_blocks) {
             Object.assign(config.level, houseLevels[selectedHouse]);
 
@@ -491,7 +489,6 @@ Craft.getCurrentCharacter = function () {
 };
 
 Craft.setCurrentCharacter = function (name) {
-  trackEvent('Minecraft', 'ChoseCharacter', name);
   Craft.clearPlayerState();
   trySetLocalStorage('craftSelectedPlayer', name);
   Craft.updateUIForCharacter(name);
@@ -534,7 +531,6 @@ Craft.showHouseSelectionPopup = function (onSelectedCallback) {
     $('#choose-house-a')[0],
     function () {
       selectedHouse = 'houseA';
-      trackEvent('Minecraft', 'ClickedHouse', selectedHouse);
       popupDialog.hide();
     }.bind(this)
   );
@@ -542,7 +538,6 @@ Craft.showHouseSelectionPopup = function (onSelectedCallback) {
     $('#choose-house-b')[0],
     function () {
       selectedHouse = 'houseB';
-      trackEvent('Minecraft', 'ClickedHouse', selectedHouse);
       popupDialog.hide();
     }.bind(this)
   );
@@ -550,7 +545,6 @@ Craft.showHouseSelectionPopup = function (onSelectedCallback) {
     $('#choose-house-c')[0],
     function () {
       selectedHouse = 'houseC';
-      trackEvent('Minecraft', 'ClickedHouse', selectedHouse);
       popupDialog.hide();
     }.bind(this)
   );

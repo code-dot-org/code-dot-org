@@ -18,5 +18,3 @@ gem 'kitchen-ec2'
 gem 'kitchen-sync'
 
 gem 'json', '>= 2.3.0' # 2.3.0 resolved some Ruby 2.7 deprecation warnings
-
-gem 'racc' # test-kitchen 3.4.0 has an undeclared dependency on racc that breaks on Ruby 3.3.4. If we upgrade test-kitchen, we can drop this line.
