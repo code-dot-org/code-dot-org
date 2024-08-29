@@ -27,7 +27,7 @@ const MultiInputCustomization: React.FunctionComponent<{
   addedItems,
   visibility,
   isReadOnly,
-  hideInputBoxWhenReadOnly: hideInputBoxWhenReadOnly,
+  hideInputBoxWhenReadOnly,
   onUpdateItems,
 }) => {
   const [newItem, setNewItem] = useState('');
