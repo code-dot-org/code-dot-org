@@ -635,11 +635,11 @@ const aichatSlice = createSlice({
     ) => {
       state.savedAiCustomizations = action.payload;
     },
-    setAiCustomizationProperty: (
-      state,
+    setAiCustomizationProperty: <T extends keyof AiCustomizations>(
+      state: AichatState,
       action: PayloadAction<{
-        property: keyof AiCustomizations;
-        value: AiCustomizations[typeof property];
+        property: T;
+        value: AiCustomizations[T];
       }>
     ) => {
       const {property, value} = action.payload;
