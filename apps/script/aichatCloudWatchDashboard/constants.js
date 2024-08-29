@@ -177,4 +177,38 @@ const crossModelWidgetsConfig = [
   },
 ];
 
-module.exports = {modelNames, headerWidgetConfig, crossModelWidgetsConfig};
+const logWidgetsConfig = [
+  {
+    height: 6,
+    width: 12,
+    type: 'log',
+    properties: {
+      query:
+        "SOURCE 'production-browser-events' | fields @message\n| filter level = \"SEVERE\" and message.appName = 'aichat'\n| stats count(*) as error_count by message.errorMessage as error\n| display error, error_count\n| sort by error_count desc",
+      region: 'us-east-1',
+      stacked: false,
+      title: 'Errors by type',
+      view: 'table',
+    },
+  },
+  {
+    type: 'log',
+    width: 12,
+    height: 6,
+    properties: {
+      query:
+        "SOURCE 'production-browser-events' | fields @message\n| filter level = \"WARNING\" and message.appName = 'aichat'\n| stats count(*) as warning_count by message.message as warning\n| display warning, warning_count\n| sort by warning_count desc",
+      region: 'us-east-1',
+      stacked: false,
+      view: 'table',
+      title: 'Warnings by type',
+    },
+  },
+];
+
+module.exports = {
+  modelNames,
+  headerWidgetConfig,
+  crossModelWidgetsConfig,
+  logWidgetsConfig,
+};

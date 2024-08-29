@@ -2,6 +2,7 @@ const {
   modelNames,
   headerWidgetConfig,
   crossModelWidgetsConfig,
+  logWidgetsConfig,
 } = require('./constants');
 
 const getModelSpecificConfig = modelName => [
@@ -239,6 +240,7 @@ const dashboardConfig = {
     headerWidgetConfig,
     ...crossModelWidgetsConfig,
     ...modelNames.map(getModelSpecificConfig).flat(),
+    ...logWidgetsConfig,
   ],
 };
 
