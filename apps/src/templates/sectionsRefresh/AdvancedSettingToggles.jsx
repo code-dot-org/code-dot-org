@@ -2,6 +2,8 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 import Toggle from '@cdo/apps/componentLibrary/toggle/Toggle';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import InfoHelpTip from '@cdo/apps/sharedComponents/InfoHelpTip';
 import i18n from '@cdo/locale';
 
@@ -38,6 +40,13 @@ export default function AdvancedSettingToggles({
 
   const handleAITutorEnabledToggle = e => {
     const updatedValue = !section.aiTutorEnabled;
+    const event = section.aiTutorEnabled
+      ? EVENTS.AI_TUTOR_DISABLED
+      : EVENTS.AI_TUTOR_ENABLED;
+    analyticsReporter.sendEvent(event, {
+      sectionId: section.id,
+      uiLocation: 'sectionEditAdvancedSettings',
+    });
     updateSection('aiTutorEnabled', updatedValue);
   };
 

@@ -112,7 +112,7 @@ GRAPH
     redisio (>= 0.0.0)
   cdo-repository (0.2.56)
     cdo-github-access (>= 0.0.0)
-  cdo-ruby (0.2.89)
+  cdo-ruby (0.2.91)
     apt (>= 0.0.0)
   cdo-secrets (0.1.12)
   cdo-syslog (0.1.14)

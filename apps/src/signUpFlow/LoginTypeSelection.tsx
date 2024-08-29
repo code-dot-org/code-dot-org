@@ -4,6 +4,7 @@ import {Button} from '@cdo/apps/componentLibrary/button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
 import TextField from '@cdo/apps/componentLibrary/textField/TextField';
 import {Heading3, BodyThreeText} from '@cdo/apps/componentLibrary/typography';
+import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import cleverLogo from '@cdo/apps/signUpFlow/images/cleverLogo.png';
 import signupCanvas from '@cdo/apps/signUpFlow/images/signupCanvas.png';
 import signupSchoology from '@cdo/apps/signUpFlow/images/signupSchoology.png';
@@ -12,6 +13,10 @@ import AccountBanner from '@cdo/apps/templates/account/AccountBanner';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
 import {getAuthenticityToken} from '@cdo/apps/util/AuthenticityTokenStore';
 import i18n from '@cdo/locale';
+
+import {navigateToHref} from '../utils';
+
+import {ACCOUNT_TYPE_SESSION_KEY} from './signUpFlowConstants';
 
 import style from './signUpFlowStyles.module.scss';
 
@@ -31,6 +36,10 @@ const LoginTypeSelection: React.FunctionComponent = () => {
     setPassword(event.target.value);
   };
 
+  const finishAccountUrl =
+    sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === 'teacher'
+      ? studio('/users/new_sign_up/finish_teacher_account')
+      : studio('/users/new_sign_up/finish_student_account');
   const passwordIcon = password.length >= 6 ? 'circle-check' : 'circle-x';
   const iconClass = password.length >= 6 ? style.teal : style.lightGray;
 
@@ -141,7 +150,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
           <Button
             className={style.shortButton}
             text={locale.create_my_account()}
-            onClick={() => {}}
+            onClick={() => navigateToHref(finishAccountUrl)}
           />
         </div>
       </div>

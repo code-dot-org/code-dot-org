@@ -3,17 +3,6 @@ import {Condition} from '@cdo/apps/lab2/types';
 
 import PythonValidationTracker from './PythonValidationTracker';
 
-export interface TestResult {
-  name: string;
-  result:
-    | 'PASS'
-    | 'FAIL'
-    | 'ERROR'
-    | 'UNEXPECTED_FAILURE'
-    | 'EXPECTED_SUCCESS'
-    | 'SKIP';
-}
-
 // Conditions the Python Validator supports.
 export enum ConditionType {
   PASSED_ALL_TESTS = 'PASSED_ALL_TESTS',
@@ -40,11 +29,16 @@ export default class PythonValidator extends Validator {
   conditionsMet(conditions: Condition[]): boolean {
     for (const condition of conditions) {
       if (condition.name === ConditionType.PASSED_ALL_TESTS) {
-        const testResults = this.pythonValidationTracker.getTestResults();
-        if (!testResults) {
+        const validationResults =
+          this.pythonValidationTracker.getValidationResults();
+        if (!validationResults) {
           return false;
         }
-        if (testResults.some(testResult => testResult.result !== 'PASS')) {
+        if (
+          validationResults.some(
+            validationResult => validationResult.result !== 'PASS'
+          )
+        ) {
           return false;
         }
       }
@@ -54,5 +48,9 @@ export default class PythonValidator extends Validator {
 
   clear(): void {
     this.pythonValidationTracker.reset();
+  }
+
+  getValidationResults() {
+    return this.pythonValidationTracker.getValidationResults();
   }
 }
