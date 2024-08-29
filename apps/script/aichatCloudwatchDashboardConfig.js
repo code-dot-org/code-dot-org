@@ -1,10 +1,8 @@
-const modelNames = [
-  'gen-ai-mistral-7b-inst-v01',
-  'gen-ai-arithmo2-mistral-7b',
-  'gen-ai-biomistral-7b',
-  'gen-ai-karen-creative-mistral-7b',
-  'gen-ai-mistral-pirate-7b',
-];
+const {
+  modelNames,
+  headerWidgetConfig,
+  crossModelWidgetsConfig,
+} = require('./dashboardConfigConstants');
 
 const getModelSpecificConfig = modelName => [
   {
@@ -236,8 +234,12 @@ const getModelSpecificConfig = modelName => [
   },
 ];
 
-const jsonObject = {
-  widgets: modelNames.map(getModelSpecificConfig).flat(),
+const dashboardConfig = {
+  widgets: [
+    headerWidgetConfig,
+    ...crossModelWidgetsConfig,
+    ...modelNames.map(getModelSpecificConfig).flat(),
+  ],
 };
 
-module.exports = jsonObject;
+module.exports = dashboardConfig;
