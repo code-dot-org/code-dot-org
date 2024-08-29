@@ -39,25 +39,31 @@
       secondary_url: CDO.studio_url("/projects/gamelab/new"),
       secondary_aria_label: hoc_s("teach_labs_section.gamelab.call_to_action_try"),
     },
+    {
+      overline: hoc_s("teach_labs_section.applab.overline"),
+      title: hoc_s("teach_labs_section.applab.title"),
+      what_you_can_make: hoc_s("teach_labs_section.applab.what_you_can_make"),
+      experience: hoc_s("teach_labs_section.applab.experience"),
+      img: "/images/build-your-way-applab.png",
+      primary_label: hoc_s("teach_labs_section.applab.call_to_action_learn_more"),
+      primary_url: "/educate/applab",
+      primary_aria_label: hoc_s("teach_labs_section.applab.aria_label_learn_more"),
+      secondary_label: hoc_s("teach_labs_section.applab.call_to_action_try"),
+      secondary_url: CDO.studio_url("/projects/applab/new"),
+      secondary_aria_label: hoc_s("teach_labs_section.applab.call_to_action_try"),
+    },
+    {
+      overline: hoc_s("teach_labs_section.weblab.overline"),
+      title: hoc_s("teach_labs_section.weblab.title"),
+      what_you_can_make: hoc_s("teach_labs_section.weblab.what_you_can_make"),
+      experience: hoc_s("teach_labs_section.weblab.experience"),
+      img: "images/web-lab-banner.png",
+      primary_label: hoc_s("teach_labs_section.weblab.call_to_action_learn_more"),
+      primary_url: "/educate/weblab",
+      primary_aria_label: hoc_s("teach_labs_section.weblab.aria_label_learn_more"),
+      secondary_label: hoc_s("teach_labs_section.weblab.call_to_action_try"),
+      secondary_url: CDO.studio_url("/p/weblab"),
+      secondary_aria_label: hoc_s("teach_labs_section.weblab.call_to_action_try"),
+    },
   ]
 
-.action-block__wrapper.action-block__wrapper--three-col
-  - block_items.each do |block_item|
-    .action-block.action-block--one-col.flex-space-between
-      .content-wrapper
-        %p.overline
-          = block_item[:overline]
-        %h3
-          = block_item[:title]
-        %img{src: block_item[:img], alt: ""}
-        %p 
-          %strong What you can make:
-          = block_item[:what_you_can_make]
-        %p 
-          %strong Experience:
-          = block_item[:experience]
-      .content-footer
-        %a.link-button{href: block_item[:primary_url], aria:{label: block_item[:primary_aria_label]}}
-          = block_item[:primary_label]
-        %a.link-button.secondary{href: block_item[:secondary_url], aria:{label: block_item[:secondary_aria_label]}}
-          = block_item[:secondary_label]

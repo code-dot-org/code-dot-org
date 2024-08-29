@@ -11629,6 +11629,14 @@
       call_to_action_learn_more: "Learn more"
       aria_label_learn_more: "Learn more about Music Lab"
       call_to_action_try: "Try Music Lab"
+    weblab:
+      overline: "Ages 13+"
+      title: "Web Lab"
+      what_you_can_make: "Simple webpages with HTML and CSS"
+      experience: "Beginner"
+      call_to_action_learn_more: "Learn more"
+      aria_label_learn_more: "Learn more about Web Lab"
+      call_to_action_try: "Try Web Lab"
 
   resources_tabs:
     progress:
