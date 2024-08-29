@@ -961,7 +961,7 @@ class AbilityTest < ActiveSupport::TestCase
   test 'teacher meeting AI Chat access requirements can perform AI Chat actions' do
     teacher = create :teacher
     teacher.stubs(:teacher_can_access_ai_chat?).returns(true)
-    [:chat_completion, :log_chat_event, :start_chat_completion, :chat_request, :student_chat_history].each do |action|
+    [:log_chat_event, :start_chat_completion, :chat_request, :student_chat_history].each do |action|
       assert Ability.new(teacher).can? action, :aichat
     end
   end
@@ -969,7 +969,7 @@ class AbilityTest < ActiveSupport::TestCase
   test 'teacher not meeting AI Chat access requirements cannot perform AI Chat actions' do
     teacher = create :teacher
     teacher.stubs(:teacher_can_access_ai_chat?).returns(false)
-    [:chat_completion, :log_chat_event, :start_chat_completion, :chat_request, :student_chat_history].each do |action|
+    [:log_chat_event, :start_chat_completion, :chat_request, :student_chat_history].each do |action|
       refute Ability.new(teacher).can? action, :aichat
     end
   end
@@ -977,7 +977,7 @@ class AbilityTest < ActiveSupport::TestCase
   test 'student meeting AI Chat access requirements can perform AI Chat actions' do
     student = create :student
     student.stubs(:student_can_access_ai_chat?).returns(true)
-    [:chat_completion, :log_chat_event, :start_chat_completion, :chat_request].each do |action|
+    [:log_chat_event, :start_chat_completion, :chat_request].each do |action|
       assert Ability.new(student).can? action, :aichat
     end
   end
@@ -985,7 +985,7 @@ class AbilityTest < ActiveSupport::TestCase
   test 'student not meeting AI Chat access requirements cannot perform AI Chat actions' do
     student = create :student
     student.stubs(:student_can_access_ai_chat?).returns(false)
-    [:chat_completion, :log_chat_event, :start_chat_completion, :chat_request].each do |action|
+    [:log_chat_event, :start_chat_completion, :chat_request].each do |action|
       refute Ability.new(student).can? action, :aichat
     end
   end

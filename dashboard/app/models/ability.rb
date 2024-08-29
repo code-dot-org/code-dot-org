@@ -483,7 +483,7 @@ class Ability
         user.verified_instructor? || user.sections_as_student.any? {|s| s.assigned_csa? && s.teacher&.verified_instructor?}
       end
 
-      can [:chat_completion, :log_chat_event, :start_chat_completion, :chat_request], :aichat do
+      can [:log_chat_event, :start_chat_completion, :chat_request], :aichat do
         user.teacher_can_access_ai_chat? || user.student_can_access_ai_chat?
       end
       # Additional logic that confirms that a given teacher should have access

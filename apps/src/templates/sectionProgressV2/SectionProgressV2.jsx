@@ -30,6 +30,7 @@ function SectionProgressV2({
   isLevelProgressLoaded,
   expandedLessonIds,
   loadExpandedLessonsFromLocalStorage,
+  hideTopHeading,
 }) {
   React.useEffect(() => {
     loadExpandedLessonsFromLocalStorage(scriptId, sectionId);
@@ -59,7 +60,7 @@ function SectionProgressV2({
 
   return (
     <div className={styles.progressV2Page} data-testid="section-progress-v2">
-      <Heading1>{i18n.progressBeta()}</Heading1>
+      {!hideTopHeading && <Heading1>{i18n.progressBeta()}</Heading1>}
       <IconKey
         isViewingValidatedLevel={isViewingValidatedLevel}
         expandedLessonIds={expandedLessonIds}
@@ -88,6 +89,7 @@ SectionProgressV2.propTypes = {
   isLevelProgressLoaded: PropTypes.bool.isRequired,
   expandedLessonIds: PropTypes.array,
   loadExpandedLessonsFromLocalStorage: PropTypes.func.isRequired,
+  hideTopHeading: PropTypes.bool,
 };
 
 export default connect(
