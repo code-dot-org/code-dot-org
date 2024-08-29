@@ -1,0 +1,12 @@
+name 'self-paced-pl-gen-ai-foundations_03_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Hierarchy of AI
+
+### Beep boop
+
+
+
+MARKDOWN

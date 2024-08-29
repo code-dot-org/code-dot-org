@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "gen-ai-staging",
-    "serialized_at": "2024-08-20 17:35:57 UTC",
+    "serialized_at": "2024-08-29 04:07:12 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -10155,6 +10155,32 @@
       }
     },
     {
+      "name": "Generative AI: Attention",
+      "url": "https://www.youtube.com/watch?v=2RdK6k45koY",
+      "key": "generative_ai_attention",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/gen_ai_attention_compressed-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "generative_ai_attention"
+      }
+    },
+    {
+      "name": "Generative AI: Input & Pre-training",
+      "url": "https://www.youtube.com/watch?v=JO9MgO1Zp3E",
+      "key": "generative_ai_input_pre-training",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/gen_ai_input_pretraining_compressed-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "generative_ai_input_pre-training"
+      }
+    },
+    {
       "name": "Generative AI Opinion 1",
       "url": "https://docs.google.com/document/d/1FIZimuU8V2PcfDur9nVmpCRTqPIHZg47oyxYM1RZGu4/edit",
       "key": "generative_ai_opinion_1",
@@ -10204,6 +10230,45 @@
       },
       "seeding_key": {
         "resource.key": "generative_ai_opinion_4"
+      }
+    },
+    {
+      "name": "Generative AI: Output & Probabilities",
+      "url": "https://www.youtube.com/watch?v=gGK7b7j4BiQ",
+      "key": "generative_ai_output_probabilities",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/gen_ai_output_probabilities_compressed-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "generative_ai_output_probabilities"
+      }
+    },
+    {
+      "name": "Generative AI: Processing & Neural Networks",
+      "url": "https://www.youtube.com/watch?v=Z7Mes_Ej69Y",
+      "key": "generative_ai_processing_neural_networks",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/gen_ai_processing_neuralnets_compressed-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "generative_ai_processing_neural_networks"
+      }
+    },
+    {
+      "name": "Generative AI: Storage & Embeddings",
+      "url": "https://www.youtube.com/watch?v=s1fhxAVpYx8",
+      "key": "generative_ai_storage_embeddings",
+      "properties": {
+        "audience": "Student",
+        "download_url": "https://videos.code.org/levelbuilder/gen_ai_storage_embeddings_compressed-mp4.mp4",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "generative_ai_storage_embeddings"
       }
     },
     {
@@ -10846,6 +10911,12 @@
     {
       "seeding_key": {
         "lesson.key": "Attention Is All You Need",
+        "resource.key": "generative_ai_attention"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Attention Is All You Need",
         "resource.key": "meaning_from_context"
       }
     },
@@ -10925,6 +10996,12 @@
       "seeding_key": {
         "lesson.key": "Hallucinations and Fabrications",
         "resource.key": "hallucinations_and_fabrications"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Input & Training Data",
+        "resource.key": "generative_ai_input_pre-training"
       }
     },
     {
@@ -11081,6 +11158,12 @@
       "seeding_key": {
         "lesson.key": "Neural Networks: How They're Trained",
         "resource.key": "neural_networks_how_they_re_made"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Outputs & Probabilities",
+        "resource.key": "generative_ai_output_probabilities"
       }
     },
     {
@@ -11272,6 +11355,12 @@
     {
       "seeding_key": {
         "lesson.key": "Understanding Embeddings",
+        "resource.key": "generative_ai_storage_embeddings"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Embeddings",
         "resource.key": "lesson_instructions"
       }
     },
@@ -11279,6 +11368,12 @@
       "seeding_key": {
         "lesson.key": "Understanding Embeddings",
         "resource.key": "understanding_embeddings"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Understanding Neural Networks",
+        "resource.key": "generative_ai_processing_neural_networks"
       }
     },
     {

@@ -1,0 +1,12 @@
+name 'self-paced-pl-gen-ai-foundations-overview_02_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Foundations of Gen AI Overview
+
+
+#### 
+
+
+MARKDOWN
