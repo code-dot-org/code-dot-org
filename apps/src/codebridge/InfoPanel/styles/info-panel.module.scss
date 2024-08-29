@@ -1,4 +1,4 @@
-@import "color";
+@import 'color';
 
 .infoPanel {
   white-space: pre-wrap;
@@ -7,6 +7,7 @@
   color: $white;
   background-color: $neutral_dark;
   border: 1px solid $neutral_dark80;
+  overflow: scroll;
 }
 
 // This is adapted from customDropdown.module.scss in the component library.
@@ -21,12 +22,12 @@
   margin: 0.25rem 0;
   list-style: none;
   background-color: $dark_gray;
-  border: 1px solid rgba(0 0 0 / .15);
+  border: 1px solid rgba(0 0 0 / 0.15);
   border-radius: 4px;
-  -webkit-box-shadow: 0 6px 12px rgba(0 0 0 / .175);
-  box-shadow: 0 6px 12px rgba(0 0 0 / .175);
+  -webkit-box-shadow: 0 6px 12px rgba(0 0 0 / 0.175);
+  box-shadow: 0 6px 12px rgba(0 0 0 / 0.175);
   background-clip: padding-box;
-  padding: .25rem 0 0;
+  padding: 0.25rem 0 0;
 
   ul {
     margin: 0;
@@ -65,7 +66,8 @@
         }
       }
 
-      label, .dropdownItem {
+      label,
+      .dropdownItem {
         flex-grow: 1;
         margin-bottom: 0;
       }
