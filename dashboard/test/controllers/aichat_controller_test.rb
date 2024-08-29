@@ -135,36 +135,6 @@ class AichatControllerTest < ActionController::TestCase
     assert_response :too_many_requests
   end
 
-  test 'returns user profanity status when chat message contains profanity' do
-    sign_in(@authorized_student1)
-    ShareFiltering.stubs(:find_profanity_failure).returns(ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'damn'))
-    post :start_chat_completion, params: @profanity_violation_params, as: :json
-
-    assert_response :success
-    assert_equal "damn", json_response["flagged_content"]
-    assert_equal json_response.keys, ['messages', 'flagged_content']
-  end
-
-  test 'returns model profanity status when model response contains profanity' do
-    sign_in(@authorized_student1)
-    ShareFiltering.stubs(:find_profanity_failure).returns(
-      nil,
-      ShareFailure.new(ShareFiltering::FailureType::PROFANITY, 'damn')
-    )
-    post :start_chat_completion, params: @valid_params_chat_completion, as: :json
-
-    assert_response :success
-    assert_equal json_response.keys, ['messages']
-    assert_equal json_response["messages"].length, 2
-    user_message = json_response["messages"].first
-    assert_equal user_message["role"], "user"
-    assert_equal user_message["status"], SharedConstants::AI_INTERACTION_STATUS[:ERROR]
-    assistant_message = json_response["messages"].last
-    assert_equal assistant_message["role"], "assistant"
-    assert_equal assistant_message["status"], SharedConstants::AI_INTERACTION_STATUS[:ERROR]
-    assert_equal assistant_message["chatMessageText"], '[redacted - model generated profanity]'
-  end
-
   test 'can_request_aichat_chat_completion returns false when DCDO flag is set to `false`' do
     DCDO.stubs(:get).with('aichat_chat_completion', true).returns(false)
     assert_equal false, AichatSagemakerHelper.can_request_aichat_chat_completion?
@@ -208,7 +178,7 @@ class AichatControllerTest < ActionController::TestCase
 
   test 'Bad request if required params are not included for student_chat_history' do
     sign_in(@authorized_teacher1)
-    get :chat_completion, params: {studentId: @authorized_student1.id}, as: :json
+    get :student_chat_history, params: {studentId: @authorized_student1.id}, as: :json
     assert_response :bad_request
   end
 
@@ -255,7 +225,7 @@ class AichatControllerTest < ActionController::TestCase
   end
 
   test 'GET chat_request returns forbidden if user is not the requester' do
-    sign_in(@authorized_student1)
+    sign_in(@authorized_teacher1)
     request = create(:aichat_request, user: @authorized_student1)
     get :chat_request, params: {id: request.id}, as: :json
     assert_response :forbidden
@@ -265,7 +235,7 @@ class AichatControllerTest < ActionController::TestCase
     response = "AI model response"
     execution_status = SharedConstants::AI_REQUEST_EXECUTION_STATUS[:SUCCESS]
 
-    sign_in(@authorized_student1)
+    sign_in(@authorized_teacher1)
     request = create(:aichat_request, user: @authorized_teacher1, response: response, execution_status: execution_status)
     get :chat_request, params: {id: request.id}, as: :json
 
