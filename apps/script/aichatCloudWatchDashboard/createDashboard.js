@@ -1,3 +1,5 @@
+// See README.md in this directory for information on how to use this script.
+
 const {
   CloudWatchClient,
   PutDashboardCommand,
