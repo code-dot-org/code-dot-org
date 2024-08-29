@@ -1,5 +1,3 @@
-import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
-
 import {postLogChatEvent} from './aichatApi';
 import {ChatEvent, AichatContext} from './types';
 
@@ -47,9 +45,8 @@ export default class ChatEventLogger {
           await postLogChatEvent(chatEvent, aichatContext);
           this.sendingInProgress = false;
         } catch (error) {
-          Lab2Registry.getInstance()
-            .getMetricsReporter()
-            .logError('Error in aichat event logging request', error as Error);
+          this.sendingInProgress = true;
+          console.error('Error logging chat event:', error);
         }
       }
     }
