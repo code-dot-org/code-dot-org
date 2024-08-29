@@ -18,7 +18,7 @@ const MultiInputCustomization: React.FunctionComponent<{
   addedItems: string[];
   visibility: Visibility;
   isReadOnly: boolean;
-  hideInputsWhenReadOnly: boolean;
+  hideInputBoxWhenReadOnly: boolean;
   onUpdateItems: (updatedItems: string[]) => void;
 }> = ({
   label,
@@ -27,7 +27,7 @@ const MultiInputCustomization: React.FunctionComponent<{
   addedItems,
   visibility,
   isReadOnly,
-  hideInputsWhenReadOnly,
+  hideInputBoxWhenReadOnly: hideInputBoxWhenReadOnly,
   onUpdateItems,
 }) => {
   const [newItem, setNewItem] = useState('');
@@ -49,7 +49,7 @@ const MultiInputCustomization: React.FunctionComponent<{
 
   return (
     <>
-      {(!isReadOnly || !hideInputsWhenReadOnly) && (
+      {(!isReadOnly || !hideInputBoxWhenReadOnly) && (
         <>
           <div className={modelCustomizationStyles.inputContainer}>
             <FieldLabel label={label} id={fieldId} tooltipText={tooltipText} />
