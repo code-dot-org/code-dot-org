@@ -55,6 +55,7 @@ export default function AssessmentsAnnouncementDialog() {
         role="region"
         aria-label={i18n.aiAssessmentsAnnouncementHeading()}
         className={styles.announcementDialog}
+        id="uitest-ai-assessments-announcement"
       >
         <img
           src={announcementImage}
@@ -66,7 +67,7 @@ export default function AssessmentsAnnouncementDialog() {
           {i18n.aiAssessmentsAnnouncementBody()}
         </BodyTwoText>
         <Button
-          id="accept-invitation"
+          className="learn-more-button"
           text={i18n.learnMore()}
           onClick={handleButtonClick}
           type="primary"

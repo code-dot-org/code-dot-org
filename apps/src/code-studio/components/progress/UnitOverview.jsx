@@ -220,7 +220,11 @@ class UnitOverview extends React.Component {
           includeReviewStates={isCsdOrCsp}
         />
         <GoogleClassroomAttributionLabel />
-        {showAiAssessmentsAnnouncement && <AssessmentsAnnouncementDialog />}
+        {showAiAssessmentsAnnouncement ? (
+          <AssessmentsAnnouncementDialog />
+        ) : (
+          <div id="uitest-no-ai-assessments-announcement" />
+        )}
       </div>
     );
   }
