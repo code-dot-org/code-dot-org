@@ -50,7 +50,7 @@
   ]
 
 .carousel-wrapper
-  %swiper-container.three-col{navigation: "true", "navigation-next-el": ".swiper-nav-next", "navigation-prev-el": ".swiper-nav-prev", init: "false"}
+  %swiper-container.swiper-widgets{navigation: "true", "navigation-next-el": ".nav-next-widgets", "navigation-prev-el": ".nav-prev-widgets", init: "false", pagination: "true"}
     - block_items.each do |block_item|
       %swiper-slide
         .action-block.action-block--one-col.flex-space-between
@@ -76,7 +76,6 @@
             %a.link-button{href: block_item[:url], aria:{label: block_item[:aria_label]}}
               = block_item[:button_label]
 
-  %button.swiper-nav-prev
-  %button.swiper-nav-next
+  %button.swiper-nav-prev.nav-prev-widgets
+  %button.swiper-nav-next.nav-next-widgets
 
-= view :swiper
