@@ -15,7 +15,6 @@ module I18n
             public/csforgood.md
             public/curriculum/unplugged.md.partial
             public/educate/it.md
-            public/helloworld.md.partial
           ].freeze
 
           def process
