@@ -44,7 +44,7 @@ class LtiV1Controller < ApplicationController
     # from the LTI Platform, and can use it to query for these values in the
     # authenticate controller action.
     begin
-      write_cache(state_and_nonce[:state], state_and_nonce)
+      write_cache(state_and_nonce[:state], state_and_nonce, 15.minutes)
     rescue => exception
       Honeybadger.notify(exception, context: {message: 'Error writing state and nonce to cache'})
       return render status: :internal_server_error
@@ -85,11 +85,14 @@ class LtiV1Controller < ApplicationController
     # 'integration' can come back as a hash from the cache or as a class instance returned by ActiveRecord. In the case of the former, we are
     # unable to access values using dot notation and instead must use brackets. This still works with the value returned by Active Record,
     # as it has a '[]' method that behaves in the same way https://api.rubyonrails.org/classes/ActiveRecord/AttributeMethods.html#method-i-5B-5D
-    integration = read_cache(integration_cache_key) || LtiIntegration.find_by({client_id: extracted_client_id, issuer: extracted_issuer_id})
+    integration = read_cache(integration_cache_key)
+    unless integration
+      integration = LtiIntegration.find_by({client_id: extracted_client_id, issuer: extracted_issuer_id})
+      # Cache integration for fast retrieval on subsequent LTI launches. Set
+      # expires_in to 1 week
+      write_cache(integration_cache_key, integration, 1.week)
+    end
     return log_unauthorized('LTI integration not found', {client_id: extracted_client_id, issuer: extracted_issuer_id}) unless integration
-    # Cache integration for fast retrieval on subsequent LTI launches. Set
-    # expires_in to 1 week
-    write_cache(integration_cache_key, integration, 1.week)
 
     # check state and nonce in response and id_token against cached values
     begin
