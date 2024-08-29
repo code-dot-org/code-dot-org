@@ -55,14 +55,12 @@ module Cdo
     # rather than the length, at a small performance cost.
     private def new_database_migration_since_initialization?
       return nil unless defined?(@@latest_count_of_database_migrations)
-      current_migrations_count =
-        ApplicationRecord.connection.migration_context.get_all_versions.length
+      current_migrations_count = ActiveRecord::SchemaMigration.all.count
       return current_migrations_count != @@latest_count_of_database_migrations
     end
 
     private def count_and_remember_database_migrations
-      @@latest_count_of_database_migrations =
-        ApplicationRecord.connection.migration_context.get_all_versions.length
+      @@latest_count_of_database_migrations = ActiveRecord::SchemaMigration.all.count
     end
   end
 end
