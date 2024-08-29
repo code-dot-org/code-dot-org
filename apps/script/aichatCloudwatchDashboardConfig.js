@@ -1,12 +1,22 @@
-const modelNames = ['gen-ai-mistral-7b-inst-v01', 'gen-ai-biomistral-7b'];
+const modelNames = [
+  'gen-ai-mistral-7b-inst-v01',
+  'gen-ai-arithmo2-mistral-7b',
+  'gen-ai-biomistral-7b',
+  'gen-ai-karen-creative-mistral-7b',
+  'gen-ai-mistral-pirate-7b',
+];
 
 const getModelSpecificConfig = modelName => `
 [
       {
-        "height": 9,
-        "width": 8,
-        "y": 12,
-        "x": 0,
+        "width": 24,
+        "height": 1,
+        "type": "text",
+        "properties": {
+          "markdown": "## **${modelName}**"
+        }
+      },
+      {
         "type": "metric",
         "properties": {
           "view": "timeSeries",
@@ -36,10 +46,6 @@ const getModelSpecificConfig = modelName => `
         }
       },
       {
-        "height": 9,
-        "width": 8,
-        "y": 12,
-        "x": 8,
         "type": "metric",
         "properties": {
           "view": "timeSeries",
@@ -80,10 +86,6 @@ const getModelSpecificConfig = modelName => `
         }
       },
       {
-        "height": 9,
-        "width": 8,
-        "y": 12,
-        "x": 16,
         "type": "metric",
         "properties": {
           "view": "timeSeries",
@@ -125,10 +127,6 @@ const getModelSpecificConfig = modelName => `
         }
       },
       {
-        "height": 9,
-        "width": 8,
-        "y": 3,
-        "x": 0,
         "type": "metric",
         "properties": {
           "metrics": [
@@ -166,10 +164,6 @@ const getModelSpecificConfig = modelName => `
         }
       },
       {
-        "height": 9,
-        "width": 6,
-        "y": 3,
-        "x": 8,
         "type": "metric",
         "properties": {
           "view": "timeSeries",
@@ -203,10 +197,6 @@ const getModelSpecificConfig = modelName => `
         }
       },
       {
-        "height": 9,
-        "width": 8,
-        "y": 3,
-        "x": 16,
         "type": "metric",
         "properties": {
           "view": "timeSeries",
@@ -248,21 +238,7 @@ const getModelSpecificConfig = modelName => `
         }
       },
       {
-        "height": 1,
-        "width": 24,
-        "y": 2,
-        "x": 0,
-        "type": "text",
-        "properties": {
-          "markdown": "## **${modelName}**"
-        }
-      },
-      {
         "type": "metric",
-        "x": 14,
-        "y": 3,
-        "width": 2,
-        "height": 9,
         "properties": {
           "view": "singleValue",
           "stacked": false,
@@ -298,5 +274,5 @@ const jsonObject = {
     .map(modelName => JSON.parse(getModelSpecificConfig(modelName)))
     .flat(),
 };
-console.log(jsonObject);
+
 module.exports = jsonObject;

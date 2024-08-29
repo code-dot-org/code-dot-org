@@ -3,7 +3,7 @@ const {
   PutDashboardCommand,
 } = require('@aws-sdk/client-cloudwatch');
 
-const dashboardConfig = require('./singleAichatModelDashboardConfig.js');
+const dashboardConfig = require('./aichatCloudwatchDashboardConfig.js');
 
 const putDashboard = async () => {
   const client = new CloudWatchClient({region: 'us-east-1'});
