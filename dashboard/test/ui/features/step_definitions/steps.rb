@@ -287,16 +287,18 @@ end
 
 When /^I wait until (?:element )?"([.#])([^"]*)" is (not )?enabled$/ do |selector_symbol, name, negation|
   selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
-  wait_until do
-    element = @browser.find_element(selection_criteria)
-    element.enabled? == negation.nil?
-  end
+  wait_for_element(selection_criteria, negation.nil?)
 end
 
-When /^I wait testchange until element "([^"]*)" is enabled$/ do |selection_criteria|
+When /^I wait until element with css selector "([^"]*)" is (not )?enabled$/ do |css_selector, negation|
+  selection_criteria = {css: css_selector}
+  wait_for_element(selection_criteria, negation.nil?)
+end
+
+def wait_for_element(selection_criteria, enabled)
   wait_until do
-    element = @browser.find_element(css: selection_criteria)
-    element.enabled?
+    element = @browser.find_element(selection_criteria)
+    element.enabled? == enabled
   end
 end
 
