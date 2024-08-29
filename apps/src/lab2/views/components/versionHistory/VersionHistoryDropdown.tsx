@@ -88,11 +88,12 @@ const VersionHistoryDropdown: React.FunctionComponent<
           } else {
             setLoadError(true);
           }
-          setLoading(false);
           closeDropdown();
         })
         .catch(() => {
           setLoadError(true);
+        })
+        .finally(() => {
           setLoading(false);
         });
     }
