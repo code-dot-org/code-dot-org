@@ -2629,6 +2629,22 @@
     labs:
       heading: "Build your way with labs"
       desc: "Discover programming environments designed to meet you at your level and elevate your skills."
+      musiclab:
+        overline: "Ages 10+"
+        title: "Music Lab"
+        what_you_can_make: "Create your own mix and beats with code!"
+        experience: "Beginner"
+        call_to_action_learn_more: "Learn more"
+        aria_label_learn_more: "Learn more about Music Lab"
+        call_to_action_try: "Try Music Lab"
+      weblab:
+        overline: "Ages 13+"
+        title: "Web Lab"
+        what_you_can_make: "Simple webpages with HTML and CSS"
+        experience: "Beginner"
+        call_to_action_learn_more: "Learn more"
+        aria_label_learn_more: "Learn more about Web Lab"
+        call_to_action_try: "Try Web Lab"
     tools_el:
       heading: "Empower learning with standalone tools"
       desc: "Leverage our labs to create dynamic learning experiences that resonate with each student. These tools not only teach coding but also build confidence and spark curiosity through hands-on practice."
@@ -11621,22 +11637,6 @@
       call_to_action_learn_more: "Learn more"
       aria_label_learn_more: "Learn more about App Lab"
       call_to_action_try: "Try App Lab"
-    musiclab:
-      overline: "Ages 10+"
-      title: "Music Lab"
-      what_you_can_make: "Create your own mix and beats with code!"
-      experience: "Beginner"
-      call_to_action_learn_more: "Learn more"
-      aria_label_learn_more: "Learn more about Music Lab"
-      call_to_action_try: "Try Music Lab"
-    weblab:
-      overline: "Ages 13+"
-      title: "Web Lab"
-      what_you_can_make: "Simple webpages with HTML and CSS"
-      experience: "Beginner"
-      call_to_action_learn_more: "Learn more"
-      aria_label_learn_more: "Learn more about Web Lab"
-      call_to_action_try: "Try Web Lab"
 
   resources_tabs:
     progress:
