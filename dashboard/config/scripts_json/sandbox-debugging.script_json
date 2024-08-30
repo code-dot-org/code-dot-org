@@ -8,7 +8,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-21 19:08:19 UTC",
+    "serialized_at": "2024-08-29 22:02:54 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -461,6 +461,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "active debugging"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -478,10 +481,34 @@
     },
     {
       "chapter": 4,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "1PLOPD-K5-PLVid_2023_K5CSConceptsVideo"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging",
+        "activity_section.key": "19d26778-f470-4a7e-ba8c-4148d404c22b"
+      },
+      "level_keys": [
+        "1PLOPD-K5-PLVid_2023_K5CSConceptsVideo"
+      ]
+    },
+    {
+      "chapter": 5,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "reflective debugging"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -498,11 +525,35 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 6,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "reflective debugging codealong"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging",
+        "activity_section.key": "7f57bf0a-14b6-4b05-9a9c-a150945ae895"
+      },
+      "level_keys": [
+        "reflective debugging codealong"
+      ]
+    },
+    {
+      "chapter": 7,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Bug Talks"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -519,11 +570,35 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 8,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "bug talks code along"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging",
+        "activity_section.key": "e1711bed-33df-4dea-aa90-eeea0247697c"
+      },
+      "level_keys": [
+        "bug talks code along"
+      ]
+    },
+    {
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Trace Code Execution"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -540,11 +615,35 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 10,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Trace code execution code along"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging",
+        "activity_section.key": "946a50c6-c367-455a-9c1a-5082974833b9"
+      },
+      "level_keys": [
+        "Trace code execution code along"
+      ]
+    },
+    {
+      "chapter": 11,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Hypothesize and Test"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -561,11 +660,35 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 12,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Hypothesize and Test Code Along Video"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging",
+        "activity_section.key": "3450687e-8f0b-4e2d-8e4a-bdf039cd49cb"
+      },
+      "level_keys": [
+        "Hypothesize and Test Code Along Video"
+      ]
+    },
+    {
+      "chapter": 13,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Reproducing Bugs?"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -582,11 +705,35 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 14,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Reproducing Bugs Code Along Video"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging",
+        "activity_section.key": "a2b91ce3-c1cb-4a0d-9d3e-728c479a0d7f"
+      },
+      "level_keys": [
+        "Reproducing Bugs Code Along Video"
+      ]
+    },
+    {
+      "chapter": 15,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Debugging by Comparison"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -603,11 +750,35 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 16,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Debugging by Comparison Code Along Video"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging",
+        "activity_section.key": "55b197dd-d57e-45ba-9df3-274606e64656"
+      },
+      "level_keys": [
+        "Debugging by Comparison Code Along Video"
+      ]
+    },
+    {
+      "chapter": 17,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Using External Resources"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -624,11 +795,35 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 18,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Use External Resources Code Along Video"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging",
+        "activity_section.key": "eeeb9af4-ed12-4da7-be09-bd3cb4000f9b"
+      },
+      "level_keys": [
+        "Use External Resources Code Along Video"
+      ]
+    },
+    {
+      "chapter": 19,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "Choose appropriate techniques"
+        ]
       },
       "bonus": false,
       "seeding_key": {
@@ -642,6 +837,27 @@
       },
       "level_keys": [
         "Choose appropriate techniques"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Choose Appropriate Techniques Code Along Video"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging",
+        "activity_section.key": "ab7c4365-32fb-4cee-b988-39601dedf92e"
+      },
+      "level_keys": [
+        "Choose Appropriate Techniques Code Along Video"
       ]
     }
   ],
@@ -684,9 +900,33 @@
     },
     {
       "seeding_key": {
+        "level.key": "1PLOPD-K5-PLVid_2023_K5CSConceptsVideo",
+        "script_level.level_keys": [
+          "1PLOPD-K5-PLVid_2023_K5CSConceptsVideo"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging",
+        "activity_section.key": "19d26778-f470-4a7e-ba8c-4148d404c22b"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "reflective debugging",
         "script_level.level_keys": [
           "reflective debugging"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging",
+        "activity_section.key": "7f57bf0a-14b6-4b05-9a9c-a150945ae895"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "reflective debugging codealong",
+        "script_level.level_keys": [
+          "reflective debugging codealong"
         ],
         "lesson.key": "lesson-3",
         "lesson_group.key": "",
@@ -708,9 +948,33 @@
     },
     {
       "seeding_key": {
+        "level.key": "bug talks code along",
+        "script_level.level_keys": [
+          "bug talks code along"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging",
+        "activity_section.key": "e1711bed-33df-4dea-aa90-eeea0247697c"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "Trace Code Execution",
         "script_level.level_keys": [
           "Trace Code Execution"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging",
+        "activity_section.key": "946a50c6-c367-455a-9c1a-5082974833b9"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Trace code execution code along",
+        "script_level.level_keys": [
+          "Trace code execution code along"
         ],
         "lesson.key": "lesson-5",
         "lesson_group.key": "",
@@ -732,9 +996,33 @@
     },
     {
       "seeding_key": {
+        "level.key": "Hypothesize and Test Code Along Video",
+        "script_level.level_keys": [
+          "Hypothesize and Test Code Along Video"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging",
+        "activity_section.key": "3450687e-8f0b-4e2d-8e4a-bdf039cd49cb"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "Reproducing Bugs?",
         "script_level.level_keys": [
           "Reproducing Bugs?"
+        ],
+        "lesson.key": "lesson-7",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging",
+        "activity_section.key": "a2b91ce3-c1cb-4a0d-9d3e-728c479a0d7f"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Reproducing Bugs Code Along Video",
+        "script_level.level_keys": [
+          "Reproducing Bugs Code Along Video"
         ],
         "lesson.key": "lesson-7",
         "lesson_group.key": "",
@@ -756,6 +1044,18 @@
     },
     {
       "seeding_key": {
+        "level.key": "Debugging by Comparison Code Along Video",
+        "script_level.level_keys": [
+          "Debugging by Comparison Code Along Video"
+        ],
+        "lesson.key": "lesson-8",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging",
+        "activity_section.key": "55b197dd-d57e-45ba-9df3-274606e64656"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "Using External Resources",
         "script_level.level_keys": [
           "Using External Resources"
@@ -768,9 +1068,33 @@
     },
     {
       "seeding_key": {
+        "level.key": "Use External Resources Code Along Video",
+        "script_level.level_keys": [
+          "Use External Resources Code Along Video"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging",
+        "activity_section.key": "eeeb9af4-ed12-4da7-be09-bd3cb4000f9b"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "Choose appropriate techniques",
         "script_level.level_keys": [
           "Choose appropriate techniques"
+        ],
+        "lesson.key": "lesson-10",
+        "lesson_group.key": "",
+        "script.name": "sandbox-debugging",
+        "activity_section.key": "ab7c4365-32fb-4cee-b988-39601dedf92e"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Choose Appropriate Techniques Code Along Video",
+        "script_level.level_keys": [
+          "Choose Appropriate Techniques Code Along Video"
         ],
         "lesson.key": "lesson-10",
         "lesson_group.key": "",

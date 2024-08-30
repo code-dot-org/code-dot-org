@@ -140,3 +140,11 @@
   margin: 20px;
   float: left;
 }
+
+.hideWaitingForResponse {
+  display: none;
+}
+
+.waitingForResponse {
+  width: 50px;
+}

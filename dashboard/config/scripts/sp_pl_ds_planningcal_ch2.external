@@ -1,0 +1,20 @@
+name 'sp-pl-DS-planningCal-Ch2'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Ethical Data Collection 
+
+#### **Chapter 2: Python and Pandas** is made up of 12 lessons including a final assessment. Take some time to consider how and when you will teach these lessons. 
+
+#### Take a look at the calendar tool on the  <a href="url" target="blank" rel="noopener noreferrer">overview page</a>.
+
+#### Use the drop down menu to adjust to your instructional minutes per week.
+***This is the chapter 1 calendar and will need to be changed****
+
+![](https://images.code.org/041cacc0474c1ac41517f13736512be3-image-1724435109003.png)
+
+
+#### Take some time to adjust the calendar and plan when you will teach each lesson. 
+
+MARKDOWN

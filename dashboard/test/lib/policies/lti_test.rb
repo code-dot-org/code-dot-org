@@ -150,9 +150,9 @@ class Policies::LtiTest < ActiveSupport::TestCase
     end
   end
 
-  test 'force_iframe_launch? should return true for Schoology and false for other LMS platforms' do
+  test 'force_iframe_launch? should return true for Schoology and Canvas' do
     assert Policies::Lti.force_iframe_launch?('https://schoology.schoology.com')
-    refute Policies::Lti.force_iframe_launch?('https://canvas.instructure.com')
+    assert Policies::Lti.force_iframe_launch?('https://canvas.instructure.com')
   end
 
   class FeedbackAvailabilityTest < ActiveSupport::TestCase
