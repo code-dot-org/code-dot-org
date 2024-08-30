@@ -26,3 +26,21 @@
   z-index: 2000;
   width: 600px;
 }
+
+.disabledInfoIcon {
+  padding: 8px;
+  color: $white;
+  cursor: 'pointer'
+}
+
+.consoleHeader {
+  height: 40px;
+}
+
+.controlButton {
+  margin: 4px 8px;
+}
+
+.controlButtons {
+  display: flex;
+}
