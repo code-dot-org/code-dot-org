@@ -237,6 +237,9 @@ const EVENTS = {
   TA_RUBRIC_TOUR_COMPLETE: 'User viewed all of TA Rubric product tour',
   TA_RUBRIC_EVIDENCE_TOOLTIP_HOVERED: 'TA Rubric Evidence Tooltip Hovered',
   TA_RUBRIC_EVIDENCE_GOTO_CLICKED: 'TA Rubric Evidence Line Number Clicked',
+  TA_RUBRIC_ANNOUNCEMENT_VIEWED: 'TA Rubric Announcement Viewed',
+  TA_RUBRIC_ANNOUNCEMENT_CLICKED: 'TA Rubric Announcement Clicked',
+  TA_RUBRIC_ANNOUNCEMENT_DISMISSED: 'TA Rubric Announcement Dismissed',
 
   // AI Tutor
   AI_TUTOR_PANEL_OPENED: 'AI Tutor Panel Opened',

@@ -1,11 +1,9 @@
-// import PropTypes from 'prop-types';
-import React from 'react';
-// import {connect} from 'react-redux';
+import React, {useEffect} from 'react';
 
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import {Heading2, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
-// import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-// import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import HttpClient from '@cdo/apps/util/HttpClient';
 import {navigateToHref} from '@cdo/apps/utils';
@@ -17,6 +15,12 @@ import styles from './rubrics.module.scss';
 
 export default function AssessmentsAnnouncementDialog() {
   const [dialogOpen, setDialogOpen] = React.useState(true);
+
+  useEffect(() => {
+    if (dialogOpen) {
+      analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_ANNOUNCEMENT_VIEWED);
+    }
+  });
 
   if (!dialogOpen) {
     return null;
@@ -32,6 +36,7 @@ export default function AssessmentsAnnouncementDialog() {
   const handleClose = () => {
     // dialog should close immediately, before post request completes
     setDialogOpen(false);
+    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_ANNOUNCEMENT_DISMISSED);
     postAnnouncementSeen();
   };
   const handleDismiss = handleClose;
@@ -39,6 +44,7 @@ export default function AssessmentsAnnouncementDialog() {
   const handleButtonClick = () => {
     // wait for the post request to complete before navigating, otherwise the
     // post request may be cancelled when navigation occurs.
+    analyticsReporter.sendEvent(EVENTS.TA_RUBRIC_ANNOUNCEMENT_CLICKED);
     postAnnouncementSeen().then(() => {
       navigateToHref('https://code.org/ai/teaching-assistant');
     });
