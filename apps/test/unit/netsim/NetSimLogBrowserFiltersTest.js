@@ -2,14 +2,14 @@
 import {shallow, mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import _ from 'lodash';
 import React from 'react';
-import {spy} from 'sinon';
+import {spy} from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import NetSimLogBrowserFilters, {
   SentByDropdown,
 } from '@cdo/apps/netsim/NetSimLogBrowserFilters';
 import i18n from '@cdo/netsim/locale';
 
-import {expect} from '../../util/deprecatedChai';
+import {expect} from '../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 describe('NetSimLogBrowserFilters', function () {
   describe('Student View', function () {

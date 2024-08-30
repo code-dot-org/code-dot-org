@@ -193,26 +193,6 @@ def campaign_date(format)
   return I18n.t(id, locale: language)
 end
 
-def company_count
-  return fetch_hoc_metrics['hoc_company_totals'][@company]
-end
-
-# We get counts for the individual countries in Latin America,
-#  so let's sum those up to get the total for all of Latam
-def latam_count(totals)
-  latam_totals = totals.slice(*LATAM_COUNTRY_CODES)
-  return latam_totals.inject(0) {|sum, tuple| sum + tuple[1]}
-end
-
-def country_count
-  code = HOC_COUNTRIES[@country]['country_code'] || @country
-  totals = fetch_hoc_metrics['hoc_country_totals']
-
-  # If the country is Latam, return the sum of all events in Latam.
-  #  Otherwise return the total for the given country.
-  return @country == 'la' ? latam_count(totals) : totals[code.upcase]
-end
-
 def country_full_name
   return HOC_COUNTRIES[@country]['full_name']
 end

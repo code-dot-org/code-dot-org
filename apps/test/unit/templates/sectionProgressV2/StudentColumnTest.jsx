@@ -2,7 +2,6 @@ import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import DCDO from '@cdo/apps/dcdo';
 import {
   getStore,
   registerReducers,
@@ -12,8 +11,6 @@ import {
 import currentUser from '@cdo/apps/templates/currentUserRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
 import StudentColumn from '@cdo/apps/templates/sectionProgressV2/StudentColumn.jsx';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 const studentA = {
   name: 'Sherlock',
@@ -45,8 +42,6 @@ describe('StudentColumn', () => {
     });
 
     store = getStore();
-
-    DCDO.set('progress-v2-metadata-enabled', false);
   });
 
   afterEach(() => {
@@ -68,7 +63,7 @@ describe('StudentColumn', () => {
 
   it('shows no students if empty', () => {
     renderDefault();
-    expect(screen.queryByText('Holmes')).to.be.null;
+    expect(screen.queryByText('Holmes')).toBeNull();
   });
 
   it('shows all students', () => {
@@ -91,19 +86,17 @@ describe('StudentColumn', () => {
     screen.getByText('Moriarty');
   });
 
-  it('shows expansion if DCDO flag is enabled', () => {
-    DCDO.set('progress-v2-metadata-enabled', true);
-
+  it('shows expansion', () => {
     renderDefault({
       sortedStudents: [studentA, studentB],
     });
     let holmes = screen.getByText('Sherlock Holmes');
-    expect(holmes.getAttribute('aria-expanded')).to.equal('false');
+    expect(holmes.getAttribute('aria-expanded')).toBe('false');
 
     fireEvent.click(holmes);
 
     holmes = screen.getByText('Sherlock Holmes');
-    expect(holmes.getAttribute('aria-expanded')).to.equal('true');
+    expect(holmes.getAttribute('aria-expanded')).toBe('true');
 
     screen.getByText('Time Spent (mins)');
     screen.getByText('Last Updated');

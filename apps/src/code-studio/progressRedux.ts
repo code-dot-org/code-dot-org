@@ -26,10 +26,10 @@ import {
   LevelResults,
   ViewType,
   PeerReviewLevelInfo,
-  LevelWithProgress,
 } from '@cdo/apps/types/progressTypes';
 import {RootState} from '@cdo/apps/types/redux';
 
+import notifyLevelChange from '../lab2/utils/notifyLevelChange';
 import {getBubbleUrl} from '../templates/progress/BubbleFactory';
 import {AppDispatch} from '../util/reduxHooks';
 import {navigateToHref} from '../utils';
@@ -42,7 +42,6 @@ import {
 import {authorizeLockable} from './lessonLockRedux';
 import {
   getCurrentLevel,
-  getCurrentLevels,
   getCurrentScriptLevelId,
   levelById,
   nextLevelId,
@@ -57,7 +56,7 @@ export interface ProgressState {
   lessons: Lesson[] | null;
   lessonGroups: LessonGroup[] | null;
   scriptId: number | null;
-  viewAsUserId: string | null;
+  viewAsUserId: number | null;
   scriptName: string | null;
   scriptDisplayName: string | undefined;
   unitTitle: string | null;
@@ -282,7 +281,7 @@ const progressSlice = createSlice({
     setLessonExtrasEnabled(state, action: PayloadAction<boolean>) {
       state.lessonExtrasEnabled = action.payload;
     },
-    setViewAsUserId(state, action: PayloadAction<string>) {
+    setViewAsUserId(state, action: PayloadAction<number>) {
       state.viewAsUserId = action.payload;
     },
   },
@@ -325,39 +324,12 @@ export function navigateToLevelId(levelId: string): ProgressThunkAction {
 
     if (canChangeLevelInPage(currentLevel, newLevel)) {
       updateBrowserForLevelNavigation(state, newLevel.path, levelId);
+      // Notify the Lab2 system that the level is changing.
+      notifyLevelChange(currentLevel.id, levelId);
       dispatch(setCurrentLevelId(levelId));
     } else {
       const url = getBubbleUrl(newLevel.path, undefined, undefined, true);
       navigateToHref(url);
-    }
-  };
-}
-
-// Updates the current level ID in the store when the level
-// (and possibly sublevel) index changes.
-// Typically happens when the user presses the browser back/forward button
-// in a level progression that doesn't require page reloads.
-export function onLevelIndexChange(
-  levelIndex: number,
-  sublevelIndex?: number
-): ProgressThunkAction {
-  return (dispatch, getState) => {
-    const levels: LevelWithProgress[] = getCurrentLevels(getState());
-    if (!levels || levels.length === 0) {
-      return;
-    }
-
-    const level = levels[levelIndex];
-    if (
-      sublevelIndex !== undefined &&
-      level.sublevels &&
-      sublevelIndex < level.sublevels.length
-    ) {
-      const newLevelId = level.sublevels[sublevelIndex].id;
-      dispatch(setCurrentLevelId(newLevelId));
-    } else {
-      const newLevelId = level.id;
-      dispatch(setCurrentLevelId(newLevelId));
     }
   };
 }

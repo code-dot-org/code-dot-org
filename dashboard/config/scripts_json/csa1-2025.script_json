@@ -16,7 +16,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-04-08 00:03:55 UTC",
+    "serialized_at": "2024-08-30 05:51:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -8947,6 +8947,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2_Casting-and-range-of-variables-L1"
+        ],
         "progression": "Predict and Run: Overflow Errors"
       },
       "bonus": false,
@@ -8969,6 +8972,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2_Casting-and-range-of-variables-L2"
+        ],
         "progression": "Investigate and Modify: Roundoff Errors"
       },
       "bonus": false,
@@ -8991,6 +8997,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2_Casting-and-range-of-variables-L3"
+        ],
         "progression": "Investigate and Modify: Roundoff Errors"
       },
       "bonus": false,
@@ -9013,6 +9022,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2_Casting-and-range-of-variables-L4"
+        ],
         "progression": "Practice: Handling Overflow"
       },
       "bonus": false,
@@ -9035,6 +9047,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA U2_Casting-and-range-of-variables-L5-parent"
+        ],
         "progression": "Practice: Handling Overflow"
       },
       "bonus": false,

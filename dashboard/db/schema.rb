@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_07_02_214406) do
+ActiveRecord::Schema.define(version: 2024_08_07_174943) do
 
   create_table "activities", id: :integer, charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -68,6 +68,31 @@ ActiveRecord::Schema.define(version: 2024_07_02_214406) do
     t.index ["script_id"], name: "index_ai_tutor_interactions_on_script_id"
     t.index ["user_id", "level_id", "script_id"], name: "index_ati_user_level_script"
     t.index ["user_id"], name: "index_ai_tutor_interactions_on_user_id"
+  end
+
+  create_table "aichat_events", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "level_id"
+    t.integer "script_id"
+    t.integer "project_id"
+    t.json "aichat_event"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id", "level_id", "script_id"], name: "index_ace_user_level_script"
+  end
+
+  create_table "aichat_requests", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "level_id"
+    t.integer "script_id"
+    t.integer "project_id"
+    t.json "model_customizations", null: false
+    t.json "stored_messages", null: false
+    t.json "new_message", null: false
+    t.integer "execution_status", null: false
+    t.text "response"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "aichat_sessions", charset: "utf8mb4", collation: "utf8mb4_bin", force: :cascade do |t|
@@ -1670,12 +1695,6 @@ ActiveRecord::Schema.define(version: 2024_07_02_214406) do
     t.index ["storage_app_id"], name: "index_project_commits_on_storage_app_id"
   end
 
-  create_table "project_use_datablock_storages", charset: "utf8mb3", collation: "utf8mb3_unicode_ci", force: :cascade do |t|
-    t.integer "project_id", null: false
-    t.boolean "use_datablock_storage", default: false, null: false
-    t.index ["project_id"], name: "index_project_use_datablock_storages_on_project_id"
-  end
-
   create_table "projects", id: :integer, charset: "utf8mb4", collation: "utf8mb4_general_ci", force: :cascade do |t|
     t.integer "storage_id"
     t.text "value", size: :medium
@@ -2393,7 +2412,11 @@ ActiveRecord::Schema.define(version: 2024_07_02_214406) do
     t.boolean "urm"
     t.string "races"
     t.integer "primary_contact_info_id"
+    t.string "unlock_token"
+    t.string "cap_status", limit: 1
+    t.datetime "cap_status_date"
     t.index ["birthday"], name: "index_users_on_birthday"
+    t.index ["cap_status", "cap_status_date"], name: "index_users_on_cap_status_and_cap_status_date"
     t.index ["current_sign_in_at"], name: "index_users_on_current_sign_in_at"
     t.index ["deleted_at"], name: "index_users_on_deleted_at"
     t.index ["email", "deleted_at"], name: "index_users_on_email_and_deleted_at"
@@ -2407,6 +2430,7 @@ ActiveRecord::Schema.define(version: 2024_07_02_214406) do
     t.index ["reset_password_token", "deleted_at"], name: "index_users_on_reset_password_token_and_deleted_at", unique: true
     t.index ["school_info_id"], name: "index_users_on_school_info_id"
     t.index ["studio_person_id"], name: "index_users_on_studio_person_id"
+    t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
     t.index ["username", "deleted_at"], name: "index_users_on_username_and_deleted_at", unique: true
   end
 

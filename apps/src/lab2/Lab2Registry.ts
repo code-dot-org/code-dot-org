@@ -3,10 +3,12 @@
 import LabMetricsReporter from './Lab2MetricsReporter';
 import ProjectManager from './projects/ProjectManager';
 import {AppName} from './types';
+import LifecycleNotifier from './utils/LifecycleNotifier';
 
 export default class Lab2Registry {
   private projectManager: ProjectManager | null;
   private metricsReporter: LabMetricsReporter;
+  private lifecycleNotifier: LifecycleNotifier;
   private appName: AppName | null;
 
   private static _instance: Lab2Registry;
@@ -14,6 +16,7 @@ export default class Lab2Registry {
   constructor() {
     this.projectManager = null;
     this.metricsReporter = new LabMetricsReporter();
+    this.lifecycleNotifier = new LifecycleNotifier();
     this.appName = null;
   }
 
@@ -49,6 +52,10 @@ export default class Lab2Registry {
 
   public getMetricsReporter() {
     return this.metricsReporter;
+  }
+
+  public getLifecycleNotifier() {
+    return this.lifecycleNotifier;
   }
 
   public setAppName(appName: AppName) {

@@ -3,10 +3,10 @@ import classNames from 'classnames';
 import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {useSelector} from 'react-redux';
 
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
-import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import Button from '@cdo/apps/templates/Button';
+import AccessibleDialog from '@cdo/apps/sharedComponents/AccessibleDialog';
 import color from '@cdo/apps/util/color';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import inputLibraryJson from '@cdo/static/dance/ai/ai-inputs.json';
@@ -638,7 +638,10 @@ const DanceAiModal: React.FunctionComponent<DanceAiModalProps> = ({
       className={moduleStyles.dialog}
       onClose={handleOnClose}
       initialFocus={false}
-      styles={{modalBackdrop: moduleStyles.modalBackdrop}}
+      styles={{
+        modalBackdrop: moduleStyles.modalBackdrop,
+        xCloseButton: moduleStyles.xCloseButton,
+      }}
     >
       <DanceAiModalHeader
         onClose={onClose}

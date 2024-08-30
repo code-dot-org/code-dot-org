@@ -5,9 +5,9 @@ import {connect} from 'react-redux';
 
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import Notification from '@cdo/apps/sharedComponents/Notification';
 import DonorTeacherBanner from '@cdo/apps/templates/DonorTeacherBanner';
 import ParticipantFeedbackNotification from '@cdo/apps/templates/feedback/ParticipantFeedbackNotification';
-import Notification from '@cdo/apps/templates/Notification';
 import ProjectWidgetWithData from '@cdo/apps/templates/projects/ProjectWidgetWithData';
 import BorderedCallToAction from '@cdo/apps/templates/studioHomepages/BorderedCallToAction';
 import JoinSectionArea from '@cdo/apps/templates/studioHomepages/JoinSectionArea';
@@ -211,7 +211,6 @@ export const UnconnectedTeacherHomepage = ({
               buttonText={announcement.buttonText}
               buttonLink={announcement.link}
               newWindow={true}
-              googleAnalyticsId={announcement.id}
             />
             <div style={styles.clear} />
           </div>

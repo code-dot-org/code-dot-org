@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CourseEditor from '@cdo/apps/lib/levelbuilder/course-editor/CourseEditor';
+import {Provider} from 'react-redux';
+
+import {getStore} from '@cdo/apps/code-studio/redux';
+import CourseEditor from '@cdo/apps/levelbuilder/course-editor/CourseEditor';
 import createResourcesReducer, {
   initResources,
-} from '@cdo/apps/lib/levelbuilder/lesson-editor/resourcesEditorRedux';
-import {Provider} from 'react-redux';
-import {getStore} from '@cdo/apps/code-studio/redux';
+} from '@cdo/apps/levelbuilder/lesson-editor/resourcesEditorRedux';
 import {registerReducers} from '@cdo/apps/redux';
 
 $(document).ready(showCourseEditor);

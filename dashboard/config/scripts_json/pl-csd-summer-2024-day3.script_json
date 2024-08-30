@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-05-08 20:45:37 UTC",
+    "serialized_at": "2024-07-23 21:29:15 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1546,15 +1546,12 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Sprites intro sprites_CSD-PL-24"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSD U3 Sprites intro sprites_CSD-PL-24"
+          "CSD U3 Sprites test intro sprites CSD-PL-24"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "lessonGroup-2",
@@ -1562,7 +1559,7 @@
         "activity_section.key": "eef07fa5-e016-46cd-a3a5-0d50c606be23"
       },
       "level_keys": [
-        "CSD U3 Sprites intro sprites_CSD-PL-24"
+        "CSD U3 Sprites test intro sprites CSD-PL-24"
       ]
     },
     {
@@ -1571,9 +1568,6 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Sprites anitab 1_CSD-PL-24"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1596,9 +1590,6 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "CSD U3 Sprites sequencing_CSD-PL-24"
-        ],
         "progression": "Skill Building"
       },
       "bonus": false,
@@ -1963,9 +1954,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSD U3 Sprites intro sprites_CSD-PL-24",
+        "level.key": "CSD U3 Sprites test intro sprites CSD-PL-24",
         "script_level.level_keys": [
-          "CSD U3 Sprites intro sprites_CSD-PL-24"
+          "CSD U3 Sprites test intro sprites CSD-PL-24"
         ],
         "lesson.key": "Sprites",
         "lesson_group.key": "lessonGroup-2",
@@ -2108,16 +2099,6 @@
       }
     },
     {
-      "name": "CSD Activity Packet 2024",
-      "url": "https://docs.google.com/document/d/1e6h0_yN0txqYVXmxUEco5ldh0l1K8cU4tukxdnXh3Xo/edit?usp=drive_link",
-      "key": "csd_activity_packet_2024",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_activity_packet_2024"
-      }
-    },
-    {
       "name": "CSD In-Person Summer Workshop Day 3 Agenda",
       "url": "https://docs.google.com/document/d/1u0fq0msjhfNs528pbILMonq9epbB4eeqNwXqm-Sl6p0/edit?usp=drive_link",
       "key": "csd_in-person_summer_workshop_day_3_agenda_1",
@@ -2135,16 +2116,6 @@
       },
       "seeding_key": {
         "resource.key": "csd_in-person_summer_workshop_day_3_slides_1"
-      }
-    },
-    {
-      "name": "CSD Resource Packet 2024",
-      "url": "https://docs.google.com/document/d/17b0KVjqOsr2X3NUyE6gS82SEkXOsAuEE815H_Z6FRGU/edit?usp=drive_link",
-      "key": "csd_resource_packet_2024",
-      "properties": {
-      },
-      "seeding_key": {
-        "resource.key": "csd_resource_packet_2024"
       }
     },
     {
@@ -2373,18 +2344,7 @@
     }
   ],
   "scripts_student_resources": [
-    {
-      "seeding_key": {
-        "resource.key": "csd_activity_packet_2024",
-        "script.name": "pl-csd-summer-2024-day3"
-      }
-    },
-    {
-      "seeding_key": {
-        "resource.key": "csd_resource_packet_2024",
-        "script.name": "pl-csd-summer-2024-day3"
-      }
-    }
+
   ],
   "vocabularies": [
     {

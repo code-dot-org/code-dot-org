@@ -113,6 +113,11 @@ class UserTest < ActiveSupport::TestCase
     assert_equal '21+', teacher.age
   end
 
+  test 'creating teacher sets show_progress_table_v2 to true' do
+    teacher = create :teacher
+    assert teacher.show_progress_table_v2
+  end
+
   # Disable this test if and when we do require teachers to complete school data
   test 'school info should not be validated' do
     school_attributes = {
@@ -4012,7 +4017,7 @@ class UserTest < ActiveSupport::TestCase
         has_ever_signed_in: @student.has_ever_signed_in?,
         ai_tutor_access_denied: !!@student.ai_tutor_access_denied,
         at_risk_age_gated: false,
-        child_account_compliance_state: @student.child_account_compliance_state,
+        child_account_compliance_state: @student.cap_status,
         latest_permission_request_sent_at: latest_permission_request_sent_at,
       },
       @student.summarize
@@ -5426,6 +5431,50 @@ class UserTest < ActiveSupport::TestCase
     student.update!(us_state: 'WA')
     student.reload
     assert_equal student.us_state, 'WA'
+  end
+
+  test "teacher with oauth account can access AI Chat" do
+    teacher = create :teacher, :google_sso_provider
+    assert teacher.teacher_can_access_ai_chat?
+  end
+
+  test "teacher with LTI account can access AI Chat" do
+    teacher = create :teacher, :with_lti_auth
+    assert teacher.teacher_can_access_ai_chat?
+  end
+
+  test "teacher with AUTHORIZED_TEACHER permissions can access AI Chat" do
+    teacher = create :authorized_teacher
+    assert teacher.teacher_can_access_ai_chat?
+  end
+
+  test "teacher with email account cannot access AI Chat" do
+    teacher = create :teacher
+    refute teacher.teacher_can_access_ai_chat?
+  end
+
+  test "student with email account cannot access AI Chat" do
+    student = create :student
+    refute student.student_can_access_ai_chat?
+  end
+
+  test "student with verified teacher and in appropriate section can access AI Chat" do
+    unit_group = create :unit_group, name: 'exploring-gen-ai-2024'
+    teacher = create :authorized_teacher
+    section = create :section, teacher: teacher, unit_group: unit_group
+    student = create :student
+    create :follower, section: section, student_user: student, user: teacher
+
+    assert student.student_can_access_ai_chat?
+  end
+
+  test "student with verified teacher but not in appropriate section cannot access AI Chat" do
+    teacher = create :authorized_teacher
+    section = create :section, teacher: teacher
+    student = create :student
+    create :follower, section: section, student_user: student, user: teacher
+
+    refute student.student_can_access_ai_chat?
   end
 
   describe '#latest_parental_permission_request' do

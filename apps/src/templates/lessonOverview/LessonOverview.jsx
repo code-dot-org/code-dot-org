@@ -5,11 +5,11 @@ import {connect} from 'react-redux';
 import {announcementShape} from '@cdo/apps/code-studio/announcementsRedux';
 import {ViewType} from '@cdo/apps/code-studio/viewAsRedux';
 import {PublishedState} from '@cdo/apps/generated/curriculum/sharedCourseConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import styleConstants from '@cdo/apps/styleConstants';
-import Button from '@cdo/apps/templates/Button';
 import CopyrightInfo from '@cdo/apps/templates/CopyrightInfo';
 import VerifiedResourcesNotification from '@cdo/apps/templates/courseOverview/VerifiedResourcesNotification';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
@@ -29,7 +29,7 @@ import {DefaultLocale} from '@cdo/generated-scripts/sharedConstants';
 import i18n from '@cdo/locale';
 
 import Announcements from '../../code-studio/components/progress/Announcements';
-import FontAwesome from '../FontAwesome';
+import FontAwesome from '../../legacySharedComponents/FontAwesome';
 
 import LessonStandards from './LessonStandards';
 import StyledCodeBlock from './StyledCodeBlock';

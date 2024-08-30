@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-11 17:00:49 UTC",
+    "serialized_at": "2024-08-27 22:04:10 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6605,6 +6605,16 @@
       }
     },
     {
+      "name": "CSP Unit 6 - Slides",
+      "url": "https://docs.google.com/presentation/d/1l_mpNKjAK73OlGNpll-0fWEPnsHaP3YeLffqHKN9oPE/template/preview",
+      "key": "csp_unit_6_-_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_6_-_slides"
+      }
+    },
+    {
       "name": "Customize Make Lessons: How-To-Guide",
       "url": "https://docs.google.com/document/d/1K33HqvpPwb8BYX7mvFD7m2d17RSGD7ASEG4UUA0ajOM/edit?usp=sharing",
       "key": "customize_make_lessons_how-to-guide",
@@ -7164,6 +7174,12 @@
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
+        "script.name": "csp6-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_unit_6_-_slides",
         "script.name": "csp6-2024"
       }
     },

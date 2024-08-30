@@ -3,17 +3,17 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {Heading1, Heading2} from '@cdo/apps/lib/ui/Headings';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import Dialog, {Body} from '@cdo/apps/legacySharedComponents/Dialog';
+import {Heading1, Heading2} from '@cdo/apps/legacySharedComponents/Headings';
 import {getStore} from '@cdo/apps/redux';
-import Button from '@cdo/apps/templates/Button';
-import Dialog, {Body} from '@cdo/apps/templates/Dialog';
 import InlineMarkdown from '@cdo/apps/templates/InlineMarkdown';
 import PadAndCenter from '@cdo/apps/templates/teacherDashboard/PadAndCenter';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {findProfanity} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
 
-import Spinner from '../../pd/components/spinner';
+import Spinner from '../../../sharedComponents/Spinner';
 import {hideLibraryCreationDialog} from '../shareDialogRedux';
 
 import LibraryClientApi from './LibraryClientApi';

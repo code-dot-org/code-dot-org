@@ -10,12 +10,14 @@ import {
   Heading1,
   Heading3,
 } from '@cdo/apps/componentLibrary/typography';
-import InfoHelpTip from '@cdo/apps/lib/ui/InfoHelpTip';
+import Button from '@cdo/apps/legacySharedComponents/Button';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {getStore} from '@cdo/apps/redux';
-import Button from '@cdo/apps/templates/Button';
-import Notification, {NotificationType} from '@cdo/apps/templates/Notification';
+import InfoHelpTip from '@cdo/apps/sharedComponents/InfoHelpTip';
+import Notification, {
+  NotificationType,
+} from '@cdo/apps/sharedComponents/Notification';
 import CoteacherSettings from '@cdo/apps/templates/sectionsRefresh/coteacherSettings/CoteacherSettings';
 import {navigateToHref} from '@cdo/apps/utils';
 import i18n from '@cdo/locale';
@@ -256,6 +258,21 @@ export default function SectionsSetUpContainer({
       });
   };
 
+  const consolidatedCourseData = () => {
+    if (sections[0].courseOfferingId !== null) {
+      return {
+        courseOfferingId: sections[0].courseOfferingId,
+        versionId: sections[0].courseVersionId,
+        unitId: sections[0].unitId,
+        hasLessonExtras: sections[0].lessonExtras,
+        hasTextToSpeech: sections[0].ttsAutoplayEnabled,
+        displayName: sections[0].courseDisplayName,
+      };
+    } else {
+      return null;
+    }
+  };
+
   const onURLClick = () => {
     showVideoDialog(
       {
@@ -413,7 +430,7 @@ export default function SectionsSetUpContainer({
         id="uitest-curriculum-quick-assign"
         isNewSection={isNewSection}
         updateSection={(key, val) => updateSection(0, key, val)}
-        sectionCourse={sections[0].course}
+        sectionCourse={sections[0].course || consolidatedCourseData()}
         initialParticipantType={sections[0].participantType}
       />
 

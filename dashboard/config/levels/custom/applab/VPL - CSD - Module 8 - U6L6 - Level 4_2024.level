@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2024-03-25T22:42:26.000Z",
   "level_num": "custom",
@@ -13,7 +14,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "###### **Note**: This level is the same across the Circuit Playground and micro:bit versions of Getting Screen Inputs. This level does not require you to use a device to complete it.\r\n\r\n* ###### **Circuit Playground Level:** Lesson 9, Level 4\r\n* ###### **micro:bit Level:** Lesson 8, Level 4\r\n\r\n___\r\n\r\n# Dropdowns\r\n\r\nYou can also edit the dropdown list of options from design mode. For example, you could update the color choices to match two opposing sports teams or the school logo colors.\r\n\r\n## Do This\r\n\r\n**In Design Mode:**\r\n1) Select the dropdown element and change the colors in the `options` area.\r\n\t- For example: colors that match what you're wearing today, or colors that match different sports teams\r\n\t- ::: details [**Show Me How**]\r\n<img src=\"https://images.code.org/8c304f0db270614be52af8eef7d62c8c-image-1638223891063.gif\" width=\"500px\" />\r\n:::\r\n\r\nYou do not need to make any changes to your code!\r\n\r\n**Run Your Program!** The background should should change to the colors you set in design mode",
+    "long_instructions": "##### **Note**: This level is the same across the Circuit Playground and micro:bit versions of Getting Screen Inputs. This level does not require you to use a device to complete it.\r\n\r\n* ##### **Circuit Playground Level:** Lesson 9, Level 4\r\n* ##### **micro:bit Level:** Lesson 8, Level 4\r\n\r\n___\r\n\r\n# Dropdowns\r\n\r\n#### You can also edit the dropdown list of options from design mode. For example, you could update the color choices to match two opposing sports teams or the school logo colors.\r\n\r\n## Do This\r\n\r\n#### **In Design Mode:**\r\n1) #### Select the dropdown element and change the colors in the `options` area.\r\n\t- #### For example: colors that match what you're wearing today, or colors that match different sports teams\r\n    - #### You do not need to make any changes to your code!\r\n\t- ::: details [**Show Me How**]\r\n<img src=\"https://images.code.org/8c304f0db270614be52af8eef7d62c8c-image-1638223891063.gif\" width=\"500px\" />\r\n:::\r\n\r\n#### **Run Your Program!** The background should should change to the colors you set in design mode",
     "instructions_important": "false",
     "submittable": "false",
     "start_blocks": "onEvent(\"startButton\", \"click\", function() {\r\n  //Add your code here!\r\n  \r\n});\r\n\r\n",
@@ -65,9 +66,8 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-25T22:42:26.651+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD - Module 8 - U6L6 - Level 4_2023\\\"\"],\"cloned_from\":\"VPL - CSD - Module 8 - U6L6 - Level 4_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-03-25T22:42:26.651+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD - Module 8 - U6L6 - Level 4_2023\\\"\"],\"cloned_from\":\"VPL - CSD - Module 8 - U6L6 - Level 4_2023\"},{\"changed_at\":\"2024-08-29 19:02:24 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

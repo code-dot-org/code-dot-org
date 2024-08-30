@@ -2,13 +2,13 @@ import {mount} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 import {Provider} from 'react-redux';
 import {combineReducers, createStore} from 'redux';
-import sinon from 'sinon';
+import sinon from 'sinon'; // eslint-disable-line no-restricted-imports
 
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import responsive from '@cdo/apps/code-studio/responsiveRedux';
 import Certificate from '@cdo/apps/templates/certificates/Certificate';
 
-import {expect} from '../../../util/reconfiguredChai';
+import {expect} from '../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 const store = createStore(combineReducers({responsive, isRtl}));
 

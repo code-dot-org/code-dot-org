@@ -33,7 +33,7 @@ export default function SchoolDataInputs({
     detectedCountry === US_COUNTRY_CODE
   );
   const [isOutsideUS, setIsOutsideUS] = useState(
-    detectedCountry && detectedCountry !== US_COUNTRY_CODE
+    (detectedCountry || usIp === false) && detectedCountry !== US_COUNTRY_CODE
   );
 
   // Add 'Select a country' and 'United States' to the top of the country list
@@ -72,20 +72,16 @@ export default function SchoolDataInputs({
   return (
     <div className={style.schoolAssociationWrapper}>
       {includeHeaders && (
-        <div>
-          <Heading2 className={style.topPadding}>
-            {i18n.censusHeading()}
-          </Heading2>
+        <div className={style.headerContainer}>
+          <Heading2>{i18n.censusHeading()}</Heading2>
           <BodyTwoText>{i18n.schoolInfoInterstitialTitle()}</BodyTwoText>
         </div>
       )}
       <div className={style.inputContainer}>
-        <BodyTwoText className={style.padding} visualAppearance={'heading-xs'}>
-          {i18n.whatCountry()}
-        </BodyTwoText>
         <SimpleDropdown
           id="uitest-country-dropdown"
           name={fieldNames.country}
+          labelText={i18n.whatCountry()}
           items={COUNTRY_ITEMS}
           selectedValue={country}
           onChange={onCountryChange}

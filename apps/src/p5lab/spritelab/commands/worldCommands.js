@@ -1,10 +1,11 @@
+import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
 import {getStore} from '@cdo/apps/redux';
-import {addConsoleMessage} from '../../redux/textConsole';
+
 import {
   addTextPrompt,
   addMultipleChoicePrompt,
 } from '../../redux/spritelabInput';
-import {commands as audioCommands} from '@cdo/apps/lib/util/audioApi';
+import {addConsoleMessage} from '../../redux/textConsole';
 import {MAX_NUM_TEXTS} from '../constants';
 
 export const commands = {

@@ -13,7 +13,7 @@ import {
   ActiveCourses,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
 
-import {expect} from '../../../../../util/reconfiguredChai';
+import {expect} from '../../../../../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 describe('CourseSelect', () => {
   it('only renders blank if course is empty', () => {

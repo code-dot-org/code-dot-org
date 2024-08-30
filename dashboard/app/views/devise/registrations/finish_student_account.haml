@@ -1,0 +1,5 @@
+= render 'devise/registrations/new_sign_up_locale'
+
+%script{src: webpack_asset_path('js/devise/registrations/finish_student_account.js'), data: {ageOptions: @age_options.to_json, usStateOptions: @us_state_options.to_json}}
+
+#finish-student-account-root

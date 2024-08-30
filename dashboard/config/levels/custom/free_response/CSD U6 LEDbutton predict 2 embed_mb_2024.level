@@ -13,7 +13,6 @@
     "skip_sound": true,
     "long_instructions": "# Scrolling Block\r\n\r\nLook at the code with a partner and discuss what you think it will do. Once you have answered the question click \"Run\" to see the program's result. Make sure your micro:bit is plugged in.",
     "parent_level_id": 20397,
-    "name_suffix": "_mb_2024",
     "encrypted": "false",
     "optional": "false",
     "allow_multiple_attempts": "false"

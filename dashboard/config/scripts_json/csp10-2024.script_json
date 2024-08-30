@@ -19,7 +19,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-11 16:56:41 UTC",
+    "serialized_at": "2024-08-27 22:26:27 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -34,7 +34,7 @@
       "user_facing": true,
       "position": 1,
       "properties": {
-        "display_name": "Unit 10: Algortihms"
+        "display_name": "Unit 10: Algorithms"
       },
       "seeding_key": {
         "lesson_group.key": "csp_unit10_2020",
@@ -2658,6 +2658,16 @@
       }
     },
     {
+      "name": "CSP Unit 10 - Slides",
+      "url": "https://docs.google.com/presentation/d/1R9n57GGvVd8HAbHqU77N86FDGBUaMjkmYyY11vPL6tg/template/preview",
+      "key": "csp_unit_10_-_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "csp_unit_10_-_slides"
+      }
+    },
+    {
       "name": "Folding@home Supercomputing Project",
       "url": "https://youtu.be/RGGzMQ2oFrA",
       "key": "folding_home_supercomputing_project",
@@ -2881,6 +2891,12 @@
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
+        "script.name": "csp10-2024"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_unit_10_-_slides",
         "script.name": "csp10-2024"
       }
     },

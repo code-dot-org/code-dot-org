@@ -41,8 +41,7 @@
           = link_to t('cancel'), users_cancel_path
 
     = f.hidden_field :locale, value: locale
-    - if DCDO.get('student-email-post-enabled', false)
-      = f.hidden_field :email, value: @user.email
+    = f.hidden_field :email, value: @user.email
     - if @user.errors.any?
       .row
         .span8

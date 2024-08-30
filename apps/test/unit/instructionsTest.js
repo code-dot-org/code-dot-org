@@ -6,7 +6,7 @@ import instructions, {
   determineInstructionsConstants,
 } from '@cdo/apps/redux/instructions';
 
-import {assert} from '../util/reconfiguredChai';
+import {assert} from '../util/reconfiguredChai'; // eslint-disable-line no-restricted-imports
 
 var testUtils = require('./../util/testUtils');
 

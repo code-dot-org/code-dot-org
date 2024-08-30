@@ -69,7 +69,6 @@
     "makerlab_enabled": "microbit",
     "long_instructions": "<!--\r\n<div markdown=\"1\" style=\"float: right; margin: 20px;\">\r\n\r\n![expandable](https://images.code.org/72422d06e261209c083b9437fcbc873d-image-1650059388879.gif)\r\n\r\n<br/>\r\n\r\nClick to expand\r\n\r\n</div>\r\n-->\r\n\r\n# Random Movement\r\n\r\nCreate an app that randomizes the location of the smiley face on the screen:\r\n- Pressing the A button moves the smiley face to a new random `x` coordinate\r\n- Pressing the B button moves the smiley face to a new random `y` coordinate\r\n\r\nYou can use the [`setProperty()`(#fff176)](/docs/applab/setProperty/) and [`randomNumber()`(#FFB74D)](/docs/applab/randomNumber_min_max/) blocks together to create the random movement.\r\n\r\n## Do This\r\n1. When the A button is pressed, move to a random x coordinate\r\n2. When the B button is pressed, move to a random y coordinate",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

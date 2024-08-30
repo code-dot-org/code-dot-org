@@ -183,7 +183,11 @@ class ProjectsController < ApplicationController
     },
     pythonlab: {
       name: 'New Python Lab Project'
+    },
+    transformers: {
+      name: 'New Transformers Project'
     }
+    # Note: When adding to this list, remember that project level files must include "is_project_level": true
   }.with_indifferent_access.freeze
 
   @@project_level_cache = {}
@@ -544,9 +548,12 @@ class ProjectsController < ApplicationController
     render json: {channel_id: new_channel_id}
   end
 
+  def datablock_storage_options
+    {}
+  end
+
   def export_config
     return if redirect_under_13_without_tos_teacher(@level)
-    # TODO: post-firebase-cleanup, remove both branches of this conditional: #56994
     if params[:script_call]
       render js: "#{params[:script_call]}(#{datablock_storage_options.to_json});"
     else

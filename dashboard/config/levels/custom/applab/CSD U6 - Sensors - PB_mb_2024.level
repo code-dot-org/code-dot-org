@@ -84,7 +84,6 @@
     "makerlab_enabled": "microbit",
     "long_instructions": "# Interactive Birthday Card\r\n\r\nThis app simulates an interactive greeting card that you can find in stores. The app displays several candles and, when the user blows on the micro:bit, the candles should disappear and the app should say \"Happy Birthday!\". This app will need to use the `tempSensor` event to detect a `change` in the temperature.\r\n\r\n## Do This\r\n\r\n_Note: You can click the instructions below to expand them and see more specific instructions_\r\n\r\n1) ::: details [Create an event to check when the `tempSensor` has changed]\r\n\t- Add an [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) block to detect when the `tempSensor` has a `change`\r\n    :::\r\n2) ::: details [When the temperature changes, update the card to hide the candles and have the micro:bit say Happy Birthday]\r\n\t- Inside the [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/):\r\n    \t- Use [`hideElement()`(#fff176)](/docs/applab/hideElement/) to hide the candles\r\n        - Use [`ledScreen.scrollString()`(#f78183)](/docs/ide/applab/expressions/ledScreen.scrollString) to update the `ledScreen` to say \"Happy Birthday!\"\r\n   :::\r\n\r\n**Run Your App!** You should be able to blow on the micro:bit to trigger the temperature sensor. This will make the candles disappear and the micro:bit will wish you Happy Birthday!",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

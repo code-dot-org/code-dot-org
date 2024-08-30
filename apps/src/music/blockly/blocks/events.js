@@ -1,5 +1,5 @@
-import {BlockTypes} from '../blockTypes';
 import musicI18n from '../../locale';
+import {BlockTypes} from '../blockTypes';
 import {fieldTriggerDefinition} from '../fields';
 
 export const whenRun = {

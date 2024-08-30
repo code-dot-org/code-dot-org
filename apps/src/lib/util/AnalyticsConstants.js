@@ -120,6 +120,27 @@ const EVENTS = {
   SORT_BY_FAMILY_NAME: 'Sorted by family name',
   SORT_BY_DISPLAY_NAME: 'Sorted by display name',
 
+  // Section table on teacher My Dashboard
+  SECTION_TABLE_PRINT_LOGIN_CARDS_CLICKED:
+    'Section table print login cards clicked',
+  SECTION_TABLE_JOIN_INSTRUCTIONS_CLICKED:
+    'Section table join instructions clicked',
+  SECTION_TABLE_EDIT_SECTION_DETAILS_CLICKED:
+    'Section table edit section details clicked',
+  SECTION_TABLE_VIEW_PROGRESS_CLICKED: 'Section table view progress clicked',
+  SECTION_TABLE_MANAGE_STUDENTS_CLICKED:
+    'Section table manage students clicked',
+  SECTION_TABLE_ARCHIVE_SECTION_CLICKED:
+    'Section table archive section clicked',
+  SECTION_TABLE_RESTORE_SECTION_CLICKED:
+    'Section table restore section clicked',
+  SECTION_TABLE_DELETE_SECTION_CLICKED: 'Section table delete section clicked',
+  SECTION_TABLE_PRINT_CERTIFICATES_CLICKED:
+    'Section table print certificates clicked',
+  SECTION_TABLE_SYNC_GOOGLE_CLASSROOM_CLICKED:
+    'Section table sync google classroom clicked',
+  SECTION_TABLE_SYNC_CLEVER_CLICKED: 'Section table sync clever clicked',
+
   // Section progress v2
   PROGRESS_V2_VIEW: 'Section New Progress Viewed ',
   PROGRESS_V2_VIEW_NEW_PROGRESS: 'New Progress Link Clicked',
@@ -138,6 +159,13 @@ const EVENTS = {
   PROGRESS_V2_DELAY_INVITATION:
     'Section Progress Invitation Modal Remind Later',
   PROGRESS_V2_SEEN_INVITATION: 'Section Progress Invitation Modal seen by user',
+  PROGRESS_V2_ONE_ROW_EXPANDED: 'Section New Progress One Student Row Expanded',
+  PROGRESS_V2_ALL_ROWS_EXPANDED:
+    'Section New Progress All Student Rows Expanded',
+  PROGRESS_V2_ONE_ROW_COLLAPSED:
+    'Section New Progress One Student Row Collapsed',
+  PROGRESS_V2_ALL_ROWS_COLLAPSED:
+    'Section New Progress All Student Rows Collapsed',
 
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',
@@ -146,6 +174,15 @@ const EVENTS = {
   SUMMARY_PAGE_LOADED: 'Summary Page Loaded',
   SUMMARY_PAGE_NEXT_LEVEL_CLICKED: 'Summary Page Next Level Clicked',
   SUMMARY_PAGE_BACK_TO_LEVEL_CLICKED: 'Summary Page Back To Level Clicked',
+
+  // Check for understanding
+  CFU_NAMES_TOGGLED_ON: 'Summary Page Names Toggled On',
+  CFU_NAMES_TOGGLED_OFF: 'Summary Page Names Toggled Off',
+  CFU_RESPONSE_HIDDEN: 'Summary Page Response Hidden',
+  CFU_RESPONSE_PINNED: 'Summary Page Response Pinned',
+  CFU_RESPONSE_UNPINNED: 'Summary Page Response Unpinned',
+  CFU_RESPONSE_ALL_UNHID: 'Summary Page Response Hidden Responses Unhidden',
+  CFU_RESPONSE_ALL_UNPINNED: 'Summary Page Response All Unpinned',
 
   // Maker setup
   MAKER_SETUP_PAGE_BOARD_TYPE_EVENT: 'Board Type On Maker Setup Page',
@@ -207,11 +244,15 @@ const EVENTS = {
   AI_TUTOR_ASK_ABOUT_COMPILATION: 'AI Tutor was asked about compilation',
   AI_TUTOR_ASK_ABOUT_VALIDATION: 'AI Tutor was asked about validation',
   AI_TUTOR_ASK_GENERAL_CHAT: 'AI Tutor was asked a question in general chat',
+  AI_TUTOR_DISABLED: 'Teacher disabled AI Tutor for a section',
+  AI_TUTOR_ENABLED: 'Teacher enabled AI Tutor for a section',
 
   // Hour of Code
   AGE_21_SELECTED_EVENT: 'Age 21+ Selected',
   HOC_GUIDE_DIALOG_SHOWN: 'HOC Guide Dialog Shown',
   GUIDE_SENT_EVENT: 'Guide Sent',
+  HOC_ACTIVITY_START_BUTTON_CLICKED:
+    'Hour of Code Activity Start Button Clicked',
 
   // Hour of Code - Dance Party
   DANCE_PARTY_ACTIVITY_STARTED: 'Dance Party Activity Started',
@@ -230,6 +271,7 @@ const EVENTS = {
 
   // videos
   VIDEO_LOADED: 'Video Loaded',
+  VIDEO_FALLBACK_LOADED: 'Video Fallback Loaded',
   VIDEO_STARTED: 'Video Started',
   VIDEO_PAUSED: 'Video Paused',
   VIDEO_ENDED: 'Video Played To Completion',
@@ -250,18 +292,36 @@ const EVENTS = {
   // PL Landing Page
   MY_PL_PAGE_VISITED: 'My Professional Learning Page Visited',
 
-  // Header navigation
-  SIGNED_OUT_USER_SEES_HEADER: 'Signed Out Navigation Header Shown',
+  // Header navigation - signed out
   SIGNED_OUT_USER_CLICKS_HEADER_LINK: 'Signed Out User Clicks Header Link',
   SIGNED_OUT_USER_CLICKS_HAMBURGER_LINK:
     'Signed Out User Clicks Hamburger Link',
   SIGNED_OUT_USER_CLICKS_HELP_MENU: 'Signed Out User Clicks Help Menu',
+  CREATE_ACCOUNT_BUTTON_CLICKED: 'Create Account Button Clicked',
 
-  // Header Create menu
+  // Header Create menu - signed out
   SIGNED_OUT_USER_CLICKS_CREATE_DROPDOWN:
     'Signed Out User Clicks Create Dropdown',
   SIGNED_OUT_USER_SELECTS_CREATE_DROPDOWN_OPTION:
     'Signed Out User Selects Create Dropdown Option',
+
+  // Header navigation - signed in
+  SIGNED_IN_USER_CLICKS_HEADER_LINK: 'Signed In User Clicks Header Link',
+  SIGNED_IN_USER_CLICKS_HAMBURGER_LINK: 'Signed In User Clicks Hamburger Link',
+  SIGNED_IN_USER_CLICKS_HAMBURGER_OPTION:
+    'Signed In User Clicks Hamburger Dropdown Option',
+  SIGNED_IN_USER_CLICKS_HELP_MENU: 'Signed In User Clicks Help Menu',
+  SIGNED_IN_USER_CLICKS_HELP_MENU_OPTION:
+    'Signed In User Clicks Help Menu Option',
+  SIGNED_IN_USER_CLICKS_USER_MENU: 'Signed In User Clicks User Menu',
+  SIGNED_IN_USER_CLICKS_USER_MENU_OPTION:
+    'Signed In User Clicks User Menu Option',
+
+  // Header Create menu - signed in
+  SIGNED_IN_USER_CLICKS_CREATE_DROPDOWN:
+    'Signed In User Clicks Create Dropdown',
+  SIGNED_IN_USER_SELECTS_CREATE_DROPDOWN_OPTION:
+    'Signed In User Selects Create Dropdown Option',
 
   // Project sharing via 'Share' button
   SHARING_DIALOG_OPEN: 'User Opens Project Share Dialog',

@@ -2,7 +2,8 @@ import cookies from 'js-cookie';
 import React, {CSSProperties, useState, useEffect, useReducer} from 'react';
 import {useSelector} from 'react-redux';
 
-import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import Button from '@cdo/apps/legacySharedComponents/Button';
+import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import parentalPermissionRequestReducer, {
   REQUEST_PARENTAL_PERMISSION_SUCCESS,
@@ -16,11 +17,10 @@ import i18n from '@cdo/locale';
 import headerThanksImage from '@cdo/static/common_images/penguin/dancing.png';
 import headerImage from '@cdo/static/common_images/penguin/yelling.png';
 
-import Spinner from '../../code-studio/pd/components/spinner';
 import {getStore} from '../../redux';
+import Spinner from '../../sharedComponents/Spinner';
 import * as color from '../../util/color';
 import {hashString} from '../../utils';
-import Button from '../Button';
 
 /**
  * This panel represents the page that is displayed to accounts that are being
@@ -30,7 +30,7 @@ import Button from '../Button';
  */
 const LockoutPanel: React.FC<LockoutPanelProps> = props => {
   const reportEvent = (eventName: string, payload: object = {}) => {
-    analyticsReporter.sendEvent(eventName, payload, PLATFORMS.AMPLITUDE);
+    analyticsReporter.sendEvent(eventName, payload);
   };
 
   // Determine if we think the given email matches the child email

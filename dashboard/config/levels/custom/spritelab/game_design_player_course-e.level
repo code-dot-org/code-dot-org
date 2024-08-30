@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-05-17T16:35:14.000Z",
   "level_num": "custom",
@@ -45,11 +46,12 @@
     "encrypted_examples": "iUl6ruyWPpOH8wljN8604n4iAMJd+iPSOQ2J++mU1rUjzHb1OmcsuMZaaJm8\nFhy5SoIFYwda9H4s/QgdyQxsEw==\n",
     "instructions_icon": "fox",
     "video_key": "CSF_SpriteLab_Intro_v2",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "hint_prompt_attempts_threshold": "1"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-05-17T16:35:14.131+00:00\",\"changed\":[\"cloned from \\\"game_design_player_2024\\\"\"],\"cloned_from\":\"game_design_player_2024\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-17T16:35:14.131+00:00\",\"changed\":[\"cloned from \\\"game_design_player_2024\\\"\"],\"cloned_from\":\"game_design_player_2024\"},{\"changed_at\":\"2024-07-15 20:52:55 +0000\",\"changed\":[\"start_blocks\",\"toolbox_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 2
   }
 }]]></config>
   <blocks>

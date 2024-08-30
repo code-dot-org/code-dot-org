@@ -72,7 +72,6 @@
     "makerlab_enabled": "microbit",
     "long_instructions": "# Controller App\r\n\r\nCreate an app that uses the buttons or toggle switches as if the micro:bit were a controller for a game where you needed to make a decision. For example, using the A and B buttons to select which character you will play.\r\n\r\nYou may not be able to create the \"perfect\" app yet, but you can develop a **prototype** which shows the general idea of the app and some of the basic features behind how it could work.",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

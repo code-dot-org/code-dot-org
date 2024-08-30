@@ -2,11 +2,8 @@ import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import PropTypes from 'prop-types';
 import React, {useState} from 'react';
-import sinon from 'sinon';
 
 import TextField from '@cdo/apps/componentLibrary/textField';
-
-import {expect} from '../../util/reconfiguredChai';
 
 describe('Design System - TextField', () => {
   const renderTextField = props => {
@@ -29,13 +26,13 @@ describe('Design System - TextField', () => {
   it('renders with correct label', () => {
     renderTextField({label: 'TextField label'});
 
-    expect(screen.getByDisplayValue('test-textfield')).to.exist;
-    expect(screen.getByText('TextField label')).to.exist;
+    expect(screen.getByDisplayValue('test-textfield')).toBeDefined();
+    expect(screen.getByText('TextField label')).toBeDefined();
   });
 
   it('changes value via keyboard input', async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
 
     renderTextField({label: 'TextField label', onChange: spyOnChange});
 
@@ -43,13 +40,13 @@ describe('Design System - TextField', () => {
 
     await user.type(textField, '12');
 
-    expect(spyOnChange).to.have.been.calledTwice;
-    expect(textField.value).to.equal('test-textfield12');
+    expect(spyOnChange).toHaveBeenCalledTimes(2);
+    expect(textField.value).toBe('test-textfield12');
   });
 
   it("doesn't change value when disabled", async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
 
     renderTextField({
       label: 'TextField label',
@@ -61,14 +58,14 @@ describe('Design System - TextField', () => {
 
     await user.type(textField, '12');
 
-    expect(spyOnChange).not.to.have.been.called;
-    expect(textField.value).to.equal('test-textfield');
-    expect(textField.disabled).to.be.true;
+    expect(spyOnChange).not.toHaveBeenCalled();
+    expect(textField.value).toBe('test-textfield');
+    expect(textField.disabled).toBe(true);
   });
 
   it("doesn't change value when readOnly", async () => {
     const user = userEvent.setup();
-    const spyOnChange = sinon.spy();
+    const spyOnChange = jest.fn();
 
     renderTextField({
       label: 'TextField label',
@@ -80,8 +77,8 @@ describe('Design System - TextField', () => {
 
     await user.type(textField, '12');
 
-    expect(spyOnChange).to.have.not.been.called;
-    expect(textField.value).to.equal('test-textfield');
-    expect(textField.readOnly).to.be.true;
+    expect(spyOnChange).not.toHaveBeenCalled();
+    expect(textField.value).toBe('test-textfield');
+    expect(textField.readOnly).toBe(true);
   });
 });

@@ -135,6 +135,8 @@ en:
           description_audience: ''
           lesson_groups: {}
           student_description: Create images with bits and bytes.
+          lessons: {}
+          name: pixelation
         20-hour:
           title: Accelerated Intro to CS Course
           description: This 20-hour course covers the core computer science and programming concepts in courses 2-4. The course is designed for use with ages 10-18. Check out courses 2-4 for a more complete experience!
@@ -235,6 +237,7 @@ en:
           lesson_groups: {}
           student_description: Compress text by identifying repeated patterns.
           name: text-compression
+          lessons: {}
         CSPPD:
           title: Computer Science Principles PD
           description: 'Phase 1: Online Introduction for CSP'
@@ -403,6 +406,8 @@ en:
               name: Web Lab 2
             lesson-55:
               name: Lab2 Showcase
+            lesson-56:
+              name: Activity Guide Levelgroup
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -1241,6 +1246,7 @@ en:
           lesson_groups: {}
           student_description: In this lesson, students are introduced to the need for encryption and simple techniques for breaking (or cracking) secret messages.
           name: hoc-encryption
+          lessons: {}
         csd2-2017:
           title: CSD Unit 2 - Web Development ('17-'18)
           description_audience: ''
@@ -1997,6 +2003,7 @@ en:
           lesson_groups: {}
           student_description: Create your own app in JavaScript using either block based programming or text. If you've already done some programming with blocks, take your skills to the next level.
           name: applab-intro
+          lessons: {}
         e-f-ramp:
           title: Course E & F Ramp
           description_audience: ''
@@ -2874,6 +2881,7 @@ en:
           lesson_groups: {}
           student_description: Code your own dance party to share with your friends!
           name: dance
+          lessons: {}
         frozen-2018-test-b:
           title: New Frozen Script
           description: ''
@@ -2934,6 +2942,7 @@ en:
           lesson_groups: {}
           student_description: Go beyond the first hour with extended project ideas.
           name: dance-extras
+          lessons: {}
         coursef-2019:
           title: Course F (2019)
           description: Learn to use different kinds of loops, events, functions, and conditionals. Investigate different problem-solving techniques and discuss societal impacts of computing and the internet. In the second part of this course, design and create a capstone project you can share with friends and family.
@@ -9886,6 +9895,8 @@ en:
               name: Matching Levels
             lesson-9:
               name: AI Draft Levels
+            lesson-11:
+              name: Python Lab
           lesson_groups: {}
           name: emmas-playground
           title: ''
@@ -10440,6 +10451,10 @@ en:
               name: New Game Design Lesson 3
             lesson-13:
               name: Music Lab Testing
+            lesson-14:
+              name: Chatbots
+            lesson-15:
+              name: Sprite Lab Tutorial
           lesson_groups: {}
           name: katies-playground
           title: Katie's Place To Do Stuff
@@ -10483,7 +10498,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: csc-timecapsule-2023
-          title: Coding a Time Capsule (2023)
+          title: Coding a Time Capsule
           description_audience: ''
           description_short: ''
           description: "##Suggested Pre-Work for this Module\n\n**Social Studies:** Read any of these [Multiple Perspectives Read Alouds](https://docs.google.com/document/d/1GU2wLxQ2xkoYGrjJU2mbngZEDxOX7bEWTlh4Ns1cnh8/template/preview) together as a class to enrich the discussion questions throughout the module, especially regarding the importance of having your voice in your own story, and what happens if certain things are included or left out. \n\n**ELA:** Read poetry together: Read a few poems together as a class and practice naming the mood of each poem. Encourage students to share their interpretation, even if it’s different from someone else’s. Make sure that all students are familiar with the structure of a poem before Lesson 2, in which students will write their own poems.\n\n**Computer Science:**  Students will be working with sprites and events in the module. We recommend beginning with [Hello World](https://studio.code.org/s/coursee-2023/lessons/4) (45 minutes) where students will gain a basic introduction to sprites and how to animate them with events. \n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/self-paced-pl-csc-2023).\n"
@@ -10564,7 +10579,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: csc-mappinglandmarks-2023
-          title: Coding Interactive Maps (2023)
+          title: Coding Interactive Maps
           description_audience: ''
           description_short: ''
           description: "##Suggested Pre-Work for this Module\n \n**Social Studies:** Students will discuss and code several different types of maps. To build a base understanding together you might consider reading one of these books about maps: [Maps by Aleksandra and Daniel Mizielinski](https://oladaniel.com/maps), [The Once Upon a Time Map Book by BG Hennessy](https://bghennessy.com/f/the-once-upon-a-time-map-book), or [City Atlas: Travel the World with 30 City Maps by Georgia Cherry](https://www.youtube.com/watch?v=LRy3daJLhtg).\n\nAdditionally, it may be beneficial to spend some time **building interactive maps with hands on materials in your classroom**: fill a bucket with colored strips of felt to represent roads, rivers, houses and more. Let students build and play in an imaginary town. Or after a shared experience (ie recess or field trip) create a topographical map using play-dough or salt dough.\n\n\n**Computer Science:** In this module students will be working a lot with sprites including changing the location and size of them and initiating behaviors. [CSFundamentals Course F Lesson 3](https://studio.code.org/s/coursef-2023/lessons/3) is a great introduction to two concepts at the heart of this all: sprites and behaviors.\n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/self-paced-pl-csc-2023).\n"
@@ -10625,7 +10640,7 @@ en:
               name: Code Your Own Ecosystem (2023)
           lesson_groups: {}
           name: csc-ecosystems-2023
-          title: Simulating a Marine Ecosystem (2023)
+          title: Simulating a Marine Ecosystem
           description_audience: ''
           description_short: ''
           description: "##Suggested Pre-Work for this Module\n \n**Science:** Students will simulate a marine life ecosystem in Lessons 1 and 2. To build familiarity with this ecosystem, we recommend this [Ocean Animals Video](https://www.youtube.com/watch?v=8adtdg0N2-g) (9:42 minutes). \n\nIn Lesson 2, students will code several sustainable fishing practices. These are a few readings to build some background knowledge and deepen connections to the real world: [Understanding Overfishing](https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing) (Monterey Bay Aquarium article), or [Mw,kwa Talks to the Loon](https://books.google.com/books/about/Mw_kwa_Talks_to_the_Loon.html?id=ZtJfkFFPTzIC) (Children's book).\n\n**Computer Science:** In this module, students will learn new coding concepts that might be difficult for new-to-computer science students. If students are not familiar with Code.org’s Sprite Lab we recommend trying [Swimming Fish with Sprite Lab](https://studio.code.org/s/coursee-2022/lessons/3) (55 minutes) for a basic introduction to the tool. \n\nThis module also uses an advanced CS concept called conditional statements. Students learn this concept in a scaffolded way, but some students may benefit from first engaging in this introduction to conditionals unplugged activity: [Conditionals with Cards](https://studio.code.org/s/coursed-2022/lessons/12) (50 minutes).\n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/self-paced-pl-csc-2023).\n\n"
@@ -10638,7 +10653,7 @@ en:
               name: Code Your Own Adaptation
           lesson_groups: {}
           name: csc-adaptations-2023
-          title: Modeling Animal Adaptations (2023)
+          title: Modeling Animal Adaptations
           description_audience: ''
           description_short: ''
           description: "##Suggested Pre-Work for this Module\n \n**Science:** Students will simulate several animal adaptations. To build familiarity with adaptations, we recommend this [Living Things Change Video](https://www.youtube.com/watch?v=xDSFlRunlrU&list=PLdG-lk1eEmZnq4ZO2CzERCv6jZkYIHCbR&index=4) (4:36 minutes). \n\n**Computer Science:** In this module students will be working a lot with sprites including changing the location and size of them and initiating behaviors. [CSF Making Sprites](https://studio.code.org/s/coursef-2023/lessons/3) is a great introduction to two concepts at the heart of this all: sprites and behaviors.\n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/self-paced-pl-csc-2023).\n\n"
@@ -10698,7 +10713,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: poetry-2023
-          title: Coding with Poetry (2023)
+          title: Coding with Poetry
           description_audience: ''
           description_short: ''
           description: "##Suggested Pre-Work for this Module\n \n**English Language Arts:** To prepare for this module and create some shared understanding of poetry together we recommend starting by reading poetry together: Read a few poems together as a class and practice naming the mood of each poem. Encourage students to share their interpretation, even if it’s different from someone else’s. Make sure that all students are familiar with the structure of a poem before Lesson 2, in which students will write their own poems.\n\n**Computer Science:**  As a warm up to the tool students can add art and animation to a classic poem in this [Poem Art](https://studio.code.org/s/poem-art-2021/lessons/1) (55 minutes) Hour of Code activity!\n\nAdditionally, in this module students will use event blocks to program changes at important lines in the poem. To start building skills with events try [Build a Flappy Game](https://studio.code.org/s/coursec-2023/lessons/12) (60 minutes). \n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/self-paced-pl-csc-2023).\n"
@@ -10736,7 +10751,7 @@ en:
               name: Plan Your Interactive Book Cover
           lesson_groups: {}
           name: csc-bookcovers-2023
-          title: Coding Book Covers (2023)
+          title: Coding Book Covers
           description_audience: ''
           description_short: ''
           description: "##Suggested Pre-Work for this Module\n \n**English Language Arts:** Building some familiarity with and background knowledge on book covers, the elements they all share (title, author, illustrations, etc) and design choices will help students focus. Here are two hands on activities to try in your classroom: \n- **Book sort**: Have groups of students organize books into genre piles, based only on the book cover. Students make inferences based on the book cover about what genre a book may fall under.\n- **Cover comparison**: show students multiple covers for the same book. Engage in a discussion about what is different in each cover and evaluation which version is best.\n\n\n**Computer Science:** In this module, students will learn the basics of coding using code.org's Sprite Lab. These activities may be supportive to engage in before starting the module:\n- Introduce students to the idea of **events** with this unplugged activity: [The Big Event](https://studio.code.org/s/course1/lessons/15/levels/1) (15-minute activity). The teacher will press buttons on a paper remote and students will react depending on which button is pressed. \n- [Making Sprites](https://studio.code.org/s/coursef-2023/lessons/3) (50 minutes) is a great self-paced introduction to the basics of coding with sprites.\n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/self-paced-pl-csc-2023).\n"
@@ -11114,10 +11129,10 @@ en:
           lessons: {}
           lesson_groups: {}
           name: csc-starquilts-2023
-          title: Coding a Geometric Star Quilt (2023)
+          title: Coding a Geometric Star Quilt
           description_audience: ''
           description_short: ''
-          description: "##Suggested Pre-Work for this Module\n \n**Math:** Students will be working with shapes and angles in this module. To build familiarity, we recommend playing these active songs [Types of Angles song](https://www.youtube.com/watch?v=kGAGkysDunw&t=1s) (2:47 minutes) and [Angles & Lines](https://www.youtube.com/watch?v=an1tG3upvow) (3:06 minutes). \n\nThese are a few children's books to build some background knowledge and deepen connections to the real world:  \n- [Shota and the Star Quilt](https://www.amazon.com/Shota-Star-Quilt-Folk-Tales/dp/1840890231) Picture book about the tradition of quilting and how traditions can change over time\n- [Rainbow Weavers](https://www.amazon.com/Rainbow-Weaver-Tejedora-del-Arcoiris/dp/0892393742/ref=asc_df_0892393742/?tag=hyprod-20&linkCode=df0&hvadid=312089887152&hvpos=&hvnetw=g&hvrand=526653230527463008&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9033356&hvtargid=pla-522520885864&psc=1) This picture book is about weaving, not quilting, but it could deepen students' understanding of how indigenous traditions evolve.\n- [A Trapezoid is Not a Dinosaur](https://www.mathsthroughstories.org/a-trapezoid-is-not-a-dinosaur.html) by Suzanne Morris \n- [The Greedy Triangle](https://youngmathematicians.edc.org/picture_book/%EF%BB%BF%EF%BB%BFthe-greedy-triangle/) by Marilyn Burns\n- Any of these [Geometry Read Alouds](https://www.k-5mathteachingresources.com/geometry-read-aloud.html)\n\n**Computer Science:** In this module, students will use Code.org's Artist tool. If students are not yet familiar with it, we recommend trying [Intro to Artist lesson](https://studio.code.org/s/artist/lessons/1) (50 minutes) for a basic introduction to the tool. \n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/self-paced-pl-csc-2023).\n\n"
+          description: "##Suggested Pre-Work for this Module\n \n**Math:** Students will be working with shapes and angles in this module. To build familiarity, we recommend playing these active songs [Types of Angles song](https://www.youtube.com/watch?v=kGAGkysDunw&t=1s) (2:47 minutes) and [Angles & Lines](https://www.youtube.com/watch?v=an1tG3upvow) (3:06 minutes). \n\nFor a quick introduction to shapes and angles with the Artist tool, watch this [Turns and Angles video](https://www.youtube.com/watch?v=sPKXZBL_Yvs) (2 mins).\n\nThese are a few children's books to build some background knowledge and deepen connections to the real world:  \n- [Shota and the Star Quilt](https://www.amazon.com/Shota-Star-Quilt-Folk-Tales/dp/1840890231) Picture book about the tradition of quilting and how traditions can change over time\n- [Rainbow Weavers](https://www.amazon.com/Rainbow-Weaver-Tejedora-del-Arcoiris/dp/0892393742/ref=asc_df_0892393742/?tag=hyprod-20&linkCode=df0&hvadid=312089887152&hvpos=&hvnetw=g&hvrand=526653230527463008&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9033356&hvtargid=pla-522520885864&psc=1) This picture book is about weaving, not quilting, but it could deepen students' understanding of how indigenous traditions evolve.\n- [A Trapezoid is Not a Dinosaur](https://www.mathsthroughstories.org/a-trapezoid-is-not-a-dinosaur.html) by Suzanne Morris \n- [The Greedy Triangle](https://youngmathematicians.edc.org/picture_book/%EF%BB%BF%EF%BB%BFthe-greedy-triangle/) by Marilyn Burns\n- Any of these [Geometry Read Alouds](https://www.k-5mathteachingresources.com/geometry-read-aloud.html)\n\n**Computer Science:** In this module, students will use Code.org's Artist tool. If students are not yet familiar with it, we recommend trying [Intro to Artist lesson](https://studio.code.org/s/artist/lessons/1) (50 minutes) for a basic introduction to the tool. \n\n**New to teaching Computer Science?**\n\nGet started with our [self-paced Professional Learning](https://studio.code.org/s/self-paced-pl-csc-2023).\n\n"
           student_description: ''
         focus-on-creativity4-2023:
           lessons: {}
@@ -11750,7 +11765,7 @@ en:
             lessonGroup-4:
               display_name: Building Physical Prototypes
           name: focus-on-design-with-purpose4b-2023
-          title: Unit 4B - (Option B) Creating Apps with Devices (micro:bit)
+          title: Unit 4B - (Option B) Creating Apps with Devices (micro:bit) ('24-'25)
           description_audience: ''
           description_short: ''
           description: "In the Creating Apps with Devices unit, students explore the role of physical devices in computing. Using App Lab and BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **micro:bit** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **circuit playground** devices by assigning the [Creating Apps with Devices (Circuit Playground) unit](/s/focus-on-design-with-purpose4a-2023). Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n* Create app prototypes that use a physical device to control a digital app.\n\n\n**Big Questions:**\n- What inputs and outputs are available on a physical device?\n- What inputs and outputs are available on an app?\n- How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates sensors with digital apps. \n* Create app prototypes that use a physical device to solve real-world problems.\n* Use physical computing to solve problems in fun and innovative ways.\n\n\n**Big Questions:**\n- How can a physical device use sensors to react to a physical environment?\n- How can simple hardware be used to develop innovative new products?\n\n:::\n\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n- This unit requires students to have access to micro:bit devices - [click here for more information about using micro:bit's in your classroom](https://code.org/maker/microbit)\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices (micro:bit) Self-Paced Professional Development Module](https://studio.code.org/courses/self-paced-pl-microbit). The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) to let the Code.org curriculum team know how the unit went."
@@ -14056,7 +14071,7 @@ en:
               display_name: Inputs and Outputs
             lessonGroup-4:
               display_name: Building Physical Prototypes
-          title: Unit 6B - (Option B)  Creating Apps with Devices (micro:bit)
+          title: Unit 6B - (Option B)  Creating Apps with Devices (micro:bit) ('24-'25)
           description: "In the Creating Apps with Devices unit, students explore the role of physical devices in computing. Using App Lab and BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **micro:bit** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **circuit playground** devices by assigning the [Creating Apps with Devices (Circuit Playground) unit](/s/csd6a-2023). Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n* Create app prototypes that use a physical device to control a digital app.\n\n\n**Big Questions:**\n- What inputs and outputs are available on a physical device?\n- What inputs and outputs are available on an app?\n- How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates sensors with digital apps. \n* Create app prototypes that use a physical device to solve real-world problems.\n* Use physical computing to solve problems in fun and innovative ways.\n\n\n**Big Questions:**\n- How can a physical device use sensors to react to a physical environment?\n- How can simple hardware be used to develop innovative new products?\n\n:::\n\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n- This unit requires students to have access to micro:bit devices - [click here for more information about using micro:bit's in your classroom](https://code.org/maker/microbit)\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices (micro:bit) Self-Paced Professional Development Module](https://studio.code.org/courses/self-paced-pl-microbit). The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) to let the Code.org curriculum team know how the unit went."
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and BBC micro:bit, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the micro:bit as the basis for an innovation of your own design.
           description_short: ''
@@ -14672,7 +14687,7 @@ en:
         csp10-2024:
           lesson_groups:
             csp_unit10_2020:
-              display_name: 'Unit 10: Algortihms'
+              display_name: 'Unit 10: Algorithms'
             lessonGroup-2:
               display_name: Post-Course Survey
           title: Algorithms ('24-'25)
@@ -14762,6 +14777,8 @@ en:
           student_description: "This unit introduces you to data structures to store primitive values and object references. You use one-dimensional (1D) arrays to store multiple related values while expanding your knowledge of loops and conditionals to analyze and process data in a 1D array. You learn to use `for` loops to traverse arrays and discover that an algorithm involving loops can be implemented with either a `for` loop or a `while` loop. Throughout the unit, you develop and modify algorithms to find and manipulate elements in a 1D array while also discovering the concept of polymorphism when traversing arrays of objects. While developing algorithms, you identify preconditions and postconditions and implement solutions to ensure that these conditions are satisfied. You continue to develop software engineering skills as you learn to make design decisions and use 1D arrays to store and analyze data.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p>\n\n* Declare and initialize one-dimensional (1D) arrays to store primitive values and objects using the `new` keyword and initializer lists\n\n* Traverse the elements in one-dimensional (1D) arrays using `for` loops, `while` loops, and enhanced `for` loops\n\n* Write algorithms to find and modify elements in one-dimensional (1D) arrays\n\n* Implement solutions to satisfy the preconditions and postconditions of an algorithm\n\n* Debug common errors that occur when traversing one-dimensional (1D) arrays\n\n* Use polymorphism to create and traverse one-dimensional (1D) arrays of a superclass type\n    </div>\n</details>"
           description_short: Students use one-dimensional (1D) arrays to store lists of primitive values and object references.
           description_audience: ''
+          lessons: {}
+          name: csa3-2025
         csa4-2025:
           lesson_groups:
             lessonGroup-2:
@@ -14798,6 +14815,8 @@ en:
           student_description: "This unit expands on data structures introduced in Unit 3 to create tables of data using two-dimensional (2D) arrays. You identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing 2D arrays and apply standard algorithms to find and manipulate elements. As you analyze problems involving 2D arrays, you revisit these standard algorithms to determine what code needs to be added or modified and to interact with completed program code. You apply these concepts to manipulate pixels using The Theater to create image filters in addition to working with primitive values and various object references. Additionally, you use the programming knowledge and skills you have acquired to consider the impacts of programs on society, economies, and culture.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p>\n\n* Declare and initialize a two-dimensional (2D) array using the `new` keyword and an initializer list\n\n* Access and modify elements in a two-dimensional (2D) array using row and column indexes\n\n* Write nested loops to traverse a two-dimensional (2D) array in row-major and column-major order\n\n* Write nested enhanced `for` loops to traverse a two-dimensional (2D) array\n\n* Apply standard 1D array algorithms to a 2D array\n\n* Discuss the beneficial and harmful impacts of programs\n    </div>\n</details>"
           description_short: Students use two-dimensional (2D) arrays to expand storage and organization capabilities in their programs.
           description_audience: ''
+          lessons: {}
+          name: csa5-2025
         csa6-2025:
           lesson_groups:
             lessonGroup-2:
@@ -14815,6 +14834,8 @@ en:
           student_description: "This unit continues to expand on data structures to introduce you to creating lists using the `ArrayList` class. In the process, you learn about the `Integer` and `Double` classes and use their methods to parse data from text files and explore the limits of integer values. You differentiate between when to use each type of data structure while learning about the structure and functionality of an `ArrayList`. You apply standard algorithms to find and manipulate data in an `ArrayList` of numerical and object data. Throughout the unit, you learn to use the `String` class to analyze and process text obtained from a user and from file input while learning about basic natural language processing techniques and applications. Additionally, you further develop software engineering skills by writing Javadoc comments to create API documentation for your programs.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p>\n\n* Use the `Integer` and `Double` class to represent primitive values as objects\n\n* Describe the structure and functionality of an `ArrayList`\n\n* Use methods in the `ArrayList` class to obtain the size of an `ArrayList`, add elements, retrieve elements, set values, and remove elements\n\n* Apply standard algorithms used with one-dimensional (1D) arrays to an `ArrayList`\n\n* Use methods in the `String` class to retrieve substrings and perform comparisons\n\n* Write standard algorithms to traverse a `String` object\n    </div>\n</details>"
           description_short: Students use ArrayLists to store program data and work with methods in the String class to manipulate and evaluate String objects.
           description_audience: ''
+          lessons: {}
+          name: csa6-2025
         csa7-2025:
           lesson_groups:
             lessonGroup-2:
@@ -14832,6 +14853,8 @@ en:
           student_description: "This unit allows you to practice software design and development using the skills you have learned throughout the curriculum while planning and developing a creative coding project to convey a personal interest or story using The Theater. You use decomposition strategies and object-oriented principles to plan and implement your ideas while ensuring your project meet specified requirements. In the process, you learn to write `private`, overloaded, and overridden methods and use the `super` keyword in a subclass method to call a superclass method while exploring the functionality of methods and their parameters. Throughout the unit, you practice tracing and writing recursive methods and comparing these methods to iterative solutions. With the knowledge and skills acquired throughout the year, you consider the need for maximizing system reliability as you explore bugs and issues in existing programs.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p>\n\n* Differentiate between passing primitive values and object references as parameters\n\n* Write and call overloaded, `private`, and overridden methods\n\n* Explain the legal issues and intellectual property concerns of programs that create AI-generated images\n\n* Trace a recursive method to determine its result\n\n* Identify strategies to maximize system reliability\n    </div>\n</details>"
           description_short: Students practice software design and development using the skills and programming constructs they have learned and explore recursion.
           description_audience: ''
+          lessons: {}
+          name: csa7-2025
         csa8-2025:
           lesson_groups:
             lessonGroup-2:
@@ -14849,6 +14872,8 @@ en:
           student_description: "In this unit, you expand on the algorithms you have learned to explore common approaches to searching and sorting 1D and 2D arrays and `ArrayList`s. In the process, you analyze and compare the efficiencies of these algorithms using statement execution counts and further develop problem-solving skills to decompose complex problems. Throughout the unit, you apply your programming and software engineering skills to plan and develop a creative coding project using the console that incorporates object-oriented design, data structures, and algorithmic thinking. With the knowledge and skills acquired throughout the year, you consider the privacy and security of programs and users.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p>\n\n* Explain the functionality of standard searching and sorting algorithms\n\n* Analyze the efficiency of searching and sorting algorithms using execution counts\n\n* Implement algorithms involving multiple 1D or 2D arrays or `ArrayList`s\n    </div>\n</details>"
           description_short: ''
           description_audience: ''
+          lessons: {}
+          name: csa8-2025
         csa9-2025:
           lesson_groups:
             lessonGroup-2:
@@ -14862,6 +14887,8 @@ en:
           student_description: This unit prepares you for the AP CSA Exam by reviewing key concepts, practicing multiple-choice and free response questions, and strengthening test-taking strategies. You identify strengths and areas of improvement to create individualized study plans to focus you practice and self-assess your progress.
           description_short: Students prepare for the AP CSA Exam by practicing strategies for the multiple-choice and free response questions.
           description_audience: ''
+          lessons: {}
+          name: csa9-2025
         csa-postap-se-and-computer-vision-2025:
           lesson_groups:
             lessonGroup-2:
@@ -15723,96 +15750,146 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons:
+            lesson-8:
+              name: 'Synchronous Session 3: Wrap Up - 2024'
+          lesson_groups: {}
+          name: vpl-csd-2024-m1
         vpl-csd-2024-m2:
           title: Module 2
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m2
         vpl-csd-2024-m3:
           title: Module 3
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m3
         vpl-csd-2024-m4:
           title: Module 4
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m4
         vpl-csd-2024-m5:
           title: Module 5
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m5
         vpl-csd-2024-m6:
           title: Module 6
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m6
         vpl-csd-2024-m7:
           title: Module 7
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m7
         vpl-csd-2024-m8:
           title: Module 8
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csd-2024-m8
         vpl-csa-2024-m1:
           title: Module 1
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2024-m1
         vpl-csa-2024-m2:
           title: Module 2
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2024-m2
         vpl-csa-2024-m3:
           title: Module 3
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2024-m3
         vpl-csa-2024-m4:
           title: Module 4
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2024-m4
         vpl-csa-2024-m5:
           title: Module 5
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2024-m5
         vpl-csa-2024-m6:
           title: Module 6
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2024-m6
         vpl-csa-2024-m7:
           title: Module 7
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2024-m7
         vpl-csa-2024-m8:
           title: Module 8
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csa-2024-m8
         self-paced-pl-csa1-2024:
           title: 'Module 1: Welcome'
           description: |-
@@ -15938,36 +16015,54 @@ en:
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2024-m3
         vpl-csp-2024-m4:
           title: Module 4
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2024-m4
         vpl-csp-2024-m5:
           title: Module 5
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2024-m5
         vpl-csp-2024-m6:
           title: Module 6
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2024-m6
         vpl-csp-2024-m7:
           title: Module 7
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2024-m7
         vpl-csp-2024-m8:
           title: Module 8
           description: ''
           student_description: ''
           description_short: ''
           description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: vpl-csp-2024-m8
         self-paced-pl-csp1-2024:
           title: Welcome
           description: "This module is a short introduction to both Code.org and professional learning modules. \n\n**You will:**\n* Get an introduction to Code.org and CS Principles.\n* Learn how to engage in professional learning modules.\n\n**Suggested Time:** 10 minutes"
@@ -17215,7 +17310,7 @@ en:
             lessonGroup-5:
               display_name: Survey
           title: AI and Machine Learning ('24-'25)
-          description: "This unit is a hands-on introduction to developing a machine learning model with tabular data. Students explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.\n\n::: details [**Chapter 1 Overview**]\n**Description:** Students learn the basics of machine learning and use a tool called AI Lab to create machine learning models that can be used in App Lab. The unit starts with an overview of machine learning and how computers can use patterns in data to make decisions and predictions. Then, students learn how to use AI Lab to train models from tabular data while exploring issues of bias. Lessons follow a repeating \"unplugged - AI Lab - App Lab\" pattern so students are continually exposed to the concepts and tools of machine learning. The chapter culminates in a project where students select from a set of real-world datasets to train a machine learning model and create an app.\n\n\n**Goals:**\n* Create a machine learning model in AI Lab to solve a problem, and use App Lab to create an app that uses their model. \n* Understand how machine learning models make decisions from data\n\n\n**Big Questions:**\n- How does machine learning find patterns in data to make decisions?\n- How can we avoid bias when training a machine learning model?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** This chapter prepares students to be machine learning scientists to create an app that addresses an issue in their community. Students follow along with a fictional group of students as they define an issue, develop a survey to collect data, analyze their data in AI Lab, create a model card, and create an app to solve their problem. Then, in the final project, students repeat these same steps with an issue they care about in their community.\n\n**Goals:**\n* Create machine learning models in AI Lab  from their own data and use App Lab to create an app that uses their model to solve problems in their community. \n\n\n**Big Questions:**\n- How can machine learning be used to solve problems in our community?\n\n:::\n\n\n::: details [**Implementation Guidance for the AI and Machine Learning Unit**]\n\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n- You can view the full [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [AI/ML Self-Paced Professional Development Module](https://studio.code.org/courses/self-paced-pl-aiml-2023). The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7) to let the Code.org curriculum team know how the unit went."
+          description: "This unit is a hands-on introduction to developing a machine learning model with tabular data. Students explore how computers learn from data to make decisions, then develop machine learning projects around real-world data. The unit culminates in designing a machine learning app to solve a personally relevant problem.\n\n::: details [**Chapter 1 Overview**]\n**Description:** Students learn the basics of machine learning and use a tool called AI Lab to create machine learning models that can be used in App Lab. The unit starts with an overview of machine learning and how computers can use patterns in data to make decisions and predictions. Then, students learn how to use AI Lab to train models from tabular data while exploring issues of bias. Lessons follow a repeating \"unplugged - AI Lab - App Lab\" pattern so students are continually exposed to the concepts and tools of machine learning. The chapter culminates in a project where students select from a set of real-world datasets to train a machine learning model and create an app.\n\n\n**Goals:**\n* Create a machine learning model in AI Lab to solve a problem, and use App Lab to create an app that uses their model. \n* Understand how machine learning models make decisions from data\n\n\n**Big Questions:**\n- How does machine learning find patterns in data to make decisions?\n- How can we avoid bias when training a machine learning model?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** This chapter prepares students to be machine learning scientists to create an app that addresses an issue in their community. Students follow along with a fictional group of students as they define an issue, develop a survey to collect data, analyze their data in AI Lab, create a model card, and create an app to solve their problem. Then, in the final project, students repeat these same steps with an issue they care about in their community.\n\n**Goals:**\n* Create machine learning models in AI Lab  from their own data and use App Lab to create an app that uses their model to solve problems in their community. \n\n\n**Big Questions:**\n- How can machine learning be used to solve problems in our community?\n\n:::\n\n\n::: details [**Implementation Guidance for the AI and Machine Learning Unit**]\n\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/view) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/view)\n- You can view the full [Implementation Guide](https://docs.google.com/document/d/1sM_1Oxb7TGp5gSfuMjs0X0_Tko9tm8QJ4N6L26NI_iE/view) for more information about this unit\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [AI/ML Self-Paced Professional Development Module](https://studio.code.org/courses/self-paced-pl-aiml-2024). The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7) to let the Code.org curriculum team know how the unit went."
           student_description: |-
             This unit is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
 
@@ -17377,7 +17472,7 @@ en:
               display_name: Inputs and Outputs
             lessonGroup-4:
               display_name: Building Physical Prototypes
-          title: Unit 4B - Creating Apps with Devices (micro:bit)
+          title: 'Unit 4B - Creating Apps with Devices (micro:bit) '
           description: "In the Creating Apps with Devices unit, students explore the role of physical devices in computing. Using App Lab and BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **micro:bit** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **circuit playground** devices by assigning the [Creating Apps with Devices (Circuit Playground) unit](/s/focus-on-coding4a-2023). Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n* Create app prototypes that use a physical device to control a digital app.\n\n\n**Big Questions:**\n- What inputs and outputs are available on a physical device?\n- What inputs and outputs are available on an app?\n- How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates sensors with digital apps. \n* Create app prototypes that use a physical device to solve real-world problems.\n* Use physical computing to solve problems in fun and innovative ways.\n\n\n**Big Questions:**\n- How can a physical device use sensors to react to a physical environment?\n- How can simple hardware be used to develop innovative new products?\n\n:::\n\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n- This unit requires students to have access to micro:bit devices - [click here for more information about using micro:bit's in your classroom](https://code.org/maker/microbit)\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices (micro:bit) Self-Paced Professional Development Module](https://studio.code.org/courses/self-paced-pl-microbit). The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) to let the Code.org curriculum team know how the unit went."
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and BBC micro:bit, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the micro:bit as the basis for an innovation of your own design.
           description_short: ''
@@ -17528,7 +17623,7 @@ en:
               display_name: Inputs and Outputs
             lessonGroup-4:
               display_name: Building Physical Prototypes
-          title: Unit 3B - (Option B) Creating Apps with Devices (micro:bit)
+          title: Unit 3B - (Option B) Creating Apps with Devices (micro:bit)  ('24-'25)
           description: "In the Creating Apps with Devices unit, students explore the role of physical devices in computing. Using App Lab and BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **micro:bit** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **circuit playground** devices by assigning the [Creating Apps with Devices (Circuit Playground) unit](/s/focus-on-hardware3a-2023). Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n* Create app prototypes that use a physical device to control a digital app.\n\n\n**Big Questions:**\n- What inputs and outputs are available on a physical device?\n- What inputs and outputs are available on an app?\n- How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates sensors with digital apps. \n* Create app prototypes that use a physical device to solve real-world problems.\n* Use physical computing to solve problems in fun and innovative ways.\n\n\n**Big Questions:**\n- How can a physical device use sensors to react to a physical environment?\n- How can simple hardware be used to develop innovative new products?\n\n:::\n\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n- This unit requires students to have access to micro:bit devices - [click here for more information about using micro:bit's in your classroom](https://code.org/maker/microbit)\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices (micro:bit) Self-Paced Professional Development Module](https://studio.code.org/courses/self-paced-pl-microbit). The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) to let the Code.org curriculum team know how the unit went."
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and BBC micro:bit, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the micro:bit as the basis for an innovation of your own design.
           description_short: ''
@@ -17610,7 +17705,7 @@ en:
               display_name: Inputs and Outputs
             lessonGroup-4:
               display_name: Building Physical Prototypes
-          title: Unit 4B - (Option B) Creating Apps with Devices (micro:bit)
+          title: Unit 4B - (Option B) Creating Apps with Devices (micro:bit) ('24-'25)
           description: "In the Creating Apps with Devices unit, students explore the role of physical devices in computing. Using App Lab and BBC micro:bit, students develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. Then, students explore how physical devices can be used to react to the world around them using a “maker” mindset to create prototypes with everyday materials.\n\n⚠️ This unit uses the **micro:bit** to introduce physical computing and the \"maker\" mindset. You can also teach this content using **circuit playground** devices by assigning the [Creating Apps with Devices (Circuit Playground) unit](/s/focus-on-design-with-purpose4a-2023). Both units teach the same content and are equivalent - you do not need to buy both sets of devices or teach both units.\n\n::: details [**Chapter 1 Overview**]\n**Description:** This unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. By the end of the chapter, students will be able to create an app that controls a device, similar to many \"smart\" hardware they may experience in their day-to-day lives.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates physical inputs and outputs with digital apps. \n* Create app prototypes that use a physical device to control a digital app.\n\n\n**Big Questions:**\n- What inputs and outputs are available on a physical device?\n- What inputs and outputs are available on an app?\n- How can we create apps that use a physical device to control a digital app?\n\n:::\n\n::: details [**Chapter 2 Overview**]\n**Description:** In this chapter, students focus on how their physical device can interact with the outside world. They learn how to use sensors and the accelerometer to react to the physical environment. They learn to attach external LEDs and buttons that extend the types of devices they can make. Throughout the unit, students use physical materials like paper or cardboard to extend the functionality of their devices. By the end of the unit, students will have created an interactive art project and developed a prototype for a physical device that solves a problem.\n\n\n**Goals:**\n* Design and build a physical computing device that integrates sensors with digital apps. \n* Create app prototypes that use a physical device to solve real-world problems.\n* Use physical computing to solve problems in fun and innovative ways.\n\n\n**Big Questions:**\n- How can a physical device use sensors to react to a physical environment?\n- How can simple hardware be used to develop innovative new products?\n\n:::\n\n\n::: details [**Implementation Guidance for Creating Apps with Devices**]\n- This unit requires students to have access to micro:bit devices - [click here for more information about using micro:bit's in your classroom](https://code.org/maker/microbit)\n- Guidance for how to support students in programming levels and differentiate tasks are available in the [Programming Levels Guide](https://docs.google.com/document/d/1LlbzDHvq_DXggzeGg_sBcNov9pZX7h9NqardkGW4ELw/preview) and [Differentiation Guide](https://docs.google.com/document/d/10u5N7zCf52IZiSf4drQplEz3d3zS1iqWpegbBMDm0RQ/preview)\n:::\n\n::: details [**Professional Development**]\nIf you are interested in teaching this course, we recommend completing the free [Creating Apps for Devices (micro:bit) Self-Paced Professional Development Module](https://studio.code.org/courses/self-paced-pl-microbit). The module is designed to take 2 hours to complete. No previous experience with coding or devices is assumed.\n:::\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) to let the Code.org curriculum team know how the unit went."
           student_description: This unit explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and BBC micro:bit, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the micro:bit as the basis for an innovation of your own design.
           description_short: ''
@@ -17774,7 +17869,13 @@ en:
           lesson_groups: {}
           name: focus-on-data-post-survey-2024
         sandbox-csf-a:
-          lessons: {}
+          lessons:
+            lesson-1:
+              name: Learn to Drag and Drop
+            lesson-4:
+              name: Digital Citizenship
+            lesson-5:
+              name: Unplugged Lessons
           lesson_groups: {}
           name: sandbox-csf-a
           title: 'SANDBOX CSF Course A '
@@ -17873,7 +17974,7 @@ en:
             * ##### Practice key concepts included in the unit.
             * ##### Engage with AI Lab and App Lab.
 
-            ##### **Suggested time:** UPDATE minutes
+            ##### **Suggested time:** 70 minutes
           student_description: |-
             ##### This section contains a curriculum overview of the Artificial Intelligence (AI) and Machine Learning unit.
 
@@ -17883,12 +17984,12 @@ en:
             * ##### Practice key concepts included in the unit.
             * ##### Engage with AI Lab and App Lab.
 
-            ##### **Suggested time:** UPDATE minutes
+            ##### **Suggested time:** 70 minutes
         self-paced-pl-foundations-unit4:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-foundations-unit4
-          title: 'Curriculum Overview: Unit 1 - Computer Systems and Devices (micro:bit)'
+          title: 'Curriculum Overview: Unit 1A - (Option A) Computer Systems and Devices with micro:bit'
           description_audience: ''
           description_short: ''
           description: |-
@@ -17899,8 +18000,9 @@ en:
             * ##### Get an introduction to Computer Systems and Devices
             * ##### Set up your micro:bit
             * ##### Practice key concepts included in the unit.
+            * ##### Preview the end-of-unit project.
 
-            ##### **Suggested time:** UPDATE minutes
+            ##### **Suggested time:** 55 minutes
           student_description: |-
             ##### This section contains a curriculum overview of the Computer Systems and Devices unit, focusing on the BBC micro:bit.
 
@@ -17909,8 +18011,9 @@ en:
             * ##### Get an introduction to Computer Systems and Devices
             * ##### Set up your micro:bit
             * ##### Practice key concepts included in the unit.
+            * ##### Preview the end-of-unit project.
 
-            ##### **Suggested time:** UPDATE minutes
+            ##### **Suggested time:** 55 minutes
         self-paced-pl-foundations-unit5:
           lessons: {}
           lesson_groups: {}
@@ -17933,7 +18036,7 @@ en:
           lessons: {}
           lesson_groups: {}
           name: self-paced-pl-foundations-unit1
-          title: 'Curriculum Overview: Unit 1 - Computer Systems and Devices (Circuit Playground)'
+          title: 'Curriculum Overview: Unit 1B - (Option B) Computer Systems and Devices with Circuit Playground'
           description_audience: ''
           description_short: ''
           description: |-
@@ -17944,8 +18047,9 @@ en:
             * ##### Get an introduction to Computer Systems and Devices
             * ##### Set up your Circuit Playground.
             * ##### Practice key concepts included in the unit.
+            * ##### Preview the end-of-unit project.
 
-            ##### **Suggested time:** UPDATE minutes
+            ##### **Suggested time:** 55 minutes
           student_description: |-
             ##### This section contains a curriculum overview of the Computer Systems and Devices unit, focusing on Adafruit's Circuit Playground.
 
@@ -17954,8 +18058,9 @@ en:
             * ##### Get an introduction to Computer Systems and Devices
             * ##### Set up your Circuit Playground.
             * ##### Practice key concepts included in the unit.
+            * ##### Preview the end-of-unit project.
 
-            ##### **Suggested time:** UPDATE minutes
+            ##### **Suggested time:** 55 minutes
         self-paced-pl-foundations-unit2:
           lessons: {}
           lesson_groups: {}
@@ -17971,7 +18076,7 @@ en:
             * ##### Get an introduction to Representing Information.
             * ##### Practice key concepts included in the unit.
 
-            ##### **Suggested time:** UPDATE minutes
+            ##### **Suggested time:** 40 minutes
           student_description: |-
             ##### This section contains a curriculum overview of the Representing Information unit.
 
@@ -17980,7 +18085,7 @@ en:
             * ##### Get an introduction to Representing Information.
             * ##### Practice key concepts included in the unit.
 
-            ##### **Suggested time:** UPDATE minutes
+            ##### **Suggested time:** 40 minutes
         gen-ai-customizing-pilot-v2:
           lessons:
             lesson-11:
@@ -18151,6 +18256,8 @@ en:
               display_name: Customizing Language Models
             lessonGroup-4:
               display_name: User-Centered Design
+            lessonGroup-5:
+              display_name: Flexible Implementation Lessons
           name: gen-ai-staging
           title: ''
           description_audience: ''
@@ -18224,7 +18331,7 @@ en:
           title: Game Design
           description_audience: ''
           description_short: ''
-          description: "#### **You will:**\n\n* ####  Learn the basic elements of game design.\n* #### Use variables to keep score.\n* ####  Code environment and player sprites. \n* Learn how to host a game jam in your classroom. \n* Learn how to access Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
+          description: "#### **You will:**\n\n* ####  Learn the basic elements of game design.\n* #### Use variables to keep score.\n* ####  Code environment and player sprites. \n* #### Learn how to host a game jam in your classroom. \n* #### Learn how to access Code.org curricula.\n\n**Suggested time:** 80 minutes\n"
           student_description: "#### **You will:**\n\n* #### Learn the basic elements of game design.\n* #### Use variables to keep score.\n* #### Code environment and player sprites. \n* #### Learn how to host a game jam in your classroom. \n* ####  Learn how to access Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
         k5gettingstarted:
           lessons: {}
@@ -18316,4 +18423,640 @@ en:
           description_short: ''
           description: "#### This module covers the concepts and skills that are in the first micro:bit track.\n\n#### **You will:**\n* #### Explore an unplugged coding lesson. \n* #### Code using events with Code.org.\n\n* #### Create and code with variables.\n\n\n#### **Suggested Time:** 70 minutes\n\n\n"
           student_description: "#### This module covers the concepts and skills that are in the first micro:bit track.\n\n#### **You will:**\n* #### Explore an unplugged coding lesson. \n* #### Code using events with Code.org.\n\n* #### Create and code with variables.\n\n\n#### **Suggested Time:** 70 minutes\n\n\n"
-...
+        intro-to-data-science:
+          lessons: {}
+          lesson_groups: {}
+          name: intro-to-data-science
+          title: Introduction to Data Science
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        intro-to-data-science-2024:
+          lessons:
+            lesson-13:
+              name: Pre-Assessment
+            lesson-1:
+              name: Introduction to Data Science
+            lesson-2:
+              name: Making Sense of Data
+            lesson-3:
+              name: Ethical Data Collection
+            lesson-4:
+              name: Data Rights
+            lesson-5:
+              name: Effective Data Questions
+            lesson-6:
+              name: Data Storytelling
+            lesson-7:
+              name: Introduction to Data Visualization
+            lesson-8:
+              name: Data Cleaning and Analysis Techniques
+            lesson-9:
+              name: Data Interpretation
+            lesson-10:
+              name: More Visualization Techniques
+            lesson-11:
+              name: Crafting Stories with Data Project
+            lesson-12:
+              name: Assessment Day
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Getting Started
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: intro-to-data-science-2024
+          title: Introduction to Data Science
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        data-science-with-python-2024:
+          lessons:
+            lesson-1:
+              name: Project Kickoff
+            lesson-2:
+              name: Introduction to Python
+            lesson-3:
+              name: Introduction to Pandas
+            lesson-4:
+              name: Introduction to Matplotlib
+            lesson-5:
+              name: Getting to Know Your Data
+            lesson-6:
+              name: Accessing and Grouping Values
+            lesson-7:
+              name: Cleaning Data
+            lesson-8:
+              name: More Visualization Types
+            lesson-9:
+              name: Exploratory Data Analysis
+            lesson-10:
+              name: Querying Your Data
+            lesson-11:
+              name: Data Science for Community Impact Project
+            lesson-12:
+              name: Assessment
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+          name: data-science-with-python-2024
+          title: Data Science with Python
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        tess-getting-started:
+          lessons: {}
+          lesson_groups: {}
+          name: tess-getting-started
+          title: Getting Started with Code.org [Optional]
+          description_audience: ''
+          description_short: ''
+          description: "#### This module is a short introduction to using the Code.org platform.\n\n#### **You will:**\n* #### Get an introduction to Code.org \n* #### Learn to navigate the teacher features on the Code.org platform\n\n#### **Suggested Time:** 30 minutes"
+          student_description: "#### This module is a short introduction to using the Code.org platform.\n\n#### **You will:**\n* #### Get an introduction to Code.org \n* #### Learn to navigate the teacher features on the Code.org platform\n\n#### **Suggested Time:** 30 minutes"
+        getting-started-with-code:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Getting Started with Code.org
+          name: getting-started-with-code
+          title: Getting Started [Optional]
+          description_audience: ''
+          description_short: ''
+          description: "#### **You will:**\n\n* ####  Get an introduction to Code.org’s mission. \n* ####  Learn how to navigate the Code.org website and teacher tools.\n* ####  Set up a classroom section.\n* ####  Locate and use course lesson plans and teacher resources.\n* ####  Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
+          student_description: "#### **You will:**\n\n#### * Get an introduction to Code.org’s mission. \n#### * Learn how to navigate the Code.org website and teacher tools.\n#### * Set up a classroom section.\n#### * Locate and use course lesson plans and teacher resources.\n#### * Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
+        getting-started-with-code-maker:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Getting Started with Code.org
+          name: getting-started-with-code-maker
+          title: Getting Started [Optional]
+          description_audience: ''
+          description_short: ''
+          description: "#### **You will:**\n\n* ####  Get an introduction to Code.org’s mission. \n* ####  Learn how to navigate the Code.org website and teacher tools.\n* ####  Set up a classroom section.\n* ####  Locate and use course lesson plans and teacher resources.\n* ####  Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
+          student_description: "#### **You will:**\n\n#### * Get an introduction to Code.org’s mission. \n#### * Learn how to navigate the Code.org website and teacher tools.\n#### * Set up a classroom section.\n#### * Locate and use course lesson plans and teacher resources.\n#### * Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
+        getting-started-with-code-game-design:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Getting Started with Code.org
+          name: getting-started-with-code-game-design
+          title: Getting Started [Optional]
+          description_audience: ''
+          description_short: ''
+          description: "#### **You will:**\n\n* ####  Get an introduction to Code.org’s mission. \n* ####  Learn how to navigate the Code.org website and teacher tools.\n* ####  Set up a classroom section.\n* ####  Locate and use course lesson plans and teacher resources.\n* ####  Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
+          student_description: "#### **You will:**\n\n#### * Get an introduction to Code.org’s mission. \n#### * Learn how to navigate the Code.org website and teacher tools.\n#### * Set up a classroom section.\n#### * Locate and use course lesson plans and teacher resources.\n#### * Learn how to access support while teaching Code.org curricula.\n\n#### **Suggested time:** 80 minutes\n"
+        k5-unplugged:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sequencing
+            lessonGroup-3:
+              display_name: Loops
+            lessonGroup-4:
+              display_name: Events
+            lessonGroup-5:
+              display_name: Impacts of Computing
+            lessonGroup-6:
+              display_name: Data
+            lessonGroup-7:
+              display_name: Computer Systems
+            lessonGroup-8:
+              display_name: Conditionals
+            lessonGroup-9:
+              display_name: Functions
+            lessonGroup-10:
+              display_name: Variables
+          name: k5-unplugged
+          title: Unplugged Activities for K-5
+          description_audience: ''
+          description_short: ''
+          description: |-
+            #####We've compiled a list of all of our unplugged lessons for you to use in your classroom. Now you can teach the fundamentals of computer science, whether you have computers in your classroom or not!
+
+            <img src="https://images.code.org/8f9ecd6897039d861bccd67cd60a16c4-image-1721339529551.jpg" width=450px style="float:right; margin-left:30px">
+
+            #####We refer to lessons in which students are not working on a computer as “unplugged.” Students will often work with pencil and paper or physical manipulatives. These are intentionally placed kinesthetic opportunities that help students digest complicated concepts in ways that relate to their own lives.
+
+            #####Unplugged lessons are particularly useful for building and maintaining a collaborative classroom environment, and they are useful touchstone experiences you can refer to when introducing more abstract concepts. Each of these activities can either be used alone or with other computer science lessons on related concepts.
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+          student_description: ''
+        csa1-alt-2025:
+          lessons:
+            lesson-6:
+              name: User Input
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+          name: csa1-alt-2025
+          title: Using Objects and Methods
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa2-alt-2025:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+          name: csa2-alt-2025
+          title: Selection and Iteration
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa3-alt-2025:
+          lessons:
+            lesson-3:
+              name: Program Design
+            lesson-5:
+              name: AI-Generated Code
+            lesson-9:
+              name: No-Argument Constructors
+            lesson-11:
+              name: Parameterized Constructors
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: AI-Generated Code
+          name: csa3-alt-2025
+          title: Class Creation
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csa4-alt-2025:
+          lessons:
+            lesson-1:
+              name: Ethical and Social Issues Around Data Collection
+            lesson-2:
+              name: Data Sets
+            lesson-9:
+              name: Text Files
+            lesson-19:
+              name: Enhanced For Loops (2D)
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+          name: csa4-alt-2025
+          title: Data Collections
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        hello-world-food-one:
+          title: 'Hello World: Food'
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+        sandbox-csf-course-a:
+          lessons: {}
+          lesson_groups: {}
+        hello-world-transformers-one-2024:
+          title: 'Hello World: Transformers One'
+          description: ''
+          student_description: ''
+          description_short: ''
+          description_audience: ''
+          lessons: {}
+          lesson_groups: {}
+          name: hello-world-transformers-one-2024
+        csa1-pilot-2025:
+          lessons:
+            lesson-8:
+              name: AI-Generated Code
+            lesson-2:
+              name: AI-Generated Code (non-AI Tutor)
+            lesson-1:
+              name: Unit 1 Survey
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Survey
+            lessonGroup-3:
+              display_name: Content
+            lessonGroup-4:
+              display_name: Show What You Know
+            lessonGroup-5:
+              display_name: Pre-Survey
+            lessonGroup-6:
+              display_name: Alternate Lessons
+            lessonGroup-7:
+              display_name: Sandboxes
+            lessonGroup-8:
+              display_name: End of Unit Survey
+          name: csa1-pilot-2025
+          title: Object-Oriented Programming
+          description_audience: ''
+          description_short: Students learn fundamental Java concepts, discover their identity as software engineers, and use debugging strategies and code reviews to improve their programming skills.
+          description: "This unit introduces students to object-oriented programming principles as they explore The Neighborhood and discover their identity as a software engineer. Students learn fundamental Java concepts as they navigate and paint in The Neighborhood with `Painter` objects and extend the `Painter` class to expand the capabilities of their programs. Students practice predicting the outcome of program code and developing algorithms using sequencing, selection, and iteration to navigate mazes and paint murals. Students also learn to document program code using comments to describe the behavior of specific code segments and conduct code reviews to receive feedback from their peers.\n\n### \U0001F3AF Unit Objectives\n\n*By the end of this unit, students will be able to . . .*\n\n* Use inheritance to create subclasses that extend an existing class\n\n* Write methods with and without parameters to perform a specific task\n\n* Implement algorithms sequencing, selection, and iteration\n\n* Write clear and readable code using methods, control structures, and comments\n\n* Improve a program through iterative development based on feedback"
+          student_description: "This unit introduces you to object-oriented programming principles as you explore The Neighborhood and discover your identity as a software engineer. You learn fundamental Java concepts as you navigate and paint in The Neighborhood with `Painter` objects and extend the `Painter` class to expand the capabilities of your programs. You practice predicting the outcome of program code and developing algorithms using sequencing, selection, and iteration to navigate mazes and paint murals. You also learn to document program code using comments to describe the behavior of specific code segments and conduct code reviews to receive feedback from your peers.\n\n### \U0001F3AF Unit Objectives\n\n*By the end of this unit, you will be able to . . .*\n\n* Use inheritance to create subclasses that extend an existing class\n\n* Write methods with and without parameters to perform a specific task\n\n* Implement algorithms sequencing, selection, and iteration\n\n* Write clear and readable code using methods, control structures, and comments\n\n* Improve a program through iterative development based on feedback"
+        csa2-pilot-2025:
+          lessons:
+            lesson-3:
+              name: Program Design
+            lesson-5:
+              name: User Input
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+            lessonGroup-4:
+              display_name: End of Unit Survey
+            lessonGroup-5:
+              display_name: Alternate Lessons
+            lessonGroup-6:
+              display_name: Sandboxes
+          name: csa2-pilot-2025
+          title: Class Structure and Design
+          description_audience: ''
+          description_short: Students develop an understanding of data encapsulation and object-oriented design decisions.
+          description: "This unit expands on the object-oriented programming principles introduced in Unit 1 to explore design principles as students develop classes with attributes and behaviors and work with primitive and object data. Students learn to write no-argument constructors to assign default values and parameterized constructors to assign specific values to an object's instance variables. They explore how the `this` keyword can be used to reduce ambiguity and redundancies in their program and how the `super` keyword can be used to call a superclass constructor or method. Students also learn how to work with variables and write expressions using arithmetic and compound assignment operators and practice tracing code segments to determine the output. After working with instance variables and constructors, they write accessor and mutator methods to work with the values assigned to an object's instance variables and `toString()` methods to display information about an object to the console. Throughout this unit, students continue to develop software engineering skills as they learn to make design decisions and use inheritance to create class hierarchies.\n\n### \U0001F3AF Unit Objectives\n\n*By the end of this unit, students will be able to . . .*\n\n* Represent attributes of an object using instance variables\n\n* Write no-argument and parameterized constructors to set the state of an object\n\n* Use the `super` keyword to refer to the superclass in constructors and methods\n\n* Write expressions using arithmetic operators and compound assignment operators with variables and object data\n\n* Write accessor and mutator methods to obtain and modify object data\n\n* Write `toString()` methods and use escape sequences to display and format information about an object to the console\n\n### ✅ AP Classroom Personal Progress Checks\n\nTo assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's <a href=\"https://studio.code.org/s/csa2-2023/standards\" target=\"_blank\"><strong>Standards</strong></a> page. You can find instructions and video demonstrations to do this on <a href=\"https://apcentral.collegeboard.org/instructional-resources/ap-classroom\" target=\"_blank\"><strong>AP Central</strong></a>.\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n\n* Personal Progress Check 1\n\n* Personal Progress Check 5\n\n* Personal Progress Check 9\n\n***Note:*** *Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.*\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=2) to let the Code.org curriculum team know how the unit went. "
+          student_description: "This unit expands on the object-oriented programming principles introduced in Unit 1 to explore design principles as you develop classes with attributes and behaviors and work with primitive and object data. You learn to work with variables and user input as you develop and utilize classes and objects to represent desserts, customers, and food trucks for the Project Mercury Pastries Food Truck business. As you work with the `Dessert` class, you build on your knowledge of inheritance to design subclasses that represent specific types of desserts. While working with variables, you learn to create and evaluate expressions using assignment and relational operators and trace code segments to determine the result of output. Throughout this unit, you continue to develop software engineering skills as you learn to use UML diagrams to represent classes and the DRY principle to refactor program code.\n\n### \U0001F3AF Unit Objectives\n\n*By the end of this unit, you will be able to . . .*\n\n* Represent attributes of an object using instance variables\n\n* Write no-argument and parameterized constructors to set the state of an object\n\n* Use the `super` keyword to refer to the superclass in constructors and methods\n\n* Write expressions using arithmetic operators and compound assignment operators with variables and object data\n\n* Write accessor and mutator methods to obtain and modify object data\n\n* Write `toString()` methods and use escape sequences to display and format information about an object to the console"
+        csa3-pilot-2025:
+          lessons:
+            lesson-1:
+              name: Data Sets
+            lesson-6:
+              name: Text Files
+            lesson-8:
+              name: Ethical and Social Issues Around Data Collection
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+            lessonGroup-4:
+              display_name: End of Unit Survey
+            lessonGroup-5:
+              display_name: Alternate Lessons
+            lessonGroup-6:
+              display_name: Sandboxes
+          name: csa3-pilot-2025
+          title: Arrays and Algorithms
+          description_audience: ''
+          description_short: Students use one-dimensional (1D) arrays to store lists of primitive values and object references.
+          description: "This unit introduces students to data structures to store primitive values and object references. Students use one-dimensional (1D) arrays to store multiple related values while expanding their knowledge of loops and conditionals to analyze and process data in a 1D array. Students learn to use `for` loops to traverse arrays and discover that an algorithm involving loops can be implemented with either a `for` loop or a `while` loop. Throughout the unit, students develop and modify algorithms to find and manipulate elements in a 1D array while also discovering the concept of polymorphism when traversing arrays of objects. While developing algorithms, students identify preconditions and postconditions and implement solutions to ensure that these conditions are satisfied. Students continue to develop software engineering skills as they learn to make design decisions and use 1D arrays to store and analyze data.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, students will be able to . . .</em></strong></p>\n\n* Declare and initialize one-dimensional (1D) arrays to store primitive values and objects using the `new` keyword and initializer lists\n\n* Traverse the elements in one-dimensional (1D) arrays using `for` loops, `while` loops, and enhanced `for` loops\n\n* Write algorithms to find and modify elements in one-dimensional (1D) arrays\n\n* Implement solutions to satisfy the preconditions and postconditions of an algorithm\n\n* Debug common errors that occur when traversing one-dimensional (1D) arrays\n\n* Use polymorphism to create and traverse one-dimensional (1D) arrays of a superclass type\n    </div>\n</details>\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">✅ AP Classroom Personal Progress Checks</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p>To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's <a href=\"https://studio.code.org/s/csa2-2023/standards\" target=\"_blank\"><strong>Standards</strong></a> page. You can find instructions and video demonstrations to do this on <a href=\"https://apcentral.collegeboard.org/instructional-resources/ap-classroom\" target=\"_blank\"><strong>AP Central</strong></a>.</p>\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n\n* Personal Progress Check 4\n\n* Personal Progress Check 6\n\n<p><em><strong>Note:</strong> Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.</em></p>\n    </div>\n</details>\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=3) to let the Code.org curriculum team know how the unit went."
+          student_description: "This unit introduces you to data structures to store primitive values and object references. You use one-dimensional (1D) arrays to store multiple related values while expanding your knowledge of loops and conditionals to analyze and process data in a 1D array. You learn to use `for` loops to traverse arrays and discover that an algorithm involving loops can be implemented with either a `for` loop or a `while` loop. Throughout the unit, you develop and modify algorithms to find and manipulate elements in a 1D array while also discovering the concept of polymorphism when traversing arrays of objects. While developing algorithms, you identify preconditions and postconditions and implement solutions to ensure that these conditions are satisfied. You continue to develop software engineering skills as you learn to make design decisions and use 1D arrays to store and analyze data.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p>\n\n* Declare and initialize one-dimensional (1D) arrays to store primitive values and objects using the `new` keyword and initializer lists\n\n* Traverse the elements in one-dimensional (1D) arrays using `for` loops, `while` loops, and enhanced `for` loops\n\n* Write algorithms to find and modify elements in one-dimensional (1D) arrays\n\n* Implement solutions to satisfy the preconditions and postconditions of an algorithm\n\n* Debug common errors that occur when traversing one-dimensional (1D) arrays\n\n* Use polymorphism to create and traverse one-dimensional (1D) arrays of a superclass type\n    </div>\n</details>"
+        csa4-pilot-2025:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+            lessonGroup-4:
+              display_name: End of Unit Survey
+            lessonGroup-5:
+              display_name: Alternate Lessons
+            lessonGroup-6:
+              display_name: Sandboxes
+          name: csa4-pilot-2025
+          title: Conditions and Logic
+          description_audience: ''
+          description_short: Students improve decision-making in their programs using relational and logical operators to evaluate primitive values and object references and use the Math class to perform calculations and generate random numbers.
+          description: "This unit expands on the use of APIs, object-oriented programming concepts, and conditional statements to develop visuals and animations using The Theater. Students learn about the functionality of the `static` keyword and explore the methods in the `Math` class to perform calculations and incorporate randomness in program decisions and behaviors. While working with conditional statements and Boolean expressions, students realize the difference between using the `==` operator and the `equals()` method to compare objects for equality and discover the need for overriding the `equals()` method in their own classes. They deepen their understanding of conditional statements and logical operators as they learn to write nested conditional statements, use the AND ( `&&` ) and OR ( `||` ) operators, and write multi-selection statements to test multiple conditions. Using their knowledge of Boolean expressions and logical operators, they practice evaluating truth tables to compare two expressions for equivalence and applying De Morgan's Laws to simplify expressions.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, students will be able to . . .</em></strong></p>\n\n* Use the `static` keyword to to create static variables and methods in a class\n\n* Call `Math` class methods and constants to perform calculations and generate random numbers\n\n* Use casting operators to assign a value of one type to another\n\n* Explain the difference between `==` and `equals()`\n\n* Write nested `if` statements to test a combination of conditions\n\n* Construct a conditional statement involving logical operators\n\n* Evaluate compound Boolean expressions for equivalence\n\n* Write multi-selection statements to test multiple conditions\n    </div>\n</details>\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">✅ AP Classroom Personal Progress Checks</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p>To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's <a href=\"https://studio.code.org/s/csa2-2023/standards\" target=\"_blank\"><strong>Standards</strong></a> page. You can find instructions and video demonstrations to do this on <a href=\"https://apcentral.collegeboard.org/instructional-resources/ap-classroom\" target=\"_blank\"><strong>AP Central</strong></a>.</p>\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n\n* Personal Progress Check 3\n\n<p><em><strong>Note:</strong> Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.</em></p>\n    </div>\n</details>"
+          student_description: "This unit expands on the use of APIs, object-oriented programming concepts, and conditional statements to develop visuals and animations using The Theater. You learn about the functionality of the `static` keyword and explore the methods in the `Math` class to perform calculations and incorporate randomness in program decisions and behaviors. While working with conditional statements and Boolean expressions, you realize the difference between using the `==` operator and the `equals()` method to compare objects for equality and discover the need for overriding the `equals()` method in their own classes. You deepen your understanding of conditional statements and logical operators as they learn to write nested conditional statements, use the AND ( `&&` ) and OR ( `||` ) operators, and write multi-selection statements to test multiple conditions. Using your knowledge of Boolean expressions and logical operators, you practice evaluating truth tables to compare two expressions for equivalence and applying De Morgan's Laws to simplify expressions.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p>\n\n* Use the `static` keyword to to create static variables and methods in a class\n\n* Call `Math` class methods and constants to perform calculations and generate random numbers\n\n* Use casting operators to assign a value of one type to another\n\n* Explain the difference between `==` and `equals()`\n\n* Write nested `if` statements to test a combination of conditions\n\n* Construct a conditional statement involving logical operators\n\n* Evaluate compound Boolean expressions for equivalence\n\n* Write multi-selection statements to test multiple conditions\n    </div>\n</details>"
+        csa5-pilot-2025:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-6:
+              display_name: Show What You Know
+            lessonGroup-5:
+              display_name: End of Unit Survey
+            lessonGroup-4:
+              display_name: Alternate Lessons
+            lessonGroup-3:
+              display_name: Sandboxes
+          name: csa5-pilot-2025
+          title: Two-Dimensional Arrays
+          description_audience: ''
+          description_short: Students use two-dimensional (2D) arrays to expand storage and organization capabilities in their programs.
+          description: "This unit expands on data structures introduced in Unit 3 to create tables of data using two-dimensional (2D) arrays. Students identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing 2D arrays and apply standard algorithms to find and manipulate elements. As students analyze problems involving 2D arrays, they revisit these standard algorithms to determine what code needs to be added or modified and to interact with completed program code. Students apply these concepts to manipulate pixels and in The Theater to create image filters in addition to working with primitive values and various object references. Additionally, students use the programming knowledge and skills they have acquired to consider the impacts of programs on society, economies, and culture.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, students will be able to . . .</em></strong></p>\n\n* Declare and initialize a two-dimensional (2D) array using the `new` keyword and an initializer list\n\n* Access and modify elements in a two-dimensional (2D) array using row and column indexes\n\n* Write nested loops to traverse a two-dimensional (2D) array in row-major and column-major order\n\n* Write nested enhanced `for` loops to traverse a two-dimensional (2D) array\n\n* Apply standard 1D array algorithms to a 2D array\n\n* Discuss the beneficial and harmful impacts of programs\n    </div>\n</details>\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">✅ AP Classroom Personal Progress Checks</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p>To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's <a href=\"https://studio.code.org/s/csa2-2023/standards\" target=\"_blank\"><strong>Standards</strong></a> page. You can find instructions and video demonstrations to do this on <a href=\"https://apcentral.collegeboard.org/instructional-resources/ap-classroom\" target=\"_blank\"><strong>AP Central</strong></a>.</p>\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n\n* Personal Progress Check 8\n\n<p><em><strong>Note:</strong> Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.</em></p>\n    </div>\n</details>\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=5) to let the Code.org curriculum team know how the unit went."
+          student_description: "This unit expands on data structures introduced in Unit 3 to create tables of data using two-dimensional (2D) arrays. You identify similarities and differences between 1D and 2D arrays when creating, accessing, and traversing 2D arrays and apply standard algorithms to find and manipulate elements. As you analyze problems involving 2D arrays, you revisit these standard algorithms to determine what code needs to be added or modified and to interact with completed program code. You apply these concepts to manipulate pixels using The Theater to create image filters in addition to working with primitive values and various object references. Additionally, you use the programming knowledge and skills you have acquired to consider the impacts of programs on society, economies, and culture.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p>\n\n* Declare and initialize a two-dimensional (2D) array using the `new` keyword and an initializer list\n\n* Access and modify elements in a two-dimensional (2D) array using row and column indexes\n\n* Write nested loops to traverse a two-dimensional (2D) array in row-major and column-major order\n\n* Write nested enhanced `for` loops to traverse a two-dimensional (2D) array\n\n* Apply standard 1D array algorithms to a 2D array\n\n* Discuss the beneficial and harmful impacts of programs\n    </div>\n</details>"
+        csa6-pilot-2025:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-6:
+              display_name: Show What You Know
+            lessonGroup-5:
+              display_name: End of Unit Survey
+            lessonGroup-4:
+              display_name: Alternate Lessons
+            lessonGroup-3:
+              display_name: Sandboxes
+          name: csa6-pilot-2025
+          title: ArrayLists and String Methods
+          description_audience: ''
+          description_short: Students use ArrayLists to store program data and work with methods in the String class to manipulate and evaluate String objects.
+          description: "This unit continues to expand on data structures to introduce students to creating lists using the `ArrayList` class. In the process, students learn about the `Integer` and `Double` classes and use their methods to parse data from text files and explore the limits of integer values. Students differentiate between when to use each type of data structure while learning about the structure and functionality of an `ArrayList`. Students apply standard algorithms to find and manipulate data in an `ArrayList` of numerical and object data. Throughout the unit, students learn to use the `String` class to analyze and process text obtained from a user and from file input while learning about basic natural language processing techniques and applications. Additionally, students further develop software engineering skills by writing Javadoc comments to create API documentation for their programs.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, students will be able to . . .</em></strong></p>\n\n* Use the `Integer` and `Double` class to represent primitive values as objects\n\n* Describe the structure and functionality of an `ArrayList`\n\n* Use methods in the `ArrayList` class to obtain the size of an `ArrayList`, add elements, retrieve elements, set values, and remove elements\n\n* Apply standard algorithms used with one-dimensional (1D) arrays to an `ArrayList`\n\n* Use methods in the `String` class to retrieve substrings and perform comparisons\n\n* Write standard algorithms to traverse a `String` object\n    </div>\n</details>\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">✅ AP Classroom Personal Progress Checks</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p>To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's <a href=\"https://studio.code.org/s/csa2-2023/standards\" target=\"_blank\"><strong>Standards</strong></a> page. You can find instructions and video demonstrations to do this on <a href=\"https://apcentral.collegeboard.org/instructional-resources/ap-classroom\" target=\"_blank\"><strong>AP Central</strong></a>.</p>\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n\n* Personal Progress Check 2\n* Personal Progress Check 7\n\n<p><em><strong>Note:</strong> Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.</em></p>\n    </div>\n</details>\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=6) to let the Code.org curriculum team know how the unit went."
+          student_description: "This unit continues to expand on data structures to introduce you to creating lists using the `ArrayList` class. In the process, you learn about the `Integer` and `Double` classes and use their methods to parse data from text files and explore the limits of integer values. You differentiate between when to use each type of data structure while learning about the structure and functionality of an `ArrayList`. You apply standard algorithms to find and manipulate data in an `ArrayList` of numerical and object data. Throughout the unit, you learn to use the `String` class to analyze and process text obtained from a user and from file input while learning about basic natural language processing techniques and applications. Additionally, you further develop software engineering skills by writing Javadoc comments to create API documentation for your programs.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p>\n\n* Use the `Integer` and `Double` class to represent primitive values as objects\n\n* Describe the structure and functionality of an `ArrayList`\n\n* Use methods in the `ArrayList` class to obtain the size of an `ArrayList`, add elements, retrieve elements, set values, and remove elements\n\n* Apply standard algorithms used with one-dimensional (1D) arrays to an `ArrayList`\n\n* Use methods in the `String` class to retrieve substrings and perform comparisons\n\n* Write standard algorithms to traverse a `String` object\n    </div>\n</details>"
+        csa7-pilot-2025:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-6:
+              display_name: Show What You Know
+            lessonGroup-5:
+              display_name: End of Unit Survey
+            lessonGroup-4:
+              display_name: Alternate Lessons
+            lessonGroup-3:
+              display_name: Sandboxes
+          name: csa7-pilot-2025
+          title: Method Decomposition and Recursion
+          description_audience: ''
+          description_short: Students practice software design and development using the skills and programming constructs they have learned and explore recursion.
+          description: "This unit allows students to practice software design and development using the skills they have learned throughout the curriculum while planning and developing a creative coding project to convey a personal interest or story using The Theater. Students use decomposition strategies and object-oriented principles to plan and implement their ideas while ensuring their projects meet specified requirements. In the process, students learn to write `private`, overloaded, and overridden methods and use the `super` keyword in a subclass method to call a superclass method while exploring the functionality of methods and their parameters. Throughout the unit, students practice tracing and writing recursive methods and comparing these methods to iterative solutions. With the knowledge and skills acquired throughout the year, students consider the need for maximizing system reliability as they explore bugs and issues in existing programs.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, students will be able to . . .</em></strong></p>\n\n* Differentiate between passing primitive values and object references as parameters\n\n* Write and call overloaded, `private`, and overridden methods\n\n* Explain the legal issues and intellectual property concerns of programs that create AI-generated images\n\n* Trace a recursive method to determine its result\n\n* Identify strategies to maximize system reliability\n    </div>\n</details>\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">✅ AP Classroom Personal Progress Checks</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p>To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's <a href=\"https://studio.code.org/s/csa2-2023/standards\" target=\"_blank\"><strong>Standards</strong></a> page. You can find instructions and video demonstrations to do this on <a href=\"https://apcentral.collegeboard.org/instructional-resources/ap-classroom\" target=\"_blank\"><strong>AP Central</strong></a>.</p>\n    </div>\n</details>\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=7) to let the Code.org curriculum team know how the unit went."
+          student_description: "This unit allows you to practice software design and development using the skills you have learned throughout the curriculum while planning and developing a creative coding project to convey a personal interest or story using The Theater. You use decomposition strategies and object-oriented principles to plan and implement your ideas while ensuring your project meet specified requirements. In the process, you learn to write `private`, overloaded, and overridden methods and use the `super` keyword in a subclass method to call a superclass method while exploring the functionality of methods and their parameters. Throughout the unit, you practice tracing and writing recursive methods and comparing these methods to iterative solutions. With the knowledge and skills acquired throughout the year, you consider the need for maximizing system reliability as you explore bugs and issues in existing programs.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p>\n\n* Differentiate between passing primitive values and object references as parameters\n\n* Write and call overloaded, `private`, and overridden methods\n\n* Explain the legal issues and intellectual property concerns of programs that create AI-generated images\n\n* Trace a recursive method to determine its result\n\n* Identify strategies to maximize system reliability\n    </div>\n</details>"
+        csa8-pilot-2025:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Content
+            lessonGroup-3:
+              display_name: Show What You Know
+            lessonGroup-4:
+              display_name: Survey
+            lessonGroup-5:
+              display_name: Alternate Lessons
+            lessonGroup-6:
+              display_name: Sandboxes
+          name: csa8-pilot-2025
+          title: Searching and Sorting
+          description_audience: ''
+          description_short: ''
+          description: "This unit expands on algorithms students have learned to introduce common approaches to searching and sorting 1D and 2D arrays and `ArrayList`s. In the process, students analyze and compare the efficiencies of these algorithms using statement execution counts and further develop problem-solving skills to decompose complex problems. Throughout the unit, students apply their programming and software engineering skills to plan and develop a creative coding project using the console that incorporates object-oriented design, data structures, and algorithmic thinking. With the knowledge and skills acquired throughout the year, students consider the privacy and security of programs and users.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, students will be able to . . .</em></strong></p>\n\n* Explain the functionality of standard searching and sorting algorithms\n\n* Analyze the efficiency of searching and sorting algorithms using execution counts\n\n* Implement algorithms involving multiple 1D or 2D arrays or `ArrayList`s\n    </div>\n</details>\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">✅ AP Classroom Personal Progress Checks</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p>To assign questions from the AP Classroom Question Bank that align with this unit, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements on the unit's <a href=\"https://studio.code.org/s/csa2-2023/standards\" target=\"_blank\"><strong>Standards</strong></a> page. You can find instructions and video demonstrations to do this on <a href=\"https://apcentral.collegeboard.org/instructional-resources/ap-classroom\" target=\"_blank\"><strong>AP Central</strong></a>.</p>\n\nThe following Personal Progress Checks in AP Classroom can be assigned during the Show What You Know week:\n\n* Personal Progress Check 10\n\n<p><em><strong>Note:</strong> Some Learning Objectives and Essential Knowledge statements in the suggested Personal Progress Checks are covered in later units.</em></p>\n    </div>\n</details>\n\n## Finished Teaching This Unit?\nAnswer this [**short survey**](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=8) to let the Code.org curriculum team know how the unit went."
+          student_description: "In this unit, you expand on the algorithms you have learned to explore common approaches to searching and sorting 1D and 2D arrays and `ArrayList`s. In the process, you analyze and compare the efficiencies of these algorithms using statement execution counts and further develop problem-solving skills to decompose complex problems. Throughout the unit, you apply your programming and software engineering skills to plan and develop a creative coding project using the console that incorporates object-oriented design, data structures, and algorithmic thinking. With the knowledge and skills acquired throughout the year, you consider the privacy and security of programs and users.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF Unit Objectives</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>By the end of this unit, you will be able to . . .</em></strong></p>\n\n* Explain the functionality of standard searching and sorting algorithms\n\n* Analyze the efficiency of searching and sorting algorithms using execution counts\n\n* Implement algorithms involving multiple 1D or 2D arrays or `ArrayList`s\n    </div>\n</details>"
+        csa9-pilot-2025:
+          lessons: {}
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Review and Practice
+            lessonGroup-3:
+              display_name: Mock Exams
+            lessonGroup-4:
+              display_name: Sandboxes
+          name: csa9-pilot-2025
+          title: AP Exam Review and Practice
+          description_audience: ''
+          description_short: Students prepare for the AP CSA Exam by practicing strategies for the multiple-choice and free response questions.
+          description: This unit prepares students for the AP CSA Exam by reviewing key concepts, practicing multiple-choice and free response questions, and strengthening test-taking strategies. Students identify strengths and areas of improvement to create individualized study plans to focus their practice and self-assess their progress.
+          student_description: This unit prepares you for the AP CSA Exam by reviewing key concepts, practicing multiple-choice and free response questions, and strengthening test-taking strategies. You identify strengths and areas of improvement to create individualized study plans to focus you practice and self-assess your progress.
+        sandbox-debugging:
+          lessons:
+            lesson-1:
+              name: What is Debugging?
+            lesson-2:
+              name: Active Debugging
+            lesson-3:
+              name: Reflective Debugging
+            lesson-4:
+              name: Bug Talks
+            lesson-5:
+              name: Trace Code Execution
+            lesson-6:
+              name: Hypothesize and Test
+            lesson-7:
+              name: Reproducing Bugs
+            lesson-8:
+              name: Debugging by Comparison
+            lesson-9:
+              name: Using External Resources
+            lesson-10:
+              name: 'Choose Appropriate Techniques '
+          lesson_groups: {}
+          name: sandbox-debugging
+          title: Debugging Sandbox
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        exploring-gen-ai-1:
+          lessons: {}
+          lesson_groups: {}
+          name: exploring-gen-ai-1
+          title: "[Don't Use - use /s/exploring-gen-ai1-2024 instead]"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        exploring-gen-ai-2:
+          lessons: {}
+          lesson_groups: {}
+          name: exploring-gen-ai-2
+          title: "[Don't Use - use /s/exploring-gen-ai2-2024 instead]"
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        self-paced-gen-ai-2024:
+          lessons:
+            lesson-1:
+              name: Introduction to Generative AI
+            lesson-2:
+              name: Lesson Exploration, Foundations of Gen AI
+            lesson-3:
+              name: Lesson Exploration, Customizing Large Language Models
+            lesson-4:
+              name: Lesson Exploration, User Centered Design
+            lesson-5:
+              name: Teaching Resources
+          lesson_groups: {}
+          name: self-paced-gen-ai-2024
+          title: Generative AI Self-Paced Professional Learning
+          description_audience: ''
+          description_short: ''
+          description: "## Welcome! \n##### This professional learning module is designed to help you prepare to teach Code.org’s Generative AI unit.\n\n##### The Generative AI unit is designed as standalone coursework for 6-12 students that can be integrated seamlessly into any existing curriculum, offering teachers the flexibility to introduce it according to their schedule and educational needs. \n\n### Find the learning that works for you\n* **Go at your own pace:** This self-paced learning experience is designed to give you control over your own learning. Suggested times are given for each lesson.  However, we encourage you to **engage with the content at your own pace.**\n\n* **Pick your content:** The content is organized in the suggested progression for teachers new to both Code.org and the Generative AI unit. However, you can **engage with the content in the order that best meets your needs.** If you are already familiar with the Code.org platform, you might choose to skip Getting Started with Code.org and move straight to Computer Vision Unit. "
+          student_description: ''
+        music-ai-2024:
+          lessons:
+            lesson-1:
+              name: 'Music Lab: A.I. Edition for Hour of Code'
+          lesson_groups: {}
+          name: music-ai-2024
+          title: 'Music Lab: AI Edition'
+          description_audience: 'Hour of Code students and teachers '
+          description_short: 'Learn the basics of Music Lab and use AI to help you create new beats and tunes! '
+          description: ''
+          student_description: ''
+        csd-ayw1-debugging:
+          lessons:
+            lesson-1:
+              name: Debugging Challenges
+          lesson_groups: {}
+          name: csd-ayw1-debugging
+          title: 'CSD Academic Year Workshop #1 - Debugging'
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        sandbox-teaching-data-science:
+          lessons:
+            lesson-1:
+              name: Introduction to Teaching Data Science
+            lesson-2:
+              name: Introduction to Data Science [Chapter 1]
+            lesson-3:
+              name: Python and Data Science [Chapter 2]
+            lesson-4:
+              name: Teaching Resources for Data Science
+          lesson_groups: {}
+          name: sandbox-teaching-data-science
+          title: Teaching Data Science
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        foundations-gen-ai-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: foundations-gen-ai-2024
+          title: Foundations of Generative AI
+          description_audience: ''
+          description_short: ''
+          description: This unit aims to build a foundational understanding of text-based generative AI models, focusing on core concepts over technical skills. Students will demystify generative AI models by exploring their internal structures through the familiar lens of input, storage, process, and output. They will gain insights into how these models represent language, the impact of training data on model performance, and the potential for bias. Using this knowledge they will be presented with scenarios throughout the unit where they can help educate individuals who feel powerless or lack agency in how AI is impacting their lives, or respond to individuals who have only read the hype headlines and offer feedback or criticism based on their knowledge of how these AI systems work.
+          student_description: ''
+        customizing-llms-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: customizing-llms-2024
+          title: Customizing Language Models
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        exploring-gen-ai1-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: exploring-gen-ai1-2024
+          title: Foundations of Generative AI
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        exploring-gen-ai2-2024:
+          lessons: {}
+          lesson_groups: {}
+          name: exploring-gen-ai2-2024
+          title: Customizing Language Models
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd-summer-pr-day1:
+          lessons: {}
+          lesson_groups: {}
+          name: csd-summer-pr-day1
+          title: Dìa 1
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd-summer-pr-day2:
+          lessons: {}
+          lesson_groups: {}
+          name: csd-summer-pr-day2
+          title: Dìa 2
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd-summer-pr-day3:
+          lessons: {}
+          lesson_groups: {}
+          name: csd-summer-pr-day3
+          title: Dìa 3
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd-summer-pr-day4:
+          lessons: {}
+          lesson_groups: {}
+          name: csd-summer-pr-day4
+          title: Dìa 4
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        csd-summer-pr-day5:
+          lessons: {}
+          lesson_groups: {}
+          name: csd-summer-pr-day5
+          title: Dìa 5
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
+        pilot-elem-music-lab:
+          lessons:
+            lesson-1:
+              name: Intro & Sequencing
+            lesson-2:
+              name: Loops
+          lesson_groups: {}
+          name: pilot-elem-music-lab
+          title: Intro to Programming with Music Lab
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''

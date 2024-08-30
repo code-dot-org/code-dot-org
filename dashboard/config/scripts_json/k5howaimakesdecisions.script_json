@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-11 17:49:48 UTC",
+    "serialized_at": "2024-07-15 21:26:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -201,6 +201,7 @@
       "key": "d05c52fb-7316-4308-8616-3b1c3d2dd27c",
       "position": 1,
       "properties": {
+        "progression_name": "Next Steps"
       },
       "seeding_key": {
         "activity_section.key": "d05c52fb-7316-4308-8616-3b1c3d2dd27c",
@@ -992,7 +993,8 @@
       "properties": {
         "level_keys": [
           "PLPLPLpl-k5-2_PLexperiences_prod"
-        ]
+        ],
+        "progression": "Next Steps"
       },
       "bonus": false,
       "seeding_key": {

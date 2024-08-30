@@ -1,6 +1,5 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import React from 'react';
-import sinon from 'sinon';
 
 import {
   fakeLessonWithLevels,
@@ -8,8 +7,6 @@ import {
 } from '@cdo/apps/templates/progress/progressTestHelpers';
 import {UnconnectedLessonProgressColumnHeader} from '@cdo/apps/templates/sectionProgressV2/LessonProgressColumnHeader.jsx';
 import i18n from '@cdo/locale';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 const LESSON = fakeLessonWithLevels({numberedLesson: true}, 1);
 
@@ -38,7 +35,7 @@ describe('LessonProgressColumnHeader', () => {
     lesson.numberedLesson = true;
     renderDefault({lesson});
 
-    expect(screen.queryByTitle(i18n.expand())).to.be.null;
+    expect(screen.queryByTitle(i18n.expand())).toBeNull();
   });
 
   it('Shows uninteractive if lockable lesson', () => {
@@ -46,12 +43,12 @@ describe('LessonProgressColumnHeader', () => {
     lesson.lockable = true;
     renderDefault({lesson});
 
-    expect(screen.queryByTitle(i18n.expand())).to.be.null;
+    expect(screen.queryByTitle(i18n.expand())).toBeNull();
     screen.getByTitle(i18n.locked());
   });
 
   it('Shows lesson header and expands on click', () => {
-    const addExpandedLesson = sinon.spy();
+    const addExpandedLesson = jest.fn();
     renderDefault({addExpandedLesson: addExpandedLesson});
 
     screen.getByText(LESSON.relative_position);
@@ -59,6 +56,6 @@ describe('LessonProgressColumnHeader', () => {
     const caret = screen.getByTitle(i18n.expand());
 
     fireEvent.click(caret);
-    expect(addExpandedLesson).to.have.been.calledOnce;
+    expect(addExpandedLesson).toHaveBeenCalledTimes(1);
   });
 });

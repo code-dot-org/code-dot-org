@@ -1,5 +1,6 @@
 <GamelabJr>
   <config><![CDATA[{
+  "published": true,
   "game_id": 64,
   "created_at": "2024-05-17T16:37:32.000Z",
   "level_num": "custom",
@@ -54,9 +55,12 @@
     "instructions_icon": "fox",
     "preload_asset_list": null
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-05-17T16:37:32.651+00:00\",\"changed\":[\"cloned from \\\"game_variables_fix_choices_e_2024\\\"\"],\"cloned_from\":\"game_variables_fix_choices_e_2024\"}]",
+  "audit_log": "[{\"changed_at\":\"2024-05-17T16:37:32.651+00:00\",\"changed\":[\"cloned from \\\"game_variables_fix_choices_e_2024\\\"\"],\"cloned_from\":\"game_variables_fix_choices_e_2024\"},{\"changed_at\":\"2024-07-16 17:15:55 +0000\",\"changed\":[\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18605,\"changed_by_email\":\"katie.frank+levelbuilder@code.org\"}]",
   "level_concept_difficulty": {
+    "sequencing": 1,
+    "debugging": 1,
+    "events": 1,
+    "variables": 1
   }
 }]]></config>
   <blocks>

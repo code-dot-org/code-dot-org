@@ -1,18 +1,19 @@
 /** @file Provides clients to AWS Firehose, whose data is imported into AWS Redshift. */
 
+import logToCloud from '@cdo/apps/logToCloud';
+import {getStore} from '@cdo/apps/redux';
+import currentLocale from '@cdo/apps/util/currentLocale';
 import {
   createUuid,
   trySetLocalStorage,
   tryGetLocalStorage,
 } from '@cdo/apps/utils';
-import {getStore} from '@cdo/apps/redux';
+
 import {
   getEnvironment,
   isDevelopmentEnvironment,
   isTestEnvironment,
 } from '../../utils';
-import logToCloud from '@cdo/apps/logToCloud';
-import currentLocale from '@cdo/apps/util/currentLocale';
 
 /**
  * A barebones client for posting data to an AWS Firehose stream.

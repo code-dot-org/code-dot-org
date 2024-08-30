@@ -67,7 +67,6 @@ def replace_hostname(url)
     pegasus_host: ENV.fetch('PEGASUS_TEST_DOMAIN', nil),
     hourofcode_host: ENV.fetch('HOUROFCODE_TEST_DOMAIN', nil),
     csedweek_host: ENV.fetch('CSEDWEEK_TEST_DOMAIN', nil),
-    advocacy_host: ENV.fetch('ADVOCACY_TEST_DOMAIN', nil)
   ).replace_origin(url)
 end
 
@@ -183,7 +182,7 @@ When /^I close the instructions overlay if it exists$/ do
   steps 'When I click selector "#overlay" if it exists'
 end
 
-When /^I wait for the page to fully load$/ do
+When /^I wait for the lab page to fully load$/ do
   steps <<-GHERKIN
     When I wait to see "#runButton"
     And I wait to see ".header_user"
@@ -257,6 +256,14 @@ When /^I wait until the first (?:element )?"([^"]*)" (?:has|contains) text "([^"
   wait_until {@browser.execute_script("return $(#{selector.dump}).first().text();").include? text}
 end
 
+When /^I wait until (?:element )?"([^"]*)" (?:has|contains) one or more integers$/ do |selector|
+  wait_for_jquery
+  wait_until do
+    element_text = @browser.execute_script("return $(#{selector.dump}).text();")
+    element_text.match?(/\d+/)
+  end
+end
+
 When /^I wait until (?:element )?"([^"]*)" is (not )?checked$/ do |selector, negation|
   wait_until {@browser.execute_script("return $(\"#{selector}\").is(':checked');") == negation.nil?}
 end
@@ -280,9 +287,18 @@ end
 
 When /^I wait until (?:element )?"([.#])([^"]*)" is (not )?enabled$/ do |selector_symbol, name, negation|
   selection_criteria = selector_symbol == '#' ? {id: name} : {class: name}
+  wait_for_element(selection_criteria, negation.nil?)
+end
+
+When /^I wait until element with css selector "([^"]*)" is (not )?enabled$/ do |css_selector, negation|
+  selection_criteria = {css: css_selector}
+  wait_for_element(selection_criteria, negation.nil?)
+end
+
+def wait_for_element(selection_criteria, enabled)
   wait_until do
     element = @browser.find_element(selection_criteria)
-    element.enabled? == negation.nil?
+    element.enabled? == enabled
   end
 end
 
@@ -453,24 +469,6 @@ def select_dropdown(element, option_text, load)
     select = Selenium::WebDriver::Support::Select.new(element)
     select.select_by(:text, option_text)
   end
-end
-
-When /^I open the topmost blockly category "([^"]*)"$/ do |name|
-  name_selector = ".blocklyTreeLabel:contains(#{name})"
-  # seems we usually have two of these item, and want the second if the function
-  # editor is open, the first if it isn't
-  @browser.execute_script(
-    "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " \
-    "$('#{name_selector}').get(val).dispatchEvent(new MouseEvent('mousedown', {" \
-      "bubbles: true," \
-      "cancelable: true," \
-      "view: window" \
-    "}))"
-  )
-rescue
-  script = "var val = Blockly.functionEditor && Blockly.functionEditor.isOpen() ? 1 : 0; " \
-    "$('" + name_selector + "').eq(val).simulate('drag', function(){});"
-  @browser.execute_script(script)
 end
 
 And(/^I open the blockly category with ID "([^"]*)"$/) do |id|
@@ -746,6 +744,10 @@ end
 
 Then /^element "([^"]*)" has "([^"]*)" text from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, loc_key|
   element_has_i18n_text(selector, language, loc_key)
+end
+
+Then /^element "([^"]*)" has "([^"]*)" RTL text from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, loc_key|
+  element_has_i18n_text(selector, language, loc_key, rtl: true)
 end
 
 Then /^element "([^"]*)" has "([^"]*)" markdown from key "((?:[^"\\]|\\.)*)"$/ do |selector, language, loc_key|
@@ -1230,11 +1232,6 @@ When /^I debug channel id$/ do
   puts "appOptions.channel: #{@browser.execute_script('return (appOptions && appOptions.channel)')}"
 end
 
-And(/^I ctrl-([^"]*)$/) do |key|
-  # Note: Safari webdriver does not support actions API
-  @browser.action.key_down(:control).send_keys(key).key_up(:control).perform
-end
-
 def press_keys(element, key)
   element.send_keys(*convert_keys(key))
 end
@@ -1498,7 +1495,9 @@ When /^I set up code review for teacher "([^"]*)" with (\d+(?:\.\d*)?) students 
     And I create a new code review group for the section I saved
     #{add_students_to_group_step_list.join("\n")}
     And I click selector ".uitest-base-dialog-confirm"
-    And I click selector ".toggle-input"
+    And I click selector "#uitest-code-review-groups-toggle"
+    And I wait until element "#uitest-code-review-groups-status-message" is visible
+    And I wait until element "#uitest-code-review-groups-save-confirm" is visible
   GHERKIN
 end
 

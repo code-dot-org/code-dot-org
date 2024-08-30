@@ -10,13 +10,28 @@
       "is_course": true,
       "is_migrated": true,
       "show_calendar": true,
+      "supported_locales": [
+        "ar-SA",
+        "zh-TW",
+        "fr-FR",
+        "es-MX",
+        "hi-IN",
+        "id-ID",
+        "it-IT",
+        "ja-JP",
+        "ko-KR",
+        "fa-IR",
+        "pt-BR",
+        "th-TH",
+        "tr-TR"
+      ],
       "tts": true,
       "version_year": "2023",
       "weekly_instructional_minutes": 225
     },
     "new_name": null,
     "family_name": "how-ai-works",
-    "serialized_at": "2024-06-17 21:30:14 UTC",
+    "serialized_at": "2024-08-20 17:27:00 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -2174,7 +2189,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Real-World Connections:** Consider sharing with students the work of Michael Running Wolf, an indigenous computer scientist who is working to add Native languages like Salish, Cheyenne, or Blackfoot to voice assistants. Part of this work includes creating the data that the assistants can use when generating their response, since that data was missing when these systems were first created. Consider sharing [this news article](https://missoulian.com/news/local/meet-michael-running-wolf-the-man-using-ai-to-reclaim-native-languages/article_9cdd8db4-4074-5edb-9fa4-74773cdb9464.html) with students or completing one of the activities from the [CS Education Week CS Heroes series](https://www.csedweek.org/cs-heroes/michael-running-wolf)"
+            "markdown": "**Real-World Connections:** Consider sharing with students the work of Michael Running Wolf, an Indigenous computer scientist who is working to add Native languages like Salish, Cheyenne, or Blackfoot to voice assistants. Part of this work includes creating the data that the assistants can use when generating their response, since that data was missing when these systems were first created. Consider sharing [this news article](https://missoulian.com/news/local/meet-michael-running-wolf-the-man-using-ai-to-reclaim-native-languages/article_9cdd8db4-4074-5edb-9fa4-74773cdb9464.html) with students or completing one of the activities from the [CS Education Week CS Heroes series](https://www.csedweek.org/cs-heroes/michael-running-wolf)"
           }
         ]
       },

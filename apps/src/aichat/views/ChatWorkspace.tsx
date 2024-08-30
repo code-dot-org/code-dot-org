@@ -1,16 +1,20 @@
-import React, {useCallback, useRef, useEffect} from 'react';
+import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import {
-  AichatState,
-  selectAllMessages,
+  fetchStudentChatHistory,
+  selectAllVisibleMessages,
   setShowWarningModal,
 } from '@cdo/apps/aichat/redux/aichatRedux';
 import ChatWarningModal from '@cdo/apps/aiComponentLibrary/warningModal/ChatWarningModal';
 import {Button} from '@cdo/apps/componentLibrary/button';
-import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
+import {FontAwesomeV6IconProps} from '@cdo/apps/componentLibrary/fontAwesomeV6Icon';
+import Tabs, {TabsProps} from '@cdo/apps/componentLibrary/tabs/Tabs';
+import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
 
-import ChatItemView from './ChatItemView';
+import {getShortName} from '../utils';
+
+import ChatEventsList from './ChatEventsList';
 import CopyButton from './CopyButton';
 import UserChatMessageEditor from './UserChatMessageEditor';
 
@@ -19,6 +23,21 @@ import moduleStyles from './chatWorkspace.module.scss';
 interface ChatWorkspaceProps {
   onClear: () => void;
 }
+interface Students {
+  [index: number]: {
+    id: number;
+    name: string;
+  };
+}
+
+enum WorkspaceTeacherViewTab {
+  STUDENT_CHAT_HISTORY = 'viewStudentChatHistory',
+  TEST_STUDENT_MODEL = 'testStudentModel',
+}
+
+const eraserIcon: FontAwesomeV6IconProps = {
+  iconName: 'eraser',
+};
 
 /**
  * Renders the AI Chat Lab main chat workspace component.
@@ -26,73 +45,126 @@ interface ChatWorkspaceProps {
 const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   onClear,
 }) => {
-  const showWarningModal = useSelector(
-    (state: {aichat: AichatState}) => state.aichat.showWarningModal
+  const [selectedTab, setSelectedTab] =
+    useState<WorkspaceTeacherViewTab | null>(null);
+
+  const {showWarningModal, studentChatHistory} = useAppSelector(
+    state => state.aichat
   );
+  const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
+  const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
+  const visibleItems = useSelector(selectAllVisibleMessages);
 
-  const items = useSelector(selectAllMessages);
-
-  const isWaitingForChatResponse = useSelector(
-    (state: {aichat: AichatState}) => state.aichat.isWaitingForChatResponse
+  const students = useSelector(
+    (state: {teacherSections: {selectedStudents: Students}}) =>
+      state.teacherSections.selectedStudents
   );
-
-  // Compare the messages as a string since the object reference will change on every update.
-  // This way we will only scroll when the contents of the messages have changed.
-  const messagesString = JSON.stringify(items);
-  const conversationContainerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (conversationContainerRef.current) {
-      conversationContainerRef.current.scrollTo({
-        top: conversationContainerRef.current.scrollHeight,
-        behavior: 'smooth',
-      });
-    }
-  }, [messagesString, isWaitingForChatResponse]);
 
   const dispatch = useAppDispatch();
+
+  const selectedStudentName = useMemo(() => {
+    if (viewAsUserId && currentLevelId) {
+      const selectedStudent = Object.values(students).find(
+        student => student.id === viewAsUserId
+      );
+      if (selectedStudent) {
+        dispatch(fetchStudentChatHistory(selectedStudent.id));
+        return getShortName(selectedStudent.name);
+      }
+    }
+    return null;
+  }, [viewAsUserId, students, dispatch, currentLevelId]);
+
+  // Teacher user is able to interact with chatbot.
+  const canChatWithModel = useMemo(
+    () => selectedTab !== WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY,
+    [selectedTab]
+  );
+
+  useEffect(() => {
+    // If we are viewing as a student, default to the student chat history tab if tab is not yet selected.
+    if (viewAsUserId && !selectedTab) {
+      setSelectedTab(WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY);
+    } else if (!viewAsUserId) {
+      setSelectedTab(null);
+    }
+  }, [viewAsUserId, selectedTab]);
+
+  const iconValue: FontAwesomeV6IconProps = {
+    iconName: 'lock',
+    iconStyle: 'solid',
+  };
+
+  const tabs = [
+    {
+      value: 'viewStudentChatHistory',
+      text:
+        `${selectedStudentName}'s chat history` +
+        (selectedTab === WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY
+          ? ' (view only)'
+          : ''),
+
+      tabContent: (
+        <ChatEventsList events={studentChatHistory} isTeacherView={true} />
+      ),
+      iconLeft: iconValue,
+    },
+    {
+      value: 'testStudentModel',
+      text: 'Test student model',
+      tabContent: <ChatEventsList events={visibleItems} />,
+    },
+  ];
+
+  const handleOnChange = useCallback(
+    (value: string) => {
+      setSelectedTab(value as WorkspaceTeacherViewTab);
+    },
+    [setSelectedTab]
+  );
+
+  const tabArgs: TabsProps = {
+    name: 'teacherViewChatHistoryTabs',
+    tabs,
+    defaultSelectedTabValue: tabs[0].value,
+    onChange: handleOnChange,
+    type: 'secondary',
+    tabsContainerClassName: moduleStyles.tabsContainer,
+    tabPanelsContainerClassName: moduleStyles.tabPanelsContainer,
+  };
 
   const onCloseWarningModal = useCallback(
     () => dispatch(setShowWarningModal(false)),
     [dispatch]
   );
 
-  const showWaitingAnimation = () => {
-    if (isWaitingForChatResponse) {
-      return (
-        <img
-          src="/blockly/media/aichat/typing-animation.gif"
-          alt={'Waiting for response'}
-          className={moduleStyles.waitingForResponse}
-        />
-      );
-    }
-  };
-
   return (
     <div id="chat-workspace-area" className={moduleStyles.chatWorkspace}>
       {showWarningModal && <ChatWarningModal onClose={onCloseWarningModal} />}
-      <div
-        id="chat-workspace-conversation"
-        className={moduleStyles.conversationArea}
-        ref={conversationContainerRef}
-      >
-        {items.map((item, index) => (
-          <ChatItemView item={item} key={index} />
-        ))}
-        {showWaitingAnimation()}
-      </div>
-      <UserChatMessageEditor />
-      <div className={moduleStyles.buttonRow}>
-        <Button
-          text="Clear chat"
-          iconLeft={{iconName: 'eraser'}}
-          size="s"
-          type="secondary"
-          color="gray"
-          onClick={onClear}
-        />
-        <CopyButton />
+      {viewAsUserId ? (
+        <Tabs {...tabArgs} />
+      ) : (
+        <ChatEventsList events={visibleItems} />
+      )}
+
+      <div className={moduleStyles.footer}>
+        {canChatWithModel && (
+          <UserChatMessageEditor
+            editorContainerClassName={moduleStyles.messageEditorContainer}
+          />
+        )}
+        <div className={moduleStyles.buttonRow}>
+          <Button
+            text="Clear chat"
+            disabled={!canChatWithModel}
+            iconLeft={eraserIcon}
+            size="s"
+            type="secondary"
+            color="gray"
+            onClick={onClear}
+          />
+          <CopyButton />
+        </div>
       </div>
     </div>
   );

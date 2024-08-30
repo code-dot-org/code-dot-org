@@ -1,6 +1,6 @@
 {
   "key": "elementaryai",
-  "display_name": "elementaryai",
+  "display_name": "How AI Makes Decisions",
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Professional Learning",
@@ -14,7 +14,6 @@
   "description": null,
   "professional_learning_program": null,
   "video": null,
-  "published_date": null,
-  "self_paced_pl_course_offering_id": null,
+  "published_date": "2024-07-16 04:00:00 UTC",
   "self_paced_pl_course_offering_key": null
 }

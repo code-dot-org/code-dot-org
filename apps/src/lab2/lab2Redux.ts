@@ -46,6 +46,7 @@ import {
   ProjectManagerStorageType,
   ProjectSources,
 } from './types';
+import {LifecycleEvent} from './utils/LifecycleNotifier';
 
 interface PageError {
   errorMessage: string;
@@ -101,11 +102,14 @@ export const setUpWithLevel = createAsyncThunk(
       scriptId?: number;
       levelPropertiesPath: string;
       channelId?: string;
-      userId?: string;
+      userId?: number;
       scriptLevelId?: string;
     },
     thunkAPI
   ) => {
+    Lab2Registry.getInstance()
+      .getLifecycleNotifier()
+      .notify(LifecycleEvent.LevelLoadStarted, payload.levelId);
     try {
       // Update properties for reporting as early as possible in case of errors.
       Lab2Registry.getInstance().getMetricsReporter().updateProperties({
@@ -278,21 +282,33 @@ export const isLabLoading = (state: {lab: LabState}) =>
 
 // This may depend on more factors, such as share.
 export const isReadOnlyWorkspace = (state: RootState) => {
-  const isOwner = state.lab.channel?.isOwner;
   const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const isEditingExemplarMode = getAppOptionsEditingExemplar();
-  const isFrozen = !!state.lab.channel?.frozen;
-  const isPredictLevel =
-    state.lab.levelProperties?.predictSettings?.isPredictLevel || false;
-  const hasSubmitted = getCurrentLevel(state)?.status === LevelStatus.submitted;
+
   // We are always in edit mode if we are in start or editing exemplar mode.
   // Both of these modes have no channel.
   if (isStartMode || isEditingExemplarMode) {
     return false;
   }
+
   // Otherwise, we are in read only mode if we are not the owner of the channel,
-  // the level is frozen, the level is a predict level, or the level has been submitted.
-  return !isOwner || isFrozen || isPredictLevel || hasSubmitted;
+  // the level is frozen, the level is a read only predict level, the level has been submitted.
+  // or this is a lab that should be read only while running and the code is currently running.
+  const isOwner = state.lab.channel?.isOwner;
+  const isFrozen = !!state.lab.channel?.frozen;
+  const readonlyPredictLevel = isReadonlyPredictLevel(state);
+  const hasSubmitted = getCurrentLevel(state)?.status === LevelStatus.submitted;
+  const isRunningAndReadonly =
+    (state.lab2System.isRunning || state.lab2System.isTesting) &&
+    shouldBeReadonlyWhileRunning(state);
+
+  return (
+    !isOwner ||
+    isFrozen ||
+    readonlyPredictLevel ||
+    hasSubmitted ||
+    isRunningAndReadonly
+  );
 };
 
 // If there is an error present on the page.
@@ -309,6 +325,8 @@ export const shouldHideShareAndRemix = (state: {lab: LabState}): boolean => {
 
 export const isProjectTemplateLevel = (state: {lab: LabState}) =>
   !!state.lab.levelProperties?.projectTemplateLevelName;
+
+// SLICE
 
 const labSlice = createSlice({
   name: 'lab',
@@ -431,6 +449,8 @@ function getErrorFromThunkAction(
   };
 }
 
+// HELPERS
+
 // Helper function to add event listeners to the project manager
 // and load the project. Returns the project load response.
 // This should be called from a thunk, which will provide its
@@ -476,6 +496,14 @@ function setProjectAndLevelData(
   if (aborted) {
     return;
   }
+  Lab2Registry.getInstance()
+    .getLifecycleNotifier()
+    .notify(
+      LifecycleEvent.LevelLoadCompleted,
+      data.levelProperties,
+      data.channel,
+      data.initialSources
+    );
   // Dispatch level change last so labs can react to the new level data
   // and new initial sources at once.
   dispatch(onLevelChange(data));
@@ -499,6 +527,31 @@ async function cleanUpProjectManager() {
   // saves from the existing project manager.
   await existingProjectManager?.cleanUp();
   Lab2Registry.getInstance().clearProjectManager();
+}
+
+// Returns if the current state represents a predict level that should be read only.
+// If the predict level code is not editable after submit or the user has not submitted a response,
+// the predict level is read only.
+function isReadonlyPredictLevel(state: RootState) {
+  const isPredictLevel =
+    state.lab.levelProperties?.predictSettings?.isPredictLevel || false;
+  let isReadonlyPredictLevel = isPredictLevel;
+  if (isPredictLevel) {
+    const isEditableAfterSubmit =
+      state.lab.levelProperties?.predictSettings?.codeEditableAfterSubmit ||
+      false;
+    const hasSubmittedPredictResponse = state.predictLevel.hasSubmittedResponse;
+    // If the predict level code is not editable after submit or the user has not submitted a response,
+    // the predict level is read only.
+    isReadonlyPredictLevel =
+      !isEditableAfterSubmit || !hasSubmittedPredictResponse;
+  }
+  return isReadonlyPredictLevel;
+}
+
+// Currently only Python Lab disables editing while code is running.
+function shouldBeReadonlyWhileRunning(state: RootState) {
+  return state.lab.levelProperties?.appName === 'pythonlab';
 }
 
 // This is an action that other reducers (specifically predictLevelRedux) can respond to.

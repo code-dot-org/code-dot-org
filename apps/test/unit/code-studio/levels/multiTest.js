@@ -1,11 +1,9 @@
-import {assert, expect} from 'chai';
-
-import {writeSourceForLevel} from '@cdo/apps/code-studio/clientState';
+import {writeSourceForLevel} from '@cdo/apps/code-studio/clientState'; // eslint-disable-line no-restricted-imports
 import Multi from '@cdo/apps/code-studio/levels/multi';
 import {
   LegacyTooFewDialog,
   LegacyIncorrectDialog,
-} from '@cdo/apps/lib/ui/LegacyDialogContents';
+} from '@cdo/apps/legacySharedComponents/LegacyDialogContents';
 
 import {TestResults} from '../../../../src/constants';
 import {replaceOnWindow, restoreOnWindow} from '../../../util/testUtils';
@@ -50,7 +48,7 @@ describe('multi', () => {
         allowMultipleAttempts
       );
       multi.clickItem(1);
-      assert.strictEqual(multi.validateAnswers(), true);
+      expect(multi.validateAnswers()).toBe(true);
     });
 
     it('returns false if user provides the wrong answer', () => {
@@ -67,7 +65,7 @@ describe('multi', () => {
         allowMultipleAttempts
       );
       multi.clickItem(0);
-      assert.strictEqual(multi.validateAnswers(), false);
+      expect(multi.validateAnswers()).toBe(false);
     });
 
     it('returns false if user provides no answers', () => {
@@ -83,7 +81,7 @@ describe('multi', () => {
         containedMode,
         allowMultipleAttempts
       );
-      assert.strictEqual(multi.validateAnswers(), false);
+      expect(multi.validateAnswers()).toBe(false);
     });
 
     it('returns false if user answers correctly but multi was not given the answers', () => {
@@ -103,7 +101,7 @@ describe('multi', () => {
       );
 
       multi.clickItem(1);
-      assert.strictEqual(multi.validateAnswers(), false);
+      expect(multi.validateAnswers()).toBe(false);
     });
   });
 
@@ -123,7 +121,7 @@ describe('multi', () => {
         containedMode,
         allowMultipleAttempts
       );
-      expect(multi.selectedAnswers).to.be.empty;
+      expect(multi.selectedAnswers).toHaveLength(0);
     });
 
     it('selects the server-side last attempt when provided', () => {
@@ -139,7 +137,9 @@ describe('multi', () => {
         containedMode,
         allowMultipleAttempts
       );
-      expect(multi.selectedAnswers).to.include(lastAttemptNum);
+      expect(multi.selectedAnswers).toEqual(
+        expect.arrayContaining([lastAttemptNum])
+      );
     });
 
     it('selects the client-side last attempt when available', () => {
@@ -163,7 +163,9 @@ describe('multi', () => {
         allowMultipleAttempts
       );
 
-      expect(multi.selectedAnswers).to.include(lastAttemptNum);
+      expect(multi.selectedAnswers).toEqual(
+        expect.arrayContaining([lastAttemptNum])
+      );
     });
 
     it('selects the server-side last attempt when both are available', () => {
@@ -187,7 +189,9 @@ describe('multi', () => {
         allowMultipleAttempts
       );
 
-      expect(multi.selectedAnswers).to.include(lastAttemptNum);
+      expect(multi.selectedAnswers).toEqual(
+        expect.arrayContaining([lastAttemptNum])
+      );
     });
 
     it('selects none after attempt is reset', () => {
@@ -211,11 +215,13 @@ describe('multi', () => {
         allowMultipleAttempts
       );
 
-      expect(multi.selectedAnswers).to.include(lastAttemptNum);
+      expect(multi.selectedAnswers).toEqual(
+        expect.arrayContaining([lastAttemptNum])
+      );
 
       multi.resetAnswers();
 
-      expect(multi.selectedAnswers.length).to.equal(0);
+      expect(multi.selectedAnswers.length).toBe(0);
     });
   });
 
@@ -236,7 +242,7 @@ describe('multi', () => {
       multi.clickItem(1);
       const result = multi.getResult(true);
 
-      assert.deepEqual(result, {
+      expect(result).toEqual({
         response: 1,
         result: true,
         errorDialog: undefined,
@@ -262,10 +268,10 @@ describe('multi', () => {
       multi.clickItem(0);
       const result = multi.getResult(true);
 
-      assert.equal(result.response, 0);
-      assert.equal(result.result, false);
-      assert.equal(result.errorDialog.type, LegacyIncorrectDialog);
-      assert.equal(result.testResult, TestResults.CONTAINED_LEVEL_RESULT);
+      expect(result.response).toEqual(0);
+      expect(result.result).toEqual(false);
+      expect(result.errorDialog.type).toEqual(LegacyIncorrectDialog);
+      expect(result.testResult).toEqual(TestResults.CONTAINED_LEVEL_RESULT);
     });
 
     it('returns a TooFewDialog for too few answers', () => {
@@ -284,7 +290,7 @@ describe('multi', () => {
       );
       const result = multi.getResult(true);
 
-      assert.strictEqual(result.errorDialog.type, LegacyTooFewDialog);
+      expect(result.errorDialog.type).toBe(LegacyTooFewDialog);
     });
   });
 });

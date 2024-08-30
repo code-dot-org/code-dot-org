@@ -1,7 +1,6 @@
 /**
  * Form for creating / editing workshop details.
  */
-import classnames from 'classnames';
 import $ from 'jquery';
 import _ from 'lodash';
 import moment from 'moment';
@@ -38,12 +37,12 @@ import {
   NotFundedSubjects,
   MustSuppressEmailSubjects,
 } from '@cdo/apps/generated/pd/sharedWorkshopConstants';
-import HelpTip from '@cdo/apps/lib/ui/HelpTip';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
+import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
+import HelpTip from '@cdo/apps/sharedComponents/HelpTip';
 import color from '@cdo/apps/util/color';
 
+import Spinner from '../../../../sharedComponents/Spinner';
 import MapboxLocationSearchField from '../../../../templates/MapboxLocationSearchField';
-import Spinner from '../../components/spinner';
 import {
   PermissionPropType,
   WorkshopAdmin,
@@ -950,6 +949,13 @@ export class WorkshopForm extends React.Component {
     this.context.router.goBack();
   };
 
+  // Collapse dropdown if 'Escape' is pressed
+  onKeyDown(e) {
+    if (e.keyCode === 27) {
+      e.currentTarget.classList.remove('open');
+    }
+  }
+
   shouldShowFacilitators() {
     return !['Counselor', 'Admin'].includes(this.state.course);
   }
@@ -1191,6 +1197,7 @@ export class WorkshopForm extends React.Component {
                         data-toggle="dropdown"
                         aria-haspopup={true}
                         aria-label="pl Topics dropdown"
+                        disabled={this.props.readOnly}
                       >
                         {this.state.course_offerings.length > 0 && (
                           <FontAwesome
@@ -1212,16 +1219,13 @@ export class WorkshopForm extends React.Component {
                         />
                       </button>
                       <div
-                        className={classnames('dropdown-menu')}
+                        className={'dropdown-menu'}
+                        style={styles.dropdown}
                         aria-labelledby="dropdownMenuButton"
                       >
                         <ul style={styles.listItems}>
                           {Object.values(ALL_PL_TOPICS).map(topic => (
-                            <li
-                              className="dropdown-item"
-                              style={styles.singleItem}
-                              key={topic.id}
-                            >
+                            <li style={styles.singleItem} key={topic.id}>
                               <Checkbox
                                 name={topic.display_name}
                                 label={topic.display_name}
@@ -1375,6 +1379,10 @@ const styles = {
   },
   extraMargin: {
     margin: '15px 15px 0 15px',
+  },
+  dropdown: {
+    height: '300px',
+    overflow: 'auto',
   },
 };
 

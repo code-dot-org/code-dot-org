@@ -2,7 +2,6 @@ import {render, screen} from '@testing-library/react';
 import React from 'react';
 import {Provider} from 'react-redux';
 
-import DCDO from '@cdo/apps/dcdo';
 import {registerReducers, restoreRedux, stubRedux} from '@cdo/apps/redux';
 import unitSelection, {setScriptId} from '@cdo/apps/redux/unitSelectionRedux';
 import currentUser from '@cdo/apps/templates/currentUserRedux';
@@ -15,8 +14,6 @@ import SectionProgressV2 from '@cdo/apps/templates/sectionProgressV2/SectionProg
 import teacherSections, {
   setStudentsForCurrentSection,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
-
-import {expect} from '../../../util/reconfiguredChai';
 
 const STUDENT_1 = {id: 1, name: 'Student 1', familyName: 'FamNameB'};
 const STUDENT_2 = {id: 2, name: 'Student 2', familyName: 'FamNameA'};
@@ -40,7 +37,6 @@ describe('SectionProgressV2', () => {
     store = createStore(5, 5);
     store.dispatch(setScriptId(1));
     store.dispatch(finishLoadingProgress());
-    DCDO.set('progress-v2-metadata-enabled', false);
   });
 
   afterEach(() => {
@@ -56,7 +52,6 @@ describe('SectionProgressV2', () => {
   }
 
   it('shows expand and collapse dropdown', () => {
-    DCDO.set('progress-v2-metadata-enabled', true);
     renderDefault();
 
     store.dispatch(setStudentsForCurrentSection(1, STUDENTS));
@@ -70,7 +65,7 @@ describe('SectionProgressV2', () => {
     screen.getByText('Progress (beta)');
     screen.getByText('Students');
     screen.getAllByTestId('skeleton-cell');
-    expect(screen.queryAllByText(/Student [1-9]/)).to.be.empty;
+    expect(screen.queryAllByText(/Student [1-9]/)).toHaveLength(0);
   });
 
   it('shows students and unit selector', () => {
@@ -81,8 +76,6 @@ describe('SectionProgressV2', () => {
     screen.getByText('Progress (beta)');
     screen.getByText('Students');
 
-    expect(screen.getAllByText(/Student [1-9]/).length).to.equal(
-      STUDENTS.length
-    );
+    expect(screen.getAllByText(/Student [1-9]/).length).toBe(STUDENTS.length);
   });
 });

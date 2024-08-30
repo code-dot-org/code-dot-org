@@ -10,7 +10,7 @@ import i18n from '@cdo/locale';
 import {Card} from './Card';
 
 import cardStyles from '@cdo/apps/componentLibrary/card/Card/card.module.scss';
-import styles from '@cdo/apps/lib/ui/lti/link/LtiLinkAccountPage/link-account.module.scss';
+import styles from '@cdo/apps/simpleSignUp/link-account.module.scss';
 
 const meta: Meta<typeof Card> = {
   title: 'DesignSystem/Card', // eslint-disable-line storybook/no-title-property-in-meta

@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-03-06 20:07:28 UTC",
+    "serialized_at": "2024-08-05 14:13:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -124,6 +124,7 @@
       "key": "3a5f5a1a-b6ec-4d0b-898f-3ce7d5843541",
       "position": 1,
       "properties": {
+        "duration": 60,
         "name": "Introduction to JavaLab"
       },
       "seeding_key": {
@@ -137,6 +138,7 @@
       "key": "b6899065-8b6f-462e-bec8-a87da8e921de",
       "position": 1,
       "properties": {
+        "duration": 60,
         "name": "Using variables in Java"
       },
       "seeding_key": {
@@ -150,6 +152,7 @@
       "key": "7ae93634-0030-4b34-9483-d6da41414fdc",
       "position": 1,
       "properties": {
+        "duration": 90
       },
       "seeding_key": {
         "lesson_activity.key": "7ae93634-0030-4b34-9483-d6da41414fdc",
@@ -162,6 +165,7 @@
       "key": "2e52cc83-4f9a-400b-b10d-d0e0cfe58693",
       "position": 1,
       "properties": {
+        "duration": 60
       },
       "seeding_key": {
         "lesson_activity.key": "2e52cc83-4f9a-400b-b10d-d0e0cfe58693",
@@ -174,6 +178,7 @@
       "key": "21f71655-121a-4ecd-bee1-072002ff906c",
       "position": 1,
       "properties": {
+        "duration": 90
       },
       "seeding_key": {
         "lesson_activity.key": "21f71655-121a-4ecd-bee1-072002ff906c",

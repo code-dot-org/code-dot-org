@@ -4,12 +4,12 @@
     "self-paced-pl-foundations-intro",
     "self-paced-pl-foundations-getting-started",
     "self-paced-pl-foundations-teaching-cs",
-    "self-paced-pl-foundations-unit1",
     "self-paced-pl-foundations-unit4",
+    "self-paced-pl-foundations-unit1",
     "self-paced-pl-foundations-unit2",
     "self-paced-pl-foundations-unit3"
   ],
-  "published_state": "in_development",
+  "published_state": "stable",
   "instruction_type": "self_paced",
   "participant_audience": "teacher",
   "instructor_audience": "facilitator",
@@ -18,7 +18,16 @@
     "version_year": "2024"
   },
   "resources": [
-
+    {
+      "name": "Foundations of Computer Science Curriculum",
+      "url": "https://studio.code.org/courses/foundations-of-cs-beta-2024",
+      "key": "foundations_of_computer_science_curriculum",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "foundations_of_computer_science_curriculum"
+      }
+    }
   ],
   "student_resources": [
 

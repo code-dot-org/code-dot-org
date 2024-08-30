@@ -2,8 +2,8 @@
 Feature: Recommended/Required Blocks Feedback
 
 Scenario: Solve without recommended blocks
-  Given I am on "http://studio.code.org/s/allthethings/lessons/4/levels/5?noautoplay=true&blocklyVersion=google"
-  And I wait for the page to fully load
+  Given I am on "http://studio.code.org/s/allthethings/lessons/4/levels/5?noautoplay=true"
+  And I wait for the lab page to fully load
 
   When I press "runButton"
   And I wait to see ".congrats"
@@ -32,5 +32,5 @@ Scenario: Solve without recommended blocks
   And I wait to see ".congrats"
 
   Then element ".congrats" is visible
-  And element ".congrats" has text "Congratulations! You have completed the final puzzle."
+  And element ".congrats" has text "Congratulations! You completed Puzzle 5."
   And element "#hint-request-button" does not exist

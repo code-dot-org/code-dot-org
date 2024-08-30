@@ -3,7 +3,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 
 import {Heading1, Heading6} from '@cdo/apps/componentLibrary/typography';
-import DCDO from '@cdo/apps/dcdo';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import i18n from '@cdo/locale';
@@ -32,11 +31,6 @@ function SectionProgressV2({
   expandedLessonIds,
   loadExpandedLessonsFromLocalStorage,
 }) {
-  const expandedMetadataEnabled = React.useMemo(
-    () => DCDO.get('progress-v2-metadata-enabled', false),
-    []
-  );
-
   React.useEffect(() => {
     loadExpandedLessonsFromLocalStorage(scriptId, sectionId);
     analyticsReporter.sendEvent(EVENTS.PROGRESS_V2_VIEW, {
@@ -52,7 +46,7 @@ function SectionProgressV2({
   }, [unitData, isLevelProgressLoaded]);
 
   React.useEffect(() => {
-    if (!unitData && !isLoadingProgress && !isRefreshingProgress) {
+    if (!unitData && !isLoadingProgress && !isRefreshingProgress && scriptId) {
       loadUnitProgress(scriptId, sectionId);
     }
   }, [unitData, isLoadingProgress, isRefreshingProgress, scriptId, sectionId]);
@@ -77,7 +71,7 @@ function SectionProgressV2({
           {i18n.lessonsIn()}
 
           <UnitSelectorV2 className={styles.titleUnitSelectorDropdown} />
-          {expandedMetadataEnabled && <MoreOptionsDropdown />}
+          <MoreOptionsDropdown />
         </Heading6>
       </div>
       <ProgressTableV2 isSkeleton={!levelDataInitialized} />

@@ -4,14 +4,14 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
-      "curriculum_umbrella": "Foundations of Programming",
+      "curriculum_umbrella": "Foundations of CS",
       "is_migrated": true,
       "student_detail_progress_view": true,
       "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-11 21:31:42 UTC",
+    "serialized_at": "2024-07-13 00:45:53 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,

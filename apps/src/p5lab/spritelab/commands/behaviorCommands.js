@@ -1,6 +1,7 @@
+import * as utils from '@cdo/apps/p5lab/utils';
+
 import {commands as actionCommands} from './actionCommands';
 import {commands as spriteCommands} from './spriteCommands';
-import * as utils from '@cdo/apps/p5lab/utils';
 
 export const commands = {
   addBehaviorSimple(spriteArg, behavior) {

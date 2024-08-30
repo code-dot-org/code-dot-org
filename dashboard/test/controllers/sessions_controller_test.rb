@@ -228,23 +228,14 @@ class SessionsControllerTest < ActionController::TestCase
   class LtiAccountLinkingSignInPageTest < ActionDispatch::IntegrationTest
     test 'renders alternative account linking login page during LTI registration' do
       DCDO.stubs(:get)
-      DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
       Policies::Lti.stubs(:lti_registration_in_progress?).returns(true)
 
       get user_session_path
       assert_template partial: 'devise/sessions/_login_lti_account_linking'
     end
 
-    test 'renders normal login page if the account linking DCDO flag is disabled' do
-      Policies::Lti.stubs(:lti_registration_in_progress?).returns(true)
-
-      get user_session_path
-      assert_template partial: 'devise/sessions/_login'
-    end
-
     test 'renders normal login page for non-LTI/non-partial registrations' do
       DCDO.stubs(:get)
-      DCDO.stubs(:get).with('lti_account_linking_enabled', false).returns(true)
       Policies::Lti.stubs(:lti_registration_in_progress?).returns(false)
 
       get user_session_path
@@ -263,7 +254,7 @@ class SessionsControllerTest < ActionController::TestCase
 
     before do
       Policies::ChildAccount::ComplianceState.stubs(:locked_out?).with(user).returns(user_is_locked_out)
-      user.update(child_account_compliance_lock_out_date: DateTime.now)
+      user.update(cap_status_date: DateTime.now)
 
       sign_in user
     end
@@ -280,7 +271,7 @@ class SessionsControllerTest < ActionController::TestCase
 
     it 'assigns @delete_date with 7 day after user lockout date' do
       get :lockout
-      _(assigns[:delete_date]).must_equal DateTime.parse(user.child_account_compliance_lock_out_date).since(7.days)
+      _(assigns[:delete_date]).must_equal user.cap_status_date.since(7.days)
     end
 
     it 'renders lockout page' do

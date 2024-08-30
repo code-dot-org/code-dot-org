@@ -5,7 +5,7 @@ import PrintCertificates from '@cdo/apps/templates/teacherDashboard/PrintCertifi
 import {UnconnectedSectionActionDropdown as SectionActionDropdown} from '@cdo/apps/templates/teacherDashboard/SectionActionDropdown';
 import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 
-import {expect} from '../../../util/deprecatedChai';
+import {expect} from '../../../util/deprecatedChai'; // eslint-disable-line no-restricted-imports
 
 const sections = [
   {

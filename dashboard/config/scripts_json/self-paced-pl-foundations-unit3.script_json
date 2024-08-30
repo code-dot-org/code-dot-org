@@ -6,11 +6,12 @@
     "properties": {
       "curriculum_umbrella": "Foundations of CS",
       "is_migrated": true,
-      "student_detail_progress_view": true
+      "student_detail_progress_view": true,
+      "tts": true
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-07-12 01:33:03 UTC",
+    "serialized_at": "2024-07-13 00:47:05 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -264,6 +265,17 @@
       },
       "seeding_key": {
         "activity_section.key": "689883b2-09ff-47b9-8b4e-e07e257471c4",
+        "lesson_activity.key": "faa352e4-007f-4fd5-8209-7ff1703ed8a7"
+      }
+    },
+    {
+      "key": "646b3027-c7c5-4ed8-a9c1-cc07e8503268",
+      "position": 3,
+      "properties": {
+        "progression_name": "End-Of-Unit Project"
+      },
+      "seeding_key": {
+        "activity_section.key": "646b3027-c7c5-4ed8-a9c1-cc07e8503268",
         "lesson_activity.key": "faa352e4-007f-4fd5-8209-7ff1703ed8a7"
       }
     }
@@ -1043,6 +1055,28 @@
       "level_keys": [
         "SP-VPL-21-CSD-mod5-L14examples-AIML_-22_23_-foundations24"
       ]
+    },
+    {
+      "chapter": 32,
+      "position": 9,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "End-Of-Unit Project"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "SP-FCS-Unit3Project"
+        ],
+        "lesson.key": "Consider Real-World Implications",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit3",
+        "activity_section.key": "646b3027-c7c5-4ed8-a9c1-cc07e8503268"
+      },
+      "level_keys": [
+        "SP-FCS-Unit3Project"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -1416,6 +1450,18 @@
         "lesson_group.key": "",
         "script.name": "self-paced-pl-foundations-unit3",
         "activity_section.key": "689883b2-09ff-47b9-8b4e-e07e257471c4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "SP-FCS-Unit3Project",
+        "script_level.level_keys": [
+          "SP-FCS-Unit3Project"
+        ],
+        "lesson.key": "Consider Real-World Implications",
+        "lesson_group.key": "",
+        "script.name": "self-paced-pl-foundations-unit3",
+        "activity_section.key": "646b3027-c7c5-4ed8-a9c1-cc07e8503268"
       }
     }
   ],

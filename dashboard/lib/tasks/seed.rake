@@ -110,6 +110,10 @@ namespace :seed do
     interactive-games-animations-2023
     focus-on-creativity3-2023
     focus-on-coding3-2023
+    csd3-2024
+    interactive-games-animations-2024
+    focus-on-creativity3-2024
+    focus-on-coding3-2024
     csp1-2017
     csp2-2017
     csp3-2017
@@ -378,6 +382,11 @@ namespace :seed do
     MegaSection.seed
   end
 
+  # Seeds shared tables in datablock storage
+  timed_task_with_logging datablock_storage: :environment do
+    DatablockStorageLibraryManifest.seed_all
+  end
+
   MAX_LEVEL_SOURCES = 10_000
   desc "calculate solutions (ideal_level_source) for levels based on most popular correct solutions (very slow)"
   timed_task_with_logging ideal_solutions: :environment do
@@ -482,8 +491,8 @@ namespace :seed do
     files_to_import.each {|file_to_import| CsvToSqlTable.new(pegasus_dir(file_to_import), db, table_prefix).import}
   end
 
-  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :donor_schools, :foorms, :import_pegasus_data].freeze
-  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_ui_tests, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools, :import_pegasus_data].freeze
+  FULL_SEED_TASKS = [:check_migrations, :videos, :concepts, :scripts, :courses, :reference_guides, :data_docs, :callouts, :school_districts, :schools, :census_summaries, :secret_words, :secret_pictures, :donors, :donor_schools, :foorms, :import_pegasus_data, :datablock_storage].freeze
+  UI_TEST_SEED_TASKS = [:check_migrations, :videos, :concepts, :course_offerings_ui_tests, :scripts_ui_tests, :courses_ui_tests, :callouts, :school_districts, :schools, :secret_words, :secret_pictures, :donors, :donor_schools, :import_pegasus_data, :datablock_storage].freeze
   DEFAULT_SEED_TASKS = [:adhoc, :test].include?(rack_env) ? UI_TEST_SEED_TASKS : FULL_SEED_TASKS
 
   desc "seed the data needed for this type of environment by default"

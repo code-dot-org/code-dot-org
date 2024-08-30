@@ -24,6 +24,7 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
      ruby --version     # --> ruby 3.0.5
      node --version     # --> v18.16.0
      git-lfs --version  #  >= git-lfs/3.0
+     pdm --version    #  >= 2.17
      ```
 
 1. `git lfs pull`
@@ -46,13 +47,13 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
 
     </details>
     <details>
-      <summary>Troubleshoot: `FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError` or similar `Aws::SecretsManager` errors</summary>
+      <summary>Troubleshoot: <code>FrozenError: can't modify frozen String...Aws::Errors::MissingCredentialsError</code> or similar <code>Aws::SecretsManager</code> errors</summary>
       Reported when missing credentials for access to our AWS Account or local secret configuration.
 
       See [Configure AWS Access or Secrets](#configure-aws-access-or-secrets)
     </details>
     <details>
-      <summary>Troubleshoot: `WSL: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock'` </summary>
+      <summary>Troubleshoot: <code>WSL: Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock'</code> </summary>
 
       - This is an issue specific to Windows System for Linux (WSL) OS configuration where connection to mysql without sudo would fail with the above error. This can be rectified with some permission updates on mysql files and updating SQL client side configuration as called out [in this SO post](https://stackoverflow.com/a/66949451)
     </details>
@@ -60,13 +61,13 @@ You can do Code.org development using macOS, Ubuntu, or Windows (running Ubuntu 
 1. `bundle exec rake install`
     <details>
         <summary>This will take 30 minutes, or more</summary>
-        The most expensive are the "seeding" tasks, where your local DB is populated from data in the repository. Some of the seeding rake tasks can take several minutes. The longest one, `seed:scripts`, can take > 10 minutes, but it should at least print out progress as it goes.
+        The most expensive are the "seeding" tasks, where your local DB is populated from data in the repository. Some of the seeding rake tasks can take several minutes. The longest one, <code>seed:scripts</code>, can take > 10 minutes, but it should at least print out progress as it goes.
     </details>
     <details>
-        <summary>If `bundle exec rake install` is interrupted before finishing...</summary>
-        If, for any reason, you are forced to interrupt the `bundle exec rake install` command before it completes,
-        cd into dashboard and run `bundle exec rake db:drop` before trying `bundle exec rake install` again.
-        `bundle exec rake install` must always be called from the local project's root directory, or it won't work.
+        <summary>If <code>bundle exec rake install</code> is interrupted before finishing...</summary>
+        If, for any reason, you are forced to interrupt the <code>bundle exec rake install</code> command before it completes,
+        cd into dashboard and run <code>bundle exec rake db:drop</code> before trying <code>bundle exec rake install</code> again.
+        <code>bundle exec rake install</code> must always be called from the local project's root directory, or it won't work.
     </details>
 
 1. fix your database charset and collation to match our servers
@@ -96,8 +97,6 @@ External contributors can supply alternate placeholder values for secrets normal
 ```
 slack_bot_token: localoverride
 pardot_private_key: localoverride
-firebase_secret: localoverride
-firebase_shared_secret: localoverride
 properties_encryption_key: ''
 ```
 
@@ -121,7 +120,7 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
 
 1. Install **brew packages**:
    ```
-   brew install rbenv ruby-build nvm mysql@8.0 redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi pdftk-java
+   brew install rbenv ruby-build nvm pdm mysql@8.0 redis git-lfs enscript gs imagemagick coreutils parallel tidy-html5 openssl libffi pdftk-java
    ```
 
 1. Initialize **Git LFS**:
@@ -175,15 +174,15 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
         ```
 
 1.  Install **Node.js**
-    1. Install node version specified by [.
-    rc](.nvmrc):
+    1. Install node version specified by [.nvmrc](.nvmrc):
         ```
         nvm install    # run from the project root directory
         ```
       <details>
-        <summary>If you get an error `nvm: command not found`</summary>
+        <summary>If you get an error <code>nvm: command not found</code></summary>
         Run `brew info nvm` and follow the instructions there. They will include making an `.nvm` folder and updating your shell configuration file.
       </details>
+
     2. Set default node version:
         ```
         nvm alias default $(cat ./.nvmrc)
@@ -210,10 +209,10 @@ These steps are for Apple devices running **macOS 14.x**, including those runnin
 Note: Virtual Machine Users should check the [Alternative note](#alternative-use-an-ubuntu-vm) below before starting
 
 1. `sudo apt-get update`
-1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-11-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript build-essential redis-server rbenv chromium-browser parallel`
+1. `sudo apt-get install -y git mysql-server mysql-client libmysqlclient-dev libxslt1-dev libssl-dev zlib1g-dev imagemagick libmagickcore-dev libmagickwand-dev openjdk-11-jre-headless libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev curl pdftk enscript build-essential redis-server rbenv chromium-browser parallel python3-pip`
     * **Hit enter and select default options for any configuration popups, leaving mysql passwords blank**
     <details> 
-      <summary>Troubleshoot: `E: Package 'pdftk' has no installation candidate`.</summary>
+      <summary>Troubleshoot: <code>E: Package 'pdftk' has no installation candidate</code>.</summary>
       - If you run into this error, remove `pdftk` from the previous command and run it again. Then try installing `pdftk` another way:
           - Ubuntu 18.04: `sudo snap install pdftk`.
           - If you can't get `pdftk` installed, it is ok to skip installing this package, and keep in mind that the `PDFMergerTest` test may fail when you try to run the pegasus tests locally.
@@ -245,8 +244,6 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
     1. Install [ruby-build as a rbenv plugin](https://github.com/rbenv/ruby-build#readme)
         1. `mkdir -p "$(rbenv root)"/plugins`
         1. `git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build`
-    1. Use the rbenv-doctor from the [`rbenv` installation instructions](https://github.com/rbenv/rbenv#basic-github-checkout) to verify rbenv is set up correctly:
-        1. `curl -fsSL https://github.com/rbenv/rbenv-installer/raw/main/bin/rbenv-doctor | bash`
     1. If there are any errors (they appear red), follow the [`rbenv` installation instructions] (https://github.com/rbenv/rbenv#basic-github-checkout) to properly configure `rbenv`, following steps for **Ubuntu Desktop** so that config changes go into `.bashrc`.
     1. **Note:** Ubuntu 22.04 ships with versions of `libssl` and `openssl` that are incompatible with `ruby-build`; see https://github.com/rbenv/ruby-build/discussions/1940 for context
         1. As a result, attempts to run `rbenv install` will fail. To resolve, compile a valid version of `openssl` locally and direct `rbenv` to configure ruby to use it as described here: https://github.com/rbenv/ruby-build/discussions/1940#discussioncomment-2663209
@@ -255,6 +252,9 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
     1. If your PATH is missing `~/.rbenv/shims`, the next two commands might not work. Edit your .bashrc to include the following line:
        `export PATH="$HOME/.rbenv/bin:~/.rbenv/shims:$PATH"`, then run `source .bashrc` for the change to take effect (as seen in [this github issue](https://github.com/rbenv/rbenv/issues/877)).
     1. `rbenv rehash`
+1. Install pdm, which will be used later by `rake install` to install python
+    1. `sudo pip3 install --prefix=/usr/local --upgrade pdm`
+        - alternatively, if you prefer pipx and have it configured path-wise: `pipx install pdm`
 1. Enable **corepack** to install **yarn**: `corepack enable`
 1. Make it so that you can run apps tests locally
     1. Add the following to `~/.bashrc` or your desired shell configuration file:

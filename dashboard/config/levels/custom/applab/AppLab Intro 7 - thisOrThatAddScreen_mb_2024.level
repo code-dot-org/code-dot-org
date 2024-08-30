@@ -67,7 +67,6 @@
     "start_blocks": "onEvent(\"thisButton\", \"click\", function() {\r\n  setScreen(\"thisScreen\");\r\n  playSound(\"sound://default.mp3\", false);\r\n});",
     "project_template_level_name": "AppLab Intro 6 - thisOrThatAddButton Template_mb_2024",
     "top_level_procedure_autopopulate": "false",
-    "name_suffix": "_mb_2024",
     "preload_asset_list": null
   },
   "published": true,

@@ -5,7 +5,6 @@ import {UnconnectedAnimationUploadButton as AnimationUploadButton} from '@cdo/ap
 import ImageUploadModal from '@cdo/apps/templates/imageUploadWarning/ImageUploadModal';
 
 import AnimationPickerListItem from '../../../../src/p5lab/AnimationPicker/AnimationPickerListItem';
-import {expect} from '../../../util/reconfiguredChai';
 
 const emptyFunction = () => {};
 
@@ -29,7 +28,7 @@ describe('AnimationUploadButton', function () {
       const uploadButton = body.find(AnimationPickerListItem).at(0);
       uploadButton.simulate('click');
       const warningModal = body.find(ImageUploadModal).at(0);
-      expect(warningModal.props().isOpen).to.be.true;
+      expect(warningModal.props().isOpen).toBe(true);
     });
 
     it('does not show warning if should restrict and is already in restricted mode', () => {
@@ -42,7 +41,7 @@ describe('AnimationUploadButton', function () {
       const uploadButton = body.find(AnimationPickerListItem).at(0);
       uploadButton.simulate('click');
       const warningModal = body.find(ImageUploadModal);
-      expect(warningModal.at(0).props().isOpen).to.be.false;
+      expect(warningModal.at(0).props().isOpen).toBe(false);
     });
 
     it('does not show warning if should not restrict', () => {
@@ -55,7 +54,7 @@ describe('AnimationUploadButton', function () {
       const uploadButton = body.find(AnimationPickerListItem).at(0);
       uploadButton.simulate('click');
       const warningModal = body.find(ImageUploadModal);
-      expect(warningModal.at(0).props().isOpen).to.be.false;
+      expect(warningModal.at(0).props().isOpen).toBe(false);
     });
   });
 
@@ -70,7 +69,7 @@ describe('AnimationUploadButton', function () {
       const uploadButton = body.find(AnimationPickerListItem).at(0);
       uploadButton.simulate('click');
       const warningModal = body.find(ImageUploadModal).at(0);
-      expect(warningModal.props().isOpen).to.be.true;
+      expect(warningModal.props().isOpen).toBe(true);
     });
 
     it('does not show warning if should restrict and is already in restricted mode', () => {
@@ -83,7 +82,7 @@ describe('AnimationUploadButton', function () {
       const uploadButton = body.find(AnimationPickerListItem).at(0);
       uploadButton.simulate('click');
       const warningModal = body.find(ImageUploadModal);
-      expect(warningModal.at(0).props().isOpen).to.be.false;
+      expect(warningModal.at(0).props().isOpen).toBe(false);
     });
 
     it('does not show warning if should not restrict', () => {
@@ -96,7 +95,7 @@ describe('AnimationUploadButton', function () {
       const uploadButton = body.find(AnimationPickerListItem).at(0);
       uploadButton.simulate('click');
       const warningModal = body.find(ImageUploadModal);
-      expect(warningModal.at(0).props().isOpen).to.be.false;
+      expect(warningModal.at(0).props().isOpen).toBe(false);
     });
   });
 });

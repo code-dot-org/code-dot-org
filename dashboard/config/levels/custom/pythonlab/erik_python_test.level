@@ -1,5 +1,6 @@
 <Pythonlab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 72,
   "created_at": "2024-07-11T19:55:41.000Z",
   "level_num": "custom",
@@ -9,12 +10,7 @@
     "long_instructions": "1. Predict the output of the program <b>There are no wrong answers!</b>\r\n\r\n2. Run it to compare your prediction with the results\r\n",
     "hide_share_and_remix": "false",
     "predict_settings": {
-      "isPredictLevel": true,
-      "solution": "",
-      "questionType": "freeResponse",
-      "allowMultipleAttempts": false,
-      "placeholderText": "Write your prediction here",
-      "freeResponseHeight": 100
+      "isPredictLevel": false
     },
     "source": {
       "files": {
@@ -30,9 +26,9 @@
       },
       "folders": {
       }
-    }
+    },
+    "submittable": "false"
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2024-07-11T19:55:41.610+00:00\",\"changed\":[\"cloned from \\\"ken_python_test\\\"\"],\"cloned_from\":\"ken_python_test\"},{\"changed_at\":\"2024-07-11 19:56:11 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-11 19:57:37 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-11 19:59:15 +0000\",\"changed\":[\"source\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-07-11T19:55:41.610+00:00\",\"changed\":[\"cloned from \\\"ken_python_test\\\"\"],\"cloned_from\":\"ken_python_test\"},{\"changed_at\":\"2024-07-11 19:56:11 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-11 19:57:37 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-11 19:59:15 +0000\",\"changed\":[\"source\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"},{\"changed_at\":\"2024-07-15 14:51:16 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18603,\"changed_by_email\":\"erik+levelbuilder@code.org\"}]"
 }]]></config>
 </Pythonlab>

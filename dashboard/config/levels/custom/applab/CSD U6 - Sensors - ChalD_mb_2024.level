@@ -83,7 +83,6 @@
     "makerlab_enabled": "microbit",
     "long_instructions": "# Environmental App\r\n\r\nCreate an app prototype that could be used in an environmental or ecology setting to monitor plants or animals in an environment. For example, the micro:bit could be placed in a pet sleeping area and if the app detects the temperature is too cold, it could recommend the heat be turned on. Or, the micro:bit could be placed with a plant and if the app detects that the light is too low, it could recommend that the plant be moved into the sunlight.\r\n\r\nYou may not be able to create the \"perfect\" app yet, but you can develop a **prototype** which shows the general idea of the app and some of the basic features behind how it could work.",
     "parent_level_id": 20595,
-    "name_suffix": "_mb_2024",
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "encrypted": "false",

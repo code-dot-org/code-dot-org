@@ -175,6 +175,8 @@
   explore_our_curriculum: "Explore Our Curriculum"
   start_professional_learning: "Start Professional Learning"
 
+  best_of_stem_heading: "Code.org wins Best of STEM 2024"
+
   how_ai_works_video_series: "How AI Works Video Series"
   learn_how_ai_works: "Learn How AI Works"
   ai_101_for_educators: "AI 101 for Educators"
@@ -290,6 +292,7 @@
   call_to_action_select_activity: "Select an activity"
   call_to_action_select_coding_activity: "Select a coding activity"
   call_to_action_start_activity: "Start an activity"
+  call_to_action_start_activity_short: "Start activity"
   call_to_action_get_certificates: "Get certificates"
   call_to_action_print_certificates: "Print certificates"
   call_to_action_go_beyond_hoc: "Go beyond the Hour of Code"
@@ -366,7 +369,6 @@
   call_to_action_resources_videos: "Explore all videos"
   call_to_action_resources_slides: "Explore example slide deck"
   call_to_action_resources_assessments: "Explore an assessment lesson"
-  call_to_action_resources_tools: "Try out programming tools"
   call_to_action_sign_up_free: "Sign up for free"
   call_to_action_explore_ai_resources: "Explore AI resources"
   call_to_action_explore_ai_curricula: "Explore AI curricula"
@@ -438,7 +440,7 @@
   call_to_action_explore_learning_ages_11_plus: "Explore learning for ages 11+"
   call_to_action_get_started: "Get started"
   call_to_action_discover_district_program: "Discover our District Program"
-  call_to_action_see_district_partners: "See our District Partners"
+  call_to_action_see_district_partners: "See our Code.org Districts"
   call_to_action_read_full_story: "Read the full story"
   call_to_action_learn_about_pl: "Learn about Professional Learning"
   call_to_action_pilot_web_dev_unit: "Pilot our newly updated Web Development unit!"
@@ -1266,7 +1268,7 @@
   ai_vid_ethics1_caption: "Ethics & AI: Equal Access and Algorithmic Bias"
   ai_vid_ethics2_caption: "Ethics & AI: Privacy and the Future of Work"
 
-  admins_page_top_heading: "Expand computer science in your school or district"
+  admins_page_top_heading: "Expand computer science in your district"
   admins_page_top_subhead: "Unlock the future of education with Code.org's comprehensive computer science (CS) programs."
   admins_page_top_desc: "Join a visionary network of over 2 million educators dedicated to shaping innovative leaders, critical thinkers, and engaged digital citizens. Code.org partners with administrators to seamlessly integrate CS into schools, offering extensive resources, tailored professional development, and continual support for systemic success."
   admins_page_elevate_heading: "Elevate computer science education at your school"
@@ -1304,7 +1306,7 @@
   admins_page_resources_desc_unplugged: "Now you can teach the fundamentals of computer science to your students, whether you have computers in your classroom or not!"
 
   districts_page_top_heading: "Districts in the Code.org District Program"
-  districts_page_top_desc: "We're actively expanding our network of district partners across the US. Explore this list of districts currently enrolled in our District Partner program."
+  districts_page_top_desc: "We're actively expanding our network of Code.org Districts across the US. Explore this list of districts currently enrolled in our District Partner program."
   districts_page_join_heading: "Join our District Partner Program"
   districts_page_join_desc: "District leaders around the United States have partnered with Code.org directly, at no cost to bring computer science to their district, and teach students the skills of the future."
 
@@ -1489,7 +1491,6 @@
   resources_tabs_tab_label_videos: "Videos"
   resources_tabs_tab_label_slides: "Slides"
   resources_tabs_tab_label_assessments: "Assessments"
-  resources_tabs_tab_label_tools: "Programming Tools"
   resources_tabs_lesson_plans_subhead: "Get step-by-step guidance, learning objectives, and assessment strategies for effective teaching."
   resources_tabs_lesson_plans_desc: "Helpful resources include slide decks, activity guides, rubrics, and more — all organized in one place. Each lesson plan is accompanied by tips for classroom implementation, differentiation ideas, and extension activities to cater to students of all abilities."
   resources_tabs_videos_heading: "Instructional Videos"
@@ -1500,8 +1501,6 @@
   resources_tabs_slides_desc: "Code.org slide decks provide step-by-step instructions, examples, and interactive activities that align with curricular objectives."
   resources_tabs_assessments_subhead: "Our curricula includes a comprehensive system of formative and summative assessment resources."
   resources_tabs_assessments_desc: "These include rubrics, checklists, mini-projects, end-of-chapter projects, student-facing rubrics, sample projects, and post-project tests — all designed to support teachers in measuring student growth, providing feedback, and evaluating student understanding."
-  resources_tabs_tools_subhead: "Code.org's integrated development environments (IDEs) cater to students of all skill levels."
-  resources_tabs_tools_desc: "We offer a versatile and user-friendly platform that supports a variety of programming paradigms. This enables learners to seamlessly transition from block-based coding to text-based languages, and fosters creativity and innovation."
 
   teach_page_top_heading: "Teach computer science & ignite possibilities"
   teach_page_top_desc_01: "Tap into your students' full potential with Code.org's free Computer Science (CS) curriculum."
@@ -1795,6 +1794,58 @@
   donate_tabs_bitpay_title: "Donate with Crypto via BitPay"
   donate_tabs_bitpay_desc: "Embrace the future of giving with cryptocurrency. Through BitPay, your digital currency can directly support Code.org's endeavors in expanding computer science education."
 
+  donate_page:
+    heading: "Help fund and support our mission"
+    options:
+      heading: "Donate to Code.org"
+      desc: "Explore a variety of ways to support Code.org directly through our website. Your contribution fuels our mission to expand access to computer science education."
+      contribute:
+        tab: "Contribute"
+        title: "Donate directly to Code.org"
+        desc: "Make a secure donation directly through our site using the form. Your gift can be one-time or recurring, tailored to your preference. Access our [donation system](%{system_url}), powered by Classy, to create an account or manage your contributions."
+      disclaimer: "Code.org is registered as a public 501(c)(3) nonprofit organization. Contributions to Code.org are tax-deductible to the extent permitted by law. Code.org's tax identification number is 46-0858543. Read our [donation policy](%{policy_url}) to learn about how we handle and allocate contributions."
+    empower:
+      heading: "Empower computer science education"
+      button: "Donate"
+      worldwide:
+        title: "Support students worldwide"
+        desc: "Help students worldwide try an Hour of Code! Our courses are available in over 50 languages and 180+ countries. For every dollar you give, one child is introduced to the world of computer science."
+        amount: "$50"
+      teacher:
+        title: "Support teachers like Flo"
+        desc: "How can there be computer science classes without CS teachers? Support teachers like Flo from Oakland to become computer science educators. Code.org trains thousands of teachers nationwide."
+        amount: "$250"
+      workshops:
+        title: "Support local workshops"
+        desc: "Code.org has over 60 partners in all 50 states running workshops to prepare teachers for computer science. Help create sustainable, community-driven professional development by supporting these local workshops."
+        amount: "$750"
+    campaign:
+      farsi:
+        aria_label:
+          primary: "Donate to Code.org in Farsi"
+          secondary: "Learn more about Code.org in Farsi"
+      naipi:
+        title: "Native American and Indigenous Peoples Initiative (NAIPI)"
+        desc: "Code.org's Native American and Indigenous Peoples Initiative integrates Native American perspectives into education and technology. Explore innovative approaches in Native American education and computer science, discover collaboration opportunities, and witness our collective impact."
+        aria_label:
+          primary: "Donate to Code.org's Native American and Indigenous Peoples Initiative"
+          secondary: "Learn more about Code.org's Native American and Indigenous Peoples Initiative"
+    support_mission:
+      heading: "More ways you can support our mission"
+      desc: "Support our mission to make computer science accessible for every child, everywhere. Your efforts help us inspire future innovators and bridge the tech education gap."
+      translate:
+        title: "Help us translate"
+        desc: "Volunteers have translated our tutorials in over 45 languages. Help us continue to expand our tutorials for students around the world!"
+        button: "Start translating"
+      speak_up:
+        title: "Speak up for CS education"
+        desc: "Learn more about Code.org's advocacy work across the U.S. and the ten policies we recommend states adopt to make computer science foundational for all students. Plus, find out how you can drive change in your state."
+        button: "Learn about our advocacy"
+      shop:
+        title: "Shop Code.org"
+        desc: "Support our work and wear the movement with pride. Our hats have been worn by President Obama and celebrities too."
+        button: "Visit the store"
+
   help_page_top_heading: "How you can help"
   help_page_top_desc: "Support our mission to make computer science accessible for every child, everywhere. Your efforts help us inspire future innovators and bridge the tech education gap."
   help_page_top_subhead: "Make a donation to Code.org"
@@ -2024,7 +2075,7 @@
       heading: "Feedback or questions?"
       subheading: "We greatly value your input and invite you to share your feedback to help shape our offerings."
       desc: "Our international program is continuously expanding, and while resources may be limited, we are committed to growth that meets the needs of educators worldwide. For any questions or suggestions, our dedicated team is ready to assist you as we strive to support your journey in computer science education."
-      cta: "Email us at [international@code.org](%{email_url})."
+      cta: "Email us at [team-global@code.org](%{email_url})."
 
   intl_pl_partners_page:
     page_title: "International Professional Learning Partners"
@@ -2530,6 +2581,160 @@
         title: "Hour of Code Activities"
         desc: "One-hour tutorials in over 45 languages. No experience needed. Hour of Code activities are available for free year-round."
         button: "Explore activities"
+
+  transformers:
+    header: "Code the fun: with Transformers One!"
+    desc: "Build your own exciting Transformers One world now!"
+    code_favorite:
+      header: "Code with your favorite Transformers"
+      desc: "Explore and build awesome worlds with Optimus Prime, Bumblebee, Megatron, and More!"
+    fun:
+      header: "Get in the fun! Easy-to-learn code with Transformers One"
+      desc: "Code.org has teamed up with Transformers One to offer a fun and easy-to-learn coding activity for 2nd-8th graders. Now, you can create your own interactive Transformers One world with some of the movie's most beloved characters!"
+      code_card:
+        header: "Code with the Transformers"
+        desc: "Autobots, roll out! In this Transformers One-themed introduction to our Sprite Lab, students learn the basics of computer science by building fun, interactive projects."
+    after:
+      header: "Continue learning after Transformers One"
+      desc: "The Transformers One activity is an ideal first step for classrooms before tackling the open-ended projects in our new CS Connections curriculum. Once students learn basic coding, they can advance to CS Connections' cross-curricular projects."
+  
+  hello_world:
+    tiny_banner: "Check out the new [Transformers One theme](%{url}) of Hello World!"
+    header: "Hello World"
+    desc: "Say hello to the world of computer science with this introductory activity that equips students with the basic coding skills and confidence to create apps."
+    theme:
+      header: "Choose your Hello World theme!"
+      desc: "Choose from these fun themes to code interactive characters in a world you create!"
+    continue:
+      header: "Continue learning after Hello World"
+      desc: "Hello World is a great starting point before doing CS connections."
+    carousel:
+      transformers: "Transformers One"
+      space: "Space"
+      space_desc: "3, 2, 1... blast off! In this space-themed introduction to our Sprite Lab, students learn the basics of computer science by building fun, interactive projects."
+      soccer: "Soccer"
+      soccer_desc: "Goooooal! In this soccer-themed introduction to our Sprite Lab, students learn the basics of computer science by building fun, interactive projects."
+      food: "Food"
+      food_desc: "Let's see what's on the menu! In this food-themed intro to Sprite Lab, students learn computer science basics by building fun, interactive projects."
+      animals: "Animals"
+      animals_desc: "Lions and tigers and bears, oh my! In this animal-themed intro to Sprite Lab, students learn computer science basics by building fun, interactive projects."
+      retro: "Retro"
+      retro_desc: "Go old school! In this retro-themed intro to Sprite Lab, students learn computer science basics by building fun, interactive projects"
+      emoji: "Emoji"
+      emoji_desc: "In this emoji-themed intro to Sprite Lab, students learn computer science basics by building fun, interactive projects."
+  
+  tools_page:
+    heading: 'Explore Standalone Labs and Widgets'
+    desc: 'Discover programming environments designed to support your creativity. Our labs offer supportive environments that meet learners where they are at, while still keeping the possibilities endless. Our widgets unravel core computer science concepts.'
+    labs:
+      heading: "Build your way with labs"
+      desc: "Discover programming environments designed to meet you at your level and elevate your skills."
+      label_what_you_can_make: "What you can make:"
+      label_experience: "Experience:"
+      spritelab:
+        overline: "Ages 5-12"
+        title: "Sprite Lab"
+        what_you_can_make: "Simple animations and games with characters"
+        experience: "Beginner"
+        call_to_action_learn_more: "Learn more"
+        aria_label_learn_more: "Learn more about Sprite Lab"
+        call_to_action_try: "Try Sprite Lab"
+      gamelab:
+        overline: "Ages 13+"
+        title: "Game Lab"
+        what_you_can_make: "Simple animations and games with characters"
+        experience: "Beginner"
+        call_to_action_learn_more: "Learn more"
+        aria_label_learn_more: "Learn more about Game Lab"
+        call_to_action_try: "Try Game Lab"
+      applab:
+        overline: "Ages 13+"
+        title: "App Lab"
+        what_you_can_make: "Simple Javascript apps with blocks or code"
+        experience: "Beginner"
+        call_to_action_learn_more: "Learn more"
+        aria_label_learn_more: "Learn more about App Lab"
+        call_to_action_try: "Try App Lab"
+      musiclab:
+        overline: "Ages 10+"
+        title: "Music Lab"
+        what_you_can_make: "Create your own mix and beats with code!"
+        experience: "Beginner"
+        call_to_action_learn_more: "Learn more"
+        aria_label_learn_more: "Learn more about Music Lab"
+        call_to_action_try: "Try Music Lab"
+      weblab:
+        overline: "Ages 13+"
+        title: "Web Lab"
+        what_you_can_make: "Simple webpages with HTML and CSS"
+        experience: "Beginner"
+        call_to_action_learn_more: "Learn more"
+        aria_label_learn_more: "Learn more about Web Lab"
+        call_to_action_try: "Try Web Lab"
+    tools_el:
+      heading: "Empower learning with standalone tools"
+      desc: "Leverage our labs to create dynamic learning experiences that resonate with each student. These tools not only teach coding but also build confidence and spark curiosity through hands-on practice."
+      scaffolding: 
+        heading: "Scaffolded learning"
+        desc: "Our programming environments are carefully scaffolded, providing the right level of support to students at every step of their coding journey."
+      independence: 
+        heading: "Guided to independent"
+        desc: "Ease the transition from structured learning to exploration, with tools that encourage students to apply their learning in open-ended projects."
+      engagement: 
+        heading: "Engagement through creativity"
+        desc: "Coding becomes an adventure with labs and widgets that make learning not just educational, but exciting and genuinely fun."
+      differentiation: 
+        heading: "Support differentiation"
+        desc: "Cater to a range of abilities and interests, with tools that adapt to different skill levels, ensuring your students can find their path."
+    widgets:
+      overline: "Grades 6-12"
+      heading: "Explore computer science concepts with widgets"
+      desc: "Delve into the fundamentals of computer science with our interactive widgets. Grasp complex concepts like network communication with the Internet Simulator, or understand data efficiency through the Text Compression Widget. These tools make abstract principles tangible and engaging."
+      text_compression:
+        overline: "compression"
+        title: "Text Compression"
+        desc: "Learn the essentials of text compression as you condense content dynamically. This widget allows immediate visualization of compression effects, challenging students to find optimal patterns and understand file size efficiency."
+        aria_label: "try the text compression widget"
+        button_label: "Try this widget"
+      pixelation:
+        overline: "pixelation"
+        title: "Images and Pixels"
+        desc: "Create images from the ground up with binary code using our Pixelation Widget. Start with simple black and white pixels and progress to intricate, full-color visuals, learning how binary translates into the images we see."
+        aria_label: "try the pixelation widget"
+        button_label: "Try this widget"
+      frequency_analysis:
+        overline: "cryptography"
+        title: "Frequency Analysis"
+        desc: "Unlock the secrets of classic ciphers with the Frequency Analysis Widget. Experiment with the Caesar Shift and random substitution methods to encrypt messages and challenge students to decrypt them without the key."
+        aria_label: "try the frequency analysis widget"
+        button_label: "Try this widget"
+      cipher:
+        overline: "cryptography"
+        title: "Vigenere cipher"
+        desc: "Dive into the world of complex encryption with the Vigenère Cipher Widget. Once deemed unbreakable, this cipher changes with each letter, inviting you to both encode secret messages and test your skills at cracking them."
+        aria_label: "try the vigenere cipher widget"
+        button_label: "Try this widget"
+      internet_simulator:
+        overline: "internet"
+        title: "Internet Simulator"
+        desc: "Explore the intricacies of networked computers with our expansive Internet Simulator. Beyond learning internet protocols, engage with CS concepts such as abstraction and the binary representation of data, all while understanding the 'why' behind internet structures."
+        aria_label: "try the internet simulator widget"
+        button_label: "Try this widget"
+    additional_resources:
+      heading: "Additional resources"
+      catalog:
+        title: "Curriculum Catalog"
+        desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
+        button_label: "Explore the catalog"
+      video_library:
+        title: "Video Library"
+        desc: "Explore our large library of engaging and informative videos to learn about key computer science concepts on a broad range of topics."
+        button_label: "View video library"
+      hour_of_code:
+        title: "Try an Hour of Code"
+        desc: "Looking for more short-form activities and resources for all age levels? Explore our large library of Hour of Code activities and tutorials!"
+        button_label: "See Hour of Code activities"
+
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
@@ -10835,42 +11040,6 @@
   accessibility_card_title_10: "Quorum "
   accessibility_card_text_10: "An adaptation of Code.org’s AP Computer Science Principles curriculum using Quorum, an evidence-based language originally designed to provide accessibility for blind or visually-impaired students."
 
-  engineering_hero_heading: "Join our engineering team!"
-  engineering_hero_desc: "As we continue to expand our engineering team, we wanted to share more about our engineering organization at Code.org and some of the unique aspects of working here. If you are interested in applying for one of our roles, we'd love to hear from you!"
-  engineering_team_title: "Meet the engineering team at Code.org"
-  engineering_team_card_text_1: "This is (most of) us at our in-person get together during the summer of 2023! This crowd is divided into four sub-teams within our engineering team who work together to build and serve the platform for all our students and teachers."
-  engineering_team_card_text_2: "If you are interested in applying for one of our roles, we'd love to hear from you! You can find a list of open positions on our Careers page."
-  engineering_our_team_title: "Our engineering team"
-  engineering_our_team_desc: "The engineering team at Code.org is divided into four sub-teams that build and support different areas of our platform:"
-  engineering_our_team_sub_title_1: "Student Learning Team"
-  engineering_our_team_text_1: "Our Student Learning Team owns all our activities (we call them labs) that our students use each day. This team works mostly on front-end tech (we use React and a lot of custom JS) and we have a great working relationship with many partners and open source projects. For example, we use [Google's Blockly](%{youtube_url}) for all of our block-based programming. We support students in their learning journey all the way from Kindergarten through 12th grade."
-  engineering_our_team_sub_title_2: "Teacher Experience Team"
-  engineering_our_team_text_2: "Our Teacher Experience Team builds the tools that attract new teachers to Code.org (we call these acquisition products) and develops the platform that empowers our existing teachers to teach our curriculum (our teacher tools). As with our student tools, we rely on React to build our front-end and our server-side components are served using Ruby on Rails."
-  engineering_our_team_sub_title_3: "Platform Team"
-  engineering_our_team_text_3: "Our Platform Team owns core components that serve the needs of our student and teacher teams (for example, authentication and user profile) and also has the mission of reaching students who we can't yet reach. This includes building integrations that connect us with schools that use different Learning Management Systems (LMS) and packaging our curriculum so that it can be used in remote schools who don't have access to reliable internet."
-  engineering_our_team_sub_title_4: "Infrastructure Team"
-  engineering_our_team_text_4: "Our Infrastructure Team provides the backbone for the platform that supports our students and teachers. This includes our hosting infrastructure and related services (we use AWS), data management, security programs, developer and deployment services and much more. This team also owns our scaling and provisioning systems, which are critical during Hour of Code, where we invite every student in the world to complete an hour of coding with us."
-  engineering_faq_question_1: "What does Code.org do?"
-  engineering_faq_answer_1_a: "Code.org is an education innovation nonprofit dedicated to the vision that every student in every school has the opportunity to learn computer science as part of their core K-12 education."
-  engineering_faq_answer_1_b: "We expand access to computer science in schools, with a focus on increasing participation by young women and students from other underrepresented groups. The leading provider of K-12 computer science curriculum in the largest school districts in the United States, Code.org also organizes the annual Hour of Code campaign, which has engaged more than 15% of all students in the world."
-  engineering_faq_answer_1_c: "Code.org is supported by generous donors including Microsoft, Amazon, Google and many others."
-  engineering_faq_question_2: "What is Code.org’s developer experience and tooling?"
-  engineering_faq_answer_2: "Our developer experience may be different to what you’ve seen in your past roles. Working closely with our product team, we ship to production every weekday and we have a variety of cadences - sometimes you are writing code that goes live that day; other times you are on longer term projects - and while we do follow 2-weekly sprints, we do so in a lightweight way. We index towards getting the right things done the right way vs. taking a purist view of any particular methodology. [All our code](%{code_url}) is open source and we use JIRA and GitHub pull requests to track all of our work items. We also care a lot about quality and testing and are fortunate to have incredible support from [SauceLabs](%{saucelabs_url}), who help us run our suite of UI tests on various student devices (e.g., iPads) in their cloud device farm."
-  engineering_faq_question_3: "What is the engineer on-call rotation at Code.org?"
-  engineering_faq_answer_3: 'Our 30+ engineering team shares on-call responsibilities. Each engineer covers a 24-hour shift and uses our escalation paths and playbooks to respond to site outages or other live-site issues. We are proud of our site’s reliability - on average, each engineer is only woken up once per year for issues that are typically quick to resolve. Instead, the "Developer of the Day" usually spends a portion of their workday managing the production deployment and triaging less urgent issues.'
-  engineering_faq_question_4: "Are you a remote-friendly / WFH organization?"
-  engineering_faq_answer_4_a: "Yes! In 2019, shortly before the pandemic, Code.org became a remote-first organization. Today, we have engineers in every US time zone and accommodate working hours accordingly. Most of our meetings happen between the hours of 10am and 3pm PT."
-  engineering_faq_answer_4_b: "We also recognize the value of in-person time, and every quarter we get together in person, typically in Seattle. Two of these events (we call them Kick-off week and “Codechella”) bring everyone in the organization together in January and June - and the engineering and product teams meet separately in April and October."
-  engineering_faq_answer_4_c: "We strongly believe in spending time with our students and teachers, so many of these in-person events include trips into schools and classrooms to gather feedback or play-test our products"
-  engineering_faq_question_5: "What makes the engineering team at Code.org unique?"
-  engineering_faq_answer_5_a: "Beyond solving challenging technical problems, we have a few things that make our engineering org different from others you may have worked in:"
-  engineering_faq_answer_5_b_1: "We all share our passion for our mission."
-  engineering_faq_answer_5_b_2: "Each of us is here to support the mission to expand access to computer science for every student across the world. We all have our unique story and perspective about what drives us towards this mission."
-  engineering_faq_answer_5_c_1: "We care deeply about each other."
-  engineering_faq_answer_5_c_2: "When engineers are struggling with an issue, we step in and we help. One of our principles is that we are hard on problems, but kind to each other. We promote engineers regularly, but we don't prescribe over-engineered solutions just to support someone's promotion path. Instead, we invest in our engineers with a generous professional development budget and access to other learning opportunities."
-  engineering_faq_answer_5_d_1: "We work hard, but we set clear boundaries."
-  engineering_faq_answer_5_d_2: "While we support students across the world, we hold ourselves accountable for clear boundaries between work and home life. We enjoy no-meetings Wednesdays, 3 weeks of flexible paid time off, an additional org-wide 2-week office closure at the end of the year, and other generous benefits."
-
   careers_hero_title: "Careers"
   careers_hero_description: "Code.org is a nonprofit organization dedicated to expanding access to computer science in schools. We are especially focused on increasing participation among young women and underrepresented students."
   careers_hero_description_under: "Help us change the world, one student at a time!"
@@ -11344,7 +11513,7 @@
   about_page_section_more_description_1: "In 2013, Code.org was launched by twin brothers [Hadi](%{hadi_url}) and [Ali Partovi](%{partovi_url}) with a [video](%{video_url}) promoting computer science. This video became #1 on YouTube for a day, and 15,000 schools reached out to us for help. Since then, we've expanded from a bootstrapped staff of volunteers to build a full organization supporting a worldwide movement. We believe that a quality computer science education should be available to every child, not just a lucky few."
   about_page_section_more_description_2: "To support our goal, we do work across the education spectrum: designing our own courses or partnering with others, training teachers, partnering with large school districts, helping change government policies, expanding internationally via partnerships, and marketing to break stereotypes."
   about_page_section_more_description_3: "Our work builds upon [decades of effort, by countless organizations and individuals](%{efforts_url}) who have helped establish, fund, and spread computer science education. We're thankful to benefit from the tireless help of the broader computer science education community, and [we thank all the partners and individuals who have supported our impact over the years](%{partners_url}))."
-  about_page_annual_report_2022: "[Code.org 2022 Annual Report](%{report_url_2022}) (Past reports: [2021](%{report_url_2021}), [2020](%{report_url_2020}), [2019](%{report_url_2019}), [2018](%{report_url_2018}), [2017](%{report_url_2017}), [2016](%{report_url_2016}), [2015](%{report_url_2015}), [2014](%{report_url_2014}))"
+  about_page_annual_report: "[Code.org Annual Report](%{report_url})"
   about_page_section_more_list_2: "[Our core values and messaging guidelines](%{core_url})"
   about_page_section_more_list_3: "[Our curriculum and pedagogy philosophy](%{curriculum_url})"
   about_page_section_more_list_4: "[TEDx talk by our founder Hadi Partovi about why computer science is for all (VIDEO)](%{tedx_url})"
@@ -11476,6 +11645,7 @@
       what_you_can_make: "Simple animations and games with characters"
       experience: "Beginner"
       call_to_action_learn_more: "Learn more"
+      aria_label_learn_more: "Learn more about Sprite Lab"
       call_to_action_try: "Try Sprite Lab"
     gamelab:
       overline: "Ages 13+"
@@ -11483,6 +11653,7 @@
       what_you_can_make: "Simple animations and games with characters"
       experience: "Beginner"
       call_to_action_learn_more: "Learn more"
+      aria_label_learn_more: "Learn more about Game Lab"
       call_to_action_try: "Try Game Lab"
     applab:
       overline: "Ages 13+"
@@ -11490,8 +11661,9 @@
       what_you_can_make: "Simple Javascript apps with blocks or code"
       experience: "Beginner"
       call_to_action_learn_more: "Learn more"
+      aria_label_learn_more: "Learn more about App Lab"
       call_to_action_try: "Try App Lab"
- 
+
   resources_tabs:
     progress:
       tab_label: "Progress"

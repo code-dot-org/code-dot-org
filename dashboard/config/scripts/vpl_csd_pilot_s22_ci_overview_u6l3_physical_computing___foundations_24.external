@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Experiment with Inputs and Outputs
 
-#### The Creating Apps with Devices unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. 
+#### The Computer Systems and Devices unit emphasizes the interactions between inputs and outputs on the micro:bit and an app screen. On their micro:bit, students learn to control inputs like buttons and outputs like the LED Screen. Students also interact with inputs and outputs in App Lab, such as buttons and text inputs and dropdowns. 
 
 ### **You will:**
 

@@ -7,34 +7,38 @@ import {
   ThunkDispatch,
 } from '@reduxjs/toolkit';
 
-import {Role} from '@cdo/apps/aiComponentLibrary/chatItems/types';
+import {Role} from '@cdo/apps/aiComponentLibrary/chatMessage/types';
+import {
+  getCurrentScriptLevelId,
+  getCurrentLevel,
+} from '@cdo/apps/code-studio/progressReduxSelectors';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {registerReducers} from '@cdo/apps/redux';
+import {commonI18n} from '@cdo/apps/types/locale';
 import {RootState} from '@cdo/apps/types/redux';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-import {postAichatCompletionMessage} from '../aichatCompletionApi';
+import {postAichatCompletionMessage, getStudentChatHistory} from '../aichatApi';
+import ChatEventLogger from '../chatEventLogger';
 import {saveTypeToAnalyticsEvent} from '../constants';
 import {
-  AiCustomizations,
   AichatContext,
+  AiCustomizations,
+  ChatEvent,
+  ChatMessage,
   FieldVisibilities,
   LevelAichatSettings,
   ModelCardInfo,
   SaveType,
   ViewMode,
   Visibility,
-  ChatMessage,
-  ChatItem,
   isModelUpdate,
   isNotification,
   isChatMessage,
-  ModelUpdate,
-  Notification,
 } from '../types';
 import {
   DEFAULT_VISIBILITIES,
@@ -44,12 +48,13 @@ import {validateModelId} from '../views/modelCustomization/utils';
 
 import {
   allFieldsHidden,
+  anyFieldsChanged,
   findChangedProperties,
   getNewMessageId,
   hasFilledOutModelCard,
 } from './utils';
 
-const messageListKeys = ['chatItemsPast', 'chatItemsCurrent'] as const;
+const messageListKeys = ['chatEventsPast', 'chatEventsCurrent'] as const;
 type MessageLocation = {
   index: number;
   messageListKey: (typeof messageListKeys)[number];
@@ -58,22 +63,24 @@ type MessageLocation = {
 export interface AichatState {
   // Content from previous chat sessions that we track purely for visibility to the user
   // and do not send to the model as history.
-  chatItemsPast: ChatItem[];
+  chatEventsPast: ChatEvent[];
   // Items in the current chat session that we want to provide as history to the model.
-  chatItemsCurrent: ChatItem[];
+  chatEventsCurrent: ChatEvent[];
   // The user message currently awaiting response from the model (if any).
   chatMessagePending?: ChatMessage;
   // Denotes whether we are waiting for a chat completion response from the backend
   isWaitingForChatResponse: boolean;
+  // Student events viewed by a teacher user in chat workspace
+  studentChatHistory: ChatEvent[];
   // Denotes whether we should show the warning modal
   showWarningModal: boolean;
   // Denotes if there is an error with the chat completion response
   chatMessageError: boolean;
+  initialAiCustomizations: AiCustomizations;
   currentAiCustomizations: AiCustomizations;
   savedAiCustomizations: AiCustomizations;
   fieldVisibilities: FieldVisibilities;
   viewMode: ViewMode;
-  currentSessionId?: number;
   // If a save is currently in progress
   saveInProgress: boolean;
   // The type of save action being performed (customization update, publish, model card save, etc).
@@ -81,12 +88,14 @@ export interface AichatState {
 }
 
 const initialState: AichatState = {
-  chatItemsPast: [],
-  chatItemsCurrent: [],
+  chatEventsPast: [],
+  chatEventsCurrent: [],
   chatMessagePending: undefined,
   isWaitingForChatResponse: false,
+  studentChatHistory: [],
   showWarningModal: true,
   chatMessageError: false,
+  initialAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   currentAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   savedAiCustomizations: EMPTY_AI_CUSTOMIZATIONS,
   fieldVisibilities: DEFAULT_VISIBILITIES,
@@ -206,20 +215,28 @@ export const onSaveComplete =
 
     changedProperties.forEach(property => {
       const typedProperty = property as keyof AiCustomizations;
-      dispatch(
-        addModelUpdate({
-          id: getNewMessageId(),
-          updatedField: typedProperty,
-          updatedValue: currentAiCustomizations[typedProperty],
-          timestamp: Date.now(),
-        })
-      );
+      const modelUpdate = {
+        id: getNewMessageId(),
+        updatedField: typedProperty,
+        updatedValue: currentAiCustomizations[typedProperty],
+        timestamp: Date.now(),
+      };
+      dispatch(addChatEvent(modelUpdate));
 
+      // Report to analytics the changed value for only selected model id and temperature properties.
+      // Do not include the free text changes (system prompt and retrieval contexts).
+      const propertiesChangedValueToReport = ['selectedModelId', 'temperature'];
+      const propertyChangedTo = propertiesChangedValueToReport.includes(
+        typedProperty
+      )
+        ? currentAiCustomizations[typedProperty]
+        : 'NULL';
       if (currentSaveType) {
         analyticsReporter.sendEvent(
           saveTypeToAnalyticsEvent[currentSaveType],
           {
             propertyUpdated: property,
+            propertyChangedTo,
             levelPath: window.location.pathname,
           },
           PLATFORMS.BOTH
@@ -276,7 +293,11 @@ export const onSaveFail =
           if (body?.details?.profaneWords?.length > 0 && flaggedProperties) {
             errorMessage = `Profanity detected in the ${flaggedProperties} and cannot be updated. Please try again.`;
           }
-          dispatchSaveFailNotification(dispatch, errorMessage);
+          dispatchSaveFailNotification(
+            dispatch,
+            errorMessage,
+            !!flaggedProperties
+          );
         })
         // Catch any errors in parsing the response body or if there was no response body
         // and fall back to the default error message.
@@ -291,19 +312,62 @@ export const onSaveFail =
 
 const dispatchSaveFailNotification = (
   dispatch: AppDispatch,
-  errorMessage: string
+  errorMessage: string,
+  includeInChatHistory?: boolean
 ) => {
-  dispatch(
-    addNotification({
-      id: getNewMessageId(),
-      text: errorMessage,
-      notificationType: 'error',
-      timestamp: Date.now(),
-    })
-  );
+  const errorNotification = {
+    id: getNewMessageId(),
+    text: errorMessage,
+    notificationType: 'error',
+    timestamp: Date.now(),
+    includeInChatHistory,
+  };
+  dispatch(addChatEvent(errorNotification));
+
   // Notify the UI that the save is complete.
   dispatch(endSave());
 };
+
+// This thunk adds a chat event to chatEventsCurrent (displayed in current chat workspace) if visible, i.e.,
+// hideForParticipants != true. Then it logs the event to the backend for all chat events except notifications
+// with includeInHistory != true.
+export const addChatEvent =
+  <T extends ChatEvent>(chatEvent: T) =>
+  (dispatch: AppDispatch, getState: () => RootState) => {
+    // Only visible chat events added to chatEventsCurrent.
+    if (!chatEvent.hideForParticipants) {
+      dispatch(addEventToChatEventsCurrent(chatEvent));
+    }
+    // Log chat event to backend.
+    const state = getState() as RootState;
+    const aichatContext: AichatContext = {
+      currentLevelId: parseInt(state.progress.currentLevelId || ''),
+      scriptId: state.progress.scriptId,
+      channelId: state.lab.channel?.id,
+    };
+    // Other than notifications that are not included in chat history (save errors not due to profanity),
+    // log the chat event to backend.
+    if (
+      !isNotification(chatEvent) ||
+      (isNotification(chatEvent) && chatEvent.includeInChatHistory)
+    ) {
+      // If a model update, log only the updated value for temperature and selected model id.
+      // Do not log free text updated values (e.g., system prompt, retrieval contexts, model card info).
+      if (isModelUpdate(chatEvent)) {
+        const {updatedField, updatedValue} = chatEvent;
+        // Only log updated value for temperature and selected model id - free text values are not logged.
+        const updatedValueToLog =
+          updatedField === 'temperature' || updatedField === 'selectedModelId'
+            ? updatedValue
+            : 'N/A';
+        chatEvent = {
+          ...chatEvent,
+          updatedValue: updatedValueToLog,
+        };
+      }
+      ChatEventLogger.getInstance().logChatEvent(chatEvent, aichatContext);
+    }
+  };
 
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
@@ -311,12 +375,10 @@ const dispatchSaveFailNotification = (
 export const submitChatContents = createAsyncThunk(
   'aichat/submitChatContents',
   async (newUserMessageText: string, thunkAPI) => {
+    const dispatch = thunkAPI.dispatch as AppDispatch;
     const state = thunkAPI.getState() as RootState;
-    const {
-      savedAiCustomizations: aiCustomizations,
-      chatItemsCurrent,
-      currentSessionId,
-    } = state.aichat;
+    const {savedAiCustomizations: aiCustomizations, chatEventsCurrent} =
+      state.aichat;
 
     const aichatContext: AichatContext = {
       currentLevelId: parseInt(state.progress.currentLevelId || ''),
@@ -324,42 +386,30 @@ export const submitChatContents = createAsyncThunk(
       channelId: state.lab.channel?.id,
     };
     // Create the new user ChatCompleteMessage and add to chatMessages.
-    const newMessage: ChatMessage = {
+    const newUserMessage: ChatMessage = {
       role: Role.USER,
       status: Status.UNKNOWN,
       chatMessageText: newUserMessageText,
       timestamp: Date.now(),
     };
-    thunkAPI.dispatch(setChatMessagePending(newMessage));
+    dispatch(setChatMessagePending(newUserMessage));
 
     // Post user content and messages to backend and retrieve assistant response.
     const startTime = Date.now();
 
     let chatApiResponse;
     try {
-      chatApiResponse = await postAichatCompletionMessage(
-        newMessage,
-        chatItemsCurrent.filter(isChatMessage) as ChatMessage[],
-        aiCustomizations,
-        aichatContext,
-        currentSessionId
-      );
-    } catch (error) {
       Lab2Registry.getInstance()
         .getMetricsReporter()
-        .logError('Error in aichat completion request', error as Error);
-
-      thunkAPI.dispatch(clearChatMessagePending());
-      thunkAPI.dispatch(addChatMessage({...newMessage, status: Status.ERROR}));
-
-      const assistantChatMessage: ChatMessage = {
-        role: Role.ASSISTANT,
-        status: Status.ERROR,
-        chatMessageText: 'error',
-        timestamp: Date.now(),
-      };
-      thunkAPI.dispatch(addChatMessage(assistantChatMessage));
-
+        .incrementCounter('Aichat.ChatCompletionRequestInitiated');
+      chatApiResponse = await postAichatCompletionMessage(
+        newUserMessage,
+        chatEventsCurrent.filter(isChatMessage) as ChatMessage[],
+        aiCustomizations,
+        aichatContext
+      );
+    } catch (error) {
+      await handleChatCompletionError(error as Error, newUserMessage, dispatch);
       return;
     }
 
@@ -372,10 +422,6 @@ export const submitChatContents = createAsyncThunk(
         },
       ]);
 
-    if (chatApiResponse.session_id) {
-      thunkAPI.dispatch(setChatSessionId(chatApiResponse.session_id));
-    }
-
     if (chatApiResponse.flagged_content) {
       console.log(
         `Content flagged by profanity filter: ${chatApiResponse.flagged_content}`
@@ -383,9 +429,104 @@ export const submitChatContents = createAsyncThunk(
     }
 
     thunkAPI.dispatch(clearChatMessagePending());
-    chatApiResponse.messages.forEach(message =>
-      thunkAPI.dispatch(addChatMessage({...message, timestamp: Date.now()}))
+    chatApiResponse.messages.forEach(message => {
+      dispatch(addChatEvent({...message, timestamp: Date.now()}));
+    });
+  }
+);
+
+async function handleChatCompletionError(
+  error: Error,
+  newUserMessage: ChatMessage,
+  dispatch: AppDispatch
+) {
+  Lab2Registry.getInstance()
+    .getMetricsReporter()
+    .logError('Error in aichat completion request', error as Error);
+
+  dispatch(clearChatMessagePending());
+  dispatch(addChatEvent({...newUserMessage, status: Status.ERROR}));
+
+  // Display specific error notifications if the user was rate limited (HTTP 429) or not authorized (HTTP 403).
+  // Otherwise, display a generic error assistant response.
+  if (error instanceof NetworkError && error.response.status === 429) {
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .incrementCounter('Aichat.ChatCompletionErrorRateLimited');
+    dispatch(
+      addChatEvent({
+        id: getNewMessageId(),
+        text: commonI18n.aiChatRateLimitError(),
+        notificationType: 'error',
+        timestamp: Date.now(),
+      })
     );
+  } else if (error instanceof NetworkError && error.response.status === 403) {
+    const responseBody = await error.response.json();
+    const userType = responseBody?.user_type;
+
+    const userTypeToMessageText: {[key: string]: string} = {
+      teacher: commonI18n.aiChatNotAuthorizedTeacher(),
+      student: commonI18n.aiChatNotAuthorizedStudent(),
+    };
+    const messageText =
+      userTypeToMessageText[userType] ||
+      commonI18n.aiChatNotAuthorizedSignedOut();
+
+    dispatch(
+      addChatEvent({
+        id: getNewMessageId(),
+        text: messageText,
+        notificationType: 'error',
+        timestamp: Date.now(),
+      })
+    );
+  } else {
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .incrementCounter('Aichat.ChatCompletionErrorUnhandled');
+    dispatch(
+      addChatEvent({
+        role: Role.ASSISTANT,
+        status: Status.ERROR,
+        chatMessageText: 'error',
+        timestamp: Date.now(),
+      })
+    );
+  }
+}
+
+// This thunk's callback function submits a teacher's student's id along with the level/script id
+// (and the scriptLevelId if the level is a sublevel) to the student chat history endpoint,
+// waits for a response, and then returns the student's chat events for that level/script.
+export const fetchStudentChatHistory = createAsyncThunk(
+  'aichat/fetchStudentChatHistory',
+  async (studentUserId: number, thunkAPI) => {
+    const state = thunkAPI.getState() as RootState;
+    // Post teacher's student's user id to backend and retrieve student's chat history.
+    const currentLevel = getCurrentLevel(state);
+    // The scriptLevelId is sent to the backend if the current level is a sublevel so that we can
+    // correctly check if the teacher has permission to view the student's chat history.
+    const scriptLevelId = currentLevel.parentLevelId
+      ? getCurrentScriptLevelId(state)
+      : undefined;
+    try {
+      const studentChatHistoryApiResponse = await getStudentChatHistory(
+        studentUserId,
+        parseInt(state.progress.currentLevelId || ''),
+        state.progress.scriptId,
+        scriptLevelId
+      );
+      thunkAPI.dispatch(setStudentChatHistory(studentChatHistoryApiResponse));
+    } catch (error) {
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError(
+          'Error in aichat student chat history request',
+          error as Error
+        );
+      return;
+    }
   }
 );
 
@@ -393,14 +534,11 @@ const aichatSlice = createSlice({
   name: 'aichat',
   initialState,
   reducers: {
-    addChatMessage: (state, action: PayloadAction<ChatMessage>) => {
-      state.chatItemsCurrent.push(action.payload);
+    addEventToChatEventsCurrent: (state, action: PayloadAction<ChatEvent>) => {
+      state.chatEventsCurrent.push(action.payload);
     },
-    addModelUpdate: (state, action: PayloadAction<ModelUpdate>) => {
-      state.chatItemsCurrent.push(action.payload);
-    },
-    addNotification: (state, action: PayloadAction<Notification>) => {
-      state.chatItemsCurrent.push(action.payload);
+    setStudentChatHistory: (state, action: PayloadAction<ChatEvent[]>) => {
+      state.studentChatHistory = action.payload;
     },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
       const modelUpdateMessageInfo = getUpdateMessageLocation(
@@ -415,21 +553,16 @@ const aichatSlice = createSlice({
       state[messageListKey].splice(index, 1);
     },
     clearChatMessages: state => {
-      state.chatItemsPast = [];
-      state.chatItemsCurrent = [];
-      state.currentSessionId = undefined;
+      state.chatEventsPast = [];
+      state.chatEventsCurrent = [];
     },
     setChatMessagePending: (state, action: PayloadAction<ChatMessage>) => {
       state.chatMessagePending = action.payload;
     },
     clearChatMessagePending: state => (state.chatMessagePending = undefined),
     setNewChatSession: state => {
-      state.chatItemsPast.push(...state.chatItemsCurrent);
-      state.chatItemsCurrent = [];
-      state.currentSessionId = undefined;
-    },
-    setChatSessionId: (state, action: PayloadAction<number>) => {
-      state.currentSessionId = action.payload;
+      state.chatEventsPast.push(...state.chatEventsCurrent);
+      state.chatEventsCurrent = [];
     },
     setShowWarningModal: (state, action: PayloadAction<boolean>) => {
       state.showWarningModal = action.payload;
@@ -475,6 +608,7 @@ const aichatSlice = createSlice({
         ),
       };
 
+      state.initialAiCustomizations = reconciledAiCustomizations;
       state.savedAiCustomizations = reconciledAiCustomizations;
       state.currentAiCustomizations = reconciledAiCustomizations;
       state.fieldVisibilities =
@@ -508,11 +642,11 @@ const aichatSlice = createSlice({
     ) => {
       state.savedAiCustomizations = action.payload;
     },
-    setAiCustomizationProperty: (
-      state,
+    setAiCustomizationProperty: <T extends keyof AiCustomizations>(
+      state: AichatState,
       action: PayloadAction<{
-        property: keyof AiCustomizations;
-        value: AiCustomizations[typeof property];
+        property: T;
+        value: AiCustomizations[T];
       }>
     ) => {
       const {property, value} = action.payload;
@@ -596,9 +730,21 @@ export const selectAllFieldsHidden = createSelector(
   allFieldsHidden
 );
 
-export const selectAllMessages = (state: {aichat: AichatState}) => {
-  const {chatItemsPast, chatItemsCurrent, chatMessagePending} = state.aichat;
-  const messages = [...chatItemsPast, ...chatItemsCurrent];
+export const selectCurrentCustomizationsMatchInitial = createSelector(
+  (state: RootState) => state.aichat.initialAiCustomizations,
+  (state: RootState) => state.aichat.currentAiCustomizations,
+  anyFieldsChanged
+);
+
+export const selectSavedCustomizationsMatchInitial = createSelector(
+  (state: RootState) => state.aichat.initialAiCustomizations,
+  (state: RootState) => state.aichat.savedAiCustomizations,
+  anyFieldsChanged
+);
+
+export const selectAllVisibleMessages = (state: {aichat: AichatState}) => {
+  const {chatEventsPast, chatEventsCurrent, chatMessagePending} = state.aichat;
+  const messages = [...chatEventsPast, ...chatEventsCurrent];
   if (chatMessagePending) {
     messages.push(chatMessagePending);
   }
@@ -613,8 +759,7 @@ export const selectHavePropertiesChanged = (state: RootState) =>
 
 // Actions not to be used outside of this file
 const {
-  addChatMessage,
-  addModelUpdate,
+  addEventToChatEventsCurrent,
   startSave,
   setChatMessagePending,
   clearChatMessagePending,
@@ -623,16 +768,15 @@ const {
 
 registerReducers({aichat: aichatSlice.reducer});
 export const {
-  addNotification,
   removeUpdateMessage,
   setNewChatSession,
-  setChatSessionId,
   clearChatMessages,
   setShowWarningModal,
   resetToDefaultAiCustomizations,
   setViewMode,
   setStartingAiCustomizations,
   setAiCustomizationProperty,
+  setStudentChatHistory,
   setModelCardProperty,
   endSave,
 } = aichatSlice.actions;

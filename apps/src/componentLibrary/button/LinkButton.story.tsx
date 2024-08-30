@@ -69,7 +69,7 @@ LinkButtonWithIcons.args = {
   text: 'Button',
   href: 'https://www.google.com',
   iconLeft: {iconName: 'house', iconStyle: 'solid'},
-  iconRight: {iconName: 'smile', iconStyle: 'solid'},
+  iconRight: {iconName: 'brands fa-facebook', iconStyle: 'solid'},
   size: 'm',
 };
 
@@ -104,6 +104,12 @@ GroupOfColorsOfLinkButtons.args = {
       href: 'https://www.google.com',
     },
     {
+      text: 'Button Primary Destructive',
+      color: buttonColors.destructive,
+      size: 'm',
+      href: 'https://www.google.com',
+    },
+    {
       text: 'Button Secondary Black',
       color: buttonColors.black,
       type: 'secondary',
@@ -120,6 +126,13 @@ GroupOfColorsOfLinkButtons.args = {
     {
       text: 'Button Secondary White',
       color: buttonColors.white,
+      type: 'secondary',
+      size: 'm',
+      href: 'https://www.google.com',
+    },
+    {
+      text: 'Button Secondary Destructive',
+      color: buttonColors.destructive,
       type: 'secondary',
       size: 'm',
       href: 'https://www.google.com',
@@ -146,6 +159,13 @@ GroupOfColorsOfLinkButtons.args = {
       href: 'https://www.google.com',
     },
     {
+      text: 'Button Tertiary Destructive',
+      color: buttonColors.destructive,
+      type: 'tertiary',
+      size: 'm',
+      href: 'https://www.google.com',
+    },
+    {
       icon: {iconName: 'smile', iconStyle: 'solid'},
       color: buttonColors.purple,
       type: 'primary',
@@ -164,6 +184,14 @@ GroupOfColorsOfLinkButtons.args = {
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
       color: buttonColors.white,
+      type: 'primary',
+      isIconOnly: true,
+      size: 'm',
+      href: 'https://www.google.com',
+    },
+    {
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      color: buttonColors.destructive,
       type: 'primary',
       isIconOnly: true,
       size: 'm',
@@ -195,6 +223,14 @@ GroupOfColorsOfLinkButtons.args = {
     },
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
+      color: buttonColors.destructive,
+      type: 'secondary',
+      isIconOnly: true,
+      size: 'm',
+      href: 'https://www.google.com',
+    },
+    {
+      icon: {iconName: 'smile', iconStyle: 'solid'},
       color: buttonColors.purple,
       type: 'tertiary',
       isIconOnly: true,
@@ -212,6 +248,14 @@ GroupOfColorsOfLinkButtons.args = {
     {
       icon: {iconName: 'smile', iconStyle: 'solid'},
       color: buttonColors.white,
+      type: 'tertiary',
+      isIconOnly: true,
+      size: 'm',
+      href: 'https://www.google.com',
+    },
+    {
+      icon: {iconName: 'smile', iconStyle: 'solid'},
+      color: buttonColors.destructive,
       type: 'tertiary',
       isIconOnly: true,
       size: 'm',
