@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "self-paced-gen-ai",
-    "serialized_at": "2024-08-28 18:47:02 UTC",
+    "serialized_at": "2024-08-29 20:20:06 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -613,6 +613,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-foundations-overview_02_2024"
+        ],
         "progression": "Unit Overview (5 min)"
       },
       "bonus": false,
@@ -635,6 +638,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-foundations_01_2024"
+        ],
         "progression": "Foundations of AI (20 min)"
       },
       "bonus": false,
@@ -657,6 +663,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-foundations_02_2024"
+        ],
         "progression": "Foundations of AI (20 min)"
       },
       "bonus": false,
@@ -679,6 +688,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-foundations_03_2024"
+        ],
         "progression": "Foundations of AI (20 min)"
       },
       "bonus": false,
@@ -701,6 +713,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-foundations_04_2024"
+        ],
         "progression": "Foundations of AI (20 min)"
       },
       "bonus": false,
@@ -723,6 +738,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-foundations_05_2024"
+        ],
         "progression": "Foundations of AI (20 min)"
       },
       "bonus": false,
@@ -745,6 +763,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-foundations_06_2024"
+        ],
         "progression": "Foundations of AI (20 min)"
       },
       "bonus": false,
@@ -767,6 +788,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-foundations_07_2024"
+        ],
         "progression": "Foundations of AI (20 min)"
       },
       "bonus": false,
@@ -789,6 +813,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-foundations_08_2024"
+        ],
         "progression": "Foundations of AI (20 min)"
       },
       "bonus": false,
@@ -811,6 +838,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-foundations_09_2024"
+        ],
         "progression": "Foundations of AI (20 min)"
       },
       "bonus": false,
@@ -833,6 +863,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-foundations_10_2024"
+        ],
         "progression": "Foundations of AI (20 min)"
       },
       "bonus": false,
@@ -855,6 +888,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-foundations-project_01_2024"
+        ],
         "progression": "Final Project (10 min)"
       },
       "bonus": false,
@@ -873,6 +909,50 @@
     },
     {
       "chapter": 24,
+      "position": 14,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Project (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-gen-ai-foundations-project_02_2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "2bc3e9e7-a6eb-4900-b43a-245649a59733"
+      },
+      "level_keys": [
+        "self-paced-pl-gen-ai-foundations-project_02_2024"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 15,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Project (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-gen-ai-foundations-project_04_2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "2bc3e9e7-a6eb-4900-b43a-245649a59733"
+      },
+      "level_keys": [
+        "self-paced-pl-gen-ai-foundations-project_04_2024"
+      ]
+    },
+    {
+      "chapter": 26,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -897,11 +977,14 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 27,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-customizing-overview_02_2024"
+        ],
         "progression": "Unit Overview (5)"
       },
       "bonus": false,
@@ -919,7 +1002,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 28,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
@@ -944,7 +1027,7 @@
       ]
     },
     {
-      "chapter": 27,
+      "chapter": 29,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
@@ -969,7 +1052,7 @@
       ]
     },
     {
-      "chapter": 28,
+      "chapter": 30,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
@@ -994,7 +1077,7 @@
       ]
     },
     {
-      "chapter": 29,
+      "chapter": 31,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
@@ -1019,7 +1102,7 @@
       ]
     },
     {
-      "chapter": 30,
+      "chapter": 32,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
@@ -1044,7 +1127,7 @@
       ]
     },
     {
-      "chapter": 31,
+      "chapter": 33,
       "position": 8,
       "activity_section_position": 6,
       "assessment": false,
@@ -1069,7 +1152,7 @@
       ]
     },
     {
-      "chapter": 32,
+      "chapter": 34,
       "position": 9,
       "activity_section_position": 7,
       "assessment": false,
@@ -1094,7 +1177,7 @@
       ]
     },
     {
-      "chapter": 33,
+      "chapter": 35,
       "position": 10,
       "activity_section_position": 8,
       "assessment": false,
@@ -1119,11 +1202,14 @@
       ]
     },
     {
-      "chapter": 34,
+      "chapter": 36,
       "position": 11,
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-customizing_07b_2024"
+        ],
         "progression": "Customizing Language Models (45 min)"
       },
       "bonus": false,
@@ -1141,7 +1227,7 @@
       ]
     },
     {
-      "chapter": 35,
+      "chapter": 37,
       "position": 12,
       "activity_section_position": 10,
       "assessment": false,
@@ -1166,11 +1252,14 @@
       ]
     },
     {
-      "chapter": 36,
+      "chapter": 38,
       "position": 13,
       "activity_section_position": 11,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-customizing_14_2024"
+        ],
         "progression": "Customizing Language Models (45 min)"
       },
       "bonus": false,
@@ -1188,11 +1277,14 @@
       ]
     },
     {
-      "chapter": 37,
+      "chapter": 39,
       "position": 14,
       "activity_section_position": 12,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-customizing_15b_2024"
+        ],
         "progression": "Customizing Language Models (45 min)"
       },
       "bonus": false,
@@ -1210,11 +1302,14 @@
       ]
     },
     {
-      "chapter": 38,
+      "chapter": 40,
       "position": 15,
       "activity_section_position": 13,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-customizing_18_2024"
+        ],
         "progression": "Customizing Language Models (45 min)"
       },
       "bonus": false,
@@ -1232,11 +1327,14 @@
       ]
     },
     {
-      "chapter": 39,
+      "chapter": 41,
       "position": 16,
       "activity_section_position": 14,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-customizing_19_2024"
+        ],
         "progression": "Customizing Language Models (45 min)"
       },
       "bonus": false,
@@ -1254,11 +1352,14 @@
       ]
     },
     {
-      "chapter": 40,
+      "chapter": 42,
       "position": 17,
       "activity_section_position": 15,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-customizing_20_2024"
+        ],
         "progression": "Customizing Language Models (45 min)"
       },
       "bonus": false,
@@ -1276,11 +1377,14 @@
       ]
     },
     {
-      "chapter": 41,
+      "chapter": 43,
       "position": 18,
       "activity_section_position": 16,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-customizing_21_2024"
+        ],
         "progression": "Customizing Language Models (45 min)"
       },
       "bonus": false,
@@ -1298,11 +1402,14 @@
       ]
     },
     {
-      "chapter": 42,
+      "chapter": 44,
       "position": 19,
       "activity_section_position": 17,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-customizing_22_2024"
+        ],
         "progression": "Customizing Language Models (45 min)"
       },
       "bonus": false,
@@ -1320,11 +1427,14 @@
       ]
     },
     {
-      "chapter": 43,
+      "chapter": 45,
       "position": 20,
       "activity_section_position": 18,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-customizing_23_2024"
+        ],
         "progression": "Customizing Language Models (45 min)"
       },
       "bonus": false,
@@ -1342,11 +1452,14 @@
       ]
     },
     {
-      "chapter": 44,
+      "chapter": 46,
       "position": 21,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-customizing-project_01_2024"
+        ],
         "progression": "Final Project (10 min)"
       },
       "bonus": false,
@@ -1364,7 +1477,73 @@
       ]
     },
     {
-      "chapter": 45,
+      "chapter": 47,
+      "position": 22,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Project (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-gen-ai-customizing-project_02_2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "42766be2-d03b-4f40-90bb-2475a2ead6e0"
+      },
+      "level_keys": [
+        "self-paced-pl-gen-ai-customizing-project_02_2024"
+      ]
+    },
+    {
+      "chapter": 48,
+      "position": 23,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Project (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-gen-ai-customizing-project_03_2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "42766be2-d03b-4f40-90bb-2475a2ead6e0"
+      },
+      "level_keys": [
+        "self-paced-pl-gen-ai-customizing-project_03_2024"
+      ]
+    },
+    {
+      "chapter": 49,
+      "position": 24,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Project (10 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-gen-ai-customizing-project_04_2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "42766be2-d03b-4f40-90bb-2475a2ead6e0"
+      },
+      "level_keys": [
+        "self-paced-pl-gen-ai-customizing-project_04_2024"
+      ]
+    },
+    {
+      "chapter": 50,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1389,11 +1568,14 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 51,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-user-overview_02b_2024"
+        ],
         "progression": "Unit Overview (5 min)"
       },
       "bonus": false,
@@ -1411,11 +1593,14 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 52,
       "position": 3,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-user_01_2024"
+        ],
         "progression": "User Centered Design (20 min)"
       },
       "bonus": false,
@@ -1433,11 +1618,14 @@
       ]
     },
     {
-      "chapter": 48,
+      "chapter": 53,
       "position": 4,
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-user_02_2024"
+        ],
         "progression": "User Centered Design (20 min)"
       },
       "bonus": false,
@@ -1455,11 +1643,14 @@
       ]
     },
     {
-      "chapter": 49,
+      "chapter": 54,
       "position": 5,
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-user_03_2024"
+        ],
         "progression": "User Centered Design (20 min)"
       },
       "bonus": false,
@@ -1477,11 +1668,14 @@
       ]
     },
     {
-      "chapter": 50,
+      "chapter": 55,
       "position": 6,
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-user_04_2024"
+        ],
         "progression": "User Centered Design (20 min)"
       },
       "bonus": false,
@@ -1499,11 +1693,14 @@
       ]
     },
     {
-      "chapter": 51,
+      "chapter": 56,
       "position": 7,
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-user_05_2024"
+        ],
         "progression": "User Centered Design (20 min)"
       },
       "bonus": false,
@@ -1521,11 +1718,14 @@
       ]
     },
     {
-      "chapter": 52,
+      "chapter": 57,
       "position": 8,
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-user_06_2024"
+        ],
         "progression": "User Centered Design (20 min)"
       },
       "bonus": false,
@@ -1543,11 +1743,14 @@
       ]
     },
     {
-      "chapter": 53,
+      "chapter": 58,
       "position": 9,
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-user_07_2024"
+        ],
         "progression": "User Centered Design (20 min)"
       },
       "bonus": false,
@@ -1565,11 +1768,14 @@
       ]
     },
     {
-      "chapter": 54,
+      "chapter": 59,
       "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "self-paced-pl-gen-ai-user-project_01_2024"
+        ],
         "progression": "Final Project (15 min)"
       },
       "bonus": false,
@@ -1587,7 +1793,73 @@
       ]
     },
     {
-      "chapter": 55,
+      "chapter": 60,
+      "position": 11,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Project (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-gen-ai-user-project_03_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "588405d8-40f4-4cc0-bb8a-7baca357c382"
+      },
+      "level_keys": [
+        "self-paced-pl-gen-ai-user-project_03_2024"
+      ]
+    },
+    {
+      "chapter": 61,
+      "position": 12,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Project (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-gen-ai-user-project_02_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "588405d8-40f4-4cc0-bb8a-7baca357c382"
+      },
+      "level_keys": [
+        "self-paced-pl-gen-ai-user-project_02_2024"
+      ]
+    },
+    {
+      "chapter": 62,
+      "position": 13,
+      "activity_section_position": 4,
+      "assessment": false,
+      "properties": {
+        "progression": "Final Project (15 min)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "self-paced-pl-gen-ai-user-project_04_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "588405d8-40f4-4cc0-bb8a-7baca357c382"
+      },
+      "level_keys": [
+        "self-paced-pl-gen-ai-user-project_04_2024"
+      ]
+    },
+    {
+      "chapter": 63,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1891,6 +2163,30 @@
     },
     {
       "seeding_key": {
+        "level.key": "self-paced-pl-gen-ai-foundations-project_02_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-gen-ai-foundations-project_02_2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "2bc3e9e7-a6eb-4900-b43a-245649a59733"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-gen-ai-foundations-project_04_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-gen-ai-foundations-project_04_2024"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "2bc3e9e7-a6eb-4900-b43a-245649a59733"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "self-paced-pl-gen-ai-customizing-overview_01_2024",
         "script_level.level_keys": [
           "self-paced-pl-gen-ai-customizing-overview_01_2024"
@@ -2143,6 +2439,42 @@
     },
     {
       "seeding_key": {
+        "level.key": "self-paced-pl-gen-ai-customizing-project_02_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-gen-ai-customizing-project_02_2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "42766be2-d03b-4f40-90bb-2475a2ead6e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-gen-ai-customizing-project_03_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-gen-ai-customizing-project_03_2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "42766be2-d03b-4f40-90bb-2475a2ead6e0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-gen-ai-customizing-project_04_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-gen-ai-customizing-project_04_2024"
+        ],
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "42766be2-d03b-4f40-90bb-2475a2ead6e0"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "self-paced-pl-gen-ai-user-overview_01_2024",
         "script_level.level_keys": [
           "self-paced-pl-gen-ai-user-overview_01_2024"
@@ -2254,6 +2586,42 @@
         "level.key": "self-paced-pl-gen-ai-user-project_01_2024",
         "script_level.level_keys": [
           "self-paced-pl-gen-ai-user-project_01_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "588405d8-40f4-4cc0-bb8a-7baca357c382"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-gen-ai-user-project_03_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-gen-ai-user-project_03_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "588405d8-40f4-4cc0-bb8a-7baca357c382"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-gen-ai-user-project_02_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-gen-ai-user-project_02_2024"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "self-paced-gen-ai-2024",
+        "activity_section.key": "588405d8-40f4-4cc0-bb8a-7baca357c382"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "self-paced-pl-gen-ai-user-project_04_2024",
+        "script_level.level_keys": [
+          "self-paced-pl-gen-ai-user-project_04_2024"
         ],
         "lesson.key": "lesson-4",
         "lesson_group.key": "",

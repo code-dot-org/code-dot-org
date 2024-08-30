@@ -1,13 +1,18 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2024-08-27T20:59:06.000Z",
   "level_num": "custom",
   "user_id": 18605,
   "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "####Play different sounds together\r\n\r\n1. Drag the [play together](#clickable=play-together-sound-block) block and connect it under [when run](#clickable=when-run-block).\r\n2. Then add two or more sounds that you want to play together.\r\n3. Then press [Run](#clickable=run-button).",
+    "hide_share_and_remix": "false",
     "preload_asset_list": null
   },
-  "published": true
+  "audit_log": "[{\"changed_at\":\"2024-08-29 20:44:44 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-29 20:45:40 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>
