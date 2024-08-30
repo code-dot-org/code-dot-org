@@ -18,7 +18,6 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {registerReducers} from '@cdo/apps/redux';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {RootState} from '@cdo/apps/types/redux';
-import experiments from '@cdo/apps/util/experiments';
 import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
@@ -404,8 +403,7 @@ export const submitChatContents = createAsyncThunk(
         newUserMessage,
         chatEventsCurrent.filter(isChatMessage) as ChatMessage[],
         aiCustomizations,
-        aichatContext,
-        experiments.isEnabled(experiments.AICHAT_POLLING)
+        aichatContext
       );
     } catch (error) {
       await handleChatCompletionError(error as Error, newUserMessage, dispatch);

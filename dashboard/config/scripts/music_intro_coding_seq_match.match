@@ -1,0 +1,24 @@
+name 'music-intro-coding-seq-match'
+title 'Sequence'
+description 'Match the code with the description.'
+
+height '210'
+width '200'
+
+question 'https://images.code.org/1f1d0db680a92a8f55f791f167f4f5b0-image-1724877631391.jpg'
+answer '**First**, drums play. **Next**, guitar plays. **Last**, an effect plays.'
+question 'https://images.code.org/fcdfedcc81cb1b3b4c21b82a289cb7d2-image-1724875817123.jpg'
+answer 'https://images.code.org/ee8c058e60af4851640e7ed6ef2a055c-image-1724875828301.jpg'
+question 'https://images.code.org/3a2ed1486f37a022502db705c46550bb-image-1724875065850.jpg'
+answer 'https://images.code.org/89fe1c6f966ba19f6ea9437e74826d86-image-1724875072450.jpg'
+
+allow_multiple_attempts true
+
+
+markdown <<MARKDOWN
+![]()
+MARKDOWN
+
+teacher_markdown <<MARKDOWN
+
+MARKDOWN

@@ -1,13 +1,84 @@
 <Music>
   <config><![CDATA[{
+  "published": true,
   "game_id": 70,
   "created_at": "2024-08-27T20:57:14.000Z",
   "level_num": "custom",
   "user_id": 18605,
   "properties": {
+    "encrypted": "false",
+    "instructions_important": "false",
+    "long_instructions": "####Put it In Order\r\n\r\n1. We want the bass to play before the drums.\r\n2. Click and drag the blocks into the correct order.\r\n3. Then press [Run](#clickable=run-button).\r\n",
+    "hide_share_and_remix": "false",
+    "level_data": {
+      "library": "intro2024",
+      "startSources": {
+        "blocks": {
+          "languageVersion": 0,
+          "blocks": [
+            {
+              "type": "when_run_simple2",
+              "id": "when_run_simple2",
+              "x": 30,
+              "y": 30,
+              "deletable": false,
+              "movable": false,
+              "next": {
+                "block": {
+                  "type": "play_sound_at_current_location_simple2",
+                  "id": "play_sound_at_current_location_simple2",
+                  "deletable": false,
+                  "movable": true,
+                  "fields": {
+                    "sound": "beats/drum_kit_pop"
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sound_at_current_location_simple2",
+                      "id": "play_sound_at_current_location_simple2",
+                      "deletable": false,
+                      "movable": true,
+                      "fields": {
+                        "sound": "bass/amped_alternate_bass"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "sounds": {
+        "beats": [
+          "drum_kit_disco",
+          "drum_beat_edm",
+          "drum_beat_club",
+          "drum_beat_knock",
+          "drum_kit_pop"
+        ]
+      },
+      "toolbox": {
+        "blocks": {
+        }
+      }
+    },
+    "validations": [
+      {
+        "key": "music-intro-coding-seq-investigate_91474dd7-b755-4afb-a5a1-29da8048b90f",
+        "message": "Great work! You played the sounds in the correct order. ",
+        "next": true,
+        "conditions": [
+          {
+            "name": "played_sounds",
+            "value": 2
+          }
+        ]
+      }
+    ],
     "preload_asset_list": null
   },
-  "published": true
+  "audit_log": "[{\"changed_at\":\"2024-08-28 20:27:11 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:29:39 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:33:51 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:34:38 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:37:05 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:37:32 +0000\",\"changed\":[\"validations\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:39:27 +0000\",\"changed\":[],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:41:15 +0000\",\"changed\":[\"level_data\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:51:57 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:54:16 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:55:10 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-28 20:56:07 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Music>

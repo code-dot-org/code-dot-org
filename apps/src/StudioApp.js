@@ -1370,18 +1370,11 @@ StudioApp.prototype.onReportComplete = function (response) {
   }
   this.lastShareUrl = response.level_source;
 
-  // Track GA events
   if (response.new_level_completed) {
-    trackEvent(
-      'Puzzle',
-      'Completed',
-      response.level_path,
-      response.level_attempts
-    );
-  }
-
-  if (response.share_failure) {
-    trackEvent('Share', 'Failure', response.share_failure.type);
+    trackEvent('puzzle', 'puzzle_completed', {
+      path: response.level_path,
+      value: response.level_attempts,
+    });
   }
 };
 
@@ -1678,13 +1671,6 @@ StudioApp.prototype.displayFeedback = function (options) {
   }
 
   if (experiments.isEnabled(experiments.BUBBLE_DIALOG)) {
-    // Track whether this experiment is in use. If not, delete this and similar
-    // sections of code. If it is, create a non-experiment flag.
-    trackEvent(
-      'experiment',
-      'Feedback bubbleDialog',
-      `AppType ${this.config.app}. Level ${this.config.serverLevelId}`
-    );
     const {response, preventDialog, feedbackType, feedbackImage} = options;
 
     const newFinishDialogApps = {

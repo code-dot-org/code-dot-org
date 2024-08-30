@@ -10,8 +10,6 @@ import FontAwesome from '@cdo/apps/legacySharedComponents/FontAwesome';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import color from '@cdo/apps/util/color';
 
-import trackEvent from '../util/trackEvent';
-
 export const NotificationType = {
   default: 'default',
   information: 'information',
@@ -39,7 +37,6 @@ const Notification = ({
   detailsLinkText,
   dismissible,
   firehoseAnalyticsData,
-  googleAnalyticsId,
   iconStyles,
   isRtl,
   newWindow,
@@ -90,11 +87,6 @@ const Notification = ({
   };
 
   const onAnnouncementClick = () => {
-    // Log to Google Analytics
-    if (googleAnalyticsId) {
-      trackEvent('teacher_announcement', 'click', googleAnalyticsId);
-    }
-
     // Log to Firehose
     if (firehoseAnalyticsData) {
       logAnnouncementClickToFirehose();
@@ -231,9 +223,8 @@ Notification.propTypes = {
   iconStyles: PropTypes.object,
   onDismiss: PropTypes.func,
   newWindow: PropTypes.bool,
-  // googleAnalyticsId and firehoseAnalyticsData are only used when a primary button is provided.
+  // firehoseAnalyticsData are only used when a primary button is provided.
   // It's not used by the array of buttons.
-  googleAnalyticsId: PropTypes.string,
   firehoseAnalyticsData: PropTypes.object,
   responsiveSize: PropTypes.oneOf(['lg', 'md', 'sm', 'xs']),
   isRtl: PropTypes.bool.isRequired,
