@@ -11,6 +11,7 @@ import {Block} from 'blockly';
 
 import DCDO from '@cdo/apps/dcdo';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import trackEvent from '@cdo/apps/util/trackEvent';
 import {
   getEnvironment,
   isDevelopmentEnvironment,
@@ -121,6 +122,8 @@ export default class AnalyticsReporter {
           .logError(message, error as Error);
       }
     }
+
+    trackEvent('music', 'music_session_start');
   }
 
   private async initialize(): Promise<void> {
@@ -192,6 +195,7 @@ export default class AnalyticsReporter {
 
   onPackSelected(packId: string) {
     this.onButtonClicked('select-pack', {packId});
+    trackEvent('music', 'music_pack_selected', {value: packId});
   }
 
   onButtonClicked(buttonName: string, properties?: object) {
