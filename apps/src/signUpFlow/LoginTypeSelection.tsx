@@ -24,6 +24,13 @@ const LoginTypeSelection: React.FunctionComponent = () => {
   const [password, setPassword] = useState('');
   const [authToken, setAuthToken] = useState('');
 
+  const finishAccountUrl =
+    sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === 'teacher'
+      ? studio('/users/new_sign_up/finish_teacher_account')
+      : studio('/users/new_sign_up/finish_student_account');
+  const passwordIcon = password.length >= 6 ? 'circle-check' : 'circle-x';
+  const iconClass = password.length >= 6 ? style.teal : style.lightGray;
+
   useEffect(() => {
     async function getToken() {
       setAuthToken(await getAuthenticityToken());
@@ -36,12 +43,22 @@ const LoginTypeSelection: React.FunctionComponent = () => {
     setPassword(event.target.value);
   };
 
-  const finishAccountUrl =
-    sessionStorage.getItem(ACCOUNT_TYPE_SESSION_KEY) === 'teacher'
-      ? studio('/users/new_sign_up/finish_teacher_account')
-      : studio('/users/new_sign_up/finish_student_account');
-  const passwordIcon = password.length >= 6 ? 'circle-check' : 'circle-x';
-  const iconClass = password.length >= 6 ? style.teal : style.lightGray;
+  const submitLoginType = () => {
+    $.ajax({
+      method: 'POST',
+      url: '/users/begin_creating_user',
+      contentType: 'application/json',
+      data: JSON.stringify({
+        user: {
+          email: 'test@email.com',
+          password: password,
+          password_confirmation: password,
+        },
+      }),
+    }).done(() => {
+      navigateToHref(finishAccountUrl);
+    });
+  };
 
   return (
     <div className={style.newSignupFlow}>
@@ -150,7 +167,7 @@ const LoginTypeSelection: React.FunctionComponent = () => {
           <Button
             className={style.shortButton}
             text={locale.create_my_account()}
-            onClick={() => navigateToHref(finishAccountUrl)}
+            onClick={submitLoginType}
           />
         </div>
       </div>

@@ -64,6 +64,22 @@ class RegistrationsController < Devise::RegistrationsController
   end
 
   #
+  # POST /users/begin_creating_user
+  #
+  # Set up PartialRegistration for user after they enter an email and password.
+  #
+  def begin_creating_user
+    @user = User.new(begin_sign_up_params)
+    @user.validate_for_finish_sign_up
+
+    SignUpTracking.log_begin_sign_up(@user, session)
+
+    if @user.errors.blank?
+      PartialRegistration.persist_attributes(session, @user)
+    end
+  end
+
+  #
   # Get /users/new_sign_up/account_type
   #
   def account_type
