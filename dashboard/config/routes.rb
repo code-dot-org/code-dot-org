@@ -190,9 +190,8 @@ Dashboard::Application.routes.draw do
       get '/oauth_sign_out/:provider', to: 'sessions#oauth_sign_out', as: :oauth_sign_out
       post '/users/begin_sign_up', to: 'registrations#begin_sign_up'
       post '/users/finish_sign_up', to: 'registrations#new'
-      get '/users/new_sign_up', to: 'registrations#new_sign_up'
-      # Part of the new sign up flow - work in progress
       get '/users/new_sign_up/account_type', to: 'registrations#account_type'
+      get '/users/new_sign_up/login_type', to: 'registrations#login_type'
       get '/users/new_sign_up/finish_student_account', to: 'registrations#finish_student_account'
       get '/users/new_sign_up/finish_teacher_account', to: 'registrations#finish_teacher_account'
       patch '/dashboardapi/users', to: 'registrations#update'
@@ -1170,7 +1169,6 @@ Dashboard::Application.routes.draw do
 
     post '/openai/chat_completion', to: 'openai_chat#chat_completion'
 
-    post '/aichat/chat_completion', to: 'aichat#chat_completion'
     post '/aichat/log_chat_event', to: 'aichat#log_chat_event'
     get '/aichat/student_chat_history', to: 'aichat#student_chat_history'
     post '/aichat/check_message_safety', to: 'aichat#check_message_safety'

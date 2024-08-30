@@ -152,7 +152,7 @@ const SetupCustomization: React.FunctionComponent = () => {
                 dispatch(
                   setAiCustomizationProperty({
                     property: 'temperature',
-                    value: event.target.value,
+                    value: parseFloat(event.target.value),
                   })
                 )
               }

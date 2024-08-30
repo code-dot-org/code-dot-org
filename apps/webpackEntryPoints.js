@@ -55,7 +55,7 @@ const CODE_STUDIO_ENTRIES = {
   'sessions/lockout': './src/sites/studio/pages/sessions/lockout.js',
   'devise/sessions/new': './src/sites/studio/pages/devise/sessions/new.js',
   'devise/registrations/_sign_up': './src/sites/studio/pages/devise/registrations/_sign_up.js',
-  'devise/registrations/new_sign_up': './src/sites/studio/pages/devise/registrations/new_sign_up.js',
+  'devise/registrations/login_type': './src/sites/studio/pages/devise/registrations/login_type.js',
   'devise/registrations/finish_student_account': './src/sites/studio/pages/devise/registrations/finish_student_account.js',
   'devise/registrations/finish_teacher_account': './src/sites/studio/pages/devise/registrations/finish_teacher_account.js',
   'devise/shared/_oauth_links': './src/sites/studio/pages/devise/shared/_oauth_links.js',
@@ -191,6 +191,7 @@ const INTERNAL_ENTRIES = {
 const PEGASUS_ENTRIES = {
   // code.org
   'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
+  'code.org/public/helloworld': './src/sites/code.org/pages/public/helloworld.js',
   'code.org/public/teacher-dashboard/index': './src/sites/code.org/pages/public/teacher-dashboard/index.js',
   'code.org/public/yourschool': './src/sites/code.org/pages/public/yourschool.js',
   'code.org/public/yourschool/thankyou': './src/sites/code.org/pages/public/yourschool/thankyou.js',

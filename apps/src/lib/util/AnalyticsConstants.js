@@ -244,6 +244,8 @@ const EVENTS = {
   AI_TUTOR_ASK_ABOUT_COMPILATION: 'AI Tutor was asked about compilation',
   AI_TUTOR_ASK_ABOUT_VALIDATION: 'AI Tutor was asked about validation',
   AI_TUTOR_ASK_GENERAL_CHAT: 'AI Tutor was asked a question in general chat',
+  AI_TUTOR_DISABLED: 'Teacher disabled AI Tutor for a section',
+  AI_TUTOR_ENABLED: 'Teacher enabled AI Tutor for a section',
 
   // Hour of Code
   AGE_21_SELECTED_EVENT: 'Age 21+ Selected',
@@ -269,6 +271,7 @@ const EVENTS = {
 
   // videos
   VIDEO_LOADED: 'Video Loaded',
+  VIDEO_FALLBACK_LOADED: 'Video Fallback Loaded',
   VIDEO_STARTED: 'Video Started',
   VIDEO_PAUSED: 'Video Paused',
   VIDEO_ENDED: 'Video Played To Completion',

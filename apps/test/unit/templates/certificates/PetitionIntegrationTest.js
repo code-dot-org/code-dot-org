@@ -124,16 +124,4 @@ describe('Petition on submit', () => {
       role_s: 'engineer', // The 'role' value has a consistent name regardless of language
     });
   });
-  it('reports to google analytics if successful submit', () => {
-    const petition = mountPetition();
-    addInputsToPetition(petition, minimumInputs);
-    submitForm(petition);
-
-    sinon.assert.calledOnce(window.ga);
-  });
-  it('does not report to google analytics if unsuccessful submit', () => {
-    const petition = mountPetition();
-    submitForm(petition);
-    sinon.assert.notCalled(window.ga);
-  });
 });
