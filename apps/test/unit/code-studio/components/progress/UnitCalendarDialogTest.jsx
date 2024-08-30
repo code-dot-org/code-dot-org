@@ -1,10 +1,10 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import UnitCalendarGrid from '@cdo/apps/code-studio/components/progress/UnitCalendar';
 import UnitCalendarDialog, {
   WEEK_WIDTH,
 } from '@cdo/apps/code-studio/components/progress/UnitCalendarDialog';
+import UnitCalendarGrid from '@cdo/apps/code-studio/components/progress/UnitCalendarGrid';
 
 import {testLessons} from './unitCalendarTestData';
 

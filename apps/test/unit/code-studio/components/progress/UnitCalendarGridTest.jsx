@@ -1,7 +1,7 @@
 import {shallow} from 'enzyme'; // eslint-disable-line no-restricted-imports
 import React from 'react';
 
-import UnitCalendarGrid from '@cdo/apps/code-studio/components/progress/UnitCalendar';
+import UnitCalendarGrid from '@cdo/apps/code-studio/components/progress/UnitCalendarGrid';
 
 import {testLessonSchedule, testLessons} from './unitCalendarTestData';
 
