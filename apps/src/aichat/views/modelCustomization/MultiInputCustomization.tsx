@@ -1,5 +1,6 @@
 import React, {useState, useCallback} from 'react';
 
+import Alert, {alertTypes} from '@cdo/apps/componentLibrary/alert/Alert';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
@@ -47,6 +48,24 @@ const MultiInputCustomization: React.FunctionComponent<{
     document.getElementById(fieldId)?.focus();
   }, [newItem, addedItems, fieldId, onUpdateItems]);
 
+  const examplePromptAlerts = {
+    success: {
+      text: 'Must add at least one example prompt',
+      type: alertTypes.success,
+      className: modelCustomizationStyles.examplePromptAlertSuccess,
+    },
+    warning: {
+      text: 'Must add at least one example prompt',
+      type: alertTypes.warning,
+      className: modelCustomizationStyles.examplePromptAlert,
+    },
+  };
+
+  const examplePromptAlert =
+    addedItems.length > 0
+      ? examplePromptAlerts.success
+      : examplePromptAlerts.warning;
+
   return (
     <>
       {(!isReadOnly || !hideInputBoxWhenReadOnly) && (
@@ -58,6 +77,12 @@ const MultiInputCustomization: React.FunctionComponent<{
               onChange={event => setNewItem(event.target.value)}
               value={newItem}
               disabled={isReadOnly}
+            />
+            <Alert
+              text={examplePromptAlert.text}
+              type={examplePromptAlert.type}
+              size="s"
+              className={examplePromptAlert.className}
             />
           </div>
           <div className={modelCustomizationStyles.addItemContainer}>

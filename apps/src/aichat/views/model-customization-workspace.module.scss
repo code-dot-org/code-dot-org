@@ -216,3 +216,20 @@ $default-spacing: 4px;
   font-size: 14px;
   margin: 16px 0 8px 0;
 }
+
+@mixin example-prompt-alert {
+  padding: 0;
+  background-color: white;
+}
+
+.examplePromptAlert {
+  @include example-prompt-alert;
+}
+
+.examplePromptAlertSuccess {
+  @include example-prompt-alert;
+}
+
+.examplePromptAlertSuccess i {
+  color: $teal !important;
+}
