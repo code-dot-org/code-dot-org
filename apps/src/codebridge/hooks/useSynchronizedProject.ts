@@ -28,7 +28,6 @@ export const useSynchronizedProject = (
     projectReducer,
     externalProject
   );
-  const previousInternalProjectRef = useRef(internalProject);
 
   // and our list of project utilities. We need this internally for the `replaceProject` call, and we return
   // it at the end since this is the hook where our `useReducer` call exists
@@ -60,11 +59,7 @@ export const useSynchronizedProject = (
   //
   // That's what the extra ref and the hoop jumping protects us from.
   useEffect(() => {
-    if (
-      internalProject !== previousInternalProjectRef.current &&
-      internalProject !== externalProjectRef.current
-    ) {
-      previousInternalProjectRef.current = internalProject;
+    if (internalProject !== externalProjectRef.current) {
       setProject(internalProject);
     }
   }, [internalProject, setProject]);

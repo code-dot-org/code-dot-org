@@ -99,12 +99,11 @@ const VersionHistoryDropdown: React.FunctionComponent<
           } else {
             setLoadError(true);
           }
+          setLoading(false);
           closeDropdown();
         })
         .catch(() => {
           setLoadError(true);
-        })
-        .finally(() => {
           setLoading(false);
         });
     }
@@ -122,7 +121,6 @@ const VersionHistoryDropdown: React.FunctionComponent<
   };
 
   const onVersionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    // TODO: preview this version
     setSelectedVersion(e.target.value);
     dispatch(loadVersion({versionId: e.target.value}));
   };
