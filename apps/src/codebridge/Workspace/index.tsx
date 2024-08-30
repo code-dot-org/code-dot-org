@@ -1,5 +1,6 @@
 import {useCodebridgeContext} from '@codebridge/codebridgeContext';
 import {Editor} from '@codebridge/Editor';
+import {FileBrowser} from '@codebridge/FileBrowser';
 import {FileTabs} from '@codebridge/FileTabs';
 import React from 'react';
 
@@ -33,21 +34,31 @@ const Workspace = () => {
       rightHeaderContent={<HeaderButtons />}
       className={moduleStyles.workspace}
     >
-      <FileTabs />
-      {isStartMode && (
+      <div>
+        <FileTabs />
+        {isStartMode && (
+          <div
+            id="startSourcesWarningBanner"
+            className={moduleStyles.warningBanner}
+          >
+            {projectTemplateLevel
+              ? 'WARNING: You are editing start sources for a level with a template. Start sources should be defined on the template.'
+              : 'You are editing start sources.'}
+          </div>
+        )}
         <div
-          id="startSourcesWarningBanner"
-          className={moduleStyles.warningBanner}
+          className={moduleStyles.workspaceWorkarea}
+          style={{
+            gridTemplateColumns: config.showFileBrowser ? '200px auto' : '100%',
+          }}
         >
-          {projectTemplateLevel
-            ? 'WARNING: You are editing start sources for a level with a template. Start sources should be defined on the template.'
-            : 'You are editing start sources.'}
+          {config.showFileBrowser && <FileBrowser />}
+          <Editor
+            langMapping={config.languageMapping}
+            editableFileTypes={config.editableFileTypes}
+          />
         </div>
-      )}
-      <Editor
-        langMapping={config.languageMapping}
-        editableFileTypes={config.editableFileTypes}
-      />
+      </div>
     </PanelContainer>
   );
 };
