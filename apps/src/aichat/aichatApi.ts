@@ -269,8 +269,8 @@ function getUpdatedMessages(
 }
 
 /**
- * This function sends a GET request to the aichat getAichatAccess backend controller, then returns
- * true of the user has aichat access and false otherwise.
+ * This function sends a GET request to the aichat's userHasAichatAccess backend controller action,
+ * then returns true if the user has aichat access and false otherwise.
  */
 export async function getUserHasAichatAccess(): Promise<boolean> {
   const response = await HttpClient.fetchJson<boolean>(

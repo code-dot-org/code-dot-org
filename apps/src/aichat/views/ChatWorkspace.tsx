@@ -2,6 +2,7 @@ import React, {useCallback, useEffect, useMemo, useState} from 'react';
 import {useSelector} from 'react-redux';
 
 import {
+  fetchUserHasAichatAccess,
   fetchStudentChatHistory,
   selectAllVisibleMessages,
   setShowWarningModal,
@@ -48,9 +49,9 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   const [selectedTab, setSelectedTab] =
     useState<WorkspaceTeacherViewTab | null>(null);
 
-  const {showWarningModal, studentChatHistory} = useAppSelector(
-    state => state.aichat
-  );
+  const {showWarningModal, studentChatHistory, userHasAichatAccess} =
+    useAppSelector(state => state.aichat);
+  console.log('userHasAichatAccess', userHasAichatAccess);
   const viewAsUserId = useAppSelector(state => state.progress.viewAsUserId);
   const currentLevelId = useAppSelector(state => state.progress.currentLevelId);
   const visibleItems = useSelector(selectAllVisibleMessages);
@@ -82,13 +83,15 @@ const ChatWorkspace: React.FunctionComponent<ChatWorkspaceProps> = ({
   );
 
   useEffect(() => {
+    dispatch(fetchUserHasAichatAccess());
+    console.log('');
     // If we are viewing as a student, default to the student chat history tab if tab is not yet selected.
     if (viewAsUserId && !selectedTab) {
       setSelectedTab(WorkspaceTeacherViewTab.STUDENT_CHAT_HISTORY);
     } else if (!viewAsUserId) {
       setSelectedTab(null);
     }
-  }, [viewAsUserId, selectedTab]);
+  }, [viewAsUserId, selectedTab, dispatch]);
 
   const iconValue: FontAwesomeV6IconProps = {
     iconName: 'lock',

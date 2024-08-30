@@ -22,7 +22,11 @@ import {NetworkError} from '@cdo/apps/util/HttpClient';
 import {AppDispatch} from '@cdo/apps/util/reduxHooks';
 import {AiInteractionStatus as Status} from '@cdo/generated-scripts/sharedConstants';
 
-import {postAichatCompletionMessage, getStudentChatHistory} from '../aichatApi';
+import {
+  postAichatCompletionMessage,
+  getStudentChatHistory,
+  getUserHasAichatAccess,
+} from '../aichatApi';
 import ChatEventLogger from '../chatEventLogger';
 import {saveTypeToAnalyticsEvent} from '../constants';
 import {
@@ -85,6 +89,7 @@ export interface AichatState {
   saveInProgress: boolean;
   // The type of save action being performed (customization update, publish, model card save, etc).
   currentSaveType: SaveType | undefined;
+  userHasAichatAccess?: boolean;
 }
 
 const initialState: AichatState = {
@@ -102,6 +107,7 @@ const initialState: AichatState = {
   viewMode: ViewMode.EDIT,
   saveInProgress: false,
   currentSaveType: undefined,
+  userHasAichatAccess: undefined,
 };
 
 // THUNKS
@@ -369,6 +375,25 @@ export const addChatEvent =
     }
   };
 
+// This thunk's callback function returns if a user has aichat acess.
+export const fetchUserHasAichatAccess = createAsyncThunk(
+  'aichat/fetchUserHasAichatAccess',
+  async (__, thunkAPI) => {
+    try {
+      const userHasAichatAccess = await getUserHasAichatAccess();
+      thunkAPI.dispatch(setUserHasAichatAccess(userHasAichatAccess));
+    } catch (error) {
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .logError(
+          'Error in aichat student chat history request',
+          error as Error
+        );
+      return;
+    }
+  }
+);
+
 // This thunk's callback function submits a user's chat content and AI customizations to
 // the chat completion endpoint, then waits for a chat completion response, and updates
 // the user messages.
@@ -539,6 +564,9 @@ const aichatSlice = createSlice({
     },
     setStudentChatHistory: (state, action: PayloadAction<ChatEvent[]>) => {
       state.studentChatHistory = action.payload;
+    },
+    setUserHasAichatAccess: (state, action: PayloadAction<boolean>) => {
+      state.userHasAichatAccess = action.payload;
     },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
       const modelUpdateMessageInfo = getUpdateMessageLocation(
@@ -776,7 +804,8 @@ export const {
   setViewMode,
   setStartingAiCustomizations,
   setAiCustomizationProperty,
-  setStudentChatHistory,
   setModelCardProperty,
+  setStudentChatHistory,
+  setUserHasAichatAccess,
   endSave,
 } = aichatSlice.actions;
