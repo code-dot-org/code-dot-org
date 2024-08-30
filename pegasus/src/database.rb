@@ -32,7 +32,7 @@ class Tutorials
     end.deep_dup
 
     @contents = JSON.parse(json_contents, object_class: DB[@table]).each do |tutorial|
-      tutorial.values.symbolize_keys!
+      tutorial.values.symbolize_keys!.to_h
     end
   end
 
