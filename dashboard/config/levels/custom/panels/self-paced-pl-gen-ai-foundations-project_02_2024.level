@@ -1,0 +1,43 @@
+<Panels>
+  <config><![CDATA[{
+  "game_id": 73,
+  "created_at": "2024-08-29T20:19:34.000Z",
+  "level_num": "custom",
+  "user_id": 18605,
+  "properties": {
+    "encrypted": "false",
+    "panels": [
+      {
+        "text": "##**Day 1**\n####Give ample time for students to decide on their topic and begin planning how they will develop their chatbot. This section of the guide will help students later when they need to make decisions about their system prompt, retrieval, and temperature.",
+        "imageUrl": "https://images.code.org/3cbee8fd74e104849868f921a0f88e08-Screenshot 2024-08-29 at 3.58.35 PM.png",
+        "key": "game_design_spr_types-6451ed33-47e5-458c-9da1-d89e123d039c"
+      },
+      {
+        "text": "##**Day 2, Part 1 - Model, Temperature, and Prompt**\n#### ",
+        "imageUrl": "https://images.code.org/b6900fc9f82b14ec7120f04fbb99db80-Screenshot 2024-08-29 at 3.52.52 PM.png",
+        "key": "game_design_spr_types-53c92e2f-0462-48a7-8070-e1224840f013"
+      },
+      {
+        "text": "##**Day 2, Part 2 - Retrieval**\n#### ",
+        "imageUrl": "https://images.code.org/3c5b5411a7b4cee51f632fc25fe6678b-Screenshot 2024-08-29 at 3.53.00 PM.png",
+        "key": "game_design_spr_types-4936be88-574e-4dd8-a31f-e671e54e482b",
+        "layout": "text-bottom-right"
+      },
+      {
+        "text": "##**Day 2, Part 3 - Testing**\n#### ",
+        "imageUrl": "https://images.code.org/49ac788b2d3303e5ecbfdd50babc9b7c-Screenshot 2024-08-29 at 3.53.14 PM.png",
+        "key": "gen-ai-panels-test-L1-a74895ac-5363-4d66-9831-a3d899ea8ed7",
+        "layout": "text-top-left"
+      },
+      {
+        "text": "##**Day 3**\n#### (Optional) Gallery Walk. Have students place their chatbots in “User View” where others can interact. Have students interact with their peers work and leave post-it notes with positive feedback starting with “I Like…” or “I Wish…”",
+        "imageUrl": "https://images.code.org/7a7491c85c7d222befab02bc23fd9af0-Screenshot 2024-08-29 at 3.53.32 PM.png",
+        "key": "self-paced-pl-gen-ai-customizing-project_02_2024-d188940e-a67a-4deb-8fe0-80956166fdc5"
+      }
+    ],
+    "name_suffix": "_2024"
+  },
+  "published": true,
+  "audit_log": "[{\"changed_at\":\"2024-08-29T20:19:34.108+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-gen-ai-customizing-project_02_2024\\\"\"],\"cloned_from\":\"self-paced-pl-gen-ai-customizing-project_02_2024\"}]"
+}]]></config>
+</Panels>
