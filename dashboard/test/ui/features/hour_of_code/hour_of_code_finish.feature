@@ -267,7 +267,7 @@ Scenario: congrats certificate pages show social media icons
   And I wait until element ".fa-twitter" is visible
   Then the href of selector ".social-print-link" contains "/print_certificates/"
 
-   When I am on "http://code.org/congrats/coursea-2017"
+  When I am on "http://code.org/congrats/coursea-2017"
   And I wait until current URL contains "/congrats"
   And I wait to see element with ID "uitest-certificate"
   And element "#uitest-certificate" is visible
