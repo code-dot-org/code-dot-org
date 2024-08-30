@@ -1,3 +1,6 @@
+import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
+import {NetworkError} from '@cdo/apps/util/HttpClient';
+
 import {postLogChatEvent} from './aichatApi';
 import {ChatEvent, AichatContext} from './types';
 
@@ -44,11 +47,17 @@ export default class ChatEventLogger {
         try {
           await postLogChatEvent(chatEvent, aichatContext);
         } catch (error) {
-          console.error(
-            'Error logging chat event:',
-            chatEvent.descriptionKey,
-            error
-          );
+          // Only send log report if not a 403 error.
+          if (
+            !(error instanceof NetworkError && error.response.status === 403)
+          ) {
+            Lab2Registry.getInstance()
+              .getMetricsReporter()
+              .logError(
+                'Error in aichat event logging request',
+                error as Error
+              );
+          }
         } finally {
           this.sendingInProgress = false;
         }
