@@ -43,10 +43,14 @@ export default class ChatEventLogger {
         this.sendingInProgress = true;
         try {
           await postLogChatEvent(chatEvent, aichatContext);
-          this.sendingInProgress = false;
         } catch (error) {
-          this.sendingInProgress = true;
-          console.error('Error logging chat event:', error);
+          console.error(
+            'Error logging chat event:',
+            chatEvent.descriptionKey,
+            error
+          );
+        } finally {
+          this.sendingInProgress = false;
         }
       }
     }
