@@ -117,6 +117,15 @@
   "https://studio.code.org/s/allthethings/lessons/4/levels/5": {
     "short_instructions": "Purple flowers may have either 1 or 0 nectar, but you don't know which one! Be careful not to collect nectar from a purple flower if it doesn't have any. Check if the nectar is equal to 1 by using the if block."
   },
+  "https://studio.code.org/s/allthethings/lessons/4/levels/6": {
+    "short_instructions": "Functions are blocks of code that perform a task.  \n\nUse the `get 5` function to get 5 nectars at a time.",
+    "long_instructions": "Functions are blocks of code that perform a task.  \n\nUse the `get 5` function to get 5 nectars at a time.",
+    "function_definitions": {
+      "get 5": {
+        "name": "get 5"
+      }
+    }
+  },
   "https://studio.code.org/s/allthethings/lessons/5/levels/3": {
     "short_instructions": "Let's make the dog speak every number from 1 to 100. Use a `for` loop and the counter block to speak the counter variable each time the loop is run.",
     "long_instructions": "Let's make the dog speak every number from 1 to 100. Use a `for` loop and the counter block to speak the counter variable each time the loop is run."
@@ -3066,6 +3075,47 @@
       },
       "Weblab2 Sublevel": {
         "long_instructions": "## Web Lab 2 Basics\r\n\r\nCreate your own web page!"
+      }
+    }
+  },
+  "https://studio.code.org/s/allthethings/lessons/53/levels/1": {
+    "dsls": {
+      "title": "Activity Guide Levelgroup"
+    },
+    "sublevels": {
+      "test-single-multi-retriable-in-levelgroup": {
+        "dsls": {
+          "answers": [
+            {
+              "text": "Nothing will happen.",
+              "correct": false,
+              "feedback": "Incorrect. The tumbleweed will begin tumbling."
+            },
+            {
+              "text": "The tumbleweed will float to the top of the screen.",
+              "correct": false,
+              "feedback": "Incorrect. The tumbleweed will begin tumbling."
+            },
+            {
+              "text": "The tumbleweed will begin tumbling.",
+              "correct": true,
+              "feedback": "Correct!"
+            },
+            {
+              "text": "The tumbleweed will blink on and off.",
+              "correct": false,
+              "feedback": "Incorrect. The tumbleweed will begin tumbling."
+            }
+          ],
+          "questions": [
+            {
+              "text": "Look closely at the code below. What will happen after you click \"Run\"?"
+            }
+          ]
+        }
+      },
+      "test-free-response-retriable-in-levelgroup": {
+        "long_instructions": "What do you think this program does?"
       }
     }
   }

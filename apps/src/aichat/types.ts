@@ -8,6 +8,7 @@ import {Role} from '../aiComponentLibrary/chatMessage/types';
 import type {ValueOf} from '../types/utils';
 
 export const ChatEventDescriptions = {
+  COPY_CHAT: 'The user copied the chat history.',
   CLEAR_CHAT: 'The user cleared the chat workspace.',
   LOAD_LEVEL: 'The user loaded the aichat level.',
 } as const;

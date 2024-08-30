@@ -399,6 +399,9 @@ export const submitChatContents = createAsyncThunk(
 
     let chatApiResponse;
     try {
+      Lab2Registry.getInstance()
+        .getMetricsReporter()
+        .incrementCounter('Aichat.ChatCompletionRequestInitiated');
       chatApiResponse = await postAichatCompletionMessage(
         newUserMessage,
         chatEventsCurrent.filter(isChatMessage) as ChatMessage[],
@@ -447,6 +450,9 @@ async function handleChatCompletionError(
   // Display specific error notifications if the user was rate limited (HTTP 429) or not authorized (HTTP 403).
   // Otherwise, display a generic error assistant response.
   if (error instanceof NetworkError && error.response.status === 429) {
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .incrementCounter('Aichat.ChatCompletionErrorRateLimited');
     dispatch(
       addChatEvent({
         id: getNewMessageId(),
@@ -476,6 +482,9 @@ async function handleChatCompletionError(
       })
     );
   } else {
+    Lab2Registry.getInstance()
+      .getMetricsReporter()
+      .incrementCounter('Aichat.ChatCompletionErrorUnhandled');
     dispatch(
       addChatEvent({
         role: Role.ASSISTANT,
@@ -633,11 +642,11 @@ const aichatSlice = createSlice({
     ) => {
       state.savedAiCustomizations = action.payload;
     },
-    setAiCustomizationProperty: (
-      state,
+    setAiCustomizationProperty: <T extends keyof AiCustomizations>(
+      state: AichatState,
       action: PayloadAction<{
-        property: keyof AiCustomizations;
-        value: AiCustomizations[typeof property];
+        property: T;
+        value: AiCustomizations[T];
       }>
     ) => {
       const {property, value} = action.payload;

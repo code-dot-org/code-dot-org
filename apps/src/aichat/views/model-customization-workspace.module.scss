@@ -14,7 +14,7 @@ $default-spacing: 4px;
   width: 100%;
   height: 4px;
   background: $light_gray_700;
-  border-radius: .1rem;
+  border-radius: 0.1rem;
 }
 
 @mixin slider-thumb {
@@ -70,39 +70,40 @@ $default-spacing: 4px;
     border-color: $light_black;
   }
 
-  input[type="range"] {
+  input[type='range'] {
     -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
 
     @include slider-track;
-    &:disabled, &[aria-disabled="true"] {
+    &:disabled,
+    &[aria-disabled='true'] {
       background: $light_gray_200;
     }
   }
 
-  input[type="range"]::-webkit-slider-thumb {
+  input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none; /* Hides the thumb so that custom thumb can be made */
 
     @include slider-thumb;
   }
 
-  input[type="range"]:disabled::-webkit-slider-thumb {
+  input[type='range']:disabled::-webkit-slider-thumb {
     @include disabled-slider-thumb;
   }
 
   /* Firefox */
-  input[type="range"]::-moz-range-track {
+  input[type='range']::-moz-range-track {
     @include slider-track;
   }
 
-  input[type="range"]:disabled::-moz-range-track {
+  input[type='range']:disabled::-moz-range-track {
     background: $light_gray_200;
   }
 
-  input[type="range"]::-moz-range-thumb {    
+  input[type='range']::-moz-range-thumb {
     @include slider-thumb;
   }
 
-  input[type="range"]:disabled::-moz-range-thumb {
+  input[type='range']:disabled::-moz-range-thumb {
     @include disabled-slider-thumb;
   }
 }
@@ -177,4 +178,41 @@ $default-spacing: 4px;
   padding-top: 0;
   padding-bottom: 0;
   background-color: white;
+}
+
+/* Used in MultiInputCustomization */
+
+.itemContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 5px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  border-color: $light_gray_500;
+  border: 1px solid;
+  color: $light_gray_500;
+}
+
+.removeItemIcon {
+  color: $light_gray_500;
+
+  &:hover {
+    color: $light_negative_500;
+  }
+}
+
+.removeItemButton {
+  @include remove-button-styles;
+}
+
+.addItemContainer {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.addedItemsHeaderContainer {
+  border-bottom: 1px solid $light_gray_200;
+  font-size: 14px;
+  margin: 16px 0 8px 0;
 }
