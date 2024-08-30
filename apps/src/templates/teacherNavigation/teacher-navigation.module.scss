@@ -111,3 +111,15 @@
   width: 20px;
   text-align: center;
 }
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerSectionName {
+  font-size: 12px;
+  font-weight: 600;
+  color: $light_primary_500;
+  text-transform: uppercase;
+}
