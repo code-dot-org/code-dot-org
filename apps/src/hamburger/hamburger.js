@@ -3,8 +3,6 @@ import {
   userAlreadyReportedAbuse,
 } from '@cdo/apps/reportAbuse';
 
-import trackEvent from '../util/trackEvent';
-
 export const initHamburger = function () {
   $(document).ready(function () {
     $('#hamburger-icon').click(function (e) {
@@ -88,27 +86,6 @@ export const initHamburger = function () {
         $('#help-button #help-contents').slideToggle();
         e.preventDefault();
       }
-    });
-
-    $('#help-icon #report-bug').click(function () {
-      trackEvent('help_ui', 'report-bug', 'hamburger');
-    });
-
-    $('#help-icon #support').click(function () {
-      trackEvent('help_ui', 'support', 'hamburger');
-    });
-
-    // This item is not in the hamburger, but actually in the studio footer.
-    $('.footer #support').click(function () {
-      trackEvent('help_ui', 'support', 'studio_footer');
-    });
-
-    // This item is not in the hamburger, but actually in the pegasus footers for
-    // desktop and mobile.
-    $('#pagefooter #support').each(function () {
-      $(this).click(function () {
-        trackEvent('help_ui', 'support', 'studio_footer');
-      });
     });
 
     const channelId = getChannelIdFromUrl(location.href);

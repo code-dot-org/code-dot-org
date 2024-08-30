@@ -22,7 +22,6 @@ import renderVersionNotFound from './renderVersionNotFound';
 
 var createCallouts = require('@cdo/apps/code-studio/callouts').default;
 var project = require('@cdo/apps/code-studio/initApp/project');
-var timing = require('@cdo/apps/code-studio/initApp/timing');
 var LegacyDialog = require('@cdo/apps/code-studio/LegacyDialog');
 var reporting = require('@cdo/apps/code-studio/reporting');
 var showVideoDialog = require('@cdo/apps/code-studio/videos').showVideoDialog;
@@ -44,8 +43,6 @@ export function setupApp(appOptions) {
   if (!window.dashboard) {
     throw new Error('Assume existence of window.dashboard');
   }
-  timing.startTiming('Puzzle', window.script_path, '');
-
   if (appOptions.hasContainedLevels) {
     if (appOptions.readonlyWorkspace) {
       // Lock the contained levels if this is a teacher viewing student work:
@@ -128,14 +125,22 @@ export function setupApp(appOptions) {
         }
         report.callback = appOptions.report.callback;
       }
-      trackEvent('Activity', 'Lines of Code', window.script_path, report.lines);
+      trackEvent('activity', 'activity_lines_of_code', {
+        path: window.script_path,
+        value: report.lines,
+      });
 
       report.fallbackResponse = appOptions.report.fallback_response;
       // Track puzzle attempt event
-      trackEvent('Puzzle', 'Attempt', window.script_path, report.pass ? 1 : 0);
+      trackEvent('puzzle', 'puzzle_attempt', {
+        path: window.script_path,
+        value: report.pass ? 1 : 0,
+      });
       if (report.pass) {
-        trackEvent('Puzzle', 'Success', window.script_path, report.attempt);
-        timing.stopTiming('Puzzle', window.script_path, '');
+        trackEvent('puzzle', 'puzzle_success', {
+          path: window.script_path,
+          value: report.attempt,
+        });
       }
       reporting.sendReport(report);
     },
