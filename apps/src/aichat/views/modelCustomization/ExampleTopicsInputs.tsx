@@ -32,6 +32,8 @@ const ExampleTopicsInputs: React.FunctionComponent<{
     [dispatch]
   );
 
+  // text is duplicated here in case we want the text to change for success.
+  // todo: Dry it up if we don't change the text.
   const examplePromptAlerts = useMemo(() => {
     return {
       success: {

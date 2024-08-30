@@ -233,6 +233,9 @@ $default-spacing: 4px;
   @include example-prompt-alert;
 }
 
+// The !important is required here to override the color in the Alert component
+// This begs the question of whether this should use the default success green instead of teal,
+// Since that is the way the component normally works.
 .examplePromptAlertSuccess i {
   color: $teal !important;
 }
