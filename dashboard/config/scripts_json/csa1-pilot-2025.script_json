@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-28 05:03:37 UTC",
+    "serialized_at": "2024-08-30 03:55:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -430,6 +430,9 @@
       "has_lesson_plan": true,
       "relative_position": 20,
       "properties": {
+        "overview": "**How can a programmer use AI effectively and ethically to develop code?**\n\nArtificial Intelligence (AI) has permeated nearly every aspect of modern life. In this lesson, students first recognize the ways in which AI-developed programs and data sets can have inherent bias. Then, students learn how AI can help to develop code while exploring the challenges associated with AI-developed code. Finally, students practice designing prompts in order to more effectively make use of AI-assistance in developing programs. ",
+        "preparation": "- Print copies of the [Planning Programs](https://docs.google.com/document/d/1VRFumOTI2Gidc3L2v7So9nw3iQCSbaKuazUbdBrkIaI/edit?usp=drive_link) handout \n- Preview the *Are We Automating Racism* video\n- Check the Teacher's Lounge for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers\n",
+        "student_overview": "**How can a programmer use AI effectively and ethically to develop code?**\n\nArtificial Intelligence (AI) is a big part of modern life. In this lesson, you'll first recognize how AI programs and data sets can have built-in biases. Then, you'll learn how AI can develop code while understanding the challenges that come with AI-created code. Finally, you'll practice designing prompts to make better use of AI when developing programs."
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -1259,6 +1262,48 @@
       "seeding_key": {
         "lesson_activity.key": "5098d125-0f30-4473-860c-d8b8fc0481c4",
         "lesson.key": "Asphalt Art Project [1-Day Version]",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa1-pilot-2025"
+      }
+    },
+    {
+      "key": "ce3055df-536c-48cf-82ce-541a6a47352f",
+      "position": 1,
+      "properties": {
+        "duration": 5,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ce3055df-536c-48cf-82ce-541a6a47352f",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa1-pilot-2025"
+      }
+    },
+    {
+      "key": "a7723245-0b2a-4d41-86bc-d36dc6d52afa",
+      "position": 2,
+      "properties": {
+        "duration": 35,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a7723245-0b2a-4d41-86bc-d36dc6d52afa",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa1-pilot-2025"
+      }
+    },
+    {
+      "key": "11aed889-124a-453a-9220-584e57eb5c31",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "11aed889-124a-453a-9220-584e57eb5c31",
+        "lesson.key": "lesson-2",
         "lesson_group.key": "lessonGroup-6",
         "script.name": "csa1-pilot-2025"
       }
@@ -6411,6 +6456,193 @@
       }
     },
     {
+      "key": "21cc8db4-2dd0-4005-8892-2ab9628a9035",
+      "position": 1,
+      "properties": {
+        "description": "We've seen how AI can be a powerful tool, but today we'll explore both its potential and its risks. We'll start with the \"Are We Automating Racism?\" video to understand how AI can unintentionally reinforce biases. Then, we'll learn how to use AI to write code, considering both its advantages and challenges. By the end, we'll focus on designing programs that make the best use of AI while ensuring fairness and accuracy.",
+        "duration": "5",
+        "name": "Bias in AI-Generated Code",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "21cc8db4-2dd0-4005-8892-2ab9628a9035",
+        "lesson_activity.key": "ce3055df-536c-48cf-82ce-541a6a47352f"
+      }
+    },
+    {
+      "key": "552a5cbd-0c6d-4d6d-98e1-6ecd31156c6f",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video - *Are We Automating Racism*.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [Guide to Curriculum Videos](https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "552a5cbd-0c6d-4d6d-98e1-6ecd31156c6f",
+        "lesson_activity.key": "ce3055df-536c-48cf-82ce-541a6a47352f"
+      }
+    },
+    {
+      "key": "730a2520-acd0-463c-a1b9-b891fef853fd",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *How can programmers avoid bias in their designs when using AI to help develop their programs?*\n\n**Discussion Goal:** Students discuss systemic issues that are rooted in bias. They explore how these biases can emerge in AI and consider the ways in which programmers might avoid incorporating bias into their designs. Students might share ideas such as using diverse data sets, applying thorough testing across different scenarios, and being mindful of ethical considerations when developing AI-assisted programs."
+      },
+      "seeding_key": {
+        "activity_section.key": "730a2520-acd0-463c-a1b9-b891fef853fd",
+        "lesson_activity.key": "ce3055df-536c-48cf-82ce-541a6a47352f"
+      }
+    },
+    {
+      "key": "19514ea4-a279-481b-8475-4ba7846e2e96",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "duration": "10",
+        "name": "How does AI Generate Content?"
+      },
+      "seeding_key": {
+        "activity_section.key": "19514ea4-a279-481b-8475-4ba7846e2e96",
+        "lesson_activity.key": "a7723245-0b2a-4d41-86bc-d36dc6d52afa"
+      }
+    },
+    {
+      "key": "39a3cd2d-d8bf-4396-a6aa-aff4496a1221",
+      "position": 2,
+      "properties": {
+        "description": "We have already seen one limitation in the use of AI—namely the possibility of algorithmic bias in programs created by AI. We’ll now deepen our understanding of the power and limitations of AI. Keep in mind the importance of the way humans can make thoughtful, intentional adjustments to AI-generated programs. ",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "39a3cd2d-d8bf-4396-a6aa-aff4496a1221",
+        "lesson_activity.key": "a7723245-0b2a-4d41-86bc-d36dc6d52afa"
+      }
+    },
+    {
+      "key": "597c7bac-fdd9-4a4b-b5c5-1fb0b267280a",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Chatbots and Large-Language Models (Part 1)*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slideshow to display the prompts.\n* *What are some challenges when using AI to develop code?*\n* *What might a human programmer do to ensure the AI creates accurate and effective programs?*\n\n**Discussion Goal:** Students discuss how large-language models are trained to predict and generate new content. Students also explore the challenges of doing this, such as limited context or incorrect predictions. They surface ideas  about how human programmers can address these challenges in order to improve the effectiveness and accuracy of AI-generated code. \n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***artificial intelligence***\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***large-language model***\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Show the video – *Chatbots and Large-Language Models (Part 2)*.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Given some of the limitations of AI and LLMs, what are some ways humans might have to make manual adjustments?*\n\n**Discussion Goal:** Students analyze the limitations of large language models (LLMs) and discuss how human intervention, such as tuning and context adjustments, helps overcome these limitations. They explore specific scenarios where manual adjustments are necessary to improve the accuracy and relevance of AI-generated content.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** A programmer prompted an AI to create a method that would paint the flag of Belgium. Here is the prompt the programmer used: “Write a method to draw the flag of Belgium in Java Lab”\n* *Do you think this prompt would be effective? Why or why not?*\n\n**Discussion Goal:** Students mention the need for clarity and specificity when prompting AI to generate code. They discuss how vague prompts might lead to inaccurate or incomplete outputs. They generate ideas about how more precise instructions can improve the effectiveness of AI-generated code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Here is the method one AI came up with. It is not at all what the programmer was looking for. \n* *What factors might be important for making sure an AI is able to produce the method the programmer is hoping to see?*\n\n**Discussion Goal**: Students identify key favors that influence the accuracy of AI-generated code, such as the prompt being specific and AI’s understanding of the programming context. They discuss how providing examples and clear instructions can guide AI toward generating more accurate code. Students might also mention the need for iterative testing and human fine-tuning when using AI to generate code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Explain how programs should be planned before using AI to generate code. "
+      },
+      "seeding_key": {
+        "activity_section.key": "597c7bac-fdd9-4a4b-b5c5-1fb0b267280a",
+        "lesson_activity.key": "a7723245-0b2a-4d41-86bc-d36dc6d52afa"
+      }
+    },
+    {
+      "key": "fbadd82a-7a0a-4d2c-8f09-12704ba147be",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 1 on Code Studio. Students investigate the program, make changes to the program as prompted in Levels 1 and 2, and observe the results.",
+        "duration": "10",
+        "name": "Investigating AI-Generated Code",
+        "progression_name": "Investigating AI-Generated Code"
+      },
+      "seeding_key": {
+        "activity_section.key": "fbadd82a-7a0a-4d2c-8f09-12704ba147be",
+        "lesson_activity.key": "a7723245-0b2a-4d41-86bc-d36dc6d52afa"
+      }
+    },
+    {
+      "key": "97c32ef4-5f9c-4f79-bfe1-70bb6d298000",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from their investigation into the code."
+      },
+      "seeding_key": {
+        "activity_section.key": "97c32ef4-5f9c-4f79-bfe1-70bb6d298000",
+        "lesson_activity.key": "a7723245-0b2a-4d41-86bc-d36dc6d52afa"
+      }
+    },
+    {
+      "key": "41be2fc7-c293-4629-87ba-353b392e7df5",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Planning Programs handout.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Students investigate and analyze prompts for using AI to help generate code in order to draw the Thailand flag in The Neighborhood. Students then write their own prompts before reflecting on how these prompts can improve AI-assisted coding.",
+        "name": "Planning Programs",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Before students begin analyzing prompts, emphasize the importance of planning and problem decomposition. Encourage them to think critically about how clear, detailed prompts lead to more efficient and accurate code generation. Have them focus on identifying the key parts of the task and how precision in their prompts improves AI-assisted programming.\n\nDuring the activity, guide students to approach prompt design iteratively—each refinement should clarify instructions, reducing ambiguity and improving results. Encourage discussion on how specific details, like dimensions and starting points, are essential for developing well-structured programs."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "41be2fc7-c293-4629-87ba-353b392e7df5",
+        "lesson_activity.key": "a7723245-0b2a-4d41-86bc-d36dc6d52afa"
+      }
+    },
+    {
+      "key": "ba115d44-9112-4d85-82b1-ade93008503d",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Using AI to design methods can speed up coding, but success depends on using specific, well-planned prompts. \nWhat strategies did you use to ensure the prompts would make the most of AI’s capabilities?\n\n**Discussion Goal:** Students share the strategies they tried for generating effective prompts. They discuss the elements of an effective prompt like being specific and providing examples. "
+      },
+      "seeding_key": {
+        "activity_section.key": "ba115d44-9112-4d85-82b1-ade93008503d",
+        "lesson_activity.key": "a7723245-0b2a-4d41-86bc-d36dc6d52afa"
+      }
+    },
+    {
+      "key": "8f669118-bd53-4d7f-bcbf-668cc742ea34",
+      "position": 1,
+      "properties": {
+        "description": "We’ve learned a lot of using AI to help develop our programs. Let’s see how we can bring everything we have learned together. ",
+        "duration": "5",
+        "name": "Closing the Loop",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8f669118-bd53-4d7f-bcbf-668cc742ea34",
+        "lesson_activity.key": "11aed889-124a-453a-9220-584e57eb5c31"
+      }
+    },
+    {
+      "key": "f02e50f9-3c5e-4f69-be6e-4a5ceebd91b1",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n- What did you learn about the role of clear instructions in using AI to generate code?\n- Identify any challenges AI might face and suggest how better planning could improve its effectiveness.\n- How did changing and improving the prompts help you better understand how to plan a program? \n\n**Discussion Goal:** Students will discuss how the instructions given to AI to generate code must be clear and specific in order to generate high quality responses from the AI. Some challenges students may mention are handling incorrect or partially correct responses, or difficulties in fine-tuning the results of AI-generated code. Finally, students discuss how investigating and refining prompts helped them to identify the specific details that can help make a high-quality prompt for using AI to help develop code.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Closing the Loop helps students recap concepts and reflect on their learning process. This discussion is also an opportunity to normalize any confusion students are experiencing. Highlight that this is new information for most students and that there will be times when they feel lost or confused. Share your own experience using AI to help develop programs for the first time. You can also ask students to share strategies for when they are confused, such as consulting additional resources."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "f02e50f9-3c5e-4f69-be6e-4a5ceebd91b1",
+        "lesson_activity.key": "11aed889-124a-453a-9220-584e57eb5c31"
+      }
+    },
+    {
+      "key": "37b19ef0-834f-40f4-a6e7-53823e85ebeb",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "37b19ef0-834f-40f4-a6e7-53823e85ebeb",
+        "lesson_activity.key": "11aed889-124a-453a-9220-584e57eb5c31"
+      }
+    },
+    {
+      "key": "e2045ddd-a8c5-4d5e-998f-4b2af1a68345",
+      "position": 4,
+      "properties": {
+        "description": "*Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket.*",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "e2045ddd-a8c5-4d5e-998f-4b2af1a68345",
+        "lesson_activity.key": "11aed889-124a-453a-9220-584e57eb5c31"
+      }
+    },
+    {
       "key": "cfe7f241-f9bc-4b42-b938-21f9dbeba5ba",
       "position": 1,
       "properties": {
@@ -7365,6 +7597,9 @@
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-AIGeneratedCode-L4_2025"
+        ],
         "progression": "Checking for Understanding"
       },
       "bonus": false,
@@ -8462,6 +8697,72 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "progression": "Investigating AI-Generated Code"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-AIGeneratedCode(Alternate)-L1_2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa1-pilot-2025",
+        "activity_section.key": "fbadd82a-7a0a-4d2c-8f09-12704ba147be"
+      },
+      "level_keys": [
+        "CSA-AIGeneratedCode(Alternate)-L1_2025"
+      ]
+    },
+    {
+      "chapter": 83,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "progression": "Investigating AI-Generated Code"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-AIGeneratedCode(Alternate)-L2_2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa1-pilot-2025",
+        "activity_section.key": "fbadd82a-7a0a-4d2c-8f09-12704ba147be"
+      },
+      "level_keys": [
+        "CSA-AIGeneratedCode(Alternate)-L2_2025"
+      ]
+    },
+    {
+      "chapter": 84,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-AIGeneratedCode(Alternate)-L3_2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa1-pilot-2025",
+        "activity_section.key": "e2045ddd-a8c5-4d5e-998f-4b2af1a68345"
+      },
+      "level_keys": [
+        "CSA-AIGeneratedCode(Alternate)-L3_2025"
+      ]
+    },
+    {
+      "chapter": 85,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
         "level_keys": [
           "CSA 2023 Neighborhood Sandbox_pilot-2025"
         ],
@@ -8482,7 +8783,7 @@
       ]
     },
     {
-      "chapter": 83,
+      "chapter": 86,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -9482,6 +9783,42 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA-AIGeneratedCode(Alternate)-L1_2025",
+        "script_level.level_keys": [
+          "CSA-AIGeneratedCode(Alternate)-L1_2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa1-pilot-2025",
+        "activity_section.key": "fbadd82a-7a0a-4d2c-8f09-12704ba147be"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-AIGeneratedCode(Alternate)-L2_2025",
+        "script_level.level_keys": [
+          "CSA-AIGeneratedCode(Alternate)-L2_2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa1-pilot-2025",
+        "activity_section.key": "fbadd82a-7a0a-4d2c-8f09-12704ba147be"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-AIGeneratedCode(Alternate)-L3_2025",
+        "script_level.level_keys": [
+          "CSA-AIGeneratedCode(Alternate)-L3_2025"
+        ],
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-6",
+        "script.name": "csa1-pilot-2025",
+        "activity_section.key": "e2045ddd-a8c5-4d5e-998f-4b2af1a68345"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA 2023 Neighborhood Sandbox_pilot-2025",
         "script_level.level_keys": [
           "CSA 2023 Neighborhood Sandbox_pilot-2025"
@@ -9540,6 +9877,18 @@
       },
       "seeding_key": {
         "resource.key": "_exemplar_planning_programs"
+      }
+    },
+    {
+      "name": "[EXEMPLAR] Planning Programs (Alternate Version)",
+      "url": "https://docs.google.com/document/d/1MZDU4cUUeLgCCcTOSeBrpJ-q6D2fRSdg-1X5O6kLZjQ/edit?usp=drive_link",
+      "key": "_exemplar_planning_programs_alternate_version_",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Exemplar"
+      },
+      "seeding_key": {
+        "resource.key": "_exemplar_planning_programs_alternate_version_"
       }
     },
     {
@@ -9688,7 +10037,7 @@
     },
     {
       "name": "[EXEMPLAR] AI-Generated Code Guided Notes",
-      "url": "https://docs.google.com/document/d/1Whx0j6rOrfxdTOQxBJ8z9u_h3o8WSIQkHbMZKsvQUHY/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1wSDmcrNCUr7-qbW5t6f1n6go3XGHrHk-Xrsn9V7tumc/edit?usp=drive_link",
       "key": "_exemplar_u1l8_guided_notes_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -9892,7 +10241,7 @@
     },
     {
       "name": "[KEY] Instantiating Objects Extra Practice",
-      "url": "https://docs.google.com/document/d/1WUeBWWvDtdSOL7u02eLKrXZg-KMj0tUiE7maaN-yrpE/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1zq8hW-LOf6gFabaBO6cgPieGnl9VFTPA3n2feuf6b00/edit?usp=drive_link",
       "key": "_key_u1l4_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -9987,6 +10336,18 @@
       }
     },
     {
+      "name": "AI-Generated Code (Alternate Version)",
+      "url": "https://docs.google.com/presentation/d/11XaM8cXYyzp4CBn6PNbVnGYBMuT1fNBqHG5gLWqytds/edit?usp=drive_link",
+      "key": "ai-generated_code_alternate_version_",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "ai-generated_code_alternate_version_"
+      }
+    },
+    {
       "name": "All Resources",
       "url": "/s/csa1-pilot-2025/resources",
       "key": "all_resources",
@@ -10032,6 +10393,18 @@
       }
     },
     {
+      "name": "Are We Automating Racism",
+      "url": "https://youtu.be/Ok5sKLXqynQ?feature=shared&t=255",
+      "key": "are_we_automating_racism_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "are_we_automating_racism_1"
+      }
+    },
+    {
       "name": "Asphalt Art Project",
       "url": "https://docs.google.com/presentation/d/1JliJ9LioCFS28DbedgICqNfE8nqsHoxyibOl1ZfXkAE/edit?usp=drive_link",
       "key": "asphalt_art_project",
@@ -10045,7 +10418,7 @@
     },
     {
       "name": "Asphalt Art Project",
-      "url": "https://docs.google.com/presentation/d/1lbLuhz0kTixAVLMdZ0CNDtYSzHmuBaB9bCulQNtF4Uo/edit?usp=drive_link",
+      "url": "https://docs.google.com/presentation/d/1lbLuhz0kTixAVLMdZ0CNDtYSzHmuBaB9bCulQNtF4Uo/edit?usp=sharing",
       "key": "asphalt_art_project_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -10250,6 +10623,18 @@
       }
     },
     {
+      "name": "How Chatbots and Large Language Models Work",
+      "url": "https://youtu.be/X-AWdfSFCHQ?feature=shared",
+      "key": "how_chatbots_and_large_language_models_work_1",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_chatbots_and_large_language_models_work_1"
+      }
+    },
+    {
       "name": "How to Conduct a Code Review",
       "url": "https://docs.google.com/document/d/172jHHGFO0pQf5NhqvbcfBm9jotyVplaAZznPF1F_PXk/edit?usp=sharing",
       "key": "how_to_conduct_a_code_review",
@@ -10421,6 +10806,18 @@
       },
       "seeding_key": {
         "resource.key": "planning_programs"
+      }
+    },
+    {
+      "name": "Planning Programs (Alternate Version)",
+      "url": "https://docs.google.com/document/d/1i6j879bZjgxPe9-a20RPOlq_GXglb6UqaGH2rW4iBdg/edit?usp=drive_link",
+      "key": "planning_programs_alternate_version_",
+      "properties": {
+        "audience": "Student",
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "planning_programs_alternate_version_"
       }
     },
     {
@@ -10776,7 +11173,7 @@
     },
     {
       "name": "Instantiating Objects Extra Practice",
-      "url": "https://docs.google.com/document/d/1bf6wdryCKsqj632zGBvcU8isI3ij4GLxo4tYiL0i1SE/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1WUeBWWvDtdSOL7u02eLKrXZg-KMj0tUiE7maaN-yrpE/edit?usp=drive_link",
       "key": "u1l4_extra_practice",
       "properties": {
         "audience": "Student",
@@ -10906,7 +11303,7 @@
     },
     {
       "name": "AI-Generated Code Guided Notes",
-      "url": "https://docs.google.com/document/d/1s_YaJ6lPH5ebCtB1TjM-BoiaHac2_L6M_DFodG-Q-gA/edit?usp=drive_link",
+      "url": "https://docs.google.com/document/d/1xj_2Y_s-Qn62mt4i7L4mWrGjXDZ2RYiWQidNX4qxWao/edit?usp=drive_link",
       "key": "u1l8_guided_notes_1",
       "properties": {
         "audience": "Student",
@@ -11901,6 +12298,48 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "_exemplar_planning_programs_alternate_version_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "_exemplar_u1l8_guided_notes_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "ai-generated_code_alternate_version_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "are_we_automating_racism_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "how_chatbots_and_large_language_models_work_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "planning_programs_alternate_version_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "resource.key": "u1l8_guided_notes_1"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-8",
         "resource.key": "_exemplar_planning_programs"
       }
@@ -12828,6 +13267,18 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "artificial_intelligence_ai_"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "vocabulary.key": "large_language_model_llm_"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-8",
         "vocabulary.key": "artificial_intelligence_ai_"
       }
@@ -12891,6 +13342,16 @@
       "seeding_key": {
         "lesson.key": "Two-Way Selection Statements",
         "objective.key": "1a1e092d-50c8-4e9c-8611-874c2bbf39fd"
+      }
+    },
+    {
+      "key": "1f707555-a309-4b9b-a4aa-36dd0e3c345d",
+      "properties": {
+        "description": "Identify the challenges of using AI to develop code "
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "1f707555-a309-4b9b-a4aa-36dd0e3c345d"
       }
     },
     {
@@ -13031,6 +13492,16 @@
       "seeding_key": {
         "lesson.key": "Methods with Parameters",
         "objective.key": "548233e3-7052-49e8-ade9-b7794ede5f48"
+      }
+    },
+    {
+      "key": "56b9bda9-bed9-4730-a045-c49938b6293e",
+      "properties": {
+        "description": "Recognize the risk of bias in programs developed with AI"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "56b9bda9-bed9-4730-a045-c49938b6293e"
       }
     },
     {
@@ -13251,6 +13722,26 @@
       "seeding_key": {
         "lesson.key": "Java Lab",
         "objective.key": "c5c12c4d-b711-4462-9a6b-1d7a5b1bec40"
+      }
+    },
+    {
+      "key": "c6bdc452-8e4a-455f-b032-cc0a8e5345c5",
+      "properties": {
+        "description": "Explain how the use of artificial intelligence (AI) can decrease the time it takes to develop code"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "c6bdc452-8e4a-455f-b032-cc0a8e5345c5"
+      }
+    },
+    {
+      "key": "d081e50e-f51e-44be-8969-3a5435f7a292",
+      "properties": {
+        "description": "Create a well-designed program plan in order to increase the effectiveness of using AI to develop a program"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "objective.key": "d081e50e-f51e-44be-8969-3a5435f7a292"
       }
     },
     {

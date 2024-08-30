@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-08-22 15:09:17 UTC",
+    "serialized_at": "2024-08-29 22:42:32 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -115,7 +115,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/1) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I represent the attributes an object should have in a class?**\n\nIn this lesson, students expand on what they learned about classes in the previous unit to declare instance variables to represent an object's attributes. As students learn about instance variables, they discover the difference between `public` and `private` access and identify the need for encapsulation. Students also revisit inheritance to recall that subclasses share the attributes and behaviors of a class and practice declaring instance variables in a single class and in a superclass and subclass.",
-        "preparation": "* **(Optional)** Print copies of the U2L1 Guided Notes (one for each student)\n* Preview the *Instance Variables and Attributes* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-1-attributes/37872) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Attributes Guided Notes (one for each student)\n* Preview the *Instance Variables and Attributes* video",
         "student_overview": "**How can I represent the attributes an object should have in a class?**\n\nYou previously learned that a class is a blueprint that defines the attributes and behaviors an object should have. In this lesson, you expand on what you learned about classes in the previous unit to declare instance variables to represent an object's attributes. As you learn about instance variables, you discover the difference between `public` and `private` access and identify the need for encapsulation. You also revisit inheritance to recall that subclasses share the attributes and behaviors of a class and practice declaring instance variables in a single class and in a superclass and subclass."
       },
       "seeding_key": {
@@ -134,7 +134,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.1\n* Topic Questions 5.8\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/2) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How does a constructor assign values to instance variables?**\n\nStudents have used constructors to create a variety of objects, including `Painter` objects. Students build on their knowledge of instance variables to explore how to assign values to the instance variables when an object is created. Students recall that the constructor they have used in the `Painter` class instantiates a `Painter` object with the same values every time, and they consider the decisions a software engineer needs to make to decide what default values should be assigned to instance variables. Students practice writing no-argument constructors and continue developing the `Dessert` class for the Joyful Pastries food truck.",
-        "preparation": "* **(Optional)** Print copies of the U2L2 Guided Notes (one for each student)\n* Preview the *Constructors* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-2-no-argument-constructors/37873) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the No-Argument Constructors Guided Notes (one for each student)\n* Preview the *Constructors* video",
         "student_overview": "**How does a constructor assign values to instance variables?**\n\nYou have used constructors to create a variety of objects, including `Painter` objects. In this lesson, you build on your knowledge of instance variables to explore how to assign values to the instance variables when an object is created. You recall that the constructor you have used in the `Painter` class instantiates a `Painter` object with the same values every time, and you consider the decisions a software engineer needs to make to decide what default values should be assigned to instance variables. You practice writing no-argument constructors and continue developing the `Dessert` class for the Joyful Pastries food truck."
       },
       "seeding_key": {
@@ -153,7 +153,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.2\n* Topic Questions 5.2\n* Topic Questions 9.1\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/3) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I create objects with specific values for its instance variables?**\n\nStudents have learned how to write no-argument constructors to assign default values to instance variables and use these to instantiate objects. In this lesson, students consider the limitations of no-argument constructors and learn about using parameterized constructors to assign specific values to the instance variables. Students explore the components of a parameterized constructor and its functionality, then practice writing parameterized constructors in a class.",
-        "preparation": "* **(Optional)** Print copies of the U2L3 Guided Notes (one for each student)\n* Preview the *Overloaded Constructors* video\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-3-parameterized-constructors/37874) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Parameterized Constructors Guided Notes (one for each student)\n* Preview the *Overloaded Constructors* video",
         "student_overview": "**How can I create objects with specific values for its instance variables?**\n\nYou have learned how to write no-argument constructors to assign default values to instance variables and use these to instantiate objects. In this lesson, you consider the limitations of no-argument constructors and learn about using parameterized constructors to assign specific values to the instance variables. You explore the components of a parameterized constructor and its functionality, then practice writing parameterized constructors in a class."
       },
       "seeding_key": {
@@ -263,7 +263,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 1.3\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/8) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I use variables and operators to perform calculations?**\n\nStudents have learned how to use variables to store primitive values and object references. In this lesson, students explore writing and evaluating expressions using arithmetic operators and compound assignment operators. Students discover how the data type impacts the way an expression is evaluated and the result of dividing an `int` or a `double` value by zero. They also learn about using compound assignment operators and explore the mod ( `%` ) operator.",
-        "preparation": "* **(Optional)** Print copies of the U2L8 Guided Notes (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-8-operators-and-expressions/37879) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* **(Optional)** Print copies of the Operators and Expressions Guided Notes (one for each student)",
         "student_overview": "**How can I use variables and operators to perform calculations?**\n\nYou have learned how to use variables to store primitive values and object references. In this lesson, you explore writing and evaluating expressions using arithmetic operators and compound assignment operators. You discover how the data type impacts the way an expression is evaluated and the result of dividing an `int` or a `double` value by zero. You also learn about using compound assignment operators and explore the mod ( `%` ) operator."
       },
       "seeding_key": {
@@ -281,9 +281,9 @@
       "relative_position": 11,
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 2.3\n* Topic Questions 2.4\n* Topic Questions 3.1\n* Topic Questions 5.1\n* Topic Questions 5.5\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/9) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
-        "overview": "**How can I change the values assigned to an object's instance variables after the object has been created?**\n\nIn this lesson, students learn to write and call mutator methods to change the values stored in an object's instance variables. Students explore the functionality and syntax of a mutator method while also learning more about the methods in the `Scanner` class to get input from a user. They consider scenarios where the value of an instance variable should not be changed and learn how to identify and address invalid values for instance variables. Students then practice writing a mutator method in a class before adding mutator methods to the `Dessert` class and subclass.",
-        "preparation": "* **(Optional)** Print copies of the U2L9 Guided Notes (one for each student)\n* Preview the *Scanner Class Methods* and *Mutator Methods* videos\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-9-mutator-methods/37880) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teacher",
-        "student_overview": "**How can I change the values assigned to an object's instance variables after the object has been created?**\n\nIn this lesson, you learn to write and call mutator methods to change the values stored in an object's instance variables. You explore the functionality and syntax of a mutator method while also learning more about the methods in the `Scanner` class to get input from a user. You consider scenarios where the value of an instance variable should not be changed and learn how to identify and address invalid values for instance variables. You then practice writing a mutator method in a class before adding mutator methods to the `Dessert` class and subclass."
+        "overview": "**How can I change the values assigned to an object's instance variables after the object has been created?**\n\nIn this lesson, students learn to write and call mutator methods to change the values stored in an object's instance variables. Students explore the functionality and syntax of a mutator method. They consider scenarios where the value of an instance variable should not be changed and learn how to identify and address invalid values for instance variables. Students then practice writing a mutator method in a class before adding mutator methods to the `Dessert` class and subclass.",
+        "preparation": "* **(Optional)** Print copies of the Mutator Methods Guided Notes (one for each student)\n* Preview the *Mutator Methods* video",
+        "student_overview": "**How can I change the values assigned to an object's instance variables after the object has been created?**\n\nIn this lesson, you learn to write and call mutator methods to change the values stored in an object's instance variables. You explore the functionality and syntax of a mutator method. You consider scenarios where the value of an instance variable should not be changed and learn how to identify and address invalid values for instance variables. You then practice writing a mutator method in a class before adding mutator methods to the `Dessert` class and subclass."
       },
       "seeding_key": {
         "lesson.key": "Mutator Methods",
@@ -301,7 +301,7 @@
       "properties": {
         "assessment_opportunities": "### AP Classroom Topic Questions\n\nTo assign questions from the AP Classroom Question Bank that align with this lesson, create a custom quiz in AP Classroom by searching the Question Bank for the Essential Knowledge statements listed at the top of this lesson plan. You can find instructions and video demonstrations to do this on [**AP Central**](https://apcentral.collegeboard.org/instructional-resources/ap-classroom).\n\nThe following Topic Questions in AP Classroom can be assigned as a formative assessment for this lesson:\n\n* Topic Questions 5.4\n* Topic Questions 9.1\n* Topic Questions 9.7\n\n**Note:** *Some Learning Objectives and Essential Knowledge statements in the suggested Topic Questions are covered in later units.*\n\n### JuiceMind Quiz\n\nYou can use [**this JuiceMind Quiz**](https://play.juicemind.com/dashboard/explore/class/ap-cs-a-codeorg/unitNumber/2/topicNumber/10) as another formative assessment opportunity for this lesson. You could do this quiz before the independent practice levels, in place of or after the wrap up activity, or to review this lesson at the beginning of the next lesson. This quiz is completely **optional**, and it is entirely up to you if and how you use it.\n\n<i class=\"fa-solid fa-bullhorn\"></i> **Let us know how it went!**\n\nIf you do use this JuiceMind quiz for this lesson, we'd love to hear how it went! Please take a moment to share your feedback on [**this survey**](https://forms.gle/28jxqJXpp2G8Yg596) so we can ensure this resource meets the needs of you and your students.\n\nWe'd also love to hear from your students about their experience taking the JuiceMind quiz! Please share [**this survey**](https://forms.gle/VhkESMs4eQzegZfbA) with your students after completing the quiz so they can let us know what they thought and to help us meet their needs.",
         "overview": "**How can I easily display information about an object?**\n\nStudents have learned to use accessor methods to obtain information about the state of an object. In this lesson, students explore how to print an object reference and the `toString()` method to easily obtain information about an object. Students revisit the `Object` class and learn how to override its `toString()` method and practice writing a `toString()` method in a class using escape sequences to format output. Students then write a `toString()` method in the `Dessert` class and subclass.",
-        "preparation": "* **(Optional)** Print copies of the U2L10 Guided Notes (one for each student)\n* Preview *The toString() Method* video\n* Print copies of the Unit 2 Study Guide (one for each student)\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-10-printing-objects/37881) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teacher",
+        "preparation": "* **(Optional)** Print copies of the Printing Objects Guided Notes (one for each student)\n* Preview *The toString() Method* video\n* Print copies of the Unit 2 Study Guide (one for each student)",
         "student_overview": "**How can I easily display information about an object?**\n\nYou have learned to use accessor methods to obtain information about the state of an object. In this lesson, you explore how to print an object reference and the `toString()` method to easily obtain information about an object. You revisit the `Object` class and learn how to override its `toString()` method and practice writing a `toString()` method in a class using escape sequences to format output. You then write a `toString()` method in the `Dessert` class and subclass."
       },
       "seeding_key": {
@@ -320,7 +320,7 @@
       "properties": {
         "assessment": true,
         "overview": "**What business or service do I want to manage using a program?**\n\nFor this project, students use the skills they have developed throughout this unit to create a store management system for a business or service. Students choose the objects for their business that represent something they are interested in or meaningful to them. After brainstorming and planning, students develop their programs to create their store management system.",
-        "preparation": "* Review project setup, requirements, and rubric\n* Print copies of the Store Management Project Planning Guide handout (one for each student)\n* Create code review groups if you are not reusing the same groups\n* Gather several sticky notes for each student\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-11-store-management-project/37882) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Review project setup, requirements, and rubric\n* Print copies of the Store Management Project Planning Guide handout (one for each student)\n* Create code review groups if you are not reusing the same groups\n* Gather several sticky notes for each student",
         "student_overview": "**What business or service do I want to manage using a program?**\n\nFor this project, you use the skills you have developed throughout this unit to create a store management system for a business or service. You choose the objects for your business that represent something you are interested in or meaningful to you. After brainstorming and planning, you develop your program to create your store management system."
       },
       "seeding_key": {
@@ -357,7 +357,7 @@
       "properties": {
         "assessment": true,
         "overview": "Students complete a multiple-choice assessment that covers the unit topics.",
-        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource\n* Check the [**Teacher's Lounge**](https://forum.code.org/t/csa-2-13-unit-2-assessment/37884) for verified teachers on the CSA Forum to find additional strategies or resources shared by fellow teachers",
+        "preparation": "* Preview the assessment questions\n* Unlock the assessment questions as indicated on the Unlocking Assessments resource",
         "student_overview": "Congratulations, you completed Unit 2! Assess your progress through the Unit 2 Assessment."
       },
       "seeding_key": {
@@ -1230,7 +1230,7 @@
       "key": "6c1054bf-3847-4002-a7e3-9c88634b8aee",
       "position": 8,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***instance variable***.\n\n**Do This:** Explain the syntax for declaring an instance variable:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The instance variable is `private`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The data type for the instance variable and introduce the `double` data type\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The name of the instance variable\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think these are called instance variables instead of just variables?*\n\n**Discussion Goal:** Students recall that when they create an object, they are creating an instance of a class. An object then gets its own copy of the attributes and methods defined in the class. They realize that these are called instance variables because they define the attributes an object should have, so each object gets its own copy of these variables.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Define ***instance variable***.\n\n**Do This:** Explain the syntax for declaring an instance variable:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The instance variable is `private`\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The data type for the instance variable and default values that are assigned\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> The name of the instance variable\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Why do you think these are called instance variables instead of just variables?*\n\n**Discussion Goal:** Students recall that when they create an object, they are creating an instance of a class. An object then gets its own copy of the attributes and methods defined in the class. They realize that these are called instance variables because they define the attributes an object should have, so each object gets its own copy of these variables.",
         "tips": [
           {
             "type": "teachingTip",
@@ -3202,8 +3202,19 @@
       }
     },
     {
-      "key": "38cb100d-b7e5-4e5e-80c8-67be72c25c86",
+      "key": "794a9295-82a6-4a34-9cb7-c253fafe43ba",
       "position": 11,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What do you think would happen if we attempted to evaluate an expression before a variable has been given a value?*\n\n**Discussion Goal:** The goal of this discussion is to help students understand the importance of variable initialization before use. Students should explore the potential errors or unexpected behavior that can occur when attempting to evaluate an expression with an uninitialized variable.\n\n**Do This:** Click through the animated slides to demonstrate how a complication occurs when attempting to evaluate an expression before initializing the variable in the expression.\n \n**Do This:** Explain the proper way to initialize and evaluate variables. "
+      },
+      "seeding_key": {
+        "activity_section.key": "794a9295-82a6-4a34-9cb7-c253fafe43ba",
+        "lesson_activity.key": "4b91d09e-f5f6-4338-8d85-f5d950811f4b"
+      }
+    },
+    {
+      "key": "38cb100d-b7e5-4e5e-80c8-67be72c25c86",
+      "position": 12,
       "properties": {
         "description": "Java also has additional operators that we can use to perform calculations and assign the result to a variable. Let's take a look at how these work.",
         "duration": "10",
@@ -3217,7 +3228,7 @@
     },
     {
       "key": "ea1f8fae-96b3-4d78-85eb-8a940d15968f",
-      "position": 12,
+      "position": 13,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Direct students to Level 5 on Code Studio to complete Levels 5 and 6. Students investigate the program, make changes to the program as prompted, and observe the results.",
         "progression_name": "Investigate and Modify: Operators"
@@ -3229,7 +3240,7 @@
     },
     {
       "key": "7cd2748c-c164-499e-b318-f68090837983",
-      "position": 13,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Have students share what they discovered from the modifications they made to the code.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to define ***compound assignment operator*** and demonstrate the examples.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Click through the animated slide to demonstrate evaluating expressions using the mod ( `%` ) operator.\n\n**Do This:** Explain the order of operations:\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Introduce the order of operations\n* <i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> Respond to the self-check question\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *When would the mod ( `%` ) operator be useful?*\n\n**Discussion Goal:** Students suggest using the mod ( `%` )operator to determine if a number is a multiple of another number. Students note that the mod ( `%` ) operator could also determine if a number is even or odd.",
         "tips": [
@@ -3313,46 +3324,11 @@
       "key": "3ab55d3e-93f8-4da9-98ca-080d7c0d7fea",
       "position": 1,
       "properties": {
-        "description": "We previously learned about the `Scanner` class and how programs obtain input from a user. Let's take a look at some of the methods in the `Scanner` class and how they work.",
-        "name": "Scanner Class Methods",
-        "remarks": true
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review accessor methods.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Do This:** Review the `Scanner` class.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *Can you think of a situation where you would use the information from a user to modify an object?*\n\n**Discussion Goal:** The goal of this discussion is to help students connect their understanding of accessor methods and the `Scanner` class to real-world scenarios. Students should brainstorm situations where user input could be used to modify an object's attributes, reinforcing how these concepts are applied in programming.",
+        "name": "Modifying Objects"
       },
       "seeding_key": {
         "activity_section.key": "3ab55d3e-93f8-4da9-98ca-080d7c0d7fea",
-        "lesson_activity.key": "f2242c82-ccc1-4d63-b6e7-882008c1b4a4"
-      }
-    },
-    {
-      "key": "1397fbca-6d76-4293-b786-c1230f8e2716",
-      "position": 2,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the video – *Scanner Class Methods*.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Videos are used throughout the curriculum to spark discussions, supplement key concepts with additional explanations and examples, and expose students to the various roles and backgrounds of individuals in computer science.\n\nWhile interacting with the video, turn on closed captioning so students can also read along as they watch.\n\nTo encourage active engagement and reflection, use one or more of the strategies discussed in the [**Guide to Curriculum Videos**](https://docs.google.com/document/d/1FqIUpJg6MrgdtbFGLobSojOz0u1m5Jge1nMAjUqI5ZM/edit?usp=sharing)."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "1397fbca-6d76-4293-b786-c1230f8e2716",
-        "lesson_activity.key": "f2242c82-ccc1-4d63-b6e7-882008c1b4a4"
-      }
-    },
-    {
-      "key": "4a7e67bd-6b4a-4efa-9489-f41a1157aa84",
-      "position": 3,
-      "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What kind of information might you ask the user for in your programs? Which method would you use to get this information?*\n\n**Discussion Goal:** Students suggest getting values for a starting price for a `Dessert` object or asking the user for their name. Students share the methods they would use, such as `nextDouble()` to get the price and `next()` or `nextLine()` to get the user's name.",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "Use the Hold That Thought strategy to allow students to write down their thoughts on paper first. Emphasize that they do not need to write complete sentences – they can write a few words, bullet points, draw a quick sketch, or anything else that will help them gather and recall their thoughts when it is time to share with the class."
-          }
-        ]
-      },
-      "seeding_key": {
-        "activity_section.key": "4a7e67bd-6b4a-4efa-9489-f41a1157aa84",
         "lesson_activity.key": "f2242c82-ccc1-4d63-b6e7-882008c1b4a4"
       }
     },
@@ -7995,8 +7971,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U2L10 Guided Notes",
-      "url": "https://docs.google.com/document/d/1rtCEQUhsyPKxUYnHRgENoOtCAopQoPjABdrDEJS_ZMw/edit?usp=sharing",
+      "name": "[EXEMPLAR] Printing Objects Guided Notes",
+      "url": "https://docs.google.com/document/d/1Ck8t7mQZl7UaUx87ASaNd3H6VQNf9Ty820JC1u51RtY/edit?usp=drive_link",
       "key": "_exemplar_u2l10_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -8007,8 +7983,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U2L1 Guided Notes",
-      "url": "https://docs.google.com/document/d/1JpA2-cJ59a4SxpWIiwUdz8ygJLLzJ45vCAWEnmvjfss/edit?usp=sharing",
+      "name": "[EXEMPLAR] Attributes Guided Notes",
+      "url": "https://docs.google.com/document/d/1q7-0JXbMkQDjr5XszVpWKI0ss_uXAC1zBePtmVR1j_M/edit?usp=drive_link",
       "key": "_exemplar_u2l1_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -8019,8 +7995,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U2L2 Guided Notes",
-      "url": "https://docs.google.com/document/d/1j0b450ET2przWQJYTvYkdVGwPdvrSVpRxC_ORuuYhXw/edit?usp=sharing",
+      "name": "[EXEMPLAR] No-Argument Constructors Guided Notes",
+      "url": "https://docs.google.com/document/d/1M-FTxIut0sp1Mkq7HZPQWp1VXl-h4BafYhZR2UROlcI/edit?usp=drive_link",
       "key": "_exemplar_u2l2_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -8031,8 +8007,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U2L3 Guided Notes",
-      "url": "https://docs.google.com/document/d/1Fz8bpusC_-9tf_fi-9cQGyuvcwI91eMKKSt-pMeu7pA/edit?usp=sharing",
+      "name": "[EXEMPLAR] Parameterized Constructors Guided Notes",
+      "url": "https://docs.google.com/document/d/18-UR0nbpgcC-vtwRAZv2RYrg1Q_h69ud-RIvRhLBrsk/edit?usp=drive_link",
       "key": "_exemplar_u2l3_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -8091,8 +8067,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U2L8 Guided Notes",
-      "url": "https://docs.google.com/document/d/19gBhx5DIm0YnaUIgaqk3vZ0tdlUnGHGHI_xMnQWslVY/edit?usp=sharing",
+      "name": "[EXEMPLAR] Operators and Expressions Guided Notes",
+      "url": "https://docs.google.com/document/d/1MS0dT4eSNosWEppllgg3OzNxOLEsIqMX7T-qUv9Xq7Y/edit?usp=drive_link",
       "key": "_exemplar_u2l8_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -8103,8 +8079,8 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U2L9 Guided Notes",
-      "url": "https://docs.google.com/document/d/18PxnbJcnAR4ovl70rgte6otlZiOOml9OASnUr8TlVmk/edit?usp=sharing",
+      "name": "[EXEMPLAR] Mutator Methods Guided Notes",
+      "url": "https://docs.google.com/document/d/18lPJY3TvrLkAGF0IIhGzkt22lX2hlk87ZyqFiwrCvgw/edit?usp=drive_link",
       "key": "_exemplar_u2l9_guided_notes",
       "properties": {
         "audience": "Verified Teacher",
@@ -8163,8 +8139,8 @@
       }
     },
     {
-      "name": "[KEY] U2L10 Extra Practice",
-      "url": "https://docs.google.com/document/d/1NhgGv_Pq_Y7groTBw6X357NJW811S8NzuzkV3OIcL-8/edit?usp=sharing",
+      "name": "[KEY] Printing Objects Extra Practice",
+      "url": "https://docs.google.com/document/d/1bDvOHeZz2712p6ihYnH3fWRZ0RSw_kr48PrHPacjroE/edit?usp=drive_link",
       "key": "_key_u2l10_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -8175,8 +8151,8 @@
       }
     },
     {
-      "name": "[KEY] U2L1 Extra Practice",
-      "url": "https://docs.google.com/document/d/14yfuKXi8y0vL9JSJ6Bd0a1T5w6JSaQVez1xaqHdVA9k/edit?usp=sharing",
+      "name": "[KEY] Attributes Extra Practice",
+      "url": "https://docs.google.com/document/d/16kDgZ-d_2aOGap7S0tAPWxD-In4uTxmdKqUuwgD8vmE/edit?usp=drive_link",
       "key": "_key_u2l1_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -8187,8 +8163,8 @@
       }
     },
     {
-      "name": "[KEY] U2L2 Extra Practice",
-      "url": "https://docs.google.com/document/d/1L_uTDV8baUAhdQVvN-YtTW1PjwVfuefuaMF9g-MBmYY/edit?usp=sharing",
+      "name": "[KEY] No-Argument Constructors Extra Practice",
+      "url": "https://docs.google.com/document/d/1p38v4gNRGC59tpf9NIFkhWsd_LXSe_YRR3iZSG86978/edit?usp=drive_link",
       "key": "_key_u2l2_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -8199,8 +8175,8 @@
       }
     },
     {
-      "name": "[KEY] U2L3 Extra Practice",
-      "url": "https://docs.google.com/document/d/1k86BCTc9swj46bc6WZYN2dIHbowcwF8qUnizhYnF04w/edit?usp=sharing",
+      "name": "[KEY] Parameterized Constructors Extra Practice",
+      "url": "https://docs.google.com/document/d/1RqBDxQ-pL2hP_loVVAyaJ9dRT5j7woKiPAy1UXQJXyc/edit?usp=drive_link",
       "key": "_key_u2l3_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -8247,8 +8223,8 @@
       }
     },
     {
-      "name": "[KEY] U2L8 Extra Practice",
-      "url": "https://docs.google.com/document/d/1Np8qxhAVcLEbkHQOKDs8LfufOgl6742l0JWdUW0FR00/edit?usp=sharing",
+      "name": "[KEY] Operators and Expressions Extra Practice",
+      "url": "https://docs.google.com/document/d/1nPHfiA86SvK6D6JlbbFtO1CKA6vvSBj9CYsZ261JH9E/edit?usp=drive_link",
       "key": "_key_u2l8_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -8259,8 +8235,8 @@
       }
     },
     {
-      "name": "[KEY] U2L9 Extra Practice",
-      "url": "https://docs.google.com/document/d/1vHuyelmZABIMFI6yNhIBoXbVpklRqZSGT2J3uJDWOHE/edit?usp=sharing",
+      "name": "[KEY] Mutator Methods Extra Practice",
+      "url": "https://docs.google.com/document/d/1ZS5iUMR6uOTOGTPrjTRJxyplcPKla_scEPv5cGS9vZY/edit?usp=drive_link",
       "key": "_key_u2l9_extra_practice",
       "properties": {
         "audience": "Verified Teacher",
@@ -8309,7 +8285,7 @@
     },
     {
       "name": "Attributes",
-      "url": "https://docs.google.com/presentation/d/1TDW4lLm9ASPr8BkNfjdEFOWUpgjGXbwpZf8kfWg6qhA/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1WlQ2sfbHEbRS0iVJlLGPLSpwgq8peUe6EPc1d7JWEco/edit?usp=sharing",
       "key": "attributes",
       "properties": {
         "audience": "Verified Teacher",
@@ -8321,7 +8297,7 @@
     },
     {
       "name": "Burger Class FRQ",
-      "url": "https://docs.google.com/presentation/d/17PEkVk8-0LhSP9GgziHROq_Yqsyk2ZXkQUkkoViqds0/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1-RHfYK1cexnMXhTHZYui4ivGn4diDFDAVZ-sGrU9Tzo/edit?usp=sharing",
       "key": "burger_class_frq",
       "properties": {
         "audience": "Verified Teacher",
@@ -8479,7 +8455,7 @@
     },
     {
       "name": "Mutator Methods",
-      "url": "https://docs.google.com/presentation/d/1zLWA75y7dtE3f6Bayu9NUr7RDwJZu_S0B-6gE1ySc7Y/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/16drGMm3jbJj3JMQrn7Wo1A-5F8rZt_eRCXacukzxaNQ/edit?usp=sharing",
       "key": "mutator_methods",
       "properties": {
         "audience": "Verified Teacher",
@@ -8503,7 +8479,7 @@
     },
     {
       "name": "No-Argument Constructors",
-      "url": "https://docs.google.com/presentation/d/1KkYAHeAmkY1O-LaASVqAFg8sAM2pfGEiW84ybqz3eeg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1lD7xSqQ8_OkIpn-iwYuaqAUIwh6kPoti-Kx76uX1tJ8/edit?usp=sharing",
       "key": "no-argument_constructors",
       "properties": {
         "audience": "Verified Teacher",
@@ -8515,7 +8491,7 @@
     },
     {
       "name": "Operators and Expressions",
-      "url": "https://docs.google.com/presentation/d/15Vx46VJj1wxa8YHcNW0-b_RqujR1ueHwN6mXzPq01Hg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1MjMCE_djyaSzNZZsid7cqft110ZZBrUtPbADiVSTjPc/edit?usp=sharing",
       "key": "operators_and_expressions",
       "properties": {
         "audience": "Verified Teacher",
@@ -8539,7 +8515,7 @@
     },
     {
       "name": "Parameterized Constructors",
-      "url": "https://docs.google.com/presentation/d/1LE5wrMmHvWLlcon8CEnLUQocPMiDvvkk8JAk6dZOhbo/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1TQup7LM0JuMMjGxSo7n8w_qpR7L-VojsIGv-yXjzt-o/edit?usp=sharing",
       "key": "parameterized_constructors",
       "properties": {
         "audience": "Verified Teacher",
@@ -8551,7 +8527,7 @@
     },
     {
       "name": "Printing Objects",
-      "url": "https://docs.google.com/presentation/d/1WZisgFzkH3eHG7VPl1C3RNKqBz4_Omg7hPxKtWGBy6I/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1BXiVLhATwrh5F9kgzZ50PkTjneYRytsoyBKkOI1w6uE/edit?usp=sharing",
       "key": "printing_objects",
       "properties": {
         "audience": "Verified Teacher",
@@ -8572,20 +8548,8 @@
       }
     },
     {
-      "name": "Scanner Class Methods",
-      "url": "https://youtu.be/v1xPNK2hzzg",
-      "key": "scanner_class_methods",
-      "properties": {
-        "audience": "Student",
-        "type": "Video"
-      },
-      "seeding_key": {
-        "resource.key": "scanner_class_methods"
-      }
-    },
-    {
       "name": "Store Management Project",
-      "url": "https://docs.google.com/presentation/d/1SHwRgaBAbNGhMy4hn_a7UuYT1Fz2E43qjnAyGBQG9dg/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1TmElHgQRnUxOigGkOPLZmEsXb0B5AQWWt9OTUZHr0f8/edit?usp=sharing",
       "key": "store_management_project",
       "properties": {
         "audience": "Verified Teacher",
@@ -8597,7 +8561,7 @@
     },
     {
       "name": "Store Management Project",
-      "url": "https://docs.google.com/presentation/d/1LT9gqXWwpS-M1Igis_lRowFAi42_LK8hknH-0dPVDmw/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1nJS6HJcpzKBESLGkDwCy0xwdo2OQ5_tp6eC5pIgFtXo/edit?usp=sharing",
       "key": "store_management_project_1",
       "properties": {
         "audience": "Verified Teacher",
@@ -8657,8 +8621,8 @@
       }
     },
     {
-      "name": "U2L10 Extra Practice",
-      "url": "https://docs.google.com/document/d/1AsasCiiM_mgtnc3iO3lpRxrM7kGtLgjP4fYZvs4d9C0/edit?usp=sharing",
+      "name": "Printing Objects Extra Practice",
+      "url": "https://docs.google.com/document/d/1-rFGNw3fWOg0ot0UT87k19VasI2FJwO6ZANpPlqyMDA/edit?usp=drive_link",
       "key": "u2l10_extra_practice",
       "properties": {
         "audience": "Student",
@@ -8670,8 +8634,8 @@
       }
     },
     {
-      "name": "U2L10 Guided Notes",
-      "url": "https://docs.google.com/document/d/1LzWhhO-px2RyQFZ0sD_55cPl5N42wyOFj20duKdmZPs/edit?usp=sharing",
+      "name": "Printing Objects Guided Notes",
+      "url": "https://docs.google.com/document/d/1Nls5mnDB1JJB-rf3rJe6UKfjSiSc8lJIiNHz3JRmXYk/edit?usp=drive_link",
       "key": "u2l10_guided_notes",
       "properties": {
         "audience": "Student",
@@ -8683,8 +8647,8 @@
       }
     },
     {
-      "name": "U2L1 Extra Practice",
-      "url": "https://docs.google.com/document/d/1xol1ugsQO8w330sOTKis3AB6r0vv0WVjVNBA09JPWtk/edit?usp=sharing",
+      "name": "Attributes Extra Practice",
+      "url": "https://docs.google.com/document/d/1CMsqm6Ny8IZuJ-iBeClMqLaF7bEx0oh-XmgTmAf4eLw/edit?usp=drive_link",
       "key": "u2l1_extra_practice",
       "properties": {
         "audience": "Student",
@@ -8696,8 +8660,8 @@
       }
     },
     {
-      "name": "U2L1 Guided Notes",
-      "url": "https://docs.google.com/document/d/17L9RMzHX1dRP3f2jUVr0siB7FjRSMlBlVjKhLt1oQVE/edit?usp=sharing",
+      "name": "Attributes Guided Notes",
+      "url": "https://docs.google.com/document/d/1rV_ZNiB49uTAjLS5KaJnrhWE7eKJi2mms5YwkHwCzZI/edit?usp=drive_link",
       "key": "u2l1_guided_notes",
       "properties": {
         "audience": "Student",
@@ -8709,8 +8673,8 @@
       }
     },
     {
-      "name": "U2L2 Extra Practice",
-      "url": "https://docs.google.com/document/d/1lfbA0_XYsQS5nFKWUQMeo8JR6I4_JBN0GursLk5PovA/edit?usp=sharing",
+      "name": "No-Argument Constructors Extra Practice",
+      "url": "https://docs.google.com/document/d/1p38v4gNRGC59tpf9NIFkhWsd_LXSe_YRR3iZSG86978/edit?usp=drive_link",
       "key": "u2l2_extra_practice",
       "properties": {
         "audience": "Student",
@@ -8722,8 +8686,8 @@
       }
     },
     {
-      "name": "U2L2 Guided Notes",
-      "url": "https://docs.google.com/document/d/1uUPYH9F35ZQhR1MavMVyPe0xBOnuvqF1EfR4jgAcO48/edit?usp=sharing",
+      "name": "No-Argument Constructors Guided Notes",
+      "url": "https://docs.google.com/document/d/1wEN6-WgxtTgR9T5dTL3o7nZ5utAnVF3BgEZE4X_70Bk/edit?usp=drive_link",
       "key": "u2l2_guided_notes",
       "properties": {
         "audience": "Student",
@@ -8735,8 +8699,8 @@
       }
     },
     {
-      "name": "U2L3 Extra Practice",
-      "url": "https://docs.google.com/document/d/1WSHs_5PNnAJinD60ZPomsLCT81JxSX4uD7fjwoyf8tw/edit?usp=sharing",
+      "name": "Parameterized Constructors Extra Practice",
+      "url": "https://docs.google.com/document/d/1r2aVVfshCnwtTHTWUgV9Kr0rqdy3YgCs4vnWPHZYsNw/edit?usp=drive_link",
       "key": "u2l3_extra_practice",
       "properties": {
         "audience": "Student",
@@ -8748,8 +8712,8 @@
       }
     },
     {
-      "name": "U2L3 Guided Notes",
-      "url": "https://docs.google.com/document/d/1rFKbiv-4k6fVptDb4AGsMrjghAnJC9NUrpz1g80wsAE/edit?usp=sharing",
+      "name": "Parameterized Constructors Guided Notes",
+      "url": "https://docs.google.com/document/d/1N-oYh30dn6-FU51O2vqGkYKd2j2tTRYDSklm0MtJx-M/edit?usp=drive_link",
       "key": "u2l3_guided_notes",
       "properties": {
         "audience": "Student",
@@ -8877,8 +8841,8 @@
       }
     },
     {
-      "name": "U2L8 Extra Practice",
-      "url": "https://docs.google.com/document/d/1Fmy0ZOIM19by7q_e-YzTwex9_8jfAeVFYv7sej5F1v8/edit?usp=sharing",
+      "name": "Operators and Expressions Extra Practice",
+      "url": "https://docs.google.com/document/d/1rdgHYG_tOw_Lnar4CksSGNzZM6APrJecnx1GyUECjTU/edit?usp=drive_link",
       "key": "u2l8_extra_practice",
       "properties": {
         "audience": "Student",
@@ -8890,8 +8854,8 @@
       }
     },
     {
-      "name": "U2L8 Guided Notes",
-      "url": "https://docs.google.com/document/d/1lKEGGyW2SOVwM8lPlJhU5HCgT03fHrVH8H5Bu_O9kGI/edit?usp=sharing",
+      "name": "Operators and Expressions Guided Notes",
+      "url": "https://docs.google.com/document/d/1Fl4QdMngpIXnBlUbMKaAFpCNBclgi4CXhngXM7vSzH0/edit?usp=drive_link",
       "key": "u2l8_guided_notes",
       "properties": {
         "audience": "Student",
@@ -8903,8 +8867,8 @@
       }
     },
     {
-      "name": "U2L9 Extra Practice",
-      "url": "https://docs.google.com/document/d/1uVSlbSDYRQyT8z-9mbQ6lsH3splw4WlxdcYVvniUx2k/edit?usp=sharing",
+      "name": "Mutator Methods Extra Practice",
+      "url": "https://docs.google.com/document/d/1r1LaYqLw07DsDnzVtqSq6LkN99xwXr6WyD89vGw9VIo/edit?usp=drive_link",
       "key": "u2l9_extra_practice",
       "properties": {
         "audience": "Student",
@@ -8916,8 +8880,8 @@
       }
     },
     {
-      "name": "U2L9 Guided Notes",
-      "url": "https://docs.google.com/document/d/1us3iSd5-KZY-yfpipy0P-_yapaBUgfsEn-Wi948fmyI/edit?usp=sharing",
+      "name": "Mutator Methods Guided Notes",
+      "url": "https://docs.google.com/document/d/1cBBd9diUhxjmRTTOgD-P1N78Ubq7tv2IKl7gzzDseHY/edit?usp=drive_link",
       "key": "u2l9_guided_notes",
       "properties": {
         "audience": "Student",
@@ -8930,7 +8894,7 @@
     },
     {
       "name": "Unit 2 Assessment",
-      "url": "https://docs.google.com/presentation/d/1tnM7y3LNJJEwUUzDIndJ3xFSyzBgKuLgJN14fnYFGQQ/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/1NdVdisXI6CGlYUzFMGu7sfBCuqwmcwGpiBUhEBtDdHg/edit?usp=sharing",
       "key": "unit_2_assessment",
       "properties": {
         "audience": "Verified Teacher",
@@ -8942,7 +8906,7 @@
     },
     {
       "name": "Unit 2 Study Guide",
-      "url": "https://docs.google.com/document/d/1k2hoP7Zjy0Z1LYYqjNTM4_MIYXAeeVlw-abhc93B72g/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1od6k6IJUwRbC-f4Lr2RqP3m9vhf_W262PJ3sfS7xkxg/edit?usp=drive_link",
       "key": "unit_2_study_guide",
       "properties": {
         "audience": "Student",
@@ -9175,12 +9139,6 @@
       "seeding_key": {
         "lesson.key": "Mutator Methods",
         "resource.key": "mutator_methods_1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mutator Methods",
-        "resource.key": "scanner_class_methods"
       }
     },
     {
@@ -10400,50 +10358,29 @@
     {
       "seeding_key": {
         "lesson.key": "Accessor Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.G.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.9.B.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Accessor Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.D.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.5.A.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Accessor Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.D.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.5.A.4"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Accessor Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.D.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accessor Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.D.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accessor Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.A.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Accessor Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.A.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.5.A.5"
       }
     },
     {
@@ -10463,36 +10400,36 @@
     {
       "seeding_key": {
         "lesson.key": "Attributes",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.A.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.1.A.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Attributes",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.A.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.3.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Attributes",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.A.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.3.A.4"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Attributes",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.A.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.3.A.5"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Attributes",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.A.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.4.A.5"
       }
     },
     {
@@ -10505,57 +10442,8 @@
     {
       "seeding_key": {
         "lesson.key": "Constructors and Inheritance",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.14"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors and Inheritance",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.5"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors and Inheritance",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.6"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors and Inheritance",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.7"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors and Inheritance",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.8"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors and Inheritance",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.9"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors and Inheritance",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.E.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Constructors and Inheritance",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.E.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.12.A.3"
       }
     },
     {
@@ -10568,64 +10456,50 @@
     {
       "seeding_key": {
         "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.E.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.9.B.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.E.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.9.B.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.E.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.2.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.E.7"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.2.A.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.F.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "2.2.A.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.F.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.5.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.E.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.E.2"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Mutator Methods",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.A.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.5.A.6"
       }
     },
     {
@@ -10645,29 +10519,29 @@
     {
       "seeding_key": {
         "lesson.key": "No-Argument Constructors",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.C.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.13.A.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "No-Argument Constructors",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.E.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.13.C.4"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "No-Argument Constructors",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.A.5"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.3.A.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "No-Argument Constructors",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.B.5"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.4.A.4"
       }
     },
     {
@@ -10680,85 +10554,64 @@
     {
       "seeding_key": {
         "lesson.key": "Operators and Expressions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.A.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.3.C.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Operators and Expressions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.A.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.3.C.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Operators and Expressions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.A.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.3.C.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Operators and Expressions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.A.5"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.3.C.4"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Operators and Expressions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.A.6"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.3.C.5"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Operators and Expressions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.A.7"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.3.C.6"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Operators and Expressions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.A.8"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.4.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Operators and Expressions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.B.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.4.A.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Operators and Expressions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.B.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Operators and Expressions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.B.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Operators and Expressions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.E.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Operators and Expressions",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.E.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.6.A.1"
       }
     },
     {
@@ -10771,50 +10624,43 @@
     {
       "seeding_key": {
         "lesson.key": "Parameterized Constructors",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.C.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.13.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Parameterized Constructors",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.C.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.13.A.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Parameterized Constructors",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.C.4"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.13.C.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Parameterized Constructors",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.C.5"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.13.C.3"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Parameterized Constructors",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.C.6"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.4.A.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Parameterized Constructors",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-1.D.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Parameterized Constructors",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.B.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.8.A.1"
       }
     },
     {
@@ -10827,50 +10673,15 @@
     {
       "seeding_key": {
         "lesson.key": "Printing Objects",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.D.6"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.15.A.5"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Printing Objects",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-2.D.7"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Printing Objects",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.B.10"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Printing Objects",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.D.1"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Printing Objects",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.E.3"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Printing Objects",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "MOD-3.E.4"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Printing Objects",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.E.11"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.3.B.3"
       }
     },
     {
@@ -10932,8 +10743,22 @@
     {
       "seeding_key": {
         "lesson.key": "The this Keyword",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.H.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.8.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The this Keyword",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.9.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "The this Keyword",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.9.A.2"
       }
     },
     {
@@ -10946,43 +10771,50 @@
     {
       "seeding_key": {
         "lesson.key": "Variables",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.A.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.12.B.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Variables",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "CON-1.B.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.15.A.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Variables",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.B.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.15.A.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Variables",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.C.2"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.2.B.2"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Variables",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.C.3"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.3.B.1"
       }
     },
     {
       "seeding_key": {
         "lesson.key": "Variables",
-        "framework.shortcode": "csa",
-        "standard.shortcode": "VAR-1.E.1"
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.4.A.2"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Variables",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.1.A.2"
       }
     },
     {
@@ -10990,6 +10822,34 @@
         "lesson.key": "Variables",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-22"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.1.A.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "3.1.A.7"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.4.B.1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csa2025",
+        "standard.shortcode": "1.7.A.1"
       }
     }
   ],
