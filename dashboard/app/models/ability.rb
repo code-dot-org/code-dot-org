@@ -355,7 +355,7 @@ class Ability
       can :extra_links, Level
     end
 
-    if user.persisted? && (user.permission?(UserPermission::PROJECT_VALIDATOR))
+    if user.persisted? && user.permission?(UserPermission::PROJECT_VALIDATOR)
       can :extra_links, ProjectsController
     end
 

@@ -282,7 +282,7 @@ class TestController < ApplicationController
 
   def create_applications
     %w(csd csp csa).each do |course|
-      (Pd::Application::TeacherApplication.statuses).each do |status|
+      Pd::Application::TeacherApplication.statuses.each do |status|
         teacher_email = "#{course}_#{status}@code.org"
         teacher = User.find_or_create_teacher(
           {name: "#{course} #{status}", email: teacher_email}, nil, nil

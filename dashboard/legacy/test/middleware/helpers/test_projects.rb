@@ -176,7 +176,7 @@ class ProjectsTest < Minitest::Test
     new_project_channel_id = project.create({}, ip: 123)
     assert_equal 0, Projects.get_abuse(new_project_channel_id)
     project.buffer_abuse_score(new_project_channel_id)
-    assert_equal (-50), Projects.get_abuse(new_project_channel_id)
+    assert_equal(-50, Projects.get_abuse(new_project_channel_id))
   end
 
   def test_uses_type_over_level_project_type

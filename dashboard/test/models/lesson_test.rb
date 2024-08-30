@@ -72,7 +72,7 @@ class LessonTest < ActiveSupport::TestCase
     lesson = create :lesson, script: script
     create :script_level, script: script, lesson: lesson, levels: [level]
 
-    assert_match (/extras$/), lesson.summarize[:lesson_extras_level_url]
+    assert_match /extras$/, lesson.summarize[:lesson_extras_level_url]
   end
 
   test "summary for lesson with extras where include_bonus_levels is true" do
@@ -171,7 +171,7 @@ class LessonTest < ActiveSupport::TestCase
     create :script_level, script: script, lesson: lesson2
     create :script_level, script: script, lesson: lesson2
 
-    assert_match (/\/s\/bogus-script-\d+\/lessons\/2\/levels\/1/), lesson1.next_level_path_for_lesson_extras(@student)
+    assert_match /\/s\/bogus-script-\d+\/lessons\/2\/levels\/1/, lesson1.next_level_path_for_lesson_extras(@student)
     assert_equal "/s/#{script.name}", lesson2.next_level_path_for_lesson_extras(@student)
   end
 

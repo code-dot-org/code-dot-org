@@ -83,7 +83,7 @@ module Cdo
       existing_partitions = get_partitions(database, table).map(&:values)
       puts "Found #{existing_partitions.count} existing partitions."
 
-      new_partitions = (partition_value_map.slice(*(partition_value_map.keys - existing_partitions))).map do |values, paths|
+      new_partitions = partition_value_map.slice(*(partition_value_map.keys - existing_partitions)).map do |values, paths|
         {
           values: values,
           storage_descriptor: {

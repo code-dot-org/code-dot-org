@@ -232,7 +232,7 @@ class RegionalPartnerTest < ActiveSupport::TestCase
   test 'are_apps_closed returns false if RP app closed date is on current date' do
     Timecop.freeze do
       regional_partner = create :regional_partner
-      regional_partner.update!(apps_close_date_teacher: (Time.zone.today).strftime("%Y-%m-%d"))
+      regional_partner.update!(apps_close_date_teacher: Time.zone.today.strftime("%Y-%m-%d"))
       refute regional_partner.are_apps_closed
     end
   end

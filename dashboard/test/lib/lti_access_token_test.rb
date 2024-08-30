@@ -62,7 +62,7 @@ class LtiAccessTokenTest < ActiveSupport::TestCase
       sub: 'foo-client-id',
       aud: 'foo-audience',
       iat: Time.now.to_i,
-      exp: (5).minutes.from_now.to_i,
+      exp: 5.minutes.from_now.to_i,
       jti: 'foo-jwt-id',
     }
     jwt = sign_jwt(test_claims)

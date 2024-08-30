@@ -71,8 +71,8 @@ def hoc_canonicalized_i18n_path(uri, query_string)
   # Expected to be in short string format (ex. 'en')
   @language = @user_language || default_language
 
-  canonical_urls = [File.join(["/#{(@company || @country)}/#{@language}", path].reject(&:nil_or_empty?))]
-  canonical_urls << File.join(["/#{(@company || @country)}", path].reject(&:nil_or_empty?)) if @language == country_language
+  canonical_urls = [File.join(["/#{@company || @country}/#{@language}", path].reject(&:nil_or_empty?))]
+  canonical_urls << File.join(["/#{@company || @country}", path].reject(&:nil_or_empty?)) if @language == country_language
   unless canonical_urls.include?(uri)
     dont_cache
     redirect canonical_urls.last + (query_string.empty? ? '' : "?#{query_string}")

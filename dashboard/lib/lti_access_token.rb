@@ -22,7 +22,7 @@ module LtiAccessToken
       aud: access_token_url,
       iat: Time.now.to_i,
       # this can be short, since the JWT will be validated as part of the access_token request handshake.
-      exp: (5).minutes.from_now.to_i,
+      exp: 5.minutes.from_now.to_i,
       jti: SecureRandom.alphanumeric(10),
     }
 

@@ -48,7 +48,7 @@ module CacheMethod
       original_method_id = "_cache_method_#{method_id}"
 
       # Support instance methods and singleton-class methods.
-      base = (instance_methods.include?(method_id)) ? self : singleton_class
+      base = instance_methods.include?(method_id) ? self : singleton_class
       base.send(:alias_method, original_method_id, method_id)
       base.send(:define_method, method_id) do |*args, **kwargs, &blk|
         cache_key = ActiveSupport::Cache.expand_cache_key([method(method_id).inspect, args], version)
