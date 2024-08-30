@@ -22,6 +22,7 @@ const paths = {
   CHAT_COMPLETION_URL: `${ROOT_URL}/chat_completion`,
   CHAT_CHECK_SAFETY_URL: `${ROOT_URL}/check_message_safety`,
   LOG_CHAT_EVENT_URL: `${ROOT_URL}/log_chat_event`,
+  USER_HAS_AICHAT_ACCESS_URL: `${ROOT_URL}/user_has_aichat_access`,
   START_CHAT_COMPLETION_URL: `${ROOT_URL}/start_chat_completion`,
   GET_CHAT_REQUEST_URL: `${ROOT_URL}/chat_request`,
   STUDENT_CHAT_HISTORY_URL: `${ROOT_URL}/student_chat_history`,
@@ -265,4 +266,15 @@ function getUpdatedMessages(
     default:
       throw new Error(`Unexpected status: ${executionStatus}`);
   }
+}
+
+/**
+ * This function sends a GET request to the aichat getAichatAccess backend controller, then returns
+ * true of the user has aichat access and false otherwise.
+ */
+export async function getUserHasAichatAccess(): Promise<boolean> {
+  const response = await HttpClient.fetchJson<boolean>(
+    paths.USER_HAS_AICHAT_ACCESS_URL
+  );
+  return response.value;
 }
