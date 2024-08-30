@@ -2622,6 +2622,119 @@
       retro_desc: "Go old school! In this retro-themed intro to Sprite Lab, students learn computer science basics by building fun, interactive projects"
       emoji: "Emoji"
       emoji_desc: "In this emoji-themed intro to Sprite Lab, students learn computer science basics by building fun, interactive projects."
+  
+  tools_page:
+    heading: 'Explore Standalone Labs and Widgets'
+    desc: 'Discover programming environments designed to support your creativity. Our labs offer supportive environments that meet learners where they are at, while still keeping the possibilities endless. Our widgets unravel core computer science concepts.'
+    labs:
+      heading: "Build your way with labs"
+      desc: "Discover programming environments designed to meet you at your level and elevate your skills."
+      label_what_you_can_make: "What you can make:"
+      label_experience: "Experience:"
+      spritelab:
+        overline: "Ages 5-12"
+        title: "Sprite Lab"
+        what_you_can_make: "Simple animations and games with characters"
+        experience: "Beginner"
+        call_to_action_learn_more: "Learn more"
+        aria_label_learn_more: "Learn more about Sprite Lab"
+        call_to_action_try: "Try Sprite Lab"
+      gamelab:
+        overline: "Ages 13+"
+        title: "Game Lab"
+        what_you_can_make: "Simple animations and games with characters"
+        experience: "Beginner"
+        call_to_action_learn_more: "Learn more"
+        aria_label_learn_more: "Learn more about Game Lab"
+        call_to_action_try: "Try Game Lab"
+      applab:
+        overline: "Ages 13+"
+        title: "App Lab"
+        what_you_can_make: "Simple Javascript apps with blocks or code"
+        experience: "Beginner"
+        call_to_action_learn_more: "Learn more"
+        aria_label_learn_more: "Learn more about App Lab"
+        call_to_action_try: "Try App Lab"
+      musiclab:
+        overline: "Ages 10+"
+        title: "Music Lab"
+        what_you_can_make: "Create your own mix and beats with code!"
+        experience: "Beginner"
+        call_to_action_learn_more: "Learn more"
+        aria_label_learn_more: "Learn more about Music Lab"
+        call_to_action_try: "Try Music Lab"
+      weblab:
+        overline: "Ages 13+"
+        title: "Web Lab"
+        what_you_can_make: "Simple webpages with HTML and CSS"
+        experience: "Beginner"
+        call_to_action_learn_more: "Learn more"
+        aria_label_learn_more: "Learn more about Web Lab"
+        call_to_action_try: "Try Web Lab"
+    tools_el:
+      heading: "Empower learning with standalone tools"
+      desc: "Leverage our labs to create dynamic learning experiences that resonate with each student. These tools not only teach coding but also build confidence and spark curiosity through hands-on practice."
+      scaffolding: 
+        heading: "Scaffolded learning"
+        desc: "Our programming environments are carefully scaffolded, providing the right level of support to students at every step of their coding journey."
+      independence: 
+        heading: "Guided to independent"
+        desc: "Ease the transition from structured learning to exploration, with tools that encourage students to apply their learning in open-ended projects."
+      engagement: 
+        heading: "Engagement through creativity"
+        desc: "Coding becomes an adventure with labs and widgets that make learning not just educational, but exciting and genuinely fun."
+      differentiation: 
+        heading: "Support differentiation"
+        desc: "Cater to a range of abilities and interests, with tools that adapt to different skill levels, ensuring your students can find their path."
+    widgets:
+      overline: "Grades 6-12"
+      heading: "Explore computer science concepts with widgets"
+      desc: "Delve into the fundamentals of computer science with our interactive widgets. Grasp complex concepts like network communication with the Internet Simulator, or understand data efficiency through the Text Compression Widget. These tools make abstract principles tangible and engaging."
+      text_compression:
+        overline: "compression"
+        title: "Text Compression"
+        desc: "Learn the essentials of text compression as you condense content dynamically. This widget allows immediate visualization of compression effects, challenging students to find optimal patterns and understand file size efficiency."
+        aria_label: "try the text compression widget"
+        button_label: "Try this widget"
+      pixelation:
+        overline: "pixelation"
+        title: "Images and Pixels"
+        desc: "Create images from the ground up with binary code using our Pixelation Widget. Start with simple black and white pixels and progress to intricate, full-color visuals, learning how binary translates into the images we see."
+        aria_label: "try the pixelation widget"
+        button_label: "Try this widget"
+      frequency_analysis:
+        overline: "cryptography"
+        title: "Frequency Analysis"
+        desc: "Unlock the secrets of classic ciphers with the Frequency Analysis Widget. Experiment with the Caesar Shift and random substitution methods to encrypt messages and challenge students to decrypt them without the key."
+        aria_label: "try the frequency analysis widget"
+        button_label: "Try this widget"
+      cipher:
+        overline: "cryptography"
+        title: "Vigenere cipher"
+        desc: "Dive into the world of complex encryption with the Vigenère Cipher Widget. Once deemed unbreakable, this cipher changes with each letter, inviting you to both encode secret messages and test your skills at cracking them."
+        aria_label: "try the vigenere cipher widget"
+        button_label: "Try this widget"
+      internet_simulator:
+        overline: "internet"
+        title: "Internet Simulator"
+        desc: "Explore the intricacies of networked computers with our expansive Internet Simulator. Beyond learning internet protocols, engage with CS concepts such as abstraction and the binary representation of data, all while understanding the 'why' behind internet structures."
+        aria_label: "try the internet simulator widget"
+        button_label: "Try this widget"
+    additional_resources:
+      heading: "Additional resources"
+      catalog:
+        title: "Curriculum Catalog"
+        desc: "Comprehensive curriculum offerings for every grade and experience level featuring robust structured and self-paced learning options."
+        button_label: "Explore the catalog"
+      video_library:
+        title: "Video Library"
+        desc: "Explore our large library of engaging and informative videos to learn about key computer science concepts on a broad range of topics."
+        button_label: "View video library"
+      hour_of_code:
+        title: "Try an Hour of Code"
+        desc: "Looking for more short-form activities and resources for all age levels? Explore our large library of Hour of Code activities and tutorials!"
+        button_label: "See Hour of Code activities"
+
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
