@@ -1,6 +1,5 @@
 import React, {useState, useCallback} from 'react';
 
-import Alert, {alertTypes} from '@cdo/apps/componentLibrary/alert/Alert';
 import Button from '@cdo/apps/componentLibrary/button/Button';
 import FontAwesomeV6Icon from '@cdo/apps/componentLibrary/fontAwesomeV6Icon/FontAwesomeV6Icon';
 import {StrongText} from '@cdo/apps/componentLibrary/typography/TypographyElements';
@@ -21,6 +20,7 @@ const MultiInputCustomization: React.FunctionComponent<{
   isReadOnly: boolean;
   hideInputBoxWhenReadOnly: boolean;
   onUpdateItems: (updatedItems: string[]) => void;
+  validationAlert?: React.ReactNode;
 }> = ({
   label,
   fieldId,
@@ -30,6 +30,7 @@ const MultiInputCustomization: React.FunctionComponent<{
   isReadOnly,
   hideInputBoxWhenReadOnly,
   onUpdateItems,
+  validationAlert,
 }) => {
   const [newItem, setNewItem] = useState('');
 
@@ -48,24 +49,6 @@ const MultiInputCustomization: React.FunctionComponent<{
     document.getElementById(fieldId)?.focus();
   }, [newItem, addedItems, fieldId, onUpdateItems]);
 
-  const examplePromptAlerts = {
-    success: {
-      text: 'Must add at least one example prompt',
-      type: alertTypes.success,
-      className: modelCustomizationStyles.examplePromptAlertSuccess,
-    },
-    warning: {
-      text: 'Must add at least one example prompt',
-      type: alertTypes.warning,
-      className: modelCustomizationStyles.examplePromptAlert,
-    },
-  };
-
-  const examplePromptAlert =
-    addedItems.length > 0
-      ? examplePromptAlerts.success
-      : examplePromptAlerts.warning;
-
   return (
     <>
       {(!isReadOnly || !hideInputBoxWhenReadOnly) && (
@@ -78,12 +61,7 @@ const MultiInputCustomization: React.FunctionComponent<{
               value={newItem}
               disabled={isReadOnly}
             />
-            <Alert
-              text={examplePromptAlert.text}
-              type={examplePromptAlert.type}
-              size="s"
-              className={examplePromptAlert.className}
-            />
+            {!isReadOnly && validationAlert}
           </div>
           <div className={modelCustomizationStyles.addItemContainer}>
             <Button
