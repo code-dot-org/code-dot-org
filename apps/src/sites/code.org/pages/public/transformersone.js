@@ -5,28 +5,28 @@ import ProjectCardRow from '@cdo/apps/templates/projects/ProjectCardRow';
 
 const TRANSFORMERSONE_PROJECTS = [
   {
-    name: 'Click the Cog',
-    key: 'cschelloworld_happyfood2',
-    channel: '0NalG1oERxEncUaxvibF8ZbccP9tY5qU5Hz7pdGcifA',
+    name: 'Catch Megatron!',
+    key: 'catch_megatron',
+    channel: 'KRhjKpvWoPIcDPMmvD91NCm23S9SshJH4JQPVh0zkv8',
   },
   {
-    name: 'Join the Crew',
-    key: 'cschelloworld_emoji',
-    channel: '9HGWXijqhLzaIIUQbPXlNmWgMO1SXzf3TvMHNtbOXmc',
+    name: 'Alita',
+    key: 'alita',
+    channel: 'qmgtei5u0nYUl1IOl4-3BmZei7Yf_jc080JwOmx2zMI',
   },
   {
-    name: 'Roll Out',
-    key: 'cschelloworld_animals',
-    channel: '-jyvYo6WibyXD0HbMVfiOAl7H28LnP7_0PXR-Sgf6TE',
+    name: 'Bumblebee',
+    key: 'bumblebee',
+    channel: '1rlHhoDtD9uqspF9I7HDJvtYoXehzDXheLD0BOCnfdQ',
   },
   {
-    name: 'Character Lineup',
-    key: 'cschelloworld_retro',
-    channel: 'rYH8D8eAvWOjuiOpWbHzN7yo2E1S0q87VqlzaBz7oqo',
+    name: 'Optimus Prime',
+    key: 'optimus_prime',
+    channel: '1rlHhoDtD9uqspF9I7HDJtWOewKeCjRIc9QVq-ASZ3E',
   },
 ].map(project => ({
   type: 'spritelab',
-  thumbnailUrl: `/images/csc/helloworld/${project.key}.gif`,
+  thumbnailUrl: `/images/transformers/${project.key}.png`,
   ...project,
 }));
 
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(
     <ProjectCardRow
       galleryType="public"
-      showFullThumbnail={true}
+      showFullThumbnail={false}
       projects={TRANSFORMERSONE_PROJECTS}
     />,
     container
