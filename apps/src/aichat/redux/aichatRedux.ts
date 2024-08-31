@@ -383,13 +383,12 @@ export const fetchUserHasAichatAccess = createAsyncThunk(
       const userHasAichatAccess = await getUserHasAichatAccess();
       thunkAPI.dispatch(setUserHasAichatAccess(userHasAichatAccess));
     } catch (error) {
-      Lab2Registry.getInstance()
-        .getMetricsReporter()
-        .logError(
-          'Error in aichat student chat history request',
-          error as Error
-        );
-      return;
+      if (!(error instanceof NetworkError && error.response.status === 403)) {
+        Lab2Registry.getInstance()
+          .getMetricsReporter()
+          .logError('Error in fetching user aichat access', error as Error);
+        return;
+      }
     }
   }
 );
