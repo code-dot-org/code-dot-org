@@ -138,7 +138,7 @@ const styles = {
   },
   thumbnail: {
     width: 214,
-    height: 170,
+    height: 150,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
