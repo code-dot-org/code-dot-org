@@ -5,7 +5,8 @@
   grid-area: workspace;
   background-color: $darkest_gray;
   color: $white;
-  overflow: scroll;
+  overflow: hidden;
+  display: block;
 }
 
 .warningBanner {
@@ -19,4 +20,6 @@
 
 .workspaceWorkarea {
   display: grid;
+  overflow: scroll;
+  height: 100%;
 }
