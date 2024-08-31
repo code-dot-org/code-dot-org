@@ -22,6 +22,7 @@ import aichatI18n from '../locale';
 import {
   addChatEvent,
   clearChatMessages,
+  fetchUserHasAichatAccess,
   onSaveComplete,
   onSaveFail,
   onSaveNoop,
@@ -72,9 +73,12 @@ const AichatView: React.FunctionComponent = () => {
 
   const projectTemplateLevel = useAppSelector(isProjectTemplateLevel);
 
-  const {currentAiCustomizations, viewMode} = useAppSelector(
-    state => state.aichat
-  );
+  const {currentAiCustomizations, userHasAichatAccess, viewMode} =
+    useAppSelector(state => state.aichat);
+  console.log('userHasAichatAccess', userHasAichatAccess);
+  const signInState = useAppSelector(state => state.currentUser.signInState);
+  console.log('signInState', signInState);
+
   const {botName, isPublished} = currentAiCustomizations.modelCardInfo;
 
   const allFieldsHidden = useAppSelector(selectAllFieldsHidden);
@@ -113,6 +117,7 @@ const AichatView: React.FunctionComponent = () => {
         hideForParticipants: true,
       })
     );
+    dispatch(fetchUserHasAichatAccess());
   }, [dispatch, initialSources, levelAichatSettings]);
 
   // When the level changes or if we are viewing aichat level as a different user
@@ -185,6 +190,20 @@ const AichatView: React.FunctionComponent = () => {
     }
   }, [dialogControl, resetProject]);
 
+  const sendAnalytics = useCallback(
+    (event: string, properties: object) => {
+      if (signInState === 'SignedOut') {
+        return;
+      }
+      analyticsReporter.sendEvent(
+        event,
+        {...properties, userHasAichatAccess},
+        PLATFORMS.BOTH
+      );
+    },
+    [signInState, userHasAichatAccess]
+  );
+
   const onClear = useCallback(() => {
     dispatch(clearChatMessages());
     dispatch(
@@ -194,14 +213,10 @@ const AichatView: React.FunctionComponent = () => {
         hideForParticipants: true,
       })
     );
-    analyticsReporter.sendEvent(
-      EVENTS.CHAT_ACTION,
-      {
-        action: 'Clear chat history',
-      },
-      PLATFORMS.BOTH
-    );
-  }, [dispatch]);
+    sendAnalytics(EVENTS.CHAT_ACTION, {
+      action: 'Clear chat history',
+    });
+  }, [dispatch, sendAnalytics]);
 
   return (
     <div id="aichat-lab" className={moduleStyles.aichatLab}>
@@ -236,13 +251,9 @@ const AichatView: React.FunctionComponent = () => {
                   rightHeaderContent={renderModelCustomizationHeaderRight(
                     () => {
                       onClickStartOver();
-                      analyticsReporter.sendEvent(
-                        EVENTS.AICHAT_START_OVER,
-                        {
-                          levelPath: window.location.pathname,
-                        },
-                        PLATFORMS.BOTH
-                      );
+                      sendAnalytics(EVENTS.AICHAT_START_OVER, {
+                        levelPath: window.location.pathname,
+                      });
                     }
                   )}
                 >
