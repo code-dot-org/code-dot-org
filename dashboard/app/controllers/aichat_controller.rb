@@ -162,7 +162,7 @@ class AichatController < ApplicationController
 
   # GET /aichat/user_has_aichat_access
   def user_has_aichat_access
-    render(status: :ok, json: {user_has_aichat_access: current_user&.has_aichat_access?})
+    render(status: :ok, json: current_user&.has_aichat_access?)
   end
 
   private def chat_completion_has_required_params?
