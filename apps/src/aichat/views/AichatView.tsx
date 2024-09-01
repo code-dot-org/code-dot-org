@@ -14,6 +14,7 @@ import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import {useDialogControl, DialogType} from '@cdo/apps/lab2/views/dialogs';
 import {EVENTS, PLATFORMS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
+import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import ProjectTemplateWorkspaceIcon from '@cdo/apps/templates/ProjectTemplateWorkspaceIcon';
 import {commonI18n} from '@cdo/apps/types/locale';
 import {useAppDispatch, useAppSelector} from '@cdo/apps/util/reduxHooks';
@@ -117,8 +118,10 @@ const AichatView: React.FunctionComponent = () => {
         hideForParticipants: true,
       })
     );
-    dispatch(fetchUserHasAichatAccess());
-  }, [dispatch, initialSources, levelAichatSettings]);
+    if (signInState === SignInState.SignedIn) {
+      dispatch(fetchUserHasAichatAccess());
+    }
+  }, [dispatch, initialSources, levelAichatSettings, signInState]);
 
   // When the level changes or if we are viewing aichat level as a different user
   // (e.g., teacher viewing student work), clear the chat message history and start a new session.
@@ -192,7 +195,7 @@ const AichatView: React.FunctionComponent = () => {
 
   const sendAnalytics = useCallback(
     (event: string, properties: object) => {
-      if (signInState === 'SignedOut') {
+      if (!userHasAichatAccess) {
         return;
       }
       analyticsReporter.sendEvent(
@@ -201,7 +204,7 @@ const AichatView: React.FunctionComponent = () => {
         PLATFORMS.BOTH
       );
     },
-    [signInState, userHasAichatAccess]
+    [userHasAichatAccess]
   );
 
   const onClear = useCallback(() => {

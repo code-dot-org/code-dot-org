@@ -89,7 +89,7 @@ export interface AichatState {
   saveInProgress: boolean;
   // The type of save action being performed (customization update, publish, model card save, etc).
   currentSaveType: SaveType | undefined;
-  userHasAichatAccess?: boolean;
+  userHasAichatAccess: 'yes' | 'no' | undefined;
 }
 
 const initialState: AichatState = {
@@ -380,8 +380,8 @@ export const fetchUserHasAichatAccess = createAsyncThunk(
   'aichat/fetchUserHasAichatAccess',
   async (__, thunkAPI) => {
     try {
-      const userHasAichatAccess = await getUserHasAichatAccess();
-      thunkAPI.dispatch(setUserHasAichatAccess(userHasAichatAccess));
+      const hasAichatAccess = await getUserHasAichatAccess();
+      thunkAPI.dispatch(setUserHasAichatAccess(hasAichatAccess ? 'yes' : 'no'));
     } catch (error) {
       if (!(error instanceof NetworkError && error.response.status === 403)) {
         Lab2Registry.getInstance()
@@ -564,7 +564,10 @@ const aichatSlice = createSlice({
     setStudentChatHistory: (state, action: PayloadAction<ChatEvent[]>) => {
       state.studentChatHistory = action.payload;
     },
-    setUserHasAichatAccess: (state, action: PayloadAction<boolean>) => {
+    setUserHasAichatAccess: (
+      state,
+      action: PayloadAction<'yes' | 'no' | undefined>
+    ) => {
       state.userHasAichatAccess = action.payload;
     },
     removeUpdateMessage: (state, action: PayloadAction<number>) => {
