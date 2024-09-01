@@ -1,7 +1,35 @@
-# Several new cops were added to RuboCop bewteen 0.52 and 1.28. Some we may
+# Several new cops were added to RuboCop bewteen 0.52 and 1.65. Some we may
 # want to disable in the long-term, but right now they're all enabled and the
 # existing violations are captured in .rubocop_todo.yml
 
+Gemspec/AddRuntimeDependency: # new in 1.65
+  Enabled: true
+Lint/ItWithoutArgumentsInBlock: # new in 1.59
+  Enabled: true
+Lint/LiteralAssignmentInCondition: # new in 1.58
+  Enabled: true
+Lint/MixedCaseRange: # new in 1.53
+  Enabled: true
+Lint/RedundantRegexpQuantifiers: # new in 1.53
+  Enabled: true
+Style/MapIntoArray: # new in 1.63
+  Enabled: true
+Style/RedundantCurrentDirectoryInPath: # new in 1.53
+  Enabled: true
+Style/RedundantRegexpArgument: # new in 1.53
+  Enabled: true
+Style/ReturnNilInPredicateMethodDefinition: # new in 1.53
+  Enabled: true
+Style/SendWithLiteralMethodName: # new in 1.64
+  Enabled: true
+Style/SingleLineDoEndBlock: # new in 1.57
+  Enabled: true
+Style/SuperArguments: # new in 1.64
+  Enabled: true
+Style/SuperWithArgsParentheses: # new in 1.58
+  Enabled: true
+Style/YAMLFileRead: # new in 1.53
+  Enabled: true
 Gemspec/RequireMFA: # new in 1.23
   Enabled: true
 Layout/LineEndStringConcatenationIndentation: # new in 1.18
