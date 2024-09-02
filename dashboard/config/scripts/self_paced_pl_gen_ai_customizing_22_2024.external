@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Lessons 19 and 20: Model Cards
 
-<img src="https://images.code.org/d84e29dc1d036a5fd755e0f1ca039ffa-image-1715268406186.png" alt="cat from the pixel activity" width="300px" style="border-radius:20px; float:right; margin: 0 0 40px 40px; transform: scaleX(-1);">
+<img src="https://images.code.org/e507ae94d4f0b00931eccd00cf0e3f1f-Screenshot 2024-08-30 at 4.00.01 PM.png" alt="an example model card" width="300px" style="border-radius:20px; float:right; margin: 0 0 40px 40px">
 
 #### Lessons 19 and 20 help students develop an understanding of Model Cards. Students go through the Explore and Practice their learning in this two lesson series.
 
@@ -14,12 +14,6 @@ markdown <<MARKDOWN
 
 ## Lesson 20: Practice
 #### In this lesson, students explore how to create model cards as they develop their chatbots. They start by helping a friend design a chatbot using multiple-choice focus questions and document these decisions on the model card. This process emphasizes how model cards serve as documentation during chatbot development. After a class example, students choose a new scenario and repeat the process.
-
-<div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
-
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> XXX  
-</p>
-</div>
 
 
 MARKDOWN
