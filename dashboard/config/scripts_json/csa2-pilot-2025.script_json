@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2024-09-02 07:07:29 UTC",
+    "serialized_at": "2024-09-02 09:07:12 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
@@ -164,7 +164,7 @@
       "properties": {
         "overview": "**How do I get input from the user?**\n\nStudents learn how to obtain user input using the `Scanner` class. Students also explore the `File` class and use the `Scanner` class to read data from a file and print it to the console.\n",
         "preparation": "- (Optional) Print copies of the U2L5 Guided Notes (one for each student)\n- Preview the *Creating Scanner Objects* and *Scanner Class Methods* videos\n- Print copies of The Painter handout (one for each student)",
-        "student_overview": "How do I get input from the user?\n\nIn this lesson, you learn how to use the `Scanner` and `File` classes to obtain user input and to read data from a file."
+        "student_overview": "**How do I get input from the user?**\n\nIn this lesson, you learn how to use the `Scanner` and `File` classes to obtain user input and to read data from a file."
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -1137,7 +1137,7 @@
       "key": "c5d8c690-a912-45c9-b783-da1f673d9a43",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** *What software engineering characteristics do you want to work on in this unit? How will you know you grew in this area by the end of the unit?*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discussion Goal:** Students share characteristics and skills that they want to improve and identify goals. Students can choose any characteristic or skill they want to improve regardless of whether or not it is an area for improvement. Students can choose a characteristic that is a strength that they want to further develop as an anchor for upcoming units, or they can choose a characteristic that is an area for improvement.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Discuss:** Think of a time where you had to prepare to do something, like go on a trip or make a meal.\n- *How can having an effective plan make things easier?*\n\n**Discussion Goal:** Students discuss how having a plan can make tasks easier by reducing stress, saving time, and improving organization. They relate these benefits to their own experiences of preparing for activities or projects.",
         "tips": [
           {
             "type": "teachingTip",
@@ -8647,7 +8647,7 @@
       }
     },
     {
-      "name": "[EXEMPLAR] U2L1 Guided Notes",
+      "name": "[EXEMPLAR] Program Design Guided Notes",
       "url": "https://docs.google.com/document/d/1WBBzL3SI3OQJV9eap_cT2SYSjNkq_aLIVEPE9TIisDY/edit?usp=sharing",
       "key": "_exemplar_u2l1_guided_notes_1",
       "properties": {
@@ -8825,6 +8825,18 @@
       }
     },
     {
+      "name": "[KEY] Program Design Extra Practice",
+      "url": "https://docs.google.com/document/d/1no84O0SEdUGexfRK87unJZPqR9k06GgkaLpcQ23SfQo/edit?usp=sharing",
+      "key": "_key_program_design_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_program_design_extra_practice"
+      }
+    },
+    {
       "name": "[KEY] Printing Objects Extra Practice",
       "url": "https://docs.google.com/document/d/1bDvOHeZz2712p6ihYnH3fWRZ0RSw_kr48PrHPacjroE/edit?usp=drive_link",
       "key": "_key_u2l10_extra_practice",
@@ -8930,6 +8942,18 @@
       },
       "seeding_key": {
         "resource.key": "_key_u2l9_extra_practice"
+      }
+    },
+    {
+      "name": "[KEY] User Input Extra Practice",
+      "url": "https://docs.google.com/document/d/1kqeurBWZWpih_amwCGTcWf_TO7MBu2a_iV0cy90zzJ8/edit?usp=drive_link",
+      "key": "_key_user_input_extra_practice",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_user_input_extra_practice"
       }
     },
     {
@@ -9270,6 +9294,19 @@
       }
     },
     {
+      "name": "Program Design Extra Practice",
+      "url": "https://docs.google.com/document/d/1sk8EARaEMczFgs4Tq19-pIlEd7L-itmMf2z9zJgBBV8/edit?usp=sharing",
+      "key": "program_design_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "program_design_extra_practice"
+      }
+    },
+    {
       "name": "Programming Levels in CSA",
       "url": "https://docs.google.com/document/d/1RJxTkc2WiaE2kcl1wB2Jpn7GkFfNm2DcYqJ8DRtJZD8/edit?usp=sharing",
       "key": "programming_levels_in_csa_2",
@@ -9405,7 +9442,7 @@
       }
     },
     {
-      "name": "U2L1 Guided Notes",
+      "name": "Program Design Guided Notes",
       "url": "https://docs.google.com/document/d/15fmUWT_taAS_mO2w9rwzviZEH1wmIySzGpgqCSN-mmk/edit?usp=drive_link",
       "key": "u2l1_guided_notes_1",
       "properties": {
@@ -9734,6 +9771,19 @@
       },
       "seeding_key": {
         "resource.key": "user_input"
+      }
+    },
+    {
+      "name": "User Input Extra Practice",
+      "url": "https://docs.google.com/document/d/17ogRzAgaSnZaZL_1TieE2Fv-1zjKwQHde6MViIR41Y4/edit?usp=drive_link",
+      "key": "user_input_extra_practice",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "user_input_extra_practice"
       }
     },
     {
@@ -10294,6 +10344,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-3",
+        "resource.key": "_key_program_design_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
         "resource.key": "planning_programs_1"
       }
     },
@@ -10301,6 +10357,12 @@
       "seeding_key": {
         "lesson.key": "lesson-3",
         "resource.key": "program_design"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-3",
+        "resource.key": "program_design_extra_practice"
       }
     },
     {
@@ -10318,6 +10380,12 @@
     {
       "seeding_key": {
         "lesson.key": "lesson-5",
+        "resource.key": "_key_user_input_extra_practice"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
         "resource.key": "guide_to_programming_levels_in_csa"
       }
     },
@@ -10325,6 +10393,12 @@
       "seeding_key": {
         "lesson.key": "lesson-5",
         "resource.key": "user_input"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "user_input_extra_practice"
       }
     },
     {
