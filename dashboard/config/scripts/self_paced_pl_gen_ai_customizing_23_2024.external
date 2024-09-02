@@ -3,20 +3,17 @@ title 'title'
 description 'description here'
 
 markdown <<MARKDOWN
-# Lessons 19 and 20: Model Cards
+# Model Cards
 
-<img src="https://images.code.org/d84e29dc1d036a5fd755e0f1ca039ffa-image-1715268406186.png" alt="cat from the pixel activity" width="300px" style="border-radius:20px; float:right; margin: 0 0 40px 40px; transform: scaleX(-1);">
+<img src="https://images.code.org/c73259b359788f8e1e5c251de5b549a2-Screenshot 2024-08-30 at 4.03.27 PM.png" alt="model card from recipe recommender bot" width="300px" style="border-radius:20px; float:right; margin: 0 0 40px 40px">
 
-#### Lessons 19 and 20 help students develop an understanding of Model Cards. Students go through the Explore and Practice their learning in this two lesson series.
-
-
-## Up Next!
-#### You’ll practice using Model Cards in chatbot lab.
-
+#### Model cards contain additional information about the chatbot for the user to review. These can include safety features which help the user know how to use the chatbot responsibly. Or transparency information, so the user knows how the chatbot was created or designed. And even usability information, which helps the user know where to get started.
 
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> XXX  
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> Students may be surprised to suddenly find themselves writing and explaining and reflecting about their chatbots. Students who may have been confident and engaged in earlier lessons may find themselves deflated by the task of writing about their chatbots and describing their decisions. It can be helpful to acknowledge this change in dynamic, but encourage students to lean into it rather than away from it. Taking time to document and describe our chatbots and other digital artifacts is a core part of any new technology, and might take a different set of skills but is just as important. Be sure to provide writing supports to students who may need it, such as having students explain it to you first before writing it down.
+
+  
 </p>
 </div>
 

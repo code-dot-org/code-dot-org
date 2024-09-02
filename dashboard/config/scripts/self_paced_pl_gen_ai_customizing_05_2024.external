@@ -5,7 +5,7 @@ description 'description here'
 markdown <<MARKDOWN
 # Lessons 13-15: System Prompting
 
-<img src="https://images.code.org/d84e29dc1d036a5fd755e0f1ca039ffa-image-1715268406186.png" alt="cat from the pixel activity" width="300px" style="border-radius:20px; float:right; margin: 0 0 40px 40px; transform: scaleX(-1);">
+<img src="https://images.code.org/29c99d9ec0c5c98502e79a8cbdb6e57f-Screenshot 2024-08-30 at 2.37.31 PM.png" alt="system prompt with role, goal, tone, and restriction" width="300px" style="border-radius:20px; float:right; margin: 0 0 40px 40px">
 
 #### Lessons 13 through 15 in the Customizing Large Language Models unit help students develop an understanding of system prompting. Students go through the **Explore-Practice-Synthesis** model of learning.
 
@@ -18,14 +18,13 @@ markdown <<MARKDOWN
 ## Lesson 15: Synthesis
 #### This lesson expands on the prompting techniques learned previously, inviting students to reflect on their skill growth. They explore advanced techniques: **chain of reasoning** for precise responses and providing examples to enhance accuracy. After practicing these skills, students revisit and refine earlier activities using their accumulated knowledge.
 
-## Up Next!
-#### You’ll learn about system prompts yourself and try it out in a curriculum investigation.
-
 <div style="background-color: #a6e3e8; border-radius: 40px; color: #000000; width: 95%; padding: 1px 20px 1px 20px;">
 
-<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> XXX  
+<p style="line-height: 1.5; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; font-size: 18px; "><strong>Teacher Tip:</strong> As students struggle getting the chatbot to respond in a particular way, they may want to know the “trick” or “secret” to getting the chatbot to respond how they want. You can assure students that there is no trick, just a set of strategies that tend to work more often than others but are still unreliable.  
 </p>
 </div>
 
+## Up Next!
+#### You’ll learn about system prompts yourself and try it out in a curriculum investigation.
 
 MARKDOWN
