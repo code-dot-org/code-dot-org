@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.2.4]()
+
+* added support of custom `className` for `RadioButton`
+* added support of common custom className (`commonClassName`) for `RadioButtonGroup`
+
 ## [0.2.3](https://github.com/code-dot-org/code-dot-org/pull/59444)
 
 * removed label fixed height
