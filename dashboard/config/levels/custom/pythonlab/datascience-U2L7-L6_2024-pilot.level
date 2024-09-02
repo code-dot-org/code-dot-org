@@ -1,0 +1,49 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-08-30T16:25:07.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Usability via Visualizations\r\nVisualizing data can help us identify patterns and inconsistencies. Let's use a bar chart to see the distribution of job titles.\r\n\r\n\r\n## Do This:\r\n1. Uncomment line 16 and run the code again. Discuss with your partner how the output of this line compares with the visual representation in the bar chart.\r\n\r\n## Bonus Investigations:\r\n**Do This:** \r\n- Add `to_string()` to the `value_counts()` function on line 16 so it looks like this: `print(data[‘Occupations’].value_counts().to_string())`\r\n- Run the program and discuss the output.\r\n\r\n**Do This:**\r\n- What do you think will happen when you comment out line 13 and run the program?\r\n- What does `plt.tight_layout()` do for the visualization?\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "Occupations.csv",
+          "language": "csv",
+          "contents": "",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "project_template_level_name": "datascience-U2L7-L5-6templ_2024-pilot"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-30T16:25:07.355+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L7-L5_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L7-L5_2024-pilot\"},{\"changed_at\":\"2024-08-30 16:28:41 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

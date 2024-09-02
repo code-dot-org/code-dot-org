@@ -1,0 +1,39 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-08-30T17:48:31.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Exploring Pie Charts: Step 1\r\n\r\nExplore how to create a pie chart and how changing the grouping parameter affects the distribution shown in the pie chart. \r\n\r\n## Do This\r\n\r\n1. Run the code to see the output. \r\n2. What happens if you change the grouping parameter from `Creature` to `Region`? \r\n3. Discuss with your partner:\r\n   - How does that affect the distribution shown in the pie chart?\r\n   - What does it look like `size()` does with the group formed by the `groupby()` function? \r\n\r\n\r\n\r\n",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0"
+      ]
+    },
+    "project_template_level_name": "datascience-U2L8-L10-11templ_2024-pilot"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-30T17:48:31.043+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L8-L8_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L8-L8_2024-pilot\"},{\"changed_at\":\"2024-08-30 17:49:31 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"},{\"changed_at\":\"2024-08-30 17:51:20 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":16899,\"changed_by_email\":\"emma.wingreen+teacher@code.org\"}]"
+}]]></config>
+</Pythonlab>
