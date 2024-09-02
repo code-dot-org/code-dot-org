@@ -36,6 +36,7 @@ import {
   TEACHER_NAVIGATION_PATHS,
   TEACHER_NAVIGATION_SECTIONS_URL,
 } from './TeacherNavigationPaths';
+import UnitCalendar from './UnitCalendar';
 
 import styles from './teacher-navigation.module.scss';
 
@@ -241,7 +242,7 @@ const TeacherNavigationRouter: React.FC<TeacherNavigationRouterProps> = ({
               <ElementOrEmptyPage
                 showNoStudents={studentCount === 0}
                 showNoCurriculumAssigned={!anyStudentHasProgress}
-                element={applyV1TeacherDashboardWidth(<TemporaryBlankPage />)}
+                element={applyV1TeacherDashboardWidth(<UnitCalendar />)}
               />
             }
           />
