@@ -21,6 +21,8 @@
   "blockly_blockPlayTuneTooltip": "play tune",
   "blockly_blockPlayPattern": "play drums {pattern}",
   "blockly_blockPlayPatternTooltip": "play drums",
+  "blockly_blockPlayPatternAi": "{bot} play AI drums {pattern}",
+  "blockly_blockPlayPatternAiTooltip": "play AI drums",
   "blockly_blockRest": "rest for {duration}",
   "blockly_blockRestTooltip": "rest",
   "blockly_blockSetLocationNextMeasure": "go to next measure",

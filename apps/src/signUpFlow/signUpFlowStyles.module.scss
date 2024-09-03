@@ -66,6 +66,7 @@ span {
   text-align: center;
   padding-block-end: 2rem;
   margin-inline: auto;
+  max-width: 100%;
 
   .containerWrapper {
     display: flex;
@@ -77,6 +78,14 @@ span {
     border-radius: 4px;
     border: 1px solid $light_gray_200;
     margin-bottom: 1rem;
+    box-sizing: border-box;
+    max-width: 970px;
+
+    @media (max-width: 800px) {
+      flex-direction: column;
+      align-items: center;
+      max-width: 400px;
+    }
   }
 
   .dividerContainer {
@@ -86,29 +95,55 @@ span {
     align-items: center;
     justify-content: center;
     margin: 0 20px;
-  }
 
-  .verticalDividerTop,
-  .verticalDividerBottom {
-    width: 1px;
-    background-color: $light_gray_200;
-    height: 50%;
-  }
+    .verticalDividerTop,
+    .verticalDividerBottom {
+      width: 1px;
+      background-color: $light_gray_200;
+      height: 50%;
+    }
 
-  .verticalDividerTop {
-    margin-bottom: 1rem;
-  }
+    .verticalDividerTop {
+      margin-bottom: 1rem;
+    }
 
-  .verticalDividerBottom {
-    margin-top: 1rem;
-  }
+    .verticalDividerBottom {
+      margin-top: 1rem;
+    }
 
-  .dividerText {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    text-transform: uppercase;
-    font-weight: 600;
+    .dividerText {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    @media (max-width: 800px) {
+      flex-direction: row;
+      width: 100%;
+      margin: 10px 0;
+
+      .dividerText {
+        position: static;
+        transform: none;
+        margin: 10px 0;
+      }
+
+      .verticalDividerTop,
+      .verticalDividerBottom {
+        width: 50%;
+        height: 1px;
+      }
+
+      .verticalDividerTop {
+        margin: 0 1rem 0 0;
+      }
+  
+      .verticalDividerBottom {
+        margin: 0 0 0 1rem;
+      }
+    }
   }
 
   .container {
@@ -136,6 +171,9 @@ span {
   
       button {
         width: 100%;
+        font-weight: 600;
+        font-size: 1rem;
+        padding-block: 0.75rem;
       }
     }
 
@@ -172,7 +210,7 @@ span {
 
     .shortButton {
       width: auto;
-      margin-top: 1rem;
+      margin-top: 2rem;
     }
 
     .googleButton {
@@ -239,14 +277,15 @@ span {
   }
 
   .headers {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
   }
 
-  .signUpWithDesc {
-    margin-top: 0.125rem;
+  .signUpWithTitle {
+    margin-bottom: .25rem;
   }
 
   .inputContainer {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1.125rem;

@@ -5,12 +5,14 @@ description 'description here'
 markdown <<MARKDOWN
 # Safety Note with Our Chatbot
 
-### Beep boop
+### Content TBD.
+
+<img src="https://images.code.org/e65f6834044f4a2b77c14601cf6a749f-Screenshot 2024-08-30 at 2.32.36 PM.png" alt="AI bot and a model card" style="border-radius:40px; float: right; height: 150px; clear: both; margin: 0 20px 20px 0;">
+
 
 
 ## Up Next!
 
-#### transition to temperature
-
+#### In the next level you’ll get to experiment with **temperature**. Temperature is one of the values you can control once a language model has been trained
 
 MARKDOWN

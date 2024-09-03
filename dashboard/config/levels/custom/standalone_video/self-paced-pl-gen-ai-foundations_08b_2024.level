@@ -1,0 +1,23 @@
+<StandaloneVideo>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 54,
+  "created_at": "2024-08-30T17:29:01.000Z",
+  "level_num": "custom",
+  "user_id": 63,
+  "properties": {
+    "video_key": "PL-genAI-attention",
+    "instructions_important": "false",
+    "skip_dialog": true,
+    "skip_sound": true,
+    "parent_level_id": 28811,
+    "name_suffix": "_23",
+    "encrypted": "false",
+    "long_instructions": "## Lesson 8: Attention Is All You Need\r\n#### This lesson explores language ambiguity and the importance of context. Students brainstorm words with multiple meanings, create sentences to clarify them, and connect this to how **attention** updates word meanings in language models.\r\n\r\n## To Do:\r\n#### Watch the video below to learn more about the processing step.\r\n"
+  },
+  "notes": "",
+  "audit_log": "[{\"changed_at\":\"2024-08-30T17:29:01.297+00:00\",\"changed\":[\"cloned from \\\"self-paced-pl-gen-ai-foundations_05b_2024\\\"\"],\"cloned_from\":\"self-paced-pl-gen-ai-foundations_05b_2024\"},{\"changed_at\":\"2024-08-30 17:30:26 +0000\",\"changed\":[\"video_key\",\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-30 17:31:30 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-30 17:35:18 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":19151,\"changed_by_email\":\"micah+levelbuilder@code.org\"}]",
+  "level_concept_difficulty": {
+  }
+}]]></config>
+</StandaloneVideo>
