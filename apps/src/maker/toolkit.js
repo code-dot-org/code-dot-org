@@ -10,7 +10,6 @@ import {
 import WebSerialPortWrapper from '@cdo/apps/maker/WebSerialPortWrapper';
 
 import {getStore} from '../redux';
-import trackEvent from '../util/trackEvent';
 
 import CircuitPlaygroundBoard from './boards/circuitPlayground/CircuitPlaygroundBoard';
 import MicroBitBoard from './boards/microBit/MicroBitBoard';
@@ -113,7 +112,6 @@ export function connect({interpreter, onDisconnect}) {
         });
       }
       dispatch(redux.reportConnected());
-      trackEvent('Maker', 'ConnectionSuccess');
     })
     .catch(error => {
       if (error instanceof ConnectionCanceledError) {
@@ -123,7 +121,6 @@ export function connect({interpreter, onDisconnect}) {
         // Something went wrong, so show the error screen.
         error = wrapKnownMakerErrors(error);
         dispatch(redux.reportConnectionError(error));
-        trackEvent('Maker', 'ConnectionError');
         return Promise.reject(error);
       }
     });

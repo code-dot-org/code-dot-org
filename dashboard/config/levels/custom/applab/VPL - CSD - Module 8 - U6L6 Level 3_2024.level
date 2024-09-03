@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2024-03-25T22:42:26.000Z",
   "level_num": "custom",
@@ -55,7 +56,7 @@
     "parent_level_id": 20431,
     "name_suffix": "_2024",
     "text_mode_at_start": "false",
-    "long_instructions": "###### **Note**: This level is the same across the Circuit Playground and micro:bit versions of Getting Screen Inputs. This level does not require you to use a device to complete it.\r\n\r\n* ###### **Circuit Playground Level:** Lesson 9, Level 3\r\n* ###### **micro:bit Level:** Lesson 8, Level 3\r\n\r\n___\r\n# Dropdowns\r\n\r\nYou can also use a dropdown to let the user interact with the screen. A dropdown lets you select from a list of options. You can use the [`getProperty()`(#fff176)](/docs/applab/getProperty/) block to get the `value` from the dropdown and use it in your app.\r\n\r\nThis app should let the user change the background color of the app, but it isn't finished.\r\n\r\n## Do This\r\n\r\n1) Get the value from the dropdown\r\n\t- Add a [`var x`(#BB77C7)](/docs/applab/declareAssign_x/) and [`getProperty()`(#fff176)](/docs/applab/getProperty/) block to get the `value` from the `colorDropdown` element\r\n2) Update the background color\r\n\t- Add a [`setProperty`(#fff176)](/docs/applab/setProperty/) block to update the background of the screen to the value from the dropdown\r\n\r\n::: details [**Show Me How**]\r\n<img src=\"https://images.code.org/d9ae7f5b99af8fbd5f5875d822b19124-image-1638223704356.png\" width=\"500px\" />\r\n:::\r\n\r\n**Run the program!** Change the background color, then click the update button to see the backgr",
+    "long_instructions": "##### **Note**: This level is the same across the Circuit Playground and micro:bit versions of Getting Screen Inputs. This level does not require you to use a device to complete it.\r\n\r\n* ##### **Circuit Playground Level:** Lesson 9, Level 3\r\n* ##### **micro:bit Level:** Lesson 8, Level 3\r\n\r\n___\r\n# Dropdowns\r\n\r\n#### You can also use a dropdown to let the user interact with the screen. A dropdown lets you select from a list of options. You can use the [`getProperty()`(#fff176)](/docs/applab/getProperty/) block to get the `value` from the dropdown and use it in your app.\r\n\r\n#### This app should let the user change the background color of the app, but it isn't finished.\r\n\r\n## Do This\r\n\r\n1) ####  Get the value from the dropdown\r\n\t- #### Add a [`var x`(#BB77C7)](/docs/applab/declareAssign_x/) and [`getProperty()`(#fff176)](/docs/applab/getProperty/) block to get the `value` from the `colorDropdown` element\r\n2) #### Update the background color\r\n\t- #### Add a [`setProperty`(#fff176)](/docs/applab/setProperty/) block to update the background of the screen to the value from the dropdown\r\n\r\n#### **Run the program!** Change the background color, then click the update button to see the backgr\r\n___\r\n\r\n::: details [**Show Me How**]\r\n<img src=\"https://images.code.org/d9ae7f5b99af8fbd5f5875d822b19124-image-1638223704356.png\" width=\"500px\" />\r\n:::",
     "map_reference": "/courses/vpl-csd-2022/guides/taking-input-with-getproperty",
     "mini_rubric": "false",
     "encrypted": "false",
@@ -65,9 +66,8 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2024-03-25T22:42:26.373+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD - Module 8 - U6L6 Level 3_2023\\\"\"],\"cloned_from\":\"VPL - CSD - Module 8 - U6L6 Level 3_2023\"}]"
+  "audit_log": "[{\"changed_at\":\"2024-03-25T22:42:26.373+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD - Module 8 - U6L6 Level 3_2023\\\"\"],\"cloned_from\":\"VPL - CSD - Module 8 - U6L6 Level 3_2023\"},{\"changed_at\":\"2024-08-29 19:00:36 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

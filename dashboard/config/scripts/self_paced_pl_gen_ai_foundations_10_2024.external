@@ -1,0 +1,53 @@
+name 'self-paced-pl-gen-ai-foundations_10_2024'
+title 'title'
+description 'description here'
+
+markdown <<MARKDOWN
+# Lesson 10: Hallucinations and Fabrications
+
+<img src="https://images.code.org/da2d6f6c30ac5b47931d9affb929f6a5-Screenshot 2024-08-30 at 1.38.26 PM.png" alt="examples headlines of AI bias" width="300px" style="border-radius:20px; float:right; margin: 0 0 40px 40px">
+
+#### In this lesson, students **explore** why language models produce **hallucinations** or inaccurate outputs. They discuss how **bias** in training data leads to errors and act as AI Auditors to suggest proactive measures for mitigating harm from language models.
+
+## Bias
+#### Bias occurs when a decision favors some things and de-prioritizes or excludes others. Bias within an AI system is a direct reflection of the data a system was trained on and the way it is trained.
+
+## Action Items
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;"> 🖥️Assume all AI systems have bias</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style = "font-size: 16px;">
+  Even AI systems that seem innocuous are likely to have biases, whether those are deeply harmful or just irritating. <br><br> Before using an AI system to make decisions in your classroom, examine the ways it might be biased. Start by trying to understand the historical biases in the data the AI system uses.
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🚦Approach discussions of AI bias carefully</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style = "font-size: 16px;">
+   Many students have had personal experiences with bias, but may not have used that specific word to explain it. Approach discussions of AI bias with an understanding that students may need time to process such an emotionally difficult concept.
+
+</p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">🌍 Emphasize the importance of team diversity</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style = "font-size: 16px;">
+   Talk with students about how team diversity can help in developing widely useful AI systems. Use this fact as a motivator to encourage students to design for their community and advocate for their wants and needs. Avoid positioning students as the ones to fix others’ mistakes, but rather as innovators with a deeply valuable perspective.
+ </p></div>
+</details>
+
+<details style="background-color: #ececec; padding: 10px; margin-bottom: 10px; border: 1px solid transparent; border-radius: 5px;">
+    <summary style="font-size: 1.5em; font-weight: bold;">✅ Support companies committed to reducing bias</summary>
+<div style="margin-top: 20px; margin-left: 20px; margin-right: 20px;">
+    <p style = "font-size: 16px;">
+   Seek out companies that follow specific, actionable commitments that reduce bias in their AI tools. Read about the company’s background, checking for independent audits and partnerships with reputable community organizations.
+
+</p></div>
+</details>
+
+
+MARKDOWN

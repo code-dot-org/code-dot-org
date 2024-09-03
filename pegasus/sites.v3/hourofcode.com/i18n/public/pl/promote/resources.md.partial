@@ -24,8 +24,6 @@ Wydrukuj własne plakaty! Wystarczy kliknąć poniższy obrazek, aby wyświetli�
 
 {{ promote_new_posters }}
 
-* Czy szukasz naszych plakatów z ubiegłych lat? [Znajdziesz je tutaj]({{ promote/previous_posters_url }})!
-
 <a id="social"></a>
 
 ## Opublikuj w mediach społecznościowych
@@ -128,7 +126,7 @@ Zobacz http://hourofcode.com/,{{ country_language }}, aby uzyskać szczegółowe
 
 Komputery są wszędzie, zmieniając każdą branżę na świecie, ale tylko 51% wszystkich szkół średnich oferuje informatykę. Młode kobiety i uczniowie z marginalizowanych grup rasowych i etnicznych są poważnie niedostatecznie reprezentowani na zajęciach informatyki, oraz w branży technologicznej. Dobrą wiadomością jest, że zamierzamy to zmienić.
 
-Dzięki Godzinie Kodowania, zajęcia informatyki pojawiły się na stronach domowych Google, MSN, Yahoo! Ponad 100 partnerskich firm wsparło tę inicjatywę. Każdy salon Apple na świecie organizował Godzinę Kodowania. Nawet Prezydent Obama napisał swoją pierwszą linię kodu w ramach tej inicjatywy.
+Dzięki Godzinie Kodowania, zajęcia z informatyki pojawiły się na stronach Google, MSN, Yahoo! i Disney. Ponad 100 partnerów wspólnie wsparło tę inicjatywę. Każdy salon Apple na świecie organizował Godzinę Kodowania. Nawet Prezydent Obama napisał swoją pierwszą linię kodu w ramach tej inicjatywy.
 
 Dlatego każdy z uczniów [numer X] w [NAZWA SZKOŁY] dołącza do największego wydarzenia edukacyjnego w historii: Godzina Kodowania, podczas Tygodnia Edukacji Informatycznej (6-12 grudnia).
 

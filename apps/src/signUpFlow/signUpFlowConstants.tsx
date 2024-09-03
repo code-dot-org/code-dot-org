@@ -1,3 +1,4 @@
+const ACCOUNT_TYPE_SESSION_KEY = 'accountType';
 const DISPLAY_NAME_SESSION_KEY = 'displayName';
 const USER_AGE_SESSION_KEY = 'age';
 const IS_PARENT_SESSION_KEY = 'isParent';
@@ -11,6 +12,7 @@ const SCHOOL_ZIP_SESSION_KEY = 'schoolZip';
 const SCHOOL_NAME_SESSION_KEY = 'schoolName';
 
 export {
+  ACCOUNT_TYPE_SESSION_KEY,
   DISPLAY_NAME_SESSION_KEY,
   USER_AGE_SESSION_KEY,
   IS_PARENT_SESSION_KEY,
