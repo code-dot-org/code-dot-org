@@ -246,37 +246,37 @@ class AichatControllerTest < ActionController::TestCase
     assert_equal json_response['response'], response
   end
 
-  # user_has_aichat_access tests
-  test 'signed out user does not have access to user_has_aichat_access test' do
-    get :user_has_aichat_access
+  # has_access tests
+  test 'signed out user does not have access to has_access test' do
+    get :has_access
     assert_response :forbidden
   end
 
-  test 'GET user_has_aichat_access returns false for unauthorized teacher' do
+  test 'GET has_access returns false for unauthorized teacher' do
     sign_in(create(:teacher))
-    get :user_has_aichat_access
+    get :has_access
     assert_response :success
-    assert_equal json_response, false
+    assert_equal json_response['hasAccess'], false
   end
 
-  test 'GET user_has_aichat_access returns true for authorized teacher' do
+  test 'GET has_access returns true for authorized teacher' do
     sign_in(@authorized_teacher1)
-    get :user_has_aichat_access
+    get :has_access
     assert_response :success
-    assert_equal json_response, true
+    assert_equal json_response['hasAccess'], true
   end
 
-  test 'GET user_has_aichat_access returns false for unauthorized student' do
+  test 'GET has_access returns false for unauthorized student' do
     sign_in(create(:student))
-    get :user_has_aichat_access
+    get :has_access
     assert_response :success
-    assert_equal json_response, false
+    assert_equal json_response['hasAccess'], false
   end
 
-  test 'GET user_has_aichat_access returns true for student of authorized teacher' do
+  test 'GET has_access returns true for student of authorized teacher' do
     sign_in(@authorized_student1)
-    get :user_has_aichat_access
+    get :has_access
     assert_response :success
-    assert_equal json_response, true
+    assert_equal json_response['hasAccess'], true
   end
 end

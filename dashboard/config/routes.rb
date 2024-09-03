@@ -1174,7 +1174,7 @@ Dashboard::Application.routes.draw do
     post '/aichat/check_message_safety', to: 'aichat#check_message_safety'
     post '/aichat/start_chat_completion', to: 'aichat#start_chat_completion'
     get '/aichat/chat_request/:id', to: 'aichat#chat_request'
-    get '/aichat/user_has_aichat_access', to: 'aichat#user_has_aichat_access'
+    get '/aichat/has_access', to: 'aichat#has_access'
 
     post 'ai_diff/chat_completion', to: 'ai_diff#chat_completion'
 

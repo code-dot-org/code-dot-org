@@ -160,9 +160,9 @@ class AichatController < ApplicationController
     render(status: :ok, json: response_body)
   end
 
-  # GET /aichat/user_has_aichat_access
-  def user_has_aichat_access
-    render(status: :ok, json: current_user&.has_aichat_access?)
+  # GET /aichat/has_access
+  def has_access?
+    render(status: :ok, json: {hasAccess: current_user&.has_aichat_access?})
   end
 
   private def chat_completion_has_required_params?
