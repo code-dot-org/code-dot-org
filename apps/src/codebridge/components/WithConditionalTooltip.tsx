@@ -21,23 +21,21 @@ const WithConditionalTooltip: React.FunctionComponent<
   iconName,
   iconClassName,
 }) => {
-  return (
-    <div>
-      {showTooltip ? (
-        <WithTooltip
-          tooltipProps={tooltipProps}
-          tooltipOverlayClassName={tooltipOverlayClassName}
-        >
-          {children}
-          <i
-            className={classNames('fa', iconName, iconClassName)}
-            aria-describedby={tooltipProps.tooltipId}
-          />
-        </WithTooltip>
-      ) : (
-        children
-      )}
-    </div>
+  return showTooltip ? (
+    <WithTooltip
+      tooltipProps={tooltipProps}
+      tooltipOverlayClassName={tooltipOverlayClassName}
+    >
+      <div>
+        {children}
+        <i
+          className={classNames('fa', iconName, iconClassName)}
+          aria-describedby={tooltipProps.tooltipId}
+        />
+      </div>
+    </WithTooltip>
+  ) : (
+    <div>{children}</div>
   );
 };
 
