@@ -87,6 +87,22 @@ export default class MusicBlocklyWorkspace {
 
     const toolboxBlocks = getToolbox(toolbox);
 
+    // Other Blockly labs use FeedbackUtils.prototype.showSimpleDialog to create a prettier dialog.
+    // See StudioApp.prototype.inject for more information.
+    const customSimpleDialog = function (options: {
+      bodyText: string;
+      promptPrefill: string;
+      onCancel: (p1: string | null) => void;
+    }) {
+      Blockly.dialog.prompt(
+        options.bodyText,
+        options.promptPrefill,
+        options.onCancel
+      );
+    };
+    // Other Blockly labs use the level edit field :disable_param_editing to allow writes to customize this.
+    // For now, we restrict param editing to advanced mode.
+    const disableParamEditing = getBlockMode() !== BlockMode.ADVANCED;
     this.workspace = Blockly.inject(container, {
       toolbox: toolboxBlocks,
       grid: {spacing: 20, length: 0, colour: '#444', snap: true},
@@ -102,6 +118,8 @@ export default class MusicBlocklyWorkspace {
       readOnly: isReadOnlyWorkspace,
       useBlocklyDynamicCategories: true,
       rtl: isRtl,
+      customSimpleDialog,
+      disableParamEditing,
     } as BlocklyOptions);
 
     this.resizeBlockly();
