@@ -248,10 +248,10 @@
 
 %div#expire-other-sessions
   %hr
-  %h2= t('expire_other_sessions')
-  %p= t('expire_other_sessions_description')
+  %h2= t('user.expire_other_sessions')
+  %p= t('user.expire_other_sessions_description')
   = form_for(resource, as: resource_name, url: expire_other_path, html: {method: :delete}) do |expire_other_form|
-    = expire_other_form.submit t('expire_other_sessions_button'), class: 'btn btn-warning'
+    = expire_other_form.submit t('user.expire_other_sessions_button'), class: 'btn btn-warning'
 
 - if current_user.can_delete_own_account?
   -# Mount point for React DeleteAccount component.
