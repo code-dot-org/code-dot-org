@@ -1,4 +1,6 @@
 require 'aws-sdk-cloudwatchlogs'
+require 'honeybadger/ruby'
+require 'cdo/buffer'
 
 module Cdo
   # Singleton interface for asynchronously sending log events to CloudWatch in batches
@@ -37,11 +39,11 @@ module Cdo
           http_read_timeout: 5,
           http_idle_timeout: 2
         )
-        client.put_log_events(
-          log_group_name: @log_group_name,
-          log_stream_name: @log_stream_name,
-          log_events: events
-        )
+        # client.put_log_events(
+        #   log_group_name: @log_group_name,
+        #   log_stream_name: @log_stream_name,
+        #   log_events: events
+        # )
       rescue => exception
         Honeybadger.notify(exception)
       end
