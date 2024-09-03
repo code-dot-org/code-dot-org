@@ -509,10 +509,7 @@ en:
         csd-2024:
           title: Computer Science Discoveries ('24-'25)
           description_short: An introductory computer science course that empowers students to create authentic artifacts
-          description_student: |-
-            Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
-
-            **Interested in Teaching CS Discoveries?** Professional development is available to help you get started teaching CS Discoveries. [Click here][0] to learn more about professional learning opportunities in your region or [click here][1] to learn more about a self-paced online option.
+          description_student: Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers you to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
           description_teacher: |-
             Computer Science Discoveries (CS Discoveries) is an introductory computer science course that empowers students to create authentic artifacts and engage with computer science as a medium for creativity, communication, problem solving, and fun.
 
