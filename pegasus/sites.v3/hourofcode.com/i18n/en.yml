@@ -10764,6 +10764,14 @@
         desc: "Explore a wide selection of one-hour tutorial designed for all ages in over 45 languages."
         button: "Explore activities"
 
+  hoc_activites:
+    heading: "Explore activities"
+    desc: "Teachers: [Host an hour](%{host_url}) or [read the How-To Guide](%{how_to_url})"
+    previous:
+      heading: "Looking for previous years' activities?"
+      desc: "We've moved all previous activities [here](%{archive_url})."
+      button: "View archived activities"
+
   before_hoc: "Before Hour of Code"
   day_of_hoc: "Day of Hour of Code"
   after_hoc: "After Hour of Code"
