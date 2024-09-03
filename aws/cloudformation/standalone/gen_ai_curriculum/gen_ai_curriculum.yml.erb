@@ -11,13 +11,12 @@ Parameters:
   Environment:
     Type: String
     Default: "test"
-    Description: "Environment being deployed to (prod or test)"
+    Description: "Environment being deployed to (production or test)"
   HuggingFaceToken:
     Type: String
     Description: "HuggingFace token required for deploying HuggingFace models."
   HuggingFaceImageUri:
     Type: String
-    Default: "763104351884.dkr.ecr.us-east-1.amazonaws.com/huggingface-pytorch-tgi-inference:2.3.0-tgi2.2.0-gpu-py310-cu121-ubuntu22.04-v2.0"
     Description: "HuggingFace Image URI to use for the model."
 Resources:
 <% Config::ENDPOINT_CONFIGS.each do |config| %>
@@ -45,7 +44,7 @@ Resources:
       EndpointConfigName: !Sub "<%= "#{config[:model_name]}-${Environment}-EndpointConfig-#{Time.now.to_i}" %>"
       ProductionVariants:
         - ContainerStartupHealthCheckTimeoutInSeconds: 300
-          InitialInstanceCount: <%= environment == 'prod' ? config[:min_num_instances] : 1 %>
+          InitialInstanceCount: <%= environment == 'production' ? config[:min_num_instances] : 1 %>
           InitialVariantWeight: 1
           InstanceType: "<%= config[:instance_type][environment.to_sym] %>"
           ModelName: !GetAtt <%= config[:model_name] %>Model.ModelName
@@ -55,7 +54,7 @@ Resources:
     Properties:
       EndpointConfigName: !GetAtt <%= config[:model_name] %>EndpointConfig.EndpointConfigName
       EndpointName: !Sub "<%= "#{config[:model_id]}-${Environment}" %>"
-  <% if environment == 'prod' %>
+  <% if environment == 'production' %>
   <%= config[:model_name] %>ScalingTarget:
     Type: "AWS::ApplicationAutoScaling::ScalableTarget"
     Properties:

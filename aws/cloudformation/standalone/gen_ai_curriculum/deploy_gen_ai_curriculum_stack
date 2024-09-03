@@ -6,12 +6,14 @@ require 'open3'
 require_relative '../../../../lib/cdo/pycall'
 require_relative './config'
 
+VALID_ENVIRONMENTS = %w[production test].freeze
+
 def main
   options = {}
   OptionParser.new do |opts|
     opts.banner = "Usage: ./deploy_gen_ai_curriculum_stack [options]"
 
-    opts.on("-e", "--environment ENVIRONMENT", String, "Stack environment (prod or test)") do |v|
+    opts.on("-e", "--environment ENVIRONMENT", String, "Stack environment (#{VALID_ENVIRONMENTS.join(' or ')})") do |v|
       options[:environment] = v
     end
 
@@ -19,7 +21,7 @@ def main
       options[:dry_run] = v.nil? ? true : v
     end
 
-    opts.on("-v", "--image-uri-version", Numeric, "HuggingFace Image URI version") do |v|
+    opts.on("-v", "--image-uri-version IMAGE_URI_VERSION", Numeric, "HuggingFace Image URI version") do |v|
       options[:image_uri_version] = v
     end
 
@@ -34,12 +36,12 @@ def main
 
   # Prompt for environment if not provided
   unless options[:environment]
-    print "Environment (prod or test): "
+    print "Environment (#{VALID_ENVIRONMENTS.join(' or ')}): "
     options[:environment] = gets.chomp
   end
 
-  unless %w[prod test].include?(options[:environment])
-    puts "Error: Invalid environment '#{options[:environment]}'. Must be 'prod' or 'test'."
+  unless VALID_ENVIRONMENTS.include?(options[:environment])
+    puts "Error: Invalid environment '#{options[:environment]}'. Must be #{VALID_ENVIRONMENTS.join(' or ')}."
     exit 1
   end
 
