@@ -32,7 +32,7 @@
       .span10
         %p
           - if is_lti
-            = t('activerecord.attributes.user.finish_sign_up_subheader_provider_markdown', provider: issuer_name, email: @user.email, markdown: :inline).html_safe
+            = t('activerecord.attributes.user.finish_sign_up_subheader_provider_markdown', provider: issuer_name, email: params.dig(:user, :email), markdown: :inline).html_safe
           - elsif @user.provider.present?
             - provider = t("auth.#{@user.provider}")
             = t('activerecord.attributes.user.finish_sign_up_subheader_provider_markdown', provider: provider, email: @user.email, markdown: :inline).html_safe
