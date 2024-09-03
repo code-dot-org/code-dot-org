@@ -28,9 +28,9 @@
 }
 
 .disabledInfoIcon {
-  padding: 8px;
+  padding: 12px;
   color: $white;
-  cursor: 'pointer'
+  font-size: 16px;
 }
 
 .consoleHeader {
@@ -43,4 +43,10 @@
 
 .controlButtons {
   display: flex;
+}
+
+.disabledButtonTooltipContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

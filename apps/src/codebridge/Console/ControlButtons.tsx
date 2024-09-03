@@ -112,9 +112,11 @@ const ControlButtons: React.FunctionComponent = () => {
           tooltipId: tooltipId,
           size: 's',
         }}
+        tooltipOverlayClassName={moduleStyles.disabledButtonTooltipContainer}
       >
         <i
           className={classNames('fa', iconName, moduleStyles.disabledInfoIcon)}
+          aria-describedby={tooltipId}
         />
       </WithTooltip>
     );
