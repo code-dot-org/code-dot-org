@@ -2598,7 +2598,7 @@
     after:
       header: "Continue learning after Transformers One"
       desc: "The Transformers One activity is an ideal first step for classrooms before tackling the open-ended projects in our new CS Connections curriculum. Once students learn basic coding, they can advance to CS Connections' cross-curricular projects."
-  
+
   hello_world:
     tiny_banner: "Check out the new [Transformers One theme](%{url}) of Hello World!"
     header: "Hello World"
@@ -2623,7 +2623,7 @@
       retro_desc: "Go old school! In this retro-themed intro to Sprite Lab, students learn computer science basics by building fun, interactive projects"
       emoji: "Emoji"
       emoji_desc: "In this emoji-themed intro to Sprite Lab, students learn computer science basics by building fun, interactive projects."
-  
+
   tools_page:
     heading: 'Explore Standalone Labs and Widgets'
     desc: 'Discover programming environments designed to support your creativity. Our labs offer supportive environments that meet learners where they are at, while still keeping the possibilities endless. Our widgets unravel core computer science concepts.'
@@ -2675,16 +2675,16 @@
     tools_el:
       heading: "Empower learning with standalone tools"
       desc: "Leverage our labs to create dynamic learning experiences that resonate with each student. These tools not only teach coding but also build confidence and spark curiosity through hands-on practice."
-      scaffolding: 
+      scaffolding:
         heading: "Scaffolded learning"
         desc: "Our programming environments are carefully scaffolded, providing the right level of support to students at every step of their coding journey."
-      independence: 
+      independence:
         heading: "Guided to independent"
         desc: "Ease the transition from structured learning to exploration, with tools that encourage students to apply their learning in open-ended projects."
-      engagement: 
+      engagement:
         heading: "Engagement through creativity"
         desc: "Coding becomes an adventure with labs and widgets that make learning not just educational, but exciting and genuinely fun."
-      differentiation: 
+      differentiation:
         heading: "Support differentiation"
         desc: "Cater to a range of abilities and interests, with tools that adapt to different skill levels, ensuring your students can find their path."
     widgets:
@@ -10714,6 +10714,31 @@
   dont_know: "I don't know"
 
   language_label: "Language"
+
+  hoc_homepage:
+    what_is_hoc:
+      heading: "What is the Hour of Code?"
+      desc: "The Hour of Code is worldwide movement that aims to introduce millions of students to computer science through one-hour coding activities. Through Hour of Code, we aim to demystify coding and show that anyone can learn the basics, inspiring future interest in computer science."
+    host:
+      heading: "Host an Hour of Code"
+      desc: "Your class or school can join millions around the world doing the Hour of Code! Registration for the annual Computer Science Education Week celebration begins in September. Though, Hour of Code is available year-round. Register today!"
+      button: "Register your event"
+    resources:
+      heading: "All the resources you need for your Hour of Code"
+      desc: "Bringing Hour of Code to your classroom or school is easy! Follow our step-by-step guides for preparing for, running, and celebrating your event. Check out our resources for everything you'll need!"
+      button:
+        how_to: "How-To Guides"
+        explore_resources: "Explore resources"
+    global:
+      heading: "Hour of Code is a global movement"
+      desc: "When you participate in the Hour of Code, you join a movement of millions across the globe."
+      stats:
+        served: "Hours of Code served"
+        countries: "Countries with Hour of Code"
+        events: "Events registered so far in %{campaign_date_year}"
+      button:
+        host: "Host an Hour of Code"
+        try_activites: "Try activities"
 
   before_hoc: "Before Hour of Code"
   day_of_hoc: "Day of Hour of Code"
