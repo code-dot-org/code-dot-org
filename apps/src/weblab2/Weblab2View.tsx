@@ -152,7 +152,8 @@ const defaultProject: ProjectSources = {source: defaultSource};
 
 const Weblab2View = () => {
   const [config, setConfig] = useState<ConfigType>(defaultConfig);
-  const {source, setSource, getStartSource} = useSource(defaultProject);
+  const {source, setSource, getStartSource, codeBridgeKey} =
+    useSource(defaultProject);
   const [showConfig, setShowConfig] = useState<
     'project' | 'config' | 'layout' | ''
   >('');
@@ -184,6 +185,7 @@ const Weblab2View = () => {
             setProject={setSource}
             setConfig={setConfig}
             startSource={getStartSource()}
+            key={codeBridgeKey}
           />
         )}
 
