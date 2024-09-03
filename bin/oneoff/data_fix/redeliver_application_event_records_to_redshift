@@ -250,13 +250,13 @@ CSV.open(options[:log_filename], 'a') do |batch_log_csv|
       # Iterate through each undelivered/errored Firehose batch identified in the current error manifest.
       JSON.parse(error_manifest_json)["entries"].each_with_index do |entry, position_in_error_manifest|
         batches_processed += 1
-        invalid_records_skipped = 0
-        invalid_records_modified = 0
         undelivered_batch_uri = URI.parse(entry["url"])
         batch_status = BatchRedeliveryStatus.new
         batch_status.error_manifest_object_key = error_manifest_object.key
         batch_status.undelivered_batch_object_key = undelivered_batch_uri.path&.delete_prefix('/')
         batch_status.undelivered_batch_position_in_manifest = position_in_error_manifest
+        batch_status.records_modified = 0
+        batch_status.records_skipped = 0
         CDO.log.info "Attempting to redeliver error batch: #{batch_status.undelivered_batch_object_key}"
         undelivered_batch = s3_client.get_object(
           bucket: undelivered_batch_uri.host,
@@ -272,10 +272,10 @@ CSV.open(options[:log_filename], 'a') do |batch_log_csv|
           tap {|array| batch_status.records_in_batch = array.length}.
           each_with_index do |record, _position_in_batch|
           modified_record, record_validation_status = validate_record(record, event_json_schema, modify_invalid: options[:modify_invalid])
-          invalid_records_modified += 1 if !record_validation_status && options[:modify_invalid]
+          batch_status.records_modified += 1 if !record_validation_status && options[:modify_invalid] # TODO: Fix validate_record. It's returning the opposite value for record_validation_status.
           modified_batch += modified_record.to_json
         rescue RecordValidationError => exception
-          invalid_records_skipped += 1
+          batch_status.records_skipped += 1
           CDO.log.info record
           CDO.log.info exception.message
         end
@@ -333,8 +333,6 @@ CSV.open(options[:log_filename], 'a') do |batch_log_csv|
         batch_status.redelivery_status = false
         batch_status.redelivery_status_reason = exception.message
       ensure
-        batch_status.records_modified = invalid_records_modified
-        batch_status.records_skipped = invalid_records_skipped
         batch_log_csv << batch_status
         batch_log_csv.flush
       end
