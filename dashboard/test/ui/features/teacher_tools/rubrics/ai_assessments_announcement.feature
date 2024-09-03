@@ -1,3 +1,4 @@
+@no_mobile
 Feature: Announcement for AI Assessments
   Scenario: Teacher views and closes announcement
     Given I am a teacher
