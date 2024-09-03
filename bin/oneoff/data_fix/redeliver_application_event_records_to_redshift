@@ -272,7 +272,7 @@ CSV.open(options[:log_filename], 'a') do |batch_log_csv|
           tap {|array| batch_status.records_in_batch = array.length}.
           each_with_index do |record, _position_in_batch|
           modified_record, record_validation_status = validate_record(record, event_json_schema, modify_invalid: options[:modify_invalid])
-          batch_status.records_modified += 1 if !record_validation_status && options[:modify_invalid] # TODO: Fix validate_record. It's returning the opposite value for record_validation_status.
+          batch_status.records_modified += 1 if record_validation_status && options[:modify_invalid]
           modified_batch += modified_record.to_json
         rescue RecordValidationError => exception
           batch_status.records_skipped += 1
