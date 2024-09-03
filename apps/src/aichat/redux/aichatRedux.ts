@@ -806,15 +806,16 @@ const {
 
 registerReducers({aichat: aichatSlice.reducer});
 export const {
-  removeUpdateMessage,
-  setNewChatSession,
   clearChatMessages,
-  setShowWarningModal,
+  endSave,
+  removeUpdateMessage,
   resetToDefaultAiCustomizations,
-  setViewMode,
-  setStartingAiCustomizations,
   setAiCustomizationProperty,
-  setStudentChatHistory,
   setModelCardProperty,
+  setNewChatSession,
+  setShowWarningModal,
+  setStartingAiCustomizations,
+  setStudentChatHistory,
   setUserHasAichatAccess,
+  setViewMode,
 } = aichatSlice.actions;
