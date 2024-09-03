@@ -9,40 +9,176 @@
     "encrypted": "false",
     "background": "music-black",
     "long_instructions": "####Play a Sound\r\n\r\n\r\n\r\n1 Drag the [play](#clickable=play-sound-block) block and connect it under [when run](#clickable=when-run-block). \r\n\r\n2 Then press [▶ Run](#clickable=run-button).",
-    "level_data": {
-      "startSources": {
-        "blocks": {
-          "languageVersion": 0,
-          "blocks": [
-            {
-              "type": "when_run_simple2",
-              "id": "when_run_simple2",
-              "x": 30,
-              "y": 30,
-              "deletable": false,
-              "movable": false
+ "level_data": {
+    "library": "launch2024",
+    "packId": "sabrina_carpenter_espresso",
+    "startSources": {
+      "blocks": {
+        "languageVersion": 0,
+        "blocks": [
+          {
+            "type": "when_run_simple2",
+            "id": "when_run_simple2",
+            "x": 34,
+            "y": 34,
+            "deletable": false,
+            "movable": false,
+            "next": {
+              "block": {
+                "type": "play_sounds_together",
+                "id": "play_sounds_together",
+                "inputs": {
+                  "code": {
+                    "block": {
+                      "type": "play_sound_at_current_location_simple2",
+                      "id": "play_sound_at_current_location_simple2",
+                      "fields": {
+                        "sound": "sabrina_carpenter_espresso/guitar_intro"
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "play_sound_at_current_location_simple2",
+                          "fields": {
+                            "sound": "sabrina_carpenter_espresso/drums_intro"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "play_sound_at_current_location_simple2",
+                              "fields": {
+                                "sound": "sabrina_carpenter_espresso/bass_intro"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "next": {
+                  "block": {
+                    "type": "play_sounds_together",
+                    "id": "play_sounds_together",
+                    "inputs": {
+                      "code": {
+                        "block": {
+                          "type": "play_sound_at_current_location_simple2",
+                          "id": "play_sound_at_current_location_simple2",
+                          "fields": {
+                            "sound": "sabrina_carpenter_espresso/vocals_chorus_1"
+                          },
+                          "next": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "play_sound_at_current_location_simple2",
+                              "fields": {
+                                "sound": "sabrina_carpenter_espresso/drums_main_beat"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "play_sound_at_current_location_simple2",
+                                  "fields": {
+                                    "sound": "sabrina_carpenter_espresso/guitar_intro"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "play_sound_at_current_location_simple2",
+                                      "fields": {
+                                        "sound": "sabrina_carpenter_espresso/keys_chorus_1"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "play_sound_at_current_location_simple2",
+                                          "fields": {
+                                            "sound": "sabrina_carpenter_espresso/bass_main"
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "next": {
+                      "block": {
+                        "type": "play_sounds_together",
+                        "id": "play_sounds_together",
+                        "inputs": {
+                          "code": {
+                            "block": {
+                              "type": "play_sound_at_current_location_simple2",
+                              "id": "play_sound_at_current_location_simple2",
+                              "fields": {
+                                "sound": "sabrina_carpenter_espresso/vocals_chorus_2"
+                              },
+                              "next": {
+                                "block": {
+                                  "type": "play_sound_at_current_location_simple2",
+                                  "id": "play_sound_at_current_location_simple2",
+                                  "fields": {
+                                    "sound": "sabrina_carpenter_espresso/vocals_chorus_backgrounds"
+                                  },
+                                  "next": {
+                                    "block": {
+                                      "type": "play_sound_at_current_location_simple2",
+                                      "id": "play_sound_at_current_location_simple2",
+                                      "fields": {
+                                        "sound": "sabrina_carpenter_espresso/drums_main_beat"
+                                      },
+                                      "next": {
+                                        "block": {
+                                          "type": "play_sound_at_current_location_simple2",
+                                          "id": "play_sound_at_current_location_simple2",
+                                          "fields": {
+                                            "sound": "sabrina_carpenter_espresso/guitar_intro"
+                                          },
+                                          "next": {
+                                            "block": {
+                                              "type": "play_sound_at_current_location_simple2",
+                                              "id": "play_sound_at_current_location_simple2",
+                                              "fields": {
+                                                "sound": "sabrina_carpenter_espresso/keys_chorus_1"
+                                              },
+                                              "next": {
+                                                "block": {
+                                                  "type": "play_sound_at_current_location_simple2",
+                                                  "id": "play_sound_at_current_location_simple2",
+                                                  "fields": {
+                                                    "sound": "sabrina_carpenter_espresso/bass_main"
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
-          ]
-        }
-      },
-      "sounds": {
-        "beats": [
-          "drum_kit_disco",
-          "drum_beat_edm",
-          "drum_beat_club",
-          "drum_beat_knock",
-          "drum_kit_pop"
+          }
         ]
-      },
-      "toolbox": {
-        "blocks": {
-          "Play": [
-            "play_sound_at_current_location_simple2"
-          ]
-        },
-        "type": "flyout"
       }
-    },
+    }
+  }
+,
     "instructions_important": "false",
     "hide_share_and_remix": "false",
     "name_suffix": "_v2",

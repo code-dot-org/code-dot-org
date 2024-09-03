@@ -115,8 +115,17 @@ async function generatePattern(
   console.time('AI: generate pattern');
   const seedSeq = toNoteSequence(seed, seedLength);
   const result = model
-    .continueSequence(seedSeq, generateLength, temperature)
-    .then(r => seed.concat(fromNoteSequence(r, generateLength)));
+    .continueSequenceAndReturnProbabilities(
+      seedSeq,
+      generateLength,
+      temperature
+    )
+    .then(r => {
+      console.log(r.probs);
+      r.sequence.then(s => {
+        seed.concat(fromNoteSequence(s, generateLength));
+      });
+    });
   console.timeEnd('AI: generate pattern');
 
   return result;

@@ -19,18 +19,157 @@
             {
               "type": "when_run_simple2",
               "id": "when_run_simple2",
-              "x": 30,
-              "y": 30,
+              "x": 34,
+              "y": 34,
               "deletable": false,
               "movable": false,
               "next": {
                 "block": {
-                  "type": "play_sound_at_current_location_simple2",
-                  "id": "play_sound_at_current_location_simple2",
-                  "deletable": false,
-                  "movable": false,
-                  "fields": {
-                    "sound": "beats/drum_kit_disco"
+                  "type": "play_sounds_together",
+                  "id": "play_sounds_together",
+                  "inputs": {
+                    "code": {
+                      "block": {
+                        "type": "play_sound_at_current_location_simple2",
+                        "id": "play_sound_at_current_location_simple2",
+                        "fields": {
+                          "sound": "sabrina_carpenter_espresso/guitar_intro"
+                        },
+                        "next": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "play_sound_at_current_location_simple2",
+                            "fields": {
+                              "sound": "sabrina_carpenter_espresso/drums_intro"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "play_sound_at_current_location_simple2",
+                                "fields": {
+                                  "sound": "sabrina_carpenter_espresso/bass_intro"
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "next": {
+                    "block": {
+                      "type": "play_sounds_together",
+                      "id": "play_sounds_together",
+                      "inputs": {
+                        "code": {
+                          "block": {
+                            "type": "play_sound_at_current_location_simple2",
+                            "id": "play_sound_at_current_location_simple2",
+                            "fields": {
+                              "sound": "sabrina_carpenter_espresso/vocals_chorus_1"
+                            },
+                            "next": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "play_sound_at_current_location_simple2",
+                                "fields": {
+                                  "sound": "sabrina_carpenter_espresso/drums_main_beat"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "play_sound_at_current_location_simple2",
+                                    "fields": {
+                                      "sound": "sabrina_carpenter_espresso/guitar_intro"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "play_sound_at_current_location_simple2",
+                                        "fields": {
+                                          "sound": "sabrina_carpenter_espresso/keys_chorus_1"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "play_sound_at_current_location_simple2",
+                                            "fields": {
+                                              "sound": "sabrina_carpenter_espresso/bass_main"
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "next": {
+                        "block": {
+                          "type": "play_sounds_together",
+                          "id": "play_sounds_together",
+                          "inputs": {
+                            "code": {
+                              "block": {
+                                "type": "play_sound_at_current_location_simple2",
+                                "id": "play_sound_at_current_location_simple2",
+                                "fields": {
+                                  "sound": "sabrina_carpenter_espresso/vocals_chorus_2"
+                                },
+                                "next": {
+                                  "block": {
+                                    "type": "play_sound_at_current_location_simple2",
+                                    "id": "play_sound_at_current_location_simple2",
+                                    "fields": {
+                                      "sound": "sabrina_carpenter_espresso/vocals_chorus_backgrounds"
+                                    },
+                                    "next": {
+                                      "block": {
+                                        "type": "play_sound_at_current_location_simple2",
+                                        "id": "play_sound_at_current_location_simple2",
+                                        "fields": {
+                                          "sound": "sabrina_carpenter_espresso/drums_main_beat"
+                                        },
+                                        "next": {
+                                          "block": {
+                                            "type": "play_sound_at_current_location_simple2",
+                                            "id": "play_sound_at_current_location_simple2",
+                                            "fields": {
+                                              "sound": "sabrina_carpenter_espresso/guitar_intro"
+                                            },
+                                            "next": {
+                                              "block": {
+                                                "type": "play_sound_at_current_location_simple2",
+                                                "id": "play_sound_at_current_location_simple2",
+                                                "fields": {
+                                                  "sound": "sabrina_carpenter_espresso/keys_chorus_1"
+                                                },
+                                                "next": {
+                                                  "block": {
+                                                    "type": "play_sound_at_current_location_simple2",
+                                                    "id": "play_sound_at_current_location_simple2",
+                                                    "fields": {
+                                                      "sound": "sabrina_carpenter_espresso/bass_main"
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
                   }
                 }
               }

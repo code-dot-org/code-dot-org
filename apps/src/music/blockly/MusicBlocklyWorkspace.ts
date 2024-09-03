@@ -102,6 +102,8 @@ export default class MusicBlocklyWorkspace {
       readOnly: isReadOnlyWorkspace,
       useBlocklyDynamicCategories: true,
       rtl: isRtl,
+      useModalFunctionEditor: true,
+      disableParamEditing: false,
     } as BlocklyOptions);
 
     this.resizeBlockly();
@@ -165,7 +167,18 @@ export default class MusicBlocklyWorkspace {
     let functionCallsCode = '';
     let functionImplementationsCode = '';
 
-    if (getBlockMode() === BlockMode.SIMPLE2) {
+    functionImplementationsCode = Blockly.JavaScript.workspaceToCode(
+      this.workspace
+    );
+
+    this.compiledEvents.whenRunButton = {
+      code: functionImplementationsCode,
+    };
+
+    if (
+      getBlockMode() === BlockMode.SIMPLE2 /* ||
+      getBlockMode() === BlockMode.ADVANCED*/
+    ) {
       // Go through all blocks, specifically looking for functions.
       // As they are found, accumulate one set of code to call all of them,
       // and a second set of code that has their implementations.
@@ -173,7 +186,10 @@ export default class MusicBlocklyWorkspace {
       // implementations will become part of the runtime code for both when_run,
       // as well as for each new trigger handler.
       topBlocks.forEach(functionBlock => {
-        if (functionBlock.type === 'procedures_defnoreturn') {
+        if (
+          functionBlock.type === 'procedures_defnoreturn' ||
+          functionBlock.type === 'procedures_defreturn'
+        ) {
           // Accumulate some custom code that calls all the functions
           // together, simulating tracks mode.
           const actualFunctionName =
@@ -185,13 +201,16 @@ export default class MusicBlocklyWorkspace {
 
           // Accumulate some code that has all of the function implementations.
           const functionCode = Blockly.JavaScript.blockToCode(
-            functionBlock.getChildren(false)[0]
+            functionBlock // functionBlock.getChildren(false)[0]
           );
-          functionImplementationsCode +=
+
+          functionImplementationsCode += functionCode;
+
+          /*functionImplementationsCode +=
             GeneratorHelpersSimple2.getFunctionImplementation(
               functionBlock.getFieldValue('NAME'),
               functionCode
-            );
+            );*/
         }
       });
 
@@ -210,11 +229,14 @@ export default class MusicBlocklyWorkspace {
       }
     }
 
+    /*
     topBlocks.forEach(block => {
       if (getBlockMode() !== BlockMode.SIMPLE2) {
         if (block.type === BlockTypes.WHEN_RUN) {
           this.compiledEvents.whenRunButton = {
-            code: Blockly.JavaScript.blockToCode(block),
+            code:
+              Blockly.JavaScript.blockToCode(block) +
+              functionImplementationsCode,
           };
         }
       } else {
@@ -265,6 +287,7 @@ export default class MusicBlocklyWorkspace {
         );
       }
     });
+    */
 
     const currentEventsJson = JSON.stringify(this.compiledEvents);
     const lastExecutedEventsJson = JSON.stringify(this.lastExecutedEvents);

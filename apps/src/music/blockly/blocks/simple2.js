@@ -36,11 +36,11 @@ export class GeneratorHelpersSimple2 {
   static getFunctionImplementation(functionName, functionCode) {
     const actualFunctionName = this.getSafeFunctionName(functionName);
     return `function ${actualFunctionName}() {
-      Sequencer.startFunctionContext('${functionName}');
-      Sequencer.playSequential();
+      //Sequencer.startFunctionContext('${functionName}');
+      //Sequencer.playSequential();
       ${functionCode}
-      Sequencer.endSequential();
-      Sequencer.endFunctionContext();
+      //Sequencer.endSequential();
+      //Sequencer.endFunctionContext();
     }
     `;
   }

@@ -447,6 +447,7 @@ export function getToolbox(toolbox) {
           Logic: ['controls_if', 'logic_compare'],
         },
         {
+          includeFunctions: true,
           includeVariables: true,
         }
       );
