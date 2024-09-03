@@ -17,10 +17,13 @@ import {appendSystemMessage} from '../redux/consoleRedux';
 
 import moduleStyles from './console.module.scss';
 
+// Control buttons for running and stopping code.
+// Can be extended in the future to include a test button.
 const ControlButtons: React.FunctionComponent = () => {
   const dispatch = useAppDispatch();
-  const lifecycleNotifier = Lab2Registry.getInstance().getLifecycleNotifier();
   const {onRun, onStop} = useCodebridgeContext();
+
+  const lifecycleNotifier = Lab2Registry.getInstance().getLifecycleNotifier();
 
   const source = useAppSelector(
     state => state.lab2Project.projectSource?.source
@@ -34,11 +37,13 @@ const ControlButtons: React.FunctionComponent = () => {
   const isLoadingEnvironment = useAppSelector(
     state => state.lab2System.loadingCodeEnvironment
   );
-  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
   const isRunning = useAppSelector(state => state.lab2System.isRunning);
+
+  const isStartMode = getAppOptionsEditBlocks() === START_SOURCES;
 
   const awaitingPredictSubmit =
     !isStartMode && isPredictLevel && !hasPredictResponse;
+
   useEffect(() => {
     const resetStatus = () => {
       dispatch(setHasRun(false));
@@ -90,6 +95,7 @@ const ControlButtons: React.FunctionComponent = () => {
     }
     return tooltip;
   };
+
   const disabledCodeActionsTooltip = getDisabledCodeActionsTooltip();
   const disabledCodeActionsIcon = awaitingPredictSubmit
     ? 'fa-question-circle-o'
