@@ -40,9 +40,7 @@ dashboard_db_reader: \"mysql://readonly@localhost/dashboard_test\"
 dashboard_enable_pegasus: true
 dashboard_port: 3000
 dashboard_workers: 5
-disable_all_eyes_running: true
 files_s3_directory: files_circle/$CIRCLE_BUILD_NUM
-ignore_eyes_mismatches: true
 libraries_s3_directory: libraries_circle/$CIRCLE_BUILD_NUM
 localize_apps: true
 netsim_redis_groups:
@@ -59,6 +57,9 @@ skip_seed_all: true
 sources_s3_directory: sources_circle/$CIRCLE_BUILD_NUM
 use_my_apps: true
 aiproxy_api_key: 'fake_key'
+ignore_eyes_mismatches: false
+disable_all_eyes_running: false
+applitools_eyes_api_key: $APPLITOOLS_EYES_API_KEY
 " >> locals.yml
 echo "Wrote secrets from env vars into locals.yml."
 
