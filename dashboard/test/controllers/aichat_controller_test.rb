@@ -247,6 +247,11 @@ class AichatControllerTest < ActionController::TestCase
   end
 
   # user_has_aichat_access tests
+  test 'signed out user does not have access to user_has_aichat_access test' do
+    get :user_has_aichat_access
+    assert_response :forbidden
+  end
+
   test 'GET user_has_aichat_access returns false for unauthorized teacher' do
     sign_in(create(:teacher))
     get :user_has_aichat_access
