@@ -945,10 +945,10 @@
       desc_02: "**Make the Invisible, Visible** encourages the next generation of creators to explore, craft, and showcase how coding can bring their favorite things to life. Computer science and AI are wondrous forces that drive the epic apps, designs, and gadgets we use every day. This movement helps to highlight how coding is behind everything from your favorite shoes to the music you listen to. By jumping into fun activities and starting your own projects, you can learn how to use computer science to bring your passions to life and share them with others."
     activities:
       heading: "Lead an Hour of Code Activity"
-      desc: "With 100 activities to choose from with classifications by grade level, experience, your choices are vast. When you know your plans, please [register your activity](%{register_url}) so we can celebrate all the events happening across the globe."
+      desc: "With 100 activities to choose from with classifications by grade level and experience, your choices are vast. When you know your plans, please [register your activity](%{register_url}) so we can celebrate all the events happening across the globe."
       dance:
         overline: "Grade levels: 3–12"
-        title: "Dance Party AI Edition"
+        title: "Dance Party: AI Edition"
         desc: "It's time to strut your stuff! Create your own dance party featuring hits by Miley Cyrus, BTS, Lil Nas X, Harry Styles, Nicki Minaj, Rosalía, and more!"
         button: "Explore Dance Party"
       ai_for_oceans:
@@ -972,8 +972,8 @@
         button: "Explore the catalog"
       teach:
         title: "Teach with Code.org"
-        desc: "Explore our large library of engaging and informative videos to learn about key computer science concepts on a broad range of topics."
-        button: "View video library"
+        desc: "Find everything you need to start teaching computer science with Code.org, from lesson plans to classroom support."
+        button: "Teach with Code.org"
       professional_learning:
         title: "Professional Learning"
         desc: "Discover accessible, comprehensive, and flexible professional learning that equips you with the skills to empower your students."
