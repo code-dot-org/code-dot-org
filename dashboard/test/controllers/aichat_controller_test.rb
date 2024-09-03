@@ -147,6 +147,7 @@ class AichatControllerTest < ActionController::TestCase
     assert_response :forbidden
   end
 
+  # log_chat_event tests
   test 'authorized teacher has access to log_chat_event test' do
     sign_in(@authorized_teacher1)
     post :log_chat_event, params: @valid_params_log_chat_event, as: :json
@@ -243,5 +244,34 @@ class AichatControllerTest < ActionController::TestCase
     assert_equal json_response.keys, ['executionStatus', 'response']
     assert_equal json_response['executionStatus'], execution_status
     assert_equal json_response['response'], response
+  end
+
+  # user_has_aichat_access tests
+  test 'GET user_has_aichat_access returns false for unauthorized teacher' do
+    sign_in(create(:teacher))
+    get :user_has_aichat_access
+    assert_response :success
+    assert_equal json_response, false
+  end
+
+  test 'GET user_has_aichat_access returns true for authorized teacher' do
+    sign_in(@authorized_teacher1)
+    get :user_has_aichat_access
+    assert_response :success
+    assert_equal json_response, true
+  end
+
+  test 'GET user_has_aichat_access returns false for unauthorized student' do
+    sign_in(create(:student))
+    get :user_has_aichat_access
+    assert_response :success
+    assert_equal json_response, false
+  end
+
+  test 'GET user_has_aichat_access returns true for student of authorized teacher' do
+    sign_in(@authorized_student1)
+    get :user_has_aichat_access
+    assert_response :success
+    assert_equal json_response, true
   end
 end
