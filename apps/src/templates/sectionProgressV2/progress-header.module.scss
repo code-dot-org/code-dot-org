@@ -20,4 +20,8 @@
 
 .pageContent {
   padding: 24px 64px 64px 64px;
+
+  &.navView {
+    padding: 0;
+  }
 }
