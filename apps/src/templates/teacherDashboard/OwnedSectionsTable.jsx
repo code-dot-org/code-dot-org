@@ -23,7 +23,7 @@ import SectionActionDropdown from './SectionActionDropdown';
 import {sortableSectionShape} from './shapes';
 import {getSectionRows} from './teacherSectionsRedux';
 
-import skeletonizeContent from '@cdo/apps/componentLibrary/skeletonize-content.module.scss';
+import skeletonizeContent from '@cdo/apps/sharedComponents/skeletonize-content.module.scss';
 
 /** @enum {number} */
 export const COLUMNS = {
