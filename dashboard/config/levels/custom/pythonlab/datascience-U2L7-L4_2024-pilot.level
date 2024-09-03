@@ -1,0 +1,50 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-08-30T16:00:01.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Investigate Dataset Values\r\nBefore we do anything with this dataset, we need to evaluate its content to see if it is usable.\r\n\r\n\r\n## Do This:\r\n1. Add code to print the total of missing values in each column.\r\n2. Discuss with your partner:\r\n   - What does the count of missing values tell you about the dataset? \r\n   - Why is it important to know if and how many missing values are in the dataset?",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "Occupations.csv",
+          "language": "csv",
+          "contents": "",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "project_template_level_name": "datascience-U2L7-L2-4templ_2024-pilot",
+    "teacher_markdown": "**What Students Should Take Away:**\r\n- Students should understand how to use basic Pandas functions (isnull(), describe(), info(), head(), tail(), len()) to investigate a dataset and identify data quality issues.\r\n\r\n**Misconceptions Students Might Have or Points They Might Struggle With and Tips to Assist:**\r\n\r\n- Students might struggle with interpreting the output of isnull(), describe(), and info() and understanding the significance of missing values.\r\n   - Tip: Provide examples of the output from these functions and explain what each part means. Highlight key indicators, such as the presence of NaN values and statistical summaries.\r\n   - Tip: Encourage students to compare the output from isnull() with the results from head() and tail() to see how missing values are represented in the dataset.\r\n- Students might have difficulty recognizing invalid values and understanding how they affect the dataset.\r\n   - Tip: Explain what constitutes an invalid value in the context of the dataset. Provide examples of common invalid values, such as text in numeric columns or out-of-range values.\r\n   - Tip: Discuss the impact of invalid values on data analysis, emphasizing how they can distort results and lead to incorrect conclusions."
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-30T16:00:01.517+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L7-L3_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L7-L3_2024-pilot\"},{\"changed_at\":\"2024-08-30 16:01:15 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2024-08-30 16:19:13 +0000\",\"changed\":[\"predict_settings\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>

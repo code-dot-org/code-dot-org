@@ -1,0 +1,49 @@
+<Pythonlab>
+  <config><![CDATA[{
+  "published": true,
+  "game_id": 72,
+  "created_at": "2024-08-30T16:20:03.000Z",
+  "level_num": "custom",
+  "user_id": 18602,
+  "properties": {
+    "encrypted": "false",
+    "long_instructions": "# Usability via Visualizations\r\nVisualizing data can help us identify patterns and inconsistencies. Let's use a bar chart to see the distribution of job titles.\r\n\r\n\r\n## Do This:\r\n1. Run the code to create a bar chart visualizing the frequency of each job title in the dataset.\r\n2. Discuss with your partner:\r\n   - What do you notice about the distribution of job titles?\r\n   - re there any job titles that seem to be repeated with different formats (e.g., different cases or spellings)?\r\n   - Why might this matter?",
+    "ai_tutor_available": "false",
+    "submittable": "false",
+    "hide_share_and_remix": "false",
+    "predict_settings": {
+      "isPredictLevel": false
+    },
+    "start_sources": {
+      "files": {
+        "0": {
+          "id": "0",
+          "name": "main.py",
+          "language": "py",
+          "contents": "\n",
+          "folderId": "0",
+          "active": true,
+          "open": true
+        },
+        "1": {
+          "id": "1",
+          "name": "Occupations.csv",
+          "language": "csv",
+          "contents": "",
+          "folderId": "0",
+          "active": false,
+          "open": true
+        }
+      },
+      "folders": {
+      },
+      "openFiles": [
+        "0",
+        "1"
+      ]
+    },
+    "project_template_level_name": "datascience-U2L7-L5-6templ_2024-pilot"
+  },
+  "audit_log": "[{\"changed_at\":\"2024-08-30T16:20:03.069+00:00\",\"changed\":[\"cloned from \\\"datascience-U2L7-L3_2024-pilot\\\"\"],\"cloned_from\":\"datascience-U2L7-L3_2024-pilot\"},{\"changed_at\":\"2024-08-30 16:21:24 +0000\",\"changed\":[\"long_instructions\",\"predict_settings\",\"project_template_level_name\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+}]]></config>
+</Pythonlab>
