@@ -11,6 +11,9 @@ interface WithConditionalTooltipProps {
   iconName: string;
   iconClassName: string;
 }
+
+// Component that wraps children with a tooltip is showTooltip is true,
+// otherwise it just renders the children wrapped in a div.
 const WithConditionalTooltip: React.FunctionComponent<
   WithConditionalTooltipProps
 > = ({

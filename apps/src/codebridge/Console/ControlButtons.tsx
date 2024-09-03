@@ -1,9 +1,7 @@
-//import classNames from 'classnames';
 import React, {useEffect} from 'react';
 
 import codebridgeI18n from '@cdo/apps/codebridge/locale';
 import Button from '@cdo/apps/componentLibrary/button';
-//import {WithTooltip} from '@cdo/apps/componentLibrary/tooltip';
 import {START_SOURCES} from '@cdo/apps/lab2/constants';
 import Lab2Registry from '@cdo/apps/lab2/Lab2Registry';
 import {getAppOptionsEditBlocks} from '@cdo/apps/lab2/projects/utils';
@@ -96,32 +94,6 @@ const ControlButtons: React.FunctionComponent = () => {
   const disabledCodeActionsIcon = awaitingPredictSubmit
     ? 'fa-question-circle-o'
     : 'fa-spinner fa-spin';
-
-  // We may want to expand the tooltip to cover the disabled button
-  // as well. We will likely move these buttons; when we do consider
-  // wrapping the buttons in a div with the icon and applying the tooltip to that div.
-  // const renderDisabledButtonHelperIcon = (
-  //   iconName: string,
-  //   tooltipId: string,
-  //   helpText: string
-  // ) => {
-  //   return (
-  //     <WithTooltip
-  //       tooltipProps={{
-  //         direction: 'onRight',
-  //         text: helpText,
-  //         tooltipId: tooltipId,
-  //         size: 's',
-  //       }}
-  //       tooltipOverlayClassName={moduleStyles.disabledButtonTooltipContainer}
-  //     >
-  //       <i
-  //         className={classNames('fa', iconName, moduleStyles.disabledInfoIcon)}
-  //         aria-describedby={tooltipId}
-  //       />
-  //     </WithTooltip>
-  //   );
-  // };
 
   return (
     <div className={moduleStyles.controlButtons}>
