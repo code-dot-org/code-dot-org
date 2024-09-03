@@ -1,7 +1,7 @@
 {
   "pages": {
-    "/home": "user-research-aug-2024",
-    "/student-home": ""
+    "/home": "transformers-sept-2024",
+    "/student-home": "transformers-sept-2024"
   },
   "banners": {
     "superhero": {
@@ -36,6 +36,14 @@
       "buttonText": "Join our research community",
       "buttonUrl": "https://greatquestion.co/codedotorg/userresearch",
       "buttonId": "user-research-aug-2024"
+    },
+    "transformers-sept-2024": {
+      "image": "/shared/images/banners/transformers_action_poster.png",
+      "title": "Get in the fun! Easy-to-learn code with Transformers One",
+      "body": "Autobots, roll out! In this Transformers One-themed introduction to our Sprite Lab, students learn the basics of computer science by building fun, interactive projects.",
+      "buttonText": "Try it now",
+      "buttonUrl": "https://studio.code.org/s/hello-world-transformers-one-2024/lessons/1/levels/1",
+      "buttonId": "transformers-sept-2024"
     }
   }
 }
