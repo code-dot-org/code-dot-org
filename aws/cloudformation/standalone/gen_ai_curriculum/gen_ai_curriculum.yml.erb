@@ -43,7 +43,7 @@ Resources:
     Properties:
       EndpointConfigName: !Sub "<%= "#{config[:model_name]}-${Environment}-EndpointConfig-#{Time.now.to_i}" %>"
       ProductionVariants:
-        - ContainerStartupHealthCheckTimeoutInSeconds: 300
+        - ContainerStartupHealthCheckTimeoutInSeconds: 600
           InitialInstanceCount: <%= environment == 'production' ? config[:min_num_instances] : 1 %>
           InitialVariantWeight: 1
           InstanceType: "<%= config[:instance_type][environment.to_sym] %>"

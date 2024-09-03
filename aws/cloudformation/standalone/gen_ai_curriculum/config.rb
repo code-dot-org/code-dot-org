@@ -7,11 +7,11 @@ module Config
   #   model_id: App-wide model ID (from shared constants)
   #   model_name: Short name for naming resources (letters only)
   #   instance_type: EC2 Instance Type for endpoint
-  #   min_num_instances (prod only): Minimum number of deployed instances used for autoscaling on production
+  #   min_num_instances (production only): Minimum number of deployed instances used for autoscaling on production
   #     on test, only a single instance will be used without autoscaling to limit resource usage
-  #   max_num_instances (prod only): Maximum number of deployed instances used for autoscaling on production
+  #   max_num_instances (production only): Maximum number of deployed instances used for autoscaling on production
   #     not used on test
-  #   autoscaling_target_value (prod only): Number of requests / minute at which autoscaling starts to take effect
+  #   autoscaling_target_value (production only): Number of requests / minute at which autoscaling starts to take effect
   #     not used on test
   ENDPOINT_CONFIGS = [
     {
@@ -19,7 +19,7 @@ module Config
       model_id: SharedConstants::AI_CHAT_MODEL_IDS[:MISTRAL],
       model_name: "Mistral",
       instance_type: {
-        prod: "ml.g5.4xlarge",
+        production: "ml.g5.4xlarge",
         test: "ml.g5.xlarge"
       },
       min_num_instances: 3,
@@ -27,11 +27,23 @@ module Config
       autoscaling_target_value: 150
     },
     {
+      hf_model_id: "BioMistral/BioMistral-7B",
+      model_id: SharedConstants::AI_CHAT_MODEL_IDS[:BIOMISTRAL],
+      model_name: "BioMistral",
+      instance_type: {
+        production: "ml.g5.xlarge",
+        test: "ml.g5.xlarge"
+      },
+      min_num_instances: 2,
+      max_num_instances: 2,
+      autoscaling_target_value: 150
+    },
+    {
       hf_model_id: "upaya07/Arithmo2-Mistral-7B",
       model_id: SharedConstants::AI_CHAT_MODEL_IDS[:ARITHMO],
       model_name: "Arithmo",
       instance_type: {
-        prod: "ml.g5.xlarge",
+        production: "ml.g5.xlarge",
         test: "ml.g5.xlarge"
       },
       min_num_instances: 2,
@@ -43,7 +55,7 @@ module Config
       model_id: SharedConstants::AI_CHAT_MODEL_IDS[:PIRATE],
       model_name: "Pirate",
       instance_type: {
-        prod: "ml.g5.xlarge",
+        production: "ml.g5.xlarge",
         test: "ml.g5.xlarge"
       },
       min_num_instances: 2,
@@ -55,7 +67,7 @@ module Config
       model_id: SharedConstants::AI_CHAT_MODEL_IDS[:KAREN],
       model_name: "Karen",
       instance_type: {
-        prod: "ml.g5.xlarge",
+        production: "ml.g5.xlarge",
         test: "ml.g5.xlarge"
       },
       min_num_instances: 2,
